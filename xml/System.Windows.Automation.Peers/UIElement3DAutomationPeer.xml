@@ -1,0 +1,839 @@
+<Type Name="UIElement3DAutomationPeer" FullName="System.Windows.Automation.Peers.UIElement3DAutomationPeer">
+  <TypeSignature Language="C#" Value="public class UIElement3DAutomationPeer : System.Windows.Automation.Peers.AutomationPeer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UIElement3DAutomationPeer extends System.Windows.Automation.Peers.AutomationPeer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.AutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Macht <see cref="T:System.Windows.UIElement3D" /> Typen für die UI-Automatisierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig jede Klasse erbt von <xref:System.Windows.UIElement3D> verwendet <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> für die Kommunikation mit [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)].  
+  
+ Wenn Sie eine Klasse, die Erstellen von erben <xref:System.Windows.UIElement3D>, Sie möchten einen Automatisierungspeer zur Unterstützung der Funktionalität der Klasse bereitstellen. Überschreiben Sie die <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetClassNameCore%2A> Methode, um eine Zeichenfolge zurückzugeben, die den Typ des zugeordneten Elements darstellt der <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>. Z. B. eine Klasse mit dem Namen `My3DElement` und ein Automatisierungspeer aufgerufen `My3DElementAutomationPeer`, überschreiben die <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetClassNameCore%2A> Methode, um die Zeichenfolge "My3DElement" zurückzugeben.  
+  
+ Wenn Ihre Klasse mit einer bekannten Steuerelementtypen entspricht, außer Kraft setzen die <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetAutomationControlTypeCore%2A> Methode, um die zurückgeben <xref:System.Windows.Automation.ControlType>. Beachten Sie, dass, obwohl der vorhandenen <xref:System.Windows.Automation.ControlType> Werte werden im Allgemeinen 2D Steuerelementen zugeordnet, die <xref:System.Windows.Automation.ControlType> gibt an der Funktionalität eines Steuerelements, nicht seine Darstellung.  Wenn also Ihre <xref:System.Windows.UIElement3D> Ruft eine Aktion aus, klickt der Benutzer, Sie möchten möglicherweise <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetHelpTextCore%2A> zurückzugebenden <xref:System.Windows.Automation.ControlType.Button?displayProperty=nameWithType>.  
+  
+ Das Verhalten des benutzerdefinierten <xref:System.Windows.UIElement3D> bestimmt, welche anderen Methoden, die Sie überschreiben soll. Jedes Thema Methode in der <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> wird beschrieben, wie die Methode verwendet wird und wann sie zu überschreiben geeignet sind.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIElement3DAutomationPeer (System.Windows.UIElement3D owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.UIElement3D owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.#ctor(System.Windows.UIElement3D)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.UIElement3D" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der <see cref="T:System.Windows.UIElement3D" />, der diesem <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePeerForElement">
+      <MemberSignature Language="C#" Value="public static System.Windows.Automation.Peers.AutomationPeer CreatePeerForElement (System.Windows.UIElement3D element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Automation.Peers.AutomationPeer CreatePeerForElement(class System.Windows.UIElement3D element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.CreatePeerForElement(System.Windows.UIElement3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement3D" />
+      </Parameters>
+      <Docs>
+        <param name="element">Der <see cref="T:System.Windows.UIElement3D" />, der diesem <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> zugeordnet ist.</param>
+        <summary>Erstellt einen <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> für das angegebene <see cref="T:System.Windows.UIElement3D" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> für den angegebenen <see cref="T:System.Windows.UIElement3D" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> verbleibt im Arbeitsspeicher, bis das zugeordnete <xref:System.Windows.UIElement3D> zerstört wird.  
+  
+ Der gleichen Instanz von der <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> aus nachfolgenden Aufrufen zurückgegeben wird, an diese Methode und Aufrufen der <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.FromElement%2A>. Der Typ des Peers richtet sich nach der <xref:System.Windows.UIElement3D.OnCreateAutomationPeer%2A> virtuellen Rückruf. Wenn <xref:System.Windows.UIElement3D> implementiert den Rückruf nicht nicht <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> wird erstellt und diese Methode gibt `null`.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromElement">
+      <MemberSignature Language="C#" Value="public static System.Windows.Automation.Peers.AutomationPeer FromElement (System.Windows.UIElement3D element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Automation.Peers.AutomationPeer FromElement(class System.Windows.UIElement3D element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.FromElement(System.Windows.UIElement3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement3D" />
+      </Parameters>
+      <Docs>
+        <param name="element">Der <see cref="T:System.Windows.UIElement3D" />, der diesem <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> zugeordnet ist.</param>
+        <summary>Gibt den <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> für das angegebene <see cref="T:System.Windows.UIElement3D" /> zurück.</summary>
+        <returns>Die <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />, oder <see langword="null" /> Wenn die <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> wurde nicht erstellt, indem Sie die <see cref="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.CreatePeerForElement(System.Windows.UIElement3D)" /> Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAcceleratorKeyCore">
+      <MemberSignature Language="C#" Value="protected override string GetAcceleratorKeyCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetAcceleratorKeyCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetAcceleratorKeyCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zugriffstaste für das <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAcceleratorKey" /> aufgerufen.</summary>
+        <returns>Die Zugriffstaste für das <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die <xref:System.Windows.Automation.AutomationProperties.GetAcceleratorKey%2A?displayProperty=nameWithType> Methode, um den Wert abzurufen. <xref:System.Windows.Automation.AutomationProperties.GetAcceleratorKey%2A?displayProperty=nameWithType>Gibt einen Wert nur, wenn die <xref:System.Windows.Automation.AutomationProperties.AcceleratorKey%2A?displayProperty=nameWithType> festgelegt wird. Sie können außer Kraft setzen <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetAcceleratorKeyCore%2A> und Logik hinzufügen, um die Zugriffstaste auf eine Weise bereitstellen, die sinnvoll für Ihre <xref:System.Windows.UIElement3D>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessKeyCore">
+      <MemberSignature Language="C#" Value="protected override string GetAccessKeyCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetAccessKeyCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetAccessKeyCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Zugriffsschlüssel für das <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAccessKey" /> aufgerufen.</summary>
+        <returns>Der Zugriffsschlüssel für das <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die <xref:System.Windows.Automation.AutomationProperties.GetAccessKey%2A?displayProperty=nameWithType> Methode, um den Wert abzurufen. <xref:System.Windows.Automation.AutomationProperties.GetAccessKey%2A?displayProperty=nameWithType>Gibt einen Wert nur, wenn die <xref:System.Windows.Automation.AutomationProperties.AccessKey%2A?displayProperty=nameWithType> festgelegt wird. Sie können außer Kraft setzen <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetAccessKeyCore%2A> und Logik hinzufügen, um den Zugriffsschlüssel in eine Möglichkeit bereitzustellen, die sinnvoll für Ihre <xref:System.Windows.UIElement3D>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationControlTypeCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetAutomationControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Steuerelementtyp für die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" /> aufgerufen.</summary>
+        <returns>
+          <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Custom" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Ihre Klasse mit einer bekannten Steuerelementtypen entspricht, außer Kraft setzen die <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetAutomationControlTypeCore%2A> Methode, um die zurückgeben <xref:System.Windows.Automation.ControlType>. Beachten Sie, dass, obwohl der vorhandenen <xref:System.Windows.Automation.ControlType> Werte werden im Allgemeinen 2D Steuerelementen zugeordnet, die <xref:System.Windows.Automation.ControlType> gibt an der Funktionalität eines Steuerelements, nicht seine Darstellung.  Wenn also Ihre <xref:System.Windows.UIElement3D> Ruft eine Aktion aus, klickt der Benutzer, Sie möchten möglicherweise <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetHelpTextCore%2A> zurückzugebenden <xref:System.Windows.Automation.ControlType.Button?displayProperty=nameWithType>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationIdCore">
+      <MemberSignature Language="C#" Value="protected override string GetAutomationIdCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetAutomationIdCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetAutomationIdCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolge, die eindeutig den <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationId" /> aufgerufen.</summary>
+        <returns>Die Zeichenfolge, die eindeutig den <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die <xref:System.Windows.Automation.AutomationProperties.GetAutomationId%2A?displayProperty=nameWithType> Methode, um den Wert abzurufen. <xref:System.Windows.Automation.AutomationProperties.GetAutomationId%2A?displayProperty=nameWithType>Gibt einen Wert nur, wenn die <xref:System.Windows.Automation.AutomationProperties.AutomationId%2A?displayProperty=nameWithType> festgelegt wird. Sie können außer Kraft setzen <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetAutomationIdCore%2A> und Logik hinzufügen, um einen Bezeichner auf eine Weise bereitstellen, die sinnvoll für Ihre <xref:System.Windows.UIElement3D>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoundingRectangleCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Rect GetBoundingRectangleCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Rect GetBoundingRectangleCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetBoundingRectangleCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Windows.Rect" /> , die das umschließende Rechteck darstellt, die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetBoundingRectangle" /> aufgerufen.</summary>
+        <returns>Ein <see cref="T:System.Windows.Rect" />, das die Koordinaten des Elements enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Element nicht sowohl eine <xref:System.Windows.Interop.HwndSource> und ein <xref:System.Windows.PresentationSource>, gibt diese Methode <xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>.  
+  
+ Klassen, die von erben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> müssen in der Regel nicht überschreiben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetBoundingRectangleCore%2A>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildrenCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt; GetChildrenCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.List`1&lt;class System.Windows.Automation.Peers.AutomationPeer&gt; GetChildrenCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetChildrenCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Auflistung der untergeordneten Elemente des der <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetChildren" /> aufgerufen.</summary>
+        <returns>Die <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> Elemente, die untergeordneten Elemente des entsprechen den <see cref="T:System.Windows.UIElement3D" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die von erben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> müssen in der Regel nicht überschreiben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetChildrenCore%2A>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetClassNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetClassNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetClassNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Namen des der <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" /> aufgerufen.</summary>
+        <returns>
+          <see cref="F:System.String.Empty" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die von erben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> müssen überschreiben diese Methode, um den Namen des Zurückgeben der <xref:System.Windows.UIElement3D> zugeordneten der <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClickablePointCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Point GetClickablePointCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Point GetClickablePointCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetClickablePointCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Windows.Point" /> , der den klickbaren Bereich, der auf darstellt der <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClickablePoint" /> aufgerufen.</summary>
+        <returns>Der <see cref="T:System.Windows.Point" /> auf dem Element, der einen Mausklick zulässt. Die Punktwerte sind (<see cref="F:System.Double.NaN" />, <see cref="F:System.Double.NaN" />), wenn das Element nicht sowohl eine <see cref="T:System.Windows.Interop.HwndSource" /> als auch eine <see cref="T:System.Windows.PresentationSource" /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetClickablePointCore%2A> Methodenrückgabe den Punkt, der den Mittelpunkt des darstellt der <xref:System.Windows.UIElement3D>. Überschreiben Sie <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetClickablePointCore%2A> , wenn Sie einen anderen Zeitpunkt zurückgegeben werden soll.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHelpTextCore">
+      <MemberSignature Language="C#" Value="protected override string GetHelpTextCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetHelpTextCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetHelpTextCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolge, die die Funktionalität des beschreibt die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetHelpText" /> aufgerufen.</summary>
+        <returns>Eine Zeichenfolge, die Funktionalität des beschreibt, die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel die <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetHelpTextCore%2A> Methode gibt eine Zeichenfolge, die den gleichen Text, der das Steuerelement in der QuickInfo bereitstellt. Diese Methode ruft die <xref:System.Windows.Automation.AutomationProperties.GetHelpText%2A?displayProperty=nameWithType> Methode, um den Wert abzurufen. <xref:System.Windows.Automation.AutomationProperties.GetHelpText%2A?displayProperty=nameWithType>Gibt einen Wert nur, wenn die <xref:System.Windows.Automation.AutomationProperties.HelpText%2A?displayProperty=nameWithType> festgelegt wird. Sie können außer Kraft setzen <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetHelpTextCore%2A> und Logik hinzufügen, um den Hilfetext auf eine Weise bereitstellen, die sinnvoll für Ihre <xref:System.Windows.UIElement3D>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemStatusCore">
+      <MemberSignature Language="C#" Value="protected override string GetItemStatusCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetItemStatusCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetItemStatusCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die den Status der kommuniziert die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetItemStatus" /> aufgerufen.</summary>
+        <returns>Der Status der <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zurückgeben einer Zeichenfolge, der angibt, ob die <xref:System.Windows.UIElement3D> Status zu einem Element vermittelt wird. Beispielsweise kann ein Element eines Kontakts in einer messaging-Anwendung zugeordnet "Ausgelastet" oder "Verbunden" sein.  
+  
+ Diese Methode ruft die <xref:System.Windows.Automation.AutomationProperties.GetItemStatus%2A?displayProperty=nameWithType> Methode, um den Wert abzurufen. <xref:System.Windows.Automation.AutomationProperties.GetItemStatus%2A?displayProperty=nameWithType>Gibt einen Wert nur, wenn die <xref:System.Windows.Automation.AutomationProperties.ItemStatus%2A?displayProperty=nameWithType> festgelegt wird. Sie können außer Kraft setzen <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetItemStatusCore%2A> und Logik hinzufügen, um den Status des Konfigurationselements auf eine Weise bereitstellen, die sinnvoll für Ihre <xref:System.Windows.UIElement3D>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemTypeCore">
+      <MemberSignature Language="C#" Value="protected override string GetItemTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetItemTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetItemTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Geben Sie eine lesbare gibt eine Zeichenfolge zurück, der das Element darstellt, die die <see cref="T:System.Windows.UIElement3D" /> dafür <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetItemType" /> aufgerufen.</summary>
+        <returns>Geben Sie eine Zeichenfolge, die das Element darstellt, die die <see cref="T:System.Windows.UIElement3D" /> dafür <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die <xref:System.Windows.Automation.AutomationProperties.GetItemType%2A?displayProperty=nameWithType> Methode, um den Wert abzurufen. <xref:System.Windows.Automation.AutomationProperties.GetItemType%2A?displayProperty=nameWithType>Gibt einen Wert nur, wenn die <xref:System.Windows.Automation.AutomationProperties.ItemType%2A?displayProperty=nameWithType> festgelegt wird. Sie können außer Kraft setzen <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetItemTypeCore%2A> und Logik hinzufügen, um den Elementtyp in einer Weise bereitstellen, die sinnvoll für Ihre <xref:System.Windows.UIElement3D>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLabeledByCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer GetLabeledByCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer GetLabeledByCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetLabeledByCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für das Element, das als Ziel verwendet die <see cref="T:System.Windows.UIElement3D" /> dafür <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetLabeledBy" /> aufgerufen.</summary>
+        <returns>Die <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für das Element, das als Ziel verwendet die <see cref="T:System.Windows.UIElement3D" /> dafür <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die <xref:System.Windows.Automation.AutomationProperties.GetLabeledBy%2A> Methode, um den Wert abzurufen. <xref:System.Windows.Automation.AutomationProperties.GetLabeledBy%2A>Gibt einen Wert nur, wenn die <xref:System.Windows.Automation.AutomationProperties.LabeledBy%2A?displayProperty=nameWithType> festgelegt wird. Sie überschreiben können <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetLabeledByCore%2A> und Hinzufügen von Logik zum Bereitstellen der <xref:System.Windows.Automation.Peers.AutomationPeer> in einer Weise, die sinnvoll für Ihre <xref:System.Windows.UIElement3D>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolge, die stellt die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetName" /> aufgerufen.</summary>
+        <returns>Die Zeichenfolge, die stellt die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können vorstellen, der als was Benutzer verwenden, um das Steuerelement zu erläutern die Namenseigenschaft sind Name-Eigenschaft. Achten Sie darauf, dass Sie eine Textdarstellung für alle Steuerelemente in verfügen die [!INCLUDE[TLA#tla_gui](~/includes/tlasharptla-gui-md.md)] , damit Sie programmgesteuert auf das Steuerelement in lokalisierten Versionen verweisen können.  
+  
+ Diese Methode ruft die <xref:System.Windows.Automation.AutomationProperties.GetName%2A?displayProperty=nameWithType> Methode, um den Wert abzurufen. <xref:System.Windows.Automation.AutomationProperties.GetName%2A?displayProperty=nameWithType>Gibt einen Wert nur, wenn die <xref:System.Windows.Automation.AutomationProperties.Name%2A?displayProperty=nameWithType> festgelegt wird. Sie können außer Kraft setzen <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetNameCore%2A> und Logik hinzufügen, um einen Namen auf eine Weise bereitstellen, die sinnvoll für Ihre <xref:System.Windows.UIElement3D>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrientationCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationOrientation GetOrientationCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationOrientation GetOrientationCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetOrientationCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationOrientation</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Ausrichtung des der <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetOrientation" /> aufgerufen.</summary>
+        <returns>
+          <see cref="F:System.Windows.Automation.Peers.AutomationOrientation.None" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Ihre <xref:System.Windows.UIElement3D> kann entweder horizontal oder vertikal ausgerichtet, überschreiben diese Methode die aktuelle Ausrichtung des zurückzugebenden der <xref:System.Windows.UIElement3D>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPattern">
+      <MemberSignature Language="C#" Value="public override object GetPattern (System.Windows.Automation.Peers.PatternInterface patternInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetPattern(valuetype System.Windows.Automation.Peers.PatternInterface patternInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternInterface" Type="System.Windows.Automation.Peers.PatternInterface" />
+      </Parameters>
+      <Docs>
+        <param name="patternInterface">Einer der Enumerationswerte.</param>
+        <summary>Gibt das Steuerelementmuster für die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />.</summary>
+        <returns>Ein Objekt, implementiert die <see cref="T:System.Windows.Automation.Provider.ISynchronizedInputProvider" /> Schnittstelle, wenn <paramref name="patternInterface" /> ist <see cref="F:System.Windows.Automation.Peers.PatternInterface.SynchronizedInput" />ist, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie die <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.GetPattern%2A> Methode, um zurückzugeben, die Steuerelementmuster gelten für Ihre <xref:System.Windows.UIElement3D>. Weitere Informationen finden Sie unter [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](~/docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasKeyboardFocusCore">
+      <MemberSignature Language="C#" Value="protected override bool HasKeyboardFocusCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HasKeyboardFocusCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.HasKeyboardFocusCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> derzeit Tastatureingabefokus hat. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.HasKeyboardFocus" /> aufgerufen.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element den Tastatureingabefokus hat; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die von erben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> müssen in der Regel nicht überschreiben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.HasKeyboardFocusCore%2A>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContentElementCore">
+      <MemberSignature Language="C#" Value="protected override bool IsContentElementCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsContentElementCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsContentElementCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> ist ein Element, das Daten enthält, die dem Benutzer angezeigt werden. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsContentElement" /> aufgerufen.</summary>
+        <returns>
+          <see langword="true" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie die <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsContentElementCore%2A> Methode Wenn Ihre <xref:System.Windows.UIElement3D> ist kein Element für Inhalt. Ein Inhaltselement enthält Daten, die dem Benutzer angezeigt werden. Ein Beispiel für ein Inhaltselement ist ein Element in einem Listenfeld oder eine Schaltfläche in einem Dialogfeld. Normalerweise verwenden Sie nicht-Inhalt-Elementen, die auch peripheren Elemente aufgerufen werden, um den Inhalt in ein zusammengesetztes Steuerelement zu bearbeiten. Ein Beispiel für ein Element nicht-Inhalt ist die Schaltfläche in einem Dropdown-Steuerelement.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsControlElementCore">
+      <MemberSignature Language="C#" Value="protected override bool IsControlElementCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsControlElementCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsControlElementCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> vom Endbenutzer als interaktiv angesehen wird. Optional, ggf. die Benutzer verstehen der <see cref="T:System.Windows.UIElement3D" /> als Teil der logischen Struktur des Steuerelements in der [!INCLUDE[TLA2#tla_gui](~/includes/tla2sharptla-gui-md.md)]. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsControlElement" /> aufgerufen.</summary>
+        <returns>
+          <see langword="true" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie diese Methode nicht.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledCore">
+      <MemberSignature Language="C#" Value="protected override bool IsEnabledCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsEnabledCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsEnabledCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> Treffertests oder den Fokus annehmen kann. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsKeyboardFocusable" /> aufgerufen.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> Treffertests oder den Fokus annehmen kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die von erben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> müssen in der Regel nicht überschreiben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsEnabledCore%2A>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyboardFocusableCore">
+      <MemberSignature Language="C#" Value="protected override bool IsKeyboardFocusableCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsKeyboardFocusableCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsKeyboardFocusableCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> über den Tastaturfokus übernehmen können. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsKeyboardFocusable" /> aufgerufen.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element den Tastaturfokus erhalten kann; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die von erben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> müssen in der Regel nicht überschreiben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsKeyboardFocusableCore%2A>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOffscreenCore">
+      <MemberSignature Language="C#" Value="protected override bool IsOffscreenCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsOffscreenCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsOffscreenCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> ist außerhalb des Bildschirms. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsOffscreen" /> aufgerufen.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element nicht auf dem Bildschirm befindet; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt keine, ob das Element sichtbar ist. In einigen Fällen ein Element wird auf dem Bildschirm jedoch immer noch nicht sichtbar ist. Angenommen, wenn das Element auf dem Bildschirm jedoch von anderen Elementen verdeckt ist, kann er nicht sichtbar. In diesem Fall gibt die Methode zurück `false`.  
+  
+ Klassen, die von erben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> müssen in der Regel nicht überschreiben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsOffscreenCore%2A>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPasswordCore">
+      <MemberSignature Language="C#" Value="protected override bool IsPasswordCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsPasswordCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsPasswordCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> geschützte Inhalte enthält. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsPassword" /> aufgerufen.</summary>
+        <returns>
+          <see langword="false" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsKeyboardFocusableCore%2A> Wenn Ihre <xref:System.Windows.UIElement3D> geschützte Inhalte, z. B. ein Kennwort enthält.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequiredForFormCore">
+      <MemberSignature Language="C#" Value="protected override bool IsRequiredForFormCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsRequiredForFormCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsRequiredForFormCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> ist erforderlich, um in einem Formular ausgefüllt werden. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsRequiredForForm" /> aufgerufen.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.UIElement3D" /> ist erforderlich, dass in einem Formular abgeschlossen ist, anderfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die <xref:System.Windows.Automation.AutomationProperties.GetIsRequiredForForm%2A?displayProperty=nameWithType> Methode, um den Wert abzurufen. <xref:System.Windows.Automation.AutomationProperties.GetIsRequiredForForm%2A?displayProperty=nameWithType>Gibt einen Wert nur, wenn die <xref:System.Windows.Automation.AutomationProperties.IsRequiredForForm%2A?displayProperty=nameWithType> festgelegt wird. Sie können außer Kraft setzen <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.IsRequiredForFormCore%2A> und Logik hinzufügen, um einen Wert angeben, die sinnvoll für Ihre <xref:System.Windows.UIElement3D>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement3D Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement3D Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.UIElement3DAutomationPeer.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />.</summary>
+        <value>Der <see cref="T:System.Windows.UIElement3D" />, der diesem <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" /> zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFocusCore">
+      <MemberSignature Language="C#" Value="protected override void SetFocusCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetFocusCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.UIElement3DAutomationPeer.SetFocusCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt den Tastatureingabefokus auf die <see cref="T:System.Windows.UIElement3D" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.UIElement3DAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.SetFocus" /> aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die von erben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer> müssen in der Regel nicht überschreiben <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer.SetFocusCore%2A>.  
+  
+ <xref:System.Windows.Automation.Peers.UIElement3DAutomationPeer>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

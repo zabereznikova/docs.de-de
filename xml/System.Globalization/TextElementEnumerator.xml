@@ -1,0 +1,282 @@
+<Type Name="TextElementEnumerator" FullName="System.Globalization.TextElementEnumerator">
+  <TypeSignature Language="C#" Value="public class TextElementEnumerator : System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TextElementEnumerator extends System.Object implements class System.Collections.IEnumerator" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.TextElementEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Listet die Textelemente einer Zeichenfolge auf.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework definiert ein Textelement als eine Einheit der Text, der als ein einzelnes Zeichen, d. h. eine zwischen graphemgruppen angezeigt wird. Ein Textelement kann eine der folgenden sein:  
+  
+-   Ein Basiszeichen, der als ein einzelnes dargestellt wird <xref:System.Char> Wert. Beispielsweise LATIN CAPITAL LETTER (U + 0041) und Basis-Zeichen mit dem LATEINISCHEN Buchstaben Kleinem (U + 00E6).  
+  
+-   Eine Kombination von Zeichen Sequenz, das ein Basiszeichen und mindestens eine Kombination von Zeichen besteht. Angenommen, z. B. LATIN CAPITAL LETTER (U + 0041) gefolgt von MACRON KOMBINIEREN (U + 0304) ist eine Kombination von Zeichen der Sequenz.  
+  
+-   Ersatzpaare, die die [Unicode-Standard](http://go.microsoft.com/fwlink/?linkid=37123) definiert als eine codierte zeichendarstellung für ein einzelnes abstraktes Zeichen, die aus einer Folge von zwei Codeeinheiten besteht: ein hohes Ersatzzeichen ist, und ein niedriges Ersatzzeichen. Ersatzzeichenpaare werden verwendet, um Zeichen außerhalb der grundlegenden mehrsprachigen Ebene von Unicode-UTF-8-codierte Zeichen darstellen. GOTHIC Buchstaben SAUIL (U + 10343) wird z. B. in UTF-8-Codierung als ein hohes Ersatzzeichen, dessen Wert 0xD800 ist, und ein niedriges Ersatzzeichen, dessen Wert 0xdf43, dargestellt. Ein Ersatzzeichenpaar kann ein Basiszeichen oder eine Kombination von Zeichen darstellen.  
+  
+ Die <xref:System.Globalization.TextElementEnumerator> Klasse können Sie mit die Textelemente einer Zeichenfolge anstatt mit einzelnen <xref:System.Char> Objekte.  
+  
+ Instanziieren Sie ein <xref:System.Globalization.TextElementEnumerator> Objekt, das eine bestimmte Zeichenfolge darstellt, durch Übergeben der Zeichenfolge an die <xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A?displayProperty=nameWithType> Methode. Einen Enumerator, der vor dem ersten Textelement in der Zeichenfolge positioniert wird zurückgegeben. Aufrufen der <xref:System.Globalization.TextElementEnumerator.Reset%2A> Methode setzt den Enumerator ebenfalls auf diese Position zurück. Da dies einen ungültigen Status darstellt, rufen Sie <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> um den Enumerator auf das erste Textelement der Zeichenfolge zu setzen, vor dem Lesen des Werts von der <xref:System.Globalization.TextElementEnumerator.Current%2A> Eigenschaft, um das aktuelle Textelement zurückzugeben.  
+  
+ Bei der Arbeit mit einem <xref:System.Globalization.TextElementEnumerator> -Objekt, Sie sind verantwortlich für die Positionierung des Enumerators. Die <xref:System.Globalization.TextElementEnumerator.Current%2A> -Eigenschaft gibt den gleichen Text-Element zurück, bis Sie entweder Aufrufen <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> oder <xref:System.Globalization.TextElementEnumerator.Reset%2A>. Der Enumerator ist in einem ungültigen Zustand, wenn er vor dem ersten Textelement oder hinter dem letzten Textelement in der Zeichenfolge befindet. Wenn der Enumerator in einem ungültigen Zustand befindet, versuchen Sie zum Abrufen des Werts von der <xref:System.Globalization.TextElementEnumerator.Current%2A> -Eigenschaft löst eine Ausnahme aus. Sie können bestimmen, ob der Enumerator durch das Testen in einem ungültigen Zustand befindet, ob der Rückgabewert von der <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> Eigenschaft ist `false`.  
+  
+ Die <xref:System.Globalization.TextElementEnumerator> -Objekt stellt eine Momentaufnahme des aktuellen Zustands eines String-Variable oder ein Zeichenfolgenliteral im Moment dar, die die <xref:System.Globalization.TextElementEnumerator> Objekt instanziiert wird. Hinweis:  
+  
+-   Text-Element Enumeratoren können nur verwendet werden, um Daten in einer Zeichenfolge zu lesen. Die zugrunde liegende Zeichenfolge ändern nicht.  
+  
+-   Ein Enumerator besitzt nicht exklusiven Zugriff auf die Zeichenfolge, die es darstellt. Eine Zeichenfolgenvariable kann geändert werden, nachdem der Enumerator erstellt wurde.  
+  
+-   Ein <xref:System.Globalization.TextElementEnumerator> Objekt listet die Textelemente, die zum Zeitpunkt in der Zeichenfolge vorhanden, die die <xref:System.Globalization.TextElementEnumerator> Objekt instanziiert wurde. Alle nachfolgenden Änderungen der Zeichenfolgenvariablen reflektiert nicht, wenn diese Variable anschließend geändert wird.  
+  
+-   Da die <xref:System.Globalization.TextElementEnumerator> Klasse überschreibt nicht <xref:System.Object.Equals%2A?displayProperty=nameWithType>, zwei <xref:System.Globalization.TextElementEnumerator> Objekte, die die gleiche Zeichenfolge darstellen werden als ungleich betrachtet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Globalization.TextElementEnumerator> Klasse, um die Textelemente einer Zeichenfolge aufgelistet.  
+  
+ [!code-cpp[System.Globalization.TextElementEnumerator.Summary#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.TextElementEnumerator.Summary/CPP/tee_summary.cpp#1)]
+ [!code-csharp[System.Globalization.TextElementEnumerator.Summary#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.TextElementEnumerator.Summary/CS/tee_summary.cs#1)]
+ [!code-vb[System.Globalization.TextElementEnumerator.Summary#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.TextElementEnumerator.Summary/VB/tee_summary.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public object Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Current" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.TextElementEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Textelement in der Zeichenfolge ab.</summary>
+        <value>Ein Objekt, das das aktuelle Textelement in der Zeichenfolge enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Erstellen eines Enumerators oder nach einem <xref:System.Globalization.TextElementEnumerator.Reset%2A> aufgerufen wird, <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> muss aufgerufen werden, um den Enumerator auf das erste Textelement der Zeichenfolge vor dem Lesen des Werts von <xref:System.Globalization.TextElementEnumerator.Current%2A>. Andernfalls <xref:System.Globalization.TextElementEnumerator.Current%2A> ist nicht definiert.  
+  
+ <xref:System.Globalization.TextElementEnumerator.Current%2A>Außerdem löst eine Ausnahme aus, wenn der letzte Aufruf <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> zurückgegebene `false`, gibt das Ende der Zeichenfolge an.  
+  
+ <xref:System.Globalization.TextElementEnumerator.Current%2A>Verschiebt die Position des Enumerators und aufeinander folgende Aufrufe von nicht <xref:System.Globalization.TextElementEnumerator.Current%2A> dasselbe Objekt zurück, bis entweder <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> oder <xref:System.Globalization.TextElementEnumerator.Reset%2A> aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Enumerator wird vor dem ersten Textelement der Zeichenfolge oder hinter dem letzten Textelement positioniert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementIndex">
+      <MemberSignature Language="C#" Value="public int ElementIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ElementIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.TextElementEnumerator.ElementIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des Textelements ab, über dem sich der Enumerator gerade befindet.</summary>
+        <value>Der Index des Textelements, über dem sich der Enumerator gerade befindet.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Enumerator wird vor dem ersten Textelement der Zeichenfolge oder hinter dem letzten Textelement positioniert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextElement">
+      <MemberSignature Language="C#" Value="public string GetTextElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetTextElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextElementEnumerator.GetTextElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das aktuelle Textelement in der Zeichenfolge ab.</summary>
+        <returns>Eine neue Zeichenfolge, die das aktuelle Textelement aus der gerade gelesenen Zeichenfolge enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den gleichen Text-Element als der <xref:System.Globalization.TextElementEnumerator.Current%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Enumerator wird vor dem ersten Textelement der Zeichenfolge oder hinter dem letzten Textelement positioniert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextElementEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf das nächste Textelement der Zeichenfolge.</summary>
+        <returns>
+          <see langword="true" />, wenn der Enumerator erfolgreich auf das nächste Textelement gesetzt wurde, <see langword="false" />, wenn der Enumerator das Ende der Zeichenfolge überschritten hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Erstellen eines Enumerators oder nach einem <xref:System.Globalization.TextElementEnumerator.Reset%2A> wird aufgerufen, wird der Enumerator vor das erste Textelement der Zeichenfolge und der erste Aufruf von positioniert <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> setzt den Enumerator auf das erste Textelement der Zeichenfolge.  
+  
+ Wenn die Zeichenfolge geändert wird, nachdem dieser Enumerator erstellt wurde, <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> löst eine Ausnahme aus.  
+  
+ Nach das Ende der Zeichenfolge übergeben, geben nachfolgende Aufrufe ist <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> zurückgeben `false` bis <xref:System.Globalization.TextElementEnumerator.Reset%2A> aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextElementEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf seine anfängliche Position vor dem ersten Textelement in der Zeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.TextElementEnumerator.Reset%2A> Methode verschiebt den Enumerator auf den Anfang der Zeichenfolge, vor dem ersten Textelement. Nach dem Aufruf <xref:System.Globalization.TextElementEnumerator.Reset%2A>, rufen Sie <xref:System.Globalization.TextElementEnumerator.MoveNext%2A> um den Enumerator auf das erste Textelement der Zeichenfolge vor dem Aufruf <xref:System.Globalization.TextElementEnumerator.Current%2A> , den Wert des ersten Textelements zu lesen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

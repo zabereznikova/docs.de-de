@@ -1,0 +1,75 @@
+<Type Name="IColorizeText" FullName="Microsoft.JScript.IColorizeText">
+  <TypeSignature Language="C#" Value="public interface IColorizeText" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IColorizeText" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.IColorizeText" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("DB283E60-7ADB-4cf6-9758-2931893A12FC")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definieren die Dienste für die farbliche Kennzeichnung Text, wenn JScript-Code in einem Editor erstellt wird.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Colorize">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.ITokenEnumerator Colorize (string sourceCode, Microsoft.JScript.SourceState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.JScript.ITokenEnumerator Colorize(string sourceCode, valuetype Microsoft.JScript.SourceState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IColorizeText.Colorize(System.String,Microsoft.JScript.SourceState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ITokenEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceCode" Type="System.String" />
+        <Parameter Name="state" Type="Microsoft.JScript.SourceState" />
+      </Parameters>
+      <Docs>
+        <param name="sourceCode">Der Quellcode, die zur farblichen Kennzeichnung der.</param>
+        <param name="state">Der aktuelle Status (normal, Comment, String) des Quellcodes.</param>
+        <summary>Bei Implementierung in einer Klasse, durchsucht den angegebenen Quellcode nach einzelnen Einheiten von Code, und gibt die Farbe, die aufweisen sollte.</summary>
+        <returns>Eine Enumeration von <see cref="T:Microsoft.JScript.ITokenColorInfo" /> Objekte, die zur farblichen Kennzeichnung der Einheiten von Code darstellen.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetStateForText">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.SourceState GetStateForText (string sourceCode, Microsoft.JScript.SourceState currentState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Microsoft.JScript.SourceState GetStateForText(string sourceCode, valuetype Microsoft.JScript.SourceState currentState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IColorizeText.GetStateForText(System.String,Microsoft.JScript.SourceState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.SourceState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceCode" Type="System.String" />
+        <Parameter Name="currentState" Type="Microsoft.JScript.SourceState" />
+      </Parameters>
+      <Docs>
+        <param name="sourceCode">Der Quellcode zu analysieren.</param>
+        <param name="currentState">Der aktuelle Status (normal, Comment, String) des Quellcodes.</param>
+        <summary>Bei Implementierung in einer Klasse durchsucht den angegebenen Quellcode nach einzelnen Einheiten von Code und identifiziert den Status (normal, Kommentar, Zeichenfolge) des angegebenen Codes.</summary>
+        <returns>Der Status des Quellcodes.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

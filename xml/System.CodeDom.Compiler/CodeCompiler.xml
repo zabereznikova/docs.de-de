@@ -1,0 +1,658 @@
+<Type Name="CodeCompiler" FullName="System.CodeDom.Compiler.CodeCompiler">
+  <TypeSignature Language="C#" Value="public abstract class CodeCompiler : System.CodeDom.Compiler.CodeGenerator, System.CodeDom.Compiler.ICodeCompiler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CodeCompiler extends System.CodeDom.Compiler.CodeGenerator implements class System.CodeDom.Compiler.ICodeCompiler" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.CodeCompiler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.Compiler.CodeGenerator</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.CodeDom.Compiler.ICodeCompiler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine beispielimplementierung der <see cref="T:System.CodeDom.Compiler.ICodeCompiler" /> Schnittstelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.Compiler.CodeCompiler>ist eine nützliches Dienstprogramm Basisklasse für Code-Generatoren von ableiten, um Code Kompilierung Funktionen bereitzustellen.  
+  
+> [!NOTE]
+>  Diese Klasse enthält einen Linkaufruf und einer vererbungsanforderung auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder die abgeleitete Klasse volle Vertrauenswürdigkeit verfügt. Weitere Informationen zu sicherheitsforderungen, finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) und [Vererbungsanforderungen](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CodeCompiler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.Compiler.CodeCompiler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CmdArgsFromParameters">
+      <MemberSignature Language="C#" Value="protected abstract string CmdArgsFromParameters (System.CodeDom.Compiler.CompilerParameters options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string CmdArgsFromParameters(class System.CodeDom.Compiler.CompilerParameters options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.CmdArgsFromParameters(System.CodeDom.Compiler.CompilerParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> , der die Compileroptionen angibt.</param>
+        <summary>Ruft die Befehlsargumente an den Compiler übergeben werden, aus dem angegebenen <see cref="T:System.CodeDom.Compiler.CompilerParameters" />.</summary>
+        <returns>Die Befehlsargumente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompilerName">
+      <MemberSignature Language="C#" Value="protected abstract string CompilerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CompilerName" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeCompiler.CompilerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Compilers ausführbaren Datei ab.</summary>
+        <value>Der Name des ausführbaren-Compilers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den Namen der aufzurufenden ausführbaren Compilerdatei an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileExtension">
+      <MemberSignature Language="C#" Value="protected abstract string FileExtension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileExtension" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeCompiler.FileExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Dateinamenerweiterung für Quelldateien verwendet.</summary>
+        <value>Die Dateinamenerweiterung für Quelldateien verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die Dateinamenerweiterung der Quelldateien, die kompiliert werden müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromDom">
+      <MemberSignature Language="C#" Value="protected virtual System.CodeDom.Compiler.CompilerResults FromDom (System.CodeDom.Compiler.CompilerParameters options, System.CodeDom.CodeCompileUnit e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults FromDom(class System.CodeDom.Compiler.CompilerParameters options, class System.CodeDom.CodeCompileUnit e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.FromDom(System.CodeDom.Compiler.CompilerParameters,System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="e" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="e">Ein <see cref="T:System.CodeDom.CodeCompileUnit" /> Objekt, das die Quelle für die Kompilierung angibt.</param>
+        <summary>Kompiliert die angegebene Kompilierungseinheit mit den angegebenen Optionen und gibt die Ergebnisse der Kompilierung zurück.</summary>
+        <returns>Die Ergebnisse der Kompilierung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="options" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Kompilierung. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromDomBatch">
+      <MemberSignature Language="C#" Value="protected virtual System.CodeDom.Compiler.CompilerResults FromDomBatch (System.CodeDom.Compiler.CompilerParameters options, System.CodeDom.CodeCompileUnit[] ea);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults FromDomBatch(class System.CodeDom.Compiler.CompilerParameters options, class System.CodeDom.CodeCompileUnit[] ea) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.FromDomBatch(System.CodeDom.Compiler.CompilerParameters,System.CodeDom.CodeCompileUnit[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="ea" Type="System.CodeDom.CodeCompileUnit[]" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="ea">Ein Array von <see cref="T:System.CodeDom.CodeCompileUnit" /> -Objekten, die die Quelle für die Kompilierung angibt.</param>
+        <summary>Kompiliert die angegebenen Kompilierungseinheiten mit den angegebenen Optionen und gibt die Ergebnisse der Kompilierung zurück.</summary>
+        <returns>Die Ergebnisse der Kompilierung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="options" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="ea" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Kompilierung. Die zugeordnete Enumeration ist<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromFile">
+      <MemberSignature Language="C#" Value="protected virtual System.CodeDom.Compiler.CompilerResults FromFile (System.CodeDom.Compiler.CompilerParameters options, string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults FromFile(class System.CodeDom.Compiler.CompilerParameters options, string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.FromFile(System.CodeDom.Compiler.CompilerParameters,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="fileName">Der Name der Datei zu kompilieren.</param>
+        <summary>Kompiliert die angegebene Datei mit den angegebenen Optionen und gibt die Ergebnisse der Kompilierung zurück.</summary>
+        <returns>Die Ergebnisse der Kompilierung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="options" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Kompilierung. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromFileBatch">
+      <MemberSignature Language="C#" Value="protected virtual System.CodeDom.Compiler.CompilerResults FromFileBatch (System.CodeDom.Compiler.CompilerParameters options, string[] fileNames);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults FromFileBatch(class System.CodeDom.Compiler.CompilerParameters options, string[] fileNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.FromFileBatch(System.CodeDom.Compiler.CompilerParameters,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="fileNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="fileNames">Ein Array von Zeichenfolgen, die Dateinamen der zu kompilierenden Dateien angibt.</param>
+        <summary>Kompiliert die angegebenen Dateien mit den angegebenen Optionen und gibt die Ergebnisse der Kompilierung zurück.</summary>
+        <returns>Die Ergebnisse der Kompilierung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="options" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="fileNames" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Kompilierung. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromSource">
+      <MemberSignature Language="C#" Value="protected virtual System.CodeDom.Compiler.CompilerResults FromSource (System.CodeDom.Compiler.CompilerParameters options, string source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults FromSource(class System.CodeDom.Compiler.CompilerParameters options, string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.FromSource(System.CodeDom.Compiler.CompilerParameters,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="source">Die Quellzeichenfolge des Code zu kompilieren.</param>
+        <summary>Kompiliert die angegebene Code Quellzeichenfolge mit den angegebenen Optionen und gibt die Ergebnisse der Kompilierung zurück.</summary>
+        <returns>Die Ergebnisse der Kompilierung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="options" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Kompilierung. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromSourceBatch">
+      <MemberSignature Language="C#" Value="protected virtual System.CodeDom.Compiler.CompilerResults FromSourceBatch (System.CodeDom.Compiler.CompilerParameters options, string[] sources);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults FromSourceBatch(class System.CodeDom.Compiler.CompilerParameters options, string[] sources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.FromSourceBatch(System.CodeDom.Compiler.CompilerParameters,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="sources" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="sources">Ein Array von Zeichenfolgen, enthält den Quellcode zu kompilieren.</param>
+        <summary>Kompiliert die angegebene Quelle Codezeichenfolgen, die mit den angegebenen Optionen und gibt die Ergebnisse der Kompilierung zurück.</summary>
+        <returns>Die Ergebnisse der Kompilierung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="options" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="sources" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Kompilierung. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResponseFileCmdArgs">
+      <MemberSignature Language="C#" Value="protected virtual string GetResponseFileCmdArgs (System.CodeDom.Compiler.CompilerParameters options, string cmdArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetResponseFileCmdArgs(class System.CodeDom.Compiler.CompilerParameters options, string cmdArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.GetResponseFileCmdArgs(System.CodeDom.Compiler.CompilerParameters,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="cmdArgs" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="cmdArgs">Eine Befehlszeichenfolge Argumente.</param>
+        <summary>Ruft die Befehlsargumente beim Aufrufen des Compilers verwenden, um eine Antwortdatei zu generieren.</summary>
+        <returns>Die Befehlsargumente zum Generieren einer Antwortdatei oder <see langword="null" /> , wenn keine Antwort Dateiargumente vorhanden sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JoinStringArray">
+      <MemberSignature Language="C#" Value="protected static string JoinStringArray (string[] sa, string separator);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig string JoinStringArray(string[] sa, string separator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.JoinStringArray(System.String[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sa" Type="System.String[]" />
+        <Parameter Name="separator" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sa">Das Array von Zeichenfolgen zu verknüpfen.</param>
+        <param name="separator">das Trennzeichen verwenden.</param>
+        <summary>Verknüpft die angegebenen Zeichenfolgenarrays an.</summary>
+        <returns>Die verkettete Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCompilerOutputLine">
+      <MemberSignature Language="C#" Value="protected abstract void ProcessCompilerOutputLine (System.CodeDom.Compiler.CompilerResults results, string line);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ProcessCompilerOutputLine(class System.CodeDom.Compiler.CompilerResults results, string line) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.ProcessCompilerOutputLine(System.CodeDom.Compiler.CompilerResults,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.CodeDom.Compiler.CompilerResults" />
+        <Parameter Name="line" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="results">Ein <see cref="T:System.CodeDom.Compiler.CompilerResults" /> , der die Ergebnisse der Kompilierung angibt.</param>
+        <param name="line">Die Zeile zu verarbeiten.</param>
+        <summary>Verarbeitet die angegebene Zeile aus dem angegebenen <see cref="T:System.CodeDom.Compiler.CompilerResults" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromDom">
+      <MemberSignature Language="C#" Value="System.CodeDom.Compiler.CompilerResults ICodeCompiler.CompileAssemblyFromDom (System.CodeDom.Compiler.CompilerParameters options, System.CodeDom.CodeCompileUnit e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromDom(class System.CodeDom.Compiler.CompilerParameters options, class System.CodeDom.CodeCompileUnit e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.System#CodeDom#Compiler#ICodeCompiler#CompileAssemblyFromDom(System.CodeDom.Compiler.CompilerParameters,System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="e" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="e">Ein <see cref="T:System.CodeDom.CodeCompileUnit" /> , der die Quelle für die Kompilierung angibt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromDom(System.CodeDom.Compiler.CompilerParameters,System.CodeDom.CodeCompileUnit)" />.</summary>
+        <returns>Die Ergebnisse der Kompilierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.CodeDom.Compiler.CodeCompiler>-Instanz in eine <xref:System.CodeDom.Compiler.ICodeCompiler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="options" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Kompilierung. Die zugeordnete Enumeration ist<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromDomBatch">
+      <MemberSignature Language="C#" Value="System.CodeDom.Compiler.CompilerResults ICodeCompiler.CompileAssemblyFromDomBatch (System.CodeDom.Compiler.CompilerParameters options, System.CodeDom.CodeCompileUnit[] ea);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromDomBatch(class System.CodeDom.Compiler.CompilerParameters options, class System.CodeDom.CodeCompileUnit[] ea) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.System#CodeDom#Compiler#ICodeCompiler#CompileAssemblyFromDomBatch(System.CodeDom.Compiler.CompilerParameters,System.CodeDom.CodeCompileUnit[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="ea" Type="System.CodeDom.CodeCompileUnit[]" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="ea">Ein Array von <see cref="T:System.CodeDom.CodeCompileUnit" /> -Objekten, die die Quelle für die Kompilierung angibt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromDomBatch(System.CodeDom.Compiler.CompilerParameters,System.CodeDom.CodeCompileUnit[])" />.</summary>
+        <returns>Die Ergebnisse der Kompilierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.CodeDom.Compiler.CodeCompiler>-Instanz in eine <xref:System.CodeDom.Compiler.ICodeCompiler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Kompilierung. Die zugeordnete Enumeration ist<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromFile">
+      <MemberSignature Language="C#" Value="System.CodeDom.Compiler.CompilerResults ICodeCompiler.CompileAssemblyFromFile (System.CodeDom.Compiler.CompilerParameters options, string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromFile(class System.CodeDom.Compiler.CompilerParameters options, string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.System#CodeDom#Compiler#ICodeCompiler#CompileAssemblyFromFile(System.CodeDom.Compiler.CompilerParameters,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="fileName">Der Name der Datei zu kompilieren.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromFile(System.CodeDom.Compiler.CompilerParameters,System.String)" />.</summary>
+        <returns>Die Ergebnisse der Kompilierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.CodeDom.Compiler.CodeCompiler>-Instanz in eine <xref:System.CodeDom.Compiler.ICodeCompiler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="options" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Kompilierung. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromFileBatch">
+      <MemberSignature Language="C#" Value="System.CodeDom.Compiler.CompilerResults ICodeCompiler.CompileAssemblyFromFileBatch (System.CodeDom.Compiler.CompilerParameters options, string[] fileNames);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromFileBatch(class System.CodeDom.Compiler.CompilerParameters options, string[] fileNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.System#CodeDom#Compiler#ICodeCompiler#CompileAssemblyFromFileBatch(System.CodeDom.Compiler.CompilerParameters,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="fileNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="fileNames">Ein Array von Zeichenfolgen, das die Dateinamen zum Kompilieren angibt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromFileBatch(System.CodeDom.Compiler.CompilerParameters,System.String[])" />.</summary>
+        <returns>Die Ergebnisse der Kompilierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.CodeDom.Compiler.CodeCompiler>-Instanz in eine <xref:System.CodeDom.Compiler.ICodeCompiler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Kompilierung. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromSource">
+      <MemberSignature Language="C#" Value="System.CodeDom.Compiler.CompilerResults ICodeCompiler.CompileAssemblyFromSource (System.CodeDom.Compiler.CompilerParameters options, string source);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromSource(class System.CodeDom.Compiler.CompilerParameters options, string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.System#CodeDom#Compiler#ICodeCompiler#CompileAssemblyFromSource(System.CodeDom.Compiler.CompilerParameters,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="source">Eine Zeichenfolge, die den Quellcode zu kompilieren.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromSource(System.CodeDom.Compiler.CompilerParameters,System.String)" />.</summary>
+        <returns>Die Ergebnisse der Kompilierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.CodeDom.Compiler.CodeCompiler>-Instanz in eine <xref:System.CodeDom.Compiler.ICodeCompiler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="options" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Kompilierung. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromSourceBatch">
+      <MemberSignature Language="C#" Value="System.CodeDom.Compiler.CompilerResults ICodeCompiler.CompileAssemblyFromSourceBatch (System.CodeDom.Compiler.CompilerParameters options, string[] sources);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromSourceBatch(class System.CodeDom.Compiler.CompilerParameters options, string[] sources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeCompiler.System#CodeDom#Compiler#ICodeCompiler#CompileAssemblyFromSourceBatch(System.CodeDom.Compiler.CompilerParameters,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="sources" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Compileroptionen angibt.</param>
+        <param name="sources">Ein Array von Zeichenfolgen, die den Quellcode zu kompilieren.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromSourceBatch(System.CodeDom.Compiler.CompilerParameters,System.String[])" />.</summary>
+        <returns>Die Ergebnisse der Kompilierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.CodeDom.Compiler.CodeCompiler>-Instanz in eine <xref:System.CodeDom.Compiler.ICodeCompiler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="options" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Kompilierung. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

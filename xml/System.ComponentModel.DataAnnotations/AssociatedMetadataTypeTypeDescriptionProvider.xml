@@ -1,0 +1,93 @@
+<Type Name="AssociatedMetadataTypeTypeDescriptionProvider" FullName="System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider">
+  <TypeSignature Language="C#" Value="public class AssociatedMetadataTypeTypeDescriptionProvider : System.ComponentModel.TypeDescriptionProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssociatedMetadataTypeTypeDescriptionProvider extends System.ComponentModel.TypeDescriptionProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeDescriptionProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erweitert die Metadateninformationen für eine Klasse durch Hinzufügen von Attributen und Informationen, die in eine zugeordnete Klasse definiert ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider> Klasse dynamisch erweitert die Typinformationen, die einen Typ oder ein Objekt durch Hinzufügen, ändern oder Ausblenden von Eigenschaften, z. B. Attribute, Eigenschaften und Ereignisse zugeordnet. Weitere Informationen finden Sie unter <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssociatedMetadataTypeTypeDescriptionProvider (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, für den der Metadatenanbieter erstellt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider" /> -Klasse unter Verwendung des angegebenen Typs.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssociatedMetadataTypeTypeDescriptionProvider (Type type, Type associatedMetadataType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, class System.Type associatedMetadataType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="associatedMetadataType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, für den der Metadatenanbieter erstellt wird.</param>
+        <param name="associatedMetadataType">Der zugeordnete Typ, der die Metadaten enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider" />-Klasse unter Verwendung des angegebenen Metadatenanbietertyps und des zugeordneten Typs.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert von <paramref name="associatedMetadataType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeDescriptor">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor (Type objectType, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor(class System.Type objectType, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider.GetTypeDescriptor(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ICustomTypeDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Type" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objectType">Der Typ des Objekts, für den Typdeskriptor abgerufen werden soll.</param>
+        <param name="instance">Eine Instanz des Typs.</param>
+        <summary>Ruft einen Typdeskriptor für den angegebenen Typ und Objekt ab.</summary>
+        <returns>Der Deskriptor, der Metadaten für den Typ bereitstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

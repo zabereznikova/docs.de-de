@@ -1,0 +1,95 @@
+<Type Name="IteratorStateMachineAttribute" FullName="System.Runtime.CompilerServices.IteratorStateMachineAttribute">
+  <TypeSignature Language="C#" Value="public sealed class IteratorStateMachineAttribute : System.Runtime.CompilerServices.StateMachineAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit IteratorStateMachineAttribute extends System.Runtime.CompilerServices.StateMachineAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.IteratorStateMachineAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.CompilerServices.StateMachineAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob eine Methode in Visual Basic markiert ist, mit der <see langword="Iterator" /> Modifizierer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten nicht anwenden, die `IteratorStateMachine` -Attribut auf Methoden im Code. Für Methoden in Visual Basic, die über die [Iterator](~/docs/visual-basic/language-reference/modifiers/iterator.md) Modifizierer, der Compiler gelten die `IteratorStateMachine` -Attribut in die IL aus, die ihn ausgibt.  
+  
+ Wenn eine Methode (*MethodName*) in Visual Basic hat die `Iterator` Modifizierer verwenden, gibt der Compiler die IL aus, die eine Computer Zustandsstruktur enthält. Diese Struktur enthält den Code in der Methode. IL auch eine Stub-Methode enthält (*MethodName*) in der Zustandsautomat aufruft. Der Compiler fügt den `IteratorStateMachine` -Attribut auf die Stubmethode, sodass Tools das entsprechenden Zustandsautomat ermitteln können. Details zu den ausgegebenen IL-Code können in zukünftigen Versionen der Compiler ändern.  
+  
+ Eine Iterator-Methode führt eine benutzerdefinierte Iteration durch eine Auflistung mit den `Yield` -Anweisung (Visual Basic), um jedes Element einzeln nacheinander zurückzugeben. Weitere Informationen finden Sie unter [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+  
+> [!NOTE]
+>  Sie können keine `IteratorStateMachineAttribute` zu prüfen, ob eine Methode eine Iteratormethode in C# geschrieben ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie zu bestimmen, ob eine Methode eine Iteratormethode ist. Im Beispiel `IsIteratorMethod` führt die folgenden Schritte aus:  
+  
+-   Ruft eine <xref:System.Reflection.MethodInfo> Objekt für den Methodennamen mit <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>.  
+  
+-   Ruft eine <xref:System.Type> Objekt für das Attribut mit [Operators "GetType"](~/docs/visual-basic/language-reference/operators/gettype-operator.md).  
+  
+-   Erhält ein Attributobjekt für die Methode und Attribut mit `MethodInfo.GetCustomAttribute`. Wenn `GetCustomAttribute` gibt `Nothing` (Visual Basic), die Methode nicht das Attribut enthalten.  
+  
+ [!code-vb[Runtime.CompilerServices.AsyncStateMachineAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/runtime.compilerservices.asyncstatemachineattribute/vb/module2.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IteratorStateMachineAttribute (Type stateMachineType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type stateMachineType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.IteratorStateMachineAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stateMachineType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="stateMachineType">Das Typobjekt für den zugrunde liegenden Zustand Computertyp, der verwendet wird, um eine zustandsautomatenmethode zu implementieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.CompilerServices.IteratorStateMachineAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

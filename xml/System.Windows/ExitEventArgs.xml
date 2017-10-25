@@ -1,0 +1,49 @@
+<Type Name="ExitEventArgs" FullName="System.Windows.ExitEventArgs">
+  <TypeSignature Language="C#" Value="public class ExitEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExitEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ExitEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ereignisargumente für das <see cref="E:System.Windows.Application.Exit" />-Ereignis.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationExitCode">
+      <MemberSignature Language="C#" Value="public int ApplicationExitCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ApplicationExitCode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ExitEventArgs.ApplicationExitCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Exitcode, den eine Anwendung für das Betriebssystem zurückgibt, wenn die Anwendung beendet wird.</summary>
+        <value>Der Exitcode, den eine Anwendung für das Betriebssystem zurückgibt, wenn die Anwendung beendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Anwendung gibt in der Regel einen Exitcode zurück, für das Betriebssystem, um anzugeben, ob eine Anwendung wurde erfolgreich beendet wurde. Eine Anwendung beenden-Codewert des **0** (Standard) wird häufig verwendet, um einen Erfolg zu melden. Allerdings können Sie Codewerte beenden zurück, die für Ihre Anwendung geeignet sind.  
+  
+ Sie können einen Exitcode angeben, durch Behandeln der <xref:System.Windows.Application.Exit> Ereignis und Einstellung <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> durch einen geeigneten Wert.  
+  
+> [!NOTE]
+>  Sie können auch einen Exitcode angeben, durch den Aufruf <xref:System.Windows.Application.Shutdown%2A> Methode. Wenn Sie dies tun, den Wert der <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> ist der Wert des Exitcodes, die Sie zum übergeben <xref:System.Windows.Application.Shutdown%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

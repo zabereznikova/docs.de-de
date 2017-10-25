@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Forms.Design">
+  <Docs>
+    <summary>Die <see cref="N:System.Windows.Forms.Design" /> -Namespace enthält Klassen, die während der Entwurfszeit-Konfiguration und das Verhalten von Windows Forms-Komponenten unterstützen. Diese Klassen bestehen aus Designerklassen, die Unterstützung für Windows Forms-Komponenten, einen Satz von Entwurfszeitdienste bereitzustellen. <see langword="UITypeEditor" /> Klassen zum Konfigurieren bestimmter Typen von Eigenschaften und Klassen zum Importieren von ActiveX-Steuerelemente.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

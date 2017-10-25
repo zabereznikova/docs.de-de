@@ -1,0 +1,265 @@
+<Type Name="Transform" FullName="System.Windows.Media.Transform">
+  <TypeSignature Language="C#" Value="public abstract class Transform : System.Windows.Media.GeneralTransform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Transform extends System.Windows.Media.GeneralTransform" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Transform" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.GeneralTransform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Media.TransformConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Media.Converters.TransformValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Funktionalität, die Transformationen in einer 2-D-Ebene aktiviert. Die Transformationen beinhalten Drehung (<see cref="T:System.Windows.Media.RotateTransform" />), Skalierung (<see cref="T:System.Windows.Media.ScaleTransform" />), Neigung (<see cref="T:System.Windows.Media.SkewTransform" />) und Verschiebung (<see cref="T:System.Windows.Media.TranslateTransform" />). Diese Klassenhierarchie unterscheidet sich von der <see cref="T:System.Windows.Media.Matrix" />-Struktur, da sie eine Klasse darstellt und die Semantik für Animation und Enumeration unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.MatrixTransform> Klasse, um benutzerdefinierte Transformationen erstellen, die nicht enthalten sind die <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.Media.ScaleTransform>, <xref:System.Windows.Media.SkewTransform>, und <xref:System.Windows.Media.TranslateTransform> Klassen.  
+  
+ Ein [!INCLUDE[TLA#tla_2d](~/includes/tlasharptla-2d-md.md)] X-y-Ebene wird eine 3 x 3-Matrix für Transformationen verwendet. Sie können affine Transformation Matrizen bis hin zu lineare Transformationen, wie Drehung und Neigung (Scherung) multiplizieren, die Übersetzung folgen.  
+  
+ Eine affine Transformationsmatrix hat die letzte Spalte gleich (0, 0, 1) aus diesem Grund müssen Sie nur die Elemente in den ersten beiden Spalten angeben.  
+  
+ Ein [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Matrix> weist die folgende Struktur:  
+  
+||||  
+|-|-|-|  
+|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|  
+|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|  
+  
+ Die Elemente in der letzten Zeile <xref:System.Windows.Media.Matrix.OffsetX%2A> und <xref:System.Windows.Media.Matrix.OffsetY%2A>, Übersetzungswerte darstellen.  
+  
+ Methoden und Eigenschaften geben die Transformationsmatrix i. d. r. als ein Vektor, der nur sechs Member aufweist; Sie lauten wie folgt:  
+  
+ (<xref:System.Windows.Media.Matrix.M11%2A>, <xref:System.Windows.Media.Matrix.M12%2A>, <xref:System.Windows.Media.Matrix.M21%2A>, <xref:System.Windows.Media.Matrix.M22%2A>, <xref:System.Windows.Media.Matrix.OffsetX%2A>, <xref:System.Windows.Media.Matrix.OffsetY%2A>)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Transform Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Transform Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Transform.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine änderbare Kopie dieses <see cref="T:System.Windows.Media.Transform" />-Objekts, indem tiefe Kopien seiner Werte erzeugt werden.</summary>
+        <returns>Eine änderbare tiefe Kopie des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts gibt <see langword="false" /> zurück, selbst wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie schreibgeschützte änderbare Kopien erzeugen <xref:System.Windows.Freezable> Objekte. Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Wenn Abhängigkeitseigenschaften diese Methode kopiert kopiert Ressource Ressourcenverweise und datenbindungen, obwohl sie nicht mehr aufgelöst werden können. Er kopiert keine Animationen oder ihre aktuellen Werte.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Transform CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Transform CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Transform.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Transform" /> Objekt, indem tiefe Kopien seiner Werte. Diese Methode wird nicht Ressourcenverweise, datenbindungen und Animationen, kopiert, auch wenn sie ihre aktuellen Werte kopiert.</summary>
+        <returns>Eine änderbare tiefe Kopie des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" /> -Eigenschaft des geklonten Objekts ist <see langword="false" /> selbst wenn die <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft der Quelle ist <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie schreibgeschützte änderbare Kopien erzeugen <xref:System.Windows.Freezable> Objekte. Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Transform Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Transform Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Transform.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Identitätstransformation ab.</summary>
+        <value>Eine Identitätstransformation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Identitätstransformation (Identitätsmatrix), die die folgende Konfiguration aufweist:  
+  
+||||  
+|-|-|-|  
+|1|0|0|  
+|0|1|0|  
+|0|0|1|  
+  
+ Wenn Sie eine Identitätsmatrix anwenden, wird das Objekt nicht geändert. Es ist z. B. Multiplikation mit `1`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inverse">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.GeneralTransform Inverse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.GeneralTransform Inverse" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Transform.Inverse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GeneralTransform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Umkehrung dieser Transformation ab, falls vorhanden.</summary>
+        <value>Die Umkehrung der Transformation, falls vorhanden; andernfalls <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Transform Parse (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Transform Parse(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Transform.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Sechs durch Kommas getrennte <see cref="T:System.Double" /> Werte, die die neue beschreiben <see cref="T:System.Windows.Media.Transform" />. Siehe auch "Hinweise".</param>
+        <summary>Erstellt ein neues <see cref="T:System.Windows.Media.Transform" /> über die angegebene Zeichenfolgendarstellung einer Transformationsmatrix.</summary>
+        <returns>Eine neue Transformation, die aus der angegebenen Zeichenfolge erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der Verwendung von XAML-Attributen Teil der <xref:System.Windows.Media.MatrixTransform> Seite-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformBounds">
+      <MemberSignature Language="C#" Value="public override System.Windows.Rect TransformBounds (System.Windows.Rect rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Windows.Rect TransformBounds(valuetype System.Windows.Rect rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Transform.TransformBounds(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das umgebende Feld zu transformieren.</param>
+        <summary>Transformiert das angegebene umgebende Feld aus, und gibt eine Achse ausgerichtete umgebende Feld, die genau groß genug ist, in dem es enthalten ist.</summary>
+        <returns>Die kleinste Achse ausgerichtete umgebende Rechteck, das die transformierten enthalten kann <paramref name="rect" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryTransform">
+      <MemberSignature Language="C#" Value="public override bool TryTransform (System.Windows.Point inPoint, out System.Windows.Point result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TryTransform(valuetype System.Windows.Point inPoint, [out] valuetype System.Windows.Point&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Transform.TryTransform(System.Windows.Point,System.Windows.Point@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inPoint" Type="System.Windows.Point" />
+        <Parameter Name="result" Type="System.Windows.Point&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="inPoint">Der zu transformierende Punkt.</param>
+        <param name="result">Das Ergebnis der Transformation <c>InPoint</c>.</param>
+        <summary>Versucht, den angegebenen Punkt zu transformieren, und gibt einen Wert, der angibt, ob die Transformation erfolgreich war.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="inPoint" /> wurde transformierten; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Windows.Media.GeneralTransform.Transform%2A> -Methode, diese Methode ist keine Ausnahme ausgelöst, wenn die Transformation fehlgeschlagen ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.Matrix Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Matrix Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Transform.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Transformation als ein <see cref="T:System.Windows.Media.Matrix" /> Objekt.</summary>
+        <value>Die aktuelle Matrixtransformation.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

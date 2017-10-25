@@ -1,0 +1,712 @@
+<Type Name="HtmlForm" FullName="System.Web.UI.HtmlControls.HtmlForm">
+  <TypeSignature Language="C#" Value="public class HtmlForm : System.Web.UI.HtmlControls.HtmlContainerControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlForm extends System.Web.UI.HtmlControls.HtmlContainerControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlForm" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlContainerControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den programmgesteuerten Zugriff auf das HTML-Element <see langword="&lt;form&gt;" /> auf dem Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement ist ein Container für Steuerelemente auf einer Web Forms-Seite. Alle Steuerelemente, die an den Server zurückgesendet müssen zwischen dem Start- und Endtag des platziert werden ein <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement.  
+  
+> [!NOTE]
+>  ASP.NET ermöglicht, nur einen einzigen <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement auf einer Web Forms-Seite aktiv sein. Wenn es mehr als eine active <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement auf einer Web Forms-Seite, die common Language Runtime löst eine <xref:System.Web.HttpException?displayProperty=nameWithType> -Ausnahme aus, wenn Sie die Seite anfordern. Allerdings können Sie eine <xref:System.Web.UI.WebControls.MultiView> steuern, wo jede <xref:System.Web.UI.WebControls.View> Objekt enthält ein <xref:System.Web.UI.HtmlControls.HtmlForm> zu steuern, da nur ein <xref:System.Web.UI.WebControls.View> zu einem beliebigen Zeitpunkt aktiv ist.  
+  
+ Sie können das Verhalten des steuern die <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement durch Festlegen der Eigenschaften. Um den Codierungstyp für die Daten des Formulars anzugeben, legen Sie die <xref:System.Web.UI.HtmlControls.HtmlForm.Enctype%2A> Eigenschaft. Die Methode (`GET` oder `POST`), die ein Browser verwendet, um Daten an den Server bereitstellen, für die Verarbeitung durch Festlegen von angegeben wird die <xref:System.Web.UI.HtmlControls.HtmlForm.Method%2A> Eigenschaft.  
+  
+> [!CAUTION]
+>  In der Standardeinstellung ist die <xref:System.Web.UI.HtmlControls.HtmlForm.Method%2A>-Eigenschaft auf `POST` festgelegt. Sie können den Wert dieser Eigenschaft auf `GET`, aber dies möglicherweise die integrierten Zustands- und unterbrochen postback-Dienste, die durch das ASP.NET-Seitenframework bereitgestellt.  
+  
+ Sie können konfigurieren, Steuerelemente, implementieren die <xref:System.Web.UI.WebControls.IButtonControl> Schnittstelle, um an eine andere Zielseite zu senden. Dies wird als Cross senden bezeichnet. Weitere Informationen finden Sie unter [Cross-Page Posting in ASP.NET Web Forms](http://msdn.microsoft.com/library/fedf234e-b7c4-4644-a9e8-c1c0870b043b).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlForm>, finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlForm.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlForm> Klasse, um ein einfaches Formular zu erstellen.  
+  
+ [!code-aspx-csharp[HtmlForm#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlForm/CS/htmlformcs.aspx#1)]
+ [!code-aspx-vb[HtmlForm#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlForm/VB/htmlformvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlForm.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlForm" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.HtmlControls.HtmlForm> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlForm>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A>|Das Zeichenfolgenliteral "Form".|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.HtmlControls.HtmlForm> steuern und platzieren Sie es auf der Webseite.  
+  
+ [!code-aspx-csharp[HtmlFormCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlFormCtor/CS/htmlformctorcs.aspx#1)]
+ [!code-aspx-vb[HtmlFormCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlFormCtor/VB/htmlformctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlForm.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Aktionsattribut des HTML-Formulars ab oder legt es fest.</summary>
+        <value>Das Aktionsattribut des HTML-Formulars. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Web.UI.HtmlControls.HtmlForm.Action%2A> Eigenschaft, wenn Sie die URL der ursprünglichen Anforderung umschreiben, aber die ursprüngliche URL für das Attribut "Action" im HTML-Format beibehalten werden soll. Legen Sie die <xref:System.Web.UI.HtmlControls.HtmlForm.Action%2A> Eigenschaft auf den Wert der URL, die Sie beibehalten möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientID">
+      <MemberSignature Language="C#" Value="public override string ClientID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlForm.ClientID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Steuerelement-ID, die vom generierten ab [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] für die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> Steuerelement</summary>
+        <value>Der Bezeichner des von generierten [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] für die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu verhindern, dass Namenskonflikte, wenn mehrere Instanzen eines Steuerelements gerendert werden, [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] generiert automatisch eine eindeutige <xref:System.Web.UI.HtmlControls.HtmlForm.ClientID%2A> Wert für jedes Steuerelement auf einer Seite. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Web.UI.Control.ClientID%2A?displayProperty=nameWithType>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlForm.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Web.UI.ControlCollection" /> Auflistung für die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.ControlCollection" /> , enthält die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> untergeordneten Steuerelemente des Steuerelements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultButton">
+      <MemberSignature Language="C#" Value="public string DefaultButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlForm.DefaultButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das untergeordnete Steuerelement von der <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> -Steuerelement, das Postback verursacht, wenn die EINGABETASTE gedrückt wird.</summary>
+        <value>Die <see cref="P:System.Web.UI.Control.ID" /> Schaltfläche des Steuerelements wird standardmäßig angezeigt, wenn die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> geladen wird. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultButton%2A> -Eigenschaft können Sie angeben, dass Benutzer einen Postback verursachen können, durch Drücken der EINGABETASTE in ein Eingabesteuerelement in der Form (z. B. ein Textfeld). Sie können angeben, als Standardschaltfläche jedes Steuerelement, das von abgeleitet ist der <xref:System.Web.UI.WebControls.IButtonControl> außer Schnittstelle die <xref:System.Web.UI.WebControls.LinkButton> Steuerelement. Wenn das Steuerelement, das vom verwiesen wird die <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultButton%2A> Eigenschaft ist nicht von abgeleitet <xref:System.Web.UI.WebControls.IButtonControl>, wird eine <xref:System.InvalidOperationException> Ausnahme wird ausgelöst.  
+  
+ Verwenden Sie Masterseiten, und legen Sie die <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultButton%2A> Eigenschaft aus einer Inhaltsseite verwenden die <xref:System.Web.UI.Control.UniqueID%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.IButtonControl> Schaltfläche. Weitere Informationen zu Masterseiten, finden Sie unter [ASP.NET Masterseiten](http://msdn.microsoft.com/library/4e53eedf-8304-4e7a-aed1-691a2623b28b).  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultButton%2A> Eigenschaft kann nicht dazu führen, dass einen Postback in den folgenden Szenarien:  
+  
+-   Drücken Sie EINGABETASTE, wenn außerhalb der Eingabesteuerelemente in der Form den Fokus ist. Die Standardaktion postback ist nicht garantiert, ausgelöst werden soll.  
+  
+-   Drücken Sie EINGABETASTE, wenn in einem mehrzeiligen Textfeld den Fokus ist. In einem mehrzeiligen Textfeld wird erwartet, dass eine neue Zeile in das Textfeld durch Drücken der EINGABETASTE erstellt werden. In einigen Browsern Drücken der EINGABETASTE innerhalb von Triggern eine mehrzeilige Texteingabe-Feld einen Postback. Wenn Sie die EINGABETASTE, um stattdessen eine neue Zeile erstellen möchten, können Sie in diesem Fall eine JavaScript-Funktion an das Eingabesteuerelement anfügen. Das Skript sollte erfassen die EINGABETASTE, und beenden das Postback. Beispielsweise können Sie der <xref:System.Web.UI.WebControls.WebControl.Attributes%2A> hinzuzufügende Clientskripts für die Auflistung von Eigenschaften der `onKeyPress` Ereignis.  
+  
+-   Angeben einer <xref:System.Web.UI.WebControls.LinkButton> -Steuerelement als Standardschaltfläche. Nur <xref:System.Web.UI.WebControls.Button> und <xref:System.Web.UI.WebControls.ImageButton> Steuerelemente werden unterstützt.  
+  
+-   Ändern der <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultButton%2A> Eigenschaft programmgesteuert während eines asynchronen Postbacks. Asynchrone Postbacks können auf einer Seite aktiviert werden, indem Sie eine oder mehrere <xref:System.Web.UI.UpdatePanel> Steuerelemente auf der Seite. Weitere Informationen finden Sie unter [Übersicht über das Steuerelement UpdatePanel](http://msdn.microsoft.com/library/29a2265d-9674-4c19-b70e-e5560ee9689a) und [Teilrendering von Seiten Rendering Overview](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultButton%2A> Eigenschaft, um das standardmäßige Steuerelement festzulegen, die einen Postback verursacht.  
+  
+ [!code-aspx-csharp[HtmlForm.DefaultButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlForm.DefaultButton/CS/htmlform.defaultbuttoncs.aspx#1)]
+ [!code-aspx-vb[HtmlForm.DefaultButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlForm.DefaultButton/VB/htmlform.defaultbuttonvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Steuerelement auf die verwiesen wird, wie die Standardschaltfläche nicht vom Typ ist <see cref="T:System.Web.UI.WebControls.IButtonControl" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultFocus">
+      <MemberSignature Language="C#" Value="public string DefaultFocus { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultFocus" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlForm.DefaultFocus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Steuerelement im Formular anzuzeigende als das Steuerelement mit der Eingabe Fokus, wenn die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> -Steuerelement geladen wird.</summary>
+        <value>Die <see cref="P:System.Web.UI.Control.ClientID" /> Fokus des Steuerelements im Formular, das als das Steuerelement mit der Eingabe angezeigt, wenn die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> geladen wird. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultFocus%2A> Eigenschaft auf das Steuerelement im Formular anzuzeigende als das Steuerelement mit der Eingabe Fokus, wenn die <xref:System.Web.UI.HtmlControls.HtmlForm> -Steuerelement geladen wird. Steuerelemente, die ausgewählt werden können werden angezeigt, mit der ein visueller Hinweis, der angibt, dass sie den Fokus haben. Angenommen, ein <xref:System.Web.UI.WebControls.TextBox> Steuerelement mit Fokus mit der Einfügemarke angezeigt wird.  
+  
+ Das Steuerelement mit Fokus kann auch festgelegt werden mithilfe der <xref:System.Web.UI.Control.Focus%2A> oder <xref:System.Web.UI.Page.SetFocus%2A> Methoden. Diese Methoden haben Vorrang vor den <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultFocus%2A> Eigenschaft. Wenn einer dieser Methoden aufgerufen werden, um das Steuerelement mit festzulegen zu konzentrieren, den Wert von der <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultFocus%2A> Eigenschaft wird ignoriert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultFocus%2A> Eigenschaft ein angegebenes Steuerelement in einem Formular als das Steuerelement mit dem Eingabefokus angezeigt wird, beim Laden des Formulars. Wenn `Form1` gerendert wird, beachten Sie, dass die Einfügemarke in `TextBox1`, um anzugeben, `TextBox1` ist das Steuerelement den Fokus besitzt.  
+  
+ [!code-aspx-csharp[HtmlForm.DefaultButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlForm.DefaultButton/CS/htmlform.defaultbuttoncs.aspx#1)]
+ [!code-aspx-vb[HtmlForm.DefaultButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlForm.DefaultButton/VB/htmlform.defaultbuttonvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enctype">
+      <MemberSignature Language="C#" Value="public string Enctype { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Enctype" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlForm.Enctype" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Codierungstyp, den ein Browser verwendet, wenn das Formular Daten an den Server.</summary>
+        <value>Eine Zeichenfolge, die den Codierungstyp enthält. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass der Browser Standardinhaltstyp verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlForm.Enctype%2A> Eigenschaft, um anzugeben, geben Sie einen Browser die Codierung wird verwendet, um Daten an den Server zu senden.  
+  
+ Die folgende Tabelle zeigt die codieren häufig verwendeten Typen.  
+  
+|Codierungstyp|Beschreibung|  
+|-------------------|-----------------|  
+|application/x-www-form-urlencoded|Formulardaten werden als Name/Wert-Paare codiert. Dies ist das standard-Codierungsformat.|  
+|Multipart/Form-data|Formulardaten werden als eine Nachricht mit einem separaten Teil für jedes Steuerelement auf der Seite codiert.|  
+|Text/plain|Formulardaten werden im nur-Text ohne Steuerelemente oder Formatierungszeichen codiert.|  
+  
+ Weitere Informationen über Codierungstypen finden Sie unter der [World Wide Web Consortium (W3C-Website](http://go.microsoft.com/fwlink/?linkid=37125).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlForm.Enctype%2A> Eigenschaft, um anzugeben, geben Sie die Codierung den Browser verwendet, um Daten an den Server zu senden.  
+  
+ [!code-aspx-csharp[HtmlForm#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlForm/CS/htmlformcs.aspx#1)]
+ [!code-aspx-vb[HtmlForm#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlForm/VB/htmlformvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public string Method { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Method" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlForm.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie ein Browser Formulardaten zur Verarbeitung an den Server übermittelt.</summary>
+        <value>Eine Zeichenfolge, die angibt, wie ein Browser Formulardaten an den Server übermittelt. Der Standardwert ist <see langword="POST" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um anzugeben, wie der Browser Formulardaten zur Verarbeitung an den Server sendet. Die zwei allgemeinen Methoden, die von allen Browsern unterstützt werden `GET` und `POST`.  
+  
+> [!CAUTION]
+>  Sie können überschreiben, den Standardwert dieser Eigenschaft und die Verwendung der `GET` Methode anstelle von `POST`. Allerdings da `GET` Anforderungen beschränkt werden in wie viele Daten enthalten können mithilfe der `GET` Methode kann in einigen Fällen verursachen die postback und Statusansichten Verwaltungsfunktionen zur Verfügung gestellt, durch das ASP.NET-Seitenframework fehlschlägt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlForm.Method%2A> Eigenschaft, um anzugeben, dass Daten an den Server zurückgesendet werden.  
+  
+ [!code-aspx-csharp[HtmlForm#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlForm/CS/htmlformcs.aspx#1)]
+ [!code-aspx-vb[HtmlForm#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlForm/VB/htmlformvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlForm.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Bezeichners für die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, den Namen des Bezeichners für enthält, die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlForm.Name%2A> Eigenschaft, um zu bestimmen, den Namen der eindeutigen Bezeichner für ein <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement. In dieser Implementierung Abrufen dieser Eigenschaft gibt den Wert von der <xref:System.Web.UI.HtmlControls.HtmlForm.UniqueID%2A> Eigenschaft. Allerdings ist die Eigenschaft keinen Wert zuweisen der Eigenschaft. Festlegen der Eigenschaft weist keinen Wert für diese Eigenschaft da die <xref:System.Web.UI.HtmlControls.HtmlForm.Name%2A> Eigenschaft müssen den gleichen Wert wie die <xref:System.Web.UI.HtmlControls.HtmlForm.UniqueID%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Die `name` Attribut ist kein XHTML-kompatibles Attribut und nicht unabhängig von ASP.NET gerendert wird die `xhtmlConformance` Einstellung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlForm.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" /> , das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis für das <see cref="T:System.Web.UI.HtmlControls.HtmlForm" />-Steuerelement aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Benachrichtigung durch den <xref:System.Web.UI.HtmlControls.HtmlForm.OnInit%2A> -Methode, Webserversteuerelemente müssen alle Schritte zum Initialisieren, die erforderlich sind, erstellen und richten Sie eine Instanz ausführen. In dieser Phase des Lebenszyklus des Serversteuerelements muss Ansichtszustand des Steuerelements noch aufgefüllt werden. Darüber hinaus können Sie andere Serversteuerelemente beim diese Methode aufgerufen wird, unabhängig davon, ob es sich um ein untergeordnetes oder übergeordnetes Steuerelement handelt, zugreifen. Andere Steuerelemente sind nicht unbedingt erstellt und für den Zugriff bereit.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.WebControls.GridView.OnInit%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlForm.OnInit%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.HtmlControls.HtmlForm.OnInit(System.EventArgs)" /> Methode in einer abgeleiteten Klasse sicher, dass der Basisklasse aufgerufen werden <see cref="M:System.Web.UI.HtmlControls.HtmlForm.OnInit(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen. Darüber hinaus Aufruf der Basisklasse <see cref="M:System.Web.UI.HtmlControls.HtmlForm.OnInit(System.EventArgs)" /> Methode wird sichergestellt, dass die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> Steuerelement wird als Webseitenformular ordnungsgemäß festgelegt und Anzeigezustand der Seite beibehalten wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlForm.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis für das <see cref="T:System.Web.UI.HtmlControls.HtmlForm" />-Steuerelement aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlForm.OnPreRender%2A> Methode wird aufgerufen, unmittelbar vor dem Rendering der <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement. Wenn die <xref:System.Web.UI.Page.SmartNavigation%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true`die <xref:System.Web.UI.HtmlControls.HtmlForm.OnPreRender%2A> Methode registriert die intelligente Navigation Skriptdateiverweis, damit er gerendert wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Page.SmartNavigation%2A?displayProperty=nameWithType> Eigenschaft in ASP.NET Version 2.0 wurde verworfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlForm.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="output">Der <see cref="T:System.Web.UI.HtmlTextWriter" />, der den gerenderten Inhalt empfängt.</param>
+        <summary>Rendert die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> Steuerelement mit dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlForm.Render%2A> -Methode rendert ein HTML- `<iframe>` Element Wenn die <xref:System.Web.UI.Page.SmartNavigation%2A> -Eigenschaftensatz auf `true`. Die <xref:System.Web.UI.HtmlControls.HtmlForm.Render%2A> Methode ruft die <xref:System.Web.UI.Control.Render%2A> Methode.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlForm.Render%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> Steuerelement wird nicht gerendert, ohne einen Verweis auf die <see cref="T:System.Web.UI.Page" /> Instanz.</exception>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.HtmlControls.HtmlForm.Render(System.Web.UI.HtmlTextWriter)" /> Methode in einer abgeleiteten Klasse sicher, dass der Basisklasse aufgerufen werden <see cref="M:System.Web.UI.HtmlControls.HtmlForm.Render(System.Web.UI.HtmlTextWriter)" /> Methode, damit die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> untergeordneten Steuerelemente des Steuerelements werden ordnungsgemäß gerendert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAttributes">
+      <MemberSignature Language="C#" Value="protected override void RenderAttributes (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderAttributes(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlForm.RenderAttributes(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Web.UI.HtmlTextWriter" />, der den gerenderten Inhalt empfängt.</param>
+        <summary>Rendert die Attribute des <see cref="T:System.Web.UI.HtmlControls.HtmlForm" />-Steuerelements in das angegebene <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlForm.RenderAttributes%2A> -Methode verwendet die <xref:System.Web.UI.HtmlTextWriter.IsValidFormAttribute%2A> -Methode überprüft die <xref:System.Web.UI.HtmlControls.HtmlForm> Attribute des Steuerelements, um sicherzustellen, dass sie in das Anfangstag des gerendert werden können ein `<form>` HTML-Element.  
+  
+ Darüber hinaus die <xref:System.Web.UI.HtmlControls.HtmlForm.RenderAttributes%2A> Methode rendert das `method`, `action`, und `onsubmit` Attribute der <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement. Die Steuerelement-ID festgelegt, der <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultButton%2A> Eigenschaft nicht implementiert die <xref:System.Web.UI.WebControls.IButtonControl> -Schnittstelle, eine <xref:System.InvalidOperationException> Ausnahme wird ausgelöst.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlForm.RenderAttributes%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Legen Sie die Steuerelement-ID in der <see cref="P:System.Web.UI.HtmlControls.HtmlForm.DefaultButton" /> Eigenschaft ist nicht vom Typ <see cref="T:System.Web.UI.WebControls.IButtonControl" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.HtmlControls.HtmlForm.RenderAttributes(System.Web.UI.HtmlTextWriter)" /> Methode in einer abgeleiteten Klasse sicher, dass der Basisklasse aufgerufen werden <see cref="M:System.Web.UI.HtmlControls.HtmlForm.RenderAttributes(System.Web.UI.HtmlTextWriter)" /> Methode, damit die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> des Steuerelements Attribute werden ordnungsgemäß gerendert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderChildren">
+      <MemberSignature Language="C#" Value="protected override void RenderChildren (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderChildren(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlForm.RenderChildren(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Web.UI.HtmlTextWriter" />, der den gerenderten Inhalt empfängt.</param>
+        <summary>Rendert die untergeordneten Steuerelemente von der <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlForm.RenderChildren%2A> Methode rendert das Clientskript, um sicherzustellen, dass der Browserfokus auf das Steuerelement im angegebenen festgelegt ist die <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultFocus%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Ein Steuerelement, das gemäß der <xref:System.Web.UI.Page.SetFocus%2A?displayProperty=nameWithType> -Eigenschaft Vorrang vor einem vom angegebenen Steuerelement die <xref:System.Web.UI.HtmlControls.HtmlForm.DefaultFocus%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die Webseite wurde mehr als eine serverseitige <see langword="&lt;form&gt;" /> Tag.</exception>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.HtmlControls.HtmlForm.RenderChildren(System.Web.UI.HtmlTextWriter)" /> Methode in einer abgeleiteten Klasse sicher, dass der Basisklasse aufgerufen werden <see cref="M:System.Web.UI.HtmlControls.HtmlForm.RenderChildren(System.Web.UI.HtmlTextWriter)" /> Methode, damit die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> untergeordneten Steuerelemente des Steuerelements werden ordnungsgemäß gerendert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderControl">
+      <MemberSignature Language="C#" Value="public override void RenderControl (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RenderControl(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlForm.RenderControl(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , die das Formular Steuerelementinhalt empfängt.</param>
+        <summary>Rendert die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> Steuerelement mit dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.HtmlControls.HtmlForm.RenderControl(System.Web.UI.HtmlTextWriter)" /> Methode in einer abgeleiteten Klasse sicher, dass der Basisklasse aufgerufen werden <see cref="M:System.Web.UI.Control.RenderControl(System.Web.UI.HtmlTextWriter)" /> Methode, damit die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> -Steuerelement ordnungsgemäß gerendert wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmitDisabledControls">
+      <MemberSignature Language="C#" Value="public virtual bool SubmitDisabledControls { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SubmitDisabledControls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlForm.SubmitDisabledControls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob Steuerelemente auf dem Client zum Übermitteln von deren Werte festlegen deaktivierte, sodass sie ihre Werte beibehalten, nachdem die Seite an den Server zurückgesendet.</summary>
+        <value>
+          <see langword="true" />Wenn auf dem Client deaktivierten Steuerelemente ihre Werte übermitteln erzwungen werden; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlForm.SubmitDisabledControls%2A> Eigenschaft, um anzugeben, ob Steuerelemente auf dem Client ihre Werte zu übermitteln, wenn die Seite Postback deaktiviert. Dadurch wird die deaktivierten Steuerelemente ihre Werte beibehalten, nachdem die Seite an den Server zurückgesendet. Wenn die <xref:System.Web.UI.HtmlControls.HtmlForm.SubmitDisabledControls%2A> -Eigenschaftensatz auf `false`, Steuerelemente im Formular, die mit Clientskript deaktiviert wurden werden nicht übermittelt werden mit dem Server das nächste Mal die Seite zurück sendet. Dies hat zur Folge, dass alle von den deaktivierten Steuerelementen gespeicherten Werte verloren. Damit die deaktivierten Steuerelemente ihre Werte beibehalten, nachdem die Seite an den Server zurückgesendet wird, legen Sie die <xref:System.Web.UI.HtmlControls.HtmlForm.SubmitDisabledControls%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.HtmlControls.HtmlForm.SubmitDisabledControls%2A> -Eigenschaft für ein Formular zum `true` , wodurch die Steuerelemente, die deaktiviert Clientskript kann ihre Werte beibehalten werden, nachdem die Seite an den Server zurückgesendet. In diesem Beispiel, wenn Sie festlegen, die <xref:System.Web.UI.HtmlControls.HtmlForm.SubmitDisabledControls%2A> Eigenschaft `false` , und klicken Sie dann auf die **zurücksenden** Schaltfläche der Text im Textfeld HTML verloren gegangen ist und nicht mehr das HTML-Kontrollkästchen ausgewählt ist.  
+  
+ [!code-aspx-csharp[HtmlForm.SubmitDisabledControls#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlForm.SubmitDisabledControls/CS/htmlform.submitdisabledcontrolscs.aspx#1)]
+ [!code-aspx-vb[HtmlForm.SubmitDisabledControls#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlForm.SubmitDisabledControls/VB/htmlform.submitdisabledcontrolsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlForm.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Frame oder das Fenster, in dem die Ergebnisse der Informationen gerendert werden soll, die an den Server zurückgesendet wird.</summary>
+        <value>Das Browserfenster oder der Zielframe, in dem die Ergebnisse der Informationen auf dem Server angezeigt. Der Standardwert ist eine leere Zeichenfolge (""), die das Fenster oder den Frame mit dem Fokus aktualisiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlForm.Target%2A> Eigenschaft, um das Zielfenster oder Rahmen, die zeigt die Ergebnisse der Informationen, die bereitgestellt wird, an den Server. Die Ergebnisse der Informationen auf dem Server bereitgestellte umleiten ist eine komplexe Aufgabe. Mithilfe dieser Eigenschaft einfach Postback wird nicht empfohlen.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.HtmlControls.HtmlForm.Target%2A> Eigenschaft als rendert eine `target` Attribut. Die `target` -Attribut `form` Elemente ist in XHTML 1.1 nicht zulässig. Aus diesem Grund, wenn der gerenderten Markups XHTML-Standards entsprechen oder Barrierefreiheitsstandards muss, legen Sie keine der <xref:System.Web.UI.HtmlControls.HtmlForm.Target%2A> Eigenschaft. Weitere Informationen finden Sie unter [XHTML-Standards in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97) und [Barrierefreiheit in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13).  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlForm.Target%2A> Wert muss mit einem Buchstaben im Bereich von A bis Z (Groß-/Kleinschreibung), mit Ausnahme der folgenden speziellen Werte, die beginnen mit einem Unterstrich beginnen.  
+  
+|Zielwert|Beschreibung|  
+|------------------|-----------------|  
+|`_blank`|Rendert den Inhalt in einem neuen Fenster ohne Frames.|  
+|`_parent`|Rendert den Inhalt im unmittelbar übergeordneten Frameset.|  
+|`_search`|Rendert den Inhalt im Suchbereich.|  
+|`_self`|Rendert den Inhalt im Rahmen mit Fokus.|  
+|`_top`|Rendert den Inhalt in der gesamten Fenster ohne Frames.|  
+  
+> [!NOTE]
+>  Überprüfen Sie Ihre Browserdokumentation zum bestimmen, ob die `_search` Wert wird unterstützt.  Beispielsweise Microsoft Internet Explorer 5.0 und höher, unterstützt die `_search` Zielwert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlForm.Target%2A> Eigenschaft an einem neuen Fenster ohne Frames zum Anzeigen der Ergebnisse der Informationen an den Server zurückgesendet.  
+  
+ [!code-aspx-csharp[HtmlFormTarget#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlFormTarget/CS/htmlformtargetcs.aspx#1)]
+ [!code-aspx-vb[HtmlFormTarget#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlFormTarget/VB/htmlformtargetvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UniqueID">
+      <MemberSignature Language="C#" Value="public override string UniqueID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UniqueID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlForm.UniqueID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Den eindeutigen Programmbezeichner zugewiesene Ruft die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> Steuerelement.</summary>
+        <value>Der eindeutige Programmbezeichner zugewiesen werden, um die <see cref="T:System.Web.UI.HtmlControls.HtmlForm" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlForm.UniqueID%2A> -Eigenschaft zum Abrufen des eindeutigen Programmbezeichner zugewiesene der <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement. Diese Eigenschaft überschreibt die basisimplementierung bereit, einen konstanten Wert zurückgeben, wenn das Steuerelement enthalten ist ein <xref:System.Web.UI.INamingContainer>-Objekt als eine Seite, z. B. ein benutzerdefiniertes Steuerelement implementiert. Der Benennungscontainer ist eine Seite, die den Wert des der <xref:System.Web.UI.HtmlControls.HtmlForm> des Steuerelements <xref:System.Web.UI.Control.ID%2A> Eigenschaft zurückgegeben wird.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlForm.UniqueID%2A> Eigenschaft und die <xref:System.Web.UI.HtmlControls.HtmlForm.Name%2A> -Eigenschaft immer den gleichen Wert zurück. Dies ist hilfreich, wenn die <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement gerendert wird, in einem Browser, die erforderlich sind die <xref:System.Web.UI.HtmlControls.HtmlForm> des Steuerelements <xref:System.Web.UI.HtmlControls.HtmlForm.UniqueID%2A> und <xref:System.Web.UI.HtmlControls.HtmlForm.Name%2A> Eigenschaften identisch sein. Zu diesen Eigenschaften synchronisiert, die <xref:System.Web.UI.HtmlControls.HtmlForm.Name%2A> Eigenschaft gibt immer den Wert der <xref:System.Web.UI.HtmlControls.HtmlForm.UniqueID%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Die `name` Attribut ist kein XHTML-kompatibles Attribut und wird standardmäßig nicht von ASP.NET gerendert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlForm.UniqueID%2A> den eindeutige Bezeichner für die abzurufende Eigenschaft ein <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlForm.UniqueID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlForm.UniqueID/CS/htmlform.uniqueidcs.aspx#1)]
+ [!code-aspx-vb[HtmlForm.UniqueID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlForm.UniqueID/VB/htmlform.uniqueidvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,8 @@
+<Namespace Name="System.IdentityModel.Selectors">
+  <Docs>
+    <summary>Die <see cref="N:System.IdentityModel.Selectors" /> -Namespace enthält Klassen, die Authentifizierung in der Windows Communication Foundation (WCF) anspruchsbasierte Identitätsmodell implementieren.  
+  
+ Ab .NET Framework 4.5 und die Integration von Windows Identity Foundation (WIF) in .NET Framework, wurde das anspruchsbasierte Identitätsmodell WCF von WIF abgelöst. WIF bietet eine anspruchsbasierte Identität-Objektmodell, das verwendet werden kann, um die Authentifizierung und Autorisierung über verschiedene Microsoft-Produkt-Stacks, einschließlich der CLR, WCF und ASP.NET bereit. Die WIF-Klassen, die Sicherheitstoken darstellen, und werden verwendet, um Sicherheit zu verarbeiten, im Token enthaltenen, der <see cref="N:System.IdentityModel.Tokens" /> Namespace, z. B. <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> und <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" />. Ab .NET 4.5, die Klassen in der <see cref="N:System.IdentityModel.Tokens" /> Namespace verwendet werden sollte, nicht die in der <see cref="N:System.IdentityModel.Selectors" /> Namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

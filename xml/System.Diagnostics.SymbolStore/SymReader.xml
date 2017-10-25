@@ -1,0 +1,431 @@
+<Type Name="SymReader" FullName="System.Diagnostics.SymbolStore.SymReader">
+  <TypeSignature Language="C#" Value="public class SymReader : System.Diagnostics.SymbolStore.SymReaderBase, IDisposable, System.Diagnostics.SymbolStore.ISymbolReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SymReader extends System.Diagnostics.SymbolStore.SymReaderBase implements class System.Diagnostics.SymbolStore.ISymbolReader, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SymbolStore.SymReader" />
+  <AssemblyInfo>
+    <AssemblyName>ISymWrapper</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.SymbolStore.SymReaderBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Diagnostics.SymbolStore.ISymbolReader</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet Zugriff auf Dokumente, Methoden und Variablen in einem Symbolspeicher.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymReader (System.Diagnostics.SymbolStore.Private.ISymUnmanagedReader* pReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.SymbolStore.Private.ISymUnmanagedReader* pReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedReader*)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pReader" Type="System.Diagnostics.SymbolStore.Private.ISymUnmanagedReader*" />
+      </Parameters>
+      <Docs>
+        <param name="pReader">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override sealed void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.Diagnostics.SymbolStore.SymReader" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">
+          <see langword="true" />, um verwaltete und nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Wird von der <see cref="M:System.Diagnostics.SymbolStore.SymReader.Dispose" />-Methode und der <see cref="M:System.Diagnostics.SymbolStore.SymReader.Finalize" />-Methode aufgerufen, um die verwalteten und nicht verwalteten von der aktuellen Instanz der <see cref="T:System.Diagnostics.SymbolStore.SymReader" />-Klasse verwendeten Ressourcen freizugeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, nur von den öffentlichen <xref:System.Diagnostics.SymbolStore.SymReader.Dispose%2A> und <xref:System.Diagnostics.SymbolStore.SymReader.Finalize%2A> -Methoden für diese Methode nicht direkt aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~SymReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt nicht verwaltete Ressourcen frei und führt andere Bereinigungsvorgänge durch, bevor die <see cref="T:System.Diagnostics.SymbolStore.SymReader" /> durch die Garbage Collection wieder zugänglich gemacht wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Object.Finalize%2A>. Diese Methode sollte nicht von Anwendungscode aufgerufen werden. ein Objekt `Finalize` Methode wird automatisch während der Garbagecollection aufgerufen, durch einen Aufruf von seiner Finalisierung verfolgt, durch den Garbage Collector deaktiviert wurde die <xref:System.GC.SuppressFinalize%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDocument">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolDocument GetDocument (string url, Guid language, Guid languageVendor, Guid documentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolDocument GetDocument(string url, valuetype System.Guid language, valuetype System.Guid languageVendor, valuetype System.Guid documentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.GetDocument(System.String,System.Guid,System.Guid,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolDocument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="language" Type="System.Guid" />
+        <Parameter Name="languageVendor" Type="System.Guid" />
+        <Parameter Name="documentType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL, die das Dokument kennzeichnet.</param>
+        <param name="language">Die Dokumentsprache. Sie können für diesen Parameter <see cref="F:System.Guid.Empty" /> angeben. Um eine beliebige Sprache anzugeben.</param>
+        <param name="languageVendor">Die Identität des Herstellers für die Dokumentsprache. Sie können für diesen Parameter <see cref="F:System.Guid.Empty" /> angeben, um einen beliebigen Compilerhersteller anzugeben.</param>
+        <param name="documentType">Der Typ des Dokuments. Sie können für diesen Parameter <see cref="F:System.Guid.Empty" /> angeben, um einen beliebigen Dokumenttyp anzugeben.</param>
+        <summary>Ruft ein durch die zugehörige URL angegebenes Dokument und optional die Sprache, den Compilerhersteller und den Typ ab.</summary>
+        <returns>Das Dokument mit der angegebenen URL, wenn dieses im Symbolspeicher gefunden wurde, oder <see langword="null" />, wenn das Dokument nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `language`, `languageVendor`, und `documentType` Parameter sind derzeit ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDocuments">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolDocument[] GetDocuments ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolDocument[] GetDocuments() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.GetDocuments" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolDocument[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array aller im Symbolspeicher definierten Dokumente ab.</summary>
+        <returns>Ein Array aller im Symbolspeicher definierten Dokumente.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.OutOfMemoryException">Es ist nicht genügend Arbeitsspeicher zum Erfüllen der Anforderung vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGlobalVariables">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolVariable[] GetGlobalVariables ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolVariable[] GetGlobalVariables() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.GetGlobalVariables" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolVariable[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <returns>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethod">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolMethod GetMethod (System.Diagnostics.SymbolStore.SymbolToken method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolMethod GetMethod(valuetype System.Diagnostics.SymbolStore.SymbolToken method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.GetMethod(System.Diagnostics.SymbolStore.SymbolToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+      </Parameters>
+      <Docs>
+        <param name="method">Das Metadatentoken der Methode.</param>
+        <summary>Ruft ein Methodenobjekt des Symbolreaders ab, wenn der Bezeichner einer Methode angegeben ist.</summary>
+        <returns>Das Methodenobjekt des Symbolreaders für den angegebenen Methodenbezeichner.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethod">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolMethod GetMethod (System.Diagnostics.SymbolStore.SymbolToken method, int version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolMethod GetMethod(valuetype System.Diagnostics.SymbolStore.SymbolToken method, int32 version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.GetMethod(System.Diagnostics.SymbolStore.SymbolToken,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+        <Parameter Name="version" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="method">Das Metadatentoken der Methode.</param>
+        <param name="version">Die Version für Bearbeiten und Fortfahren der Methode.</param>
+        <summary>Ruft ein Methodenobjekt des Symbolreaders ab, wenn der Bezeichner einer Methode sowie deren Version für Bearbeiten und Fortfahren angegeben ist.</summary>
+        <returns>Das Methodenobjekt des Symbolreaders für den angegebenen Methodenbezeichner und die angegebene Version.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodFromDocumentPosition">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolMethod GetMethodFromDocumentPosition (System.Diagnostics.SymbolStore.ISymbolDocument document, int line, int column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolMethod GetMethodFromDocumentPosition(class System.Diagnostics.SymbolStore.ISymbolDocument document, int32 line, int32 column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.GetMethodFromDocumentPosition(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Diagnostics.SymbolStore.ISymbolDocument" />
+        <Parameter Name="line" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="document">Das Dokument, in dem sich die Methode befindet.</param>
+        <param name="line">Die Position der Zeile im Dokument. Die Zeilen sind fortlaufend nummeriert, beginnend mit 1.</param>
+        <param name="column">Die Position der Spalte im Dokument. Die Spalten sind fortlaufend nummeriert, beginnend mit 1.</param>
+        <summary>Ruft das Methodenobjekt des Symbolreaders ab, das eine angegebene Position in einem Dokument enthält.</summary>
+        <returns>Das Methodenobjekt des Symbolreaders für die angegebene Position im Dokument.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamespaces">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolNamespace[] GetNamespaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolNamespace[] GetNamespaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.GetNamespaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolNamespace[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <returns>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSymAttribute">
+      <MemberSignature Language="C#" Value="public virtual byte[] GetSymAttribute (System.Diagnostics.SymbolStore.SymbolToken parent, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetSymAttribute(valuetype System.Diagnostics.SymbolStore.SymbolToken parent, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.GetSymAttribute(System.Diagnostics.SymbolStore.SymbolToken,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Dieser Parameter wird nicht verwendet.</param>
+        <param name="name">Dieser Parameter wird nicht verwendet.</param>
+        <summary>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <returns>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVariables">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolVariable[] GetVariables (System.Diagnostics.SymbolStore.SymbolToken parent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolVariable[] GetVariables(valuetype System.Diagnostics.SymbolStore.SymbolToken parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.GetVariables(System.Diagnostics.SymbolStore.SymbolToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolVariable[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Dieser Parameter wird nicht verwendet.</param>
+        <summary>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <returns>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceSymbolStore">
+      <MemberSignature Language="C#" Value="public virtual void ReplaceSymbolStore (string fileName, IntPtr stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReplaceSymbolStore(string fileName, native int stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.ReplaceSymbolStore(System.String,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="stream" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei, die den Symbolspeicher enthält, oder <see langword="null" />, wenn ein speicherinterner Datenspeicher verwendet wird.</param>
+        <param name="stream">Der Zeiger auf den Eingabestream für den Symbolspeicher oder <see cref="F:System.IntPtr.Zero" />, wenn eine Speichereinheit auf der Festplatte verwendet wird.</param>
+        <summary>Ersetzt den vorhandenen Symbolspeicher durch einen Deltasymbolspeicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.SymbolStore.SymReader.ReplaceSymbolStore%2A> ähnelt in vielerlei Hinsicht der <xref:System.Diagnostics.SymbolStore.SymReader.UpdateSymbolStore%2A> -Methode, aber die angegebene Delta fungiert als ein Update, sondern vollständig ersetzt.  
+  
+ Nur einer der Parameter, `fileName` oder `stream`, muss angegeben werden. Wenn `fileName` angegeben wird, der Symbolspeicher mit den Symbolen in dieser Datei aktualisiert wird. Wenn `stream` angegeben wird, der Symbolspeicher wird aktualisiert, mit den Daten aus der <xref:System.Runtime.InteropServices.ComTypes.IStream> .  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSymbolStore">
+      <MemberSignature Language="C#" Value="public virtual void UpdateSymbolStore (string fileName, IntPtr stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateSymbolStore(string fileName, native int stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymReader.UpdateSymbolStore(System.String,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="stream" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei, die den Symbolspeicher enthält, oder <see langword="null" />, wenn ein speicherinterner Datenspeicher verwendet wird.</param>
+        <param name="stream">Der Zeiger auf den Eingabestream für den Symbolspeicher oder <see cref="F:System.IntPtr.Zero" />, wenn eine Speichereinheit auf der Festplatte verwendet wird.</param>
+        <summary>Aktualisiert den vorhandenen Symbolspeicher mit einem Deltasymbolspeicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in Szenarien mit bearbeiten und Fortfahren als eine Möglichkeit, den Symbolspeicher aktualisieren entsprechend Deltas mit der ursprünglichen PE-Datei verwendet.  
+  
+ Nur einer der Parameter, `fileName` oder `stream`, muss angegeben werden. Wenn `fileName` angegeben wird, der Symbolspeicher mit den Symbolen in dieser Datei aktualisiert wird. Wenn `stream` angegeben wird, der Symbolspeicher wird aktualisiert, mit den Daten aus der <xref:System.Runtime.InteropServices.ComTypes.IStream> .  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserEntryPoint">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.SymbolToken UserEntryPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.SymbolStore.SymbolToken UserEntryPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymReader.UserEntryPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.SymbolToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Metadatentoken für die Methode ab, die als benutzerdefinierter Einstiegspunkt für das ggf. vorhandene Modul angegeben wurde.</summary>
+        <value>Das Metadatentoken für die Methode, die der benutzerdefinierte Einstiegspunkt für das Modul ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert ist normalerweise die main-Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Ein Einstiegspunkt wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

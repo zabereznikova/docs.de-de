@@ -1,0 +1,126 @@
+<Type Name="LinearColorKeyFrame" FullName="System.Windows.Media.Animation.LinearColorKeyFrame">
+  <TypeSignature Language="C#" Value="public class LinearColorKeyFrame : System.Windows.Media.Animation.ColorKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinearColorKeyFrame extends System.Windows.Media.Animation.ColorKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.LinearColorKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.ColorKeyFrame</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine Animation über die <see cref="T:System.Windows.Media.Color" /> -Wert des vorherigen Keyframes in seine eigene <see cref="P:System.Windows.Media.Animation.ColorKeyFrame.Value" /> unter Verwendung der linearen Interpolation.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient als Teil einer <xref:System.Windows.Media.Animation.ColorKeyFrameCollection> in Verbindung mit einem <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames> zu animierende eine <xref:System.Windows.Media.Color> Eigenschaftswert für einen Satz von Keyframes.  
+  
+ Ein Keyframe definiert einen Zeitabschnitt der <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames> zu der er gehört. Jedem Keyframe hat ein Ziel <xref:System.Windows.Media.Animation.ColorKeyFrame.Value%2A> und ein <xref:System.Windows.Media.Animation.ColorKeyFrame.KeyTime%2A>. Die <xref:System.Windows.Media.Animation.ColorKeyFrame.KeyTime%2A> gibt an, der Zeitpunkt des Keyframes <xref:System.Windows.Media.Animation.ColorKeyFrame.Value%2A> erreicht werden soll. Ein Keyframe erstellt eine Animation über den Zielwert des vorherigen Keyframes auf einem eigenen Zielwert aus. Es beginnt, wenn die vorherige Keyframes beendet und beendet, wenn eine eigene Schlüsselzeit erreicht ist.  
+  
+ Lineare Keyframes wie <xref:System.Windows.Media.Animation.LinearColorKeyFrame> eine glatte, lineare Interpolation zwischen Werten zu erstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearColorKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearColorKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.LinearColorKeyFrame" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearColorKeyFrame (System.Windows.Media.Color value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Color value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearColorKeyFrame.#ctor(System.Windows.Media.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Color" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Endwert (auch als „Zielwert“ bezeichnet) für den Keyframe.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.LinearColorKeyFrame" />-Klasse mit dem angegebenen Endwert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearColorKeyFrame (System.Windows.Media.Color value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Color value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearColorKeyFrame.#ctor(System.Windows.Media.Color,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Color" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Endwert (auch als „Zielwert“ bezeichnet) für den Keyframe.</param>
+        <param name="keyTime">Die Schlüsselzeit für den Keyframe. Die Schlüsselzeit bestimmt, wann der Zielwert erreicht wird, was auch dem Ende des Keyframes entspricht.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.LinearColorKeyFrame" />-Klasse mit dem angegebenen Endwert und der Schlüsselzeit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearColorKeyFrame.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz von <see cref="T:System.Windows.Media.Animation.LinearColorKeyFrame" />.</summary>
+        <returns>Eine neue <see cref="T:System.Windows.Media.Animation.LinearColorKeyFrame" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Color InterpolateValueCore (System.Windows.Media.Color baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Media.Color InterpolateValueCore(valuetype System.Windows.Media.Color baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearColorKeyFrame.InterpolateValueCore(System.Windows.Media.Color,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Windows.Media.Color" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">Der Wert, von dem animiert werden soll.</param>
+        <param name="keyFrameProgress">Ein Wert zwischen 0,0 und 1,0 (einschließlich), der den Prozentsatz der verstrichenen Zeit für diesen Keyframe angibt.</param>
+        <summary>Nimmt mithilfe des angegebenen Fortschrittsinkrements eine lineare Interpolation zwischen dem vorherigen Keyframewert und dem Wert des aktuellen Keyframes vor.</summary>
+        <returns>Der Ausgabewert dieses Keyframes unter Verwendung des angegebenen Basiswerts und Fortschritts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,291 @@
+<Type Name="TrackingService" FullName="System.Workflow.Runtime.Tracking.TrackingService">
+  <TypeSignature Language="C#" Value="public abstract class TrackingService : System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TrackingService extends System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Hosting.WorkflowRuntimeService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die grundlegende Schnittstelle zwischen einem Überwachungsdienst und der Laufzeit-Nachverfolgungsinfrastruktur an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Ein Überwachungsdienst übernimmt die Bereitstellung von Verfolgungskanälen und Verfolgungsprofilen für das Workflowlaufzeitmodul. Das Workflowlaufzeitmodul fordert von einem Überwachungsdienst einen <xref:System.Workflow.Runtime.Tracking.TrackingChannel> für jede Workflowinstanz an, für die ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile> vorhanden ist. Mit diesem <xref:System.Workflow.Runtime.Tracking.TrackingChannel> übermittelt das Workflowlaufzeitmodul der Workflowinstanz zugeordnete Verfolgungsprofile. Ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile> enthält Verfolgungspunkte, die eine Reihe von Verfolgungsereignissen angeben, für die die Laufzeitverfolgungsinfrastruktur Verfolgungsdatensätze senden soll. Ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile> kann auch Daten angeben, die aus der Workflowinstanz extrahiert werden sollen, wenn eines dieser Verfolgungsereignisse eintritt.  
+  
+ Die Laufzeitverfolgungsinfrastruktur verwendet ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile>, um von einer Workflowinstanz ausgegebene Verfolgungsereignisse zu filtern. Wenn ein Verfolgungsereignis ausgegeben wird, das mit einem Verfolgungspunkt im <xref:System.Workflow.Runtime.Tracking.TrackingProfile> übereinstimmt, extrahiert die Laufzeitverfolgungsinfrastruktur die im <xref:System.Workflow.Runtime.Tracking.TrackingProfile> angegebenen Daten aus der Workflowinstanz und kapselt diese Daten und Informationen zum Verfolgungsereignis in einen Verfolgungsdatensatz ein. Dieser Verfolgungsdatensatz wird dann über den <xref:System.Workflow.Runtime.Tracking.TrackingChannel> gesendet, der der Workflowinstanz zugeordnet ist. Bei einem Nachverfolgungsdatensatz kann es sich um eine der folgenden Arten handeln:  
+  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord>  
+  
+ <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord>  
+  
+ <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord>  
+  
+ Der Verfolgungsdatensatz kann von der Hostanwendung beliebig verwendet werden. Eine Hostanwendung kann die Verfolgungsinformationen z.&#160;B. in einer Datenbank speichern und damit eine anspruchsvolle Benutzeroberfläche implementieren, oder ein Administrator kann mit den Informationen über Bedingungen informiert werden, die Maßnahmen erfordern. Sie können einen Überwachungsdienst beim Workflowlaufzeitmodul registrieren, indem Sie <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A?displayProperty=nameWithType> aufrufen oder indem Sie einen entsprechenden Eintrag in die Anwendungskonfigurationsdatei aufnehmen.  
+  
+ Alle Überwachungsdienste müssen von der abstrakten <xref:System.Workflow.Runtime.Tracking.TrackingService>-Klasse erben. Diese Klasse definiert die grundlegende Schnittstelle zwischen einem Überwachungsdienst und der Laufzeitverfolgungsinfrastruktur. Das Workflowlaufzeitmodul fordert ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile> für eine bestimmte Workflowinstanz oder einen Workflow-<xref:System.Type> an, indem sie eine der überladenen <xref:System.Workflow.Runtime.Tracking.TrackingService.GetProfile%2A>-Methoden oder die <xref:System.Workflow.Runtime.Tracking.TrackingService.TryGetProfile%2A>-Methode aufruft. Das Workflowlaufzeitmodul ruft <xref:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel%2A> auf, um einen <xref:System.Workflow.Runtime.Tracking.TrackingChannel> anzufordern.  
+  
+ Die Laufzeitverfolgungsinfrastruktur ruft die Methoden <xref:System.Workflow.Runtime.Tracking.TrackingService.GetProfile%2A> und <xref:System.Workflow.Runtime.Tracking.TrackingService.TryGetProfile%2A> immer dann auf, wenn eine Workflowinstanz erstellt oder aus dem Persistenzspeicher geladen wird. Der mit diesen Aufrufen verbundene Aufwand kann den Überwachungsdienst stark auslasten (z.&#160;B. durch viele Datenbankaufrufe). Um diesen aufrufbasierten Mechanismus zu umgehen, können Sie die <xref:System.Workflow.Runtime.Tracking.IProfileNotification>-Schnittstelle in den Überwachungsdienst aufnehmen und das Workflowlaufzeitmodul mithilfe von Ereignissen über Änderungen eines <xref:System.Workflow.Runtime.Tracking.TrackingProfile> benachrichtigen. Für Überwachungsdienste, die die <xref:System.Workflow.Runtime.Tracking.IProfileNotification>-Schnittstelle implementieren, abonniert das Workflowlaufzeitmodul die Ereignisse <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileUpdated> und <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileRemoved>. Der Überwachungsdienst kann das entsprechende Ereignis bei einer Änderung eines seiner Verfolgungsprofile auslösen. Die <xref:System.Workflow.Runtime.Tracking.SqlTrackingService>-Klasse implementiert diese Schnittstelle.  
+  
+ Das Workflowlaufzeitmodul ruft die <xref:System.Workflow.Runtime.Tracking.TrackingService.TryReloadProfile%2A>-Methode auf, um zu testen, ob ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile> aufgrund eines ausdrücklichen Aufrufs von <xref:System.Workflow.Runtime.WorkflowInstance.ReloadTrackingProfiles%2A> durch einen Host oder einen Dienst in einer Workflowinstanz aktualisiert oder entfernt wurde. Dieser Prozess ermöglicht es einem Host oder Dienst, das für eine bestimmte Workflowinstanz verwendete Verfolgungsprofil dynamisch zu ändern.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>-   Wenn Sie <see cref="T:System.Workflow.Runtime.Tracking.TrackingService" /> vererben, müssen Sie folgende Member überschreiben: <see cref="M:System.Workflow.Runtime.Tracking.TrackingService.GetProfile(System.Guid)" />.  
+  
+-   <see cref="M:System.Workflow.Runtime.Tracking.TrackingService.GetProfile(System.Type,System.Version)" />  
+  
+-   <see cref="M:System.Workflow.Runtime.Tracking.TrackingService.TryGetProfile(System.Type,System.Workflow.Runtime.Tracking.TrackingProfile@)" />  
+  
+-   <see cref="M:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel(System.Workflow.Runtime.Tracking.TrackingParameters)" />  
+  
+-   <see cref="M:System.Workflow.Runtime.Tracking.TrackingService.TryReloadProfile(System.Type,System.Guid,System.Workflow.Runtime.Tracking.TrackingProfile@)" /></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TrackingService ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert beim Implementieren in einer abgeleiteten Klasse eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.TrackingService" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Erstellen einer neuen Instanz eines `TerminationTrackingService`-Objekts veranschaulicht, eines Typen, der von einem `TrackingService` abgeleitet wird. Dieses Beispiel stammt aus dem Termination Tracking Service SDK-Beispiel. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Termination Tracking Service-Beispiel](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[WF_Samples#111](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#111)]
+ [!code-vb[WF_Samples#111](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#111)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetProfile">
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Muss in der abgeleiteten Klasse überschrieben werden und ruft bei der Implementierung das Verfolgungsprofil für eine angegebene Workflowinstanz oder einen Workflowtyp ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Überwachungsdienst übernimmt die Verwaltung der für bestimmte Workflowtypen und Workflowinstanzen verfügbaren Verfolgungsprofile. Sie können diese Verwaltung nach Bedarf beliebig implementieren. Sie können z.&#160;B. dasselbe <xref:System.Workflow.Runtime.Tracking.TrackingProfile> für jeden Workflow-<xref:System.Type> und jede Workflowinstanz zurückgeben; oder Sie verwalten einen erweiterten Speicher mit Verfolgungsprofilen, auf die von der Workflowinstanz, dem Workflow-<xref:System.Type> und <xref:System.Version> verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetProfile">
+      <MemberSignature Language="C#" Value="protected abstract System.Workflow.Runtime.Tracking.TrackingProfile GetProfile (Guid workflowInstanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Workflow.Runtime.Tracking.TrackingProfile GetProfile(valuetype System.Guid workflowInstanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingService.GetProfile(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingProfile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowInstanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="workflowInstanceId"><see cref="T:System.Guid" /> der Workflowinstanz.</param>
+        <summary>Muss in der abgeleiteten Klasse überschrieben werden und gibt bei der Implementierung das Verfolgungsprofil für die angegebene Workflowinstanz zurück.</summary>
+        <returns>Das Überwachungsprofil für die angegebene Workflowinstanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Überwachungsdienst übernimmt die Verwaltung der für bestimmte Workflowtypen und Workflowinstanzen verfügbaren Verfolgungsprofile. Sie können diese Verwaltung nach Bedarf beliebig implementieren. Sie können z.&#160;B. dasselbe <xref:System.Workflow.Runtime.Tracking.TrackingProfile> für jeden Workflow-<xref:System.Type> und jede Workflowinstanz zurückgeben; oder Sie verwalten einen erweiterten Speicher mit Verfolgungsprofilen, auf die von der Workflowinstanz, dem Workflow-<xref:System.Type> und <xref:System.Version> verwiesen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der `GetProfile`-Methode veranschaulicht. In diesem Beispiel rufen verschiedene Überladungen der `GetProfile`-Methode eine einzelne private `GetProfile`-Methode auf, die ein hartcodiertes Standardverfolgungsprofil zurückgibt. Dieses Beispiel stammt aus dem Termination Tracking Service SDK-Beispiel. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Termination Tracking Service-Beispiel](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[WF_Samples#115](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#115)]
+ [!code-vb[WF_Samples#115](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#115)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProfile">
+      <MemberSignature Language="C#" Value="protected abstract System.Workflow.Runtime.Tracking.TrackingProfile GetProfile (Type workflowType, Version profileVersionId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Workflow.Runtime.Tracking.TrackingProfile GetProfile(class System.Type workflowType, class System.Version profileVersionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingService.GetProfile(System.Type,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingProfile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowType" Type="System.Type" />
+        <Parameter Name="profileVersionId" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="workflowType">Der <see cref="T:System.Type" /> des Workflows.</param>
+        <param name="profileVersionId"><see cref="T:System.Version" /> des Verfolgungsprofils.</param>
+        <summary>Muss in der abgeleiteten Klasse überschrieben werden und gibt bei der Implementierung das durch die Version bestimmte Verfolgungsprofil für den angegebenen Workflow-<see cref="T:System.Type" /> zurück.</summary>
+        <returns>Das nachverfolgungsprofil für den Typ des angegebenen Workflows.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Überwachungsdienst übernimmt die Verwaltung der für bestimmte Workflowtypen und Workflowinstanzen verfügbaren Verfolgungsprofile. Sie können diese Verwaltung nach Bedarf beliebig implementieren. Sie können z.&#160;B. dasselbe <xref:System.Workflow.Runtime.Tracking.TrackingProfile> für jeden Workflow-<xref:System.Type> und jede Workflowinstanz zurückgeben; oder Sie verwalten einen erweiterten Speicher mit Verfolgungsprofilen, auf die von der Workflowinstanz, dem Workflow-<xref:System.Type> und <xref:System.Version> verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTrackingChannel">
+      <MemberSignature Language="C#" Value="protected abstract System.Workflow.Runtime.Tracking.TrackingChannel GetTrackingChannel (System.Workflow.Runtime.Tracking.TrackingParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Workflow.Runtime.Tracking.TrackingChannel GetTrackingChannel(class System.Workflow.Runtime.Tracking.TrackingParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel(System.Workflow.Runtime.Tracking.TrackingParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Workflow.Runtime.Tracking.TrackingParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters"><see cref="T:System.Workflow.Runtime.Tracking.TrackingParameters" />, die der Workflowinstanz zugeordnet sind.</param>
+        <summary>Muss in der abgeleiteten Klasse überschrieben werden und gibt bei der Implementierung den Kanal zurück, über den die Laufzeitverfolgungsinfrastruktur Verfolgungsdatensätze an den Überwachungsdienst sendet.</summary>
+        <returns><see cref="T:System.Workflow.Runtime.Tracking.TrackingChannel" />, mit dem Verfolgungsdatensätze an den Überwachungsdienst gesendet werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Laufzeitverfolgungsinfrastruktur verwendet pro Überwachungsdienst einen <xref:System.Workflow.Runtime.Tracking.TrackingChannel> für jede Workflowinstanz. Das Workflowlaufzeitmodul ruft <xref:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel%2A> für jeden Überwachungsdienst auf, um den <xref:System.Workflow.Runtime.Tracking.TrackingChannel> für diesem Dienst abzurufen. Sie können die in <xref:System.Workflow.Runtime.Tracking.TrackingParameters> übergebenen Informationen verwenden, um über den <xref:System.Workflow.Runtime.Tracking.TrackingChannel> für den Überwachungsdienst gesendete Daten einer bestimmten Stammworkflowinstanz zuzuordnen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der `GetTrackingChannel`-Methode veranschaulicht. Dieses Beispiel stammt aus dem Termination Tracking Service SDK-Beispiel. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Termination Tracking Service-Beispiel](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[WF_Samples#113](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#113)]
+ [!code-vb[WF_Samples#113](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#113)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetProfile">
+      <MemberSignature Language="C#" Value="protected abstract bool TryGetProfile (Type workflowType, out System.Workflow.Runtime.Tracking.TrackingProfile profile);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryGetProfile(class System.Type workflowType, [out] class System.Workflow.Runtime.Tracking.TrackingProfile&amp; profile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingService.TryGetProfile(System.Type,System.Workflow.Runtime.Tracking.TrackingProfile@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowType" Type="System.Type" />
+        <Parameter Name="profile" Type="System.Workflow.Runtime.Tracking.TrackingProfile&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="workflowType"><see cref="T:System.Type" /> des Workflows, für den das Verfolgungsprofil abgerufen werden soll.</param>
+        <param name="profile">Diese Methode gibt das zu ladende <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> zurück. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Muss in der abgeleiteten Klasse überschrieben werden und ruft bei der Implementierung das Verfolgungsprofil für den angegebenen Workflowtyp ab, sofern ein Typ verfügbar ist.</summary>
+        <returns>
+          <see langword="true" />, wenn ein <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> für den angegebenen Workflow <see cref="T:System.Type" /> verfügbar ist, andernfalls <see langword="false" />. Wenn <see langword="true" />, wird das <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> in <paramref name="profile" /> zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Überwachungsdienst übernimmt die Verwaltung der für bestimmte Workflowtypen und Workflowinstanzen verfügbaren Verfolgungsprofile. Sie können diese Verwaltung nach Bedarf beliebig implementieren. Sie können z.&#160;B. dasselbe <xref:System.Workflow.Runtime.Tracking.TrackingProfile> für jeden Workflow-<xref:System.Type> und jede Workflowinstanz zurückgeben; oder Sie verwalten einen erweiterten Speicher mit Verfolgungsprofilen, auf die von der Workflowinstanz, dem Workflow-<xref:System.Type> und <xref:System.Version> verwiesen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der `TryGetProfile`-Methode veranschaulicht, die eine private `GetProfile`-Methode aufruft. Dieses Beispiel stammt aus dem Termination Tracking Service SDK-Beispiel. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Termination Tracking Service-Beispiel](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[Wf_samples#209](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#209)]
+ [!code-vb[Wf_samples#209](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#209)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReloadProfile">
+      <MemberSignature Language="C#" Value="protected abstract bool TryReloadProfile (Type workflowType, Guid workflowInstanceId, out System.Workflow.Runtime.Tracking.TrackingProfile profile);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryReloadProfile(class System.Type workflowType, valuetype System.Guid workflowInstanceId, [out] class System.Workflow.Runtime.Tracking.TrackingProfile&amp; profile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingService.TryReloadProfile(System.Type,System.Guid,System.Workflow.Runtime.Tracking.TrackingProfile@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowType" Type="System.Type" />
+        <Parameter Name="workflowInstanceId" Type="System.Guid" />
+        <Parameter Name="profile" Type="System.Workflow.Runtime.Tracking.TrackingProfile&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="workflowType"><see cref="T:System.Type" /> der Workflowinstanz.</param>
+        <param name="workflowInstanceId"><see cref="T:System.Guid" /> der Workflowinstanz.</param>
+        <param name="profile">Diese Methode gibt das zu ladende <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> zurück. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Muss in der abgeleiteten Klasse überschrieben werden und ruft bei der Implementierung ein neues Verfolgungsprofil für die angegebene Workflowinstanz ab, wenn sich das Verfolgungsprofil seit dem letzten Laden geändert hat.</summary>
+        <returns>
+          <see langword="true" />, wenn ein neues <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> geladen werden soll, andernfalls <see langword="false" />. Wenn <see langword="true" />, wird das <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> in <paramref name="profile" /> zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.TrackingService.TryReloadProfile%2A> wird von der Laufzeitverfolgungsinfrastruktur aufgerufen, um zu bestimmen, ob ein neues <xref:System.Workflow.Runtime.Tracking.TrackingProfile> für die angegebene Workflowinstanz geladen werden soll. Wenn ein neues <xref:System.Workflow.Runtime.Tracking.TrackingProfile> erforderlich ist, wird es in `profile` zurückgegeben. Wenn die Laufzeitverfolgungsinfrastruktur eine Workflowinstanz nicht mehr verfolgen soll, sollte der Überwachungsdienst `true` zurückgeben und `profile` auf einen NULL-Verweis (`Nothing` in Visual Basic) festlegen. Der Überwachungsdienst kann `workflowType` oder `workflowInstanceId` beliebig verwenden, um zu bestimmen, ob ein Verfolgungsprofil neu geladen werden soll. Beispielsweise verwendet <xref:System.Workflow.Runtime.Tracking.SqlTrackingService> nur `workflowInstanceId`, um zu bestimmen, ob ein Verfolgungsprofil neu geladen werden soll. <xref:System.Workflow.Runtime.Tracking.TrackingService.TryReloadProfile%2A> wird von der Laufzeitverfolgungsstruktur nach einer eigenen Verfolgungssemantik aufgerufen oder als Antwort auf einen Host oder Dienst, der <xref:System.Workflow.Runtime.WorkflowInstance.ReloadTrackingProfiles%2A?displayProperty=nameWithType> für eine Workflowinstanz aufruft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine grundlegende Implementierung der `TryReloadProfile`-Methode veranschaulicht. Dieses Beispiel stammt aus dem Termination Tracking Service SDK-Beispiel. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Termination Tracking Service-Beispiel](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[WF_Samples#116](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#116)]
+ [!code-vb[WF_Samples#116](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#116)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

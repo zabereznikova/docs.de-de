@@ -1,0 +1,155 @@
+<Type Name="ThicknessConverter" FullName="System.Windows.ThicknessConverter">
+  <TypeSignature Language="C#" Value="public class ThicknessConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ThicknessConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ThicknessConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert Instanzen anderer Typen in und aus Instanzen von <see cref="T:System.Windows.Thickness" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="XAMLTextUsage_ThicknessConverter"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThicknessConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ThicknessConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.ThicknessConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ThicknessConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Die Kontextinformationen eines Typs.</param>
+        <param name="sourceType">Der Quelltyp, den der Typkonverter für die Konvertierung ausgewertet wird.</param>
+        <summary>Bestimmt, ob der Typkonverter eine Instanz von zusammenzulegen <see cref="T:System.Windows.Thickness" /> aus einem angegebenen Typ.</summary>
+        <returns>
+          <see langword="true" />Wenn der Typkonverter eine Instanz von erstellen, kann <see cref="T:System.Windows.Thickness" /> aus dem angegebenen Typ, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ThicknessConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Die Kontextinformationen eines Typs.</param>
+        <param name="destinationType">Der Typ, der für die der Typkonverter wird diese Instanz von auswerten <see cref="T:System.Windows.Thickness" /> für die Konvertierung.</param>
+        <summary>Bestimmt, ob der Typkonverter eine Instanz von konvertieren kann <see cref="T:System.Windows.Thickness" /> in einen anderen Typ.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Instanz von der Typkonverter konvertiert werden kann <see cref="T:System.Windows.Thickness" /> auf die <paramref name="destinationType" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, System.Globalization.CultureInfo cultureInfo, object source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Globalization.CultureInfo cultureInfo, object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ThicknessConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Die Kontextinformationen für einen Typ.</param>
+        <param name="cultureInfo">Die <see cref="T:System.Globalization.CultureInfo" /> des Typs, der konvertiert wird.</param>
+        <param name="source">Die <c>Quelle</c> <see cref="T:System.Object" /> konvertiert wird.</param>
+        <summary>Versucht, eine Instanz von <see cref="T:System.Windows.Thickness" /> aus einem angegebenen Objekt zu erstellen.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Windows.Thickness" />, die aus der konvertierten <paramref name="source" /> erstellt wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Objekt ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">Das Beispielobjekt ist kein NULL-Verweis und kein gültiger Typ, der in eine <see cref="T:System.Windows.Thickness" /> konvertiert werden kann.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, System.Globalization.CultureInfo cultureInfo, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Globalization.CultureInfo cultureInfo, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ThicknessConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Die Kontextinformationen eines Typs.</param>
+        <param name="cultureInfo">Die <see cref="T:System.Globalization.CultureInfo" /> des Typs, der konvertiert wird.</param>
+        <param name="value">Die Instanz von <see cref="T:System.Windows.Thickness" /> konvertieren.</param>
+        <param name="destinationType">Der Typ, die von dieser Instanz des <see cref="T:System.Windows.Thickness" /> konvertiert.</param>
+        <summary>Versucht, eine Instanz der <see cref="T:System.Windows.Thickness" /> in einen angegebenen Typ.</summary>
+        <returns>Der Typ, der erstellt wird, wenn der Typkonverter eine Instanz von konvertiert <see cref="T:System.Windows.Thickness" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="value" /> Objekt ist kein null-Verweis (<see langword="Nothing" />) und kein Pinsel oder der <paramref name="destinationType" /> ist kein gültiger Typ für die Konvertierung.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="value" /> Objekt ist ein null-Verweis.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Win32">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.Win32" /> Namespace bietet zwei Arten von Klassen: solche, die durch das Betriebssystem und die Bearbeitung die Registrierung ausgelöste Ereignisse behandeln.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,314 @@
+<Type Name="Viewport3D" FullName="System.Windows.Controls.Viewport3D">
+  <TypeSignature Language="C#" Value="public class Viewport3D : System.Windows.FrameworkElement, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Viewport3D extends System.Windows.FrameworkElement implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Viewport3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Children")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Rendert den enthaltenen 3D-Inhalt innerhalb der Grenzen 2D-Layout des Inhalts der <see cref="T:System.Windows.Controls.Viewport3D" /> Element.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Viewport3D> Element rendert 3D beim Bereitstellen von Funktionen, die konsistent mit Inhalt <xref:System.Windows.FrameworkElement> Objekte einschließlich 2D-Layout, Clipping und Eingabeereignisse.  
+  
+ Wenn dieses Element als Inhalt eines Layoutelements ist wie <xref:System.Windows.Controls.Canvas>, Angeben der Größe der <xref:System.Windows.Controls.Viewport3D> durch Festlegen seiner <xref:System.Windows.FrameworkElement.Height%2A> und <xref:System.Windows.FrameworkElement.Width%2A> Eigenschaften (geerbt von <xref:System.Windows.FrameworkElement>).  
+  
+ <xref:System.Windows.Controls.Viewport3D>Erweitert die 2D-Treffertests in die 3D-Szene durch Ziehen den Treffertest 2D-Punkt in einem 3D Strahl. Rufen Sie die <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> Methode, um ausführliche zurückzugeben erreicht Ergebnisinformationen zu den visuellen Treffertest, Modell, Netz und Schnittpunkt.  
+  
+ Auf [!INCLUDE[TLA#tla_whistler](~/includes/tlasharptla-whistler-md.md)], wenn die Qualität Farbe auf 32-Bit- oder 16-Bit nicht festgelegt ist die <xref:System.Windows.Controls.Viewport3D> möglicherweise nicht wie erwartet gerendert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Viewport3D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Viewport3D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Viewport3D" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[3dgallery_procedural_snip#Basic3DShapeCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexamplewholepage)]
+ [!code-vb[3dgallery_procedural_snip#Basic3DShapeCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size finalSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size finalSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Viewport3D.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="finalSize">Größe von <see cref="T:System.Windows.Controls.Viewport3D" /> geht davon aus.</param>
+        <summary>Bewirkt, dass die <see cref="T:System.Windows.Controls.Viewport3D" /> So ordnen Sie den visuellen Inhalt an eine angegebene Größe an.</summary>
+        <returns>Die endgültige Größe des angeordneten <see cref="T:System.Windows.Controls.Viewport3D" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Camera">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Camera Camera { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Camera Camera" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Viewport3D.Camera" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Camera</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft oder Festlegen eines kameraprojekts, projiziert die [!INCLUDE[TLA#tla_3d](~/includes/tlasharptla-3d-md.md)] Inhalt der <see cref="T:System.Windows.Controls.Viewport3D" /> auf die [!INCLUDE[TLA#tla_2d](~/includes/tlasharptla-2d-md.md)] -Oberfläche des der <see cref="T:System.Windows.Controls.Viewport3D" />.</summary>
+        <value>Die Kamera, die die [!INCLUDE[TLA#tla_3d](~/includes/tlasharptla-3d-md.md)]-Inhalte auf die [!INCLUDE[TLA#tla_2d](~/includes/tlasharptla-2d-md.md)]-Oberfläche projiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft darstellt, die Anzeigeprojektion der [!INCLUDE[TLA2#tla_3d](~/includes/tla2sharptla-3d-md.md)] Szene.  
+  
+<a name="dependencyPropertyInfo_CameraProperty"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Viewport3D.CameraProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+> [!NOTE]
+>  Der Metadatentyp für diese Abhängigkeitseigenschaft ist <xref:System.Windows.PropertyMetadata>, nicht <xref:System.Windows.FrameworkPropertyMetadata>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Einstellung der <xref:System.Windows.Controls.Viewport3D.Camera%2A> Eigenschaft von einem <xref:System.Windows.Controls.Viewport3D> mithilfe von Code. Den gesamten Code aus der dieser Auszug stammt, finden Sie unter [Vorgehensweise: erstellen eine 3D-Szene](~/docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md).  
+  
+ [!code-csharp[3DGallery_procedural_snip#Basic3DShapeCodeExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexampleinline1)]
+ [!code-vb[3DGallery_procedural_snip#Basic3DShapeCodeExampleInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexampleinline1)]  
+  
+ Das folgende Beispiel zeigt die Einstellung der <xref:System.Windows.Controls.Viewport3D.Camera%2A> Eigenschaft eine <xref:System.Windows.Controls.Viewport3D> mit [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)]. Den gesamten Code aus der dieser Auszug stammt, finden Sie unter [Vorgehensweise: erstellen eine 3D-Szene](~/docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md).  
+  
+ [!code-xaml[basic3d#Basic3DXAML3DN1](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CameraProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CameraProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CameraProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Viewport3D.CameraProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Viewport3D.Camera" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Visual3DCollection Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Visual3DCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Viewport3D.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Visual3DCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung untergeordneter <see cref="T:System.Windows.Media.Media3D.Visual3D" />-Elemente von <see cref="T:System.Windows.Controls.Viewport3D" /> ab.</summary>
+        <value>Eine Auflistung untergeordneter <see cref="T:System.Windows.Media.Media3D.Visual3D" />-Elemente von <see cref="T:System.Windows.Controls.Viewport3D" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Viewport3D.ChildrenProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildrenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ChildrenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ChildrenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Viewport3D.ChildrenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Viewport3D.Children" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisualChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Visual GetVisualChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Visual GetVisualChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Viewport3D.GetVisualChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position des Elements in der Auflistung.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Media.Visual" /> an einer angegebenen Position in der <see cref="P:System.Windows.Controls.Viewport3D.Children" /> Auflistung von der <see cref="T:System.Windows.Controls.Viewport3D" />.</summary>
+        <returns>Visual an der angegebenen Position in der <see cref="P:System.Windows.Controls.Viewport3D.Children" /> Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Viewport3D.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine <see cref="T:System.Windows.Automation.Peers.Viewport3DAutomationPeer" /> für dieses Objekt <see cref="T:System.Windows.Controls.Viewport3D" />.</summary>
+        <returns>
+          <see cref="T:System.Windows.Automation.Peers.Viewport3DAutomationPeer" />für dieses Objekt <see cref="T:System.Windows.Controls.Viewport3D" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Viewport3D.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das als untergeordnetes Element hinzufügen.</param>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Viewport3D.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die das Objekt hinzugefügt werden soll.</param>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int VisualChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisualChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Viewport3D.VisualChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine ganze Zahl, die die Anzahl der <see cref="T:System.Windows.Media.Visual" /> Objekte in der <see cref="P:System.Windows.Media.Media3D.ModelVisual3D.Children" /> Auflistung von der <see cref="T:System.Windows.Media.Media3D.Visual3D" />.</summary>
+        <value>Ganze Zahl, die gewünschte Anzahl von visuellen Elementen in der Auflistung der untergeordneten Elemente von der <see cref="T:System.Windows.Media.Media3D.Visual3D" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,207 @@
+<Type Name="DSAKeyValue" FullName="System.Security.Cryptography.Xml.DSAKeyValue">
+  <TypeSignature Language="C#" Value="public class DSAKeyValue : System.Security.Cryptography.Xml.KeyInfoClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DSAKeyValue extends System.Security.Cryptography.Xml.KeyInfoClause" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.DSAKeyValue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.KeyInfoClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die <see cref="T:System.Security.Cryptography.DSA" /> private Schlüssel der <see langword="&lt;KeyInfo&gt;" /> Element.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.KeyInfo> -Klasse stellt die `<KeyInfo>` Element, das eine <xref:System.Security.Cryptography.DSA> öffentlichen Schlüssel.  
+  
+ Verwendung <xref:System.Security.Cryptography.Xml.DSAKeyValue> den öffentlichen Schlüssel zu identifizieren, die entspricht der <xref:System.Security.Cryptography.DSA> privaten Schlüssel, der zum Erstellen der digitalen Signatur verwendet wurde.  
+  
+ Wenn ein Schlüssel nicht explizit an den Konstruktor bereitgestellt wird ein neues <xref:System.Security.Cryptography.DSA> Schlüsselpaar wird nach dem Zufallsprinzip generiert.  
+  
+ Die <xref:System.Security.Cryptography.Xml.DSAKeyValue> Klasse mit XML-Signaturen verwendet wird. Weitere Informationen zur W3C-Spezifikation finden Sie unter "http://www.w3.org/TR/xmldsig-core/".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.Xml.DSAKeyValue> Klasse in XML-Verschlüsselung zum Erstellen einer getrennten Signatur.  
+  
+ [!code-cpp[System.Security.Cryptography.XML.DSAKeyValue_Detached#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.DSAKeyValue_Detached/CPP/exampledetached.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML.DSAKeyValue_Detached#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.DSAKeyValue_Detached/CS/exampledetached.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML.DSAKeyValue_Detached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML.DSAKeyValue_Detached/VB/exampledetached.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.Xml.DSAKeyValue> Klasse in XML-Verschlüsselung zum Erstellen einer Signatur Umschlag.  
+  
+ [!code-cpp[System.Security.Cryptography.XML.DSAKeyValue_Envelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.DSAKeyValue_Envelope/CPP/exampleenvelope.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML.DSAKeyValue_Envelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.DSAKeyValue_Envelope/CS/exampleenvelope.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML.DSAKeyValue_Envelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML.DSAKeyValue_Envelope/VB/exampleenvelope.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DSAKeyValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.DSAKeyValue.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.DSAKeyValue" /> Klasse mit einem neuen, nach dem Zufallsprinzip generierte <see cref="T:System.Security.Cryptography.DSA" /> öffentlichen Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines neuen <xref:System.Security.Cryptography.DSA> drücken, wird dieser Konstruktor verwendet die standardmäßige Implementierung des <xref:System.Security.Cryptography.DSA> gemäß der <xref:System.Security.Cryptography.CryptoConfig> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DSAKeyValue (System.Security.Cryptography.DSA key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.DSA key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.DSAKeyValue.#ctor(System.Security.Cryptography.DSA)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.DSA" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die Instanz einer Implementierung der <see cref="T:System.Security.Cryptography.DSA" /> -Klasse, die den öffentlichen Schlüssel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.DSAKeyValue" /> Klasse mit dem angegebenen <see cref="T:System.Security.Cryptography.DSA" /> öffentlichen Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.Xml.DSAKeyValue> Klasse in XML-Verschlüsselung.  
+  
+ [!code-cpp[System.Security.Cryptography.XML.DSAKeyValue_Detached#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.DSAKeyValue_Detached/CPP/exampledetached.cpp#2)]
+ [!code-csharp[System.Security.Cryptography.XML.DSAKeyValue_Detached#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.DSAKeyValue_Detached/CS/exampledetached.cs#2)]
+ [!code-vb[System.Security.Cryptography.XML.DSAKeyValue_Detached#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML.DSAKeyValue_Detached/VB/exampledetached.vb#2)]  
+  
+ [!code-cpp[System.Security.Cryptography.XML.DSAKeyValue_Envelope#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.DSAKeyValue_Envelope/CPP/exampleenvelope.cpp#2)]
+ [!code-csharp[System.Security.Cryptography.XML.DSAKeyValue_Envelope#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.DSAKeyValue_Envelope/CS/exampleenvelope.cs#2)]
+ [!code-vb[System.Security.Cryptography.XML.DSAKeyValue_Envelope#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML.DSAKeyValue_Envelope/VB/exampleenvelope.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.DSAKeyValue.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die XML-Darstellung einer <see cref="T:System.Security.Cryptography.Xml.DSAKeyValue" /> Element.</summary>
+        <returns>Die XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.DSAKeyValue" /> Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie die Ausgabe der XML-Code für eine <xref:System.Security.Cryptography.Xml.DSAKeyValue> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.DSA Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.DSA Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.DSAKeyValue.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.DSA</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schlüsselwert, dargestellt durch eine <see cref="T:System.Security.Cryptography.DSA" /> Objekt.</summary>
+        <value>Der öffentliche Schlüssel, dargestellt durch eine <see cref="T:System.Security.Cryptography.DSA" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt das DSA-Schlüssel zum Signieren von XML verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public override void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.DSAKeyValue.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das XML-Element beim Laden der <see cref="T:System.Security.Cryptography.Xml.DSAKeyValue" /> Zustand.</param>
+        <summary>Lädt eine <see cref="T:System.Security.Cryptography.Xml.DSAKeyValue" /> Zustand aus einer XML-Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, um XML-Elemente hinzuzufügen ein <xref:System.Security.Cryptography.Xml.DSAKeyValue> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die <paramref name="value" /> Parameter ist kein gültiger <see cref="T:System.Security.Cryptography.Xml.DSAKeyValue" /> -XML-Element.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,190 @@
+<Type Name="ParserError" FullName="System.Web.ParserError">
+  <TypeSignature Language="C#" Value="public sealed class ParserError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ParserError extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ParserError" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Fehler im Parser oder eine Warnung. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.ParserError> Objekt stellt einen Fehler, der erstellt wird ein <xref:System.Web.HttpParseException> Ausnahme wird ausgelöst. Fehlermeldungstext, einen virtuellen Pfad der Datei, in dem der Fehler aufgetreten ist, und die Zeilennummer des Fehlers in dieser Datei, kann ein Parser Error-Objekt enthalten. Wenn mehr als ein Parserfehler auftritt oder wenn mehrere Parserfehler an einem zentralen Ort, Verwendung gespeichert werden soll die <xref:System.Web.ParserErrorCollection> Objekt.  
+  
+ Ein Fehler im Parser ist vom Typ <xref:System.Web.HttpException>. Weitere Informationen zu Ausnahmen und deren Behandlung finden Sie unter [MSDN Library](http://go.microsoft.com/fwlink/?linkid=37118).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine neue Parserfehler zum Hinzufügen einer <xref:System.Web.ParserErrorCollection> Objekt.  
+  
+ [!code-csharp[System.Web.ParserErrorCollection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserErrorCollection/CS/ParserErrorCollection_CS.aspx#3)]
+ [!code-vb[System.Web.ParserErrorCollection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserErrorCollection/VB/ParserErrorCollection_VB.aspx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParserError ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ParserError.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ParserError" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine leere Instanz der initialisiert werden, die <xref:System.Web.ParserError> Klasse sowie zum Verwenden von deren Eigenschaften.  
+  
+ [!code-csharp[System.Web.ParserError#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserError/CS/parsererror_cs.aspx#1)]
+ [!code-vb[System.Web.ParserError#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserError/VB/parsererror_vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParserError (string errorText, string virtualPath, int line);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string errorText, string virtualPath, int32 line) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ParserError.#ctor(System.String,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorText" Type="System.String" />
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="line" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="errorText">Der Text der Fehlermeldung.</param>
+        <param name="virtualPath">Der virtuelle Pfad der Datei, die analysiert werden, wenn der Fehler aufgetreten ist.</param>
+        <param name="line">Die Zeilennummer der Fehlerquelle.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.ParserError" /> Klasse, indem Sie den angegebenen Fehlertext, den virtuellen Pfad und die Zeilennummer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.ParserError.%23ctor%2A> Konstruktor zum Initialisieren einer <xref:System.Web.ParserError> Objekt mit benutzerdefinierten Einstellungen. Die <xref:System.Web.ParserError.%23ctor%2A> Konstruktor hat die folgenden Eigenschaften:  
+  
+-   Die <xref:System.Web.ParserError.ErrorText%2A> -Eigenschaft, d. h. eine Zeichenfolge, enthält die Fehlermeldung, die mit dem Fehler im Parser verknüpft ist.  
+  
+-   Die <xref:System.Web.ParserError.VirtualPath%2A> Eigenschaft, die eine schreibgeschützte Zeichenfolge darstellt, der den virtuellen Pfad der Datei angibt, die den Fehler im Parser enthält.  
+  
+-   Die <xref:System.Web.ParserError.Line%2A> Eigenschaft landwirtschaftlichenBetrieb die Zeile innerhalb der Datei an dem diese Zahl <xref:System.Web.ParserError> -Objekt ausgelöst wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorText">
+      <MemberSignature Language="C#" Value="public string ErrorText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ParserError.ErrorText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge, die für den Fehler stellt die <see cref="T:System.Web.ParserError" /> Objekt.</summary>
+        <value>Eine Zeichenfolge, die die Fehlermeldung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.ParserError.ErrorText%2A> -Eigenschaft ein Programmierer definierte Fehlermeldung für Parser Fehler für die Anzeige in einem <xref:System.Web.ParserError> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Auffüllen der <xref:System.Web.ParserError.ErrorText%2A> -Eigenschaft für eine <xref:System.Web.ParserError> Objekt.  
+  
+ [!code-csharp[System.Web.ParserError#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserError/CS/parsererror_cs.aspx#3)]
+ [!code-vb[System.Web.ParserError#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserError/VB/parsererror_vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="public int Line { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Line" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ParserError.Line" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeilennummer der Quelle, an der der Fehler auftritt.</summary>
+        <value>Die Zeilennummer, in dem der Parser den Fehler aufgetreten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.ParserError.Line%2A> Propertyis die Zeile in der Datei bei der diese Zahl <xref:System.Web.ParserError> -Objekt ausgelöst wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Auffüllen der <xref:System.Web.ParserError.Line%2A> -Eigenschaft für eine <xref:System.Web.ParserError> Objekt.  
+  
+ [!code-csharp[System.Web.ParserError#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserError/CS/parsererror_cs.aspx#4)]
+ [!code-vb[System.Web.ParserError#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserError/VB/parsererror_vb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualPath">
+      <MemberSignature Language="C#" Value="public string VirtualPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ParserError.VirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den virtuellen Pfad der Datei, die beim Auftreten des Fehlers analysiert wurde.</summary>
+        <value>Eine Zeichenfolge, die den virtuellen Pfad der Datei angibt, die den Fehler im Parser enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Auffüllen der <xref:System.Web.ParserError.VirtualPath%2A> -Eigenschaft für eine <xref:System.Web.ParserError> Objekt.  
+  
+ [!code-csharp[System.Web.ParserError#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserError/CS/parsererror_cs.aspx#5)]
+ [!code-vb[System.Web.ParserError#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserError/VB/parsererror_vb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

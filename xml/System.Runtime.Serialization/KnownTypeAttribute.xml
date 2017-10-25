@@ -1,0 +1,208 @@
+<Type Name="KnownTypeAttribute" FullName="System.Runtime.Serialization.KnownTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class KnownTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit KnownTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.KnownTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Typen an, die vom <see cref="T:System.Runtime.Serialization.DataContractSerializer" /> beim Serialisieren oder Deserialisieren eines bestimmten Typs erkannt werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenden Sie das <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribut auf einen Typ an, um dem <xref:System.Runtime.Serialization.DataContractSerializer> die Typen anzuzeigen, die bei der Serialisierung oder Deserialisierung einer Instanz des Typs, auf den das Attribut angewendet wird, erkannt werden sollen. Dieses Attribut kann auch von anderen Serialisierungsprogrammen erkannt werden, die Datenverträge verstehen.  
+  
+> [!NOTE]
+>  Sie können im Code das Wort `KnownType` anstelle des längeren `KnownTypeAttribute` verwenden.  
+  
+ Sie können entweder genau eine <xref:System.Runtime.Serialization.KnownTypeAttribute>-Instanz mit der festgelegten <xref:System.Runtime.Serialization.KnownTypeAttribute.MethodName%2A>-Eigenschaft oder eine oder mehrere <xref:System.Runtime.Serialization.KnownTypeAttribute>-Instanzen mit der festgelegten <xref:System.Runtime.Serialization.KnownTypeAttribute.Type%2A> -Eigenschaft anwenden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden ein Typ mit dem Namen `Person` und ein Typ mit dem Namen `IDInformation` veranschaulicht, die bei der Serialisierung oder Deserialisierung des `Person`-Typs erkannt werden sollen.  
+  
+ [!code-csharp[KnownTypeAttribute#0](~/samples/snippets/csharp/VS_Snippets_CFX/knowntypeattribute/cs/overview.cs#0)]
+ [!code-vb[KnownTypeAttribute#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/knowntypeattribute/vb/overview.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KnownTypeAttribute (string methodName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string methodName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">Der Name der Methode, die einen <see cref="T:System.Collections.IEnumerable" /> von Typen zurückgibt, die bei der Serialisierung oder Deserialisierung von Daten verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.KnownTypeAttribute" />-Klasse mit dem Namen einer Methode, die einen <see cref="T:System.Collections.IEnumerable" /> bekannter Typen zurückgibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet einen Methodennamen, der einer Methode der Klasse entspricht.  Die Methode gibt einen <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Type>-Objekten zurück. Bei der Serialisierung oder Deserialisierung können die in der Auflistung gefundenen Typen im Stammtyp, auf den das Attribut angewendet wird, verwendet werden.   
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der `methodName`-Parameter verwendet, um eine Methode in dem Typ zu bestimmen, der ein Array von <xref:System.Type>-Objekten enthält.  
+  
+ [!code-csharp[KnownTypeAttribute_Ctor_String#1](~/samples/snippets/csharp/VS_Snippets_CFX/knowntypeattribute_ctor_string/cs/knowntype_ctor1.cs#1)]
+ [!code-vb[KnownTypeAttribute_Ctor_String#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/knowntypeattribute_ctor_string/vb/knowntypeattribute_ctor1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KnownTypeAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der <see cref="T:System.Type" />, der bei der Serialisierung oder Deserialisierung von Daten als bekannter Typ enthalten ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.KnownTypeAttribute" />-Klasse mit dem angegebenen Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel werden ein Typ mit dem Namen`Person` und ein Typ mit dem Namen `IDInformation` veranschaulicht, die bei der Deserialisierung enthalten sein sollen.  
+  
+ [!code-csharp[KnownTypeAttribute#0](~/samples/snippets/csharp/VS_Snippets_CFX/knowntypeattribute/cs/overview.cs#0)]
+ [!code-vb[KnownTypeAttribute#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/knowntypeattribute/vb/overview.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.KnownTypeAttribute.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen einer Methode ab, die eine Liste von Typen zurückgibt, die bei der Serialisierung oder Deserialisierung erkannt werden sollen.</summary>
+        <value>Ein <see cref="T:System.String" />, der den Namen der Methode für den von der <see cref="T:System.Runtime.Serialization.KnownTypeAttribute" />-Klasse definierten Typ enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode muss für die Klasse oder Struktur vorhanden sein, auf die der <xref:System.Runtime.Serialization.KnownTypeAttribute> angewendet wird; sie muss statisch sein, darf keine Parameter annehmen und muss eine Instanz jedes Typs zurückgeben, der die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle, wie die <xref:System.Collections.ObjectModel.Collection%601>-Klasse, oder ein Array von <xref:System.Type>-Objekten implementiert.  
+  
+ Die Methode wird einmal pro Anwendungsdomäne aufgerufen, wenn der Datenvertrag für den Typ geladen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der `methodName`-Parameter verwendet, um eine Methode in dem Typ zu bestimmen, der ein Array von <xref:System.Type>-Objekten enthält.  
+  
+ [!code-csharp[KnownTypeAttribute_Ctor_String#1](~/samples/snippets/csharp/VS_Snippets_CFX/knowntypeattribute_ctor_string/cs/knowntype_ctor1.cs#1)]
+ [!code-vb[KnownTypeAttribute_Ctor_String#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/knowntypeattribute_ctor_string/vb/knowntypeattribute_ctor1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.KnownTypeAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ ab, der bei der Serialisierung oder Deserialisierung vom <see cref="T:System.Runtime.Serialization.DataContractSerializer" /> erkannt werden soll.</summary>
+        <value>Der <see cref="T:System.Type" />, der bei der Serialisierung oder Deserialisierung verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

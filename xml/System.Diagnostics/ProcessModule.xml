@@ -1,0 +1,382 @@
+<Type Name="ProcessModule" FullName="System.Diagnostics.ProcessModule">
+  <TypeSignature Language="C#" Value="public class ProcessModule : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProcessModule extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.ProcessModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Process</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Diagnostics.Design.ProcessModuleDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die DLL- oder .exe-Datei, die in einem bestimmten Prozess geladen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Modul ist eine ausführbare Datei oder eine dynamic Link Library (DLL). Jeder Prozess besteht aus einem oder mehreren Modulen. Sie können diese Klasse verwenden, beim Abrufen von Informationen über das Modul.  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Diagnostics.ProcessModule> Klasse zum Abrufen und Anzeigen von Informationen zu allen Modulen, die von der Anwendung Notepad.exe verwendet werden.  
+  
+ [!code-cpp[ProcessModule#1](~/samples/snippets/cpp/VS_Snippets_CLR/ProcessModule/CPP/processmodule.cpp#1)]
+ [!code-csharp[ProcessModule#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessModule/CS/processmodule.cs#1)]
+ [!code-vb[ProcessModule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessModule/VB/processmodule.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="BaseAddress">
+      <MemberSignature Language="C#" Value="public IntPtr BaseAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int BaseAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessModule.BaseAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The base memory address of this module")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Speicheradresse, an das Modul geladen wurde.</summary>
+        <value>Die Load-Adresse des Moduls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird einen neuen Prozess für die Anwendung Notepad.exe erstellt. Der Code durchläuft die <xref:System.Diagnostics.ProcessModuleCollection> Klasse zum Abrufen einer <xref:System.Diagnostics.ProcessModule> Objekt für jedes Modul in der Auflistung. Die <xref:System.Diagnostics.ProcessModule.ModuleName%2A> und <xref:System.Diagnostics.ProcessModule.BaseAddress%2A> Eigenschaften werden verwendet, um den Namen des Moduls und die Speicheradresse angezeigt, in dem jedes Modul geladen wurde.  
+  
+ [!code-cpp[ProcessModule_BaseAddress#1](~/samples/snippets/cpp/VS_Snippets_CLR/ProcessModule_BaseAddress/CPP/processmodule_baseaddress.cpp#1)]
+ [!code-csharp[ProcessModule_BaseAddress#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessModule_BaseAddress/CS/processmodule_baseaddress.cs#1)]
+ [!code-vb[ProcessModule_BaseAddress#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessModule_BaseAddress/VB/processmodule_baseaddress.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryPointAddress">
+      <MemberSignature Language="C#" Value="public IntPtr EntryPointAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int EntryPointAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessModule.EntryPointAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The base memory address of the entry point of this module")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Speicheradresse für die Funktion, die ausgeführt wird, wenn das System geladen und das Modul führt an.</summary>
+        <value>Der Einstiegspunkt des Moduls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einstiegspunkt des Moduls ist der Speicherort der Funktion, die während des Prozessstarts, Thread starten, Beenden des Prozesses und Thread Herunterfahren aufgerufen wird. Der Einstiegspunkt ist, zwar nicht die Adresse der DllMain-Funktion sollte es sein, für die meisten Zwecke ausreichend zu schließen.  
+  
+> [!NOTE]
+>  Aufgrund von Änderungen auf die Weise, dass Windows-Assemblys geladen <xref:System.Diagnostics.ProcessModule.EntryPointAddress%2A> immer 0 zurück, auf [!INCLUDE[win8](~/includes/win8-md.md)] oder [!INCLUDE[win81](~/includes/win81-md.md)] und sollte nicht auf diesen Plattformen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird einen neuen Prozess für die Anwendung Notepad.exe erstellt. Der Code durchläuft die <xref:System.Diagnostics.ProcessModuleCollection> Klasse zum Abrufen einer <xref:System.Diagnostics.ProcessModule> Objekt für jedes Modul in der Auflistung. Die <xref:System.Diagnostics.ProcessModule.ModuleName%2A> und <xref:System.Diagnostics.ProcessModule.EntryPointAddress%2A> Eigenschaften werden verwendet, um den Namen und die Adresse der Eintrag für jedes Modul angezeigt.  
+  
+ [!code-cpp[ProcessModule_EntryPoint#1](~/samples/snippets/cpp/VS_Snippets_CLR/ProcessModule_EntryPoint/CPP/processmodule_entrypoint.cpp#1)]
+ [!code-csharp[ProcessModule_EntryPoint#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessModule_EntryPoint/CS/processmodule_entrypoint.cs#1)]
+ [!code-vb[ProcessModule_EntryPoint#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessModule_EntryPoint/VB/processmodule_entrypoint.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessModule.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The file name of this module")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Pfad zu dem Modul ab.</summary>
+        <value>Der voll gekennzeichnete Pfad, der den Speicherort des Moduls definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Dateiname länger als die maximale Anzahl zulässiger Zeichen ist, wird der Dateiname abgeschnitten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird einen neuen Prozess für die Anwendung Notepad.exe erstellt. Der Code durchläuft die <xref:System.Diagnostics.ProcessModuleCollection> Klasse zum Abrufen einer <xref:System.Diagnostics.ProcessModule> Objekt für jedes Modul in der Auflistung. Die <xref:System.Diagnostics.ProcessModule.ModuleName%2A> und <xref:System.Diagnostics.ProcessModule.FileName%2A> Eigenschaften werden verwendet, um den Namen des Moduls und die Informationen für den vollständigen Pfad für jedes Modul angezeigt.  
+  
+ [!code-cpp[ProcessModule_FileName#1](~/samples/snippets/cpp/VS_Snippets_CLR/ProcessModule_FileName/CPP/processmodule_filename.cpp#1)]
+ [!code-csharp[ProcessModule_FileName#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessModule_FileName/CS/processmodule_filename.cs#1)]
+ [!code-vb[ProcessModule_FileName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessModule_FileName/VB/processmodule_filename.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileVersionInfo">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.FileVersionInfo FileVersionInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.FileVersionInfo FileVersionInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessModule.FileVersionInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.FileVersionInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionsinformationen zum Modul ab.</summary>
+        <value>Ein <see cref="T:System.Diagnostics.FileVersionInfo" /> , die Versionsinformationen für das Modul enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird einen neuen Prozess für die Anwendung Notepad.exe erstellt. Der Code durchläuft die <xref:System.Diagnostics.ProcessModuleCollection> Klasse zum Abrufen einer <xref:System.Diagnostics.ProcessModule> Objekt für jedes Modul in der Auflistung. Die <xref:System.Diagnostics.ProcessModule.ModuleName%2A> und <xref:System.Diagnostics.ProcessModule.FileVersionInfo%2A> Eigenschaften werden verwendet, um den Namen des Moduls und die Dateiversionsinformationen für jedes Modul angezeigt.  
+  
+ [!code-cpp[ProcessModule_FileVersionInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/ProcessModule_FileVersionInfo/CPP/processmodule_fileversioninfo.cpp#1)]
+ [!code-csharp[ProcessModule_FileVersionInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessModule_FileVersionInfo/CS/processmodule_fileversioninfo.cs#1)]
+ [!code-vb[ProcessModule_FileVersionInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessModule_FileVersionInfo/VB/processmodule_fileversioninfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleMemorySize">
+      <MemberSignature Language="C#" Value="public int ModuleMemorySize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ModuleMemorySize" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessModule.ModuleMemorySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The memory needed by this module")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Arbeitsspeichers, die erforderlich sind, zum Laden des Moduls ab.</summary>
+        <value>Die Größe in Bytes, des Arbeitsspeichers, der das Modul belegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.ProcessModule.ModuleMemorySize%2A>keine zusätzlichen speicherbelegungen gehören, die das Modul macht, sobald es ausgeführt wird; Er enthält nur die Größe des statischen Code und Daten in-Datei des Moduls.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird einen neuen Prozess für die Anwendung Notepad.exe erstellt. Der Code durchläuft die <xref:System.Diagnostics.ProcessModuleCollection> Klasse zum Abrufen einer <xref:System.Diagnostics.ProcessModule> Objekt für jedes Modul in der Auflistung. Die <xref:System.Diagnostics.ProcessModule.ModuleName%2A> und <xref:System.Diagnostics.ProcessModule.ModuleMemorySize%2A> Eigenschaften werden verwendet, um den Namen des Moduls und der benötigte Speicherplatz für jedes Modul angezeigt.  
+  
+ [!code-cpp[ProcessModule_ModuleMemorySize#1](~/samples/snippets/cpp/VS_Snippets_CLR/ProcessModule_ModuleMemorySize/CPP/processmodule_modulememorysize.cpp#1)]
+ [!code-csharp[ProcessModule_ModuleMemorySize#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessModule_ModuleMemorySize/CS/processmodule_modulememorysize.cs#1)]
+ [!code-vb[ProcessModule_ModuleMemorySize#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessModule_ModuleMemorySize/VB/processmodule_modulememorysize.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleName">
+      <MemberSignature Language="C#" Value="public string ModuleName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ModuleName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessModule.ModuleName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The name of this module")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Prozessmoduls ab.</summary>
+        <value>Der Name des Moduls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Name länger als die maximale Anzahl zulässiger Zeichen ist, wird der Dezimalanteil abgeschnitten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird einen neuen Prozess für die Anwendung Notepad.exe erstellt. Der Code durchläuft die <xref:System.Diagnostics.ProcessModuleCollection> Klasse zum Abrufen einer <xref:System.Diagnostics.ProcessModule> Objekt für jedes Modul in der Auflistung. Die <xref:System.Diagnostics.ProcessModule.ModuleName%2A> Eigenschaft wird verwendet, um den Namen der einzelnen Module anzuzeigen.  
+  
+ [!code-cpp[ProcessModule_ModuleName#1](~/samples/snippets/cpp/VS_Snippets_CLR/ProcessModule_ModuleName/CPP/processmodule_modulename.cpp#1)]
+ [!code-csharp[ProcessModule_ModuleName#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessModule_ModuleName/CS/processmodule_modulename.cs#1)]
+ [!code-vb[ProcessModule_ModuleName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessModule_ModuleName/VB/processmodule_modulename.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ProcessModule.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Namen des Moduls in eine Zeichenfolge.</summary>
+        <returns>Der Wert der <see cref="P:System.Diagnostics.ProcessModule.ModuleName" />-Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird einen neuen Prozess für die Anwendung Notepad.exe erstellt. Der Code durchläuft die <xref:System.Diagnostics.ProcessModuleCollection> Klasse zum Abrufen einer <xref:System.Diagnostics.ProcessModule> Objekt für jedes Modul in der Auflistung. Die <xref:System.Diagnostics.ProcessModule.ToString%2A> Methode wird verwendet, um den Namen für jedes Modul anzuzeigen.  
+  
+ [!code-cpp[ProcessModule_ToString#1](~/samples/snippets/cpp/VS_Snippets_CLR/ProcessModule_ToString/CPP/processmodule_tostring.cpp#1)]
+ [!code-csharp[ProcessModule_ToString#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessModule_ToString/CS/processmodule_tostring.cs#1)]
+ [!code-vb[ProcessModule_ToString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessModule_ToString/VB/processmodule_tostring.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

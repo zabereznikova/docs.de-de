@@ -1,0 +1,117 @@
+<Type Name="SwitchLevelAttribute" FullName="System.Diagnostics.SwitchLevelAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SwitchLevelAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SwitchLevelAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SwitchLevelAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifiziert den Ebenentyp für einen Schalter an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut ist dazu vorgesehen, auf alle Klassen angewendet werden soll, die von erben die <xref:System.Diagnostics.Switch> Klasse. Der Zweck des Attributs wird zur Identifizierung des Typs, der die Switch-Kriterien des Schalters angibt. Jeder Switch bestimmt, ob eine Ablaufverfolgung geschrieben werden, auf Grundlage ein Ereignistyps übereinstimmt oder überschreitet den Wert von der <xref:System.Diagnostics.SwitchLevelAttribute.SwitchLevelType%2A> Eigenschaft für den Switch. Der Typ, der verwendet wird, für die <xref:System.Diagnostics.SwitchLevelAttribute.SwitchLevelType%2A> Eigenschaft variiert nach verschiedenen Switches. Z. B. den Switch Ebenentyp für die <xref:System.Diagnostics.BooleanSwitch> Klasse ist <xref:System.Boolean>, und der Typ der Ebene für die <xref:System.Diagnostics.TraceSwitch> Klasse ist <xref:System.Diagnostics.TraceLevel>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SwitchLevelAttribute (Type switchLevelType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type switchLevelType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SwitchLevelAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="switchLevelType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="switchLevelType">Die <see cref="T:System.Type" /> , der bestimmt, ob eine Ablaufverfolgung geschrieben werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.SwitchLevelAttribute" /> -Klasse und gibt den Typ, der bestimmt, ob eine Ablaufverfolgung geschrieben werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `switchLevelType` Parameter identifiziert die Art, die vom Switch verwendet wird, um festzustellen, ob eine Ablaufverfolgung geschrieben werden soll; z. B. den Typ des der <xref:System.Diagnostics.TraceSwitch.Level%2A> Eigenschaft von der <xref:System.Diagnostics.TraceSwitch> Klasse ist <xref:System.Diagnostics.TraceLevel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchLevelType">
+      <MemberSignature Language="C#" Value="public Type SwitchLevelType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type SwitchLevelType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SwitchLevelAttribute.SwitchLevelType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ, der bestimmt, ob eine Ablaufverfolgung geschrieben werden soll.</summary>
+        <value>Die <see cref="T:System.Type" /> , der bestimmt, ob eine Ablaufverfolgung geschrieben werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ebeneneigenschaft eines Schalters heißt nicht unbedingt `Level`, z. B. die Eigenschaft von der <xref:System.Diagnostics.BooleanSwitch> Klasse ist <xref:System.Diagnostics.BooleanSwitch.Enabled%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert, der die <xref:System.Diagnostics.SwitchLevelAttribute.SwitchLevelType%2A> -Eigenschaft für die <xref:System.Diagnostics.BooleanSwitch>.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/CS/program.cs#13)]
+ [!code-vb[System.Diagnostics.TraceSource#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/VB/program.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Set-Vorgang ist fehlgeschlagen, weil der Wert <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

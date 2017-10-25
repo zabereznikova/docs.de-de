@@ -1,0 +1,141 @@
+<Type Name="DataControlFieldHeaderCell" FullName="System.Web.UI.WebControls.DataControlFieldHeaderCell">
+  <TypeSignature Language="C#" Value="public class DataControlFieldHeaderCell : System.Web.UI.WebControls.DataControlFieldCell" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataControlFieldHeaderCell extends System.Web.UI.WebControls.DataControlFieldCell" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataControlFieldHeaderCell" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataControlFieldCell</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt in Barrierefreiheitsszenarios einen Header in der gerenderten Tabelle eines tabellarischen datengebundenen ASP.NET-Steuerelements dar, z. B. <see cref="T:System.Web.UI.WebControls.GridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell> Klasse wird von Datentabellen verwendet (z. B. die <xref:System.Web.UI.WebControls.GridView> Steuerelement) zur Darstellung der Header zugegriffen werden kann. Tabellarische Steuerelemente wie z. B. <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.FormView> gelten als Layouttabellen, und benötigen daher keine Header zugegriffen werden kann, und verwenden Sie nicht die <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell> Klasse.  
+  
+ Die <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell> Klasse wird in zwei Fällen verwendet:  
+  
+-   Die <xref:System.Web.UI.WebControls.GridView.UseAccessibleHeader%2A>-Eigenschaft ist `true`.  
+  
+-   Das Feld ist eine <xref:System.Web.UI.WebControls.BoundField> Objekt, dessen <xref:System.Web.UI.WebControls.BoundField.DataField%2A> Eigenschaftensatz als die <xref:System.Web.UI.WebControls.GridView.RowHeaderColumn%2A> Eigenschaft.  
+  
+ Ist weder der Fall, eine reguläre <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell> Objekt verwendet wird, rendert eine `<td>` anstelle von einer `<th>` Element.  
+  
+ Da die <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell> -Klasse unterstützt die <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell.AbbreviatedText%2A> -Eigenschaft, wird es von verwendet die <xref:System.Web.UI.WebControls.GridView> steuern, wenn die <xref:System.Web.UI.WebControls.GridView.UseAccessibleHeader%2A> Eigenschaft ist `true`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataControlFieldHeaderCell (System.Web.UI.WebControls.DataControlField containingField);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.DataControlField containingField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldHeaderCell.#ctor(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="containingField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="containingField">Die <see cref="T:System.Web.UI.WebControls.DataControlField" /> , die die aktuelle Zelle enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.DataControlFieldHeaderCell" /> Klasse, indem das angegebene <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt als Container der Zelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell.%23ctor%2A> Konstruktor übergibt die <xref:System.Web.UI.HtmlTextWriterTag?displayProperty=nameWithType> Element als seine `tagKey` -Parameter, der die Darstellung des HTML-Tags ist es mit gerendert wird. Die <xref:System.Web.UI.WebControls.DataControlField> übergeben der `containingField` Parameter wird verwendet, um zu bestimmen, ob Header angezeigt werden und welche Stile auf die Zelle angewendet werden soll, wenn er gerendert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbbreviatedText">
+      <MemberSignature Language="C#" Value="public virtual string AbbreviatedText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AbbreviatedText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlFieldHeaderCell.AbbreviatedText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest abgekürzten Text, der in HTML gerendert wird <see langword="abbr" /> -Attributs und das von Bildschirmsprachausgaben verwendet wird.</summary>
+        <value>Eine verkürzte Version von den Headertext Tabelle, die von Bildschirmsprachausgaben gelesen wird. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell.AbbreviatedText%2A> Eigenschaft im Ansichtszustand gespeichert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldHeaderCell.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" /> , der den Ausgabestream, der HTML-Inhalt an den Client rendert darstellt.</param>
+        <summary>Die Liste der zu rendernden Attribute hinzugefügt Informationen über die Tabellenzelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell.AddAttributesToRender%2A> Methode fügt die <xref:System.Web.UI.HtmlTextWriterAttribute.Scope> oder <xref:System.Web.UI.HtmlTextWriterAttribute.Abbr> -Attribute an, sofern die jeweilige <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell.Scope%2A> oder <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell.AbbreviatedText%2A> Eigenschaften werden festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.TableHeaderScope Scope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.TableHeaderScope Scope" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlFieldHeaderCell.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableHeaderScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Headerzelle Bereich innerhalb einer HTML-Tabelle.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.TableHeaderScope" />-Werte. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.TableHeaderScope.NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert von der <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell.Scope%2A> Eigenschaft wird als HTML gerendert `scope` -Attribut verwenden, nach der <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell> Objekt. Obwohl die <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell.Scope%2A> -Eigenschaft wird mit initialisiert <xref:System.Web.UI.WebControls.TableHeaderScope.NotSet>, sollten Sie es entweder festlegen <xref:System.Web.UI.WebControls.TableHeaderScope.Column> oder <xref:System.Web.UI.WebControls.TableHeaderScope.Row>, je nachdem, auf die Zellen, die der Header darstellt.  
+  
+ Der Wert, der die <xref:System.Web.UI.WebControls.DataControlFieldHeaderCell.Scope%2A> Eigenschaft im Ansichtszustand gespeichert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

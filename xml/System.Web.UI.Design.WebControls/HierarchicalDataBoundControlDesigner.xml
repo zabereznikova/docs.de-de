@@ -1,0 +1,391 @@
+<Type Name="HierarchicalDataBoundControlDesigner" FullName="System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner">
+  <TypeSignature Language="C#" Value="public class HierarchicalDataBoundControlDesigner : System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HierarchicalDataBoundControlDesigner extends System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt entwurfszeitunterstützung in einem Designerhost für das <see cref="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem Designerhost, wenn der Benutzer aus der Quelle zur Entwurfsansicht wechselt Markup-Quellcode, beschreibt ein Steuerelement, das von abgeleitet ist die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> abstrakte Klasse wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Benutzer zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet. Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner> Klasse bietet entwurfszeitunterstützung für Steuerelemente, die abgeleitet sind die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> in einem Designerhost.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner> Klasseneigenschaften bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.ActionLists%2A> Eigenschaft gibt eine <xref:System.ComponentModel.Design.DesignerActionListCollection> -Objekt, das in der Regel auf ein Objekt enthält, die abgeleitet ist die <xref:System.ComponentModel.Design.DesignerActionList> Klasse für jede Ebene in der Vererbungsstruktur des Designers.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DataSourceDesigner%2A> Eigenschaft ermöglicht den Zugriff auf den Designer der Datenquelle, sofern eine definiert ist.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DesignerView%2A> -Eigenschaft ruft die Standardansicht der Datenquelle, die an das zugeordnete Steuerelement gebunden ist.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.UseDataSourcePickerActionList%2A> -Eigenschaft bestimmt, ob das Steuerelement seine Aktion Standardlisten zum auswählen und Erstellen von Datenquellen gerendert werden soll.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner> -Klasse, Methoden bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.ConnectToDataSource%2A> Methode führt die Aktionen, die für die Verbindung mit der aktuellen Datenquelle erforderlich sind.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.CreateDataSource%2A> Methode erstellt eine neue Datenquelle für das zugeordnete Steuerelement.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DataBind%2A> Methode bindet das zugeordnete Steuerelement, das von abgeleitet ist die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse mit einer Datenquelle zur Entwurfszeit.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DisconnectFromDataSource%2A> -Methode führt die Aktionen, die zum Trennen der aktuellen Datenquelle erforderlich sind.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.GetDesignTimeDataSource%2A> Methode ruft eine Datenquelle, die zur Entwurfszeit für das zugeordnete Steuerelement verwendet werden kann.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.GetSampleDataSource%2A> -Methode erstellt eine Beispieldatenquelle, die zur Entwurfszeit für das zugeordnete Steuerelement verwendet werden kann.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.PreFilterProperties%2A> Methode dient zum Entfernen von Eigenschaften aus, oder zusätzliche Eigenschaften hinzugefügt oder Shadowing von Eigenschaften des zugeordneten Steuerelements, das von abgeleitet ist die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erweitern der <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner> auf die Darstellung von Steuerelementen zu ändern, die von der abgeleiteten Klasse die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> -Steuerelements zur Entwurfszeit.  
+  
+ Im Beispiel leitet der `MyHierarchicalDataBoundControl` -Klasse aus den <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl>. Die `MyHierarchicalDataBoundControl` Klasse ist einfach eine Kopie der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl>. Im Beispiel wird außerdem abgeleitet der `MyHierarchicalDataBoundControlDesigner` -Klasse aus der <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner> -Klasse, und stellen eine <xref:System.ComponentModel.DesignerAttribute> -Objekt für die `MyHierarchicalDataBoundControlDesigner` auf die `MyHierarchicalDataBoundControl` Klasse.  
+  
+ Die `MyHierarchicalDataBoundControlDesigner` überschreibt die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.PreFilterProperties%2A> Methode zum Erstellen der <xref:System.Web.UI.Control.NamingContainer%2A> Eigenschaft sichtbar ist, in der **Eigenschaften** Raster zur Entwurfszeit. Es überschreibt die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.GetDesignTimeHtml%2A> Methode, um das Markup für einen Platzhalter generieren, wenn das Entwurfszeitmarkup `null` oder <xref:System.String.Empty>, oder wenn das Markup zur Entwurfszeit eine leere `<span>` Block (d. h., wenn keine innere Markup zwischen den besteht`<span`...`>` und `</span>` Tags).  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner/CS/hierarchicaldatabounddesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner/VB/hierarchicaldatabounddesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HierarchicalDataBoundControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner> Klasse bei der Erstellung des zugeordneten Steuerelements, das von abgeleitet ist die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse oder eine Kopie des Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Designer-Aktionslistenauflistung für diesen Designer ab.</summary>
+        <value>Die diesem Designer zugeordnete <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.ActionLists%2A> Eigenschaft erstellt ein leeres <xref:System.ComponentModel.Design.DesignerActionListCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectToDataSource">
+      <MemberSignature Language="C#" Value="protected override bool ConnectToDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ConnectToDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.ConnectToDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Aktionen, die für die Verbindung mit der aktuellen Datenquelle erforderlich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Verbindung mit einer neuen Datenquelle ausgeführt wurde. <see langword="false" /> , wenn die alten und neuen Datenquelle identisch sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.ConnectToDataSource%2A> -Methode trennt die <xref:System.Web.UI.Design.DataSourceDesigner.DataSourceChanged> und <xref:System.Web.UI.Design.DataSourceDesigner.SchemaRefreshed> Ereignisse aus der vorherigen Datenquelle, und klicken Sie dann die neue Datenquelle fügt diese Ereignisse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDataSource">
+      <MemberSignature Language="C#" Value="protected override void CreateDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.CreateDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Datenquelle für das zugeordnete Steuerelement an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.CreateDataSource%2A> Methode zeigt ein Dialogfeld an, die verwendet werden kann, um eine Datenquelle für das zugeordnete Steuerelement zu erstellen, die abgeleitet ist die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="protected override void DataBind (System.Web.UI.WebControls.BaseDataBoundControl dataBoundControl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DataBind(class System.Web.UI.WebControls.BaseDataBoundControl dataBoundControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DataBind(System.Web.UI.WebControls.BaseDataBoundControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataBoundControl" Type="System.Web.UI.WebControls.BaseDataBoundControl" />
+      </Parameters>
+      <Docs>
+        <param name="dataBoundControl">Das an die Entwurfszeitdatenquelle zu bindende <see cref="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" />.</param>
+        <summary>Bindet das zugeordnete Steuerelement an die Entwurfszeitdatenquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DataBind%2A> erste legt die <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Steuerelement Verweis auf die Datenquelle zur Entwurfszeit und legt die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.DataSourceID%2A> Eigenschaft, um `null`. Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DataBind%2A> einen Rückruf der <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataBind%2A> Methode des Steuerelements, das von abgeleitet ist die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse, um mit der Datenquelle zur Entwurfszeit zu binden. Schließlich wiederhergestellt, die ursprünglichen Werte von der <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> und <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.DataSourceID%2A> Eigenschaften.  
+  
+ Die `dataBoundControl` Parameter ist das Steuerelement, das von abgeleitet ist die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> -Klasse, die diesem Designer oder eine Kopie dieses Steuerelements zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceDesigner">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IHierarchicalDataSourceDesigner DataSourceDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IHierarchicalDataSourceDesigner DataSourceDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DataSourceDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IHierarchicalDataSourceDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht den Zugriff auf den Designer der Datenquelle, wenn eine für die Datenbindung ausgewählt ist.</summary>
+        <value>Der Designer für die Datenquelle des zugeordneten Steuerelements abgeleitet wurde. die <see cref="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" />, implementiert die <see cref="T:System.Web.UI.Design.IHierarchicalDataSourceDesigner" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Datenquelle möglich, die mithilfe der <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataSource%2A> -Eigenschaft des Designers oder <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A?displayProperty=nameWithType> Eigenschaft des zugeordneten Steuerelements, das von abgeleitet ist die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerView">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.DesignerHierarchicalDataSourceView DesignerView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerHierarchicalDataSourceView DesignerView" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DesignerView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerHierarchicalDataSourceView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardansicht der Datenquelle, die an das zugeordnete Steuerelement gebunden ist.</summary>
+        <value>Die <see cref="T:System.Web.UI.Design.DesignerHierarchicalDataSourceView" /> , die die Standardansicht der Datenquelle darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Datenquelle möglich, die mithilfe der <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataSource%2A> -Eigenschaft des Designers oder <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A?displayProperty=nameWithType> Eigenschaft des zugeordneten Steuerelements, das von abgeleitet ist die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisconnectFromDataSource">
+      <MemberSignature Language="C#" Value="protected override void DisconnectFromDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DisconnectFromDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DisconnectFromDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Aktionen, die zum Trennen der aktuellen Datenquelle erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DisconnectFromDataSource%2A> -Methode trennt die <xref:System.Web.UI.Design.DataSourceDesigner.DataSourceChanged> und <xref:System.Web.UI.Design.DataSourceDesigner.SchemaRefreshed> Ereignisse aus der aktuellen Datenquelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeDataSource">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.IHierarchicalEnumerable GetDesignTimeDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.IHierarchicalEnumerable GetDesignTimeDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.GetDesignTimeDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchicalEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Datenquelle, die zur Entwurfszeit für das zugeordnete Steuerelement verwendet werden kann.</summary>
+        <returns>Ein Objekt, durch die <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> -Schnittstelle, die verwendet werden kann, wie eine Datenquelle für Steuerelemente abgeleitet der <see cref="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aus Gründen der Leistung ist besser, eine einfache vordefinierte Datenquelle zur Entwurfszeit anstelle der tatsächlichen Datenquelle für das Steuerelement zu verwenden, die abgeleitet ist die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSampleDataSource">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.IHierarchicalEnumerable GetSampleDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.IHierarchicalEnumerable GetSampleDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.GetSampleDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchicalEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Beispieldatenquelle, die zur Entwurfszeit für das zugeordnete Steuerelement verwendet werden kann.</summary>
+        <returns>Ein Objekt, durch die <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> -Schnittstelle, die verwendet werden kann, wie eine Datenquelle für Steuerelemente abgeleitet <see cref="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Beispieldaten erstellt, indem die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.GetSampleDataSource%2A> Methode verfügt über einen einzelnen Knoten mit einem leeren Pfad.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Eine Auflistung, die das <see cref="T:System.Collections.IDictionary" /> von hinzugefügten Eigenschaften und Shadowing-Eigenschaften implementiert.</param>
+        <summary>Wird vom Designer zum Entfernen von Eigenschaften aus, oder fügen zusätzliche Eigenschaften der Anzeige in der **Eigenschaften** Raster oder Shadowing von Eigenschaften des zugeordneten Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelement-Designer verwenden von abgeleiteten Methoden, die <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A?displayProperty=nameWithType> Methode verschiedene Steuerelementeigenschaften mit entsprechenden zur Entwurfszeit zu überschatten, die der Designer implementiert, um Eigenschaften hinzufügen oder Entfernen von Eigenschaften aus der ** Eigenschaften** Raster.  
+  
+ Für Steuerelemente, die abgeleitet sind die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> -Klasse, die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.PreFilterProperties%2A> Methode erstellt Entwurfszeiteigenschaften für das Shadowing der <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> und <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.DataSourceID%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.PreFilterProperties%2A> Methode in einer Klasse, die vom geerbt wird die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner> -Klasse zum Ändern der **Eigenschaften** Raster der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> -Steuerelements zur Entwurfszeit. Im Beispiel wird die <xref:System.Web.UI.Control.NamingContainer%2A> Eigenschaft sichtbar ist, in der **Eigenschaften** Raster.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner/CS/hierarchicaldatabounddesigner.cs#3)]
+ [!code-vb[System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner/VB/hierarchicaldatabounddesigner.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.PreFilterProperties(System.Collections.IDictionary)" /> Methode, um Eigenschaften hinzufügen oder ändern Sie die Attribute der Eigenschaften in der Entwurfszeiteigenschaft-Auflistung. Achten Sie darauf, dass Sie die Basismethode aufrufen, bevor Sie andere Verarbeitungsschritte ausführt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDataSourcePickerActionList">
+      <MemberSignature Language="C#" Value="protected virtual bool UseDataSourcePickerActionList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDataSourcePickerActionList" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.UseDataSourcePickerActionList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Steuerelement den Standardwert Aktionslisten, gerendert werden sollen, die einen Daten-ID-Dropdown-Quellliste und Verwandte Aufgaben enthalten.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Listen Sie die Standardaktion für die <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner> -Klasse enthalten eine **Datenquelle auswählen** Menüelement, das eine Dropdown-Liste wurde aus der Datenquelle ausgewählt werden kann und andere Aufgaben in den Aktionslisten des Datenquellen-Steuerelements.  
+  
+ In der Regel die Datenquelle Listen enthält der Controlleraktion **Datenquelle konfigurieren** und **Schema aktualisieren** Menüelemente, obwohl dies nicht immer vorhanden sein müssen. Die **Datenquelle konfigurieren** Menüpunkt zeigt ein Dialogfeld an, die in den Typ der Datenquelle ausgewählte geeignet ist. Z. B., wenn die Datenquelle ist ein <xref:System.Web.UI.WebControls.ObjectDataSource> -Steuerelement, das **Datenquelle konfigurieren** Dialogfeld können Sie für ein Geschäftsobjekt auswählen der <xref:System.Web.UI.WebControls.ObjectDataSource>. Die **Schema aktualisieren** Menüelement aktualisiert das Designer-Schema, der von der Datenquelle angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie nicht die standardmäßige Aktion Liste Datenquellenelemente, die angezeigt werden soll, überschreiben die <see cref="P:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.UseDataSourcePickerActionList" /> -Eigenschaft zum Zurückgeben von <see langword="false" />. Wenn Sie andere Aktion Liste Datenquellenelemente, die angezeigt werden soll, überschreiben die <see cref="P:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.UseDataSourcePickerActionList" /> zurückzugebenden <see langword="false" /> und überschreiben die <see cref="P:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.ActionLists" /> hinzuzufügenden der entsprechenden Eigenschaft <see cref="T:System.ComponentModel.Design.DesignerActionItem" /> Datenbankobjekte in der <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> -Objekt, das zurückgegeben.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,224 @@
+<Type Name="AsymmetricSignatureFormatter" FullName="System.Security.Cryptography.AsymmetricSignatureFormatter">
+  <TypeSignature Language="C#" Value="public abstract class AsymmetricSignatureFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AsymmetricSignatureFormatter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.AsymmetricSignatureFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse dar, von der alle Implementierungen asymmetrischer Signaturformatierungsprogrammen abgeleitet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Asymmetrischer signaturformatierungsprogrammen erstellen digitale Signaturen, die überprüft werden unter Verwendung von Implementierungen der <xref:System.Security.Cryptography.AsymmetricSignatureDeformatter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AsymmetricSignatureFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricSignatureFormatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Security.Cryptography.AsymmetricSignatureFormatter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz einer abstrakten Klasse kann nicht erstellt werden. Anwendungscode erstellt eine neue Instanz einer abgeleiteten Klasse.  
+  
+ Implementierungen von <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.SetKey%2A> und <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.SetHashAlgorithm%2A> den Schlüssel und Hash-Algorithmus festgelegt wird, vor dem Aufrufen einer Implementierung der <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSignature">
+      <MemberSignature Language="C#" Value="public abstract byte[] CreateSignature (byte[] rgbHash);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] CreateSignature(unsigned int8[] rgbHash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbHash" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbHash">Die zu signierenden Daten.</param>
+        <summary>Erstellt beim Überschreiben in einer abgeleiteten Klasse die Signatur für die angegebenen Daten.</summary>
+        <returns>Die digitale Signatur für den <paramref name="rgbHash" />-Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen einen Schlüssel und einen Hashalgorithmus angeben, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSignature">
+      <MemberSignature Language="C#" Value="public virtual byte[] CreateSignature (System.Security.Cryptography.HashAlgorithm hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] CreateSignature(class System.Security.Cryptography.HashAlgorithm hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature(System.Security.Cryptography.HashAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Security.Cryptography.HashAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="hash">Der zum Erstellen der Signatur zu verwendende Hashalgorithmus.</param>
+        <summary>Erstellt die Signatur aus dem angegebenen Hashwert.</summary>
+        <returns>Die Signatur für den angegebenen Hashwert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode wird den Hash-Algorithmus verwendet werden, dann gibt die Signatur der Eingabe Hash Algorithm-Wert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="hash" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHashAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract void SetHashAlgorithm (string strName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetHashAlgorithm(string strName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricSignatureFormatter.SetHashAlgorithm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="strName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="strName">Der Name des Hashalgorithmus, der zum Erstellen der Signatur verwendet werden soll.</param>
+        <summary>Legt, falls in einer abgeleiteten Klasse überschrieben, den Hashalgorithmus fest, der zum Erstellen der Signatur verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Müssen Sie einen Hash-Algorithmus festlegen, bevor Sie eine Implementierung von Aufrufen <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKey">
+      <MemberSignature Language="C#" Value="public abstract void SetKey (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetKey(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricSignatureFormatter.SetKey(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die Instanz der Implementierung des <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" /> zum Erstellen der Signatur verwendet.</param>
+        <summary>Legt, falls in einer abgeleiteten Klasse überschrieben, den asymmetrischen Algorithmus fest, der zum Erstellen der Signatur verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen einen Schlüssel festlegen, bevor eine Implementierung von <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,569 @@
+<Type Name="CollectionEditor" FullName="System.ComponentModel.Design.CollectionEditor">
+  <TypeSignature Language="C#" Value="public class CollectionEditor : System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CollectionEditor extends System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.CollectionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.UITypeEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Benutzeroberfläche, die meisten Arten von Auflistungen, die zur Entwurfszeit bearbeiten können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit einem <xref:System.ComponentModel.EditorAttribute> Zuordnen der <xref:System.ComponentModel.Design.CollectionEditor> mit der Eigenschaft.  
+  
+ [!code-cpp[EditorAttributesExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/EditorAttributesExample/CPP/class1.cpp#1)]
+ [!code-csharp[EditorAttributesExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/EditorAttributesExample/CS/class1.cs#1)]
+ [!code-vb[EditorAttributesExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/EditorAttributesExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Mit diesem Editor kann Sammlungen mit Bearbeiten einer <see langword="Item" /> Eigenschaft. Der Editor kann bestimmen den Typ des der Auflistung aus der <see langword="Item" /> -Eigenschaft, wenn sie vorhanden ist. Wenn die Auflistung verfügt nicht über diese Eigenschaft, oder wenn Sie Auflistungen von mehr als einem Typ bereitstellen möchten, können Sie bestimmte geschützte Member dieser Klasse angepasst werden, den Editor, um andere Arten von Auflistungen unterstützen überschreiben.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CollectionEditor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ der Auflistung für diesen Editor zu bearbeiten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Design.CollectionEditor" /> -Klasse unter Verwendung des angegebenen Auflistungstyps.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelChanges">
+      <MemberSignature Language="C#" Value="protected virtual void CancelChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CancelChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.CancelChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht Änderungen an der Auflistung ab.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, wenn Sie zusätzliche Verarbeitung beim Abbruch von Änderungen an der Sammlung ausführen müssen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRemoveInstance">
+      <MemberSignature Language="C#" Value="protected virtual bool CanRemoveInstance (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanRemoveInstance(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.CanRemoveInstance(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu entfernende Wert.</param>
+        <summary>Gibt an, ob die ursprünglichen Elemente der Auflistung entfernt werden können.</summary>
+        <returns>
+          <see langword="true" />Wenn es zulässig, die diesen Wert aus der Auflistung entfernt wird; andernfalls <see langword="false" />. Gibt die standardmäßige Implementierung immer <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Implementieren in einer abgeleiteten Klasse gibt diese Methode an, ob der angegebene Wert aus der Auflistung entfernt werden kann. Standardmäßig gibt diese Methode immer `true`.  
+  
+ Diese Methode wird aufgerufen, wenn der Benutzer versucht, ein Element zu entfernen, die eine ursprüngliche Member der Auflistung ist. Diese Methode wird nicht aufgerufen, wenn Elemente entfernt werden, die in der aktuellen Sitzung bearbeiten, da es keine sind noch nicht Teil der Auflistung hinzugefügt wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSelectMultipleInstances">
+      <MemberSignature Language="C#" Value="protected virtual bool CanSelectMultipleInstances ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanSelectMultipleInstances() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.CanSelectMultipleInstances" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob mehrere Elemente der Auflistung gleichzeitig ausgewählt werden können.</summary>
+        <returns>
+          <see langword="true" />Wenn es mehrere Member der Auflistung sein können gleichzeitig; ausgewählt andernfalls <see langword="false" />. Standardmäßig gibt diese <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt an, ob mehrere Member der Auflistung innerhalb der Auflistung-Editor-Dialogfeld ausgewählt werden können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionItemType">
+      <MemberSignature Language="C#" Value="protected Type CollectionItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type CollectionItemType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.CollectionEditor.CollectionItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Datentyp jedes Elements in der Auflistung ab.</summary>
+        <value>Der Datentyp der Elemente der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt den Datentyp der Elemente der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionType">
+      <MemberSignature Language="C#" Value="protected Type CollectionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type CollectionType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.CollectionEditor.CollectionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Datentyp des Auflistungsobjekts ab.</summary>
+        <value>Der Datentyp des Auflistungsobjekts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt den Datentyp des Auflistungsobjekts dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.ITypeDescriptorContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ITypeDescriptorContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.CollectionEditor.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ITypeDescriptorContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Typdeskriptor, der den aktuellen Kontext angibt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , der den Kontext aktuell in Verwendung angibt oder <see langword="null" /> , wenn kein Kontext verfügbar ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCollectionForm">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.Design.CollectionEditor.CollectionForm CreateCollectionForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ComponentModel.Design.CollectionEditor/CollectionForm CreateCollectionForm() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.CreateCollectionForm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CollectionEditor+CollectionForm</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Formular zum Anzeigen und Bearbeiten der aktuellen Auflistung.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.Design.CollectionEditor.CollectionForm" /> als Benutzeroberfläche bereitstellen, für die Bearbeitung der auflistungs.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können die erben von <see cref="T:System.ComponentModel.Design.CollectionEditor.CollectionForm" /> Ihre eigenen Formen bereitzustellen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCollectionItemType">
+      <MemberSignature Language="C#" Value="protected virtual Type CreateCollectionItemType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Type CreateCollectionItemType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.CreateCollectionItemType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Datentyp, den diese Auflistung enthält.</summary>
+        <returns>Der Datentyp der Elemente in der Auflistung oder ein <see cref="T:System.Object" /> kein <see langword="Item" /> Eigenschaft kann auf die Auflistung nicht gefunden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den Datentyp der Elemente der Auflistung von Abrufen der <xref:System.ComponentModel.Design.CollectionEditor.CollectionItemType%2A> -Eigenschaft, die schneller als diese Methode ist.  
+  
+ Diese Methode muss nicht von Benutzern, außer in abgeleiteten Klassen aufgerufen werden, in dem diese Methode außer Kraft gesetzt und implementiert wurde.  
+  
+ Die standardmäßige Implementierung dieser Methode gibt den Datentyp der `Item` -Eigenschaft der Auflistung, sofern vorhanden.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Entwickler können festlegen, überschreiben Sie diese Methode zur Unterstützung von Auflistungen, die nicht typisch und unterstützten Auflistung Modell folgen, oder typauflösung erfolgt zu langsam, wenn die Leistung kritisch und reflektionsbasiertes ist.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected virtual object CreateInstance (Type itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object CreateInstance(class System.Type itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.CreateInstance(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Typ des zu erstellenden Elements.</param>
+        <summary>Erstellt eine neue Instanz des angegebenen Elements Sammlungstyps.</summary>
+        <returns>Eine neue Instanz des angegebenen Objekts.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Methode sollte eine Ausnahme auslösen, wenn eine neue Instanz des angegebenen Typs erstellt werden kann.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewItemTypes">
+      <MemberSignature Language="C#" Value="protected virtual Type[] CreateNewItemTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Type[] CreateNewItemTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.CreateNewItemTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Datentypen, die diese auflistungs-Editor enthalten kann.</summary>
+        <returns>Ein Array von Datentypen, die dieser Auflistung enthalten kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den Datentyp der Elemente der Auflistung von Abrufen der <xref:System.ComponentModel.Design.CollectionEditor.NewItemTypes%2A> -Eigenschaft, die schneller als diese Methode ist.  
+  
+ Diese Methode muss nicht von Benutzern, außer in abgeleiteten Klassen aufgerufen werden, in dem diese Methode außer Kraft gesetzt und implementiert wurde.  
+  
+ Die standardmäßige Implementierung dieser Methode gibt den Typ der Elemente der Auflistung in einem Typarray zurück.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Methode muss überschrieben werden, um Sammlungen, die mit verschiedenen unterstützt. Die standardmäßige Implementierung dieser Methode gibt den Datentyp der <see langword="Item" /> -Eigenschaft der Auflistung, sofern vorhanden. Verwenden Sie diese Methode, um die standardmäßige Implementierung überschreiben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DestroyInstance">
+      <MemberSignature Language="C#" Value="protected virtual void DestroyInstance (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DestroyInstance(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.DestroyInstance(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Das Objekt zu zerstören.</param>
+        <summary>Zerstört die angegebene Instanz des Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditValue">
+      <MemberSignature Language="C#" Value="public override object EditValue (System.ComponentModel.ITypeDescriptorContext context, IServiceProvider provider, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EditValue(class System.ComponentModel.ITypeDescriptorContext context, class System.IServiceProvider provider, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, über die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <param name="provider">Ein Dienstobjekt, das über die Bearbeitung von Diensten abgerufen werden kann.</param>
+        <param name="value">Das Objekt, das den Wert bearbeiten.</param>
+        <summary>Bearbeitet den Wert des angegebenen Objekts mit dem angegebenen Dienstanbieter und Kontext.</summary>
+        <returns>Der neue Wert des Objekts. Wenn sich der Wert des Objekts nicht geändert hat, wird hierbei dasselbe Objekt zurückgegeben, das zuvor übergeben wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.Design.CheckoutException">Versuch, die in ein Quellcode-Verwaltungsprogramm eingecheckte Datei auszuchecken war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDisplayText">
+      <MemberSignature Language="C#" Value="protected virtual string GetDisplayText (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetDisplayText(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.GetDisplayText(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Listenelement für die angezeigten Text abzurufen.</param>
+        <summary>Ruft den Anzeigetext für das angegebene Listenelement ab.</summary>
+        <returns>Der Anzeigetext für <paramref name="value" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditStyle">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Design.UITypeEditorEditStyle GetEditStyle (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Design.UITypeEditorEditStyle GetEditStyle(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, über die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <summary>Ruft den Bearbeitungsstil ab, in der <see cref="M:System.ComponentModel.Design.CollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> -Enumerationswert, der angibt, die bereitgestellten Bearbeitung zu formatieren. Diese Methode gibt zurück, wenn die Methode im angegebenen Kontext nicht unterstützt wird, die <see cref="F:System.Drawing.Design.UITypeEditorEditStyle.None" /> Bezeichner.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItems">
+      <MemberSignature Language="C#" Value="protected virtual object[] GetItems (object editValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object[] GetItems(object editValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.GetItems(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="editValue">Die Auflistung zu bearbeiten.</param>
+        <summary>Ruft ein Array von Objekten, die mit der angegebenen Auflistung ab.</summary>
+        <returns>Ein Array mit den Auflistungsobjekten, oder ein leeres Objekt-Array, wenn die angegebene Auflistung erbt nicht von <see cref="T:System.Collections.ICollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectsFromInstance">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.IList GetObjectsFromInstance (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.IList GetObjectsFromInstance(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.GetObjectsFromInstance(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Ein <see cref="T:System.Collections.ArrayList" /> als ein Objekt zurückgegeben.</param>
+        <summary>Gibt eine Liste mit dem angegebenen Objekt.</summary>
+        <returns>Ein <see cref="T:System.Collections.ArrayList" /> enthält die einzelnen Objekte erstellt werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des abzurufenden Diensts.</param>
+        <summary>Ruft den angeforderten Dienst ab, sofern dieser verfügbar ist.</summary>
+        <returns>Eine Instanz des Diensts oder <see langword="null" /> , wenn der Dienst nicht gefunden werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpTopic">
+      <MemberSignature Language="C#" Value="protected virtual string HelpTopic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpTopic" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.CollectionEditor.HelpTopic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Hilfeschlüsselwort zum Anzeigen des Hilfethemas oder Themenliste, wenn die Editor Dialogfeld Hilfe-Schaltfläche oder die F1-Taste gedrückt wird.</summary>
+        <value>Das Hilfeschlüsselwort zum Anzeigen des Hilfethemas oder Themenliste für Wenn Hilfe, aus dem Editor angefordert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie diese Eigenschaft, um ein anderes Hilfethema anzuzeigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewItemTypes">
+      <MemberSignature Language="C#" Value="protected Type[] NewItemTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] NewItemTypes" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.CollectionEditor.NewItemTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die verfügbaren Typen von Elementen, die erstellt werden, können für diese Auflistung ab.</summary>
+        <value>Die Typen von Elementen, die erstellt werden können.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, die Datentypen, die der Auflistung hinzugefügt werden können. Standardmäßig gibt dies nur ein <xref:System.ComponentModel.Design.CollectionEditor.CollectionItemType%2A>. Wenn mehr als einem Typ zurückgegeben wird, stellt der Auflistungseditor UI eine Möglichkeit zum Auswählen der richtige Elementtyp erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItems">
+      <MemberSignature Language="C#" Value="protected virtual object SetItems (object editValue, object[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object SetItems(object editValue, object[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.SetItems(System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editValue" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="editValue">Die Auflistung zu bearbeiten.</param>
+        <param name="value">Ein Array von Objekten, die als Elemente der Auflistung festgelegt werden soll.</param>
+        <summary>Legt das angegebene Array als die Elemente der Auflistung fest.</summary>
+        <returns>Das neu erstellte Objekt oder hingegen aus die Auflistung erkennbar die <paramref name="editValue" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Einstellung erfordert, dass ein neues Objekt erstellt werden, wird das neue Objekt zurückgegeben. Andernfalls die `editValue` Parameter zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="protected virtual void ShowHelp ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ShowHelp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.CollectionEditor.ShowHelp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt das Hilfethema für den Standardwert für den auflistungs-Editor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

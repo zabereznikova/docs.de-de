@@ -1,0 +1,695 @@
+<Type Name="ReplicatorActivity" FullName="System.Workflow.Activities.ReplicatorActivity">
+  <TypeSignature Language="C#" Value="public sealed class ReplicatorActivity : System.Workflow.ComponentModel.CompositeActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReplicatorActivity extends System.Workflow.ComponentModel.CompositeActivity" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.ReplicatorActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.CompositeActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Initialized")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Workflow.Activities.ReplicatorDesigner), typeof(System.ComponentModel.Design.IDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(typeof(System.Workflow.ComponentModel.Design.ActivityToolboxItem))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Workflow.Activities.ReplicatorActivity), "Resources.Replicator.png")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Workflow.ComponentModel.Compiler.ActivityValidator(typeof(System.Workflow.Activities.ReplicatorValidator))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Workflow.Runtime.DebugEngine.WorkflowDebuggerStepping(System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption.Concurrent)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Führt mehrere Instanzen einer untergeordneten Aktivität aus.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Activities.ReplicatorActivity> ist mit einer `for each`-Anweisung vergleichbar. Wenn eine Aufgabe auszuführen ist, bei der die gleiche Funktion auf zahlreichen verschiedenen Entitäten wiederholt wird, ist <xref:System.Workflow.Activities.ReplicatorActivity> möglicherweise besser geeignet als <xref:System.Workflow.Activities.WhileActivity>.  
+  
+ Standardmäßig wird <xref:System.Workflow.Activities.ReplicatorActivity> nach dem Abschluss aller untergeordneten Instanzen abgeschlossen. Sie können dieses Verhalten mit einer benutzerdefinierten Bedingung überschreiben, die beim Beenden der Aktivität verwendet wird. Ergibt diese Bedingung vor Abschluss aller untergeordneten Instanzen `true`, werden alle zu diesem Zeitpunkt ausgeführten untergeordneten Instanzen abgebrochen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie eine neue Instanz der <xref:System.Workflow.Activities.ReplicatorActivity>-Klasse erstellt und ein Handler für das <xref:System.Workflow.Activities.ReplicatorActivity.Initialized>-Ereignis definiert wird. Dieses Codebeispiel stammt aus dem Replicator SDK-Beispiel in der Datei SimpleReplicatorWorkflow.Designer.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Mit Replikator](http://msdn.microsoft.com/en-us/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
+  
+ [!code-csharp[wf_samples#177](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#177)]
+ [!code-vb[wf_samples#177](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#177)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReplicatorActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReplicatorActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.ReplicatorActivity" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie eine neue Instanz der <xref:System.Workflow.Activities.ReplicatorActivity>-Klasse erstellt wird.  Dieses Codebeispiel stammt aus dem Replicator SDK-Beispiel in der Datei SimpleReplicatorWorkflow.Designer.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Mit Replikator](http://msdn.microsoft.com/en-us/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
+  
+ [!code-csharp[wf_samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
+ [!code-vb[wf_samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReplicatorActivity (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReplicatorActivity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der benutzerdefinierte Name der Aktivität.</param>
+        <summary>Initialisiert mithilfe des Aktivitätsnamens eine neue Instanz der <see cref="T:System.Workflow.Activities.ReplicatorActivity" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllChildrenComplete">
+      <MemberSignature Language="C#" Value="public bool AllChildrenComplete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllChildrenComplete" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.AllChildrenComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob alle untergeordneten Instanzen vollständig sind.</summary>
+        <value>
+          <see langword="true" />, wenn alle untergeordneten Instanzen vollständig sind; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht dem <xref:System.Workflow.Activities.ReplicatorActivity.UntilCondition%2A>-Writer das problemlose Abrufen dieser Informationen, ohne dass eigene Auflistungen verwaltet oder Bewertungen über einen dynamischen Aktivitätensatz durchgeführt werden müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.ActivityExecutionStatus Cancel (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Cancel(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReplicatorActivity.Cancel(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Activities.ReplicatorChildEventArgs&gt; ChildCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Activities.ReplicatorChildEventArgs&gt; ChildCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.ReplicatorActivity.ChildCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Activities.ReplicatorChildEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt sofort auf, nachdem von <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> die Ausführung einer untergeordneten Aktivitätsinstanz beendet wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildCompletedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty ChildCompletedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty ChildCompletedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.ChildCompletedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die untergeordnete Aktivitätsinstanz von <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildInitialized">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Activities.ReplicatorChildEventArgs&gt; ChildInitialized;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Activities.ReplicatorChildEventArgs&gt; ChildInitialized" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.ReplicatorActivity.ChildInitialized" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Activities.ReplicatorChildEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt umgehend nach der Initialisierung einer untergeordneten Aktivität auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sofern dieses Ereignis abonniert ist, wird es immer dann ausgelöst, wenn eine Instanz der untergeordneten Aktivität für ein Element in der `Children`-Auflistung erstellt wird. Die `Children`-Auflistung wird durch die <xref:System.Workflow.Activities.ReplicatorChildEventArgs> des <xref:System.Workflow.Activities.ReplicatorActivity.Initialized>-Ereignishandlers festgelegt. Die untergeordnete <xref:System.Workflow.ComponentModel.Activity>-Instanz wird im Aufruf übergeben, sodass von <xref:System.Workflow.Activities.ReplicatorActivity> Werte auf dem untergeordneten Element festgelegt werden können. Das relevante <xref:System.Workflow.Activities.ReplicatorChildEventArgs.InstanceData%2A>-Objekt aus der `Children`-Auflistung wird ebenfalls übergeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ist dargestellt, wie der Wert der <xref:System.Workflow.Activities.ReplicatorActivity.ChildInitialized>-Eigenschaft festgelegt wird. Dieses Codebeispiel stammt aus dem Replicator SDK-Beispiel in der Datei SimpleReplicatorWorkflow.Designer.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Mit Replikator](http://msdn.microsoft.com/en-us/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
+  
+ [!code-csharp[wf_samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
+ [!code-vb[wf_samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildInitializedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty ChildInitializedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty ChildInitializedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.ChildInitializedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die untergeordnete Aktivitätsinstanz von <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> initialisiert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Completed">
+      <MemberSignature Language="C#" Value="public event EventHandler Completed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Completed" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.ReplicatorActivity.Completed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> abgeschlossen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty CompletedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty CompletedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.CompletedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentChildData">
+      <MemberSignature Language="C#" Value="public System.Collections.IList CurrentChildData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList CurrentChildData" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.CurrentChildData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Liste aller untergeordneten Aktivitäten zurück.</summary>
+        <value>Eine Liste aller untergeordneten Aktivitäten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentIndex">
+      <MemberSignature Language="C#" Value="public int CurrentIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.CurrentIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Indexposition der aktuellen untergeordneten Aktivität ab.</summary>
+        <value>Die Indexposition der aktuellen untergeordneten Aktivität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicActivities">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.Workflow.ComponentModel.Activity&gt; DynamicActivities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Workflow.ComponentModel.Activity&gt; DynamicActivities" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.DynamicActivities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Workflow.ComponentModel.Activity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array mit ausgeführten untergeordneten Aktivitätsinstanzen ab.</summary>
+        <value>Ein Array mit derzeit ausgeführten untergeordneten Aktivitätsinstanzen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von dieser Eigenschaft zurückgegebenen Aktivitätsinstanzen sind die Instanzen des Aktivitätstyps, die in <xref:System.Workflow.Activities.ReplicatorActivity> enthalten sind. Wird <xref:System.Workflow.Activities.ReplicatorActivity> im Sequenzmodus ausgeführt, beinhaltet das Array nur eine Aktivität; bei einer Ausführung im Parallelmodus beinhaltet das Array alle derzeit ausgeführten Instanzen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.ActivityExecutionStatus Execute (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Execute(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReplicatorActivity.Execute(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionType">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.ExecutionType ExecutionType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.Activities.ExecutionType ExecutionType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.ExecutionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.ExecutionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Workflow.Activities.ExecutionType" /> für den <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> ab oder legt diese fest.</summary>
+        <value>Der <see cref="T:System.Workflow.Activities.ExecutionType" /> für den <see cref="T:System.Workflow.Activities.ReplicatorActivity" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Festlegen der `ExecutionType`-Eigenschaft veranschaulicht. Dieses Beispiel stammt aus dem Simple Replicator SDK-Beispiel. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Replikator Beispiel](http://msdn.microsoft.com/en-us/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
+  
+ [!code-csharp[wf_samples#180](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#180)]
+ [!code-vb[wf_samples#180](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#180)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionTypeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty ExecutionTypeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty ExecutionTypeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.ExecutionTypeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> dar, die sich auf die <see cref="P:System.Workflow.Activities.ReplicatorActivity.ExecutionType" />-Eigenschaft bezieht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialChildData">
+      <MemberSignature Language="C#" Value="public System.Collections.IList InitialChildData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList InitialChildData" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.InitialChildData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.BindUITypeEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste mit untergeordneten Aktivitätsdaten ab oder legt diese fest.</summary>
+        <value>Eine Liste mit untergeordneten Aktivitätsdaten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialChildDataProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty InitialChildDataProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty InitialChildDataProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.InitialChildDataProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> dar, die sich auf die <see cref="P:System.Workflow.Activities.ReplicatorActivity.InitialChildData" />-Eigenschaft bezieht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialized">
+      <MemberSignature Language="C#" Value="public event EventHandler Initialized;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Initialized" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.ReplicatorActivity.Initialized" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Ausführung von <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> beginnt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel ist dargestellt, wie der Wert der <xref:System.Workflow.Activities.ReplicatorActivity.Initialized>-Eigenschaft festgelegt wird. Dieses Codebeispiel stammt aus dem Replicator SDK-Beispiel in der Datei SimpleReplicatorWorkflow.Designer.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Mit Replikator](http://msdn.microsoft.com/en-us/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
+  
+ [!code-csharp[wf_samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
+ [!code-vb[wf_samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty InitializedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty InitializedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.InitializedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> dar, die sich auf das <see cref="E:System.Workflow.Activities.ReplicatorActivity.Initialized" />-Ereignis bezieht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExecuting">
+      <MemberSignature Language="C#" Value="public bool IsExecuting (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsExecuting(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReplicatorActivity.IsExecuting(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition der untergeordneten Aktivität.</param>
+        <summary>Gibt an, ob die angegebene untergeordnete Aktivität gerade ausgeführt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die untergeordnete Aktivität ausgeführt wird; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosed">
+      <MemberSignature Language="C#" Value="protected override void OnClosed (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClosed(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReplicatorActivity.OnClosed(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UntilCondition">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.ActivityCondition UntilCondition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.ActivityCondition UntilCondition" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.UntilCondition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Abschlussbedingung ab oder legt eine Abschlussbedingung fest, die angibt, wenn <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> beendet werden soll.</summary>
+        <value>Eine <see cref="T:System.Workflow.ComponentModel.ActivityCondition" />, die bestimmt, ob <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> beendet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Standardbedingung wird festgelegt, dass zum Abschluss von <xref:System.Workflow.Activities.ReplicatorActivity> alle untergeordneten Instanzen abgeschlossen werden müssen.  
+  
+ Ebenso wie bei <xref:System.Workflow.Activities.ConditionedActivityGroup> können Sie die Abschlussbedingung mit einer Regel- oder einer Codebedingung angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie der Wert der <xref:System.Workflow.Activities.ReplicatorActivity.UntilCondition%2A>-Eigenschaft auf `null` festgelegt wird. Dies bedeutet, dass `ReplicatorActivity` niemals geschlossen wird. Dieses Codebeispiel stammt aus dem Replicator SDK-Beispiel in der Datei SimpleReplicatorWorkflow.Designer.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Mit Replikator](http://msdn.microsoft.com/en-us/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
+  
+ [!code-csharp[wf_samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
+ [!code-vb[wf_samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UntilConditionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty UntilConditionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty UntilConditionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.UntilConditionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> dar, die sich auf die <see cref="P:System.Workflow.Activities.ReplicatorActivity.UntilCondition" />-Eigenschaft bezieht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

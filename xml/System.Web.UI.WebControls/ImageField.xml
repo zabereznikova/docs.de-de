@@ -1,0 +1,962 @@
+<Type Name="ImageField" FullName="System.Web.UI.WebControls.ImageField">
+  <TypeSignature Language="C#" Value="public class ImageField : System.Web.UI.WebControls.DataControlField" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImageField extends System.Web.UI.WebControls.DataControlField" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ImageField" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataControlField</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Feld dar, das als Bild in einem datengebundenen Steuerelement angezeigt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField> Klasse wird verwendet, indem Sie datengebundene Steuerelemente (z. B. <xref:System.Web.UI.WebControls.GridView> und <xref:System.Web.UI.WebControls.DetailsView>) zum Anzeigen eines Bilds für jeden Datensatz angezeigt. Die <xref:System.Web.UI.WebControls.ImageField> Objekt wird anders angezeigt, je nach dem datengebundenen Steuerelement in der er verwendet wird. Z. B. die <xref:System.Web.UI.WebControls.GridView> -Steuerelement zeigt eine <xref:System.Web.UI.WebControls.ImageField> Objekt als eine Spalte während der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement als eine Zeile angezeigt.  
+  
+ Sie müssen zum Anzeigen von Bildern, Binden einer <xref:System.Web.UI.WebControls.ImageField> Objekt in ein Feld aus einer Datenquelle, die die URL eines Bilds enthält. Dies geschieht durch Festlegen der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlField%2A> Eigenschaft. Der URL-Wert kann formatiert werden, mithilfe der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlFormatString%2A> Eigenschaft. Jedes Image kann auch alternativen Text zugeordnet haben. Dieser Text wird angezeigt, wenn ein Bild kann nicht geladen werden oder nicht verfügbar ist. Browsern, die mit Unterstützung für das QuickInfo-Feature wird dieser Text auch als QuickInfo angezeigt. Sie können den alternativen Text für ein Bild angeben, mit einer der folgenden Methoden:  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.ImageField.AlternateText%2A> -Eigenschaft alternativen Text an, die auf alle Bilder angewendet wird.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> Eigenschaft, um ein Feld aus einer Datenquelle zu binden, die <xref:System.Web.UI.WebControls.Image.AlternateText%2A> -Eigenschaft jedes Bilds. Dadurch können Sie anderen alternativen Text für jedes angezeigte Bild haben. Beim Binden von Daten können Sie optional den alternativen Text formatieren, indem Sie mit der <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextFormatString%2A> Eigenschaft.  
+  
+ Wenn der Wert der URL für ein Bild ist `null`, ein Bild kann nicht angezeigt werden. Sie können ein anderes Bild für anzeigen `null` -Feldwerte durch Festlegen der <xref:System.Web.UI.WebControls.ImageField.NullImageUrl%2A> Eigenschaft. Anstelle eines alternativen Bilds können Sie alternativen Text anzeigen, indem Sie die Einstellung der <xref:System.Web.UI.WebControls.ImageField.NullDisplayText%2A> Eigenschaft.  
+  
+ Standardmäßig werden alle deklarierten Felder in einem datengebundenen Steuerelement angezeigt. Können Sie Ausblenden einer <xref:System.Web.UI.WebControls.ImageField> Objekt in einem datengebundenen Steuerelement durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.Visible%2A> Eigenschaft `false`.  
+  
+ Sie können anpassen, die Abschnitte für Kopf- und Fußzeilen, der ein <xref:System.Web.UI.WebControls.ImageField> Objekt. Um eine Beschriftung in der Kopf- oder Fußzeile Abschnitt anzuzeigen, legen die <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> oder <xref:System.Web.UI.WebControls.DataControlField.FooterText%2A> Eigenschaften bzw.. Um ein Bild anstelle von Text in der Kopfzeile anzuzeigen, legen die <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> Eigenschaft. Der Headerabschnitt kann ausgeblendet werden, der <xref:System.Web.UI.WebControls.ImageField> Objekt durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A> Eigenschaft `false`.  
+  
+> [!NOTE]
+>  Einige datengebundene Steuerelemente (z. B. die <xref:System.Web.UI.WebControls.GridView> Steuerelement) können ein- oder ausblenden nur den gesamten Kopfzeilenbereich des Steuerelements. Diese datengebundenen Steuerelemente unterstützen nicht die <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A> für ein einzelnes Feld der datengebundenen Eigenschaft. Verwenden Sie zum Anzeigen oder Ausblenden der gesamte Headerabschnitt eines datengebundenen Steuerelements, des Steuerelements `ShowHeader` Eigenschaft (falls verfügbar).  
+  
+ Die Darstellung der können auch Anpassen der <xref:System.Web.UI.WebControls.ImageField> Objekt (Schriftfarbe, Hintergrundfarbe und So weiter), indem Sie die Stileigenschaften für die verschiedenen Teile des Felds festlegen. Die folgende Tabelle enthält die verschiedenen Stileigenschaften.  
+  
+|Style-Eigenschaft|Beschreibung|  
+|--------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A>|Die Stileigenschaften für die untergeordneten Webserversteuerelemente von der <xref:System.Web.UI.WebControls.ImageField> Objekt.|  
+|<xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A>|Die Stileigenschaften für den Fußzeilenbereich der <xref:System.Web.UI.WebControls.ImageField> Objekt.|  
+|<xref:System.Web.UI.WebControls.DataControlField.HeaderStyle%2A>|Die Stileigenschaften für den Headerabschnitt, der die <xref:System.Web.UI.WebControls.ImageField> Objekt.|  
+|<xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A>|Die stileinstellungen für die Datenelemente in der <xref:System.Web.UI.WebControls.ImageField> Objekt.|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.ImageField> -Objekt in ein <xref:System.Web.UI.WebControls.GridView> Steuerelement um ein Bild anzuzeigen.  
+  
+ [!code-aspx-csharp[ImageField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageField/CS/ImageFieldcs.aspx#1)]
+ [!code-aspx-vb[ImageField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageField/VB/ImageFieldvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ImageField" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.ImageField> Klasse. Dieser Konstruktor wird normalerweise verwendet, beim Hinzufügen von Feldern zu einem dynamisch erstellten datengebundenen Steuerelement.  
+  
+ Dynamisch Hinzufügen einer <xref:System.Web.UI.WebControls.ImageField> -Objekt in einem datengebundenen Steuerelement, erstellen Sie ein neues <xref:System.Web.UI.WebControls.ImageField> Objekt, dessen Eigenschaften festlegen und dann zur feldauflistung für das datengebundene Steuerelement hinzufügen. Z. B. bei Verwendung der <xref:System.Web.UI.WebControls.GridView> steuern, fügen Sie der <xref:System.Web.UI.WebControls.ImageField> -Objekt an die <xref:System.Web.UI.WebControls.GridView.Columns%2A> Auflistung.  
+  
+> [!NOTE]
+>  Obwohl Sie Felder zu einem datengebundenen Steuerelement dynamisch hinzufügen können, wird dringend empfohlen, dass Felder statisch deklariert und dann angezeigt oder ausgeblendet werden, je nach Bedarf. Statisch deklarieren aller Felder reduziert die Größe des Ansichtszustands für das übergeordnete datengebundene Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie dieser Konstruktor dynamisch hinzufügen ein <xref:System.Web.UI.WebControls.ImageField> -Objekt an die <xref:System.Web.UI.WebControls.GridView.Columns%2A> Auflistung von einer <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[ImageFieldCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageFieldCtor/CS/ImageFieldCtorcs.aspx#1)]
+ [!code-aspx-vb[ImageFieldCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageFieldCtor/VB/ImageFieldCtorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternateText">
+      <MemberSignature Language="C#" Value="public virtual string AlternateText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AlternateText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.AlternateText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den alternativen Text für ein Bild im angezeigt, die <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt.</summary>
+        <value>Der alternative Text für ein Bild angezeigt, der <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ImageField.AlternateText%2A> -Eigenschaft an den alternativen Text für die Bilder angezeigt, die einer <xref:System.Web.UI.WebControls.ImageField> Objekt. Der alternative Text wird angezeigt, wenn ein Bild kann nicht geladen werden oder nicht verfügbar ist. Browsern, die mit Unterstützung für das QuickInfo-Feature wird dieser Text auch als QuickInfo angezeigt.  
+  
+> [!NOTE]
+>  Wenn diese Eigenschaft festgelegt ist, alle in angezeigten Bilder ein <xref:System.Web.UI.WebControls.ImageField> Objekt gemeinsam denselben alternativen Text. Als Alternative können Sie den alternativen Text an ein Feld in einer Datenquelle binden, durch Festlegen der <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> -Eigenschaft statt dieser Eigenschaft. Dadurch können Sie anderen alternativen Text für jedes angezeigte Bild haben. Wenn beide die <xref:System.Web.UI.WebControls.ImageField.AlternateText%2A> und <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> Eigenschaften festgelegt sind, wird die <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> -Eigenschaft Vorrang.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ImageField.AlternateText%2A> -Eigenschaft an den alternativen Text für alle Bilder angezeigt, die einer <xref:System.Web.UI.WebControls.ImageField> Objekt.  
+  
+ [!code-aspx-csharp[ImageField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageField/CS/ImageFieldcs.aspx#1)]
+ [!code-aspx-vb[ImageField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageField/VB/ImageFieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertEmptyStringToNull">
+      <MemberSignature Language="C#" Value="public virtual bool ConvertEmptyStringToNull { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConvertEmptyStringToNull" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.ConvertEmptyStringToNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine leere Zeichenfolge ("") in konvertiert <see langword="null" /> Wenn die Feldwerte aus der Datenquelle zurückgegeben werden.</summary>
+        <value>
+          <see langword="true" />Wenn <see cref="F:System.String.Empty" /> Werte sollten in konvertiert werden <see langword="null" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einigen Fällen kann der Benutzer eine leere Zeichenfolge für einen Feldwert beim Aktualisieren oder Einfügen von Datensätzen eingeben. Verwenden der <xref:System.Web.UI.WebControls.ImageField.ConvertEmptyStringToNull%2A> Eigenschaft, um anzugeben, ob es sich bei ein leeren Zeichenfolgenwert in automatisch konvertiert wird `null` bei der Aktualisierung des Datenfelds in der Datenquelle  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.ImageField> -Klasse zeigt `null` als leere Zeichenfolgen in der Standardeinstellung. Wenn einen anderen Wert anzeigen zu können, legen Sie die <xref:System.Web.UI.WebControls.ImageField.NullDisplayText%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperties">
+      <MemberSignature Language="C#" Value="protected override void CopyProperties (System.Web.UI.WebControls.DataControlField newField);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyProperties(class System.Web.UI.WebControls.DataControlField newField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.CopyProperties(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="newField">Die <see cref="T:System.Web.UI.WebControls.DataControlField" />-Objekt, das die Kopie erhält abgeleitet.</param>
+        <summary>Kopiert die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt, das das angegebene Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.CopyProperties%2A> Methode wird aufgerufen, indem Sie die <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A> Methode, um die Eigenschaften des aktuellen kopieren <xref:System.Web.UI.WebControls.ImageField> zu einem anderen Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.DataControlField CreateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.DataControlField CreateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.CreateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ImageField" />-Klasse zurück.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ImageField" />-Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.CreateField%2A> Methode wird aufgerufen, indem Sie die <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A> -Methode erstellt eine neue Instanz der dem <xref:System.Web.UI.WebControls.ImageField> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataAlternateTextField">
+      <MemberSignature Language="C#" Value="public virtual string DataAlternateTextField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataAlternateTextField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.DataAlternateTextField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Felds aus der Datenquelle mit den Werten zum Binden an die <see cref="P:System.Web.UI.WebControls.Image.AlternateText" /> -Eigenschaft jedes Bilds in eine <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt.</summary>
+        <value>Der Name des Felds, das Binden der <see cref="P:System.Web.UI.WebControls.Image.AlternateText" /> -Eigenschaft jedes Bilds in eine <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> Eigenschaft, um anzugeben, der Namen des Felds aus der Datenquelle, enthält die Werte zum Binden an die <xref:System.Web.UI.WebControls.Image.AlternateText%2A> -Eigenschaft jedes Bilds in eine <xref:System.Web.UI.WebControls.ImageField> Objekt. Das ermöglicht Alternative zu einer anderen Text für jedes Bild angezeigt. Der alternative Text wird angezeigt, wenn ein Bild kann nicht geladen werden oder nicht verfügbar ist. Browsern, die mit Unterstützung für das QuickInfo-Feature wird dieser Text auch als QuickInfo angezeigt.  
+  
+> [!NOTE]
+>  Sie können alternativen Text, der für alle Bilder wendet angeben der <xref:System.Web.UI.WebControls.ImageField.AlternateText%2A> -Eigenschaft statt dieser Eigenschaft. Wenn beide die <xref:System.Web.UI.WebControls.ImageField.AlternateText%2A> und <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> Eigenschaften festgelegt sind, wird die <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> Feld hat Vorrang vor.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie die <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> Eigenschaft, um anzugeben, der Namen des Felds aus der Datenquelle, enthält die Werte zum Binden an die <xref:System.Web.UI.WebControls.Image.AlternateText%2A> -Eigenschaft jedes Bilds in eine <xref:System.Web.UI.WebControls.ImageField> Objekt.  
+  
+ [!code-aspx-csharp[ImageFieldAlternateTextField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageFieldAlternateTextField/CS/ImageFieldAlternateTextFieldcs.aspx#1)]
+ [!code-aspx-vb[ImageFieldAlternateTextField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageFieldAlternateTextField/VB/ImageFieldAlternateTextFieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataAlternateTextFormatString">
+      <MemberSignature Language="C#" Value="public virtual string DataAlternateTextFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataAlternateTextFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.DataAlternateTextFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die das Format, in dem angibt der alternative Text für jedes Bild in einem <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt gerendert wird.</summary>
+        <value>Eine Zeichenfolge, die das Format, in dem angibt der alternative Text für jedes Bild in einem <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt gerendert wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, keine besondere Formatierung auf den alternativen Text angewendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextFormatString%2A> -Eigenschaft ein benutzerdefiniertes Format für die alternativen Text-Werte, der angezeigten Bilder an ein <xref:System.Web.UI.WebControls.ImageField> Objekt.  
+  
+> [!NOTE]
+>  Die Formatzeichenfolge gilt nur, wenn die <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> festgelegt wird. Es ist nicht angewendet, wenn die <xref:System.Web.UI.WebControls.ImageField.AlternateText%2A> festgelegt wird.  
+  
+ Dies ist hilfreich, wenn Sie zum Ändern des ursprünglichen Werts im Feld enthaltenen benötigen. Wenn die <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextFormatString%2A> Eigenschaft nicht festgelegt ist, die alternativen Text-Werte erhalten keine spezielle Formatierung.  
+  
+ Die Formatzeichenfolge kann eine literale Zeichenfolge sein und in der Regel enthält einen Platzhalter für den Wert des Felds. Beispielsweise ist in der Formatzeichenfolge "Elementwert: {0}", der Platzhalter "{0}" wird ersetzt, mit dem Wert der Felder gemäß der <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> Eigenschaft. Der Rest der Formatzeichenfolge wird als Literaltext angezeigt.  
+  
+> [!NOTE]
+>  Wenn die Formatzeichenfolge keine Platzhalter enthalten, ist der Wert des Felds aus der Datenquelle nicht in den endgültigen Anzeigetext enthalten.  
+  
+ Der Platzhalter besteht aus zwei Teilen, getrennt durch einen Doppelpunkt (":") und eingeschlossen in geschweifte Klammern (""), in der Form `{A:Bxx}`. Der Wert vor dem Doppelpunkt (`A` im allgemeinen Beispiel) gibt an, das Feld Value-Index in einer nullbasierten Liste von Parametern.  
+  
+> [!NOTE]
+>  Dieser Parameter ist Teil der Formatierung Syntax. Da nur ein Feldwert in jeder Zelle vorhanden ist, wird dieser Wert kann nur auf 0 festgelegt.  
+  
+ Der Doppelpunkt und die Werte nach dem Doppelpunkt sind optional. Die Zeichen nach dem Doppelpunkt (`B` im allgemeinen Beispiel) gibt das Format, in dem den Wert angezeigt. Die folgende Tabelle enthält die gängigen Formaten.  
+  
+|Formatzeichen|Beschreibung|  
+|----------------------|-----------------|  
+|`C`|Zeigt numerische Werte im Währungsformat an.|  
+|`D`|Zeigt die numerische Werte im Dezimalformat.|  
+|`E`|Numerischen Werte in wissenschaftlicher (exponentieller) Format angezeigt.|  
+|`F`|Numerischen Werte in festgelegten Format angezeigt.|  
+|`G`|Im Allgemeinen formatieren Sie numerische Werte angezeigt.|  
+|`N`|Numerischen Werte im Zahlenformat angezeigt.|  
+|`X`|Numerischen Werte im Hexadezimalformat angezeigt.|  
+  
+> [!NOTE]
+>  Die Formatierungszeichen sind nicht in der Groß-/Kleinschreibung beachtet, mit Ausnahme von `X`, woraufhin die hexadezimalen Zeichen im angegebenen Fall.  
+  
+ Der Wert nach der Formatzeichen (im allgemeinen Beispiel Xx) gibt die Anzahl der signifikanten Stellen oder anzuzeigenden Dezimalstellen an. Die Formatzeichenfolge "{0: F2}" zeigt z. B. eine Festkommazahl mit 2 Dezimalstellen.  
+  
+ Weitere Informationen zur Formatierung finden Sie unter [Formatierung von Typen](~/docs/standard/base-types/formatting-types.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextFormatString%2A> Eigenschaft anwenden ein benutzerdefiniertes Formats auf die alternativen Text-Werte für die Bilder in einer <xref:System.Web.UI.WebControls.ImageField> Objekt.  
+  
+ [!code-aspx-csharp[ImageFieldAlternateTextField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageFieldAlternateTextField/CS/ImageFieldAlternateTextFieldcs.aspx#1)]
+ [!code-aspx-vb[ImageFieldAlternateTextField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageFieldAlternateTextField/VB/ImageFieldAlternateTextFieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataImageUrlField">
+      <MemberSignature Language="C#" Value="public virtual string DataImageUrlField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataImageUrlField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.DataImageUrlField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Felds aus der Datenquelle mit den Werten zum Binden an die <see cref="P:System.Web.UI.MobileControls.Image.ImageUrl" /> -Eigenschaft jedes Bilds in eine <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt.</summary>
+        <value>Der Name des Felds zum Binden an die <see cref="P:System.Web.UI.MobileControls.Image.ImageUrl" /> -Eigenschaft jedes Bilds in eine <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlField%2A> -Eigenschaft den Namen des Felds, das zum Binden an die <xref:System.Web.UI.MobileControls.Image.ImageUrl%2A> -Eigenschaft jedes Bilds in eine <xref:System.Web.UI.WebControls.ImageField> Objekt. Das angegebene Feld muss die URLs für die Bilder anzuzeigenden enthalten die <xref:System.Web.UI.WebControls.ImageField> Objekt. Sie können optional die URL-Werte formatieren, durch Festlegen der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlFormatString%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn der Feldwert wird `null`, ein Bild kann nicht angezeigt werden. Sie können ein anderes Bild für anzeigen `null` -Feldwerte durch Festlegen der <xref:System.Web.UI.WebControls.ImageField.NullImageUrl%2A> Eigenschaft. Anstelle eines alternativen Bilds können Sie alternativen Text anzeigen, indem Sie die Einstellung der <xref:System.Web.UI.WebControls.ImageField.NullDisplayText%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie die <xref:System.Web.UI.WebControls.ImageField.DataImageUrlField%2A> -Eigenschaft den Namen des Felds, das zum Binden an die <xref:System.Web.UI.MobileControls.Image.ImageUrl%2A> -Eigenschaft jedes Bilds in eine <xref:System.Web.UI.WebControls.ImageField> Objekt.  
+  
+ [!code-aspx-csharp[ImageFieldImageUrlFormatString#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageFieldImageUrlFormatString/CS/ImageFieldImageUrlFormatStringcs.aspx#1)]
+ [!code-aspx-vb[ImageFieldImageUrlFormatString#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageFieldImageUrlFormatString/VB/ImageFieldImageUrlFormatStringvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataImageUrlFormatString">
+      <MemberSignature Language="C#" Value="public virtual string DataImageUrlFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataImageUrlFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.DataImageUrlFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die das Format, in dem angibt die URL für jedes Bild in ein <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt gerendert wird.</summary>
+        <value>Eine Zeichenfolge, die das Format, in dem angibt die URL für jedes Bild in ein <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt gerendert wird. Der Standardwert ist eine leere Zeichenfolge (""), was bedeutet, dass keine besondere Formatierung auf die URLs angewendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlFormatString%2A> -Eigenschaft an ein benutzerdefiniertes Format für die URLs der angezeigten Bilder ein <xref:System.Web.UI.WebControls.ImageField> Objekt. Dies ist hilfreich, wenn Sie eine URL, z. B. wenn generieren müssen die <xref:System.Web.UI.WebControls.ImageField> -Objekt nur den Dateinamen enthält. Wenn die <xref:System.Web.UI.WebControls.ImageField.DataImageUrlFormatString%2A> Eigenschaft nicht festgelegt ist, die URL-Werte erhalten keine spezielle Formatierung.  
+  
+ Die Formatzeichenfolge kann eine literale Zeichenfolge sein und in der Regel enthält einen Platzhalter für den Wert des Felds. Beispielsweise ist in der Formatzeichenfolge "Elementwert: {0}", der Platzhalter "{0}" wird ersetzt, mit dem Wert der Felder gemäß der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlField%2A> Eigenschaft. Der Rest der Formatzeichenfolge wird als Literaltext angezeigt.  
+  
+> [!NOTE]
+>  Wenn die Formatzeichenfolge keine Platzhalter enthalten, ist der Wert des Felds aus der Datenquelle nicht in den endgültigen Anzeigetext enthalten.  
+  
+ Der Platzhalter besteht aus zwei Teilen, getrennt durch einen Doppelpunkt (":") und eingeschlossen in geschweifte Klammern (""), in der Form `{A:Bxx}`. Der Wert vor dem Doppelpunkt (`A` im allgemeinen Beispiel) gibt an, das Feld Value-Index in einer nullbasierten Liste von Parametern.  
+  
+> [!NOTE]
+>  Dieser Parameter ist Teil der Formatierung Syntax. Da nur ein Feldwert in jeder Zelle vorhanden ist, wird dieser Wert kann nur auf 0 festgelegt.  
+  
+ Der Doppelpunkt und die Werte nach dem Doppelpunkt sind optional. Die Zeichen nach dem Doppelpunkt (`B` im allgemeinen Beispiel) gibt das Format, in dem den Wert angezeigt. Die folgende Tabelle enthält die gängigen Formaten.  
+  
+|Formatzeichen|Beschreibung|  
+|----------------------|-----------------|  
+|`C`|Zeigt numerische Werte im Währungsformat an.|  
+|`D`|Zeigt die numerische Werte im Dezimalformat.|  
+|`E`|Numerischen Werte in wissenschaftlicher (exponentieller) Format angezeigt.|  
+|`F`|Numerischen Werte in festgelegten Format angezeigt.|  
+|`G`|Im Allgemeinen formatieren Sie numerische Werte angezeigt.|  
+|`N`|Numerischen Werte im Zahlenformat angezeigt.|  
+|`X`|Numerischen Werte im Hexadezimalformat angezeigt.|  
+  
+> [!NOTE]
+>  Die Formatierungszeichen sind nicht in der Groß-/Kleinschreibung beachtet, mit Ausnahme von `X`, woraufhin die hexadezimalen Zeichen im angegebenen Fall.  
+  
+ Der Wert nach der Formatzeichen (im allgemeinen Beispiel Xx) gibt die Anzahl der signifikanten Stellen oder anzuzeigenden Dezimalstellen an. Die Formatzeichenfolge "{0: F2}" zeigt z. B. eine Festkommazahl mit 2 Dezimalstellen.  
+  
+ Weitere Informationen zur Formatierung finden Sie unter [Formatierung von Typen](~/docs/standard/base-types/formatting-types.md).  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie die <xref:System.Web.UI.WebControls.ImageField.DataImageUrlFormatString%2A> Standardwerte für die Eigenschaft auf ein benutzerdefiniertes Format für die URL gelten für die Bilder in einem <xref:System.Web.UI.WebControls.ImageField> Objekt.  
+  
+ [!code-aspx-csharp[ImageFieldImageUrlFormatString#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageFieldImageUrlFormatString/CS/ImageFieldImageUrlFormatStringcs.aspx#1)]
+ [!code-aspx-vb[ImageFieldImageUrlFormatString#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageFieldImageUrlFormatString/VB/ImageFieldImageUrlFormatStringvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractValuesFromCell">
+      <MemberSignature Language="C#" Value="public override void ExtractValuesFromCell (System.Collections.Specialized.IOrderedDictionary dictionary, System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlRowState rowState, bool includeReadOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ExtractValuesFromCell(class System.Collections.Specialized.IOrderedDictionary dictionary, class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlRowState rowState, bool includeReadOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.ExtractValuesFromCell(System.Collections.Specialized.IOrderedDictionary,System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlRowState,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.Specialized.IOrderedDictionary" />
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="includeReadOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> verwendet, um die Werte der angegebenen Zelle zu speichern.</param>
+        <param name="cell">Die <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> , die die abzurufenden Werte enthält.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Werte.</param>
+        <param name="includeReadOnly">
+          <see langword="true" />um die Werte der schreibgeschützte Felder enthalten. andernfalls <see langword="false" />.</param>
+        <summary>Füllt den angegebenen <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> Objekt mit den Werten aus dem angegebenen <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.ExtractValuesFromCell%2A> Methode ist eine Hilfsmethode, die zum Abrufen der Werte der Felder aus dem angegebenen <xref:System.Web.UI.WebControls.DataControlFieldCell> -Objekt in ein <xref:System.Web.UI.WebControls.ImageField> Objekt.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ Diese Methode keinen Rückgabewert. Stattdessen werden die Feldwerte zurückgegeben, als Verweis über die <xref:System.Collections.Specialized.IOrderedDictionary> für übergebene Objekt die `dictionary` Parameter. Nach dem Aufruf der Methode durchlaufen die <xref:System.Collections.Specialized.IOrderedDictionary> Objekt, das die Feldwerte zugreifen.  
+  
+> [!NOTE]
+>  Die schreibgeschützte Feldwerte einschließen der <xref:System.Web.UI.WebControls.DataControlFieldCell> Objekt, und übergeben Sie im `true` für die `includeReadOnly` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatImageUrlValue">
+      <MemberSignature Language="C#" Value="protected virtual string FormatImageUrlValue (object dataValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string FormatImageUrlValue(object dataValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.FormatImageUrlValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataValue">Der Wert, zu transformieren.</param>
+        <summary>Wendet die Formatangabe durch die <see cref="P:System.Web.UI.WebControls.ImageField.DataImageUrlFormatString" /> Eigenschaft, um einen Feldwert angibt.</summary>
+        <returns>Den transformierten Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.FormatImageUrlValue%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.ImageField> Klasse, um die Formatangabe durch Anwenden der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlFormatString%2A> Eigenschaft, um einen Feldwert.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.ImageField" /> -Klasse, überschreiben Sie diese Methode, um eine benutzerdefinierte Formatierung Routine durchführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeValue">
+      <MemberSignature Language="C#" Value="protected virtual string GetDesignTimeValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetDesignTimeValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.GetDesignTimeValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Wert für den Wert eines Felds verwendet wird, beim Rendern der <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt in einem Designer.</summary>
+        <returns>Der Wert im Designer als der Wert des Felds angezeigt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.GetDesignTimeValue%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.ImageField> Klasse, um zu bestimmen, welcher Wert für ein Feld angezeigt wird, wenn das Rendern einer <xref:System.Web.UI.WebControls.ImageField> Objekt in einem Designer. Wenn sich um echte Daten aus der Datenquelle zur Entwurfszeit abgerufen werden können nicht, wird von dieser Methode zurückgegebene Wert stattdessen angezeigt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.ImageField" /> -Klasse, überschreiben Sie diese Methode, um einen anderen Wert für das Feld in einem Designer anzuzeigende zurück.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormattedAlternateText">
+      <MemberSignature Language="C#" Value="protected virtual string GetFormattedAlternateText (System.Web.UI.Control controlContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetFormattedAlternateText(class System.Web.UI.Control controlContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.GetFormattedAlternateText(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlContainer" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="controlContainer">Die <see cref="T:System.Web.UI.Control" /> , die den alternativen Textwert enthält, zu transformieren.</param>
+        <summary>Wendet die Formatangabe durch die <see cref="P:System.Web.UI.WebControls.ImageField.DataAlternateTextFormatString" /> den alternativen Text Wert in der angegebenen Eigenschaft <see cref="T:System.Web.UI.Control" /> Objekt.</summary>
+        <returns>Den transformierten Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.GetFormattedAlternateText%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.ImageField> Klasse, um die Formatangabe durch Anwenden der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlFormatString%2A> Eigenschaft auf den alternativen Text-Wert. Der alternative Text-Wert ist Bestandteil der <xref:System.Web.UI.Control> angegebene Objekt der `controlContainer` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.ImageField" /> -Klasse, überschreiben Sie diese Methode, um eine benutzerdefinierte Formatierung Routine durchführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="protected virtual object GetValue (System.Web.UI.Control controlContainer, string fieldName, ref System.ComponentModel.PropertyDescriptor cachedDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetValue(class System.Web.UI.Control controlContainer, string fieldName, class System.ComponentModel.PropertyDescriptor&amp; cachedDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.GetValue(System.Web.UI.Control,System.String,System.ComponentModel.PropertyDescriptor@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlContainer" Type="System.Web.UI.Control" />
+        <Parameter Name="fieldName" Type="System.String" />
+        <Parameter Name="cachedDescriptor" Type="System.ComponentModel.PropertyDescriptor&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="controlContainer">Die <see cref="T:System.Web.UI.Control" /> , enthält den Wert des Felds.</param>
+        <param name="fieldName">Der Name des Felds, für das Abrufen des Werts.</param>
+        <param name="cachedDescriptor">Ein <see cref="T:System.ComponentModel.PropertyDescriptor" />, als Verweis übergeben wird, die die Eigenschaften des Felds darstellt.</param>
+        <summary>Ruft den Wert des angegebenen Felds aus dem angegebenen Steuerelement ab.</summary>
+        <returns>Der Wert des angegebenen Felds.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.GetValue%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.ImageField> Objekt, das den Wert des angegebenen Felds zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Der <paramref name="controlContainer" />-Parameter ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ Das Datenelement, das Container-Steuerelement zugeordnet ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ Das Feld gemäß den <paramref name="fieldName" /> Parameter konnte nicht gefunden werden.</exception>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.ImageField" /> -Objekt, Sie können diese Methode zum Bereitstellen der benutzerdefinierten Routine, um zu bestimmen, der Wert eines Felds überschreiben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override bool Initialize (bool enableSorting, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Initialize(bool enableSorting, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.Initialize(System.Boolean,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enableSorting" Type="System.Boolean" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="enableSorting">
+          <see langword="true" />Wenn Sortierung unterstützt wird. andernfalls <see langword="false" />.</param>
+        <param name="control">Das Steuerelement, das enthält die <see cref="T:System.Web.UI.WebControls.ImageField" />.</param>
+        <summary>Initialisiert die <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt.</summary>
+        <returns>Gibt immer <see langword="true" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.Initialize%2A> Methode wird aufgerufen, indem Sie das Steuerelement mit dem die <xref:System.Web.UI.WebControls.ImageField> -Objekt bezieht, führen Sie die grundlegende Initialisierung für Instanzen des Felds, bevor eine feldauflistung jemals das Feld hinzugefügt wird. Daten steuert, wie z. B. <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.GridView> rufen die <xref:System.Web.UI.WebControls.ImageField.Initialize%2A> Methode in ihren `CreateChildControls` Methoden vor anderen Methoden wie z. B. `CreateRow` werden aufgerufen, um bestimmte Zeilen mit Daten zu erstellen.  
+  
+ Rufen Sie diese Methode, wenn Sie schreiben eine benutzerdefinierte datengebundene Steuerelement, verwendet <xref:System.Web.UI.WebControls.DataControlFieldCell> Objekte für die grundlegende Initialisierung für einen <xref:System.Web.UI.WebControls.ImageField> Objekt. Implementieren Sie diese Methode, wenn Ihre <xref:System.Web.UI.WebControls.ImageField>-abgeleiteten Typ erfordert Initialisierungen Objekt aus, bevor er füllt <xref:System.Web.UI.WebControls.DataControlFieldCell> Objekte mit Daten oder Steuerelemente in der <xref:System.Web.UI.WebControls.ImageField.InitializeCell%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCell">
+      <MemberSignature Language="C#" Value="public override void InitializeCell (System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlCellType cellType, System.Web.UI.WebControls.DataControlRowState rowState, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeCell(class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlCellType cellType, valuetype System.Web.UI.WebControls.DataControlRowState rowState, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.InitializeCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType,System.Web.UI.WebControls.DataControlRowState,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="cellType" Type="System.Web.UI.WebControls.DataControlCellType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Die zu initialisierende <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" />.</param>
+        <param name="cellType">Einer der <see cref="T:System.Web.UI.WebControls.DataControlCellType" />-Werte.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Werte.</param>
+        <param name="rowIndex">Der nullbasierte Index der Zeile.</param>
+        <summary>Initialisiert das angegebene <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> Objekt mit dem angegebenen Zellentyp Zeilenstatus und Zeilenindex.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.InitializeCell%2A> Methode implementiert wird <xref:System.Web.UI.WebControls.ImageField>-abgeleitete Typen zum Hinzufügen von Text und Steuerelementen zu einer <xref:System.Web.UI.WebControls.DataControlFieldCell> Objekt eines Daten-Steuerelements, die Tabellen verwendet, um eine Benutzeroberfläche (UI) anzeigen. Diese Datensteuerelemente erstellen der vollständigen Tabelle Struktur Zeile für Zeile bei der des Steuerelements `CreateChildControls` -Methode aufgerufen wird. Die <xref:System.Web.UI.WebControls.ImageField.InitializeCell%2A> Methode wird aufgerufen, indem Sie die `InitializeRow` Methode Datenmenge wird gesteuert, wie z. B. <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.GridView>.  
+  
+ Rufen Sie diese Methode, wenn Sie schreiben eine benutzerdefinierte datengebundene Steuerelement, verwendet <xref:System.Web.UI.WebControls.DataControlFieldCell> Objekte zum Initialisieren der Zellen der Tabellenstruktur mit Daten oder Steuerelemente. Implementieren Sie diese Methode, wenn Sie schreiben eine <xref:System.Web.UI.WebControls.ImageField>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDataCell">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeDataCell (System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlRowState rowState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeDataCell(class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlRowState rowState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.InitializeDataCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlRowState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Die zu initialisierende <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" />.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Werte.</param>
+        <summary>Initialisiert das angegebene <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> Objekt mit dem angegebenen Zeilenstatus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.InitializeDataCell%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.ImageField> Klasse initialisiert werden, eine Zelle in einer <xref:System.Web.UI.WebControls.ImageField> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.BoundField" /> -Klasse, überschreiben Sie diese Methode, um eine benutzerdefinierte Initialisierungsroutine durchführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="NullDisplayText">
+      <MemberSignature Language="C#" Value="public virtual string NullDisplayText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NullDisplayText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.NullDisplayText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text anzuzeigenden ein <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt, wenn der Wert des Felds der <see cref="P:System.Web.UI.WebControls.ImageField.DataImageUrlField" /> Eigenschaft ist <see langword="null" />.</summary>
+        <value>Der Text, der angezeigt wird, wenn der Wert eines Felds ist <see langword="null" />. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert des Felds gemäß der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlField%2A> Eigenschaft `null`, ein Bild kann nicht angezeigt werden, ein <xref:System.Web.UI.WebControls.ImageField> Objekt. Verwenden der <xref:System.Web.UI.WebControls.ImageField.NullDisplayText%2A> Eigenschaft an, dass der Text, in der anstelle des Bilds angezeigt. Der Text zeigt normalerweise an, dass das normale Bild nicht verfügbar ist oder wurde nicht gefunden.  
+  
+> [!NOTE]
+>  Als Alternative können Sie ein alternatives Bild anzeigen, wenn der Wert des Felds ist `null` durch Festlegen der <xref:System.Web.UI.WebControls.ImageField.NullImageUrl%2A> -Eigenschaft statt dieser Eigenschaft. Wenn die <xref:System.Web.UI.WebControls.ImageField.NullImageUrl%2A> und <xref:System.Web.UI.WebControls.ImageField.NullDisplayText%2A> Eigenschaften festgelegt sind, die <xref:System.Web.UI.WebControls.ImageField.NullImageUrl%2A> Eigenschaft hat Vorrang vor.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ImageField.NullDisplayText%2A> -Eigenschaft geben Sie den Text an, wenn der Wert des Felds der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlField%2A> Eigenschaft ist `null`.  
+  
+ [!code-aspx-csharp[ImageField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageField/CS/ImageFieldcs.aspx#1)]
+ [!code-aspx-vb[ImageField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageField/VB/ImageFieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string NullImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NullImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.NullImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem anderen Bild angezeigt, einem <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt, wenn der Wert des Felds der <see cref="P:System.Web.UI.WebControls.ImageField.DataImageUrlField" /> Eigenschaft ist <see langword="null" />.</summary>
+        <value>Die URL zu einem anderen Bild angezeigt, wenn der Wert eines Felds ist <see langword="null" />. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert des Felds gemäß der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlField%2A> Eigenschaft `null`, ein Bild kann nicht angezeigt werden, ein <xref:System.Web.UI.WebControls.ImageField> Objekt. Verwenden der <xref:System.Web.UI.WebControls.ImageField.NullImageUrl%2A> Eigenschaft zum Angeben der URL zu einem anderen Bild angezeigt. Das alternative Bild ist in der Regel ein Bild, der angibt, dass das normale Bild nicht verfügbar ist oder wurde nicht gefunden.  
+  
+> [!NOTE]
+>  Als Alternative können Sie einfach Text anzeigen, wenn der Wert des Felds ist `null` durch Festlegen der <xref:System.Web.UI.WebControls.ImageField.NullDisplayText%2A> -Eigenschaft statt dieser Eigenschaft. Wenn die <xref:System.Web.UI.WebControls.ImageField.NullImageUrl%2A> und <xref:System.Web.UI.WebControls.ImageField.NullDisplayText%2A> Eigenschaften festgelegt sind, die <xref:System.Web.UI.WebControls.ImageField.NullImageUrl%2A> Eigenschaft hat Vorrang vor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ImageField.NullImageUrl%2A> -Eigenschaft an die URL zu einem anderen Bild angezeigt, wenn der Wert des Felds der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlField%2A> Eigenschaft ist `null`.  
+  
+ [!code-aspx-csharp[ImageFieldNullImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageFieldNullImageUrl/CS/ImageFieldNullImageUrlcs.aspx#1)]
+ [!code-aspx-vb[ImageFieldNullImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageFieldNullImageUrl/VB/ImageFieldNullImageUrlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataBindField">
+      <MemberSignature Language="C#" Value="protected virtual void OnDataBindField (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDataBindField(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.OnDataBindField(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Bindet den Wert eines Felds, das die <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.OnDataBindField%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.ImageField> Klasse, um den Wert eines Felds in der Datenquelle binden, in eine entsprechende Zelle in einer <xref:System.Web.UI.WebControls.ImageField> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="T:System.Web.UI.WebControls.ImageField" /> Objekt enthält ein Steuerelement, das keine <see cref="T:System.Web.UI.WebControls.TextBox" /> steuern im Bearbeitungsmodus befindet und keine <see cref="T:System.Web.UI.WebControls.Image" /> steuern mit einer <see cref="T:System.Web.UI.WebControls.Label" /> -Steuerelement im Nur-Lese-Modus.</exception>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.ImageField" /> -Klasse, überschreiben Sie diese Methode, um eine benutzerdefinierte Bindungsroutine durchführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Werte des Felds vom angegeben die <see cref="P:System.Web.UI.WebControls.ImageField.DataImageUrlField" /> Eigenschaft kann geändert werden, im Bearbeitungsmodus befindet.</summary>
+        <value>
+          <see langword="true" />um anzugeben, dass die Feldwerte im Bearbeitungsmodus geändert werden können. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden die Werte des Felds gemäß der <xref:System.Web.UI.WebControls.ImageField.DataImageUrlField%2A> Eigenschaft kann vom Benutzer geändert werden, wenn ein datengebundenes Steuerelement im Bearbeitungsmodus befindet. Um zu verhindern, dass den Benutzer die Werte des Felds ändern, legen Sie diese Eigenschaft auf `true`.  
+  
+> [!NOTE]
+>  In einer <xref:System.Web.UI.WebControls.ImageField> -Objekt, das <xref:System.Web.UI.WebControls.ImageField.DataImageUrlField%2A> Eigenschaft enthält in der Regel der Name des Felds, das die URLs auf die Bilder angezeigt, in dem Objekt enthält.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ImageField.ReadOnly%2A> Eigenschaft, um anzugeben, dass die Feldwerte, die URLs darstellen, auf die Bilder angezeigt, die einer <xref:System.Web.UI.WebControls.ImageField> Objekt kann nicht geändert werden, im Bearbeitungsmodus befindet.  
+  
+ [!code-aspx-csharp[ImageFieldReadOnly#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageFieldReadOnly/CS/ImageFieldReadOnlycs.aspx#1)]
+ [!code-aspx-vb[ImageFieldReadOnly#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageFieldReadOnly/VB/ImageFieldReadOnlyvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThisExpression">
+      <MemberSignature Language="C#" Value="public static readonly string ThisExpression;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ThisExpression" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ImageField.ThisExpression" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Ausdruck „this“ dar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.ThisExpression> Feld wird verwendet, um anzugeben, dass die <xref:System.Web.UI.WebControls.ImageField> Objekt sollten mit der Datenquelle selbst statt einen archivierten der Datenquelle binden. In diesem Fall der Wert zurückgegeben, von des Objekts <xref:System.Object.ToString%2A> Methode wird in das Feld angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateSupportsCallback">
+      <MemberSignature Language="C#" Value="public override void ValidateSupportsCallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ValidateSupportsCallback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.ValidateSupportsCallback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die in Steuerelemente enthaltenen ein <see cref="T:System.Web.UI.WebControls.ImageField" /> -Objekt Rückrufe unterstützen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ImageField.ValidateSupportsCallback%2A> Methode ist eine Hilfsmethode verwendet, um zu bestimmen, ob die in Steuerelemente enthaltenen ein <xref:System.Web.UI.WebControls.ImageField> -Objekt Rückrufe unterstützen. Diese Methode wurde implementiert, als eine leere Methode (eine Methode, die keinen Code enthalten ist), um anzugeben, dass Rückrufe unterstützt werden.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen die <see cref="T:System.Web.UI.WebControls.DataControlField" /> Klasse kann diese Methode, um anzugeben, ob die Steuerelemente im Feld Unterstützung Rückrufe enthaltenen überschreiben. Implementieren Sie diese Methode als eine leere Methode, die keine Ausnahme auslöst, um anzugeben, dass Rückrufe unterstützt werden, Andernfalls lösen Sie eine Ausnahme mit einer aussagekräftigen Meldung erläutert, warum Rückrufe nicht unterstützt werden.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

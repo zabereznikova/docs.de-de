@@ -1,0 +1,149 @@
+<Type Name="Rule" FullName="System.Data.Rule">
+  <TypeSignature Language="C#" Value="public enum Rule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Rule extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Rule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Aktion an, das auftritt, wenn eine <see cref="T:System.Data.ForeignKeyConstraint" /> wird erzwungen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Rule> Werte festgelegt sind die <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> und die <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> Eigenschaften eine <xref:System.Data.ForeignKeyConstraint> -Objekt gefunden, eine <xref:System.Data.DataTable> des Objekts <xref:System.Data.ConstraintCollection>.  
+  
+ Die <xref:System.Data.Rule> Werte bestimmen die Aktion, die auftritt, wenn ein Wert in einer Spalte gelöscht oder aktualisiert wird. Hierbei ist das Löschen eines Wertes der anspruchsvollere Vorgang beim Festlegen einer Regel.  
+  
+ Im Fall, in dem ein Wert gelöscht wird, `Cascade` gibt an, dass alle Zeilen, die mit diesem Wert auch gelöscht werden. `SetNull`Gibt an, dass Werte in allen untergeordneten Spalten null-Werte festgelegt sind. `SetDefault`Gibt an, dass alle untergeordneten Spalten auf den Standardwert für die Spalte festgelegt werden. `None`Gibt an, dass keine Aktion ausgeführt, sondern Ausnahmen ausgelöst werden.  
+  
+ Im Fall, in dem ein Wert aktualisiert wird, `Cascade` gibt an, dass alle untergeordneten Spalten entsprechend den neuen Wert aktualisiert werden. `SetNull`Gibt an, dass alle untergeordneten Spalten null-Werte festgelegt werden. `SetDefault`Gibt an, dass alle untergeordneten Spaltenwerte auf den Standardwert festgelegt werden. `None`Gibt an, dass keine Aktion ausgeführt werden, sondern Ausnahmen ausgelöst werden.  
+  
+ Einschränkungen für einen <xref:System.Data.DataSet> werden nicht erzwungen werden, es sei denn, die <xref:System.Data.DataSet.EnforceConstraints%2A> Eigenschaft ist `true`.  
+  
+ Wenn die <xref:System.Data.DataTable.AcceptChanges%2A> -Methode aufgerufen wird, die <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A> weiter bestimmt, welche Aktion ausgeführt wird.  
+  
+   
+  
+## Examples  
+ [!code-vb[Classic WebData ForeignKeyConstraint Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cascade">
+      <MemberSignature Language="C#" Value="Cascade" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Rule Cascade = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Rule.Cascade" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Rule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verknüpfte Zeilen werden gelöscht oder aktualisiert. Dies ist die Standardeinstellung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Rule None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Rule.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Rule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ohne weitere Maßnahmen auf Verknüpfte Zeilen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefault">
+      <MemberSignature Language="C#" Value="SetDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Rule SetDefault = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Rule.SetDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Rule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legen Sie Werte in verknüpften Zeilen den Wert in der <see cref="P:System.Data.DataColumn.DefaultValue" /> Eigenschaft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNull">
+      <MemberSignature Language="C#" Value="SetNull" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Rule SetNull = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Rule.SetNull" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Rule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legen Sie Werte in verknüpften Zeilen <see langword="DBNull" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

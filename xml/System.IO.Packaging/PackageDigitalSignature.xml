@@ -1,0 +1,385 @@
+<Type Name="PackageDigitalSignature" FullName="System.IO.Packaging.PackageDigitalSignature">
+  <TypeSignature Language="C#" Value="public class PackageDigitalSignature" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PackageDigitalSignature extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.PackageDigitalSignature" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine digitale Signatur dar, die auf einen Satz von Paketteilen und Beziehungen angewendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.IO.Packaging.PackageDigitalSignature> Objekt ist unveränderlich und kann nicht geändert werden, nachdem er erstellt wurde.  
+  
+ Aus Sicherheitsgründen eine <xref:System.IO.Packaging.PackageDigitalSignature> Teilen innerhalb zugeordnet werden können eine <xref:System.IO.Packaging.Package>. Ein <xref:System.IO.Packaging.PackageDigitalSignature> enthält ein x. 509-Zertifikat, das zwei Funktionen bietet:  
+  
+-   Identifizieren und Authentifizieren des Erstellers eines Parts  
+  
+-   Überprüfen des Parts auf Änderungen  
+  
+ Die digitale Signatur ist nicht zwingend bearbeitet werden ausgeschlossen, aber eine Überprüfung anhand der Signatur ein Fehler auftritt, wenn das Webpart in keiner Weise geändert wurde. Die Anwendung kann dann entsprechende Aktion vornehmen – z. B. sie können verhindern, dass das Webpart geöffnet, oder sie können Benutzer benachrichtigen, dass der Teil geändert wurde und nicht sicher ist.  
+  
+ Weitere Informationen zu digitalen Paketsignaturen finden Sie im MSDN-Artikel [Digital signieren Framework von der Open Packaging Conventions](http://go.microsoft.com/fwlink/?LinkId=74494).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CertificateEmbeddingOption">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.CertificateEmbeddingOption CertificateEmbeddingOption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Packaging.CertificateEmbeddingOption CertificateEmbeddingOption" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignature.CertificateEmbeddingOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.CertificateEmbeddingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Option für die X.509-Zertifikateinbettung ab.</summary>
+        <value>Einer der <see cref="T:System.IO.Packaging.CertificateEmbeddingOption" />-Werte, der die Option für die digitale Signatur angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ X. 509-Zertifikate verwendet, um ein Paket zu überprüfen, möglicherweise in einem von drei Speicherorten gespeichert werden:  
+  
+|||  
+|-|-|  
+|<xref:System.IO.Packaging.CertificateEmbeddingOption.InCertificatePart>|In einem eigenen Zertifikat <xref:System.IO.Packaging.PackagePart> im Paket.<br /><br /> Das x. 509-Zertifikat abgerufen werden kann, durch die <xref:System.IO.Packaging.PackageDigitalSignature.Signer%2A> Eigenschaft.|  
+|<xref:System.IO.Packaging.CertificateEmbeddingOption.InSignaturePart>|In den Inhalt der <xref:System.IO.Packaging.PackageDigitalSignature.SignaturePart%2A> im Paket.<br /><br /> Das x. 509-Zertifikat abgerufen werden kann, durch die <xref:System.IO.Packaging.PackageDigitalSignature.Signer%2A> Eigenschaft.|  
+|<xref:System.IO.Packaging.CertificateEmbeddingOption.NotEmbedded>|Extern für das Paket an einem Ort bezeichnet, die Anwendung, die Signatur erstellt, und die Anwendung verwendet, die später die Signatur für die Überprüfung.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPartTransformList">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;string&gt; GetPartTransformList (Uri partName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;string&gt; GetPartTransformList(class System.Uri partName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignature.GetPartTransformList(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partName" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="partName">Die <see cref="T:System.Uri" /> von der <see cref="T:System.IO.Packaging.PackagePart" /> um die Transformationsliste für zurückzugeben.</param>
+        <summary>Gibt eine geordnete Liste der <see cref="T:System.Security.Cryptography.Xml.Transform" /> Vorgänge, die auf einem bestimmten Teil angewendet.</summary>
+        <returns>Eine geordnete Liste von URI-Zeichenfolge, z. B. <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigCanonicalizationUrl" /> oder <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigC14NTransformUrl" />, darstellt, die kanonischen XML-Transformationen mit dem Webpart mit der angegebenen <paramref name="partName" /> URI.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Signature">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.Signature Signature { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.Signature Signature" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignature.Signature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.Signature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die digitale Signatur von XML.</summary>
+        <value>Die digitale Signatur von XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.PackageDigitalSignature.Signature%2A>ermöglicht den Zugriff auf die Foundation-Klasse, die Signatur typspezifische Kryptografiefunktionen und Serialisierung in und aus führt die <xref:System.IO.Packaging.PackagePart> , die die Signatur hostet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignaturePart">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackagePart SignaturePart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Packaging.PackagePart SignaturePart" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignature.SignaturePart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackagePart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.IO.Packaging.PackagePart" /> , die die Signatur enthält.</summary>
+        <value>Das Paketteil, das die Signatur enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Signatur Paketteil ist häufig zugegriffen werden, wenn die Signatur erneut signiert wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureType">
+      <MemberSignature Language="C#" Value="public string SignatureType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignatureType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignature.SignatureType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Zeichenfolge, die den Signaturtyp angibt.</summary>
+        <value>Ein [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Zeichenfolge, die den Signaturtyp angibt. Die Standardeinstellung ist <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigC14NTransformUrl" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureValue">
+      <MemberSignature Language="C#" Value="public byte[] SignatureValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SignatureValue" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignature.SignatureValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den verschlüsselten Hash-Wert, der die <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" />.</summary>
+        <value>Ein Bytearray, das den verschlüsselten Hash-Wert, der enthält die <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedParts">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Uri&gt; SignedParts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Uri&gt; SignedParts" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignature.SignedParts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Uri&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller der <see cref="T:System.IO.Packaging.PackagePart" /> Objekte mit der Signatur signiert.</summary>
+        <value>Eine Auflistung, die alle Paketteile enthält, die mit der Signatur signiert werden.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedRelationshipSelectors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IO.Packaging.PackageRelationshipSelector&gt; SignedRelationshipSelectors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IO.Packaging.PackageRelationshipSelector&gt; SignedRelationshipSelectors" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignature.SignedRelationshipSelectors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IO.Packaging.PackageRelationshipSelector&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der <see cref="T:System.IO.Packaging.PackageRelationship" /> Teile, die mit der Signatur signiert wurden.</summary>
+        <value>Die Liste der der <see cref="T:System.IO.Packaging.PackageRelationship" /> Teile, die mit der Signatur signiert wurden.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Signer">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate Signer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate Signer" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignature.Signer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das X.509-Zertifikat des Signaturgebers ab.</summary>
+        <value>Das digitale Zertifikat des Signaturgebers oder <see langword="null" /> Wenn das Zertifikat nicht, in gespeichert werden der <see cref="T:System.IO.Packaging.Package" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.PackageDigitalSignature.Signer%2A>Gibt die x. 509-Zertifikat des Signaturgebers zurück, wenn das digitale Zertifikat im Paket gespeichert wird (d. h. wenn <xref:System.IO.Packaging.PackageDigitalSignature.CertificateEmbeddingOption%2A> ist <xref:System.IO.Packaging.CertificateEmbeddingOption.InCertificatePart> oder <xref:System.IO.Packaging.CertificateEmbeddingOption.InSignaturePart>).  
+  
+ <xref:System.IO.Packaging.PackageDigitalSignature.Signer%2A>Gibt `null` Wenn das x. 509-Zertifikat nicht im Paket gespeichert ist (d. h. wenn <xref:System.IO.Packaging.PackageDigitalSignature.CertificateEmbeddingOption%2A> ist <xref:System.IO.Packaging.CertificateEmbeddingOption.NotEmbedded>).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningTime">
+      <MemberSignature Language="C#" Value="public DateTime SigningTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime SigningTime" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignature.SigningTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum und die Uhrzeit der Erstellung die Signatur.</summary>
+        <value>Das Datum und Uhrzeit der Erstellung die Signatur.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Packaging.PackageDigitalSignature.TimeFormat%2A> -Eigenschaft gibt das Format des Datums.  Das Format der <xref:System.IO.Packaging.PackageDigitalSignature.SigningTime%2A> Zeichenfolge basiert auf der <xref:System.IO.Packaging.PackageDigitalSignatureManager.TimeFormat%2A?displayProperty=nameWithType> Eigenschaft wirksam, wenn die Signatur erstellt wurde.  
+  
+ <xref:System.IO.Packaging.PackageDigitalSignature.SigningTime%2A>basiert auf der Systemzeit des Computers ist, in dem das Signaturzertifikat stattgefunden hat.  
+  
+ <xref:System.IO.Packaging.PackageDigitalSignature.SigningTime%2A>darf nicht "Sichere Zeitstempel" und nicht von vertrauenswürdigen Time Stamp Stelle.  Ein sichere Zeitstempel muss abgerufen und über einer vertrauenswürdigen Stelle der Zeitstempel angewendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeFormat">
+      <MemberSignature Language="C#" Value="public string TimeFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TimeFormat" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignature.TimeFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Format der das Datum und die Uhrzeit der Rückgabe durch die <see cref="P:System.IO.Packaging.PackageDigitalSignature.SigningTime" /> Eigenschaft.</summary>
+        <value>Das Format der das Datum und die Uhrzeit der Rückgabe durch die <see cref="P:System.IO.Packaging.PackageDigitalSignature.SigningTime" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datum/Uhrzeit-Formate führen Sie die Syntax der W3C [Date and Time Formats](http://go.microsoft.com/fwlink/?LinkId=84446) Hinweis.  In der folgenden Tabelle angezeigten Komponenten müssen die dargestellte Syntax und Interpunktion verwenden.  
+  
+|"TimeFormat"|Beschreibung|Beispiel|  
+|----------------|-----------------|-------------|  
+|YYYY|Jahr|2005|  
+|JJJJ-MM-|Jahr und Monat|2005-07|  
+|YYYY-MM-DD|Vollständiges Datum|2005-07-28|  
+|JJJJ-MM-DDThh:mmTZD|Vollständiges Datum plus Stunden und Minuten|2005-07-28T19:20-01:00 UHR|  
+|JJJJ-MM-DDThh:mm:ssTZD|Vollständiges Datum plus Stunden, Minuten und Sekunden|2005-07-28T19:20:45-01:00 UHR|  
+|JJJJ-MM-DDThh:mm:ss.sTZD|Vollständiges Datum plus Stunden, Minuten und Sekunden mit einem Dezimalbruch|2005-07-28T19:20:45.75-01:00 UHR|  
+  
+ Dabei gilt:  
+  
+|||  
+|-|-|  
+|YYYY|vierstellige Jahreszahl (z. B. 2006)|  
+|MM|zweistellige Monatsangabe (01 = Januar)|  
+|DD|zweistellige Tag des Monats (01 bis 31)|  
+|Thh|zweistellige Stundenangabe (00 bis 23, 24-Stunden-Uhrzeit)|  
+|mm|zwei Ziffern des Minuten (00 bis 59)|  
+|ss|zwei Ziffern des Sekunden (00 bis 59)|  
+|s|eine oder mehrere Ziffern, die einen Dezimalbruch einer Sekunde darstellt.|  
+|TZD|zeitzonenkennzeichner (Z oder + hh: mm oder -Hh: mm)|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Verify">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.VerifyResult Verify ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.IO.Packaging.VerifyResult Verify() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignature.Verify" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.VerifyResult</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft die digitale Signatur anhand eines X.509-Zertifikats.</summary>
+        <returns>
+          <see cref="F:System.IO.Packaging.VerifyResult.Success" />Wenn die Überprüfung erfolgreich war; andernfalls, eines der <see cref="T:System.IO.Packaging.VerifyResult" /> Werte, die ein Problem kennzeichnen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft die Signatur anhand eines eingebetteten x. 509-Zertifikat, gespeichert der <xref:System.IO.Packaging.Package>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Verify">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.VerifyResult Verify (System.Security.Cryptography.X509Certificates.X509Certificate signingCertificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.IO.Packaging.VerifyResult Verify(class System.Security.Cryptography.X509Certificates.X509Certificate signingCertificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignature.Verify(System.Security.Cryptography.X509Certificates.X509Certificate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.VerifyResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signingCertificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+      </Parameters>
+      <Docs>
+        <param name="signingCertificate">Das X.509-Zertifikat des Signaturgebers, mit dem die digitale Signatur überprüft wird.</param>
+        <summary>Überprüft die digitale Signatur anhand eines angegebenen X.509-Zertifikats.</summary>
+        <returns>
+          <see cref="F:System.IO.Packaging.VerifyResult.Success" />Wenn die Überprüfung erfolgreich war; andernfalls, eines der <see cref="T:System.IO.Packaging.VerifyResult" /> Werte, die ein Problem kennzeichnen.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die digitale <see cref="P:System.IO.Packaging.PackageDigitalSignature.Signature" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

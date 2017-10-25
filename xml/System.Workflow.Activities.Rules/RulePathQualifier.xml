@@ -1,0 +1,100 @@
+<Type Name="RulePathQualifier" FullName="System.Workflow.Activities.Rules.RulePathQualifier">
+  <TypeSignature Language="C#" Value="public class RulePathQualifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RulePathQualifier extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RulePathQualifier" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt den Pfad eines Felds oder einer Eigenschaft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die folgende Syntax, um den Pfad `this/wkflwprop/childprop/` zu erstellen:  
+  
+ `new RulePathQualifier("this", new RulePathQualifier("workflowprop", new RulePathQualifier("childprop", null)))`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RulePathQualifier (string name, System.Workflow.Activities.Rules.RulePathQualifier next);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Workflow.Activities.Rules.RulePathQualifier next) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RulePathQualifier.#ctor(System.String,System.Workflow.Activities.Rules.RulePathQualifier)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="next" Type="System.Workflow.Activities.Rules.RulePathQualifier" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der aktuellen Entität im Pfad.</param>
+        <param name="next">Die nächste Entität oder das Feld oder die Eigenschaft für den Pfad. NULL, wenn <c>Namen</c> ist der Name der Eigenschaft oder des Felds im Stamm des Pfads.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.RulePathQualifier" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die folgende Syntax, um den Pfad `this/wkflwprop/childprop/` zu erstellen:  
+  
+ `new RulePathQualifier("this", new RulePathQualifier("workflowprop", new RulePathQualifier("childprop", null)))`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RulePathQualifier.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des aktuellen Felds oder der Eigenschaft ab.</summary>
+        <value>Der Name der aktuellen Entität im Pfad.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.Rules.RulePathQualifier Next { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Activities.Rules.RulePathQualifier Next" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RulePathQualifier.Next" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RulePathQualifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das nächste Feld oder die Eigenschaft für den Pfad ab.</summary>
+        <value>Die nächste Entität oder das Feld oder die Eigenschaft für den Pfad.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.Rules.RulePathQualifier.Next%2A> ist NULL, wenn <xref:System.Workflow.Activities.Rules.RulePathQualifier.Name%2A> der Name der Eigenschaft oder des Felds im Stamm des Pfads ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

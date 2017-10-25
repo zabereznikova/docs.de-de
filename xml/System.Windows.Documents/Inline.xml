@@ -1,0 +1,336 @@
+<Type Name="Inline" FullName="System.Windows.Documents.Inline">
+  <TypeSignature Language="C#" Value="public abstract class Inline : System.Windows.Documents.TextElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Inline extends System.Windows.Documents.TextElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Inline" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.TextElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Documents.TextElementEditingBehavior(IsMergeable=true, IsTypographicOnly=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine abstrakte Klasse, die eine Basis für alle fortlaufenden Inline-Inhaltselemente bereitstellt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Inline ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Inline.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert basieren Klassenwerte, wenn durch eine abgeleitete Klasse aufgerufen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaselineAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.BaselineAlignment BaselineAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.BaselineAlignment BaselineAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Inline.BaselineAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaselineAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Baseline-Ausrichtung für die <see cref="T:System.Windows.Documents.Inline" /> Element.</summary>
+        <value>Ein Element oder die <see cref="T:System.Windows.BaselineAlignment" /> -Enumeration, der Baselineausrichtung für die <see cref="T:System.Windows.Documents.Inline" /> Element.  
+  
+ Der Standardwert ist <see cref="T:System.Windows.BaselineAlignment" />.** Geplante**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_BaselineAlignment"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.Inline.BaselineAlignmentProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaselineAlignmentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BaselineAlignmentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BaselineAlignmentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Inline.BaselineAlignmentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.Inline.BaselineAlignment" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.FlowDirection FlowDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FlowDirection FlowDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Inline.FlowDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der die relative Richtung für den Ablauf von Inhalten innerhalb einer <see cref="T:System.Windows.Documents.Inline" /> Element.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Windows.FlowDirection" /> -Enumeration, die die relative flussrichtung angibt.  Beim Abrufen dieser Eigenschaft gibt die derzeit gültigen flussrichtung zurück.  Durch Festlegen dieser Eigenschaft führt dazu, dass der Inhalt der <see cref="T:System.Windows.Documents.Inline" /> Element in der angegebenen Richtung erneut zu übertragen.  
+  
+ Der Standardwert ist <see cref="F:System.Windows.FlowDirection.LeftToRight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die flussrichtung von Inhalten entspricht in der Regel die Standard-flussrichtung der Sprache, dargestellt wird.  Geben Sie Beispiele für Sprachen, die natürliche Weise von rechts nach links fließen, Hebräisch und Arabisch.  Geben Sie Beispiele für Sprachen, die natürliche Weise von links nach rechts fließen, Englisch, Deutsch und Russisch.  
+  
+ **Hinweis:** der Wert dieser Eigenschaft wird nicht automatisch die vom Betriebssystem verwendete Sprache entsprechend geändert. Wenn Sie einen anderen Wert wird der Standardwert verwenden müssen <xref:System.Windows.FlowDirection.LeftToRight>, Sie müssen selbst angeben.  
+  
+<a name="dependencyPropertyInfo_FlowDirection"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.Inline.FlowDirectionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.Inline.FlowDirection%2A> Attribut des eine <xref:System.Windows.Documents.Inline> Element (<xref:System.Windows.Documents.Run>).  
+  
+ [!code-xaml[InlineSnippets#_Inline_FlowDirectionXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml#_inline_flowdirectionxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.Inline.FlowDirection%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[InlineSnippets#_Inline_FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_inline_flowdirection)]
+ [!code-vb[InlineSnippets#_Inline_FlowDirection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_inline_flowdirection)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FlowDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FlowDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Inline.FlowDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.Inline.FlowDirection" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextInline">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Inline NextInline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.Inline NextInline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Inline.NextInline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Inline</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den nächsten <see cref="T:System.Windows.Documents.Inline" /> Element, das ein Peer für dieses Element ist.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.Inline" /> Objekt, das den nächsten darstellt <see cref="T:System.Windows.Documents.Inline" /> Element, das ein Peer für dieses Element ist oder **null** es ist keine Weiter <see cref="T:System.Windows.Documents.Inline" /> Element.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Windows.Documents.Inline.NextInline%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[InlineSnippets#_Inline_SiblingBase](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_inline_siblingbase)]
+ [!code-vb[InlineSnippets#_Inline_SiblingBase](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_inline_siblingbase)]  
+  
+ [!code-csharp[InlineSnippets#_Inline_NextSibling](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_inline_nextsibling)]
+ [!code-vb[InlineSnippets#_Inline_NextSibling](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_inline_nextsibling)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousInline">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Inline PreviousInline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.Inline PreviousInline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Inline.PreviousInline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Inline</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vorherigen <see cref="T:System.Windows.Documents.Inline" /> Element, das ein Peer für dieses Element ist.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.Inline" /> darstellt, das vorherige Objekt <see cref="T:System.Windows.Documents.Inline" /> Element, das ein Peer für dieses Element ist oder **null** Wenn es kein vorheriges ist <see cref="T:System.Windows.Documents.Inline" /> Element.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Windows.Documents.Inline.NextInline%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[InlineSnippets#_Inline_SiblingBase](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_inline_siblingbase)]
+ [!code-vb[InlineSnippets#_Inline_SiblingBase](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_inline_siblingbase)]  
+  
+ [!code-csharp[InlineSnippets#_Inline_PreviousSibling](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_inline_previoussibling)]
+ [!code-vb[InlineSnippets#_Inline_PreviousSibling](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_inline_previoussibling)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SiblingInlines">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.InlineCollection SiblingInlines { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.InlineCollection SiblingInlines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Inline.SiblingInlines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.InlineCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.InlineCollection" /> , enthält die <see cref="T:System.Windows.Documents.Inline" /> Elemente, die gleichgeordnete Elemente (Peers) für dieses Element sind.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.InlineCollection" /> -Objekt, enthält die <see cref="T:System.Windows.Documents.Inline" /> Elemente, die gleichgeordnete Elemente dieses Elements sind.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Immer die von dieser Eigenschaft zurückgegebene Auflistung enthält das Element, das über dem die Auflistung angefordert wird.  D. h. gilt ein Inlineelement eigene gleichgeordnetes Element beim Erstellen einer Auflistung von nebengeordneten Elementen für das Element sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Windows.Documents.Inline.SiblingInlines%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[InlineSnippets#_Inline_SiblingBase](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_inline_siblingbase)]
+ [!code-vb[InlineSnippets#_Inline_SiblingBase](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_inline_siblingbase)]  
+  
+ [!code-csharp[InlineSnippets#_Inline_Siblings](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_inline_siblings)]
+ [!code-vb[InlineSnippets#_Inline_Siblings](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_inline_siblings)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextDecorations">
+      <MemberSignature Language="C#" Value="public System.Windows.TextDecorationCollection TextDecorations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.TextDecorationCollection TextDecorations" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Inline.TextDecorations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.TextDecorationCollection" /> Textdekorationen anzuwendende für dieses Element enthält.</summary>
+        <value>Ein <see cref="T:System.Windows.TextDecorationCollection" /> -Auflistung, die auf dieses Element angewendet Textdekorationen enthält.  
+  
+ Der Standardwert ist **null** (keine Textdekorationen angewendet).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.TextDecoration> Objekt ist eine visuelle Verzierung können Sie Text hinzufügen. Es gibt vier Arten von Textdekorationen: "Unterstreichen", die Baseline, durchgestrichen und Überstrichen.  Weitere Informationen zu Textdekorationen finden Sie unter [Vorgehensweise: Erstellen Sie einen Text-Decoration](~/docs/framework/wpf/advanced/how-to-create-a-text-decoration.md).  
+  
+<a name="dependencyPropertyInfo_TextDecorations"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.Inline.TextDecorationsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.Inline.TextDecorations%2A> Attribut des eine <xref:System.Windows.Documents.Inline> Element (<xref:System.Windows.Documents.Run>).  
+  
+ [!code-xaml[InlineSnippets#_Inline_TextDecXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml#_inline_textdecxaml)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Text mit standardmäßigem Durchstreicheffekt](~/add/media/inline-textdec-strike.png "Bildschirmabbildung: Text mit Durchstreicheffekt")  
+  
+ Der folgenden Abbildung wird wie die **überlagernde Linie**, **Baseline**, und **Unterstreichen** Ergänzungen zu rendern, bzw..  
+  
+ ![Bildschirmabbildung: Overline TextDecorator](~/add/media/inline-textdec-over.png "Screenshot: Overline TextDecorator")  
+  
+ ![Bildschirmabbildung: Default Baseline-Effekt auf Text](~/add/media/inline-textdec-base.png "Screenshot: Standard-Baseline-Effekt auf Text")  
+  
+ ![Bildschirmabbildung: Text mit standardmäßigem unterstreichungseffekt](~/add/media/inline-textdec-under.png "Bildschirmabbildung: Text mit unterstreichungseffekt")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.Inline.TextDecorations%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[InlineSnippets#_Inline_TextDec](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_inline_textdec)]
+ [!code-vb[InlineSnippets#_Inline_TextDec](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_inline_textdec)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextDecorationsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextDecorationsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextDecorationsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Inline.TextDecorationsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.Inline.TextDecorations" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

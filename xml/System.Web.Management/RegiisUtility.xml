@@ -1,0 +1,187 @@
+<Type Name="RegiisUtility" FullName="System.Web.Management.RegiisUtility">
+  <TypeSignature Language="C#" Value="public sealed class RegiisUtility : System.Web.Management.IRegiisUtility" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RegiisUtility extends System.Object implements class System.Web.Management.IRegiisUtility" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.RegiisUtility" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.Management.IRegiisUtility</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Autorisierung Hilfsprogramme zur Unterstützung von bestimmten Webanwendungskonfiguration, Assemblyregistrierung und Assembly-Schlüsselcontainer Bearbeitung bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.RegiisUtility> Klasse stellt Hilfsfunktionen, die Unterstützung der `system.web` Assemblyregistrierung.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegiisUtility ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.RegiisUtility.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Management.RegiisUtility" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.RegiisUtility.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Es basiert auf der <xref:System.Web.Management.IRegiisUtility> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectedConfigAction">
+      <MemberSignature Language="C#" Value="public void ProtectedConfigAction (long options, string firstArgument, string secondArgument, string providerName, string appPath, string site, string cspOrLocation, int keySize, out IntPtr exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProtectedConfigAction(int64 options, string firstArgument, string secondArgument, string providerName, string appPath, string site, string cspOrLocation, int32 keySize, [out] native int&amp; exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.RegiisUtility.ProtectedConfigAction(System.Int64,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.Int64" />
+        <Parameter Name="firstArgument" Type="System.String" />
+        <Parameter Name="secondArgument" Type="System.String" />
+        <Parameter Name="providerName" Type="System.String" />
+        <Parameter Name="appPath" Type="System.String" />
+        <Parameter Name="site" Type="System.String" />
+        <Parameter Name="cspOrLocation" Type="System.String" />
+        <Parameter Name="keySize" Type="System.Int32" />
+        <Parameter Name="exception" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="options">Der Typ der auszuführenden Aktion.</param>
+        <param name="firstArgument">Ein Abschnitt oder Schlüssel Assembly Container Konfigurationsname.</param>
+        <param name="secondArgument">Der Konfigurationsdateiname oder der Kontoname.</param>
+        <param name="providerName">Der Anbietername.</param>
+        <param name="appPath">Der Pfad der Anwendung.</param>
+        <param name="site">Der Verweis auf die Site.</param>
+        <param name="cspOrLocation">Der Speicherort der Konfiguration.</param>
+        <param name="keySize">Die Größe des Schlüssels.</param>
+        <param name="exception">Die Ausnahme angezeigt.</param>
+        <summary>Ermöglicht bestimmte Bearbeitung von Konfigurationsabschnitten und Assemblyschlüssel-Container, die basierend auf den angegebenen Parametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.RegiisUtility.ProtectedConfigAction%2A> Methode wird intern verwendet, um zu schützen und Aufheben des Schutzes Abschnitte innerhalb der Konfiguration. Die <xref:System.Web.Management.RegiisUtility.ProtectedConfigAction%2A> Methode unterstützt auch die Bearbeitung der Assembly-Schlüsselcontainer.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAsnetMmcAssembly">
+      <MemberSignature Language="C#" Value="public void RegisterAsnetMmcAssembly (int doReg, string typeName, string binaryDirectory, out IntPtr exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterAsnetMmcAssembly(int32 doReg, string typeName, string binaryDirectory, [out] native int&amp; exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.RegiisUtility.RegisterAsnetMmcAssembly(System.Int32,System.String,System.String,System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doReg" Type="System.Int32" />
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="binaryDirectory" Type="System.String" />
+        <Parameter Name="exception" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="doReg">0 gibt an, dass die Assembly aufgehoben werden soll. Andernfalls sollte die Assembly registriert werden.</param>
+        <param name="typeName">Der Typ der Assembly.</param>
+        <param name="binaryDirectory">Der Pfad des Verzeichnisses binäre.</param>
+        <param name="exception">Die Ausnahme angezeigt.</param>
+        <summary>Ermöglicht die derzeit ausgeführte Assembly der Microsoft Management Console (MMC), der registriert oder deren Registrierung aufgehoben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird intern verwendet, für das Registrieren oder Aufheben der Registrierung der ausgeführten MMC-Assembly.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterSystemWebAssembly">
+      <MemberSignature Language="C#" Value="public void RegisterSystemWebAssembly (int doReg, out IntPtr exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterSystemWebAssembly(int32 doReg, [out] native int&amp; exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.RegiisUtility.RegisterSystemWebAssembly(System.Int32,System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doReg" Type="System.Int32" />
+        <Parameter Name="exception" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="doReg">0 gibt an, dass die Assembly aufgehoben werden soll. Andernfalls sollte die Assembly registriert werden.</param>
+        <param name="exception">Die Ausnahme angezeigt.</param>
+        <summary>Ermöglicht es die ausgeführte Webassembly registriert oder deren Registrierung aufgehoben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für das Registrieren oder Aufheben der Registrierung der ausgeführten Web-Assembly verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveBrowserCaps">
+      <MemberSignature Language="C#" Value="public void RemoveBrowserCaps (out IntPtr exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveBrowserCaps([out] native int&amp; exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.RegiisUtility.RemoveBrowserCaps(System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die Ausnahme angezeigt.</param>
+        <summary>Ermöglicht die Browserfunktionen Codegenerator deinstalliert werden.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

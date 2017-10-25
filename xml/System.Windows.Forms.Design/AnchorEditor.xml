@@ -1,0 +1,105 @@
+<Type Name="AnchorEditor" FullName="System.Windows.Forms.Design.AnchorEditor">
+  <TypeSignature Language="C#" Value="public sealed class AnchorEditor : System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AnchorEditor extends System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.AnchorEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.UITypeEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Benutzeroberfläche zum Konfigurieren einer <see cref="P:System.Windows.Forms.Control.Anchor" /> Eigenschaft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.AnchorEditor> bietet eine Entwurfszeit-Benutzeroberfläche zum Konfigurieren einer <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft. Ein <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft wird normalerweise verwendet, um zu bestimmen, welche Seiten des Containers ein Steuerelement gebunden ist. Diese Klasse stellt eine grafische Dropdown--Steuerelement, das dem Benutzer ermöglicht, welche Seiten des Speichercontainers, um das Steuerelement zu verankern angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit einem <xref:System.ComponentModel.EditorAttribute> Zuordnen der <xref:System.Windows.Forms.Design.AnchorEditor> mit der Eigenschaft.  
+  
+ [!code-cpp[EditorAttributesExample#4](~/samples/snippets/cpp/VS_Snippets_Winforms/EditorAttributesExample/CPP/class1.cpp#4)]
+ [!code-csharp[EditorAttributesExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/EditorAttributesExample/CS/class1.cs#4)]
+ [!code-vb[EditorAttributesExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/EditorAttributesExample/VB/class1.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnchorEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.AnchorEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.AnchorEditor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditValue">
+      <MemberSignature Language="C#" Value="public override object EditValue (System.ComponentModel.ITypeDescriptorContext context, IServiceProvider provider, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EditValue(class System.ComponentModel.ITypeDescriptorContext context, class System.IServiceProvider provider, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.AnchorEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, über die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <param name="provider">Ein <see cref="T:System.IServiceProvider" /> über die Bearbeitung von Diensten abgerufen werden kann.</param>
+        <param name="value">Eine Instanz des Werts, die bearbeitet wird.</param>
+        <summary>Bearbeitet den Wert des angegebenen Objekts mit dem angegebenen Dienstanbieter und Kontext.</summary>
+        <returns>Der neue Wert des Objekts. Wenn der Wert des Objekts nicht geändert hat, wird hierbei dasselbe Objekt zurückgegeben, das zuvor übergeben wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Dienstanbieter wird bereitgestellt, damit alle erforderlichen Bearbeitungsdienste abgerufen werden können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditStyle">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Design.UITypeEditorEditStyle GetEditStyle (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Design.UITypeEditorEditStyle GetEditStyle(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.AnchorEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, über die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <summary>Ruft den von der <see cref="M:System.Windows.Forms.Design.AnchorEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />-Methode verwendeten Editor-Stil ab.</summary>
+        <returns>Eines der <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> Werte, der angibt, die bereitgestellten Bearbeitung zu formatieren. Diese Methode gibt zurück, wenn die Methode nicht unterstützt wird, <see cref="F:System.Drawing.Design.UITypeEditorEditStyle.None" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

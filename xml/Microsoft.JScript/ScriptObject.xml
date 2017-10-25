@@ -1,0 +1,619 @@
+<Type Name="ScriptObject" FullName="Microsoft.JScript.ScriptObject">
+  <TypeSignature Language="C#" Value="public abstract class ScriptObject : System.Reflection.IReflect" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ScriptObject extends System.Object implements class System.Reflection.IReflect" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.ScriptObject" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Reflection.IReflect</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Unterstützt alle JScript-Klassen. Dies ist die übergeordnete Basisklasse aller JScript-Klassen. Diese Klasse gehört zur Kategorie Objekte und Funktionen.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="engine">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.VsaEngine engine;" />
+      <MemberSignature Language="ILAsm" Value=".field public class Microsoft.JScript.Vsa.VsaEngine engine" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.ScriptObject.engine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.VsaEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speichert einen Verweis auf das Skriptmodul.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetField">
+      <MemberSignature Language="C#" Value="public System.Reflection.FieldInfo GetField (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.FieldInfo GetField(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.GetField(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des abzurufenden Felds.</param>
+        <param name="bindingAttr">Eine bitweise Kombination der Enumerationswerte, die angibt, wie die Suche nach Membern mittels Reflektion durchgeführt wird.</param>
+        <summary>Ruft ein Feld mit dem angegebenen Namen ab.</summary>
+        <returns>Ein Feld mit dem angegebenen <paramref name="name" />, oder null, wenn das Skriptobjekt das Feld nicht enthalten ist.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetFields">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.FieldInfo[] GetFields (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.FieldInfo[] GetFields(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.GetFields(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Eine bitweise Kombination der Enumerationswerte, die angibt, wie die Suche nach Membern mittels Reflektion durchgeführt wird.</param>
+        <summary>Ruft ein Array von <see cref="T:System.Reflection.FieldInfo" /> Objekte, die alle Felder des aktuellen Skriptobjekts entsprechen.</summary>
+        <returns>Ein Array von Objekten, die alle Felder des aktuellen Skriptobjekts enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetMember">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MemberInfo[] GetMember (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MemberInfo[] GetMember(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.GetMember(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu suchenden Elements.</param>
+        <param name="bindingAttr">Eine bitweise Kombination der Enumerationswerte, die angibt, wie die Suche nach Membern mittels Reflektion durchgeführt wird.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ein Array von <see cref="T:System.Reflection.MemberInfo" /> Objekte, die alle Elemente entsprechen, die mit den angegebenen Namen übereinstimmen.</summary>
+        <returns>Ein Array von Objekten, die entsprechen den <paramref name="name" /> Argument.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetMembers">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MemberInfo[] GetMembers (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MemberInfo[] GetMembers(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.GetMembers(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Eine bitweise Kombination der Enumerationswerte, die angibt, wie die Suche nach Membern mittels Reflektion durchgeführt wird.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ein Array von <see cref="T:System.Reflection.MemberInfo" /> Objekte, die alle Elemente des aktuellen Skriptobjekts entsprechen.</summary>
+        <returns>Ein Array von Objekten, die alle Elemente des aktuellen Skriptobjekts enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo GetMethod (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetMethod(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.GetMethod(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der abzurufenden Methode.</param>
+        <param name="bindingAttr">Eine bitweise Kombination der Enumerationswerte, die angibt, wie die Suche nach Membern mittels Reflektion durchgeführt wird.</param>
+        <summary>Ruft eine Methode, die dem angegebenen Namen ab.</summary>
+        <returns>Eine Methode mit dem angegebenen <paramref name="name" />, oder null, wenn das Skriptobjekt keine Methode enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo GetMethod (string name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, Type[] types, System.Reflection.ParameterModifier[] modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetMethod(string name, valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.Binder binder, class System.Type[] types, valuetype System.Reflection.ParameterModifier[] modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Type[],System.Reflection.ParameterModifier[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu suchenden Methode.</param>
+        <param name="bindingAttr">Eine bitweise Kombination der Enumerationswerte, die angibt, wie die Suche nach Membern mittels Reflektion durchgeführt wird.</param>
+        <param name="binder">Ein Objekt, das typkonvertierung von tatsächlicher Argumenttyp in den Typ des formalen Arguments ausführt.</param>
+        <param name="types">Die Parametertypen, die denen eine übereinstimmende Methode gesucht werden soll.</param>
+        <param name="modifiers">Ein Array von Parametermodifizierern, mit denen Bindung mit Parametersignaturen in der die Typen geändert wurden.</param>
+        <summary>Ruft eine Methode mit dem angegebenen Namen unter Verwendung der angegebenen Auswahlkriterien ab.</summary>
+        <returns>Eine Methode mit dem angegebenen <paramref name="name" />, oder null, wenn das Skriptobjekt keine Methode enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethods">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodInfo[] GetMethods (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo[] GetMethods(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.GetMethods(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Eine bitweise Kombination der Enumerationswerte, die angibt, wie die Suche nach Membern mittels Reflektion durchgeführt wird.</param>
+        <summary>Ruft ein Array von <see cref="T:System.Reflection.MethodInfo" /> Objekte, die alle Methoden des aktuellen Skriptobjekts entsprechen.</summary>
+        <returns>Ein Array von Objekten, die alle Methoden des aktuellen Skriptobjekts enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetParent">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.ScriptObject GetParent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.JScript.ScriptObject GetParent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.GetParent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ScriptObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Verweis auf das übergeordnete Objekt ab.</summary>
+        <returns>Ein Verweis auf das übergeordnete Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das übergeordnete Element ist das Objekt, das Skriptobjekt Anforderungen für die Eigenschaften oder Methoden delegiert, dass es selbst nicht implementiert wird. Z. B. beim Erstellen einer <xref:Microsoft.JScript.NumberObject> mithilfe einer <xref:Microsoft.JScript.NumberConstructor>, das übergeordnete Element ist ein <xref:Microsoft.JScript.NumberPrototype>.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.PropertyInfo[] GetProperties (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.PropertyInfo[] GetProperties(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.GetProperties(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Eine bitweise Kombination der Enumerationswerte, die angibt, wie die Suche nach Membern mittels Reflektion durchgeführt wird.</param>
+        <summary>Ruft ein Array von <see cref="T:System.Reflection.PropertyInfo" /> Objekte, die alle Eigenschaften des aktuellen Skriptobjekts entsprechen.</summary>
+        <returns>Ein Array von Objekten, die alle Eigenschaften des aktuellen Skriptobjekts enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public System.Reflection.PropertyInfo GetProperty (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.PropertyInfo GetProperty(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.GetProperty(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der abzurufenden Eigenschaft.</param>
+        <param name="bindingAttr">Eine bitweise Kombination der Enumerationswerte, die angibt, wie die Suche nach Membern mittels Reflektion durchgeführt wird.</param>
+        <summary>Ruft eine Eigenschaft mit dem angegebenen Namen ab.</summary>
+        <returns>Eine Eigenschaft mit dem angegebenen <paramref name="name" />, oder null, wenn das Skriptobjekt die Eigenschaft nicht enthalten ist.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public System.Reflection.PropertyInfo GetProperty (string name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, Type returnType, Type[] types, System.Reflection.ParameterModifier[] modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.PropertyInfo GetProperty(string name, valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.Binder binder, class System.Type returnType, class System.Type[] types, valuetype System.Reflection.ParameterModifier[] modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.GetProperty(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Type,System.Type[],System.Reflection.ParameterModifier[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Eigenschaft, nach der gesucht werden soll.</param>
+        <param name="bindingAttr">Eine bitweise Kombination der Enumerationswerte, die angibt, wie die Suche nach Membern mittels Reflektion durchgeführt wird.</param>
+        <param name="binder">Ein Objekt, das typkonvertierung von tatsächlicher Argumenttyp in den Typ des formalen Arguments ausführt.</param>
+        <param name="returnType">Der Typ des Rückgabewerts, die die Eigenschaft benötigen.</param>
+        <param name="types">Die Indextypen der zu suchenden Eigenschaft. Verwendet für Indexeigenschaften fest, wie z. B. der Indexer für eine Klasse.</param>
+        <param name="modifiers">Ein Array von Parametermodifizierern, mit denen Bindung mit Parametersignaturen in der die Typen geändert wurden.</param>
+        <summary>Ruft eine Eigenschaft mit dem angegebenen Namen unter Verwendung der angegebenen Auswahlkriterien ab.</summary>
+        <returns>Eine Eigenschaft mit dem angegebenen <paramref name="name" />, oder null, wenn das Skriptobjekt die Eigenschaft nicht enthalten ist.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMember">
+      <MemberSignature Language="C#" Value="public virtual object InvokeMember (string name, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object target, object[] args, System.Reflection.ParameterModifier[] modifiers, System.Globalization.CultureInfo locale, string[] namedParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object InvokeMember(string name, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object target, object[] args, valuetype System.Reflection.ParameterModifier[] modifiers, class System.Globalization.CultureInfo locale, string[] namedParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+        <Parameter Name="locale" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="namedParameters" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des aufzurufenden Members.</param>
+        <param name="invokeAttr">Eine bitweise Kombination der Enumerationswerte, die angibt, wie die Suche nach Membern mittels Reflektion durchgeführt wird.</param>
+        <param name="binder">Ein Objekt, das typkonvertierung von tatsächlicher Argumenttyp in den Typ des formalen Arguments ausführt.</param>
+        <param name="target">Das Objekt auf dem der Member aufgerufen werden soll. Diese Angabe muss das aktuelle Skriptobjekt.</param>
+        <param name="args">Ein Array von Objekten, die aufgerufen werden Anzahl, Reihenfolge und Typ der Parameter des Elements enthält. Dies ist ein leeres Array, wenn keine Parameter vorhanden sind.</param>
+        <param name="modifiers">Ein Array, das die gleiche Länge wie der Args-Parameter verfügt. Es stellt die Argumentattribute des aufgerufenen Members in den Metadaten dar.</param>
+        <param name="locale">Enthält Informationen über eine bestimmte Kultur oder ein Gebietsschema. Zur ordnungsgemäßen Formatierung von Zahlen, Datumsangaben und Zeichenfolgen verwendet.</param>
+        <param name="namedParameters">Ein Array von Parametern.</param>
+        <summary>Ruft den angegebenen Member auf.</summary>
+        <returns>Der Rückgabewert des Aufrufs an das Element.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[double index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(float64)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ScriptObject.Item(System.Double)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements.</param>
+        <summary>Ruft ab oder legt ein Element des Skripts Objekt, durch das angegebene festgelegten <see cref="T:System.Double" /> Indexwert.</summary>
+        <value>Der Wert des Elements, die zur <paramref name="index" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ScriptObject.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements.</param>
+        <summary>Ruft ab oder legt ein Element des Skripts Objekt, durch das angegebene festgelegten <see cref="T:System.Int32" /> Indexwert.</summary>
+        <value>Der Wert des Elements, die zur <paramref name="index" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[params object[] pars] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(object[])" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ScriptObject.Item(System.Object[])" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pars" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="pars">Der Name oder Index des Elements.</param>
+        <summary>Ruft ab oder legt ein Mitglied der Skriptobjekt, das mit dem angegebenen Namen bezeichneten <see cref="T:System.Double" /> Indexwert, oder <see cref="T:System.Int32" /> Indexwert.</summary>
+        <value>Der Wert des Members, der im angegebenen <paramref name="pars" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `pars` Array verfügt über mehr als ein Element, das letzte Element ist das Argument für diese Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ScriptObject.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ermittelt oder definiert ein Mitglied der Skriptobjekt, das durch den angegebenen Namen gekennzeichnet wird.</summary>
+        <value>Der Wert des Elements mit dem Namen <paramref name="name" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="parent">
+      <MemberSignature Language="C#" Value="protected Microsoft.JScript.ScriptObject parent;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Microsoft.JScript.ScriptObject parent" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.ScriptObject.parent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ScriptObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speichert einen Verweis auf das übergeordnete Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das übergeordnete Element ist das Objekt, das Skriptobjekt Anforderungen für die Eigenschaften oder Methoden delegiert, dass es selbst nicht implementiert wird. Z. B. beim Erstellen einer <xref:Microsoft.JScript.NumberObject> mithilfe einer <xref:Microsoft.JScript.NumberConstructor>, das übergeordnete Element ist ein <xref:Microsoft.JScript.NumberPrototype>.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlyingSystemType">
+      <MemberSignature Language="C#" Value="public virtual Type UnderlyingSystemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type UnderlyingSystemType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ScriptObject.UnderlyingSystemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Skriptobjekts ab.</summary>
+        <value>Der Typ des Skriptobjekts.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WrapMembers">
+      <MemberSignature Language="C#" Value="protected static System.Reflection.MemberInfo[] WrapMembers (System.Reflection.MemberInfo member, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Reflection.MemberInfo[] WrapMembers(class System.Reflection.MemberInfo member, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.WrapMembers(System.Reflection.MemberInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="member" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="member">Das Element zu umschließen.</param>
+        <param name="obj">Das Objekt, das <c>Member</c> auf definiert ist.</param>
+        <summary>Erstellt ein umschlossenes Objekt, das das angegebene Element zusammen mit dem angegebenen Objekt enthält.</summary>
+        <returns>Ein Array mit einem Element mit einem umschlossene Objekt, das die Elementinformationen enthält und <paramref name="obj" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht, andere Objekte, die das Element zu speichern, und klicken Sie dann den Wert zurückgeben, als wäre er ihre eigenen nicht enthalten.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WrapMembers">
+      <MemberSignature Language="C#" Value="protected static System.Reflection.MemberInfo[] WrapMembers (System.Reflection.MemberInfo[] members, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Reflection.MemberInfo[] WrapMembers(class System.Reflection.MemberInfo[] members, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.WrapMembers(System.Reflection.MemberInfo[],System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="members" Type="System.Reflection.MemberInfo[]" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="members">Die Elemente umschließen.</param>
+        <param name="obj">Das Objekt, das <c>Elemente</c> definiert.</param>
+        <summary>Erstellt ein Array von umschlossenen Objekte, die die angegebenen Elemente zusammen mit dem angegebenen Objekt enthalten.</summary>
+        <returns>Ein Array von umschlossenen Objekte, von denen jede Informationen und eine Kopie des enthält <paramref name="obj" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht, andere Objekte, die diese Member zu speichern, und klicken Sie dann ihre Werte zurückgeben, als wären sie ihre eigenen nicht enthalten.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WrapMembers">
+      <MemberSignature Language="C#" Value="protected static System.Reflection.MemberInfo[] WrapMembers (System.Reflection.MemberInfo[] members, object obj, Microsoft.JScript.SimpleHashtable cache);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Reflection.MemberInfo[] WrapMembers(class System.Reflection.MemberInfo[] members, object obj, class Microsoft.JScript.SimpleHashtable cache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptObject.WrapMembers(System.Reflection.MemberInfo[],System.Object,Microsoft.JScript.SimpleHashtable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="members" Type="System.Reflection.MemberInfo[]" />
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="cache" Type="Microsoft.JScript.SimpleHashtable" />
+      </Parameters>
+      <Docs>
+        <param name="members">Die Elemente umschließen.</param>
+        <param name="obj">Das Objekt, das <c>Elemente</c> definiert.</param>
+        <param name="cache">Temporärer Speicher für die umschlossene Objekte.</param>
+        <summary>Erstellt ein Array von umschlossenen Objekte, die die angegebenen Member zusammen mit dem angegebenen Objekt, das Zwischenspeichern der Ergebnisse in den Speicher angegebenen Daten enthalten.</summary>
+        <returns>Ein Array von umschlossenen Objekte, von denen jede Informationen und eine Kopie des enthält <paramref name="obj" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht, andere Objekte, die diese Member zu speichern, und klicken Sie dann ihre Werte zurückgeben, als wären sie ihre eigenen nicht enthalten.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

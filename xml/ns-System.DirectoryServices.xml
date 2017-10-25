@@ -1,0 +1,39 @@
+<Namespace Name="System.DirectoryServices">
+  <Docs>
+    <summary>Die <see cref="N:System.DirectoryServices" /> Namespace bietet einen einfachen Zugriff auf Active Directory-Domänendienste aus verwaltetem Code. Der Namespace enthält zwei Komponentenklassen, <see cref="T:System.DirectoryServices.DirectoryEntry" /> und <see cref="T:System.DirectoryServices.DirectorySearcher" />, die die Active Directory Services Interfaces (ADSI)-Technologie verwenden. ADSI ist der Satz von Schnittstellen, die Microsoft als ein flexibles Tool bereitstellt, für die Arbeit mit einer Vielzahl von Netzwerkanbieter erforderlich. ADSI bietet dem Administrator die Möglichkeit zum Suchen und Verwalten von Ressourcen in einem Netzwerk mit relativ einfach, unabhängig von der Größe des Netzwerks.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in diesem Namespace können mit der Active Directory-Domänendienste-Dienstanbieter verwendet werden. Der aktuelle Anbieter sind: (Internet Information Services, IIS), Lightweight Directory Access Protocol (LDAP), Novell NetWare Directory Service (NDS) und WinNT.  
+  
+ ADSI ist eine programmgesteuerte Schnittstelle für Microsoft Active Directory Domain Services, die Ihre Anwendungen für die Interaktion mit verschiedenen Verzeichnissen in einem Netzwerk über eine einzige Oberfläche ermöglicht. Verwenden ADSI, können Sie Anwendungen erstellen, die Ausführung allgemeiner Aufgaben, z. B. das Sichern von Datenbanken, den Zugriff auf Drucker und Verwalten von Benutzerkonten.  
+  
+ Es wird davon ausgegangen, dass Sie die Verwendung dieser Klassen werden allgemeine Kenntnisse im Umgang mit Active Directory-Domänendienste verfügen. Weitere Informationen zu Active Directory Domain Services, finden Sie unter den Themen [Einführung in Active Directory-Objekte](http://go.microsoft.com/fwlink/?LinkID=121193&clcid=0x409) und [Hintergrundinformationen zur Active Directory-Technologie](http://go.microsoft.com/fwlink/?LinkID=121194&clcid=0x409), sowie in den folgenden Themen der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library):  
+  
+-   [Mithilfe der Active Directory-Domänendienste](http://go.microsoft.com/fwlink/?LinkID=121195&clcid=0x409)  
+  
+-   [Active Directory-Dienstschnittstellen](http://go.microsoft.com/fwlink/?LinkID=121197&clcid=0x409)  
+  
+-   [Lightweight Directory Access-Protokoll](http://go.microsoft.com/fwlink/?LinkID=121198&clcid=0x409)  
+  
+-   [Active Directory-Dienst implementieren Schnittstellen Anbieter](http://go.microsoft.com/fwlink/?LinkID=121199&clcid=0x409)  
+  
+-   [Binden an ein ADSI-Objekt](http://go.microsoft.com/fwlink/?LinkID=121200&clcid=0x409)  
+  
+-   [IADsOpenDSObject::OpenDSObject](http://go.microsoft.com/fwlink/?LinkID=121201&clcid=0x409)  
+  
+ Active Directory-Domänendienste verwenden eine Baumstruktur. Jeder Knoten in der Struktur enthält einen Satz von Eigenschaften. Verwenden Sie diesen Namespace zu durchsuchen, suchen, und ändern Sie die Struktur und Lese- / an den Eigenschaften eines Knotens an.  
+  
+ Die <xref:System.DirectoryServices.DirectoryEntry>-Klasse kapselt einen Knoten oder ein Objekt in der Active Directory-Domänendienste-Hierarchie. Verwenden Sie diese Klasse für das Binden an Objekte, beim Lesen der Eigenschaften und Attribute aktualisieren. Zusammen mit Hilfsklassen <xref:System.DirectoryServices.DirectoryEntry> bietet Unterstützung für den Lebenszyklus Verwaltung und Navigation Methoden, einschließlich erstellen, löschen, umbenennen, Verschieben von untergeordneten Knoten und untergeordnete Elemente auflisten.  
+  
+ Verwenden der <xref:System.DirectoryServices.DirectorySearcher> Klasse zum Ausführen von Abfragen für die Active Directory-Domänendienste-Hierarchie. LDAP ist der einzige vom System bereitgestellten Active Directory Service Interfaces (ADSI) Anbieter, der Suche unterstützt.  
+  
+ Eine Suche in den Active Directory-Domänendienste-Hierarchie über <xref:System.DirectoryServices.DirectorySearcher> gibt Instanzen von <xref:System.DirectoryServices.SearchResult>, die in einer Instanz von enthalten sind die <xref:System.DirectoryServices.SearchResultCollection> Klasse.  
+  
+ Hinweis: Viele der Klassen, Methoden und Eigenschaften in der <xref:System.DirectoryServices> Namespace verwenden die <xref:System.Security.Permissions.SecurityAction.LinkDemand> Codezugriffssicherheits-Option. Dies bedeutet, dass der Code Access Security Bedarf nur während der Just-in-Time-Kompilierung erfolgt und, dass die Anforderung nur auf der aufrufenden Assembly und nicht auf die gesamte Aufrufliste ausgeführt wird. Aus diesem Grund sollten Aufrufer keine Objekte übergeben, die aus diesem Namespace zur Laufzeit in Code erstellt werden, die nicht vertrauenswürdig ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

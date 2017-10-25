@@ -1,0 +1,168 @@
+<Type Name="ExceptionHandlingClauseOptions" FullName="System.Reflection.ExceptionHandlingClauseOptions">
+  <TypeSignature Language="C#" Value="public enum ExceptionHandlingClauseOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ExceptionHandlingClauseOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ExceptionHandlingClauseOptions" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Arten der Ausnahmebehandlung-Klauseln.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Überprüfen der Ausnahmebehandlung Klauseln in einer Methode Abrufen einer <xref:System.Reflection.MethodInfo> Objekt, und rufen die <xref:System.Reflection.MethodBase.GetMethodBody%2A> Methode, um den Methodentext abzurufen. Verwenden der <xref:System.Reflection.MethodBody.ExceptionHandlingClauses%2A> -Eigenschaft zum Abrufen einer Liste der <xref:System.Reflection.ExceptionHandlingClause> Objekte.  
+  
+> [!NOTE]
+>  Arbeiten mit Ausnahmebehandlungsklauseln erfordert ein gehendes Verständnis von Metadaten und Microsoft intermediate Language (MSIL)-Anweisung formatiert. Informationen finden Sie in der Common Language Infrastructure (CLI)-Dokumentation, insbesondere in "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert eine Testmethode, die mit dem Namen `MethodBodyExample`, ihre lokalen Variableninformationen und Ausnahmebehandlung Klauseln angezeigt. Die <xref:System.Reflection.MethodBase.GetMethodBody%2A?displayProperty=nameWithType> Methode wird zum Abrufen einer <xref:System.Reflection.MethodBody> Objekt für die Testmethode. Die <xref:System.Reflection.MethodBody.ExceptionHandlingClauses%2A> Eigenschaft wird zum Abrufen einer Liste von <xref:System.Reflection.ExceptionHandlingClause> Objekte und ihre Eigenschaften anzuzeigen.  
+  
+> [!NOTE]
+>  Nicht alle Computersprachen können Filterklauseln generieren. Visual Basic-Beispiel zeigt eine Filterklausel mit einem Visual Basic `When` Ausdruck, der in den Beispielen für andere Sprachen ausgelassen wird.  
+  
+ Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Reflection.MethodBody> Klasse.  
+  
+ [!code-cpp[MethodBody#2](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#2)]
+ [!code-csharp[MethodBody#2](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#2)]
+ [!code-vb[MethodBody#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#2)]  
+[!code-cpp[MethodBody#4](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#4)]
+[!code-csharp[MethodBody#4](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#4)]
+[!code-vb[MethodBody#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#4)]  
+[!code-cpp[MethodBody#5](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#5)]
+[!code-csharp[MethodBody#5](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#5)]
+[!code-vb[MethodBody#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#5)]  
+[!code-cpp[MethodBody#7](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#7)]
+[!code-csharp[MethodBody#7](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#7)]
+[!code-vb[MethodBody#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clause">
+      <MemberSignature Language="C#" Value="Clause" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.ExceptionHandlingClauseOptions Clause = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.ExceptionHandlingClauseOptions.Clause" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ExceptionHandlingClauseOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Klausel akzeptiert alle Ausnahmen, die von einem angegebenen Typ abgeleitet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fault">
+      <MemberSignature Language="C#" Value="Fault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.ExceptionHandlingClauseOptions Fault = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.ExceptionHandlingClauseOptions.Fault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ExceptionHandlingClauseOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die-Klausel wird ausgeführt, wenn eine Ausnahme auftritt, jedoch nicht auf Abschluss der normalen ablaufsteuerung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="Filter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.ExceptionHandlingClauseOptions Filter = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.ExceptionHandlingClauseOptions.Filter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ExceptionHandlingClauseOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die-Klausel enthält Benutzer angegebenen Anweisungen, die bestimmen, ob die Ausnahme ignoriert werden soll (d. h., ob die normale Ausführung fortgesetzt werden soll), die vom zugeordneten Handler behandelt werden, oder auf die nächste Klausel übergeben werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Finally">
+      <MemberSignature Language="C#" Value="Finally" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.ExceptionHandlingClauseOptions Finally = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.ExceptionHandlingClauseOptions.Finally" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ExceptionHandlingClauseOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die-Klausel wird ausgeführt, wenn der Try-Block, ob Sie über normale ablaufsteuerung oder aufgrund einer nicht behandelten Ausnahme beendet wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,186 @@
+<Type Name="AsymmetricSecurityKey" FullName="System.IdentityModel.Tokens.AsymmetricSecurityKey">
+  <TypeSignature Language="C#" Value="public abstract class AsymmetricSecurityKey : System.IdentityModel.Tokens.SecurityKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AsymmetricSecurityKey extends System.IdentityModel.Tokens.SecurityKey" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.AsymmetricSecurityKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityKey</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Basisklasse für asymmetrische Schlüssel.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Klasse nicht verwenden, wenn [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] unter partieller Vertrauenswürdigkeit ausgeführt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AsymmetricSecurityKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.AsymmetricSecurityKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.AsymmetricSecurityKey" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsymmetricAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.AsymmetricAlgorithm GetAsymmetricAlgorithm (string algorithm, bool privateKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.AsymmetricAlgorithm GetAsymmetricAlgorithm(string algorithm, bool privateKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="privateKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der zu erstellende asymmetrische Algorithmus.</param>
+        <param name="privateKey">
+          <see langword="true" />, wenn ein privater Schlüssel zum Erstellen des Algorithmus erforderlich ist, andernfalls <see langword="false" />.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse den angegebenen asymmetrischen kryptografischen Algorithmus ab.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" />, der den angegebenen asymmetrischen kryptografischen Algorithmus darstellt.  
+  
+ In der Regel wird <see langword="true" /> in den <paramref name="privateKey" />-Parameter übergeben, da für die Entschlüsselung normalerweise ein privater Schlüssel erforderlich ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die statischen Felder der <xref:System.IdentityModel.Tokens.SecurityAlgorithms>-Klasse, um den Algorithmus anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashAlgorithmForSignature">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.HashAlgorithm GetHashAlgorithmForSignature (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.HashAlgorithm GetHashAlgorithmForSignature(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der Hashalgorithmus.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse einen kryptografischen Algorithmus ab, der einen Hash für eine digitale Signatur generiert.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.HashAlgorithm" />, der Hashs für digitale Signaturen generiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die statischen Felder der <xref:System.IdentityModel.Tokens.SecurityAlgorithms>-Klasse, um den Algorithmus anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignatureDeformatter">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.AsymmetricSignatureDeformatter GetSignatureDeformatter (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.AsymmetricSignatureDeformatter GetSignatureDeformatter(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureDeformatter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricSignatureDeformatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der Deformatierungsalgorithmus für die digitale Signatur.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse den Deformatierungsalgorithmus für die digitale Signatur ab.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.AsymmetricSignatureDeformatter" />, der den Deformatierungsalgorithmus für die digitale Signatur darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Signaturdeformatierungsprogramm wird in der Regel zum Überprüfen einer digitalen Signatur verwendet.  
+  
+ Verwenden Sie die statischen Felder der <xref:System.IdentityModel.Tokens.SecurityAlgorithms>-Klasse, um den Algorithmus anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignatureFormatter">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.AsymmetricSignatureFormatter GetSignatureFormatter (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.AsymmetricSignatureFormatter GetSignatureFormatter(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricSignatureFormatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der Formatierungsalgorithmus für die digitale Signatur.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse den Formatierungsalgorithmus für die digitale Signatur ab.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.AsymmetricSignatureFormatter" />, der den Formatierungsalgorithmus für die digitale Signatur darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird ein Signaturformatierungsprogramm zum Generieren einer digitalen Signatur verwendet.  
+  
+ Verwenden Sie die statischen Felder der <xref:System.IdentityModel.Tokens.SecurityAlgorithms>-Klasse, um den Algorithmus anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPrivateKey">
+      <MemberSignature Language="C#" Value="public abstract bool HasPrivateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasPrivateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.AsymmetricSecurityKey.HasPrivateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben einer abgeleiteten Klasse einen Wert ab, der angibt, ob der private Schlüssel verfügbar ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der private Schlüssel verfügbar ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

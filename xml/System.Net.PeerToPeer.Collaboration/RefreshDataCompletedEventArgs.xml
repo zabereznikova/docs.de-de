@@ -1,0 +1,37 @@
+<Type Name="RefreshDataCompletedEventArgs" FullName="System.Net.PeerToPeer.Collaboration.RefreshDataCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class RefreshDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RefreshDataCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.RefreshDataCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die qualifizierenden Informationen zu den <see cref="M:System.Net.PeerToPeer.Collaboration.PeerNearMe.OnRefreshDataCompleted(System.Net.PeerToPeer.Collaboration.RefreshDataCompletedEventArgs)" /> Methode beim <see cref="E:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshDataCompleted" /> Ereignisse auftreten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PeerEndPoint">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerEndPoint PeerEndPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerEndPoint PeerEndPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.RefreshDataCompletedEventArgs.PeerEndPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerEndPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den aktualisierten <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.</summary>
+        <value>Die aktualisierte <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> Objekt, das die Endpunktdaten eines Peers enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

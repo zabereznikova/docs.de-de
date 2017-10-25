@@ -1,0 +1,171 @@
+<Type Name="ToolboxItemFilterType" FullName="System.ComponentModel.ToolboxItemFilterType">
+  <TypeSignature Language="C#" Value="public enum ToolboxItemFilterType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolboxItemFilterType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ToolboxItemFilterType" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Bezeichner verwendet, um den Typ des Filters anzugeben, eine <see cref="T:System.ComponentModel.ToolboxItemFilterAttribute" /> verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden der <xref:System.ComponentModel.ToolboxItemFilterAttribute>.  
+  
+ [!code-cpp[IToolboxUserExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IToolboxUserExample/CPP/samplecontrol.cpp#1)]
+ [!code-csharp[IToolboxUserExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IToolboxUserExample/CS/samplecontrol.cs#1)]
+ [!code-vb[IToolboxUserExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IToolboxUserExample/VB/samplecontrol.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Allow">
+      <MemberSignature Language="C#" Value="Allow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ToolboxItemFilterType Allow = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ToolboxItemFilterType.Allow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ToolboxItemFilterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Filterzeichenfolge ein Toolboxelement zulässig, jedoch nicht erforderlich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ToolboxItemFilterType Custom = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ToolboxItemFilterType.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ToolboxItemFilterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die benutzerdefinierte Verarbeitung erforderlich, um festzustellen, ob eine Filterzeichenfolge ein Toolboxelement verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Art von <xref:System.ComponentModel.ToolboxItemFilterType> in der Regel für ein Stamm-Designer-Klasse, um anzugeben, dass der Designer zum Akzeptieren oder Ablehnen eines Toolboxelements über Code möchte angegeben wird. Der Designer muss implementieren die <xref:System.Drawing.Design.IToolboxUser.GetToolSupported%2A> Methode der <xref:System.Drawing.Design.IToolboxUser> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden der <xref:System.ComponentModel.ToolboxItemFilterAttribute>.  
+  
+ [!code-cpp[IToolboxUserExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IToolboxUserExample/CPP/samplecontrol.cpp#1)]
+ [!code-csharp[IToolboxUserExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IToolboxUserExample/CS/samplecontrol.cs#1)]
+ [!code-vb[IToolboxUserExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IToolboxUserExample/VB/samplecontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prevent">
+      <MemberSignature Language="C#" Value="Prevent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ToolboxItemFilterType Prevent = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ToolboxItemFilterType.Prevent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ToolboxItemFilterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Filterzeichenfolge ein Toolboxelement nicht zulässig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Designer und eine Komponentenklasse haben eine Filterzeichenfolge verfügt und einen <xref:System.ComponentModel.ToolboxItemFilterType> Prevent, das Toolboxelement ist nicht verfügbar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Require">
+      <MemberSignature Language="C#" Value="Require" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ToolboxItemFilterType Require = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ToolboxItemFilterType.Require" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ToolboxItemFilterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Filterzeichenfolge für ein Toolboxelement zu aktivierenden vorhanden sein muss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für ein Toolboxelement mit dem Filtertyp benötigen aktiviert werden soll, müssen der Designer und der Komponentenklasse des haben einen übereinstimmenden Zeichenfolge zu filtern. Darüber hinaus kann weder die Komponentenklasse der Designer haben eine <xref:System.ComponentModel.ToolboxItemFilterType.Require> von verhindern, dass für das Toolboxelement aktiviert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

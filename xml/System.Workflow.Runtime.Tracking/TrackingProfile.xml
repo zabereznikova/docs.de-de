@@ -1,0 +1,219 @@
+<Type Name="TrackingProfile" FullName="System.Workflow.Runtime.Tracking.TrackingProfile">
+  <TypeSignature Language="C#" Value="public class TrackingProfile" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TrackingProfile extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingProfile" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert relevante Punkte im möglichen Ausführungspfad einer Stammworkflowinstanz, zu denen ein Überwachungsdienst benachrichtigt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Während eine Workflowinstanz ausgeführt wird, gibt sie Verfolgungsereignisse an die Laufzeitverfolgungsinfrastruktur aus. Die Laufzeitverfolgungsinfrastruktur verwendet ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile>, um diese Verfolgungsereignisse zu filtern, und gibt Verfolungsdaten basierend auf diesem Filter an einen Überwachungsdienst zurück. Es gibt drei Arten von Verfolgungsereignissen, die gefiltert werden können: Aktivitätsstatusereignisse, Workflowstatusereignisse und Benutzerereignisse. Sie können der <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint>-Eigenschaft <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>-Objekte hinzufügen, um bestimmte Aktivitätsstatusereignisse abzugleichen; der <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint>-Eigenschaft <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A>-Objekte, um bestimmte Workflowstatusereignisse abzugleichen; und der <xref:System.Workflow.Runtime.Tracking.UserTrackPoint>-Eigenschaft <xref:System.Workflow.Runtime.Tracking.TrackingProfile.UserTrackPoints%2A>-Objekte, um bestimmte Benutzerereignisse abzugleichen. Beim Abgleich eines Verfolgungspunkts gibt die Laufzeitverfolgungsinfrastruktur die Daten, die dem Verfolgungsereignis zugeordnet sind, an den Überwachungsdienst zurück. Dazu wird der <xref:System.Workflow.Runtime.Tracking.TrackingChannel> verwendet, der dem Überwachungsdienst zugeordnet ist. Die Daten werden je nach dem Typ des abgeglichenen Verfolgungspunkt entweder in <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord>, <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> oder <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> zurückgegeben.  
+  
+ Ein Überwachungsdienst implementiert die Methoden in der abstrakten <xref:System.Workflow.Runtime.Tracking.TrackingService>-Klasse. Damit wird für die Laufzeitverfolgungsinfrastruktur die Funktionalität zum Anfordern eines dem Dienst zugeordneten <xref:System.Workflow.Runtime.Tracking.TrackingChannel> und ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile> bereitgestellt, das einer bestimmten Workflowinstanz oder einem bestimmten Workflowtyp zugeordnet ist. Ein Überwachungsdienst muss auch die abstrakte <xref:System.Workflow.Runtime.Tracking.TrackingChannel>-Klasse implementieren, um den Kanal bereitzustellen, über den die Laufzeitverfolgungsinfrastruktur Verfolgungsdatensätze sendet.  
+  
+ Wenn der Überwachungsdienst ein Verfolgungsprofilobjekt an das Laufzeitmodul zurückgibt, beginnt die Ausführung des Workflows und das Verfolgungsprofil wird serialisiert. Schlägt die Serialisierung des Verfolgungsprofils fehl, wird eine Ausnahme für die Workflowinstanz ausgelöst. Wenn die Ausnahme nicht behandelt wird, wird die Workflowinstanz beendet. Das Verfolgungsprofil kann vor der Übergabe an das Laufzeitmodul mit der <xref:System.Workflow.Runtime.Tracking.TrackingProfileSerializer.Schema%2A>-Eigenschaft überprüft werden.  
+  
+ <xref:System.Workflow.Runtime.Tracking.TrackingProfile> kann mit <xref:System.Workflow.Runtime.Tracking.TrackingProfileSerializer> serialisiert werden. Dabei wird XML nach dem <xref:System.Workflow.Runtime.Tracking.TrackingProfileSerializer.Schema%2A> formatiert. Dieses Format eignet sich besonders zum Speichern von Profilen und zum nicht programmgesteuerten Erstellen von Profilen. Der SQL-Überwachungsdienst beispielsweise speichert serialisierte Versionen seiner Verfolgungsprofile. Auch Überwachungsdienste, die Sie basierend auf der <xref:System.Workflow.Runtime.Tracking.SqlTrackingService>-Klasse erstellen, speichern serialisierte Profile.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.Workflow.Runtime.Tracking.TrackingProfile> ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile.%23ctor%2A> erstellt wird. Dieses Codebeispiel verwendet die Eigenschaften <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A> und <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A>.  
+  
+ Dieses Codebeispiel stammt aus dem Query using SQLTrackingService SDK-Beispiel in der Datei Program.cs. Weitere Informationen finden Sie unter [Abfrage mithilfe von SQLTrackingService](http://msdn.microsoft.com/en-us/a81e48bb-12f4-4e2b-9176-ea4e6b6e3d21).  
+  
+ [!code-csharp[WF_Samples#291](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#291)]
+ [!code-vb[WF_Samples#291](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#291)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrackingProfile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingProfile.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konstruktor initialisiert ein leeres <xref:System.Workflow.Runtime.Tracking.TrackingProfile>. Sie können <xref:System.Workflow.Runtime.Tracking.TrackingProfile.UserTrackPoints%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A> und <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A> Verfolgungspunkte hinzufügen, um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> zu konfigurieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.Workflow.Runtime.Tracking.TrackingProfile> ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile.%23ctor%2A> erstellt wird. Dieses Codebeispiel verwendet die Eigenschaften <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A> und <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A>.  
+  
+ Dieses Codebeispiel stammt aus dem Query using SQLTrackingService SDK-Beispiel in der Datei Program.cs. Weitere Informationen finden Sie unter [Abfrage mithilfe von SQLTrackingService](http://msdn.microsoft.com/en-us/a81e48bb-12f4-4e2b-9176-ea4e6b6e3d21).  
+  
+ [!code-csharp[WF_Samples#291](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#291)]
+ [!code-vb[WF_Samples#291](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#291)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityTrackPoints">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.ActivityTrackPointCollection ActivityTrackPoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.ActivityTrackPointCollection ActivityTrackPoints" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.ActivityTrackPointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Aktivitätsverfolgungspunkte ab, die von der Laufzeitverfolgungsinfrastruktur zum Filtern von Aktivitätsstatusereignissen verwendet werden.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackPointCollection" /> mit den Punkten in einer Workflowinstanz, für die die Laufzeitverfolgungsinfrastruktur einen <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" /> an den Überwachungsdienst senden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Workflowinstanz gibt bei jeder Änderung des <xref:System.Workflow.ComponentModel.ActivityExecutionStatus> einer Aktivitätsinstanz Aktivitätsstatusereignisse an die Laufzeitverfolgungsinfrastruktur aus. Die Laufzeitverfolgungsinfrastruktur filtert diese Aktivitätsstatusereignisse mit der <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>-Eigenschaft, um zu bestimmen, wann ein <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> an den Überwachungsdienst gesendet werden muss. Sie können der <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint>-Eigenschaft einen <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A> hinzufügen. Damit können Sie relevante Punkte im möglichen Ausführungspfad für die Workflowinstanz angeben, für die die Laufzeitverfolgungsinfrastruktur einen <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> senden soll.  
+  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> definiert keinen physischen Punkt in einer Workflowinstanz, sondern eine Reihe von Übereinstimmungsparametern, mit denen die Laufzeitverfolgungsinfrastruktur ein Aktivitätsstatusereignis, für das ein <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> gesendet werden soll, abgleichen kann. Deshalb kann derselbe <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> während der Ausführung einer Workflowinstanz mehrmals abgeglichen werden. <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> kann auch Daten angeben, die aus der Workflowinstanz extrahiert und im <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> zurückgegeben werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.Workflow.Runtime.Tracking.TrackingProfile> ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile.%23ctor%2A> erstellt wird. Dieses Codebeispiel verwendet die Eigenschaften <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A> und <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A>.  
+  
+ Dieses Codebeispiel stammt aus dem Query using SQLTrackingService SDK-Beispiel in der Datei Program.cs. Weitere Informationen finden Sie unter [Abfrage mithilfe von SQLTrackingService](http://msdn.microsoft.com/en-us/a81e48bb-12f4-4e2b-9176-ea4e6b6e3d21).  
+  
+ [!code-csharp[WF_Samples#291](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#291)]
+ [!code-vb[WF_Samples#291](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#291)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserTrackPoints">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.UserTrackPointCollection UserTrackPoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.UserTrackPointCollection UserTrackPoints" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingProfile.UserTrackPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.UserTrackPointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Benutzerverfolgungspunkte ab, die von der Laufzeitverfolgungsinfrastruktur zum Filtern von Benutzerereignissen verwendet werden.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.UserTrackPointCollection" /> mit den Punkten in einer Workflowinstanz, für die die Laufzeitverfolgungsinfrastruktur einen <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingRecord" /> an den Überwachungsdienst senden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Workflow-Designer oder Aktivitätsdesigner kann mit <xref:System.Workflow.ComponentModel.Activity.TrackData%2A?displayProperty=nameWithType>, <xref:System.Workflow.ComponentModel.Activity.TrackData%2A?displayProperty=nameWithType>, <xref:System.Workflow.ComponentModel.ActivityExecutionContext.TrackData%2A?displayProperty=nameWithType> oder <xref:System.Workflow.ComponentModel.Activity.TrackData%2A?displayProperty=nameWithType> einen Workflow oder eine Aktivität so einrichten, dass Daten an bestimmten Punkten während der Ausführung eines Workflows an die Laufzeitverfolgungsinfrastruktur ausgegeben werden. Dabei handelt es sich um ein Benutzereignis, und die ausgegebenen Daten sind Benutzerdaten. Die Laufzeitverfolgungsinfrastruktur filtert diese Benutzerereignisse mit der <xref:System.Workflow.Runtime.Tracking.TrackingProfile.UserTrackPoints%2A>-Eigenschaft, um zu bestimmen, wann ein <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> an den Überwachungsdienst gesendet werden muss. Sie können der <xref:System.Workflow.Runtime.Tracking.UserTrackPoint>-Eigenschaft einen <xref:System.Workflow.Runtime.Tracking.TrackingProfile.UserTrackPoints%2A> hinzufügen. Damit können Sie relevante Punkte im möglichen Ausführungspfad für die Workflowinstanz angeben, für die ein <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> gesendet werden soll.  
+  
+ <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> definiert keinen physischen Punkt in einer Workflowinstanz, sondern eine Reihe von Übereinstimmungsparametern, mit denen die Laufzeitverfolgungsinfrastruktur Benutzerereignisse abgleichen kann. Deshalb kann derselbe <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> während der Ausführung einer Workflowinstanz mehrmals abgeglichen werden. Die Laufzeitverfolgungsinfrastruktur gibt stetes die Benutzerdaten zurück, die einem abgeglichenen <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> in <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> zugeordnet sind. Ein <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> kann jedoch auch Daten angeben, die aus der Workflowinstanz extrahiert und in einem Verfolgungsdatensatz zurückgegeben werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingProfile.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionsnummer des Verfolgungsprofils ab oder legt die Nummer fest.</summary>
+        <value>Der <see cref="T:System.Version" /> des <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Semantik der Profilzwischenspeicherung im Workflowlaufzeitmodul verlangt, dass Sie <xref:System.Workflow.Runtime.Tracking.TrackingProfile> aktualisieren, wenn Sie den Inhalt von <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A> ändern. Andernfalls wird das aktualisierte <xref:System.Workflow.Runtime.Tracking.TrackingProfile> möglicherweise nicht vom Workflowlaufzeitmodul geladen. Es wird selbst dann nicht geladen, wenn es in einem Aufruf von <xref:System.Workflow.Runtime.Tracking.TrackingService.TryReloadProfile%2A?displayProperty=nameWithType> zurückgegeben oder in <xref:System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs> gesendet wird, die einem <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileUpdated>-Ereignis zugeordnet ist. Ändern Sie deshalb das <xref:System.Workflow.Runtime.Tracking.TrackingProfile> für <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A>, um sicherzustellen, dass das aktualisierte <xref:System.Workflow.Runtime.Tracking.TrackingProfile> vom Workflowlaufzeitmodul geladen wird. Sie können <xref:System.Workflow.Runtime.WorkflowInstance.ReloadTrackingProfiles%2A?displayProperty=nameWithType> dann ausdrücklich für alle geeigneten Workflowinstanzen aufrufen oder, je nach Implementierung, es dem Überwachungsdienst überlassen, das Workflowlaufzeitmodul über die Änderung zu benachrichtigen. Weitere Informationen finden Sie unter <xref:System.Workflow.Runtime.Tracking.TrackingService>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.Workflow.Runtime.Tracking.TrackingProfile> ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile.%23ctor%2A> erstellt wird. Dieses Codebeispiel verwendet die Eigenschaften <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A> und <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A>.  
+  
+ Dieses Codebeispiel stammt aus dem Query using SQLTrackingService SDK-Beispiel in der Datei Program.cs. Weitere Informationen finden Sie unter [Abfrage mithilfe von SQLTrackingService](http://msdn.microsoft.com/en-us/a81e48bb-12f4-4e2b-9176-ea4e6b6e3d21).  
+  
+ [!code-csharp[WF_Samples#291](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#291)]
+ [!code-vb[WF_Samples#291](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#291)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowTrackPoints">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.WorkflowTrackPointCollection WorkflowTrackPoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.WorkflowTrackPointCollection WorkflowTrackPoints" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.WorkflowTrackPointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Workflowverfolgungspunkte ab, die von der Laufzeitverfolgungsinfrastruktur zum Filtern von Workflowstatusereignissen verwendet werden.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackPointCollection" /> mit den Punkten in einer Workflowinstanz, für die die Laufzeitverfolgungsinfrastruktur einen <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord" /> an den Überwachungsdienst senden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Workflowinstanz gibt bei jedem <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent>, das eine Statusänderung einer Workflowinstanz angibt, ein Workflowstatusereignis an die Laufzeitverfolgungsinfrastruktur aus. Die Laufzeitverfolgungsinfrastruktur filtert diese Workflowstatusereignisse mit der <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A>-Eigenschaft, um zu bestimmen, wann ein <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> an den Überwachungsdienst gesendet werden muss. Sie können der <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint>-Eigenschaft einen <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A> hinzufügen. Damit können Sie relevante Punkte im möglichen Ausführungspfad für die Workflowinstanz angeben, für die ein <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> gesendet werden soll.  
+  
+ <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> definiert keinen physischen Punkt in einer Workflowinstanz, sondern eine einen oder mehrere <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent>-Werte, mit denen die Laufzeitverfolgungsinfrastruktur Workflowstatusereignisse abgleichen kann. Deshalb kann derselbe <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> während der Ausführung einer Workflowinstanz mehrmals abgeglichen werden. <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> kann auch Anmerkungen angeben, die im <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> zurückgegeben werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.Workflow.Runtime.Tracking.TrackingProfile> ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile.%23ctor%2A> erstellt wird. Dieses Codebeispiel verwendet die Eigenschaften <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A> und <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A>.  
+  
+ Dieses Codebeispiel stammt aus dem Query using SQLTrackingService SDK-Beispiel in der Datei Program.cs. Weitere Informationen finden Sie unter [Abfrage mithilfe von SQLTrackingService](http://msdn.microsoft.com/en-us/a81e48bb-12f4-4e2b-9176-ea4e6b6e3d21).  
+  
+ [!code-csharp[WF_Samples#291](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#291)]
+ [!code-vb[WF_Samples#291](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#291)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

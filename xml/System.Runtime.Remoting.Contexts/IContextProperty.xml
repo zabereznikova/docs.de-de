@@ -1,0 +1,112 @@
+<Type Name="IContextProperty" FullName="System.Runtime.Remoting.Contexts.IContextProperty">
+  <TypeSignature Language="C#" Value="public interface IContextProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContextProperty" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.IContextProperty" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Sammelt Namensinformationen aus der Kontexteigenschaft und bestimmt, ob die neue Kontext für die Kontexteigenschaft Ordnung ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Contexts.IContextProperty> -Schnittstelle wird von der Eigenschaft auf einen Kontext durch ein Attribut verfügbar gemacht. Standardmäßig wird es auch von implementiert die <xref:System.Runtime.Remoting.Contexts.ContextAttribute> Basisklasse, von dem <xref:System.Runtime.Remoting.Contexts.Context> Attributklassen erweitern können.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Freeze">
+      <MemberSignature Language="C#" Value="public void Freeze (System.Runtime.Remoting.Contexts.Context newContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Freeze(class System.Runtime.Remoting.Contexts.Context newContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContextProperty.Freeze(System.Runtime.Remoting.Contexts.Context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newContext" Type="System.Runtime.Remoting.Contexts.Context" />
+      </Parameters>
+      <Docs>
+        <param name="newContext">Der Kontext, fixiert werden soll.</param>
+        <summary>Wird aufgerufen, wenn der Kontext eingefroren ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kontexteigenschaften können nicht hinzugefügt werden, nachdem der Kontext eingefroren wurde.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsNewContextOK">
+      <MemberSignature Language="C#" Value="public bool IsNewContextOK (System.Runtime.Remoting.Contexts.Context newCtx);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsNewContextOK(class System.Runtime.Remoting.Contexts.Context newCtx) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContextProperty.IsNewContextOK(System.Runtime.Remoting.Contexts.Context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newCtx" Type="System.Runtime.Remoting.Contexts.Context" />
+      </Parameters>
+      <Docs>
+        <param name="newCtx">Neuen Kontext aus, in dem die <see cref="T:System.Runtime.Remoting.Contexts.ContextProperty" /> erstellt wurde.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob die Kontexteigenschaft mit dem neuen Kontext kompatibel ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Kontexteigenschaft mit den anderen Kontexteigenschaften im angegebenen Kontext gleichzeitig ausgeführt werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachdem alle Kontexteigenschaften an den neuen Kontext hinzugefügt wurden, werden sie abgefragt, um gibt an, ob sie im neuen Kontext zulässig sind. Die Kontexteigenschaft konnte der anderen Kontexteigenschaften aus `newCtx` und bestimmen, ob sie mit diesen anderen Kontexteigenschaften kompatibel ist.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Contexts.IContextProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Eigenschaft, die unter der er zum Kontext hinzugefügt werden.</summary>
+        <value>Der Name der Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Diagnostics">
+  <Docs>
+    <summary>Die <see cref="N:System.ServiceModel.Diagnostics" /> -Namespace enthält eine Enumeration, die zum Konfigurieren von Leistungsindikatoren für Diagnosezwecke verwendet wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

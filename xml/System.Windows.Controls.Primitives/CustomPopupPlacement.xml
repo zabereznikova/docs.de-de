@@ -1,0 +1,183 @@
+<Type Name="CustomPopupPlacement" FullName="System.Windows.Controls.Primitives.CustomPopupPlacement">
+  <TypeSignature Language="C#" Value="public struct CustomPopupPlacement" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit CustomPopupPlacement extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.CustomPopupPlacement" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert benutzerdefinierte Platzierungsparameter für ein <see cref="T:System.Windows.Controls.Primitives.Popup" />-Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Primitives.CustomPopupPlacement> Struktur definiert einen Speicherort für eine <xref:System.Windows.Controls.Primitives.Popup> in Bezug auf das übergeordnete Steuerelement, und definiert wie die <xref:System.Windows.Controls.Primitives.Popup> verschiebt mehr sichtbar werden, wenn es von einer Grenze Bildschirm verdeckt wird.  
+  
+ Ein <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback?displayProperty=nameWithType> Delegat gibt ein Array dieser Strukturen als benutzerdefinierte Platzierungsoptionen für einen <xref:System.Windows.Controls.Primitives.Popup> bei der <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomPopupPlacement (System.Windows.Point point, System.Windows.Controls.Primitives.PopupPrimaryAxis primaryAxis);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point point, valuetype System.Windows.Controls.Primitives.PopupPrimaryAxis primaryAxis) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.CustomPopupPlacement.#ctor(System.Windows.Point,System.Windows.Controls.Primitives.PopupPrimaryAxis)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="primaryAxis" Type="System.Windows.Controls.Primitives.PopupPrimaryAxis" />
+      </Parameters>
+      <Docs>
+        <param name="point">Die <see cref="T:System.Windows.Point" /> relativ zum der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> , in der oberen linken Ecke des der <see cref="T:System.Windows.Controls.Primitives.Popup" /> platziert wird.</param>
+        <param name="primaryAxis">Die <see cref="T:System.Windows.Controls.Primitives.PopupPrimaryAxis" /> an dem ein <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelement verschoben wird, wenn es von einem Bildschirmrand verdeckt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacement" />-Struktur.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.CustomPopupPlacement.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Die <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacement" /> Struktur zu vergleichen.</param>
+        <summary>Vergleicht diese Struktur mit einem anderen <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacement" /> Struktur, um zu bestimmen, ob sie gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die Strukturen dieselben Werte aufweisen; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.CustomPopupPlacement.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für diese Struktur ab.</summary>
+        <returns>Der Hashcode für diese Struktur.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Controls.Primitives.CustomPopupPlacement placement1, System.Windows.Controls.Primitives.CustomPopupPlacement placement2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Controls.Primitives.CustomPopupPlacement placement1, valuetype System.Windows.Controls.Primitives.CustomPopupPlacement placement2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.CustomPopupPlacement.op_Equality(System.Windows.Controls.Primitives.CustomPopupPlacement,System.Windows.Controls.Primitives.CustomPopupPlacement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="placement1" Type="System.Windows.Controls.Primitives.CustomPopupPlacement" />
+        <Parameter Name="placement2" Type="System.Windows.Controls.Primitives.CustomPopupPlacement" />
+      </Parameters>
+      <Docs>
+        <param name="placement1">Die erste zu vergleichende <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacement" />-Struktur.</param>
+        <param name="placement2">Die zweite zu vergleichende <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacement" />-Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacement" /> auszugeben, um zu bestimmen, ob sie gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die Strukturen dieselben Werte aufweisen; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Controls.Primitives.CustomPopupPlacement placement1, System.Windows.Controls.Primitives.CustomPopupPlacement placement2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Controls.Primitives.CustomPopupPlacement placement1, valuetype System.Windows.Controls.Primitives.CustomPopupPlacement placement2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.CustomPopupPlacement.op_Inequality(System.Windows.Controls.Primitives.CustomPopupPlacement,System.Windows.Controls.Primitives.CustomPopupPlacement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="placement1" Type="System.Windows.Controls.Primitives.CustomPopupPlacement" />
+        <Parameter Name="placement2" Type="System.Windows.Controls.Primitives.CustomPopupPlacement" />
+      </Parameters>
+      <Docs>
+        <param name="placement1">Die erste zu vergleichende <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacement" />-Struktur.</param>
+        <param name="placement2">Die zweite zu vergleichende <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacement" />-Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacement" /> auszugeben, um zu bestimmen, ob diese ungleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die Strukturen nicht über die gleichen Werte verfügen; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Point { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Point" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.CustomPopupPlacement.Point" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Punkt, der relativ zum Zielobjekt, in der oberen linken Ecke des der <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelement ist platziert.</summary>
+        <value>Ein <see cref="T:System.Windows.Point" /> wird, positionieren Sie ein <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelement. Der Standardwert ist (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Zielobjekt ist das Element, das die <xref:System.Windows.Controls.Primitives.Popup> relativ ist. Weitere Informationen finden Sie unter [Verhalten beim Platzieren von Popups](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimaryAxis">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.PopupPrimaryAxis PrimaryAxis { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Primitives.PopupPrimaryAxis PrimaryAxis" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.CustomPopupPlacement.PrimaryAxis" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PopupPrimaryAxis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Richtung, in dem Verschieben einer <see cref="T:System.Windows.Controls.Primitives.Popup" /> steuern, wann die <see cref="T:System.Windows.Controls.Primitives.Popup" /> von bildschirmbegrenzungen verdeckt wird.</summary>
+        <value>Die Richtung, in dem Verschieben einer <see cref="T:System.Windows.Controls.Primitives.Popup" /> steuern, wann die <see cref="T:System.Windows.Controls.Primitives.Popup" /> von bildschirmbegrenzungen verdeckt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

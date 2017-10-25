@@ -1,0 +1,6 @@
+<Namespace Name="System.Xaml.Schema">
+  <Docs>
+    <summary>Enthält Typen, die Erweiterbarkeit des XAML-Typsystem zu unterstützen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

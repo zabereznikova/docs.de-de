@@ -1,0 +1,6 @@
+<Namespace Name="System.CodeDom.Compiler">
+  <Docs>
+    <summary>Der <see cref="N:System.CodeDom.Compiler" />-Namespace enthält Typen zum Verwalten der Generierung und Kompilierung von in unterstützten Programmiersprachen geschriebenem Quellcode. Code-Generatoren können jede erzeugen Quellcode in einer bestimmten Programmiersprache, die basierend auf der Struktur der Code Document Object Model (CodeDOM) quellcodemodelle von bereitgestellten Elementen besteht die <see cref="N:System.CodeDom" /> Namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,174 @@
+<Type Name="XPathMessageQueryCollection" FullName="System.ServiceModel.Dispatcher.XPathMessageQueryCollection">
+  <TypeSignature Language="C#" Value="public class XPathMessageQueryCollection : System.ServiceModel.Dispatcher.MessageQueryCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XPathMessageQueryCollection extends System.ServiceModel.Dispatcher.MessageQueryCollection" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.XPathMessageQueryCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Dispatcher.MessageQueryCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine Auflistung von <see cref="T:System.ServiceModel.XPathMessageQuery" />-Objekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu Meldungsabfragen finden Sie unter den Klassen <xref:System.ServiceModel.Dispatcher.MessageQuery> und <xref:System.ServiceModel.Dispatcher.MessageQueryCollection>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden eine neue Meldung und XPath-Meldungsabfragen erstellt. Die Abfragen werden von den <xref:System.ServiceModel.XPathMessageQuery>-Objekten ausgewertet, die in einem <xref:System.ServiceModel.Dispatcher.XPathMessageQueryCollection>-Objekt enthalten sind. Die Ergebnisse einer jeden Abfrage werden mit der <xref:System.ServiceModel.Dispatcher.XPathResult.ResultType%2A>-Eigenschaft der <xref:System.ServiceModel.Dispatcher.XPathResult>-Klasse getestet.  
+  
+ [!code-csharp[XPathMessageQuery#0](~/samples/snippets/csharp/VS_Snippets_CFX/xpathmessagequery/cs/source.cs#0)]
+ [!code-vb[XPathMessageQuery#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/xpathmessagequery/vb/source.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XPathMessageQueryCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageQueryCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.XPathMessageQueryCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TResult&gt;&gt; Evaluate&lt;TResult&gt; (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageQuery, !!TResult&gt;&gt; Evaluate&lt;TResult&gt;(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageQueryCollection.Evaluate``1(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TResult&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ des zurückzugebenden Objekts.</typeparam>
+        <param name="message">Die abzufragende Nachricht.</param>
+        <summary>Führt eine Abfrage für die Meldung aus. Der Text kann nicht abgefragt werden.</summary>
+        <returns>
+          <see cref="T:System.Collections.Generic.IEnumerable`1" />  
+  
+ Eine aufzählbare Auflistung von Ergebnissen, die die Abfrage erfüllen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TResult&gt;&gt; Evaluate&lt;TResult&gt; (System.ServiceModel.Channels.MessageBuffer buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageQuery, !!TResult&gt;&gt; Evaluate&lt;TResult&gt;(class System.ServiceModel.Channels.MessageBuffer buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageQueryCollection.Evaluate``1(System.ServiceModel.Channels.MessageBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TResult&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ des zurückzugebenden Ergebnisses.</typeparam>
+        <param name="buffer">Die abzufragende Nachricht.</param>
+        <summary>Führt eine XPath-Abfrage für die Meldung aus.</summary>
+        <returns>
+          <see cref="T:System.Collections.Generic.IEnumerable`1" />  
+  
+ Eine aufzählbare Auflistung von Ergebnissen, die die Abfrage erfüllen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.ServiceModel.Dispatcher.MessageQuery item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.ServiceModel.Dispatcher.MessageQuery item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageQueryCollection.InsertItem(System.Int32,System.ServiceModel.Dispatcher.MessageQuery)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.ServiceModel.Dispatcher.MessageQuery" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position in der Auflistung, an der das Element eingefügt werden soll.</param>
+        <param name="item">Das einzufügende XPath-Abfrageobjekt.</param>
+        <summary>Fügt das XPath-Abfrageobjekt am angegebenen Index in die Auflistung ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageQueryCollection.RemoveItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position, an der das Element entfernt werden soll.</param>
+        <summary>Entfernt das Element am angegebenen Index aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.ServiceModel.Dispatcher.MessageQuery item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.ServiceModel.Dispatcher.MessageQuery item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageQueryCollection.SetItem(System.Int32,System.ServiceModel.Dispatcher.MessageQuery)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.ServiceModel.Dispatcher.MessageQuery" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu ersetzenden Elements.</param>
+        <param name="item">Der neue Wert für das Element am angegebenen Index.</param>
+        <summary>Ersetzt das Element am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,93 @@
+<Type Name="CatalogLocation" FullName="System.Data.Common.CatalogLocation">
+  <TypeSignature Language="C#" Value="public enum CatalogLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CatalogLocation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.CatalogLocation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Position von der Name des Katalogs in einem qualifizierten Tabellennamen in einem Textbefehl.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="End" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Common.CatalogLocation End = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Common.CatalogLocation.End" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CatalogLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Position der Katalogname nach den Schemateil einen vollqualifizierten Tabellennamen in einem Textbefehl auftritt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieses Felds und den Wert des Felds Start schließen sich gegenseitig aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="Start" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Common.CatalogLocation Start = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Common.CatalogLocation.Start" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CatalogLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Position der Katalogname vor den Schemateil einen vollqualifizierten Tabellennamen in einem Textbefehl auftritt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieses Felds und den Wert des Felds End schließen sich gegenseitig aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

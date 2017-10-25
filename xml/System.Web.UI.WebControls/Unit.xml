@@ -1,0 +1,763 @@
+<Type Name="Unit" FullName="System.Web.UI.WebControls.Unit">
+  <TypeSignature Language="C#" Value="public struct Unit" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Unit extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Unit" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.UnitConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Längenmaß dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Unit> Struktur darstellt, der eine Länge Maßeinheit, die in jeder HTML-kompatiblen Größeneinheit ausgedrückt werden können. Die <xref:System.Web.UI.WebControls.UnitType>-Enumeration listet die darstellbaren Maßeinheiten auf. Die <xref:System.Web.UI.WebControls.Unit> wird verwendet, durch die Eigenschaften wie z. B. `BorderWidth` und `Height` zum Darstellen der Länge oder Breite der Eigenschaft. Sie können z. B. Festlegen der <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A> Eigenschaft eines Webserver-Steuerelements an einen <xref:System.Web.UI.WebControls.Unit> , die fünf Pixel darstellt.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.Unit> -Klasse kann nur Werte zwischen-32768 und 32767 darstellen.  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.Unit.Value%2A> Eigenschaft, um die Länge der Messung zu bestimmen. Die Maßeinheit wird anhand der <xref:System.Web.UI.WebControls.Unit.Type%2A> Eigenschaft. Sie können andere Datentypen konvertieren einer <xref:System.Web.UI.WebControls.Unit> mithilfe der <xref:System.Web.UI.WebControls.Unit.Parse%2A>, <xref:System.Web.UI.WebControls.Unit.Percentage%2A>, <xref:System.Web.UI.WebControls.Unit.Pixel%2A>, und <xref:System.Web.UI.WebControls.Unit.Point%2A> Methoden.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.Unit>, finden Sie unter der <xref:System.Web.UI.WebControls.Unit> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.Style> Objekt, das die Stileigenschaften mehrerer Steuerelemente gleichzeitig zu ändern. Jedes Mal, wenn eine der der <xref:System.Web.UI.WebControls.Style> -Eigenschaftswerte ändert, muss jedes Steuerelement Aufrufen seiner <xref:System.Web.UI.WebControls.WebControl.ApplyStyle%2A> Methode. Beachten Sie, dass nicht alle Steuerelemente alle veranschaulichten Eigenschaften unterstützen. Wenn ein Steuerelement eine bestimmte Eigenschaft nicht unterstützt, wird die Darstellung des Steuerelements nicht ändern, wenn der Eigenschaftswert geändert wird.  
+  
+ [!code-aspx-csharp[StyleClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/StyleClass/CS/styleclasscs.aspx#1)]
+ [!code-aspx-vb[StyleClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StyleClass/VB/styleclassvb.aspx#1)]  
+[!code-aspx-csharp[StyleClass#3](~/samples/snippets/csharp/VS_Snippets_WebNet/StyleClass/CS/styleclasscs.aspx#3)]
+[!code-aspx-vb[StyleClass#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StyleClass/VB/styleclassvb.aspx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Unit (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.#ctor(System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine Gleitkommazahl, die die Länge des mit doppelter Genauigkeit der <see cref="T:System.Web.UI.WebControls.Unit" /> in Pixel.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.Unit" /> Struktur mit der angegebenen Gleitkommazahl mit doppelter Genauigkeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.Unit> -Struktur unter Verwendung der angegebenen Gleitkommazahl mit doppelter Genauigkeit.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.Unit>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.Unit.Type%2A>|<xref:System.Web.UI.WebControls.UnitType.Pixel>|  
+|<xref:System.Web.UI.WebControls.Unit.Value%2A>|Der von `value` angegebene Wert.|  
+  
+> [!CAUTION]
+>  Wenn `value` wird nicht zwischen-32768 und 32767 liegen, wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" />liegt nicht zwischen-32768 und 32767 liegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Unit (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine 32-Bit-Ganzzahl mit Vorzeichen, die die Länge des der <see cref="T:System.Web.UI.WebControls.Unit" /> in Pixel.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.Unit" /> Struktur mit der angegebenen 32-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.Unit> -Struktur unter Verwendung der angegebenen 32-Bit-Ganzzahl mit Vorzeichen.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.Unit>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.Unit.Type%2A>|<xref:System.Web.UI.WebControls.UnitType.Pixel>|  
+|<xref:System.Web.UI.WebControls.Unit.Value%2A>|Der von `value` angegebene Wert.|  
+  
+> [!CAUTION]
+>  Wenn `value` wird nicht zwischen-32768 und 32767 liegen, wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" />liegt nicht zwischen-32768 und 32767 liegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Unit (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine Zeichenfolge, die die Länge des der <see cref="T:System.Web.UI.WebControls.Unit" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.Unit" /> Struktur mit der angegebenen Länge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.Unit> -Struktur unter Verwendung der angegebenen Länge. Die Länge wird in zwei Teilen, die Length-Wert und die Länge Unit-Typ angegeben. "200 Cm" steht z. B. eine Länge von 200 Zentimeter. Sie können jeder gültigen Ausdruck mit CSS-kompatiblen Einheit.  
+  
+ Die folgende Tabelle enthält die allgemeinen Typen.  
+  
+|Unit-Typ|Beschreibung|  
+|---------------|-----------------|  
+|`Pixel`|Die Länge in Pixel.|  
+|`Point`|Die Länge in Punkt. Einen Punkt darstellt, 1/72 Zoll.|  
+|`Inch`|Die Länge in Zoll.|  
+|`Mm`|Die Länge in Millimeter enthält.|  
+|`Cm`|Die Länge in Zentimeter an.|  
+|`Percentage`|Die Länge als Prozentsatz des übergeordneten Elements.|  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.Unit>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.Unit.Type%2A>|Unit-Typ, die im angegebenen `value`.|  
+|<xref:System.Web.UI.WebControls.Unit.Value%2A>|Der Wert im angegebenen `value`.|  
+  
+> [!CAUTION]
+>  Wenn `value` wird nicht zwischen-32768 und 32767 liegen, wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die angegebene Länge ist nicht zwischen-32768 und 32767 liegen.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="value" />ist kein gültiger CSS-kompatiblen Einheitenausdruck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Unit (double value, System.Web.UI.WebControls.UnitType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 value, valuetype System.Web.UI.WebControls.UnitType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.#ctor(System.Double,System.Web.UI.WebControls.UnitType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="type" Type="System.Web.UI.WebControls.UnitType" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine Gleitkommazahl, die die Länge des mit doppelter Genauigkeit der <see cref="T:System.Web.UI.WebControls.Unit" />.</param>
+        <param name="type">Einer der <see cref="T:System.Web.UI.WebControls.UnitType" />-Enumerationswerte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.Unit" /> Struktur mit der angegebenen Gleitkommazahl mit doppelter Genauigkeit und <see cref="T:System.Web.UI.WebControls.UnitType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.Unit> -Struktur unter Verwendung der angegebenen Gleitkommazahl mit doppelter Genauigkeit und <xref:System.Web.UI.WebControls.UnitType>.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.Unit>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.Unit.Type%2A>|Der Wert von `type`.|  
+|<xref:System.Web.UI.WebControls.Unit.Value%2A>|Der von `value` angegebene Wert.|  
+  
+> [!CAUTION]
+>  Wenn `value` wird nicht zwischen-32768 und 32767 liegen, wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" />liegt nicht zwischen-32768 und 32767 liegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Unit (string value, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.#ctor(System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine Zeichenfolge, die die Länge des der <see cref="T:System.Web.UI.WebControls.Unit" />.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , die Kultur darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.Unit" /> Struktur mit der angegebenen Länge und <see cref="T:System.Globalization.CultureInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.Unit> -Struktur unter Verwendung der angegebenen Länge und <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>. Die Länge wird in zwei Teilen, die Length-Wert und die Länge Unit-Typ angegeben. "200 Cm" steht z. B. eine Länge von 200 Zentimeter. Sie können jeder gültigen Ausdruck mit CSS-kompatiblen Einheit.  
+  
+ Die folgende Tabelle enthält die allgemeinen Typen.  
+  
+|Unit-Typ|Beschreibung|  
+|---------------|-----------------|  
+|`Pixel`|Die Länge in Pixel.|  
+|`Point`|Die Länge in Punkt. Einen Punkt darstellt, 1/72 Zoll.|  
+|`Inch`|Die Länge in Zoll.|  
+|`Mm`|Die Länge in Millimeter enthält.|  
+|`Cm`|Die Länge in Zentimeter an.|  
+|`Percentage`|Die Länge als Prozentsatz des übergeordneten Elements.|  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.Unit>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.Unit.Type%2A>|Unit-Typ, die im angegebenen `value`.|  
+|<xref:System.Web.UI.WebControls.Unit.Value%2A>|Der Wert im angegebenen `value`.|  
+  
+> [!CAUTION]
+>  Wenn `value` wird nicht zwischen-32768 und 32767 liegen, wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die angegebene Länge ist nicht zwischen-32768 und 32767 liegen.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="value" />ist kein gültiger CSS-kompatiblen Einheitenausdruck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.Unit Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Web.UI.WebControls.Unit Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.Unit.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein leeres <see cref="T:System.Web.UI.WebControls.Unit" />. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende Objekt.</param>
+        <summary>Vergleicht dieses <see cref="T:System.Web.UI.WebControls.Unit" /> mit dem angegebenen Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.Unit" /> ist, dass diese Methode aufgerufen wird, mit dem angegebenen Objekt identisch ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Unit.Equals%2A> Methode zum Vergleichen der <xref:System.Web.UI.WebControls.Unit> , die diese Methode wird aus aufgerufen, mit dem Objekt vom angegebenen `obj`. Damit beide Objekte gleich sind, müssen sie für die <xref:System.Web.UI.WebControls.Unit.Type%2A>-Eigenschaft und für die <xref:System.Web.UI.WebControls.Unit.Value%2A>-Eigenschaft dieselben Werte aufweisen.  
+  
+> [!NOTE]
+>  Das Objekt vom angegebenen `obj` muss durch eine <xref:System.Web.UI.WebControls.Unit> Typobjekt, damit der Vergleich erfolgreich durchgeführt. Wenn das Objekt `null`, `false` wird zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen. Diese ist der Hashcode für die Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Unit.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.Unit" /> ist leer.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Web.UI.WebControls.Unit" /> leer ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Unit.IsEmpty%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Web.UI.WebControls.Unit> ist leer. Die <xref:System.Web.UI.WebControls.Unit> ist leer Wenn die <xref:System.Web.UI.WebControls.Unit.Type%2A> -Eigenschaft enthält einen Enumerationswert von 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Web.UI.WebControls.Unit left, System.Web.UI.WebControls.Unit right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Web.UI.WebControls.Unit left, valuetype System.Web.UI.WebControls.Unit right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.op_Equality(System.Web.UI.WebControls.Unit,System.Web.UI.WebControls.Unit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Web.UI.WebControls.Unit" />
+        <Parameter Name="right" Type="System.Web.UI.WebControls.Unit" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die <see cref="T:System.Web.UI.WebControls.Unit" /> auf der linken Seite des Operators.</param>
+        <param name="right">Die <see cref="T:System.Web.UI.WebControls.Unit" /> auf der rechten Seite des Operators.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Web.UI.WebControls.Unit" /> Objekte bestimmen, ob sie gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn beide <see cref="T:System.Web.UI.WebControls.Unit" /> Objekte sind gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Operator, um zwei <xref:System.Web.UI.WebControls.Unit> -Objekte auf Gleichheit. Damit beide Objekte gleich sind, müssen sie für die <xref:System.Web.UI.WebControls.Unit.Type%2A>-Eigenschaft und für die <xref:System.Web.UI.WebControls.Unit.Value%2A>-Eigenschaft dieselben Werte aufweisen.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Web.UI.WebControls.Unit.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Web.UI.WebControls.Unit (int n);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Web.UI.WebControls.Unit op_Implicit(int32 n) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.op_Implicit(System.Int32)~System.Web.UI.WebControls.Unit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="n" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="n">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Web.UI.WebControls.Unit left, System.Web.UI.WebControls.Unit right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Web.UI.WebControls.Unit left, valuetype System.Web.UI.WebControls.Unit right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.op_Inequality(System.Web.UI.WebControls.Unit,System.Web.UI.WebControls.Unit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Web.UI.WebControls.Unit" />
+        <Parameter Name="right" Type="System.Web.UI.WebControls.Unit" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die <see cref="T:System.Web.UI.WebControls.Unit" /> auf der linken Seite des Operators.</param>
+        <param name="right">Die <see cref="T:System.Web.UI.WebControls.Unit" /> auf der rechten Seite des Operators.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Web.UI.WebControls.Unit" /> Objekte bestimmen, ob diese ungleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.Unit" /> Objekte sind nicht gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Operator, um zwei <xref:System.Web.UI.WebControls.Unit> -Objekte auf Ungleichheit. Für die Objekte nicht gleich sind, müssen sie unterschiedliche Werte für die <xref:System.Web.UI.WebControls.Unit.Type%2A> Eigenschaft oder die <xref:System.Web.UI.WebControls.Unit.Value%2A> Eigenschaft.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Web.UI.WebControls.Unit.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.Unit Parse (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Web.UI.WebControls.Unit Parse(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert die angegebene Zeichenfolge in eine <see cref="T:System.Web.UI.WebControls.Unit" />.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.Unit" /> , die die angegebene Zeichenfolge darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Unit.Parse%2A> statische Methode der angegebenen Zeichenfolge zu konvertieren die `s` Parameter an eine <xref:System.Web.UI.WebControls.Unit>.  
+  
+> [!NOTE]
+>  Die Maßeinheit bei Verwendung dieser Methode wird <xref:System.Web.UI.WebControls.UnitType.Pixel>.  
+  
+   
+  
+## Examples  
+ [!code-aspx-csharp[StyleClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/StyleClass/CS/styleclasscs.aspx#1)]
+ [!code-aspx-vb[StyleClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StyleClass/VB/styleclassvb.aspx#1)]  
+[!code-aspx-csharp[StyleClass#3](~/samples/snippets/csharp/VS_Snippets_WebNet/StyleClass/CS/styleclasscs.aspx#3)]
+[!code-aspx-vb[StyleClass#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StyleClass/VB/styleclassvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.Unit Parse (string s, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Web.UI.WebControls.Unit Parse(string s, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.Parse(System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die Kultur darstellt.</param>
+        <summary>Konvertiert die angegebene Zeichenfolge und <see cref="T:System.Globalization.CultureInfo" /> zu einem <see cref="T:System.Web.UI.WebControls.Unit" />.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.Unit" /> , die die angegebene Zeichenfolge darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Unit.Parse%2A> statische Methode zum Konvertieren der angegebenen Zeichenfolge `s` auf eine <xref:System.Web.UI.WebControls.Unit> in der durch den angegebenen Kultur `culture`.  
+  
+> [!NOTE]
+>  Die Maßeinheit bei Verwendung dieser Methode wird <xref:System.Web.UI.WebControls.UnitType.Pixel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Percentage">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.Unit Percentage (double n);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Web.UI.WebControls.Unit Percentage(float64 n) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.Percentage(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="n" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="n">Eine Gleitkommazahl mit doppelter Genauigkeit, die die Länge des der <see cref="T:System.Web.UI.WebControls.Unit" />.</param>
+        <summary>Erstellt eine <see cref="T:System.Web.UI.WebControls.Unit" /> des Typs <see cref="F:System.Web.UI.WebControls.UnitType.Percentage" /> aus der angegebenen Gleitkommazahl mit doppelter Genauigkeit.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.Unit" /> des Typs <see cref="F:System.Web.UI.WebControls.UnitType.Percentage" /> , die durch die Gleitkommazahl mit doppelter Genauigkeit angegebene Länge darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Unit.Percentage%2A> statische Methode zum Erstellen einer <xref:System.Web.UI.WebControls.Unit> des Typs <xref:System.Web.UI.WebControls.UnitType.Percentage> , die die Länge darstellt der `n` Parameter. Beispielsweise bei Angabe von 80 für * n * und legen Sie mit der zurückgegebenen Einheit der <xref:System.Web.UI.WebControls.WebControl.Height%2A> von einem Webserver-Steuerelement, das `height` -Attribut auf 80 % festgelegt ist.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.Unit> -Klasse kann nur Werte zwischen-32768 und 32767 darstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pixel">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.Unit Pixel (int n);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Web.UI.WebControls.Unit Pixel(int32 n) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.Pixel(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="n" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="n">Eine 32-Bit-Ganzzahl mit Vorzeichen, die die Länge des der <see cref="T:System.Web.UI.WebControls.Unit" />.</param>
+        <summary>Erstellt eine <see cref="T:System.Web.UI.WebControls.Unit" /> des Typs <see cref="F:System.Web.UI.WebControls.UnitType.Pixel" /> aus der angegebenen 32-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.Unit" /> des Typs <see cref="F:System.Web.UI.WebControls.UnitType.Pixel" /> , die die Länge darstellt der <paramref name="n" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Unit.Pixel%2A> statische Methode zum Erstellen einer <xref:System.Web.UI.WebControls.Unit> des Typs <xref:System.Web.UI.WebControls.UnitType.Pixel> , die die Länge darstellt der `n` Parameter.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.Unit> -Klasse kann nur Werte zwischen-32768 und 32767 darstellen.  
+  
+   
+  
+## Examples  
+ [!code-aspx-csharp[TableCell#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCell/CS/tablecellcs.aspx#1)]
+ [!code-aspx-vb[TableCell#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCell/VB/tablecellvb.aspx#1)]  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.Unit Point (int n);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Web.UI.WebControls.Unit Point(int32 n) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.Point(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="n" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="n">Eine 32-Bit-Ganzzahl mit Vorzeichen, die die Länge des der <see cref="T:System.Web.UI.WebControls.Unit" />.</param>
+        <summary>Erstellt eine <see cref="T:System.Web.UI.WebControls.Unit" /> des Typs <see cref="F:System.Web.UI.WebControls.UnitType.Point" /> aus der angegebenen 32-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.Unit" /> des Typs <see cref="F:System.Web.UI.WebControls.UnitType.Point" /> , indem Sie die 32-Bit-Ganzzahl mit Vorzeichen angegebene Länge darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Unit.Point%2A> statische Methode zum Erstellen einer <xref:System.Web.UI.WebControls.Unit> des Typs <xref:System.Web.UI.WebControls.UnitType.Point> , die die Länge darstellt der `n` Parameter.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.Unit> -Klasse kann nur Werte zwischen-32768 und 32767 darstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert ein <see cref="T:System.Web.UI.WebControls.Unit" />-Element in ein <see cref="T:System.String" />-Element.</summary>
+        <returns>Ein <see cref="T:System.String" />, der diesen <see cref="T:System.Web.UI.WebControls.Unit" /> darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.ToString(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , die Kultur darstellt.</param>
+        <summary>Konvertiert eine <see cref="T:System.Web.UI.WebControls.Unit" /> in eine Zeichenfolge, die in der angegebenen Kultur entspricht.</summary>
+        <returns>Ein <see cref="T:System.String" /> stellt dies <see cref="T:System.Web.UI.WebControls.Unit" /> in der durch den angegebenen Kultur <paramref name="culture" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Unit.ToString%2A> -Methode zum Konvertieren der <xref:System.Web.UI.WebControls.Unit> , die diese Methode wird aufgerufen von in eine Zeichenfolge in der angegebenen Kultur entspricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Unit.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="formatProvider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert eine <see cref="T:System.Web.UI.WebControls.Unit" /> zu einer Zeichenfolge entspricht, die mit den angegebenen Formatanbieter.</summary>
+        <returns>Ein <see cref="T:System.String" /> darstellt, dies <see cref="T:System.Web.UI.WebControls.Unit" /> in dem vom angegebenen Format <paramref name="formatProvider" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Unit.ToString%2A> Methode gibt eine Zeichenfolgendarstellung mit einer Einheit formatiert <xref:System.Web.UI.WebControls.Unit.Value%2A> und eine Abkürzung für die Einheit <xref:System.Web.UI.WebControls.Unit.Type%2A>. Die folgende Tabelle enthält <xref:System.Web.UI.WebControls.UnitType> Werte und ihre entsprechenden Abkürzung.  
+  
+|Unit-Typ|Abkürzung|  
+|---------------|------------------|  
+|<xref:System.Web.UI.WebControls.UnitType.Pixel>|px|  
+|<xref:System.Web.UI.WebControls.UnitType.Point>|pt|  
+|<xref:System.Web.UI.WebControls.UnitType.Pica>|PC|  
+|<xref:System.Web.UI.WebControls.UnitType.Inch>|Zoll|  
+|<xref:System.Web.UI.WebControls.UnitType.Mm>|mm|  
+|<xref:System.Web.UI.WebControls.UnitType.Cm>|cm|  
+|<xref:System.Web.UI.WebControls.UnitType.Percentage>|%|  
+|<xref:System.Web.UI.WebControls.UnitType.Em>|em|  
+|<xref:System.Web.UI.WebControls.UnitType.Ex>|ex|  
+  
+ Verwendung `formatProvider` an kulturspezifische Informationen zum Formatieren der <xref:System.Web.UI.WebControls.Unit.Value%2A>. Wenn `formatProvider` ist `null`, der numerische Teil der Zeichenfolge ist die Verwendung eines formatiert <xref:System.Globalization.NumberFormatInfo> Objekt für die aktuelle Kultur festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.UnitType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.UnitType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Unit.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.UnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Einheitentyp der <see cref="T:System.Web.UI.WebControls.Unit" /> ab.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.UnitType" />-Enumerationswerte. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.UnitType.Pixel" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Unit.Type%2A> -Eigenschaft zum Bestimmen der Maßeinheit, die die <xref:System.Web.UI.WebControls.Unit> darstellt, z. B. Pixel. Die <xref:System.Web.UI.WebControls.Unit.Type%2A> Eigenschaft wird durch eine der repräsentiert die <xref:System.Web.UI.WebControls.UnitType> Enumerationswerte.  
+  
+> [!NOTE]
+>  Wenn <xref:System.Web.UI.WebControls.Unit.IsEmpty%2A> -Eigenschaftensatz auf `true`die <xref:System.Web.UI.WebControls.UnitType.Point> zurückgegebene Enumerationswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public double Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Unit.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge ab der <see cref="T:System.Web.UI.WebControls.Unit" />.</summary>
+        <value>Eine mit doppelter Genauigkeit Gleitkommazahl, die die Länge des der <see cref="T:System.Web.UI.WebControls.Unit" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Unit.Value%2A> -Eigenschaft können Sie die Länge des bestimmen die <xref:System.Web.UI.WebControls.Unit>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

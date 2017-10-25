@@ -1,0 +1,90 @@
+<Type Name="TargetedPatchingOptOutAttribute" FullName="System.Runtime.TargetedPatchingOptOutAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TargetedPatchingOptOutAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TargetedPatchingOptOutAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.TargetedPatchingOptOutAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass die .NET Framework-Bibliothek Klassenmethode auf die dieses Attribut angewendet wird, ist es unwahrscheinlich, dass Versionen Wartung betroffen sein und aus diesem Grund berechtigt ist, die über Native Image Generator (NGen) Images inline gesetzt werden.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TargetedPatchingOptOutAttribute (string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.TargetedPatchingOptOutAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reason">Der Grund warum die Methode, die die <see cref="T:System.Runtime.TargetedPatchingOptOutAttribute" /> Attribut angewendet wird gilt für inlining über Images Native Image Generator (NGen).</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.TargetedPatchingOptOutAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public string Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Reason" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.TargetedPatchingOptOutAttribute.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Grund, warum die Methode, die auf die dieses Attribut angewendet wird zur gilt, inlining über Images Native Image Generator (NGen).</summary>
+        <value>Der Grund, warum die Methode gilt für, inlining über NGen-Images.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

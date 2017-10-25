@@ -1,0 +1,122 @@
+<Type Name="PartChromeType" FullName="System.Web.UI.WebControls.WebParts.PartChromeType">
+  <TypeSignature Language="C#" Value="public enum PartChromeType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PartChromeType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PartChromeType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Art des Rahmens, der eine Webparts-Steuerelemente umgibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein des Teilsteuerelements <xref:System.Web.UI.WebControls.WebParts.PartChromeType> Enumeration bestimmt die Art des Rahmens einer Webparts-Steuerelemente umgibt. Mit einer Titelleiste nur, nur einen Rahmen, eine Titelleiste und Rand oder keines von beiden Optionen.  
+  
+ Wenn der Enumerationswert auf Standard festgelegt ist, auf der <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A> -Eigenschaft eines Steuerelements Teil, das Steuerelement erbt die Einstellung aus der <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType%2A> Eigenschaft der Zone, die das Steuerelement enthält.  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispiele veranschaulichen die deklarative Verwendung des der <xref:System.Web.UI.WebControls.WebParts.PartChromeType> Enumeration mithilfe ein benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement auf einer ASP.NET-Webseite verwiesen wird. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ Der erste Teil des Beispiels enthält den Code für das benutzerdefinierte Steuerelement, mit dem Namen `TextDisplayWebPart`. Da das Steuerelement abgeleitet <xref:System.Web.UI.WebControls.WebParts.WebPart>, es erbt außerdem die allgemeinen Eigenschaften, die <xref:System.Web.UI.WebControls.WebParts.Part> Klasse bereitstellt, einschließlich der <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A> -Eigenschaft, die verwendet die <xref:System.Web.UI.WebControls.WebParts.PartChromeType> Enumeration als Rückgabetyp.  
+  
+ [!code-csharp[WebParts_Part_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Part_Overview/CS/textdisplaywebpart.cs#2)]
+ [!code-vb[WebParts_Part_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Part_Overview/VB/textdisplaywebpart.vb#2)]  
+  
+ Beachten Sie, die im deklarativen Markup für die Web-Seite, die zweite Instanz von der `TextDisplayWebPart` -Steuerelement legt seine <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A> Eigenschaftswert an TitleOnly. Nachdem Sie die Seite in einem Browser geladen haben, wird die zweite Instanz des Steuerelements minimiert angezeigt. Wenn Sie das zweite Steuerelement erweitern, ist es nur eine Titelleiste ohne Rahmen.  
+  
+ [!code-aspx-csharp[WebParts_Part_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Part_Overview/CS/partoverviewcs.aspx#1)]
+ [!code-aspx-vb[WebParts_Part_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Part_Overview/VB/partoverviewvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BorderOnly">
+      <MemberSignature Language="C#" Value="BorderOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PartChromeType BorderOnly = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PartChromeType.BorderOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur ein Rahmen, ohne Titelleiste.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PartChromeType Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PartChromeType.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Rahmen, die aus dem Teilsteuerelement geerbte Einstellung die Zone enthält.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PartChromeType None = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PartChromeType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kein Rahmen und keine Titelleiste.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleAndBorder">
+      <MemberSignature Language="C#" Value="TitleAndBorder" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PartChromeType TitleAndBorder = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PartChromeType.TitleAndBorder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Titelleiste und einen Rahmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleOnly">
+      <MemberSignature Language="C#" Value="TitleOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PartChromeType TitleOnly = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PartChromeType.TitleOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Titelleiste, ohne einen Rahmen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

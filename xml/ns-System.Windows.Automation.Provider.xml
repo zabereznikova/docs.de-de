@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Automation.Provider">
+  <Docs>
+    <summary>Stellt die APIs zum Erstellen von Benutzeroberflächenautomatisierungs-Anbietern bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

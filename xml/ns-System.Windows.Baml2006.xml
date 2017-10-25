@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Baml2006">
+  <Docs>
+    <summary>Enthält Klassen, Reader und Writer, die XAML in BAML-Form verwendet werden können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

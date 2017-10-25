@@ -1,0 +1,217 @@
+<Type Name="ICodeCompiler" FullName="System.CodeDom.Compiler.ICodeCompiler">
+  <TypeSignature Language="C#" Value="public interface ICodeCompiler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICodeCompiler" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.ICodeCompiler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Schnittstelle für die Kompilierung von Quellcode oder ein CodeDOM-Baum, die mit einem bestimmten Compiler aufrufen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  In der .NET Framework-Versionen 1.0 und 1.1, bestehen Codeanbieter Implementierungen von <xref:System.CodeDom.Compiler.CodeDomProvider>, <xref:System.CodeDom.Compiler.ICodeGenerator>, <xref:System.CodeDom.Compiler.ICodeParser>, und <xref:System.CodeDom.Compiler.ICodeCompiler>. In der [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A>, <xref:System.CodeDom.Compiler.CodeDomProvider.CreateParser%2A>, und <xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A> Methoden sind veraltet, und die Methoden der <xref:System.CodeDom.Compiler.ICodeGenerator> und <xref:System.CodeDom.Compiler.ICodeCompiler> stehen direkt in die <xref:System.CodeDom.Compiler.CodeDomProvider> Klasse. Überschreiben Sie diese Methoden in der anbieterimplementierung Code, und nicht die Basis-Methoden aufrufen.  
+  
+ Die <xref:System.CodeDom.Compiler.ICodeCompiler> -Schnittstelle kann für einen bestimmten Compiler ermöglichen Entwicklern die Assemblys aus Code Document Object Model (CodeDOM) Kompilierungseinheiten, Zeichenfolgen, die mit Quellcode, programmgesteuert zu kompilieren oder Quelldateien Code implementiert werden.  
+  
+ Die <xref:System.CodeDom.Compiler.ICodeCompiler> Schnittstelle bietet die Möglichkeit zum Aufrufen der Kompilierung mit angegebenen Parametern zur Laufzeit und Zugriff Informationen im Zusammenhang mit Kompilierung nach der Kompilierung tritt auf, einschließlich der Ergebniscode und Fehler oder Warnungen der Compiler gibt. Jede Compile-Methode akzeptiert eine <xref:System.CodeDom.Compiler.CompilerParameters> Objekt, gibt die Einstellungen für den Compiler an, und gibt, ein <xref:System.CodeDom.Compiler.CompilerResults> Objekt, das die Ergebnisse der Kompilierung angibt.  
+  
+ Compilerfehler Entwickler sollte eine Implementierung dieser Schnittstelle zur Unterstützung der dynamischen Kompilierung bereitstellen. <xref:System.CodeDom.Compiler.CodeDomProvider>Implementierer sollten auch berücksichtigen, implementieren diese Schnittstelle zum programmgesteuerten Kompilierung-Funktion für die Sprache bereitstellt, dass sie CodeDom-Unterstützung bereitstellen für.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Schnittstelle kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Klassen, die diese Schnittstelle implementieren, können nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="CompileAssemblyFromDom">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CompilerResults CompileAssemblyFromDom (System.CodeDom.Compiler.CompilerParameters options, System.CodeDom.CodeCompileUnit compilationUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults CompileAssemblyFromDom(class System.CodeDom.Compiler.CompilerParameters options, class System.CodeDom.CodeCompileUnit compilationUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromDom(System.CodeDom.Compiler.CompilerParameters,System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="compilationUnit" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Einstellungen für die Kompilierung angibt.</param>
+        <param name="compilationUnit">Ein <see cref="T:System.CodeDom.CodeCompileUnit" /> , der angibt, dass des Codes kompiliert.</param>
+        <summary>Kompiliert eine Assembly aus der <see cref="N:System.CodeDom" /> enthaltenen in der angegebenen Struktur <see cref="T:System.CodeDom.CodeCompileUnit" />, mit der angegebenen compilereinstellungen.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.Compiler.CompilerResults" /> Objekt, das die Ergebnisse der Kompilierung angibt.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileAssemblyFromDomBatch">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CompilerResults CompileAssemblyFromDomBatch (System.CodeDom.Compiler.CompilerParameters options, System.CodeDom.CodeCompileUnit[] compilationUnits);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults CompileAssemblyFromDomBatch(class System.CodeDom.Compiler.CompilerParameters options, class System.CodeDom.CodeCompileUnit[] compilationUnits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromDomBatch(System.CodeDom.Compiler.CompilerParameters,System.CodeDom.CodeCompileUnit[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="compilationUnits" Type="System.CodeDom.CodeCompileUnit[]" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Einstellungen für die Kompilierung angibt.</param>
+        <param name="compilationUnits">Ein Array vom Typ <see cref="T:System.CodeDom.CodeCompileUnit" /> , der angibt, dass des Codes kompiliert.</param>
+        <summary>Kompiliert eine Assembly auf Basis der <see cref="N:System.CodeDom" /> innerhalb des angegebenen Arrays von Strukturen <see cref="T:System.CodeDom.CodeCompileUnit" /> Objekte mithilfe der angegebenen compilereinstellungen.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.Compiler.CompilerResults" /> Objekt, das die Ergebnisse der Kompilierung angibt.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileAssemblyFromFile">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CompilerResults CompileAssemblyFromFile (System.CodeDom.Compiler.CompilerParameters options, string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults CompileAssemblyFromFile(class System.CodeDom.Compiler.CompilerParameters options, string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromFile(System.CodeDom.Compiler.CompilerParameters,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Einstellungen für die Kompilierung angibt.</param>
+        <param name="fileName">Der Dateiname der Datei, die den Quellcode zu kompilieren.</param>
+        <summary>Kompiliert eine Assembly aus dem Quellcode in der angegebenen Datei enthaltenen mithilfe der angegebenen compilereinstellungen.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.Compiler.CompilerResults" /> Objekt, das die Ergebnisse der Kompilierung angibt.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileAssemblyFromFileBatch">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CompilerResults CompileAssemblyFromFileBatch (System.CodeDom.Compiler.CompilerParameters options, string[] fileNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults CompileAssemblyFromFileBatch(class System.CodeDom.Compiler.CompilerParameters options, string[] fileNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromFileBatch(System.CodeDom.Compiler.CompilerParameters,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="fileNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Einstellungen für die Kompilierung angibt.</param>
+        <param name="fileNames">Die Dateinamen der zu kompilierenden Dateien.</param>
+        <summary>Kompiliert eine Assembly aus dem Quellcode in die angegebenen Dateien enthalten sind, mithilfe der angegebenen compilereinstellungen.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.Compiler.CompilerResults" /> Objekt, das die Ergebnisse der Kompilierung angibt.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileAssemblyFromSource">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CompilerResults CompileAssemblyFromSource (System.CodeDom.Compiler.CompilerParameters options, string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults CompileAssemblyFromSource(class System.CodeDom.Compiler.CompilerParameters options, string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromSource(System.CodeDom.Compiler.CompilerParameters,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Einstellungen für die Kompilierung angibt.</param>
+        <param name="source">Der Quellcode zu kompilieren.</param>
+        <summary>Kompiliert eine Assembly aus der angegebenen Zeichenfolge, enthält Quellcode, indem Sie die angegebenen compilereinstellungen.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.Compiler.CompilerResults" /> Objekt, das die Ergebnisse der Kompilierung angibt.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileAssemblyFromSourceBatch">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CompilerResults CompileAssemblyFromSourceBatch (System.CodeDom.Compiler.CompilerParameters options, string[] sources);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults CompileAssemblyFromSourceBatch(class System.CodeDom.Compiler.CompilerParameters options, string[] sources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromSourceBatch(System.CodeDom.Compiler.CompilerParameters,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="sources" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Einstellungen für die Kompilierung angibt.</param>
+        <param name="sources">Die Quellzeichenfolgen des Code zu kompilieren.</param>
+        <summary>Kompiliert eine Assembly aus dem angegebenen Array von Zeichenfolgen, Quellcode enthält, mithilfe der angegebenen compilereinstellungen.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.Compiler.CompilerResults" /> Objekt, das die Ergebnisse der Kompilierung angibt.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,109 @@
+<Type Name="ObjectListShowCommandsEventArgs" FullName="System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs">
+  <TypeSignature Language="C#" Value="public class ObjectListShowCommandsEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectListShowCommandsEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.MobileControls.ObjectList.ShowItemCommands" /> -Ereignis für ein <see cref="T:System.Web.UI.MobileControls.ObjectList" />. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von einer <xref:System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs> Objekt automatisch erstellt und übergeben Sie an den Ereignishandler für die <xref:System.Web.UI.MobileControls.ObjectList.ShowItemCommands> -Ereignis für ein <xref:System.Web.UI.MobileControls.ObjectList>.  
+  
+ Ein geerbter Klasse oder ein Ereignishandler mithilfe dieses Ereignisses kann Befehle nur für das Element anzeigen, indem Sie die Änderung der Auflistung von Befehlen in der <xref:System.Web.UI.MobileControls.ObjectList.Commands%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie im Beispiel für die <xref:System.Web.UI.MobileControls.ObjectList> (Übersicht).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectListShowCommandsEventArgs (System.Web.UI.MobileControls.ObjectListItem item, System.Web.UI.MobileControls.ObjectListCommandCollection commands);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.MobileControls.ObjectListItem item, class System.Web.UI.MobileControls.ObjectListCommandCollection commands) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs.#ctor(System.Web.UI.MobileControls.ObjectListItem,System.Web.UI.MobileControls.ObjectListCommandCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.MobileControls.ObjectListItem" />
+        <Parameter Name="commands" Type="System.Web.UI.MobileControls.ObjectListCommandCollection" />
+      </Parameters>
+      <Docs>
+        <param name="item">Initialisiert die <see cref="P:System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs.ListItem" /> Eigenschaft.</param>
+        <param name="commands">Initialisiert die <see cref="P:System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs.Commands" /> Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt ein neues <xref:System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs> -Objekt und initialisiert die <xref:System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs.ListItem%2A> und <xref:System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs.Commands%2A> mit den Werten der Eigenschaften der `item` und `commands` Parameter bzw..  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commands">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.ObjectListCommandCollection Commands { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.ObjectListCommandCollection Commands" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs.Commands" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListCommandCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung von Befehlen in der <see cref="T:System.Web.UI.MobileControls.ObjectListCommandCollection" /> Objekte. Die Auflistung ist anfangs leer. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Auflistung von Befehlen in der <see cref="T:System.Web.UI.MobileControls.ObjectListCommandCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie hinzufügen oder Entfernen von Befehlen in der Auflistung mithilfe der <xref:System.Web.UI.MobileControls.ObjectListCommandCollection.Add%2A>, <xref:System.Web.UI.MobileControls.ObjectListCommandCollection.AddAt%2A>, <xref:System.Web.UI.MobileControls.ObjectListCommandCollection.Remove%2A>, und <xref:System.Web.UI.MobileControls.ObjectListCommandCollection.RemoveAt%2A> Methoden die <xref:System.Web.UI.MobileControls.ObjectListCommandCollection> Klasse. Sie können diese Eigenschaft verwenden, zugreifen auf und ändern die Befehle für ein einzelnes Element in einer <xref:System.Web.UI.MobileControls.ObjectList> -Objekt während der <xref:System.Web.UI.MobileControls.ObjectList.ShowItemCommands> Ereignis. Vorgenommene Änderungen wirken sich nicht auf die basisauflistung für die angegebenen Befehle die <xref:System.Web.UI.MobileControls.ObjectList> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListItem">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.ObjectListItem ListItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.ObjectListItem ListItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs.ListItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Listenelement für die angegebenen Befehle, die angezeigt werden sollen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Listenelement für die angegebenen Befehle, die angezeigt werden sollen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

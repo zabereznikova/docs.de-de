@@ -1,0 +1,209 @@
+<Type Name="InstanceOwnerException" FullName="System.Runtime.DurableInstancing.InstanceOwnerException">
+  <TypeSignature Language="C#" Value="public class InstanceOwnerException : System.Runtime.DurableInstancing.InstancePersistenceException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit InstanceOwnerException extends System.Runtime.DurableInstancing.InstancePersistenceException" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.DurableInstancing.InstanceOwnerException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.DurableInstancing.InstancePersistenceException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Dauerhaftigkeitsanbieter löst diese Ausnahme aus, wenn der an den Instanzhandle gebundene Instanzbesitzer nicht mehr gültig ist.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceOwnerException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceOwnerException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceOwnerException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceOwnerException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceOwnerException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Grund für die Ausnahme.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceOwnerException" />-Klasse mithilfe der Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InstanceOwnerException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceOwnerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Informationen zur aktuellen Ausnahme.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceOwnerException" />-Klasse mit den serialisierten Daten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceOwnerException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceOwnerException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Grund für die Ausnahme.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceOwnerException" />-Klasse mithilfe der Fehlermeldung und der Informationen zur inneren Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceOwnerException (System.Xml.Linq.XName commandName, Guid instanceOwnerId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceOwnerId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceOwnerException.#ctor(System.Xml.Linq.XName,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceOwnerId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceOwnerId">Die ID des Instanzbesitzers.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceOwnerException" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls und der ID des Instanzbesitzers.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceOwnerException (System.Xml.Linq.XName commandName, Guid instanceOwnerId, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceOwnerId, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceOwnerException.#ctor(System.Xml.Linq.XName,System.Guid,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceOwnerId" Type="System.Guid" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceOwnerId">Die ID des Instanzbesitzers.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceOwnerException" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls, der ID des Instanzbesitzers und der Informationen zur inneren Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceOwnerException (System.Xml.Linq.XName commandName, Guid instanceOwnerId, string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceOwnerId, string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceOwnerException.#ctor(System.Xml.Linq.XName,System.Guid,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceOwnerId" Type="System.Guid" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceOwnerId">Die ID des Instanzbesitzers.</param>
+        <param name="message">Die Fehlermeldung, in der die Ausnahme erläutert wird.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceOwnerException" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls, der ID des Instanzbesitzers, der Fehlermeldung, die die Ausnahme erläutert, sowie der Informationen zu inneren Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceOwnerException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die serialisierten Objektdaten über die ausgelöste Ausnahme.</param>
+        <param name="context">Die Kontextinformationen über die Quelle oder das Ziel.</param>
+        <summary>Legt das <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit Informationen zur Ausnahme fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceOwnerId">
+      <MemberSignature Language="C#" Value="public Guid InstanceOwnerId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceOwnerId" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceOwnerException.InstanceOwnerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID des Instanzbesitzers ab.</summary>
+        <value>Die ID des Instanzbesitzers.  Gibt "Guid.Empty" zurück, wenn der Instanzbesitzer nicht bekannt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

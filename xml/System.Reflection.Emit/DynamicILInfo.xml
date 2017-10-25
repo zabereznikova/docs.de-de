@@ -1,0 +1,538 @@
+<Type Name="DynamicILInfo" FullName="System.Reflection.Emit.DynamicILInfo">
+  <TypeSignature Language="C#" Value="public class DynamicILInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicILInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.DynamicILInfo" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet Unterstützung für alternative Möglichkeiten, die Microsoft intermediate Language (MSIL) zu generieren und die Metadaten für eine dynamische Methode, einschließlich der Methoden zum Erstellen von Token und zum Einfügen von Code, Ausnahmebehandlung und lokale Variablensignatur Blobs.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.Emit.DynamicILInfo> Klasse können Entwickler ihre eigenen MSIL-Generatoren anstatt schreiben <xref:System.Reflection.Emit.ILGenerator>.  
+  
+ Zum Erstellen von Instanzen anderer Typen Aufrufen von Methoden und So weiter, muss der MSIL-Code Sie generieren Token für die Entitäten enthalten. Die <xref:System.Reflection.Emit.DynamicILInfo> Klasse enthält mehrere Überladungen der der <xref:System.Reflection.Emit.DynamicILInfo.GetTokenFor%2A> -Methode, die Token gültig zurückgeben, im Gültigkeitsbereich des aktuellen <xref:System.Reflection.Emit.DynamicILInfo>. Z. B., wenn Sie eine Überladung aufrufen der <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> -Methode, die Sie erhalten eine <xref:System.RuntimeMethodHandle> für, die überladen, und übergeben Sie sie an der <xref:System.Reflection.Emit.DynamicILInfo.GetTokenFor%2A> Methode zum Abrufen eines Token zum Einbetten in die MSIL.  
+  
+ Nach dem Erstellen <xref:System.Byte> Arrays für die lokale Variablensignatur, Ausnahmen und Codetext, können Sie die <xref:System.Reflection.Emit.DynamicILInfo.SetCode%2A>, <xref:System.Reflection.Emit.DynamicILInfo.SetExceptions%2A>, und <xref:System.Reflection.Emit.DynamicILInfo.SetLocalSignature%2A> Methoden zum Einfügen in die <xref:System.Reflection.Emit.DynamicMethod> zugeordneten Ihrer <xref:System.Reflection.Emit.DynamicILInfo> -Objekt.  
+  
+ Generieren von Metadaten und MSIL erfordert Vertrautheit mit der Common Language Infrastructure (CLI)-Dokumentation, insbesondere in "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+> [!NOTE]
+>  Verwenden Sie keine <xref:System.Reflection.Emit.DynamicILInfo> zum Generieren von Code, der einen Delegaten an eine andere dynamische Methode erstellt, indem Delegatkonstruktors direkt aufgerufen werden. Verwenden Sie stattdessen die <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> Methode, um den Delegaten zu erstellen. Einen Verweis auf die dynamische Zielmethode kein Delegat, der mit dem Delegatkonstruktor erstellt wird. Die dynamische Methode möglicherweise durch die Garbagecollection freigegeben werden, während der Delegat weiterhin verwendet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DynamicMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.DynamicMethod DynamicMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Emit.DynamicMethod DynamicMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicILInfo.DynamicMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.DynamicMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dynamische Methode, deren Text von der aktuellen Instanz generiert wird.</summary>
+        <value>Ein <see cref="T:System.Reflection.Emit.DynamicMethod" /> Objekt, das die dynamische Methode darstellt, für die das aktuelle <see cref="T:System.Reflection.Emit.DynamicILInfo" /> Objekt Code generiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Reflection.Emit.DynamicILInfo> Objekt immer eine dynamische Methode zugeordnet ist. Der Zweck der <xref:System.Reflection.Emit.DynamicILInfo> Klasse ist eine weitere Möglichkeit zum Einfügen von der MSIL-Streams, die Behandlung von Ausnahmen und die lokale Variablensignatur in eine dynamische Methode bereitstellen, für Entwickler möchten ohne Verwendung von MSIL generieren die <xref:System.Reflection.Emit.ILGenerator> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenFor">
+      <MemberSignature Language="C#" Value="public int GetTokenFor (byte[] signature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetTokenFor(unsigned int8[] signature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.GetTokenFor(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="signature">Ein Array, das die Signatur enthält.</param>
+        <summary>Ruft ein Token, die im Gültigkeitsbereich des aktuellen gültigen <see cref="T:System.Reflection.Emit.DynamicILInfo" />, das die Signatur für die zugeordnete dynamische Methode darstellt.</summary>
+        <returns>Ein Token, das in die Metadaten und MSIL-Streams für die zugeordnete dynamische Methode eingebettet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zu Signatur-Blobs finden Sie in der Common Language Infrastructure (CLI)-Dokumentation, insbesondere in "Partition II: Metadata Definition and Semantics". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenFor">
+      <MemberSignature Language="C#" Value="public int GetTokenFor (System.Reflection.Emit.DynamicMethod method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetTokenFor(class System.Reflection.Emit.DynamicMethod method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.GetTokenFor(System.Reflection.Emit.DynamicMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Reflection.Emit.DynamicMethod" />
+      </Parameters>
+      <Docs>
+        <param name="method">Die dynamische Methode, die aufgerufen werden soll.</param>
+        <summary>Ruft ein Token, die im Gültigkeitsbereich des aktuellen gültigen <see cref="T:System.Reflection.Emit.DynamicILInfo" />, aus der zugeordneten Methode aufgerufen werden dynamische Methode darstellt.</summary>
+        <returns>Ein Token, das als Ziel einer MSIL-Anweisung in den MSIL-Streams für die zugeordnete dynamische Methode eingebettet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Token über Überladung dieser Methode können Sie eine dynamische Methode aus der dynamischen Methode verknüpft sind, mit dem aktuellen Aufrufen <xref:System.Reflection.Emit.DynamicILInfo> Objekt. Um die rekursiv zugeordnete dynamische Methode aufzurufen, übergeben Sie den Wert von der <xref:System.Reflection.Emit.DynamicILInfo.DynamicMethod%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenFor">
+      <MemberSignature Language="C#" Value="public int GetTokenFor (RuntimeFieldHandle field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetTokenFor(valuetype System.RuntimeFieldHandle field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.GetTokenFor(System.RuntimeFieldHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.RuntimeFieldHandle" />
+      </Parameters>
+      <Docs>
+        <param name="field">Das Feld, auf das zugegriffen werden soll.</param>
+        <summary>Ruft ein Token, die im Gültigkeitsbereich des aktuellen gültigen <see cref="T:System.Reflection.Emit.DynamicILInfo" />, das ein Feld aus der zugeordneten dynamischen Methode zugegriffen werden darstellt.</summary>
+        <returns>Ein Token, das als Operand einer MSIL-Anweisung verwendet werden kann, die Felder in den Bereich des aktuellen greift auf <see cref="T:System.Reflection.Emit.DynamicILInfo" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie benötigen ein Token für jedes Feld, das von der dynamischen Methode verknüpft sind, mit dem aktuellen erfolgt <xref:System.Reflection.Emit.DynamicILInfo> Objekt. Verwenden der <xref:System.Type.GetField%2A?displayProperty=nameWithType> Methode zum Abrufen einer <xref:System.Reflection.FieldInfo> für das Feld, das Sie zugreifen möchten, verwenden Sie dann die <xref:System.Reflection.FieldInfo.FieldHandle%2A> Eigenschaft, um die <xref:System.RuntimeFieldHandle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenFor">
+      <MemberSignature Language="C#" Value="public int GetTokenFor (RuntimeMethodHandle method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetTokenFor(valuetype System.RuntimeMethodHandle method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.GetTokenFor(System.RuntimeMethodHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.RuntimeMethodHandle" />
+      </Parameters>
+      <Docs>
+        <param name="method">Die Methode, zugegriffen werden.</param>
+        <summary>Ruft ein Token, die im Gültigkeitsbereich des aktuellen gültigen <see cref="T:System.Reflection.Emit.DynamicILInfo" />, das eine Methode aus der zugeordneten dynamischen Methode zugegriffen werden darstellt.</summary>
+        <returns>Ein Token, das als Operand einer MSIL-Anweisung verwendet werden kann, die Methoden, wie z. B. greift auf <see cref="F:System.Reflection.Emit.OpCodes.Call" /> oder <see cref="F:System.Reflection.Emit.OpCodes.Ldtoken" />, im Gültigkeitsbereich des aktuellen <see cref="T:System.Reflection.Emit.DynamicILInfo" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie benötigen ein Token für jede Methode, die von der dynamischen Methode verknüpft sind, mit dem aktuellen erfolgt <xref:System.Reflection.Emit.DynamicILInfo> Objekt. Verwenden der <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> Methode zum Abrufen einer <xref:System.Reflection.MethodInfo> für die Methode, die Sie zugreifen möchten, und verwenden Sie dann die <xref:System.Reflection.MethodBase.MethodHandle%2A> Eigenschaft, um die <xref:System.RuntimeMethodHandle>.  
+  
+> [!NOTE]
+>  Verwenden Sie für eine Methode, die für einen generischen Typ gehört, die <xref:System.Reflection.Emit.DynamicILInfo.GetTokenFor%28System.RuntimeMethodHandle%2CSystem.RuntimeTypeHandle%29> -methodenüberladung, und geben Sie einen <xref:System.RuntimeTypeHandle> für den generischen Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenFor">
+      <MemberSignature Language="C#" Value="public int GetTokenFor (RuntimeTypeHandle type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetTokenFor(valuetype System.RuntimeTypeHandle type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.GetTokenFor(System.RuntimeTypeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.RuntimeTypeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, der verwendet werden.</param>
+        <summary>Ruft ein Token, die im Gültigkeitsbereich des aktuellen gültigen <see cref="T:System.Reflection.Emit.DynamicILInfo" />, einen Typ in der zugeordneten dynamischen Methode zu verwendende darstellt.</summary>
+        <returns>Ein Token, das als Operand einer MSIL-Anweisung verwendet werden kann, die einen Typ im Gültigkeitsbereich des aktuellen erfordert <see cref="T:System.Reflection.Emit.DynamicILInfo" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Token über Überladung dieser Methode können Sie lokalen Variablen vom Typ definieren und Ausgeben von MSIL zum Erstellen von einer Instanz eines Typs in der dynamischen Methode verknüpft sind, mit dem aktuellen <xref:System.Reflection.Emit.DynamicILInfo> Objekt.  
+  
+ Zum Abrufen einer <xref:System.RuntimeTypeHandle> einen Typ darstellt, verwenden Sie die <xref:System.Type.TypeHandle%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenFor">
+      <MemberSignature Language="C#" Value="public int GetTokenFor (string literal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetTokenFor(string literal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.GetTokenFor(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="literal" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="literal">Die Zeichenfolge, die verwendet werden.</param>
+        <summary>Ruft ein Token, die im Gültigkeitsbereich des aktuellen gültigen <see cref="T:System.Reflection.Emit.DynamicILInfo" />, das ein Zeichenfolgenliteral in der zugeordneten dynamischen Methode zu verwendende darstellt.</summary>
+        <returns>Ein Token, das als Operand einer MSIL-Anweisung verwendet werden kann, die eine Zeichenfolge im Gültigkeitsbereich des aktuellen erfordert <see cref="T:System.Reflection.Emit.DynamicILInfo" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenFor">
+      <MemberSignature Language="C#" Value="public int GetTokenFor (RuntimeFieldHandle field, RuntimeTypeHandle contextType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetTokenFor(valuetype System.RuntimeFieldHandle field, valuetype System.RuntimeTypeHandle contextType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.GetTokenFor(System.RuntimeFieldHandle,System.RuntimeTypeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.RuntimeFieldHandle" />
+        <Parameter Name="contextType" Type="System.RuntimeTypeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="field">Das Feld, auf das zugegriffen werden soll.</param>
+        <param name="contextType">Der generische Typ, dem das Feld angehört.</param>
+        <summary>Ruft ein Token, die im Gültigkeitsbereich des aktuellen gültigen <see cref="T:System.Reflection.Emit.DynamicILInfo" />, ist das Feld für den angegebenen generischen Typ, ein Feld aus der zugeordneten dynamischen Methode zugegriffen werden darstellt.</summary>
+        <returns>Ein Token, das als Operand einer MSIL-Anweisung verwendet werden kann, die Felder im Bereich des aktuellen greift auf <see cref="T:System.Reflection.Emit.DynamicILInfo" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie benötigen ein Token für jedes Feld, das von der dynamischen Methode verknüpft sind, mit dem aktuellen erfolgt <xref:System.Reflection.Emit.DynamicILInfo> Objekt. Verwenden der <xref:System.Type.GetField%2A?displayProperty=nameWithType> Methode zum Abrufen einer <xref:System.Reflection.FieldInfo> für das Feld, das Sie zugreifen möchten, und verwenden Sie dann die <xref:System.Reflection.FieldInfo.FieldHandle%2A> Eigenschaft, um die <xref:System.RuntimeFieldHandle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenFor">
+      <MemberSignature Language="C#" Value="public int GetTokenFor (RuntimeMethodHandle method, RuntimeTypeHandle contextType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetTokenFor(valuetype System.RuntimeMethodHandle method, valuetype System.RuntimeTypeHandle contextType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.GetTokenFor(System.RuntimeMethodHandle,System.RuntimeTypeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.RuntimeMethodHandle" />
+        <Parameter Name="contextType" Type="System.RuntimeTypeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="method">Die Methode.</param>
+        <param name="contextType">Der generische Typ, dem die Methode gehört.</param>
+        <summary>Ruft ein Token, die im Gültigkeitsbereich des aktuellen gültigen <see cref="T:System.Reflection.Emit.DynamicILInfo" />, das eine Methode für einen generischen Typ darstellt.</summary>
+        <returns>Ein Token, das als Operand einer MSIL-Anweisung verwendet werden kann, die Methoden, wie z. B. greift auf <see cref="F:System.Reflection.Emit.OpCodes.Call" /> oder <see cref="F:System.Reflection.Emit.OpCodes.Ldtoken" />, im Gültigkeitsbereich des aktuellen <see cref="T:System.Reflection.Emit.DynamicILInfo" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie benötigen ein Token für jede Methode, die aufgerufen wird, von der dynamischen Methode verknüpft sind, mit dem aktuellen <xref:System.Reflection.Emit.DynamicILInfo> Objekt. Verwenden der <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> Methode zum Abrufen einer <xref:System.Reflection.MethodInfo> für die Methode, die Sie verwenden möchten, einen Aufruf, und klicken Sie dann die <xref:System.Reflection.MethodBase.MethodHandle%2A> Eigenschaft, um die <xref:System.RuntimeMethodHandle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCode">
+      <MemberSignature Language="C#" Value="public void SetCode (byte[] code, int maxStackSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCode(unsigned int8[] code, int32 maxStackSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.SetCode(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.Byte[]" />
+        <Parameter Name="maxStackSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="code">Ein Array, das den MSIL-Stream enthält.</param>
+        <param name="maxStackSize">Die maximale Anzahl der Elemente im Operandenstapel, wenn die Methode ausgeführt wird.</param>
+        <summary>Legt den Hauptteil von Code für die zugeordnete dynamische Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Keine Gültigkeit überprüft werden für die MSIL-Streams ausgeführt.  
+  
+ Beim Aufrufen dieser Methode eines zweiten Mal ersetzt die erste MSIL-Streams mit dem zweiten.  
+  
+ Generieren von Metadaten und MSIL erfordert Vertrautheit mit der Common Language Infrastructure (CLI)-Dokumentation, insbesondere in "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCode">
+      <MemberSignature Language="C#" Value="public void SetCode (byte* code, int codeSize, int maxStackSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCode(unsigned int8* code, int32 codeSize, int32 maxStackSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.SetCode(System.Byte*,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.Byte*" />
+        <Parameter Name="codeSize" Type="System.Int32" />
+        <Parameter Name="maxStackSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="code">Ein Zeiger auf ein Bytearray mit MSIL-Streams.</param>
+        <param name="codeSize">Die Anzahl der Bytes im MSIL-Streams.</param>
+        <param name="maxStackSize">Die maximale Anzahl der Elemente im Operandenstapel, wenn die Methode ausgeführt wird.</param>
+        <summary>Legt den Hauptteil von Code für die zugeordnete dynamische Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Keine Gültigkeit überprüft werden für die MSIL-Streams ausgeführt.  
+  
+ Beim Aufrufen dieser Methode eines zweiten Mal ersetzt die erste MSIL-Streams mit dem zweiten.  
+  
+ Generieren von Metadaten und MSIL erfordert Vertrautheit mit der Common Language Infrastructure (CLI)-Dokumentation, insbesondere in "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set." Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Reflection.Emit.DynamicILInfo.SetCode(System.Byte[],System.Int32)" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="code" />ist <see langword="null" /> und <paramref name="codeSize" /> ist größer als 0.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="codeSize" /> ist kleiner als 0.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetExceptions">
+      <MemberSignature Language="C#" Value="public void SetExceptions (byte[] exceptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetExceptions(unsigned int8[] exceptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.SetExceptions(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exceptions" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="exceptions">Ein Array, das die Ausnahmemetadaten enthält.</param>
+        <summary>Legt die Ausnahmemetadaten für die zugeordnete dynamische Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausnahmemetadaten für eine Methode definiert, die Position und Größe aller `try`, `catch`, `finally`, Filter und Fault-Blöcke. Informationen zum Layout aus diesen Metadaten finden Sie unter der Common Language Infrastructure (CLI)-Dokumentation, insbesondere in "Partition II: Metadata Definition and Semantics". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetExceptions">
+      <MemberSignature Language="C#" Value="public void SetExceptions (byte* exceptions, int exceptionsSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetExceptions(unsigned int8* exceptions, int32 exceptionsSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.SetExceptions(System.Byte*,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exceptions" Type="System.Byte*" />
+        <Parameter Name="exceptionsSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="exceptions">Ein Zeiger auf ein Bytearray, das die Ausnahmemetadaten enthält.</param>
+        <param name="exceptionsSize">Die Anzahl der Bytes, die der Ausnahmemetadaten.</param>
+        <summary>Legt die Ausnahmemetadaten für die zugeordnete dynamische Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausnahmemetadaten für eine Methode definiert, die Position und Größe aller `try`, `catch`, `finally`, Filter und Fault-Blöcke. Informationen zum Layout aus diesen Metadaten finden Sie unter der Common Language Infrastructure (CLI)-Dokumentation, insbesondere in "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Reflection.Emit.DynamicILInfo.SetExceptions(System.Byte[])" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="exceptions" />ist <see langword="null" /> und <paramref name="exceptionSize" /> ist größer als 0.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="exceptionSize" /> ist kleiner als 0.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLocalSignature">
+      <MemberSignature Language="C#" Value="public void SetLocalSignature (byte[] localSignature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLocalSignature(unsigned int8[] localSignature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.SetLocalSignature(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localSignature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="localSignature">Ein Array, das Layout der lokalen Variablen für den zugeordneten enthält <see cref="T:System.Reflection.Emit.DynamicMethod" />.</param>
+        <summary>Legt die Signatur die lokale Variable, die das Layout der lokalen Variablen für die zugeordnete dynamische Methode beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die lokale Variablensignatur beschreibt das Layout der lokalen Variablen für eine Methode. Verwenden Sie zur Vereinfachung der Erstellung der Signatur der lokalen Variablen der `static` (`Shared` in Visual Basic) <xref:System.Reflection.Emit.SignatureHelper.GetLocalVarSigHelper%2A?displayProperty=nameWithType> Methode zum Abrufen einer <xref:System.Reflection.Emit.SignatureHelper> für die lokale Signatur.  
+  
+ Informationen zu Signaturen für lokale Variablen finden Sie in der Dokumentation der Common Language Infrastructure (CLI), insbesondere in "Partition II: Metadata Definition and Semantics". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLocalSignature">
+      <MemberSignature Language="C#" Value="public void SetLocalSignature (byte* localSignature, int signatureSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLocalSignature(unsigned int8* localSignature, int32 signatureSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicILInfo.SetLocalSignature(System.Byte*,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localSignature" Type="System.Byte*" />
+        <Parameter Name="signatureSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="localSignature">Ein Array, das Layout der lokalen Variablen für den zugeordneten enthält <see cref="T:System.Reflection.Emit.DynamicMethod" />.</param>
+        <param name="signatureSize">Die Anzahl der Bytes in der Signatur.</param>
+        <summary>Legt die Signatur die lokale Variable, die das Layout der lokalen Variablen für die zugeordnete dynamische Methode beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die lokale Variablensignatur beschreibt das Layout der lokalen Variablen für eine Methode. Verwenden Sie zur Vereinfachung der Erstellung der Signatur der lokalen Variablen der `static` (`Shared` in Visual Basic) <xref:System.Reflection.Emit.SignatureHelper.GetLocalVarSigHelper%2A?displayProperty=nameWithType> Methode zum Abrufen einer <xref:System.Reflection.Emit.SignatureHelper> für die lokale Signatur.  
+  
+ Informationen zu Signaturen für lokale Variablen finden Sie in der Dokumentation der Common Language Infrastructure (CLI), insbesondere in "Partition II: Metadata Definition and Semantics". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Reflection.Emit.DynamicILInfo.SetLocalSignature(System.Byte[])" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="localSignature" />ist <see langword="null" /> und <paramref name="signatureSize" /> ist größer als 0.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="signatureSize" /> ist kleiner als 0.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

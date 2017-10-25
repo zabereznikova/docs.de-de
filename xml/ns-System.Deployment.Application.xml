@@ -1,0 +1,15 @@
+<Namespace Name="System.Deployment.Application">
+  <Docs>
+    <summary>Mit der <see cref="N:System.Deployment.Application" /> -Namespace, Sie können benutzerdefinierte Upgradeverhalten programmieren, in die ClickOnce-Anwendung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist die Hauptklasse in diesem Namespace <xref:System.Deployment.Application.ApplicationDeployment>. Sie können testen, ob es sich bei die Bereitstellung ein Update verfügbar ist, indem Sie entweder die <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdate%2A> oder <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync%2A> Methoden, die zweite Methode löst die <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted> Ereignis aus, wenn er erfolgreich abgeschlossen wurde. <xref:System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate%2A>wichtige Informationen zu Update, z. B. die Versionsnummer und ob es sich um ein erforderliches Update für den aktuellen Benutzer werden zurückgegeben. Wenn ein Update verfügbar ist, können Sie es installieren, indem Sie mit <xref:System.Deployment.Application.ApplicationDeployment.Update%2A> oder <xref:System.Deployment.Application.ApplicationDeployment.UpdateAsync%2A>; die zweite Methode löst die <xref:System.Deployment.Application.ApplicationDeployment.UpdateCompleted> Ereignis nach der Installation des Updates. Bei großen Updates erhalten Sie Benachrichtigungen zum Status über das <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdateProgressChanged> und <xref:System.Deployment.Application.ApplicationDeployment.UpdateProgressChanged> Ereignisse, und verwenden Sie die Informationen in <xref:System.ComponentModel.ProgressChangedEventArgs> Benachrichtigung des Benutzers, der den Downloadstatus.  
+  
+ Sie können auch <xref:System.Deployment.Application.ApplicationDeployment> Herunterladen großer Dateien und Assemblys bei Bedarf. Diese Dateien müssen innerhalb der Bereitstellungsmanifest-Anwendung als "optional" markiert werden, damit sie bei der Installation nicht heruntergeladen werden. Laden Sie die Dateien zu einem beliebigen Zeitpunkt während der Dauer für die Anwendung herunter, indem die <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> oder <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync%2A> Methoden. Sie können Assemblys herunterladen, bevor sie in den Arbeitsspeicher geladen werden, indem Sie einen Ereignishandler für das <xref:System.AppDomain.AssemblyResolve> Ereignis auf der <xref:System.AppDomain> Klasse. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Bedarfsgerechtes Herunterladen von Assemblys mit der API für die ClickOnce-Bereitstellung unter Verwendung des Designers](http://msdn.microsoft.com/library/59a0dd5f-1cab-4f2f-b780-0ab7399905d5).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,48 @@
+<Type Name="IDataSourceViewSchemaAccessor" FullName="System.Web.UI.IDataSourceViewSchemaAccessor">
+  <TypeSignature Language="C#" Value="public interface IDataSourceViewSchemaAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataSourceViewSchemaAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IDataSourceViewSchemaAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht einen Typkonverter auf Schemainformationen, die auf ein Objekt gespeichert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wird implementiert, indem Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding>, <xref:System.Web.UI.WebControls.MenuItemBinding>, und <xref:System.Web.UI.WebControls.DataControlField> Klassen. Diese Implementierungen von .NET Framework verwendet werden und nicht für die Verwendung in Code vorgesehen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataSourceViewSchema">
+      <MemberSignature Language="C#" Value="public object DataSourceViewSchema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSourceViewSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei der Implementierung ruft ab oder legt das Schema, das dem Objekt zugeordnet.</summary>
+        <value>Eine <see cref="T:System.Object" /> , die das Schema darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wird implementiert, indem Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding>, <xref:System.Web.UI.WebControls.MenuItemBinding>, und <xref:System.Web.UI.WebControls.DataControlField> Klassen. Diese Implementierungen von .NET Framework verwendet werden und nicht für die Verwendung in Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

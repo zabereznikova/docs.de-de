@@ -1,0 +1,170 @@
+<Type Name="Rotation3DAnimationBase" FullName="System.Windows.Media.Animation.Rotation3DAnimationBase">
+  <TypeSignature Language="C#" Value="public abstract class Rotation3DAnimationBase : System.Windows.Media.Animation.AnimationTimeline" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Rotation3DAnimationBase extends System.Windows.Media.Animation.AnimationTimeline" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.Rotation3DAnimationBase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.AnimationTimeline</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Abstrakte Klasse, die bei Implementierung einen <see cref="T:System.Windows.Media.Media3D.Rotation3D" />-Wert animiert.</summary>
+    <remarks>To be added.</remarks>
+    <block subset="none" type="overrides">
+      <para>Finden Sie unter der [Animationen-Übersicht über benutzerdefinierte](~/docs/framework/wpf/graphics-multimedia/custom-animations-overview.md) Informationen zum Erweitern der Animation-Klassen.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Rotation3DAnimationBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Rotation3DAnimationBase Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.Rotation3DAnimationBase Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationBase.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Rotation3DAnimationBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationBase" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValue">
+      <MemberSignature Language="C#" Value="public override sealed object GetCurrentValue (object defaultOriginValue, object defaultDestinationValue, System.Windows.Media.Animation.AnimationClock animationClock);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetCurrentValue(object defaultOriginValue, object defaultDestinationValue, class System.Windows.Media.Animation.AnimationClock animationClock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationBase.GetCurrentValue(System.Object,System.Object,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultOriginValue" Type="System.Object" />
+        <Parameter Name="defaultDestinationValue" Type="System.Object" />
+        <Parameter Name="animationClock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="defaultOriginValue">Der für die Animation bereitgestellte Ursprungswert, wenn die Animation keinen eigenen Anfangswert aufweist. Wenn diese Animation die erste Aufgabe in einer Kompositionskette ist werden der Basiswert der animierten Eigenschaft; Andernfalls werden die von der vorherigen Animation in der Kette zurückgegebene Wert.</param>
+        <param name="defaultDestinationValue">Der für die Animation bereitgestellte Zielwert, wenn die Animation keinen eigenen Zielwert aufweist.</param>
+        <param name="animationClock">Die <see cref="T:System.Windows.Media.Animation.AnimationClock" /> kann das Generieren der <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" /> oder <see cref="P:System.Windows.Media.Animation.Clock.CurrentProgress" /> Wert, der von der Animation zum Generieren ihres Ausgabewerts verwendet werden.</param>
+        <summary>Ruft den aktuellen Wert der Animation ab.</summary>
+        <returns>Der aktuelle Wert der Animation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Rotation3D GetCurrentValue (System.Windows.Media.Media3D.Rotation3D defaultOriginValue, System.Windows.Media.Media3D.Rotation3D defaultDestinationValue, System.Windows.Media.Animation.AnimationClock animationClock);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.Rotation3D GetCurrentValue(class System.Windows.Media.Media3D.Rotation3D defaultOriginValue, class System.Windows.Media.Media3D.Rotation3D defaultDestinationValue, class System.Windows.Media.Animation.AnimationClock animationClock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationBase.GetCurrentValue(System.Windows.Media.Media3D.Rotation3D,System.Windows.Media.Media3D.Rotation3D,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rotation3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultOriginValue" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="defaultDestinationValue" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="animationClock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="defaultOriginValue">Der für die Animation bereitgestellte Ursprungswert, wenn die Animation keinen eigenen Anfangswert aufweist. Wenn diese Animation die erste Aufgabe in einer Kompositionskette ist werden der Basiswert der animierten Eigenschaft; Andernfalls werden die von der vorherigen Animation in der Kette zurückgegebene Wert.</param>
+        <param name="defaultDestinationValue">Der für die Animation bereitgestellte Zielwert, wenn die Animation keinen eigenen Zielwert aufweist.</param>
+        <param name="animationClock">Die <see cref="T:System.Windows.Media.Animation.AnimationClock" /> kann das Generieren der <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" /> oder <see cref="P:System.Windows.Media.Animation.Clock.CurrentProgress" /> Wert, der von der Animation zum Generieren ihres Ausgabewerts verwendet werden.</param>
+        <summary>Ruft den aktuellen Wert der Animation ab.</summary>
+        <returns>Der aktuelle Wert der Animation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.Media.Media3D.Rotation3D GetCurrentValueCore (System.Windows.Media.Media3D.Rotation3D defaultOriginValue, System.Windows.Media.Media3D.Rotation3D defaultDestinationValue, System.Windows.Media.Animation.AnimationClock animationClock);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Media.Media3D.Rotation3D GetCurrentValueCore(class System.Windows.Media.Media3D.Rotation3D defaultOriginValue, class System.Windows.Media.Media3D.Rotation3D defaultDestinationValue, class System.Windows.Media.Animation.AnimationClock animationClock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Rotation3DAnimationBase.GetCurrentValueCore(System.Windows.Media.Media3D.Rotation3D,System.Windows.Media.Media3D.Rotation3D,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rotation3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultOriginValue" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="defaultDestinationValue" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="animationClock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="defaultOriginValue">Der vorgeschlagene Ursprungswert, der verwendet wird, wenn die Animation nicht über einen eigenen explizit festgelegten Startwert verfügt.</param>
+        <param name="defaultDestinationValue">Der vorgeschlagene Zielwert, der verwendet wird, wenn die Animation nicht über einen eigenen explizit festgelegten Endwert verfügt.</param>
+        <param name="animationClock">Ein <see cref="T:System.Windows.Media.Animation.AnimationClock" /> , generiert der <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" /> oder <see cref="P:System.Windows.Media.Animation.Clock.CurrentProgress" /> von der Hostanimation verwendet.</param>
+        <summary>Berechnet einen Wert, der den aktuellen Wert der zu animierenden Eigenschaft gemäß der Hostanimation darstellt.</summary>
+        <returns>Der berechnete Wert der Eigenschaft, die durch die aktuelle Animation bestimmt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `defaultOriginValue` ist die erste dieser Wert wird in der Kompositionskette sein, den Momentaufnahmenwert (sofern verfügbar) oder der Wert der Basiseigenschaft; andernfalls wird dieser Wert den Rückgabewert von der vorherigen Animation in der Kette mit einer <xref:System.Windows.Media.Animation.AnimationClock> , die sich nicht < C4 > <xref:System.Windows.Media.Animation.Clock.Stopped%2A> .  
+  
+ Die `defaultDestinationValue` ist der Basiswert, wenn die Animation wird in der ersten Kompositionsebene von Animationen in einer Eigenschaft; andernfalls ist der Wert aus der vorherigen Kompositionsebene von Animationen für die Eigenschaft der Ausgabewert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetPropertyType">
+      <MemberSignature Language="C#" Value="public override sealed Type TargetPropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TargetPropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Rotation3DAnimationBase.TargetPropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Werts ab, den diese Animation generiert.</summary>
+        <value>Der Typ des von dieser Animation erzeugten Werts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

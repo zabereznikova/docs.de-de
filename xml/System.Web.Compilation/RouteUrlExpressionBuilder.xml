@@ -1,0 +1,239 @@
+<Type Name="RouteUrlExpressionBuilder" FullName="System.Web.Compilation.RouteUrlExpressionBuilder">
+  <TypeSignature Language="C#" Value="public class RouteUrlExpressionBuilder : System.Web.Compilation.ExpressionBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RouteUrlExpressionBuilder extends System.Web.Compilation.ExpressionBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.RouteUrlExpressionBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Compilation.ExpressionBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Compilation.ExpressionEditor("System.Web.UI.Design.RouteUrlExpressionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.Compilation.ExpressionPrefix("Routes")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erstellt eine URL, die angegebene URL-Parameterwerten entspricht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.RouteUrlExpressionBuilder> -Klasse macht es möglich, die Eigenschaft eines Steuerelements an die URL einer Route festgelegt werden, indem Sie eine Liste von URL-Parameterwerten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie beim Erstellen von Markup, das einen Link mit einer URL generiert, die für eine Route formatiert sind. Die Route wird mittels definiert `http://www.contoso.com/search/{searchterm}` als URL-Muster.  
+  
+```  
+<asp:HyperLink ID="HyperLink1" runat="server"  
+               NavigateUrl="<%$ RouteUrl:searchterm=Bicycles %>">  
+  Search for Bicycles  
+</asp:HyperLink>  
+```  
+  
+ Die URL für diesen Link wäre generiert `http://www.contoso.com/search/Bicycles`.  
+  
+ Sofern die URL-Parameter der `RouteUrl` Ausdruck sind nicht ausreichend, um eine Route eindeutig zu identifizieren, müssen Sie den Routennamen einschließen. Wenn eine Webanwendung mit zwei Routen besitzt z. B. `searchterm` als einzige URL-Parameter, die Routen müsste mit Routennamen definiert werden und das Markup Hyperlink würde im folgende Beispiel ähneln:  
+  
+```  
+<asp:HyperLink ID="HyperLink1" runat="server"  
+               NavigateUrl="<%$ RouteUrl:searchterm=Bicycles,  
+               routename=BasicSearchRoute %>">  
+  Search for Bicycles  
+</asp:HyperLink>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RouteUrlExpressionBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.RouteUrlExpressionBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Compilation.RouteUrlExpressionBuilder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public override object EvaluateExpression (object target, System.Web.UI.BoundPropertyEntry entry, object parsedData, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EvaluateExpression(object target, class System.Web.UI.BoundPropertyEntry entry, object parsedData, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.RouteUrlExpressionBuilder.EvaluateExpression(System.Object,System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="entry" Type="System.Web.UI.BoundPropertyEntry" />
+        <Parameter Name="parsedData" Type="System.Object" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="target">Wird in dieser Implementierung nicht verwendet.</param>
+        <param name="entry">Die Eigenschaft, der der Ausdruck gebunden ist.</param>
+        <param name="parsedData">Wird in dieser Implementierung nicht verwendet.</param>
+        <param name="context">Eigenschaften für das Steuerelement oder die Seite.</param>
+        <summary>Erstellt eine URL, die angegebene URL-Parameterwerten und in ein URL-Format Route entspricht.</summary>
+        <returns>Die URL, die die angegebene URL-Parameterwerten und der ausgewählten Route entspricht. Die Route ist nach übereinstimmenden Routen-URL-Mustern in der angegebenen Liste von Parametern ausgewählt. Für den Fall, dass mehr als eine Route mit eine angegebene Liste von Parametern übereinstimmt, kann ein Routennamen auch angegeben werden, um anzugeben, welche route auswählen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von ASP.NET aufgerufen, wenn ein Ausdruck eines der folgenden Form im Markup gefunden wird:  
+  
+ `<%$ RouteUrl: urlparameter=value %>`  
+  
+ Diese Methode generiert die entsprechende URL für die angegebenen Werte von Route-Schlüssel für den aktuellen <xref:System.Web.Routing.Route> Objekt. Diese Methode überschreibt die <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> Methode. Ruft ab, aus der `entry` Parameter einen Verweis auf das Steuerelement an die der Ausdruck gebunden ist, ruft aus der `context` Parameter der Ausdruck ausgewertet werden soll, und ruft die <xref:System.Web.Compilation.RouteUrlExpressionBuilder.GetRouteUrl%2A> Methode zum Generieren der URL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCodeExpression">
+      <MemberSignature Language="C#" Value="public override System.CodeDom.CodeExpression GetCodeExpression (System.Web.UI.BoundPropertyEntry entry, object parsedData, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.CodeDom.CodeExpression GetCodeExpression(class System.Web.UI.BoundPropertyEntry entry, object parsedData, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.RouteUrlExpressionBuilder.GetCodeExpression(System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Web.UI.BoundPropertyEntry" />
+        <Parameter Name="parsedData" Type="System.Object" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Die Eigenschaft, der der Ausdruck gebunden ist.</param>
+        <param name="parsedData">Das Objekt, das darstellt analysiert Daten wie vom <see cref="M:System.Web.Compilation.RouteUrlExpressionBuilder.TryParseRouteExpression(System.String,System.Web.Routing.RouteValueDictionary,System.String@)" />.</param>
+        <param name="context">Eigenschaften für das Steuerelement oder die Seite.</param>
+        <summary>Gibt einen Codeausdruck, der verwendet wird, um die eigenschaftenzuweisung in der generierten Seitenklasse ausführen.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.CodeExpression" /> -Instanz, die in der Eigenschaft die Zuweisung verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn das CodeDOM für eine Seite oder ein Steuerelement erstellt wird. Die <xref:System.CodeDom.CodeExpression> zurückgegebene Objekt stellt den Codeausdruck, der der Eigenschaft die Zuweisung in der generierten Page-Klasse hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRouteUrl">
+      <MemberSignature Language="C#" Value="public static string GetRouteUrl (System.Web.UI.Control control, string expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetRouteUrl(class System.Web.UI.Control control, string expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.RouteUrlExpressionBuilder.GetRouteUrl(System.Web.UI.Control,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="expression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, dem den Ausdruck gebunden ist.</param>
+        <param name="expression">Der Ausdruck wie im Markup angegeben.</param>
+        <summary>Erstellt eine URL, die angegebene Route-Schlüssel für eine Route-URL-Format entspricht.</summary>
+        <returns>Die URL, die Routen-URL-Format des aktuellen entspricht <see cref="T:System.Web.Routing.Route" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode generiert den entsprechenden Wert für die URL durch Aufrufen der <xref:System.Web.Routing.RouteCollection.GetVirtualPath%2A> Methode der <xref:System.Web.Routing.RouteCollection> Objekt. Es ruft die <xref:System.Web.Routing.RequestContext> -Objekt aus der `control` Parameter, und es analysiert die Routenparameter und die Routenwerte aus der `expression` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="control" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Methode konnte nicht beim Analysieren des Ausdrucks, der im Markup angegeben wurde. Weitere Informationen finden Sie unter <see cref="M:System.Web.Compilation.RouteUrlExpressionBuilder.TryParseRouteExpression(System.String,System.Web.Routing.RouteValueDictionary,System.String@)" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsEvaluate">
+      <MemberSignature Language="C#" Value="public override bool SupportsEvaluate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsEvaluate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.RouteUrlExpressionBuilder.SupportsEvaluate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Ausdruck in einer Seite ausgewertet werden kann, die nicht kompiliert wird.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.RouteUrlExpressionBuilder.SupportsEvaluate%2A> Eigenschaft gibt an, ob die <xref:System.Web.Compilation.RouteUrlExpressionBuilder.EvaluateExpression%2A> Methode in der Klasse implementiert wurde und einen Wert für den Ausdruck zurückgeben kann, auf einer Seite, die nicht kompiliert wird. Die <xref:System.Web.Compilation.RouteUrlExpressionBuilder> Klasse kann Auswerten eines Ausdrucks in eine Seite, die nicht kompiliert wird. Aus diesem Grund die <xref:System.Web.Compilation.RouteUrlExpressionBuilder.SupportsEvaluate%2A> -Eigenschaft gibt immer `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseRouteExpression">
+      <MemberSignature Language="C#" Value="public static bool TryParseRouteExpression (string expression, System.Web.Routing.RouteValueDictionary routeValues, out string routeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParseRouteExpression(string expression, class System.Web.Routing.RouteValueDictionary routeValues, [out] string&amp; routeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.RouteUrlExpressionBuilder.TryParseRouteExpression(System.String,System.Web.Routing.RouteValueDictionary,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="routeValues" Type="System.Web.Routing.RouteValueDictionary" />
+        <Parameter Name="routeName" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der Ausdruck wie im Markup angegeben.</param>
+        <param name="routeValues">Die Auflistung der Schlüssel der Route und die zugehörigen Werte.</param>
+        <param name="routeName">Diese Methode zurückgibt, enthält eine Zeichenfolge, die den Namen der Route darstellt, wenn <c>Ausdruck</c> enthält einen Routenschlüssel mit dem Namen <c>RouteName</c>. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Analysiert einen Ausdruck in eine Auflistung von Routenschlüsseln und Werten und optional in einem Routennamen an.</summary>
+        <returns>
+          <see langword="true" />Wenn die Analyse erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.RouteUrlExpressionBuilder.TryParseRouteExpression%2A> -Methode entfernt führende und nachfolgende Leerzeichen aus dem Ausdruck und teilt Sie es in Schlüssel-/Wertpaaren, mit Kommas als Trennzeichen. Wenn der Routenschlüssel mit dem Namen `RouteName` gefunden wird, dass ein Wert übergeben wird, zurück in die `routeName` Parameter und nicht im `routeValues`. Andernfalls `null` zurückgegebenen `routeName`. Führende und nachfolgende Leerzeichen werden auch von den einzelnen Schlüsseln und Werten entfernt.  
+  
+ Die <xref:System.Web.Compilation.RouteUrlExpressionBuilder.TryParseRouteExpression%2A> -Methode zurückkehrt `false` , wenn der Ausdruck nicht der mindestens ein Schlüssel/Wert-Paar besteht, die im Format *Schlüssel*`=`*Wert*, und mithilfe von Kommas an Trennen Sie mehrere Paare.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

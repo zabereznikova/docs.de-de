@@ -1,0 +1,1626 @@
+<Type Name="StreamWriter" FullName="System.IO.StreamWriter">
+  <TypeSignature Language="C#" Value="public class StreamWriter : System.IO.TextWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit StreamWriter extends System.IO.TextWriter" />
+  <TypeSignature Language="DocId" Value="T:System.IO.StreamWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.TextWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert einen <see cref="T:System.IO.TextWriter" /> zum Schreiben von Zeichen in einen Stream in einer bestimmten Codierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die .NET Framework-Quellcodes für diesen Typ finden Sie unter der [Verweisquelle](http://referencesource.microsoft.com/#mscorlib/system/io/streamwriter.cs#9e38cb1c84769eba). Sie können den Quellcode online Durchsuchen, Referenz für die Offlineanzeige herunterladen und schrittweise durchlaufen (inklusive Patches und Updates) während des Debuggens; finden Sie unter [Anweisungen](http://referencesource.microsoft.com/).  
+  
+ <xref:System.IO.StreamWriter>ist für die Zeichenausgabe in einer bestimmten Codierung konzipiert, während die abgeleitete Klassen <xref:System.IO.Stream> dienen zum Byte für ein- und Ausgabe.  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ <xref:System.IO.StreamWriter>Der Standardwert ist eine Instanz des <xref:System.Text.UTF8Encoding> sofern nicht anders angegeben. Diese Instanz von `UTF8Encoding` wird daher ohne eine bytereihenfolgemarkierung (BOM), erstellt die <xref:System.Text.Encoding.GetPreamble%2A> Methode gibt ein leeres Bytearray zurück. Die Standard-UTF-8-Codierung für diesen Konstruktor löst eine Ausnahme für ungültige Bytes. Dieses Verhalten unterscheidet sich vom Verhalten des Codierungsobjekts in gebotenen der <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> Eigenschaft. Geben Sie eine BOM, und bestimmen, ob eine Ausnahme, auf das ungültige Bytes ausgelöst wird, verwenden Sie einen Konstruktor, der ein Codierungsobjekt als Parameter, wie z. B. akzeptiert <xref:System.IO.StreamWriter.%23ctor%28System.String%2CSystem.Boolean%2CSystem.Text.Encoding%29> oder <xref:System.IO.StreamWriter.%23ctor%2A>.  
+  
+ Wird standardmäßig ein <xref:System.IO.StreamWriter> ist nicht threadsicher. Finden Sie unter <xref:System.IO.TextWriter.Synchronized%2A?displayProperty=nameWithType> für ein threadsicherer Wrapper.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.IO.StreamWriter> Objekt eine Datei zu schreiben, führt die Verzeichnisse auf dem Laufwerk C, und verwendet dann, eine <xref:System.IO.StreamReader> Objekt zum Lesen und Anzeigen der einzelnen Verzeichnisname. Eine bewährte Methode besteht darin, verwenden Sie diese Objekte in einem `using` Anweisung, damit Sie ordnungsgemäß nicht verwalteten Ressourcen freigegeben werden. Die `using` Anweisung ruft automatisch <xref:System.IDisposable.Dispose%2A> für das Objekt nach Abschluss der Code, der verwendet wird. In diesem Beispiel verwendete Konstruktor wird nicht unterstützt, für die Verwendung in [!INCLUDE[win8_appstore_long](~/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!code-csharp[StreamReadWrite#1](~/samples/snippets/csharp/VS_Snippets_CLR/streamreadwrite/cs/program.cs#1)]
+ [!code-vb[StreamReadWrite#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/streamreadwrite/vb/module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Stream, in den geschrieben werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.StreamWriter" />-Klasse für den angegebenen Stream unter Verwendung der UTF-8-Codierung und der Standardpuffergröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein <xref:System.IO.StreamWriter> mit UTF-8-Codierung ohne eine Bytereihenfolge-Marke (BOM), sodass seine <xref:System.Text.Encoding.GetPreamble%2A> Methode gibt ein leeres Bytearray zurück. Die Standard-UTF-8-Codierung für diesen Konstruktor löst eine Ausnahme für ungültige Bytes. Dieses Verhalten unterscheidet sich vom Verhalten des Codierungsobjekts in gebotenen der <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> Eigenschaft. Verwenden Sie einen Konstruktor, der ein Codierungsobjekt wie z. B. als Parameter akzeptiert, um anzugeben, ob eine Ausnahme, auf das ungültige Bytes ausgelöst wird <xref:System.IO.StreamWriter.%23ctor%2A>. Die <xref:System.IO.StreamWriter.BaseStream%2A> Eigenschaft initialisiert wird, mit der `stream` Parameter. Die Position des Streams wird nicht zurückgesetzt werden.  
+  
+ Die <xref:System.IO.StreamWriter> -Objekt ruft <xref:System.IO.Stream.Dispose> zur angegebenen <xref:System.IO.Stream> Objekt beim <xref:System.IO.StreamWriter.Dispose%2A?displayProperty=nameWithType> aufgerufen wird.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, werden die Zeichen möglicherweise nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program1.cs#1)]
+ [!code-vb[System.IO.StreamWriter.ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" />ist nicht beschreibbar.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der vollständige Dateipfad, in den geschrieben werden soll. <c>Pfad</c> kann ein Dateiname sein.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.StreamWriter" />-Klasse für die angegebene Datei unter Verwendung der Standardcodierung und -puffergröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein <xref:System.IO.StreamWriter> mit UTF-8-Codierung ohne eine Bytereihenfolge-Marke (BOM), sodass seine <xref:System.Text.Encoding.GetPreamble%2A> Methode gibt ein leeres Bytearray zurück. Die Standard-UTF-8-Codierung für diesen Konstruktor löst eine Ausnahme für ungültige Bytes. Dieses Verhalten unterscheidet sich vom Verhalten des Codierungsobjekts in gebotenen der <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> Eigenschaft. Geben Sie eine BOM, und bestimmen, ob eine Ausnahme, auf das ungültige Bytes ausgelöst wird, verwenden Sie einen Konstruktor, der ein Codierungsobjekt als Parameter, wie z. B. akzeptiert <xref:System.IO.StreamWriter.%23ctor%28System.String%2CSystem.Boolean%2CSystem.Text.Encoding%29>.  
+  
+ Die `path` Parameter kann einen Dateinamen, einschließlich einer Datei auf einer Freigabe (UNC = Universal Naming Convention) sein. Wenn die Datei vorhanden ist, wird sie überschrieben; Andernfalls wird eine neue Datei erstellt.  
+  
+ Die `path` Parameter ist nicht erforderlich, um eine Datei auf dem Datenträger gespeichert werden; sie können einen beliebigen Teil eines Systems, der Zugriff mithilfe von Streams unterstützt werden.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, werden die Zeichen möglicherweise nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program5.cs#5)]
+ [!code-vb[System.IO.StreamWriter.ctor#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program5.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff wird verweigert.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="path" />enthält den Namen eines Geräts System (com1, com2, usw.).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig (er befindet sich z. B. auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise darf ein Pfad auf einer Windows-basierten Plattform nicht mehr als 248 Zeichen und ein Dateiname nicht mehr als 260 Zeichen lang sein.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="path" />enthält eine falsche oder ungültige Syntax für Dateinamen, Verzeichnisnamen oder die Syntax der Volumebezeichnung.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (System.IO.Stream stream, System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.IO.Stream,System.Text.Encoding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Stream, in den geschrieben werden soll.</param>
+        <param name="encoding">Die zu verwendende Zeichencodierung.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.StreamWriter" />-Klasse für den angegebenen Stream unter Verwendung der angegebenen Codierung und der Standardpuffergröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.IO.StreamWriter.Encoding%2A> Eigenschaft mit dem encoding-Parameter, und die <xref:System.IO.StreamWriter.BaseStream%2A> Eigenschaft mit dem Streamparameter. Die Position des Streams wird nicht zurückgesetzt werden. Weitere Informationen finden Sie unter <xref:System.IO.TextWriter.Encoding%2A>.  
+  
+ Die <xref:System.IO.StreamWriter> -Objekt ruft <xref:System.IO.Stream.Dispose> zur angegebenen <xref:System.IO.Stream> Objekt beim <xref:System.IO.StreamWriter.Dispose%2A?displayProperty=nameWithType> aufgerufen wird.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program2.cs#2)]
+ [!code-vb[System.IO.StreamWriter.ctor#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> oder <paramref name="encoding" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" />ist nicht beschreibbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (string path, bool append);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, bool append) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="append" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der vollständige Dateipfad, in den geschrieben werden soll.</param>
+        <param name="append">
+          <see langword="true" />, wenn Daten an die Datei angefügt werden sollen, <see langword="false" />, wenn die Datei überschrieben werden soll. Wenn die angegebene Datei nicht vorhanden ist, hat dieser Parameter keine Auswirkungen, und der Konstruktor erstellt eine neue Datei.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.StreamWriter" />-Klasse für die angegebene Datei unter Verwendung der Standardcodierung und -puffergröße. Wenn die Datei vorhanden ist, kann sie überschrieben oder an sie angefügt werden. Wenn die Datei nicht vorhanden ist, erstellt dieser Konstruktor eine neue Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein <xref:System.IO.StreamWriter> mit UTF-8-Codierung ohne eine Bytereihenfolge-Marke (BOM), sodass seine <xref:System.Text.Encoding.GetPreamble%2A> Methode gibt ein leeres Bytearray zurück. Die Standard-UTF-8-Codierung für diesen Konstruktor löst eine Ausnahme für ungültige Bytes. Dieses Verhalten unterscheidet sich vom Verhalten des Codierungsobjekts in gebotenen der <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> Eigenschaft. Geben Sie eine BOM, und bestimmen, ob eine Ausnahme, auf das ungültige Bytes ausgelöst wird, verwenden Sie einen Konstruktor, der ein Codierungsobjekt als Parameter, wie z. B. akzeptiert <xref:System.IO.StreamWriter.%23ctor%28System.String%2CSystem.Boolean%2CSystem.Text.Encoding%29>.  
+  
+ Die `path` Parameter kann einen Dateinamen, einschließlich einer Datei auf einer Freigabe (UNC = Universal Naming Convention) sein.  
+  
+ Die `path` Parameter ist nicht erforderlich, um eine Datei auf dem Datenträger gespeichert werden; sie können einen beliebigen Teil eines Systems, der Zugriff mithilfe von Streams unterstützt werden.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program6.cs#6)]
+ [!code-vb[System.IO.StreamWriter.ctor#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program6.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff wird verweigert.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> ist leer.  
+  
+ - oder -   
+  
+ <paramref name="path" />enthält den Namen eines Geräts System (com1, com2, usw.).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig (er befindet sich z. B. auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="path" />enthält eine falsche oder ungültige Syntax für Dateinamen, Verzeichnisnamen oder die Syntax der Volumebezeichnung.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise darf ein Pfad auf einer Windows-basierten Plattform nicht mehr als 248 Zeichen und ein Dateiname nicht mehr als 260 Zeichen lang sein.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (System.IO.Stream stream, System.Text.Encoding encoding, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Text.Encoding encoding, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.IO.Stream,System.Text.Encoding,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Stream, in den geschrieben werden soll.</param>
+        <param name="encoding">Die zu verwendende Zeichencodierung.</param>
+        <param name="bufferSize">Die Puffergröße in Byte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.StreamWriter" />-Klasse für den angegebenen Stream unter Verwendung der angegebenen Codierung und Puffergröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.IO.StreamWriter.Encoding%2A> Eigenschaft mit der `encoding` Parameter, und die <xref:System.IO.StreamWriter.BaseStream%2A> Eigenschaft mithilfe der `stream` Parameter. Die Position des Streams wird nicht zurückgesetzt werden. Weitere Informationen finden Sie unter <xref:System.IO.TextWriter.Encoding%2A>.  
+  
+ Die <xref:System.IO.StreamWriter> -Objekt ruft <xref:System.IO.Stream.Dispose> zur angegebenen <xref:System.IO.Stream> Objekt beim <xref:System.IO.StreamWriter.Dispose%2A?displayProperty=nameWithType> aufgerufen wird.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program3.cs#3)]
+ [!code-vb[System.IO.StreamWriter.ctor#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program3.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> oder <paramref name="encoding" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="bufferSize" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" />ist nicht beschreibbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (string path, bool append, System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, bool append, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.String,System.Boolean,System.Text.Encoding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="append" Type="System.Boolean" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der vollständige Dateipfad, in den geschrieben werden soll.</param>
+        <param name="append">
+          <see langword="true" />, wenn Daten an die Datei angefügt werden sollen, <see langword="false" />, wenn die Datei überschrieben werden soll. Wenn die angegebene Datei nicht vorhanden ist, hat dieser Parameter keine Auswirkungen, und der Konstruktor erstellt eine neue Datei.</param>
+        <param name="encoding">Die zu verwendende Zeichencodierung.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.StreamWriter" />-Klasse für die angegebene Datei unter Verwendung der angegebenen Codierung und Standardpuffergröße. Wenn die Datei vorhanden ist, kann sie überschrieben oder an sie angefügt werden. Wenn die Datei nicht vorhanden ist, erstellt dieser Konstruktor eine neue Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.IO.StreamWriter.Encoding%2A> Eigenschaft mit dem encoding-Parameter. Weitere Informationen finden Sie unter <xref:System.IO.TextWriter.Encoding%2A>.  
+  
+ `path`kann ein Dateinamen, einschließlich einer Datei auf einer Freigabe (UNC = Universal Naming Convention) sein.  
+  
+ `path`ist nicht erforderlich, um eine Datei auf dem Datenträger gespeichert werden. Sie können einen beliebigen Teil eines Systems werden, die Zugriff über Datenströme unterstützt.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program7.cs#7)]
+ [!code-vb[System.IO.StreamWriter.ctor#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program7.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff wird verweigert.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> ist leer.  
+  
+ - oder -   
+  
+ <paramref name="path" />enthält den Namen eines Geräts System (com1, com2, usw.).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig (er befindet sich z. B. auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="path" />enthält eine falsche oder ungültige Syntax für Dateinamen, Verzeichnisnamen oder die Syntax der Volumebezeichnung.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise darf ein Pfad auf einer Windows-basierten Plattform nicht mehr als 248 Zeichen und ein Dateiname nicht mehr als 260 Zeichen lang sein.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (System.IO.Stream stream, System.Text.Encoding encoding, int bufferSize, bool leaveOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Text.Encoding encoding, int32 bufferSize, bool leaveOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.IO.Stream,System.Text.Encoding,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Stream, in den geschrieben werden soll.</param>
+        <param name="encoding">Die zu verwendende Zeichencodierung.</param>
+        <param name="bufferSize">Die Puffergröße in Byte.</param>
+        <param name="leaveOpen">
+          <see langword="true" />, um den Datenstrom geöffnet zu lassen, nach dem das <see cref="T:System.IO.StreamWriter" />-Objekt freigegeben wurde; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.StreamWriter" />-Klasse für den angegebenen Stream unter Verwendung der angegebenen Codierung und Puffergröße und lässt optional den Stream geöffnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es sei denn, Sie legen die `leaveOpen` Parameter `true`, die <xref:System.IO.StreamWriter> -Objekt ruft <xref:System.IO.Stream.Dispose> zur angegebenen <xref:System.IO.Stream> Objekt beim <xref:System.IO.StreamWriter.Dispose%2A?displayProperty=nameWithType> aufgerufen wird.  
+  
+ Dieser Konstruktor initialisiert die <xref:System.IO.StreamWriter.Encoding%2A> Eigenschaft mithilfe der `encoding` Parameter und initialisiert die <xref:System.IO.StreamWriter.BaseStream%2A> Eigenschaft mithilfe der `stream` Parameter. Die Position des Streams wird nicht zurückgesetzt werden. Weitere Informationen finden Sie unter der <xref:System.IO.TextWriter.Encoding%2A> Eigenschaft.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program4.cs#4)]
+ [!code-vb[System.IO.StreamWriter.ctor#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> oder <paramref name="encoding" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="bufferSize" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" />ist nicht beschreibbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (string path, bool append, System.Text.Encoding encoding, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, bool append, class System.Text.Encoding encoding, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.String,System.Boolean,System.Text.Encoding,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="append" Type="System.Boolean" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der vollständige Dateipfad, in den geschrieben werden soll.</param>
+        <param name="append">
+          <see langword="true" />, wenn Daten an die Datei angefügt werden sollen, <see langword="false" />, wenn die Datei überschrieben werden soll. Wenn die angegebene Datei nicht vorhanden ist, hat dieser Parameter keine Auswirkungen, und der Konstruktor erstellt eine neue Datei.</param>
+        <param name="encoding">Die zu verwendende Zeichencodierung.</param>
+        <param name="bufferSize">Die Puffergröße in Byte.</param>
+        <summary>Initialisiert für die angegebene Datei im angegebenen Pfad eine neue Instanz der <see cref="T:System.IO.StreamWriter" />-Klasse unter Verwendung der angegebenen Codierung und Puffergröße. Wenn die Datei vorhanden ist, kann sie überschrieben oder an sie angefügt werden. Wenn die Datei nicht vorhanden ist, erstellt dieser Konstruktor eine neue Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.IO.StreamWriter.Encoding%2A> Eigenschaft mit dem encoding-Parameter. Weitere Informationen finden Sie unter <xref:System.IO.TextWriter.Encoding%2A>.  
+  
+ `path`kann ein Dateinamen, einschließlich einer Datei auf einer Freigabe (UNC = Universal Naming Convention) sein.  
+  
+ `path`ist nicht erforderlich, um eine Datei auf dem Datenträger gespeichert werden. Sie können einen beliebigen Teil eines Systems werden, die Zugriff über Datenströme unterstützt.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program8.cs#8)]
+ [!code-vb[System.IO.StreamWriter.ctor#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program8.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="path" />enthält den Namen eines Geräts System (com1, com2, usw.).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> oder <paramref name="encoding" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="bufferSize" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="path" />enthält eine falsche oder ungültige Syntax für Dateinamen, Verzeichnisnamen oder die Syntax der Volumebezeichnung.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff wird verweigert.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig (er befindet sich z. B. auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise darf ein Pfad auf einer Windows-basierten Plattform nicht mehr als 248 Zeichen und ein Dateiname nicht mehr als 260 Zeichen lang sein.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFlush">
+      <MemberSignature Language="C#" Value="public virtual bool AutoFlush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoFlush" />
+      <MemberSignature Language="DocId" Value="P:System.IO.StreamWriter.AutoFlush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der <see cref="T:System.IO.StreamWriter" /> nach jedem Aufruf von <see cref="M:System.IO.StreamWriter.Write(System.Char)" /> den Puffer in den zugrunde liegenden Stream wegschreibt, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, um <see cref="T:System.IO.StreamWriter" /> zum Entleeren des Puffers zu zwingen, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Leeren des Streams wird die zugrunde liegende Encoder nicht entleert, es sei denn, Sie explizit aufrufen <xref:System.IO.StreamWriter.Flush%2A> oder <xref:System.IO.StreamWriter.Close%2A>. Festlegen von <xref:System.IO.StreamWriter.AutoFlush%2A> auf `true` bedeutet, die Daten werden geleert werden aus dem Puffer in den Stream nach jedem Schreibvorgang, aber die Encoder-Status wird nicht geleert werden. Dadurch wird den Encoder seinen Zustand (teilweise Zeichen) beibehalten, sodass er den nächsten Block von Zeichen richtig zu codieren. Dieses Szenario betrifft UTF8 und UTF7, in denen bestimmte Zeichen nur verschlüsselt werden können, nachdem der Encoder die angrenzenden Zeichen oder Zeichen empfängt.  
+  
+ Wenn `AutoFlush` festgelegt ist, um `false`, `StreamWriter` ist dies eine begrenzte Menge an Pufferung intern und möglicherweise im Encoder aus der Codierung im übergeben. Sie erhalten eine bessere Leistung durch Festlegen `AutoFlush` auf `false`, vorausgesetzt, Sie rufen Sie immer `Close` (oder zumindest `Flush`) Wenn Sie fertig sind Schreiben mit einer `StreamWriter`.  
+  
+ Legen Sie z. B. `AutoFlush` zu `true` beim Schreiben auf einem Gerät, auf dem der Benutzer unmittelbares Feedback erwartet. `Console.Out`ist einer der folgenden Fälle: der `StreamWriter` wird intern verwendet, zum Schreiben in `Console` leert den internen Zustand mit Ausnahme der Encoder-Status nach jedem Aufruf <xref:System.IO.StreamWriter.Write%2A?displayProperty=nameWithType>.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Syntax für die Verwendung der `AutoFlush` Eigenschaft.  
+  
+ [!code-cpp[System.IO.StreamWriter#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamWriter/CPP/logger.cpp#5)]
+ [!code-csharp[System.IO.StreamWriter#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/logger.cs#5)]
+ [!code-vb[System.IO.StreamWriter#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/logger.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseStream">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Stream BaseStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream BaseStream" />
+      <MemberSignature Language="DocId" Value="P:System.IO.StreamWriter.BaseStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den zugrunde liegenden Stream ab, der eine Schnittstelle zu einem Sicherungsspeicher bildet.</summary>
+        <value>Der Stream, in den dieser <see langword="StreamWriter" /> schreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt das aktuelle <see langword="StreamWriter" />-Objekt und den zugrunde liegenden Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>.  
+  
+ Diese Implementierung der <xref:System.IO.StreamWriter.Close%2A> Aufrufe der <xref:System.IO.StreamWriter.Dispose%2A> -Methode übergibt eine `true` Wert.  
+  
+ Rufen Sie <xref:System.IO.StreamWriter.Close%2A> um sicherzustellen, dass alle Daten ordnungsgemäß in den zugrunde liegenden Stream geschrieben. Nach einem Aufruf <xref:System.IO.StreamWriter.Close%2A>, alle Vorgänge für die <xref:System.IO.StreamWriter> möglicherweise Ausnahmen ausgelöst. Wenn nicht genügend Speicherplatz auf dem Datenträger vorhanden ist, beim Aufrufen von <xref:System.IO.StreamWriter.Close%2A> wird eine Ausnahme ausgelöst.  
+  
+ Das Leeren des Streams wird die zugrunde liegende Encoder nicht entleert, es sei denn, Sie explizit aufrufen <xref:System.IO.StreamWriter.Flush%2A> oder <xref:System.IO.StreamWriter.Close%2A>. Festlegen von <xref:System.IO.StreamWriter.AutoFlush%2A> zu `true` ist, werden Daten aus dem Puffer geleert werden, in den Stream, aber die Encoder-Status wird nicht geleert werden. Dadurch wird den Encoder seinen Zustand (teilweise Zeichen) beibehalten, sodass er den nächsten Block von Zeichen richtig zu codieren. Dieses Szenario betrifft UTF8 und UTF7, in denen bestimmte Zeichen nur verschlüsselt werden können, nachdem der Encoder die angrenzenden Zeichen oder Zeichen empfängt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die `Close` Methode.  
+  
+ [!code-cpp[System.IO.StreamWriter#17](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamWriter/CPP/logger.cpp#17)]
+ [!code-csharp[System.IO.StreamWriter#17](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/logger.cs#17)]
+ [!code-vb[System.IO.StreamWriter#17](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/logger.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Text.EncoderFallbackException">Die aktuelle Codierung unterstützt nicht die Hälfte ein Unicode-Ersatzzeichenpaars anzeigen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.IO.StreamWriter" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.IO.StreamWriter> verweist. Diese Methode ruft die `Dispose`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Text.EncoderFallbackException">Die aktuelle Codierung unterstützt nicht die Hälfte ein Unicode-Ersatzzeichenpaars anzeigen.</exception>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose" />müssen Sie darauf achten, nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />.  
+  
+ Diese Methode ruft die Dispose-Methode der Basisklasse, <see cref="M:System.IO.TextWriter.Dispose(System.Boolean)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public override System.Text.Encoding Encoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.IO.StreamWriter.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Text.Encoding" /> ab, in der die Ausgabe geschrieben wird.</summary>
+        <value>Die im Konstruktor für die aktuelle Instanz angegebene <see cref="T:System.Text.Encoding" /> oder <see cref="T:System.Text.UTF8Encoding" />, sofern keine Codierung angegeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist erforderlich für einige XML-Szenarien, in denen ein Header geschrieben werden muss, enthält die Codierung von verwendet, die <xref:System.IO.StreamWriter>. Dadurch wird den XML-Code einen beliebigen nutzen <xref:System.IO.StreamWriter> und den richtigen XML-Header generieren.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ruft die Codierung des angegebenen <xref:System.IO.StreamWriter> Instanz.  
+  
+ [!code-cpp[System.IO.StreamWriter#11](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamWriter/CPP/logger.cpp#11)]
+ [!code-csharp[System.IO.StreamWriter#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/logger.cs#11)]
+ [!code-vb[System.IO.StreamWriter#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/logger.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht sämtliche Puffer für den aktuellen Writer und veranlasst die Ausgabe aller gepufferten Daten an den zugrunde liegenden Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.IO.TextWriter.Flush%2A?displayProperty=nameWithType>.  
+  
+ Das Leeren des Streams wird die zugrunde liegende Encoder nicht entleert, es sei denn, Sie explizit aufrufen `Flush` oder <xref:System.IO.StreamWriter.Close%2A>. Festlegen von <xref:System.IO.StreamWriter.AutoFlush%2A> auf `true` bedeutet, die Daten werden geleert werden aus dem Puffer in den Stream nach jedem Schreibvorgang, aber die Encoder-Status wird nicht geleert werden. Dadurch wird den Encoder seinen Zustand (teilweise Zeichen) beibehalten, sodass er den nächsten Block von Zeichen richtig zu codieren. Dieses Szenario betrifft UTF8 und UTF7, in denen bestimmte Zeichen nur verschlüsselt werden können, nachdem der Encoder die angrenzenden Zeichen oder Zeichen empfängt.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Writer ist geschlossen.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler ist aufgetreten.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Die aktuelle Codierung unterstützt nicht die Hälfte ein Unicode-Ersatzzeichenpaars anzeigen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task FlushAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task FlushAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.FlushAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Puffer für diesen Stream asynchron und veranlasst die Ausgabe aller gepufferten Daten an das zugrunde liegende Gerät.</summary>
+        <returns>Eine Aufgabe, die die asynchrone Leerung darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Stream wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.IO.StreamWriter Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.IO.StreamWriter Null" />
+      <MemberSignature Language="DocId" Value="F:System.IO.StreamWriter.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.StreamWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen <see langword="StreamWriter" /> ohne Sicherungsspeicher bereit, in den zwar geschrieben, aus dem jedoch nicht gelesen werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung `Null` Umleiten von Ausgaben zu einem `StreamWriter` belegt, die keine Ressourcen des Betriebssystems.  
+  
+ Wenn die `StreamWriter.Write` Methoden werden aufgerufen, auf `Null`, der Aufruf zurückgegeben und keine Daten tatsächlich in einen Sicherungsspeicher geschrieben werden.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der `Null` Feld.  
+  
+ [!code-cpp[System.IO.StreamWriter#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamWriter/CPP/logger.cpp#6)]
+ [!code-csharp[System.IO.StreamWriter#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/logger.cs#6)]
+ [!code-vb[System.IO.StreamWriter#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/logger.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Write(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das in den Stream zu schreibende Zeichen.</param>
+        <summary>Schreibt ein Zeichen in den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.IO.TextWriter.Write%2A?displayProperty=nameWithType>.  
+  
+ Wenn das Ende des Streams vorzeitig erreicht ist, wird das angegebene Zeichen in den zugrunde liegenden Stream geschrieben. Wenn <xref:System.IO.StreamWriter.AutoFlush%2A> ist `true`, <xref:System.IO.StreamWriter.Flush%2A> wird automatisch aufgerufen.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" />ist "true" oder die <see cref="T:System.IO.StreamWriter" /> Puffer ist voll, und die aktuelle Writer ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" />ist "true" oder der <see cref="T:System.IO.StreamWriter" /> Puffer ist voll, und der Inhalt des Puffers können nicht in den zugrunde liegenden Stream mit fester Größe geschrieben werden, da die <see cref="T:System.IO.StreamWriter" /> wird am Ende des Streams.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (char[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(char[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Write(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein Zeichenarray mit den zu schreibenden Daten. Wenn <c>Puffer</c> ist <see langword="null" />, wird nichts geschrieben.</param>
+        <summary>Schreibt ein Zeichenarray in den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.IO.TextWriter.Write%2A?displayProperty=nameWithType>.  
+  
+ Wenn das Ende des Streams vorzeitig erreicht ist, werden die angegebenen Zeichen in den zugrunde liegenden Stream geschrieben. Wenn <xref:System.IO.StreamWriter.AutoFlush%2A> ist `true`, <xref:System.IO.StreamWriter.Flush%2A> wird automatisch aufgerufen.  
+  
+ Diese Methode möglicherweise eine bessere Leistung als `Write` (`char[],``int,``int`), da es weniger Argumente überprüft wurde.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" />ist "true" oder die <see cref="T:System.IO.StreamWriter" /> Puffer ist voll, und die aktuelle Writer ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" />ist "true" oder der <see cref="T:System.IO.StreamWriter" /> Puffer ist voll, und der Inhalt des Puffers können nicht in den zugrunde liegenden Stream mit fester Größe geschrieben werden, da die <see cref="T:System.IO.StreamWriter" /> wird am Ende des Streams.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die Zeichenfolge, die in den Stream geschrieben werden soll. Wenn <c>Wert</c> ist null, wird nichts geschrieben.</param>
+        <summary>Schreibt eine Zeichenfolge in den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.IO.TextWriter.Write%2A?displayProperty=nameWithType>.  
+  
+ Das angegebene <xref:System.String> in den zugrunde liegenden Stream geschrieben, es sei denn, vorzeitig das Ende des Streams erreicht ist.  
+  
+ <xref:System.IO.StreamWriter.Flush%2A>wird automatisch aufgerufen, wenn <xref:System.IO.StreamWriter.AutoFlush%2A> ist `true`. Wenn `value` ist `null`, keine Einträge werden geschrieben.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" />ist "true" oder die <see cref="T:System.IO.StreamWriter" /> Puffer ist voll, und die aktuelle Writer ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" />ist "true" oder der <see cref="T:System.IO.StreamWriter" /> Puffer ist voll, und der Inhalt des Puffers können nicht in den zugrunde liegenden Stream mit fester Größe geschrieben werden, da die <see cref="T:System.IO.StreamWriter" /> wird am Ende des Streams.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Write(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein Zeichenarray, das die zu schreibenden Daten enthält.</param>
+        <param name="index">Die Zeichenposition im Puffer, an der mit dem Lesen von Daten begonnen werden soll.</param>
+        <param name="count">Die maximale Anzahl der zu schreibenden Zeichen.</param>
+        <summary>Schreibt ein Teilarray von Zeichen in den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.IO.TextWriter.Write%2A?displayProperty=nameWithType>.  
+  
+ Zeichen aus gelesen werden `buffer` beginnend `index` und sich über fortsetzend `index` + (`count` - 1). Alle Zeichen werden in den zugrunde liegenden Stream geschrieben, es sei denn, das Ende der zugrunde liegende Stream vorzeitig erreicht ist. <xref:System.IO.StreamWriter.Flush%2A>wird automatisch aufgerufen, wenn <xref:System.IO.StreamWriter.AutoFlush%2A> ist `true`.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ In diesem Beispiel schreibt acht Zeichen aus einem Array von 13-Element in eine Datei, die auf das dritte Element des Arrays ab.  
+  
+ [!code-cpp[Classic StreamWriter.Write2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic StreamWriter.Write2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic StreamWriter.Write2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic StreamWriter.Write2 Example/CS/source.cs#1)]
+ [!code-vb[Classic StreamWriter.Write2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic StreamWriter.Write2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Pufferlänge minus <paramref name="index" /> ist kleiner als <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> oder <paramref name="count" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" />ist "true" oder die <see cref="T:System.IO.StreamWriter" /> Puffer ist voll, und die aktuelle Writer ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" />ist "true" oder der <see cref="T:System.IO.StreamWriter" /> Puffer ist voll, und der Inhalt des Puffers können nicht in den zugrunde liegenden Stream mit fester Größe geschrieben werden, da die <see cref="T:System.IO.StreamWriter" /> wird am Ende des Streams.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteAsync(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das in den Stream zu schreibende Zeichen.</param>
+        <summary>Schreibt ein Zeichen asynchron in den Stream.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Schreibvorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein einzelnes Zeichen geschrieben (der Buchstabe "a") in eine Textdatei mit der <xref:System.IO.StreamWriter.WriteAsync%28System.Char%29> Methode.  
+  
+ [!code-csharp[System.IO.StreamWriter#20](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example20.cs#20)]
+ [!code-vb[System.IO.StreamWriter#20](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example20.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das StreamWriter wurde verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die StreamWriter wird derzeit von einem vorherigen Schreibvorgang verwendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die Zeichenfolge, die in den Stream geschrieben werden soll. Wenn <c>Wert</c> ist <see langword="null" />, wird nichts geschrieben.</param>
+        <summary>Schreibt eine Zeichenfolge asynchron in den Stream.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Schreibvorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Zeichenfolge in eine Textdatei zu schreiben, mit der <xref:System.IO.StreamWriter.WriteAsync%28System.String%29> Methode.  
+  
+ [!code-csharp[System.IO.StreamWriter#21](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example21.cs#21)]
+ [!code-vb[System.IO.StreamWriter#21](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example21.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das StreamWriter wurde verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die StreamWriter wird derzeit von einem vorherigen Schreibvorgang verwendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteAsync(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein Zeichenarray, das die zu schreibenden Daten enthält.</param>
+        <param name="index">Die Zeichenposition im Puffer, an der mit dem Lesen von Daten begonnen werden soll.</param>
+        <param name="count">Die maximale Anzahl der zu schreibenden Zeichen.</param>
+        <summary>Schreibt ein Teilarray von Zeichen asynchron in den Stream.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Schreibvorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Schreiben von mehreren Zeichen in eine Textdatei mit der <xref:System.IO.StreamWriter.WriteAsync%28System.Char%5B%5D%2CSystem.Int32%2CSystem.Int32%29> Methode.  
+  
+ [!code-csharp[System.IO.StreamWriter#24](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example24.cs#24)]
+ [!code-vb[System.IO.StreamWriter#24](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example24.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="index" /> plus <paramref name="count" /> ist größer als die Pufferlänge.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> oder <paramref name="count" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das StreamWriter wurde verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die StreamWriter wird derzeit von einem vorherigen Schreibvorgang verwendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteLineAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteLineAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteLineAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt ein Zeichen für den Zeilenabschluss asynchron in den Stream.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Schreibvorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die für den Zeilenabschluss wird definiert, indem die <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das StreamWriter wurde verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die StreamWriter wird derzeit von einem vorherigen Schreibvorgang verwendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteLineAsync (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteLineAsync(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteLineAsync(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das in den Stream zu schreibende Zeichen.</param>
+        <summary>Schreibt ein Zeichen, gefolgt von einem Zeichen für den Zeilenabschluss asynchron in den Stream.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Schreibvorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die für den Zeilenabschluss wird definiert, indem die <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein einzelnes Zeichen geschrieben (der Buchstabe "a") zu einer Zeile in einer Textdatei, gefolgt von einer anderen Zeile, die ein einzelnes Zeichen (dem Buchstaben "b"), indem enthält die <xref:System.IO.StreamWriter.WriteLineAsync%28System.Char%29> Methode.  
+  
+ [!code-csharp[System.IO.StreamWriter#22](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example22.cs#22)]
+ [!code-vb[System.IO.StreamWriter#22](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example22.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das StreamWriter wurde verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die StreamWriter wird derzeit von einem vorherigen Schreibvorgang verwendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteLineAsync (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteLineAsync(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteLineAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu schreibende Zeichenfolge. Wenn der Wert <see langword="null" /> ist, wird nur ein Zeichen für den Zeilenabschluss geschrieben.</param>
+        <summary>Schreibt eine Zeichenfolge, gefolgt von einem Zeichen für den Zeilenabschluss, asynchron in den Stream.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Schreibvorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die für den Zeilenabschluss wird definiert, indem die <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei Zeilen zu schreiben, die mithilfe von Zeichenfolgenwerten in eine Textdatei bestehen die <xref:System.IO.StreamWriter.WriteLineAsync%28System.String%29> Methode.  
+  
+ [!code-csharp[System.IO.StreamWriter#23](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example23.cs#23)]
+ [!code-vb[System.IO.StreamWriter#23](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example23.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das StreamWriter wurde verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die StreamWriter wird derzeit von einem vorherigen Schreibvorgang verwendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteLineAsync (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteLineAsync(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das Zeichenarray, aus dem Daten geschrieben werden sollen.</param>
+        <param name="index">Die Zeichenposition im Puffer, an der mit dem Lesen von Daten begonnen werden soll.</param>
+        <param name="count">Die maximale Anzahl der zu schreibenden Zeichen.</param>
+        <summary>Schreibt ein Teilarray von Zeichen, gefolgt von einem Zeichen für den Zeilenabschluss, asynchron in den Stream.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Schreibvorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die für den Zeilenabschluss wird definiert, indem die <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Schreiben von Zeichen in zwei separate Zeilen in einer Textdatei mithilfe der <xref:System.IO.StreamWriter.WriteLineAsync%28System.Char%5B%5D%2CSystem.Int32%2CSystem.Int32%29> Methode. Die erste Zeile enthält den ersten 11 Zeichen aus der Zeichenfolge (die Buchstaben "Erste Zeile" von einem Leerzeichen gefolgt). Die zweite Zeile enthält die übrigen Zeichen aus der Zeichenfolge (die Buchstaben "und die zweite Zeile").  
+  
+ [!code-csharp[System.IO.StreamWriter#25](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example25.cs#25)]
+ [!code-vb[System.IO.StreamWriter#25](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example25.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="index" /> plus <paramref name="count" /> ist größer als die Pufferlänge.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> oder <paramref name="count" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das StreamWriter wurde verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die StreamWriter wird derzeit von einem vorherigen Schreibvorgang verwendet.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

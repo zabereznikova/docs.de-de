@@ -1,0 +1,6 @@
+<Namespace Name="System.Net.Security">
+  <Docs>
+    <summary>Die <see cref="N:System.Net.Security" /> -Namespace stellt Netzwerkstreams für die sichere Kommunikation zwischen Hosts bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

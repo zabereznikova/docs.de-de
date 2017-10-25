@@ -1,0 +1,140 @@
+<Type Name="ModifierKeysValueSerializer" FullName="System.Windows.Input.ModifierKeysValueSerializer">
+  <TypeSignature Language="C#" Value="public class ModifierKeysValueSerializer : System.Windows.Markup.ValueSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ModifierKeysValueSerializer extends System.Windows.Markup.ValueSerializer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ModifierKeysValueSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.ValueSerializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert Instanzen von <see cref="T:System.String" /> in <see cref="T:System.Windows.Input.ModifierKeys" />-Instanzen und umgekehrt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird in der Regel nur von verwendet die <xref:System.Windows.Markup.Primitives.MarkupWriter> für Serialisierungszwecke.  
+  
+<a name="xamlTextUsage_ModifierKeysValueSerializer"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModifierKeysValueSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ModifierKeysValueSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.ModifierKeysValueSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFromString">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFromString (string value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFromString(string value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ModifierKeysValueSerializer.CanConvertFromString(System.String,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Zeichenfolge, die für die Konvertierung ausgewertet werden soll.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.String" />-Objekt in eine Instanz von <see cref="T:System.Windows.Input.ModifierKeys" /> konvertiert werden kann.</summary>
+        <returns>Gibt immer <see langword="true" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertToString">
+      <MemberSignature Language="C#" Value="public override bool CanConvertToString (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertToString(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ModifierKeysValueSerializer.CanConvertToString(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die Modifizierer-Schlüssel für die Konvertierung ausgewertet werden soll.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Windows.Input.ModifierKeys" /> konvertiert werden kann, um eine <see cref="T:System.String" />.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value" /> in einen <see cref="T:System.String" /> konvertiert werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFromString">
+      <MemberSignature Language="C#" Value="public override object ConvertFromString (string value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFromString(string value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ModifierKeysValueSerializer.ConvertFromString(System.String,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die Zeichenfolge, die in ein <see cref="T:System.Windows.Input.ModifierKeys" />-Element konvertiert werden soll.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Konvertiert eine <see cref="T:System.String" /> in einem <see cref="T:System.Windows.Input.ModifierKeys" /> Wert.</summary>
+        <returns>Eine neue Instanz von <see cref="T:System.Windows.Input.ModifierKeys" /> anhand des angegebenen <paramref name="value" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToString">
+      <MemberSignature Language="C#" Value="public override string ConvertToString (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ConvertToString(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ModifierKeysValueSerializer.ConvertToString(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Schlüssel in eine Zeichenfolge konvertieren.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Konvertiert eine Instanz von <see cref="T:System.Windows.Input.ModifierKeys" /> in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine invariante Zeichenfolgendarstellung des angegebenen <see cref="T:System.Windows.Input.ModifierKeys" /> Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

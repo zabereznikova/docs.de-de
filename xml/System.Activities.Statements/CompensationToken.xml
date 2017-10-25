@@ -1,0 +1,30 @@
+<Type Name="CompensationToken" FullName="System.Activities.Statements.CompensationToken">
+  <TypeSignature Language="C#" Value="public sealed class CompensationToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CompensationToken extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.CompensationToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Möglichkeit zum expliziten Bestätigen bzw. Kompensieren einer <see cref="T:System.Activities.Statements.CompensableActivity" /> bereit, und zwar nach erfolgreicher Beendigung des <see cref="P:System.Activities.Statements.CompensableActivity.Body" />s der <see cref="T:System.Activities.Statements.CompensableActivity" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Kompensierung Programmiermodell](http://msdn.microsoft.com/en-us/29e5442c-1df7-401d-a6ca-746e617cbf9f).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

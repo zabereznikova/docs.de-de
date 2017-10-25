@@ -1,0 +1,238 @@
+<Type Name="HttpListenerElement" FullName="System.Net.Configuration.HttpListenerElement">
+  <TypeSignature Language="C#" Value="public sealed class HttpListenerElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpListenerElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.HttpListenerElement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die HttpListener-Element in der Konfigurationsdatei dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse entspricht dem \<HttpListener >-Element (Netzwerkeinstellungen)-Konfigurationselement. Diese Klasse bietet programmgesteuerten Zugriff auf Informationen, die in Konfigurationsdateien gespeichert werden kann.  
+  
+ Die <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> Eigenschaft gibt an, ob <xref:System.Net.HttpListener> verwendet den unformatierten URI ohne Escapezeichen anstelle des konvertierten URI, in dem alle Prozentzeichen codiert Werte konvertiert und andere Normalisierungsschritte unternommen werden.  
+  
+ Wenn eine <xref:System.Net.HttpListener> Instanz empfängt eine Anforderung über die `http.sys` Service, erstellt er eine Instanz der URI-Zeichenfolge, die von bereitgestellte `http.sys`, und verfügbar gemacht wird, als die <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Die `http.sys` Dienst macht zwei Zeichenfolgen der Anfrage-URI:  
+  
+-   RAW-URI  
+  
+-   Konvertierte URI  
+  
+ Der unformatierte URI ist der <xref:System.Uri?displayProperty=nameWithType> in der Anforderungszeile einer HTTP-Anforderung bereitgestellt:  
+  
+ `GET /path/`  
+  
+ `Host: www.contoso.com`  
+  
+ Der unformatierte URI gebotenen `http.sys` für die oben genannte Anforderung ist "/ Path /". Dies stellt die Zeichenfolge, die das HTTP-Verb folgt, da sie über das Netzwerk gesendet wurden.  
+  
+ Die `http.sys` Dienst erstellt einen konvertierten URI aus der Informationen in der Anforderung mithilfe den in der Anforderungszeile HTTP-URI und der Hostheader, um zu bestimmen, den Ursprungsserver die Anforderung weitergeleitet werden sollen. Dies erfolgt durch Vergleichen der Informationen aus der Anforderung mit einem Satz von registrierten URI-Präfixen. Die HTTP-Server-SDK-Dokumentation bezieht sich auf diesen konvertierten URI als die [HTTP_COOKED_URL](http://go.microsoft.com/fwlink/?LinkID=166108) Struktur.  
+  
+ Damit die Anforderung mit registrierten URI-Präfixe verglichen werden können, muss eine Normalisierung der Anforderung erfolgen. Für das Beispiel oben des konvertierten URI würde wie folgt lauten:  
+  
+ `http://www.contoso.com/path/`  
+  
+ Die `http.sys` service kombiniert die <xref:System.Uri.Host%2A?displayProperty=nameWithType> Eigenschaftswert und die Zeichenfolge in der Anforderungszeile, um einen konvertierten URI zu erstellen. Darüber hinaus `http.sys` und die <xref:System.Uri?displayProperty=nameWithType> Klasse auch folgendermaßen vorgehen:  
+  
+-   Alle Prozentangaben codierte un-Escapezeichen.  
+  
+-   Konvertiert Prozentzeichen codiert nicht-ASCII-Zeichen in eine UTF-16-Zeichen-Darstellung. Beachten Sie, dass UTF-8 und ANSI/DBCS-Zeichen sowie Unicode-Zeichen (Unicode-Codierung mit dem % uXXXX-Format) unterstützt werden.  
+  
+-   Führt andere Normalisierungsschritte, ebenso wie die Pfad-Komprimierung an.  
+  
+ Da die Anforderung keine Informationen enthält über die Codierung für Werte Prozentzeichen codiert möglich, Bestimmen der richtigen Codierung nur durch das Analysieren der Prozentzeichen codiert Werte möglicherweise nicht.  
+  
+ Aus diesem Grund `http.sys` bietet zwei Registrierungsschlüssel zum Ändern des Prozesses:  
+  
+|-Registrierungsschlüssel|Standardwert|Beschreibung|  
+|------------------|-------------------|-----------------|  
+|EnableNonUTF8|1|Wenn der Wert 0, `http.sys` akzeptiert nur UTF-8-codierte URLs.<br /><br /> Wenn ungleich 0 (null), `http.sys` auch ANSI-codiert oder DBCS-codierte URLs in Anforderungen akzeptiert.|  
+|FavorUTF8|1|Wenn ungleich 0 (null), `http.sys` immer versucht, eine URL als UTF-8 zuerst decodiert werden, wenn dieser Konvertierung ein Fehler auftritt und EnableNonUTF8 ungleich NULL ist, "http.sys" und dann versucht, die als ANSI oder DBCS decodiert werden.<br /><br /> Wenn der Wert 0 (und EnableNonUTF8 ist ungleich null), `http.sys` versucht, die als ANSI oder DBCS; Wenn für das decodiert nicht erfolgreich ist, versucht eine UTF-8-Konvertierung.|  
+  
+ Wenn <xref:System.Net.HttpListener> eine Anforderung empfängt, verwendet es den konvertierten URI aus `http.sys` als Eingabe in die <xref:System.Net.HttpListenerRequest.Url%2A> Eigenschaft.  
+  
+ Es ist erforderlich für die Unterstützung von Zeichen als Buchstaben und Zahlen in URIs. Ein Beispiel ist der folgende URI, die verwendet wird, um Kundeninformationen für Kunden abrufen Nummer "1/3812":  
+  
+ `http://www.contoso.com/Customer('1%2F3812')/`  
+  
+ Beachten Sie das Prozentzeichen codiert Schrägstrich in der Uri (% 2F). Dies ist erforderlich, da in diesem Fall die Schrägstrich Daten und kein Pfadtrennzeichen darstellt.  
+  
+ Die Zeichenfolge an den Uri-Konstruktor übergeben wird, führen zu den folgenden URI:  
+  
+ `http://www.contoso.com/Customer('1/3812')/`  
+  
+ Aufteilen des Pfads in seine Segmente würde dazu führen, dass die folgenden Elemente:  
+  
+ `Customer('1`  
+  
+ `3812')`  
+  
+ Dies ist nicht die Absicht des Absenders der Anforderung.  
+  
+ Wenn die <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> Eigenschaft auf "false" festgelegt ist bei der <xref:System.Net.HttpListener> eine Anforderung empfängt, verwendet es den unformatierten URI anstelle des konvertierten URI aus `http.sys` als Eingabe in die <xref:System.Net.HttpListenerRequest.Url%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpListenerElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.HttpListenerElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Configuration.HttpListenerElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.HttpListenerElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeouts">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.HttpListenerTimeoutsElement Timeouts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.HttpListenerTimeoutsElement Timeouts" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.HttpListenerElement.Timeouts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("timeouts")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.HttpListenerTimeoutsElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Timeout-Elemente, die zum ab einem <see cref="T:System.Net.HttpListener" /> Objekt.</summary>
+        <value>Gibt <see cref="T:System.Net.Configuration.HttpListenerTimeoutsElement" />zurück.  
+  
+ Der Timeout-Elementen, die verwendet wird, für eine <see cref="T:System.Net.HttpListener" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnescapeRequestUrl">
+      <MemberSignature Language="C#" Value="public bool UnescapeRequestUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnescapeRequestUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("unescapeRequestUrl", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der gibt an, wenn <see cref="T:System.Net.HttpListener" /> den unformatierten URI ohne Escapezeichen anstelle des konvertierten URI verwendet.</summary>
+        <value>Ein boolescher Wert, der gibt an, wenn <see cref="T:System.Net.HttpListener" /> den unformatierten URI ohne Escapezeichen anstelle des konvertierten URI verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> Eigenschaft gibt an, ob <xref:System.Net.HttpListener> verwendet den unformatierten URI ohne Escapezeichen anstelle des konvertierten URI, in dem alle Prozentzeichen codiert Werte konvertiert und andere Normalisierungsschritte unternommen werden.  
+  
+ Wenn eine <xref:System.Net.HttpListener> Instanz empfängt eine Anforderung über die `http.sys` Service, erstellt er eine Instanz der URI-Zeichenfolge, die von bereitgestellte `http.sys`, und verfügbar gemacht wird, als die <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Die `http.sys` Dienst macht zwei Zeichenfolgen der Anfrage-URI:  
+  
+-   RAW-URI  
+  
+-   Konvertierte URI  
+  
+ Der unformatierte URI ist der <xref:System.Uri?displayProperty=nameWithType> in der Anforderungszeile einer HTTP-Anforderung bereitgestellt:  
+  
+ `GET /path/`  
+  
+ `Host: www.contoso.com`  
+  
+ Der unformatierte URI gebotenen `http.sys` für die oben genannte Anforderung ist "/ Path /". Dies stellt die Zeichenfolge, die das HTTP-Verb folgt, da sie über das Netzwerk gesendet wurden.  
+  
+ Die `http.sys` Dienst erstellt einen konvertierten URI aus der Informationen in der Anforderung mithilfe den in der Anforderungszeile HTTP-URI und der Hostheader, um zu bestimmen, den Ursprungsserver die Anforderung weitergeleitet werden sollen. Dies erfolgt durch Vergleichen der Informationen aus der Anforderung mit einem Satz von registrierten URI-Präfixen. Die HTTP-Server-SDK-Dokumentation bezieht sich auf diesen konvertierten URI als die [HTTP_COOKED_URL](http://go.microsoft.com/fwlink/?LinkID=166108) Struktur.  
+  
+ Damit die Anforderung mit registrierten URI-Präfixe verglichen werden können, muss eine Normalisierung der Anforderung erfolgen. Für das Beispiel oben des konvertierten URI würde wie folgt lauten:  
+  
+ `http://www.contoso.com/path/`  
+  
+ Die `http.sys` service kombiniert die <xref:System.Uri.Host%2A?displayProperty=nameWithType> Eigenschaftswert und die Zeichenfolge in der Anforderungszeile, um einen konvertierten URI zu erstellen. Darüber hinaus `http.sys` und die <xref:System.Uri?displayProperty=nameWithType> Klasse auch folgendermaßen vorgehen:  
+  
+-   Alle Prozentangaben codierte un-Escapezeichen.  
+  
+-   Konvertiert Prozentzeichen codiert nicht-ASCII-Zeichen in eine UTF-16-Zeichen-Darstellung. Beachten Sie, dass UTF-8 und ANSI/DBCS-Zeichen sowie Unicode-Zeichen (Unicode-Codierung mit dem % uXXXX-Format) unterstützt werden.  
+  
+-   Führt andere Normalisierungsschritte, ebenso wie die Pfad-Komprimierung an.  
+  
+ Da die Anforderung keine Informationen enthält über die Codierung für Werte Prozentzeichen codiert möglich, Bestimmen der richtigen Codierung nur durch das Analysieren der Prozentzeichen codiert Werte möglicherweise nicht.  
+  
+ Aus diesem Grund `http.sys` bietet zwei Registrierungsschlüssel zum Ändern des Prozesses:  
+  
+|-Registrierungsschlüssel|Standardwert|Beschreibung|  
+|------------------|-------------------|-----------------|  
+|EnableNonUTF8|1|Wenn der Wert 0, `http.sys` akzeptiert nur UTF-8-codierte URLs.<br /><br /> Wenn ungleich 0 (null), `http.sys` auch ANSI-codiert oder DBCS-codierte URLs in Anforderungen akzeptiert.|  
+|FavorUTF8|1|Wenn ungleich 0 (null), `http.sys` immer versucht, eine URL als UTF-8 zuerst decodiert werden, wenn dieser Konvertierung ein Fehler auftritt und EnableNonUTF8 ungleich NULL ist, "http.sys" und dann versucht, die als ANSI oder DBCS decodiert werden.<br /><br /> Wenn der Wert 0 (und EnableNonUTF8 ist ungleich null), `http.sys` versucht, die als ANSI oder DBCS; Wenn für das decodiert nicht erfolgreich ist, versucht eine UTF-8-Konvertierung.|  
+  
+ Wenn <xref:System.Net.HttpListener> eine Anforderung empfängt, verwendet es den konvertierten URI aus `http.sys` als Eingabe in die <xref:System.Net.HttpListenerRequest.Url%2A> Eigenschaft.  
+  
+ Es ist erforderlich für die Unterstützung von Zeichen als Buchstaben und Zahlen in URIs. Ein Beispiel ist der folgende URI, die verwendet wird, um Kundeninformationen für Kunden abrufen Nummer "1/3812":  
+  
+ `http://www.contoso.com/Customer('1%2F3812')/`  
+  
+ Beachten Sie das Prozentzeichen codiert Schrägstrich in der Uri (% 2F). Dies ist erforderlich, da in diesem Fall die Schrägstrich Daten und kein Pfadtrennzeichen darstellt.  
+  
+ Die Zeichenfolge an den Uri-Konstruktor übergeben wird, führen zu den folgenden URI:  
+  
+ `http://www.contoso.com/Customer('1/3812')/`  
+  
+ Aufteilen des Pfads in seine Segmente würde dazu führen, dass die folgenden Elemente:  
+  
+ `Customer('1`  
+  
+ `3812')`  
+  
+ Dies ist nicht die Absicht des Absenders der Anforderung.  
+  
+ Wenn die <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> Eigenschaft auf "false" festgelegt ist bei der <xref:System.Net.HttpListener> eine Anforderung empfängt, verwendet es den unformatierten URI anstelle des konvertierten URI aus `http.sys` als Eingabe in die <xref:System.Net.HttpListenerRequest.Url%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,657 @@
+<Type Name="ITextRangeProvider" FullName="System.Windows.Automation.Provider.ITextRangeProvider">
+  <TypeSignature Language="C#" Value="public interface ITextRangeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITextRangeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.ITextRangeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("5347ad7b-c355-46f8-aff5-909033582f63")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Methoden und Eigenschaften zur Unterstützung von Benutzeroberflächenautomatisierungs-Client beim Zugriff auf einen Abschnitt fortlaufenden Texts in einem Textcontainer, der implementiert <see cref="T:System.Windows.Automation.Provider.ITextProvider" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert ein Benutzeroberflächenautomatisierungs-Anbieter, die unterstützen, muss die <xref:System.Windows.Automation.TextPattern> -Steuerelementmuster.  
+  
+ Ein <xref:System.Windows.Automation.Text.TextPatternRange> darstellen kann, eine Einfügemarke, eine Teilmenge oder aller der Text in einem <xref:System.Windows.Automation.TextPattern> Container.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddToSelection">
+      <MemberSignature Language="C#" Value="public void AddToSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddToSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.AddToSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt Elemente zur Auflistung markierter Textbereiche in einem Textcontainer hinzu, der mehrere, nicht zusammenhängende Auswahlbereiche unterstützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Einfügemarke wird in den Bereich der neuen Auswahl verschoben.  
+  
+ Bietet einen degenerierten Textbereich verschiebt die Einfügemarke an.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn der Textanbieter mehrere, nicht unterstützt nicht zusammenhängende Auswahlbereiche (d. h. <see cref="P:System.Windows.Automation.Provider.ITextProvider.SupportedTextSelection" /> benötigen Sie einen Wert von <see langword="Multiple" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.ITextRangeProvider Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen neuen <see cref="T:System.Windows.Automation.Provider.ITextRangeProvider" /> zurück, der mit dem ursprünglichen <see cref="T:System.Windows.Automation.Provider.ITextRangeProvider" /> identisch ist und dessen sämtliche Eigenschaften erbt.</summary>
+        <returns>Der neue Textbereich. Ein NULL-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) wird niemals zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der neue Bereich kann unabhängig vom Original bearbeitet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public bool Compare (System.Windows.Automation.Provider.ITextRangeProvider range);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Compare(class System.Windows.Automation.Provider.ITextRangeProvider range) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.Compare(System.Windows.Automation.Provider.ITextRangeProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="range" Type="System.Windows.Automation.Provider.ITextRangeProvider" />
+      </Parameters>
+      <Docs>
+        <param name="range">Ein Textbereich für den Vergleich</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob ein Textabschnitt (<see cref="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start" />-Endpunkt bis <see cref="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.End" />-Endpunkt) mit einem anderen Textabschnitt identisch ist.</summary>
+        <returns>
+          <see langword="true" />, wenn beide Textabschnitte identisch sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Wenn die verglichenen Bereich nicht vom gleichen Textanbieter stammt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareEndpoints">
+      <MemberSignature Language="C#" Value="public int CompareEndpoints (System.Windows.Automation.Text.TextPatternRangeEndpoint endpoint, System.Windows.Automation.Provider.ITextRangeProvider targetRange, System.Windows.Automation.Text.TextPatternRangeEndpoint targetEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareEndpoints(valuetype System.Windows.Automation.Text.TextPatternRangeEndpoint endpoint, class System.Windows.Automation.Provider.ITextRangeProvider targetRange, valuetype System.Windows.Automation.Text.TextPatternRangeEndpoint targetEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.CompareEndpoints(System.Windows.Automation.Text.TextPatternRangeEndpoint,System.Windows.Automation.Provider.ITextRangeProvider,System.Windows.Automation.Text.TextPatternRangeEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.Windows.Automation.Text.TextPatternRangeEndpoint" />
+        <Parameter Name="targetRange" Type="System.Windows.Automation.Provider.ITextRangeProvider" />
+        <Parameter Name="targetEndpoint" Type="System.Windows.Automation.Text.TextPatternRangeEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der <see cref="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start" />-Endpunkt oder der <see cref="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.End" />-Endpunkt des Aufrufers.</param>
+        <param name="targetRange">Der Zielbereich für den Vergleich.</param>
+        <param name="targetEndpoint">Der <see cref="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start" />-Endpunkt oder der <see cref="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.End" />-Endpunkt des Ziels.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei Textbereiche identische Endpunkte aufweisen.</summary>
+        <returns>Gibt einen negativen Wert zurück, wenn der Endpunkt des Aufrufers im Text vor dem Zielendpunkt liegt.  
+  
+ Gibt 0 (null) zurück, wenn der Endpunkt des Aufrufers an derselben Position wie der Zielendpunkt liegt.  
+  
+ Gibt einen positiven Wert zurück, wenn der Endpunkt des Aufrufers im Text nach dem Zielendpunkt liegt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Wenn <paramref name="targetRange" /> wird von einem anderen Text-Anbieter.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandToEnclosingUnit">
+      <MemberSignature Language="C#" Value="public void ExpandToEnclosingUnit (System.Windows.Automation.Text.TextUnit unit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExpandToEnclosingUnit(valuetype System.Windows.Automation.Text.TextUnit unit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.ExpandToEnclosingUnit(System.Windows.Automation.Text.TextUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unit" Type="System.Windows.Automation.Text.TextUnit" />
+      </Parameters>
+      <Docs>
+        <param name="unit">Die Texteinheit.</param>
+        <summary>Erweitert den Textbereich auf die angegebene Texteinheit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Bereich bereits eine genaue Anzahl der angegebenen Einheiten ist bleibt unverändert.  
+  
+ Ist eine Reihe von Schritten im Hintergrund in der Reihenfolge für die <xref:System.Windows.Automation.Provider.ITextRangeProvider.Move%2A> -Methode erfolgreich auszuführen.  
+  
+1.  Der Textbereich ist normalisiert. Dies bedeutet, dass dieser auf einen degenerierten Bereich am <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> -Endpunkt reduziert ist, wodurch der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkt überflüssig wird. Dieser Schritt ist erforderlich, um Mehrdeutigkeit in Situationen, in denen ein Textbereich umfasst `unit` Grenzen, z. B. "{die U} RL [http://www.microsoft.com](http://www.microsoft.com) ist in den Text eingebettet", "{" und "}" werden der Text Endpunkte des Textbereichs.  
+  
+2.  Der resultierende Bereich wird im <xref:System.Windows.Automation.Provider.ITextProvider.DocumentRange%2A> zurück an den Anfang der angeforderten `unit`-Grenze verschoben.  
+  
+3.  Der Bereich wird um die angeforderte Anzahl von <xref:System.Windows.Automation.Provider.ITextProvider.DocumentRange%2A>-Grenzen nach vorne oder nach hinten im `unit` verschoben.  
+  
+4.  Anschließend wird der Bereich von einem degenerierten Bereichszustand erweitert, indem der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>-Endpunkt um eine angeforderte `unit`-Grenze verschoben wird.  
+  
+ ![Bereichsberichtigung durch Move und ExpandToEnclosingUnit](~/add/media/uia-textpattern-moveandexpand-examples.png "Bereichsberichtigung durch Move und ExpandToEnclosingUnit")  
+Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosingUnit()  
+  
+> [!NOTE]
+>  Diese Schritte sind notwendig, da sie häufig eine Bildschirmsprachausgabe, eine vollständige Wort, Satz oder gesamte Absatz an der Einfügemarke oder virtuellen Cursorposition zu lesen ist.  
+  
+ <xref:System.Windows.Automation.Provider.ITextRangeProvider.ExpandToEnclosingUnit%2A>berücksichtigt ausgeblendeten und sichtbaren Text.  
+  
+ <xref:System.Windows.Automation.Provider.ITextRangeProvider.ExpandToEnclosingUnit%2A>orientiert sich an den nächsten größten <xref:System.Windows.Automation.Text.TextUnit> unterstützten If der angegebenen <xref:System.Windows.Automation.Text.TextUnit> wird vom Steuerelement nicht unterstützt.  
+  
+ Die Reihenfolge, in die kleinste Einheit zum größten ist unten aufgeführt.  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Character>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Format>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Word>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Line>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Paragraph>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Page>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Document>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAttribute">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider FindAttribute (int attribute, object value, bool backward);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.ITextRangeProvider FindAttribute(int32 attribute, object value, bool backward) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.FindAttribute(System.Int32,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribute" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="backward" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attribute">Das zu suchende Attribut.</param>
+        <param name="value">Der zu suchende Attributwert. Dieser Wert mit dem für das Attribut angegebenen Typ übereinstimmen.</param>
+        <param name="backward">
+          <see langword="true" />, wenn statt dem ersten der letzte vorhandene Textbereich zurückgegeben werden soll, andernfalls <see langword="false" />.</param>
+        <summary>Gibt den Teil des Textbereichs zurück, der den angegebenen Attributwert aufweist.</summary>
+        <returns>Ein Textbereich mit einem entsprechenden Attribut und Attributwert, andernfalls NULL (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es wird keine Differenzierung zwischen ausgeblendeten und sichtbaren Text.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindText">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider FindText (string text, bool backward, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.ITextRangeProvider FindText(string text, bool backward, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.FindText(System.String,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="backward" Type="System.Boolean" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="text">Die zu suchende Textzeichenfolge.</param>
+        <param name="backward">
+          <see langword="true" />, wenn statt dem ersten der letzte vorhandene Textbereich zurückgegeben werden soll, andernfalls <see langword="false" />.</param>
+        <param name="ignoreCase">
+          <see langword="true" />, wenn die Groß-/Kleinschreibung ignoriert werden soll, andernfalls <see langword="false" />.</param>
+        <summary>Gibt den Teil des Textbereichs zurück, der den angegebenen Text enthält.</summary>
+        <returns>Ein Textbereich, der mit dem angegebenen Text übereinstimmt, andernfalls NULL (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es wird keine Differenzierung zwischen ausgeblendeten und sichtbaren Text.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttributeValue">
+      <MemberSignature Language="C#" Value="public object GetAttributeValue (int attribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetAttributeValue(int32 attribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.GetAttributeValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribute" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="attribute">Das Textattribut.</param>
+        <summary>Ruft den Wert des angegebenen Attributs textbereichübergreifend ab.</summary>
+        <returns>Ruft ein Objekt ab, das den Wert des angegebenen Attributs darstellt. Beispielsweise <c>gibt GetAttributeValue(TextPattern.FontNameAttribute)</c> würde eine Zeichenfolge, die den Schriftartnamen des Textbereichs beim darstellt zurückgeben <c>GetAttributeValue(TextPattern.IsItalicAttribute)</c> einen Wert vom Typ zurückgeben würde <see cref="T:System.Boolean" />.  
+  
+ Gibt <see cref="F:System.Windows.Automation.TextPattern.MixedAttributeValue" /> zurück, wenn sich der Wert des angegebenen Attributs im Verlauf des Textbereichs ändert.  
+  
+ Gibt <see cref="F:System.Windows.Automation.AutomationElement.NotSupported" /> zurück, wenn das angegebene Attribut vom Anbieter oder Steuerelement nicht unterstützt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es wird keine Differenzierung zwischen ausgeblendeten und sichtbaren Text.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Wenn das angegebene Attribut nicht gültig ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoundingRectangles">
+      <MemberSignature Language="C#" Value="public double[] GetBoundingRectangles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64[] GetBoundingRectangles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.GetBoundingRectangles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft für jede vollständig oder teilweise sichtbare Textzeile in einem Textbereich eine Auflistung von umgebenden Rechtecken ab.</summary>
+        <returns>Ein Array von umgebenden Rechtecken für jede vollständige oder unvollständige Textzeile in einem Textbereich.  
+  
+ Ein leeres Array für einen degenerierten Bereich.  
+  
+ Ein leeres Array für einen Textbereich mit Bildschirmkoordinaten, die vollständig außerhalb des Bildschirms liegen, sich durch einen Bildlauf außerhalb des sichtbaren Bereichs befinden oder von einem überlappenden Fenster verdeckt werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple[] GetChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple[] GetChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.GetChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung aller eingebetteten Objekte ab, die innerhalb des Textbereichs liegen.</summary>
+        <returns>Eine Auflistung von untergeordneten Objekten, die innerhalb des Bereichs liegen. Untergeordnete Elemente, die sich mit dem Textbereich überlappen, von diesem jedoch nicht vollständig umschlossen sind, werden in der Auflistung ebenfalls aufgeführt.  
+  
+ Gibt eine leere Auflistung zurück, wenn keine untergeordneten Objekte vorhanden sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnclosingElement">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple GetEnclosingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple GetEnclosingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.GetEnclosingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das innerste Steuerelement zurück, das den Textbereich umschließt.</summary>
+        <returns>Das umschließende Steuerelement, i. d. R. der Textanbieter, der den Textbereich bereitstellt. Wenn der Textanbieter jedoch untergeordnete Elemente unterstützt, z. B. Tabellen oder Links, kann das umschließende Element ein Nachfolgerelement des Textanbieters darstellen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public string GetText (int maxLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetText(int32 maxLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.GetText(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxLength">Die maximale Länge der zurückzugebenden Zeichenfolge. Verwendung <c>-1</c> , wenn keine Grenze erforderlich ist.</param>
+        <summary>Ruft den reinen Text des Bereichs ab.</summary>
+        <returns>Der reine Text des Textbereichs, möglicherweise an der angegebenen <paramref name="maxLength" /> abgeschnitten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.Provider.ITextRangeProvider.GetText%2A>berücksichtigt ausgeblendeten und sichtbaren Text.  
+  
+ Wenn `maxLength` ist größer als die Länge des Textabschnitts des Aufrufers, wird die zurückgegebene Zeichenfolge den reinen Text des Textbereichs aufweisen.  
+  
+ <xref:System.Windows.Automation.Provider.ITextRangeProvider.GetText%2A>wird nicht durch die Reihenfolge der Endpunkte in den Textfluss beeinflusst. Es wird immer der Text zwischen die Start- und Endpunkte des Textbereichs in der logischen Textflusses zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Wenn <paramref name="maxLength" /> ist kleiner als -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="public int Move (System.Windows.Automation.Text.TextUnit unit, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Move(valuetype System.Windows.Automation.Text.TextUnit unit, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.Move(System.Windows.Automation.Text.TextUnit,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unit" Type="System.Windows.Automation.Text.TextUnit" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="unit">Die Grenze der Texteinheit.</param>
+        <param name="count">Die Anzahl von Texteinheiten, um die der Textbereich verschoben werden soll.  
+  
+ Bei einem positiven Wert wird der Textbereich vorwärts verschoben, bei einem negativen Wert wird der Textbereich rückwärts verschoben. Der Wert 0 (null) hat keine Auswirkungen.</param>
+        <summary>Verschiebt den Textbereich um die festgelegte Anzahl von Texteinheiten.</summary>
+        <returns>Die Anzahl von Einheiten, um die der Textbereich tatsächlich verschoben wurde. Diese kann unterhalb der angeforderten Anzahl liegen, wenn einer der neuen Textbereichsendpunkte größer oder kleiner als der jeweilige <see cref="P:System.Windows.Automation.Provider.ITextProvider.DocumentRange" />-Endpunkt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Inhalt eines Textbereichs durchlaufen werden muss, ist eine Reihe von Hintergrundschritten erforderlich, um die<xref:System.Windows.Automation.Provider.ITextRangeProvider.Move%2A>-Methode erfolgreich auszuführen.  
+  
+1.  Der Textbereich ist normalisiert. Dies bedeutet, dass dieser auf einen degenerierten Bereich am <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> -Endpunkt reduziert ist, wodurch der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkt überflüssig wird. Dieser Schritt ist erforderlich, um Mehrdeutigkeit in Situationen, in denen ein Textbereich umfasst `unit` Grenzen, z. B. "{die U} RL [http://www.microsoft.com](http://www.microsoft.com) ist in den Text eingebettet", "{" und "}" werden der Text Endpunkte des Textbereichs.  
+  
+2.  Der resultierende Bereich wird im <xref:System.Windows.Automation.Provider.ITextProvider.DocumentRange%2A> zurück an den Anfang der angeforderten `unit`-Grenze verschoben.  
+  
+3.  Der Bereich wird um die angeforderte Anzahl von <xref:System.Windows.Automation.Provider.ITextProvider.DocumentRange%2A>-Grenzen nach vorne oder nach hinten im `unit` verschoben.  
+  
+4.  Anschließend wird der Bereich von einem degenerierten Bereichszustand erweitert, indem der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>-Endpunkt um eine angeforderte `unit`-Grenze verschoben wird.  
+  
+ ![Bereichsberichtigung durch Move und ExpandToEnclosingUnit](~/add/media/uia-textpattern-moveandexpand-examples.png "Bereichsberichtigung durch Move und ExpandToEnclosingUnit")  
+Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosingUnit()  
+  
+ Der Textinhalt (oder innere Text) eines Textcontainers und ein eingebettetes Objekt, z. B. ein Link oder eine Tabellenzelle, werden in der Steuerelementansicht und der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Struktur als einzelner, kontinuierlicher Textstream verfügbar gemacht, Objektgrenzen werden dabei ignoriert.   
+  
+ ![Von eingebetteten Objekten umfasste Textbereiche. ] (~/add/media/uia-textpattern-embeddedobjecttextranges.png "Von eingebetteten Objekten umfasste Textbereiche.")  
+Beispiel für einen Textstream mit eingebetteten Objekten und deren Bereichsabschnitten  
+  
+ <xref:System.Windows.Automation.Provider.ITextRangeProvider.Move%2A>berücksichtigt ausgeblendeten und sichtbaren Text.  
+  
+ <xref:System.Windows.Automation.Provider.ITextRangeProvider.Move%2A>orientiert sich an den nächsten größten <xref:System.Windows.Automation.Text.TextUnit> unterstützten If der angegebenen <xref:System.Windows.Automation.Text.TextUnit> wird vom Steuerelement nicht unterstützt.  
+  
+ Die Reihenfolge, in die kleinste Einheit zum größten ist unten aufgeführt.  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Character>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Format>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Word>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Line>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Paragraph>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Page>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Document>  
+  
+ Der Text nicht in keiner Weise geändert wird, die der Textbereich umfasst lediglich einen anderen Teil des Texts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveEndpointByRange">
+      <MemberSignature Language="C#" Value="public void MoveEndpointByRange (System.Windows.Automation.Text.TextPatternRangeEndpoint endpoint, System.Windows.Automation.Provider.ITextRangeProvider targetRange, System.Windows.Automation.Text.TextPatternRangeEndpoint targetEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MoveEndpointByRange(valuetype System.Windows.Automation.Text.TextPatternRangeEndpoint endpoint, class System.Windows.Automation.Provider.ITextRangeProvider targetRange, valuetype System.Windows.Automation.Text.TextPatternRangeEndpoint targetEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.MoveEndpointByRange(System.Windows.Automation.Text.TextPatternRangeEndpoint,System.Windows.Automation.Provider.ITextRangeProvider,System.Windows.Automation.Text.TextPatternRangeEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.Windows.Automation.Text.TextPatternRangeEndpoint" />
+        <Parameter Name="targetRange" Type="System.Windows.Automation.Provider.ITextRangeProvider" />
+        <Parameter Name="targetEndpoint" Type="System.Windows.Automation.Text.TextPatternRangeEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der zu verschiebende Endpunkt.</param>
+        <param name="targetRange">Ein anderer Bereich vom gleichen Textanbieter.</param>
+        <param name="targetEndpoint">Ein Endpunkt des anderen Bereichs.</param>
+        <summary>Verschiebt einen Endpunkt eines Textbereichs an den angegebenen Endpunkt eines zweiten Textbereichs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser Endpunkt wird ebenfalls verschoben, wodurch ein degenerierter Bereich, und stellen Sie sicher, die richtige Reihenfolge der Endpunkte der verschobene Endpunkt überschreitet den anderen Endpunkt im gleichen Textbereich enthalten (d. h. <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ist immer kleiner oder gleich <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveEndpointByUnit">
+      <MemberSignature Language="C#" Value="public int MoveEndpointByUnit (System.Windows.Automation.Text.TextPatternRangeEndpoint endpoint, System.Windows.Automation.Text.TextUnit unit, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 MoveEndpointByUnit(valuetype System.Windows.Automation.Text.TextPatternRangeEndpoint endpoint, valuetype System.Windows.Automation.Text.TextUnit unit, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.MoveEndpointByUnit(System.Windows.Automation.Text.TextPatternRangeEndpoint,System.Windows.Automation.Text.TextUnit,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.Windows.Automation.Text.TextPatternRangeEndpoint" />
+        <Parameter Name="unit" Type="System.Windows.Automation.Text.TextUnit" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der zu verschiebende Endpunkt.</param>
+        <param name="unit">Die zu verschiebende Texteinheit.</param>
+        <param name="count">Die Anzahl der Einheiten, um die verschoben werden sollen. Bei einem positiven Wert wird der Endpunkt vorwärts verschoben. Bei einem negativen Wert wird der Endpunkt rückwärts verschoben. Der Wert 0 (null) hat keine Auswirkungen.</param>
+        <summary>Verschiebt einen Endpunkt des Textbereichs um die festgelegte Anzahl von Texteinheiten innerhalb des Dokumentbereichs.</summary>
+        <returns>Die Anzahl von Einheiten, um die der Endpunkt tatsächlich verschoben wurde. Diese kann kleiner als die angeforderte Anzahl sein, wenn beim Verschieben des Endpunkts der Anfang bzw. das Ende des Dokuments erreicht wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Inhalt eines Textbereichs durchlaufen werden muss, ist eine Reihe von Hintergrundschritten erforderlich, um die<xref:System.Windows.Automation.Provider.ITextRangeProvider.Move%2A>-Methode erfolgreich auszuführen.  
+  
+1.  Der Textbereich ist normalisiert. Dies bedeutet, dass dieser auf einen degenerierten Bereich am <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> -Endpunkt reduziert ist, wodurch der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkt überflüssig wird. Dieser Schritt ist erforderlich, um Mehrdeutigkeit in Situationen, in denen ein Textbereich umfasst `unit` Grenzen, z. B. "{die U} RL [http://www.microsoft.com](http://www.microsoft.com) ist in den Text eingebettet", "{" und "}" werden der Text Endpunkte des Textbereichs.  
+  
+2.  Der resultierende Bereich wird im <xref:System.Windows.Automation.Provider.ITextProvider.DocumentRange%2A> zurück an den Anfang der angeforderten `unit`-Grenze verschoben.  
+  
+3.  Anschließend wird der Bereich von einem degenerierten Bereichszustand erweitert, indem der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>-Endpunkt um eine angeforderte `unit`-Grenze verschoben wird.  
+  
+ ![Bereichsberichtigung durch Move und ExpandToEnclosingUnit](~/add/media/uia-textpattern-moveandexpand-examples.png "Bereichsberichtigung durch Move und ExpandToEnclosingUnit")  
+Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosingUnit()  
+  
+ <xref:System.Windows.Automation.Provider.ITextRangeProvider.MoveEndpointByUnit%2A>orientiert sich an den nächsten größten <xref:System.Windows.Automation.Text.TextUnit> unterstützten If der angegebenen <xref:System.Windows.Automation.Text.TextUnit> wird vom Steuerelement nicht unterstützt.  
+  
+ Die Reihenfolge, in die kleinste Einheit zum größten ist unten aufgeführt.  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Character>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Format>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Word>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Line>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Paragraph>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Page>  
+  
+-   <xref:System.Windows.Automation.Text.TextUnit.Document>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveFromSelection">
+      <MemberSignature Language="C#" Value="public void RemoveFromSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveFromSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.RemoveFromSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt einen markierten Textabschnitt, der dem <see cref="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start" />-Endpunkt und dem <see cref="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.End" />-Endpunkt des Aufrufers entspricht, aus der Auflistung markierter Textbereiche in einem Textcontainer, der mehrere, nicht zusammenhängende Auswahlbereiche unterstützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Einfügemarke wird in den Bereich der entfernten Markierung verschoben.  
+  
+ Bietet einen degenerierten Textbereich wird die Einfügemarke verschieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn der Textanbieter mehrere, nicht unterstützt nicht zusammenhängende Auswahlbereiche (z. B. <see cref="P:System.Windows.Automation.TextPattern.SupportedTextSelection" /> benötigen Sie einen Wert von <see langword="Multiple" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollIntoView">
+      <MemberSignature Language="C#" Value="public void ScrollIntoView (bool alignToTop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ScrollIntoView(bool alignToTop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.ScrollIntoView(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="alignToTop" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="alignToTop">
+          <see langword="true" />, wenn im Textsteuerelement ein Bildlauf so durchgeführt werden soll, dass der Textbereich am oberen Rand des Anzeigebereichs ausgerichtet ist, <see langword="false" />, wenn der Bereich am unteren Rand des Anzeigebereichs ausgerichtet werden soll.</param>
+        <summary>Bewirkt, dass im Textsteuerelement ein vertikaler Bildlauf durchgeführt wird, bis der Textbereich im Anzeigebereich sichtbar ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.Provider.ITextRangeProvider.ScrollIntoView%2A>berücksichtigt ausgeblendeten und sichtbaren Text.  
+  
+ Wenn der Textbereich ausgeblendet ist, wird nur dann, wenn der ausgeblendete Text einen Anker im Sichtbereich im Textsteuerelement ein Bildlauf durchgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public void Select ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Select() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextRangeProvider.Select" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert Text im Textsteuerelement entsprechend dem <see cref="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start" />-Endpunkt und dem <see cref="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.End" />-Endpunkt des Textbereichs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ein degenerierten Textbereich bereitgestellt wird, wechselt die Einfügemarke in die <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> Endpunkt des Textbereichs.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tritt auf, wenn die Textauswahl nicht vom Textsteuerelement unterstützt wird.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

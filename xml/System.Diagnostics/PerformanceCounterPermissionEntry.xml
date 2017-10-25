@@ -1,0 +1,134 @@
+<Type Name="PerformanceCounterPermissionEntry" FullName="System.Diagnostics.PerformanceCounterPermissionEntry">
+  <TypeSignature Language="C#" Value="public class PerformanceCounterPermissionEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PerformanceCounterPermissionEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceCounterPermissionEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die kleinste Einheit der Codezugriffsberechtigungen Sicherheit, die für festgelegt ist eine <see cref="T:System.Diagnostics.PerformanceCounter" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu Code Access Security, finden Sie unter [Code Access Security](~/docs/framework/misc/code-access-security.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounterPermissionEntry (System.Diagnostics.PerformanceCounterPermissionAccess permissionAccess, string machineName, string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.PerformanceCounterPermissionAccess permissionAccess, string machineName, string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterPermissionEntry.#ctor(System.Diagnostics.PerformanceCounterPermissionAccess,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAccess" Type="System.Diagnostics.PerformanceCounterPermissionAccess" />
+        <Parameter Name="machineName" Type="System.String" />
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAccess">Eine bitweise Kombination der <see cref="T:System.Diagnostics.PerformanceCounterPermissionAccess" />-Werte. Die <see cref="P:System.Diagnostics.PerformanceCounterPermissionEntry.PermissionAccess" /> Eigenschaft auf diesen Wert festgelegt ist.</param>
+        <param name="machineName">Der Server, auf dem sich die Kategorie des Leistungsindikators "" befindet.</param>
+        <param name="categoryName">Der Name des der Leistungsindikatorkategorie (Leistungsobjekt ""), die dieser Leistungsindikator zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.PerformanceCounterPermissionEntry" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="categoryName" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="machineName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="permissionAccess" /> ist kein gültiger <see cref="T:System.Diagnostics.PerformanceCounterPermissionAccess" />-Wert.  
+  
+ - oder -   
+  
+ <paramref name="machineName" />ist kein gültigen Computernamen ein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryName">
+      <MemberSignature Language="C#" Value="public string CategoryName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterPermissionEntry.CategoryName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Leistungsindikator-Kategorienamen (Leistungsobjekt "").</summary>
+        <value>Der Name des Leistungsindikator-Kategorienamen (Leistungsobjekt "").</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public string MachineName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterPermissionEntry.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Servers, auf dem sich die Kategorie des Leistungsindikators "" befindet.</summary>
+        <value>Der Name des Servers, auf dem sich die Kategorie befindet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionAccess">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounterPermissionAccess PermissionAccess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.PerformanceCounterPermissionAccess PermissionAccess" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterPermissionEntry.PermissionAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Berechtigungsebene für den Zugriff des Eintrags ab.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Diagnostics.PerformanceCounterPermissionAccess" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

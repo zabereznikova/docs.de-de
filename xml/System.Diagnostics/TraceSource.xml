@@ -1,0 +1,1005 @@
+<Type Name="TraceSource" FullName="System.Diagnostics.TraceSource">
+  <TypeSignature Language="C#" Value="public class TraceSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TraceSource extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.TraceSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Gruppe von Methoden und Eigenschaften bereit, mit denen Anwendungen die Ausführung von Code verfolgen und Ablaufverfolgungsmeldungen ihrer jeweiligen Quelle zuordnen können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceSource>-Klasse wird von Anwendungen verwendet, um Ablaufverfolgungen zu erzeugen, die der Anwendung zugeordnet werden können. <xref:System.Diagnostics.TraceSource> stellt Ablaufverfolgungsmethoden bereit, mit denen Sie Ereignisse und Daten einfach verfolgen und Ablaufverfolgungen zu Informationszwecken ausgeben können. Ablaufverfolgungsausgabe von <xref:System.Diagnostics.TraceSource> kann durch Einstellungen in der Konfigurationsdatei gesteuert werden. Die Konfigurationsdatei befindet sich im Ordner mit der ausführbaren Datei der Anwendung und den Namen der Anwendung mit der Dateierweiterung ".config-Datei namens" hinzugefügt wurde. Beispielsweise ist der Name der Konfigurationsdatei für TraceSourceSample.exe TraceSourceSample.exe.config. Die Konfigurationsdatei kann verwendet werden, um zu bestimmen, wo die Ablaufverfolgungsinformationen gesendet werden und welche Ebenen der Aktivität sind, verfolgt werden sollen. Das folgende Beispiel zeigt den Inhalt des eine Beispielkonfigurationsdatei für die Anwendung.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <sources>  
+      <source name="TraceTest" switchName="SourceSwitch"   
+        switchType="System.Diagnostics.SourceSwitch" >  
+        <listeners>  
+          <add name="console" />  
+          <remove name ="Default" />  
+        </listeners>  
+      </source>  
+    </sources>  
+    <switches>  
+      <!-- You can set the level at which tracing is to occur -->  
+      <add name="SourceSwitch" value="Warning" />  
+        <!-- You can turn tracing off -->  
+        <!--add name="SourceSwitch" value="Off" -->  
+    </switches>  
+    <sharedListeners>  
+      <add name="console"   
+        type="System.Diagnostics.ConsoleTraceListener"   
+        initializeData="false"/>  
+    </sharedListeners>  
+    <trace autoflush="true" indentsize="4">  
+      <listeners>  
+        <add name="console" />  
+      </listeners>  
+    </trace>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ Die <xref:System.Diagnostics.TraceSource> Klasse wird durch den Namen einer Quelle, i. d. r. der Name der Anwendung identifiziert.  Die Ablaufverfolgungsmeldungen, die von einer bestimmten Komponente können durch eine bestimmte Ablaufverfolgungsquelle initiiert werden, sodass alle eingehenden Nachrichten von dieser Komponente leicht identifiziert werden.  
+  
+ <xref:System.Diagnostics.TraceSource>Ablaufverfolgungsmethoden definiert, aber tatsächlich bietet keine bestimmten Mechanismus für das Generieren und Speichern von Ablaufverfolgungsdaten. Die Ablaufverfolgungsdaten werden von Ablaufverfolgungslistenern erzeugt-Plug-ins, die von Ablaufverfolgungsquellen geladen werden kann.  
+  
+> [!NOTE]
+>  Sie sollten die Ablaufverfolgungsmethoden nicht während des Abschlusses aufrufen. Auf diese Weise kann dazu führen, ein <xref:System.ObjectDisposedException> ausgelöst wird.  
+  
+ Sie können die Ablaufverfolgungsausgabe Ziel anpassen, indem hinzufügen oder Entfernen von <xref:System.Diagnostics.TraceListener> Instanzen zu oder aus der Auflistung, die in gespeicherten der <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> Eigenschaft. Standardmäßig ist Trace-Ausgabe erstellt, mit einer Instanz von der <xref:System.Diagnostics.DefaultTraceListener> Klasse. Im vorangehenden Konfigurationsbeispiel Datei veranschaulicht Entfernen der <xref:System.Diagnostics.DefaultTraceListener> und das Hinzufügen einer <xref:System.Diagnostics.ConsoleTraceListener> um die Ausgabe der Ablaufverfolgung für die Ablaufverfolgungsquelle zu erzeugen. Weitere Informationen finden Sie unter [ &lt;Listener&gt; ](~/docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md) und [ &lt;SharedListeners&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).  
+  
+> [!NOTE]
+>  Einen Ablaufverfolgungslistener Hinzufügen der <xref:System.Diagnostics.TraceSource.Listeners%2A> Auflistung kann dazu führen, dass eine Ausnahme ausgelöst wird, während der Ablaufverfolgung, wenn eine Ressource, die vom Ablaufverfolgungslistener verwendet nicht verfügbar ist. Die Bedingungen und die Ausnahme wird ausgelöst, richten sich nach der Ablaufverfolgungslistener und können nicht aufgezählt werden, in diesem Thema. Möglicherweise empfiehlt es sich, Aufrufe der <xref:System.Diagnostics.TraceSource> Methoden in `try` / `catch` zu erkennen und Behandeln von Ausnahmen vom Ablaufverfolgungslistener Blöcke.  
+  
+ Die <xref:System.Diagnostics.SourceSwitch> Klasse bietet die Möglichkeit, um die Ablaufverfolgungsausgabe dynamisch zu steuern. Im vorangehenden Konfigurationsbeispiel-Datei zeigt, wie Sie deaktivieren, können die Ablaufverfolgung von einer Ablaufverfolgungsquelle und das Steuerelement die Ebene auf der die Ablaufverfolgung tritt auf.  Sie können den Wert des Quellschalters ändern, ohne Ihre Anwendung neu zu kompilieren. Informationen zum Verwenden der Konfigurationsdatei zum Festlegen eines Schalters finden Sie unter <xref:System.Diagnostics.Switch> und [Vorgehensweise: erstellen, initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](~/docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+  
+> [!NOTE]
+>  Wenn Sie eine Konfigurationsdatei ändern, während eine Anwendung ausgeführt wird, die Anwendung muss beendet und neu gestartet oder der <xref:System.Diagnostics.Trace.Refresh%2A> -Methode muss aufgerufen werden, damit die neuen Einstellungen wirksam werden.  
+  
+ Die <xref:System.Diagnostics.TraceEventType> Enumeration wird verwendet, um das Ereignis des Typs der ablaufverfolgungsnachricht zu definieren. Trace-Filter verwenden die <xref:System.Diagnostics.TraceEventType> zu bestimmen, ob Sie ein Ablaufverfolgungslistener erzeugt, die die Ablaufverfolgungsmeldung.  
+  
+ Die Trace-Listener können optional eine zusätzliche Ebene Filtern eines Ablaufverfolgungsfilters verfügen.  Wenn Sie ein Ablaufverfolgungslistener ein Filter zugeordnet ist, ruft der Listener die <xref:System.Diagnostics.TraceFilter.ShouldTrace%2A> -Methode für diesen Filter, um zu bestimmen, ob die Ablaufverfolgungsinformationen zu erzeugen.  
+  
+ Die Ablaufverfolgungslistener verwenden die Werte der <xref:System.Diagnostics.Trace> Klasseneigenschaften <xref:System.Diagnostics.Trace.Indent%2A>, <xref:System.Diagnostics.Trace.IndentSize%2A>, und <xref:System.Diagnostics.Trace.AutoFlush%2A> zum Formatieren der Trace-Ausgabe. Können Sie Konfigurationsdateiattribute festzulegende der <xref:System.Diagnostics.Trace.Indent%2A>, <xref:System.Diagnostics.Trace.IndentSize%2A>, und <xref:System.Diagnostics.Trace.AutoFlush%2A> Eigenschaften. Im folgenden Beispiel wird die <xref:System.Diagnostics.Trace.AutoFlush%2A> Eigenschaft `false` und die <xref:System.Diagnostics.Trace.IndentSize%2A> -Eigenschaft auf 3.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="3" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.TraceSource> Klasse, um ablaufverfolgungen an Listener weiterleitet.  Darüber hinaus wird veranschaulicht, Switches und die Filter.  
+  
+ [!code-cpp[System.Diagnostics.TraceSource2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CPP/tracesource2.cpp#1)]
+ [!code-csharp[System.Diagnostics.TraceSource2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#1)]
+ [!code-vb[System.Diagnostics.TraceSource2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceSource (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Quelle (i. d. R. der Name der Anwendung).</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.TraceSource" />-Klasse, wobei der angegebene Namen der Quelle verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Quellname wird verwendet, um ablaufverfolgungen zu identifizieren. Wird verwendet, indem eine <xref:System.Diagnostics.SourceFilter> zu bestimmen, ob ein Ablaufverfolgungslistener die Ablaufverfolgung erzeugen. Die empfohlene Vorgehensweise ist die Verwendung des Namens der Anwendung für den Quellnamen.  
+  
+> [!NOTE]
+>  Es ist nicht erforderlich, zum Erstellen eines neuen <xref:System.Diagnostics.TraceSource> Instanz für jede ablaufverfolgungsanforderung. Erstellen Sie eine <xref:System.Diagnostics.TraceSource> -Instanz und deren Verwendung für alle Trace-Anforderungen für die Anwendung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.TraceSource.%23ctor%2A> Konstruktor zum Erstellen eines neuen <xref:System.Diagnostics.TraceSource> Objekt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#9)]
+ [!code-vb[System.Diagnostics.TraceSource2#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceSource (string name, System.Diagnostics.SourceLevels defaultLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Diagnostics.SourceLevels defaultLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.#ctor(System.String,System.Diagnostics.SourceLevels)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="defaultLevel" Type="System.Diagnostics.SourceLevels" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Quelle, i. d. R. der Name der Anwendung.</param>
+        <param name="defaultLevel">Eine bitweise Kombination der Enumerationswerte, die die Standardebene der Quelle angibt, auf der die Ablaufverfolgung durchgeführt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.TraceSource" />-Klasse, wobei der angegebene Name der Quelle und die Standardebene der Quelle verwendet werden, auf der die Ablaufverfolgung durchgeführt werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Quellname wird verwendet, um ablaufverfolgungen zu identifizieren. Kann verwendet werden, indem eine <xref:System.Diagnostics.SourceSwitch> zu bestimmen, ob die Ablaufverfolgung ausgeführt wird und durch eine <xref:System.Diagnostics.SourceFilter> bestimmt, ob die Ablaufverfolgung zu erzeugen. Die Standardebene der Quelle wird verwendet, indem ein <xref:System.Diagnostics.EventTypeFilter> zu bestimmen, ob die Ablaufverfolgung ausgeführt wird basierend auf der Ebene der Quelle der Nachricht verfolgt werden sollen.  
+  
+> [!NOTE]
+>  Es ist nicht erforderlich, zum Erstellen eines neuen <xref:System.Diagnostics.TraceSource> Instanz für jede ablaufverfolgungsanforderung. Erstellen Sie eine <xref:System.Diagnostics.TraceSource> -Instanz und deren Verwendung für alle Trace-Anforderungen für die Anwendung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringDictionary Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringDictionary Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSource.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benutzerdefinierten Schalterattribute ab, die in der Anwendungskonfigurationsdatei definiert sind.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.StringDictionary" />, das die benutzerdefinierten Attribute für den Ablaufverfolgungsschalter enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceSource.Attributes%2A> Eigenschaft identifiziert, das die benutzerdefinierten Attribute, die in der Konfigurationsdatei der Anwendung verwiesen wird. Nicht referenzierte benutzerdefinierte Attribute werden nicht aufgezählt werden. Klassen, die von erben die <xref:System.Diagnostics.TraceSource> Klasse kann benutzerdefinierte Attribute hinzufügen, durch Überschreiben der <xref:System.Diagnostics.Switch.GetSupportedAttributes%2A?displayProperty=nameWithType> -Methode und ein Zeichenfolgenarray mit benutzerdefinierten Attributnamen zurückgeben.  
+  
+ Im folgenden finden Sie ein Beispiel für ein Element einer Ablaufverfolgungsquelle, das benutzerdefinierte Attribut `SecondTraceSourceAttribute`:  
+  
+```  
+<sources>  
+  <source name="TraceTest" switchName="TestSourceSwitch"   
+    switchType="Testing.MySourceSwitch, TraceSample"   
+    SecondTraceSourceAttribute="two">  
+  </source>  
+</sources>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die benutzerdefinierten Attribute für die Anzeige einer <xref:System.Diagnostics.TraceSource>.  Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#14)]
+ [!code-vb[System.Diagnostics.TraceSource2#14](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt alle Ablaufverfolgungslistener in der Auflistung der Ablaufverfolgungslistener.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceSource.Close%2A> Methodenaufrufe der <xref:System.Diagnostics.TraceListener.Close%2A> Methode der einzelnen Ablaufverfolgungslistener in der <xref:System.Diagnostics.TraceSource.Listeners%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie verwenden, können die <xref:System.Diagnostics.TraceSource.Close%2A> Methode zum Schließen alle Listener in der Auflistung. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#33](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#33)]
+ [!code-vb[System.Diagnostics.TraceSource2#33](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Ablaufverfolgungslistener aus der Auflistung der Ablaufverfolgungslistener.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceSource.Flush%2A> Methodenaufrufe der <xref:System.Diagnostics.TraceListener.Flush%2A> Methode der einzelnen Ablaufverfolgungslistener in der <xref:System.Diagnostics.TraceSource.Listeners%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie verwenden, können die <xref:System.Diagnostics.TraceSource.Flush%2A> Methode leert alle Listener in der Auflistung. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#33](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#33)]
+ [!code-vb[System.Diagnostics.TraceSource2#33](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Es wurde versucht, für die Ablaufverfolgung ein Ereignis während des Abschlusses.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedAttributes">
+      <MemberSignature Language="C#" Value="protected virtual string[] GetSupportedAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string[] GetSupportedAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.GetSupportedAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die von der Ablaufverfolgungsquelle unterstützten benutzerdefinierten Attribute ab.</summary>
+        <returns>Ein Zeichenfolgenarray, das die von der Ablaufverfolgungsquelle unterstützten benutzerdefinierten Attribute benennt, oder <see langword="null" />, wenn es keine benutzerdefinierten Attribute gibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung für <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> gibt `null`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Außerkraftsetzen der der <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> Methode zum Identifizieren der benutzerdefinierten Attribute für die `MyTraceSource` Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource#33](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/CS/program.cs#33)]
+ [!code-vb[System.Diagnostics.TraceSource#33](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/VB/program.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Diagnostics.TraceSource" /> Klasse oder einer abgeleiteten Klasse können Sie überschreiben die <see cref="M:System.Diagnostics.TraceSource.GetSupportedAttributes" /> Methode, um benutzerdefinierte Attribute für die Klasse bereitzustellen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Listeners">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.TraceListenerCollection Listeners { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.TraceListenerCollection Listeners" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSource.Listeners" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceListenerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Ablaufverfolgungslistener für die Ablaufverfolgungsquelle ab.</summary>
+        <value>Eine <see cref="T:System.Diagnostics.TraceListenerCollection" />, die die aktiven Ablaufverfolgungslistener enthält, die der Quelle zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zugreifen, und führen Operationen für den Ablaufverfolgungslistener.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSource.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Ablaufverfolgungsquelle ab.</summary>
+        <value>Der Name der Ablaufverfolgungsquelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name wird festgelegt, indem die `name` Parameter an den Konstruktor übergeben. Sie können mithilfe der Ablaufverfolgungsquelle verweisen die `name` Attribut in der Konfigurationsdatei.  
+  
+ Das folgende XML-Element zeigt auf eine Ablaufverfolgungsquelle in der Konfigurationsdatei verweisen.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <sources>  
+      <source name="TraceTest">  
+      </source>  
+    </sources>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Ablaufverfolgungsquelle im Konstruktoraufruf benennen.  Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#9)]
+ [!code-vb[System.Diagnostics.TraceSource2#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Switch">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SourceSwitch Switch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.SourceSwitch Switch" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSource.Switch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SourceSwitch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Quellschalters ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Diagnostics.SourceSwitch" />-Objekt, das den Wert des Quellschalters darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceSource.Switch%2A> Eigenschaft ermöglicht das Filtern von Nachrichten, bevor die Ablaufverfolgungsquelle Listener aufruft.  
+  
+ Der Schalter wird verwendet, zu überprüfen, ob die Trace-Aufrufe generiert oder ignoriert werden soll. Jede Trace-Methode aufruft der <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> Methode der <xref:System.Diagnostics.SourceSwitch> bestimmt, ob die Ablaufverfolgung fortzusetzen. Wenn der Aufruf zurückgegeben `true`, die Listener aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Für <see cref="P:System.Diagnostics.TraceSource.Switch" /> ist <see langword="null" /> festgelegt.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public void TraceData (System.Diagnostics.TraceEventType eventType, int id, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceData(valuetype System.Diagnostics.TraceEventType eventType, int32 id, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceData(System.Diagnostics.TraceEventType,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="eventType">Einer der Enumerationswerte, der den Ereignistyp der Ablaufverfolgungsdaten angibt.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="data">Die Ablaufverfolgungsdaten.</param>
+        <summary>Schreibt Ablaufverfolgungsdaten in die Ablaufverfolgungslistener der <see cref="P:System.Diagnostics.TraceSource.Listeners" />-Auflistung. Hierbei werden der angegebene Ereignistyp, der Ereignisbezeichner und die angegebenen Ablaufverfolgungsdaten verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceSource.TraceData%2A> Methode, z. B. die <xref:System.Diagnostics.TraceSource.TraceEvent%2A> -Methode, richtet sich automatisierten Tools, jedoch können auch das Anfügen eines zusätzlichen Objekts, z. B. eine Ausnahmeinstanz, auf die Ablaufverfolgung.  
+  
+ Die <xref:System.Diagnostics.TraceSource.TraceData%2A> Methodenaufrufe der <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A?displayProperty=nameWithType> Methode der <xref:System.Diagnostics.SourceSwitch> zurückgegebenes Objekt die <xref:System.Diagnostics.TraceSource.Switch%2A> Eigenschaft. Wenn <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> gibt `true`, <xref:System.Diagnostics.TraceSource.TraceData%2A> aufruft, das entsprechende <xref:System.Diagnostics.TraceListener.TraceData%2A> -Methode für alle Listener. Andernfalls <xref:System.Diagnostics.TraceSource.TraceData%2A> zurück, ohne Aufrufen der Methoden der Listener.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.EventLogTraceListener> Objekt ist auf maximal `id` Wert von 65.535. Wenn die `id` angegebene Wert ist größer als 65.535 sein, die <xref:System.Diagnostics.EventLogTraceListener> object verwendet 65.535.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.TraceSource.TraceData%28System.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.Object%29> Methode filtern und eine Ablaufverfolgungsmeldung an die Listener weiterleiten. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#28](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#28)]
+ [!code-vb[System.Diagnostics.TraceSource2#28](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Es wurde versucht, für die Ablaufverfolgung ein Ereignis während des Abschlusses.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public void TraceData (System.Diagnostics.TraceEventType eventType, int id, params object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceData(valuetype System.Diagnostics.TraceEventType eventType, int32 id, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceData(System.Diagnostics.TraceEventType,System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventType">Einer der Enumerationswerte, der den Ereignistyp der Ablaufverfolgungsdaten angibt.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="data">Ein Objektarray, das die Ablaufverfolgungsdaten enthält.</param>
+        <summary>Schreibt Ablaufverfolgungsdaten in die Ablaufverfolgungslistener der <see cref="P:System.Diagnostics.TraceSource.Listeners" />-Auflistung. Hierbei werden der angegebene Ereignistyp, der Ereignisbezeichner und das Array von Ablaufverfolgungsdaten verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceSource.TraceData%2A> Methode, z. B. die <xref:System.Diagnostics.TraceSource.TraceEvent%2A> -Methode, richtet sich automatisierten Tools, jedoch können auch das Anfügen von Objekten, z. B. eine Ausnahmeinstanz und eine stapelüberwachung, um die Ablaufverfolgung.  
+  
+ Die <xref:System.Diagnostics.TraceSource.TraceData%2A> Methodenaufrufe der <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> Methode der <xref:System.Diagnostics.SourceSwitch> zurückgegebenes Objekt die <xref:System.Diagnostics.TraceSource.Switch%2A> Eigenschaft. Wenn <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> gibt `true`, <xref:System.Diagnostics.TraceSource.TraceData%2A> aufruft, das entsprechende <xref:System.Diagnostics.TraceListener.TraceData%2A> -Methode für alle Listener. Andernfalls <xref:System.Diagnostics.TraceSource.TraceData%2A> zurück, ohne Aufrufen der Methoden der Listener.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.EventLogTraceListener> Objekt ist auf maximal `id` Wert von 65.535. Wenn die `id` angegebene Wert ist größer als 65.535 sein, die <xref:System.Diagnostics.EventLogTraceListener> object verwendet 65.535.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Es wurde versucht, für die Ablaufverfolgung ein Ereignis während des Abschlusses.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public void TraceEvent (System.Diagnostics.TraceEventType eventType, int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceEvent(valuetype System.Diagnostics.TraceEventType eventType, int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceEvent(System.Diagnostics.TraceEventType,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventType">Einer der Enumerationswerte, der den Ereignistyp der Ablaufverfolgungsdaten angibt.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <summary>Schreibt eine Meldung eines Ablaufverfolgungsereignisses in die Ablaufverfolgungslistener der <see cref="P:System.Diagnostics.TraceSource.Listeners" />-Auflistung. Hierbei werden der angegebene Ereignistyp und Ereignisbezeichner verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceSource.TraceEvent%2A> -Methode dient zum Verfolgen von Ereignissen, die automatisch von Tools verarbeitet werden können. Überwachungstools kann beispielsweise einen Administrator benachrichtigt, wenn ein bestimmtes Ereignis von einer bestimmten Quelle nachverfolgt wird.  
+  
+ Die <xref:System.Diagnostics.TraceSource.TraceEvent%2A> Methodenaufrufe der <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> Methode der <xref:System.Diagnostics.SourceSwitch> zurückgegebenes Objekt die <xref:System.Diagnostics.TraceSource.Switch%2A> Eigenschaft. Wenn <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> gibt `true`, <xref:System.Diagnostics.TraceSource.TraceEvent%2A> aufruft, das entsprechende <xref:System.Diagnostics.TraceListener.TraceEvent%2A> Methode für die einzelnen Listener. Andernfalls <xref:System.Diagnostics.TraceSource.TraceEvent%2A> zurück, ohne Aufrufen der Methoden der Listener.  
+  
+ Der Ablaufverfolgungsinhalt ist Listener spezifisch. Wenn die Methode von der Implementierung der Listener nicht überschrieben wird, wird die standardmäßigen Ausgabe der Name der Ablaufverfolgungsquelle, die numerische Identität und den Ereignistyp.  Zusätzliche Ablaufverfolgungsinhalt ist abhängig von des Listeners <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaftswert.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.EventLogTraceListener> Objekt ist auf maximal `id` Wert von 65.535. Wenn die `id` angegebene Wert ist größer als 65.535 sein, die <xref:System.Diagnostics.EventLogTraceListener> 65.535 verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%29> Methode, um ein Ablaufverfolgungsereignis an den Listener zu übergeben. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#17](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#17)]
+ [!code-vb[System.Diagnostics.TraceSource2#17](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Es wurde versucht, für die Ablaufverfolgung ein Ereignis während des Abschlusses.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public void TraceEvent (System.Diagnostics.TraceEventType eventType, int id, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceEvent(valuetype System.Diagnostics.TraceEventType eventType, int32 id, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceEvent(System.Diagnostics.TraceEventType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventType">Einer der Enumerationswerte, der den Ereignistyp der Ablaufverfolgungsdaten angibt.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="message">Die zu schreibende Ablaufverfolgungsmeldung.</param>
+        <summary>Schreibt eine Meldung eines Ablaufverfolgungsereignisses in die Ablaufverfolgungslistener der <see cref="P:System.Diagnostics.TraceSource.Listeners" />-Auflistung. Hierbei werden der angegebene Ereignistyp, der Ereignisbezeichner und die angegebene Meldung verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceSource.TraceEvent%2A> -Methode dient zum Verfolgen von Ereignissen, die automatisch von Tools verarbeitet werden können. Überwachungstools kann beispielsweise einen Administrator benachrichtigt, wenn ein bestimmtes Ereignis von einer bestimmten Quelle nachverfolgt wird.  
+  
+ Die <xref:System.Diagnostics.TraceSource.TraceEvent%2A> Methodenaufrufe der <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> Methode der <xref:System.Diagnostics.SourceSwitch> zurückgegebenes Objekt die <xref:System.Diagnostics.TraceSource.Switch%2A> Eigenschaft. Wenn <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> gibt `true`, <xref:System.Diagnostics.TraceSource.TraceEvent%2A> aufruft, das entsprechende <xref:System.Diagnostics.TraceListener.TraceEvent%2A> Methode für die einzelnen Listener. Andernfalls <xref:System.Diagnostics.TraceSource.TraceEvent%2A> zurück, ohne Aufrufen der Methoden der Listener.  
+  
+ Der Ablaufverfolgungsinhalt ist Listener spezifisch. Wenn die Methode von der Implementierung der Listener nicht überschrieben wird, ist die standardmäßigen Ausgabe der Name der Ablaufverfolgungsquelle, die numerische Identität, den Ereignistyp und die Nachricht an.  Zusätzliche Ablaufverfolgungsinhalt ist abhängig von des Listeners <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaftswert.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.EventLogTraceListener> Objekt ist auf maximal `id` Wert von 65.535. Wenn die `id` angegebene Wert ist größer als 65.535 sein, die <xref:System.Diagnostics.EventLogTraceListener> object verwendet 65.535.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%29> Methode, um ein Ablaufverfolgungsereignis an den Listener zu übergeben. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#18](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#18)]
+ [!code-vb[System.Diagnostics.TraceSource2#18](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Es wurde versucht, für die Ablaufverfolgung ein Ereignis während des Abschlusses.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public void TraceEvent (System.Diagnostics.TraceEventType eventType, int id, string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceEvent(valuetype System.Diagnostics.TraceEventType eventType, int32 id, string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceEvent(System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventType">Einer der Enumerationswerte, der den Ereignistyp der Ablaufverfolgungsdaten angibt.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="format">Eine kombinierte Formatzeichenfolge, die Text enthält festgelegtem mit 0 (null) oder mehr Formatelementen, die Objekten im entsprechen den <c>Args</c> Array.</param>
+        <param name="args">Ein <see langword="object" />-Array mit 0 oder mehr zu formatierenden Objekten.</param>
+        <summary>Schreibt ein Ablaufverfolgungsereignis in die Ablaufverfolgungslistener der <see cref="P:System.Diagnostics.TraceSource.Listeners" />-Auflistung. Hierbei werden der angegebene Ereignistyp, der Ereignisbezeichner sowie das angegebene Argumentarray und Format verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den `format` Parameter, finden Sie unter [kombinierte Formatierung](~/docs/standard/base-types/composite-formatting.md).  
+  
+ Die <xref:System.Diagnostics.TraceSource.TraceEvent%2A> -Methode dient zum Verfolgen von Ereignissen, die automatisch von Tools verarbeitet werden können. Überwachungstools kann beispielsweise einen Administrator benachrichtigt, wenn ein bestimmtes Ereignis von einer bestimmten Quelle nachverfolgt wird.  
+  
+ Die <xref:System.Diagnostics.TraceSource.TraceEvent%2A> Methodenaufrufe der <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> Methode der <xref:System.Diagnostics.SourceSwitch> zurückgegebenes Objekt die <xref:System.Diagnostics.TraceSource.Switch%2A> Eigenschaft. Wenn <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> gibt `true`, <xref:System.Diagnostics.TraceSource.TraceEvent%2A> aufruft, das entsprechende <xref:System.Diagnostics.TraceListener.TraceEvent%2A> Methode für die einzelnen Listener. Andernfalls <xref:System.Diagnostics.TraceSource.TraceEvent%2A> zurück, ohne Aufrufen der Methoden der Listener.  
+  
+ Der Ablaufverfolgungsinhalt ist Listener spezifisch. Die Standardeinstellung <xref:System.Diagnostics.TraceListener.TraceEvent%28System.Diagnostics.TraceEventCache%2CSystem.String%2CSystem.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%2CSystem.Object%5B%5D%29> Methode schreibt den Datenquellennamen, Ereignistyp und numerische Identität in der Ablaufverfolgungsheader, und ruft dann die <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> -Methode auf und übergibt die `format` Zeichenfolge und `args` Array und mithilfe der <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> Eigenschaft, um die die Zeichenfolge als die Meldungsausgabe.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.EventLogTraceListener> Objekt ist auf maximal `id` Wert von 65.535. Wenn die `id` angegebene Wert ist größer als 65.535 sein, die <xref:System.Diagnostics.EventLogTraceListener> object verwendet 65.535.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%29> Methode, um ein Ablaufverfolgungsereignis an den Listener zu übergeben. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#24](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#24)]
+ [!code-vb[System.Diagnostics.TraceSource2#24](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> ist ungültig.  
+  
+ - oder -   
+  
+ Die Zahl, die angibt, ein zu formatierendes Argument ist kleiner als 0 oder größer als oder gleich der Anzahl der angegebenen zu formatierenden Objekten.</exception>
+        <exception cref="T:System.ObjectDisposedException">Es wurde versucht, für die Ablaufverfolgung ein Ereignis während des Abschlusses.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceInformation">
+      <MemberSignature Language="C#" Value="public void TraceInformation (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceInformation(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceInformation(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu schreibende Informationsmeldung.</param>
+        <summary>Schreibt eine Informationsmeldung unter Verwendung der angegebenen Meldung in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.TraceSource.Listeners" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceSource.TraceInformation%2A> Methode bietet eine informative Meldung, die von Benutzern und nicht durch Tools gelesen werden soll.  
+  
+ <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%29>Aufrufe der <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%29> -Methode, Festlegen von `eventType` auf <xref:System.Diagnostics.TraceEventType?displayProperty=nameWithType> und übergeben die informationsmeldung als der Meldungszeichenfolge. Die <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%29> -Methode ruft ihrerseits die <xref:System.Diagnostics.TraceListener.TraceEvent%28System.Diagnostics.TraceEventCache%2CSystem.String%2CSystem.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%29> Methode der einzelnen Ablaufverfolgungslistener.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Es wurde versucht, für die Ablaufverfolgung ein Ereignis während des Abschlusses.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceInformation">
+      <MemberSignature Language="C#" Value="public void TraceInformation (string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceInformation(string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceInformation(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">Eine kombinierte Formatzeichenfolge, die Text enthält festgelegtem mit 0 (null) oder mehr Formatelementen, die Objekten im entsprechen den <c>Args</c> Array.</param>
+        <param name="args">Ein Array mit 0 oder mehr zu formatierenden Objekten.</param>
+        <summary>Schreibt eine Informationsmeldung unter Verwendung des angegebenen Objektarrays und der Formatierungsinformationen in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.TraceSource.Listeners" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den `format` Parameter, finden Sie unter [kombinierte Formatierung](~/docs/standard/base-types/composite-formatting.md).  
+  
+ Die <xref:System.Diagnostics.TraceSource.TraceInformation%2A> Methode bietet eine informative Meldung, die von Benutzern und nicht durch Tools gelesen werden soll.  
+  
+ <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29>Aufrufe der <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%2CSystem.Object%5B%5D%29> -Methode, Festlegen von `eventType` auf <xref:System.Diagnostics.TraceEventType?displayProperty=nameWithType> und den Nachrichteninhalt als ein Objektarray mit Formatierungsinformationen übergeben. Die <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%2CSystem.Object%5B%5D%29> -Methode ruft ihrerseits die <xref:System.Diagnostics.TraceListener.TraceEvent%28System.Diagnostics.TraceEventCache%2CSystem.String%2CSystem.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%2CSystem.Object%5B%5D%29> Methode der einzelnen Ablaufverfolgungslistener.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> ist ungültig.  
+  
+ - oder -   
+  
+ Die Zahl, die angibt, ein zu formatierendes Argument ist kleiner als 0 oder größer als oder gleich der Anzahl der angegebenen zu formatierenden Objekten.</exception>
+        <exception cref="T:System.ObjectDisposedException">Es wurde versucht, für die Ablaufverfolgung ein Ereignis während des Abschlusses.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceTransfer">
+      <MemberSignature Language="C#" Value="public void TraceTransfer (int id, string message, Guid relatedActivityId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceTransfer(int32 id, string message, valuetype System.Guid relatedActivityId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceTransfer(System.Int32,System.String,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="relatedActivityId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="message">Die zu schreibende Ablaufverfolgungsmeldung.</param>
+        <param name="relatedActivityId">Eine Struktur, die die verwandte Aktivität bezeichnet.</param>
+        <summary>Schreibt eine Meldung der Ablaufverfolgungsübertragung in die Ablaufverfolgungslistener der <see cref="P:System.Diagnostics.TraceSource.Listeners" />-Auflistung. Hierbei werden der angegebene numerische Bezeichner, die Meldung und der verwandte Aktivitätsbezeichner verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceSource.TraceTransfer%2A> Methodenaufrufe der <xref:System.Diagnostics.TraceListener.TraceTransfer%2A> Methode der einzelnen Ablaufverfolgungslistener in der <xref:System.Diagnostics.TraceSource.Listeners%2A> Eigenschaft, um die Ablaufverfolgungsinformationen zu schreiben. Die Standardeinstellung <xref:System.Diagnostics.TraceListener.TraceTransfer%2A> Methode in der Basisklasse <xref:System.Diagnostics.TraceListener> -Klasse ruft die <xref:System.Diagnostics.TraceListener.TraceEvent%28System.Diagnostics.TraceEventCache%2CSystem.String%2CSystem.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%29?displayProperty=nameWithType> Methode zum Verarbeiten des Aufrufs, Festlegen von `eventType` auf <xref:System.Diagnostics.TraceEventType?displayProperty=nameWithType> von und Anhängen eine Zeichenfolgendarstellung der `relatedActivityId` GUID `message`.  
+  
+ <xref:System.Diagnostics.TraceSource.TraceTransfer%2A>mit den logischen Operationen verwendet werden soll eine <xref:System.Diagnostics.CorrelationManager>. Die `relatedActivityId` Parameter bezieht sich auf die <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> Eigenschaft von einem <xref:System.Diagnostics.CorrelationManager> Objekt. Wenn eine logische Operation in einer Aktivität beginnt und in eine andere übertragen wird, protokolliert die zweite Aktivität die Übertragung durch Aufrufen der <xref:System.Diagnostics.TraceSource.TraceTransfer%2A> Methode. Die <xref:System.Diagnostics.TraceSource.TraceTransfer%2A> Aufruf bezieht sich die neue Aktivitätsidentität zur vorherigen Identität. Der wahrscheinlichste Consumer dieser Funktionalität ist einen Ablaufverfolgungs-Viewer, der logische Operationen melden kann, die mehrere Aktivitäten umfassen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

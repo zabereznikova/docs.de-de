@@ -1,0 +1,96 @@
+<Type Name="Collation" FullName="System.Printing.Collation">
+  <TypeSignature Language="C#" Value="public enum Collation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Collation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.Collation" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob ein Drucker Ausgabe sortiert, wenn es mehrere Kopien eines Druckauftrags mit mehreren Seiten gedruckt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einem Standarddrucker sortiert die Ausgabe in der Regel durch druckspezifische jeder Seite der ersten Kopie, und klicken Sie dann auf jeder Seite der zweiten Kopie und So weiter. Wenn ein Drucker nicht sortiert ist, gibt sie an jede Kopie der ersten Seite, und klicken Sie dann auf jede Kopie des zweiten Seite, und So weiter.  
+  
+ Einige Drucker, die speziell mit Klassen sortieren ausgestattet sind. Die Drucken Sequenz für diesen speziellen Druckern möglicherweise von den standardmäßigen Drucker unterschiedlich sein. Das Ergebnis identisch ist jedoch: jede Kopie eines mehrseitigen Druckauftrags enthält alle seine Seiten in der richtigen Reihenfolge ohne manuelle sortieren.  
+  
+ Verwenden Sie die Werte dieses Typs hauptsächlich für folgende Zwecke.  
+  
+-   Als Mitglied der <xref:System.Printing.PrintCapabilities.CollationCapability%2A> -Auflistung, die eine Eigenschaft des <xref:System.Printing.PrintCapabilities>, diese Werte geben Sie den Typ der Ausgabe, die der Drucker unterstützt. (Viele Drucker unterstützen beide Typen.)  
+  
+-   Als Wert für die <xref:System.Printing.PrintTicket.Collation%2A> Eigenschaft ein <xref:System.Printing.PrintTicket>, der Wert weist dem Drucker an, ob die collate.  
+  
+ Die **unbekannte** Wert wird in den Eigenschaften der nie verwendet <xref:System.Printing.PrintCapabilities> Objekte.  
+  
+ Sollten Sie niemals Festlegen einer <xref:System.Printing.PrintTicket> Eigenschaft, um **unbekannte**. Wenn eine andere <xref:System.Printing.PrintTicket> erstellt wurde, erzeugt die Anwendung eine *PrintTicket-Dokument* das Feature für die Sortierung einer nicht erkannten Sortierung Option festlegt und dann eine <xref:System.Printing.PrintTicket> Objekten in der Anwendung, die mit dem Sie erstellt wird Dieses Dokument hat **unbekannte** als Wert für die <xref:System.Printing.PrintTicket.Collation%2A> Eigenschaft.  
+  
+ Obwohl die <xref:System.Printing.PrintTicket> und <xref:System.Printing.PrintCapabilities> Klassen können nicht vererbt werden, können Sie erweitern die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Druckgerät Funktionen zu erkennen, die nicht in berücksichtigt werden die <xref:System.Printing.PrintTicket> oder <xref:System.Printing.PrintCapabilities> Klassen. Weitere Informationen finden Sie unter [nicht im Build: Vorgehensweise: Erweitern der Druckschema und Erstellen von neuen Druckserver Systemklassen](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht die Leistungsmerkmale des Druckers testen und Konfigurieren eines Druckauftrags, um diese nutzen. .  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Collated">
+      <MemberSignature Language="C#" Value="Collated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Collation Collated = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Collation.Collated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Collation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sortierte Ausgabe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Uncollated">
+      <MemberSignature Language="C#" Value="Uncollated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Collation Uncollated = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Collation.Uncollated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Collation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nicht sortierte Ausgabe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Collation Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Collation.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Collation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Funktion (deren Optionen durch diese Enumeration dargestellt werden) ist eine Option festgelegt, nicht definiert, der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

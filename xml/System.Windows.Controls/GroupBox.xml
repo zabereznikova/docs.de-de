@@ -1,0 +1,107 @@
+<Type Name="GroupBox" FullName="System.Windows.Controls.GroupBox">
+  <TypeSignature Language="C#" Value="public class GroupBox : System.Windows.Controls.HeaderedContentControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi GroupBox extends System.Windows.Controls.HeaderedContentControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.GroupBox" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.HeaderedContentControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement, das einen Container erstellt, der einen Rahmen und einen Header für Inhalte der Benutzeroberfläche (UI) verfügt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.GroupBox>ist eine <xref:System.Windows.Controls.HeaderedContentControl>, dies bedeutet, dass seine <xref:System.Windows.Controls.ContentControl.Content%2A> und <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> Eigenschaften eines beliebigen Typs (z. B. die Zeichenfolge "," Image "oder" Bereich ") werden können.  Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Controls.HeaderedContentControl>-Klasse.  
+  
+ Die folgende Abbildung ist ein Beispiel für eine <xref:System.Windows.Controls.GroupBox> , enthält eine <xref:System.Windows.Controls.TabControl> und eine <xref:System.Windows.Controls.Button> , eingeschlossen sind, eine <xref:System.Windows.Controls.StackPanel>.  
+  
+ ![GroupBoxImage](~/add/media/groupboximage.JPG "GroupBoxImage")  
+  
+## <a name="customizing-the-groupbox-control"></a>Anpassen der GroupBox-Steuerelement  
+ Zum Anwenden der gleichen eigenschafteneinstellungen mit mehreren <xref:System.Windows.Controls.GroupBox> -Steuerelemente verwenden die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, finden Sie unter [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Um anzuzeigen, die Teile und Zustände, die spezifisch für die <xref:System.Windows.Controls.GroupBox>, finden Sie unter [GroupBox-Stile und Vorlagen](~/docs/framework/wpf/controls/groupbox-styles-and-templates.md).  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Festlegen einer visuellen Eigenschaft haben nur Auswirkungen, wenn diese Eigenschaft sowohl in vorhanden ist <xref:System.Windows.Controls.GroupBox> Steuerelement die Standardvorlage und festgelegt ist, mit ein. Sie finden eine Liste der Eigenschaften visueller Elemente im Abschnitt "Ändern der visuellen Struktur eines Steuerelements" [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine <xref:System.Windows.Controls.GroupBox> Steuerelement mit dem Titel **My Employee Info**. Das Steuerelement besteht aus einem <xref:System.Windows.Controls.TabControl> und ein <xref:System.Windows.Controls.Button> in eine <xref:System.Windows.Controls.StackPanel>. Im Beispiel wird die <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> Eigenschaft, um eine <xref:System.Windows.Controls.Label>.  
+  
+ [!code-xaml[GroupBoxExample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxExample/CSharp/Page1.xaml#1)]  
+  
+ Müssen Sie auch einen Ereignishandler für ein Code-Behind-Seite um verarbeiten definieren die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis, das auftritt, wenn ein Benutzer klickt auf die **Zusammenfassung anzeigen** Schaltfläche.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GroupBox ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GroupBox.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.GroupBox" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAccessKey">
+      <MemberSignature Language="C#" Value="protected override void OnAccessKey (System.Windows.Input.AccessKeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAccessKey(class System.Windows.Input.AccessKeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GroupBox.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.AccessKeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisinformationen.</param>
+        <summary>Reagiert, wenn die <see cref="P:System.Windows.Controls.AccessText.AccessKey" /> für die <see cref="T:System.Windows.Controls.GroupBox" /> gedrückt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GroupBox.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Implementierung von <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für die <see cref="T:System.Windows.Controls.GroupBox" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.GroupBoxAutomationPeer" /> für die <see cref="T:System.Windows.Controls.GroupBox" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

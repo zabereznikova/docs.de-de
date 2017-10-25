@@ -1,0 +1,79 @@
+<Type Name="ColorBuilder" FullName="System.Web.UI.Design.ColorBuilder">
+  <TypeSignature Language="C#" Value="public sealed class ColorBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ColorBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ColorBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen HTML-Farbe Zeichenfolgen-Generator zur Entwurfszeit, die einem Benutzer ermöglicht, eine Farbe auszuwählen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ColorBuilder.BuildColor%2A> Methode startet eine Benutzeroberfläche zum Auswählen einer Farbe-Werts.  
+  
+ Die <xref:System.Web.UI.Design.ColorBuilder> Klasse dient nicht zur Verwendung außerhalb der entwurfszeitumgebung. <xref:System.Web.UI.Design.ColorBuilder>erfordert die <xref:System.Web.UI.Design.IWebFormsBuilderUIService>, steht in der Regel in einem Web Forms-Projekt zur Entwurfszeit. Wenn Sie HTML-Farbe Zeichenfolgen erstellen möchten, möchten Sie möglicherweise eine Methode zu implementieren, der die RGB-Werte konvertiert eine <xref:System.Drawing.Color> Objekt in eine HTML-kompatible RRGGBB-Formatzeichenfolge. Wenn Sie ein Steuerelement an eine andere Farbe auswählen, oder konfigurieren eine Farbe verwenden möchten, können Sie dafür eine Benutzeroberfläche erstellen, oder Sie verwenden möchten eine <xref:System.Windows.Forms.PropertyGrid> steuern, welche Sie bearbeiten kann <xref:System.Drawing.Color> Eigenschaften mit dem Standardnamen <xref:System.Drawing.Design.ColorEditor> ein Farbauswahl bereitstellen -Schnittstelle.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ColorBuilderExample#1](~/samples/snippets/cpp/VS_Snippets_WebNet/ColorBuilderExample/CPP/colorbuilderdesigner.cpp#1)]
+ [!code-csharp[ColorBuilderExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ColorBuilderExample/CS/colorbuilderdesigner.cs#1)]
+ [!code-vb[ColorBuilderExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ColorBuilderExample/VB/colorbuilderdesigner.vb#1)]  
+  
+ [!code-cpp[ColorBuilderExample#2](~/samples/snippets/cpp/VS_Snippets_WebNet/ColorBuilderExample/CPP/colorbuilderdesigner.cpp#2)]
+ [!code-csharp[ColorBuilderExample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ColorBuilderExample/CS/colorbuilderdesigner.cs#2)]
+ [!code-vb[ColorBuilderExample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ColorBuilderExample/VB/colorbuilderdesigner.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuildColor">
+      <MemberSignature Language="C#" Value="public static string BuildColor (System.ComponentModel.IComponent component, System.Windows.Forms.Control owner, string initialColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string BuildColor(class System.ComponentModel.IComponent component, class System.Windows.Forms.Control owner, string initialColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ColorBuilder.BuildColor(System.ComponentModel.IComponent,System.Windows.Forms.Control,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="owner" Type="System.Windows.Forms.Control" />
+        <Parameter Name="initialColor" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die <see cref="T:System.ComponentModel.IComponent" /> , dessen Standort Zugriff auf Dienste zur Entwurfszeit verwendet wird.</param>
+        <param name="owner">Die <see cref="T:System.Web.UI.Control" /> mit dem übergeordneten Auswahlfenster verwendet.</param>
+        <param name="initialColor">Die ursprüngliche Farbe im Auswahlfenster in einem gültigen Format für die HTML-Farben angezeigt werden.</param>
+        <summary>Startet einen Farb-Editor, um eine HTML-Farbwert Eigenschaft zu erstellen.</summary>
+        <returns>Der Farbwert, dargestellt als eine Zeichenfolge in eine HTML-Farbformat oder <see langword="null" /> , wenn der Generator-Dienst konnte nicht abgerufen werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Zeichenfolge, wenn andere als `null`, gibt eine Farbe in einem gültigen Format für die HTML-Farben an. Gültige Formate sind benannte Farben und Farbcodes im RGB-Format (#RRGGBB).  
+  
+   
+  
+## Examples  
+ [!code-cpp[ColorBuilderExample#1](~/samples/snippets/cpp/VS_Snippets_WebNet/ColorBuilderExample/CPP/colorbuilderdesigner.cpp#1)]
+ [!code-csharp[ColorBuilderExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ColorBuilderExample/CS/colorbuilderdesigner.cs#1)]
+ [!code-vb[ColorBuilderExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ColorBuilderExample/VB/colorbuilderdesigner.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

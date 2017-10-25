@@ -1,0 +1,282 @@
+<Type Name="IncrementalHash" FullName="System.Security.Cryptography.IncrementalHash">
+  <TypeSignature Language="C#" Value="public sealed class IncrementalHash : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit IncrementalHash extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.IncrementalHash" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Unterstützung für die Berechnung eines Hash- oder eines auf einem Hash basierenden HMAC-Werts (Hash-based Message Authentication Code) inkrementell über mehrere Segmente hinweg bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlgorithmName">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.HashAlgorithmName AlgorithmName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.HashAlgorithmName AlgorithmName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.IncrementalHash.AlgorithmName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.HashAlgorithmName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Algorithmus ab, der ausgeführt wird. HMAC-Algorithmen sind mit "HMAC", um die Unterscheidung von einer ohne Schlüssel wünschen Digest vorangestellt.</summary>
+        <value>Der Name des Algorithmus, der ausgeführt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendData">
+      <MemberSignature Language="C#" Value="public void AppendData (byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendData(unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.IncrementalHash.AppendData(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die zu verarbeitenden Daten.</param>
+        <summary>Fügt die angegebenen Daten den Daten hinzu, die bereits im Hash oder HMAC verarbeitet wurden.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das <see cref="T:System.Security.Cryptography.IncrementalHash" />-Objekt wurde bereits entfernt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendData">
+      <MemberSignature Language="C#" Value="public void AppendData (byte[] data, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendData(unsigned int8[] data, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.IncrementalHash.AppendData(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die zu verarbeitenden Daten.</param>
+        <param name="offset">Der Offset im Bytearray, ab dem Daten verwendet werden sollen.</param>
+        <param name="count">Die Anzahl von Bytes aus <c>Daten</c>.</param>
+        <summary>Fügt die angegebene Zahl an Bytes aus den angegebenen Daten in die bereits verarbeiteten im Hash oder HMAC (Hash-basierter Nachrichtenauthentifizierungscode) ein, beginnend mit dem angegebenen Offset.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" /> oder <paramref name="offset" /> ist ein negativer Wert.  
+  
+ - oder -   
+  
+ <paramref name="count" />ist größer als die Länge des <paramref name="data" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Summe aus <paramref name="offset" /> und <paramref name="count" /> ist größer als die Datenlänge.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das <see cref="T:System.Security.Cryptography.IncrementalHash" />-Objekt wurde bereits entfernt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHash">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.IncrementalHash CreateHash (System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.IncrementalHash CreateHash(valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.IncrementalHash.CreateHash(System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.IncrementalHash</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="hashAlgorithm">Der Name des Hashalgorithmus, der ausgeführt werden soll.</param>
+        <summary>Erstellt einen <see cref="T:System.Security.Cryptography.IncrementalHash" /> für den angegebenen Algorithmus.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.IncrementalHash" />-Instanz, die bereit ist, den von <paramref name="hashAlgorithm" /> angegebenen Hashalgorithmus zu berechnen.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="hashAlgorithm" /> ist kein bekannter Hashalgorithmus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHMAC">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.IncrementalHash CreateHMAC (System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[] key);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.IncrementalHash CreateHMAC(valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, unsigned int8[] key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.IncrementalHash.CreateHMAC(System.Security.Cryptography.HashAlgorithmName,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.IncrementalHash</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="key" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="hashAlgorithm">Der Name des Hashalgorithmus, der im HMAC ausgeführt werden soll.</param>
+        <param name="key">Der geheime Schlüssel für den HMAC. Der Schlüssel kann von beliebiger Länge sein, doch ein Schlüssel, der länger als die Ausgabegröße des angegebenen Hashalgorithmus ist, wird mit eindeutigem Hashwert berechnet, um den Schlüssel mit richtiger Größe abzuleiten. Daher ist die empfohlene Größe des geheimen Schlüssels die Ausgabegröße des angegebenen Hashalgorithmus.</param>
+        <summary>Erstellt <see cref="T:System.Security.Cryptography.IncrementalHash" /> für den Algorithmus des hashbasierten Nachrichtenauthentifizierungscodes (HMAC, Hash-based Message Authentication Code) mithilfe des angegebenen Hashalgorithmus und Schlüssels.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Security.Cryptography.IncrementalHash" />-Klasse, die den angegebenen Hashalgorithmus berechnen kann.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="hashAlgorithm" /> ist kein bekannter Hashalgorithmus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.IncrementalHash.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.Security.Cryptography.IncrementalHash" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashAndReset">
+      <MemberSignature Language="C#" Value="public byte[] GetHashAndReset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetHashAndReset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.IncrementalHash.GetHashAndReset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hash oder HMAC für die Daten ab, die von früheren Aufrufen der <see cref="M:System.Security.Cryptography.IncrementalHash.AppendData(System.Byte[])" />-Methode gesammelt wurden, und setzt das Objekt auf seinen ursprünglichen Zustand zurück.</summary>
+        <returns>Der berechnete Hash oder HMAC.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das <see cref="T:System.Security.Cryptography.IncrementalHash" />-Objekt wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,83 @@
+<Type Name="ReliableSessionBindingElementImporter" FullName="System.ServiceModel.Channels.ReliableSessionBindingElementImporter">
+  <TypeSignature Language="C#" Value="public sealed class ReliableSessionBindingElementImporter : System.ServiceModel.Description.IPolicyImportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReliableSessionBindingElementImporter extends System.Object implements class System.ServiceModel.Description.IPolicyImportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ReliableSessionBindingElementImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyImportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ordnet zuverlässige Sitzungsbindungselemente von und zu Darstellungen ihrer entsprechenden Richtlinienassertionen in Metadaten zu. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)] verwendet diese Klasse, um zuverlässige Sitzungsbindungselemente in Bindungsrichtlinienassertionen in Metadaten zu importieren. Diese Klasse verwendet die zuverlässigen Sitzungsbindungselemente und schreibt benutzerdefinierte Richtlinienassertionen in die WSDL-Datei, wenn sie sich auf dem Dienst befindet. Auf dem Client sucht sie nach diesen Assertionen und fügt ein entsprechendes Bindungselement wieder in der Clientbindung ein. Beachten Sie, dass das Vorhandensein einer zuverlässigen Sitzung in einer Bindung als zuverlässige Nachrichtenassertion, die in der WS-Reliable Messaging-Richtlinienspezifikation beschrieben wird, dargestellt wird.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)] zum Austausch von Richtlinienassertionen zwischen Bindungen an WSDL-Informationen finden Sie unter der <xref:System.ServiceModel.Description.IPolicyImportExtension>-Schnittstelle und der <xref:System.ServiceModel.Description.IPolicyExportExtension>-Schnittstelle:  
+  
+-   Implementieren Sie die <xref:System.ServiceModel.Description.IPolicyImportExtension>-Schnittstelle, um in WSDL-Informationen, die von einem bestimmten Endpunkt ausgegeben werden, nach benutzerdefinierten Richtlinienassertionen zu Endpunktfunktionen oder -anforderungen zu suchen.  
+  
+-   Implementieren Sie die <xref:System.ServiceModel.Description.IPolicyExportExtension>-Schnittstelle für ein <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>-Objekt, um Anweisungen zu Endpunktfunktionen oder -anforderungen in die WSDL-Informationen zu schreiben, die von einem bestimmten Endpunkt ausgegeben werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReliableSessionBindingElementImporter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReliableSessionBindingElementImporter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ReliableSessionBindingElementImporter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyImportExtension.ImportPolicy (System.ServiceModel.Description.MetadataImporter importer, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy(class System.ServiceModel.Description.MetadataImporter importer, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReliableSessionBindingElementImporter.System#ServiceModel#Description#IPolicyImportExtension#ImportPolicy(System.ServiceModel.Description.MetadataImporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importer" Type="System.ServiceModel.Description.MetadataImporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="importer"><see cref="T:System.ServiceModel.Description.MetadataImporter" /> zum Importieren der WSDL-Metadaten in das Bindungselement.</param>
+        <param name="context">Der <see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> für den Dienstendpunkt, der die Bindungsrichtlinienassertionen enthält, die in Bindungselemente konvertiert werden können.</param>
+        <summary>Konvertiert WS-Reliable Message-Richtlinienassertionen in die zuverlässigen Sitzungsbindungselemente in einer Bindung auf dem Client.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert die <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="context" /> oder <paramref name="importer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Channels.InvalidChannelBindingException">Die Richtlinienassertion, die gelesen wird, ist ungültig, da sie nicht der WS-Reliable Messaging-Richtlinie entspricht.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,103 @@
+<Type Name="SaveChangesOptions" FullName="System.Data.Services.Client.SaveChangesOptions">
+  <TypeSignature Language="C#" Value="public enum SaveChangesOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SaveChangesOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.SaveChangesOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Änderungsoptionen an, wenn <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" /> aufgerufen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die ContinueOnError-Option festgelegt ist, werden nachfolgende Operationen weiterhin versucht, auch nachdem ein Fehler auftritt.  
+  
+ Wenn die Batchverarbeitung nicht verwendet wird, gibt die <xref:System.Data.Services.Client.DataServiceResponse.BatchHeaders%2A>-Eigenschaft auf der <xref:System.Data.Services.Client.DataServiceResponse.BatchHeaders%2A>-Instanz eine leere Auflistung zurück, und die <xref:System.Data.Services.Client.DataServiceResponse.BatchStatusCode%2A>-Eigenschaft ist 0 (null).  
+  
+ Batch und ContinueOnError kann nicht gleichzeitig festgelegt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Batch">
+      <MemberSignature Language="C#" Value="Batch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.Client.SaveChangesOptions Batch = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.Client.SaveChangesOptions.Batch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.SaveChangesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle ausstehenden Änderungen werden in einer einzelnen Batchanforderung gespeichert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueOnError">
+      <MemberSignature Language="C#" Value="ContinueOnError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.Client.SaveChangesOptions ContinueOnError = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.Client.SaveChangesOptions.ContinueOnError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.SaveChangesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausstehende Änderungen werden mithilfe mehrerer Anforderungen auf dem Server gespeichert, und der Vorgang wird auch nach Auftreten eines Fehlers fortgesetzt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.Client.SaveChangesOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.Client.SaveChangesOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.SaveChangesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausstehende Änderungen werden mithilfe mehrerer Anforderungen auf dem Server gespeichert, aber der Vorgang wird beim ersten Fehler beendet (Standard).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceOnUpdate">
+      <MemberSignature Language="C#" Value="ReplaceOnUpdate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.Client.SaveChangesOptions ReplaceOnUpdate = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.Client.SaveChangesOptions.ReplaceOnUpdate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.SaveChangesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausstehende Updates erfolgen durch Ersetzen von alle Werten der Entität in der Datenquelle mit Werten aus der aktualisierten Entität (HTTP PUT) anstatt nur geänderte Werte (HTTP MERGE) Dies ist das Standardverhalten aktualisiert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

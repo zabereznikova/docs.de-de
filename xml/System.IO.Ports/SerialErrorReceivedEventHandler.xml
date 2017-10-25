@@ -1,0 +1,36 @@
+<Type Name="SerialErrorReceivedEventHandler" FullName="System.IO.Ports.SerialErrorReceivedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void SerialErrorReceivedEventHandler(object sender, SerialErrorReceivedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SerialErrorReceivedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Ports.SerialErrorReceivedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Ports</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.IO.Ports.SerialErrorReceivedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Der Absender des Ereignisses, also die <see cref="T:System.IO.Ports.SerialPort" /> Objekt.</param>
+    <param name="e">Ein <see cref="T:System.IO.Ports.SerialErrorReceivedEventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.IO.Ports.SerialPort.ErrorReceived" /> -Ereignis für ein <see cref="T:System.IO.Ports.SerialPort" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.IO.Ports.SerialErrorReceivedEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

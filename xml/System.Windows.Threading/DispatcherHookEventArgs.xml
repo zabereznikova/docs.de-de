@@ -1,0 +1,80 @@
+<Type Name="DispatcherHookEventArgs" FullName="System.Windows.Threading.DispatcherHookEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class DispatcherHookEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DispatcherHookEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.DispatcherHookEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Ereignisdaten für <see cref="T:System.Windows.Threading.DispatcherHooks" /> Ereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Threading.DispatcherHooks>bietet eine Reihe von zusätzlichen Ereignisse im Zusammenhang mit der <xref:System.Windows.Threading.Dispatcher>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DispatcherHookEventArgs (System.Windows.Threading.DispatcherOperation operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Threading.DispatcherOperation operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherHookEventArgs.#ctor(System.Windows.Threading.DispatcherOperation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="operation" Type="System.Windows.Threading.DispatcherOperation" />
+      </Parameters>
+      <Docs>
+        <param name="operation">Der Vorgang, der dem Ereignis zugeordnet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Threading.DispatcherHookEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispatcher">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.Dispatcher Dispatcher { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Threading.Dispatcher Dispatcher" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.DispatcherHookEventArgs.Dispatcher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.Dispatcher</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Threading.Dispatcher" /> mit diesem Ereignis verknüpft sind.</summary>
+        <value>Die <see cref="T:System.Windows.Threading.Dispatcher" /> mit diesem Ereignis verknüpft sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operation">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperation Operation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Threading.DispatcherOperation Operation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.DispatcherHookEventArgs.Operation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Threading.DispatcherOperation" /> mit diesem Ereignis verknüpft sind.</summary>
+        <value>Der Vorgang.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,122 @@
+<Type Name="InitializeCorrelation" FullName="System.ServiceModel.Activities.InitializeCorrelation">
+  <TypeSignature Language="C#" Value="public sealed class InitializeCorrelation : System.Activities.NativeActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InitializeCorrelation extends System.Activities.NativeActivity" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.InitializeCorrelation" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.NativeActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("CorrelationData")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Initialisiert eine Korrelation, ohne eine Meldung zu senden oder zu empfangen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird die Korrelation durch das Senden oder Empfangen einer Meldung initialisiert. Wenn die Korrelation initialisiert werden muss, bevor eine Meldung gesendet oder empfangen wird, kann <xref:System.ServiceModel.Activities.InitializeCorrelation> zum Initialisieren der Korrelation verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InitializeCorrelation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.InitializeCorrelation.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.InitializeCorrelation" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Correlation">
+      <MemberSignature Language="C#" Value="public System.Activities.InArgument&lt;System.ServiceModel.Activities.CorrelationHandle&gt; Correlation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.InArgument`1&lt;class System.ServiceModel.Activities.CorrelationHandle&gt; Correlation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.InitializeCorrelation.Correlation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;System.ServiceModel.Activities.CorrelationHandle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft <see cref="T:System.ServiceModel.Activities.CorrelationHandle" /> ab, auf das die Korrelation verweist, oder legt diesen Wert fest.</summary>
+        <value>Das Korrelationshandle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist zur Laufzeit schreibgeschützt. Wenn der Wert zur Laufzeit festgelegt wird, wird eine <xref:System.InvalidOperationException> ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationData">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,System.Activities.InArgument&lt;string&gt;&gt; CorrelationData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class System.Activities.InArgument`1&lt;string&gt;&gt; CorrelationData" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Activities.InArgument&lt;System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch von Korrelationsdaten ab, die Meldungen mit dieser Workflowinstanz verknüpft, oder legt es fest.</summary>
+        <value>Ein Wörterbuch der Korrelationsdaten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist zur Laufzeit schreibgeschützt. Wenn der Wert zur Laufzeit festgelegt wird, wird eine <xref:System.InvalidOperationException> ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override void Execute (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Execute(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.InitializeCorrelation.Execute(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

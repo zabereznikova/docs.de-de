@@ -1,0 +1,432 @@
+<Type Name="SequentialActivityDesigner" FullName="System.Workflow.ComponentModel.Design.SequentialActivityDesigner">
+  <TypeSignature Language="C#" Value="public class SequentialActivityDesigner : System.Workflow.ComponentModel.Design.StructuredCompositeActivityDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SequentialActivityDesigner extends System.Workflow.ComponentModel.Design.StructuredCompositeActivityDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Design.StructuredCompositeActivityDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Eigenschaften und Methoden für alle Aktivitätsdesigner mit einem sequenziellen vertikalen Layout auf der Workflowentwurfsoberfläche.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Der <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner> und die Klassen, die von ihm erben, können untergeordnete Aktivitätsdesigner enthalten. Sie werden auf der Workflowentwurfsoberfläche vertikal angeordnet dargestellt, wobei untergeordnete Aktivitäten auf der Oberfläche des <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner> angezeigt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SequentialActivityDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessibilityObject">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject AccessibilityObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AccessibleObject AccessibilityObject" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.AccessibilityObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Windows.Forms.AccessibleObject" /> ab, das es dem <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> ermöglicht, seine Benutzeroberfläche für Benutzer mit Behinderungen anzupassen.</summary>
+        <value>Das dem Designer zuzuordnende <see cref="T:System.Windows.Forms.AccessibleObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Anfangswert von <xref:System.Windows.Forms.AccessibleObject> ein NULL-Verweis ist (`Nothing` in Visual Basic), erstellt <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner> ein <xref:System.Windows.Forms.AccessibleObject>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExpandCollapse">
+      <MemberSignature Language="C#" Value="public override bool CanExpandCollapse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanExpandCollapse" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.CanExpandCollapse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> auf der Workflowdesigneroberfläche erweitert und reduziert werden.</summary>
+        <value>
+          <see langword="true" />, wenn der Designer auf der Workflowentwurfsoberfläche erweitert und reduziert werden kann; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.CanExpandCollapse%2A> `true` zurückgibt, rendert der Designer auf der Workflowentwurfsoberfläche eine Schaltfläche zum Erweitern/Reduzieren.  
+  
+ Wenn <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner> der übergeordnete Designer des <xref:System.Workflow.ComponentModel.Design.ParallelActivityDesigner> ist, gibt <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.CanExpandCollapse%2A> `false` zurück. Wenn der <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner> der Stamm-Designer ist, gibt <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.CanExpandCollapse%2A> darüber hinaus `false` zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expanded">
+      <MemberSignature Language="C#" Value="public override bool Expanded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Expanded" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.Expanded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob der Designer auf der Workflowentwurfsoberfläche erweitert ist.</summary>
+        <value>
+          <see langword="true" />, wenn der <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> auf der Workflowentwurfsoberfläche erweitert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstSelectableObject">
+      <MemberSignature Language="C#" Value="public override object FirstSelectableObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object FirstSelectableObject" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.FirstSelectableObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das erste auswählbare Objekt in der Navigationsreihenfolge von <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> ab.</summary>
+        <value>Ein <see cref="T:System.Object" />, bei dem es sich um das erste auswählbare Objekt in der Designernavigationsreihenfolge handelt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConnectors">
+      <MemberSignature Language="C#" Value="protected virtual System.Drawing.Rectangle[] GetConnectors ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance valuetype System.Drawing.Rectangle[] GetConnectors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.GetConnectors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Array von Rechtecken zurück, die die Verbindungen des Aktivitätsdesigners umschließen.</summary>
+        <returns>Das <see cref="T:System.Drawing.Rectangle" />-Array, das die Verbindungen umschließt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der aktuelle Designer nicht der aktive Designer ist oder der Designer nicht erweitert ist, gibt <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.GetConnectors%2A> ein leeres Array zurück. Wenn im übergeordneten Designer keine Aktivitätsdesigner vorhanden sind, gibt <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.GetConnectors%2A> ein Array mit einem Rechteck zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDropTargets">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Rectangle[] GetDropTargets (System.Drawing.Point dropPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Rectangle[] GetDropTargets(valuetype System.Drawing.Point dropPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.GetDropTargets(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dropPoint" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="dropPoint"><see cref="T:System.Drawing.Point" />, der die x- und y-Koordinaten für das Ablageziel definiert.</param>
+        <summary>Gibt ein Array von Rechtecken zurück, die die gültigen Ablagespeicherorte im <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> darstellen.</summary>
+        <returns>Das <see cref="T:System.Drawing.Rectangle" />-Array, das die gültigen Ablagespeicherorte im <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextSelectableObject">
+      <MemberSignature Language="C#" Value="public override object GetNextSelectableObject (object obj, System.Workflow.ComponentModel.Design.DesignerNavigationDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetNextSelectableObject(object obj, valuetype System.Workflow.ComponentModel.Design.DesignerNavigationDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.GetNextSelectableObject(System.Object,System.Workflow.ComponentModel.Design.DesignerNavigationDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="direction" Type="System.Workflow.ComponentModel.Design.DesignerNavigationDirection" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das aktuelle Objekt in der Navigationsreihenfolge.</param>
+        <param name="direction">Ein <see cref="T:System.Workflow.ComponentModel.Design.DesignerNavigationDirection" />-Enumerationswert, der die Navigationsreihenfolge des Designers bestimmt.</param>
+        <summary>Gibt das erste auswählbare Objekt nach dem angegebenen Objekt in der Navigationsreihenfolge des aktuellen <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> zurück.</summary>
+        <returns>Das erste auswählbare <see cref="T:System.Object" /> nach dem <paramref name="obj" />-Parameter in der Navigationsreihenfolge des <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Glyphs">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection Glyphs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection Glyphs" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.Glyphs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine schreibgeschützte Sammlung aller Symbole ab, die dem <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> zugeordnet sind.</summary>
+        <value>Eine schreibgeschützte <see cref="T:System.Workflow.ComponentModel.Design.DesignerGlyph" />-Sammlung, die alle Symbole für die Anzeige auf dem <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpText">
+      <MemberSignature Language="C#" Value="protected virtual string HelpText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpText" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.HelpText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Text ab oder legt den Text fest, der angezeigt wird, wenn der <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> keine anderen Aktivitätsdesigner enthält.</summary>
+        <value>Eine Zeichenfolge, die den auf der Designeroberfläche anzuzeigenden Text enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.HelpText%2A>-Eigenschaftenwert wird auf der <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner>-Oberfläche angezeigt, wenn keine untergeordneten Aktivitätsdesigner vorhanden sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpTextRectangle">
+      <MemberSignature Language="C#" Value="protected virtual System.Drawing.Rectangle HelpTextRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle HelpTextRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.HelpTextRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Rechteck ab, das als Begrenzung für den von der <see cref="P:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.HelpText" />-Eigenschaft angezeigten Text dient.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" />, das als Begrenzung für den von der <see cref="P:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.HelpText" />-Eigenschaft angezeigten Text dient.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpTextSize">
+      <MemberSignature Language="C#" Value="protected System.Drawing.Size HelpTextSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size HelpTextSize" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.HelpTextSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe und Breite des Textes ab, der im <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> angezeigt wird, wenn keine untergeordneten Aktivitätsdesigner vorhanden sind.</summary>
+        <value>Die <see cref="T:System.Drawing.Size" />, die die Höhe und Breite des Textes definiert, der von <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> angezeigt wird, wenn keine untergeordneten Aktivitätsdesigner vorhanden sind. Standardmäßig wird <see cref="P:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.HelpTextSize" /> auf eine neu initialisierte <see cref="T:System.Drawing.Size" /> festgelegt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public override System.Workflow.ComponentModel.Design.HitTestInfo HitTest (System.Drawing.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Workflow.ComponentModel.Design.HitTestInfo HitTest(valuetype System.Drawing.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.HitTest(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.HitTestInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Die <see cref="T:System.Drawing.Point" />-Position auf der Workflowentwurfsoberfläche, von der Informationen erfasst werden sollen.</param>
+        <summary>Gibt Informationen zum <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> am angegebenen Punkt auf der Workflowentwurfsoberfläche zurück.</summary>
+        <returns>Eine <see cref="T:System.Workflow.ComponentModel.Design.HitTestInfo" /> mit Informationen zum <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.HitTest%2A> zurückgegebenen Informationen basieren auf dem angegebenen Punkt auf der Workflowentwurfsoberfläche. Sie enthalten den mit dem Punkt verknüpften Aktivitätsdesigner, die Begrenzung dieses Aktivitätsdesigners, die genaue Trefferposition des Punktes, dem Punkt zugeordnete auswählbare Objekte und dem Punkt zugeordnete Benutzerdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize (System.Workflow.ComponentModel.Activity activity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Initialize(class System.Workflow.ComponentModel.Activity activity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.Initialize(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="activity"><see cref="T:System.Workflow.ComponentModel.Activity" />, mit der <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> initialisiert werden soll.</param>
+        <summary>Initialisiert den Designer unter Verwendung der angegebenen Aktivität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.Initialize%2A> weist einen Wert für die <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.HelpText%2A>-Eigenschaft zu, der auf dem <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner> angezeigt wird, wenn keine untergeordneten Designer vorhanden sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastSelectableObject">
+      <MemberSignature Language="C#" Value="public override object LastSelectableObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object LastSelectableObject" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.LastSelectableObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das letzte auswählbare Objekt in der Navigationsreihenfolge des <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> ab.</summary>
+        <value>Das <see cref="T:System.Object" />, bei dem es sich um das letzte auswählbare Objekt in der Designernavigationsreihenfolge handelt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayoutPosition">
+      <MemberSignature Language="C#" Value="protected override void OnLayoutPosition (System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLayoutPosition(class System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.OnLayoutPosition(System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e"><see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" /> mit den Layoutargumenten.</param>
+        <summary>Führt Layoutaufgaben aus, um visuelle Hinweise und untergeordnete Designer auf <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> zu positionieren.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayoutSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size OnLayoutSize (System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Size OnLayoutSize(class System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.OnLayoutSize(System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e"><see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" /> mit den Layoutargumenten.</param>
+        <summary>Legt die Größe der visuellen Hinweise auf den Designern in <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> fest.</summary>
+        <returns>Die <see cref="T:System.Drawing.Size" />, die die neuen Größeneinstellungen für den <see cref="T:System.Workflow.ComponentModel.Design.SequentialActivityDesigner" /> enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.OnPaint(System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs" />, die die Zeichnungsargumente enthalten.</param>
+        <summary>Zeichnet zur Entwurfszeit die visuelle Darstellung der Aktivität.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

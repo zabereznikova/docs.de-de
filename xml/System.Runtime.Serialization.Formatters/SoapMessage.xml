@@ -1,0 +1,166 @@
+<Type Name="SoapMessage" FullName="System.Runtime.Serialization.Formatters.SoapMessage">
+  <TypeSignature Language="C#" Value="public class SoapMessage : System.Runtime.Serialization.Formatters.ISoapMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SoapMessage extends System.Object implements class System.Runtime.Serialization.Formatters.ISoapMessage" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Formatters.SoapMessage" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.Formatters.ISoapMessage</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält die Namen und Typen der Parameter während der Serialisierung einer SOAP-RPC (Remote Procedure Call) benötigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Runtime.Serialization.Formatters.SoapMessage> ist der Stamm eines Diagramms Serialisierung SOAP RPC (Remote Procedure Call)-Format erstellt wird und ein <xref:System.Runtime.Serialization.Formatters.SoapMessage> Objekt wird verwendet, um die Parametertypen der Methode Aufruf angeben. Die <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TopObject%2A?displayProperty=nameWithType> Eigenschaft kann während der Deserialisierung auf dieses Objekt festgelegt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.SoapMessage.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.Formatters.SoapMessage" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.Header[] Headers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Messaging.Header[] Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.SoapMessage.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.Header[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Out-of-Band-Daten der aufgerufenen Methode fest.</summary>
+        <value>Die Out-of-Band-Daten der aufgerufenen Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.SoapMessage.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der aufgerufenen Methode.</summary>
+        <value>Der Name der aufgerufenen Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParamNames">
+      <MemberSignature Language="C#" Value="public string[] ParamNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ParamNames" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.SoapMessage.ParamNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Parameternamen für die aufgerufene Methode.</summary>
+        <value>Die Parameternamen für die aufgerufene Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParamTypes">
+      <MemberSignature Language="C#" Value="public Type[] ParamTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] ParamTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.SoapMessage.ParamTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist reserviert. Verwenden der <see cref="P:System.Runtime.Serialization.Formatters.SoapMessage.ParamNames" /> und/oder <see cref="P:System.Runtime.Serialization.Formatters.SoapMessage.ParamValues" /> Eigenschaften stattdessen.</summary>
+        <value>Parametertypen für die aufgerufene Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParamValues">
+      <MemberSignature Language="C#" Value="public object[] ParamValues { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] ParamValues" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.SoapMessage.ParamValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Parameterwerte für die aufgerufene Methode.</summary>
+        <value>Parameterwerte für die aufgerufene Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNameSpace">
+      <MemberSignature Language="C#" Value="public string XmlNameSpace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlNameSpace" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.SoapMessage.XmlNameSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der XML-Namespace, in dem das Objekt, das die aufgerufene Methode enthält befindet.</summary>
+        <value>Der Name des XML-Namespaces, die auf dem sich das Objekt, das die aufgerufene Methode enthält befindet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

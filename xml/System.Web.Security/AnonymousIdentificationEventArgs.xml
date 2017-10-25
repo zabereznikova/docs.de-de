@@ -1,0 +1,125 @@
+<Type Name="AnonymousIdentificationEventArgs" FullName="System.Web.Security.AnonymousIdentificationEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class AnonymousIdentificationEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AnonymousIdentificationEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.AnonymousIdentificationEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die **AnonymousIdentification_Creating** Ereignis. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.AnonymousIdentificationEventArgs> Klasse wird verwendet, um Ereigniswerte an die <xref:System.Web.Security.AnonymousIdentificationModule.Creating> Ereignis und ermöglichen Ihnen die Angabe eine benutzerdefinierte Windows-Identität für die aktuelle Anforderung. Sie erreichen die <xref:System.Web.Security.AnonymousIdentificationModule.Creating> -Ereignis für die <xref:System.Web.Security.AnonymousIdentificationModule> -Klasse durch Angabe einer Unterroutine namens **AnonymousIdentification_Creating** in der Datei "Global.asax", damit Ihre ASP.NET-Anwendung.  
+  
+ Die <xref:System.Web.Security.AnonymousIdentificationModule> erstellt eine <xref:System.Web.Security.AnonymousIdentificationEventArgs> -Objekt mit dem aktuellen <xref:System.Web.HttpContext> und übergibt es an die **AnonymousIdentification_Creating** Ereignis.  
+  
+ Können Sie die <xref:System.Web.Security.AnonymousIdentificationEventArgs.AnonymousID%2A> Eigenschaft von der <xref:System.Web.Security.AnonymousIdentificationEventArgs> -Objekt bereitgestellt werden, um die **AnonymousIdentification_Creating** Ereignis, um den anonymen Bezeichner auf einen benutzerdefinierten Wert festgelegt. Wenn Sie einen Wert für nicht angeben der <xref:System.Web.Security.AnonymousIdentificationEventArgs.AnonymousID%2A> Eigenschaft während der **AnonymousIdentification_Creating** Ereignis, eine <xref:System.Guid> verwendet wird.  
+  
+ Die **AnonymousIdentification_Creating** Ereignis wird nur ausgelöst, wenn die anonyme Identifikation ist <xref:System.Web.Security.AnonymousIdentificationModule.Enabled%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der **AnonymousIdentification_Creating** Ereignis, um den anonymen Bezeichner auf einen benutzerdefinierten Wert festgelegt.  
+  
+ [!code-csharp[System.Web.Security.AnonymousIdentificationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.AnonymousIdentificationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.AnonymousIdentificationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.AnonymousIdentificationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnonymousIdentificationEventArgs (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AnonymousIdentificationEventArgs.#ctor(System.Web.HttpContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Kontext für das Ereignis.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Security.AnonymousIdentificationEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.AnonymousIdentificationModule> erstellt eine <xref:System.Web.Security.AnonymousIdentificationEventArgs> -Objekt mit dem aktuellen <xref:System.Web.HttpContext>. Es übergibt dann die <xref:System.Web.Security.AnonymousIdentificationEventArgs> -Objekt an die **AnonymousIdentification_Creating** Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnonymousID">
+      <MemberSignature Language="C#" Value="public string AnonymousID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AnonymousID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.AnonymousIdentificationEventArgs.AnonymousID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den anonymen Bezeichner für den Benutzer ab oder legt diesen fest.</summary>
+        <value>Der anonyme Bezeichner für den Benutzer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Web.Security.AnonymousIdentificationEventArgs.AnonymousID%2A> Eigenschaft, um den anonymen Bezeichner auf einen benutzerdefinierten Wert beim Festlegen der **AnonymousIdentification_Creating** Ereignis. Wenn Sie einen Wert für nicht angeben der <xref:System.Web.Security.AnonymousIdentificationEventArgs.AnonymousID%2A> Eigenschaft während der **AnonymousIdentification_Creating** Ereignis, eine <xref:System.Guid> verwendet wird.  
+  
+ Die **AnonymousIdentification_Creating** Ereignis wird nur ausgelöst, wenn die anonyme Identifikation ist <xref:System.Web.Security.AnonymousIdentificationModule.Enabled%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der **AnonymousIdentification_Creating** Ereignis, um den anonymen Bezeichner auf einen benutzerdefinierten Wert festgelegt.  
+  
+ [!code-csharp[System.Web.Security.AnonymousIdentificationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.AnonymousIdentificationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.AnonymousIdentificationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.AnonymousIdentificationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Web.HttpContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.AnonymousIdentificationEventArgs.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Web.HttpContext" />-Objekt für die aktuelle HTTP-Anforderung ab.</summary>
+        <value>Das <see cref="T:System.Web.HttpContext" />-Objekt für die aktuelle HTTP-Anforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpContext> ermöglicht den Zugriff auf <xref:System.Web.HttpContext.Request%2A>, <xref:System.Web.HttpContext.Response%2A>, und <xref:System.Web.HttpContext.User%2A> Objekte für die aktuelle Anforderung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

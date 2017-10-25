@@ -1,0 +1,50 @@
+<Type Name="TableCallback" FullName="System.Web.UI.WebControls.WebParts.TableCallback">
+  <TypeSignature Language="C#" Value="public delegate void TableCallback(ICollection tableData);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TableCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.TableCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="tableData" Type="System.Collections.ICollection" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="tableData">Die Daten, die vom Anbieter abzurufen.</param>
+    <summary>Verweist auf die Methode, die aufgerufen wird, wenn die Daten von einem Anbieter abgerufen werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Webparts-Steuerelement implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> -Schnittstelle und fungiert als Anbieter in einer Webparts-Verbindung, die Consumer oder Transformer müssen abzurufen und zu verarbeiten die Tabellendaten aus den Anbieter. Die <xref:System.Web.UI.WebControls.WebParts.TableCallback> Delegat stellt die Methode für die Verarbeitung der Anbieterdaten aufrufen.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.GetTableData%2A> Methode enthält einen <xref:System.Web.UI.WebControls.WebParts.TableCallback> Parameter zu delegieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel enthält ein Webparts-Steuerelement namens `TableProviderWebPart` , die als Anbieter von Daten in Form einer Tabelle dient. Das Steuerelement schließt eine Implementierung der <xref:System.Web.UI.WebControls.WebParts.IWebPartTable.GetTableData%2A> -Methode, die einen Parameter vom Typ empfängt <xref:System.Web.UI.WebControls.WebParts.TableCallback>. Diese Methode ruft die Methode, dargestellt durch die <xref:System.Web.UI.WebControls.WebParts.TableCallback> delegieren, die Tabellendaten übergeben.  
+  
+ [!code-csharp[WebParts_TableCallback_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_TableCallback_Overview/CS/tableprovider.cs#1)]
+ [!code-vb[WebParts_TableCallback_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_TableCallback_Overview/VB/tableprovider.vb#1)]  
+  
+ In der `OnPreRender` -Methode, ruft der Consumer `GetTableData` in `TableProviderWebPart` und übergibt die `GetTableData` -Methode, wie der Delegat, der mit der Tabellendaten aufrufen, wie im folgenden Codebeispiel gezeigt.  
+  
+ [!code-csharp[WebParts_TableCallback_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_TableCallback_Overview/CS/tableconsumerwebpart.cs#2)]
+ [!code-vb[WebParts_TableCallback_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_TableCallback_Overview/VB/tableconsumerwebpart.vb#2)]  
+  
+ Die beiden Steuerelemente und die Verbindung sind in einer Webseite enthalten, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-aspx-csharp[WebParts_TableCallback_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_TableCallback_Overview/CS/TableConnection.aspx#3)]
+ [!code-aspx-vb[WebParts_TableCallback_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_TableCallback_Overview/VB/TableConnection.aspx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,630 @@
+<Type Name="MessageEncoder" FullName="System.ServiceModel.Channels.MessageEncoder">
+  <TypeSignature Language="C#" Value="public abstract class MessageEncoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MessageEncoder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.MessageEncoder" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Der Encoder ist die Komponente, die zum Schreiben von Nachrichten in einen Stream und Lesen von Nachrichten aus einem Stream dient.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.MessageEncoder> ist eine Basisklasse, die Implementierungen bietet, die eine(n) Multipurpose Internet Mail Extensions (MIME)-Inhaltstyp und -Nachrichtenversion unterstützen und die Schnittstelle für die Serialisierung und Deserialisierung von Nachrichten entsprechend dieses Inhaltstyps definieren. Verwenden Sie es als Basisklasse zum Schreiben eines eigenen benutzerdefinierten Encoders.  
+  
+ Mit dieser Klasse können Sie einen benutzerdefinierten Nachrichtenencoder implementieren. Zum Implementieren eines eigenen Nachrichtenencoders müssen benutzerdefinierte Implementierungen der folgenden abstrakten Basisklassen bereitgestellt werden:  
+  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+  
+-   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+  
+-   <xref:System.ServiceModel.Channels.MessageEncoder>  
+  
+ Überschreiben Sie den <xref:System.ServiceModel.Channels.MessageEncoderFactory.Encoder%2A>, um eine Instanz des benutzerdefinierten <xref:System.ServiceModel.Channels.MessageEncoder> zurückzugeben. Verknüpfen Sie anschließend die benutzerdefinierte <xref:System.ServiceModel.Channels.MessageEncoderFactory> mit dem Bindungselementstapel für die Konfiguration des Diensts oder des Clients durch Überschreiben der <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>-Methode, um eine Instanz der Factory zurückzugeben.  
+  
+ Die Aufgabe zur Umwandlung der speicherinternen Version einer Nachricht und eines XML Information Set (Infoset) in eine Version, die in einen Stream geschrieben werden kann, ist Teil der <xref:System.ServiceModel.Channels.MessageEncoder>-Klasse, die als Factory für XML-Reader und XML-Writer mit Unterstützung für bestimmte XML-Codierungstypen fungiert.  
+  
+ Die Schlüsselmethoden für <xref:System.ServiceModel.Channels.MessageEncoder> sind <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> und <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>. <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> nimmt ein <xref:System.ServiceModel.Channels.Message>-Objekt an und schreibt es in ein <xref:System.IO.Stream>-Objekt. <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> nimmt ein <xref:System.IO.Stream>-Objekt sowie eine maximale Headergröße an und gibt ein <xref:System.ServiceModel.Channels.Message>-Objekt zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine vom <xref:System.ServiceModel.Channels.MessageEncoder> abgeleitete Klasse veranschaulicht.  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoder.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.MessageEncoder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWriteMessage">
+      <MemberSignature Language="C#" Value="public virtual IAsyncResult BeginWriteMessage (System.ServiceModel.Channels.Message message, System.IO.Stream stream, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginWriteMessage(class System.ServiceModel.Channels.Message message, class System.IO.Stream stream, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.BeginWriteMessage(System.ServiceModel.Channels.Message,System.IO.Stream,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung.</param>
+        <param name="stream">Der Stream (Datenstrom).</param>
+        <param name="callback">Der Rückruf.</param>
+        <param name="state">Der Zustand.</param>
+        <summary>Startet das Schreiben der Nachricht für die Nachrichtenencoder mit der angegebenen Meldung, Stream, Rückruf und Zustand.</summary>
+        <returns>Das asynchrone Ergebnis des Vorgangs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public abstract string ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageEncoder.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Überschreiben in einer abgeleiteten Klasse wird der vom Encoder verwendete MIME-Inhaltstyp abgerufen.</summary>
+        <value>Der Inhaltstyp, der vom Nachrichtenencoder unterstützt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhaltstyp ist ein Multipurpose Internet Mail Exchange (MIME)-Header, der zu Anfang einer MIME-Nachricht sowie innerhalb der einzelnen Textteile angezeigt wird. Content-Type-Header werden zur Angabe des Medientyps und des Untertyps von Daten im Text einer Nachricht sowie zur vollständigen Angabe des Medientyps und des Untertyps von Daten im Text einer Nachricht und zur (optionalen) Angabe der Zeichencodierung von Daten verwendet. Ein Beispiel für einen MIME-Inhaltstyp, der unterstützt werden können: "Application/Soap + Xml; Charset = 'utf8' ".  
+  
+ Eine Grammatik für die Syntax des Content-Type-Headers wird beschrieben, [RFC 2045](http://go.microsoft.com/fwlink/?LinkId=95945), Abschnitt 5.1. [RFC 2046](http://go.microsoft.com/fwlink/?LinkId=95944) enthält detaillierte Informationen zum MIME-Medientypen und ihre Parameter.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoder.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWriteMessage">
+      <MemberSignature Language="C#" Value="public virtual void EndWriteMessage (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndWriteMessage(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.EndWriteMessage(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das Ergebnis des Vorgangs.</param>
+        <summary>Beendet das Schreiben von Nachrichten für die Nachrichtenencoder.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public virtual T GetProperty&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T GetProperty&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.GetProperty``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <summary>Gibt ggf. ein angefordertes typisiertes Objekt von der entsprechenden Ebene im Kanalstapel zurück.</summary>
+        <returns>Das von <paramref name="T" /> angeforderte typisierte Objekt, oder <see langword="null" />, falls das Objekt nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Anforderung können Sie typisierte Objekte wie eine Schnittstelle für das Festlegen von Eigenschaften oder für das Abrufen des Status aus der entsprechenden Ebene im Kanalstapel abfragen. Wenn eine Ebene das Zurückgeben des angeforderten Objekts unterstützt, wird der Vorgang ausgeführt. Andernfalls wird der Aufruf an die nächst tiefere Ebene im Stapel delegiert. Wenn die letzte Ebene erreicht ist und das angeforderte Objekt von keiner Kanalebene unterstützt wird, gibt die Methode `null` zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContentTypeSupported">
+      <MemberSignature Language="C#" Value="public virtual bool IsContentTypeSupported (string contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsContentTypeSupported(string contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.IsContentTypeSupported(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">Der Content-Type auf Nachrichtenebene, der getestet wird.</param>
+        <summary>Gibt einen Wert zurück, der anzeigt, ob ein angegebener Content-Type-Wert auf Nachrichtenebene vom Nachrichtenencoder unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Content-Type auf Nachrichtenebene unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um festzustellen, ob der Nachrichtenencoder verwendet werden kann, um einen bestimmten Nachrichtenstil basierend auf dem Inhaltstyp zu lesen. Die Informationen in der <xref:System.Net.Mime.ContentType>-Klasse werden verwendet, um die Daten zu beschreiben, die in einer Nachricht enthalten sind, und um zu bestimmen, ob eine Entsprechung des Content-Types vorliegt.  
+  
+ Eine Grammatik für die Syntax des Content-Type-Headers wird beschrieben, [RFC 2045](http://go.microsoft.com/fwlink/?LinkId=95945) Abschnitt 5.1. [RFC 2046](http://go.microsoft.com/fwlink/?LinkId=95944) enthält ausführliche Informationen zu Medientypen Multipurpose Internet Mail Extensions (MIME) und ihre Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Überschreiben dieser Methode zur Verarbeitung unterschiedlicher Inhaltstypen mit demselben Medienttyp veranschaulicht.  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoder.cs#8)]
+ [!code-csharp[S_UE_CustomTextMessageEncoder#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoderfactory.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaType">
+      <MemberSignature Language="C#" Value="public abstract string MediaType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MediaType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageEncoder.MediaType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Überschreiben in einer abgeleiteten Klasse wird der vom Encoder verwendete Medientypwert abgerufen.</summary>
+        <value>Der Medientyp, der vom Nachrichtenencoder unterstützt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Medientyp ist Teil des Content-Type-Headers.  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird die Implementierung der `MediaType`-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoder.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageVersion">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.MessageVersion MessageVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageVersion MessageVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageEncoder.MessageVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Überschreiben in einer abgeleiteten Klasse wird die vom Encoder verwendete Nachrichtenversion abgerufen.</summary>
+        <value>Die vom Encoder verwendete <see cref="T:System.ServiceModel.Channels.MessageVersion" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die SOAP-Version und die Version von WS-Adressierung an, die einer Nachricht und ihrem Austausch zugeordnet sind. Wenn keine SOAP-Versionen verwendet werden sollen, sollte diese Eigenschaft daher überschrieben werden, um <xref:System.ServiceModel.Channels.MessageVersion.None%2A> zurückzugeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird die Implementierung der <xref:System.ServiceModel.Channels.MessageEncoder.MessageVersion%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoder.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMessage">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Message ReadMessage (ArraySegment&lt;byte&gt; buffer, System.ServiceModel.Channels.BufferManager bufferManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.Message ReadMessage(valuetype System.ArraySegment`1&lt;unsigned int8&gt; buffer, class System.ServiceModel.Channels.BufferManager bufferManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.ReadMessage(System.ArraySegment{System.Byte},System.ServiceModel.Channels.BufferManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="bufferManager" Type="System.ServiceModel.Channels.BufferManager" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein <see cref="T:System.ArraySegment`1" /> vom Typ <see cref="T:System.Byte" />, das den Puffer bereitstellt, aus dem die Nachricht deserialisiert wird.</param>
+        <param name="bufferManager">Der <see cref="T:System.ServiceModel.Channels.BufferManager" />, der den Puffer verwaltet, aus dem die Nachricht deserialisiert wird.</param>
+        <summary>Liest beim Überschreiben in einer abgeleiteten Klasse eine Nachricht aus dem angegebenen Puffer.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Channels.Message" />, die vom angegebenen Puffer gelesen wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMessage">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Message ReadMessage (System.IO.Stream stream, int maxSizeOfHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.Message ReadMessage(class System.IO.Stream stream, int32 maxSizeOfHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.ReadMessage(System.IO.Stream,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="maxSizeOfHeaders" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Das <see cref="T:System.IO.Stream" />-Objekt, aus dem die Nachricht gelesen wird.</param>
+        <param name="maxSizeOfHeaders">Die maximal zulässige Headergröße, die aus der Nachricht gelesen werden kann.</param>
+        <summary>Liest beim Überschreiben in einer abgeleiteten Klasse eine Nachricht aus dem angegebenen Stream.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Channels.Message" />, die vom angegebenen Stream gelesen wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMessage">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.Message ReadMessage (ArraySegment&lt;byte&gt; buffer, System.ServiceModel.Channels.BufferManager bufferManager, string contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.Message ReadMessage(valuetype System.ArraySegment`1&lt;unsigned int8&gt; buffer, class System.ServiceModel.Channels.BufferManager bufferManager, string contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.ReadMessage(System.ArraySegment{System.Byte},System.ServiceModel.Channels.BufferManager,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="bufferManager" Type="System.ServiceModel.Channels.BufferManager" />
+        <Parameter Name="contentType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein <see cref="T:System.ArraySegment`1" /> vom Typ <see cref="T:System.Byte" />, das den Puffer bereitstellt, aus dem die Nachricht deserialisiert wird.</param>
+        <param name="bufferManager">Der <see cref="T:System.ServiceModel.Channels.BufferManager" />, der den Puffer verwaltet, aus dem die Nachricht deserialisiert wird.</param>
+        <param name="contentType">Der Multipurpose Internet Mail Extensions (MIME)-Content-Type auf Nachrichtenebene.</param>
+        <summary>Liest beim Überschreiben in einer abgeleiteten Klasse eine Nachricht aus dem angegebenen Stream.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Channels.Message" />, die vom angegebenen Stream gelesen wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Implementierung der <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%28System.ArraySegment%7BSystem.Byte%7D%2CSystem.ServiceModel.Channels.BufferManager%2CSystem.String%29>-Methode veranschaulicht.  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoder.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMessage">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.Message ReadMessage (System.IO.Stream stream, int maxSizeOfHeaders, string contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.Message ReadMessage(class System.IO.Stream stream, int32 maxSizeOfHeaders, string contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.ReadMessage(System.IO.Stream,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="maxSizeOfHeaders" Type="System.Int32" />
+        <Parameter Name="contentType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Das <see cref="T:System.IO.Stream" />-Objekt, aus dem die Nachricht gelesen wird.</param>
+        <param name="maxSizeOfHeaders">Die maximal zulässige Headergröße, die aus der Nachricht gelesen werden kann.</param>
+        <param name="contentType">Der Multipurpose Internet Mail Extensions (MIME)-Content-Type auf Nachrichtenebene.</param>
+        <summary>Liest beim Überschreiben in einer abgeleiteten Klasse eine Nachricht aus dem angegebenen Stream.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Channels.Message" />, die vom angegebenen Stream gelesen wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Implementierung der <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%28System.IO.Stream%2CSystem.Int32%2CSystem.String%29>-Methode veranschaulicht.  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoder.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Der Inhaltstyp, der vom Nachrichtenencoder verwendet wird, wird zurückgegeben.</summary>
+        <returns>Der Inhaltstyp, der vom Nachrichtenencoder verwendet wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteMessage">
+      <MemberSignature Language="C#" Value="public abstract void WriteMessage (System.ServiceModel.Channels.Message message, System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteMessage(class System.ServiceModel.Channels.Message message, class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.WriteMessage(System.ServiceModel.Channels.Message,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die <see cref="T:System.ServiceModel.Channels.Message" /> zum Schreiben in die <c>Stream</c>.</param>
+        <param name="stream">Die <see cref="T:System.IO.Stream" /> Objekt, mit dem die <c>Nachricht</c> geschrieben wird.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse eine Nachricht in den angegebenen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Implementierung der <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%28System.ServiceModel.Channels.Message%2CSystem.IO.Stream%29>-Methode veranschaulicht.  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoder.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteMessage">
+      <MemberSignature Language="C#" Value="public ArraySegment&lt;byte&gt; WriteMessage (System.ServiceModel.Channels.Message message, int maxMessageSize, System.ServiceModel.Channels.BufferManager bufferManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ArraySegment`1&lt;unsigned int8&gt; WriteMessage(class System.ServiceModel.Channels.Message message, int32 maxMessageSize, class System.ServiceModel.Channels.BufferManager bufferManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.WriteMessage(System.ServiceModel.Channels.Message,System.Int32,System.ServiceModel.Channels.BufferManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ArraySegment&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="maxMessageSize" Type="System.Int32" />
+        <Parameter Name="bufferManager" Type="System.ServiceModel.Channels.BufferManager" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die in den Nachrichtenpuffer zu schreibende <see cref="T:System.ServiceModel.Channels.Message" />.</param>
+        <param name="maxMessageSize">Die maximal zulässige Nachrichtengröße, die geschrieben werden kann.</param>
+        <param name="bufferManager">Der <see cref="T:System.ServiceModel.Channels.BufferManager" />, der den Puffer verwaltet, in den die Nachricht geschrieben wird.</param>
+        <summary>Schreibt eine Nachricht, die kleiner ist als die angegebene Größe, in einen Bytearraypuffer.</summary>
+        <returns>Ein <see cref="T:System.ArraySegment`1" /> vom Typ <see langword="byte" />, das den Puffer bereitstellt, in dem die Nachricht serialisiert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die abstrakte Methode <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%28System.ServiceModel.Channels.Message%2CSystem.Int32%2CSystem.ServiceModel.Channels.BufferManager%2CSystem.Int32%29> mit `messageOffset` = 0 auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteMessage">
+      <MemberSignature Language="C#" Value="public abstract ArraySegment&lt;byte&gt; WriteMessage (System.ServiceModel.Channels.Message message, int maxMessageSize, System.ServiceModel.Channels.BufferManager bufferManager, int messageOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.ArraySegment`1&lt;unsigned int8&gt; WriteMessage(class System.ServiceModel.Channels.Message message, int32 maxMessageSize, class System.ServiceModel.Channels.BufferManager bufferManager, int32 messageOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncoder.WriteMessage(System.ServiceModel.Channels.Message,System.Int32,System.ServiceModel.Channels.BufferManager,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ArraySegment&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="maxMessageSize" Type="System.Int32" />
+        <Parameter Name="bufferManager" Type="System.ServiceModel.Channels.BufferManager" />
+        <Parameter Name="messageOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die in den Nachrichtenpuffer zu schreibende <see cref="T:System.ServiceModel.Channels.Message" />.</param>
+        <param name="maxMessageSize">Die maximal zulässige Nachrichtengröße, die geschrieben werden kann.</param>
+        <param name="bufferManager">Der <see cref="T:System.ServiceModel.Channels.BufferManager" />, der den Puffer verwaltet, in den die Nachricht geschrieben wird.</param>
+        <param name="messageOffset">Offset des Segments, das am Start des Bytearrays beginnt, das den Puffer bereitstellt.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse eine Nachricht, die kleiner ist als die angegebene Größe, im angegebenen Offset in einen Bytearraypuffer.</summary>
+        <returns>Ein <see cref="T:System.ArraySegment`1" /> vom Typ <see langword="byte" />, das den Puffer bereitstellt, in dem die Nachricht serialisiert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%28System.ServiceModel.Channels.Message%2CSystem.Int32%2CSystem.ServiceModel.Channels.BufferManager%2CSystem.Int32%29> aufgerufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Implementierung der <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%28System.ServiceModel.Channels.Message%2CSystem.Int32%2CSystem.ServiceModel.Channels.BufferManager%2CSystem.Int32%29>-Methode veranschaulicht.  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencoder.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

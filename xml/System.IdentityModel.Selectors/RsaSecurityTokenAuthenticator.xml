@@ -1,0 +1,86 @@
+<Type Name="RsaSecurityTokenAuthenticator" FullName="System.IdentityModel.Selectors.RsaSecurityTokenAuthenticator">
+  <TypeSignature Language="C#" Value="public class RsaSecurityTokenAuthenticator : System.IdentityModel.Selectors.SecurityTokenAuthenticator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RsaSecurityTokenAuthenticator extends System.IdentityModel.Selectors.SecurityTokenAuthenticator" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.RsaSecurityTokenAuthenticator" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenAuthenticator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Authentifiziert ein <see cref="T:System.IdentityModel.Tokens.RsaSecurityToken" />-Sicherheitstoken.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RsaSecurityTokenAuthenticator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.RsaSecurityTokenAuthenticator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.RsaSecurityTokenAuthenticator" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool CanValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.RsaSecurityTokenAuthenticator.CanValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Die zu validierende <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob das angegebene Sicherheitstoken von diesem Sicherheitstoken-Authentifikator überprüft werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="token" /> ein <see cref="T:System.IdentityModel.Tokens.RsaSecurityToken" />-Sicherheitstoken ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.RsaSecurityTokenAuthenticator.ValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Die zu validierende <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</param>
+        <summary>Authentifiziert das angegebene Sicherheitstoken und gibt den Satz von Autorisierungsrichtlinien für das Sicherheitstoken zurück.</summary>
+        <returns>Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> des Typs <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" />, der den Satz von Autorisierungsrichtlinien für diese Anwendung praktisch enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode für die von dieser Methode zurückgegebenen Autorisierungsrichtlinie zurückgegeben wird, wird ein Anspruch des Typs <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> zur <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A>-Eigenschaft des <xref:System.IdentityModel.Policy.EvaluationContext> hinzugefügt, die an die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode übergeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

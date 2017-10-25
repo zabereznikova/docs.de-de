@@ -1,0 +1,77 @@
+<Type Name="StretchDirection" FullName="System.Windows.Controls.StretchDirection">
+  <TypeSignature Language="C#" Value="public enum StretchDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StretchDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.StretchDirection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt, wie die Skalierung auf Inhalt angewendet wird, und beschränkt die Skalierung auf benannte Achsentypen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer Instanz des <xref:System.Windows.Controls.Viewbox> und legen Sie die <xref:System.Windows.Controls.StretchDirection> von Inhalten mithilfe von Code.  
+  
+ [!code-cpp[ViewBoxCode#2](~/samples/snippets/cpp/VS_Snippets_Wpf/ViewBoxCode/CPP/ViewboxCode.cpp#2)]
+ [!code-csharp[ViewBoxCode#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ViewBoxCode/Csharp/ViewboxCode.cs#2)]
+ [!code-vb[ViewBoxCode#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ViewBoxCode/VisualBasic/ViewBoxCodeVB.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Both">
+      <MemberSignature Language="C#" Value="Both" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.StretchDirection Both = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.StretchDirection.Both" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.StretchDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Inhalt gestreckt wird, um das übergeordnete Element entsprechend dem Anpassen der <see cref="T:System.Windows.Media.Stretch" /> Modus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DownOnly">
+      <MemberSignature Language="C#" Value="DownOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.StretchDirection DownOnly = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.StretchDirection.DownOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.StretchDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Inhalt wird nur dann nach unten skaliert, wenn er größer als das übergeordnete Element ist. Wenn der Inhalt kleiner ist, wird keine Skalierung nach oben durchgeführt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UpOnly">
+      <MemberSignature Language="C#" Value="UpOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.StretchDirection UpOnly = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.StretchDirection.UpOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.StretchDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Inhalt wird nur dann nach oben skaliert, wenn er kleiner als das übergeordnete Element ist. Wenn der Inhalt größer ist, wird keine Skalierung nach unten durchgeführt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

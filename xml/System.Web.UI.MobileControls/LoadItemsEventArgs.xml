@@ -1,0 +1,106 @@
+<Type Name="LoadItemsEventArgs" FullName="System.Web.UI.MobileControls.LoadItemsEventArgs">
+  <TypeSignature Language="C#" Value="public class LoadItemsEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LoadItemsEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.LoadItemsEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Ereignisdaten für ASP.NET mobile-Steuerelemente, die benutzerdefinierte Paginierung unterstützen. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klasse <xref:System.Web.UI.MobileControls.LoadItemsEventArgs> Objekt stellt Ereignisdaten mit Informationen über wie viele zum Laden in das Steuerelement bei Bedarf Elemente bereit.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.List.OnLoadItems%2A> Ereignis Funktionsaufrufe `LoadNow`. Die <xref:System.Web.UI.MobileControls.LoadItemsEventArgs.ItemIndex%2A> Eigenschaft bestimmt die Anzahl der Elemente, die ein Array hinzugefügt werden, die auf eine Liste gebunden ist. Um die Auswirkungen dieses Beispiels angezeigt wird, müssen Sie die Seite auf einem Gerät anzeigen, die die Liste Paginieren können.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileLoadListEventArgsSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileLoadListEventArgsSample/cs/default.aspx#1)]
+ [!code-aspx-vb[MobileLoadListEventArgsSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileLoadListEventArgsSample/vb/default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoadItemsEventArgs (int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.LoadItemsEventArgs.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Initialisiert die <see cref="P:System.Web.UI.MobileControls.LoadItemsEventArgs.ItemIndex" /> Eigenschaft mit diesem Wert.</param>
+        <param name="count">Initialisiert die <see cref="P:System.Web.UI.MobileControls.LoadItemsEventArgs.ItemCount" /> Eigenschaft mit diesem Wert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.LoadItemsEventArgs" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt ein neues <xref:System.Web.UI.MobileControls.LoadItemsEventArgs> -Objekt und initialisiert die <xref:System.Web.UI.MobileControls.LoadItemsEventArgs.ItemIndex%2A> und <xref:System.Web.UI.MobileControls.LoadItemsEventArgs.ItemCount%2A> mit den Werten der Eigenschaften der `index`, und `count` Parameter bzw..  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCount">
+      <MemberSignature Language="C#" Value="public int ItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.LoadItemsEventArgs.ItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Elemente im Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Anzahl der Elemente im Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.LoadItemsEventArgs.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des ersten Elements, das durch das aufgerufene Ereignis geladen werden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Index des ersten Elements, das durch das aufgerufene Ereignis geladen werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

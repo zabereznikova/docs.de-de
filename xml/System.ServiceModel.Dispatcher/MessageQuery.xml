@@ -1,0 +1,181 @@
+<Type Name="MessageQuery" FullName="System.ServiceModel.Dispatcher.MessageQuery">
+  <TypeSignature Language="C#" Value="public abstract class MessageQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MessageQuery extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.MessageQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert das Kernverhalten von Klassen, das verwendet wurde, um in einer Nachricht nach bestimmten korrelierenden Daten zu suchen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Dispatcher.MessageQuery>-Klasse ähnelt der <xref:System.ServiceModel.Dispatcher.MessageFilter>-Klasse.  Statt Übereinstimmungen zurückzugeben, gibt die <xref:System.ServiceModel.Dispatcher.MessageQuery.Evaluate%2A>-Methode die Ergebnisse einer Abfrage für eine Nachricht aus. Das Ergebnis der Abfrage ist ein Wert, der in der Nachricht enthalten ist. Verwenden Sie den Wert als Schlüssel, um die Nachricht in Beziehung zu anderen Nachrichten zu setzen. Um eine neue Eigenschaft für die Daten hinzuzufügen, verwenden Sie die <xref:System.ServiceModel.Channels.CorrelationDataMessageProperty.Add%2A>-Methode der <xref:System.ServiceModel.Channels.CorrelationDataMessageProperty>-Klasse.  
+  
+> [!NOTE]
+>  Eine konkrete Implementierung der <xref:System.ServiceModel.Dispatcher.MessageQuery>-Methode finden Sie in der <xref:System.ServiceModel.XPathMessageQuery>-Klasse.  
+  
+## <a name="using-the-xpathmessagequery-and-messagequerycollection-classes"></a>Verwenden der XPathMessageQuery-Klasse und der MessageQueryCollection-Klasse  
+ Sie können den Abfrageprozess optimieren, indem Sie einen Satz von Abfrageobjekten erstellen und sie in eine Instanz der <xref:System.ServiceModel.Dispatcher.MessageQueryCollection>-Klasse einfügen.  
+  
+> [!NOTE]
+>  Eine konkrete Implementierung der <xref:System.ServiceModel.Dispatcher.MessageQueryCollection>-Methode finden Sie in der <xref:System.ServiceModel.Dispatcher.XPathMessageQueryCollection>-Klasse.  
+  
+ Eine allgemeine Verwendung ist, die Auflistung mit Abfragen aufzufüllen, die über das gleiche XPath-Prädikat verfügen und sich nur im abschließenden Blattwert unterscheiden. Die folgenden XPath-Abfragen unterscheiden sich z. B. nur in der abschließenden Klausel. Die ersten Abfragen aller Elemente, bei denen das Mengenattribut auf 1 festgelegt ist, und die zweiten Abfragen aller Elemente, bei denen das Produktattribut haben auf 'Contoso' festgelegt ist:  
+  
+```  
+"/s12:Envelope/s12:Body/PurchaseOrder/Items/Item[@quantity = 1]"  
+"/s12:Envelope/s12:Body/PurchaseOrder/Items/Item[@product = 'Contoso']"  
+```  
+  
+ Mit der <xref:System.ServiceModel.Dispatcher.MessageQueryCollection>-Klasse können Sie Tabellen von Abfragen erstellen, die sich nur leicht unterscheiden, sodass sie effizienter verarbeitet werden.  
+  
+ Alternativ können Sie die <xref:System.ServiceModel.Dispatcher.MessageQueryTable%601>-Klasse verwenden, um Nachrichtenabfragen zu speichern und auszuwerten.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden eine neue Meldung und XPath-Meldungsabfragen erstellt. Die Abfragen werden von den <xref:System.ServiceModel.XPathMessageQuery>-Objekten ausgewertet, die in einem <xref:System.ServiceModel.Dispatcher.XPathMessageQueryCollection>-Objekt enthalten sind. Die Ergebnisse einer jeden Abfrage werden mit der <xref:System.ServiceModel.Dispatcher.XPathResult.ResultType%2A>-Eigenschaft der <xref:System.ServiceModel.Dispatcher.XPathResult>-Klasse getestet.  
+  
+ [!code-csharp[XPathMessageQuery#0](~/samples/snippets/csharp/VS_Snippets_CFX/xpathmessagequery/cs/source.cs#0)]
+ [!code-vb[XPathMessageQuery#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/xpathmessagequery/vb/source.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQuery.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.MessageQuery" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageQueryCollection">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Dispatcher.MessageQueryCollection CreateMessageQueryCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Dispatcher.MessageQueryCollection CreateMessageQueryCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQuery.CreateMessageQueryCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.MessageQueryCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Auflistung von Abfragen, die einen bestimmten Typ von ihr zugeordneten Daten zurückgibt.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.Dispatcher.MessageQueryCollection" />Die Auflistung der Abfragen, die dem Datentyp zugeordnet sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für die Verwendung durch die <xref:System.ServiceModel.Dispatcher.MessageQueryCollection>-Klasse vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Evaluate&lt;TResult&gt;">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Wenn sie in einer abgeleiteten Klasse überschrieben wird, wird eine Abfrage für die Nachricht ausgeführt und ein Wert zurückgegeben, der die Abfrage erfüllt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Unterschied zwischen den zwei Überladungen besteht darin, dass eine Überladung einen <xref:System.ServiceModel.Channels.Message>-Parameter entgegennimmt und den Textinhalt nicht überprüfen darf, während die andere einen <xref:System.ServiceModel.Channels.MessageBuffer>-Parameter entgegennimmt und alle Teile der Nachricht überprüfen kann. Nachrichtenheader werden automatisch gepuffert und können abgefragt werden, ohne verwendet zu werden. Wenn jedoch der Nachrichtentext abgefragt werden soll, muss die gesamte Nachricht gepuffert werden, da eine nicht gepufferte Nachricht durch die Abfrage verwendet werden kann, wodurch ihr Inhalt vernichtet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Evaluate&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public abstract TResult Evaluate&lt;TResult&gt; (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TResult Evaluate&lt;TResult&gt;(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQuery.Evaluate``1(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Den Typ des Rückgabewerts.</typeparam>
+        <param name="message">Die abzufragende Nachricht.</param>
+        <summary>Wenn sie in einer abgeleiteten Klasse überschrieben wird, wird eine Abfrage für die Nachricht ausgeführt und ein Wert zurückgegeben. Der Text kann nicht abgefragt werden.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.Dispatcher.MessageQueryCollection" />  
+  
+ Eine aufzählbare Auflistung von Ergebnissen, die die Abfrage erfüllen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public abstract TResult Evaluate&lt;TResult&gt; (System.ServiceModel.Channels.MessageBuffer buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TResult Evaluate&lt;TResult&gt;(class System.ServiceModel.Channels.MessageBuffer buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQuery.Evaluate``1(System.ServiceModel.Channels.MessageBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ des zurückzugebenden Objekts.</typeparam>
+        <param name="buffer">Die abzufragende Nachricht.</param>
+        <summary>Wenn sie in einer abgeleiteten Klasse überschrieben wird, wird eine Abfrage für die Nachricht ausgeführt und ein Wert zurückgegeben.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.Dispatcher.MessageQueryCollection" />  
+  
+ Eine aufzählbare Auflistung von Ergebnissen, die die Abfrage erfüllen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel werden eine neue Meldung und XPath-Meldungsabfragen erstellt. Die Abfragen werden von den <xref:System.ServiceModel.XPathMessageQuery>-Objekten ausgewertet, die in einem <xref:System.ServiceModel.Dispatcher.XPathMessageQueryCollection>-Objekt enthalten sind. Die Ergebnisse einer jeden Abfrage werden mit der <xref:System.ServiceModel.Dispatcher.XPathResult.ResultType%2A>-Eigenschaft der <xref:System.ServiceModel.Dispatcher.XPathResult>-Klasse getestet.  
+  
+ [!code-csharp[XPathMessageQuery#0](~/samples/snippets/csharp/VS_Snippets_CFX/xpathmessagequery/cs/source.cs#0)]
+ [!code-vb[XPathMessageQuery#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/xpathmessagequery/vb/source.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,77 @@
+<Type Name="WorkflowInstanceQuery" FullName="System.Activities.Tracking.WorkflowInstanceQuery">
+  <TypeSignature Language="C#" Value="public class WorkflowInstanceQuery : System.Activities.Tracking.TrackingQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowInstanceQuery extends System.Activities.Tracking.TrackingQuery" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.WorkflowInstanceQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Tracking.TrackingQuery</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beim Hinzufügen zur <see cref="P:System.Activities.Tracking.TrackingProfile.Queries" />-Auflistung werden Workflowinstanzdatensätze abonniert, wenn das Nachverfolgungsprofil für das Abonnement von Nachverfolgungsdatensätzen erstellt wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowInstanceQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.WorkflowInstanceQuery.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Tracking.WorkflowInstanceQuery" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="States">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; States { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; States" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.WorkflowInstanceQuery.States" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Abonnementzustände der nachverfolgten Workflowinstanz beim Erstellen der Nachverfolgungsdatensätze.</summary>
+        <value>Die Workflowszustände.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebenen Datensätze werden entsprechend den Zuständen in dieser Auflistung gefiltert.  
+  
+ Eine Beschreibung der möglichen Zustandswerte finden Sie in der folgenden Tabelle.  
+  
+|Zustand|Beschreibung|  
+|-----------|-----------------|  
+|Aborted|Die Workflowinstanz wurde abgebrochen.|  
+|Abgeschlossen|Die Workflowinstanz wurde abgeschlossen.|  
+|Deleted|Die Workflowinstanz wurde gelöscht.|  
+|Idle|Die Workflowinstanz ist im Leerlauf.|  
+|Persisted|Die Workflowinstanz wurde beibehalten.|  
+|Resumed|Die Workflowinstanz wurde wiederaufgenommen.|  
+|Started|Die Workflowinstanz wurde gestartet.|  
+|UnhandledException|In der Workflowinstanz ist eine nicht behandelte Ausnahme aufgetreten.|  
+|Unloaded|Die Workflowinstanz wurde entladen.|  
+|Canceled|Die Workflowinstanz wurde abgebrochen.|  
+|Angehalten|Die Workflowinstanz wurde unterbrochen.|  
+|Terminated|Die Workflowinstanz wurde beendet.|  
+|Unsuspended|Die Workflowinstanz wurde fortgesetzt.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,131 @@
+<Type Name="ConvertEventArgs" FullName="System.Windows.Forms.ConvertEventArgs">
+  <TypeSignature Language="C#" Value="public class ConvertEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConvertEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ConvertEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.Binding.Format" />-Ereignis und das <see cref="E:System.Windows.Forms.Binding.Parse" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ConvertEventArgs> dient zum Formatieren und die Wiederherstellungsinformationen von einem Windows Forms-Steuerelement, das an Daten gebunden ist angezeigten Werte einen <xref:System.Windows.Forms.Binding> Objekt. Die <xref:System.Windows.Forms.Binding.Format> Ereignis tritt auf, wenn eine Steuerelementeigenschaft an einen Wert gebunden wird und die <xref:System.Windows.Forms.Binding.Parse> Ereignis tritt auf, wenn der gebundene Wert ändert.  
+  
+ Die <xref:System.Windows.Forms.Binding.Format> und <xref:System.Windows.Forms.Binding.Parse> Ereignisse ermöglichen es Ihnen, benutzerdefinierte Formate für die Anzeige von Daten zu erstellen. Z. B., wenn die Daten in einer Tabelle vom Typ <xref:System.Decimal>, können Sie angeben, dass durch Festlegen der Daten in der lokalen Währungsformat angezeigt werden sollen die <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> Eigenschaft von der <xref:System.Windows.Forms.ConvertEventArgs> auf den formatierten Wert in der <xref:System.Windows.Forms.Binding.Format> Ereignis. Sie müssen daher Wiederherstellungsinformationen den angezeigten Wert in der <xref:System.Windows.Forms.Binding.Parse> Ereignis.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Binding>, fügt eine <xref:System.Windows.Forms.ConvertEventHandler> Delegat, der sowohl die <xref:System.Windows.Forms.Binding.Parse> und <xref:System.Windows.Forms.Binding.Format> Ereignisse und verwendet die <xref:System.Windows.Forms.Control.DataBindings%2A> hinzuzufügenden Eigenschaft der <xref:System.Windows.Forms.Binding> auf der <xref:System.Windows.Forms.BindingsCollection> von eine <xref:System.Windows.Forms.TextBox> -Steuerelement. Die `DecimalToCurrencyString` Ereignisdelegaten, der hinzugefügt wird die <xref:System.Windows.Forms.Binding.Format> Ereignis, verwendet der <xref:System.Decimal.ToString%2A> Methode zum Formatieren des gebundenen Wert (eine <xref:System.Decimal> Typ) als Währung. Die `CurrencyStringToDecimal` Ereignisdelegaten, der hinzugefügt wird die <xref:System.Windows.Forms.Binding.Parse> Ereignis konvertiert den Wert, der im Steuerelement angezeigt wird zurück an den <xref:System.Decimal> Typ.  
+  
+ [!code-cpp[Classic ConvertEventArgs Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ConvertEventArgs Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ConvertEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ConvertEventArgs Example/CS/source.cs#1)]
+ [!code-vb[Classic ConvertEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ConvertEventArgs Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConvertEventArgs (object value, Type desiredType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object value, class System.Type desiredType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ConvertEventArgs.#ctor(System.Object,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="desiredType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Object" /> , den Wert der aktuellen Eigenschaft enthält.</param>
+        <param name="desiredType">Die <see cref="T:System.Type" /> des Werts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ConvertEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredType">
+      <MemberSignature Language="C#" Value="public Type DesiredType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DesiredType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ConvertEventArgs.DesiredType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Datentyp des gewünschten Werts ab.</summary>
+        <value>Die <see cref="T:System.Type" /> des gewünschten Werts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ConvertEventArgs.DesiredType%2A> Eigenschaft können Sie den Typ der Eigenschaft zu überprüfen, die der Wert konvertiert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.ConvertEventArgs.DesiredType%2A> Eigenschaft, um zu bestimmen, ob die Konvertierung eines Typs in einen anderen fortgesetzt werden kann. Die `DecimalToCurrencyString` -Methode testet, ob die <xref:System.Windows.Forms.ConvertEventArgs.DesiredType%2A> ist eine Zeichenfolge. Wenn dies nicht der Fall ist, wird der Code beendet wird, die Methode. Auf ähnliche Weise die `CurrencyStringToDecimal` -Methode testet, ob die <xref:System.Windows.Forms.ConvertEventArgs.DesiredType%2A> ist ein <xref:System.Decimal>, und beendet, wenn er nicht ist `true`.  
+  
+ [!code-cpp[Classic ConvertEventArgs.DesiredType Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ConvertEventArgs.DesiredType Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ConvertEventArgs.DesiredType Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ConvertEventArgs.DesiredType Example/CS/source.cs#1)]
+ [!code-vb[Classic ConvertEventArgs.DesiredType Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ConvertEventArgs.DesiredType Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ConvertEventArgs.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <see cref="T:System.Windows.Forms.ConvertEventArgs" />.</summary>
+        <value>Der Wert von <see cref="T:System.Windows.Forms.ConvertEventArgs" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, enthalten die <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> Eigenschaft hängt von dem Ereignis in der die <xref:System.Windows.Forms.ConvertEventArgs> zurückgegeben wird. Die <xref:System.Windows.Forms.ConvertEventArgs> zurückgegeben werden kann, entweder in der <xref:System.Windows.Forms.Binding.Format> Ereignis oder den <xref:System.Windows.Forms.Binding.Parse> Ereignis.  
+  
+ Wenn die <xref:System.Windows.Forms.ConvertEventArgs> wird zurückgegeben, der <xref:System.Windows.Forms.Binding.Format> -Ereignis der <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> Eigenschaft enthält den unformatierten Eigenschaftswert der Datenquelle. Innerhalb der <xref:System.Windows.Forms.Binding.Format> Ereignis, Sie können den Wert der Eigenschaft zu lesen, formatieren Sie den Wert, und setzen die <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> Eigenschaft auf den neuen (formatierten) Wert, wodurch Festlegen des Werts, der im datengebundenen Steuerelement angezeigt.  
+  
+ Wenn die <xref:System.Windows.Forms.ConvertEventArgs> wird zurückgegeben, der <xref:System.Windows.Forms.Binding.Parse> Ereignis, das die Eigenschaft enthält den formatierten Wert des datengebundenen Steuerelements. Innerhalb der <xref:System.Windows.Forms.Binding.Parse> Ereignis, Sie müssen den formatierten Wert lesen, analysieren, und die Umstellung zurück auf den gleichen Datentyp wie die Datenquelle. Sie können dann Zurücksetzen der <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> Eigenschaft, um die unformatierten aus und legen Sie den Wert der Datenquelle und. Um den Typ der Datenquelle zu ermitteln, untersuchen die <xref:System.Windows.Forms.ConvertEventArgs.DesiredType%2A> Eigenschaftswert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Binding>, fügt eine <xref:System.Windows.Forms.ConvertEventHandler> Delegat, der sowohl die <xref:System.Windows.Forms.Binding.Parse> und <xref:System.Windows.Forms.Binding.Format> Ereignisse und verwendet die <xref:System.Windows.Forms.Control.DataBindings%2A> hinzuzufügenden Eigenschaft der <xref:System.Windows.Forms.Binding> auf der <xref:System.Windows.Forms.BindingsCollection> von eine <xref:System.Windows.Forms.TextBox> -Steuerelement. Die `DecimalToCurrencyString` Ereignisdelegaten, der hinzugefügt wird die <xref:System.Windows.Forms.Binding.Format> Ereignis, verwendet der <xref:System.Decimal.ToString%2A> Methode zum Formatieren des gebundenen Wert (eine <xref:System.Decimal> Typ) als Währung. Die `CurrencyStringToDecimal` Ereignisdelegaten, der hinzugefügt wird die <xref:System.Windows.Forms.Binding.Parse> Ereignis konvertiert den Wert, der im Steuerelement angezeigt wird zurück an den <xref:System.Decimal> Typ.  
+  
+ [!code-cpp[Classic ConvertEventArgs Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ConvertEventArgs Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ConvertEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ConvertEventArgs Example/CS/source.cs#1)]
+ [!code-vb[Classic ConvertEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ConvertEventArgs Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

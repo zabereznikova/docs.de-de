@@ -1,0 +1,31 @@
+<Type Name="DebugEngineCallback" FullName="System.Workflow.Runtime.DebugEngine.DebugEngineCallback">
+  <TypeSignature Language="C#" Value="public delegate void DebugEngineCallback();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DebugEngineCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.DebugEngine.DebugEngineCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Verweist auf eine Rückrufmethode, die von der Komponente zur Workflowausdrucksauswertung aufgerufen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Der Standardrückruf wird intern im Workflowlaufzeitmodul von einem Objekt implementiert, das auf einem unabhängigen Thread ausgeführt wird und den Kontext für die Workflowausdrucksauswertung bereitstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

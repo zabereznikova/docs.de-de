@@ -1,0 +1,398 @@
+<Type Name="InputLanguageManager" FullName="System.Windows.Input.InputLanguageManager">
+  <TypeSignature Language="C#" Value="public sealed class InputLanguageManager : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InputLanguageManager extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.InputLanguageManager" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Funktionen zum Verwalten von Sprachen in Windows Presentation Foundation (WPF).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusätzliche Sprachen können registriert werden, mithilfe der Systemsteuerung Regions- und Sprachoptionen. Wählen Sie von der Registerkarte "Sprachen" "Textdienste und Eingabesprachen", und klicken Sie auf "Details", um weitere Sprachen zu registrieren. Das folgende Dialogfeld wird angezeigt.  
+  
+ ![Text Textdienste und Sprachen Dialogfeld. ] (~/add/media/tsf-dialog.PNG "Text Dialogfeld für Textdienste und.")  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Windows.Input.InputLanguageManager> die Eingabesprache des Festlegen einer <xref:System.Windows.Controls.TextBox> Element.  
+  
+ [!code-csharp[languageManager#1](~/samples/snippets/csharp/VS_Snippets_Wpf/languageManager/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[languageManager#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/languageManager/visualbasic/window1.xaml.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AvailableInputLanguages">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable AvailableInputLanguages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable AvailableInputLanguages" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputLanguageManager.AvailableInputLanguages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerator für die derzeit verfügbaren Sprachen.</summary>
+        <value>Ein Enumerator für die aktuell verfügbare Eingabesprachen oder **null** , wenn keine Eingabesprachen verfügbar sind.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Windows.Input.InputLanguageManager> verfügbaren Eingabesprachen aufgelistet werden.  
+  
+ [!code-csharp[languageManager#1](~/samples/snippets/csharp/VS_Snippets_Wpf/languageManager/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[languageManager#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/languageManager/visualbasic/window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.InputLanguageManager Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.InputLanguageManager Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputLanguageManager.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.InputLanguageManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Eingabesprache-Manager mit dem aktuellen Kontext verknüpft sind.</summary>
+        <value>Ein <see cref="T:System.Windows.Input.InputLanguageManager" /> Objekt mit dem aktuellen Kontext verknüpft sind.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Windows.Input.InputLanguageManager> Zugriff auf den die Language-Manager mit dem aktuellen Kontext verknüpft sind.  
+  
+ [!code-csharp[languageManager#1](~/samples/snippets/csharp/VS_Snippets_Wpf/languageManager/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[languageManager#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/languageManager/visualbasic/window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentInputLanguage">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo CurrentInputLanguage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo CurrentInputLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputLanguageManager.CurrentInputLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.CultureInfoIetfLanguageTagConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die aktuelle Eingabesprache.</summary>
+        <value>Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die derzeit ausgewählte Eingabesprache darstellt.  Diese Eigenschaft kann nicht festgelegt werden, um **null**.  
+  
+ Der Standardwert ist <see cref="P:System.Globalization.CultureInfo.InvariantCulture" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Windows.Input.InputLanguageManager> Abrufen des aktuellen Eingabesprache.  
+  
+ [!code-csharp[languageManager#3](~/samples/snippets/csharp/VS_Snippets_Wpf/languageManager/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[languageManager#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/languageManager/visualbasic/window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn versucht wird, diese Eigenschaft festzulegen, um **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInputLanguage">
+      <MemberSignature Language="C#" Value="public static System.Globalization.CultureInfo GetInputLanguage (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Globalization.CultureInfo GetInputLanguage(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputLanguageManager.GetInputLanguage(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.CultureInfoIetfLanguageTagConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, für das die Eingabesprache abgerufen werden soll.</param>
+        <summary>Gibt den Wert der angefügten <see cref="P:System.Windows.Input.InputLanguageManager.InputLanguage" />-Eigenschaft für ein angegebenes Abhängigkeitsobjekt zurück.</summary>
+        <returns>Ein <see cref="T:System.Globalization.CultureInfo" />-Objekt, das die Eingabesprache für das angegebene Abhängigkeitsobjekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Windows.Input.InputLanguageManager> die Eingabesprache des abzurufenden ein <xref:System.Windows.Controls.TextBox> Element.  
+  
+ [!code-csharp[languageManager#1](~/samples/snippets/csharp/VS_Snippets_Wpf/languageManager/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[languageManager#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/languageManager/visualbasic/window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <paramref name="target" /> ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRestoreInputLanguage">
+      <MemberSignature Language="C#" Value="public static bool GetRestoreInputLanguage (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetRestoreInputLanguage(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputLanguageManager.GetRestoreInputLanguage(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, für das Abrufen des Werts eines <see cref="P:System.Windows.Input.InputLanguageManager.RestoreInputLanguage" />.</param>
+        <summary>Gibt den Wert der <see cref="P:System.Windows.Input.InputLanguageManager.RestoreInputLanguage" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <returns>Der aktuelle Wert der <see cref="P:System.Windows.Input.InputLanguageManager.RestoreInputLanguage" /> für das angegebene Abhängigkeitsobjekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <paramref name="target" /> ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InputLanguageChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.InputLanguageEventHandler InputLanguageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.InputLanguageEventHandler InputLanguageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputLanguageManager.InputLanguageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.InputLanguageEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Änderung der Eingabesprache abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputLanguageChanging">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.InputLanguageEventHandler InputLanguageChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.InputLanguageEventHandler InputLanguageChanging" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputLanguageManager.InputLanguageChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.InputLanguageEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Änderung der Eingabesprache initiiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputLanguageProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty InputLanguageProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty InputLanguageProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.InputLanguageManager.InputLanguageProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Input.InputLanguageManager.InputLanguage" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterInputLanguageSource">
+      <MemberSignature Language="C#" Value="public void RegisterInputLanguageSource (System.Windows.Input.IInputLanguageSource inputLanguageSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterInputLanguageSource(class System.Windows.Input.IInputLanguageSource inputLanguageSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputLanguageManager.RegisterInputLanguageSource(System.Windows.Input.IInputLanguageSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputLanguageSource" Type="System.Windows.Input.IInputLanguageSource" />
+      </Parameters>
+      <Docs>
+        <param name="inputLanguageSource">Ein Objekt, das die Eingabesprache registrieren angibt.  Dieses Objekt muss die <see cref="T:System.Windows.Input.IInputLanguageSource" />-Schnittstelle implementieren.</param>
+        <summary>Registriert eine Eingabesprachenquelle mit der <see cref="T:System.Windows.Input.InputLanguageManager" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <paramref name="inputLanguageSource" /> ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportInputLanguageChanged">
+      <MemberSignature Language="C#" Value="public void ReportInputLanguageChanged (System.Globalization.CultureInfo newLanguageId, System.Globalization.CultureInfo previousLanguageId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReportInputLanguageChanged(class System.Globalization.CultureInfo newLanguageId, class System.Globalization.CultureInfo previousLanguageId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputLanguageManager.ReportInputLanguageChanged(System.Globalization.CultureInfo,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newLanguageId" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="previousLanguageId" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="newLanguageId">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die neue Eingabesprache darstellt.</param>
+        <param name="previousLanguageId">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die vorherige Eingabesprache darstellt.</param>
+        <summary>Melden Sie den Abschluss einer Änderung der Eingabesprache an die <see cref="T:System.Windows.Input.InputLanguageManager" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <paramref name="newLanguageId" /> oder <paramref name="previousLanguageId" /> ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportInputLanguageChanging">
+      <MemberSignature Language="C#" Value="public bool ReportInputLanguageChanging (System.Globalization.CultureInfo newLanguageId, System.Globalization.CultureInfo previousLanguageId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReportInputLanguageChanging(class System.Globalization.CultureInfo newLanguageId, class System.Globalization.CultureInfo previousLanguageId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputLanguageManager.ReportInputLanguageChanging(System.Globalization.CultureInfo,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newLanguageId" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="previousLanguageId" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="newLanguageId">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die neue Eingabesprache darstellt.</param>
+        <param name="previousLanguageId">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die vorherige Eingabesprache darstellt.</param>
+        <summary>Die Initiierung einer Änderung der Eingabesprache zum Melden der <see cref="T:System.Windows.Input.InputLanguageManager" />.</summary>
+        <returns>**"true"** um anzugeben, dass die gemeldete Änderung der Eingabesprache akzeptiert, andernfalls wurde **"false"**.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <paramref name="newLanguageId" /> oder <paramref name="previousLanguageId" /> ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RestoreInputLanguageProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RestoreInputLanguageProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RestoreInputLanguageProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.InputLanguageManager.RestoreInputLanguageProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Input.InputLanguageManager.RestoreInputLanguage" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetInputLanguage">
+      <MemberSignature Language="C#" Value="public static void SetInputLanguage (System.Windows.DependencyObject target, System.Globalization.CultureInfo inputLanguage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetInputLanguage(class System.Windows.DependencyObject target, class System.Globalization.CultureInfo inputLanguage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputLanguageManager.SetInputLanguage(System.Windows.DependencyObject,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+        <Parameter Name="inputLanguage" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, für das die angefügte <see cref="P:System.Windows.Input.InputLanguageManager.InputLanguage" />-Eigenschaft festgelegt werden soll.</param>
+        <param name="inputLanguage">Ein <see cref="T:System.Globalization.CultureInfo" />-Objekt, das den neuen Wert für die angefügte <see cref="P:System.Windows.Input.InputLanguageManager.InputLanguage" />-Eigenschaft darstellt.</param>
+        <summary>Legt den Wert der angefügten <see cref="P:System.Windows.Input.InputLanguageManager.InputLanguage" />-Eigenschaft für das angegebene Abhängigkeitsobjekt fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Windows.Input.InputLanguageManager> die Eingabesprache des Festlegen einer <xref:System.Windows.Controls.TextBox> Element.  
+  
+ [!code-csharp[languageManager#1](~/samples/snippets/csharp/VS_Snippets_Wpf/languageManager/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[languageManager#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/languageManager/visualbasic/window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <paramref name="target" /> ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRestoreInputLanguage">
+      <MemberSignature Language="C#" Value="public static void SetRestoreInputLanguage (System.Windows.DependencyObject target, bool restore);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetRestoreInputLanguage(class System.Windows.DependencyObject target, bool restore) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputLanguageManager.SetRestoreInputLanguage(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+        <Parameter Name="restore" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, für das der <see cref="P:System.Windows.Input.InputLanguageManager.RestoreInputLanguage" />-Wert festgelegt werden soll.</param>
+        <param name="restore">Ein boolescher Wert, auf den die angefügte <see cref="P:System.Windows.Input.InputLanguageManager.RestoreInputLanguage" />-Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert der <see cref="P:System.Windows.Input.InputLanguageManager.RestoreInputLanguage" />-Abhängigkeitseigenschaft für das angegebene Abhängigkeitsobjekt fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <paramref name="target" /> ist **null**.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

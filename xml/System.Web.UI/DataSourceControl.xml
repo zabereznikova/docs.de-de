@@ -1,0 +1,689 @@
+<Type Name="DataSourceControl" FullName="System.Web.UI.DataSourceControl">
+  <TypeSignature Language="C#" Value="public abstract class DataSourceControl : System.Web.UI.Control, System.ComponentModel.IListSource, System.Web.UI.IDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataSourceControl extends System.Web.UI.Control implements class System.ComponentModel.IListSource, class System.Web.UI.IDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataSourceControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IListSource</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.DataSourceDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.DataSourceControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.NonVisualControl</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fungiert als Basisklasse für Steuerelemente, die Datenquellen für datengebundene Steuerelemente darstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET unterstützt ein Steuerelement Datenbindungsarchitektur, die Webserver-Steuerelemente binden an Daten auf konsistente Weise ermöglicht. Webserversteuerelemente, die an Daten gebunden werden als datengebundene Steuerelemente und die Klassen, die zu ermöglichen, dass die Bindung heißen Datenquellensteuerelemente bezeichnet. Datenquellensteuerelemente können jede beliebige Datenquelle darstellen: eine relationale Datenbank, eine Datei, einen Stream, ein Geschäftsobjekt usw.. Datenquelle steuert die Darstellung der Daten auf konsistente Weise für datengebundene Steuerelemente, unabhängig von der Quelle oder das Format der zugrunde liegenden Daten.  
+  
+ Verwenden Sie die Datenquellen-Steuerelementen, die bereitgestellt werden, mit ASP.NET einschließlich <xref:System.Web.UI.WebControls.SqlDataSource>, <xref:System.Web.UI.WebControls.AccessDataSource>, und <xref:System.Web.UI.WebControls.XmlDataSource>, um die meisten Webentwicklungsaufgaben auszuführen. Sie verwenden die Basis <xref:System.Web.UI.DataSourceControl> Klasse, wenn Sie ein eigene benutzerdefinierte Datenquellen-Steuerelement implementieren möchten.  
+  
+ Während jede Klasse, implementiert die <xref:System.Web.UI.IDataSource> Schnittstelle ist ein Datenquellensteuerelement, können die meisten ASP.NET-Datenquellensteuerelemente erweitern die abstrakte <xref:System.Web.UI.DataSourceControl> -Klasse, die stellt eine basisimplementierung der <xref:System.Web.UI.IDataSource> Schnittstelle. Die <xref:System.Web.UI.DataSourceControl> Klasse bietet auch eine Implementierung von der <xref:System.ComponentModel.IListSource> -Schnittstelle, die Sie die Datenquellen-Steuerelement programmgesteuert zuweisen kann die `DataSource` Eigenschaft eines datengebundenen Steuerelement und die Daten an das Steuerelement als einfache Liste zurückgeben.  
+  
+ Jedes ASP.NET-Steuerelement, das von abgeleitet ist die <xref:System.Web.UI.WebControls.DataBoundControl> Klasse kann an ein Datenquellen-Steuerelement binden. Wenn eine <xref:System.Web.UI.WebControls.DataBoundControl> gebunden ist, ein Datenquellen-Steuerelement, Datenbindung erfolgt automatisch zur Laufzeit. Außerdem können Sie Datenquellen-Steuerelementen mit ASP.NET-Steuerelemente, die verfügbar machen eine `DataSource` oder `DataSourceID` -Eigenschaft und die einfache Datenbindung unterstützen, sind aber nicht von abgeleiteten <xref:System.Web.UI.WebControls.DataBoundControl>. Wenn Sie diese datengebundene Steuerelemente zu verwenden, müssen Sie explizit aufrufen der `DataBind` Methode. Weitere Informationen über die Datenbindung finden Sie unter [ASP.NET Data Access Content Map](http://msdn.microsoft.com/en-us/f9219396-a0fa-481f-894d-e3d9c67d64f2).  
+  
+ Sie können ein Datenquellensteuerelement vorstellen, als die Kombination der <xref:System.Web.UI.DataSourceControl> Objekt und der zugehörigen Liste der Daten, die von Datenquellensichten aufgerufen. Jede Liste der Daten wird dargestellt, indem ein <xref:System.Web.UI.DataSourceView> Objekt. Da der zugrunde liegenden Datenspeicher eine oder mehrere Listen mit Daten enthält eine <xref:System.Web.UI.DataSourceControl> ist immer mit einem oder mehr benannte <xref:System.Web.UI.DataSourceView> Objekte. Die <xref:System.Web.UI.IDataSource> Schnittstelle definiert die Methoden, die Datenquellensteuerelemente zur Interaktion mit Datenquellensichten verwenden: die <xref:System.Web.UI.DataSourceControl.GetViewNames%2A> Methode wird verwendet, um den aktuell zugeordneten Datenquellen-Steuerelements Datenquellensichten aufgelistet werden und die <xref:System.Web.UI.DataSourceControl.GetView%2A> Methode wird eine Instanz einer bestimmten Quelle abzurufenden anhand des Namens verwendet.  
+  
+ Sie können auch das Datenquellensteuerelement vorstellen als zwei unterschiedliche Schnittstellen von Aufrufern verwenden für den Datenzugriff. Die <xref:System.Web.UI.DataSourceControl> Klasse ist die Schnittstelle, die Entwicklern die direkte Interaktion mit beim Entwickeln einer Web Forms-Seite, und die <xref:System.Web.UI.DataSourceView> -Klasse ist die Schnittstelle, die von datengebundenen Steuerelementen und Autoren von datengebundenen Steuerelement mit interagieren. Da die <xref:System.Web.UI.DataSourceView> Objekt steht nur zur Laufzeit, einem beliebigen Zustand beibehalten, für das Datenquellensteuerelement oder Datenquellensicht muss direkt von Datenquellen-Steuerelements verfügbar gemacht werden.  
+  
+ Es ist keine visuelle Darstellung von ASP.NET-Datenquellensteuerelemente. Sie werden implementiert, wie Steuerelemente, sodass Sie deklarativ erstellen können, und optional an Zustandsverwaltung teilnehmen können. Folglich Datenquellensteuerelemente unterstützen keine visuellen Features wie z. B. <xref:System.Web.UI.DataSourceControl.EnableTheming%2A> oder <xref:System.Web.UI.DataSourceControl.SkinID%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie eine Klasse erweitern kann die <xref:System.Web.UI.DataSourceControl> Klasse. Die `CsvDataSource` Steuerelement darstellt, durch Trennzeichen getrennte Dateidaten in eine CSV-Datei gespeichert. Die `CsvDataSource` Klasse bietet einen eigenen Implementierungen von der <xref:System.Web.UI.DataSourceControl.GetView%2A>, <xref:System.Web.UI.DataSourceControl.GetViewNames%2A>, und andere Methoden, da Implementierungen der Basisklasse nicht funktionsfähig sind.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#1)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die `CsvDataSource` Steuerelement in einem Web Form.  
+  
+ [!code-aspx-csharp[Urtue.Samples.Alexkr.CsvDataSource_1_webform#50](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1_webform/CS/webform6cs.aspx#50)]
+ [!code-aspx-vb[Urtue.Samples.Alexkr.CsvDataSource_1_webform#50](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1_webform/VB/webform6vb.aspx#50)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataSourceControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataSourceControl" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyStyleSheetSkin">
+      <MemberSignature Language="C#" Value="public override void ApplyStyleSheetSkin (System.Web.UI.Page page);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ApplyStyleSheetSkin(class System.Web.UI.Page page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.ApplyStyleSheetSkin(System.Web.UI.Page)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="page" Type="System.Web.UI.Page" />
+      </Parameters>
+      <Docs>
+        <param name="page">Die <see cref="T:System.Web.UI.Page" /> , die das Steuerelement enthält.</param>
+        <summary>Wendet die Stileigenschaften, die im Seitenstylesheet auf das Steuerelement definiert sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientID">
+      <MemberSignature Language="C#" Value="public override string ClientID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceControl.ClientID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Serverbezeichner-Steuerelement von ASP.NET generiert wird.</summary>
+        <value>Der Bezeichner des Server-Steuerelement, die von ASP.NET generiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientIDMode">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ClientIDMode ClientIDMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.ClientIDMode ClientIDMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceControl.ClientIDMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ClientIDMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft wird nicht für Datenquellensteuerelemente verwendet.</summary>
+        <value>Diese Eigenschaft wird nicht für Datenquellensteuerelemente verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft von der <xref:System.Web.UI.Control> Basisklasse wird nicht für Datenquellensteuerelemente verwendet, da Datenquellensteuerelemente Markup nicht gerendert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, diese Eigenschaft festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceControl.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Web.UI.ControlCollection" />-Objekt ab, das die untergeordneten Steuerelemente für ein angegebenes Serversteuerelement in der Hierarchie der Benutzeroberfläche darstellt.</summary>
+        <value>Die Auflistung der untergeordneten Steuerelemente für das angegebene Serversteuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Auflistung zum Speichern untergeordneter Steuerelemente.</summary>
+        <returns>Gibt einen Wert vom Typ <see cref="T:System.Web.UI.EmptyControlCollection" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Da Datenquellensteuerelemente keine untergeordneten Steuerelemente, dürfen die <xref:System.Web.UI.DataSourceControl> Klasse die standardmäßige Implementierung unterstützt nicht das Einbetten von untergeordneten Steuerelementen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTheming">
+      <MemberSignature Language="C#" Value="public override bool EnableTheming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTheming" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceControl.EnableTheming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dieses Steuerelement Designs unterstützt.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.DataSourceControl> Steuerelement besitzt kein visuell dargestellt, Designs wird nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, zum Festlegen des Werts, der die <see cref="P:System.Web.UI.DataSourceControl.EnableTheming" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindControl">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Control FindControl (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.Control FindControl(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.FindControl(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Der Bezeichner für das Steuerelement gefunden werden.</param>
+        <summary>Durchsucht den aktuellen Benennungscontainer nach einem Serversteuerelement mit der angegebenen <paramref name="id" /> Parameter.</summary>
+        <returns>Das angegebene Steuerelement oder <see langword="null" /> ist das angegebene Steuerelement ist nicht vorhanden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focus">
+      <MemberSignature Language="C#" Value="public override void Focus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Focus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.Focus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Eingabefokus auf das Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.DataSourceControl> Steuerelement besitzt kein visuelles Rendern Aufrufen der <xref:System.Web.UI.DataSourceControl.Focus%2A> auf diese Methode löst eine <xref:System.NotSupportedException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, zum Aufrufen der <see cref="M:System.Web.UI.DataSourceControl.Focus" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetView">
+      <MemberSignature Language="C#" Value="protected abstract System.Web.UI.DataSourceView GetView (string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.DataSourceView GetView(string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.GetView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">Der Name der abzurufenden <see cref="T:System.Web.UI.DataSourceView" />. In Steuerelementen für Datenquellen, die nur eine Sicht, z. B. unterstützen <see cref="T:System.Web.UI.WebControls.SqlDataSource" />, dieser Parameter wird ignoriert.</param>
+        <summary>Ruft die benannte Datenquellensicht zugeordneten Datenquellen-Steuerelements ab.</summary>
+        <returns>Gibt die benannte <see cref="T:System.Web.UI.DataSourceView" /> zugeordneten der <see cref="T:System.Web.UI.DataSourceControl" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den Satz von Ansichten, die aktuell zugeordneten Datenquellen-Steuerelements durch Aufrufen durchlaufen die <xref:System.Web.UI.DataSourceControl.GetViewNames%2A> Methode.  
+  
+ Datenquellen-Steuerelementklassen können einer oder mehreren Ansichten der zugrunde liegenden Daten unterstützen. Diese Ansichten werden durch Instanzen der dargestellt die <xref:System.Web.UI.DataSourceView> Klasse. Die Datenquellensicht definiert, das die Funktionen des Datenquellen-Steuerelements, ist die gesamte Arbeit, die zum Abrufen von Daten aus dem zugrunde liegenden Datenspeicher und führt Vorgänge wie das Sortieren, einfügen, löschen und aktualisieren.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.DataSourceControl> gibt die standardmäßige Implementierung der Klasse `null`. Wenn Sie erweitern die <xref:System.Web.UI.DataSourceControl> -Klasse außer Kraft, indem der <xref:System.Web.UI.DataSourceControl.GetView%2A> Methode, um den angegebenen zurückzugeben <xref:System.Web.UI.DataSourceView> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Datenquellen-Steuerelementklasse, die erweitert die <xref:System.Web.UI.DataSourceControl> -Klasse implementiert die <xref:System.Web.UI.IDataSource.GetView%2A> Methode, die eine stark typisierte Instanz zurückgeben der <xref:System.Web.UI.DataSourceView> Klasse. Da die Datenquellen-Steuerelements nur eine Ansicht unterstützt, ignoriert die Namen und gibt eine Ansicht mit dem Namen, mit dem Standardnamen für die Sicht zurück. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#3)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewNames">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.ICollection GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.ICollection GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.GetViewNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von Namen, die die Liste der darstellt <see cref="T:System.Web.UI.DataSourceView" /> Objekte zugeordnet sind und die <see cref="T:System.Web.UI.DataSourceControl" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Collections.ICollection" /> , enthält die Namen der <see cref="T:System.Web.UI.DataSourceView" /> Objekte zugeordnet sind und die <see cref="T:System.Web.UI.DataSourceControl" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.ICollection> Auflistung der Namen ist die zulässige Menge von Werten, die übergeben werden kann die <xref:System.Web.UI.DataSourceControl.GetView%2A> Methode.  
+  
+ Die <xref:System.Web.UI.ListSourceHelper> -Klasse, die für verwendet wird der <xref:System.Web.UI.DataSourceControl> Klasse <xref:System.ComponentModel.IListSource> Implementierung, überprüft der <xref:System.Web.UI.DataSourceControl.GetViewNames%2A> Methode für beide der <xref:System.Web.UI.DataSourceControl.System%23ComponentModel%23IListSource%23ContainsListCollection%2A> und <xref:System.Web.UI.DataSourceControl.System%23ComponentModel%23IListSource%23GetList%2A> aufrufen, um zu bestimmen, ob die Datenquellen-Steuerelement zugeordnet ist oder mehrere Datenquellensichten. Wenn <xref:System.Web.UI.DataSourceControl.GetViewNames%2A> gibt `null`, also die standardmäßige Implementierung der Methode <xref:System.Web.UI.DataSourceControl.System%23ComponentModel%23IListSource%23ContainsListCollection%2A> gibt `false` und <xref:System.Web.UI.DataSourceControl.System%23ComponentModel%23IListSource%23GetList%2A> gibt `null`.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.DataSourceControl> gibt die standardmäßige Implementierung der Klasse `null`. Wenn Sie erweitern die <xref:System.Web.UI.DataSourceControl> -Klasse außer Kraft, indem der <xref:System.Web.UI.DataSourceControl.GetViewNames%2A> Methode zum Zurückgeben einer Auflistung von Sichtnamen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse, die erweitert die <xref:System.Web.UI.DataSourceControl> -Klasse überschreiben die Standardimplementierung gibt `null`, um eine Sammlung von Sichtnamen bereitstellen. Die `CsvDataSource` Klasse unterstützt nur eine Sicht; daher wird eine Auflistung von einem Element mit dem Standardnamen der Sicht zurückgegeben. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#4)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasControls">
+      <MemberSignature Language="C#" Value="public override bool HasControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool HasControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.HasControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob das Serversteuerelement untergeordnete Steuerelemente enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn das Steuerelement andere Steuerelemente enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseDataSourceChangedEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaiseDataSourceChangedEvent (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaiseDataSourceChangedEvent(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.RaiseDataSourceChangedEvent(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.IDataSource.DataSourceChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceControl.RaiseDataSourceChangedEvent%2A> Methode weist ein datengebundenes Steuerelement, dass der zugrunde liegenden Datenquelle oder die im Arbeitsspeicher zwischengespeicherten Daten geändert hat und, dass das Steuerelement binden soll, und führen Sie alle zusätzlichen notwendigen Schritte. In der Regel die <xref:System.Web.UI.DataSourceControl.RaiseDataSourceChangedEvent%2A> Methode wird aufgerufen, wenn eine Eigenschaft des Datenquellen-Steuerelements oder ein Parameterwert geändert wurde.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Aufrufen der <xref:System.Web.UI.DataSourceControl.RaiseDataSourceChangedEvent%2A> -Methode auf, wenn eine Datenquelle oder die zugrunde liegenden Daten auf eine Weise geändert wurde, die alle beeinträchtigen können Sie datengebundene Steuerelemente. In diesem Beispiel wird eine dateibasierte Datenquellen-Steuerelements, reicht die <xref:System.Web.UI.DataSourceControl> löst die <xref:System.Web.UI.IDataSource.DataSourceChanged> -Ereignis durch das Aufrufen <xref:System.Web.UI.DataSourceControl.RaiseDataSourceChangedEvent%2A> jederzeit die `FileName` -Eigenschaft geändert wird.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#1)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.DataSourceControl.RaiseDataSourceChangedEvent(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.DataSourceControl.RaiseDataSourceChangedEvent(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderControl">
+      <MemberSignature Language="C#" Value="public override void RenderControl (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RenderControl(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.RenderControl(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den Inhalt des Steuerelements empfängt.</param>
+        <summary>Gibt Inhalte von Serversteuerelementen an ein bereitgestelltes <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt aus und speichert Ablaufverfolgungsinformationen zum Steuerelement, sofern die Ablaufverfolgung aktiviert ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkinID">
+      <MemberSignature Language="C#" Value="public override string SkinID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SkinID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceControl.SkinID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Design an, ab dem <see cref="T:System.Web.UI.DataSourceControl" /> Steuerelement.</summary>
+        <value>
+          <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.DataSourceControl> Steuerelement besitzt kein visuell dargestellt, kann nicht festgelegt werden die <xref:System.Web.UI.DataSourceControl.SkinID%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, zum Festlegen des Werts, der die <see cref="P:System.Web.UI.DataSourceControl.SkinID" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IListSource.ContainsListCollection">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IListSource.ContainsListCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IListSource.ContainsListCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceControl.System#ComponentModel#IListSource#ContainsListCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die Datenquellen-Steuerelement ein oder mehrere Listen der Daten zugeordnet ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.DataSourceControl" /> bezieht sich auf einem oder mehreren <see cref="T:System.Web.UI.DataSourceView" /> Objekte; anderenfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, um zu bestimmen, ob das aktuelle Objekt als Quelle für eine oder mehrere Listen der Daten verwendet werden kann. Datenquellensteuerelemente kapseln ihre Listen mit Daten als <xref:System.Web.UI.DataSourceView> Objekte; deshalb beim mit einem oder mehreren verbundenen <xref:System.Web.UI.DataSourceView> Objekte eine <xref:System.Web.UI.DataSourceControl> Steuerelement darstellt, ein Listenobjekt für die Quelle und die Eigenschaft gibt `true`.  
+  
+ Diese Eigenschaft ruft die statische <xref:System.Web.UI.ListSourceHelper.ContainsListCollection%2A?displayProperty=nameWithType> Methode, um zu bestimmen, ob das aktuelle Datenquellensteuerelement als Quelle der Daten verwendet werden kann. Die <xref:System.Web.UI.ListSourceHelper> -Klasse bestimmt, ob die <xref:System.Web.UI.DataSourceControl.GetViewNames%2A> Methodenrückgabe als gültige Sammlung von Sichtnamen. Wenn dies der Fall ist, gibt diese Eigenschaft `true`. Wenn <xref:System.Web.UI.DataSourceControl.GetViewNames%2A> gibt `null`, also die standardmäßige Implementierung des der <xref:System.Web.UI.DataSourceControl> Klasse, die Methodenrückgabe `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IListSource.GetList">
+      <MemberSignature Language="C#" Value="System.Collections.IList IListSource.GetList ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IList System.ComponentModel.IListSource.GetList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.System#ComponentModel#IListSource#GetList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Liste der Datenquellen-Steuerelementen, die als Quellen der Listen mit Daten verwendet werden kann.</summary>
+        <returns>Ein <see cref="T:System.Collections.IList" /> von Steuerelementen für Datenquellen, die als Quellen der Listen mit Daten verwendet werden können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um einen Satz von Objekten abzurufen, die als Datenquellen verwendet werden kann. Datenquellensteuerelemente kapseln ihre Listen mit Daten als <xref:System.Web.UI.DataSourceView> Objekte; deshalb beim mit einem oder mehreren verbundenen <xref:System.Web.UI.DataSourceView> Objekte eine <xref:System.Web.UI.DataSourceControl> Steuerelement darstellt, ein Listenobjekt für die Quelle und die Methode gibt ein <xref:System.Collections.IList> Auflistung von ein Element der <xref:System.Web.UI.DataSourceControl> selbst.  
+  
+ Diese Methode ruft die statische <xref:System.Web.UI.ListSourceHelper.GetList%2A?displayProperty=nameWithType> Methode zum Abrufen einer <xref:System.Collections.IList> Auflistung von Objekten, die als Datenquellen verwendet werden können. Die <xref:System.Web.UI.ListSourceHelper> -Klasse bestimmt, ob <xref:System.Web.UI.DataSourceControl.GetViewNames%2A> gibt eine Auflistung gültige Sichtnamen zurück. Wenn dies der Fall ist, die <xref:System.Web.UI.ListSourceHelper> -Klasse zurückgegeben wird ein <xref:System.Collections.IList> Auflistung ein Element der <xref:System.Web.UI.DataSourceControl> Steuerelement. Wenn <xref:System.Web.UI.DataSourceControl.GetViewNames%2A> gibt `null`, also die standardmäßige Implementierung des der <xref:System.Web.UI.DataSourceControl> -Klasse, die <xref:System.Web.UI.ListSourceHelper> auch zurück `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataSource.GetView">
+      <MemberSignature Language="C#" Value="System.Web.UI.DataSourceView IDataSource.GetView (string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Web.UI.DataSourceView System.Web.UI.IDataSource.GetView(string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.System#Web#UI#IDataSource#GetView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">Der Name der abzurufenden <see cref="T:System.Web.UI.DataSourceView" />. In Steuerelementen für Datenquellen, die nur eine Sicht, z. B. unterstützen <see cref="T:System.Web.UI.WebControls.SqlDataSource" />, dieser Parameter wird ignoriert.</param>
+        <summary>Ruft die benannte <see cref="T:System.Web.UI.DataSourceView" /> zugeordnete Objekt der <see cref="T:System.Web.UI.DataSourceControl" /> Steuerelement. Einige Datenquellensteuerelemente unterstützen nur eine Sicht, während andere mehrere unterstützen.</summary>
+        <returns>Gibt die benannte <see cref="T:System.Web.UI.DataSourceView" /> zugeordneten der <see cref="T:System.Web.UI.DataSourceControl" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `viewName` Parameter wird ignoriert, wenn diese Methode für Datenquellensteuerelemente aufgerufen wird, die nur eine Sicht, z. B. unterstützen die <xref:System.Web.UI.WebControls.SqlDataSource> und <xref:System.Web.UI.WebControls.AccessDataSource> Steuerelemente.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.DataSourceControl> Standardimplementierung-Klasse, die von dieser Schnittstellenmethode aufgerufen wird, gibt `null`. Wenn Sie erweitern die <xref:System.Web.UI.DataSourceControl> -Klasse außer Kraft, indem der <xref:System.Web.UI.DataSourceControl.GetView%2A> Methode, um den angegebenen zurückzugeben <xref:System.Web.UI.DataSourceView> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="viewName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataSource.GetViewNames">
+      <MemberSignature Language="C#" Value="System.Collections.ICollection IDataSource.GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.ICollection System.Web.UI.IDataSource.GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControl.System#Web#UI#IDataSource#GetViewNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von Namen, die die Liste der darstellt <see cref="T:System.Web.UI.DataSourceView" /> Objekte zugeordnet sind und die <see cref="T:System.Web.UI.DataSourceControl" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Collections.ICollection" /> , enthält die Namen der <see cref="T:System.Web.UI.DataSourceView" /> Objekte zugeordnet sind und die <see cref="T:System.Web.UI.DataSourceControl" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.DataSourceControl> Standardimplementierung-Klasse, die von dieser Schnittstellenmethode aufgerufen wird, gibt `null`, gibt an, nur die Ansicht wird unterstützt. Wenn Sie erweitern die <xref:System.Web.UI.DataSourceControl> -Klasse außer Kraft, indem der <xref:System.Web.UI.DataSourceControl.GetViewNames%2A> Methode zum Zurückgeben einer Auflistung von Sichtnamen. Ein Name übergeben werden kann, um die <xref:System.Web.UI.DataSourceControl.GetView%2A> -Methode zur Rückgabe einer <xref:System.Web.UI.DataSourceView> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public override bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceControl.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Steuerelement visuell angezeigt wird.</summary>
+        <value>Immer <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.DataSourceControl> Steuerelement hat keine visuelle Darstellung der <xref:System.Web.UI.DataSourceControl.Visible%2A> -Eigenschaft gibt immer `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, zum Festlegen des Werts, der die <see cref="P:System.Web.UI.DataSourceControl.Visible" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

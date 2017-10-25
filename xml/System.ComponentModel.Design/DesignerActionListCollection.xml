@@ -1,0 +1,517 @@
+<Type Name="DesignerActionListCollection" FullName="System.ComponentModel.Design.DesignerActionListCollection">
+  <TypeSignature Language="C#" Value="public class DesignerActionListCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerActionListCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionListCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.ComponentModel.Design.DesignerActionList" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerActionListCollection> -Klasse stellt die Aggregation aller Elemente in einen Smarttagbereich dar. Die <xref:System.ComponentModel.Design.DesignerActionListCollection> Klasse enthält 0 (null) oder mehrere <xref:System.ComponentModel.Design.DesignerActionList> Objekte. Jede dieser Listen enthält null oder mehr Objekte, die abgeleitet sind und Darstellen von der tatsächlichen Elemente im Bereich der <xref:System.ComponentModel.Design.DesignerActionItem> Klasse.  
+  
+ Die folgende Tabelle zeigt die beiden Techniken zur Angabe einer <xref:System.ComponentModel.Design.DesignerActionListCollection> um den Bereich mit Elementen für Komponenten, einschließlich benutzerdefinierter Steuerelemente aufzufüllen.  
+  
+|Vorgehensweise|Beschreibung|  
+|---------------|-----------------|  
+|Pull-Modell|Der Designer für die Komponentenklasse, das von abgeleitet ist die <xref:System.ComponentModel.Design.ComponentDesigner> Klasse, stellt diese Auflistung über die <xref:System.ComponentModel.Design.ComponentDesigner.ActionLists%2A> Eigenschaft. Die Designer-Infrastruktur liest diese Eigenschaft auf, wenn der Bereich angezeigt werden müssen.|  
+|Pushmodell|Ein <xref:System.ComponentModel.Design.DesignerActionList> oder <xref:System.ComponentModel.Design.DesignerActionListCollection> angegeben wird, als Parameter in einem Aufruf der <xref:System.ComponentModel.Design.DesignerActionService.Add%2A> Methode der <xref:System.ComponentModel.Design.DesignerActionService> der Komponente zugeordnet.|  
+  
+ Die Designer-Infrastruktur erstellt einen Bereich, indem Sie erstellen einen Smarttagbereich, deren Konstruktor zwei Parameter vom Typ akzeptiert <xref:System.ComponentModel.Design.DesignerActionListCollection>. Die Auflistungen von Listen, die die gesendete und mithilfe von Push-Elemente enthalten, werden in einem Fensterbereich zusammengeführt.  
+  
+ Da es von abgeleitet ist die <xref:System.Collections.CollectionBase?displayProperty=nameWithType> -Klasse, <xref:System.ComponentModel.Design.DesignerActionListCollection> verwendet eine interne <xref:System.Collections.ArrayList> speichern die Sammlung von <xref:System.ComponentModel.Design.DesignerActionList> Objekte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Sammlung von <xref:System.ComponentModel.Design.DesignerActionItem> Objekte.  
+  
+ Ein vollständiges Beispiel finden Sie unter [wie: Anfügen von Smarttags auf eine Komponente in Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#8)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#8)]  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#9)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionListCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" />-Klasse mit Standardeinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerActionListCollection.%23ctor%2A> Konstruktor erstellt eine leere Auflistung, die mit 0 (null) <xref:System.ComponentModel.Design.DesignerActionList> Objekte.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionListCollection (System.ComponentModel.Design.DesignerActionList[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Design.DesignerActionList[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.#ctor(System.ComponentModel.Design.DesignerActionList[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.Design.DesignerActionList[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Array von <see cref="T:System.ComponentModel.Design.DesignerActionList" /> Objekte beim Auffüllen der Auflistung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> -Klasse mit den angegebenen Bereichselementen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerActionListCollection.%23ctor%2A> Konstruktor erstellt eine Auflistung mit dem angegebenen <xref:System.ComponentModel.Design.DesignerActionList> Objekte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.ComponentModel.Design.DesignerActionList value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.ComponentModel.Design.DesignerActionList value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.Add(System.ComponentModel.Design.DesignerActionList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.Design.DesignerActionList" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende <see cref="T:System.ComponentModel.Design.DesignerActionList" />.</param>
+        <summary>Fügt den angegebenen <see cref="T:System.ComponentModel.Design.DesignerActionList" /> mit der aktuellen Auflistung.</summary>
+        <returns>Die Position, an der das neue Element in der Auflistung interne Liste eingefügt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das neue Element wird am Ende der internen Liste hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.ComponentModel.Design.DesignerActionList[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.ComponentModel.Design.DesignerActionList[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.AddRange(System.ComponentModel.Design.DesignerActionList[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.Design.DesignerActionList[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Array von <see cref="T:System.ComponentModel.Design.DesignerActionList" /> hinzuzufügenden Objekte.</param>
+        <summary>Fügt die Elemente des angegebenen <see cref="T:System.ComponentModel.Design.DesignerActionList" /> Array an das Ende der aktuellen Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neue Elemente werden am Ende der internen Liste hinzugefügt.  
+  
+ Nach dem Validieren der `value` Parameter, die <xref:System.ComponentModel.Design.DesignerActionListCollection.AddRange%2A> Methode erstellt eine Reihe von Aufrufen an die <xref:System.ComponentModel.Design.DesignerActionListCollection.Add%2A> Methode, um jedes Element einzeln hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.ComponentModel.Design.DesignerActionListCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.ComponentModel.Design.DesignerActionListCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.AddRange(System.ComponentModel.Design.DesignerActionListCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.Design.DesignerActionListCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" />.</param>
+        <summary>Fügt die Elemente des angegebenen <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> an das Ende der aktuellen Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neue Elemente werden am Ende der internen Liste hinzugefügt.  
+  
+ Nach dem Validieren der `value` Parameter, die <xref:System.ComponentModel.Design.DesignerActionListCollection.AddRange%2A> Methode erstellt eine Reihe von Aufrufen an die <xref:System.ComponentModel.Design.DesignerActionListCollection.Add%2A> Methode, um jedes Element einzeln hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.ComponentModel.Design.DesignerActionList value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.ComponentModel.Design.DesignerActionList value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.Contains(System.ComponentModel.Design.DesignerActionList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.Design.DesignerActionList" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu suchende <see cref="T:System.ComponentModel.Design.DesignerActionList" />.</param>
+        <summary>Gibt an, ob die Auflistung einen bestimmten Wert enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn die Auflistung den angegebenen Wert enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Übereinstimmung wird durch den Wert, nicht Identität, Vergleich bestimmt.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.ComponentModel.Design.DesignerActionList[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.ComponentModel.Design.DesignerActionList[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.CopyTo(System.ComponentModel.Design.DesignerActionList[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.ComponentModel.Design.DesignerActionList[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionales Array vom Typ <see cref="T:System.ComponentModel.Design.DesignerActionList" /> , die das Ziel der aus der aktuellen Auflistung kopierten Elemente ist. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der aktuellen Auflistung in das angegebene Array, beginnend am angegebenen Arrayindex begonnen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.ComponentModel.Design.DesignerActionListCollection.CopyTo%2A> Methode löst eine Ausnahme während des Kopiervorgangs aus, der Status des Zielarrays ist nicht definiert. Z. B. wenn ein <xref:System.ArgumentException> oder <xref:System.InvalidCastException> auftritt, des Zielarrays in einer teilweise gefüllten Zustand verbleibt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als 0.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der aktuellen Auflistung ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Zielarrays.</exception>
+        <exception cref="T:System.InvalidCastException">Es ist ein Problem aufgetreten, die die Elemente der aktuellen Auflistung in den Typ des Zielarrays, vielleicht als das Ergebnis eines Fehlers bei Downcasting umwandeln.</exception>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.ComponentModel.Design.DesignerActionList value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.ComponentModel.Design.DesignerActionList value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.IndexOf(System.ComponentModel.Design.DesignerActionList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.Design.DesignerActionList" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.ComponentModel.Design.DesignerActionList" />, die in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt den Index eines bestimmten Elements in der Auflistung.</summary>
+        <returns>Der Index des <paramref name="value" /> Wenn in der internen Liste gefunden wurde, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Intern können die <xref:System.ComponentModel.Design.DesignerActionListCollection> -Klasse verwendet eine <xref:System.Collections.ArrayList?displayProperty=nameWithType> enthält die Auflistung von <xref:System.ComponentModel.Design.DesignerActionList> Objekte.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.ComponentModel.Design.DesignerActionList value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.ComponentModel.Design.DesignerActionList value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.Insert(System.Int32,System.ComponentModel.Design.DesignerActionList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.ComponentModel.Design.DesignerActionList" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Wert</c> eingefügt werden soll.</param>
+        <param name="value">Die <see cref="T:System.ComponentModel.Design.DesignerActionList" /> zum Einfügen in die Auflistung.</param>
+        <summary>Fügt das angegebene <see cref="T:System.ComponentModel.Design.DesignerActionList" /> in der Auflistung an der angegebenen Position.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `index` -Parameter ist gleich dem Wert, der die <xref:System.Collections.CollectionBase.Count%2A> -Eigenschaft, das neue Element wird am Ende der Auflistung hinzugefügt.  
+  
+ Intern können die <xref:System.ComponentModel.Design.DesignerActionListCollection> -Klasse verwendet eine <xref:System.Collections.ArrayList?displayProperty=nameWithType> enthält die Auflistung von <xref:System.ComponentModel.Design.DesignerActionList> Objekte. Da Listen zusammenhängende Elementen verwalten, nach die Elemente hinter der Einfügemarke nach unten, um das neue Element aufzunehmen. Durch diese Neuordnung ändert sich der Index der Elemente nach der Einfügemarke.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist kleiner als 0 oder größer als die Anzahl der Elemente in der aktuellen Auflistung.</exception>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.DesignerActionList this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionList Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionListCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Elements.</param>
+        <summary>Ruft das Element am angegebenen Index ab oder legt dieses fest.</summary>
+        <value>Der <see cref="T:System.ComponentModel.Design.DesignerActionList" /> am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Element auf `null` bewirkt, dass eine Ausnahme zur Entwurfszeit ausgelöst werden, wenn Sie der Smarttagbereich angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClear">
+      <MemberSignature Language="C#" Value="protected override void OnClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.OnClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt zusätzliche benutzerdefinierte Prozesse aus, wenn des Inhalts der <see cref="T:System.Collections.CollectionBase" /> Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected override void OnInsert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem einzufügende <c>Wert</c>.</param>
+        <param name="value">Der neue Wert des Elements am <c>Index</c>.</param>
+        <summary>Führt zusätzliche benutzerdefinierte Prozesse vor dem Einfügen eines neuen Elements in die <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" />-Instanz aus.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemove">
+      <MemberSignature Language="C#" Value="protected override void OnRemove (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemove(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.OnRemove(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Wert</c> gefunden werden können.</param>
+        <param name="value">Der Wert des Elements, das Entfernen von <c>Index</c>.</param>
+        <summary>Führt zusätzliche benutzerdefinierte Prozesse beim Entfernen eines Elements aus der <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> Instanz.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSet">
+      <MemberSignature Language="C#" Value="protected override void OnSet (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSet(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.OnSet(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>OldValue</c> gefunden werden können.</param>
+        <param name="oldValue">Der Wert, der durch Ersetzen <c>NewValue</c>.</param>
+        <param name="newValue">Der neue Wert des Elements am <c>Index</c>.</param>
+        <summary>Führt zusätzliche benutzerdefinierte Prozesse vor dem Festlegen eines Werts in der <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" />-Instanz aus.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, dessen Gültigkeit überprüft werden soll.</param>
+        <summary>Führt zusätzliche benutzerdefinierte Prozesse aus, bei der Überprüfung eines Werts.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.ComponentModel.Design.DesignerActionList value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.ComponentModel.Design.DesignerActionList value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListCollection.Remove(System.ComponentModel.Design.DesignerActionList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.Design.DesignerActionList" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.ComponentModel.Design.DesignerActionList" /> aus der aktuellen Auflistung entfernt.</param>
+        <summary>Entfernt das erste Vorkommen eines bestimmten <see cref="T:System.ComponentModel.Design.DesignerActionList" /> aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Intern können die <xref:System.ComponentModel.Design.DesignerActionListCollection> -Klasse verwendet eine <xref:System.Collections.ArrayList?displayProperty=nameWithType> enthält die Auflistung von <xref:System.ComponentModel.Design.DesignerActionList> Objekte. Da Listen zusammenhängende Elemente verwalten, nach Verschieben aller Elemente, die die Entfernung Punkt folgen die frei gewordene Stelle einzunehmen. Durch diese Neuordnung ändert sich der Index der Elemente nach dem Zeitpunkt, zum Entfernen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

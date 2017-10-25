@@ -1,0 +1,46 @@
+<Type Name="FormsAuthenticationEventHandler" FullName="System.Web.Security.FormsAuthenticationEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void FormsAuthenticationEventHandler(object sender, FormsAuthenticationEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormsAuthenticationEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.FormsAuthenticationEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.Security.FormsAuthenticationEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.Security.FormsAuthenticationEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die **FormsAuthentication_OnAuthenticate** -Ereignis für ein <see cref="T:System.Web.Security.FormsAuthenticationModule" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.FormsAuthenticationEventHandler> Delegat wird definiert, für die <xref:System.Web.Security.FormsAuthenticationModule.Authenticate> -Ereignis für die <xref:System.Web.Security.FormsAuthenticationModule> Klasse. Sie erreichen die <xref:System.Web.Security.FormsAuthenticationModule.Authenticate> -Ereignis für die <xref:System.Web.Security.FormsAuthenticationModule> -Klasse durch Angabe einer Unterroutine namens **FormsAuthentication_OnAuthenticate** in der Datei "Global.asax", damit Ihre ASP.NET-Anwendung. Die <xref:System.Web.Security.FormsAuthenticationModule.Authenticate> Ereignis wird ausgelöst, während die <xref:System.Web.HttpApplication.AuthenticateRequest> Ereignis.  
+  
+ Die <xref:System.Web.Security.FormsAuthenticationModule> erstellt eine <xref:System.Web.Security.FormsAuthenticationEventArgs> -Objekt mit dem aktuellen <xref:System.Web.HttpContext> und übergibt es an die **FormsAuthentication_OnAuthenticate** Ereignis.  
+  
+ Können Sie die <xref:System.Web.Security.FormsAuthenticationEventArgs.User%2A> Eigenschaft von der <xref:System.Web.Security.FormsAuthenticationEventArgs> -Objekt bereitgestellt werden, um die **FormsAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> für eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal> -Objekt. Wenn Sie einen Wert für nicht angeben der <xref:System.Web.Security.FormsAuthenticationEventArgs.User%2A> Eigenschaft während der **FormsAuthentication_OnAuthenticate** Ereignis, das durch das Formularauthentifizierungsticket im Cookie oder URL bereitgestellte Identität verwendet wird.  
+  
+ Die **FormsAuthentication_OnAuthenticate** Ereignis wird nur ausgelöst wird, wenn die Authentifizierung <xref:System.Web.Configuration.AuthenticationSection.Mode%2A> auf festgelegt ist <xref:System.Web.Configuration.AuthenticationMode.Forms> und die <xref:System.Web.Security.FormsAuthenticationModule> ein aktives HTTP-Modul für die Anwendung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der **FormsAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> auf eine <xref:System.Security.Principal.GenericPrincipal> Objekt mit einem benutzerdefinierten <xref:System.Security.Principal.IPrincipal.Identity%2A>.  
+  
+ [!code-csharp[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

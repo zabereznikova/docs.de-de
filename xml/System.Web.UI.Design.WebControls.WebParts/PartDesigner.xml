@@ -1,0 +1,68 @@
+<Type Name="PartDesigner" FullName="System.Web.UI.Design.WebControls.WebParts.PartDesigner">
+  <TypeSignature Language="C#" Value="public abstract class PartDesigner : System.Web.UI.Design.WebControls.CompositeControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PartDesigner extends System.Web.UI.Design.WebControls.CompositeControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WebParts.PartDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.CompositeControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erweitert das Entwurfszeitverhalten für Steuerelemente, implementieren die <see cref="T:System.Web.UI.WebControls.WebParts.Part" /> abstrakte Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.WebParts.PartDesigner> Klasse ist die Basisklasse für viele der verschiedenen Designer in der <xref:System.Web.UI.Design.WebControls.WebParts> -Namespace, der zur Entwurfszeit visuelle Darstellungen der Webparts-Steuerelemente bieten. Die <xref:System.Web.UI.Design.WebControls.WebParts.PartDesigner.UsePreviewControl%2A> Eigenschaft wird überschrieben, um stets `true`, sodass <xref:System.Web.UI.Design.WebControls.WebParts.PartDesigner> wird immer eine Kopie des zugeordneten Steuerelements anstelle des Steuerelements selbst gerendert.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Die <see cref="T:System.Web.UI.Design.WebControls.WebParts.PartDesigner" /> Klasse keinen öffentlichen Konstruktor, damit Sie von ihm direkt außerhalb erben können nicht die <see cref="N:System.Web.UI.Design.WebControls.WebParts" /> Namespace. Verwenden Sie stattdessen <see cref="T:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner" />, <see cref="T:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner" />, oder <see cref="T:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner" />, das Ableiten von <see cref="T:System.Web.UI.Design.WebControls.WebParts.PartDesigner" /> und bieten die gleiche Funktionalität mit einem öffentlichen Konstruktor.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.PartDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die <see cref="T:System.Web.UI.WebControls.WebParts.Part" /> diesem Designer zugeordnete Steuerelement.</param>
+        <summary>Erstellt eine Instanz des Designers gebunden an die zugeordnete <see cref="T:System.Web.UI.WebControls.WebParts.Part" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.WebParts.PartDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Designer zum Generieren des Entwurfszeitmarkups anstelle des dem Designer tatsächlich zugeordneten Steuerelements eine temporäre Kopie verwenden soll.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

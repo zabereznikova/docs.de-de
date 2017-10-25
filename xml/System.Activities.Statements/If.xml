@@ -1,0 +1,303 @@
+<Type Name="If" FullName="System.Activities.Statements.If">
+  <TypeSignature Language="C#" Value="public sealed class If : System.Activities.NativeActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit If extends System.Activities.NativeActivity" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.If" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.NativeActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt ein Modell einer If-Then-Bedingung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen einer <xref:System.Activities.Statements.If>-Aktivität gezeigt. Dieses Beispiel stammt aus dem [senden und Behandeln von Fehlern](~/docs/framework/windows-workflow-foundation/samples/sending-and-handling-faults.md) Beispiel.  
+  
+ [!code-csharp[wfs_Faults#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_faults/cs/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public If ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.If.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Statements.If" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen einer <xref:System.Activities.Statements.If>-Aktivität gezeigt. Dieses Beispiel stammt aus dem [senden und Behandeln von Fehlern](~/docs/framework/windows-workflow-foundation/samples/sending-and-handling-faults.md) Beispiel.  
+  
+ [!code-csharp[wfs_Faults#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_faults/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public If (System.Activities.Activity&lt;bool&gt; condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Activity`1&lt;bool&gt; condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.If.#ctor(System.Activities.Activity{System.Boolean})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Activities.Activity&lt;System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Die Ausführungsbedingung.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Statements.If" />-Klasse mit der angegebenen Bedingung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen einer <xref:System.Activities.Statements.If>-Aktivität gezeigt. Dieses Beispiel stammt aus dem [senden und Behandeln von Fehlern](~/docs/framework/windows-workflow-foundation/samples/sending-and-handling-faults.md) Beispiel.  
+  
+ [!code-csharp[wfs_Faults#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_faults/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public If (System.Activities.InArgument&lt;bool&gt; condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.InArgument`1&lt;bool&gt; condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.If.#ctor(System.Activities.InArgument{System.Boolean})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Activities.InArgument&lt;System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Die Ausführungsbedingung.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Statements.If" />-Klasse mit der angegebenen Bedingung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen einer <xref:System.Activities.Statements.If>-Aktivität gezeigt. Dieses Beispiel stammt aus dem [senden und Behandeln von Fehlern](~/docs/framework/windows-workflow-foundation/samples/sending-and-handling-faults.md) Beispiel.  
+  
+ [!code-csharp[wfs_Faults#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_faults/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public If (System.Linq.Expressions.Expression&lt;Func&lt;System.Activities.ActivityContext,bool&gt;&gt; condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.Activities.ActivityContext, bool&gt;&gt; condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.If.#ctor(System.Linq.Expressions.Expression{System.Func{System.Activities.ActivityContext,System.Boolean}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.Activities.ActivityContext,System.Boolean&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Die Ausführungsbedingung.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Statements.If" />-Klasse mit der angegebenen Bedingung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen einer <xref:System.Activities.Statements.If>-Aktivität gezeigt. Dieses Beispiel stammt aus dem [senden und Behandeln von Fehlern](~/docs/framework/windows-workflow-foundation/samples/sending-and-handling-faults.md) Beispiel.  
+  
+ [!code-csharp[wfs_Faults#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_faults/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.NativeActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.NativeActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.If.CacheMetadata(System.Activities.NativeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.NativeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public System.Activities.InArgument&lt;bool&gt; Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.InArgument`1&lt;bool&gt; Condition" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.If.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Activities.RequiredArgument</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Bedingung, die die auszuführende untergeordnete Aktivität bestimmt. Die <see cref="P:System.Activities.Statements.If.Then" /> Aktivität ausgeführt wird, wenn die Bedingung ergibt <see langword="true" />. Die <see cref="P:System.Activities.Statements.If.Else" /> Aktivität ausgeführt wird, wenn die Bedingung ergibt <see langword="false" />.</summary>
+        <value>Die Ausführungsbedingung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Festlegen der Condition-Eigenschaft einer <xref:System.Activities.Statements.If>-Aktivität gezeigt. Dieses Beispiel stammt aus dem [senden und Behandeln von Fehlern](~/docs/framework/windows-workflow-foundation/samples/sending-and-handling-faults.md) Beispiel.  
+  
+ [!code-csharp[wfs_Faults#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_faults/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Else">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Else { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Else" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.If.Else" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Then")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Aktivität ausgeführt werden, wenn der Aktivitätssymbols <see cref="P:System.Activities.Statements.If.Condition" /> löst in **"false"**.</summary>
+        <value>Die untergeordnete Aktivität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Festlegen der Else-Eigenschaft einer <xref:System.Activities.Statements.If>-Aktivität veranschaulicht. Dieses Beispiel stammt aus dem [senden und Behandeln von Fehlern](~/docs/framework/windows-workflow-foundation/samples/sending-and-handling-faults.md) Beispiel.  
+  
+ [!code-csharp[wfs_Faults#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_faults/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override void Execute (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Execute(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.If.Execute(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateDynamicUpdateMap">
+      <MemberSignature Language="C#" Value="protected override void OnCreateDynamicUpdateMap (System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata metadata, System.Activities.Activity originalActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCreateDynamicUpdateMap(class System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata metadata, class System.Activities.Activity originalActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.If.OnCreateDynamicUpdateMap(System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata,System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata" />
+        <Parameter Name="originalActivity" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <param name="originalActivity">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Then">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Then { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Then" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.If.Then" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Condition")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Aktivität ausgeführt werden, wenn der Aktivitätssymbols <see cref="P:System.Activities.Statements.If.Condition" /> löst in **"true"**.</summary>
+        <value>Die untergeordnete Aktivität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Festlegen der Then-Eigenschaft einer <xref:System.Activities.Statements.If>-Aktivität veranschaulicht. Dieses Beispiel stammt aus dem [senden und Behandeln von Fehlern](~/docs/framework/windows-workflow-foundation/samples/sending-and-handling-faults.md) Beispiel.  
+  
+ [!code-csharp[wfs_Faults#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_faults/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

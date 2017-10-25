@@ -1,0 +1,457 @@
+<Type Name="RuntimeReflectionExtensions" FullName="System.Reflection.RuntimeReflectionExtensions">
+  <TypeSignature Language="C#" Value="public static class RuntimeReflectionExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit RuntimeReflectionExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.RuntimeReflectionExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden bereit, die Informationen über Typen zur Laufzeit abrufen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetMethodInfo">
+      <MemberSignature Language="C#" Value="public static System.Reflection.MethodInfo GetMethodInfo (this Delegate del);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.MethodInfo GetMethodInfo(class System.Delegate del) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.RuntimeReflectionExtensions.GetMethodInfo(System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="del" Type="System.Delegate" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="del">Der Delegat, untersuchen.</param>
+        <summary>Ruft ein Objekt, das durch den angegebenen Delegaten dargestellte Methode darstellt.</summary>
+        <returns>Ein Objekt, das die Methode darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeBaseDefinition">
+      <MemberSignature Language="C#" Value="public static System.Reflection.MethodInfo GetRuntimeBaseDefinition (this System.Reflection.MethodInfo method);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.MethodInfo GetRuntimeBaseDefinition(class System.Reflection.MethodInfo method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.RuntimeReflectionExtensions.GetRuntimeBaseDefinition(System.Reflection.MethodInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Reflection.MethodInfo" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="method">Die Methode zum Abrufen von Informationen zu.</param>
+        <summary>Ruft ein Objekt, das die angegebene Methode für die direkte oder indirekte Basisklasse darstellt, in dem die Methode zuerst deklariert wurde.</summary>
+        <returns>Ein Objekt, das die angegebene Methode ursprüngliche Deklaration in einer Basisklasse darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeEvent">
+      <MemberSignature Language="C#" Value="public static System.Reflection.EventInfo GetRuntimeEvent (this Type type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.EventInfo GetRuntimeEvent(class System.Type type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvent(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.EventInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" RefType="this" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, der das Ereignis enthält.</param>
+        <param name="name">Der Name des Ereignisses.</param>
+        <summary>Ruft ein Objekt, das das angegebene Ereignis darstellt.</summary>
+        <returns>Ein Objekt, das das angegebene Ereignis darstellt, oder <see langword="null" /> , wenn das Ereignis nicht gefunden wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeEvents">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;System.Reflection.EventInfo&gt; GetRuntimeEvents (this Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.EventInfo&gt; GetRuntimeEvents(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Reflection.EventInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, der die Ereignisse enthält.</param>
+        <summary>Ruft eine Auflistung, die die Ereignisse, die definiert, die für einen angegebenen Typ darstellt.</summary>
+        <returns>Eine Auflistung von Ereignissen für den angegebenen Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt alle Ereignisse des angegebenen Typs, einschließlich geerbte Instanz nicht öffentlich ist und statische Ereignisse definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeField">
+      <MemberSignature Language="C#" Value="public static System.Reflection.FieldInfo GetRuntimeField (this Type type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.FieldInfo GetRuntimeField(class System.Type type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.RuntimeReflectionExtensions.GetRuntimeField(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" RefType="this" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, der das Feld enthält.</param>
+        <param name="name">Der Name des Felds.</param>
+        <summary>Ruft ein Objekt, das ein bestimmtes Feld darstellt.</summary>
+        <returns>Ein Objekt, das das angegebene Feld darstellt, oder <see langword="null" /> , wenn das Feld nicht gefunden wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeFields">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;System.Reflection.FieldInfo&gt; GetRuntimeFields (this Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.FieldInfo&gt; GetRuntimeFields(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.RuntimeReflectionExtensions.GetRuntimeFields(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Reflection.FieldInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, der die Felder enthält.</param>
+        <summary>Ruft eine Auflistung, die alle für einen angegebenen Typ definierten Felder darstellt.</summary>
+        <returns>Eine Auflistung von Feldern für den angegebenen Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt alle Felder, die für den angegebenen Typ, einschließlich geerbte Instanz nicht öffentlich ist und statische Felder definiert sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeInterfaceMap">
+      <MemberSignature Language="C#" Value="public static System.Reflection.InterfaceMapping GetRuntimeInterfaceMap (this System.Reflection.TypeInfo typeInfo, Type interfaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Reflection.InterfaceMapping GetRuntimeInterfaceMap(class System.Reflection.TypeInfo typeInfo, class System.Type interfaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.RuntimeReflectionExtensions.GetRuntimeInterfaceMap(System.Reflection.TypeInfo,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.InterfaceMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeInfo" Type="System.Reflection.TypeInfo" RefType="this" />
+        <Parameter Name="interfaceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeInfo">Der Typ, eine Zuordnung abgerufen werden soll.</param>
+        <param name="interfaceType">Die Schnittstelle, die eine Zuordnung abgerufen werden soll.</param>
+        <summary>Gibt eine schnittstellenzuordnung für den angegebenen Typ und die angegebene Schnittstelle zurück.</summary>
+        <returns>Ein Objekt, das die schnittstellenzuordnung für die angegebene Schnittstelle und den Typ darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeMethod">
+      <MemberSignature Language="C#" Value="public static System.Reflection.MethodInfo GetRuntimeMethod (this Type type, string name, Type[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.MethodInfo GetRuntimeMethod(class System.Type type, string name, class System.Type[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.RuntimeReflectionExtensions.GetRuntimeMethod(System.Type,System.String,System.Type[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" RefType="this" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, der die Methode enthält.</param>
+        <param name="name">Der Name der Methode.</param>
+        <param name="parameters">Ein Array, das die Parameter der Methode enthält.</param>
+        <summary>Ruft ein Objekt, das eine angegebene Methode darstellt.</summary>
+        <returns>Ein Objekt, das die angegebene Methode darstellt, oder <see langword="null" /> , wenn die Methode nicht gefunden wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeMethods">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;System.Reflection.MethodInfo&gt; GetRuntimeMethods (this Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.MethodInfo&gt; GetRuntimeMethods(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.RuntimeReflectionExtensions.GetRuntimeMethods(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Reflection.MethodInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, der die Methoden enthält.</param>
+        <summary>Ruft eine Auflistung, die alle für einen angegebenen Typ definierte Methoden darstellt.</summary>
+        <returns>Eine Auflistung von Methoden für den angegebenen Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt alle Methoden des angegebenen Typs, einschließlich geerbte Instanz nicht öffentlich ist und statische Methoden definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeProperties">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;System.Reflection.PropertyInfo&gt; GetRuntimeProperties (this Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.PropertyInfo&gt; GetRuntimeProperties(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Reflection.PropertyInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, dessen Eigenschaften.</param>
+        <summary>Ruft eine Auflistung, die alle für einen angegebenen Typ definierten Eigenschaften darstellt.</summary>
+        <returns>Eine Auflistung von Eigenschaften für den angegebenen Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt alle Eigenschaften des angegebenen Typs, einschließlich der geerbten Instanz nicht öffentlich ist und statische Eigenschaften definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeProperty">
+      <MemberSignature Language="C#" Value="public static System.Reflection.PropertyInfo GetRuntimeProperty (this Type type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.PropertyInfo GetRuntimeProperty(class System.Type type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperty(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" RefType="this" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, der die Eigenschaft enthält.</param>
+        <param name="name">Den Namen der Eigenschaft.</param>
+        <summary>Ruft ein Objekt, das eine angegebene Eigenschaft darstellt.</summary>
+        <returns>Ein Objekt, das die angegebene Eigenschaft darstellt, oder <see langword="null" /> , wenn die Eigenschaft nicht gefunden wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

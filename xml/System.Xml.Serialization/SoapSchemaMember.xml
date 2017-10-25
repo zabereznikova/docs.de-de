@@ -1,0 +1,137 @@
+<Type Name="SoapSchemaMember" FullName="System.Xml.Serialization.SoapSchemaMember">
+  <TypeSignature Language="C#" Value="public class SoapSchemaMember" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapSchemaMember extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.SoapSchemaMember" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt bestimmte Attribute einem XSD- &lt; <see langword="part" /> &gt; Element in einem WSDL-Dokument zum Generieren von Klassen aus dem Dokument.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.SoapSchemaMember> Klasse wird vom Tool Wsdl.exe verwendet, bei der Generierung von Clientproxyklassen oder abstrakten Klassen aus einem Dokument Web Services Description Language (WSDL). Diese Klasse anstatt direkt Wsdl.exe verwenden.  
+  
+ Die <xref:System.Xml.Serialization.SoapSchemaMember> -Klasse verfügt über Eigenschaften, die die Attribute Name und Typ eines Elements Teil WSDL entsprechen. Die Klasse wird verwendet, nur, wenn ein WSDL-Dokument SOAP-Codierung, gibt wie in Abschnitt 5 der SOAP 1.1-Spezifikation beschrieben.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapSchemaMember ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapSchemaMember.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.SoapSchemaMember" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapSchemaMember.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, auf das Namensattribut des WSDL-Teilelement fest.</summary>
+        <value>Der Elementname.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht dem XML- `name` -Attribut des XML-Elements `<wsdl:part>`. Weitere Informationen über das Element finden Sie unter [http://www.w3.org/TR/wsdl](http://www.w3.org/TR/wsdl).  
+  
+ Die <xref:System.Xml.Serialization.SoapSchemaMember> Klasse wird vom Tool Wsdl.exe beim Generieren von Klassen aus einem Dokument von Web Services Description Language (WSDL), der angibt, die SOAP-Codierung verwendet. Diese Klasse anstatt direkt Wsdl.exe verwenden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName MemberType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapSchemaMember.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der Type-Attribut des Elements Teil WSDL.</summary>
+        <value>Eine <see cref="T:System.Xml.XmlQualifiedName" /> , die XML-Typ entspricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht dem XML- `type` -Attribut des XML-Elements `<wsdl:part>`. Weitere Informationen über das Element finden Sie unter [http://www.w3.org/TR/wsdl](http://www.w3.org/TR/wsdl).  
+  
+ Die <xref:System.Xml.Serialization.SoapSchemaMember> Klasse wird vom Tool Wsdl.exe beim Generieren von Klassen aus einem Dokument von Web Services Description Language (WSDL), der angibt, die SOAP-Codierung verwendet. Diese Klasse anstatt direkt Wsdl.exe verwenden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

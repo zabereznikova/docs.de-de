@@ -1,0 +1,744 @@
+<Type Name="BasicDesignerLoader" FullName="System.ComponentModel.Design.Serialization.BasicDesignerLoader">
+  <TypeSignature Language="C#" Value="public abstract class BasicDesignerLoader : System.ComponentModel.Design.Serialization.DesignerLoader, System.ComponentModel.Design.Serialization.IDesignerLoaderService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BasicDesignerLoader extends System.ComponentModel.Design.Serialization.DesignerLoader implements class System.ComponentModel.Design.Serialization.IDesignerLoaderService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.BasicDesignerLoader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.Serialization.DesignerLoader</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.Serialization.IDesignerLoaderService</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Implementierung der <see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderService" />-Schnittstelle bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> ist eine vollständige Implementierung von einem Designerladeprogramm ohne Daten im Zusammenhang mit einem persistenten Format. Ein <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> schreibt nicht vor, eine Text- oder binäre Persistenz, aber es unterstützt die folgenden Funktionen:  
+  
+-   Mehrere Load-Abhängigkeiten.  
+  
+-   Nachverfolgen von Änderungen im Designer.  
+  
+-   Verzögerte Neuladen Zeit im Leerlauf.  
+  
+ Ein <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> fügt zwei Arten von Diensten auf dem Designerhost Dienstcontainer: ersetzbare und unersetzbarer Dienste. Sie können einen ersetzbaren Dienst ersetzen, durch Ändern des Werts der geschützten <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.LoaderHost%2A> Eigenschaft. Unersetzbarer Dienste nicht ersetzt werden, da ihre Implementierungen voneinander abhängig sind.  
+  
+ Die folgende Tabelle beschreibt die Dienste, die standardmäßig bereitgestellt werden.  
+  
+|Standarddienst|Beschreibung|  
+|---------------------|-----------------|  
+|<xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService>|Ermöglicht es Objekten, um anzufordern, dass der Designer sich selbst neu geladen, wenn er im Leerlauf befindet. Dies ist eine austauschbare Dienst.|  
+|<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager>|Zum Serialisieren und Deserialisieren von Objekten verwendet. Der Serialisierungs-Manager wird als Dienst hinzugefügt, damit die Objekte, die Serialisierungen durchführen müssen alle Serialisierungsprovider genutzt werden können, die dem Serialisierungs-Manager hinzugefügt wurden. Dies ist ein unersetzbarer Dienst.|  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BasicDesignerLoader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.Serialization.BasicDesignerLoader" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginLoad">
+      <MemberSignature Language="C#" Value="public override void BeginLoad (System.ComponentModel.Design.Serialization.IDesignerLoaderHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void BeginLoad(class System.ComponentModel.Design.Serialization.IDesignerLoaderHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad(System.ComponentModel.Design.Serialization.IDesignerLoaderHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.Serialization.IDesignerLoaderHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">Der Designerladeprogramm-Host geladen.</param>
+        <summary>Startet den Ladevorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine Implementierung der abstrakten <xref:System.ComponentModel.Design.Serialization.DesignerLoader.BeginLoad%2A?displayProperty=nameWithType> Methode. Sie müssen nicht dieser Methode in Ihrer eigenen Klasse außer Kraft setzen. Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad%2A> Methode führt die folgenden Aktionen aus:  
+  
+-   Es wird überprüft, dass die Entwurfsoberfläche nicht bereits geladen wurde.  
+  
+-   Beim ersten Aufruf fügt relevanter Dienst und ruft die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Initialize%2A> Methode.  
+  
+-   Ruft die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnBeginLoad%2A>, <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.PerformLoad%2A>, und <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnEndLoad%2A> Methoden.  
+  
+ Designerladeprogramm-Dienst nicht aus dem Dienstcontainer entfernt wurde <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad%2A> aufrufen, wird die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.System%23ComponentModel%23Design%23Serialization%23IDesignerLoaderService%23AddLoadDependency%2A> und <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.System%23ComponentModel%23Design%23Serialization%23IDesignerLoaderService%23DependentLoadComplete%2A> Methoden anstelle der <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnBeginLoad%2A> und <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnEndLoad%2A> Methoden. In diesem Fall kann es liegt in der Verantwortung des Diensts Designerladeprogramm Aufrufen <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnBeginLoad%2A> und <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnEndLoad%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="host" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Designer wurde bereits geladen, oder <see cref="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad(System.ComponentModel.Design.Serialization.IDesignerLoaderHost)" /> mit einem anderen Designerladeprogramm-Host aufgerufen wurde.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <paramref name="host" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die von der <see cref="T:System.ComponentModel.Design.Serialization.BasicDesignerLoader" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Dispose%2A> Methode leert Änderungen nicht in das Designerladeprogramm. Wenn Sie Änderungen gespeichert werden soll, rufen <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Flush%2A> vor dem Aufruf <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Dispose%2A>.  
+  
+ Rufen Sie <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Dispose%2A> auf, wenn Sie <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> nicht mehr benötigen. Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Dispose%2A>-Methode bewirkt, dass <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableComponentNotification">
+      <MemberSignature Language="C#" Value="protected virtual bool EnableComponentNotification (bool enable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool EnableComponentNotification(bool enable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.EnableComponentNotification(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enable">
+          <see langword="true" />So aktivieren Sie die Komponente Benachrichtigung durch den <see cref="T:System.ComponentModel.Design.Serialization.DesignerLoader" />; <see langword="false" /> Deaktivieren der Komponente Benachrichtigung durch den <see cref="T:System.ComponentModel.Design.Serialization.DesignerLoader" />.</param>
+        <summary>Aktiviert oder deaktiviert die Benachrichtigung der Komponente mit der <see cref="T:System.ComponentModel.Design.Serialization.DesignerLoader" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die Komponente Benachrichtigung vor diesem Aufruf aktiviert wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Leerungen ausstehende Änderungen in das Designerladeprogramm.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Designerladeprogramm nicht geladen wurde oder wurde nicht geändert wurde, markiert der <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Flush%2A> Methode kehrt sofort zurück. Andernfalls <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Flush%2A> den Serialisierungs-Manager beim Erstellen einer Serialisierungssitzung und ruft dann <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.PerformFlush%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der <see cref="T:System.Type" /> des Diensts.</param>
+        <summary>Ruft den angeforderten Dienst ab.</summary>
+        <returns>Der angeforderte Dienst oder <see langword="null" /> , wenn der angeforderte Dienst nicht gefunden werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.GetService%2A>ist eine Hilfsmethode, die von abgeleitete Klassen kann <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> , durch den Designerladeprogramm-Host bereitgestellten Dienste zuzugreifen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected virtual void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert Dienste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Initialize%2A> Methodenaufrufs erstmalig <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad%2A> aufgerufen wird. Sie können zu diesem Zeitpunkt an den Designerladeprogramm-Host erforderlichen Dienste hinzufügen. Die grundlegende Implementierung fügt Dienste, von denen <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> bereitstellt, sodass nach dem Aufrufen der basisimplementierung Sie vorhandene Dienste ersetzen können. Müssen Sie alle benutzerdefinierten Dienste, Sie fügen Sie hier durch Außerkraftsetzen, entfernen <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Dispose%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> wurde nicht initialisiert.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReloadNeeded">
+      <MemberSignature Language="C#" Value="protected virtual bool IsReloadNeeded ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsReloadNeeded() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.IsReloadNeeded" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob der Designer neu geladen werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn der Designer neu geladen werden soll; andernfalls <see langword="false" />. Gibt die standardmäßige Implementierung immer <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.IsReloadNeeded%2A> Methode wird von einigen-Designer-Ladeprogramme verwendet, zum erneuten Laden zu optimieren. Diese Methode kann überschrieben werden, wenn das Designerladeprogramm intelligentes Neuladen unterstützt. Einige-Designer-Ladeprogramme können Änderungen an ihren zugrunde liegenden Dokument erkennen und bestimmen, ob ein erneutes Laden des Designers tatsächlich erforderlich ist. Wenn nicht, die sie zurückgeben soll `false` aus dieser Methode. Gibt die standardmäßige Implementierung immer `true`, gibt an, dass jeder Aufruf <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Reload%2A> wird erfolgreich ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoaderHost">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.Design.Serialization.IDesignerLoaderHost LoaderHost { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.Serialization.IDesignerLoaderHost LoaderHost" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.BasicDesignerLoader.LoaderHost" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.IDesignerLoaderHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Ladeprogrammhost ab.</summary>
+        <value>Die <see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> übergebene die <see cref="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad(System.ComponentModel.Design.Serialization.IDesignerLoaderHost)" /> Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Ladeprogrammhost, der in diesem Designerladeprogramm zugewiesen wurde. Dies ist möglich `null` Wenn <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad%2A> wurde nicht aufgerufen wurde, oder wenn das Designerladeprogramm verworfen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> wurde nicht initialisiert.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Loading">
+      <MemberSignature Language="C#" Value="public override bool Loading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Loading" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Loading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Designerladeprogramm auf die Entwurfsoberfläche geladen wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Designerladeprogramm gegenwärtig die Entwurfsoberfläche lädt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> -Klasse stellt die <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService>, welche unterstützt Abhängigkeiten zu laden. Diese Eigenschaft nimmt laden Abhängigkeiten berücksichtigen und wird return `true` Wenn alle ausstehenden laden Abhängigkeiten vorhanden sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modified">
+      <MemberSignature Language="C#" Value="protected virtual bool Modified { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Modified" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Modified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Designer geändert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der Designer geändert wurde; andernfalls <see langword="false" />,</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bestimmt, ob das Designerladeprogramm erkannt wird, dass der Designer geändert wurde. Wenn diese Eigenschaft ist `true` Wenn des Designerladeprogramms <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Flush%2A> -Methode aufgerufen wird, ruft das Designerladeprogramm die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.PerformFlush%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginLoad">
+      <MemberSignature Language="C#" Value="protected virtual void OnBeginLoad ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBeginLoad() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnBeginLoad" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt, dass das Laden wird in Kürze dem Designerladeprogramm.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnBeginLoad%2A> Methode wird aufgerufen, um den Ladevorgang zu starten. Sie sollten die notwendige Initialisierungen für das Laden zu diesem Zeitpunkt ausführen. Diese Methode sollte nicht verwendet werden, um die tatsächliche Last auszuführen. Die standardmäßige Implementierung änderungsbenachrichtigungen deaktiviert und richtet die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> für das Laden.  
+  
+ Wenn Sie implementieren <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService> um abhängige laden zu unterstützen, rufen Sie <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnBeginLoad%2A> tritt das erste abhängige laden. Rufen Sie die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnEndLoad%2A> Methode nach dem letzten Aufruf der <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.System%23ComponentModel%23Design%23Serialization%23IDesignerLoaderService%23DependentLoadComplete%2A> Methode. Standardmäßig <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> implementiert <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService> und übernimmt dies für Sie. Wenn <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService> ist nicht verfügbar, wenn <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad%2A> aufgerufen wird, <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad%2A> wird direkt aufrufen <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnBeginLoad%2A>.  
+  
+ Wenn Sie einen eigenen Ladeprogrammdienst bereitstellen oder wenn Sie festlegen, geben Sie einen Dienst für das workflowladeprogramm nicht, sind Sie verantwortlich für das Aufrufen dieser Methode. Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad%2A> Methode wird Sie automatisch aufrufen, entweder indirekt durch den Aufruf <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.System%23ComponentModel%23Design%23Serialization%23IDesignerLoaderService%23AddLoadDependency%2A> Wenn <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService> verfügbar ist, direkt oder ist er nicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginUnload">
+      <MemberSignature Language="C#" Value="protected virtual void OnBeginUnload ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBeginUnload() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnBeginUnload" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt dem Designerladeprogramm, entladen begonnen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnBeginUnload%2A> Methode wird aufgerufen, wenn das Designerladeprogramm das Dokument entladen wird.  
+  
+ Das Dokument als Vorbereitung für das erneute Laden, entladen werden kann oder wenn das Dokument konnte nicht geladen werden. Wenn Sie dokumentspezifische Dienste in hinzugefügt <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnBeginLoad%2A> oder <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnEndLoad%2A>, entfernen Sie sie hier.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndLoad">
+      <MemberSignature Language="C#" Value="protected virtual void OnEndLoad (bool successful, System.Collections.ICollection errors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndLoad(bool successful, class System.Collections.ICollection errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnEndLoad(System.Boolean,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="successful" Type="System.Boolean" />
+        <Parameter Name="errors" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="successful">
+          <see langword="true" />Wenn der Ladevorgang erfolgreich abgeschlossen wurde; andernfalls <see langword="false" />.</param>
+        <param name="errors">Ein <see cref="T:System.Collections.ICollection" /> mit Objekten (normalerweise Ausnahmen), die als Fehler gemeldet wurden.</param>
+        <summary>Benachrichtigt dem Designerladeprogramm, dass der Ladevorgang abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnEndLoad%2A> Methode wird aufgerufen, wenn das Laden abgeschlossen ist. Es wird immer aufgerufen, auch wenn beim Laden eine Ausnahme ausgelöst wird. Der Wert der `successful` festgelegt, um `true` , wenn der Ladevorgang erfolgreich war, oder `false` Wenn ein schwerwiegender Fehler aufgetreten ist. Die `errors` Auflistung enthält Objekte, die als Fehler gemeldet wurden. In der Regel sind diese Objekte Ausnahmen.  
+  
+ Wenn Sie implementieren <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService> um abhängige laden zu unterstützen, rufen Sie die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnEndLoad%2A> Methode nach dem letzten Aufruf von der <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.System%23ComponentModel%23Design%23Serialization%23IDesignerLoaderService%23DependentLoadComplete%2A> Methode. Standardmäßig <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader> implementiert <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService> und übernimmt dies für Sie. Wenn <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService> ist nicht verfügbar, wenn <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad%2A> aufgerufen wird, <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad%2A> wird direkt aufrufen <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnEndLoad%2A> nach dem Aufruf <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.PerformLoad%2A>.  
+  
+ Diese Methode sollte vom Designerladeprogramm-Dienst aufgerufen werden, wenn alle abhängigen lädt abgeschlossen wurden.  Dies beendet den Ladevorgang der Initiierung durch die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad%2A> Methode. Wenn Sie einen eigenen Ladeprogrammdienst bereitstellen oder wenn Sie festlegen, geben Sie einen Dienst für das workflowladeprogramm nicht, sind Sie verantwortlich für das Aufrufen dieser Methode. Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.BeginLoad%2A> Methode wird Sie automatisch aufrufen, entweder indirekt durch Aufrufen der <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.System%23ComponentModel%23Design%23Serialization%23IDesignerLoaderService%23DependentLoadComplete%2A> Methode Wenn <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService> verfügbar ist, direkt oder ist er nicht.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> wurde nicht initialisiert.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnModifying">
+      <MemberSignature Language="C#" Value="protected virtual void OnModifying ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnModifying() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnModifying" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt das Designerladeprogramm, die der Status des Dokuments geändert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnModifying%2A> aufgerufen Methode als Antwort auf eine Komponente geändert, hinzufügen, oder Entfernen von Ereignis, das anzeigt, dass der Designer geändert werden. Sie können Quellcodeverwaltungssystem implementieren, indem Sie diese Methode überschreiben. Ein Aufruf von <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnModifying%2A> bedeutet nicht, dass die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Modified%2A> wird später-Eigenschaftensatz auf `true`; er gibt lediglich eine Absicht dazu.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformFlush">
+      <MemberSignature Language="C#" Value="protected abstract void PerformFlush (System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PerformFlush(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.PerformFlush(System.ComponentModel.Design.Serialization.IDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Ein <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> zum Beibehalten des Zustands der geladenen Designer verwendet werden soll.</param>
+        <summary>Leert alle Änderungen in den Designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.PerformFlush%2A> Methode wird aufgerufen, wenn das Designerladeprogramm alle Änderungen an den Designern leeren auf Dauerhaftigkeit muss. Wird aufgerufen, als Antwort auf einen Aufruf der <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Flush%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformLoad">
+      <MemberSignature Language="C#" Value="protected abstract void PerformLoad (System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PerformLoad(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.PerformLoad(System.ComponentModel.Design.Serialization.IDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Ein <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> zum Laden des Zustands der Designer verwendet werden soll.</param>
+        <summary>Lädt einen Designer aus der Persistenz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.PerformLoad%2A> Methode wird aufgerufen, wenn das Designerladeprogramm seinen Zustand zu laden muss. <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.PerformLoad%2A>wird aufgerufen, bevor die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.OnBeginLoad%2A> Methode. Sie müssen diese Methode, um den Designer Inhalt laden implementieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyProvider">
+      <MemberSignature Language="C#" Value="protected object PropertyProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object PropertyProvider" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.BasicDesignerLoader.PropertyProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Eigenschaftenanbieter für den Serialisierungs-Manager, der vom Ladeprogramm verwendet wird.</summary>
+        <value>Ein Objekt, dessen Eigenschaften werden auf dem Serialisierungs-Manager zur Verfügung gestellt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Serialisierungs-Manager bietet eine `Properties` Eigenschaft für die primäre Schnittstelle, die von Serialisierungsprogrammen, deren Serialisierung auf speziellen Bedürfnisse anzupassen gelesen werden kann. Die Eigenschaften, die durch die Serialisierungsprogramme geprüft werden, hängen von den Typ des verwendeten Serialisierer ab.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> wurde nicht initialisiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reload">
+      <MemberSignature Language="C#" Value="protected void Reload (System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReloadOptions flags);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Reload(valuetype System.ComponentModel.Design.Serialization.BasicDesignerLoader/ReloadOptions flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Reload(System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReloadOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.ComponentModel.Design.Serialization.BasicDesignerLoader+ReloadOptions" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReloadOptions" />-Werte.</param>
+        <summary>Erneutes Laden des Designers die Warteschlange gestellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Reload%2A> Methode kann durch das Designerladeprogramm zum Anfordern einer zum erneuten Laden des Designers aufgerufen werden. Da Neuladen während der Leerlaufzeit ausgeführt werden, neu diese Methode nicht tatsächlich den Designer; Er fügt nur das erneute Laden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReloadPending">
+      <MemberSignature Language="C#" Value="protected bool ReloadPending { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReloadPending" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReloadPending" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob erneut in die Warteschlange gestellt wurde.</summary>
+        <value>
+          <see langword="true" />, wenn ein Aufruf von <see cref="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Reload(System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReloadOptions)" /> eine Anforderung zum erneuten Laden der Warteschlange hinzugefügt wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportFlushErrors">
+      <MemberSignature Language="C#" Value="protected virtual void ReportFlushErrors (System.Collections.ICollection errors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ReportFlushErrors(class System.Collections.ICollection errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReportFlushErrors(System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errors" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="errors">Ein <see cref="T:System.Collections.ICollection" /> Fehlerobjekte, in der Regel Ausnahmen enthält.</param>
+        <summary>Meldet Fehler, die beim Löschen der Änderungen ist aufgetreten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReportFlushErrors%2A> Methode wird aufgerufen, während der <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Flush%2A> , wenn eine oder mehrere beim Leeren der Änderungen Fehler. Die Werte in der `errors` Auflistung kann Ausnahmen oder Objekte mit <xref:System.Object.ToString%2A> Werte, die den Fehler beschreiben. Die standardmäßige Implementierung des <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReportFlushErrors%2A> löst die letzte Ausnahme in der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Fehler beim Leeren der Änderungen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBaseComponentClassName">
+      <MemberSignature Language="C#" Value="protected void SetBaseComponentClassName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetBaseComponentClassName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.SetBaseComponentClassName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Eine Zeichenfolge, die den vollständigen Namen der Komponente so entwickelt werden.</param>
+        <summary>Legt den vollständigen Klassennamen der Basiskomponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.SetBaseComponentClassName%2A> Methode sollte aufgerufen werden, während der loading, um den vollständigen Namen der Komponente hergestellt, ein Designer entworfen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency">
+      <MemberSignature Language="C#" Value="void IDesignerLoaderService.AddLoadDependency ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.System#ComponentModel#Design#Serialization#IDesignerLoaderService#AddLoadDependency" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Registriert eine externe Komponente als Teil des Ladevorgangs von verwalteten <see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency%2A> Methode einmal für jedes externe Objekt, das den Ladevorgang. Die <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A> Methode wird aufgerufen, wenn die den Ladevorgang ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> wurde nicht initialisiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete">
+      <MemberSignature Language="C#" Value="void IDesignerLoaderService.DependentLoadComplete (bool successful, System.Collections.ICollection errorCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete(bool successful, class System.Collections.ICollection errorCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.System#ComponentModel#Design#Serialization#IDesignerLoaderService#DependentLoadComplete(System.Boolean,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="successful" Type="System.Boolean" />
+        <Parameter Name="errorCollection" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="successful">
+          <see langword="true" />Um erfolgreich geladen werden. andernfalls <see langword="false" />.</param>
+        <param name="errorCollection">Ein <see cref="T:System.Collections.ICollection" /> mit Fehlern, die während des Auslastungstests aufgetreten sind.</param>
+        <summary>Signalisiert, die ein abhängiger Ladevorgang abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.System%23ComponentModel%23Design%23Serialization%23IDesignerLoaderService%23DependentLoadComplete%2A> Methode wird aufgerufen, um zu signalisieren, dass ein abhängiger Ladevorgang abgeschlossen wurde. Rufen Sie die <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A> Methode einmal für jeden Prozess auf, die durch den Aufruf registriert war die <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency%2A> -Methode, die bereits abgeschlossen wurde.  
+  
+ Bei erfolgreichem abhängige laden, die der Aufrufer legt den `successful` Parameter `true` und übergibt Sie entweder eine leere Auflistung oder `null` auf die `errorCollection` Parameter. Der Aufrufer legt fest, wenn die abhängige Last Fehler feststellt, der `successful` Parameter `false` und übergibt eine Auflistung von Ausnahmen, die angeben, den Grund oder die Gründe für das Fehlschlagen der `errorCollection` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Keine Abhängigkeiten Load wurden durch hinzugefügt <see cref="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.System#ComponentModel#Design#Serialization#IDesignerLoaderService#AddLoadDependency" />, oder die <see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> wurde nicht initialisiert.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerLoaderService.Reload">
+      <MemberSignature Language="C#" Value="bool IDesignerLoaderService.Reload ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.ComponentModel.Design.Serialization.IDesignerLoaderService.Reload() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.System#ComponentModel#Design#Serialization#IDesignerLoaderService#Reload" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lädt das Dokument entwerfen.</summary>
+        <returns>
+          <see langword="true" />Wenn die Anforderung zum erneuten Laden akzeptiert wird; <see langword="false" /> , wenn das Ladeprogramm für das erneute Laden nicht erlaubt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Objekt aufrufen, kann die <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.System%23ComponentModel%23Design%23Serialization%23IDesignerLoaderService%23Reload%2A> Methode, um anzufordern, dass das Ladeprogramm für das Design-Dokument laden. Wenn das Ladeprogramm für das Neuladen unterstützt und das erneute Laden einhält, kann das Designerladeprogramm zurückgeben `true`. Andernfalls wird zurückgegeben `false`, der angibt, die das erneute Laden nicht stattfinden. Aufrufer können nicht auf die erneute Ladevorgang sofort basieren; Das Designerladeprogramm kann dies für einen anderen Zeitpunkt planen, oder sie können versuchen, den Designer erneut zu laden.  
+  
+ Der Aufrufer kann dem Benutzer eine Meldung angezeigt, wenn der Designer erneut geladen werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

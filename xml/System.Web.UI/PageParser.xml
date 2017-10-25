@@ -1,0 +1,208 @@
+<Type Name="PageParser" FullName="System.Web.UI.PageParser">
+  <TypeSignature Language="C#" Value="public sealed class PageParser : System.Web.UI.TemplateControlParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PageParser extends System.Web.UI.TemplateControlParser" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PageParser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.TemplateControlParser</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert einen Parser für ASPX-Dateien. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verwendet diese Klasse, um ASPX-Seiten zu analysieren.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageParser ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageParser.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.PageParser" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die Standardwerte für die während der Analyse Seite verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultApplicationBaseType">
+      <MemberSignature Language="C#" Value="public static Type DefaultApplicationBaseType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Type DefaultApplicationBaseType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageParser.DefaultApplicationBaseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ fest, von dem die <see cref="T:System.Web.HttpApplication" /> Instanz stammt.</summary>
+        <value>Der Typ, von dem die <see cref="T:System.Web.HttpApplication" /> Instanz stammt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft zugegriffen werden soll, in der Datei "Global.asax", bevor die `PreApplicationStart` Ereignis auftritt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPageBaseType">
+      <MemberSignature Language="C#" Value="public static Type DefaultPageBaseType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Type DefaultPageBaseType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageParser.DefaultPageBaseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ, von dem alle Seiten abgeleitet werden.</summary>
+        <value>Der Typ.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nur festgelegt werden, bevor die `PreApplicationStart` Ereignis tritt auf, in der Datei "Global.asax". Diese Eigenschaft kann jederzeit gelesen werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPageParserFilterType">
+      <MemberSignature Language="C#" Value="public static Type DefaultPageParserFilterType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Type DefaultPageParserFilterType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageParser.DefaultPageParserFilterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest-Parser Filter Seitentyp, der zum Zeitpunkt der Analyse verwendet werden soll.</summary>
+        <value>Der Typ des Filters Parser Seite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft zugegriffen werden soll, bevor die `PreApplicationStart` Ereignis tritt auf, in der Datei "Global.asax".  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultUserControlBaseType">
+      <MemberSignature Language="C#" Value="public static Type DefaultUserControlBaseType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Type DefaultUserControlBaseType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageParser.DefaultUserControlBaseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ, von dem alle Steuerelemente abgeleitet werden.</summary>
+        <value>Der Typ, von denen den Benutzer Steuerelemente abgeleitet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft zugegriffen werden soll, bevor die `PreApplicationStart` Ereignis tritt auf, in der Datei "Global.asax".  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EnableLongStringsAsResources">
+      <MemberSignature Language="C#" Value="public static bool EnableLongStringsAsResources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool EnableLongStringsAsResources" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageParser.EnableLongStringsAsResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ASP.NET die interne Behandlung langer Zeichenfolgen optimieren soll, die aufgetreten sind, wenn ASP.NET eine Seite oder ein Steuerelement analysiert.</summary>
+        <value>
+          <see langword="true" />Wenn ASP.NET die interne Behandlung langer Zeichenfolgen optimieren soll; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig konvertiert der Parser ASP.NET Literalzeichenfolgen, die mehr als 256 Zeichen in eine temporäre Ressourcenzeichenfolge enthalten. Diese Eigenschaft kann festgelegt werden, um `false` um dieses Verhalten zu deaktivieren und stattdessen zum Schreiben der literalen Zeichenfolge direkt an den Antwortstream. Diese Eigenschaft kann nur festgelegt werden, in der Datei "Global.asax", bevor die `PreApplicationStart` Ereignis auftritt. Diese Eigenschaft kann jederzeit gelesen werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetCompiledPageInstance">
+      <MemberSignature Language="C#" Value="public static System.Web.IHttpHandler GetCompiledPageInstance (string virtualPath, string inputFile, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.IHttpHandler GetCompiledPageInstance(string virtualPath, string inputFile, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageParser.GetCompiledPageInstance(System.String,System.String,System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpHandler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="inputFile" Type="System.String" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad der angeforderten Datei.</param>
+        <param name="inputFile">Der physische Pfad der Seite.</param>
+        <param name="context">Ein Objekt, das Informationen zu der aktuellen webanforderung enthält.</param>
+        <summary>Gibt eine Instanz einer kompilierten Seite für den angegebenen virtuellen Pfad zurück.</summary>
+        <returns>Gibt die kompilierte Instanz der angeforderten Seite zurück.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

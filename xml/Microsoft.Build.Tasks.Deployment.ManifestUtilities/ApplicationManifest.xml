@@ -1,0 +1,1145 @@
+<Type Name="ApplicationManifest" FullName="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationManifest : Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplicationManifest extends Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot("ApplicationManifest")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt ein ClickOnce- oder ein systemeigenes Win32-Anwendungsmanifest.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationManifest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationManifest (string targetFrameworkVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string targetFrameworkVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetFrameworkVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetFrameworkVersion">Ein Token, das eine Version von .NET Framework darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigFile">
+      <MemberSignature Language="C#" Value="public string ConfigFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anwendungskonfigurationsdatei ab oder legt sie fest.</summary>
+        <value>Eine Zeichenfolge, die den Namen der Anwendungskonfigurationsdatei angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für ein systemeigenes Win32-Manifest wird diese Eingabe ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryPoint">
+      <MemberSignature Language="C#" Value="public override Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference EntryPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference EntryPoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.EntryPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Assemblyverweis ab, der den Einstiegspunkt der Anwendung darstellt, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference" />-Objekt, das den Einstiegspunkt der Anwendung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorReportUrl">
+      <MemberSignature Language="C#" Value="public string ErrorReportUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorReportUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL des Fehlerberichts fest.</summary>
+        <value>Eine Zeichenfolge, die die URL des Fehlerberichts enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileAssociations">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociationCollection FileAssociations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociationCollection FileAssociations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest dateizuordnungen, die im Manifest definiert werden.</summary>
+        <value>Eine Zeichenfolge, die die dateizuordnungen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostInBrowser">
+      <MemberSignature Language="C#" Value="public bool HostInBrowser { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HostInBrowser" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Anwendung in einem Browser gehostet wird (wie WPF-Webbrowseranwendungen) fest.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die bereitgestellte Anwendung in einem Browser gehostet wird (<see langword="True" />), oder nicht (<see langword="False" />). <see langword="True" />gilt nur für WPF-Webbrowseranwendungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten für Projekttypen als WPF-Webbrowseranwendungen festlegen <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser%2A> auf `False` (Standardwert).  
+  
+ Wenn Sie eine WPF-Webbrowseranwendung bereitstellen, müssen Sie festlegen der <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser%2A> Eigenschaft `True`. Dies bewirkt, dass die `<hostInBrowser>` Tag generierten Anwendungsmanifest hinzugefügt werden. Dieses Tag ermöglicht ClickOnce zum Bereitstellen von Projekten für im Browser gehostete Anwendungen die XBAP-Dateien enthalten.  
+  
+ Sie müssen auch die Anwendung nur online durch Festlegen von zur Verfügung <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A> auf `False`. Wenn Sie dies nicht tun, erhalten Sie [MSBuild-Fehler MSB3116](http://msdn.microsoft.com/library/bf04c587-d0e2-4d68-bbff-da9a985ea70e).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IconFile">
+      <MemberSignature Language="C#" Value="public string IconFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IconFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Programmsymboldatei ab oder legt sie fest.</summary>
+        <value>Eine Zeichenfolge, die den Namen der Symboldatei darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Symbol für das Programm wird im generierten Anwendungsmanifest ausgedrückt und wird verwendet, für die **starten** Menü und **Software**. Wenn diese Datei mit dem Symbol nicht angegeben ist, wird ein Standardsymbol verwendet. Für ein systemeigenes Win32-Manifest wird diese Eingabe ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClickOnceManifest">
+      <MemberSignature Language="C#" Value="public bool IsClickOnceManifest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClickOnceManifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der angibt, ob das Manifest ein ClickOnce-Anwendungsmanifest oder ein systemeigenes Win32-Anwendungsmanifest ist.</summary>
+        <value>Ein boolescher Wert, der angibt, ob das Manifest ein ClickOnce-Anwendungsmanifest ist (<see langword="True" />) oder ein systemeigenes Win32-Manifest (<see langword="False" />).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxTargetPath">
+      <MemberSignature Language="C#" Value="public int MaxTargetPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxTargetPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.MaxTargetPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der die maximal zulässige Länge eines Dateipfads in einer ClickOnce-Anwendungsbereitstellung angibt. Wenn dieser Wert angegeben wird, wird die Länge jedes Dateipfads in der Anwendung mit dem Grenzwert verglichen. Alle Elemente, die den Grenzwert übersteigen, lösen eine Warnmeldung aus. Wenn dieser Parameter nicht angegeben wird oder den Wert 0 (Null) hat, wird keine Prüfung ausgeführt. Für ein systemeigenes Win32-Manifest wird diese Eingabe ignoriert.</summary>
+        <value>Eine ganze Zahl, die die maximal zulässige Länge eines Dateipfads in einer ClickOnce-Anwendungsbereitstellung anzeigt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OSDescription">
+      <MemberSignature Language="C#" Value="public string OSDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OSDescription" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der eine Textbeschreibung für die Betriebssystemabhängigkeit angibt, oder legt ihn fest.</summary>
+        <value>Eine Zeichenfolge, die die Betriebssystemabhängigkeit angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OSSupportUrl">
+      <MemberSignature Language="C#" Value="public string OSSupportUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OSSupportUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der eine Support-URL für die Betriebssystemabhängigkeit angibt.</summary>
+        <value>Eine Zeichenfolge, die die Support-URL für die Betriebssystemabhängigkeit angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OSVersion">
+      <MemberSignature Language="C#" Value="public string OSVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OSVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die für die Anwendung mindestens erforderliche Betriebssystemversion angibt, oder legt diesen fest.</summary>
+        <value>Eine Zeichenfolge, die die für die Anwendung mindestens erforderliche Betriebssystemversion angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die von der Anwendung erforderliche Mindestversion des Betriebssystems-Version. Ein Beispielwert ist "5.1.2600.0" für Windows XP. Wenn dieser Parameter nicht angegeben wird, wird ein Standardwert verwendet. Der Standardwert ist die kleinste unterstützte Betriebssystem von .NET Framework also "4.10.0.0" für Windows 98 SE. Wenn die Anwendung systemeigene oder registrierungsfreie COM-Verweise enthält, ist die Standardeinstellung jedoch Windows XP. Für ein systemeigenes Win32-Manifest wird diese Eingabe ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Product">
+      <MemberSignature Language="C#" Value="public string Product { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Product" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, die <see langword="ProductName" /> Eigenschaft in der Projektdatei.</summary>
+        <value>Ein Zeichenfolgenwert, der entspricht der <see langword="ProductName" /> Eigenschaft in der Projektdatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der `ProductName` Eigenschaft in der Projektdatei. Der Standardwert ist NULL. Wenn `ProductName` ist null und <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> ist `True`, wird der RegisteredOrganization-Wert in der Registrierung auf das Anwendungsmanifest geschrieben. Wenn RegisteredOrganization auch null ist, wird der Name der Assembly verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Publisher">
+      <MemberSignature Language="C#" Value="public string Publisher { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Publisher" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, die <see langword="PublisherName" /> Eigenschaft in der Projektdatei.</summary>
+        <value>Ein Zeichenfolgenwert, der entspricht der <see langword="PublisherName" /> Eigenschaft in der Projektdatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der `PublisherName` Eigenschaft in der Projektdatei. Der Standardwert ist NULL. Wenn `PublisherName` ist null und <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> ist `True`, wird der Name der Assembly auf das Anwendungsmanifest geschrieben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuiteName">
+      <MemberSignature Language="C#" Value="public string SuiteName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuiteName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Suitenamen, der im Manifest definiert ist.</summary>
+        <value>Eine Zeichenfolge, die den Suitenamen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportUrl">
+      <MemberSignature Language="C#" Value="public string SupportUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SupportUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, die <see langword="SupportUrl" /> Eigenschaft in der Projektdatei.</summary>
+        <value>Ein Zeichenfolgenwert, der entspricht der <see langword="SupportUrl" /> Eigenschaft in der Projektdatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der `SupportUrl` Eigenschaft in der Projektdatei. Der Standardwert ist NULL. Wenn `SupportUrl` ist null und <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> ist `True`, eine leere Zeichenfolge in das Anwendungsmanifest geschrieben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameworkVersion">
+      <MemberSignature Language="C#" Value="public string TargetFrameworkVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert ein Token, das eine Version von .NET Framework darstellt.</summary>
+        <value>Ein <see cref="T:System.String" /> , die eine Version von .NET Framework darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustInfo">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo TrustInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo TrustInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TrustInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt diesen fest, der ein Vertrauensstellungsobjekt zur Definition der Anwendungssicherheit angibt.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo" /> -Objekt, das die anwendungssicherheit definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseApplicationTrust">
+      <MemberSignature Language="C#" Value="public bool UseApplicationTrust { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseApplicationTrust" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product" />, <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher" />, und <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl" /> Eigenschaften werden auf das Anwendungsmanifest geschrieben.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher" />, <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product" />, und <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl" /> Eigenschaften werden auf das Anwendungsmanifest geschrieben. Wenn der Wert <see langword="True" />, sie auf das Anwendungsmanifest geschrieben werden. Wenn der Wert <see langword="False" />, diese Eigenschaften werden ignoriert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product%2A>, <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher%2A>, und <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl%2A> Eigenschaften werden festgelegt, auf Null. Sie werden verwendet, wenn nur <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> ist `True`. Wenn diese Eigenschaft ist `True`, die Werte dieser Eigenschaften werden in die entsprechenden Tags im Anwendungsmanifest geschrieben.  
+  
+ Wenn <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> ist `False` (der Standardwert), diese Eigenschaften werden ignoriert.  
+  
+ Diese Eigenschaft entspricht der `UseApplicationTrust` Eigenschaft in der Projektdatei.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt verschiedene Überprüfungen aus, um die Gültigkeit des Manifests zu bestätigen. Alle resultierenden Fehler oder Warnungen werden gemeldet, der <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen vor dem Aufrufen dieser Methode Festlegen der <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion%2A> Eigenschaft, damit die Überprüfung Anwendungsmanifest für die richtige Version von .NET Framework-Laufzeit überprüfen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlConfigFile">
+      <MemberSignature Language="C#" Value="public string XmlConfigFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlConfigFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlConfigFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("ConfigFile")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEntryPointIdentity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity XmlEntryPointIdentity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity XmlEntryPointIdentity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("EntryPointIdentity")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Eigenschaft ab oder legt diese fest, die zum Serialisieren der Identität des Einstiegspunkts in eine XML-Datei verwendet wird.</summary>
+        <value>Die Identität des Einstiegspunkts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEntryPointParameters">
+      <MemberSignature Language="C#" Value="public string XmlEntryPointParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlEntryPointParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("EntryPointParameters")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Eigenschaft ab, die zum Serialisieren der Einstiegspunktparameter in eine XML-Datei verwendet wird, oder legt diese fest.</summary>
+        <value>Die Einstiegspunktparameter.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEntryPointPath">
+      <MemberSignature Language="C#" Value="public string XmlEntryPointPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlEntryPointPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("EntryPointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Eigenschaft ab oder legt diese fest, die den Einstiegspunkt zum Ausführen der Assembly angibt und mit der der Einstiegspunkt in eine XML-Datei serialisiert wird.</summary>
+        <value>Der Einstiegspunkt zum Ausführen der Assembly.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlErrorReportUrl">
+      <MemberSignature Language="C#" Value="public string XmlErrorReportUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlErrorReportUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlErrorReportUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("ErrorReportUrl")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlFileAssociations">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation[] XmlFileAssociations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation[] XmlFileAssociations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlFileAssociations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArray("FileAssociations")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlHostInBrowser">
+      <MemberSignature Language="C#" Value="public string XmlHostInBrowser { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlHostInBrowser" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlHostInBrowser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("HostInBrowser")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>
+          <see langword="true" /> oder <see langword="false" />. Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlIconFile">
+      <MemberSignature Language="C#" Value="public string XmlIconFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlIconFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlIconFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("IconFile")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlIsClickOnceManifest">
+      <MemberSignature Language="C#" Value="public string XmlIsClickOnceManifest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlIsClickOnceManifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlIsClickOnceManifest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("IsClickOnceManifest")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>
+          <see langword="true" /> oder <see langword="false" />. Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlOSBuild">
+      <MemberSignature Language="C#" Value="public string XmlOSBuild { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlOSBuild" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSBuild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("OSBuild")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die zum Serialisieren der Buildversion des Betriebssystems in eine XML-Datei verwendet wird.</summary>
+        <value>Die Buildversion des Betriebssystems.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlOSDescription">
+      <MemberSignature Language="C#" Value="public string XmlOSDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlOSDescription" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("OSDescription")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlOSMajor">
+      <MemberSignature Language="C#" Value="public string XmlOSMajor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlOSMajor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSMajor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("OSMajor")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Eigenschaft ab, die zum Serialisieren des Hauptteils der Versionsnummer des Betriebssystems in einer XML-Datei verwendet wird, oder legt die Eigenschaft fest.</summary>
+        <value>Der Hauptteil der Versionsnummer des Betriebssystems.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlOSMinor">
+      <MemberSignature Language="C#" Value="public string XmlOSMinor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlOSMinor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSMinor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("OSMinor")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Eigenschaft ab, die zum Serialisieren des Nebenteils der Versionsnummer des Betriebssystems in einer XML-Datei verwendet wird, oder legt die Eigenschaft fest.</summary>
+        <value>Der Nebenteil der Versionsnummer des Betriebssystems.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlOSRevision">
+      <MemberSignature Language="C#" Value="public string XmlOSRevision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlOSRevision" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSRevision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("OSRevision")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Eigenschaft ab, die zum Serialisieren des Überarbeitungsteils der Versionsnummer des Betriebssystems in einer XML-Datei verwendet wird, oder legt die Eigenschaft fest.</summary>
+        <value>Der Überarbeitungsteil der Versionsnummer des Betriebssystems.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlOSSupportUrl">
+      <MemberSignature Language="C#" Value="public string XmlOSSupportUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlOSSupportUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSSupportUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("OSSupportUrl")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlProduct">
+      <MemberSignature Language="C#" Value="public string XmlProduct { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlProduct" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlProduct" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("Product")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlPublisher">
+      <MemberSignature Language="C#" Value="public string XmlPublisher { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlPublisher" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlPublisher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("Publisher")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSuiteName">
+      <MemberSignature Language="C#" Value="public string XmlSuiteName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlSuiteName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlSuiteName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("SuiteName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSupportUrl">
+      <MemberSignature Language="C#" Value="public string XmlSupportUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlSupportUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlSupportUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("SupportUrl")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlUseApplicationTrust">
+      <MemberSignature Language="C#" Value="public string XmlUseApplicationTrust { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlUseApplicationTrust" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlUseApplicationTrust" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("UseApplicationTrust")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Der Wert der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

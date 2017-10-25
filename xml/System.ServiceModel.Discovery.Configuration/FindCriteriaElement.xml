@@ -1,0 +1,213 @@
+<Type Name="FindCriteriaElement" FullName="System.ServiceModel.Discovery.Configuration.FindCriteriaElement">
+  <TypeSignature Language="C#" Value="public sealed class FindCriteriaElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FindCriteriaElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.Configuration.FindCriteriaElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet ein Konfigurationselement, das einen Kriteriensatz enthält, welcher von einer Clientanwendung zum Suchen nach Workflowdiensten über ein Netzwerk oder im Internet verwendet wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FindCriteriaElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.FindCriteriaElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.Configuration.FindCriteriaElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractTypeNames">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection ContractTypeNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection ContractTypeNames" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.FindCriteriaElement.ContractTypeNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("types")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Konfigurationselementen ab, die die Namen von Workflowdienst-Vertragstypen enthalten.</summary>
+        <value>Eine Auflistung von -Elementen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public TimeSpan Duration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Duration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.FindCriteriaElement.Duration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("duration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceModel.Configuration.ServiceModelTimeSpanValidator(MinValueString="00:00:00.001")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Zeit ab oder legt sie fest, die auf Antworten von Diensten in einem Netzwerk oder im Internet gewartet wird.</summary>
+        <value>Ein timespan-Objekt, das die Wartezeit definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.XmlElementElementCollection Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.XmlElementElementCollection Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.FindCriteriaElement.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("extensions")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.XmlElementElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.ServiceModel.Configuration.XmlElementElementCollection" />-Objekt ab, das Erweiterungen für ein <see cref="T:System.ServiceModel.Discovery.Configuration.FindCriteriaElement" /> bereitstellt.</summary>
+        <value>Eine Auflistung von -Elementen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxResults">
+      <MemberSignature Language="C#" Value="public int MaxResults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxResults" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.FindCriteriaElement.MaxResults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxResults", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=2147483647, MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl an Antworten ab oder legt sie fest, auf die von Diensten in einem Netzwerk oder im Internet gewartet wird.</summary>
+        <value>Eine maximale Anzahl.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement.MaxResults%2A>-Antworten empfangen werden, bevor die <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement.Duration%2A> verstrichen ist, endet der Suchvorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.FindCriteriaElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeMatchBy">
+      <MemberSignature Language="C#" Value="public Uri ScopeMatchBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ScopeMatchBy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.FindCriteriaElement.ScopeMatchBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("scopeMatchBy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen URI ab oder legt ihn fest, der den Namen und den Speicherort eines Diensts festlegt, nach dem gesucht wird und mit dem Member der <see cref="P:System.ServiceModel.Discovery.Configuration.FindCriteriaElement.Scopes" />-Auflistung abgeglichen werden.</summary>
+        <value>Der URI einer Dienstanwendung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scopes">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.Configuration.ScopeElementCollection Scopes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Discovery.Configuration.ScopeElementCollection Scopes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.FindCriteriaElement.Scopes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("scopes")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.Configuration.ScopeElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung mit <see cref="T:System.ServiceModel.Discovery.Configuration.FindCriteriaElement" />-Objekten ab, die absolute URIs enthalten, die während eines Suchvorgangs verwendet werden, um einen bestimmten Dienst oder bestimmte Dienste zu suchen.</summary>
+        <value>Eine Auflistung mit Elementen, die URIs enthalten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der bestimmte Dienst gefunden wird, wurde eine erfolgreiche Übereinstimmung zwischen dem Dienst- und Bereichs-URI hergestellt. Dies geschieht mitunter mittels Bereichsregeln, die Probleme beim Abgleichen behandeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

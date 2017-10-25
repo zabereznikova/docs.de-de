@@ -1,0 +1,13 @@
+<Namespace Name="System.Data.Services.Providers">
+  <Docs>
+    <summary>Bietet eine Reihe von Schnittstellen, die implementiert werden, um einen benutzerdefinierten Datendienstanbieter für WCF Data Services zu definieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Datendiensteanbieter](~/docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

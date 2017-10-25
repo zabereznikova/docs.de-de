@@ -1,0 +1,140 @@
+<Type Name="BitmapPalette" FullName="System.Windows.Media.Imaging.BitmapPalette">
+  <TypeSignature Language="C#" Value="public sealed class BitmapPalette : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BitmapPalette extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.BitmapPalette" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die verfügbare Farbpalette für einen unterstützten Bildtyp.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)] und [!INCLUDE[TLA#tla_gif](~/includes/tlasharptla-gif-md.md)] Bildformate Image Farbpaletten unterstützt. Allerdings können anderen Bildtypen verwendet werden, definieren eine <xref:System.Windows.Media.Imaging.BitmapPalette>. Beim Definieren einer <xref:System.Windows.Media.Imaging.BitmapPalette> für ein nicht unterstütztes Bitmapformat keine Ausnahme aus, ergeben der festgelegten <xref:System.Windows.Media.Imaging.BitmapPalette> wird einfach ignoriert.  
+  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]unterstützt benutzerdefinierte Farbpaletten und vordefinierte Paletten durch die <xref:System.Windows.Media.Imaging.BitmapPalettes> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein benutzerdefiniertes <xref:System.Windows.Media.Imaging.BitmapPalette> und wendet ihn auf ein neues <xref:System.Windows.Media.Imaging.BitmapSource>.  
+  
+ [!code-csharp[bitmapframeexample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#1)]
+ [!code-vb[bitmapframeexample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#1)]  
+  
+ Das folgende Beispiel veranschaulicht das Abrufen einer <xref:System.Windows.Media.Imaging.BitmapPalette> aus einem Image.  
+  
+ [!code-csharp[bitmapframeexample#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#5)]
+ [!code-vb[bitmapframeexample#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapPalette (System.Collections.Generic.IList&lt;System.Windows.Media.Color&gt; colors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IList`1&lt;valuetype System.Windows.Media.Color&gt; colors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapPalette.#ctor(System.Collections.Generic.IList{System.Windows.Media.Color})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="colors" Type="System.Collections.Generic.IList&lt;System.Windows.Media.Color&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="colors">Die Farben der benutzerdefinierten Palette hinzu.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Imaging.BitmapPalette" /> Klasse mit den angegebenen Farben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein benutzerdefiniertes <xref:System.Windows.Media.Imaging.BitmapPalette> und wendet ihn auf ein neues <xref:System.Windows.Media.Imaging.BitmapSource>.  
+  
+ [!code-csharp[bitmapframeexample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#1)]
+ [!code-vb[bitmapframeexample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="colors" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <paramref name="colors" /> Parameter ist kleiner als 1 oder größer als 256 Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapPalette (System.Windows.Media.Imaging.BitmapSource bitmapSource, int maxColorCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Imaging.BitmapSource bitmapSource, int32 maxColorCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapPalette.#ctor(System.Windows.Media.Imaging.BitmapSource,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="bitmapSource" Type="System.Windows.Media.Imaging.BitmapSource" />
+        <Parameter Name="maxColorCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bitmapSource">Die Quellbitmap, aus der die Palette gelesen oder erstellt wird.</param>
+        <param name="maxColorCount">Die maximale Anzahl der Farben auf die neue <see cref="T:System.Windows.Media.Imaging.BitmapPalette" /> verwenden können.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Imaging.BitmapPalette" /> Klasse auf der Grundlage der angegebenen <see cref="T:System.Windows.Media.Imaging.BitmapSource" />. Die neue <see cref="T:System.Windows.Media.Imaging.BitmapPalette" /> ist auf eine angegebene maximale Anzahl von Farben beschränkt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `bitmapSource` hat bereits eine Palette definierte die entsprechende Palette zurückgegeben wird. Andernfalls wird eine neue Palette aus einer Analyse der Bitmap erstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Abrufen einer <xref:System.Windows.Media.Imaging.BitmapPalette> aus einem Image.  
+  
+ [!code-csharp[bitmapframeexample#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#5)]
+ [!code-vb[bitmapframeexample#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="bitmapSource" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Colors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Windows.Media.Color&gt; Colors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype System.Windows.Media.Color&gt; Colors" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapPalette.Colors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Windows.Media.Color&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rufen Sie die Farben in einer Palette definiert.</summary>
+        <value>Die Liste der Farben in einer Palette definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein benutzerdefiniertes <xref:System.Windows.Media.Imaging.BitmapPalette> und wendet ihn auf ein neues <xref:System.Windows.Media.Imaging.BitmapSource>.  
+  
+ [!code-csharp[bitmapframeexample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#1)]
+ [!code-vb[bitmapframeexample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

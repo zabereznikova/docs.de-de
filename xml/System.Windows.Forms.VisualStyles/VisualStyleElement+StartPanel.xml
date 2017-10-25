@@ -1,0 +1,49 @@
+<Type Name="VisualStyleElement+StartPanel" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+StartPanel">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.StartPanel" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/StartPanel extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Klassen, ermöglichen <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> Objekte für die Bestandteile der **starten** Menü. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel> Klasse bietet eine Grundlage, die in der folgenden Klassen definiert werden:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.LogOff>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.LogOffButtons>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MorePrograms>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.PlaceList>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.PlaceListSeparator>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.Preview>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.ProgList>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.ProgListSeparator>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.UserPane>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.UserPicture>  
+  
+ Jede dieser Klassen enthält eine oder mehrere Eigenschaften, die Zurückgeben einer <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für jeden Status der der **starten** Teil dem Klassennamen angegeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

@@ -1,0 +1,323 @@
+<Type Name="Task" FullName="Microsoft.Build.Utilities.Task">
+  <TypeSignature Language="C#" Value="public abstract class Task : Microsoft.Build.Framework.ITask" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Task extends System.Object implements class Microsoft.Build.Framework.ITask" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.Task" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITask</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt beim Überschreiben in einem abgeleiteten Formular Funktionen für Aufgaben bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese abstrakte Klasse stellt standardimplementierungen für die Methoden und Eigenschaften der <xref:Microsoft.Build.Framework.ITask> Schnittstelle.  
+  
+ Diese Klasse kann nur in einem abgeleiteten Formular instanziiert werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Code für eine Aufgabe, die eine oder mehrere Verzeichnisse erstellt.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Task ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.Task.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Utilities.Task" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Task (System.Resources.ResourceManager taskResources);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Resources.ResourceManager taskResources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.Task.#ctor(System.Resources.ResourceManager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="taskResources" Type="System.Resources.ResourceManager" />
+      </Parameters>
+      <Docs>
+        <param name="taskResources">Die Aufgabenressourcen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Utilities.Task" />-Klasse mit der angegebenen <see cref="P:Microsoft.Build.Utilities.Task.TaskResources" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ermöglicht es abgeleiteten Klassen, ihre Ressourcen zu registrieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Task (System.Resources.ResourceManager taskResources, string helpKeywordPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Resources.ResourceManager taskResources, string helpKeywordPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.Task.#ctor(System.Resources.ResourceManager,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="taskResources" Type="System.Resources.ResourceManager" />
+        <Parameter Name="helpKeywordPrefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskResources">Die Aufgabenressourcen.</param>
+        <param name="helpKeywordPrefix">Das Präfix, das Zeichenfolgenressourcen angefügt werden soll, um Hilfeschlüsselwörter zu erstellen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Utilities.Task" />-Klasse mit den angegebenen <see cref="P:Microsoft.Build.Utilities.Task.TaskResources" /> und dem angegebenen <see cref="P:Microsoft.Build.Utilities.Task.HelpKeywordPrefix" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Konstruktor können abgeleiteten Klassen, ihre Ressourcen zu registrieren sowie ein Präfix zum Erstellen von Hilfeschlüsselwörtern aus Zeichenfolgenressourcennamen bereitzustellen. Wenn `helpKeywordPrefix` ist eine leere Zeichenfolge, die Zeichenfolgenressource Namen wörtlich als Hilfeschlüsselwörter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEngine">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IBuildEngine BuildEngine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IBuildEngine BuildEngine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.BuildEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IBuildEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Instanz des von der Aufgabe verwendeten <see cref="T:Microsoft.Build.Framework.IBuildEngine" />-Objekts ab oder legt diese fest.</summary>
+        <value>Das für Aufgaben verfügbare <see cref="T:Microsoft.Build.Framework.IBuildEngine" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Buildmodul legt automatisch diese Eigenschaft auf Aufgaben zurückgerufen werden können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEngine2">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IBuildEngine2 BuildEngine2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IBuildEngine2 BuildEngine2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.BuildEngine2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IBuildEngine2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Instanz von der <see cref="T:Microsoft.Build.Framework.IBuildEngine2" /> Objekt, das von der Aufgabe verwendet.</summary>
+        <value>Das für Aufgaben verfügbare <see cref="T:Microsoft.Build.Framework.IBuildEngine2" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEngine3">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IBuildEngine3 BuildEngine3 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IBuildEngine3 BuildEngine3" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.BuildEngine3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IBuildEngine3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Instanz von der <see cref="T:Microsoft.Build.Framework.IBuildEngine3" /> Objekt, das von der Aufgabe verwendet.</summary>
+        <value>Das für Aufgaben verfügbare <see cref="T:Microsoft.Build.Framework.IBuildEngine3" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEngine4">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IBuildEngine4 BuildEngine4 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IBuildEngine4 BuildEngine4" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.BuildEngine4" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IBuildEngine4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Instanz von der <see cref="T:Microsoft.Build.Framework.IBuildEngine4" /> Objekt, das von der Aufgabe verwendet.</summary>
+        <value>Gibt die <see cref="T:Microsoft.Build.Framework.IBuildEngine4" /> für Aufgaben verfügbar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public abstract bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.Task.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Aufgabe beim Überschreiben in einer abgeleiteten Klasse aus.</summary>
+        <returns>
+          <see langword="true" />, wenn die Aufgabe erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse muss in einer abgeleiteten Klasse überschrieben werden und wird zum Ausführen der Ausführungslogik des Tasks verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Code für eine Aufgabe, die eine oder mehrere Verzeichnisse erstellt.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpKeywordPrefix">
+      <MemberSignature Language="C#" Value="protected string HelpKeywordPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpKeywordPrefix" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.HelpKeywordPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Präfix ab, das zum Erstellen von Hilfeschlüsselwörtern aus Ressourcennamen verwendet wird, oder legt dieses fest.</summary>
+        <value>Das Präfix, das zum Erstellen von Hilfeschlüsselwörtern aus Ressourcennamen verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Aufgabe keine Hilfeschlüsselwörter parteinachrichten zugeordnet, kann es ignoriert diese Eigenschaft oder legen sie den `null`. Wenn diese Eigenschaft, um eine leere festgelegt wird <xref:System.String>, Ressourcennamen wörtlich als Hilfeschlüsselwörter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskHost HostObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskHost HostObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.HostObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Hostobjekt ab oder legt dieses fest, das der Aufgabe zugeordnet ist.</summary>
+        <value>Das Hostobjekt, das der Aufgabe zugeordnet ist. Dieser Wert kann <see langword="null" /> sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Host-IDE ein Hostobjekt mit dieser bestimmten Aufgabe verknüpft hat, legt das Buildmodul diese Eigenschaft fest.  
+  
+ Das Hostobjekt gebotenen <xref:Microsoft.Build.Execution.HostServices>. Visual Studio bestimmt das Hostobjekt, das über ein System-Registrierungsschlüssel. Weitere Informationen finden Sie unter <xref:Microsoft.VisualStudio.Shell.Interop.IVsMSBuildHostObject>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Utilities.TaskLoggingHelper Log { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Utilities.TaskLoggingHelper Log" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.Log" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.TaskLoggingHelper</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Instanz von einem <see cref="T:Microsoft.Build.Utilities.TaskLoggingHelper" /> Klasse, die Aufgabenprotokollierungsmethoden enthält.</summary>
+        <value>Das Hilfsobjekt für die Protokollierung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt den Code für eine Aufgabe, die eine oder mehrere Verzeichnisse erstellt.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskResources">
+      <MemberSignature Language="C#" Value="protected System.Resources.ResourceManager TaskResources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Resources.ResourceManager TaskResources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.TaskResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.ResourceManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft kulturspezifische Ressourcen für diese Aufgabe ab oder legt sie fest.</summary>
+        <value>Die kulturspezifischen Ressourcen für diese Aufgabe. Dieser Wert kann <see langword="null" /> sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn abgeleitete Klassen lokalisierte Zeichenfolgen verfügen, sollten sie ihre Ressourcen entweder während der Konstruktion oder durch diese Eigenschaft registrieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

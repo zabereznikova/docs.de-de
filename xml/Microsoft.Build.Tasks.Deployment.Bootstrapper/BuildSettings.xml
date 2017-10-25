@@ -1,0 +1,349 @@
+<Type Name="BuildSettings" FullName="Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings">
+  <TypeSignature Language="C#" Value="public class BuildSettings : Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildSettings extends System.Object implements class Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("5D13802C-C830-4b41-8E7A-F69D9DD6A095")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Einstellungen für den Bootstrapper-Buildvorgang.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationFile">
+      <MemberSignature Language="C#" Value="public string ApplicationFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der Datei, die installiert werden soll, nachdem der Bootstrapper alle erforderlichen Komponenten installiert hat.</summary>
+        <value>Der Name der Datei, die nach der Installation der erforderlichen Komponenten installiert werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dient zum Abrufen oder Festlegen der Datei, die installiert werden soll, nachdem der Bootstrapper alle erforderlichen Komponenten installiert hat. Standardmäßig ist der Dateipfad relativ zum Pfad Bootstrapper-Quelle. Legen Sie diese Eigenschaft auf null, wenn keine Anwendung installiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Namens der Anwendung, die installiert werden soll, nachdem der Bootstrapper alle erforderlichen Komponenten installiert hat.</summary>
+        <value>Der Name der Anwendung, die nach der Installation der erforderlichen Komponenten installiert werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dient zum Abrufen oder Festlegen des Namens der Anwendung, die installiert werden soll, nachdem der Bootstrapper alle erforderlichen Komponenten installiert hat. Legen Sie diese Eigenschaft auf null, wenn keine Anwendung installiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationRequiresElevation">
+      <MemberSignature Language="C#" Value="public bool ApplicationRequiresElevation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplicationRequiresElevation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationRequiresElevation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Komponente mit erweiterten Berechtigungen ausgeführt wird, wenn es auf einem Zielcomputer installiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die installierte Komponente mit erweiterten Berechtigungen ausgeführt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann in der Projektdatei festgelegt werden, aber wird nicht in der MSBuild-Schema verfügbar gemacht.  
+  
+ Eine Komponente, die mit erweiterten Berechtigungen ausgeführt werden, wenn sie einen Registrierungsschlüssel schreibt oder im globalen Assemblycache installiert ist. Wenn Sie Assemblys im globalen Assemblycache installieren, müssen Sie diese Eigenschaft festgelegt wird, um `true`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationUrl">
+      <MemberSignature Language="C#" Value="public string ApplicationUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Quellpfad ab oder legt diesen fest, wenn der Bootstrapper auf einer Website veröffentlicht wird.</summary>
+        <value>Eine URL, die den erwarteten Quellpfad darstellt, wenn der Bootstrapper auf einer Website veröffentlicht wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Angabe von <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationFile%2A>, der Bootstrapper wird in den von diesem Wert angegebenen Speicherort veröffentlicht werden.  
+  
+ Wenn <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation%2A> festgelegt ist, um <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.Relative>, erforderlichen Komponentendateien an einem Speicherort relativ zu diesem Wert veröffentlicht werden.  
+  
+ Legen Sie diesen Wert auf null, wenn Setup.exe nicht im Web veröffentlicht werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation ComponentsLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation ComponentsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Installationspfad für Bootstrapperkomponenten ab oder legt ihn fest.</summary>
+        <value>Der Installationspfad (<see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation" />) für Bootstrapperkomponenten.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentsUrl">
+      <MemberSignature Language="C#" Value="public string ComponentsUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ComponentsUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Speicherort ab oder legt diesen fest, an den der Bootstrapper Komponenten kopiert, wenn <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation" /> auf <see cref="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.Absolute" /> festgelegt ist.</summary>
+        <value>Der Speicherort, an den der Bootstrapper Komponenten kopiert, wenn <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation" /> auf <see cref="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.Absolute" /> festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CopyComponents">
+      <MemberSignature Language="C#" Value="public bool CopyComponents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CopyComponents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.CopyComponents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Bootstrapperkomponenten in das Buildausgabeverzeichnis kopiert werden.</summary>
+        <value>
+          <see langword="true" />, wenn die Bootstrapperkomponenten in das Buildausgabeverzeichnis kopiert werden, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `true`, der Bootstrapperkomponenten kopiert werden. Wenn `false`, die Dateien nicht kopiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackLCID">
+      <MemberSignature Language="C#" Value="public int FallbackLCID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FallbackLCID" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.FallbackLCID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Kulturbezeichners, der verwendet werden soll, wenn der LCID-Bezeichner nicht verfügbar ist.</summary>
+        <value>Ein Ganzzahlwert, der den Kulturbezeichner darstellt, der verwendet werden soll, wenn der LCID-Bezeichner nicht verfügbar ist.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LCID">
+      <MemberSignature Language="C#" Value="public int LCID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LCID" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.LCID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Kulturbezeichner zum Angeben der Kultur ab, für die der Bootstrapper erstellt wird, oder legt diesen fest.</summary>
+        <value>Ein Ganzzahlwert, der den Kulturbezeichner zum Angeben der Kultur darstellt, für die der Bootstrapper erstellt wird.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OutputPath">
+      <MemberSignature Language="C#" Value="public string OutputPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OutputPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.OutputPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Speicherort ab oder legt diesen fest, an den Ausgabedateien kopiert werden.</summary>
+        <value>Eine Zeichenfolge, die den Speicherort darstellt, an den Ausgabedateien kopiert werden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProductBuilders">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilderCollection ProductBuilders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilderCollection ProductBuilders" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ProductBuilders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zum Generieren des Bootstrappers zu verwendenden Produktgeneratoren ab.</summary>
+        <value>Eine Auflistung der produktgeneratoren (<see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilderCollection" />) zum Generieren des Bootstrappers verwendet werden soll.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SupportUrl">
+      <MemberSignature Language="C#" Value="public string SupportUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SupportUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.SupportUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL für die Website ab, die Supportinformationen für den Bootstrapper enthält, oder legt diese fest.</summary>
+        <value>Die URL für die Website, die Supportinformationen für den Bootstrapper enthält.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public bool Validate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Validate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.Validate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt diesen fest, der angibt, ob der Bootstrapper die XML-Validierung auf die Komponentenmanifeste anwendet.</summary>
+        <value>
+          <see langword="true" />Wenn der Bootstrapper XML-Überprüfung auf die Komponentenmanifeste anwendet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `true`, validiert Komponentenmanifeste; Wenn der Bootstrapper `false`, des Bootstrappers Komponentenmanifeste nicht überprüft.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

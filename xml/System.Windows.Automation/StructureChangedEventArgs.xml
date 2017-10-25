@@ -1,0 +1,112 @@
+<Type Name="StructureChangedEventArgs" FullName="System.Windows.Automation.StructureChangedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class StructureChangedEventArgs : System.Windows.Automation.AutomationEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StructureChangedEventArgs extends System.Windows.Automation.AutomationEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.StructureChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.AutomationEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über das Ereignis, das ausgelöst wird, wenn der Benutzeroberflächenautomatisierungs-Struktur geändert wurde.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StructureChangedEventArgs (System.Windows.Automation.StructureChangeType structureChangeType, int[] runtimeId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Automation.StructureChangeType structureChangeType, int32[] runtimeId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.StructureChangedEventArgs.#ctor(System.Windows.Automation.StructureChangeType,System.Int32[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="structureChangeType" Type="System.Windows.Automation.StructureChangeType" />
+        <Parameter Name="runtimeId" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="structureChangeType">Ein einzelner Wert, der den Typ der Änderung angibt.</param>
+        <param name="runtimeId">Die Common Language Runtime [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] von der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elements, dessen Struktur geändert wurde.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="P:System.Windows.Automation.StructureChangedEventArgs.StructureChangeType" /> -Klasse und gibt die Art der Änderung und die [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] des Elements, dessen Struktur geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte, die in zurückgegeben werden können `structureChangeType` hängen von der Implementierung des Benutzeroberflächenautomatisierungs-Anbieters. Beispielsweise, wenn Elemente sind hinzugefügt oder daraus eine [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] Listenfeld, wenn der Anbieter nicht bestimmen die Anzahl der Elemente hinzugefügt oder entfernt werden kann, kann er angeben <xref:System.Windows.Automation.StructureChangeType.ChildrenInvalidated> und nicht <xref:System.Windows.Automation.StructureChangeType.ChildAdded> oder <xref:System.Windows.Automation.StructureChangeType.ChildRemoved>.  
+  
+ Die folgende Tabelle beschreibt die Informationen im Ereignisprotokoll durch Empfangen der <xref:System.Windows.Automation.StructureChangedEventHandler> für andere Struktur geändert wird.  
+  
+|`structureChangeType`|Ereignisquelle|`runtimeId`|  
+|---------------------------|------------------|-----------------|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildAdded>|Das untergeordnete Element, das hinzugefügt wurde.|Das untergeordnete Element, das hinzugefügt wurde.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildRemoved>|Das übergeordnete Element des untergeordneten Elements, das entfernt wurde.|Das untergeordnete Element, das entfernt wurde.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildrenBulkAdded>|Das übergeordnete Element der untergeordneten Elemente, die hinzugefügt wurden.|Das übergeordnete Element der untergeordneten Elemente, die hinzugefügt wurden.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildrenBulkRemoved>|Das übergeordnete Element der untergeordneten Elemente, die entfernt wurden.|Das übergeordnete Element der untergeordneten Elemente, die entfernt wurden.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildrenInvalidated>|Das übergeordnete Element der untergeordneten Elemente, die für ungültig erklärt wurden.|Das übergeordnete Element der untergeordneten Elemente, die für ungültig erklärt wurden|  
+  
+ Benutzerdefinierte Steuerelemente können nicht in der Lage, geben Sie keinen sinnvollen Wert in `runtimeId`. Weitere Informationen finden Sie unter <xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseStructureChangedEvent%2A>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie die Erstellung und das Auslösen eines Ereignisses, wenn untergeordnete Elemente hinzugefügt werden, oder über ein benutzerdefiniertes Listenfeld entfernt.  
+  
+ [!code-csharp[FragmentProvider#101](~/samples/snippets/csharp/VS_Snippets_Wpf/FragmentProvider/CSharp/ListFragment.cs#101)]
+ [!code-vb[FragmentProvider#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FragmentProvider/VisualBasic/ListFragment.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeId">
+      <MemberSignature Language="C#" Value="public int[] GetRuntimeId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32[] GetRuntimeId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.StructureChangedEventArgs.GetRuntimeId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Runtime [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] von der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elements, dessen Struktur geändert wurde.</summary>
+        <returns>Die Common Language Runtime [!INCLUDE[TLA2#tla_id](~/includes/tla2sharptla-id-md.md)] von der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elements, dessen Struktur geändert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert ist möglicherweise der Bezeichner des untergeordneten Elements, das hinzugefügt oder entfernt wurde oder, im Fall von viele untergeordnete Elemente werden hinzugefügt, entfernt oder ungültig, den Bezeichner des übergeordneten Elements. Weitere Informationen finden Sie unter <xref:System.Windows.Automation.StructureChangedEventArgs.%23ctor%2A>.  
+  
+ Benutzerdefinierte Steuerelemente möglicherweise nicht mit einer gültigen Laufzeitbezeichner bereit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StructureChangeType">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.StructureChangeType StructureChangeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.StructureChangeType StructureChangeType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.StructureChangedEventArgs.StructureChangeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.StructureChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, der Art der Änderung, die aufgetreten sind in der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Struktur.</summary>
+        <value>Der Typ geändert werden, die aufgetreten ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

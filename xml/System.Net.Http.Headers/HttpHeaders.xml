@@ -1,0 +1,421 @@
+<Type Name="HttpHeaders" FullName="System.Net.Http.Headers.HttpHeaders">
+  <TypeSignature Language="C#" Value="public abstract class HttpHeaders : System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,System.Collections.Generic.IEnumerable&lt;string&gt;&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract HttpHeaders extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Collections.Generic.IEnumerable`1&lt;string&gt;&gt;&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.Headers.HttpHeaders" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Collections.Generic.IEnumerable&lt;System.String&gt;&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Eine Auflistung von Headern und deren Werten (gemäß Definition in RFC 2616).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpHeaders ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.Headers.HttpHeaders" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string name, System.Collections.Generic.IEnumerable&lt;string&gt; values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string name, class System.Collections.Generic.IEnumerable`1&lt;string&gt; values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.Add(System.String,System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="values" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Header, der der Auflistung hinzugefügt werden soll.</param>
+        <param name="values">Eine Liste von Headerwerten in der Auflistung hinzu.</param>
+        <summary>Fügt den angegebenen Header und seine Werte in der <see cref="T:System.Net.Http.Headers.HttpHeaders" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Header `values` analysiert und überprüft werden.  
+  
+ Wenn der angegebene Header nicht vorhanden ist, die <xref:System.Net.Http.Headers.HttpHeaders.Add%2A> Methode fügt einen neuen Header in der Liste von Name/Wert-Paaren für Header.  
+  
+ Wenn der angegebene Header bereits vorhanden ist, ist `values` werden hinzugefügt, der durch Trennzeichen getrennte Liste von Werten, die dem Header zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Header, der der Auflistung hinzugefügt werden soll.</param>
+        <param name="value">Der Inhalt des Headers.</param>
+        <summary>Fügt den angegebenen Header und dessen Wert in der <see cref="T:System.Net.Http.Headers.HttpHeaders" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Header `value` analysiert und überprüft werden.  
+  
+ Wenn der angegebene Header nicht vorhanden ist, die <xref:System.Net.Http.Headers.HttpHeaders.Add%2A> Methode fügt einen neuen Header in der Liste von Name/Wert-Paaren für Header.  
+  
+ Wenn der angegebene Header bereits vorhanden ist, ist `value` wird hinzugefügt, der durch Trennzeichen getrennte Liste von Werten, die dem Header zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Header aus der <see cref="T:System.Net.Http.Headers.HttpHeaders" /> Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der angegebene Header.</param>
+        <summary>Gibt Informationen dazu zurück, ob ein bestimmter Header in der <see cref="T:System.Net.Http.Headers.HttpHeaders" />-Sammlung vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Header in der Sammlung vorhanden ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;string,System.Collections.Generic.IEnumerable&lt;string&gt;&gt;&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Collections.Generic.IEnumerable`1&lt;string&gt;&gt;&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Collections.Generic.IEnumerable&lt;System.String&gt;&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:System.Net.Http.Headers.HttpHeaders" />-Instanz durchlaufen kann.</summary>
+        <returns>Ein Enumerator für <see cref="T:System.Net.Http.Headers.HttpHeaders" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; GetValues (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; GetValues(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.GetValues(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der angegebene Header, für den Werte zurückgegeben werden sollen.</param>
+        <summary>Gibt alle Headerwerte für einen angegebenen Header zurück, der in der <see cref="T:System.Net.Http.Headers.HttpHeaders" />-Sammlung gespeichert ist.</summary>
+        <returns>Ein Array von Headerzeichenfolgen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Headers, der aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt den angegebenen Header aus der <see cref="T:System.Net.Http.Headers.HttpHeaders" /> Auflistung.</summary>
+        <returns>Gibt <see cref="T:System.Boolean" />zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Enumerator ab, der eine <see cref="T:System.Net.Http.Headers.HttpHeaders" /> durchlaufen kann.</summary>
+        <returns>Eine Instanz einer Implementierung einer <see cref="T:System.Collections.IEnumerator" />, die eine <see cref="T:System.Net.Http.Headers.HttpHeaders" /> durchlaufen kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle <see cref="T:System.Net.Http.Headers.HttpHeaders" />-Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryAddWithoutValidation">
+      <MemberSignature Language="C#" Value="public bool TryAddWithoutValidation (string name, System.Collections.Generic.IEnumerable&lt;string&gt; values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryAddWithoutValidation(string name, class System.Collections.Generic.IEnumerable`1&lt;string&gt; values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String,System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="values" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Header, der der Auflistung hinzugefügt werden soll.</param>
+        <param name="values">Die Werte des Headers.</param>
+        <summary>Gibt einen Wert zurück, der anzeigt, ob der angegebene Header und seine Werte der <see cref="T:System.Net.Http.Headers.HttpHeaders" />-Sammlung ohne Überprüfung der bereitgestellten Informationen hinzugefügt wurden.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Header <paramref name="name" /> und <paramref name="values" /> der Sammlung hinzugefügt werden konnten; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryAddWithoutValidation">
+      <MemberSignature Language="C#" Value="public bool TryAddWithoutValidation (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryAddWithoutValidation(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Header, der der Auflistung hinzugefügt werden soll.</param>
+        <param name="value">Der Inhalt des Headers.</param>
+        <summary>Gibt einen Wert zurück, der anzeigt, ob der angegebene Header und sein Wert der <see cref="T:System.Net.Http.Headers.HttpHeaders" />-Sammlung ohne Überprüfung der bereitgestellten Informationen hinzugefügt wurden.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Header <paramref name="name" /> und <paramref name="value" /> der Sammlung hinzugefügt werden konnten; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValues">
+      <MemberSignature Language="C#" Value="public bool TryGetValues (string name, out System.Collections.Generic.IEnumerable&lt;string&gt; values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetValues(string name, [out] class System.Collections.Generic.IEnumerable`1&lt;string&gt;&amp; values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.TryGetValues(System.String,System.Collections.Generic.IEnumerable{System.String}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="values" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der angegebene Header.</param>
+        <param name="values">Die angegebenen Headerwerte.</param>
+        <summary>Zurückgeben, wenn ein angegebener Header und angegebene Werte in der <see cref="T:System.Net.Http.Headers.HttpHeaders" />-Sammlung gespeichert sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="name" /> und <see langword="values" /> des angegebenen Headers in der Sammlung gespeichert sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

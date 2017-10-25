@@ -1,0 +1,212 @@
+<Type Name="ProjectUsingTaskParameterElement" FullName="Microsoft.Build.Construction.ProjectUsingTaskParameterElement">
+  <TypeSignature Language="C#" Value="public class ProjectUsingTaskParameterElement : Microsoft.Build.Construction.ProjectElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectUsingTaskParameterElement extends Microsoft.Build.Construction.ProjectElement" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectUsingTaskParameterElement" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Construction.ProjectElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Name={Name} ParameterType={ParameterType} Output={Output} Required={Required}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Parameter einer Inlineaufgabe dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public override string Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskParameterElement.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine nicht vorhandene Bedingung, die implizit "true" ist.</summary>
+        <value>Gibt Null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionLocation">
+      <MemberSignature Language="C#" Value="public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ConditionLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskParameterElement.ConditionLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nicht verwenden. Condition-Attribut, das für dieses Element nicht vorhanden ist. Get löst einen internen Fehler.</summary>
+        <value>Löst einen internen Fehler aus und gibt null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskParameterElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert den Namen des Parameters dieser Inlineaufgabe.</summary>
+        <value>Gibt den Namen des Parameters zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="public string Output { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Output" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskParameterElement.Output" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das optionale Ausgabeattribut dieser Inlineaufgabe.</summary>
+        <value>Gibt den Wert des Attributs Ausgabe zurück. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt einen booleschen Wert auszugeben, dass, wenn die `true`, gibt an, dass dieser Parameter sowohl Eingabe-als auch ein Ausgabeparameter ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation OutputLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation OutputLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskParameterElement.OutputLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort des Ausgabeattributs für dieses Element, sofern vorhanden.</summary>
+        <value>Attribut Ausgabespeicherort zurück. Wenn kein solches Attribut vorhanden ist, gibt die Position des Elements an, anstelle des Speicherorts des Standardattributs zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterType">
+      <MemberSignature Language="C#" Value="public string ParameterType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskParameterElement.ParameterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Typattribut der diese Inlineaufgabe.</summary>
+        <value>Gibt den Wert des Type-Attributs. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt den Typ des Parameters. Die Bedeutung eines Typs hängt von der Aufgabenfactory dieser Inlineaufgabe ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterTypeLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ParameterTypeLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ParameterTypeLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskParameterElement.ParameterTypeLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort des Attributs ParameterType für dieses Element, sofern vorhanden.</summary>
+        <value>Gibt die ParameterType Attributpfad zurück. Wenn kein solches Attribut vorhanden ist, gibt die Position des Elements an, anstelle des Speicherorts des Standardattributs zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="public string Required { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Required" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskParameterElement.Required" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das erforderliche Attribut</summary>
+        <value>Gibt den Wert des Attributs erforderlich. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt ein boolesches Flag, das bei "true" gibt an, dass dieser Parameter erforderlich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation RequiredLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation RequiredLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskParameterElement.RequiredLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speicherort der das erforderliche Attribut für dieses Element, sofern vorhanden.</summary>
+        <value>Attributpfad gibt, die erforderlich sind. Wenn kein solches Attribut vorhanden ist, gibt die Position des Elements an, anstelle des Speicherorts des Standardattributs zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

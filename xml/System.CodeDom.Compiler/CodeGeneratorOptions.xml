@@ -1,0 +1,238 @@
+<Type Name="CodeGeneratorOptions" FullName="System.CodeDom.Compiler.CodeGeneratorOptions">
+  <TypeSignature Language="C#" Value="public class CodeGeneratorOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CodeGeneratorOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.CodeGeneratorOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Reihe von Optionen, die von einem Codegenerator verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.Compiler.CodeGeneratorOptions>an die Methoden des Code-Generierung der übergeben wird ein <xref:System.CodeDom.Compiler.ICodeGenerator> Implementierung zum Angeben von Optionen, die während der codegenerierung von verwendet.  
+  
+ Die <xref:System.CodeDom.Compiler.CodeGeneratorOptions.IndentString%2A> Eigenschaft gibt die Zeichenfolge, die für jeden Einzug verwendet. Die <xref:System.CodeDom.Compiler.CodeGeneratorOptions.BracingStyle%2A> Eigenschaft gibt die Platzierung Formatvorlage für geschweifte Klammern, der angibt, die Begrenzungen von Codeblöcken. Die <xref:System.CodeDom.Compiler.CodeGeneratorOptions.ElseOnClosing%2A> Eigenschaft gibt an, ob Anfügen einer `else`, `catch`, oder `finally` blockieren, einschließlich der Klammern an die abschließende Zeile jedes `if` oder `try` Block. Die <xref:System.CodeDom.Compiler.CodeGeneratorOptions.BlankLinesBetweenMembers%2A> Eigenschaft gibt an, ob leere Zeilen zwischen Elementen eingefügt.  
+  
+ Ein <xref:System.CodeDom.Compiler.ICodeGenerator> Implementierung benutzerdefinierter Code Generierungsoptionen bietet dem können Sie festlegen, oder übergeben von Daten zur Verwendung der <xref:System.CodeDom.Compiler.CodeGeneratorOptions.Item%2A> Wörterbuch Indexer, der ein Codegenerator durchsuchen kann, um zusätzliche Codegenerierungsoptionen zu suchen.  
+  
+> [!NOTE]
+>  Diese Klasse enthält einen Linkaufruf und einer vererbungsanforderung auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder die abgeleitete Klasse volle Vertrauenswürdigkeit verfügt. Weitere Informationen zu sicherheitsforderungen, finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) und [Vererbungsanforderungen](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ [!code-cpp[CodeGeneratorOptionsExample#1](~/samples/snippets/cpp/VS_Snippets_CLR/CodeGeneratorOptionsExample/CPP/class1.cpp#1)]
+ [!code-csharp[CodeGeneratorOptionsExample#1](~/samples/snippets/csharp/VS_Snippets_CLR/CodeGeneratorOptionsExample/CS/class1.cs#1)]
+ [!code-vb[CodeGeneratorOptionsExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeGeneratorOptionsExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeGeneratorOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGeneratorOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.Compiler.CodeGeneratorOptions" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BlankLinesBetweenMembers">
+      <MemberSignature Language="C#" Value="public bool BlankLinesBetweenMembers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BlankLinesBetweenMembers" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGeneratorOptions.BlankLinesBetweenMembers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob leere Zeilen zwischen Elementen eingefügt.</summary>
+        <value>
+          <see langword="true" />Wenn Sie leere Zeilen eingefügt werden soll; andernfalls <see langword="false" />. Standardmäßig ist der Wert dieser Eigenschaft <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BracingStyle">
+      <MemberSignature Language="C#" Value="public string BracingStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BracingStyle" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGeneratorOptions.BracingStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Stil für Klammern verwendet.</summary>
+        <value>Eine Zeichenfolge mit den Klammern zu verwendende Format.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft ist `Block`, gibt an, Code generiert werden soll, damit Klammern beginnen, auf derselben Zeile wie die Anweisung oder Deklaration, denen sie zugeordnet sind. Einem Eigenschaftswert des `C` gibt an, dass geschweifte Klammern in der Zeile nach der Anweisung oder Deklaration starten, der sie zugeordnet sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElseOnClosing">
+      <MemberSignature Language="C#" Value="public bool ElseOnClosing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ElseOnClosing" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGeneratorOptions.ElseOnClosing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob anzufügende ein <see langword="else" />, <see langword="catch" />, oder <see langword="finally" /> blockieren, einschließlich der Klammern an die abschließende Zeile jedes vorhergehenden <see langword="if" /> oder <see langword="try" /> Block.</summary>
+        <value>
+          <see langword="true" />Wenn ein anderer angefügt werden sollen; andernfalls <see langword="false" />. Der Standardwert dieser Eigenschaft ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentString">
+      <MemberSignature Language="C#" Value="public string IndentString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IndentString" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGeneratorOptions.IndentString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die für Einzüge verwendet.</summary>
+        <value>Eine Zeichenfolge, die die zu verwendenden für Einzüge Zeichen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft ist "/---/" (vier Leerzeichen).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGeneratorOptions.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Name der abzurufenden-Objekt zugeordnet.</param>
+        <summary>Ruft ab oder legt das Objekt am angegebenen Index fest.</summary>
+        <value>Das Objekt, das dem angegebenen Namen zugeordnet. Wenn kein Objekt mit dem angegebenen Namen zugeordnete in der Auflistung vorhanden ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Wörterbuch enthält Erweiterungsmechanismus für Entwickler, um Daten für benutzerdefinierte Funktionen eines Code-Generators bereitzustellen. Ein Code-Generator muss solche Funktionen implementiert und überprüft das Wörterbuch für diese Option, um nützlich zu unterstützen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbatimOrder">
+      <MemberSignature Language="C#" Value="public bool VerbatimOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool VerbatimOrder" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGeneratorOptions.VerbatimOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Elemente in der Reihenfolge generiert in Auflistungen von auftreten.</summary>
+        <value>
+          <see langword="true" />die Elemente in der Reihenfolge generiert in der Elementauflistung auftreten; andernfalls <see langword="false" />. Der Standardwert dieser Eigenschaft ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung wird z. B. Elemente anhand ihres Typs generiert. Feld, Member, Konstruktor oder Eigenschaft.  Code-Generators können die <xref:System.CodeDom.Compiler.CodeGeneratorOptions.VerbatimOrder%2A> Eigenschaft #region-Blöcke in Code, damit die Reihenfolge ändern einfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

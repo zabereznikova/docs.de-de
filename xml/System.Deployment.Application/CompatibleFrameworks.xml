@@ -1,0 +1,62 @@
+<Type Name="CompatibleFrameworks" FullName="System.Deployment.Application.CompatibleFrameworks">
+  <TypeSignature Language="C#" Value="public class CompatibleFrameworks" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CompatibleFrameworks extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Deployment.Application.CompatibleFrameworks" />
+  <AssemblyInfo>
+    <AssemblyName>System.Deployment</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ausführliche Informationen zu Versionen von .NET Framework, auf denen diese Anwendung installieren und ausführen kann.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Frameworks">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Deployment.Application.CompatibleFramework&gt; Frameworks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Deployment.Application.CompatibleFramework&gt; Frameworks" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CompatibleFrameworks.Frameworks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Deployment.Application.CompatibleFramework&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der .NET Framework-Versionen, auf denen diese Anwendung installieren und ausführen kann.</summary>
+        <value>Eine Liste der <see cref="T:System.Deployment.Application.CompatibleFramework" /> Objekten, die .NET Framework-Versionen angeben, auf denen diese Anwendung installieren und ausführen kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportUrl">
+      <MemberSignature Language="C#" Value="public Uri SupportUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SupportUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CompatibleFrameworks.SupportUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Uri" /> , die ermöglicht dem Benutzer Anweisungen zum Installieren einer Version von .NET Framework, auf denen diese Anwendung installieren und ausführen kann.</summary>
+        <value>Ein <see cref="T:System.Uri" /> , die ermöglicht dem Benutzer Anweisungen zum Installieren einer Version von .NET Framework, auf denen diese Anwendung installieren und ausführen kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Deployment.Application.CompatibleFrameworks.SupportUrl%2A> Eigenschaft enthält die <xref:System.Uri> , die angezeigt werden können die `SupportUrl` Attribut innerhalb der [ &lt;CompatibleFrameworks&gt; Element](http://msdn.microsoft.com/library/f6c3ee55-9e65-403d-8664-3ebde872c7d4).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

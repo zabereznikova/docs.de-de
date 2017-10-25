@@ -1,0 +1,75 @@
+<Type Name="VirtualizationMode" FullName="System.Windows.Controls.VirtualizationMode">
+  <TypeSignature Language="C#" Value="public enum VirtualizationMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VirtualizationMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.VirtualizationMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Methode an, die der <see cref="T:System.Windows.Controls.VirtualizingStackPanel" /> zum Verwalten der Virtualisierung seiner untergeordneten Elemente verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig ein <xref:System.Windows.Controls.VirtualizingStackPanel> erstellt einen Elementcontainer für jedes Element sichtbar und wird diese verworfen, wenn er nicht mehr benötigt wird (z. B. wenn das Element nicht aus der Sicht Bildlauf durchgeführt wird). Wenn ein <xref:System.Windows.Controls.ItemsControl> enthält viele Elemente, den Prozess des Erstellens und Verwerfen von Elementcontainer kann sich negativ auf die Leistung beeinträchtigen. Wenn <xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A> festgelegt ist, um die Wiederverwendung, die <xref:System.Windows.Controls.VirtualizingStackPanel> Elementcontainer stattdessen ein neues Konto erstellen jedes Mal, wenn verwendet.  
+  
+ Wenn <xref:System.Windows.Controls.VirtualizingStackPanel> Elementcontainer, nicht wiederverwenden verwendet den Modus "standard" der Virtualisierung, die zum Erstellen und verwerfen Elementcontainer für jedes Element ist. Die folgende Liste beschreibt Fällen bei der <xref:System.Windows.Controls.VirtualizingStackPanel> Elementcontainer nicht wiederverwenden:  
+  
+-   Die <xref:System.Windows.Controls.ItemsControl> Elementcontainer verschiedener Typen enthält.  Z. B. eine <xref:System.Windows.Controls.Menu> möglicherweise Elemente, die sowohl <xref:System.Windows.Controls.MenuItem> und <xref:System.Windows.Controls.Separator> Objekte als Elementcontainer.  
+  
+-   Der Elementcontainer für explizit erstellt die <xref:System.Windows.Controls.ItemsControl>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.ListBox> und legt die <xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A> angefügten Eigenschaft Wiederverwendung.  
+  
+ [!code-xaml[RecycleItemContainerShippets#VirtualizationMode](~/samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml#virtualizationmode)]  
+  
+ Das folgende Beispiel zeigt die Daten, die im vorherigen Beispiel verwendet.  
+  
+ [!code-csharp[RecycleItemContainerShippets#ListBoxData](~/samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml.cs#listboxdata)]
+ [!code-vb[RecycleItemContainerShippets#ListBoxData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RecycleItemContainerShippets/visualbasic/window1.xaml.vb#listboxdata)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Recycling">
+      <MemberSignature Language="C#" Value="Recycling" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.VirtualizationMode Recycling = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizationMode.Recycling" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.VirtualizationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wiederverwenden der Elementcontainer.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Standard">
+      <MemberSignature Language="C#" Value="Standard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.VirtualizationMode Standard = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizationMode.Standard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.VirtualizationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellen und Verwerfen der Elementcontainer.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,130 @@
+<Type Name="ScriptModule" FullName="System.Web.Handlers.ScriptModule">
+  <TypeSignature Language="C#" Value="public class ScriptModule : System.Web.IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScriptModule extends System.Object implements class System.Web.IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Handlers.ScriptModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Verwaltet die HTTP-Module für AJAX-Funktionen in ASP.NET.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.ScriptModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Handlers.ScriptModule" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.ScriptModule.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die vom Modul verwendeten Ressourcen (mit Ausnahme des Speichers) frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Handlers.ScriptModule.Dispose%2A> -Methode führt alle abschließenden Bereinigungen aus, bevor das Modul aus der Ausführungspipeline entfernt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="protected virtual void Init (System.Web.HttpApplication app);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Init(class System.Web.HttpApplication app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.ScriptModule.Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="app" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="app">Ein <see cref="T:System.Web.HttpApplication" /> -Objekt, das ermöglicht den Zugriff auf die Methoden, Eigenschaften und Ereignisse, die für alle Anwendungen in einer ASP.NET-Anwendung gemeinsam sind.</param>
+        <summary>Initialisiert ein Modul und bereitet es für die Verarbeitung von Anforderungen vor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.Handlers.ScriptModule.Init%2A> Methode Ereignisbehandlungsmethoden mit bestimmten Ereignissen registriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpModule.Dispose">
+      <MemberSignature Language="C#" Value="void IHttpModule.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpModule.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.ScriptModule.System#Web#IHttpModule#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt anwendungsspezifische Aufgaben, die Freigabe, der Zurückgabe oder dem Zurücksetzen von nicht verwalteten Ressourcen zugeordnet sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpModule.Init">
+      <MemberSignature Language="C#" Value="void IHttpModule.Init (System.Web.HttpApplication context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpModule.Init(class System.Web.HttpApplication context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.ScriptModule.System#Web#IHttpModule#Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Web.HttpApplication" /> , der Zugang zu den Methoden, Eigenschaften und Ereignisse, die allen Anwendungsobjekten in einer ASP.NET-Anwendung gemeinsam sind.</param>
+        <summary>Das Modul initialisiert und vorbereitet werden kann, um Anforderungen zu verarbeiten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

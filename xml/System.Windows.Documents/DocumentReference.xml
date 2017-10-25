@@ -1,0 +1,180 @@
+<Type Name="DocumentReference" FullName="System.Windows.Documents.DocumentReference">
+  <TypeSignature Language="C#" Value="public sealed class DocumentReference : System.Windows.FrameworkElement, System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DocumentReference extends System.Windows.FrameworkElement implements class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.DocumentReference" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.UsableDuringInitialization(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet Zugriff zum Erstellen eines Verweises auf ein <see cref="T:System.Windows.Documents.FixedDocument" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DocumentReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Documents.DocumentReference" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDocument">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.FixedDocument GetDocument (bool forceReload);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.FixedDocument GetDocument(bool forceReload) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentReference.GetDocument(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.FixedDocument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forceReload" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="forceReload">
+          <see langword="true" />So erzwingen einen neuen Auslastungstest von der <see cref="P:System.Windows.Documents.DocumentReference.Source" /> dokumentieren, auch wenn sie zuvor bereits geladen wurde.</param>
+        <summary>Lädt und analysiert die angegebene Dokument die <see cref="P:System.Windows.Documents.DocumentReference.Source" /> Eigenschaft Speicherort.</summary>
+        <returns>Das Dokument, das geladen wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Dokument zuvor nicht geladen wurde <xref:System.Windows.Documents.DocumentReference.GetDocument%2A> lädt das Dokument unabhängig davon, ob die `forceReload` Parameter ist `true` oder `false`.  
+  
+ Wenn das Dokument bereits geladen wurde und `forceReload` angegeben ist, als `false`, wird das Dokument nicht erneut geladen, und die zuvor geladene Dokument zurückgegeben wird.  
+  
+ Wenn `forceReload` angegeben `true`, und klicken Sie dann das gesamte Dokument wird erneut geladen und analysiert, selbst wenn es zuvor bereits abgerufen wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDocument">
+      <MemberSignature Language="C#" Value="public void SetDocument (System.Windows.Documents.FixedDocument doc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDocument(class System.Windows.Documents.FixedDocument doc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentReference.SetDocument(System.Windows.Documents.FixedDocument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doc" Type="System.Windows.Documents.FixedDocument" />
+      </Parameters>
+      <Docs>
+        <param name="doc">Das Dokument, das angefügt wird.</param>
+        <summary>Fügt eine <see cref="T:System.Windows.Documents.FixedDocument" /> auf die <see cref="T:System.Windows.Documents.DocumentReference" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können ein Dokument anfügen, nur dann, wenn es nicht an diese angefügt wurde <xref:System.Windows.Documents.DocumentReference> vor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Uri Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.DocumentReference.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] für diesen Dokumentverweis.</summary>
+        <value>Ein <see cref="T:System.Uri" /> , der den Dokumentverweis darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Abhängigkeitseigenschaft wird anhand der <xref:System.Windows.Documents.DocumentReference.SourceProperty> Feld.  
+  
+<a name="dependencyPropertyInfo_Source"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.DocumentReference.SourceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.DocumentReference.SourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.DocumentReference.Source" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IUriContext.BaseUri">
+      <MemberSignature Language="C#" Value="Uri System.Windows.Markup.IUriContext.BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri System.Windows.Markup.IUriContext.BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.DocumentReference.System#Windows#Markup#IUriContext#BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Windows.Markup.IUriContext.BaseUri" />.</summary>
+        <value>Die Basis-URI des aktuellen Kontexts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Documents.DocumentReference>-Instanz in eine <xref:System.Windows.Markup.IUriContext>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

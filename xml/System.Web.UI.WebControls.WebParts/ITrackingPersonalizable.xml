@@ -1,0 +1,212 @@
+<Type Name="ITrackingPersonalizable" FullName="System.Web.UI.WebControls.WebParts.ITrackingPersonalizable">
+  <TypeSignature Language="C#" Value="public interface ITrackingPersonalizable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITrackingPersonalizable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Können Webparts-Steuerelemente zum Nachverfolgen der bestimmten Phasen des Ladevorgangs Personalisierung und Speichervorgang.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ermöglicht es, Entwickler von Steuerelementen zum Nachverfolgen von verschiedenen Phasen des Personalisierungslebenszyklus, z. B. das Laden und Speichern der Personalisierungsdaten. In den meisten Fällen verwenden Sie diese Schnittstelle Erstellen eines benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> oder <xref:System.Web.UI.WebControls.WebParts.WebPartManager> und implementieren diese Schnittstelle. Darüber hinaus sollten Steuerelemente, die zum Verwalten ihrer eigenen änderungsnachverfolgung ("dirty") müssen diese Schnittstelle implementieren. Steuerelemente, die ihre eigenen änderungsnachverfolgung verwalten sollte zurückgeben `true` aus der <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges%2A> Eigenschaft.  
+  
+ Wenn `false` zurückgegeben wird, und klicken Sie dann ASP.NET zuständig ist, für das Ermitteln von Änderungen durch Vergleichen der Eigenschaftsinformationen mit Informationen über die Eigenschaft geladen, der gespeichert wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable> Methoden und Eigenschaften, um das Laden und Speichern von Personalisierungsinformationen nachzuverfolgen. Das Beispiel besteht aus zwei Teilen, einer ASPX-Seite und einer Datei, die in das Unterverzeichnis App_Code eingefügt werden soll.  
+  
+ Im folgenden Codebeispiel wird ein Webparts-Steuerelement, ermöglicht es einem Benutzer zur Eingabe der URL-Informationen und speichert diese Informationen für den Benutzer, erstellt.  
+  
+ [!code-csharp[WebParts_IPersonalizable#9](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/persdict.cs#9)]
+ [!code-vb[WebParts_IPersonalizable#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/persdict.vb#9)]  
+  
+ Die folgenden ASPX-Seite eine Webparts-Zone erstellt und der Zone des Steuerelements hinzugefügt. Die Seite verweist auch ein Anmeldesteuerelement, das Sie verwenden sollten, auf einzelne Benutzer anmelden, damit Personalisierung angewendet werden kann.  
+  
+ [!code-aspx-csharp[WebParts_IPersonalizable#10](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/defaultcs.aspx#10)]
+ [!code-aspx-vb[WebParts_IPersonalizable#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/Defaultvb.aspx#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginLoad">
+      <MemberSignature Language="C#" Value="public void BeginLoad ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginLoad() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginLoad" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt den Beginn der Ladephase für Personalisierungsinformationen dar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Webparts-Steuerelementsatz ruft diese Methode vor dem Anwenden der Personalisierungsdaten. Ein Steuerelement, das einen eigenen Änderungszustand nachverfolgt sollten diese Methode verwenden, um ein internes Flag gibt an, dass Eigenschaften nicht aufrufen sollte festgelegt <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A>. Dies ist, da die Einstellung der Eigenschaft Methoden aufgerufen werden können, während der Anwendung von Personalisierungsdaten nach dem Aufruf von <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginLoad%2A>. In den meisten Fällen sollte ein Steuerelement nicht berücksichtigt ("dirty") geändert werden, nur weil seine personalisierbaren Eigenschaften für Daten aus dem zugrunde liegenden Datenspeicher geladen Basis festgelegt wurden.  
+  
+> [!NOTE]
+>  Diese Methode wird auch aufgerufen, wenn Personalisierungsdaten nach dem Importieren des Webparts-Steuerelement angewendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginLoad%2A> Methode. Ein vollständiges, funktionsfähiges Codebeispiel, das aus einem Steuerelement und einer ASPX-Seite besteht, finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> Übersichtsthema.  
+  
+ [!code-csharp[WebParts_IPersonalizable#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/persdict.cs#4)]
+ [!code-vb[WebParts_IPersonalizable#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/persdict.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSave">
+      <MemberSignature Language="C#" Value="public void BeginSave ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginSave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginSave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt die Phase vor dem Extrahieren von Personalisierungsdaten aus einem Steuerelement dar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Webparts-Steuerelementsatz ruft diese Methode vor dem Extrahieren von Personalisierungsdaten aus dem Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginSave%2A> Methode. Ein vollständiges, funktionsfähiges Codebeispiel, das aus einem Steuerelement und einer ASPX-Seite besteht, finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> Übersichtsthema.  
+  
+ [!code-csharp[WebParts_IPersonalizable#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/persdict.cs#5)]
+ [!code-vb[WebParts_IPersonalizable#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/persdict.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndLoad">
+      <MemberSignature Language="C#" Value="public void EndLoad ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndLoad() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndLoad" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt die Phase nach dem Personalisierungsdaten auf ein Steuerelement angewendet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webparts-Steuerelementsatz ruft diese Methode nach Personalisierungsdaten auf das Steuerelement angewendet wurde. Ein Steuerelement, das überwacht den Änderungszustand sollte verwenden Sie diese Methode, um anzugeben, dass nachfolgende Eigenschaften festlegende Methoden aufrufen, sollte der interne Zustand zurückgesetzt <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A>. Nach der Dauer der <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndLoad%2A> -Methode aufgerufen wird, die Webparts-Steuerelementsatzes Anwendung von Personalisierungsdaten des Steuerelements abgeschlossen wurde. Folglich nachfolgende Änderungen an den Zustand des Steuerelements angesehen wird, gültige Indikatoren, die das Steuerelement geändert wurde ("dirty" ist).  
+  
+> [!NOTE]
+>  Diese Methode wird auch aufgerufen, wenn Personalisierungsdaten nach dem Importieren des Webparts-Steuerelement angewendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndLoad%2A> Methode. Ein vollständiges, funktionsfähiges Codebeispiel, das aus einem Steuerelement und einer ASPX-Seite besteht, finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> Übersichtsthema.  
+  
+ [!code-csharp[WebParts_IPersonalizable#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/persdict.cs#6)]
+ [!code-vb[WebParts_IPersonalizable#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/persdict.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSave">
+      <MemberSignature Language="C#" Value="public void EndSave ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndSave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndSave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt die Phase nach der von einem Steuerelement Personalisierungsdaten extrahiert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webparts-Steuerelementsatz ruft diese Methode nach Personalisierungsdaten aus dem Steuerelement extrahiert wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndSave%2A> Methode. Ein vollständiges, funktionsfähiges Codebeispiel, das aus einem Steuerelement und einer ASPX-Seite besteht, finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> Übersichtsthema.  
+  
+ [!code-csharp[WebParts_IPersonalizable#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/persdict.cs#7)]
+ [!code-vb[WebParts_IPersonalizable#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/persdict.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TracksChanges">
+      <MemberSignature Language="C#" Value="public bool TracksChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TracksChanges" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob das Steuerelement den Status seiner Änderungen verfolgt.</summary>
+        <value>
+          <see langword="true" />Wenn das Webparts-Steuerelement ist zuständig für das ermitteln, wenn das Steuerelement gilt geänderte ("dirty"); andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Steuerelement gibt `true` der von dieser Eigenschaft wird es wird der Webparts-Steuerelement dafür verantwortlich, um zu bestimmen, wann es selbst "geändert" betrachtet. Wenn ein Steuerelement feststellt, dass er geändert wurde (ist "dirty"), dass das Steuerelement aufzurufen, muss <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A> auf sich selbst.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges%2A> Eigenschaft. Ein vollständiges, funktionsfähiges Codebeispiel, das aus einem Steuerelement und einer ASPX-Seite besteht, finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable> Übersichtsthema.  
+  
+ [!code-csharp[WebParts_IPersonalizable#8](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/persdict.cs#8)]
+ [!code-vb[WebParts_IPersonalizable#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/persdict.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

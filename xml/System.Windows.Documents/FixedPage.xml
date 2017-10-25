@@ -1,0 +1,1021 @@
+<Type Name="FixedPage" FullName="System.Windows.Documents.FixedPage">
+  <TypeSignature Language="C#" Value="public sealed class FixedPage : System.Windows.FrameworkElement, System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FixedPage extends System.Windows.FrameworkElement implements class System.Windows.Markup.IAddChild, class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.FixedPage" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Children")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den Inhalt für eine Seite mit hoher Genauigkeit und festem Format bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.FixedPage>wird in der Regel verwendet werden, um den Inhalt für eine Seite innerhalb Bereitstellen einer <xref:System.Windows.Documents.FixedDocument>.  
+  
+ <xref:System.Windows.Documents.FixedPage>definiert automatisch Seitenumbrüche am Anfang und Ende des Inhalts.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.FixedPage> Klasse.  
+  
+ [!code-csharp[XpsSave#XpsSaveCreateFixedPage5](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpfContent.cs#xpssavecreatefixedpage5)]
+ [!code-vb[XpsSave#XpsSaveCreateFixedPage5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpfcontent.vb#xpssavecreatefixedpage5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FixedPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Documents.FixedPage" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.FixedPage> Konstruktor.  
+  
+ [!code-csharp[XpsSave#XpsSaveCreateFixedPage5](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpfContent.cs#xpssavecreatefixedpage5)]
+ [!code-vb[XpsSave#XpsSaveCreateFixedPage5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpfcontent.vb#xpssavecreatefixedpage5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Background { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Background" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedPage.Background" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Brush" /> zum Rendern des Hintergrunds der verwendeten.</summary>
+        <value>Der Pinsel für den Hintergrund der rendern.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Background"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FixedPage.BackgroundProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.FixedPage.Background%2A> Eigenschaft.  
+  
+ [!code-csharp[XpsSave#XpsSaveCreateFixedPage1](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpfContent.cs#xpssavecreatefixedpage1)]
+ [!code-vb[XpsSave#XpsSaveCreateFixedPage1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpfcontent.vb#xpssavecreatefixedpage1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FixedPage.BackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FixedPage.Background" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BleedBox">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect BleedBox { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect BleedBox" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedPage.BleedBox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Rechteck ab oder legt dieses fest, das den Überlaufbereich für Beschnittzugaben, Passmarken und Zuschnittmarken definiert.</summary>
+        <value>Die <see cref="T:System.Windows.Rect" /> den Überlaufbereich definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.FixedPage.BleedBox%2A>Dient zum Angeben eines erweiterten Bereichs für Drucken druckbedingte Beschnittzugaben, passmarken und Zuschnittmarken, die außerhalb der logischen Seite erweitern können. Die logische Seite ist der Teil der Tabelle, die verbleibt, nachdem es auf die endgültige Größe abgeschnitten wurde. Damit die Dimensionen des Anschnitt können nicht kleiner als die Größe der logischen Seite jedoch möglicherweise länger. Kontrast der <xref:System.Windows.Documents.FixedPage.BleedBox%2A> mit der <xref:System.Windows.Documents.FixedPage.ContentBox%2A> also in den Bereich der Seite auf die Inhalte angezeigt werden kann; d. h. der Teil der Seite, *in* die Ränder. Damit die Dimensionen der des Inhaltsbereichs darf nicht größer als die Seite sein, aber möglicherweise kleiner.  
+  
+ Die <xref:System.Windows.Rect.Left%2A> und <xref:System.Windows.Rect.Right%2A> Eigenschaften von den Anschnitt und des Inhaltsbereichs werden von links gemessen und die <xref:System.Windows.Rect.Top%2A> und <xref:System.Windows.Rect.Bottom%2A> Eigenschaften werden von oben gemessen. Daher müssen die folgenden Regeln erzwungen werden, bei der Definition der <xref:System.Windows.Documents.FixedPage.BleedBox%2A> und <xref:System.Windows.Documents.FixedPage.ContentBox%2A>:  
+  
+-   <xref:System.Windows.Documents.FixedPage.BleedBox%2A>. <xref:System.Windows.Rect.Left%2A> muss kleiner als oder gleich <xref:System.Windows.Documents.FixedPage.ContentBox%2A>.<xref:System.Windows.Rect.Left%2A>.  
+  
+-   <xref:System.Windows.Documents.FixedPage.BleedBox%2A>. <xref:System.Windows.Rect.Top%2A> muss kleiner als oder gleich <xref:System.Windows.Documents.FixedPage.ContentBox%2A>.<xref:System.Windows.Rect.Top%2A>.  
+  
+-   <xref:System.Windows.Documents.FixedPage.BleedBox%2A>. <xref:System.Windows.Rect.Right%2A> muss größer als oder gleich <xref:System.Windows.Documents.FixedPage.ContentBox%2A>.<xref:System.Windows.Rect.Right%2A>.  
+  
+-   <xref:System.Windows.Documents.FixedPage.BleedBox%2A>. <xref:System.Windows.Rect.Bottom%2A> muss größer als oder gleich <xref:System.Windows.Documents.FixedPage.ContentBox%2A>.<xref:System.Windows.Rect.Bottom%2A>.  
+  
+<a name="dependencyPropertyInfo_BleedBox"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FixedPage.BleedBoxProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BleedBoxProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BleedBoxProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BleedBoxProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FixedPage.BleedBoxProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FixedPage.BleedBox" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BottomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BottomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FixedPage.BottomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Documents.FixedPage.Bottom" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.UIElementCollection Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.UIElementCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedPage.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.UIElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von der <see cref="T:System.Windows.Documents.FixedPage" /> untergeordnete Elemente.</summary>
+        <value>Die <see cref="T:System.Windows.Controls.UIElementCollection" /> der untergeordneten Elemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.FixedPage.Children%2A>Gibt `null` Wenn die <xref:System.Windows.Documents.FixedPage> datengebundene und untergeordneten Elementen werden nicht hinzugefügt oder manuell entfernt werden.  
+  
+ Bei nicht datengebundenen Verwendungen <xref:System.Windows.Documents.FixedPage.Children%2A> kann die Anwendung manuell <xref:System.Windows.Controls.UIElementCollection.Add%2A> oder <xref:System.Windows.Controls.UIElementCollection.Remove%2A> untergeordnete Elemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentBox">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect ContentBox { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect ContentBox" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedPage.ContentBox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das umschließende Rechteck des Inhaltsbereichs; d. h. den Bereich der Seite *in* die Ränder, sofern vorhanden.</summary>
+        <value>Die <see cref="T:System.Windows.Rect" /> , das den Inhaltsbereich definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Regeln erzwungen werden müssen, definieren die <xref:System.Windows.Documents.FixedPage.ContentBox%2A>:  
+  
+-   <xref:System.Windows.Documents.FixedPage.ContentBox%2A>. <xref:System.Windows.Rect.Left%2A> muss größer als oder gleich 0 (null) sein und kleiner als oder gleich (<xref:System.Windows.Documents.FixedPage.ContentBox%2A>.<xref:System.Windows.Rect.Right%2A> -1).  
+  
+-   <xref:System.Windows.Documents.FixedPage.ContentBox%2A>. <xref:System.Windows.Rect.Top%2A> muss größer als oder gleich 0 (null) sein und kleiner als oder gleich (<xref:System.Windows.Documents.FixedPage.ContentBox%2A>.<xref:System.Windows.Rect.Bottom%2A> -1).  
+  
+-   <xref:System.Windows.Documents.FixedPage.ContentBox%2A>. <xref:System.Windows.Rect.Right%2A> muss größer als oder gleich sein (<xref:System.Windows.Documents.FixedPage.ContentBox%2A>.<xref:System.Windows.Rect.Left%2A> + 1).  
+  
+-   <xref:System.Windows.Documents.FixedPage.ContentBox%2A>. <xref:System.Windows.Rect.Bottom%2A> muss größer als oder gleich sein (<xref:System.Windows.Documents.FixedPage.ContentBox%2A>.<xref:System.Windows.Rect.Top%2A> + 1).  
+  
+-   Die relative Größe der Regeln für die <xref:System.Windows.Documents.FixedPage.ContentBox%2A> und <xref:System.Windows.Documents.FixedPage.BleedBox%2A>, finden Sie im Thema <xref:System.Windows.Documents.FixedPage.BleedBox%2A?displayProperty=nameWithType>.  
+  
+-  
+  
+<a name="dependencyPropertyInfo_ContentBox"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|-Feld ID|<xref:System.Windows.Documents.FixedPage.ContentBoxProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|-Keine|  
+  
+-  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentBoxProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContentBoxProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContentBoxProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FixedPage.ContentBoxProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FixedPage.ContentBox" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBottom">
+      <MemberSignature Language="C#" Value="public static double GetBottom (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetBottom(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.GetBottom(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem den unteren Offset abgerufen werden soll.</param>
+        <summary>Gibt den Abstand zwischen dem unteren Rand eines Elements und dem unteren Rand seines übergeordneten <see cref="T:System.Windows.Controls.Canvas" />.</summary>
+        <returns>Der Abstand zwischen dem unteren Rand eines Elements und dem unteren Rand des übergeordneten Zeichenbereichs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der untere Offset nicht festgelegt wurde, <xref:System.Windows.Documents.FixedPage.GetBottom%2A> gibt <xref:System.Double.NaN>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLeft">
+      <MemberSignature Language="C#" Value="public static double GetLeft (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetLeft(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.GetLeft(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem linken Offset abgerufen werden soll.</param>
+        <summary>Gibt den Abstand zwischen der linken Seite eines Elements und der linken Seite des übergeordneten <see cref="T:System.Windows.Controls.Canvas" />.</summary>
+        <returns>Der Abstand zwischen der rechten Seite eines Elements und der rechten Seite des übergeordneten Zeichenbereichs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der linke Offset nicht festgelegt wurde, <xref:System.Windows.Documents.FixedPage.GetRight%2A> gibt <xref:System.Double.NaN>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNavigateUri">
+      <MemberSignature Language="C#" Value="public static Uri GetNavigateUri (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri GetNavigateUri(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.GetNavigateUri(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, von dem die Eigenschaft abgerufen wird.</param>
+        <summary>Gibt die <see cref="P:System.Windows.Documents.FixedPage.NavigateUri" /> Eigenschaft für ein angegebenes Element.</summary>
+        <returns>Die <see cref="T:System.Uri" /> von <paramref name="element" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die angefügte Eigenschaft nicht festgelegt wurde, <xref:System.Windows.Documents.FixedPage.GetNavigateUri%2A> gibt `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRight">
+      <MemberSignature Language="C#" Value="public static double GetRight (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetRight(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.GetRight(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem den richtigen Offset abgerufen werden soll.</param>
+        <summary>Gibt den Abstand zwischen der rechten Seite eines Elements und der rechten Seite des übergeordneten <see cref="T:System.Windows.Controls.Canvas" />.</summary>
+        <returns>Der Abstand zwischen der rechten Seite eines Elements und der rechten Seite des übergeordneten Zeichenbereichs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Rechte Offset nicht festgelegt wurde, <xref:System.Windows.Documents.FixedPage.GetRight%2A> gibt <xref:System.Double.NaN>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTop">
+      <MemberSignature Language="C#" Value="public static double GetTop (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetTop(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.GetTop(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem den obersten Offset abgerufen werden soll.</param>
+        <summary>Gibt den Abstand zwischen dem oberen Rand eines Elements und dem oberen Rand seines übergeordneten <see cref="T:System.Windows.Controls.Canvas" />.</summary>
+        <returns>Der Abstand zwischen dem oberen Rand eines Elements und dem oberen Rand des übergeordneten Zeichenbereichs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der obere Offset nicht festgelegt wurde, <xref:System.Windows.Documents.FixedPage.GetTop%2A> gibt <xref:System.Double.NaN>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisualChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Visual GetVisualChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Visual GetVisualChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.GetVisualChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LeftProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LeftProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FixedPage.LeftProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Documents.FixedPage.Left" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedPage.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUriProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty NavigateUriProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty NavigateUriProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FixedPage.NavigateUriProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Documents.FixedPage.NavigateUri" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseWheel (System.Windows.Input.MouseWheelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseWheel(class System.Windows.Input.MouseWheelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.OnPreviewMouseWheel(System.Windows.Input.MouseWheelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseWheelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override void OnRender (System.Windows.Media.DrawingContext dc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Windows.Media.DrawingContext dc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.OnRender(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="dc">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisualParentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnVisualParentChanged (System.Windows.DependencyObject oldParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnVisualParentChanged(class System.Windows.DependencyObject oldParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.OnVisualParentChanged(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldParent" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="oldParent">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintTicket">
+      <MemberSignature Language="C#" Value="public object PrintTicket { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object PrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedPage.PrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Printing.PrintTicket" /> , die mit der Seite verknüpft ist.</summary>
+        <value>Die <see cref="T:System.Printing.PrintTicket" /> für die Seite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Printing.PrintTicket> enthält Informationen wie Materialien, die gedruckt werden soll; beispielsweise davon, ob zweiseitigen Drucken verwendet werden soll.  
+  
+ Wenn dieser <xref:System.Windows.Documents.FixedPage.PrintTicket%2A> Eigenschaft nicht überprüfen oder ändern Sie den angegebenen <xref:System.Printing.PrintTicket> für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+<a name="dependencyPropertyInfo_PrintTicket"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FixedPage.PrintTicketProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintTicketProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PrintTicketProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PrintTicketProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FixedPage.PrintTicketProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FixedPage.PrintTicket" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FixedPage.RightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Documents.FixedPage.Right" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBottom">
+      <MemberSignature Language="C#" Value="public static void SetBottom (System.Windows.UIElement element, double length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetBottom(class System.Windows.UIElement element, float64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.SetBottom(System.Windows.UIElement,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="length" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für das den untere Offset festgelegt werden soll.</param>
+        <param name="length">Der neue Abstand zwischen dem unteren Rand des Elements und den unteren Rand des übergeordneten Zeichenbereichs.</param>
+        <summary>Legt den Abstand zwischen dem unteren Rand eines Elements und dem unteren Rand seines übergeordneten <see cref="T:System.Windows.Controls.Canvas" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das untergeordnete Element untere Offset wirkt sich nicht auf die Größe des übergeordneten Zeichenbereichs aus.  
+  
+ Wenn eine obere und eine untere Offset für dasselbe Element angegeben wurde, hat der obere Offset Vorrang vor.  
+  
+ Beim Festlegen der untere offset als einen Prozentsatz basiert der Prozentwert für die Größe des übergeordneten Zeichenbereichs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLeft">
+      <MemberSignature Language="C#" Value="public static void SetLeft (System.Windows.UIElement element, double length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetLeft(class System.Windows.UIElement element, float64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.SetLeft(System.Windows.UIElement,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="length" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für das linken Offset festgelegt werden soll.</param>
+        <param name="length">Der neue Abstand zwischen der linken Seite des Elements und dem linken Rand des übergeordneten Zeichenbereichs.</param>
+        <summary>Legt den Abstand zwischen der linken Seite eines Elements und der linken Seite des übergeordneten <see cref="T:System.Windows.Controls.Canvas" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das untergeordnete Element nach links Offset wirkt sich nicht auf die Größe des übergeordneten Zeichenbereichs aus.  
+  
+ Wenn sowohl ein Offset linken und rechten für dasselbe Element festgelegt wurden, hat der linke Offset Vorrang vor.  
+  
+ Wenn den linken Offset als Prozentsatz festlegen, basiert der Prozentwert für die Breite des übergeordneten Zeichenbereichs.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.FixedPage.SetLeft%2A> Methode.  
+  
+ [!code-csharp[XpsSave#XpsSaveCreateFixedPage5](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpfContent.cs#xpssavecreatefixedpage5)]
+ [!code-vb[XpsSave#XpsSaveCreateFixedPage5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpfcontent.vb#xpssavecreatefixedpage5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNavigateUri">
+      <MemberSignature Language="C#" Value="public static void SetNavigateUri (System.Windows.UIElement element, Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetNavigateUri(class System.Windows.UIElement element, class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.SetNavigateUri(System.Windows.UIElement,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für das URI-Offset festgelegt werden soll.</param>
+        <param name="uri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] zu navigieren, wenn auf ein Link geklickt wird.</param>
+        <summary>Legt die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] zu navigieren, wenn auf ein Link geklickt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRight">
+      <MemberSignature Language="C#" Value="public static void SetRight (System.Windows.UIElement element, double length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetRight(class System.Windows.UIElement element, float64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.SetRight(System.Windows.UIElement,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="length" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für das die rechten Offset festgelegt werden soll.</param>
+        <param name="length">Der neue Abstand zwischen der rechten Seite des Elements und der rechten Seite des übergeordneten Zeichenbereichs.</param>
+        <summary>Legt den Abstand zwischen der rechten Seite eines Elements und der rechten Seite des übergeordneten <see cref="T:System.Windows.Controls.Canvas" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das untergeordnete Element Rechte Offset wirkt sich nicht auf die Größe des übergeordneten Zeichenbereichs aus.  
+  
+ Wenn eine linke und eine Rechte Offset für dasselbe Element angegeben wurde, hat der linke Offset Vorrang vor.  
+  
+ Rechten Offset als einen Prozentsatz festgelegt wird, basiert der Prozentwert für die Breite des übergeordneten Zeichenbereichs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTop">
+      <MemberSignature Language="C#" Value="public static void SetTop (System.Windows.UIElement element, double length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetTop(class System.Windows.UIElement element, float64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.SetTop(System.Windows.UIElement,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="length" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, das oberen Offset festgelegt werden soll.</param>
+        <param name="length">Der neue Abstand zwischen den oberen Rand des Elements und den oberen Rand des übergeordneten Zeichenbereichs.</param>
+        <summary>Legt den Abstand zwischen dem oberen Rand eines Elements und dem oberen Rand seines übergeordneten <see cref="T:System.Windows.Controls.Canvas" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das untergeordnete Element obere Offset wirkt sich nicht auf die Größe des übergeordneten Zeichenbereichs aus.  
+  
+ Wenn Sie sowohl einen oberen und unteren Offset für dasselbe Element festgelegt wurden, hat der obere Offset Vorrang vor.  
+  
+ Wenn der obere offset als einen Prozentsatz festlegen, basiert der Prozentwert auf die Größe des übergeordneten Zeichenbereichs.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.FixedPage.SetTop%2A> Methode.  
+  
+ [!code-csharp[XpsSave#XpsSaveCreateFixedPage5](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpfContent.cs#xpssavecreatefixedpage5)]
+ [!code-vb[XpsSave#XpsSaveCreateFixedPage5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpfcontent.vb#xpssavecreatefixedpage5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende untergeordnete Objekt.</param>
+        <summary>Fügt ein untergeordnetes Objekt hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedPage.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der dem Objekt hinzuzufügende Text.</param>
+        <summary>Fügt dem Objekt den Textinhalt eines Knotens hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IUriContext.BaseUri">
+      <MemberSignature Language="C#" Value="Uri System.Windows.Markup.IUriContext.BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri System.Windows.Markup.IUriContext.BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedPage.System#Windows#Markup#IUriContext#BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Basis-URI des aktuellen Anwendungskontexts ab oder legt diesen fest.</summary>
+        <value>Der Basis-URI des Anwendungskontexts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TopProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TopProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FixedPage.TopProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Documents.FixedPage.Top" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int VisualChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisualChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedPage.VisualChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

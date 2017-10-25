@@ -1,0 +1,375 @@
+<Type Name="ScriptReference" FullName="System.Web.UI.ScriptReference">
+  <TypeSignature Language="C#" Value="public class ScriptReference : System.Web.UI.ScriptReferenceBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScriptReference extends System.Web.UI.ScriptReferenceBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ScriptReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ScriptReferenceBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Path")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Registriert eine ECMAScript (JavaScript)-Datei zur Verwendung auf einer ASP.NET-Webseite an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine JavaScript-Datei auf einer ASP.NET-Webseite einschließen, indem Sie die Registrierung über eine <xref:System.Web.UI.ScriptReference> Objekt. Sie können eine Skriptdatei registrieren, die als eine .js-Datei (eine statische Skriptdatei) auf der Website befindet. Sie können eine Skriptdatei, die eingebettet wird auch als Ressource in einer Assembly registrieren. Nach dem Registrieren der Skriptdatei, können Sie ihre Funktionen in Clientskripts auf der Webseite.  
+  
+ Zum Registrieren einer statischen Skriptdatei legen die <xref:System.Web.UI.ScriptReferenceBase.Path%2A> Eigenschaft von der <xref:System.Web.UI.ScriptReference> Objekt, das den relativen Speicherort der Datei.  
+  
+ Um eine Skriptdatei, die eingebettet wird als Ressource in einer Assembly zu registrieren, legen Sie die <xref:System.Web.UI.ScriptReference.Assembly%2A> -Eigenschaft auf den Namen der Assembly, die die Datei enthält. Legen Sie dann die <xref:System.Web.UI.ScriptReference.Name%2A> -Eigenschaft auf den Namen der JS-Datei, die in der Assembly eingebettet ist. In diesem Fall muss die Skriptdatei eingebettet werden nicht verknüpft.  
+  
+ Sie legen die <xref:System.Web.UI.ScriptReferenceBase.ScriptMode%2A> Eigenschaft, um anzugeben, ob die Debug- oder eine Releaseversion des Skripts.  
+  
+ Die <xref:System.Web.UI.ScriptMode.Auto> Wert führt zu unterschiedlichen Ergebnissen, je nachdem, ob er verweist auf eine eigenständige Skriptdatei oder in einer Skriptdatei, die als Ressource in einer Assembly eingebettet ist. Eine eigenständige Skriptdatei wird definiert, mit der <xref:System.Web.UI.ScriptReferenceBase.Path%2A> Eigenschaft. Verweis auf eine Assembly zugegriffen werden muss, bis die <xref:System.Web.UI.ScriptReference.Name%2A> und <xref:System.Web.UI.ScriptReference.Assembly%2A> Eigenschaften. Die Ergebnisse für die <xref:System.Web.UI.ScriptMode.Auto> Wert lauten wie folgt:  
+  
+-   Wenn es in einer eigenständigen Skriptdatei angewendet wird, in dem die <xref:System.Web.UI.ScriptReferenceBase.Path%2A> Eigenschaft wird angegeben, die <xref:System.Web.UI.ScriptMode.Auto> Wert ist gleich <xref:System.Web.UI.ScriptMode.Release>.  
+  
+-   Wenn es einen Skriptverweis in einer Assembly angewendet wird <xref:System.Web.UI.ScriptMode.Auto> entspricht <xref:System.Web.UI.ScriptMode.Inherit>. Wenn nur <xref:System.Web.UI.ScriptReference.Name%2A> angegeben ist, wird verwendet, um das Skript zu verweisen. Wenn <xref:System.Web.UI.ScriptReference.Name%2A> und <xref:System.Web.UI.ScriptReferenceBase.Path%2A> Eigenschaft angegeben sind, die <xref:System.Web.UI.ScriptReferenceBase.Path%2A> Eigenschaft wird verwendet, statt <xref:System.Web.UI.ScriptReference.Name%2A>, aber die <xref:System.Web.UI.ScriptMode.Auto> Wert entspricht immer noch <xref:System.Web.UI.ScriptMode.Inherit>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Verweisen auf ein benutzerdefiniertes Steuerelement und eine JavaScript-Datei, die in der Steuerelementassembly eingebettet ist. Wird angenommen, dass die Assembly im Ordner "bin" der Website befinden. Das benutzerdefinierte Steuerelement animiert <xref:System.Web.UI.UpdatePanel> Steuerelemente. Die JavaScript-Datei wird als eingebettete Ressource kompiliert, die mit dem Namen SampleControl.UpdatePanelAnimation.js. Registrieren Sie die eingebettete JavaScript-Datei mithilfe der <xref:System.Web.UI.ScriptReference.Assembly%2A> und <xref:System.Web.UI.ScriptReference.Name%2A> Eigenschaften.  
+  
+ Um dieses Codebeispiel zu verwenden, kompilieren Sie die JavaScript-Datei, die im Beispiel als eingebettete Ressource durch das benutzerdefinierte Steuerelement angezeigt wird. Fügen Sie die resultierende Assembly in den Ordner "Bin" der Website an. Ein Beispiel dafür, wie eine JavaScript-Datei in eine Assembly eingebettet werden sollen, finden Sie unter [Exemplarische Vorgehensweise: Einbetten einer JavaScript-Datei als Ressource in einer Assembly](http://msdn.microsoft.com/library/d8cb78cd-95a9-4dc6-92df-391866817e89).  
+  
+ Das folgende Beispiel zeigt eine Seite, die das benutzerdefinierte Steuerelement verwendet.  
+  
+ [!code-aspx-csharp[System.Web.UI.ScriptReference#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReference/CS/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ScriptReference#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.ScriptReference/vb/Default.aspx#1)]  
+  
+ Das folgende Beispiel zeigt die Klassendefinition benutzerdefiniertes Steuerelement an.  
+  
+ [!code-csharp[System.Web.UI.ScriptReference#2](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReference/CS/customcontrol.cs#2)]
+ [!code-vb[System.Web.UI.ScriptReference#2](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.ScriptReference/vb/customcontrol.vb#2)]  
+  
+ Das folgende Beispiel zeigt die unterstützende JavaScript-Datei.  
+  
+ [!code-javascript[System.Web.UI.ScriptReference#3](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReference/CS/UpdatePanelAnimation.js#3)]  
+  
+ Im folgende Beispiel wird gezeigt, Code, der der AssemblyInfo-Datei des Projekts, das das benutzerdefinierte Steuerelement enthält und der JavaScript-Datei hinzugefügt werden muss.  
+  
+ [!code-csharp[System.Web.UI.ScriptReference#4](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReference/CS/AssemblyInfo.cs#4)]
+ [!code-vb[System.Web.UI.ScriptReference#4](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.ScriptReference/vb/AssemblyInfo.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.ScriptReference" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptReference (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReference.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad der Clientskriptdatei relativ zur Webseite.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.ScriptReference" /> Klasse mit einem angegebenen Pfad.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptReference (string name, string assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReference.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="assembly" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Skriptdatei, die in der Assembly eingebettet ist.</param>
+        <param name="assembly">Der Name der Assembly, die die Client-Skriptdatei als eingebettete Ressource enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.ScriptReference" /> Klasse mit einem angegebenen Namen und die Assembly.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="public string Assembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Assembly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptReference.Assembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Assembly, die die Client-Skriptdatei als eingebettete Ressource enthält.</summary>
+        <value>Der vollqualifizierte oder teilweise qualifizierte Name der Assembly, die eine Client-Skriptdatei als eingebettete Ressource enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie legen die <xref:System.Web.UI.ScriptReference.Assembly%2A> Eigenschaft, wenn Sie eine Clientskriptdatei verweisen, die als eingebettete Ressource in einer Assembly enthalten ist. Legen Sie <xref:System.Web.UI.ScriptReference.Assembly%2A> auf den vollqualifizierten oder teilweise qualifizierten Assemblynamen. Ein vollqualifizierten Assemblynamen enthält ein Name, Kultur, öffentlicher Schlüssel und Versionsnummer. Ein teilweise gekennzeichnete Assemblynamen enthält nur einen Namen an.  
+  
+ Wenn Sie einen Wert für angeben <xref:System.Web.UI.ScriptReference.Assembly%2A>, müssen Sie auch angeben, der Name der eingebetteten Ressource in der <xref:System.Web.UI.ScriptReference.Name%2A> Eigenschaft. Andernfalls ein <xref:System.InvalidOperationException> ausgelöst.  
+  
+ Die referenzierte Assembly muss in den Ordner "bin" der Website oder im globalen Assemblycache befinden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Verweisen auf ein benutzerdefiniertes Steuerelement und eine JavaScript-Datei, die in der Steuerelementassembly eingebettet ist. Wird angenommen, dass die Assembly im Ordner "bin" der Website befinden. Das benutzerdefinierte Steuerelement animiert <xref:System.Web.UI.UpdatePanel> Steuerelemente. Die JavaScript-Datei wird als eingebettete Ressource kompiliert, die mit dem Namen SampleControl.UpdatePanelAnimation.js. Registrieren Sie die eingebettete JavaScript-Datei mithilfe der <xref:System.Web.UI.ScriptReference.Assembly%2A> und <xref:System.Web.UI.ScriptReference.Name%2A> Eigenschaften.  
+  
+ Um dieses Codebeispiel zu verwenden, kompilieren Sie die JavaScript-Datei, die im Beispiel als eingebettete Ressource durch das benutzerdefinierte Steuerelement angezeigt wird. Fügen Sie die resultierende Assembly in den Ordner "Bin" der Website an. Ein Beispiel dafür, wie eine JavaScript-Datei in eine Assembly eingebettet werden sollen, finden Sie unter [Exemplarische Vorgehensweise: Einbetten einer JavaScript-Datei als Ressource in einer Assembly](http://msdn.microsoft.com/library/d8cb78cd-95a9-4dc6-92df-391866817e89).  
+  
+ Das folgende Beispiel zeigt eine Seite, die das benutzerdefinierte Steuerelement verwendet.  
+  
+ [!code-aspx-csharp[System.Web.UI.ScriptReference#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReference/CS/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ScriptReference#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.ScriptReference/vb/Default.aspx#1)]  
+  
+ Das folgende Beispiel zeigt die Klassendefinition benutzerdefiniertes Steuerelement an.  
+  
+ [!code-csharp[System.Web.UI.ScriptReference#2](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReference/CS/customcontrol.cs#2)]
+ [!code-vb[System.Web.UI.ScriptReference#2](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.ScriptReference/vb/customcontrol.vb#2)]  
+  
+ Das folgende Beispiel zeigt die unterstützende JavaScript-Datei.  
+  
+ [!code-javascript[System.Web.UI.ScriptReference#3](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReference/CS/UpdatePanelAnimation.js#3)]  
+  
+ Im folgende Beispiel wird gezeigt, Code, der der AssemblyInfo-Datei des Projekts, das das benutzerdefinierte Steuerelement enthält und der JavaScript-Datei hinzugefügt werden muss.  
+  
+ [!code-csharp[System.Web.UI.ScriptReference#4](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReference/CS/AssemblyInfo.cs#4)]
+ [!code-vb[System.Web.UI.ScriptReference#4](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.ScriptReference/vb/AssemblyInfo.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUrl">
+      <MemberSignature Language="C#" Value="protected override string GetUrl (System.Web.UI.ScriptManager scriptManager, bool zip);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance string GetUrl(class System.Web.UI.ScriptManager scriptManager, bool zip) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReference.GetUrl(System.Web.UI.ScriptManager,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+        <Parameter Name="zip" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">Die <see langword="ScriptManager" /> Steuerelement auf der Ziel-Webseite.</param>
+        <param name="zip">
+          <see langword="true" />Wenn das Skript komprimiert werden sollen; andernfalls <see langword="false" />.</param>
+        <summary>Ruft die URL, die als Wert des gerendert wird die <see langword="src" /> Attribut von der <see langword="script" /> Element.</summary>
+        <returns>Eine Zeichenfolge, die die URL enthält, die als Wert des gerendert wird die <see langword="src" /> Attribut von der <see langword="script" /> Element.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreScriptPath">
+      <MemberSignature Language="C#" Value="public bool IgnoreScriptPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreScriptPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptReference.IgnoreScriptPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property is obsolete. Instead of using ScriptManager.ScriptPath, set the Path property on each individual ScriptReference.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="P:System.Web.UI.ScriptManager.ScriptPath" /> Eigenschaft wird beim Registrieren einer Client-Skriptdatei aus einer Ressource in der URL enthalten.</summary>
+        <value>
+          <see langword="true" />Wenn der Skriptpfad nicht verwendet wird, wenn Sie das Clientskript registrieren; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie <xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A> auf `true` werden sollen, ohne eine Clientskriptdatei registriert die <xref:System.Web.UI.ScriptManager.ScriptPath%2A> Wert in der URL der Skriptdatei.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAjaxFrameworkScript">
+      <MemberSignature Language="C#" Value="protected override bool IsAjaxFrameworkScript (System.Web.UI.ScriptManager scriptManager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool IsAjaxFrameworkScript(class System.Web.UI.ScriptManager scriptManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReference.IsAjaxFrameworkScript(System.Web.UI.ScriptManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">Ein <see cref="T:System.Web.UI.ScriptManager" />-Objekt.</param>
+        <summary>Bestimmt, ob der Skriptverweis ein AJAX-Skript ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Skriptverweis ein AJAX-Skript ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFromSystemWebExtensions">
+      <MemberSignature Language="C#" Value="protected override bool IsFromSystemWebExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool IsFromSystemWebExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReference.IsFromSystemWebExtensions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method is obsolete. Use IsAjaxFrameworkScript(ScriptManager) instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob das zusammengesetzte Skript einen Verweis auf ein ASP.NET AJAX-Framework-Skript enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn das zusammengesetzte Skript einen Verweis auf ein ASP.NET AJAX-Framework-Skript enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptReference.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der eingebetteten Ressource, die die Skriptdatei enthält.</summary>
+        <value>Der Name der Client-Skriptdatei, die als Ressource in einer Assembly eingebettet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie legen die <xref:System.Web.UI.ScriptReference.Name%2A> Eigenschaft auf eine Clientskriptdatei zu verweisen, die als Ressource in einer Assembly eingebettet ist.  
+  
+ Wenn Sie Werte für beide definieren die <xref:System.Web.UI.ScriptReferenceBase.Path%2A> und <xref:System.Web.UI.ScriptReference.Name%2A> Eigenschaften in der gleichen Skriptverweis die <xref:System.Web.UI.ScriptReferenceBase.Path%2A> -Eigenschaft Vorrang.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Verweisen auf ein benutzerdefiniertes Steuerelement und eine JavaScript-Datei, die in der Steuerelementassembly eingebettet ist. Wird angenommen, dass die Assembly im Ordner "bin" der Website befinden. Das benutzerdefinierte Steuerelement animiert <xref:System.Web.UI.UpdatePanel> Steuerelemente. Die JavaScript-Datei wird als eingebettete Ressource kompiliert, die mit dem Namen SampleControl.UpdatePanelAnimation.js. Registrieren Sie die eingebettete JavaScript-Datei mithilfe der <xref:System.Web.UI.ScriptReference.Assembly%2A> und <xref:System.Web.UI.ScriptReference.Name%2A> Eigenschaften.  
+  
+ Um dieses Codebeispiel zu verwenden, kompilieren Sie die JavaScript-Datei, die im Beispiel als eingebettete Ressource durch das benutzerdefinierte Steuerelement angezeigt wird. Fügen Sie die resultierende Assembly in den Ordner "Bin" der Website an. Ein Beispiel dafür, wie eine JavaScript-Datei in eine Assembly eingebettet werden sollen, finden Sie unter [Exemplarische Vorgehensweise: Einbetten einer JavaScript-Datei als Ressource in einer Assembly](http://msdn.microsoft.com/library/d8cb78cd-95a9-4dc6-92df-391866817e89).  
+  
+ Das folgende Beispiel zeigt eine Seite, die das benutzerdefinierte Steuerelement verwendet.  
+  
+ [!code-aspx-csharp[System.Web.UI.ScriptReference#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReference/CS/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ScriptReference#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.ScriptReference/vb/Default.aspx#1)]  
+  
+ Das folgende Beispiel zeigt die Klassendefinition benutzerdefiniertes Steuerelement an.  
+  
+ [!code-csharp[System.Web.UI.ScriptReference#2](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReference/CS/customcontrol.cs#2)]
+ [!code-vb[System.Web.UI.ScriptReference#2](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.ScriptReference/vb/customcontrol.vb#2)]  
+  
+ Das folgende Beispiel zeigt die unterstützende JavaScript-Datei.  
+  
+ [!code-javascript[System.Web.UI.ScriptReference#3](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReference/CS/UpdatePanelAnimation.js#3)]  
+  
+ Im folgende Beispiel wird gezeigt, Code, der der AssemblyInfo-Datei des Projekts, das das benutzerdefinierte Steuerelement enthält und der JavaScript-Datei hinzugefügt werden muss.  
+  
+ [!code-csharp[System.Web.UI.ScriptReference#4](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReference/CS/AssemblyInfo.cs#4)]
+ [!code-vb[System.Web.UI.ScriptReference#4](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.ScriptReference/vb/AssemblyInfo.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReference.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die den Wert des darstellt der <see cref="P:System.Web.UI.ScriptReference.Name" /> -Eigenschaft, die <see cref="P:System.Web.UI.ScriptReferenceBase.Path" /> Eigenschaft oder der Typname.</summary>
+        <returns>Der Wert des der <see cref="P:System.Web.UI.ScriptReference.Name" /> Eigenschaft, wenn er definiert ist, oder der Wert des der <see cref="P:System.Web.UI.ScriptReferenceBase.Path" /> Eigenschaft, wenn er definiert wurde, andernfalls ist, wird der Wert des der <see cref="P:System.Reflection.MemberInfo.Name" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

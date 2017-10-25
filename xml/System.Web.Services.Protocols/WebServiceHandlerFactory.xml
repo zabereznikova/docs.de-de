@@ -1,0 +1,101 @@
+<Type Name="WebServiceHandlerFactory" FullName="System.Web.Services.Protocols.WebServiceHandlerFactory">
+  <TypeSignature Language="C#" Value="public class WebServiceHandlerFactory : System.Web.IHttpHandlerFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebServiceHandlerFactory extends System.Object implements class System.Web.IHttpHandlerFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.WebServiceHandlerFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpHandlerFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Dynamisch erzeugt Web Service Handler-Instanzen, deren Typ bzw. Typen implementieren die <see cref="T:System.Web.IHttpHandler" /> Schnittstelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.IHttpHandler> Schnittstelle richtet den Vertrag, den ASP.NET verwendet, um die eingehenden HTTP-mit benutzerdefinierten HTTP-Handler webanforderungen zu verarbeiten. Die <xref:System.Web.Services.Protocols.WebServiceHandlerFactory> Klasse generiert eine Instanz des ein <xref:System.Web.IHttpHandler> Implementierung für die Verarbeitung von webdienstanforderungen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebServiceHandlerFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.WebServiceHandlerFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.WebServiceHandlerFactory" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHandler">
+      <MemberSignature Language="C#" Value="public System.Web.IHttpHandler GetHandler (System.Web.HttpContext context, string verb, string url, string filePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.IHttpHandler GetHandler(class System.Web.HttpContext context, string verb, string url, string filePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.WebServiceHandlerFactory.GetHandler(System.Web.HttpContext,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpHandler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="verb" Type="System.String" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="filePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Web.HttpContext" /> , Verweise auf systeminterne Serverobjekte bereitstellt (z. B. <see cref="P:System.Web.HttpContext.Request" />, <see cref="P:System.Web.HttpContext.Response" />, <see cref="P:System.Web.HttpContext.Session" />, und <see cref="P:System.Web.HttpContext.Server" />) verwendet, um HTTP-Anforderungen.</param>
+        <param name="verb">Die vom Client verwendete HTTP-Datenübertragungsmethode (GET oder POST).</param>
+        <param name="url">Die Basis-URL der angeforderten Ressource.</param>
+        <param name="filePath">Der Dateisystempfad der angeforderten Ressource.</param>
+        <summary>Gibt eine <see cref="T:System.Web.IHttpHandler" />-Instanz zurück.</summary>
+        <returns>Eine <see cref="T:System.Web.IHttpHandler" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseHandler">
+      <MemberSignature Language="C#" Value="public void ReleaseHandler (System.Web.IHttpHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseHandler(class System.Web.IHttpHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.WebServiceHandlerFactory.ReleaseHandler(System.Web.IHttpHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Web.IHttpHandler" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Die freizugebende <see cref="T:System.Web.IHttpHandler" />-Instanz.</param>
+        <summary>Versionen der <see cref="T:System.Web.IHttpHandler" /> Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es sind keine Ressourcen verknüpft sind mit einem Handler-Instanz, die die <xref:System.Web.Services.Protocols.WebServiceHandlerFactory> Klasse freigegeben werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

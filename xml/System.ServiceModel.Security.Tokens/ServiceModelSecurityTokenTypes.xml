@@ -1,0 +1,169 @@
+<Type Name="ServiceModelSecurityTokenTypes" FullName="System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes">
+  <TypeSignature Language="C#" Value="public static class ServiceModelSecurityTokenTypes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ServiceModelSecurityTokenTypes extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Typen von Sicherheitstoken, die von WCF erkannt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die statischen Zeichenfolgen dieses Typs werden von <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> und <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> zum Identifizieren von Tokenanbietern und Tokenauthentifizierern verwendet, die basierend auf dem Tokentyp erstellt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AnonymousSslnego">
+      <MemberSignature Language="C#" Value="public static string AnonymousSslnego { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string AnonymousSslnego" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.AnonymousSslnego" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, durch die angegeben wird, dass der Initiator anonym ist, das Antwortzertifikat aber als Teil einer SOAP-SSL-Verhandlung zur Verfügung steht.</summary>
+        <value>Ein Zeichenfolge, durch die angegeben wird, dass der Initiator anonym ist, das Antwortzertifikat aber als Teil einer SOAP-SSL-Verhandlung zur Verfügung steht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MutualSslnego">
+      <MemberSignature Language="C#" Value="public static string MutualSslnego { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string MutualSslnego" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.MutualSslnego" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die angibt, dass der Initiator und der Beantworter sich gegenseitig über X.509-Zertifikate authentifizieren.</summary>
+        <value>Eine Zeichenfolge, die angibt, dass der Initiator und der Beantworter sich gegenseitig über X.509-Zertifikate authentifizieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Zertifikat des Beantworters ist über die SOAP-SSL-Verhandlung verfügbar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecureConversation">
+      <MemberSignature Language="C#" Value="public static string SecureConversation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SecureConversation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.SecureConversation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die angibt, ob der Dienst WS-SecureConversation-Authentifizierung verwendet.</summary>
+        <value>Eine Zeichenfolge, die angibt, ob der Dienst WS-SecureConversation-Authentifizierung verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die WS-SecureConversation-Spezifikation wird auf Grundlage der WS-Security- und WS-Policy-Richtlinien erstellt. Sie bietet sichere Kommunikation zwischen Diensten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityContext">
+      <MemberSignature Language="C#" Value="public static string SecurityContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SecurityContext" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.SecurityContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die angibt, ob der Dienst SOAP SecurityContext-Authentifizierung verwendet.</summary>
+        <value>Eine Zeichenfolge, die angibt, ob der Dienst SOAP SecurityContext-Authentifizierung verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert gibt an, dass `SecurityContextToken` zum Darstellen des Sicherheitskontexts verwendet wird, mit dem eine Konversation zwischen Absender und Empfänger gesichert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Spnego">
+      <MemberSignature Language="C#" Value="public static string Spnego { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Spnego" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die angibt, ob die Authentifizierung über das Windows SPNEGO-Protokoll (Services SP Negotiation) vorgenommen wird.</summary>
+        <value>Eine Zeichenfolge, die angibt, ob die Authentifizierung über das Windows Services SPNEGO-Protokoll vorgenommen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ SPNEGO ist der systemeigene Windows-zu-Windows-Authentifizierungsdienst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SspiCredential">
+      <MemberSignature Language="C#" Value="public static string SspiCredential { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SspiCredential" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.SspiCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die angibt, ob die Clientauthentifizierung über Windows-Anmeldeinformationen durchgeführt wird.</summary>
+        <value>Eine Zeichenfolge, die angibt, ob die Clientauthentifizierung über Windows-Anmeldeinformationen durchgeführt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe von SSPI kann eine Anwendung verschiedene Sicherheitsmodelle einsetzen, die auf einem Computer oder Netzwerk verfügbar sind, ohne dass die Schnittstelle zum Sicherheitssystem geändert werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

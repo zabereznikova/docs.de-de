@@ -1,0 +1,195 @@
+<Type Name="StandardBindingCollectionElement&lt;TStandardBinding,TBindingConfiguration&gt;" FullName="System.ServiceModel.Configuration.StandardBindingCollectionElement&lt;TStandardBinding,TBindingConfiguration&gt;">
+  <TypeSignature Language="C#" Value="public class StandardBindingCollectionElement&lt;TStandardBinding,TBindingConfiguration&gt; : System.ServiceModel.Configuration.BindingCollectionElement where TStandardBinding : Binding where TBindingConfiguration : StandardBindingElementnew()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StandardBindingCollectionElement`2&lt;(class System.ServiceModel.Channels.Binding) TStandardBinding, .ctor (class System.ServiceModel.Configuration.StandardBindingElement) TBindingConfiguration&gt; extends System.ServiceModel.Configuration.BindingCollectionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.StandardBindingCollectionElement`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TStandardBinding">
+      <Constraints>
+        <BaseTypeName>System.ServiceModel.Channels.Binding</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TBindingConfiguration">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>System.ServiceModel.Configuration.StandardBindingElement</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.BindingCollectionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TStandardBinding">Ein Standardbindungselement.</typeparam>
+    <typeparam name="TBindingConfiguration">Ein Bindungskonfigurationselement.</typeparam>
+    <summary>Stellt eine Basisklasse für die Konfigurationsabschnitte, die vordefinierte Bindungen von Windows Communication Foundation (WCF) angeben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StandardBindingCollectionElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardBindingCollectionElement`2.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.StandardBindingCollectionElement`2" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bindings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.StandardBindingElementCollection&lt;TBindingConfiguration&gt; Bindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.StandardBindingElementCollection`1&lt;!TBindingConfiguration&gt; Bindings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.StandardBindingCollectionElement`2.Bindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", Options=System.Configuration.ConfigurationPropertyOptions.IsDefaultCollection)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.StandardBindingElementCollection&lt;TBindingConfiguration&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Standardbindungen der in diesem Konfigurationsabschnitt definierten Bindungen ab.</summary>
+        <value>Eine Auflistung von allen standardbindungen, die in diesem Konfigurationsabschnitt definierten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingType">
+      <MemberSignature Language="C#" Value="public override Type BindingType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BindingType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.StandardBindingCollectionElement`2.BindingType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ dieser Bindung ab.</summary>
+        <value>Der Typ dieser Bindung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfiguredBindings">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ServiceModel.Configuration.IBindingConfigurationElement&gt; ConfiguredBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.ServiceModel.Configuration.IBindingConfigurationElement&gt; ConfiguredBindings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.StandardBindingCollectionElement`2.ConfiguredBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ServiceModel.Configuration.IBindingConfigurationElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung konfigurierter Bindungsobjekte ab.</summary>
+        <value>Eine Auflistung konfigurierter Bindungsobjekte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public override bool ContainsKey (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ContainsKey(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardBindingCollectionElement`2.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu suchenden Bindung.</param>
+        <summary>Bestimmt, ob eine Bindung in der Auflistung mit dem angegebenen Namen vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die Sammlung die Bindung mit dem angegebenen <paramref name="name" /> enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefault">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Channels.Binding GetDefault ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.ServiceModel.Channels.Binding GetDefault() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardBindingCollectionElement`2.GetDefault" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die verwendete Standardbindung ab.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.Binding" />-Objekt, das die Standardbindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.StandardBindingCollectionElement`2.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz ab, die eine Auflistung von <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</summary>
+        <value>Eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz, die eine Sammlung mit <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die entweder Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryAdd">
+      <MemberSignature Language="C#" Value="protected override bool TryAdd (string name, System.ServiceModel.Channels.Binding binding, System.Configuration.Configuration config);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool TryAdd(string name, class System.ServiceModel.Channels.Binding binding, class System.Configuration.Configuration config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardBindingCollectionElement`2.TryAdd(System.String,System.ServiceModel.Channels.Binding,System.Configuration.Configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="config" Type="System.Configuration.Configuration" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der hinzuzufügenden Bindung.</param>
+        <param name="binding">Ein <see cref="T:System.ServiceModel.Channels.Binding" />-Objekt, das die hinzuzufügende Bindung darstellt.</param>
+        <param name="config">Die Konfigurationseinstellungen dieser Bindung.</param>
+        <summary>Fügt der Auflistung die angegebene Bindung hinzu.</summary>
+        <returns>
+          <see langword="true" />, wenn die Bindung dieser Auflistung hinzugefügt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

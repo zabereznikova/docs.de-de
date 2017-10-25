@@ -1,0 +1,103 @@
+<Type Name="DesignerActionUIStateChangeEventArgs" FullName="System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs">
+  <TypeSignature Language="C#" Value="public class DesignerActionUIStateChangeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerActionUIStateChangeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.ComponentModel.Design.DesignerActionUIService.DesignerActionUIStateChange" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ComponentModel.Design.DesignerActionUIService.DesignerActionUIStateChange> Ereignis tritt auf, wenn Sie ein Smarttagbereich angezeigt oder ausgeblendet wird. Dieses Ereignis wird nicht generiert werden, direkt durch den Bereich, sondern durch die <xref:System.ComponentModel.Design.DesignerActionUIService> Klasse an, wenn seine <xref:System.ComponentModel.Design.DesignerActionUIService.ShowUI%2A> und <xref:System.ComponentModel.Design.DesignerActionUIService.HideUI%2A> Methoden ausgeführt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionUIStateChangeEventArgs (object relatedObject, System.ComponentModel.Design.DesignerActionUIStateChangeType changeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object relatedObject, valuetype System.ComponentModel.Design.DesignerActionUIStateChangeType changeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs.#ctor(System.Object,System.ComponentModel.Design.DesignerActionUIStateChangeType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="relatedObject" Type="System.Object" />
+        <Parameter Name="changeType" Type="System.ComponentModel.Design.DesignerActionUIStateChangeType" />
+      </Parameters>
+      <Docs>
+        <param name="relatedObject">Das Objekt, das dem Bereich zugeordnet ist.</param>
+        <param name="changeType">Ein Wert, der angibt, ob der Bereich angezeigt oder ausgeblendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> Ereignis, das `relatedObject` Parameter verweist immer auf die <xref:System.ComponentModel.Component?displayProperty=nameWithType> , die im Bereich zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeType">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.DesignerActionUIStateChangeType ChangeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Design.DesignerActionUIStateChangeType ChangeType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs.ChangeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionUIStateChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Flag, das angibt, ob der Smarttagbereich wird angezeigt oder ausgeblendet wird.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.Design.DesignerActionUIStateChangeType" /> , den Zustand des Bereichs angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Bereich durch einen Aufruf von ausgeblendet wird, wird die <xref:System.ComponentModel.Design.DesignerActionUIService.HideUI%2A> -Methode, diese Eigenschaft hat den Wert <xref:System.ComponentModel.Design.DesignerActionUIStateChangeType.Hide>. Wenn im Bereich, durch einen Aufruf von angezeigt wird <xref:System.ComponentModel.Design.DesignerActionUIService.ShowUI%2A>, hat diese Eigenschaft den Wert der <xref:System.ComponentModel.Design.DesignerActionUIStateChangeType.Show>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedObject">
+      <MemberSignature Language="C#" Value="public object RelatedObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object RelatedObject" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs.RelatedObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das den Smarttagbereich zugeordnet ist.</summary>
+        <value>Die <see cref="T:System.Object" /> Smarttagbereich zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs.RelatedObject%2A> -Eigenschaft ermöglicht es den Programmierer, die ein Objekt mit einer Instanz von Zuordnen der <xref:System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs> Klasse. Dieses Objekt ist dann verfügbar, um Methoden zum Behandeln der <xref:System.ComponentModel.Design.DesignerActionUIService.DesignerActionUIStateChange> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

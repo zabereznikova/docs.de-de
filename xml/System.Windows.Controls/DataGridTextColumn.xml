@@ -1,0 +1,461 @@
+<Type Name="DataGridTextColumn" FullName="System.Windows.Controls.DataGridTextColumn">
+  <TypeSignature Language="C#" Value="public class DataGridTextColumn : System.Windows.Controls.DataGridBoundColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DataGridTextColumn extends System.Windows.Controls.DataGridBoundColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridTextColumn" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.DataGridBoundColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see cref="T:System.Windows.Controls.DataGrid" /> Spalte, die in den Zellen Textinhalt hostet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Windows.Controls.DataGridTextColumn> Datenspalten als Text angezeigt. Die folgende Abbildung zeigt ein Beispiel für zwei <xref:System.Windows.Controls.DataGridTextColumn> Typen.  
+  
+ ![Zwei DataGridTextColumns](~/add/media/wpf-datagridtextcolumns.png "zwei DataGridTextColumns")  
+  
+ Um eine Spalte zu erstellen, fügen Sie es auf die <xref:System.Windows.Controls.DataGrid.Columns%2A> Auflistung. Um die Spalte aufzufüllen, binden Sie die Spalte auf die Daten mithilfe der <xref:System.Windows.Controls.DataGridBoundColumn.Binding%2A> Eigenschaft. Die <xref:System.Windows.Controls.DataGridBoundColumn.Binding%2A> -Eigenschaft angewendet wird, um die <xref:System.Windows.Controls.TextBlock> oder <xref:System.Windows.Controls.TextBox> Element in der Spalte erstellt. Die <xref:System.Windows.FrameworkElement.DataContext%2A> für das Element in jeder Zelle das Datenelement für die Zeile der Zelle befindet sich im. Aus diesem Grund zum Einrichten der Bindung haben nur zum Festlegen der <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>. Optional können Sie angeben einer <xref:System.Windows.Data.Binding.Converter%2A?displayProperty=nameWithType> Wenn Sie die Daten konvertieren möchten oder die <xref:System.Windows.Data.BindingBase.StringFormat%2A>. Weitere Informationen zur Datenbindung finden Sie unter [Data Binding (WPF)](~/docs/framework/wpf/data/data-binding-wpf.md).  
+  
+ **Hinweis** <xref:System.Windows.Controls.DataGridTextColumn> erstellt eine <xref:System.Windows.Controls.TextBlock> Element in den nicht-Bearbeitungsmodus und ein <xref:System.Windows.Controls.TextBox> Element im Bearbeitungsmodus.  
+  
+ Sie können anpassen, die <xref:System.Windows.Controls.DataGridTextColumn> durch Festlegen von Eigenschaften, z. B. <xref:System.Windows.Controls.DataGridColumn.Width%2A>, <xref:System.Windows.Controls.DataGridColumn.Header%2A>, <xref:System.Windows.Controls.DataGridTextColumn.FontSize%2A>, und <xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A>.  
+  
+ Wenn Sie andere Typen von Daten anzeigen möchten <xref:System.Windows.Controls.DataGrid> bietet die folgenden Spaltentypen:  
+  
+|Spaltentyp|Datenanzeige|  
+|-----------------|------------------|  
+|<xref:System.Windows.Controls.DataGridHyperlinkColumn>|Verwenden Sie zum Anzeigen von URI-Daten.|  
+|<xref:System.Windows.Controls.DataGridComboBoxColumn>|Mit der Enumerationsdaten angezeigt.|  
+|<xref:System.Windows.Controls.DataGridCheckBoxColumn>|Verwenden Sie zum Anzeigen von booleschen Daten.|  
+  
+ Wenn Sie andere Steuerelemente in verwenden möchten Ihre <xref:System.Windows.Controls.DataGrid>, können Sie eigene Spaltentypen mit erstellen <xref:System.Windows.Controls.DataGridTemplateColumn>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.DataGrid> , die Textspalten angepasst und XML-Daten als Quelle verwendet. Die Abbildung weiter oben in diesem Thema wird gezeigt, wie dieser Code angezeigt wird. Weitere Informationen zum Binden an XML-Daten finden Sie unter [Vorgehensweise: Binden an XML-Daten mit einer XMLDataProvider und XPath-Abfragen](~/docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+  
+ [!code-xaml[DataGrid_TextColumn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_textcolumn/CS/mainwindow.xaml#1)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridTextColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridTextColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.DataGridTextColumn" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelCellEdit">
+      <MemberSignature Language="C#" Value="protected override void CancelCellEdit (System.Windows.FrameworkElement editingElement, object uneditedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CancelCellEdit(class System.Windows.FrameworkElement editingElement, object uneditedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridTextColumn.CancelCellEdit(System.Windows.FrameworkElement,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="uneditedValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="editingElement">Das Element, das die Spalte für eine Zelle im Bearbeitungsmodus angezeigt.</param>
+        <param name="uneditedValue">Der vorherige, unbearbeiteten Wert in der Zelle, die bearbeitet wird.</param>
+        <summary>Bewirkt, dass die Zelle bearbeitet wird, um auf den angegebenen Wert zurückzusetzen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitCellEdit">
+      <MemberSignature Language="C#" Value="protected override bool CommitCellEdit (System.Windows.FrameworkElement editingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CommitCellEdit(class System.Windows.FrameworkElement editingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridTextColumn.CommitCellEdit(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="editingElement">Das Element, das die Spalte für eine Zelle im Bearbeitungsmodus angezeigt.</param>
+        <summary>Führt alle erforderlichen Überprüfung vor dem Beenden des Bearbeitungsmodus.</summary>
+        <returns>
+          <see langword="false" />Bei einem Überprüfungsfehler; andernfalls <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultEditingElementStyle">
+      <MemberSignature Language="C#" Value="public static System.Windows.Style DefaultEditingElementStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Style DefaultEditingElementStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridTextColumn.DefaultEditingElementStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Standardwert der <see cref="P:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle" />-Eigenschaft.</summary>
+        <value>Ein Objekt, das das Format darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultElementStyle">
+      <MemberSignature Language="C#" Value="public static System.Windows.Style DefaultElementStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Style DefaultElementStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridTextColumn.DefaultElementStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Standardwert der <see cref="P:System.Windows.Controls.DataGridBoundColumn.ElementStyle" />-Eigenschaft.</summary>
+        <value>Ein Objekt, das das Format darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamily">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FontFamily FontFamily { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.FontFamily FontFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridTextColumn.FontFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schriftfamilie für den Inhalt von Zellen in der Spalte.</summary>
+        <value>Die Schriftfamilie des Inhalts für Zellen in der Spalte. Der registrierte Standardwert ist <see cref="P:System.Windows.SystemFonts.MessageFontFamily" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridTextColumn.FontFamily%2A> Eigenschaft bestimmt die Schriftart für Steuerelemente in der Spalte nur, wenn die Vorlage die Eigenschaft als Parameter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamilyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontFamilyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontFamilyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridTextColumn.FontFamilyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridTextColumn.FontFamily" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSize">
+      <MemberSignature Language="C#" Value="public double FontSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 FontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridTextColumn.FontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.FontSizeConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schriftgrad für den Inhalt von Zellen in der Spalte.</summary>
+        <value>Der Schriftgrad des Inhalts von Zellen in der Spalte. Der registrierte Standardwert ist <see cref="P:System.Windows.SystemFonts.MessageFontSize" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridTextColumn.FontSize%2A> Eigenschaft bestimmt den Schriftgrad für Steuerelemente in der Spalte nur, wenn die Vorlage die Eigenschaft als Parameter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontSizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontSizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridTextColumn.FontSizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridTextColumn.FontSize" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStyle FontStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStyle FontStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridTextColumn.FontStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schriftschnitt für den Inhalt von Zellen in der Spalte.</summary>
+        <value>Der Schriftschnitt für den Inhalt der Zellen in der Spalte. Der registrierte Standardwert ist <see cref="P:System.Windows.SystemFonts.MessageFontStyle" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridTextColumn.FontStyle%2A> Eigenschaft bestimmt den Schriftschnitt für Steuerelemente in der Spalte nur, wenn die Vorlage die Eigenschaft als Parameter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridTextColumn.FontStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridTextColumn.FontStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeight">
+      <MemberSignature Language="C#" Value="public System.Windows.FontWeight FontWeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontWeight FontWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridTextColumn.FontWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schriftbreite für den Inhalt von Zellen in der Spalte.</summary>
+        <value>Die Schriftbreite des Inhalts der Zellen in der Spalte. Der registrierte Standardwert ist <see cref="P:System.Windows.SystemFonts.MessageFontWeight" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridTextColumn.FontWeight%2A> Eigenschaft bestimmt die Schriftbreite für Steuerelemente in der Spalte nur, wenn die Vorlage die Eigenschaft als Parameter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontWeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontWeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridTextColumn.FontWeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridTextColumn.FontWeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Foreground">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Foreground { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Foreground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridTextColumn.Foreground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Brush" /> , die zum Zeichnen von Text-Inhalt von Zellen in der Spalte verwendet wird.</summary>
+        <value>Der Pinsel, der verwendet wird, um den Inhalt der Zellen in der Spalte zu zeichnen. Der registrierte Standardwert ist <see cref="P:System.Windows.SystemColors.ControlTextBrush" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridTextColumn.Foreground%2A> Eigenschaft bestimmt den Pinsel für den Textinhalt der Steuerelemente in der Spalte nur, wenn die Vorlage die Eigenschaft als Parameter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ForegroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ForegroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridTextColumn.ForegroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridTextColumn.Foreground" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateEditingElement">
+      <MemberSignature Language="C#" Value="protected override System.Windows.FrameworkElement GenerateEditingElement (System.Windows.Controls.DataGridCell cell, object dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.FrameworkElement GenerateEditingElement(class System.Windows.Controls.DataGridCell cell, object dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridTextColumn.GenerateEditingElement(System.Windows.Controls.DataGridCell,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Windows.Controls.DataGridCell" />
+        <Parameter Name="dataItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Die Zelle, die das generierte Element enthalten soll.</param>
+        <param name="dataItem">Die Daten, die durch die Zeile mit der gewünschten Zelle dargestellt.</param>
+        <summary>Ruft eine <see cref="T:System.Windows.Controls.TextBox" /> Steuerelement, das an die Spalte gebundene <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> Eigenschaftswert.</summary>
+        <returns>Ein neues Textfeld-Steuerelement, das an der Spaltenwerts gebunden ist <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> Eigenschaftswert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateElement">
+      <MemberSignature Language="C#" Value="protected override System.Windows.FrameworkElement GenerateElement (System.Windows.Controls.DataGridCell cell, object dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.FrameworkElement GenerateElement(class System.Windows.Controls.DataGridCell cell, object dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridTextColumn.GenerateElement(System.Windows.Controls.DataGridCell,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Windows.Controls.DataGridCell" />
+        <Parameter Name="dataItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Die Zelle, die das generierte Element enthalten soll.</param>
+        <param name="dataItem">Die Daten, die durch die Zeile mit der gewünschten Zelle dargestellt.</param>
+        <summary>Ruft ein schreibgeschütztes <see cref="T:System.Windows.Controls.TextBlock" /> Steuerelement, das an die Spalte gebundene <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> Eigenschaftswert.</summary>
+        <returns>Ein neues, nur-Lese TextBlock-Steuerelement, das an der Spaltenwerts gebunden ist <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> Eigenschaftswert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareCellForEdit">
+      <MemberSignature Language="C#" Value="protected override object PrepareCellForEdit (System.Windows.FrameworkElement editingElement, System.Windows.RoutedEventArgs editingEventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object PrepareCellForEdit(class System.Windows.FrameworkElement editingElement, class System.Windows.RoutedEventArgs editingEventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridTextColumn.PrepareCellForEdit(System.Windows.FrameworkElement,System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="editingEventArgs" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="editingElement">Das Element, das die Spalte für eine Zelle im Bearbeitungsmodus angezeigt.</param>
+        <param name="editingEventArgs">Informationen über die Benutzeraktion, die eine Zelle in den Bearbeitungsmodus verursacht.</param>
+        <summary>Wird aufgerufen, wenn eine Zelle in der Spalte den Bearbeitungsmodus wechselt.</summary>
+        <returns>Der unveränderte Wert der Zelle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshCellContent">
+      <MemberSignature Language="C#" Value="protected override void RefreshCellContent (System.Windows.FrameworkElement element, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RefreshCellContent(class System.Windows.FrameworkElement element, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridTextColumn.RefreshCellContent(System.Windows.FrameworkElement,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="element">Der zu aktualisierenden Zelle.</param>
+        <param name="propertyName">Der Name der Spalteneigenschaft, die geändert wurden.</param>
+        <summary>Aktualisiert den Inhalt einer Zelle in der Spalte als Antwort auf eine Spalte eigenschaftswertänderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,60 @@
+<Type Name="DetailsViewCommandEventHandler" FullName="System.Web.UI.WebControls.DetailsViewCommandEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DetailsViewCommandEventHandler(object sender, DetailsViewCommandEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DetailsViewCommandEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewCommandEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.DetailsViewCommandEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.DetailsViewCommandEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die <see cref="E:System.Web.UI.WebControls.DetailsView.ItemCommand" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement löst die <xref:System.Web.UI.WebControls.DetailsView.ItemCommand> Ereignis aus, wenn eine Schaltfläche in einem <xref:System.Web.UI.WebControls.ButtonField>, <xref:System.Web.UI.WebControls.CommandField>, oder <xref:System.Web.UI.WebControls.TemplateField> Zeilenfeld geklickt wird. Dadurch können Sie einen Ereignishandler bereitstellen, der eine benutzerdefinierte Routine ausführt, wenn dieses Ereignis tritt auf.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement löst auch andere spezielle Ereignisse bestimmte Schaltflächen geklickt werden (Schaltflächen mit der `CommandName` -Eigenschaft auf "Löschen", "Einfügen", "Seite" oder "Update" festgelegt). Wenn Sie eine der folgenden Schaltflächen verwenden, sollten Sie eine der speziellen Ereignisse vom Steuerelement bereitgestellte verwenden (z. B. <xref:System.Web.UI.WebControls.DetailsView.ItemDeleted> oder <xref:System.Web.UI.WebControls.DetailsView.ItemDeleting>).  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.DetailsViewCommandEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuert hinzufügen eine <xref:System.Web.UI.WebControls.DetailsViewCommandEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.DetailsView.ItemCommand> -Ereignis für ein <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. In diesem Beispiel verwendet das Einzeldatei Codierung.  
+  
+ [!code-aspx-csharp[DetailsViewCommandEventHandlerCodeInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewCommandEventHandlerCodeInline/CS/DetailsViewCommandEventHandlerInlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewCommandEventHandlerCodeInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewCommandEventHandlerCodeInline/VB/DetailsViewCommandEventHandlerInlinevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, Code-Behind-Codierung Modellversion des vorherigen Beispiels. Für dieses Beispiel funktioniert müssen Sie den folgenden Code in der zugehörigen Code-Behind-Datei kopieren.  
+  
+ [!code-aspx-csharp[DetailsViewCommandEventHandlerCodeBehind#1](~/samples/snippets/csharp/VS_Snippets_WebNet/detailsviewcommandeventhandlercodebehind/CS/Default.aspx#1)]
+ [!code-aspx-vb[DetailsViewCommandEventHandlerCodeBehind#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/detailsviewcommandeventhandlercodebehind/VB/DefaultVB.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, die Code-Behind-Datei für das vorherige Beispiel.  
+  
+ [!code-csharp[DetailsViewCommandEventHandlerCodeBehind#2](~/samples/snippets/csharp/VS_Snippets_WebNet/detailsviewcommandeventhandlercodebehind/CS/Default.aspx.cs#2)]
+ [!code-vb[DetailsViewCommandEventHandlerCodeBehind#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/detailsviewcommandeventhandlercodebehind/VB/DefaultVB.aspx.vb#2)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie deklarativ hinzufügen, eine <xref:System.Web.UI.WebControls.DetailsViewCommandEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.DetailsView.ItemCommand> -Ereignis für eine <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ [!code-aspx-csharp[DetailsViewItemCommand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewItemCommand/CS/detailsviewitemcommandcs.aspx#1)]
+ [!code-aspx-vb[DetailsViewItemCommand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewItemCommand/VB/detailsviewitemcommandvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

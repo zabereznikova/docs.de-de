@@ -1,0 +1,690 @@
+<Type Name="MarkupCompilePass1" FullName="Microsoft.Build.Tasks.Windows.MarkupCompilePass1">
+  <TypeSignature Language="C#" Value="public sealed class MarkupCompilePass1 : Microsoft.Build.Utilities.Task" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MarkupCompilePass1 extends Microsoft.Build.Utilities.Task" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Windows.MarkupCompilePass1" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationBuildTasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Utilities.Task</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die <c>MarkupCompilePass1</c> Aufgabe. Verwenden der <c>MarkupCompilePass1</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [MarkupCompilePass1](http://msdn.microsoft.com/library/693d6945-fd6f-4698-8f64-9dfcb71052d3).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MarkupCompilePass1 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.Windows.MarkupCompilePass1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AllGeneratedFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] AllGeneratedFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] AllGeneratedFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.AllGeneratedFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Liste der Dateien, die durch den Markupcompiler generiert werden.</summary>
+        <value>Eine Liste der Dateien, die durch den Markupcompiler generiert werden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AlwaysCompileMarkupFilesInSeparateDomain">
+      <MemberSignature Language="C#" Value="public bool AlwaysCompileMarkupFilesInSeparateDomain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AlwaysCompileMarkupFilesInSeparateDomain" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.AlwaysCompileMarkupFilesInSeparateDomain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Kompilierung in der zweiten Anwendungsdomäne ausgeführt.</summary>
+        <value>
+          <see langword="true" />um die Kompilierung im zweiten Anwendungsdomäne ausgeführt werden. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft auf `false` schneller Kompilierung führt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationMarkup">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ApplicationMarkup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ApplicationMarkup" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.ApplicationMarkup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Anwendungsdefinition [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Datei.</summary>
+        <value>Der Name der Anwendungsdefinition [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Datei.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AssembliesGeneratedDuringBuild">
+      <MemberSignature Language="C#" Value="public string[] AssembliesGeneratedDuringBuild { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AssembliesGeneratedDuringBuild" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.AssembliesGeneratedDuringBuild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Liste von Verweisassemblys, die während der Buildzyklus geändert.</summary>
+        <value>Die Liste der Verweisassemblys, die während der Buildzyklus geändert.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Kurznamen der Assembly, die für dieses Projekt generiert wird.</summary>
+        <value>Der kurze Name der Assembly, die für dieses Projekt generiert wird.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyPublicKeyToken">
+      <MemberSignature Language="C#" Value="public string AssemblyPublicKeyToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyPublicKeyToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.AssemblyPublicKeyToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das öffentliche Schlüsseltoken der Assembly.</summary>
+        <value>Das öffentliche Schlüsseltoken der Assembly.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyVersion">
+      <MemberSignature Language="C#" Value="public string AssemblyVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.AssemblyVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version der Assembly ab oder legt sie fest.</summary>
+        <value>Die Version der Assembly.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ContentFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ContentFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ContentFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.ContentFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Liste von loose Inhaltsdateien.</summary>
+        <value>Eine Liste von loose Inhaltsdateien.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DefineConstants">
+      <MemberSignature Language="C#" Value="public string DefineConstants { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefineConstants" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.DefineConstants" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der aktuelle Wert der **DefineConstants** beibehalten wird.</summary>
+        <value>Gibt an, ob der aktuelle Wert der **DefineConstants** wird beibehalten, die wirkt sich auf Ziel Generieren der Assembly; Wenn dieser Parameter geändert wird, kann die öffentliche API in der Zielassembly geändert werden und die Kompilierung des [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] Dateien, die auf lokale Typen verweisen können davon betroffen sein.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Aufgabe ausgeführt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Aufgabe erfolgreich ausgeführt wurde andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraBuildControlFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ExtraBuildControlFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ExtraBuildControlFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.ExtraBuildControlFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Liste der Dateien, die steuern, ob eine Wiederherstellung wird ausgelöst, wenn die <see cref="T:Microsoft.Build.Tasks.Windows.MarkupCompilePass1" /> Aufgabe führt; eine Wiederherstellung wird ausgelöst, wenn eine dieser Änderungen Dateien.</summary>
+        <value>Eine Liste der Dateien, die steuern, ob eine Wiederherstellung wird ausgelöst, wenn die <see cref="T:Microsoft.Build.Tasks.Windows.MarkupCompilePass1" /> Aufgabe führt; eine Wiederherstellung wird ausgelöst, wenn eine dieser Änderungen Dateien.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratedBamlFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] GeneratedBamlFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] GeneratedBamlFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.GeneratedBamlFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die generierte [!INCLUDE[TLA#tla_baml](~/includes/tlasharptla-baml-md.md)] Dateien.</summary>
+        <value>Die generierte [!INCLUDE[TLA#tla_baml](~/includes/tlasharptla-baml-md.md)] Dateien.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratedCodeFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] GeneratedCodeFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] GeneratedCodeFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.GeneratedCodeFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Liste der generierten verwalteten Codedateien.</summary>
+        <value>Die Liste der generierten verwalteten Codedateien.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratedLocalizationFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] GeneratedLocalizationFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] GeneratedLocalizationFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.GeneratedLocalizationFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die generierte Lokalisierungsdatei für jede lokalisierbare [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Datei.</summary>
+        <value>Die generierten Lokalisierungsdatei für jede lokalisierbare [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Datei.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HostInBrowser">
+      <MemberSignature Language="C#" Value="public string HostInBrowser { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostInBrowser" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.HostInBrowser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die generierte Assembly ist eine [!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)].</summary>
+        <value>
+          <see langword="true" />Wenn die generierte Assembly ist eine [!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)]ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsRunningInVisualStudio">
+      <MemberSignature Language="C#" Value="public bool IsRunningInVisualStudio { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRunningInVisualStudio" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.IsRunningInVisualStudio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Aufgabe in Visual Studio ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Aufgabe in Visual Studio ausgeführt wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KnownReferencePaths">
+      <MemberSignature Language="C#" Value="public string[] KnownReferencePaths { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] KnownReferencePaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.KnownReferencePaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Pfaden der Assemblys verwiesen wird, die während dieses Vorgangs Build nicht ändern.</summary>
+        <value>Die Pfade der referenzierten Assemblys, die während dieses Vorgangs Build nicht ändern.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public string Language { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den verwaltete Sprache, die der Compiler unterstützt.</summary>
+        <value>Die verwalteten Sprache, die der Compiler unterstützt. Gültige Werte sind **c#**, **VB**, und **C++**.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LanguageSourceExtension">
+      <MemberSignature Language="C#" Value="public string LanguageSourceExtension { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LanguageSourceExtension" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.LanguageSourceExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Erweiterung, die mit der Erweiterung von der generierten verwalteten Codedatei angefügt ist.</summary>
+        <value>Die Erweiterung, die die Erweiterung der generierten angefügt wird, verwaltet Codedatei.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LocalizationDirectivesToLocFile">
+      <MemberSignature Language="C#" Value="public string LocalizationDirectivesToLocFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalizationDirectivesToLocFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.LocalizationDirectivesToLocFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie Lokalisierungsinformationen für die einzelnen generiert [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Datei.</summary>
+        <value>Ein Wert, der angibt, wie Lokalisierungsinformationen für die einzelnen generiert [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Datei. Gültige Werte sind **keine**, **CommentsOnly**, und **alle**.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OutputPath">
+      <MemberSignature Language="C#" Value="public string OutputPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OutputPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.OutputPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Speicherort der generierten Codedateien fest.</summary>
+        <value>Der Speicherort der generierten Codedateien.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OutputType">
+      <MemberSignature Language="C#" Value="public string OutputType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OutputType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.OutputType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausgabetyp der Assembly fest.</summary>
+        <value>Der Typ der Assembly, die von einem Projekt generiert wird. Gültige Werte sind **Winexe**, **Exe**, **Bibliothek**, und **Netmodule**.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PageMarkup">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] PageMarkup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] PageMarkup" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.PageMarkup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Liste der [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Dateien zum Prozess.</summary>
+        <value>Eine Liste der [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Dateien zum Prozess.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="References">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] References { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] References" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.References" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Assemblyverweise.</summary>
+        <value>Die Assemblyverweise.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RequirePass2ForMainAssembly">
+      <MemberSignature Language="C#" Value="public bool RequirePass2ForMainAssembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequirePass2ForMainAssembly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.RequirePass2ForMainAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Projekt enthält nicht lokalisierbaren [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Dateien, die auf lokale Typen verweisen, die in die Hauptassembly eingebettet sind.</summary>
+        <value>
+          <see langword="true" />Wenn das Projekt nicht lokalisierbaren enthält [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Dateien, die auf lokale Typen verweisen, die in die Haupt-Assembly eingebettete ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RequirePass2ForSatelliteAssembly">
+      <MemberSignature Language="C#" Value="public bool RequirePass2ForSatelliteAssembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequirePass2ForSatelliteAssembly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.RequirePass2ForSatelliteAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Projekt enthält lokalisierbare [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Dateien, die auf lokale Typen verweisen, die in der Satellitenassembly eingebettet sind.</summary>
+        <value>
+          <see langword="true" />Wenn das Projekt p lokalisierbare enthält [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Dateien, die auf lokale Typen verweisen, die in die Satellitenassembly eingebettet ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RootNamespace">
+      <MemberSignature Language="C#" Value="public string RootNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootNamespace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.RootNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Stammnamespace der Klassen im Projekt.</summary>
+        <value>Der Stammnamespace der Klassen im Projekt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SourceCodeFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] SourceCodeFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] SourceCodeFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.SourceCodeFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Quellliste für die Datei von Code für das aktuelle Projekt.</summary>
+        <value>Der Code Quellliste Datei aus, für das aktuelle Projekt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SplashScreen">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] SplashScreen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] SplashScreen" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.SplashScreen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Bild des Begrüßungsbildschirms vor der anwendungsinitialisierung angezeigt werden.</summary>
+        <value>Bild des Begrüßungsbildschirms.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UICulture">
+      <MemberSignature Language="C#" Value="public string UICulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UICulture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.UICulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, welche Kultur Satellitenassembly generierten festhält, [!INCLUDE[TLA#tla_baml](~/includes/tlasharptla-baml-md.md)] Dateien.</summary>
+        <value>Ein Wert, der angibt, welche Kultur Satellitenassembly generierten festhält, [!INCLUDE[TLA#tla_baml](~/includes/tlasharptla-baml-md.md)] Dateien.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="XamlDebuggingInformation">
+      <MemberSignature Language="C#" Value="public bool XamlDebuggingInformation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool XamlDebuggingInformation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.XamlDebuggingInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Diagnoseinformationen generiert und in der kompilierten enthalten [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] um Debuggen zu unterstützen.</summary>
+        <value>
+          <see langword="true" />Wenn Sie Diagnoseinformationen generiert und in der kompilierten enthalten [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] zum Unterstützen von Debuggen; anderenfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

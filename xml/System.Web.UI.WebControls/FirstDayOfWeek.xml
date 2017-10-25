@@ -1,0 +1,161 @@
+<Type Name="FirstDayOfWeek" FullName="System.Web.UI.WebControls.FirstDayOfWeek">
+  <TypeSignature Language="C#" Value="public enum FirstDayOfWeek" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FirstDayOfWeek extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FirstDayOfWeek" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Tag an den ersten Tag der Woche anzuzeigen, auf die <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FirstDayOfWeek> -Enumeration stellt dar, die Werte, die angeben, welcher Tag als erster Tag der Woche anzuzeigen, auf die <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf eine Dropdown-Liste zu verwenden, um den ersten Tag der Woche für das Kalender-Steuerelement festzulegen.  
+  
+ [!code-aspx-csharp[CalendarFirstDayOfWeek#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarFirstDayOfWeek/CS/calendarfirstdayofweekcs.aspx#1)]
+ [!code-aspx-vb[CalendarFirstDayOfWeek#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarFirstDayOfWeek/VB/calendarfirstdayofweekvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FirstDayOfWeek Default = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FirstDayOfWeek.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der erste Tag der Woche von den Systemeinstellungen angegeben ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Friday">
+      <MemberSignature Language="C#" Value="Friday" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FirstDayOfWeek Friday = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FirstDayOfWeek.Friday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der erste Tag der Woche Freitag ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Monday">
+      <MemberSignature Language="C#" Value="Monday" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FirstDayOfWeek Monday = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FirstDayOfWeek.Monday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der erste Tag der Woche Montag ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Saturday">
+      <MemberSignature Language="C#" Value="Saturday" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FirstDayOfWeek Saturday = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FirstDayOfWeek.Saturday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der erste Tag der Woche Samstag ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sunday">
+      <MemberSignature Language="C#" Value="Sunday" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FirstDayOfWeek Sunday = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FirstDayOfWeek.Sunday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der erste Tag der Woche Sonntag ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Thursday">
+      <MemberSignature Language="C#" Value="Thursday" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FirstDayOfWeek Thursday = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FirstDayOfWeek.Thursday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der erste Tag der Woche ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tuesday">
+      <MemberSignature Language="C#" Value="Tuesday" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FirstDayOfWeek Tuesday = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FirstDayOfWeek.Tuesday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der erste Tag der Woche Dienstag ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Wednesday">
+      <MemberSignature Language="C#" Value="Wednesday" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FirstDayOfWeek Wednesday = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FirstDayOfWeek.Wednesday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der erste Tag der Woche Mittwoch ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

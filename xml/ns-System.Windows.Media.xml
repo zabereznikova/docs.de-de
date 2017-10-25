@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Media">
+  <Docs>
+    <summary>Enthält Typen, die Integration von rich-Media, einschließlich Zeichnungen, Text und Audio/Video-Inhalt in Windows Presentation Foundation (WPF)-Anwendungen zu ermöglichen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

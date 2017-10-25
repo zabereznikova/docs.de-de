@@ -1,0 +1,160 @@
+<Type Name="UserNameSecurityTokenAuthenticator" FullName="System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator">
+  <TypeSignature Language="C#" Value="public abstract class UserNameSecurityTokenAuthenticator : System.IdentityModel.Selectors.SecurityTokenAuthenticator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit UserNameSecurityTokenAuthenticator extends System.IdentityModel.Selectors.SecurityTokenAuthenticator" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenAuthenticator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Authentifiziert ein <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" />-Sicherheitstoken.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie die <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>-Klasse, um Sicherheitstoken auf Grundlage von einem Benutzernamen und einem Kennwort zu authentifizieren.  
+  
+ Der [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] wird mit den folgenden Klassen versendet, die Support für das Authentifizieren von <xref:System.IdentityModel.Tokens.UserNameSecurityToken>-Sicherheitstoken bereitstellen.  
+  
+|Typ|Beschreibung|  
+|----------|-----------------|  
+|<xref:System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator>|Ermöglicht es einer Anwendung, ein benutzerdefiniertes Authentifizierungsschema für Benutzernamen und Kennwörter bereitzustellen. Das Authentifizierungsschema wird mit einer Klasse bereitgestellt, die von der <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>-Klasse abgeleitet wird.|  
+|<xref:System.IdentityModel.Selectors.WindowsUserNameSecurityTokenAuthenticator>|Authentifiziert den Benutzernamen und das Kennwort als Windows-Konto.|  
+  
+ Die meisten Authentifizierungsschemen verwenden die <xref:System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator>-Klasse und implementieren eine Klasse, die von der <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>-Klasse abgeleitet wird.  Wenn allerdings zusätzliche Flexibilität erforderlich ist, können Sie eine Klasse von der <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>-Klasse ableiten und die <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%2A>-Methode überschreiben.  
+  
+   
+  
+## Examples  
+ [!code-csharp[UserNameSecurityTokenAuthenticator#0](~/samples/snippets/csharp/VS_Snippets_CFX/usernamesecuritytokenauthenticator/cs/mytokenauthenticator.cs#0)]
+ [!code-vb[UserNameSecurityTokenAuthenticator#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/usernamesecuritytokenauthenticator/vb/mytokenauthenticator.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UserNameSecurityTokenAuthenticator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool CanValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.CanValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Die zu validierende <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob das angegebene Sicherheitstoken von diesem Sicherheitstoken-Authentifikator überprüft werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="token" /> ein <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" />-Sicherheitstoken ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.CanValidateTokenCore%2A>-Methode authentifiziert das Sicherheitstoken nicht. Dies wird von der <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode durchgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Die zu validierende <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</param>
+        <summary>Authentifiziert das angegebene Sicherheitstoken und gibt den Satz von Autorisierungsrichtlinien für das Sicherheitstoken zurück.</summary>
+        <returns>Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> des Typs <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" />, der den Satz von Autorisierungsrichtlinien für diese Anwendung praktisch enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode ruft die <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%2A>-Methode auf, um den `token`-Parameter unter Verwendung des Benutzernamens und des Kennworts zu authentifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateUserNamePasswordCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateUserNamePasswordCore (string userName, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateUserNamePasswordCore(string userName, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userName" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="userName">Der dem Sicherheitstoken zugeordnete Benutzername.</param>
+        <param name="password">Das dem Sicherheitstoken zugeordnete Kennwort.</param>
+        <summary>Authentifiziert beim Überschreiben in einer abgeleiteten Klasse den angegebenen Benutzernamen und das Kennwort und gibt den Satz von Autorisierungsrichtlinien für <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" />-Sicherheitstoken zurück.</summary>
+        <returns>Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> des Typs <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" />, der den Satz von Autorisierungsrichtlinien für diese Anwendung praktisch enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie die <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%2A>-Methode, um <xref:System.IdentityModel.Tokens.UserNameSecurityToken>-Sicherheitstoken zu authentifizieren.  
+  
+ Wenn die <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%2A>-Methode überschrieben wird, beachten Sie die folgenden Richtlinien:  
+  
+-   Wenn das in den `token`-Parameter übergebene Sicherheitstoken nicht überprüft werden kann, wird die <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>-Ausnahme ausgegeben.  
+  
+-   Wenn für diese Anwendung praktisch keine Autorisierungsrichtlinien vorhanden sind, wird eine leere <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> des Typs <xref:System.IdentityModel.Policy.IAuthorizationPolicy> zurückgegeben.  
+  
+ Wenn `null` von dieser Methode zurückgegeben wird, löst [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] die <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>-Ausnahme aus.  
+  
+   
+  
+## Examples  
+ [!code-csharp[UserNameSecurityTokenAuthenticator#1](~/samples/snippets/csharp/VS_Snippets_CFX/usernamesecuritytokenauthenticator/cs/mytokenauthenticator.cs#1)]
+ [!code-vb[UserNameSecurityTokenAuthenticator#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/usernamesecuritytokenauthenticator/vb/mytokenauthenticator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

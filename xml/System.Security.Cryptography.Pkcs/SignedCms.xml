@@ -1,0 +1,705 @@
+<Type Name="SignedCms" FullName="System.Security.Cryptography.Pkcs.SignedCms">
+  <TypeSignature Language="C#" Value="public sealed class SignedCms" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SignedCms extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.SignedCms" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> Klasse ermöglicht, Signieren und Überprüfen der CMS/PKCS #7-Nachrichten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Cryptographic Message Syntax RFC gibt die folgenden MIME-Typen und die Dateinamenerweiterungen für CMS/PKCS #7-Nachrichten mit der Content-Arten an.  
+  
+|Inhaltstyp|MIME-Typ|Erweiterung|  
+|------------------|---------------|---------------|  
+|envelopedData|Anwendung/pkcs7-MIME-|P7M|  
+|signedData|Anwendung/pkcs7-Signatur|. p7s.p7c|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignedCms ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Der <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.#ctor" />-Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Pkcs.SignedCms> -Klasse verfügt über die folgenden Standardwerte für die Eigenschaft.  
+  
+|Eigenschaft|Standardwert|  
+|--------------|-------------------|  
+|<xref:System.Security.Cryptography.Pkcs.SignedCms.ContentInfo%2A>|1.2.840.113549.1.7.1 (Daten) Länge: 0 (null)|  
+|<xref:System.Security.Cryptography.Pkcs.SignedCms.Detached%2A>|Status getrennt: `false` der signierte Inhalt ist in der CMS/PKCS #7-Meldung zusammen mit den Informationen zur Signatur enthalten.|  
+  
+ Die Standardeinstellung <xref:System.Security.Cryptography.Pkcs.SubjectIdentifierType> für Signaturgeber lautet SubjectIdentifierType.IssuerAndSerialNumber.  
+  
+ Wenn der getrennte Status ist `false` (Standard), der signierte Inhalt ist in der CMS/PKCS #7-Meldung zusammen mit den Informationen zur Signatur enthalten. Wenn der getrennte Status ist `true`, Clients, die nicht decodiert werden S/MIME-Nachrichten können können weiterhin den Inhalt der Nachricht angezeigt, gesondert gesendet. Dies kann in einer Anwendung zur Archivierung nützlich sein, der Nachrichteninhalt archiviert, ob der Absender der Nachricht für die Echtheit überprüft werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignedCms (System.Security.Cryptography.Pkcs.ContentInfo content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Pkcs.ContentInfo content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.#ctor(System.Security.Cryptography.Pkcs.ContentInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentInfo" Type="System.Security.Cryptography.Pkcs.ContentInfo" />
+      </Parameters>
+      <Docs>
+        <param name="content">To be added.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.#ctor(System.Security.Cryptography.Pkcs.ContentInfo)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> -Klasse unter Verwendung der angegebenen Inhaltsinformationen als innerer Inhalt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardwerte für Eigenschaften mit diesem Konstruktor verwendet, finden Sie unter <xref:System.Security.Cryptography.Pkcs.SignedCms.%23ctor>.  
+  
+ Wenn der getrennte Status ist `false` (Standard), der signierte Inhalt ist in der CMS/PKCS #7-Meldung zusammen mit den Informationen zur Signatur enthalten. Wenn der getrennte Status ist `true`, Clients, die nicht decodiert werden S/MIME-Nachrichten können können weiterhin den Inhalt der Nachricht angezeigt, gesondert gesendet. Dies kann in einer Anwendung zur Archivierung nützlich sein, die Inhalte archiviert, ob der Absender der Nachricht für die Echtheit überprüft werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignedCms (System.Security.Cryptography.Pkcs.SubjectIdentifierType signerIdentifierType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.Pkcs.SubjectIdentifierType signerIdentifierType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.#ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signerIdentifierType" Type="System.Security.Cryptography.Pkcs.SubjectIdentifierType" />
+      </Parameters>
+      <Docs>
+        <param name="signerIdentifierType">Ein <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifierType" /> Member, der Bezeichner den Standardtyp-Betreff für Signaturgeber angibt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.#ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> Klasse, indem Sie den Typ des angegebenen Antragstellers Bezeichner als Betreff Bezeichner Standardtyp für Signaturgeber.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardwerte für Eigenschaften mit diesem Konstruktor verwendet, finden Sie unter <xref:System.Security.Cryptography.Pkcs.SignedCms.%23ctor>.  
+  
+ Wenn der getrennte Status ist `false` (Standard), der signierte Inhalt ist in der CMS/PKCS #7-Meldung zusammen mit den Informationen zur Signatur enthalten. Wenn der getrennte Status ist `true`, Clients, die nicht decodiert werden S/MIME-Nachrichten können können weiterhin den Inhalt der Nachricht angezeigt, gesondert gesendet. Dies kann in einer Anwendung zur Archivierung nützlich sein, die Inhalte archiviert, ob der Absender der Nachricht für die Echtheit überprüft werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignedCms (System.Security.Cryptography.Pkcs.ContentInfo content, bool detached);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Pkcs.ContentInfo content, bool detached) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.#ctor(System.Security.Cryptography.Pkcs.ContentInfo,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentInfo" Type="System.Security.Cryptography.Pkcs.ContentInfo" />
+        <Parameter Name="detached" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="content">To be added.</param>
+        <param name="detached">Ein <see cref="T:System.Boolean" /> Wert, der angibt, ob die <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> Objekt ist eine getrennte Signatur. Wenn <c>getrennt</c> ist <see langword="true" />, die Signatur wird getrennt. Wenn <c>getrennt</c> ist <see langword="false" />, ist die Signatur nicht getrennt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.#ctor(System.Security.Cryptography.Pkcs.ContentInfo,System.Boolean)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> -Klasse mit dem angegebenen Inhalt als innerer Inhalt und mithilfe der getrennten Zustand befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardwerte für Eigenschaften mit diesem Konstruktor verwendet, finden Sie unter <xref:System.Security.Cryptography.Pkcs.SignedCms.%23ctor>.  
+  
+ Wenn der getrennte Status ist `false` (Standard), der signierte Inhalt ist in der CMS/PKCS #7-Meldung zusammen mit den Informationen zur Signatur enthalten. Wenn der getrennte Status ist `true`, Clients, die nicht decodiert werden S/MIME-Nachrichten können können weiterhin den Inhalt der Nachricht angezeigt, gesondert gesendet. Dies kann in einer Anwendung zur Archivierung nützlich sein, die Inhalte archiviert, ob der Absender der Nachricht für die Echtheit überprüft werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignedCms (System.Security.Cryptography.Pkcs.SubjectIdentifierType signerIdentifierType, System.Security.Cryptography.Pkcs.ContentInfo content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.Pkcs.SubjectIdentifierType signerIdentifierType, class System.Security.Cryptography.Pkcs.ContentInfo content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.#ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType,System.Security.Cryptography.Pkcs.ContentInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signerIdentifierType" Type="System.Security.Cryptography.Pkcs.SubjectIdentifierType" />
+        <Parameter Name="contentInfo" Type="System.Security.Cryptography.Pkcs.ContentInfo" />
+      </Parameters>
+      <Docs>
+        <param name="signerIdentifierType">Ein <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifierType" /> Member, der Bezeichner den Standardtyp-Betreff für Signaturgeber angibt.</param>
+        <param name="content">To be added.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.#ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType,System.Security.Cryptography.Pkcs.ContentInfo)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> Klasse, indem Sie den Typ des angegebenen Antragstellers Bezeichner als Betreff Bezeichner Standardtyp für Signaturgeber und Inhaltsinformationen, die als innerer Inhalt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardwerte für Eigenschaften mit diesem Konstruktor verwendet, finden Sie unter <xref:System.Security.Cryptography.Pkcs.SignedCms.%23ctor>.  
+  
+ Wenn der getrennte Status ist `false` (Standard), der signierte Inhalt ist in der CMS/PKCS #7-Meldung zusammen mit den Informationen zur Signatur enthalten. Wenn der getrennte Status ist `true`, Clients, die nicht decodiert werden S/MIME-Nachrichten können können weiterhin den Inhalt der Nachricht angezeigt, gesondert gesendet. Dies kann in einer Anwendung zur Archivierung nützlich sein, die Inhalte archiviert, ob der Absender der Nachricht für die Echtheit überprüft werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignedCms (System.Security.Cryptography.Pkcs.SubjectIdentifierType signerIdentifierType, System.Security.Cryptography.Pkcs.ContentInfo content, bool detached);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.Pkcs.SubjectIdentifierType signerIdentifierType, class System.Security.Cryptography.Pkcs.ContentInfo content, bool detached) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.#ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType,System.Security.Cryptography.Pkcs.ContentInfo,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signerIdentifierType" Type="System.Security.Cryptography.Pkcs.SubjectIdentifierType" />
+        <Parameter Name="contentInfo" Type="System.Security.Cryptography.Pkcs.ContentInfo" />
+        <Parameter Name="detached" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="signerIdentifierType">Ein <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifierType" /> Member, der Bezeichner den Standardtyp-Betreff für Signaturgeber angibt.</param>
+        <param name="content">To be added.</param>
+        <param name="detached">Ein <see cref="T:System.Boolean" /> Wert, der angibt, ob die <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> Objekt ist eine getrennte Signatur. Wenn <c>getrennt</c> ist <see langword="true" />, die Signatur wird getrennt. Wenn getrennt ist <see langword="false" />, ist die Signatur nicht getrennt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.#ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType,System.Security.Cryptography.Pkcs.ContentInfo,System.Boolean)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> Klasse anhand der angegebenen Betreff Bezeichner als Standardtyp Betreff Bezeichner für den Signaturgeber, die Inhaltsinformationen als inneren Inhalt und mithilfe der getrennten Zustand befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der getrennte Status ist `false` (Standard), der signierte Inhalt ist in der CMS/PKCS #7-Meldung zusammen mit den Informationen zur Signatur enthalten. Wenn der getrennte Status ist `true`, Clients, die nicht decodiert werden S/MIME-Nachrichten können können weiterhin den Inhalt der Nachricht angezeigt, gesondert gesendet. Dies kann in einer Anwendung zur Archivierung nützlich sein, der Nachrichteninhalt archiviert, und zwar unabhängig davon, ob der Absender der Nachricht für die Echtheit überprüft werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Certificates">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2Collection Certificates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2Collection Certificates" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SignedCms.Certificates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SignedCms.Certificates" /> -Eigenschaft ruft die zugeordneten Zertifikate für die codierte CMS/PKCS #7-Meldung ab.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> -Auflistung, welche Zertifikate für die codierte CMS/PKCS #7-Meldung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckHash">
+      <MemberSignature Language="C#" Value="public void CheckHash ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CheckHash() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.CheckHash" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.CheckHash" /> Methode überprüft die Integrität der Daten von der CMS/PKCS #7-Meldung. <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.CheckHash" />ist eine spezielle Methode in bestimmten sicherheitsanwendungen-Infrastruktur verwendet, nur die möchten den Hash der CMS-Nachricht zu überprüfen, sondern führen Sie eine vollständige digitale signaturüberprüfung. <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.CheckHash" />nicht den Autor noch den Absender der Nachricht authentifizieren, da diese Methode keine beinhaltet Überprüfen einer digitalen Signatur. Allgemeine zur Überprüfung der Integrität und die Authentizität der Nachricht CMS/PKCS #7 verwenden die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.CheckSignature(System.Boolean)" /> oder <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.CheckSignature(System.Security.Cryptography.X509Certificates.X509Certificate2Collection,System.Boolean)" /> Methoden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet keine Authentifizierung von der CMS/PKCS #7-Meldung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ein Methodenaufruf war für den aktuellen Zustands des Objekts ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckSignature">
+      <MemberSignature Language="C#" Value="public void CheckSignature (bool verifySignatureOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CheckSignature(bool verifySignatureOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.CheckSignature(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verifySignatureOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="verifySignatureOnly">Ein <see cref="T:System.Boolean" /> Wert, der angibt, ob nur die digitalen Signaturen überprüft werden, ohne Zertifikate der Signaturgeber, die überprüft wird.  
+  
+ Wenn <c>VerifySignatureOnly</c> ist <see langword="true" />, nur die digitalen Signaturen überprüft werden. Ist er <see langword="false" />, die digitalen Signaturen überprüft werden, der Signaturgeber Zertifikate werden überprüft und im Rahmen der Zertifikate überprüft werden. Im Rahmen eines Zertifikats werden als gültig betrachtet, wenn das Zertifikat keine Schlüsselverwendung aufweist oder wenn die Schlüsselverwendung digitale Signaturen oder Nichtabstreitbarkeit unterstützt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.CheckSignature(System.Boolean)" /> Methode überprüft die digitalen Signaturen der CMS/PKCS #7-Meldung und optional die Zertifikate der Signaturgeber überprüft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft alle Signaturen, einschließlich der Gegensignaturen, auf der CMS/PKCS #7-Meldung. Wenn mit Vorzeichen mit der Nachricht enthaltenen Attribute vorhanden sind, werden diese Attribute auch überprüft werden. Wenn die Option ausgewählt wird, um Zertifikate zu überprüfen, wird der gesamte eingeschlossene Teil der Zertifikatskette validiert.  
+  
+ Diese Methode löst eine Ausnahme aus, wenn die Überprüfung einer digitalen Signatur ein Fehler auftritt oder Überprüfung nicht erfüllt sind.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Platzierung von <xref:System.Security.Cryptography.Pkcs.SignedCms.CheckSignature%28System.Boolean%29> zwischen die erforderlichen Schritte zum Überprüfen der Signaturen einer <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht. In diesem Beispiel wird der Nachrichteninhalt nicht getrennt werden. Der Inhalt der Meldung ist in enthalten die <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht.  
+  
+ [!code-csharp[mpkcs_SignedCMS#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/mpkcs_SignedCMS/cs/Program.cs#1)]
+ [!code-vb[mpkcs_SignedCMS#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/mpkcs_SignedCMS/vb/Program.vb#1)]  
+  
+ Das folgende Beispiel zeigt die Platzierung von <xref:System.Security.Cryptography.Pkcs.SignedCms.CheckSignature%28System.Boolean%29> zwischen die erforderlichen Schritte zum Überprüfen der Signaturen einer <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht. In diesem Beispiel der Nachrichteninhalt wird getrennt, daher muss der Inhalt der Meldung überprüft, unabhängig von der <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht.  
+  
+ [!code-csharp[mpkcs_SignedCMS#2](~/samples/snippets/csharp/VS_Snippets_WindowsServer/mpkcs_SignedCMS/cs/Program.cs#2)]
+ [!code-vb[mpkcs_SignedCMS#2](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/mpkcs_SignedCMS/vb/Program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein Methodenaufruf war für den aktuellen Zustands des Objekts ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckSignature">
+      <MemberSignature Language="C#" Value="public void CheckSignature (System.Security.Cryptography.X509Certificates.X509Certificate2Collection extraStore, bool verifySignatureOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CheckSignature(class System.Security.Cryptography.X509Certificates.X509Certificate2Collection extraStore, bool verifySignatureOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.CheckSignature(System.Security.Cryptography.X509Certificates.X509Certificate2Collection,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extraStore" Type="System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />
+        <Parameter Name="verifySignatureOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="extraStore">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> -Objekt, das zum Überprüfen der Zertifikatskette verwendet werden kann. Wenn keine weiteren Zertifikate verwendet werden, verwenden, um die Überprüfung der Zertifikatkette <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.CheckSignature(System.Boolean)" /> anstelle von <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.CheckSignature(System.Security.Cryptography.X509Certificates.X509Certificate2Collection,System.Boolean)" />.</param>
+        <param name="verifySignatureOnly">Ein <see cref="T:System.Boolean" /> Wert, der angibt, ob nur die digitalen Signaturen überprüft werden, ohne Zertifikate der Signaturgeber, die überprüft wird.  
+  
+ Wenn <c>VerifySignatureOnly</c> ist <see langword="true" />, nur die digitalen Signaturen überprüft werden. Ist er <see langword="false" />, die digitalen Signaturen überprüft werden, der Signaturgeber Zertifikate werden überprüft und im Rahmen der Zertifikate überprüft werden. Im Rahmen eines Zertifikats werden als gültig betrachtet, wenn das Zertifikat keine Schlüsselverwendung aufweist oder wenn die Schlüsselverwendung digitale Signaturen oder Nichtabstreitbarkeit unterstützt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.CheckSignature(System.Security.Cryptography.X509Certificates.X509Certificate2Collection,System.Boolean)" /> Methode überprüft die digitalen Signaturen der CMS/PKCS #7-Meldung mit der angegebenen Auflistung von Zertifikaten und validiert optional die Zertifikate der Signaturgeber.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft alle Signaturen, einschließlich der Gegensignaturen, auf der CMS/PKCS #7-Meldung. Wenn mit Vorzeichen mit der Nachricht enthaltenen Attribute vorhanden sind, werden diese Attribute auch überprüft werden. Wenn die Option ausgewählt wird, um Zertifikate zu überprüfen, wird der gesamte eingeschlossene Teil der Zertifikatskette validiert.  
+  
+ Diese Methode löst eine Ausnahme aus, wenn die Überprüfung einer digitalen Signatur ein Fehler auftritt oder Überprüfung nicht erfüllt sind.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Platzierung von <xref:System.Security.Cryptography.Pkcs.SignedCms.CheckSignature%28System.Security.Cryptography.X509Certificates.X509Certificate2Collection%2CSystem.Boolean%29> zwischen die erforderlichen Schritte zum Überprüfen der Signaturen einer <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht. In diesem Beispiel der Nachrichteninhalt nicht getrennt ist, damit der Inhalt der Meldung, in enthalten ist der <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht.  
+  
+ [!code-csharp[mpkcs_SignedCMS#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/mpkcs_SignedCMS/cs/Program.cs#1)]
+ [!code-vb[mpkcs_SignedCMS#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/mpkcs_SignedCMS/vb/Program.vb#1)]  
+  
+ Das folgende Beispiel zeigt die Platzierung von <xref:System.Security.Cryptography.Pkcs.SignedCms.CheckSignature%28System.Security.Cryptography.X509Certificates.X509Certificate2Collection%2CSystem.Boolean%29> zwischen die erforderlichen Schritte zum Überprüfen der Signaturen einer <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht. In diesem Beispiel der Nachrichteninhalt wird getrennt, damit der Inhalt der Meldung werden, unabhängig von überprüft muss der <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht.  
+  
+ [!code-csharp[mpkcs_SignedCMS#2](~/samples/snippets/csharp/VS_Snippets_WindowsServer/mpkcs_SignedCMS/cs/Program.cs#2)]
+ [!code-vb[mpkcs_SignedCMS#2](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/mpkcs_SignedCMS/vb/Program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein Methodenaufruf war für den aktuellen Zustands des Objekts ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeSignature">
+      <MemberSignature Language="C#" Value="public void ComputeSignature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ComputeSignature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature" /> Methode der Benutzer aufgefordert, ein Signaturzertifikat auswählen, erstellt eine Signatur und fügt die Signatur der CMS/PKCS #7-Meldung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode zeigt eine Benutzeroberfläche, in der Sie Signaturgeber für diese Nachricht auswählen. Dies erfordert, dass der aktuelle Prozess, in ausgeführt wird *interaktiven Modus*, d. h., die die <xref:System.Environment.UserInteractive%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true`. Ein Prozess befindet sich normalerweise im interaktiven Modus, es sei denn, eine Dienstprozess oder die Ausführung in einer Webanwendung ist.  
+  
+ Signaturgeber, dessen Zertifikate die folgenden Bedingungen erfüllen, werden in der Liste angezeigt werden:  
+  
+-   Das Zertifikat verfügt über einen zugeordneten privaten Schlüssel.  
+  
+-   Das Zertifikat ist in seinem Gültigkeitszeitraum liegen.  
+  
+-   Das Zertifikat weist keine Schlüsselverwendung oder eine Schlüsselverwendung, die digitale Signaturen oder Nichtabstreitbarkeit unterstützt.  
+  
+ Signaturgeberzertifikate ausgewählt sind, aus dem persönlichen Speicher.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Die folgenden Berechtigungen sind erforderlich, um die Benutzeroberfläche anzuzeigen:  
+  
+-   <xref:System.Security.Permissions.UIPermissionWindow?displayProperty=nameWithType>  
+  
+ Die folgenden Berechtigungen sind erforderlich, auf den Signaturschlüssel zuzugreifen:  
+  
+-   <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType>  
+  
+-   <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Schritte zum Berechnen einer Signatur ein <xref:System.Security.Cryptography.Pkcs.SignedCms> -Meldung mit dem Inhalt von Nachrichten, die nicht getrennt ist. In diesem Fall wird der Inhalt der Meldung enthalten, der <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht.  
+  
+ [!code-csharp[mpkcs_SignedCMS#3](~/samples/snippets/csharp/VS_Snippets_WindowsServer/mpkcs_SignedCMS/cs/Program.cs#3)]
+ [!code-vb[mpkcs_SignedCMS#3](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/mpkcs_SignedCMS/vb/Program.vb#3)]  
+  
+ Das folgende Beispiel zeigt die Schritte zum Berechnen einer Signatur ein <xref:System.Security.Cryptography.Pkcs.SignedCms> -Meldung mit dem Inhalt von Nachrichten, die getrennt ist. In diesem Fall muss der Inhalt der Meldung überprüft werden, unabhängig von der <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht.  
+  
+ [!code-csharp[mpkcs_SignedCMS#4](~/samples/snippets/csharp/VS_Snippets_WindowsServer/mpkcs_SignedCMS/cs/Program.cs#4)]
+ [!code-vb[mpkcs_SignedCMS#4](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/mpkcs_SignedCMS/vb/Program.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeSignature">
+      <MemberSignature Language="C#" Value="public void ComputeSignature (System.Security.Cryptography.Pkcs.CmsSigner signer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ComputeSignature(class System.Security.Cryptography.Pkcs.CmsSigner signer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signer" Type="System.Security.Cryptography.Pkcs.CmsSigner" />
+      </Parameters>
+      <Docs>
+        <param name="signer">Ein <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> -Objekt, das den Signaturgeber darstellt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner)" /> Methode erstellt mithilfe des angegebenen Signaturgebers eine Signatur und fügt die Signatur der CMS/PKCS #7-Meldung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Die folgenden Berechtigungen sind erforderlich, auf den Signaturschlüssel zuzugreifen:  
+  
+-   <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType>  
+  
+-   <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Schritte zum Berechnen einer Signatur ein <xref:System.Security.Cryptography.Pkcs.SignedCms> -Meldung mit dem Inhalt von Nachrichten, die nicht getrennt ist. In diesem Fall wird der Inhalt der Meldung enthalten, der <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht.  
+  
+ [!code-csharp[mpkcs_SignedCMS#3](~/samples/snippets/csharp/VS_Snippets_WindowsServer/mpkcs_SignedCMS/cs/Program.cs#3)]
+ [!code-vb[mpkcs_SignedCMS#3](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/mpkcs_SignedCMS/vb/Program.vb#3)]  
+  
+ Das folgende Beispiel zeigt die Schritte zum Berechnen einer Signatur ein <xref:System.Security.Cryptography.Pkcs.SignedCms> -Meldung mit dem Inhalt von Nachrichten, die getrennt ist. In diesem Fall muss der Inhalt der Meldung überprüft werden, unabhängig von der <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht.  
+  
+ [!code-csharp[mpkcs_SignedCMS#4](~/samples/snippets/csharp/VS_Snippets_WindowsServer/mpkcs_SignedCMS/cs/Program.cs#4)]
+ [!code-vb[mpkcs_SignedCMS#4](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/mpkcs_SignedCMS/vb/Program.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeSignature">
+      <MemberSignature Language="C#" Value="public void ComputeSignature (System.Security.Cryptography.Pkcs.CmsSigner signer, bool silent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ComputeSignature(class System.Security.Cryptography.Pkcs.CmsSigner signer, bool silent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signer" Type="System.Security.Cryptography.Pkcs.CmsSigner" />
+        <Parameter Name="silent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="signer">Ein <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> -Objekt, das den Signaturgeber darstellt.</param>
+        <param name="silent">
+          <see langword="false" />um den Benutzer zum Auswählen eines Signaturzertifikats zu aufzufordern.</param>
+        <summary>Erstellt mithilfe des angegebenen Signaturgebers eine Signatur und fügt die Signatur der CMS/PKCS #7-Meldung hinzu. Ist der Wert des Parameters im Hintergrund <see langword="false" /> und die <see cref="P:System.Security.Cryptography.Pkcs.CmsSigner.Certificate" /> Eigenschaft von der <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> durch den Signaturgeber-Parameter angegebene Objekt nicht zu einem gültigen Zertifikat festgelegt ist, diese Methode der Benutzer aufgefordert, ein Signaturzertifikat auszuwählen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Die folgenden Berechtigungen sind erforderlich, um die Benutzeroberfläche anzuzeigen:  
+  
+-   <xref:System.Security.Permissions.UIPermissionWindow?displayProperty=nameWithType>  
+  
+ Die folgenden Berechtigungen sind erforderlich, auf den Signaturschlüssel zuzugreifen:  
+  
+-   <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType>  
+  
+-   <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <paramref name="silent" /> Parameter ist <see langword="true" /> und ein Signaturzertifikat ist nicht angegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentInfo">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.ContentInfo ContentInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.ContentInfo ContentInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SignedCms.ContentInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.ContentInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SignedCms.ContentInfo" /> -Eigenschaft ruft die inneren Inhalte des codierten CMS/PKCS #7-Meldung ab.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Pkcs.ContentInfo" /> -Objekt, das den Inhalt der codierten CMS/PKCS #7-Meldung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decode">
+      <MemberSignature Language="C#" Value="public void Decode (byte[] encodedMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Decode(unsigned int8[] encodedMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.Decode(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encodedMessage" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encodedMessage">Ein Array von Bytewerten, das die codierte CMS/PKCS #7-Meldung zu decodierende darstellt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.Decode(System.Byte[])" /> Methode decodiert einen codierten <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> Nachricht. Nach erfolgreicher Decodierung kann die decodierte Informationen aus den Eigenschaften eines abgerufen werden die <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode setzt alle Membervariablen des Objekts anhand der Informationen aus der erfolgreichen Decodierung abgerufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Platzierung der <xref:System.Security.Cryptography.Pkcs.SignedCms.Decode%2A> Methode beim Überprüfen der Signaturen einer <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht. In diesem Beispiel der Nachrichteninhalt nicht getrennt ist, damit der Inhalt der Meldung, in enthalten ist der <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht.  
+  
+ [!code-csharp[mpkcs_SignedCMS#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/mpkcs_SignedCMS/cs/Program.cs#1)]
+ [!code-vb[mpkcs_SignedCMS#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/mpkcs_SignedCMS/vb/Program.vb#1)]  
+  
+ Das folgende Beispiel zeigt die Platzierung der <xref:System.Security.Cryptography.Pkcs.SignedCms.Decode%2A> Methode beim Überprüfen der Signaturen einer <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht. In diesem Beispiel der Nachrichteninhalt wird getrennt, damit der Inhalt der Meldung werden, unabhängig von überprüft muss der <xref:System.Security.Cryptography.Pkcs.SignedCms> Nachricht.  
+  
+ [!code-csharp[mpkcs_SignedCMS#2](~/samples/snippets/csharp/VS_Snippets_WindowsServer/mpkcs_SignedCMS/cs/Program.cs#2)]
+ [!code-vb[mpkcs_SignedCMS#2](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/mpkcs_SignedCMS/vb/Program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Detached">
+      <MemberSignature Language="C#" Value="public bool Detached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Detached" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SignedCms.Detached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SignedCms.Detached" /> Eigenschaft ruft, ob die <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> Objekt ist eine getrennte Signatur.</summary>
+        <value>Ein <see cref="T:System.Boolean" /> Wert, der angibt, ob die <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> Objekt ist eine getrennte Signatur. Wenn diese Eigenschaft ist <see langword="true" />, die Signatur wird getrennt. Wenn diese Eigenschaft ist <see langword="false" />, ist die Signatur nicht getrennt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public byte[] Encode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Encode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.Encode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.Encode" /> Methode codiert, die Informationen in das Objekt in einem CMS/PKCS #7-Meldung.</summary>
+        <returns>Ein Array von Bytewerten, das die codierte Nachricht darstellt. Die codierte Nachricht decodiert werden kann, durch die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.Decode(System.Byte[])" /> Methode.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein Methodenaufruf war für den aktuellen Zustands des Objekts ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSignature">
+      <MemberSignature Language="C#" Value="public void RemoveSignature (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveSignature(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.RemoveSignature(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden.</param>
+        <summary>Entfernt die Signatur am angegebenen Index aus der <see cref="P:System.Security.Cryptography.Pkcs.SignedCms.SignerInfos" /> Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Eine CMS/PKCS #7-Meldung wird nicht signiert, und <paramref name="index" /> ist ungültig.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" />ist größer als die Anzahl der Signatur minus 1.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die Signatur konnte nicht entfernt werden.  
+  
+ - oder -   
+  
+ Ein interner kryptografischer Fehler ist aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSignature">
+      <MemberSignature Language="C#" Value="public void RemoveSignature (System.Security.Cryptography.Pkcs.SignerInfo signerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveSignature(class System.Security.Cryptography.Pkcs.SignerInfo signerInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignedCms.RemoveSignature(System.Security.Cryptography.Pkcs.SignerInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signerInfo" Type="System.Security.Cryptography.Pkcs.SignerInfo" />
+      </Parameters>
+      <Docs>
+        <param name="signerInfo">Ein <see cref="T:System.Security.Cryptography.Pkcs.SignerInfo" /> -Objekt, das die zu entfernende Gegensignatur darstellt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignedCms.RemoveSignature(System.Security.Cryptography.Pkcs.SignerInfo)" /> Methode entfernt die Signatur für den angegebenen <see cref="T:System.Security.Cryptography.Pkcs.SignerInfo" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert eines Arguments war außerhalb des zulässigen Bereichs von Werten, wie von der aufgerufenen Methode definiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignerInfos">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.SignerInfoCollection SignerInfos { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.SignerInfoCollection SignerInfos" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SignedCms.SignerInfos" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.SignerInfoCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SignedCms.SignerInfos" /> -Eigenschaft ruft die <see cref="T:System.Security.Cryptography.Pkcs.SignerInfoCollection" /> der CMS/PKCS #7-Meldung zugeordnete Auflistung.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Pkcs.SignerInfoCollection" /> -Objekt, das Informationen über den Signaturgeber für die CMS/PKCS #7-Meldung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public int Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SignedCms.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SignedCms.Version" /> -Eigenschaft ruft die Version der CMS/PKCS #7-Meldung ab.</summary>
+        <value>Int-Wert, der die Version der CMS/PKCS #7-Meldung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Version bestimmt, ob die Nachricht eine PKCS #7-Nachricht oder eine Nachricht Cryptographic Message Syntax (CMS) ist. CMS ist eine neuere Obermenge von PKCS #7.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,53 @@
+<Type Name="IApplicationIdentifier" FullName="System.Runtime.Caching.Hosting.IApplicationIdentifier">
+  <TypeSignature Language="C#" Value="public interface IApplicationIdentifier" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IApplicationIdentifier" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.Hosting.IApplicationIdentifier" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Bezeichner für Anwendungsdomänen, die eine Cacheimplementierung für die Interaktion mit einer hostumgebung verwenden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] hostumgebung wie z. B. ASP.NET verwenden, kann die <xref:System.Runtime.Caching.Hosting.IApplicationIdentifier> Schnittstelle, um Zeichenfolgen zu definieren, die einzelne Anwendungsdomänen zu identifizieren. Die hostumgebung implementiert die <xref:System.Runtime.Caching.Hosting.IApplicationIdentifier> Schnittstelle. Diese Schnittstelle wird dann zur Verfügung <xref:System.Runtime.Caching.ObjectCache> Implementierungen über die <xref:System.Runtime.Caching.ObjectCache.Host%2A> Eigenschaft.  
+  
+ Eine Cacheimplementierung verwendet diesen Verweis um einen Bezeichner für die Anwendungsdomäne herunterzuladen. In ASP.NET verwenden Cache Implementierungen den Anwendungsbezeichner, um IDs für Cache-Leistungsindikatoren zu erstellen. Dies stellt Namen für die Leistungsindikatoreninstanzen, die zwischen Anwendungsdomänen, die Ausführung von mehreren Anwendungsdomänen unterschieden werden können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetApplicationId">
+      <MemberSignature Language="C#" Value="public string GetApplicationId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetApplicationId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Hosting.IApplicationIdentifier.GetApplicationId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Bezeichner für eine Anwendungsdomäne ab.</summary>
+        <returns>Ein eindeutiger Bezeichner für die aktuelle Anwendungsdomäne.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.Hosting.IApplicationIdentifier.GetApplicationId%2A> Methode wird in der Regel implementiert ein [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] hostumgebung, um einen Anwendungsbezeichner für erstellen eine <xref:System.Runtime.Caching.ObjectCache> Implementierung. Ein <xref:System.Runtime.Caching.ObjectCache> Implementierung verwendet diese Informationen, um die Anwendungsdomäne zu identifizieren, die zurzeit ausgeführt wird.  
+  
+ Beispielsweise verwendet der Cache in ASP.NET einen Anwendungsbezeichner-IDs für Cache-Leistungsindikatoren zu erstellen. Die Cache-Aufrufe der <xref:System.Runtime.Caching.Hosting.IApplicationIdentifier.GetApplicationId%2A> -Methode, die von der hostumgebung und dem Host implementiert wird, gibt den Bezeichner zurück. Dies stellt Namen für die Leistungsindikatoreninstanzen, die zwischen Anwendungsdomänen, die Ausführung von mehreren Anwendungsdomänen unterschieden werden können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

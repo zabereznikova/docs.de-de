@@ -1,0 +1,210 @@
+<Type Name="UdpAnnouncementEndpoint" FullName="System.ServiceModel.Discovery.UdpAnnouncementEndpoint">
+  <TypeSignature Language="C#" Value="public class UdpAnnouncementEndpoint : System.ServiceModel.Discovery.AnnouncementEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UdpAnnouncementEndpoint extends System.ServiceModel.Discovery.AnnouncementEndpoint" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.UdpAnnouncementEndpoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Discovery.AnnouncementEndpoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Standardendpunkt, der von Diensten verwendet wird, um Ankündigungsmeldungen über eine UDP-Bindung zu senden. Dieser Endpunkt erbt von <see cref="T:System.ServiceModel.Discovery.AnnouncementEndpoint" /> und hat auf ähnliche Weise einen festen Vertrag und unterstützt zwei Ermittlungsversionen. Außerdem weist er eine feste UDP-Bindung und einen Standardadresswert gemäß WS-Discovery-Spezifikationen (WS-Discovery Version April 2005 oder Version 1.1) auf. Daher müssen Sie im einfachsten Fall keinen dieser Werte angeben, wenn Sie einen <see cref="T:System.ServiceModel.Discovery.AnnouncementEndpoint" /> erstellen und zu einem Dienst hinzufügen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpAnnouncementEndpoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.UdpAnnouncementEndpoint" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpAnnouncementEndpoint (System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.#ctor(System.ServiceModel.Discovery.DiscoveryVersion)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="discoveryVersion" Type="System.ServiceModel.Discovery.DiscoveryVersion" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryVersion">Die Version des zu verwendenden WS-Discovery-Protokolls.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.UdpAnnouncementEndpoint" />-Klasse, die zur Verwendung der angegebenen <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" /> konfiguriert ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpAnnouncementEndpoint (string multicastAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string multicastAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="multicastAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="multicastAddress">Die Multicastadresse.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.UdpAnnouncementEndpoint" />-Klasse mit der angegebenen Multicastadresse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpAnnouncementEndpoint (Uri multicastAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri multicastAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="multicastAddress" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="multicastAddress">Die Multicastadresse.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.UdpAnnouncementEndpoint" />-Klasse mit der angegebenen Multicastadresse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpAnnouncementEndpoint (System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, string multicastAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, string multicastAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.#ctor(System.ServiceModel.Discovery.DiscoveryVersion,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="discoveryVersion" Type="System.ServiceModel.Discovery.DiscoveryVersion" />
+        <Parameter Name="multicastAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryVersion">Die Version des zu verwendenden WS-Discovery-Protokolls.</param>
+        <param name="multicastAddress">Die zu verwendende Multicastadresse.</param>
+        <summary>Erstellt eine neue Instanz des <see cref="T:System.ServiceModel.Discovery.UdpAnnouncementEndpoint" />, der zur Verwendung der angegebenen <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" /> und Multicastadresse konfiguriert ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpAnnouncementEndpoint (System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, Uri multicastAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, class System.Uri multicastAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.#ctor(System.ServiceModel.Discovery.DiscoveryVersion,System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="discoveryVersion" Type="System.ServiceModel.Discovery.DiscoveryVersion" />
+        <Parameter Name="multicastAddress" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryVersion">Die Version des zu verwendenden WS-Discovery-Protokolls.</param>
+        <param name="multicastAddress">Die zu verwendende Multicastadresse.</param>
+        <summary>Erstellt eine neue Instanz des <see cref="T:System.ServiceModel.Discovery.UdpAnnouncementEndpoint" />, der zur Verwendung der angegebenen <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" /> und Multicastadresse konfiguriert ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultIPv4MulticastAddress">
+      <MemberSignature Language="C#" Value="public static readonly Uri DefaultIPv4MulticastAddress;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Uri DefaultIPv4MulticastAddress" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.DefaultIPv4MulticastAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Standard-UDP-Multicastadresse für IPv4.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultIPv6MulticastAddress">
+      <MemberSignature Language="C#" Value="public static readonly Uri DefaultIPv6MulticastAddress;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Uri DefaultIPv6MulticastAddress" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.DefaultIPv6MulticastAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Standard-UDP-Multicastadresse für IPv6.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastAddress">
+      <MemberSignature Language="C#" Value="public Uri MulticastAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri MulticastAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.MulticastAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Multicastadresse des Endpunkts ab oder legt sie fest.</summary>
+        <value>Eine <see cref="T:System.Uri" />-Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.DefaultIPv4MulticastAddress>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.UdpTransportSettings TransportSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Discovery.UdpTransportSettings TransportSettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("TranportSettings property in System.SerivceModel.Discovery.UdpAnnouncementEndpoint is obsolete. Consider using System.ServiceModel.Channels.UdpTransportBindingElement for setting the transport properties.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.UdpTransportSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die UDP-Transporteinstellungen ab, die der <see cref="T:System.ServiceModel.Discovery.UdpAnnouncementEndpoint" />-Instanz zugeordnet sind.</summary>
+        <value>Die UDP-Transporteinstellungen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

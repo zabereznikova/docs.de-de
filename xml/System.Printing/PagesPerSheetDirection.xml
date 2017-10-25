@@ -1,0 +1,188 @@
+<Type Name="PagesPerSheetDirection" FullName="System.Printing.PagesPerSheetDirection">
+  <TypeSignature Language="C#" Value="public enum PagesPerSheetDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PagesPerSheetDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PagesPerSheetDirection" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Anordnung der Seiten an, wenn mehr als eine Seite des Inhalts auf eine einzelne Seite drucken Medien angezeigt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Werte dieses Typs hauptsächlich für folgende Zwecke:  
+  
+-   Als Mitglied der <xref:System.Printing.PrintCapabilities.PagesPerSheetDirectionCapability%2A> -Auflistung, die eine Eigenschaft des <xref:System.Printing.PrintCapabilities>, diese Werte geben an, die der Drucker unterstützt Regelung der Seite.  
+  
+-   Als Wert für die <xref:System.Printing.PrintTicket.PagesPerSheetDirection%2A> Eigenschaft eine <xref:System.Printing.PrintTicket>, weist der Wert den Drucker zum Anordnen von Seiten des Inhalts in einer angegebenen Richtung.  
+  
+ Die **unbekannte** Wert wird in den Eigenschaften der nie verwendet <xref:System.Printing.PrintCapabilities> Objekte.  
+  
+ Sollten Sie niemals Festlegen einer <xref:System.Printing.PrintTicket> Eigenschaft, um **unbekannte**. Wenn eine andere <xref:System.Printing.PrintTicket> erstellt wurde, erzeugt die Anwendung eine *PrintTicket-Dokument* die Seiten pro Blatt Richtung-Funktion auf eine unbekannte Option festlegt (also eine Option, die nicht in definiert ist die [drucken Schema](http://go.microsoft.com/fwlink/?LinkId=186397)), wird eine <xref:System.Printing.PrintTicket> -Objekt in der Anwendung, die mit diesem Dokument erstellt wird **unbekannte** als Wert für die <xref:System.Printing.PrintTicket.PagesPerSheetDirection%2A> Eigenschaft.  
+  
+ Obwohl die <xref:System.Printing.PrintTicket> und <xref:System.Printing.PrintCapabilities> Klassen können nicht vererbt werden, können Sie erweitern die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Druckgerät Funktionen zu erkennen, die nicht in berücksichtigt werden die <xref:System.Printing.PrintTicket> oder <xref:System.Printing.PrintCapabilities> Klassen. Weitere Informationen finden Sie unter [nicht im Build: Vorgehensweise: Erweitern der Druckschema und Erstellen von neuen Druckserver Systemklassen](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie einen Drucker Funktionen testen und konfigurieren den Druckauftrag aus, um diese nutzen.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BottomLeft">
+      <MemberSignature Language="C#" Value="BottomLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PagesPerSheetDirection BottomLeft = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PagesPerSheetDirection.BottomLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PagesPerSheetDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Seiten werden in Spalten von oben nach unten und rechts nach links im Verhältnis zur seitenausrichtung angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomRight">
+      <MemberSignature Language="C#" Value="BottomRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PagesPerSheetDirection BottomRight = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PagesPerSheetDirection.BottomRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PagesPerSheetDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Seiten werden in Spalten von oben nach unten und von links nach rechts im Verhältnis zur seitenausrichtung angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftBottom">
+      <MemberSignature Language="C#" Value="LeftBottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PagesPerSheetDirection LeftBottom = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PagesPerSheetDirection.LeftBottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PagesPerSheetDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Seiten in Zeilen, die von rechts nach links und von oben nach unten im Verhältnis zur seitenausrichtung angezeigt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftTop">
+      <MemberSignature Language="C#" Value="LeftTop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PagesPerSheetDirection LeftTop = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PagesPerSheetDirection.LeftTop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PagesPerSheetDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Seiten in Zeilen, die von rechts nach links und von unten nach oben im Verhältnis zur seitenausrichtung angezeigt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightBottom">
+      <MemberSignature Language="C#" Value="RightBottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PagesPerSheetDirection RightBottom = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PagesPerSheetDirection.RightBottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PagesPerSheetDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Seiten in Zeilen, die von links nach rechts und oben nach unten im Verhältnis zur seitenausrichtung angezeigt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightTop">
+      <MemberSignature Language="C#" Value="RightTop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PagesPerSheetDirection RightTop = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PagesPerSheetDirection.RightTop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PagesPerSheetDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Seiten in Zeilen, die von links nach rechts und von unten nach oben im Verhältnis zur seitenausrichtung angezeigt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeft">
+      <MemberSignature Language="C#" Value="TopLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PagesPerSheetDirection TopLeft = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PagesPerSheetDirection.TopLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PagesPerSheetDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Seiten werden in Spalten von unten nach oben und rechts nach links im Verhältnis zur seitenausrichtung angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopRight">
+      <MemberSignature Language="C#" Value="TopRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PagesPerSheetDirection TopRight = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PagesPerSheetDirection.TopRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PagesPerSheetDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Seiten werden in Spalten von unten nach oben und links nach rechts im Verhältnis zur seitenausrichtung angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PagesPerSheetDirection Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PagesPerSheetDirection.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PagesPerSheetDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Funktion (deren Optionen durch diese Enumeration dargestellt werden) ist eine Option festgelegt, nicht definiert, der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

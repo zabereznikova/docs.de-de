@@ -1,0 +1,66 @@
+<Type Name="CoordinateSpace" FullName="System.Drawing.Drawing2D.CoordinateSpace">
+  <TypeSignature Language="C#" Value="public enum CoordinateSpace" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CoordinateSpace extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.CoordinateSpace" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das System beim Auswerten der Koordinaten verwendet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Device">
+      <MemberSignature Language="C#" Value="Device" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CoordinateSpace Device = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CoordinateSpace.Device" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CoordinateSpace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass es sich bei den Gerätekontext-Koordinate Koordinaten sind. Auf einem Computerbildschirm des Geräts werden Koordinaten in der Regel in Pixel gemessen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="Page" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CoordinateSpace Page = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CoordinateSpace.Page" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CoordinateSpace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die-Koordinate Seitenkontext Koordinaten sind. Ihre Einheiten werden definiert, indem die <see cref="P:System.Drawing.Graphics.PageUnit" /> -Eigenschaft muss eines der Elemente von der <see cref="T:System.Drawing.GraphicsUnit" /> Enumeration.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="World">
+      <MemberSignature Language="C#" Value="World" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CoordinateSpace World = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CoordinateSpace.World" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CoordinateSpace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass globale Koordinaten Koordinaten sind. Globalen Koordinaten werden in einer nonphysical Umgebung, z. B. eine modellierungsumgebung verwendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

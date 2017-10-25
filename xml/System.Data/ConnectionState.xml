@@ -1,0 +1,199 @@
+<Type Name="ConnectionState" FullName="System.Data.ConnectionState">
+  <TypeSignature Language="C#" Value="public enum ConnectionState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConnectionState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.ConnectionState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt den aktuellen Status der Verbindung mit einer Datenquelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.ConnectionState> Werte werden verwendet, indem Sie die `State` Eigenschaft von der <xref:System.Data.OleDb.OleDbConnection> und <xref:System.Data.SqlClient.SqlConnection> Objekte.  
+  
+> [!NOTE]
+>  Die Werte in dieser Enumeration dienen nicht als eine Gruppe von Flags verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Broken">
+      <MemberSignature Language="C#" Value="Broken" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.ConnectionState Broken = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.ConnectionState.Broken" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ConnectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Verbindung mit der Datenquelle ist unterbrochen. Dies kann auftreten, nachdem die Verbindung geöffnet wurde. Eine Verbindung in diesem Zustand kann geschlossen und erneut geöffnet werden. (Dieser Wert ist für zukünftige Versionen des Produkts reserviert.)</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Closed">
+      <MemberSignature Language="C#" Value="Closed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.ConnectionState Closed = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.ConnectionState.Closed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ConnectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Verbindung ist geschlossen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Connecting">
+      <MemberSignature Language="C#" Value="Connecting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.ConnectionState Connecting = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.ConnectionState.Connecting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ConnectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Verbindungsobjekt stellt eine Verbindung mit der Datenquelle her.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Executing">
+      <MemberSignature Language="C#" Value="Executing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.ConnectionState Executing = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.ConnectionState.Executing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ConnectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Verbindungsobjekt wird die Ausführung eines Befehls. (Dieser Wert ist für zukünftige Versionen des Produkts reserviert.)</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fetching">
+      <MemberSignature Language="C#" Value="Fetching" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.ConnectionState Fetching = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.ConnectionState.Fetching" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ConnectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Verbindungsobjekt werden Daten abgerufen werden. (Dieser Wert ist für zukünftige Versionen des Produkts reserviert.)</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="Open" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.ConnectionState Open = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.ConnectionState.Open" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ConnectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Verbindung ist geöffnet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

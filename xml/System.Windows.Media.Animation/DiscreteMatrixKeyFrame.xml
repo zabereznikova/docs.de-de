@@ -1,0 +1,126 @@
+<Type Name="DiscreteMatrixKeyFrame" FullName="System.Windows.Media.Animation.DiscreteMatrixKeyFrame">
+  <TypeSignature Language="C#" Value="public class DiscreteMatrixKeyFrame : System.Windows.Media.Animation.MatrixKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DiscreteMatrixKeyFrame extends System.Windows.Media.Animation.MatrixKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.DiscreteMatrixKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.MatrixKeyFrame</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt mithilfe diskreter Interpolation eine Animation vom <see cref="T:System.Windows.Media.Matrix" />-Wert des vorherigen Keyframes bis zum eigenen <see cref="P:System.Windows.Media.Animation.MatrixKeyFrame.Value" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient als Teil einer <xref:System.Windows.Media.Animation.MatrixKeyFrameCollection> in Verbindung mit einem <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> zu animierende eine <xref:System.Windows.Media.Matrix> Eigenschaftswert für einen Satz von Keyframes.  
+  
+ Ein Keyframe definiert einen Zeitabschnitt der <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> zu der er gehört. Jedem Keyframe hat ein Ziel <xref:System.Windows.Media.Animation.MatrixKeyFrame.Value%2A> und ein <xref:System.Windows.Media.Animation.MatrixKeyFrame.KeyTime%2A>. Die <xref:System.Windows.Media.Animation.MatrixKeyFrame.KeyTime%2A> gibt an, der Zeitpunkt des Keyframes <xref:System.Windows.Media.Animation.MatrixKeyFrame.Value%2A> erreicht werden soll. Ein Keyframe erstellt eine Animation über den Zielwert des vorherigen Keyframes auf einem eigenen Zielwert aus. Es beginnt, wenn die vorherige Keyframes beendet und beendet, wenn eine eigene Schlüsselzeit erreicht ist.  
+  
+ Diskrete Keyframes wie <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> plötzlichen "Sprünge" zwischen Werten (keine Interpolation). Das heißt, wird die animierte Eigenschaft nicht geändert werden, bis Schlüsselzeit für den Keyframe erreicht ist an diesem Punkt die animierte Eigenschaft plötzlich den Zielwert wechselt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscreteMatrixKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteMatrixKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.DiscreteMatrixKeyFrame" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscreteMatrixKeyFrame (System.Windows.Media.Matrix value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Matrix value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteMatrixKeyFrame.#ctor(System.Windows.Media.Matrix)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Endwert (auch als „Zielwert“ bezeichnet) für den Keyframe.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.DiscreteMatrixKeyFrame" />-Klasse mit dem angegebenen Endwert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscreteMatrixKeyFrame (System.Windows.Media.Matrix value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Matrix value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteMatrixKeyFrame.#ctor(System.Windows.Media.Matrix,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Matrix" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Endwert (auch als „Zielwert“ bezeichnet) für den Keyframe.</param>
+        <param name="keyTime">Die Schlüsselzeit für den Keyframe. Die Schlüsselzeit bestimmt, wann der Zielwert erreicht wird, was auch dem Ende des Keyframes entspricht.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.DiscreteMatrixKeyFrame" />-Klasse mit dem angegebenen Endwert und der Schlüsselzeit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteMatrixKeyFrame.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz von <see cref="T:System.Windows.Media.Animation.DiscreteMatrixKeyFrame" />.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Matrix InterpolateValueCore (System.Windows.Media.Matrix baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Media.Matrix InterpolateValueCore(valuetype System.Windows.Media.Matrix baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteMatrixKeyFrame.InterpolateValueCore(System.Windows.Media.Matrix,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Windows.Media.Matrix" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">Der Wert, von dem animiert werden soll.</param>
+        <param name="keyFrameProgress">Ein Wert zwischen 0,0 und 1,0 (einschließlich), der den Prozentsatz der verstrichenen Zeit für diesen Keyframe angibt.</param>
+        <summary>Verwendet diskrete Interpolation für den Übergang zwischen dem vorherigen Keyframewert und dem Wert des aktuellen Keyframes.</summary>
+        <returns>Der Ausgabewert dieses Keyframes unter Verwendung des angegebenen Basiswerts und Fortschritts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,191 @@
+<Type Name="ConfigurationBasedIssuerNameRegistry" FullName="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry">
+  <TypeSignature Language="C#" Value="public class ConfigurationBasedIssuerNameRegistry : System.IdentityModel.Tokens.IssuerNameRegistry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConfigurationBasedIssuerNameRegistry extends System.IdentityModel.Tokens.IssuerNameRegistry" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.IssuerNameRegistry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine ausstellernamenregistration, die verwaltet eine Liste vertrauenswürdiger Aussteller von Elementen in der Konfigurationsdatei der Anwendung, die jede Ausstellernamen auf das x. 509-Zertifikat zuordnen, die zum Überprüfen der Signatur von Token, die von den Aussteller erzeugten benötigt wird geladen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> -Klasse verwaltet ein Wörterbuch der vertrauenswürdigen Aussteller durch einen Namen, der auf diesem Aussteller verweist das Zertifikat des jeder vertrauenswürdigen Aussteller zuordnen. Mithilfe der ASN. 1 des Fingerabdrucks formularcodierten sind die Zertifikate angegeben. Der Ausstellername kann eine beliebige Zeichenfolge sein, solange er eindeutig innerhalb des Bereichs der Anwendung ist. Dieses Wörterbuch aufweist und durch zugegriffen werden kann die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.ConfiguredTrustedIssuers%2A> Eigenschaft. X. 509-Zertifikate kann nur von die Klasse aufgelöst werden.  
+  
+ Die Zuordnung der vertrauenswürdigen Aussteller ist in einer Konfigurationsdatei angegeben, indem Sie Einträge unter dem [ &lt;TrustedIssuers&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) Element. Die `<trustedIssuers>` Element ist ein untergeordnetes Element von der [ &lt;IssuerNameRegistry&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md) -Element, und es ist gültig, wenn die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> Klasse wird angegeben, der `type` Attribut dieses Elements. Weitere Informationen finden Sie in der Dokumentation für jedes dieser Elemente in der [WIF-Konfigurationsschema](http://msdn.microsoft.com/library/4d4f6d76-49a5-4bad-b345-097b2e2844e9). Weitere Informationen zu Issuer Name Registrierungen, finden Sie unter der <xref:System.IdentityModel.Tokens.IssuerNameRegistry> Klasse.  
+  
+ Sie können aus ableiten <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> eigene Konfiguration basierend-ausstellernamenregistration implementiert. Welche Methoden Sie außer Kraft setzen hängen von der Implementierung ab. Sie können z. B. überschreiben die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.LoadCustomConfiguration%2A> Methode beim Laden der Konfiguration von einem Schema für die benutzerdefinierte Konfiguration.  
+  
+   
+  
+## Examples  
+ Das folgende XML zeigt die Konfiguration für eine <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> für eine Auflistung von sicherheitstokenhandlern hinzugefügt. Die `<trustedIssuers>` Element verhält sich wie eine klassische konfigurationsauflistung .NET ermöglicht die `<add>`, `<delete>` und `<clear>` Elemente als untergeordnete Elemente.  
+  
+```  
+<system.identityModel>  
+  <identityConfiguration>  
+    <securityTokenHandlersCollection>  
+      <securityTokenHandlerConfiguration>  
+        <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel">  
+          <trustedIssuers>  
+             <add thumbprint="97249e … 158de" name="contoso.com" />  
+         </trustedIssuers>  
+        </issuerNameRegistry>  
+      </securityTokenHandlerConfiguration>  
+  </identityConfiguration>  
+</system.identityModel>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationBasedIssuerNameRegistry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTrustedIssuer">
+      <MemberSignature Language="C#" Value="public void AddTrustedIssuer (string certificateThumbprint, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddTrustedIssuer(string certificateThumbprint, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.AddTrustedIssuer(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificateThumbprint" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="certificateThumbprint">ASN. 1-codierte Form des Zertifikatfingerabdrucks des Ausstellers.</param>
+        <param name="name">Der Name des Ausstellers.</param>
+        <summary>Fügt einen Aussteller, die dem Wörterbuch vertrauenswürdiger Aussteller.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie diese Methode zum Hinzufügen von Aussteller Aufrufen der <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.ConfiguredTrustedIssuers%2A> Wörterbuch. In abgeleiteten Klassen rufen Sie diese Methode aus der <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.LoadCustomConfiguration%2A> Methode, um den Aussteller zum Wörterbuch hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="certificateThumbprint" /> hat den Wert <see langword="null" /> oder ist leer.  
+  
+ - oder -   
+  
+ <paramref name="name" /> hat den Wert <see langword="null" /> oder ist leer.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Aussteller gemäß <paramref name="certificateThumbprint" /> wurde bereits konfiguriert. (Der Aussteller, die bereits in der <see cref="P:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.ConfiguredTrustedIssuers" /> Wörterbuch.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfiguredTrustedIssuers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; ConfiguredTrustedIssuers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; ConfiguredTrustedIssuers" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.ConfiguredTrustedIssuers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Wörterbuch der vertrauenswürdigen Aussteller, die konfiguriert wurden für diese Instanz ab.</summary>
+        <value>Ein Wörterbuch, das den vertrauenswürdigen Aussteller enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schlüssel im Wörterbuch ist der ASN. 1-codierte Form des Fingerabdrucks des Zertifikats des vertrauenswürdigen Ausstellers und des Werts des Ausstellernamens. Das Wörterbuch enthält die Aussteller, die in der Konfiguration angegeben wurden und alle zusätzlichen Aussteller, die mit hinzugefügt wurden die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.AddTrustedIssuer%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIssuerName">
+      <MemberSignature Language="C#" Value="public override string GetIssuerName (System.IdentityModel.Tokens.SecurityToken securityToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetIssuerName(class System.IdentityModel.Tokens.SecurityToken securityToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.GetIssuerName(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityToken" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="securityToken">Das Sicherheitstoken für das der Namen des Ausstellers angefordert werden. Muss als <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />.</param>
+        <summary>Gibt den Namen des Ausstellers mit der angegebenen verknüpften <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" /> durch den Fingerabdruck des Zertifikats in einen Namen im Wörterbuch vertrauenswürdiger Aussteller zuordnen.</summary>
+        <returns>Der Ausstellername ggf. ein Eintrag für den Fingerabdruck des Zertifikats des Tokens in der <see cref="P:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.ConfiguredTrustedIssuers" /> Wörterbuch ist, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung sucht die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.ConfiguredTrustedIssuers%2A> Wörterbuch für den Fingerabdruck des x. 509-Zertifikats im angegebenen `securityToken`. Wenn ein Eintrag gefunden wird, der Ausstellernamen zurückgegeben. andernfalls `null` zurückgegeben wird. Wenn `securityToken` abfragesichtausdrucks kann nicht aus <xref:System.IdentityModel.Tokens.X509SecurityToken>, `null` wird zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityToken" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public override void LoadCustomConfiguration (System.Xml.XmlNodeList customConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList customConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customConfiguration" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="customConfiguration">Das XML, das die Zuordnung der vertrauenswürdigen Aussteller darstellt, die in der Konfigurationsdatei angegeben wird.</param>
+        <summary>Lädt aus der Konfiguration vertrauenswürdiger Aussteller.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.LoadCustomConfiguration%2A> Methode wird von der Konfigurationsinfrastruktur aufgerufen. Wenn diese Methode aufgerufen wird, die `nodelist` der obersten Ebene der untergeordneten Elemente des enthält die [ &lt;IssuerNameRegistry&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md) Element aus der Konfigurationsdatei. Jede dieser kann wiederum enthalten Attribute oder untergeordnete Elemente abhängig von dem Konfigurationsschema, das Sie für die abgeleitete Klasse zu definieren.  
+  
+ Diese Methode wird von der Konfigurationsinfrastruktur aufgerufen. Die standardmäßige Implementierung lädt Konfiguration aus einer [ &lt;TrustedIssuers&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) Element (unter konfiguriert die [ &lt;IssuerNameRegistry&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)Element). Sie können diese Methode zum Bereitstellen von Unterstützung für benutzerdefinierte Konfigurationselemente in abgeleiteten Klassen überschreiben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="customConfiguration" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Konfiguration enthält ein oder mehrere Elemente, die nicht erkannt werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

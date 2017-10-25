@@ -1,0 +1,392 @@
+<Type Name="LocalBuilder" FullName="System.Reflection.Emit.LocalBuilder">
+  <TypeSignature Language="C#" Value="public sealed class LocalBuilder : System.Reflection.LocalVariableInfo, System.Runtime.InteropServices._LocalBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit LocalBuilder extends System.Reflection.LocalVariableInfo implements class System.Runtime.InteropServices._LocalBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.LocalBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.LocalVariableInfo</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._LocalBuilder</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._LocalBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine lokale Variable innerhalb einer Methode oder der Konstruktor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `LocalBuilder` Objekt kann definiert werden, mithilfe der <xref:System.Reflection.Emit.ILGenerator.DeclareLocal%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine `static` Methode (`Shared` in Visual Basic) mit dem Namen `Function1` , gibt eine Zeichenfolge zurück und weist einen Parameter vom Typ <xref:System.Int32>. Im Text der Methode, die das Codebeispiel erstellt <xref:System.Reflection.Emit.LocalBuilder> -Objekte darstellen zweier lokale Variablen und Symbolinformationen für die lokalen Variablen. Die Methode führt keine etwas schwerwiegendes, aber der Methodentext veranschaulicht einen Parameter an eine lokale Variable, eine literale Zeichenfolge an eine lokale Variable speichern und Laden eine lokale Variable zu speichern.  
+  
+ [!code-cpp[LocalBuilder_Sample_SetLocalSymInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/LocalBuilder_Sample_SetLocalSymInfo/CPP/localbuilder_sample_4.cpp#1)]
+ [!code-csharp[LocalBuilder_Sample_SetLocalSymInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/LocalBuilder_Sample_SetLocalSymInfo/CS/localbuilder_sample_4.cs#1)]
+ [!code-vb[LocalBuilder_Sample_SetLocalSymInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/LocalBuilder_Sample_SetLocalSymInfo/VB/localbuilder_sample_4.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsPinned">
+      <MemberSignature Language="C#" Value="public override bool IsPinned { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPinned" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.LocalBuilder.IsPinned" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Objekt verweist auf die lokale Variable im Arbeitsspeicher fixiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Objekt auf verweist ist die lokale Variable im Arbeitsspeicher fixiert; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In unsicherem Code muss ein Objekt fixiert werden, bevor durch einen nicht verwalteten Zeiger verwiesen werden kann. Während das referenzierte Objekt fixiert ist, kann es durch die Garbagecollection verschoben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalIndex">
+      <MemberSignature Language="C#" Value="public override int LocalIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LocalIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.LocalBuilder.LocalIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den nullbasierten Index der lokalen Variablen innerhalb des Methodentexts ab.</summary>
+        <value>Ein Ganzzahlwert, der die Reihenfolge der Deklaration der lokalen Variablen innerhalb des Methodentexts darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lokale Variablen in der Reihenfolge Indexnummern zugewiesen sind in der sie deklariert oder ausgegeben werden, beginnend mit 0 (null).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalType">
+      <MemberSignature Language="C#" Value="public override Type LocalType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type LocalType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.LocalBuilder.LocalType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der lokalen Variablen ab.</summary>
+        <value>Die <see cref="T:System.Type" /> der lokalen Variablen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `LocalType`. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Reflection.Emit.LocalBuilder> Klasse.  
+  
+ [!code-cpp[LocalBuilder_Sample_SetLocalSymInfo#2](~/samples/snippets/cpp/VS_Snippets_CLR/LocalBuilder_Sample_SetLocalSymInfo/CPP/localbuilder_sample_4.cpp#2)]
+ [!code-csharp[LocalBuilder_Sample_SetLocalSymInfo#2](~/samples/snippets/csharp/VS_Snippets_CLR/LocalBuilder_Sample_SetLocalSymInfo/CS/localbuilder_sample_4.cs#2)]
+ [!code-vb[LocalBuilder_Sample_SetLocalSymInfo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/LocalBuilder_Sample_SetLocalSymInfo/VB/localbuilder_sample_4.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLocalSymInfo">
+      <MemberSignature Language="C#" Value="public void SetLocalSymInfo (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLocalSymInfo(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.LocalBuilder.SetLocalSymInfo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der lokalen Variablen.</param>
+        <summary>Legt den Namen dieses lokalen Variablen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.Emit.LocalBuilder.SetLocalSymInfo%2A> Methode wird für Methoden definiert, die in dynamischen Typen unterstützt. Es wird nicht unterstützt für dynamische Methoden definiert, mit der <xref:System.Reflection.Emit.DynamicMethod> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Reflection.Emit.LocalBuilder.SetLocalSymInfo%2A> Methode. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Reflection.Emit.LocalBuilder> Klasse.  
+  
+ [!code-cpp[LocalBuilder_Sample_SetLocalSymInfo#2](~/samples/snippets/cpp/VS_Snippets_CLR/LocalBuilder_Sample_SetLocalSymInfo/CPP/localbuilder_sample_4.cpp#2)]
+ [!code-csharp[LocalBuilder_Sample_SetLocalSymInfo#2](~/samples/snippets/csharp/VS_Snippets_CLR/LocalBuilder_Sample_SetLocalSymInfo/CS/localbuilder_sample_4.cs#2)]
+ [!code-vb[LocalBuilder_Sample_SetLocalSymInfo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/LocalBuilder_Sample_SetLocalSymInfo/VB/localbuilder_sample_4.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde mit <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" />.  
+  
+ - oder -   
+  
+ Es ist kein Symbolwriter definiert für das enthaltende Modul aus.</exception>
+        <exception cref="T:System.NotSupportedException">Dieser lokalen wird in eine dynamische Methode und nicht in einer Methode eines dynamischen Typs definiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLocalSymInfo">
+      <MemberSignature Language="C#" Value="public void SetLocalSymInfo (string name, int startOffset, int endOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLocalSymInfo(string name, int32 startOffset, int32 endOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.LocalBuilder.SetLocalSymInfo(System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="startOffset" Type="System.Int32" />
+        <Parameter Name="endOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der lokalen Variablen.</param>
+        <param name="startOffset">Der Startoffset des lexikalischen Gültigkeitsbereichs der lokalen Variablen.</param>
+        <param name="endOffset">Der Endoffset für den lexikalischen Gültigkeitsbereich der lokalen Variablen.</param>
+        <summary>Legt den Namen und lexikalischen Gültigkeitsbereich der lokalen Variablen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.Emit.LocalBuilder.SetLocalSymInfo%2A> Methode wird für Methoden definiert, die in dynamischen Typen unterstützt. Es wird nicht unterstützt für dynamische Methoden definiert, mit der <xref:System.Reflection.Emit.DynamicMethod> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Reflection.Emit.LocalBuilder.SetLocalSymInfo%2A> Methode. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Reflection.Emit.LocalBuilder> Klasse.  
+  
+ [!code-cpp[LocalBuilder_Sample_SetLocalSymInfo#2](~/samples/snippets/cpp/VS_Snippets_CLR/LocalBuilder_Sample_SetLocalSymInfo/CPP/localbuilder_sample_4.cpp#2)]
+ [!code-csharp[LocalBuilder_Sample_SetLocalSymInfo#2](~/samples/snippets/csharp/VS_Snippets_CLR/LocalBuilder_Sample_SetLocalSymInfo/CS/localbuilder_sample_4.cs#2)]
+ [!code-vb[LocalBuilder_Sample_SetLocalSymInfo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/LocalBuilder_Sample_SetLocalSymInfo/VB/localbuilder_sample_4.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde mit <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" />.  
+  
+ - oder -   
+  
+ Es ist kein Symbolwriter definiert für das enthaltende Modul aus.</exception>
+        <exception cref="T:System.NotSupportedException">Dieser lokalen wird in eine dynamische Methode und nicht in einer Methode eines dynamischen Typs definiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._LocalBuilder.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _LocalBuilder.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._LocalBuilder.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.LocalBuilder.System#Runtime#InteropServices#_LocalBuilder#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="rgszNames">Das übergebene Array von zuzuordnenden Namen.</param>
+        <param name="cNames">Die Anzahl der zuzuordnenden Namen.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem die Namen interpretiert werden sollen.</param>
+        <param name="rgDispId">Das vom Aufrufer zugewiesene Array, das die IDs entsprechend den Namen empfängt.</param>
+        <summary>Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetIDsOfNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._LocalBuilder.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _LocalBuilder.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._LocalBuilder.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.LocalBuilder.System#Runtime#InteropServices#_LocalBuilder#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">Die zurückzugebenden Typinformationen.</param>
+        <param name="lcid">Der Gebietsschemabezeichner für die Typinformationen.</param>
+        <param name="ppTInfo">Empfängt einen Zeiger auf das angeforderte Objekt mit den Typinformationen.</param>
+        <summary>Ruft die Typinformationen für ein Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._LocalBuilder.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _LocalBuilder.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._LocalBuilder.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.LocalBuilder.System#Runtime#InteropServices#_LocalBuilder#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Zeigt auf einen Speicherort, der die Anzahl der Schnittstellen mit Typinformationen empfängt, die vom Objekt bereitgestellt werden.</param>
+        <summary>Ruft die Anzahl der Schnittstellen mit Typinformationen ab, die von einem Objekt bereitgestellt werden (0 oder 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfoCount`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._LocalBuilder.Invoke">
+      <MemberSignature Language="C#" Value="void _LocalBuilder.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._LocalBuilder.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.LocalBuilder.System#Runtime#InteropServices#_LocalBuilder#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Bezeichnet den Member.</param>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem Argumente interpretiert werden sollen.</param>
+        <param name="wFlags">Flags, die den Kontext des Aufrufs beschreiben.</param>
+        <param name="pDispParams">Ein Zeiger auf eine Struktur, die ein Array von Argumenten und ein Array von Argument-DISPIDs für benannte Argumente sowie Zähler für die Anzahl der Elemente in jedem Array enthält.</param>
+        <param name="pVarResult">Ein Verweis auf den Speicherort, an dem das Ergebnis gespeichert werden soll.</param>
+        <param name="pExcepInfo">Ein Zeiger auf eine Struktur mit Ausnahmeinformationen.</param>
+        <param name="puArgErr">Der Index des ersten Arguments mit einem Fehler.</param>
+        <summary>Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::Invoke`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

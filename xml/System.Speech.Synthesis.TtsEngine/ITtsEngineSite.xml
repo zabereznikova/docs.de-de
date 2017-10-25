@@ -1,0 +1,206 @@
+<Type Name="ITtsEngineSite" FullName="System.Speech.Synthesis.TtsEngine.ITtsEngineSite">
+  <TypeSignature Language="C#" Value="public interface ITtsEngineSite" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITtsEngineSite" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.ITtsEngineSite" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Schreiben von Audiodaten und Ereignisse bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Actions">
+      <MemberSignature Language="C#" Value="public int Actions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Actions" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.Actions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt die Aktion oder Aktionen, die das Modul durchführen sollten.</summary>
+        <value>Ein <see langword="int" /> , enthält die Summe der mindestens ein Mitglied der <see langword="TtsEngineAction" /> Enumeration.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEvents">
+      <MemberSignature Language="C#" Value="public void AddEvents (System.Speech.Synthesis.TtsEngine.SpeechEventInfo[] events, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddEvents(valuetype System.Speech.Synthesis.TtsEngine.SpeechEventInfo[] events, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.AddEvents(System.Speech.Synthesis.TtsEngine.SpeechEventInfo[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Speech.Synthesis.TtsEngine.SpeechEventInfo[]" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="events">Ein Array von <see langword="SpeechEventInfo" />-Objekten.</param>
+        <param name="count">Die Größe des Arrays.</param>
+        <summary>Fügt eine oder mehrere Ereignisse an die <see langword="EventInterest" /> Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteSkip">
+      <MemberSignature Language="C#" Value="public void CompleteSkip (int skipped);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CompleteSkip(int32 skipped) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.CompleteSkip(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="skipped" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="skipped">Die Anzahl von Elementen übersprungen wird.</param>
+        <summary>Gibt die Anzahl von Elementen übersprungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventInterest">
+      <MemberSignature Language="C#" Value="public int EventInterest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventInterest" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.EventInterest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt die Ereignisse, die das Modul auslösen soll.</summary>
+        <value>Ein <see langword="int" /> , enthält die Summe der mindestens ein Mitglied der <see langword="TtsEventId" /> Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes bit in der `EventInterest` Attributfeld stellt einen Ereignistyp, der das Modul auslösen soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSkipInfo">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.TtsEngine.SkipInfo GetSkipInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Speech.Synthesis.TtsEngine.SkipInfo GetSkipInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.GetSkipInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.SkipInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Anzahl und Typ der Elemente, übersprungen werden soll.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadResource">
+      <MemberSignature Language="C#" Value="public System.IO.Stream LoadResource (Uri uri, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream LoadResource(class System.Uri uri, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.LoadResource(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Der URI der Ressource.</param>
+        <param name="mediaType">Der Medientyp der Ressource.</param>
+        <summary>Lädt die Ressource am angegebenen URI.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rate">
+      <MemberSignature Language="C#" Value="public int Rate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Rate" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.Rate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die sprechgeschwindigkeit des Datenbankmoduls ab.</summary>
+        <value>Ein <see langword="int" /> bewerten, enthält die sprechgeschwindigkeit.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Volume">
+      <MemberSignature Language="C#" Value="public int Volume { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Volume" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.Volume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sprecherstimme Volume des Datenbankmoduls ab.</summary>
+        <value>Ein <see langword="int" /> , Sprecherstimme Volume enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public int Write (IntPtr data, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Write(native int data, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.Write(System.IntPtr,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IntPtr" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="data">Der Speicherort der Ausgabe-audio-Daten.</param>
+        <param name="count">Die Anzahl der Elemente in den Ausgabestream audio.</param>
+        <summary>Ausgaben Audiodaten.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

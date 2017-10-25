@@ -1,0 +1,629 @@
+<Type Name="FrameworkName" FullName="System.Runtime.Versioning.FrameworkName">
+  <TypeSignature Language="C#" Value="public sealed class FrameworkName : IEquatable&lt;System.Runtime.Versioning.FrameworkName&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit FrameworkName extends System.Object implements class System.IEquatable`1&lt;class System.Runtime.Versioning.FrameworkName&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Versioning.FrameworkName" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Runtime.Versioning.FrameworkName&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt den Namen einer Version von .NET Framework dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkName (string frameworkName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string frameworkName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.FrameworkName.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="frameworkName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="frameworkName">Eine Zeichenfolge, die .NET Framework-Versionsinformationen enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Versioning.FrameworkName" /> Klasse aus einer Zeichenfolge, die Informationen zu einer Version von .NET Framework enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Versioning.FrameworkName.%23ctor%28System.String%29> Konstruktor analysiert eine Zeichenfolge im folgenden Format.  
+  
+ *Bezeichner*, Version =*VersionNumber*[, Profile =*ProfileName*]  
+  
+ Komponenten in eckigen Klammern sind optional. Die folgende Tabelle beschreibt die einzelnen Komponenten.  
+  
+|Komponente|Beschreibung|  
+|---------------|-----------------|  
+|*identifier*|Eine beliebige Zeichenfolge, die dies identifiziert <xref:System.Runtime.Versioning.FrameworkName> Instanz.|  
+|*Versionsnummer*|Eine Zeichenfolge, die die Version von .NET Framework, in der Form [V] stellt*wichtigen*.* kleinere*[.* Erstellen Sie*.* Revision*], wobei "V" in Groß- oder Kleinbuchstaben kann, und die Klammern optionale Elemente einer Versionsnummer bezeichnen.|  
+|*Profilname*|Eine beliebige Zeichenfolge, die das Profil des .NET Framework-Version darstellt. In der Regel wird es verwendet, um eine Teilmenge von .NET Framework, z. B. die .NET Compact Framework oder Silverlight zu kennzeichnen.|  
+  
+ Wenn beide *VersionNumber* und *ProfileName* vorhanden sind, erscheinen können in beliebiger Reihenfolge nach *Bezeichner*. Diese Zeichenfolgen werden durch die Schlüsselwörter "Version" und "Profil" definiert, die Groß-/Kleinschreibung nicht berücksichtigen.  
+  
+ Die Werte der *Bezeichner*, *VersionNumber*, und *ProfileName* Komponenten definieren die Werte dieser <xref:System.Runtime.Versioning.FrameworkName> Objekteigenschaften wie folgt:  
+  
+-   Führenden oder nachfolgenden Leerzeichen in der *Bezeichner* Komponente entfernt und die resultierende Zeichenfolge zugewiesen ist die <xref:System.Runtime.Versioning.FrameworkName.Identifier%2A> Eigenschaft.  
+  
+-   Alle führenden oder nachgestellten Leerzeichen und die anfängliche "V" oder "V", falls vorhanden, werden aus entfernt die `versionNumber`. Die zurückgegebene Zeichenfolge wird dann zum Übergeben der <xref:System.Version.%23ctor%28System.String%29?displayProperty=nameWithType> Konstruktor und die resultierende <xref:System.Version?displayProperty=nameWithType> Objekt zugewiesen ist die <xref:System.Runtime.Versioning.FrameworkName.Version%2A> Eigenschaft.  
+  
+-   Führenden oder nachfolgenden Leerzeichen in der `profileName` Komponente entfernt und die resultierende Zeichenfolge zugewiesen ist die <xref:System.Runtime.Versioning.FrameworkName.Profile%2A> Eigenschaft.  
+  
+ Im folgenden sind Beispiele für gültige Zeichenfolgen, die übergeben werden können die <xref:System.Runtime.Versioning.FrameworkName.%23ctor%2A> Konstruktor:  
+  
+-   .NET Framework, Version = 4.0  
+  
+-   . NETFramework, Version = 4.0  
+  
+-   .NET Framework, Version 2.0, Profile = = Compact  
+  
+-   .NET Framework, Version = v4. 0, Profile = Compact  
+  
+-   .NET Framework, Profile = vollständig, Version = 2.0.0  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="frameworkName" /> ist <see cref="F:System.String.Empty" />.  
+  
+ - oder -   
+  
+ <paramref name="frameworkName" />verfügt über weniger als zwei oder mehr als drei Komponenten.  
+  
+ - oder -   
+  
+ <paramref name="frameworkName" />Schließt eine Haupt-und Nebenversionsnummern Zahl nicht.  
+  
+ - oder -   
+  
+ <paramref name="frameworkName" />schließt keine gültige Versionsnummer ein.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="frameworkName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkName (string identifier, Version version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identifier, class System.Version version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.FrameworkName.#ctor(System.String,System.Version)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+        <Parameter Name="version" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Eine Zeichenfolge, die eine .NET Framework-Version identifiziert.</param>
+        <param name="version">Ein Objekt, das .NET Framework-Versionsinformationen enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Versioning.FrameworkName" /> Klasse aus einer Zeichenfolge und ein <see cref="T:System.Version" /> -Objekt, das eine .NET Framework-Version zu identifizieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Versioning.FrameworkName> Klasse erfordert, dass ein <xref:System.Runtime.Versioning.FrameworkName.Version%2A> Objekt enthalten mindestens eine Haupt- und Nebenversionsnummern Versionsnummer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identifier" /> ist <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identifier" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="version" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkName (string identifier, Version version, string profile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identifier, class System.Version version, string profile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.FrameworkName.#ctor(System.String,System.Version,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+        <Parameter Name="version" Type="System.Version" />
+        <Parameter Name="profile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Eine Zeichenfolge, die eine .NET Framework-Version identifiziert.</param>
+        <param name="version">Ein Objekt, das .NET Framework-Versionsinformationen enthält.</param>
+        <param name="profile">Ein Profilname.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Versioning.FrameworkName" /> Klasse aus einer Zeichenfolge ein <see cref="T:System.Version" /> Objekt, das eine .NET Framework-Version und einen Profilnamen identifiziert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Versioning.FrameworkName> Klasse erfordert, dass ein <xref:System.Runtime.Versioning.FrameworkName.Version%2A> Objekt enthalten mindestens eine Haupt- und Nebenversionsnummern Versionsnummer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identifier" /> ist <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identifier" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="version" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.FrameworkName.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob dies <see cref="T:System.Runtime.Versioning.FrameworkName" /> Instanz darstellt, die dieselbe .NET Framework-Version als ein angegebenes Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn jede Komponente des aktuellen <see cref="T:System.Runtime.Versioning.FrameworkName" /> Objekt übereinstimmt, den entsprechenden Komponenten von <paramref name="obj" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertiert die Methode `obj` zu einem <xref:System.Runtime.Versioning.FrameworkName> -Objekt und ruft die <xref:System.Runtime.Versioning.FrameworkName.Equals%28System.Runtime.Versioning.FrameworkName%29?displayProperty=nameWithType> Überladung auf Gleichheit. Wenn die Konvertierung nicht erfolgreich ist oder wenn `obj` ist `null`, gibt die Methode `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Runtime.Versioning.FrameworkName other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Runtime.Versioning.FrameworkName other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.FrameworkName.Equals(System.Runtime.Versioning.FrameworkName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Runtime.Versioning.FrameworkName" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob dies <see cref="T:System.Runtime.Versioning.FrameworkName" /> Instanz darstellt, die gleiche Version von .NET Framework als ein angegebenes <see cref="T:System.Runtime.Versioning.FrameworkName" /> Instanz.</summary>
+        <returns>
+          <see langword="true" />Wenn jede Komponente des aktuellen <see cref="T:System.Runtime.Versioning.FrameworkName" /> Objekt übereinstimmt, den entsprechenden Komponenten von <paramref name="other" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Zurückgeben des Ergebnisses die folgenden Vergleiche auf Gleichheit testet die Methode:  
+  
+-   Einen ordinalen Vergleich von der <xref:System.Runtime.Versioning.FrameworkName.Identifier%2A> Eigenschaftswerte der aktuellen Instanz und `other`.  
+  
+-   Einen ordinalen Vergleich von der <xref:System.Runtime.Versioning.FrameworkName.Profile%2A> Eigenschaftswerte der aktuellen Instanz und `other`.  
+  
+-   Einen Vergleich der Versionseigenschaften durch Aufrufen der <xref:System.Version.Equals%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Versioning.FrameworkName.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Namen dieses <see cref="T:System.Runtime.Versioning.FrameworkName" /> Objekt.</summary>
+        <value>Der vollständige Name dieses <see cref="T:System.Runtime.Versioning.FrameworkName" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Zeichenfolge den <xref:System.Runtime.Versioning.FrameworkName.FullName%2A> Eigenschaft weist das folgende Format:  
+  
+ *Bezeichner*, Version =*Version*[, Profile =*Profil*]  
+  
+ auf dem *Bezeichner* entspricht der <xref:System.Runtime.Versioning.FrameworkName.Identifier%2A> -Eigenschaft, `version` entspricht dem Aufruf <xref:System.Version.ToString%2A?displayProperty=nameWithType> auf den Wert des der <xref:System.Runtime.Versioning.FrameworkName.Version%2A> -Eigenschaft, und `profile` entspricht der <xref:System.Runtime.Versioning.FrameworkName.Profile%2A> Diese Eigenschaft. Wenn Sie ein Profil nicht zugewiesen wurde die <xref:System.Runtime.Versioning.FrameworkName> -Objekt, das Profilkomponente ist nicht in der Zeichenfolge enthalten.  
+  
+ Der Wert des der <xref:System.Runtime.Versioning.FrameworkName.FullName%2A> Eigenschaft ist identisch mit der Zeichenfolge zurückgegeben, durch die <xref:System.Runtime.Versioning.FrameworkName.ToString%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.FrameworkName.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für die <see cref="T:System.Runtime.Versioning.FrameworkName" /> Objekt.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen, die den Hashcode für diese Instanz darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identifier">
+      <MemberSignature Language="C#" Value="public string Identifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Identifier" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Versioning.FrameworkName.Identifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner dieses <see cref="T:System.Runtime.Versioning.FrameworkName" /> Objekt.</summary>
+        <value>Der Bezeichner dieser <see cref="T:System.Runtime.Versioning.FrameworkName" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert der Read-only <xref:System.Runtime.Versioning.FrameworkName.Identifier%2A> Eigenschaft wird festgelegt, der <xref:System.Runtime.Versioning.FrameworkName.%23ctor%2A> Klassenkonstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Runtime.Versioning.FrameworkName left, System.Runtime.Versioning.FrameworkName right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Runtime.Versioning.FrameworkName left, class System.Runtime.Versioning.FrameworkName right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.FrameworkName.op_Equality(System.Runtime.Versioning.FrameworkName,System.Runtime.Versioning.FrameworkName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Runtime.Versioning.FrameworkName" />
+        <Parameter Name="right" Type="System.Runtime.Versioning.FrameworkName" />
+      </Parameters>
+      <Docs>
+        <param name="left">Das erste zu vergleichende Objekt.</param>
+        <param name="right">Das zweite zu vergleichende Objekt.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei <see cref="T:System.Runtime.Versioning.FrameworkName" />-Objekte dieselbe .NET Framework-Version darstellen.</summary>
+        <returns>
+          <see langword="true" />, wenn die Parameter <paramref name="left" /> und <paramref name="right" /> die gleiche Version von .NET Framework darstellen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Versioning.FrameworkName.op_Equality%2A> Methode definiert, den Vorgang des Gleichheitsoperators für <xref:System.Runtime.Versioning.FrameworkName> Objekte.  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können Aufrufen der <xref:System.Runtime.Versioning.FrameworkName.Equals%28System.Runtime.Versioning.FrameworkName%29?displayProperty=nameWithType> Methode stattdessen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel verwendet den Gleichheitsoperator, um zu bestimmen, ob ein <xref:System.Runtime.Versioning.FrameworkName> -Objekt, das die ausgeführte Version von .NET Framework stellt eine unterstützte Version von .NET Framework gleich ist. Beachten Sie, dass die beiden Versionen nicht gleich sind, da sie keinen identischen Versionsnummern haben.  
+  
+ [!code-csharp[System.Runtime.Versioning.FrameworkName.Operators#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.versioning.frameworkname.operators/cs/Operators1.cs#1)]
+ [!code-vb[System.Runtime.Versioning.FrameworkName.Operators#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.versioning.frameworkname.operators/vb/Operators1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Runtime.Versioning.FrameworkName left, System.Runtime.Versioning.FrameworkName right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Runtime.Versioning.FrameworkName left, class System.Runtime.Versioning.FrameworkName right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.FrameworkName.op_Inequality(System.Runtime.Versioning.FrameworkName,System.Runtime.Versioning.FrameworkName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Runtime.Versioning.FrameworkName" />
+        <Parameter Name="right" Type="System.Runtime.Versioning.FrameworkName" />
+      </Parameters>
+      <Docs>
+        <param name="left">Das erste zu vergleichende Objekt.</param>
+        <param name="right">Das zweite zu vergleichende Objekt.</param>
+        <summary>Gibt einen Wert, der angibt, ob zwei <see cref="T:System.Runtime.Versioning.FrameworkName" /> Objekte unterschiedliche .NET Framework-Versionen darstellen.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="left" /> und <paramref name="right" /> Parameter unterschiedliche .NET Framework-Versionen darstellen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Versioning.FrameworkName.op_Inequality%2A> -Methode definiert die Operation des Ungleichheitsoperators für <xref:System.Runtime.Versioning.FrameworkName> Objekte.  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können auf Ungleichheit testen, durch Aufrufen der <xref:System.Runtime.Versioning.FrameworkName.Equals%28System.Runtime.Versioning.FrameworkName%29?displayProperty=nameWithType> -Methode und ihren Wert umkehren.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel verwendet den Gleichheitsoperator, um zu bestimmen, ob ein <xref:System.Runtime.Versioning.FrameworkName> -Objekt, das die ausgeführte Version von .NET Framework stellt eine unterstützte Version von .NET Framework gleich ist. Beachten Sie, dass die beiden Versionen nicht gleich sind, da sie keinen identischen Versionsnummern haben.  
+  
+ [!code-csharp[System.Runtime.Versioning.FrameworkName.Operators#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.versioning.frameworkname.operators/cs/Operators1.cs#2)]
+ [!code-vb[System.Runtime.Versioning.FrameworkName.Operators#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.versioning.frameworkname.operators/vb/Operators1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Profile">
+      <MemberSignature Language="C#" Value="public string Profile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Profile" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Versioning.FrameworkName.Profile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Profilnamen dieses <see cref="T:System.Runtime.Versioning.FrameworkName" /> Objekt.</summary>
+        <value>Der Profilname dieses <see cref="T:System.Runtime.Versioning.FrameworkName" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert der Read-only <xref:System.Runtime.Versioning.FrameworkName.Profile%2A> Eigenschaft wird festgelegt, der <xref:System.Runtime.Versioning.FrameworkName.%23ctor%2A> Klassenkonstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.FrameworkName.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolgendarstellung dieses <see cref="T:System.Runtime.Versioning.FrameworkName" />-Objekts zurück.</summary>
+        <returns>Eine Zeichenfolge, die dieses <see cref="T:System.Runtime.Versioning.FrameworkName" />-Objekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Zeichenfolge den <xref:System.Runtime.Versioning.FrameworkName.ToString%2A> Methode weist das folgende Format:  
+  
+ *Bezeichner*, Version =*Version*[, Profile =*Profil*]  
+  
+ auf dem *Bezeichner* entspricht der <xref:System.Runtime.Versioning.FrameworkName.Identifier%2A> -Eigenschaft, `version` entspricht dem Aufruf <xref:System.Version.ToString%2A?displayProperty=nameWithType> auf den Wert des der <xref:System.Runtime.Versioning.FrameworkName.Version%2A> -Eigenschaft, und `profile` entspricht der <xref:System.Runtime.Versioning.FrameworkName.Profile%2A> Diese Eigenschaft. Wenn Sie ein Profil nicht zugewiesen wurde die <xref:System.Runtime.Versioning.FrameworkName> -Objekt, das Profilkomponente ist nicht in der zurückgegebenen Zeichenfolge enthalten.  
+  
+ Der zurückgegebene Wert der <xref:System.Runtime.Versioning.FrameworkName.ToString%2A> Methode ist identisch mit dem Wert, der die <xref:System.Runtime.Versioning.FrameworkName.FullName%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Versioning.FrameworkName.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version dieses <see cref="T:System.Runtime.Versioning.FrameworkName" /> Objekt.</summary>
+        <value>Ein Objekt, das Informationen über diese Version enthält <see cref="T:System.Runtime.Versioning.FrameworkName" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert der Read-only <xref:System.Runtime.Versioning.FrameworkName.Version%2A> Eigenschaft wird festgelegt, der <xref:System.Runtime.Versioning.FrameworkName.%23ctor%2A> Klassenkonstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

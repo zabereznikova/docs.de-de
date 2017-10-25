@@ -1,0 +1,116 @@
+<Type Name="CaptionButton" FullName="System.Windows.Forms.CaptionButton">
+  <TypeSignature Language="C#" Value="public enum CaptionButton" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CaptionButton extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CaptionButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ der Schaltfläche "Caption" angezeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, indem Sie <xref:System.Windows.Forms.ControlPaint.DrawCaptionButton%2A?displayProperty=nameWithType>.  
+  
+ Beschriftungsschaltflächen sind die Systemschaltflächen finden Sie in der Regel auf der rechten Seite der Titelleiste des Formulars.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ControlPaint.DrawCaptionButton%2A?displayProperty=nameWithType> Methode und die <xref:System.Windows.Forms.CaptionButton> Enumeration. Zum Ausführen dieses Beispiels fügen Sie der folgende Code in ein Formular mit einer Schaltfläche mit dem Namen Button1. Das Formular sollte die Namespaces "System.Windows.Forms" und "System.Drawing" importieren. Stellen Sie sicher, dass die Schaltfläche Paint-Ereignis der Ereignisbehandlungsmethode in diesem Beispiel zugeordnet ist.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaintMembers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ControlPaintMembers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ControlPaintMembers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="Close" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.CaptionButton Close = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.CaptionButton.Close" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CaptionButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schaltfläche Schließen</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Help">
+      <MemberSignature Language="C#" Value="Help" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.CaptionButton Help = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.CaptionButton.Help" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CaptionButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Schaltfläche "Hilfe".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximize">
+      <MemberSignature Language="C#" Value="Maximize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.CaptionButton Maximize = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.CaptionButton.Maximize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CaptionButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schaltfläche "Maximieren".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimize">
+      <MemberSignature Language="C#" Value="Minimize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.CaptionButton Minimize = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.CaptionButton.Minimize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CaptionButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schaltfläche "Minimieren".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Restore">
+      <MemberSignature Language="C#" Value="Restore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.CaptionButton Restore = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.CaptionButton.Restore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CaptionButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wiederherstellungsschaltfläche.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

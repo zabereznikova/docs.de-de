@@ -1,0 +1,225 @@
+<Type Name="Saml2AuthorizationDecisionStatement" FullName="System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement">
+  <TypeSignature Language="C#" Value="public class Saml2AuthorizationDecisionStatement : System.IdentityModel.Tokens.Saml2Statement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Saml2AuthorizationDecisionStatement extends System.IdentityModel.Tokens.Saml2Statement" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.Saml2Statement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die <see langword="&lt;saml:AuthzDecisionStatement&gt;" /> von SAML 2.0 definierten Elemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IdentityModel.Tokens.Saml2SecurityToken>-Sicherheitstoken geben ihre Ansprüche mithilfe von SAML-Assertionen an, die angeben können, ob ein Subjekt auf eine bestimmte Ressource zugreifen darf. Die Ansprüche in einer SAML-Assertion werden durch SAML-Anweisungen dargestellt. Das SAML 2.0-Spezifikation definiert einen Satz von SAML-Anweisungstypen, und eine davon wird durch die <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement> Klasse. Wenn in einer SAML 2.0-Assertion in angegeben die <xref:System.IdentityModel.Tokens.Saml2Assertion.Statements%2A?displayProperty=nameWithType> -Eigenschaft, ein <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement> bestätigt eine autorisierungsentscheidung für den Zugriff des Subjekts der Assertion auf eine angegebene Ressource. Das Subjekt der SAML 2.0-Assertion wird angegeben, indem die <xref:System.IdentityModel.Tokens.Saml2Assertion.Subject%2A?displayProperty=nameWithType> Eigenschaft. In der folgenden Tabelle werden die Eigenschaften zusammengefasst, die der Autorisierungsentscheidung zugeordnet werden.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Decision%2A>|Die Autorisierungsentscheidung, die von der SAML-Behörde in Bezug auf die von der <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement.Resource%2A>-Eigenschaft dargestellte Ressource gerendert wurde.|  
+|<xref:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Evidence%2A>|Ein Satz von SAML-Assertionen, auf den sich die SAML-Behörde verlassen hat, um die Entscheidung zu rendern.|  
+|<xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement.Resource%2A>|Ein URI-Verweis, der die Ressource identifiziert, zu der Zugriff gesucht wird.|  
+|<xref:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Actions%2A>|Der Satz an Aktionen, die das Subjekt auf der Ressource ausführen darf, die durch die <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement.Resource%2A>-Eigenschaft dargestellt wird. Jede Aktion wird dargestellt, von einer Instanz von <xref:System.IdentityModel.Tokens.Saml2Action>.|  
+  
+ [!INCLUDE[wif_saml2_ref](~/includes/wif-saml2-ref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2AuthorizationDecisionStatement (Uri resource, System.IdentityModel.Tokens.SamlAccessDecision decision);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri resource, valuetype System.IdentityModel.Tokens.SamlAccessDecision decision) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.#ctor(System.Uri,System.IdentityModel.Tokens.SamlAccessDecision)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resource" Type="System.Uri" />
+        <Parameter Name="decision" Type="System.IdentityModel.Tokens.SamlAccessDecision" />
+      </Parameters>
+      <Docs>
+        <param name="resource">Die <see cref="T:System.Uri" /> der Ressource, die über die die autorisierungsentscheidung gilt. Legt die <see cref="P:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Resource" />-Eigenschaft fest.</param>
+        <param name="decision">Ein <see cref="T:System.IdentityModel.Tokens.SamlAccessDecision" /> Wert, der die Entscheidung angibt. Legt die <see cref="P:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Decision" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement" /> Klasse mit der angegebenen Entscheidung für die angegebene Ressource.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Actions%2A> Eigenschaft in der neuen Instanz auf null initialisiert wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resource" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="resource" />ist ein absoluter URI oder ein leeres relativen URI.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="decision" /> ist kein gültiger <see cref="T:System.IdentityModel.Tokens.SamlAccessDecision" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2AuthorizationDecisionStatement (Uri resource, System.IdentityModel.Tokens.SamlAccessDecision decision, System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.Saml2Action&gt; actions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri resource, valuetype System.IdentityModel.Tokens.SamlAccessDecision decision, class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Tokens.Saml2Action&gt; actions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.#ctor(System.Uri,System.IdentityModel.Tokens.SamlAccessDecision,System.Collections.Generic.IEnumerable{System.IdentityModel.Tokens.Saml2Action})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resource" Type="System.Uri" />
+        <Parameter Name="decision" Type="System.IdentityModel.Tokens.SamlAccessDecision" />
+        <Parameter Name="actions" Type="System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.Saml2Action&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="resource">Die <see cref="T:System.Uri" /> der Ressource, die über die die autorisierungsentscheidung gilt. Legt die <see cref="P:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Resource" />-Eigenschaft fest.</param>
+        <param name="decision">Ein <see cref="T:System.IdentityModel.Tokens.SamlAccessDecision" /> Wert, der die Entscheidung angibt. Legt die <see cref="P:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Decision" />-Eigenschaft fest.</param>
+        <param name="actions">Eine Auflistung von <see cref="T:System.IdentityModel.Tokens.Saml2Action" /> , angibt, dass die Aktionen, die für die Ressource autorisiert werden. Legt die <see cref="P:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Actions" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement" /> Klasse mit der angegebenen Entscheidung für die angegebenen Aktionen für die angegebene Ressource.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resource" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="resource" />ist ein absoluter URI oder ein leeres relativen URI.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="decision" /> ist kein gültiger <see cref="T:System.IdentityModel.Tokens.SamlAccessDecision" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Actions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.Saml2Action&gt; Actions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.IdentityModel.Tokens.Saml2Action&gt; Actions" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Actions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.Saml2Action&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Satz von Aktionen, die autorisiert, auf die angegebene Ressource ausgeführt werden.</summary>
+        <value>Eine Auflistung vom Typ <see cref="T:System.IdentityModel.Tokens.Saml2Action" /> , die die autorisierte Aktionen angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entspricht der `<saml:Actions>` untergeordnetes Element. [!INCLUDE[wif_saml2_ref](~/includes/wif-saml2-ref-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decision">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SamlAccessDecision Decision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IdentityModel.Tokens.SamlAccessDecision Decision" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Decision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlAccessDecision</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Entscheidung, die durch die SAML-Behörde in Bezug auf die angegebene Ressource gerendert wurde.</summary>
+        <value>Einer der <see cref="T:System.IdentityModel.Tokens.SamlAccessDecision" />-Werte, der die Autorisierungsentscheidung angibt, die durch die SAML-Behörde in Bezug auf den Zugriff des Subjekts auf die angegebene Ressource gerendert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entspricht der `<saml:Decision>` untergeordnetes Element. [!INCLUDE[wif_saml2_ref](~/includes/wif-saml2-ref-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Versuch, einen Wert festzulegen, das ist kein gültiger <see cref="T:System.IdentityModel.Tokens.SamlAccessDecision" /> Wert auftritt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EmptyResource">
+      <MemberSignature Language="C#" Value="public static readonly Uri EmptyResource;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Uri EmptyResource" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.EmptyResource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen leeren URI-Verweis ab. Der Verweis kann zum Festlegen der <see cref="P:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Resource" /> Eigenschaft. Wenn verwendet, gibt er den Beginn des aktuellen Dokuments.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein leerer URI-Verweis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evidence">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.Saml2Evidence Evidence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.Saml2Evidence Evidence" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Evidence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.Saml2Evidence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Satz von Assertionen, die die SAML-Behörde basieren auf die Entscheidung treffen. [Saml2Core 2.7.4]</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Tokens.Saml2Evidence" /> , enthält die Assertionen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entspricht der `<saml:Evidence>` untergeordnetes Element. [!INCLUDE[wif_saml2_ref](~/includes/wif-saml2-ref-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resource">
+      <MemberSignature Language="C#" Value="public Uri Resource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Resource" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Resource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den URI-Verweis, der die Ressource identifiziert, zu der zugriffsautorisierung gesucht wird.</summary>
+        <value>Ein <see cref="T:System.Uri" /> , die die Ressource identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entspricht der `Resource` Attribut [!INCLUDE[wif_saml2_ref](~/includes/wif-saml2-ref-md.md)].  
+  
+ Die <xref:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Resource%2A> Eigenschaft kann festgelegt werden, um ein absoluter URI oder den leeren URI-Verweis (<xref:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.EmptyResource>). Wenn sie auf den leeren URI-Verweis festgelegt ist, wird die Bedeutung der Beginn des aktuellen Dokuments werden definiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Versuch, einen Wert festzulegen, ist <see langword="null" /> auftritt.</exception>
+        <exception cref="T:System.ArgumentException">Tritt auf beim Versuch, einen Wert festzulegen, der ist kein absoluter URI oder ist kein leeres relativen URI.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

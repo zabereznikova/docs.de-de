@@ -1,0 +1,90 @@
+<Type Name="KerberosSecurityTokenAuthenticator" FullName="System.IdentityModel.Selectors.KerberosSecurityTokenAuthenticator">
+  <TypeSignature Language="C#" Value="public class KerberosSecurityTokenAuthenticator : System.IdentityModel.Selectors.WindowsSecurityTokenAuthenticator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KerberosSecurityTokenAuthenticator extends System.IdentityModel.Selectors.WindowsSecurityTokenAuthenticator" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.KerberosSecurityTokenAuthenticator" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.WindowsSecurityTokenAuthenticator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Authentifiziert ein <see cref="T:System.IdentityModel.Tokens.KerberosReceiverSecurityToken" />-Sicherheitstoken.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Selectors.KerberosSecurityTokenAuthenticator>-Klasse, um <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken>-Sicherheitstoken zu authentifizieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KerberosSecurityTokenAuthenticator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.KerberosSecurityTokenAuthenticator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.KerberosSecurityTokenAuthenticator" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer authentifiziert wird, werden die Ansprüche hinzugefügt, um die Gruppen, zu denen der Windows-Benutzer gehört, zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KerberosSecurityTokenAuthenticator (bool includeWindowsGroups);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool includeWindowsGroups) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.KerberosSecurityTokenAuthenticator.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="includeWindowsGroups" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includeWindowsGroups">
+          <see langword="true" />, um die Gruppen abzurufen, zu denen der Windows-Benutzer gehört, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.KerberosSecurityTokenAuthenticator" />-Klasse durch Angabe, ob die Gruppen, zu denen der Windows-Benutzer gehört, abgerufen werden, wenn der Benutzer authentifiziert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool CanValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.KerberosSecurityTokenAuthenticator.CanValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Die <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> zu authentifizieren.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob das angegebene Sicherheitstoken von diesem Sicherheitstoken-Authentifikator überprüft werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="token" /> ein <see cref="T:System.IdentityModel.Tokens.KerberosReceiverSecurityToken" />-Sicherheitstoken ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

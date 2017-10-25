@@ -1,0 +1,190 @@
+<Type Name="DataSourceDescriptorCollection" FullName="System.ComponentModel.Design.Data.DataSourceDescriptorCollection">
+  <TypeSignature Language="C#" Value="public class DataSourceDescriptorCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataSourceDescriptorCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Data.DataSourceDescriptorCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine typsichere Auflistung von <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" />-Objekten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceDescriptorCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DataSourceDescriptorCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptorCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.ComponentModel.Design.Data.DataSourceDescriptor value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.ComponentModel.Design.Data.DataSourceDescriptor value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DataSourceDescriptorCollection.Add(System.ComponentModel.Design.Data.DataSourceDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.Design.Data.DataSourceDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" /> in der Auflistung hinzu.</param>
+        <summary>Fügt der Auflistung eine <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" /> hinzu.</summary>
+        <returns>Der Index, der die <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" /> , die der Auflistung hinzugefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.ComponentModel.Design.Data.DataSourceDescriptor value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.ComponentModel.Design.Data.DataSourceDescriptor value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DataSourceDescriptorCollection.Contains(System.ComponentModel.Design.Data.DataSourceDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.Design.Data.DataSourceDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu suchende <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" />.</param>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptorCollection" /> enthält die angegebene <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" /> in der Auflistung enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.ComponentModel.Design.Data.DataSourceDescriptor[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.ComponentModel.Design.Data.DataSourceDescriptor[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DataSourceDescriptorCollection.CopyTo(System.ComponentModel.Design.Data.DataSourceDescriptor[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.ComponentModel.Design.Data.DataSourceDescriptor[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> , das das Ziel der aus kopierten Werte der <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptorCollection" />.</param>
+        <param name="index">Der Index in der <c>Array</c> , in dem Kopiervorgang beginnt.</param>
+        <summary>Kopiert die <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptorCollection" /> Werte in ein eindimensionales <see cref="T:System.Array" /> am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.ComponentModel.Design.Data.DataSourceDescriptor value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.ComponentModel.Design.Data.DataSourceDescriptor value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DataSourceDescriptorCollection.IndexOf(System.ComponentModel.Design.Data.DataSourceDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.Design.Data.DataSourceDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu suchende <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" />.</param>
+        <summary>Gibt den Index des eine <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" /> in der <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptorCollection" />.</summary>
+        <returns>Der Index des der <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" /> von <paramref name="value" /> in die <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptorCollection" />, sofern gefunden, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.ComponentModel.Design.Data.DataSourceDescriptor value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.ComponentModel.Design.Data.DataSourceDescriptor value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DataSourceDescriptorCollection.Insert(System.Int32,System.ComponentModel.Design.Data.DataSourceDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.ComponentModel.Design.Data.DataSourceDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, in dem <c>Wert</c> eingefügt werden soll.</param>
+        <param name="value">Der einzufügende <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" />.</param>
+        <summary>Fügt am angegebenen Index ein <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" />-Element in die <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptorCollection" /> ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.Data.DataSourceDescriptor this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.Data.DataSourceDescriptor Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DataSourceDescriptorCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Data.DataSourceDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" /> angegebenen.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" /> angegebenen.</summary>
+        <value>Das angegebene <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.ComponentModel.Design.Data.DataSourceDescriptor value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.ComponentModel.Design.Data.DataSourceDescriptor value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DataSourceDescriptorCollection.Remove(System.ComponentModel.Design.Data.DataSourceDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.Design.Data.DataSourceDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" />, der aus der <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptorCollection" /> entfernt werden soll.</param>
+        <summary>Entfernt ein bestimmtes <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" /> aus der <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptorCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

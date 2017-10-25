@@ -1,0 +1,204 @@
+<Type Name="ITextProvider" FullName="System.Windows.Automation.Provider.ITextProvider">
+  <TypeSignature Language="C#" Value="public interface ITextProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITextProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.ITextProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("3589c92c-63f3-4367-99bb-ada653b77cf2")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Methoden und Eigenschaften verfügbar, um dem Benutzeroberflächenautomatisierungs-Client den Zugriff auf Steuerelemente zu ermöglichen, die Text enthalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert ein Benutzeroberflächenautomatisierungs-Anbieter, die unterstützen, muss die <xref:System.Windows.Automation.TextPattern> -Steuerelementmuster.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DocumentRange">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider DocumentRange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Provider.ITextRangeProvider DocumentRange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.ITextProvider.DocumentRange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Textbereich ab, der den Haupttext eines Dokuments umschließt.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige zusätzlichen Text z. B. Header, Fußnoten oder Anmerkungen möglicherweise nicht enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelection">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider[] GetSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.ITextRangeProvider[] GetSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextProvider.GetSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von nicht zusammenhängenden Textbereichen ab, die der aktuellen Textauswahl zugeordnet sind.</summary>
+        <returns>Eine Auflistung von nicht zusammenhängenden Textbereichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Anbieter sollte für Benutzeroberflächenautomatisierungs-Anbietern, die Textauswahl unterstützen, implementieren Sie diese Methode und auch Zurückgeben einer <xref:System.Windows.Automation.Provider.ITextProvider.SupportedTextSelection%2A> Wert.  
+  
+ Wenn kein Text ausgewählt ist, <xref:System.Windows.Automation.Provider.ITextProvider.GetSelection%2A> gibt den degenerierten Textbereich (leere Bereich) an der Position des Systemcursors (Texteinfügemarke) zurück.  
+  
+ Wenn der Systemcursor (Texteinfügemarke) nicht vorhanden ist, <xref:System.Windows.Automation.Provider.ITextProvider.GetSelection%2A> kann einen null-Verweis zurückgeben (`Nothing` in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn der Benutzeroberflächenautomatisierungs-Anbieter keine Textauswahl unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisibleRanges">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider[] GetVisibleRanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.ITextRangeProvider[] GetVisibleRanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextProvider.GetVisibleRanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array von nicht zusammenhängenden Textbereichen aus einem Textcontainer ab, wobei jeder Textbereich mit der ersten teilweise sichtbaren Zeile beginnt und mit dem Ende der letzten teilweise sichtbaren Zeile endet.</summary>
+        <returns>Die Auflistung sichtbarer Textbereiche innerhalb des Containers oder eines leeren Arrays. Ein NULL-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) wird niemals zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzeroberflächenautomatisierungs-Anbietern sollten sicherstellen, dass sie höchstens Textbereiche zurückgeben, die innerhalb des Containers sichtbar sind.  
+  
+ Nicht zusammenhängende Bereiche auftreten, wenn der Inhalt eines Textcontainer von einem überlappenden Fenster oder einem anderen Objekt verdeckt wird oder ein Textcontainer mit einem mehrspaltigen Layout verfügt über einen oder mehrere Spalten durch einen Bildlauf nicht aus der Sicht.  
+  
+ Wenn kein Text angezeigt wird, wird ein degenerierten (leeren) Textbereich zurückgegeben. Dieser leeren Bereichs kann zurückgegeben werden, wenn der Textcontainer leer ist oder wenn gesamten Text aus der Sicht Bildlauf durchgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RangeFromChild">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider RangeFromChild (System.Windows.Automation.Provider.IRawElementProviderSimple childElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.ITextRangeProvider RangeFromChild(class System.Windows.Automation.Provider.IRawElementProviderSimple childElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextProvider.RangeFromChild(System.Windows.Automation.Provider.IRawElementProviderSimple)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="childElement" Type="System.Windows.Automation.Provider.IRawElementProviderSimple" />
+      </Parameters>
+      <Docs>
+        <param name="childElement">Das eingeschlossene Objekt.</param>
+        <summary>Ruft einen Textbereich ab, der ein untergeordnetes Element einschließt, z. B. ein Bild, einen Link oder ein anderes eingebettetes Objekt.</summary>
+        <returns>Ein Bereich, der sich über das untergeordnete Element erstreckt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Benutzeroberflächenautomatisierungs-Anbieter sollte überprüfen, ob das übergebene Element ein untergeordnetes Element des Textcontainers ist.  
+  
+ Wenn kein Text vorhanden, in dem Bereich ist, in dem das untergeordnete Element vorhanden ist, wird eine degenerierten (leeren) zurückgegeben.  
+  
+ Die `childElement` Parameter ist entweder ein untergeordnetes Element von der <xref:System.Windows.Automation.AutomationElement> zugeordnet eine <xref:System.Windows.Automation.TextPattern> oder aus dem Array untergeordneter Elemente in eine <xref:System.Windows.Automation.Text.TextPatternRange>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Wenn das untergeordnete Element ein Nullverweis ist (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RangeFromPoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider RangeFromPoint (System.Windows.Point screenLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.ITextRangeProvider RangeFromPoint(valuetype System.Windows.Point screenLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextProvider.RangeFromPoint(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="screenLocation" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="screenLocation">Die Position in Bildschirmkoordinaten.</param>
+        <summary>Gibt den degenerierten (leeren) Textbereich zurück, der sich am nächsten an den angegebenen Bildschirmkoordinaten befindet.</summary>
+        <returns>Ein degenerierter Bereich, der sich am nächsten an der angegebenen Position befindet. Ein NULL-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) wird niemals zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Textbereich, der ein untergeordnetes Objekt umschließt wird zurückgegeben, wenn die Bildschirmkoordinaten innerhalb der Koordinaten für ein Bild, Hyperlink oder ein anderes eingebettetes Objekt sind.  
+  
+ Da verborgenen Text nicht vom ignoriert wird <xref:System.Windows.Automation.Provider.ITextProvider.RangeFromPoint%2A> ein degenerierter Bereich über den sichtbaren Text auf den angegebenen Punkt am nächsten wird zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ist ein bestimmten Punkt außerhalb der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Element, das Textmuster zugeordnet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedTextSelection">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.SupportedTextSelection SupportedTextSelection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.SupportedTextSelection SupportedTextSelection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.ITextProvider.SupportedTextSelection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.SupportedTextSelection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Textanbieter Auswahl unterstützt. Wenn dies der Fall ist, wird die Art der unterstützten Auswahl angegeben.</summary>
+        <value>Ein Element von <see langword="None" />, <see langword="Single" /> oder <see langword="Multiple" /> aus <see cref="T:System.Windows.Automation.SupportedTextSelection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

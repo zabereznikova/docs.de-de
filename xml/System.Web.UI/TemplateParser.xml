@@ -1,0 +1,154 @@
+<Type Name="TemplateParser" FullName="System.Web.UI.TemplateParser">
+  <TypeSignature Language="C#" Value="public abstract class TemplateParser : System.Web.UI.BaseParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TemplateParser extends System.Web.UI.BaseParser" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.TemplateParser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.BaseParser</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fungiert als die abstrakte Basisklasse für ASP.NET Dateiparser.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.TemplateParser> -Klasse stellt die allgemeine Funktionalität für die Parserklassen. Da die <xref:System.Web.UI.TemplateParser> Klasse abstrakt ist, wird eine Instanz dieser Klasse nicht direkt erstellt.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="ParseFile">
+      <MemberSignature Language="C#" Value="protected void ParseFile (string physicalPath, string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ParseFile(string physicalPath, string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateParser.ParseFile(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="physicalPath" Type="System.String" />
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="physicalPath">Der physische Pfad der Datei zu analysieren. <c>PhysicalPath</c> hat Vorrang gegenüber <c>"VirtualPath"</c>.</param>
+        <param name="virtualPath">Der virtuelle Pfad der Datei zu analysieren.</param>
+        <summary>Analysiert den Inhalt der Datei, die durch seine virtuell oder physisch angegeben wird Pfad.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein physischer Pfad angegeben wird, wird er über den virtuellen Pfad für die Suche nach der Datei zum Analysieren verwendet.  
+  
+ Wenn der Pfad zur Datei analysiert einen Zirkelverweis ist; d. h., er bezieht sich auf dieselbe Datei, die derzeit der Parser analysiert, eine <xref:System.Web.HttpException> Ausnahme wird ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="physicalPath" />oder <paramref name="virtualPath" /> bezieht sich auf die Datei, die gerade analysiert wird.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ParseTemplate">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.ITemplate ParseTemplate (string content, string virtualPath, bool ignoreFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.ITemplate ParseTemplate(string content, string virtualPath, bool ignoreFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateParser.ParseTemplate(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="ignoreFilter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="content">Der Inhalt.</param>
+        <param name="virtualPath">Der virtuelle Pfad.</param>
+        <param name="ignoreFilter">
+          <see langword="true" />um den Filter zu ignorieren; andernfalls <see langword="false" />.</param>
+        <summary>Analysiert die Vorlage an.</summary>
+        <returns>Gibt die Vorlage an.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessError">
+      <MemberSignature Language="C#" Value="protected void ProcessError (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ProcessError(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateParser.ProcessError(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Text der Fehlermeldung zur Erstellung einer neuen <see cref="T:System.Web.ParserError" />.</param>
+        <summary>Gibt einen Prozessfehler durch Erstellen eines neuen <see cref="T:System.Web.ParserError" /> -Objekt mit der angegebenen Meldung und Hinzufügen zu einem <see cref="T:System.Web.ParserErrorCollection" /> Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessException">
+      <MemberSignature Language="C#" Value="protected void ProcessException (Exception ex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ProcessException(class System.Exception ex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateParser.ProcessException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ex" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="ex">Die <see cref="T:System.Exception" /> verwendet zum Erstellen eines neuen <see cref="T:System.Web.ParserError" />.</param>
+        <summary>Meldet eine Parserausnahme durch Erstellen eines neuen <see cref="T:System.Web.ParserError" /> wie das angegebene Objekt <see cref="T:System.Exception" /> Ausnahme und das Hinzufügen zu einer <see cref="T:System.Web.ParserErrorCollection" /> Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpCompileException">Die <see cref="T:System.Exception" /> verarbeiten wird ein Compilerfehler ausgelöst.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.TemplateParser.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichenfolge, die enthält die Daten analysiert werden soll.</summary>
+        <value>Die Daten analysiert werden soll.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

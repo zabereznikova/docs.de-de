@@ -1,0 +1,222 @@
+<Type Name="SupportsPreviewControlAttribute" FullName="System.Web.UI.Design.SupportsPreviewControlAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SupportsPreviewControlAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SupportsPreviewControlAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.SupportsPreviewControlAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob ein Steuerelement-Designer eine Vorschauinstanz des Steuerelements zur Entwurfszeit erforderlich ist. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> -Attribut auf eine Steuerelement-Designer-Klasse, um den Typ des Vorschausteuerelement anzugeben, die vom Steuerelement-Designer unterstützt wird. Verwenden Sie dieses Attribut, um ein Vorschausteuerelement für das Rendering zur Entwurfszeit zu ändern, ohne Auswirkungen auf die tatsächliche beibehaltene Instanz des zugeordneten Steuerelements.  
+  
+ Geben Sie in der Regel die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> bei der Deklaration einer benutzerdefinierten Klasse, die abgeleitet ist von der <xref:System.Web.UI.Design.ControlDesigner> Klasse. Der Wert des der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> -Eigenschaft für die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> Attribut bestimmt das Verhalten für die <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> und <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Elemente in der Basisklasse <xref:System.Web.UI.Design.ControlDesigner> Klasse.  
+  
+ Legen Sie die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Eigenschaft `true` um anzugeben, dass der Designer eine temporäre Kopie des zugeordneten Steuerelements verwendet, um den während der Entwurfszeit-HTML-Code zu generieren. Änderungen an den temporären Steuerelement werden nicht beibehalten.  
+  
+ Festlegen der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Eigenschaft `false` , um anzugeben, dass der Designer die Instanz des Steuerelements zurückgibt, die speziell die <xref:System.ComponentModel.Design.ComponentDesigner.Component%2A> -Eigenschaft, aus der <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Methode. Änderungen an das Steuerelementobjekt werden beibehalten.  
+  
+ Z. B. die <xref:System.Web.UI.Design.WebControls.CalendarDesigner> Klasse gekennzeichnet wird, mit der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> festgelegt `true`. Der Designer verwendet die Vorschausteuerelement mit dem automatischen Formatierung Aufgabe, die dem Benutzer ermöglicht, die verschiedene Autoformat Stylesthat Vorschau auf den Kalender angewendet werden kann. Wie der Benutzer verschiedene Autoformat-Stile in der Benutzeroberfläche auswählt, wird das ausgewählte Format Schema auf die Vorschausteuerelement angewendet. Neue Formatvorlage an das Vorschausteuerelement ändert sich nicht auf das Schema, das auf die Instanz angewendet wird die <xref:System.Web.UI.WebControls.Calendar> Steuerelement im Designer.  
+  
+ Wenn die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> in einer Deklaration der Steuerelement-Designer nicht angegeben ist die <xref:System.Web.UI.Design.ControlDesigner> Verhalten entspricht dem Angeben der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> als `false`.  
+  
+> [!NOTE]
+>  Designerklassen abgeleitet der <xref:System.Web.UI.Design.ControlDesigner> -Klasse überschreiben die <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> und <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Elemente, und ignorieren die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> Attribut. Um zu bestimmen, das erwartete Verhalten für <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> und <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A>, finden Sie in der Referenzdokumentation für die abgeleitete Steuerelement-Designer-Klasse.  
+  
+ Allgemeine Informationen zum Verwenden von Attributen finden Sie unter [Übersicht über Attribute](http://msdn.microsoft.com/en-us/a4daf212-2410-423d-a800-7a08864e9bff) und [Attribute](~/docs/standard/attributes/index.md). Weitere Informationen zur Entwurfszeit Attribute finden Sie unter [Attribute und Entwurfszeitunterstützung](http://msdn.microsoft.com/library/7aed9eb4-124b-4a15-a0a3-458f37ac9ef7).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einen Steuerelement-Designer mit Markieren der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> Attribut. Im Codebeispiel wird abgeleitet wird, ein ASP.NET-Serversteuerelement aus der <xref:System.Web.UI.WebControls.Label> -Klasse und ordnet die ASP.NET-Serversteuerelement ein benutzerdefiniertes Steuerelement-Designer-Implementierung. Die Deklaration der Steuerelement-Designer-Klasse mit RuntimeCompatibility der `SupportsPreviewControl` -Attributsatz zur `true`. Überschreibt die Steuerelementdesigner die <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methode und den während der Entwurfszeit-HTML-Code für das Steuerelement kursiv Tags einschließt.  
+  
+ [!code-csharp[System.Web.UI.Design.SupportsPreviewControlAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.SupportsPreviewControlAttribute/CS/supportspreviewdesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.SupportsPreviewControlAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.SupportsPreviewControlAttribute/VB/supportspreviewdesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SupportsPreviewControlAttribute (bool supportsPreviewControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool supportsPreviewControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.SupportsPreviewControlAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="supportsPreviewControl" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="supportsPreviewControl">Der Anfangswert für zuweisen <see cref="P:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> -Klasse und legt den anfänglichen Wert des der <see cref="P:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie ist in der Regel nicht erforderlich, erstellen eine Instanz von der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> -Klasse direkt verwendet. Anwenden der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> der Klassendeklaration des Designers benutzerdefiniertes Steuerelement im Quellcode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.Design.SupportsPreviewControlAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.Design.SupportsPreviewControlAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.Design.SupportsPreviewControlAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.SupportsPreviewControlAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Instanz von der <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> -Klasse, die auf den Standardwert für die Vorschau festgelegt ist. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Eigenschaft von der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.Default> Feld `false`.  
+  
+ Verwenden der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.IsDefaultAttribute%2A> Methode, um zu bestimmen, ob der Wert für die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Eigenschaft auf den Standardwert für die Vorschau festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.SupportsPreviewControlAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt für den Vergleich mit der aktuellen Instanz der <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" />.</param>
+        <summary>Bestimmt, ob das angegebene Objekt dieselbe Preview attributeinstellung als die aktuelle Instanz von darstellt der <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> Klasse.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="obj" /> ist ein <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> Attribut und seinen Wert ist identisch mit dieser Instanz von <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.Equals%2A> methodenüberschreibungen die <xref:System.Object.Equals%2A?displayProperty=nameWithType> Methode.  
+  
+ Die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.Equals%2A> Methode vergleicht zwei Instanzen, basierend auf dem Wert von deren <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.SupportsPreviewControlAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz die <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> Klasse.</summary>
+        <returns>Ein 32-Bit-Ganzzahl-Hashcode für die aktuelle Instanz von <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.GetHashCode%2A> methodenüberschreibungen die <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> Methode.  
+  
+ Die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.GetHashCode%2A> Methode generiert für zwei Objekte, die entsprechend dem gleich sind, denselben Hashcode der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.Equals%2A> Methode. Der Hashcode eignet sich für die Verwendung in Hashalgorithmen und Datenstrukturen wie Hashtabellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.SupportsPreviewControlAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die aktuelle Instanz von der <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> -Klasse festgelegt, dass der Preview-Attribut Standardwert.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Instanz von <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> ist auf den Standardwert für Preview-Attribut entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.IsDefaultAttribute%2A> Methode vergleicht den Wert für die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Eigenschaft des aktuellen <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> Objekt mit dem Wert für die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> der statischen Eigenschaft <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.Default> Feld.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsPreviewControl">
+      <MemberSignature Language="C#" Value="public bool SupportsPreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsPreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Steuerelement-Designer ein temporäres Vorschausteuerelement zur Entwurfszeit erforderlich ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Designer eine temporäre Kopie des zugeordneten Steuerelements für die Vorschau zur Entwurfszeit verwendet. <see langword="false" /> , wenn der Designer eine Instanz von verwendet die <see cref="P:System.ComponentModel.Design.ComponentDesigner.Component" /> Steuerelement, das im Designer enthalten ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel geben Sie einen Wert für die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Eigenschaft durch Anwenden der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> -Attribut auf einen benutzerdefinierten Designer Klassendeklaration. Der Wert des der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> -Eigenschaft für die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> Attribut bestimmt das Verhalten für die <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> und <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Elemente in der Basisklasse <xref:System.Web.UI.Design.ControlDesigner> Klasse.  
+  
+ Legen Sie die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Eigenschaft `true` um anzugeben, dass der Designer eine temporäre Kopie des zugeordneten Steuerelements verwendet, um den während der Entwurfszeit-HTML-Code zu generieren. Änderungen an den temporären Steuerelement werden nicht beibehalten.  
+  
+ Festlegen der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Eigenschaft `false` , um anzugeben, dass der Designer die Instanz des Steuerelements zurückgibt, die speziell die <xref:System.ComponentModel.Design.ComponentDesigner.Component%2A> -Eigenschaft, aus der <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Methode. Änderungen an das Steuerelementobjekt werden beibehalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.InteropServices.WindowsRuntime">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.InteropServices.WindowsRuntime" /> -Namespace enthält Klassen, die die Interoperation zwischen verwaltetem Code und die Windows-Runtime unterstützen, und ermöglichen die Erstellung von Windows-Runtime-Typen mit verwaltetem Code.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

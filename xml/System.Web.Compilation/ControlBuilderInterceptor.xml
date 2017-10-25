@@ -1,0 +1,116 @@
+<Type Name="ControlBuilderInterceptor" FullName="System.Web.Compilation.ControlBuilderInterceptor">
+  <TypeSignature Language="C#" Value="public abstract class ControlBuilderInterceptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ControlBuilderInterceptor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ControlBuilderInterceptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Können im Verlauf des Vorgangs angepasst oder gesteuert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.ControlBuilderInterceptor>-Klasse stellt eine abstrakte Klasse dar. Ein Typ, der diese Klasse erweitert registriert werden kann, in der Datei "Web.config" mithilfe einer `ControlBuilderInterceptorType` Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ControlBuilderInterceptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ControlBuilderInterceptor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Compilation.ControlBuilderInterceptor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnProcessGeneratedCode">
+      <MemberSignature Language="C#" Value="public virtual void OnProcessGeneratedCode (System.Web.UI.ControlBuilder controlBuilder, System.CodeDom.CodeCompileUnit codeCompileUnit, System.CodeDom.CodeTypeDeclaration baseType, System.CodeDom.CodeTypeDeclaration derivedType, System.CodeDom.CodeMemberMethod buildMethod, System.CodeDom.CodeMemberMethod dataBindingMethod, System.Collections.IDictionary additionalState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnProcessGeneratedCode(class System.Web.UI.ControlBuilder controlBuilder, class System.CodeDom.CodeCompileUnit codeCompileUnit, class System.CodeDom.CodeTypeDeclaration baseType, class System.CodeDom.CodeTypeDeclaration derivedType, class System.CodeDom.CodeMemberMethod buildMethod, class System.CodeDom.CodeMemberMethod dataBindingMethod, class System.Collections.IDictionary additionalState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ControlBuilderInterceptor.OnProcessGeneratedCode(System.Web.UI.ControlBuilder,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeTypeDeclaration,System.CodeDom.CodeTypeDeclaration,System.CodeDom.CodeMemberMethod,System.CodeDom.CodeMemberMethod,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlBuilder" Type="System.Web.UI.ControlBuilder" />
+        <Parameter Name="codeCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="baseType" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="derivedType" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="buildMethod" Type="System.CodeDom.CodeMemberMethod" />
+        <Parameter Name="dataBindingMethod" Type="System.CodeDom.CodeMemberMethod" />
+        <Parameter Name="additionalState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="controlBuilder">Die Steuerelement-Generator-Instanz.</param>
+        <param name="codeCompileUnit">Ein <see cref="T:System.CodeDom.CodeCompileUnit" />-Objekt, das von der Kompilierung generiert wird.</param>
+        <param name="baseType">Die Typdeklaration des Codes hinter Klasse oder abgeleitetem Typ.</param>
+        <param name="derivedType">Die Typdeklaration des Markupelements der obersten Ebene.</param>
+        <param name="buildMethod">Die Methode mit dem erforderlichen Code zum Erstellen des Steuerelements und Festlegen der verschiedenen Eigenschaften, Ereignisse und Felder des Steuerelements.</param>
+        <param name="dataBindingMethod">Die Methode mit Code zum Auswerten von Datenbindungsausdrücken innerhalb des Steuerelements.</param>
+        <param name="additionalState">Der zusätzliche Zustand, der zum Speichern und Abrufen von Daten in mehreren Methoden der <see cref="T:System.Web.Compilation.ControlBuilderInterceptor" />-Klasse verwendet werden kann.</param>
+        <summary>Wird aufgerufen, nachdem <see cref="T:System.Web.UI.ControlBuilder" /> die Codegenerierung abgeschlossen hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreControlBuilderInit">
+      <MemberSignature Language="C#" Value="public virtual void PreControlBuilderInit (System.Web.UI.ControlBuilder controlBuilder, System.Web.UI.TemplateParser parser, System.Web.UI.ControlBuilder parentBuilder, Type type, string tagName, string id, System.Collections.IDictionary attributes, System.Collections.IDictionary additionalState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PreControlBuilderInit(class System.Web.UI.ControlBuilder controlBuilder, class System.Web.UI.TemplateParser parser, class System.Web.UI.ControlBuilder parentBuilder, class System.Type type, string tagName, string id, class System.Collections.IDictionary attributes, class System.Collections.IDictionary additionalState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ControlBuilderInterceptor.PreControlBuilderInit(System.Web.UI.ControlBuilder,System.Web.UI.TemplateParser,System.Web.UI.ControlBuilder,System.Type,System.String,System.String,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlBuilder" Type="System.Web.UI.ControlBuilder" />
+        <Parameter Name="parser" Type="System.Web.UI.TemplateParser" />
+        <Parameter Name="parentBuilder" Type="System.Web.UI.ControlBuilder" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+        <Parameter Name="additionalState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="controlBuilder">Der Steuerelementgenerator, der gerade initialisiert werden soll.</param>
+        <param name="parser">Der <see cref="T:System.Web.UI.TemplateParser" />, der zum Analysieren des Markups verwendet wurde.</param>
+        <param name="parentBuilder">Der Generator für das übergeordnete Steuerelement.</param>
+        <param name="type">Der Typ des Steuerelements, das durch diesen Generator erstellt wird.</param>
+        <param name="tagName">Der Name des zu erstellenden Tags.</param>
+        <param name="id">Die ID des Elements im Markup.</param>
+        <param name="attributes">Die Liste der Attribute des Elements im Markup.</param>
+        <param name="additionalState">Der zusätzliche Zustand, der zum Speichern und Abrufen von Daten in mehreren Methoden der <see cref="T:System.Web.Compilation.ControlBuilderInterceptor" />-Klasse verwendet werden kann.</param>
+        <summary>Wird aufgerufen, bevor der <see cref="T:System.Web.UI.ControlBuilder" /> eines Elements im Markup initialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `parentBuilder` Parameter ist in der Regel der Generator, das übergeordnete Element im Markup entspricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,442 @@
+<Type Name="ComponentDocumentDesigner" FullName="System.Windows.Forms.Design.ComponentDocumentDesigner">
+  <TypeSignature Language="C#" Value="public class ComponentDocumentDesigner : System.ComponentModel.Design.ComponentDesigner, IDisposable, System.ComponentModel.Design.IRootDesigner, System.ComponentModel.Design.ITypeDescriptorFilterService, System.Drawing.Design.IToolboxUser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComponentDocumentDesigner extends System.ComponentModel.Design.ComponentDesigner implements class System.ComponentModel.Design.IDesigner, class System.ComponentModel.Design.IRootDesigner, class System.ComponentModel.Design.ITypeDescriptorFilterService, class System.Drawing.Design.IToolboxUser, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.ComponentDocumentDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.ComponentDesigner</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IRootDesigner</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.ITypeDescriptorFilterService</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Drawing.Design.IToolboxUser</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Die Basisdesignerklasse für die Erweiterung des Entwurfsmodusverhaltens eines Stammentwurfsdokuments, das geschachtelte Komponenten unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.Design.ComponentDocumentDesigner>Stellt eine Basisklasse für Designer von Stamm Entwerfen von Dokumenten, die geschachtelte Komponenten unterstützen. Zusätzlich zu den Methoden und Funktionen von geerbt der <xref:System.ComponentModel.Design.ComponentDesigner> -Klasse, <xref:System.Windows.Forms.Design.ComponentDocumentDesigner> implementiert die <xref:System.ComponentModel.Design.IRootDesigner> Schnittstelle zum Bereitstellen einer Entwurfsmodusansicht auf Stammebene für die zugeordnete Komponente und alle geschachtelten Komponenten.  
+  
+> [!NOTE]
+>  Die Entwurfsmodusansicht auf Stammebene für eine <xref:System.Windows.Forms.Form> oder <xref:System.Windows.Forms.Control> wird normalerweise durch einen integrierten Stammdesigner bereitgestellt. Eine benutzerdefinierte <xref:System.ComponentModel.Design.IRootDesigner> Implementierung ist erforderlich, um eine Ansicht für andere Typen von Stammkomponenten im Entwurfsmodus bereitzustellen.  
+  
+ Sie können einen Designer Zuordnen eines Typs unter Verwendung einer <xref:System.ComponentModel.DesignerAttribute>. Einen Überblick über das Anpassen des Verhaltens der Design-Time finden Sie unter [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentDocumentDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentDocumentDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.ComponentDocumentDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control Control" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ComponentDocumentDesigner.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Steuerelement für den Designer ab.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.Control" /> der Designer bearbeitet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentDocumentDesigner.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.Design.ComponentDocumentDesigner" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.Windows.Forms.Design.ComponentDocumentDesigner> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolSupported">
+      <MemberSignature Language="C#" Value="protected virtual bool GetToolSupported (System.Drawing.Design.ToolboxItem tool);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool GetToolSupported(class System.Drawing.Design.ToolboxItem tool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentDocumentDesigner.GetToolSupported(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="tool">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> So testen Sie die Toolbox-Unterstützung.</param>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene Tool vom Designer unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />Wenn das Tool in der Toolbox aktiviert werden soll; <see langword="false" /> , wenn der Dokument-Designer Gewusst wie: Verwenden Sie das Tool nicht bekannt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Tool unterstützt wird, wird in der Toolbox aktiviert werden, wenn der Designer den Fokus erhält wieder. Andernfalls wird es deaktiviert. Sobald ein Tool gekennzeichnet ist als aktiviert oder deaktiviert, es kann nicht erneut abgefragt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentDocumentDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das dem Designer zuzuordnende <see cref="T:System.ComponentModel.IComponent" />.</param>
+        <summary>Initialisiert den Designer mit der angegebenen Komponente.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Der Designer kann Zugriff auf die Site der Komponente und von dort Dienste anfordern, in dieser Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentDocumentDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Eine <see cref="T:System.Collections.IDictionary" /> , die die Eigenschaften für die Klasse der Komponente enthält.</param>
+        <summary>Passt die Gruppe von Eigenschaften der Komponente verfügbar, über gemacht wird eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.ComponentModel.Design.IDesignerFilter> -Schnittstellenmethode fügt eine nicht durchsuchbar zur Entwurfszeit nur `boolean` -Eigenschaft TrayLargeIcon "" für diesen Designer-Komponente zur Entwurfszeit. Diese Eigenschaft wird von der Komponentenleiste.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IRootDesigner.GetView">
+      <MemberSignature Language="C#" Value="object IRootDesigner.GetView (System.ComponentModel.Design.ViewTechnology technology);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.Design.IRootDesigner.GetView(valuetype System.ComponentModel.Design.ViewTechnology technology) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentDocumentDesigner.System#ComponentModel#Design#IRootDesigner#GetView(System.ComponentModel.Design.ViewTechnology)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="technology" Type="System.ComponentModel.Design.ViewTechnology" />
+      </Parameters>
+      <Docs>
+        <param name="technology">Ein <see cref="T:System.ComponentModel.Design.ViewTechnology" /> , der eine bestimmte Ansicht Technologie angibt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="T:System.ComponentModel.Design.ViewTechnology" />.</summary>
+        <returns>Ein Objekt, das die Ansicht für diesen Designer darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.Design.ComponentDocumentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IRootDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IRootDesigner.SupportedTechnologies">
+      <MemberSignature Language="C#" Value="System.ComponentModel.Design.ViewTechnology[] System.ComponentModel.Design.IRootDesigner.SupportedTechnologies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Design.ViewTechnology[] System.ComponentModel.Design.IRootDesigner.SupportedTechnologies" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ComponentDocumentDesigner.System#ComponentModel#Design#IRootDesigner#SupportedTechnologies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ViewTechnology[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.Design.IRootDesigner.SupportedTechnologies" />.</summary>
+        <value>Ein Array unterstützter <see cref="T:System.ComponentModel.Design.ViewTechnology" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.Design.ComponentDocumentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IRootDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.ITypeDescriptorFilterService.FilterAttributes">
+      <MemberSignature Language="C#" Value="bool ITypeDescriptorFilterService.FilterAttributes (System.ComponentModel.IComponent component, System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.ComponentModel.Design.ITypeDescriptorFilterService.FilterAttributes(class System.ComponentModel.IComponent component, class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentDocumentDesigner.System#ComponentModel#Design#ITypeDescriptorFilterService#FilterAttributes(System.ComponentModel.IComponent,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, deren Attribute gefiltert werden sollen.</param>
+        <param name="attributes">Ein Attributwörterbuch, das geändert werden kann.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.Design.ITypeDescriptorFilterService.FilterAttributes(System.ComponentModel.IComponent,System.Collections.IDictionary)" />.</summary>
+        <returns>
+          <see langword="true" />, wenn der Satz von gefilterten Attributen zwischengespeichert werden soll; <see langword="false" />, wenn der Filterdienst eine weitere Abfrage ausführen muss.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.Design.ComponentDocumentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.ITypeDescriptorFilterService>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.ITypeDescriptorFilterService.FilterEvents">
+      <MemberSignature Language="C#" Value="bool ITypeDescriptorFilterService.FilterEvents (System.ComponentModel.IComponent component, System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.ComponentModel.Design.ITypeDescriptorFilterService.FilterEvents(class System.ComponentModel.IComponent component, class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentDocumentDesigner.System#ComponentModel#Design#ITypeDescriptorFilterService#FilterEvents(System.ComponentModel.IComponent,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, deren Ereignisse gefiltert werden sollen.</param>
+        <param name="events">Ein Ereigniswörterbuch, das geändert werden kann.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.Design.ITypeDescriptorFilterService.FilterEvents(System.ComponentModel.IComponent,System.Collections.IDictionary)" />.</summary>
+        <returns>
+          <see langword="true" />, wenn der Satz von gefilterten Ereignissen zwischengespeichert werden soll; <see langword="false" />, wenn der Filterdienst eine neue Abfrage ausführen muss.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.Design.ComponentDocumentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.ITypeDescriptorFilterService>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.ITypeDescriptorFilterService.FilterProperties">
+      <MemberSignature Language="C#" Value="bool ITypeDescriptorFilterService.FilterProperties (System.ComponentModel.IComponent component, System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.ComponentModel.Design.ITypeDescriptorFilterService.FilterProperties(class System.ComponentModel.IComponent component, class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentDocumentDesigner.System#ComponentModel#Design#ITypeDescriptorFilterService#FilterProperties(System.ComponentModel.IComponent,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, deren Eigenschaften gefiltert werden sollen.</param>
+        <param name="properties">Ein Eigenschaftenwörterbuch, das geändert werden kann.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.Design.ITypeDescriptorFilterService.FilterProperties(System.ComponentModel.IComponent,System.Collections.IDictionary)" />.</summary>
+        <returns>
+          <see langword="true" />, wenn der Satz von gefilterten Eigenschaften zwischengespeichert werden soll; <see langword="false" />, wenn der Filterdienst eine neue Abfrage ausführen muss.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.Design.ComponentDocumentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.ITypeDescriptorFilterService>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Drawing.Design.IToolboxUser.GetToolSupported">
+      <MemberSignature Language="C#" Value="bool IToolboxUser.GetToolSupported (System.Drawing.Design.ToolboxItem tool);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Drawing.Design.IToolboxUser.GetToolSupported(class System.Drawing.Design.ToolboxItem tool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentDocumentDesigner.System#Drawing#Design#IToolboxUser#GetToolSupported(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="tool">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> für Toolbox-Unterstützung getestet werden.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Drawing.Design.IToolboxUser.GetToolSupported(System.Drawing.Design.ToolboxItem)" />.</summary>
+        <returns>
+          <see langword="true" />Wenn das Tool von der Toolbox unterstützt wird und aktiviert werden kann; <see langword="false" /> , wenn der Dokument-Designer nicht wissen, wie das Tool verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.Design.ComponentDocumentDesigner>-Instanz in eine <xref:System.Drawing.Design.IToolboxUser>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Drawing.Design.IToolboxUser.ToolPicked">
+      <MemberSignature Language="C#" Value="void IToolboxUser.ToolPicked (System.Drawing.Design.ToolboxItem tool);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Drawing.Design.IToolboxUser.ToolPicked(class System.Drawing.Design.ToolboxItem tool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentDocumentDesigner.System#Drawing#Design#IToolboxUser#ToolPicked(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="tool">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> auswählen.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Drawing.Design.IToolboxUser.ToolPicked(System.Drawing.Design.ToolboxItem)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.Design.ComponentDocumentDesigner>-Instanz in eine <xref:System.Drawing.Design.IToolboxUser>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrayAutoArrange">
+      <MemberSignature Language="C#" Value="public bool TrayAutoArrange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrayAutoArrange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ComponentDocumentDesigner.TrayAutoArrange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Komponentenleiste für den Designer im Modus für automatische Anordnung befindet.</summary>
+        <value>
+          <see langword="true" />ist die Komponentenleiste für den Designer im Modus für automatische Anordnung; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrayLargeIcon">
+      <MemberSignature Language="C#" Value="public bool TrayLargeIcon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrayLargeIcon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ComponentDocumentDesigner.TrayLargeIcon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Komponentenleiste für den Designer im Modus "große Symbole" ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Komponentenleiste für den Designer im Modus "große Symbole" ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

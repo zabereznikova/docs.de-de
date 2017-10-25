@@ -1,0 +1,328 @@
+<Type Name="ClaimsAuthorizationManager" FullName="System.Security.Claims.ClaimsAuthorizationManager">
+  <TypeSignature Language="C#" Value="public class ClaimsAuthorizationManager : System.IdentityModel.Configuration.ICustomIdentityConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClaimsAuthorizationManager extends System.Object implements class System.IdentityModel.Configuration.ICustomIdentityConfiguration" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Claims.ClaimsAuthorizationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IdentityModel.Configuration.ICustomIdentityConfiguration</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert die grundlegende Implementierung für einen anspruchsautorisierungs-Manager.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Claims.ClaimsAuthorizationManager> -Klasse stellt die basisimplementierung für ein anspruchsautorisierungs-Manager. Ein anspruchsautorisierungs-Manager kann in den folgenden zwei Szenarien verwendet werden:  
+  
+-   Webbasierte Anwendungen und Dienste kann ein anspruchsautorisierungs-Manager hinzugefügt werden, der Verarbeitungspipeline Erweiterungspunkt bereitstellen, von dem Sie Zugriff auf eine Ressource gemäß dem Wert des eingehenden Ansprüche, bevor Sie den Anwendungscode autorisieren können tatsächlich implementiert die angeforderte Ressource aufgerufen wird.  
+  
+-   Bei Verwendung der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> Klasse oder die <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Klasse entweder imperative oder deklarativen Zugriff auf Ansprüchen basierende auszuführenden überprüft in Ihrem Code Ansprüche Autorisierungs-Manager, der für die Anwendung konfiguriert ist wird aufgerufen, die vom System Ausführen der Überprüfen. Anspruchsbasierte zugriffsüberprüfungen können in webbasierte Anwendungen und desktopanwendungen ausgeführt werden.  
+  
+ Die standardmäßige Implementierung gebotenen der <xref:System.Security.Claims.ClaimsAuthorizationManager> Klasse autorisiert den Zugriff für jeden Anspruch angezeigt, allerdings können Sie von dieser Klasse ableiten und überschreiben die <xref:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess%2A> Methode, um eine eigene Autorisierungslogik bereitzustellen.  
+  
+ Die Verwendung eines Abschlüsse Autorisierungs-Managers ist optional. Sie können konfigurieren, dass die Anwendung einem anspruchsautorisierungs-Manager verwendet entweder programmgesteuert mithilfe der <xref:System.IdentityModel.Configuration.IdentityConfiguration> Klasse oder deklarativ durch Angabe der [ &lt;ClaimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)-Element, das ein untergeordnetes Element von der [ &lt;IdentityConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element in der Anwendungskonfigurationsdatei. Wenn Ihre Anwendung eine Website oder eine Webanwendung, die in Internet Information Services (IIS) gehostet ist, müssen Sie auch hinzufügen der <xref:System.IdentityModel.Services.ClaimsAuthorizationModule> in der Auflistung des ASP.NET HTTP-Module.  
+  
+> [!IMPORTANT]
+>  Bei Verwendung der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> Klasse oder die <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> -Klasse, die Ansprüche Autorisierungs-Manager, der verwendet wird, um die zugriffsprüfung durchzuführen ist dasjenige, das in der identitätskonfiguration unter angegeben wird die <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> Eigenschaft. In einer Konfigurationsdatei angegeben und ist die `<identityConfiguration>` -Abschnitt, der von der Standardeinstellung verwiesen wird `<federationConfiguration>` Element. Dies gilt auch für Windows Communication Foundation (WCF)-Dienste und desktopanwendungen.  
+  
+ Die <xref:System.Security.Claims.ClaimsAuthorizationManager> Basisklasse akzeptiert keine zusätzliche Konfiguration; Sie können jedoch überschreiben die <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> in abgeleiteten Klassen zum Bereitstellen der Initialisierung des Ihre anspruchsautorisierungs-Manager von untergeordneten Elementen in der die `<claimsAuthorizationElement>`. Typische Szenario ist die Verwendung dieser untergeordneten Elemente Autorisierungsrichtlinien angeben, die bestimmen, welche Anspruchstypen und-Werte erforderlich sind, um den Zugriff auf die Ressource zugreifen zu können. Dies ist nicht zwingend schwer, Sie jedoch zu definieren, die Verwendung und die Syntax für die Implementierung sinnvoll ist.  
+  
+   
+  
+## Examples  
+ Die Codebeispiele, die in verwendet werden die <xref:System.Security.Claims.ClaimsAuthorizationManager> Themen stammen aus den `Claims Based Authorization` Beispiel. Dieses Beispiel stellt einen benutzerdefinierte Ansprüche Autorisierungs-Manager, der autorisieren kann Themen, die basierend auf einer Richtlinie, die in der Konfiguration angegeben ist. Benutzerdefinierte Ansprüche Autorisierungs-Managers besteht aus drei Hauptkomponenten: eine abgeleitete Klasse <xref:System.Security.Claims.ClaimsAuthorizationManager> , implementiert die Manager der `ResourceAction` -Klasse, die eine Ressource und eine Aktion-Paare und eine Richtlinie-Reader, die gelesen und kompiliert, die Richtlinie in der Konfigurationsdatei angegeben. Dadurch kompiliert Richtlinie kann dann von den Ansprüchen Autorisierungs-Manager auszuwertende ein Prinzipals zum Autorisieren des Zugriffs auf Ressourcen verwendet werden. Nicht alle Elemente werden aus Gründen der Übersichtlichkeit aufgeführt. Informationen zu diesem Beispiel und weitere Beispiele verfügbar für WIF und dazu, wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ Der folgende Code zeigt die Implementierung des benutzerdefinierten Ansprüchen Autorisierungs-Managers. Die <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> Methode liest und die Richtlinie aus der Konfiguration mithilfe der Richtlinie Reader Hilfsklasse (nicht dargestellt) kompiliert und die <xref:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess%2A> Methode gewährt oder verweigert den Zugriff auf Grundlage dieser Richtlinie.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#2](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/myclaimsauthorizationmanager.cs#2)]  
+  
+ Der folgende code zeigt die `ResourceAction` Klasse, die vom Manager für benutzerdefinierte Ansprüche verwendet.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#1](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/resourceaction.cs#1)]  
+  
+ Das folgende XML zeigt, wie so konfigurieren Sie die Ansprüche für eine Webanwendung in IIS 7.5 gehostet oben gezeigten Autorisierungs-Manager. Es werden nur die Elemente, die spezifisch für die Konfiguration der Ansprüche Autorisierungs-Manager angezeigt. Beachten Sie, dass ein Verweis auf die <xref:System.IdentityModel.Services.ClaimsAuthorizationModule> Klasse muss hinzugefügt werden, an die Pipeline unter der `<system.Webserver>` Element. Für Websites und Anwendungen, die in Versionen von IIS vor IIS 7 gehostete Module hinzugefügt werden können, an die Pipeline unter der `<system.Web>` Element. Diese Konfiguration wird angezeigt, jedoch auskommentiert.  
+  
+ Die Richtlinie, die von den Ansprüchen Autorisierungs-Manager verwendet wird angegeben, indem benutzerdefinierte `<policy>` Elemente unter dem [ &lt;ClaimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) Element. In der ersten Richtlinie muss der Prinzipal einer der angegebenen Ansprüche, um die angegebene Aktion für die angegebene Ressource verfügen. In der zweiten Richtlinie muss der Prinzipal beide Ansprüche an die angegebene Aktion für die angegebene Ressource ausführen kann verfügen. In allen anderen Fällen wird der Prinzipal automatisch Zugriff unabhängig von den Ansprüchen gewährt, die er besitzt.  
+  
+```  
+<configuration>  
+  <configSections>  
+    <!--WIF 4.5 sections -->  
+    <section name="system.identityModel" type="System.IdentityModel.Configuration.SystemIdentityModelSection, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>  
+    ...  
+  
+  </configSections>  
+  
+  ...  
+  
+  <system.web>  
+    <httpModules>  
+      <!--WIF 4.5 modules -->  
+      <!--Not needed here for IIS >= 7 -->  
+      <!--<add name="ClaimsAuthorizationModule" type="System.IdentityModel.Services.ClaimsAuthorizationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>-->  
+    </httpModules>  
+  </system.web>  
+  
+  ...  
+  
+  <system.webServer>  
+    <modules>  
+      <!--WIF 4.5 modules -->  
+      <add name="ClaimsAuthorizationModule" type="System.IdentityModel.Services.ClaimsAuthorizationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>  
+    </modules>  
+  </system.webServer>  
+  
+  ...  
+  
+  <!-- WIF 4.5 s.im section-->  
+  <system.identityModel>  
+    <identityConfiguration>  
+      <claimsAuthorizationManager type="ClaimsAuthorizationLibrary.MyClaimsAuthorizationManager, ClaimsAuthorizationLibrary">  
+        <policy resource="http://localhost:28491/Developers.aspx" action="GET">  
+          <or>  
+            <claim claimType="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" claimValue="developer" />  
+            <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+          </or>  
+        </policy>  
+        <policy resource="http://localhost:28491/Administrators.aspx" action="GET">  
+          <and>  
+            <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+            <claim claimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country" claimValue="USA" />  
+          </and>  
+        </policy>  
+        <policy resource="http://localhost:28491/Default.aspx" action="GET">  
+        </policy>  
+        <policy resource="http://localhost:28491/" action="GET">  
+        </policy>  
+        <policy resource="http://localhost:28491/Claims.aspx" action="GET">  
+        </policy>  
+      </claimsAuthorizationManager>  
+  
+      ...  
+  
+    </identityConfiguration>  
+  </system.identityModel>  
+  ...  
+  
+</configuration><configuration>  
+  <configSections>  
+    <!--WIF 4.5 sections -->  
+    <section name="system.identityModel" type="System.IdentityModel.Configuration.SystemIdentityModelSection, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>  
+    ...  
+  
+  </configSections>  
+  
+  ...  
+  
+  <system.web>  
+    <httpModules>  
+      <!--WIF 4.5 modules -->  
+      <!--Not needed here for IIS >= 7 -->  
+      <!--<add name="ClaimsAuthorizationModule" type="System.IdentityModel.Services.ClaimsAuthorizationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>-->  
+    </httpModules>  
+  </system.web>  
+  
+  ...  
+  
+  <system.webServer>  
+    <modules>  
+      <!--WIF 4.5 modules -->  
+      <add name="ClaimsAuthorizationModule" type="System.IdentityModel.Services.ClaimsAuthorizationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>  
+    </modules>  
+  </system.webServer>  
+  
+  ...  
+  
+  <!-- WIF 4.5 s.im section-->  
+  <system.identityModel>  
+    <identityConfiguration>  
+      <claimsAuthorizationManager type="MyClaimsAuthorizationManager.SimpleClaimsAuthoirzationManager, MyClaimsAuthorizationManager" />  
+      ...  
+  
+  </system.identityModel>  
+  ...  
+  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsAuthorizationManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsAuthorizationManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Claims.ClaimsAuthorizationManager" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAccess">
+      <MemberSignature Language="C#" Value="public virtual bool CheckAccess (System.Security.Claims.AuthorizationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CheckAccess(class System.Security.Claims.AuthorizationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess(System.Security.Claims.AuthorizationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Security.Claims.AuthorizationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Autorisierungskontext, der enthält den Betreff, die Ressource und die Aktion, die für die Autorisierung ist, überprüft werden soll.</param>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse überprüft die Autorisierung für den Betreff in den angegebenen Kontext zum Ausführen der angegebenen Aktion auf die angegebene Ressource auf.</summary>
+        <returns>
+          <see langword="true" />Wenn der Antragsteller autorisiert ist, um die angegebene Aktion für die angegebene Ressource; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die basisimplementierung immer `true`, dem Zugriff autorisiert. Sie können diese Methode in einer abgeleiteten Klasse zum Autorisieren des Zugriffs auf der Grundlage der Anforderungen Ihrer Anwendung der vertrauenden Seite überschreiben. Wenn diese Methode zurückgibt `false`, Windows Identity Foundation (WIF) einen nicht autorisierten Fehler an den Aufrufer zurückgegeben; andernfalls wird die Ausführung an die Anwendung der vertrauenden Seite übergeben.  
+  
+   
+  
+## Examples  
+ Die Codebeispiele, die in verwendet werden die <xref:System.Security.Claims.ClaimsAuthorizationManager> Themen stammen aus den `Claims Based Authorization` Beispiel. Dieses Beispiel stellt einen benutzerdefinierte Ansprüche Autorisierungs-Manager, der autorisieren kann Themen, die basierend auf einer Richtlinie, die in der Konfiguration angegeben ist. Benutzerdefinierte Ansprüche Autorisierungs-Managers besteht aus drei Hauptkomponenten: eine abgeleitete Klasse <xref:System.Security.Claims.ClaimsAuthorizationManager> , implementiert die Manager der `ResourceAction` -Klasse, die eine Ressource und eine Aktion-Paare und eine Richtlinie-Reader, die gelesen und kompiliert, die Richtlinie in der Konfigurationsdatei angegeben. Dadurch kompiliert Richtlinie kann dann von den Ansprüchen Autorisierungs-Manager auszuwertende ein Prinzipals zum Autorisieren des Zugriffs auf Ressourcen verwendet werden. Nicht alle Elemente werden aus Gründen der Übersichtlichkeit aufgeführt. Informationen zu diesem Beispiel und weitere Beispiele verfügbar für WIF und dazu, wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ Der folgende Code zeigt die Überschreibung der <xref:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess%2A> Methode. Diese Methode gewährt oder verweigert hat, Zugriff basierend auf einer Richtlinie gelesen und kompiliert aus der Konfigurationsdatei.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#3](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/myclaimsauthorizationmanager.cs#3)]  
+[!code-csharp[WifClaimsBasedAuthorization#5](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/myclaimsauthorizationmanager.cs#5)]  
+  
+ Der folgende code zeigt die `ResourceAction` Klasse, die vom Manager für benutzerdefinierte Ansprüche verwendet.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#1](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/resourceaction.cs#1)]  
+  
+ Die Richtlinie, die von den Ansprüchen Autorisierungs-Manager verwendet wird angegeben, indem benutzerdefinierte `<policy>` Elemente unter dem [ &lt;ClaimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) Element. Diese Richtlinie gelesen und kompiliert wurde, indem die <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> Methode. In der ersten Richtlinie muss der Prinzipal einer der angegebenen Ansprüche, um die angegebene Aktion für die angegebene Ressource verfügen. In der zweiten Richtlinie muss der Prinzipal beide Ansprüche an die angegebene Aktion für die angegebene Ressource ausführen kann verfügen. In allen anderen Fällen wird der Prinzipal automatisch Zugriff unabhängig von den Ansprüchen gewährt, die er besitzt.  
+  
+```  
+<system.identityModel>  
+  <identityConfiguration>  
+    <claimsAuthorizationManager type="ClaimsAuthorizationLibrary.MyClaimsAuthorizationManager, ClaimsAuthorizationLibrary">  
+      <policy resource="http://localhost:28491/Developers.aspx" action="GET">  
+        <or>  
+          <claim claimType="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" claimValue="developer" />  
+          <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+        </or>  
+      </policy>  
+      <policy resource="http://localhost:28491/Administrators.aspx" action="GET">  
+        <and>  
+          <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+          <claim claimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country" claimValue="USA" />  
+        </and>  
+      </policy>  
+      <policy resource="http://localhost:28491/Default.aspx" action="GET">  
+      </policy>  
+      <policy resource="http://localhost:28491/" action="GET">  
+      </policy>  
+      <policy resource="http://localhost:28491/Claims.aspx" action="GET">  
+      </policy>  
+    </claimsAuthorizationManager>  
+  
+    ...  
+  
+  </identityConfiguration>  
+</system.identityModel>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public virtual void LoadCustomConfiguration (System.Xml.XmlNodeList nodelist);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList nodelist) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodelist" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodelist">Die benutzerdefinierte Konfiguration-Elemente. Jeder Knoten in der Liste ist vom Typ <see cref="T:System.Xml.XmlElement" />.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse lädt benutzerdefinierte Konfiguration aus XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> Methode wird von der Konfigurationsinfrastruktur aufgerufen. Wenn diese Methode aufgerufen wird, die `nodelist` der obersten Ebene der untergeordneten Elemente des enthält die [ &lt;ClaimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) Element aus der Konfigurationsdatei. Jedes dieser Elemente kann wiederum enthalten Attribute oder untergeordnete Elemente abhängig von dem Konfigurationsschema, das Sie für die abgeleitete Klasse zu definieren. Wenn keine untergeordneten Elemente unter werden die `<claimsAuthorizationManager>` Element in der Konfigurationsdatei, die diese Methode wird nicht aufgerufen.  
+  
+ Die Standardimplementierung löst eine <xref:System.NotImplementedException>. Überschreiben Sie diese Methode in der abgeleiteten Klasse auf die Initialisierung des Ihre anspruchsautorisierungs-Manager aus einer Konfigurationsdatei zu aktivieren. Normalerweise sind die Konfigurationselemente verwendet, um eine Autorisierungsrichtlinie express; Allerdings können Sie Elemente zu definieren und verwenden diese in keiner Weise, die basierend auf den Anforderungen Ihrer Anwendung sinnvoll ist.  
+  
+   
+  
+## Examples  
+ Die Codebeispiele, die in verwendet werden die <xref:System.Security.Claims.ClaimsAuthorizationManager> Themen stammen aus den `Claims Based Authorization` Beispiel. Dieses Beispiel stellt einen benutzerdefinierte Ansprüche Autorisierungs-Manager, der autorisieren kann Themen, die basierend auf einer Richtlinie, die in der Konfiguration angegeben ist. Benutzerdefinierte Ansprüche Autorisierungs-Managers besteht aus drei Hauptkomponenten: eine abgeleitete Klasse <xref:System.Security.Claims.ClaimsAuthorizationManager> , implementiert die Manager der `ResourceAction` -Klasse, die eine Ressource und eine Aktion-Paare und eine Richtlinie-Reader, die gelesen und kompiliert, die Richtlinie in der Konfigurationsdatei angegeben. Dadurch kompiliert Richtlinie kann dann von den Ansprüchen Autorisierungs-Manager auszuwertende ein Prinzipals zum Autorisieren des Zugriffs auf Ressourcen verwendet werden. Nicht alle Elemente werden aus Gründen der Übersichtlichkeit aufgeführt. Informationen zu diesem Beispiel und weitere Beispiele verfügbar für WIF und dazu, wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ Der folgende Code zeigt die Überschreibung der <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> Methode. Diese Methode verwendet eine Richtlinie Reader Hilfsklasse (nicht dargestellt) zum Lesen und Kompilieren Autorisierungsrichtlinien, die in der Konfigurationsdatei angegeben. Richtlinien für ein Wörterbuch hinzugefügt werden und werden aufgerufen, indem eine `ResourceAction` Schlüsselobjekt, das erstellt wird, aus der Ressource und die Aktion, für die sie vorgesehen sind.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#3](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/myclaimsauthorizationmanager.cs#3)]  
+[!code-csharp[WifClaimsBasedAuthorization#4](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/myclaimsauthorizationmanager.cs#4)]  
+  
+ Der folgende code zeigt die `ResourceAction` Klasse, die vom Manager für benutzerdefinierte Ansprüche verwendet.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#1](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/resourceaction.cs#1)]  
+  
+ Die Richtlinie, die von den Ansprüchen Autorisierungs-Manager verwendet wird angegeben, indem benutzerdefinierte `<policy>` Elemente unter dem [ &lt;ClaimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) Element. Diese Richtlinie gelesen und kompiliert wurde, indem die <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> Methode. In der ersten Richtlinie muss der Prinzipal einer der angegebenen Ansprüche, um die angegebene Aktion für die angegebene Ressource verfügen. In der zweiten Richtlinie muss der Prinzipal beide Ansprüche an die angegebene Aktion für die angegebene Ressource ausführen kann verfügen. In allen anderen Fällen wird der Prinzipal automatisch Zugriff unabhängig von den Ansprüchen gewährt, die er besitzt.  
+  
+```  
+<system.identityModel>  
+  <identityConfiguration>  
+    <claimsAuthorizationManager type="ClaimsAuthorizationLibrary.MyClaimsAuthorizationManager, ClaimsAuthorizationLibrary">  
+      <policy resource="http://localhost:28491/Developers.aspx" action="GET">  
+        <or>  
+          <claim claimType="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" claimValue="developer" />  
+          <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+        </or>  
+      </policy>  
+      <policy resource="http://localhost:28491/Administrators.aspx" action="GET">  
+        <and>  
+          <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+          <claim claimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country" claimValue="USA" />  
+        </and>  
+      </policy>  
+      <policy resource="http://localhost:28491/Default.aspx" action="GET">  
+      </policy>  
+      <policy resource="http://localhost:28491/" action="GET">  
+      </policy>  
+      <policy resource="http://localhost:28491/Claims.aspx" action="GET">  
+      </policy>  
+    </claimsAuthorizationManager>  
+  
+    ...  
+  
+  </identityConfiguration>  
+</system.identityModel>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

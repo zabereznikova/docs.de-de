@@ -1,0 +1,634 @@
+<Type Name="TableCell" FullName="System.Web.UI.WebControls.TableCell">
+  <TypeSignature Language="C#" Value="public class TableCell : System.Web.UI.WebControls.WebControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TableCell extends System.Web.UI.WebControls.WebControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TableCell" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.PreviewControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.TableCellControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Zelle in einem <see cref="T:System.Web.UI.WebControls.Table" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Die <xref:System.Web.UI.WebControls.TableCell> Klasse stellt eine Zelle in einem <xref:System.Web.UI.WebControls.Table> Steuerelement. Sie können die <xref:System.Web.UI.WebControls.TableCell.Text%2A> Eigenschaft angeben oder den Inhalt der Zelle zu ermitteln.  
+  
+ Die <xref:System.Web.UI.WebControls.TableCell> Klasse können Sie steuern, wie der Inhalt der Zelle angezeigt werden. Die Ausrichtung des Inhalts in der Zelle angegeben werden, indem die <xref:System.Web.UI.WebControls.TableCell.HorizontalAlign%2A> und <xref:System.Web.UI.WebControls.TableCell.VerticalAlign%2A> Eigenschaften. Sie können die <xref:System.Web.UI.WebControls.TableCell.Wrap%2A> Eigenschaft, um anzugeben, ob der Inhalt der Zelle in der Zelle zu umschließen.  
+  
+ Sie können auch wie viele Zeilen oder Spalten in der Tabelle, dargestellt durch Angeben einer <xref:System.Web.UI.WebControls.Table> steuern, die von einer einzelnen Zelle belegt werden. Die <xref:System.Web.UI.WebControls.TableCell.RowSpan%2A> und <xref:System.Web.UI.WebControls.TableCell.ColumnSpan%2A> Eigenschaften steuern, wie viele Zeilen und Spalten verwendet werden.  
+  
+> [!CAUTION]
+>  Dieses Steuerelement kann verwendet werden, Benutzereingaben angezeigt werden, die möglicherweise böswillige Clientskripts umfassen. Überprüfen Sie alle Informationen, die für ausführbare Skripts, SQL-Anweisungen oder anderen Code von einem Client gesendet wird, vor der Anzeige in der Anwendung. ASP.NET bietet eine Funktion für den Überprüfung eingabeanforderung zum Blockieren von Skript und HTML in Benutzereingaben. Server-Validierungssteuerelemente werden ebenfalls bereitgestellt, um Benutzereingaben zu bewerten. Weitere Informationen finden Sie unter [Standardsteuerelemente schützen](http://msdn.microsoft.com/library/f3e7718f-63d0-44a3-bd5f-48cc2059c2a8), [wie: schützen gegen Script Exploits in einer Web-Anwendung durch Anwenden von HTML-Codierung in Zeichenfolgen](http://msdn.microsoft.com/library/6f67973f-dda0-45a1-ba9d-e88532d7dc5b), und [Validieren von Benutzereingaben in ASP.NET Web Pages](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:TableCell  
+    AccessKey="string"  
+    AssociatedHeaderCellID="string"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    ColumnSpan="integer"  
+    CssClass="string"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|Medium|  
+        Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    Height="size"  
+    HorizontalAlign="NotSet|Left|Center|Right|Justify"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    RowSpan="integer"  
+    runat="server"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    Text="string"  
+    ToolTip="string"  
+    VerticalAlign="NotSet|Top|Middle|Bottom"  
+    Visible="True|False"  
+    Width="size"  
+    Wrap="True|False"  
+/></asp:TableCell>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Tabelle erstellen, programmgesteuert hinzufügen, Elemente in der Tabelle und die Tabelle auf der Webseite angezeigt wird. Hinweis wie <xref:System.Web.UI.WebControls.TableCell> Steuerelemente instanziiert werden, und ihre Eigenschaftswerte festgelegt sind.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[TableCell#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCell/CS/tablecellcs.aspx#1)]
+ [!code-aspx-vb[TableCell#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCell/VB/tablecellvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableCell ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableCell.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.TableCell" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TableCell> erstellt, wobei die <xref:System.Web.UI.HtmlTextWriterTag.Td> Tag.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht, wie eine neue Instanz der programmgesteuerten Erstellung einer <xref:System.Web.UI.WebControls.TableCell> Steuerelement.  
+  
+ [!code-csharp[TableCell#5](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCell/CS/tablecellcs.aspx#5)]
+ [!code-vb[TableCell#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCell/VB/tablecellvb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableCell.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Ausgabestream, der HTML-Inhalt für den Client rendert.</param>
+        <summary>Fügt die Eigenschaften, die spezifisch für die <see cref="T:System.Web.UI.WebControls.TableCell" /> Steuerelement in der Liste der zu rendernden Attribute.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TableCell.AddAttributesToRender%2A> Methode überschreibt der Basisklasse <xref:System.Web.UI.WebControls.WebControl.AddAttributesToRender%2A> -Methode und der erste Ruft die Basismethode und fügt dann die <xref:System.Web.UI.WebControls.TableCell> Attribute, entspricht die <xref:System.Web.UI.WebControls.TableCell.RowSpan%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.TableCell.ColumnSpan%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.TableCell.AssociatedHeaderCellID%2A> Diese Eigenschaft. Wenn die <xref:System.Web.UI.WebControls.TableCell.AssociatedHeaderCellID%2A> Eigenschaft bezieht sich auf eine <xref:System.Web.UI.WebControls.TableHeaderCell> , die nicht gefunden werden kann, ein <xref:System.Web.HttpException> ausgelöst wird.  
+  
+ Die <xref:System.Web.UI.WebControls.TableCell.AddAttributesToRender%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.WebControls.TableCell> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.TableCell.AddAttributesToRender%2A> in einem benutzerdefinierten gesteuert wird, damit ein benutzerdefiniertes Title-Attribut für jede Zelle gerendert wird.  
+  
+ [!code-aspx-csharp[CustomTableCellAddAttributesToRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomTableCellAddAttributesToRender/CS/custom_tablecell_addattributestorendercs.aspx#1)]
+ [!code-aspx-vb[CustomTableCellAddAttributesToRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomTableCellAddAttributesToRender/VB/custom_tablecell_addattributestorendervb.aspx#1)]  
+  
+ [!code-csharp[CustomTableCellAddAttributesToRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomTableCellAddAttributesToRender/CS/custom_tablecell_addattributestorender.cs#2)]
+ [!code-vb[CustomTableCellAddAttributesToRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomTableCellAddAttributesToRender/VB/custom_tablecell_addattributestorender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Eine Zelle, die als zugeordnete Headerzelle wurde nicht gefunden.</exception>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.WebControls.TableCell.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" /> Methode in einer abgeleiteten Klasse aufrufen werden die <see cref="M:System.Web.UI.WebControls.TableCell.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" /> Methode der Basisklasse, damit die <see cref="T:System.Web.UI.WebControls.TableCell" /> Steuerelementattribute korrekt gerendert werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="protected override void AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableCell.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein <see cref="T:System.Object" /> , das das analysierte Element darstellt.</param>
+        <summary>Fügt eine analysierte untergeordnete Steuerelement, das <see cref="T:System.Web.UI.WebControls.TableCell" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.TableCell> Steuerelement untergeordnete Steuerelemente enthält der Basisklasse <xref:System.Web.UI.WebControls.TableCell.AddParsedSubObject%2A> Methode wird aufgerufen, andernfalls der <xref:System.Web.UI.WebControls.TableCell> des Steuerelements <xref:System.Web.UI.WebControls.TableCell.Text%2A> Eigenschaftswert als hinzugefügt wird eine <xref:System.Web.UI.LiteralControl> -Objekt an die <xref:System.Web.UI.WebControls.TableCell> Steuerelement <xref:System.Web.UI.ControlCollection>.  
+  
+ Die <xref:System.Web.UI.WebControls.TableCell.AddParsedSubObject%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.WebControls.TableCell> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.WebControls.TableCell.AddParsedSubObject(System.Object)" /> Methode in einer abgeleiteten Klasse sicher, dass der Basisklasse aufgerufen werden <see cref="M:System.Web.UI.WebControls.TableCell.AddParsedSubObject(System.Object)" /> Methode, sodass Objekte ordnungsgemäß hinzugefügt werden die <see cref="T:System.Web.UI.WebControls.TableCell" /> Steuerelement <see cref="T:System.Web.UI.ControlCollection" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedHeaderCellID">
+      <MemberSignature Language="C#" Value="public virtual string[] AssociatedHeaderCellID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AssociatedHeaderCellID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableCell.AssociatedHeaderCellID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.StringArrayConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine durch Leerzeichen getrennte Liste der Header Tabellenzellen zugeordneten der <see cref="T:System.Web.UI.WebControls.TableCell" /> Steuerelement.</summary>
+        <value>Ein Array von Zeichenfolgen, die der zugeordneten Tabellenheaderzellen-IDs enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TableCell.AssociatedHeaderCellID%2A> Eigenschaft enthält eine Liste der Header Zelle programmgesteuerten Bezeichner, die Headerinformationen des Bereitstellen der <xref:System.Web.UI.WebControls.TableCell> Steuerelement. Die Liste der Header Zelle Bezeichner wird als eine durch Trennzeichen getrennte Liste in HTML gerendert `<td>` des Elements `header` Attribut.  
+  
+ Beim Festlegen der <xref:System.Web.UI.WebControls.TableCell.AssociatedHeaderCellID%2A> Eigenschaft verwenden Sie eine durch Trennzeichen getrennte Liste von Zeichenfolgen. Wenn ein Element der Liste nicht als eine gültige Tabelle Kopfzeilenzelle erkannt wird ein <xref:System.Web.HttpException> wird ausgelöst, wenn die <xref:System.Web.UI.WebControls.TableCell.AddAttributesToRender%2A> aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ angeben, die <xref:System.Web.UI.WebControls.TableCell.AssociatedHeaderCellID%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TableCell> Steuerelement. Beachten Sie insbesondere, wie die Zelle in der letzten Zeile drei Headerzellen zugeordnet ist. Ein vollständiges, funktionsfähiges Codebeispiel finden Sie unter der <xref:System.Web.UI.WebControls.TableHeaderCell> Übersichtsthema.  
+  
+```csharp  
+<asp:TableCell AssociatedHeaderCellID="Column1Header Column2Header Column3Header"  
+ColumnSpan="3"  
+HorizontalAlign="Left">(2,0)  
+</asp:TableCell>  
+```  
+  
+```vb  
+<asp:TableCell AssociatedHeaderCellID="Column1Header Column2Header Column3Header"  
+ColumnSpan="3"  
+HorizontalAlign="Left">(2,0)  
+</asp:TableCell>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnSpan">
+      <MemberSignature Language="C#" Value="public virtual int ColumnSpan { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableCell.ColumnSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Spalten in der <see cref="T:System.Web.UI.WebControls.Table" /> -Steuerelement, das die Zelle umfasst.</summary>
+        <value>Die Anzahl der Spalten in der gerenderten Tabelle, die die Zelle umfasst. Der Standardwert ist <see langword="0" />, was bedeutet, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TableCell.ColumnSpan%2A> Eigenschaft festzulegen oder zu bestimmen die Anzahl der Spalten in der gerenderten Tabelle, die die Zelle umfasst. Wenn Sie diese Eigenschaft festlegen, um z. B. `2`, nimmt zwei Spalten in die Zelle die <xref:System.Web.UI.WebControls.Table> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ angeben, die <xref:System.Web.UI.WebControls.TableCell.ColumnSpan%2A> von einem <xref:System.Web.UI.WebControls.TableCell> Steuerelement. Beachten Sie insbesondere, wie die letzte Zeile einzelne Zelle drei Spalten umfasst. Ein vollständiges, funktionsfähiges Codebeispiel finden Sie unter der <xref:System.Web.UI.WebControls.TableHeaderCell> Übersichtsthema.  
+  
+```csharp  
+<asp:TableCell AssociatedHeaderCellID="Column1Header Column2Header Column3Header"  
+ColumnSpan="3"  
+HorizontalAlign="Left">(2,0)  
+</asp:TableCell>  
+```  
+  
+```vb  
+<asp:TableCell AssociatedHeaderCellID="Column1Header Column2Header Column3Header"  
+ColumnSpan="3"  
+HorizontalAlign="Left">(2,0)  
+</asp:TableCell>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist kleiner als <see langword="0" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlStyle">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.Style CreateControlStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.Style CreateControlStyle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableCell.CreateControlStyle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> für die <see cref="T:System.Web.UI.WebControls.TableCell" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.Style" /> darstellt, die die <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> für die <see cref="T:System.Web.UI.WebControls.TableCell" /> Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TableItemStyle> erstellt, indem die <xref:System.Web.UI.WebControls.TableCell.CreateControlStyle%2A> Methode wird verwendet, mit der <xref:System.Web.UI.WebControls.TableCell.Wrap%2A>, <xref:System.Web.UI.WebControls.TableCell.HorizontalAlign%2A>, und <xref:System.Web.UI.WebControls.TableCell.VerticalAlign%2A> Eigenschaften.  
+  
+ Die <xref:System.Web.UI.WebControls.TableCell.CreateControlStyle%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.WebControls.TableCell> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.TableCell.CreateControlStyle%2A> Methode in einem benutzerdefinierten steuern, sodass sie immer eine neue Instanz der zurückgibt der <xref:System.Web.UI.WebControls.TableStyle> -Klasse für die <xref:System.Web.UI.WebControls.TableCell>.  
+  
+ [!code-aspx-csharp[CustomTableCellCreateControlStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomTableCellCreateControlStyle/CS/custom_tablecell_createcontrolstylecs.aspx#1)]
+ [!code-aspx-vb[CustomTableCellCreateControlStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomTableCellCreateControlStyle/VB/custom_tablecell_createcontrolstylevb.aspx#1)]  
+  
+ [!code-csharp[CustomTableCellCreateControlStyle#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomTableCellCreateControlStyle/CS/custom_tablecell_createcontrolstyle.cs#2)]
+ [!code-vb[CustomTableCellCreateControlStyle#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomTableCellCreateControlStyle/VB/custom_tablecell_createcontrolstyle.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.HorizontalAlign HorizontalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.HorizontalAlign HorizontalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableCell.HorizontalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HorizontalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die horizontale Ausrichtung des Inhalts in der Zelle.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.HorizontalAlign" />-Enumerationswerte. Die Standardeinstellung ist <see langword="NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TableCell.HorizontalAlign%2A> Eigenschaft, um die horizontale Ausrichtung des Inhalts der Zelle anzugeben. Die möglichen Werte für die Verwendung werden angegeben, der <xref:System.Web.UI.WebControls.HorizontalAlign> Enumeration.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ angeben, die <xref:System.Web.UI.WebControls.TableCell.HorizontalAlign%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TableCell> Steuerelement. Beachten Sie insbesondere, wie die Zelle in der letzten Zeile als linksbündig ausgerichtet ist. Ein vollständiges, funktionsfähiges Codebeispiel finden Sie unter der <xref:System.Web.UI.WebControls.TableHeaderCell> Übersichtsthema.  
+  
+```csharp  
+<asp:TableCell AssociatedHeaderCellID="Column1Header,Column2Header,Column3Header"  
+ColumnSpan="3"  
+HorizontalAlign="Left">(2,0)  
+</asp:TableCell>  
+```  
+  
+```vb  
+<asp:TableCell AssociatedHeaderCellID="Column1Header,Column2Header,Column3Header"  
+ColumnSpan="3"  
+HorizontalAlign="Left">(2,0)  
+</asp:TableCell>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableCell.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Ausgabestream, der HTML-Inhalt für den Client rendert.</param>
+        <summary>Rendert die <see cref="T:System.Web.UI.WebControls.TableCell" /> Inhalt in den angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.TableCell> Steuerelement verfügt über untergeordnete Steuerelemente oder überschrieben wird, einer abgeleiteten Klasse der Basisklasse <xref:System.Web.UI.WebControls.WebControl.RenderContents%2A> Methode wird aufgerufen, andernfalls der Wert des der <xref:System.Web.UI.WebControls.TableCell.Text%2A> Eigenschaft geschrieben der <xref:System.Web.UI.HtmlTextWriter> Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.TableCell.RenderContents%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.WebControls.TableCell> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.TableCell.RenderContents%2A> Methode in einem benutzerdefinierten <xref:System.Web.UI.WebControls.TableCell> steuern, in den Inhalt der Zelle benutzerdefinierter Text eingefügt wird.  
+  
+ [!code-aspx-csharp[CustomTableCellRenderContents#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomTableCellRenderContents/CS/custom_tablecell_rendercontentscs.aspx#1)]
+ [!code-aspx-vb[CustomTableCellRenderContents#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomTableCellRenderContents/VB/custom_tablecell_rendercontentsvb.aspx#1)]  
+  
+ [!code-csharp[CustomTableCellRenderContents#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomTableCellRenderContents/CS/custom_tablecell_rendercontents.cs#2)]
+ [!code-vb[CustomTableCellRenderContents#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomTableCellRenderContents/VB/custom_tablecell_rendercontents.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowSpan">
+      <MemberSignature Language="C#" Value="public virtual int RowSpan { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableCell.RowSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Zeilen in der <see cref="T:System.Web.UI.WebControls.Table" /> -Steuerelement, das die Zelle umfasst.</summary>
+        <value>Die Anzahl der Zeilen in der gerenderten Tabelle, die die Zelle umfasst. Der Standardwert ist <see langword="0" />, was bedeutet, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TableCell.RowSpan%2A> Eigenschaft festzulegen oder zu bestimmen die Anzahl der Zeilen in der gerenderten Tabelle, die die Zelle umfasst. Wenn Sie diese Eigenschaft festlegen, um z. B. `2`, erstreckt sich zwei Zeilen in die Zelle der <xref:System.Web.UI.WebControls.Table> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist kleiner als <see langword="0" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDisabledAttribute">
+      <MemberSignature Language="C#" Value="public override bool SupportsDisabledAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDisabledAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableCell.SupportsDisabledAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob vom Steuerelement das <see langword="disabled" />-Attribut des gerenderten HTML-Elements auf "disabled" festgelegt werden soll, wenn die <see cref="P:System.Web.UI.WebControls.WebControl.IsEnabled" />-Eigenschaft des Steuerelements <see langword="false" /> ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> Eigenschaft gibt an, eine frühere ASP.NET-Version als <c>4.0</c>ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, wie ASP.NET HTML für ein Steuerelement rendern soll, wenn das Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `true`, rendert ASP.NET ein `disabled` Attribut, wenn ein Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `false`, rendert ASP.NET ein `class` Attribut, wenn ein Steuerelement deaktiviert ist. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableCell.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Textinhalt der Zelle fest.</summary>
+        <value>Der Textinhalt der Zelle. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TableCell.Text%2A> Eigenschaft festlegen oder den Text-Inhalt der Zelle zu ermitteln. Diese Eigenschaft wird häufig verwendet, um den Inhalt einer Zelle programmgesteuert zu aktualisieren.  
+  
+> [!NOTE]
+>  Festlegen der <xref:System.Web.UI.WebControls.TableCell.Text%2A> löschen Eigenschaft alle anderen Steuerelemente der <xref:System.Web.UI.WebControls.TableCell>.  
+  
+> [!CAUTION]
+>  Die <xref:System.Web.UI.WebControls.TableCell.Text%2A> -Steuerelement anzuzeigende Benutzereingaben, die möglicherweise böswillige Clientskripts umfasst verwendet werden kann. Überprüfen Sie alle Informationen, die für ausführbare Skripts, SQL-Anweisungen oder anderen Code von einem Client gesendet wird, vor der Anzeige in der Anwendung. ASP.NET bietet eine Funktion für den Überprüfung eingabeanforderung zum Blockieren von Skript und HTML in Benutzereingaben. Server-Validierungssteuerelemente werden ebenfalls bereitgestellt, um Benutzereingaben zu bewerten. Weitere Informationen finden Sie unter [Standardsteuerelemente schützen](http://msdn.microsoft.com/library/f3e7718f-63d0-44a3-bd5f-48cc2059c2a8), [wie: schützen gegen Script Exploits in einer Web-Anwendung durch Anwenden von HTML-Codierung in Zeichenfolgen](http://msdn.microsoft.com/library/6f67973f-dda0-45a1-ba9d-e88532d7dc5b), und [Validieren von Benutzereingaben in ASP.NET Web Pages](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer neuen Instanz von einem <xref:System.Web.UI.WebControls.TableCell> programmgesteuert zu steuern. Beachten Sie insbesondere, wie die <xref:System.Web.UI.WebControls.TableCell.Text%2A> Eigenschaft wird zum Festlegen des Inhalts von den <xref:System.Web.UI.WebControls.TableCell> Steuerelement.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.TableCell> Klasse.  
+  
+ [!code-csharp[TableCell#5](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCell/CS/tablecellcs.aspx#5)]
+ [!code-vb[TableCell#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCell/VB/tablecellvb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.VerticalAlign VerticalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.VerticalAlign VerticalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableCell.VerticalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.VerticalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die vertikale Ausrichtung des Inhalts in der Zelle.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.VerticalAlign" />-Enumerationswerte. Die Standardeinstellung ist <see langword="NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TableCell.VerticalAlign%2A> Eigenschaft, um die vertikale Ausrichtung des Inhalts der Zelle anzugeben. Die möglichen Werte für die Verwendung werden angegeben, der <xref:System.Web.UI.WebControls.VerticalAlign> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="public virtual bool Wrap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Wrap" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableCell.Wrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert fest, der angibt, ob der Inhalt der Zelle umbrochen.</summary>
+        <value>
+          <see langword="true" />Wenn der Inhalt der Zelle in der Zelle zu umschließen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TableCell.Wrap%2A> Eigenschaft festzulegen oder zu bestimmen, ob der Inhalt der Zelle in der Zelle zu umschließen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,132 @@
+<Type Name="ClientRolePrincipal" FullName="System.Web.ClientServices.ClientRolePrincipal">
+  <TypeSignature Language="C#" Value="public class ClientRolePrincipal : System.Security.Principal.IPrincipal" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClientRolePrincipal extends System.Object implements class System.Security.Principal.IPrincipal" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ClientServices.ClientRolePrincipal" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Principal.IPrincipal</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Sicherheitsinformationen für Clientanwendungsdienste, darunter Rolleninformationen dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Überprüfen von eines Benutzers in Clientanwendungsdienste, die <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider> oder <xref:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider> legt die `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> -Eigenschaft auf eine Instanz dieser Klasse. Die <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider> initialisiert die <xref:System.Web.ClientServices.ClientRolePrincipal.Identity%2A> Eigenschaft, um eine neue Instanz der dem <xref:System.Web.ClientServices.ClientFormsIdentity> Klasse. Die <xref:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider> initialisiert die <xref:System.Web.ClientServices.ClientRolePrincipal.Identity%2A> Eigenschaft, um die <xref:System.Security.Principal.WindowsIdentity> zurückgegebenes Objekt die `static` <xref:System.Security.Principal.WindowsIdentity.GetCurrent?displayProperty=nameWithType> Methode.  
+  
+ Diese Klasse wird nicht in der Regel direkt zugreifen werden. Normalerweise rufen Sie die <xref:System.Security.Principal.IPrincipal.IsInRole%2A> Methode der <xref:System.Security.Principal.IPrincipal> zurückgegebenes der `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> Eigenschaft. Sie können jedoch umgewandelt der <xref:System.Threading.Thread.CurrentPrincipal%2A> Eigenschaftswert angibt, der eine <xref:System.Web.ClientServices.ClientRolePrincipal> Verweis zum Aufrufen der <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> Methode explizit, wie im Beispielabschnitt veranschaulicht.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie diese Klasse zu verwenden, um eine Schaltfläche angezeigt werden, nur, wenn der Benutzer in der Rolle "Manager" ist. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Button> mit dem Namen `managerOnlyButton` mit einem Anfangswert <xref:System.Windows.Forms.Control.Visible%2A> Eigenschaftswert `false`.  
+  
+ [!code-csharp[ClientApplicationServices#313](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#313)]
+ [!code-vb[ClientApplicationServices#313](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#313)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientRolePrincipal (System.Security.Principal.IIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.ClientRolePrincipal.#ctor(System.Security.Principal.IIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Den aktuellen Benutzer darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ClientServices.ClientRolePrincipal" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.ClientServices.ClientRolePrincipal.Identity%2A> -Eigenschaft wird mit dem Wert des initialisiert die `identity` Parameter.  
+  
+ Beim Überprüfen von eines Benutzers in Clientanwendungsdienste, die <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider> oder <xref:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider> legt die `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> -Eigenschaft auf eine Instanz dieser Klasse. Die <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider> initialisiert die <xref:System.Web.ClientServices.ClientRolePrincipal.Identity%2A> Eigenschaft, um eine neue Instanz der dem <xref:System.Web.ClientServices.ClientFormsIdentity> Klasse. Die <xref:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider> initialisiert die <xref:System.Web.ClientServices.ClientRolePrincipal.Identity%2A> Eigenschaft, um die <xref:System.Security.Principal.WindowsIdentity> zurückgegebenes Objekt die `static` <xref:System.Security.Principal.WindowsIdentity.GetCurrent?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IIdentity Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IIdentity Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ClientServices.ClientRolePrincipal.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zugeordnete Sicherheitsidentität der <see cref="T:System.Web.ClientServices.ClientRolePrincipal" />.</summary>
+        <value>Den aktuellen Benutzer darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Überprüfen von eines Benutzers in Clientanwendungsdienste, die <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider> oder <xref:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider> legt die `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> -Eigenschaft auf eine Instanz dieser Klasse. Die <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider> initialisiert die <xref:System.Web.ClientServices.ClientRolePrincipal.Identity%2A> Eigenschaft, um eine neue Instanz der dem <xref:System.Web.ClientServices.ClientFormsIdentity> Klasse. Die <xref:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider> initialisiert die <xref:System.Web.ClientServices.ClientRolePrincipal.Identity%2A> Eigenschaft, um die <xref:System.Security.Principal.WindowsIdentity> zurückgegebenes Objekt die `static` <xref:System.Security.Principal.WindowsIdentity.GetCurrent?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInRole">
+      <MemberSignature Language="C#" Value="public bool IsInRole (string role);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsInRole(string role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.ClientRolePrincipal.IsInRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="role" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="role">Die Rolle, um zu überprüfen.</param>
+        <summary>Ruft einen Wert ab, ob der Benutzer durch dargestellt die <see cref="T:System.Web.ClientServices.ClientRolePrincipal" /> in der angegebenen Rolle ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Benutzer in der angegebenen Rolle ist. <see langword="false" /> , wenn der Benutzer befindet sich nicht in der angegebenen Rolle oder ist nicht authentifiziert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise rufen Sie die <xref:System.Security.Principal.IPrincipal.IsInRole%2A> Methode der <xref:System.Security.Principal.IPrincipal> zurückgegebenes der `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> Eigenschaft. Sie können jedoch umgewandelt der <xref:System.Threading.Thread.CurrentPrincipal%2A> Eigenschaftswert angibt, der eine <xref:System.Web.ClientServices.ClientRolePrincipal> Verweis auf diese Methode, wie im Beispielabschnitt veranschaulicht, explizit aufrufen.  
+  
+ Die <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> Methode gibt stets `false` aus, wenn die Benutzeranmeldung abgelaufen ist. Dies geschieht nicht, wenn die Anwendung ruft die <xref:System.Security.Principal.IPrincipal.IsInRole%2A> Methode einmal kurz nach der Authentifizierung. Wenn Ihre Anwendung Benutzerrollen zu anderen Zeiten abrufen muss, empfiehlt es sich, Code hinzufügen, um Benutzer, deren Anmeldung abgelaufen ist, erneut zu überprüfen. Wenn allen gültigen Benutzern Rollen zugewiesen sind, können Sie bestimmen, ob die Anmeldung, abgelaufen ist, in dem Sie die <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> -Methode aufrufen. Wenn keine Rollen ausgegeben, ist die Anmeldung abgelaufen. Ein Beispiel für diese Funktion finden Sie unter der <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> -Methode. Diese Funktion ist nur erforderlich, wenn Sie die Option **Verlangen, dass sich der Benutzer bei Ablauf des Cookies erneut anmelden** in der Anwendungskonfiguration ausgewählt haben. Weitere Informationen finden Sie unter [How to: Configure Client Application Services](~/docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie diese Methode verwenden, um eine Schaltfläche angezeigt werden, nur, wenn der Benutzer in der Rolle "Manager" ist. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Button> mit dem Namen `managerOnlyButton` mit einem Anfangswert <xref:System.Windows.Forms.Control.Visible%2A> Eigenschaftswert `false`.  
+  
+ [!code-csharp[ClientApplicationServices#313](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#313)]
+ [!code-vb[ClientApplicationServices#313](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#313)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

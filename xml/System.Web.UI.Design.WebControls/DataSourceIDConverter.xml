@@ -1,0 +1,249 @@
+<Type Name="DataSourceIDConverter" FullName="System.Web.UI.Design.WebControls.DataSourceIDConverter">
+  <TypeSignature Language="C#" Value="public class DataSourceIDConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataSourceIDConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.DataSourceIDConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine wählbar Liste der Datenquellennamen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter> Klasse ist eine <xref:System.ComponentModel.TypeConverter> -Objekt, das in der Regel verweist die <xref:System.ComponentModel.TypeConverterAttribute> Attribut.  
+  
+ Die Datenquelle den Namen, die von zurückgegeben werden die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.GetStandardValues%2A> Methode werden von Komponenten aus dem Container des angegebenen Kontexts, die gültige Datenquellen sind.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.GetStandardValuesExclusive%2A> Methode ruft einen Wert, der angibt, ob die zurückgegebenen Datenquellennamen eine exklusive Liste möglicher Werte sind. Die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.GetStandardValuesSupported%2A> Methode ruft einen Wert, der angibt, ob die Datenquellennamen ein Standardsatz von Werten sind, die aus einer Liste ausgewählt werden können.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.ConvertFrom%2A> -Methode konvertiert das angegebene Objekt in den systemeigenen Typ des Konverters. Die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.CanConvertFrom%2A> Methode ruft einen Wert, der angibt, ob dies <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter> ein Objekt vom angegebenen Quelltyp in den systemeigenen Typ konvertieren kann.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.IsValidDataSource%2A> Methode gibt an, ob die angegebene Komponente implementiert die <xref:System.Web.UI.IDataSource> Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceIDConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataSourceIDConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.DataSourceIDConverter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter> Klasse bei der die Klasse verwiesen wird ein <xref:System.ComponentModel.TypeConverterAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataSourceIDConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, durch die <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , Informationen über einen Kontext für einen Typkonverter bereitstellt, sodass der Typkonverter eine Konvertierung durchführen kann.</param>
+        <param name="sourceType">Die <see cref="T:System.Type" /> des Objekts, für die Konvertierung angefordert wird.</param>
+        <summary>Ruft einen Wert, der angibt, ob dieser Konverter ein Objekt vom angegebenen Quelltyp in den systemeigenen Typ des Konverters konvertieren kann.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="sourceType" /> ist eine Zeichenfolge ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.ConvertFrom%2A> Methode kann nur aus einer Zeichenfolge konvertieren das <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.CanConvertFrom%2A> wird nur zurückgegeben `true` Wenn `sourcetype` ist eine Zeichenfolge.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.CanConvertFrom%2A> verwendet nicht die `context` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataSourceIDConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, durch die <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , Informationen über einen Kontext für einen Typkonverter bereitstellt, sodass der Typkonverter eine Konvertierung durchführen kann.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> -Objekt, das die Kultur der gibt an, die <c>Wert</c> Parameter.</param>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert das angegebene Objekt in den systemeigenen Typ des Konverters.</summary>
+        <returns>Die <paramref name="value" /> Parameter wird als Zeichenfolge zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `value` Parameter verfügt einen Typ einer Zeichenfolge, wird er als Zeichenfolge zurückgegeben. Wenn `value` ist `null`, eine leere Zeichenfolge ("") zurückgegeben. Andernfalls wird eine <xref:System.NotSupportedException> ausgelöst.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.ConvertFrom%2A> Methode verwendet nicht die `context` oder `culture` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" />ist keine Zeichenfolge oder <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataSourceIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, durch die <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , Informationen über einen Kontext für einen Typkonverter bereitstellt, sodass der Typkonverter eine Konvertierung durchführen kann.</param>
+        <summary>Gibt eine Liste der verfügbaren Datenquellennamen zurück.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> mit den Namen der Steuerelemente, implementieren die <see cref="T:System.Web.UI.IDataSource" /> -Schnittstelle und stehen zur Verwendung im angegebenen Kontext.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.GetStandardValues%2A> Methode erstellt eine Liste der Namen der Komponenten, die gültige Datenquellen im Container des Objekts, die von angegeben wird, sind die `context` Parameter. Es wird dann der Liste, um konvertiert eine <xref:System.ComponentModel.TypeConverter.StandardValuesCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataSourceIDConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, durch die <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , Informationen über einen Kontext für einen Typkonverter bereitstellt, sodass der Typkonverter eine Konvertierung durchführen kann.</param>
+        <summary>Ruft einen Wert, der angibt, ob die zurückgegebenen Datenquellennamen eine exklusive Liste möglicher Werte sind.</summary>
+        <returns>Immer <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn einer Klasse von Ableiten der <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter> Klasse, und überschreiben die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.GetStandardValues%2A> auch Überschreiben der Methode, um eine exklusive Liste von Datenquellennamen, zurückzugeben der <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.GetStandardValuesExclusive%2A> -Methode zur Rückgabe `true` Wenn die Liste der Datenquellennamen exklusiv ist.  
+  
+ Die `context` Parameter wird nicht verwendet, durch die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.GetStandardValuesExclusive%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataSourceIDConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, durch die <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , Informationen über einen Kontext für einen Typkonverter bereitstellt, sodass der Typkonverter eine Konvertierung durchführen kann.</param>
+        <summary>Ruft einen Wert, der angibt, ob dieses Objekt einen Standardsatz von Datenquellennamen, die ausgewählt werden können aus einer Liste zurückgibt.</summary>
+        <returns>Immer <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `context` Parameter wird nicht verwendet, durch die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.GetStandardValuesSupported%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidDataSource">
+      <MemberSignature Language="C#" Value="protected virtual bool IsValidDataSource (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsValidDataSource(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataSourceIDConverter.IsValidDataSource(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein Objekt, das die <see cref="T:System.ComponentModel.IComponent" />-Schnittstelle implementiert.</param>
+        <summary>Ruft einen Wert, der angibt, ob die angegebene Komponente eine gültige Datenquelle ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="component" /> ist eine gültige Datenquelle ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter.IsValidDataSource%2A> Methode betrachtet die `component` Parameter, um eine gültige Datenquelle werden, wenn es implementiert die <xref:System.Web.UI.IDataSource> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.UI.Design.WebControls.DataSourceIDConverter.IsValidDataSource(System.ComponentModel.IComponent)" /> Methode überschrieben werden soll, von Steuerelementen, die näher untersuchen eine bestimmte Komponente um zu entscheiden, ob sie in der Liste von Standardwerten zurückgegeben werden soll. Angenommen, ein Steuerelement mit funktioniert nur, <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> Datenquellen <see cref="M:System.Web.UI.Design.WebControls.DataSourceIDConverter.IsValidDataSource(System.ComponentModel.IComponent)" /> zurückgeben sollte <see langword="true" /> nur für Komponenten, die <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> Objekte.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

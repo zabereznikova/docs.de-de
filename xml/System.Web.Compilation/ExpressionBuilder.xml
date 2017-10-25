@@ -1,0 +1,251 @@
+<Type Name="ExpressionBuilder" FullName="System.Web.Compilation.ExpressionBuilder">
+  <TypeSignature Language="C#" Value="public abstract class ExpressionBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ExpressionBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ExpressionBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Wertet die Ausdrücke während der Seitenanalyse an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.ExpressionBuilder> Klasse ist die Basisklasse für Ausdrucks-Generatoren, z. B. die <xref:System.Web.Compilation.AppSettingsExpressionBuilder> Klasse bereit, die Codeausdrücke während der Seitenanalyse zu erstellen.  
+  
+ Ausdrucks-Generatoren deklarative Ausdrücke zu analysieren und erstellen Sie Code zum Abrufen von Werten, die an eine Steuerelementeigenschaft gebunden. In Szenarien ohne Kompilierung wertet ein Ausdrucks-Generator, der einen kein-kompiliert-Feature unterstützt den Ausdruck zur Laufzeit.  
+  
+ Wenn der Parser einen Ausdruck, der mit der Zeichenfolge als Trennzeichen ist trifft `<%$ %>`, einen Ausdrucks-Generator für den Ausdruck basierend auf dem Präfix in der Zeichenfolge erstellt. Das Präfix ist der Teil der Zeichenfolge, die links neben dem Doppelpunkt (:) ist. Beispielsweise, wenn der Parser erkennt die Zeichenfolge `<%$ ConnectionStrings:MessageDB %>`, erstellt er eine <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder> Objekt. Präfixe sind in der Datei "Web.config" im Ausdrucks-Generatoren zugeordnet der <xref:System.Web.Configuration.CompilationSection.ExpressionBuilders%2A> Abschnitt.  
+  
+ Rechts neben der deklarativen Ausdruck wird zur Auswertung an den Ausdrucks-Generator übergeben. Überschreiben Sie die <xref:System.Web.Compilation.ExpressionBuilder.GetCodeExpression%2A> Methode, um Code zu generieren, die mit der Seite kompiliert werden.  
+  
+ Wenn die benutzerdefinierten Ausdrucks-Generator auf Seiten aktiv sein, die nicht kompiliert werden sollen, müssen Sie auch überschreiben die <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> Methode, um ein Objekt zurückzugeben, die die Ergebnisse des Ausdrucks darstellt. Sie müssen auch überschreiben die <xref:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate%2A> Eigenschaft, um anzugeben, dass der benutzerdefinierte Ausdrucks-Generator Seiten ohne Kompilierung unterstützt.  
+  
+ Sie können eine Reihe von Eigenschaften und Methoden zur Auswahl und die Auswertung eines Ausdrucks, das zur Entwurfszeit eine Steuerelementeigenschaft zugeordnet ist, durch die Implementierung eines Ausdrucks-Editors definieren. Der Editor ist auf den Ausdrucks-Generator über Metadaten auf Klassenebene markiert. Weitere Informationen finden Sie unter <xref:System.Web.UI.Design.ExpressionEditor>.  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispiele veranschaulichen, wie einen benutzerdefinierter Ausdrucks-Generator zu erstellen, indem Sie die Implementierung der <xref:System.Web.Compilation.ExpressionBuilder> abstrakte Klasse. Diese Implementierung der <xref:System.Web.Compilation.ExpressionBuilder> gibt eine ausgewertete-Anweisung, die auf den Ausdruck übergeben wird. Um dieses Beispiel auszuführen, müssen Sie zuerst den benutzerdefinierten Ausdrucks-Generator in der Datei "Web.config" registrieren. Im ersten Codebeispiel wird veranschaulicht, wie benutzerdefinierte Ausdrucks-Generator in der Datei "Web.config" registriert.  
+  
+```  
+<configuration>  
+    <system.web>  
+       <compilation>  
+          <expressionBuilders>  
+              <add expressionPrefix="MyCustomExpression"  
+               type="MyCustomExpressionBuilder"/>  
+          </expressionBuilders>  
+       </compilation>  
+    </system.web>  
+</configuration>  
+```  
+  
+ Im zweiten Codebeispiel wird veranschaulicht, wie der Ausdruck in einer ASPX-Datei verweisen.  
+  
+```  
+<asp:Label ID="Label1" runat="server"   
+Text="<%$ MyCustomExpression:Hello, world! %>" />  
+```  
+  
+ Im dritten Codebeispiel wird veranschaulicht, wie einen benutzerdefinierter Ausdrucks-Generator zu entwickeln, durch Ableiten von <xref:System.Web.Compilation.ExpressionBuilder>. Um dieses Codebeispiel ausführen zu können, müssen Sie die Klasse im Ordner "App_Code" platzieren.  
+  
+ [!code-csharp[System.Web.Compilation.ExpressionBuilder#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/CS/MyExpressionBuilder.cs#1)] 
+ [!code-vb[System.Web.Compilation.ExpressionBuilder#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/VB/MyExpressionBuilder.vb#1)]   
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Web.Compilation.ExpressionBuilder" /> -Klasse, die Sie überschreiben müssen die <see cref="M:System.Web.Compilation.ExpressionBuilder.GetCodeExpression(System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" /> Methode.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExpressionBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Compilation.ExpressionBuilder" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.Compilation.ExpressionBuilder> Klasse ist abstrakt, können Sie eine Instanz von erstellen <xref:System.Web.Compilation.ExpressionBuilder> direkt mithilfe der <xref:System.Web.Compilation.ExpressionBuilder.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Ableiten von der <see cref="T:System.Web.Compilation.ExpressionBuilder" /> -Klasse außer Kraft, indem die <see cref="M:System.Web.Compilation.ExpressionBuilder.#ctor" /> Konstruktor, um die angepasste Initialisierung von Aktionen für die Implementierung des Ausdrucks-Generator zu implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public virtual object EvaluateExpression (object target, System.Web.UI.BoundPropertyEntry entry, object parsedData, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object EvaluateExpression(object target, class System.Web.UI.BoundPropertyEntry entry, object parsedData, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionBuilder.EvaluateExpression(System.Object,System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="entry" Type="System.Web.UI.BoundPropertyEntry" />
+        <Parameter Name="parsedData" Type="System.Object" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Objekt, das den Ausdruck enthält.</param>
+        <param name="entry">Das Objekt, das Informationen über die Eigenschaft darstellt, die durch den Ausdruck an gebunden werden.</param>
+        <param name="parsedData">Das Objekt mit Daten analysiert, wie vom <see cref="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />.</param>
+        <param name="context">Die Kontextinformationen für die Auswertung des Ausdrucks.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt ein Objekt, das einen ausgewerteten Ausdruck darstellt.</summary>
+        <returns>Ein Objekt, das den ausgewerteten Ausdruck darstellt. andernfalls <see langword="null" /> Wenn keine die Inheritor implementiert <see cref="M:System.Web.Compilation.ExpressionBuilder.EvaluateExpression(System.Object,System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gegebenenfalls Ihre <xref:System.Web.Compilation.ExpressionBuilder> Objekt, das auf einer Seite aktiv sein, die die Funktion keine Kompilierung unterstützt Sie außer Kraft setzen können die <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> Methode und die <xref:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate%2A> Eigenschaft. Die <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> Methode sollte die Auswertung des aktuellen Ausdrucks zurückgeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe der überschriebenen <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> Methode zum Zurückgeben eines ausgewerteten Ausdrucks.  
+  
+ [!code-csharp[System.Web.Compilation.ExpressionBuilder#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/CS/MyExpressionBuilder.cs#3)]    
+ [!code-vb[System.Web.Compilation.ExpressionBuilder#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/VB/MyExpressionBuilder.vb#3)]   
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie überschreiben die <see cref="M:System.Web.Compilation.ExpressionBuilder.EvaluateExpression(System.Object,System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" /> -Methode, müssen Sie auch überschreiben die <see cref="P:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate" /> Eigenschaft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCodeExpression">
+      <MemberSignature Language="C#" Value="public abstract System.CodeDom.CodeExpression GetCodeExpression (System.Web.UI.BoundPropertyEntry entry, object parsedData, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.CodeExpression GetCodeExpression(class System.Web.UI.BoundPropertyEntry entry, object parsedData, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionBuilder.GetCodeExpression(System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Web.UI.BoundPropertyEntry" />
+        <Parameter Name="parsedData" Type="System.Object" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Das Objekt, das Informationen über die Eigenschaft darstellt, die durch den Ausdruck an gebunden werden.</param>
+        <param name="parsedData">Das Objekt mit Daten analysiert, wie vom <see cref="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />.</param>
+        <param name="context">Die Kontextinformationen für die Auswertung des Ausdrucks.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt Code, der während der seitenausführung zum Abrufen des ausgewerteten Ausdrucks dient zurück.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.CodeExpression" /> , die für die eigenschaftenzuweisung verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die von erben die <xref:System.Web.Compilation.ExpressionBuilder> Klasse implementieren muss die <xref:System.Web.Compilation.ExpressionBuilder.GetCodeExpression%2A> abstrakte Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Zurückgeben einer <xref:System.CodeDom.CodeExpression> Objekt durch Überschreiben der <xref:System.Web.Compilation.ExpressionBuilder.GetCodeExpression%2A> Methode.  
+  
+ [!code-csharp[System.Web.Compilation.ExpressionBuilder#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/CS/MyExpressionBuilder.cs#4)] 
+ [!code-vb[System.Web.Compilation.ExpressionBuilder#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/VB/MyExpressionBuilder.vb#4)]   
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie einen benutzerdefinierten Ausdrucks-Generator implementieren, müssen Sie die richtige Typumwandlung für die Steuerelementeigenschaft ausführen und Zurückgeben der Umwandlungsvorgang in die <see cref="T:System.CodeDom.CodeExpression" /> Objekt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseExpression">
+      <MemberSignature Language="C#" Value="public virtual object ParseExpression (string expression, Type propertyType, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ParseExpression(string expression, class System.Type propertyType, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der Wert der deklarativen Ausdrucks.</param>
+        <param name="propertyType">Der Typ der Eigenschaft, die durch den Ausdruck an gebunden werden.</param>
+        <param name="context">Die Kontextinformationen für die Auswertung des Ausdrucks.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt ein Objekt, das den analysierten Ausdruck darstellt.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , die der analysierte Darstellung des Ausdrucks; enthält andernfalls <see langword="null" /> Wenn <see cref="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" /> ist nicht implementiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse wird diese Methode analysiert den Ausdruck und gibt ihn als ein Objekt, das als verwendet werden kann die `parsedData` Parameter in einem <xref:System.Web.Compilation.ExpressionBuilder.GetCodeExpression%2A> oder <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsEvaluate">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsEvaluate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsEvaluate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse einen Wert, der angibt, ob die aktuelle <see cref="T:System.Web.Compilation.ExpressionBuilder" /> Objekt unterstützt kein-kompiliert Seiten.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.Compilation.ExpressionBuilder" /> ausdrucksauswertung unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für die <xref:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate%2A> Eigenschaft ist `false`. Um Seiten ohne Kompilierung zu unterstützen, müssen Sie beide überschreiben die <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> Methode und die <xref:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Web.Compilation.ExpressionBuilder#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/CS/MyExpressionBuilder.cs#2)] 
+ [!code-vb[System.Web.Compilation.ExpressionBuilder#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/VB/MyExpressionBuilder.vb#2)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

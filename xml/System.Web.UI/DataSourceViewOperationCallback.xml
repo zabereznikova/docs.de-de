@@ -1,0 +1,33 @@
+<Type Name="DataSourceViewOperationCallback" FullName="System.Web.UI.DataSourceViewOperationCallback">
+  <TypeSignature Language="C#" Value="public delegate bool DataSourceViewOperationCallback(int affectedRecords, Exception ex);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataSourceViewOperationCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataSourceViewOperationCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="affectedRecords" Type="System.Int32" />
+    <Parameter Name="ex" Type="System.Exception" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="affectedRecords">Die Anzahl der Datensätze, die den Datenvorgang betroffen.</param>
+    <param name="ex">Ein <see cref="T:System.Exception" />, wenn eine von der Datenvorgang während der Verarbeitung ausgelöst wird.</param>
+    <summary>Stellt die asynchrone Rückrufmethode, die ein datengebundenes Steuerelement bereitstellt, eine Datenquellensicht für asynchrone INSERT-, Update- oder Delete-Datenvorgänge dar.</summary>
+    <returns>Ein Wert, der angibt, ob alle Ausnahmen, die während des Datenvorgangs verarbeitet wurden.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist die Seiten- und Ausführung von ASP.NET Web synchron. Allerdings können Datenquellensteuerelemente zur Unterstützung asynchronen Datenabruf und Datenvorgänge erweitert werden. Die <xref:System.Web.UI.DataSourceView> -Objekt unterstützt die <xref:System.Web.UI.DataSourceView.Insert%2A>, <xref:System.Web.UI.DataSourceView.Update%2A>, und <xref:System.Web.UI.DataSourceView.Delete%2A> Methoden für die asynchrone Verarbeitung der Daten. Die <xref:System.Web.UI.DataSourceViewOperationCallback> Delegaten ist mit der Datenquellensicht von einem datengebundenen Steuerelement übergeben, so, dass die Sicht kann dieser Delegat aufgerufen wird, wenn die asynchrone Verarbeitung abgeschlossen ist und das datengebundene Steuerelement der das Ergebnis des Vorgangs zu benachrichtigen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

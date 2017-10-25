@@ -1,0 +1,295 @@
+<Type Name="NetMsmqBindingElement" FullName="System.ServiceModel.Configuration.NetMsmqBindingElement">
+  <TypeSignature Language="C#" Value="public class NetMsmqBindingElement : System.ServiceModel.Configuration.MsmqBindingElementBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NetMsmqBindingElement extends System.ServiceModel.Configuration.MsmqBindingElementBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.NetMsmqBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.MsmqBindingElementBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Bindung in der Warteschlange dar, die für eine computerübergreifende Kommunikation geeignet ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.NetMsmqBinding>-Bindung stellt Unterstützung für Warteschlangen bereit, indem MSMQ (Microsoft Message Queuing) als Transport eingesetzt wird, und ermöglicht Unterstützung für lose miteinander verknüpfte Anwendungen, Fehlerisolierung, Lastenausgleich und Vorgänge im Offlinemodus. Eine Erörterung dieser Features finden Sie unter [Warteschlangenübersicht](~/docs/framework/wcf/feature-details/queues-overview.md).  
+  
+ Dies ist eine der Standardbindungen, die von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] zur Verfügung gestellt werden. Mit Ausnahme einiger erweiterter Szenarien, in denen Konfigurationswerte beim Initialisieren eines Diensts festgelegt werden müssen, wird empfohlen, die Bindung anstelle eines codebasierten Ansatzes mit Konfigurationswerten zu definieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetMsmqBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.NetMsmqBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.NetMsmqBindingElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetMsmqBindingElement (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.NetMsmqBindingElement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Wert des <see langword="name" />-Attributs, mit dem das <see langword="binding" />-Element identifiziert wird, dessen Einstellungen zur Initialisierung der Bindung verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.NetMsmqBindingElement" />-Klasse aus den Einstellungen eines angegebenen Konfigurationsbindungselements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingElementType">
+      <MemberSignature Language="C#" Value="protected override Type BindingElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BindingElementType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NetMsmqBindingElement.BindingElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Type" /> der Bindung ab.</summary>
+        <value>Der <see cref="T:System.Type" /> der Bindung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="protected override void InitializeFrom (System.ServiceModel.Channels.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeFrom(class System.ServiceModel.Channels.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.NetMsmqBindingElement.InitializeFrom(System.ServiceModel.Channels.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Das Bindungselement, das zum Initialisieren des Konfigurationsabschnitts der Bindung verwendet werden sollte.</param>
+        <summary>Initialisiert den Bindungskonfigurationsabschnitt mit dem Inhalt des angegebenen Bindungselements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferPoolSize">
+      <MemberSignature Language="C#" Value="public long MaxBufferPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxBufferPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NetMsmqBindingElement.MaxBufferPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxBufferPoolSize", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.LongValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Speicherkapazität ab, die vom Puffer-Manager für Nachrichten verwendet werden kann, der Nachrichten aus dem Kanal empfängt, oder legt diese fest.</summary>
+        <value>Die maximale Speicherkapazität in Byte, die vom Puffer-Manager für Nachrichten verwendet werden kann. Der Standardwert ist 524288 (0x80000) Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.Channels.BufferManager> reduziert den Pufferaufwand durch Verwendung eines Pufferpools. Puffer sind zur Verarbeitung von Nachrichten durch den Dienst erforderlich, wenn sie aus dem Kanal eintreffen. Wenn die Speicherkapazität des Pufferpools zur Verarbeitung der Nachrichten nicht ausreicht, muss der <xref:System.ServiceModel.Channels.BufferManager> zusätzliche Speicherkapazität aus dem CLR-Heap zuweisen. Dadurch wird die Auslastung der Garbage Collection erhöht. Eine umfangreiche Zuweisung aus dem CLR-Heap der Garbage Collection weist darauf hin, dass die Größe des Pufferpools nicht ausreichend ist und dass die Leistung durch eine größere Zuweisung infolge einer Erhöhung der maximalen <xref:System.ServiceModel.BasicHttpBinding.MaxBufferPoolSize%2A> verbessert werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyConfiguration">
+      <MemberSignature Language="C#" Value="protected override void OnApplyConfiguration (System.ServiceModel.Channels.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnApplyConfiguration(class System.ServiceModel.Channels.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.NetMsmqBindingElement.OnApplyConfiguration(System.ServiceModel.Channels.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Eine <see cref="T:System.ServiceModel.Channels.Binding" />, die auf das Konfigurationselement angewendet werden soll.</param>
+        <summary>Wendet die angegebene Bindung auf das Konfigurationselement an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NetMsmqBindingElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> ab, die mit dieser Bindung verknüpft ist.</summary>
+        <value>Die <see cref="T:System.Configuration.ConfigurationPropertyCollection" />, die mit der Bindung verknüpft ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueTransferProtocol">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.QueueTransferProtocol QueueTransferProtocol { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.QueueTransferProtocol QueueTransferProtocol" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NetMsmqBindingElement.QueueTransferProtocol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("queueTransferProtocol", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.QueueTransferProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerationswert ab, der den Wartenschlangentransport für den Kommunikationskanal angibt, der von der Bindung verwendet wird, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.QueueTransferProtocol" />-Enumerationswert, der den Transport zwischen Warteschlangen-Managern angibt, die diese Bindung verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ MSMQ unterstützt keine Active Directory-Adressierung in Verbindung mit dem SOAP Reliable Messaging Protocol. Diese Eigenschaft sollte daher nicht auf <xref:System.ServiceModel.QueueTransferProtocol.Srmp> oder <xref:System.ServiceModel.QueueTransferProtocol.SrmpSecure> festgelegt werden, wenn <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.UseActiveDirectory%2A> auf `true` festgelegt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReaderQuotas">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement ReaderQuotas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement ReaderQuotas" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NetMsmqBindingElement.ReaderQuotas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("readerQuotas")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />-Objekt ab, das mit der Bindung verknüpft ist, oder legt dieses fest.</summary>
+        <value>Ruft das <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />-Objekt ab, das mit der Bindung verknüpft ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.Xml.XmlDictionaryReaderQuotas>-Objekt definiert eine Reihe von Beschränkungen für die Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit einer Bindung konfiguriert wurden. Zu diesen Einschränkungen gehören `maxArrayLength`, `maxBytesPerRead`, `maxDepth`, `maxNameTableCharCount` und `maxStringContentLength`. Diese Werte helfen, Denial-of-Service-Angriffe zu verhindern. Weitere Informationen finden Sie unter <xref:System.Xml.XmlDictionaryReaderQuotas>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Security">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.NetMsmqSecurityElement Security { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.NetMsmqSecurityElement Security" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NetMsmqBindingElement.Security" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("security")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.NetMsmqSecurityElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.ServiceModel.NetMsmqSecurity" /> ab, die mit dieser Bindung verknüpft ist.</summary>
+        <value>Die <see cref="T:System.ServiceModel.NetMsmqSecurity" />, die mit der Bindung verknüpft ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.NetMsmqSecurity> stellt eine Einkapselung des MSMQ-Transports und der SOAP-Sicherheit dar. Dadurch wird angegeben, ob die Transportsicherheit oder die SOAP-Sicherheit aktiviert sind und ggf. welcher Authentifizierungsmodus und welche Schutzebenen verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseActiveDirectory">
+      <MemberSignature Language="C#" Value="public bool UseActiveDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseActiveDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NetMsmqBindingElement.UseActiveDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("useActiveDirectory", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen booleschen Wert zurück, der angibt, ob Warteschlangenadressen mit Active Directory konvertiert werden sollen.</summary>
+        <value>
+          <see langword="true" />, wenn Warteschlangenadressen mit Active Directory konvertiert werden sollen, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ MSMQ-Warteschlangenadressen können aus Pfadnamen oder aus direkten Formatnamen bestehen. Bei direkten Formatnamen wird der Warteschlangenname von MSMQ mit DNS, NetBIOS oder IP aufgelöst. Bei Pfadnamen wird der Warteschlangenname von MSMQ mit Active Directory aufgelöst.  
+  
+ Die URI einer Nachrichtenwarteschlange wird vom [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Wartenschlangentransport standardmäßig in einen direkten Formatnamen konvertiert. Durch Festlegen der <xref:System.ServiceModel.NetMsmqBinding.UseActiveDirectory%2A>-Eigenschaft auf `true` kann von einer Anwendung angegeben werden, dass der Warteschlangenname vom Warteschlangentransport mit Active Directory anstelle von DNS, NetBIOS oder IP aufgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

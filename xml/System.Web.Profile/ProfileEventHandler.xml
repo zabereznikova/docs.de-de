@@ -1,0 +1,42 @@
+<Type Name="ProfileEventHandler" FullName="System.Web.Profile.ProfileEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ProfileEventHandler(object sender, ProfileEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProfileEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.ProfileEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.Profile.ProfileEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die <see cref="T:System.Web.Profile.ProfileModule" /> ausgelösten der <see cref="E:System.Web.Profile.ProfileModule.Personalize" /> Ereignis.</param>
+    <param name="e">Ein <see cref="T:System.Web.Profile.ProfileEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Web.Profile.ProfileModule.Personalize" />-Ereignisses eines <see cref="T:System.Web.Profile.ProfileModule" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.ProfileEventHandler> Delegat wird definiert, für die <xref:System.Web.Profile.ProfileModule.Personalize> -Ereignis für die <xref:System.Web.Profile.ProfileModule> Klasse. Sie erreichen die <xref:System.Web.Profile.ProfileModule.Personalize> -Ereignis für die <xref:System.Web.Profile.ProfileModule> Klasse in der Datei "Global.asax" für Ihre ASP.NET-Anwendung mit der `Profile_Personalize` globale Ereignis, wie im Beispiel in diesem Thema gezeigt.  
+  
+ Sie können die <xref:System.Web.Profile.ProfileModule.Personalize> Ereignis, um ein benutzerdefiniertes Profil angegeben. Wenn die <xref:System.Web.Profile.ProfileEventArgs.Profile%2A> Eigenschaft von der <xref:System.Web.Profile.ProfileEventArgs> für die angegebene Parameter der <xref:System.Web.Profile.ProfileModule.Personalize> des Ereignisses <xref:System.Web.Profile.ProfileEventHandler> auf einen Wert ungleich Null festgelegt ist Wert der <xref:System.Web.Profile.ProfileModule.Personalize> abgeschlossen wird, klicken Sie dann die <xref:System.Web.Profile.ProfileModule> anhand dieses Werts für die <xref:System.Web.HttpContext.Profile%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die <xref:System.Web.Profile.ProfileModule.Personalize> Ereignis deklariert wird, in der Datei "Global.asax" einer Anwendung. Der Ereigniscode lädt ein Benutzerprofil für einen Benutzer basierend auf der Rollenmitgliedschaft.  
+  
+ [!code-csharp[System.Web.Profile.ProfileManager.Personalize#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.Personalize/CS/global.asax#12)]
+ [!code-vb[System.Web.Profile.ProfileManager.Personalize#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.Personalize/VB/global.asax#12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

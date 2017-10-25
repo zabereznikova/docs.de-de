@@ -1,0 +1,153 @@
+<Type Name="CLSCompliantAttribute" FullName="System.CLSCompliantAttribute">
+  <TypeSignature Language="C#" Value="public sealed class CLSCompliantAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit CLSCompliantAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.CLSCompliantAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob ein Programmelement mit der Common Language Specification (CLS) kompatibel ist. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.CLSCompliantAttribute> Attribut wird verwendet, um anzugeben, ob ein bestimmtes Programmelement mit der Common Language Specification (CLS) entspricht, die die Funktionen definiert, die jede Sprache, die .NET Framework unterstützen muss. CLS-Kompatibilität wird hauptsächlich von Bedeutung für den Bibliotheksentwickler möchten, stellen Sie sicher, dass ihre Bibliotheken in einer beliebigen Sprache zugegriffen werden kann, die auf .NET Framework abzielt. Weitere Informationen finden Sie unter [Sprachenunabhängigkeit und sprachunabhängige Komponenten](~/docs/standard/language-independence-and-language-independent-components.md).  
+  
+ Sie können Anwenden der <xref:System.CLSCompliantAttribute> -Attribut auf die folgenden Programmelemente: Assembly, Modul, Klasse, Struktur, Enum, Konstruktor, -Methode, Eigenschaft, Feld, Ereignis, Schnittstelle, Delegaten, Parameter und Rückgabewert. Allerdings ist das Konzept der CLS-Kompatibilität nur für Assemblys, Module, Typen und Member von Typen, nicht Teil einer Signatur des Members von Bedeutung. Folglich <xref:System.CLSCompliantAttribute> wird ignoriert, wenn auf Parameter angewendet oder Programmelemente Rückgabewert.  
+  
+ Wenn kein <xref:System.CLSCompliantAttribute> auf ein Programmelement aus, und klicken Sie dann in der Standardeinstellung angewendet wird:  
+  
+-   Die Assembly ist nicht CLS-kompatibel.  
+  
+-   Der Typ ist CLS-kompatibel, nur dann, wenn der einschließenden Typ oder die Assembly CLS-kompatibel ist.  
+  
+-   Die Member eines Typs ist CLS-kompatibel, nur, wenn der Typ CLS-kompatibel ist.  
+  
+ Wenn eine Assembly als CLS-kompatibel gekennzeichnet ist, muss jeder öffentlich verfügbar gemachte Typ in der Assembly, die nicht CLS-kompatibel ist mit gekennzeichnet <xref:System.CLSCompliantAttribute> mithilfe einer `false` Argument. Auf ähnliche Weise, wenn eine Klasse als CLS-kompatibel gekennzeichnet ist, müssen Sie einzeln alle Elemente markieren, die nicht CLS-kompatibel sind. Alle nicht kompatiblen Member müssen entsprechende CLS-kompatible Alternativen bereitzustellen.  
+  
+ Attribute, die Assemblys oder Module angewendet werden, müssen erfolgen, nachdem die C#- `using` (`Imports` in Visual Basic) Klauseln und vor dem Code.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+> [!NOTE]
+>  Generiert der aktuellen Microsoft Visual Basic-Compiler eine Warnung CLS-Kompatibilität absichtlich nicht möchten, eine zukünftige Version des Compilers wird jedoch, dass die Warnung ausgegeben.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet eine <xref:System.CLSCompliantAttribute> für die gesamte Assembly.  
+  
+```  
+using System;  
+    [assembly: CLSCompliant(true)]  
+```  
+  
+ Die folgende Deklaration eine CLS-Kompatibilität-Warnung generiert, da der Typ `UInt32` in CLS-Kompatibilität nicht angegeben ist.  
+  
+```  
+public int SetValue(UInt32 value);  
+```  
+  
+ Wenn die Deklaration mit gekennzeichnet ist eine <xref:System.CLSCompliantAttribute>, keine compilerwarnung oder ein Fehler wird generiert.  
+  
+```  
+[CLSCompliant(false)]  
+ public int SetValue(UInt32 value);  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CLSCompliantAttribute (bool isCompliant);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isCompliant) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CLSCompliantAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isCompliant" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isCompliant">
+          <see langword="true" />Wenn Sie CLS-kompatible andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.CLSCompliantAttribute" /> Klasse mit einem booleschen Wert, der angibt, ob das angegebene Programmelement CLS-kompatibel ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompliant">
+      <MemberSignature Language="C#" Value="public bool IsCompliant { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompliant" />
+      <MemberSignature Language="DocId" Value="P:System.CLSCompliantAttribute.IsCompliant" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den booleschen Wert, der angibt, ob das angegebene Programmelement CLS-kompatibel ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Programmelement CLS-kompatibel ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

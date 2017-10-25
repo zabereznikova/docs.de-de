@@ -1,0 +1,127 @@
+<Type Name="IBindingConfigurationElement" FullName="System.ServiceModel.Configuration.IBindingConfigurationElement">
+  <TypeSignature Language="C#" Value="public interface IBindingConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBindingConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.IBindingConfigurationElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basiskonfigurationeinstellungen für ein Bindungselement bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="public void ApplyConfiguration (System.ServiceModel.Channels.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyConfiguration(class System.ServiceModel.Channels.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.IBindingConfigurationElement.ApplyConfiguration(System.ServiceModel.Channels.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Eine Bindung.</param>
+        <summary>Übernimmt den Inhalt der angegebenen Bindung für diesen Bindungskonfigurationsabschnitt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan CloseTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CloseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.IBindingConfigurationElement.CloseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, das für den Abschluss eines Schließvorgangs bereitgestellt wird.</summary>
+        <value>Der <see cref="T:System.TimeSpan" />, der angibt, welcher Zeitraum für das Schließen bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.IBindingConfigurationElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Bindung ab.</summary>
+        <value>Der Name der Bindung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan OpenTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan OpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.IBindingConfigurationElement.OpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, das für den Abschluss eines Öffnungsvorgangs bereitgestellt wird.</summary>
+        <value>Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für das Öffnen bleibt, bevor ein Timeout auftritt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ReceiveTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ReceiveTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, das für den Abschluss eines Empfangsvorgangs bereitgestellt wird.</summary>
+        <value>Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Empfangsvorgang bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan SendTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SendTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.IBindingConfigurationElement.SendTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, das für den Abschluss eines Sendevorgangs bereitgestellt wird.</summary>
+        <value>Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Sendevorgang bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

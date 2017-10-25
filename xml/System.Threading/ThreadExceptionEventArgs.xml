@@ -1,0 +1,129 @@
+<Type Name="ThreadExceptionEventArgs" FullName="System.Threading.ThreadExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public class ThreadExceptionEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ThreadExceptionEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.ThreadExceptionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Thread</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.Application.ThreadException" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Threading.ThreadExceptionEventArgs> wird durch einen Thread erstellt, wenn eine nicht behandelte Ausnahme auftritt. <xref:System.Threading.ThreadExceptionEventArgs>enthält die <xref:System.Exception> aufgetreten ist.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel können Sie zum Auslösen einer <xref:System.Windows.Forms.Application.ThreadException> Ereignis, indem Sie auf `button1` in einem Formular. Im Beispiel werden zwei Klassen erstellt. Die `ErrorHandler` Klasse erstellt, das Formular und die Schaltfläche, die das Ereignis auslöst. Die `CustomExceptionHandler` Klasse enthält die Methoden, um die Ausnahme zu behandeln.  
+  
+ In `Main` in der `ErrorHandler` -Klasse, die der Code erstellt einer neuen Instanz der Klasse Ausnahmebehandlung, d. h. eine Instanz von der `CustomExceptionHandler`. Klicken Sie dann die Instanz auf das Ereignis hinzugefügt wird, und die Anwendung ausgeführt wird.  
+  
+ In der `OnThreadException` Methode in der `CustomExceptionHandler` -Klasse, die im Beispiel wird eine `try...catch...finally` Anweisung, um die Ausnahme zu verarbeiten. Die `ShowThreadExceptionDialog` -Methode erstellt die Meldung angezeigt, und in einem Meldungsfeld angezeigt.  
+  
+ [!code-csharp[Classic ThreadExceptionEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ThreadExceptionEventArgs Example/CS/source.cs#1)]
+ [!code-vb[Classic ThreadExceptionEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ThreadExceptionEventArgs Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThreadExceptionEventArgs (Exception t);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception t) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadExceptionEventArgs.#ctor(System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="t" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="t">Die <see cref="T:System.Exception" />, die aufgetreten ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.ThreadExceptionEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel können Sie zum Auslösen einer <xref:System.Windows.Forms.Application.ThreadException> Ereignis, indem Sie auf `button1` in einem Formular. Im Beispiel werden zwei Klassen erstellt. Die `ErrorHandler` Klasse erstellt, das Formular und die Schaltfläche, die das Ereignis auslöst. Die `CustomExceptionHandler` Klasse enthält die Methoden, um die Ausnahme zu behandeln.  
+  
+ In `Main` in der `ErrorHandler` -Klasse, die der Code erstellt einer neuen Instanz der Klasse Ausnahmebehandlung, d. h. eine Instanz von der `CustomExceptionHandler`. Klicken Sie dann die Instanz auf das Ereignis hinzugefügt wird, und die Anwendung ausgeführt wird.  
+  
+ In der `OnThreadException` Methode in der `CustomExceptionHandler` -Klasse, die im Beispiel wird eine `try...catch...finally` Anweisung, um die Ausnahme zu verarbeiten. Die `ShowThreadExceptionDialog` -Methode erstellt die Meldung angezeigt, und in einem Meldungsfeld angezeigt.  
+  
+ [!code-csharp[Classic ThreadExceptionEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ThreadExceptionEventArgs Example/CS/source.cs#1)]
+ [!code-vb[Classic ThreadExceptionEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ThreadExceptionEventArgs Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.ThreadExceptionEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Exception" /> aufgetreten ist.</summary>
+        <value>Die <see cref="T:System.Exception" />, die aufgetreten ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel können Sie zum Auslösen einer <xref:System.Windows.Forms.Application.ThreadException> Ereignis, indem Sie auf `button1` in einem Formular. Im Beispiel werden zwei Klassen erstellt. Die `ErrorHandler` Klasse erstellt, das Formular und die Schaltfläche, die das Ereignis auslöst. Die `CustomExceptionHandler` Klasse enthält die Methoden, um die Ausnahme zu behandeln.  
+  
+ In `Main` in der `ErrorHandler` -Klasse, die der Code erstellt einer neuen Instanz der Klasse Ausnahmebehandlung, d. h. eine Instanz von der `CustomExceptionHandler`. Klicken Sie dann die Instanz auf das Ereignis hinzugefügt wird, und die Anwendung ausgeführt wird.  
+  
+ In der `OnThreadException` Methode in der `CustomExceptionHandler` -Klasse, die im Beispiel wird eine `try...catch...finally` Anweisung, um die Ausnahme zu verarbeiten. Die `ShowThreadExceptionDialog` -Methode erstellt die Meldung angezeigt, und in einem Meldungsfeld angezeigt.  
+  
+ [!code-csharp[Classic ThreadExceptionEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ThreadExceptionEventArgs Example/CS/source.cs#1)]
+ [!code-vb[Classic ThreadExceptionEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ThreadExceptionEventArgs Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,336 @@
+<Type Name="GridViewRowCollection" FullName="System.Web.UI.WebControls.GridViewRowCollection">
+  <TypeSignature Language="C#" Value="public class GridViewRowCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewRowCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewRowCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Web.UI.WebControls.GridViewRow" />-Objekten in einem <see cref="T:System.Web.UI.WebControls.GridView" />-Steuerelement dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.GridViewRowCollection> Klasse dient zum Speichern und verwalten eine Auflistung von <xref:System.Web.UI.WebControls.GridViewRow> Objekte in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement. Jede Zeile in einer <xref:System.Web.UI.WebControls.GridView> Steuerelement wird dargestellt, indem ein <xref:System.Web.UI.WebControls.GridViewRow> Objekt. Die <xref:System.Web.UI.WebControls.GridView> -Steuerelement speichert alle eigenen Datenzeilen in der <xref:System.Web.UI.WebControls.GridView.Rows%2A> Auflistung.  
+  
+ Die <xref:System.Web.UI.WebControls.GridViewRowCollection> -Klasse unterstützt mehrere Möglichkeiten, auf die Elemente in der Auflistung zuzugreifen:  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.GridViewRowCollection.Item%2A> Indexer direkt Abrufen einer <xref:System.Web.UI.WebControls.GridViewRow> Objekt am angegebenen nullbasierten Index.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.GridViewRowCollection.GetEnumerator%2A> Methode, um einen Enumerator abzurufen, der zum Durchlaufen der Auflistung verwendet werden kann.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.GridViewRowCollection.CopyTo%2A> Methode kopiert die Elemente in der Auflistung in ein <xref:System.Array?displayProperty=nameWithType> -Objekt, das Zugriff auf die Elemente in der Auflistung verwendet werden kann.  
+  
+ Verwenden Sie zum Bestimmen der Gesamtzahl der Elemente in der Auflistung der <xref:System.Web.UI.WebControls.GridViewRowCollection.Count%2A> Eigenschaft  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Durchlaufen der <xref:System.Web.UI.WebControls.GridView.Rows%2A> Auflistung von einem <xref:System.Web.UI.WebControls.GridView> steuern und die Werte einer Spalte auf der Seite angezeigt.  
+  
+ [!code-aspx-csharp[GridViewRowCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowCollection/CS/gridviewrowcollectioncs.aspx#1)]
+ [!code-aspx-vb[GridViewRowCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowCollection/VB/gridviewrowcollectionvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewRowCollection (System.Collections.ArrayList rows);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ArrayList rows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewRowCollection.#ctor(System.Collections.ArrayList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rows" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="rows">Ein <see cref="T:System.Collections.ArrayList" /> -Objekt, enthält die <see cref="T:System.Web.UI.WebControls.GridViewRow" /> Objekten, mit denen die Auflistung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.GridViewRowCollection" />-Klasse mit dem angegebenen <see cref="T:System.Collections.ArrayList" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.GridViewRowCollection> -Klasse mit dem angegebenen <xref:System.Collections.ArrayList?displayProperty=nameWithType> Objekt. Die <xref:System.Collections.ArrayList?displayProperty=nameWithType> Objekt dürfen die <xref:System.Web.UI.WebControls.GridViewRow> Objekten, mit denen beim Auffüllen der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.GridViewRow[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.GridViewRow[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewRowCollection.CopyTo(System.Web.UI.WebControls.GridViewRow[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.GridViewRow[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Eine nullbasierte <see cref="T:System.Array" /> Objekt, das die kopierten Elemente aus empfängt die <see cref="T:System.Web.UI.WebControls.GridViewRowCollection" /> Objekt.</param>
+        <param name="index">Der erste Index im angegebenen <see cref="T:System.Array" /> Objekt, das den Inhalt kopiert wird.</param>
+        <summary>Kopiert alle Elemente aus dieser <see cref="T:System.Web.UI.WebControls.GridViewRowCollection" /> in den angegebenen <see cref="T:System.Array" /> -Objekt, beginnend am angegebenen Index in die <see cref="T:System.Array" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode kopiert die Elemente in der <xref:System.Web.UI.WebControls.GridViewRowCollection> Objekt in die angegebene <xref:System.Array?displayProperty=nameWithType> -Objekt, beginnend am angegebenen Index. Die <xref:System.Array?displayProperty=nameWithType> Objekt kann dann den Zugriff auf die Elemente in der Auflistung verwendet werden.  
+  
+> [!NOTE]
+>  Sie müssen eine nullbasierte verwenden <xref:System.Array?displayProperty=nameWithType> -Objekt für die `array` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewRowCollection.CopyTo%2A> Methode, um die Elemente der Auflistung in ein Array zu kopieren. Das Array durchlaufen, und die Werte der ersten Zelle auf der Seite angezeigt werden.  
+  
+ [!code-aspx-csharp[GridViewRowCollectionCopyTo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowCollectionCopyTo/CS/gridviewrowcollectioncopytocs.aspx#1)]
+ [!code-aspx-vb[GridViewRowCollectionCopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowCollectionCopyTo/VB/gridviewrowcollectioncopytovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRowCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der <see cref="T:System.Web.UI.WebControls.GridViewRowCollection" /> Objekt.</summary>
+        <value>Die Anzahl der Elemente in der <see cref="T:System.Web.UI.WebControls.GridViewRowCollection" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewRowCollection.Count%2A> -Eigenschaft können Sie die Anzahl der Elemente in der Auflistung bestimmen. Die <xref:System.Web.UI.WebControls.GridViewRowCollection.Count%2A> Eigenschaft wird üblicherweise beim Durchlaufen der Auflistung zum Bestimmen der oberen Grenze der Auflistung verwendet. Die <xref:System.Web.UI.WebControls.GridViewRowCollection.Count%2A> Eigenschaft wird auch häufig verwendet, um zu bestimmen, ob eine Auflistung leer ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewRowCollection.Count%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Web.UI.WebControls.GridView> Steuerelement enthält keine Datensätze. Ein Wert größer als 0 (null), die angibt die <xref:System.Web.UI.WebControls.GridView> Steuerelement enthält mindestens ein Datensatz.  
+  
+ [!code-aspx-csharp[GridViewRowCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowCollection/CS/gridviewrowcollectioncs.aspx#1)]
+ [!code-aspx-vb[GridViewRowCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowCollection/VB/gridviewrowcollectionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewRowCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, der alle enthält <see cref="T:System.Web.UI.WebControls.GridViewRow" /> Objekte in der <see cref="T:System.Web.UI.WebControls.GridViewRowCollection" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> implementiert-Objekt, das alle enthält <see cref="T:System.Web.UI.WebControls.GridViewRow" /> Objekte in der <see cref="T:System.Web.UI.WebControls.GridViewRowCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie einen Enumerator abrufen, der linear durchlaufen werden kann, den Zugriff auf jedes Element in der <xref:System.Web.UI.WebControls.GridViewRowCollection>. Verwenden Sie für den Zugriff auf das Element an der aktuellen Position des Enumerators, der <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft. Verwenden der <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> -Methode zum nächsten Element in der Auflistung zu verschieben. Um den Enumerator auf seine anfängliche Position zu verschieben, verwenden Sie die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode.  
+  
+> [!NOTE]
+>  Wenn Sie anfänglich Abrufen des Enumerators oder verwenden Sie die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf das erste Element in der Auflistung rufen Sie die <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> Methode. Andernfalls das Element, das entspricht der <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft ist nicht definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewRowCollection.GetEnumerator%2A> Methode, um einen Enumerator abzurufen, die die Werte aus der Auflistung enthält. Der Enumerator durchlaufen, und die Werte der ersten Zelle auf der Seite angezeigt werden.  
+  
+ [!code-aspx-csharp[GridViewRowCollectionGetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowCollectionGetEnumerator/CS/gridviewrowcollectiongetenumeratorcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowCollectionGetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowCollectionGetEnumerator/VB/gridviewrowcollectiongetenumeratorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRowCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Zeilen in der <see cref="T:System.Web.UI.WebControls.GridViewRowCollection" /> Objekt geändert werden kann.</summary>
+        <value>Gibt immer <see langword="false" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewRowCollection.IsReadOnly%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Web.UI.WebControls.GridViewRow> Objekte in der <xref:System.Web.UI.WebControls.GridViewRowCollection> Objekt geändert werden kann.  
+  
+> [!NOTE]
+>  Diese Eigenschaft überschrieben, um stets `false` gibt an, dass die <xref:System.Web.UI.WebControls.GridViewRow> Objekte in der <xref:System.Web.UI.WebControls.GridViewRowCollection> Objekt kann in allen Fällen geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRowCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.GridViewRowCollection" /> -Objekt synchronisiert (threadsicher).</summary>
+        <value>Gibt immer <see langword="false" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewRowCollection.IsSynchronized%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Web.UI.WebControls.GridViewRowCollection> Objekt ist threadsicher.  
+  
+> [!NOTE]
+>  Diese Eigenschaft überschrieben, um stets `false` gibt an, dass die <xref:System.Web.UI.WebControls.GridViewRowCollection> Objekt ist nicht threadsicher.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.GridViewRowCollection.IsSynchronized%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.GridViewRow this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.GridViewRow Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRowCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.GridViewRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Web.UI.WebControls.GridViewRow" /> aus der Auflistung abzurufenden Objekts.</param>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.GridViewRow" /> Objekt am angegebenen Index.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.GridViewRow" /> Objekt am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Indexer zum Abrufen einer <xref:System.Web.UI.WebControls.GridViewRow> Objekt am angegebenen Index mithilfe der Arraynotation aus der Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie den Indexer zum Abrufen einer <xref:System.Web.UI.WebControls.GridViewRow> Objekt aus der Auflistung. Die Werte der Zellen in der <xref:System.Web.UI.WebControls.GridViewRow> Objekt auf der Seite angezeigt werden.  
+  
+ [!code-aspx-csharp[GridViewRowCollectionIndexer#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowCollectionIndexer/CS/gridviewrowcollectionindexercs.aspx#1)]
+ [!code-aspx-vb[GridViewRowCollectionIndexer#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowCollectionIndexer/VB/gridviewrowcollectionindexervb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRowCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt verwendet, um den Zugriff auf die Auflistung zu synchronisieren.</summary>
+        <value>Eine <see cref="T:System.Object" /> , die zum Synchronisieren des Zugriffs auf die Auflistung verwendet werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewRowCollection.SyncRoot%2A> Eigenschaft, um ein Objekt abzurufen, die zum Synchronisieren des Zugriffs auf die Auflistung verwendet werden kann. Das in dieser Implementierung zurückgegebene Objekt stellt der <xref:System.Web.UI.WebControls.GridViewRowCollection> Objekt selbst.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.GridViewRowCollection.SyncRoot%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewRowCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> -Objekt, das das Ziel der aus kopierten Elemente ist die <see cref="T:System.Collections.ICollection" /> Schnittstelle. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index in einem <see cref="T:System.Array" /> Objekt, an dem der Kopiervorgang beginnt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Kann verwendet werden nur, wenn die <xref:System.Web.UI.WebControls.GridViewRowCollection> Instanz umgewandelt wird die <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

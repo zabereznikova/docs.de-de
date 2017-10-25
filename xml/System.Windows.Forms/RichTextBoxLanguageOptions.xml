@@ -1,0 +1,135 @@
+<Type Name="RichTextBoxLanguageOptions" FullName="System.Windows.Forms.RichTextBoxLanguageOptions">
+  <TypeSignature Language="C#" Value="public enum RichTextBoxLanguageOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RichTextBoxLanguageOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.RichTextBoxLanguageOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet <see cref="T:System.Windows.Forms.RichTextBox" /> Einstellungen für Eingabemethoden-Editor (IME) und Unterstützung für asiatische Sprachen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoFont">
+      <MemberSignature Language="C#" Value="AutoFont" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions AutoFont = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.AutoFont" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Steuerelement automatisch Schriftarten ändert, wenn der Benutzer explizit auf ein anderes Tastaturlayout festlegt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFontSizeAdjust">
+      <MemberSignature Language="C#" Value="AutoFontSizeAdjust" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions AutoFontSizeAdjust = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.AutoFontSizeAdjust" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass es sich bei Schriftart gebundenen Schriftgrade Ihren Bedürfnissen von der Größe der Einfügemarke entsprechend ein Skript skaliert werden. Asiatische Schriftarten sind beispielsweise etwas größer als westliche Schriftarten. Dies ist die Standardeinstellung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoKeyboard">
+      <MemberSignature Language="C#" Value="AutoKeyboard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions AutoKeyboard = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.AutoKeyboard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Windows.Forms.RichTextBox" /> -Steuerelement automatisch das Tastaturlayout ändert, wenn der Benutzer explizit in eine andere Schriftart ändert oder wenn der Benutzer explizit die Einfügemarke an einem neuen Speicherort im Text ändert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DualFont">
+      <MemberSignature Language="C#" Value="DualFont" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions DualFont = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.DualFont" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt das Steuerelement in den Modus mit Dual-Schriftart fest. Für asiatische Sprachtext verwendet. Die <see cref="T:System.Windows.Forms.RichTextBox" /> Steuerelement eine englische Schriftart für ASCII-Text und asiatische Schriftarten für asiatische verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeAlwaysSendNotify">
+      <MemberSignature Language="C#" Value="ImeAlwaysSendNotify" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions ImeAlwaysSendNotify = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.ImeAlwaysSendNotify" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, wie der Client während der IME-Komposition benachrichtigt wird. Eine Einstellung von 0 gibt an, dass keine Ereignisse EN_CHANGE oder EN_SELCHANGE während einem unbestimmten Zustand. Benachrichtigung wird gesendet, wenn die endgültige Zeichenfolge eingehen. Dies ist die Standardeinstellung. Eine Einstellung von 1 gibt an, dass es sich bei einem unbestimmten Zustand EN_CHANGE und EN_SELCHANGE Ereignisse auftreten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeCancelComplete">
+      <MemberSignature Language="C#" Value="ImeCancelComplete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions ImeCancelComplete = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.ImeCancelComplete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, wie das Steuerelement die Kompositionszeichenfolge von einer Eingabe-Editor (IME) verwendet, wenn der Abbruch durch den Benutzer. Wenn dieses Flag festgelegt ist, verwirft das Steuerelement die Kompositionszeichenfolge. Wenn dieses Flag nicht festgelegt ist, verwendet das Steuerelement die Kompositionszeichenfolge als der Ergebniszeichenfolge an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UIFonts">
+      <MemberSignature Language="C#" Value="UIFonts" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxLanguageOptions UIFonts = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxLanguageOptions.UIFonts" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxLanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Standardschriftarten Benutzeroberfläche verwendet werden. Diese Option ist standardmäßig deaktiviert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

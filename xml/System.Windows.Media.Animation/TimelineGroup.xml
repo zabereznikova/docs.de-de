@@ -1,0 +1,369 @@
+<Type Name="TimelineGroup" FullName="System.Windows.Media.Animation.TimelineGroup">
+  <TypeSignature Language="C#" Value="public abstract class TimelineGroup : System.Windows.Media.Animation.Timeline, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract TimelineGroup extends System.Windows.Media.Animation.Timeline implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.TimelineGroup" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Timeline</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Children")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Abstrakte Klasse, die bei der Implementierung stellt eine <see cref="T:System.Windows.Media.Animation.Timeline" /> , die möglicherweise einer Auflistung von untergeordneten <see cref="T:System.Windows.Media.Animation.Timeline" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Media.Animation.TimelineGroup> kann ein untergeordnetes Element eines anderen <xref:System.Windows.Media.Animation.TimelineGroup>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TimelineGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.TimelineGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Animation.TimelineGroup" /> -Klasse mit Standardeigenschaften.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TimelineGroup (Nullable&lt;TimeSpan&gt; beginTime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; beginTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.TimelineGroup.#ctor(System.Nullable{System.TimeSpan})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beginTime" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="beginTime">Das <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> für dieses <see cref="T:System.Windows.Media.Animation.TimelineGroup" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.TimelineGroup" />-Klasse mit der angegebenen <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TimelineGroup (Nullable&lt;TimeSpan&gt; beginTime, System.Windows.Duration duration);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; beginTime, valuetype System.Windows.Duration duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.TimelineGroup.#ctor(System.Nullable{System.TimeSpan},System.Windows.Duration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beginTime" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="beginTime">Das <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> für dieses <see cref="T:System.Windows.Media.Animation.TimelineGroup" />.</param>
+        <param name="duration">Das <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> für dieses <see cref="T:System.Windows.Media.Animation.TimelineGroup" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.TimelineGroup" />-Klasse mit den angegebenen <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> und dem angegebenen <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TimelineGroup (Nullable&lt;TimeSpan&gt; beginTime, System.Windows.Duration duration, System.Windows.Media.Animation.RepeatBehavior repeatBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; beginTime, valuetype System.Windows.Duration duration, valuetype System.Windows.Media.Animation.RepeatBehavior repeatBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.TimelineGroup.#ctor(System.Nullable{System.TimeSpan},System.Windows.Duration,System.Windows.Media.Animation.RepeatBehavior)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beginTime" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+        <Parameter Name="repeatBehavior" Type="System.Windows.Media.Animation.RepeatBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="beginTime">Das <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> für dieses <see cref="T:System.Windows.Media.Animation.TimelineGroup" />.</param>
+        <param name="duration">Das <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> für dieses <see cref="T:System.Windows.Media.Animation.TimelineGroup" />.</param>
+        <param name="repeatBehavior">Das <see cref="P:System.Windows.Media.Animation.Timeline.RepeatBehavior" /> für dieses <see cref="T:System.Windows.Media.Animation.TimelineGroup" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Animation.TimelineGroup" /> Klasse mit dem angegebenen <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" />, <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />, und <see cref="P:System.Windows.Media.Animation.Timeline.RepeatBehavior" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChild">
+      <MemberSignature Language="C#" Value="protected virtual void AddChild (object child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddChild(object child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.TimelineGroup.AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="child">Das Objekt, das als untergeordnetes Element dieser hinzuzufügenden <see cref="T:System.Windows.Media.Animation.TimelineGroup" />. Wenn dieses Objekt einen <see cref="T:System.Windows.Media.Animation.Timeline" /> werden hinzugefügt werden, um die <see cref="P:System.Windows.Media.Animation.TimelineGroup.Children" /> Auflistung ist; andernfalls wird eine Ausnahme ausgelöst werden.</param>
+        <summary>Fügt ein untergeordnetes Element <see cref="T:System.Windows.Media.Animation.Timeline" /> dieser <see cref="T:System.Windows.Media.Animation.TimelineGroup" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Der Parameter <paramref name="child" /> ist eine <see cref="T:System.Windows.Media.Animation.Timeline" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddText">
+      <MemberSignature Language="C#" Value="protected virtual void AddText (string childText);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddText(string childText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.TimelineGroup.AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="childText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="childText">Der zu <see cref="T:System.Windows.Media.Animation.Timeline" /> hinzugefügte Text.</param>
+        <summary>Fügt eine Textzeichenfolge als untergeordnetes Element von <see cref="T:System.Windows.Media.Animation.Timeline" /> hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Media.Animation.Timeline> akzeptiert Text nicht als untergeordnetes Element, damit diese Methode eine InvalididOperationException ausgelöst wird, außer eine abgeleitete Klasse dieses Verhalten außer Kraft Text gesetzt wurde hinzugefügt werden können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllocateClock">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Animation.Clock AllocateClock ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Windows.Media.Animation.Clock AllocateClock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.TimelineGroup.AllocateClock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Clock</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine typspezifische Uhr für diese Zeitachse.</summary>
+        <returns>Eine Uhr für diese Zeitachse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine abgeleitete Klasse diese Methode überschreibt, es sollte nur erstellen und zurückgeben ein Objekt einer Klasse erben von <xref:System.Windows.Media.Animation.Clock>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.TimelineCollection Children { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.TimelineCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.TimelineGroup.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.TimelineCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung direkter untergeordneter <see cref="T:System.Windows.Media.Animation.Timeline" />-Objekte der <see cref="T:System.Windows.Media.Animation.TimelineGroup" /> ab oder legt sie fest.</summary>
+        <value>Untergeordnete <see cref="T:System.Windows.Media.Animation.Timeline" />-Objekte der <see cref="T:System.Windows.Media.Animation.TimelineGroup" />. Der Standardwert ist **null**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Children"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.TimelineGroup.ChildrenProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildrenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ChildrenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ChildrenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.TimelineGroup.ChildrenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.TimelineGroup.Children" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Bezeichner für die <xref:System.Windows.Media.Animation.TimelineGroup.Children%2A>-Abhängigkeitseigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.TimelineGroup Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.TimelineGroup Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.TimelineGroup.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.TimelineGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Animation.TimelineGroup" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.TimelineGroup CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.TimelineGroup CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.TimelineGroup.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.TimelineGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Animation.TimelineGroup" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateClock">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.ClockGroup CreateClock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.ClockGroup CreateClock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.TimelineGroup.CreateClock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.ClockGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Instanziiert eine neue <see cref="T:System.Windows.Media.Animation.ClockGroup" /> -Objekt unter Verwendung dieser Instanz.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.Animation.ClockGroup" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object child);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.TimelineGroup.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="child">Das hinzuzufügende untergeordnete Objekt.</param>
+        <summary>Fügt ein untergeordnetes Objekt hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string childText);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string childText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.TimelineGroup.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="childText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="childText">Der dem Objekt hinzuzufügende Text.</param>
+        <summary>Fügt dem Objekt den Textinhalt eines Knotens hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

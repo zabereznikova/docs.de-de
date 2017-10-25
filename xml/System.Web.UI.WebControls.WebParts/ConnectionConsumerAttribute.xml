@@ -1,0 +1,359 @@
+<Type Name="ConnectionConsumerAttribute" FullName="System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute">
+  <TypeSignature Language="C#" Value="public class ConnectionConsumerAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConnectionConsumerAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifiziert die Rückrufmethode in einem Steuerelement in einer Webparts-Verbindung als Consumer fungiert, und ermöglicht es Entwicklern, geben Sie Details zu den Consumerverbindungspunkt an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webparts-Verbindung besteht aus zwei Serversteuerelementen, die in einer <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone und Freigeben von Daten über eine Schnittstelleninstanz von einem Steuerelement an das andere übergeben. Das Steuerelement, das die Schnittstelleninstanz dient der Anbieter aufgerufen wird, und das Steuerelement, das die Schnittstelleninstanz und Prozesse empfängt oder zeigt die Daten den Consumer aufgerufen wird. Ausführliche Informationen zu Verbindungen, finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Klasse und [Web Parts Verbindungen Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b).  
+  
+ Der Consumer-Steuerelement in einer Verbindung kann eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement oder einem anderen Server oder das Benutzersteuerelement, aber sie benötigen eine Methode als eine Rückrufmethode. Die Rückrufmethode wird während des Verbindungsvorgangs aufgerufen, und ihr Zweck besteht eine Schnittstelleninstanz vom Anbieter erhalten, die Daten enthält. Um die Methode festlegen, die als die Rückrufmethode in einem Consumer fungiert, müssen Sie Hinzufügen einer `ConnectionConsumerAttribute` Metadatenelement an die Methode (das Element basiert auf der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute> Klasse).  
+  
+ Zusätzlich zur Kennzeichnung der Rückrufmethode in einem Consumer der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute> Objekt auch ermöglicht es Ihnen, bestimmte Details zu einem Consumerverbindungspunkt an. Ein Consumerverbindungspunkt ist eine Instanz der <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> -Klasse alle Informationen zu einem Consumer zum Herstellen einer Verbindungs kapselt, einschließlich der Consumer-Steuerelementtyp, ob er an mehrere Anbieter, zur gleichen Zeit herstellen kann benötigt was Typ der Schnittstelle der Consumer erhalten von einem Anbieter, Details über die Rückrufmethode und einen Anzeigenamen ein, der den Consumerverbindungspunkt in der Benutzeroberfläche (UI) darstellt. Jede Webparts-Verbindung umfasst einen Consumerverbindungspunkt an, der dem Consumersteuerelement zugeordnet ist.  
+  
+ Beim Hinzufügen der `ConnectionConsumerAttribute` Metadatenelement an die Rückrufmethode in einem Consumer, außerdem können Sie sie an die folgenden Informationen zu den Consumerverbindungspunkt an: einen Anzeigenamen für den Verbindungspunkt (Einzelheiten finden Sie in der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayName%2A> Eigenschaft), Gibt an, ob der Consumer an mehrere Anbieter gleichzeitig eine Verbindung herstellen kann (Einzelheiten finden Sie in der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.AllowsMultipleConnections%2A> Eigenschaft), eine ID für den Verbindungspunkt (Einzelheiten finden Sie in der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.ID%2A> Eigenschaft), und der Typ des Verbindungspunkts, die der Consumer (für verwendet Details finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.ConnectionPointType%2A> Eigenschaft). Die vier Überladungen des Konstruktors für den <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute> jede Klasse haben, Parameter, mit denen Sie Werte für eine oder mehrere der Eigenschaften dieser Verbindung angeben, wenn eine neue Instanz der Klasse erstellt wird. Die meisten Eigenschaften für einen Consumerverbindungspunkt können auch programmgesteuert festgelegt werden. Diese Einstellung mithilfe der `ConnectionConsumerAttribute` Element ist optional.  
+  
+> [!NOTE]
+>  Beim Hinzufügen der `ConnectionConsumerAttribute` Metadatenelement an eine Rückrufmethode in einem Consumer, der einzige Parameter, der immer angegeben werden müssen ist die `displayName` Parameter (Einzelheiten finden Sie in der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.%23ctor%28System.String%29> Konstruktorüberladung). Der Wert dieses Parameters zugewiesen wird die <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayName%2A> -Eigenschaft, und wenn ein Benutzer die Verbindung UI öffnet (erstellt, indem die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement), den Anzeigenamen darstellt, den Consumerverbindungspunkt in der Benutzeroberfläche. Wenn Sie mehrere Rückrufmethoden in einem Consumersteuerelement festlegen, mehrere mögliche Verbindungspunkte auswählen müssen und beim Hinzufügen der `ConnectionConsumerAttribute` Metadatenelement jedes Rückrufmethode, sollten Sie auch einen Wert für angeben der `id` Parameter hat, damit jeder Consumer Verbindungspunkt, eine bekannte, eindeutigen Bezeichners.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute> Klasse erfahren, wie Sie deklarieren die `ConnectionConsumerAttribute` Metadatenelement für eine Rückrufmethode in einem Consumersteuerelement. Beachten Sie, dass die einfachste Überladung des Konstruktors verwendet wird. nur die `displayName` Parameterwert angegeben wird.  
+  
+ [!code-csharp[UI.WebControls.WebParts.Connection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/CS/rowconsumerwebpart.cs#5)]
+ [!code-vb[UI.WebControls.WebParts.Connection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/VB/rowconsumerwebpart.vb#5)]  
+  
+ Die folgenden Codebeispiele veranschaulichen, wie zum Erstellen einer grundlegenden, statischen Verbindungs zwischen zwei Webparts-Steuerelemente, die mithilfe der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Klasse. Die Codedateien Anbieter- und sollten in den Ordner "App_Code" unterhalb des Anwendungsordners abgelegt werden, die die ASPX-Seite enthält.  
+  
+ Das erste Beispiel zeigt eine Klasse, die als Anbieter fungiert.  
+  
+ [!code-csharp[UI.WebControls.WebParts.Connection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/CS/rowproviderwebpart.cs#1)]
+ [!code-vb[UI.WebControls.WebParts.Connection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/VB/rowproviderwebpart.vb#1)]  
+  
+ Im zweite Beispiel wird gezeigt, eine Klasse, die als Consumer fungiert. Beachten Sie, dass eine Methode als die Rückrufmethode mit festgelegt ist die `ConnectionConsumerAttribute` Metadatenelement einfügen.  
+  
+ [!code-csharp[UI.WebControls.WebParts.Connection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/CS/rowconsumerwebpart.cs#2)]
+ [!code-vb[UI.WebControls.WebParts.Connection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/VB/rowconsumerwebpart.vb#2)]  
+  
+ Im abschließenden Beispiel zeigt die ASP.NET-Seite fest, die die beiden Steuerelemente enthält.  
+  
+ [!code-aspx-csharp[UI.WebControls.WebParts.Connection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/CS/defaultcs.aspx#3)]
+ [!code-aspx-vb[UI.WebControls.WebParts.Connection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/VB/defaultvb.aspx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute" /> Klasse Angabe eines Werts, der für die Anzeigenamen der Verbindung verwendet und optional die Werte für den Verbindungspunkt-ID, den Punkt Verbindungstyp oder beides verwenden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Consumer-Steuerelement kann mehrere Methoden mit gekennzeichnet haben die `ConnectionConsumerAttribute` Metadatenelement einfügen. In diesem Fall würde der Consumer haben mehrere Verbindungspunkte und jede Instanz von der `ConnectionConsumerAttribute` Element sollte einen eindeutigen ID-Wert für den zugeordneten Verbindungspunkt angeben, sodass der Consumer-Verbindungspunkte unterschieden werden können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionConsumerAttribute (string displayName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Eine Zeichenfolge, die einen Anzeigenamen für den Consumerverbindungspunkt zur Anzeige in der Benutzeroberfläche enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute" /> -Klasse und gibt einen Anzeigenamen für den Consumerverbindungspunkt an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine Instanz des Attributs, das mit einer Methode eines Webparts-Steuerelements, das als Consumer fungiert verwendet wird. Diese Methode wird dem Verbindungspunkt zwischen dem Anbieter und der Consumer. In der Regel ist die Art der Verwendung dieses Konstruktors zum Deklarieren einer `ConnectionConsumerAttribute` Metadatenelement auf eine Methode, die Sie als eine Rückrufmethode in einem Consumersteuerelement festlegen möchten.  
+  
+ Die `displayName` Parameter ist ein Anzeigename für den Consumerverbindungspunkt an, mit der die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement zur Darstellung des Consumers Verbindungspunkt in der Benutzeroberfläche.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute> Klasse erfahren, wie Sie deklarieren die `ConnectionConsumerAttribute` Metadatenelement für eine Rückrufmethode in einem Consumersteuerelement. Beachten Sie, dass die einfachste Überladung des Konstruktors verwendet wird. nur die `displayName` Parameterwert angegeben wird. Den vollständigen Code, der zum Ausführen des Codebeispiels erforderlich ist, finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute> -Klassenübersicht.  
+  
+ [!code-csharp[UI.WebControls.WebParts.Connection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/CS/rowconsumerwebpart.cs#5)]
+ [!code-vb[UI.WebControls.WebParts.Connection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/VB/rowconsumerwebpart.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="displayName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionConsumerAttribute (string displayName, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Eine Zeichenfolge, die einen Anzeigenamen für den Consumerverbindungspunkt zur Anzeige in der Benutzeroberfläche enthält.</param>
+        <param name="id">Die <see cref="P:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.ID" />, ein eindeutiger Zeichenfolgenwert, der dem Consumerverbindungspunkt zugewiesen ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute" /> -Klasse und gibt einen Anzeigenamen und eine ID für den Consumerverbindungspunkt an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `displayName` Parameter ist ein Anzeigename für den Consumerverbindungspunkt an, mit der die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement zur Darstellung des Consumers Verbindungspunkt in der Benutzeroberfläche.  
+  
+ Die `id` Parameter wird verwendet, um die ID für den Consumerverbindungspunkt an bestimmten Rückrufmethode zugeordneten angeben. Ein Steuerelement kann mehrere Verbindungspunkte, haben aber die `id` für jeweils eindeutig sein muss. Deshalb ist diese Überladung des Konstruktors hilfreich sein, mehrere Rückrufmethoden im Consumer-Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="displayName" /> oder <paramref name="id" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionConsumerAttribute (string displayName, Type connectionPointType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, class System.Type connectionPointType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="connectionPointType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Eine Zeichenfolge, die einen Anzeigenamen für den Consumerverbindungspunkt zur Anzeige in der Benutzeroberfläche enthält.</param>
+        <param name="connectionPointType">Ein <see cref="T:System.Type" />, der von <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> abgeleitet ist, und den Sie als Typ des Verbindungspunktobjekts angeben möchten, das mit einer bestimmten Rückrufmethode verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute" /> -Klasse und gibt einen Anzeigenamen und einen bestimmten Typ von Verbindungspunktobjekt für den Consumerverbindungspunkt an verwenden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `displayName` Parameter ist ein Anzeigename für den Consumerverbindungspunkt an, mit der die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement zur Darstellung des Consumers Verbindungspunkt in der Benutzeroberfläche.  
+  
+ Die `connectionPointType` Parameter muss ein <xref:System.Type> abgeleitet <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint>. Wenn dieser Parameter angegeben wird, die <xref:System.Type> dient zum Erstellen des Verbindungspunkts anstelle des <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Klasse, die mit dem Webparts-Steuerelementsatz bereitgestellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="displayName" /> oder <paramref name="connectionPointType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="connectionPointType" /> ist nicht gültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionConsumerAttribute (string displayName, string id, Type connectionPointType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string id, class System.Type connectionPointType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.#ctor(System.String,System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="connectionPointType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Eine Zeichenfolge, die einen Anzeigenamen für den Consumerverbindungspunkt zur Anzeige in der Benutzeroberfläche enthält.</param>
+        <param name="id">Die <see cref="P:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.ID" />, ein eindeutiger Zeichenfolgenwert, der dem Consumerverbindungspunkt zugewiesen ist.</param>
+        <param name="connectionPointType">Ein <see cref="T:System.Type" />, der von <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> abgeleitet ist, und den Sie als Typ des Verbindungspunktobjekts angeben möchten, das mit einer bestimmten Rückrufmethode verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute" />-Klasse und gibt einen Anzeigenamen, eine ID und einen bestimmten Typ von Verbindungspunktobjekt zur Verwendung für den Consumerverbindungspunkt an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `displayName` Parameter ist ein Anzeigename für den Consumerverbindungspunkt an, mit der die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement zur Darstellung des Consumers Verbindungspunkt in der Benutzeroberfläche.  
+  
+ Die `id` Parameter wird verwendet, um die ID für den Consumerverbindungspunkt an bestimmten Rückrufmethode zugeordneten angeben. Ein Steuerelement kann mehrere Verbindungspunkte, haben aber die `id` für jeweils eindeutig sein muss. Deshalb ist diese Überladung des Konstruktors hilfreich sein, mehrere Rückrufmethoden im Consumer-Steuerelement.  
+  
+ Die `connectionPointType` Parameter muss ein <xref:System.Type> abgeleitet <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint>. Wenn dieser Parameter angegeben wird, die <xref:System.Type> dient zum Erstellen des Verbindungspunkts anstelle des <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Klasse, die mit dem Webparts-Steuerelementsatz bereitgestellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="displayName" />, <paramref name="id" /> oder <paramref name="connectionPointType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="connectionPointType" /> ist nicht gültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowsMultipleConnections">
+      <MemberSignature Language="C#" Value="public bool AllowsMultipleConnections { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowsMultipleConnections" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.AllowsMultipleConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob den Verbindungspunkt mehrere Verbindungen zulässt.</summary>
+        <value>
+          <see langword="true" />Wenn der Verbindungspunkt mehrere Verbindungen akzeptiert. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig Consumerverbindungen akzeptieren keine mehrere Verbindungen ab, damit diese Eigenschaft, um festgelegt wird `false`. Anbieter-Verbindungen jedoch akzeptieren mehrere Verbindungen standardmäßig, und diese Eigenschaft auf einen <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> -Objekts festgelegt wird, um `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionPointType">
+      <MemberSignature Language="C#" Value="public Type ConnectionPointType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ConnectionPointType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.ConnectionPointType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Verbindungstyp Punkt, der dem Consumerverbindungspunkt ab.</summary>
+        <value>Ein <see cref="T:System.Type" /> , der den Typ des Verbindungspunkts angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die <xref:System.Type> für den Consumerverbindungspunkt an. Die <xref:System.Type> leiten sich aus <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint>, und beim Deklarieren der `connectionPointType` Parameter mit einem `ConnectionConsumerAttribute` Metadatenelement für eine Rückrufmethode, die eine Instanz des Typs, die Sie deklarieren, wird verwendet, um einen Verbindungspunkt anstelle des Erstellen<xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ein Ungültiger Verbindungstyp für den Punkt (eine, die nicht von abgeleitet ist die <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> Klasse) verwendet wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public virtual string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den benutzerfreundlichen Namen der dem Consumerverbindungspunkt ab.</summary>
+        <value>Eine Zeichenfolge mit einem Anzeigenamen für den Consumerverbindungspunkt an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist der Anzeigename der Consumerverbindungspunkt an. Ihr Wert kann deklarativ festgelegt werden, beim Hinzufügen der `displayName` Parameter an eine `ConnectionConsumerAttribute` Metadatenelement für eine Rückrufmethode. Sie können auch programmgesteuert festgelegt werden durch eine abgeleitete Klasse mit den geschützten <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayNameValue%2A> Eigenschaft.  
+  
+ Wenn Sie über eine Auflistung von Verbindungspunkten gesucht werden, sollten Sie verwenden die <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.ID%2A> Eigenschaft, da die ID-Eigenschaft eindeutig sein muss, aber die <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayName%2A> Eigenschaft muss nicht.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayName%2A> Eigenschaft von einem Consumerverbindungspunkt wird Benutzern angezeigt bei einer <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement auf der Seite ist die Verbindungs-Benutzeroberfläche (UI) geöffnet ist und handelt es sich in einer Ansicht, in dem Auswählen von Verbindungspunkten herstellen gestattet, ein Verbindung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayName%2A> Eigenschaft erfahren, wie Sie deklarieren die `ConnectionConsumerAttribute` Metadatenelement für eine Rückrufmethode in einem Consumersteuerelement. Beachten Sie, dass die einfachste Überladung des Konstruktors verwendet wird. nur die `displayName` Parameterwert angegeben wird. Der Wert des Parameters wird zum Wert von der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayName%2A> Eigenschaft. Den vollständigen Code, der zum Ausführen des Codebeispiels erforderlich ist, finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute> -Klassenübersicht.  
+  
+ [!code-csharp[UI.WebControls.WebParts.Connection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/CS/rowconsumerwebpart.cs#5)]
+ [!code-vb[UI.WebControls.WebParts.Connection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/VB/rowconsumerwebpart.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayNameValue">
+      <MemberSignature Language="C#" Value="protected string DisplayNameValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayNameValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayNameValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge ab, die als Wert für die <see cref="P:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayName" /> Eigenschaft für die Verwendung in Szenarien mit Lokalisierung.</summary>
+        <value>Eine Zeichenfolge, die verwendet wird, als Wert des <see cref="P:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayName" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese zusätzliche Eigenschaft vorhanden ist, sodass Sie ableiten können <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute> , und geben Sie eine lokalisierte Version. Die abgeleitete lokalisierbare <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute> Attribut behält ein privates boolesches Feld, um anzugeben, ob es lokalisiert wurde. Beim ersten Zugriff auf die <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayName%2A> -Eigenschaft, werden die lokalisierte Zeichenfolge suchen und verwenden Sie dann die <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayNameValue%2A> Eigenschaft, um den lokalisierten Wert zuweisen der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayName%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public string ID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die eindeutige Identität der dem Consumerverbindungspunkt darstellt.</summary>
+        <value>Die eindeutige ID, der dem Consumerverbindungspunkt zugewiesen ist. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie über eine Auflistung von Verbindungspunkten zu suchen, verwenden Sie die <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.ID%2A> Eigenschaft zu einem bestimmten Verbindungspunkt. Diese Eigenschaft kann verwendet werden, um zwischen zwei Verbindungspunkten mit dem gleichen Namen unterscheiden zu können. Consumer-Verbindungspunkte können verfügen über denselben <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.DisplayName%2A> Eigenschaftswert, aber die <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.ID%2A> Eigenschaft muss unterschiedlich sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,281 @@
+<Type Name="EnumeratedPrintQueueTypes" FullName="System.Printing.EnumeratedPrintQueueTypes">
+  <TypeSignature Language="C#" Value="public enum EnumeratedPrintQueueTypes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EnumeratedPrintQueueTypes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.EnumeratedPrintQueueTypes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Attribute von Druckerwarteschlangen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Werte mit der <xref:System.Printing.PrintServer.GetPrintQueues%2A> Methode, um eine Teilmenge der verfügbaren Druckwarteschlangen.  
+  
+ PushedMachineConnection und PushedUserConnection beziehen sich auf Richtlinien, die automatische Verbindung von Computern und Benutzern mit Druckern zu aktivieren. Finden Sie im Abschnitt "Bereitstellen von Drucker, Benutzer oder Computer durch Verwenden von Gruppenrichtlinien" in der [schrittweise Anleitung für die Druckverwaltung](http://technet2.microsoft.com/WindowsServer/en/Library/312b10cb-73ec-40c7-a4df-63dd7248d93d1033.mspx).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Printing.EnumeratedPrintQueueTypes.PushedMachineConnection> Enumeration eine Teilmenge der verfügbaren Druckwarteschlangen abgerufen.  
+  
+ [!code-cpp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CPP/Program.cpp#listsubsetofprintqueues)]
+ [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
+ [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Connections">
+      <MemberSignature Language="C#" Value="Connections" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes Connections = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.Connections" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange auf dem angegebenen Druckerserver verbunden ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectPrinting">
+      <MemberSignature Language="C#" Value="DirectPrinting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes DirectPrinting = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.DirectPrinting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange, die einen Druckauftrag direkt an den Drucker anstatt zuerst, den Auftrag zu spoolen sendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableBidi">
+      <MemberSignature Language="C#" Value="EnableBidi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes EnableBidi = int32(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.EnableBidi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange für einen Drucker, der bidirektionale Kommunikation aktiviert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDevQuery">
+      <MemberSignature Language="C#" Value="EnableDevQuery" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes EnableDevQuery = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.EnableDevQuery" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange, die die Druckaufträge speichert, wenn das Dokument und Drucker-Konfigurationen nicht übereinstimmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fax">
+      <MemberSignature Language="C#" Value="Fax" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes Fax = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.Fax" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange, die ein Faxgerät bedient.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepPrintedJobs">
+      <MemberSignature Language="C#" Value="KeepPrintedJobs" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes KeepPrintedJobs = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.KeepPrintedJobs" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange, die Aufträge in der Warteschlange bleiben können, nach dem Drucken.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Local">
+      <MemberSignature Language="C#" Value="Local" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes Local = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.Local" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange, die als lokale Druckwarteschlange auf dem angegebenen Druckserver installiert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PublishedInDirectoryServices">
+      <MemberSignature Language="C#" Value="PublishedInDirectoryServices" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes PublishedInDirectoryServices = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.PublishedInDirectoryServices" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange, die in das Verzeichnis der Drucker angezeigt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PushedMachineConnection">
+      <MemberSignature Language="C#" Value="PushedMachineConnection" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes PushedMachineConnection = int32(262144)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.PushedMachineConnection" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange, die mithilfe der Computerrichtlinie von Druckerverbindungen mithilfe von Push übertragen installiert wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PushedUserConnection">
+      <MemberSignature Language="C#" Value="PushedUserConnection" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes PushedUserConnection = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.PushedUserConnection" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange, die mithilfe von Druckerverbindungen mithilfe von Push übertragen-Benutzerrichtlinie installiert wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Queued">
+      <MemberSignature Language="C#" Value="Queued" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes Queued = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.Queued" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange, die mehrere Druckaufträge in der Warteschlange zulässt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawOnly">
+      <MemberSignature Language="C#" Value="RawOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes RawOnly = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.RawOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange, die nur die Rohdaten gespeichert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="Shared" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes Shared = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.Shared" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckerwarteschlange gemeinsam verwendet wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminalServer">
+      <MemberSignature Language="C#" Value="TerminalServer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes TerminalServer = int32(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.TerminalServer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckwarteschlange, die von der Funktion zur automatischen bindungsumleitung in Terminal Services installiert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkOffline">
+      <MemberSignature Language="C#" Value="WorkOffline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.EnumeratedPrintQueueTypes WorkOffline = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.EnumeratedPrintQueueTypes.WorkOffline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.EnumeratedPrintQueueTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Druckerwarteschlange offline arbeiten kann.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

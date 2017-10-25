@@ -1,0 +1,174 @@
+<Type Name="IStructuralEquatable" FullName="System.Collections.IStructuralEquatable">
+  <TypeSignature Language="C#" Value="public interface IStructuralEquatable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IStructuralEquatable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.IStructuralEquatable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>FSharp.Core</AssemblyName>
+    <AssemblyVersion>2.3.98.1</AssemblyVersion>
+    <AssemblyVersion>3.98.4.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Methoden zur Unterstützung der strukturellen Gleichheitsüberprüfung von Objekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Strukturgleichheit bedeutet, dass zwei Objekte gleich sind, da sie identische Werte aufweisen. Es unterscheidet sich von Verweisgleichheit, der angibt, dass zwei Objektverweise gleich sind, da sie dasselbe physische Objekt verweisen. Die <xref:System.Collections.IStructuralEquatable> Schnittstelle können Sie eine benutzerdefinierte Vergleiche zur Überprüfung der strukturellen gleichheitsüberprüfung von Auflistungsobjekten zu implementieren. Sie können also erstellen Sie eine eigene Definition der strukturellen gleichheitsüberprüfung und angeben, dass diese Definition mit einem Auflistungstyp verwendet wird, akzeptiert die <xref:System.Collections.IStructuralEquatable> Schnittstelle. Die Schnittstelle verfügt über zwei Member: <xref:System.Collections.IStructuralEquatable.Equals%2A>, die mithilfe eines angegebenen Gleichheit testet <xref:System.Collections.IEqualityComparer> Implementierung und <xref:System.Collections.IStructuralEquatable.GetHashCode%2A>, womit identische Hashcodes für Objekte, die gleich sind.  
+  
+> [!NOTE]
+>  Die <xref:System.Collections.IStructuralEquatable> -Schnittstelle unterstützt nur benutzerdefinierte Vergleiche strukturellen gleichheitsüberprüfung. Die <xref:System.Collections.IStructuralComparable> Schnittstelle unterstützt benutzerdefinierte strukturelle Vergleiche für das Sortieren und zu sortieren.  
+  
+ .NET Framework stellt auch Vergleiche auf Gleichheit, die von zurückgegeben werden die <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> und <xref:System.Collections.StructuralComparisons.StructuralEqualityComparer%2A?displayProperty=nameWithType> Eigenschaften. Weitere Informationen finden Sie im Beispiel.  
+  
+ Die generische Tupelklassen (<xref:System.Tuple%601>, <xref:System.Tuple%602>, <xref:System.Tuple%603>usw.) und die <xref:System.Array> Klasse geben Sie explizite Implementierungen von der <xref:System.Collections.IStructuralEquatable> Schnittstelle. Durch Umwandlung (in c#) oder konvertieren (in Visual Basic) der aktuellen Instanz eines Arrays oder Tupel für die ein <xref:System.Collections.IStructuralEquatable> Schnittstelle Wert und Bereitstellen Ihrer <xref:System.Collections.IEqualityComparer> Implementierung als ein Argument an die <xref:System.Collections.IStructuralEquatable.Equals%2A> -Methode, können Sie eine benutzerdefinierte Gleichheit definieren der Vergleich für die Arrays oder einer Auflistung.  
+  
+   
+  
+## Examples  
+ Der Standardgleichheitsvergleich `EqualityComparer<Object>.Default.Equals`, betrachtet zwei `NaN` Werte gleich sind. Jedoch in einigen Fällen kann, möchten Sie den Vergleich von `NaN` Werte hinsichtlich ihrer Gleichheit zurückzugebenden `false`, was bedeutet, dass die Werte verglichen werden können. Im folgenden Beispiel wird eine `NanComparer`-Klasse definiert, die die <xref:System.Collections.IStructuralEquatable>-Schnittstelle implementiert. Vergleicht zwei <xref:System.Double> oder zwei <xref:System.Single> Werte mithilfe des Gleichheitsoperators. Es übergibt Werte eines anderen Typs an den Standardgleichheitsvergleich.  
+  
+ [!code-csharp[System.Collections.IStructuralEquatable#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.istructuralequatable/cs/nanexample1.cs#1)]
+ [!code-vb[System.Collections.IStructuralEquatable#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.istructuralequatable/vb/nanexample1.vb#1)]  
+  
+ Das folgende Beispiel erstellt zwei identische 3-Tupel-Objekten, dessen Komponenten bestehen aus drei <xref:System.Double> Werte. Der Wert der zweiten Komponente ist <xref:System.Double.NaN?displayProperty=nameWithType>. Das Beispiel ruft dann die <xref:System.Tuple%603.Equals%2A?displayProperty=nameWithType> -Methode, und ruft die <xref:System.Collections.IStructuralEquatable.Equals%2A?displayProperty=nameWithType> -Methode dreimal aufgerufen. Erstmals ausführen, die den Standardgleichheitsvergleich, die von zurückgegeben wird übergibt die <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> Eigenschaft. Bei der zweiten übergibt den Standardgleichheitsvergleich, die von zurückgegeben wird die <xref:System.Collections.StructuralComparisons.StructuralEqualityComparer%2A?displayProperty=nameWithType> Eigenschaft. Der dritten Mal übergibt die benutzerdefinierte `NanComparer` Objekt. Wie die Ausgabe des Beispiels zeigt, die ersten drei Methodenaufrufe return `true`, wohingegen der vierten Aufruf zurückgegeben `false`.  
+  
+ [!code-csharp[System.Collections.IStructuralEquatable#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.istructuralequatable/cs/nanexample1.cs#2)]
+ [!code-vb[System.Collections.IStructuralEquatable#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.istructuralequatable/vb/nanexample1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (object other, System.Collections.IEqualityComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(object other, class System.Collections.IEqualityComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IStructuralEquatable.Equals(System.Object,System.Collections.IEqualityComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>FSharp.Core</AssemblyName>
+        <AssemblyVersion>2.3.98.1</AssemblyVersion>
+        <AssemblyVersion>3.98.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+        <Parameter Name="comparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <param name="comparer">Ein Objekt, das bestimmt, ob die aktuelle Instanz und <c>andere</c> gleich sind.</param>
+        <summary>Bestimmt, ob ein Objekt mit der aktuellen Instanz strukturell übereinstimmen.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Objekte gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.IStructuralEquatable.Equals%2A> Methode unterstützt benutzerdefinierte Strukturvergleich von Arrays und Tupel-Objekten. Diese Methode ruft die `comparer` des Objekts <xref:System.Collections.IEqualityComparer.Equals%2A?displayProperty=nameWithType> Methode zum Vergleichen von einzelnen Arrayelemente oder Tupelkomponenten, beginnend mit dem ersten Element oder die Komponente. Die einzelnen Aufrufe <xref:System.Collections.IEqualityComparer.Equals%2A?displayProperty=nameWithType> Ende und das <xref:System.Collections.IStructuralEquatable.Equals%2A?displayProperty=nameWithType> Methode gibt einen Wert entweder zurück, wenn ein Methodenaufruf zurückgegeben `false` oder nachdem alle Arrayelemente oder Tupelkomponenten verglichen wurden.  
+  
+   
+  
+## Examples  
+ Der Standardgleichheitsvergleich `EqualityComparer<Object>.Default.Equals`, betrachtet zwei `NaN` Werte gleich sind. Jedoch in einigen Fällen kann, möchten Sie den Vergleich von `NaN` Werte hinsichtlich ihrer Gleichheit zurückzugebenden `false`, was bedeutet, dass die Werte verglichen werden können. Im folgenden Beispiel wird eine `NanComparer`-Klasse definiert, die die <xref:System.Collections.IStructuralEquatable>-Schnittstelle implementiert. Vergleicht zwei <xref:System.Double> oder zwei <xref:System.Single> Werte mithilfe des Gleichheitsoperators. Es übergibt Werte eines anderen Typs an den Standardgleichheitsvergleich.  
+  
+ [!code-csharp[System.Collections.IStructuralEquatable#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.istructuralequatable/cs/nanexample1.cs#1)]
+ [!code-vb[System.Collections.IStructuralEquatable#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.istructuralequatable/vb/nanexample1.vb#1)]  
+  
+ Das folgende Beispiel erstellt zwei identische 3-Tupel-Objekten, dessen Komponenten bestehen aus drei <xref:System.Double> Werte. Der Wert der zweiten Komponente ist <xref:System.Double.NaN?displayProperty=nameWithType>. Das Beispiel ruft dann die <xref:System.Tuple%603.Equals%2A?displayProperty=nameWithType> -Methode, und ruft die <xref:System.Collections.IStructuralEquatable.Equals%2A?displayProperty=nameWithType> -Methode dreimal aufgerufen. Erstmals ausführen, die den Standardgleichheitsvergleich, die von zurückgegeben wird übergibt die <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> Eigenschaft. Bei der zweiten übergibt den Standardgleichheitsvergleich, die von zurückgegeben wird die <xref:System.Collections.StructuralComparisons.StructuralEqualityComparer%2A?displayProperty=nameWithType> Eigenschaft. Der dritten Mal übergibt die benutzerdefinierte `NanComparer` Objekt. Wie die Ausgabe des Beispiels zeigt, die ersten drei Methodenaufrufe return `true`, wohingegen der vierten Aufruf zurückgegeben `false`.  
+  
+ [!code-csharp[System.Collections.IStructuralEquatable#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.istructuralequatable/cs/nanexample1.cs#2)]
+ [!code-vb[System.Collections.IStructuralEquatable#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.istructuralequatable/vb/nanexample1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public int GetHashCode (System.Collections.IEqualityComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetHashCode(class System.Collections.IEqualityComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IStructuralEquatable.GetHashCode(System.Collections.IEqualityComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>FSharp.Core</AssemblyName>
+        <AssemblyVersion>2.3.98.1</AssemblyVersion>
+        <AssemblyVersion>3.98.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">Ein Objekt, das den Hashcode des aktuellen Objekts berechnet.</param>
+        <summary>Gibt einen Hashcode für die aktuelle Instanz zurück.</summary>
+        <returns>Der Hashcode für die aktuelle Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie diese Methode, um benutzerdefinierte Hashcodes für die von Auflistungsobjekten, entsprechen, die dem benutzerdefinierten Vergleich strukturellen gleichheitsüberprüfung von bereitgestellten Zurückgeben der <xref:System.Collections.IStructuralEquatable.Equals%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn die <see cref="M:System.Collections.IStructuralEquatable.Equals(System.Object,System.Collections.IEqualityComparer)" /> -Methode zurückkehrt <see langword="true" /> für zwei Objekte, die Werte zurückgegeben, durch die <see cref="M:System.Collections.IStructuralEquatable.GetHashCode(System.Collections.IEqualityComparer)" /> Methode für die beiden Objekte muss ebenfalls gleich sein.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

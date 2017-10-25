@@ -1,0 +1,27 @@
+<Type Name="TransactedCallback" FullName="System.Web.Util.TransactedCallback">
+  <TypeSignature Language="C#" Value="public delegate void TransactedCallback();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TransactedCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Util.TransactedCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Stellt die Rückrufmethode, die unter der Unterstützung von Transaktionen ausgeführt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat wird zum Übergeben der <xref:System.Web.Util.Transactions.InvokeTransacted%2A?displayProperty=nameWithType> Methode und stellt die Rückrufmethode, die unter der Unterstützung von Transaktionen ausgeführt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

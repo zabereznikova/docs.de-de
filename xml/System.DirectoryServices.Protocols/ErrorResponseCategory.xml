@@ -1,0 +1,146 @@
+<Type Name="ErrorResponseCategory" FullName="System.DirectoryServices.Protocols.ErrorResponseCategory">
+  <TypeSignature Language="C#" Value="public enum ErrorResponseCategory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ErrorResponseCategory extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.ErrorResponseCategory" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.ErrorResponseCategory" /> -Enumeration enthält mögliche DSML-Fehlerantworten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AuthenticationFailed">
+      <MemberSignature Language="C#" Value="AuthenticationFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.ErrorResponseCategory AuthenticationFailed = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.ErrorResponseCategory.AuthenticationFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.ErrorResponseCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fehler bei der Authentifizierung. Der Wert ist gleich 5.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionClosed">
+      <MemberSignature Language="C#" Value="ConnectionClosed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.ErrorResponseCategory ConnectionClosed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.ErrorResponseCategory.ConnectionClosed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.ErrorResponseCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>DSML-Anbieter mit einem Server verbunden, aber der Server hat die Verbindung geschlossen, ohne auf die Anforderung zu reagieren. Der Wert ist gleich 2.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CouldNotConnect">
+      <MemberSignature Language="C#" Value="CouldNotConnect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.ErrorResponseCategory CouldNotConnect = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.ErrorResponseCategory.CouldNotConnect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.ErrorResponseCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>DSML-Anbieter konnte keine Verbindung mit einem Server herstellen. Der Wert ist gleich 1.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayInternalError">
+      <MemberSignature Language="C#" Value="GatewayInternalError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.ErrorResponseCategory GatewayInternalError = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.ErrorResponseCategory.GatewayInternalError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.ErrorResponseCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es ist ein interner Gateway-Fehler. Der Wert ist gleich 4.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MalformedRequest">
+      <MemberSignature Language="C#" Value="MalformedRequest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.ErrorResponseCategory MalformedRequest = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.ErrorResponseCategory.MalformedRequest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.ErrorResponseCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Client konnte eine Anforderungs-ID für jede Anforderung an. Der Wert ist gleich 3.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAttempted">
+      <MemberSignature Language="C#" Value="NotAttempted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.ErrorResponseCategory NotAttempted = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.ErrorResponseCategory.NotAttempted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.ErrorResponseCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>DSML-Anbieter wurde nicht versucht, ein Anforderungselement ausgeführt wird. Der Wert ist gleich 0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Other">
+      <MemberSignature Language="C#" Value="Other" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.ErrorResponseCategory Other = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.ErrorResponseCategory.Other" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.ErrorResponseCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es ist ein unbekannter Fehler aufgetreten. Der Wert ist gleich 7.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnresolvableUri">
+      <MemberSignature Language="C#" Value="UnresolvableUri" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.ErrorResponseCategory UnresolvableUri = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.ErrorResponseCategory.UnresolvableUri" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.ErrorResponseCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Clientanbieter ist kann nicht aufgelöst, dass der URI, der ein Wert, der können auf den Server übertragen werden. Der Wert ist gleich 6.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

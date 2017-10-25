@@ -1,0 +1,48 @@
+<Type Name="DefaultProfile" FullName="System.Web.Profile.DefaultProfile">
+  <TypeSignature Language="C#" Value="public class DefaultProfile : System.Web.Profile.ProfileBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultProfile extends System.Web.Profile.ProfileBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.DefaultProfile" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Profile.ProfileBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Benutzerprofil Instanz dar, wenn keine Profileigenschaften definiert sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.DefaultProfile> Klasse wird von ASP.NET verwendet, um eine Standardinstanz eines Benutzerprofils zurückgeben, wenn das Profilfeature aktiviert ist, aber keine Eigenschaften definiert wurden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultProfile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.DefaultProfile.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.Profile.DefaultProfile" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.DefaultProfile> Klasse wird von ASP.NET verwendet, um eine Standardinstanz eines Benutzerprofils zurückgeben, wenn das Profilfeature aktiviert ist, aber keine Eigenschaften definiert wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

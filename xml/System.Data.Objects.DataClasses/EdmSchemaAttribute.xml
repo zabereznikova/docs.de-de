@@ -1,0 +1,71 @@
+<Type Name="EdmSchemaAttribute" FullName="System.Data.Objects.DataClasses.EdmSchemaAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EdmSchemaAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EdmSchemaAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.EdmSchemaAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Attribut, das anzeigt, dass die Assembly Klassen enthält, die Entitätstypen in einem konzeptionellen Modell zugeordnet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut erhalten Assemblys, die Entitätstypen enthalten. Es muss nur einmal zugewiesen werden, kann jedoch mehrmals zugewiesen werden. Wenn sie mehrere Male, in einer Assembly in einem Visual Basic-Projekt angewendet wird die <xref:System.Data.Objects.DataClasses.EdmSchemaAttribute.%23ctor%2A> Konstruktor muss verwendet werden, um einen Wert der GUID-Zeichenfolge angeben, die für jedes konzeptionellen Modells auf die Assembly verweist eindeutig ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EdmSchemaAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EdmSchemaAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Objects.DataClasses.EdmSchemaAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EdmSchemaAttribute (string assemblyGuid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string assemblyGuid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EdmSchemaAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assemblyGuid" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyGuid">Eine Zeichenfolge, die ein eindeutiger GUID-Wert für das Modell in der Assembly ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Objects.DataClasses.EdmSchemaAttribute" />-Klasse mit einem eindeutigen Wert für jedes Modell, auf das die Assembly verweist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, um eine GUID-Zeichenfolgenwert anzugeben, der für jedes konzeptionellen Modells auf der gleichen Assembly verweist eindeutig ist. Gehen Sie wie oben beschrieben vor, wenn <xref:System.Data.Objects.DataClasses.EdmSchemaAttribute> mehrmals einer einzelnen Assembly in einem Visual Basic-Projekt zugewiesen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

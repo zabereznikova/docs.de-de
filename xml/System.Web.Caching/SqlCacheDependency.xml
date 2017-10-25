@@ -1,0 +1,277 @@
+<Type Name="SqlCacheDependency" FullName="System.Web.Caching.SqlCacheDependency">
+  <TypeSignature Language="C#" Value="public sealed class SqlCacheDependency : System.Web.Caching.CacheDependency" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlCacheDependency extends System.Web.Caching.CacheDependency" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.SqlCacheDependency" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Caching.CacheDependency</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Legt eine Beziehung zwischen einem Element in einer ASP.NET-Anwendung gespeichert <see cref="T:System.Web.Caching.Cache" /> Objekt und einem bestimmten SQL Server-Datenbanktabelle bzw. die Ergebnisse einer SQL Server 2005-Abfrage. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unter allen unterstützten Versionen von SQL Server (Microsoft SQL Server 7.0, Microsoft SQL Server 2000 und SQL Server 2005) die <xref:System.Web.Caching.SqlCacheDependency> Klasse überwacht eine bestimmte SQL Server-Datenbanktabelle. Wenn der Tabelle ändern, Elemente, die der Tabelle zugeordneten aus entfernt die <xref:System.Web.Caching.Cache>, und eine neue Version des Elements wird hinzugefügt, um die <xref:System.Web.Caching.Cache>.  
+  
+ Die <xref:System.Web.Caching.SqlCacheDependency> -Klasse unterstützt auch die Integration in die <xref:System.Data.SqlClient.SqlDependency?displayProperty=nameWithType> Klasse bei der Verwendung einer [!INCLUDE[sqprsqlong](~/includes/sqprsqlong-md.md)] Datenbank. Die Abfrage Benachrichtigungsmechanismus der [!INCLUDE[sqprsqlong](~/includes/sqprsqlong-md.md)] erkennt Änderungen an Daten, die für ungültig zu erklären die Ergebnisse einer SQL-Abfrage ein und entfernt alle zwischengespeicherten Elemente zugeordnet sind, mit der SQL-Abfrage aus der <xref:System.Web.Caching.Cache?displayProperty=nameWithType>.  
+  
+ Sie können die <xref:System.Web.Caching.SqlCacheDependency> Klasse, um Ihre Anwendungsverzeichnis Elemente hinzuzufügen <xref:System.Web.Caching.Cache> , die bei Verwendung von einer SQL Server-Datenbanktabelle oder auf einer SQL-Abfrage abhängig sind [!INCLUDE[sqprsqlong](~/includes/sqprsqlong-md.md)]. Sie können auch diese Klasse mit der Direktive verwenden, zu einer zwischengespeicherten Seite oder ein benutzerdefiniertes Steuerelement für eine SQL Server-Datenbanktabelle abhängig machen. Schließlich können Sie die <xref:System.Web.Caching.SqlCacheDependency> Klasse mit eine zwischengespeicherten Seite der Ergebnisse einer SQL-Abfrage abhängig zu machen, bei Verwendung der Seitendirektive [!INCLUDE[sqprsqlong](~/includes/sqprsqlong-md.md)]. Abfragebenachrichtigung mit [!INCLUDE[sqprsqlong](~/includes/sqprsqlong-md.md)] wird auf die Richtlinie für Benutzersteuerelemente nicht unterstützt.  
+  
+> [!NOTE]
+>  Für diese Klasse ordnungsgemäß funktioniert müssen bei Verwendung tabellenbasierte Benachrichtigungen, aufweisen die Datenbank und alle Tabellen, denen gewünschten Abhängigkeiten auf Benachrichtigungen aktiviert. Sie können Benachrichtigungen aktivieren, durch Aufrufen der Methoden der <xref:System.Web.Caching.SqlCacheDependencyAdmin> -Klasse oder unter Verwendung des Befehlszeilentools. Darüber hinaus müssen die richtigen Konfigurationseinstellungen in der Anwendungsdatei "Web.config" enthalten sein.  
+>   
+>  Mit einem <xref:System.Web.Caching.SqlCacheDependency> -Objekt mit [!INCLUDE[sqprsqlong](~/includes/sqprsqlong-md.md)] Abfrage Benachrichtigung erfordert keine explizite Konfiguration. Wenden Sie sich an den [!INCLUDE[sqprsqlong](~/includes/sqprsqlong-md.md)] Books Online Informationen zu Einschränkungen auf die Typen von Transact-SQL-Abfragen, die bei Verwendung von Query Notifications zulässig sind.  
+  
+ Das folgende Beispiel zeigt eine ASP.NET-ANWENDUNGSEINSTELLUNGEN in Web.config-Datei, die tabellenbasierte Abhängigkeiten für eine SQL Server-Datenbanktabelle ermöglicht.  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="Northwind" connectionString="Data Source=(local); Initial Catalog=northwind; Integrated Security=true"; providerName="System.Data.SqlClient" />  
+  </connectionStrings>  
+  <system.web>  
+    <caching>  
+      <sqlCacheDependency enabled = "true" pollTime = "60000" >  
+        <databases>  
+          <add name="northwind"   
+            connectionStringName="Northwind"  
+            pollTime="9000000"  
+            />  
+        </databases>  
+      </sqlCacheDependency>  
+    </caching>  
+  </system.web>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.WebControls.SqlDataSource> und <xref:System.Web.UI.WebControls.GridView> Steuerelementen zum Anzeigen einer Datenbanktabelle. Wenn die Seite geladen ist, versucht die Seite zum Erstellen einer <xref:System.Web.Caching.SqlCacheDependency> Objekt. Nach der <xref:System.Web.Caching.SqlCacheDependency> Objekt erstellt wird, wird die Seite fügt ein Element aus, um die `Cache` mit einer Abhängigkeit der <xref:System.Web.Caching.SqlCacheDependency> Objekt. Sie sollten ähnlich wie die hier gezeigte Ausnahmebehandlung verwenden.  
+  
+ [!code-aspx-csharp[CachingSamples_SqlCacheDependency#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CachingSamples_SqlCacheDependency/CS/sqlcachedepsamplecs.aspx#1)]
+ [!code-aspx-vb[CachingSamples_SqlCacheDependency#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CachingSamples_SqlCacheDependency/VB/sqlcachedepsamplevb.aspx#1)]
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlCacheDependency (System.Data.SqlClient.SqlCommand sqlCmd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.SqlClient.SqlCommand sqlCmd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.SqlCacheDependency.#ctor(System.Data.SqlClient.SqlCommand)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sqlCmd" Type="System.Data.SqlClient.SqlCommand" />
+      </Parameters>
+      <Docs>
+        <param name="sqlCmd">Ein <see cref="T:System.Data.SqlClient.SqlCommand" /> , dient zum Erstellen einer <see cref="T:System.Web.Caching.SqlCacheDependency" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Caching.SqlCacheDependency" /> -Klasse unter Verwendung der angegebenen <see cref="T:System.Data.SqlClient.SqlCommand" /> zum Erstellen einer Cacheschlüssel Abhängigkeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird zum Erstellen <xref:System.Web.Caching.SqlCacheDependency> Objekte, die die abfragebenachrichtigung von Funktion [!INCLUDE[sqprsqlong](~/includes/sqprsqlong-md.md)] Produkte.  
+  
+ SQL-Anweisungen, die zugeordnet sind die `sqlCmd` -Parameter muss Folgendes enthalten:  
+  
+-   Vollqualifizierte Tabellennamen, einschließlich des Namens des Besitzers der Tabelle. Zum Verweisen auf eine Tabelle, benannte Customersthat ist im Besitz des Datenbankbesitzers, muss die SQL-Anweisung z. B. auf verweisen `dbo.customers`.  
+  
+-   Explizite Spaltennamen in der Select-Anweisung. Sie können nicht das Platzhalterzeichen Sternchen (*) verwenden, um alle Spalten aus einer Tabelle auszuwählen. Beispielsweise anstelle von `select * from dbo.customers`, verwenden Sie `select name, address, city, state from dbo.customers`.  
+  
+ Dieser Konstruktor kann nicht verwendet werden, um zuzuordnen eine <xref:System.Data.SqlClient.SqlCommand> -Instanz mit einer <xref:System.Web.Caching.SqlCacheDependency> Instanz auf einer Seite mit [!INCLUDE[sqprsqlong](~/includes/sqprsqlong-md.md)] abfragebenachrichtigungen mit Zwischenspeichern der Ausgabe auf Seitenebene.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="sqlCmd" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">Die <see cref="T:System.Data.SqlClient.SqlCommand" /> Instanz hat seine <see cref="P:System.Data.SqlClient.SqlCommand.NotificationAutoEnlist" /> -Eigenschaftensatz auf <see langword="true" /> und es wird eine Richtlinie auf der Seite mit den <see langword="SqlDependency" /> -Attributsatz zur <c>CommandNotification</c>.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlCacheDependency (string databaseEntryName, string tableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string databaseEntryName, string tableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.SqlCacheDependency.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="databaseEntryName" Type="System.String" />
+        <Parameter Name="tableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="databaseEntryName">Der Name einer Datenbank in der Databases-Element der Anwendungsdatei "Web.config" definiert.</param>
+        <param name="tableName">Der Name der Datenbank, Tabelle, die die <see cref="T:System.Web.Caching.SqlCacheDependency" /> zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Caching.SqlCacheDependency" /> -Klasse unter Verwendung der angegebenen Parameter zum Erstellen einer Cacheschlüssel Abhängigkeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird zum Erstellen <xref:System.Web.Caching.SqlCacheDependency> Objekte für SQL Server 7.0 und SQL Server 2000-Produkte.  
+  
+ Name der Datenbank übergeben, um die `database` Parameter muss in der Anwendungsdatei "Web.config" definiert werden. Die folgende Datei "Web.config" definiert z. B. eine Datenbank namens Pubs für <xref:System.Web.Caching.SqlCacheDependency> änderungsbenachrichtigungen.  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="Pubs" connectionString="Data Source=(local); Initial Catalog=pubs; Integrated Security=true"; providerName="System.Data.SqlClient" />  
+  </connectionStrings>  
+  <system.web>  
+    <caching>  
+      <sqlCacheDependency enabled = "true" pollTime = "60000" >  
+        <databases>  
+          <add name="pubs"   
+            connectionStringName="pubs"  
+            pollTime="9000000"  
+            />  
+        </databases>  
+      </sqlCacheDependency>  
+    </caching>  
+  </system.web>  
+</configuration>  
+```  
+  
+ Zwei Ausnahmen sind häufig ausgelöst, wenn dieser Konstruktor verwendet wird: <xref:System.Web.Caching.DatabaseNotEnabledForNotificationException> und <xref:System.Web.Caching.TableNotEnabledForNotificationException>. Wenn eine <xref:System.Web.Caching.DatabaseNotEnabledForNotificationException> wird ausgelöst, können Sie Aufrufen der <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableNotifications%2A?displayProperty=nameWithType> Methode in Ausnahmebehandlungscode, oder verwenden Sie das Befehlszeilentool zum Einrichten der Datenbank für Benachrichtigungen. Wenn eine <xref:System.Web.Caching.TableNotEnabledForNotificationException> ist ausgelöst wird, können Sie Aufrufen der <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableTableForNotifications%2A?displayProperty=nameWithType> -Methode oder verwenden, um die Tabelle für Benachrichtigungen einrichten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird dieser Konstruktor zum Erstellen einer Instanz von verwendet die <xref:System.Web.Caching.SqlCacheDependency> -Klasse, die eine Datenbanktabelle mit dem Namen Kategorien in einer SQL Server-Datenbank zugeordnet ist, mit dem Namen Northwind.  
+  
+ [!code-csharp[CachingSamples_SqlCacheDependency#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CachingSamples_SqlCacheDependency/CS/sqlcachedepsamplecs.aspx#2)]
+ [!code-vb[CachingSamples_SqlCacheDependency#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CachingSamples_SqlCacheDependency/VB/sqlcachedepsamplevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die Überprüfung auf interne <see cref="T:System.Data.SqlClient.SqlClientPermission" /> ist fehlgeschlagen.  
+  
+ \- oder –  
+  
+ Die <paramref name="databaseEntryName" /> wurde nicht gefunden, in der Liste der Datenbanken, die für die Tabelle basierende Benachrichtigungen konfiguriert.  
+  
+ \- oder –  
+  
+ Die <see cref="T:System.Web.Caching.SqlCacheDependency" /> Objekt konnte keine Verbindung mit der Datenbank während der Initialisierung.  
+  
+ \- oder –  
+  
+ Die <see cref="T:System.Web.Caching.SqlCacheDependency" /> assoziierten einen Berechtigung verweigert-Fehler in der Datenbank oder auf der Datenbank gespeicherten Prozeduren, die Unterstützung der <see cref="T:System.Web.Caching.SqlCacheDependency" /> Objekt.</exception>
+        <exception cref="T:System.ArgumentException">Der <paramref name="tableName" />-Parameter ist <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Abruf nicht aktiviert ist, für die <see cref="T:System.Web.Caching.SqlCacheDependency" />.  
+  
+ \- oder –  
+  
+ Das Abrufintervall ist nicht richtig konfiguriert.  
+  
+ \- oder –  
+  
+ In der Anwendungskonfigurationsdatei wurde keine Verbindungszeichenfolge angegeben.  
+  
+ \- oder –  
+  
+ In der Anwendungskonfigurationsdatei angegebene Verbindungszeichenfolge konnte nicht gefunden werden.  
+  
+ \- oder –  
+  
+ In der Anwendungskonfigurationsdatei angegebene Verbindungszeichenfolge ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.Web.Caching.DatabaseNotEnabledForNotificationException">Der Datenbank die <paramref name="databaseEntryName" /> Parameter keine änderungsbenachrichtigungen aktiviert ist.</exception>
+        <exception cref="T:System.Web.Caching.TableNotEnabledForNotificationException">Die Datenbanktabelle, angegeben der <paramref name="tableName" /> Parameter keine änderungsbenachrichtigungen aktiviert ist.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="databaseEntryName" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ <paramref name="tableName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOutputCacheDependency">
+      <MemberSignature Language="C#" Value="public static System.Web.Caching.CacheDependency CreateOutputCacheDependency (string dependency);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Caching.CacheDependency CreateOutputCacheDependency(string dependency) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.SqlCacheDependency.CreateOutputCacheDependency(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.CacheDependency</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependency" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dependency">Die Ausgabe-Cacheabhängigkeit-Direktive.</param>
+        <summary>Erstellt eine abhängigkeitsbeziehung zwischen einem Element, das in einer ASP.NET-Anwendung gespeichert ist <see cref="T:System.Web.Caching.OutputCache" /> -Objekt und einer SQL Server-Datenbanktabelle.</summary>
+        <returns>Das neue Dependency-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Markup zeigt eine typische Ausgabe-Cacheabhängigkeit-Direktive.  
+  
+```  
+<%@ OutputCache Duration="3600" SqlDependency="Northwind:Employees" VaryByParam="none" %>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependencyDispose">
+      <MemberSignature Language="C#" Value="protected override void DependencyDispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DependencyDispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.SqlCacheDependency.DependencyDispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUniqueID">
+      <MemberSignature Language="C#" Value="public override string GetUniqueID ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetUniqueID() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.SqlCacheDependency.GetUniqueID" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen eindeutigen Bezeichner für eine <see cref="T:System.Web.Caching.SqlCacheDependency" /> Objekt.</summary>
+        <returns>Der eindeutige Bezeichner für die <see cref="T:System.Web.Caching.SqlCacheDependency" /> -Objekt oder null, wenn kein Bezeichner generiert werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Caching.SqlCacheDependency> Methodenrückgabe einen Bezeichner eindeutig nachverfolgen, <xref:System.Web.Caching.SqlCacheDependency> eines Elements oder einer Anwendung zugeordneten Objekte. Der eindeutige Bezeichner generiert, wenn die Tabelle basierende Benachrichtigungen mit ist teilweise abhängig von der Änderung Bezeichner, die von der Datenbank generiert.  
+  
+ Wenn Sie SQL Server 2005-basierten abfragebenachrichtigungen verwenden zu können, ist der eindeutige Bezeichner `null` da [!INCLUDE[sqprsqlong](~/includes/sqprsqlong-md.md)] Rückgabe der eindeutige Bezeichner für die einzelnen abfragebenachrichtigungen nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

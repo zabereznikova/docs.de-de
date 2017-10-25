@@ -1,0 +1,59 @@
+<Type Name="IVirtualizedItemProvider" FullName="System.Windows.Automation.Provider.IVirtualizedItemProvider">
+  <TypeSignature Language="C#" Value="public interface IVirtualizedItemProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IVirtualizedItemProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IVirtualizedItemProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("cb98b665-2d35-4fac-ad35-f3c60d0c0b8b")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht eine Methode, um die virtualisierte TableItem-Steuerelementmuster unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Automation.Provider.IVirtualizedItemProvider.Realize%2A> Methode ist ein virtuelles Element vollständig zugegriffen werden kann, wie ein Benutzeroberflächenautomatisierungs-Element. Ein virtualisiertes Element ist in der Regel ein Element in einer Liste der virtuellen; d. h. eine Liste, die keine eigenen Daten verwaltet. Wenn eine Anwendung ein Automatisierungselement für eine virtualisierte Element abruft, mithilfe der <xref:System.Windows.Automation.ItemContainerPattern.FindItemByProperty%2A> , der Anbieter möglicherweise Methodenrückgabewert ein Platzhalterelement, das implementiert die <xref:System.Windows.Automation.Provider.IVirtualizedItemProvider> Schnittstelle. Die Implementierung der <xref:System.Windows.Automation.Provider.IVirtualizedItemProvider.Realize%2A> Methodenrückgabe ein vollständigen Verweises mit Benutzeroberflächenautomatisierungs-Element.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Realize">
+      <MemberSignature Language="C#" Value="public void Realize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Realize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IVirtualizedItemProvider.Realize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass die virtuelle Element vollständig zugegriffen werden kann, wie ein Benutzeroberflächenautomatisierungs-Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Element aus einer Liste der virtuellen abgerufen wird, ist es nur ein Platzhalter. Verwenden Sie diese Methode in eine vollständige Referenz der Benutzeroberflächenautomatisierungs-Element zu konvertieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

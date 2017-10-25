@@ -1,0 +1,141 @@
+<Type Name="ComponentGuaranteesOptions" FullName="System.Runtime.Versioning.ComponentGuaranteesOptions">
+  <TypeSignature Language="C#" Value="public enum ComponentGuaranteesOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ComponentGuaranteesOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Versioning.ComponentGuaranteesOptions" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt die Kompatibilitätsgarantie einer Komponente, Typ oder Typmember, die mehrere Versionen umfassen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Versioning.ComponentGuaranteesOptions> Enumeration wird verwendet, durch die <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute> Klasse, um den Grad an Kompatibilität anzugeben, die für eine Komponente oder eine Klassenbibliothek garantiert wird, die mehrere Versionen umfasst. Exchange stellt die stärkste Kompatibilitätsgarantie, gefolgt von stabil und SideBySide bereit. None wird keine Kompatibilität versionsübergreifende.  
+  
+ Eine detaillierte Erläuterung der Bedeutung der einzelnen Garantie, finden Sie unter der <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute> Thema.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Exchange">
+      <MemberSignature Language="C#" Value="Exchange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ComponentGuaranteesOptions Exchange = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ComponentGuaranteesOptions.Exchange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ComponentGuaranteesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Entwickler verspricht mit mehreren Versionen von Exchange-Kompatibilität für den Typ an. Consumer des Typs erwarten Kompatibilität können in zukünftigen Versionen und können den Typ in allen Schnittstellen verwenden. Versionsprobleme können nicht durch die Ausführung von Seite-an-Seite behoben werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ComponentGuaranteesOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ComponentGuaranteesOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ComponentGuaranteesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Entwickler ist keine versionsübergreifende Kompatibilität. Consumer der Komponente, Typ oder Member können erwarten, dass zukünftige Versionen der vorhandenen Clients zu unterbrechen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SideBySide">
+      <MemberSignature Language="C#" Value="SideBySide" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ComponentGuaranteesOptions SideBySide = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ComponentGuaranteesOptions.SideBySide" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ComponentGuaranteesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Komponente wurde getestet, um arbeiten, wenn mehr als eine Version der Assembly in der gleichen Anwendungsdomäne geladen werden. Zukünftige Versionen können die Kompatibilität aufgehoben. Wenn solche Änderungen vorgenommen werden, die alte Version wird nicht geändert, jedoch weiterhin zusammen mit der neuen Version vorhanden ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stable">
+      <MemberSignature Language="C#" Value="Stable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ComponentGuaranteesOptions Stable = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ComponentGuaranteesOptions.Stable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ComponentGuaranteesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Entwickler verspricht stabile Kompatibilität zwischen Versionen. Consumer des Typs können davon ausgehen, dass zukünftige Versionen der vorhandenen Clients nicht unterbrochen werden. Allerdings kann stimmen die Namen und der Client den Typ nicht in den Schnittstellen verwendet wurde, Seite-an-Seite-Ausführung das Problem beheben.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

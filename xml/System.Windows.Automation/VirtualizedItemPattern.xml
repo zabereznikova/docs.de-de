@@ -1,0 +1,63 @@
+<Type Name="VirtualizedItemPattern" FullName="System.Windows.Automation.VirtualizedItemPattern">
+  <TypeSignature Language="C#" Value="public class VirtualizedItemPattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VirtualizedItemPattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.VirtualizedItemPattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Elemente in Containern, die virtualisiert werden und als Benutzeroberflächenautomatisierungs-Elemente vollständig zugänglich gemacht werden müssen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.VirtualizedItemPattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das <see cref="T:System.Windows.Automation.VirtualizedItemPattern" />-Steuerelementmuster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.VirtualizedItemPatternIdentifiers>.  
+  
+ Der Musterbezeichner wird an Methoden übergeben, z. B. <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>, zum Abrufen der Steuerelementmuster aus dem angegebenen <xref:System.Windows.Automation.AutomationElement>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Realize">
+      <MemberSignature Language="C#" Value="public void Realize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Realize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.VirtualizedItemPattern.Realize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass die virtuelle Element vollständig zugegriffen werden kann, wie ein Benutzeroberflächenautomatisierungs-Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

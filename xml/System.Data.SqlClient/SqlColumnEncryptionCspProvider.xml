@@ -1,0 +1,110 @@
+<Type Name="SqlColumnEncryptionCspProvider" FullName="System.Data.SqlClient.SqlColumnEncryptionCspProvider">
+  <TypeSignature Language="C#" Value="public class SqlColumnEncryptionCspProvider : System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlColumnEncryptionCspProvider extends System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlColumnEncryptionCspProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Implementierung des CMK-Store-Anbieters für die Verwendung von Microsoft CAPI-basierten Cryptographic Service Provider (CSP) mit [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ermöglicht das Speichern von Always Encrypted-Spalte Hauptschlüssel Schlüssel in einem Speicher, basierten Sicherheitsmodul (HSM), die von der Microsoft CAPI unterstützt Cryptographic Service Provider (CSP) wie z. B. ein Hardware.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlColumnEncryptionCspProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlColumnEncryptionCspProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.SqlClient.SqlColumnEncryptionCspProvider" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptColumnEncryptionKey">
+      <MemberSignature Language="C#" Value="public override byte[] DecryptColumnEncryptionKey (string masterKeyPath, string encryptionAlgorithm, byte[] encryptedColumnEncryptionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] DecryptColumnEncryptionKey(string masterKeyPath, string encryptionAlgorithm, unsigned int8[] encryptedColumnEncryptionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlColumnEncryptionCspProvider.DecryptColumnEncryptionKey(System.String,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="masterKeyPath" Type="System.String" />
+        <Parameter Name="encryptionAlgorithm" Type="System.String" />
+        <Parameter Name="encryptedColumnEncryptionKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="masterKeyPath">Der Pfad des Hauptschlüssels.</param>
+        <param name="encryptionAlgorithm">Der Verschlüsselungsalgorithmus.</param>
+        <param name="encryptedColumnEncryptionKey">Der verschlüsselte Spaltenverschlüsselungsschlüssel.</param>
+        <summary>Entschlüsselt den angegebenen verschlüsselten Wert mit einem asymmetrischen Schlüssel, der durch den Schlüsselpfad und den Algorithmus angegeben ist. Der Schlüsselpfad liegt im Format „[Anbietername]/Schlüssel-ID“ vor und muss ein asymmetrischer Schlüssel sein, der im angegebenen Kryptografiedienstanbieter gespeichert ist. Der gültige Algorithmus zum Verschlüsseln und Entschlüsseln des CEK (Content Encryption Key) ist „RSA_OAEP“.</summary>
+        <returns>Der entschlüsselte Spaltenverschlüsselungsschlüssel.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptColumnEncryptionKey">
+      <MemberSignature Language="C#" Value="public override byte[] EncryptColumnEncryptionKey (string masterKeyPath, string encryptionAlgorithm, byte[] columnEncryptionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] EncryptColumnEncryptionKey(string masterKeyPath, string encryptionAlgorithm, unsigned int8[] columnEncryptionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlColumnEncryptionCspProvider.EncryptColumnEncryptionKey(System.String,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="masterKeyPath" Type="System.String" />
+        <Parameter Name="encryptionAlgorithm" Type="System.String" />
+        <Parameter Name="columnEncryptionKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="masterKeyPath">Der Pfad des Hauptschlüssels.</param>
+        <param name="encryptionAlgorithm">Der Verschlüsselungsalgorithmus.</param>
+        <param name="columnEncryptionKey">Der verschlüsselte Spaltenverschlüsselungsschlüssel.</param>
+        <summary>Verschlüsselt den Verschlüsselungsschlüssel der Nur-Text-Spalte mithilfe eines asymmetrischen Schlüssels, der durch den Schlüsselpfad und den angegebenen Algorithmus festgelegt wird. Der Schlüsselpfad liegt im Format „[Anbietername]/Schlüssel-ID“ vor und muss ein asymmetrischer Schlüssel sein, der im angegebenen Kryptografiedienstanbieter gespeichert ist. Der gültige Algorithmus zum Verschlüsseln und Entschlüsseln des CEK (Content Encryption Key) ist „RSA_OAEP“.</summary>
+        <returns>Der verschlüsselte Spaltenverschlüsselungsschlüssel.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public const string ProviderName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ProviderName" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlColumnEncryptionCspProvider.ProviderName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine konstante Zeichenfolge für den Anbieternamen „MSSQL_CSP_PROVIDER“.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

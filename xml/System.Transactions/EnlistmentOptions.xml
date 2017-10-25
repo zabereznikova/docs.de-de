@@ -1,0 +1,95 @@
+<Type Name="EnlistmentOptions" FullName="System.Transactions.EnlistmentOptions">
+  <TypeSignature Language="C#" Value="public enum EnlistmentOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EnlistmentOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.EnlistmentOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bestimmt, ob das Objekt während der Vorbereitungsphase eingetragen werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird übergeben, in der <xref:System.Transactions.Transaction.EnlistVolatile%2A> und <xref:System.Transactions.Transaction.EnlistDurable%2A> und Methoden, um dem Transaktions-Manager, ob der Ressourcen-Manager beim Erstellen einer anderen Eintragung während der Vorbereitungsphase muss zu benachrichtigen. Weitere Informationen zum eintragen, finden Sie unter [Ressourcen als Teilnehmer in einer Transaktion eintragen](http://msdn.microsoft.com/en-us/7bf66ce7-4190-4910-89d7-df4ad43e9f31).  
+  
+ Wenn EnlistDuringPrepareRequired während der Eintragung angegeben wird, gibt der Ressourcen-Manager, dass eine Verbindung eine Prepare-Benachrichtigung erhalten, während für die Transaktion weiterhin neue Eintragungen zulässig sind. Ein Ressourcen-Manager, die als Cache für eine andere permanente Ressource, z. B. eine Back-End-Datenbank fungiert, verwenden diese Option während der Eintragung wahrscheinlich. Wenn die Zwischenspeichern Ressource die Prepare-Benachrichtigung erhält, werden dessen Inhalt auf die Ressource dauerhaft übertragen. Trägt sich auf diese Weise die dauerhafte Ressource für die Transaktion wird ein Teilnehmer die 2-Phase Commit ausgeführt (2PC)-Protokolls. Bevor Sie in diesem Fall wurde nur das Zwischenspeichern Ressource (nicht die permanente Ressource) eingetragen.  
+  
+ Wenn keine Angabe erfolgt, gibt die Eintragung, die keine Prepare-Benachrichtigung empfangen wird, bis es zu spät zum Erstellen von neuer Eintragungen in 2PC ist an. In unserem oben beschriebene Szenario erhält eine Zwischenspeichern Ressource gibt diese Option beim eintragen und versucht, den Cache zu leeren, während der Benachrichtigung vorbereiten die dauerhafte Ressource eine Ausnahme wenn zum eintragen versucht, da es zu spät ist.  
+  
+ Keine sollte als Standard verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnlistDuringPrepareRequired">
+      <MemberSignature Language="C#" Value="EnlistDuringPrepareRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.EnlistmentOptions EnlistDuringPrepareRequired = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.EnlistmentOptions.EnlistDuringPrepareRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.EnlistmentOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Objekt muss während der Anfangsphase des Prozesses Verpflichtung eingetragen werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.EnlistmentOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.EnlistmentOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.EnlistmentOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Objekt ist kein Eintragung während der ersten Phase des Prozesses Verpflichtung erforderlich.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

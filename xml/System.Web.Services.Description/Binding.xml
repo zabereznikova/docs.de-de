@@ -1,0 +1,189 @@
+<Type Name="Binding" FullName="System.Web.Services.Description.Binding">
+  <TypeSignature Language="C#" Value="public sealed class Binding : System.Web.Services.Description.NamedItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Binding extends System.Web.Services.Description.NamedItem" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.Binding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.NamedItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtensionPoint("Extensions")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den konkreten Datenformat und Protokolle, die in der XML-Webdienst verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Binding` Klasse entspricht, auf die WSDL Web Services Description Language () `<binding>` Element eingeschlossen wird, von der Stammzertifizierungsstelle `<definitions>` Element. Weitere Informationen zu WDSL finden Sie in der Spezifikation unter http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt ein typisches Einsatzgebiet von der `Binding` Klasse.  
+  
+ [!code-cpp[BindingCollectionsample1#3](~/samples/snippets/cpp/VS_Snippets_Remoting/BindingCollectionsample1/CPP/bindingcollectionsample1.cpp#3)]
+ [!code-csharp[BindingCollectionsample1#3](~/samples/snippets/csharp/VS_Snippets_Remoting/BindingCollectionsample1/CS/bindingcollectionsample1.cs#3)]
+ [!code-vb[BindingCollectionsample1#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/BindingCollectionsample1/VB/bindingcollectionsample1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.Binding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Description.Binding" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public override System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.Binding.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Erweiterbarkeitselemente in der XML-Webdienst verwendet.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> -Objekt, das die Auflistung der Erweiterbarkeitselemente verwendet in der XML-Webdienst enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt ein typisches Einsatzgebiet von der `Extensions` Eigenschaft.  
+  
+ [!code-cpp[BindingCollectionSample2#4](~/samples/snippets/cpp/VS_Snippets_Remoting/BindingCollectionSample2/CPP/bindingcollectionsample2.cpp#4)]
+ [!code-csharp[BindingCollectionSample2#4](~/samples/snippets/csharp/VS_Snippets_Remoting/BindingCollectionSample2/CS/bindingcollectionsample2.cs#4)]
+ [!code-vb[BindingCollectionSample2#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/BindingCollectionSample2/VB/bindingcollectionsample2.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operations">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.OperationBindingCollection Operations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.OperationBindingCollection Operations" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.Binding.Operations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("operation")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OperationBindingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Spezifikationen für Datenformate und Nachrichtenprotokolle verwendet in der Aktion, die von der XML-Webdienst unterstützt.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Description.OperationBindingCollection" /> -Objekt, das die Auflistung der Spezifikationen für Datenformate und verwendet in der Aktion, die von der XML-Webdienst unterstützt Nachrichtenprotokolle enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt ein typisches Einsatzgebiet von der `Operations` Eigenschaft.  
+  
+ [!code-cpp[BindingCollectionSample2#5](~/samples/snippets/cpp/VS_Snippets_Remoting/BindingCollectionSample2/CPP/bindingcollectionsample2.cpp#5)]
+ [!code-csharp[BindingCollectionSample2#5](~/samples/snippets/csharp/VS_Snippets_Remoting/BindingCollectionSample2/CS/bindingcollectionsample2.cs#5)]
+ [!code-vb[BindingCollectionSample2#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/BindingCollectionSample2/VB/bindingcollectionsample2.vb#5)]  
+[!code-cpp[BindingCollectionSample2#8](~/samples/snippets/cpp/VS_Snippets_Remoting/BindingCollectionSample2/CPP/bindingcollectionsample2.cpp#8)]
+[!code-csharp[BindingCollectionSample2#8](~/samples/snippets/csharp/VS_Snippets_Remoting/BindingCollectionSample2/CS/bindingcollectionsample2.cs#8)]
+[!code-vb[BindingCollectionSample2#8](~/samples/snippets/visualbasic/VS_Snippets_Remoting/BindingCollectionSample2/VB/bindingcollectionsample2.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceDescription">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescription ServiceDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescription ServiceDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.Binding.ServiceDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Services.Description.ServiceDescription" /> von denen die <see cref="T:System.Web.Services.Description.Binding" /> Mitglied ist.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Description.ServiceDescription" /> von denen die <see cref="T:System.Web.Services.Description.Binding" /> Mitglied ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.Binding.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("type")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der den Namespace-qualifizierten Namen des repräsentiert die <see cref="T:System.Web.Services.Description.PortType" /> mit dem der <see langword="Binding" /> zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.Xml.XmlQualifiedName" /> von der <see cref="T:System.Web.Services.Description.PortType" /> mit dem der <see langword="Binding" /> zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist eine leere Zeichenfolge („“).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der `Type` Eigenschaft.  
+  
+ [!code-cpp[BindingCollectionSample2#3](~/samples/snippets/cpp/VS_Snippets_Remoting/BindingCollectionSample2/CPP/bindingcollectionsample2.cpp#3)]
+ [!code-csharp[BindingCollectionSample2#3](~/samples/snippets/csharp/VS_Snippets_Remoting/BindingCollectionSample2/CS/bindingcollectionsample2.cs#3)]
+ [!code-vb[BindingCollectionSample2#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/BindingCollectionSample2/VB/bindingcollectionsample2.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

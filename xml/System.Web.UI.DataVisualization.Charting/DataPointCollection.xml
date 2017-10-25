@@ -1,0 +1,822 @@
+<Type Name="DataPointCollection" FullName="System.Web.UI.DataVisualization.Charting.DataPointCollection">
+  <TypeSignature Language="C#" Value="public class DataPointCollection : System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.DataPoint&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataPointCollection extends System.Web.UI.DataVisualization.Charting.ChartElementCollection`1&lt;class System.Web.UI.DataVisualization.Charting.DataPoint&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.DataPointCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.DataPoint&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Web.UI.DataVisualization.Charting.DataPoint</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection> Klasse stellt eine Auflistung von <xref:System.Web.UI.DataVisualization.Charting.DataPoint> Objekte, die wiederum die Datenpunkte darstellen, die Teil einer <xref:System.Web.UI.DataVisualization.Charting.Series> Objekt.  
+  
+ Diese Auflistungsklasse wird als implementiert die <xref:System.Web.UI.DataVisualization.Charting.Series.Points%2A> Eigenschaft von einem <xref:System.Web.UI.DataVisualization.Charting.Series> Objekt.  
+  
+ <xref:System.Web.UI.DataVisualization.Charting.DataPoint>Objekte in der Auflistung mit den jeweiligen X-Wert und Y eingefügt oder angefügt werden können-Werte, die bereits als Parameter angegeben. Beachten Sie, dass sie auch automatisch hinzugefügt werden, wenn eine Reihe an eine mit einer Datenquelle gebunden ist die <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection.DataBindY%2A> oder <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection.DataBindXY%2A> Methode.  
+  
+ Datenpunkte werden in der Reihenfolge, die sie in dieser Auflistung nur auftreten, wenn der Reihe, das die Auflistung gehört hat seine <xref:System.Web.UI.DataVisualization.Charting.Series.IsXValueIndexed%2A> -Eigenschaftensatz auf `true` (der Standardwert ist `false`), oder wenn alle X-Werte für alle Datenpunkte 0 (null) sind. Andernfalls werden Datenpunkte mit ihren X-Werten.  
+  
+ Datenpunkte befindet, und bearbeitet, können basierend auf maximale, minimale oder angegebenen X- oder Y-Werte mit den überladenen `FindMaxValue`, `FindMinValue` oder `FindValue` Methoden bzw..  
+  
+ Die [DataPointCollection.Count](<xref:System.Collections.ObjectModel.Collection%601.Count%2A>) -Eigenschaft gibt die Gesamtzahl der Elemente in der Auflistung und wird häufig verwendet werden, um die Obergrenze für die Sammlung zu suchen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DataPoint Add (params double[] y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.DataPoint Add(float64[] y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.Add(System.Double[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="y" Type="System.Double[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="y">Der Y-Wert.</param>
+        <summary>Fügt ein neues <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt der Auflistung und legt dessen Y-Wert.</summary>
+        <returns>Das neue <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddXY">
+      <MemberSignature Language="C#" Value="public int AddXY (double xValue, double yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 AddXY(float64 xValue, float64 yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.AddXY(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xValue" Type="System.Double" />
+        <Parameter Name="yValue" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="xValue">X-Wert des Datenpunkts.</param>
+        <param name="yValue">Y-Wert des Datenpunkts.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> an das Ende der Auflistung mit dem angegebenen Objekt-X und Y-Wert.</summary>
+        <returns>Ein <see langword="integer" /> , den nullbasierten Index, an das Element, in der Sammlung von Punkt eingefügt wurde, darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt <xref:System.Web.UI.DataVisualization.Charting.DataPoint> -Objekt an die <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection>; das Objekt immer am Ende der Auflistung hinzugefügt wird.  
+  
+ Verwenden der <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection.AddXY%2A> -methodenüberladung, wenn die Datenpunkte mehr als einen Y-Wert erforderlich ist.  
+  
+ Wenn die Datenpunkte einen X-Wert nicht benötigen – d. h., wenn für die Erstellung nicht-Punktdiagramme – verwenden Sie die <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection.AddY%2A> Methode stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddXY">
+      <MemberSignature Language="C#" Value="public int AddXY (object xValue, params object[] yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 AddXY(object xValue, object[] yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.AddXY(System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xValue" Type="System.Object" />
+        <Parameter Name="yValue" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="xValue">Die X-Wert des Datenpunkts.</param>
+        <param name="yValue">Eine oder mehrere durch Trennzeichen getrennten Werten, die darstellen, die Y-Werte des Datenpunkts.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> -Objekt am Ende der Auflistung mit dem angegebenen X-Wert und Y-Werte.</summary>
+        <returns>Ein <see langword="integer" /> Wert, der den nullbasierten Index darstellt, in dem das Element in die Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt einer <xref:System.Web.UI.DataVisualization.Charting.DataPoint> -Objekt an die <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection>; das Datenpunkt wird immer an das Ende der Auflistung hinzugefügt.  
+  
+ Sie müssen mindestens einen (1) Y-Wert angeben, andernfalls wird eine Ausnahme ausgelöst. Diese Methode überprüft auch die <xref:System.Web.UI.DataVisualization.Charting.Series.YValueType%2A> Eigenschaft von der <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection> -Objekt, dass diese Daten zu gehört; Wenn zu viele Y-Werte angegeben sind, wird eine Ausnahme ausgelöst werden.  
+  
+ In der Reihenfolge für <xref:System.DateTime> Formatierung, um die Auswirkungen haben, ist ein Wert muss eine <xref:System.DateTime> Objekt.  
+  
+ Wenn die Datenpunkte einen X-Wert nicht benötigen – d. h., wenn für die Erstellung nicht-Punktdiagramme – verwenden Sie die <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection.AddY%2A> Methode stattdessen  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddY">
+      <MemberSignature Language="C#" Value="public int AddY (double yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 AddY(float64 yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.AddY(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="yValue" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="yValue">Der Y-Wert des Datenpunkts.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt an das Ende der Auflistung mit dem angegebenen Y-Wert.</summary>
+        <returns>Ein <see langword="integer" /> , den nullbasierten Index, an das Element, in der Sammlung von Punkt eingefügt wurde, darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt einer <xref:System.Web.UI.DataVisualization.Charting.DataPoint> -Objekt an die <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection>; das Datenpunkt wird immer an das Ende der Auflistung hinzugefügt.  
+  
+ Verwenden Sie die Definition der Methode, die ein Array von Y-Werte zulässt, wenn die Datenpunkte mehr als einen Y-Wert erforderlich ist.  
+  
+ Wenn die Datenpunkte einen X-Wert benötigen – d. h., wenn für die Erstellung Punktdiagramme – verwenden Sie eine der der `AddXY` Methoden stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddY">
+      <MemberSignature Language="C#" Value="public int AddY (params object[] yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 AddY(object[] yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.AddY(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="yValue" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="yValue">Eine durch Trennzeichen getrennte Liste der Y-Werte, der die <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt der Auflistung hinzugefügt.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt an das Ende der Auflistung mit den angegebenen Y-Werte.</summary>
+        <returns>Eine <see langword="integer" /> , die die Position im nullbasierten Index, in dem das Element, in der Auflistung eingefügt wurde, darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt einer <xref:System.Web.UI.DataVisualization.Charting.DataPoint> -Objekt an die <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection>; das Datenpunkt wird immer an das Ende der Auflistung hinzugefügt.  
+  
+ Sie müssen mindestens einen (1) Y-Wert angeben, andernfalls wird eine Ausnahme ausgelöst. Diese Methode überprüft auch die <xref:System.Web.UI.DataVisualization.Charting.Series.ChartType%2A> Eigenschaft von der <xref:System.Web.UI.DataVisualization.Charting.DataPoint> Objekt diesen Daten gehört, und wenn zu viele Y-Werte angegeben sind, wird eine Ausnahme ausgelöst werden.  
+  
+ Der X-Wert wird immer auf Null (0) festgelegt werden, was zu nicht-Punktdiagramme. Wenn Sie die Datenpunkte einen X-Wert verwenden möchten, rufen Sie eine von der `AddXY` Methoden stattdessen.  
+  
+ In der Reihenfolge für <xref:System.DateTime> Formatierung, um die Auswirkungen haben, ist ein Wert muss eine <xref:System.DateTime> Objekt.  
+  
+ Finden Sie in der folgenden Optionen für eine vollständige Liste der gültigen .NET Framework-Typen, die die Typparameter des Objekts verwendet werden kann:  
+  
+||||  
+|-|-|-|  
+|Zeichenfolge|DateTime|Double|  
+|Decimal|Single|Int32|  
+|UInt32|Int64|UInt64|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="public void DataBind (System.Collections.IEnumerable dataSource, string xField, string yFields, string otherFields);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBind(class System.Collections.IEnumerable dataSource, string xField, string yFields, string otherFields) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.DataBind(System.Collections.IEnumerable,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+        <Parameter Name="xField" Type="System.String" />
+        <Parameter Name="yFields" Type="System.String" />
+        <Parameter Name="otherFields" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Die Datenquelle</param>
+        <param name="xField">Der Name des Felds für X-Werte.</param>
+        <param name="yFields">Eine durch Trennzeichen getrennte Namen der Felder für Y-Werte.</param>
+        <param name="otherFields">Andere Datenpunkteigenschaften mit Bindungsregeln im Format: Punkteigenschaft = Feld [{Format}] [, Punkteigenschaft = Feld [{Format}]].  
+  
+ Zum Beispiel: "QuickInfo = Price {C1} Url angegebenen" Websitename "=".</param>
+        <summary>Daten bindet den X-Wert, Y-Werte und die Werte der Datenpunkte an, z. B. QuickInfo oder LabelStyle, mit der Datenquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Datenquelle kann der DataReader Ole (SQL), einer "DataView", Datasets, einer DataTable oder einer DataRow sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindXY">
+      <MemberSignature Language="C#" Value="public void DataBindXY (System.Collections.IEnumerable xValue, params System.Collections.IEnumerable[] yValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBindXY(class System.Collections.IEnumerable xValue, class System.Collections.IEnumerable[] yValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.DataBindXY(System.Collections.IEnumerable,System.Collections.IEnumerable[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xValue" Type="System.Collections.IEnumerable" />
+        <Parameter Name="yValues" Type="System.Collections.IEnumerable[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="xValue">Die Datenquelle, die die X-Werte für die Datenpunkte geliefert wird.</param>
+        <param name="yValues">Eine durch Trennzeichen getrennte Liste der Y-Werte, der die <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt der Auflistung hinzugefügt.</param>
+        <summary>Daten werden die X-Wert und die Y-Werte, der die Auflistung von Datenpunkten zu den ersten Spalten einer angegebenen Datenquelle bindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bindet alle <xref:System.Web.UI.DataVisualization.Charting.DataPoint> Objekte in einem <xref:System.Web.UI.DataVisualization.Charting.Series>, und verwendet separate Datenquellen für die X- und Y-Werte.  
+  
+ Beachten Sie, dass die erste Spalte in der Datenquelle verwendet werden, wenn die Datenbindung zu einer Tabelle. Verwenden Sie zum Binden an eine andere Spalte als die erste Spalte der <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection.DataBindXY%2A> Methode.  
+  
+ Sie können an mehrere Y-Werte binden, indem Sie eine durch Trennzeichen getrennte Liste von bereitstellen <xref:System.Collections.Generic.IEnumerable%601> von Objekten für die `yValues` Parameter.  
+  
+ Wenn Y-Werte werden nicht von der Datenquelle bereitgestellt, oder wenn die falsche Anzahl von Werten bereitgestellt werden, wird eine Ausnahme ausgelöst.  
+  
+ Wenn Sie nicht möchten, Punktdiagramme, angezeigt in der X- und Y-Werte verwendet werden, verwenden Sie eines der `DataBindY` Methoden stattdessen.  
+  
+ Im folgenden finden eine Liste von Objekten, die Sie als Datenquellenparameter verwenden können:  
+  
+-   DataView  
+  
+-   Datenreader (SQL, OleDB)  
+  
+-   Arrays  
+  
+-   Listen  
+  
+-   Alle anderen Objekte verwendet werden, die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindXY">
+      <MemberSignature Language="C#" Value="public void DataBindXY (System.Collections.IEnumerable xValue, string xField, System.Collections.IEnumerable yValue, string yFields);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBindXY(class System.Collections.IEnumerable xValue, string xField, class System.Collections.IEnumerable yValue, string yFields) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.DataBindXY(System.Collections.IEnumerable,System.String,System.Collections.IEnumerable,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xValue" Type="System.Collections.IEnumerable" />
+        <Parameter Name="xField" Type="System.String" />
+        <Parameter Name="yValue" Type="System.Collections.IEnumerable" />
+        <Parameter Name="yFields" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xValue">Die Datenquelle, die die X-Werte für die Datenpunkte geliefert wird.</param>
+        <param name="xField">Der Name der Spalte, die die X-Werte für die Datenpunkte geliefert wird.</param>
+        <param name="yValue">Eine durch Trennzeichen getrennte Liste der Y-Werte, der die <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt der Auflistung hinzugefügt.</param>
+        <param name="yFields">Eine durch Trennzeichen getrennte Liste von Spaltennamen, die die Y-Werte für die Datenpunkte geliefert wird. Beachten Sie, dass ein Komma als Teil eines Spaltennamens, eingebettet werden kann, mit einem doppelten Komma.</param>
+        <summary>Daten werden die X-Wert und die Y-Werte der Datenpunkte in der Auflistung den angegebenen Spalten der angegebenen Datenquellen gebunden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Daten werden die X-Wert und die Y-Werte der Datenpunkte in der Auflistung die angegebene Datenquelle ersten Spalten gebunden.  
+  
+ Sie können an mehrere Y-Werte binden, durch Festlegen der `yFields` Parameter, um mehrere Spaltennamen. Trennen Sie die Spaltennamen durch Kommas.  
+  
+ Wenn Y-Werte werden nicht von der Datenquelle bereitgestellt, oder wenn die falsche Anzahl von Werten bereitgestellt werden, wird eine Ausnahme ausgelöst.  
+  
+ Wenn Sie nicht möchten, Punktdiagramme, angezeigt in der X- und Y-Werte verwendet werden, verwenden Sie eines der `DataBindY` Methoden stattdessen.  
+  
+ Im folgenden finden eine Liste von Objekten, die Sie als Datenquellenparameter verwenden können:  
+  
+-   DataView  
+  
+-   Datenreader (SQL, OleDB)  
+  
+-   Arrays  
+  
+-   Listen  
+  
+-   Alle anderen Objekte verwendet werden, die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindY">
+      <MemberSignature Language="C#" Value="public void DataBindY (params System.Collections.IEnumerable[] yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBindY(class System.Collections.IEnumerable[] yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.DataBindY(System.Collections.IEnumerable[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="yValue" Type="System.Collections.IEnumerable[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="yValue">Eine oder mehrere durch Trennzeichen getrennte <see cref="T:System.Collections.Generic.IEnumerable`1" /> Datenquellen.</param>
+        <summary>Daten bindet die Y-Werte der Daten für die Auflistung verweist, auf die erste Spalte der angegebenen Datenquellen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bindet die Y-Werte der Datenpunkte in der Auflistung mit der ersten Spalte der angegebenen Datenquellen.  
+  
+ Um Y-Werte an eine Datenquellenspalte zu binden, die nicht die erste Spalte ist, verwenden die <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection.DataBindY%2A> Methode.  
+  
+ Sie können mehrere Y-Werte binden, indem Sie mehrere Datenquellen angeben, mit der `yValue` Parameter. Beachten Sie, dass die erste Spalte in jeder Datenquelle für jeden Datenpunkt aufeinander folgenden Y-Werte verwendet werden soll. Z. B. die erste Spalte der ersten <xref:System.Collections.Generic.IEnumerable%601> -Datenquelle wird gebunden werden, um den ersten Y-Wert von Datenpunkten, die erste Spalte der zweiten <xref:System.Collections.Generic.IEnumerable%601> Datenquelle wird an den zweiten Y-Wert von Datenpunkten gebunden werden und so weiter.  
+  
+ Wenn Y-Werte werden nicht von der Datenquelle bereitgestellt, oder wenn die falsche Anzahl von Werten bereitgestellt werden, wird eine Ausnahme ausgelöst.  
+  
+ Im folgenden finden eine Liste von Objekten, die Sie als Datenquellenparameter verwenden können:  
+  
+ Im folgenden finden eine Liste von Objekten, die Sie als Datenquelle verwenden können:  
+  
+-   DataView  
+  
+-   Datenreader (SQL, OleDB)  
+  
+-   Arrays  
+  
+-   Listen  
+  
+-   Alle anderen Objekte verwendet werden, die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindY">
+      <MemberSignature Language="C#" Value="public void DataBindY (System.Collections.IEnumerable yValue, string yFields);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBindY(class System.Collections.IEnumerable yValue, string yFields) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.DataBindY(System.Collections.IEnumerable,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="yValue" Type="System.Collections.IEnumerable" />
+        <Parameter Name="yFields" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="yValue">Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> Datenquellenobjekt, die die Y-Werte.</param>
+        <param name="yFields">Die Datenquellen-Felder für die Bindung von Datenpunkt(en). Beachten Sie, dass ein Komma als Teil eines Spaltennamens, eingebettet werden kann, mit einem doppelten Komma.</param>
+        <summary>Daten bindet die Y-Werte der Datenpunkte an die angegebenen Spalten der angegebenen Datenquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bindet die Y-Werte der Datenpunkte in der Auflistung den angegebenen Feldern (s) der Datenquelle an.  
+  
+ Um nur das erste Feld in einer Datenquelle zu binden, verwenden Sie die <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection.DataBindY%2A> Methode.  
+  
+ Sie können auf mehrere Felder binden, durch Festlegen der `yFields` Parameter, um mehrere Feldnamen, die durch Kommas voneinander getrennt sind. Beachten Sie, dass das erste Feld für den Datenpunkt ersten Y-Wert verwendet werden, das zweite benannte Feld für den Datenpunkt zweiten Y-Wert zu verwendende usw. ein.  
+  
+ Wenn Y-Werte werden nicht von der Datenquelle bereitgestellt, oder die falsche Anzahl von Werten bereitgestellt werden, wird eine Ausnahme ausgelöst.  
+  
+ Im folgenden finden eine Liste von Objekten, die Sie als Datenquelle verwenden können:  
+  
+-   DataView  
+  
+-   Datenreader (SQL, OleDB)  
+  
+-   Arrays  
+  
+-   Listen  
+  
+-   Alle anderen Objekte verwendet werden, die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllByValue">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Web.UI.DataVisualization.Charting.DataPoint&gt; FindAllByValue (double valueToFind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.DataVisualization.Charting.DataPoint&gt; FindAllByValue(float64 valueToFind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.FindAllByValue(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.DataVisualization.Charting.DataPoint&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToFind" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="valueToFind">Der zu suchenden Wert des Datenpunkts.</param>
+        <summary>Suchen Sie alle Datenpunkte, die gleich dem angegebenen Wert sind.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> Schnittstelle, die den Enumerator der übereinstimmenden Datenpunkte darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllByValue">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Web.UI.DataVisualization.Charting.DataPoint&gt; FindAllByValue (double valueToFind, string useValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.DataVisualization.Charting.DataPoint&gt; FindAllByValue(float64 valueToFind, string useValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.FindAllByValue(System.Double,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Web.UI.DataVisualization.Charting.DataPointCollection/&lt;FindAllByValue&gt;d__23))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.DataVisualization.Charting.DataPoint&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToFind" Type="System.Double" />
+        <Parameter Name="useValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="valueToFind">Der zu suchenden Wert des Datenpunkts.</param>
+        <param name="useValue">Der Datenpunktwert (X, Y1, Y2,...) verwenden.</param>
+        <summary>Sucht alle Datenpunkte, die gleich dem angegebenen Wert sind.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> Schnittstelle, die den Enumerator der übereinstimmenden Datenpunkte darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllByValue">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Web.UI.DataVisualization.Charting.DataPoint&gt; FindAllByValue (double valueToFind, string useValue, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.DataVisualization.Charting.DataPoint&gt; FindAllByValue(float64 valueToFind, string useValue, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.FindAllByValue(System.Double,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Web.UI.DataVisualization.Charting.DataPointCollection/&lt;FindAllByValue&gt;d__22))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.DataVisualization.Charting.DataPoint&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToFind" Type="System.Double" />
+        <Parameter Name="useValue" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="valueToFind">Der zu suchenden Wert des Datenpunkts.</param>
+        <param name="useValue">Der Datenpunktwert (X, Y1, Y2,...) verwenden.</param>
+        <param name="startIndex">Die Indexposition des Datenpunkts aus Suche beginnen soll.</param>
+        <summary>Sucht alle Datenpunkte, die auf den angegebenen Wert, beginnend mit der angegebenen Indexposition gleich sind.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> Schnittstelle, die den Enumerator der übereinstimmenden Datenpunkte darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByValue">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DataPoint FindByValue (double valueToFind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.DataPoint FindByValue(float64 valueToFind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.FindByValue(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToFind" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="valueToFind">Der zu suchenden Wert des Datenpunkts.</param>
+        <summary>Sucht nach den ersten Datenpunkt, der gleich dem angegebenen Wert ist.</summary>
+        <returns>Die <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> , die mit den angegebenen Wert übereinstimmt oder <see langword="null" /> , wenn keine Übereinstimmung vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByValue">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DataPoint FindByValue (double valueToFind, string useValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.DataPoint FindByValue(float64 valueToFind, string useValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.FindByValue(System.Double,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToFind" Type="System.Double" />
+        <Parameter Name="useValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="valueToFind">Der zu suchenden Wert des Datenpunkts.</param>
+        <param name="useValue">Der Datenpunktwert (X, Y1, Y2,...) verwenden.</param>
+        <summary>Sucht nach den ersten Datenpunkt, der gleich dem angegebenen Wert ist.</summary>
+        <returns>Die <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> , die mit den angegebenen Wert übereinstimmt oder <see langword="null" /> , wenn keine Übereinstimmung vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByValue">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DataPoint FindByValue (double valueToFind, string useValue, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.DataPoint FindByValue(float64 valueToFind, string useValue, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.FindByValue(System.Double,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToFind" Type="System.Double" />
+        <Parameter Name="useValue" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="valueToFind">Der zu suchenden Wert des Datenpunkts.</param>
+        <param name="useValue">Der Datenpunktwert (X, Y1, Y2,...) verwenden.</param>
+        <param name="startIndex">Die Indexposition des Datenpunkts aus Suche beginnen soll.</param>
+        <summary>Sucht nach den ersten Datenpunkt, der gleich dem angegebenen Wert, beginnend mit der angegebenen Indexposition ein.</summary>
+        <returns>Die <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> , die mit den angegebenen Wert übereinstimmt oder <see langword="null" /> , wenn keine Übereinstimmung vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMaxByValue">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DataPoint FindMaxByValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.DataPoint FindMaxByValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.FindMaxByValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sucht den Datenpunkt mit dem maximalen Wert an.</summary>
+        <returns>Die <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt mit dem maximalen Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMaxByValue">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DataPoint FindMaxByValue (string useValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.DataPoint FindMaxByValue(string useValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.FindMaxByValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="useValue">Der Datenpunktwert (X, Y1, Y2,...) verwenden.</param>
+        <summary>Sucht nach der Datenpunktwert mit dem maximalen Wert.</summary>
+        <returns>Die <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt mit dem maximalen Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMaxByValue">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DataPoint FindMaxByValue (string useValue, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.DataPoint FindMaxByValue(string useValue, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.FindMaxByValue(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useValue" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="useValue">Der Datenpunktwert (X, Y1, Y2,...) verwenden.</param>
+        <param name="startIndex">Die Indexposition des Datenpunkts aus Suche beginnen soll.</param>
+        <summary>Sucht nach der Datenpunkt mit dem maximalen Wert aus der angegebenen Indexposition ab.</summary>
+        <returns>Die <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt mit dem maximalen Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMinByValue">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DataPoint FindMinByValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.DataPoint FindMinByValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.FindMinByValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sucht den Datenpunkt mit dem minimalen Wert an.</summary>
+        <returns>Die <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt mit dem minimalen Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMinByValue">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DataPoint FindMinByValue (string useValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.DataPoint FindMinByValue(string useValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.FindMinByValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="useValue">Der Datenpunktwert (X, Y1, Y2,...) verwenden.</param>
+        <summary>Sucht den Datenpunkt mit dem minimalen Wert an.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt mit dem minimalen Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMinByValue">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DataPoint FindMinByValue (string useValue, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.DataPoint FindMinByValue(string useValue, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.FindMinByValue(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useValue" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="useValue">Der Datenpunktwert (X, Y1, Y2,...) verwenden.</param>
+        <param name="startIndex">Die Indexposition des Datenpunkts aus Suche beginnen soll.</param>
+        <summary>Sucht nach der Datenpunkt mit dem minimalen Wert, beginnend mit der angegebenen Indexposition ein.</summary>
+        <returns>Die <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt mit dem minimalen Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertXY">
+      <MemberSignature Language="C#" Value="public void InsertXY (int index, object xValue, params object[] yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertXY(int32 index, object xValue, object[] yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.InsertXY(System.Int32,System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="xValue" Type="System.Object" />
+        <Parameter Name="yValue" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index, wonach der Datenpunkt eingefügt wird.</param>
+        <param name="xValue">Die X-Wert des Datenpunkts.</param>
+        <param name="yValue">Eine durch Trennzeichen getrennte Liste von Y-Werten des Datenpunkts.</param>
+        <summary>Fügt einen Datenpunkt mit dem angegebenen X-Wert und eine oder mehrere Y-Werte angegeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertY">
+      <MemberSignature Language="C#" Value="public void InsertY (int index, params object[] yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertY(int32 index, object[] yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointCollection.InsertY(System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="yValue" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index, wonach der Datenpunkt eingefügt wird.</param>
+        <param name="yValue">Eine durch Trennzeichen getrennte Liste von Y-Werten des Datenpunkts.</param>
+        <summary>Fügt einen Datenpunkt mit einem oder mehreren angegebenen Y-Werten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

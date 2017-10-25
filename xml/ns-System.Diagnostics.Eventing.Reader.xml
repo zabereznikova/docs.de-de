@@ -1,0 +1,6 @@
+<Namespace Name="System.Diagnostics.Eventing.Reader">
+  <Docs>
+    <summary>Mithilfe des <see cref="N:System.Diagnostics.Eventing.Reader" />-Namespaces können Sie Anwendungen entwickeln, die Ereignisprotokolle lesen und verwalten. Ein Ereignis in einem Ereignisprotokoll enthält Informationen, eine Warnung oder einen Fehler, die von bestimmten Anwendungen, Diensten oder Betriebssystemkomponenten veröffentlicht wurden.  Diese Ereignisse werden von Anwendungen gelesen, die den Computerzustand überwachen, sowie von Anwendungen, die Aktionen ausführen, wenn ein bestimmtes Ereignis auftritt.  Weitere Informationen finden Sie unter [Zusammenfassung der Technologie zum Lesen und Verwalten von Ereignisprotokollen](https://msdn.microsoft.com/library/bb671205.aspx) und [Ereignisprotokoll Szenarien](https://msdn.microsoft.com/library/bb671204.aspx).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

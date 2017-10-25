@@ -1,0 +1,484 @@
+<Type Name="SelectedDatesCollection" FullName="System.Web.UI.WebControls.SelectedDatesCollection">
+  <TypeSignature Language="C#" Value="public sealed class SelectedDatesCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SelectedDatesCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SelectedDatesCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Kapselt eine Auflistung von <see cref="T:System.DateTime" /> Objekte, die darstellen, die ausgewählten Datumsangaben in einem <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Klasse eine Auflistung von programmgesteuerte Verwaltung <xref:System.DateTime?displayProperty=nameWithType> Objekte, die die ausgewählten Datumsangaben in darstellen einer <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Diese Klasse wird häufig zum Hinzufügen oder Entfernen von Daten aus der Auflistung verwendet.  
+  
+ Diese Auflistung speichert nur ganze Datumsangaben. Der Time-Teil der einzelnen <xref:System.DateTime?displayProperty=nameWithType> wird entfernt. Die Datumsangaben werden in aufsteigender Reihenfolge gespeichert. Wenn doppelte Datumsangaben sind, wird nur ein Datum in der Auflistung gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuerte Verwendung der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Klasse, um die Auswahl von Datumsangaben in der <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic SelectedDatesCollection Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic SelectedDatesCollection Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic SelectedDatesCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic SelectedDatesCollection Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SelectedDatesCollection (System.Collections.ArrayList dateList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ArrayList dateList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SelectedDatesCollection.#ctor(System.Collections.ArrayList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dateList" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="dateList">Eine <see cref="T:System.Collections.ArrayList" /> , die eine Auflistung von Datumsangaben darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> -Klasse mit der angegebenen Liste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Klasse.  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern beim Erweitern der <xref:System.Web.UI.WebControls.Calendar> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SelectedDatesCollection.Add(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">Der der Auflistung hinzuzufügende <see cref="T:System.DateTime" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.DateTime" /> Objekt an das Ende der <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode das angegebene hinzuzufügende <xref:System.DateTime?displayProperty=nameWithType> Objekt an das Ende der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.SelectedDatesCollection.Add%2A> -Methode zum Hinzufügen einer <xref:System.DateTime?displayProperty=nameWithType> -Objekt an eine <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung. Beachten Sie, dass die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Calendar> ist eine Instanz einer der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Klasse.  
+  
+ [!code-aspx-csharp[SelectedDatesCollectionAdd#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SelectedDatesCollectionAdd/CS/selecteddatescollectionaddcs.aspx#1)]
+ [!code-aspx-vb[SelectedDatesCollectionAdd#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SelectedDatesCollectionAdd/VB/selecteddatescollectionaddvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SelectedDatesCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.DateTime" />-Objekte aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können alle entfernen <xref:System.DateTime?displayProperty=nameWithType> Objekte aus der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung und legen die <xref:System.Web.UI.WebControls.SelectedDatesCollection.Count%2A> Eigenschaft auf 0.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.SelectedDatesCollection.Clear%2A> Methode, um alle entfernen <xref:System.DateTime?displayProperty=nameWithType> Objekte aus der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung und Ersetzen Sie sie mit den neuen <xref:System.DateTime?displayProperty=nameWithType> Objekte.  
+  
+ [!code-aspx-csharp[SelectedDatesCollectionAdd#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SelectedDatesCollectionAdd/CS/selecteddatescollectionaddcs.aspx#1)]
+ [!code-aspx-vb[SelectedDatesCollectionAdd#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SelectedDatesCollectionAdd/VB/selecteddatescollectionaddvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SelectedDatesCollection.Contains(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">Die <see cref="T:System.DateTime" />, die in <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> gesucht werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> Auflistung enthält die angegebene <see cref="T:System.DateTime" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> enthält die angegebene <see cref="T:System.DateTime" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um zu bestimmen, ob die <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung enthält die angegebene <xref:System.DateTime?displayProperty=nameWithType> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.SelectedDatesCollection.Contains%2A> Methode, um zu bestimmen, ob die <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung enthält die angegebene <xref:System.DateTime?displayProperty=nameWithType> Objekt.  
+  
+ [!code-aspx-csharp[Classic SelectedDatesCollection.Contains Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic SelectedDatesCollection.Contains Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic SelectedDatesCollection.Contains Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic SelectedDatesCollection.Contains Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SelectedDatesCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein nullbasiertes <see cref="T:System.Array" />, das die kopierten Elemente aus der <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> empfängt.</param>
+        <param name="index">Der erste Index im angegebenen <see cref="T:System.Array" /> Elemente empfangen.</param>
+        <summary>Kopiert die Elemente aus der <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> Auflistung mit dem angegebenen <see cref="T:System.Array" />, beginnend mit dem angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Kopieren der Inhalte der <xref:System.Web.UI.WebControls.SelectedDatesCollection> in die angegebene Auflistung <xref:System.Array?displayProperty=nameWithType>, beginnend am angegebenen Index.  
+  
+> [!NOTE]
+>  Die `array` Parameter muss eine nullbasierte <xref:System.Array?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TableCellCollection.CopyTo%2A> Methode zum Kopieren von Elementen aus der <xref:System.Web.UI.WebControls.SelectedDatesCollection> in das angegebene Array.  
+  
+ [!code-aspx-csharp[Classic SelectedDatesCollection.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic SelectedDatesCollection.CopyTo Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic SelectedDatesCollection.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic SelectedDatesCollection.CopyTo Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SelectedDatesCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der <see cref="T:System.DateTime" />-Objekte in der <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" />-Auflistung ab.</summary>
+        <value>Die Anzahl der <see cref="T:System.DateTime" /> Objekte in der <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um zu bestimmen, die Anzahl der Datumsangaben in der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung. Die <xref:System.Web.UI.WebControls.SelectedDatesCollection.Count%2A> Eigenschaft wird häufig beim Durchlaufen des Auflistung zum Bestimmen der oberen Grenze verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.SelectedDatesCollection.Count%2A> -Eigenschaft können Sie bestimmen die Anzahl der Datumsangaben in der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung. Beachten Sie, dass die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Calendar> -Steuerelement ist eine Instanz von der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Klasse.  
+  
+ [!code-aspx-csharp[Classic SelectedDatesCollection.Count Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic SelectedDatesCollection.Count Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic SelectedDatesCollection.Count Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic SelectedDatesCollection.Count Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SelectedDatesCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Collections.IEnumerator" />-Objekt, das alle enthält implementiert <see cref="T:System.DateTime" /> Objekte innerhalb der <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> Auflistung.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das alle enthält implementiert <see cref="T:System.DateTime" /> Objekte innerhalb der <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType>-implementiert-Objekt, das einfach durchlaufen werden kann, um jedes Element abzurufen, der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft, um das Element derzeit in der Auflistung verweist.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> -Methode zum nächsten Element in der Auflistung zu verschieben.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf die ursprüngliche Position zurück.  
+  
+> [!NOTE]
+>  Die <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> Methode nach der Erstellung aufgerufen werden muss ein <xref:System.Collections.IEnumerator?displayProperty=nameWithType>-Objekt oder mit implementiert die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf das erste Element in der Auflistung zu bewegen. Andernfalls das Element dargestellt, durch die <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft ist nicht definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TableCellCollection.GetEnumerator%2A> Methode zum Erstellen eine <xref:System.Collections.IEnumerator?displayProperty=nameWithType>-Objekt, das zum Anzeigen der ausgewählten Datumsangaben durchlaufen wird implementiert die <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic SelectedDatesCollection.GetEnumerator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic SelectedDatesCollection.GetEnumerator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic SelectedDatesCollection.GetEnumerator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic SelectedDatesCollection.GetEnumerator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SelectedDatesCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" />-Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer `false` gibt an, dass die <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung in allen Fällen geschrieben werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SelectedDatesCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zugriff auf die <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> -Auflistung synchronisiert (threadsicher).</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird von abgeleiteten <xref:System.Collections.ICollection?displayProperty=nameWithType> und wird überschrieben, um stets `false`.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.SelectedDatesCollection.IsSynchronized%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public DateTime this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SelectedDatesCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein Ordinalindex-Wert, der angibt, <see cref="T:System.DateTime" /> zurückgegeben.</param>
+        <summary>Ruft eine <see cref="T:System.DateTime" /> Objekt am angegebenen Index in der <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> Auflistung.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> , die stellt ein Element in der <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Indexer zum Abrufen einer Einzelperson <xref:System.DateTime?displayProperty=nameWithType> -Objekt in der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung am angegebenen Index mithilfe von einfachen Array-Notation.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit dem Indexer zum Abrufen einer <xref:System.DateTime?displayProperty=nameWithType> -Objekt aus einem <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung. Beachten Sie, dass die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Calendar> -Steuerelement ist eine Instanz von der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Klasse.  
+  
+ [!code-aspx-csharp[Classic SelectedDatesCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic SelectedDatesCollection.this Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic SelectedDatesCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic SelectedDatesCollection.this Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SelectedDatesCollection.Remove(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">Der <see cref="T:System.DateTime" />, der aus der <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> entfernt werden soll.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.DateTime" /> -Objekt aus der <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Entfernen des angegebenen <xref:System.DateTime?displayProperty=nameWithType> -Objekt aus der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.SelectedDatesCollection.Remove%2A> -Methode zum Entfernen eines Elements aus der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung.  
+  
+ [!code-aspx-csharp[Classic SelectedDatesCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic SelectedDatesCollection.Remove Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic SelectedDatesCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic SelectedDatesCollection.Remove Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectRange">
+      <MemberSignature Language="C#" Value="public void SelectRange (DateTime fromDate, DateTime toDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SelectRange(valuetype System.DateTime fromDate, valuetype System.DateTime toDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SelectedDatesCollection.SelectRange(System.DateTime,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromDate" Type="System.DateTime" />
+        <Parameter Name="toDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="fromDate">Ein <see cref="T:System.DateTime" /> , die das ursprüngliche Datum hinzuzufügende gibt die <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" />.</param>
+        <param name="toDate">Ein <see cref="T:System.DateTime" /> , die das Enddatum hinzuzufügende gibt die <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" />.</param>
+        <summary>Fügt den angegebenen Datumsbereich an die <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie den angegebenen Datumsbereich zum Hinzufügen der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuerte Verwendung der <xref:System.Web.UI.WebControls.SelectedDatesCollection.SelectRange%2A> Methode, um einen fortlaufenden Datumsbereich wählen Sie auf der <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[SelectedDatesCollectionSelectRange#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SelectedDatesCollectionSelectRange/CS/selecteddatescollectionselectrangecs.aspx#1)]
+ [!code-aspx-vb[SelectedDatesCollectionSelectRange#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SelectedDatesCollectionSelectRange/VB/selecteddatescollectionselectrangevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SelectedDatesCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das verwendet werden kann, zum Synchronisieren des Zugriffs auf die <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> Auflistung.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das in dieser Implementierung zurückgegebene Objekt stellt der <xref:System.Web.UI.WebControls.SelectedDatesCollection> Objekt selbst.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.SelectedDatesCollection.SyncRoot%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

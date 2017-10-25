@@ -1,0 +1,100 @@
+<Type Name="BindUITypeEditor" FullName="System.Workflow.ComponentModel.Design.BindUITypeEditor">
+  <TypeSignature Language="C#" Value="public class BindUITypeEditor : System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BindUITypeEditor extends System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.BindUITypeEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.UITypeEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen <see cref="T:System.Drawing.Design.UITypeEditor" /> dar, der in einer Aktivität den Eigenschaften zugeordnet ist, die gebunden sind oder gebunden werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Benutzer an, dass sie Eigenschaftswerte bearbeiten möchten die **ActivityBind** Dialogfeld wird geöffnet, um Hilfe beim Binden von Eigenschaften für eine Aktivität angeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindUITypeEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.BindUITypeEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.BindUITypeEditor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditValue">
+      <MemberSignature Language="C#" Value="public override object EditValue (System.ComponentModel.ITypeDescriptorContext context, IServiceProvider serviceProvider, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EditValue(class System.ComponentModel.ITypeDescriptorContext context, class System.IServiceProvider serviceProvider, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.BindUITypeEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, über die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <param name="serviceProvider">Ein <see cref="T:System.IServiceProvider" />, über den dieser Editor Dienste anfordern kann.</param>
+        <param name="value">Der Wert des zu bearbeitenden Objekts.</param>
+        <summary>Bearbeitet den Wert des angegebenen Objekts, wobei der von <see cref="Overload:System.Workflow.ComponentModel.Design.BindUITypeEditor.GetEditStyle" /> angegebene Editorstil verwendet wird.</summary>
+        <returns>Der neue Wert des Objekts.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceProvider" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditStyle">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Design.UITypeEditorEditStyle GetEditStyle (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Design.UITypeEditorEditStyle GetEditStyle(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.BindUITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, über die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <summary>Gibt den von der <see cref="Overload:System.Workflow.ComponentModel.Design.BindUITypeEditor.EditValue" />-Methode verwendeten Editorstil zurück.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" />-Wert, der den von <see cref="Overload:System.Workflow.ComponentModel.Design.BindUITypeEditor.EditValue" /> verwendeten Editorstil angibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

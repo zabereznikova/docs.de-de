@@ -1,0 +1,183 @@
+<Type Name="DesignerDataConnection" FullName="System.ComponentModel.Design.Data.DesignerDataConnection">
+  <TypeSignature Language="C#" Value="public sealed class DesignerDataConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignerDataConnection extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Data.DesignerDataConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Verbindung mit einem Datenspeicher in einem Entwurfstool dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Data.DesignerDataConnection> Objekt stellt eine Verbindung mit einem Datenspeicher im Entwurfstool dar. In der Regel eine <xref:System.ComponentModel.Design.Data.DesignerDataConnection> Objekt wird zurückgegeben, als Teil der <xref:System.ComponentModel.Design.Data.IDataEnvironment.Connections%2A> -Eigenschaft, und wird erstellt, durch Lesen der Konfigurationsdatei der Anwendung oder durch Aufrufen der <xref:System.ComponentModel.Design.Data.IDataEnvironment.BuildConnection%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerDataConnection (string name, string providerName, string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string providerName, string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DesignerDataConnection.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="providerName" Type="System.String" />
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name dieser Verbindung zugeordnet ist.</param>
+        <param name="providerName">Der Name des Anbieterobjekts verwendet, um den zugrunde liegenden Datenspeicher zugreifen</param>
+        <param name="connectionString">Die Zeichenfolge, die angibt, wie eine Verbindung mit dem Datenspeicher hergestellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Design.Data.DesignerDataConnection" /> Klasse mit dem angegebenen Namen, Datenanbieter und Verbindungszeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen <xref:System.ComponentModel.Design.Data.DesignerDataConnection> Objekte, die nicht aus der Konfigurationsdatei der Anwendung erstellt werden. Wenn Sie diesen Konstruktor verwenden die <xref:System.ComponentModel.Design.Data.DesignerDataConnection.IsConfigured%2A> -Eigenschaftensatz auf `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerDataConnection (string name, string providerName, string connectionString, bool isConfigured);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string providerName, string connectionString, bool isConfigured) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DesignerDataConnection.#ctor(System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="providerName" Type="System.String" />
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="isConfigured" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name dieser Verbindung zugeordnet ist.</param>
+        <param name="providerName">Der Name des Anbieterobjekts verwendet, um den zugrunde liegenden Datenspeicher zugegriffen wird.</param>
+        <param name="connectionString">Die Zeichenfolge, die angibt, wie eine Verbindung mit dem Datenspeicher hergestellt.</param>
+        <param name="isConfigured">
+          <see langword="true" />um anzugeben, dass die Verbindung aus Informationen in der Konfigurationsdatei der Anwendung erstellt wurde. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Design.Data.DesignerDataConnection" /> -Klasse mit dem angegebenen Namen, den Datenanbieter und die Verbindungszeichenfolge und gibt an, ob die Verbindung aus einer Konfigurationsdatei geladen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie den Wert der angeben müssen die <xref:System.ComponentModel.Design.Data.DesignerDataConnection.IsConfigured%2A> Eigenschaft, z. B. für die Erstellung einer <xref:System.ComponentModel.Design.Data.DesignerDataConnection> Objekt aus den Informationen, die in der Konfigurationsdatei der Anwendung gespeichert. Die <xref:System.ComponentModel.Design.Data.DesignerDataConnection.IsConfigured%2A> auf den Wert der Eigenschaft festgelegt ist die `isConfigured` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionString">
+      <MemberSignature Language="C#" Value="public string ConnectionString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataConnection.ConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Verbindungszeichenfolge der Anwendung, die für die Verbindung definiert.</summary>
+        <value>Die Verbindungszeichenfolge der Anwendung, die für die Verbindung definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Data.DesignerDataConnection.ConnectionString%2A> Eigenschaft enthält die Verbindungszeichenfolge, die von der Anwendung zum Herstellen einer Verbindung mit dem Datenspeicher verwendet. Verwenden Sie die <xref:System.ComponentModel.Design.Data.IDataEnvironment.GetDesignTimeConnection%2A?displayProperty=nameWithType> Methode, um eine Verbindungszeichenfolge in der entwurfsumgebung für die Verwendung geeignet zurückzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConfigured">
+      <MemberSignature Language="C#" Value="public bool IsConfigured { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConfigured" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataConnection.IsConfigured" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Verbindungsinformationen in der Konfigurationsdatei der Anwendung sind.</summary>
+        <value>
+          <see langword="true" />Wenn die Verbindung in der Konfigurationsdatei der Anwendung definiert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Data.DesignerDataConnection.IsConfigured%2A> -Eigenschaft `true` Wenn die <xref:System.ComponentModel.Design.Data.DesignerDataConnection> Objekt aus der Konfigurationsdatei der Anwendung gelesen oder, wenn die <xref:System.ComponentModel.Design.Data.DesignerDataConnection> Objekt wurde geschrieben, um Sie in der Konfigurationsdatei der Anwendung durch die <xref:System.ComponentModel.Design.Data.IDataEnvironment.ConfigureConnection%2A?displayProperty=nameWithType> Methode.  
+  
+ Wenn die <xref:System.ComponentModel.Design.Data.DesignerDataConnection.IsConfigured%2A> ist `true`, die <xref:System.ComponentModel.Design.Data.DesignerDataConnection.Name%2A> Eigenschaft auf den Namen der Verbindung festgelegt wird, gemäß der [ConnectionStrings-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b6ffbb2e-a4d1-410e-8f7e-9755e92c65de) der Konfigurationsdatei.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataConnection.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Datenverbindung ab.</summary>
+        <value>Der Name der Datenverbindung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Data.DesignerDataConnection.Name%2A> Eigenschaft enthält den Namen, die eine bestimmte Verbindung in einer Anwendungskonfigurationsdatei oder einer Liste von datenverbindungen identifiziert. Wenn der <xref:System.ComponentModel.Design.Data.DesignerDataConnection.IsConfigured%2A> Eigenschaft ist `true`, <xref:System.ComponentModel.Design.Data.DesignerDataConnection.Name%2A> Eigenschaft dient als der `name` Attribut in der [ConnectionStrings-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b6ffbb2e-a4d1-410e-8f7e-9755e92c65de) Konfigurationselement, oder zurückgegeben wird, aus der <xref:System.ComponentModel.Design.Data.IDataEnvironment.ConfigureConnection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public string ProviderName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataConnection.ProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Anbieters verwendet, um den zugrunde liegenden Datenspeicher zugegriffen.</summary>
+        <value>Der Name des Anbieters verwendet, um den zugrunde liegenden Datenspeicher zugegriffen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

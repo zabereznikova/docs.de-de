@@ -1,0 +1,127 @@
+<Type Name="XpsFont" FullName="System.Windows.Xps.Packaging.XpsFont">
+  <TypeSignature Language="C#" Value="public class XpsFont : System.Windows.Xps.Packaging.XpsResource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XpsFont extends System.Windows.Xps.Packaging.XpsResource" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.XpsFont" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Xps.Packaging.XpsResource</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schriftart in ein <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Xps.Packaging.XpsFont> -Klasse verfügt über keinen öffentlichen Konstruktor.  
+  
+ Verwenden der <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont%2A> Methode, um eine Schriftart hinzuzufügen und einen Verweis darauf in ein neues Dokument zu erhalten.  
+  
+ Verwenden der <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.GetFont%2A> Methode, um einen Schriftartverweis in einem vorhandenen Dokument abzurufen.  
+  
+ Anhand der Einstellungen der <xref:System.Windows.Xps.Serialization.XpsSerializationManager> und <xref:System.Windows.Xps.Serialization.XpsPackagingPolicy>, wie z. B. <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies> und <xref:System.Windows.Xps.Packaging.PackageInterleavingOrder>, die Leerung des der <xref:System.Windows.Xps.Packaging.XpsResource.Commit%2A> Methode der <xref:System.Windows.Xps.Packaging.XpsFont> Klasse kann verzögert werden, bis die gesamte <xref:System.Windows.Xps.Packaging.XpsDocument> geschlossen wird.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Schriftarten zum Hinzufügen einer <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpageresources)]
+ [!code-csharp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpageresources)]
+ [!code-vb[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpageresources)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsObfuscated">
+      <MemberSignature Language="C#" Value="public bool IsObfuscated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsObfuscated" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsFont.IsObfuscated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Schriftart verborgen ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Schriftart verborgen ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu verbergen, finden Sie in Abschnitt 2.1.7.3 "Eingebettete Schriftart Verschleierung" in der *XML Paper Specification (XPS)* zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRestricted">
+      <MemberSignature Language="C#" Value="public bool IsRestricted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRestricted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsFont.IsRestricted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Text, der diese Schriftart verwendet geändert werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn der Text, der diese Schriftart verwendet geändert oder bearbeitet werden kann; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Verwendung der eingeschränkten Schriftarten, finden Sie unter der *XML Paper Specification (XPS)* zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObfuscateFontData">
+      <MemberSignature Language="C#" Value="public static void ObfuscateFontData (byte[] fontData, Guid guid);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ObfuscateFontData(unsigned int8[] fontData, valuetype System.Guid guid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.XpsFont.ObfuscateFontData(System.Byte[],System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fontData" Type="System.Byte[]" />
+        <Parameter Name="guid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="fontData">Die Schriftart-Daten, zu verbergen.</param>
+        <param name="guid">Die [!INCLUDE[TLA#tla_guid](~/includes/tlasharptla-guid-md.md)] zu verwenden, um zu verbergen die <c>Fontdata</c>.</param>
+        <summary>Verbirgt die Schriftartdaten Schriftart an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Xps.Packaging.XpsFont.ObfuscateFontData%2A> Methode wird bereitgestellt, für wird verwendet, wenn Sie gesetzlich verpflichtet, zu verbergen sind proprietäre Schriftarten lizenziert.  
+  
+ Während dieser Methode keine Verschlüsselung bietet die <xref:System.Windows.Xps.Packaging.XpsFont.ObfuscateFontData%2A> Methode kann verwendet werden, um Benutzer von entzippt proprietäre [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] Schriftarten und für andere Zwecke separat installieren.  
+  
+ Weitere Informationen zu verbergen, finden Sie in Abschnitt 2.1.7.3 "Eingebettete Schriftart Verschleierung" in der *XML Paper Specification (XPS)* zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

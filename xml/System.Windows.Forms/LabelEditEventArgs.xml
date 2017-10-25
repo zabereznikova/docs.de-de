@@ -1,0 +1,184 @@
+<Type Name="LabelEditEventArgs" FullName="System.Windows.Forms.LabelEditEventArgs">
+  <TypeSignature Language="C#" Value="public class LabelEditEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LabelEditEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.LabelEditEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.ListView.BeforeLabelEdit" />-Ereignis und das <see cref="E:System.Windows.Forms.ListView.AfterLabelEdit" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.LabelEditEventArgs> gibt den Index und die Beschriftung des eine <xref:System.Windows.Forms.ListViewItem> und der Beschriftung, nachdem er vom Benutzer bearbeitet wurde. Diese Klasse bietet auch eine <xref:System.Windows.Forms.LabelEditEventArgs.CancelEdit%2A> Eigenschaft. Sie können diese Eigenschaft in einer <xref:System.Windows.Forms.ListView.BeforeLabelEdit?displayProperty=nameWithType> Ereignishandler, um zu verhindern, dass den Benutzer die Bezeichnung bearbeiten. Sie können auch in eine <xref:System.Windows.Forms.ListView.AfterLabelEdit?displayProperty=nameWithType> -Ereignishandler, um die Änderung verwerfen und die Beschriftung rückgängig zu machen es auf den ursprünglichen Wert. Dies ist hilfreich, wenn Benutzereingaben zu überprüfen, bevor die Änderung wird übergeben werden sollen.  
+  
+> [!NOTE]
+>  Da die <xref:System.Windows.Forms.ListView.AfterLabelEdit?displayProperty=nameWithType> Ereignis erfolgt vor die Bearbeitung Bezeichnung ein Commit ausgeführt wurde, Aufrufen der <xref:System.Windows.Forms.ListView.Sort%2A?displayProperty=nameWithType> -Methode in einen Handler für dieses Ereignis wird das Element mit dem ursprünglichen Wert zu sortieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Behandlung der <xref:System.Windows.Forms.ListView.BeforeLabelEdit?displayProperty=nameWithType> -Ereignisses und die Verwendung der <xref:System.Windows.Forms.LabelEditEventArgs.Item%2A> und <xref:System.Windows.Forms.LabelEditEventArgs.CancelEdit%2A> Eigenschaften. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular mit einem <xref:System.Windows.Forms.ListView> Steuerelement namens `ListView1` und mit mindestens 3 Elemente gefüllt. Stellen Sie sicher, dass alle Ereignisse ihre Ereignisbehandlungsmethoden zugeordnet sind.  
+  
+ [!code-cpp[System.Windows.Forms.ListView3#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView3/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView3#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView3/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView3#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView3/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LabelEditEventArgs (int item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LabelEditEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="item">Der nullbasierte Index des der <see cref="T:System.Windows.Forms.ListViewItem" />, mit der Bezeichnung bearbeiten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.LabelEditEventArgs" /> Klasse mit dem angegebenen Index der <see cref="T:System.Windows.Forms.ListViewItem" /> zu bearbeiten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie diesen Konstruktor beim Auslösen der <xref:System.Windows.Forms.ListView.BeforeLabelEdit?displayProperty=nameWithType> oder <xref:System.Windows.Forms.ListView.AfterLabelEdit?displayProperty=nameWithType> Ereignis zur Laufzeit an ein bestimmtes Listenelement in der <xref:System.Windows.Forms.ListView> zu bearbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LabelEditEventArgs (int item, string label);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 item, string label) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LabelEditEventArgs.#ctor(System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Int32" />
+        <Parameter Name="label" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="item">Der nullbasierte Index des der <see cref="T:System.Windows.Forms.ListViewItem" />, mit der Bezeichnung bearbeiten.</param>
+        <param name="label">Der neue Text zugewiesen an die Bezeichnung der <see cref="T:System.Windows.Forms.ListViewItem" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.LabelEditEventArgs" /> Klasse mit dem angegebenen Index der <see cref="T:System.Windows.Forms.ListViewItem" /> bearbeitet wird und den neuen Text für die Bezeichnung des der <see cref="T:System.Windows.Forms.ListViewItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie diesen Konstruktor beim Auslösen der <xref:System.Windows.Forms.ListView.BeforeLabelEdit?displayProperty=nameWithType> oder <xref:System.Windows.Forms.ListView.AfterLabelEdit?displayProperty=nameWithType> Ereignis zur Laufzeit an ein Listenelement in der <xref:System.Windows.Forms.ListView> zu bearbeiten. Der Konstruktor ermöglicht auch die Geben Sie des neuen Texts verknüpft sind, mit der Bezeichnung der <xref:System.Windows.Forms.ListViewItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelEdit">
+      <MemberSignature Language="C#" Value="public bool CancelEdit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CancelEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LabelEditEventArgs.CancelEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob an die Bezeichnung Änderungen der <see cref="T:System.Windows.Forms.ListViewItem" /> abgebrochen werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn die Bearbeitung der die Bezeichnung für die <see cref="T:System.Windows.Forms.ListViewItem" /> werden soll, andernfalls abgebrochen <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um Änderungen an die Bezeichnung "Abbrechen" eine <xref:System.Windows.Forms.ListViewItem> und diese in den ursprünglichen Text wiederherstellen. Verwenden Sie diese Eigenschaft, um zu verhindern, dass die Beschriftung eines Elements geändert wird, um ein Wert, der nicht den Anforderungen der Anwendung erfüllt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Behandlung der <xref:System.Windows.Forms.ListView.BeforeLabelEdit?displayProperty=nameWithType> -Ereignisses und die Verwendung der <xref:System.Windows.Forms.LabelEditEventArgs.Item%2A> und <xref:System.Windows.Forms.LabelEditEventArgs.CancelEdit%2A> Eigenschaften. Fügen Sie zum Ausführen des Beispiels den folgenden Code in ein Formular einem ListView-Steuerelement mit dem Namen ListView1 mit mindestens 3 Elemente enthält. Stellen Sie sicher, dass alle Ereignisse ihre Ereignisbehandlungsmethoden zugeordnet sind.  
+  
+ [!code-cpp[System.Windows.Forms.ListView3#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView3/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView3#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView3/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView3#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView3/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public int Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Item" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LabelEditEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den nullbasierten Index des der <see cref="T:System.Windows.Forms.ListViewItem" /> mit der Bezeichnung bearbeiten.</summary>
+        <value>Der nullbasierte Index des der <see cref="T:System.Windows.Forms.ListViewItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Behandlung der <xref:System.Windows.Forms.ListView.BeforeLabelEdit?displayProperty=nameWithType> -Ereignisses und die Verwendung der <xref:System.Windows.Forms.LabelEditEventArgs.Item%2A> und <xref:System.Windows.Forms.LabelEditEventArgs.CancelEdit%2A> Eigenschaften. Fügen Sie zum Ausführen des Beispiels den folgenden Code in ein Formular einem ListView-Steuerelement mit dem Namen ListView1 mit mindestens 3 Elemente enthält. Stellen Sie sicher, dass alle Ereignisse ihre Ereignisbehandlungsmethoden zugeordnet sind.  
+  
+ [!code-cpp[System.Windows.Forms.ListView3#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView3/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView3#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView3/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView3#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView3/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LabelEditEventArgs.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den neuen Text zugewiesen an die Bezeichnung der <see cref="T:System.Windows.Forms.ListViewItem" />.</summary>
+        <value>Den neuen Text Zuordnen der <see cref="T:System.Windows.Forms.ListViewItem" /> oder <see langword="null" /> , wenn der Text nicht geändert wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.AfterLabelEdit?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.AfterLabelEdit?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#463](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#463)]
+ [!code-vb[System.Windows.Forms.EventExamples#463](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#463)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

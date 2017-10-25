@@ -1,0 +1,420 @@
+<Type Name="SoapHeader" FullName="System.Web.Services.Protocols.SoapHeader">
+  <TypeSignature Language="C#" Value="public abstract class SoapHeader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SoapHeader extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapHeader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.SoapType(IncludeInSchema=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(IncludeInSchema=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse stellt den Inhalt eines SOAP-Headers dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ SOAP-Header bieten eine Methode zum Übergeben von Daten in und aus einer XML-Webdienstmethode, wenn die Daten nicht direkt mit der XML-Webdienstmethode Hauptfunktionen verknüpft ist. Ein XML-Webdienst kann z. B. mehrere XML-Webdienstmethoden enthalten, dass all ein benutzerdefiniertes Authentifizierungsschema erforderlich. Anstatt zum Hinzufügen von Parametern an einzelnen XML-Webdienstmethode für das benutzerdefinierte Authentifizierungsschema eine <xref:System.Web.Services.Protocols.SoapHeaderAttribute>, das auf eine Klasse ableiten von <xref:System.Web.Services.Protocols.SoapHeader>, kann auf jeder XML-Webdienstmethode angewendet werden. Die Implementierung für die Klasse, ableiten von <xref:System.Web.Services.Protocols.SoapHeader> behandelt das benutzerdefinierte Authentifizierungsschema. Auf diese Weise den XML-Webdienstmethode implementiert nur die Funktionen, die speziell für sie und fügt zusätzliche Funktionen, die mit einem SOAP-Header hinzu.  
+  
+ Die folgende Liste zeigt die grundlegenden Schritte zum Empfangen und Verarbeiten eines SOAP-Headers:  
+  
+1.  Erstellen Sie eine Klasse, die abgeleitet <xref:System.Web.Services.Protocols.SoapHeader> Darstellung der Daten in den SOAP-Header übergeben.  
+  
+2.  Fügen Sie einen Member der Klasse, die einen XML-Webdienst implementiert oder ein XML-Webdienst Client-Proxyklasse, des Typs im ersten Schritt erstellt haben.  
+  
+3.  Anwenden einer <xref:System.Web.Services.Protocols.SoapHeaderAttribute> der XML-Webdienstmethode oder die entsprechende Methode in der Proxyklasse, Angeben der Element im zweiten Schritt in erstellt die <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> Eigenschaft.  
+  
+4.  Im XML-Webdienstmethode oder XML Web Service-Clientcode, Zugriff auf die <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> Eigenschaft zum Verarbeiten der Daten in den SOAP-Header gesendet wurden.  
+  
+   
+  
+## Examples  
+ Die folgenden `MyWebService` XML-Webdienst definiert die `MyHeader` SOAP-Header und muss mit allen Aufrufen gesendet wird die `MyWebMethod` XML-Webdienstmethode. Darüber hinaus `MyWebMethod` alle SOAP-Header außer empfängt die `MyHeader` SOAP-Header.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SoapHeader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.SoapHeader" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Actor">
+      <MemberSignature Language="C#" Value="public string Actor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Actor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeader.Actor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.SoapAttribute("actor", Namespace="http://schemas.xmlsoap.org/soap/envelope/")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("actor", Namespace="http://schemas.xmlsoap.org/soap/envelope/")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Empfänger den SOAP-Header.</summary>
+        <value>Der Empfänger den SOAP-Header. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie zum Festlegen des Empfängers eines SOAP-Headers der <xref:System.Web.Services.Protocols.SoapHeader.Actor%2A> Eigenschaft. Unabhängig von der Version des SOAP-Protokolls für die Kommunikation mit einem XML-Webdienst verwendet generiert das .NET Framework automatisch die SOAP-Nachricht, die spezifisch für die Version des SOAP-Protokolls. Insbesondere unterscheiden sich die XML-Element und XML-Namespace, der den Empfänger darstellt für die beiden Versionen ein.  
+  
+ XML-Webdienste, die den SOAP-Header empfangen erhalten den beabsichtigten Empfänger durch Abrufen der <xref:System.Web.Services.Protocols.SoapHeader.Role%2A> oder <xref:System.Web.Services.Protocols.SoapHeader.Actor%2A> Eigenschaften.  
+  
+ Die Empfänger für die `Body` Element und alle SOAP-Header in der `Header` -Element einer SOAP-Nachricht muss nicht identisch sein. Wenn ein `Header` Element in der SOAP-Nachricht vorhanden, er stellt zusätzliche Daten, die in und aus der XML-Webdienstmethode oder Vermittler gesendet werden können. Der Empfänger der Daten, bekannt als SOAP- `Actor` in Version 1.1, kann ein anderen URI als den URI für die XML-Webdienstmethode sein.  
+  
+ Weitere Informationen zu SOAP `actor` -Attribut angegeben wird, finden Sie in der SOAP-Spezifikation unter http://www.w3.org/TR/SOAP/.  
+  
+   
+  
+## Examples  
+ Die folgenden XML-Client Webdienstaufrufe die `MyWebMethod` nach dem Erstellen eines benutzerdefinierten SOAP-Headers vom Typ XML-Webdienstmethode `MyHeader` verwendet wird und der <xref:System.Web.Services.Protocols.SoapHeader.Actor%2A> Eigenschaft `http://www.contoso.com/MySoapHeaderHandler`.  
+  
+ [!code-cpp[Classic SoapHeader.Actor Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHeader.Actor Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHeader.Actor Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHeader.Actor Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHeader.Actor Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHeader.Actor Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DidUnderstand">
+      <MemberSignature Language="C#" Value="public bool DidUnderstand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DidUnderstand" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeader.DidUnderstand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.SoapIgnore</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine XML-Webdienstmethode einen SOAP-Header ordnungsgemäß verarbeitet.</summary>
+        <value>
+          <see langword="true" />Wenn der SOAP-Header ordnungsgemäß verarbeitet wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch einen XML-Webdienst definierten SOAP-Header ASP.NET geht davon aus der XML-Webdiensts Dienstmethode die SOAP-Header ordnungsgemäß verarbeitet durch Festlegen den Anfangswert von <xref:System.Web.Services.Protocols.SoapHeader.DidUnderstand%2A> auf `true`. Für SOAP-Header, die nicht durch den XML-Webdienst definiert, ist der Anfangswert `false`. Wenn ASP.NET SOAP erkennt Header übergeben, um eine XML-Webdienstmethode mit <xref:System.Web.Services.Protocols.SoapHeader.DidUnderstand%2A> festgelegt `false` nach der Methodenrückgabe ein <xref:System.Web.Services.Protocols.SoapHeaderException> ausgelöst zurück an den XML-WebClient-Dienst anstelle von den Ergebnissen aus der XML-Webdienstmethode.  
+  
+   
+  
+## Examples  
+ Die folgenden `MyWebService` XML-Webdienst definiert die `MyHeader` SOAP-Header und muss mit allen Aufrufen gesendet wird die `MyWebMethod` XML-Webdienstmethode. Darüber hinaus die `MyWebMethod` alle SOAP-Header außer empfängt die `MyHeader` SOAP-Header. Für SOAP-Header, `MyWebMethod` verarbeitet werden können, <xref:System.Web.Services.Protocols.SoapHeader.DidUnderstand%2A> festgelegt ist, um `true`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodedMustUnderstand">
+      <MemberSignature Language="C#" Value="public string EncodedMustUnderstand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EncodedMustUnderstand" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeader.EncodedMustUnderstand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.SoapAttribute("mustUnderstand", Namespace="http://schemas.xmlsoap.org/soap/envelope/")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("mustUnderstand", Namespace="http://schemas.xmlsoap.org/soap/envelope/")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <see langword="mustUnderstand" /> XML-Attribut für den SOAP-Header, die bei der Kommunikation mit SOAP-Protokoll, Version 1.1.</summary>
+        <value>Der Wert, der die <see langword="mustUnderstand" /> Attribut. Der Standardwert ist "0".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft nicht. Verwenden Sie stattdessen die <xref:System.Web.Services.Protocols.SoapHeader.MustUnderstand%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapHeader_EncodedMustUnderstand#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapHeader_EncodedMustUnderstand/CPP/soapheader_encodedmustunderstand.cpp#1)]
+ [!code-csharp[SoapHeader_EncodedMustUnderstand#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapHeader_EncodedMustUnderstand/CS/soapheader_encodedmustunderstand.cs#1)]
+ [!code-vb[SoapHeader_EncodedMustUnderstand#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapHeader_EncodedMustUnderstand/VB/soapheader_encodedmustunderstand.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft wird auf einen Wert festgelegt, außer: "0", "1", "Wahr" oder "false".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodedMustUnderstand12">
+      <MemberSignature Language="C#" Value="public string EncodedMustUnderstand12 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EncodedMustUnderstand12" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeader.EncodedMustUnderstand12" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.SoapAttribute("mustUnderstand", Namespace="http://www.w3.org/2003/05/soap-envelope")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("mustUnderstand", Namespace="http://www.w3.org/2003/05/soap-envelope")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <see langword="mustUnderstand" /> XML-Attribut für den SOAP-Header, die bei der Kommunikation mit SOAP-Protokoll, Version 1.2.</summary>
+        <value>Der Wert, der die <see langword="mustUnderstand" /> XML-Attribut eines SOAP-Headers. Der Standardwert ist "0".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft nicht. Verwenden Sie stattdessen die <xref:System.Web.Services.Protocols.SoapHeader.MustUnderstand%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft wird auf einen Wert festgelegt, außer: "0", "1", "Wahr" oder "false".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodedRelay">
+      <MemberSignature Language="C#" Value="public string EncodedRelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EncodedRelay" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeader.EncodedRelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.SoapAttribute("relay", Namespace="http://www.w3.org/2003/05/soap-envelope")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("relay", Namespace="http://www.w3.org/2003/05/soap-envelope")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Relay-Attribut des SOAP 1.2-Headers fest.</summary>
+        <value>Entweder "0", "false", "1" oder "true".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.SoapHeader.EncodedRelay%2A> Eigenschaft gilt nur für SOAP 1.2 und gibt an, ob der Empfänger der Nachricht diesen Header weiterleitet, wenn die Nachricht an den nächsten Knoten downstream weitergeleitet. Da SOAP-Vermittler in .NET Framework nicht unterstützt wird, wird diese Eigenschaft wird serialisiert und deserialisiert, jedoch ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MustUnderstand">
+      <MemberSignature Language="C#" Value="public bool MustUnderstand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MustUnderstand" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeader.MustUnderstand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.SoapIgnore</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.Services.Protocols.SoapHeader" /> verstanden werden muss.</summary>
+        <value>
+          <see langword="true" />Wenn der XML-Webdienst ordnungsgemäß interpretieren und verarbeiten muss die <see cref="T:System.Web.Services.Protocols.SoapHeader" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein XML-Webdienstclient einen SOAP-Header hinzufügt, um ein XML-Webdienst-Methodenaufruf mit der <xref:System.Web.Services.Protocols.SoapHeader.MustUnderstand%2A> -Eigenschaftensatz auf `true`, muss die XML-Webdienstmethode festgelegt die <xref:System.Web.Services.Protocols.SoapHeader.DidUnderstand%2A> Eigenschaft `true`ist, andernfalls eine <xref:System.Web.Services.Protocols.SoapHeaderException> Ausnahme ausgelöst, und um die XML-Webdienstclient von ASP.NET.  
+  
+ Obwohl sowohl die <xref:System.Web.Services.Protocols.SoapHeader.EncodedMustUnderstand%2A> und <xref:System.Web.Services.Protocols.SoapHeader.MustUnderstand%2A> Eigenschaften dienen zum Festlegen des Werts der `mustUnderstand` Attribut innerhalb der SOAP-Header, der <xref:System.Web.Services.Protocols.SoapHeader.MustUnderstand%2A> -Eigenschaft können Sie das Attribut mit einem booleschen Wert festgelegt.  
+  
+ Weitere Informationen zum Hinzufügen von SOAP-Headern zu Clients finden Sie unter [&#91;\< Topic://cpconusingsoapheaders > &#93; ](http://msdn.microsoft.com/en-us/7bd961f2-b492-48d0-bafe-09d5d5fec3ba).  
+  
+   
+  
+## Examples  
+ Die folgenden XML-Webdienstclient definiert einen benutzerdefinierten SOAP-Header vom Typ `MyHeader`, legt der <xref:System.Web.Services.Protocols.SoapHeader.MustUnderstand%2A> Eigenschaft `true`, und ruft die `MyWebMethod` XML-Webdienstmethode. Wenn kein XML-Webdienstmethode festgelegt wird der <xref:System.Web.Services.Protocols.SoapHeader.DidUnderstand%2A> Eigenschaft der `MyHeader` SOAP-Header zu `true`, eine <xref:System.Web.Services.Protocols.SoapHeaderException> ausgelöst.  
+  
+ [!code-cpp[Classic SoapHeader.MustUnderstand Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHeader.MustUnderstand Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHeader.MustUnderstand Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHeader.MustUnderstand Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHeader.MustUnderstand Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHeader.MustUnderstand Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Relay">
+      <MemberSignature Language="C#" Value="public bool Relay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Relay" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeader.Relay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.SoapIgnore</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der SOAP-Header auf den nächsten SOAP-Knoten weitergeleitet werden, wenn der aktuelle Knoten den Header nicht interpretiert werden.</summary>
+        <value>
+          <see langword="true" />verfügt der SOAP-Header "Relay"-Attribut auf "True" festgelegt ist andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardregeln für die Verarbeitung von SOAP 1.2 erfordern SOAP-Knoten, um Header zu entfernen, die nicht von der SOAP-Verarbeitungsknoten verstanden werden, bevor die Nachricht an den nächsten Knoten übergeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public string Role { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Role" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeader.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.SoapAttribute("role", Namespace="http://www.w3.org/2003/05/soap-envelope")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("role", Namespace="http://www.w3.org/2003/05/soap-envelope")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Empfänger den SOAP-Header.</summary>
+        <value>Ein URI, der den Empfänger des SOAP-Headers darstellt. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie zum Festlegen des Empfängers eines SOAP-Headers der <xref:System.Web.Services.Protocols.SoapHeader.Actor%2A> Eigenschaft. Unabhängig von der Version des SOAP-Protokolls für die Kommunikation mit einem XML-Webdienst verwendet generiert das .NET Framework automatisch die SOAP-Nachricht, die spezifisch für die Version des SOAP-Protokolls. Insbesondere unterscheiden sich die XML-Element und XML-Namespace, der den Empfänger darstellt für die beiden Versionen ein.  
+  
+ XML-Webdienste, die den SOAP-Header empfangen erhalten den beabsichtigten Empfänger durch Abrufen der <xref:System.Web.Services.Protocols.SoapHeader.Role%2A> oder <xref:System.Web.Services.Protocols.SoapHeader.Actor%2A> Eigenschaften.  
+  
+ Die Empfänger für die `Body` Element und alle SOAP-Header in der `Header` -Element einer SOAP-Nachricht muss nicht identisch sein. Wenn ein `Header` Element in der SOAP-Nachricht vorhanden, er stellt zusätzliche Daten, die in und aus der XML-Webdienstmethode oder Vermittler gesendet werden können. Der Empfänger der Daten, bekannt als SOAP- `Role` in Version 1.2 des SOAP-Spezifikation und die SOAP- `Actor` in Version 1.1, kann ein anderen URI als den URI für die XML-Webdienstmethode sein.  
+  
+ Weitere Informationen zu SOAP `actor` -Attribut angegeben wird, finden Sie in der SOAP-Spezifikation unter http://www.w3.org/TR/SOAP/.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

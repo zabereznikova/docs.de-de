@@ -1,0 +1,49 @@
+<Type Name="IOCompletionCallback" FullName="System.Threading.IOCompletionCallback">
+  <TypeSignature Language="C#" Value="public delegate void IOCompletionCallback(uint errorCode, uint numBytes, NativeOverlapped* pOVERLAP);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IOCompletionCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.IOCompletionCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Overlapped</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="errorCode" Type="System.UInt32" />
+    <Parameter Name="numBytes" Type="System.UInt32" />
+    <Parameter Name="pOVERLAP" Type="System.Threading.NativeOverlapped*" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="errorCode">Der Fehlercode.</param>
+    <param name="numBytes">Die Anzahl der Bytes, die übertragen werden.</param>
+    <param name="pOVERLAP">Ein <see cref="T:System.Threading.NativeOverlapped" /> , einen nicht verwalteten Zeiger auf den systemeigenen überlappenden Werttyp darstellt.</param>
+    <summary>Empfängt beim Abschluss eines e/a-Vorgangs im Threadpool den Fehlercode, der Anzahl der Bytes und den überlappenden Werttyp.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+  </Docs>
+</Type>

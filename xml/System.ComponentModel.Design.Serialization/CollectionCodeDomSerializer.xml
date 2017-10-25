@@ -1,0 +1,155 @@
+<Type Name="CollectionCodeDomSerializer" FullName="System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer">
+  <TypeSignature Language="C#" Value="public class CollectionCodeDomSerializer : System.ComponentModel.Design.Serialization.CodeDomSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CollectionCodeDomSerializer extends System.ComponentModel.Design.Serialization.CodeDomSerializer" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.Serialization.CodeDomSerializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Sammlungen wird serialisiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer> -Klasse Anweisungen oder Ausdrücken erstellen kann. Wenn das zu serialisierende Objekt ein Array ist, wird die <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer> einen Ausdruck erstellen und Zuweisen der Anweisung im aktuellen Kontextstapel. Wenn das Objekt eine Auflistung mit einem *AddRange* oder eine vergleichbare Methode, die <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer> erstellt eine Anweisung, die die Methode aufruft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CollectionCodeDomSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodSupportsSerialization">
+      <MemberSignature Language="C#" Value="protected bool MethodSupportsSerialization (System.Reflection.MethodInfo method);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool MethodSupportsSerialization(class System.Reflection.MethodInfo method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer.MethodSupportsSerialization(System.Reflection.MethodInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Reflection.MethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="method">Die <see cref="T:System.Reflection.MethodInfo" /> zu suchende Serialisierungsattribute.</param>
+        <summary>Überprüft die Serialisierungsunterstützung durch die <paramref name="method" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="method" /> Serialisierung unterstützt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überprüft die `method` Attribute, um festzustellen, ob sie die Serialisierung unterstützen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="method" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public override object Serialize (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Serialize(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer.Serialize(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Die <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> während der Serialisierung verwendet.</param>
+        <param name="value">Das zu serialisierende Objekt.</param>
+        <summary>Serialisiert die angegebene Auflistung in ein CodeDOM-Objekt.</summary>
+        <returns>Ein CodeDOM-Objekt, <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sammlungen werden wie folgt serialisiert:  
+  
+1.  Wenn die Auflistung ein Array ist, wird das Array geschrieben.  
+  
+    1.  Wenn die Auflistung ein *AddRange* -Methode wird aufgerufen, und mit einem Array bereitgestellt.  
+  
+    2.  Wenn die Auflistung ein *hinzufügen* -Methode aufgerufen wird wiederholt, bis alle Elemente in der Auflistung geschrieben werden.  
+  
+2.  Wenn die Auflistung ein <xref:System.Collections.IList>, <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer.Serialize%2A> Methode werden umgewandelt, der die Auflistung ein <xref:System.Collections.IList> und über diese Schnittstelle hinzugefügt.  
+  
+    1.  Wenn die Auflistung keine enthält *hinzufügen* -Methode, aber mit gekennzeichnet ist <xref:System.ComponentModel.DesignerSerializationVisibility?displayProperty=nameWithType>, <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer.Serialize%2A> Durchlaufen der Auflistung und jedes Element serialisiert wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> oder <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeCollection">
+      <MemberSignature Language="C#" Value="protected virtual object SerializeCollection (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, System.CodeDom.CodeExpression targetExpression, Type targetType, System.Collections.ICollection originalCollection, System.Collections.ICollection valuesToSerialize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object SerializeCollection(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, class System.CodeDom.CodeExpression targetExpression, class System.Type targetType, class System.Collections.ICollection originalCollection, class System.Collections.ICollection valuesToSerialize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer.SerializeCollection(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.CodeDom.CodeExpression,System.Type,System.Collections.ICollection,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="targetExpression" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="originalCollection" Type="System.Collections.ICollection" />
+        <Parameter Name="valuesToSerialize" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Die <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> während der Serialisierung verwendet.</param>
+        <param name="targetExpression">Die <see cref="T:System.CodeDom.CodeExpression" /> , die auf die Auflistung verweist</param>
+        <param name="targetType">Die <see cref="T:System.Type" /> der Auflistung.</param>
+        <param name="originalCollection">Die zu serialisierende Sammlung.</param>
+        <param name="valuesToSerialize">Die zu serialisierenden Werte.</param>
+        <summary>Serialisiert die jeweilige Sammlung.</summary>
+        <returns>Serialisierte Sammlung, wenn der Serialisierungsprozess erfolgreich ausgeführt wurde; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.CodeDom.CodeExpression> bezieht, die sich auf die Auflistung kann nicht `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" />, <paramref name="targetType" />, <paramref name="originalCollection" /> oder <paramref name="valuesToSerialize" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.CompilerServices">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.CompilerServices" /> Namespace stellt Funktionen für Compilerwriter verwenden Sie verwalteten code zum Angeben der Attribute in Metadaten, die das Laufzeitverhalten der common Language Runtime beeinflussen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Namespace ist in erster Linie für Compilerautoren, obwohl einige der entsprechende Klassen, z. B. <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, werden in einer Vielzahl von Anwendungen verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

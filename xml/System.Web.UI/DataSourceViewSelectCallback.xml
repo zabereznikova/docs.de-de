@@ -1,0 +1,30 @@
+<Type Name="DataSourceViewSelectCallback" FullName="System.Web.UI.DataSourceViewSelectCallback">
+  <TypeSignature Language="C#" Value="public delegate void DataSourceViewSelectCallback(IEnumerable data);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataSourceViewSelectCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataSourceViewSelectCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="data" Type="System.Collections.IEnumerable" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="data">Ein <see cref="T:System.Collections.IEnumerable" /> Sammeln von Daten aufzeichnet, die über die <see cref="M:System.Web.UI.DataSourceView.Select(System.Web.UI.DataSourceSelectArguments,System.Web.UI.DataSourceViewSelectCallback)" /> und <see cref="M:System.Web.UI.DataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" /> -Methoden zurückgeben.</param>
+    <summary>Stellt die asynchrone Rückrufmethode, die ein datengebundenes Steuerelement bereitstellt, eine Datenquellensicht für den asynchronen Datenabruf dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist die Seiten- und Ausführung von ASP.NET Web synchron. ASP.NET-Datenquellensteuerelemente unterstützen jedoch auch einen asynchronen Abruf Datenmuster für Data-Vorgänge. Keines der von ASP.NET Version 2.0 bereitgestellte Datenquellensteuerelemente sind asynchron, aber der Entwickler eines Steuerelements kann ein Datenquellensteuerelement, das asynchrone erstellen. Die <xref:System.Web.UI.DataSourceView> -Objekt unterstützt die <xref:System.Web.UI.DataSourceView.Select%2A> Methode zum asynchronen Datenabruf. Die <xref:System.Web.UI.DataSourceViewSelectCallback> Delegaten ist mit der Datenquellensicht von einem datengebundenen Steuerelement übergeben, so, dass die Ansicht dieser Delegat aufgerufen wird, wenn die asynchrone Verarbeitung abgeschlossen ist und die Daten für das datengebundene Steuerelement bereitstellen kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

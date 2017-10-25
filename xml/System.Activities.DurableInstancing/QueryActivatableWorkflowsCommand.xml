@@ -1,0 +1,101 @@
+<Type Name="QueryActivatableWorkflowsCommand" FullName="System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand">
+  <TypeSignature Language="C#" Value="public sealed class QueryActivatableWorkflowsCommand : System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit QueryActivatableWorkflowsCommand extends System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.DurableInstancing.InstancePersistenceCommand</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Befehl dar, den ein generischer Host für einen Instanzspeicher ausführt, um Aktivierungsparameter abzurufen. Der generische Host erstellt mit diesen Aktivierungsparametern einen Workflowhost, der dann eine ausführbare Dienstinstanz lädt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz ist *aktivierbare*, wenn er befindet sich nicht im Zustand "angehalten" oder "abgeschlossen" befindet und die folgenden Bedingungen erfüllt:  
+  
+-   Die Instanz ist *ausführbare*. Eine Instanz in der Beibehaltungsdatenbank wird als ausführbar betrachtet, wenn sie die folgenden Bedingungen erfüllt:  
+  
+    -   Die Instanz ist nicht gesperrt und weist einen ausstehenden Timer auf, der abgelaufen ist.  
+  
+    -   Die Instanz ist nicht gesperrt und sein Status **ausführen**.  
+  
+    -   Die Instanz weist eine abgelaufene Sperre auf.  
+  
+-   Es ist kein Workflowhost vorhanden, der die Instanz laden kann, die auf dem lokalen Computer ausgeführt wird.  
+  
+ Ein Instanzspeicher soll in regelmäßigen Abständen nach aktivierbaren Workflowinstanzen suchen, die zu einem Workflowhost gehören, der den Speicher verwendet. Er soll das <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent>-Element auslösen, wenn eine aktivierbare Instanz im Beibehaltungsspeicher gefunden wird. Wenn der Instanzspeicher keine aktivierbare Instanz im Beibehaltungsspeicher findet, soll er weiterhin den Beibehaltungsspeicher auf aktivierbare Instanzen überwachen.  
+  
+ Nach dem Auslösen von HasActivatableWorkflowEvent soll der Instanzspeicher die Überwachung des Beibehaltungsspeichers auf aktivierbare Instanzen beenden, bis er das <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>-Element empfängt und ausführt. Die Überwachung wird nur dann fortgeführt, wenn die Befehlsausführung keine aktivierbaren Workflowinstanzen zurückgibt.  
+  
+ Wenn ein generischer Host dieses Ereignis empfängt, wird das <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>-Element für den Instanzspeicher ausgeführt, um die zur Erstellung eines Workflowhosts erforderlichen Aktivierungsparameter abzurufen. Der generische Host erstellt mit diesen Aktivierungsparametern einen Workflowhost, der dann die Dienstinstanz lädt und ausführt. Die Aktivierungsparameter für den WAS-Aktivierungstyp sind: der Name der Site, der Anwendungspfad (relativ zur Website) und der Dienstpfad (relativ zur Anwendung). Ein Instanzspeicher kann mehrere Sätze dieser drei Aktivierungsparameter zurückgeben.  
+  
+ Ein generischer Host ist ein Host, einen XName-Parameter mit dem Namen **ActivationType**, die auf einen Wert, der vom Instanzspeicher unterstützt festgelegt werden sollte. Zurzeit unterstützt der SQL-Workflowinstanzspeicher generische Hosts, deren ActivationType-Parameter, die auf den Wert festgelegt: **WAS**. Wenn "ActivationType" überhaupt nicht festgelegt ist, behandelt der SQL-Workflowinstanzspeicher den Host als generischen Host.  
+  
+> [!NOTE]
+>  Der Workflow-Verwaltungsdienst, dass der Code im Lieferumfang von "Dublin" (Application Server Extensions for .NET 4.0) namens ist ein generischer Host, den Aktivierungstyp auf **WAS**.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryActivatableWorkflowsCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTransactionEnlistmentOptional">
+      <MemberSignature Language="C#" Value="protected override bool IsTransactionEnlistmentOptional { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTransactionEnlistmentOptional" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand.IsTransactionEnlistmentOptional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="protected override void Validate (System.Runtime.DurableInstancing.InstanceView view);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Validate(class System.Runtime.DurableInstancing.InstanceView view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand.Validate(System.Runtime.DurableInstancing.InstanceView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="System.Runtime.DurableInstancing.InstanceView" />
+      </Parameters>
+      <Docs>
+        <param name="view">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,220 @@
+<Type Name="EventMetadata" FullName="System.Diagnostics.Eventing.Reader.EventMetadata">
+  <TypeSignature Language="C#" Value="public sealed class EventMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventMetadata extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Metadaten (Eigenschaften und Einstellungen) für ein Ereignis, das in einem Ereignisanbieter definiert ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kann nicht instanziiert werden. Ein <xref:System.Diagnostics.Eventing.Reader.ProviderMetadata> -Objekt definiert eine Liste von <xref:System.Diagnostics.Eventing.Reader.EventMetadata> Objekten, eines für jedes Ereignis, das vom Anbieter definiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventMetadata.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibungsvorlage, die das Ereignis mit dem aktuellen Threadgebietsschema für die Beschreibungssprache ab.</summary>
+        <value>Gibt eine Zeichenfolge, die dem Ereignis zugeordnete Beschreibungsvorlage enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public long Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventMetadata.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner des Ereignisses, das in der Ereignisanbieter definiert ist.</summary>
+        <value>Gibt eine <see langword="long" /> Wert, der Ereignisbezeichner.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keywords">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Diagnostics.Eventing.Reader.EventKeyword&gt; Keywords { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Diagnostics.Eventing.Reader.EventKeyword&gt; Keywords" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventMetadata.Keywords" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Diagnostics.Eventing.Reader.EventKeyword&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kennwörter ab, die dem im Ereignisanbieter definierten Ereignis zugeordnet sind.</summary>
+        <value>Gibt eine aufzählbare Sammlung von <see cref="T:System.Diagnostics.Eventing.Reader.EventKeyword" />-Objekten zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Schlüsselwörter für ein Ereignis werden verwendet, um das Ereignis mit anderen ähnlichen Ereignisse basierend auf der Nutzung der Ereignisse zu gruppieren. Jedes Schlüsselwort stellt ein bit in einer 64-Bit-Maske. Vordefinierte Bitwerte und reservierten Bits belegen die oberen 16 Positionen dieser Maske, die das Manifest, um alle Bits zwischen 0 x 0000000000000001 und 0 x 0000800000000000 verwenden lassen.  
+  
+ Die standard-Ereignis-Schlüsselwörter werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Eventing.Reader.EventLevel Level { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.Eventing.Reader.EventLevel Level" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventMetadata.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ebene, die das Ereignis, das in der Ereignisanbieter definiert ist. Die Ebene definiert den Schweregrad des Ereignisses.</summary>
+        <value>Gibt ein <see cref="T:System.Diagnostics.Eventing.Reader.EventLevel" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der standard-Ereignisebenen werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventLevel> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogLink">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Eventing.Reader.EventLogLink LogLink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.Eventing.Reader.EventLogLink LogLink" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventMetadata.LogLink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLogLink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Link in das Ereignisprotokoll, das dieses Ereignis, wenn der Anbieter das Ereignis veröffentlicht empfängt.</summary>
+        <value>Gibt ein <see cref="T:System.Diagnostics.Eventing.Reader.EventLogLink" />-Objekt zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opcode">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Eventing.Reader.EventOpcode Opcode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.Eventing.Reader.EventOpcode Opcode" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventMetadata.Opcode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventOpcode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Opcode verknüpft sind mit diesem Ereignis, das von einem Ereignisanbieter definiert ist. Der Opcode definiert einen numerischen Wert, der angibt, die Aktivität oder einem Punkt in eine Aktivität, die der Anwendung durchgeführt wurde, wenn sie das Ereignis ausgelöst hat.</summary>
+        <value>Gibt ein <see cref="T:System.Diagnostics.Eventing.Reader.EventOpcode" />-Objekt zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standard-Ereignis Opcodes werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventOpcode> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Task">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Eventing.Reader.EventTask Task { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.Eventing.Reader.EventTask Task" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventMetadata.Task" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventTask</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem Ereignis zugeordneten Aufgabe ab. Eine Aufgabe identifiziert, einen Teil einer Anwendung oder eine Komponente, die ein Ereignis veröffentlicht wird.</summary>
+        <value>Gibt ein <see cref="T:System.Diagnostics.Eventing.Reader.EventTask" />-Objekt zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Task ist ein 16-Bit-Wert mit der ersten 16 Werte reserviert. Dieser Typ kann einen beliebigen Wert zwischen 0 x 0000 und 0xffef verwendet werden.  
+  
+ Die standard-Ereignis Aufgaben werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventTask> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Template">
+      <MemberSignature Language="C#" Value="public string Template { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Template" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventMetadata.Template" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vorlage für das Ereignis ab. Vorlagen werden verwendet, um Daten zu beschreiben, die von einem Anbieter verwendet wird, wenn ein Ereignis veröffentlicht wird. Optional Geben Sie Vorlagen XML, das die Struktur eines Ereignisses enthält. Der XML-Code kann Werte, die vom Herausgeber des Ereignisses enthält, während das Rendern eines Ereignisses eingefügt werden.</summary>
+        <value>Gibt eine Zeichenfolge, die die Vorlage für das Ereignis enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public byte Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventMetadata.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version des Ereignisses, das den Ereignisbezeichner beschreibt.</summary>
+        <value>Gibt einen Byte-Wert zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

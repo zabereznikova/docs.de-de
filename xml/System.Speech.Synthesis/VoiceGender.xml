@@ -1,0 +1,89 @@
+<Type Name="VoiceGender" FullName="System.Speech.Synthesis.VoiceGender">
+  <TypeSignature Language="C#" Value="public enum VoiceGender" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VoiceGender extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.VoiceGender" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert die Werte für das Geschlecht einer gebildeter Stimme an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Speech.Synthesis.VoiceGender>das Geschlecht einer vorhandenen Stimme oder eine Geschlecht-Einstellung kann darauf hinweisen, bei der Auswahl einer Stimme. Alle der <xref:System.Speech.Synthesis.SpeechSynthesizer.SelectVoiceByHints%2A> Methoden und drei der <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> Methoden <xref:System.Speech.Synthesis.VoiceGender> das Geschlecht an, bei der Auswahl einer Stimme. Die <xref:System.Speech.Synthesis.VoiceInfo.Gender%2A> Eigenschaft ruft das Geschlecht eines vorhandenen Stimme mithilfe einer <xref:System.Speech.Synthesis.VoiceGender> Member.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Female">
+      <MemberSignature Language="C#" Value="Female" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.VoiceGender Female = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.VoiceGender.Female" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.VoiceGender</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einer weiblichen Stimme an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Male">
+      <MemberSignature Language="C#" Value="Male" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.VoiceGender Male = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.VoiceGender.Male" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.VoiceGender</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine männlichen Stimme an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Neutral">
+      <MemberSignature Language="C#" Value="Neutral" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.VoiceGender Neutral = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.VoiceGender.Neutral" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.VoiceGender</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine gender-neutral Stimme an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.VoiceGender NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.VoiceGender.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.VoiceGender</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, keine Stimme Gender-Spezifikation.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

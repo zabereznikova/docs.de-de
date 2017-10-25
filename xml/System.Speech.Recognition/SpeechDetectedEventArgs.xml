@@ -1,0 +1,88 @@
+<Type Name="SpeechDetectedEventArgs" FullName="System.Speech.Recognition.SpeechDetectedEventArgs">
+  <TypeSignature Language="C#" Value="public class SpeechDetectedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SpeechDetectedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SpeechDetectedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt Daten von <see cref="E:System.Speech.Recognition.SpeechRecognitionEngine.SpeechDetected" /> oder <see cref="E:System.Speech.Recognition.SpeechRecognizer.SpeechDetected" /> Ereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `SpeechDetected` Ereignis wird ausgelöst, durch die <xref:System.Speech.Recognition.SpeechRecognizer> und <xref:System.Speech.Recognition.SpeechRecognitionEngine> Klassen.  
+  
+ **SpeechDetected** Ereignisse werden generiert, wenn ein Erkennungsmodul Audioeingabe als menschliche Sprache identifiziert werden kann.  
+  
+ <xref:System.Speech.Recognition.SpeechDetectedEventArgs> wird von <xref:System.EventArgs> abgeleitet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt einen Handler für <xref:System.Speech.Recognition.SpeechRecognizer.SpeechDetected?displayProperty=nameWithType> oder <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechDetected?displayProperty=nameWithType> Ereignisse. Der Handler Initialisiert eine Anzeige, jedes Mal, wenn Sprache erkannt wird, und zeigt Statusinformationen, einschließlich audioposition.  
+  
+```  
+_recognizer.SpeechDetected +=  
+  delegate(object sender, SpeechDetectedEventArgs eventArgs)   
+  {  
+  
+    // Clear previous recognition information.  
+    _audioDeviceStatusLabel.Enabled = true;  
+    _audioDeviceStatusLabel.Visible = true;  
+    Utils.DisplayAudioInputFormat(_audioStateLabel, _recognizer);  
+    Utils.DisplayRecognizerState(_recognizerStateLabel, _recognizer.State);  
+    Utils.DisplaySpeechDetected(_speechDetectedLabel, eventArgs.AudioPosition);  
+  };  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AudioPosition">
+      <MemberSignature Language="C#" Value="public TimeSpan AudioPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan AudioPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SpeechDetectedEventArgs.AudioPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position in den Audiostream, in dem Sprache erkannt wurde.</summary>
+        <value>Gibt den Speicherort eines erkannten Ausdrucks innerhalb einer Erkennungsmodul Speech-Puffers zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt einen Handler für <xref:System.Speech.Recognition.SpeechRecognizer.SpeechDetected?displayProperty=nameWithType> oder <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechDetected?displayProperty=nameWithType> Ereignisse. Der Handler Initialisiert eine Anzeige, die jedes Mal Spracherkennung erkannt und Statusinformationen, einschließlich audioposition angezeigt.  
+  
+```  
+_recognizer.SpeechDetected +=  
+  delegate(object sender, SpeechDetectedEventArgs eventArgs)   
+  {  
+  
+    // Clear previous recognition information.  
+    _audioDeviceStatusLabel.Enabled = true;  
+    _audioDeviceStatusLabel.Visible = true;  
+    Utils.DisplayAudioInputFormat(_audioStateLabel, _recognizer);  
+    Utils.DisplayRecognizerState(_recognizerStateLabel, _recognizer.State);  
+    Utils.DisplaySpeechDetected(_speechDetectedLabel, eventArgs.AudioPosition);  
+  };  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

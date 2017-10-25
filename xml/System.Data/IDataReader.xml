@@ -1,0 +1,335 @@
+<Type Name="IDataReader" FullName="System.Data.IDataReader">
+  <TypeSignature Language="C#" Value="public interface IDataReader : IDisposable, System.Data.IDataRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataReader implements class System.Data.IDataRecord, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.IDataReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.IDataRecord</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ermöglicht das Lesen eines oder mehrerer Vorwärtsdatenströme von Resultsets, die durch Ausführen eines Befehls für eine Datenquelle abgerufen wurden, und wird von .NET Framework-Datenanbietern implementiert, die auf relationale Datenbanken zugreifen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.IDataReader> und <xref:System.Data.IDataRecord> Schnittstellen ermöglichen einer erbenden Klasse zum Implementieren einer `DataReader` Klasse, die Möglichkeit, lesen eine oder mehrere vorwärtsströme von Resultsets bereitstellt. Weitere Informationen zu `DataReader` Klassen, finden Sie unter [Retrieving Data Using eines "DataReader"](~/docs/framework/data/adonet/retrieving-data-using-a-datareader.md).  
+  
+ Eine Anwendung erstellt eine Instanz der nicht der <xref:System.Data.IDataReader> -Schnittstelle direkt, sondern erstellt eine Instanz einer Klasse, die erbt <xref:System.Data.IDataReader>.  
+  
+ Klassen, erben <xref:System.Data.IDataReader> müssen Sie die geerbten Member implementieren und definieren Sie in der Regel zusätzliche Elemente, um die anbieterspezifische Funktionalität hinzufügen.  
+  
+ Änderungen an einem Resultset ein weiteres verarbeiten oder thread während des Lesens Daten möglicherweise sichtbar für den Benutzer einer Klasse, die implementiert eine `IDataReader`. Das genaue Verhalten ist jedoch, Anbieter und Zeitpunkt abhängig.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt Instanzen der abgeleiteten Klassen <xref:System.Data.SqlClient.SqlConnection>, <xref:System.Data.SqlClient.SqlCommand>, und <xref:System.Data.SqlClient.SqlDataReader>. Das Beispiel liest durch die Daten, die an die Konsole schreiben. Im Beispiel wird schließlich schließt die <xref:System.Data.SqlClient.SqlDataReader>, und klicken Sie dann die <xref:System.Data.SqlClient.SqlConnection>.  
+  
+ [!code-csharp[Classic WebData SqlDataReader.Read Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataReader.Read Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlDataReader.Read Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataReader.Read Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Zur Förderung der Konsistenz zwischen .NET Framework-Datenanbieter, benennen Sie die erbende Klasse in der Form <paramref name="Prv" /> Befehl, wobei <paramref name="Prv" /> ist die einheitliche Präfix für alle Klassen in einem bestimmten .NET Framework Data Provider-Namespace. Beispielsweise <paramref name="Sql" /> ist das Präfix des der <see cref="T:System.Data.SqlClient.SqlDataAdapter" /> -Klasse in der <see langword="System.Data.SqlClient" /> Namespace.  
+  
+ Benutzer erstellen keine Instanz von einem <see langword="DataReader" /> -Klasse direkt verwendet. Rufen sie stattdessen die <see langword="DataReader" /> -Instanz über die <see langword="ExecuteReader" /> Methode der <see langword="Command" /> Objekt. Aus diesem Grund sollten Sie markieren <see langword="DataReader" /> Konstruktoren als intern.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt das <see cref="T:System.Data.IDataReader" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Müssen Sie explizit aufrufen der <xref:System.Data.IDataReader.Close%2A> Methode, wenn Sie in der Verwendung von sind die <xref:System.Data.IDataReader> an die zugeordnete <xref:System.Data.IDbConnection> für andere Zwecke.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Depth">
+      <MemberSignature Language="C#" Value="public int Depth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Depth" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDataReader.Depth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Tiefe der Schachtelung für die aktuelle Zeile angibt.</summary>
+        <value>Die Schachtelungsebene.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die äußerste Tabelle hat die Tiefe 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemaTable">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable GetSchemaTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.DataTable GetSchemaTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataReader.GetSchemaTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Data.DataTable" /> zurück, die die Spaltenmetadaten des <see cref="T:System.Data.IDataReader" /> beschreibt.</summary>
+        <returns>Eine <see cref="T:System.Data.DataTable" />, die die Spaltenmetadaten beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung der <xref:System.Data.IDataReader.GetSchemaTable%2A> Methode für die .NET Framework-Datenanbieter für OLE DB ordnet der OLE DB-IColumnsRowset:: GetColumnsRowset-Methode, bei der Implementierung für andere .NET Framework-Datenanbieter eine OLE DB-Anbieter-Ebene nicht verwenden. Die Reihenfolge, in der <xref:System.Data.IDataReader.GetSchemaTable%2A> gibt Metadaten zu jeder Spalte in einer Tabelle und die DataReader-Spalten, die zurückgegeben werden, variieren je nach welchen Datenanbieter Sie verwenden. Die folgende Tabelle enthält Member, implementieren und -Datenanbieter <xref:System.Data.IDataReader.GetSchemaTable%2A>.  
+  
+|Datenanbieter|Member|  
+|-------------------|------------|  
+|.NET-Datenanbieter für ODBC|<xref:System.Data.Odbc.OdbcDataReader.GetSchemaTable%2A?displayProperty=nameWithType>.|  
+|.NET-Datenanbieter für OLE DB|<xref:System.Data.OleDb.OleDbDataReader.GetSchemaTable%2A?displayProperty=nameWithType>.|  
+|.NET-Datenanbieter für Oracle|<xref:System.Data.OracleClient.OracleDataReader.GetSchemaTable%2A?displayProperty=nameWithType>.|  
+|.NET-Datenanbieter für SQLServer|<xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A?displayProperty=nameWithType>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der <see cref="T:System.Data.IDataReader" /> ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosed">
+      <MemberSignature Language="C#" Value="public bool IsClosed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDataReader.IsClosed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Datenreader geschlossen ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Datenreader geschlossen ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.IDataReader.IsClosed%2A>und <xref:System.Data.IDataReader.RecordsAffected%2A> sind die einzigen Eigenschaften, die Sie, nachdem aufrufen können die <xref:System.Data.IDataReader> geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextResult">
+      <MemberSignature Language="C#" Value="public bool NextResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool NextResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataReader.NextResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Datenleser beim Lesen der Ergebnisse von SQL-Anweisungen auf das nächste Ergebnis.</summary>
+        <returns>
+          <see langword="true" />, wenn mehrere Zeilen vorhanden sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet, um mehrere Ergebnisse zu verarbeiten, die durch Ausführen von SQL-Batchanweisungen abgerufen werden kann.  
+  
+ Standardmäßig wird der Datenleser auf das erste Ergebnis positioniert.  
+  
+ [!code-csharp[IDataReader_NextResult#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/idatareader_nextresult/cs/source.cs#1)]
+ [!code-vb[IDataReader_NextResult#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/idatareader_nextresult/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den <see cref="T:System.Data.IDataReader" /> auf den nächsten Datensatz.</summary>
+        <returns>
+          <see langword="true" />, wenn mehrere Zeilen vorhanden sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardposition des der <xref:System.Data.IDataReader> wird vor dem ersten Datensatz. Sie müssen daher Aufrufen <xref:System.Data.IDataReader.Read%2A> um den Zugriff auf alle Daten zu beginnen.  
+  
+ Während der Datenleser verwendet wird, ist die zugeordnete Verbindung Informationsfluss der <xref:System.Data.IDataReader>. Dies ist der Fall, bis <xref:System.Data.IDataReader.Close%2A> aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt Instanzen von drei abgeleiteten Klassen <xref:System.Data.OleDb.OleDbConnection>, wird ein <xref:System.Data.OleDb.OleDbCommand>, und ein <xref:System.Data.OleDb.OleDbDataReader>. Das Beispiel liest durch die Daten, die an die Konsole schreiben. Im Beispiel wird schließlich schließt die <xref:System.Data.OleDb.OleDbDataReader>, und klicken Sie dann die <xref:System.Data.OleDb.OleDbConnection>.  
+  
+ [!code-csharp[Classic WebData IDataReader.Read Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData IDataReader.Read Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData IDataReader.Read Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData IDataReader.Read Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordsAffected">
+      <MemberSignature Language="C#" Value="public int RecordsAffected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RecordsAffected" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDataReader.RecordsAffected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der durch die Ausführung der SQL-Anweisung geänderten, eingefügten oder gelöschten Zeilen ab.</summary>
+        <value>Die Anzahl der geänderten, eingefügten oder gelöschten Zeilen; 0, wenn keine Zeilen betroffen sind, oder bei der Anweisung ein Fehler aufgetreten ist, und -1 für SELECT-Anweisungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.IDataReader.RecordsAffected%2A> Eigenschaft ist nicht festgelegt, bis alle Zeilen gelesen wurden, und Sie schließen die <xref:System.Data.IDataReader>.  
+  
+ <xref:System.Data.IDataReader.IsClosed%2A>und <xref:System.Data.IDataReader.RecordsAffected%2A> sind die einzigen Eigenschaften, die Sie, nachdem aufrufen können die <xref:System.Data.IDataReader> geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

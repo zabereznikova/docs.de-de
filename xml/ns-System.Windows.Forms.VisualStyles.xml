@@ -1,0 +1,21 @@
+<Namespace Name="System.Windows.Forms.VisualStyles">
+  <Docs>
+    <summary>Die <see cref="N:System.Windows.Forms.VisualStyles" /> -Namespace enthält Klassen für das Rendern von Steuerelementen und anderen Windows-Benutzer die Elemente der Benutzeroberfläche (UI) mit visuellen Stilen in Betriebssystemen, die sie unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles> -Namespace enthält die folgenden Hauptklassen:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>ist eine Klasse Foundation zum Identifizieren von jedes Steuerelement oder UI-Element durch visuelle Stile unterstützt. Zusätzlich zu <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> selbst enthält der <xref:System.Windows.Forms.VisualStyles>-Namespace viele geschachtelte Klassen von <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> mit `static`-Eigenschaften, die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für jeden Zustand eines Steuerelements, Teil eines Steuerelements oder jedes UI-Element zurückgeben, der bzw. das von visuellen Stilen unterstützt wird. Z. B. die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.PushButton.Pressed%2A> Eigenschaft von der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.PushButton> -Klasse zurückgegeben wird ein <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> , eine Schaltfläche in den Zustand "gedrückt" mit visuellen Stilen identifiziert.  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>Stellt Methoden zum Zeichnen und Abrufen von Informationen zu den einzelnen <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> durch den aktuellen visuellen Stil des Betriebssystems definiert. Die Informationen, die über ein Element abgerufen werden können, beinhalten die Standardgröße, den Hintergrundtyp und die Farbdefinitionen.  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation>bietet eine Reihe von `static` Eigenschaften, die Informationen zu den aktuellen visuellen Stil des Betriebssystems angeben.  
+  
+ Die <xref:System.Windows.Forms.VisualStyles> Namespace enthält auch eine Reihe von Enumerationen. Einige dieser Enumerationen, z. B. <xref:System.Windows.Forms.VisualStyles.PushButtonState> und <xref:System.Windows.Forms.VisualStyles.ComboBoxState>, Statusüberwachungsdefinitionen für verwandte visuellen Stilelemente bereitstellen. Die meisten anderen Enumerationen unterstützen <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Methoden, die Informationen über ein bestimmtes Element zurückzugeben. Z. B. die <xref:System.Windows.Forms.VisualStyles.EnumProperty> Enumeration stellt die möglichen Argumentwerte für die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue%2A> Methode. Schließlich die <xref:System.Windows.Forms.VisualStyles.VisualStyleState> -Enumeration enthält Werte, die definieren, wie visuelle Stile werden derzeit für die Anwendung angewendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

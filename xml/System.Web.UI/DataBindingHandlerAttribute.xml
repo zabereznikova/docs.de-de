@@ -1,0 +1,237 @@
+<Type Name="DataBindingHandlerAttribute" FullName="System.Web.UI.DataBindingHandlerAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DataBindingHandlerAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataBindingHandlerAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataBindingHandlerAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine Entwurfszeit-Klasse, die die Datenbindung von Steuerelementen in einem Designer ausführt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird einen Datenbindung wird Ereignishandler definiert, mit dem Namen `MyDataBindingHandler`, um die vom Designer im Bearbeitungsmodus verwendet werden. Beim Beenden des Bearbeitungsmodus der `Text` Eigenschaftswert wird angezeigt.  
+  
+ [!code-csharp[SystemWebUI_DataBindingHandlerAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_DataBindingHandlerAttribute/CS/databindinghandlerattribute.cs#1)]
+ [!code-vb[SystemWebUI_DataBindingHandlerAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_DataBindingHandlerAttribute/VB/databindinghandlerattribute.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataBindingHandlerAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingHandlerAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.DataBindingHandlerAttribute" /> -Klasse ohne Parameter. Dies ist der Standardkonstruktor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.DataBindingHandlerAttribute.%23ctor%2A> Konstruktor.  
+  
+ [!code-csharp[DataBindingHandlerAttribute_Samp2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataBindingHandlerAttribute_Samp2/CS/databindinghandlerattribute_samp2.cs#1)]
+ [!code-vb[DataBindingHandlerAttribute_Samp2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataBindingHandlerAttribute_Samp2/VB/databindinghandlerattribute_samp2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataBindingHandlerAttribute (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingHandlerAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der vollqualifizierte Name des Handlers Datenbindungsfunktionen <see cref="T:System.Type" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataBindingHandlerAttribute" />-Klasse mit dem angegebenen Typnamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name dieses Konstruktors ist der vollqualifizierte Name des Typs, einschließlich des Assemblynamens.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.DataBindingHandlerAttribute.%23ctor%2A> Konstruktor, um eine benutzerdefinierte <xref:System.Web.UI.Design.DataBindingHandler> Klasse für das Web-Steuerelement.  
+  
+ [!code-csharp[DataBindingHandlerAttribute_Samp1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataBindingHandlerAttribute_Samp1/CS/databindinghandlerattribute_samp1.cs#1)]
+ [!code-vb[DataBindingHandlerAttribute_Samp1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataBindingHandlerAttribute_Samp1/VB/databindinghandlerattribute_samp1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataBindingHandlerAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingHandlerAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> für den Handler für die Datenbindung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.DataBindingHandlerAttribute" /> Klasse des angegebenen <see cref="T:System.Type" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Syntax für dieses Attribut ist:  
+  
+```  
+[DataBindingHandlerAttribute  
+  (typeof(dataBindingHandlerType))]  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird einen Datenbindung wird Ereignishandler definiert, mit dem Namen `MyDataBindingHandler`, um die vom Designer im Bearbeitungsmodus verwendet werden. Beim Beenden des Bearbeitungsmodus der `Text` Eigenschaftswert wird angezeigt.  
+  
+ [!code-csharp[SystemWebUI_DataBindingHandlerAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_DataBindingHandlerAttribute/CS/databindinghandlerattribute.cs#1)]
+ [!code-vb[SystemWebUI_DataBindingHandlerAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_DataBindingHandlerAttribute/VB/databindinghandlerattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.DataBindingHandlerAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.DataBindingHandlerAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataBindingHandlerAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataBindingHandlerAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definiert das Standardattribut für die <see cref="T:System.Web.UI.DataBindingHandlerAttribute" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist das Standardattribut verwendet, wenn das Attribut nicht angegeben ist. Dieses Feld ist schreibgeschützt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz von der <xref:System.Web.UI.DataBindingHandlerAttribute> -Klasse, die festgelegt wird, um <xref:System.Web.UI.DataBindingHandlerAttribute.Default>.  
+  
+ [!code-csharp[DataBindingHandlerAttribute_Default#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataBindingHandlerAttribute_Default/CS/databindinghandlerattribute_default.cs#1)]
+ [!code-vb[DataBindingHandlerAttribute_Default#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataBindingHandlerAttribute_Default/VB/databindinghandlerattribute_default.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingHandlerAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende mit dem aktuellen Objekt <see cref="T:System.Web.UI.DataBindingHandlerAttribute" />.</param>
+        <summary>Stellt fest, ob zwei Objektinstanzen gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="obj" /> entspricht der <see cref="T:System.Web.UI.DataBindingHandlerAttribute" /> Objekt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingHandlerAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlerTypeName">
+      <MemberSignature Language="C#" Value="public string HandlerTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HandlerTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBindingHandlerAttribute.HandlerTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typnamen den Datenbindungsfunktionen Handler ab.</summary>
+        <value>Der Typname des Handlers. Wenn der Typname ist <see langword="null" />, gibt diese Eigenschaft eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende code Beispiel ruft die <xref:System.Web.UI.DataBindingHandlerAttribute.HandlerTypeName%2A> Eigenschaft von einer Instanz von der <xref:System.Web.UI.DataBindingHandlerAttribute> Klasse.  
+  
+ [!code-csharp[DataBindingHandlerAttribute_HandlerTypeName#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataBindingHandlerAttribute_HandlerTypeName/CS/databindinghandlerattribute_handlertypename.cs#1)]
+ [!code-vb[DataBindingHandlerAttribute_HandlerTypeName#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataBindingHandlerAttribute_HandlerTypeName/VB/databindinghandlerattribute_handlertypename.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

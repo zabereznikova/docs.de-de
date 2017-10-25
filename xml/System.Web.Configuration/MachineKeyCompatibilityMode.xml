@@ -1,0 +1,81 @@
+<Type Name="MachineKeyCompatibilityMode" FullName="System.Web.Configuration.MachineKeyCompatibilityMode">
+  <TypeSignature Language="C#" Value="public enum MachineKeyCompatibilityMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MachineKeyCompatibilityMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.MachineKeyCompatibilityMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, welche Verschlüsselungsmethoden verwendet werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Web.Configuration.MachineKeyCompatibilityMode> Werte beim Festlegen der <xref:System.Web.Configuration.MachineKeySection.CompatibilityMode%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Framework20SP1">
+      <MemberSignature Language="C#" Value="Framework20SP1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyCompatibilityMode Framework20SP1 = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyCompatibilityMode.Framework20SP1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyCompatibilityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die Verschlüsselungsmethoden, die in .NET Framework-Versionen vor Version 2.0 implementiert wurden Service Pack 2. Initialisierungsvektoren (IVs) werden für alle Verschlüsselungsvorgänge außer Speichern von verschlüsselten Kennwörtern in der Mitgliedschaftsdatenbank ASP.NET verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Framework20SP2">
+      <MemberSignature Language="C#" Value="Framework20SP2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyCompatibilityMode Framework20SP2 = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyCompatibilityMode.Framework20SP2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyCompatibilityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die stärkeren Verschlüsselungsmethoden, die in .NET Framework, Version 2.0 SP2 und höheren Versionen verfügbar sind. Initialisierungsvektoren (IVs) werden für alle Verschlüsselungsvorgänge verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Framework45">
+      <MemberSignature Language="C#" Value="Framework45" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyCompatibilityMode Framework45 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyCompatibilityMode.Framework45" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyCompatibilityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden von Verschlüsselungsmethoden, die in .NET Framework Version 4.5 und höher verfügbar sind. Im Vergleich zu den Verschlüsselungsmethoden für die verwendeten <see cref="F:System.Web.Configuration.MachineKeyCompatibilityMode.Framework20SP1" /> und <see cref="F:System.Web.Configuration.MachineKeyCompatibilityMode.Framework20SP2" />, der verschlüsselte Text, der durch die standardmäßige kryptografischen Routinen generiert wird etwas kleiner ist und mehr Stabilität gegen bestimmte Klassen theoretische Angriffe ist. Auch integriert [!INCLUDE[win8](~/includes/win8-md.md)] verzeichnisverwaltung um erforderlichen kryptografische Schlüssel zu erhalten. Diese Option ermöglicht Ihnen die Angabe von benutzerdefinierten kryptografischen Routinen schreiben Sie eine Klasse, abgeleitet wird, auch <see cref="T:System.Security.Cryptography.DataProtector" /> und geben den Klassennamen in der <see cref="P:System.Web.Configuration.MachineKeySection.DataProtectorType" /> Eigenschaft.  
+  
+ Die folgende Konfiguration gelten für diese Option:  
+  
+ 1. Wenn die <see cref="P:System.Web.Configuration.MachineKeySection.DataProtectorType" /> Eigenschaft hat den Wert der <see cref="P:System.Web.Configuration.MachineKeySection.ApplicationName" /> Eigenschaft muss auch einen Wert aufweisen.  
+  
+ 2. Die <see cref="P:System.Web.Configuration.MachineKeySection.Validation" /> Attribut muss in einer Klasse, die von abgeleitet ist eine systemdefinierte Überprüfungsalgorithmus (z. B. MD5, SHA1, HMACSHA256, HMACSHA384 oder HMACSHA512) oder eine benutzerdefinierte Validierungsalgorithmus angeben der <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> Klasse. Die Werte AES- und 3DES-Verschlüsselungsalgorithmen sind nicht Überprüfung Algorithmen.  
+  
+ Wenn Sie diese Option angeben, Formularauthentifizierungstickets immer sowohl verschlüsselt und signiert, unabhängig von der angegebene Wert für die <see cref="P:System.Web.Configuration.FormsAuthenticationConfiguration.Protection" /> Eigenschaft. Ist außerdem sowohl verschlüsselt und signiert werden, wenn einer Seite <see cref="P:System.Web.UI.Page.EnableViewStateMac" /> Eigenschaft <paramref name="true" /> oder <see cref="P:System.Web.UI.Page.ViewStateEncryptionMode" /> Eigenschaft ist <see cref="F:System.Web.UI.ViewStateEncryptionMode.Always" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

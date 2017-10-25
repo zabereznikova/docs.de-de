@@ -1,0 +1,464 @@
+<Type Name="VerificationAttribute" FullName="System.Web.UI.VerificationAttribute">
+  <TypeSignature Language="C#" Value="public sealed class VerificationAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit VerificationAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.VerificationAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Property, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert das Attribut für die Metadaten einer Web Content Eingabehilfen-Regel an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Web.UI.VerificationAttribute> Klasse definiert eine Web Content Eingabehilfen-Regel, die überprüft werden kann. Weitere Informationen über Web Content Barrierefreiheits-Richtlinien finden Sie unter der [Website des World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125).  
+  
+ Die minimale Menge an Informationen erforderlich, um eine Instanz von definieren eine <xref:System.Web.UI.VerificationAttribute> enthält:  
+  
+-   Eine Richtlinie, die die Überprüfungsregel darstellt. In den Konstruktor angegebene Wert der <xref:System.Web.UI.VerificationAttribute.Guideline%2A> Eigenschaft.  
+  
+-   Ein Prüfpunkt der Richtlinie. In den Konstruktor angegebene Wert der <xref:System.Web.UI.VerificationAttribute.Checkpoint%2A> Eigenschaft.  
+  
+-   Ein Prüfpunktpriorität.  In den Konstruktor angegebene Wert der <xref:System.Web.UI.VerificationAttribute.Priority%2A> Eigenschaft.  
+  
+-   Ein <xref:System.Web.UI.VerificationReportLevel> Enumerationswert, der die Berichterstellungsebene darstellt, für die Regel sollte, angehört. In den Konstruktor angegebene Wert der <xref:System.Web.UI.VerificationAttribute.VerificationReportLevel%2A> Eigenschaft.  
+  
+-   Eine Meldung, die gemeldet wird, wenn die Überprüfungsregel "true" ist. In den Konstruktor angegebene Wert der <xref:System.Web.UI.VerificationAttribute.Message%2A> Eigenschaft.  
+  
+ Optionale Eigenschaften der Überprüfungsregel, die beim Erstellen einer Instanz angegeben werden können:  
+  
+-   Ein <xref:System.Web.UI.VerificationRule> -Enumerationswert ab, der darstellt, wie die Überprüfungsregel interpretiert werden sollen. In den Konstruktor angegebene Wert der <xref:System.Web.UI.VerificationAttribute.VerificationRule%2A> Eigenschaft.  
+  
+-   Ein <xref:System.Web.UI.VerificationConditionalOperator> -Enumerationswert ab, der den Operator in der bedingte Ausdruck, der zum Testen der Überprüfungsregel darstellt. In den Konstruktor angegebene Wert der <xref:System.Web.UI.VerificationAttribute.VerificationConditionalOperator%2A> Eigenschaft.  
+  
+-   Eine Richtlinie-URL Eingabehilfen Verweis. In den Konstruktor angegebene Wert der <xref:System.Web.UI.VerificationAttribute.GuidelineUrl%2A> Eigenschaft.  
+  
+-   Ein bedingter Wert, rechts neben einem bedingten Ausdruck darstellt. In den Konstruktor angegebene Wert der <xref:System.Web.UI.VerificationAttribute.ConditionalValue%2A> Eigenschaft.  
+  
+-   Eine bedingte-Eigenschaft, die die linke Seite eines bedingten Ausdrucks darstellt. In den Konstruktor angegebene Wert der <xref:System.Web.UI.VerificationAttribute.ConditionalProperty%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.VerificationAttribute> Metadaten definierten Klasse bzw. Indexer Deklarationen werden kann.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.VerificationAttribute> Klasse. In der Metadatendefinition des Überprüfung werden die Richtlinien, verwendet "WCAG," Web Content Eingabehilfen-Richtlinie und "ADA," Amerikaner mit Behinderungen Act-Richtlinien. Weitere Informationen finden Sie unter der [Website des World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125).  
+  
+ Die Prüfpunkte verwendet werden, "1.1" und "1194.22(a)""für WCAG und ADA Prüfpunkte zum sicherstellen, die ein entsprechende Text für nicht-Textelemente vorhanden ist. Die <xref:System.Web.UI.VerificationAttribute> wird angewendet, um die `ImageText` Eigenschaft, die für die textentsprechung von einer anderen Eigenschaft mit dem Namen `ImageProperty`. Wenn die `ImageText` Eigenschaft nicht festgelegt ist, die Eingabehilfen-Überprüfung wird die Nachricht zurückgegeben "das Bild fehlt einen entsprechende Text."  
+  
+ [!code-csharp[System.Web.UI.VerificationAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.VerificationAttribute/cs/VerificationAttributeExample.cs#1)]
+ [!code-vb[System.Web.UI.VerificationAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.VerificationAttribute/vb/VerificationAttributeExample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VerificationAttribute (string guideline, string checkpoint, System.Web.UI.VerificationReportLevel reportLevel, int priority, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string guideline, string checkpoint, valuetype System.Web.UI.VerificationReportLevel reportLevel, int32 priority, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.VerificationAttribute.#ctor(System.String,System.String,System.Web.UI.VerificationReportLevel,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="guideline" Type="System.String" />
+        <Parameter Name="checkpoint" Type="System.String" />
+        <Parameter Name="reportLevel" Type="System.Web.UI.VerificationReportLevel" />
+        <Parameter Name="priority" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="guideline">Die Eingabehilfen Führungslinie Überprüfungsregel beschreibt.</param>
+        <param name="checkpoint">Der Prüfpunkt in der Richtlinie.</param>
+        <param name="reportLevel">Einer der <see cref="T:System.Web.UI.VerificationReportLevel" />-Werte.</param>
+        <param name="priority">Die Priorität des Prüfpunkts.</param>
+        <param name="message">Die Meldung angezeigt, wenn die Überprüfungsregel "true" ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.VerificationAttribute" /> Klasse mit Eingabehilfen-Richtlinie, Prüfpunkt, Berichterstellungsebene, Checkpoint-Priorität und Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.VerificationAttribute.%23ctor%2A> Konstruktor, der die <xref:System.Web.UI.VerificationAttribute> Klasse gibt die minimale Menge an Informationen, die erforderlich sind, definieren eine Überprüfungsregel an. Die folgenden Standardwerte für die <xref:System.Web.UI.VerificationAttribute> Instanz wird angenommen, dass:  
+  
+-   Die <xref:System.Web.UI.VerificationAttribute.VerificationRule%2A> Eigenschaftensatz als <xref:System.Web.UI.VerificationRule.Required>.  
+  
+-   Die <xref:System.Web.UI.VerificationAttribute.VerificationConditionalOperator%2A> Eigenschaftensatz als <xref:System.Web.UI.VerificationConditionalOperator.Equals>.  
+  
+-   Die <xref:System.Web.UI.VerificationAttribute.GuidelineUrl%2A> Eigenschaft wird festgelegt, wie eine leere Zeichenfolge ("").  
+  
+-   Die <xref:System.Web.UI.VerificationAttribute.ConditionalValue%2A> Eigenschaft wird festgelegt, wie eine leere Zeichenfolge ("").  
+  
+-   Die <xref:System.Web.UI.VerificationAttribute.ConditionalProperty%2A> Eigenschaft wird festgelegt, wie eine leere Zeichenfolge ("").  
+  
+-   Um die Werte der Eigenschaften in der vorangehenden Liste über die Standardwerte angeben, verwenden Sie die <xref:System.Web.UI.VerificationAttribute.%23ctor%2A> oder <xref:System.Web.UI.VerificationAttribute.%23ctor%2A> Konstruktorüberladungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VerificationAttribute (string guideline, string checkpoint, System.Web.UI.VerificationReportLevel reportLevel, int priority, string message, System.Web.UI.VerificationRule rule, string conditionalProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string guideline, string checkpoint, valuetype System.Web.UI.VerificationReportLevel reportLevel, int32 priority, string message, valuetype System.Web.UI.VerificationRule rule, string conditionalProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.VerificationAttribute.#ctor(System.String,System.String,System.Web.UI.VerificationReportLevel,System.Int32,System.String,System.Web.UI.VerificationRule,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="guideline" Type="System.String" />
+        <Parameter Name="checkpoint" Type="System.String" />
+        <Parameter Name="reportLevel" Type="System.Web.UI.VerificationReportLevel" />
+        <Parameter Name="priority" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="rule" Type="System.Web.UI.VerificationRule" />
+        <Parameter Name="conditionalProperty" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="guideline">Die Eingabehilfen Führungslinie Überprüfungsregel beschreibt.</param>
+        <param name="checkpoint">Der Prüfpunkt in der Richtlinie.</param>
+        <param name="reportLevel">Einer der <see cref="T:System.Web.UI.VerificationReportLevel" />-Werte.</param>
+        <param name="priority">Die Priorität des Prüfpunkts.</param>
+        <param name="message">Die Meldung angezeigt, wenn die Überprüfungsregel "true" ist.</param>
+        <param name="rule">Eines der <see cref="T:System.Web.UI.VerificationRule" />Werte.</param>
+        <param name="conditionalProperty">Die linke Seite des ein bedingter Ausdruck verwendet, um zu überprüfen, ob die Barrierefreiheitsregel.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.VerificationAttribute" /> Klasse mit Eingabehilfen-Richtlinie, Checkpoint, Berichtebene, Prüfpunktpriorität, die Fehlermeldung, <see cref="T:System.Web.UI.VerificationRule" />.value und zugehörige bedingte-Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `conditionalProperty` -Parameter ist eine andere Eigenschaft, die als Teil des bedingten Ausdrucks zum Auswerten der Überprüfungsregel verwendet wird. Angenommen, wenn der Regelparameter ist <xref:System.Web.UI.VerificationRule.NotEmptyString> und der zugehörigen Eigenschaft gemäß `conditionalProperty` muss sich nicht auf eine leere Zeichenfolge ("").  
+  
+ Die folgenden Standardwerte für die <xref:System.Web.UI.VerificationAttribute> Instanz wird angenommen, dass:  
+  
+-   Die <xref:System.Web.UI.VerificationAttribute.VerificationConditionalOperator%2A> Eigenschaftensatz als <xref:System.Web.UI.VerificationConditionalOperator.Equals>.  
+  
+-   Die <xref:System.Web.UI.VerificationAttribute.GuidelineUrl%2A> Eigenschaft wird festgelegt, wie eine leere Zeichenfolge ("").  
+  
+-   Die <xref:System.Web.UI.VerificationAttribute.ConditionalProperty%2A> Eigenschaft wird festgelegt, wie eine leere Zeichenfolge ("").  
+  
+ Um die Werte der Eigenschaften in der vorangehenden Liste über die Standardwerte angeben, verwenden die <xref:System.Web.UI.VerificationAttribute.%23ctor%2A> Überladung des Konstruktors.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VerificationAttribute (string guideline, string checkpoint, System.Web.UI.VerificationReportLevel reportLevel, int priority, string message, System.Web.UI.VerificationRule rule, string conditionalProperty, System.Web.UI.VerificationConditionalOperator conditionalOperator, string conditionalValue, string guidelineUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string guideline, string checkpoint, valuetype System.Web.UI.VerificationReportLevel reportLevel, int32 priority, string message, valuetype System.Web.UI.VerificationRule rule, string conditionalProperty, valuetype System.Web.UI.VerificationConditionalOperator conditionalOperator, string conditionalValue, string guidelineUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.VerificationAttribute.#ctor(System.String,System.String,System.Web.UI.VerificationReportLevel,System.Int32,System.String,System.Web.UI.VerificationRule,System.String,System.Web.UI.VerificationConditionalOperator,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="guideline" Type="System.String" />
+        <Parameter Name="checkpoint" Type="System.String" />
+        <Parameter Name="reportLevel" Type="System.Web.UI.VerificationReportLevel" />
+        <Parameter Name="priority" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="rule" Type="System.Web.UI.VerificationRule" />
+        <Parameter Name="conditionalProperty" Type="System.String" />
+        <Parameter Name="conditionalOperator" Type="System.Web.UI.VerificationConditionalOperator" />
+        <Parameter Name="conditionalValue" Type="System.String" />
+        <Parameter Name="guidelineUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="guideline">Die Eingabehilfen Führungslinie Überprüfungsregel beschreibt.</param>
+        <param name="checkpoint">Der Prüfpunkt in der Richtlinie.</param>
+        <param name="reportLevel">Einer der <see cref="T:System.Web.UI.VerificationReportLevel" />-Werte.</param>
+        <param name="priority">Die Priorität des Prüfpunkts.</param>
+        <param name="message">Die Meldung angezeigt, wenn die Überprüfungsregel "true" ist.</param>
+        <param name="rule">Eines der <see cref="T:System.Web.UI.VerificationRule" />Werte.</param>
+        <param name="conditionalProperty">Die linke Seite des ein bedingter Ausdruck verwendet, um zu überprüfen, ob die Barrierefreiheitsregel.</param>
+        <param name="conditionalOperator">Einer der <see cref="T:System.Web.UI.VerificationConditionalOperator" />-Werte.</param>
+        <param name="conditionalValue">Die rechte Seite eines bedingten Ausdrucks verwendet, um zu überprüfen, ob die Barrierefreiheitsregel.</param>
+        <param name="guidelineUrl">Eine Referenz-URL für <c>Richtlinie</c>.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Web.UI.VerificationAttribute" /> Klasse mit Eingabehilfen-Richtlinie, Checkpoint, Berichtebene, Prüfpunktpriorität, Fehlermeldung <see cref="T:System.Web.UI.VerificationRule" />.value, zugehöriger bedingter Eigenschaft, einen verknüpften bedingte Eigenschaftswert und ein Referenz-URL-Richtlinie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.Web.UI.VerificationAttribute.%23ctor%2A> ermöglicht Ihnen die Erstellung eine Instanz von der <xref:System.Web.UI.VerificationAttribute> Klasse mit allen möglichen Eigenschaften angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Checkpoint">
+      <MemberSignature Language="C#" Value="public string Checkpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Checkpoint" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.VerificationAttribute.Checkpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Prüfpunktverweis in der angegebenen <see cref="P:System.Web.UI.VerificationAttribute.Guideline" /> Eigenschaft.</summary>
+        <value>Eine Zeichenfolge, die den Prüfpunktverweis darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.VerificationAttribute.Checkpoint%2A> Eigenschaft wird festgelegt, wenn die <xref:System.Web.UI.VerificationAttribute> -Instanz erstellt und ist erforderlich.  
+  
+ Für das Web Content Accessibility Guidelines auf definiert die [Website des World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125) die <xref:System.Web.UI.VerificationAttribute.Checkpoint%2A> Eigenschaft als Leitlinie Zahl gefolgt von einem Punkt (.) gefolgt von einem Prüfpunktnummer angegeben ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalProperty">
+      <MemberSignature Language="C#" Value="public string ConditionalProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConditionalProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.VerificationAttribute.ConditionalProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab der linken Seite eines bedingten Ausdrucks als Teil des Prüfpunkts Eingabehilfen Überprüfung verwendet.</summary>
+        <value>Die linke Seite des bedingten Ausdrucks. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.VerificationAttribute.ConditionalProperty%2A> Eigenschaft kann festgelegt werden, wenn die <xref:System.Web.UI.VerificationAttribute> Instanz erstellt wird, ist jedoch optional. Wenn Sie einen Konstruktor verwenden, der keine akzeptiert eine `conditionalProperty` Parameter, der Standardwert eine leere Zeichenfolge ("") verwendet wird.  
+  
+ Die <xref:System.Web.UI.VerificationAttribute.ConditionalValue%2A> -Eigenschaft ist die rechte Seite oder Wert, der ein bedingter Ausdruck, der die Überprüfung des Prüfpunkts Barrierefreiheit verwendet wird. Die linke Seite des bedingten Ausdrucks wird angegeben, mit der <xref:System.Web.UI.VerificationAttribute.ConditionalProperty%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalValue">
+      <MemberSignature Language="C#" Value="public string ConditionalValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConditionalValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.VerificationAttribute.ConditionalValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, die rechts neben einem bedingten Ausdruck, der als Teil des Prüfpunkts Eingabehilfen Überprüfung verwendet.</summary>
+        <value>Rechts neben einem bedingten Ausdruck. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.VerificationAttribute.ConditionalValue%2A> Eigenschaft kann festgelegt werden, wenn die <xref:System.Web.UI.VerificationAttribute> Instanz erstellt wird, ist jedoch optional. Wenn Sie einen Konstruktor verwenden, der keine akzeptiert eine `conditionalValue` Parameter, der Standardwert eine leere Zeichenfolge ("") verwendet wird.  
+  
+ Die <xref:System.Web.UI.VerificationAttribute.ConditionalValue%2A> -Eigenschaft ist die rechte Seite oder Wert, der ein bedingter Ausdruck, der die Überprüfung des Prüfpunkts Barrierefreiheit verwendet wird. Die linke Seite des bedingten Ausdrucks wird angegeben, mit der <xref:System.Web.UI.VerificationAttribute.ConditionalProperty%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Guideline">
+      <MemberSignature Language="C#" Value="public string Guideline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Guideline" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.VerificationAttribute.Guideline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Richtlinie, die für die Überprüfung der Eingabehilfen verwendet.</summary>
+        <value>Eine Zeichenfolge, die die Richtlinie darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.VerificationAttribute.Guideline%2A> Eigenschaft wird festgelegt, wenn die <xref:System.Web.UI.VerificationAttribute> -Instanz erstellt und ist erforderlich.  
+  
+ Beispiele für Richtlinien sind "WCAG 1.1" und "ADA508 sind".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GuidelineUrl">
+      <MemberSignature Language="C#" Value="public string GuidelineUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GuidelineUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.VerificationAttribute.GuidelineUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft der URL kann verwendet werden, um weitere Informationen zu den Richtlinien für Eingabehilfen im angegebenen erhalten die <see cref="P:System.Web.UI.VerificationAttribute.Guideline" /> Eigenschaft.</summary>
+        <value>Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.VerificationAttribute.GuidelineUrl%2A> Eigenschaft kann festgelegt werden, wenn die <xref:System.Web.UI.VerificationAttribute> Instanz erstellt wird, ist jedoch optional. Wenn Sie einen Konstruktor verwenden, der keine akzeptiert eine `guidelineUrl` Parameter, der Standardwert eine leere Zeichenfolge ("") verwendet wird.  
+  
+ Die Zeichenfolge, die eingegeben werden, für die <xref:System.Web.UI.VerificationAttribute.GuidelineUrl%2A> -Eigenschaft wird nicht auf Richtigkeit überprüft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.VerificationAttribute.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Meldungszeichenfolge ab, wenn die Überprüfungsregel für Eingabehilfen Prüfpunkt "true" ist.</summary>
+        <value>Eine Fehlerzeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.VerificationAttribute.Message%2A> Eigenschaft wird festgelegt, wenn die <xref:System.Web.UI.VerificationAttribute> -Instanz erstellt und ist erforderlich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public int Priority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.VerificationAttribute.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Priorität des Prüfpunkts Eingabehilfen ab.</summary>
+        <value>Eine ganze Zahl, die die Priorität darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.VerificationAttribute.Priority%2A> Eigenschaft definiert die <xref:System.Web.UI.VerificationAttribute.Checkpoint%2A> Eigenschaft Auswirkungen auf Eingabehilfen. Sowohl die <xref:System.Web.UI.VerificationAttribute.Checkpoint%2A> und <xref:System.Web.UI.VerificationAttribute.Priority%2A> -Eigenschaft werden festgelegt, wenn die <xref:System.Web.UI.VerificationAttribute> -Instanz erstellt und ist erforderlich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerificationConditionalOperator">
+      <MemberSignature Language="C#" Value="public System.Web.UI.VerificationConditionalOperator VerificationConditionalOperator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.VerificationConditionalOperator VerificationConditionalOperator" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.VerificationAttribute.VerificationConditionalOperator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VerificationConditionalOperator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.VerificationConditionalOperator" /> Enumeration Wert Angabe, wie die Barrierefreiheits-Prüfpunkt überprüft wird.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.VerificationConditionalOperator" />-Enumerationswerte. Der Standardwert ist <see cref="F:System.Web.UI.VerificationConditionalOperator.Equals" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.VerificationAttribute.VerificationConditionalOperator%2A> Eigenschaft kann festgelegt werden, wenn die <xref:System.Web.UI.VerificationAttribute> Instanz erstellt wird, ist jedoch optional. Wenn Sie einen Konstruktor verwenden, der keine akzeptiert eine `conditionalOperator` Parameter, der Standardwert <xref:System.Web.UI.VerificationConditionalOperator.Equals> verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerificationReportLevel">
+      <MemberSignature Language="C#" Value="public System.Web.UI.VerificationReportLevel VerificationReportLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.VerificationReportLevel VerificationReportLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.VerificationAttribute.VerificationReportLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VerificationReportLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.VerificationReportLevel" /> -Enumerationswert, der angibt, wie der Barrierefreiheits-Prüfpunkt verwendet wird.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.VerificationReportLevel" />-Enumerationswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.VerificationAttribute.VerificationReportLevel%2A> Eigenschaft wird festgelegt, wenn die <xref:System.Web.UI.VerificationAttribute> -Instanz erstellt und ist erforderlich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerificationRule">
+      <MemberSignature Language="C#" Value="public System.Web.UI.VerificationRule VerificationRule { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.VerificationRule VerificationRule" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.VerificationAttribute.VerificationRule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VerificationRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.VerificationRule" /> -Enumerationswert, der angibt, wie der Barrierefreiheits-Prüfpunkt verwendet wird.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.VerificationRule" />-Enumerationswerte. Der Standardwert ist <see cref="F:System.Web.UI.VerificationRule.Required" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.VerificationAttribute.VerificationRule%2A> Eigenschaft kann festgelegt werden, wenn die <xref:System.Web.UI.VerificationAttribute> Instanz erstellt wird, ist jedoch optional. Wenn Sie einen Konstruktor verwenden, der keine akzeptiert eine `rule` Parameter, der Standardwert <xref:System.Web.UI.VerificationRule.Required> verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

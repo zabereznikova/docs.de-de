@@ -1,0 +1,364 @@
+<Type Name="EditCommandColumn" FullName="System.Web.UI.WebControls.EditCommandColumn">
+  <TypeSignature Language="C#" Value="public class EditCommandColumn : System.Web.UI.WebControls.DataGridColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EditCommandColumn extends System.Web.UI.WebControls.DataGridColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.EditCommandColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataGridColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein spezieller Spaltentyp für das <see cref="T:System.Web.UI.WebControls.DataGrid" />-Steuerelement, das die <see langword="Edit" />-Schaltflächen zum Bearbeiten von Datenelementen in jeder Zeile enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.EditCommandColumn> Klasse zum Erstellen einer speziellen Spalteninhalts für die <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement, enthält die `Edit`, `Update`, und `Cancel` Schaltflächen für jede Datenzeile im Raster. Mit diesen Schaltflächen können Sie so bearbeiten Sie die Werte einer Zeile in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ Wenn keine Zeile ausgewählt ist, ein `Edit` Schaltfläche zeigt an, der <xref:System.Web.UI.WebControls.EditCommandColumn> Objekt für jede Datenzeile in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Wenn die `Edit` Schaltfläche für ein Element geklickt wird, die <xref:System.Web.UI.WebControls.DataGrid.EditCommand> Ereignis wird ausgelöst, und die `Edit` Schaltfläche wird ersetzt, mit der `Update` und `Cancel` Schaltflächen. Müssen Sie Code zum Behandeln von Bereitstellen der <xref:System.Web.UI.WebControls.DataGrid.EditCommand> Ereignis. Legt ein typische Ereignishandler die <xref:System.Web.UI.WebControls.DataGrid.EditItemIndex%2A> Eigenschaft, um die ausgewählte Zeile, und klicken Sie dann bindet die Daten in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+> [!NOTE]
+>  Geben Sie Werte für die <xref:System.Web.UI.WebControls.EditCommandColumn.CancelText%2A>, <xref:System.Web.UI.WebControls.EditCommandColumn.EditText%2A>, und <xref:System.Web.UI.WebControls.EditCommandColumn.UpdateText%2A> Eigenschaften. Andernfalls werden die zugeordneten Schaltflächen nicht angezeigt der <xref:System.Web.UI.WebControls.EditCommandColumn>.  
+  
+ Die Schaltflächen in der <xref:System.Web.UI.WebControls.EditCommandColumn> kann festgelegt werden, als Links oder Schaltflächen angezeigt die <xref:System.Web.UI.WebControls.EditCommandColumn.ButtonType%2A> Eigenschaft.  
+  
+ Klicken auf die `Update` oder `Cancel` Schaltfläche löst die <xref:System.Web.UI.WebControls.DataGrid.UpdateCommand> oder <xref:System.Web.UI.WebControls.DataGrid.CancelCommand> Ereignis bzw.. Sie müssen Code zum Verarbeiten von diesen Ereignissen angeben.  
+  
+ Eine typische Handler für die <xref:System.Web.UI.WebControls.DataGrid.UpdateCommand> Ereignis aktualisiert die Daten, legt der <xref:System.Web.UI.WebControls.DataGrid.EditItemIndex%2A> Eigenschaft, um `-1` (um das Element zu deaktivieren), und klicken Sie dann die Daten in die Bindung der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ Eine typische Handler für die <xref:System.Web.UI.WebControls.DataGrid.CancelCommand> Ereignis legt die <xref:System.Web.UI.WebControls.DataGrid.EditItemIndex%2A> Eigenschaft, um `-1` (um das Element zu deaktivieren), und klicken Sie dann die Daten in die Bindung der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+> [!CAUTION]
+>  Die <xref:System.Web.UI.WebControls.EditCommandColumn> Objekt anzuzeigenden Benutzereingaben, die möglicherweise böswillige Clientskripts umfasst verwendet werden kann. Überprüfen Sie alle Informationen, die für ausführbare Skripts, SQL-Anweisungen oder anderen Code von einem Client gesendet wird, vor der Anzeige in der Anwendung. Sie können Validierungssteuerelemente verwenden, um Benutzereingaben zu überprüfen, vor dem Anzeigen des Eingabetext in einer <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  ASP.NET bietet eine Funktion für den Überprüfung eingabeanforderung zum Blockieren von Skript und HTML in Benutzereingaben. Weitere Informationen finden Sie unter [Standardsteuerelemente schützen](http://msdn.microsoft.com/library/f3e7718f-63d0-44a3-bd5f-48cc2059c2a8), [wie: schützen gegen Script Exploits in einer Web-Anwendung durch Anwenden von HTML-Codierung in Zeichenfolgen](http://msdn.microsoft.com/library/6f67973f-dda0-45a1-ba9d-e88532d7dc5b), und [Validieren von Benutzereingaben in ASP.NET Web Pages](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+  
+ Standardmäßig erfolgt die Validierung bei der ein `Update` Schaltfläche der <xref:System.Web.UI.WebControls.EditCommandColumn> Steuerelement geklickt wird. Seitenüberprüfung bestimmt, ob die Eingabesteuerelemente, die mit einer Überprüfung verknüpft sind auf der Seite steuern, die alle die Validierungsregeln übergeben, die durch das Validierungssteuerelement angegeben werden. Damit die seitenüberprüfung verhindern, legen die <xref:System.Web.UI.WebControls.EditCommandColumn.CausesValidation%2A> Eigenschaft `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Hinzufügen einer <xref:System.Web.UI.WebControls.EditCommandColumn> -Objekt an eine <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ [!code-aspx-csharp[DataGridEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridEdit/CS/datagrideditcs.aspx#1)]
+ [!code-aspx-vb[DataGridEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridEdit/VB/datagrideditvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditCommandColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EditCommandColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.EditCommandColumn" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.EditCommandColumn> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Erstellen und initialisieren eine neue Instanz der dem <xref:System.Web.UI.WebControls.EditCommandColumn> Klasse.  
+  
+ [!code-csharp[Classic EditCommandColumn.EditCommandColumn Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic EditCommandColumn.EditCommandColumn Example/CS/source.cs#1)]
+ [!code-vb[Classic EditCommandColumn.EditCommandColumn Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic EditCommandColumn.EditCommandColumn Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ButtonColumnType ButtonType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ButtonColumnType ButtonType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EditCommandColumn.ButtonType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ButtonColumnType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schaltflächentyp für die Spalte fest.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.ButtonColumnType" />-Werte. Der Standardwert ist <see langword="LinkButton" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.EditCommandColumn.ButtonType%2A> Eigenschaft, um anzugeben, ob die Schaltflächen in der Spalte als Schaltflächen oder links angezeigt.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.EditCommandColumn.ButtonType%2A> Eigenschaft zum Anzeigen der `Edit` Befehlsschaltflächen als Schaltflächen.  
+  
+ [!code-aspx-csharp[DataGridEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridEdit/CS/datagrideditcs.aspx#1)]
+ [!code-aspx-vb[DataGridEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridEdit/VB/datagrideditvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Typ der angegebenen Schaltfläche ist nicht die <see cref="T:System.Web.UI.WebControls.ButtonColumnType" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelText">
+      <MemberSignature Language="C#" Value="public virtual string CancelText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CancelText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EditCommandColumn.CancelText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text anzuzeigenden für die <see langword="Cancel" /> Befehlsschaltfläche in die <see cref="T:System.Web.UI.WebControls.EditCommandColumn" />.</summary>
+        <value>Die Beschriftung ein, für die Anzeige der <see langword="Cancel" /> Befehlsschaltfläche in die <see cref="T:System.Web.UI.WebControls.EditCommandColumn" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.EditCommandColumn.CancelText%2A> Eigenschaft zum Angeben der anzuzeigenden Text für die `Cancel` Befehlsschaltfläche in die <xref:System.Web.UI.WebControls.EditCommandColumn>.  
+  
+> [!NOTE]
+>  Geben Sie einen Wert für die <xref:System.Web.UI.WebControls.EditCommandColumn.CancelText%2A> Eigenschaft. Andernfalls die `Cancel` Befehlsschaltfläche erscheint nicht der <xref:System.Web.UI.WebControls.EditCommandColumn>.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.EditCommandColumn.CancelText%2A> Eigenschaft für benutzerdefinierten Text an den `Cancel` Befehlsschaltfläche.  
+  
+ [!code-aspx-csharp[DataGridEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridEdit/CS/datagrideditcs.aspx#1)]
+ [!code-aspx-vb[DataGridEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridEdit/VB/datagrideditvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public virtual bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EditCommandColumn.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Validierung durchgeführt wird bei einer <see langword="Update" /> Schaltfläche der <see cref="T:System.Web.UI.WebControls.EditCommandColumn" /> Objekt geklickt wird.</summary>
+        <value>
+          <see langword="true" />Validierung durchgeführt wird bei einer <see langword="Update" /> Schaltfläche der <see cref="T:System.Web.UI.WebControls.EditCommandColumn" /> geklickt wurde, andernfalls wird <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig erfolgt die Validierung bei der ein `Update` Schaltfläche eine <xref:System.Web.UI.WebControls.EditCommandColumn> Steuerelement geklickt wird. Seitenüberprüfung bestimmt, ob die Eingabesteuerelemente, die mit einer Überprüfung verknüpft sind auf der Seite steuern, die alle die Validierungsregeln übergeben, die durch das Validierungssteuerelement angegeben werden.  
+  
+ Können Sie angeben oder zu bestimmen, ob die Überprüfung auf dem Client und dem Server ausgeführt wird bei einer `Update` Schaltfläche ein <xref:System.Web.UI.WebControls.EditCommandColumn> Steuerelement geklickt wird, mithilfe der <xref:System.Web.UI.WebControls.EditCommandColumn.CausesValidation%2A> Eigenschaft. Validierung durchgeführt werden soll, legen Sie die <xref:System.Web.UI.WebControls.EditCommandColumn.CausesValidation%2A> Eigenschaft `false`.  
+  
+ Bei den Wert des der <xref:System.Web.UI.WebControls.EditCommandColumn.CausesValidation%2A> -Eigenschaftensatz auf `true`, können Sie auch die <xref:System.Web.UI.WebControls.EditCommandColumn.ValidationGroup%2A> Eigenschaft, um den Namen der Validierungsgruppe für das angeben ein `Update` Schaltfläche der <xref:System.Web.UI.WebControls.EditCommandColumn> Objekt eine Validierung auslöst.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditText">
+      <MemberSignature Language="C#" Value="public virtual string EditText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EditText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EditCommandColumn.EditText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text anzuzeigenden für die <see langword="Edit" /> Schaltfläche der <see cref="T:System.Web.UI.WebControls.EditCommandColumn" />.</summary>
+        <value>Die Beschriftung ein, für die Anzeige der <see langword="Edit" /> Schaltfläche der <see cref="T:System.Web.UI.WebControls.EditCommandColumn" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.EditCommandColumn.EditText%2A> Eigenschaft zum Angeben der anzuzeigenden Text für die `Edit` Schaltfläche der <xref:System.Web.UI.WebControls.EditCommandColumn> Steuerelement.  
+  
+> [!NOTE]
+>  Geben Sie einen Wert für die <xref:System.Web.UI.WebControls.EditCommandColumn.EditText%2A> Eigenschaft. Andernfalls die `Edit` Schaltfläche erscheint nicht der <xref:System.Web.UI.WebControls.EditCommandColumn>.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.EditCommandColumn.EditText%2A> Eigenschaft für benutzerdefinierten Text an den `Edit` Schaltfläche.  
+  
+ [!code-aspx-csharp[DataGridEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridEdit/CS/datagrideditcs.aspx#1)]
+ [!code-aspx-vb[DataGridEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridEdit/VB/datagrideditvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCell">
+      <MemberSignature Language="C#" Value="public override void InitializeCell (System.Web.UI.WebControls.TableCell cell, int columnIndex, System.Web.UI.WebControls.ListItemType itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeCell(class System.Web.UI.WebControls.TableCell cell, int32 columnIndex, valuetype System.Web.UI.WebControls.ListItemType itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EditCommandColumn.InitializeCell(System.Web.UI.WebControls.TableCell,System.Int32,System.Web.UI.WebControls.ListItemType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.TableCell" />
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Ein <see cref="T:System.Web.UI.WebControls.TableCell" /> , Informationen über die zu initialisierenden Zelle enthält.</param>
+        <param name="columnIndex">Die Nummer der Spalte, in denen die Zelle befindet.</param>
+        <param name="itemType">Einer der <see cref="T:System.Web.UI.WebControls.ListItemType" />-Werte.</param>
+        <summary>Initialisiert eine Zelle innerhalb der Spalte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateText">
+      <MemberSignature Language="C#" Value="public virtual string UpdateText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UpdateText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EditCommandColumn.UpdateText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text anzuzeigenden für die <see langword="Update" /> Befehlsschaltfläche in die <see cref="T:System.Web.UI.WebControls.EditCommandColumn" />.</summary>
+        <value>Die Beschriftung ein, für die Anzeige der <see langword="Update" /> Befehlsschaltfläche in die <see cref="T:System.Web.UI.WebControls.EditCommandColumn" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.EditCommandColumn.UpdateText%2A> Eigenschaft zum Angeben der anzuzeigenden Text für die `Update` Befehlsschaltfläche in die <xref:System.Web.UI.WebControls.EditCommandColumn>.  
+  
+> [!NOTE]
+>  Geben Sie einen Wert für die <xref:System.Web.UI.WebControls.EditCommandColumn.UpdateText%2A> Eigenschaft. Andernfalls die `Update` Befehlsschaltfläche erscheint nicht der <xref:System.Web.UI.WebControls.EditCommandColumn>.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.EditCommandColumn.UpdateText%2A> Eigenschaft für benutzerdefinierten Text an den `Update` Befehlsschaltfläche.  
+  
+ [!code-aspx-csharp[DataGridEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridEdit/CS/datagrideditcs.aspx#1)]
+ [!code-aspx-vb[DataGridEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridEdit/VB/datagrideditvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public virtual string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EditCommandColumn.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie die Gruppe der Validierungssteuerelemente für das die <see cref="T:System.Web.UI.WebControls.EditCommandColumn" /> Objekt eine Validierung auslöst, wenn es an den Server zurückgesendet.</summary>
+        <value>Die Gruppe der Validierungssteuerelemente für das der Schaltfläche "Aktualisieren" in eine <see cref="T:System.Web.UI.WebControls.EditCommandColumn" /> eine Validierung auslöst, wenn es an den Server zurückgesendet. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überprüfung Gruppen erlauben Ihnen Validierungssteuerelemente auf einer Seite einer bestimmten Kategorie zuweisen. Jede Validierungsgruppe kann unabhängig von anderen Gruppen Überprüfung auf der Seite überprüft werden. Verwenden der <xref:System.Web.UI.WebControls.EditCommandColumn.ValidationGroup%2A> -Eigenschaft geben Sie den Namen der Validierungsgruppe für das der Schaltfläche "Aktualisieren" in eine <xref:System.Web.UI.WebControls.EditCommandColumn> Objekt eine Validierung auslöst, wenn es an den Server zurückgesendet.  
+  
+ Die <xref:System.Web.UI.WebControls.EditCommandColumn.ValidationGroup%2A> Eigenschaft wirkt sich nur, wenn der Wert der <xref:System.Web.UI.WebControls.EditCommandColumn.CausesValidation%2A> -Eigenschaftensatz auf `true`. Wenn geben Sie einen Wert für die <xref:System.Web.UI.WebControls.EditCommandColumn.ValidationGroup%2A> -Eigenschaft, nur die Validierung, die Steuerelemente, die Teil der angegebenen Gruppe überprüft werden bei der Update-Schaltfläche in ein <xref:System.Web.UI.WebControls.EditCommandColumn> Objekt an den Server sendet. Wenn Sie einen Wert für nicht angeben der <xref:System.Web.UI.WebControls.EditCommandColumn.ValidationGroup%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.EditCommandColumn.CausesValidation%2A> -Eigenschaftensatz auf `true`, alle Validierungssteuerelemente auf der Seite, die nicht zu einer Überprüfung Gruppe zugewiesen sind, werden überprüft bei der Update-Schaltfläche in ein <xref:System.Web.UI.WebControls.EditCommandColumn> Objekt wird an den Server zurückgesendet.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

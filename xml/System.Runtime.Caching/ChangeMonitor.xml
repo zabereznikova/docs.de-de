@@ -1,0 +1,416 @@
+<Type Name="ChangeMonitor" FullName="System.Runtime.Caching.ChangeMonitor">
+  <TypeSignature Language="C#" Value="public abstract class ChangeMonitor : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ChangeMonitor extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.ChangeMonitor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Basisklasse für einen abgeleiteten benutzerdefinierten Typ, der Änderungen in den Zustand der Daten überwacht, ein Element im Cache abhängig.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.ChangeMonitor> Klasse dient als Basisklasse für Klassen abgeleiteten überwachen, die für bestimmte Cache-Implementierungen angegeben werden. Ein <xref:System.Runtime.Caching.ChangeMonitor> Instanz überwacht Änderungen in den Zustand der Daten an ein Element im Cache abhängig. Beispielsweise kann für das Element eine Datei oder eine Entität sein, deren Inhalt zwischengespeichert werden. Wenn die Datei oder eine Entität aktualisiert wird, muss der zugeordnete Cacheeintrag auch geändert werden. Allgemeine Elemente, die überwacht werden können enthalten Datenentitäten (z. B. Datenbankfelder, Werte, Zeilen oder Tabellen), einen weiteren Cacheeintrag und Dateien und Dateiattribute.  
+  
+ Eine Änderung der Abhängigkeit ist eine Änderung in den Zustand einer Abhängigkeit. In einem typischen Cacheimplementierung nach einem <xref:System.Runtime.Caching.ChangeMonitor> Instanz benachrichtigt den Cache, die eine Abhängigkeit geändert wurden, die vom Cache durchgeführt, die erforderliche Aktion, z. B. inserted Cacheeintrags.  
+  
+ Abgeleitete <xref:System.Runtime.Caching.ChangeMonitor> Klassen zum Überwachen von Abhängigkeit Änderungen für bestimmte verschiedene Datenbereiche angepasst werden. Es gibt z. B. Cache-Implementierungen für ein Dateisystem, physischen Speicher oder einer Datenbank. Die <xref:System.Runtime.Caching.ChangeMonitor> Klasse außerhalb der Cache auftretende Änderungen überprüft und Warnungen klicken Sie dann den Cache, die Änderungen vorgenommen wurden.  
+  
+ Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] umfasst die folgenden Klassen, die davon Herleiten <xref:System.Runtime.Caching.ChangeMonitor> Klasse:  
+  
+-   <xref:System.Runtime.Caching.CacheEntryChangeMonitor>  
+  
+-   <xref:System.Runtime.Caching.FileChangeMonitor>  
+  
+-   <xref:System.Runtime.Caching.HostFileChangeMonitor>  
+  
+-   <xref:System.Runtime.Caching.SqlChangeMonitor>  
+  
+ Jede dieser Klassen funktioniert mit verschiedenen Typen von Abhängigkeiten. Beispielsweise ist das abgeleitete <xref:System.Runtime.Caching.FileChangeMonitor> Klasse überwacht Änderungen an einen Cache für die Dateisystemdaten (Dateien und Ordner), von denen das Element im Cache abhängig.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+    <block subset="none" type="overrides">
+      <para>Wenn Sie beim Erstellen eines benutzerdefinierten Cacheimplementierung oder abgeleiteten Typs überwachen Änderung müssen bestimmte Richtlinien beachtet. Die folgende Liste fasst diese Richtlinien. Weitere Informationen finden Sie in der Dokumentation für die einzelnen Methoden oder Eigenschaften.  
+  
+-   Legen Sie der Konstruktor einer abgeleiteten Klasse muss die <see cref="P:System.Runtime.Caching.ChangeMonitor.UniqueId" /> -Eigenschaft, mit der Überwachung beginnen, und rufen <see cref="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" /> -Methode auf, bevor die Methode gibt. Wenn ein Konstruktor ein Fehler, während der Konstruktionen auftritt und aufweisen muss, um Ressourcen freizugeben, wird der Konstruktor kann nur Aufrufen der <see cref="Overload:System.Runtime.Caching.ChangeMonitor.Dispose" /> nach der Überladung der <see cref="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" /> Methode wird aufgerufen, da die <see cref="Overload:System.Runtime.Caching.ChangeMonitor.Dispose" /> Überladung löst ein <see cref="T:System.InvalidOperationException" /> Ausnahme, wenn die Initialisierung nicht abgeschlossen wird.  
+  
+-   Wenn Auftreten von Änderungen in die Daten, die überwacht werden, bevor die Initialisierung abgeschlossen ist, muss es sich um eine Aufruf des Konstruktors der <see cref="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" /> Methode vor dem Aufruf der <see cref="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" /> Methode.  
+  
+-   Nachdem ein abgeleiteter <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Typ instanziiert wird, müssen Sie den Monitor einfügen, in ein benutzerdefiniertes <see cref="T:System.Runtime.Caching.ObjectCache" /> Implementierung. Oder wenn Sie mit dem Monitor für die Änderung abgeschlossen haben, rufen Sie die <see cref="Overload:System.Runtime.Caching.ChangeMonitor.Dispose" /> Methode.  
+  
+-   Nach einem <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Instanz eingefügt wird eine <see cref="T:System.Runtime.Caching.ObjectCache" /> Implementierung, die <see cref="T:System.Runtime.Caching.ObjectCache" /> Instanz erforderlich, dass der Monitor Änderung verworfen wird. Selbst wenn die Einfügemarke ungültig ist und bewirkt, eine Ausnahme dass der <see cref="T:System.Runtime.Caching.ObjectCache" /> Implementierung aufrufen, muss die <see cref="Overload:System.Runtime.Caching.ChangeMonitor.Dispose" /> überladen.  
+  
+-   Nach dem Einfügen eines abgeleiteten Change Monitors in den Cache der <see cref="T:System.Runtime.Caching.ObjectCache" /> Implementierung muss Aufrufen <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" />, durch Übergeben einer <see cref="T:System.Runtime.Caching.OnChangedCallback" /> Objekt. Die <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" /> Methode kann nur einmal aufgerufen werden. Wenn eine Änderung der Abhängigkeit bereits eingetreten sein, die <see cref="T:System.Runtime.Caching.OnChangedCallback" /> Instanz wird sofort aufgerufen, wenn <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" /> aufgerufen wird. Andernfalls die <see cref="T:System.Runtime.Caching.OnChangedCallback" /> Instanz wird nur einmal aufgerufen werden. Diesmal ein Aufruf wird entweder bei der <see cref="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" /> Methode wird aufgerufen, da die <see cref="T:System.Runtime.Caching.ChangeMonitor" /> eine Änderung erkannt oder wenn die <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> Methode aufgerufen wird die <see cref="T:System.Runtime.Caching.ChangeMonitor" />, welcher Vorgang zuerst ausgeführt.  
+  
+-   Die <see cref="T:System.Runtime.Caching.OnChangedCallback" /> -Instanz, die von bereitgestellte ein <see cref="T:System.Runtime.Caching.ObjectCache" /> Implementierung sollten die zugeordneten Cacheeintrag entfernen und einen Grund angeben, mit der <see cref="F:System.Web.Caching.CacheItemRemovedReason.DependencyChanged" /> Enumeration.  
+  
+-   Ein <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Instanz Aufrufen der <see cref="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" /> Methode entweder vor dem Aufruf einer Cacheimplementierung hat <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" /> Methode oder nach. Wenn die <see cref="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" /> Methode wird aufgerufen, bevor <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" /> aufgerufen wird, wird die Basis <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Implementierung benachrichtigt, dass den Cache, der dies der Fall und löst den Rückruf zu übergebenden <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" /> sofort beim Auftreten <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" /> aufgerufen wird. Beliebige Zustandsdaten, die übergeben werden die <see cref="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" /> Methode Einsparung/des Monitors ändern und anschließend übergeben der <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" /> Methode beim der <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" /> Methode wird aufgerufen.  
+  
+-   Eine änderungsüberwachung implementieren muss die <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose(System.Boolean)" /> Methode. Weitere Informationen finden Sie in der Dokumentation zur <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose(System.Boolean)" />-Methode.  
+  
+-   Die <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> methodenüberladung aufgerufen werden, um das Verwerfen der <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Instanz. Die Regeln zum Aufrufen der Dispose sind wie folgt aus:  
+  
+    -   Bevor ein Element in den Cache eingefügt wird, ist es die Verantwortung des Aufrufers Löschen einer <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Instanz.  
+  
+    -   Einmal Cacheelement und <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Instanzen, die mit ihr verbunden sind, werden auf einen Cache übergeben, Ausführender der Cache muss sicherstellen, dass, die die <see cref="Overload:System.Runtime.Caching.ChangeMonitor.Dispose" /> -Methode aufgerufen wird, auch wenn der Vorgang schlägt fehl.  
+  
+    -   Nach einem Element und die zugehörigen <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Instanzen auf einen Cache übergeben werden, die der Aufrufer muss die Abhängigkeit nicht freigeben, da bei der <see cref="Overload:System.Runtime.Caching.ChangeMonitor.Dispose" /> -Methode aufgerufen wird, der Aufruf wird behandelt, als ob die Abhängigkeit geändert hat. Daher die <see cref="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" /> Methode wird automatisch aufgerufen.  
+  
+-   Unter Berücksichtigung dieser Regeln, die <see cref="Overload:System.Runtime.Caching.ChangeMonitor.Dispose" /> muss in einem der folgenden Methoden aufgerufen werden:  
+  
+    -   Benutzer müssen Aufrufen der <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> -methodenüberladung, wenn sie nicht die abgeleiteten änderungsüberwachung-Instanz in einen Cache einfügen möchten.  
+  
+    -   Wenn versucht wird, dass die Implementierung die änderungsüberwachung Instanz in den Objektcache ein einfügen, aber die Einfügung einen Fehler, der Cacheimplementierung ist verantwortlich für das Aufrufen der <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> überladen. Wenn der Versuch der Einfügung eine Ausnahme auslöst, muss der Cacheimplementierung alle zugehörigen Abhängigkeiten freizugeben.  
+  
+    -   Der Cacheeintrag entfernt wird, muss auch der Abhängigkeit der Cacheimplementierung dispose.  
+  
+    -   Die interne Implementierung der <see cref="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" /> Methodenaufrufe automatisch die <see cref="Overload:System.Runtime.Caching.ChangeMonitor.Dispose" /> mithilfe der Methode nach dem Aufruf eines Rückrufs, der registriert wird <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" />.  
+  
+ <block subset="none" type="note"><para>  
+ Diese automatischen Aufruf der Dispose-Methode bei den Auslösen von Ereignissen tritt nur auf, wenn die Initialisierung der <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Instanz wurde bereits abgeschlossen.  
+  
+</para></block>  
+  
+ Wenn eine abgeleitete änderungsüberwachung Konstruktor ruft die <see cref="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" /> -Methode, wenn der Status des Monitors ändern bereits geändert wurde (d. h. den Zustand, der bereits geänderten überwacht wird, wenn der Konstruktor noch aktiv war) und dann die <see cref="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" /> Methode wird Löschen Sie automatisch des Monitors ändern.  
+  
+-   Die <see cref="P:System.Runtime.Caching.ChangeMonitor.HasChanged" /> -Eigenschaftensatz auf <see langword="true" /> nach der <see cref="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" /> Methode wird aufgerufen, von der abgeleiteten änderungsüberwachung-Instanz, unabhängig davon, ob eine <see cref="T:System.Runtime.Caching.OnChangedCallback" /> Objekt durch einen Aufruf von festgelegt wurde die <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" /> Methode oder nicht.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChangeMonitor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.ChangeMonitor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Caching.ChangeMonitor" />-Klasse. Dieser Konstruktor wird von Konstruktoren in abgeleiteten Klassen zum Initialisieren der Basisklasse aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.ChangeMonitor> -Klasse verfügt über einen Standardkonstruktor. Allerdings Klassen, die von der Basisklasse erben <xref:System.Runtime.Caching.ChangeMonitor> Klasse, und definieren Sie benutzerdefinierte Change-Überwachung Verhalten muss in den Konstruktor Initialisierung ausführen. Weitere Informationen finden Sie die Hinweise für Vererber-Abschnitt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Der Konstruktor einer abgeleiteten Klasse muss festlegen, die <see cref="P:System.Runtime.Caching.ChangeMonitor.UniqueId" /> -Eigenschaft, mit der Überwachung beginnen, und rufen die <see cref="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" /> -Klasse vor dem zurückgeben. Wenn eine Abhängigkeit Änderungen vor der Initialisierung abgeschlossen (z. B., wenn ein abhängiger Cacheschlüssel nicht im Cache gefunden wird), muss der Konstruktor aufrufen der <see cref="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" /> Methode vor dem Aufrufen der <see cref="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" /> Methode. In diesem Fall kann Konstruktor aufrufen der <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> Methode erst nach der <see cref="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" /> -Methode aufgerufen wird, da die <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> Methode löst eine Ausnahme aus, wenn die Initialisierung nicht abgeschlossen wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Dispose">
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.Runtime.Caching.ChangeMonitor" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methode wird verwendet, um die Version der <xref:System.Runtime.Caching.ChangeMonitor> Instanz und die zugehörigen Ressourcen. Die öffentliche <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methode wird aufgerufen, um den Verkauf-Prozess mit Schlüssel Lebenszyklusereignisse abgeleiteten änderungsüberwachung-Klassen (z. B. Initialisierung) zu koordinieren und Freigeben der <xref:System.Runtime.Caching.ChangeMonitor> Instanz fest, damit die Instanz die Garbage Collection bereinigt werden kann. Die <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methode wird von abgeleiteten änderungsüberwachung Klassen implementiert ihre verwalteten und nicht verwalteten Ressourcen freizugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.ChangeMonitor.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.Runtime.Caching.ChangeMonitor" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methode ruft die <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methode der abgeleiteten Klassen nur einmal, das erste Mal aufgerufen wird. Nachfolgende Aufrufe der <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methode haben keine Auswirkungen. Nach dem Aufruf der Methode der <xref:System.Runtime.Caching.ChangeMonitor.IsDisposed%2A> -Eigenschaftensatz auf `true`.  
+  
+ Die <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Überladung aufgerufen werden, um das Verwerfen einer <xref:System.Runtime.Caching.ChangeMonitor> Instanz. Es folgen die Regeln zum Aufrufen der Dispose-Methode:  
+  
+-   Bevor ein Element in den Cache eingefügt wird, ist es der Verantwortung des Aufrufers Löschen einer <xref:System.Runtime.Caching.ChangeMonitor> Instanz.  
+  
+-   Einmal Cacheelement und <xref:System.Runtime.Caching.ChangeMonitor> Instanzen, die mit ihr verbunden sind, werden auf einen Cache, der Cache-Implementierer, die sicherstellen muss, dass übergeben <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> aufgerufen wird, auch wenn der Vorgang schlägt fehl.  
+  
+-   Nach einem Element und die zugehörigen <xref:System.Runtime.Caching.ChangeMonitor> Instanzen auf einen Cache übergeben werden, die der Aufrufer muss die Abhängigkeit nicht freigeben, da bei der <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> -Methode aufgerufen wird, der Aufruf wird behandelt, als ob die Abhängigkeit geändert hat. Daher die <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methode wird automatisch aufgerufen.  
+  
+-   Unter Berücksichtigung dieser Regeln, die <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> muss in einem der folgenden Methoden aufgerufen werden:  
+  
+    -   Benutzer müssen Aufrufen der <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> -methodenüberladung, wenn sie nicht die abgeleiteten änderungsüberwachung-Instanz in einen Cache einfügen möchten.  
+  
+    -   Die Cacheimplementierung ist verantwortlich für das Aufrufen der <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> überladen werden, wenn versucht wird, dass die Implementierung die änderungsüberwachung Instanz in den Objektcache ein einfügen, aber die Einfügung einen Fehler. Wenn der Versuch der Einfügung eine Ausnahme auslöst, muss der Cacheimplementierung alle zugehörigen Abhängigkeiten freigeben.  
+  
+    -   Der Cacheeintrag entfernt wird, muss die Abhängigkeit der Cacheimplementierung auch dispose.  
+  
+ Die interne Implementierung der der <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methodenaufrufe automatisch die <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> mithilfe der Methode nach dem Aufruf eines Rückrufs, der registriert wird die <xref:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged%2A> Methode.  
+  
+> [!NOTE]
+>  Diese automatische Dispose während den Auslösen von Ereignissen tritt nur auf, wenn die Initialisierung der <xref:System.Runtime.Caching.ChangeMonitor> Instanz bereits abgeschlossen.  
+  
+ Wenn eine abgeleitete änderungsüberwachung Konstruktor ruft die <xref:System.Runtime.Caching.ChangeMonitor.InitializationComplete%2A> -Methode, wenn der Status des Monitors ändern bereits geändert wurde (d. h. der Zustand, der überwacht wird wurde bereits geändert, wenn der Konstruktor noch aktiv ist) dann <xref:System.Runtime.Caching.ChangeMonitor.InitializationComplete%2A> Methode wird Löschen Sie automatisch die änderungsüberwachung.  
+  
+> [!NOTE]
+>  Benutzer sollten nicht aufrufen, die <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methode. Sie können keine jedoch verhindern, dass Benutzer Aufrufen der Methode. Aus diesem Grund, stimmen die Namen der <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methode aufgerufen wird. In diesem Fall wird der Cacheeintrag benachrichtigt, als ob die Abhängigkeit geändert hat.  
+  
+ Um zu verhindern, dass abgeleitete Klassen überschreiben <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methode, die Methode ist nicht um eine explizite Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Initialisierung ist nicht vollständig in der abgeleiteten änderungsüberwachung-Klasse, die die Basis aufgerufen <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected abstract void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.ChangeMonitor.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />Freigeben von verwalteten und nicht verwalteten Ressourcen und alle Verweise auf eine <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Instanz. <see langword="false" /> um ausschließlich nicht verwaltete Ressourcen freizugeben. Wenn <see langword="false" /> übergeben wird, wird die <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose(System.Boolean)" /> Methode wird aufgerufen, indem eine <see langword="finalizer" /> Thread und alle externen verwalteten Verweise sind wahrscheinlich nicht mehr gültig, da sie bereits über die Garbage Collection bereinigt wurden.</param>
+        <summary>Gibt alle verwalteten und nicht verwalteten Ressourcen und alle Verweise auf die <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Instanz. Diese Überladung muss von abgeleiteten änderungsüberwachung Klassen implementiert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert der `disposing` Wert ist `true`, alle verwaltete und nicht verwaltete Ressourcen freigegeben, und alle Verweise auf dieses Objekt werden freigegeben, damit die Instanz der abgeleiteten änderungsüberwachung Garbage Collection ausgeführt werden kann. Es ist sichergestellt, dass die Basis <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methode wird das implementierte Aufrufen <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methode nur einmal.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Eine änderungsüberwachung implementieren muss die <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose(System.Boolean)" /> auf alle release verwaltete und nicht verwaltete Ressourcen bei der Wert der <paramref name="disposing" /> ist <see langword="true" />. Die <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose(System.Boolean)" /> methodenüberladung mit einem <paramref name="disposing" /> Wert <see langword="true" /> wird aufgerufen, nur ein Mal, wenn die Instanz zum ersten Mal freigegeben wird. Eine änderungsüberwachung muss nicht aufrufen, die <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose(System.Boolean)" /> direkt überladen. Eine abgeleitete änderungsüberwachung Erreichen des öffentlichen parameterlosen <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> Methode auf der Basis <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Klasse.  
+  
+ Alternativ kann eine änderungsüberwachung eine Finalizer-Methode implementieren. In diesem Fall kann die Finalizer Aufrufen der <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose(System.Boolean)" /> Methode und übergibt ihn dann ein <paramref name="disposing" /> Wert <see langword="false" />. Dies ist jedoch in der Regel nicht erforderlich. Überwachung für Abhängigkeit Änderungen erfolgt in der Regel von einem Dienst, der einen Verweis auf die Instanz ändern-Monitor verwaltet. Der Verweis verhindert, dass die Instanz Garbage Collection und aus diesem Grund wird eine Finalizermethode nicht erforderlich. Um Speicherverluste zu vermeiden, wenn eine Abhängigkeit ändert, die <see cref="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" /> Methode entfernt die änderungsüberwachung Instanz (es sei denn, die Initialisierung nicht beendet wurde).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChanged">
+      <MemberSignature Language="C#" Value="public bool HasChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.ChangeMonitor.HasChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, das den Zustand, der von überwacht wird, die <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Klasse hat sich geändert.</summary>
+        <value>
+          <see langword="true" />Wenn der Zustand, der von überwacht wird, die <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Instanz geändert hat, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sehen Sie sich den Wert dieser Eigenschaft in einer abgeleiteten <xref:System.Runtime.Caching.ChangeMonitor> Klasse, um festzustellen, ob eine Abhängigkeit geändert hat.  
+  
+ Der Wert wird festgelegt, um `true` tritt eine Änderung der Abhängigkeit (das heißt, wenn die <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> -Methode aufgerufen wird). Nach der <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methode wird aufgerufen, von der abgeleiteten Klasse, die den Wert von der <xref:System.Runtime.Caching.ChangeMonitor.HasChanged%2A> -Eigenschaft `true`, unabhängig davon, ob eine <xref:System.Runtime.Caching.OnChangedCallback> Instanz wurde durch einen Aufruf von benachrichtigt die <xref:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged%2A> Methode.  
+  
+> [!NOTE]
+>  Aufrufer überprüfen, können die <xref:System.Runtime.Caching.ChangeMonitor.HasChanged%2A> Eigenschaft, um festzustellen, ob eine Abhängigkeit geändert hat. In einer Umgebung mit mehreren Threads ein einfacherer und sind besser verwaltbar Ansatz ist jedoch zum Einfügen von Daten in einem Cacheimplementierung ohne Überprüfung der <xref:System.Runtime.Caching.ChangeMonitor.HasChanged%2A> Eigenschaft. Cache-Implementierungen müssen überprüfen, die <xref:System.Runtime.Caching.ChangeMonitor.HasChanged%2A> -Eigenschaft für Sie und müssen nicht einfügen oder Vorgang festgelegt, wenn eine oder mehrere zugeordnete Abhängigkeiten bereits geändert haben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializationComplete">
+      <MemberSignature Language="C#" Value="protected void InitializationComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializationComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, aus dem Konstruktor der abgeleiteten Klassen, die darauf hinweisen, dass die Initialisierung abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Abhängigkeit ändert, bevor die Initialisierung in einer abgeleiteten Klasse abgeschlossen ist, muss der Konstruktor der abgeleiteten Klasse Aufrufen der <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methode.  
+  
+ Wenn der <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methode wird aufgerufen, der <xref:System.Runtime.Caching.ChangeMonitor.HasChanged%2A> -Eigenschaftensatz wird automatisch auf `true` vom Monitor ändern. Daher bei der Änderung des Monitors Konstruktor ruft die <xref:System.Runtime.Caching.ChangeMonitor.InitializationComplete%2A> -Methode der Basisklasse wird automatisch aufgerufen. die <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methode. Wenn die Initialisierung abgeschlossen ist, ist die <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methode verwirft automatisch die abgeleiteten änderungsüberwachung-Instanz.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Der Konstruktor einer abgeleiteten Klasse die Basisklasse aufrufen muss <see cref="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" /> -Methode auf, bevor Sie den Konstruktor zurück. Der Konstruktor einer abgeleiteten Klasse aufrufen kann die <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> Methode erst nach <see cref="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" /> aufgerufen wird, da die <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> Methode löst eine Ausnahme aus, wenn die Initialisierung abgeschlossen ist, nicht.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDisposed">
+      <MemberSignature Language="C#" Value="public bool IsDisposed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDisposed" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.ChangeMonitor.IsDisposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, das die abgeleitete Instanz einer <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Klasse verfügbar gemacht wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Instanz freigegeben wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaft wird festgelegt, um `true` nach der Basis <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methodenaufrufe der <xref:System.Runtime.Caching.ChangeMonitor.Dispose%2A> Methode in einer abgeleiteten Klasse, die Instanz zu verwerfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyOnChanged">
+      <MemberSignature Language="C#" Value="public void NotifyOnChanged (System.Runtime.Caching.OnChangedCallback onChangedCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NotifyOnChanged(class System.Runtime.Caching.OnChangedCallback onChangedCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="onChangedCallback" Type="System.Runtime.Caching.OnChangedCallback" />
+      </Parameters>
+      <Docs>
+        <param name="onChangedCallback">Ein Verweis auf eine Methode, die aufgerufen wird, wenn eine Abhängigkeit geändert hat.</param>
+        <summary>Wird aufgerufen, durch die Cache-Implementierungen einen Rückruf zu registrieren, und informiert ein <see cref="T:System.Runtime.Caching.ObjectCache" /> -Instanz über die <see cref="T:System.Runtime.Caching.OnChangedCallback" /> delegieren, wenn eine Abhängigkeit geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cache-Implementierung mit dieser Methode können selbst bis zu eine änderungsüberwachung von Netzwerkdaten. Wenn Sie ordnen Sie eine oder mehrere Monitore mit dem Cacheelement, das ändern möchten, übergeben Sie eine <xref:System.Runtime.Caching.CacheItemPolicy> Instanz mit der Eigenschaft Monitore ausgefüllter Änderung auf das Element im Cache. Eine Cache-Implementierer, unterstützt Monitore ändern ist verantwortlich für das Durchlaufen der <xref:System.Runtime.Caching.CacheItemPolicy.ChangeMonitors%2A> Eigenschaft und Registrieren der <xref:System.Runtime.Caching.OnChangedCallback> Delegaten mit jedem geändert Monitor, die es findet.  
+  
+ Da die <xref:System.Runtime.Caching.OnChangedCallback> Delegaten enthält eine optionale Statusparameter, eine konkrete Implementierung Monitor kann optionale Zustandsinformationen übergeben. Ausführender der Cache bestimmt, ob explizite Abhängigkeit für den Typ des Zustands, der eine benutzerdefinierte änderungsüberwachung im Rahmen des Rückrufs übergibt ausgeführt werden kann.  
+  
+> [!NOTE]
+>  Die Basis-Cache-Erweiterbarkeits-API hat keine Anforderung für die explizite Abhängigkeit für den Typ des Zustands.  
+  
+ Die Implementierung von der <xref:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged%2A> Methode bestimmt, ob der Zustand des Monitors bereits zum Zeitpunkt geändert hat automatisch <xref:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged%2A> Methode wird aufgerufen. Wenn die <xref:System.Runtime.Caching.ChangeMonitor.HasChanged%2A> Eigenschaft ist `true`, und dann die Methode automatisch Ruft die <xref:System.Runtime.Caching.OnChangedCallback> -Ereignishandler registriert wurde die <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methode. Dies tritt auf, da es möglich ist, dass von der Zeit, die eine Cacheimplementierung eine änderungsüberwachung, mit der Zeit erstellt, eine Cacheimplementierung den Monitor ruft und verbindet sich bis zu, der zugrunde liegenden überwachte Zustand geändert hat. Wenn der Zustand bereits klicken Sie dann das Objekt geändert hat, die an die <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methode ist `null`.  
+  
+ Die <xref:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged%2A> Methode kann nur einmal aufgerufen werden, und löst eine Ausnahme bei nachfolgenden Aufrufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Rückrufmethode wurde bereits aufgerufen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="onChangedCallback" /> ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>1.  Rufen Sie die <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" /> Methode Abhängigkeit Änderungen benachrichtigt zu werden. Wenn eine Änderung der Abhängigkeit bereits eingetreten sein, die <see cref="T:System.Runtime.Caching.OnChangedCallback" /> Instanz wird aufgerufen, wenn <see cref="M:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged(System.Runtime.Caching.OnChangedCallback)" /> aufgerufen wird. Hingegen die <see cref="T:System.Runtime.Caching.OnChangedCallback" /> Instanz wird ein Mal aufgerufen werden entweder bei der <see cref="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" /> Methode wird aufgerufen, oder wenn die <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> -Methode aufgerufen wird, welcher Vorgang zuerst ausgeführt. Die <see cref="T:System.Runtime.Caching.OnChangedCallback" /> von der Cacheimplementierung bereitgestellte Instanz Entfernen des Eintrags im Cache und ggf. durch den Aufrufer Cache wird ausgelöst, die notwendige Änderung oder Update-Ereignis an den ursprünglichen Aufrufer der Cache sollte.  
+  
+2.  Der Cacheimplementierung Objekt muss den Cacheeintrag entfernen, der eine Änderung der Abhängigkeitseigenschaft zugeordnet ist.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanged">
+      <MemberSignature Language="C#" Value="protected void OnChanged (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnChanged(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Die Daten für das Change-Ereignis. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Wird von abgeleiteten Klassen zum Auslösen des Ereignisses, wenn eine Abhängigkeit ändert aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel die <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methode wird aufgerufen, wenn Abhängigkeit Änderungen auftreten. Die <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methode wird auch aufgerufen, wenn eine änderungsüberwachung Instanz freigegeben wird, aber die Freigabe tritt nur dann, wenn der Rückruf noch nicht aufgerufen wurde.  
+  
+ Wenn die <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methode wird aufgerufen, bevor die <xref:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged%2A> -Methode aufgerufen wird, das die Zustandsdaten aus dem Aufruf der <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methode wird von der Cacheimplementierung gespeichert. Darüber hinaus wird der Rückruf, der die <xref:System.Runtime.Caching.OnChangedCallback> Methode wird sofort aufgerufen, wenn die <xref:System.Runtime.Caching.ChangeMonitor.NotifyOnChanged%2A> Methode wird aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UniqueId">
+      <MemberSignature Language="C#" Value="public abstract string UniqueId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UniqueId" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.ChangeMonitor.UniqueId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert darstellt, die die <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Klasseninstanz.</summary>
+        <value>Der Bezeichner für eine änderungsüberwachung Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.ChangeMonitor.UniqueId%2A> Eigenschaftswert besteht normalerweise aus der Abhängigkeit, kombiniert mit Zeichenfolgendaten, eindeutig Bezeichner die Daten, die überwacht wird eine <xref:System.Runtime.Caching.ChangeMonitor> Instanz. Der Wert, der die <xref:System.Runtime.Caching.ChangeMonitor.UniqueId%2A> -Eigenschaft ist eine Zeichenfolge. Der Wert der Zeichenfolge verwendet, um die eindeutige ID des zuzuweisen der <xref:System.Runtime.Caching.ChangeMonitor> Instanz.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Durch Überschreiben der Eigenschaft, können Sie eine benutzerdefinierte Implementierung für den Zeichenfolgenwert der Eigenschaft definieren, um ihm eine eindeutige ID zuweisen</para>
+        </block>
+        <block subset="none" type="overrides">
+          <para>In abgeleiteten Klassen muss den Wert der Eigenschaft im Konstruktor festgelegt werden.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

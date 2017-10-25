@@ -1,0 +1,169 @@
+<Type Name="CacheItem" FullName="System.Runtime.Caching.CacheItem">
+  <TypeSignature Language="C#" Value="public class CacheItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CacheItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.CacheItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen einzelne Cacheeintrag im Cache dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.CacheItem> -Klasse stellt eine logische Darstellung eines Cache-Eintrags, z. Regionen mithilfe b. der <xref:System.Runtime.Caching.CacheItem.RegionName%2A> Eigenschaft. In der Implementierung der Standardeinstellung ASP.NET Cache ist ein Cacheeintrag ein Schlüssel/Wert-Paar.  
+  
+ Einträge im Cache sind keine <xref:System.Runtime.Caching.CacheItem> Instanzen. Stattdessen kann der Cacheanbieter Cacheeinträge jedes interne Format speichern, die praktisch ist. Die Cache-API erfordert jedoch Cacheanbieter Cacheeinträge in konvertieren können <xref:System.Runtime.Caching.CacheItem> Instanzen (und umgekehrt).  
+  
+ Benutzerdefinierte Cache-Implementierungen können von erben die <xref:System.Runtime.Caching.CacheItem> -Klasse enthalten zusätzliche Informationen zur Cacheeinträge.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Runtime.Caching.CacheItem> Klasse, um den Inhalt einer Datei als einen Eintrag im Cache zu speichern.  
+  
+ [!code-csharp[System.Runtime.Caching.CacheItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/system.runtime.caching.cacheitem/cs/default.aspx.cs#1)]
+ [!code-vb[System.Runtime.Caching.CacheItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.runtime.caching.cacheitem/vb/default.aspx.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Die <see cref="T:System.Runtime.Caching.ObjectCache" /> Klasse verfügt über Methoden, Unterstützung hinzufügen, abrufen und Aktualisieren von Daten zwischenzuspeichern, und alle diese Methoden Überladungen haben, die Unterstützung der <see cref="T:System.Runtime.Caching.CacheItem" /> Klasse. Daher kann eine benutzerdefinierte Cacheimplementierung ein erweitertes erstellen <see cref="T:System.Runtime.Caching.CacheItem" /> Klasse, und verwenden, die erweiterte Klasse zusammen mit den vorhandenen <see cref="T:System.Runtime.Caching.ObjectCache" /> -API für die Einträge im Cache.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheItem (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.CacheItem.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein eindeutiger Bezeichner für eine <see cref="T:System.Runtime.Caching.CacheItem" /> Eintrag.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Runtime.Caching.CacheItem" /> -Instanz mit dem angegebenen Schlüssel, der einen Cacheeintrag.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Runtime.Caching.CacheItem.%23ctor%28System.String%29> -methodenüberladung aufgerufen wird, werden die Eigenschaftenwerte für <xref:System.Runtime.Caching.CacheItem.RegionName%2A> und <xref:System.Runtime.Caching.CacheItem.Value%2A> festgelegt `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheItem (string key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.CacheItem.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein eindeutiger Bezeichner für eine <see cref="T:System.Runtime.Caching.CacheItem" /> Eintrag.</param>
+        <param name="value">Die Daten für eine <see cref="T:System.Runtime.Caching.CacheItem" /> Eintrag.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Runtime.Caching.CacheItem" /> -Instanz mit dem angegebenen Schlüssel und einen Wert des Cacheeintrags.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Runtime.Caching.CacheItem.%23ctor%28System.String%2CSystem.Object%29> -methodenüberladung aufgerufen wird, den Eigenschaftswert für <xref:System.Runtime.Caching.CacheItem.RegionName%2A> festgelegt ist, um `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheItem (string key, object value, string regionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string key, object value, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.CacheItem.#ctor(System.String,System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein eindeutiger Bezeichner für eine <see cref="T:System.Runtime.Caching.CacheItem" /> Eintrag.</param>
+        <param name="value">Die Daten für eine <see cref="T:System.Runtime.Caching.CacheItem" /> Eintrag.</param>
+        <param name="regionName">Der Name eines Bereichs im Cache, die enthalten, wird die <see cref="T:System.Runtime.Caching.CacheItem" /> Eintrag.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Runtime.Caching.CacheItem" /> -Instanz mit dem angegebenen Schlüssel, Wert und Region des Cacheeintrags.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public string Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Key" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheItem.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen eindeutigen Bezeichner für eine <see cref="T:System.Runtime.Caching.CacheItem" /> Instanz.</summary>
+        <value>Der Bezeichner für eine <see cref="T:System.Runtime.Caching.CacheItem" /> Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionName">
+      <MemberSignature Language="C#" Value="public string RegionName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegionName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheItem.RegionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen eines Bereichs im Cache, der enthält einem <see cref="T:System.Runtime.Caching.CacheItem" /> Eintrag.</summary>
+        <value>Der Name eines Datenbereichs in einem Cache. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheItem.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Daten für eine <see cref="T:System.Runtime.Caching.CacheItem" /> Instanz.</summary>
+        <value>Die Daten für eine <see cref="T:System.Runtime.Caching.CacheItem" /> Instanz. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

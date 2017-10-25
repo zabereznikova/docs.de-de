@@ -1,0 +1,587 @@
+<Type Name="PathFigure" FullName="System.Windows.Media.PathFigure">
+  <TypeSignature Language="C#" Value="public sealed class PathFigure : System.Windows.Media.Animation.Animatable, IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PathFigure extends System.Windows.Media.Animation.Animatable implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.PathFigure" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Segments")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Unterabschnitt einer Geometrie dar, eine einzelne verbundene Folge zweidimensionaler geometrischer Segmente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Media.PathGeometry> setzt sich aus ein oder mehrere Zahlen, dargestellt durch die <xref:System.Windows.Media.PathFigure> Klasse. Abbildung ist selbst setzt sich aus einem oder mehreren Segmenten, definiert durch die <xref:System.Windows.Media.PathSegment> Klasse.  
+  
+<a name="xamlObjectElementUsage_PathFigure"></a>   
+## <a name="xaml-object-element-usage"></a>Verwendung von XAML-Objektelementen  
+  
+```  
+<PathFigure .../>  
+-or-  
+<PathFigure ...>  
+  oneOrMoreSegments  
+</PathFigure>  
+```  
+  
+<a name="xamlValues_PathFigure"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ `oneOrMoreSegments`  
+ Ein oder mehrere Objektelemente für Objekte, die Ableitung <xref:System.Windows.Media.PathSegment>. In der Regel sind diese: <xref:System.Windows.Media.ArcSegment>,  
+  
+ <xref:System.Windows.Media.BezierSegment>, <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.PolyBezierSegment>, <xref:System.Windows.Media.PolyLineSegment>, <xref:System.Windows.Media.PolyQuadraticBezierSegment>, <xref:System.Windows.Media.QuadraticBezierSegment>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathFigure ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathFigure.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.PathFigure" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathFigure (System.Windows.Point start, System.Collections.Generic.IEnumerable&lt;System.Windows.Media.PathSegment&gt; segments, bool closed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point start, class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Media.PathSegment&gt; segments, bool closed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathFigure.#ctor(System.Windows.Point,System.Collections.Generic.IEnumerable{System.Windows.Media.PathSegment},System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="start" Type="System.Windows.Point" />
+        <Parameter Name="segments" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Media.PathSegment&gt;" />
+        <Parameter Name="closed" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="start">Der <see cref="P:System.Windows.Media.PathFigure.StartPoint" /> für den <see cref="T:System.Windows.Media.PathFigure" />.</param>
+        <param name="segments">Der <see cref="P:System.Windows.Media.PathFigure.Segments" /> für den <see cref="T:System.Windows.Media.PathFigure" />.</param>
+        <param name="closed">Der <see cref="P:System.Windows.Media.PathFigure.IsClosed" /> für den <see cref="T:System.Windows.Media.PathFigure" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.PathFigure" /> Klasse mit dem angegebenen <see cref="P:System.Windows.Media.PathFigure.StartPoint" />, <see cref="P:System.Windows.Media.PathFigure.Segments" />, und <see cref="P:System.Windows.Media.PathFigure.IsClosed" /> Werte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathFigure Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PathFigure Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathFigure.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathFigure</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.PathFigure" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathFigure CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PathFigure CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathFigure.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathFigure</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.PathFigure" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathFigure.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetFlattenedPathFigure">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.PathFigure" /> Objekt, das eine polygonale Näherung dieses <see cref="T:System.Windows.Media.PathFigure" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der flattening Prozess ist in Bezug auf die Animation und Kurve Segment Parameter lossy.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetFlattenedPathFigure">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathFigure GetFlattenedPathFigure ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PathFigure GetFlattenedPathFigure() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathFigure.GetFlattenedPathFigure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathFigure</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.PathFigure" /> Objekt, das eine polygonale Näherung dieses <see cref="T:System.Windows.Media.PathFigure" /> Objekt.</summary>
+        <returns>Die polygonale Näherung dieses <see cref="T:System.Windows.Media.PathFigure" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der flattening Prozess ist in Bezug auf die Animation und Kurve Segment Parameter lossy.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFlattenedPathFigure">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathFigure GetFlattenedPathFigure (double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PathFigure GetFlattenedPathFigure(float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathFigure.GetFlattenedPathFigure(System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathFigure</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="tolerance">Die Fehlertoleranz.</param>
+        <param name="type">Gibt an, wie Fehler der Toleranz interpretiert wird.</param>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.PathFigure" /> -Objekt ist innerhalb der angegebenen Toleranz, die eine polygonale Näherung dieses <see cref="T:System.Windows.Media.PathFigure" /> Objekt.</summary>
+        <returns>Die polygonale Näherung dieses <see cref="T:System.Windows.Media.PathFigure" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der flattening Prozess ist in Bezug auf die Animation und Kurve Segment Parameter lossy.  
+  
+ `tolerance`Bestimmt, wie genau die Kurve angeglichen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosed">
+      <MemberSignature Language="C#" Value="public bool IsClosed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.PathFigure.IsClosed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dies zuerst Abbildungen und zuletzt Segmente verbunden sind.</summary>
+        <value>
+          <see langword="true" />Wenn in dieser Abbildung erste und letzte des Segmente sind verbunden. andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsClosed"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.PathFigure.IsClosedProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsClosedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsClosedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PathFigure.IsClosedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.PathFigure.IsClosed" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFilled">
+      <MemberSignature Language="C#" Value="public bool IsFilled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFilled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.PathFigure.IsFilled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob dieser Bereich enthaltenen <see cref="T:System.Windows.Media.PathFigure" /> für Treffertests, rendern und Ausschneiden belegt verwendet werden soll.</summary>
+        <value>Bestimmt, ob dieser Bereich enthaltenen <see cref="T:System.Windows.Media.PathFigure" /> für Treffertests, rendern und Ausschneiden belegt verwendet werden soll.  Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft, um festgelegt wird `false`, und klicken Sie dann nur die Kontur des der <xref:System.Windows.Media.PathFigure> verwendet werden, und die enthaltenen Bereich wird nicht in den gesamten Bereich der beitragen der <xref:System.Windows.Media.PathFigure>.  
+  
+ Eine Verwendung dieser Eigenschaft wird zum Zulassen von ausgefüllte Striche in einer ansonsten gefüllt <xref:System.Windows.Media.Geometry>, wie z. B. den Mund in der linken Smiley unten.  Festlegen der Mund <xref:System.Windows.Media.PathFigure.IsFilled%2A> auf `true` erzeugen die unerwünschte Auswirkungen der Mund Smiley rechts aufweist.  
+  
+ ![Smiley-Pfad ist gefüllt](~/add/media/ref-mil-pathfigure-isfilled-smiley.PNG "Smiley-Pfad ist gefüllt.")  
+Beispiel für IsFilled  
+  
+<a name="dependencyPropertyInfo_IsFilled"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.PathFigure.IsFilledProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFilledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsFilledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsFilledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PathFigure.IsFilledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.PathFigure.IsFilled" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MayHaveCurves">
+      <MemberSignature Language="C#" Value="public bool MayHaveCurves ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool MayHaveCurves() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathFigure.MayHaveCurves" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dies <see cref="T:System.Windows.Media.PathFigure" /> Objekt möglicherweise gekrümmte Segmente aufweisen.</summary>
+        <returns>
+          <see langword="true" />Wenn diese <see cref="T:System.Windows.Media.PathFigure" /> Objekt möglicherweise gekrümmte Segmente aufweisen, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Segments">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathSegmentCollection Segments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.PathSegmentCollection Segments" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.PathFigure.Segments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathSegmentCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der Segmente, die die Form dieses definieren <see cref="T:System.Windows.Media.PathFigure" /> Objekt.</summary>
+        <value>Die Auflistung der Segmente, die die Form dieses definieren <see cref="T:System.Windows.Media.PathFigure" /> Objekt. Der Standardwert ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_Segments"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+    oneOrMorePathSegments  
+</object>  
+```  
+  
+<a name="xamlValues_Segments"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ `oneOrMorePathSegments`  
+ Ein oder mehrere Objektelemente für Objekte, die Ableitung <xref:System.Windows.Media.PathSegment>. In der Regel sind diese: <xref:System.Windows.Media.ArcSegment>,  
+  
+ <xref:System.Windows.Media.BezierSegment>, <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.PolyBezierSegment>, <xref:System.Windows.Media.PolyLineSegment>, <xref:System.Windows.Media.PolyQuadraticBezierSegment>, <xref:System.Windows.Media.QuadraticBezierSegment>.  
+  
+<a name="dependencyPropertyInfo_Segments"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.PathFigure.SegmentsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SegmentsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SegmentsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SegmentsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PathFigure.SegmentsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.PathFigure.Segments" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartPoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Point StartPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point StartPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.PathFigure.StartPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Point" /> , in dem der <see cref="T:System.Windows.Media.PathFigure" /> beginnt.</summary>
+        <value>Die <see cref="T:System.Windows.Point" /> , in dem die <see cref="T:System.Windows.Media.PathFigure" /> beginnt. Der Standardwert ist <c>0,0</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_StartPoint"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.PathFigure.StartPointProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartPointProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StartPointProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StartPointProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PathFigure.StartPointProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Bezeichner für die <see cref="P:System.Windows.Media.PathFigure.StartPoint" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathFigure.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das zu verwendende Format.  
+  
+ - oder -   
+  
+ Ein null-Verweis (<see langword="Nothing" /> in Visual Basic), verwenden Sie das Standardformat für den Typ des definiert die <see cref="T:System.IFormattable" /> Implementierung.</param>
+        <param name="provider">Der zum Formatieren des Werts zu verwendende Anbieter.  
+  
+ - oder -   
+  
+ Ein null-Verweis (<see langword="Nothing" /> in Visual Basic) um die Zahlenformatinformationen aus dem aktuellen Gebietsschema des Betriebssystems abzurufen.</param>
+        <summary>Formatiert den Wert der aktuellen Instanz mit dem angegebenen Format.</summary>
+        <returns>Der Wert der aktuellen Instanz im angegebenen Format.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ToString">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt eine Zeichenfolgendarstellung dieses Objekts an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Reihe von verschieben und draw-Befehle. Weitere Informationen zum Format dieser Befehle finden Sie unter der [Markup Pfadsyntax](~/docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) (Übersicht).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathFigure.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Zeichenfolgendarstellung dieses Objekts an.</summary>
+        <returns>Eine Zeichenfolgendarstellung dieses <see cref="T:System.Windows.Media.PathFigure" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Reihe von verschieben und draw-Befehle. Weitere Informationen zum Format dieser Befehle finden Sie unter der [Markup Pfadsyntax](~/docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) (Übersicht).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathFigure.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Kulturspezifische Formatierungsinformationen; andernfalls <see langword="null" /> die aktuelle Kultur verwenden und default Settings Formatierung.</param>
+        <summary>Erstellt eine Zeichenfolgendarstellung dieses Objekts unter Verwendung der angegebenen kulturspezifischen Formatierung an.</summary>
+        <returns>Eine formatierte Zeichenfolgendarstellung dieses <see cref="T:System.Windows.Media.PathFigure" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Reihe von verschieben und draw-Befehle. Weitere Informationen zum Format dieser Befehle finden Sie unter der [Markup Pfadsyntax](~/docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) (Übersicht).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

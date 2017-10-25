@@ -1,0 +1,94 @@
+<Type Name="MergeOption" FullName="System.Data.Services.Client.MergeOption">
+  <TypeSignature Language="C#" Value="public enum MergeOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MergeOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.MergeOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bestimmt die Synchronisierungsoption zum Senden oder Empfangen von Entitäten an oder von WCF Data Services.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird beim Materialisieren von Objekten verwendet. Legen Sie diese Eigenschaft auf die entsprechende Materialisierungsoption fest, bevor Abfragen oder Updates zum Datendienst ausgeführt werden. Der Standardwert ist `MergeOption.AppendOnly`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppendOnly">
+      <MemberSignature Language="C#" Value="AppendOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.Client.MergeOption AppendOnly = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.Client.MergeOption.AppendOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.MergeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es werden nur neue Entitäten angefügt. Vorhandene Entitäten oder ihre ursprünglichen Werte werden nicht geändert. Bei dieser Zusammenführung gehen keine clientseitigen Änderungen verloren. Dies ist das Standardverhalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoTracking">
+      <MemberSignature Language="C#" Value="NoTracking" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.Client.MergeOption NoTracking = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.Client.MergeOption.NoTracking" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.MergeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Objekte werden stets aus dem dauerhaften Speicher geladen. Alle an Objekten im Objektkontext vorgenommenen Eigenschaftenänderungen werden von den Datenquellenwerten überschrieben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwriteChanges">
+      <MemberSignature Language="C#" Value="OverwriteChanges" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.Client.MergeOption OverwriteChanges = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.Client.MergeOption.OverwriteChanges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.MergeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle aktuellen Werte auf dem Client werden mit aktuellen Datendienstwerten überschrieben – unabhängig davon, ob sie auf dem Client geändert wurden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreserveChanges">
+      <MemberSignature Language="C#" Value="PreserveChanges" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.Client.MergeOption PreserveChanges = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.Client.MergeOption.PreserveChanges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.MergeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktuelle, auf dem Client geänderte Werte werden nicht geändert, jedoch werden alle unveränderten Werte mit aktuellen Werten vom Datendienst aktualisiert. Bei dieser Zusammenführung gehen keine clientseitigen Änderungen verloren.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

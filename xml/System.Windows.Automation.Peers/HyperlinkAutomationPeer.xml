@@ -1,0 +1,165 @@
+<Type Name="HyperlinkAutomationPeer" FullName="System.Windows.Automation.Peers.HyperlinkAutomationPeer">
+  <TypeSignature Language="C#" Value="public class HyperlinkAutomationPeer : System.Windows.Automation.Peers.TextElementAutomationPeer, System.Windows.Automation.Provider.IInvokeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HyperlinkAutomationPeer extends System.Windows.Automation.Peers.TextElementAutomationPeer implements class System.Windows.Automation.Provider.IInvokeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.HyperlinkAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.TextElementAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IInvokeProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Macht <see cref="T:System.Windows.Documents.Hyperlink" /> Typen für die UI-Automatisierung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HyperlinkAutomationPeer (System.Windows.Documents.Hyperlink owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Hyperlink owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.HyperlinkAutomationPeer.#ctor(System.Windows.Documents.Hyperlink)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Documents.Hyperlink" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der <see cref="T:System.Windows.Documents.Hyperlink" />, der diesem <see cref="T:System.Windows.Automation.Peers.HyperlinkAutomationPeer" /> zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Automation.Peers.HyperlinkAutomationPeer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationControlTypeCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.HyperlinkAutomationPeer.GetAutomationControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Steuerelementtyp für die <see cref="T:System.Windows.Documents.Hyperlink" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.HyperlinkAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" /> aufgerufen.</summary>
+        <returns>Der <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Hyperlink" />-Enumerationswert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetClassNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetClassNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.HyperlinkAutomationPeer.GetClassNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Namen des der <see cref="T:System.Windows.Documents.Hyperlink" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.HyperlinkAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" /> aufgerufen.</summary>
+        <returns>Eine Zeichenfolge, die "Hyperlink" enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.HyperlinkAutomationPeer.GetNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Textbezeichnung des <see cref="T:System.Windows.Documents.Hyperlink" /> ab, das diesem <see cref="T:System.Windows.Automation.Peers.HyperlinkAutomationPeer" /> zugeordnet ist. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetName" /> aufgerufen.</summary>
+        <returns>Die Zeichenfolge, die die Bezeichnung enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können der Name-Eigenschaft vorstellen, als wäre er eine Textzeichenfolge, die Benutzer verwenden, um das Steuerelement zu erläutern die Namenseigenschaft sind. Stellen Sie sicher, dass Sie eine Textdarstellung für alle Steuerelemente in verfügen die [!INCLUDE[TLA#tla_gui](~/includes/tlasharptla-gui-md.md)] , damit Sie programmgesteuert auf das Steuerelement in lokalisierten Versionen verweisen können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPattern">
+      <MemberSignature Language="C#" Value="public override object GetPattern (System.Windows.Automation.Peers.PatternInterface patternInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetPattern(valuetype System.Windows.Automation.Peers.PatternInterface patternInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.HyperlinkAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternInterface" Type="System.Windows.Automation.Peers.PatternInterface" />
+      </Parameters>
+      <Docs>
+        <param name="patternInterface">Ein Wert in der Enumeration.</param>
+        <summary>Ruft das Steuerelementmuster für die <see cref="T:System.Windows.Documents.Hyperlink" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.HyperlinkAutomationPeer" />.</summary>
+        <returns>Wenn <paramref name="patternInterface" /> ist <see cref="F:System.Windows.Automation.Peers.PatternInterface.Invoke" />, gibt diese Methode einen <see langword="this" /> Zeiger; anderenfalls Methodenrückgabe <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsControlElementCore">
+      <MemberSignature Language="C#" Value="protected override bool IsControlElementCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsControlElementCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.HyperlinkAutomationPeer.IsControlElementCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Documents.Hyperlink" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.HyperlinkAutomationPeer" /> verstanden vom Endbenutzer als interaktives kann der Benutzer verstehen, ist die <see cref="T:System.Windows.Documents.Hyperlink" /> als Teil der logischen Struktur des Steuerelements in der [!INCLUDE[TLA2#tla_gui](~/includes/tla2sharptla-gui-md.md)]. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsControlElement" /> aufgerufen.</summary>
+        <returns>
+          <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IInvokeProvider.Invoke">
+      <MemberSignature Language="C#" Value="void IInvokeProvider.Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.IInvokeProvider.Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.HyperlinkAutomationPeer.System#Windows#Automation#Provider#IInvokeProvider#Invoke" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,306 @@
+<Type Name="DisplayClaim" FullName="System.IdentityModel.Metadata.DisplayClaim">
+  <TypeSignature Language="C#" Value="public class DisplayClaim" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DisplayClaim extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Metadata.DisplayClaim" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die anzeigbare Claim-Objekt dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel auf das Tag anzeigen (die <xref:System.IdentityModel.Metadata.DisplayClaim.DisplayTag%2A> Eigenschaft) und die Beschreibung (die Description-Eigenschaft) sind lokalisiert. Die <xref:System.IdentityModel.Metadata.DisplayClaim.ClaimType%2A> Eigenschaft identifiziert verschiedene Anspruchstypen. Der Anzeigewert (die <xref:System.IdentityModel.Metadata.DisplayClaim.DisplayValue%2A> Eigenschaft) ist eine Zeichenfolgendarstellung des Anspruchs. Die Ressource.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisplayClaim (string claimType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string claimType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Metadata.DisplayClaim.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">Fordern Sie der Anspruchstyp für die Anzeige. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.ClaimType" /> Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Metadata.DisplayClaim" /> Klasse, die den angegebenen Anspruchstyp verfügt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der <paramref name="claimType" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisplayClaim (string claimType, string displayTag, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string claimType, string displayTag, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Metadata.DisplayClaim.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+        <Parameter Name="displayTag" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">Fordern Sie der Anspruchstyp für die Anzeige. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.ClaimType" /> Eigenschaft.</param>
+        <param name="displayTag">Fordern Sie den Anzeigenamen (oder den Anzeigenamen) für die Anzeige. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.DisplayTag" /> Eigenschaft.</param>
+        <param name="description">Die Beschreibung für die Anzeige Anspruch. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.Description" /> Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Metadata.DisplayClaim" /> -Klasse mit dem angegebenen Anspruchstyp, Name und Beschreibung angezeigt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der <paramref name="claimType" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisplayClaim (string claimType, string displayTag, string description, string displayValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string claimType, string displayTag, string description, string displayValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Metadata.DisplayClaim.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+        <Parameter Name="displayTag" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="displayValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">Fordern Sie der Anspruchstyp für die Anzeige. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.ClaimType" /> Eigenschaft.</param>
+        <param name="displayTag">Fordern Sie den Anzeigenamen (oder den Anzeigenamen) für die Anzeige. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.DisplayTag" /> Eigenschaft.</param>
+        <param name="description">Die Beschreibung für die Anzeige Anspruch. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.Description" /> Eigenschaft.</param>
+        <param name="displayValue">Der Anzeigewert für die Anzeige Anspruch. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.DisplayValue" /> Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Metadata.DisplayClaim" /> -Klasse mit dem angegebenen Anspruchstyp, Anzeigename, Wert und Beschreibung angezeigt. Der Anspruch ist erforderlich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Metadata.DisplayClaim.Optional%2A> -Eigenschaft wird mit initialisiert `true` in der neuen Instanz.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der <paramref name="claimType" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisplayClaim (string claimType, string displayTag, string description, string displayValue, bool optional);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string claimType, string displayTag, string description, string displayValue, bool optional) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Metadata.DisplayClaim.#ctor(System.String,System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+        <Parameter Name="displayTag" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="displayValue" Type="System.String" />
+        <Parameter Name="optional" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">Fordern Sie der Anspruchstyp für die Anzeige. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.ClaimType" /> Eigenschaft.</param>
+        <param name="displayTag">Fordern Sie den Anzeigenamen (oder den Anzeigenamen) für die Anzeige. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.DisplayTag" /> Eigenschaft.</param>
+        <param name="description">Die Beschreibung für die Anzeige Anspruch. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.Description" /> Eigenschaft.</param>
+        <param name="displayValue">Der Anzeigewert für die Anzeige Anspruch. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.DisplayValue" /> Eigenschaft.</param>
+        <param name="optional">
+          <see langword="true" />, wenn der Anspruch optional ist, andernfalls <see langword="false" />. Initialisiert die <see cref="P:System.IdentityModel.Metadata.DisplayClaim.Optional" /> Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Metadata.DisplayClaim" /> -Klasse mit dem angegebenen Anspruchstyp, Anzeigename, Wert, Beschreibung und optionales Attribut anzuzeigen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der <paramref name="claimType" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimType">
+      <MemberSignature Language="C#" Value="public string ClaimType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClaimType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.DisplayClaim.ClaimType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anspruchstyp der Anzeige Anspruch zugeordnet.</summary>
+        <value>Ein URI, den Typ des Anspruchs darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser erforderliche Attribut den eindeutigen Bezeichner (URI) bietet des einzelnen Anspruchs zurückgegebenen im Sicherheitstoken  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDisplayClaimFromClaimType">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Metadata.DisplayClaim CreateDisplayClaimFromClaimType (string claimType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Metadata.DisplayClaim CreateDisplayClaimFromClaimType(string claimType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Metadata.DisplayClaim.CreateDisplayClaimFromClaimType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Metadata.DisplayClaim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">Der URI, den Typ des Anspruchs darstellt.</param>
+        <summary>Erstellt einen Anspruch für die Anzeige aus dem angegebenen anspruchtyp.</summary>
+        <returns>Gibt <see cref="T:System.IdentityModel.Metadata.DisplayClaim" />zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Metadata.DisplayClaim.DisplayTag%2A> und <xref:System.IdentityModel.Metadata.DisplayClaim.Description%2A> Eigenschaften werden auf die Standardwerte, die basierend auf dem angegebenen anspruchtyp festgelegt. Wenn Sie Standardwerte für die Eigenschaften nicht vorhanden sind, die Einstellung `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.DisplayClaim.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Beschreibung für die Anzeige Anspruch.</summary>
+        <value>Die Beschreibung für die Anzeige Anspruch.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses optionale Element enthält eine Beschreibung der Semantik für den Anspruch im Sicherheitstoken zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayTag">
+      <MemberSignature Language="C#" Value="public string DisplayTag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayTag" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.DisplayClaim.DisplayTag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Anzeigenamen für den Anspruch anzeigen.</summary>
+        <value>Der angezeigte Name für den Anspruch anzeigen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses optionale Element bietet einen Anzeigenamen für den Anspruch im Sicherheitstoken zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayValue">
+      <MemberSignature Language="C#" Value="public string DisplayValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayValue" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.DisplayClaim.DisplayValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest darstellbaren Wert für die Anzeige Anspruch.</summary>
+        <value>Der darstellbaren Wert für die Anzeige Anspruch.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses optionale Element enthält eine oder mehr darstellbaren Werte für den Anspruch im Sicherheitstoken zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Optional">
+      <MemberSignature Language="C#" Value="public bool Optional { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Optional" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.DisplayClaim.Optional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das optionale Attribut für den Anspruch anzeigen</summary>
+        <value>
+          <see langword="true" />Wenn die Anzeige Anspruch optional ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das optionale Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteOptionalAttribute">
+      <MemberSignature Language="C#" Value="public bool WriteOptionalAttribute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WriteOptionalAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.DisplayClaim.WriteOptionalAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das optionale Attribut serialisiert werden.</summary>
+        <value>
+          <see langword="true" />Das optionale Attribut serialisieren; andernfalls "false". Der Standardwert ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

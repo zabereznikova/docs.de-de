@@ -1,0 +1,157 @@
+<Type Name="AttachedPropertyBrowsableForChildrenAttribute" FullName="System.Windows.AttachedPropertyBrowsableForChildrenAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AttachedPropertyBrowsableForChildrenAttribute : System.Windows.AttachedPropertyBrowsableAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AttachedPropertyBrowsableForChildrenAttribute extends System.Windows.AttachedPropertyBrowsableAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.AttachedPropertyBrowsableAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine angefügte Eigenschaft einen durchsuchbaren Bereich besitzt, der sich auf untergeordnete Elemente in der logischen Struktur erstreckt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Bedeutung des Begriffs `browsable` wie dies bei Beschreibungen für diesen [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] ist analog zu die Beschreibungen für <xref:System.ComponentModel.BrowsableAttribute>, aber der durchsuchbarkeitszustand für eine angefügte Eigenschaft ist besonders relevant für die Eigenschaftsinformationen für [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], da in erster Linie eine angefügte Eigenschaft ist ein [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Konzept.  
+  
+ Wenn dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] für die Get-Zugriffsmethode für eine angefügte Eigenschaft angewendet wird dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] gibt an, dass eine angefügte Eigenschaft durchsuchbar ist, wenn die angefügte Eigenschaftenbesitzer eines übergeordneten Elements von anderen Elementen.  
+  
+ Wenn von einem Designer interpretiert, dass verwendet Typinformationen Deskriptor, der Designer sollte diese Eigenschaft als eine Steuerelementeigenschaft an alle untergeordneten Elemente in der logischen Struktur hinzufügen, basierend auf dem übergeordneten Element mit diesem [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] angewendet.  
+  
+ Im Allgemeinen entspricht der durchsuchbarkeitszustand Funktionalität. Z. B. <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType> festgelegt wurde, durchsucht werden kann, auf Elemente, die untergeordneten Elemente des sind eine <xref:System.Windows.Controls.Canvas>, da <xref:System.Windows.Controls.Canvas> enthält Code für die Überprüfung der festgelegten Werten von <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType> auf untergeordnete Elemente.  
+  
+ Dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] unterstützt zwei Arten von Struktur Erkennung Modi für die Position von übergeordneten Elementen: einen flachen Modus und einen tiefen Modus. Die flache Modus der Standardmodus für eine ausgeglichene ist <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)], erfordert, dass das unmittelbar übergeordnete Element den Besitzertyp der Eigenschaft in der Reihenfolge für die angefügte Eigenschaft durchsuchbar sein. Der Modus wird deklariert, durch Anwenden des Attributs mit <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A> als `true`. Der Modus ist weniger restriktiv, da es nur erfordert der Besitzertyp an einer beliebigen Stelle in der Richtung Vorgänger des logischen Struktur, und daher die angefügte Eigenschaft ist für alle untergeordneten Elemente, nicht nur direkte untergeordnete Elemente gesucht werden kann. Der Modus wird für angefügte Eigenschaftenverwendungen angewendet, in dem in der logischen Struktur beteiligten Elemente nicht als "true" übergeordnetes Element gemeldet werden sollte. Implizite Sammlungen (z. B. die <xref:System.Windows.Controls.UIElementCollection> , die implizit ist die <xref:System.Windows.Controls.Panel.Children%2A> von einer <xref:System.Windows.Controls.Panel>) gelten nicht als übergeordnete Elemente für Zwecke wie dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] deklariert die Erkennung Strukturmodus.  
+  
+ Dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] sollte nur auf Get-Accessor der angefügten Eigenschaftsdefinitionen angewendet werden. Dies sind nicht anwendbar [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] für die Set-Zugriffsmethode. Obwohl intuitiv die Set-Operation, die durchsuchbar für bereitgestellt werden [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] auf untergeordnete Elemente, ist das Vorhandensein und die Merkmale des Get-Accessors für das übergeordnete Element, das "true" das Verhalten steuert.  
+  
+ Gibt an, ob ist eine angefügte Eigenschaft gesucht werden kann, auf dem untergeordneten Element nicht absolute Garantie dafür, dass der Wert der angefügten Eigenschaft tatsächlich vom übergeordneten Element auf eine Weise verarbeitet wird. Darüber hinaus die <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A> Wert ist keine absolute Garantie dafür, dass der Bereich für die Verarbeitung erstreckt sich nicht hinter dem Element übergeordneten Elements. All dies ist implementierungsspezifisch. Allerdings dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] für die Berichterstattung der durchsuchbarkeitszustand ist der am besten Mechanismus für die berichterstellung, die Informationen zur Verwendung und die funktionalen Informationen für eine angefügte Eigenschaft. Aus diesem Grund können Sie in der Regel davon ausgehen, dass der durchsuchbarkeitszustand einer angefügten Eigenschaft entspricht dem Verhalten der wie ein Wert der angefügten Eigenschaft auf dem untergeordneten Element verarbeitet oder vom entsprechenden übergeordneten Element in Ihrem Anwendungscode interpretiert wird.  
+  
+ Allgemeine Informationen zum Deklarieren von angefügten Eigenschaften finden Sie unter [Eigenschaftenübersicht angefügt](~/docs/framework/wpf/advanced/attached-properties-overview.md).  
+  
+<a name="xamlTextUsage_AttachedPropertyBrowsableForChildrenAttribute"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Member dieses Typs werden normalerweise nicht im verwendet [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AttachedPropertyBrowsableForChildrenAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung für <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A> ist `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" /> zum Vergleichen mit der aktuellen <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" />.</param>
+        <summary>Bestimmt, ob die aktuelle <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] mit einem angegebenen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" /> gleich der aktuellen <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung unterstützt Wertgleichheit des einen möglichen festlegbaren Werts, der verfügbar gemacht werden, von diesem [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)], <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)].</summary>
+        <returns>Ein 32-Bit-Ganzzahlwert ohne Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung unterstützt zwei mögliche Hashwerte basierend auf einen möglichen festlegbaren Werts, der von diesem verfügbar gemacht [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)], <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeDescendants">
+      <MemberSignature Language="C#" Value="public bool IncludeDescendants { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeDescendants" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob den tiefgreifende Modus für die Erkennung von übergeordneten Elementen der angefügten Eigenschaft verwendet deklariert, in denen dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] angewendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn die angefügte Eigenschaft für alle untergeordneten Elemente in der logischen Struktur des übergeordneten Elements durchsucht werden kann, das die angefügte Eigenschaft besitzt. <see langword="false" />Wenn die angefügte Eigenschaft nur für die unmittelbar untergeordneten Elemente eines übergeordneten Elements durchsucht werden kann, das die angefügte Eigenschaft besitzt. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der angefügten Eigenschaften definiert, indem Sie die meisten [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] , gelten <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute> holen Sie dies hat den Standardwert <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A> als `false`.  
+  
+<a name="xamlTextUsage_IncludeDescendants"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Member dieses Typs werden normalerweise nicht im verwendet [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

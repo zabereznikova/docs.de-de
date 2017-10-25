@@ -1,0 +1,102 @@
+<Type Name="FlowDirection" FullName="System.Windows.Forms.FlowDirection">
+  <TypeSignature Language="C#" Value="public enum FlowDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FlowDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FlowDirection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Konstanten, die die Richtung anzugeben, in der aufeinander folgende Elemente der Benutzeroberfläche (UI) in einem linearen Layoutcontainer platziert werden</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.FlowDirection> Enumeration beschreibt die flussrichtung von aufeinander folgenden Elemente der Benutzeroberfläche, in der Regel Steuerelemente, die auf einer Entwurfsoberfläche oder Container, z. B. ein Formular. Diese Enumeration wird von linearen Layoutcontainern verwendet, z. B. <xref:System.Windows.Forms.FlowLayoutPanel>, die speichert diese Informationen intern in der <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Die <xref:System.Windows.Forms.FlowDirection> bestimmt, wo ein neues Steuerelement standardmäßig platziert wird, wenn sie zu einem unterstützenden Container hinzugefügt wird. Die flussrichtung des Containers, zusammen mit den <xref:System.Windows.Forms.Control.Anchor%2A> und <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaften der einzelnen eigenständigen Steuerung, bestimmen Sie die neuanordnung von Steuerelementen beim Ändern der Größe der Container.  
+  
+ Die <xref:System.Windows.Forms.FlowLayoutPanel> Steuerelement verfügt über eine `FlowBreak` Eigenschaft für seine untergeordneten Steuerelemente. Festlegen des Werts der `FlowBreak` Eigenschaft `true` bewirkt, dass die <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement andere Steuerelemente in der aktuellen flussrichtung an und in die nächste Zeile oder Spalte.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Eigenschaft auf einen <xref:System.Windows.Forms.FlowLayoutPanel> Steuerelement. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.FlowLayoutPanel> Steuerelement.  
+  
+ [!code-cpp[System.Windows.Forms.FlowLayoutPanel#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/cpp/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.FlowLayoutPanel#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.FlowLayoutPanel#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/VB/form1.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BottomUp">
+      <MemberSignature Language="C#" Value="BottomUp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlowDirection BottomUp = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlowDirection.BottomUp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Elemente, die vom unteren Rand der Entwurfsoberfläche nach oben weitergegeben werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftToRight">
+      <MemberSignature Language="C#" Value="LeftToRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlowDirection LeftToRight = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlowDirection.LeftToRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>-Elemente werden vom linken Rand der Entwurfsoberfläche rechts fließen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeft">
+      <MemberSignature Language="C#" Value="RightToLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlowDirection RightToLeft = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlowDirection.RightToLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Auf der linken Seite Fluss Elemente aus dem rechten Rand der Entwurfsoberfläche angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopDown">
+      <MemberSignature Language="C#" Value="TopDown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlowDirection TopDown = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlowDirection.TopDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die letzte Fluss Elemente vom oberen Rand der Entwurfsoberfläche angezeigt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

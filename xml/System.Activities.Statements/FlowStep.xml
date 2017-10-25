@@ -1,0 +1,124 @@
+<Type Name="FlowStep" FullName="System.Activities.Statements.FlowStep">
+  <TypeSignature Language="C#" Value="public sealed class FlowStep : System.Activities.Statements.FlowNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FlowStep extends System.Activities.Statements.FlowNode" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.FlowStep" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Statements.FlowNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Action")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein <see cref="T:System.Activities.Statements.FlowNode" />-Element, das eine angegebene <see cref="P:System.Activities.Statements.FlowStep.Action" /> ausführt und einen <see cref="P:System.Activities.Statements.FlowStep.Next" />-Zeiger aufweist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen eines <xref:System.Activities.Statements.FlowStep>-Knotens veranschaulicht. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#4](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowStep ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.FlowStep.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine neue Instanz der <see cref="T:System.Activities.Statements.FlowStep" />-Klasse zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen eines <xref:System.Activities.Statements.FlowStep>-Knotens veranschaulicht. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#4](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Action" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowStep.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Activities.Activity" />, die vom <see cref="T:System.Activities.Statements.FlowStep" /> ausgeführt wird.</summary>
+        <value>Die Aktivität, die als Teil dieses Schritts des Flussdiagrammes ausgeführt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der Action-Eigenschaft eines <xref:System.Activities.Statements.FlowStep>-Knotens veranschaulicht. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#4](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public System.Activities.Statements.FlowNode Next { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Statements.FlowNode Next" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowStep.Next" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Action")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Statements.FlowNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das nächste <see cref="T:System.Activities.Statements.FlowNode" /> im Flussdiagramm, das ausgeführt wird, nachdem die Ausführung des aktuellen <see cref="T:System.Activities.Statements.FlowStep" />.</summary>
+        <value>Das angegebene Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der Next-Eigenschaft eines <xref:System.Activities.Statements.FlowStep>-Knotens veranschaulicht. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#4](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

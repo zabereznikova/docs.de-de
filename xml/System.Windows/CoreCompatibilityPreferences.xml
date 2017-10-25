@@ -1,0 +1,64 @@
+<Type Name="CoreCompatibilityPreferences" FullName="System.Windows.CoreCompatibilityPreferences">
+  <TypeSignature Language="C#" Value="public static class CoreCompatibilityPreferences" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed CoreCompatibilityPreferences extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.CoreCompatibilityPreferences" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Eigenschaften, die angeben, wie sich eine Anwendung in Bezug auf WPF-Features verhalten soll, die sich in der PresentationCore-Assembly befinden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnableMultiMonitorDisplayClipping">
+      <MemberSignature Language="C#" Value="public static Nullable&lt;bool&gt; EnableMultiMonitorDisplayClipping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Nullable`1&lt;bool&gt; EnableMultiMonitorDisplayClipping" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines Werts, der angibt, ob Clipping bei einer Anzeige mit mehreren Monitoren aktiviert werden soll.</summary>
+        <value>
+          <see langword="true" />, um Clipping bei einer Anzeige mit mehreren Monitoren zu aktivieren, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAltKeyRequiredInAccessKeyDefaultScope">
+      <MemberSignature Language="C#" Value="public static bool IsAltKeyRequiredInAccessKeyDefaultScope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsAltKeyRequiredInAccessKeyDefaultScope" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.CoreCompatibilityPreferences.IsAltKeyRequiredInAccessKeyDefaultScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Benutzer für eine Tastenkombination die ALT-TASTE verwenden muss, oder legt ihn fest.</summary>
+        <value>
+          <see langword="true" />Wenn der Benutzer die ALT-Taste zu verwenden, um eine Tastenkombination muss andernfalls <see langword="false" />.  Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Eigenschaft verwenden, um das Verhalten von WPF ändern, müssen Sie früh in der app-Lebensdauer, z. B. im Konstruktor der Klasse, die von der Anwendung erbt, die den Wert der Eigenschaft ändern.  Nachdem der Wert gelesen wurde, können nicht Sie ihn erneut ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

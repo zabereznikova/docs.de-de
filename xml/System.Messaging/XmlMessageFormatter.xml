@@ -1,0 +1,420 @@
+<Type Name="XmlMessageFormatter" FullName="System.Messaging.XmlMessageFormatter">
+  <TypeSignature Language="C#" Value="public class XmlMessageFormatter : ICloneable, System.Messaging.IMessageFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlMessageFormatter extends System.Object implements class System.ICloneable, class System.Messaging.IMessageFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.XmlMessageFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Messaging.IMessageFormatter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Serialisiert und deserialisiert Objekte in den oder aus dem Textteil einer Nachricht, die mithilfe der XML-Formats auf Grundlage der XSD-Schema-Definition.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.XmlMessageFormatter> der Standardformatierer ist, eine Instanz von <xref:System.Messaging.MessageQueue> verwendet, um in die Warteschlange geschriebenen Nachrichten zu serialisieren. Beim Erstellen einer Instanz von <xref:System.Messaging.MessageQueue>, eine Instanz von <xref:System.Messaging.XmlMessageFormatter> für Sie erstellt und zugeordnet wird die <xref:System.Messaging.MessageQueue>. Sie können ein anderes Formatierungsprogramm angeben, indem es in Ihrem Code erstellen und Zuweisen der <xref:System.Messaging.MessageQueue.Formatter%2A> Eigenschaft Ihrer <xref:System.Messaging.MessageQueue>.  
+  
+ Eine Warteschlange Standard <xref:System.Messaging.XmlMessageFormatter> Instanz kann zum Schreiben in die Warteschlange verwendet werden, aber es kann nicht verwendet werden, um aus der Warteschlange zu lesen, bis Sie festlegen, die <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> oder <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> Eigenschaft für den Formatierer. Sie können entweder eine oder beide der folgenden Werte auf der Standardinstanz für den Formatierer festlegen oder Sie erstellen eine neue Instanz des Formatierungsprogramms und die Werte automatisch festlegen, indem sie in die entsprechenden als Argumente übergeben können <xref:System.Messaging.XmlMessageFormatter.%23ctor%2A> Konstruktor.  
+  
+ Beim Angeben von <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> statt <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A>, Typ vorhanden ist wird zur Kompilierzeit statt Lesezeit, reduzieren die Möglichkeit, dass Fehler überprüft. <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A>erfordert, dass jeder Eintrag angeben des Assemblynamens vollständig qualifiziert werden. Darüber hinaus muss bei der Arbeit mit mehrere parallele Versionen die Versionsnummer auch zieltypnamen sowie angefügt werden.  
+  
+ Die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> und <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaften der Formatierungsprogramm mitgeteilt, welche Schemas versucht, eine Übereinstimmung, wenn eine Nachricht zu deserialisieren. Dadurch wird das Formatierungsprogramm der Nachrichtentext interpretiert.  
+  
+ In dem Textkörper der serialisierten Instanz muss eines der Schemas dargestellt, die in den Typarray entsprechen. Beim Lesen der Nachricht mit der <xref:System.Messaging.MessageQueue.Receive%2A> -Methode, die Methode erstellt ein Objekt des Typs, der dem bezeichneten Schema entspricht, und liest den Nachrichtentext hinein.  
+  
+ Muss nur eine der beiden Eigenschaften festgelegt werden, beim Lesen aus der Warteschlange, aber Sie können beide festlegen. Der Satz von Typen wird der kombinierte Satz aus zwei Eigenschaften. Die Entscheidung, welche Eigenschaft zu verwenden, bezieht sich auf Ihre Anwendung. Wenn der Nachrichtentext ein Typs enthält, deren Schema nicht mit den Typen im Array für beide Eigenschaften übereinstimmt, wird eine Ausnahme ausgelöst werden, wenn die Nachricht gelesen wird.  
+  
+ Die <xref:System.Messaging.XmlMessageFormatter> ist eine wichtige Komponente von lose verbundenen XML-basiertem messaging. Das Dienstprogramm XSD.exe verwendet, die das XML-Format, zum Generieren von XML-Schema verwendet wird, z. B. bei Verwendung des Hilfsprogramms zur Serialisierung einer Klasse, die von Ihrer Anwendung verwendet. Die Klasse muss über einen Standardkonstruktor verfügen.  
+  
+ Das Format wird verwendet, wieder in dieser Prozess umgekehrt, wenn das Hilfsprogramm eine Klasse, die basierend auf dem Schema generiert Sie verteilen, um die Klassendaten beschreiben. Die Verwendung des Hilfsprogramms und das XML-Schema generierten können Sie redistributing.dll Dateien zu vermeiden, jedes Mal, wenn Sie eine Klasse erneut kompilieren, nachdem die Implementierung der Klasse geändert wurde. Solange das Schema nicht auf dem Client oder Server ändern, wirken andere Änderungen auf beiden Seiten der anderen sich nicht.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel enthält drei Arten von Code: eine Serverkomponente, eine Order-Klasse, und Clientcode. Die Order-Klasse kann zum Generieren von Schemas, die die Server in eingehenden Nachrichten erkennt vom Dienstprogramm XSD.exe verwendet werden. Das Schema ist eine XML-formatierte Datei, die "Shape" der Klasse beschreibt. Dieses Schema kann dann auf der Clientseite verwendet werden, um eine clientspezifische Order-Klasse zu generieren, die gemeinsam das gleiche Schema wie die Server-Klasse.  
+  
+ Das folgende Codebeispiel stellt eine Serverkomponente, die Bestellungen über eine Warteschlange empfängt. Der Text der Nachricht sollte ein Order-Objekt, dessen Schema der Klasse Order.cs übereinstimmt. Der Serverprozess bzw. welche Anwendung deserialisiert die Reihenfolge.  
+  
+ [!code-cpp[Classic XmlMessageFormatter Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlMessageFormatter Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlMessageFormatter Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlMessageFormatter Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlMessageFormatter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlMessageFormatter Example/VB/source.vb#1)]  
+  
+ Das folgende Codebeispiel stellt die Order-Klasse, die ein Schema für die Order-Objekte bereitstellt, die die Anwendung auf dem Server empfangen und deserialisiert.  
+  
+ [!code-cpp[Classic XmlMessageFormatter Example#2](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlMessageFormatter Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic XmlMessageFormatter Example#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlMessageFormatter Example/CS/source2.cs#2)]
+ [!code-vb[Classic XmlMessageFormatter Example#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlMessageFormatter Example/VB/source2.vb#2)]  
+  
+ Jede Clientanwendung, die Interaktion mit der Anwendung auf dem Server muss Nachrichten durch serialisieren Informationen in eine lokal definierte Order-Klasse in den Nachrichtentext an den Server senden. Die lokal definierte Order-Klasse muss das gleiche Schema wie die Server definierte Order-Klasse haben, in dem die Anwendung auf dem Server versucht, den Nachrichtentext deserialisiert. Das Dienstprogramm XSD.exe kann die Manager der Anwendung auf dem Server erstellen und Verteilen des Schemas, die der Client verwenden muss, um an den Server gesendete Nachrichten zu serialisieren.  
+  
+ Erhalt der Manager der Clientanwendung das Schema für die Order-Klasse, wird das Dienstprogramm XSD.exe erneut verwendet, um eine clientspezifische Order-Klasse aus dem Schema zu generieren. Es wird diese Klasse, die im Client-Codebeispiel unten nicht Order-Klasse mit dem Server verwendet wird (das Dienstprogramm XSD.exe bewirkt, dass die schemagenerierter-Klasse, um den gleichen Namen wie die ursprüngliche Klasse haben). Diese neue Order-Klasse wird verwendet, um die Reihenfolge in den Nachrichtentext zu serialisieren.  
+  
+ Im folgenden Codebeispiel wird die clientseitige Verarbeitung, die zum Serialisieren einer Bestellung und senden Sie die Informationen, die die Reihenfolge an eine Warteschlange zugeordnet. Der Code ordnet Element, Menge und Adressinformationen Elemente des Schemas, die vom Dienstprogramm XSD.exe für die Klasse Order.cs generiert wurden. Eine Bestellung wird an die Warteschlange "Orders" auf dem lokalen Computer gesendet.  
+  
+ [!code-cpp[Classic XmlMessageFormatter Example#3](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlMessageFormatter Example/CPP/source3.cpp#3)]
+ [!code-csharp[Classic XmlMessageFormatter Example#3](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlMessageFormatter Example/CS/source3.cs#3)]
+ [!code-vb[Classic XmlMessageFormatter Example#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlMessageFormatter Example/VB/source3.vb#3)]  
+  
+ Nachdem das Schema aus der Order-Klasse, auf dem Server generiert wird, können Sie die Klasse ändern. Wenn das Schema ändert, müssen Sie nicht das Schema zu verteilen. Nach der das Schema und generiert eine clientseitige Order-Klasse, kann dieser Clientklasse unabhängig von dem Server Order-Klasse auch geändert werden, solange das Schema selbst nicht geändert wird. Die beiden Klassen sind lose miteinander verbunden werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlMessageFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.XmlMessageFormatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.XmlMessageFormatter" /> -Klasse, ohne Ziel Typen festlegen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung des Konstruktors wird am häufigsten verwendet beim Schreiben in die Warteschlange, da Zieltypen nicht erforderlich, beim Schreiben von sind.  
+  
+ Lesen eine Nachricht aus einer Warteschlange mit einer Instanz von <xref:System.Messaging.XmlMessageFormatter> mit diesem Konstruktor erstellt, müssen Sie festlegen, die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> oder <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaften, damit der Formatierer weiß, welche Typen zu deserialisierenden.  
+  
+ Beim Erstellen einer neuen <xref:System.Messaging.MessageQueue>, den Standardwert <xref:System.Messaging.XmlMessageFormatter> Instanz erstellt werden, ohne den Zielsatz für Typen. Wie bei der ein Formatierungsprogramm, die Verwendung dieses Konstruktors erstellt wird, müssen Sie Zieltypen für diese Instanz des Formatierungsprogramms festlegen, wenn Sie aus der Warteschlange lesen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlMessageFormatter (string[] targetTypeNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] targetTypeNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.XmlMessageFormatter.#ctor(System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetTypeNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="targetTypeNames">Ein Array vom Typ <see cref="T:System.String" /> , die angibt, dass die Gruppe möglicher Typen, die vom Formatierungsprogramm aus der bereitgestellten Nachricht deserialisiert wird. Diese Werte müssen vollqualifiziert sein, z. B. "MyNamespace.MyOrders, MyOrdersAssemblyName" sein.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.XmlMessageFormatter" /> Klasse, indem die Zieltypen als ein Array von Zeichenfolgenwerten (vollständig qualifizierte) übergeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Konstruktoren mit Parametern für den Ziel werden am häufigsten verwendet werden, beim Lesen aus der Warteschlange. Beim Schreiben von ist es nicht notwendig, dass Zieltypen angeben.  
+  
+ Diese Überladung von der <xref:System.Messaging.XmlMessageFormatter.%23ctor%2A> Konstruktor legt die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> Eigenschaft, um auf die Arraywerte durch Übergeben der `targetTypeNames` Parameter. Einstellung, die diese Eigenschaft ermöglicht eine <xref:System.Messaging.MessageQueue> mit diesem <xref:System.Messaging.XmlMessageFormatter> Instanz zum Lesen von Nachrichten, die mit Objekten des angegebenen Typen.  
+  
+ Sowohl die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> und <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaften der Formatierungsprogramm mitgeteilt, welche Schemas versucht, eine Übereinstimmung, wenn eine Nachricht zu deserialisieren. Dadurch wird das Formatierungsprogramm der Nachrichtentext interpretiert.  
+  
+ In dem Textkörper der serialisierten Instanz muss eines der Schemas dargestellt, die in den Typarray entsprechen. Beim Lesen der Nachricht mit der <xref:System.Messaging.MessageQueue.Receive%2A> -Methode, die Methode erstellt ein Objekt des Typs, der dem bezeichneten Schema entspricht, und liest den Nachrichtentext hinein.  
+  
+ Muss nur eine der beiden Eigenschaften festgelegt werden, beim Lesen aus der Warteschlange, aber Sie können beide festlegen. Der Satz von Typen wird der kombinierte Satz aus zwei Eigenschaften. Die Entscheidung zu verwenden ist spezifisch für Ihre Anwendung. Wenn der Nachrichtentext ein Typs enthält, deren Schema nicht mit den Typen im Array für beide Eigenschaften übereinstimmt, wird eine Ausnahme am Lesezeit ausgelöst werden.  
+  
+   
+  
+## Examples  
+ [!code-cpp[Message.Body#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Body/CPP/message_sendreceive.cpp#1)]
+ [!code-csharp[Message.Body#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Body/CS/message_sendreceive.cs#1)]
+ [!code-vb[Message.Body#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Body/VB/message_sendreceive.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="targetTypeNames" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlMessageFormatter (Type[] targetTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type[] targetTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.XmlMessageFormatter.#ctor(System.Type[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetTypes" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="targetTypes">Ein Array vom Typ <see cref="T:System.Type" /> , die angibt, dass die Gruppe möglicher Typen, die vom Formatierungsprogramm aus der bereitgestellten Nachricht deserialisiert wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.XmlMessageFormatter" /> Klasse, indem die Zieltypen als ein Array von Objekttypen übergeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Konstruktoren mit Parametern für den Ziel werden am häufigsten verwendet werden, beim Lesen aus der Warteschlange. Beim Schreiben von ist es nicht notwendig, dass Zieltypen angeben.  
+  
+ Diese Überladung von der <xref:System.Messaging.XmlMessageFormatter.%23ctor%2A> Konstruktor legt die <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaft, um auf die Arraywerte durch Übergeben der `targetTypes` Parameter. Die Einstellung dieser Eigenschaft können eine <xref:System.Messaging.MessageQueue> mit diesem <xref:System.Messaging.XmlMessageFormatter> Instanz zum Lesen von Nachrichten, die Objekte des angegebenen Typs enthält.  
+  
+ Sowohl die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> und <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaften der Formatierungsprogramm mitgeteilt, welche Schemas versucht, eine Übereinstimmung, wenn eine Nachricht zu deserialisieren. Dadurch wird das Formatierungsprogramm der Nachrichtentext interpretiert.  
+  
+ In dem Textkörper der serialisierten Instanz muss eines der Schemas dargestellt, die in den Typarray entsprechen. Beim Lesen der Nachricht mit der <xref:System.Messaging.MessageQueue.Receive%2A> -Methode, die Methode erstellt ein Objekt des Typs, der dem bezeichneten Schema entspricht, und liest den Nachrichtentext hinein.  
+  
+ Muss nur eine der beiden Eigenschaften festgelegt werden, beim Lesen aus der Warteschlange, aber Sie können beide festlegen. Der Satz von Typen wird der kombinierte Satz aus zwei Eigenschaften. Die Entscheidung zu verwenden ist spezifisch für Ihre Anwendung. Wenn der Nachrichtentext ein Typs enthält, deren Schema nicht mit den Typen im Array für beide Eigenschaften übereinstimmt, wird eine Ausnahme am Lesezeit ausgelöst werden.  
+  
+ Beim Angeben von <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> statt <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A>, Typ vorhanden ist wird zur Kompilierzeit statt Lesezeit, reduzieren die Möglichkeit, dass Fehler überprüft. <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A>erfordert, dass jeder Eintrag angeben des Assemblynamens vollständig qualifiziert werden. Darüber hinaus muss bei der Arbeit mit mehrere parallele Versionen die Versionsnummer auch zieltypnamen sowie angefügt werden.  
+  
+ Bei Verwendung <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A>, Sie können jedes Objekt hinzufügen (z. B. `MyClass`) zur Liste auf eine Weise, die im folgenden C#-Code veranschaulicht.  
+  
+```  
+TargetTypes = new Type[]{typeof(MyClass)}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="targetTypes" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public bool CanRead (System.Messaging.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanRead(class System.Messaging.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.XmlMessageFormatter.CanRead(System.Messaging.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Messaging.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die <see cref="T:System.Messaging.Message" /> , zu überprüfen.</param>
+        <summary>Bestimmt, ob der Formatierer die Nachricht deserialisiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die Nachricht von der XML-Formatierer deserialisiert werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Messaging.XmlMessageFormatter.CanRead%2A> aufgerufen wird, wird der Formatierer versucht zu bestimmen, ob der Inhalt der Nachricht werden deserialisieren kann. Das Formatierungsprogramm kann nur die Nachricht deserialisieren, wenn der Typ im Nachrichtentext das gleiche Schema wie einer der Typen im Array dargestellte besitzt die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> und <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaften. <xref:System.Messaging.XmlMessageFormatter.CanRead%2A>Gibt `false` in den folgenden zwei Situationen:  
+  
+-   Die Nachricht wurde nicht mit formatiert die <xref:System.Messaging.XmlMessageFormatter>.  
+  
+-   Das Schema des Nachrichtentexts ist nicht in den aufgelisteten entweder in der <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> oder <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaft.  
+  
+ Die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> und <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> -Eigenschaft geben das Formatierungsprogramm welche Arten von Objekten zum Deserialisieren können muss. Wenn beliebiger Typ aus der Liste fehlt noch sich innerhalb der Nachricht befindet <xref:System.Messaging.XmlMessageFormatter.CanRead%2A> gibt `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Weder die <see cref="P:System.Messaging.XmlMessageFormatter.TargetTypeNames" /> noch <see cref="P:System.Messaging.XmlMessageFormatter.TargetTypes" /> Eigenschaft festgelegt wurde.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="message" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.XmlMessageFormatter.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Messaging.XmlMessageFormatter" /> Klasse, deren Lese-/Schreibzugriff (die Gruppe von Zieltypen) sind identisch mit der aktuellen <see cref="T:System.Messaging.XmlMessageFormatter" /> Instanz.</summary>
+        <returns>Ein Objekt, dessen Eigenschaften identisch mit denen dieses sind <see cref="T:System.Messaging.XmlMessageFormatter" /> Instanz, aber keine, deren Metadaten werden als Instanz an.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Kopie des Formatierungsprogramms und initialisiert alle seine Eigenschaften mit den Werten dieses <xref:System.Messaging.XmlMessageFormatter> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public object Read (System.Messaging.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Read(class System.Messaging.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.XmlMessageFormatter.Read(System.Messaging.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Messaging.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die <see cref="T:System.Messaging.Message" />, im XML-Format, um zu deserialisieren.</param>
+        <summary>Liest den Inhalt der angegebenen Nachricht und erstellt ein Objekt, das die deserialisierte Nachricht enthält.</summary>
+        <returns>Die deserialisierte Meldung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sowohl die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> und <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaften der Formatierungsprogramm mitgeteilt, welche Schemas versucht, eine Übereinstimmung, wenn eine Nachricht zu deserialisieren. Eine dieser Eigenschaften muss festgelegt werden, bevor die Nachricht deserialisiert werden kann.  
+  
+ In dem Textkörper der serialisierten Instanz muss eines der Schemas dargestellt, die in den Typarray entsprechen. Beim Lesen der Nachricht mit der <xref:System.Messaging.MessageQueue.Receive%2A> -Methode, die Methode erstellt ein Objekt des Typs, der dem bezeichneten Schema entspricht, und liest den Nachrichtentext hinein.  
+  
+ Zieltypen müssen nicht angegeben werden, um in die Warteschlange geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Weder die <see cref="P:System.Messaging.XmlMessageFormatter.TargetTypeNames" /> noch <see cref="P:System.Messaging.XmlMessageFormatter.TargetTypes" /> Eigenschaft festgelegt wurde.  
+  
+ - oder -   
+  
+ In dem Textkörper der serialisierten Instanz stimmt nicht mit Schemas, dargestellt durch die Typen in der <see cref="P:System.Messaging.XmlMessageFormatter.TargetTypeNames" /> und <see cref="P:System.Messaging.XmlMessageFormatter.TargetTypes" /> Eigenschaften.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="message" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetTypeNames">
+      <MemberSignature Language="C#" Value="public string[] TargetTypeNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] TargetTypeNames" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.XmlMessageFormatter.TargetTypeNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("XmlMsgTargetTypeNames")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Satz möglicher Typen, die vom Formatierungsprogramm aus der bereitgestellten Nachricht deserialisiert wird.</summary>
+        <value>Ein Array vom Typ <see cref="T:System.String" /> , die die Typen von Objekten aus dem Nachrichtentext deserialisiert, beim Lesen der Nachricht angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sowohl die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> und <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaften der Formatierungsprogramm mitgeteilt, welche Schemas versucht, eine Übereinstimmung, wenn eine Nachricht zu deserialisieren. Dadurch wird das Formatierungsprogramm der Nachrichtentext interpretiert.  
+  
+ In dem Textkörper der serialisierten Instanz muss eines der Schemas dargestellt, die in den Typarray entsprechen. Beim Lesen der Nachricht mit der <xref:System.Messaging.MessageQueue.Receive%2A> -Methode, die Methode erstellt ein Objekt des Typs, der dem bezeichneten Schema entspricht, und liest den Nachrichtentext hinein.  
+  
+ Muss nur eine der beiden Eigenschaften festgelegt werden, beim Lesen aus der Warteschlange, aber Sie können beide festlegen. Der Satz von Typen wird der kombinierte Satz aus zwei Eigenschaften. Die Entscheidung, welche Eigenschaft zu verwenden, bezieht sich auf Ihre Anwendung. Wenn der Nachrichtentext ein Typs enthält, deren Schema nicht mit den Typen im Array für beide Eigenschaften übereinstimmt, wird eine Ausnahme ausgelöst werden, wenn die Nachricht gelesen wird.  
+  
+ <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A>erfordert, dass jeder Eintrag angeben des Assemblynamens vollständig qualifiziert werden. Darüber hinaus muss bei der Arbeit mit mehrere parallele Versionen die Versionsnummer auch zieltypnamen sowie angefügt werden.  
+  
+ Die Zieltypen sind nur erforderlich, wenn aus der Warteschlange zu lesen. Die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> und <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaften müssen nicht zum Schreiben in die Warteschlange festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="P:System.Messaging.XmlMessageFormatter.TargetTypeNames" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetTypes">
+      <MemberSignature Language="C#" Value="public Type[] TargetTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] TargetTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.XmlMessageFormatter.TargetTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("XmlMsgTargetTypes")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Satz möglicher Typen, die vom Formatierungsprogramm aus der bereitgestellten Nachricht deserialisiert wird.</summary>
+        <value>Ein Array vom Typ <see cref="T:System.Type" /> , die die Typen von Objekten aus dem Nachrichtentext deserialisiert, beim Lesen der Nachricht angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sowohl die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> und <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaften der Formatierungsprogramm mitgeteilt, welche Schemas versucht, eine Übereinstimmung, wenn eine Nachricht zu deserialisieren. Dadurch wird das Formatierungsprogramm der Nachrichtentext interpretiert.  
+  
+ In dem Textkörper der serialisierten Instanz muss eines der Schemas dargestellt, die in den Typarray entsprechen. Beim Lesen der Nachricht mit der <xref:System.Messaging.MessageQueue.Receive%2A> -Methode, die Methode erstellt ein Objekt des Typs, der dem bezeichneten Schema entspricht, und liest den Nachrichtentext hinein.  
+  
+ Muss nur eine der beiden Eigenschaften festgelegt werden, beim Lesen aus der Warteschlange, aber Sie können beide festlegen. Der Satz von Typen wird der kombinierte Satz aus zwei Eigenschaften. Die Entscheidung, welche Eigenschaft zu verwenden, bezieht sich auf Ihre Anwendung. Wenn der Nachrichtentext ein Typs enthält, deren Schema nicht mit den Typen im Array für beide Eigenschaften übereinstimmt, wird eine Ausnahme ausgelöst werden, wenn die Nachricht gelesen wird.  
+  
+ Die Zieltypen sind nur erforderlich, wenn aus der Warteschlange zu lesen. Die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> und <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaften müssen nicht zum Schreiben in die Warteschlange festgelegt werden.  
+  
+ Beim Angeben von <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> statt <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A>, Typ vorhanden ist wird zur Kompilierzeit statt Lesezeit, reduzieren die Möglichkeit, dass Fehler überprüft.  
+  
+ Bei Verwendung <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A>, Sie können jedes Objekt hinzufügen (z. B. `MyClass`) zur Liste auf eine Weise, die vom C#-Code veranschaulicht `TargetTypes = new Type[]{typeof(MyClass), typeof (MyOtherClass)};`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel sendet und empfängt eine Nachricht, die eine Bestellung in und aus einer Warteschlange enthält.  
+  
+ [!code-cpp[Message.Body#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Body/CPP/message_sendreceive.cpp#1)]
+ [!code-csharp[Message.Body#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Body/CS/message_sendreceive.cs#1)]
+ [!code-vb[Message.Body#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Body/VB/message_sendreceive.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="P:System.Messaging.XmlMessageFormatter.TargetTypes" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.Messaging.Message message, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Messaging.Message message, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.XmlMessageFormatter.Write(System.Messaging.Message,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Messaging.Message" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die <see cref="T:System.Messaging.Message" /> , deren <see cref="P:System.Messaging.Message.Body" /> Eigenschaft das serialisierte Objekt enthält.</param>
+        <param name="obj">Die <see cref="T:System.Object" /> -Nachrichtentext serialisiert werden.</param>
+        <summary>Serialisiert ein Objekt in den Text der Nachricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zieltypen müssen nicht angegeben werden, an die Warteschlange geschrieben werden soll, wie es beim Lesen von sein muss. Die <xref:System.Messaging.XmlMessageFormatter.TargetTypeNames%2A> oder <xref:System.Messaging.XmlMessageFormatter.TargetTypes%2A> Eigenschaft wird vom Formatierungsprogramm verwendet, nur, wenn eine Nachricht zu deserialisieren.  
+  
+ Die <xref:System.Messaging.XmlMessageFormatter> nutzt die <xref:System.Xml.Serialization.XmlSerializer> Klasse, die definiert, was serialisiert werden kann. Nur können öffentliche Felder und öffentliche Eigenschaften serialisiert werden. Strukturen, Strukturen mit Arrays und Arrays von Strukturen sind alle serialisierbaren, solange das Codierungsformat keine mit dem SOAP-Protokoll verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="message" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der <paramref name="obj" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

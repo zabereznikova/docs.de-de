@@ -1,0 +1,351 @@
+<Type Name="AtomPub10ServiceDocumentFormatter" FullName="System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter">
+  <TypeSignature Language="C#" Value="public class AtomPub10ServiceDocumentFormatter : System.ServiceModel.Syndication.ServiceDocumentFormatter, System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AtomPub10ServiceDocumentFormatter extends System.ServiceModel.Syndication.ServiceDocumentFormatter implements class System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Syndication.ServiceDocumentFormatter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xml.Serialization.IXmlSerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot("service", Namespace="http://www.w3.org/2007/app")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein Formatierungsprogramm, das eine <see cref="T:System.ServiceModel.Syndication.ServiceDocument" />-Instanz mithilfe von Atom&amp;#160;1.0-Formaten in und aus XML serialisiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Klasse zur Serialisierung von Instanzen von <xref:System.ServiceModel.Syndication.ServiceDocument> in XML und zum Generieren von Instanzen von <xref:System.ServiceModel.Syndication.ServiceDocument> aus einem XML-Dokument. Falls Sie ein von <xref:System.ServiceModel.Syndication.ServiceDocument> abgeleitetes Objekt serialisieren oder deserialisieren möchten, verwenden Sie stattdessen das <xref:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter%601>-Formatierungsprogramm.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AtomPub10ServiceDocumentFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der Atom&amp;#160;1.0-basierten <see cref="T:System.ServiceModel.Syndication.ServiceDocumentFormatter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AtomPub10ServiceDocumentFormatter (System.ServiceModel.Syndication.ServiceDocument documentToWrite);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Syndication.ServiceDocument documentToWrite) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter.#ctor(System.ServiceModel.Syndication.ServiceDocument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="documentToWrite" Type="System.ServiceModel.Syndication.ServiceDocument" />
+      </Parameters>
+      <Docs>
+        <param name="documentToWrite">Das dem Atom&amp;#160;1.0-Formatierungsprogramm zugewiesene <see cref="T:System.ServiceModel.Syndication.ServiceDocument" />.</param>
+        <summary>Erstellt eine neue Instanz der Atom&amp;#160;1.0-basierten <see cref="T:System.ServiceModel.Syndication.ServiceDocumentFormatter" />-Klasse, um ein angegebenes Dienstdokument zu serialisieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `documentToWrite` kann vom Formatierungsprogramm mithilfe von Atom&amp;#160;1.0-Formaten in eine XML-Darstellung serialisiert oder aus einer XML-Darstellung deserialisiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="documentToWrite" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AtomPub10ServiceDocumentFormatter (Type documentTypeToCreate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type documentTypeToCreate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="documentTypeToCreate" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="documentTypeToCreate">Die Instanz eines Objekts, das von einem <see cref="T:System.ServiceModel.Syndication.ServiceDocument" />-Typ abgeleitet wurde, der einem Atom&amp;#160;1.0-Formatierungsprogramm zugewiesen ist.</param>
+        <summary>Erstellt eine neue Instanz der Atom&amp;#160;1.0-basierten <see cref="T:System.ServiceModel.Syndication.ServiceDocumentFormatter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `documentTypeToCreate` kann vom Formatierungsprogramm mithilfe von Atom&amp;#160;1.0-Formaten in eine XML-Darstellung serialisiert oder aus einer XML-Darstellung deserialisiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="documentTypeToCreate" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          Der angegebene <paramref name="documentTypeToCreate" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanRead(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter.CanRead(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der XML-Reader.</param>
+        <summary>Testet, ob der angegebene XML-Reader ein gültiges Dienstdokument enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn der XML-Reader ein gültiges Dienstdokument enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDocumentInstance">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Syndication.ServiceDocument CreateDocumentInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Syndication.ServiceDocument CreateDocumentInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter.CreateDocumentInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.ServiceDocument</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue dem Atom&amp;#160;1.0-Formatierungsprogramm zugeordnete <see cref="T:System.ServiceModel.Syndication.ServiceDocument" />-Instanz.</summary>
+        <returns>Gibt eine Instanz von <see cref="T:System.ServiceModel.Syndication.ServiceDocument" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadFrom">
+      <MemberSignature Language="C#" Value="public override void ReadFrom (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReadFrom(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter.ReadFrom(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der XML-Reader, aus dem der Syndication-Feed gelesen werden soll.</param>
+        <summary>Generiert ein <see cref="T:System.ServiceModel.Syndication.ServiceDocument" />-Objekt von einem angegebenen XML-Reader.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Der XML-Code konnte nicht analysiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.GetSchema">
+      <MemberSignature Language="C#" Value="System.Xml.Schema.XmlSchema IXmlSerializable.GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Xml.Schema.XmlSchema System.Xml.Serialization.IXmlSerializable.GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter.System#Xml#Serialization#IXmlSerializable#GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese Methode ist reserviert und sollte nicht verwendet werden.</summary>
+        <returns>Gibt <see langword="null" />zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert ausdrücklich die <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.ReadXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.ReadXml (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.ReadXml(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter.System#Xml#Serialization#IXmlSerializable#ReadXml(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />-Stream, aus dem das <see cref="T:System.ServiceModel.Syndication.ServiceDocument" />-Objekt deserialisiert wird.</param>
+        <summary>Generiert ein <see cref="T:System.ServiceModel.Syndication.ServiceDocument" /> aus seiner XML-Darstellung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert ausdrücklich die <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.WriteXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.WriteXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.WriteXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter.System#Xml#Serialization#IXmlSerializable#WriteXml(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />-Stream, in den das Objekt serialisiert wird.</param>
+        <summary>Konvertiert das <see cref="T:System.ServiceModel.Syndication.ServiceDocument" /> in seine XML-Darstellung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert ausdrücklich die <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Keine Instanz von <see cref="T:System.ServiceModel.Syndication.ServiceDocument" /> ist dem Formatierungsprogramm zugeordnet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public override string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Atom Publishing Protocol-Namespaces ab.</summary>
+        <value>Gibt "http://www.w3.org/2007/app" zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public override void WriteTo (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteTo(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer, in den vom Formatierungsprogramm geschrieben werden soll.</param>
+        <summary>Schreibt ein <see cref="T:System.ServiceModel.Syndication.ServiceDocument" />-Objekt, das mit dem Formatierungsprogramm einem angegebenen XML-Writer zugeordnet wurde.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.XmlException">
+          <paramref name="writer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Das dem Formatierungsprogramm zugeordnete Dienstdokument ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

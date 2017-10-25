@@ -1,0 +1,179 @@
+<Type Name="IStackWalk" FullName="System.Security.IStackWalk">
+  <TypeSignature Language="C#" Value="public interface IStackWalk" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IStackWalk" />
+  <TypeSignature Language="DocId" Value="T:System.Security.IStackWalk" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwaltet den Stackwalk, der bestimmt, ob alle Aufrufer in der Aufrufliste über die erforderlichen Berechtigungen für den Zugriff auf eine geschützte Ressource verfügen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Teilweise vertrauenswürdiger Code stellt immer ein Sicherheitsrisiko dar. In einigen Fällen kann festgelegt werden, um Aktionen im Auftrag von bösartigem Code auszuführen, die nicht über die Berechtigung zum Zugriff auf eine Ressource verfügt. Auf diese Weise kann schädlichen Code höhere Sicherheitszugriff als es zulässig ist, erreichen.  
+  
+ Die common Language Runtime schützt verwalteten Code vor einem solchen Angriff durch ein Stackwalk auf alle Aufrufe ausführen. Der Stackwalk erfordert, dass der gesamte Code in der Aufrufliste über die Berechtigung zum Zugriff auf eine geschützte Ressource verfügt. Da der Code versucht, das Risiko eines Angriffs immer an einer beliebigen Stelle in der Aufrufliste vorhanden sind, ist es keine eigenen Sicherheitsberechtigungen überschreitet möglich.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public void Assert ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Assert() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IStackWalk.Assert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestätigt, dass der aufrufende Code auf die durch das aktuelle Berechtigungsobjekt identifizierte Ressource zugreifen kann, selbst wenn Aufrufern einer höheren Ebene in der Aufrufliste keine Berechtigung für den Zugriff auf die Ressource erteilt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Security.IStackWalk.Assert%2A> beendet die Überprüfung der Berechtigung auf Aufrufern einer höheren Ebene in der Aufrufliste. Aus diesem Grund, selbst wenn dieser Aufrufer nicht über die erforderlichen Berechtigungen verfügen, können sie weiterhin Ressourcen zugreifen. Eine Assertion ist nur wirksam, wenn der Code aufruft <xref:System.Security.IStackWalk.Assert%2A> übergibt die sicherheitsüberprüfung für die Berechtigung, die davon auszugehen ist.  
+  
+ Ein Aufruf von <xref:System.Security.IStackWalk.Assert%2A> bleibt wirksam, bis der aufrufende Code an den Aufrufer oder bis ein nachfolgender Aufruf von zurückgibt <xref:System.Security.IStackWalk.Assert%2A> rendert die vorhergehende Assertion wirkungslos. Darüber hinaus <xref:System.Security.CodeAccessPermission.RevertAssert%2A> oder <xref:System.Security.CodeAccessPermission.RevertAll%2A> entfernt eine ausstehende <xref:System.Security.IStackWalk.Assert%2A>.  
+  
+ <xref:System.Security.IStackWalk.Assert%2A>wird ignoriert, für eine Berechtigung nicht gewährt werden, da eine Anforderung für die Berechtigung nicht erfolgreich ist. Jedoch wenn Code in der Aufrufliste niedrigeren aufruft <xref:System.Security.IStackWalk.Demand%2A> für die Berechtigung, eine <xref:System.Security.SecurityException> wird ausgelöst, wenn der Stackwalk im Code, die es wurde versucht erreicht, rufen Sie <xref:System.Security.IStackWalk.Assert%2A>. Dies liegt daran, dass der Code, der aufgerufen <xref:System.Security.IStackWalk.Assert%2A> wurde nicht erteilt die Berechtigung, obwohl sie versucht haben zu <xref:System.Security.IStackWalk.Assert%2A> es.  
+  
+> [!CAUTION]
+>  Da Aufrufen <xref:System.Security.IStackWalk.Assert%2A> entfernt die Anforderung, dass der gesamte code in der Aufrufkette Berechtigung erteilt werden, auf die angegebene Ressource zugreifen, es kann Sicherheitslücken öffnen, wenn falsch oder nicht ordnungsgemäß verwendet. Aus diesem Grund sollte mit großer Vorsicht verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der aufrufende Code verfügt nicht über <see cref="F:System.Security.Permissions.SecurityPermissionFlag.Assertion" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Demand">
+      <MemberSignature Language="C#" Value="public void Demand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Demand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IStackWalk.Demand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermittelt zur Laufzeit, ob allen Aufrufern in der Aufrufliste die vom aktuellen Berechtigungsobjekt angegebene Berechtigung erteilt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in der Regel von sicheren Bibliotheken verwendet, um sicherzustellen, dass Aufrufer über die Berechtigung zum Zugriff auf eine Ressource verfügen. Z. B. eine Klasse von Dateien in einer sicheren Klassenbibliothek ruft <xref:System.Security.IStackWalk.Demand%2A> für die erforderlichen <xref:System.Security.Permissions.FileIOPermission> vor dem Ausführen einer Datei-Vorgangs, der vom Aufrufer angefordert.  
+  
+ Die Berechtigungen des Codes, der diese Methode aufruft, werden nicht überprüft. die Überprüfung beginnt um den unmittelbaren Aufrufer dieses Codes und im Stapel nach oben verläuft. <xref:System.Security.IStackWalk.Demand%2A>nur erfolgreich, wenn keine <xref:System.Security.SecurityException> ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Ein in der Aufrufliste höher eingestufter Aufrufer hat nicht die durch das aktuelle Berechtigungsobjekt angegebene Berechtigung.  
+  
+ - oder -   
+  
+ Ein Aufrufer in der Aufrufliste hat <see cref="M:System.Security.IStackWalk.Deny" /> für das aktuelle Berechtigungsobjekt aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Deny">
+      <MemberSignature Language="C#" Value="public void Deny ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Deny() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IStackWalk.Deny" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt einen Fehler bei jeder <see cref="M:System.Security.IStackWalk.Demand" /> für das aktuelle Objekt, das den aufrufenden Code durchläuft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verhindert, dass Aufrufern einer höheren Ebene in der Aufrufliste Zugriff auf die geschützte Ressource über den Code, der diese Methode aufruft, auch wenn diese Aufrufern Berechtigung für den Zugriff erteilt wurde. Die Aufrufliste wird in der Regel als absteigend, dargestellt, sodass Methoden in der Aufrufliste höher niedriger Methoden aufrufen.  
+  
+ <xref:System.Security.IStackWalk.Deny%2A>kann die Haftung des Programmierers einschränken oder unbeabsichtigte Sicherheitslücken zu verhindern, da sie Ihnen helfen zu verhindern, dass die Methode, die aufruft <xref:System.Security.IStackWalk.Deny%2A> Zugriff auf die durch die verweigerte Berechtigung geschützten Ressource verwendet wird. Wenn eine Methode aufruft <xref:System.Security.IStackWalk.Deny%2A> auf eine Berechtigung an, und wenn ein <xref:System.Security.IStackWalk.Demand%2A> für diese Berechtigung von einem Aufrufer weiter unten in der Aufrufliste aufgerufen wird, wird diese sicherheitsüberprüfung fehlschlägt, wenn erreicht die <xref:System.Security.IStackWalk.Deny%2A>.  
+  
+ <xref:System.Security.IStackWalk.Deny%2A>wird ignoriert, für eine Berechtigung nicht gewährt werden, da eine Anforderung für die Berechtigung nicht erfolgreich ist.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können nicht auf diese Methode überschreiben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PermitOnly">
+      <MemberSignature Language="C#" Value="public void PermitOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PermitOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IStackWalk.PermitOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass jede <see cref="M:System.Security.IStackWalk.Demand" /> für alle Objekte mit Ausnahme der aktuellen Aktivität, die ein Fehlschlagen der aufrufende Code durchlaufen, auch wenn der Code in der Aufrufliste über die Berechtigung zum Zugriff auf andere Ressourcen gewährt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.IStackWalk.PermitOnly%2A>ähnelt dem <xref:System.Security.IStackWalk.Deny%2A>, insofern, dass beide Stackwalk fehlschlagen, wenn sie erfolgreich ausgeführt worden wäre. Der Unterschied besteht darin, die <xref:System.Security.IStackWalk.Deny%2A> Gibt Berechtigungen, die den Stackwalk auftreten, verursachen jedoch <xref:System.Security.IStackWalk.PermitOnly%2A> gibt an, die nur Berechtigungen, die nicht durch den Stackwalk fehlschlagen können. Rufen Sie diese Methode, um sicherzustellen, dass der Code verwendet werden kann, um nur die angegebenen Ressourcen zugreifen.  
+  
+ <xref:System.Security.IStackWalk.PermitOnly%2A>wird ignoriert, für eine Berechtigung nicht gewährt werden, da eine Anforderung für die Berechtigung nicht erfolgreich ist. Jedoch wenn später-Code, die sich auf den Aufruf einer niedrigeren Stack Aufrufe <xref:System.Security.IStackWalk.Demand%2A> für die Berechtigung, eine <xref:System.Security.SecurityException> wird ausgelöst, wenn der Stackwalk im Code, die es wurde versucht erreicht, rufen Sie <xref:System.Security.IStackWalk.PermitOnly%2A>. Dies ist, da der Code, der aufgerufen <xref:System.Security.IStackWalk.PermitOnly%2A> nicht wurde die Berechtigung erteilt hat, auch wenn er aufgerufen <xref:System.Security.IStackWalk.PermitOnly%2A> für diese Berechtigung. Die Aufrufliste wird in der Regel als absteigend, dargestellt, sodass Methoden in der Aufrufliste höher niedriger Methoden aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

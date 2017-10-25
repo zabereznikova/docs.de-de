@@ -1,0 +1,81 @@
+<Type Name="ConstructorArgumentAttribute" FullName="System.Windows.Markup.ConstructorArgumentAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ConstructorArgumentAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConstructorArgumentAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.ConstructorArgumentAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass ein Objekt mit der Syntax eines Nicht-Standardkonstruktors initialisiert werden kann und dass eine Eigenschaft mit dem angegebenen Namen Informationen zur Erstellung bereitstellt.  Diese Informationen sind in erster Linie für die XAML-Serialisierung vorgesehen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut gibt an, dass der zugehörigen Eigenschaft von einem Konstruktorparameter initialisiert werden kann und für die Verwendung von XAML-Serialisierung ignoriert werden sollen, wenn der Konstruktor verwendet wird, um die Instanz zu erstellen. Dies bietet eine bessere Roundtrip Darstellungen für parametrisierten Konstruktorsyntax statt standardmäßig Konstruktor Instanziierung sowie bestimmte Attribute.  
+  
+ Ein Framework kann potenziell unterstützen, bleiben Markuperweiterungsverwendungen und rekonstruieren anstatt `ProvideValue` Ausgabe in der Objektstruktur für die Serialisierung. In diesem Fall die <xref:System.Windows.Markup.ConstructorArgumentAttribute> Informationen sind hilfreich, während der Serialisierung für die Erzeugung von einer genauen Darstellung der typische Markuperweiterungsverwendung. Weitere Informationen über Markuperweiterungen finden Sie unter [Markup Extensions for XAML Overview](~/docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+  
+ Um für gültig sein, eine <xref:System.Windows.Markup.ConstructorArgumentAttribute> Informationsblatt befindet, ein Typ, der öffentliche nicht standardmäßigen Konstruktor muss genau einen Parameter unterstützen. Der Name des Parameters muss einer Lese-Schreib-Eigenschaft entsprechen. Die Eigenschaft muss anderweitig serialisierbar sein. Sie können dieses Attribut verwenden, um die Entsprechung zwischen den Namen des Parameters im Konstruktor und die Eigenschaft zu erstellen. Insbesondere können Sie dieses Attribut anwenden, auf die Definition auf Eigenschaftenebene verbindende Lese-Schreib-Eigenschaft.  
+  
+ Consumer von <xref:System.Windows.Markup.ConstructorArgumentAttribute> sind, möglicherweise in Fällen, in denen <xref:System.Windows.Markup.ConstructorArgumentAttribute.ArgumentName%2A> löst nicht sichern, geben oder wenn auf einen Typ angewendet, die nicht mit den entsprechenden Konstruktionsargumente und Stelligkeit verfügt.  
+  
+ In früheren Versionen von .NET Framework war diese Klasse in der WPF-spezifischen Assembly WindowsBase. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.ConstructorArgumentAttribute> befindet sich in der System.Xaml-Assembly. Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
+ Weitere Informationen über Markuperweiterungen und WPF finden Sie unter [Markuperweiterungen und WPF-XAML](~/docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConstructorArgumentAttribute (string argumentName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string argumentName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ConstructorArgumentAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="argumentName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="argumentName">Der Name des Konstruktors, der die zugeordnete Eigenschaft initialisieren soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.ConstructorArgumentAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArgumentName">
+      <MemberSignature Language="C#" Value="public string ArgumentName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ArgumentName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ConstructorArgumentAttribute.ArgumentName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namensparameter des Konstruktors ab, der die zugeordnete Eigenschaft initialisiert.</summary>
+        <value>Der Name des Konstruktors. Ausgehend von einer CLR-Sicherung entspricht dies dem <see cref="P:System.Reflection.ParameterInfo.Name" /> des relevanten Konstruktorparameters.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

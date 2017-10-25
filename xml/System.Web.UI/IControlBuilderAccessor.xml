@@ -1,0 +1,48 @@
+<Type Name="IControlBuilderAccessor" FullName="System.Web.UI.IControlBuilderAccessor">
+  <TypeSignature Language="C#" Value="public interface IControlBuilderAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IControlBuilderAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IControlBuilderAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht es dem Steuerelementserialisierungsprogramm zum Abrufen des Generators für ein Steuerelement aus.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IControlBuilderAccessor> -Schnittstelle definiert die Eigenschaft ein Steuerelement implementieren muss, um Zugriff auf das Steuerelement-Generator eine Steuerelement-Serialisierungsprogramm zu ermöglichen. <xref:System.Web.UI.Control>implementiert diese Schnittstelle, d. h. alle Steuerelemente Ableiten von <xref:System.Web.UI.Control> über eine Implementierung dieser Eigenschaft verfügen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ControlBuilder">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ControlBuilder ControlBuilder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlBuilder ControlBuilder" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IControlBuilderAccessor.ControlBuilder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlBuilder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Steuerelementgenerator für dieses Steuerelement ab.</summary>
+        <value>Die <see cref="T:System.Web.UI.ControlBuilder" /> , das das Steuerelement erstellt, andernfalls <see langword="null" /> Wenn keine-Generator verwendet wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IControlBuilderAccessor.ControlBuilder%2A> -Eigenschaft ermöglicht es einem Steuerelement-Serialisierungsprogramm Zugriff auf den Generator, der das Steuerelement erstellt, die implementiert <xref:System.Web.UI.IControlBuilderAccessor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

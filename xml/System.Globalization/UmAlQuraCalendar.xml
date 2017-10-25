@@ -1,0 +1,1288 @@
+<Type Name="UmAlQuraCalendar" FullName="System.Globalization.UmAlQuraCalendar">
+  <TypeSignature Language="C#" Value="public class UmAlQuraCalendar : System.Globalization.Calendar" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit UmAlQuraCalendar extends System.Globalization.Calendar" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.UmAlQuraCalendar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization.Calendars</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Globalization.Calendar</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Saudi Hijri (Um Al Qura) Kalender dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.UmAlQuraCalendar> Klasse ist nahezu identisch mit der <xref:System.Globalization.HijriCalendar> Klasse, außer der Umm Al-Qura-Kalender verwendet einen tabellenbasierten Algorithmus aus der Saudi Regierung lizenziert, um Datumsangaben zu berechnen, können schnelle Datumsangaben auf das Jahr 1500 a. h. und unterstützt nicht die <xref:System.Globalization.HijriCalendar.HijriAdjustment%2A>Eigenschaft.  
+  
+> [!NOTE]
+>  Informationen zum Verwenden der <xref:System.Globalization.UmAlQuraCalendar> Klasse und der andere Klassen in .NET Framework "Kalender", finden Sie unter [arbeiten mit Kalendern](~/docs/standard/datetime/working-with-calendars.md).  
+  
+ Für die <xref:System.Globalization.UmAlQuraCalendar> -Klasse, jeden Monat hat 29 oder 30 Tage, aber in der Regel keine messbaren nacheinander. Während die Dokumentation für den Hijri-Kalender eine Tabelle, die die entsprechenden Tagen in jedem Monat anzeigt erhalten, kann keine solche allgemeine Tabelle für den Umm Al-Qura-Kalender erstellt werden.  
+  
+ Weitere Informationen zu den Hijri-Kalender, finden Sie unter der <xref:System.Globalization.HijriCalendar> Klasse.  
+  
+ **Hinweis** die <xref:System.Globalization.UmAlQuraCalendar> Klasse unterstützt nur Datumswerte von 04/30/1900 00.00.00 (gregorianisches Datum) bis 11/16/2077 23:59:59 (gregorianisches Datum).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UmAlQuraCalendar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Globalization.UmAlQuraCalendar" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMonths">
+      <MemberSignature Language="C#" Value="public override DateTime AddMonths (DateTime time, int months);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime AddMonths(valuetype System.DateTime time, int32 months) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.AddMonths(System.DateTime,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="months" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="time">Das Datum der Monate hinzugefügt. Die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse unterstützt nur Datumswerte von 04/30/1900 00.00.00 (gregorianisches Datum) bis 11/16/2077 23:59:59 (gregorianisches Datum).</param>
+        <param name="months">Die positive oder negative Anzahl von Monaten, die hinzugefügt werden sollen.</param>
+        <summary>Berechnet ein Datum, das eine angegebene Anzahl von Monaten Weg von einem angegebenen Anfangsdatum ist.</summary>
+        <returns>Das Datum zurückgegeben, durch die angegebene Anzahl von Monaten durch Hinzufügen der <paramref name="months" /> Parameter zum angegebenen Datum die durch die <paramref name="time" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Tagesangabe des resultierenden <xref:System.DateTime> wird beeinflusst, wenn die sich ergebende Tag keinen gültigen Tag im resultierenden Monat des resultierenden Jahres ist. Es wird in den letzten gültigen Tag im resultierenden Monat des resultierenden Jahres geändert. Der Jahresteil des resultierenden <xref:System.DateTime> wird beeinflusst, wenn der resultierende Monat außerhalb des angegebenen Jahres ist <xref:System.DateTime>. Diese Implementierung unterstützt nur den aktuellen Zeitraum an. Aus diesem Grund wird eine Ausnahme ausgelöst, wenn das resultierende Jahr außerhalb des Zeitraums des angegebenen ist <xref:System.DateTime>. Die Zeit des Tages Teil der resultierenden <xref:System.DateTime> bleibt die gleiche wie das angegebene <xref:System.DateTime>.  
+  
+ Beispielsweise befindet sich im angegebene Monat Zulkadah, das 30 Tage hat, der angegebene Tag ist der 30. Tag des Monats und den Wert des der `months` Parameter 3 ist, ist das resultierende Jahr mehr als den angegebenen Werten für Jahr, der sich ergebenden Monat entspricht, Safar und der resultierende d Weg ist der 29. Tag, die den letzten Tag im Safar ist.  
+  
+ Wenn der Wert des der `months` Parameter negativ ist, ist das resultierende <xref:System.DateTime> liegt vor dem angegebenen <xref:System.DateTime>.  
+  
+ Die <xref:System.DateTime.Kind%2A> -Eigenschaft des zurückgegebenen <xref:System.DateTime> ist der Wert immer <xref:System.DateTimeKind?displayProperty=nameWithType>. Können Sie erhalten die <xref:System.DateTime.Kind%2A> Eigenschaft von der `time` Parameter durch Aufrufen der <xref:System.DateTime.SpecifyKind%2A?displayProperty=nameWithType> Methode, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[System.Globalization.Calendar.AddMethods#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/cs/add1.cs#5)]
+ [!code-vb[System.Globalization.Calendar.AddMethods#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/vb/add1.vb#5)]  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.DateTime> Wert und die Werte verschiedener Komponenten im Umm Al-Qura-Kalender angezeigt. Anschließend ruft es die <xref:System.Globalization.UmAlQuraCalendar.AddYears%2A> und <xref:System.Globalization.UmAlQuraCalendar.AddMonths%2A> Methoden, um den Date-Wert 2 Jahre und 10 Monaten im Umm Al-Qura-Kalender hinzugefügt. Schließlich wird erneut die Werte dieser Komponenten Datum im Umm Al-Qura-Kalender.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.AddMonths#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.addmonths/cs/addmonths1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.AddMonths#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.addmonths/vb/addmonths1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das resultierende Datum liegt außerhalb des Bereichs von unterstützt die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="months" />ist kleiner als-120.000 oder größer als 120.000.  
+  
+ - oder -   
+  
+ <paramref name="time" />liegt außerhalb des Bereichs, die von diesem Kalender unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddYears">
+      <MemberSignature Language="C#" Value="public override DateTime AddYears (DateTime time, int years);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime AddYears(valuetype System.DateTime time, int32 years) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.AddYears(System.DateTime,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="years" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="time">Das Datum der Jahre hinzugefügt. Die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse unterstützt nur Datumswerte von 04/30/1900 00.00.00 (gregorianisches Datum) bis 11/16/2077 23:59:59 (gregorianisches Datum).</param>
+        <param name="years">Die positive oder negative Anzahl von Jahren, die hinzugefügt werden sollen.</param>
+        <summary>Berechnet ein Datum, das eine angegebene Anzahl von Jahren Weg von einem angegebenen Anfangsdatum befindet.</summary>
+        <returns>Das Datum zurückgegeben, durch die angegebene Anzahl von Jahren durch Hinzufügen der <paramref name="years" /> Parameter zum angegebenen Datum die durch die <paramref name="time" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Tagesangabe des resultierenden <xref:System.DateTime> wird beeinflusst, wenn die sich ergebende Tag keinen gültigen Tag im resultierenden Monat des resultierenden Jahres ist. Es wird in den letzten gültigen Tag im resultierenden Monat des resultierenden Jahres geändert. Die Monatsangabe des resultierenden <xref:System.DateTime> bleibt die gleiche wie das angegebene <xref:System.DateTime>. Diese Implementierung unterstützt nur den aktuellen Zeitraum an. Aus diesem Grund wird eine Ausnahme ausgelöst, wenn das resultierende Jahr außerhalb des Zeitraums des angegebenen ist <xref:System.DateTime>. Die Zeit des Tages Teil der resultierenden <xref:System.DateTime> bleibt die gleiche wie das angegebene <xref:System.DateTime>.  
+  
+ Zulhijjah hat beispielsweise 29 Tage, außer in einem Schaltjahr er 30 Tage hat. Wenn das angegebene Datum der 30. Tag Zulhijjah in einem Schaltjahr und der Wert des ist die `years` Parameter ist 1, das resultierende Datum ist der 29. Tag Zulhijjah im folgenden Jahr.  
+  
+ Wenn `years` negativ ist, wird das resultierende <xref:System.DateTime> liegt vor dem angegebenen <xref:System.DateTime>.  
+  
+ Die <xref:System.DateTime.Kind%2A> -Eigenschaft des zurückgegebenen <xref:System.DateTime> ist der Wert immer <xref:System.DateTimeKind?displayProperty=nameWithType>. Können Sie erhalten die <xref:System.DateTime.Kind%2A> Eigenschaft von der `time` Parameter durch Aufrufen der <xref:System.DateTime.SpecifyKind%2A?displayProperty=nameWithType> Methode, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[System.Globalization.Calendar.AddMethods#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/cs/add1.cs#8)]
+ [!code-vb[System.Globalization.Calendar.AddMethods#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/vb/add1.vb#8)]  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.DateTime> Wert und die Werte verschiedener Komponenten im Umm AL-Qura-Kalender angezeigt. Anschließend ruft es die <xref:System.Globalization.UmAlQuraCalendar.AddYears%2A> und <xref:System.Globalization.UmAlQuraCalendar.AddMonths%2A> Methoden, um den Date-Wert 2 Jahre und 10 Monaten im Umm Al-Qura-Kalender hinzugefügt. Schließlich wird erneut die Werte dieser Komponenten Datum im Umm Al-Qura-Kalender.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.AddMonths#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.addmonths/cs/addmonths1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.AddMonths#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.addmonths/vb/addmonths1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das resultierende Datum liegt außerhalb des Bereichs von unterstützt die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="years" />ist kleiner als-10.000 oder größer als 10.000.  
+  
+ - oder -   
+  
+ <paramref name="time" />liegt außerhalb des Bereichs, die von diesem Kalender unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmType">
+      <MemberSignature Language="C#" Value="public override System.Globalization.CalendarAlgorithmType AlgorithmType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Globalization.CalendarAlgorithmType AlgorithmType" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.UmAlQuraCalendar.AlgorithmType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CalendarAlgorithmType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der aktuelle Kalender ist, Sonnenkalender, Mondkalender oder eine Kombination aus beidem.</summary>
+        <value>Gibt immer <see cref="F:System.Globalization.CalendarAlgorithmType.LunarCalendar" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird Reflektion zum Instanziieren jedes <xref:System.Globalization.Calendar> Typ in .NET Framework gefunden und zeigt den Wert von dessen <xref:System.Globalization.Calendar.AlgorithmType%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Globalization.Calendar.AlgorithmType#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.algorithmtype/cs/algorithmtype1.cs#1)]
+ [!code-vb[System.Globalization.Calendar.AlgorithmType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.algorithmtype/vb/algorithmtype1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DaysInYearBeforeMinSupportedYear">
+      <MemberSignature Language="C#" Value="protected override int DaysInYearBeforeMinSupportedYear { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DaysInYearBeforeMinSupportedYear" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.UmAlQuraCalendar.DaysInYearBeforeMinSupportedYear" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Tage im Jahr, die das Jahr vor, die von angegeben wird die <see cref="P:System.Globalization.UmAlQuraCalendar.MinSupportedDateTime" /> Eigenschaft.</summary>
+        <value>Die Anzahl der Tage im Jahr, der vom angegebenen Jahr vorausgeht <see cref="P:System.Globalization.UmAlQuraCalendar.MinSupportedDateTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt einen konstanten Wert von 384 zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eras">
+      <MemberSignature Language="C#" Value="public override int[] Eras { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] Eras" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.UmAlQuraCalendar.Eras" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Zeiträume, die vom aktuellen unterstützt werden <see cref="T:System.Globalization.UmAlQuraCalendar" />.</summary>
+        <value>Ein Array, das besteht aus einem einzelnen Element mit einem Wert, der <see cref="F:System.Globalization.UmAlQuraCalendar.UmAlQuraEra" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hijri-Kalender umfasst einen Zeitraum: a. h. (Lateinisch "Anno Hegirae", "Das Jahr der Migration" in Bezug auf die Migration von Propheten (PBUH) aus Mekka). Diese Eigenschaft gibt immer ein Array mit nur einem Element zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfMonth">
+      <MemberSignature Language="C#" Value="public override int GetDayOfMonth (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDayOfMonth(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.GetDayOfMonth(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Der Datumswert, der gelesen werden soll. Die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse unterstützt nur Datumswerte von 04/30/1900 00.00.00 (gregorianisches Datum) bis 11/16/2077 23:59:59 (gregorianisches Datum).</param>
+        <summary>Berechnet den Tag des Monats, auf denen ein angegebenes Datum fällt.</summary>
+        <returns>Eine ganze Zahl zwischen 1 und 30, die für den Tag des Monats gemäß der <paramref name="time" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Werte der verschiedenen Komponenten von einer <xref:System.DateTime> im Hinblick auf den Umm Al-Qura-Kalender.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.AddMonths#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.addmonths/cs/addmonths1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.AddMonths#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.addmonths/vb/addmonths1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="time" />liegt außerhalb des Bereichs, die von diesem Kalender unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfWeek">
+      <MemberSignature Language="C#" Value="public override DayOfWeek GetDayOfWeek (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DayOfWeek GetDayOfWeek(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.GetDayOfWeek(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DayOfWeek</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Der Datumswert, der gelesen werden soll. Die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse unterstützt nur Datumswerte von 04/30/1900 00.00.00 (gregorianisches Datum) bis 11/16/2077 23:59:59 (gregorianisches Datum).</param>
+        <summary>Berechnet den Tag der Woche, auf der ein angegebenes Datum fällt.</summary>
+        <returns>Ein <see cref="T:System.DayOfWeek" /> -Wert, der den Tag der Woche gemäß der <paramref name="time" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.DayOfWeek> Werte lauten wie folgt:  
+  
+|DayOfWeek-Wert|Gibt an|  
+|---------------------|---------------------|  
+|Sonntag|الاحد (Al-Ahad)|  
+|Montag|الاثنين (Al-Ithnayn)|  
+|Dienstag|الثلاثاء (am Thulaathaa ")|  
+|Mittwoch|الاربعاء (Al Arbi'aa ")|  
+|Donnerstag|الخميس (Al-Khamiis)|  
+|Freitag|الجمعة (Al-Jumu'ah)|  
+|Samstag|السبت (als Sabt)|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Werte der verschiedenen Komponenten von einer <xref:System.DateTime> im Hinblick auf den Umm Al-Qura-Kalender.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.AddMonths#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.addmonths/cs/addmonths1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.AddMonths#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.addmonths/vb/addmonths1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="time" />liegt außerhalb des Bereichs, die von diesem Kalender unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfYear">
+      <MemberSignature Language="C#" Value="public override int GetDayOfYear (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDayOfYear(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.GetDayOfYear(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Der Datumswert, der gelesen werden soll. Die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse unterstützt nur Datumswerte von 04/30/1900 00.00.00 (gregorianisches Datum) bis 11/16/2077 23:59:59 (gregorianisches Datum).</param>
+        <summary>Berechnet den Tag des Jahres, auf den ein angegebenes Datum fällt.</summary>
+        <returns>Eine ganze Zahl zwischen 1 und 355, die den Tag des Jahres gemäß stellt die <paramref name="time" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Tag des Jahres wird als die Anzahl der Tage vom ersten Tag des Jahres definiert. Z. B. die <xref:System.Globalization.UmAlQuraCalendar.GetDayOfYear%2A> -Methode gibt 1 zurück, für den ersten Tag der ersten Monat des Jahres und die Gesamtzahl der Tage im Jahr für den letzten Tag des letzten Monats.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Werte der verschiedenen Komponenten von einer <xref:System.DateTime> im Hinblick auf den Umm Al-Qura-Kalender.  
+  
+ [!code-csharp[System.Globalization.UmALQuraCalendar.AddMonths#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.addmonths/cs/addmonths1.cs#1)]
+ [!code-vb[System.Globalization.UmALQuraCalendar.AddMonths#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.addmonths/vb/addmonths1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="time" />liegt außerhalb des Bereichs, die von diesem Kalender unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDaysInMonth">
+      <MemberSignature Language="C#" Value="public override int GetDaysInMonth (int year, int month, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDaysInMonth(int32 year, int32 month, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.GetDaysInMonth(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Jahr.</param>
+        <param name="month">Eine ganze Zahl zwischen 1 und 12, die einen Monat darstellt.</param>
+        <param name="era">Ein Zeitraum. Geben Sie <see langword="UmAlQuraCalendar.Eras[UmAlQuraCalendar.CurrentEra]" /> oder <see cref="F:System.Globalization.UmAlQuraCalendar.UmAlQuraEra" /> an.</param>
+        <summary>Berechnet die Anzahl der Tage im angegebenen Monat des angegebenen Werten für Jahr und Zeitraum zurück.</summary>
+        <returns>Die Anzahl der Tage im angegebenen Monat des angegebenen Jahrs im Zeitraum. Der zurückgegebene Wert ist 29 in einem Gemeinjahr und 30 in einem Schaltjahr.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine andere Anzahl von Tagen in einem angegebenen Monat für ein Gemeinjahr und ein Schaltjahr zurück. Beispielsweise diese Methode gibt 29 oder 30 für Zulhijjah (`month` = 12), je nachdem, ob `year` ein Schaltjahr ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Globalization.UmAlQuraCalendar.GetDaysInMonth%2A> Methode, um die Anzahl der Tage in jedem Monat von fünf aufeinander folgenden Jahren abzurufen.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.GetDaysInMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getdaysinmonth/cs/getdaysinmonth1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.GetDaysInMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getdaysinmonth/vb/getdaysinmonth1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />, <paramref name="month" />, oder <paramref name="era" /> liegt außerhalb des Bereichs von unterstützt die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDaysInYear">
+      <MemberSignature Language="C#" Value="public override int GetDaysInYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDaysInYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.GetDaysInYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Jahr.</param>
+        <param name="era">Ein Zeitraum. Geben Sie <see langword="UmAlQuraCalendar.Eras[UmAlQuraCalendar.CurrentEra]" /> oder <see cref="F:System.Globalization.UmAlQuraCalendar.UmAlQuraEra" /> an.</param>
+        <summary>Berechnet die Anzahl der Tage des angegebenen Jahres im angegebenen Zeitraum zurück.</summary>
+        <returns>Die Anzahl der Tage im angegebenen Jahr des angegebenen Zeitraums. Die Anzahl der Tage werden 354 in ein Gemeinjahr 355 in ein Schaltjahr ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Globalization.UmAlQuraCalendar.GetDaysInYear%2A> Methode zum Abrufen der Anzahl von Tagen in 10 aufeinander folgenden Jahren in jedem Zeitraum von unterstützt die <xref:System.Globalization.UmAlQuraCalendar> Klasse.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.GetDaysInYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getdaysinyear/cs/getdaysinyear1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.GetDaysInYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getdaysinyear/vb/getdaysinyear1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />oder <paramref name="era" /> liegt außerhalb des Bereichs von unterstützt die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEra">
+      <MemberSignature Language="C#" Value="public override int GetEra (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetEra(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.GetEra(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Der Datumswert, der gelesen werden soll.</param>
+        <summary>Berechnet den Zeitraum, in dem ein angegebenes Datum fällt.</summary>
+        <returns>Gibt immer die <see cref="F:System.Globalization.UmAlQuraCalendar.UmAlQuraEra" /> Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Umm Al-Qura-Kalender umfasst einen Zeitraum: a. h. (Lateinisch "Anno Hegirae", "Das Jahr der Migration" in Bezug auf die Migration von Propheten (PBUH) aus Mekka).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Werte der verschiedenen Komponenten eines Datums im Umm Al-Qura-Kalender.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.AddMonths#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.addmonths/cs/addmonths1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.AddMonths#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.addmonths/vb/addmonths1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="time" />liegt außerhalb des Bereichs, die von diesem Kalender unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLeapMonth">
+      <MemberSignature Language="C#" Value="public override int GetLeapMonth (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetLeapMonth(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.GetLeapMonth(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Jahr.</param>
+        <param name="era">Ein Zeitraum. Geben Sie <see langword="UmAlQuraCalendar.Eras[UmAlQuraCalendar.CurrentEra]" /> oder <see cref="F:System.Globalization.UmAlQuraCalendar.UmAlQuraEra" /> an.</param>
+        <summary>Berechnet den Schaltmonat für ein angegebenes Jahr und Zeitraum zurück.</summary>
+        <returns>Immer 0 da die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse Leap Monate nicht unterstützt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem Kalender, der das Konzept von Schaltmonaten unterstützt, kann es sich bei der Schaltmonat entweder nach einem bestimmten Monat oder nach einem beliebigen Monat eines Jahres auftreten. Z. B. die <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%28System.DateTime%29?displayProperty=nameWithType> Methode gibt eine Zahl zwischen 1 und 13, der den einem bestimmten Datum zugeordneten Monat angibt. Wenn ein Schaltmonat zwischen dem achten und neunten Monate des Jahres, besteht die <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%2A> Methodenrückgabe 8 für den achten Monat, 9 für den Schaltmonat und 10 für den neunten Monat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />ist kleiner als 1318 oder größer als 1450.  
+  
+ - oder -   
+  
+ <paramref name="era" /> ist nicht <see langword="UmAlQuraCalendar.Eras[UmAlQuraCalendar.CurrentEra]" /> oder <see cref="F:System.Globalization.UmAlQuraCalendar.UmAlQuraEra" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMonth">
+      <MemberSignature Language="C#" Value="public override int GetMonth (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMonth(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.GetMonth(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Der Datumswert, der gelesen werden soll. Die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse unterstützt nur Datumswerte von 04/30/1900 00.00.00 (gregorianisches Datum) bis 11/16/2077 23:59:59 (gregorianisches Datum).</param>
+        <summary>Berechnet den Monat, in dem ein angegebenes Datum fällt.</summary>
+        <returns>Eine ganze Zahl zwischen 1 und 12, die für den Monat im angegebenen Datum die durch die <paramref name="time" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Datumsbereiche von unterstützt die <xref:System.Globalization.UmAlQuraCalendar> Klasse, in dem gregorianischen und Umm Al-Qura-Kalender. Die <xref:System.Globalization.UmAlQuraCalendar.GetMonth%2A> Methode wird verwendet, um den Monat des minimalen und maximalen unterstützten Datumsangaben im Umm Al-Qura-Kalender abzurufen, ist er nicht aktuellen Kalender der aktuellen Kultur.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.GetMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getmonth/cs/getmonth1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.GetMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getmonth/vb/getmonth1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="time" />liegt außerhalb des Bereichs, die von diesem Kalender unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMonthsInYear">
+      <MemberSignature Language="C#" Value="public override int GetMonthsInYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMonthsInYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.GetMonthsInYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Jahr.</param>
+        <param name="era">Ein Zeitraum. Geben Sie <see langword="UmAlQuaraCalendar.Eras[UmAlQuraCalendar.CurrentEra]" /> oder <see cref="F:System.Globalization.UmAlQuraCalendar.UmAlQuraEra" /> an.</param>
+        <summary>Berechnet die Anzahl der Monate des angegebenen Jahres im angegebenen Zeitraum zurück.</summary>
+        <returns>Immer 12.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Globalization.UmAlQuraCalendar.GetMonthsInYear%2A> Methode, um zu bestimmen, die Anzahl der Monate in vier aufeinander folgende Jahre, und klicken Sie dann ruft der <xref:System.Globalization.UmAlQuraCalendar.GetDaysInMonth%2A> Methode, um zu bestimmen, wie viele Tage in jedem Monat sind.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.GetDaysInMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getdaysinmonth/cs/getdaysinmonth1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.GetDaysInMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getdaysinmonth/vb/getdaysinmonth1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />liegt außerhalb des Bereichs, die von diesem Kalender unterstützt.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="era" />liegt außerhalb des Bereichs, die von diesem Kalender unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetYear">
+      <MemberSignature Language="C#" Value="public override int GetYear (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetYear(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.GetYear(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Der Datumswert, der gelesen werden soll. Die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse unterstützt nur Datumswerte von 04/30/1900 00.00.00 (gregorianisches Datum) bis 11/16/2077 23:59:59 (gregorianisches Datum).</param>
+        <summary>Berechnet das Jahr eines Datums, dargestellt durch eine angegebene <see cref="T:System.DateTime" />.</summary>
+        <returns>Eine ganze Zahl, die vom angegebenen Jahr darstellt. die <paramref name="time" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Datumsbereiche von unterstützt die <xref:System.Globalization.UmAlQuraCalendar> Klasse, in dem gregorianischen und Umm Al-Qura-Kalender. Die <xref:System.Globalization.UmAlQuraCalendar.GetYear%2A> Methode wird verwendet, um das Jahr des minimalen und maximalen unterstützten Datumsangaben im Umm Al-Qura-Kalender abzurufen, ist er nicht aktuellen Kalender der aktuellen Kultur.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.GetMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getmonth/cs/getmonth1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.GetMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getmonth/vb/getmonth1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="time" />liegt außerhalb des Bereichs, die von diesem Kalender unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapDay">
+      <MemberSignature Language="C#" Value="public override bool IsLeapDay (int year, int month, int day, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapDay(int32 year, int32 month, int32 day, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.IsLeapDay(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Jahr.</param>
+        <param name="month">Eine ganze Zahl zwischen 1 und 12, die einen Monat darstellt.</param>
+        <param name="day">Eine ganze Zahl zwischen 1 und 30, die einen Tag darstellt.</param>
+        <param name="era">Ein Zeitraum. Geben Sie <see langword="UmAlQuraCalendar.Eras[UmAlQuraCalendar.CurrentEra]" /> oder <see cref="F:System.Globalization.UmAlQuraCalendar.UmAlQuraEra" /> an.</param>
+        <summary>Bestimmt, ob das angegebene Datum ein Schalttag ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Tag ein Schalttag ist, andernfalls <see langword="false" />. Der Rückgabewert ist immer <see langword="false" /> da die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse Leap Tage nicht unterstützt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Schalttag ist ein Tag, der nur in einem Schaltjahr auftritt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Globalization.UmAlQuraCalendar.IsLeapDay%2A> Methode für den letzten Tag des zweiten Monats (Februar) für fünf Jahre in jedem Zeitraum.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar.IsLeapDay#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.IsLeapDay/CPP/hijricalendar_isleapday.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar.IsLeapDay#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.IsLeapDay/CS/hijricalendar_isleapday.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar.IsLeapDay#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.IsLeapDay/VB/hijricalendar_isleapday.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />, <paramref name="month" />, <paramref name="day" />, oder <paramref name="era" /> liegt außerhalb des Bereichs von unterstützt die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapMonth">
+      <MemberSignature Language="C#" Value="public override bool IsLeapMonth (int year, int month, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapMonth(int32 year, int32 month, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.IsLeapMonth(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Jahr.</param>
+        <param name="month">Eine ganze Zahl zwischen 1 und 12, die einen Monat darstellt.</param>
+        <param name="era">Ein Zeitraum. Geben Sie <see langword="UmAlQuraCalendar.Eras[UmAlQuraCalendar.CurrentEra]" /> oder <see cref="F:System.Globalization.UmAlQuraCalendar.UmAlQuraEra" /> an.</param>
+        <summary>Bestimmt, ob der angegebene Monat des angegebenen Jahrs im angegebenen Zeitraum ein Schaltmonat ist.</summary>
+        <returns>Immer <see langword="false" /> da die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse Leap Monate nicht unterstützt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Schaltmonat ist einen gesamten Monat, der nur in einem Schaltjahr auftritt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />, <paramref name="month" />, oder <paramref name="era" /> liegt außerhalb des Bereichs von unterstützt die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapYear">
+      <MemberSignature Language="C#" Value="public override bool IsLeapYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.IsLeapYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Jahr.</param>
+        <param name="era">Ein Zeitraum. Geben Sie <see langword="UmAlQuraCalendar.Eras[UmAlQuraCalendar.CurrentEra]" /> oder <see cref="F:System.Globalization.UmAlQuraCalendar.UmAlQuraEra" /> an.</param>
+        <summary>Bestimmt, ob das angegebene Jahr im angegebenen Zeitraum ein Schaltjahr ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene Jahr ein Schaltjahr ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Gemeinjahr hat 354 und ein Schaltjahr 355 Tage.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet die Anzahl der Tage in zehn Jahre hintereinander und ruft die <xref:System.Globalization.UmAlQuraCalendar.IsLeapYear%2A> Methode, um zu bestimmen, welche Jahre Schaltjahren sind.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.IsLeapYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.isleapyear/cs/isleapyear1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.IsLeapYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.isleapyear/vb/isleapyear1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />oder <paramref name="era" /> liegt außerhalb des Bereichs von unterstützt die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MaxSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MaxSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.UmAlQuraCalendar.MaxSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das späteste Datum und Uhrzeit, die von diesem Kalender unterstützt.</summary>
+        <value>Das späteste Datum und Uhrzeit unterstützt werden, durch die <see cref="T:System.Globalization.UmAlQuraCalendar" /> -Klasse, entspricht das späteste 16 November 2077 unserer Zeitrechnung im gregorianischen Kalender.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v45](~/includes/net-v45-md.md)], den Wert der <xref:System.Globalization.UmAlQuraCalendar.MaxSupportedDateTime%2A> Eigenschaft ist 11/16/2077. In früheren Versionen von .NET Framework ist der Wert für das späteste 13 Mai 2029 unserer Zeitrechnung im gregorianischen Kalender.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Datumsbereiche von unterstützt die <xref:System.Globalization.UmAlQuraCalendar> Klasse, in dem gregorianischen und Umm Al-Qura-Kalender.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.GetMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getmonth/cs/getmonth1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.GetMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getmonth/vb/getmonth1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MinSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MinSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.UmAlQuraCalendar.MinSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das früheste Datum und die früheste Uhrzeit ab, die von diesem Kalender unterstützt werden.</summary>
+        <value>Das früheste Datum und Uhrzeit unterstützt werden, durch die <see cref="T:System.Globalization.UmAlQuraCalendar" /> -Klasse, die dem ersten Moment des 30. April 1900 unserer Zeitrechnung entspricht im gregorianischen Kalender.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Datumsbereiche von unterstützt die <xref:System.Globalization.UmAlQuraCalendar> Klasse, in dem gregorianischen und Umm Al-Qura-Kalender.  
+  
+ [!code-csharp[System.Globalization.UmAlQuraCalendar.GetMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getmonth/cs/getmonth1.cs#1)]
+ [!code-vb[System.Globalization.UmAlQuraCalendar.GetMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.umalquracalendar.getmonth/vb/getmonth1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime ToDateTime (int year, int month, int day, int hour, int minute, int second, int millisecond, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime ToDateTime(int32 year, int32 month, int32 day, int32 hour, int32 minute, int32 second, int32 millisecond, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="hour" Type="System.Int32" />
+        <Parameter Name="minute" Type="System.Int32" />
+        <Parameter Name="second" Type="System.Int32" />
+        <Parameter Name="millisecond" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Jahr.</param>
+        <param name="month">Eine ganze Zahl zwischen 1 und 12, die einen Monat darstellt.</param>
+        <param name="day">Eine ganze Zahl von 1 bis 29, die einen Tag darstellt.</param>
+        <param name="hour">Eine ganze Zahl zwischen 0 und 23, die eine Stunde darstellt.</param>
+        <param name="minute">Eine ganze Zahl zwischen 0 und 59, die eine Minute darstellt.</param>
+        <param name="second">Eine ganze Zahl zwischen 0 und 59, die eine Sekunde darstellt.</param>
+        <param name="millisecond">Eine ganze Zahl zwischen 0 und 999, die eine Millisekunde darstellt.</param>
+        <param name="era">Ein Zeitraum. Geben Sie <see langword="UmAlQuraCalendar.Eras[UmAlQuraCalendar.CurrentEra]" /> oder <see cref="F:System.Globalization.UmAlQuraCalendar.UmAlQuraEra" /> an.</param>
+        <summary>Gibt eine <see cref="T:System.DateTime" /> , die zum angegebenen Datum, Uhrzeit und Zeitraum festgelegt ist.</summary>
+        <returns>Die <see cref="T:System.DateTime" /> , die auf das angegebene Datum und die Uhrzeit im aktuellen Zeitraum festgelegt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.UmAlQuraCalendar.ToDateTime%2A> Methode ist nützlich, da sie ein beliebiges Datum im aktuellen Kalender auf ein Datum des gregorianischen Kalenders konvertieren kann. Dem gregorianischen Kalender kann anschließend, z. B. dienen zum Vergleichen von Datumsangaben in unterschiedlichen Kalender oder eine entsprechende Datum in einem bestimmten Kalender zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />, <paramref name="month" />, <paramref name="day" />, oder <paramref name="era" /> liegt außerhalb des Bereichs von unterstützt die <see cref="T:System.Globalization.UmAlQuraCalendar" /> Klasse.  
+  
+ - oder -   
+  
+ <paramref name="hour" /> ist kleiner als 0 (null) oder größer als 23.  
+  
+ - oder -   
+  
+ <paramref name="minute" />ist kleiner als 0 (null) oder größer als 59.  
+  
+ - oder -   
+  
+ <paramref name="second" />ist kleiner als 0 (null) oder größer als 59.  
+  
+ - oder -   
+  
+ <paramref name="millisecond" />ist kleiner als 0 (null) oder größer als 999.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToFourDigitYear">
+      <MemberSignature Language="C#" Value="public override int ToFourDigitYear (int year);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ToFourDigitYear(int32 year) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.UmAlQuraCalendar.ToFourDigitYear(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Eine Jahresangabe mit 2 Stellen von 0 bis 99 oder eine Jahresangabe mit 4 Stellen Umm Al-Qura-Kalender von 1318 und 1450.</param>
+        <summary>Konvertiert das angegebene Jahr in eine vierstellige Jahresangabe unter Verwendung der <see cref="P:System.Globalization.UmAlQuraCalendar.TwoDigitYearMax" /> -Eigenschaft können Sie das entsprechende Jahrhundert zu bestimmen.</summary>
+        <returns>Wenn die <paramref name="year" /> Parameter ist eine Jahresangabe mit 2 Stellen, wird die entsprechende 4 zweistellige Jahresangabe zurückgegeben. Wenn die <paramref name="year" /> Parameter ist eine Jahresangabe mit 4 Stellen, der Rückgabewert ist der unveränderte <paramref name="year" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.UmAlQuraCalendar.ToFourDigitYear%2A> -Methode verwendet die `year` Parameter, die <xref:System.Globalization.UmAlQuraCalendar.TwoDigitYearMax%2A> -Eigenschaft, und ein Jahr eine Jahresangabe mit 4 Stellen zu berechnen. Das Jahrhundert richtet sich nach der einzige Vorkommen der 2-Ziffer gesucht `year` innerhalb dieses Bereichs von 100-Jahre-Parameter. Z. B. wenn <xref:System.Globalization.UmAlQuraCalendar.TwoDigitYearMax%2A> festgelegt ist, 1429, ist der 100-Jahre-Bereich von 1330 bis 1429. Aus diesem Grund wird auf ein 2-Wert von 30 als 1330 interpretiert, während der Wert 2 Ziffern von 29 als 1429 interpretiert wird.  
+  
+ Wenn die <xref:System.Globalization.UmAlQuraCalendar.TwoDigitYearMax%2A> Eigenschaft ist der spezielle Wert 99, die <xref:System.Globalization.UmAlQuraCalendar.ToFourDigitYear%2A> -Methode ignoriert die Einstellungen in den regionalen und Sprache "Optionen" in der Systemsteuerung, und gibt die `year` -Parameter unverändert.  
+  
+ <xref:System.Globalization.UmAlQuraCalendar.ToFourDigitYear%2A>unterstützt eine zweistellige Jahresangabe oder eine vierstellige Jahresangabe. Die Übergabe des Werts zweistellige Jahresangabe (weniger als 100) bewirkt, dass die Methode, die den Wert in einen vierstelligen Wert entsprechend dem Konvertieren der <xref:System.Globalization.UmAlQuraCalendar.TwoDigitYearMax%2A> Wert, der das entsprechende Jahrhundert darstellt. Wenn die Anwendung einen vierstellige Jahresangabe Wert bereitstellt, die innerhalb des Kalenderbereichs unterstützten für <xref:System.Globalization.UmAlQuraCalendar.ToFourDigitYear%2A>, gibt die Methode den tatsächlichen Eingabewert zurück. Wenn die Anwendung einen vierstelligen Wert bereitstellt, der außerhalb des Kalenderbereichs unterstützten ist oder wenn es sich um einen negativen Wert bereitstellt, löst die Methode eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />liegt außerhalb des Bereichs, die von diesem Kalender unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoDigitYearMax">
+      <MemberSignature Language="C#" Value="public override int TwoDigitYearMax { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TwoDigitYearMax" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.UmAlQuraCalendar.TwoDigitYearMax" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das letzte Jahr eines Bereichs von 100 Jahren ab, das durch eine Jahresangabe mit 2 Stellen dargestellt werden kann, oder legt dieses fest.</summary>
+        <value>Das letzte Jahr eines Bereichs von 100 Jahren, das durch eine Jahresangabe mit 2 Stellen dargestellt werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht eine Jahresangabe mit 2 Stellen, eine Jahresangabe mit 4 Stellen ordnungsgemäß übersetzt werden. Wenn diese Eigenschaft auf 1429 festgelegt ist, ist der 100-Jahre-Bereich z. B. von 1330 bis 1429. Aus diesem Grund wird auf ein 2-Wert von 30 als 1330 interpretiert, während der Wert 2 Ziffern von 29 als 1429 interpretiert wird.  
+  
+ Der Anfangswert für diese Eigenschaft wird aus den Einstellungen in den Regions- und Sprachoptionen Teil Systemsteuerung Optionen abgeleitet. Diese Informationen kann jedoch ändern, während der Lebensdauer der <xref:System.AppDomain>. Die <xref:System.Globalization.UmAlQuraCalendar> Klasse erkennt keine Änderungen in den Systemeinstellungen automatisch.  
+  
+ Der spezielle Wert 99 die <xref:System.Globalization.UmAlQuraCalendar.ToFourDigitYear%2A> unverändert Methode, um Einstellungen für das ignorieren und den angegebene Werten für Jahr zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Dieser Kalender ist schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">In einem Set-Vorgang, der Wert kleiner als 1318 ist Umm Al-Qura-Kalenderjahr, aber nicht 99, oder größer als 1450.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UmAlQuraEra">
+      <MemberSignature Language="C#" Value="public const int UmAlQuraEra = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 UmAlQuraEra = (1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UmAlQuraCalendar.UmAlQuraEra" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Stellt den aktuellen Zeitraum dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Globalization.UmAlQuraCalendar.UmAlQuraEra> Feld ist 1.  
+  
+ Der Umm Al-Qura-Kalender umfasst einen Zeitraum: a. h. (Lateinisch "Anno Hegirae", "Das Jahr der Migration" in Bezug auf die Migration von Propheten (PBUH) aus Mekka).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

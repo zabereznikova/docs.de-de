@@ -1,0 +1,322 @@
+<Type Name="LocalizationCategory" FullName="System.Windows.LocalizationCategory">
+  <TypeSignature Language="C#" Value="public enum LocalizationCategory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LocalizationCategory extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.LocalizationCategory" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Kategoriewert, der eine <see cref="T:System.Windows.LocalizabilityAttribute" /> für eine binäre XAML (BAML)-Klasse bzw. des Klassenmembers.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.LocalizabilityAttribute> Attribut kann auf eine Klasse, Eigenschaft oder Methode angewendet werden.  
+  
+ Weitere Informationen zum Verwenden der Lokalisierungsattribute finden Sie unter [Lokalisierungsattribute und Kommentare](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, den Kategoriewert, der eine <xref:System.Windows.LocalizabilityAttribute> für eine Schaltfläche definiert.  
+  
+ [!code-xaml[AttributesSnippets#AttributesSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/AttributesSnippets/CSharp/Attributes.xaml#attributessnippet1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Button">
+      <MemberSignature Language="C#" Value="Button" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory Button = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.Button" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Windows.Controls.Button" /> oder ein verwandtes Steuerelement.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckBox">
+      <MemberSignature Language="C#" Value="CheckBox" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory CheckBox = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.CheckBox" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Windows.Controls.CheckBox" /> oder ein verwandtes Steuerelement.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ComboBox">
+      <MemberSignature Language="C#" Value="ComboBox" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory ComboBox = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.ComboBox" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Windows.Controls.ComboBox" /> oder ein verwandtes Steuerelement, z. B. <see cref="T:System.Windows.Controls.ComboBoxItem" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="Font" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory Font = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.Font" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schriftart produktbezogene Daten wie z. B. Schriftart, Stil oder die Größe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hyperlink">
+      <MemberSignature Language="C#" Value="Hyperlink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory Hyperlink = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.Hyperlink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Windows.Documents.Hyperlink" /> oder ein verwandtes Steuerelement.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ignore">
+      <MemberSignature Language="C#" Value="Ignore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory Ignore = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.Ignore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Ressource nicht lokalisiert werden. Dies gilt nicht für alle untergeordneten Knoten, die ggf. vorhanden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inherit">
+      <MemberSignature Language="C#" Value="Inherit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory Inherit = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.Inherit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erbt seine Kategorie von einem übergeordneten Knoten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="Label" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory Label = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.Label" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Windows.Controls.Label" /> oder ein verwandtes Steuerelement.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ListBox">
+      <MemberSignature Language="C#" Value="ListBox" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory ListBox = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.ListBox" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Windows.Controls.ListBox" /> oder ein verwandtes Steuerelement, z. B. <see cref="T:System.Windows.Controls.ListBoxItem" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Menu">
+      <MemberSignature Language="C#" Value="Menu" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory Menu = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.Menu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Windows.Controls.Menu" /> oder ein verwandtes Steuerelement, z. B. <see cref="T:System.Windows.Controls.MenuItem" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NeverLocalize">
+      <MemberSignature Language="C#" Value="NeverLocalize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory NeverLocalize = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.NeverLocalize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Ressource und alle untergeordneten Knoten, deren Kategorie auf festgelegt ist, nicht lokalisiert **erben**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ressource gehört nicht zu einer standard-Kategorie.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RadioButton">
+      <MemberSignature Language="C#" Value="RadioButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory RadioButton = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.RadioButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Windows.Controls.RadioButton" /> oder ein verwandtes Steuerelement.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory Text = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für einen langen des Texts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TextFlow">
+      <MemberSignature Language="C#" Value="TextFlow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory TextFlow = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.TextFlow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für Bereiche, die Text enthalten können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="Title" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory Title = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.Title" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für eine einzelne Textzeile, z. B. Text, die für einen Titel verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="ToolTip" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory ToolTip = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.ToolTip" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Windows.Controls.ToolTip" /> oder ein verwandtes Steuerelement.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlData">
+      <MemberSignature Language="C#" Value="XmlData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LocalizationCategory XmlData = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LocalizationCategory.XmlData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>[!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)]Daten.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

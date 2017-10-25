@@ -1,0 +1,179 @@
+<Type Name="ActivityTrackPoint" FullName="System.Workflow.Runtime.Tracking.ActivityTrackPoint">
+  <TypeSignature Language="C#" Value="public sealed class ActivityTrackPoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityTrackPoint extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.ActivityTrackPoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert einen Punkt, der einer Ausführungsstatusänderung einer Aktivität zugeordnet ist und im möglichen Ausführungspfad einer Workflowinstanz nachverfolgt werden soll. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Bei jeder Änderung des Ausführungsstatus einer Aktivität gibt die Workflowinstanz ein Aktivitätsstatusereignis an die Laufzeitverfolgungsinfrastruktur aus. <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> definiert einen relevanten Punkt im möglichen Ausführungspfad eines Workflows, der ein solches Aktivitätsstatusereignis betrifft. <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> enthält in den Abgleich eingeschlossene Positionen, vom Abgleich ausgeschlossene Positionen und Daten, die bei einem Abgleich des Verfolgungspunkts aus der Workflowinstanz extrahiert werden sollten. Sie können <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> einen <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A> hinzufügen, um die Laufzeitverfolgungsinfrastruktur anzuweisen, einen <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> an den Überwachungsdienst zu senden, wenn die angegebene Reihe von Aktivitätsstatusereignissen eintritt. Ein einzelner <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> kann an verschiedenen Punkten in der Workflowinstanz abgeglichen werden.  
+  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> enthält Übereinstimmungsbedingungen für eine oder mehrere Positionen im möglichen Ausführungspfad einer Workflowinstanz. Sie können <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.MatchingLocations%2A>-Objekte hinzufügen, um Positionen zu definieren, die beim Abgleich mit dem Verfolgungspunkt eingeschlossen werden sollen. Entsprechend können Sie <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.ExcludedLocations%2A>-Objekte hinzufügen, um Positionen zu definieren, die beim Abgleich mit dem Verfolgungspunkt ausgeschlossen werden sollen.  
+  
+ Sie können <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract> <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract>-Objekte und <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Extracts%2A>-Objekte hinzufügen, um Daten anzugeben, die beim Abgleich des Überwachungspunkts aus der Workflowinstanz extrahiert werden sollen. Die extrahierten Daten werden in <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> eingeschlossen.  
+  
+ Sie können <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Annotations%2A> hinzufügen, um weitere, dem Verfolgungspunkt zugeordnete Informationen anzugeben. Diese Anmerkungen werden in den <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> eingeschlossen, der beim Abgleich des Verfolgungspunkts gesendet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityTrackPoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.ActivityTrackPoint.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackPoint" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert einen leeren Verfolgungspunkt. Keine übereinstimmenden Positionen, ausgeschlossene Positionen, Datenextraktionen oder Anmerkungen werden angegeben. Sie müssen den Verfolgungspunkt konfigurieren, indem Sie <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> mindestens einen <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.MatchingLocations%2A> hinzufügen. Sie können <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.ExcludedLocations%2A>, <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Extracts%2A> und <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Annotations%2A> optional Objekte hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingAnnotationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Anmerkungen ab, die dem Verfolgungspunkt zugeordnet sind.</summary>
+        <value>Eine <see cref="T:System.Workflow.Runtime.Tracking.TrackingAnnotationCollection" />. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Annotations%2A> hinzufügen. Damit können Sie Anmerkungen angeben, die beim Abgleich des Verfolgungspunkts in dem <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> zurückgegeben werden, der an den Überwachungsdienst gesendet wird. Wenn <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Annotations%2A> leer ist, werden dem Verfolgungspunkt keine Anmerkungen zugeordnet.  
+  
+ Anmerkungen sind von Ihnen definierte `strings` mit Informationen, die dem Verfolgungspunkt zugeordnet sind. Eine Anmerkung kann z. &#160;B. Informationen über den möglichen Ausführungspfad enthalten, den der Workflow ab diesem Punkt folgt, oder sie enthält Informationen, die in einer Benutzeroberfläche angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExcludedLocations">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.ActivityTrackingLocationCollection ExcludedLocations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.ActivityTrackingLocationCollection ExcludedLocations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackPoint.ExcludedLocations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.ActivityTrackingLocationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Positionen ab, die von der Laufzeitverfolgungsinfrastruktur aus dem Verfolgungspunkt ausgeschlossen werden sollen.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingLocationCollection" /> mit den Positionen, die aus dem Verfolgungspunkt ausgeschlossen werden sollen. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> in <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.ExcludedLocations%2A> mit einem bestimmten Aktivitätsstatusereignis abgeglichen wird, dann wird der Verfolgungspunkt nicht abgeglichen und kein <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> wird an den Überwachungsdienst gesendet. Wenn <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.ExcludedLocations%2A> leer ist, werden keine Positionen ausgeschlossen.  
+  
+ Sie können mit <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.ExcludedLocations%2A> ausschließen, dass bestimmte Positionen von der Laufzeitverfolgungsinfrastruktur verfolgt werden. Wenn Sie z.&#160;B. alle <xref:System.Workflow.Activities.CodeActivity>-Aktivitäten außer der <xref:System.Workflow.Activities.CodeActivity>-Aktivität mit einer <xref:System.Workflow.ComponentModel.Activity.Name%2A>-Eigenschaft "Code1" verfolgen möchten, können Sie einen <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> definieren, der mit allen <xref:System.Workflow.Activities.CodeActivity>-Aktivitäten übereinstimmt, und ihn <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.MatchingLocations%2A> hinzufügen. Anschließend definieren Sie einen weiteren <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation>, der mit <xref:System.Workflow.Activities.CodeActivity>-Aktivitäten übereinstimmt, deren <xref:System.Workflow.ComponentModel.Activity.Name%2A>-Eigenschaft auf "Code1" festgelegt ist, und fügen ihn <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.ExcludedLocations%2A> hinzu. Der Verfolgungspunkt gleicht dann alle <xref:System.Workflow.Activities.CodeActivity>-Aktivitäten außer der "Code1"-Aktivität ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extracts">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.ExtractCollection Extracts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.ExtractCollection Extracts" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Extracts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.ExtractCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Daten ab, die aus der Workflowinstanz extrahiert und an den Überwachungsdienst gesendet werden sollen.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.ExtractCollection" /> mit Daten, die extrahiert und an den Überwachungsdienst gesendet werden sollen. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Verfolgungspunkt abgeglichen wird, kann die Laufzeitverfolgungsinfrastruktur Daten aus der Workflowinstanz extrahieren. Die Laufzeitverfolgungsinfrastruktur kapselt die extrahierten Daten in <xref:System.Workflow.Runtime.Tracking.TrackingDataItem>-Objekte ein und speichert sie im <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.Body%2A> des <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord>, den sie an den Überwachungsdienst sendet. Wenn <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Extracts%2A> leer ist, werden keine Daten extrahiert.  
+  
+ Sie können <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract> <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Extracts%2A>-Objekte hinzufügen, um Memberdaten anzugeben, die aus der Aktivität extrahiert werden sollen, die diesem Verfolgungspunkt zugeordnet ist. Sie können <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract> auch <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Extracts%2A>-Objekte hinzufügen, um Memberdaten anzugeben, die aus der Aktivität des Workflows extrahiert werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchingLocations">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.ActivityTrackingLocationCollection MatchingLocations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.ActivityTrackingLocationCollection MatchingLocations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackPoint.MatchingLocations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.ActivityTrackingLocationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Positionen ab, die von der Laufzeitverfolgungsinfrastruktur in den Abgleich des Verfolgungspunkts eingeschlossen werden sollen.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingLocationCollection" /> mit den Positionen, die mit dem Verfolgungspunkt abgeglichen werden sollen. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.MatchingLocations%2A> leer ist, kann der Verfolgungspunkt nicht von der Laufzeitverfolgungsinfrastruktur abgeglichen werden. Fügen Sie <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> mindestens einen <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.MatchingLocations%2A> hinzu, damit der <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> abgeglichen werden kann.  
+  
+ Der Verfolgungspunkt wird abgeglichen, wenn ein <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> in <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.MatchingLocations%2A> von der Laufzeitverfolgungsinfrastruktur abgeglichen wird und kein <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> in <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.ExcludedLocations%2A> übereinstimmt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.MatchingLocations%2A>-Eigenschaft veranschaulicht. Dieses Beispiel stammt aus dem Tracking Profile Designer SDK-Beispiel. Weitere Informationen finden Sie unter [Tracking Profile Designer Beispiel](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[WF_Samples#120](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#120)]
+ [!code-vb[WF_Samples#120](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#120)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

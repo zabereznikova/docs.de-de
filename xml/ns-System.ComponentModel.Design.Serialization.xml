@@ -1,0 +1,25 @@
+<Namespace Name="System.ComponentModel.Design.Serialization">
+  <Docs>
+    <summary>Die <see cref="N:System.ComponentModel.Design.Serialization" /> Namespace enthält Typen, die Anpassung und Steuern der Serialisierung zur Entwurfszeit zu unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in diesem Namespace können in folgenden Kategorien unterteilt werden:  
+  
+-   Serialisierungsattribute, die verwendet werden können, um anzugeben, das Serialisierungsprogramm für einen bestimmten Typ zu verwenden: <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute>, um anzugeben, das Serialisierungsprogramm für einen bestimmten Typ verwendet und <xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute>, um anzugeben, das Basis-Serialisierungsprogramm für den Stamm-Designer verwenden.  
+  
+-   Klassen, die ein Designer implementieren kann, um die Serialisierung anzupassen: <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost>, für das ein Designer-Dokument aus einem serialisierten Zustand zu laden und <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService>, für die ein Designer-Dokument lädt, wenn externe Komponenten und das asynchrone Laden beteiligt sind.  
+  
+-   Schnittstellen, die ein Designer verwenden kann, um den Serialisierungsprozess zu verwalten: <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager>, für das Registrieren oder benutzerdefinierte Serialisierungsprogramme; abrufen <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationProvider>, um ein Serialisierungsprogramm verfügbar zu machen eine <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager>; und <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>, stellt Methoden zum Aufrufen von Serialisierung und Deserialisierung durchzuführen.  
+  
+-   Eine Schnittstelle, die implementiert werden kann, um den Ladevorgang eines Designers anzupassen: <xref:System.ComponentModel.Design.Serialization.DesignerLoader>.  
+  
+-   Eine Schnittstelle, die verwendet werden kann, um das erneute Laden eines Designers zu optimieren: <xref:System.ComponentModel.Design.Serialization.ICodeDomDesignerReload>.  
+  
+-   Andere Hilfsklassen: <xref:System.ComponentModel.Design.Serialization.INameCreationService>, eine Schnittstelle zum Generieren eindeutiger Namen für Objekte. <xref:System.ComponentModel.Design.Serialization.ContextStack>, eine Datenstruktur, die nützlich für die Freigabe von Kontextinformationen für die Serialisierung mit Serialisierungsprogrammen; und <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor>, ein Objekt, das ein serialisierbares Objekt beschreiben kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

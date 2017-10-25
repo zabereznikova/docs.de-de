@@ -1,0 +1,110 @@
+<Type Name="EdmFunctionAttribute" FullName="System.Data.Objects.DataClasses.EdmFunctionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EdmFunctionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EdmFunctionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.EdmFunctionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein Attribut, auf eine Methode angewendet, um anzugeben, dass die Methode einen Proxy für eine Funktion im konzeptionellen Modell oder Speichermodell ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> eine common Language Runtime (CLR)-Methode an eine andere Funktion verknüpft. Das Attribut kann z. B. verwendet werden, um zuordnen eine CLR-Methode auf eine Funktion, die vom Speicheranbieter verfügbar gemacht wird, um eine benutzerdefinierte Funktion in der Datenbank oder an eine benutzerdefinierte Funktion im konzeptionellen Modell. Methoden, die dieses Attribut können über LINQ to Entities-Abfragen aufgerufen werden.  
+  
+ Verwenden einer <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> zum Zuordnen einer CLR-Methode auf eine Funktion Folgendes erfüllt sein:  
+  
+-   Der Rückgabetyp der CLR-Methode muss kompatibel mit dem Rückgabetyp der Funktion zugeordnet sein.  
+  
+-   Die Argumenttypen der CLR-Methode müssen mit den Typen der Funktion zugeordnet ist, kompatibel sein.  
+  
+ Informationen über kompatible Typen finden Sie unter [konzeptionellen Modell Typen (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EdmFunctionAttribute (string namespaceName, string functionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string namespaceName, string functionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EdmFunctionAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="functionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceName">Der Namespace der Funktion zugeordnet werden soll.</param>
+        <param name="functionName">Der Name der Funktion zugeordnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Objects.DataClasses.EdmFunctionAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> eine common Language Runtime (CLR)-Methode an eine andere Funktion verknüpft. Das Attribut kann z. B. verwendet werden, um zuordnen eine CLR-Methode auf eine Funktion, die vom Speicheranbieter verfügbar gemacht wird, um eine benutzerdefinierte Funktion in der Datenbank oder an eine benutzerdefinierte Funktion im konzeptionellen Modell. Methoden, die dieses Attribut können über LINQ to Entities-Abfragen aufgerufen werden.  
+  
+ Verwenden einer <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> zum Zuordnen einer CLR-Methode auf eine Funktion Folgendes erfüllt sein:  
+  
+-   Der Rückgabetyp der CLR-Methode muss kompatibel mit dem Rückgabetyp der Funktion zugeordnet sein.  
+  
+-   Die Argumenttypen der CLR-Methode müssen mit den Typen der Funktion zugeordnet ist, kompatibel sein.  
+  
+ Informationen über kompatible Typen finden Sie unter [konzeptionellen Modell Typen (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FunctionName">
+      <MemberSignature Language="C#" Value="public string FunctionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FunctionName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name der Funktion zugeordnet werden soll.</summary>
+        <value>Der Name der Funktion zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceName">
+      <MemberSignature Language="C#" Value="public string NamespaceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Namespace der Funktion zugeordnet werden soll.</summary>
+        <value>Der Namespace der Funktion zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

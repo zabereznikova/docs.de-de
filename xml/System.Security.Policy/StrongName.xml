@@ -1,0 +1,328 @@
+<Type Name="StrongName" FullName="System.Security.Policy.StrongName">
+  <TypeSignature Language="C#" Value="public sealed class StrongName : System.Security.Policy.EvidenceBase, System.Security.Policy.IIdentityPermissionFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit StrongName extends System.Security.Policy.EvidenceBase implements class System.Security.Policy.IIdentityPermissionFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.StrongName" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Policy.EvidenceBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Policy.IIdentityPermissionFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den starken Namen einer Code-Assembly als Beweis für die richtlinienauswertung bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Policy.StrongName> Klasse stellt den Beweis für einen eindeutigen, kryptografisch starken Namen eine Codeassembly dar. Der starke Name besteht aus einem öffentlichen Schlüssel eines angegebenen Namens und einer Version. Der öffentliche Schlüssel entspricht privaten Schlüssel des Herausgebers, die geheim gehalten wird, und mit dem die Assembly signiert werden muss, in der Reihenfolge nach einem starken Namen gültig ist.  
+  
+ Assemblys, die entweder in der Regel starke Namen zugewiesen <xref:System.Reflection.AssemblyKeyFileAttribute>, <xref:System.Reflection.AssemblyKeyNameAttribute> oder <xref:System.Reflection.AssemblyDelaySignAttribute> in Verbindung mit dem Dienstprogramm "sn" (siehe [Sn.exe (Strong Name-Tool)](~/docs/framework/tools/sn-exe-strong-name-tool.md)).  
+  
+ <xref:System.Security.Permissions.StrongNameIdentityPermission>verwendet diese Klasse um zu bestätigen, dass das Aufrufen von Code in einer bestimmten starken Namen Codeassembly ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StrongName (System.Security.Permissions.StrongNamePublicKeyBlob blob, string name, Version version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Permissions.StrongNamePublicKeyBlob blob, string name, class System.Version version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.StrongName.#ctor(System.Security.Permissions.StrongNamePublicKeyBlob,System.String,System.Version)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="blob" Type="System.Security.Permissions.StrongNamePublicKeyBlob" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="version" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="blob">Die <see cref="T:System.Security.Permissions.StrongNamePublicKeyBlob" /> der Herausgeber der Software.</param>
+        <param name="name">Der einfache Name Abschnitt des starken Namens.</param>
+        <param name="version">Die <see cref="T:System.Version" /> des starken Namens.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Policy.StrongName" /> Klasse mit dem starken Namen Blob des öffentlichen Schlüssels, den Namen und die Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `name` Parameter möglich `null`, jedoch keine leere Zeichenfolge ("").  
+  
+ Weitere Informationen zu starken Namen finden Sie unter <xref:System.Security.Permissions.StrongNameIdentityPermission> und <xref:System.Security.Permissions.StrongNamePublicKeyBlob>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="blob" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der <paramref name="name" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der <paramref name="version" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der <paramref name="name" />-Parameter ist eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.EvidenceBase Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.EvidenceBase Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.StrongName.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.EvidenceBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen Instanz darstellt.</summary>
+        <returns>Ein neues Objekt, das eine Kopie dieser Instanz ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public object Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.StrongName.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine äquivalente Kopie des aktuellen <see cref="T:System.Security.Policy.StrongName" />.</summary>
+        <returns>Eine neue, identische Kopie des aktuellen <see cref="T:System.Security.Policy.StrongName" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateIdentityPermission">
+      <MemberSignature Language="C#" Value="public System.Security.IPermission CreateIdentityPermission (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission CreateIdentityPermission(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.StrongName.CreateIdentityPermission(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">Die <see cref="T:System.Security.Policy.Evidence" /> aus der konstruiert die <see cref="T:System.Security.Permissions.StrongNameIdentityPermission" />.</param>
+        <summary>Erstellt eine <see cref="T:System.Security.Permissions.StrongNameIdentityPermission" /> , entspricht der aktuellen <see cref="T:System.Security.Policy.StrongName" />.</summary>
+        <returns>Ein <see cref="T:System.Security.Permissions.StrongNameIdentityPermission" /> für den angegebenen <see cref="T:System.Security.Policy.StrongName" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Identitätsberechtigung für einen starken Namen kann verwendet werden, um zu bestimmen, ob der aufrufende Code auf einem bestimmten starken Codeassembly benannt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.StrongName.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Der starke Name, die mit dem aktuellen starken Namen verglichen.</param>
+        <summary>Bestimmt, ob der angegebene starke Name gleich dem aktuellen starken Namen.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene starke Name gleich dem aktuellen starken Namen wird; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.StrongName.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode des aktuellen <see cref="T:System.Security.Policy.StrongName" />.</summary>
+        <returns>Der Hashcode des aktuellen <see cref="T:System.Security.Policy.StrongName" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.StrongName.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den einfachen Namen des aktuellen <see cref="T:System.Security.Policy.StrongName" />.</summary>
+        <value>Der einfache Namensteil der <see cref="T:System.Security.Policy.StrongName" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicKey">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.StrongNamePublicKeyBlob PublicKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Permissions.StrongNamePublicKeyBlob PublicKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.StrongName.PublicKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StrongNamePublicKeyBlob</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft <see cref="T:System.Security.Permissions.StrongNamePublicKeyBlob" /> für die aktuelle <see cref="T:System.Security.Policy.StrongName" /> ab.</summary>
+        <value>Der <see cref="T:System.Security.Permissions.StrongNamePublicKeyBlob" /> der aktuellen <see cref="T:System.Security.Policy.StrongName" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Blob ist kryptografischen Informationen, die den öffentlichen Schlüssel des Softwareherausgebers eindeutig angibt.  
+  
+ BLOBs unterscheiden sich von Zertifikaten, dass das Blob nur Informationen über den öffentlichen Schlüssel enthält; das Zertifikat enthält auch Informationen, die den Namen des Inhabers mit dem Schlüssel zuordnet, sowie Informationen zum Überprüfen des Zertifikats.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.StrongName.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Zeichenfolgendarstellung des aktuellen <see cref="T:System.Security.Policy.StrongName" />.</summary>
+        <returns>Eine Darstellung des aktuellen <see cref="T:System.Security.Policy.StrongName" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode eignet sich während des Debuggens, um eine einfach zu lesende Darstellung des Objekts abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.StrongName.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft <see cref="T:System.Version" /> für die aktuelle <see cref="T:System.Security.Policy.StrongName" /> ab.</summary>
+        <value>Der <see cref="T:System.Version" /> der aktuellen <see cref="T:System.Security.Policy.StrongName" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

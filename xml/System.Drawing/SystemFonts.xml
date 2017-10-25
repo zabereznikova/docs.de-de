@@ -1,0 +1,225 @@
+<Type Name="SystemFonts" FullName="System.Drawing.SystemFonts">
+  <TypeSignature Language="C#" Value="public sealed class SystemFonts" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SystemFonts extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.SystemFonts" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, die zum Anzeigen von Text in Windows verwendeten Schriftarten Elemente anzuzeigen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Eigenschaft von der <xref:System.Drawing.SystemFonts> -Klasse zurückgegeben wird ein <xref:System.Drawing.Font> zur Anzeige von Text in einer bestimmten Windows anzeigen Elements, z. B. der Titelleiste eines Fensters. Diese Schriftarten reflektieren die aktuellen Einstellungen in der Systemsteuerung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CaptionFont">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font CaptionFont { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Font CaptionFont" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemFonts.CaptionFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Font" /> , die zum Anzeigen von Text in die Titelleisten von Windows verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Font" /> , die zum Anzeigen von Text in die Titelleisten von Windows verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultFont">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font DefaultFont { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Font DefaultFont" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemFonts.DefaultFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardschriftart, die Anwendungen für die Dialogfelder und Formulare verwenden können.</summary>
+        <value>Die Standardeinstellung <see cref="T:System.Drawing.Font" /> des Systems. Der zurückgegebene Wert variiert je nach Betriebssystem des Benutzers und die lokale kultureinstellung des Systems.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle beschreibt den Rückgabewert von der <xref:System.Drawing.SystemFonts.DefaultFont%2A> Eigenschaft je nach Betriebssystem und der lokalen Kultur.  
+  
+|System und/oder Kultur|Schriftart|  
+|----------------------------|----------|  
+|Windows NT 4 x, japanische version|MS UI dem Gotischen, 9-Punkt|  
+|Arabische Windows|Tahoma, 8 Punkt|  
+|Andere Betriebssystem/Kultur|MS Shell Dlg logische Schriftart, i. d. r. Microsoft Sans Serif, 8 Punkt|  
+  
+ MS Shell Dlg ordnet eine Schriftart in der Registrierung festgelegt.  
+  
+ Wenn die oben genannten Schriftarten nicht installiert sind, ist die Standardschriftart Tahoma, 8 Punkt. Wenn Tahoma, 8 Punkt, nicht installiert ist, <xref:System.Drawing.SystemFonts.DefaultFont%2A> gibt den Wert der <xref:System.Drawing.FontFamily.GenericSansSerif%2A> Eigenschaft.  
+  
+ Die <xref:System.Drawing.Font> zurückgegebenes <xref:System.Drawing.SystemFonts.DefaultFont%2A> wird nicht geändert werden, wenn der Benutzer im Modus für hohe Kontraste ist. Verwenden Sie für eine Schriftart, die geändert wird, wenn der Benutzer im Modus für hohe Kontraste ist eine andere Systemschriftart ein, z. B. <xref:System.Drawing.SystemFonts.IconTitleFont%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DialogFont">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font DialogFont { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Font DialogFont" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemFonts.DialogFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Schriftart, die Anwendungen für die Dialogfelder und Formularen verwendet werden kann.</summary>
+        <value>Ein <see cref="T:System.Drawing.Font" /> , die für die Dialogfelder und Formularen unterstützt, je nach Betriebssystem und lokaler kultureinstellung des Systems verwendet werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Betriebssystem Windows 2000 oder Windows XP ist die <xref:System.Drawing.SystemFonts.DialogFont%2A> Eigenschaft zurückgibt, Tahoma, 8 Punkt. Andernfalls <xref:System.Drawing.SystemFonts.DialogFont%2A> gibt den Wert der <xref:System.Drawing.SystemFonts.DefaultFont%2A> Eigenschaft. Die <xref:System.Drawing.Font> zurückgegebenes <xref:System.Drawing.SystemFonts.DialogFont%2A> wird nicht geändert werden, wenn der Benutzer im Modus für hohe Kontraste ist. Verwenden Sie für eine Schriftart, die geändert wird, wenn der Benutzer im Modus für hohe Kontraste ist eine andere Systemschriftart ein, z. B. <xref:System.Drawing.SystemFonts.IconTitleFont%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontByName">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font GetFontByName (string systemFontName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Font GetFontByName(string systemFontName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.SystemFonts.GetFontByName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="systemFontName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="systemFontName">Der Name der Systemschriftart benötigen Sie für ein Font-Objekt.</param>
+        <summary>Gibt eine Schriftartobjekt, das entspricht, den Namen des angegebenen Schriftart zurück.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Font" /> Wenn der angegebene Namen, einen Wert in entspricht <see cref="T:System.Drawing.SystemFonts" />ist, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.SystemFonts.GetFontByName%2A> -Methode zurückkehrt `null` entspricht der angegebene Namen keine Schriftart in der <xref:System.Drawing.SystemFonts> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IconTitleFont">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font IconTitleFont { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Font IconTitleFont" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemFonts.IconTitleFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Font" /> dient für den Symboltitel.</summary>
+        <value>Ein <see cref="T:System.Drawing.Font" /> dient für den Symboltitel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuFont">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font MenuFont { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Font MenuFont" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemFonts.MenuFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Font" /> , die für Menüs verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Font" /> , die für Menüs verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageBoxFont">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font MessageBoxFont { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Font MessageBoxFont" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemFonts.MessageBoxFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Font" /> , die für Meldungsfelder verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Font" /> dient für den Meldungsfelder</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallCaptionFont">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font SmallCaptionFont { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Font SmallCaptionFont" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemFonts.SmallCaptionFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Font" /> , die zum Anzeigen von Text in den Titelleisten der kleine Fenster, z. B. Toolfenster verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Font" /> , die zum Anzeigen von Text in den Titelleisten der kleine Fenster, z. B. Toolfenster verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusFont">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font StatusFont { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Font StatusFont" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemFonts.StatusFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Font" /> , wird verwendet, um Text in der Statusleiste angezeigt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Font" /> , wird verwendet, um Text in der Statusleiste angezeigt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

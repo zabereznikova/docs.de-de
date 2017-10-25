@@ -1,0 +1,82 @@
+<Type Name="ISession" FullName="System.ServiceModel.Channels.ISession">
+  <TypeSignature Language="C#" Value="public interface ISession" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISession" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ISession" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Schnittstelle zur Erstellung eines für Parteien freigegebenen Kontexts, die Nachrichten austauschen, indem sie eine ID für die Kommunikationssitzung bereitstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Channels.ISession>-Schnittstelle ist die Basisschnittstelle für alle Sitzungen. Sie enthält eine <xref:System.ServiceModel.Channels.ISession.Id%2A>-Eigenschaft für die Identifikation der Sitzung.  
+  
+ Eine Sitzung ist ein für alle Teilnehmer eines Kommunikationsaustauschs freigegebener Kontext. Dieser freigegebene Kontext wird durch die folgenden drei Eigenschaften gekennzeichnet:  
+  
+-   Sitzungseinrichtung – ein Prozess für die Einrichtung von Kontext, der für alle Teilnehmer freigegeben ist.  
+  
+-   Nachrichtenkorrelation – eine Methode für die Korrelation einer Gruppe von Nachrichten zu einer Instanz freigegebenen Kontexts.  
+  
+-   Die <xref:System.ServiceModel.Channels.ISession>-Schnittstelle ist nicht über die Anzahl der Teilnehmer in einer Sitzung oder die Lebensdauer der Sitzung informiert.  
+  
+ Diese Sitzungseigenschaften werden bereitgestellt, indem einer Sitzung eine ID zugeordnet wird.  
+  
+ <xref:System.ServiceModel.Channels.ISession> wird geerbt von:  
+  
+-   <xref:System.ServiceModel.Channels.IInputSession>  
+  
+-   <xref:System.ServiceModel.Channels.IOutputSession>  
+  
+-   <xref:System.ServiceModel.Channels.IDuplexSession>  
+  
+-   <xref:System.ServiceModel.Channels.ISessionChannel%601>vom Typ<xref:System.ServiceModel.Channels.ISession>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ISession.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID ab, die die Sitzung eindeutig identifiziert.</summary>
+        <value>Die ID, die die Sitzung eindeutig identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Sitzung unterbrochen wird, kann sie mit dem <xref:System.ServiceModel.Channels.ISession.Id%2A> abgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

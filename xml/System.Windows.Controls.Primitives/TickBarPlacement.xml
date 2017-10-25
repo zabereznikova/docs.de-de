@@ -1,0 +1,96 @@
+<Type Name="TickBarPlacement" FullName="System.Windows.Controls.Primitives.TickBarPlacement">
+  <TypeSignature Language="C#" Value="public enum TickBarPlacement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TickBarPlacement extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.TickBarPlacement" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Platzierung der eine <see cref="T:System.Windows.Controls.Primitives.TickBar" /> in Bezug auf die <see cref="T:System.Windows.Controls.Primitives.Track" /> von einem <see cref="T:System.Windows.Controls.Slider" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Primitives.TickBarPlacement> Enumeration zum Festlegen der <xref:System.Windows.Controls.Primitives.TickBar.Placement%2A> Eigenschaft eine <xref:System.Windows.Controls.Primitives.TickBar>. Die eigentliche Position der eine <xref:System.Windows.Controls.Primitives.TickBar> wird definiert, indem die <xref:System.Windows.Controls.ControlTemplate> von einem <xref:System.Windows.Controls.Slider> Steuerelement. Die <xref:System.Windows.Controls.Primitives.TickBar.Placement%2A> Eigenschaft identifiziert diese Position, damit die Teilstriche von einem <xref:System.Windows.Controls.Primitives.TickBar> ordnungsgemäß gezeichnet werden. Die folgende Abbildung zeigt wie <xref:System.Windows.Controls.Primitives.TickBar> Steuerelemente gezeichnet werden bei der <xref:System.Windows.Controls.Primitives.TickBar.Placement%2A> Eigenschaft nach oben und unten festgelegt ist.  
+  
+ ![TickBar-Platzierung](~/add/media/tickbarplacement.png "TickBar-Platzierung")  
+  
+   
+  
+## Examples  
+ Ein Beispiel für eine <xref:System.Windows.Controls.Primitives.TickBarPlacement.Top> dient, die in der <xref:System.Windows.Style> des eine <xref:System.Windows.Controls.Slider>, finden Sie unter [Schieberegler Stile und Vorlagen](~/docs/framework/wpf/controls/slider-styles-and-templates.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.TickBarPlacement Bottom = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBarPlacement.Bottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickBarPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Tick-Leiste befindet sich unterhalb der <see cref="T:System.Windows.Controls.Primitives.Track" /> von der <see cref="T:System.Windows.Controls.Slider" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.TickBarPlacement Left = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBarPlacement.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickBarPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Tick-Leiste auf der linken Seite des positioniert ist die <see cref="T:System.Windows.Controls.Primitives.Track" /> von der <see cref="T:System.Windows.Controls.Slider" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.TickBarPlacement Right = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBarPlacement.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickBarPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Tick-Leiste befindet sich rechts neben der <see cref="T:System.Windows.Controls.Primitives.Track" /> von der <see cref="T:System.Windows.Controls.Slider" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.TickBarPlacement Top = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBarPlacement.Top" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickBarPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Tick-Leiste oben positioniert ist die <see cref="T:System.Windows.Controls.Primitives.Track" /> von der <see cref="T:System.Windows.Controls.Slider" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

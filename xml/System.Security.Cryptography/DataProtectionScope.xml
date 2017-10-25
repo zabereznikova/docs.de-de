@@ -1,0 +1,86 @@
+<Type Name="DataProtectionScope" FullName="System.Security.Cryptography.DataProtectionScope">
+  <TypeSignature Language="C#" Value="public enum DataProtectionScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataProtectionScope extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.DataProtectionScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.ProtectedData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Bereich der Datenschutz durch angewendet werden die <see cref="M:System.Security.Cryptography.ProtectedData.Protect(System.Byte[],System.Byte[],System.Security.Cryptography.DataProtectionScope)" /> Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird zusammen mit den <xref:System.Security.Cryptography.ProtectedData.Protect%2A> und <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> Methoden zum Schützen von Daten durch Verschlüsselung.  
+  
+ **Vorsicht** Enumerationswert der LocalMachine kann mehrere Konten zum Aufheben des Schutzes von Daten.  Verwenden Sie diesen Wert nur, wenn Sie für jedes Konto auf einem Computer als vertrauenswürdig einstufen.  In den meisten Fällen sollten Sie den Speicher CurrentUser-Wert verwenden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Schutz von Daten verwenden.  
+  
+ [!code-cpp[Cryptography.DataProtectionSample#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.DataProtectionSample/CPP/dataprotectionsample.cpp#1)]
+ [!code-csharp[Cryptography.DataProtectionSample#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.DataProtectionSample/CS/dataprotectionsample.cs#1)]
+ [!code-vb[Cryptography.DataProtectionSample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.DataProtectionSample/vb/dataprotectionsample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentUser">
+      <MemberSignature Language="C#" Value="CurrentUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.DataProtectionScope CurrentUser = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.DataProtectionScope.CurrentUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.ProtectedData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.DataProtectionScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die geschützten Daten, die den aktuellen Benutzer zugeordnet ist. Die Daten können nur Threads, die unter der Kontext des aktuellen Benutzers aufgehoben werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalMachine">
+      <MemberSignature Language="C#" Value="LocalMachine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.DataProtectionScope LocalMachine = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.DataProtectionScope.LocalMachine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.ProtectedData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.DataProtectionScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die geschützten Daten, die den Computerkontext zugeordnet ist. Alle auf dem Computer ausgeführten Prozess kann Daten aufgehoben werden. Dieser Enumerationswert wird in der Regel in Server-spezifische Anwendungen verwendet, die auf einem Server ausgeführt werden, in denen nicht vertrauenswürdige Benutzer nicht zugreifen dürfen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,82 @@
+<Type Name="EventOpcode" FullName="System.Diagnostics.Eventing.Reader.EventOpcode">
+  <TypeSignature Language="C#" Value="public sealed class EventOpcode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventOpcode extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventOpcode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält einen Ereignisopcode, der in einem Ereignisanbieter definiert ist. Ein Opcode definiert einen numerischen Wert, der angibt, die Aktivität oder einem Punkt in eine Aktivität, die der Anwendung durchgeführt wurde, wenn sie das Ereignis ausgelöst hat.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kann nicht instanziiert werden. Ein <xref:System.Diagnostics.Eventing.Reader.ProviderMetadata> -Objekt definiert eine Liste von <xref:System.Diagnostics.Eventing.Reader.EventOpcode> Objekten, eines für den Anbieter definiert.  
+  
+ Die standard-Ereignis Opcodes werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventOpcode> Enumeration.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventOpcode.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lokalisierten Namen für einen Ereignisopcode.</summary>
+        <value>Gibt eine Zeichenfolge, die den lokalisierten Namen für ein Ereignisopcode enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventOpcode.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den nicht lokalisierten Namen für einen Ereignisopcode.</summary>
+        <value>Gibt eine Zeichenfolge, die den nicht lokalisierten Namen für ein Ereignisopcode enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public int Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventOpcode.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den numerischen Wert verknüpft sind, mit der Ereignisopcode.</summary>
+        <value>Gibt einen Ganzzahlwert zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

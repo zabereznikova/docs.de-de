@@ -1,0 +1,313 @@
+<Type Name="DataSourceExpressionCollection" FullName="System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection">
+  <TypeSignature Language="C#" Value="public class DataSourceExpressionCollection : System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataSourceExpressionCollection extends System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.StateManagedCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von Ausdrücken dar, die auf ein Datenquellen-Steuerelement angewendet werden sollen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceExpressionCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Expressions.DataSourceExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.WebControls.Expressions.DataSourceExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.WebControls.Expressions.DataSourceExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.Add(System.Web.UI.WebControls.Expressions.DataSourceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Die Datenquelle Ausdrucksobjekt hinzufügen.</param>
+        <summary>Fügt ein Datenquellenobjekt Ausdruck auf eine <see cref="T:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection" /> Objekt am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public void Contains (System.Web.UI.WebControls.Expressions.DataSourceExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Contains(class System.Web.UI.WebControls.Expressions.DataSourceExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.Contains(System.Web.UI.WebControls.Expressions.DataSourceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Die Datenquelle zu suchende Ausdrucksobjekt.</param>
+        <summary>Bestimmt, ob ein <see cref="T:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection" /> Objekt enthält ein bestimmte Datenquellenausdrucks-Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Web.HttpContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.HttpContext" /> -Instanz die <see cref="T:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection" /> Klasse.</summary>
+        <value>Die <see cref="T:System.Web.HttpContext" />-Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.Expressions.DataSourceExpression[] expressionArray, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.Expressions.DataSourceExpression[] expressionArray, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.CopyTo(System.Web.UI.WebControls.Expressions.DataSourceExpression[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expressionArray" Type="System.Web.UI.WebControls.Expressions.DataSourceExpression[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="expressionArray">Das eindimensionale Array, das das Ziel der Elemente, die kopiert werden.</param>
+        <param name="index">Der nullbasierte Index im Array, ab dem kopiert wird.</param>
+        <summary>Kopiert Elemente aus der <see cref="T:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection" /> Objekt in ein Array, beginnend an einem bestimmten Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für das Array muss eine nullbasierte Indizierung verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKnownType">
+      <MemberSignature Language="C#" Value="protected override object CreateKnownType (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object CreateKnownType(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.CreateKnownType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index im Array, in dem die Datenquelle Expression-Objekt, befindet.</param>
+        <summary>Erstellt eine Instanz eines Ausdrucks in ein Datenquellenobjekt.</summary>
+        <returns>Der Index des Datenquellenausdrucks So erstellen Sie aus der geordneten Liste von Typen, die zurückgegeben werden, indem Sie die <see cref="M:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.GetKnownTypes" /> Methode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKnownTypes">
+      <MemberSignature Language="C#" Value="protected override Type[] GetKnownTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type[] GetKnownTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.GetKnownTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array von Datenquellenobjekten Ausdruck ab, die die <see cref="T:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection" /> -Objekt enthalten kann.</summary>
+        <returns>Ein geordnetes Array von Datenquellenausdrucks-Objekten, die die quellauflistung Daten enthalten kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.Expressions.DataSourceExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.Expressions.DataSourceExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.IndexOf(System.Web.UI.WebControls.Expressions.DataSourceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Die Datenquelle zu suchende Ausdrucksobjekt.</param>
+        <summary>Ruft den Index des angegebenen Daten-Quellobjekt Ausdruck in der <see cref="T:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection" /> Objekt.</summary>
+        <returns>Der Index der der Ausdruck Datenquellenobjekt, wenn es in der Auflistung vorhanden ist. andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.Expressions.DataSourceExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.Expressions.DataSourceExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.Insert(System.Int32,System.Web.UI.WebControls.Expressions.DataSourceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="expression" Type="System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem das Objekt eingefügt werden soll.</param>
+        <param name="expression">Das einzufügende Expression-Objekt.</param>
+        <summary>Fügt ein Datenquellenobjekt Ausdruck in eine <see cref="T:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection" /> Objekt am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Expressions.DataSourceExpression this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Expressions.DataSourceExpression Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Expressions.DataSourceExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des ausgewählten Datenquellenausdruck abgerufen.</param>
+        <summary>Ruft ab oder legt die Datenquellenausdrucks-Objekt am angegebenen Index.</summary>
+        <value>Das am angegebenen Index Expression-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Besitzersteuerelement ab.</summary>
+        <value>Das Besitzersteuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.Expressions.DataSourceExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.Expressions.DataSourceExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.Remove(System.Web.UI.WebControls.Expressions.DataSourceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Das Entfernen Expression-Objekt.</param>
+        <summary>Entfernt das erste Vorkommen des angegebenen Ausdrucks Quellobjekts aus der <see cref="T:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des ausgewählten Datenquellenausdruck zu entfernen.</param>
+        <summary>Entfernt ein Datenquellenobjekt Ausdruck am angegebenen Index aus der <see cref="T:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDirtyObject">
+      <MemberSignature Language="C#" Value="protected override void SetDirtyObject (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDirtyObject(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection.SetDirtyObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das Datenquellenobjekt Ausdruck zum Kennzeichnen als geändert, seit dem letzten Laden oder Vorgang aus dem Ansichtszustand zu speichern.</param>
+        <summary>Markierungen, die eine angegebene Datenquelle Ausdrucksobjekt als geändert, seit dem letzten Laden oder Vorgang aus dem Ansichtszustand zu speichern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

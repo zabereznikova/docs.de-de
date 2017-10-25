@@ -1,0 +1,106 @@
+<Type Name="ScrollAmount" FullName="System.Windows.Automation.ScrollAmount">
+  <TypeSignature Language="C#" Value="public enum ScrollAmount" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ScrollAmount extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.ScrollAmount" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("bd52d3c7-f990-4c52-9ae3-5c377e9eb772")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Werte, die von verwendeten <see cref="T:System.Windows.Automation.ScrollPattern" /> um die Richtung und Entfernung des Bildlaufs anzugeben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LargeDecrement">
+      <MemberSignature Language="C#" Value="LargeDecrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ScrollAmount LargeDecrement = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollAmount.LargeDecrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ScrollAmount</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Durchführen eines Bildlaufs in großen verringert, entspricht erfolgt **PageUp** oder durch Klicken auf einen leeren Teil einer Bildlaufleiste. Wenn **PageUp** relevanter Umfang für das Steuerelement und/oder grundsätzlich keine Schiebeleiste vorhanden ist, den Wert darstellt, eine Menge gleich der aktuellen Fenster sichtbar ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeIncrement">
+      <MemberSignature Language="C#" Value="LargeIncrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ScrollAmount LargeIncrement = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollAmount.LargeIncrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ScrollAmount</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Durchführen eines Bildlaufs in gleich große Inkrementen erfolgt eine **Bild** oder durch Klicken auf den Titel einer Scrollbar-Komponente. Wenn eine **Bild** ist kein relevanter Umfang für das Steuerelement und/oder grundsätzlich keine Schiebeleiste vorhanden ist, wird der Wert stellt eine Menge gleich der aktuellen sichtbaren Bereich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoAmount">
+      <MemberSignature Language="C#" Value="NoAmount" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ScrollAmount NoAmount = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollAmount.NoAmount" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ScrollAmount</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass kein Bildlauf ausgeführt werden soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallDecrement">
+      <MemberSignature Language="C#" Value="SmallDecrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ScrollAmount SmallDecrement = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollAmount.SmallDecrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ScrollAmount</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, in kleinen verringert, gleichbedeutend mit eine Pfeiltaste drücken oder indem Sie auf die Pfeilschaltfläche auf einer Bildlaufleiste Bildlauf durchgeführt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallIncrement">
+      <MemberSignature Language="C#" Value="SmallIncrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ScrollAmount SmallIncrement = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollAmount.SmallIncrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ScrollAmount</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass in kleinen Schritten, gleichbedeutend mit eine Pfeiltaste drücken oder indem Sie auf die Pfeilschaltfläche auf einer Bildlaufleiste Bildlauf durchgeführt wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,15 @@
+<Namespace Name="System.Windows.Annotations">
+  <Docs>
+    <summary>Stellt Klassen zur Unterstützung von benutzerdefinierten Anmerkungen auf Inhalte, die in WPF-Dokument Steuerelemente anzeigen angezeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Typen in der <xref:System.Windows.Annotations> Namespace werden bereitgestellt, um die Verwaltung von benutzerdefinierten Anmerkungen für Anwendungsdaten im angezeigten unterstützen [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] Dokument Steuerelemente anzeigen.  Mithilfe der [!INCLUDE[TLA#tla_caf](~/includes/tlasharptla-caf-md.md)] Anwendungen können Unterstützung für benutzerdefiniertes Hinweise und Merkmale, die getrennt von der Anwendungsdokument selbst gespeichert sind hinzufügen.  Da die Anmerkung Benutzerinformationen getrennt von den Dokumentinhalt gespeichert ist, wird Benutzer können sogar Notizen hinzufügen, und hebt Sie hervor, schreibgeschützt oder Rights Management geschützte Dokumente, die physisch können nicht geändert werden.  
+  
+ Die [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Dokumentansichten-Steuerelemente, die Benutzer-Anmerkungsfunktionen unterstützen basieren auf <xref:System.Windows.Controls.Primitives.DocumentViewerBase> abgeleitet Unterklassen z. B. <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, und <xref:System.Windows.Controls.FlowDocumentScrollViewer> sowie <xref:System.Windows.Controls.FlowDocumentReader>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

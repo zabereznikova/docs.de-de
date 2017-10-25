@@ -1,0 +1,106 @@
+<Type Name="FileChangeMonitor" FullName="System.Runtime.Caching.FileChangeMonitor">
+  <TypeSignature Language="C#" Value="public abstract class FileChangeMonitor : System.Runtime.Caching.ChangeMonitor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FileChangeMonitor extends System.Runtime.Caching.ChangeMonitor" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.FileChangeMonitor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Caching.ChangeMonitor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Objekt, das Änderungen an Dateien überwacht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.FileChangeMonitor> -Klasse ist eine Basisklasse <xref:System.Runtime.Caching.ChangeMonitor> Typ für Klassen, die Änderungen an Dateien überwacht werden. Um eine überwachen Sie Änderungen im Dateisystem zu erstellen, können Sie von dieser Klasse erben.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Sie ein Cacheelement erstellen, verwendet eine <xref:System.Runtime.Caching.HostFileChangeMonitor> Objekt zum Überwachen des Status der Quelldaten (Datei) im Dateisystem. Die <xref:System.Runtime.Caching.HostFileChangeMonitor>-Klasse erbt von der <xref:System.Runtime.Caching.FileChangeMonitor>-Klasse. Mithilfe der Cacheeintrag definiert ein <xref:System.Runtime.Caching.CacheItemPolicy> Objekt, das Details zur Entfernung und Ablauf für den Cacheeintrag bereitstellt.  
+  
+ [!code-csharp[CachingASPNetApplications#1](~/samples/snippets/csharp/VS_Snippets_WebNet/cachingaspnetapplications/cs/default.aspx.cs#1)]
+ [!code-vb[CachingASPNetApplications#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/cachingaspnetapplications/vb/default.aspx.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Informationen zu den Vererbungsvertrag, der befolgt werden muss, finden Sie die Hinweise für Vererber-Abschnitt in der <see cref="T:System.Runtime.Caching.ChangeMonitor" /> -Klassenübersicht.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FileChangeMonitor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.FileChangeMonitor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Caching.FileChangeMonitor" />-Klasse. Dieser Konstruktor wird von Konstruktoren in abgeleiteten Klassen aufgerufen, um die Basisklasse der Klasse zu initialisieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePaths">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; FilePaths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; FilePaths" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.FileChangeMonitor.FilePaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung mit den Pfaden der Dateien auf Änderungen überwacht werden.</summary>
+        <value>Eine Auflistung von Dateipfaden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung wird normalerweise im Konstruktor einer abgeleiteten festgelegt <xref:System.Runtime.Caching.FileChangeMonitor> Typ.  
+  
+ Überwachung von benutzerdefinierten dateiänderung ermöglichen möchten, müssen Sie diese Methode in einer abgeleiteten Klasse überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastModified">
+      <MemberSignature Language="C#" Value="public abstract DateTimeOffset LastModified { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset LastModified" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.FileChangeMonitor.LastModified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der Zeitpunkt der letzten angibt, die eine Datei, die überwacht werden geändert wurde.</summary>
+        <value>Wenn mehrere Dateien überwacht werden, geändert die letzte Uhrzeit der zuletzt geänderten Datei; andernfalls das letzte Zeitpunkt, zu die Datei, die überwacht wird, wurde geändert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Runtime.Caching.FileChangeMonitor.LastModified%2A> Eigenschaft wird in der Regel während der Initialisierungsphase einer abgeleiteten Klasse berechnet.  
+  
+ Benutzerdefinierte Datei Änderung Überwachung ermöglichen, müssen Sie diese Methode in einer abgeleiteten Klasse überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

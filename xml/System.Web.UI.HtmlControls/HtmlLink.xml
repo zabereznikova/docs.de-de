@@ -1,0 +1,201 @@
+<Type Name="HtmlLink" FullName="System.Web.UI.HtmlControls.HtmlLink">
+  <TypeSignature Language="C#" Value="public class HtmlLink : System.Web.UI.HtmlControls.HtmlControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlLink extends System.Web.UI.HtmlControls.HtmlControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlLink" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht den programmgesteuerten Zugriff auf das HTML-Element <see langword="link" /> auf dem Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlLink> Steuerelement ermöglicht den programmgesteuerten Zugriff auf das HTML `link` Element auf dem Server. Die <xref:System.Web.UI.HtmlControls.HtmlLink> Steuerelement programmgesteuert an ein cascading Stylesheet (CSS)-Verweis auf einer Webseite verwendet werden kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.HtmlControls.HtmlLink> Steuerelement programmgesteuert ein Stylesheet zu einer Webseite hinzufügen.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlLink#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlLink/CS/htmllinkcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlLink#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlLink/VB/htmllinkvb.aspx#1)]  
+  
+ Führen Sie im vorangehenden Codebeispiel benötigen Sie ein cascading Stylesheet (CSS) mit dem Namen `Stylesheet.css`, mit dem folgenden Code, der im gleichen Verzeichnis wie die Website gespeichert.  
+  
+```vb  
+body {  
+  padding-left: 11em;  
+  font-family:  Verdana, "Times New Roman",  
+        Times, serif;  
+  color: blue;  
+  background-color: silver }  
+h1 {  
+  font-family: Helvetica, Geneva, Arial,  
+        SunSans-Regular, sans-serif;   
+  color: purple }  
+```  
+  
+```csharp  
+body {  
+  padding-left: 11em;  
+  font-family:  Verdana, "Times New Roman",  
+        Times, serif;  
+  color: blue;  
+  background-color: silver }  
+h1 {  
+  font-family: Helvetica, Geneva, Arial,  
+        SunSans-Regular, sans-serif;   
+  color: purple }  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlLink ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlLink.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlLink" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.HtmlControls.HtmlLink> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuerte Deklarieren einer <xref:System.Web.UI.HtmlControls.HtmlLink> steuern und seine Eigenschaften zu definieren. Ein vollständiges, funktionsfähiges Codebeispiel finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlLink> Übersichtsthema.  
+  
+ [!code-csharp[System.Web.UI.HtmlControls.HtmlLink#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlLink/CS/htmllink.cs#2)]
+ [!code-csharp[System.Web.UI.HtmlControls.HtmlLink#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlLink/CS/htmllinkcs.aspx#2)]
+ [!code-vb[System.Web.UI.HtmlControls.HtmlLink#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlLink/VB/htmllinkvb.aspx#2)]
+ [!code-vb[System.Web.UI.HtmlControls.HtmlLink#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlLink/VB/htmllink.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Href">
+      <MemberSignature Language="C#" Value="public virtual string Href { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Href" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlLink.Href" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL-Ziel des Links im angegebenen der <see cref="T:System.Web.UI.HtmlControls.HtmlLink" /> Steuerelement.</summary>
+        <value>Das URL-Ziel des Links.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlLink.Href%2A> Eigenschaft gibt das URL-Ziel des Links im angegebenen der <xref:System.Web.UI.HtmlControls.HtmlLink> Steuerelement. Sie können diese Eigenschaft verwenden, den Speicherort der externen cascading Stylesheet (CSS) an.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.HtmlControls.HtmlLink.Href%2A> -Eigenschaft auf ein cascading Stylesheet (CSS), die im selben Verzeichnis wie die Webseite gespeichert wird. Ein vollständiges, funktionsfähiges Codebeispiel finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlLink> Übersichtsthema.  
+  
+ [!code-csharp[System.Web.UI.HtmlControls.HtmlLink#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlLink/CS/htmllink.cs#2)]
+ [!code-csharp[System.Web.UI.HtmlControls.HtmlLink#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlLink/CS/htmllinkcs.aspx#2)]
+ [!code-vb[System.Web.UI.HtmlControls.HtmlLink#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlLink/VB/htmllinkvb.aspx#2)]
+ [!code-vb[System.Web.UI.HtmlControls.HtmlLink#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlLink/VB/htmllink.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlLink.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Web.UI.HtmlTextWriter" />, der den gerenderten Inhalt empfängt.</param>
+        <summary>Rendert die <see cref="T:System.Web.UI.HtmlControls.HtmlLink" /> Steuerelement mit dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlLink.Render%2A> -Methode rendert ein <xref:System.Web.UI.HtmlTextWriter.SelfClosingTagEnd> schließende Klammer (/ >), wenn die ASP.NET-Anwendung für die XHTML-kompatibles Markup Rendern konfiguriert ist. Standardmäßig Rendern von ASP.NET-Seiten und-Steuerelemente Markup, das mit dem XHTML 1.1-Standard kompatibel ist. Weitere Informationen zum Konfigurieren einer ASP.NET-Website für nicht-XHTML-Rendering finden Sie unter [NIB: Vorgehensweise: Konfigurieren von XHTML-Rendering in ASP.NET Web Sites](http://msdn.microsoft.com/en-us/42483a54-f1ae-44e1-88e6-4370f8690149).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAttributes">
+      <MemberSignature Language="C#" Value="protected override void RenderAttributes (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderAttributes(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlLink.RenderAttributes(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Web.UI.HtmlTextWriter" />, der den gerenderten Inhalt empfängt.</param>
+        <summary>Rendert die Attribute des <see cref="T:System.Web.UI.HtmlControls.HtmlLink" />-Steuerelements in das angegebene <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlLink.RenderAttributes%2A> Methode löst die <xref:System.Web.UI.HtmlControls.HtmlLink.Href%2A> Eigenschaft vor dem Aufruf der Basisklasse <xref:System.Web.UI.HtmlControls.HtmlControl.RenderAttributes%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,155 @@
+<Type Name="SimpleValueProvider" FullName="System.Web.ModelBinding.SimpleValueProvider">
+  <TypeSignature Language="C#" Value="public abstract class SimpleValueProvider : System.Web.ModelBinding.IValueProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SimpleValueProvider extends System.Object implements class System.Web.ModelBinding.IValueProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.SimpleValueProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.ModelBinding.IValueProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Wertanbieter für einzelne Schlüssel/Wert-Suchvorgänge.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse enthält nicht die tatsächlichen Suchmechanismus. Es delegiert, die auf die abgeleitete Klassen, die mithilfe der <xref:System.Web.ModelBinding.SimpleValueProvider.FetchValue%2A> Methode. Beispiele für einfache Wertanbieter sind die <xref:System.Web.ModelBinding.ViewStateValueProvider> Klasse und die <xref:System.Web.ModelBinding.ControlValueProvider> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SimpleValueProvider (System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.SimpleValueProvider.#ctor(System.Web.ModelBinding.ModelBindingExecutionContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="modelBindingExecutionContext" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="modelBindingExecutionContext">Der Ausführungskontext.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.ModelBinding.SimpleValueProvider" /> -Klasse unter Verwendung des angegebenen Ausführungskontexts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SimpleValueProvider (System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, System.Globalization.CultureInfo cultureInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, class System.Globalization.CultureInfo cultureInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.SimpleValueProvider.#ctor(System.Web.ModelBinding.ModelBindingExecutionContext,System.Globalization.CultureInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="modelBindingExecutionContext" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="modelBindingExecutionContext">Der Ausführungskontext.</param>
+        <param name="cultureInfo">Die Kulturinformationen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.ModelBinding.SimpleValueProvider" /> Klasse mit dem angegebenen Kontext und kulturinformationen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsPrefix">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsPrefix (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsPrefix(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.SimpleValueProvider.ContainsPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Präfix.</param>
+        <summary>Ruft einen Wert, der angibt, ob der Wertanbieter das angegebene Präfix enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wertanbieter das angegebene Präfix enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="prefix" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FetchValue">
+      <MemberSignature Language="C#" Value="protected abstract object FetchValue (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object FetchValue(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.SimpleValueProvider.FetchValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des abzurufenden Werts.</param>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse gibt den Wert für den angegebenen Schlüssel zurück.</summary>
+        <returns>Der Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public virtual System.Web.ModelBinding.ValueProviderResult GetValue (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.ModelBinding.ValueProviderResult GetValue(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.SimpleValueProvider.GetValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ValueProviderResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des abzurufenden Werts.</param>
+        <summary>Ruft die <see cref="M:System.Web.ModelBinding.SimpleValueProvider.FetchValue(System.String)" /> Methode und verwendet dann instanziiert eine neue Instanz der zurückgegebenen Wert die <see cref="T:System.Web.ModelBinding.ValueProviderResult" /> Klasse.</summary>
+        <returns>Der Wert.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="key" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelBindingExecutionContext">
+      <MemberSignature Language="C#" Value="protected System.Web.ModelBinding.ModelBindingExecutionContext ModelBindingExecutionContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.ModelBinding.ModelBindingExecutionContext ModelBindingExecutionContext" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.SimpleValueProvider.ModelBindingExecutionContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ModelBindingExecutionContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ausführungskontext ab.</summary>
+        <value>Der Ausführungskontext.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

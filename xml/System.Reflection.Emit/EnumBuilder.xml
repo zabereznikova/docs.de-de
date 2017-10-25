@@ -1,0 +1,2405 @@
+<Type Name="EnumBuilder" FullName="System.Reflection.Emit.EnumBuilder">
+  <TypeSignature Language="C#" Value="public sealed class EnumBuilder : System.Reflection.TypeInfo, System.Runtime.InteropServices._EnumBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EnumBuilder extends System.Reflection.TypeInfo implements class System.Runtime.InteropServices._EnumBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.EnumBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Emit</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.TypeInfo</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netcore-2.0">System.Type</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._EnumBuilder</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._EnumBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt einen Enumerationstyp und stellt ihn dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  In der .NET Framework-Versionen 1.0 und 1.1, ist es erforderlich, Enumerationen, die mit definieren <xref:System.Reflection.Emit.TypeBuilder> da <xref:System.Reflection.Emit.EnumBuilder> ausgibt, deren Elemente vom Typ sind, Enumerationen <xref:System.Int32> anstelle des Enumerationstyps. In .NET Framework, Version 2.0 <xref:System.Reflection.Emit.EnumBuilder> ausgibt, Enumerationen, deren Elemente über den richtigen Typ.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die zur Erstellung einer Enumeration in eine dynamische Assembly, die mit `EnumBuilder`. Im Beispiel definiert eine Enumeration, die mit dem Namen `Elevation`, mit dem zugrunde liegenden Datentyp <xref:System.Int32>, und erstellt zwei Elemente: `Low`, mit dem Wert 0 (null) und `High`, mit dem Wert 1. Nachdem der Typ erstellt wurde, wird die Assembly gespeichert, mit dem Namen `TempAssembly.dll`. Sie können die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md) untersuchen den Inhalt dieser Assembly.  
+  
+> [!NOTE]
+>  Vor .NET Framework, Version 2.0 wird in diesem Codebeispiel wird eine ordnungsgemäße Enumeration kein erzeugt.  
+  
+ [!code-cpp[ModuleBuilder_DefineEnum#1](~/samples/snippets/cpp/VS_Snippets_CLR/ModuleBuilder_DefineEnum/CPP/modulebuilder_defineenum.cpp#1)]
+ [!code-csharp[ModuleBuilder_DefineEnum#1](~/samples/snippets/csharp/VS_Snippets_CLR/ModuleBuilder_DefineEnum/CS/modulebuilder_defineenum.cs#1)]
+ [!code-vb[ModuleBuilder_DefineEnum#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ModuleBuilder_DefineEnum/VB/modulebuilder_defineenum.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EnumBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Assembly Assembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly Assembly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.Assembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dynamische Assembly ab, die diese Enumerationsdefinition enthält.</summary>
+        <value>Schreibgeschützt. Die dynamische Assembly, die diese Enumerationsdefinition enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der `Assembly` Eigenschaft zum Verweisen auf der übergeordneten Assembly des aktuellen `EnumBuilder`.  
+  
+ [!code-cpp[EnumBuilder_Properties_5#1](~/samples/snippets/cpp/VS_Snippets_CLR/EnumBuilder_Properties_5/CPP/enumbuilder_properties_5.cpp#1)]
+ [!code-csharp[EnumBuilder_Properties_5#1](~/samples/snippets/csharp/VS_Snippets_CLR/EnumBuilder_Properties_5/CS/enumbuilder_properties_5.cs#1)]
+ [!code-vb[EnumBuilder_Properties_5#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/EnumBuilder_Properties_5/VB/enumbuilder_properties_5.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyQualifiedName">
+      <MemberSignature Language="C#" Value="public override string AssemblyQualifiedName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyQualifiedName" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.AssemblyQualifiedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den vollständigen Pfad dieser Enumeration zurück, der durch den Anzeigenamen der übergeordneten Assembly qualifiziert ist.</summary>
+        <value>Schreibgeschützt. Der vollständige Pfad dieser Enumeration, der durch den Anzeigenamen der übergeordneten Assembly qualifiziert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Format der zurückgegebenen Zeichenfolge ist:  
+  
+ \<FullTypeName >, \<AssemblyDisplayName >  
+  
+ Finden Sie unter <xref:System.Reflection.AssemblyName> eine Beschreibung des Formats des Anzeigenamens einer Assembly.  
+  
+## <a name="version-information"></a>Versionsinformationen  
+ In .NET Framework, Version 1.1 und früher der Rückgabewert dieser Eigenschaft nicht die Kultur oder den öffentlichen Schlüssel enthalten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der `AssemblyQualifiedName` Eigenschaft, um die qualifizierten Namen übergeordneten Assembly des aktuellen `EnumBuilder`.  
+  
+ [!code-cpp[EnumBuilder_Properties_5#2](~/samples/snippets/cpp/VS_Snippets_CLR/EnumBuilder_Properties_5/CPP/enumbuilder_properties_5.cpp#2)]
+ [!code-csharp[EnumBuilder_Properties_5#2](~/samples/snippets/csharp/VS_Snippets_CLR/EnumBuilder_Properties_5/CS/enumbuilder_properties_5.cs#2)]
+ [!code-vb[EnumBuilder_Properties_5#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/EnumBuilder_Properties_5/VB/enumbuilder_properties_5.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public override System.Reflection.TypeAttributes Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.TypeAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.TypeAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseType">
+      <MemberSignature Language="C#" Value="public override Type BaseType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BaseType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.BaseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den übergeordneten <see cref="T:System.Type" /> dieses Typs, der immer <see cref="T:System.Enum" /> ist.</summary>
+        <value>Schreibgeschützt. Das übergeordnete <see cref="T:System.Type" /> dieses Typs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsGenericParameters">
+      <MemberSignature Language="C#" Value="public override bool ContainsGenericParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContainsGenericParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.ContainsGenericParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateType">
+      <MemberSignature Language="C#" Value="public Type CreateType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type CreateType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.CreateType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein <see cref="T:System.Type" />-Objekt für diese Enumeration.</summary>
+        <returns>Ein <see cref="T:System.Type" />-Objekt für diese Enumeration.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Dieser Typ wurde zuvor erstellt.  
+  
+ - oder -   
+  
+ Der einschließende Typ wurde nicht erstellt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTypeInfo">
+      <MemberSignature Language="C#" Value="public System.Reflection.TypeInfo CreateTypeInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.TypeInfo CreateTypeInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.CreateTypeInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.TypeInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Reflection.TypeInfo" />-Objekt ab, das diese Enumeration darstellt.</summary>
+        <returns>Ein Objekt, das diese Enumeration darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringMethod">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodBase DeclaringMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodBase DeclaringMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.DeclaringMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringType">
+      <MemberSignature Language="C#" Value="public override Type DeclaringType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclaringType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.DeclaringType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Typ zurück, der diesen <see cref="T:System.Reflection.Emit.EnumBuilder" /> deklariert hat.</summary>
+        <value>Schreibgeschützt. Der Typ, der diesen <see cref="T:System.Reflection.Emit.EnumBuilder" /> deklariert hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineLiteral">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.FieldBuilder DefineLiteral (string literalName, object literalValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.FieldBuilder DefineLiteral(string literalName, object literalValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.DefineLiteral(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.FieldBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="literalName" Type="System.String" />
+        <Parameter Name="literalValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="literalName">Der Name des statischen Felds.</param>
+        <param name="literalValue">Der konstante Wert des Literals.</param>
+        <summary>Definiert das benannte statische Feld in einem Enumerationstyp mit dem angegebenen konstanten Wert.</summary>
+        <returns>Das definierte Feld.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das definierte Feld müssen die Feldattribute <xref:System.Reflection.FieldAttributes.Public>, <xref:System.Reflection.FieldAttributes.Static>, und <xref:System.Reflection.FieldAttributes.Literal> festgelegt.  
+  
+> [!NOTE]
+>  In der .NET Framework-Versionen 1.0 und 1.1, ist es erforderlich, Enumerationen, die mit definieren <xref:System.Reflection.Emit.TypeBuilder> da <xref:System.Reflection.Emit.EnumBuilder> ausgibt, deren Elemente vom Typ sind, Enumerationen <xref:System.Int32> anstelle des Enumerationstyps. In .NET Framework, Version 2.0 <xref:System.Reflection.Emit.EnumBuilder> ausgibt, Enumerationen, deren Elemente über den richtigen Typ.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die zur Erstellung einer Enumeration in eine dynamische Assembly, die mit `EnumBuilder`. Im Beispiel definiert eine Enumeration, die mit dem Namen `Elevation`, mit dem zugrunde liegenden Datentyp <xref:System.Int32>, und erstellt zwei Elemente: `Low`, mit dem Wert 0 (null) und `High`, mit dem Wert 1. Nachdem der Typ erstellt wurde, wird die Assembly gespeichert, mit dem Namen `TempAssembly.dll`. Sie können die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md) untersuchen den Inhalt dieser Assembly.  
+  
+> [!NOTE]
+>  Vor .NET Framework, Version 2.0 wird in diesem Codebeispiel wird eine ordnungsgemäße Enumeration kein erzeugt.  
+  
+ [!code-cpp[ModuleBuilder_DefineEnum#1](~/samples/snippets/cpp/VS_Snippets_CLR/ModuleBuilder_DefineEnum/CPP/modulebuilder_defineenum.cpp#1)]
+ [!code-csharp[ModuleBuilder_DefineEnum#1](~/samples/snippets/csharp/VS_Snippets_CLR/ModuleBuilder_DefineEnum/CS/modulebuilder_defineenum.cs#1)]
+ [!code-vb[ModuleBuilder_DefineEnum#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ModuleBuilder_DefineEnum/VB/modulebuilder_defineenum.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public override string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den vollständigen Pfad dieser Enumeration zurück.</summary>
+        <value>Schreibgeschützt. Der vollständige Pfad dieser Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Format ist "einschließenderTypVollständigerName + geschachtelterTypname" für geschachtelte Typen und "Typname" für den nicht geschachtelten Typen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericParameterAttributes">
+      <MemberSignature Language="C#" Value="public override System.Reflection.GenericParameterAttributes GenericParameterAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.GenericParameterAttributes GenericParameterAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.GenericParameterAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.GenericParameterAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericParameterPosition">
+      <MemberSignature Language="C#" Value="public override int GenericParameterPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 GenericParameterPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.GenericParameterPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericTypeArguments">
+      <MemberSignature Language="C#" Value="public override Type[] GenericTypeArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] GenericTypeArguments" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.GenericTypeArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArrayRank">
+      <MemberSignature Language="C#" Value="public override int GetArrayRank ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetArrayRank() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetArrayRank" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttributeFlagsImpl">
+      <MemberSignature Language="C#" Value="protected override System.Reflection.TypeAttributes GetAttributeFlagsImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Reflection.TypeAttributes GetAttributeFlagsImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetAttributeFlagsImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.TypeAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConstructorImpl">
+      <MemberSignature Language="C#" Value="protected override System.Reflection.ConstructorInfo GetConstructorImpl (System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConvention, Type[] types, System.Reflection.ParameterModifier[] modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Reflection.ConstructorInfo GetConstructorImpl(valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.Binder binder, valuetype System.Reflection.CallingConventions callConvention, class System.Type[] types, valuetype System.Reflection.ParameterModifier[] modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetConstructorImpl(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ConstructorInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="callConvention" Type="System.Reflection.CallingConventions" />
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">To be added.</param>
+        <param name="binder">To be added.</param>
+        <param name="callConvention">To be added.</param>
+        <param name="types">To be added.</param>
+        <param name="modifiers">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConstructors">
+      <MemberSignature Language="C#" Value="public override System.Reflection.ConstructorInfo[] GetConstructors (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.ConstructorInfo[] GetConstructors(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetConstructors(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ConstructorInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Diese Angabe muss ein Bitflag aus <see cref="T:System.Reflection.BindingFlags" /> : <see langword="InvokeMethod" />, <see langword="NonPublic" />und so weiter.</param>
+        <summary>Gibt ein Array von <see cref="T:System.Reflection.ConstructorInfo" /> Objekte, die für diese Klasse angegebenen definierten öffentlichen und nicht öffentlichen Konstruktoren darstellen.</summary>
+        <returns>Gibt ein Array von <see cref="T:System.Reflection.ConstructorInfo" /> Objekte, die für diese Klasse definierten angegebenen Konstruktoren darstellen. Wenn keine Konstruktoren definiert sind, wird ein leeres Array zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, zum Abrufen der Konstruktor eines Typs nicht mehr benötigen, Sie können rufen Sie den Typ mithilfe <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">Gibt an, ob die Vererbungskette dieses Members nach den Attributen durchsucht werden soll.</param>
+        <summary>Gibt alle benutzerdefinierten Attribute zurück, die für diesen Konstruktor definiert sind.</summary>
+        <returns>Gibt ein Array von Objekten, die die benutzerdefinierten Attribute des Konstruktors dargestellt, die von diesem darstellen <see cref="T:System.Reflection.Emit.ConstructorBuilder" /> Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um die benutzerdefinierten Attribute des abgeschlossenen Typs abzurufen, rufen Sie den Typ mithilfe <xref:System.Type.GetType%2A?displayProperty=nameWithType> , und rufen Sie <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A> für das zurückgegebene <xref:System.Type>.  
+  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `GetCustomAttribute` im Kontext des <xref:System.Reflection.Emit.EnumBuilder>.  
+  
+ [!code-cpp[EnumBuilder_SetCustomAttribute2#1](~/samples/snippets/cpp/VS_Snippets_CLR/EnumBuilder_SetCustomAttribute2/CPP/enumbuilder_setcustomattribute2.cpp#1)]
+ [!code-csharp[EnumBuilder_SetCustomAttribute2#1](~/samples/snippets/csharp/VS_Snippets_CLR/EnumBuilder_SetCustomAttribute2/CS/enumbuilder_setcustomattribute2.cs#1)]
+ [!code-vb[EnumBuilder_SetCustomAttribute2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/EnumBuilder_SetCustomAttribute2/VB/enumbuilder_setcustomattribute2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Die <see langword="Type" /> -Objekt, das die benutzerdefinierten Attribute angewendet werden.</param>
+        <param name="inherit">Gibt an, ob die Vererbungskette dieses Members nach den Attributen durchsucht werden soll.</param>
+        <summary>Gibt die benutzerdefinierten Attribute zurück, die durch den angegebenen Typ identifiziert werden.</summary>
+        <returns>Gibt ein Array von Objekten, die die Attribute dieses Konstruktors mit dem darstellen <see cref="T:System.Type" /> <paramref name="attributeType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um die benutzerdefinierten Attribute des abgeschlossenen Typs abzurufen, rufen Sie den Typ mithilfe <xref:System.Type.GetType%2A?displayProperty=nameWithType> , und rufen Sie <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> für das zurückgegebene <xref:System.Type>.  
+  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `GetCustomAttribute` im Kontext des <xref:System.Reflection.Emit.EnumBuilder>.  
+  
+ [!code-cpp[EnumBuilder_SetCustomAttribute1#2](~/samples/snippets/cpp/VS_Snippets_CLR/EnumBuilder_SetCustomAttribute1/CPP/enumbuilder_setcustomattribute1.cpp#2)]
+ [!code-csharp[EnumBuilder_SetCustomAttribute1#2](~/samples/snippets/csharp/VS_Snippets_CLR/EnumBuilder_SetCustomAttribute1/CS/enumbuilder_setcustomattribute1.cs#2)]
+ [!code-vb[EnumBuilder_SetCustomAttribute1#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/EnumBuilder_SetCustomAttribute1/VB/enumbuilder_setcustomattribute1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementType">
+      <MemberSignature Language="C#" Value="public override Type GetElementType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetElementType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetElementType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beim Aufrufen dieser Methode wird immer eine <see cref="T:System.NotSupportedException" /> ausgelöst.</summary>
+        <returns>Diese Methode wird nicht unterstützt. Es wird kein Wert zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumUnderlyingType">
+      <MemberSignature Language="C#" Value="public override Type GetEnumUnderlyingType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetEnumUnderlyingType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetEnumUnderlyingType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den zugrunde liegenden Ganzzahltyp der aktuellen Enumeration zurück, die beim Definieren des Enumerations-Generators festgelegt wird.</summary>
+        <returns>Der zugrunde liegende Typ.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvent">
+      <MemberSignature Language="C#" Value="public override System.Reflection.EventInfo GetEvent (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.EventInfo GetEvent(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetEvent(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.EventInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des abzurufenden Ereignisses.</param>
+        <param name="bindingAttr">Dieses Aufrufattribut. Diese Angabe muss ein Bitflag aus <see cref="T:System.Reflection.BindingFlags" /> : <see langword="InvokeMethod" />, <see langword="NonPublic" />und so weiter.</param>
+        <summary>Gibt das Ereignis mit dem angegebenen Namen zurück.</summary>
+        <returns>Gibt ein <see cref="T:System.Reflection.EventInfo" /> -Objekt deklariert oder geerbt wurde von diesem Typ mit dem angegebenen Namen, die das Ereignis darstellt. Wenn keine Übereinstimmungen vorhanden sind <see langword="null" /> zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um das Ereignis eines abgeschlossenen Typs abzurufen, rufen Sie den Typ mithilfe <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvents">
+      <MemberSignature Language="C#" Value="public override System.Reflection.EventInfo[] GetEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.EventInfo[] GetEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.EventInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Ereignisse für die öffentlichen Ereignisse zurück, die von diesem Typ deklariert oder geerbt wurden.</summary>
+        <returns>Gibt ein Array von <see cref="T:System.Reflection.EventInfo" /> -Objekten deklariert oder geerbt wurden von diesem Typ öffentlichen Ereignisse darstellen. Wenn keine öffentlichen Ereignisse vorhanden sind, wird ein leeres Array zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um die Ereignisse eines abgeschlossenen Typs abzurufen, rufen Sie den Typ mithilfe <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvents">
+      <MemberSignature Language="C#" Value="public override System.Reflection.EventInfo[] GetEvents (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.EventInfo[] GetEvents(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetEvents(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.EventInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Diese Angabe muss ein Bitflag aus <see cref="T:System.Reflection.BindingFlags" />, wie z. B. <see langword="InvokeMethod" />, <see langword="NonPublic" />und so weiter.</param>
+        <summary>Gibt die öffentlichen und nicht öffentlichen Ereignisse zurück, die von diesem Typ deklariert werden.</summary>
+        <returns>Gibt ein Array von <see cref="T:System.Reflection.EventInfo" /> -Objekten deklariert oder geerbt wurden von diesem Typ öffentlichen und nicht öffentlichen Ereignisse darstellen. Wenn es keine Ereignisse wie angegeben gibt, wird ein leeres Array zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um die Ereignisse eines abgeschlossenen Typs abzurufen, rufen Sie den Typ mithilfe <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ die Ereignisse abzurufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetField">
+      <MemberSignature Language="C#" Value="public override System.Reflection.FieldInfo GetField (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.FieldInfo GetField(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetField(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des abzurufenden Felds.</param>
+        <param name="bindingAttr">Diese Angabe muss ein Bitflag aus <see cref="T:System.Reflection.BindingFlags" /> : <see langword="InvokeMethod" />, <see langword="NonPublic" />und so weiter.</param>
+        <summary>Gibt das vom angegebenen Namen angegebene Feld zurück.</summary>
+        <returns>Gibt die <see cref="T:System.Reflection.FieldInfo" /> -Objekt deklariert oder geerbt wurde von diesem Typ mit dem angegebenen Namen und öffentlichen oder nicht öffentlichen Modifizierer, die das Feld darstellt. Wenn keine Übereinstimmungen vorhanden sind, wird NULL zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um das Feld eines abgeschlossenen Typs abzurufen, rufen Sie den Typ mithilfe <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFields">
+      <MemberSignature Language="C#" Value="public override System.Reflection.FieldInfo[] GetFields (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.FieldInfo[] GetFields(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetFields(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Diese Angabe muss ein Bitflag aus <see cref="T:System.Reflection.BindingFlags" />, z. B. InvokeMethod "," NonPublic "usw..</param>
+        <summary>Gibt die öffentlichen und nicht öffentlichen Felder zurück, die von diesem Typ deklariert werden.</summary>
+        <returns>Gibt ein Array von <see cref="T:System.Reflection.FieldInfo" /> -Objekten deklariert oder geerbt wurden von diesem Typ die öffentlichen und nicht öffentlichen Felder darstellen. Wenn keine Felder vorhanden sind, wird ein leeres Array zurückgegeben, wie angegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um das Feld eines abgeschlossenen Typs abzurufen, rufen Sie den Typ mithilfe <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ Die <xref:System.Reflection.Emit.EnumBuilder.GetFields%2A> Methode gibt keinen zurück Felder in einer bestimmten Reihenfolge, z. B. alphabetische oder Reihenfolge der Deklaration. Der Code muss nicht auf die Reihenfolge, in der Felder zurückgegeben werden, abhängen, da dieser Reihenfolge variieren kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGenericParameterConstraints">
+      <MemberSignature Language="C#" Value="public override Type[] GetGenericParameterConstraints ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type[] GetGenericParameterConstraints() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetGenericParameterConstraints" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGenericTypeDefinition">
+      <MemberSignature Language="C#" Value="public override Type GetGenericTypeDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetGenericTypeDefinition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetGenericTypeDefinition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInterface">
+      <MemberSignature Language="C#" Value="public override Type GetInterface (string name, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetInterface(string name, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetInterface(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Schnittstelle.</param>
+        <param name="ignoreCase">Wenn <see langword="true" />, wird bei der Suche die Groß-/Kleinschreibung. Wenn <see langword="false" />, wird bei der Suche die Groß-/Kleinschreibung beachtet.</param>
+        <summary>Gibt die von diesem Typ (direkt oder indirekt) implementierte Schnittstelle mit dem angegebenen vollqualifizierten Namen zurück.</summary>
+        <returns>Gibt eine <see cref="T:System.Type" /> -Objekt, das die implementierte Schnittstelle darstellt. Gibt NULL zurück, wenn kein mit der Schnittstelle übereinstimmender Name gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um die Schnittstelle eines abgeschlossenen Typs abzurufen, rufen den mit <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInterfaceMap">
+      <MemberSignature Language="C#" Value="public override System.Reflection.InterfaceMapping GetInterfaceMap (Type interfaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Reflection.InterfaceMapping GetInterfaceMap(class System.Type interfaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetInterfaceMap(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.InterfaceMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="interfaceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceType">Der Typ der Schnittstelle, für die die Schnittstellenzuordnung abgerufen werden soll.</param>
+        <summary>Gibt eine Schnittstellenzuordnung für die angeforderte Schnittstelle zurück.</summary>
+        <returns>Die angeforderte Schnittstellenzuordnung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um die Zuordnung Schnittstellentypen eines abgeschlossenen Typs abzurufen, rufen den mit <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Schnittstelle wird vom Typ nicht implementiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInterfaces">
+      <MemberSignature Language="C#" Value="public override Type[] GetInterfaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type[] GetInterfaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetInterfaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Array aller für diese Klasse und die zugehörigen Basisklassen implementierten Schnittstellen zurück.</summary>
+        <returns>Gibt ein Array von <see cref="T:System.Type" /> Objekten, die die implementierten Schnittstellen darstellen. Wenn keine definiert sind, wird ein leeres Array zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um die Schnittstelle eines abgeschlossenen Typs abzurufen, rufen den mit <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMember">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MemberInfo[] GetMember (string name, System.Reflection.MemberTypes type, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MemberInfo[] GetMember(string name, valuetype System.Reflection.MemberTypes type, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetMember(System.String,System.Reflection.MemberTypes,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Reflection.MemberTypes" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Members.</param>
+        <param name="type">Der Typ des zurückzugebenden Members.</param>
+        <param name="bindingAttr">Diese Angabe muss ein Bitflag aus <see cref="T:System.Reflection.BindingFlags" /> : <see langword="InvokeMethod" />, <see langword="NonPublic" />und so weiter.</param>
+        <summary>Gibt alle Member mit dem angegebenen Namen, dem Typ und der Bindung zurück, die von diesem Typ deklariert oder geerbt wurden.</summary>
+        <returns>Gibt ein Array von <see cref="T:System.Reflection.MemberInfo" /> Objekten, die die öffentlichen und nicht öffentlichen Member, die für diesen Typ definiert wird, wenn darstellen <paramref name="nonPublic" /> verwendet wird; andernfalls werden nur die öffentlichen Member zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, zum Abrufen der Member eines Typs nicht mehr benötigen, rufen Sie den Typ mithilfe <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMembers">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MemberInfo[] GetMembers (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MemberInfo[] GetMembers(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetMembers(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Diese Angabe muss ein Bitflag aus <see cref="T:System.Reflection.BindingFlags" /> : <see langword="InvokeMethod" />, <see langword="NonPublic" />und so weiter.</param>
+        <summary>Gibt die angegebenen Member zurück, die von diesem Typ deklariert oder geerbt wurden.</summary>
+        <returns>Gibt ein Array von <see cref="T:System.Reflection.MemberInfo" /> -Objekten deklariert oder geerbt wurden von diesem Typ, die die öffentlichen und nicht öffentlichen Member darstellt. Wenn keine übereinstimmenden Member vorhanden sind, wird ein leeres Array zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um die Elemente eines abgeschlossenen Typs abzurufen, rufen den mit <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodImpl">
+      <MemberSignature Language="C#" Value="protected override System.Reflection.MethodInfo GetMethodImpl (string name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConvention, Type[] types, System.Reflection.ParameterModifier[] modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Reflection.MethodInfo GetMethodImpl(string name, valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.Binder binder, valuetype System.Reflection.CallingConventions callConvention, class System.Type[] types, valuetype System.Reflection.ParameterModifier[] modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetMethodImpl(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="callConvention" Type="System.Reflection.CallingConventions" />
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="bindingAttr">To be added.</param>
+        <param name="binder">To be added.</param>
+        <param name="callConvention">To be added.</param>
+        <param name="types">To be added.</param>
+        <param name="modifiers">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethods">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodInfo[] GetMethods (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MethodInfo[] GetMethods(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetMethods(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Diese Angabe muss ein Bitflag aus <see cref="T:System.Reflection.BindingFlags" />, wie z. B. <see langword="InvokeMethod" />, <see langword="NonPublic" />und so weiter.</param>
+        <summary>Gibt alle öffentlichen und nicht öffentlichen Methoden zurück, die gemäß Angabe von diesem Typ deklariert oder geerbt wurden.</summary>
+        <returns>Gibt ein Array von <see cref="T:System.Reflection.MethodInfo" /> Objekte, die die öffentlichen und nicht öffentlichen Methoden, die für diesen Typ definiert wird, wenn <paramref name="nonPublic" /> verwendet wird; andernfalls werden nur die öffentlichen Methoden zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um die Methoden eines abgeschlossenen Typs abzurufen, rufen Sie den Typ mithilfe <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNestedType">
+      <MemberSignature Language="C#" Value="public override Type GetNestedType (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetNestedType(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetNestedType(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">Die <see cref="T:System.String" /> , die den Namen des abzurufenden geschachtelten Typs enthält.</param>
+        <param name="bindingAttr">Eine Bitmaske aus einem oder mehreren <see cref="T:System.Reflection.BindingFlags" />, die angeben, wie die Suche durchgeführt wird.  
+  
+ - oder -   
+  
+ Null, um eine Suche nach öffentlichen Methoden mit Beachtung der Groß-/Kleinschreibung durchzuführen.</param>
+        <summary>Gibt den angegebenen geschachtelten Typ zurück, der von diesem Typ deklariert wird.</summary>
+        <returns>Ein <see cref="T:System.Type" /> Objekt, das den geschachtelten Typ, der den angegebenen Anforderungen entspricht, sofern gefunden, andernfalls darstellt <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um den geschachtelten Typ eines abgeschlossenen Typs abzurufen, rufen Sie den Typ mithilfe <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNestedTypes">
+      <MemberSignature Language="C#" Value="public override Type[] GetNestedTypes (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type[] GetNestedTypes(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetNestedTypes(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Diese Angabe muss ein Bitflag aus <see cref="T:System.Reflection.BindingFlags" />, wie z. B. <see langword="InvokeMethod" />, <see langword="NonPublic" />und so weiter.</param>
+        <summary>Gibt die öffentlichen und nicht öffentlichen geschachtelten Typen zurück, die von diesem Typ deklariert oder geerbt werden.</summary>
+        <returns>Ein Array von <see cref="T:System.Type" /> Objekte in der aktuellen geschachtelten alle Typen darstellen <see cref="T:System.Type" /> , die den angegebenen bindungseinschränkungen entsprechen.  
+  
+ Ein leeres Array vom Typ <see cref="T:System.Type" />, wenn keine Typen, in der aktuellen geschachtelt sind <see cref="T:System.Type" />, oder wenn keiner der geschachtelten Typen die bindungseinschränkungen entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um die geschachtelten Typen eines abgeschlossenen Typs abzurufen, rufen den mit <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public override System.Reflection.PropertyInfo[] GetProperties (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.PropertyInfo[] GetProperties(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetProperties(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Dieses Aufrufattribut. Diese Angabe muss ein Bitflag aus <see cref="T:System.Reflection.BindingFlags" /> : <see langword="InvokeMethod" />, <see langword="NonPublic" />und so weiter.</param>
+        <summary>Gibt alle öffentlichen und nicht öffentlichen Eigenschaften zurück, die gemäß Angabe von diesem Typ deklariert oder geerbt wurden.</summary>
+        <returns>Gibt ein Array von <see cref="T:System.Reflection.PropertyInfo" /> Objekten, die die öffentlichen und nicht öffentlichen Eigenschaften, die für diesen Typ definiert wird, wenn darstellen <paramref name="nonPublic" /> verwendet wird; andernfalls werden nur die öffentlichen Eigenschaften zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um die Eigenschaften eines abgeschlossenen Typs abzurufen, rufen den mit <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyImpl">
+      <MemberSignature Language="C#" Value="protected override System.Reflection.PropertyInfo GetPropertyImpl (string name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, Type returnType, Type[] types, System.Reflection.ParameterModifier[] modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Reflection.PropertyInfo GetPropertyImpl(string name, valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.Binder binder, class System.Type returnType, class System.Type[] types, valuetype System.Reflection.ParameterModifier[] modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.GetPropertyImpl(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Type,System.Type[],System.Reflection.ParameterModifier[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="bindingAttr">To be added.</param>
+        <param name="binder">To be added.</param>
+        <param name="returnType">To be added.</param>
+        <param name="types">To be added.</param>
+        <param name="modifiers">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GUID">
+      <MemberSignature Language="C#" Value="public override Guid GUID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid GUID" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.GUID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die GUID dieser Enumeration zurück.</summary>
+        <value>Schreibgeschützt. Die GUID dieser Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der `GUID` -Eigenschaft zum Verweisen auf die zugeordnete <xref:System.Guid> des aktuellen `EnumBuilder`.  
+  
+ [!code-cpp[EnumBuilder_Properties_4.cs#4](~/samples/snippets/cpp/VS_Snippets_CLR/EnumBuilder_Properties_4.cs/CPP/enumbuilder_properties_4.cpp#4)]
+ [!code-csharp[EnumBuilder_Properties_4.cs#4](~/samples/snippets/csharp/VS_Snippets_CLR/EnumBuilder_Properties_4.cs/CS/enumbuilder_properties_4.cs#4)]
+ [!code-vb[EnumBuilder_Properties_4.cs#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/EnumBuilder_Properties_4.cs/VB/enumbuilder_properties_4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasElementTypeImpl">
+      <MemberSignature Language="C#" Value="protected override bool HasElementTypeImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HasElementTypeImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.HasElementTypeImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMember">
+      <MemberSignature Language="C#" Value="public override object InvokeMember (string name, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object target, object[] args, System.Reflection.ParameterModifier[] modifiers, System.Globalization.CultureInfo culture, string[] namedParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object InvokeMember(string name, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object target, object[] args, valuetype System.Reflection.ParameterModifier[] modifiers, class System.Globalization.CultureInfo culture, string[] namedParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="namedParameters" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des aufzurufenden Members. Dies kann ein Konstruktor, eine Methode, eine Eigenschaft oder ein Feld sein. Es muss ein geeignetes Aufrufattribut angegeben werden. Beachten Sie, dass es möglich ist, den Standardmember einer Klasse aufzurufen, indem Sie eine leere Zeichenfolge als Name des Members übergeben.</param>
+        <param name="invokeAttr">Das Attribut für den Aufruf. Diese Angabe muss ein Bitflag aus <see langword="BindingFlags" />.</param>
+        <param name="binder">Ein Objekt, das die Bindung, die Umwandlung von Argumenttypen, das Aufrufen von Membern und das Abrufen von <see langword="MemberInfo" />-Objekten über Reflektion ermöglicht. Wenn der Binder ist <see langword="null" />, wird der Standardbinder verwendet. Siehe <see cref="T:System.Reflection.Binder" />.</param>
+        <param name="target">Das Objekt, für das der angegebene Member aufgerufen werden soll. Wenn der Member statisch ist, wird dieser Parameter ignoriert.</param>
+        <param name="args">Eine Argumentliste. Dies ist ein Array von Objekten, das die Anzahl, Reihenfolge und den Typ der Parameter des aufzurufenden Members enthält. Wenn keine Parameter vorhanden sind, muss dies gleich NULL sein.</param>
+        <param name="modifiers">Ein Array derselben Länge wie <c>Args</c> mit Elementen, die die Attribute, die den Argumenten des aufzurufenden Members zugeordnet darstellen. Ein Parameter verfügt über Attribute, die ihm in den Metadaten zugeordnet werden. Sie werden von verschiedenen Interoperabilitätsdiensten verwendet. Informationen wie diese finden Sie in den Metadatenspezifikationen.</param>
+        <param name="culture">Eine Instanz von <see langword="CultureInfo" /> für die Steuerung der Umwandlung von Typen. Wenn diese gleich null ist, wird die <see langword="CultureInfo" /> des aktuellen Threads verwendet wird. (Dies ist z. B. erforderlich, um eine Zeichenfolge, die 1000 darstellt, in einen Double-Wert zu konvertieren, da 1000 in verschiedenen Kulturen unterschiedlich dargestellt wird.)</param>
+        <param name="namedParameters">Jeder Parameter in der <c>NamedParameters</c> Array Ruft den Wert in das entsprechende Element in der <c>Args</c> Array. Wenn die Länge des <c>Args</c> ist größer als die Länge des <c>NamedParameters</c>, die restlichen Argumentwerte in der Reihenfolge übergeben.</param>
+        <summary>Ruft den angegebenen Member auf. Die Methode, die aufgerufen werden soll, muss zugänglich sein und mit der angegebenen Argumentliste unter den Einschränkungen des angegebenen Binders und der Aufrufattribute die spezifischste Übereinstimmung bereitstellen.</summary>
+        <returns>Gibt den Rückgabewert des aufgerufenen Members zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den Typ mithilfe abrufen <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsArrayImpl">
+      <MemberSignature Language="C#" Value="protected override bool IsArrayImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsArrayImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.IsArrayImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAssignableFrom">
+      <MemberSignature Language="C#" Value="public override bool IsAssignableFrom (System.Reflection.TypeInfo typeInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsAssignableFrom(class System.Reflection.TypeInfo typeInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.IsAssignableFrom(System.Reflection.TypeInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeInfo" Type="System.Reflection.TypeInfo" />
+      </Parameters>
+      <Docs>
+        <param name="typeInfo">Das zu überprüfende Objekt.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob ein angegebenes <see cref="T:System.Reflection.TypeInfo" />-Objekt diesem Objekt zugewiesen werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="typeInfo" /> diesem Objekt zugewiesen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsByRefImpl">
+      <MemberSignature Language="C#" Value="protected override bool IsByRefImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsByRefImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.IsByRefImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCOMObjectImpl">
+      <MemberSignature Language="C#" Value="protected override bool IsCOMObjectImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsCOMObjectImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.IsCOMObjectImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConstructedGenericType">
+      <MemberSignature Language="C#" Value="public override bool IsConstructedGenericType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConstructedGenericType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.IsConstructedGenericType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dieses Objekt einen konstruierten generischen Typ darstellt.</summary>
+        <value>
+          <see langword="true" />, wenn dieses Objekt einen konstruierten generischen Typ darstellt, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public override bool IsDefined (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefined(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Die <see langword="Type" /> -Objekt, das die benutzerdefinierten Attribute angewendet werden.</param>
+        <param name="inherit">Gibt an, ob die Vererbungskette dieses Members nach den Attributen durchsucht werden soll.</param>
+        <summary>Überprüft, ob der Typ des angegebenen benutzerdefinierten Attributs definiert ist.</summary>
+        <returns>
+          <see langword="true" />Wenn eine oder mehrere Instanzen von <paramref name="attributeType" /> für diesen Member definiert ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Problem zu umgehen, um festzustellen, ob ein benutzerdefiniertes Attribut für einen abgeschlossenen Typ definiert ist, rufen Sie den Typ mithilfe <xref:System.Type.GetType%2A> , und rufen Sie <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A> für das zurückgegebene <xref:System.Type>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird derzeit nicht in Typen unterstützt, die nicht abgeschlossen sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnum">
+      <MemberSignature Language="C#" Value="public override bool IsEnum { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnum" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.IsEnum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGenericParameter">
+      <MemberSignature Language="C#" Value="public override bool IsGenericParameter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGenericParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.IsGenericParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGenericType">
+      <MemberSignature Language="C#" Value="public override bool IsGenericType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGenericType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.IsGenericType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGenericTypeDefinition">
+      <MemberSignature Language="C#" Value="public override bool IsGenericTypeDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGenericTypeDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.IsGenericTypeDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPointerImpl">
+      <MemberSignature Language="C#" Value="protected override bool IsPointerImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsPointerImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.IsPointerImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrimitiveImpl">
+      <MemberSignature Language="C#" Value="protected override bool IsPrimitiveImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsPrimitiveImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.IsPrimitiveImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSerializable">
+      <MemberSignature Language="C#" Value="public override bool IsSerializable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSerializable" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.IsSerializable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSZArray">
+      <MemberSignature Language="C#" Value="public override bool IsSZArray { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSZArray" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.IsSZArray" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTypeDefinition">
+      <MemberSignature Language="C#" Value="public override bool IsTypeDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTypeDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.IsTypeDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValueTypeImpl">
+      <MemberSignature Language="C#" Value="protected override bool IsValueTypeImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsValueTypeImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.IsValueTypeImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVariableBoundArray">
+      <MemberSignature Language="C#" Value="public override bool IsVariableBoundArray { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVariableBoundArray" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.IsVariableBoundArray" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeArrayType">
+      <MemberSignature Language="C#" Value="public override Type MakeArrayType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type MakeArrayType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.MakeArrayType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Type" />-Objekt zurück, das ein eindimensionales Array vom aktuellen Typ mit einer unteren Grenze von 0 (null) darstellt.</summary>
+        <returns>Ein <see cref="T:System.Type" />-Objekt, das ein eindimensionales Array vom aktuellen Typ mit einer unteren Grenze von 0 (null) darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeArrayType">
+      <MemberSignature Language="C#" Value="public override Type MakeArrayType (int rank);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type MakeArrayType(int32 rank) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.MakeArrayType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rank" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rank">Die Anzahl von Dimensionen für das Array. Diese Zahl muss kleiner oder gleich 32 sein.</param>
+        <summary>Gibt ein <see cref="T:System.Type" />-Objekt zurück, das ein Array vom aktuellen Typ mit der angegebenen Anzahl von Dimensionen darstellt.</summary>
+        <returns>Ein Objekt, das ein Array vom aktuellen Typ mit der angegebenen Anzahl von Dimensionen darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="rank" /> ist kleiner als 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeByRefType">
+      <MemberSignature Language="C#" Value="public override Type MakeByRefType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type MakeByRefType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.MakeByRefType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Type" /> -Objekt, das beim Übergeben als der aktuelle Typ stellt eine **Ref** Parameter (**ByRef** -Parameter in Visual Basic).</summary>
+        <returns>Ein <see cref="T:System.Type" /> -Objekt, das beim Übergeben als der aktuelle Typ stellt eine **Ref** Parameter (**ByRef** -Parameter in Visual Basic).</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeGenericType">
+      <MemberSignature Language="C#" Value="public override Type MakeGenericType (params Type[] typeArguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type MakeGenericType(class System.Type[] typeArguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.MakeGenericType(System.Type[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeArguments" Type="System.Type[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="typeArguments">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakePointerType">
+      <MemberSignature Language="C#" Value="public override Type MakePointerType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type MakePointerType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.MakePointerType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Type" />-Objekt zurück, das einen Zeiger auf den aktuellen Typ darstellt.</summary>
+        <returns>Ein <see cref="T:System.Type" />-Objekt, das einen Zeiger auf den aktuellen Typ darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Module Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Module Module" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das dynamische Modul ab, das diese <see cref="T:System.Reflection.Emit.EnumBuilder" />-Definition enthält.</summary>
+        <value>Schreibgeschützt. Das dynamische Modul, das diese <see cref="T:System.Reflection.Emit.EnumBuilder" />-Definition enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der `Module` Eigenschaft zum Verweisen auf das übergeordnete Modul des aktuellen `EnumBuilder`.  
+  
+ [!code-cpp[EnumBuilder_Properties_5#3](~/samples/snippets/cpp/VS_Snippets_CLR/EnumBuilder_Properties_5/CPP/enumbuilder_properties_5.cpp#3)]
+ [!code-csharp[EnumBuilder_Properties_5#3](~/samples/snippets/csharp/VS_Snippets_CLR/EnumBuilder_Properties_5/CS/enumbuilder_properties_5.cs#3)]
+ [!code-vb[EnumBuilder_Properties_5#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/EnumBuilder_Properties_5/VB/enumbuilder_properties_5.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Namen dieser Enumeration zurück.</summary>
+        <value>Schreibgeschützt. Der Name dieser Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der `Name` Eigenschaft zum Verweisen auf den Namen des aktuellen `EnumBuilder`.  
+  
+ [!code-cpp[EnumBuilder_Properties_5#4](~/samples/snippets/cpp/VS_Snippets_CLR/EnumBuilder_Properties_5/CPP/enumbuilder_properties_5.cpp#4)]
+ [!code-csharp[EnumBuilder_Properties_5#4](~/samples/snippets/csharp/VS_Snippets_CLR/EnumBuilder_Properties_5/CS/enumbuilder_properties_5.cs#4)]
+ [!code-vb[EnumBuilder_Properties_5#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/EnumBuilder_Properties_5/VB/enumbuilder_properties_5.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public override string Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Namespace dieser Enumeration zurück.</summary>
+        <value>Schreibgeschützt. Der Namespace dieser Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der `Namespace` Eigenschaft Verweis auf den zugeordneten Namespace des aktuellen `EnumBuilder`.  
+  
+ [!code-cpp[EnumBuilder_Properties_5#5](~/samples/snippets/cpp/VS_Snippets_CLR/EnumBuilder_Properties_5/CPP/enumbuilder_properties_5.cpp#5)]
+ [!code-csharp[EnumBuilder_Properties_5#5](~/samples/snippets/csharp/VS_Snippets_CLR/EnumBuilder_Properties_5/CS/enumbuilder_properties_5.cs#5)]
+ [!code-vb[EnumBuilder_Properties_5#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/EnumBuilder_Properties_5/VB/enumbuilder_properties_5.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectedType">
+      <MemberSignature Language="C#" Value="public override Type ReflectedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReflectedType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.ReflectedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Typ zurück, der verwendet wurde, zum Abrufen dieser <see cref="T:System.Reflection.Emit.EnumBuilder" />.</summary>
+        <value>Schreibgeschützt. Der Typ, der verwendet wurde, zum Abrufen dieser <see cref="T:System.Reflection.Emit.EnumBuilder" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetCustomAttribute (System.Reflection.Emit.CustomAttributeBuilder customBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCustomAttribute(class System.Reflection.Emit.CustomAttributeBuilder customBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.SetCustomAttribute(System.Reflection.Emit.CustomAttributeBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customBuilder" Type="System.Reflection.Emit.CustomAttributeBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="customBuilder">Eine Instanz einer Hilfsklasse zum Definieren des benutzerdefinierten Attributs.</param>
+        <summary>Legt ein benutzerdefiniertes Attribut mithilfe eines benutzerdefinierten Attribut-Generators fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `SetCustomAttribute` im Kontext des <xref:System.Reflection.Emit.EnumBuilder>, und übergeben Sie eine <xref:System.Reflection.Emit.CustomAttributeBuilder>.  
+  
+ [!code-cpp[EnumBuilder_SetCustomAttribute2#2](~/samples/snippets/cpp/VS_Snippets_CLR/EnumBuilder_SetCustomAttribute2/CPP/enumbuilder_setcustomattribute2.cpp#2)]
+ [!code-csharp[EnumBuilder_SetCustomAttribute2#2](~/samples/snippets/csharp/VS_Snippets_CLR/EnumBuilder_SetCustomAttribute2/CS/enumbuilder_setcustomattribute2.cs#2)]
+ [!code-vb[EnumBuilder_SetCustomAttribute2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/EnumBuilder_SetCustomAttribute2/VB/enumbuilder_setcustomattribute2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="con" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetCustomAttribute (System.Reflection.ConstructorInfo con, byte[] binaryAttribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCustomAttribute(class System.Reflection.ConstructorInfo con, unsigned int8[] binaryAttribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.SetCustomAttribute(System.Reflection.ConstructorInfo,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="con" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="binaryAttribute" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="con">Der Konstruktor für das benutzerdefinierte Attribut.</param>
+        <param name="binaryAttribute">Ein Byte-BLOB, das die Attribute darstellt.</param>
+        <summary>Legt ein benutzerdefiniertes Attribut mithilfe eines angegebenen benutzerdefinierten Attribut-BLOBs fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Metadatenspezifikation in der ECMA Partition II-Dokumentation weitere Informationen zum format finden Sie unter `binaryAttribute`. Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `SetCustomAttribute` im Kontext des <xref:System.Reflection.Emit.EnumBuilder>, ein Byte-Blob übergeben.  
+  
+ [!code-cpp[EnumBuilder_SetCustomAttribute2#2](~/samples/snippets/cpp/VS_Snippets_CLR/EnumBuilder_SetCustomAttribute2/CPP/enumbuilder_setcustomattribute2.cpp#2)]
+ [!code-csharp[EnumBuilder_SetCustomAttribute2#2](~/samples/snippets/csharp/VS_Snippets_CLR/EnumBuilder_SetCustomAttribute2/CS/enumbuilder_setcustomattribute2.cs#2)]
+ [!code-vb[EnumBuilder_SetCustomAttribute2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/EnumBuilder_SetCustomAttribute2/VB/enumbuilder_setcustomattribute2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="con" /> oder <paramref name="binaryAttribute" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._EnumBuilder.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _EnumBuilder.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._EnumBuilder.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.System#Runtime#InteropServices#_EnumBuilder#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="rgszNames">Das übergebene Array von zuzuordnenden Namen.</param>
+        <param name="cNames">Die Anzahl der zuzuordnenden Namen.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem die Namen interpretiert werden sollen.</param>
+        <param name="rgDispId">Das vom Aufrufer zugewiesene Array, das die IDs entsprechend den Namen empfängt.</param>
+        <summary>Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetIDsOfNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._EnumBuilder.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _EnumBuilder.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._EnumBuilder.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.System#Runtime#InteropServices#_EnumBuilder#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">Die zurückzugebenden Typinformationen.</param>
+        <param name="lcid">Der Gebietsschemabezeichner für die Typinformationen.</param>
+        <param name="ppTInfo">Empfängt einen Zeiger auf das angeforderte Objekt mit den Typinformationen.</param>
+        <summary>Ruft die Typinformationen für ein Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._EnumBuilder.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _EnumBuilder.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._EnumBuilder.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.System#Runtime#InteropServices#_EnumBuilder#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Zeigt auf einen Speicherort, der die Anzahl der Schnittstellen mit Typinformationen empfängt, die vom Objekt bereitgestellt werden.</param>
+        <summary>Ruft die Anzahl der Schnittstellen mit Typinformationen ab, die von einem Objekt bereitgestellt werden (0 oder 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfoCount`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._EnumBuilder.Invoke">
+      <MemberSignature Language="C#" Value="void _EnumBuilder.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._EnumBuilder.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.EnumBuilder.System#Runtime#InteropServices#_EnumBuilder#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Bezeichnet den Member.</param>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem Argumente interpretiert werden sollen.</param>
+        <param name="wFlags">Flags, die den Kontext des Aufrufs beschreiben.</param>
+        <param name="pDispParams">Ein Zeiger auf eine Struktur, die ein Array von Argumenten und ein Array von Argument-DISPIDs für benannte Argumente sowie Zähler für die Anzahl der Elemente in jedem Array enthält.</param>
+        <param name="pVarResult">Ein Verweis auf den Speicherort, an dem das Ergebnis gespeichert werden soll.</param>
+        <param name="pExcepInfo">Ein Zeiger auf eine Struktur mit Ausnahmeinformationen.</param>
+        <param name="puArgErr">Der Index des ersten Arguments mit einem Fehler.</param>
+        <summary>Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::Invoke`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeHandle">
+      <MemberSignature Language="C#" Value="public override RuntimeTypeHandle TypeHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.RuntimeTypeHandle TypeHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.TypeHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeTypeHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das interne Handle für diese Enumeration ab.</summary>
+        <value>Schreibgeschützt. Das interne Handle für diese Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den Typ mithilfe abrufen <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und mithilfe der Reflektion für den abgerufenen Typ.  
+  
+ Verwenden Sie dieses Handle, um auf das zugrunde liegende Metadatenhandle zuzugreifen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Eigenschaft wird derzeit nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeToken">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.TypeToken TypeToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.Emit.TypeToken TypeToken" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.TypeToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.TypeToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das interne Metadatentyptoken dieser Enumeration zurück.</summary>
+        <value>Schreibgeschützt. Das Typtoken dieser Enumeration.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlyingField">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.FieldBuilder UnderlyingField { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Emit.FieldBuilder UnderlyingField" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.UnderlyingField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.FieldBuilder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das zugrunde liegende Feld für diese Enumeration zurück.</summary>
+        <value>Schreibgeschützt. Das zugrunde liegende Feld für diese Enumeration.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlyingSystemType">
+      <MemberSignature Language="C#" Value="public override Type UnderlyingSystemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type UnderlyingSystemType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.EnumBuilder.UnderlyingSystemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den zugrunde liegenden Systemtyp für diese Enumeration zurück.</summary>
+        <value>Schreibgeschützt. Gibt den zugrunde liegenden Systemtyp zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

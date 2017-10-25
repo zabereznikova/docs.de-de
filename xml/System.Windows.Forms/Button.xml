@@ -1,0 +1,574 @@
+<Type Name="Button" FullName="System.Windows.Forms.Button">
+  <TypeSignature Language="C#" Value="public class Button : System.Windows.Forms.ButtonBase, System.Windows.Forms.IButtonControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Button extends System.Windows.Forms.ButtonBase implements class System.Windows.Forms.IButtonControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Button" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ButtonBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IButtonControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.ButtonBaseDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Schaltflächen-Steuerelement von Windows dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.Button> geklickt werden kann, mit der Maus, die EINGABETASTE oder die LEERTASTE, wenn die Schaltfläche "" den Fokus besitzt.  
+  
+ Legen Sie die <xref:System.Windows.Forms.Form.AcceptButton%2A> oder <xref:System.Windows.Forms.Form.CancelButton%2A> Eigenschaft eine <xref:System.Windows.Forms.Form> , damit Benutzer auf eine Schaltfläche durch Drücken der EINGABETASTE oder ESC-Taste, selbst wenn die Schaltfläche nicht den Fokus besitzt. Dies weist dem Formular auf das Verhalten eines Dialogfelds.  
+  
+ Beim Anzeigen eines Formulars mit der <xref:System.Windows.Forms.Form.ShowDialog%2A> -Methode, die Sie verwenden die <xref:System.Windows.Forms.Button.DialogResult%2A> einer Schaltfläche an den Rückgabewert der Eigenschaft <xref:System.Windows.Forms.Form.ShowDialog%2A>.  
+  
+ Sie können die Darstellung der Schaltfläche ändern. Angenommen, um für eine Webansicht flach dargestellt werden soll, legen die <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> Eigenschaft <xref:System.Windows.Forms.FlatStyle?displayProperty=nameWithType>. Die <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> Eigenschaft kann auch festgelegt werden, um <xref:System.Windows.Forms.FlatStyle?displayProperty=nameWithType>, das angezeigt wird Flatfile, bis der Mauszeiger über der Schaltfläche "übergibt dann die Schaltfläche nimmt die Darstellung der standardmäßigen Windows-Schaltfläche.  
+  
+> [!NOTE]
+>  Wenn das Steuerelement, das Fokus hat, akzeptiert, und Drücken der EINGABETASTE, verarbeitet die <xref:System.Windows.Forms.Button> nicht verarbeitet. Angenommen, ein mehrzeiliges <xref:System.Windows.Forms.TextBox> oder eine andere Schaltfläche den Fokus besitzt, Steuerelement Drücken der EINGABETASTE anstatt die Schaltfläche "Annehmen" verarbeitet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Button>, legt seine <xref:System.Windows.Forms.Button.DialogResult%2A> Eigenschaft, um <xref:System.Windows.Forms.DialogResult?displayProperty=nameWithType>, und fügt es einer <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Classic Button.Button Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Button.Button Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Button.Button Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Button.Button Example/CS/source.cs#1)]
+ [!code-vb[Classic Button.Button Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Button.Button Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Button ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Button.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Button" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig die <xref:System.Windows.Forms.Button> wird keine Beschriftung angezeigt. Um den Beschriftungstext anzugeben, legen Sie die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Button>, legt seine <xref:System.Windows.Forms.Button.DialogResult%2A> Eigenschaft, um die `OK` Wert <xref:System.Windows.Forms.DialogResult>, und fügt es ein <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Classic Button.Button Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Button.Button Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Button.Button Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Button.Button Example/CS/source.cs#1)]
+ [!code-vb[Classic Button.Button Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Button.Button Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AutoSizeMode AutoSizeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AutoSizeMode AutoSizeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Button.AutoSizeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Modus fest, mit dem die <see cref="T:System.Windows.Forms.Button" /> automatisch angepasst.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.AutoSizeMode" />-Werte. Der Standardwert ist <see cref="F:System.Windows.Forms.AutoSizeMode.GrowOnly" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Button.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Forms.CreateParams" /> für die Basisklasse für die Erstellung eines Fensters.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.CreateParams" /> Objekt in der Basisklasse, die beim Erstellen eines Fensters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erbende Klassen können außer Kraft setzen diese Eigenschaft, um zusätzliche Funktionalität hinzufügen, jedoch muss rufen Sie zuerst die <xref:System.Windows.Forms.CreateParams> Konstruktor der Basisklasse, um sicherzustellen, dass das Steuerelement weiterhin ordnungsgemäß funktioniert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DialogResult">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DialogResult DialogResult { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DialogResult DialogResult" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Button.DialogResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der beim Klicken auf die Schaltfläche an das übergeordnete Formular zurückgegeben wird, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte. Der Standardwert ist <see langword="None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.DialogResult> für diese Eigenschaft auf einen anderen Wert, außer festgelegt ist `None`, und wenn das übergeordnete Formular über angezeigt wurde die <xref:System.Windows.Forms.Form.ShowDialog%2A> -Methode, auf die Schaltfläche des übergeordneten Formulars schließt, ohne dass Ereignisse einbinden. Des Formulars <xref:System.Windows.Forms.Form.DialogResult%2A> Eigenschaft legen Sie dann auf die <xref:System.Windows.Forms.DialogResult> neben der Schaltfläche, wenn die Schaltfläche geklickt wird.  
+  
+ Beispielsweise, um das Dialogfeld "Yes/No/Cancel" zu erstellen, einfach drei Schaltflächen hinzufügen und ihre <xref:System.Windows.Forms.DialogResult> Eigenschaften `Yes`, `No`, und `Cancel`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Button>, legt seine <xref:System.Windows.Forms.DialogResult> Eigenschaft, um `OK`, und fügt es einer <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Classic Button.Button Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Button.Button Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Button.Button Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Button.Button Example/CS/source.cs#1)]
+ [!code-vb[Classic Button.Button Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Button.Button Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Windows.Forms.DialogResult" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Button.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzer auf das <see cref="T:System.Windows.Forms.Button" />-Steuerelement doppelklickt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Forms.ControlStyles?displayProperty=nameWithType> und <xref:System.Windows.Forms.ControlStyles?displayProperty=nameWithType> Stilbits werden auf festgelegt `false` für die <xref:System.Windows.Forms.Button> -Steuerelement, und die <xref:System.Windows.Forms.Button.DoubleClick> Ereignis wird nicht ausgelöst.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Button.DoubleClick> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.Button> mit dem Namen `Button1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Button.DoubleClick> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#137](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#137)]
+ [!code-vb[System.Windows.Forms.EventExamples#137](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#137)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDoubleClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Button.MouseDoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzer mit der Maus auf das <see cref="T:System.Windows.Forms.Button" />-Steuerelement doppelklickt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Forms.ControlStyles?displayProperty=nameWithType> und <xref:System.Windows.Forms.ControlStyles?displayProperty=nameWithType> Stilbits werden auf festgelegt `false` für die <xref:System.Windows.Forms.Button> -Steuerelement, und die <xref:System.Windows.Forms.Button.MouseDoubleClick> Ereignis wird nicht ausgelöst.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Button.MouseDoubleClick> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.Button> mit dem Namen `Button1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Button.MouseDoubleClick> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#138](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#138)]
+ [!code-vb[System.Windows.Forms.EventExamples#138](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#138)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyDefault">
+      <MemberSignature Language="C#" Value="public virtual void NotifyDefault (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void NotifyDefault(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Button.NotifyDefault(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <see langword="true" />Wenn die Schaltfläche wird die Darstellung der Standardschaltfläche haben; andernfalls <see langword="false" />.</param>
+        <summary>Benachrichtigt den <see cref="T:System.Windows.Forms.Button" /> gibt an, ob es die Standardschaltfläche ist, sodass seine Darstellung entsprechend angepasst werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, durch das übergeordnete Formular zum Benachrichtigen der <xref:System.Windows.Forms.Button> , dass als Standardschaltfläche und analysesituationen festgelegt werden sollte, seine Darstellung entsprechend angepasst. Normalerweise weist eine Schaltfläche, die die Standardschaltfläche für ein Formular ist einen dickeren Rahmen als die anderen Schaltflächen auf dem Formular an.  
+  
+ Aufrufen der <xref:System.Windows.Forms.Button.NotifyDefault%2A> Methode zeichnet nur die Schaltfläche "" als Standardschaltfläche; ihr Verhalten wird nicht geändert. Damit die Schaltfläche verhält sich wie eine Standardschaltfläche, zugeordnet werden muss die <xref:System.Windows.Forms.Form.AcceptButton%2A> Eigenschaft von der <xref:System.Windows.Forms.Form>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.Button.NotifyDefault(System.Boolean)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Button.NotifyDefault(System.Boolean)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected override void OnClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Button.OnClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.Click" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFontChanged">
+      <MemberSignature Language="C#" Value="protected override void OnFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Button.OnFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.FontChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.Button.OnFontChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.Button.OnFontChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.Button.OnFontChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseEnter">
+      <MemberSignature Language="C#" Value="protected override void OnMouseEnter (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseEnter(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Button.OnMouseEnter(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.Control.OnMouseEnter(System.EventArgs)" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Button.OnMouseLeave(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.Control.OnMouseLeave(System.EventArgs)" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs mevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs mevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Button.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mevent" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="mevent">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.ButtonBase.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.Button.OnMouseUp%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.Button.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.Button.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextChanged">
+      <MemberSignature Language="C#" Value="protected override void OnTextChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Button.OnTextChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.TextChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.Button.OnTextChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.Button.OnTextChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.Button.OnTextChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformClick">
+      <MemberSignature Language="C#" Value="public void PerformClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PerformClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Button.PerformClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert eine <see cref="E:System.Windows.Forms.Control.Click" /> Ereignis für eine Schaltfläche.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann aufgerufen werden, zum Auslösen der <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel generiert eine <xref:System.Windows.Forms.Control.Click> -Ereignis für ein <xref:System.Windows.Forms.Button> für abwechselnde <xref:System.Windows.Forms.Control.Click> Ereignisse einer anderen Schaltfläche. Mit diesem Code wird davon ausgegangen, dass zwei <xref:System.Windows.Forms.Button> Steuerelemente in einem Formular instanziiert wurden und eine Membervariable mit dem Namen `myVar` als eine 32-Bit-Ganzzahl mit Vorzeichen innerhalb der Klasse deklariert wurde.  
+  
+ [!code-cpp[Classic Button.PerformClick Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Button.PerformClick Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Button.PerformClick Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Button.PerformClick Example/CS/source.cs#1)]
+ [!code-vb[Classic Button.PerformClick Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Button.PerformClick Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMnemonic">
+      <MemberSignature Language="C#" Value="protected override bool ProcessMnemonic (char charCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ProcessMnemonic(char charCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Button.ProcessMnemonic(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charCode" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="charCode">Das mnemonische Zeichen eingegeben.</param>
+        <summary>Verarbeitet ein mnemonisches Zeichen.</summary>
+        <returns>
+          <see langword="true" />Wenn das mnemonische Zeichen verarbeitet wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Überschreiben <xref:System.Windows.Forms.Button.ProcessMnemonic%2A> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <xref:System.Windows.Forms.Button.ProcessMnemonic%2A> um sicherzustellen, dass die grundlegende Funktionalität bleibt unverändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Button.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.String" /> zurück, die den Namen der <see cref="T:System.ComponentModel.Component" /> enthält (sofern vorhanden). Diese Methode darf nicht überschrieben werden.</summary>
+        <returns>Eine <see cref="T:System.String" />, die den Namen der <see cref="T:System.ComponentModel.Component" /> enthält (sofern vorhanden), oder <see langword="null" />, wenn die <see cref="T:System.ComponentModel.Component" /> unbenannt ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Button.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Die zu verarbeitende Windows-<see cref="T:System.Windows.Forms.Message" />.</param>
+        <summary>Verarbeitet Windows-Meldungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

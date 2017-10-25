@@ -1,0 +1,173 @@
+<Type Name="IEntityChangeTracker" FullName="System.Data.Objects.DataClasses.IEntityChangeTracker">
+  <TypeSignature Language="C#" Value="public interface IEntityChangeTracker" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEntityChangeTracker" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.IEntityChangeTracker" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Funktionen, die von Object Services verwendet werden, zum Nachverfolgen von Änderungen, die an den Eigenschaften eines Objekts vorgenommen werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.EntityObject> und <xref:System.Data.Objects.DataClasses.ComplexObject> sind die Basisklassen für die von den Entity Data Model-Tools generierten Entitätstypen und komplexen Typen. Beide Basisklassen verwenden <xref:System.Data.Objects.DataClasses.IEntityChangeTracker>, um Änderungen von Eigenschaften zu melden.  
+  
+ Weitere Informationen finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) und [Nachverfolgen von Änderungen in POCO-Entitäten](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EntityComplexMemberChanged">
+      <MemberSignature Language="C#" Value="public void EntityComplexMemberChanged (string entityMemberName, object complexObject, string complexObjectMemberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EntityComplexMemberChanged(string entityMemberName, object complexObject, string complexObjectMemberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanged(System.String,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entityMemberName" Type="System.String" />
+        <Parameter Name="complexObject" Type="System.Object" />
+        <Parameter Name="complexObjectMemberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entityMemberName">Der Name der komplexen Eigenschaft des Entitätstyps, die geändert wurden.</param>
+        <param name="complexObject">Der komplexe Typ, der die geänderte Eigenschaft enthält.</param>
+        <param name="complexObjectMemberName">Der Name der Eigenschaft, die für den komplexen Typ geändert wurde.</param>
+        <summary>Benachrichtigt das System zur änderungsnachverfolgung, das Änderung einer Eigenschaft eines komplexen Typs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanged%2A>Dient der <xref:System.Data.Objects.DataClasses.ComplexObject> zum Bericht, der eine Eigenschaft geändert wurde.  
+  
+ Weitere Informationen finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) und [Nachverfolgen von Änderungen in POCO-Entitäten](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityComplexMemberChanging">
+      <MemberSignature Language="C#" Value="public void EntityComplexMemberChanging (string entityMemberName, object complexObject, string complexObjectMemberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EntityComplexMemberChanging(string entityMemberName, object complexObject, string complexObjectMemberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanging(System.String,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entityMemberName" Type="System.String" />
+        <Parameter Name="complexObject" Type="System.Object" />
+        <Parameter Name="complexObjectMemberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entityMemberName">Der Name der Entitätseigenschaft der obersten Ebene, die geändert wird.</param>
+        <param name="complexObject">Der komplexe Typ, der die Eigenschaft enthält, die geändert wird.</param>
+        <param name="complexObjectMemberName">Der Name der Eigenschaft, die für den komplexen Typ geändert wird.</param>
+        <summary>Benachrichtigt das System zur Änderungsnachverfolgung über eine ausstehende Änderung einer komplexen Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanging%2A> wird von <xref:System.Data.Objects.DataClasses.EntityObject> und <xref:System.Data.Objects.DataClasses.ComplexObject> zum Melden der ausstehenden Änderung einer komplexen Eigenschaft verwendet.  
+  
+ Weitere Informationen finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) und [Nachverfolgen von Änderungen in POCO-Entitäten](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityMemberChanged">
+      <MemberSignature Language="C#" Value="public void EntityMemberChanged (string entityMemberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EntityMemberChanged(string entityMemberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanged(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entityMemberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entityMemberName">Der Name der geänderten Eigenschaft.</param>
+        <summary>Benachrichtigt den Änderungsprotokollierer, den Änderung einer Eigenschaft eines Entitätstyps.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanged%2A>Dient der <xref:System.Data.Objects.DataClasses.EntityObject> zum Bericht, der eine Eigenschaft geändert wurde.  
+  
+ Weitere Informationen finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) und [Nachverfolgen von Änderungen in POCO-Entitäten](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityMemberChanging">
+      <MemberSignature Language="C#" Value="public void EntityMemberChanging (string entityMemberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EntityMemberChanging(string entityMemberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanging(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entityMemberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entityMemberName">Der Name der Eigenschaft, die sich ändert.</param>
+        <summary>Benachrichtigt das System zur änderungsnachverfolgung über eine ausstehende Änderung einer Eigenschaft eines Entitätstyps.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanging%2A>Dient der <xref:System.Data.Objects.DataClasses.EntityObject> Bericht, die eine Eigenschaft geändert wird.  
+  
+ Weitere Informationen finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) und [Nachverfolgen von Änderungen in POCO-Entitäten](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityState">
+      <MemberSignature Language="C#" Value="public System.Data.EntityState EntityState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.EntityState EntityState" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Status eines nachverfolgten Objekts ab.</summary>
+        <value>Ein <see cref="T:System.Data.EntityState" />, der den Status des nachverfolgten Objekts darstellt.  
+  
+ Weitere Informationen finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) und [Nachverfolgen von Änderungen in POCO-Entitäten](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

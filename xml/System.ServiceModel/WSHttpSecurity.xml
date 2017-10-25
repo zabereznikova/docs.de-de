@@ -1,0 +1,222 @@
+<Type Name="WSHttpSecurity" FullName="System.ServiceModel.WSHttpSecurity">
+  <TypeSignature Language="C#" Value="public sealed class WSHttpSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WSHttpSecurity extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.WSHttpSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Sicherheitseinstellungen für die <see cref="T:System.ServiceModel.WSHttpBinding" /> dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.WSHttpBinding>-Klasse ist für die Zusammenarbeit mit Diensten vorgesehen, die WS-*-Spezifikationen implementieren. Die Transportsicherheit für diese Bindung ist SSL (Secure Sockets Layer) über HTTP oder HTTPS.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSHttpSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WSHttpSecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.WSHttpSecurity" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.NonDualMessageSecurityOverHttp Message { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.NonDualMessageSecurityOverHttp Message" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WSHttpSecurity.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.NonDualMessageSecurityOverHttp</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Nachrichtensicherheitseinstellungen für diese Bindung ab.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.NonDualMessageSecurityOverHttp" />-Instanz.  
+  
+ Der Standardwert umfasst Folgendes: <see cref="P:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext" /> mit der Standardeinstellung <see langword="true" />, <see cref="P:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType" /> ist <see cref="F:System.ServiceModel.MessageCredentialType.Windows" />, <see cref="P:System.ServiceModel.MessageSecurityOverHttp.AlgorithmSuite" /> ist <see cref="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256" /> und <see cref="P:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential" /> ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Code veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[c_CreateSecureSession#4](~/samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.SecurityMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.SecurityMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WSHttpSecurity.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.SecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den <see cref="T:System.ServiceModel.SecurityMode" /> von Nachrichten für diese Bindung an.</summary>
+        <value>Die <see cref="T:System.ServiceModel.SecurityMode" />-Einstellung für diese Bindung. Die Standardeinstellung ist <see cref="F:System.ServiceModel.SecurityMode.Message" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt, ob die Einstellungen aus den <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>-Eigenschaftenbuckets und/oder <xref:System.ServiceModel.WSHttpSecurity.Message%2A>-Eigenschaftenbuckets wirksam werden oder nicht.  
+  
+   
+  
+## Examples  
+ Mit dem folgenden Code wird diese Eigenschaft festgelegt.  
+  
+ [!code-csharp[c_CreateSecureSession#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert der <see cref="P:System.ServiceModel.WSHttpSecurity.Mode" />-Einstellung ist nicht definiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMessage">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMessage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WSHttpSecurity.ShouldSerializeMessage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.WSHttpSecurity.Message" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll. Dies wird von [!INCLUDE[indigo2](~/includes/indigo2-md.md)] für die XAML-Integration verwendet.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.WSHttpSecurity.Message" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMode">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WSHttpSecurity.ShouldSerializeMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.WSHttpSecurity.Mode" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll. Dies wird von [!INCLUDE[indigo2](~/includes/indigo2-md.md)] für die XAML-Integration verwendet.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.WSHttpSecurity.Mode" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeTransport">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeTransport ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeTransport() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WSHttpSecurity.ShouldSerializeTransport" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.WSHttpSecurity.Transport" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.WSHttpSecurity.Transport" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transport">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.HttpTransportSecurity Transport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.HttpTransportSecurity Transport" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WSHttpSecurity.Transport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.HttpTransportSecurity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, das die Transportsicherheitseinstellungen für diese Bindung enthält.</summary>
+        <value>Die <see cref="T:System.ServiceModel.HttpTransportSecurity" />-Einstellung für diese Bindung.  
+  
+ Der Standardwert ist für <see cref="P:System.ServiceModel.HttpTransportSecurity.ClientCredentialType" /> auf <see cref="F:System.ServiceModel.HttpClientCredentialType.None" /> und für <see cref="P:System.ServiceModel.HttpTransportSecurity.ProxyCredentialType" /> auf <see cref="F:System.ServiceModel.HttpProxyCredentialType.None" /> festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können das von dieser Eigenschaft zurückgegebene Objekt verwenden, um die Transportsicherheitseinstellungen für die Bindung festzulegen.  
+  
+   
+  
+## Examples  
+ Mit dem folgenden Code wird der Clientanmeldeinformationstyp auf Windows festgelegt.  
+  
+```csharp  
+// The code uses a shortcut to specify the security mode to Transport.  
+WSHttpBinding b = new WSHttpBinding(SecurityMode.Transport);  
+b.Security.Transport.ClientCredentialType = HttpClientCredentialType.Windows;  
+```  
+  
+```vb  
+' The code uses a shortcut to specify the security mode to Transport.  
+Dim b As WSHttpBinding = new WSHttpBinding(SecurityMode.Transport)  
+b.Security.Transport.ClientCredentialType = HttpClientCredentialType.Windows  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

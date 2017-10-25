@@ -1,0 +1,471 @@
+<Type Name="DocumentDesigner" FullName="System.Windows.Forms.Design.DocumentDesigner">
+  <TypeSignature Language="C#" Value="public class DocumentDesigner : System.Windows.Forms.Design.ScrollableControlDesigner, IDisposable, System.ComponentModel.Design.IRootDesigner, System.Drawing.Design.IToolboxUser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DocumentDesigner extends System.Windows.Forms.Design.ScrollableControlDesigner implements class System.ComponentModel.Design.IDesigner, class System.ComponentModel.Design.IRootDesigner, class System.Drawing.Design.IToolboxUser, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.DocumentDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Design.ScrollableControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IRootDesigner</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Drawing.Design.IToolboxUser</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Windows.Forms")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Basisdesignerklasse zum Erweitern des Entwurfsmodusverhaltens von einem sowie zum Bereitstellen einer Entwurfsmodusansicht auf Stammebene für ein <see cref="T:System.Windows.Forms.Control" />-Objekt, das geschachtelte Steuerelemente unterstützt und Bildlaufnachrichten empfangen sollte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Designer ist ein Stammdesigner, was bedeutet, dass es die Entwurfsmodusansicht auf Stammebene für das zugeordnete Dokument enthält, im Entwurfsmodus angezeigt wird.  
+  
+ Sie können einen Designer Zuordnen eines Typs unter Verwendung einer <xref:System.ComponentModel.DesignerAttribute>. Einen Überblick über das Anpassen des Verhaltens der Design-Time finden Sie unter [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DocumentDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.DocumentDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.Design.DocumentDesigner" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.Windows.Forms.Design.DocumentDesigner> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureMenuEditorService">
+      <MemberSignature Language="C#" Value="protected virtual void EnsureMenuEditorService (System.ComponentModel.IComponent c);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EnsureMenuEditorService(class System.ComponentModel.IComponent c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.EnsureMenuEditorService(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="c">Die <see cref="T:System.ComponentModel.IComponent" /> verfügt über eine Kontext-menüdienst, um sicherzustellen, dass.</param>
+        <summary>Überprüft das Vorhandensein eines Diensts im Menü-Editor, und erstellt einen, falls noch nicht vorhanden ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGlyphs">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.Design.Behavior.GlyphCollection GetGlyphs (System.Windows.Forms.Design.Behavior.GlyphSelectionType selectionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.Design.Behavior.GlyphCollection GetGlyphs(valuetype System.Windows.Forms.Design.Behavior.GlyphSelectionType selectionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.GetGlyphs(System.Windows.Forms.Design.Behavior.GlyphSelectionType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.GlyphCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectionType" Type="System.Windows.Forms.Design.Behavior.GlyphSelectionType" />
+      </Parameters>
+      <Docs>
+        <param name="selectionType">Ein <see cref="T:System.Windows.Forms.Design.Behavior.GlyphSelectionType" /> Wert, der den Auswahlzustand angibt.</param>
+        <summary>Ruft eine <see cref="T:System.Windows.Forms.Design.Behavior.GlyphCollection" /> darstellt der <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> Objekte.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />-Objekten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolSupported">
+      <MemberSignature Language="C#" Value="protected virtual bool GetToolSupported (System.Drawing.Design.ToolboxItem tool);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool GetToolSupported(class System.Drawing.Design.ToolboxItem tool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.GetToolSupported(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="tool">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> So testen Sie die Toolbox-Unterstützung.</param>
+        <summary>Gibt an, ob das angegebene Tool vom Designer unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />Wenn das Tool in der Toolbox aktiviert werden soll; <see langword="false" /> , wenn der Dokument-Designer Gewusst wie: Verwenden Sie das Tool nicht bekannt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Tool unterstützt wird, wird in der Toolbox aktiviert werden, wenn der Designer den Fokus erhält. Andernfalls wird es deaktiviert. Sobald ein Tool gekennzeichnet ist als aktiviert oder deaktiviert, es kann nicht erneut abgefragt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das dem Designer zuzuordnende <see cref="T:System.ComponentModel.IComponent" />.</param>
+        <summary>Initialisiert den Designer mit der angegebenen Komponente.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Der Designer kann Zugriff auf die Site der Komponente und von dort Dienste anfordern, in dieser Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="menuEditorService">
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.Design.IMenuEditorService menuEditorService;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Windows.Forms.Design.IMenuEditorService menuEditorService" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.DocumentDesigner.menuEditorService" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.IMenuEditorService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Initialisiert die MenuEditorService-Variable auf <see langword="null" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextMenu">
+      <MemberSignature Language="C#" Value="protected override void OnContextMenu (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnContextMenu(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.OnContextMenu(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die horizontale Bildschirmkoordinate, um das Kontextmenü anzuzeigen.</param>
+        <param name="y">Die vertikale Bildschirmkoordinate, um das Kontextmenü anzuzeigen.</param>
+        <summary>Wird aufgerufen, wenn das Kontextmenü angezeigt werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode zeigt das Kontextmenü des Dokument-Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateHandle">
+      <MemberSignature Language="C#" Value="protected override void OnCreateHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCreateHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.OnCreateHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, unmittelbar nachdem das Handle für den Designer erstellt wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Eine <see cref="T:System.Collections.IDictionary" /> , die die Eigenschaften für die Klasse der Komponente enthält.</param>
+        <summary>Passt die Gruppe von Eigenschaften, die die Komponente verfügbar, über macht eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.ComponentModel.Design.IDesignerFilter> -Schnittstellenmethode fügt einen Satz von Eigenschaften für diesen Designer-Komponente zur Entwurfszeit. Diese Methode fügt die folgenden durchsuchbaren Eigenschaften hinzu: "Location" und "BackColor".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionRules">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.Design.SelectionRules SelectionRules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Design.SelectionRules SelectionRules" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.DocumentDesigner.SelectionRules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.SelectionRules</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.Design.SelectionRules" /> für den Designer.</summary>
+        <value>Eine bitweise Kombination von <see cref="T:System.Windows.Forms.Design.SelectionRules" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt ein <xref:System.Windows.Forms.Design.SelectionRules> , die verhindert, dass das Dokument, dessen Größe geändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IRootDesigner.GetView">
+      <MemberSignature Language="C#" Value="object IRootDesigner.GetView (System.ComponentModel.Design.ViewTechnology technology);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.Design.IRootDesigner.GetView(valuetype System.ComponentModel.Design.ViewTechnology technology) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.System#ComponentModel#Design#IRootDesigner#GetView(System.ComponentModel.Design.ViewTechnology)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="technology" Type="System.ComponentModel.Design.ViewTechnology" />
+      </Parameters>
+      <Docs>
+        <param name="technology">Ein <see cref="T:System.ComponentModel.Design.ViewTechnology" /> , der eine bestimmte Ansicht Technologie angibt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="T:System.ComponentModel.Design.ViewTechnology" />.</summary>
+        <returns>Ein Objekt, das die Ansicht für diesen Designer darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.Design.DocumentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IRootDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IRootDesigner.SupportedTechnologies">
+      <MemberSignature Language="C#" Value="System.ComponentModel.Design.ViewTechnology[] System.ComponentModel.Design.IRootDesigner.SupportedTechnologies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Design.ViewTechnology[] System.ComponentModel.Design.IRootDesigner.SupportedTechnologies" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.DocumentDesigner.System#ComponentModel#Design#IRootDesigner#SupportedTechnologies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ViewTechnology[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.Design.IRootDesigner.SupportedTechnologies" />.</summary>
+        <value>Ein Array unterstützter <see cref="T:System.ComponentModel.Design.ViewTechnology" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.Design.DocumentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IRootDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Drawing.Design.IToolboxUser.GetToolSupported">
+      <MemberSignature Language="C#" Value="bool IToolboxUser.GetToolSupported (System.Drawing.Design.ToolboxItem tool);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Drawing.Design.IToolboxUser.GetToolSupported(class System.Drawing.Design.ToolboxItem tool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.System#Drawing#Design#IToolboxUser#GetToolSupported(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="tool">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> für Toolbox-Unterstützung getestet werden.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Drawing.Design.IToolboxUser.GetToolSupported(System.Drawing.Design.ToolboxItem)" />.</summary>
+        <returns>
+          <see langword="true" />Wenn das Tool von der Toolbox unterstützt wird und aktiviert werden kann; <see langword="false" /> , wenn der Dokument-Designer nicht wissen, wie das Tool verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.Design.DocumentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IRootDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Drawing.Design.IToolboxUser.ToolPicked">
+      <MemberSignature Language="C#" Value="void IToolboxUser.ToolPicked (System.Drawing.Design.ToolboxItem tool);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Drawing.Design.IToolboxUser.ToolPicked(class System.Drawing.Design.ToolboxItem tool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.System#Drawing#Design#IToolboxUser#ToolPicked(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="tool">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> auswählen.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Drawing.Design.IToolboxUser.ToolPicked(System.Drawing.Design.ToolboxItem)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.Design.DocumentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IRootDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolPicked">
+      <MemberSignature Language="C#" Value="protected virtual void ToolPicked (System.Drawing.Design.ToolboxItem tool);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ToolPicked(class System.Drawing.Design.ToolboxItem tool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.ToolPicked(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="tool">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> für eine Komponente zu erstellen.</param>
+        <summary>Wählt das angegebene Tool an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Design.IToolboxUser.ToolPicked%2A>wird aufgerufen, wenn der Benutzer auf ein Toolboxelement doppelklickt. Der Dokument-Designer sollte eine Komponente für das angegebene Tool erstellen. Nur die Tools, die in der Toolbox aktiviert sind, werden an diese Methode übergeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.DocumentDesigner.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Der zu verarbeitende <see cref="T:System.Windows.Forms.Message" />.</param>
+        <summary>Verarbeitet Windows-Meldungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

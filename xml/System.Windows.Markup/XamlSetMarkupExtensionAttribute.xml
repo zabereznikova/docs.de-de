@@ -1,0 +1,81 @@
+<Type Name="XamlSetMarkupExtensionAttribute" FullName="System.Windows.Markup.XamlSetMarkupExtensionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class XamlSetMarkupExtensionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XamlSetMarkupExtensionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.XamlSetMarkupExtensionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Klasse eine Markuperweiterung einen Wert angeben können, und verweist auf einen Handler für Mengenoperationen für Markup-Erweiterung verwenden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardimplementierung für ein XAML-Objektwriter verwendet CLR Reflektion und diese CLR-Attributen um zu ermitteln, ob ein absichtliche Rückruf für Markuperweiterungsverwendungen, die Werte von einem Typ oder Member festlegen. Z. B. eine <xref:System.Xaml.XamlServices> geladen oder analysiert wird, oder ein <xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlObjectWriter> -Sequenz wird dieses Attribut verwenden, und ruft die namens "Callback" im Rahmen des Vorgangs immer basierend auf eine Markuperweiterungsverwendung geschrieben der Objektknoten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlSetMarkupExtensionAttribute (string xamlSetMarkupExtensionHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string xamlSetMarkupExtensionHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlSetMarkupExtensionAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xamlSetMarkupExtensionHandler" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xamlSetMarkupExtensionHandler">Der Name des Handlers, der für die Markuperweiterung verwendet Mengenoperationen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.XamlSetMarkupExtensionAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode, die auf die verwiesen wird anhand des Namens durch die `xamlSetMarkupExtensionHandler` Wert sollte auf einen generischen basieren <xref:System.EventHandler%601> mit Delegieren <xref:System.Windows.Markup.XamlSetMarkupExtensionEventArgs> Ereignisdaten-Einschränkung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XamlSetMarkupExtensionHandler">
+      <MemberSignature Language="C#" Value="public string XamlSetMarkupExtensionHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XamlSetMarkupExtensionHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XamlSetMarkupExtensionAttribute.XamlSetMarkupExtensionHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft der Namen des Handlers, der für die Markuperweiterung verwendet Mengenoperationen.</summary>
+        <value>Der Name des Handlers, der für die Markuperweiterung verwendet Mengenoperationen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Handler muss auf einen generischen basieren <xref:System.EventHandler%601> mit Delegieren <xref:System.Windows.Markup.XamlSetMarkupExtensionEventArgs> Ereignisdaten-Einschränkung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

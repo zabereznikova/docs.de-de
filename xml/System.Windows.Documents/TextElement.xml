@@ -1,0 +1,1154 @@
+<Type Name="TextElement" FullName="System.Windows.Documents.TextElement">
+  <TypeSignature Language="C#" Value="public abstract class TextElement : System.Windows.FrameworkContentElement, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract TextElement extends System.Windows.FrameworkContentElement implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.TextElement" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkContentElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Eine abstrakte Klasse, die als Basisklasse verwendet werden, für die abstrakte <see cref="T:System.Windows.Documents.Block" /> und <see cref="T:System.Windows.Documents.Inline" /> Klassen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Background { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Background" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.Background" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den <see cref="T:System.Windows.Media.Brush" /> zum Ausfüllen des Inhaltsbereichs verwendet.</summary>
+        <value>Der Pinsel, der zum Ausfüllen des Inhaltsbereichs, verwendet oder <see langword="null" /> Hintergrundpinsel nicht zu verwenden. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Tabelle der Muster, die die verfügbaren vordefinierten Pinsel Farben angezeigt werden, finden Sie unter <xref:System.Windows.Media.Brushes>.  
+  
+<a name="dependencyPropertyInfo_Background"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TextElement.BackgroundProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.Background%2A> -Attribut mit <xref:System.Windows.Documents.Paragraph> wie das Beispielelement.  
+  
+ [!code-xaml[TextElementSnippets#_TextElement_BackgroundXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml#_textelement_backgroundxaml)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Vordergrund Grün, Hintergrund hat die Farbe biskuit](~/add/media/textelement-foreback.png "Bildschirmabbildung: Vordergrund Grün, Hintergrund hat die Farbe biskuit")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.Background%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[TextElementSnippets#_TextElement_Background](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_background)]
+ [!code-vb[TextElementSnippets#_TextElement_Background](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_background)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TextElement.BackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TextElement.Background" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentEnd">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer ContentEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TextPointer ContentEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.ContentEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.TextPointer" /> , die das Ende des Inhalts im Element darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.TextPointer" /> , darstellt, das Ende des Inhalts in der <see cref="T:System.Windows.Documents.TextElement" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.FlowDocument.ContentEnd%2A> Eigenschaft wird häufig verwendet, um Inhalt am Ende Anfügen einer <xref:System.Windows.Documents.TextElement>.  
+  
+ Die <xref:System.Windows.Documents.TextPointer> von dieser Eigenschaft zurückgegebene verfügt immer über seine <xref:System.Windows.Documents.TextPointer.LogicalDirection%2A> festgelegt <xref:System.Windows.Documents.LogicalDirection?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentStart">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer ContentStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TextPointer ContentStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.ContentStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.TextPointer" /> , die den Anfang des Inhalts im Element darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.TextPointerContext" /> , die dem Start des Inhalts im darstellt der <see cref="T:System.Windows.Documents.TextElement" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.FlowDocument.ContentStart%2A> Eigenschaft wird häufig zum Einfügen von Inhalt an den Anfang einer <xref:System.Windows.Documents.TextElement>.  
+  
+ Die <xref:System.Windows.Documents.TextPointer> von dieser Eigenschaft zurückgegebene verfügt immer über seine <xref:System.Windows.Documents.TextPointer.LogicalDirection%2A> festgelegt <xref:System.Windows.Documents.LogicalDirection?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementEnd">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer ElementEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TextPointer ElementEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.ElementEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.TextPointer" /> , die die Position direkt hinter das Ende des Elements darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.TextPointer" /> , die die Position direkt hinter das Ende darstellt der <see cref="T:System.Windows.Documents.TextElement" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.TextPointer> von dieser Eigenschaft zurückgegebene verfügt immer über seine <xref:System.Windows.Documents.TextPointer.LogicalDirection%2A> festgelegt <xref:System.Windows.Documents.LogicalDirection?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementStart">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer ElementStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TextPointer ElementStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.ElementStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.TextPointer" /> , die die Position unmittelbar vor dem Start des Elements darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.TextPointerContext" /> , die die Position unmittelbar vor dem Start des stellt die <see cref="T:System.Windows.Documents.TextElement" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.TextPointer> von dieser Eigenschaft zurückgegebene verfügt immer über seine <xref:System.Windows.Documents.TextPointer.LogicalDirection%2A> festgelegt <xref:System.Windows.Documents.LogicalDirection?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamily">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FontFamily FontFamily { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.FontFamily FontFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.FontFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Font, Modifiability=System.Windows.Modifiability.Unmodifiable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die bevorzugte Schriftfamilie der obersten Ebene für den Inhalt des Elements ab oder legt sie fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.FontFamily" /> Objekt, das die bevorzugte Schriftfamilie oder eine primäre bevorzugte Schriftfamilie mit einer oder mehreren ausweichschriftfamilien angibt. Die Standardeinstellung ist die Schriftart, die bestimmt, indem die <see cref="P:System.Windows.SystemFonts.MessageFontFamily" /> Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn mehrere Familien angegeben werden, dienen die zweite und alle nachfolgenden Schriftartfamilien als Alternative Produktreihen in Fällen verwendet werden, in dem die primäre Schriftfamilie nicht verfügbar oder nicht anwendbar ist.  
+  
+ Diese Eigenschaft gibt nur eine Einstellung an.  Wenn die angegebene Schriftfamilie nicht verfügbar ist, ist der <xref:System.Windows.Documents.FlowDocument> im Hintergrund ausgewichen, auf die Schriftart, die bestimmt, indem die <xref:System.Windows.SystemFonts.MessageFontFamily%2A> Wert.  
+  
+ Diese Abhängigkeitseigenschaft wird auch die Verwendung einer angefügten Eigenschaft. In [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ist die Verwendung \< *Objekt* <xref:System.Windows.Documents.TextElement.FontFamily%2A?displayProperty=nameWithType>= "*Wert*" … / >, wobei *Objekt* ist ein Object-Element (in der Regel ein Element für fortlaufenden) als Bestandteil einer <xref:System.Windows.Controls.TextBlock>, und *Wert* ist einer der Werte Zeichenfolgenformat wie im XAML-Werte erläutert. Im Code wird die Verwendung der angefügten Eigenschaft von unterstützt die <xref:System.Windows.Documents.TextElement.GetFontFamily%2A> und <xref:System.Windows.Documents.TextElement.SetFontFamily%2A> Methoden. Verwendung als angefügte Eigenschaft ist, da die meisten Elemente können nicht gemeinsam enthalten sein, eine <xref:System.Windows.Documents.TextElement> Unterstützung eine analoge Laufzeitstruktur `FontFamily` -Eigenschaft, die der Inhaltshost für das Rendering verwendet.  
+  
+<a name="xamlAttributeUsage_FontFamily"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object FontFamily="fontFamilyName"/>  
+- or -  
+<object FontFamily="fontFamilyNamesList"/>  
+- or -  
+<object FontFamily="fontFamilyFolderReference"/>  
+- or -  
+<object FontFamily="fontFamilyUriReference"/>  
+```  
+  
+<a name="xamlValues_FontFamily"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *fontFamilyName*  
+ Eine Zeichenfolge, die einen Namen der Schriftfamilie angibt.  Beispielsweise `"Arial"` oder `"Century Gothic"`.  
+  
+ *fontFamilyNamesList*  
+ Eine Zeichenfolge, die mehrere Namen angeben, getrennt durch ein Komma (Leerräume nach einem Komma wird ignoriert).  Das erste angegebene Schriftfamilie dient als die primäre Schriftfamilie; Nachfolgende Schriftartfamilien dienen als Alternative Produktreihen in Fällen verwendet werden, in dem die primäre Schriftfamilie nicht verfügbar oder nicht anwendbar ist.  Beispielsweise `"Arial, Century Gothic"` Arial als die primäre Schriftfamilie, mit dem Gotischen mit Jahrhundert als fallback-Schriftfamilie angegeben.  
+  
+ *fontFamilyFolderReference*  
+ Eine Zeichenfolge, die einen Ordner mit der Schriftart, zusammen mit einem Namen der Schriftfamilie angibt.  Die Ordner und den Namen der Schriftfamilie werden durch das Zeichen # getrennt.  Der Ordnerverweis kann absolut oder relativ sein.  Beispielsweise `"Custom Fonts\#My Custom Font"`.  
+  
+ *fontFamilyUriReference*  
+ Eine Zeichenfolge, eine [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] für die Schriftart, zusammen mit einem Namen der Schriftfamilie.  Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] und Namen der Schriftfamilie, die durch ein Nummernzeichen (#) getrennt sind.  Beispielsweise `"http://MyFontServer/Fonts/#My Custom Font"`.  
+  
+<a name="dependencyPropertyInfo_FontFamily"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TextElement.FontFamilyProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.FontFamily%2A> -Attribut mit <xref:System.Windows.Documents.Paragraph> wie das Beispielelement.  
+  
+ [!code-xaml[TextElementSnippets#_TextElement_FontPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml#_textelement_fontpropsxaml)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Text mit Text festgelegt](~/add/media/textelement-fontprops.png "Bildschirmabbildung: Text mit Text festgelegt")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.FontFamily%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[TextElementSnippets#_TextElement_FontProps](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_fontprops)]
+ [!code-vb[TextElementSnippets#_TextElement_FontProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_fontprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamilyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontFamilyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontFamilyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TextElement.FontFamilyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TextElement.FontFamily" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSize">
+      <MemberSignature Language="C#" Value="public double FontSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 FontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.FontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.FontSizeConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schriftgrad für den Inhalt des Elements ab oder legt ihn fest.</summary>
+        <value>Der gewünschte Schriftgrad in geräteunabhängigen Pixeln, größer als 0,001 und kleiner oder gleich 35791.  Der Standardwert richtet sich nach der aktuellen Systemeinstellungen und richtet sich nach der <see cref="P:System.Windows.SystemFonts.MessageFontSize" /> Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Abhängigkeitseigenschaft wird auch die Verwendung einer angefügten Eigenschaft. In [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ist die Verwendung \< *Objekt* <xref:System.Windows.Documents.TextElement.FontSize%2A?displayProperty=nameWithType>= "*Wert*" … / >, wobei *Objekt* ist ein Object-Element (in der Regel ein Element für fortlaufenden) als Bestandteil einer <xref:System.Windows.Documents.TextElement>, und *Wert* ist einer der Werte Zeichenfolgenformat wie im XAML-Werte erläutert. Im Code wird die Verwendung der angefügten Eigenschaft von unterstützt die <xref:System.Windows.Documents.TextElement.GetFontSize%2A> und <xref:System.Windows.Documents.TextElement.SetFontSize%2A> Methoden. Verwendung als angefügte Eigenschaft ist, da die meisten Elemente können nicht gemeinsam enthalten sein, eine <xref:System.Windows.Documents.TextElement> Unterstützung eine analoge Laufzeitstruktur `FontSize` -Eigenschaft, die der Inhaltshost für das Rendering verwendet.  
+  
+<a name="xamlAttributeUsage_FontSize"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object FontSize="double"/>  
+- or -  
+<object FontSize="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_FontSize"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als 0,0 jedoch kleiner als oder gleich <xref:System.Double.PositiveInfinity>. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert, wie oben beschrieben, gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_FontSize"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TextElement.FontSizeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.FontSize%2A> -Attribut mit <xref:System.Windows.Documents.Paragraph> wie das Beispielelement.  
+  
+ [!code-xaml[TextElementSnippets#_TextElement_FontPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml#_textelement_fontpropsxaml)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Text mit Text festgelegt](~/add/media/textelement-fontprops.png "Bildschirmabbildung: Text mit Text festgelegt")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.FontSize%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[TextElementSnippets#_TextElement_FontProps](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_fontprops)]
+ [!code-vb[TextElementSnippets#_TextElement_FontProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_fontprops)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Documents.TextElement.FontSize" />wird festgelegt auf einen Wert größer als 35791 oder kleiner oder gleich 0,001.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontSizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontSizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TextElement.FontSizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TextElement.FontSize" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStretch">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStretch FontStretch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStretch FontStretch" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.FontStretch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Eigenschaften zum Strecken einer Schriftart für den Inhalt des Elements ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.FontStretch" /> -Struktur, die gewünschten Eigenschaften zum Strecken einer Schriftart verwenden angibt. Die Standardeinstellung ist <see cref="P:System.Windows.FontStretches.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Abhängigkeitseigenschaft wird auch die Verwendung einer angefügten Eigenschaft. In [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ist die Verwendung \< *Objekt* <xref:System.Windows.Documents.TextElement.FontStretch%2A?displayProperty=nameWithType>= "*Wert*" … / >, wobei *Objekt* ist ein Object-Element (in der Regel ein Element für fortlaufenden) als Bestandteil einer <xref:System.Windows.Documents.TextElement>, und *Wert* ist eines der Zeichenfolgenformat Eigenschaftsnamen der der <xref:System.Windows.FontStretch> Klasse. Im Code wird die Verwendung der angefügten Eigenschaft von unterstützt die <xref:System.Windows.Documents.TextElement.GetFontStretch%2A> und <xref:System.Windows.Documents.TextElement.SetFontStretch%2A> Methoden. Verwendung als angefügte Eigenschaft ist, da die meisten Elemente können nicht gemeinsam enthalten sein, eine <xref:System.Windows.Documents.TextElement> Unterstützung eine analoge Laufzeitstruktur `FontStretch` -Eigenschaft, die der Inhaltshost für das Rendering verwendet.  
+  
+<a name="dependencyPropertyInfo_FontStretch"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TextElement.FontStretchProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.FontStretch%2A> -Attribut mit <xref:System.Windows.Documents.Paragraph> wie das Beispielelement.  
+  
+ [!code-xaml[TextElementSnippets#_TextElement_FontPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml#_textelement_fontpropsxaml)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Text mit Text festgelegt](~/add/media/textelement-fontprops.png "Bildschirmabbildung: Text mit Text festgelegt")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.FontStretch%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[TextElementSnippets#_TextElement_FontProps](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_fontprops)]
+ [!code-vb[TextElementSnippets#_TextElement_FontProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_fontprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStretchProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontStretchProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontStretchProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TextElement.FontStretchProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TextElement.FontStretch" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStyle FontStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStyle FontStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.FontStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schriftschnitt für den Inhalt des Elements ab oder legt ihn fest.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Windows.FontStyles" /> Klasse, die den gewünschten Schriftschnitt angibt. Der Standardwert richtet sich nach der <see cref="P:System.Windows.SystemFonts.MessageFontStyle" /> Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Abhängigkeitseigenschaft wird auch die Verwendung einer angefügten Eigenschaft. In [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ist die Verwendung \< *Objekt* <xref:System.Windows.Documents.TextElement.FontStyle%2A?displayProperty=nameWithType>= "*Wert*" … / >, wobei *Objekt* ist ein Object-Element (in der Regel ein Element für fortlaufenden) enthaltenen eine <xref:System.Windows.Documents.TextElement>, und *Wert* ist eines der Zeichenfolgenformat Eigenschaftsnamen in die <xref:System.Windows.FontStyles> Klasse. Im Code wird die Verwendung der angefügten Eigenschaft von unterstützt die <xref:System.Windows.Documents.TextElement.GetFontStyle%2A> und <xref:System.Windows.Documents.TextElement.SetFontStyle%2A> Methoden. Verwendung als angefügte Eigenschaft ist, da die meisten Elemente können nicht gemeinsam enthalten sein, eine <xref:System.Windows.Documents.TextElement> Unterstützung eine analoge Laufzeitstruktur `FontStyle` -Eigenschaft, die der Inhaltshost für das Rendering verwendet.  
+  
+<a name="dependencyPropertyInfo_FontStyle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TextElement.FontStyleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.FontStyle%2A> -Attribut mit <xref:System.Windows.Documents.Paragraph> wie das Beispielelement.  
+  
+ [!code-xaml[TextElementSnippets#_TextElement_FontPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml#_textelement_fontpropsxaml)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Text mit Text festgelegt](~/add/media/textelement-fontprops.png "Bildschirmabbildung: Text mit Text festgelegt")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.FontStyle%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[TextElementSnippets#_TextElement_FontProps](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_fontprops)]
+ [!code-vb[TextElementSnippets#_TextElement_FontProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_fontprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TextElement.FontStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TextElement.FontStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeight">
+      <MemberSignature Language="C#" Value="public System.Windows.FontWeight FontWeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontWeight FontWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.FontWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schriftbreite der obersten Ebene für den Inhalt des Elements ab oder legt sie fest.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Windows.FontWeights" /> Klasse, die die gewünschte Schriftbreite angibt. Der Standardwert richtet sich nach der <see cref="P:System.Windows.SystemFonts.MessageFontWeight" /> Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Abhängigkeitseigenschaft wird auch die Verwendung einer angefügten Eigenschaft. In [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ist die Verwendung \< *Objekt* <xref:System.Windows.Documents.TextElement.FontWeight%2A?displayProperty=nameWithType>= "*Wert*" … / >, wobei *Objekt* ist ein Object-Element (in der Regel ein Element für fortlaufenden) als Bestandteil einer <xref:System.Windows.Documents.TextElement>, und *Wert* ist das Format der Zeichenfolge der Werte der <xref:System.Windows.FontWeight> Enumeration. Im Code wird die Verwendung der angefügten Eigenschaft von unterstützt die <xref:System.Windows.Documents.TextElement.GetFontWeight%2A> und <xref:System.Windows.Documents.TextElement.SetFontWeight%2A> Methoden. Verwendung als angefügte Eigenschaft ist, da die meisten Elemente können nicht gemeinsam enthalten sein, eine <xref:System.Windows.Documents.TextElement> Unterstützung eine analoge Laufzeitstruktur `FontWeight` -Eigenschaft, die der Inhaltshost für das Rendering verwendet.  
+  
+<a name="dependencyPropertyInfo_FontWeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TextElement.FontWeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.FontWeight%2A> -Attribut mit <xref:System.Windows.Documents.Paragraph> wie das Beispielelement.  
+  
+ [!code-xaml[TextElementSnippets#_TextElement_FontPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml#_textelement_fontpropsxaml)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Text mit Text festgelegt](~/add/media/textelement-fontprops.png "Bildschirmabbildung: Text mit Text festgelegt")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.FontWeight%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[TextElementSnippets#_TextElement_FontProps](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_fontprops)]
+ [!code-vb[TextElementSnippets#_TextElement_FontProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_fontprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontWeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontWeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TextElement.FontWeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TextElement.FontWeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Foreground">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Foreground { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Foreground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.Foreground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Brush" /> auf den Inhalt des Elements angewendet.</summary>
+        <value>Der Pinsel, der auf den Textinhalt angewendet werden soll. Die Standardeinstellung ist <see cref="P:System.Windows.Media.Brushes.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Tabelle mit Feldern, die die verfügbaren vordefinierten Pinsel Farben anzeigt, finden Sie unter <xref:System.Windows.Media.Brushes>.  
+  
+ Diese Abhängigkeitseigenschaft wird auch die Verwendung einer angefügten Eigenschaft. In [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ist die Verwendung \< *Objekt* <xref:System.Windows.Documents.TextElement.Foreground%2A?displayProperty=nameWithType>= "*Wert*" … / >, wobei *Objekt* ist ein Object-Element (in der Regel ein Element für fortlaufenden) als Bestandteil einer <xref:System.Windows.Documents.TextElement>, und *Wert* ist eine Zeichenfolge, die aufgelöst wird, eine <xref:System.Windows.Media.Brush> Implementierung-Wert. Im Code wird die Verwendung der angefügten Eigenschaft von unterstützt die <xref:System.Windows.Documents.TextElement.GetForeground%2A> und <xref:System.Windows.Documents.TextElement.SetForeground%2A> Methoden. Verwendung als angefügte Eigenschaft ist, da die meisten Elemente können nicht gemeinsam enthalten sein, eine <xref:System.Windows.Documents.TextElement> Unterstützung eine analoge Laufzeitstruktur `Foreground` -Eigenschaft, die der Inhaltshost für das Rendering verwendet.  
+  
+<a name="dependencyPropertyInfo_Foreground"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TextElement.ForegroundProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.Foreground%2A> -Attribut mit <xref:System.Windows.Documents.Paragraph> wie das Beispielelement.  
+  
+ [!code-xaml[TextElementSnippets#_TextElement_BackgroundXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml#_textelement_backgroundxaml)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Vordergrund Grün, Hintergrund hat die Farbe biskuit](~/add/media/textelement-foreback.png "Bildschirmabbildung: Vordergrund Grün, Hintergrund hat die Farbe biskuit")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.Foreground%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[TextElementSnippets#_TextElement_Background](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_background)]
+ [!code-vb[TextElementSnippets#_TextElement_Background](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_background)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ForegroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ForegroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TextElement.ForegroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TextElement.Foreground" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontFamily">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.FontFamily GetFontFamily (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.FontFamily GetFontFamily(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.GetFontFamily(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontFamily</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt, für das Abrufen des Werts der <see cref="P:System.Windows.Documents.TextElement.FontFamily" /> Eigenschaft.</param>
+        <summary>Gibt den Wert der angefügten <see cref="P:System.Windows.Documents.TextElement.FontFamily" />-Eigenschaft für ein angegebenes Abhängigkeitsobjekt zurück.</summary>
+        <returns>Der aktuelle Wert der die <see cref="P:System.Windows.Documents.TextElement.FontFamily" /> -Eigenschaft für das angegebene Abhängigkeitsobjekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontSize">
+      <MemberSignature Language="C#" Value="public static double GetFontSize (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetFontSize(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.GetFontSize(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.FontSizeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt, für das Abrufen des Werts der <see cref="P:System.Windows.Documents.TextElement.FontSize" /> Eigenschaft.</param>
+        <summary>Gibt den Wert der angefügten <see cref="P:System.Windows.Documents.TextElement.FontSize" />-Eigenschaft für ein angegebenes Abhängigkeitsobjekt zurück.</summary>
+        <returns>Der aktuelle Wert der die <see cref="P:System.Windows.Documents.TextElement.FontSize" /> -Eigenschaft für das angegebene Abhängigkeitsobjekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontStretch">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontStretch GetFontStretch (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.FontStretch GetFontStretch(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.GetFontStretch(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStretch</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt, für das Abrufen des Werts der <see cref="P:System.Windows.Documents.TextElement.FontStretch" /> Eigenschaft.</param>
+        <summary>Gibt den Wert der angefügten <see cref="P:System.Windows.Documents.TextElement.FontStretch" />-Eigenschaft für ein angegebenes Abhängigkeitsobjekt zurück.</summary>
+        <returns>Der aktuelle Wert der die <see cref="P:System.Windows.Documents.TextElement.FontStretch" /> -Eigenschaft für das angegebene Abhängigkeitsobjekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontStyle">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontStyle GetFontStyle (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.FontStyle GetFontStyle(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.GetFontStyle(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt, für das Abrufen des Werts der <see cref="P:System.Windows.Documents.TextElement.FontStyle" /> Eigenschaft.</param>
+        <summary>Gibt den Wert der angefügten <see cref="P:System.Windows.Documents.TextElement.FontStyle" />-Eigenschaft für ein angegebenes Abhängigkeitsobjekt zurück.</summary>
+        <returns>Der aktuelle Wert der die <see cref="P:System.Windows.Documents.TextElement.FontStyle" /> -Eigenschaft für das angegebene Abhängigkeitsobjekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontWeight">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight GetFontWeight (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.FontWeight GetFontWeight(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.GetFontWeight(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt, für das Abrufen des Werts der <see cref="P:System.Windows.Documents.TextElement.FontWeight" /> Eigenschaft.</param>
+        <summary>Gibt den Wert der angefügten <see cref="P:System.Windows.Documents.TextElement.FontWeight" />-Eigenschaft für ein angegebenes Abhängigkeitsobjekt zurück.</summary>
+        <returns>Der aktuelle Wert der die <see cref="P:System.Windows.Documents.TextElement.FontWeight" /> -Eigenschaft für das angegebene Abhängigkeitsobjekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForeground">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Brush GetForeground (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Brush GetForeground(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.GetForeground(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt, für das Abrufen des Werts der <see cref="P:System.Windows.Documents.TextElement.Foreground" /> Eigenschaft.</param>
+        <summary>Gibt den Wert der angefügten <see cref="P:System.Windows.Documents.TextElement.Foreground" />-Eigenschaft für ein angegebenes Abhängigkeitsobjekt zurück.</summary>
+        <returns>Der aktuelle Wert der die <see cref="P:System.Windows.Documents.TextElement.Foreground" /> -Eigenschaft für das angegebene Abhängigkeitsobjekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die logischen untergeordneten Elemente des Elements durchlaufen kann.</summary>
+        <value>Ein Enumerator für die logischen untergeordneten Elemente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ändern Sie die Argumente, die den Wert der Eigenschaft zugeordnet.  Die <see cref="P:System.Windows.DependencyPropertyChangedEventArgs.Property" /> Eigenschaft gibt an, welche Eigenschaft geändert wurde, die <see cref="P:System.Windows.DependencyPropertyChangedEventArgs.OldValue" /> Eigenschaft gibt an, der vorherige Eigenschaftswert, und die <see cref="P:System.Windows.DependencyPropertyChangedEventArgs.NewValue" /> Eigenschaft gibt an, der neue Eigenschaftswert.</param>
+        <summary>Verarbeitet die Benachrichtigungen, die eine oder mehrere der Abhängigkeitseigenschaften, die für das Element vorhanden sind die effektiven Werte geändert wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Windows.FrameworkContentElement.OnPropertyChanged%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontFamily">
+      <MemberSignature Language="C#" Value="public static void SetFontFamily (System.Windows.DependencyObject element, System.Windows.Media.FontFamily value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFontFamily(class System.Windows.DependencyObject element, class System.Windows.Media.FontFamily value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.SetFontFamily(System.Windows.DependencyObject,System.Windows.Media.FontFamily)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Media.FontFamily" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt, für das Festlegen des Werts der <see cref="P:System.Windows.Documents.TextElement.FontFamily" /> Eigenschaft.</param>
+        <param name="value">Der neue Wert, auf den die Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Documents.TextElement.FontFamily" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontSize">
+      <MemberSignature Language="C#" Value="public static void SetFontSize (System.Windows.DependencyObject element, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFontSize(class System.Windows.DependencyObject element, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.SetFontSize(System.Windows.DependencyObject,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt, für das Festlegen des Werts der <see cref="P:System.Windows.Documents.TextElement.FontSize" /> Eigenschaft.</param>
+        <param name="value">Der neue Wert, auf den die Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Documents.TextElement.FontSize" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontStretch">
+      <MemberSignature Language="C#" Value="public static void SetFontStretch (System.Windows.DependencyObject element, System.Windows.FontStretch value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFontStretch(class System.Windows.DependencyObject element, valuetype System.Windows.FontStretch value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.SetFontStretch(System.Windows.DependencyObject,System.Windows.FontStretch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.FontStretch" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt, für das Festlegen des Werts der <see cref="P:System.Windows.Documents.TextElement.FontStretch" /> Eigenschaft.</param>
+        <param name="value">Der neue Wert, auf den die Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Documents.TextElement.FontStretch" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontStyle">
+      <MemberSignature Language="C#" Value="public static void SetFontStyle (System.Windows.DependencyObject element, System.Windows.FontStyle value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFontStyle(class System.Windows.DependencyObject element, valuetype System.Windows.FontStyle value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.SetFontStyle(System.Windows.DependencyObject,System.Windows.FontStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt, für das Festlegen des Werts der <see cref="P:System.Windows.Documents.TextElement.FontStyle" /> Eigenschaft.</param>
+        <param name="value">Der neue Wert, auf den die Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Documents.TextElement.FontStyle" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontWeight">
+      <MemberSignature Language="C#" Value="public static void SetFontWeight (System.Windows.DependencyObject element, System.Windows.FontWeight value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFontWeight(class System.Windows.DependencyObject element, valuetype System.Windows.FontWeight value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.SetFontWeight(System.Windows.DependencyObject,System.Windows.FontWeight)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.FontWeight" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt, für das Festlegen des Werts der <see cref="P:System.Windows.Documents.TextElement.FontWeight" /> Eigenschaft.</param>
+        <param name="value">Der neue Wert, auf den die Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Documents.TextElement.FontWeight" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetForeground">
+      <MemberSignature Language="C#" Value="public static void SetForeground (System.Windows.DependencyObject element, System.Windows.Media.Brush value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetForeground(class System.Windows.DependencyObject element, class System.Windows.Media.Brush value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.SetForeground(System.Windows.DependencyObject,System.Windows.Media.Brush)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Media.Brush" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt, für das Festlegen des Werts der <see cref="P:System.Windows.Documents.TextElement.Foreground" /> Eigenschaft.</param>
+        <param name="value">Der neue Wert, auf den die Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Documents.TextElement.Foreground" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende untergeordnete Objekt.</param>
+        <summary>Fügt ein untergeordnetes Objekt hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElement.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der dem Objekt hinzuzufügende Text.</param>
+        <summary>Fügt dem Objekt den Textinhalt eines Knotens hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextEffects">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TextEffectCollection TextEffects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.TextEffectCollection TextEffects" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.TextEffects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextEffectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Auflistung von Texteffekte auf den Inhalt des Elements angewendet.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.TextEffectCollection" /> mit einer oder mehreren <see cref="T:System.Windows.Media.TextEffect" /> Objekten, die Auswirkungen auf den Inhalt in diesem Element definieren. Die Standardeinstellung ist <see langword="null" /> (nicht auf eine leere Auflistung).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist diese Eigenschaft auf festgelegt `null` und weist keinen <xref:System.Windows.Media.TextEffectCollection> zugeordnet.  Vor dem Hinzufügen von Texteffekte, erstellen Sie ein neues <xref:System.Windows.Media.TextEffectCollection> und weisen sie dieser Eigenschaft.  
+  
+<a name="dependencyPropertyInfo_TextEffects"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TextElement.TextEffectsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie einen einfachen Text-Effekt zu erstellen, und wenden Sie es in eine Textdatei <xref:System.Windows.Documents.Run> über die <xref:System.Windows.Documents.TextElement.TextEffects%2A> Eigenschaft.  
+  
+ [!code-csharp[TextElementSnippets#_TextElement_TextEffects](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_texteffects)]
+ [!code-vb[TextElementSnippets#_TextElement_TextEffects](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_texteffects)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextEffectsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextEffectsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextEffectsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TextElement.TextEffectsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TextElement.TextEffects" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Typography">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Typography Typography { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.Typography Typography" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElement.Typography" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Typography</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die derzeit gültigen Typografievarianten für den Inhalt des Elements ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.Typography" /> Objekt, das die derzeit gültigen Typografie Variationen angibt. Eine Liste der Standardwerte für die Typografie, finden Sie unter <see cref="T:System.Windows.Documents.Typography" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.FlowDocument.Typography%2A> Eigenschaft gilt nur für [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] Schriftarten. Eine Variante Typografie wirkt sich nicht auf Schriftarten, die sich bei der Variante nicht unterstützen.  Weitere Informationen zu diesem Thema finden Sie unter [Typografie in WPF](~/docs/framework/wpf/advanced/typography-in-wpf.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.Typography%2A> -Attribut mit <xref:System.Windows.Documents.Paragraph> wie das Beispielelement.  
+  
+ [!code-xaml[TextElementSnippets#_TextElement_TypogXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml#_textelement_typogxaml)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Text mit geänderter Typografie](~/add/media/textelement-typog.png "Bildschirmabbildung: Text mit geänderter Typografie")  
+  
+ Im Gegensatz dazu zeigt die folgende Abbildung, wie ein ähnliches Beispiel mit typografischen Standardeigenschaften gerendert wird.  
+  
+ ![Bildschirmabbildung: Text mit geänderter Typografie](~/add/media/textelement-typog-default.png "Bildschirmabbildung: Text mit geänderter Typografie")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TextElement.Typography%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[TextElementSnippets#_TextElement_Typog](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_typog)]
+ [!code-vb[TextElementSnippets#_TextElement_Typog](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_typog)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

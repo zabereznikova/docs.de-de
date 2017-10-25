@@ -1,0 +1,89 @@
+<Type Name="VBFixedStringAttribute" FullName="Microsoft.VisualBasic.VBFixedStringAttribute">
+  <TypeSignature Language="C#" Value="public sealed class VBFixedStringAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VBFixedStringAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.VBFixedStringAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Zeichenfolge behandelt werden sollen, als ob er eine feste Länge wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic-Zeichenfolgen sind standardmäßig eine Variable Länge. Dieses Attribut ist hilfreich, wenn die Eingabe und Ausgabe von Funktionen wie z. B. Visual Basic-Datei mit `FileGet` und `FilePut` , die Zeichenfolgen fester Länge erfordern.  
+  
+   
+  
+## Examples  
+ [!code-vb[VbCnAttributes#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbCnAttributes/VB/Class2.vb#23)]  
+  
+> [!NOTE]
+>  Die `VBFixedStringAttribute` dient nur zu Informationszwecken und kann nicht verwendet werden, um eine Zeichenfolge variabler Länge in eine feste Zeichenfolge zu konvertieren. Der Zweck dieses Attributs zu ändern, wie Zeichenfolgen in Strukturen und nicht lokale Variablen verwendet werden, durch die Methoden oder API-Aufrufe, mit denen erkannt wird die `VBFixedStringAttribute`. Bedenken Sie, dass dieses Attribut nicht die tatsächliche Länge der Zeichenfolge selbst ändert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VBFixedStringAttribute (int Length);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(int32 Length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.VBFixedStringAttribute.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Length">Die Länge der Zeichenfolge fester Länge.</param>
+        <summary>Der Wert des initialisiert die <see langword="SizeConst" /> Feld.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konstruktor wird ausgeführt, wenn die `VBFixedStringAttribute` -Attribut auf eine Zeichenfolge angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.VBFixedStringAttribute.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge der Zeichenfolge.</summary>
+        <value>Die Länge der Zeichenfolge zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konstruktor für dieses Attribut wird diese Eigenschaft bei der `VBFixedStringAttribute` auf eine Zeichenfolge angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

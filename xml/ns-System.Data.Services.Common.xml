@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Services.Common">
+  <Docs>
+    <summary>Implementiert Funktionen, die beide WCF Data Services-Client und Server Laufzeiten gemeinsam.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

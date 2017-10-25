@@ -1,0 +1,613 @@
+<Type Name="DispatchOperation" FullName="System.ServiceModel.Dispatcher.DispatchOperation">
+  <TypeSignature Language="C#" Value="public sealed class DispatchOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DispatchOperation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.DispatchOperation" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Wird verwendet, um das Ausführungsverhalten eines bestimmten Dienstvorgangs in einem Dienstendpunkt zu ändern oder zu erweitern. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Dispatcher.DispatchOperation>-Klasse ist der Ort für Laufzeitänderungen und der Einfügepunkt für benutzerdefinierte Erweiterungen, die nur auf einen Dienstvorgang abzielen. (Um das Dienstlaufzeit-Verhalten für alle Nachrichten in einem Vertrag zu ändern, verwenden Sie die <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse.)  
+  
+ Installieren Sie <xref:System.ServiceModel.Dispatcher.DispatchOperation>-Änderungen unter Verwendung eines benutzerdefinierten Vorgangsverhaltensobjekts oder eines Verhaltens mit größerem Gültigkeitsbereich, um Vorgänge in einem gesamten Vertrag zu ändern.  
+  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A>-Eigenschaft, um das <xref:System.ServiceModel.Dispatcher.DispatchOperation>-Objekt zu suchen, das einen bestimmten Dienstvorgang darstellt.  
+  
+-   Die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A> und <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> erhalten die jeweiligen Werte für den Vorgang.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A>-Eigenschaft und die <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A>-Eigenschaft geben das Transaktionsverhalten an.  
+  
+-   Die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> und <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> steuern die Lebensdauer des benutzerdefinierten Dienstobjekts bezogen auf den <xref:System.ServiceModel.InstanceContext>.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A>-Eigenschaft und die <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A>-Eigenschaft ermöglichen die explizite Steuerung der Konvertierung von Nachrichten in Objekte und umgekehrt.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A>-Eigenschaft gibt die Ebene des Identitätswechsels des Vorgangs an.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A>-Eigenschaft fügt benutzerdefinierte Erweiterungen des Aufrufkontexts für den Vorgang ein. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Dispatcher.ICallContextInitializer>.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A>-Eigenschaft steuert, ob Parameterobjekte verworfen werden, wenn der Dienstvorgang abgeschlossen ist.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A>-Eigenschaft ist für das Einfügen eines benutzerdefinierten aufrufenden Objekts.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A>-Eigenschaft ermöglicht es Ihnen, einen benutzerdefinierten Parameterinspektor einzufügen, den Sie verwenden können, um Parameter und Rückgabewerte zu überprüfen oder zu ändern.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DispatchOperation (System.ServiceModel.Dispatcher.DispatchRuntime parent, string name, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Dispatcher.DispatchRuntime parent, string name, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.DispatchOperation.#ctor(System.ServiceModel.Dispatcher.DispatchRuntime,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parent" Type="System.ServiceModel.Dispatcher.DispatchRuntime" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Das zugeordnete <see cref="T:System.ServiceModel.Dispatcher.DispatchRuntime" />-Objekt.</param>
+        <param name="name">Der Name des Verteilvorgangs. Dieser wird als Schlüssel für die <see cref="P:System.ServiceModel.Dispatcher.DispatchRuntime.Operations" />-Auflistung verwendet.</param>
+        <param name="action">Die Nachrichtenaktion, für die dieser Verteilvorgang erstellt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.DispatchOperation" />-Klasse unter Verwendung der angegebenen DispatchRuntime, des angegebenen Namens und der Aktionswerte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor für einen Dienstvorgang, der dem unidirektionalen Muster folgt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DispatchOperation (System.ServiceModel.Dispatcher.DispatchRuntime parent, string name, string action, string replyAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Dispatcher.DispatchRuntime parent, string name, string action, string replyAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.DispatchOperation.#ctor(System.ServiceModel.Dispatcher.DispatchRuntime,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parent" Type="System.ServiceModel.Dispatcher.DispatchRuntime" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="replyAction" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Das zugeordnete <see cref="T:System.ServiceModel.Dispatcher.DispatchRuntime" />-Objekt.</param>
+        <param name="name">Der Name des Verteilvorgangs.</param>
+        <param name="action">Die SOAP-Nachrichtenaktion, für die dieser Verteilvorgang erstellt wird.</param>
+        <param name="replyAction">Die diesem Verteilvorgang zugeordnete Antwortaktion.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.DispatchOperation" />-Klasse unter Verwendung der angegebenen DispatchRuntime, des angegebenen Namens, der Aktion und der Antwortaktionswerte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor für einen Dienstvorgang, der dem Anforderung-Antwort-Muster folgt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der Aktion für diesen Vorgang ab.</summary>
+        <value>Der Wert der Aktion für diesen Vorgang.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoDisposeParameters">
+      <MemberSignature Language="C#" Value="public bool AutoDisposeParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoDisposeParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob Parameter automatisch verworfen werden sollen.</summary>
+        <value>
+          <see langword="true" />, wenn die Parameter automatisch verworfen werden sollen, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft legt fest, ob der Dienst alle <xref:System.IDisposable?displayProperty=nameWithType>-Parameter (Eingabe-, Ausgabe- oder Referenzparameter) verwirft, die beim Verarbeiten einer Nachricht erstellt wurden. Der Standardwert ist `true`. Legen Sie den Wert dieser Eigenschaft auf `false` fest, um zu verhindern, dass das System Ressourcen freigibt. In diesem Fall sind Sie für die Lebensdauer der Parameter verantwortlich. Weitere Informationen für den Fall, dass Sie Parameter verwerfen müssen, wenn der Vorgang abgeschlossen ist, finden Sie in den Informationen zum <xref:System.ServiceModel.OperationContext.OperationCompleted>-Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallContextInitializers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.ICallContextInitializer&gt; CallContextInitializers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SynchronizedCollection`1&lt;class System.ServiceModel.Dispatcher.ICallContextInitializer&gt; CallContextInitializers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.ICallContextInitializer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Auflistung von <see cref="T:System.ServiceModel.Dispatcher.ICallContextInitializer" />-Objekten, die die Methoden zur Ermöglichung der Initialisierung und Wiederverwendung von lokalem Threadspeicher mit dem Thread definiert, der Benutzercode aufruft.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ServiceModel.Dispatcher.ICallContextInitializer" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A>-Eigenschaft, um benutzerdefinierte <xref:System.ServiceModel.Dispatcher.ICallContextInitializer>-Objekte hinzuzufügen, die dem Aufrufkontext für die Dauer des Aufrufs einen Zustand zuweisen und diesen nach Abschluss des Aufrufs, jedoch vor Rückgabe der Nachricht, abrufen können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeRequest">
+      <MemberSignature Language="C#" Value="public bool DeserializeRequest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DeserializeRequest" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt diesen fest, der angibt, ob der Wert der <see cref="P:System.ServiceModel.Dispatcher.DispatchOperation.Formatter" />-Eigenschaft verwendet wird, um die Anforderungsnachricht zu deserialisieren.</summary>
+        <value>
+          <see langword="false" />, wenn der Rückgabetyp vom Typ <see cref="T:System.ServiceModel.Channels.Message" /> ist und keine out-Parameter vorhanden sind, andernfalls <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>-Eigenschaft, um zu steuern, ob der Formatierer den Rückgabewert einer eingehenden Nachricht deserialisiert oder ob die eingehende Nachricht direkt als Rückgabewert zurückgegeben wird.  
+  
+-   **Hinweis** Wenn `false`, muss der Rückgabetyp vom Typ <xref:System.ServiceModel.Channels.Message> , und es kann keine Out-Parameter oder ein <xref:System.InvalidCastException> wird zur Laufzeit ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultContractInfos">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.FaultContractInfo&gt; FaultContractInfos { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SynchronizedCollection`1&lt;class System.ServiceModel.Dispatcher.FaultContractInfo&gt; FaultContractInfos" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.FaultContractInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.ServiceModel.Dispatcher.FaultContractInfo" />-Objekten ab, die die angegebenen SOAP-Fehler für diesen Vorgang darstellen.</summary>
+        <value>Eine Auflistung der für diesen Vorgang angegebenen SOAP-Fehler.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A>-Eigenschaft, um eine Auflistung aller im Vertrag angegebenen SOAP-Fehler abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Formatter">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.IDispatchMessageFormatter Formatter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.IDispatchMessageFormatter Formatter" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.Formatter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IDispatchMessageFormatter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Formatierer ab bzw. legt ihn fest, der Nachrichten in Objekte deserialisiert und Objekte in Nachrichten serialisiert.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Dispatcher.IDispatchMessageFormatter" />-Implementierung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A>-Eigenschaft, um eine benutzerdefinierte <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Implementierung für einen Vorgang einzufügen oder das aktuelle Formatierungsprogramm zu ändern. Im Fall von stark typisierten Nachrichtenvorgängen kann die Verwendung des Formatierers durch die <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A>-Eigenschaft und die <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>-Eigenschaft gesteuert werden.  
+  
+ Die <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> Schnittstelle definiert die <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter.SerializeReply%2A> und <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter.DeserializeRequest%2A> -Methoden, die verwendet werden, um einen Satz von Objektparametern in eine Nachricht bzw. aus einer Nachricht auf einen Satz von Rückgabewerten konvertieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Impersonation">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ImpersonationOption Impersonation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.ImpersonationOption Impersonation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ImpersonationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab einen Wert bzw. legt diesen fest, der angibt, bis zu welchem Grad der Vorgang einen Identitätswechsel erfordert.</summary>
+        <value>Einer der <see cref="T:System.ServiceModel.ImpersonationOption" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoker">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.IOperationInvoker Invoker { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.IOperationInvoker Invoker" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.Invoker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IOperationInvoker</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.ServiceModel.Dispatcher.IOperationInvoker" />-Objekt ab bzw. legt dieses fest, das die benutzerdefinierte Methode aufruft.</summary>
+        <value>Das <see cref="T:System.ServiceModel.Dispatcher.IOperationInvoker" />-Objekt, das die benutzerdefinierte Methode aufruft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.ServiceModel.Dispatcher.IOperationInvoker>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInsideTransactedReceiveScope">
+      <MemberSignature Language="C#" Value="public bool IsInsideTransactedReceiveScope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInsideTransactedReceiveScope" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.IsInsideTransactedReceiveScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob sich der Bereich des Vorgangs in einer transaktiven Empfangsaktivität befindet.</summary>
+        <value>
+          <see langword="true" />ist der Bereich in einer transaktiven Empfangsaktivität; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOneWay">
+      <MemberSignature Language="C#" Value="public bool IsOneWay { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOneWay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Vorgang ein unidirektionaler Vorgang ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang nur eine Eingabe hat, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTerminating">
+      <MemberSignature Language="C#" Value="public bool IsTerminating { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTerminating" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dieser Vorgang der letzte in einer Sitzung ist, bzw. legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die zugeordnete Sitzung geschlossen wird, nachdem der Vorgang aufgerufen wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Vorgangs ab.</summary>
+        <value>Der Name des Vorgangs. Dieser wird als Schlüssel für die <see cref="P:System.ServiceModel.Dispatcher.DispatchRuntime.Operations" />-Auflistung verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterInspectors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.IParameterInspector&gt; ParameterInspectors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SynchronizedCollection`1&lt;class System.ServiceModel.Dispatcher.IParameterInspector&gt; ParameterInspectors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.IParameterInspector&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.ServiceModel.Dispatcher.IParameterInspector" />-Objekten ab, die eingehende und ausgehende Objekte für eine bestimmte Proxymethode überprüfen und ändern können, bzw. legt diese fest.</summary>
+        <value>Eine Auflistung der <see cref="T:System.ServiceModel.Dispatcher.IParameterInspector" />-Implementierungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A>-Eigenschaft, um eine benutzerdefinierte <xref:System.ServiceModel.Dispatcher.IParameterInspector>-Implementierung einzufügen oder die aktuelle Implementierung zu ändern. Parameterinspektoren werden für Anforderungen in der Reihenfolge aufgerufen, in der sie zur Auflistung hinzugefügt werden, und für Antworten in der umgekehrten Reihenfolge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.DispatchRuntime Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.DispatchRuntime Parent" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.DispatchRuntime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das zugeordnete <see cref="T:System.ServiceModel.Dispatcher.DispatchRuntime" />-Objekt ab.</summary>
+        <value>Das zugeordnete <see cref="T:System.ServiceModel.Dispatcher.DispatchRuntime" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseInstanceAfterCall">
+      <MemberSignature Language="C#" Value="public bool ReleaseInstanceAfterCall { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReleaseInstanceAfterCall" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt diesen fest, der angibt, ob das Dienstobjekt nach einem Aufruf wiederverwendet werden soll.</summary>
+        <value>
+          <see langword="true" />, wenn die Instanz freigegeben wird, nachdem ein Aufruf abgeschlossen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseInstanceBeforeCall">
+      <MemberSignature Language="C#" Value="public bool ReleaseInstanceBeforeCall { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReleaseInstanceBeforeCall" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt diesen fest, der angibt, ob das Dienstobjekt vor dem Weiterleiten des Aufrufs wiederverwendet werden soll.</summary>
+        <value>
+          <see langword="true" />, wenn die Instanz freigegeben und eine neue vor dem Weiterleiten des Aufrufs erstellt wird, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplyAction">
+      <MemberSignature Language="C#" Value="public string ReplyAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReplyAction" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aktion der Antwortnachricht für den Vorgang ab.</summary>
+        <value>Die Aktion der Antwortnachricht für den Vorgang.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeReply">
+      <MemberSignature Language="C#" Value="public bool SerializeReply { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SerializeReply" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="P:System.ServiceModel.Dispatcher.DispatchOperation.Formatter" />-Objekt Antwortnachrichten serialisiert, bzw. legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="P:System.ServiceModel.Dispatcher.DispatchOperation.Formatter" />-Eigenschaft die Rückgabewerte in eine Antwortnachricht serialisiert, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A>-Eigenschaft, um anzugeben, ob der Formatierer die Vorgangsparameter in eine Antwortnachricht serialisiert, oder ob der erste Parameter als die ausgehende Nachricht gesendet wird.  
+  
+> [!NOTE]
+>  Wenn auf `false` gesetzt, muss der Rückgabewert des Vorgangs vom Typ <xref:System.ServiceModel.Channels.Message> sein oder es wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionAutoComplete">
+      <MemberSignature Language="C#" Value="public bool TransactionAutoComplete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransactionAutoComplete" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt diesen fest, der angibt, ob die aktuelle Transaktion automatisch abgeschlossen wird, wenn der Vorgang erfolgreich ausgeführt wurde.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang erfolgreich ausgeführt wurde, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionRequired">
+      <MemberSignature Language="C#" Value="public bool TransactionRequired { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransactionRequired" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt diesen fest, der angibt, ob der Vorgang innerhalb einer Transaktion ausgeführt werden muss.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang innerhalb des Bereichs einer Transaktion ausgeführt werden muss, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> Eigenschaft `true`, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] legt die aktuelle Transaktion für die Transaktion verwendet, um die Meldung angezeigt, wenn über den Kanal mit einem transaktiven Transport; oder die Transaktion übergeben werden, wenn die Nachricht eine Transaktion; hatte oder die Verteiler wird ein neues erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

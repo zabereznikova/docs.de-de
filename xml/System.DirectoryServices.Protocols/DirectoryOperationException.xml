@@ -1,0 +1,203 @@
+<Type Name="DirectoryOperationException" FullName="System.DirectoryServices.Protocols.DirectoryOperationException">
+  <TypeSignature Language="C#" Value="public class DirectoryOperationException : System.DirectoryServices.Protocols.DirectoryException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit DirectoryOperationException extends System.DirectoryServices.Protocols.DirectoryException implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.DirectoryOperationException" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.DirectoryOperationException" /> -Klasse ist eine Ausnahme ausgelöst wird, indem Sie die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.SendRequest(System.DirectoryServices.Protocols.DirectoryRequest)" /> Methode, um anzugeben, dass der Server gab eine <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> -Objekt mit einem Fehler.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryOperationException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor" />-Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.DirectoryOperationException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryOperationException (System.DirectoryServices.Protocols.DirectoryResponse response);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.Protocols.DirectoryResponse response) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor(System.DirectoryServices.Protocols.DirectoryResponse)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="response" Type="System.DirectoryServices.Protocols.DirectoryResponse" />
+      </Parameters>
+      <Docs>
+        <param name="response">Die <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> vom Server zurückgegebene Objekt.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor(System.DirectoryServices.Protocols.DirectoryResponse)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.DirectoryOperationException" /> -Klasse unter Verwendung der angegebenen Response-Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryOperationException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, die dem Client angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor(System.String)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.DirectoryOperationException" /> -Klasse unter Verwendung der angegebenen Meldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryOperationException (System.DirectoryServices.Protocols.DirectoryResponse response, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.Protocols.DirectoryResponse response, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor(System.DirectoryServices.Protocols.DirectoryResponse,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="response" Type="System.DirectoryServices.Protocols.DirectoryResponse" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="response">Die <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> vom Server zurückgegebene Objekt.</param>
+        <param name="message">Die Meldung, die dem Client angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor(System.DirectoryServices.Protocols.DirectoryResponse,System.String)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.DirectoryOperationException" /> -Objekt mit dem angegebenen Response-Objekt und die Nachricht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DirectoryOperationException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Daten, die zum Serialisieren des Parameters erforderlich sind.</param>
+        <param name="context">Die Quelle und Ziel des serialisierten Streams, der dem Parameter zugeordnet werden soll.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.DirectoryOperationException" /> -Klasse unter Verwendung des angegebenen Serialisierungsinformationen und Streamingkontext.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryOperationException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, die dem Client angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <param name="inner">Die <see cref="P:System.Exception.InnerException" />, falls vorhanden, die die Ausnahme ausgelöst hat.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor(System.String,System.Exception)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.DirectoryOperationException" /> -Klasse unter Verwendung der angegebenen Meldung und inneren Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryOperationException (System.DirectoryServices.Protocols.DirectoryResponse response, string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.Protocols.DirectoryResponse response, string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor(System.DirectoryServices.Protocols.DirectoryResponse,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="response" Type="System.DirectoryServices.Protocols.DirectoryResponse" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="response">Die <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> vom Server zurückgegebene Objekt.</param>
+        <param name="message">Die Meldung, die dem Client angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <param name="inner">Die <see cref="P:System.Exception.InnerException" />, falls vorhanden, die die Ausnahme ausgelöst hat.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.DirectoryOperationException.#ctor(System.DirectoryServices.Protocols.DirectoryResponse,System.String,System.Exception)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.DirectoryOperationException" /> -Klasse unter Verwendung der angegebenen Response-Objekt, Meldung und inneren Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryOperationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Daten, die zum Serialisieren des Parameters erforderlich sind.</param>
+        <param name="streamingContext">Die Quelle und Ziel des serialisierten Streams, der dem Parameter zugeordnet werden soll.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.DirectoryOperationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" /> Methode füllt die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt mit den erforderlichen Daten zum Serialisieren des Parameters.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Response">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.DirectoryResponse Response { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.Protocols.DirectoryResponse Response" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DirectoryOperationException.Response" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectoryResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.DirectoryOperationException.Response" /> Eigenschaft gibt an, die <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> Objekt zurückgegeben, die vom Server, die einen Fehler enthält.</summary>
+        <value>Die <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> Objekt zurückgegeben, die vom Server, die einen Fehler enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

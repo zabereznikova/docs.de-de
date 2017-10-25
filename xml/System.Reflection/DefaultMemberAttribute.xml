@@ -1,0 +1,127 @@
+<Type Name="DefaultMemberAttribute" FullName="System.Reflection.DefaultMemberAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DefaultMemberAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DefaultMemberAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.DefaultMemberAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Interface)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert den Member eines Typs, der das Standardelement von verwendeten <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Eigenschaft wird als Indexer importiert (indizierte Standardeigenschaft in Visual Basic), wenn die Eigenschaft Argumente verfügt und der Namen der Eigenschaft oder eines seiner Accessoren entspricht, indem der angegebene Name der <xref:System.Reflection.DefaultMemberAttribute>. Wenn die <xref:System.Reflection.DefaultMemberAttribute> befindet sich nicht auf den enthaltenden Typ haben, und klicken Sie dann den Typ ein Indexers nicht vorhanden ist. Der c#-Compiler gibt die <xref:System.Reflection.DefaultMemberAttribute> für jeden Typ, der einen Indexer enthält. In C# geschrieben, die es tritt ein Fehler in "Attribut" manuell einen Typ mit dem <xref:System.Reflection.DefaultMemberAttribute> , wenn der Typ auch ein Indexer deklariert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Reflection.DefaultMemberAttribute> Attribut stellen die `Age` Eigenschaft das Standardelement von der `MyClass` Klasse.  
+  
+ [!code-cpp[Type_GetDefaultMembers#1](~/samples/snippets/cpp/VS_Snippets_CLR/Type_GetDefaultMembers/CPP/type_getdefaultmembers.cpp#1)]
+ [!code-csharp[Type_GetDefaultMembers#1](~/samples/snippets/csharp/VS_Snippets_CLR/Type_GetDefaultMembers/CS/type_getdefaultmembers.cs#1)]
+ [!code-vb[Type_GetDefaultMembers#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Type_GetDefaultMembers/VB/type_getdefaultmembers.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultMemberAttribute (string memberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string memberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.DefaultMemberAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="memberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="memberName">Ein <see langword="String" /> mit dem Namen des aufzurufenden Members. Dies kann ein Konstruktor, Methoden-, Eigenschafts- oder Feldinformationen sein. Wenn das Element aufgerufen wird, muss ein geeignetes Aufrufattribut angegeben werden. Das Standardelement einer Klasse kann angegeben werden, durch Übergeben eines leeren <see langword="String" /> als den Namen des Elements.  
+  
+ Das Standardelement eines Typs ist mit markiert die <see langword="DefaultMemberAttribute" /> benutzerdefinierten Attributen oder markierte in COM auf die übliche Weise.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.DefaultMemberAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.DefaultMemberAttribute.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Attributs ab.</summary>
+        <value>Eine Zeichenfolge, die den Membernamen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt keinen Set-Accessor auf, da der Name der an den Konstruktor bereitgestellt werden muss. Der Name ist nicht optional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

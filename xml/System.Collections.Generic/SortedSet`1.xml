@@ -1,0 +1,1948 @@
+<Type Name="SortedSet&lt;T&gt;" FullName="System.Collections.Generic.SortedSet&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class SortedSet&lt;T&gt; : System.Collections.Generic.ICollection&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IReadOnlyCollection&lt;T&gt;, System.Collections.Generic.ISet&lt;T&gt;, System.Collections.ICollection, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SortedSet`1&lt;T&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;!T&gt;, class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;!T&gt;, class System.Collections.Generic.ISet`1&lt;!T&gt;, class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Runtime.Serialization.IDeserializationCallback, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.SortedSet`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ISet&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IDeserializationCallback</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Collections.Generic.SortedSetDebugView`1))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">Der Typ der Elemente in der Gruppe.</typeparam>
+    <summary>Stellt eine Auflistung von Objekten dar, deren Sortierreihenfolge beibehalten wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Collections.Generic.SortedSet%601> Objekt eine sortierte Reihenfolge beibehält, ohne die Leistung beeinträchtigen, wie Elemente eingefügt und gelöscht werden. Doppelte Elemente sind nicht zulässig. Ändern der Sortierungswerte von vorhandenen Elementen wird nicht unterstützt und kann zu unerwartetem Verhalten führen.  
+  
+ Für eine Thread-sichere Alternative zum <xref:System.Collections.Generic.SortedSet%601>, finden Sie unter<xref:System.Collections.Immutable.ImmutableSortedSet%601>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine <xref:System.Collections.Generic.SortedSet%601> -Klasse, die mit dem Konstruktor erstellt wird, die akzeptiert eine <xref:System.Collections.Generic.IComparer%601> als Parameter. Dieses Vergleichs (`ByFileExtension`) Dient zum Sortieren einer Liste der Dateinamen, nach deren Erweiterungen.  
+  
+ In diesem Beispiel wird veranschaulicht, erstellen eine sortierte Sammlung von Dateinamen, entfernen Sie unerwünschte Elemente, einen Bereich von Elementen anzeigen und vergleichen Sie die mit einem anderen sortierten Satz an.  
+  
+ [!code-csharp[System.Collections.Generic.SortedSet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.sortedset/cs/program.cs#1)]
+ [!code-vb[System.Collections.Generic.SortedSet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.sortedset/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Generic.SortedSet`1" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SortedSet ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Generic.SortedSet`1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SortedSet (System.Collections.Generic.IComparer&lt;T&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IComparer`1&lt;!T&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.#ctor(System.Collections.Generic.IComparer{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">Der zum Vergleichen von Objekten zu verwendende Standardvergleich.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Generic.SortedSet`1" />-Klasse, die den angegebenen Vergleich verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `comparer` implementiert nicht <xref:System.IComparable%601>, geben Sie ein <xref:System.Collections.Generic.IComparer%601> Objekt verwendet werden soll.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert einen Vergleich (`ByFileExtension`), wird verwendet, um eine sortierte Gruppe zu erstellen, die Dateinamen sortiert nach deren Erweiterungen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.SortedSet%601> Klasse.  
+  
+ [!code-csharp[System.Collections.Generic.SortedSet#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.sortedset/cs/program.cs#2)]
+ [!code-vb[System.Collections.Generic.SortedSet#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.sortedset/vb/program.vb#2)]  
+[!code-csharp[System.Collections.Generic.SortedSet#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.sortedset/cs/program.cs#9)]
+[!code-vb[System.Collections.Generic.SortedSet#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.sortedset/vb/program.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="comparer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SortedSet (System.Collections.Generic.IEnumerable&lt;T&gt; collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.#ctor(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="collection">Die zu kopierende zählbare Auflistung.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Generic.SortedSet`1" />-Klasse, die Elemente enthält, die aus einer angegebenen zählbaren Auflistung kopiert wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Doppelte Elemente in der zählbaren Auflistung werden nicht kopiert, in die neue Instanz der <xref:System.Collections.Generic.SortedSet%601> -Klasse, und keine Ausnahmen ausgelöst werden.  
+  
+ Dieser Konstruktor ist eine O (`n` Protokoll `n`)-Vorgang, in dem `n` ist die Anzahl der Elemente in der `collection` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SortedSet (System.Collections.Generic.IEnumerable&lt;T&gt; collection, System.Collections.Generic.IComparer&lt;T&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; collection, class System.Collections.Generic.IComparer`1&lt;!T&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IComparer{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="collection">Die zu kopierende zählbare Auflistung.</param>
+        <param name="comparer">Der zum Vergleichen von Objekten zu verwendende Standardvergleich.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Generic.SortedSet`1" />-Klasse, die aus einer angegebenen zählbaren Auflistung kopierte Elemente enthält und einen angegebenen Vergleich verwendet.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="collection" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SortedSet (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die zum Serialisieren des <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekts erforderlichen Informationen enthält.</param>
+        <param name="context">Die Struktur, die die Quelle und das Ziel des serialisierten Streams enthält, der dem <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Generic.SortedSet`1" />-Klasse, die serialisierte Daten enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird aufgerufen, während der Deserialisierung ein Objekts wiederherstellen kann, das über einen Stream übertragen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public bool Add (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Add(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Der Element, das zur Menge hinzugefügt wird.</param>
+        <summary>Fügt der Gruppe ein Element hinzu und gibt einen Wert zurück, der angibt, ob es erfolgreich hinzugefügt wurde.</summary>
+        <returns>
+          <see langword="true" />, wenn der Gruppe <paramref name="item" /> hinzugefügt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.Generic.SortedSet%601> Klasse akzeptiert keine doppelten Elemente. Wenn `item` befindet sich bereits in der Menge und gibt diese Methode `false` und löst keine Ausnahme.  
+  
+ Wenn <xref:System.Collections.Generic.SortedSet%601.Count%2A> bereits die Kapazität entspricht der <xref:System.Collections.Generic.SortedSet%601> -Objekt, die Kapazität wird automatisch angepasst, um das neue Element aufzunehmen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine sortierte Gruppe Elemente hinzugefügt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.SortedSet%601> Klasse.  
+  
+ [!code-csharp[System.Collections.Generic.SortedSet#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.sortedset/cs/program.cs#3)]
+ [!code-vb[System.Collections.Generic.SortedSet#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.sortedset/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus dem Satz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comparer">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IComparer&lt;T&gt; Comparer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IComparer`1&lt;!T&gt; Comparer" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedSet`1.Comparer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IComparer&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Collections.Generic.IComparer`1" />-Objekt ab, das zum Sortieren der Werte in <see cref="T:System.Collections.Generic.SortedSet`1" /> dient.</summary>
+        <value>Der Vergleich, der zum Sortieren der Werte in <see cref="T:System.Collections.Generic.SortedSet`1" /> dient.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zurückgegebenen Vergleichs kann die standardmäßige Vergleichsfunktion des Typs für eine <xref:System.Collections.Generic.SortedSet%601>, oder der Vergleich für den Konstruktor verwendet.  
+  
+ Das Abrufen des Werts dieser Eigenschaft ist ein O(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public virtual bool Contains (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, das in der Gruppe gesucht werden soll.</param>
+        <summary>Ermittelt, ob die Gruppe ein bestimmtes Element enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn die Gruppe <paramref name="item" /> enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein O (ln n)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CopyTo">
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Kopiert ein <see cref="T:System.Collections.Generic.SortedSet`1" /> teilweise oder vollständig in ein kompatibles eindimensionales Array, wobei am Anfang des Zielarrays oder an einem angegebenen Index begonnen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] array);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(!T[] array) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.CopyTo(`0[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array, in das die Elemente aus <see cref="T:System.Collections.Generic.SortedSet`1" /> kopiert werden.</param>
+        <summary>Kopiert das gesamte <see cref="T:System.Collections.Generic.SortedSet`1" /> in ein kompatibles eindimensionales Array, wobei am Anfang des Zielarrays begonnen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Indizierung von `array` nullbasiert sein muss.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Anzahl der Elemente in der Quelle <see cref="T:System.Collections.Generic.SortedSet`1" /> überschreitet die Anzahl der Elemente, die das Zielarray enthalten kann.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(!T[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array, in das die Elemente aus <see cref="T:System.Collections.Generic.SortedSet`1" /> kopiert werden. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert das vollständige <see cref="T:System.Collections.Generic.SortedSet`1" /> in ein kompatibles eindimensionales Array, beginnend am angegebenen Index des Arrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Anzahl der Elemente im Quellarray ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Zielarrays.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] array, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(!T[] array, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.CopyTo(`0[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array, in das die Elemente aus <see cref="T:System.Collections.Generic.SortedSet`1" /> kopiert werden. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <param name="count">Die Anzahl der zu kopierenden Elemente.</param>
+        <summary>Kopiert eine angegebene Anzahl von Elementen aus <see cref="T:System.Collections.Generic.SortedSet`1" /> in ein kompatibles eindimensionales Array, beginnend ab dem angegebenen Arrayindex.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist `count`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Anzahl der Elemente im Quellarray ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Zielarrays.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als Null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedSet`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente im <see cref="T:System.Collections.Generic.SortedSet`1" /> ab.</summary>
+        <value>Die Anzahl der Elemente im <see cref="T:System.Collections.Generic.SortedSet`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Abrufen des Werts dieser Eigenschaft ist ein O(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSetComparer">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEqualityComparer&lt;System.Collections.Generic.SortedSet&lt;T&gt;&gt; CreateSetComparer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEqualityComparer`1&lt;class System.Collections.Generic.SortedSet`1&lt;!T&gt;&gt; CreateSetComparer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.CreateSetComparer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEqualityComparer&lt;System.Collections.Generic.SortedSet&lt;T&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Collections.IEqualityComparer" />-Objekt zurück, mit dem eine Auflistung erstellt werden kann, die einzelne Gruppen enthält.</summary>
+        <returns>Ein Vergleich zum Erstellen einer Auflistung von Gruppen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.IEqualityComparer> Objekt auf Gleichheit auf nur einer Ebene überprüft, aber Sie können verketten Vergleiche auf zusätzlichen Ebenen, um tiefere Gleichheitstests auszuführen.  
+  
+ Beim Aufrufen dieser Methode ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSetComparer">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEqualityComparer&lt;System.Collections.Generic.SortedSet&lt;T&gt;&gt; CreateSetComparer (System.Collections.Generic.IEqualityComparer&lt;T&gt; memberEqualityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEqualityComparer`1&lt;class System.Collections.Generic.SortedSet`1&lt;!T&gt;&gt; CreateSetComparer(class System.Collections.Generic.IEqualityComparer`1&lt;!T&gt; memberEqualityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.CreateSetComparer(System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEqualityComparer&lt;System.Collections.Generic.SortedSet&lt;T&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memberEqualityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="memberEqualityComparer">Der Vergleich, der zum Erstellen des zurückgegebenen Vergleichs verwendet werden soll.</param>
+        <summary>Gibt entsprechend einem angegebenen Vergleich ein <see cref="T:System.Collections.IEqualityComparer" />-Objekt zurück, mit dem eine Auflistung erstellt werden kann, die einzelne Gruppen enthält.</summary>
+        <returns>Ein Vergleich zum Erstellen einer Auflistung von Gruppen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `memberEqualityComparer` und der aktuelle <xref:System.Collections.Generic.SortedSet%601> müssen dieselbe Definition auf Wertgleichheit.  
+  
+ Können Sie den Vergleich zurückgegeben, die von dieser Methode in der <xref:System.Collections.Generic.SortedSet%601.%23ctor%28System.Collections.Generic.IEnumerable%7B%600%7D%2CSystem.Collections.Generic.IComparer%7B%600%7D%29?displayProperty=nameWithType> Konstruktor zum Erstellen einer Hashtabelle der einzelnen Sätze.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Collections.Generic.SortedSet%601.CreateSetComparer%2A> Methode zum Erstellen eines Satzes von Sätzen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.SortedSet%601> Klasse.  
+  
+ [!code-csharp[System.Collections.Generic.SortedSet#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.sortedset/cs/program.cs#7)]
+ [!code-vb[System.Collections.Generic.SortedSet#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.sortedset/vb/program.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptWith">
+      <MemberSignature Language="C#" Value="public void ExceptWith (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExceptWith(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.ExceptWith(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung der Elemente, die aus dem <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt entfernt werden sollen.</param>
+        <summary>Entfernt alle Elemente in einer angegebenen Auflistung aus dem aktuellen <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entfernt jedes Element in der aktuellen <xref:System.Collections.Generic.SortedSet%601> , der sich ebenfalls in `other`. Doppelte Werte in `other` werden ignoriert.  
+  
+ Diese Methode ist eine O (`n`)-Vorgang, in dem `n` ist die Anzahl der Elemente in der `other` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel entfernt die Elemente aus einer sortierten Menge, die in einem anderen sortierten Satz dupliziert werden. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.SortedSet%601> Klasse.  
+  
+ [!code-csharp[System.Collections.Generic.SortedSet#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.sortedset/cs/program.cs#6)]
+ [!code-vb[System.Collections.Generic.SortedSet#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.sortedset/vb/program.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SortedSet&lt;T&gt;.Enumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Generic.SortedSet`1/Enumerator&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SortedSet&lt;T&gt;+Enumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:System.Collections.Generic.SortedSet`1" /> durchläuft.</summary>
+        <returns>Ein Enumerator, der <see cref="T:System.Collections.Generic.SortedSet`1" /> in sortierter Reihenfolge durchläuft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Änderungen an der <xref:System.Collections.Generic.SortedSet%601> wird den Enumerator ungültig.  
+  
+ Diese Methode ist ein O (Log n)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit den zum Serialisieren des neuen <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekts erforderlichen Informationen.</param>
+        <param name="context">Eine <see cref="T:System.Runtime.Serialization.StreamingContext" />-Struktur, die die Quelle und das Ziel des serialisierten Streams enthält, der dem <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt zugeordnet ist.</param>
+        <summary>Implementiert die <see cref="T:System.Runtime.Serialization.ISerializable" />-Schnittstelle und gibt die zum Serialisieren eines <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekts erforderlichen Daten zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für das Bereitstellen von Serialisierungsdiensten. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewBetween">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.SortedSet&lt;T&gt; GetViewBetween (T lowerValue, T upperValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.SortedSet`1&lt;!T&gt; GetViewBetween(!T lowerValue, !T upperValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.GetViewBetween(`0,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SortedSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lowerValue" Type="T" />
+        <Parameter Name="upperValue" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="lowerValue">Der niedrigste gewünschte Wert in der Ansicht.</param>
+        <param name="upperValue">Der höchste gewünschte Wert in der Ansicht.</param>
+        <summary>Gibt eine Ansicht einer Teilmenge in einem <see cref="T:System.Collections.Generic.SortedSet`1" /> zurück.</summary>
+        <returns>Eine Teilmengenansicht, die nur die Werte im angegebenen Bereich enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Ansicht des Bereichs von Elementen, die zwischen fallen `lowerValue` und `upperValue`, wie durch den Vergleich definierten. Diese Methode kopiert keine Elemente aus der <xref:System.Collections.Generic.SortedSet%601>, aber stellt ein Fenster in den zugrunde liegenden <xref:System.Collections.Generic.SortedSet%601> selbst. Sie können Änderungen vornehmen, in der sowohl von der Ansicht und in der zugrunde liegenden <xref:System.Collections.Generic.SortedSet%601>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Collections.Generic.SortedSet%601.GetViewBetween%2A> Methode, um nur die AVI-Dateien aus einem sortierten Satz von Medien-Dateinamen. Der Vergleich ergibt Dateinamen gemäß deren Erweiterungen. Die `lowerValue` ist "AVI" und die `upperValue` ist nur ein Wert höher, "AVJ", um die Darstellung aller AVI-Dateien zu erhalten. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.SortedSet%601> Klasse.  
+  
+ [!code-csharp[System.Collections.Generic.SortedSet#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.sortedset/cs/program.cs#5)]
+ [!code-vb[System.Collections.Generic.SortedSet#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.sortedset/vb/program.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="lowerValue" />ist mehr als <paramref name="upperValue" /> gemäß den angegebenen Schlüsselvergleichs.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Eine wiederholt-Operation für die Sicht wurde außerhalb des Bereichs von angegebenen <paramref name="lowerValue" /> und <paramref name="upperValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IntersectWith">
+      <MemberSignature Language="C#" Value="public virtual void IntersectWith (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void IntersectWith(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.IntersectWith(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit dem aktuellen <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt verglichen werden soll.</param>
+        <summary>Ändert das aktuelle <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt, sodass es nur Elemente enthält, die in einer angegebenen Auflistung ebenfalls enthalten sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ignoriert alle doppelten Elemente in `other`.  
+  
+ Wenn die Auflistung von dargestellt die `other` Parameter ist ein <xref:System.Collections.Generic.SortedSet%601> Auflistung mit den gleichen Gleichheitsvergleich wie die aktuelle <xref:System.Collections.Generic.SortedSet%601> -Objekt, diese Methode ist eine O (`n`) Vorgang. Diese Methode ist, andernfalls eine O (`n` + `m`)-Vorgang, in dem `n` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A> und `m` ist die Anzahl der Elemente im `other`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsProperSubsetOf">
+      <MemberSignature Language="C#" Value="public bool IsProperSubsetOf (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsProperSubsetOf(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.IsProperSubsetOf(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit dem aktuellen <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob ein <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt eine echte Teilmenge der angegebenen Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das aktuelle <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt eine echte Teilmenge von <paramref name="other" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine leere Menge ist eine echte Teilmenge von einer anderen Sammlung an. Daher, diese Methode gibt `true` , wenn die Auflistung von der aktuellen dargestellt <xref:System.Collections.Generic.SortedSet%601> ist leer, es sei denn, die `other` Parameter ist auch ein leeres Resultset.  
+  
+ Diese Methode gibt immer `false` Wenn <xref:System.Collections.Generic.SortedSet%601.Count%2A> ist größer als oder gleich der Anzahl der Elemente im `other`.  
+  
+ Wenn die Auflistung von dargestellt `other` ist ein <xref:System.Collections.Generic.SortedSet%601> Auflistung mit den gleichen Gleichheitsvergleich wie die aktuelle <xref:System.Collections.Generic.SortedSet%601> -Objekt, dann ist diese Methode eine O (`n`) Vorgang. Diese Methode ist, andernfalls eine O (`n` + `m`)-Vorgang, in dem `n` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A> und `m` ist die Anzahl der Elemente im `other`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsProperSupersetOf">
+      <MemberSignature Language="C#" Value="public bool IsProperSupersetOf (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsProperSupersetOf(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.IsProperSupersetOf(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit dem aktuellen <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob ein <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt eine echte Obermenge der angegebenen Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt eine echte Obermenge von <paramref name="other" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine leere Menge ist eine echte Obermenge von einer anderen Sammlung an. Aus diesem Grund gibt diese Methode zurück `true` , wenn die Auflistung von dargestellt die `other` Parameter ist leer, wenn die aktuelle <xref:System.Collections.Generic.SortedSet%601> Sammlung wird auch leer.  
+  
+ Diese Methode gibt immer `false` Wenn <xref:System.Collections.Generic.SortedSet%601.Count%2A> ist kleiner oder gleich der Anzahl der Elemente im `other`.  
+  
+ Wenn die Auflistung von dargestellte `other` ist eine <xref:System.Collections.Generic.SortedSet%601> Auflistung mit den gleichen Gleichheitsvergleich wie die aktuelle <xref:System.Collections.Generic.SortedSet%601> -Objekt, diese Methode ist eine O (`n`) Vorgang. Diese Methode ist, andernfalls eine O (`n` + `m`)-Vorgang, in dem `n` ist die Anzahl der Elemente im `other` und `m` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public bool IsSubsetOf (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSubsetOf(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.IsSubsetOf(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit dem aktuellen <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob ein <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt eine Teilmenge der angegebenen Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das aktuelle <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt eine Teilmenge von <paramref name="other" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine leere Menge ist eine Teilmenge einer anderen Sammlung, z. B. ein leeres Resultset. aus diesem Grund gibt diese Methode zurück `true` , wenn die vom aktuellen Auflistung dargestellte <xref:System.Collections.Generic.SortedSet%601> Objekt leer ist, auch wenn die `other` Parameter ist eine leere Menge.  
+  
+ Diese Methode gibt immer `false` Wenn <xref:System.Collections.Generic.SortedSet%601.Count%2A> ist größer als die Anzahl der Elemente im `other`.  
+  
+ Wenn die Auflistung von dargestellte `other` ist eine <xref:System.Collections.Generic.SortedSet%601> Auflistung mit den gleichen Gleichheitsvergleich wie die aktuelle <xref:System.Collections.Generic.SortedSet%601> -Objekt, diese Methode ist eine O (`n`) Vorgang. Diese Methode ist, andernfalls eine O (`n` + `m`)-Vorgang, in dem `n` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A> und `m` ist die Anzahl der Elemente im `other`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupersetOf">
+      <MemberSignature Language="C#" Value="public bool IsSupersetOf (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSupersetOf(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.IsSupersetOf(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit dem aktuellen <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob ein <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt eine Obermenge der angegebenen Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt eine Obermenge von <paramref name="other" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Auflistungen, einschließlich leerer Mengen sind Obermengen der Satz leer. Aus diesem Grund gibt diese Methode zurück `true` , wenn die Auflistung von dargestellt die `other` Parameter ist leer, auch wenn die aktuelle <xref:System.Collections.Generic.SortedSet%601> Objekt leer ist.  
+  
+ Diese Methode gibt immer `false` Wenn <xref:System.Collections.Generic.SortedSet%601.Count%2A> ist kleiner als die Anzahl der Elemente im `other`.  
+  
+ Wenn die Auflistung von dargestellte `other` ist eine <xref:System.Collections.Generic.SortedSet%601> Auflistung mit den gleichen Gleichheitsvergleich wie die aktuelle <xref:System.Collections.Generic.SortedSet%601> -Objekt, diese Methode ist eine O (`n`) Vorgang. Diese Methode ist, andernfalls eine O (`n` + `m`)-Vorgang, in dem `n` ist die Anzahl der Elemente im `other` und `m` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Max">
+      <MemberSignature Language="C#" Value="public T Max { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Max" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedSet`1.Max" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den durch den Vergleich definierten Höchstwert im <see cref="T:System.Collections.Generic.SortedSet`1" /> ab.</summary>
+        <value>Der Höchstwert in der Gruppe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Min">
+      <MemberSignature Language="C#" Value="public T Min { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Min" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedSet`1.Min" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den durch den Vergleich definierten Mindestwert im <see cref="T:System.Collections.Generic.SortedSet`1" /> ab.</summary>
+        <value>Der Mindestwert in der Gruppe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserialization">
+      <MemberSignature Language="C#" Value="protected virtual void OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Deserialisierungsereignisses.</param>
+        <summary>Implementiert die <see cref="T:System.Runtime.Serialization.ISerializable" />-Schnittstelle und löst das Deserialisierungsereignis aus, sobald die Deserialisierung abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt zugewiesen ist, mit dem aktuellen <see cref="T:System.Collections.Generic.SortedSet`1" /> Objekt ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Overlaps">
+      <MemberSignature Language="C#" Value="public bool Overlaps (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Overlaps(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.Overlaps(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit dem aktuellen <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das aktuelle <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt und eine angegebene Auflistung gemeinsame Elemente enthalten.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt und <paramref name="other" /> mindestens ein gemeinsames Element enthalten, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle doppelten Elemente in `other` werden ignoriert.  
+  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist die Anzahl der Elemente in `other`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu entfernende Element.</param>
+        <summary>Entfernt ein angegebenes Element aus dem <see cref="T:System.Collections.Generic.SortedSet`1" />.</summary>
+        <returns>
+          <see langword="true" />, wenn das Element gefunden und erfolgreich entfernt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Collections.Generic.SortedSet%601> Objekt enthält nicht das angegebene Element, das Objekt bleibt unverändert und keine Ausnahme ausgelöst wird.  
+  
+ `item`kann `null` für Verweistypen.  
+  
+ Diese Methode ist ein O (Log n)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveWhere">
+      <MemberSignature Language="C#" Value="public int RemoveWhere (Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 RemoveWhere(class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.RemoveWhere(System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">Der Delegat, der die Bedingungen für die Elemente definiert, die entfernt werden sollen.</param>
+        <summary>Entfernt alle Elemente aus einer <see cref="T:System.Collections.Generic.SortedSet`1" />-Auflistung, die die vom angegebenen Prädikat definierten Bedingungen erfüllen.</summary>
+        <returns>Die Anzahl von Elementen, die aus der <see cref="T:System.Collections.Generic.SortedSet`1" />-Auflistung entfernt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `match`nicht ändern, müssen die <xref:System.Collections.Generic.SortedSet%601>. Auf diese Weise kann zu unerwarteten Ergebnissen führen.  
+  
+ Beim Aufrufen dieser Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel entfernt unerwünschte Elemente aus einem sortierten Satz an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.SortedSet%601> Klasse.  
+  
+ [!code-csharp[System.Collections.Generic.SortedSet#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.sortedset/cs/program.cs#4)]
+ [!code-vb[System.Collections.Generic.SortedSet#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.sortedset/vb/program.vb#4)]  
+[!code-csharp[System.Collections.Generic.SortedSet#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.sortedset/cs/program.cs#8)]
+[!code-vb[System.Collections.Generic.SortedSet#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.sortedset/vb/program.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="match" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reverse">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;T&gt; Reverse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!T&gt; Reverse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.Reverse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> zurück, das das <see cref="T:System.Collections.Generic.SortedSet`1" /> in umgekehrter Reihenfolge durchläuft.</summary>
+        <returns>Ein Enumerator, der das <see cref="T:System.Collections.Generic.SortedSet`1" /> in umgekehrter Reihenfolge durchläuft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEquals">
+      <MemberSignature Language="C#" Value="public bool SetEquals (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetEquals(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.SetEquals(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit dem aktuellen <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das aktuelle <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt und die angegebene Auflistung dieselben Elemente enthalten.</summary>
+        <returns>
+          <see langword="true" />, wenn das aktuelle <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt und <paramref name="other" /> gleich sind, andernfalls false.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ignoriert die Reihenfolge der Elemente und alle doppelten Elemente in `other`.  
+  
+ Wenn die Auflistung von dargestellt `other` ist ein <xref:System.Collections.Generic.SortedSet%601> Auflistung mit den gleichen Gleichheitsvergleich wie die aktuelle <xref:System.Collections.Generic.SortedSet%601> -Objekt, diese Methode ist eine O (Log`n`) Vorgang. Diese Methode ist, andernfalls eine O (`n` + `m`)-Vorgang, in dem `n` ist die Anzahl der Elemente im `other` und `m` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SymmetricExceptWith">
+      <MemberSignature Language="C#" Value="public void SymmetricExceptWith (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SymmetricExceptWith(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.SymmetricExceptWith(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit dem aktuellen <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt verglichen werden soll.</param>
+        <summary>Ändert das aktuelle <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt, sodass es nur Elemente enthält, die entweder im aktuellen Objekt oder in der angegebenen Auflistung, nicht jedoch in beiden vorhanden sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle doppelten Elemente in `other` werden ignoriert.  
+  
+ Wenn die `other` Parameter ist ein <xref:System.Collections.Generic.SortedSet%601> Auflistung mit den gleichen Gleichheitsvergleich wie die aktuelle <xref:System.Collections.Generic.SortedSet%601> -Objekt, diese Methode ist eine O (n Log `m`) Vorgang. Diese Methode ist, andernfalls eine O (`n` Protokoll `m`) + O (`n` Protokoll `n`)-Vorgang, in dem `n` ist die Anzahl der Elemente im `other` und `m` ist <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.Add">
+      <MemberSignature Language="C#" Value="void ICollection&lt;T&gt;.Add (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;T&gt;.Add(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.System#Collections#Generic#ICollection&lt;T&gt;#Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Objekt, das dem <see cref="T:System.Collections.Generic.ICollection`1" />-Objekt hinzugefügt werden soll.</param>
+        <summary>Fügt einem <see cref="T:System.Collections.Generic.ICollection`1" />-Objekt ein Element hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Generic.SortedSet%601>-Instanz in eine <xref:System.Collections.Generic.ICollection%601>-Schnittstelle umgewandelt wird.  
+  
+ Wenn <xref:System.Collections.Generic.List%601.Count%2A> ist kleiner als <xref:System.Collections.Generic.List%601.Capacity%2A>, diese Methode ist ein o(1)-Vorgang. Wenn die Kapazität erhöht werden muss, um das neue Element aufzunehmen, wird diese Methode eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Generic.List%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Collections.Generic.ICollection`1" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedSet`1.System#Collections#Generic#ICollection&lt;T&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eine <see cref="T:System.Collections.ICollection" /> schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistung schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Generic.SortedSet%601>-Instanz in eine <xref:System.Collections.Generic.ICollection%601>-Schnittstelle umgewandelt wird.  
+  
+ Eine schreibgeschützte Auflistung gestattet nach dem Erstellen der Auflistung weder das Hinzufügen noch das Ändern oder Entfernen von Elementen.  
+  
+ Eine Auflistung, die schreibgeschützt ist, ist eine Auflistung mit einem Wrapper, der verhindert, dass die Auflistung ändern; Wenn Änderungen an der zugrunde liegenden Auflistung vorgenommen werden, spiegelt die schreibgeschützte Auflistung daher diese Änderungen wider.  
+  
+ Abrufen des Werts dieser Eigenschaft ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;T&gt; IEnumerable&lt;T&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.System#Collections#Generic#IEnumerable&lt;T&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der eine Auflistung durchläuft.</summary>
+        <returns>Ein Enumerator, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Generic.SortedSet%601>-Instanz in eine <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array, in das die Elemente aus <see cref="T:System.Collections.Generic.SortedSet`1" /> kopiert werden. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert das vollständige <see cref="T:System.Collections.Generic.SortedSet`1" /> in ein kompatibles eindimensionales Array, beginnend am angegebenen Index des Arrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Generic.SortedSet%601>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Anzahl der Elemente im Quellarray ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Zielarrays.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedSet`1.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf <see cref="T:System.Collections.ICollection" /> synchronisiert ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Generic.SortedSet%601>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedSet`1.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann. In der Standardimplementierung der <see cref="T:System.Collections.Generic.Dictionary`2.KeyCollection" /> gibt diese Eigenschaft immer die aktuelle Instanz zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Generic.SortedSet%601>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der eine Auflistung durchläuft.</summary>
+        <returns>Ein Enumerator, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Generic.SortedSet%601>-Instanz in eine <xref:System.Collections.IEnumerable>-Schnittstelle umgewandelt wird.  
+  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.IDeserializationCallback.OnDeserialization">
+      <MemberSignature Language="C#" Value="void IDeserializationCallback.OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.System#Runtime#Serialization#IDeserializationCallback#OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Deserialisierungsereignisses.</param>
+        <summary>Implementiert die <see cref="T:System.Runtime.Serialization.IDeserializationCallback" />-Schnittstelle und löst das Deserialisierungsereignis aus, sobald die Deserialisierung abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Generic.SortedSet%601>-Instanz in eine <xref:System.Runtime.Serialization.IDeserializationCallback>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt zugewiesen ist, mit dem aktuellen <see cref="T:System.Collections.Generic.SortedSet`1" /> Instanz ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit den zum Serialisieren der <see cref="T:System.Collections.Generic.SortedSet`1" />-Instanz erforderlichen Informationen.</param>
+        <param name="context">Eine <see cref="T:System.Runtime.Serialization.StreamingContext" />-Struktur, die die Quelle und das Ziel des serialisierten Streams enthält, der der <see cref="T:System.Collections.Generic.SortedSet`1" />-Instanz zugeordnet ist.</param>
+        <summary>Implementiert die <see cref="T:System.Runtime.Serialization.ISerializable" />-Schnittstelle und gibt die zum Serialisieren der <see cref="T:System.Collections.Generic.SortedSet`1" />-Instanz erforderlichen Daten zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Generic.SortedSet%601>-Instanz in eine <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für das Bereitstellen von Serialisierungsdiensten. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (T equalValue, out T actualValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetValue(!T equalValue, [out] !T&amp; actualValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.TryGetValue(`0,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equalValue" Type="T" />
+        <Parameter Name="actualValue" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="equalValue">To be added.</param>
+        <param name="actualValue">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnionWith">
+      <MemberSignature Language="C#" Value="public void UnionWith (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnionWith(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedSet`1.UnionWith(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit dem aktuellen <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt verglichen werden soll.</param>
+        <summary>Ändert das aktuelle <see cref="T:System.Collections.Generic.SortedSet`1" />-Objekt, sodass es alle Elemente enthält, die sowohl im aktuellen Objekt als auch in der angegebenen Auflistung vorhanden sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle doppelten Elemente in `other` werden ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

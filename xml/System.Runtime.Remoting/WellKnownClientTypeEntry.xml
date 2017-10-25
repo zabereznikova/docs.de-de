@@ -1,0 +1,178 @@
+<Type Name="WellKnownClientTypeEntry" FullName="System.Runtime.Remoting.WellKnownClientTypeEntry">
+  <TypeSignature Language="C#" Value="public class WellKnownClientTypeEntry : System.Runtime.Remoting.TypeEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WellKnownClientTypeEntry extends System.Runtime.Remoting.TypeEntry" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.WellKnownClientTypeEntry" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.TypeEntry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Werte für einen Objekttyp, auf dem Client als Server aktivierten Typ (einzelner Aufruf oder Singleton) registriert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Server aktivierte Typen können einzelne Aufruf oder Singleton sein. Wenn eine Klasse als ein einzelner Aufruf registriert ist, wird eine neue Instanz jedes Mal erstellt, wenn ein Aufruf vom Client eingeht. Alle Aufrufe an einen Singleton-Objekt werden durch eine Instanz dieses Objekts verarbeitet, es sei denn, dieses Objekt gesammelt wurden.  
+  
+ Jeder Client, der den URI eines registrierten Server aktivierten Objekts kennt kann einen Proxy für dieses Objekt abrufen, indem er mit den bevorzugten Channel registrieren <xref:System.Runtime.Remoting.Channels.ChannelServices> und aktivieren das Objekt durch den Aufruf `new` oder <xref:System.Activator.GetObject%2A?displayProperty=nameWithType>. So aktivieren Sie ein Server aktivierten-Objekt mit `new`, müssen Sie zuerst auf dem Client mithilfe den Server aktivierten Objekttyp Registrieren der <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A> Methode. Durch Aufrufen von <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A>, weisen Sie der Remotinginfrastruktur den Speicherort des Remoteobjekts, wodurch die `new` Schlüsselwort, um ihn zu erstellen. Wenn Sie andererseits, verwenden Sie die <xref:System.Activator.GetObject%2A?displayProperty=nameWithType> Methode, um ein Objekt Server aktiviert, aktivieren Sie müssen das Objekt URL angeben als Argument, sodass keine vorherige Registrierung auf dem Client erforderlich ist.  
+  
+ Eine ausführliche Beschreibung des Server-aktivierten Objekten und der Aktivierung von remote-Objekt, finden Sie unter [&#91;\< Topic://cpconActivation > &#93; ](http://msdn.microsoft.com/en-us/e90d0c64-00da-4080-ae78-a6c558825c25).  
+  
+   
+  
+## Examples  
+ [!code-cpp[WellKnownClientTypeEntry_Client#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WellKnownClientTypeEntry_Client/CPP/wellknownclienttypeentry_client.cpp#1)]
+ [!code-csharp[WellKnownClientTypeEntry_Client#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WellKnownClientTypeEntry_Client/CS/wellknownclienttypeentry_client.cs#1)]
+ [!code-vb[WellKnownClientTypeEntry_Client#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WellKnownClientTypeEntry_Client/VB/wellknownclienttypeentry_client.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WellKnownClientTypeEntry (Type type, string objectUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string objectUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.WellKnownClientTypeEntry.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="objectUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> des Typs Server aktiviert.</param>
+        <param name="objectUrl">Die URL des Typs Server aktiviert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.WellKnownClientTypeEntry" /> Klasse mit dem angegebenen Typ und URL.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WellKnownClientTypeEntry (string typeName, string assemblyName, string objectUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName, string assemblyName, string objectUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.WellKnownClientTypeEntry.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+        <Parameter Name="objectUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der Typname des Typs Server aktiviert.</param>
+        <param name="assemblyName">Der Name der Assembly des Typs Server aktiviert.</param>
+        <param name="objectUrl">Die URL des Typs Server aktiviert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.WellKnownClientTypeEntry" /> -Klasse mit den angegebenen Typ, der Name der Assembly und der URL.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationUrl">
+      <MemberSignature Language="C#" Value="public string ApplicationUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.WellKnownClientTypeEntry.ApplicationUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL der Anwendung, die den Typ in zu aktivieren.</summary>
+        <value>Die URL der Anwendung, die den Typ in zu aktivieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die URL der Anwendung ist optional und sollte auf die URL der Anwendung entspricht, mit dem Server aktivierten Objekt festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectType">
+      <MemberSignature Language="C#" Value="public Type ObjectType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.WellKnownClientTypeEntry.ObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> des Clienttyps-Server aktiviert.</summary>
+        <value>Ruft die <see cref="T:System.Type" /> des Clienttyps-Server aktiviert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectUrl">
+      <MemberSignature Language="C#" Value="public string ObjectUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ObjectUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.WellKnownClientTypeEntry.ObjectUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL des Servers aktivierten Clientobjekts ab.</summary>
+        <value>Die URL des Servers aktivierten Clientobjekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.WellKnownClientTypeEntry.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den vollständigen Typnamen, Assemblynamen und Objekt-URL des vom Server aktivierten Clienttyp wie eine <see cref="T:System.String" />.</summary>
+        <returns>Der vollständige Typname, Assemblyname und Objekt-URL von dem Server aktivierten Client Geben Sie als eine <see cref="T:System.String" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Runtime.Remoting.WellKnownClientTypeEntry.ApplicationUrl%2A> nicht `null`, es wird am Ende der Zeichenfolge zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

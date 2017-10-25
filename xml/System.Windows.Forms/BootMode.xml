@@ -1,0 +1,77 @@
+<Type Name="BootMode" FullName="System.Windows.Forms.BootMode">
+  <TypeSignature Language="C#" Value="public enum BootMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BootMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.BootMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Startmodus in dem das System gestartet wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration definiert Bezeichner, die den Startmodus Standardbetriebssystem darstellen.  
+  
+ Diese Enumeration wird verwendet, durch die <xref:System.Windows.Forms.SystemInformation.BootMode%2A> Eigenschaft von der <xref:System.Windows.Forms.SystemInformation> Klasse.  
+  
+ Der normalen Start-Modus ist das Standardbetriebssystem Startmodus. Der Startmodus FailSafe wird auch im abgesicherten Modus bezeichnet. Der Startmodus FailSafeWithNetwork wird auch im abgesicherten Modus bei Netzwerk bezeichnet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FailSafe">
+      <MemberSignature Language="C#" Value="FailSafe" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.BootMode FailSafe = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.BootMode.FailSafe" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BootMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Computer wurde im abgesicherten Modus ohne Netzwerkunterstützung gestartet. In diesem Modus wird ein eingeschränkte Treiber und Einstellungen-Profil verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FailSafeWithNetwork">
+      <MemberSignature Language="C#" Value="FailSafeWithNetwork" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.BootMode FailSafeWithNetwork = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.BootMode.FailSafeWithNetwork" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BootMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Computer wurde im abgesicherten Modus mit Netzwerkunterstützung gestartet. Dieser Modus verwendet eine begrenzte Treiber und Einstellungen-Profil und lädt die Dienste erforderlich, um das Netzwerk zu starten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.BootMode Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.BootMode.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BootMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Computer wurde im Standardmodus gestartet. Dieser Modus verwendet die normale Treiber und die Einstellungen für das System an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

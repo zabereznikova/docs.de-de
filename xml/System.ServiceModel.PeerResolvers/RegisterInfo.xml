@@ -1,0 +1,149 @@
+<Type Name="RegisterInfo" FullName="System.ServiceModel.PeerResolvers.RegisterInfo">
+  <TypeSignature Language="C#" Value="public class RegisterInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RegisterInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.RegisterInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.MessageContract(IsWrapped=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Peerregistrierungsinformationen, die zu einem Peerresolverdienst anzugeben sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Klasse werden die Informationen definiert, die zur Registrierung des Tuple eines Peerknotens und einer Netz-ID mit einem Peerresolverdienst verwendet werden. Diese Informationen werden als Eintrag in die Registrierungssuchtabelle des Resolverdiensts eingefügt, der dann von anderen Peers nach den Endpunktadressen des eingefügten Peers abgefragt werden kann.  
+  
+ Instanzen dieser Klasse werden erstellt, wenn <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Register%2A> (oder eine Implementierung von <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract.Register%2A>) zur Registrierung bei einem Peerauflösungsdienst aufgerufen wird. Sie werden vorwiegend zur Übergabe von Registrierungs-Entfernungsanforderungsinformationen an den Peerauflösungsdienst von einem Netzwerkclient dieses Diensts verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegisterInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RegisterInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.ServiceModel.PeerResolvers.RegisterInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegisterInfo (Guid client, string meshId, System.ServiceModel.PeerNodeAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid client, string meshId, class System.ServiceModel.PeerNodeAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RegisterInfo.#ctor(System.Guid,System.String,System.ServiceModel.PeerNodeAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="client" Type="System.Guid" />
+        <Parameter Name="meshId" Type="System.String" />
+        <Parameter Name="address" Type="System.ServiceModel.PeerNodeAddress" />
+      </Parameters>
+      <Docs>
+        <param name="client">
+          <see cref="T:System.Guid" />, die den zu registrierenden Peerknoten eindeutig identifiziert.</param>
+        <param name="meshId">
+          <see cref="T:System.String" />, die die ID des Netzes angibt, an dem der Peerknoten teilnimmt.</param>
+        <param name="address">
+          <see cref="T:System.ServiceModel.PeerNodeAddress" />, die die Endpunktadresse(n) des zu registrierenden Peerknotens angibt(angeben).</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.PeerResolvers.RegisterInfo" />-Klasse mit der angegebenen Client-ID, der Netz-ID und der(den) Endpunktadresse(n).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientId">
+      <MemberSignature Language="C#" Value="public Guid ClientId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ClientId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.RegisterInfo.ClientId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Guid" /> ab, die den Registrierungseintrag für einen Peerknoten eindeutig identifiziert.</summary>
+        <value>
+          Ruft eine <see cref="T:System.Guid" /> ab, die den Registrierungseintrag eines Peerknotens eindeutig identifiziert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RegisterInfo.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob der Text der Nachricht, die eine serialisierte Instanz dieses Typs enthält, richtig formatiert ist.</summary>
+        <returns>True, wenn der Registrierungsinformationstext vom Absender richtig formatiert wurde, False, wenn dies nicht der Fall ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeshId">
+      <MemberSignature Language="C#" Value="public string MeshId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MeshId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.RegisterInfo.MeshId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine dem Registrierungseintrag zugeordnete Netz-ID ab.</summary>
+        <value>
+          <see cref="T:System.String" />, die die dem Registrierungseintrag zugeordnete Netz-ID (oder den Netznamen) enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerNodeAddress NodeAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.PeerNodeAddress NodeAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.RegisterInfo.NodeAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerNodeAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem Knoten, der mit dem Resolverdienst registriert wird, zuzuordnende(n) Endpunktadresse(n) ab.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.PeerNodeAddress" />, die die dem Knoten, der mit dem Resolverdienst registriert wird, zuzuordnende(n) Endpunktadresse(n) enthält. Die in dieser Instanz enthaltene(n) Adresse(n) können für die Verbindung mit dem im Netz enthaltenen Peerknoten verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

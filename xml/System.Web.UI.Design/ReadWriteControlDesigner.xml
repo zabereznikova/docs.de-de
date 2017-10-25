@@ -1,0 +1,218 @@
+<Type Name="ReadWriteControlDesigner" FullName="System.Web.UI.Design.ReadWriteControlDesigner">
+  <TypeSignature Language="C#" Value="public class ReadWriteControlDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ReadWriteControlDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ReadWriteControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The recommended alternative is ContainerControlDesigner because it uses an EditableDesignerRegion for editing the content. Designer regions allow for better control of the content being edited. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erweitert das Entwurfszeitverhalten für Lese-/Schreib-Serversteuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ReadWriteControlDesigner> Klasse ist veraltet. Verwenden der <xref:System.Web.UI.Design.ContainerControlDesigner> Klasse für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ Diese Steuerelement-Designer bietet die Möglichkeit zum Löschen von Steuerelementen auf das Steuerelement für diesen Designer.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Implementierer der Entwickler ihre Steuerelement unterstützt das Hinzufügen von untergeordneten Steuerelementen möchten die zu verwendende <see cref="T:System.Web.UI.Design.ReadWriteControlDesigner" />. Wenn Sie nicht, dass das Steuerelement untergeordnete Steuerelemente zu unterstützen möchten, verwenden Sie einen Designer abgeleitet <see cref="T:System.Web.UI.Design.ControlDesigner" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReadWriteControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ReadWriteControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Web.UI.Design.ReadWriteControlDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ReadWriteControlDesigner> Klasse ist veraltet. Verwenden der <xref:System.Web.UI.Design.ContainerControlDesigner> Klasse für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ReadWriteControlDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den HTML-Code ab, der für die Darstellung des Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Der HTML-Code, der für die Darstellung des Steuerelements zur Entwurfszeit verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ReadWriteControlDesigner> Klasse ist veraltet. Verwenden der <xref:System.Web.UI.Design.ContainerControlDesigner> Klasse für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapPropertyToStyle">
+      <MemberSignature Language="C#" Value="protected virtual void MapPropertyToStyle (string propName, object varPropValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void MapPropertyToStyle(string propName, object varPropValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ReadWriteControlDesigner.MapPropertyToStyle(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propName" Type="System.String" />
+        <Parameter Name="varPropValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propName">Der Name der zuzuordnenden Eigenschaft.</param>
+        <param name="varPropValue">Der Wert der Eigenschaft.</param>
+        <summary>Ordnet eine Eigenschaft, einschließlich Beschreibung und Wert einer systeminternen HTML-Format an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ReadWriteControlDesigner.MapPropertyToStyle%2A> Methode ist veraltet. Verwenden der <xref:System.Web.UI.Design.ContainerControlDesigner.GetDesignTimeCssAttributes%2A?displayProperty=nameWithType> Methode für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+> [!NOTE]
+>  Diese Methode muss in einer abgeleiteten Klasse zum Implementieren des Designers überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBehaviorAttached">
+      <MemberSignature Language="C#" Value="protected override void OnBehaviorAttached ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBehaviorAttached() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ReadWriteControlDesigner.OnBehaviorAttached" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is ControlDesigner.Tag. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine Benachrichtigung, die ausgelöst wird, wenn ein Verhalten, in den Designer angefügt ist bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ReadWriteControlDesigner.OnBehaviorAttached%2A> Methode ist veraltet. Verwenden Sie die Elemente von der <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType> Eigenschaft stattdessen. Verwenden Sie z. B. die <xref:System.Web.UI.Design.IControlDesignerTag.SetAttribute%2A> und <xref:System.Web.UI.Design.IControlDesignerTag.GetAttribute%2A> Methoden für die <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType> Eigenschaften Formatvorlagen zuzuordnenden Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanged">
+      <MemberSignature Language="C#" Value="public override void OnComponentChanged (object sender, System.ComponentModel.Design.ComponentChangedEventArgs ce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnComponentChanged(object sender, class System.ComponentModel.Design.ComponentChangedEventArgs ce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ReadWriteControlDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="ce" Type="System.ComponentModel.Design.ComponentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das das Ereignis zu senden.</param>
+        <param name="ce">Die <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" /> -Objekt, das Daten für das Ereignis bereitstellt.</param>
+        <summary>Stellt die Methode dar, die das <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" />-Ereignis der <see cref="T:System.ComponentModel.Design.IComponentChangeService" />-Klasse behandelt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ReadWriteControlDesigner> Klasse ist veraltet. Verwenden der <xref:System.Web.UI.Design.ContainerControlDesigner> Klasse für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ Die <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> Ereignis tritt auf, nachdem eine Eigenschaft geändert wurde. Diese Methode ermöglicht Implementierer Verarbeitungen ausführen können, die möglicherweise nach der Änderung einer Eigenschaft erforderlich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override void UpdateDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void UpdateDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ReadWriteControlDesigner.UpdateDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert die Anzeige des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ReadWriteControlDesigner> Klasse ist veraltet. Verwenden der <xref:System.Web.UI.Design.ContainerControlDesigner> Klasse für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

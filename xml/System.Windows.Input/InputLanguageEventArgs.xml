@@ -1,0 +1,105 @@
+<Type Name="InputLanguageEventArgs" FullName="System.Windows.Input.InputLanguageEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class InputLanguageEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit InputLanguageEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.InputLanguageEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Basisklasse für Argumente für Ereignisse bereit, die eine Änderung der Eingabesprache behandeln.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt die Basis für die <xref:System.Windows.Input.InputLanguageChangedEventArgs> und <xref:System.Windows.Input.InputLanguageChangingEventArgs> Klassen, die wiederum Argumente für die <xref:System.Windows.Input.InputLanguageManager.InputLanguageChanged> und <xref:System.Windows.Input.InputLanguageManager.InputLanguageChanging> bzw. weitergeleitete Ereignisse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InputLanguageEventArgs (System.Globalization.CultureInfo newLanguageId, System.Globalization.CultureInfo previousLanguageId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Globalization.CultureInfo newLanguageId, class System.Globalization.CultureInfo previousLanguageId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputLanguageEventArgs.#ctor(System.Globalization.CultureInfo,System.Globalization.CultureInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newLanguageId" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="previousLanguageId" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="newLanguageId">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das eine neue aktuelle Eingabesprache darstellt.</param>
+        <param name="previousLanguageId">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die vorherige aktuelle Eingabesprache darstellt.</param>
+        <summary>Initialisiert basieren Klassenwerte für eine neue Instanz einer abgeleiteten Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen <xref:System.Windows.Input.InputLanguageEventArgs> rufen Sie diesen Konstruktor, um sicherzustellen, dass von der abstrakten Basisklasse bereitgestellten Werte ordnungsgemäß initialisiert werden sollte.  
+  
+ Die Konstruktoren für <xref:System.Windows.Input.InputLanguageChangedEventArgs> und <xref:System.Windows.Input.InputLanguageChangingEventArgs> automatisch diese Basiskonstruktor aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewLanguage">
+      <MemberSignature Language="C#" Value="public virtual System.Globalization.CultureInfo NewLanguage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo NewLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputLanguageEventArgs.NewLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die neue aktuelle Eingabesprache darstellt.</summary>
+        <value>Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die neue aktuelle Eingabesprache darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft wird eingerichtet, über die `newLanguageId` Parameter bereitgestellt werden, indem die <xref:System.Windows.Input.InputLanguageEventArgs.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousLanguage">
+      <MemberSignature Language="C#" Value="public virtual System.Globalization.CultureInfo PreviousLanguage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo PreviousLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputLanguageEventArgs.PreviousLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die vorherige aktuelle Eingabesprache darstellt.</summary>
+        <value>Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die vorherige aktuelle Eingabesprache darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft wird eingerichtet, über die `previousLanguageId` Parameter bereitgestellt werden, indem die <xref:System.Windows.Input.InputLanguageEventArgs.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,134 @@
+<Type Name="MessageQueueException" FullName="System.Messaging.MessageQueueException">
+  <TypeSignature Language="C#" Value="public class MessageQueueException : System.Runtime.InteropServices.ExternalException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MessageQueueException extends System.Runtime.InteropServices.ExternalException" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.InteropServices.ExternalException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn ein interner Fehler von Microsoft Message Queuing auftritt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zugeordnete Ausnahmen der <xref:System.Messaging.MessageQueueException> generierte Klasse werden von internen Fehlern in Message Queuing, die über den Code behandelt werden sollten.  
+  
+ Jede Ausnahme besteht aus einem Fehlercode und einer Textzeichenfolge, die die Quelle des Fehlers beschreibt. Finden Sie unter der <xref:System.Messaging.MessageQueueErrorCode> Klasse eine Liste mit diesen Fehlercodes und ihren Beschreibungen.  
+  
+ Wenn eine <xref:System.Messaging.MessageQueue> eine Warteschlange öffnet und der `sharedModeDenyReceive`-Parameter dabei auf true festgelegt ist, wird durch jeden späteren Versuch einer <xref:System.Messaging.MessageQueue>, Daten aus der Warteschlange zu lesen, wegen der Freigabeverletzung eine <xref:System.Messaging.MessageQueueException>-Ausnahme generiert. Diese Ausnahme wird ebenso ausgelöst, wenn eine <xref:System.Messaging.MessageQueue> versucht, im exklusiven Modus auf die Warteschlange zuzugreifen, während eine andere <xref:System.Messaging.MessageQueue> bereits nicht exklusiven Zugriff auf die Warteschlange hat.  
+  
+> **Warnung Tag wird nicht unterstützt.**  
+> <xref:System.Messaging.MessageQueueTransaction> ist abhängig vom Threadapartmentstatus. Visual Basic legt den Zustand des Hauptthreads auf `STA`, sodass Sie anwenden, müssen die <xref:System.MTAThreadAttribute> in die `Main` Unterroutine. Andernfalls wird durch das Senden einer Transaktionsmeldung mithilfe eines anderen Threads eine <xref:System.Messaging.MessageQueueException>-Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ [!code-cpp[MessageQueue.ExistsDelete#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueue.ExistsDelete/CPP/mqexistsdelete.cpp#1)]
+ [!code-csharp[MessageQueue.ExistsDelete#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueue.ExistsDelete/CS/mqexistsdelete.cs#1)]
+ [!code-vb[MessageQueue.ExistsDelete#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageQueue.ExistsDelete/VB/mqexistsdelete.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageQueueException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den serialisierten Daten, die der <see cref="T:System.Messaging.MessageQueueException" /> zugeordnet sind.</param>
+        <param name="context">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />, der Quelle und Ziel des serialisierten Streams enthält, der dem <see cref="T:System.Messaging.MessageQueueException" /> zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Messaging.MessageQueueException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den serialisierten Daten, die der <see cref="T:System.Messaging.MessageQueueException" /> zugeordnet sind.</param>
+        <param name="context">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />, der Quelle und Ziel des serialisierten Streams enthält, der dem <see cref="T:System.Messaging.MessageQueueException" /> zugeordnet ist.</param>
+        <summary>Füllt ein Serialisierungsinformationsobjekt mit den Daten auf, die zum Serialisieren des <see cref="T:System.Messaging.MessageQueueException" /> erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="info" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Message Queuing-Fehler beschreibt.</summary>
+        <value>Die Beschreibung des internen Fehlers in Message Queuing, die diese generiert <see cref="T:System.Messaging.MessageQueueException" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft abgerufen wird, versucht die Methode zum Abrufen der Textzeichenfolge zugeordnet die <xref:System.Messaging.MessageQueueException.MessageQueueErrorCode%2A> Eigenschaft. Wenn die Methode kann nicht interpretiert werden, die Message Queuing generiert, den Fehlercode ist die <xref:System.Messaging.MessageQueueException.Message%2A> -Eigenschaft ruft den Wert `UnknownError`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageQueueErrorCode">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueueErrorCode MessageQueueErrorCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.MessageQueueErrorCode MessageQueueErrorCode" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueException.MessageQueueErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den dieser Ausnahme zugeordneten Fehlercode angibt.</summary>
+        <value>Ein <see cref="T:System.Messaging.MessageQueueErrorCode" /> , identifiziert den Typ des Fehlers Message Queuing generiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.MessageQueueException.Message%2A> Eigenschaft enthält eine Zeichenfolge, die mit diesem verknüpften <xref:System.Messaging.MessageQueueException.MessageQueueErrorCode%2A> , der die Ursache des Fehlers ausführlicher beschreibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

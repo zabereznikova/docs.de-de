@@ -1,0 +1,82 @@
+<Type Name="SiteMapDesignerDataSourceView" FullName="System.Web.UI.Design.WebControls.SiteMapDesignerDataSourceView">
+  <TypeSignature Language="C#" Value="public class SiteMapDesignerDataSourceView : System.Web.UI.Design.DesignerDataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SiteMapDesignerDataSourceView extends System.Web.UI.Design.DesignerDataSourceView" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.SiteMapDesignerDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.DesignerDataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine während der Entwurfszeit-Ansicht der Daten für die <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> und <see cref="T:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner" /> Klassen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapDesignerDataSourceView (System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner owner, string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner owner, string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDesignerDataSourceView.#ctor(System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner" />
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der übergeordnete <see cref="T:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner" />.</param>
+        <param name="viewName">Der Name der Ansicht für die Daten von der Datenquelle bereitgestellt werden soll.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Web.UI.Design.WebControls.SiteMapDesignerDataSourceView" /> -Klasse unter Verwendung der bereitgestellten <see cref="T:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner" /> Objekt- und die Sicht angegeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeData">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerable GetDesignTimeData (int minimumRows, out bool isSampleData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerable GetDesignTimeData(int32 minimumRows, [out] bool&amp; isSampleData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDesignerDataSourceView.GetDesignTimeData(System.Int32,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minimumRows" Type="System.Int32" />
+        <Parameter Name="isSampleData" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="minimumRows">Die minimale Anzahl von Zeilen zum Abrufen oder erstellen.</param>
+        <param name="isSampleData">
+          <see langword="true" />um Beispieldaten anzuzeigen; <see langword="false" /> um echte Daten anzugeben.</param>
+        <summary>Generiert Entwurfszeitdaten, die dem Schema des zugeordneten Datenquellen-Steuerelements, mithilfe der bereitgestellten Anzahl von Zeilen entsprechen, und gibt einen booleschen Wert, der angibt, ob die Daten Beispieldaten oder echte Daten handelt.</summary>
+        <returns>Während der Entwurfszeit-Daten, die das Schema des zugeordneten Datenquellen-Steuerelements übereinstimmt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.IDataSourceViewSchema Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IDataSourceViewSchema Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.SiteMapDesignerDataSourceView.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Schema, das die Daten beschrieben werden, die von diesem dargestellt wird <see cref="T:System.Web.UI.Design.WebControls.SiteMapDesignerDataSourceView" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" /> oder ein Objekt, das von abgeleitet ist <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

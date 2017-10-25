@@ -1,0 +1,69 @@
+<Type Name="IInvokeOnGetBinder" FullName="System.Dynamic.IInvokeOnGetBinder">
+  <TypeSignature Language="C#" Value="public interface IInvokeOnGetBinder" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInvokeOnGetBinder" />
+  <TypeSignature Language="DocId" Value="T:System.Dynamic.IInvokeOnGetBinder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Informationen zu einem dynamischen Memberabrufvorgang dar, die angeben, ob beim Ausführen des Abrufvorgangs Eigenschaften aufgerufen werden sollen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InvokeOnGet">
+      <MemberSignature Language="C#" Value="public bool InvokeOnGet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InvokeOnGet" />
+      <MemberSignature Language="DocId" Value="P:System.Dynamic.IInvokeOnGetBinder.InvokeOnGet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert, der angibt, ob dieser memberabrufvorgang Eigenschaften aufgerufen werden sollen, wenn sie das Get-Vorgang ausführen. Der Standardwert, wenn diese Schnittstelle nicht vorhanden ist, ist "true".</summary>
+        <value>True, wenn diese memberabrufvorgang Eigenschaften aufgerufen werden sollen, wenn sie das Get-Vorgang ausführen. andernfalls "false".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird von einigen Sprachen verwendet, um bessere abzurufen [!INCLUDE[TLA2#tla_com](~/includes/tla2sharptla-com-md.md)] interoperation Erfahrung.  
+  
+ Wenn der Wert festgelegt ist, auf "false", die dynamische [!INCLUDE[TLA2#tla_com](~/includes/tla2sharptla-com-md.md)] Objekt wird nicht das Objekt aufrufen, jedoch wird stattdessen binden auf den Namen und Objekt zurück, die aufgerufen werden kann oder indexed später das. Dies ist nützlich für indizierte Eigenschaften und Sprachen, die keine InvokeMember Aufrufsites erzeugen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,74 @@
+<Type Name="ManagementCreateAttribute" FullName="System.Management.Instrumentation.ManagementCreateAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ManagementCreateAttribute : System.Management.Instrumentation.ManagementNewInstanceAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagementCreateAttribute extends System.Management.Instrumentation.ManagementNewInstanceAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementCreateAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Instrumentation.ManagementNewInstanceAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Mit dem ManagementCreateAttribute wird angezeigt, dass eine Methode eine neue Instanz einer verwalteten Entität erstellt.  
+  
+ Hinweis: Die WMI .NET-Bibliotheken werden jetzt als abgeschlossen betrachtet, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Aspekte verfügbar sein, die diese Bibliotheken betreffen. Die [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) für alle neuen Entwicklungen verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Lebensdauer einer verwalteten Entität gebunden ist nicht von der Lebensdauer des Objekts .NET, die es darstellt. Der Anbieter kann die Methode, die mit diesem Attribut gekennzeichnet verwenden, um eine neue Instanz der entsprechenden verwalteten Entität zu erstellen.  
+  
+ Die Methodenparameter müssen den gleichen Namen und Typ mit den Parametern der Konstruktor der Bindung-Klasse.  
+  
+ Verwendung dieses Attributs wirkt sich auf die Registrierung der WMI-Klasse im Repository keine. Es wird nur zur Laufzeit verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie Sie das Attribut ManagementCreate verwenden.  
+  
+```  
+[ManagementEntity]  
+public class ProcessInstance  
+{  
+     [ManagementKey]  
+     public int Id;   
+  
+     [ManagementCreate]  
+     public ProcessInstance StartProcess(string cmdLine)  
+     {  
+        ProcessInstance newProcess = new ProcessInstance(cmdLine);  
+        newProcess.Start();  
+        return newProcess;  
+     }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementCreateAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.ManagementCreateAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Management.ManagementCreateAttribute" />-Klasse. Dies ist der Standardkonstruktor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

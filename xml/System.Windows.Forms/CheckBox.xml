@@ -1,0 +1,915 @@
+<Type Name="CheckBox" FullName="System.Windows.Forms.CheckBox">
+  <TypeSignature Language="C#" Value="public class CheckBox : System.Windows.Forms.ButtonBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CheckBox extends System.Windows.Forms.ButtonBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CheckBox" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ButtonBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultBindingProperty("CheckState")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("CheckedChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Checked")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Windows.Forms.Design.AutoSizeToolboxItem,System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Windows <see cref="T:System.Windows.Forms.CheckBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.Windows.Forms.CheckBox> der Benutzer eine Option, z. B. wahr/falsch oder Ja/Nein zugewiesen werden soll. Die <xref:System.Windows.Forms.CheckBox> -Steuerelement kann ein Image, Text oder beides anzeigen.  
+  
+ <xref:System.Windows.Forms.CheckBox>und <xref:System.Windows.Forms.RadioButton> Steuerelemente verfügen über ähnliche Funktionen: Benutzer können aus einer Liste von Optionen auswählen. <xref:System.Windows.Forms.CheckBox>Steuerelemente können die Benutzer, die eine Kombination von Optionen auswählen. Im Gegensatz dazu <xref:System.Windows.Forms.RadioButton> Steuerelemente ermöglichen einem Benutzer, die sich gegenseitig ausschließende Optionen zur Auswahl.  
+  
+ Die <xref:System.Windows.Forms.CheckBox.Appearance%2A> Eigenschaft bestimmt, ob die <xref:System.Windows.Forms.CheckBox> angezeigt wird, wie von einem normalen <xref:System.Windows.Forms.CheckBox> oder als eine Schaltfläche.  
+  
+ Die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaft bestimmt, ob das Steuerelement zwei oder drei Zustände unterstützt. Verwenden Sie die <xref:System.Windows.Forms.CheckBox.Checked%2A> Eigenschaft zum Abrufen oder festlegen den Wert eines zwei-Status <xref:System.Windows.Forms.CheckBox> steuern und verwenden Sie die <xref:System.Windows.Forms.CheckBox.CheckState%2A> Eigenschaft zum Abrufen oder festlegen den Wert eines drei-Status <xref:System.Windows.Forms.CheckBox> Steuerelement.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaftensatz auf `true`, <xref:System.Windows.Forms.CheckBox.Checked%2A> Eigenschaft zurück `true` für einen aktivierten oder einen unbestimmten Zustand.  
+  
+ Die <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> Eigenschaft bestimmt den Stil und die Darstellung des Steuerelements. Wenn die <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.FlatStyle?displayProperty=nameWithType>, Betriebssystem des Benutzers bestimmt die Darstellung des Steuerelements.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.FlatStyle?displayProperty=nameWithType>, die <xref:System.Windows.Forms.CheckBox.CheckAlign%2A> Eigenschaft wird ignoriert, und das Steuerelement wird angezeigt, mit der <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType> oder <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType> Ausrichtung. Wenn die <xref:System.Windows.Forms.CheckBox.CheckAlign%2A> Eigenschaft auf einen der rechtsbündige festgelegt ist, das Steuerelement wird angezeigt, mit der <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType> Ausrichtung; andernfalls wird es angezeigt, mit der <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType> Ausrichtung.  
+  
+ Im folgenden wird beschrieben, einen unbestimmten Zustand: stehen Ihnen eine <xref:System.Windows.Forms.CheckBox> , die bestimmt, ob der markierte Text im eine <xref:System.Windows.Forms.RichTextBox> fett formatiert ist. Wenn Sie Text auswählen, klicken Sie auf, die <xref:System.Windows.Forms.CheckBox> fett. Ebenso bei Auswahl von Text, der <xref:System.Windows.Forms.CheckBox> zeigt an, ob die ausgewählten Text fett formatiert ist. Wenn der ausgewählte Text Text enthält, fett und "normal", ist, die <xref:System.Windows.Forms.CheckBox> hat einen unbestimmten Zustand.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.CheckBox>, erhalten sie die Darstellung einer Umschaltfläche, legt <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> auf `false`, und fügt es ein <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Classic CheckBox.CheckBox Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CheckBox.CheckBox Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CheckBox.CheckBox Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CheckBox.CheckBox Example/CS/source.cs#1)]
+ [!code-vb[Classic CheckBox.CheckBox Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CheckBox.CheckBox Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CheckBox ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.CheckBox" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig, wenn ein neuer <xref:System.Windows.Forms.CheckBox> instanziiert wird, <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> festgelegt ist, um `true`, <xref:System.Windows.Forms.CheckBox.Checked%2A> festgelegt ist, um `false`, und <xref:System.Windows.Forms.CheckBox.Appearance%2A> auf festgelegt ist <xref:System.Windows.Forms.Appearance.Normal>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.CheckBox>, erhalten sie die Darstellung einer Umschaltfläche, legt <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> auf `false`, und fügt es ein <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Classic CheckBox.CheckBox Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CheckBox.CheckBox Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CheckBox.CheckBox Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CheckBox.CheckBox Example/CS/source.cs#1)]
+ [!code-vb[Classic CheckBox.CheckBox Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CheckBox.CheckBox Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Appearance">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Appearance Appearance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Appearance Appearance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBox.Appearance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Appearance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert, der bestimmt, die Darstellung von einem <see cref="T:System.Windows.Forms.CheckBox" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.Appearance" />-Werte. Der Standardwert ist <see cref="F:System.Windows.Forms.Appearance.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.CheckBox.Appearance%2A> Wert wird festgelegt, um <xref:System.Windows.Forms.Appearance.Normal>, die <xref:System.Windows.Forms.CheckBox> eine typische Darstellung hat. Wenn der Wert, um festgelegt ist `Button`die <xref:System.Windows.Forms.CheckBox> angezeigt wird, z. B. eine Umschaltfläche, die auf eine nach-oben oder unten Zustand umgeschaltet werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.CheckBox>, erhalten sie die Darstellung einer Umschaltfläche, legt <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> auf `false`, und fügt es ein <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Classic CheckBox.CheckBox Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CheckBox.CheckBox Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CheckBox.CheckBox Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CheckBox.CheckBox Example/CS/source.cs#1)]
+ [!code-vb[Classic CheckBox.CheckBox Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CheckBox.CheckBox Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Windows.Forms.Appearance" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppearanceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AppearanceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AppearanceChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.CheckBox.AppearanceChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.CheckBox.Appearance" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.CheckBox.AppearanceChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.CheckBox> mit dem Namen `CheckBox1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.CheckBox.AppearanceChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#139](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#139)]
+ [!code-vb[System.Windows.Forms.EventExamples#139](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#139)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoCheck">
+      <MemberSignature Language="C#" Value="public bool AutoCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBox.AutoCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="P:System.Windows.Forms.CheckBox.Checked" /> oder <see cref="P:System.Windows.Forms.CheckBox.CheckState" /> Werte und die <see cref="T:System.Windows.Forms.CheckBox" />des Darstellung werden automatisch geändert, wenn die <see cref="T:System.Windows.Forms.CheckBox" /> geklickt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Windows.Forms.CheckBox.Checked" /> Wert oder <see cref="P:System.Windows.Forms.CheckBox.CheckState" /> Wert und die Darstellung des Steuerelements automatisch geändert, auf die <see cref="E:System.Windows.Forms.Control.Click" /> Ereignis ist, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> ist festgelegt auf "false", Sie müssen zum Hinzufügen von Code zum Aktualisieren der <xref:System.Windows.Forms.CheckBox.Checked%2A> oder <xref:System.Windows.Forms.CheckBox.CheckState%2A> Werte in der <xref:System.Windows.Forms.Control.Click> -Ereignishandler.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.CheckBox>, erhalten sie die Darstellung einer Umschaltfläche, legt <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> auf `false`, und fügt es ein <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Classic CheckBox.CheckBox Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CheckBox.CheckBox Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CheckBox.CheckBox Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CheckBox.CheckBox Example/CS/source.cs#1)]
+ [!code-vb[Classic CheckBox.CheckBox Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CheckBox.CheckBox Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAlign">
+      <MemberSignature Language="C#" Value="public System.Drawing.ContentAlignment CheckAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment CheckAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBox.CheckAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die horizontale und vertikale Ausrichtung des Häkchens in einer <see cref="T:System.Windows.Forms.CheckBox" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Drawing.ContentAlignment" />-Werte. Der Standardwert ist <see langword="MiddleLeft" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der drei Eigenschaften in einer Beschriftung an. Die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaft wechselt zwischen `true` und `false` mit abwechselnden auf das Steuerelement und die <xref:System.Windows.Forms.CheckBox.CheckAlign%2A> wechselt zwischen den `MiddleRight` und `MiddleLeft` Werte von <xref:System.Drawing.ContentAlignment>. In diesem Beispiel wird gezeigt, wie die Eigenschaftswerte ändern die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> eigenschaftenänderungen und das Steuerelement aktiviert ist. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.Label> und <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden und die Bezeichnung ist groß genug für die Anzeige von drei Zeilen Text als auch einen Verweis auf die <xref:System.Drawing?displayProperty=nameWithType> Namespace. Dieser Code sollte aufgerufen werden, der <xref:System.Windows.Forms.Control.Click> -Ereignishandler des Steuerelements.  
+  
+ [!code-cpp[Classic CheckBox.CheckAlign Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CheckBox.CheckAlign Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CheckBox.CheckAlign Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CheckBox.CheckAlign Example/CS/source.cs#1)]
+ [!code-vb[Classic CheckBox.CheckAlign Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CheckBox.CheckAlign Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Drawing.ContentAlignment" /> Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public bool Checked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Checked" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBox.Checked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.CheckBox" /> befindet sich im aktivierten Zustand.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.CheckBox" /> befindet sich in der aktivierten Zustand befindet, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.  
+  
+ <block subset="none" type="note"><para>  
+ Wenn die <see cref="P:System.Windows.Forms.CheckBox.ThreeState" /> -Eigenschaftensatz auf <see langword="true" />, die <see cref="P:System.Windows.Forms.CheckBox.Checked" /> Eigenschaft zurück <see langword="true" /> für entweder eine <see langword="Checked" /> oder <see langword="Indeterminate" /> <see cref="P:System.Windows.Forms.CheckBox.CheckState" />.  
+  
+</para></block></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert ist `true`die <xref:System.Windows.Forms.CheckBox> Teil des Steuerelements ein Häkchen angezeigt. Wenn die <xref:System.Windows.Forms.CheckBox.Appearance%2A> -Eigenschaftensatz auf `Button`, das Steuerelement abgesenkt dargestellt, wenn <xref:System.Windows.Forms.CheckBox.Checked%2A> ist `true` und ausgelöst werden, wie eine Schaltfläche, wenn `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der drei Eigenschaften in einer Beschriftung an. Die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaft wechselt zwischen `true` und `false` mit abwechselnden auf das Steuerelement und die <xref:System.Windows.Forms.CheckBox.CheckAlign%2A> wechselt zwischen einer <xref:System.Drawing.ContentAlignment> Wert `MiddleRight` und `MiddleLeft`. In diesem Beispiel wird gezeigt, wie die Eigenschaftswerte ändern die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> eigenschaftenänderungen und das Steuerelement aktiviert ist. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.Label> und <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden und die Bezeichnung ist groß genug für die Anzeige von drei Zeilen Text als auch einen Verweis auf die <xref:System.Drawing?displayProperty=nameWithType> Namespace. Dieser Code sollte aufgerufen werden, der <xref:System.Windows.Forms.Control.Click> -Ereignishandler des Steuerelements.  
+  
+ [!code-cpp[Classic CheckBox.CheckAlign Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CheckBox.CheckAlign Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CheckBox.CheckAlign Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CheckBox.CheckAlign Example/CS/source.cs#1)]
+ [!code-vb[Classic CheckBox.CheckAlign Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CheckBox.CheckAlign Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckedChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CheckedChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CheckedChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.CheckBox.CheckedChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.CheckBox.Checked" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.CheckBox.CheckedChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.CheckBox> mit dem Namen `CheckBox1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.CheckBox.CheckedChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#140)]
+ [!code-vb[System.Windows.Forms.EventExamples#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#140)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckState">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.CheckState CheckState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.CheckState CheckState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBox.CheckState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CheckState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Status der <see cref="T:System.Windows.Forms.CheckBox" />.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.CheckState" />-Enumerationswerte. Der Standardwert ist <see langword="Unchecked" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaftensatz auf `false`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> Eigenschaftswert kann nur festgelegt werden, um `CheckState.Indeterminate` im Code und nicht durch eine Benutzerinteraktion.  
+  
+ Die folgende Tabelle beschreibt die <xref:System.Windows.Forms.Appearance?displayProperty=nameWithType> von der <xref:System.Windows.Forms.CheckBox> -Steuerelement in den verschiedenen Zuständen der `Normal` und `Button` formatieren-Steuerelements <xref:System.Windows.Forms.CheckBox.Appearance%2A?displayProperty=nameWithType>.  
+  
+|CheckState|Appearance.Normal|Appearance.Button|  
+|----------------|-----------------------|-----------------------|  
+|`Checked`|Die <xref:System.Windows.Forms.CheckBox> ein Häkchen angezeigt.|Das Steuerelement wird vertieft.|  
+|`Unchecked`|Die <xref:System.Windows.Forms.CheckBox> ist leer.|Das Steuerelement wird ausgelöst.|  
+|`Indeterminate`|Die <xref:System.Windows.Forms.CheckBox> zeigt ein Häkchen und schattiert dargestellt.|Das Steuerelement wird flach dargestellt.|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der drei Eigenschaften in einer Beschriftung an. Die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaft wechselt zwischen `true` und `false` mit abwechselnden auf das Steuerelement und die <xref:System.Windows.Forms.CheckBox.CheckAlign%2A> wechselt zwischen den `MiddleRight` und `MiddleLeft` Werte von <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType>. In diesem Beispiel wird gezeigt, wie die Eigenschaftswerte ändern die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> eigenschaftenänderungen und das Steuerelement aktiviert ist. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.Label> und <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden und die Bezeichnung ist groß genug für die Anzeige von drei Zeilen Text als auch einen Verweis auf die <xref:System.Drawing?displayProperty=nameWithType> Namespace. Dieser Code sollte aufgerufen werden, der <xref:System.Windows.Forms.Control.Click> -Ereignishandler des Steuerelements.  
+  
+ [!code-cpp[Classic CheckBox.CheckAlign Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CheckBox.CheckAlign Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CheckBox.CheckAlign Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CheckBox.CheckAlign Example/CS/source.cs#1)]
+ [!code-vb[Classic CheckBox.CheckAlign Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CheckBox.CheckAlign Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Windows.Forms.CheckState" /> Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckStateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CheckStateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CheckStateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.CheckBox.CheckStateChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.CheckBox.CheckState" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.CheckBox.CheckStateChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.CheckBox> mit dem Namen `CheckBox1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.CheckBox.CheckStateChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#141](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#141)]
+ [!code-vb[System.Windows.Forms.EventExamples#141](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#141)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt für die Barrierefreiheit für das <see cref="T:System.Windows.Forms.CheckBox" />-Steuerelement.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Forms.CheckBox.CheckBoxAccessibleObject" /> für das Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die <xref:System.Windows.Forms.CheckBox.CreateAccessibilityInstance%2A>-Methode nicht explizit aufrufen, wird sie beim Verweis auf die <xref:System.Windows.Forms.Control.AccessibilityObject%2A>-Eigenschaft aufgerufen.  
+  
+> [!NOTE]
+>  Zum Abrufen oder Festlegen der <xref:System.Windows.Forms.Control.AccessibilityObject%2A> -Eigenschaft, müssen Sie einen Verweis zum Hinzufügen der `Accessibility` Assembly, die mit .NET Framework installiert.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.CheckBox.CreateAccessibilityInstance" /> in einer abgeleiteten Klasse aufrufen, sollten Sie nicht der Basisklasse <see cref="M:System.Windows.Forms.CheckBox.CreateAccessibilityInstance" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBox.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benötigten Erstellungsparameter ab, wenn das Steuerelementhandle erstellt wird.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.CreateParams" />-Eigenschaft, die die erforderlichen Erstellungsparameter enthält, wenn das Handle für das Steuerelement erstellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird erweitert die <xref:System.Windows.Forms.Control.CreateParams%2A> Eigenschaft eine <xref:System.Windows.Forms.Button> abgeleitete Klasse. Die <xref:System.Windows.Forms.CreateParams.Style%2A?displayProperty=nameWithType> Eigenschaft geändert wird, die bewirkt, dass der Schaltfläche zum Anzeigen einer <xref:System.Drawing.Icon> anstelle einer <xref:System.Drawing.Image>. Dieses Beispiel benötigen Sie, dass Sie eine Klasse, die haben von erben die <xref:System.Windows.Forms.Button> Klasse.  
+  
+ [!code-cpp[CreateParams#3](~/samples/snippets/cpp/VS_Snippets_Winforms/CreateParams/CPP/createparams.cpp#3)]
+ [!code-csharp[CreateParams#3](~/samples/snippets/csharp/VS_Snippets_Winforms/CreateParams/CS/createparams.cs#3)]
+ [!code-vb[CreateParams#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CreateParams/VB/createparams.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBox.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardgröße des Steuerelements ab.</summary>
+        <value>Die Standardgröße.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.CheckBox.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzer auf das <see cref="T:System.Windows.Forms.CheckBox" />-Steuerelement doppelklickt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig die <xref:System.Windows.Forms.ControlStyles.StandardClick> und <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> Enumerationen auf "false" festgelegt sind die <xref:System.Windows.Forms.CheckBox> -Steuerelement, und die <xref:System.Windows.Forms.CheckBox.DoubleClick> Ereignis wird nicht ausgelöst.  
+  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDoubleClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.CheckBox.MouseDoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzer auf das <see cref="T:System.Windows.Forms.CheckBox" />-Steuerelement doppelklickt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Forms.ControlStyles?displayProperty=nameWithType> und <xref:System.Windows.Forms.ControlStyles?displayProperty=nameWithType> Stilbits werden auf festgelegt `false` für die <xref:System.Windows.Forms.CheckBox> -Steuerelement, und die <xref:System.Windows.Forms.CheckBox.MouseDoubleClick> Ereignis wird nicht ausgelöst.  
+  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAppearanceChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnAppearanceChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAppearanceChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.OnAppearanceChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.CheckBox.AppearanceChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.CheckBox.OnAppearanceChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.CheckBox.OnAppearanceChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.CheckBox.OnAppearanceChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCheckedChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnCheckedChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCheckedChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.OnCheckedChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.CheckBox.CheckedChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.CheckBox.OnCheckedChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.CheckBox.OnCheckedChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.CheckBox.OnCheckedChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCheckStateChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnCheckStateChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCheckStateChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.OnCheckStateChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.CheckBox.CheckStateChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.CheckBox.OnCheckStateChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.CheckBox.OnCheckStateChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.CheckBox.OnCheckStateChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected override void OnClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.OnClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.Click" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.CheckBox.OnClick%2A> ändert sich die <xref:System.Windows.Forms.CheckBox.CheckState%2A> Eigenschaft. Wenn die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaftensatz auf `true`nachfolgende klickt Sie auf der die <xref:System.Windows.Forms.CheckBox> führt zu <xref:System.Windows.Forms.CheckBox.OnClick%2A> durchlaufen alle Werte der der <xref:System.Windows.Forms.CheckBox.CheckState%2A> Enumeration. Andernfalls <xref:System.Windows.Forms.CheckBox.OnClick%2A> Kontextwechsel zwischen <xref:System.Windows.Forms.CheckState.Checked> und <xref:System.Windows.Forms.CheckState.Unchecked>.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.CheckBox.OnClick%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.CheckBox.OnClick(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.CheckBox.OnClick(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.HandleCreated" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Forms.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Forms.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.OnKeyDown(System.Windows.Forms.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.KeyEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.ButtonBase.OnKeyUp(System.Windows.Forms.KeyEventArgs)" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs mevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs mevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mevent" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="mevent">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das OnMouseUp-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMnemonic">
+      <MemberSignature Language="C#" Value="protected override bool ProcessMnemonic (char charCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ProcessMnemonic(char charCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.ProcessMnemonic(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charCode" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="charCode">Das zu verarbeitende Zeichen.</param>
+        <summary>Verarbeitet ein mnemonisches Zeichen.</summary>
+        <returns>
+          <see langword="true" />, wenn das Zeichen als mnemonisches Zeichen vom Steuerelement verarbeitet wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, um ein Steuerelement auf ein mnemonisches Zeichen verarbeiten können. Die Methode bestimmt, ob das Steuerelement in einem Zustand, der Prozess Mnemonik ist und ob, ob das angegebene Zeichen das mnemonische Zeichen darstellt. Wenn also die Methode die Aktion zugeordnete mnemonische Zeichen und der Rückgabewert durchführen sollten `true`. Wenn nicht, der Methodenrückgabewert `false`. Implementierungen dieser Methode verwenden häufig die <xref:System.Windows.Forms.Control.IsMnemonic%2A> Methode, um zu bestimmen, ob das angegebene Zeichen das mnemonische Zeichen im Text des Steuerelements übereinstimmt.  
+  
+ Zum Beispiel:  
+  
+```csharp  
+if (CanSelect && IsMnemonic(charCode, MyControl.Text) {  
+    // Perform action associated with mnemonic.  
+    }  
+```  
+  
+ Diese Standardimplementierung von der <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> einfach Methodenrückgabe `false` um anzugeben, dass das Steuerelement keine mnemonische Zeichen hat.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine Erweiterung der Schaltfläche-Klasse, überschreibt die <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> Methode, um benutzerdefiniertes Verhalten bereitzustellen. Das Beispiel zeigt auch die Verwendung der <xref:System.Windows.Forms.Control.CanSelect%2A> und <xref:System.Windows.Forms.Control.IsMnemonic%2A> Eigenschaften. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code nach einer Form-Klasse, in der gleichen Datei. Fügen Sie eine Schaltfläche vom Typ `MnemonicButton` in das Formular.  
+  
+ [!code-cpp[System.Windows.Forms.ProcessMnemonic#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ProcessMnemonic/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ProcessMnemonic#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ProcessMnemonic/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ProcessMnemonic#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ProcessMnemonic/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlign">
+      <MemberSignature Language="C#" Value="public override System.Drawing.ContentAlignment TextAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment TextAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBox.TextAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung des Texts auf die <see cref="T:System.Windows.Forms.CheckBox" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Drawing.ContentAlignment" />-Werte. Die Standardeinstellung ist <see cref="F:System.Drawing.ContentAlignment.MiddleLeft" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreeState">
+      <MemberSignature Language="C#" Value="public bool ThreeState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThreeState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBox.ThreeState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.CheckBox" /> lässt drei Zustände statt zwei überprüfen.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.CheckBox" /> ist in drei Kontrollkästchen-Status anzeigen kann; andernfalls, <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaftensatz auf `false`, die <xref:System.Windows.Forms.CheckBox.CheckState%2A> Eigenschaftswert kann nur festgelegt werden, um die `Indeterminate` Wert <xref:System.Windows.Forms.CheckState?displayProperty=nameWithType> im Code und nicht durch eine Benutzerinteraktion.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der drei Eigenschaften in einer Beschriftung an. Die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaft wechselt zwischen `true` und `false` mit abwechselnden auf das Steuerelement und die <xref:System.Windows.Forms.CheckBox.CheckAlign%2A> wechselt zwischen den `MiddleRight` und `MiddleLeft` Werte von <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType>. In diesem Beispiel wird gezeigt, wie die Eigenschaftswerte ändern die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> eigenschaftenänderungen und das Steuerelement aktiviert ist. Dieser Code erfordert, dass eine <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.Label> und <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden und die Bezeichnung ist groß genug für die Anzeige von drei Zeilen Text als auch einen Verweis auf die <xref:System.Drawing?displayProperty=nameWithType> Namespace. Dieser Code sollte aufgerufen werden, der <xref:System.Windows.Forms.Control.Click> -Ereignishandler des Steuerelements.  
+  
+ [!code-cpp[Classic CheckBox.CheckAlign Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CheckBox.CheckAlign Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CheckBox.CheckAlign Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CheckBox.CheckAlign Example/CS/source.cs#1)]
+ [!code-vb[Classic CheckBox.CheckAlign Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CheckBox.CheckAlign Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle <see cref="T:System.Windows.Forms.CheckBox" />-Steuerelement darstellt.</summary>
+        <returns>Eine Zeichenfolge, die vom Steuerelementtyp und den Status der Zustände der <see cref="P:System.Windows.Forms.CheckBox.CheckState" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

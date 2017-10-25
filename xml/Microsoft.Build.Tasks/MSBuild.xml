@@ -1,0 +1,419 @@
+<Type Name="MSBuild" FullName="Microsoft.Build.Tasks.MSBuild">
+  <TypeSignature Language="C#" Value="public class MSBuild : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MSBuild extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.MSBuild" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.Build.Framework.RunInMTA</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die <c>MSBuild</c> Aufgabe. Verwenden der <c>MSBuild</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [MSBuild-Aufgabe](http://msdn.microsoft.com/library/76577f6c-7669-44ad-a840-363e37a04d34).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse implementiert den Task "MSBuild" weitergibt untergeordnete Projektdateien auf das MSBuild-Modul erstellt werden sollen.  
+  
+ Als RunInMTA gekennzeichnet, da es besteht kein Grund, die MSBuild-Aufgaben auf einem anderen Thread als dem vom RequestBuilder erzeugten ausgeführt werden soll, mit die sie erzeugt.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MSBuild ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.MSBuild.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.MSBuild" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="BuildInParallel">
+      <MemberSignature Language="C#" Value="public bool BuildInParallel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BuildInParallel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.BuildInParallel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob die Projekte in angegeben die <see cref="P:Microsoft.Build.Tasks.MSBuild.Projects" /> Eigenschaft werden nach Möglichkeit parallel erstellt.</summary>
+        <value>
+          <see langword="true" />Wenn die Projekte in angegeben die <see cref="P:Microsoft.Build.Tasks.MSBuild.Projects" /> Eigenschaft parallel erstellt werden, wenn möglich ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `true`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.MSBuild.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Weist das MSBuild-Modul an, eine oder mehrere Projektdateien zu erstellen, deren Speicherorte durch die <see cref="P:Microsoft.Build.Tasks.MSBuild.Projects" />-Eigenschaft angegeben werden.</summary>
+        <returns>
+          <see langword="true" />, wenn alle Projekte erfolgreich erstellt werden, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Projects">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Projects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Projects" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.Projects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zu erstellenden Projektdateien ab oder legt diese fest.</summary>
+        <value>Die zu erstellenden Projektdateien.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public string[] Properties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Properties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine durch Semikolons getrennte Liste der Eigenschaftenname-Wert-Paare ab oder legt diese fest, die als globale Eigenschaften auf das untergeordnete Projekt angewendet werden.</summary>
+        <value>Eine durch Semikolons getrennte Liste der Eigenschaftenname-Wert-Paare, die als globale Eigenschaften auf das untergeordnete Projekt angewendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Angabe dieses Parameters ist funktionell gleichwertig mit dem Festlegen von Eigenschaften, die über die **"/ Property"** wechseln, wenn Sie mit erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RebaseOutputs">
+      <MemberSignature Language="C#" Value="public bool RebaseOutputs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RebaseOutputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.RebaseOutputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab oder legt diesen fest, der angibt, ob die Pfade der relativen Pfade von Zielausgabeelementen der erstellten Projekte angepasst werden, damit diese relativ zum aufrufenden Projekt sind.</summary>
+        <value>
+          <see langword="true" />Wenn die relativen Pfade der Ausgabeelemente der erstellten Projekte Ziel Zielausgabeelementen angepasst, damit diese relativ zum aufrufenden Projekt sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveProperties">
+      <MemberSignature Language="C#" Value="public string RemoveProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RemoveProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.RemoveProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Satz von globalen Eigenschaften zu entfernen.</summary>
+        <value>Gibt den Satz von globalen Eigenschaften zu entfernen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RunEachTargetSeparately">
+      <MemberSignature Language="C#" Value="public bool RunEachTargetSeparately { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RunEachTargetSeparately" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.RunEachTargetSeparately" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob die [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] -Aufgabe alle Ziele in der Liste zu übergeben [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] einzeln nacheinander, statt gleichzeitig.</summary>
+        <value>
+          <see langword="true" />Wenn die [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] -Aufgabe alle Ziele in der Liste zu übergeben [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] jeweils einzeln; <see langword="false" /> Wenn die [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] -Aufgabe alle Ziele in der Liste gleichzeitig aufruft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft auf `true` wird sichergestellt, dass nachfolgende Ziele aufgerufen werden, selbst wenn die zuvor aufgerufene Ziele fehlgeschlagen. Ansonsten würde ein Buildfehler den Aufruf aller nachfolgenden Ziele beenden. Der Standardwert ist `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SkipNonexistentProjects">
+      <MemberSignature Language="C#" Value="public string SkipNonexistentProjects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SkipNonexistentProjects" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.SkipNonexistentProjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob wird übersprungen-Projektdateien, die nicht auf dem Datenträger vorhanden sind.</summary>
+        <value>
+          <see langword="true" />Wenn Projektdateien, die nicht auf dem Datenträger vorhanden wird übersprungen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Projektdateien, die nicht auf dem Datenträger vorhanden sind, nicht übersprungen werden, werden sie bewirken, dass einen Buildfehler.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StopOnFirstFailure">
+      <MemberSignature Language="C#" Value="public bool StopOnFirstFailure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StopOnFirstFailure" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.StopOnFirstFailure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob die Aufgabe das Erstellen der restlichen Projekte beenden soll, sobald eines dieser Projekte möglicherweise nicht funktioniert.</summary>
+        <value>
+          <see langword="true" />Wenn die Aufgabe erstellen der restlichen Projekte beenden sollte, sobald eines dieser möglicherweise nicht funktioniert; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetAndPropertyListSeparators">
+      <MemberSignature Language="C#" Value="public string[] TargetAndPropertyListSeparators { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] TargetAndPropertyListSeparators" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.TargetAndPropertyListSeparators" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Escapezeichen ohne Escapezeichen aus dem angegebenen <see cref="P:Microsoft.Build.Tasks.MSBuild.Properties" /> und <see cref="P:Microsoft.Build.Tasks.MSBuild.Targets" />.</summary>
+        <value>Die Escapezeichen ohne Escapezeichen aus dem angegebenen <see cref="P:Microsoft.Build.Tasks.MSBuild.Properties" /> und <see cref="P:Microsoft.Build.Tasks.MSBuild.Targets" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss auf einen Wert festgelegt werden, außer `null` für die `MSBuild` Aufgabe unescape-Eigenschaften und Ziele.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetOutputs">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] TargetOutputs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] TargetOutputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.TargetOutputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Ausgaben der erstellten Ziele von allen Projektdateien zurück. Es werden nur die Ausgaben der angegebenen Ziele zurückgegeben, jedoch keine Ausgaben, die möglicherweise für Ziele vorhanden sind, von denen diese Ziele abhängen.</summary>
+        <value>Die Ausgaben der erstellten Ziele von allen Projektdateien.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Targets">
+      <MemberSignature Language="C#" Value="public string[] Targets { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Targets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.Targets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Ziel oder die Ziele ab, die in den Projektdateien erstellt werden sollen, oder legt sie fest. Verwenden Sie Semikolons, um eine Liste von Zielnamen zu trennen.</summary>
+        <value>Das Ziel oder die Ziele, die in den Projektdateien erstellt werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sind in der `MSBuild` Aufgabe keine Ziele angegeben, werden die in den Projektdateien angegebenen Standardziele erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsVersion">
+      <MemberSignature Language="C#" Value="public string ToolsVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.ToolsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Ziel [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Version zum Erstellen des Projekts, wodurch eine [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] -Aufgabe ein Projekt erstellen, die auf eine andere Version von den [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] als die im Projekt. Gültige Werte sind <paramref name="2.0" />, <paramref name="3.0" /> und <paramref name="3.5" />.</summary>
+        <value>Das Ziel [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Version, um das Projekt mit erstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `3.5.`  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnloadProjectsOnCompletion">
+      <MemberSignature Language="C#" Value="public bool UnloadProjectsOnCompletion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnloadProjectsOnCompletion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.UnloadProjectsOnCompletion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob das Projekt entladen wird, sobald der Vorgang abgeschlossen ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Projekt entladen werden, wenn der Vorgang abgeschlossen ist. andernfalls <see langword="false" />. Diese Eigenschaft wird in Version 4.0 nicht mehr verwendet.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UseResultsCache">
+      <MemberSignature Language="C#" Value="public bool UseResultsCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseResultsCache" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.MSBuild.UseResultsCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob das MSBuild-Modul erstellten Ziele aus dem Cache zurückgegeben wird.</summary>
+        <value>
+          <see langword="true" />Wenn das MSBuild-Modul erstellten Ziele aus dem Cache zurückgegeben wird. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Gültigkeitsbereich der erstellten Ziele in den Cache ist (ProjectFileName, GlobalProperties) [TargetNames] als Liste von Buildelementen.  
+  
+ Diese Eigenschaft wird nicht mehr in Version 4.0 verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

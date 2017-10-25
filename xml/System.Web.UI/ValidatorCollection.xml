@@ -1,0 +1,373 @@
+<Type Name="ValidatorCollection" FullName="System.Web.UI.ValidatorCollection">
+  <TypeSignature Language="C#" Value="public sealed class ValidatorCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ValidatorCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ValidatorCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt ein Array von <see cref="T:System.Web.UI.IValidator" /> Verweise. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.Web.UI.ValidatorCollection> Verweis mit einem Server, auf der angeforderten Seite enthalten Validierungssteuerelement zugeordnet ist. Diese Steuerelemente selbst zur Auflistung hinzufügen, wenn die <xref:System.Web.UI.Control.Init> -Ereignis für die <xref:System.Web.UI.Page> -Objekts behandelt wird. Entfernen sie Sie selbst wenn die <xref:System.Web.UI.Control.Unload> -Ereignis der <xref:System.Web.UI.Page> -Objekts behandelt wird. Die <xref:System.Web.UI.Page> Klasse erbt beide Methoden aus der <xref:System.Web.UI.Control> Klasse.  
+  
+ Sie können Zugriff auf diese Sammlung, deren Methoden und ihre Eigenschaften über die <xref:System.Web.UI.Page.Validators%2A?displayProperty=nameWithType> Eigenschaft. Wenn die getestete Bedingung einer Bestätigung in dieser Auflistung ein Fehler auftritt, die <xref:System.Web.UI.Page.IsValid%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Auflistung über den Zugriff auf die <xref:System.Web.UI.Page.Validators%2A?displayProperty=nameWithType> -Eigenschaft und die Verwendung der <xref:System.Web.UI.ValidatorCollection.GetEnumerator%2A> Methode, um die Werte durchlaufen.  
+  
+ [!code-csharp[ValidatorCollection_GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidatorCollection_GetEnumerator/CS/validatorcollection_getenumerator.cs.aspx#1)]
+ [!code-vb[ValidatorCollection_GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidatorCollection_GetEnumerator/VB/validatorcollection_getenumerator.vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidatorCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ValidatorCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.ValidatorCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.IValidator validator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.IValidator validator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ValidatorCollection.Add(System.Web.UI.IValidator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validator" Type="System.Web.UI.IValidator" />
+      </Parameters>
+      <Docs>
+        <param name="validator">Das Validierungssteuerelement des Server hinzufügen.</param>
+        <summary>Fügt den angegebenen Server Validierungssteuerelement der <see cref="T:System.Web.UI.ValidatorCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn hinzugefügt der <xref:System.Web.UI.ValidatorCollection> Auflistung von einer <xref:System.Web.UI.Page> -Objekt über die <xref:System.Web.UI.Page.Validators%2A> -Eigenschaft, die <xref:System.Web.UI.IValidator> Implementierung ist Bestandteil bei der Validierung. Die <xref:System.Web.UI.IValidator.Validate%2A> Methode wird aufgerufen, zusammen mit den <xref:System.Web.UI.IValidator.Validate%2A> Methoden der alle anderen Validierungssteuerelemente. Alle Validierungssteuerelemente dann freigeben, bei der Bestimmung, ob die <xref:System.Web.UI.Page> -Objekt als Ganzes gültig ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Web.UI.ValidatorCollection.Add%2A>-Methode verwenden.  
+  
+ [!code-csharp[ValidatorCollection_Add#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidatorCollection_Add/CS/validatorcollection_add.cs#1)]
+ [!code-vb[ValidatorCollection_Add#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidatorCollection_Add/VB/validatorcollection_add.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.IValidator validator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.IValidator validator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ValidatorCollection.Contains(System.Web.UI.IValidator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validator" Type="System.Web.UI.IValidator" />
+      </Parameters>
+      <Docs>
+        <param name="validator">Das Validierungssteuerelement des Servers zu überprüfen.</param>
+        <summary>Bestimmt, ob die angegebenen Validierungssteuerelements Server innerhalb der Seite enthalten ist <see cref="T:System.Web.UI.ValidatorCollection" /> Auflistung.</summary>
+        <returns>
+          <see langword="true" />Wenn das Validierungssteuerelement für die Server in der Auflistung befindet; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Web.UI.ValidatorCollection.Contains%2A>-Methode verwenden.  
+  
+ [!code-csharp[ValidatorCollection_Contains_Remove#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidatorCollection_Contains_Remove/CS/validatorcollection_contains_remove.cs#1)]
+ [!code-vb[ValidatorCollection_Contains_Remove#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidatorCollection_Contains_Remove/VB/validatorcollection_contains_remove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ValidatorCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Die Auflistung, die das Serversteuerelement Validierung hinzugefügt wird.</param>
+        <param name="index">Der Index, in dem das Validierungssteuerelement für den Server kopiert wird.</param>
+        <summary>Kopiert die Validierungssteuerelement-Auflistung in das angegebene Array, beginnend am angegebenen Speicherort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.ValidatorCollection.CopyTo%2A> Methode.  
+  
+ [!code-csharp[ValidatorCollection_CopyTo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidatorCollection_CopyTo/CS/validatorcollection_copyto.cs.aspx#1)]
+ [!code-vb[ValidatorCollection_CopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidatorCollection_CopyTo/VB/validatorcollection_copyto.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ValidatorCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Verweise in der Auflistung ab.</summary>
+        <value>Die Anzahl der Überprüfung gesteuert wird, auf der Seite <see cref="T:System.Web.UI.ValidatorCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.ValidatorCollection.Count%2A> Eigenschaft.  
+  
+ [!code-csharp[ValidatorCollection_Constructor_Count#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidatorCollection_Constructor_Count/CS/validatorcollection_constructor_count.cs.aspx#2)]
+ [!code-vb[ValidatorCollection_Constructor_Count#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidatorCollection_Constructor_Count/VB/validatorcollection_constructor_count.vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ValidatorCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Collections.IEnumerator" /> Instanz, für die <see cref="T:System.Web.UI.ValidatorCollection" /> Auflistung.</summary>
+        <returns>Die <see cref="T:System.Collections.IEnumerator" /> für die Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType> -Instanz, die zum Abrufen jedes einzelnen Elements im durchlaufen werden kann die <xref:System.Web.UI.ValidatorCollection> Auflistung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.ValidatorCollection.GetEnumerator%2A> Methode.  
+  
+ [!code-csharp[ValidatorCollection_GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidatorCollection_GetEnumerator/CS/validatorcollection_getenumerator.cs.aspx#1)]
+ [!code-vb[ValidatorCollection_GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidatorCollection_GetEnumerator/VB/validatorcollection_getenumerator.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ValidatorCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Web.UI.ValidatorCollection" />-Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistung schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.ValidatorCollection.IsReadOnly%2A> Eigenschaft.  
+  
+ [!code-csharp[ValidatorCollection_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidatorCollection_3/CS/validatorcollection_3.cs.aspx#1)]
+ [!code-vb[ValidatorCollection_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidatorCollection_3/VB/validatorcollection_3.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ValidatorCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.ValidatorCollection" /> Auflistung synchronisiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Auflistung synchronisiert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Auflistung synchronisiert wird, ist sie threadsicher.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.ValidatorCollection.IsSynchronized%2A> Eigenschaft.  
+  
+ [!code-csharp[ValidatorCollection_3#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidatorCollection_3/CS/validatorcollection_3.cs.aspx#2)]
+ [!code-vb[ValidatorCollection_3#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidatorCollection_3/VB/validatorcollection_3.vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.IValidator this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.IValidator Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ValidatorCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IValidator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des zurückzugebenden Bestätigung.</param>
+        <summary>Ruft das Validierungssteuerelement für den Server an der angegebenen Indexposition in der <see cref="T:System.Web.UI.ValidatorCollection" /> Auflistung.</summary>
+        <value>Der Wert des angegebenen Validierungssteuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.ValidatorCollection.Item%2A> Eigenschaft.  
+  
+ [!code-csharp[ValidatorCollection_Item#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidatorCollection_Item/CS/validatorcollection_item.cs.aspx#1)]
+ [!code-vb[ValidatorCollection_Item#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidatorCollection_Item/VB/validatorcollection_item.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.IValidator validator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.IValidator validator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ValidatorCollection.Remove(System.Web.UI.IValidator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validator" Type="System.Web.UI.IValidator" />
+      </Parameters>
+      <Docs>
+        <param name="validator">Das Validierungssteuerelement des Servers aus der Auflistung zu entfernen.</param>
+        <summary>Entfernt den angegebenen Validierungssteuerelements für den Server auf der Seite <see cref="T:System.Web.UI.ValidatorCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Web.UI.ValidatorCollection.Remove%2A>-Methode verwenden.  
+  
+ [!code-csharp[ValidatorCollection_Contains_Remove#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidatorCollection_Contains_Remove/CS/validatorcollection_contains_remove.cs#1)]
+ [!code-vb[ValidatorCollection_Contains_Remove#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidatorCollection_Contains_Remove/VB/validatorcollection_contains_remove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ValidatorCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das verwendet werden kann, Synchronisieren der <see cref="T:System.Web.UI.ValidatorCollection" /> Auflistung.</summary>
+        <value>Die <see cref="T:System.Object" /> in die Auflistung zu synchronisieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.ValidatorCollection.SyncRoot%2A> Eigenschaft.  
+  
+ [!code-csharp[ValidatorCollection_3#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidatorCollection_3/CS/validatorcollection_3.cs.aspx#2)]
+ [!code-vb[ValidatorCollection_3#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidatorCollection_3/VB/validatorcollection_3.vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

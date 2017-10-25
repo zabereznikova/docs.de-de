@@ -1,0 +1,376 @@
+<Type Name="SoapDocumentMethodAttribute" FullName="System.Web.Services.Protocols.SoapDocumentMethodAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SoapDocumentMethodAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapDocumentMethodAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapDocumentMethodAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Anwenden der <see cref="T:System.Web.Services.Protocols.SoapDocumentMethodAttribute" /> an eine Methode angegeben, dass SOAP-Nachrichten an und von der Methode <see langword="Document" /> formatieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Web Services Description Language (WSDL) definiert zwei Stile für das wie eine XML-Webdienstmethode, die es einen Vorgang aufruft, in einer SOAP-Nachricht formatiert werden kann: `RPC` und `Document`. `Document`bezieht sich auf die Formatierung der XML-Webdienstmethode entsprechend einem XSD-Schema. Die `Document` -Stil bezieht sich auf die Formatierung der `Body` Element als eine Reihe von einer oder mehreren Nachrichtenteilen, die nach dem `Body` Element. Genau wie die einzelnen Nachrichtenteile wird bestimmt durch die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Use%2A> und <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.ParameterStyle%2A> Eigenschaften. Die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Use%2A> -Eigenschaft bestimmt, ob Parameter formatiert werden `Encoded` oder `Literal`. Die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.ParameterStyle%2A> bestimmt, ob die Parameter innerhalb einer einzelnen Nachricht Teil Folgendes gekapselt sind die `Body` Element- oder gibt an, ob jeder Parameter einen einzelnen Nachrichtenteil ist.  
+  
+ Weitere Informationen finden Sie unter [&#91;\< Topic://cpconCustomizingSOAPInASPNETWebServicesWebServiceClients > &#93;](http://msdn.microsoft.com/en-us/1d777288-c0d9-4e6a-b638-f010da031952)  
+  
+ Dieses Attribut kann eine XML-Webdienstmethode auf dem Server und eine Methode der Proxyklasse auf dem Client angewendet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Format der Nachricht auf `Document` für die `GetUserName` XML-Webdienstmethode. Darüber hinaus wird das XML-Element mit der `Body` für die SOAP-Anforderung und die SOAP-Antwort sind-Elementgruppe `GetUserNameRequest` und `GetUserNameResponse`bzw..  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapDocumentMethodAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapDocumentMethodAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.SoapDocumentMethodAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapDocumentMethodAttribute (string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapDocumentMethodAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die <see langword="SOAPAction" /> -HTTP-Headerfeld der SOAP-Anforderung. Legt die <see cref="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Action" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Protocols.SoapDocumentMethodAttribute" /> Klasse, indem die <see cref="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Action" /> auf den Wert der Eigenschaft der <paramref name="action" /> Parameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see langword="SOAPAction" /> -HTTP-Headerfeld der SOAP-Anforderung.</summary>
+        <value>Die <see langword="SOAPAction" /> -HTTP-Headerfeld der SOAP-Anforderung. Die Standardeinstellung ist http://tempuri.org/MethodName, wobei Methodenname der Name der XML-Webdienstmethode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Action%2A> Eigenschaft ist ein URI, der den Zweck der Anforderung angibt. Allerdings die SOAP-Spezifikation schränkt das Format des URIS, oder alle Regeln darüber, ob der URI ist aufgelöst werden kann. Das Vorhandensein und Inhalt der <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Action%2A> Eigenschaft kann von Webservern, z. B. Firewalls, verwendet werden, um SOAP-Anforderungsnachrichten in HTTP entsprechend zu filtern.  
+  
+ Standardmäßig veröffentlicht die .NET Framework, Version 1.1 der <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Action%2A> Eigenschaft in der `soapAction` Attribut des der `soap:operation` -Element für jede unterstützte SOAP-Bindung in WSDL-Dokumenten, die für einen XML-Webdienst generiert. Weitere Informationen über die SOAP-Spezifikation finden Sie in der W3C-Website (http://www.w3.org/TR/SOAP).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Action%2A> Eigenschaft `http://www.contoso.com/GetUserName`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public string Binding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Binding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Bindung, der eine XML-Webdienstmethode einen Vorgang implementiert wird.</summary>
+        <value>Die Bindung, der eine XML-Webdienstmethode einen Vorgang implementiert wird. Die Standardeinstellung ist der Name des XML-Webdiensts "SOAP" angehängt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Bindung ist von Web Services Description Language (WSDL) definiert eine Schnittstelle ähnelt insofern, dass es sich um eine konkrete Reihe von Vorgängen definiert. In Bezug auf die mithilfe von ASP.NET erstellten XML-Webdienste ist jede XML-Webdienstmethode ein Vorgang innerhalb einer Bindung. XML-Webdienstmethoden sind Elemente von der standardbindung für einen XML-Webdienst oder einer angegebenen Bindung eine <xref:System.Web.Services.WebServiceBindingAttribute> auf einen XML-Webdienst angewendet. Ein XML-Webdienst kann mehrere Bindungen implementieren bei mehreren <xref:System.Web.Services.WebServiceBindingAttribute> Attribute gelten für einen XML-Webdienst.  
+  
+ Mindestens einmal <xref:System.Web.Services.WebServiceBindingAttribute> Attribute gelten für einen XML-Webdienst eine <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> oder <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> auf einzelne XML-Webdienstmethoden an, der durch eine bestimmte XML-Webdienstmethode implementierten Bindungsvorgang angewendet werden können. Legen Sie die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Binding%2A> Eigenschaft <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> oder <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> die Bindung an eine XML-Webdienstmethode einen Vorgang für eine implementiert wird. Nur ein <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> oder <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> kann auf eine XML-Webdienstmethode angewendet werden. Aus diesem Grund kann eine XML-Webdienstmethode nur einen Vorgang für eine Bindung implementieren.  
+  
+ Weitere Informationen über die WSDL-Spezifikation finden Sie in der W3C-Website (http://www.w3.org/TR/wsdl).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OneWay">
+      <MemberSignature Language="C#" Value="public bool OneWay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OneWay" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.OneWay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob ein XML-Webdienstclient auf dem Webserver zum Abschließen der Verarbeitung einer XML-Webdienstmethode wartet.</summary>
+        <value>
+          <see langword="true" />Wenn der XML-Client Webdienstmethode wartet nicht auf dem Webserver eine XML-Webdienstmethode vollständig verarbeitet. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine XML-Webdienstmethode hat die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.OneWay%2A> -Eigenschaftensatz auf `true`, die XML-Webdienstclient keinen auf dem Webserver zum Abschließen der Verarbeitung der XML-Webdienstmethode warten. Als der Webserver deserialisiert ist die <xref:System.Web.Services.Protocols.SoapServerMessage>, aber vor dem Aufrufen der XML-Webdienstmethode, gibt der Server einen HTTP-Statuscode 202 zurück. Ein HTTP 202-Statuscode gibt an den Client, dass der Webserver die Verarbeitung der Nachricht gestartet wurde. Daher empfängt ein XML-Webdienstclient keine Bestätigung, dass der Webserver die Nachricht erfolgreich verarbeitet.  
+  
+ Unidirektionale Methoden sind keinen Rückgabewert oder out-Parameter.  
+  
+ Wenn Sie die .NET Framework Version 1.0 XML-Webdienstmethoden verwenden, der entweder die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> oder <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> -Attribut angewendet wird, mit der <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.OneWay%2A> Eigenschaft auf festgelegt `true`, haben keinen Zugriff auf ihre <xref:System.Web.HttpContext> mithilfe der statische <xref:System.Web.HttpContext.Current%2A> Eigenschaft. Für den Zugriff auf die <xref:System.Web.HttpContext>, leiten Sie die Klasse implementieren die XML-Webdienstmethode aus <xref:System.Web.Services.WebService> und Zugriff auf die <xref:System.Web.Services.WebService.Context%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine XML-Webdienstmethode, die nicht vom Client warten, für die XML-Webdienstmethode abgeschlossen benötigt werden. Deshalb im Beispiel legt die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.OneWay%2A> Eigenschaft `true`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterStyle">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapParameterStyle ParameterStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapParameterStyle ParameterStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.ParameterStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapParameterStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob der Parameter in einer einzelnen XML-Element unter gekapselt werden die <see langword="Body" /> Element im XML-Teil einer SOAP-Nachricht.</summary>
+        <value>Die <see cref="T:System.Web.Services.Protocols.SoapParameterStyle" /> für SOAP-Nachrichten gesendet und aus einer XML-Webdienstmethode-service-Methode. Der Standardwert ist <see cref="F:System.Web.Services.Protocols.SoapParameterStyle.Wrapped" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel gibt an, dass Parameter in der SOAP-Nachrichten gesendet und aus gesendet der `PlaceOrder` XML-Webdienstmethode nicht in ein XML-Element gekapselt werden.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestElementName">
+      <MemberSignature Language="C#" Value="public string RequestElementName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.RequestElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das XML-Element zugeordnete SOAP-Anforderung für eine XML-Webdienstmethode, die in eine dienstbeschreibung als einen Vorgang definiert ist.</summary>
+        <value>Das XML-Element, das die SOAP-Anforderung für eine XML-Webdienstmethode, die in einer dienstbeschreibung als einen Vorgang definiert ist zugeordnet ist. Der Standardwert ist der Name der XML-Webdienstmethode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.RequestElementName%2A> definiert das XML-Element zum Einbinden der Parameter unterhalb der `Body` Element des SOAP-Anforderung beim <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.ParameterStyle%2A> ist <xref:System.Web.Services.Protocols.SoapParameterStyle.Wrapped>. Dies ist das XSD-Schema, das die SOAP-Anforderung an die XML-Webdienstmethode in die Beschreibung des Diensts für einen XML-Webdienst darstellt wider.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt den Namen des XML-Elements zugeordnete XML-Webdienstmethode in der SOAP-Anforderung `MyCustomElement`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestNamespace">
+      <MemberSignature Language="C#" Value="public string RequestNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.RequestNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namespace der SOAP-Anforderung für eine XML-Webdienstmethode zugeordnet.</summary>
+        <value>Der XML-Namespace der SOAP-Anforderung für eine XML-Webdienstmethode zugeordnet. Der Standardwert ist http://tempuri.org/.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.RequestNamespace%2A>wird in der XSD-Schema für die XML-Webdienstmethode in seine dienstbeschreibung verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.RequestNamespace%2A> Eigenschaft `http://www.contoso.com`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseElementName">
+      <MemberSignature Language="C#" Value="public string ResponseElementName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResponseElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.ResponseElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das XML-Element in der SOAP-Antwort für eine XML-Webdienstmethode zugeordnet.</summary>
+        <value>Das XML-Element, das SOAP-Anforderung für eine XML-Webdienstmethode zugeordnet ist. Der Standardwert ist WebServiceNameResult, wobei WebServiceName der Name der XML-Webdienstmethode ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.ResponseElementName%2A> definiert das XML-Element zum Einbinden der Parameter unterhalb der `Body` Element der SOAP-Antwort beim <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.ParameterStyle%2A> ist <xref:System.Web.Services.Protocols.SoapParameterStyle.Wrapped>. Dies ist das XSD-Schema, das die SOAP-Antwort an die XML-Webdienstmethode innerhalb der XML-Webdienst-dienstbeschreibung darstellt wider.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt den Namen des XML-Elements zugeordnete XML-Webdienstmethode in der SOAP-Antwort an `MyCustomResponseElement`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseNamespace">
+      <MemberSignature Language="C#" Value="public string ResponseNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResponseNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.ResponseNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den XML-Namespace der SOAP-Antwort für eine XML-Webdienstmethode zugeordnet.</summary>
+        <value>Der XML-Namespace der SOAP-Antwort für eine XML-Webdienstmethode zugeordnet. Der Standardwert ist http://tempuri.org/.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.ResponseNamespace%2A> Eigenschaft wird in der XSD-Schema für die XML-Webdienstmethode in seine dienstbeschreibung verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.ResponseNamespace%2A> Eigenschaft `http://www.contoso.com`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Use">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.SoapBindingUse Use { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Description.SoapBindingUse Use" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Use" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.SoapBindingUse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Parameter, die Formatierung für eine XML-Webdienstmethode in der XML-Teil einer SOAP-Nachricht.</summary>
+        <value>Die <see cref="T:System.Web.Services.Description.SoapBindingUse" /> für die XML-Webdienstmethode. Die Standardeinstellung ist <see cref="F:System.Web.Services.Description.SoapBindingUse.Literal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Web Services Description Language (WSDL) definiert zwei Methoden zum Formatieren von Parametern: <xref:System.Web.Services.Description.SoapBindingUse.Encoded> und <xref:System.Web.Services.Description.SoapBindingUse.Literal>. <xref:System.Web.Services.Description.SoapBindingUse.Encoded>bezieht sich auf die Formatierung von Parametern mithilfe von SOAP-Codierung, wie in Abschnitt 5 der SOAP-Spezifikation beschrieben. <xref:System.Web.Services.Description.SoapBindingUse.Literal>bezieht sich auf die Formatierung der Parameter mit einem vordefinierten XSD-Schema für jeden Parameter.  
+  
+ Weitere Informationen finden Sie unter [&#91;\< Topic://cpconCustomizingSOAPInASPNETWebServicesWebServiceClients > &#93; ](http://msdn.microsoft.com/en-us/1d777288-c0d9-4e6a-b638-f010da031952).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel gibt an, dass `Document`  /  `Encoded` müssen SOAP-Nachrichten gesendet werden, um die `PlaceOrder` XML-Webdienstmethode.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,36 @@
+<Type Name="ShowDeletedControl" FullName="System.DirectoryServices.Protocols.ShowDeletedControl">
+  <TypeSignature Language="C#" Value="public class ShowDeletedControl : System.DirectoryServices.Protocols.DirectoryControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ShowDeletedControl extends System.DirectoryServices.Protocols.DirectoryControl" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.ShowDeletedControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.ShowDeletedControl" /> Klasse wird verwendet, mit <see cref="T:System.DirectoryServices.Protocols.SearchRequest" /> so angeben, dass die Suchergebnisse einschließen sollten Sie gelöschte Objekte, die den Filter entsprechen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ShowDeletedControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ShowDeletedControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.ShowDeletedControl.#ctor" />-Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.ShowDeletedControl" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

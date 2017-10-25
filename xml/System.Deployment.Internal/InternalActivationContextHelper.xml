@@ -1,0 +1,193 @@
+<Type Name="InternalActivationContextHelper" FullName="System.Deployment.Internal.InternalActivationContextHelper">
+  <TypeSignature Language="C#" Value="public static class InternalActivationContextHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit InternalActivationContextHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Deployment.Internal.InternalActivationContextHelper" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet Zugriff auf Daten aus einer <see cref="T:System.ActivationContext" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine temporäre Hilfsklasse, die den Zugriff auf interne Member verwendet ein <xref:System.ActivationContext> Objekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetActivationContextData">
+      <MemberSignature Language="C#" Value="public static object GetActivationContextData (ActivationContext appInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetActivationContextData(class System.ActivationContext appInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Deployment.Internal.InternalActivationContextHelper.GetActivationContextData(System.ActivationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appInfo" Type="System.ActivationContext" />
+      </Parameters>
+      <Docs>
+        <param name="appInfo">Das Objekt, das Manifest enthält.</param>
+        <summary>Ruft den Inhalt der Anwendung manifest aus einem <see cref="T:System.ActivationContext" /> Objekt.</summary>
+        <returns>Das Anwendungsmanifest, das enthalten ist das <see cref="T:System.ActivationContext" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplicationComponentManifest">
+      <MemberSignature Language="C#" Value="public static object GetApplicationComponentManifest (ActivationContext appInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetApplicationComponentManifest(class System.ActivationContext appInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Deployment.Internal.InternalActivationContextHelper.GetApplicationComponentManifest(System.ActivationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appInfo" Type="System.ActivationContext" />
+      </Parameters>
+      <Docs>
+        <param name="appInfo">Das Objekt, das Manifest enthält.</param>
+        <summary>Ruft das Manifest der letzten Bereitstellungskomponente in ein <see cref="T:System.ActivationContext" /> Objekt.</summary>
+        <returns>Das Manifest der letzten Bereitstellungskomponente in der <see cref="T:System.ActivationContext" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplicationManifestBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetApplicationManifestBytes (ActivationContext appInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetApplicationManifestBytes(class System.ActivationContext appInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Deployment.Internal.InternalActivationContextHelper.GetApplicationManifestBytes(System.ActivationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appInfo" Type="System.ActivationContext" />
+      </Parameters>
+      <Docs>
+        <param name="appInfo">Das Objekt, das Abrufen von Bytes aus.</param>
+        <summary>Ruft ein Bytearray, das den Rohdateninhalt des Anwendungsmanifests...</summary>
+        <returns>Ein Array, das Anwendungsmanifest als unformatierte Daten enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDeploymentComponentManifest">
+      <MemberSignature Language="C#" Value="public static object GetDeploymentComponentManifest (ActivationContext appInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetDeploymentComponentManifest(class System.ActivationContext appInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Deployment.Internal.InternalActivationContextHelper.GetDeploymentComponentManifest(System.ActivationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appInfo" Type="System.ActivationContext" />
+      </Parameters>
+      <Docs>
+        <param name="appInfo">Das Objekt, das Manifest enthält.</param>
+        <summary>Ruft das Manifest der ersten Bereitstellungskomponente in ein <see cref="T:System.ActivationContext" /> Objekt.</summary>
+        <returns>Das Manifest der ersten Bereitstellungskomponente in der <see cref="T:System.ActivationContext" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDeploymentManifestBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetDeploymentManifestBytes (ActivationContext appInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetDeploymentManifestBytes(class System.ActivationContext appInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Deployment.Internal.InternalActivationContextHelper.GetDeploymentManifestBytes(System.ActivationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appInfo" Type="System.ActivationContext" />
+      </Parameters>
+      <Docs>
+        <param name="appInfo">Das Objekt, das Abrufen von Bytes aus.</param>
+        <summary>Ruft ein Bytearray, das den Rohdateninhalt des Bereitstellungsmanifests enthält.</summary>
+        <returns>Ein Array, das Bereitstellungsmanifest als unformatierte Daten enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFirstRun">
+      <MemberSignature Language="C#" Value="public static bool IsFirstRun (ActivationContext appInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsFirstRun(class System.ActivationContext appInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Deployment.Internal.InternalActivationContextHelper.IsFirstRun(System.ActivationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appInfo" Type="System.ActivationContext" />
+      </Parameters>
+      <Docs>
+        <param name="appInfo">Das Objekt zu untersuchen.</param>
+        <summary>Ruft einen Wert, der angibt, ob dies der erste Zeit <see cref="T:System.ActivationContext" /> Objekt ausgeführt wurde.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.ActivationContext" /> gibt an, dass er zum ersten Mal ausgeführt wird; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareForExecution">
+      <MemberSignature Language="C#" Value="public static void PrepareForExecution (ActivationContext appInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PrepareForExecution(class System.ActivationContext appInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Deployment.Internal.InternalActivationContextHelper.PrepareForExecution(System.ActivationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appInfo" Type="System.ActivationContext" />
+      </Parameters>
+      <Docs>
+        <param name="appInfo">Das Objekt, zu informieren.</param>
+        <summary>Teilt eine <see cref="T:System.ActivationContext" /> abzurufenden kann jetzt ausgeführt werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

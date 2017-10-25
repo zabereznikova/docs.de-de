@@ -1,0 +1,73 @@
+<Type Name="LogFileCreationScheduleOption" FullName="Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption">
+  <TypeSignature Language="C#" Value="public enum LogFileCreationScheduleOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LogFileCreationScheduleOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bestimmt das Datum, die in den Namen der enthalten die <see cref="T:Microsoft.VisualBasic.Logging.FileLogTraceListener" /> -Klasse Protokolldateien.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuweisen eines der <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption> -Enumerationswerte zum die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> Eigenschaft, um das Datum, das die Namen seiner Protokolldateien einschließt anzugeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Daily">
+      <MemberSignature Language="C#" Value="Daily" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption Daily = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schließen Sie das aktuelle Datum in den Protokolldateinamen an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nehmen Sie das Datum nicht in den Protokolldateinamen aus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Weekly">
+      <MemberSignature Language="C#" Value="Weekly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption Weekly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schließen Sie den ersten Tag der aktuellen Woche in den Protokolldateinamen an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

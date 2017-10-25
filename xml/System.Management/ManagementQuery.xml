@@ -1,0 +1,154 @@
+<Type Name="ManagementQuery" FullName="System.Management.ManagementQuery">
+  <TypeSignature Language="C#" Value="public abstract class ManagementQuery : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ManagementQuery extends System.Object implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.ManagementQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Management.ManagementQueryConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine abstrakte Basisklasse für alle Management Abfrageobjekte bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public abstract object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementQuery.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie des Objekts zurück.</summary>
+        <returns>Das geklonte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseQuery">
+      <MemberSignature Language="C#" Value="protected virtual void ParseQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void ParseQuery(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementQuery.ParseQuery(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Die zu analysierende Abfragezeichenfolge.</param>
+        <summary>Analysiert die Abfragezeichenfolge, und legt die Eigenschaftswerte entsprechend fest. Wenn die Abfrage gültig ist, werden die Eigenschaft "Klassenname" und die Bedingungseigenschaft der Abfrage analysiert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird analysiert eine Abfrage in Klasseneigenschaften mit dem Namen und Bedingung an.  
+  
+ [!code-csharp[wminet_ManagementQuery_ParseQuery#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementQuery_ParseQuery/cs/ManagementQuery_ParseQuery.cs#1)]
+ [!code-vb[wminet_ManagementQuery_ParseQuery#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementQuery_ParseQuery/vb/ManagementQuery.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryLanguage">
+      <MemberSignature Language="C#" Value="public virtual string QueryLanguage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string QueryLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementQuery.QueryLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Abfragesprache, die in der Abfragezeichenfolge, definieren das Format der Abfragezeichenfolge verwendet.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der das Format der Abfragezeichenfolge enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Kann auf alle unterstützten Abfragesprache festgelegt werden. "WQL" ist der einzige Wert, der von WMI systemintern unterstützt.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryString">
+      <MemberSignature Language="C#" Value="public virtual string QueryString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string QueryString" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementQuery.QueryString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Abfrage im Textformat.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der die Abfrage enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Wenn das Abfrageobjekt ohne Parameter erstellt wird, ist die Eigenschaft null bis ausdrücklich festlegen. Wenn das Objekt mit einer angegebenen Abfrage erstellt wurde, gibt die Eigenschaft die angegebene Abfragezeichenfolge zurück.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

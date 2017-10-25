@@ -1,0 +1,57 @@
+<Type Name="CoerceValueCallback" FullName="System.Windows.CoerceValueCallback">
+  <TypeSignature Language="C#" Value="public delegate object CoerceValueCallback(DependencyObject d, object baseValue);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CoerceValueCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.CoerceValueCallback" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="d" Type="System.Windows.DependencyObject" />
+    <Parameter Name="baseValue" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Object</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="d">Das Objekt, dem die Eigenschaft vorhanden ist. Wenn der Rückruf aufgerufen wird, wird das Eigenschaftensystem diesen Wert übergeben.</param>
+    <param name="baseValue">Der neue Wert der Eigenschaft, die vor einem Umwandlungsversuch.</param>
+    <summary>Bietet eine Vorlage für eine Methode, die aufgerufen wird, wenn der Wert einer Abhängigkeitseigenschaft erneut ausgewertet wird oder Umwandlung speziell angefordert wird.</summary>
+    <returns>Die umgewandelten Wert (mit den entsprechenden Typ).</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rückrufe basierend auf <xref:System.Windows.CoerceValueCallback> kann auf eine Abhängigkeitseigenschaft mithilfe verschiedener Techniken zugewiesen werden. Jede dieser Techniken erfordert, dass Sie zuerst ein neues Objekt für Eigenschaftenmetadaten erstellen (<xref:System.Windows.PropertyMetadata>, oder eine abgeleitete Klasse wie z. B. <xref:System.Windows.FrameworkPropertyMetadata>). Erstellen Sie das Metadatenobjekt, das mit einem Konstruktorsignatur, akzeptiert der `coerceValueCallback` Parameter, und weisen Sie diesen Parameter an den Rückrufhandler. Oder erstellen Sie die Metadaten durch Signatur und den Satz der <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> Eigenschaft vor dem Einfügen der Metadaten verwendet.  
+  
+ Wenn Sie diese Metadaten haben, können Sie:  
+  
+-   Definieren Sie eine neue Abhängigkeitseigenschaft auf eine neue Klasse mit einer Signatur von <xref:System.Windows.DependencyProperty.Register%2A>, wobei die Metadaten als die `typeMetadata` Wert.  
+  
+-   Überschreiben Sie die Metadaten (Aufrufen <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29>) für eine vorhandene Abhängigkeitseigenschaft, wenn Sie von der Klasse ableiten, der die Abhängigkeitseigenschaft besitzt.  
+  
+-   Fügen Sie eine vorhandenen Abhängigkeitseigenschaft zu einer neuen <xref:System.Windows.DependencyObject> -Klasse unter Verwendung der neuen Metadaten durch Aufrufen von <xref:System.Windows.DependencyProperty.AddOwner%28System.Type%2CSystem.Windows.PropertyMetadata%29>.  
+  
+ Implementierungen von diesem Rückruf überprüfen Sie den Wert `baseValue` und bestimmen Sie basierend auf den Wert oder den Typ, ob es sich um einen Wert handelt, die weitere umgewandelt werden muss.  
+  
+ Die <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> für eine Abhängigkeit Eigenschaft wird immer dann aufgerufen, die dem Eigenschaftensystem oder ein anderer Aufrufer ruft <xref:System.Windows.DependencyObject.CoerceValue%2A> auf eine <xref:System.Windows.DependencyObject> Instanz, und geben Sie diese Eigenschaft-ID als die `dp`.  
+  
+ Änderungen an den Eigenschaftswert können von jeder mögliche Teilnehmer im Eigenschaftensystem stammen. Dies schließt die Stile, generischen invalidierung, Trigger, Vererbung von Eigenschaftenwerten und lokaler Wert festlegen.  
+  
+ Im Allgemeinen sollten Sie vermeiden, mehrere angegeben <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> für eine bestimmte Abhängigkeitseigenschaft (außer Kraft setzen oder hinzufügen mit neuen Metadaten für eine Abhängigkeitseigenschaft, die bereits eine <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>). Nur einer der Rückrufe werden können verwendet. Rückruf wird möglicherweise der, die auf die am stärksten abgeleitete Klasse in der Vererbung im Vergleich zu angewendet wurde die <xref:System.Windows.DependencyObject> Aufrufer. Anderen Rückrufe, die auf die Metadaten für die Abhängigkeitseigenschaft zugewiesen werden soll, wie sie in der Hierarchie Besitzer höher vorhanden waren ersetzt werden, wenn die Metadaten überschrieben wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel schließt eine Implementierung von diesem Rückruf an den gespeicherten Wert einer Abhängigkeitseigenschaft basierend auf andere Eingaben, z. B. eine andere Eigenschaft-Wert umgewandelt werden. In diesem Fall überprüft der Rückruf finden Sie unter, ob die `ShirtType` -Eigenschaft entspricht, auf einen Typ von "Shirt", die Schaltflächen; Wenn dies der Fall wird eine beginnend Standardfarbe für die `ButtonColor`, weist der Typ "Shirt" weder Schaltflächen, wandelt die `ButtonColor` Wert an einen Startwert, wodurch die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] (nicht dargestellt) dieser Dropdownliste aus den effektiven Optionen zu entfernen.  
+  
+ [!code-csharp[DPCustom#CoerceValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCustom/CSharp/default.xaml.cs#coercevaluecallback)]
+ [!code-vb[DPCustom#CoerceValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCustom/visualbasic/default.xaml.vb#coercevaluecallback)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

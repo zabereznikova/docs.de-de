@@ -1,0 +1,459 @@
+<Type Name="ConfigurationException" FullName="System.Configuration.ConfigurationException">
+  <TypeSignature Language="C#" Value="public class ConfigurationException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ConfigurationException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationException" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn ein Konfigurationssystemfehler aufgetreten ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationException> Ausnahme wird ausgelöst, wenn die Anwendung versucht, zu lesen oder Schreiben von Daten in die Konfigurationsdatei jedoch nicht erfolgreich ist. Möglichen Ursachen dafür zählen falsch formatierte XML in der Konfigurationsdatei, die Probleme mit der Berechtigung und die Konfigurationseigenschaften mit Werten, die nicht gültig sind.  
+  
+> [!NOTE]
+>  Die <xref:System.Configuration.ConfigurationException> Objekt wird aus Gründen der Abwärtskompatibilität beibehalten. Die <xref:System.Configuration.ConfigurationErrorsException> Objekt ersetzt es, für das Konfigurationssystem.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This class is obsolete.  Use System.Configuration.ConfigurationErrorsException")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This class is obsolete.  Use System.Configuration.ConfigurationErrorsException")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationException" /> wurde eine Ausnahme ausgelöst.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConfigurationException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das Informationen zum Deserialisieren enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This class is obsolete.  Use System.Configuration.ConfigurationErrorsException")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationException" /> wurde eine Ausnahme ausgelöst.</param>
+        <param name="inner">Die innere Ausnahme, die Ursache hierfür <see cref="T:System.Configuration.ConfigurationException" /> ggf. ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationException (string message, System.Xml.XmlNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationException.#ctor(System.String,System.Xml.XmlNode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This class is obsolete.  Use System.Configuration.ConfigurationErrorsException")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="node" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationException" /> wurde eine Ausnahme ausgelöst.</param>
+        <param name="node">Die <see cref="T:System.Xml.XmlNode" /> , verursacht dies <see cref="T:System.Configuration.ConfigurationException" /> ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationException (string message, Exception inner, System.Xml.XmlNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner, class System.Xml.XmlNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationException.#ctor(System.String,System.Exception,System.Xml.XmlNode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This class is obsolete.  Use System.Configuration.ConfigurationErrorsException")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+        <Parameter Name="node" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationException" /> wurde eine Ausnahme ausgelöst.</param>
+        <param name="inner">Die innere Ausnahme, die Ursache hierfür <see cref="T:System.Configuration.ConfigurationException" /> ggf. ausgelöst wird.</param>
+        <param name="node">Die <see cref="T:System.Xml.XmlNode" /> , verursacht dies <see cref="T:System.Configuration.ConfigurationException" /> ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationException (string message, string filename, int line);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string filename, int32 line) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationException.#ctor(System.String,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This class is obsolete.  Use System.Configuration.ConfigurationErrorsException")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="line" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationException" /> wurde eine Ausnahme ausgelöst.</param>
+        <param name="filename">Der Pfad zur Konfigurationsdatei, die die Ursache <see cref="T:System.Configuration.ConfigurationException" /> ausgelöst wird.</param>
+        <param name="line">Die Zeilennummer in der Konfigurationsdatei an der diese <see cref="T:System.Configuration.ConfigurationException" /> ausgelöst wurde.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationException (string message, Exception inner, string filename, int line);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner, string filename, int32 line) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationException.#ctor(System.String,System.Exception,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This class is obsolete.  Use System.Configuration.ConfigurationErrorsException")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="line" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationException" /> wurde eine Ausnahme ausgelöst.</param>
+        <param name="inner">Die innere Ausnahme, die Ursache hierfür <see cref="T:System.Configuration.ConfigurationException" /> ggf. ausgelöst wird.</param>
+        <param name="filename">Der Pfad zur Konfigurationsdatei, die die Ursache <see cref="T:System.Configuration.ConfigurationException" /> ausgelöst wird.</param>
+        <param name="line">Die Zeilennummer in der Konfigurationsdatei an der diese <see cref="T:System.Configuration.ConfigurationException" /> ausgelöst wurde.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BareMessage">
+      <MemberSignature Language="C#" Value="public virtual string BareMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BareMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationException.BareMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Beschreibung, warum diese Konfigurationsausnahme ausgelöst wurde.</summary>
+        <value>Eine Beschreibung der verdeutlichen, warum dies <see cref="T:System.Configuration.ConfigurationException" /> wurde eine Ausnahme ausgelöst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationException.BareMessage%2A> Eigenschaft enthält den Namen der Konfigurationsdatei noch die Zeilennummer, zu der diese keine <xref:System.Configuration.ConfigurationException> Ausnahme aufgetreten ist. Wenn Sie möchten, dass eine Nachricht mit dem Namen der Konfigurationsdatei und die Zeilennummer, zusammen mit der Meldung zurückgegebene der <xref:System.Configuration.ConfigurationException.BareMessage%2A> -Eigenschaft, verwenden die <xref:System.Configuration.ConfigurationException.Message%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filename">
+      <MemberSignature Language="C#" Value="public virtual string Filename { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filename" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationException.Filename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad zur Konfigurationsdatei, die diese Konfigurationsausnahme ausgelöst wird, verursacht hat.</summary>
+        <value>Der Pfad zur Konfigurationsdatei, die die Ursache <see cref="T:System.Configuration.ConfigurationException" /> Ausnahme ausgelöst wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Informationen zu serialisierende enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Legt die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt mit dem Dateinamen und Zeilennummern zu der diese Konfigurationsausnahme aufgetreten ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationException.GetObjectData%2A> -Methode legt eine <xref:System.Runtime.Serialization.SerializationInfo> Objekt mit dem Dateinamen und Zeilennummern zu der diese <xref:System.Configuration.ConfigurationException> Ausnahme aufgetreten ist. Während der Deserialisierung wird die <xref:System.Configuration.ConfigurationException> übertragenen Ausnahme aus der <xref:System.Runtime.Serialization.SerializationInfo> -Objekt, das über den Stream übertragen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXmlNodeFilename">
+      <MemberSignature Language="C#" Value="public static string GetXmlNodeFilename (System.Xml.XmlNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetXmlNodeFilename(class System.Xml.XmlNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationException.GetXmlNodeFilename(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This class is obsolete.  Use System.Configuration.ConfigurationErrorsException")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Die <see cref="T:System.Xml.XmlNode" /> , verursacht dies <see cref="T:System.Configuration.ConfigurationException" /> Ausnahme ausgelöst wird.</param>
+        <summary>Ruft den Pfad der Konfigurationsdatei aus dem internen <see cref="T:System.Xml.XmlNode" /> Objekt geladen wurde, als diese Konfigurationsausnahme ausgelöst wurde.</summary>
+        <returns>Ein <see langword="string" /> , das den Dateinamen für den Knoten darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXmlNodeLineNumber">
+      <MemberSignature Language="C#" Value="public static int GetXmlNodeLineNumber (System.Xml.XmlNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetXmlNodeLineNumber(class System.Xml.XmlNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationException.GetXmlNodeLineNumber(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This class is obsolete.  Use System.Configuration.ConfigurationErrorsException")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Die <see cref="T:System.Xml.XmlNode" /> , verursacht dies <see cref="T:System.Configuration.ConfigurationException" /> Ausnahme ausgelöst wird.</param>
+        <summary>Ruft die Zeilennummer in der Konfigurationsdatei ab, die die interne <see cref="T:System.Xml.XmlNode" /> Objekt dargestellt wird, wenn diese Konfigurationsausnahme ausgelöst wurde.</summary>
+        <returns>Eine <see langword="int" /> , die die Zeilennummer des Knotens darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="public virtual int Line { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Line" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationException.Line" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeilennummer in der Konfigurationsdatei, an der diese Konfigurationsausnahme ausgelöst wurde.</summary>
+        <value>Die Zeilennummer in der Konfigurationsdatei an der diese <see cref="T:System.Configuration.ConfigurationException" /> wurde eine Ausnahme ausgelöst.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine erweiterte Beschreibung, warum diese Konfigurationsausnahme ausgelöst wurde.</summary>
+        <value>Eine erweiterte Beschreibung verdeutlichen, warum dies <see cref="T:System.Configuration.ConfigurationException" /> wurde eine Ausnahme ausgelöst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationException.Message%2A> Eigenschaft enthält eine Verkettung aus dem <xref:System.Configuration.ConfigurationException.BareMessage%2A>, <xref:System.Configuration.ConfigurationException.Filename%2A>, und <xref:System.Configuration.ConfigurationException.Line%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

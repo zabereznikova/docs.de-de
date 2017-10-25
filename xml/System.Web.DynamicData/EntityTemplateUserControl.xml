@@ -1,0 +1,122 @@
+<Type Name="EntityTemplateUserControl" FullName="System.Web.DynamicData.EntityTemplateUserControl">
+  <TypeSignature Language="C#" Value="public class EntityTemplateUserControl : System.Web.UI.UserControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityTemplateUserControl extends System.Web.UI.UserControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.EntityTemplateUserControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.UserControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Basisklasse für Entitätsvorlagen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entitätsvorlagen sind Benutzersteuerelemente, die für eine Entität (Tabelle) anstatt für eine einzelnes Datenfeld gelten, wie dies bei Feldvorlagen. Die Entitätsvorlage für eine in der Regel enthält mehrere <xref:System.Web.DynamicData.DynamicControl> Steuerelemente zum Rendern von Datenfeldern.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityTemplateUserControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.EntityTemplateUserControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DynamicData.EntityTemplateUserControl" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.DynamicData.ContainerType ContainerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.DynamicData.ContainerType ContainerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.EntityTemplateUserControl.ContainerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.ContainerType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des datengebundenen Steuerelements, das diese Entitätsvorlage enthält.</summary>
+        <value>Der Typ, der die Vorlage enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.EntityTemplateUserControl.ContainerType%2A> Klasse enthält Informationen über den Kontext (den Steuerelementtyp "), in dem die <xref:System.Web.DynamicData.EntityTemplateUserControl> Klasse enthalten ist. Dieser Typ kann ein Listensteuerelement sein, z. B. eine <xref:System.Web.UI.WebControls.GridView> oder <xref:System.Web.UI.WebControls.ListView> Steuerelement. Sie können auch ein einzelnes Element-Steuerelement sein, z. B. eine <xref:System.Web.UI.WebControls.DetailsView> oder <xref:System.Web.UI.WebControls.FormView> Steuerelement.  
+  
+ Sie können anpassen, die Verhalten einer Anwendung je nach den <xref:System.Web.DynamicData.EntityTemplateUserControl.ContainerType%2A> Wert, z. B. bedingt anzeigen oder Ausblenden von bestimmten UI-Elemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataBoundControlMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DataBoundControlMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.EntityTemplateUserControl.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataBoundControlMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Renderingmodus von Daten für die Entität ab.</summary>
+        <value>Die Daten-Renderingmodus für die Entität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaTable Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.EntityTemplateUserControl.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Tabelle, der auf die Entitätsvorlage angewendet wird.</summary>
+        <value>Die Tabelle, der auf die Entitätsvorlage angewendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public string ValidationGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.EntityTemplateUserControl.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Validierung für die Entität Steuerelementgruppe gilt.</summary>
+        <value>Die Validierung für die Entität Steuerelementgruppe gilt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

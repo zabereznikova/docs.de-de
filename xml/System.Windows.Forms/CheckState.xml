@@ -1,0 +1,85 @@
+<Type Name="CheckState" FullName="System.Windows.Forms.CheckState">
+  <TypeSignature Language="C#" Value="public enum CheckState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CheckState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CheckState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Zustand eines Steuerelements, wie z. B. ein Kontrollkästchen, die aktiviert, deaktiviert werden kann, oder auf einen unbestimmten Zustand festgelegt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mehrere Methoden in <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.CheckedListBox>, und <xref:System.Windows.Forms.ItemCheckEventArgs> dieser Enumeration.  
+  
+> [!NOTE]
+>  Verwenden Sie ein unbestimmt aktiviertes Steuerelement, wenn Sie keinen Standardwert festlegen möchten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Windows.Forms.CheckState> Enumeration.  
+  
+ [!code-cpp[Classic CheckedListBox Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CheckedListBox Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CheckedListBox Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CheckedListBox Example/CS/source.cs#1)]
+ [!code-vb[Classic CheckedListBox Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CheckedListBox Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="Checked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.CheckState Checked = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.CheckState.Checked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CheckState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement aktiviert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Indeterminate">
+      <MemberSignature Language="C#" Value="Indeterminate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.CheckState Indeterminate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.CheckState.Indeterminate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CheckState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement ist unbestimmt. Ein unbestimmtes Steuerelement wird im Allgemeinen schattiert dargestellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unchecked">
+      <MemberSignature Language="C#" Value="Unchecked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.CheckState Unchecked = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.CheckState.Unchecked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CheckState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement ist deaktiviert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

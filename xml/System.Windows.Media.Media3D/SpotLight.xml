@@ -1,0 +1,346 @@
+<Type Name="SpotLight" FullName="System.Windows.Media.Media3D.SpotLight">
+  <TypeSignature Language="C#" Value="public sealed class SpotLight : System.Windows.Media.Media3D.PointLightBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SpotLight extends System.Windows.Media.Media3D.PointLightBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.SpotLight" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.PointLightBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Lichtobjekt, dessen Effekt in einem Bereich Kegel geformten entlang einer angegebenen Richtung projiziert, wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.SpotLight>ist eine Art von <xref:System.Windows.Media.Media3D.PointLight>, da es sich um eine Position, Bereich und Dämpfung hat. Allerdings <xref:System.Windows.Media.Media3D.SpotLight> auch können Sie die Richtung, Form und andere Eigenschaften für den Kegel des der Lichteffekt zu steuern.  
+  
+ Geben Sie Werte für <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> (hinter dem nichts beleuchtet ist), und <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> (innerhalb der alles vollständig beleuchtet ist) den Scheinwerferlichteffekt zu ändern.  
+  
+ Beleuchtung zwischen der Außenseite des inneren Kegel und dem äußeren Kegel fällt linear.  
+  
+ ![Spotlight-Diagramm](~/add/media/spotlight-1.png "Spotlight-Diagramm")  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Media.Media3D.SpotLight> in einer 3D-Szene.  
+  
+ [!code-xaml[3DGallery_snip#SpotLightExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/SpotLightExample.xaml#spotlightexampleinline1)]  
+  
+ Der folgende Code zeigt das vollständige Beispiel.  
+  
+ [!code-xaml[3DGallery_snip#SpotLightExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/SpotLightExample.xaml#spotlightexamplewholepage)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpotLight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.SpotLight.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Media3D.SpotLight" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpotLight (System.Windows.Media.Color diffuseColor, System.Windows.Media.Media3D.Point3D position, System.Windows.Media.Media3D.Vector3D direction, double outerConeAngle, double innerConeAngle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Color diffuseColor, valuetype System.Windows.Media.Media3D.Point3D position, valuetype System.Windows.Media.Media3D.Vector3D direction, float64 outerConeAngle, float64 innerConeAngle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.SpotLight.#ctor(System.Windows.Media.Color,System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="diffuseColor" Type="System.Windows.Media.Color" />
+        <Parameter Name="position" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="direction" Type="System.Windows.Media.Media3D.Vector3D" />
+        <Parameter Name="outerConeAngle" Type="System.Double" />
+        <Parameter Name="innerConeAngle" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="diffuseColor">Farbe des neuen breiten <see cref="T:System.Windows.Media.Media3D.SpotLight" />.</param>
+        <param name="position">Die Position des neuen <see cref="T:System.Windows.Media.Media3D.SpotLight" />.</param>
+        <param name="direction">Richtung des neuen <see cref="T:System.Windows.Media.Media3D.SpotLight" />.</param>
+        <param name="outerConeAngle">Winkel, der einen Kegel definiert, außerhalb, den das Licht nicht Objekte in der Szene beleuchtet.</param>
+        <param name="innerConeAngle">Der Winkel, der einen Kegel definiert, in dem das Licht Objekte in der Szene vollständig beleuchtet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Media3D.SpotLight" /> -Klasse unter Verwendung der angegebenen Farbe, Position, Richtung und Kegelwinkel.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.SpotLight Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.SpotLight Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.SpotLight.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.SpotLight</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Media3D.SpotLight" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.SpotLight CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.SpotLight CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.SpotLight.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.SpotLight</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Media3D.SpotLight" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.SpotLight.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Vector3D Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Vector3D Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.SpotLight.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Vector3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see cref="T:System.Windows.Media.Media3D.Vector3D" /> gibt, die die Richtung, in dem die <see cref="T:System.Windows.Media.Media3D.SpotLight" /> das Licht projiziert.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Media3D.Vector3D" />die die Richtung der Spotlight-Projektion angibt. Der Standardwert ist <c>0,0, -1</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Direction"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.SpotLight.DirectionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Media.Media3D.SpotLight> in einer 3D-Szene.  
+  
+ [!code-xaml[3DGallery_snip#SpotLightExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/SpotLightExample.xaml#spotlightexampleinline1)]  
+  
+ Der folgende Code zeigt das vollständige Beispiel.  
+  
+ [!code-xaml[3DGallery_snip#SpotLightExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/SpotLightExample.xaml#spotlightexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.SpotLight.DirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.SpotLight.Direction" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerConeAngle">
+      <MemberSignature Language="C#" Value="public double InnerConeAngle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 InnerConeAngle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.SpotLight.InnerConeAngle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Winkel, der angibt, das Verhältnis einer <see cref="T:System.Windows.Media.Media3D.SpotLight" />kegelförmigen Projektion in der das Licht vollständig Objekte in der Szene beleuchtet.</summary>
+        <value>Den Winkel in Grad, der angibt, das Verhältnis einer <see cref="T:System.Windows.Media.Media3D.SpotLight" />kegelförmigen Projektion in der das Licht vollständig Objekte in der Szene beleuchtet. Der Standardwert ist <c>180</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Intensität der <xref:System.Windows.Media.Media3D.SpotLight>des Beleuchtung, kommt es vom vollständigen Beleuchtung auf keine dieser Winkel, der das Licht Projektion zwischen der <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> und die <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>.  
+  
+ ![Spotlight-Diagramm](~/add/media/spotlight-1.png "Spotlight-Diagramm")  
+  
+<a name="dependencyPropertyInfo_InnerConeAngle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Media.Media3D.SpotLight> in einer 3D-Szene.  
+  
+ [!code-xaml[3DGallery_snip#SpotLightExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/SpotLightExample.xaml#spotlightexampleinline1)]  
+  
+ Der folgende Code zeigt das vollständige Beispiel.  
+  
+ [!code-xaml[3DGallery_snip#SpotLightExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/SpotLightExample.xaml#spotlightexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerConeAngleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty InnerConeAngleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty InnerConeAngleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.SpotLight.InnerConeAngleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.SpotLight.InnerConeAngle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OuterConeAngle">
+      <MemberSignature Language="C#" Value="public double OuterConeAngle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 OuterConeAngle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.SpotLight.OuterConeAngle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Winkel, der angibt, das Verhältnis einer <see cref="T:System.Windows.Media.Media3D.SpotLight" />kegelförmigen Projektion außerhalb der das Licht nicht auf Objekte in der Szene haben.</summary>
+        <value>Den Winkel in Grad, der angibt, das Verhältnis einer <see cref="T:System.Windows.Media.Media3D.SpotLight" />kegelförmigen Projektion außerhalb der das Licht nicht auf Objekte in der Szene haben. Der Standardwert ist <c>90</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Intensität der <xref:System.Windows.Media.Media3D.SpotLight>des Beleuchtung, kommt es vom vollständigen Beleuchtung auf keine dieser Winkel, der das Licht Projektion zwischen der <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> und die <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>. Das Licht beleuchtet außerhalb der von dieser Eigenschaft angegebenen Winkels zurück.  
+  
+ ![Spotlight-Diagramm](~/add/media/spotlight-1.png "Spotlight-Diagramm")  
+  
+<a name="dependencyPropertyInfo_OuterConeAngle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Media.Media3D.SpotLight> in einer 3D-Szene.  
+  
+ [!code-xaml[3DGallery_snip#SpotLightExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/SpotLightExample.xaml#spotlightexampleinline1)]  
+  
+ Der folgende Code zeigt das vollständige Beispiel.  
+  
+ [!code-xaml[3DGallery_snip#SpotLightExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/SpotLightExample.xaml#spotlightexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OuterConeAngleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OuterConeAngleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OuterConeAngleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.SpotLight.OuterConeAngleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.SpotLight.OuterConeAngle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

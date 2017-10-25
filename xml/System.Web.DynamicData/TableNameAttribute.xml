@@ -1,0 +1,82 @@
+<Type Name="TableNameAttribute" FullName="System.Web.DynamicData.TableNameAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TableNameAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TableNameAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.TableNameAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Attribut, um den angezeigten Namen für eine Tabelle ändern.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableNameAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.TableNameAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name die Tabelle wird angezeigt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.DynamicData.TableNameAttribute" /> Klasse mit dem angegebenen Namen für die Tabelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.TableNameAttribute> Attribut wird verwendet, um den Namen der Entität in den Metadaten zu ändern, wenn Namenskonflikte aus mehreren Kontexten Entität vorhanden sind. Die <xref:System.Web.DynamicData.TableNameAttribute> Attribut sollte nicht zum Ändern des Anzeigenamens verwendet werden. Verwenden Sie stattdessen die <xref:System.ComponentModel.DisplayNameAttribute> Attribut so ändern Sie den Anzeigenamen an.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie der Tabellenname festgelegt wird. Im Beispiel wird der angezeigte Tabellenname von "ProductModelProductDescriptions", "Prod Model Desc" geändert.  
+  
+ [!code-csharp[System.Web.DynamicData.TableNameAttribute#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.TableNameAttribute/cs/ProductModelProductDescription.cs#11)]
+ [!code-vb[System.Web.DynamicData.TableNameAttribute#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.TableNameAttribute/vb/ProductModelProductDescription.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.TableNameAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Tabelle fest.</summary>
+        <value>Der Name, der einer Tabelle zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft auf einen Tabellennamen ein eindeutiger Name zugeordnet, wenn es sich bei einer anderen Tabelle in einen anderen Datenkontext den gleichen Namen hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

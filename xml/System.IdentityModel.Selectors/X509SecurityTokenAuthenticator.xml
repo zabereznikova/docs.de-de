@@ -1,0 +1,239 @@
+<Type Name="X509SecurityTokenAuthenticator" FullName="System.IdentityModel.Selectors.X509SecurityTokenAuthenticator">
+  <TypeSignature Language="C#" Value="public class X509SecurityTokenAuthenticator : System.IdentityModel.Selectors.SecurityTokenAuthenticator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509SecurityTokenAuthenticator extends System.IdentityModel.Selectors.SecurityTokenAuthenticator" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenAuthenticator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Authentifiziert ein <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator>-Klasse, um <xref:System.IdentityModel.Tokens.X509SecurityToken>-Sicherheitstoken zu authentifizieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenAuthenticator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn zum Authentifizieren des Tokens die <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode aufgerufen wird, wird das X.509-Zertifikat keiner Windows-ID zugeordnet. Das Zertifikat wird mithilfe einer Zertifikatskette validiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenAuthenticator (System.IdentityModel.Selectors.X509CertificateValidator validator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Selectors.X509CertificateValidator validator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.#ctor(System.IdentityModel.Selectors.X509CertificateValidator)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validator" Type="System.IdentityModel.Selectors.X509CertificateValidator" />
+      </Parameters>
+      <Docs>
+        <param name="validator">Ein <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" />-Objekt, das überprüft, ob das Zertifikat gültig ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator" />-Klasse unter Verwendung des angegebenen Zertifikats-Validierungssteuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse stellt einen Satz vordefinierter Zertifikatsvalidierungsmodelle bereit, z.&#160;B. die <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>-Eigenschaft. Diese Validierungsmodelle können an den `validator`-Parameter übergeben werden. Wenn eine Anwendung eine benutzerdefinierte Validierungsmethode erfordert, leiten Sie eine Klasse von <xref:System.IdentityModel.Selectors.X509CertificateValidator> ab, und überschreiben Sie die <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29>-Methode. Die <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29>-Methode wird von der <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode aufgerufen.  
+  
+ Standardmäßig ordnet der <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator> das X.509-Zertifikat keiner Windows-ID zu.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenAuthenticator (System.IdentityModel.Selectors.X509CertificateValidator validator, bool mapToWindows);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Selectors.X509CertificateValidator validator, bool mapToWindows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.#ctor(System.IdentityModel.Selectors.X509CertificateValidator,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validator" Type="System.IdentityModel.Selectors.X509CertificateValidator" />
+        <Parameter Name="mapToWindows" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="validator">Ein <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" />-Objekt, das überprüft, ob das Zertifikat gültig ist.</param>
+        <param name="mapToWindows">
+          <see langword="true" />, wenn die ID des Zertifikats einer Windows-ID zugeordnet werden soll, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator" />-Klasse unter Verwendung der angegebenen Zertifikatsvalidierungsmethode und gibt an, ob die ID des Zertifikats einer Windows-ID zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse stellt einen Satz vordefinierter Zertifikatsvalidierungsmodelle bereit, z.&#160;B. die <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>-Eigenschaft. Diese Validierungsmodelle können an den `validator`-Parameter übergeben werden. Wenn eine Anwendung eine benutzerdefinierte Validierungsmethode erfordert, leiten Sie eine Klasse von <xref:System.IdentityModel.Selectors.X509CertificateValidator> ab, und überschreiben Sie die <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29>-Methode. Die <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29>-Methode wird von der <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode aufgerufen.  
+  
+ Wenn zum Authentifizieren des Tokens die <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode aufgerufen wird und für `mapToWindows` der Wert `true` festgelegt ist, wird das X.509-Zertifikat einem Windows-Konto zugeordnet, und für die Windows-Gruppen, denen der Benutzer angehört, werden Ansprüche zu <xref:System.IdentityModel.Policy.EvaluationContext> hinzugefügt. Die Art der Zuordnung des X.509-Zertifikats zu einem Windows-Konto hängt vom Sicherheitstokentyp ab:  
+  
+-   Wenn das Sicherheitstoken dem Typ <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken> angehört, wird das X.509-Zertifikat mithilfe der <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken.WindowsIdentity%2A>-Eigenschaft zugeordnet.  
+  
+-   Wenn das Sicherheitstoken dem Typ `X509SecurityToken` angehört, wird das X.509-Zertifikat unter Verwendung des Benutzerprinzipalnamens (User Principal Name, UPN) einem Windows-Konto zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenAuthenticator (System.IdentityModel.Selectors.X509CertificateValidator validator, bool mapToWindows, bool includeWindowsGroups);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Selectors.X509CertificateValidator validator, bool mapToWindows, bool includeWindowsGroups) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.#ctor(System.IdentityModel.Selectors.X509CertificateValidator,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validator" Type="System.IdentityModel.Selectors.X509CertificateValidator" />
+        <Parameter Name="mapToWindows" Type="System.Boolean" />
+        <Parameter Name="includeWindowsGroups" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="validator">Ein <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" />-Objekt, das überprüft, ob das Zertifikat gültig ist.</param>
+        <param name="mapToWindows">
+          <see langword="true" />, wenn die ID des Zertifikats einer Windows-ID zugeordnet werden soll, andernfalls <see langword="false" />.</param>
+        <param name="includeWindowsGroups">
+          <see langword="true" />, wenn die Gruppen, denen der Windows-Benutzer angehört, in die <see cref="P:System.IdentityModel.Policy.AuthorizationContext.ClaimSets" />-Eigenschaft eingeschlossen werden sollen, die während des gesamten Authentifizierungsprozesses verwendet wird, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator" />-Klasse unter Verwendung der angegebenen Zertifikatsvalidierungsmethode und gibt an, ob die ID des Zertifikats einer Windows-ID zugeordnet ist. Weiterhin werden die Windows-Gruppen angegeben, denen der Benutzer angehört.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Übergeben Sie `false` an den `includeWindowsGroups`-Parameter, wenn die Windows-Gruppeninformationen nicht erforderlich sind, um die Leistung zu verbessern.  
+  
+ Die <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse verfügt über mehrere statische Eigenschaften, z.&#160;B. die <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>-Eigenschaft, die an den `validator`-Parameter übergeben werden können. Diese Eigenschaften stellen allgemeine Validierungsmethoden für X.509-Zertifikate bereit. Wenn eine benutzerdefinierte Validierungsmethode erforderlich ist, leiten Sie eine Klasse von <xref:System.IdentityModel.Selectors.X509CertificateValidator> ab, und überschreiben Sie die <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29>-Methode. Die <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29>-Methode wird von der <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode aufgerufen.  
+  
+ Wenn `true` für den `mapToWindows`-Parameter übergeben wird, wird das X.509-Zertifikat einem Windows-Konto zugeordnet, und es werden relevante Ansprüche zu <xref:System.IdentityModel.Policy.EvaluationContext> hinzugefügt, z.&#160;B. die Windows-Gruppen, denen der Benutzer angehört. Wenn das Sicherheitstoken dem Typ <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken> angehört, verwendet die <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken.WindowsIdentity%2A>-Eigenschaft die in dem Token angegebene ID. Andernfalls wird das X.509-Zertifikat einer Windows-ID zugeordnet. Hierfür wird eine Kerberos S4U-Anmeldung basierend auf der SubjectAltNames-Erweiterung des Benutzerprinzipalnamens im X.509-Zertifikat verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool CanValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.CanValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Die zu validierende <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob das angegebene Sicherheitstoken von diesem Sicherheitstoken-Authentifikator überprüft werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="token" /> ein <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />-Sicherheitstoken oder eine aus <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" /> abgeleitete Klasse ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.CanValidateTokenCore%2A>-Methode authentifiziert das Sicherheitstoken nicht. Dies wird von der <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode durchgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapCertificateToWindowsAccount">
+      <MemberSignature Language="C#" Value="public bool MapCertificateToWindowsAccount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MapCertificateToWindowsAccount" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.MapCertificateToWindowsAccount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das X.509-Zertifikat einem Windows-Konto zugeordnet werden soll.</summary>
+        <value>
+          <see langword="true" />, wenn das X.509-Zertifikat einem Windows-Konto zugeordnet werden soll, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.MapCertificateToWindowsAccount%2A>-Eigenschaft kann nur in einem Konstruktor festgelegt werden.  
+  
+ Wenn SSL- oder HTTPS-Sicherheit auf Transportebene verwendet wird und bereits durch den zugrunde liegenden Sicherheitskanal oder durch Internet Information Services (IIS) eine Zuordnung erfolgt, wird diese Zuordnung ohne Validierung der Kette angewendet. Andernfalls wird das Zertifikat vor der Zuordnung mithilfe einer Zertifikatskette validiert. Das Zertifikat muss mit einer NT_AUTHORITY-Identität verknüpft sein. Die Kette-Struktur verwendet, entspricht die CERT_CHAIN_POLICY_NT_AUTH gemäß der `CertVerifyCertificateChainPolicy` Funktion (finden Sie unter der [CertVerifyCertificateChainPolicy](http://go.microsoft.com/fwlink/?LinkId=83570) -Funktion in der Kryptografie-SDK). Dieses Verhalten tritt nur auf, wenn Sie ein Zertifikat einem Windows-Konto zuordnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Die zu validierende <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</param>
+        <summary>Authentifiziert das angegebene Sicherheitstoken und gibt den Satz von Autorisierungsrichtlinien für das Sicherheitstoken zurück.</summary>
+        <returns>Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> des Typs <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" />, der den Satz von Autorisierungsrichtlinien für diese Anwendung praktisch enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode überschrieben wird, beachten Sie die folgenden Richtlinien:  
+  
+-   Wenn das in den `token`-Parameter übergebene Sicherheitstoken nicht überprüft werden kann, wird die <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>-Ausnahme ausgegeben.  
+  
+-   Wenn für diese Anwendung praktisch keine Autorisierungsrichtlinien vorhanden sind, wird eine leere <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> des Typs <xref:System.IdentityModel.Policy.IAuthorizationPolicy> zurückgegeben.  
+  
+ Wenn `null` von dieser Methode zurückgegeben wird, löst [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] die <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>-Ausnahme aus.  
+  
+ Die <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode ruft die <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%28System.Security.Cryptography.X509Certificates.X509Certificate2%29>-Methode für die im Konstruktor angegebene Validierungsmethode auf, um den `token`-Parameter zu authentifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

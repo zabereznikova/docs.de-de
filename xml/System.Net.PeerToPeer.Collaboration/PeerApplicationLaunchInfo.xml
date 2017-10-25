@@ -1,0 +1,155 @@
+<Type Name="PeerApplicationLaunchInfo" FullName="System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo">
+  <TypeSignature Language="C#" Value="public class PeerApplicationLaunchInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PeerApplicationLaunchInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die erforderlichen Informationen für Start einer <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> , die als Antwort auf eine Einladung zur Peer-Zusammenarbeit initiiert hat.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Anwendung überprüfen, kann die <xref:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.Data%2A> und <xref:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.Message%2A> Eigenschaften in dieser Klasse, um die spezifischen Informationen der Einladung abzurufen, die den Start der Anwendung initiiert hat.  
+  
+ Zugriff auf diese Klasse benötigt ein <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public byte[] Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Data" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest anwendungsdefinierte zugeordnete Binärdaten der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> Einladung.</summary>
+        <value>Ein Array von Bytes, die mit den Daten zugeordnete der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> Einladung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Daten-BLOBs ist formfreien und wird vom Aufrufer bereitgestellt.  Die maximale Datenmenge, die bereitgestellt werden können, beträgt 4.096 Bytes.  
+  
+ Die <xref:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.Data%2A> nicht `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der eine Meldung mit der Antwort an den <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> Einladung.</summary>
+        <value>Eine Textnachricht mit verknüpften der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" /> auf die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> Einladung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximale Länge für die Nachricht ist 255 Unicode-Zeichen. Sofern nicht explizit angegeben wird, ist der Standardwert für alle Eigenschaften `null` für Verweistypen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerApplication">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerApplication PeerApplication { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerApplication PeerApplication" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.PeerApplication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerApplication</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> für die Einladung gesendet wurde.</summary>
+        <value>Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> für die die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> Einladung gesendet wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sofern nicht explizit angegeben wird, ist der Standardwert für alle Eigenschaften `null` für Verweistypen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerContact">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerContact PeerContact { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerContact PeerContact" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.PeerContact" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerContact</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> , die die Einladung gesendet.</summary>
+        <value>Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> , die die Einladung gesendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sofern nicht explizit angegeben wird, ist der Standardwert für alle Eigenschaften `null` für Verweistypen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerEndPoint">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerEndPoint PeerEndPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerEndPoint PeerEndPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.PeerEndPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerEndPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> aus dem die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> Einladung gesendet wurde.</summary>
+        <value>Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> von dem die Einladung gesendet wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sofern nicht explizit angegeben wird, ist der Standardwert für alle Eigenschaften `null` für Verweistypen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

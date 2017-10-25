@@ -1,0 +1,221 @@
+<Type Name="SoapHeaderException" FullName="System.Web.Services.Protocols.SoapHeaderException">
+  <TypeSignature Language="C#" Value="public class SoapHeaderException : System.Web.Services.Protocols.SoapException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SoapHeaderException extends System.Web.Services.Protocols.SoapException" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapHeaderException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.SoapException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Der SOAP-Darstellung eines Serverfehlers.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein XML-Webdienstclient einen SOAP-Header hinzufügt, um ein XML-Webdienst-Methodenaufruf mit der <xref:System.Web.Services.Protocols.SoapHeader.MustUnderstand%2A> -Eigenschaftensatz auf `true`, muss die XML-Webdienstmethode festgelegt die <xref:System.Web.Services.Protocols.SoapHeader.DidUnderstand%2A> Eigenschaft, um `true`ist, andernfalls ein <xref:System.Web.Services.Protocols.SoapHeaderException> ausgelöst wird.  
+  
+ Die <xref:System.Web.Services.Protocols.SoapException.Detail%2A> Eigenschaft kann nicht festgelegt werden, gemäß der SOAP-Spezifikation für eine <xref:System.Web.Services.Protocols.SoapHeaderException>.  
+  
+> [!NOTE]
+>  Anwendungen, die SOAP 1.1-Spezifikation zu verwenden, wie das Dienstprotokoll verwenden, kann die <xref:System.Web.Services.Protocols.SoapHeaderException> Zugriff SOAP-Fehlern. Allerdings müssen Anwendungen, die die SOAP 1.2-Spezifikation verwenden verwenden die <xref:System.Web.Services.Protocols.SoapException> Zugriff SOAP-Fehlern.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ruft ein XML-Webdienstclient die `MyWebMethod` XML-Webdienstmethode, übergeben in einem SOAP-Header vom Typ `MyHeader` mit der <xref:System.Web.Services.Protocols.SoapHeader.MustUnderstand%2A> -Eigenschaftensatz auf `true`. Wenn kein XML-Webdienstmethode festgelegt wird der <xref:System.Web.Services.Protocols.SoapHeader.DidUnderstand%2A> Eigenschaft der `MyHeader` SOAP-Header zu `true`, eine <xref:System.Web.Services.Protocols.SoapHeaderException> ausgelöst.  
+  
+ [!code-cpp[Classic SoapHeader.MustUnderstand Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHeader.MustUnderstand Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHeader.MustUnderstand Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHeader.MustUnderstand Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHeader.MustUnderstand Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHeader.MustUnderstand Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapHeaderException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.SoapHeaderException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SoapHeaderException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit Werten, die während der Serialisierung und Deserialisierung verwendet werden.</param>
+        <param name="context">Eine <see cref="M:System.Web.Services.Protocols.SoapHeaderException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" /> mit Daten über die Quelle und das Ziel des Serialisierungsstreams.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Protocols.SoapHeaderException" /> Klasse mit Parametern zum Steuern der Serialisierung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapHeaderException (string message, System.Xml.XmlQualifiedName code);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderException.#ctor(System.String,System.Xml.XmlQualifiedName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die die Ursache für das Auftreten der Ausnahme angibt. Dieser Parameter legt die <see cref="P:System.Exception.Message" />-Eigenschaft fest.</param>
+        <param name="code">Der Typ des aufgetretenen Fehlers. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Code" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.SoapHeaderException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapHeaderException (string message, System.Xml.XmlQualifiedName code, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderException.#ctor(System.String,System.Xml.XmlQualifiedName,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die die Ursache für das Auftreten der Ausnahme angibt. Dieser Parameter legt die <see cref="P:System.Exception.Message" />-Eigenschaft fest.</param>
+        <param name="code">Der Typ des aufgetretenen Fehlers. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Code" />-Eigenschaft fest.</param>
+        <param name="innerException">Ein Verweis auf die Grundursache einer Ausnahme. Dieser Parameter legt die <see cref="P:System.Exception.InnerException" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.SoapHeaderException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapHeaderException (string message, System.Xml.XmlQualifiedName code, string actor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, string actor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderException.#ctor(System.String,System.Xml.XmlQualifiedName,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="actor" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die die Ursache für das Auftreten der Ausnahme angibt. Dieser Parameter legt die <see cref="P:System.Exception.Message" />-Eigenschaft fest.</param>
+        <param name="code">Der Typ des aufgetretenen Fehlers. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Code" />-Eigenschaft fest.</param>
+        <param name="actor">Der Codeabschnitt, der die Ausnahme verursacht hat. In der Regel ist dies eine URL zu einer XML-Webdienstmethode. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Actor" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.SoapHeaderException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapHeaderException (string message, System.Xml.XmlQualifiedName code, string actor, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, string actor, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderException.#ctor(System.String,System.Xml.XmlQualifiedName,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="actor" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die die Ursache für das Auftreten der Ausnahme angibt. Dieser Parameter legt die <see cref="P:System.Exception.Message" />-Eigenschaft fest.</param>
+        <param name="code">Der Typ des aufgetretenen Fehlers. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Code" />-Eigenschaft fest.</param>
+        <param name="actor">Der Codeabschnitt, der die Ausnahme verursacht hat. In der Regel ist dies eine URL zu einer XML-Webdienstmethode. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Actor" />-Eigenschaft fest.</param>
+        <param name="innerException">Ein Verweis auf die Grundursache einer Ausnahme. Dieser Parameter legt die <see cref="P:System.Exception.InnerException" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.SoapHeaderException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapHeaderException (string message, System.Xml.XmlQualifiedName code, string actor, string role, System.Web.Services.Protocols.SoapFaultSubCode subCode, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, string actor, string role, class System.Web.Services.Protocols.SoapFaultSubCode subCode, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderException.#ctor(System.String,System.Xml.XmlQualifiedName,System.String,System.String,System.Web.Services.Protocols.SoapFaultSubCode,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="actor" Type="System.String" />
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="subCode" Type="System.Web.Services.Protocols.SoapFaultSubCode" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die die Ursache für das Auftreten der Ausnahme angibt. Dieser Parameter legt die <see cref="P:System.Exception.Message" />-Eigenschaft fest.</param>
+        <param name="code">Der Typ des aufgetretenen Fehlers. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Code" />-Eigenschaft fest.</param>
+        <param name="actor">Der Codeabschnitt, der die Ausnahme verursacht hat. In der Regel ist dies eine URL zu einer XML-Webdienstmethode. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Actor" />-Eigenschaft fest.</param>
+        <param name="role">Ein URI, der die Rolle des XML-Webdiensts bei der Verarbeitung der SOAP-Nachricht darstellt. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Role" />-Eigenschaft fest.</param>
+        <param name="subCode">Ein <see cref="T:System.Web.Services.Protocols.SoapFaultSubCode" /> , enthält den Inhalt der <see langword="&lt;subcode&gt;" /> -Elements eines SOAP-Fehlers.</param>
+        <param name="innerException">Ein Verweis auf die Ursache der Ausnahme. Dieser Parameter legt die <see cref="P:System.Exception.InnerException" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Protocols.SoapHeaderException" /> Klasse mit den zugeordneten Daten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapHeaderException (string message, System.Xml.XmlQualifiedName code, string actor, string role, string lang, System.Web.Services.Protocols.SoapFaultSubCode subCode, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, string actor, string role, string lang, class System.Web.Services.Protocols.SoapFaultSubCode subCode, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderException.#ctor(System.String,System.Xml.XmlQualifiedName,System.String,System.String,System.String,System.Web.Services.Protocols.SoapFaultSubCode,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="actor" Type="System.String" />
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="lang" Type="System.String" />
+        <Parameter Name="subCode" Type="System.Web.Services.Protocols.SoapFaultSubCode" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die die Ursache für das Auftreten der Ausnahme angibt. Dieser Parameter legt die <see cref="P:System.Exception.Message" />-Eigenschaft fest.</param>
+        <param name="code">Der Typ des aufgetretenen Fehlers. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Code" />-Eigenschaft fest.</param>
+        <param name="actor">Der Codeabschnitt, der die Ausnahme verursacht hat. In der Regel ist dies eine URL zu einer XML-Webdienstmethode. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Actor" />-Eigenschaft fest.</param>
+        <param name="role">Ein URI, der die Rolle des XML-Webdiensts bei der Verarbeitung der SOAP-Nachricht darstellt. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Role" />-Eigenschaft fest.</param>
+        <param name="lang">Eine Zeichenfolge, die die (natürliche) Sprache bezeichnet, die der Ausnahme zugeordnet ist. Dieser Parameter legt die <see cref="P:System.Web.Services.Protocols.SoapException.Lang" />-Eigenschaft fest.</param>
+        <param name="subCode">Ein <see cref="T:System.Web.Services.Protocols.SoapFaultSubCode" /> , enthält den Inhalt der <see langword="subcode" /> -Elements eines SOAP-Fehlers.</param>
+        <param name="innerException">Ein Verweis auf die Ursache einer Ausnahme. Dieser Parameter legt die <see cref="P:System.Exception.InnerException" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Protocols.SoapHeaderException" /> Klasse mit den zugeordneten Daten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

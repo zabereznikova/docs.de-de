@@ -1,0 +1,930 @@
+<Type Name="UserControl" FullName="System.Web.UI.UserControl">
+  <TypeSignature Language="C#" Value="public class UserControl : System.Web.UI.TemplateControl, System.Web.UI.IAttributeAccessor, System.Web.UI.IUserControlDesignerAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UserControl extends System.Web.UI.TemplateControl implements class System.Web.UI.IAttributeAccessor, class System.Web.UI.INamingContainer, class System.Web.UI.IUserControlDesignerAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.UserControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.TemplateControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IAttributeAccessor</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IUserControlDesignerAccessor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Load")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer("Microsoft.VisualStudio.Web.WebForms.WebFormCodeDomSerializer, Microsoft.VisualStudio.Web, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.ComponentModel.Design.Serialization.TypeCodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.UserControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.ComponentModel.Design.IDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("Microsoft.VisualStudio.Web.WebForms.WebFormDesigner, Microsoft.VisualStudio.Web, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.ComponentModel.Design.IRootDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("ASPXCodeBehind")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.UserControlControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine ASCX-Datei dar, auch bekannt als Benutzersteuerelement, die von einem Server angefordert wird, der eine ASP.NET-Webanwendung hostet. Die Datei muss von einer Web Forms-Seite aufgerufen werden, da andernfalls ein Parserfehler auftritt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UserControl> Klasse Dateien mit der Erweiterung .ascx zugeordnet ist. Diese Dateien werden zur Laufzeit als kompiliert <xref:System.Web.UI.UserControl> Objekte und im Arbeitsspeicher des Servers zwischengespeichert.  
+  
+ Sie können Benutzersteuerelemente schachteln, indem Sie deklarieren eine ASCX-Datei in eine andere, einschließlich der zweite Wert wird in Web Forms-Seite.  
+  
+ Benutzersteuerelemente in ASP.NET Web Forms-Seiten enthalten sind, und bieten Entwicklern eine einfache Möglichkeit, häufig verwendete Webbenutzeroberfläche zu erfassen. Sie sind instanziiert und zwischengespeichert, auf ähnliche Weise <xref:System.Web.UI.Page> Objekte. Im Gegensatz zu Seiten können allerdings Benutzersteuerelemente unabhängig aufgerufen werden. Sie können nur aufgerufen werden, von der Seite oder einem anderen Benutzersteuerelement, das sie enthält.  
+  
+ Leiten Sie von dieser Klasse ab, wenn Sie ein Benutzersteuerelement mithilfe der Code-Behind-Technik erstellen möchten. Dies wird empfohlen, wenn Sie Web Forms-Seiten, die auf diese Weise entwickeln.  
+  
+ Informationen zum Erstellen von Benutzersteuerelementen, finden Sie unter [ASP.NET-Benutzersteuerelemente](http://msdn.microsoft.com/library/5e601b3d-bb16-4dbe-9e35-7e92a34565ca).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel definierte Klasse `SimpleControl`, erbt die <xref:System.Web.UI.UserControl> Klasse und verwendet werden können, als ASP.NET Code-Behind-Klasse. Verwendet die <xref:System.Web.UI.WebControls.TextBox>, <xref:System.Web.UI.WebControls.Label>, und <xref:System.Web.UI.WebControls.Button> Webserver-Steuerelemente sowie die definiert eine `myButton_Click` -Methode, die weist die <xref:System.Web.UI.WebControls.TextBox.Text%2A?displayProperty=nameWithType> Eigenschaftswert zusammen mit zwei Zeichenfolgen die <xref:System.Web.UI.WebControls.Label.Text%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[Sys.Web.UI.TemplateControl_UserControl#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Sys.Web.UI.TemplateControl_UserControl/CS/simplecontrol.cs#2)]
+ [!code-vb[Sys.Web.UI.TemplateControl_UserControl#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Sys.Web.UI.TemplateControl_UserControl/VB/simplecontrol.vb#2)]  
+  
+ Im folgende Beispiel wird Markup in einer ASCX-Datei enthalten sind. Sie können die `SimpleControl` Klasse, die im vorherigen Beispiel als CodeBehind-Klasse für das Markup in dieser ASCX-Datei definiert.  
+  
+ [!code-aspx-csharp[Sys.Web.UI.TemplateControl_UserControl#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Sys.Web.UI.TemplateControl_UserControl/CS/simpleformcs.ascx#3)]
+ [!code-aspx-vb[Sys.Web.UI.TemplateControl_UserControl#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Sys.Web.UI.TemplateControl_UserControl/VB/simpleformvb.ascx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.UserControl" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Führen Sie nicht in der Regel erstellen Sie eine Instanz von der <xref:System.Web.UI.UserControl> Klasse. Um ein eigenes Benutzersteuerelement zu erstellen, erben die <xref:System.Web.UI.UserControl> Klasse.  
+  
+ Um ein neues Benutzersteuerelement auf einer ASP.NET-Seite programmgesteuert zu erstellen, verwenden die <xref:System.Web.UI.TemplateControl.LoadControl%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public System.Web.HttpApplicationState Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpApplicationState Application" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UserControl.Application" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpApplicationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="P:System.Web.HttpContext.Application" />-Objekt für die aktuelle Webanforderung ab.</summary>
+        <value>Die <see cref="T:System.Web.HttpApplicationState" /> Objekt der aktuellen webanforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel fügt zwei Schlüssel-Wert-Paare um den Zustand der Anwendung mit einem Benutzersteuerelement zugeordnet ist, wenn des Benutzersteuerelements <xref:System.Web.UI.UserControl.IsPostBack%2A> -Eigenschaft gibt `false`. Wenn diese Bedingung erfüllt ist, verwendet der Code die <xref:System.Web.HttpApplicationState.Add%2A> Methode, über des Benutzersteuerelements <xref:System.Web.UI.UserControl.Application%2A> -Eigenschaft, um die Schlüssel und deren Werte hinzuzufügen.  
+  
+ [!code-csharp[UserControl_Properties#2](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControl_Properties/CS/usercontrol_properties.cs.aspx#2)]
+ [!code-vb[UserControl_Properties#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControl_Properties/VB/usercontrol_properties.vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Web.UI.AttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.AttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UserControl.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller Attribut Name-Wert-Paare, die in das Steuerelement Benutzertag innerhalb der ASPX-Datei deklariert.</summary>
+        <value>Ein <see cref="T:System.Web.UI.AttributeCollection" /> Objekt, das alle Name-Wert-Paare enthält, die in das Steuerelement Benutzertag deklariert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel verwendet des Benutzersteuerelements <xref:System.Web.UI.UserControl.Attributes%2A> aufzurufende Eigenschaft der `Message` Attribut deklariert im benutzerdefinierten Steuerelement-Tag, die das Benutzersteuerelement auf der Seite instanziiert, die es enthält.  
+  
+ [!code-csharp[UserControl_Properties#1](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControl_Properties/CS/usercontrol_properties.cs.aspx#1)]
+ [!code-vb[UserControl_Properties#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControl_Properties/VB/usercontrol_properties.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cache">
+      <MemberSignature Language="C#" Value="public System.Web.Caching.Cache Cache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Caching.Cache Cache" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UserControl.Cache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.Cache</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Caching.Cache" /> -Objekt, mit der Anwendung verknüpft ist, die das Benutzersteuerelement enthält.</summary>
+        <value>Die <see cref="T:System.Web.Caching.Cache" /> Objekt in der zum Speichern von Daten für das Benutzersteuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UserControl.Cache%2A> können Sie zum Speichern von Daten für den späteren Abruf und die Anwendung gemeinsam. Die Daten, die Sie speichern, ist unabhängig von der aktuellen Seite oder benutzersitzung. Zugreifen auf Daten über diese Eigenschaft auf der Seite oder Anwendung Leistung zu verbessern, wenn die Daten zu erstellen, die langsam ist. Weitere Informationen zur Verwendung des Caches finden Sie unter [Anwendungsdaten Caching](http://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.UI.UserControl.Cache%2A> Eigenschaft zum Speichern der <xref:System.Web.UI.WebControls.Label.Text%2A> Eigenschaftswert, der eine <xref:System.Web.UI.WebControls.Label> -Webserversteuerelement, `txtValue`in die <xref:System.Web.Caching.Cache> Objekt, das Benutzersteuerelement-Anwendung zugeordnet. Er verwendet die <xref:System.Web.UI.UserControl.Cache%2A> Eigenschaft zu diesem Zweck dem Element einen Schlüsselparameter-Wert, der zuweisen `txtName.Text`.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[Classic Cache.this Example#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Cache.this Example/CS/source.cs#2)]
+ [!code-vb[Classic Cache.this Example#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Cache.this Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CachePolicy">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ControlCachePolicy CachePolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCachePolicy CachePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UserControl.CachePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCachePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf eine Auflistung von Parametern Zwischenspeichern für dieses Benutzersteuerelement ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ControlCachePolicy" /> mit Eigenschaften, die die caching-Parameter dafür definieren <see cref="T:System.Web.UI.UserControl" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UserControl.CachePolicy%2A> Eigenschaft definiert die Cacheparameter für die Instanz von der <xref:System.Web.UI.UserControl> Klasse. Die <xref:System.Web.UI.UserControl.CachePolicy%2A> Eigenschaft ist schreibgeschützt; Sie können jedoch die Eigenschaften der Festlegen der <xref:System.Web.UI.ControlCachePolicy> -Objekt, das zurückgegeben.  
+  
+ Die <xref:System.Web.UI.UserControl.CachePolicy%2A> Eigenschaft kann nicht deklarativ festgelegt werden. Er muss programmgesteuert festgelegt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.ControlCachePolicy.SupportsCaching%2A> -Eigenschaft können Sie bestimmen, ob das Benutzersteuerelement zwischengespeichert werden kann, und wenn dies der Fall ist, legt die <xref:System.Web.UI.ControlCachePolicy.Duration%2A> Eigenschaft, um das Steuerelement für 10 Sekunden zwischengespeichert.  
+  
+ [!code-aspx-csharp[UserControlCachePolicy#1](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControlCachePolicy/CS/usercontrolcachepolicycs.aspx#1)]
+ [!code-aspx-vb[UserControlCachePolicy#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControlCachePolicy/VB/usercontrolcachepolicyvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerInitialize">
+      <MemberSignature Language="C#" Value="public void DesignerInitialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DesignerInitialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.DesignerInitialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt alle Initialisierungsschritte für das Benutzersteuerelement, das RAD-Designer erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.UI.UserControl.DesignerInitialize%2A> Methode während der `Page_Init` Phase der anforderungsverarbeitung. Dies stellt das Benutzersteuerelement zur Verfügung RAD-Designer wie z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].  
+  
+ [!code-csharp[UserControl1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControl1/CS/usercontrol1.cs.aspx#1)]
+ [!code-vb[UserControl1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControl1/VB/usercontrol1.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeAsUserControl">
+      <MemberSignature Language="C#" Value="public void InitializeAsUserControl (System.Web.UI.Page page);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InitializeAsUserControl(class System.Web.UI.Page page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.InitializeAsUserControl(System.Web.UI.Page)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="page" Type="System.Web.UI.Page" />
+      </Parameters>
+      <Docs>
+        <param name="page">Die <see cref="T:System.Web.UI.Page" /> -Objekt, das Benutzersteuerelement enthält.</param>
+        <summary>Initialisiert die <see cref="T:System.Web.UI.UserControl" /> -Objekt, das deklarativ erstellt wurde. Da es einige Unterschiede zwischen Seiten und Benutzersteuerelementen gibt, stellt diese Methode sicher, dass das Benutzersteuerelement ordnungsgemäß initialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.UI.UserControl.InitializeAsUserControl%2A> Methode während der `Page_Init` Phase der anforderungsverarbeitung. In diesem Fall wird es von der Seite selbst initialisiert, aber Sie können von einem anderen Steuerelement zu initialisieren und übergeben der <xref:System.Web.UI.Page.ID%2A> Eigenschaftswert von der Seite als Parameter für diese Methode.  
+  
+ [!code-csharp[UserControl1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControl1/CS/usercontrol1.cs.aspx#1)]
+ [!code-vb[UserControl1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControl1/VB/usercontrol1.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPostBack">
+      <MemberSignature Language="C#" Value="public bool IsPostBack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPostBack" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UserControl.IsPostBack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Benutzersteuerelement als Antwort auf ein Postback des Clients geladen wird oder wenn es wird geladen und zum ersten Mal zugegriffen.</summary>
+        <value>
+          <see langword="true" />Wenn das Benutzersteuerelement in Reaktion auf ein Postback des Clients geladen wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel fügt zwei Schlüssel-Wert-Paare um den Zustand der Anwendung mit einem Benutzersteuerelement zugeordnet ist, wenn des Benutzersteuerelements <xref:System.Web.UI.UserControl.IsPostBack%2A> -Eigenschaft gibt `false`. Wenn diese Bedingung erfüllt ist, verwendet der Code die <xref:System.Web.HttpApplicationState.Add%2A> Methode, über des Benutzersteuerelements <xref:System.Web.UI.UserControl.Application%2A> -Eigenschaft, um die Schlüssel und deren Werte hinzuzufügen.  
+  
+ [!code-csharp[UserControl_Properties#2](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControl_Properties/CS/usercontrol_properties.cs.aspx#2)]
+ [!code-vb[UserControl_Properties#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControl_Properties/VB/usercontrol_properties.vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" />, das den wiederherzustellenden Benutzersteuerelementzustand darstellt.</param>
+        <summary>Stellt die Ansichtszustandsinformationen aus einer früheren Benutzersteuerelementanforderung wieder her, die von der <see cref="M:System.Web.UI.UserControl.SaveViewState" />-Methode gespeichert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient in erster Linie durch die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden.  Allerdings können Entwickler von Steuerelementen überschreiben Sie diese Methode, um anzugeben, wie ein benutzerdefiniertes Serversteuerelement seinen Ansichtszustand wiederherstellt. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Sie können einen Wert Ansichtszustand in ein Feld laden, so, dass Sie keine abrufen aus der <xref:System.Web.UI.Control.ViewState%2A?displayProperty=nameWithType> Eigenschaft später erneut. Sie können auch den Wert in Einfügen der <xref:System.Web.UI.Control.ViewState%2A> -Eigenschaft nur vor dem Aufruf <xref:System.Web.UI.UserControl.SaveViewState%2A> , dies ist eine effektive Möglichkeit für ein Feld über der Anzahl der Roundtrips zum Server beibehalten zu machen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt ein benutzerdefiniertes Steuerelement, das verwaltet seinen Ansichtszustand mithilfe der <xref:System.Web.UI.UserControl.LoadViewState%2A> und <xref:System.Web.UI.UserControl.SaveViewState%2A> Methoden.  
+  
+ [!code-csharp[UserControl_StateManagement#1](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControl_StateManagement/CS/usercontrol2.cs#1)]
+ [!code-vb[UserControl_StateManagement#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControl_StateManagement/VB/usercontrol2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapPath">
+      <MemberSignature Language="C#" Value="public string MapPath (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string MapPath(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.MapPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Dateipfad zugeordnet.</param>
+        <summary>Weist einen virtuellen Dateipfad, absolut oder relativ ist, um einen physischen Dateipfad an.</summary>
+        <returns>Der physische Pfad zur Datei.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ähnelt der <xref:System.Web.UI.Page.MapPath%2A?displayProperty=nameWithType> diese Methode ordnet den Pfad Speicherorts von ASCX-Datei, nicht auf die von der ASPX-Datei. Sie können diese Methode verwenden, um einen Pfad zu einem Verzeichnis von Bildern zu erhalten oder andere Ressourcen zugeordnet Ihrer <xref:System.Web.UI.UserControl> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.UI.UserControl.MapPath%2A> Methode zum Verknüpfen einer `actualServerPath` Variable durch den physischen Pfad zugeordnet das Benutzersteuerelement mit dem Namen `myControl`.  
+  
+ [!code-csharp[UserControl1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControl1/CS/usercontrol1.cs.aspx#3)]
+ [!code-vb[UserControl1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControl1/VB/usercontrol1.vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Benachrichtigung durch diese Methode die <xref:System.Web.UI.UserControl> müssen alle Schritte zum Initialisieren, die erforderlich sind, erstellen und richten Sie eine Instanz ausführen. Diese Methode bestätigt Standortinformationen zugeordnet der <xref:System.Web.UI.UserControl> -Instanz und stellt sicher, dass die Klasse richtig, als initialisiert wird ein <xref:System.Web.UI.UserControl> Objekt.  
+  
+ In dieser Phase des Lebenszyklus des Benutzersteuerelements muss Ansichtszustand des Steuerelements noch aufgefüllt werden. Darüber hinaus können Sie andere Serversteuerelemente beim diese Methode aufgerufen wird, unabhängig davon, ob es sich um ein untergeordnetes oder übergeordnetes Steuerelement handelt, zugreifen. Andere Steuerelemente sind nicht bestimmten erstellt und für den Zugriff bereit ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="public System.Web.HttpRequest Request { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpRequest Request" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UserControl.Request" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpRequest</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Web.HttpRequest" />-Objekt für die aktuelle Webanforderung ab.</summary>
+        <value>Die <see cref="T:System.Web.HttpRequest" /> zugeordnete Objekt der <see cref="T:System.Web.UI.Page" /> , enthält die <see cref="T:System.Web.UI.UserControl" /> Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.UI.UserControl.Request%2A> Eigenschaft, um den physischen Pfad des Benutzersteuerelements zu erhalten. Mit einem <xref:System.Web.UI.Control.ID%2A> -Eigenschaftensatz auf `myControl`, das Benutzersteuerelement Speicherort erhalten, indem Sie die Seite oder Benutzersteuerelement mithilfe der `myControl.Request.Path` Syntax.  
+  
+ [!code-csharp[UserControl1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControl1/CS/usercontrol1.cs.aspx#3)]
+ [!code-vb[UserControl1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControl1/VB/usercontrol1.vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Response">
+      <MemberSignature Language="C#" Value="public System.Web.HttpResponse Response { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpResponse Response" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UserControl.Response" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Web.HttpResponse" />-Objekt für die aktuelle Webanforderung ab.</summary>
+        <value>Die <see cref="T:System.Web.HttpResponse" /> zugeordnete Objekt der <see cref="T:System.Web.UI.Page" /> , enthält die <see cref="T:System.Web.UI.UserControl" /> Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.UI.UserControl.Response%2A> Eigenschaft, um den Namen des Computers mit Web Server zu schreiben, auf dem das Benutzersteuerelement ausgeführt wird. Die `myControl.Response.Write` Syntax weist das Benutzersteuerelement zum Anzeigen der Informationen des Steuerelements mit erhält die `myControl.Server.Machinename` Syntax.  
+  
+ [!code-csharp[UserControl1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControl1/CS/usercontrol1.cs.aspx#3)]
+ [!code-vb[UserControl1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControl1/VB/usercontrol1.vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert alle Benutzersteuerelement Ansichtszustandsänderungen, die seit der letzten Seite Postback aufgetreten sind.</summary>
+        <returns>Gibt die aktuellen Ansichtszustand des Benutzersteuerelements. Ist kein Ansichtszustand, der dem Steuerelement zugeordnet, gibt es <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Allgemeinen müssen Sie nicht diese Methode aufrufen. Wenn Sie benutzerdefinierte Informationen im Ansichtszustand speichern, können Sie diese Methode dazu überschreiben.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt ein benutzerdefiniertes Steuerelement, das verwaltet seinen Ansichtszustand mithilfe der <xref:System.Web.UI.UserControl.LoadViewState%2A> und <xref:System.Web.UI.UserControl.SaveViewState%2A> Methoden.  
+  
+ [!code-csharp[UserControl_StateManagement#2](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControl_StateManagement/CS/usercontrol2.cs#2)]
+ [!code-vb[UserControl_StateManagement#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControl_StateManagement/VB/usercontrol2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="public System.Web.HttpServerUtility Server { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpServerUtility Server" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UserControl.Server" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpServerUtility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Web.HttpServerUtility" />-Objekt für die aktuelle Webanforderung ab.</summary>
+        <value>Die <see cref="T:System.Web.HttpServerUtility" /> zugeordnete Objekt der <see cref="T:System.Web.UI.Page" /> , enthält die <see cref="T:System.Web.UI.UserControl" /> Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UserControl.Server%2A> Objekt ist kompatibel mit ASP-Seiten.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.UI.UserControl.Server%2A> Eigenschaft, um den Namen des Computers mit Web Server zu schreiben, auf dem das Benutzersteuerelement ausgeführt wird. Die `myControl.Response.Write` Syntax weist das Benutzersteuerelement zum Anzeigen der Informationen des Steuerelements mit erhält die `myControl.Server.Machinename` Syntax.  
+  
+ [!code-csharp[UserControl1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControl1/CS/usercontrol1.cs.aspx#3)]
+ [!code-vb[UserControl1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControl1/VB/usercontrol1.vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public System.Web.SessionState.HttpSessionState Session { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SessionState.HttpSessionState Session" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UserControl.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.HttpSessionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Web.SessionState.HttpSessionState" />-Objekt für die aktuelle Webanforderung ab.</summary>
+        <value>Ein <see cref="T:System.Web.SessionState.HttpSessionState" />-Objekt, das der <see cref="T:System.Web.UI.Page" /> zugeordnet ist, die die <see cref="T:System.Web.UI.UserControl" />-Instanz enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel fügt Werte für die <xref:System.Web.UI.UserControl.Session%2A> Eigenschaft eines Benutzersteuerelements. Die `myControl.Session.Add` Syntax fügt die Werte von zwei <xref:System.Web.UI.WebControls.TextBox> -Webserversteuerelementen mit der Sitzung zugeordnet, das Benutzersteuerelement und die Seite, die es enthält.  
+  
+ [!code-csharp[UserControl1#6](~/samples/snippets/csharp/VS_Snippets_WebNet/UserControl1/CS/usercontrol1.cs.aspx#6)]
+ [!code-vb[UserControl1#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UserControl1/VB/usercontrol1.vb.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.GetAttribute">
+      <MemberSignature Language="C#" Value="string IAttributeAccessor.GetAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Web.UI.IAttributeAccessor.GetAttribute(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.System#Web#UI#IAttributeAccessor#GetAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Attributs, von dem der Wert abgerufen wird.</param>
+        <summary>Gibt den Wert des angegebenen Benutzersteuerelement-Attributs zurück.</summary>
+        <returns>Der Wert des angegebenen Benutzersteuerelement-Attributs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.UserControl.System%23Web%23UI%23IAttributeAccessor%23GetAttribute%2A> Methode, um den Wert der Attribute von Steuerelementen abrufen, die nicht als Eigenschaften des Steuerelements verfügbar gemacht werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.SetAttribute">
+      <MemberSignature Language="C#" Value="void IAttributeAccessor.SetAttribute (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IAttributeAccessor.SetAttribute(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.System#Web#UI#IAttributeAccessor#SetAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des festzulegenden Attributs.</param>
+        <param name="value">Der Wert des festzulegenden Attributs.</param>
+        <summary>Legt den Wert des angegebenen Benutzersteuerelement-Attributs fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.UserControl.System%23Web%23UI%23IAttributeAccessor%23SetAttribute%2A> aufzurufende Methode legen Sie den Wert der Steuerelementattribute, die nicht verfügbar gemacht werden als Eigenschaften des Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IUserControlDesignerAccessor.InnerText">
+      <MemberSignature Language="C#" Value="string System.Web.UI.IUserControlDesignerAccessor.InnerText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.Web.UI.IUserControlDesignerAccessor.InnerText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UserControl.System#Web#UI#IUserControlDesignerAccessor#InnerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der zwischen dem Start- und Endtag des ein benutzerdefiniertes Steuerelement angezeigt wird.</summary>
+        <value>Der Text, der zwischen den öffnenden und schließenden Registerkarten für ein benutzerdefiniertes Steuerelement angezeigt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IUserControlDesignerAccessor.TagName">
+      <MemberSignature Language="C#" Value="string System.Web.UI.IUserControlDesignerAccessor.TagName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.Web.UI.IUserControlDesignerAccessor.TagName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UserControl.System#Web#UI#IUserControlDesignerAccessor#TagName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den vollständigen Tagnamen des Benutzersteuerelements.</summary>
+        <value>Der vollständige Tagname des Benutzersteuerelements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trace">
+      <MemberSignature Language="C#" Value="public System.Web.TraceContext Trace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.TraceContext Trace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UserControl.Trace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.TraceContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Web.TraceContext" />-Objekt für die aktuelle Webanforderung ab.</summary>
+        <value>Die Daten aus der <see cref="T:System.Web.TraceContext" /> Objekt der aktuellen webanforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ablaufverfolgung verfolgt und zeigt die Ausführungsdetails zu einer webanforderung. Für die Ablaufverfolgungsdaten in einer gerenderten Seite angezeigt werden müssen Sie die Ablaufverfolgung, um diese Seite aktivieren.  
+  
+ Standardmäßig ist die Seitenablaufverfolgung deaktiviert. Verwenden Sie zum Aktivieren der Ablaufverfolgung für eine Seite der [@ Page](http://msdn.microsoft.com/en-us/f06cf9e5-22bb-461d-8b8f-549e53ff40a4) Richtlinie wie folgt: \<"% @ Seite Trace" = "true" % >  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryUpdateModel&lt;TModel&gt;">
+      <MemberSignature Language="C#" Value="public virtual bool TryUpdateModel&lt;TModel&gt; (TModel model) where TModel : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryUpdateModel&lt;class TModel&gt;(!!TModel model) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.TryUpdateModel``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TModel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="model" Type="TModel" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TModel">Der Typ des Modellobjekts.</typeparam>
+        <param name="model">Die zu aktualisierende Modellinstanz.</param>
+        <summary>Versucht, die Modellinstanz zu aktualisieren, indem Sie die Werte aus dem datengebundenen Steuerelement.</summary>
+        <returns>
+          <see langword="true" />Wenn die Modellinstanz erfolgreich aktualisiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UserControl.TryUpdateModel%2A> Methode muss aufgerufen werden von innerhalb einer Datenvorgang Methode des Steuerelements mithilfe der `ModelType` -Eigenschaft für die Datenbindung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryUpdateModel&lt;TModel&gt;">
+      <MemberSignature Language="C#" Value="public virtual bool TryUpdateModel&lt;TModel&gt; (TModel model, System.Web.ModelBinding.IValueProvider valueProvider) where TModel : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryUpdateModel&lt;class TModel&gt;(!!TModel model, class System.Web.ModelBinding.IValueProvider valueProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.TryUpdateModel``1(``0,System.Web.ModelBinding.IValueProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TModel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="model" Type="TModel" />
+        <Parameter Name="valueProvider" Type="System.Web.ModelBinding.IValueProvider" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TModel">Der Typ des Modellobjekts.</typeparam>
+        <param name="model">Die zu aktualisierende Modellinstanz.</param>
+        <param name="valueProvider">Ein Wörterbuch mit Werten, die zum Aktualisieren des Modells verwendet werden sollen.</param>
+        <summary>Versucht, die Modellinstanz mit Werten vom Wertanbieter zu aktualisieren.</summary>
+        <returns>
+          <see langword="true" />Wenn die Modellinstanz erfolgreich aktualisiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UserControl.TryUpdateModel%2A> Methode aus aufgerufen werden muss, innerhalb einer Datenvorgang Methode des Steuerelements mithilfe der `ModelType` -Eigenschaft für die Datenbindung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateModel&lt;TModel&gt;">
+      <MemberSignature Language="C#" Value="public virtual void UpdateModel&lt;TModel&gt; (TModel model) where TModel : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateModel&lt;class TModel&gt;(!!TModel model) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.UpdateModel``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TModel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="model" Type="TModel" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TModel">Der Typ des Modellobjekts.</typeparam>
+        <param name="model">Die zu aktualisierende Modellinstanz.</param>
+        <summary>Aktualisiert die Modellinstanz mithilfe von Werten aus dem datengebundenen Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die Modellinstanz wurde nicht erfolgreich aktualisiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateModel&lt;TModel&gt;">
+      <MemberSignature Language="C#" Value="public virtual void UpdateModel&lt;TModel&gt; (TModel model, System.Web.ModelBinding.IValueProvider valueProvider) where TModel : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateModel&lt;class TModel&gt;(!!TModel model, class System.Web.ModelBinding.IValueProvider valueProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControl.UpdateModel``1(``0,System.Web.ModelBinding.IValueProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TModel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="model" Type="TModel" />
+        <Parameter Name="valueProvider" Type="System.Web.ModelBinding.IValueProvider" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TModel">Der Typ des Modellobjekts.</typeparam>
+        <param name="model">Die zu aktualisierende Modellinstanz.</param>
+        <param name="valueProvider">Ein Wörterbuch mit Werten, die zum Aktualisieren des Modells verwendet werden sollen.</param>
+        <summary>Aktualisiert die angegebene Modellinstanz mit von Werten vom Wertanbieter des Benutzersteuerelements.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die Modellinstanz wurde nicht erfolgreich aktualisiert.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

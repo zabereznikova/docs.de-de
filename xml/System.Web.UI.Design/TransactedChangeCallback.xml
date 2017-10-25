@@ -1,0 +1,32 @@
+<Type Name="TransactedChangeCallback" FullName="System.Web.UI.Design.TransactedChangeCallback">
+  <TypeSignature Language="C#" Value="public delegate bool TransactedChangeCallback(object context);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TransactedChangeCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TransactedChangeCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context">Die Methode, die aufgerufen wird, wenn die Transaktion aufgerufen wird.</param>
+    <summary>Ein Delegat, der auf eine Methode in einem benutzerdefinierten verweist <see cref="T:System.ComponentModel.Design.DesignerActionList" /> -Objekt, das aufgerufen werden soll, indem Sie die <see cref="Overload:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange" /> Methode zur Implementierung von eigenschaftsänderungen im Designer zugeordnete Steuerelement.</summary>
+    <returns>
+      <see langword="true" />Wenn die Transaktion erfolgreich abgeschlossen. <see langword="false" /> , wenn die Transaktion ein Rollback ausgeführt werden soll.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

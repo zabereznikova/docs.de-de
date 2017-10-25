@@ -1,0 +1,58 @@
+<Type Name="SecurityContext" FullName="System.Messaging.SecurityContext">
+  <TypeSignature Language="C#" Value="public sealed class SecurityContext : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SecurityContext extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.SecurityContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt den Sicherheitskontext für eine Nachricht in eine Warteschlange dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Sicherheitskontext enthält zwischengespeicherte Sicherheitsinformationen, wie z. B. ein internes Zertifikat, den entsprechenden privaten Schlüssel, die SID des Benutzers, erforderlich, um ein Zertifikat und die Absender-ID an eine Nachricht angefügt werden, wenn Authentifizierung anfordert.  
+  
+ Wenn ein Client, z. B. eine ASP.NET-Anwendung nimmt die Identität eines Benutzers zum Senden einer Nachricht an eine Warteschlange, wird die Identität des Benutzers verwendet, auf die Warteschlange zuzugreifen. Wenn die Warteschlange remote ist, werden diese Anmeldeinformationen zwischengespeichert und verwendet für Nachrichten, die anschließend an die Warteschlange gesendet werden. Deshalb wird die SID in nachfolgenden Nachrichten die zwischengespeicherte Identität des ersten Benutzers sein, die eine Nachricht an die Warteschlange gesendet. Die zwischengespeicherte Identität des ersten Benutzers, der eine Nachricht an die Warteschlange gesendet wird für nachfolgende Benutzer verwendet werden.  
+  
+ Um dieses Problem zu umgehen, legen Sie den Sicherheitskontext mit <xref:System.Messaging.Message.SecurityContext%2A> vor dem Senden einer Nachricht auf eine Remotewarteschlange an, um sicherzustellen, dass die Anmeldeinformationen des aktuellen Benutzers für den Zugriff auf die Warteschlange verwendet werden. Allerdings wird die empfohlene Methode, um:  
+  
+1.  Stellen Sie der Warteschlange authentifizierte Warteschlange.  
+  
+2.  Führen Sie die ASP.NET-Anwendung als Domänenidentität, und autorisieren Sie diese Anwendung zum Schreiben in die Warteschlange.  
+  
+3.  Führen Sie nicht die Identität des Benutzers beim Verwenden der Warteschlange. Rufen Sie stattdessen die Identität des Aufrufers, und führen Sie die autorisierungsüberprüfung in der ASP.NET-Anwendung oder schließen Sie die Identität des Aufrufers als Teil der Nachricht und autorisierungsüberprüfung in der empfängeranwendung ausführen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.SecurityContext.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Messaging.SecurityContext" /> verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

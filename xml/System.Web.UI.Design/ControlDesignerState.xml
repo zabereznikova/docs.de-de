@@ -1,0 +1,48 @@
+<Type Name="ControlDesignerState" FullName="System.Web.UI.Design.ControlDesignerState">
+  <TypeSignature Language="C#" Value="public sealed class ControlDesignerState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ControlDesignerState extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ControlDesignerState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Zugriff auf den Status der Steuerelement-Designer im Entwurfshost über die <see cref="T:System.ComponentModel.Design.IComponentDesignerStateService" /> Schnittstelle. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesignerState> Klasse ist ein Wrapper für die <xref:System.ComponentModel.Design.IComponentDesignerStateService> -Schnittstelle, die die Schnittstelle zwischen einem Designer und einem Entwurfshost, z. B. ist [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesignerState.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des Elements, das festgelegt oder abgerufen werden, aus der Auflistung.</param>
+        <summary>Stellt ein Element, nach dem angegebenen Schlüssel in der Auflistung Zustand für eine Steuerelement-Designer identifiziert.</summary>
+        <value>Das identifizierte Objekt <paramref name="key" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,602 @@
+<Type Name="ObjectManager" FullName="System.Runtime.Serialization.ObjectManager">
+  <TypeSignature Language="C#" Value="public class ObjectManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ObjectManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.ObjectManager" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Der nachverfolgt Objekte deserialisiert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der Deserialisierung wird die <xref:System.Runtime.Serialization.Formatter> Abfragen der <xref:System.Runtime.Serialization.ObjectManager> zu bestimmen, ob ein Verweis auf ein Objekt in einem serialisierten Datenstrom verweist auf ein Objekt, das bereits deserialisierte wurde (rückwärts-Verweis), oder um ein Objekt, das noch kein wurde deserialisiert (Vorwärtsverweis). Wenn der Verweis in einem serialisierten Datenstrom ein Vorwärtsverweis ist die <xref:System.Runtime.Serialization.Formatter> können eine Korrektur mit Registrieren der <xref:System.Runtime.Serialization.ObjectManager>. Wenn der Verweis in einem serialisierten Datenstrom ein rückwärts-Verweis ist dem <xref:System.Runtime.Serialization.Formatter> sofort abgeschlossen wird den Verweis. Fixup bezieht sich auf das von Objektverweisen, die nicht bereits während der Deserialisierung des Objekts abgeschlossen. Nachdem das erforderliche Objekt deserialisiert wurde, die <xref:System.Runtime.Serialization.ObjectManager> den Verweis wird abgeschlossen.  
+  
+ Die <xref:System.Runtime.Serialization.ObjectManager> folgt einem Satz von Regeln, die die Fixup-Reihenfolge vorgeben. Alle Objekte, die implementieren <xref:System.Runtime.Serialization.ISerializable> oder über eine <xref:System.Runtime.Serialization.ISerializationSurrogate> können erwartete werden alle Objekte, die sie über übertragen <xref:System.Runtime.Serialization.SerializationInfo> verfügbar, wenn die Baumstruktur im Objekt deserialisiert wird. Allerdings kann kein übergeordnetes Objekt annehmen, dass alle untergeordneten Objekte vollständig abgeschlossen werden, wenn es vollständig deserialisiert wird. Alle untergeordneten Objekte vorhanden sein werden, aber nicht alle untergeordneten Objekte notwendigerweise vorhanden sein. Wenn ein Objekt muss bestimmte Aktionen ausführen, die Ausführung von Code für seine untergeordneten Objekte abhängen, können sie diese Aktionen verzögern, implementieren die <xref:System.Runtime.Serialization.IDeserializationCallback> Schnittstelle, und führen Sie den Code nur, wenn es für diese Schnittstelle aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Runtime.Serialization.ObjectManager> Klasse, um ein Objektdiagramm, wobei jedes Objekt nur einmal durchlaufen.  
+  
+ [!code-csharp[ObjectManager#1](~/samples/snippets/csharp/VS_Snippets_Misc/ObjectManager/CS/ObjectManager.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectManager (System.Runtime.Serialization.ISurrogateSelector selector, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.ISurrogateSelector selector, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.#ctor(System.Runtime.Serialization.ISurrogateSelector,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="selector" Type="System.Runtime.Serialization.ISurrogateSelector" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="selector">Die zu verwendende Ersatzselektor. Die <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> bestimmt den korrekten Ersatz beim Deserialisieren von Objekten eines bestimmten Typs verwendet. Während der Deserialisierung erstellt der Ersatzselektor eine neue Instanz des Objekts anhand der Informationen in den Stream übertragen.</param>
+        <param name="context">Der Streamingkontext. Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> wird nicht verwendet werden, indem <see langword="ObjectManager" />, jedoch als Parameter übergeben wird, um Objekte, die Sie implementieren <see cref="T:System.Runtime.Serialization.ISerializable" /> oder eine <see cref="T:System.Runtime.Serialization.ISerializationSurrogate" />. Diese Objekte können bestimmte Aktionen abhängig von der Quelle der Informationen für die Deserialisierung ausführen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.ObjectManager" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für das Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DoFixups">
+      <MemberSignature Language="C#" Value="public virtual void DoFixups ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DoFixups() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.DoFixups" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt alle aufgezeichneten Korrekturen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Korrekturen von passende Ersatz, das Objekt selbst ausgeführt werden (wenn implementiert <xref:System.Runtime.Serialization.ISerializable>), oder die standardmäßige Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Eine Korrektur wurde nicht erfolgreich abgeschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public virtual object GetObject (long objectID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject(int64 objectID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.GetObject(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectID" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="objectID">Die ID des angeforderten Objekts.</param>
+        <summary>Gibt das Objekt mit der angegebenen Objekt-ID.</summary>
+        <returns>Das Objekt mit dem angegebenen Objekt-ID, wenn Sie zuvor gespeichert wurde oder <see langword="null" /> , wenn kein solches Objekt registriert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Objekt registriert und eine Objekt-ID mit einem Aufruf von ausgegeben werden kann die <xref:System.Runtime.Serialization.ObjectManager.RegisterObject%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="objectID" />-Parameter ist kleiner oder gleich 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseDeserializationEvent">
+      <MemberSignature Language="C#" Value="public virtual void RaiseDeserializationEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RaiseDeserializationEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.RaiseDeserializationEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das Deserialisierungsereignis aus, um alle registrierten-Objekt, das implementiert <see cref="T:System.Runtime.Serialization.IDeserializationCallback" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseOnDeserializingEvent">
+      <MemberSignature Language="C#" Value="public void RaiseOnDeserializingEvent (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseOnDeserializingEvent(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.RaiseOnDeserializingEvent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die Instanz des Typs, der die aufzurufende Methode enthält.</param>
+        <summary>Ruft die Methode mit markiert die <see cref="T:System.Runtime.Serialization.OnDeserializingAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordArrayElementFixup">
+      <MemberSignature Language="C#" Value="public virtual void RecordArrayElementFixup (long arrayToBeFixed, int index, long objectRequired);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RecordArrayElementFixup(int64 arrayToBeFixed, int32 index, int64 objectRequired) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.RecordArrayElementFixup(System.Int64,System.Int32,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrayToBeFixed" Type="System.Int64" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="objectRequired" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="arrayToBeFixed">Die ID des Arrays verwendet, um eine Korrektur aufzuzeichnen.</param>
+        <param name="index">Der Index innerhalb <c>arrayFixup den</c> , die ein Fixup angefordert wird.</param>
+        <param name="objectRequired">Die ID des Objekts, das das aktuelle Arrayelement zeigen wird nach der Korrektur abgeschlossen ist.</param>
+        <summary>Zeichnet eine Korrektur für ein Element in einem Array an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Korrektur ist für ein angegebenes Element eines angegebenen Arrays. Während des Prozesses Fixup verwendete Wert wird bereitgestellt, der `objectRequired` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="arrayToBeFixed" /> oder <paramref name="objectRequired" /> Parameter ist kleiner oder gleich 0 (null).</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="index" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordArrayElementFixup">
+      <MemberSignature Language="C#" Value="public virtual void RecordArrayElementFixup (long arrayToBeFixed, int[] indices, long objectRequired);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RecordArrayElementFixup(int64 arrayToBeFixed, int32[] indices, int64 objectRequired) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.RecordArrayElementFixup(System.Int64,System.Int32[],System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrayToBeFixed" Type="System.Int64" />
+        <Parameter Name="indices" Type="System.Int32[]" />
+        <Parameter Name="objectRequired" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="arrayToBeFixed">Die ID des Arrays verwendet, um eine Korrektur aufzuzeichnen.</param>
+        <param name="indices">Die Indizes innerhalb des mehrdimensionalen Arrays, dem eine Korrektur für angefordert wird.</param>
+        <param name="objectRequired">Die ID des Objekts werden auf die Elemente des Arrays verweisen, nach der Korrektur abgeschlossen ist.</param>
+        <summary>Zeichnet die Korrekturen für die angegebenen Elemente in einem Array, zu einem späteren Zeitpunkt ausgeführt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Korrektur ist für die angegebenen Elemente eines angegebenen Arrays. Während des Prozesses Fixup verwendete Wert wird bereitgestellt, der `objectRequired` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="arrayToBeFixed" /> oder <paramref name="objectRequired" /> Parameter ist kleiner oder gleich 0 (null).</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="indices" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordDelayedFixup">
+      <MemberSignature Language="C#" Value="public virtual void RecordDelayedFixup (long objectToBeFixed, string memberName, long objectRequired);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RecordDelayedFixup(int64 objectToBeFixed, string memberName, int64 objectRequired) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.RecordDelayedFixup(System.Int64,System.String,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectToBeFixed" Type="System.Int64" />
+        <Parameter Name="memberName" Type="System.String" />
+        <Parameter Name="objectRequired" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="objectToBeFixed">Die ID des Objekts, das den Verweis auf benötigt <c>ObjectRequired</c>.</param>
+        <param name="memberName">Der Elementname des <c>ObjectToBeFixed</c> , für die Korrektur ausgeführt wird.</param>
+        <param name="objectRequired">Die ID des Objekts erforderlichen <c>ObjectToBeFixed</c>.</param>
+        <summary>Zeichnet eine Korrektur für ein Objekt handelt, später ausgeführt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Korrektur ist für ein angegebenes Element eines angegebenen Objekts. Der Wert, der während der Fixup verwendet werden wird bereitgestellt, als die `objectRequired` Argument.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="objectToBeFixed" />oder <paramref name="objectRequired" /> Parameter ist kleiner oder gleich 0 (null).</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="memberName" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordFixup">
+      <MemberSignature Language="C#" Value="public virtual void RecordFixup (long objectToBeFixed, System.Reflection.MemberInfo member, long objectRequired);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RecordFixup(int64 objectToBeFixed, class System.Reflection.MemberInfo member, int64 objectRequired) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.RecordFixup(System.Int64,System.Reflection.MemberInfo,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectToBeFixed" Type="System.Int64" />
+        <Parameter Name="member" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="objectRequired" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="objectToBeFixed">Die ID des Objekts, die den Verweis auf die <c>ObjectRequired</c> Objekt.</param>
+        <param name="member">Das Element der <c>ObjectToBeFixed</c> , für die Korrektur ausgeführt wird.</param>
+        <param name="objectRequired">Die ID des Objekts erforderlichen <c>ObjectToBeFixed</c>.</param>
+        <summary>Zeichnet eine Korrektur für einen Member eines Objekts zu einem späteren Zeitpunkt ausgeführt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Korrektur ist für ein angegebenes Element eines angegebenen Objekts. Der Wert, der während der Fixup verwendet werden wird bereitgestellt, als die `objectRequired` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="objectToBeFixed" /> oder <paramref name="objectRequired" /> Parameter ist kleiner oder gleich 0 (null).</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="member" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterObject">
+      <MemberSignature Language="C#" Value="public virtual void RegisterObject (object obj, long objectID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterObject(object obj, int64 objectID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.RegisterObject(System.Object,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="objectID" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu registrierende Objekt.</param>
+        <param name="objectID">Die ID des Objekts zu registrieren.</param>
+        <summary>Ein-Objekt deserialisiert wird, ordnet ihn mit Register <paramref name="objectID" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.Serialization.ObjectManager>behält Informationen über das Objekt und seine-ID. Später während der Deserialisierung <xref:System.Runtime.Serialization.ObjectManager.GetObject%2A> können verwendet werden, um zu bestimmen, ob eine bestimmtes Objekt-ID bereits deserialisiert wurde, oder ob es sich um ein Vorwärtsverweis auf ein Objekt, das noch nicht deserialisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="obj" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="objectID" />-Parameter ist kleiner oder gleich 0 (null).</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <paramref name="objectID" /> wurde bereits registriert für ein Objekt außer <paramref name="obj" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterObject">
+      <MemberSignature Language="C#" Value="public void RegisterObject (object obj, long objectID, System.Runtime.Serialization.SerializationInfo info);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterObject(object obj, int64 objectID, class System.Runtime.Serialization.SerializationInfo info) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.RegisterObject(System.Object,System.Int64,System.Runtime.Serialization.SerializationInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="objectID" Type="System.Int64" />
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu registrierende Objekt.</param>
+        <param name="objectID">Die ID des Objekts zu registrieren.</param>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> verwendet, wenn <c>Obj</c> implementiert <see cref="T:System.Runtime.Serialization.ISerializable" /> oder hat ein <see cref="T:System.Runtime.Serialization.ISerializationSurrogate" />. <c>Info</c> mit allen erforderlichen Fixup-Informationen abgeschlossen wird, und klicken Sie dann an das erforderliche Objekt übergeben, wenn das Objekt abgeschlossen ist.</param>
+        <summary>Ein-Objekt deserialisiert wird, ordnet ihn mit Register <paramref name="objectID" />, und Aufzeichnen der <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit ihm verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.Serialization.ObjectManager>behält die Informationen über das Objekt und seine-ID. Sie können später während der Deserialisierung verwenden <xref:System.Runtime.Serialization.ObjectManager.GetObject%2A> ermitteln, ob ein bestimmtes Objekt-ID bereits deserialisiert wurde, oder ist er ein Vorwärtsverweis auf ein Objekt, das noch nicht deserialisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="obj" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="objectID" />-Parameter ist kleiner oder gleich 0 (null).</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <paramref name="objectID" /> wurde bereits registriert für ein Objekt außer <paramref name="obj" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterObject">
+      <MemberSignature Language="C#" Value="public void RegisterObject (object obj, long objectID, System.Runtime.Serialization.SerializationInfo info, long idOfContainingObj, System.Reflection.MemberInfo member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterObject(object obj, int64 objectID, class System.Runtime.Serialization.SerializationInfo info, int64 idOfContainingObj, class System.Reflection.MemberInfo member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.RegisterObject(System.Object,System.Int64,System.Runtime.Serialization.SerializationInfo,System.Int64,System.Reflection.MemberInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="objectID" Type="System.Int64" />
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="idOfContainingObj" Type="System.Int64" />
+        <Parameter Name="member" Type="System.Reflection.MemberInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu registrierende Objekt.</param>
+        <param name="objectID">Die ID des Objekts zu registrieren.</param>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> verwendet, wenn <c>Obj</c> implementiert <see cref="T:System.Runtime.Serialization.ISerializable" /> oder hat ein <see cref="T:System.Runtime.Serialization.ISerializationSurrogate" />. <c>Info</c> mit allen erforderlichen Fixup-Informationen abgeschlossen wird, und klicken Sie dann an das erforderliche Objekt übergeben, wenn das Objekt abgeschlossen ist.</param>
+        <param name="idOfContainingObj">Die ID des Objekts, das enthält <c>Obj</c>. Dieser Parameter ist erforderlich, wenn nur <c>Obj</c> ein Werttyp ist.</param>
+        <param name="member">Das Feld, in dem Objekt, in dem <c>Obj</c> vorhanden ist. Dieser Parameter ist bedeutungslos, wenn <c>Obj</c> ein Werttyp ist.</param>
+        <summary>Registriert ein Member eines Objekts, wie er deserialisiert wird, ordnet ihn mit <paramref name="objectID" />, und Aufzeichnen der <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Müssen Sie angeben der `member` und `idOfContainingObj` Parameter Wenn `obj` ist ein <xref:System.ValueType> Korrekturen erfolgen aufgrund der Art und Weise zum <xref:System.ValueType> Objekte. Der Speicherplatz zum Speichern der Informationen für eine <xref:System.ValueType> Inline mit dem Objekt zugeordnet ist. Jedoch, wenn die <xref:System.ValueType> geschachtelt ist, um registriert werden die <xref:System.Runtime.Serialization.ObjectManager>, er verliert die Verbindung mit dem zugehörigen enthaltenden Objekts. Um sicherzustellen, dass in der Instanz von Korrekturen erfolgen die <xref:System.ValueType> gespeichert, in dem Objekt und nicht in die geschachtelte Instanz die <xref:System.Runtime.Serialization.ObjectManager> behält einige zusätzliche Informationen.  
+  
+ <xref:System.Runtime.Serialization.ObjectManager>behält Informationen über das Objekt und seine-ID. Später während der Deserialisierung <xref:System.Runtime.Serialization.ObjectManager.GetObject%2A> können verwendet werden, um zu ermitteln, ob eine bestimmtes Objekt-ID bereits deserialisiert wurde, oder, ob es ein Vorwärtsverweis auf ein Objekt nicht ist noch deserialisiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="obj" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="objectID" />-Parameter ist kleiner oder gleich 0 (null).</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <paramref name="objectID" /> wurde bereits registriert für ein Objekt außer <paramref name="obj" />, oder <paramref name="member" /> ist ein <see cref="T:System.Reflection.FieldInfo" /> und <paramref name="member" /> ist nicht <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterObject">
+      <MemberSignature Language="C#" Value="public void RegisterObject (object obj, long objectID, System.Runtime.Serialization.SerializationInfo info, long idOfContainingObj, System.Reflection.MemberInfo member, int[] arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterObject(object obj, int64 objectID, class System.Runtime.Serialization.SerializationInfo info, int64 idOfContainingObj, class System.Reflection.MemberInfo member, int32[] arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectManager.RegisterObject(System.Object,System.Int64,System.Runtime.Serialization.SerializationInfo,System.Int64,System.Reflection.MemberInfo,System.Int32[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="objectID" Type="System.Int64" />
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="idOfContainingObj" Type="System.Int64" />
+        <Parameter Name="member" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="arrayIndex" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu registrierende Objekt.</param>
+        <param name="objectID">Die ID des Objekts zu registrieren.</param>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> verwendet, wenn <c>Obj</c> implementiert <see cref="T:System.Runtime.Serialization.ISerializable" /> oder hat ein <see cref="T:System.Runtime.Serialization.ISerializationSurrogate" />. <c>Info</c> mit allen erforderlichen Fixup-Informationen abgeschlossen wird, und klicken Sie dann an das erforderliche Objekt übergeben, wenn das Objekt abgeschlossen ist.</param>
+        <param name="idOfContainingObj">Die ID des Objekts, das enthält <c>Obj</c>. Dieser Parameter ist erforderlich, wenn nur <c>Obj</c> ein Werttyp ist.</param>
+        <param name="member">Das Feld, in dem Objekt, in dem <c>Obj</c> vorhanden ist. Dieser Parameter ist bedeutungslos, wenn <c>Obj</c> ein Werttyp ist.</param>
+        <param name="arrayIndex">Wenn <c>Obj</c> ist ein <see cref="T:System.ValueType" /> und ein Element eines Arrays <c>ArrayIndex</c> den Index innerhalb dieses Arrays enthält, in denen <c>Obj</c> vorhanden ist. <c>ArrayIndex</c> wird ignoriert, wenn <c>Obj</c> ist nicht sowohl eine <see cref="T:System.ValueType" /> und ein Element eines Arrays.</param>
+        <summary>Registriert einen Member eines Arrays in ein Objekt enthalten sind, während der Deserialisierung, zuordnen mit <paramref name="objectID" />, und Aufzeichnen der <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Müssen Sie angeben der `member` und `idOfContainingObj` Parameter Wenn `obj` ist ein <xref:System.ValueType> Korrekturen erfolgen aufgrund der Art und Weise zum <xref:System.ValueType> Objekte. Der Speicherplatz zum Speichern der Informationen für eine <xref:System.ValueType> Inline mit dem Objekt zugeordnet ist. Jedoch, wenn die <xref:System.ValueType> geschachtelt ist, um registriert werden die <xref:System.Runtime.Serialization.ObjectManager>, er verliert die Verbindung mit dem zugehörigen enthaltenden Objekts. Um sicherzustellen, dass in der Instanz von Korrekturen erfolgen die <xref:System.ValueType> gespeichert, in dem Objekt und nicht in die geschachtelte Instanz die <xref:System.Runtime.Serialization.ObjectManager> behält einige zusätzliche Informationen.  
+  
+ <xref:System.Runtime.Serialization.ObjectManager>behält Informationen über das Objekt und seine-ID. Später während der Deserialisierung <xref:System.Runtime.Serialization.ObjectManager.GetObject%2A> können verwendet werden, um zu ermitteln, ob eine bestimmtes Objekt-ID bereits deserialisiert wurde, oder, ob es ein Vorwärtsverweis auf ein Objekt nicht ist noch deserialisiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="obj" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="objectID" />-Parameter ist kleiner oder gleich 0 (null).</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <paramref name="objectID" /> wurde bereits registriert für ein Objekt außer <paramref name="obj" />, oder <paramref name="member" /> ist ein <see cref="T:System.Reflection.FieldInfo" /> und <paramref name="member" /> ist nicht <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

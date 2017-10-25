@@ -1,0 +1,531 @@
+<Type Name="X509SecurityTokenHandler" FullName="System.IdentityModel.Tokens.X509SecurityTokenHandler">
+  <TypeSignature Language="C#" Value="public class X509SecurityTokenHandler : System.IdentityModel.Tokens.SecurityTokenHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509SecurityTokenHandler extends System.IdentityModel.Tokens.SecurityTokenHandler" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.X509SecurityTokenHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityTokenHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen token Security-Handler, der Token vom Typ verarbeitet <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />. Standardmäßig wird der Handler Vertrauenskette Überprüfung des x. 509-Zertifikats ausgeführt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.X509SecurityTokenHandler" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler.MapToWindows%2A> -Eigenschaftensatz auf `false` und <xref:System.IdentityModel.Selectors.X509CertificateValidator.PeerOrChainTrust%2A> Validierungssteuerelement als Standard-Zertifikats-Validierungssteuerelement verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenHandler (bool mapToWindows);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool mapToWindows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mapToWindows" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="mapToWindows">
+          <see langword="true" />Wenn das Zertifikat einem Windows-Konto zugeordnet werden soll; andernfalls <see langword="false" />. Legt die <see cref="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.MapToWindows" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.X509SecurityTokenHandler" /> Klasse, indem ein Wert, der angibt, ob das Zertifikat einem Windows-Konto zugeordnet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.X509CertificateValidator.PeerOrChainTrust%2A> Validierungssteuerelement als Standard-Zertifikats-Validierungssteuerelement verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenHandler (System.IdentityModel.Selectors.X509CertificateValidator certificateValidator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Selectors.X509CertificateValidator certificateValidator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.#ctor(System.IdentityModel.Selectors.X509CertificateValidator)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificateValidator" Type="System.IdentityModel.Selectors.X509CertificateValidator" />
+      </Parameters>
+      <Docs>
+        <param name="certificateValidator">Das Zertifikats-Validierungssteuerelement verwendet werden soll. Legt die <see cref="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.CertificateValidator" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.X509SecurityTokenHandler" /> Klasse unter Verwendung des angegebenen Zertifikats-Validierungssteuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler.MapToWindows%2A>-Eigenschaft ist auf `false` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenHandler (bool mapToWindows, System.IdentityModel.Selectors.X509CertificateValidator certificateValidator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool mapToWindows, class System.IdentityModel.Selectors.X509CertificateValidator certificateValidator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.#ctor(System.Boolean,System.IdentityModel.Selectors.X509CertificateValidator)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mapToWindows" Type="System.Boolean" />
+        <Parameter Name="certificateValidator" Type="System.IdentityModel.Selectors.X509CertificateValidator" />
+      </Parameters>
+      <Docs>
+        <param name="mapToWindows">
+          <see langword="true" />Wenn das Zertifikat einem Windows-Konto zugeordnet werden soll; andernfalls <see langword="false" />. Legt die <see cref="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.MapToWindows" />-Eigenschaft fest.</param>
+        <param name="certificateValidator">Das Zertifikats-Validierungssteuerelement verwendet werden soll. Legt die <see cref="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.CertificateValidator" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.X509SecurityTokenHandler" /> Klasse, indem ein Wert, der angibt, ob das Zertifikat einem Windows-Konto und die angegebenen Zertifikats-Validierungssteuerelement zugeordnet werden soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override bool CanReadKeyIdentifierClause (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanReadKeyIdentifierClause(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.CanReadKeyIdentifierClause(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement des der schlüsselbezeichnerklausel.</param>
+        <summary>Gibt einen Wert, der angibt, ob der angegebene Leser verweist ein <see langword="&lt;ds:X509Data&gt;" /> Element.</summary>
+        <returns>
+          <see langword="true" />Wenn der Reader auf bezieht eine <see langword="&lt;ds:X509Data&gt;" /> Element ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadToken">
+      <MemberSignature Language="C#" Value="public override bool CanReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.CanReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein Reader auf das token XML zeigt.</param>
+        <summary>Gibt einen Wert, der angibt, ob der Reader auf einem x. 509-Sicherheitstoken zeigt, wie in der WS-Security-Spezifikation definiert.</summary>
+        <returns>
+          <see langword="true" />Wenn der Reader auf einem x. 509-Sicherheitstoken verweist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidateToken">
+      <MemberSignature Language="C#" Value="public override bool CanValidateToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanValidateToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.CanValidateToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dieser Handler die Überprüfung von Token des Typs unterstützt <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />.</summary>
+        <value>
+          <see langword="true" />Wenn der Handler die Überprüfung von Token des Typs unterstützt <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />ist, andernfalls <see langword="false" />. Immer <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override bool CanWriteKeyIdentifierClause (System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanWriteKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.CanWriteKeyIdentifierClause(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityKeyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="securityKeyIdentifierClause">Die schlüsselbezeichnerklausel serialisiert werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob die angegebene schlüsselbezeichnerklausel von diesem Handler serialisiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="securityKeyIdentifierClause" /> unterstützt wird und wenn die <see cref="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.WriteXmlDSigDefinedClauseTypes" /> -Eigenschaftensatz auf <see langword="true" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die unterstützten Typen sind:  
+  
+1.  <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause>  
+  
+2.  <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause>  
+  
+3.  <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityKeyIdentifierClause" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteToken">
+      <MemberSignature Language="C#" Value="public override bool CanWriteToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWriteToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.CanWriteToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dieser Handler, Token vom Typ schreiben kann <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />.</summary>
+        <value>
+          <see langword="true" />Wenn der Handler, Token vom Typ schreiben kann <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />ist, andernfalls <see langword="false" />. Immer <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateValidator">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.X509CertificateValidator CertificateValidator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.X509CertificateValidator CertificateValidator" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.CertificateValidator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.X509CertificateValidator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> , die von der aktuellen Instanz verwendet wird.</summary>
+        <value>Das x. 509-Zertifikats-Validierungssteuerelement, das von der aktuellen Instanz verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenTypeIdentifiers">
+      <MemberSignature Language="C#" Value="public override string[] GetTokenTypeIdentifiers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetTokenTypeIdentifiers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.GetTokenTypeIdentifiers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die x. 509-Typ des Sicherheitstoken in der WS-Security x. 509-Token Profile definiert.</summary>
+        <returns>Die x. 509-Tokentyp-URI. Standardmäßig wird der Wert von der <see cref="P:System.IdentityModel.Tokens.SecurityTokenTypes.X509Certificate" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public override void LoadCustomConfiguration (System.Xml.XmlNodeList customConfigElements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList customConfigElements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customConfigElements" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="customConfigElements">Die XML-Elemente, die die benutzerdefinierte Konfiguration enthalten.</param>
+        <summary>Lädt die benutzerdefinierte Konfiguration aus XML.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="customConfigElements" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die angegebene benutzerdefinierte Konfiguration ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MapToWindows">
+      <MemberSignature Language="C#" Value="public bool MapToWindows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MapToWindows" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.MapToWindows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Überprüfung Token eine Windows-Konto zugeordnet werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn die Überprüfung Token eine Windows-Konto zugeordnet werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClause (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClause(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.ReadKeyIdentifierClause(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der XML-Reader verweisen auf die schlüsselbezeichnerklausel.</param>
+        <summary>Deserialisiert eine schlüsselbezeichnerklausel, die vom angegebenen XML-Reader verwiesen wird.</summary>
+        <returns>Die schlüsselbezeichnerklausel, die aus XML deserialisiert wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IdentityModel.Tokens.SecurityToken ReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.ReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader, der ein x. 509-Sicherheitstoken verweist.</param>
+        <summary>Deserialisiert das x. 509-Sicherheitstoken, die vom angegebenen XML-Reader verwiesen wird.</summary>
+        <returns>Das Sicherheitstoken aus XML deserialisiert. Eine Instanz von <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="reader" />Zeigt nicht auf eine gültige x. 509-Sicherheitstoken gemäß der WS-Security x. 509-Token-Profile. Oder der angegebene Codierungstyp ist als Base64- oder HexBinary.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenType">
+      <MemberSignature Language="C#" Value="public override Type TokenType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TokenType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.TokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> der Token, der diesen Handler verarbeitet.</summary>
+        <value>Standardmäßig wird der Typ des der <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" /> Klasse.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateToken">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt; ValidateToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Security.Claims.ClaimsIdentity&gt; ValidateToken(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.ValidateToken(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das zu validierende Token.</param>
+        <summary>Überprüft das angegebene x. 509-Sicherheitstoken.</summary>
+        <returns>Die im Token enthaltenen Identitäten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="token" />ist nicht von <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration" />-Eigenschaft ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Es ist keine ausstellernamenregistration (<see cref="T:System.IdentityModel.Tokens.IssuerNameRegistry" />) konfiguriert. (Die <see cref="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.IssuerNameRegistry" /> Eigenschaft von der <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" /> verwiesen wird, indem Sie die <see cref="P:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration" /> Eigenschaft ist <see langword="null" />.)</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenValidationException">Die aktuelle <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> konnte das Zertifikat im Token zu überprüfen.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">Die aktuelle <see cref="T:System.IdentityModel.Tokens.IssuerNameRegistry" /> zurückgegebene <see langword="null" /> beim Versuch, den Aussteller des Zertifikats im Token zu beheben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override void WriteKeyIdentifierClause (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteKeyIdentifierClause(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.WriteKeyIdentifierClause(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="securityKeyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer, den die schlüsselbezeichnerklausel serialisiert werden soll.</param>
+        <param name="securityKeyIdentifierClause">Die schlüsselbezeichnerklausel zu serialisieren.</param>
+        <summary>Serialisiert die angegebene schlüsselbezeichnerklausel in der XML-Writer.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityKeyIdentifierClause" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="writer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.WriteXmlDSigDefinedClauseTypes" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToken">
+      <MemberSignature Language="C#" Value="public override void WriteToken (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteToken(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityTokenHandler.WriteToken(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer, den das Token serialisiert werden soll.</param>
+        <param name="token">Das x. 509-Sicherheitstoken zu serialisieren. Eine Instanz von <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />.</param>
+        <summary>Serialisiert das angegebene x. 509-Sicherheitstoken den angegebenen XML-Writer.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="writer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="token" />ist nicht von <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXmlDSigDefinedClauseTypes">
+      <MemberSignature Language="C#" Value="public bool WriteXmlDSigDefinedClauseTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WriteXmlDSigDefinedClauseTypes" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.WriteXmlDSigDefinedClauseTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert, der angibt, ob XmlDsig definierte Typen bevorzugt werden.</summary>
+        <value>
+          <see langword="true" />Wenn XmlDsig definierte Typen bevorzugt werden; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterstützt benutzerdefinierte XmlDSig <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> Typen sind:  
+  
+-   X509IssuerSerial  
+  
+-   X509SKI  
+  
+-   X509Certificate  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X509NTAuthChainTrustValidator">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.X509NTAuthChainTrustValidator X509NTAuthChainTrustValidator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.X509NTAuthChainTrustValidator X509NTAuthChainTrustValidator" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509SecurityTokenHandler.X509NTAuthChainTrustValidator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.X509NTAuthChainTrustValidator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.IdentityModel.Tokens.X509NTAuthChainTrustValidator" /> wird, von der aktuellen Instanz während der Überprüfung des Zertifikats bei den eingehenden x. 509-Zertifikat einem Windows-Konto zugeordnet ist.</summary>
+        <value>Ein x. 509-Zertifikats-Validierungssteuerelement an, die ein angegebenen x. 509-Zertifikat zu überprüfen und überprüfen Sie, ob das Zertifikat einem Windows-Konto zugeordnet werden kann, und gibt an, ob die Zertifikatkette vertrauenswürdig ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

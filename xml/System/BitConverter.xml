@@ -1,0 +1,1616 @@
+<Type Name="BitConverter" FullName="System.BitConverter">
+  <TypeSignature Language="C#" Value="public static class BitConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit BitConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.BitConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert Basisdatentypen in ein Bytearray und ein Bytearray in Basisdatentypen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.BitConverter> Klasse hilft Werttypen in ihrer grundlegenden Form als eine Reihe von Bytes zu bearbeiten. Ein Byte ist definiert als eine 8-Bit-Ganzzahl ohne Vorzeichen. Die <xref:System.BitConverter> Klasse enthält statische Methoden für alle primitiven Typen konvertieren in andere und aus einem Array von Bytes, wie in der folgenden Tabelle veranschaulicht wird.  
+  
+|Typ|Byte-Konvertierung|Von der Byte-Konvertierung|  
+|----------|------------------------|--------------------------|  
+|<xref:System.Boolean>|<xref:System.BitConverter.GetBytes%28System.Boolean%29>|<xref:System.BitConverter.ToBoolean%2A>|  
+|<xref:System.Char>|<xref:System.BitConverter.GetBytes%28System.Char%29>|<xref:System.BitConverter.ToChar%2A>|  
+|<xref:System.Double>|<xref:System.BitConverter.GetBytes%28System.Double%29><br /><br /> - oder - <br /><br /> <xref:System.BitConverter.DoubleToInt64Bits%28System.Double%29>|<xref:System.BitConverter.ToDouble%2A><br /><br /> - oder - <br /><br /> <xref:System.BitConverter.Int64BitsToDouble%2A>|  
+|<xref:System.Int16>|<xref:System.BitConverter.GetBytes%28System.Int16%29>|<xref:System.BitConverter.ToInt16%2A>|  
+|<xref:System.Int32>|<xref:System.BitConverter.GetBytes%28System.Int32%29>|<xref:System.BitConverter.ToInt32%2A>|  
+|<xref:System.Int64>|<xref:System.BitConverter.GetBytes%28System.Int64%29>|<xref:System.BitConverter.ToInt64%2A>|  
+|<xref:System.Single>|<xref:System.BitConverter.GetBytes%28System.Single%29>|<xref:System.BitConverter.ToSingle%2A>|  
+|<xref:System.UInt16>|<xref:System.BitConverter.GetBytes%28System.UInt16%29>|<xref:System.BitConverter.ToUInt16%2A>|  
+|<xref:System.UInt32>|<xref:System.BitConverter.GetBytes%28System.UInt32%29>|<xref:System.BitConverter.ToUInt32%2A>|  
+|<xref:System.UInt64>|<xref:System.BitConverter.GetBytes%28System.UInt64%29>|<xref:System.BitConverter.ToUInt64%2A>|  
+  
+ Bei Verwendung von <xref:System.BitConverter> Methoden, um Round-Trip Daten stellen sicher, dass die <xref:System.BitConverter.GetBytes%2A> überladen und die `To` *Typ* Methode geben Sie den gleichen Typ. Wiederherstellen von ein Array, das durch den Aufruf eine Ganzzahl mit Vorzeichen darstellt, wie im folgenden Beispiel wird veranschaulicht, die <xref:System.BitConverter.ToUInt32%2A> Methode kann dazu führen, ein Wert, der aus dem ursprünglichen unterscheidet. Weitere Informationen finden Sie im Eintrag [arbeiten mit nicht-dezimal signiert und bitweise Werte](http://go.microsoft.com/fwlink/?LinkId=186999) im BCL-Teamblog.  
+  
+ [!code-csharp[System.BitConverter.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.Class/CS/example1.cs#3)]
+ [!code-vb[System.BitConverter.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.Class/VB/example1.vb#3)]  
+  
+ Die Reihenfolge der Bytes im zurückgegebenen Array von der <xref:System.BitConverter.GetBytes%2A> methodenüberladungen (sowie die Reihenfolge der Bits in der ganzen Zahl zurückgegebenes der <xref:System.BitConverter.DoubleToInt64Bits%2A> -Methode und die Reihenfolge der Hexadezimalzeichenfolgen zurückgegebenes die <xref:System.BitConverter.ToString%28System.Byte%5B%5D%29> Methode) abhängig, ob die Computerarchitektur ist little-Endian oder big-Endian. Auf ähnliche Weise die Reihenfolge der Bytes im Array und zurückgegeben, indem die `To` *IntegerValue* Methoden und die <xref:System.BitConverter.ToChar%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist. Das Endianness einer Architektur wird angegeben, indem die <xref:System.BitConverter.IsLittleEndian> Eigenschaft, die zurückgibt `true` in little-Endian-Systemen und `false` auf big-Endian-Systemen. In little-Endian-Systemen vorausgehen niederwertigen Bytes höherwertigen Bytes. Für big-Endian-System vorausgehen höherwertigen Bytes niederwertigen Bytes. In der folgenden Tabelle veranschaulicht den Unterschied in den Bytearrays, die aus die ganzen Zahl 1.234.567.890 (0x499602D2) übergeben, um die <xref:System.BitConverter.GetBytes%28System.Int32%29> Methode. Die Bytes werden in der Reihenfolge von Byte an Index 0 auf das Byte am Index 3 aufgeführt.  
+  
+|||  
+|-|-|  
+|Little-endian|D2-02-96-49|  
+|Big-endian|49-96-02-D2|  
+  
+ Da der Rückgabewert einiger Methoden auf die Systemarchitektur abhängt, seien Sie vorsichtig beim Bytedaten über Computergrenzen übertragen:  
+  
+-   Wenn alle Systeme senden und Empfangen von Daten haben den gleichen Endian garantiert, hat nichts ausgeführt werden, auf die Daten werden.  
+  
+-   Wenn Systeme senden und Empfangen von Daten auf verschiedenen Endianness verfügen können, sollten Sie die übertragen Sie Daten in einer bestimmten Reihenfolge immer. Dies bedeutet, dass die Reihenfolge der Bytes im Array vor dem Senden oder nach dem Empfang rückgängig gemacht werden kann. Eine allgemeine Konvention besteht darin, Daten in der netzwerkbyte-Reihenfolge (big-Endian-Reihenfolge) übertragen. Im folgende Beispiel stellt eine Implementierung für einen ganzzahligen Wert in der netzwerkbyte-Reihenfolge senden.  
+  
+     [!code-csharp[System.BitConverter.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.Class/CS/networkorder1.cs#4)]
+     [!code-vb[System.BitConverter.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.Class/VB/networkorder1.vb#4)]  
+  
+-   Wenn Systeme senden und Empfangen von Daten können verschiedene Endianness haben und die Daten zu übertragende besteht aus Ganzzahlen mit Vorzeichen, rufen Sie die <xref:System.Net.IPAddress.HostToNetworkOrder%2A?displayProperty=nameWithType> Methode, um die Daten in der netzwerkbyte-Reihenfolge konvertieren und die <xref:System.Net.IPAddress.NetworkToHostOrder%2A?displayProperty=nameWithType> Methode, um sie in der erforderlichen Reihenfolge konvertieren durch den Empfänger.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung mehrerer <xref:System.BitConverter> -Klassenmethoden.  
+  
+ [!code-cpp[System.BitConverter.Class#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.Class/CPP/bitconv.cpp#1)]
+ [!code-csharp[System.BitConverter.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.Class/CS/bitconv.cs#1)]
+ [!code-vb[System.BitConverter.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.Class/VB/bitconv.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DoubleToInt64Bits">
+      <MemberSignature Language="C#" Value="public static long DoubleToInt64Bits (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 DoubleToInt64Bits(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.DoubleToInt64Bits(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende Zahl.</param>
+        <summary>Konvertiert die angegebene Gleitkommazahl mit doppelter Genauigkeit in eine 64-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Eine 64-Bit-Ganzzahl mit Vorzeichen, deren Wert gleich <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Bits in der ganzen Zahl zurückgegeben, durch die <xref:System.BitConverter.DoubleToInt64Bits%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Bitmuster mehrerer konvertiert <xref:System.Double> Werte <xref:System.Int64> Werte mit der `DoubleToInt64Bits` Methode.  
+  
+ [!code-cpp[System.BitConverter.DoubleInt64#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.DoubleInt64/CPP/dbltobits.cpp#2)]
+ [!code-csharp[System.BitConverter.DoubleInt64#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.DoubleInt64/CS/dbltobits.cs#2)]
+ [!code-vb[System.BitConverter.DoubleInt64#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.DoubleInt64/VB/dbltobits.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein boolescher Wert.</param>
+        <summary>Gibt den angegebenen booleschen Wert als Bytearray zurück.</summary>
+        <returns>Ein Bytearray mit der Länge 1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können ein Bytearray konvertiert an eine <xref:System.Boolean> -Wert durch Aufrufen der <xref:System.BitConverter.ToBoolean%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel konvertiert der Bitmuster der <xref:System.Boolean> Werte <xref:System.Byte> arrays mit den `GetBytes` Methode.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.Others#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CPP/bytesbool.cpp#1)]
+ [!code-csharp[System.BitConverter.GetBytes.Others#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CS/bytesbool.cs#1)]
+ [!code-vb[System.BitConverter.GetBytes.Others#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/VB/bytesbool.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein zu konvertierendes Zeichen.</param>
+        <summary>Gibt den Wert der angegebenen Unicode-Zeichen als ein Array von Bytes zurück.</summary>
+        <returns>Ein Array der Länge 2 Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Bytes im Array zurückgegeben werden, indem Sie die <xref:System.BitConverter.GetBytes%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert der Bitmuster der <xref:System.Char> Werte (Unicode-Zeichen) <xref:System.Byte> arrays mit den `GetBytes` Methode.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.Others#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CPP/byteschar.cpp#2)]
+ [!code-csharp[System.BitConverter.GetBytes.Others#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CS/byteschar.cs#2)]
+ [!code-vb[System.BitConverter.GetBytes.Others#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/VB/byteschar.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende Zahl.</param>
+        <summary>Gibt den angegebenen Gleitkommawert mit doppelter Genauigkeit als ein Array von Bytes zurück.</summary>
+        <returns>Ein Bytearray mit der Länge 8.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Bytes im Array zurückgegeben werden, indem Sie die <xref:System.BitConverter.GetBytes%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert der Bitmuster der <xref:System.Double> Werte <xref:System.Byte> arrays mit den `GetBytes` Methode.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.Others#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CPP/bytesdouble.cpp#4)]
+ [!code-csharp[System.BitConverter.GetBytes.Others#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CS/bytesdouble.cs#4)]
+ [!code-vb[System.BitConverter.GetBytes.Others#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/VB/bytesdouble.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende Zahl.</param>
+        <summary>Gibt den Wert der angegebenen 16-Bit-Ganzzahl mit Vorzeichen als Bytearray zurück.</summary>
+        <returns>Ein Array der Länge 2 Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Bytes im Array zurückgegeben werden, indem Sie die <xref:System.BitConverter.GetBytes%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert der Bitmuster der <xref:System.Int16> Werte <xref:System.Byte> arrays mit den `GetBytes` Methode.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.SInts#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/CPP/bytesint16.cpp#3)]
+ [!code-csharp[System.BitConverter.GetBytes.SInts#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/CS/bytesint16.cs#3)]
+ [!code-vb[System.BitConverter.GetBytes.SInts#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/VB/bytesint16.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende Zahl.</param>
+        <summary>Gibt den Wert der angegebenen 32-Bit-Ganzzahl mit Vorzeichen als Bytearray zurück.</summary>
+        <returns>Ein Array mit der Länge 4 Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Bytes im Array zurückgegeben werden, indem Sie die <xref:System.BitConverter.GetBytes%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert der Bitmuster der <xref:System.Int32> Werte <xref:System.Byte> arrays mit den `GetBytes` Methode.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.SInts#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/CPP/bytesint32.cpp#2)]
+ [!code-csharp[System.BitConverter.GetBytes.SInts#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/CS/bytesint32.cs#2)]
+ [!code-vb[System.BitConverter.GetBytes.SInts#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/VB/bytesint32.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende Zahl.</param>
+        <summary>Gibt den angegebenen ganzzahligen 64-Bit-Wert mit Vorzeichen als Bytearray zurück.</summary>
+        <returns>Ein Bytearray mit der Länge 8.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Bytes im Array zurückgegeben werden, indem Sie die <xref:System.BitConverter.GetBytes%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.BitConverter.GetBytes%2A> -Methode zum Konvertieren von jedem Element in einer <xref:System.Int64> array an eine <xref:System.Byte> Arrays.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.SInts#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/CPP/bytesint64.cpp#1)]
+ [!code-csharp[System.BitConverter.GetBytes.SInts#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/CS/bytesint64.cs#1)]
+ [!code-vb[System.BitConverter.GetBytes.SInts#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/VB/bytesint64.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende Zahl.</param>
+        <summary>Gibt den angegebenen Gleitkommawert mit einfacher Genauigkeit als ein Array von Bytes zurück.</summary>
+        <returns>Ein Array mit der Länge 4 Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Bytes im Array zurückgegeben werden, indem Sie die <xref:System.BitConverter.GetBytes%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert der Bitmuster der <xref:System.Single> Werte <xref:System.Byte> arrays mit den `GetBytes` Methode.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.Others#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CPP/bytessingle.cpp#3)]
+ [!code-csharp[System.BitConverter.GetBytes.Others#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CS/bytessingle.cs#3)]
+ [!code-vb[System.BitConverter.GetBytes.Others#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/VB/bytessingle.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (ushort value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(unsigned int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.UInt16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende Zahl.</param>
+        <summary>Gibt den Wert der angegebenen 16-Bit-Ganzzahl ohne Vorzeichen als Bytearray zurück.</summary>
+        <returns>Ein Array der Länge 2 Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Bytes im Array zurückgegeben werden, indem Sie die <xref:System.BitConverter.GetBytes%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert der Bitmuster der <xref:System.UInt16> Werte <xref:System.Byte> arrays mit den `GetBytes` Methode.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.UInts#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/CPP/bytesuint16.cpp#3)]
+ [!code-csharp[System.BitConverter.GetBytes.UInts#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/CS/bytesuint16.cs#3)]
+ [!code-vb[System.BitConverter.GetBytes.UInts#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/VB/bytesuint16.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende Zahl.</param>
+        <summary>Gibt den Wert der angegebenen 32-Bit-Ganzzahl ohne Vorzeichen als Bytearray zurück.</summary>
+        <returns>Ein Array mit der Länge 4 Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Bytes im Array zurückgegeben werden, indem Sie die <xref:System.BitConverter.GetBytes%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert der Bitmuster der <xref:System.UInt32> Werte <xref:System.Byte> arrays mit den `GetBytes` Methode.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.UInts#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/CPP/bytesuint32.cpp#2)]
+ [!code-csharp[System.BitConverter.GetBytes.UInts#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/CS/bytesuint32.cs#2)]
+ [!code-vb[System.BitConverter.GetBytes.UInts#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/VB/bytesuint32.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende Zahl.</param>
+        <summary>Gibt den Wert der angegebenen 64-Bit-Ganzzahl ohne Vorzeichen als Bytearray zurück.</summary>
+        <returns>Ein Bytearray mit der Länge 8.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Bytes im Array zurückgegeben werden, indem Sie die <xref:System.BitConverter.GetBytes%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert der Bitmuster der <xref:System.UInt64> Werte <xref:System.Byte> arrays mit den `GetBytes` Methode.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.UInts#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/CPP/bytesuint64.cpp#1)]
+ [!code-csharp[System.BitConverter.GetBytes.UInts#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/CS/bytesuint64.cs#1)]
+ [!code-vb[System.BitConverter.GetBytes.UInts#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/VB/bytesuint64.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Int32BitsToSingle">
+      <MemberSignature Language="C#" Value="public static float Int32BitsToSingle (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 Int32BitsToSingle(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.Int32BitsToSingle(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Int64BitsToDouble">
+      <MemberSignature Language="C#" Value="public static double Int64BitsToDouble (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 Int64BitsToDouble(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.Int64BitsToDouble(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende Zahl.</param>
+        <summary>Konvertiert die angegebene 64-Bit-Ganzzahl mit Vorzeichen in eine Gleitkommazahl mit doppelter Genauigkeit.</summary>
+        <returns>Eine mit doppelter Genauigkeit Gleitkommazahl, deren Wert gleich <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel `value` ist eine ganze Zahl, die von zurückgegeben wird die <xref:System.BitConverter.DoubleToInt64Bits%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Bitmuster mehrerer konvertiert <xref:System.Int64> Werte <xref:System.Double> Werte mit der `Int64BitsToDouble` Methode.  
+  
+ [!code-cpp[System.BitConverter.DoubleInt64#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.DoubleInt64/CPP/bitstodbl.cpp#1)]
+ [!code-csharp[System.BitConverter.DoubleInt64#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.DoubleInt64/CS/bitstodbl.cs#1)]
+ [!code-vb[System.BitConverter.DoubleInt64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.DoubleInt64/VB/bitstodbl.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLittleEndian">
+      <MemberSignature Language="C#" Value="public static readonly bool IsLittleEndian;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly bool IsLittleEndian" />
+      <MemberSignature Language="DocId" Value="F:System.BitConverter.IsLittleEndian" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Bytereihenfolge (Endianwert) an, in der Daten in dieser Computerarchitektur gespeichert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterschiedliche Computerarchitekturen speichern Daten mit verschiedenen Bytereihenfolgen. "Big-Endian" bedeutet, dass das höchstwertige Byte am linken Ende eines Worts. "Little-Endian" bedeutet, dass das höchstwertige Byte am rechten Ende eines Worts.  
+  
+> [!NOTE]
+>  Von Netzwerk-Byte-Reihenfolge in Konvertieren der Bytereihenfolge des Hostcomputers ohne das Abrufen des Werts der <xref:System.BitConverter.IsLittleEndian?displayProperty=nameWithType> Feld durch Übergeben einer 16-Bit, 32-Bit oder 64-Bit-Ganzzahl, die <xref:System.Net.IPAddress.HostToNetworkOrder%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der `IsLittleEndian` Feld.  
+  
+ [!code-cpp[System.BitConverter.Class#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.Class/CPP/littleend.cpp#2)]
+ [!code-csharp[System.BitConverter.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.Class/CS/littleend.cs#2)]
+ [!code-vb[System.BitConverter.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.Class/VB/littleend.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleToInt32Bits">
+      <MemberSignature Language="C#" Value="public static int SingleToInt32Bits (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 SingleToInt32Bits(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.SingleToInt32Bits(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToBoolean">
+      <MemberSignature Language="C#" Value="public static bool ToBoolean (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ToBoolean(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToBoolean(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Bytearray.</param>
+        <param name="startIndex">Der Index des in Bytes <c>Wert</c>.</param>
+        <summary>Gibt einen booleschen Wert aus dem Byte an einer angegebenen Position in ein Bytearray konvertiert.</summary>
+        <returns>
+          <see langword="true" />Wenn das Byte, ab <paramref name="startIndex" /> in <paramref name="value" /> ungleich NULL ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertieren einer <xref:System.Boolean> Wert, der seine bytedarstellung Aufruf der <xref:System.BitConverter.ToBoolean%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert die Elemente der <xref:System.Byte> auf arrays <xref:System.Boolean> Werte mit der `ToBoolean` Methode.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.Others#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CPP/batobool.cpp#1)]
+ [!code-csharp[System.BitConverter.ToXXX.Others#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CS/batobool.cs#1)]
+ [!code-vb[System.BitConverter.ToXXX.Others#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/VB/batobool.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" />ist kleiner als 0 (null) oder größer als die Länge des <paramref name="value" /> minus 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToChar">
+      <MemberSignature Language="C#" Value="public static char ToChar (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig char ToChar(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToChar(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Array.</param>
+        <param name="startIndex">Die Anfangsposition in <c>Wert</c>.</param>
+        <summary>Gibt eine Unicode-Zeichen aus zwei Bytes an einer angegebenen Position in ein Bytearray konvertiert.</summary>
+        <returns>Ein Zeichen gebildet, indem zwei Bytes, beginnend bei <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.BitConverter.ToChar%2A> -Methode konvertiert die Bytes aus dem Index `startIndex` auf `startIndex` + 1 fest, um eine <xref:System.Char> Wert. Die Reihenfolge der Bytes im Array muss das Endianness der der Architektur des Computersystems widerspiegeln; Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.BitConverter> klassenthema.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert die Elemente der <xref:System.Byte> auf arrays <xref:System.Char> Werte (Unicode-Zeichen), mit der `ToChar` Methode.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.Others#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CPP/batochar.cpp#2)]
+ [!code-csharp[System.BitConverter.ToXXX.Others#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CS/batochar.cs#2)]
+ [!code-vb[System.BitConverter.ToXXX.Others#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/VB/batochar.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" />entspricht der Länge von <paramref name="value" /> minus 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" />ist kleiner als 0 (null) oder größer als die Länge des <paramref name="value" /> minus 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDouble">
+      <MemberSignature Language="C#" Value="public static double ToDouble (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 ToDouble(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToDouble(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Bytearray.</param>
+        <param name="startIndex">Die Anfangsposition in <c>Wert</c>.</param>
+        <summary>Gibt eine mit doppelter Genauigkeit Gleitkommazahl konvertiert aus acht Bytes an einer angegebenen Position in einem Bytearray zurück.</summary>
+        <returns>Eine Gleitkommazahl mit doppelter Genauigkeit gebildet werden, um 8 Bytes, beginnend bei <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.BitConverter.ToDouble%2A> -Methode konvertiert die Bytes aus dem Index `startIndex` auf `startIndex` + 7, um eine <xref:System.Double> Wert. Die Reihenfolge der Bytes im Array muss das Endianness der der Architektur des Computersystems widerspiegeln; Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.BitConverter> klassenthema.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert die Elemente der <xref:System.Byte> auf arrays <xref:System.Double> Werte mit der `ToDouble` Methode.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.Others#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CPP/batodouble.cpp#3)]
+ [!code-csharp[System.BitConverter.ToXXX.Others#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CS/batodouble.cs#3)]
+ [!code-vb[System.BitConverter.ToXXX.Others#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/VB/batodouble.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" />ist größer als oder gleich der Länge des <paramref name="value" /> minus 7 und ist kleiner oder gleich der Länge des <paramref name="value" /> minus 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" />ist kleiner als 0 (null) oder größer als die Länge des <paramref name="value" /> minus 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt16">
+      <MemberSignature Language="C#" Value="public static short ToInt16 (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int16 ToInt16(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToInt16(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Bytearray.</param>
+        <param name="startIndex">Die Anfangsposition in <c>Wert</c>.</param>
+        <summary>Gibt eine 16-Bit-Ganzzahl mit Vorzeichen, die aus zwei Bytes an einer angegebenen Position in ein Bytearray konvertiert.</summary>
+        <returns>Eine 16-Bit-Ganzzahl mit Vorzeichen gebildet, indem zwei Bytes, beginnend bei <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.BitConverter.ToInt16%2A> -Methode konvertiert die Bytes aus dem Index `startIndex` auf `startIndex` + 1 fest, um eine <xref:System.Int16> Wert. Die Reihenfolge der Bytes im Array muss das Endianness der der Architektur des Computersystems widerspiegeln; Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.BitConverter> klassenthema.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert die Elemente der <xref:System.Byte> auf arrays <xref:System.Int16> Werte mit der `ToInt16` Methode.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.SInts#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.SInts/CPP/batoint16.cpp#1)]
+ [!code-csharp[System.BitConverter.ToXXX.SInts#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.SInts/CS/batoint16.cs#1)]
+ [!code-vb[System.BitConverter.ToXXX.SInts#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.SInts/VB/batoint16.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" />entspricht der Länge von <paramref name="value" /> minus 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" />ist kleiner als 0 (null) oder größer als die Länge des <paramref name="value" /> minus 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt32">
+      <MemberSignature Language="C#" Value="public static int ToInt32 (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ToInt32(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToInt32(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Bytearray.</param>
+        <param name="startIndex">Die Anfangsposition in <c>Wert</c>.</param>
+        <summary>Gibt eine 32-Bit-Ganzzahl mit Vorzeichen, die aus vier Bytes an einer angegebenen Position in ein Bytearray konvertiert.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen, die durch vier Bytes, beginnend bei gebildet <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.BitConverter.ToInt32%2A> -Methode konvertiert die Bytes aus dem Index `startIndex` auf `startIndex` + 3, um eine <xref:System.Int32> Wert. Die Reihenfolge der Bytes im Array muss das Endianness der der Architektur des Computersystems widerspiegeln; Weitere Informationen finden Sie im Abschnitt "Hinweise" <xref:System.BitConverter>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.BitConverter.ToInt32%2A> Methode zum Erstellen der <xref:System.Int32> Werte aus einem 4-Byte-Array und aus dem oberen vier Bytes eines 8-Byte-Arrays. Darüber hinaus verwendet der <xref:System.BitConverter.GetBytes%28System.Int32%29> und <xref:System.BitConverter.ToInt32%2A> Methoden für den roundtripvorgang ein <xref:System.Int32> Wert.  
+  
+ [!code-csharp[System.BitConverter.ToInt32#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.bitconverter.toint32/cs/toint32.cs#1)]
+ [!code-vb[System.BitConverter.ToInt32#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.bitconverter.toint32/vb/toint32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" />ist größer als oder gleich der Länge des <paramref name="value" /> minus 3, und ist kleiner oder gleich der Länge des <paramref name="value" /> minus 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" />ist kleiner als 0 (null) oder größer als die Länge des <paramref name="value" /> minus 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt64">
+      <MemberSignature Language="C#" Value="public static long ToInt64 (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 ToInt64(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToInt64(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Bytearray.</param>
+        <param name="startIndex">Die Anfangsposition in <c>Wert</c>.</param>
+        <summary>Gibt eine 64-Bit-Ganzzahl mit Vorzeichen, die aus acht Bytes an einer angegebenen Position in ein Bytearray konvertiert.</summary>
+        <returns>Eine 64-Bit-Ganzzahl mit Vorzeichen gebildet werden, um 8 Bytes, beginnend bei <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.BitConverter.ToInt64%2A> -Methode konvertiert die Bytes aus dem Index `startIndex` auf `startIndex` + 7, um eine <xref:System.Int64> Wert. Die Reihenfolge der Bytes im Array muss das Endianness der der Architektur des Computersystems widerspiegeln; Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.BitConverter> klassenthema.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert die Elemente der <xref:System.Byte> auf arrays <xref:System.Int64> Werte mit der `ToInt64` Methode.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.SInts#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.SInts/CPP/batoint64.cpp#3)]
+ [!code-csharp[System.BitConverter.ToXXX.SInts#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.SInts/CS/batoint64.cs#3)]
+ [!code-vb[System.BitConverter.ToXXX.SInts#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.SInts/VB/batoint64.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" />ist größer als oder gleich der Länge des <paramref name="value" /> minus 7 und ist kleiner oder gleich der Länge des <paramref name="value" /> minus 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" />ist kleiner als 0 (null) oder größer als die Länge des <paramref name="value" /> minus 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSingle">
+      <MemberSignature Language="C#" Value="public static float ToSingle (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 ToSingle(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToSingle(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Bytearray.</param>
+        <param name="startIndex">Die Anfangsposition in <c>Wert</c>.</param>
+        <summary>Gibt eine mit einfacher Genauigkeit Gleitkommazahl konvertiert aus vier Bytes an einer angegebenen Position in einem Bytearray zurück.</summary>
+        <returns>Eine Gleitkommazahl mit einfacher Genauigkeit gebildet, indem vier Bytes, beginnend bei <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.BitConverter.ToSingle%2A> -Methode konvertiert die Bytes aus dem Index `startIndex` auf `startIndex` + 3, um eine <xref:System.Single> Wert. Die Reihenfolge der Bytes im Array muss das Endianness der der Architektur des Computersystems widerspiegeln; Weitere Informationen finden Sie im Abschnitt "Hinweise" <xref:System.BitConverter>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert die Elemente der <xref:System.Byte> auf arrays <xref:System.Single> Werte mit der `ToSingle` Methode.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.Others#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CPP/batosingle.cpp#4)]
+ [!code-csharp[System.BitConverter.ToXXX.Others#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CS/batosingle.cs#4)]
+ [!code-vb[System.BitConverter.ToXXX.Others#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/VB/batosingle.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" />ist größer als oder gleich der Länge des <paramref name="value" /> minus 3, und ist kleiner oder gleich der Länge des <paramref name="value" /> minus 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" />ist kleiner als 0 (null) oder größer als die Länge des <paramref name="value" /> minus 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToString(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Bytearray.</param>
+        <summary>Den numerischen Wert jedes Element eines angegebenen Arrays von Bytes konvertiert in die entsprechende hexadezimale Zeichenfolgendarstellung.</summary>
+        <returns>Eine Zeichenfolge aus hexadezimalen Paaren getrennt durch einen Bindestrich jedes Paar, in dem das entsprechende Element im darstellt <paramref name="value" />, z. B. "7F.-2 C-4A-00".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Elemente der `value` konvertiert werden. Die Reihenfolge der Hexadezimalzeichenfolgen zurückgegebenes die <xref:System.BitConverter.ToString%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Der folgende code konvertiert <xref:System.Byte> auf arrays <xref:System.String> Objekte mit der `ToString` Methode.  
+  
+ [!code-cpp[System.BitConverter.ToString#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToString/CPP/batostring.cpp#1)]
+ [!code-csharp[System.BitConverter.ToString#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToString/CS/batostring.cs#1)]
+ [!code-vb[System.BitConverter.ToString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToString/VB/batostring.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToString(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Bytearray.</param>
+        <param name="startIndex">Die Anfangsposition in <c>Wert</c>.</param>
+        <summary>Den numerischen Wert, der jedes Element eines angegebenen Unterarrays von Bytes konvertiert in die entsprechende hexadezimale Zeichenfolgendarstellung.</summary>
+        <returns>Eine Zeichenfolge aus hexadezimalen Paaren getrennt durch einen Bindestrich jedes Paar, in dem das entsprechende Element in einem Unterarray von darstellt <paramref name="value" />, z. B. "7F.-2 C-4A-00".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente von Arrayposition `startIndex` bis zum Ende des Arrays konvertiert werden. Die Reihenfolge der Hexadezimalzeichenfolgen zurückgegebenes die <xref:System.BitConverter.ToString%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert, die Teil einer <xref:System.Byte> Array, beginnend am angegebenen `startIndex` auf eine <xref:System.String> mit der `ToString` Methode.  
+  
+ [!code-cpp[System.BitConverter.ToString#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToString/CPP/batostringii.cpp#2)]
+ [!code-csharp[System.BitConverter.ToString#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToString/CS/batostringii.cs#2)]
+ [!code-vb[System.BitConverter.ToString#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToString/VB/batostringii.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" />ist kleiner als 0 (null) oder größer als die Länge des <paramref name="value" /> minus 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (byte[] value, int startIndex, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(unsigned int8[] value, int32 startIndex, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToString(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Bytearray.</param>
+        <param name="startIndex">Die Anfangsposition in <c>Wert</c>.</param>
+        <param name="length">Die Anzahl der Arrayelemente in <c>Wert</c> konvertieren.</param>
+        <summary>Den numerischen Wert, der jedes Element eines angegebenen Unterarrays von Bytes konvertiert in die entsprechende hexadezimale Zeichenfolgendarstellung.</summary>
+        <returns>Eine Zeichenfolge aus hexadezimalen Paaren getrennt durch einen Bindestrich jedes Paar, in dem das entsprechende Element in einem Unterarray von darstellt <paramref name="value" />, z. B. "7F.-2 C-4A-00".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `length` Elemente aus Arrayposition `startIndex` konvertiert werden. Wenn `length` gleich NULL ist, gibt die Methode <xref:System.String?displayProperty=nameWithType>.  
+  
+ Die Reihenfolge der Hexadezimalzeichenfolgen zurückgegebenes die <xref:System.BitConverter.ToString%2A> Methode hängt davon ab, ob die Computerarchitektur little-Endian oder big-Endian ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.BitConverter.ToString%2A> -Methode zum Konvertieren von Teil ein Bytearray, beginnend am angegebenen `startIndex` und mit dem angegebenen `length`, in eine Zeichenfolge.  
+  
+ [!code-cpp[System.BitConverter.ToString#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToString/CPP/batostringii.cpp#2)]
+ [!code-csharp[System.BitConverter.ToString#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToString/CS/batostringii.cs#2)]
+ [!code-vb[System.BitConverter.ToString#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToString/VB/batostringii.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> oder <paramref name="length" /> ist kleiner als 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="startIndex" />ist größer als 0 (null) und ist größer als oder gleich der Länge des <paramref name="value" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Kombination von <paramref name="startIndex" /> und <paramref name="length" /> gibt keine Position in <paramref name="value" />, d. h. die <paramref name="startIndex" /> -Parameters ist größer als die Länge des <paramref name="value" /> minus der <paramref name="length" /> Parameter.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt16">
+      <MemberSignature Language="C#" Value="public static ushort ToUInt16 (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int16 ToUInt16(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToUInt16(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Array von Bytes.</param>
+        <param name="startIndex">Die Anfangsposition in <c>Wert</c>.</param>
+        <summary>Gibt eine 16-Bit-Ganzzahl ohne Vorzeichen konvertiert, die aus zwei Bytes an einer angegebenen Position in einem Bytearray zurück.</summary>
+        <returns>Eine 16-Bit-Ganzzahl ohne Vorzeichen gebildet, indem zwei Bytes, beginnend bei <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.BitConverter.ToUInt16%2A> -Methode konvertiert die Bytes aus dem Index `startIndex` auf `startIndex` + 1 fest, um eine <xref:System.UInt16> Wert. Die Reihenfolge der Bytes im Array muss das Endianness der der Architektur des Computersystems widerspiegeln; Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.BitConverter> klassenthema.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert die Elemente der <xref:System.Byte> auf arrays <xref:System.UInt16> Werte mit der `ToUInt16` Methode.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.UInts#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/CPP/batouint16.cpp#1)]
+ [!code-csharp[System.BitConverter.ToXXX.UInts#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/CS/batouint16.cs#1)]
+ [!code-vb[System.BitConverter.ToXXX.UInts#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/VB/batouint16.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" />entspricht der Länge von <paramref name="value" /> minus 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" />ist kleiner als 0 (null) oder größer als die Länge des <paramref name="value" /> minus 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt32">
+      <MemberSignature Language="C#" Value="public static uint ToUInt32 (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int32 ToUInt32(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToUInt32(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Bytearray.</param>
+        <param name="startIndex">Die Anfangsposition in <c>Wert</c>.</param>
+        <summary>Gibt eine 32-Bit-Ganzzahl ohne Vorzeichen aus vier Bytes an einer angegebenen Position in ein Bytearray konvertiert.</summary>
+        <returns>Eine 32-Bit-Ganzzahl ohne Vorzeichen gebildet, indem vier Bytes, beginnend bei <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.BitConverter.ToUInt32%2A> -Methode konvertiert die Bytes aus dem Index `startIndex` auf `startIndex` + 3, um eine <xref:System.UInt32> Wert. Die Reihenfolge der Bytes im Array muss das Endianness der der Architektur des Computersystems widerspiegeln; Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.BitConverter> klassenthema.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert die Elemente der <xref:System.Byte> auf arrays <xref:System.UInt32> Werte mit der `ToUInt32` Methode.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.UInts#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/CPP/batouint32.cpp#2)]
+ [!code-csharp[System.BitConverter.ToXXX.UInts#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/CS/batouint32.cs#2)]
+ [!code-vb[System.BitConverter.ToXXX.UInts#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/VB/batouint32.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" />ist größer als oder gleich der Länge des <paramref name="value" /> minus 3, und ist kleiner oder gleich der Länge des <paramref name="value" /> minus 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" />ist kleiner als 0 (null) oder größer als die Länge des <paramref name="value" /> minus 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt64">
+      <MemberSignature Language="C#" Value="public static ulong ToUInt64 (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int64 ToUInt64(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToUInt64(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Bytearray.</param>
+        <param name="startIndex">Die Anfangsposition in <c>Wert</c>.</param>
+        <summary>Gibt eine 64-Bit-Ganzzahl ohne Vorzeichen aus acht Bytes an einer angegebenen Position in ein Bytearray konvertiert.</summary>
+        <returns>Eine 64-Bit-Ganzzahl ohne Vorzeichen gebildet, indem die acht Bytes, beginnend bei <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.BitConverter.ToUInt64%2A> -Methode konvertiert die Bytes aus dem Index `startIndex` auf `startIndex` + 7, um eine <xref:System.UInt64> Wert. Die Reihenfolge der Bytes im Array muss das Endianness der der Architektur des Computersystems widerspiegeln; Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.BitConverter> klassenthema.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert die Elemente der <xref:System.Byte> auf arrays <xref:System.UInt64> Werte mit der `ToUInt64` Methode.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.UInts#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/CPP/batouint64.cpp#3)]
+ [!code-csharp[System.BitConverter.ToXXX.UInts#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/CS/batouint64.cs#3)]
+ [!code-vb[System.BitConverter.ToXXX.UInts#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/VB/batouint64.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" />ist größer als oder gleich der Länge des <paramref name="value" /> minus 7 und ist kleiner oder gleich der Länge des <paramref name="value" /> minus 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" />ist kleiner als 0 (null) oder größer als die Länge des <paramref name="value" /> minus 1.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

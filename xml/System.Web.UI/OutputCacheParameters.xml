@@ -1,0 +1,285 @@
+<Type Name="OutputCacheParameters" FullName="System.Web.UI.OutputCacheParameters">
+  <TypeSignature Language="C#" Value="public sealed class OutputCacheParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OutputCacheParameters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.OutputCacheParameters" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Kapselt die Initialisierung ausgabechacheinstellungen aus analysiert ein [@ OutputCache](http://msdn.microsoft.com/en-us/28a9e101-fb44-4198-9cb6-b8a52312fec2) Seitendirektive von ASP.NET. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.OutputCacheParameters> Klasse wird nicht von ASP.NET Seite oder Steuerelemententwicklern verwendet. Es stellt eine Datenstruktur zum Speichern von cacheeinstellungen aus analysiert, eine [@ OutputCache](http://msdn.microsoft.com/en-us/28a9e101-fb44-4198-9cb6-b8a52312fec2) Seite Richtlinie von ASP.NET-Seite und steuern, wie z. B. Parser <xref:System.Web.UI.PageParser> und <xref:System.Web.UI.TemplateControlParser>. Die <xref:System.Web.UI.OutputCacheParameters> Objekt wird verwendet, mit der <xref:System.Web.UI.Page.InitOutputCache%2A?displayProperty=nameWithType> Methode zum Initialisieren des Ausgabecaches für eine Seite und seines Inhalts zur Laufzeit.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutputCacheParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.OutputCacheParameters.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.OutputCacheParameters" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheProfile">
+      <MemberSignature Language="C#" Value="public string CacheProfile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CacheProfile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.CacheProfile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine <see cref="T:System.Web.Configuration.OutputCacheProfile" /> an, der die Einstellungen des Cacheeintrags Ausgabe zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.OutputCacheProfile" /> an, der die Einstellungen des Cacheeintrags Ausgabe zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Profil definiert eine Reihe von cacheeinstellungen in den `<outputCacheSettings>` Konfiguration, die als die grundlegenden Einstellungen für den Eintrag des Ausgabe-Cache verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public int Duration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Duration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.Duration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeitspanne, die ein Eintrag im Cache verbleiben im Ausgabecache.</summary>
+        <value>Die Zeitspanne in Sekunden, die ein Eintrag im Cache verbleiben im Ausgabecache. Der Standardwert ist-0 und eine unbegrenzte Dauer bedeutet an.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Zwischenspeichern der Ausgabe für den aktuellen Inhalt aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn für den aktuellen Inhalt die ausgabezwischenspeicherung aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Web.UI.OutputCacheLocation Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.OutputCacheLocation Location" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.OutputCacheLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der den Speicherort des Cacheeintrags bestimmt.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.OutputCacheLocation" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoStore">
+      <MemberSignature Language="C#" Value="public bool NoStore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoStore" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.NoStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob die HTTP <see langword="Cache-Control: no-store" /> Richtlinie festgelegt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see langword="Cache-Control: no-store" /> Richtlinie wird festgelegt, <see cref="T:System.Web.HttpResponse" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlDependency">
+      <MemberSignature Language="C#" Value="public string SqlDependency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SqlDependency" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.SqlDependency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen Satz von Datenbank und Tabelle Namenspaaren, von denen des Eintrags im Cache abhängig.</summary>
+        <value>Eine Zeichenfolge, die einen Satz von Datenbank und Tabelle Namenspaaren identifiziert, von denen des Eintrags im Cache abhängig. Der Cacheeintrag ist abgelaufen, wenn die Daten der Tabelle aktualisiert oder geändert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.OutputCacheParameters.SqlDependency%2A> Zeichenfolge identifiziert, Datenbanken und Tabellen entsprechend den Namen des SQL Server-Abgängigkeit Cache in Ihrer Konfiguration (in der Regel hinzugefügt, mit der `<sqlcachedependency>` Konfigurationselemente). Wenn Sie SQL Server 2005 verwenden, legen Sie die <xref:System.Web.UI.OutputCacheParameters.SqlDependency%2A> Eigenschaft auf "CommandNotification", den ASP.NET auf Zeilenebene Abhängigkeiten für alle SQL-Befehle innerhalb des Kontexts der aktuellen ASP.NET-Seite erstellen angewiesen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByContentEncoding">
+      <MemberSignature Language="C#" Value="public string VaryByContentEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByContentEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.VaryByContentEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine durch Trennzeichen getrennte Liste von Zeichensätzen (inhaltscodierungen) verwendet, um den Cacheeintrag variieren.</summary>
+        <value>Eine Liste von Zeichen legt fest, um den Inhalt zu variieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft auf mehrere Zeichensätze festgelegt ist, enthält der Ausgabecache eine andere Version von das angeforderte Dokument für jeden Satz angegeben.  
+  
+ <xref:System.Web.UI.OutputCacheParameters.VaryByContentEncoding%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByControl">
+      <MemberSignature Language="C#" Value="public string VaryByControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.VaryByControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine durch Semikolons getrennte Liste der Steuerelement-IDs, die in der aktuellen Seite oder das Benutzersteuerelement verwendet, um den aktuellen Cacheeintrag variieren enthalten sind.</summary>
+        <value>Eine durch Semikolons getrennte Liste von Zeichenfolgen verwendet, um einen Eintrag variieren der Ausgabecache. Die <see cref="P:System.Web.UI.OutputCacheParameters.VaryByControl" /> Eigenschaft festgelegt, wird er auf den vollqualifizierten Steuerelement-IDs, in dem der Bezeichner eine Verkettung der Steuerelement-IDs ab, die vom übergeordneten Element der obersten Ebene zu steuern und mit einem Dollarzeichen ($) als Trennzeichen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByCustom">
+      <MemberSignature Language="C#" Value="public string VaryByCustom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByCustom" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.VaryByCustom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der benutzerdefinierten Zeichenfolgen, die den Ausgabecache verwendet wird, um den Cacheeintrag variieren.</summary>
+        <value>Die Liste der benutzerdefinierten Zeichenfolgen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie "Browser" für diese Eigenschaft angeben, wird der Cacheeintrag je nach Browsertyp und Hauptversionsnummer. Wenn eine benutzerdefinierte Zeichenfolge eingegeben wird, müssen Sie überschreiben die <xref:System.Web.HttpApplication.GetVaryByCustomString%2A?displayProperty=nameWithType> Methode in die Datei "Global.asax" Ihrer Anwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByHeader">
+      <MemberSignature Language="C#" Value="public string VaryByHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.VaryByHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine durch Trennzeichen getrennte Namen von Spaltenüberschriften verwendet, um den Cacheeintrag variieren. Die Namen von Spaltenüberschriften identifizieren HTTP-Header der Anforderung zugeordnet ist.</summary>
+        <value>Eine Liste von Headern, um den Inhalt zu variieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft auf mehrere Header festgelegt ist, enthält der Ausgabecache eine andere Version von das angeforderte Dokument für jeden angegebenen Header aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByParam">
+      <MemberSignature Language="C#" Value="public string VaryByParam { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByParam" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.VaryByParam" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine durch Semikolons getrennte Liste der Abfragezeichenfolge und Formularbereitstellungsparameter POST-Parameter, die den Ausgabecache verwendet wird, um den Cacheeintrag variieren.</summary>
+        <value>Die Liste der Abfragezeichenfolge und Formularbereitstellungsparameter POST Abfrageparameter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft auf mehrere Parameter festgelegt ist, enthält der Ausgabecache eine andere Version von das angeforderte Dokument für jeden angegebenen Parameter. Mögliche Werte sind "none", "*", und eine beliebige gültige Abfragezeichenfolge oder die POST-Parametername.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,85 @@
+<Type Name="ErrorPrototype" FullName="Microsoft.JScript.ErrorPrototype">
+  <TypeSignature Language="C#" Value="public class ErrorPrototype : Microsoft.JScript.JSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ErrorPrototype extends Microsoft.JScript.JSObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.ErrorPrototype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.JSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt statische Methoden und Eigenschaften für <see cref="T:Microsoft.JScript.ErrorObject" /> Objekte. Alle Methoden dieser Klasse werden durch Übergabe eines Verweises auf das Objekt aufgerufen, die Zugriff auf die Methode anfordert. Diese Klasse gehört zu "Modell" integrierten Objekt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="constructor">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.ErrorConstructor constructor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.JScript.ErrorConstructor constructor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ErrorPrototype.constructor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ErrorConstructor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf ein prototypbasierten-Objekt, das diesen Prototyp verwendet wird.</summary>
+        <value>Ein Verweis auf ein prototypbasierten-Objekt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="name">
+      <MemberSignature Language="C#" Value="public readonly string name;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly string name" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.ErrorPrototype.name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Namen des Typs des Fehlers. Mögliche Werte sind Fehler, EvalError, RangeError, ReferenceError, SyntaxError, TypeError und URIError.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toString">
+      <MemberSignature Language="C#" Value="public static string toString (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toString(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ErrorPrototype.toString(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Error_toString)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Erstellt eine Zeichenfolgendarstellung des angegebenen Objekts.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <paramref name="thisob" /> , enthält den Namen des Typs der Error-Objekt und eine Fehlermeldung angezeigt, sofern vorhanden.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,122 @@
+<Type Name="ApplicationSecurityManager" FullName="System.Security.Policy.ApplicationSecurityManager">
+  <TypeSignature Language="C#" Value="public static class ApplicationSecurityManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ApplicationSecurityManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.ApplicationSecurityManager" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwaltet die Entscheidungen zur Vertrauenswürdigkeit für Applikationen-Manifest aktiviert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Policy.ApplicationSecurityManager> Klasse bietet wichtige Informationen für die Ausführung einer Anwendung Manifest-basiertes. Die <xref:System.Security.Policy.ApplicationSecurityManager.ApplicationTrustManager%2A> Eigenschaft identifiziert den Trust-Manager zuständig, um zu bestimmen, ob eine Anwendung als vertrauenswürdig eingestuft wird. Die <xref:System.Security.Policy.ApplicationSecurityManager.DetermineApplicationTrust%2A> Methode ruft die Vertrauenswürdigkeit der Anwendung-Manager, um zu bestimmen, ob eine Anwendung als vertrauenswürdig eingestuft wird. Die <xref:System.Security.Policy.ApplicationSecurityManager.UserApplicationTrusts%2A> Eigenschaft enthält die zwischengespeicherten Vertrauensstellung Entscheidungen, die für den Benutzer.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationTrustManager">
+      <MemberSignature Language="C#" Value="public static System.Security.Policy.IApplicationTrustManager ApplicationTrustManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Policy.IApplicationTrustManager ApplicationTrustManager" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationSecurityManager.ApplicationTrustManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.IApplicationTrustManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Anwendung Trust-Manager ab.</summary>
+        <value>Eine <see cref="T:System.Security.Policy.IApplicationTrustManager" /> , die den aktuellen Trust-Manager darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der aktuellen Version ist es nur eine Trust-Manager, der eine benutzerdefinierte Implementierung sein kann von der <xref:System.Security.Policy.IApplicationTrustManager> Schnittstelle. Die Standardimplementierung der Trust-Manager fordert die Benutzer die Berechtigung zum Installieren der Anwendung und die Berechtigungen für die Anwendung gewährt. Andere Implementierungen der Trust-Manager möglicherweise unterschiedliche Benutzeroberflächen. Eine Implementierung kann z. B. eine Liste der Enterprise für vertrauenswürdige Anwendungen, statt die Bestätigung vom Benutzer, die Informationen überprüfen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Policy.PolicyException">Die Richtlinie für diese Anwendung keine Trust-Manager.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DetermineApplicationTrust">
+      <MemberSignature Language="C#" Value="public static bool DetermineApplicationTrust (ActivationContext activationContext, System.Security.Policy.TrustManagerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool DetermineApplicationTrust(class System.ActivationContext activationContext, class System.Security.Policy.TrustManagerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationSecurityManager.DetermineApplicationTrust(System.ActivationContext,System.Security.Policy.TrustManagerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activationContext" Type="System.ActivationContext" />
+        <Parameter Name="context" Type="System.Security.Policy.TrustManagerContext" />
+      </Parameters>
+      <Docs>
+        <param name="activationContext">Ein <see cref="T:System.ActivationContext" /> den Aktivierungskontext für die Anwendung identifizieren.</param>
+        <param name="context">Ein <see cref="T:System.Security.Policy.TrustManagerContext" /> der Trust-Manager-Kontext für die Anwendung identifizieren.</param>
+        <summary>Bestimmt, ob der Benutzer die angegebene Anwendung, um mit der angeforderte Berechtigungssatz ausgeführt werden, genehmigt.</summary>
+        <returns>
+          <see langword="true" />für die Ausführung der angegebenen Anwendungs andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Policy.ApplicationSecurityManager.DetermineApplicationTrust%2A>verwendet die konfigurierte <xref:System.Security.Policy.ApplicationSecurityManager.ApplicationTrustManager%2A> Eigenschaft bestimmt, ob die Ausführung der angegebenen Anwendung mit den im Manifest Anwendung angeforderte Berechtigungssatz zuzulassen. Verhalten der Trust-Manager ist abhängig von der Implementierung der Trust-Manager, und übergeben Sie die Informationen den `context` Parameter. Das Standardverhalten der Trust-Manager wird ein Dialogfeld der Benutzeroberfläche (UI) zum Bestimmen der Genehmigung des Benutzers herstellen. Trust-Manager kann jedoch auch eine Anwendung Vertrauenswürdigkeitsstatus basierend auf andere Kriterien verwenden, z. B. Entscheidungen, die eine Unternehmensdatenbank gebotenen bestimmen. Die Entscheidung über die Vertrauenswürdigkeit beibehalten werden kann, abhängig von der `context` Parametereigenschaften und der Trust-Manager-Implementierung. Wenn die Vertrauenswürdigkeit für die Anwendung für eine Entscheidung basierend auf einem Dialogfeld beibehalten wird, bei weiteren Aufrufen von der <xref:System.Security.Policy.ApplicationSecurityManager> wird das Dialogfeld für die UI für jede Anforderung für diese Anwendung nicht vorhanden. <xref:System.Security.Policy.ApplicationSecurityManager.DetermineApplicationTrust%2A>wird aufgerufen, nachdem das Manifest, aber bevor die Anwendung mit dem lokalen System heruntergeladen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="activationContext" />-Parameter ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UserApplicationTrusts">
+      <MemberSignature Language="C#" Value="public static System.Security.Policy.ApplicationTrustCollection UserApplicationTrusts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Policy.ApplicationTrustCollection UserApplicationTrusts" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationSecurityManager.UserApplicationTrusts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.ApplicationTrustCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Anwendung-Vertrauensstellung, die die zwischengespeicherten Vertrauensstellung Entscheidungen, die für den Benutzer enthält.</summary>
+        <value>Eine <see cref="T:System.Security.Policy.ApplicationTrustCollection" /> , die die zwischengespeicherten Vertrauensstellung Entscheidungen, die für den Benutzer enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Entscheidungen zur Vertrauenswürdigkeit der in der Auflistung werden beibehalten, mit den Methoden der Sammlung an, wie die <xref:System.Security.Policy.ApplicationTrustCollection.Add%2A> Methode oder die <xref:System.Security.Policy.ApplicationTrustCollection.Remove%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

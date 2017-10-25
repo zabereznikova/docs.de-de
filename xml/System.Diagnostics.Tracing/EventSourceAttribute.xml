@@ -1,0 +1,191 @@
+<Type Name="EventSourceAttribute" FullName="System.Diagnostics.Tracing.EventSourceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EventSourceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventSourceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Tracing.EventSourceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht, dass der Name für die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) unabhängig von dem Namen der Ereignisquellenklasse definiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird in der ereignisablaufverfolgung für Windows (ETW) entspricht dem Namen einer Ereignisquelle den Namen der Ereignisquellenklasse, ohne dass der Name des Namespaces. Dies ist ausreichend für private Ereignisquellen, aber für Ereignisquellen besser zu sehen ist es besser, einen hierarchischen Namespace haben z. B.: *CompanyName*.* ProviderName*.  Die <xref:System.Diagnostics.Tracing.EventSourceAttribute> -Attributs können Sie den Namen des ETW-unabhängig von dem Namen der Klasse definiert.  
+  
+ Die <xref:System.Diagnostics.Tracing.EventSourceAttribute> Attribut können Sie zudem eine GUID für die Ereignisquelle explizit definieren.  In einer standardmäßigen Nutzung müssen Sie keine GUID angeben, wenn Sie ein Ereignis definieren Quell- oder darauf verweisen, da eine GUID nicht mit dem Namen der Ereignisquellenklasse implizit abgeleitet wird. Definieren explizit eine GUID wird abgeraten, außer beim Aktualisieren von vorhandenen ETW-Anbieter mithilfe von Ereignisquellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventSourceAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSourceAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.Tracing.EventSourceAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Guid">
+      <MemberSignature Language="C#" Value="public string Guid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Guid" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSourceAttribute.Guid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Quelle Ereignisbezeichner.</summary>
+        <value>Der Ereignisbezeichner für die Quelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einer standardmäßigen Nutzung müssen Sie keine GUID angeben, wenn Sie ein Ereignis definieren Quell- oder darauf verweisen, da eine GUID nicht mit dem Namen der Ereignisquellenklasse implizit abgeleitet wird. Definieren explizit eine GUID wird abgeraten, außer beim Aktualisieren von vorhandenen ETW-Anbieter mithilfe von Ereignisquellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalizationResources">
+      <MemberSignature Language="C#" Value="public string LocalizationResources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalizationResources" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Ressourcendatei Lokalisierung fest.</summary>
+        <value>Der Name der Ressourcendatei Lokalisierung oder <see langword="null" /> , wenn die Ressourcendatei für die Lokalisierung nicht vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereignisquellen unterstützen der Lokalisierung von Ereignissen. Sie können werden die Ereignisse, Operationscodes, Vorgängen, Schlüsselwörter und Zuordnungen in mehrere Sprachen lokalisiert werden. Um Ereignisse zu lokalisieren, erstellen Sie ein. ResX Stil Zeichenfolgentabelle durch Hinzufügen einer Ressourcendatei zu Ihrem Projekt.  Die Ressourcendatei erhält einen Namen (z. B. DefaultNameSpace.ResourceFileName), die übergeben werden kann die <xref:System.Resources.ResourceManager.%23ctor%2A> Konstruktor, der die Ressourcen gelesen wird.  Dieser Name ist der Wert der <xref:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources%2A> Eigenschaft. Wenn die <xref:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources%2A> Eigenschaft ist nicht `null`, die <xref:System.Diagnostics.Tracing.EventSource> Objekt sucht die lokalisierten Zeichenfolgen für Ereignisse mit den folgenden Ressourcen Namensschema, in denen die Begriffe in darstellen Großbuchstaben der Name des Ereignisses, Aufgabe, Schlüsselwort oder Zuordnung Wert sollte lokalisiert werden soll:  
+  
+-   event_EVENTNAME  
+  
+-   task_TASKNAME  
+  
+-   keyword_KEYWORDNAME  
+  
+-   map_MAPNAME  
+  
+ Beachten Sie, dass die lokalisierte Zeichenfolge für ein Ereignis der Meldungszeichenfolge entspricht und kann {0} Werte aufweisen, die wodurch die Nutzlast-Werte darstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSourceAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Ereignisquelle.</summary>
+        <value>Der Name der Ereignisquelle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

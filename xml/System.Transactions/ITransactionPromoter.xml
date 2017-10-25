@@ -1,0 +1,67 @@
+<Type Name="ITransactionPromoter" FullName="System.Transactions.ITransactionPromoter">
+  <TypeSignature Language="C#" Value="public interface ITransactionPromoter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITransactionPromoter" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.ITransactionPromoter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt eine delegierte Transaktion für eine vorhandene Transaktion, die weitergeleitet werden kann, um vom MSDTC bei Bedarf verwaltet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Ressourcen-Manager implementieren möchten, implementieren Sie nicht die <xref:System.Transactions.ITransactionPromoter> -Schnittstelle direkt. Sie sollten stattdessen implementieren <xref:System.Transactions.ISinglePhaseNotification> -Schnittstelle der einzelnen erbt <xref:System.Transactions.ITransactionPromoter.Promote%2A> -Methode dieser Schnittstelle. Weitere Informationen zum Implementieren eines Ressourcen-Managers finden Sie unter [ein Ressourcen-Manager implementieren](http://msdn.microsoft.com/en-us/81509719-d579-4530-831e-42e1acdef63e).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Promote">
+      <MemberSignature Language="C#" Value="public byte[] Promote ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] Promote() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.ITransactionPromoter.Promote" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt eine eingetragene Objekt, das eine Erhöhung der delegierten Transaktion angefordert wurde.</summary>
+        <returns>Ein Propagierungstoken für Sender/Empfänger, die eine verteilte Transaktion marshallt. Weitere Informationen finden Sie unter <see cref="M:System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken(System.Byte[])" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Transactions.TransactionPromotionException> ausgelöst werden soll, indem Sie eine Implementierung von <xref:System.Transactions.IPromotableSinglePhaseNotification> Schnittstelle, um anzugeben, dass ein Aufruf von <xref:System.Transactions.ITransactionPromoter.Promote%2A> ist fehlgeschlagen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,219 @@
+<Type Name="IPersistComponentSettings" FullName="System.Configuration.IPersistComponentSettings">
+  <TypeSignature Language="C#" Value="public interface IPersistComponentSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPersistComponentSettings" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.IPersistComponentSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Standardfunktionen für Steuerelemente oder Bibliotheken, die speichern und Abrufen der Anwendungseinstellungen für die.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können in der Regel Unterstützung von Einstellungen zu einer Anwendung hinzufügen, indem erstellen eine Wrapperklasse für Einstellungen, das von abgeleitet ist <xref:System.Configuration.ApplicationSettingsBase>, und klicken Sie dann diese Klasse besondere Eigenschaften hinzuzufügen. Allerdings ist dieser Ansatz nicht ausreichend Anwendungseinstellungen für ein Steuerelement kapseln, damit von den Details des Containers geschützt ist. Die <xref:System.Configuration.IPersistComponentSettings> Schnittstelle bietet eine Anwendung mithilfe einer standard-Schnittstelle für die Kommunikation der Application Settings Status änderungsanforderungen auf ein Steuerelement, Komponente oder Library-Modul. Entwurfszeittools hängen auch von dieser Schnittstelle, um die Steuerelemente und Komponenten ordnungsgemäß verwaltet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LoadComponentSettings">
+      <MemberSignature Language="C#" Value="public void LoadComponentSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadComponentSettings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IPersistComponentSettings.LoadComponentSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Anwendungseinstellungen in ihren entsprechenden Eigenschaften des Steuerelements liest und aktualisiert den Zustand des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Allgemeinen die <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> -Methode führt zwei grundlegende Vorgänge:  
+  
+-   Es bewirkt, dass jede Anwendungsinstanz-Einstellungen enthalten, die für das Steuerelement in der Regel aktualisieren Sie die Werte von deren Anwendungseinstellungseigenschaften durch Aufrufen ihrer <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> Methoden.  
+  
+-   Je nach Bedarf aktualisiert sie die allgemeinen Eigenschaften, von die diese Einstellungen neu geladene Eigenschaften abhängen. Wenn die Einstellungen enthalten z. B. eine `location` Einstellungseigenschaft, <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> sollten sicherstellen, dass des Steuerelements <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft wird aktualisiert, und diese neu geladene Einstellung wieder.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetComponentSettings">
+      <MemberSignature Language="C#" Value="public void ResetComponentSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetComponentSettings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IPersistComponentSettings.ResetComponentSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die Eigenschaften des Steuerelements Anwendung Einstellungen auf ihre Standardwerte zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung der <xref:System.Configuration.IPersistComponentSettings.ResetComponentSettings%2A> Methodenaufrufe in der Regel die <xref:System.Configuration.ApplicationSettingsBase.Reset%2A> Methode für jede Instanz einer Anwendung Settings-Klasse, die es enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveComponentSettings">
+      <MemberSignature Language="C#" Value="public void SaveComponentSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveComponentSettings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IPersistComponentSettings.SaveComponentSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert Einstellungseigenschaften des Steuerelements an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> -Methode schreibt die Werte der Eigenschaften des Steuerelements Anwendung in der zugeordneten Datenspeicher. Data Store und Serialisierung Technik die Methode verwendet richtet sich nach der Einstellungsanbieter zugeordneten jedes Settings-Klasse, durch die <xref:System.Configuration.SettingsProviderAttribute>. Sie können die Auswahl des Einstellungsanbieters außer Kraft setzen, mit der <xref:System.Configuration.ISettingsProviderService> Schnittstelle.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> Eigenschaft `true`, sollte das Steuerelement aufrufen <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> in eine eigene <xref:System.Windows.Forms.Control.Dispose%2A> Methode, damit das Steuerelement-Konfigurationsdaten automatisch vor dem Beenden der Anwendung gespeichert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveSettings">
+      <MemberSignature Language="C#" Value="public bool SaveSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SaveSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.IPersistComponentSettings.SaveSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Steuerelement automatisch Einstellungseigenschaften für die Anwendung weiterhin bestehen sollte.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement automatisch den Zustand beibehalten werden sollen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Steuerelement Konfigurationsdaten enthält, in der Regel bleiben diese Daten als Antwort auf ein expliziter Aufruf von der <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> Methode oder manchmal implizit beim des Steuerelements <xref:System.Windows.Forms.Control.Dispose%2A> Methode aufgerufen wird. Die <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> -Eigenschaft bestimmt, ob ein Steuerelement die Konfigurationsdaten automatisch beibehalten, wenn er verworfen wird.  
+  
+ Der Standardwert von <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> richtet sich nach der Implementierung des Steuerelements. Die Dokumentation für das Steuerelement sollte angegeben werden, ob sie Anwendungseinstellungen verwendet, welche Daten persistent gespeichert werden und welcher der Standardwert von der <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> Eigenschaft ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, der richtige Weg für ein Steuerelement, um die Überprüfung des Werts der <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> Eigenschaft, bevor er versucht, die Konfigurationsdaten automatisch beibehalten.  
+  
+ `protected override void Dispose( bool disposing ) {`  
+  
+ `if(disposing) {`  
+  
+ `try {`  
+  
+ `if (SaveSettings) {`  
+  
+ `SaveComponentSettings();`  
+  
+ `}`  
+  
+ `}`  
+  
+ `finally {`  
+  
+ `//...`  
+  
+ `}`  
+  
+ `}`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingsKey">
+      <MemberSignature Language="C#" Value="public string SettingsKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SettingsKey" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.IPersistComponentSettings.SettingsKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert des Schlüssels der Anwendung-Einstellungen für die aktuelle Instanz des Steuerelements fest.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Einstellungsschlüssel für die aktuelle Instanz des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> Eigenschaft, um Gruppen von Einstellungen Anwendungseigenschaften zu unterscheiden, wenn mehrere Instanzen derselben Wrapperklasse vorhanden sind. Beispielsweise enthält ein Steuerelement über eine zugeordnete Wrapperklasse, führt platzieren Sie dann in derselben Anwendung mehrere Instanzen des gleichen Steuerelements in der Regel mehrere Instanzen von der Wrapperklasse. Ein Einstellungsschlüssel ist erforderlich, nur, wenn die Konfigurationsdaten in einem instanzweise unterschiedlich; Beispiel: die Position der Steuerelemente dynamisch positioniert.  
+  
+ Die folgenden allgemeinen Regeln gelten für die Verwendung von <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>:  
+  
+-   Ein Steuerelement, wie jede Klasse darf null oder mehr Anwendungseinstellungsklassen abgeleitet <xref:System.Configuration.ApplicationSettingsBase>. Jede Settings-Klasse enthält einen eigenen <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A?displayProperty=nameWithType> -Eigenschaft, wodurch zu, mehrere Instanzen dieser Klasse unterscheiden.  
+  
+-   Ein Steuerelement sollte Daten pro Instanz und die freigegebenen Daten in unterschiedlichen Einstellungenklassen aufteilen.  
+  
+-   Für ein Steuerelement mit Konfigurationsdaten pro Instanz die `get` Accessor, der die <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> Eigenschaft sollte standardmäßig die <xref:System.Windows.Forms.Control.Name%2A> des Steuerelements. In den meisten Fällen wird der Name des Steuerelements in einer Anwendung eindeutig sein. Wenn das Steuerelement enthält nur freigegebene Konfigurationsdaten `get` Standard `null`.  
+  
+-   Die `set` Accessor für diese Eigenschaft sollte implementiert werden, um Anwendungseinstellungen-Klassen, pro Instanz und die freigegebene Konfigurationsdaten zu unterscheiden. Für jede Settings-Klasse, die mit der Instanzdaten `set` sollten nur Pass-Through an die <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A?displayProperty=nameWithType> Eigenschaft der Settings-Klasse. Für Anwendungseinstellungen-Klassen mit freigegebenen Daten `set` dürfen keine Aktion durchführen, für die Settings-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

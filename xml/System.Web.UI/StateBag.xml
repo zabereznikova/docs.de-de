@@ -1,0 +1,815 @@
+<Type Name="StateBag" FullName="System.Web.UI.StateBag">
+  <TypeSignature Language="C#" Value="public sealed class StateBag : System.Collections.IDictionary, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StateBag extends System.Object implements class System.Collections.ICollection, class System.Collections.IDictionary, class System.Collections.IEnumerable, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.StateBag" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Verwaltet den Ansichtszustand von ASP.NET-Serversteuerelementen, einschließlich Seiten. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anzeigen des Status für eine Seite oder ein Steuerelement ist die kumulative Eigenschaftswerte oder Ansicht der entsprechenden Seite oder des Steuerelements. Sie erreichen dieser Klasse über die <xref:System.Web.UI.Control.ViewState%2A?displayProperty=nameWithType> Eigenschaft. Steuerelemente können auch wichtige Zustandsinformationen im Steuerelementzustand speichern, aber nicht gespeichert werden, als ein <xref:System.Web.UI.StateBag> Objekt.  
+  
+ Diese Klasse ist der primäre Speichermechanismus für alle HTML- und Webserversteuerelemente. Als Zeichenfolgen, die mit dem Steuerelement verknüpfte Attribut/Wert-Paare gespeichert. Diese Attribute verfolgt Änderungen erst nach der <xref:System.Web.UI.Control.OnInit%2A> Methode für eine Seitenanforderung ausgeführt wird, und speichert die Änderungen an der Seite oder eines Steuerelements Ansichtszustand.  
+  
+ Diese Klasse implementiert ein Wörterbuch, und Sie können Elemente hinzufügen oder Elemente daraus entfernen, wie Sie alle Dictionary-Objekt. Weitere Informationen zu datenauflistungen, z. B. Wörterbücher finden Sie unter [Auflistungen und Datenstrukturen](http://msdn.microsoft.com/library/60cc581f-1db5-445b-ba04-a173396bf872).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht eine zusammengesetzte `Label` -Steuerelement mit `Text` und `FontSize` Eigenschaften. Diese Eigenschaften werden gespeichert und daraus abgerufen Zustand über, wenn die <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType> Methode für das Steuerelement aufgerufen wird.  
+  
+ [!code-csharp[SysWebUIControlViewState#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SysWebUIControlViewState/CS/controlviewstate.cs#1)]
+ [!code-vb[SysWebUIControlViewState#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SysWebUIControlViewState/VB/controlviewstate.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StateBag ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.StateBag" />-Klasse. Dies ist der Standardkonstruktor für diese Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StateBag (bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="ignoreCase">
+          <see langword="true" />Groß-und Kleinschreibung; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.StateBag" /> -Klasse, ermöglicht gespeicherten Ansichtszustandswerte Groß-/Kleinschreibung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Web.UI.StateItem Add (string key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.StateItem Add(string key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.StateItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Attributname für den <see cref="T:System.Web.UI.StateItem" />.</param>
+        <param name="value">Der Wert des Elements, das Hinzufügen der <see cref="T:System.Web.UI.StateBag" />.</param>
+        <summary>Fügt ein neues <see cref="T:System.Web.UI.StateItem" /> -Objekt an die <see cref="T:System.Web.UI.StateBag" /> Objekt. Wenn das Element bereits das <see cref="T:System.Web.UI.StateBag" /> -Objekt, diese Methode wird den Wert des Elements aktualisiert.</summary>
+        <returns>Gibt eine <see cref="T:System.Web.UI.StateItem" /> , die dem Ansichtszustand hinzugefügte Objekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.StateBag.Add%2A> Methode.  
+  
+ [!code-csharp[Web.UI.StateBag#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Web.UI.StateBag/CS/removecs.aspx#3)]
+ [!code-vb[Web.UI.StateBag#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Web.UI.StateBag/VB/removevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ Die Anzahl der Zeichen in <paramref name="key" /> ist 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus dem aktuellen <see cref="T:System.Web.UI.StateBag" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.StateBag.Clear%2A> Methode.  
+  
+ [!code-csharp[StateBag_IStateManager_Sample1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/StateBag_IStateManager_Sample1/CS/ism_statebag_samples.cs#4)]
+ [!code-vb[StateBag_IStateManager_Sample1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StateBag_IStateManager_Sample1/VB/ism_statebag_samples.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateBag.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der <see cref="T:System.Web.UI.StateItem" /> Objekte in der <see cref="T:System.Web.UI.StateBag" /> Objekt.</summary>
+        <value>Die Anzahl der Elemente in der <see cref="T:System.Web.UI.StateBag" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.StateBag.Count%2A> Eigenschaft.  
+  
+ [!code-csharp[Web.UI.StateBag#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Web.UI.StateBag/CS/gotocs.aspx#2)]
+ [!code-vb[Web.UI.StateBag#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Web.UI.StateBag/VB/gotovb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionaryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator an, die alle Schlüssel-Wert-Paare von durchläuft die <see cref="T:System.Web.UI.StateItem" /> in gespeicherten Objekte die <see cref="T:System.Web.UI.StateBag" /> Objekt.</summary>
+        <returns>Der Enumerator zum Durchlaufen der Behälter Zustand.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Web.UI.StateBag.GetEnumerator%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[StateItem_Samples1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/StateItem_Samples1/CS/stateitem_samples.cs.aspx#3)]
+ [!code-vb[StateItem_Samples1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StateItem_Samples1/VB/stateitem_samples.vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemDirty">
+      <MemberSignature Language="C#" Value="public bool IsItemDirty (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsItemDirty(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.IsItemDirty(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des zu überprüfenden Elements.</param>
+        <summary>Überprüft eine <see cref="T:System.Web.UI.StateItem" /> Objekt in der <see cref="T:System.Web.UI.StateBag" /> zu bewerten, ob es seit dem Aufruf von modifiziertes Objekt <see cref="M:System.Web.UI.Control.TrackViewState" />.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element geändert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt auch zurück `false` Wenn die `key` Parameter ist nicht vorhanden, der <xref:System.Web.UI.StateBag> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.StateBag.IsItemDirty%2A> Methode.  
+  
+ [!code-csharp[StateBag_IStateManager_Sample1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/StateBag_IStateManager_Sample1/CS/ism_statebag_samples.cs#4)]
+ [!code-vb[StateBag_IStateManager_Sample1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StateBag_IStateManager_Sample1/VB/ism_statebag_samples.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateBag.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel für das Element.</param>
+        <summary>Ruft ab oder legt den Wert eines Elements gespeichert, der <see cref="T:System.Web.UI.StateBag" /> Objekt.</summary>
+        <value>Das angegebene Element in der <see cref="T:System.Web.UI.StateBag" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Verwendung dieses Elements ist die einfachste Methode zum Speichern und Abrufen von Ansichtszustandswerte für ein Steuerelement oder eine Seite.  
+  
+ Wenn ein Element noch nicht in gespeichert ist die <xref:System.Web.UI.StateBag> -Objekt, wenn Sie diese Eigenschaft festlegen, das Schlüssel/Wert-Paar der Auflistung hinzugefügt wird. Wenn Sie diese Eigenschaft, um festlegen `null` vor der <xref:System.Web.UI.Control.TrackViewState%2A> Methode für ein Element aufgerufen wird, wird es entfernt aus der <xref:System.Web.UI.StateBag> Objekt. Andernfalls, wenn Sie diese Eigenschaft, um festlegen `null` der Schlüssel wird zum Nachverfolgen des Ansichtszustands für das Element ermöglichen gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine Eigenschaft, die ihren Namen und Wert als ein Schlüssel/Wert-Paar speichert die <xref:System.Web.UI.Control.ViewState%2A?displayProperty=nameWithType> Eigenschaft. Die <xref:System.Web.UI.Control.ViewState%2A> Eigenschaft ist eine Instanz der <xref:System.Web.UI.StateBag> Klasse.  
+  
+ [!code-csharp[SysWebUIControlViewState#2](~/samples/snippets/csharp/VS_Snippets_WebNet/SysWebUIControlViewState/CS/controlviewstate.cs#2)]
+ [!code-vb[SysWebUIControlViewState#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SysWebUIControlViewState/VB/controlviewstate.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateBag.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Schlüsseln, die die Elemente in der <see cref="T:System.Web.UI.StateBag" /> Objekt.</summary>
+        <value>Die Auflistung der Schlüssel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schlüssel sind die Namen der Eigenschaften des Steuerelements. Z. B., wenn Sie erstellt ein `BGColor` Eigenschaft auf eine `Table` Steuerelement, das Sie angepasst haben, eine `BGColor` Eintrag wird erstellt, in dieser Auflistung, die diese Eigenschaft darstellt, auf Ihre `Table` Steuerelement.  
+  
+ Diese Schlüssel entsprechen den Namen des der <xref:System.Web.UI.StateItem> in gespeicherten Objekte die <xref:System.Web.UI.StateBag> Auflistung für die aktuelle Seite oder Server.  
+  
+ Sie können eine Iteration durch dieser Sammlung mit den <xref:System.Web.UI.StateBag.GetEnumerator%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.StateBag.Keys%2A> Eigenschaft.  
+  
+ [!code-csharp[Web.UI.StateBag#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Web.UI.StateBag/CS/gotocs.aspx#2)]
+ [!code-vb[Web.UI.StateBag#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Web.UI.StateBag/VB/gotovb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Das zu entfernende Element.</param>
+        <summary>Entfernt das angegebene Schlüssel-Wert-Paar aus der <see cref="T:System.Web.UI.StateBag" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.StateBag.Remove%2A> Methode.  
+  
+ [!code-csharp[Web.UI.StateBag#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Web.UI.StateBag/CS/removecs.aspx#3)]
+ [!code-vb[Web.UI.StateBag#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Web.UI.StateBag/VB/removevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDirty">
+      <MemberSignature Language="C#" Value="public void SetDirty (bool dirty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDirty(bool dirty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.SetDirty(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dirty" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dirty">
+          <see langword="true" />, um den Zustand der Sammlung und der zugehörigen Elemente als geändert zu markieren; andernfalls <see langword="false" />.</param>
+        <summary>Legt sowohl den Status des <see cref="T:System.Web.UI.StateBag" />-Objekts als auch die <see cref="P:System.Web.SessionState.ISessionStateItemCollection.Dirty" />-Eigenschaft der einzelnen darin enthaltenen <see cref="T:System.Web.UI.StateItem" />-Objekte fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.StateBag.SetDirty%2A> Methode wird verwendet, um der Auflistung und deren Inhalt in während eines Aufrufs serialisiert werden erzwingen die <xref:System.Web.UI.StateBag.System%23Web%23UI%23IStateManager%23SaveViewState%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItemDirty">
+      <MemberSignature Language="C#" Value="public void SetItemDirty (string key, bool dirty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetItemDirty(string key, bool dirty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.SetItemDirty(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="dirty" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel, der identifiziert <see cref="T:System.Web.UI.StateItem" /> in der <see cref="T:System.Web.UI.StateBag" /> festgelegt.</param>
+        <param name="dirty">
+          <see langword="true" />der Status des Elements als geändert markiert werden; andernfalls <see langword="false" />.</param>
+        <summary>Legt die <see cref="P:System.Web.SessionState.ISessionStateItemCollection.Dirty" /> -Eigenschaft für das angegebene <see cref="T:System.Web.UI.StateItem" /> Objekt in der <see cref="T:System.Web.UI.StateBag" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.StateBag.SetItemDirty%2A> Methode wird verwendet, um zu verhindern, oder erzwingen Sie die Statusverwaltung aller bestimmte Eigenschaften, dargestellt durch <xref:System.Web.UI.StateItem> Objekte in der <xref:System.Web.UI.StateBag> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Collections.ICollection" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.StateBag>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateBag.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.IsSynchronized" />.</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf das <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.StateBag>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateBag.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.StateBag>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Add">
+      <MemberSignature Language="C#" Value="void IDictionary.Add (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Add(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.System#Collections#IDictionary#Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Das <see cref="T:System.Object" />, das als Schlüssel für das hinzuzufügende Element verwendet werden soll.</param>
+        <param name="value">Das <see cref="T:System.Object" />, das als Wert für das hinzuzufügende Element verwendet werden soll.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IDictionary.Add(System.Object,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.StateBag>-Instanz in eine <xref:System.Collections.IDictionary>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Contains">
+      <MemberSignature Language="C#" Value="bool IDictionary.Contains (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IDictionary.Contains(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.System#Collections#IDictionary#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der im <see cref="T:System.Collections.IDictionary" />-Objekt zu suchende Schlüssel.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IDictionary.Contains(System.Object)" />.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.IDictionary" /> ein Element mit dem Schlüssel enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.StateBag>-Instanz in eine <xref:System.Collections.IDictionary>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IDictionary.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IDictionary.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateBag.System#Collections#IDictionary#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IDictionary.IsFixedSize" />.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.IDictionary" />-Objekt eine feste Größe hat, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.StateBag>-Instanz in eine <xref:System.Collections.IDictionary>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IDictionary.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IDictionary.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateBag.System#Collections#IDictionary#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IDictionary.IsReadOnly" />.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.IDictionary" />-Objekt schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.StateBag>-Instanz in eine <xref:System.Collections.IDictionary>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IDictionary.Item[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IDictionary.Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateBag.System#Collections#IDictionary#Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des abzurufenden Elements.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IDictionary.Item(System.Object)" />.</summary>
+        <value>Das Element mit dem angegebenen <paramref name="key" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.StateBag>-Instanz in eine <xref:System.Collections.IDictionary>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Remove">
+      <MemberSignature Language="C#" Value="void IDictionary.Remove (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Remove(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.System#Collections#IDictionary#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des zu entfernenden Elements.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IDictionary.Remove(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.StateBag>-Instanz in eine <xref:System.Collections.IDictionary>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IEnumerable.GetEnumerator" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.StateBag>-Instanz in eine <xref:System.Collections.IEnumerable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateBag.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der anzeigt, ob Zustandsänderungen verfolgt werden.</summary>
+        <value>
+          <see langword="true" />, wenn <see cref="T:System.Web.UI.StateBag" /> markiert ist, um Änderungen seines Zustands zu speichern; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein Objekt, das den wiederherzustellenden <see cref="T:System.Web.UI.StateBag" />-Zustand darstellt.</param>
+        <summary>Stellt den zuvor gespeicherten Ansichtszustand des <see cref="T:System.Web.UI.StateBag" />-Objekts wieder her.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt die Ansichtszustandsinformationen für die <xref:System.Web.UI.StateBag> Objekt aus einer früheren Seitenanforderung wieder, die gespeichert wurde, durch die <xref:System.Web.UI.StateBag.System%23Web%23UI%23IStateManager%23SaveViewState%2A> Methode.  
+  
+ Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet. Sie können angeben, überschreiben diese Methode, um zu steuern, wie ein benutzerdefiniertes Serversteuerelement seinen Ansichtszustand wiederherstellt. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Änderungen am <see cref="T:System.Web.UI.StateBag" />-Objekt ab dem Zeitpunkt, an dem die Seite an den Server zurückgesendet wurde.</summary>
+        <returns>Das Objekt, das die Änderungen am Ansichtszustand der <see cref="T:System.Web.UI.StateBag" /> enthält. Wenn keine Änderungen vorhanden sind, oder es sind keine <see cref="T:System.Web.UI.StateItem" />-Elemente in der <see cref="T:System.Web.UI.StateBag" />, gibt diese Methode <see langword="null" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ Ansichtszustand besteht in der Ansammlung der Werte der Eigenschaften eines Serversteuerelements. Diese Werte werden automatisch in des Serversteuerelements platziert <xref:System.Web.UI.Control.ViewState%2A> -Eigenschaft, die eine Instanz von der <xref:System.Web.UI.StateBag> Klasse. Der Wert dieser Eigenschaft wird dann nach speichern Status, Phase des Lebenszyklus des Serversteuerelements an ein Zeichenfolgenobjekt beibehalten. Weitere Informationen finden Sie unter [NIB: ASP.NET-Webserversteuerelemente](http://msdn.microsoft.com/en-us/e18eb2f2-cf00-47ae-b1a1-dfc188a6dea1).  
+  
+ Wenn der Ansichtszustand gespeichert wird, wird dieser String-Objekt an den Client als eine Variable, die in einem HTML-gespeichert sind zurückgegeben `Hidden` Element. Wenn Sie benutzerdefinierte Steuerelemente erstellen, können Sie die Effizienz verbessern, indem Sie diese Methode überschreiben und Ändern des Serversteuerelements <xref:System.Web.UI.Control.ViewState%2A> Eigenschaft. Weitere Informationen finden Sie unter [NIB: ASP.NET-Webserversteuerelemente](http://msdn.microsoft.com/en-us/e18eb2f2-cf00-47ae-b1a1-dfc188a6dea1) und [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateBag.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass das <see cref="T:System.Web.UI.StateBag" />-Objekt Änderungen an seinem Zustand nachverfolgt, sodass es anforderungsübergreifend beibehalten werden kann.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateBag.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der gespeicherten Ansichtszustand Werte ab dem <see cref="T:System.Web.UI.StateBag" /> Objekt.</summary>
+        <value>Die Auflistung der Ansichtszustandswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine Auflistung mit den Werten für alle der <xref:System.Web.UI.StateItem> Objekte in die angegebene Seite oder einem Steuerelement. Sie können diese Werte durchlaufen werden, mithilfe der <xref:System.Web.UI.StateBag.GetEnumerator%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.StateBag.Values%2A> Eigenschaft.  
+  
+ [!code-csharp[Web.UI.StateBag#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Web.UI.StateBag/CS/gotocs.aspx#2)]
+ [!code-vb[Web.UI.StateBag#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Web.UI.StateBag/VB/gotovb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

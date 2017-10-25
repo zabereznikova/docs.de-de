@@ -1,0 +1,846 @@
+<Type Name="TableCell" FullName="System.Windows.Documents.TableCell">
+  <TypeSignature Language="C#" Value="public class TableCell : System.Windows.Documents.TextElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TableCell extends System.Windows.Documents.TextElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.TableCell" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.TextElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Blocks")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein fortlaufendes Inhaltselement, das eine inhaltszelle innerhalb definiert eine <see cref="T:System.Windows.Documents.Table" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.TableCell> Element ist das einzige Tabellenelement, das Inhalt direkt hostet.  Andere Tabellenelementen (<xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.TableColumn>, <xref:System.Windows.Documents.TableRowGroup>, und <xref:System.Windows.Documents.TableRow>) vorhanden sein, damit die strukturellen Attribute einer Tabelle definieren.  
+  
+ <xref:System.Windows.Documents.TableCell>-Elemente hosten möglicherweise eine oder mehrere fortlaufenden Inhaltselemente Ableiten von <xref:System.Windows.Documents.Block>.  Gültige Inhaltselemente für eine <xref:System.Windows.Documents.TableCell> enthalten:  
+  
+-   <xref:System.Windows.Documents.BlockUIContainer>  
+  
+-   <xref:System.Windows.Documents.List>  
+  
+-   <xref:System.Windows.Documents.Paragraph>  
+  
+-   <xref:System.Windows.Documents.Section>  
+  
+-   <xref:System.Windows.Documents.Table>  
+  
+ Die <xref:System.Windows.Documents.TableCellCollection> Auflistungsklasse bietet Funktionen zum Arbeiten mit Auflistungen von <xref:System.Windows.Documents.TableCell> Objekte.  
+  
+> [!NOTE]
+>  Es sind keine integrierten Daten, die für den Inhalt der Bindung einer <xref:System.Windows.Documents.TableCell>. Die einfachste Möglichkeit zum Hinzufügen von Datenbindungsfunktion auf eine <xref:System.Windows.Documents.TableCell> gebunden, die eine Daten speichern <xref:System.Windows.Controls.TextBlock> in Ihrer <xref:System.Windows.Documents.TableCell> wie folgt:`<TableCell><InlineUIContainer><TextBlock Text="{Binding ...}" /></InlineUIContainer></TableCell>`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableCell ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableCell.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der dem <see cref="T:System.Windows.Documents.TableCell" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableCell (System.Windows.Documents.Block blockItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Block blockItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableCell.#ctor(System.Windows.Documents.Block)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="blockItem" Type="System.Windows.Documents.Block" />
+      </Parameters>
+      <Docs>
+        <param name="blockItem">Ein <see cref="T:System.Windows.Documents.Block" /> angeben die anfänglichen Inhalte des neuen Objekts <see cref="T:System.Windows.Documents.TableCell" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.TableCell" /> -Klasse, wobei eine angegebene <see cref="T:System.Windows.Documents.Block" /> Objekt als die anfänglichen Inhalte des neuen <see cref="T:System.Windows.Documents.TableCell" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung dieses Konstruktors.  
+  
+ [!code-csharp[TableSnippets2#_TableCell_Const1](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_tablecell_const1)]
+ [!code-vb[TableSnippets2#_TableCell_Const1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_tablecell_const1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Blocks">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.BlockCollection Blocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.BlockCollection Blocks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableCell.Blocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.BlockCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.BlockCollection" /> ab, die <see cref="T:System.Windows.Documents.Block" />-Elemente der obersten Ebene enthält, die den Inhalt von <see cref="T:System.Windows.Documents.TableCell" /> umfassen.</summary>
+        <value>Eine <see cref="T:System.Windows.Documents.BlockCollection" /> mit den <see cref="T:System.Windows.Documents.Block" />-Elementen, die den Inhalt von <see cref="T:System.Windows.Documents.TableCell" /> umfassen.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Documents.BlockCollection> zurückgegeben, die von dieser Eigenschaft aufzuzählen oder zu bearbeiten des Inhalts des ein <xref:System.Windows.Documents.TableCell> Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush BorderBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush BorderBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableCell.BorderBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Media.Brush" /> beim Zeichnen des Rahmens des Elements verwendet.</summary>
+        <value>Der Pinsel, der auf den Rand des Elements angewendet.  
+  
+ Der Standardwert ist eine **null** Pinsel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Tabelle der Muster, die die verfügbaren vordefinierten Pinsel Farben angezeigt werden, finden Sie unter <xref:System.Windows.Media.Brushes>.  
+  
+<a name="dependencyPropertyInfo_BorderBrush"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TableCell.BorderBrushProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.BorderBrush%2A> Attribut des eine <xref:System.Windows.Documents.Block> Element (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_BordersXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_bordersxaml)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Blau, 1 &#47; 4-Zoll-Rahmen um Block](~/add/media/block-borders.png "Screenshot: Blau, 1/4-Zoll-Rahmen um Block")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.BorderBrush%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_Borders](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_borders)]
+ [!code-vb[BlockSnippets#_Block_Borders](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_borders)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TableCell.BorderBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TableCell.BorderBrush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderThickness">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness BorderThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness BorderThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableCell.BorderThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stärke des Rahmens des Elements ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Windows.Thickness" />-Struktur, die die Stärke des Rahmens in geräteunabhängigen Pixeln angibt.  
+  
+ Der Standardwert ist die einheitliche Stärke 0 (null) (**0,0**).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_BorderThickness"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object BorderThickness="uniformThickness"/>  
+- or -  
+<object BorderThickness="independentThickness"/>  
+- or -  
+<object BorderThickness="qualifiedUniformThickness"/>  
+- or -  
+<object BorderThickness="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_BorderThickness"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *uniformThickness*  
+ Entspricht der Zeichenfolgendarstellung eines einzelnen <xref:System.Double> Wert gleichmäßig auf alle vier Stärke Dimensionen angewendet.  Z. B. einen Wert von `"10"` entspricht dem Wert `"10,10,10,10"`.  Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *independentThickness*  
+ Entspricht der Zeichenfolgendarstellung von vier geordnete <xref:System.Double> Werten, die Dicke Dimensionen für Links, oben, mit der rechten Maustaste, und unten in dieser Reihenfolge.  Die vier Werte müssen durch Kommas getrennt werden; Leerzeichen sind nicht zulässig.  Beispielsweise 5,10,15,20 "" in 5 Pixel des Rahmens um links neben dem Inhalt, 10 Pixel des Rahmens oben, 15 Pixel des Rahmens, der rechts vom Inhalt und 20 Pixel des Rahmens unterhalb des Inhalts.  
+  
+ *qualifiedUniformThickness*  
+ Ein Wert von beschriebenen *UniformThickness* gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ Beispielsweise `"1in"` uniform Rahmen 1 Zoll in allen Richtungen bereitstellt.  
+  
+ *qualifiedIndependentThickness*  
+ Ein Wert von beschrieben *IndependentThickness*, wobei jeder unabhängigen Wert gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ Beispielsweise `"1.5in,0.8in,1.5in,0.8in"`.  Einheit-Spezifizierer möglicherweise gemischt oder aus einem oder mehreren Werten weggelassen werden.  
+  
+<a name="dependencyPropertyInfo_BorderThickness"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TableCell.BorderThicknessProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.BorderThickness%2A> Attribut des eine <xref:System.Windows.Documents.Block> Element (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_BordersXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_bordersxaml)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Blau, 1 &#47; 4-Zoll-Rahmen um Block](~/add/media/block-borders.png "Screenshot: Blau, 1/4-Zoll-Rahmen um Block")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.BorderThickness%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_Borders](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_borders)]
+ [!code-vb[BlockSnippets#_Block_Borders](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_borders)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderThicknessProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderThicknessProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderThicknessProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TableCell.BorderThicknessProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TableCell.BorderThickness" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnSpan">
+      <MemberSignature Language="C#" Value="public int ColumnSpan { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableCell.ColumnSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Anzahl der Spalten, die die <see cref="T:System.Windows.Documents.TableCell" /> umfassen soll.</summary>
+        <value>Die Anzahl der Spalten der <see cref="T:System.Windows.Documents.TableCell" /> umfassen soll.  
+  
+ Der Standardwert ist **1** (keine Aufteilung).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ColumnSpan"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TableCell.ColumnSpanProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnSpanProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColumnSpanProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColumnSpanProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TableCell.ColumnSpanProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TableCell.ColumnSpan" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.FlowDirection FlowDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FlowDirection FlowDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableCell.FlowDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der die relative Richtung für den Ablauf von Inhalten innerhalb einer <see cref="T:System.Windows.Documents.TableCell" /> Element.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Windows.FlowDirection" /> -Enumeration, die die relative flussrichtung angibt.  Beim Abrufen dieser Eigenschaft gibt die derzeit gültigen flussrichtung zurück.  Durch Festlegen dieser Eigenschaft führt dazu, dass der Inhalt der <see cref="T:System.Windows.Documents.TableCell" /> Element in der angegebenen Richtung erneut zu übertragen.  
+  
+ Der Standardwert ist <see cref="F:System.Windows.FlowDirection.LeftToRight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die flussrichtung von Inhalten entspricht in der Regel die Standard-flussrichtung der Sprache, dargestellt wird.  Geben Sie Beispiele für Sprachen, die natürliche Weise von rechts nach links fließen, Hebräisch und Arabisch.  Geben Sie Beispiele für Sprachen, die natürliche Weise von links nach rechts fließen, Englisch, Deutsch und Russisch.  
+  
+ **Hinweis:** der Wert dieser Eigenschaft wird nicht automatisch die vom Betriebssystem verwendete Sprache entsprechend geändert. Wenn Sie einen anderen Wert wird der Standardwert verwenden müssen <xref:System.Windows.FlowDirection.LeftToRight>, Sie müssen selbst angeben.  
+  
+<a name="dependencyPropertyInfo_FlowDirection"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TableCell.FlowDirectionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.FlowDirection%2A> Attribut des eine <xref:System.Windows.Documents.Block> Element (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_FlowDirectionXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_flowdirectionxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.FlowDirection%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_flowdirection)]
+ [!code-vb[BlockSnippets#_Block_FlowDirection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_flowdirection)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FlowDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FlowDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TableCell.FlowDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TableCell.FlowDirection" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeight">
+      <MemberSignature Language="C#" Value="public double LineHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LineHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableCell.LineHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe jeder Inhaltszeile ab bzw. legt diese fest.</summary>
+        <value>Ein Double-Wert, der die Zeilenhöhe in geräteunabhängigen Pixeln angibt.  <see cref="P:System.Windows.Documents.TableCell.LineHeight" />muss größer oder gleich <c>0,0034</c> und kleiner oder dann <c>160000</c>.  
+  
+ Der Wert <see cref="F:System.Double.NaN" /> (entspricht dem Attributwert "<c>automatisch</c>") wird die Zeilenhöhe automatisch anhand der aktuellen Schriftartmerkmale bestimmt.  
+  
+ Der Standardwert ist <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Ändern dieses Werts ändert sich nicht auf die Höhe des zugehörigen Texts; Stattdessen ändert sich die Höhe der Zeile, die den Text enthält.  
+  
+ Zusätzlich zu dieser Eigenschaft, die das Layout der Zeilen in einer <xref:System.Windows.Documents.TableCell> hat Auswirkungen auf die <xref:System.Windows.Documents.TableCell.LineStackingStrategy%2A> Eigenschaft.  
+  
+<a name="xamlAttributeUsage_LineHeight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object LineHeight="double"/>  
+- or -  
+<object LineHeight="qualifiedDouble"/>  
+- or -  
+<object LineHeight="Auto"/>  
+```  
+  
+<a name="xamlValues_LineHeight"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als oder gleich `0.0034` und kleiner oder dann `160000`. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert wie oben beschrieben (ausgenommen `Auto`) gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+ Auto  
+ Bewirkt, dass die Zeilenhöhe automatisch anhand der aktuellen Schriftartmerkmale bestimmt.  Entspricht einem Eigenschaftswert des <xref:System.Double.NaN>.  
+  
+<a name="dependencyPropertyInfo_LineHeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TableCell.LineHeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TableCell.LineHeight%2A> Attribut des ein <xref:System.Windows.Documents.Block> Element.  
+  
+ [!code-xaml[BlockSnippets#_Block_LineHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_lineheightxaml)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: FlowDocument LineHeight](~/add/media/flowdocument-lineheight.png "Bildschirmabbildung: FlowDocument LineHeight")  
+  
+ Die folgende Abbildung zeigt, wie das gleiche Beispiel mit der Standardeinstellung von rendert <xref:System.Windows.Documents.TableCell.LineHeight%2A> = <xref:System.Double.NaN>.  
+  
+ ![Bildschirmabbildung: FlowDocument LineHeight Standard](~/add/media/flowdocument-lineheightdefault.png "Bildschirmabbildung: FlowDocument LineHeight Standard")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TableCell.LineHeight%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_LineHeight](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_lineheight)]
+ [!code-vb[BlockSnippets#_Block_LineHeight](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_lineheight)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn versucht wird, legen Sie <see cref="P:System.Windows.Controls.TextBlock.LineHeight" /> auf einen nicht positiven Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LineHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LineHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TableCell.LineHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TableCell.LineHeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineStackingStrategy">
+      <MemberSignature Language="C#" Value="public System.Windows.LineStackingStrategy LineStackingStrategy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LineStackingStrategy LineStackingStrategy" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableCell.LineStackingStrategy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineStackingStrategy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der Mechanismus, mit dem eine zeilenbox bestimmt wird, für jede Textzeile in der <see cref="T:System.Windows.Documents.TableCell" />.</summary>
+        <value>Der Mechanismus, mit dem eine zeilenbox bestimmt wird, für jede Textzeile in der <see cref="T:System.Windows.Documents.TableCell" />. Der Standardwert ist <see cref="F:System.Windows.LineStackingStrategy.MaxHeight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_LineStackingStrategy"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TableCell.LineStackingStrategyProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> -Eigenschaft können Sie bestimmen, wie die Zeilenfelder für Textzeilen erstellt werden ein <xref:System.Windows.Controls.TextBlock>. Die erste <xref:System.Windows.Controls.TextBlock> verfügt über eine <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> Wert <xref:System.Windows.LineStackingStrategy.MaxHeight> und das zweite <xref:System.Windows.Controls.TextBlock> hat den Wert <xref:System.Windows.LineStackingStrategy.BlockLineHeight>.  
+  
+ [!code-xaml[FlowMiscSnippets_snip#LineStackingStrategyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/linestackingstrategyexample.xaml#linestackingstrategyexamplewholepage)]  
+  
+ Die folgende Abbildung zeigt das Ergebnis des obigen Codes.  
+  
+ ![Bildschirmabbildung: Vergleichen von LineStackingStrategy-Werten](~/add/media/flow-linestackingstrategy.gif "Bildschirmabbildung: Vergleichen von LineStackingStrategy-Werten")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineStackingStrategyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LineStackingStrategyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LineStackingStrategyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TableCell.LineStackingStrategyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TableCell.LineStackingStrategy" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableCell.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für dieses Objekt <see cref="T:System.Windows.Documents.TableCell" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für dieses Objekt <see cref="T:System.Windows.Documents.TableCell" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Windows.ContentElement.OnCreateAutomationPeer%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableCell.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Abstandsstärke für das Element ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Thickness" /> Struktur, die die Größe der Auffüllung anwenden, die in geräteunabhängigen Pixeln angibt.  
+  
+ Der Standardwert ist die einheitliche Stärke 0 (null) (**0,0**).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Padding"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Padding="uniformThickness"/>  
+- or -  
+<object Padding="independentThickness"/>  
+- or -  
+<object Padding="qualifiedUniformThickness"/>  
+- or -  
+<object Padding="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_Padding"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *uniformThickness*  
+ Entspricht der Zeichenfolgendarstellung eines einzelnen <xref:System.Double> Wert gleichmäßig auf alle vier Stärke Dimensionen angewendet.  Z. B. einen Wert von `"10"` entspricht dem Wert `"10,10,10,10"`.  Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *independentThickness*  
+ Entspricht der Zeichenfolgendarstellung von vier geordnete <xref:System.Double> Werten, die Dicke Dimensionen für Links, oben, mit der rechten Maustaste, und unten in dieser Reihenfolge.  Die vier Werte müssen durch Kommas getrennt werden; Leerzeichen sind nicht zulässig.  Beispielsweise 5,10,15,20 "" 5 Pixeln Abstand um links neben dem Inhalt, 10 Pixeln oben, 15 Pixel der Auffüllung rechts vom Inhalt und 20 Pixel Abstand unterhalb des Inhalts.  
+  
+ *qualifiedUniformThickness*  
+ Ein Wert von beschriebenen *UniformThickness* gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ Beispielsweise `"1in"` uniform Abstand von 1 Zoll in allen Richtungen bereitstellt.  
+  
+ *qualifiedIndependentThickness*  
+ Ein Wert von beschrieben *IndependentThickness*, wobei jeder unabhängigen Wert gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ Beispielsweise `"1.5in,0.8in,1.5in,0.8in"`.  Einheit-Spezifizierer möglicherweise gemischt oder aus einem oder mehreren Werten weggelassen werden.  
+  
+<a name="dependencyPropertyInfo_Padding"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TableCell.PaddingProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TableCell.Padding%2A> Attribut des eine <xref:System.Windows.Documents.Block> Element (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_MarginPaddingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_marginpaddingxaml)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  Übertriebenen Dicke und Farben werden zur Veranschaulichung verwendet.  
+  
+ ![Bildschirmabbildung: Absätze mit Abstand und Rändern](~/add/media/block-marginpadding.png "Bildschirmabbildung: Absätze mit Abstand und Rändern")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TableCell.Padding%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_MarginPadding](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_marginpadding)]
+ [!code-vb[BlockSnippets#_Block_MarginPadding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_marginpadding)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PaddingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PaddingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TableCell.PaddingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TableCell.Padding" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowSpan">
+      <MemberSignature Language="C#" Value="public int RowSpan { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableCell.RowSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Anzahl der Zeilen, die die <see cref="T:System.Windows.Documents.TableCell" /> umfassen soll.</summary>
+        <value>Die Anzahl der Zeilen der <see cref="T:System.Windows.Documents.TableCell" /> umfassen soll.  
+  
+ Der Standardwert ist **1** (keine Aufteilung).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_RowSpan"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TableCell.RowSpanProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowSpanProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RowSpanProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RowSpanProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TableCell.RowSpanProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TableCell.RowSpan" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.TextAlignment TextAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.TextAlignment TextAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableCell.TextAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die horizontale Ausrichtung von Textinhalten angibt, oder legt diesen fest.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Windows.TextAlignment" /> Enumerationen, die die gewünschte Ausrichtung angeben.  
+  
+ Der Standardwert ist <see cref="F:System.Windows.TextAlignment.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_TextAlignment"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.TableCell.TextAlignmentProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TableCell.TextAlignment%2A> Attribut des ein <xref:System.Windows.Documents.Block> Element.  
+  
+ [!code-xaml[BlockSnippets#_Block_TextAlignmentXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_textalignmentxaml)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel mit rendert **Links** textausrichtung (Standard).  
+  
+ ![Bildschirmabbildung: TextAlign-Eigenschaftswert Left](~/add/media/flowdoc-textalign-left.png "Bildschirmabbildung: TextAlign-Eigenschaftswert Left")  
+  
+ Die folgende Abbildung zeigt, wie das gleiche Beispiel mit rendert **rechts** textausrichtung.  
+  
+ ![Bildschirmabbildung: TextAlign-Wert rechts](~/add/media/flowdoc-textalign-right.png "Bildschirmabbildung: TextAlign-Wert, der rechts")  
+  
+ Die folgende Abbildung zeigt, wie das gleiche Beispiel mit rendert **Center** textausrichtung.  
+  
+ ![Bildschirmabbildung: TextAlign-Eigenschaftswert Center](~/add/media/flowdoc-textalign-center.png "Bildschirmabbildung: TextAlign-Eigenschaftswert Center")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.TableCell.TextAlignment%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_TextAlignment](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_textalignment)]
+ [!code-vb[BlockSnippets#_Block_TextAlignment](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_textalignment)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignmentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextAlignmentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextAlignmentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.TableCell.TextAlignmentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.TableCell.TextAlignment" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

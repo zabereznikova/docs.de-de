@@ -1,0 +1,246 @@
+<Type Name="QuadraticBezierSegment" FullName="System.Windows.Media.QuadraticBezierSegment">
+  <TypeSignature Language="C#" Value="public sealed class QuadraticBezierSegment : System.Windows.Media.PathSegment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed QuadraticBezierSegment extends System.Windows.Media.PathSegment" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.QuadraticBezierSegment" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.PathSegment</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine quadratische Bézier-Kurve zwischen zwei Punkten in einer <see cref="T:System.Windows.Media.PathFigure" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.Windows.Media.PathFigure> Objekt zum Erstellen von zusammengesetzter Formen mit <xref:System.Windows.Media.QuadraticBezierSegment> Objekte und andere Segmente.  
+  
+ Die <xref:System.Windows.Media.QuadraticBezierSegment> Klasse enthält keine Eigenschaft für den Anfangspunkt der Linie. Der Anfangspunkt der Linie ist der Endpunkt des vorherigen Abschnitts oder <xref:System.Windows.Media.PathFigure.StartPoint%2A> von der <xref:System.Windows.Media.PathFigure> , wenn keine anderen Segmente vorhanden sind.  
+  
+## <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
+ Da <xref:System.Windows.Media.QuadraticBezierSegment> Objekte erben von der <xref:System.Windows.Freezable> -Klasse, sie bieten verschiedene Sonderfunktionen: sie können werden deklariert, wie für mehrere Objekte freigegeben, zur Verbesserung der Leistung mit Schreibschutz versehen wurden, geklont und als threadsicher. Weitere Informationen über die verschiedenen Features, die von bereitgestellten <xref:System.Windows.Freezable> anzuzeigen, [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QuadraticBezierSegment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.QuadraticBezierSegment.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.QuadraticBezierSegment" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QuadraticBezierSegment (System.Windows.Point point1, System.Windows.Point point2, bool isStroked);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point point1, valuetype System.Windows.Point point2, bool isStroked) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.QuadraticBezierSegment.#ctor(System.Windows.Point,System.Windows.Point,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point2" Type="System.Windows.Point" />
+        <Parameter Name="isStroked" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Der Kontrollpunkt dieses <see cref="T:System.Windows.Media.QuadraticBezierSegment" />.</param>
+        <param name="point2">Der Endpunkt dieses <see cref="T:System.Windows.Media.QuadraticBezierSegment" />.</param>
+        <param name="isStroked">
+          <see langword="true" />Wenn diese <see cref="T:System.Windows.Media.QuadraticBezierSegment" /> werden gestrichelt; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.QuadraticBezierSegment" /> Klasse mit dem angegebenen Kontrollpunkt, Endpunkt und boolescher Wert, der angibt, ob zum Zeichnen dieser <see cref="T:System.Windows.Media.QuadraticBezierSegment" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.QuadraticBezierSegment Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.QuadraticBezierSegment Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.QuadraticBezierSegment.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.QuadraticBezierSegment</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.QuadraticBezierSegment" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.  
+  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.QuadraticBezierSegment CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.QuadraticBezierSegment CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.QuadraticBezierSegment.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.QuadraticBezierSegment</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.QuadraticBezierSegment" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Des geklonten Objekts <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft <see langword="false" /> selbst wenn der Quelle <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft ist <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.  
+  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.QuadraticBezierSegment.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point1">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Point1 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Point1" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.QuadraticBezierSegment.Point1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Steuerelement <see cref="T:System.Windows.Point" /> der Kurve.</summary>
+        <value>Der Kontrollpunkt dieses <see cref="T:System.Windows.Media.QuadraticBezierSegment" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Point1"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.QuadraticBezierSegment.Point1Property>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point1Property">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty Point1Property;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty Point1Property" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.QuadraticBezierSegment.Point1Property" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.QuadraticBezierSegment.Point1" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point2">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Point2 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Point2" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.QuadraticBezierSegment.Point2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Ende <see cref="T:System.Windows.Point" /> dieses <see cref="T:System.Windows.Media.QuadraticBezierSegment" />.</summary>
+        <value>Der Endpunkt dieses <see cref="T:System.Windows.Media.QuadraticBezierSegment" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Point2"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.QuadraticBezierSegment.Point2Property>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point2Property">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty Point2Property;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty Point2Property" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.QuadraticBezierSegment.Point2Property" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.QuadraticBezierSegment.Point2" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

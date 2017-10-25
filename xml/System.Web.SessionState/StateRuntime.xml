@@ -1,0 +1,173 @@
+<Type Name="StateRuntime" FullName="System.Web.SessionState.StateRuntime">
+  <TypeSignature Language="C#" Value="public sealed class StateRuntime : System.Web.SessionState.IStateRuntime" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StateRuntime extends System.Object implements class System.Web.SessionState.IStateRuntime" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.StateRuntime" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.SessionState.IStateRuntime</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Verwaltet die Sitzungsdaten, die in der ASP.NET-Statusdienst gespeichert. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET unterstützt die Option Session Zustand Out-of-Process mit Windows-Dienst die ASP.NET-Statusdienst zu verwalten. Die <xref:System.Web.SessionState.StateRuntime> -Klasse wird zum Verwalten von Sitzungsdaten von nicht verwaltetem Code in diesem Dienst verwendet. Diese Klasse unterstützt die Implementierung von ASP.NET-Zustandsdienst .NET Framework-Infrastruktur und ist nicht vorgesehen, die direkt aus Ihrem Code verwendet werden.  
+  
+ Der ASP.NET-Statusdienst ist nicht die Standardmethode des ASP.NET Session State Management; ASP.NET unterstützt standardmäßig ein in-Process-Verwaltung des Sitzungsstatus. Darüber hinaus unterstützt er eine zweite Out-of-Process-Option, die Verwaltung des Sitzungszustands in einer Microsoft SQL Server-Datenbank und Lösungen für die benutzerdefinierte Sitzungsstatus Verwaltung ermöglicht. Weitere Informationen zu den Sitzungszustand Speicheroptionen finden Sie unter [Sitzungszustandsmodus](http://msdn.microsoft.com/library/0bb0a3a3-650f-4c47-a0c5-b08b9b591bb4).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StateRuntime ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.StateRuntime.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.SessionState.StateRuntime" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Member unterstützt die .NET Framework-Infrastruktur-Implementierung der ASP.NET-Zustandsdienst und ist nicht vorgesehen, die direkt aus Ihrem Code verwendet werden. Weitere Informationen zu den Sitzungszustand Speicheroptionen finden Sie unter [Sitzungszustandsmodus](http://msdn.microsoft.com/library/0bb0a3a3-650f-4c47-a0c5-b08b9b591bb4).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRequest">
+      <MemberSignature Language="C#" Value="public void ProcessRequest (IntPtr tracker, int verb, string uri, int exclusive, int timeout, int lockCookieExists, int lockCookie, int contentLength, IntPtr content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessRequest(native int tracker, int32 verb, string uri, int32 exclusive, int32 timeout, int32 lockCookieExists, int32 lockCookie, int32 contentLength, native int content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.StateRuntime.ProcessRequest(System.IntPtr,System.Int32,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tracker" Type="System.IntPtr" />
+        <Parameter Name="verb" Type="System.Int32" />
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="exclusive" Type="System.Int32" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="lockCookieExists" Type="System.Int32" />
+        <Parameter Name="lockCookie" Type="System.Int32" />
+        <Parameter Name="contentLength" Type="System.Int32" />
+        <Parameter Name="content" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="tracker">Ein <see cref="T:System.IntPtr" /> Zeiger auf ein Objekt, das in den nicht verwalteten ASP.NET-Zustandsserver gespeichert.</param>
+        <param name="verb">Die auszuführende Aktion für das Objekt.</param>
+        <param name="uri">Ein Bezeichner für die Sitzung.</param>
+        <param name="exclusive">Der Typ des Zugriffs auf Objekte im Speicher.</param>
+        <param name="timeout">Die Anzahl der Minuten an, die die Sitzungsdaten gespeichert ist.</param>
+        <param name="lockCookieExists">Ein Wert, der angibt, ob das Sperrcookie in der ursprünglichen Anforderung aus dem ASP.NET Web-Server zum Zustandsserver ASP.NET vorhanden ist.</param>
+        <param name="lockCookie">Der Besitzer der Sperre für den Sitzungszustand.</param>
+        <param name="contentLength">Die Länge in Bytes, der für die Sitzung gespeicherten Daten.</param>
+        <param name="content">Ein <see cref="T:System.IntPtr" /> Zeiger auf den Inhalt für die Sitzung in der nicht verwalteten ASP.NET-Zustandsserver gespeichert.</param>
+        <summary>Von der ASP.NET-Zustandsserver zum Verarbeiten von Sitzungsdaten verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET unterstützt die Option Session Zustand Out-of-Process mit Windows-Dienst die ASP.NET-Statusdienst zu verwalten. Die <xref:System.Web.SessionState.StateRuntime.ProcessRequest%2A> Methode wird von nicht verwaltetem Code in diesem Dienst verwendet, um die Sitzungsdaten zu verwalten.  
+  
+ Dieser Member unterstützt die .NET Framework-Infrastruktur-Implementierung der ASP.NET-Zustandsdienst und ist nicht vorgesehen, die direkt aus Ihrem Code verwendet werden. Weitere Informationen zu den Sitzungszustand Speicheroptionen finden Sie unter [Sitzungszustandsmodus](http://msdn.microsoft.com/library/0bb0a3a3-650f-4c47-a0c5-b08b9b591bb4).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRequest">
+      <MemberSignature Language="C#" Value="public void ProcessRequest (IntPtr tracker, int verb, string uri, int exclusive, int extraFlags, int timeout, int lockCookieExists, int lockCookie, int contentLength, IntPtr content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessRequest(native int tracker, int32 verb, string uri, int32 exclusive, int32 extraFlags, int32 timeout, int32 lockCookieExists, int32 lockCookie, int32 contentLength, native int content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.StateRuntime.ProcessRequest(System.IntPtr,System.Int32,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tracker" Type="System.IntPtr" />
+        <Parameter Name="verb" Type="System.Int32" />
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="exclusive" Type="System.Int32" />
+        <Parameter Name="extraFlags" Type="System.Int32" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="lockCookieExists" Type="System.Int32" />
+        <Parameter Name="lockCookie" Type="System.Int32" />
+        <Parameter Name="contentLength" Type="System.Int32" />
+        <Parameter Name="content" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="tracker">Ein <see cref="T:System.IntPtr" /> Zeiger auf ein Objekt, das in den nicht verwalteten ASP.NET-Zustandsserver gespeichert.</param>
+        <param name="verb">Die auszuführende Aktion für das Objekt.</param>
+        <param name="uri">Ein Bezeichner für die Sitzung.</param>
+        <param name="exclusive">Der Typ des Zugriffs auf Objekte im Speicher.</param>
+        <param name="extraFlags">Ein Wert, der angibt, ob die aktuelle Sitzung eine nicht initialisierte Sitzung ohne Cookies ist.</param>
+        <param name="timeout">Die Anzahl der Minuten an, die die Sitzungsdaten gespeichert ist.</param>
+        <param name="lockCookieExists">Ein Wert, der angibt, ob das Sperrcookie in der ursprünglichen Anforderung aus dem ASP.NET Web-Server zum Zustandsserver ASP.NET vorhanden ist.</param>
+        <param name="lockCookie">Der Besitzer der Sperre für den Sitzungszustand.</param>
+        <param name="contentLength">Die Länge in Bytes, der für die Sitzung gespeicherten Daten.</param>
+        <param name="content">Ein <see cref="T:System.IntPtr" /> Zeiger auf den Inhalt für die Sitzung in der nicht verwalteten ASP.NET-Zustandsserver gespeichert.</param>
+        <summary>Von der ASP.NET-Zustandsserver zum Verarbeiten von Sitzungsdaten verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET unterstützt die Option Session Zustand Out-of-Process mit Windows-Dienst die ASP.NET-Statusdienst zu verwalten. Die <xref:System.Web.SessionState.StateRuntime.ProcessRequest%2A> Methode wird von nicht verwaltetem Code in diesem Dienst verwendet, um die Sitzungsdaten zu verwalten.  
+  
+ Dieser Member unterstützt die .NET Framework-Infrastruktur-Implementierung der ASP.NET-Zustandsdienst und ist nicht vorgesehen, die direkt aus Ihrem Code verwendet werden. Weitere Informationen zu den Sitzungszustand Speicheroptionen finden Sie unter [Sitzungszustandsmodus](http://msdn.microsoft.com/library/0bb0a3a3-650f-4c47-a0c5-b08b9b591bb4).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="public void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.StateRuntime.StopProcessing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Verarbeitung von Sitzungsdaten in der ASP.NET-Zustandsserver gespeichert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET unterstützt die Option Session Zustand Out-of-Process mit Windows-Dienst die ASP.NET-Statusdienst zu verwalten. Die <xref:System.Web.SessionState.StateRuntime.StopProcessing%2A> Methode wird von nicht verwaltetem Code in diesem Dienst verwendet, um die Sitzungsdaten Verarbeitung zu beenden. Dieser Member wird zur Unterstützung der .NET Framework-Infrastruktur-Implementierung von ASP.NET-Zustandsdienst bereitgestellt und ist nicht vorgesehen, die direkt aus Ihrem Code verwendet werden. Weitere Informationen zum Speicher für sitzungsstatusoptionen finden Sie unter [Sitzungszustandsmodus](http://msdn.microsoft.com/library/0bb0a3a3-650f-4c47-a0c5-b08b9b591bb4).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,43 @@
+<Type Name="TemplateControlParser" FullName="System.Web.UI.TemplateControlParser">
+  <TypeSignature Language="C#" Value="public abstract class TemplateControlParser : System.Web.UI.BaseTemplateParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TemplateControlParser extends System.Web.UI.BaseTemplateParser" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.TemplateControlParser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.BaseTemplateParser</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Analyse für Vorlagensteuerelemente implementiert ASP.NET-Vorlage.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.TemplateControlParser> -Klasse bietet eine Parser-Funktionalität für die <xref:System.Web.UI.TemplateControl> Klasse.  Klassen, die von erben <xref:System.Web.UI.TemplateControl> -Klasse enthalten die <xref:System.Web.UI.UserControl> und <xref:System.Web.UI.Page> Klassen. Da die <xref:System.Web.UI.TemplateControlParser> Klasse abstrakt ist, wird eine Instanz dieser Klasse nicht direkt erstellt.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TemplateControlParser ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateControlParser.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.TemplateControlParser" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,86 @@
+<Type Name="PatternMatcher" FullName="System.Web.Services.Protocols.PatternMatcher">
+  <TypeSignature Language="C#" Value="public sealed class PatternMatcher" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PatternMatcher extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.PatternMatcher" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>HTTP-Antworttext für Rückgabewerte Webdienstclients sucht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.PatternMatcher> Klasse führt Mustervergleich mit regulären Ausdrücken um Web Methodenrückgabewerte in textcodierten im Text einer HTTP-Antwort zu finden. Die <xref:System.Web.Services.Protocols.PatternMatcher> Klasse wird von der Clientseite aufgerufen <xref:System.Web.Services.Protocols.TextReturnReader> -Klasse, die Rückgabewerte des Webdiensts deserialisiert.  
+  
+ Textmustern bietet eine Möglichkeit für Webdienste zum Abrufen von HTML-Inhalt ohne Konvertierung in XML-Dokumente, die XML-Schema-Definitionen gebunden werden müssen. Reguläre Ausdrücke Suche Ziele werden angegeben, in einem Dokument Web Services Description Language (WSDL) über `match` XML-Elemente im `text` Elemente. Beide Elemente gehören zum Namespace http://microsoft.com/wsdl/mime/textMatching/.  
+  
+ Wenn `match` in einem WSDL-Dokument Elemente angegeben sind, wendet das Tool Wsdl.exe <xref:System.Web.Services.Protocols.MatchAttribute> -Attribute verwenden, um die entsprechenden Webmethoden in der Clientproxyklasse, die generiert wird. Ein <xref:System.Web.Services.Protocols.MatchAttribute> Eigenschaften des Attributs Festlegen der Suchkriterien für einen <xref:System.Web.Services.Protocols.PatternMatcher> Instanz.  
+  
+ Ein Entwickler in der Regel muss nicht direkt verwenden <xref:System.Web.Services.Protocols.PatternMatcher>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PatternMatcher (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.PatternMatcher.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Type" /> , den Rückgabetyp für eine Webmethode angibt.</param>
+        <summary>Erstellt eine <see cref="T:System.Web.Services.Protocols.PatternMatcher" /> -Instanz basierend auf den Eingabetyp.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.PatternMatcher> Eigenschaften der Instanz, z. B. den regulären Ausdruck an das Suchziel, werden basierend auf ausgefüllt <xref:System.Web.Services.Protocols.MatchAttribute> Attribute des Rückgabetyps Felder angewendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public object Match (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Match(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.PatternMatcher.Match(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der zu suchende Text, also den Hauptteil der HTTP-Antwort.</param>
+        <summary>Durchsucht eine Texteingabe zum Deserialisieren eines Objekts, das einen Rückgabewert der Webmethode darstellt.</summary>
+        <returns>Ein Objekt, das eine Webmethode darstellt-Rückgabewert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.PatternMatcher.Match%2A> Rückgabewert der Methode ist im Web Methode deserialisierten Rückgabewert aus dem Eingabetext.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

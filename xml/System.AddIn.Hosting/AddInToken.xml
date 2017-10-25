@@ -1,0 +1,756 @@
+<Type Name="AddInToken" FullName="System.AddIn.Hosting.AddInToken">
+  <TypeSignature Language="C#" Value="public sealed class AddInToken : System.Collections.Generic.IEnumerable&lt;System.AddIn.Hosting.QualificationDataItem&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit AddInToken extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;valuetype System.AddIn.Hosting.QualificationDataItem&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.AddInToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.AddIn.Hosting.QualificationDataItem&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt ein Add-in, das aktiviert werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.AddIn.Hosting.AddInToken> Objekt darstellt, ein Add-in und dessen zugeordnete Pipelinesegmente, das aktiviert werden kann. Das Token enthält der Name, Assemblynamen, Beschreibung, Herausgeber und Version des Add-Ins, die es darstellt.  
+  
+ Verwenden der <xref:System.AddIn.Hosting.AddInStore.FindAddIns%2A?displayProperty=nameWithType> Methode, um eine Auflistung von Token abzurufen, die Add-Ins darstellen, deren Pipelines eine angegebenen Hostansicht entsprechen. Verwenden der <xref:System.AddIn.Hosting.AddInStore.FindAddIn%2A?displayProperty=nameWithType> Methode, um eine Auflistung von Token abzurufen, die alle Pipelines für eine angegebene Add-in darstellen, die mit eine angegebenen Hostansicht übereinstimmen.  
+  
+ Um ein Add-in aktivieren möchten, übergeben Sie das Token, das das gewünschte Add-in repräsentiert die <xref:System.AddIn.Hosting.AddInToken.Activate%2A> Methode. Diese Methode gibt eine Instanz des Typs, der die Hostansicht des Add-Ins darstellt.  
+  
+ Die <xref:System.AddIn.Hosting.AddInToken.Activate%2A> -Methode weist mehrere Überladungen. Wenn Sie eine Überladung, die nicht den Namen einer Anwendungsdomäne als einen seiner Parameter erforderlich ist verwenden, wird automatisch eine neue Anwendungsdomäne für das Add-in erstellt.  
+  
+ Sie können Erweiterungsmethoden Language-Integrated Query (LINQ) zum Ausführen von Abfragen auf ein <xref:System.AddIn.Hosting.AddInToken>, behandeln das Token als Auflistung von <xref:System.AddIn.Hosting.QualificationDataItem> Strukturen.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Beispiele. Im erste Beispiel wird ein Add-in, das mit ausgewählt wurde aktiviert. die `ChooseAddIn` -Methode, und das zweite Beispiel zeigt die `ChooseAddIn` Methode.  
+  
+ **Beispiel 1**  
+  
+ Im folgende Beispiel wird gezeigt, wie ein Add-in mit einem Token aktiviert wird.  
+  
+ [!code-csharp[AddInP3Host#5](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#5)]
+ [!code-vb[AddInP3Host#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#5)]  
+  
+ **Beispiel 2**  
+  
+ Das folgende Beispiel zeigt die benutzerdefinierte `ChooseAddIn` -Methode, die zählt ein <xref:System.AddIn.Hosting.AddInToken> Auflistung. Der Benutzer wählt ein Token aus dieser Auflistung in das entsprechende add-in aktivieren.  
+  
+ [!code-csharp[AddInP3Host#13](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#13)]
+ [!code-vb[AddInP3Host#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#13)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (System.AddIn.Hosting.AddInEnvironment environment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(class System.AddIn.Hosting.AddInEnvironment environment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.AddIn.Hosting.AddInEnvironment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="environment" Type="System.AddIn.Hosting.AddInEnvironment" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Die Benutzeroberfläche oder abstrakten Basistyp, der die Hostansicht des Add-Ins darstellt.</typeparam>
+        <param name="environment">Der Anwendungsdomäne und der Prozess, der die ursprünglichen Add-In enthält.</param>
+        <summary>Aktiviert ein Add-in in der Umgebung von einem anderen-Add-in.</summary>
+        <returns>Der Hostansicht des Add-Ins.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese methodenüberladung aktiviert das Add-in in der gleichen Anwendungsdomäne und der Prozess als das Add-in aus dem `environment` abgerufen wurde.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein Add-in in einer automatisch generierten Anwendungsdomäne mit der angegebenen Sicherheitsstufe aktiviert. Klicken Sie dann eine zweite Add-in in derselben Anwendungsdomäne und Prozess wie das zuerst mithilfe des ersten Add-Ins des aktiviert <xref:System.AddIn.Hosting.AddInEnvironment> Objekt.  
+  
+ [!code-csharp[AddInP3Host#8](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#8)]
+ [!code-vb[AddInP3Host#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (System.AddIn.Hosting.AddInSecurityLevel trustLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(valuetype System.AddIn.Hosting.AddInSecurityLevel trustLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.AddIn.Hosting.AddInSecurityLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="trustLevel" Type="System.AddIn.Hosting.AddInSecurityLevel" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Die Benutzeroberfläche oder abstrakten Basistyp, der die Hostansicht des Add-Ins darstellt.</typeparam>
+        <param name="trustLevel">Einer der Enumerationswerte, der die Vertrauensebene angibt.</param>
+        <summary>Aktiviert ein Add-in mit einer angegebenen Vertrauensebene in eine neue Anwendungsdomäne.</summary>
+        <returns>Der Hostansicht des Add-Ins.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladung dieser Methode, die das Add-in in einer automatisch generierten Anwendungsdomäne geladen werden. Wenn Sie einen Namen für die neue Anwendungsdomäne angeben möchten, verwenden Sie die <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.AddIn.Hosting.AddInSecurityLevel%2CSystem.String%29> überladen.  
+  
+ Diese Methode legt das Basisverzeichnis für die Anwendungsdomäne, die den Speicherort der Add-in-Assembly zu sein. Sucht auch die Konfigurationsdatei [Addinassemblyname].dll.config und, sofern gefunden, wird die Konfigurationsdatei für die neue Anwendungsdomäne sein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie ein Add-in aktivieren durch das ausgewählte Token in einer automatisch generierten Anwendungsdomäne mit der angegebenen Sicherheitsstufe identifiziert.  
+  
+ [!code-csharp[AddInP3Host#5](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#5)]
+ [!code-vb[AddInP3Host#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (AppDomain target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(class System.AppDomain target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.AppDomain)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="System.AppDomain" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Die Benutzeroberfläche oder abstrakten Basistyp, der die Hostansicht des Add-Ins darstellt.</typeparam>
+        <param name="target">Die Anwendungsdomäne, der das Add-in in aktiviert werden soll.</param>
+        <summary>Aktiviert ein Add-in in einer vorhandenen Anwendungsdomäne.</summary>
+        <returns>Der Hostansicht des Add-Ins.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um ein Add-in in einer automatisch generierten Anwendungsdomäne zu aktivieren, verwenden die <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.AddIn.Hosting.AddInSecurityLevel%29> Überladung, um eine neue Anwendungsdomäne mit der angegebenen Sicherheitsstufe zu generieren oder <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.AddIn.Hosting.AddInSecurityLevel%2CSystem.String%29> Überladung einen Anzeigenamen für die Anwendungsdomäne einschließen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Add-in in einer Anwendungsdomäne, die von einem anderen Add-in verwendet wird. Der Code für den ersten add-Ins finden Sie im die <xref:System.AddIn.Hosting.AddInToken> Klasse.  
+  
+ [!code-csharp[AddInP3Host#9](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#9)]
+ [!code-vb[AddInP3Host#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Volle Vertrauenswürdigkeit gefordert wird. Ein Aufrufer in der Aufrufkette nicht über ausreichende Berechtigungen haben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (System.Security.PermissionSet permissions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(class System.Security.PermissionSet permissions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.Security.PermissionSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="permissions" Type="System.Security.PermissionSet" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Die Benutzeroberfläche oder abstrakten Basistyp, der die Hostansicht des Add-Ins darstellt.</typeparam>
+        <param name="permissions">Die Berechtigungen für das Add-in.</param>
+        <summary>Aktiviert ein Add-in mit einem angegebenen Berechtigungssatz, der in eine neue Anwendungsdomäne.</summary>
+        <returns>Der Hostansicht des Add-Ins.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladung dieser Methode, die das Add-in in einer automatisch generierten Anwendungsdomäne geladen werden. Das Basisverzeichnis für die Anwendungsdomäne an den Speicherort der Add-in-Assembly werden festgelegt. Sucht auch für die Konfigurationsdatei `[addinassemblyname].dll.config` und, wenn es gefunden wurde, legt er die Konfigurationsdatei für die neue Anwendungsdomäne.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="permissions" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (System.AddIn.Hosting.AddInProcess process, System.AddIn.Hosting.AddInSecurityLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(class System.AddIn.Hosting.AddInProcess process, valuetype System.AddIn.Hosting.AddInSecurityLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.AddIn.Hosting.AddInProcess,System.AddIn.Hosting.AddInSecurityLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="process" Type="System.AddIn.Hosting.AddInProcess" />
+        <Parameter Name="level" Type="System.AddIn.Hosting.AddInSecurityLevel" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Die Benutzeroberfläche oder abstrakten Basistyp, der die Hostansicht des Add-Ins darstellt.</typeparam>
+        <param name="process">Der externe Prozess, um das Add-in aktivieren.</param>
+        <param name="level">Einer der Enumerationswerte, der die Vertrauensebene angibt.</param>
+        <summary>Ein Add-in in einem externen Prozess in eine neue Anwendungsdomäne mit einer angegebenen Vertrauensebene aktiviert.</summary>
+        <returns>Der Hostansicht des Add-Ins.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt das Basisverzeichnis für die Anwendungsdomäne, die den Speicherort der Add-in-Assembly zu sein. Sucht auch für die Konfigurationsdatei `[addinassemblyname].dll.config` und, wenn es gefunden wurde, legt er die Konfigurationsdatei für die neue Anwendungsdomäne.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt einen neuen Prozess und ein Add-in im jeweiligen Prozess mit der Sicherheitsstufe volle Vertrauenswürdigkeit aktiviert.  
+  
+ [!code-csharp[AddInP3Host#10](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#10)]
+ [!code-vb[AddInP3Host#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (System.AddIn.Hosting.AddInProcess process, System.Security.PermissionSet permissionSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(class System.AddIn.Hosting.AddInProcess process, class System.Security.PermissionSet permissionSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.AddIn.Hosting.AddInProcess,System.Security.PermissionSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="process" Type="System.AddIn.Hosting.AddInProcess" />
+        <Parameter Name="permissionSet" Type="System.Security.PermissionSet" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Die Benutzeroberfläche oder abstrakten Basistyp, der die Hostansicht des Add-Ins darstellt.</typeparam>
+        <param name="process">Der externe Prozess, um das Add-in aktivieren.</param>
+        <param name="permissionSet">Die erforderliche Berechtigung erteilt wurde für das Add-in festgelegt.</param>
+        <summary>Aktiviert ein Add-in in einem externen Prozess in eine neue Anwendungsdomäne mit einem angegebenen Berechtigungssatz auf.</summary>
+        <returns>Der Hostansicht des Add-Ins.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt das Basisverzeichnis für die Anwendungsdomäne, die den Speicherort der Add-in-Assembly zu sein. Sucht auch für die Konfigurationsdatei `[addinassemblyname].dll.config` und, wenn es gefunden wurde, legt er die Konfigurationsdatei für die neue Anwendungsdomäne.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (System.AddIn.Hosting.AddInSecurityLevel trustLevel, string appDomainName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(valuetype System.AddIn.Hosting.AddInSecurityLevel trustLevel, string appDomainName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.AddIn.Hosting.AddInSecurityLevel,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="trustLevel" Type="System.AddIn.Hosting.AddInSecurityLevel" />
+        <Parameter Name="appDomainName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Die Benutzeroberfläche oder abstrakten Basistyp, der die Hostansicht des Add-Ins darstellt.</typeparam>
+        <param name="trustLevel">Einer der Enumerationswerte, der die Vertrauensebene angibt.</param>
+        <param name="appDomainName">Der Anzeigename der neuen Anwendungsdomäne zuweisen.</param>
+        <summary>Aktiviert ein Add-in in einer neuen Anwendungsdomäne mit einem angegebenen Namen und die Vertrauensstellung.</summary>
+        <returns>Der Hostansicht des Add-Ins.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie nicht benötigen, geben Sie den Namen einer Anwendungsdomäne, verwenden Sie die <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.AddIn.Hosting.AddInSecurityLevel%29> überladen.  
+  
+ Diese Methode legt das Basisverzeichnis für die Anwendungsdomäne, die den Speicherort der Add-in-Assembly zu sein. Sucht auch für die Konfigurationsdatei `[addinassemblyname].dll.config` und, wenn es gefunden wurde, legt er die Konfigurationsdatei für die neue Anwendungsdomäne.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddInFullName">
+      <MemberSignature Language="C#" Value="public string AddInFullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AddInFullName" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.AddInFullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace und den Typ des Add-Ins.</summary>
+        <value>Der Typ des Add-Ins, vollständig von seinem Namespace qualifizierten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft den vollständigen Namen des Add-Ins aus, wie er von zurückgegeben werden würde die <xref:System.Type.FullName%2A?displayProperty=nameWithType> Eigenschaft. Dieser Wert ist immer verfügbar, auf einer Instanz von einem <xref:System.AddIn.Hosting.AddInToken> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert des der <xref:System.AddIn.Hosting.AddInToken.Name%2A>, <xref:System.AddIn.Hosting.AddInToken.AddInFullName%2A>, <xref:System.AddIn.Hosting.AddInToken.Description%2A>, <xref:System.AddIn.Hosting.AddInToken.AssemblyName%2A>, <xref:System.AddIn.Hosting.AddInToken.Publisher%2A>, und <xref:System.AddIn.Hosting.AddInToken.Version%2A> -Eigenschaften in die Konsole. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.AddIn.Hosting.AddInToken> Klasse.  
+  
+ [!code-csharp[AddInP3Host#7](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#7)]
+ [!code-vb[AddInP3Host#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyName AssemblyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.AssemblyName AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Assembly, die das Add-in enthält.</summary>
+        <value>Der Name der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft den Anzeigenamen der Assembly, die das Add-In enthält, wie er von zurückgegeben werden würde die <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> Eigenschaft. Dieser Wert ist immer verfügbar, auf einer Instanz von einem <xref:System.AddIn.Hosting.AddInToken> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert des der <xref:System.AddIn.Hosting.AddInToken.Name%2A>, <xref:System.AddIn.Hosting.AddInToken.AddInFullName%2A>, <xref:System.AddIn.Hosting.AddInToken.Description%2A>, <xref:System.AddIn.Hosting.AddInToken.AssemblyName%2A>, <xref:System.AddIn.Hosting.AddInToken.Publisher%2A>, und <xref:System.AddIn.Hosting.AddInToken.Version%2A> -Eigenschaften in die Konsole. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.AddIn.Hosting.AddInToken> Klasse.  
+  
+ [!code-csharp[AddInP3Host#7](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#7)]
+ [!code-vb[AddInP3Host#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung des Add-Ins.</summary>
+        <value>Eine Beschreibung für das Add-in oder <see langword="null" /> Wenn die Beschreibung nicht, in angegeben wird der <see cref="T:System.AddIn.AddInAttribute" /> Attribut.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft die Beschreibung des Add-Ins entsprechend den Angaben in der <xref:System.AddIn.AddInAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert des der <xref:System.AddIn.Hosting.AddInToken.Name%2A>, <xref:System.AddIn.Hosting.AddInToken.AddInFullName%2A>, <xref:System.AddIn.Hosting.AddInToken.Description%2A>, <xref:System.AddIn.Hosting.AddInToken.AssemblyName%2A>, <xref:System.AddIn.Hosting.AddInToken.Publisher%2A>, und <xref:System.AddIn.Hosting.AddInToken.Version%2A> -Eigenschaften in die Konsole. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.AddIn.Hosting.AddInToken> Klasse.  
+  
+ [!code-csharp[AddInP3Host#7](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#7)]
+ [!code-vb[AddInP3Host#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDirectConnect">
+      <MemberSignature Language="C#" Value="public static bool EnableDirectConnect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool EnableDirectConnect" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.EnableDirectConnect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert einen Wert, der angibt, ob-add-ins direkt mit ihren Hosts verbunden werden sollen, wenn die Bedingungen dies zulassen.</summary>
+        <value>
+          <see langword="true" />Wenn das Add-in direkt mit dem Host verbunden werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Bedingungen müssen vorhanden sein, die direkte Verbindung auftreten:  
+  
+-   Diese Eigenschaft muss festgelegt werden, um `true`.  
+  
+-   Das Add-in muss in derselben Anwendungsdomäne wie der Host sein.  
+  
+-   Die Add-In-Ansicht und der Hostansicht des Add-Ins müssen den gleichen Typ sein.  
+  
+-   Alle Segmente der Pipeline müssen verfügbar sein.  
+  
+ Wenn eine direkte Verbindung hergestellt wird, werden die Add-In-seitiger Adapter und der hostseitige Adapter nicht instanziiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Bestimmt, ob ein angegebenes Objekt gleich der aktuellen Instanz ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Objekt und die aktuelle Instanz gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.AddIn.Hosting.QualificationDataItem&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.AddIn.Hosting.QualificationDataItem&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.AddIn.Hosting.QualificationDataItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator für die Qualifizierungsdaten von der Pipeline-Segmenten, die dieses Token zugeordnet sind.</summary>
+        <returns>Ein Enumerator, der verwendet werden kann, die Qualifizierungsdaten der Pipelinesegmente durchlaufen, die das aktuelle Token zugeordnet sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie um ein Token zu behandeln, als wäre er eine Auflistung von Qualifizierungsdatenelementen, z. B. in einem `foreach` Anweisung (`For Each` in Visual Basic `for each` in Visual C++).  
+  
+ Verwenden Sie den Enumerator, der von dieser Methode zurückgegebene zum iterieren durch die Qualifizierungsdatenelemente der Pipelinesegmente, die dem aktuellen Token zugeordnet. Jedes Datenelement Qualifizierung ist ein <xref:System.AddIn.Hosting.QualificationDataItem> -Struktur, die das Pipelinesegment bezeichnet und enthält ein Name/Wert-Paar aus einem <xref:System.AddIn.Pipeline.QualificationDataAttribute> angewendet, die diesem Segment.  
+  
+> [!NOTE]
+>  Das Add-In Modell verwendet nicht die Qualifizierungsdaten, die auf die Hostansicht des Add-Ins angewendet wird. Wenn Sie aufzählen Qualifizierungsdaten nicht findet daher Elemente angegeben, deren <xref:System.AddIn.Hosting.QualificationDataItem.Segment%2A> Eigenschaft ist <xref:System.AddIn.Hosting.AddInSegmentType?displayProperty=nameWithType>.  
+  
+ Alternativ können Sie die <xref:System.AddIn.Hosting.AddInToken.QualificationData%2A> Eigenschaft, um einen geschachtelten Satz von Wörterbüchern abzurufen, die die Daten ungültig, da er die Pipelinesegmente enthalten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet die Qualifizierungsdaten für die einzelnen zugeordnet Pipelinesegmente <xref:System.AddIn.Hosting.AddInToken> in einer Auflistung von Token.  
+  
+ [!code-csharp[AddInP3Host#12](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#12)]
+ [!code-vb[AddInP3Host#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für ein Token.</summary>
+        <returns>Ein Hashcode für das aktuelle Token.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Add-Ins.</summary>
+        <value>Der Name des Add-Ins.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft den Namen des Add-Ins entsprechend den Angaben in der <xref:System.AddIn.AddInAttribute> Attribut. Dieser Wert ist immer verfügbar, auf einer Instanz von einem <xref:System.AddIn.Hosting.AddInToken> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert des der <xref:System.AddIn.Hosting.AddInToken.Name%2A>, <xref:System.AddIn.Hosting.AddInToken.AddInFullName%2A>, <xref:System.AddIn.Hosting.AddInToken.Description%2A>, <xref:System.AddIn.Hosting.AddInToken.AssemblyName%2A>, <xref:System.AddIn.Hosting.AddInToken.Publisher%2A>, und <xref:System.AddIn.Hosting.AddInToken.Version%2A> -Eigenschaften in die Konsole. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.AddIn.Hosting.AddInToken> Klasse.  
+  
+ [!code-csharp[AddInP3Host#7](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#7)]
+ [!code-vb[AddInP3Host#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Publisher">
+      <MemberSignature Language="C#" Value="public string Publisher { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Publisher" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.Publisher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, der Herausgeber des Add-Ins.</summary>
+        <value>Der Herausgeber das Add-in oder <see langword="null" /> Wenn der Verleger nicht, in angegeben wird der <see cref="T:System.AddIn.AddInAttribute" /> Attribut.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft den Herausgeber des Add-Ins entsprechend den Angaben in der <xref:System.AddIn.AddInAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert des der <xref:System.AddIn.Hosting.AddInToken.Name%2A>, <xref:System.AddIn.Hosting.AddInToken.AddInFullName%2A>, <xref:System.AddIn.Hosting.AddInToken.Description%2A>, <xref:System.AddIn.Hosting.AddInToken.AssemblyName%2A>, <xref:System.AddIn.Hosting.AddInToken.Publisher%2A>, und <xref:System.AddIn.Hosting.AddInToken.Version%2A> -Eigenschaften in die Konsole. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.AddIn.Hosting.AddInToken> Klasse.  
+  
+ [!code-csharp[AddInP3Host#7](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#7)]
+ [!code-vb[AddInP3Host#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QualificationData">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.AddIn.Hosting.AddInSegmentType,System.Collections.Generic.IDictionary&lt;string,string&gt;&gt; QualificationData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;valuetype System.AddIn.Hosting.AddInSegmentType, class System.Collections.Generic.IDictionary`2&lt;string, string&gt;&gt; QualificationData" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.QualificationData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.AddIn.Hosting.AddInSegmentType,System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch von Daten über die Segmente in der Pipeline, die dem aktuellen Token zugeordnet.</summary>
+        <value>Ein Wörterbuch, dessen Schlüssel sind Pipelinesegmente und dessen Werte Wörterbücher von Name/Wert-Paaren für jedes Segment Daten Qualifizierung darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Abrufen von Daten, die angewendet wurde, um mit Pipelinesegmente der <xref:System.AddIn.Pipeline.QualificationDataAttribute> Attribut. Diese Daten können Sie identifizieren und Arbeiten mit Typen, die Pipelines zu erstellen.  
+  
+ Diese Eigenschaft gibt ein Wörterbuch von Wörterbüchern zurück. Das oberste Wörterbuch verfügt immer über sechs Schlüssel. Jeder Schlüssel ist ein <xref:System.AddIn.Hosting.AddInSegmentType> Wert für ein Segment in der Pipeline. Jeder Wert ist ein generisches <xref:System.Collections.Generic.IDictionary%602> von Zeichenfolgen mit Zeichenfolgenschlüssel, die das Segment Qualifizierungsdaten enthält.  
+  
+ Die Schlüssel und Werte dieser inneren Wörterbücher sind die Namen und Werte angegeben werden, der <xref:System.AddIn.Pipeline.QualificationDataAttribute> Attribute für die Segmente. Wenn keine Qualifizierungsdaten auf ein Segment angewendet wurde, ist das Wörterbuch leer.  
+  
+> [!NOTE]
+>  Das Add-In Modell verwendet nicht die Qualifizierungsdaten, die auf die Hostansicht des Add-Ins angewendet wird. Daher ist das Wörterbuch für <xref:System.AddIn.Hosting.AddInSegmentType?displayProperty=nameWithType> ist immer leer.  
+  
+ Alternativ können Sie Qualifizierungsdaten abrufen, indem beim Aufzählen der ein <xref:System.AddIn.Hosting.AddInToken> als handele es sich um eine Auflistung von <xref:System.AddIn.Hosting.QualificationDataItem> Strukturen mit einer `foreach` Anweisung (`For Each` in Visual Basic `for each` in Visual C++). Finden Sie im Beispiel für die <xref:System.AddIn.Hosting.QualificationDataItem> Struktur.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein Add-in Qualifizierungsdaten zu überprüfen.  
+  
+ [!code-csharp[AddInP3Host#11](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#11)]
+ [!code-vb[AddInP3Host#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator für die Qualifizierungsdaten von der Pipeline-Segmenten, die dieses Token zugeordnet sind.</summary>
+        <returns>Ein Enumerator, der verwendet werden kann, die Qualifizierungsdaten der Pipelinesegmente durchlaufen, die das aktuelle Token zugeordnet sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie ein Token, wie eine Auflistung von Qualifizierungsdatenelementen, z. B. in behandelt eine `foreach` Anweisung (`For Each` in Visual Basic `for each` in Visual C++).  
+  
+ Verwenden Sie den Enumerator, der von dieser Methode zurückgegebene zum iterieren durch die Qualifizierungsdatenelemente der Pipelinesegmente, die dem aktuellen Token zugeordnet. Jedes Datenelement Qualifizierung ist ein <xref:System.AddIn.Hosting.QualificationDataItem> -Struktur, die das Pipelinesegment bezeichnet und enthält das Name/Wert-Paar aus einem <xref:System.AddIn.Pipeline.QualificationDataAttribute> angewendet, die diesem Segment.  
+  
+> [!NOTE]
+>  Das Add-In Modell verwendet nicht die Qualifizierungsdaten, die auf die Hostansicht des Add-Ins angewendet wird. Wenn Sie aufzählen Qualifizierungsdaten nicht findet daher Elemente angegeben, deren <xref:System.AddIn.Hosting.QualificationDataItem.Segment%2A> Eigenschaft ist <xref:System.AddIn.Hosting.AddInSegmentType?displayProperty=nameWithType>.  
+  
+ Alternativ können Sie die <xref:System.AddIn.Hosting.AddInToken.QualificationData%2A> Eigenschaft, um einen geschachtelten Satz von Wörterbüchern mit der Kennzeichnung Pipelinesegmente abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die das Token darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das Token darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version des Add-Ins, gemäß der <see cref="T:System.AddIn.AddInAttribute" /> Attribut.</summary>
+        <value>Die Version des Add-Ins, oder <see langword="null" /> Wenn die Versionsnummer nicht, in angegeben wird der <see cref="T:System.AddIn.AddInAttribute" /> Attribut.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Versionsnummer ist ein Freiform-Zeichenfolge.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert des der <xref:System.AddIn.Hosting.AddInToken.Name%2A>, <xref:System.AddIn.Hosting.AddInToken.AddInFullName%2A>, <xref:System.AddIn.Hosting.AddInToken.Description%2A>, <xref:System.AddIn.Hosting.AddInToken.AssemblyName%2A>, <xref:System.AddIn.Hosting.AddInToken.Publisher%2A>, und <xref:System.AddIn.Hosting.AddInToken.Version%2A> -Eigenschaften in die Konsole. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.AddIn.Hosting.AddInToken> Klasse.  
+  
+ [!code-csharp[AddInP3Host#7](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#7)]
+ [!code-vb[AddInP3Host#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

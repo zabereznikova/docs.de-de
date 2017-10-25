@@ -1,0 +1,16 @@
+<Namespace Name="System.Drawing.Imaging">
+  <Docs>
+    <summary>Die <see cref="N:System.Drawing.Imaging" /> Namespace stellt erweiterte GDI +-Grafikfunktionen. Grundlegende Grafikfunktionen wird bereitgestellt, indem die <see cref="N:System.Drawing" /> Namespace.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Imaging.Metafile> -Klasse stellt Methoden zum Aufzeichnen und Speichern von Metadateien. Die <xref:System.Drawing.Imaging.Encoder> Klasse ermöglicht Benutzern das Erweitern von GDI +, um alle Bildformate unterstützt. Die <xref:System.Drawing.Imaging.PropertyItem> -Klasse stellt Methoden zum Speichern und Abrufen von Metadaten in Bilddateien.  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Drawing.Imaging> Namespace werden nicht unterstützt, für die Verwendung innerhalb eines Diensts Windows- oder ASP.NET. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,306 @@
+<Type Name="ClientFormsIdentity" FullName="System.Web.ClientServices.ClientFormsIdentity">
+  <TypeSignature Language="C#" Value="public class ClientFormsIdentity : IDisposable, System.Security.Principal.IIdentity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClientFormsIdentity extends System.Object implements class System.IDisposable, class System.Security.Principal.IIdentity" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ClientServices.ClientFormsIdentity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Security.Principal.IIdentity</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Benutzeridentität für Clientanwendungsdienste durch Verwenden der Formularauthentifizierung authentifiziert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Clientanwendungsdienste-Funktion verwendet diese Klasse zum Darstellen eines authentifizierten Benutzers. Wenn Sie die Anwendung verwendet die Anwendung Dienste und Forms Clientauthentifizierung konfigurieren, können Sie einen Benutzer authentifizieren, durch Aufrufen der `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> Methode. Nach der Authentifizierung können Sie einen Verweis auf die aktuelle abrufen <xref:System.Web.ClientServices.ClientFormsIdentity> -Instanz über die <xref:System.Security.Principal.IPrincipal.Identity%2A> Eigenschaft der <xref:System.Security.Principal.IPrincipal> abgerufen, die über die `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> Eigenschaft. Weitere Informationen finden Sie unter [Clientanwendungsdienste](~/docs/framework/common-client-technologies/client-application-services.md).  
+  
+ Sie greifen in der Regel eine <xref:System.Web.ClientServices.ClientFormsIdentity> -Objekt als eine <xref:System.Security.Principal.IIdentity> Verweis auf eine direkte Abhängigkeit von dieser Klasse zu vermeiden. Sie können bestimmen, ob ein Benutzer, indem Sie überprüfen authentifiziert wurde die <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=nameWithType> Eigenschaft der Identität. Der Benutzer kann jedoch für Windows, jedoch nicht für Clientanwendungsdienste authentifiziert werden. Um zu bestimmen, ob der Benutzer für Clientanwendungsdienste authentifiziert wurde, Sie sollten auch sicherstellen, dass die <xref:System.Security.Principal.IIdentity.AuthenticationType%2A?displayProperty=nameWithType> Eigenschaftswert ist "ClientForms".  
+  
+ Verwenden Sie eine explizite <xref:System.Web.ClientServices.ClientFormsIdentity> Verweis zum Aufrufen der <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> -Methode, die nicht von definiert wird die <xref:System.Security.Principal.IIdentity> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie diese Klasse zu verwenden, um einen Benutzer automatisch erneut zu überprüfen, wenn die Anwendung im offline-Status verlässt. In diesem Beispiel wird eine <xref:System.Windows.Forms.CheckBox.CheckedChanged> -Ereignishandler aktualisiert, den offline-Status entsprechend dem Wert das Kontrollkästchen angepasst. Wenn der Benutzer die Anwendung in den Onlinemodus versetzt festlegt, versucht der Ereignishandler durch Aufrufen der Benutzer erneut zu überprüfen die <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> Methode. Wenn die Authentication-Server nicht verfügbar ist, gibt der Ereignishandler jedoch die Anwendung im offline-Status zurück.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> -Methode wird nur ergänzend bereitgestellt. Da sie nicht über einen Rückgabewert verfügt, kann sie nicht angeben, ob die erneute Überprüfung fehlgeschlagen ist. Die erneute Überprüfung kann z. B. fehlschlagen, wenn die Anmeldeinformationen des Benutzers auf dem Server geändert wurden. In diesem Fall ist es ratsam, Code einzuschließen, der die Benutzer nach dem Fehlschlagen eines Dienstaufrufs explizit validiert. Weitere Informationen finden Sie im Abschnitt Zugriff auf Webeinstellungen in [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](~/docs/framework/common-client-technologies/walkthrough-using-client-application-services.md).  
+  
+ [!code-csharp[ClientApplicationServices#315](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#315)]
+ [!code-vb[ClientApplicationServices#315](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#315)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientFormsIdentity (string name, string password, System.Web.Security.MembershipProvider provider, string authenticationType, bool isAuthenticated, System.Net.CookieContainer authenticationCookies);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string password, class System.Web.Security.MembershipProvider provider, string authenticationType, bool isAuthenticated, class System.Net.CookieContainer authenticationCookies) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.ClientFormsIdentity.#ctor(System.String,System.String,System.Web.Security.MembershipProvider,System.String,System.Boolean,System.Net.CookieContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="provider" Type="System.Web.Security.MembershipProvider" />
+        <Parameter Name="authenticationType" Type="System.String" />
+        <Parameter Name="isAuthenticated" Type="System.Boolean" />
+        <Parameter Name="authenticationCookies" Type="System.Net.CookieContainer" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des authentifizierten Benutzers.</param>
+        <param name="password">Das Kennwort des authentifizierten Benutzers.</param>
+        <param name="provider">Der Mitgliedschaftsanbieter für die Benutzerauthentifizierung verwendet wird.</param>
+        <param name="authenticationType">Der Typ der Authentifizierung ab, die verwendet wird.</param>
+        <param name="isAuthenticated">
+          <see langword="true" />Wenn der Benutzer authentifiziert wurde; andernfalls <see langword="false" />.</param>
+        <param name="authenticationCookies">Die Cookies, die aus dem Authentifizierungsdienst abgerufen werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ClientServices.ClientFormsIdentity" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationCookies">
+      <MemberSignature Language="C#" Value="public System.Net.CookieContainer AuthenticationCookies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.CookieContainer AuthenticationCookies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ClientServices.ClientFormsIdentity.AuthenticationCookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.CookieContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Cookies aus dem Authentifizierungsdienst abgerufen.</summary>
+        <value>Die Cookies, die aus dem Authentifizierungsdienst abgerufen werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nicht für die Verwendung in Ihrem Anwendungscode vorgesehen. Sie können nicht sinnvoll ändern, die Cookies, die über diese Eigenschaft abgerufen, und sie keine nützlichen Informationen enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationType">
+      <MemberSignature Language="C#" Value="public string AuthenticationType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticationType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ClientServices.ClientFormsIdentity.AuthenticationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Authentifizierung des Benutzers verwendeten Authentifizierungstyp ab.</summary>
+        <value>Der Typ der Authentifizierung ab, die zum Authentifizieren des Benutzers verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie greifen in der Regel eine <xref:System.Web.ClientServices.ClientFormsIdentity> -Objekt als eine <xref:System.Security.Principal.IIdentity> Verweis auf eine direkte Abhängigkeit von dieser Klasse zu vermeiden. Sie können bestimmen, ob ein Benutzer, indem Sie überprüfen authentifiziert wurde die <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=nameWithType> Eigenschaft der Identität. Der Benutzer kann jedoch für Windows, jedoch nicht für Clientanwendungsdienste authentifiziert werden. Um zu bestimmen, ob der Benutzer für Clientanwendungsdienste authentifiziert wurde, Sie sollten auch sicherstellen, dass die <xref:System.Security.Principal.IIdentity.AuthenticationType%2A?displayProperty=nameWithType> Eigenschaftswert ist "ClientForms". Weitere Informationen finden Sie unter der <xref:System.Web.ClientServices.ClientFormsIdentity> -Klassenübersicht.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie diese Eigenschaft über eine <xref:System.Security.Principal.IIdentity> Verweis, um zu bestimmen, ob ein Benutzer derzeit für Clientanwendungsdienste authentifiziert wurde. In diesem Beispiel wird davon ausgegangen, dass die Anwendung in der Standardkonfiguration ist, in dem Benutzer nicht erforderlich sind, melden Sie sich erneut, wenn der Authentifizierungscookie abläuft. Andernfalls die <xref:System.Net.WebException> kann darauf hinweisen, dass die Anmeldung des Benutzers abgelaufen ist. Weitere Informationen finden Sie unter [How to: Configure Client Application Services](~/docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+  
+ [!code-csharp[ClientApplicationServices#312](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#312)]
+ [!code-vb[ClientApplicationServices#312](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#312)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.ClientFormsIdentity.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Web.ClientServices.ClientFormsIdentity" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Web.ClientServices.ClientFormsIdentity.Dispose%2A> auf, wenn Sie <xref:System.Web.ClientServices.ClientFormsIdentity> nicht mehr benötigen. Die <xref:System.Web.ClientServices.ClientFormsIdentity.Dispose%2A>-Methode bewirkt, dass <xref:System.Web.ClientServices.ClientFormsIdentity> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Web.ClientServices.ClientFormsIdentity.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Web.ClientServices.ClientFormsIdentity> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Web.ClientServices.ClientFormsIdentity> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Web.ClientServices.ClientFormsIdentity.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.Web.ClientServices.ClientFormsIdentity> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Web.ClientServices.ClientFormsIdentity>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.ClientFormsIdentity.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Web.ClientServices.ClientFormsIdentity" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.Web.ClientServices.ClientFormsIdentity> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuthenticated">
+      <MemberSignature Language="C#" Value="public bool IsAuthenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ClientServices.ClientFormsIdentity.IsAuthenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Benutzer authentifiziert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der Benutzer authentifiziert wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie greifen in der Regel eine <xref:System.Web.ClientServices.ClientFormsIdentity> -Objekt als eine <xref:System.Security.Principal.IIdentity> Verweis auf eine direkte Abhängigkeit von dieser Klasse zu vermeiden. Sie können bestimmen, ob ein Benutzer, indem Sie überprüfen authentifiziert wurde die <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=nameWithType> Eigenschaft der Identität. Der Benutzer kann jedoch für Windows, jedoch nicht für Clientanwendungsdienste authentifiziert werden. Um zu bestimmen, ob der Benutzer für Clientanwendungsdienste authentifiziert wurde, Sie sollten auch sicherstellen, dass die <xref:System.Security.Principal.IIdentity.AuthenticationType%2A?displayProperty=nameWithType> Eigenschaftswert ist "ClientForms". Weitere Informationen finden Sie unter der <xref:System.Web.ClientServices.ClientFormsIdentity> -Klassenübersicht.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie diese Eigenschaft über eine <xref:System.Security.Principal.IIdentity> Verweis, um zu bestimmen, ob ein Benutzer derzeit für Clientanwendungsdienste authentifiziert wurde. In diesem Beispiel wird davon ausgegangen, dass die Anwendung in der Standardkonfiguration ist, in dem Benutzer nicht erforderlich sind, melden Sie sich erneut, wenn der Authentifizierungscookie abläuft. Andernfalls die <xref:System.Net.WebException> kann darauf hinweisen, dass die Anmeldung des Benutzers abgelaufen ist. Weitere Informationen finden Sie unter [How to: Configure Client Application Services](~/docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+  
+ [!code-csharp[ClientApplicationServices#312](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#312)]
+ [!code-vb[ClientApplicationServices#312](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#312)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ClientServices.ClientFormsIdentity.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Benutzers ab.</summary>
+        <value>Der Name des Benutzers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Web.Security.MembershipProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Security.MembershipProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ClientServices.ClientFormsIdentity.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Mitgliedschaftsanbieter, der zur Authentifizierung des Benutzers verwendet wird.</summary>
+        <value>Der Mitgliedschaftsanbieter, der zur Authentifizierung des Benutzers verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RevalidateUser">
+      <MemberSignature Language="C#" Value="public void RevalidateUser ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RevalidateUser() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Im Hintergrund authentifiziert den Benutzer mithilfe von zwischengespeicherten Anmeldeinformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Formularauthentifizierung verwenden, um den aktuellen Benutzer zu überprüfen der <xref:System.Web.ClientServices.ClientFormsIdentity> Klasse speichert die Anmeldeinformationen des Benutzers aus, solange die Anwendung ausgeführt wird. Allerdings wird nur der Benutzer authentifiziert, bis der Authentifizierungscookie abläuft. Nachdem das Cookie abläuft, muss der Benutzer erneut überprüft werden, um auf die Remoterollen oder Webeinstellungsdienste zuzugreifen. Sie können die **Erweiterte Einstellungen für Dienste** Dialogfeld zum Konfigurieren Ihrer Anwendung den Benutzer automatisch erneut zu überprüfen, wie in beschrieben [wie: Konfigurieren von Clientanwendungsdiensten](~/docs/framework/common-client-technologies/how-to-configure-client-application-services.md). Jedoch wenn Sie Ihre Anwendung den Ablauf der Cookies berücksichtigt konfigurieren, Sie können programmgesteuert zum erneuten Überprüfen des Benutzers durch Aufrufen der <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> Methode. Diese Methode eignet sich auch beim Wechsel vom offline-in den Onlinemodus, da die Anwendung möglicherweise heruntergefahren wurde unten While offline.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> -Methode wird nur ergänzend bereitgestellt. Da sie nicht über einen Rückgabewert verfügt, kann sie nicht angeben, ob die erneute Überprüfung fehlgeschlagen ist. Die erneute Überprüfung kann z. B. fehlschlagen, wenn die Anmeldeinformationen des Benutzers auf dem Server geändert wurden. In diesem Fall ist es ratsam, Code einzuschließen, der die Benutzer nach dem Fehlschlagen eines Dienstaufrufs explizit validiert. Weitere Informationen finden Sie im Abschnitt Zugriff auf Webeinstellungen in [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](~/docs/framework/common-client-technologies/walkthrough-using-client-application-services.md).  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie diese Methode einen Benutzer im Hintergrund erneut zu überprüfen, wenn die Anwendung im offline-Status verlässt. In diesem Beispiel wird eine <xref:System.Windows.Forms.CheckBox.CheckedChanged> -Ereignishandler aktualisiert, den offline-Status entsprechend dem Wert das Kontrollkästchen angepasst. Wenn der Benutzer die Anwendung in den Onlinemodus versetzt festlegt, versucht der Ereignishandler den Benutzer erneut zu überprüfen. Wenn die Authentication-Server nicht verfügbar ist, gibt der Ereignishandler jedoch die Anwendung im offline-Status zurück.  
+  
+ [!code-csharp[ClientApplicationServices#315](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#315)]
+ [!code-vb[ClientApplicationServices#315](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#315)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

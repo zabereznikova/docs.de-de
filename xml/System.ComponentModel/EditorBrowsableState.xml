@@ -1,0 +1,130 @@
+<Type Name="EditorBrowsableState" FullName="System.ComponentModel.EditorBrowsableState">
+  <TypeSignature Language="C#" Value="public enum EditorBrowsableState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EditorBrowsableState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.EditorBrowsableState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Durchsuchbarkeitszustand einer Eigenschaft oder Methode innerhalb eines Editors an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird von einem visuellen Designer verwendet, um zu bestimmen, was für den Benutzer sichtbar ist. Z. B. das IntelliSense-Modul in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] nicht angezeigt wird, Methoden oder Eigenschaften, die nie markiert sind. Verwendung <xref:System.ComponentModel.EditorBrowsableAttribute> an die <xref:System.ComponentModel.EditorBrowsableState> für ein Element.  
+  
+   
+  
+## Examples  
+ Ein Beispiel der Verwendung der <xref:System.ComponentModel.EditorBrowsableState> Enumerator finden Sie unter dem Beispielcode in <xref:System.ComponentModel.EditorBrowsableAttribute> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Advanced">
+      <MemberSignature Language="C#" Value="Advanced" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.EditorBrowsableState Advanced = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.EditorBrowsableState.Advanced" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EditorBrowsableState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Eigenschaft oder Methode ist ein Feature, das nur für Benutzer fortgeschrittene sehen dürfen. Ein Editor kann entweder ein- oder ausblenden solche Eigenschaften.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Always">
+      <MemberSignature Language="C#" Value="Always" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.EditorBrowsableState Always = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.EditorBrowsableState.Always" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EditorBrowsableState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Eigenschaft oder Methode wird immer von innerhalb eines Editors gesucht werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.EditorBrowsableState Never = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.EditorBrowsableState.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EditorBrowsableState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Eigenschaft oder Methode ist nie von innerhalb eines Editors gesucht werden kann.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

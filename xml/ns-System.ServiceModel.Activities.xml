@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Activities">
+  <Docs>
+    <summary>Der System.ServiceModel.Activities-Namespace enthält Klassen, mit denen Sie Nachrichten senden und Empfangen von Nachrichten von Workflows. Diese Aktivitäten werden beim Schreiben von Workflowdiensten verwendet und ermöglichen es Ihnen zu definieren, wie Meldungen in einem Workflow gesendet und empfangen werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

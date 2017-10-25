@@ -1,0 +1,584 @@
+<Type Name="InstanceStore" FullName="System.Runtime.DurableInstancing.InstanceStore">
+  <TypeSignature Language="C#" Value="public abstract class InstanceStore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit InstanceStore extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.DurableInstancing.InstanceStore" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Instanzspeicher dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Dauerhaftigkeitsanbieter ermöglicht den Zugriff auf einen Instanzspeicher, und zwar durch die konkrete Impelementierung der <xref:System.Runtime.DurableInstancing.InstanceStore>-Klasse.  
+  
+ Dauerhaftigkeitsanbieter dürfen "InstanceHandle.Free" für an "TryCommand" übergebene Handles auch nach Abschluss der Befehlsausführung aufrufen. Starke Verweise auf InstanceHandle- bzw. InstanceOwner-Objekte dürfen von Dauerhaftigkeitsanbietern jedoch nicht verwaltet werden, da so möglicherweise verhindert wird, dass die Garbage Collection für "InstanceStore" durchgeführt wird.  
+  
+> [!WARNING]
+>  Workflowdefinitionen für beibehaltene Workflows können nicht geändert werden. Wenn eine Workflowdefinition geändert wird, nachdem es beibehalten wird, stürzt die Workflowlaufzeit, wenn der Workflow geladen wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InstanceStore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceStore" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginExecute">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginExecute (System.Runtime.DurableInstancing.InstanceHandle handle, System.Runtime.DurableInstancing.InstancePersistenceCommand command, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginExecute(class System.Runtime.DurableInstancing.InstanceHandle handle, class System.Runtime.DurableInstancing.InstancePersistenceCommand command, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.BeginExecute(System.Runtime.DurableInstancing.InstanceHandle,System.Runtime.DurableInstancing.InstancePersistenceCommand,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.Runtime.DurableInstancing.InstanceHandle" />
+        <Parameter Name="command" Type="System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Ein Instanzhandle.</param>
+        <param name="command">Der Befehl, der ausgeführt werden soll.</param>
+        <param name="timeout">Der Timeoutwert für die Befehlsausführung.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über die Beendigung des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die Statusinformationen.</param>
+        <summary>Führt Dauerhaftigkeitsbefehle, etwa <see cref="T:System.Activities.DurableInstancing.LoadWorkflowCommand" /> und <see cref="T:System.Activities.DurableInstancing.SaveWorkflowCommand" />, asynchron aus.</summary>
+        <returns>Der Status des asynchronen Vorgangs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Host ruft die <xref:System.Runtime.DurableInstancing.InstanceStore.BeginExecute%2A>-Methode auf, um asynchron einen Dauerhaftigkeitsbefehl für einen Instanzhandle auszuführen. Der Host erhält den Instanzhandle, indem er die <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A>-Methode aufruft. Der Instanzhandle ist möglicherweise an Entitäten gebunden, die den Kontext und das Subjekt des Befehls darstellen, beispielsweise eine Instanz, einen Instanzbesitzer oder eine Instanzsperre.  Es kann nur jeweils ein Befehl für einen Instanzhandle ausgegeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTryCommand">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult BeginTryCommand (System.Runtime.DurableInstancing.InstancePersistenceContext context, System.Runtime.DurableInstancing.InstancePersistenceCommand command, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.IAsyncResult BeginTryCommand(class System.Runtime.DurableInstancing.InstancePersistenceContext context, class System.Runtime.DurableInstancing.InstancePersistenceCommand command, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand(System.Runtime.DurableInstancing.InstancePersistenceContext,System.Runtime.DurableInstancing.InstancePersistenceCommand,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Runtime.DurableInstancing.InstancePersistenceContext" />
+        <Parameter Name="command" Type="System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Instanzkontext.</param>
+        <param name="command">Der Dauerhaftigkeitsbefehl, der ausgeführt werden soll.</param>
+        <param name="timeout">Der Timeoutwert für die Befehlsausführung.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über die Beendigung des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die Statusinformationen.</param>
+        <summary>Ein Dauerhaftigkeitsanbieter implementiert diese Methode, die bestimmt, ob ein bestimmter Dauerhaftigkeitsbefehl ausgeführt werden kann. Wenn der Befehl ausgeführt werden kann, erfolgt die Ausführung asynchron.</summary>
+        <returns>Der Status des asynchronen Vorgangs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Befehl ausgeführt werden kann, ruft der Dauerhaftigkeitsanbieter relevante Methoden für "InstancePersistenceContext" auf, um die Ergebnisse des Befehls bereitzustellen.  
+  
+> [!WARNING]
+>  Obwohl diese Methode, als deklariert wird `virtual` statt `abstract`, es ist keine Implementierung. Diese Methode muss überschrieben werden, um Funktionen bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWaitForEvents">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginWaitForEvents (System.Runtime.DurableInstancing.InstanceHandle handle, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginWaitForEvents(class System.Runtime.DurableInstancing.InstanceHandle handle, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.BeginWaitForEvents(System.Runtime.DurableInstancing.InstanceHandle,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.Runtime.DurableInstancing.InstanceHandle" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Ein Instanzhandle.</param>
+        <param name="timeout">Der Zeitraum, nach dem es zum Timeout des Vorgangs kommt.</param>
+        <param name="callback">Die Methode, die nach Beendigung des asynchronen Vorgangs aufgerufen werden soll.</param>
+        <param name="state">Ein Objekt mit den Zustandsinformationen, die dem asynchronen Vorgang zugeordnet sind.</param>
+        <summary>Startet einen asynchronen Vorgang, um sämtliche Ereignisse abzuhören, die vom Instanzspeicher für einen bestimmten Instanzhandle ausgelöst wurden.</summary>
+        <returns>Gibt ein <see cref="T:System.IAsyncResult" />-Objekt zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceHandle">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceHandle CreateInstanceHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Runtime.DurableInstancing.InstanceHandle CreateInstanceHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceHandle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Instanzhandle.</summary>
+        <returns>Der Instanzhandle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceHandle">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceHandle CreateInstanceHandle (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Runtime.DurableInstancing.InstanceHandle CreateInstanceHandle(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Ein Instanzbezeichner. Darf nicht "Guid.Empty" sein.</param>
+        <summary>Erstellt einen Instanzhandle.  Wenn "DefaultInstanceOwner" festgelegt wird, wird der Wert automatisch als der Instanzbesitzer des neuen Handles gebunden.  Der als Parameter übergebene Instanzbezeichner wird automatisch als Instanz des neuen Handles gebunden.</summary>
+        <returns>Der Instanzhandle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceHandle">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceHandle CreateInstanceHandle (System.Runtime.DurableInstancing.InstanceOwner owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Runtime.DurableInstancing.InstanceHandle CreateInstanceHandle(class System.Runtime.DurableInstancing.InstanceOwner owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle(System.Runtime.DurableInstancing.InstanceOwner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Runtime.DurableInstancing.InstanceOwner" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der Besitzer einer Instanz.</param>
+        <summary>Erstellt einen Instanzhandle. Wenn der Instanzbesitzer als Parameter übergeben wurde, der nicht null ist, wird der Wert automatisch als Instanzbesitzer des neuen Handles gebunden.  (Anderenfalls wird kein Instanzbesitzer gebunden, auch wenn "DefaultInstanceOwner" festgelegt ist.)</summary>
+        <returns>Der Instanzhandle. Ein NULL-Wert gibt an, dass der neue Handle nicht automatisch an einen Instanzbesitzer gebunden werden soll.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceHandle">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceHandle CreateInstanceHandle (System.Runtime.DurableInstancing.InstanceOwner owner, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Runtime.DurableInstancing.InstanceHandle CreateInstanceHandle(class System.Runtime.DurableInstancing.InstanceOwner owner, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle(System.Runtime.DurableInstancing.InstanceOwner,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Runtime.DurableInstancing.InstanceOwner" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Ein InstanceOwner-Objekt, das den Besitzer einer Instanz darstellt. Übergeben Sie NULL als Wert für diesen Parameter, um anzugeben, dass der neue Handle nicht automatisch an einen Instanzbesitzer gebunden werden soll.</param>
+        <param name="instanceId">Ein Instanzbezeichner. Darf nicht "Guid.Empty" sein.</param>
+        <summary>Erstellt einen Instanzhandle. Wenn der Instanzbesitzer als Parameter übergeben wurde, der nicht null ist, wird der Wert automatisch als Instanzbesitzer des neuen Handles gebunden.  (Anderenfalls wird kein Instanzbesitzer gebunden, auch wenn "DefaultInstanceOwner" festgelegt ist.) Der als Parameter übergebene Instanzbezeichner wird automatisch als Instanz des neuen Handles gebunden.</summary>
+        <returns>Der Instanzhandle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultInstanceOwner">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceOwner DefaultInstanceOwner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.DurableInstancing.InstanceOwner DefaultInstanceOwner" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceStore.DefaultInstanceOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceOwner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardinstanzbesitzer auf oder legt ihn fest.</summary>
+        <value>Der Standardinstanzbesitzer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Hosts leiten den zu verwendenden Instanzbesitzer ab, indem sie diese Eigenschaft lesen. "WorkflowApplication" kann diese Eigenschaft verwenden. "WorkflowServiceHost" verwendet diese Eigenschaft nicht.  
+  
+ Für die DefaultInstanceOwner-Eigenschaft muss NULL festgelegt werden, wenn sie nicht mehr benötigt wird. Für InstanceStore-Objekte wird möglicherweise keine Garbage Collection durchgeführt, wenn "DefaultInstanceOwner" nicht NULL ist.  
+  
+> [!WARNING]
+>  Obwohl diese Methode, als deklariert wird `virtual` statt `abstract`, es ist keine Implementierung. Diese Methode muss überschrieben werden, um Funktionen bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndExecute">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceView EndExecute (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Runtime.DurableInstancing.InstanceView EndExecute(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.EndExecute(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das Ergebnis des Vorgangs.</param>
+        <summary>Beendet den asynchronen Vorgang.</summary>
+        <returns>Ein InstanceView-Objekt, das nach dem erfolgreichen Abschluss des Befehls den bekannten Status der Instanz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn "BeginExecute" im Rahmen einer Transaktion aufgerufen wurde, enthält dieser Status möglicherweise Daten, für die kein Commit ausgeführt wurde. Sobald der erfolgreiche Commit der Transaktion erfolgt ist, können die Daten im InstanceView-Objekt als übernommen angesehen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTryCommand">
+      <MemberSignature Language="C#" Value="protected virtual bool EndTryCommand (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool EndTryCommand(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.EndTryCommand(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das Ergebnis des Vorgangs.</param>
+        <summary>Beendet einen asynchronen Vorgang.</summary>
+        <returns>Eine Dauerhaftigkeitsanbieterimplementierung sollte "false" zurückgeben, wenn sie den an die BeginTryCommand-Methode übergebenen Befehl nicht unterstützt. Anderenfalls sollte sie "true" zurückgeben bzw. eine Ausnahme auslösen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!WARNING]
+>  Obwohl diese Methode, als deklariert wird `virtual` statt `abstract`, es ist keine Implementierung. Diese Methode muss überschrieben werden, um Funktionen bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWaitForEvents">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Runtime.DurableInstancing.InstancePersistenceEvent&gt; EndWaitForEvents (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;class System.Runtime.DurableInstancing.InstancePersistenceEvent&gt; EndWaitForEvents(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.EndWaitForEvents(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Runtime.DurableInstancing.InstancePersistenceEvent&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Ein IAsyncResult-Objekt, das von der Begin-Methode an den Client übergeben wurde.</param>
+        <summary>Beendet den von der <see cref="M:System.Runtime.DurableInstancing.InstanceStore.BeginWaitForEvents(System.Runtime.DurableInstancing.InstanceHandle,System.TimeSpan,System.AsyncCallback,System.Object)" />-Methode initiierten asynchronen Vorgang.</summary>
+        <returns>Gibt eine Liste von <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceEvent" />-Objekten zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceView Execute (System.Runtime.DurableInstancing.InstanceHandle handle, System.Runtime.DurableInstancing.InstancePersistenceCommand command, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Runtime.DurableInstancing.InstanceView Execute(class System.Runtime.DurableInstancing.InstanceHandle handle, class System.Runtime.DurableInstancing.InstancePersistenceCommand command, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.Execute(System.Runtime.DurableInstancing.InstanceHandle,System.Runtime.DurableInstancing.InstancePersistenceCommand,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.Runtime.DurableInstancing.InstanceHandle" />
+        <Parameter Name="command" Type="System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Ein Instanzhandle.</param>
+        <param name="command">Der Befehl, der ausgeführt werden soll.</param>
+        <param name="timeout">Der Timeoutwert für den Vorgang.</param>
+        <summary>Führt einen Dauerhaftigkeitsbefehl synchron aus. <see cref="T:System.Activities.DurableInstancing.LoadWorkflowCommand" /> und <see cref="T:System.Activities.DurableInstancing.SaveWorkflowCommand" /> sind Beispiele für Dauerhaftigkeitsbefehle.</summary>
+        <returns>Ein InstanceView-Objekt, das nach erfolgreicher Beendigung des Befehls den bekannten Zustand der Instanz darstellt.  Wenn "Execute" im Rahmen einer Transaktion aufgerufen wurde, enthält dieser Status möglicherweise Daten, für die kein Commit ausgeführt wurde. Sobald der erfolgreiche Commit der Transaktion erfolgt ist, können die Daten im InstanceView-Objekt als übernommen angesehen werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Host ruft die <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A>-Methode auf, um asynchron einen Dauerhaftigkeitsbefehl für einen Instanzhandle auszuführen, den der Host durch Aufruf der <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A>-Methode erhält. Der Instanzhandle ist möglicherweise an Entitäten gebunden, die den Kontext und das Subjekt des Befehls darstellen, beispielsweise eine Instanz, einen Instanzbesitzer oder eine Instanzsperre.  Es kann nur jeweils ein Befehl für einen Instanzhandle ausgegeben werden.  
+  
+> [!WARNING]
+>  Bei der Ausführung dieser Methode mit einem <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>, erstellt jedoch eine <xref:System.Runtime.DurableInstancing.InstanceOwner> und binden es an die Instanz. Dies bedeutet, dass kein anderer Prozess auf diesem Workflow zugreifen kann; Wenn der Prozess beendet wird, ist der Workflow kann nicht wiederhergestellt oder ausgeführt. Wenn Sie ein Workflow dieser Art erneut ausgeführt wird eine <xref:System.Runtime.DurableInstancing.InstanceLockedException> ausgelöst.  
+>   
+>  Wenn <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand> wird nicht verwendet, der Instanzspeicher erstellt eine temporäre <xref:System.Runtime.DurableInstancing.InstanceOwner> , werden am Ende des Prozesses gelöscht werden. Jedoch, wenn der Prozess vor dem letzten Persistenzpunkt der Workflow beendet wird, dieser wird ausgelöst, es sei denn, in der Zeitraum angegeben die **von HostLockRenewalPeriod** Parameter ist abgelaufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvents">
+      <MemberSignature Language="C#" Value="protected System.Runtime.DurableInstancing.InstancePersistenceEvent[] GetEvents (System.Runtime.DurableInstancing.InstanceOwner owner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Runtime.DurableInstancing.InstancePersistenceEvent[] GetEvents(class System.Runtime.DurableInstancing.InstanceOwner owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.GetEvents(System.Runtime.DurableInstancing.InstanceOwner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstancePersistenceEvent[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Runtime.DurableInstancing.InstanceOwner" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Ein <see cref="T:System.Runtime.DurableInstancing.InstanceOwner" />-Objekt, das den Besitzer einer Instanz darstellt.</param>
+        <summary>Ruft alle an ein <see cref="T:System.Runtime.DurableInstancing.InstanceOwner" />-Objekt gebundenen signalisierten Ereignisse ab.</summary>
+        <returns>Gibt ein Array von <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceEvent" />-Objeken zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInstanceOwners">
+      <MemberSignature Language="C#" Value="protected System.Runtime.DurableInstancing.InstanceOwner[] GetInstanceOwners ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Runtime.DurableInstancing.InstanceOwner[] GetInstanceOwners() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.GetInstanceOwners" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceOwner[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft sämtliche InstanceOwner-Objekte ab, die an einen gültigen Instanzhandle gebunden sind bzw. für die Garbage Collection nicht durchgeführt wurde.</summary>
+        <returns>Der Besitzer der Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt ein Array von InstanceOwner-Objekten zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFreeInstanceHandle">
+      <MemberSignature Language="C#" Value="protected virtual void OnFreeInstanceHandle (System.Runtime.DurableInstancing.InstanceHandle instanceHandle, object userContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFreeInstanceHandle(class System.Runtime.DurableInstancing.InstanceHandle instanceHandle, object userContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.OnFreeInstanceHandle(System.Runtime.DurableInstancing.InstanceHandle,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceHandle" Type="System.Runtime.DurableInstancing.InstanceHandle" />
+        <Parameter Name="userContext" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceHandle">Der Instanzhandle, der freigegeben wurde.</param>
+        <param name="userContext">Die Benutzerkontextinformationen des Dauerhaftigkeitsanbieters, die von "OnNewInstanceHandle" zurückgegeben wurden, bzw. NULL, wenn  "OnNewInstanceHandle" nicht überschrieben wird.</param>
+        <summary>Wird aufgerufen, wenn ein Instanzhandle freigegeben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNewInstanceHandle">
+      <MemberSignature Language="C#" Value="protected virtual object OnNewInstanceHandle (System.Runtime.DurableInstancing.InstanceHandle instanceHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object OnNewInstanceHandle(class System.Runtime.DurableInstancing.InstanceHandle instanceHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.OnNewInstanceHandle(System.Runtime.DurableInstancing.InstanceHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceHandle" Type="System.Runtime.DurableInstancing.InstanceHandle" />
+      </Parameters>
+      <Docs>
+        <param name="instanceHandle">Ein Instanzhandle.</param>
+        <summary>Wird aufgerufen, wenn ein neuer Instanzhandle erstellt wird.</summary>
+        <returns>Ein Objekt.  Dieses Benutzerkontextobjekt steht dem Dauerhaftigkeitsanbieter zur Verfügung, wenn Befehle mit dem Handle ausgeführt werden und wenn der Handle freigegeben wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetEvent">
+      <MemberSignature Language="C#" Value="protected void ResetEvent (System.Runtime.DurableInstancing.InstancePersistenceEvent persistenceEvent, System.Runtime.DurableInstancing.InstanceOwner owner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ResetEvent(class System.Runtime.DurableInstancing.InstancePersistenceEvent persistenceEvent, class System.Runtime.DurableInstancing.InstanceOwner owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.ResetEvent(System.Runtime.DurableInstancing.InstancePersistenceEvent,System.Runtime.DurableInstancing.InstanceOwner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="persistenceEvent" Type="System.Runtime.DurableInstancing.InstancePersistenceEvent" />
+        <Parameter Name="owner" Type="System.Runtime.DurableInstancing.InstanceOwner" />
+      </Parameters>
+      <Docs>
+        <param name="persistenceEvent">Das Dauerhaftigkeitsereignis, das zuvor signalisiert wurde und zurückgesetzt werden soll.</param>
+        <param name="owner">Der Instanzbesitzer, der dem Dauerhaftigkeitsereignis zugeordnet ist.</param>
+        <summary>Setzt das signalisierte Ereignis zurück, und entfernt das Ereignis aus der vom Instanzbesitzer verwalteten Liste signalisierter Ereignisse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalEvent">
+      <MemberSignature Language="C#" Value="protected void SignalEvent (System.Runtime.DurableInstancing.InstancePersistenceEvent persistenceEvent, System.Runtime.DurableInstancing.InstanceOwner owner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SignalEvent(class System.Runtime.DurableInstancing.InstancePersistenceEvent persistenceEvent, class System.Runtime.DurableInstancing.InstanceOwner owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.SignalEvent(System.Runtime.DurableInstancing.InstancePersistenceEvent,System.Runtime.DurableInstancing.InstanceOwner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="persistenceEvent" Type="System.Runtime.DurableInstancing.InstancePersistenceEvent" />
+        <Parameter Name="owner" Type="System.Runtime.DurableInstancing.InstanceOwner" />
+      </Parameters>
+      <Docs>
+        <param name="persistenceEvent">Das Dauerhaftigkeitsereignis, das signalisiert werden soll.</param>
+        <param name="owner">Der Instanzbesitzer.</param>
+        <summary>Ein Instanzspeicher ruft diese Methode auf, um ein Ereignis zu signalisieren. Ein Workflowhost, der dieses Dauerhaftigkeitsereignis abonniert, empfängt es und ergreift eine entsprechende Maßnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCommand">
+      <MemberSignature Language="C#" Value="protected virtual bool TryCommand (System.Runtime.DurableInstancing.InstancePersistenceContext context, System.Runtime.DurableInstancing.InstancePersistenceCommand command, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryCommand(class System.Runtime.DurableInstancing.InstancePersistenceContext context, class System.Runtime.DurableInstancing.InstancePersistenceCommand command, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.TryCommand(System.Runtime.DurableInstancing.InstancePersistenceContext,System.Runtime.DurableInstancing.InstancePersistenceCommand,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Runtime.DurableInstancing.InstancePersistenceContext" />
+        <Parameter Name="command" Type="System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Instanzkontext.</param>
+        <param name="command">Der Befehl, der ausgeführt werden soll.</param>
+        <param name="timeout">Der Timeoutwert für den Vorgang.</param>
+        <summary>Ein Dauerhaftigkeitsanbieter implementiert diese Methode, mit der bestimmt wird, ob ein bestimmter Dauerhaftigkeitsbefehl ausgeführt werden kann. Ist dies der Fall, erfolgt die Ausführung asynchron.</summary>
+        <returns>Eine dauerhaftigkeitsanbieterimplementierung sollte zurückgeben <see langword="false" /> bei Unterstützung durch den Befehl übergeben als ein Parameter nicht andernfalls sollte zurückgegeben <see langword="true" /> eine Ausnahme ausgelöst.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Befehl ausgeführt werden kann, ruft der Dauerhaftigkeitsanbieter relevante Methoden für den  <xref:System.Runtime.DurableInstancing.InstancePersistenceContext> auf, um die Ergebnisse des Befehls bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEvents">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Runtime.DurableInstancing.InstancePersistenceEvent&gt; WaitForEvents (System.Runtime.DurableInstancing.InstanceHandle handle, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;class System.Runtime.DurableInstancing.InstancePersistenceEvent&gt; WaitForEvents(class System.Runtime.DurableInstancing.InstanceHandle handle, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStore.WaitForEvents(System.Runtime.DurableInstancing.InstanceHandle,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Runtime.DurableInstancing.InstancePersistenceEvent&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.Runtime.DurableInstancing.InstanceHandle" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Der Instanzhandle, der an das Ereignis gebunden ist.</param>
+        <param name="timeout">Die Zeitspanne, nach der es zum Timeout des wartenden Vorgangs kommt.</param>
+        <summary>Ein Workflowhost ruft diese Methode in der Regel auf, um auf ein zu signalisierendes Ereignis zu warten.</summary>
+        <returns>Eine Liste von <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceEvent" />-Objekten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

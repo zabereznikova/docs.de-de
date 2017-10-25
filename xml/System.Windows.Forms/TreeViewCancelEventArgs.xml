@@ -1,0 +1,125 @@
+<Type Name="TreeViewCancelEventArgs" FullName="System.Windows.Forms.TreeViewCancelEventArgs">
+  <TypeSignature Language="C#" Value="public class TreeViewCancelEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TreeViewCancelEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeViewCancelEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Windows.Forms.TreeView.BeforeCheck" />, <see cref="E:System.Windows.Forms.TreeView.BeforeCollapse" />, <see cref="E:System.Windows.Forms.TreeView.BeforeExpand" />, und <see cref="E:System.Windows.Forms.TreeView.BeforeSelect" /> Ereignisse von einem <see cref="T:System.Windows.Forms.TreeView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Ändern des Zustands von einem <xref:System.Windows.Forms.TreeView> , damit alle aktivierten Knoten sichtbar sind. Zunächst sind alle Knoten reduziert, und ein Handler hinzugefügt, mit der <xref:System.Windows.Forms.TreeView.BeforeExpand?displayProperty=nameWithType> Ereignis. Anschließend werden alle Knoten erweitert werden. Die <xref:System.Windows.Forms.TreeView.BeforeExpand?displayProperty=nameWithType> Ereignishandler bestimmt, ob ein angegebener Knoten über untergeordnete Knoten verfügt, die überprüft werden. Wenn ein Knoten nicht überprüften untergeordnete Elemente verfügt, wird die Erweiterung für diesen Knoten abgebrochen. Damit normale Node-Erweiterung kann beim Klicken auf das Pluszeichen neben einem Knoten der <xref:System.Windows.Forms.TreeView.BeforeExpand?displayProperty=nameWithType> -Ereignishandler wird entfernt.  
+  
+ Dieses Verhalten kann auch durch Behandeln implementiert werden die <xref:System.Windows.Forms.TreeView.BeforeCollapse?displayProperty=nameWithType> Ereignis, wie im Beispiel für das betreffende Thema veranschaulicht.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.TreeView.CheckBoxes%2A?displayProperty=nameWithType> Referenzthema.  
+  
+ [!code-cpp[TreeViewShowCheckedNodes1#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewShowCheckedNodes1/CPP/treeviewshowcheckednodes1.cpp#2)]
+ [!code-csharp[TreeViewShowCheckedNodes1#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewShowCheckedNodes1/CS/treeviewshowcheckednodes1.cs#2)]
+ [!code-vb[TreeViewShowCheckedNodes1#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewShowCheckedNodes1/VB/treeviewshowcheckednodes1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeViewCancelEventArgs (System.Windows.Forms.TreeNode node, bool cancel, System.Windows.Forms.TreeViewAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.TreeNode node, bool cancel, valuetype System.Windows.Forms.TreeViewAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeViewCancelEventArgs.#ctor(System.Windows.Forms.TreeNode,System.Boolean,System.Windows.Forms.TreeViewAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+        <Parameter Name="cancel" Type="System.Boolean" />
+        <Parameter Name="action" Type="System.Windows.Forms.TreeViewAction" />
+      </Parameters>
+      <Docs>
+        <param name="node">Die <see cref="T:System.Windows.Forms.TreeNode" /> , die auf das Ereignis reagiert wird.</param>
+        <param name="cancel">
+          <see langword="true" />um das Ereignis abzubrechen; andernfalls <see langword="false" />.</param>
+        <param name="action">Eines der <see cref="T:System.Windows.Forms.TreeViewAction" /> Werte, der angibt, der des Typs der Aktion, die das Ereignis ausgelöst hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.TreeViewCancelEventArgs" /> -Klasse mit der angegebenen Strukturknoten, ein Wert, der angibt, ob das Ereignis abgebrochen werden und den Typ der Struktur anzeigen Aktion, die das Ereignis ausgelöst hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeViewAction Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.TreeViewAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeViewCancelEventArgs.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeViewAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des <see cref="T:System.Windows.Forms.TreeView" /> Aktion, die das Ereignis ausgelöst hat.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.TreeViewAction" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TreeView.BeforeCheck?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.TreeView> mit dem Namen `TreeView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TreeView.BeforeCheck?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#626](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#626)]
+ [!code-vb[System.Windows.Forms.EventExamples#626](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#626)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode Node" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeViewCancelEventArgs.Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Strukturknoten ab, der aktiviert, erweitert, reduziert oder ausgewählt werden soll.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.TreeNode" /> auf dieses Kontrollkästchen aktiviert, erweitert, reduziert oder ausgewählt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Ändern des Zustands von einem <xref:System.Windows.Forms.TreeView> , damit alle aktivierten Knoten sichtbar sind. Zunächst sind alle Knoten reduziert, und ein Handler hinzugefügt, mit der <xref:System.Windows.Forms.TreeView.BeforeExpand?displayProperty=nameWithType> Ereignis. Anschließend werden alle Knoten erweitert werden. Die <xref:System.Windows.Forms.TreeView.BeforeExpand?displayProperty=nameWithType> Ereignishandler bestimmt, ob ein angegebener Knoten über untergeordnete Knoten verfügt, die überprüft werden. Wenn ein Knoten nicht überprüften untergeordnete Elemente verfügt, wird die Erweiterung für diesen Knoten abgebrochen. Damit normale Node-Erweiterung kann beim Klicken auf das Pluszeichen neben einem Knoten der <xref:System.Windows.Forms.TreeView.BeforeExpand?displayProperty=nameWithType> -Ereignishandler wird entfernt.  
+  
+ Dieses Verhalten kann auch durch Behandeln implementiert werden die <xref:System.Windows.Forms.TreeView.BeforeCollapse?displayProperty=nameWithType> Ereignis, wie im Beispiel für das betreffende Thema veranschaulicht.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.TreeView.CheckBoxes%2A?displayProperty=nameWithType> Referenzthema.  
+  
+ [!code-cpp[TreeViewShowCheckedNodes1#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewShowCheckedNodes1/CPP/treeviewshowcheckednodes1.cpp#2)]
+ [!code-csharp[TreeViewShowCheckedNodes1#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewShowCheckedNodes1/CS/treeviewshowcheckednodes1.cs#2)]
+ [!code-vb[TreeViewShowCheckedNodes1#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewShowCheckedNodes1/VB/treeviewshowcheckednodes1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,616 @@
+<Type Name="DriveInfo" FullName="System.IO.DriveInfo">
+  <TypeSignature Language="C#" Value="public sealed class DriveInfo : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DriveInfo extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.DriveInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht Zugriff auf Informationen zu einem Laufwerk.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse modelliert ein Laufwerk und stellt Methoden und Eigenschaften zur Abfrage von Informationen zum Laufwerk. Verwendung <xref:System.IO.DriveInfo> um zu bestimmen, welche Laufwerke verfügbar sind und welche Art von Laufwerken stehen. Sie können auch Abfragen, um die Kapazität und den verfügbaren freien Speicherplatz auf dem Laufwerk zu bestimmen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.DriveInfo> zum Anzeigen der Informationen über alle Laufwerke des aktuellen Systems.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.FileIOPermission">für den Zugriff auf Verzeichnisinformationen. Der Klassenkonstruktor erfordert diese Berechtigung. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DriveInfo (string driveName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string driveName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DriveInfo.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="driveName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="driveName">Ein gültiger Laufwerkpfad oder -buchstabe. Dieser kann von "a" bis "z" in Großbuchstaben oder in Kleinbuchstaben angegeben sein. Ein NULL-Wert ist nicht zulässig.</param>
+        <summary>Ermöglicht Zugriff auf Informationen zum angegebenen Laufwerk.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Klasse zum Abrufen von Informationen auf einem Laufwerk. Den Namen des Laufwerks muss ein Großbuchstabe oder Kleinbuchstabe Buchstaben von "a" bis "Z". Sie können mithilfe dieser Methode zum Abrufen von Informationen zu den Laufwerknamen, sind `null` , oder verwenden Sie UNC (\\\server\share) Pfade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Nicht mit den Buchstaben des Laufwerks <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der erste Buchstabe des <paramref name="driveName" /> ist kein Großbuchstabe oder Kleinbuchstabe Großbuchstabe von "a" bis "Z".  
+  
+ - oder -   
+  
+ <paramref name="driveName" />verweist nicht auf ein gültiges Laufwerk.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für den Zugriff auf Verzeichnisinformationen. Der Klassenkonstruktor erfordert diese Berechtigung. Zugeordnete Enumeration: <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailableFreeSpace">
+      <MemberSignature Language="C#" Value="public long AvailableFreeSpace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 AvailableFreeSpace" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.AvailableFreeSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Gesamtmenge an verfügbarem freiem Speicherplatz in Bytes ab, die auf einem Laufwerk verfügbar ist.</summary>
+        <value>Die auf dem Laufwerk verfügbare Menge an freiem Speicherplatz in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die Menge des verfügbaren freien Speicherplatzes auf dem Laufwerk an. Beachten Sie, dass diese Anzahl von unterscheiden kann die <xref:System.IO.DriveInfo.TotalFreeSpace%2A> number, da diese Eigenschaft in Konto Datenträgerkontingenten akzeptiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.DriveInfo> zum Anzeigen der Informationen über alle Laufwerke des aktuellen Systems.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Zugriff auf die Laufwerkinformationen wurde verweigert.</exception>
+        <exception cref="T:System.IO.IOException">E/a-Fehler (z. B. ein Datenträgerfehler oder ein Laufwerk nicht bereit war).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DriveFormat">
+      <MemberSignature Language="C#" Value="public string DriveFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DriveFormat" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.DriveFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Dateisystems ab, z. B. NTFS oder FAT32.</summary>
+        <value>Der Name des Dateisystems auf dem angegebenen Laufwerk.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.IO.DriveInfo.DriveFormat%2A> um zu bestimmen, welche laufwerkformatierung verwendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.DriveInfo> zum Anzeigen der Informationen über alle Laufwerke des aktuellen Systems.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Zugriff auf die Laufwerkinformationen wurde verweigert.</exception>
+        <exception cref="T:System.IO.DriveNotFoundException">Das Laufwerk ist nicht vorhanden oder ist nicht zugeordnet.</exception>
+        <exception cref="T:System.IO.IOException">E/a-Fehler (z. B. ein Datenträgerfehler oder ein Laufwerk nicht bereit war).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DriveType">
+      <MemberSignature Language="C#" Value="public System.IO.DriveType DriveType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.DriveType DriveType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.DriveType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DriveType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Laufwerkstyp ab, wie z. B. CD-ROM, Wechseldatenträger, Netzlaufwerk oder lokales Festplattenlaufwerk.</summary>
+        <value>Einer der Enumerationswerte, der einen Laufwerkstyp angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.DriveInfo.DriveType%2A> Eigenschaft gibt an, ob ein Laufwerk eines der folgenden ist: `CDRom`, `Fixed`, `Network`, `NoRootDirectory`, `Ram`, `Removable`, oder `Unknown`. Diese Werte werden beschrieben die <xref:System.IO.DriveType> Enumeration.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.DriveInfo> zum Anzeigen der Informationen über alle Laufwerke des aktuellen Systems.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDrives">
+      <MemberSignature Language="C#" Value="public static System.IO.DriveInfo[] GetDrives ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.DriveInfo[] GetDrives() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DriveInfo.GetDrives" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DriveInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Laufwerknamen aller logischen Laufwerke auf einem Computer ab.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.IO.DriveInfo" />, das die auf einem Computer vorhandenen logischen Laufwerke darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die Namen aller logischen Laufwerke auf einem Computer ab. Sie können diese Informationen verwenden, auf das Array durchlaufen und Abrufen von Informationen auf die Laufwerke, die mit anderen <xref:System.IO.DriveInfo> Methoden und Eigenschaften. Verwenden der <xref:System.IO.DriveInfo.IsReady%2A> Eigenschaft zu prüfen, ob ein Laufwerk bereit ist, da die Verwendung dieser Methode für ein Laufwerk, das nicht bereit ist auslöst, eine <xref:System.IO.IOException>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.DriveInfo> zum Anzeigen der Informationen über alle Laufwerke des aktuellen Systems.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">E/a-Fehler (z. B. ein Datenträgerfehler oder ein Laufwerk nicht bereit war).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Rufen Sie zum Aufrufen von nicht verwalteten Codes, wie das Aufrufen von systemeigenem Code mit dem Plattformaufruf oder COM-Interop. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReady">
+      <MemberSignature Language="C#" Value="public bool IsReady { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReady" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.IsReady" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Laufwerk bereit ist.</summary>
+        <value>
+          <see langword="true" />, wenn das Laufwerk bereit ist; <see langword="false" />, wenn das Laufwerk nicht bereit ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.DriveInfo.IsReady%2A>Gibt an, ob ein Laufwerk bereit ist. Beispielsweise überprüfen, ob es eine CD befindet sich in einem CD-Laufwerk oder gibt an, ob ein Wechselmedium für Lese-/Schreibvorgänge bereit ist. Wenn Sie nicht testen, ob ein Laufwerk bereit ist, und es nicht bereit ist ist, Abfragen, die mithilfe von Laufwerk <xref:System.IO.DriveInfo> löst eine <xref:System.IO.IOException>.  
+  
+ Verlassen Sie sich nicht auf <xref:System.IO.DriveInfo.IsReady%2A> zu vermeiden, wie z. B. Abfangen von Ausnahmen von anderen Mitgliedern <xref:System.IO.DriveInfo.TotalSize%2A>, <xref:System.IO.DriveInfo.TotalFreeSpace%2A>, und <xref:System.IO.DriveInfo.DriveFormat%2A>. Zwischen dem Zeitpunkt, der Ihren Code überprüft <xref:System.IO.DriveInfo.IsReady%2A> und greift dann auf eine der anderen Eigenschaften (auch wenn der Zugriff sofort nach der Überprüfung erfolgt), ein Laufwerk wurde getrennt, oder ein Datenträger wurde entfernt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.DriveInfo> zum Anzeigen der Informationen über alle Laufwerke des aktuellen Systems.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Laufwerks, z. B. "c:"\\.</summary>
+        <value>Der Name des Laufwerks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist das Laufwerk, z. B. C:\ oder "e:" zugewiesene Name\\.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.DriveInfo> zum Anzeigen der Informationen über alle Laufwerke des aktuellen Systems.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootDirectory">
+      <MemberSignature Language="C#" Value="public System.IO.DirectoryInfo RootDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.DirectoryInfo RootDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.RootDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DirectoryInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Stammverzeichnis eines Laufwerks ab.</summary>
+        <value>Ein Objekt, das das Stammverzeichnis des Laufwerks enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DriveInfo.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das mit Daten zu füllende Objekt.</param>
+        <param name="context">Das Ziel (siehe <see cref="T:System.Runtime.Serialization.StreamingContext" />) dieser Serialisierung.</param>
+        <summary>Füllt ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit den Daten, die zum Serialisieren des Zielobjekts erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Objekte eingeschlossen wurden die <xref:System.Runtime.Serialization.SerializationInfo> Objekt automatisch nachverfolgt und vom Formatierungsprogramm serialisiert werden.  
+  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.IO.DriveInfo>-Instanz in eine <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DriveInfo.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Laufwerknamen als Zeichenfolge zurück.</summary>
+        <returns>Der Name des Laufwerks.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die <xref:System.IO.DriveInfo.Name%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalFreeSpace">
+      <MemberSignature Language="C#" Value="public long TotalFreeSpace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TotalFreeSpace" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.TotalFreeSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtmenge an freiem Speicherplatz in Bytes ab, die auf einem Laufwerk verfügbar ist.</summary>
+        <value>Der auf einem Laufwerk verfügbare gesamte freie Speicherplatz in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die Gesamtmenge des verfügbaren freien Speicherplatzes auf dem Laufwerk, nicht nur für den aktuellen Benutzer verfügbar ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.DriveInfo> zum Anzeigen der Informationen über alle Laufwerke des aktuellen Systems.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Zugriff auf die Laufwerkinformationen wurde verweigert.</exception>
+        <exception cref="T:System.IO.DriveNotFoundException">Das Laufwerk ist nicht zugeordnet, oder es ist nicht vorhanden.</exception>
+        <exception cref="T:System.IO.IOException">E/a-Fehler (z. B. ein Datenträgerfehler oder ein Laufwerk nicht bereit war).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalSize">
+      <MemberSignature Language="C#" Value="public long TotalSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TotalSize" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.TotalSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtgröße des Speicherplatzes in Bytes auf einem Laufwerk ab.</summary>
+        <value>Die Gesamtgröße des Laufwerks in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die Gesamtgröße des Laufwerks in Bytes, nicht nur für den aktuellen Benutzer verfügbar ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.DriveInfo> zum Anzeigen der Informationen über alle Laufwerke des aktuellen Systems.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Zugriff auf die Laufwerkinformationen wurde verweigert.</exception>
+        <exception cref="T:System.IO.DriveNotFoundException">Das Laufwerk ist nicht zugeordnet, oder es ist nicht vorhanden.</exception>
+        <exception cref="T:System.IO.IOException">E/a-Fehler (z. B. ein Datenträgerfehler oder ein Laufwerk nicht bereit war).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VolumeLabel">
+      <MemberSignature Language="C#" Value="public string VolumeLabel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VolumeLabel" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.VolumeLabel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Volumebezeichnung eines Laufwerks ab oder legt diese fest.</summary>
+        <value>Die Volumebezeichnung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Bezeichnungslänge wird vom Betriebssystem bestimmt. NTFS ermöglicht z. B. eine Volumebezeichnung ein bis zu 32 Zeichen lang sein. Beachten Sie, dass `null` ist ein gültiger <xref:System.IO.DriveInfo.VolumeLabel%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.IO.DriveInfo> zum Anzeigen der Informationen über alle Laufwerke des aktuellen Systems.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">E/a-Fehler (z. B. ein Datenträgerfehler oder ein Laufwerk nicht bereit war).</exception>
+        <exception cref="T:System.IO.DriveNotFoundException">Das Laufwerk ist nicht zugeordnet, oder es ist nicht vorhanden.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Die Volumebezeichnung wird in einem Netzwerk oder CD-ROM-Laufwerk festgelegt.  
+  
+ - oder -   
+  
+ Zugriff auf die Laufwerkinformationen wurde verweigert.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Festlegen der Volumebezeichnung. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,149 @@
+<Type Name="XmlFormatExtensionPrefixAttribute" FullName="System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute">
+  <TypeSignature Language="C#" Value="public sealed class XmlFormatExtensionPrefixAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlFormatExtensionPrefixAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den XML-Namespace und den XML-Namespacepräfix für eine Beschreibung Format Erweiterung innerhalb einer dienstbeschreibung verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Erweiterung der Beschreibung Format erweitert, wie eine dienstbeschreibung für einen XML-Webdienst erstellt mithilfe von ASP.NET generiert wird. Insbesondere Fügt eine Erweiterung der Beschreibung Format XML-Elemente, die Beschreibung des Diensts. Dies ist hilfreich, wenn eine SOAP-Erweiterung zum Ausführen auf Client und Server-Seite von einem XML-Webdienst erstellt wird, wie Informationen zu SOAP-Erweiterungen in der dienstbeschreibung nicht platziert wird. Wenn Sie die Beschreibung des Diensts Informationen über die SOAP-Erweiterung hinzufügen, kann ein Client interpretiert werden, dass die spezifischen SOAP-Erweiterung ausgeführt werden muss. Ein Beispiel für eine SOAP-Erweiterung, die sowohl auf dem Client als auch auf dem Server ausgeführt werden muss, ist eine SOAP-Verschlüsselungserweiterung. Wenn eine SOAP-verschlüsselungserweiterung auf nur auf dem Server ausgeführt wird, und es Rückgabewerte vor dem Senden an den Client verschlüsselt, muss der Client die SOAP-Erweiterung, die zum Entschlüsseln der SOAP-Nachricht ausgeführt haben. Andernfalls kann der Client den Rückgabewert nicht verarbeiten.  
+  
+ Verwenden Sie die folgenden Schritte aus, um eine Erweiterung Format der Beschreibung zu erstellen:  
+  
+1.  Erstellen Sie eine Klasse, die abgeleitet <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension>.  
+  
+2.  Anwenden einer <xref:System.Web.Services.Configuration.XmlFormatExtensionAttribute> auf die Klasse, und geben Sie die Erweiterungspunkte, an dem die Webdiensterweiterung für Beschreibung Format ausführen sollten.  
+  
+3.  Wenden Sie optional eine <xref:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute> auf die Klasse, und geben Sie ein Element innerhalb der Klasse, die als neuer Erweiterungspunkt fungiert.  
+  
+4.  Wenden Sie optional eine <xref:System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute> auf die Klasse, und geben Sie das XML-Namespacepräfix, um XML-Elemente, die von der Beschreibung-Format diensterweiterung generierten zugeordnet werden.  
+  
+5.  Konfigurieren Sie die Beschreibung Format-Webdiensterweiterung für die Ausführung innerhalb der `serviceDescriptionFormatExtensionTypes` Abschnitt der Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#1)]
+ [!code-vb[ServiceDescriptionFormatExtension#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionPrefixAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionPrefixAttribute (string prefix, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string prefix, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das XML-Namespacepräfix, eine Erweiterung der Beschreibung Format zugeordnet.</param>
+        <param name="ns">Der XML-Namespace eine Erweiterung der Beschreibung Format zugeordnet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute" /> Klasse, indem die XML-Namespace und den XML-Namespacepräfix für eine Erweiterung der Beschreibung Format.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#2)]
+ [!code-vb[ServiceDescriptionFormatExtension#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den XML-Namespace, die eine Erweiterung der Beschreibung Format zugeordnet.</summary>
+        <value>Der XML-Namespace eine Erweiterung der Beschreibung Format zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#2)]
+ [!code-vb[ServiceDescriptionFormatExtension#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public string Prefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das XML-Namespacepräfix, die eine Erweiterung der Beschreibung Format zugeordnet.</summary>
+        <value>Das XML-Namespacepräfix, eine Erweiterung der Beschreibung Format zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#2)]
+ [!code-vb[ServiceDescriptionFormatExtension#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

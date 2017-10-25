@@ -1,0 +1,112 @@
+<Type Name="StartupNextInstanceEventArgs" FullName="Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs">
+  <TypeSignature Language="C#" Value="public class StartupNextInstanceEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi StartupNextInstanceEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für das <see langword="My.Application.StartupNextInstance" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> Ereignis tritt auf, wenn eine nachfolgende Instanz einer Einzelinstanz-Anwendung gestartet wird, verwenden das Visual Basic-Anwendungsmodell,. Weitere Informationen finden Sie unter [Überblick über die Visual Basic-Anwendungsmodell](~/docs/visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md).  
+  
+ <xref:Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs>enthält die Befehlszeilenargumente der nachfolgenden Anwendungsinstanz und gibt an, ob die erste Anwendungsinstanz in den Vordergrund beim Beenden des ausnahmehandlers geschaltet werden soll.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StartupNextInstanceEventArgs (System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; args, bool bringToForegroundFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; args, bool bringToForegroundFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs.#ctor(System.Collections.ObjectModel.ReadOnlyCollection{System.String},System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="args" Type="System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;" />
+        <Parameter Name="bringToForegroundFlag" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="args">Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> Objekt, das die Befehlszeilenargumente der nachfolgenden Anwendungsinstanz enthält.</param>
+        <param name="bringToForegroundFlag">Ein <see cref="T:System.Boolean" /> , der angibt, ob die erste Anwendungsinstanz in den Vordergrund beim Beenden des ausnahmehandlers geschaltet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> Ereignis tritt auf, wenn eine nachfolgende Instanz einer Einzelinstanz-Anwendung gestartet wird, verwenden das Visual Basic-Anwendungsmodell,. Weitere Informationen finden Sie unter [Überblick über die Visual Basic-Anwendungsmodell](~/docs/visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md).  
+  
+ <xref:Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs>enthält die Befehlszeilenargumente der nachfolgenden Anwendungsinstanz und gibt an, ob die erste Anwendungsinstanz in den Vordergrund beim Beenden des ausnahmehandlers geschaltet werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BringToForeground">
+      <MemberSignature Language="C#" Value="public bool BringToForeground { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BringToForeground" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs.BringToForeground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die erste Anwendungsinstanz in den Vordergrund beim Beenden des ausnahmehandlers geschaltet werden soll.</summary>
+        <value>Ein <see cref="T:System.Boolean" /> , der angibt, ob die erste Anwendungsinstanz in den Vordergrund beim Beenden des ausnahmehandlers geschaltet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Visual Basic-Anwendungsmodell überprüft den Wert dieser Eigenschaft nach dem Ausführen der Handler die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> Ereignis. Wenn die <xref:Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs.BringToForeground%2A> Eigenschaft `True`, ist die erste Anwendungsinstanz in den Vordergrund gebracht. Andernfalls ist die erste Anwendungsinstanz, bei denen es war. Weitere Informationen finden Sie unter [Überblick über die Visual Basic-Anwendungsmodell](~/docs/visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandLine">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; CommandLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; CommandLine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs.CommandLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Befehlszeilenargumente der nachfolgenden Anwendungsinstanz ab.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> Objekt, das die Befehlszeilenargumente der nachfolgenden Anwendungsinstanz enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> Ereignis tritt auf, wenn eine nachfolgende Instanz einer Einzelinstanz-Anwendung gestartet wird, verwenden das Visual Basic-Anwendungsmodell,. Weitere Informationen finden Sie unter [Überblick über die Visual Basic-Anwendungsmodell](~/docs/visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,13 @@
+<Namespace Name="System.Printing.Interop">
+  <Docs>
+    <summary>Stellt die Konvertierung von verwalteten <see cref="T:System.Printing.PrintTicket" /> Objekte und nicht verwalteten Graphics Device Interface (GDI) <see href="http://msdn.microsoft.com/library/windows/desktop/dd183565">DEVMODE</see> Strukturen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Namespace ist Teil der verbesserten Druckdienste Lieferumfang [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]. Entwickler von verwaltetem Code mit [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] verwenden, muss die [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)] in die <xref:System.Drawing.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

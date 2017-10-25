@@ -1,0 +1,171 @@
+<Type Name="TrackingServices" FullName="System.Runtime.Remoting.Services.TrackingServices">
+  <TypeSignature Language="C#" Value="public class TrackingServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TrackingServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Services.TrackingServices" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet eine Möglichkeit zum Registrieren und Aufheben der Registrierung erhalten eine Liste der Handler nachverfolgen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überwachung-Handler sind Objekte, implementieren die <xref:System.Runtime.Remoting.Services.ITrackingHandler> gibt an, dass sie benachrichtigt werden müssen, wenn die Infrastruktur für den Remotezugriff marshallt, unmarshals oder trennt, ein Objekt oder Proxy-Schnittstelle. Jedes Objekt, das registriert wird <xref:System.Runtime.Remoting.Services.TrackingServices> wird durch Remoting aufgerufen, wenn ein Objekt oder einen Proxy in der aktuellen <xref:System.AppDomain> gemarshallt, Marshalling oder getrennt wird.  
+  
+ Alle Methoden in der <xref:System.Runtime.Remoting.Services.TrackingServices> Klasse sind statisch und werden für die Trackinghandler in der aktuellen <xref:System.AppDomain>.  
+  
+> [!NOTE]
+>  Diese Klasse stellt einen Linkaufruf. SecurityException wird ausgelöst, wenn Sie der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur. Finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) für Weitere Informationen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Methoden der Verwendung der <xref:System.Runtime.Remoting.Services.TrackingServices> Klasse beim Registrieren und Aufheben der Überwachungsprofil-Handler.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einen Überwachungsprofil Handler implementiert.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#30](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/trackinghandler.cs#30)]  
+  
+ Das folgende Codebeispiel veranschaulicht die Implementierung dieser Klasse auf einem Server.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#20](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/server.cs#20)]  
+  
+ Im folgenden Codebeispiel wird die Implementierung dieser Klasse auf einem Client für den Server im vorangehenden Codebeispiel veranschaulicht.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#0](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/client.cs#0)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, die remote-Objekt, das vom Server und der Client verwendet wird.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#10](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/remoteservice.cs#10)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrackingServices ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.TrackingServices.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz von <see cref="T:System.Runtime.Remoting.Services.TrackingServices" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisteredHandlers">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Services.ITrackingHandler[] RegisteredHandlers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Runtime.Remoting.Services.ITrackingHandler[] RegisteredHandlers" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.TrackingServices.RegisteredHandlers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Services.ITrackingHandler[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array der Überwachungsprofil-Handler, die derzeit registriert sind <see cref="T:System.Runtime.Remoting.Services.TrackingServices" /> in der aktuellen <see cref="T:System.AppDomain" />.</summary>
+        <value>Ein Array der Überwachungsprofil-Handler, die derzeit registriert sind <see cref="T:System.Runtime.Remoting.Services.TrackingServices" /> in der aktuellen <see cref="T:System.AppDomain" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Services.TrackingServices> Klasse.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#22](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/server.cs#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterTrackingHandler">
+      <MemberSignature Language="C#" Value="public static void RegisterTrackingHandler (System.Runtime.Remoting.Services.ITrackingHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterTrackingHandler(class System.Runtime.Remoting.Services.ITrackingHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.TrackingServices.RegisterTrackingHandler(System.Runtime.Remoting.Services.ITrackingHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Runtime.Remoting.Services.ITrackingHandler" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Der Überwachungsprofil-Handler zu registrieren.</param>
+        <summary>Registriert einen neues Überwachungsprofil Handler mit der <see cref="T:System.Runtime.Remoting.Services.TrackingServices" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Services.TrackingServices> Klasse.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#21](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/server.cs#21)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="handler" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">Der Handler, der im angegebenen der <paramref name="handler" /> Parameter ist bereits registriert <see cref="T:System.Runtime.Remoting.Services.TrackingServices" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterTrackingHandler">
+      <MemberSignature Language="C#" Value="public static void UnregisterTrackingHandler (System.Runtime.Remoting.Services.ITrackingHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UnregisterTrackingHandler(class System.Runtime.Remoting.Services.ITrackingHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.TrackingServices.UnregisterTrackingHandler(System.Runtime.Remoting.Services.ITrackingHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Runtime.Remoting.Services.ITrackingHandler" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Der Handler beim Aufheben der Registrierung.</param>
+        <summary>Hebt die Registrierung des angegebenen Trackinghandlers aus <see cref="T:System.Runtime.Remoting.Services.TrackingServices" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Services.TrackingServices> Klasse.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#23](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/server.cs#23)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="handler" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">Der Handler, der im angegebenen der <paramref name="handler" /> Parameter ist nicht registriert, mit <see cref="T:System.Runtime.Remoting.Services.TrackingServices" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,600 @@
+<Type Name="ColorConvertedBitmap" FullName="System.Windows.Media.Imaging.ColorConvertedBitmap">
+  <TypeSignature Language="C#" Value="public sealed class ColorConvertedBitmap : System.Windows.Media.Imaging.BitmapSource, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ColorConvertedBitmap extends System.Windows.Media.Imaging.BitmapSource implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.ColorConvertedBitmap" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Imaging.BitmapSource</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ändert den Farbraum für eine <see cref="T:System.Windows.Media.Imaging.BitmapSource" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Verwendung von XAML-finden Sie unter [ColorConvertedBitmap Markuperweiterung](~/docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md).  
+  
+ <xref:System.Windows.Media.Imaging.ColorConvertedBitmap>implementiert die <xref:System.ComponentModel.ISupportInitialize> Schnittstelle, um die Initialisierung für mehrere Eigenschaften zu optimieren. Eigenschaftenänderungen können nur während der Objektinitialisierung erfolgen. Rufen Sie <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.BeginInit%2A> zu signalisieren, dass die Initialisierung wurde gestartet und <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.EndInit%2A> um zu signalisieren, dass die Initialisierung abgeschlossen hat. Nach der Initialisierung werden die eigenschaftenänderungen ignoriert.  
+  
+ <xref:System.Windows.Media.Imaging.ColorConvertedBitmap>Objekte, die erstellt, mit der <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.%23ctor%28System.Windows.Media.Imaging.BitmapSource%2CSystem.Windows.Media.ColorContext%2CSystem.Windows.Media.ColorContext%2CSystem.Windows.Media.PixelFormat%29> Konstruktor automatisch initialisiert wird, und eigenschaftenänderungen werden ignoriert.  
+  
+ Ein <xref:System.Windows.Media.Imaging.ColorConvertedBitmap> wird nie zwischengespeichert.  
+  
+<a name="xamlTextUsage_ColorConvertedBitmap"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Finden Sie unter "Hinweise"  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer Instanz von <xref:System.Windows.Media.Imaging.ColorConvertedBitmap> und verwenden, um die Farbe zu konvertieren.  
+  
+ [!code-csharp[bitmapimageprops#2](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#2)]
+ [!code-vb[bitmapimageprops#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColorConvertedBitmap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.ColorConvertedBitmap.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.ColorConvertedBitmap>implementiert die <xref:System.ComponentModel.ISupportInitialize> Schnittstelle, um die Initialisierung für mehrere Eigenschaften zu optimieren. Zum Initialisieren einer <xref:System.Windows.Media.Imaging.ColorConvertedBitmap> erstellt haben, verwenden diesen Konstruktor, führen Sie eigenschaftsinitialisierung zwischen <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.EndInit%2A> Aufrufe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColorConvertedBitmap (System.Windows.Media.Imaging.BitmapSource source, System.Windows.Media.ColorContext sourceColorContext, System.Windows.Media.ColorContext destinationColorContext, System.Windows.Media.PixelFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Imaging.BitmapSource source, class System.Windows.Media.ColorContext sourceColorContext, class System.Windows.Media.ColorContext destinationColorContext, valuetype System.Windows.Media.PixelFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.ColorConvertedBitmap.#ctor(System.Windows.Media.Imaging.BitmapSource,System.Windows.Media.ColorContext,System.Windows.Media.ColorContext,System.Windows.Media.PixelFormat)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Media.Imaging.BitmapSource" />
+        <Parameter Name="sourceColorContext" Type="System.Windows.Media.ColorContext" />
+        <Parameter Name="destinationColorContext" Type="System.Windows.Media.ColorContext" />
+        <Parameter Name="format" Type="System.Windows.Media.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> , die konvertiert wird.</param>
+        <param name="sourceColorContext">Die <see cref="T:System.Windows.Media.ColorContext" /> des Quellbitmaps.</param>
+        <param name="destinationColorContext">Die <see cref="T:System.Windows.Media.ColorContext" /> der konvertierte Bitmap.</param>
+        <param name="format">Die <see cref="T:System.Windows.Media.PixelFormat" /> der konvertierte Bitmap.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" />-Klasse unter Verwendung der angegebenen Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.ColorConvertedBitmap>mit diesem Konstruktor erstellten Objekte werden automatisch initialisiert. Nach der Initialisierung werden die eigenschaftenänderungen ignoriert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Instanz von initialisiert <xref:System.Windows.Media.Imaging.ColorConvertedBitmap> mithilfe der <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.%23ctor%28System.Windows.Media.Imaging.BitmapSource%2CSystem.Windows.Media.ColorContext%2CSystem.Windows.Media.ColorContext%2CSystem.Windows.Media.PixelFormat%29> Konstruktor.  
+  
+ [!code-csharp[bitmapimageprops#2](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#2)]
+ [!code-vb[bitmapimageprops#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.ColorConvertedBitmap.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert den Anfang der <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" /> Initialisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaftsinitialisierung muss erfolgen, zwischen <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.EndInit%2A> aufrufen. Nach der <xref:System.Windows.Media.Imaging.ColorConvertedBitmap> wurde initialisiert, eigenschaftenänderungen werden ignoriert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Initialisieren einer <xref:System.Windows.Media.Imaging.ColorConvertedBitmap> mit einem Satz von Eigenschaften mit den <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.EndInit%2A> Methoden.  
+  
+ [!code-csharp[bitmapimageprops#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#3)]
+ [!code-vb[bitmapimageprops#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" /> gerade initialisiert wird. <see cref="M:System.Windows.Media.Imaging.ColorConvertedBitmap.BeginInit" />wurde bereits aufgerufen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" /> wurde bereits initialisiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.ColorConvertedBitmap Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Imaging.ColorConvertedBitmap Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.ColorConvertedBitmap.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.ColorConvertedBitmap</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.ColorConvertedBitmap.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.ColorConvertedBitmap CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Imaging.ColorConvertedBitmap CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.ColorConvertedBitmap.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.ColorConvertedBitmap</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.ColorConvertedBitmap.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.ColorConvertedBitmap.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationColorContext">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ColorContext DestinationColorContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.ColorContext DestinationColorContext" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.ColorConvertedBitmap.DestinationColorContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ColorContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der das Farbprofil identifiziert gemäß der <see cref="T:System.Windows.Media.ColorContext" /> Klasse, die das konvertierte Bitmap.</summary>
+        <value>Eine Instanz von <see cref="T:System.Windows.Media.ColorContext" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eigenschaftenänderungen vornehmen, um eine <xref:System.Windows.Media.Imaging.ColorConvertedBitmap>, die Änderungen vorgenommen werden innerhalb einer <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.EndInit%2A> Block.  
+  
+<a name="xamlTextUsage_Property"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+  
+<a name="dependencyPropertyInfo_DestinationColorContext"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.ColorConvertedBitmap.DestinationColorContextProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen des Werts, der die <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.DestinationColorContext%2A> Eigenschaft.  
+  
+ [!code-csharp[bitmapimageprops#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#3)]
+ [!code-vb[bitmapimageprops#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationColorContextProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DestinationColorContextProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DestinationColorContextProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.ColorConvertedBitmap.DestinationColorContextProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.ColorConvertedBitmap.DestinationColorContext" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationFormat">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PixelFormat DestinationFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.PixelFormat DestinationFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.ColorConvertedBitmap.DestinationFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der darstellt der <see cref="T:System.Windows.Media.PixelFormat" /> der konvertierte Bitmap.</summary>
+        <value>Eine Instanz von <see cref="T:System.Windows.Media.PixelFormat" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eigenschaftenänderungen vornehmen, um eine <xref:System.Windows.Media.Imaging.ColorConvertedBitmap>, die Änderungen vorgenommen werden innerhalb einer <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.EndInit%2A> Block.  
+  
+<a name="xamlTextUsage_Property2"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+  
+<a name="dependencyPropertyInfo_DestinationFormat"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.ColorConvertedBitmap.DestinationFormatProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen des Werts, der die <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.DestinationFormat%2A> Eigenschaft.  
+  
+ [!code-csharp[bitmapimageprops#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#3)]
+ [!code-vb[bitmapimageprops#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationFormatProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DestinationFormatProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DestinationFormatProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.ColorConvertedBitmap.DestinationFormatProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.ColorConvertedBitmap.DestinationFormat" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.ColorConvertedBitmap.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert das Ende der <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" /> Initialisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaftsinitialisierung muss erfolgen, zwischen <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.EndInit%2A> aufrufen. Nach der <xref:System.Windows.Media.Imaging.ColorConvertedBitmap> wurde initialisiert, eigenschaftenänderungen werden ignoriert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.EndInit%2A> Methode zum Ändern der Eigenschaften einer <xref:System.Windows.Media.Imaging.ColorConvertedBitmap>.  
+  
+ [!code-csharp[bitmapimageprops#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#3)]
+ [!code-vb[bitmapimageprops#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Media.Imaging.ColorConvertedBitmap.Source" />, <see cref="P:System.Windows.Media.Imaging.ColorConvertedBitmap.SourceColorContext" />, oder <see cref="P:System.Windows.Media.Imaging.ColorConvertedBitmap.DestinationColorContext" /> Eigenschaft ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Die <see cref="M:System.Windows.Media.Imaging.ColorConvertedBitmap.EndInit" /> Methode wird aufgerufen, ohne dass zuvor <see cref="M:System.Windows.Media.Imaging.ColorConvertedBitmap.BeginInit" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.ColorConvertedBitmap.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.ColorConvertedBitmap.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapSource Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapSource Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.ColorConvertedBitmap.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die Quellbitmap identifiziert, die konvertiert wird.</summary>
+        <value>Ein Wert, der die Quellbitmap identifiziert, die konvertiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eigenschaftenänderungen vornehmen, um eine <xref:System.Windows.Media.Imaging.ColorConvertedBitmap>, die Änderungen vorgenommen werden innerhalb einer <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.EndInit%2A> Block.  
+  
+<a name="xamlTextUsage_Property3"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+  
+<a name="dependencyPropertyInfo_Source"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.ColorConvertedBitmap.SourceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen des Werts, der die <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.Source%2A> Eigenschaft.  
+  
+ [!code-csharp[bitmapimageprops#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#3)]
+ [!code-vb[bitmapimageprops#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceColorContext">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ColorContext SourceColorContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.ColorContext SourceColorContext" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.ColorConvertedBitmap.SourceColorContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ColorContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der das Farbprofil der Bitmap für die Datenquelle identifiziert.</summary>
+        <value>Eine Instanz von <see cref="T:System.Windows.Media.ColorContext" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eigenschaftenänderungen vornehmen, um eine <xref:System.Windows.Media.Imaging.ColorConvertedBitmap>, die Änderungen vorgenommen werden innerhalb einer <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.EndInit%2A> Block.  
+  
+<a name="xamlTextUsage_Property4"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+  
+<a name="dependencyPropertyInfo_SourceColorContext"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.ColorConvertedBitmap.SourceColorContextProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen des Werts, der die <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.SourceColorContext%2A> Eigenschaft.  
+  
+ [!code-csharp[bitmapimageprops#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#3)]
+ [!code-vb[bitmapimageprops#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceColorContextProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SourceColorContextProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SourceColorContextProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.ColorConvertedBitmap.SourceColorContextProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.ColorConvertedBitmap.SourceColorContext" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Bezeichner für die <xref:System.Windows.Media.Imaging.ColorConvertedBitmap.SourceColorContext%2A>-Abhängigkeitseigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.ColorConvertedBitmap.SourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.ColorConvertedBitmap.Source" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

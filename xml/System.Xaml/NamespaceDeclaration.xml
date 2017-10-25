@@ -1,0 +1,116 @@
+<Type Name="NamespaceDeclaration" FullName="System.Xaml.NamespaceDeclaration">
+  <TypeSignature Language="C#" Value="public class NamespaceDeclaration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NamespaceDeclaration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.NamespaceDeclaration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Prefix={Prefix} Namespace={Namespace}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Deklariert den Bezeichner und das Präfix für einen XAML-Namespace durch Speichern dieser Zeichenfolgenwerte als separate Eigenschaften.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.NamespaceDeclaration>Stellt Informationen zu XAML-Namespace als Teil eines XAML-Knotenstreams dar. Die <xref:System.Xaml.NamespaceDeclaration> Klasse ist ein Knoten, der nicht tatsächlich ein Objekt oder Element ist; es wird stattdessen eine diskrete Knotentyp.  
+  
+ In der XAML-Knotenstream eine <xref:System.Xaml.NamespaceDeclaration> auftritt, wird unmittelbar vor dem das Objekt oder einen Member, XAML-Namespace gilt.  
+  
+ Gemäß der Konvention ähnelt der Bezeichner eines XAML-Namespace ein Uniform Resource Identifier (URI). Allerdings die <xref:System.Xaml.NamespaceDeclaration.Namespace%2A> Eigenschaft <xref:System.Xaml.NamespaceDeclaration> ist vom Typ <xref:System.String>. Die APIs von .NET Framework XAML Services behandeln normalerweise XAML-Namespacebezeichner als Zeichenfolgen. Der Relative oder absolute Unterschiede in der "true" <xref:System.Uri> zum Identifizieren von eines XAML-(oder XML)-Namespaces nicht relevant sind. Die URI-wie-Namespace-Konvention ist auch in XML üblich.  
+  
+ Objekte dieses Typs werden verwendet, als Eingabe für die <xref:System.Xaml.XamlObjectWriter.WriteNamespace%2A?displayProperty=nameWithType> Methode beim Schreiben von XAML-Knoten Stream Informationen in einem Objektdiagramm. Objekte dieses Typs werden verwendet, als Eingabe für die <xref:System.Xaml.XamlXmlWriter.WriteNamespace%2A?displayProperty=nameWithType> Methode beim Schreiben von XAML-Stream Knoteninformationen im XML-Format für die Serialisierung.  
+  
+ Eine Namespacedeklaration möglicherweise eine <xref:System.String.Empty?displayProperty=nameWithType> Wert für das Präfix. Ein <xref:System.String.Empty?displayProperty=nameWithType> Präfix stellt eine Deklaration des XAML-Standardnamespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamespaceDeclaration (string ns, string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ns, string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.NamespaceDeclaration.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">Die Verwendung von XAML-Namespacebezeichner als Zeichenfolge.</param>
+        <param name="prefix">Das zeichenfolgenpräfix, das für den Namespace in/Präfix-Zuordnungen verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.NamespaceDeclaration" /> -Klasse mit Anfangswerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Initialisierung von <xref:System.Xaml.NamespaceDeclaration> versucht nicht, Werte zu überprüfen. Um einen XAML-Writer ordnungsgemäß zu verwenden, verwenden Sie nicht die null-Werte. Eine Namespacedeklaration möglicherweise eine <xref:System.String?displayProperty=nameWithType> Wert für das Präfix. Ein <xref:System.String?displayProperty=nameWithType> Präfix stellt eine Deklaration des XAML-Standardnamespace.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.NamespaceDeclaration.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bezeichnerkomponente, der eine <see cref="T:System.Xaml.NamespaceDeclaration" />.</summary>
+        <value>Der Bezeichner für die Verwendung von XAML-Namespace-Deklaration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gemäß der Konvention ähnelt der Bezeichner für einen XAML-Namespace ein Uniform Resource Identifier (URI). Die APIs von .NET Framework XAML Services behandeln normalerweise XAML-Namespacebezeichner als Zeichenfolgen. Der Relative oder absolute Unterschiede in der "true" <xref:System.Uri> zum Identifizieren von eines XAML-(oder XML)-Namespaces nicht relevant sind. Die URI-wie-Namespace-Konvention ist auch in XML üblich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public string Prefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.NamespaceDeclaration.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Präfix, das verwendet wird, als die Verwendung von XAML-Namespace Zuordnungspräfix für einen <see cref="T:System.Xaml.NamespaceDeclaration" />.</summary>
+        <value>Die Präfixzeichenfolge für diesen <see cref="T:System.Xaml.NamespaceDeclaration" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Namespacedeklaration möglicherweise eine <xref:System.String?displayProperty=nameWithType> Wert für das Präfix. Ein <xref:System.String?displayProperty=nameWithType> Präfix stellt eine Deklaration des XAML-Standardnamespace.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

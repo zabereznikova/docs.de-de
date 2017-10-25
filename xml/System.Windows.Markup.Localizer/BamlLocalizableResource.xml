@@ -1,0 +1,262 @@
+<Type Name="BamlLocalizableResource" FullName="System.Windows.Markup.Localizer.BamlLocalizableResource">
+  <TypeSignature Language="C#" Value="public class BamlLocalizableResource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BamlLocalizableResource extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Localizer.BamlLocalizableResource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine lokalisierbare Ressourcen in einem BAML-Datenstrom dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.Localizer.BamlLocalizableResource> Klasse ist die Wertkomponente des Schlüssel-Wert-Paare, die gefunden, die einem <xref:System.Windows.Markup.Localizer.BamlLocalizationDictionary>.  
+  
+<a name="xamlTextUsage_BamlLocalizableResource"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Markup.Localizer.BamlLocalizableResource>.  
+  
+ [!code-csharp[GrabBaml#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GrabBaml/CSharp/GrabBaml.cs#1)]
+ [!code-vb[GrabBaml#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GrabBaml/visualbasic/grabbaml.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BamlLocalizableResource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizableResource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResource" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BamlLocalizableResource (string content, string comments, System.Windows.LocalizationCategory category, bool modifiable, bool readable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string content, string comments, valuetype System.Windows.LocalizationCategory category, bool modifiable, bool readable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizableResource.#ctor(System.String,System.String,System.Windows.LocalizationCategory,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="comments" Type="System.String" />
+        <Parameter Name="category" Type="System.Windows.LocalizationCategory" />
+        <Parameter Name="modifiable" Type="System.Boolean" />
+        <Parameter Name="readable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="content">Den lokalisierbaren Wert.</param>
+        <param name="comments">Kommentare, die für die Lokalisierung verwendet werden.</param>
+        <param name="category">Die Zeichenfolgenkategorie der Ressource.</param>
+        <param name="modifiable">
+          <see langword="true" />Wenn die Ressource geändert werden sollte; andernfalls <see langword="false" />.</param>
+        <param name="readable">
+          <see langword="true" />Wenn die Ressource angezeigt werden soll aus Gründen der Übersetzung verwendet werden, da es möglicherweise als Text in der Benutzeroberfläche angezeigt wird; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResource" /> -Klasse, mit der angegebenen lokalisierbaren Wert, von Lokalisierungskommentaren Ressourcenkategorie, Lokalisierung Sperrstatus und Sichtbarkeit der Ressource.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public System.Windows.LocalizationCategory Category { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LocalizationCategory Category" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResource.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Lokalisierungskategorie einer Ressource.</summary>
+        <value>Die Lokalisierungskategorie als Wert der Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Category"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comments">
+      <MemberSignature Language="C#" Value="public string Comments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comments" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResource.Comments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die lokalisierungkommentare einer Ressource zugeordnete.</summary>
+        <value>Die Lokalisierung Kommentar-Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vom Entwickler Lokalisierungsexperten Regeln oder die Hinweise bereit Lokalisierungskommentaren erstellt wurden. Die Kommentare sind Freiform-Zeichenfolgen, die aus einer Datei extrahiert werden [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] oder Lokalisierungsdateien für Kommentare. Anzufügende Kommentare zu einem Element im [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], verwenden Sie die <xref:System.Windows.Localization.Comments%2A?displayProperty=nameWithType> angefügte Eigenschaft für Weitere Informationen zu dieser Eigenschaft finden Sie unter [Lokalisierungsattribute und Kommentare](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+<a name="xamlTextUsage_Comments"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public string Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResource.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den lokalisierbaren Inhalt.</summary>
+        <value>Die lokalisierbare Inhaltszeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Untergeordnete Elemente in der Standardeinstellung werden als Platzhalter dargestellt. Der Platzhalter beginnt, durch das Zeichen "#", klicken Sie dann das untergeordnete Element UID, ein ";". Z. B. "#TextBlock1; #TextBlock2;". Normale "#" und ";" Zeichen innerhalb des Inhalts werden mit Escapezeichen versehen einer "\\". Dies gilt für den tatsächlichen "\\" Zeichen selbst. Das Entfernen der untergeordneten Platzhalter im Inhalt ist nicht zulässig, da ein Element im Code verwiesen werden kann, die die lokalisierte Anwendung zur Laufzeit fehlschlagen könnte. Allerdings ist es zulässig, im lokalisierten Versionen neu anordnen.  
+  
+ Untergeordnete Elemente im Inhalt können auch als XML-Markup zur besseren Lesbarkeit formatiert werden. Zu diesem Zweck beim <xref:System.Windows.Markup.Localizer.BamlLocalizer> Abfragen der <xref:System.Windows.Markup.Localizer.ElementLocalizability> des gewünschten Elements, legen Sie die <xref:System.Windows.Markup.Localizer.ElementLocalizability.FormattingTag%2A> -Eigenschaft auf den gewünschten Tagnamen.  
+  
+<a name="xamlTextUsage_Content"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizableResource.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResource" /> Objekt auf Gleichheit.</param>
+        <summary>Bestimmt, ob ein angegebener <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResource" /> Objekt gleich diesem Objekt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="other" /> gleich diesem Objekt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizableResource.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Hashcode als ganze Zahl, die dieser Instanz darstellt.</summary>
+        <returns>Ein Hashcode als ganze Zahl.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifiable">
+      <MemberSignature Language="C#" Value="public bool Modifiable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Modifiable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResource.Modifiable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die lokalisierbare Ressource geändert werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Ressource geändert werden kann; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Modifiable"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Readable">
+      <MemberSignature Language="C#" Value="public bool Readable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Readable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResource.Readable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob die Ressource für die Übersetzung sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Ressource für die Übersetzung sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.Localizer.BamlLocalizableResource.Readable%2A> Wert dient als eine Empfehlung für den Lokalisierungsexperten zu gibt an, ob der Inhalt der lokalisierbaren Ressource direkt als einfache Zeichenfolgen übersetzt werden kann.  
+  
+ Z. B. wenn die Zeichenfolge "Red" als UI-Zeichenfolge verwendet wird, können sie direkt zu einer anderen Sprache übersetzt werden. In diesem Fall die <xref:System.Windows.Markup.Localizer.BamlLocalizableResource.Readable%2A> Eigenschaft sollte festgelegt werden, um `true`.  
+  
+ Wenn die Zeichenfolge "Red" verwendet wird, als Wert der vordefinierten Farben eine <xref:System.Windows.Media.Brush>, kann nicht übersetzt werden. Aus diesem Grund die <xref:System.Windows.Markup.Localizer.BamlLocalizableResource.Readable%2A> Eigenschaft sollte festgelegt werden, um `false`.  
+  
+<a name="xamlTextUsage_Readable"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,149 @@
+<Type Name="IDispatchMessageInspector" FullName="System.ServiceModel.Dispatcher.IDispatchMessageInspector">
+  <TypeSignature Language="C#" Value="public interface IDispatchMessageInspector" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDispatchMessageInspector" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.IDispatchMessageInspector" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Methoden, die eine benutzerdefinierte Überprüfung oder Änderung von eingehenden und ausgehenden Anwendungsnachrichten in Dienstanwendungen ermöglichen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>, um eingehende und ausgehende Anwendungsnachrichten vor dem Weiterleiten einer Anforderungsnachricht an einen Vorgang oder vor dem Zurückgeben einer Antwortnachricht an einen Aufrufer zu überprüfen oder zu ändern. Es gibt eine große Anzahl von Szenarios, in denen das Abfangen von Nachrichten vor dem Aufrufen des Vorgangs erforderlich ist, für den diese bestimmt sind. Beispielsweise können Sie eingehende Anwendungsnachrichten protokollieren oder eine Funktion auf der Basis eines Nachrichtenheaders ausführen.  
+  
+ In der Regel werden Nachrichteninspektoren durch ein Dienstverhalten (<xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>), ein Endpunktverhalten (<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>) oder ein Vertragsverhalten (<xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>) eingefügt. Das Verhalten fügt dann den Nachrichteninspektor der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A?displayProperty=nameWithType>-Auflistung hinzu. Weitere Informationen zur Ausdehnung der Laufzeit mithilfe von Verhaltensweisen finden Sie unter [Erweitern von ServiceHost und der Dienstmodellebene](~/docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>-Methode aktiviert benutzerdefiniertes Verhalten, nachdem die Nachricht eingegangen ist, jedoch bevor sie an den beabsichtigten Vorgang gesendet wird.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>-Methode aktiviert benutzerdefiniertes Verhalten, nachdem der Vorgang zurückgegeben wurde, jedoch bevor die Antwort gesendet wird.  
+  
+> [!NOTE]
+>  <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>-Objekte werden immer am selben Punkt während des Sendens von Nachrichten aufgerufen, unabhängig davon, ob es sich um einen unidirektionalen oder einen Anforderung/Antwort-Vorgang handelt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein grundlegender <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> veranschaulicht, der eine Zeichenfolge in der Konsole ausgibt, wenn er aufgerufen wird.  
+  
+ [!code-csharp[Interceptors#7](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#7)]
+ [!code-vb[Interceptors#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#7)]  
+  
+ Im folgenden Codebeispiel wird die Implementierung von <xref:System.ServiceModel.Description.IServiceBehavior> veranschaulicht, das `Inspector`<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A?displayProperty=nameWithType>-Auflistung hinzufügt.  
+  
+ [!code-csharp[Interceptors#8](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#8)]
+ [!code-vb[Interceptors#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#8)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Anwendungskonfigurationsdatei verwendet wird, um das Dienstverhalten zu laden, das den `Inspector`<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> einfügt.  
+  
+ [!code-xml[Interceptors#9](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/hostapplication.exe.config#9)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AfterReceiveRequest">
+      <MemberSignature Language="C#" Value="public object AfterReceiveRequest (ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object AfterReceiveRequest(class System.ServiceModel.Channels.Message&amp; request, class System.ServiceModel.IClientChannel channel, class System.ServiceModel.InstanceContext instanceContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest(System.ServiceModel.Channels.Message@,System.ServiceModel.IClientChannel,System.ServiceModel.InstanceContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.ServiceModel.Channels.Message&amp;" RefType="ref" />
+        <Parameter Name="channel" Type="System.ServiceModel.IClientChannel" />
+        <Parameter Name="instanceContext" Type="System.ServiceModel.InstanceContext" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die Anforderungsnachricht.</param>
+        <param name="channel">Der eingehende Kanal.</param>
+        <param name="instanceContext">Die aktuelle Dienstinstanz.</param>
+        <summary>Wird aufgerufen, nachdem eine eingehende Nachricht empfangen wurde, jedoch bevor die Nachricht an den beabsichtigten Vorgang weitergeleitet wird.</summary>
+        <returns>Das Objekt, das verwendet wird, um den Zustand zu korrelieren. Dieses Objekt wird an die <see cref="M:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply(System.ServiceModel.Channels.Message@,System.Object)" />-Methode zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>-Methode, um die eingehende Nachricht, den Clientkanal, der sie bereitgestellt hat, und die aktuelle Dienstinstanz zu prüfen oder zu ändern. Der Rückgabewert kann jedes Objekt sein, das Sie für Korrelationszwecke verwenden möchten; es wird als `correlationState`-Parameter in der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>-Methode zurückgegeben.  
+  
+> [!IMPORTANT]
+>  Sie können den Text der Nachricht nicht verwenden, sofern Sie nicht die gesamte Nachricht puffern und eine Kopie davon erstellen. Wenn Sie so vorgehen, müssen Sie zwei Kopien der Nachricht erstellen: eine für das Überprüfen und die zweite für das Überschreiben des `request`-Parameters.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein grundlegender <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> veranschaulicht, der eine Zeichenfolge in der Konsole ausgibt, wenn er aufgerufen wird.  
+  
+ [!code-csharp[Interceptors#7](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#7)]
+ [!code-vb[Interceptors#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#7)]  
+  
+ Im folgenden Codebeispiel wird die Implementierung von <xref:System.ServiceModel.Description.IServiceBehavior> veranschaulicht, das `Inspector`<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A?displayProperty=nameWithType>-Auflistung hinzufügt.  
+  
+ [!code-csharp[Interceptors#8](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#8)]
+ [!code-vb[Interceptors#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#8)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Anwendungskonfigurationsdatei verwendet wird, um das Dienstverhalten zu laden, das den `Inspector`<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> einfügt.  
+  
+ [!code-xml[Interceptors#9](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/hostapplication.exe.config#9)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeSendReply">
+      <MemberSignature Language="C#" Value="public void BeforeSendReply (ref System.ServiceModel.Channels.Message reply, object correlationState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeforeSendReply(class System.ServiceModel.Channels.Message&amp; reply, object correlationState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply(System.ServiceModel.Channels.Message@,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reply" Type="System.ServiceModel.Channels.Message&amp;" RefType="ref" />
+        <Parameter Name="correlationState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="reply">Die Antwortnachricht. Dieser Wert ist NULL, wenn es sich um einen unidirektionalen Vorgang handelt.</param>
+        <param name="correlationState">Das von der <see cref="M:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest(System.ServiceModel.Channels.Message@,System.ServiceModel.IClientChannel,System.ServiceModel.InstanceContext)" />-Methode zurückgegebene Korrelationsobjekt.</param>
+        <summary>Wird aufgerufen, nachdem der Vorgang zurückgegeben wurde, jedoch bevor die Antwortnachricht gesendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>-Methode, um benutzerdefiniertes Verhalten auszuführen, bevor die Rückgabenachricht gesendet wird. `correlationState` ist das von der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>-Methode zurückgegebene Objekt, das Sie verwenden können, um eine Korrelation zwischen eingehenden und ausgehenden Aufrufen zur Unterstützung des Verhaltens herzustellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein grundlegender <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> veranschaulicht, der eine Zeichenfolge in der Konsole ausgibt, wenn er aufgerufen wird.  
+  
+ [!code-csharp[Interceptors#7](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#7)]
+ [!code-vb[Interceptors#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#7)]  
+  
+ Im folgenden Codebeispiel wird die Implementierung von <xref:System.ServiceModel.Description.IServiceBehavior> veranschaulicht, das `Inspector`<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A?displayProperty=nameWithType>-Auflistung hinzufügt.  
+  
+ [!code-csharp[Interceptors#8](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#8)]
+ [!code-vb[Interceptors#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#8)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Anwendungskonfigurationsdatei verwendet wird, um das Dienstverhalten zu laden, das den `Inspector`<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> einfügt.  
+  
+ [!code-xml[Interceptors#9](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/hostapplication.exe.config#9)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

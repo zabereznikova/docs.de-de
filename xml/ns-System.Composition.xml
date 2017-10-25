@@ -1,0 +1,6 @@
+<Namespace Name="System.Composition">
+  <Docs>
+    <summary>Die <see cref="N:System.Composition" /> -Namespace enthält Klassen zum Erstellen und Angeben von ExportAttribute, Abrufen von Exporten aus einer Komposition ImportAttribute, konfigurieren und für die Angabe, wie Teile während der Komposition interagieren.</summary>
+    <remarks></remarks>
+  </Docs>
+</Namespace>

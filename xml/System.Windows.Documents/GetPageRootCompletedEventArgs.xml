@@ -1,0 +1,37 @@
+<Type Name="GetPageRootCompletedEventArgs" FullName="System.Windows.Documents.GetPageRootCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class GetPageRootCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GetPageRootCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.GetPageRootCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Documents.PageContent.GetPageRootCompleted" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.FixedPage Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.FixedPage Result" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.GetPageRootCompletedEventArgs.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.FixedPage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Documents.FixedPage" /> Inhalt asynchron vom angeforderten <see cref="M:System.Windows.Documents.PageContent.GetPageRootAsync(System.Boolean)" />.</summary>
+        <value>Das Stammelement der visuellen Struktur für die <see cref="T:System.Windows.Documents.PageContent" /> vom angeforderten <see cref="M:System.Windows.Documents.PageContent.GetPageRootAsync(System.Boolean)" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

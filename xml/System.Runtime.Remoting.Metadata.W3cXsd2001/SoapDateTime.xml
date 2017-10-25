@@ -1,0 +1,174 @@
+<Type Name="SoapDateTime" FullName="System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime">
+  <TypeSignature Language="C#" Value="public sealed class SoapDateTime" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapDateTime extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt statische Methoden für die Serialisierung und Deserialisierung von <see cref="T:System.DateTime" /> in eine Zeichenfolge, die im XSD-Format formatiert sind <see langword="dateTime" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen über XSD-Datentypen finden Sie unter "XML Data Types Reference" in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Methoden in der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime> -Klasse zum Konvertieren zwischen einem <xref:System.DateTime> -Objekt und ein XSD- `dateTime` Zeichenfolge.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime#10](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime/CPP/demo.cpp#10)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime#10](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime/CS/demo.cs#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapDateTime ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz von <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static DateTime Parse (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTime Parse(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende <see langword="String" />.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.String" /> in einem <see cref="T:System.DateTime" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.DateTime" /> abgerufenes Objekt <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Parse` Methode kann Analysieren von Zeichenfolgen in verschiedenen Formaten. Zeichenfolgenformate bestehen aus folgenden Formatmuster.  
+  
+|Formatmuster|Beschreibung|Beispiele|  
+|--------------------|-----------------|--------------|  
+|yyyy|Das Jahr im Format 4 Ziffern.|1999, 1812|  
+|MM|Der Monat in numerischer Form. Einstellige Monate weisen eine führende 0 auf.|11, 05|  
+|dd|Der Tag des Monats. Einstellige Tage weisen eine führende 0 auf.|23, 09|  
+|HH|Die Stunde innerhalb eines 24-Stunden-Bereichs. Einstellige Stundenangaben weisen eine führende 0 auf.|17, 07|  
+|mm|Die Minute. Einstellige Minutenangaben weisen eine führende 0 auf.|49, 05|  
+|ss|Die zweite. Einstellige Sekundenangaben weisen eine führende 0 auf.|32, 02|  
+|f "," ff "," fff,..., ffffffffff|Der Bruchteil einer Sekunde. Die Anzahl der Zeichen im Muster 'f' gibt die Anzahl von Bruchziffern.|321635, 4592|  
+|zzz|Der vollständige Zeitzonenoffset (Stunde und Minuten) aus dem Universal Time Coordinate (Greenwich Mean Time). Einstellige Stundenangaben weisen eine führende 0 auf.|-07:00, 08:00|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime#11](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime/CPP/demo.cpp#11)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime#11](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime/CS/demo.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">Eine der folgenden:  
+  
+-   <paramref name="value" /> ist eine leere Zeichenfolge.  
+  
+-   <paramref name="value" />ist <see langword="null" /> Verweis.  
+  
+-   <paramref name="value" />enthält keine Datum und Uhrzeit, das keines der erkannten Muster entspricht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (DateTime value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(valuetype System.DateTime value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime.ToString(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende <see cref="T:System.DateTime" />-Objekt.</param>
+        <summary>Gibt den angegebenen <see cref="T:System.DateTime" /> -Objekt als eine <see cref="T:System.String" />.</summary>
+        <returns>Ein <see cref="T:System.String" /> Darstellung des <paramref name="value" /> im Format "Yyyy-MM-dd'T'HH:mm:ss.fffffffzzz".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime#12](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime/CPP/demo.cpp#12)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime#12](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime/CS/demo.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XsdType">
+      <MemberSignature Language="C#" Value="public static string XsdType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string XsdType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime.XsdType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die XML-Schemadefinitionssprache (XSD) des aktuellen SOAP-Typs ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , der die XSD des aktuellen SOAP-Typs angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Eigenschaft verwendet wird. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime#13](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime/CPP/demo.cpp#13)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime#13](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime/CS/demo.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

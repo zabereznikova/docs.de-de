@@ -1,0 +1,108 @@
+<Type Name="ButtonDesigner" FullName="System.Web.UI.Design.WebControls.ButtonDesigner">
+  <TypeSignature Language="C#" Value="public class ButtonDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ButtonDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.ButtonDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.Design.SupportsPreviewControl(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Zum Bereitstellen von entwurfszeitunterstützung in einem visuellen Designer für die <see cref="T:System.Web.UI.WebControls.Button" /> -Webserversteuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht Markup-Quellcode, beschreibt die <xref:System.Web.UI.WebControls.Button> Steuerelement wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Die erste veranschaulicht das Erweitern der <xref:System.Web.UI.Design.WebControls.ButtonDesigner> Klasse. Die zweite veranschaulicht das Erweitern der <xref:System.Web.UI.WebControls.Button> Klasse und ordnen es dem die Klasse, die im ersten Codebeispiel erstellt wird.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine benutzerdefinierte Klasse erstellen, die erweitert die <xref:System.Web.UI.Design.WebControls.ButtonDesigner> -Klasse ab und überschreibt die <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> Methode. Wenn die <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> -Eigenschaft nicht zuvor festgelegt wurde (d. h., es wurde die <xref:System.Web.UI.WebControls.BorderStyle.NotSet> Wert des Felds), einen Aufruf der <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> Methode wird auf einen blauen gestrichelten Rahmen mit einer Breite von drei Pixel und Rahmen wird auf der Entwurfsoberfläche angezeigt. Wenn die <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> Eigenschaft festgelegt wurde, werden die vorhandenen Eigenschaftswerte für den Rahmen angezeigt.  
+  
+ In der Regel die <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> ruft ihrer Basismethode <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A?displayProperty=nameWithType>, die Aufrufe der <xref:System.Web.UI.Control.RenderControl%2A?displayProperty=nameWithType> Methode des zugeordneten Steuerelements zum Generieren des Markups.  
+  
+ [!code-vb[System.Web.UI.Design.WebControls_ButtonDesignerSamples#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls_ButtonDesignerSamples/VB/custombutton.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine einfache Klasse verwenden, die erweitert die <xref:System.Web.UI.WebControls.Button> Klasse zugeordnet ist, und wählen Sie die `SampleButtonDesigner` -Klasse, in der im vorherigen Beispiel erstellt die <xref:System.ComponentModel.DesignerAttribute> Objekt.  
+  
+ [!code-vb[System.Web.UI.Design.WebControls_ButtonDesignerSamples#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls_ButtonDesignerSamples/VB/custombutton.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ButtonDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ButtonDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.ButtonDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.ButtonDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.WebControls.Button> Steuerelement oder eine Kopie des Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Markup ab, das zum Rendern des zugeordneten Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Ein <see cref="T:System.String" />, der das Markup enthält, mit dem der <see cref="T:System.Web.UI.WebControls.Button" /> zur Entwurfszeit gerendert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> Methode ersetzt die <xref:System.Web.UI.WebControls.Button.Text%2A> Eigenschaft mit der <xref:System.Web.UI.Control.ID%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Button> steuern, wenn die <xref:System.Web.UI.WebControls.Button.Text%2A> keine anzeigbaren Zeichen enthält. Anschließend wird die <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> Methodenaufrufe ihrer Basismethode <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A?displayProperty=nameWithType>, die Aufrufe der <xref:System.Web.UI.Control.RenderControl%2A?displayProperty=nameWithType> Methode, um das Markup zu generieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> Methode zum Ändern des generierten Markups.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> -Eigenschaft nicht zuvor festgelegt wurde (d. h., es wurde die <xref:System.Web.UI.WebControls.BorderStyle.NotSet> Wert des Felds), einen Aufruf der <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> Methode wird auf einen blauen gestrichelten Rahmen mit einer Breite von drei Pixel und Rahmen wird auf der Entwurfsoberfläche angezeigt. Wenn die <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> Eigenschaft festgelegt wurde, werden die vorhandenen Eigenschaftswerte für den Rahmen angezeigt.  
+  
+ In der Regel die <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> ruft ihrer Basismethode <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A?displayProperty=nameWithType>, die Aufrufe der <xref:System.Web.UI.Control.RenderControl%2A?displayProperty=nameWithType> Methode des zugeordneten Steuerelements zum Generieren des Markups.  
+  
+ [!code-vb[System.Web.UI.Design.WebControls_ButtonDesignerSamples#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls_ButtonDesignerSamples/VB/custombutton.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft gesetzt werden die <see cref="M:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml" /> -Methode, in der Regel Sie ausgewählte Eigenschaftswerte ändern und dann rufen Sie die grundlegende Methode zum Generieren des Markups und stellen Sie die Eigenschaften auf ihre ursprünglichen Werte, wieder her.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

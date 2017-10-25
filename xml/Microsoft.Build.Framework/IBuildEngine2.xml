@@ -1,0 +1,135 @@
+<Type Name="IBuildEngine2" FullName="Microsoft.Build.Framework.IBuildEngine2">
+  <TypeSignature Language="C#" Value="public interface IBuildEngine2 : Microsoft.Build.Framework.IBuildEngine" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBuildEngine2 implements class Microsoft.Build.Framework.IBuildEngine" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.IBuildEngine2" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.IBuildEngine</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Bietet eine Möglichkeit Aufgabenautoren eine Teilmenge der Funktionen von MSBuild-Modul verwenden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.Framework.IBuildEngine2>Erweitert <xref:Microsoft.Build.Framework.IBuildEngine>, sodass Sie mehrere Projektdateien parallel auf Systemen mit mehreren Prozessoren oder Prozessoren mit mehreren Kernen zu erstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuildProjectFile">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFile (string projectFileName, string[] targetNames, System.Collections.IDictionary globalProperties, System.Collections.IDictionary targetOutputs, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool BuildProjectFile(string projectFileName, string[] targetNames, class System.Collections.IDictionary globalProperties, class System.Collections.IDictionary targetOutputs, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IBuildEngine2.BuildProjectFile(System.String,System.String[],System.Collections.IDictionary,System.Collections.IDictionary,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFileName" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="globalProperties" Type="System.Collections.IDictionary" />
+        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFileName">Der Name der Projektdatei erstellen.</param>
+        <param name="targetNames">Die Namen für das Ziel in das Projekt zu erstellen. Trennen Sie mehrere Ziele durch ein Semikolon (;). <see langword="Null" />Werte sind zulässig.</param>
+        <param name="globalProperties">Ein <see cref="T:System.Collections.IDictionary" /> von zusätzlichen globalen Eigenschaften, die auf das Projekt beziehen. Der Schlüssel und Wert muss <see langword="String" /> -Datentypen.</param>
+        <param name="targetOutputs">Die Ausgaben für jedes angegebene Ziel. <see langword="Null" />Werte sind zulässig.</param>
+        <param name="toolsVersion">Standardwert = "3.5". Gibt die Toolsetversion für den Build zu verwenden. <see langword="Null" />Werte sind zulässig.</param>
+        <summary>Startet einen Build einer Projektdatei. Falls der Build erfolgreich ist, ist die Ausgaben der angegebenen Ziele zurückgegeben, falls vorhanden.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Ziele angegeben sind, [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] erstellt die Standardziele des Projekts.  
+  
+ Zielausgaben werden zurückgegeben, als <xref:Microsoft.Build.Framework.ITaskItem> Arrays von Zielnamen indiziert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProjectFilesInParallel">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFilesInParallel (string[] projectFileNames, string[] targetNames, System.Collections.IDictionary[] globalProperties, System.Collections.IDictionary[] targetOutputsPerProject, string[] toolsVersion, bool useResultsCache, bool unloadProjectsOnCompletion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool BuildProjectFilesInParallel(string[] projectFileNames, string[] targetNames, class System.Collections.IDictionary[] globalProperties, class System.Collections.IDictionary[] targetOutputsPerProject, string[] toolsVersion, bool useResultsCache, bool unloadProjectsOnCompletion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IBuildEngine2.BuildProjectFilesInParallel(System.String[],System.String[],System.Collections.IDictionary[],System.Collections.IDictionary[],System.String[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFileNames" Type="System.String[]" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="globalProperties" Type="System.Collections.IDictionary[]" />
+        <Parameter Name="targetOutputsPerProject" Type="System.Collections.IDictionary[]" />
+        <Parameter Name="toolsVersion" Type="System.String[]" />
+        <Parameter Name="useResultsCache" Type="System.Boolean" />
+        <Parameter Name="unloadProjectsOnCompletion" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="projectFileNames">Die Namen der zu erstellenden Projektdateien.</param>
+        <param name="targetNames">Die Namen der Ziele im Projekt zu erstellen. Trennen Sie mehrere Ziele durch ein Semikolon (;). <see langword="Null" />Werte sind zulässig.</param>
+        <param name="globalProperties">Ein <see cref="T:System.Collections.IDictionary" /> von zusätzlichen globalen Eigenschaften, die auf das Projekt beziehen. Der Schlüssel und Wert muss <see langword="String" /> -Datentypen. Arrayeinträge kann <see langword="null" />.</param>
+        <param name="targetOutputsPerProject">Die Ausgaben für jedes angegebene Ziel. <see langword="Null" />Werte sind zulässig.</param>
+        <param name="toolsVersion">Standardwert = "3.5". Gibt die Toolsetversion für den Build zu verwenden. <see langword="Null" />Werte sind zulässig.</param>
+        <param name="useResultsCache">Wenn <see langword="true" />, der Vorgang nur ausgeführt, wenn der Cache nicht bereits das Ergebnis enthält. Nach Abschluss des Vorgangs wird das Ergebnis im Cache gespeichert.</param>
+        <param name="unloadProjectsOnCompletion">Wenn <see langword="true" /> des Projekts nach Abschluss des Vorgangs entladen wird.</param>
+        <summary>Aufgaben zum Initiieren der angegebenen Projektdateien auf Systemen mit mehreren Prozessoren oder Mehrkernprozessoren parallele Builds ermöglicht. Wenn die Builds erfolgreich ist, werden die Ausgaben der angegebenen Ziele zurückgegeben, falls vorhanden.</summary>
+        <returns>
+          <see langword="True" />Wenn der Build erfolgreich war, <see langword="false" /> Wenn andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beide `targetNames` und `targetOutputs` akzeptieren `null` Werte. Wenn keine Ziele angegeben sind, werden die Standardziele erstellt. Zielausgaben werden zurückgegeben, als <xref:Microsoft.Build.Framework.ITaskItem> Arrays von Zielnamen indiziert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRunningMultipleNodes">
+      <MemberSignature Language="C#" Value="public bool IsRunningMultipleNodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRunningMultipleNodes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IBuildEngine2.IsRunningMultipleNodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt zurück, ob das System in einzelnen oder mehreren processor-Modus ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn das System, im Modus mit mehreren Prozessoren ausgeführt wird <see langword="false" /> andernfalls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Buildmodul befindet sich im nur-Prozessor-Modus (`IsRunningMultipleNodes` = `false`) bei der Initialisierung mit der Anzahl der CPUs, die gleich 1 und das Buildmodul ist ein untergeordnetes Modul. Das Buildmodul wird im Modus mit mehreren Prozessoren (`IsRunningMultipleNodes` = `true`) nach der Initialisierung mit einer Anzahl von CPUs, die größer als 1 ist, oder wenn das Buildmodul ein untergeordnetes Modul ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

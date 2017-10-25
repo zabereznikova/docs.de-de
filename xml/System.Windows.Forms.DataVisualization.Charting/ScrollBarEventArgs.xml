@@ -1,0 +1,235 @@
+<Type Name="ScrollBarEventArgs" FullName="System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs">
+  <TypeSignature Language="C#" Value="public class ScrollBarEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScrollBarEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwendet als ein Parameterobjekt in der <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked" /> des Stamms <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs> Klasse verfügbar gemacht wird, als die `e` Parameter in der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> Ereignis.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs> Klasse enthält die folgenden Eigenschaften:  
+  
+-   Die <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.ChartArea%2A> -Eigenschaft, die zum Abrufen der <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> -Objekt, das das Ereignis ausgelöst wurde. Die <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.Name> Eigenschaft ruft den Namen der Diagrammfläche ab; andere diagrammflächeneigenschaften können auch festgelegt werden.  
+  
+-   Die <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.Axis%2A> -Eigenschaft, die zum Abrufen der <xref:System.Windows.Forms.DataVisualization.Charting.Axis> -Objekt, das die Bildlaufleiste gehört, mit der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.AxisName%2A> Eigenschaft. Andere <xref:System.Windows.Forms.DataVisualization.Charting.Axis> Eigenschaften können auch festgelegt werden.  
+  
+-   Die <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.ButtonType%2A> -Eigenschaft, die verwendet wird, um die Bildlaufleisten-Schaltfläche abzurufen, die der Endbenutzer geklickt hat.  
+  
+-   Die <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.IsHandled%2A> -Eigenschaft, die bestimmt, ob die <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Steuerelement Standardverhalten der Bildlaufleisten-Schaltfläche abbricht, nach dem Code in der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> Ausführung abgeschlossen wird.  
+  
+-   Die <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.MousePositionX%2A> Eigenschaft, die die X-Position des Mauszeigers zu dem Zeitpunkt darstellt, der Endbenutzer geklickt, das Scrollbar-Element hat.  
+  
+-   Die <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.MousePositionY%2A> Eigenschaft, die die Y-Position des Mauszeigers zu dem Zeitpunkt darstellt, der Endbenutzer geklickt, das Scrollbar-Element hat.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollBarEventArgs (System.Windows.Forms.DataVisualization.Charting.Axis axis, int x, int y, System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType buttonType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataVisualization.Charting.Axis axis, int32 x, int32 y, valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType buttonType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.#ctor(System.Windows.Forms.DataVisualization.Charting.Axis,System.Int32,System.Int32,System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="axis" Type="System.Windows.Forms.DataVisualization.Charting.Axis" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="buttonType" Type="System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType" />
+      </Parameters>
+      <Docs>
+        <param name="axis">Die <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" /> , die die Bildlaufleiste enthält.</param>
+        <param name="x">Die X-Position des Mauszeigers.</param>
+        <param name="y">Die Y-Position des Mauszeigers.</param>
+        <param name="buttonType">Der Typ der Schaltfläche geklickt hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs" /> -Klasse mit der angegebenen Achse, X und Y-Positionen der Mauszeiger und Typ der Schaltfläche geklickt hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Axis">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.Axis Axis { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.Axis Axis" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.Axis" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Axis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" /> -Objekt, das eine Bildlaufleiste gehört.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" /> Objekt, das die Achse darstellt, zu der die Bildlaufleiste gehört.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft verfügbar gemacht wird, der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> Ereignis des Stamms <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Objekt.  
+  
+ Diese Eigenschaft kann für Folgendes verwendet werden:  
+  
+-   Bestimmt den Typ der Achse – X X2, Y oder Y2 –, die das Ereignis ausgelöst wird, mithilfe der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.AxisName%2A> Eigenschaft.  
+  
+-   Abrufen und Festlegen von Eigenschaften für die Achsen, z. B. <xref:System.Windows.Forms.DataVisualization.Charting.Axis.LineColor%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType ButtonType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType ButtonType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.ButtonType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Bildlaufleisten-Schaltfläche, die der Endbenutzer geklickt hat.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType" /> -Enumerationswert ab, der den Typ der Bildlaufleiste darstellt Schaltfläche den Endbenutzer geklickt hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft verfügbar gemacht wird, der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> Ereignis des Stamms <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Objekt und kann verwendet werden, um den Typ der Schaltfläche "Scrollbar" zu bestimmen, der Endbenutzer geklickt hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartArea">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartArea ChartArea { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.ChartArea ChartArea" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.ChartArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> -Objekt, das die Bildlaufleiste gehört.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft verfügbar gemacht wird, der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> Ereignis des Stamms <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Objekt.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.ChartArea%2A> Eigenschaft kann verwendet werden, um den Diagrammbereich zu bestimmen, zu der die Bildlaufleiste durch Zugreifen auf gehört die <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.Name> Eigenschaft. Diese Eigenschaft kann auch zum Abrufen und Festlegen von diagrammflächeneigenschaften verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHandled">
+      <MemberSignature Language="C#" Value="public bool IsHandled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHandled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.IsHandled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob das Standardverhalten von Ereignissen für bestimmte Bildlaufleiste "Abbrechen".</summary>
+        <value>
+          <see langword="true" />Wenn Sie das Standardverhalten des Ereignisses abgebrochen werden soll, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft verfügbar gemacht wird, der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> Ereignis des Stamms <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Objekt.  
+  
+ Diese Eigenschaft kann verwendet werden, um das Standardverhalten für bestimmte Bildlaufleistenereignisse "Abbrechen".  
+  
+ Wenn Sie auf eine Schaltfläche "Scrollbar" klicken, wird die Standard-Bearbeitung der Sicht auftreten.  
+  
+ Die folgende Liste fasst dieses Standardverhalten:  
+  
+-   Wenn der Benutzer die Schaltfläche "Zurücksetzen/Zoom" klickt, wird die vorherige Ansicht angezeigt.  
+  
+-   Klickt der Benutzer im Bildlaufleistenhintergrund – also nicht auf dem Durchführen eines Bildlaufs Ziehpunkt auch bezeichnet als Tracker – große Inkremente und/oder verringert der Bildlaufleiste werden durchgeführt, mit der Größe des Inkrement und/oder Dekrementieren wird bestimmt durch die <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleView.Size%2A> Diese Eigenschaft.  
+  
+ Um diese Standardverhalten zu deaktivieren, setzen die <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.IsHandled%2A> Eigenschaft `true` nach der Bereitstellung benutzerdefinierten Logik in die <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MousePositionX">
+      <MemberSignature Language="C#" Value="public int MousePositionX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MousePositionX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.MousePositionX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die X-Position des Mauszeigers zum Zeitpunkt der <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked" /> Ereignis ausgelöst wurde.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die X-Position des Mauszeigers darstellt. Die Position wird in Pixel, wobei 0,0 der oberen linken Ecke des Diagrammbilds angegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, erhalten die Position X Maus in Pixel aus, wenn der Endbenutzer auf einer Bildlaufleistenelement klickt. Die Koordinate 0,0 stellt der oberen linken Ecke des Diagramms.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MousePositionY">
+      <MemberSignature Language="C#" Value="public int MousePositionY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MousePositionY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.MousePositionY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Y-Position des Mauszeigers zum Zeitpunkt der <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked" /> Ereignis ausgelöst wurde.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die Y-Position des Mauszeigers darstellt. Die Position wird in Pixel, wobei 0,0 der oberen linken Ecke des Diagrammbilds angegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft dient zum Abrufen der Mausposition Y in Pixel, klickt der Endbenutzer auf ein Bildlaufleistenelement. Die Koordinate 0,0 stellt der oberen linken Ecke des Diagramms.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

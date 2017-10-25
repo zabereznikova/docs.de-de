@@ -1,0 +1,1211 @@
+<Type Name="NavigationWindow" FullName="System.Windows.Navigation.NavigationWindow">
+  <TypeSignature Language="C#" Value="public class NavigationWindow : System.Windows.Window, System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi NavigationWindow extends System.Windows.Window implements class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.NavigationWindow" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Window</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_NavWinCP", Type=typeof(System.Windows.Controls.ContentPresenter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Fenster dar, das Inhaltsnavigation unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationWindow>leitet sich von <xref:System.Windows.Window> und erweitert sie mit der Möglichkeit zum Navigieren und Anzeigen von Inhalt.  
+  
+ Inhalt kann eine [!INCLUDE[TLA2#tla_winfx](~/includes/tla2sharptla-winfx-md.md)] Objekt oder [!INCLUDE[TLA#tla_html](~/includes/tlasharptla-html-md.md)] Datei. Im Allgemeinen ist allerdings ein <xref:System.Windows.Controls.Page> Objekt ist die bevorzugte Methode zum Paketinhalt für die Navigation.  
+  
+ Inhalt kann navigiert werden, durch Festlegen der <xref:System.Windows.Navigation.NavigationWindow.Source%2A> Eigenschaft mit dem [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] für den gewünschten Inhalt. Darüber hinaus Inhalt kann navigiert werden, indem Sie eine der folgenden Überladungen der der <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> Methode:  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.Navigate%28System.Uri%29>  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.Navigate%28System.Uri%2CSystem.Object%29>  
+  
+ Wenn Inhalt navigiert [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)], <xref:System.Windows.Navigation.NavigationWindow> ein Objekt zurück, das den Inhalt enthält.  
+  
+> [!NOTE]
+>  Navigation durch [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] unterstützt auch die Navigation zu einem Inhaltsfragment. Siehe <xref:System.Windows.Navigation.NavigationWindow.FragmentNavigation>.  
+  
+ Alternativ können Sie Inhalt kann navigiert werden, mithilfe eines der der <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> methodenüberladungen, die ein Objekt akzeptiert:  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.Navigate%28System.Object%29>  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.Navigate%28System.Object%2CSystem.Object%29>  
+  
+ Die Lebensdauer einer Navigation kann durch die folgenden Ereignisse nachverfolgt werden:  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.Navigating>  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.Navigated>  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.NavigationProgress>  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.NavigationFailed>  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.NavigationStopped>  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.LoadCompleted>  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.FragmentNavigation>.  
+  
+ Nicht alle Ereignisse werden jedes Mal ausgelöst, die eine Navigation; der Satz von Ereignissen, die ausgelöst werden, richtet sich nach den Typ der Navigation, die (Inhalt oder -Fragment) tritt auf, und wie die Navigation abgeschlossen ist (abgebrochen, angehalten oder fehlerhaft).  
+  
+ Die folgende Abbildung veranschaulicht die Abfolge, in der diese Ereignisse ausgelöst werden:  
+  
+ ![Seitennavigations-Flussdiagramm](~/add/media/navigationoverviewfigure11.png "Seitennavigations-Flussdiagramm")  
+  
+ Während oder nach einer Navigation <xref:System.Windows.Navigation.NavigationWindow> enthält Informationen über den Inhalt, zu dem navigiert wird ist z. B. die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Inhalts navigiert (<xref:System.Windows.Navigation.NavigationWindow.Source%2A>), wird die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des aktuellen Inhalts (<xref:System.Windows.Navigation.NavigationWindow.CurrentSource%2A>), und ein Objekt, das den Inhalt enthält, zu der navigiert wurde (<xref:System.Windows.Controls.ContentControl.Content%2A>).  
+  
+ Wenn der Inhalt, zu dem navigiert wird <xref:System.Windows.Navigation.NavigationWindow> zeichnet die Navigation als Eintrag im Navigationsverlauf. Ein Eintrag hinzugefügt Navigationsverlauf zurück, wenn eine neue Navigation, durch Aufrufen auftritt der <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> -Methode, einem Eintrag im Navigationsverlauf navigieren, durch den Aufruf <xref:System.Windows.Navigation.NavigationWindow.GoForward%2A>. Durch Navigieren zu einem Eintrag im Navigationsverlauf, durch den Aufruf im Navigationsverlauf ein Eintrag hinzugefügt <xref:System.Windows.Navigation.NavigationWindow.GoBack%2A>. <xref:System.Windows.Navigation.NavigationWindow.CanGoBack%2A>und <xref:System.Windows.Navigation.NavigationWindow.CanGoForward%2A> melden, ob es Einträge im Navigationsverlauf bzw. sind.  
+  
+ Beim ersten, ein Inhaltselement zum navigiert wird, von einem anderen Teil des Inhalts, <xref:System.Windows.Navigation.NavigationWindow> zeigt automatisch eine Navigation [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] , ermöglicht es Benutzern, navigieren Sie zurück, und durch den Navigationsverlauf weiterleitet. Können Sie festlegen, wann die Navigation [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] angezeigt wird, durch Festlegen der <xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A> Eigenschaft.  
+  
+ Der letzte Eintrag im Navigationsverlauf kann, durch den Aufruf entfernt werden <xref:System.Windows.Navigation.NavigationWindow.RemoveBackEntry%2A>.  
+  
+ <xref:System.Windows.Navigation.NavigationWindow>eine Instanz eines Objekts mit Inhalt werden im Navigationsverlauf nicht gespeichert werden. Stattdessen <xref:System.Windows.Navigation.NavigationWindow> erstellt eine neue Instanz des Inhaltsobjekts jedes Mal, um mithilfe von Navigationsverlauf navigiert wird. Dieses Verhalten wurde entworfen, um eine zu hohe speicherauslastung zu vermeiden, wenn eine große Anzahl und große Teile des Inhalts zu dem navigiert werden. Daher wird der Status des Inhalts nicht zur nächsten ein Navigationsmenü gespeichert. Allerdings [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] bietet verschiedene Techniken, mit dem Sie ein Stück des Status für ein Inhaltselement im Navigationsverlauf speichern können.  
+  
+ Mithilfe von <xref:System.Windows.Navigation.NavigationWindow.AddBackEntry%2A>, Sie können auch mehrere Sätze von Status für eine einzelne Seiteninstanz speichern.  
+  
+ <xref:System.Windows.Navigation.NavigationWindow>ist einer von zwei Navigatoren in [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)], das andere ist <xref:System.Windows.Controls.Frame>. Navigator ist im Wesentlichen eine Klasse Navigationsverlauf und Navigation unterstützt. Optisch können [!INCLUDE[TLA2#tla_xbap#plural](~/includes/tla2sharptla-xbapsharpplural-md.md)] verwenden [!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)] als ein Navigator, um eine integrierte Benutzeroberfläche bereitzustellen. Allerdings [!INCLUDE[TLA2#tla_xbap#plural](~/includes/tla2sharptla-xbapsharpplural-md.md)] tatsächlich verwenden <xref:System.Windows.Navigation.NavigationWindow> als Navigator; die <xref:System.Windows.Application.MainWindow%2A> Eigenschaft ein [!INCLUDE[TLA2#tla_xbap](~/includes/tla2sharptla-xbap-md.md)] auf [!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)] gibt einen Verweis auf "zurück" die <xref:System.Windows.Navigation.NavigationWindow>, und den Navigationsverlauf, die von der verwaltetwird<xref:System.Windows.Navigation.NavigationWindow>integriert, die von verwalteten Navigationsverlauf [!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)].  
+  
+ **Inhaltsmodell:** <xref:System.Windows.Navigation.NavigationWindow> ist ein <xref:System.Windows.Controls.ContentControl>, was bedeutet, dass <xref:System.Windows.Navigation.NavigationWindow> Inhalte, z. B. Text, Bilder oder Bereiche enthalten kann. Darüber hinaus <xref:System.Windows.Navigation.NavigationWindow> ein Stammelement und daher nicht Teil des Inhalts des Elements sein. Weitere Informationen über das Inhaltsmodell für <xref:System.Windows.Controls.Button>, finden Sie unter [WPF-Inhaltsmodell](~/docs/framework/wpf/controls/wpf-content-model.md).  
+  
+## <a name="customizing-the-navigationwindow-control"></a>Anpassen des Steuerelements NavigationWindow  
+ Zum Anwenden der gleichen eigenschafteneinstellungen mit mehreren <xref:System.Windows.Navigation.NavigationWindow> -Steuerelemente verwenden die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, finden Sie unter [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Um anzuzeigen, die Teile und Zustände, die spezifisch für die <xref:System.Windows.Navigation.NavigationWindow>, finden Sie unter [NavigationWindow-Stile und Vorlagen](~/docs/framework/wpf/controls/navigationwindow-styles-and-templates.md).  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Festlegen einer visuellen Eigenschaft haben nur Auswirkungen, wenn diese Eigenschaft sowohl in vorhanden ist <xref:System.Windows.Navigation.NavigationWindow> Steuerelement die Standardvorlage und festgelegt ist, mit ein. Sie finden eine Liste der Eigenschaften visueller Elemente im Abschnitt "Ändern der visuellen Struktur eines Steuerelements" [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Windows.Navigation.NavigationWindow> erstellt wird.  
+  
+ [!code-xaml[NavigationWindowSnippets#NavigationWindowAndSource](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationWindowSnippets/CS/mainwindow.xaml#navigationwindowandsource)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NavigationWindow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Navigation.NavigationWindow" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Berechtigung für dieses Objekt unsichere systemeigene Methoden aufrufen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AddBackEntry">
+      <MemberSignature Language="C#" Value="public void AddBackEntry (System.Windows.Navigation.CustomContentState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBackEntry(class System.Windows.Navigation.CustomContentState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.AddBackEntry(System.Windows.Navigation.CustomContentState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Windows.Navigation.CustomContentState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Windows.Navigation.CustomContentState" /> -Objekt, das anwendungsspezifische Zustand darstellt, die ein bestimmtes Inhaltselement zugeordnet ist.</param>
+        <summary>Fügt einen Eintrag zum Navigationsverlauf zurück, der enthält einem <see cref="T:System.Windows.Navigation.CustomContentState" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.AddBackEntry%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="state" />ist <see langword="null" />, und ein <see cref="T:System.Windows.Navigation.CustomContentState" /> vom zurückgegebenen Objekts ist nicht <see cref="M:System.Windows.Navigation.IProvideCustomContentState.GetContentState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChild">
+      <MemberSignature Language="C#" Value="protected override void AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende untergeordnete Objekt.</param>
+        <summary>Fügt ein untergeordnetes Objekt hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn diese Methode aufgerufen wird. Dadurch wird verhindert, dass Inhalt hinzugefügte <see cref="T:System.Windows.Navigation.NavigationWindow" /> mit [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddText">
+      <MemberSignature Language="C#" Value="protected override void AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der dem Objekt hinzuzufügende Text.</param>
+        <summary>Fügt Text an das Objekt hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Wenn der Parameterwert für den Text Zeichen als Leerzeichen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BackStack">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable BackStack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable BackStack" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationWindow.BackStack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Collections.IEnumerable" /> , verwenden, um die Einträge im Navigationsverlauf für Auflisten einer <see cref="T:System.Windows.Navigation.NavigationWindow" />.</summary>
+        <value>
+          <see cref="T:System.Collections.IEnumerable" />Wenn mindestens ein Eintrag hinzugefügt wurde, Navigationsverlauf sichern oder <see langword="null" /> Wenn keine Einträge vorhanden sind oder die <see cref="T:System.Windows.Navigation.NavigationWindow" /> besitzt einen eigenen Navigationsverlauf nicht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Einträge, die von zurückgegeben werden <xref:System.Windows.Navigation.NavigationWindow.BackStack%2A> gesamten Inhalt, Fragmentnavigationen und benutzerdefinierten Zustand enthalten.  
+  
+<a name="dependencyPropertyInfo_NavigationWindowBackStack"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Navigation.NavigationWindow.BackStack%2A>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackStackProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BackStackProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BackStackProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Navigation.NavigationWindow.BackStackProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Navigation.NavigationWindow.BackStack" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoBack">
+      <MemberSignature Language="C#" Value="public bool CanGoBack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGoBack" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationWindow.CanGoBack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob im Navigationsverlauf mindestens ein Eintrag vorhanden ist.</summary>
+        <value>
+          <see langword="true" />Wenn im Navigationsverlauf mindestens ein Eintrag vorhanden ist; <see langword="false" /> Wenn im Navigationsverlauf keine Einträge vorhanden sind oder die <see cref="T:System.Windows.Navigation.NavigationWindow" /> besitzt einen eigenen Navigationsverlauf nicht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.CanGoBack%2A?displayProperty=nameWithType>.  
+  
+<a name="dependencyPropertyInfo_NavigationWindowCanGoBack"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Navigation.NavigationWindow.CanGoBack%2A>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoBackProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanGoBackProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanGoBackProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Navigation.NavigationWindow.CanGoBackProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Navigation.NavigationWindow.CanGoBack" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoForward">
+      <MemberSignature Language="C#" Value="public bool CanGoForward { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGoForward" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationWindow.CanGoForward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob im Navigationsverlauf mindestens ein Eintrag vorhanden ist.</summary>
+        <value>
+          <see langword="true" />Wenn im Navigationsverlauf mindestens ein Eintrag vorhanden ist; <see langword="false" /> Wenn im Navigationsverlauf keine Einträge vorhanden sind oder die <see cref="T:System.Windows.Navigation.NavigationWindow" /> besitzt einen eigenen Navigationsverlauf nicht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_NavigationWindowCanGoForward"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Navigation.NavigationWindow.CanGoForward%2A>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoForwardProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanGoForwardProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanGoForwardProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Navigation.NavigationWindow.CanGoForwardProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Navigation.NavigationWindow.CanGoForward" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentSource">
+      <MemberSignature Language="C#" Value="public Uri CurrentSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri CurrentSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationWindow.CurrentSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] des Inhalts, zu dem zuletzt navigiert wurde.</summary>
+        <value>Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] für Inhalte, die zuletzt navigiert wurde, wenn für die Navigation zu einem [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)]ist, andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationWindow.CurrentSource%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForwardStack">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable ForwardStack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable ForwardStack" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationWindow.ForwardStack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Collections.IEnumerable" /> , verwenden, um die Einträge im Navigationsverlauf für Auflisten einer <see cref="T:System.Windows.Navigation.NavigationWindow" />.</summary>
+        <value>
+          <see cref="T:System.Collections.IEnumerable" />Wenn mindestens ein Eintrag im Navigationsverlauf oder Null hinzugefügt wurde, wenn keine Einträge vorhanden sind oder die <see cref="T:System.Windows.Navigation.NavigationWindow" /> besitzt einen eigenen Navigationsverlauf nicht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Einträge, die von zurückgegeben werden <xref:System.Windows.Navigation.NavigationWindow.ForwardStack%2A> gesamten Inhalt, Fragmentnavigationen und benutzerdefinierten Zustand enthalten.  
+  
+<a name="dependencyPropertyInfo_NavigationWindowForwardStack"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Navigation.NavigationWindow.ForwardStack%2A>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForwardStackProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ForwardStackProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ForwardStackProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Navigation.NavigationWindow.ForwardStackProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Navigation.NavigationWindow.ForwardStack" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FragmentNavigation">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.FragmentNavigationEventHandler FragmentNavigation;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.FragmentNavigationEventHandler FragmentNavigation" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationWindow.FragmentNavigation" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.FragmentNavigationEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Navigation zu einem Inhaltsfragment beginnt die sofort erfolgt, wenn das gewünschte Fragment in den aktuellen Inhalt oder nach der Quelle ist, [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] Inhalt wurde geladen, wenn das gewünschte Fragment in einem anderen Inhalt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GoBack">
+      <MemberSignature Language="C#" Value="public void GoBack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GoBack() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.GoBack" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Navigiert zum letzten Element im Navigationsverlauf.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.Navigation.NavigationWindow.GoBack" />wird aufgerufen, wenn im Navigationsverlauf keine Einträge vorhanden sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GoForward">
+      <MemberSignature Language="C#" Value="public void GoForward ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GoForward() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.GoForward" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Navigiert zum letzten Element im Verlauf der Vorwärtsnavigation.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.Navigation.NavigationWindow.GoForward" />wird aufgerufen, wenn im Navigationsverlauf keine Einträge vorhanden sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCompleted">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.LoadCompletedEventHandler LoadCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.LoadCompletedEventHandler LoadCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationWindow.LoadCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.LoadCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn es sich bei Inhalt, zu der navigiert wurde, geladen wurde, analysiert, und mit dem Rendering begonnen hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.LoadCompleted?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public bool Navigate (object content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Navigate(object content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.Navigate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="content">Ein <see cref="T:System.Object" /> , enthält den Inhalt zu navigieren.</param>
+        <summary>Navigiert asynchron zu Inhalten, die von einem Objekt enthalten ist.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Navigation nicht abgebrochen wird. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Object%29?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie auf Inhalte zu navigieren, die von einem Objekt enthalten ist.  
+  
+ [!code-csharp[HOWTONavigationSnippets#NavigateToPageObjCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatetopageobjcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateToPageObjCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopageobjcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public bool Navigate (Uri source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Navigate(class System.Uri source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.Navigate(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="source">Ein <see cref="T:System.Uri" /> Objekt initialisiert wird, mit der [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] für den gewünschten Inhalt.</param>
+        <summary>Navigiert asynchron zu vom angegebenen Inhalt einer [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</summary>
+        <returns>
+          <see langword="true" />Wenn eine Navigation nicht abgebrochen wird. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Uri%29?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  [!INCLUDE[TLA#tla_uri#initcap#plural](~/includes/tlasharptla-urisharpinitcapsharpplural-md.md)]kann entweder relativ oder absolut sein. Weitere Informationen finden Sie unter [Paket-URI in WPF](~/docs/framework/wpf/app-development/pack-uris-in-wpf.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> Methode zum Navigieren zu einer [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].  
+  
+ [!code-csharp[HOWTONavigationSnippets#NavigateToPageNavCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatetopagenavcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateToPageNavCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopagenavcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public bool Navigate (object content, object extraData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Navigate(object content, object extraData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.Navigate(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.Object" />
+        <Parameter Name="extraData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="content">Ein <see cref="T:System.Object" /> , enthält den Inhalt zu navigieren.</param>
+        <param name="extraData">Ein <see cref="T:System.Object" /> enthält Daten für die Verarbeitung während der Navigation verwendet werden.</param>
+        <summary>Navigiert asynchron zu Inhalten, die von einem Objekt enthalten ist, und übergibt ein Objekt, das Daten enthält, für die verwendet werden, Verarbeitung während der Navigation.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Navigation nicht abgebrochen wird. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Object%2CSystem.Object%29?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public bool Navigate (Uri source, object extraData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Navigate(class System.Uri source, object extraData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.Navigate(System.Uri,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Uri" />
+        <Parameter Name="extraData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">Ein <see cref="T:System.Uri" /> Objekt initialisiert wird, mit der [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] für den gewünschten Inhalt.</param>
+        <param name="extraData">Ein <see cref="T:System.Object" /> enthält Daten für die Verarbeitung während der Navigation verwendet werden.</param>
+        <summary>Navigiert asynchron zu Quellinhalt am eine [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)], und übergeben Sie ein Objekt, das Daten enthält, für die Verarbeitung während der Navigation verwendet werden.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Navigation nicht abgebrochen wird. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Uri%2CSystem.Object%29?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigated">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigatedEventHandler Navigated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigatedEventHandler Navigated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationWindow.Navigated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigatedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Inhalt, zu dem navigiert wird, gefunden wurde und über steht die <see cref="P:System.Windows.Controls.ContentControl.Content" /> -Eigenschaft, obwohl es laden möglicherweise nicht abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.Navigated?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigating">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigatingCancelEventHandler Navigating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigatingCancelEventHandler Navigating" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationWindow.Navigating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigatingCancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn eine neue Navigation angefordert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationFailed">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigationFailedEventHandler NavigationFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigationFailedEventHandler NavigationFailed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationWindow.NavigationFailed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigationFailedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein Fehler ausgelöst wird, während zum angeforderten Inhalt navigiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.NavigationFailed?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationProgress">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigationProgressEventHandler NavigationProgress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigationProgressEventHandler NavigationProgress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationWindow.NavigationProgress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigationProgressEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt regelmäßig während eines Downloadvorgangs auf, um Informationen zum Navigationsstatus bereitzustellen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.NavigationProgress?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationService">
+      <MemberSignature Language="C#" Value="public System.Windows.Navigation.NavigationService NavigationService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Navigation.NavigationService NavigationService" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationWindow.NavigationService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigationService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Navigation.NavigationService" /> wird, von diesem <see cref="T:System.Windows.Navigation.NavigationWindow" /> zur Navigation Dienstleistungen zum jeweiligen Inhalt.</summary>
+        <value>Von diesem verwendete Navigationsdienst <see cref="T:System.Windows.Navigation.NavigationWindow" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationWindow>verwendet eine <xref:System.Windows.Navigation.NavigationService> Navigationsdienste Inhalte bereitzustellen, die von gehostet <xref:System.Windows.Navigation.NavigationWindow>. Die <xref:System.Windows.Navigation.NavigationWindow.NavigationService%2A> Eigenschaft ist nützlich für Code in einem benutzerdefinierten <xref:System.Windows.Navigation.NavigationWindow> zum Abrufen eines Verweises auf die <xref:System.Windows.Navigation.NavigationService>, um Navigationsereignisse, z. B. zu behandeln.  
+  
+ Inhalt, der von gehostet wird eine <xref:System.Windows.Navigation.NavigationWindow>, wie z. B. <xref:System.Windows.Controls.Page>, die zu verwendende der <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A?displayProperty=nameWithType> Methode oder <xref:System.Windows.Controls.Page.NavigationService%2A?displayProperty=nameWithType> Eigenschaft zum Abrufen eines Verweises auf die <xref:System.Windows.Navigation.NavigationService>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationStopped">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigationStoppedEventHandler NavigationStopped;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigationStoppedEventHandler NavigationStopped" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationWindow.NavigationStopped" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigationStoppedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="M:System.Windows.Navigation.NavigationWindow.StopLoading" /> -Methode aufgerufen wird, oder wenn eine neue Navigation angefordert wird, während eine aktuelle Navigation ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.NavigationStopped?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn die Generierung von Listenvorlagen für die visuelle Struktur erstellt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosed">
+      <MemberSignature Language="C#" Value="protected override void OnClosed (EventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClosed(class System.EventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.OnClosed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Window.Closed" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationWindow.OnClosed%2A>Gibt die <xref:System.Windows.Navigation.NavigationService> Objekt, das verwendet wird, zum Verwalten der Navigation, vor dem Auslösen <xref:System.Windows.Window.Closed> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine <see cref="T:System.Windows.Automation.Peers.NavigationWindowAutomationPeer" /> für dieses Objekt <see cref="T:System.Windows.Navigation.NavigationWindow" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.NavigationWindowAutomationPeer" /> für dieses Objekt <see cref="T:System.Windows.Navigation.NavigationWindow" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Windows.ContentElement.OnCreateAutomationPeer%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lädt den aktuellen Inhalt erneut.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.Refresh%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Aufrufen der <xref:System.Windows.Navigation.NavigationWindow.Refresh%2A> Methode, um den Inhalt erneut laden einer <xref:System.Windows.Navigation.NavigationWindow>.  
+  
+ [!code-csharp[HOWTONavigationSnippets#NavigateRefreshCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigaterefreshcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateRefreshCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigaterefreshcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveBackEntry">
+      <MemberSignature Language="C#" Value="public System.Windows.Navigation.JournalEntry RemoveBackEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Navigation.JournalEntry RemoveBackEntry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.RemoveBackEntry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.JournalEntry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt den letzten Journaleintrag aus dem Verlauf zurück.</summary>
+        <returns>Die letzte <see cref="T:System.Windows.Navigation.JournalEntry" /> im Navigationsverlauf zurück, sofern vorhanden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.RemoveBackEntry%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SandboxExternalContent">
+      <MemberSignature Language="C#" Value="public bool SandboxExternalContent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SandboxExternalContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationWindow.SandboxExternalContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein <see cref="T:System.Windows.Navigation.NavigationWindow" /> isoliert externen [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Inhalt in einer teilweise vertrauenswürdigen Sicherheits-Sandbox (mit Standardberechtigungssatz für die Zone).</summary>
+        <value>
+          <see langword="true" />Wenn der Inhalt in einer teilweise vertrauenswürdigen Sicherheits-Sandbox isoliert ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Externer Inhalt ist [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Inhalte, die nicht mit einer Anwendung als eine Ressourcendatei oder eine Datei Inhalt enthalten ist (Weitere Informationen finden Sie unter [Anwendungsressource WPF-Inhalt und Datendateien](~/docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)).  
+  
+ Wenn <xref:System.Windows.Navigation.NavigationWindow.SandboxExternalContent%2A> ist "true" und den Inhalt der <xref:System.Windows.Navigation.NavigationWindow> ist ein externer [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Datei, den Inhalt in eine teilweise vertrauenswürdige Sicherheitssandbox, beschränkt auf den Standardwert Berechtigungssatzes Internetzone geladen wird. Darüber hinaus wird der externe Inhalte in einem eigenen Prozess geladen. Folglich externe Inhalt isoliert und hat keinen Zugriff auf Anwendungsbereich Ressourcen, z. B. Ressourcenwörterbücher (Weitere Informationen finden Sie unter <xref:System.Windows.ResourceDictionary>).  
+  
+> [!NOTE]
+>  <xref:System.Windows.Navigation.NavigationWindow>enthält externe Inhalte nur, wenn die <xref:System.Windows.Navigation.NavigationWindow.Source%2A> -Eigenschaftensatz auf die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] für ein externes [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Datei. <xref:System.Windows.Navigation.NavigationWindow>Inhalt, der bereitgestellt wird, mit der <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft wird als internen Inhalt betrachtet und ist anschließend nicht isoliert.  
+  
+<a name="dependencyPropertyInfo_NavigationWindowSandboxExternalContent"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Navigation.NavigationWindow.SandboxExternalContent%2A>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">
+          <see cref="P:System.Windows.Navigation.NavigationWindow.SandboxExternalContent" />wird festgelegt, wenn eine Anwendung unter teilweiser Vertrauenswürdigkeit ausgeführt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SandboxExternalContentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SandboxExternalContentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SandboxExternalContentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Navigation.NavigationWindow.SandboxExternalContentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Navigation.NavigationWindow.SandboxExternalContent" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeContent">
+      <MemberSignature Language="C#" Value="public override bool ShouldSerializeContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ShouldSerializeContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.ShouldSerializeContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:System.Windows.Controls.ContentControl.Content" />-Eigenschaft beibehalten werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der Eigenschaftswert geändert wurde und nicht mehr dem Standardwert entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `ShouldSerialize` Methode wird bereitgestellt, da die <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft verfügt nicht über einen einfachen Standardwert. Diese Methode gibt an, ob die-Eigenschaft ihren Standardwert geändert hat. Diese Methode wird in der Regel aufgerufen, wenn Sie entweder einen Designer für das Entwickeln der <xref:System.Windows.Navigation.NavigationWindow> oder entwickeln eine eigene Steuerelement einbinden der <xref:System.Windows.Navigation.NavigationWindow>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowsNavigationUI">
+      <MemberSignature Language="C#" Value="public bool ShowsNavigationUI { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowsNavigationUI" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein <see cref="T:System.Windows.Navigation.NavigationWindow" /> zeigt seine Navigations- [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)].</summary>
+        <value>
+          <see langword="true" />Wenn die Navigation [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] wird angezeigt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Unterstützung von Back und Vorwärtsnavigation, <xref:System.Windows.Navigation.NavigationWindow> zeigt automatisch eine Navigation[!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)]  
+  
+ Navigation [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] wird angezeigt, und zwar unabhängig davon, ob Navigationsfenster aufgetreten ist.  
+  
+<a name="dependencyPropertyInfo_NavigationWindowShowsNavigationUI"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowsNavigationUIProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ShowsNavigationUIProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ShowsNavigationUIProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Navigation.NavigationWindow.ShowsNavigationUIProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Uri Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationWindow.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] des aktuellen Inhalts oder die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] neuer Inhalte, die zurzeit auf navigiert wird.</summary>
+        <value>Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] für den aktuellen Inhalt oder den Inhalt, der zurzeit auf navigiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  [!INCLUDE[TLA#tla_uri#initcap#plural](~/includes/tlasharptla-urisharpinitcapsharpplural-md.md)]kann entweder relativ oder absolut sein. Weitere Informationen finden Sie unter [Paket-URI in WPF](~/docs/framework/wpf/app-development/pack-uris-in-wpf.md).  
+  
+<a name="dependencyPropertyInfo_NavigationWindowSource"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Navigation.NavigationWindow.Source%2A>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Navigieren zu einer [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] durch Festlegen der <xref:System.Windows.Navigation.NavigationWindow.Source%2A> Eigenschaft.  
+  
+ [!code-csharp[HOWTONavigationSnippets#NavigateToPageSrcCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatetopagesrccode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateToPageSrcCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopagesrccode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Navigation.NavigationWindow.SourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Navigation.NavigationWindow.Source" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopLoading">
+      <MemberSignature Language="C#" Value="public void StopLoading ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopLoading() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationWindow.StopLoading" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die weiteren Herunterladen des Inhalts für die aktuelle navigationsanforderung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A>Stoppt das Herunterladen des angeforderten Inhalts und bewirkt, dass die <xref:System.Windows.Navigation.NavigationWindow.NavigationStopped> Ereignis ausgelöst wurde.  
+  
+ Siehe <xref:System.Windows.Navigation.NavigationService.StopLoading%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Aufrufen der <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> Methode, um die Navigation zu Inhalt zu beenden, bevor er abgeschlossen wurde, wird heruntergeladen.  
+  
+ [!code-csharp[HOWTONavigationSnippets#NavigateStopLoadingCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatestoploadingcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateStopLoadingCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatestoploadingcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IUriContext.BaseUri">
+      <MemberSignature Language="C#" Value="Uri System.Windows.Markup.IUriContext.BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri System.Windows.Markup.IUriContext.BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationWindow.System#Windows#Markup#IUriContext#BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Basis uniform Resource Identifier (URI) des aktuellen Kontexts.</summary>
+        <value>Die Basis-URI des aktuellen Kontexts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Navigation.NavigationWindow>-Instanz in eine <xref:System.Windows.Markup.IUriContext>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

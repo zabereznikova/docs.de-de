@@ -1,0 +1,168 @@
+<Type Name="EndpointAddressElementBase" FullName="System.ServiceModel.Configuration.EndpointAddressElementBase">
+  <TypeSignature Language="C#" Value="public class EndpointAddressElementBase : System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EndpointAddressElementBase extends System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.EndpointAddressElementBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein XML-Element, das eine eindeutige Netzwerkadresse enthält, mit der ein Client mit dem Endpunkt eines Diensts kommuniziert.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EndpointAddressElementBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.EndpointAddressElementBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.EndpointAddressElementBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public Uri Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Address" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.EndpointAddressElementBase.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("address", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.IsRequired)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URI für den Endpunkt ab oder legt diesen fest.</summary>
+        <value>Der <see cref="T:System.Uri" />, mit dem der Netzwerkspeicherort für den Endpunkt identifiziert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="protected void Copy (System.ServiceModel.Configuration.EndpointAddressElementBase source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void Copy(class System.ServiceModel.Configuration.EndpointAddressElementBase source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.EndpointAddressElementBase.Copy(System.ServiceModel.Configuration.EndpointAddressElementBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.ServiceModel.Configuration.EndpointAddressElementBase" />
+      </Parameters>
+      <Docs>
+        <param name="source">Das Konfigurationselement, aus dem Werte kopiert werden sollen.</param>
+        <summary>Kopiert den Inhalt eines angegebenen Konfigurationselements in dieses Konfigurationselement.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> hat den Wert <see langword="null" /> oder ist leer.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfiguration ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.AddressHeaderCollectionElement Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.AddressHeaderCollectionElement Headers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.EndpointAddressElementBase.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("headers")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.AddressHeaderCollectionElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Adressenheadern für die Endpunkte ab, die der Generator erzeugen kann.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Configuration.AddressHeaderCollectionElement" />, die Adresseninformationen für den Endpunkt enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.IdentityElement Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.IdentityElement Identity" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.EndpointAddressElementBase.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("identity")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.IdentityElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Identität für den Endpunkt ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Configuration.IdentityElement" />, das eine Identität bereitstellt, mit der ein Endpunkt beim Austausch von Nachrichten durch andere Endpunkte identifiziert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="public void InitializeFrom (System.ServiceModel.EndpointAddress endpointAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InitializeFrom(class System.ServiceModel.EndpointAddress endpointAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.EndpointAddressElementBase.InitializeFrom(System.ServiceModel.EndpointAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpointAddress" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="endpointAddress">Eine Endpunktadresse.</param>
+        <summary>Initialisiert diese Endpunktadresse mit dem Inhalt der angegebenen Endpunktadresse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="endpointAddress" /> hat den Wert <see langword="null" /> oder ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.EndpointAddressElementBase.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz ab, die eine Auflistung von <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</summary>
+        <value>Eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz, die eine Sammlung mit <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die entweder Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

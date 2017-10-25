@@ -1,0 +1,256 @@
+<Type Name="Variable&lt;T&gt;" FullName="System.Activities.Variable&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class Variable&lt;T&gt; : System.Activities.Variable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Variable`1&lt;T&gt; extends System.Activities.Variable" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Variable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Activities.Variable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">Die <see cref="T:System.Type" /> des <see cref="T:System.Activities.Variable`1" />.</typeparam>
+    <summary>Stellt eine Variable in einem Workflow dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird eine <xref:System.Activities.Variable%601> für eine Meldungszeichenfolge verwendet. Diese Meldung wird von einer <xref:System.Activities.Statements.WriteLine>-Aktivität in das Konsolenfenster geschrieben.  
+  
+```csharp  
+Variable<string> msg =   
+    new Variable<string>() { Default = "Hello World!" };  
+  
+Activity wf = new Sequence()  
+{  
+    Variables =   
+    {  
+        msg  
+    },  
+    Activities =  
+    {  
+        new WriteLine()  
+        {  
+            Text = msg  
+        }  
+    }  
+};  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Variable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Variable`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Variable`1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Variable (System.Linq.Expressions.Expression&lt;Func&lt;System.Activities.ActivityContext,T&gt;&gt; defaultExpression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.Activities.ActivityContext, !T&gt;&gt; defaultExpression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Variable`1.#ctor(System.Linq.Expressions.Expression{System.Func{System.Activities.ActivityContext,`0}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultExpression" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.Activities.ActivityContext,T&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="defaultExpression">Der Standardausdruck.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Variable`1" />-Klasse mit dem Standardausdruck.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Variable (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Variable`1.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Variablenname.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Variable`1" />-Klasse mit dem Variablennamen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Variable (string name, System.Linq.Expressions.Expression&lt;Func&lt;System.Activities.ActivityContext,T&gt;&gt; defaultExpression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.Activities.ActivityContext, !T&gt;&gt; defaultExpression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Variable`1.#ctor(System.String,System.Linq.Expressions.Expression{System.Func{System.Activities.ActivityContext,`0}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="defaultExpression" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.Activities.ActivityContext,T&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Variablenname.</param>
+        <param name="defaultExpression">Der Standardausdruck.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Variable`1" />-Klasse mit dem Variablennamen und dem Standardausdruck.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Variable (string name, T defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, !T defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Variable`1.#ctor(System.String,`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="defaultValue" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Variablenname.</param>
+        <param name="defaultValue">Der Standardwert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Variable`1" />-Klasse mit dem Variablennamen und dem Standardwert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity&lt;T&gt; Default { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity`1&lt;!T&gt; Default" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Variable`1.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Activities.Activity`1" />, die den Standardwert für <see cref="T:System.Activities.Variable`1" /> darstellt, ab oder legt diese fest.</summary>
+        <value>Der Standardwert für diese <see cref="T:System.Activities.Variable`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist zur Laufzeit schreibgeschützt. Wenn der Wert zur Laufzeit festgelegt wird, wird eine <xref:System.InvalidOperationException> ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public T Get (System.Activities.ActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T Get(class System.Activities.ActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Variable`1.Get(System.Activities.ActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Aktivitätskontext der ausführenden Aktivität.</param>
+        <summary>Ruft mit dem angegebenen <see cref="T:System.Activities.ActivityContext" /> den Wert der Variablen ab.</summary>
+        <returns>Der Wert der Variablen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocation">
+      <MemberSignature Language="C#" Value="public System.Activities.Location&lt;T&gt; GetLocation (System.Activities.ActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Activities.Location`1&lt;!T&gt; GetLocation(class System.Activities.ActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Variable`1.GetLocation(System.Activities.ActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Location&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Aktivitätskontext, der den Speicherort der Variablen enthält.</param>
+        <summary>Gibt die <see cref="T:System.Activities.Location`1" /> der Variablen zurück.</summary>
+        <returns>Der Speicherort der Variablen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (System.Activities.ActivityContext context, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(class System.Activities.ActivityContext context, !T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Variable`1.Set(System.Activities.ActivityContext,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Aktivitätskontext der ausführenden Aktivität.</param>
+        <param name="value">Der Wert der Variablen.</param>
+        <summary>Legt den Wert der Variablen fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeCore">
+      <MemberSignature Language="C#" Value="protected override Type TypeCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TypeCore" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Variable`1.TypeCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,2062 @@
+<Type Name="MethodBuilder" FullName="System.Reflection.Emit.MethodBuilder">
+  <TypeSignature Language="C#" Value="public sealed class MethodBuilder : System.Reflection.MethodInfo, System.Runtime.InteropServices._MethodBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit MethodBuilder extends System.Reflection.MethodInfo implements class System.Runtime.InteropServices._MethodBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.MethodBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Emit</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.MethodInfo</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._MethodBuilder</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._MethodBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert eine Methode (oder einen Konstruktor) für eine dynamischen Klasse und stellt diese(n) dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.Emit.MethodBuilder> Klasse wird verwendet, um eine Methode in Microsoft intermediate Language (MSIL), einschließlich den Namen, Attribute, Signatur und Methode Text vollständig beschreiben. Es dient in Verbindung mit der <xref:System.Reflection.Emit.TypeBuilder> Klasse zum Erstellen von Klassen zur Laufzeit.  
+  
+## <a name="global-methods-and-methods-as-type-members"></a>Globale Methoden und Methoden als Typmember  
+ Sie können mithilfe von Reflektion ausgeben, um globale Methoden definieren und Methoden als Typmember zu definieren. Die APIs, die Methoden definieren zurückgeben <xref:System.Reflection.Emit.MethodBuilder> Objekte.  
+  
+### <a name="global-methods"></a>Globale Methoden  
+ Eine globale Methode definiert ist, mithilfe der <xref:System.Reflection.Emit.ModuleBuilder.DefineGlobalMethod%2A?displayProperty=nameWithType> Methode, die zurückgibt, eine **MethodBuilder** Objekt.  
+  
+ Globale Methoden müssen statisch sein. Wenn ein dynamisches Modul globale Methoden enthält die <xref:System.Reflection.Emit.ModuleBuilder.CreateGlobalFunctions%2A?displayProperty=nameWithType> Methode muss aufgerufen werden, bevor das dynamische Modul oder die enthaltende dynamische Assembly beibehalten, da die common Language Runtime zurück, das das dynamische Modul Aufbereitung, bis alle globalen Funktionen Es wurden definiert.  
+  
+ Eine globale systemeigene Methode definiert ist, mithilfe der <xref:System.Reflection.Emit.ModuleBuilder.DefinePInvokeMethod%2A?displayProperty=nameWithType> Methode. Plattformaufruf (PInvoke) Methoden müssen nicht abstrakte oder virtuell deklariert werden. Die Common Language Runtime legt die <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Attribut für eine Plattform invoke-Methode.  
+  
+### <a name="methods-as-members-of-types"></a>Die Methoden als Member von Typen  
+ Eine Methode als einen Typmember definiert ist, mithilfe der <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A?displayProperty=nameWithType> -Methode, die gibt eine <xref:System.Reflection.Emit.MethodBuilder> Objekt.  
+  
+ Die <xref:System.Reflection.Emit.MethodBuilder.DefineParameter%2A> Methode wird verwendet, um die Attribute Name und die Parameter eines Parameters oder des Rückgabewerts festlegen. Die <xref:System.Reflection.Emit.ParameterBuilder> von dieser Methode zurückgegebene Objekt stellt einen Parameter oder den Rückgabewert. Die <xref:System.Reflection.Emit.ParameterBuilder> Objekt kann verwendet werden, für das Marshalling festlegen, den konstanten Wert festgelegt und benutzerdefinierte Attribute angewendet.  
+  
+## <a name="attributes"></a>Attribute  
+ Mitglieder der <xref:System.Reflection.MethodAttributes> Enumeration definieren das genaue Zeichen einer dynamischen Methode:  
+  
+-   Statische Methoden werden angegeben, mit der <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Attribut.  
+  
+-   Endgültige Methoden (Methoden, die nicht überschrieben werden können) werden angegeben, mit der <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Attribut.  
+  
+-   Virtuelle Methoden werden angegeben, mit der <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Attribut.  
+  
+-   Abstrakte Methoden werden angegeben, mit der <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Attribut.  
+  
+-   Mehrere Attribute bestimmen die Sichtbarkeit der Methode. Siehe dazu die Beschreibung der <xref:System.Reflection.MethodAttributes> Enumeration.  
+  
+-   Methoden, die überladene Operatoren implementieren müssen festlegen, die <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Attribut.  
+  
+-   Finalizer müssen setzen die <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Attribut.  
+  
+## <a name="known-issues"></a>Bekannte Probleme  
+  
+-   Obwohl <xref:System.Reflection.Emit.MethodBuilder> stammt aus <xref:System.Reflection.MethodInfo>, einige der abstrakten Methoden definiert, der <xref:System.Reflection.MethodInfo> Klasse sind nicht vollständig implementiert <xref:System.Reflection.Emit.MethodBuilder>. Diese <xref:System.Reflection.Emit.MethodBuilder> Methoden lösen die <xref:System.NotSupportedException>. Zum Beispiel die <xref:System.Reflection.Emit.MethodBuilder.Invoke%2A?displayProperty=nameWithType> Methode ist nicht vollständig implementiert. Sie können diese Methoden spiegeln, durch das Abrufen von den einschließenden Typ mithilfe der <xref:System.Type.GetType%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> Methoden.  
+  
+-   Benutzerdefinierte Modifizierer werden beginnend mit .NET Framework, Version 2.0 unterstützt. Sie werden in früheren Versionen nicht unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Reflection.Emit.MethodBuilder> Klasse, um eine Methode innerhalb eines dynamischen Typs zu erstellen.  
+  
+ [!code-cpp[System.Reflection.Emit.MethodBuilder Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.MethodBuilder Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit.MethodBuilder Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MethodBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDeclarativeSecurity">
+      <MemberSignature Language="C#" Value="public void AddDeclarativeSecurity (System.Security.Permissions.SecurityAction action, System.Security.PermissionSet pset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddDeclarativeSecurity(valuetype System.Security.Permissions.SecurityAction action, class System.Security.PermissionSet pset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.AddDeclarativeSecurity(System.Security.Permissions.SecurityAction,System.Security.PermissionSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+        <Parameter Name="pset" Type="System.Security.PermissionSet" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die auszuführende Sicherheitsaktion (Demand, Assert usw.).</param>
+        <param name="pset">Der Berechtigungssatz, für den die Aktion gilt.</param>
+        <summary>Fügt dieser Methode deklarative Sicherheit hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Reflection.Emit.MethodBuilder.AddDeclarativeSecurity%2A>kann mehrere Male aufgerufen werden, mit jedem Aufruf eine Sicherheitsaktion angeben (z. B. `Demand`, `Assert`, und `Deny`) und einen Satz von Berechtigungen, die die Aktion gilt.  
+  
+> [!NOTE]
+>  In der .NET Framework-Versionen 1.0, 1.1 und 2.0, die deklarative Sicherheit-Attribute, die auf eine Methode angewendet wird, mithilfe der <xref:System.Reflection.Emit.MethodBuilder.AddDeclarativeSecurity%2A> Methode im alten Format der XML-Metadaten gespeichert werden. Finden Sie unter deklarative Sicherheitsattribute ausgeben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die kontextabhängige Verwendung von `AddDeclarativeSecurity` muss den Aufrufer einer Methode über uneingeschränkte Berechtigungen verfügen.  
+  
+ [!code-cpp[System.Reflection.Emit.MethodBuilder.AddDeclarativeSecurity Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.AddDeclarativeSecurity Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.MethodBuilder.AddDeclarativeSecurity Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.AddDeclarativeSecurity Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit.MethodBuilder.AddDeclarativeSecurity Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.AddDeclarativeSecurity Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="action" /> ist ungültig (<see langword="RequestMinimum" />, <see langword="RequestOptional" />, und <see langword="RequestRefuse" /> sind ungültig).</exception>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde mithilfe von <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.  
+  
+ - oder -   
+  
+ Der Berechtigungssatz <paramref name="pset" /> enthält eine Aktion, die zuvor von hinzugefügten <see cref="M:System.Reflection.Emit.MethodBuilder.AddDeclarativeSecurity(System.Security.Permissions.SecurityAction,System.Security.PermissionSet)" />.  
+  
+ - oder -   
+  
+ Für die aktuelle Methode ist die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pset" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodAttributes Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MethodAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Attribute für diese Methode ab.</summary>
+        <value>Schreibgeschützt. Ruft die <see langword="MethodAttributes" /> für diese Methode ab.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallingConvention">
+      <MemberSignature Language="C#" Value="public override System.Reflection.CallingConventions CallingConvention { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.CallingConventions CallingConvention" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.CallingConvention" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.CallingConventions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Aufrufkonvention der Methode zurück.</summary>
+        <value>Schreibgeschützt. Die Aufrufkonvention der Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsGenericParameters">
+      <MemberSignature Language="C#" Value="public override bool ContainsGenericParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContainsGenericParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.ContainsGenericParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für diesen Typ nicht unterstützt.</summary>
+        <value>Wird nicht unterstützt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Reflection.Emit.MethodBuilder> immer eine generische Methodendefinition darstellt, und kann daher nicht aufgerufen werden.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType> und <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A?displayProperty=nameWithType>. Informationen zu generischen Typen finden Sie unter <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die aufgerufene Methode wird in der Basisklasse nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMethodBody">
+      <MemberSignature Language="C#" Value="public void CreateMethodBody (byte[] il, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateMethodBody(unsigned int8[] il, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.CreateMethodBody(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="il" Type="System.Byte[]" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="il">Ein Array mit gültigen MSIL-Anweisungen. Wenn dieser Parameter <see langword="null" /> ist, wird der Methodentext gelöscht.</param>
+        <param name="count">Die Anzahl der gültigen Bytes im MSIL-Array. Dieser Wert wird ignoriert, wenn MSIL <see langword="null" /> ist.</param>
+        <summary>Erstellt den Text der Methode unter Verwendung eines angegebenen Bytearrays von MSIL-Anweisungen (Microsoft Intermediate Language).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt den Methodentext aus `il`, ein Array mit MSIL-Anweisungen als Opcodes. Die Anzahl der Bytes der gültige MSIL wird durch die Anzahl angegeben.  
+  
+> [!NOTE]
+>  Dies wird derzeit nicht vollständig unterstützt. Der Benutzer kann den Speicherort der token Reparaturen und Ausnahmehandler nicht bereitstellen.  
+  
+   
+  
+## Examples  
+ Im nachfolgenden Beispiel wird eine einfache Methode, die zwei ganze Zahlen addiert über Opcode mit generiert `CreateMethodBody`.  
+  
+ [!code-cpp[System.Refelction.Emit.MethodBuilder.CreateMethodBody Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Refelction.Emit.MethodBuilder.CreateMethodBody Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Refelction.Emit.MethodBuilder.CreateMethodBody Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Refelction.Emit.MethodBuilder.CreateMethodBody Example/CS/source.cs#1)]
+ [!code-vb[System.Refelction.Emit.MethodBuilder.CreateMethodBody Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Refelction.Emit.MethodBuilder.CreateMethodBody Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="count" /> liegt nicht innerhalb des Bereichs der Indizes des angegebenen Arrays der MSIL-Anweisungen und <paramref name="il" /> ist nicht <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde zuvor mit <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.  
+  
+ - oder -   
+  
+ Diese Methode wurde zuvor in diesem <see langword="MethodBuilder" /> mit einem <paramref name="il" />-Argument aufgerufen, das nicht <see langword="null" /> war.  
+  
+ - oder -   
+  
+ Für die aktuelle Methode ist die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringType">
+      <MemberSignature Language="C#" Value="public override Type DeclaringType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclaringType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.DeclaringType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Typ zurück, der diese Methode deklariert.</summary>
+        <value>Schreibgeschützt. Der Typ, der diese Methode deklariert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Code veranschaulicht die Verwendung der `Type` Eigenschaft.  
+  
+ [!code-cpp[MethodBuilderClass_TypeSample#1](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBuilderClass_TypeSample/CPP/methodbuilderclass.cpp#1)]
+ [!code-csharp[MethodBuilderClass_TypeSample#1](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBuilderClass_TypeSample/CS/methodbuilderclass.cs#1)]
+ [!code-vb[MethodBuilderClass_TypeSample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBuilderClass_TypeSample/VB/methodbuilderclass.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineGenericParameters">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.GenericTypeParameterBuilder[] DefineGenericParameters (params string[] names);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.GenericTypeParameterBuilder[] DefineGenericParameters(string[] names) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.DefineGenericParameters(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.GenericTypeParameterBuilder[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="names" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="names">Ein Array von Zeichenfolgen, die die Namen der generischen Typparameter darstellen.</param>
+        <summary>Legt die Anzahl von generischen Typparametern für die aktuelle Methode fest, gibt deren Namen an und gibt ein Array von <see cref="T:System.Reflection.Emit.GenericTypeParameterBuilder" />-Objekten zurück, das dazu verwendet werden kann, deren Einschränkungen zu definieren.</summary>
+        <returns>Ein Array von <see cref="T:System.Reflection.Emit.GenericTypeParameterBuilder" />-Objekten, die die Typparameter der generischen Methode darstellen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A> Methode wird die aktuelle Methode generische. Es gibt keine Möglichkeit, diese Änderung rückgängig zu machen. Bewirkt, dass beim Aufrufen dieser Methode eines zweiten Mal ein <xref:System.InvalidOperationException>.  
+  
+ Die Typparameter der aufgerufenen generischen Methode können später abgerufen werden, mithilfe der <xref:System.Reflection.Emit.MethodBuilder.GetGenericArguments%2A> Methode.  
+  
+ Gemäß der Konvention ist ein Typname für den Parameter aus einem einzelnen Buchstaben in Großbuchstaben.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType> und <xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A?displayProperty=nameWithType>. Informationen zu generischen Typen finden Sie unter <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen dynamischen Typ `DemoType`, die die dynamische generische Methode enthält `DemoMethod`. Diese Methode verfügt über zwei generische Typparameter, von die einer als Parameter an, und der andere als Rückgabetyp verwendet wird.  
+  
+ Bei der Codeausführung wird die dynamische Assembly als DemoGenericMethod1.dll gespeichert. Sie kann mit [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md) untersucht werden.  
+  
+> [!NOTE]
+>  Dieses Codebeispiel generiert einen einfachen Methodentext, der lediglich einen null-Verweis zurückgibt. Ein Codebeispiel mit Weitere vollständig entwickelte Methodentext, die generische Typen erstellt und verwendet, finden Sie unter [wie: Definieren einer generischen Methode mit Reflektionsausgabe](~/docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+  
+ [!code-cpp[GenericMethodBuilder#1](~/samples/snippets/cpp/VS_Snippets_CLR/GenericMethodBuilder/cpp/source.cpp#1)]
+ [!code-csharp[GenericMethodBuilder#1](~/samples/snippets/csharp/VS_Snippets_CLR/GenericMethodBuilder/CS/source.cs#1)]
+ [!code-vb[GenericMethodBuilder#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodBuilder/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurden bereits generische Typparameter für diese Methode definiert.  
+  
+ - oder -   
+  
+ Die Methode wurde bereits abgeschlossen.  
+  
+ - oder -   
+  
+ Die <see cref="M:System.Reflection.Emit.MethodBuilder.SetImplementationFlags(System.Reflection.MethodImplAttributes)" />-Methode wurde für die aktuelle Methode aufgerufen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="names" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Ein Element von <paramref name="names" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="names" /> ist ein leeres Array.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineParameter">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ParameterBuilder DefineParameter (int position, System.Reflection.ParameterAttributes attributes, string strParamName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ParameterBuilder DefineParameter(int32 position, valuetype System.Reflection.ParameterAttributes attributes, string strParamName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.DefineParameter(System.Int32,System.Reflection.ParameterAttributes,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int32" />
+        <Parameter Name="attributes" Type="System.Reflection.ParameterAttributes" />
+        <Parameter Name="strParamName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="position">Die Position des Parameters in der Parameterliste. Parameter werden beginnend mit der Zahl 1 (für den ersten Parameter) indiziert. Die Zahl 0 stellt den Rückgabewert der Methode dar.</param>
+        <param name="attributes">Die Parameterattribute des Parameters.</param>
+        <param name="strParamName">Der Name des Parameters. Der Name kann aus einer NULL-Zeichenfolge bestehen.</param>
+        <summary>Legt die Parameterattribute und den Namen eines Parameters dieser Methode oder des Rückgabewerts dieser Methode fest. Gibt einen ParameterBuilder zurück, mit dem benutzerdefinierte Attribute angewendet werden können.</summary>
+        <returns>Gibt ein <see langword="ParameterBuilder" />-Objekt zurück, das einen Parameter dieser Methode oder den Rückgabewert dieser Methode darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.Emit.ParameterBuilder> von dieser Methode zurückgegebene Objekt kann verwendet werden, der Standardwert für einen Parameter festlegen oder beim Anwenden von benutzerdefinierter Attributen.  
+  
+ Parameter die Nummerierung beginnt mit 1, sodass `position` ist 1 für den ersten Parameter. Wenn `position` NULL ist, wird diese Methode wirkt sich auf den Rückgabewert.  
+  
+> [!NOTE]
+>  In der .NET Framework-Versionen 1.0 und 1.1, wird eine Ausnahme ausgelöst, wenn `position` ist 0 (null), damit diese Methode zum Ändern der Attribute des Rückgabewerts in diesen Versionen verwendet werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Methode hat keine Parameter.  
+  
+ - oder -   
+  
+ <paramref name="position" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="position" /> ist größer als die Anzahl der Parameter der Methode.</exception>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde zuvor mit <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.  
+  
+ - oder -   
+  
+ Für die aktuelle Methode ist die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dieser <see langword="MethodBuilder" />-Instanz verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Objekt gleich dieser Instanz ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> eine Instanz von <see langword="MethodBuilder" /> und gleich diesem Objekt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Gleichheit wird festgelegt, durch die Verwendung der gleichen Namen, Attribute und Signatur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBaseDefinition">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodInfo GetBaseDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MethodInfo GetBaseDefinition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.GetBaseDefinition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Basisimplementierung für eine Methode zurück.</summary>
+        <returns>Die Basisimplementierung für diese Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies gibt immer die aktuelle `MethodBuilder` Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">Gibt an, ob die Vererbungskette dieses Members nach den benutzerdefinierten Attributen durchsucht werden soll.</param>
+        <summary>Gibt alle für diese Methode definierten benutzerdefinierten Attribute zurück.</summary>
+        <returns>Gibt ein Objektarray zurück, das alle benutzerdefinierten Attribute dieser Methode darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt. Rufen Sie die Methode mithilfe von <see cref="M:System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" /> ab, und rufen Sie <see cref="M:System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean)" /> für das zurückgegebene <see cref="T:System.Reflection.MethodInfo" />-Objekt auf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Der benutzerdefinierte Attributtyp.</param>
+        <param name="inherit">Gibt an, ob die Vererbungskette dieses Members nach den benutzerdefinierten Attributen durchsucht werden soll.</param>
+        <summary>Gibt die benutzerdefinierten Attribute zurück, die durch den angegebenen Typ identifiziert werden.</summary>
+        <returns>Gibt ein Array von Objekten, die die Attribute dieser Methode vom Typ darstellen <paramref name="attributeType" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt. Rufen Sie die Methode mithilfe von <see cref="M:System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" /> ab, und rufen Sie <see cref="M:System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean)" /> für das zurückgegebene <see cref="T:System.Reflection.MethodInfo" />-Objekt auf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGenericArguments">
+      <MemberSignature Language="C#" Value="public override Type[] GetGenericArguments ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type[] GetGenericArguments() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.GetGenericArguments" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Array von <see cref="T:System.Reflection.Emit.GenericTypeParameterBuilder" />-Objekten zurück, die die Typparameter der Methode darstellen, wenn diese generisch ist.</summary>
+        <returns>Ein Array von <see cref="T:System.Reflection.Emit.GenericTypeParameterBuilder" />-Objekten, die für eine generische Methode die Typparameter oder <see langword="null" /> darstellen, wenn die Methode nicht generisch ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Typparameter einer generischen Methode werden auch von zurückgegeben der <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A> -Methode, die zu ihrer Definition verwendet wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType> und <xref:System.Reflection.MethodInfo.GetGenericArguments%2A?displayProperty=nameWithType>. Informationen zu generischen Typen finden Sie unter <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGenericMethodDefinition">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodInfo GetGenericMethodDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MethodInfo GetGenericMethodDefinition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.GetGenericMethodDefinition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt diese Methode zurück.</summary>
+        <returns>Die aktuelle Instanz von <see cref="T:System.Reflection.Emit.MethodBuilder" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Reflection.Emit.MethodBuilder> kann nicht verwendet werden, um eine konstruierte generische Methode direkt ausgegeben. Die ausgegebene Methode ist eine generische Methodendefinition.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType> und <xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A?displayProperty=nameWithType>. Informationen zu generischen Typen finden Sie unter <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle Methode ist keine generische Methode. Das bedeutet, dass die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft <see langword="false" /> zurückgibt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für diese Methode ab.</summary>
+        <returns>Der Hashcode für diese Methode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetILGenerator">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ILGenerator GetILGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ILGenerator GetILGenerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.GetILGenerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ILGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen <see langword="ILGenerator" /> mit der standardmäßigen MSIL-Streamgröße (Microsoft Intermediate Language) von 64 Bytes für diese Methode zurück.</summary>
+        <returns>Gibt ein <see langword="ILGenerator" />-Objekt für diese Methode zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die kontextabhängige Verwendung von der `GetILGenerator` -Methode zum Erstellen und eine dynamische Assembly, die berechnet das Skalarprodukt von zwei Punkten im 3D-Bereich ausgeben.  
+  
+ [!code-cpp[System.Reflection.Emit ILGenerator Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit ILGenerator Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit ILGenerator Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit ILGenerator Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit ILGenerator Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit ILGenerator Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Methode sollte beispielsweise aufgrund ihrer <see cref="T:System.Reflection.MethodAttributes" />- oder <see cref="T:System.Reflection.MethodImplAttributes" />-Flags keinen Text enthalten, weil sie das <see cref="F:System.Reflection.MethodAttributes.PinvokeImpl" />-Flag aufweist.  
+  
+ - oder -   
+  
+ Es handelt sich um eine generische Methode, aber nicht um eine generische Methodendefinition. Das bedeutet, die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft ist <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetILGenerator">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ILGenerator GetILGenerator (int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ILGenerator GetILGenerator(int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.GetILGenerator(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ILGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="size">Die Größe des MSIL-Streams in Bytes.</param>
+        <summary>Gibt einen <see langword="ILGenerator" /> mit der angegebenen MSIL-Streamgröße (Microsoft Intermediate Language) für diese Methode zurück.</summary>
+        <returns>Gibt ein <see langword="ILGenerator" />-Objekt für diese Methode zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die kontextabhängige Verwendung von der `GetILGenerator` -Methode zum Erstellen und eine dynamische Assembly, die berechnet das Skalarprodukt von zwei Punkten im 3D-Bereich ausgeben.  
+  
+ [!code-cpp[System.Reflection.Emit ILGenerator Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit ILGenerator Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit ILGenerator Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit ILGenerator Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit ILGenerator Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit ILGenerator Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Methode sollte beispielsweise aufgrund ihrer <see cref="T:System.Reflection.MethodAttributes" />- oder <see cref="T:System.Reflection.MethodImplAttributes" />-Flags keinen Text enthalten, weil sie das <see cref="F:System.Reflection.MethodAttributes.PinvokeImpl" />-Flag aufweist.  
+  
+ - oder -   
+  
+ Es handelt sich um eine generische Methode, aber nicht um eine generische Methodendefinition. Das bedeutet, die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft ist <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodImplementationFlags">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodImplAttributes GetMethodImplementationFlags ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Reflection.MethodImplAttributes GetMethodImplementationFlags() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.GetMethodImplementationFlags" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodImplAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Implementierungsflags für die Methode zurück.</summary>
+        <returns>Gibt die Implementierungsflags für die Methode zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetModule">
+      <MemberSignature Language="C#" Value="public System.Reflection.Module GetModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Module GetModule() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.GetModule" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Verweis auf das Modul zurück, das diese Methode enthält.</summary>
+        <returns>Gibt einen Verweis auf das Modul zurück, das diese Methode enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht die Verwendung der `GetModule` Methode zum Abrufen von Informationen zu einem Modul dynamisch generiert.  
+  
+ [!code-cpp[System.Reflection.Emit.MethodBuilder.GetModule#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.GetModule/CPP/source3.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.MethodBuilder.GetModule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.GetModule/CS/source3.cs#1)]
+ [!code-vb[System.Reflection.Emit.MethodBuilder.GetModule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.GetModule/VB/source3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameters">
+      <MemberSignature Language="C#" Value="public override System.Reflection.ParameterInfo[] GetParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.ParameterInfo[] GetParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.GetParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ParameterInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Parameter dieser Methode zurück.</summary>
+        <returns>Ein Array von <see langword="ParameterInfo" />-Objekten, das die Parameter der Methode darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `GetParameters` zur Ermittlung von Informationen über die Parameter an eine dynamisch generierte Methode übergeben.  
+  
+ [!code-cpp[System.Reflection.Emit.MethodBuilder.GetParameters Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.GetParameters Example/CPP/source4.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.MethodBuilder.GetParameters Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.GetParameters Example/CS/source4.cs#1)]
+ [!code-vb[System.Reflection.Emit.MethodBuilder.GetParameters Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.GetParameters Example/VB/source4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt. Rufen Sie die Methode mithilfe von <see cref="M:System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" /> ab, und rufen Sie <see langword="GetParameters" /> für das zurückgegebene <see cref="T:System.Reflection.MethodInfo" />-Objekt auf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToken">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.MethodToken GetToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Reflection.Emit.MethodToken GetToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.GetToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.MethodToken</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see langword="MethodToken" /> , die das Token für diese Methode darstellt.</summary>
+        <returns>Gibt die <see langword="MethodToken" /> dieser Methode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitLocals">
+      <MemberSignature Language="C#" Value="public bool InitLocals { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InitLocals" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.InitLocals" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob die lokalen Variablen in dieser Methode mit 0 (null) initialisiert werden, oder legt diesen Wert fest. Der Standardwert dieser Eigenschaft ist <see langword="true" />.</summary>
+        <value>
+          <see langword="true" />, wenn die lokalen Variablen in der Methode mit 0 (null) initialisiert werden sollen, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft, um festgelegt wird `true`, schließt die ausgegebene MSIL Initialisierung der lokalen Variablen. Wenn sie, um festgelegt ist `false`, lokale Variablen werden nicht initialisiert und der generierte Code nicht überprüfbar ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Für die aktuelle Methode ist die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />. (Abrufen oder festlegen.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public override object Invoke (object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] parameters, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Invoke(object obj, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object[] parameters, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, für das die angegebene Methode aufgerufen werden soll. Wenn die Methode statisch ist, wird dieser Parameter ignoriert.</param>
+        <param name="invokeAttr">Diese Angabe muss ein Bitflag aus <see cref="T:System.Reflection.BindingFlags" /> : <see langword="InvokeMethod" />, <see langword="NonPublic" />und so weiter.</param>
+        <param name="binder">Ein Objekt, das die Bindung, die Umwandlung von Argumenttypen, das Aufrufen von Membern und das Abrufen von MemberInfo-Objekten über Reflektion ermöglicht. Wenn der Binder ist <see langword="null" />, wird der Standardbinder verwendet. Weitere Informationen finden Sie unter <see cref="T:System.Reflection.Binder" />.</param>
+        <param name="parameters">Eine Argumentliste. Diese ist ein Array von Argumenten, die hinsichtlich Anzahl, Reihenfolge und Typ mit den Parametern der aufzurufenden Methode identisch sind. Wenn keine Parameter vorhanden sind dies dürfte <see langword="null" />.</param>
+        <param name="culture">Eine Instanz von <see cref="T:System.Globalization.CultureInfo" /> für die Steuerung der Umwandlung von Typen. Wenn diese gleich null ist, wird die <see cref="T:System.Globalization.CultureInfo" /> des aktuellen Threads verwendet wird. (Beachten Sie, dass dies notwendig, z. B. konvertieren ist ein <see cref="T:System.String" /> , der 1000 darstellt, in eine <see cref="T:System.Double" /> Wert, da 1000 in verschiedenen Kulturen unterschiedlich dargestellt wird.)</param>
+        <summary>Ruft dynamisch und entsprechend den Einschränkungen des angegebenen Binders die Methode auf, die durch diese Instanz für das angegebene Objekt reflektiert wird. Übergibt dabei die angegebenen Parameter.</summary>
+        <returns>Gibt ein Objekt zurück, das den Rückgabewert der aufgerufenen Methode enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Methode statisch ist, ist die `obj` Parameter wird ignoriert. Bei nicht statischen Methoden `obj` muss eine Instanz einer Klasse, die erbt oder die Methode deklariert und muss denselben Typ wie diese Klasse. Wenn die Methode keine Parameter, den Wert der hat `parameters` muss `null`. Andernfalls sollte die Anzahl, Typ und Reihenfolge der Elemente im Parameterarray auf Anzahl, Typ und die Reihenfolge der Parameter für die Methode, die von dieser Instanz reflektiert identisch sein.  
+  
+> [!NOTE]
+>  Zugriffseinschränkungen werden bei vollständig vertrauenswürdigem Code ignoriert. D. h. private Konstruktoren, Methoden, Felder und Eigenschaften zugegriffen werden können, und mithilfe von Reflektion ist bei vollständig vertrauenswürdigem Code aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt. Rufen Sie die Methode mithilfe von <see cref="M:System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" /> ab, und rufen Sie <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" /> für das zurückgegebene <see cref="T:System.Reflection.MethodInfo" />-Objekt auf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public override bool IsDefined (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefined(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Der benutzerdefinierte Attributtyp.</param>
+        <param name="inherit">Gibt an, ob die Vererbungskette dieses Members nach den benutzerdefinierten Attributen durchsucht werden soll.</param>
+        <summary>Überprüft, ob der Typ des angegebenen benutzerdefinierten Attributs definiert ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Typ des angegebenen benutzerdefinierten Attributs definiert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt. Rufen Sie die Methode mithilfe von <see cref="M:System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" /> ab, und rufen Sie <see cref="M:System.Reflection.MemberInfo.IsDefined(System.Type,System.Boolean)" /> für das zurückgegebene <see cref="T:System.Reflection.MethodInfo" />-Objekt auf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGenericMethod">
+      <MemberSignature Language="C#" Value="public override bool IsGenericMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGenericMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Methode eine generische Methode ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Methode generisch ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Methode ist generisch, wenn es über Typparameter verfügt. Sie können eine Methode von der generischen vornehmen, durch Aufrufen der <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A> Methode, um Parameter hinzuzufügen. Diese Änderung kann nicht rückgängig gemacht werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Status einer Methode. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A> Methode.  
+  
+ [!code-cpp[GenericMethodBuilder#7](~/samples/snippets/cpp/VS_Snippets_CLR/GenericMethodBuilder/cpp/source.cpp#7)]
+ [!code-csharp[GenericMethodBuilder#7](~/samples/snippets/csharp/VS_Snippets_CLR/GenericMethodBuilder/CS/source.cs#7)]
+ [!code-vb[GenericMethodBuilder#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodBuilder/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGenericMethodDefinition">
+      <MemberSignature Language="C#" Value="public override bool IsGenericMethodDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGenericMethodDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das aktuelle <see cref="T:System.Reflection.Emit.MethodBuilder" />-Objekt die Definition einer generischen Methode darstellt.</summary>
+        <value>
+          <see langword="true" />, wenn das aktuelle <see cref="T:System.Reflection.Emit.MethodBuilder" />-Objekt die Definition einer generischen Methode darstellt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Reflection.Emit.MethodBuilder> kann nur verwendet werden, zum Erstellen von generischen Methodendefinitionen; es kann nicht verwendet werden, um eine konstruierte generische Methode nicht direkt erstellen. Allerdings eine Unterklasse von <xref:System.Reflection.Emit.MethodBuilder> könnte eine konstruierte generische Methode darstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Status einer Methode. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A> Methode.  
+  
+ [!code-cpp[GenericMethodBuilder#7](~/samples/snippets/cpp/VS_Snippets_CLR/GenericMethodBuilder/cpp/source.cpp#7)]
+ [!code-csharp[GenericMethodBuilder#7](~/samples/snippets/csharp/VS_Snippets_CLR/GenericMethodBuilder/CS/source.cs#7)]
+ [!code-vb[GenericMethodBuilder#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodBuilder/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecurityCritical">
+      <MemberSignature Language="C#" Value="public override bool IsSecurityCritical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecurityCritical" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.IsSecurityCritical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <value>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vervollständigen Sie den Typ durch Aufrufen, um zu bestimmen, ob eine Methode in einer dynamischen Assembly sicherheitskritisch ist, <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType>, rufen Sie die <xref:System.Type.GetMethod%2A> -Methode für den Typ der abgeschlossenen und Get der <xref:System.Reflection.MethodBase.IsSecurityCritical%2A> Eigenschaft für die resultierende <xref:System.Reflection.MethodInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">In allen Fällen. Diese Eigenschaft wird in dynamischen Assemblys nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecuritySafeCritical">
+      <MemberSignature Language="C#" Value="public override bool IsSecuritySafeCritical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecuritySafeCritical" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.IsSecuritySafeCritical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <value>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vervollständigen Sie den Typ durch Aufrufen, um zu bestimmen, ob eine Methode in einer dynamischen Assembly Sicherheit sicherheitsgeschützt ist, <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType>, rufen Sie die <xref:System.Type.GetMethod%2A> -Methode für den Typ der abgeschlossenen und Get der <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> Eigenschaft für die resultierende <xref:System.Reflection.MethodInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">In allen Fällen. Diese Eigenschaft wird in dynamischen Assemblys nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecurityTransparent">
+      <MemberSignature Language="C#" Value="public override bool IsSecurityTransparent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecurityTransparent" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.IsSecurityTransparent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <value>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vervollständigen Sie den Typ durch Aufrufen, um zu bestimmen, ob eine Methode in einer dynamischen Assembly sicherheitstransparent ist, <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType>, rufen Sie die <xref:System.Type.GetMethod%2A> -Methode für den Typ der abgeschlossenen und Get der <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> Eigenschaft für die resultierende <xref:System.Reflection.MethodInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">In allen Fällen. Diese Eigenschaft wird in dynamischen Assemblys nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeGenericMethod">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodInfo MakeGenericMethod (params Type[] typeArguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MethodInfo MakeGenericMethod(class System.Type[] typeArguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.MakeGenericMethod(System.Type[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeArguments" Type="System.Type[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="typeArguments">Ein Array von <see cref="T:System.Type" />-Objekten, die die Typargumente für die generische Methode darstellen.</param>
+        <summary>Gibt eine aus der aktuellen generischen Methodendefinition mit den angegebenen generischen Typargumenten konstruierte generische Methode zurück.</summary>
+        <returns>Ein <see cref="T:System.Reflection.MethodInfo" />, das die aus der aktuellen generischen Methodendefinition mit den angegebenen generischen Typargumenten konstruierte generische Methode darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie dynamischen Code ausgeben, müssen Sie möglicherweise einen Aufruf einer Methode, die aus der generischen Methodendefinition dargestellte erstellter Ausgeben einer <xref:System.Reflection.Emit.MethodBuilder>, bevor der einschließende Typ abgeschlossen wurde. Können Sie die <xref:System.Reflection.Emit.MethodBuilder.MakeGenericMethod%2A> Methode zum Erstellen einer <xref:System.Reflection.MethodInfo> für solche einer konstruierte Methode, und Verwenden der <xref:System.Reflection.MethodInfo> im ausgegebenen Aufruf.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel erstellt eine konstruierte Methode aus einer unvollständigen generischen Methodendefinition in ein unvollständiger Typ sein.  
+  
+ Das Beispiel erstellt eine flüchtige Assembly und ein Modul mit einem einzigen, fügt eine Methode `M`, und nutzt die generische Methode durch Hinzufügen eines Typs T-Parameter unter Verwendung der <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A> Methode. Der Typparameter wird als Typ des Parameters der Methode und auch als Rückgabetyp verwendet. Die generischen Methodendefinition Text nicht berechtigt ist, und der einschließende Typ wurde nicht abgeschlossen. Die <xref:System.Reflection.Emit.MethodBuilder.MakeGenericMethod%2A> Methode wird dann verwendet, um die konstruierte Methode stellen `M<String>` (`M(Of String)` in Visual Basic). Der Beispielcode hat keine Ausgabe, da die Unterklasse von <xref:System.Reflection.MethodInfo> zurückgegebenes die <xref:System.Reflection.Emit.MethodBuilder.MakeGenericMethod%2A> Methode lässt keine Reflektion über ihre Parameter.  
+  
+> [!NOTE]
+>  Weiteres Beispiel für Code, der verwendet <xref:System.Reflection.Emit.MethodBuilder.MakeGenericMethod%2A>, finden Sie unter <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A>. <xref:System.Reflection.Emit.MethodBuilder.MakeGenericMethod%2A>wird auch häufig verwendet, wenn die Code ausgeben, die generische Typen verwendet. Finden Sie unter [wie: definieren eine generische Methode mit Reflektionsausgabe](~/docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+  
+ [!code-cpp[MethodBuilder.MakeGenericMethod#1](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBuilder.MakeGenericMethod/cpp/source.cpp#1)]
+ [!code-csharp[MethodBuilder.MakeGenericMethod#1](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBuilder.MakeGenericMethod/cs/source.cs#1)]
+ [!code-vb[MethodBuilder.MakeGenericMethod#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBuilder.MakeGenericMethod/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodHandle">
+      <MemberSignature Language="C#" Value="public override RuntimeMethodHandle MethodHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.RuntimeMethodHandle MethodHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.MethodHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeMethodHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das interne Handle für die Methode ab. Verwenden Sie dieses Handle, um auf das zugrunde liegende Metadatenhandle zuzugreifen.</summary>
+        <value>Schreibgeschützt. Das interne Handle für die Methode. Verwenden Sie dieses Handle, um auf das zugrunde liegende Metadatenhandle zuzugreifen.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt. Rufen Sie die Methode mithilfe von <see cref="M:System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" /> ab, und rufen Sie <see cref="P:System.Reflection.MethodBase.MethodHandle" /> für das zurückgegebene <see cref="T:System.Reflection.MethodInfo" />-Objekt auf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodImplementationFlags">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodImplAttributes MethodImplementationFlags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MethodImplAttributes MethodImplementationFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.MethodImplementationFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodImplAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Module Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Module Module" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Modul ab, in dem die aktuelle Methode definiert wird.</summary>
+        <value>Die <see cref="T:System.Reflection.Module" /> in dem der Member vom aktuellen dargestellt <see cref="T:System.Reflection.MemberInfo" /> definiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird als Annehmlichkeit bereitgestellt. Dies ist äquivalent zum Verwenden der <xref:System.Reflection.Emit.MethodBuilder.DeclaringType%2A> Eigenschaft beim Abrufen des Typs, in dem die Methode deklariert wird, und zum Aufrufen der <xref:System.Type.Module%2A> -Eigenschaft des resultierenden <xref:System.Type> Objekt.  
+  
+ Diese Eigenschaft entspricht auch dem Aufruf <xref:System.Reflection.Emit.MethodBuilder.GetModule%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen dieser Methode ab.</summary>
+        <value>Schreibgeschützt. Ruft eine Zeichenfolge ab, die den einfachen Namen dieser Methode enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectedType">
+      <MemberSignature Language="C#" Value="public override Type ReflectedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReflectedType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.ReflectedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Klasse ab, die bei der Reflektion verwendet wurde, um dieses Objekt abzurufen.</summary>
+        <value>Schreibgeschützt. Der Typ, der zum Abrufen dieser Methode verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnParameter">
+      <MemberSignature Language="C#" Value="public override System.Reflection.ParameterInfo ReturnParameter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.ParameterInfo ReturnParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.ReturnParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ParameterInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Reflection.ParameterInfo" />-Objekt ab, das Informationen zum Rückgabetyp der Methode enthält, z: B. ob der Rückgabetyp benutzerdefinierte Modifizierer hat.</summary>
+        <value>Ein <see cref="T:System.Reflection.ParameterInfo" />-Objekt, das Informationen zum Rückgabetyp enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Compiler-Designer können Sie die <xref:System.Reflection.ParameterInfo> Objekt zurückgegeben, die von dieser Eigenschaft, um zu ermitteln, ob benutzerdefinierte Modifizierer, wie z. B. <xref:Microsoft.VisualC.IsConstModifier>, in den Rückgabetyp angewendet wurden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der deklarierende Typ wurde nicht erstellt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public override Type ReturnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Rückgabetyp der Methode ab, die von diesem <see cref="T:System.Reflection.Emit.MethodBuilder" /> dargestellt wird.</summary>
+        <value>Der Rückgabetyp der Methode</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Beginnend mit .NET Framework 2.0 und .NET Compact Framework 2.0, wird dieser Member von der Basisklasse geerbt <xref:System.Reflection.MethodInfo>. Siehe <xref:System.Reflection.MethodInfo.ReturnType%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnTypeCustomAttributes">
+      <MemberSignature Language="C#" Value="public override System.Reflection.ICustomAttributeProvider ReturnTypeCustomAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.ICustomAttributeProvider ReturnTypeCustomAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.ReturnTypeCustomAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ICustomAttributeProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die benutzerdefinierten Attribute des Rückgabetyps der Methode zurück.</summary>
+        <value>Schreibgeschützt. Die benutzerdefinierten Attribute des Rückgabetyps der Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt immer `null` zurück. Abrufen der <xref:System.Reflection.MethodInfo> nach enthaltenden <xref:System.Type> erstellt und aufgerufen wurde <xref:System.Reflection.MethodInfo.ReturnTypeCustomAttributes%2A> auf die <xref:System.Reflection.MethodInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetCustomAttribute (System.Reflection.Emit.CustomAttributeBuilder customBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCustomAttribute(class System.Reflection.Emit.CustomAttributeBuilder customBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.SetCustomAttribute(System.Reflection.Emit.CustomAttributeBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customBuilder" Type="System.Reflection.Emit.CustomAttributeBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="customBuilder">Eine Instanz einer Hilfsklasse zum Beschreiben des benutzerdefinierten Attributs.</param>
+        <summary>Legt ein benutzerdefiniertes Attribut mithilfe eines benutzerdefinierten Attribut-Generators fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.Emit.MethodBuilder.SetCustomAttribute%2A> Methode interagieren kann die <xref:System.Reflection.Emit.MethodBuilder.SetImplementationFlags%2A> Methode, wenn die beiden Methoden in Kombination verwendet werden. Finden Sie im Abschnitt "Hinweise" der <xref:System.Reflection.Emit.MethodBuilder.SetImplementationFlags%2A> -Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="customBuilder" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Für die aktuelle Methode ist die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetCustomAttribute (System.Reflection.ConstructorInfo con, byte[] binaryAttribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCustomAttribute(class System.Reflection.ConstructorInfo con, unsigned int8[] binaryAttribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.SetCustomAttribute(System.Reflection.ConstructorInfo,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="con" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="binaryAttribute" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="con">Der Konstruktor für das benutzerdefinierte Attribut.</param>
+        <param name="binaryAttribute">Ein Byte-BLOB, das die Attribute darstellt.</param>
+        <summary>Legt ein benutzerdefiniertes Attribut mithilfe eines angegebenen benutzerdefinierten Attribut-BLOBs fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Formatieren `binaryAttribute`, finden Sie in der Dokumentation der Common Language Infrastructure (CLI), insbesondere in "Partition II: Metadata Definition and Semantics". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+ Die <xref:System.Reflection.Emit.MethodBuilder.SetCustomAttribute%2A> Methode interagieren kann die <xref:System.Reflection.Emit.MethodBuilder.SetImplementationFlags%2A> Methode, wenn die beiden Methoden in Kombination verwendet werden. Finden Sie im Abschnitt "Hinweise" der <xref:System.Reflection.Emit.MethodBuilder.SetImplementationFlags%2A> -Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="con" /> oder <paramref name="binaryAttribute" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Für die aktuelle Methode ist die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImplementationFlags">
+      <MemberSignature Language="C#" Value="public void SetImplementationFlags (System.Reflection.MethodImplAttributes attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetImplementationFlags(valuetype System.Reflection.MethodImplAttributes attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.SetImplementationFlags(System.Reflection.MethodImplAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Reflection.MethodImplAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die festzulegenden Implementierungsflags.</param>
+        <summary>Legt die Implementierungsflags für diese Methode fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung der <xref:System.Reflection.Emit.MethodBuilder.SetImplementationFlags%2A> -Methode in Kombination mit der <xref:System.Reflection.Emit.MethodBuilder.SetCustomAttribute%2A> -Methode, achten Sie bei potenziellen Interaktionen. Beispiel für die Verwendung der <xref:System.Reflection.Emit.MethodBuilder.SetCustomAttribute%2A> -Methode zum Hinzufügen der <xref:System.Runtime.InteropServices.DllImportAttribute> Attributgruppen auch die <xref:System.Reflection.MethodImplAttributes?displayProperty=nameWithType> Flag. Wenn anschließend Sie rufen die <xref:System.Reflection.Emit.MethodBuilder.SetImplementationFlags%2A> -Methode, die <xref:System.Reflection.MethodImplAttributes.PreserveSig> -Flag überschrieben wird. Es gibt zwei Möglichkeiten, um dieses Problem zu vermeiden:  
+  
+-   Rufen Sie die <xref:System.Reflection.Emit.MethodBuilder.SetImplementationFlags%2A> Methode vor dem Aufrufen der <xref:System.Reflection.Emit.MethodBuilder.SetCustomAttribute%2A> Methode. Die <xref:System.Reflection.Emit.MethodBuilder.SetCustomAttribute%2A> Methode immer respektiert vorhandenen Methodenimplementierungsflags.  
+  
+-   Rufen Sie beim Festlegen der Implementierungsflags der <xref:System.Reflection.Emit.MethodBuilder.GetMethodImplementationFlags%2A> Methode, die vorhandenen Flags abzurufen, verwenden Sie den bitweisen oder um das Flag hinzufügen, und rufen Sie anschließend die <xref:System.Reflection.Emit.MethodBuilder.SetImplementationFlags%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die kontextabhängige Verwendung von der `SetImplementationFlags` Methode zum Beschreiben der MSIL-Implementierung in einem Methodentext.  
+  
+ [!code-cpp[System.Reflection.Emit.MethodBuilder.SetImplementationFlags Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.SetImplementationFlags Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.MethodBuilder.SetImplementationFlags Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.SetImplementationFlags Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit.MethodBuilder.SetImplementationFlags Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.SetImplementationFlags Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde zuvor mit <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.  
+  
+ - oder -   
+  
+ Für die aktuelle Methode ist die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMarshal">
+      <MemberSignature Language="C#" Value="public void SetMarshal (System.Reflection.Emit.UnmanagedMarshal unmanagedMarshal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMarshal(class System.Reflection.Emit.UnmanagedMarshal unmanagedMarshal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.SetMarshal(System.Reflection.Emit.UnmanagedMarshal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("An alternate API is available: Emit the MarshalAs custom attribute instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unmanagedMarshal" Type="System.Reflection.Emit.UnmanagedMarshal" />
+      </Parameters>
+      <Docs>
+        <param name="unmanagedMarshal">Die Marshallinginformationen für den Rückgabetyp dieser Methode.</param>
+        <summary>Legt die Marshallinginformationen für den Rückgabetyp dieser Methode fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die kontextabhängige Verwendung von der `SetMarshal` Methode, um die Ergebnisse eines Aufrufs der Methode als ein anderer Typ zu marshallen.  
+  
+ [!code-cpp[System.Reflection.Emit.MethodBuilder.SetMarshal Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.SetMarshal Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.MethodBuilder.SetMarshal Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.SetMarshal Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit.MethodBuilder.SetMarshal Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.SetMarshal Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde zuvor mit <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.  
+  
+ - oder -   
+  
+ Für die aktuelle Methode ist die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMethodBody">
+      <MemberSignature Language="C#" Value="public void SetMethodBody (byte[] il, int maxStack, byte[] localSignature, System.Collections.Generic.IEnumerable&lt;System.Reflection.Emit.ExceptionHandler&gt; exceptionHandlers, System.Collections.Generic.IEnumerable&lt;int&gt; tokenFixups);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMethodBody(unsigned int8[] il, int32 maxStack, unsigned int8[] localSignature, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Reflection.Emit.ExceptionHandler&gt; exceptionHandlers, class System.Collections.Generic.IEnumerable`1&lt;int32&gt; tokenFixups) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.SetMethodBody(System.Byte[],System.Int32,System.Byte[],System.Collections.Generic.IEnumerable{System.Reflection.Emit.ExceptionHandler},System.Collections.Generic.IEnumerable{System.Int32})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="il" Type="System.Byte[]" />
+        <Parameter Name="maxStack" Type="System.Int32" />
+        <Parameter Name="localSignature" Type="System.Byte[]" />
+        <Parameter Name="exceptionHandlers" Type="System.Collections.Generic.IEnumerable&lt;System.Reflection.Emit.ExceptionHandler&gt;" />
+        <Parameter Name="tokenFixups" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="il">Ein Array, das gültige MSIL-Anweisungen enthält.</param>
+        <param name="maxStack">Die maximale Stapelauswertungstiefe.</param>
+        <param name="localSignature">Ein Array von Bytes, die die serialisierte lokale Variablenstruktur enthalten. Geben Sie <see langword="null" /> , wenn die Methode keine lokalen Variablen enthält.</param>
+        <param name="exceptionHandlers">Eine Auflistung, die die Ausnahmehandler für die Methode enthält. Geben Sie <see langword="null" /> , wenn die Methode keine Ausnahmehandler verfügt.</param>
+        <param name="tokenFixups">Eine Auflistung von Werten, die Offsets darstellen <c>il</c>, von denen jede gibt den Anfang eines Tokens, der geändert werden kann. Geben Sie <see langword="null" /> , wenn die Methode über keine Token verfügt, die geändert werden müssen.</param>
+        <summary>Erstellt den Text der Methode unter Verwendung eines angegebenen Bytearrays von MSIL-Anweisungen (Microsoft Intermediate Language).</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="il" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maxStack" /> ist ein negativer Wert.  
+  
+ - oder -   
+  
+ Einer der <paramref name="exceptionHandlers" /> gibt einen Offset außerhalb von <paramref name="il" />.  
+  
+ - oder -   
+  
+ Einer der <paramref name="tokenFixups" /> gibt einen Offset außerhalb der <paramref name="il" /> Array.</exception>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde zuvor mit erstellt die <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> Methode.  
+  
+ - oder -   
+  
+ Diese Methode wurde zuvor für dieses aufgerufen <see cref="T:System.Reflection.Emit.MethodBuilder" /> Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameters">
+      <MemberSignature Language="C#" Value="public void SetParameters (params Type[] parameterTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParameters(class System.Type[] parameterTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.SetParameters(System.Type[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterTypes" Type="System.Type[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="parameterTypes">Ein Array von <see cref="T:System.Type" />-Objekten, die die Parametertypen darstellen.</param>
+        <summary>Legt die Anzahl und Typen der Parameter für eine Methode fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Anzahl und Typen der Parameter bekannt sind und wenn die Methode definiert ist, können festgelegt werden mit jeder Überladung von der <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A?displayProperty=nameWithType> -Methode, die ein Array von Parametertypen akzeptiert. Allerdings kann eine generische Methode Parameter verfügen, deren Typen angegeben werden, von einer oder mehreren eigenen generischer Typparameter, der nicht erst definiert werden, nachdem die Methode definiert wurde. Verwenden Sie diese Methode, um den Parametertypen in diesem Fall festzulegen.  
+  
+ Wenn der Rückgabetyp erforderliche oder optionale benutzerdefinierte Modifizierer, z. B. hat <xref:System.Runtime.CompilerServices.IsConst>, verwenden Sie die <xref:System.Reflection.Emit.MethodBuilder.SetSignature%28System.Type%2CSystem.Type%5B%5D%2CSystem.Type%5B%5D%2CSystem.Type%5B%5D%2CSystem.Type%5B%5D%5B%5D%2CSystem.Type%5B%5D%5B%5D%29> -methodenüberladung.  
+  
+ Beim Aufrufen dieser Methode werden alle Parametertypen, die mit festgelegt wurden ersetzt die <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A> Methode, um eine Methode den generischen stellen. Die <xref:System.Reflection.Emit.MethodBuilder.SetParameters%2A> Methode wird verwendet, um die Methode einen Parameter, erteilen, dessen Typ durch den ersten generischen Typparameter angegeben werden wird. Die <xref:System.Reflection.Emit.MethodBuilder.SetReturnType%2A> Methode wird verwendet, um der Methode einen Rückgabetyp aufweisen, angegeben durch den zweiten generischen Typparameter zu gewähren.  
+  
+ Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A> Methode.  
+  
+ [!code-cpp[GenericMethodBuilder#3](~/samples/snippets/cpp/VS_Snippets_CLR/GenericMethodBuilder/cpp/source.cpp#3)]
+ [!code-csharp[GenericMethodBuilder#3](~/samples/snippets/csharp/VS_Snippets_CLR/GenericMethodBuilder/CS/source.cs#3)]
+ [!code-vb[GenericMethodBuilder#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodBuilder/VB/source.vb#3)]  
+[!code-cpp[GenericMethodBuilder#5](~/samples/snippets/cpp/VS_Snippets_CLR/GenericMethodBuilder/cpp/source.cpp#5)]
+[!code-csharp[GenericMethodBuilder#5](~/samples/snippets/csharp/VS_Snippets_CLR/GenericMethodBuilder/CS/source.cs#5)]
+[!code-vb[GenericMethodBuilder#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodBuilder/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle Methode ist generisch, die Methodendefinition ist aber nicht generisch. Das bedeutet, die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft ist <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReturnType">
+      <MemberSignature Language="C#" Value="public void SetReturnType (Type returnType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetReturnType(class System.Type returnType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.SetReturnType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="returnType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="returnType">Ein <see cref="T:System.Type" />-Objekt, das den Rückgabetyp der Methode darstellt.</param>
+        <summary>Legt den Rückgabetyp der Methode fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um den Rückgabetyp einer generischen Methode festlegen, wenn der Rückgabetyp von einer der generische Typparameter der Methode angegeben wird. Wenn der Rückgabetyp erforderliche oder optionale benutzerdefinierte Modifizierer, z. B. hat <xref:System.Runtime.CompilerServices.IsConst>, verwenden Sie die <xref:System.Reflection.Emit.MethodBuilder.SetSignature%28System.Type%2CSystem.Type%5B%5D%2CSystem.Type%5B%5D%2CSystem.Type%5B%5D%2CSystem.Type%5B%5D%5B%5D%2CSystem.Type%5B%5D%5B%5D%29> -methodenüberladung.  
+  
+ Beim Aufrufen dieser Methode einen Rückgabetyp aufweisen, die mithilfe des hergestellt ersetzt die <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A> Methode, um eine Methode den generischen stellen. Die <xref:System.Reflection.Emit.MethodBuilder.SetParameters%2A> Methode wird verwendet, um die Methode einen Parameter, erteilen, dessen Typ durch den ersten generischen Typparameter angegeben werden wird. Die <xref:System.Reflection.Emit.MethodBuilder.SetReturnType%2A> Methode wird verwendet, um der Methode einen Rückgabetyp aufweisen, angegeben durch den zweiten generischen Typparameter zu gewähren.  
+  
+ Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A> Methode.  
+  
+ [!code-cpp[GenericMethodBuilder#3](~/samples/snippets/cpp/VS_Snippets_CLR/GenericMethodBuilder/cpp/source.cpp#3)]
+ [!code-csharp[GenericMethodBuilder#3](~/samples/snippets/csharp/VS_Snippets_CLR/GenericMethodBuilder/CS/source.cs#3)]
+ [!code-vb[GenericMethodBuilder#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodBuilder/VB/source.vb#3)]  
+[!code-cpp[GenericMethodBuilder#5](~/samples/snippets/cpp/VS_Snippets_CLR/GenericMethodBuilder/cpp/source.cpp#5)]
+[!code-csharp[GenericMethodBuilder#5](~/samples/snippets/csharp/VS_Snippets_CLR/GenericMethodBuilder/CS/source.cs#5)]
+[!code-vb[GenericMethodBuilder#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodBuilder/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle Methode ist generisch, die Methodendefinition ist aber nicht generisch. Das bedeutet, die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft ist <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSignature">
+      <MemberSignature Language="C#" Value="public void SetSignature (Type returnType, Type[] returnTypeRequiredCustomModifiers, Type[] returnTypeOptionalCustomModifiers, Type[] parameterTypes, Type[][] parameterTypeRequiredCustomModifiers, Type[][] parameterTypeOptionalCustomModifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSignature(class System.Type returnType, class System.Type[] returnTypeRequiredCustomModifiers, class System.Type[] returnTypeOptionalCustomModifiers, class System.Type[] parameterTypes, class System.Type[][] parameterTypeRequiredCustomModifiers, class System.Type[][] parameterTypeOptionalCustomModifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.SetSignature(System.Type,System.Type[],System.Type[],System.Type[],System.Type[][],System.Type[][])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="returnTypeRequiredCustomModifiers" Type="System.Type[]" />
+        <Parameter Name="returnTypeOptionalCustomModifiers" Type="System.Type[]" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+        <Parameter Name="parameterTypeRequiredCustomModifiers" Type="System.Type[][]" />
+        <Parameter Name="parameterTypeOptionalCustomModifiers" Type="System.Type[][]" />
+      </Parameters>
+      <Docs>
+        <param name="returnType">Der Rückgabetyp der Methode</param>
+        <param name="returnTypeRequiredCustomModifiers">Ein Array von Typen, die die erforderlichen benutzerdefinierten Modifizierer, etwa <see cref="T:System.Runtime.CompilerServices.IsConst" />, für den Rückgabetyp der Methode darstellen. Wenn der Rückgabetyp keine erforderlichen benutzerdefinierten Modifizierer hat, geben Sie <see langword="null" /> an.</param>
+        <param name="returnTypeOptionalCustomModifiers">Ein Array von Typen, die die optionalen benutzerdefinierten Modifizierer, etwa <see cref="T:System.Runtime.CompilerServices.IsConst" />, für den Rückgabetyp der Methode darstellen. Wenn der Rückgabetyp keine optionalen benutzerdefinierten Modifizierer hat, geben Sie <see langword="null" /> an.</param>
+        <param name="parameterTypes">Die Typen der Parameter der Methode.</param>
+        <param name="parameterTypeRequiredCustomModifiers">Ein Array mit Arrays von Typen. Jedes Array von Typen stellt die erforderlichen benutzerdefinierten Modifizierer für den entsprechenden Parameter dar, z. B. <see cref="T:System.Runtime.CompilerServices.IsConst" />. Wenn ein bestimmter Parameter keine erforderlichen benutzerdefinierten Modifizierer hat, geben Sie <see langword="null" /> anstelle eines Arrays von Typen an. Wenn keiner der Parameter erforderliche benutzerdefinierte Modifizierer hat, geben Sie <see langword="null" /> anstelle eines Arrays mit Arrays an.</param>
+        <param name="parameterTypeOptionalCustomModifiers">Ein Array mit Arrays von Typen. Jedes Array von Typen stellt die optionalen benutzerdefinierten Modifizierer für den entsprechenden Parameter dar, z. B. <see cref="T:System.Runtime.CompilerServices.IsConst" />. Wenn ein bestimmter Parameter keine optionalen benutzerdefinierten Modifizierer hat, geben Sie <see langword="null" /> anstelle eines Arrays von Typen an. Wenn keiner der Parameter optionale benutzerdefinierte Modifizierer hat, geben Sie <see langword="null" /> anstelle eines Arrays mit Arrays an.</param>
+        <summary>Legt die Methodensignatur fest, einschließlich des Rückgabetyps, der Parametertypen und der erforderlichen und optionalen benutzerdefinierten Modifizierer für den Rückgabetyp und die Parametertypen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Rückgabetyp und die Anzahl und Typen der Parameter bekannt sind und wenn die Methode definiert ist, sie können hergestellt werden mit jeder Überladung von der <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A?displayProperty=nameWithType> -Methode, die ein Array von Parametertypen akzeptiert. Allerdings kann eine generische Methode Parameter verfügen, deren Typen angegeben werden, von einer oder mehreren eigenen generischer Typparameter, der nicht erst definiert werden, nachdem die Methode definiert wurde. Verwenden Sie diese Methode, um den Parametertypen in diesem Fall festzulegen.  
+  
+ Wenn der Rückgabetyp weder die Parametertypen erforderliche oder optionale benutzerdefinierte Modifizierer wie z. B. haben <xref:Microsoft.VisualC.IsConstModifier>, können Sie die <xref:System.Reflection.Emit.MethodBuilder.SetReturnType%2A> und <xref:System.Reflection.Emit.MethodBuilder.SetParameters%2A> Methoden.  
+  
+ Beim Aufrufen dieser Methode ersetzt die Parameter und Rückgabetyp hergestellt, mit der <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel enthält Quellcode für eine generische Klasse namens Beispiel, das einen Typparameter hat `T`. Die Klasse verfügt über ein Feld mit dem Namen `Field`, des Typs `T`, und eine generische Methode `GM` mit des eigenen Typparameters `U`. Methode `GM` erstellt eine Instanz des Beispiels, das Ersetzen des eigenen Typparameters `U` für den Typparameter des Beispiels, und speichert dessen Eingabeparameter in `Field`. Dieser Code wird kompiliert, aber nicht verwendet. sehen Sie es mit der [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), und vergleichen Sie sie mit der Code ausgegeben, die von Klasse `Example`.  
+  
+ Der Code in der Klasse `Example` veranschaulicht die Verwendung von der <xref:System.Reflection.Emit.MethodBuilder.SetSignature%2A> Methode in generischem Code ausgeben. Die `Main` -Methode der Klasse `Example` erstellt eine dynamische Assembly mit einer Klasse mit dem Namen `Sample`, und verwendet die <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> Methode, um es generische machen, indem Sie einen Typparameter, der mit dem Namen `T`. Einen Standardkonstruktor und ein Feld mit dem Namen `Field`, des Typs `T`, Klasse hinzugefügt werden `Sample`. Eine Methode `GM` hinzugefügt, und in einer generischen Methode mit aktiviert die <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A> Methode. Der Typparameter der `GM` lautet `U`. Nachdem der Typparameter definiert wurde, die Signatur der `GM` hinzugefügt wird, mithilfe der <xref:System.Reflection.Emit.MethodBuilder.SetSignature%2A> Methode. Kein Rückgabetyp und keine Modifizierer erforderlich oder benutzerdefinierte vorhanden ist, sind alle Parameter dieser Methode `null` außer `parameterTypes`, wodurch des Typs der einzige Parameter der Methode; dies wird festgelegt, auf die Methode Typparameter, `U`. Der Text der Methode erstellt eine Instanz des konstruierten Typs `Sample<U>` (`Sample(Of U)` in Visual Basic), weist der Methodenparameter, damit `Field`, und gibt dann den Wert des `Field`. Ein dummy-Typ definiert ist, um die Einstiegspunktmethode halten `Main`. Im Text des `Main`, die statische `GM` Methode wird aufgerufen, für den konstruierten generischen Typ `Sample<int>` (`Sample(Of Integer)` in Visual Basic), mit dem Typ <xref:System.String> ersetzt `U`. Die <xref:System.Reflection.Emit.TypeBuilder.GetMethod%2A?displayProperty=nameWithType> Methode dient zum Erstellen einer <xref:System.Reflection.MethodInfo> für die statische `GM` Methode des konstruierten generischen Typs `Sample<U>`, und die <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> Methode dient dann zum Erstellen einer <xref:System.Reflection.MethodInfo> können, die in einem Methodenaufruf ausgegeben.  
+  
+ Wenn das Codebeispiel ausgeführt wird, speichert es die ausgegebene Assembly als TypeBuilderGetFieldExample.exe. Sie können TypeBuilderGetFieldExample.exe ausführen, und Sie können die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md) zum Vergleichen des ausgegebenen Codes durch den Code für die `Sample` -Klasse, die in das Codebeispiel selbst kompiliert wird.  
+  
+ [!code-csharp[TypeBuilder.GetField_Generic#1](~/samples/snippets/csharp/VS_Snippets_CLR/TypeBuilder.GetField_Generic/cs/source.cs#1)]
+ [!code-vb[TypeBuilder.GetField_Generic#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TypeBuilder.GetField_Generic/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle Methode ist generisch, die Methodendefinition ist aber nicht generisch. Das bedeutet, die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft ist <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSymCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetSymCustomAttribute (string name, byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSymCustomAttribute(string name, unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.SetSymCustomAttribute(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des symbolischen benutzerdefinierten Attributs.</param>
+        <param name="data">Das Byte-BLOB, das den Wert des symbolischen benutzerdefinierten Attributs darstellt.</param>
+        <summary>Legen Sie ein symbolisches benutzerdefiniertes Attribut mithilfe eines BLOBs fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu benutzerdefinierten Metadatenattributs ist dieses benutzerdefinierte Attribut einen Symbolwriter zugeordnet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die kontextabhängige Verwendung von der `SetSymCustomAttribute` Methode zum Festlegen der Bytewerte für den Namen und Schlüssel eines benutzerdefinierten Attributs an eine Methode angefügt.  
+  
+ [!code-cpp[System.Reflection.Emit.MethodBuilder.SetSymCustomAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.SetSymCustomAttribute Example/CPP/source2.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.MethodBuilder.SetSymCustomAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.SetSymCustomAttribute Example/CS/source2.cs#1)]
+ [!code-vb[System.Reflection.Emit.MethodBuilder.SetSymCustomAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.SetSymCustomAttribute Example/VB/source2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde zuvor mit <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.  
+  
+ - oder -   
+  
+ Das Modul, das diese Methode enthält, ist kein Debugmodul.  
+  
+ - oder -   
+  
+ Für die aktuelle Methode ist die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethod" />-Eigenschaft <see langword="true" />, aber die <see cref="P:System.Reflection.Emit.MethodBuilder.IsGenericMethodDefinition" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Signature">
+      <MemberSignature Language="C#" Value="public string Signature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Signature" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.MethodBuilder.Signature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Signatur der Methode ab.</summary>
+        <value>Schreibgeschützt. Eine Zeichenfolge, enthält die Signatur der Methode wiedergegeben wird, von diesem <see langword="MethodBase" /> Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBuilder.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _MethodBuilder.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._MethodBuilder.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.System#Runtime#InteropServices#_MethodBuilder#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="rgszNames">Das übergebene Array von zuzuordnenden Namen.</param>
+        <param name="cNames">Die Anzahl der zuzuordnenden Namen.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem die Namen interpretiert werden sollen.</param>
+        <param name="rgDispId">Das vom Aufrufer zugeordnete Array, das die IDs entsprechend den Namen empfängt.</param>
+        <summary>Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetIDsOfNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBuilder.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _MethodBuilder.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._MethodBuilder.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.System#Runtime#InteropServices#_MethodBuilder#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">Die zurückzugebenden Typinformationen.</param>
+        <param name="lcid">Der Gebietsschemabezeichner für die Typinformationen.</param>
+        <param name="ppTInfo">Empfängt einen Zeiger auf das angeforderte Objekt mit den Typinformationen.</param>
+        <summary>Ruft die Typinformationen für ein Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBuilder.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _MethodBuilder.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._MethodBuilder.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.System#Runtime#InteropServices#_MethodBuilder#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Zeigt auf einen Speicherort, der die Anzahl der Schnittstellen mit Typinformationen empfängt, die vom Objekt bereitgestellt werden.</param>
+        <summary>Ruft die Anzahl der Schnittstellen mit Typinformationen ab, die von einem Objekt bereitgestellt werden (0 oder 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfoCount`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBuilder.Invoke">
+      <MemberSignature Language="C#" Value="void _MethodBuilder.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._MethodBuilder.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.System#Runtime#InteropServices#_MethodBuilder#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Bezeichnet den Member.</param>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem Argumente interpretiert werden sollen.</param>
+        <param name="wFlags">Flags, die den Kontext des Aufrufs beschreiben.</param>
+        <param name="pDispParams">Ein Zeiger auf eine Struktur, die ein Array von Argumenten und ein Array von Argument-DISPIDs für benannte Argumente sowie Zähler für die Anzahl der Elemente in jedem Array enthält.</param>
+        <param name="pVarResult">Ein Verweis auf den Speicherort, an dem das Ergebnis gespeichert werden soll.</param>
+        <param name="pExcepInfo">Ein Zeiger auf eine Struktur mit Ausnahmeinformationen.</param>
+        <param name="puArgErr">Der Index des ersten Arguments mit einem Fehler.</param>
+        <summary>Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::Invoke`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.MethodBuilder.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt diese <see langword="MethodBuilder" />-Instanz als Zeichenfolge zurück.</summary>
+        <returns>Gibt eine Zeichenfolge zurück, die den Namen, die Attribute, die Methodensignatur, die Ausnahmen und die lokale Signatur dieser Methode enthält, gefolgt vom aktuellen MSIL-Stream (Microsoft Intermediate Language).</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

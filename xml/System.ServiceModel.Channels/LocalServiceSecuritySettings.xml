@@ -1,0 +1,615 @@
+<Type Name="LocalServiceSecuritySettings" FullName="System.ServiceModel.Channels.LocalServiceSecuritySettings">
+  <TypeSignature Language="C#" Value="public sealed class LocalServiceSecuritySettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LocalServiceSecuritySettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.LocalServiceSecuritySettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften für die Sicherheit von lokalen Diensten bereit, die festgelegt werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse enthält die Einstellungen für die lokale Sicherheit, die vom <xref:System.ServiceModel.Channels.SecurityBindingElement> zum Erstellen des Sicherheitskanals verwendet werden. Dabei handelt es sich um lokale Diensteinstellungen, die nicht von der Sicherheitsrichtlinie des Diensts erfasst werden.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird die Verwendung der <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>-Klasse zum Ändern der <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.DetectReplays%2A>-Einstellung veranschaulicht.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#17](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#17)]
+ [!code-vb[S_UELocalServiceSecuritySettings#17](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#17)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LocalServiceSecuritySettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.LocalServiceSecuritySettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.LocalServiceSecuritySettings" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel zeigt die Verwendung des Standardkonstruktors.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#1)]
+ [!code-vb[S_UELocalServiceSecuritySettings#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.LocalServiceSecuritySettings Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.LocalServiceSecuritySettings Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.LocalServiceSecuritySettings.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.LocalServiceSecuritySettings</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der Klasse aus der aktuellen Instanz.</summary>
+        <returns>Eine neue Instanz von <see cref="T:System.ServiceModel.Channels.LocalServiceSecuritySettings" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie eine neue Instanz der Klasse aus der aktuellen Instanz erstellt wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#16](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#16)]
+ [!code-vb[S_UELocalServiceSecuritySettings#16](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetectReplays">
+      <MemberSignature Language="C#" Value="public bool DetectReplays { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DetectReplays" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.DetectReplays" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Wiedergabeerkennung für den Dienst aktiviert ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Wiedergabeerkennung für den Dienst aktiviert ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie der Wert für diese Eigenschaft abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#2)]
+ [!code-vb[S_UELocalServiceSecuritySettings#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InactivityTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan InactivityTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan InactivityTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeitraum ab, nach dem der Kanal aufgrund von Inaktivität geschlossen wird, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" />-Wert für den Zeitraum, nach dem die Sicherheitssitzung für den Client aufgrund von Inaktivität geschlossen wird. Der Standardwert beträgt zwei Minuten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einer sicheren Konversationssitzung haben sowohl diese Eigenschaft als auch die `ReceiveTimeout`-Eigenschaft der Bindung Auswirkungen auf das Sitzungstimeout. Der kürzere der beiden Werte bestimmt, wann das Timeout eintritt.  
+  
+ Sitzungseinstellungen wie diese gelten unter einer der folgenden Bedingungen:  
+  
+-   Alle Typen von Clientanmeldeinformationen für <xref:System.ServiceModel.WSDualHttpBinding> und <xref:System.ServiceModel.NetTcpBinding>.  
+  
+-   Wenn [ \<ReliableSession >-Element](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) aktiviert ist.  
+  
+-   Wenn [ \<ReliableSession >-Element](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) nicht aktiviert ist, auf <xref:System.ServiceModel.WSHttpBinding> mit <xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>  =  `true` oder <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A?displayProperty=nameWithType>  =  `true`.  
+  
+ Sitzungseinstellungen wie diese gelten unter einer der folgenden Bedingungen nicht:  
+  
+-   Für <xref:System.ServiceModel.BasicHttpBinding>.  
+  
+-   Für <xref:System.ServiceModel.NetNamedPipeBinding>.  
+  
+-   Wenn [ \<ReliableSession > Element](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) nicht aktiviert ist, auf <xref:System.ServiceModel.WSHttpBinding> mit <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>  =  `true` oder keines der <xref:System.ServiceModel.Description.ClientCredentials> Eigenschaften festlegen, um `true`.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie der `InactivityTimeout`-Wert abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#3)]
+ [!code-vb[S_UELocalServiceSecuritySettings#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert kleiner als 0 festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuedCookieLifetime">
+      <MemberSignature Language="C#" Value="public TimeSpan IssuedCookieLifetime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan IssuedCookieLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Lebensdauer für das <see cref="T:System.ServiceModel.Security.Tokens.SecurityContextSecurityToken" /> ab, das vom Dienst für den Client ausgegeben wird, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" />, der die Lebensdauer für neue Sicherheitscookies darstellt. Der Standardwert ist 10&amp;#160;Stunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Cookietokens für eine sichere Konversation vom Dienst für den Client ausgegeben werden, wird der Gültigkeitszeitraum vom Wert dieser Eigenschaft bestimmt.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie der `IssuedCookieLifetime`-Wert abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#4)]
+ [!code-vb[S_UELocalServiceSecuritySettings#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert kleiner als 0 festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxCachedCookies">
+      <MemberSignature Language="C#" Value="public int MaxCachedCookies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxCachedCookies" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von <see cref="T:System.ServiceModel.Security.Tokens.SecurityContextSecurityToken" /> ab, die vom Dienst zu einem gegebenen Zeitpunkt im Cache zugelassen wird, oder legt diese fest.</summary>
+        <value>Die maximale Anzahl der Cookies für eine sichere Konversation, die vom Dienst zwischengespeichert werden kann. Wenn die maximale Anzahl erreicht ist, werden die ältesten zwischengespeicherten Cookies für die sichere Konversation entfernt, um Speicherplatz für neue Cookies freizugeben. Der Standard ist 1000.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel zeigt, wie der `MaxCachedCookies`-Wert abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#5)]
+ [!code-vb[S_UELocalServiceSecuritySettings#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert kleiner als 0 festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxClockSkew">
+      <MemberSignature Language="C#" Value="public TimeSpan MaxClockSkew { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxClockSkew" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den maximal zulässigen Zeitunterschied zwischen den Systemuhren der beiden Kommunikationspartner ab, oder legt diesen fest.</summary>
+        <value>Eine <see cref="T:System.TimeSpan" />, die die maximal zulässige Zeitspanne zwischen den Systemuhren der beiden miteinander kommunizierenden Parteien darstellt. Der Standardwert beträgt fünf Minuten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist fünf Minuten.  
+  
+ Nachrichten, die den Sendezeittest nicht bestehen, werden verworfen.  
+  
+ Diese Eigenschaft wird in Verbindung mit der Überprüfung des Zeitstempels der Nachricht und der <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.ReplayWindow%2A>-Eigenschaft verwendet.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie der `MaxClockSkew`-Wert abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#6)]
+ [!code-vb[S_UELocalServiceSecuritySettings#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert kleiner als 0 festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPendingSessions">
+      <MemberSignature Language="C#" Value="public int MaxPendingSessions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPendingSessions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl der gleichzeitigen Sicherheitssitzungen für den Server ab, für die ein Sitzungstoken ausgegeben wurde, ohne dass Anwendungsnachrichten gesendet wurden, oder legt diese Anzahl fest.</summary>
+        <value>Die maximale Anzahl gleichzeitiger Sicherheitssitzungen. Der Standard ist 128.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel zeigt, wie der `MaxPendingSessions`-Wert abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#7)]
+ [!code-vb[S_UELocalServiceSecuritySettings#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert kleiner als 0 festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxStatefulNegotiations">
+      <MemberSignature Language="C#" Value="public int MaxStatefulNegotiations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxStatefulNegotiations" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxStatefulNegotiations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl gleichzeitiger Sicherheitsaushandlungen mit Clients für den Dienst ab, oder legt diese fest.</summary>
+        <value>Die maximale Anzahl gleichzeitiger Sicherheitsaushandlungen mit Clients, an denen der Dienst teilnehmen kann. Der Standard ist 128.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aushandlungen, die die maximale Anzahl überschreiten, werden verworfen, und ein SOAP-Fehler wird an den Client gesendet. In aller Regel muss zu einem späteren Zeitpunkt eine Wiederholung des Vorgangs durch den Client erfolgen, sodass laufende Aushandlungen für den Dienst zwischenzeitlich abgeschlossen werden können.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie der `MaxStatefulNegotiations`-Wert festgelegt wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#8)]
+ [!code-vb[S_UELocalServiceSecuritySettings#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert kleiner als 0 festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NegotiationTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan NegotiationTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan NegotiationTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.NegotiationTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Dauer der Sicherheitsaushandlungen zwischen Client und Dienst ab, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" />-Wert, der die maximale Dauer der Sicherheitsaushandlungen zwischen Client und Dienst darstellt. Alle Aushandlungen mit dem Client (z.&amp;#160;B. während der SPNego- oder SSL-Authentifizierung auf Nachrichtenebene) müssen innerhalb dieser Zeit abgeschlossen sein. Der Standardwert beträgt 1&amp;#160;Minute.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser Wert überschritten wird, wird eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie der Wert für diese Eigenschaft abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#9)]
+ [!code-vb[S_UELocalServiceSecuritySettings#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert kleiner als 0 festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NonceCache">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.NonceCache NonceCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.NonceCache NonceCache" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.NonceCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.NonceCache</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, den Cache für die lokalen Einstellungen für die Sicherheit.</summary>
+        <value>Der Cache für die lokalen Einstellungen für die Sicherheit.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReconnectTransportOnFailure">
+      <MemberSignature Language="C#" Value="public bool ReconnectTransportOnFailure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReconnectTransportOnFailure" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.ReconnectTransportOnFailure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Sicherheitssitzungen versuchen, nach Transportfehlern erneut eine Verbindung herzustellen, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn Sicherheitssitzungen versuchen, nach Transportfehlern erneut eine Verbindung herzustellen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Flag auf `true` festgelegt ist, ermöglicht der Dienst dem Client das Senden von Nachrichten, die einer einzelnen Sicherheitssitzung über mehrere Transportverbindungen entsprechen. Dies ist hilfreich für sicheres WS-ReliableMessaging, da vom Client ein Tolerieren temporärer Transportfehler durch die Sitzung erwartet wird.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie der Wert für diese Eigenschaft abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#10)]
+ [!code-vb[S_UELocalServiceSecuritySettings#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplayCacheSize">
+      <MemberSignature Language="C#" Value="public int ReplayCacheSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReplayCacheSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.ReplayCacheSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Nonce-Caches für die Wiedergabeerkennung ab, oder legt diese fest.</summary>
+        <value>Die Größe des Nonce-Caches für die Wiedergabeerkennung. Der Standardwert ist 900.000.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Nonce ("number used once") bezeichnet eine Zahlenkombination, die nach einmaliger Verwendung verworfen wird.  
+  
+ Wenn die Nonce-Anzahl überschritten wird, werden eingehende Nachrichten verworfen, und eine <xref:System.ServiceModel.Security.MessageSecurityException> wird ausgelöst. Eine Nonce, die ein bestimmtes Alter aufweist, wird verworfen.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie der Wert für diese Eigenschaft abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#11)]
+ [!code-vb[S_UELocalServiceSecuritySettings#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplayWindow">
+      <MemberSignature Language="C#" Value="public TimeSpan ReplayWindow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ReplayWindow" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.ReplayWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den maximalen Zeitraum ab, in dem eine Nachricht vom Dienst akzeptiert werden kann, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" />-Wert, der den maximalen Zeitraum darstellt, in dem eine Nachricht vom Dienst akzeptiert werden kann. Der Standardwert beträgt fünf Minuten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Nonce ("number used once") bezeichnet eine Zahlenkombination, die nach einmaliger Verwendung verworfen wird.  
+  
+ Alle Nachrichten, die öfter als durch <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.ReplayWindow%2A> festgelegt gesendet werden, werden vom Dienst verworfen. Bei Nachrichten, die innerhalb von `ReplayWindow` empfangen werden, wird der Nonce-Wert auf Eindeutigkeit überprüft.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie der Wert für diese Eigenschaft abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#12](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#12)]
+ [!code-vb[S_UELocalServiceSecuritySettings#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert kleiner als 0 festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionKeyRenewalInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan SessionKeyRenewalInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SessionKeyRenewalInterval" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.SessionKeyRenewalInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Lebensdauer eines Schlüssels in einer Sicherheitssitzung ab. Nach Ablauf dieses Intervalls wird der Schlüssel automatisch erneuert.</summary>
+        <value>Der Zeitraum, nach dem vom Dienst die Erneuerung des Schlüssels für die Sicherheitssitzung durch den Initiator gefordert wird. Wenn der Schlüssel innerhalb dieses Zeitraums vom Initiator nicht erneuert wird, gibt der Dienst einen Fehler an den Initiator zurück. Der Standardwert ist 15 Stunden lang möglich.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sitzungseinstellungen wie diese gelten unter einer der folgenden Bedingungen:  
+  
+-   Alle Typen von Clientanmeldeinformationen für <xref:System.ServiceModel.WSDualHttpBinding> und <xref:System.ServiceModel.NetTcpBinding>.  
+  
+-   Wenn [ \<ReliableSession >-Element](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) aktiviert ist.  
+  
+-   Wenn [ \<ReliableSession >-Element](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) nicht aktiviert ist, auf <xref:System.ServiceModel.WSHttpBinding> mit <xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>  =  `true` oder <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A?displayProperty=nameWithType>  =  `true`.  
+  
+ Sitzungseinstellungen wie diese gelten unter einer der folgenden Bedingungen nicht:  
+  
+-   Für <xref:System.ServiceModel.BasicHttpBinding>.  
+  
+-   Für <xref:System.ServiceModel.NetNamedPipeBinding>.  
+  
+-   Wenn [ \<ReliableSession > Element](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) nicht aktiviert ist, auf <xref:System.ServiceModel.WSHttpBinding> mit <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>  =  `true` oder keines der <xref:System.ServiceModel.Description.ClientCredentials> Eigenschaften festlegen, um `true`.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie der Wert für diese Eigenschaft abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#13](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#13)]
+ [!code-vb[S_UELocalServiceSecuritySettings#13](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert kleiner als 0 festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionKeyRolloverInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan SessionKeyRolloverInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SessionKeyRolloverInterval" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.SessionKeyRolloverInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, in dem der frühere Sitzungsschlüssel während einer Schlüsselerneuerung noch für eingehende Nachrichten gilt, oder legt dieses fest.</summary>
+        <value>Das Zeitintervall nach der Schlüsselerneuerung, in dem der frühere Sitzungsschlüssel noch für eingehende Nachrichten gilt. Der Standardwert beträgt fünf Minuten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach der Erneuerung des Schlüssels sollten Nachrichten vom Client und vom Server mit dem aktuellsten Schlüssel gesendet werden. Eingehende Nachrichten, die mit dem früheren Sitzungsschlüssel gesichert sind, können von beiden Seiten bis zum Ablauf der Übergangszeit akzeptiert werden.  
+  
+ Sitzungseinstellungen wie diese gelten unter einer der folgenden Bedingungen:  
+  
+-   Alle Typen von Clientanmeldeinformationen für <xref:System.ServiceModel.WSDualHttpBinding> und <xref:System.ServiceModel.NetTcpBinding>.  
+  
+-   Wenn [ \<ReliableSession >-Element](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) aktiviert ist.  
+  
+-   Wenn [ \<ReliableSession >-Element](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) nicht aktiviert ist, auf <xref:System.ServiceModel.WSHttpBinding> mit <xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>  =  `true` oder <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A?displayProperty=nameWithType>  =  `true`.  
+  
+ Sitzungseinstellungen wie diese gelten unter einer der folgenden Bedingungen nicht:  
+  
+-   Für <xref:System.ServiceModel.BasicHttpBinding>.  
+  
+-   Für <xref:System.ServiceModel.NetNamedPipeBinding>.  
+  
+-   Wenn [ \<ReliableSession > Element](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) nicht aktiviert ist, auf <xref:System.ServiceModel.WSHttpBinding> mit <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>  =  `true` oder keines der <xref:System.ServiceModel.Description.ClientCredentials> Eigenschaften festlegen, um `true`.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie der `SessionKeyRolloverInterval`-Wert abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#14](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#14)]
+ [!code-vb[S_UELocalServiceSecuritySettings#14](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert kleiner als 0 festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimestampValidityDuration">
+      <MemberSignature Language="C#" Value="public TimeSpan TimestampValidityDuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimestampValidityDuration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.LocalServiceSecuritySettings.TimestampValidityDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den maximalen Gültigkeitszeitraum für Nachrichten ab, die vom Dienst gesendet werden, oder legt diesen fest. Wenn der Client nach Ablauf dieses Zeitraums eine Nachricht vom Dienst empfängt, wird diese verworfen.</summary>
+        <value>Der maximale Gültigkeitszeitraum für Nachrichten, die vom Dienst gesendet werden. Der Standardwert beträgt fünf Minuten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel zeigt, wie der `TimestampValidityDuration`-Wert abgerufen wird.  
+  
+ [!code-csharp[S_UELocalServiceSecuritySettings#15](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelocalservicesecuritysettings/cs/program.cs#15)]
+ [!code-vb[S_UELocalServiceSecuritySettings#15](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelocalservicesecuritysettings/vb/program.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert kleiner als 0 festgelegt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,63 @@
+<Type Name="IAsyncErrorNotify" FullName="System.EnterpriseServices.IAsyncErrorNotify">
+  <TypeSignature Language="C#" Value="public interface IAsyncErrorNotify" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAsyncErrorNotify" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.IAsyncErrorNotify" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("FE6777FB-A674-4177-8F32-6D707E113484")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fehlerbehebung für die asynchrone Batchverarbeitung, die von übermittelt wird, implementiert die <see cref="T:System.EnterpriseServices.Activity" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.IAsyncErrorNotify>wird verwendet, um das Abfangen von Fehlern für die asynchrone Batchverarbeitung zu implementieren, die durch übermittelt die <xref:System.EnterpriseServices.Activity> Objekt. Implementieren Sie diese Schnittstelle für das Objekt, das im Aufruf übergeben wird <xref:System.EnterpriseServices.Activity.AsynchronousCall%2A> auf die <xref:System.EnterpriseServices.Activity> Objekt. <xref:System.EnterpriseServices.Activity.AsynchronousCall%2A>Bestimmt, ob die Batchverarbeitung ist ein Fehler aufgetreten, der asynchron ausgeführt wird. Diese Schnittstelle ermöglicht es Ihnen über Fehler informiert werden, die in asynchronen Batchverarbeitung auftreten, und Beenden des Prozesses (Failfast) auf ein nicht behebbarer Fehler.  
+  
+ Informationen über Failfast finden Sie unter dem Thema "Fault Isolation and Failfast Policy" in der Platform SDK in MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnError">
+      <MemberSignature Language="C#" Value="public void OnError (int hresult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnError(int32 hresult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IAsyncErrorNotify.OnError(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hresult" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="hresult">Das HRESULT des Fehlers während die Batchverarbeitung asynchron ausgeführt wurde.</param>
+        <summary>Fehler für asynchrone Batchverarbeitung handhabt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur ordnungsgemäßen Behandlung von Fehlern, die auftreten, wenn die Batchverarbeitung asynchron ausgeführt wird, sollten diese Methode implementiert werden. Da bei nicht behebbaren Fehlern (Failfast) für den Prozess beendet wird, ohne diese Methode besteht keine Möglichkeit, zu wissen, wann asynchrone Batchverarbeitung Fehler auftritt. Der Prozess beendet auch auf, wenn diese Methode einen Fehler als Rückgabewert zurückgibt. Die Batchverarbeitung selbst wird im implementiert <xref:System.EnterpriseServices.IServiceCall.OnCall%2A>, und es wird asynchron ausgeführt, durch den Aufruf <xref:System.EnterpriseServices.Activity.AsynchronousCall%2A>.  
+  
+ Diese Methode unterstützt die Standardrückgabewerte `E_FAIL`, `E_INVALIDARG`, und `E_OUTOFMEMORY`, als auch `S_OK`, womit der Aufruf der Methode wurde erfolgreich zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

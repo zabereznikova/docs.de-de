@@ -1,0 +1,116 @@
+<Type Name="QueryCursorEventArgs" FullName="System.Windows.Input.QueryCursorEventArgs">
+  <TypeSignature Language="C#" Value="public class QueryCursorEventArgs : System.Windows.Input.MouseEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit QueryCursorEventArgs extends System.Windows.Input.MouseEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.QueryCursorEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.MouseEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Input.Mouse.QueryCursor" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Abfrage Cursor-Ereignis wird ausgelöst, auf <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement> Objekte immer an einem neuen Speicherort der Mauszeiger bewegt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryCursorEventArgs (System.Windows.Input.MouseDevice mouse, int timestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.MouseDevice mouse, int32 timestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.QueryCursorEventArgs.#ctor(System.Windows.Input.MouseDevice,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mouse" Type="System.Windows.Input.MouseDevice" />
+        <Parameter Name="timestamp" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="mouse">Das logische Mausgerät mit diesem Ereignis verknüpft sind.</param>
+        <param name="timestamp">Der Zeitpunkt des Auftretens die Eingabe.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Input.QueryCursorEventArgs" /> -Klasse unter Verwendung der angegebenen Mausgerät und dem angegebenen Zeitstempel.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryCursorEventArgs (System.Windows.Input.MouseDevice mouse, int timestamp, System.Windows.Input.StylusDevice stylusDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.MouseDevice mouse, int32 timestamp, class System.Windows.Input.StylusDevice stylusDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.QueryCursorEventArgs.#ctor(System.Windows.Input.MouseDevice,System.Int32,System.Windows.Input.StylusDevice)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mouse" Type="System.Windows.Input.MouseDevice" />
+        <Parameter Name="timestamp" Type="System.Int32" />
+        <Parameter Name="stylusDevice" Type="System.Windows.Input.StylusDevice" />
+      </Parameters>
+      <Docs>
+        <param name="mouse">Das logische Mausgerät mit diesem Ereignis verknüpft sind.</param>
+        <param name="timestamp">Der Zeitpunkt des Auftretens die Eingabe.</param>
+        <param name="stylusDevice">Der Tablettstiftzeiger mit diesem Ereignis verknüpft sind.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Input.QueryCursorEventArgs" /> -Klasse unter Verwendung der angegebenen Mausgerät, Zeitstempel und Tablettstiftgerät.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cursor">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Cursor Cursor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.Cursor Cursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.QueryCursorEventArgs.Cursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Cursor, die diesem Ereignis zugeordnete.</summary>
+        <value>Der Cursor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.QueryCursorEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">Der generische Handler auf eine Weise typspezifische aufrufen.</param>
+        <param name="genericTarget">Das Ziel den Handler aufgerufen werden.</param>
+        <summary>-Ereignishandler aufgerufen werden typspezifische versehen, Ereignis-System-Effizienz steigern können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung wandelt den generischen Handler als eine <xref:System.Windows.Input.QueryCursorEventHandler> und ruft ihn dann auf. Ausführliche Informationen zu diesem Implementierungsmuster und die Gründe dafür, finden Sie unter <xref:System.Windows.RoutedEventArgs.InvokeEventHandler%2A> und [Ereignisübersicht weitergeleitet](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

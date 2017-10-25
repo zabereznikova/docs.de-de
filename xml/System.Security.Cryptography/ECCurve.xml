@@ -1,0 +1,595 @@
+<Type Name="ECCurve" FullName="System.Security.Cryptography.ECCurve">
+  <TypeSignature Language="C#" Value="public struct ECCurve" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ECCurve extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.ECCurve" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine elliptische Kurve dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Cryptography.ECCurve.CurveType> Feld, um zu bestimmen, ob die Kurve eine benannte oder eine explizite Kurve (eine Primzahl oder eine Kurve Merkmal 2) ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="A">
+      <MemberSignature Language="C#" Value="public byte[] A;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] A" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.A" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der erste Koeffizient für eine explizite Kurve. <c>Ein</c> für kurze Weierstraßsche Montgomery und Edwards Twisted-Kurven.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="B">
+      <MemberSignature Language="C#" Value="public byte[] B;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] B" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.B" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der zweite Koeffizient für eine explizite Kurve. <c>B</c> für kurze Weierstraßsche und <c>d</c> für Twisted Edwards Kurven.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cofactor">
+      <MemberSignature Language="C#" Value="public byte[] Cofactor;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] Cofactor" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.Cofactor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Kofaktor der Kurve.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFriendlyName">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECCurve CreateFromFriendlyName (string oidFriendlyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Security.Cryptography.ECCurve CreateFromFriendlyName(string oidFriendlyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECCurve.CreateFromFriendlyName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECCurve</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oidFriendlyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="oidFriendlyName">Der Anzeigename des Bezeichners.</param>
+        <summary>Erstellt unter Verwendung des angegebenen Anzeigenamens des Bezeichners eine benannte Kurve.</summary>
+        <returns>Ein Objekt, das die benannte Kurve darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="oidFriendlyName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromOid">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECCurve CreateFromOid (System.Security.Cryptography.Oid curveOid);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Security.Cryptography.ECCurve CreateFromOid(class System.Security.Cryptography.Oid curveOid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECCurve.CreateFromOid(System.Security.Cryptography.Oid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECCurve</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="curveOid" Type="System.Security.Cryptography.Oid" />
+      </Parameters>
+      <Docs>
+        <param name="curveOid">Der zu verwendende Objektbezeichner.</param>
+        <summary>Erstellt eine benannte Kurve mithilfe des angegebenen <see cref="T:System.Security.Cryptography.Oid" />-Objekts.</summary>
+        <returns>Ein Objekt, das die benannte Kurve darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromValue">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECCurve CreateFromValue (string oidValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Security.Cryptography.ECCurve CreateFromValue(string oidValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECCurve.CreateFromValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECCurve</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oidValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="oidValue">Die Nummer des Bezeichners in Dezimalschreibweise.</param>
+        <summary>Erstellt eine benannte Kurve mit der angegebenen Dezimaldarstellung des Bezeichners (mit Punkten als Trennzeichen).</summary>
+        <returns>Ein Objekt, das die benannte Kurve darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="oidValue" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CurveType">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.ECCurve.ECCurveType CurveType;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Security.Cryptography.ECCurve/ECCurveType CurveType" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.CurveType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECCurve+ECCurveType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die Komposition des <see cref="T:System.Security.Cryptography.ECCurve" />-Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="G">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.ECPoint G;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Security.Cryptography.ECPoint G" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.G" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Generator oder Ausgangspunkt für Vorgänge auf der Kurve.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hash">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Security.Cryptography.HashAlgorithmName&gt; Hash;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Nullable`1&lt;valuetype System.Security.Cryptography.HashAlgorithmName&gt; Hash" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.Hash" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Security.Cryptography.HashAlgorithmName&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name des Hashalgorithmus, der verwendet wurde, um die Kurvenkoeffizienten (<see cref="F:System.Security.Cryptography.ECCurve.A" /> und <see cref="F:System.Security.Cryptography.ECCurve.B" />) aus dem <see cref="F:System.Security.Cryptography.ECCurve.Seed" /> unter dem ANSI X9.62-Generierungsalgorithmus zu generieren. Gilt nur für explizite Kurven.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCharacteristic2">
+      <MemberSignature Language="C#" Value="public bool IsCharacteristic2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCharacteristic2" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECCurve.IsCharacteristic2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Kurventyp eine explizite Charakteristik-2-Kurve angibt.</summary>
+        <value>
+          <see langword="true" />, wenn die Kurve eine explizite Charakteristik-2-Kurve ist. <see langword="false" />, wenn die Kurve eine benannte Charakteristik-2-, eine Prim- oder eine implizite Kurve ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExplicit">
+      <MemberSignature Language="C#" Value="public bool IsExplicit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsExplicit" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECCurve.IsExplicit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Kurventyp eine explizite Kurve (Prim- oder Charakteristik 2) angibt.</summary>
+        <value>
+          <see langword="true" />, wenn die Kurve eine explizite Kurve (Prim- oder Charakteristik 2) ist. <see langword="false" />, wenn die Kurve eine benannte oder eine implizite Kurve ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNamed">
+      <MemberSignature Language="C#" Value="public bool IsNamed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNamed" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECCurve.IsNamed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Kurventyp eine benannte Kurve angibt.</summary>
+        <value>
+          <see langword="true" />, wenn die Kurve eine benannte Kurve ist. <see langword="false" />, wenn die Kurve eine implizite oder eine explizite Kurve (Prim- oder Charakteristik 2) ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrime">
+      <MemberSignature Language="C#" Value="public bool IsPrime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrime" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECCurve.IsPrime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Kurventyp eine explizite Primkurve angibt.</summary>
+        <value>
+          <see langword="true" />, wenn die Kurve eine explizite Primkurve ist. <see langword="false" />, wenn die Kurve eine benannte Prim-, eine Charakteristik-2- oder eine implizite Kurve ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Oid">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Oid Oid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Oid Oid" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECCurve.Oid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Oid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner einer benannten Kurve ab.</summary>
+        <value>Der Bezeichner einer benannten Kurve.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nicht festgelegt, einen Wert für die <xref:System.Security.Cryptography.ECCurve.Oid%2A> -Eigenschaft direkt. Um eine benannte Kurve zu erstellen, verwenden Sie stattdessen die <xref:System.Security.Cryptography.ECCurve.CreateFromFriendlyName%2A>, <xref:System.Security.Cryptography.ECCurve.CreateFromOid%2A> , oder die <xref:System.Security.Cryptography.ECCurve.CreateFromValue%2A> Methoden.  
+  
+ Auf einige Systeme die <xref:System.Security.Cryptography.Oid.Value%2A?displayProperty=nameWithType> Eigenschaft ist für die primäre ID verwiesen wird, während in anderen ist die <xref:System.Security.Cryptography.Oid.FriendlyName%2A?displayProperty=nameWithType> Eigenschaft.  Erstellen manuell eine <xref:System.Security.Cryptography.Oid> Objekt mit nicht übereinstimmenden Werte kann zu unerwünschten Ergebnissen führen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Order">
+      <MemberSignature Language="C#" Value="public byte[] Order;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] Order" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.Order" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Reihenfolge der Kurve. Gilt nur für explizite Kurven.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.ECCurve.Order> Feld darstellt, die Reihenfolge der Gruppe generiert g = (X, y).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Polynomial">
+      <MemberSignature Language="C#" Value="public byte[] Polynomial;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] Polynomial" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.Polynomial" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Polynomkurve. Gilt nur für Charakteristik-2-Kurven.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prime">
+      <MemberSignature Language="C#" Value="public byte[] Prime;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] Prime" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.Prime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Primzahl, die das Basisfeld angibt. Gilt nur für Primkurven.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seed">
+      <MemberSignature Language="C#" Value="public byte[] Seed;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] Seed" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.Seed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Startwert für die Generierung der Koeffizienten unter dem ANSI X9.62-Generierungsalgorithmus. Gilt nur für explizite Kurven.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECCurve.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft die Integrität der aktuellen Kurve. Löst eine <see cref="T:System.Security.Cryptography.CryptographicException" />-Ausnahme aus, wenn die Struktur ungültig ist.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die Kurvenparameter sind für den aktuellen Kurventyp ungültig.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

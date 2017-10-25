@@ -1,0 +1,177 @@
+<Type Name="RequestedProofToken" FullName="System.IdentityModel.Protocols.WSTrust.RequestedProofToken">
+  <TypeSignature Language="C#" Value="public class RequestedProofToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequestedProofToken extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.RequestedProofToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Inhalt eines Elements Wst:RequestedProofToken dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt eines Elements Wst:RequestedProofToken kann entweder einen verschlüsselten Schlüssel oder einen Schlüssel in Klartext sein. In diesen Fällen die <xref:System.IdentityModel.Protocols.WSTrust.RequestedProofToken.ProtectedKey%2A> Eigenschaft enthält den Schlüssel. Wenn das Sicherheitstoken einem regulären z. B. ein SCT-Token wird dann der Sitzungsschlüssel des Materials ruft verschlüsselt werden. Wenn die Wst:RequestedProofToken wie im Fall von kombinierten Entropie nur ein Wst:ComputedKey-Element enthält die <xref:System.IdentityModel.Protocols.WSTrust.RequestedProofToken.ComputedKeyAlgorithm%2A> Eigenschaft enthält, dessen Inhalt.  
+  
+ Weitere Informationen über das Element, das diese Klasse darstellt, finden Sie in der Version der WS-Trust-Spezifikation, die für Ihr Szenario zutrifft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestedProofToken (byte[] secret);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] secret) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestedProofToken.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="secret" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="secret">Ein Array von <see cref="T:System.Byte" /> , die das Schlüsselmaterial enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedProofToken" /> -Klasse unter Verwendung des angegebenen Schlüsselmaterials.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn der Schlüssel nur-Text ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestedProofToken (System.IdentityModel.Protocols.WSTrust.ProtectedKey protectedKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Protocols.WSTrust.ProtectedKey protectedKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestedProofToken.#ctor(System.IdentityModel.Protocols.WSTrust.ProtectedKey)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectedKey" Type="System.IdentityModel.Protocols.WSTrust.ProtectedKey" />
+      </Parameters>
+      <Docs>
+        <param name="protectedKey">Ein <see cref="T:System.IdentityModel.Protocols.WSTrust.ProtectedKey" /> , die stellt den Schlüssel dar, der einen binären geheimen Schlüssel oder einen verschlüsselten Schlüssel sein kann.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedProofToken" />-Klasse mit dem angegebenen <see cref="T:System.IdentityModel.Protocols.WSTrust.ProtectedKey" />-Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="protectedKey" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestedProofToken (string computedKeyAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string computedKeyAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestedProofToken.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="computedKeyAlgorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="computedKeyAlgorithm">Eine Zeichenfolge, die einen URI, der den Algorithmus verwendet enthält, um den Sitzungsschlüssel in der kombinierten Entropie Fall berechnen angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedProofToken" /> -Klasse unter Verwendung der angegebenen berechnete Schlüsselalgorithmus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor im Fall von kombinierten Entropie zum Angeben des Algorithmus verwendet, um den Sitzungsschlüssel zu berechnen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="computedKeyAlgorithm" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestedProofToken (byte[] secret, System.IdentityModel.Tokens.EncryptingCredentials wrappingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] secret, class System.IdentityModel.Tokens.EncryptingCredentials wrappingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestedProofToken.#ctor(System.Byte[],System.IdentityModel.Tokens.EncryptingCredentials)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="secret" Type="System.Byte[]" />
+        <Parameter Name="wrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="secret">Ein Array von <see cref="T:System.Byte" /> , die das Schlüsselmaterial enthält.</param>
+        <param name="wrappingCredentials">Ein <see cref="T:System.IdentityModel.SecurityTokenService.EncryptingCredentials" /> , die die Anmeldeinformationen, die zum Verschlüsseln des Schlüsselmaterials darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedProofToken" /> -Klasse unter Verwendung des angegebenen Schlüsselmaterials Verschlüsseln von Anmeldeinformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn der Schlüssel verschlüsselt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputedKeyAlgorithm">
+      <MemberSignature Language="C#" Value="public string ComputedKeyAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ComputedKeyAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestedProofToken.ComputedKeyAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die berechnete Schlüsselalgorithmus verwendet, um den Sitzungsschlüssel in der kombinierten Entropie Groß-/Kleinschreibung zu berechnen.</summary>
+        <value>Eine Zeichenfolge, die einen URI enthält, der die berechnete Schlüsselalgorithmus angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt den Inhalt des Elements Wst:ComputedKey dar. Dieses Element enthält eine URI, der gibt an, die berechnete Schlüsselalgorithmus verwendet, wenn der Schlüssel berechnet werden müssen. Beispielsweise ist in der kombinierten Entropie-Fall, wenn sowohl die Aussteller der Requestor Entropie angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectedKey">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.ProtectedKey ProtectedKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.ProtectedKey ProtectedKey" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestedProofToken.ProtectedKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.ProtectedKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel in die Groß-/Kleinschreibung, wenn das Element Wst:RequestedProofToken einen Schlüssel enthält.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Protocols.WSTrust.ProtectedKey" /> , die den Schlüssel, der entweder verschlüsselt oder unverschlüsselter möglich darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt den Inhalt des Elements Wst:RequestedProofToken dar, wenn das Element einen Schlüssel (statt einer Wst:ComputedKeyElement) enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

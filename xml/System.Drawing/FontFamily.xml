@@ -1,0 +1,657 @@
+<Type Name="FontFamily" FullName="System.Drawing.FontFamily">
+  <TypeSignature Language="C#" Value="public sealed class FontFamily : MarshalByRefObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FontFamily extends System.MarshalByRefObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.FontFamily" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert eine Gruppe von Schriftarten mit ähnlichem Grundformat und bestimmten Unterschieden beim Schriftschnitt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Schriftfamilien in der <xref:System.Drawing.FontFamily.Families%2A> Eigenschaft von der <xref:System.Drawing.FontFamily> Klasse. In diesem Beispiel dient, die mit einem Windows Form verwendet werden. Um dieses Beispiel auszuführen, fügen einen <xref:System.Windows.Forms.ListBox> mit dem Namen `listBox1` auf ein Formular, und rufen die `PopulateListBoxWithFonts` Methode aus den Konstruktor des Formulars.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.MiscExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.MiscExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontFamily (System.Drawing.Text.GenericFontFamilies genericFamily);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Text.GenericFontFamilies genericFamily) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.#ctor(System.Drawing.Text.GenericFontFamilies)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="genericFamily" Type="System.Drawing.Text.GenericFontFamilies" />
+      </Parameters>
+      <Docs>
+        <param name="genericFamily">Der <see cref="T:System.Drawing.Text.GenericFontFamilies" />, aus dem die neue <see cref="T:System.Drawing.FontFamily" /> erstellt werden soll.</param>
+        <summary>Initialisiert ein neues <see cref="T:System.Drawing.FontFamily" />-Objekt aus der angegebenen generischen Schriftfamilie.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontFamily (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der neuen <see cref="T:System.Drawing.FontFamily" />.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.FontFamily" /> mit dem angegebenen Namen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Übergeben einer leeren Zeichenfolge ("") für die `name` Parameter bewirkt, dass eine Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="name" />Gibt eine Schriftart, die auf dem Computer mit der Anwendung nicht installiert ist.  
+  
+ - oder -   
+  
+ <paramref name="name" />Gibt eine Schriftart, die sich nicht um eine TrueType-Schriftart ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontFamily (string name, System.Drawing.Text.FontCollection fontCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Drawing.Text.FontCollection fontCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.#ctor(System.String,System.Drawing.Text.FontCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="fontCollection" Type="System.Drawing.Text.FontCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein <see cref="T:System.String" />, der den Namen der neuen <see cref="T:System.Drawing.FontFamily" /> darstellt.</param>
+        <param name="fontCollection">Die <see cref="T:System.Drawing.Text.FontCollection" />, die diese <see cref="T:System.Drawing.FontFamily" /> enthält.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.FontFamily" /> mit dem angegebenen Namen in der angegebenen <see cref="T:System.Drawing.Text.FontCollection" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="name" />Gibt eine Schriftart, die auf dem Computer mit der Anwendung nicht installiert ist.  
+  
+ - oder -   
+  
+ <paramref name="name" />Gibt eine Schriftart, die sich nicht um eine TrueType-Schriftart ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von dieser <see cref="T:System.Drawing.FontFamily" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Drawing.FontFamily.Dispose%2A> können die von diesem verwendeten Ressourcen <xref:System.Drawing.FontFamily> neu für andere Zwecke reserviert werden.  
+  
+ Rufen Sie <xref:System.Drawing.FontFamily.Dispose%2A> auf, wenn Sie <xref:System.Drawing.FontFamily> nicht mehr benötigen. Die <xref:System.Drawing.FontFamily.Dispose%2A>-Methode bewirkt, dass <xref:System.Drawing.FontFamily> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Drawing.FontFamily.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Drawing.FontFamily> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Drawing.FontFamily> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Drawing.FontFamily.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.Drawing.FontFamily> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Drawing.FontFamily>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu überprüfende Objekt.</param>
+        <summary>Gibt an, ob das angegebene Objekt ein <see cref="T:System.Drawing.FontFamily" />-Objekt und mit diesem <see cref="T:System.Drawing.FontFamily" />-Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> eine <see cref="T:System.Drawing.FontFamily" /> und identisch mit dieser <see cref="T:System.Drawing.FontFamily" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt zwei <xref:System.Drawing.Font> Objekte.  
+  
+-   Testet, ob sie gleich sind.  
+  
+-   Zeigt das Ergebnis des Tests in einem Meldungsfeld an.  
+  
+ [!code-cpp[System.Drawing.ClassicFontFamilyExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ClassicFontFamilyExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ClassicFontFamilyExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Families">
+      <MemberSignature Language="C#" Value="public static System.Drawing.FontFamily[] Families { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.FontFamily[] Families" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.FontFamily.Families" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.FontFamily[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Array mit allen <see cref="T:System.Drawing.FontFamily" />-Objekten zurück, die dem aktuellen Grafikkontext zugeordnet sind.</summary>
+        <value>Ein Array von <see cref="T:System.Drawing.FontFamily" />-Objekten, die dem aktuellen Grafikkontext zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Schriftfamilien in der <xref:System.Drawing.FontFamily.Families%2A> Eigenschaft von der <xref:System.Drawing.FontFamily> Klasse. In diesem Beispiel dient, die mit einem Windows Form verwendet werden. Um dieses Beispiel auszuführen, fügen einen <xref:System.Windows.Forms.ListBox> mit dem Namen `listBox1` auf ein Formular, und rufen die `PopulateListBoxWithFonts` Methode aus den Konstruktor des Formulars.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.MiscExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.MiscExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~FontFamily ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einem Objekt Gelegenheit zu dem Versuch, Ressourcen freizugeben und andere Bereinigungen durchzuführen, bevor es von der Garbage Collection freigegeben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericMonospace">
+      <MemberSignature Language="C#" Value="public static System.Drawing.FontFamily GenericMonospace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.FontFamily GenericMonospace" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.FontFamily.GenericMonospace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.FontFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.FontFamily" />-Objekt für generische Festbreitenschrift ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.FontFamily" />-Objekt, das eine generische Festbreitenschriftart darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericSansSerif">
+      <MemberSignature Language="C#" Value="public static System.Drawing.FontFamily GenericSansSerif { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.FontFamily GenericSansSerif" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.FontFamily.GenericSansSerif" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.FontFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.FontFamily" />-Objekt für eine generische serifenlose Schriftart.</summary>
+        <value>Ein <see cref="T:System.Drawing.FontFamily" />-Objekt, das eine generische serifenlose Schriftart darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericSerif">
+      <MemberSignature Language="C#" Value="public static System.Drawing.FontFamily GenericSerif { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.FontFamily GenericSerif" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.FontFamily.GenericSerif" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.FontFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.FontFamily" />-Objekt für eine generische Serifenschrift ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.FontFamily" />-Objekt, das eine generische Serifenschriftart darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCellAscent">
+      <MemberSignature Language="C#" Value="public int GetCellAscent (System.Drawing.FontStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetCellAscent(valuetype System.Drawing.FontStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.GetCellAscent(System.Drawing.FontStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">Ein <see cref="T:System.Drawing.FontStyle" />, der Informationen zum Schriftschnitt der Schriftart enthält.</param>
+        <summary>Gibt den Zellaufstieg (Versalhöhe) für das <see cref="T:System.Drawing.FontFamily" />-Objekt des angegebenen Schriftschnitts in Entwurfseinheiten zurück.</summary>
+        <returns>Der Zellaufstieg für dieses <see cref="T:System.Drawing.FontFamily" />-Objekt, das den angegebenen <see cref="T:System.Drawing.FontStyle" /> verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt eine <xref:System.Drawing.FontFamily>.  
+  
+-   Ruft den Zellaufstieg (Versalhöhe) für die Schriftfamilie ab.  
+  
+-   Zeichnet den Wert, der den Zellaufstieg (Versalhöhe) auf dem Bildschirm als Text an.  
+  
+ [!code-cpp[System.Drawing.ClassicFontFamilyExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicFontFamilyExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicFontFamilyExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCellDescent">
+      <MemberSignature Language="C#" Value="public int GetCellDescent (System.Drawing.FontStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetCellDescent(valuetype System.Drawing.FontStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.GetCellDescent(System.Drawing.FontStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">Ein <see cref="T:System.Drawing.FontStyle" />, der Informationen zum Schriftschnitt der Schriftart enthält.</param>
+        <summary>Gibt den Zellabstieg (Versalhöhe) für das <see cref="T:System.Drawing.FontFamily" />-Objekt des angegebenen Schriftschnitts in Entwurfseinheiten zurück.</summary>
+        <returns>Die Zellabstiegsmetrik für dieses <see cref="T:System.Drawing.FontFamily" />-Objekt, das den angegebenen <see cref="T:System.Drawing.FontStyle" /> verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt eine <xref:System.Drawing.FontFamily>.  
+  
+-   Ruft den Zellabstieg für die Schriftfamilie ab.  
+  
+-   Zeichnet den Wert, der den Zellabstieg auf dem Bildschirm als Text an.  
+  
+ [!code-cpp[System.Drawing.ClassicFontFamilyExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicFontFamilyExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicFontFamilyExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmHeight">
+      <MemberSignature Language="C#" Value="public int GetEmHeight (System.Drawing.FontStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetEmHeight(valuetype System.Drawing.FontStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.GetEmHeight(System.Drawing.FontStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">Der <see cref="T:System.Drawing.FontStyle" />, für den die Gevierthöhe abgerufen werden soll.</param>
+        <summary>Ruft die Höhe des Gevierts für den angegebenen Schriftschnitt in Schriftentwurfseinheiten ab.</summary>
+        <returns>Die Höhe des Gevierts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ *Gevierts* ist ein Begriff aus Typografie, der auf das Rechteck, das vom breitesten die Schriftart Buchstaben, die bisher dem Buchstaben M verweist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt eine <xref:System.Drawing.FontFamily>.  
+  
+-   Ruft die Gevierthöhe für die Schriftfamilie ab.  
+  
+-   Zeichnet den Wert der Gevierthöhe auf dem Bildschirm als Text an.  
+  
+ [!code-cpp[System.Drawing.ClassicFontFamilyExamples#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.ClassicFontFamilyExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.ClassicFontFamilyExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFamilies">
+      <MemberSignature Language="C#" Value="public static System.Drawing.FontFamily[] GetFamilies (System.Drawing.Graphics graphics);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.FontFamily[] GetFamilies(class System.Drawing.Graphics graphics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.GetFamilies(System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Do not use method GetFamilies, use property Families instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.FontFamily[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Das <see cref="T:System.Drawing.Graphics" />-Objekt, aus dem <see cref="T:System.Drawing.FontFamily" />-Objekte zurückgegeben werden sollen.</param>
+        <summary>Gibt ein Array mit allen <see cref="T:System.Drawing.FontFamily" />-Objekten zurück, die für den angegebenen Grafikkontext verfügbar sind.</summary>
+        <returns>Ein Array von <see cref="T:System.Drawing.FontFamily" />-Objekten, die für das angegebene <see cref="T:System.Drawing.Graphics" />-Objekt verfügbar sind.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="graphics" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Hashcode für diese <see cref="T:System.Drawing.FontFamily" /> ab.</summary>
+        <returns>Der Hashcode für diese <see cref="T:System.Drawing.FontFamily" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt eine <xref:System.Drawing.FontFamily>.  
+  
+-   Ruft den Hashcode für die Schriftfamilie ab.  
+  
+-   Zeichnet den Wert des Hashcodes auf dem Bildschirm als Text an.  
+  
+ [!code-cpp[System.Drawing.ClassicFontFamilyExamples#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.ClassicFontFamilyExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.ClassicFontFamilyExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineSpacing">
+      <MemberSignature Language="C#" Value="public int GetLineSpacing (System.Drawing.FontStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetLineSpacing(valuetype System.Drawing.FontStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.GetLineSpacing(System.Drawing.FontStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">Das anzuwendende <see cref="T:System.Drawing.FontStyle" />.</param>
+        <summary>Gibt den Zeilenabstand für das <see cref="T:System.Drawing.FontFamily" />-Objekt des angegebenen Schriftschnitts in Entwurfseinheiten zurück. Der Zeilenabstand entspricht dem vertikalen Abstand zwischen den Basislinien zweier aufeinander folgender Textzeilen.</summary>
+        <returns>Der Abstand zwischen zwei aufeinander folgenden Textzeilen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt eine <xref:System.Drawing.FontFamily>.  
+  
+-   Ruft den Zeilenabstand für die Schriftfamilie ab.  
+  
+-   Zeichnet den Wert, der den Zeilenabstand auf dem Bildschirm als Text an.  
+  
+ [!code-cpp[System.Drawing.ClassicFontFamilyExamples#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.ClassicFontFamilyExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.ClassicFontFamilyExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public string GetName (int language);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetName(int32 language) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.GetName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="language" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="language">Die Sprache, in der der Name zurückgegeben wird.</param>
+        <summary>Gibt den Namen dieses <see cref="T:System.Drawing.FontFamily" />-Objekts in der angegebenen Sprache zurück.</summary>
+        <returns>Ein <see cref="T:System.String" />-Objekt, das den Namen für dieses <see cref="T:System.Drawing.FontFamily" />-Objekt in der angegebenen Sprache darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um neutrale Sprache angeben, sollten Sie geben Sie 0 für die `language` Parameter. Eine Liste der verfügbaren Sprachen und Sprachvarianten, finden Sie in der Headerdatei "Winnt.h". Haben [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] installiert haben, diese Headerdatei in der Regel verwendbaren relativ zu den [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Installationsverzeichnis unter \\\VC\PlatformSDK\Include.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt eine <xref:System.Drawing.FontFamily>.  
+  
+-   Ruft den Namen der Schriftfamilie ab.  
+  
+-   Zeichnet den Namen der Schriftfamilie auf dem Bildschirm als Text an.  
+  
+ [!code-cpp[System.Drawing.ClassicFontFamilyExamples#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CPP/form1.cpp#8)]
+ [!code-csharp[System.Drawing.ClassicFontFamilyExamples#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CS/form1.cs#8)]
+ [!code-vb[System.Drawing.ClassicFontFamilyExamples#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStyleAvailable">
+      <MemberSignature Language="C#" Value="public bool IsStyleAvailable (System.Drawing.FontStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsStyleAvailable(valuetype System.Drawing.FontStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.IsStyleAvailable(System.Drawing.FontStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Drawing.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">Der zu überprüfende <see cref="T:System.Drawing.FontStyle" />.</param>
+        <summary>Gibt an, ob die angegebene <see cref="T:System.Drawing.FontStyle" />-Enumeration verfügbar ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene <see cref="T:System.Drawing.FontStyle" /> verfügbar ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt eine <xref:System.Drawing.FontFamily>.  
+  
+-   Testet, ob die Schriftfamilie ein kursiv verfügbar ist.  
+  
+-   Wenn dies der Fall, zeichnet Text auf dem Bildschirm.  
+  
+ [!code-cpp[System.Drawing.ClassicFontFamilyExamples#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CPP/form1.cpp#9)]
+ [!code-csharp[System.Drawing.ClassicFontFamilyExamples#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CS/form1.cs#9)]
+ [!code-vb[System.Drawing.ClassicFontFamilyExamples#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/VB/form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.FontFamily.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen dieses <see cref="T:System.Drawing.FontFamily" /> ab.</summary>
+        <value>Eine <see cref="T:System.String" />, die den Namen dieser <see cref="T:System.Drawing.FontFamily" /> darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Schriftfamilien in der <xref:System.Drawing.FontFamily.Families%2A> Eigenschaft von der <xref:System.Drawing.FontFamily> Klasse. In diesem Beispiel dient, die mit einem Windows Form verwendet werden. Um dieses Beispiel auszuführen, fügen einen <xref:System.Windows.Forms.ListBox> mit dem Namen `listBox1` auf ein Formular, und rufen die `PopulateListBoxWithFonts` Methode aus den Konstruktor des Formulars.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.MiscExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.MiscExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontFamily.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert diese <see cref="T:System.Drawing.FontFamily" /> in eine lesbare Zeichenfolgendarstellung.</summary>
+        <returns>Die Zeichenfolge, die diese <see cref="T:System.Drawing.FontFamily" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code erstellt ein <xref:System.Drawing.FontFamily> und zeichnet eine Zeichenfolgendarstellung der Schriftfamilie auf dem Bildschirm.  
+  
+ [!code-cpp[System.Drawing.ClassicFontFamilyExamples#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CPP/form1.cpp#10)]
+ [!code-csharp[System.Drawing.ClassicFontFamilyExamples#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/CS/form1.cs#10)]
+ [!code-vb[System.Drawing.ClassicFontFamilyExamples#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicFontFamilyExamples/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

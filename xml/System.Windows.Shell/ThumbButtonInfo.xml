@@ -1,0 +1,555 @@
+<Type Name="ThumbButtonInfo" FullName="System.Windows.Shell.ThumbButtonInfo">
+  <TypeSignature Language="C#" Value="public sealed class ThumbButtonInfo : System.Windows.Freezable, System.Windows.Input.ICommandSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ThumbButtonInfo extends System.Windows.Freezable implements class System.Windows.Input.ICommandSource" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shell.ThumbButtonInfo" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Freezable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Input.ICommandSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Informationen dazu, wie eine Schaltfläche in der Windows 7-Taskleistenminiaturansicht angezeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[win7](~/includes/win7-md.md)] Taskleiste bietet erweiterte Funktionen, mit dem Sie die Schaltfläche auf der Taskleiste mit der Status für einen Benutzer zu kommunizieren und allgemeine Aufgaben verfügbar zu machen, wenn das Fenster minimiert oder ausgeblendet wird. Sie können die Schaltflächen auf der Taskleistenminiaturansicht für den Zugriff auf allgemeine Aufgaben ohne den zum Anwendungsfenster hinzufügen. Windows Media Player stellt z. B. Wiedergabe, Pause "," weiterleiten, und Back-Schaltflächen, die Sie verwenden können, um die Wiedergabe von Medien aus der Taskleistenminiaturansicht steuern, wenn die Anwendung minimiert wird.  
+  
+ Die <xref:System.Windows.Shell.ThumbButtonInfo> Klasse enthält Eigenschaften, die beschreiben, wie die [!INCLUDE[win7](~/includes/win7-md.md)] Shell Schaltflächen in der Taskleistenminiaturansicht angezeigt. Es stellt einen verwalteten Wrapper um die systemeigene Windows-API bereit. <xref:System.Windows.Shell.ThumbButtonInfo>Objekte sind enthalten die <xref:System.Windows.Shell.TaskbarItemInfo.ThumbButtonInfos%2A?displayProperty=nameWithType> Auflistung.  
+  
+ Die verbesserte Taskleistenfunktionalität ist nicht verfügbar in früheren Versionen von Windows als [!INCLUDE[win7](~/includes/win7-md.md)]. In [!INCLUDE[win7](~/includes/win7-md.md)], einige Funktionen möglicherweise nicht verfügbar, abhängig von den Einstellungen des Benutzers. Schaltflächen werden z. B. nur angezeigt, in der Taskleistenminiaturansicht Wenn [!INCLUDE[TLA#tla_aero](~/includes/tlasharptla-aero-md.md)] aktiviert ist. Die Anwendung sollte alternative Möglichkeiten der Interaktion mit dem Benutzer, die nicht die verbesserten Taskleistenfunktionalität abhängig sind, bereitstellen.  
+  
+ Die folgende Abbildung zeigt eine Taskleistenvorschau mit zwei Thumb-Schaltflächen, die Zugriff auf die Wiedergabe und Stop-Befehle ermöglichen.  
+  
+ ![Infobeispiel für Taskleistenelement](~/add/media/wpfshell-taskbariteminfo.png "Infobeispiel für Taskleistenelement")  
+Windows-Taskleiste Thumb-Schaltflächen  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shell.ThumbButtonInfo> im Markup. Die <xref:System.Windows.Shell.TaskbarItemInfo> enthält eine Auflistung von <xref:System.Windows.Shell.ThumbButtonInfo> -Objekten, die Zugriff auf die Befehle Wiedergabe und Beenden der Taskleistenelement ermöglichen. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse.  
+  
+ [!code-xaml[Shell_TaskbarItemSample#010](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml#010)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThumbButtonInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.ThumbButtonInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Shell.ThumbButtonInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Shell.ThumbButtonInfo.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Miniaturansicht Schaltfläche geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie behandeln die <xref:System.Windows.Shell.ThumbButtonInfo.Click> -Ereignis der Ereignishandler ausgeführt wird, statt alle <xref:System.Windows.Shell.ThumbButtonInfo.Command%2A> , auf die Schaltfläche "Miniaturansichten" gebunden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ICommand Command { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ICommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.ThumbButtonInfo.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, der Befehl aufgerufen wird, wenn diese Miniaturansicht Schaltfläche geklickt wird.</summary>
+        <value>Der Befehl, der aufgerufen wird, wenn diese Miniaturansicht Schaltfläche geklickt wird. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie behandeln die <xref:System.Windows.Shell.ThumbButtonInfo.Click> -Ereignis der Ereignishandler ausgeführt wird, statt alle <xref:System.Windows.Shell.ThumbButtonInfo.Command%2A> , auf die Schaltfläche "Miniaturansichten" gebunden ist.  
+  
+ In XAML wird diese Eigenschaft wird häufig festgelegt auf einen statischen Befehlswert aus einer vorhandenen Befehlsbibliotheken, wie z. B. aus werden die <xref:System.Windows.Input.ApplicationCommands> oder <xref:System.Windows.Input.NavigationCommands> Bibliothek.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shell.ThumbButtonInfo> im Markup. Die <xref:System.Windows.Shell.ThumbButtonInfo> gebunden ist, um die <xref:System.Windows.Input.MediaCommands.Stop%2A?displayProperty=nameWithType> Befehl. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse.  
+  
+ [!code-xaml[Shell_TaskbarItemSample#020](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml#020)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandParameter">
+      <MemberSignature Language="C#" Value="public object CommandParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.ThumbButtonInfo.CommandParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Parameter an übergeben der <see cref="P:System.Windows.Shell.ThumbButtonInfo.Command" /> Eigenschaft.</summary>
+        <value>Der Parameter für die Übergabe an die <see cref="P:System.Windows.Shell.ThumbButtonInfo.Command" /> Eigenschaft. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandParameterProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommandParameterProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommandParameterProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.ThumbButtonInfo.CommandParameterProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.ThumbButtonInfo.CommandParameter" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommandProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommandProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.ThumbButtonInfo.CommandProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.ThumbButtonInfo.Command" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTarget">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement CommandTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement CommandTarget" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.ThumbButtonInfo.CommandTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Element, für das den angegebenen Befehl ausgelöst werden soll.</summary>
+        <value>Das Element auf dem den angegebenen Befehl ausgelöst werden soll. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Shell.ThumbButtonInfo.CommandTarget%2A> Eigenschaft stellt einen Verweis auf ein Element, das bereits in der Anwendung definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTargetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommandTargetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommandTargetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.ThumbButtonInfo.CommandTargetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.ThumbButtonInfo.CommandTarget" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.ThumbButtonInfo.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.ThumbButtonInfo.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der für die Miniaturansicht Schaltfläche-QuickInfo angezeigt.</summary>
+        <value>Der Text, der für die Miniaturansicht Schaltfläche-QuickInfo angezeigt. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Miniaturansicht Schaltfläche ein Bild hinzufügen, aber keine Eigenschaft für das Festlegen von Text für die Miniaturansicht Schaltflächenoberseite vorhanden ist. Sie können jedoch festlegen, die <xref:System.Windows.Shell.ThumbButtonInfo.Description%2A> Eigenschaft beschreibenden Text hinzuzufügen, die in einer QuickInfo angezeigt wird, wenn der Mauszeiger über die Schaltfläche "Miniaturansichten" bewegt wird.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shell.ThumbButtonInfo> im Markup. Die <xref:System.Windows.Shell.ThumbButtonInfo> gebunden ist, um die <xref:System.Windows.Input.MediaCommands.Stop%2A?displayProperty=nameWithType> Befehl. Der beschreibende QuickInfo-Text ist **beenden**. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse.  
+  
+ [!code-xaml[Shell_TaskbarItemSample#020](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml#020)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DescriptionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DescriptionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DescriptionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.ThumbButtonInfo.DescriptionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.ThumbButtonInfo.Description" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DismissWhenClicked">
+      <MemberSignature Language="C#" Value="public bool DismissWhenClicked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DismissWhenClicked" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.ThumbButtonInfo.DismissWhenClicked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Taskleistenminiaturansicht geschlossen wird, wenn die Miniaturansicht Schaltfläche geklickt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Miniaturansicht schließt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig bleibt die Taskleistenminiaturansicht sichtbar, wenn ein Miniaturbild geklickt wird. Um die Miniaturansicht schließen, wenn ein Miniaturbild geklickt wird, legen die <xref:System.Windows.Shell.ThumbButtonInfo.DismissWhenClicked%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shell.ThumbButtonInfo> im Markup. Die <xref:System.Windows.Shell.ThumbButtonInfo> gebunden ist, um die <xref:System.Windows.Input.MediaCommands.Stop%2A?displayProperty=nameWithType> Befehl. Er konfigurationsgemäß um zu schließen, wenn die Schaltfläche geklickt wird. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse.  
+  
+ [!code-xaml[Shell_TaskbarItemSample#020](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml#020)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DismissWhenClickedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DismissWhenClickedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DismissWhenClickedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.ThumbButtonInfo.DismissWhenClickedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.ThumbButtonInfo.DismissWhenClicked" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ImageSource ImageSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.ImageSource ImageSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.ThumbButtonInfo.ImageSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ImageSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Bild, das auf die Schaltfläche "Miniaturansichten" angezeigt wird.</summary>
+        <value>Das Bild, das auf die Schaltfläche "Miniaturansichten" angezeigt wird. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine statische platzieren oder animierte <xref:System.Windows.Media.ImageSource> auf die Schaltfläche "Miniaturansichten". Die Bilder werden in der entsprechenden Größe gerendert. Wenn die <xref:System.Windows.Media.ImageSource> stellt eine <xref:System.Drawing.Icon>, die entsprechende Bittiefe wird auch verwendet.  
+  
+ Um zusätzliche Textinformationen über die Schaltfläche "Miniaturansichten" bereitzustellen, legen die <xref:System.Windows.Shell.ThumbButtonInfo.Description%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shell.ThumbButtonInfo> im Markup. Die <xref:System.Windows.Shell.ThumbButtonInfo> gebunden ist, um die <xref:System.Windows.Input.MediaCommands.Stop%2A?displayProperty=nameWithType> Befehl. Das Schaltflächenbild ist ein dunkles graue Quadrat in XAML als statische Ressource definiert. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse.  
+  
+ [!code-xaml[Shell_TaskbarItemSample#020](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml#020)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageSourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ImageSourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ImageSourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.ThumbButtonInfo.ImageSourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.ThumbButtonInfo.ImageSource" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBackgroundVisible">
+      <MemberSignature Language="C#" Value="public bool IsBackgroundVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBackgroundVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.ThumbButtonInfo.IsBackgroundVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Rahmen und eine Hervorhebung um die Schaltfläche "Miniaturansichten" angezeigt.</summary>
+        <value>
+          <see langword="true" />Wenn ein Rahmen und eine Hervorhebung um die Schaltfläche "Miniaturansichten" angezeigt andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig ein Rahmen angezeigt wird, um die <xref:System.Windows.Shell.ThumbButtonInfo.ImageSource%2A>, und eine Hervorhebung wird angezeigt, wenn der Mauszeiger über die Schaltfläche "Miniaturansichten" bewegt wird. Zur ausschließlichen Anzeige der <xref:System.Windows.Shell.ThumbButtonInfo.ImageSource%2A> ohne Rand und Hervorhebung, legen Sie die <xref:System.Windows.Shell.ThumbButtonInfo.IsBackgroundVisible%2A> Eigenschaft `false`. Wenn <xref:System.Windows.Shell.ThumbButtonInfo.IsBackgroundVisible%2A> ist `false`die <xref:System.Windows.Shell.ThumbButtonInfo.ImageSource%2A> weiterhin verlagert werden, wenn die Miniaturansicht Schaltfläche geklickt wird, um visuelles Feedback für den Benutzer bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBackgroundVisibleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsBackgroundVisibleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsBackgroundVisibleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.ThumbButtonInfo.IsBackgroundVisibleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.ThumbButtonInfo.IsBackgroundVisible" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.ThumbButtonInfo.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Schaltfläche "Miniaturansichten" aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Schaltfläche "Miniaturansichten" aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Shell.ThumbButtonInfo.IsEnabled%2A> Eigenschaft ist `false`, die Schaltfläche "Miniaturansichten" reagiert nicht auf <xref:System.Windows.Shell.ThumbButtonInfo.Click> Ereignisse und die <xref:System.Windows.Shell.ThumbButtonInfo.ImageSource%2A> ist abgeblendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.ThumbButtonInfo.IsEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.ThumbButtonInfo.IsEnabled" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInteractive">
+      <MemberSignature Language="C#" Value="public bool IsInteractive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInteractive" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.ThumbButtonInfo.IsInteractive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Benutzer die Schaltfläche "Miniaturansichten" interagieren kann.</summary>
+        <value>
+          <see langword="true" />Wenn der Benutzer die Schaltfläche "Miniaturansichten" interagieren kann; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Shell.ThumbButtonInfo.IsInteractive%2A> Eigenschaft `false`, die Schaltfläche "Miniaturansichten" reagiert nicht auf <xref:System.Windows.Shell.ThumbButtonInfo.Click> Ereignisse. Allerdings die <xref:System.Windows.Shell.ThumbButtonInfo.ImageSource%2A> ist nicht abgeblendet. Sie können eine Miniaturansicht Schaltfläche verwenden, die nicht als ein Statussymbol interaktiv ist.  
+  
+ Wenn die <xref:System.Windows.Shell.ThumbButtonInfo.IsEnabled%2A> Eigenschaft ist `false`, wird die Einstellung für <xref:System.Windows.Shell.ThumbButtonInfo.IsInteractive%2A> verfügt nicht über keine Auswirkung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInteractiveProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsInteractiveProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsInteractiveProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.ThumbButtonInfo.IsInteractiveProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.ThumbButtonInfo.IsInteractive" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Visibility Visibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Visibility Visibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.ThumbButtonInfo.Visibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Visibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der den Anzeigezustand der Miniaturansicht Schaltfläche angibt.</summary>
+        <value>Ein Enumerationswert, der den Anzeigezustand der Miniaturansicht Schaltfläche angibt. Die Standardeinstellung ist <see cref="F:System.Windows.Visibility.Visible" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist die Schaltfläche "Miniaturansichten" <xref:System.Windows.Visibility.Visible>. [!INCLUDE[win7](~/includes/win7-md.md)]können maximal sieben Schaltflächen in der Taskleistenminiaturansicht. Wenn die <xref:System.Windows.Shell.ThumbButtonInfo.Visibility%2A> -Eigenschaftensatz auf <xref:System.Windows.Visibility.Hidden>ist die Schaltfläche "Miniaturansichten" hat keine sichtbaren Elemente Speicherplatz ist jedoch weiterhin für sie reserviert. Wenn die Schaltfläche "Miniaturansichten" ist <xref:System.Windows.Visibility.Collapsed>, er verfügt nicht über alle sichtbaren Elemente und kein Speicherplatz reserviert ist. In diesem Fall zusätzliche Miniaturansicht Schaltflächen der <xref:System.Windows.Shell.TaskbarItemInfo.ThumbButtonInfos%2A> Sammlung angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.ThumbButtonInfo.VisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.ThumbButtonInfo.Visibility" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

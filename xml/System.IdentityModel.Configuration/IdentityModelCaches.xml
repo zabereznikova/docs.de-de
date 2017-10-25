@@ -1,0 +1,79 @@
+<Type Name="IdentityModelCaches" FullName="System.IdentityModel.Configuration.IdentityModelCaches">
+  <TypeSignature Language="C#" Value="public sealed class IdentityModelCaches" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit IdentityModelCaches extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Configuration.IdentityModelCaches" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Caches, die zum Erkennen von wiedergegebenen Tokens und Sitzungstoken zwischenspeichern, konfiguriert sind. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ermittelt und definiert die konfigurierte <xref:System.IdentityModel.Tokens.TokenReplayCache> und <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>. Die `Caches` Eigenschaft von der <xref:System.IdentityModel.Configuration.IdentityConfiguration> Klasse und von der <xref:System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement> Klasse ist eine Instanz der <xref:System.IdentityModel.Configuration.IdentityModelCaches>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdentityModelCaches ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityModelCaches.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Configuration.IdentityModelCaches" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionSecurityTokenCache">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SessionSecurityTokenCache SessionSecurityTokenCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SessionSecurityTokenCache SessionSecurityTokenCache" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityModelCaches.SessionSecurityTokenCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SessionSecurityTokenCache</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.IdentityModel.Tokens.SessionSecurityTokenCache" /> , mit dem Cache die <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</summary>
+        <value>Die Sitzung konfigurierten Tokencache.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Versuch, die Eigenschaft auf festgelegt <see langword="null" /> auftritt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenReplayCache">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.TokenReplayCache TokenReplayCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.TokenReplayCache TokenReplayCache" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityModelCaches.TokenReplayCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.TokenReplayCache</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.IdentityModel.Tokens.TokenReplayCache" /> , wird verwendet, um zu bestimmen, ob das Token wiedergegeben werden.</summary>
+        <value>Der konfigurierten aufbewahrungsdateu-Cache.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Versuch, die Eigenschaft auf festgelegt <see langword="null" /> auftritt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

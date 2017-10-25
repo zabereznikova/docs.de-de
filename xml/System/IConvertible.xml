@@ -1,0 +1,622 @@
+<Type Name="IConvertible" FullName="System.IConvertible">
+  <TypeSignature Language="C#" Value="public interface IConvertible" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConvertible" />
+  <TypeSignature Language="DocId" Value="T:System.IConvertible" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Methoden, die den Wert der Implementierungsreferenz oder den Werttyp in einen Common Language Runtime-Typ konvertiert, der einen äquivalenten Wert aufweist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle bietet Methoden, um den Wert einer Instanz eines Implementierungstyps in einen common Language Runtime-Typ zu konvertieren, die einen äquivalenten Wert aufweist. Die Typen der common Language Runtime sind <xref:System.Boolean>, <xref:System.SByte>, <xref:System.Byte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>, <xref:System.DateTime>, <xref:System.Char>, und <xref:System.String>.  
+  
+ Wenn keine sinnvolle Konvertierung in einen common Language Runtime-Typ vorhanden ist, löst der Implementierung einer bestimmten Schnittstelle <xref:System.InvalidCastException>. Wenn diese Schnittstelle implementiert wird, auf einen booleschen Wert Geben Sie z. B. die Implementierung der <xref:System.IConvertible.ToDateTime%2A> Methode löst eine Ausnahme aus, da es nicht sinnvoll ist <xref:System.DateTime> gleichbedeutend mit einem Boolean-Typ.  
+  
+ In der Regel die common Language Runtime macht die <xref:System.IConvertible> Schnittstelle, über die <xref:System.Convert> Klasse. Die common Language Runtime verwendet auch die <xref:System.IConvertible> Schnittstelle intern in expliziten schnittstellenimplementierungen zur Vereinfachung des Codes, die zur Unterstützung von Konvertierungen in die <xref:System.Convert> Klasse und grundlegende Typen der common Language Runtime.  
+  
+ Zusätzlich zu den <xref:System.IConvertible> -Schnittstelle, die .NET Framework bietet Klassen, die den Einsatz von Typkonvertern für benutzerdefinierte Datentypen in andere Datentypen konvertieren aufgerufen. Weitere Informationen finden Sie unter der [verallgemeinerte Typkonvertierung](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada) Thema.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine Implementierung der <xref:System.IConvertible> für eine Klasse für komplexe Zahlen, sodass es umgewandelt werden zunächst als eine <xref:System.Double> und dem anschließenden Aufrufen der statischen <xref:System.Convert> Member auf, die <xref:System.Double>.  
+  
+ [!code-cpp[System.IConvertible#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IConvertible/CPP/iconvertible.cpp#1)]
+ [!code-csharp[System.IConvertible#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IConvertible/CS/iconvertible.cs#1)]
+ [!code-vb[System.IConvertible#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IConvertible/VB/iconvertible.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Bei der Implementierung der <see cref="T:System.IConvertible" /> -Schnittstelle, die Implementierung aufgerufen wird automatisch von der <see cref="M:System.Convert.ChangeType(System.Object,System.Type)" /> Methode Wenn die <see cref="T:System.Object" /> Parameter ist eine Instanz des Typs implementieren und die <see cref="T:System.Type" /> Parameter ist eine common Language Runtime Geben Sie ein.  
+  
+ Die meisten Konvertierungsmethoden haben einen Parameter vom Typ <see cref="T:System.IFormatProvider" /> , die entweder die aktuelle Kultur darstellt (<see cref="P:System.Globalization.CultureInfo.CurrentCulture" />) oder eine bestimmte Kultur. Den meisten Fällen die <see cref="T:System.IConvertible" /> Implementierungen Basistypen dieser Parameter ignoriert. Sie können jedoch auswählen, ob für die Verwendung im Code verwendet wird.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="GetTypeCode">
+      <MemberSignature Language="C#" Value="public TypeCode GetTypeCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.TypeCode GetTypeCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.GetTypeCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.TypeCode" /> für diese Instanz.</summary>
+        <returns>Die Enumerationskonstante, die die <see cref="T:System.TypeCode" /> der Klasse oder den Wert, der diese Schnittstelle implementiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToBoolean">
+      <MemberSignature Language="C#" Value="public bool ToBoolean (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ToBoolean(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToBoolean(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz in einen entsprechenden booleschen Wert, der unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen.</summary>
+        <returns>Ein boolescher Wert, der Wert dieser Instanz entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByte">
+      <MemberSignature Language="C#" Value="public byte ToByte (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ToByte(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToByte(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz, die unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen in die entsprechende 8-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Eine 8-Bit-Ganzzahl ohne Vorzeichen, die den Wert dieser Instanz entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToChar">
+      <MemberSignature Language="C#" Value="public char ToChar (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance char ToChar(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToChar(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz in eine entsprechende Unicode-Zeichen, die unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen.</summary>
+        <returns>Ein Unicode-Zeichen, die den Wert dieser Instanz entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="public DateTime ToDateTime (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.DateTime ToDateTime(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToDateTime(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz in ein entsprechendes <see cref="T:System.DateTime" /> unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen.</summary>
+        <returns>Ein <see cref="T:System.DateTime" /> Instanz gleich dem Wert dieser Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDecimal">
+      <MemberSignature Language="C#" Value="public decimal ToDecimal (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Decimal ToDecimal(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToDecimal(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz in ein entsprechendes <see cref="T:System.Decimal" /> Zahl unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen.</summary>
+        <returns>Ein <see cref="T:System.Decimal" /> Anzahl entspricht dem Wert dieser Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDouble">
+      <MemberSignature Language="C#" Value="public double ToDouble (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 ToDouble(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToDouble(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz in eine entsprechende Gleitkommazahl für mit doppelter Genauigkeit, unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen.</summary>
+        <returns>Eine mit doppelter Genauigkeit Gleitkommazahl entspricht dem Wert dieser Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt16">
+      <MemberSignature Language="C#" Value="public short ToInt16 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int16 ToInt16(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToInt16(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz, die unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen in die entsprechende 16-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Eine 16-Bit-Ganzzahl mit Vorzeichen, die den Wert dieser Instanz entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt32">
+      <MemberSignature Language="C#" Value="public int ToInt32 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ToInt32(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToInt32(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz, die unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen in die entsprechende 32-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen, die den Wert dieser Instanz entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt64">
+      <MemberSignature Language="C#" Value="public long ToInt64 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 ToInt64(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToInt64(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz, die unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen in die entsprechende 64-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Eine 64-Bit-Ganzzahl mit Vorzeichen, die den Wert dieser Instanz entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSByte">
+      <MemberSignature Language="C#" Value="public sbyte ToSByte (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int8 ToSByte(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToSByte(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.SByte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz, die unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen in die entsprechende 8-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Eine 8-Bit-Ganzzahl mit Vorzeichen, die den Wert dieser Instanz entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSingle">
+      <MemberSignature Language="C#" Value="public float ToSingle (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float32 ToSingle(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToSingle(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz in eine entsprechende Gleitkommazahl für mit einfacher Genauigkeit, unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen.</summary>
+        <returns>Eine mit einfacher Genauigkeit Gleitkommazahl entspricht dem Wert dieser Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz in ein entsprechendes <see cref="T:System.String" /> unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen.</summary>
+        <returns>Ein <see cref="T:System.String" /> Instanz gleich dem Wert dieser Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToType">
+      <MemberSignature Language="C#" Value="public object ToType (Type conversionType, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ToType(class System.Type conversionType, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToType(System.Type,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conversionType" Type="System.Type" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="conversionType">Die <see cref="T:System.Type" /> , in denen der Wert dieser Instanz konvertiert wird.</param>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz in eine <see cref="T:System.Object" /> des angegebenen <see cref="T:System.Type" /> , das über einen entsprechenden Wert unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen verfügt.</summary>
+        <returns>Ein <see cref="T:System.Object" /> Instanz des Typs <paramref name="conversionType" /> , deren Wert dem Wert dieser Instanz entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt16">
+      <MemberSignature Language="C#" Value="public ushort ToUInt16 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int16 ToUInt16(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToUInt16(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz, die unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen in die entsprechende 16-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Eine 16-Bit-Ganzzahl ohne Vorzeichen, die den Wert dieser Instanz entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt32">
+      <MemberSignature Language="C#" Value="public uint ToUInt32 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int32 ToUInt32(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToUInt32(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz, die unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen in die entsprechende 32-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Eine 32-Bit-Ganzzahl ohne Vorzeichen, die den Wert dieser Instanz entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt64">
+      <MemberSignature Language="C#" Value="public ulong ToUInt64 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int64 ToUInt64(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IConvertible.ToUInt64(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IFormatProvider" /> -schnittstellenimplementierung, die kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert dieser Instanz, die unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen in die entsprechende 64-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Eine 64-Bit-Ganzzahl ohne Vorzeichen, die den Wert dieser Instanz entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

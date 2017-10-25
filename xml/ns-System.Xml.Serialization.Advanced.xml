@@ -1,0 +1,13 @@
+<Namespace Name="System.Xml.Serialization.Advanced">
+  <Docs>
+    <summary>Die <see langword="System.Xml.Serialization.Advanced" /> -Namespace enthält Klassen, die Sie aus einem Dokument Web Services Description Language (WSDL) generierten Code anpassen können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel zur Verwendung der Funktion "Code generieren" wird die **Webverweis hinzufügen** Dialogfeld von Visual Studio. Ein weiteres Beispiel ist die [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

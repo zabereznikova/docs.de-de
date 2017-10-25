@@ -1,0 +1,6 @@
+<Namespace Name="System.Reflection.Context">
+  <Docs>
+    <summary>Die <see cref="N:System.Reflection.Context" /> -Namespace enthält Klassen, die benutzerdefinierte reflexionskontexte ermöglichen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

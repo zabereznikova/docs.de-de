@@ -1,0 +1,80 @@
+<Type Name="EncryptionAlgorithm" FullName="System.Messaging.EncryptionAlgorithm">
+  <TypeSignature Language="C#" Value="public enum EncryptionAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed EncryptionAlgorithm extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.EncryptionAlgorithm" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den zum Verschlüsseln des Nachrichtentextes einer privaten Nachricht verwendeten Verschlüsselungsalgorithmus an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cipher Modi definieren Sie die Methode, die in der Daten verschlüsselt werden. Der Stream-Verschlüsselungsmodus codiert Daten ein Bit zu einem Zeitpunkt. Der blockchiffremodus codiert Daten blockweise zu einem Zeitpunkt. Obwohl sie langsamer als die Streamverschlüsselung ausgeführt ist, ist die Blockchiffre sicherer. Die folgende Tabelle beschreibt den Verschlüsselungsmodus für jede der <xref:System.Messaging.EncryptionAlgorithm> Werte.  
+  
+|Verschlüsselung|Verschlüsselungsmodus|  
+|----------------|-----------------|  
+|RC2|64-Bit-block|  
+|RC4|Stream|  
+  
+ Message Queuing-Nachricht Eigenschaft des Objekts erläutert letztlich Verschlüsselungsstufen Betriebssystem.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.EncryptionAlgorithm None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.EncryptionAlgorithm.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.EncryptionAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Verschlüsselung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Rc2">
+      <MemberSignature Language="C#" Value="Rc2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.EncryptionAlgorithm Rc2 = int32(26114)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.EncryptionAlgorithm.Rc2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.EncryptionAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Wert MQMSG_CALG_RC2. Dies ist der Standardwert für die Verschlüsselungseigenschaft des Nachrichtenobjekts die Message Queuing-Anwendung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Rc4">
+      <MemberSignature Language="C#" Value="Rc4" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.EncryptionAlgorithm Rc4 = int32(26625)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.EncryptionAlgorithm.Rc4" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.EncryptionAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Wert MQMSG_CALG_RC4. Dies entspricht der weniger sicheren Option für die Verschlüsselungseigenschaft von der Message Queuing-Anwendung Message-Objekt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

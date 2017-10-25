@@ -1,0 +1,247 @@
+<Type Name="RowToFieldTransformer" FullName="System.Web.UI.WebControls.WebParts.RowToFieldTransformer">
+  <TypeSignature Language="C#" Value="public sealed class RowToFieldTransformer : System.Web.UI.WebControls.WebParts.WebPartTransformer, System.Web.UI.WebControls.WebParts.IWebPartField" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RowToFieldTransformer extends System.Web.UI.WebControls.WebParts.WebPartTransformer implements class System.Web.UI.WebControls.WebParts.IWebPartField" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.RowToFieldTransformer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.WebPartTransformer</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.WebParts.IWebPartField</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.WebControls.WebParts.WebPartTransformer(typeof(System.Web.UI.WebControls.WebParts.IWebPartRow), typeof(System.Web.UI.WebControls.WebParts.IWebPartField))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Transformiert die Daten in einer Webparts-Verbindung von einem Anbieter, der implementiert die <see cref="T:System.Web.UI.WebControls.WebParts.IWebPartRow" /> Schnittstelle für einen Consumer, die Daten über die <see cref="T:System.Web.UI.WebControls.WebParts.IWebPartField" /> Schnittstelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Transformatoren werden verwendet, um Daten zwischen zwei Webparts-Steuerelemente mit nicht kompatiblen Verbindungspunkten zu übersetzen. Ein <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer> Objekt transformiert die Daten von einem Anbieter implementieren die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle für einen Consumer, dass Daten aus der <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle. Die <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer> -Klasse ermöglicht es, Steuerelemente mit diesen nicht kompatiblen Verbindungspunkten verbunden werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer> Objekt, das einen Anbieter und einen Consumer mit nicht kompatiblen Verbindungspunkten zu verbinden. Der erste Abschnitt des Beispiels zeigt ein Webparts-Steuerelement, das als Anbieter fungiert. Der Provider-Klasse, die mit dem Namen `RowProviderWebPart`, stellt Daten über die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle.  
+  
+ [!code-csharp[WebParts_RowToFieldTransformer_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_RowToFieldTransformer_Overview/CS/RowProviderWebPart.cs#1)]
+ [!code-vb[WebParts_RowToFieldTransformer_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_RowToFieldTransformer_Overview/VB/RowProviderWebPart.vb#1)]  
+  
+ Der zweite Abschnitt des Beispiels enthält ein Webparts-Steuerelement, das ein Consumer einer Webparts-Verbindung ist. Der Consumerklasse, die mit dem Namen `FieldConsumerWebPart`, erwartet, dass Daten aus der <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle.  
+  
+ [!code-csharp[WebParts_RowToFieldTransformer_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_RowToFieldTransformer_Overview/CS/FieldConsumerWebPart.cs#2)]
+ [!code-vb[WebParts_RowToFieldTransformer_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_RowToFieldTransformer_Overview/VB/FieldConsumerWebPart.vb#2)]  
+  
+ Der dritte Abschnitt des Beispiels wird gezeigt, eine Seite mit den beiden steuert und definiert die <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer> Objekt zum Herstellen einer Verbindung die beiden Steuerelemente.  
+  
+ [!code-aspx-csharp[WebParts_RowToFieldTransformer_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_RowToFieldTransformer_Overview/CS/transformer3.aspx#3)]
+ [!code-aspx-vb[WebParts_RowToFieldTransformer_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_RowToFieldTransformer_Overview/VB/transformer3.aspx#3)]  
+  
+ Das Codebeispiel enthält ein Benutzersteuerelement, das Sie Anzeigemodi auf einer Webparts-Seite ändern kann. Der Quellcode für das Benutzersteuerelement stammen aus einem anderen Thema. Erhalten Sie die ASCX-Datei für das Benutzersteuerelement aus [Exemplarische Vorgehensweise: Ändern von Anzeigemodi auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0), und es muss im gleichen Ordner wie die ASPX-Seite platziert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RowToFieldTransformer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToFieldTransformer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.RowToFieldTransformer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateConfigurationControl">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Control CreateConfigurationControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.Control CreateConfigurationControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToFieldTransformer.CreateConfigurationControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt ein ASP.NET-Steuerelement, die konfiguriert eine <see cref="T:System.Web.UI.WebControls.WebParts.RowToFieldTransformer" /> von Transformer in die <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> Zone.</summary>
+        <returns>Ein ASP.NET-Steuerelement, die konfiguriert eine <see cref="T:System.Web.UI.WebControls.WebParts.RowToFieldTransformer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webparts-Verbindung kann statisch oder dynamisch eingerichtet werden. Eine statische Verbindung wird definiert, in der `<StaticConnections>` Tag. Ein Benutzer kann eine dynamische Verbindung definieren, wenn eine Verbindungszone ist auf einer Webseite enthalten, und der Benutzer befindet sich im Verbindungsmodus. Wenn eine dynamische Verbindung hergestellt wurde, definiert der Benutzer die Verbindung über ein Konfigurationssteuerelement an. Die <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer.CreateConfigurationControl%2A> Methodenrückgabe das Steuerelement, das der Benutzer interagiert, um die Verbindung definiert werden.  
+  
+ Das Konfigurationssteuerelement für eine <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer> Objekt kann einen Benutzer eine Verbindung herstellen oder Trennen von einem Anbieter und Consumer und auswählen, welches Feld aus der Anbieterzeile für die Verbindung mit dem Feld "Daten" des Consumers. Es wird in der Verbindungszone angezeigt. Konfigurationseinstellungen des Benutzers werden gespeichert, und auf den nächsten Besuch geladen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldName">
+      <MemberSignature Language="C#" Value="public string FieldName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FieldName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.RowToFieldTransformer.FieldName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Werts zu transformieren.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Namen des Felds zu transformieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer.FieldName%2A> Eigenschaft stellt die Daten aus der Anbieterzeile, die für den Consumer transformiert wird. Die <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer.FieldName%2A> Eigenschaft kann festgelegt werden, vom Benutzer über die <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer> konfigurationssteuerung oder Set deklarativ in der `<asp:RowToFieldTransformer FieldName="` *SelectedField* `" />` Tag, in denen *SelectedField * enthält den Namen des Felds zu transformieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadConfigurationState">
+      <MemberSignature Language="C#" Value="protected override void LoadConfigurationState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void LoadConfigurationState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToFieldTransformer.LoadConfigurationState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveConfigurationState">
+      <MemberSignature Language="C#" Value="protected override object SaveConfigurationState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object SaveConfigurationState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToFieldTransformer.SaveConfigurationState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.IWebPartField.GetFieldValue">
+      <MemberSignature Language="C#" Value="void IWebPartField.GetFieldValue (System.Web.UI.WebControls.WebParts.FieldCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.WebParts.IWebPartField.GetFieldValue(class System.Web.UI.WebControls.WebParts.FieldCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToFieldTransformer.System#Web#UI#WebControls#WebParts#IWebPartField#GetFieldValue(System.Web.UI.WebControls.WebParts.FieldCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Web.UI.WebControls.WebParts.FieldCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Die Delegatinstanz verwendet werden, wenn Sie einen Wert abrufen.</param>
+        <summary>Gibt den Wert des Felds, das verwendet wird, wird von der Schnittstelle als Grundlage für eine Verbindung zwischen zwei Webparts-Steuerelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer>-Instanz in eine <xref:System.Web.UI.WebControls.WebParts.IWebPartField>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.IWebPartField.Schema">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptor System.Web.UI.WebControls.WebParts.IWebPartField.Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptor System.Web.UI.WebControls.WebParts.IWebPartField.Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.RowToFieldTransformer.System#Web#UI#WebControls#WebParts#IWebPartField#Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schemainformationen für ein Datenfeld an, die verwendet wird, um Daten zwischen zwei Webparts-Steuerelemente freizugeben.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , die das Schema beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer>-Instanz in eine <xref:System.Web.UI.WebControls.WebParts.IWebPartField>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public override object Transform (object providerData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Transform(object providerData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToFieldTransformer.Transform(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="providerData">Der Anbieterdaten transformiert werden sollen.</param>
+        <summary>Stellt ein Objekt für das Transformieren der Daten bereit.</summary>
+        <returns>Eine <see cref="T:System.Object" /> Darstellung der Daten transformiert werden sollen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer.Transform%2A> -Methode stellt ein Objekt für das Transformieren der Anbieterdaten vom Typ <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> in den Typ <xref:System.Web.UI.WebControls.WebParts.IWebPartField> daher kann er vom Consumer verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

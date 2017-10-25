@@ -1,0 +1,540 @@
+<Type Name="ModelStateDictionary" FullName="System.Web.ModelBinding.ModelStateDictionary">
+  <TypeSignature Language="C#" Value="public class ModelStateDictionary : System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;string,System.Web.ModelBinding.ModelState&gt;&gt;, System.Collections.Generic.IDictionary&lt;string,System.Web.ModelBinding.ModelState&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,System.Web.ModelBinding.ModelState&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ModelStateDictionary extends System.Object implements class System.Collections.Generic.ICollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Web.ModelBinding.ModelState&gt;&gt;, class System.Collections.Generic.IDictionary`2&lt;string, class System.Web.ModelBinding.ModelState&gt;, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Web.ModelBinding.ModelState&gt;&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.ModelStateDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Web.ModelBinding.ModelState&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IDictionary&lt;System.String,System.Web.ModelBinding.ModelState&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Web.ModelBinding.ModelState&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt den Zustand der modellbindung dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModelStateDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ModelBinding.ModelStateDictionary" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModelStateDictionary (System.Web.ModelBinding.ModelStateDictionary dictionary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.ModelBinding.ModelStateDictionary dictionary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.#ctor(System.Web.ModelBinding.ModelStateDictionary)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Web.ModelBinding.ModelStateDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">Das Wörterbuch.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.ModelBinding.ModelStateDictionary" /> -Klasse unter Verwendung einer vorhandenen Dictionary-Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="dictionary" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Collections.Generic.KeyValuePair&lt;string,System.Web.ModelBinding.ModelState&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Web.ModelBinding.ModelState&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.Add(System.Collections.Generic.KeyValuePair{System.String,System.Web.ModelBinding.ModelState})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.String,System.Web.ModelBinding.ModelState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element.</param>
+        <summary>Fügt das angegebene Element im Wörterbuch.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, System.Web.ModelBinding.ModelState value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(string key, class System.Web.ModelBinding.ModelState value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.Add(System.String,System.Web.ModelBinding.ModelState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Web.ModelBinding.ModelState" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel.</param>
+        <param name="value">Der Wert.</param>
+        <summary>Fügt ein Element mit dem angegebenen Schlüssel und Wert zum Wörterbuch hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddModelError">
+      <MemberSignature Language="C#" Value="public void AddModelError (string key, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddModelError(string key, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.AddModelError(System.String,System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel.</param>
+        <param name="exception">Das Ausnahmeobjekt.</param>
+        <summary>Mithilfe des angegebenen Schlüssels und mithilfe der angegebenen Ausnahme für den Wert der fehlerauflistung hinzugefügt einen Modellfehler.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="key" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddModelError">
+      <MemberSignature Language="C#" Value="public void AddModelError (string key, string errorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddModelError(string key, string errorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.AddModelError(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="errorMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel.</param>
+        <param name="errorMessage">Die Fehlermeldung.</param>
+        <summary>Mithilfe des angegebenen Schlüssels und verwenden die Zeichenfolge der angegebenen Fehlermeldung für den Wert der fehlerauflistung hinzugefügt den angegebenen Modellfehler.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="key" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus dem Wörterbuch.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Collections.Generic.KeyValuePair&lt;string,System.Web.ModelBinding.ModelState&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Web.ModelBinding.ModelState&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.Contains(System.Collections.Generic.KeyValuePair{System.String,System.Web.ModelBinding.ModelState})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.String,System.Web.ModelBinding.ModelState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, in dem Modellzustandswörterbuch gesucht werden soll.</param>
+        <summary>Bestimmt, ob das modellzustands-Wörterbuch ein bestimmtes Element enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn sich <paramref name="item" /> im Wörterbuch befindet, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel.</param>
+        <summary>Bestimmt, ob das modellzustands-Wörterbuch den angegebenen Schlüssel enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn das Wörterbuch den angegebenen Schlüssel enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Collections.Generic.KeyValuePair&lt;string,System.Web.ModelBinding.ModelState&gt;[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Web.ModelBinding.ModelState&gt;[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.CopyTo(System.Collections.Generic.KeyValuePair{System.String,System.Web.ModelBinding.ModelState}[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Generic.KeyValuePair&lt;System.String,System.Web.ModelBinding.ModelState&gt;[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array, welches das Ziel der aus dem Wörterbuch kopierten Elemente ist. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="arrayIndex">Der nullbasierte Index im <c>Array</c> ab dem kopiert wird.</param>
+        <summary>Kopiert die Elemente des Wörterbuchs in ein Array, beginnend am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelStateDictionary.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Schlüssel/Wert-Paare in der Auflistung ab.</summary>
+        <value>Die Anzahl der Schlüssel/Wert-Paare in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;string,System.Web.ModelBinding.ModelState&gt;&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Web.ModelBinding.ModelState&gt;&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Web.ModelBinding.ModelState&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, mit denen das Wörterbuch durchlaufen werden kann.</summary>
+        <returns>Ein Enumerator, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelStateDictionary.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Wörterbuch schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn das Wörterbuch schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelStateDictionary.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Fehler in einem der Modellobjekte Status im Wörterbuch vorhanden sind.</summary>
+        <value>
+          <see langword="false" />Wenn Fehler gefunden wurden. andernfalls <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidField">
+      <MemberSignature Language="C#" Value="public bool IsValidField (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsValidField(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.IsValidField(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel.</param>
+        <summary>Bestimmt, ob vorhandene <see cref="T:System.Web.ModelBinding.ModelError" /> Objekte, die dem angegebenen Schlüssel zugeordnet sind, oder mit dem angegebenen Schlüssel als Präfix vorangestellt werden.</summary>
+        <returns>
+          <see langword="true" />Wenn alle <see cref="T:System.Web.ModelBinding.ModelError" /> Objekte sind mit dem angegebenen Schlüssel zugeordnet oder mit Präfix, mit dem angegebenen Schlüssel ist, andernfalls <see langword="false" />. Wenn der Schlüssel im Wörterbuch nicht gefunden wird, gibt diese Methode <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="key" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.ModelBinding.ModelState this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.ModelBinding.ModelState Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelStateDictionary.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ModelState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel.</param>
+        <summary>Ruft den Wert ab, der dem angegebenen Schlüssel zugeordnet ist, oder legt diesen fest.</summary>
+        <value>Das Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelStateDictionary.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung, die die Schlüssel des Wörterbuchs enthält.</summary>
+        <value>Der Schlüssel des Wörterbuchs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Merge">
+      <MemberSignature Language="C#" Value="public void Merge (System.Web.ModelBinding.ModelStateDictionary dictionary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Merge(class System.Web.ModelBinding.ModelStateDictionary dictionary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.Merge(System.Web.ModelBinding.ModelStateDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Web.ModelBinding.ModelStateDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">Das modellzustands-Wörterbuch in dieses Objekt zusammengeführt werden sollen.</param>
+        <summary>Kopiert die Werte aus dem angegebenen modellzustands-Wörterbuch-Objekt in dieses Wörterbuch, wobei vorhandene Werte überschrieben, wenn die Schlüssel identisch sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.Collections.Generic.KeyValuePair&lt;string,System.Web.ModelBinding.ModelState&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Web.ModelBinding.ModelState&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.Remove(System.Collections.Generic.KeyValuePair{System.String,System.Web.ModelBinding.ModelState})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.String,System.Web.ModelBinding.ModelState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu entfernende Element.</param>
+        <summary>Entfernt das erste Vorkommen des angegebenen Elements aus dem modellzustands-Wörterbuch.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element erfolgreich aus dem Wörterbuch entfernt wurde oder <see langword="false" /> , wenn das Element nicht entfernt wurde oder nicht im Wörterbuch gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element mit dem angegebenen Schlüssel aus dem Wörterbuch.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element erfolgreich aus dem Wörterbuch entfernt wurde oder <see langword="false" /> , wenn das Element nicht entfernt wurde oder nicht im Wörterbuch gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetModelValue">
+      <MemberSignature Language="C#" Value="public void SetModelValue (string key, System.Web.ModelBinding.ValueProviderResult value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetModelValue(string key, class System.Web.ModelBinding.ValueProviderResult value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.SetModelValue(System.String,System.Web.ModelBinding.ValueProviderResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Web.ModelBinding.ValueProviderResult" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel.</param>
+        <param name="value">Der Wert.</param>
+        <summary>Legt den Wert für den angegebenen Schlüssel.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der zum Durchlaufen der Auflistung verwendet werden kann.</summary>
+        <returns>Ein Enumerator, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.ModelBinding.ModelStateDictionary>-Instanz in eine <xref:System.Collections.IEnumerable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (string key, out System.Web.ModelBinding.ModelState value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(string key, [out] class System.Web.ModelBinding.ModelState&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelStateDictionary.TryGetValue(System.String,System.Web.ModelBinding.ModelState@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Web.ModelBinding.ModelState&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des abzurufenden Werts.</param>
+        <param name="value">Wenn diese Methode zurückgibt, enthält den Wert, der mit dem angegebenen Schlüssel zugeordnet ist, wenn der Schlüssel gefunden wurde; enthält, andernfalls der Standardwert für den Typ dieses Parameters ein. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, den Wert, der mit dem angegebenen Schlüssel zugeordnet ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Wörterbuch ein Element, die dem angegebenen Schlüssel enthält enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.Web.ModelBinding.ModelState&gt; Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Web.ModelBinding.ModelState&gt; Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelStateDictionary.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Web.ModelBinding.ModelState&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung, die die Werte des Wörterbuchs enthält.</summary>
+        <value>Die Werte des Wörterbuchs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1454 @@
+<Type Name="DateAndTime" FullName="Microsoft.VisualBasic.DateAndTime">
+  <TypeSignature Language="C#" Value="public sealed class DateAndTime" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DateAndTime extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.DateAndTime" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.VisualBasic.CompilerServices.StandardModule</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see langword="DateAndTime" /> -Modul enthält, Prozeduren und Eigenschaften, die in Vorgängen für Datum und Uhrzeit verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Modul unterstützt die Visual Basic-Schlüsselwörter und Laufzeit-Bibliothekscode-Elemente, die erhalten die aktuellen Datums- oder Zeitangabe, Durchführen von datumsberechnungen, Datum oder Uhrzeit zurück, legen Sie die Datums- oder Zeitangabe oder Zeit die Dauer eines Prozesses.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `Today` Eigenschaft, um das aktuelle Systemdatum zurückzugeben.  
+  
+```  
+Dim thisDate As Date  
+thisDate = Today   
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DateAdd">
+      <MemberSignature Language="C#" Value="public static DateTime DateAdd (Microsoft.VisualBasic.DateInterval Interval, double Number, DateTime DateValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.DateTime DateAdd(valuetype Microsoft.VisualBasic.DateInterval Interval, float64 Number, valuetype System.DateTime DateValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.DateAdd(Microsoft.VisualBasic.DateInterval,System.Double,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Interval" Type="Microsoft.VisualBasic.DateInterval" />
+        <Parameter Name="Number" Type="System.Double" />
+        <Parameter Name="DateValue" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="Interval">Erforderlich. <see langword="DateInterval" />Enumerationswert oder <see langword="String" /> Ausdruck, der das Zeitintervall, das Sie hinzufügen möchten darstellt.</param>
+        <param name="Number">Erforderlich. <see langword="Double" />. Gleitkomma-Ausdruck, der die Anzahl der Intervalle darstellt, die Sie hinzufügen möchten. <c>Anzahl</c> kann positiv (für Datum/Uhrzeit-Werte in der Zukunft) oder negativ (für Datum/Uhrzeit-Werte in der Vergangenheit) sein. Kann Nachkommastellen enthalten Teil, wenn <c>Intervall</c> Stunden, Minuten oder Sekunden angibt. Für andere Werte von <c>Intervall</c>alle Dezimalstellen Teil <c>Anzahl</c> wird ignoriert.</param>
+        <param name="DateValue">Erforderlich. <see langword="Date" />. Ein Ausdruck darstellt, das Datum und die Uhrzeit, zu dem das Intervall hinzugefügt werden. <c>DateValue</c> selbst wird nicht geändert, in dem aufrufenden Programm.</param>
+        <summary>Gibt eine <see langword="Date" /> Wert, der einen Datums- und Uhrzeitangabe enthält, denen ein angegebenes Zeitintervall hinzugefügt wurde.</summary>
+        <returns>Gibt eine <see langword="Date" /> Wert, der einen Datums- und Uhrzeitangabe enthält, denen ein angegebenes Zeitintervall hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die `DateAdd` Funktion zum Hinzufügen oder ein angegebenes Zeitintervall von einem Datum subtrahieren. Beispielsweise können Sie ein Datum 30 Tage ab heute oder eine Uhrzeit 45 Minuten, bevor Sie jetzt berechnen.  
+  
+ Tage hinzufügen `DateValue`, können Sie `DateInterval.Day`, `DateInterval.DayOfYear`, oder `DateInterval.Weekday`. Diese werden als gleichwertig betrachtet, da `DayOfYear` und `Weekday` sind keine sinnvollen Zeitintervalle.  
+  
+ Die `DateAdd` Funktion nie ein ungültiges Datum zurückgegeben. Bei Bedarf wird der Tagesteil von das resultierende Datum nach unten bis zum letzten Tag des Monats im resultierenden Jahr resultierende angepasst. Im folgenden Beispiel wird ein Monat bis zum 31. Januar:  
+  
+```vb  
+Dim NextMonth As Date = DateAdd(DateInterval.Month, 1, #1/31/1995#)  
+```  
+  
+ In diesem Beispiel `DateAdd` gibt `#2/28/1995#`, nicht `#2/31/1995#`. Wenn `DateValue` ist `#1/31/1996#`, gibt `#2/29/1996#` da 1996 ein Schaltjahr ist.  
+  
+> [!NOTE]
+>  `DateAdd`verwendet die aktuelle Einstellung der Kalender aus der <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Eigenschaft von der <xref:System.Globalization.CultureInfo> -Klasse in der <xref:System.Globalization> Namespace. Die Standardeinstellung <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Werte bestimmt werden, indem **Systemsteuerung** Einstellungen.  
+  
+ Da jeder `Date` Wert wird von unterstützt eine <xref:System.DateTime> Struktur, seine Methoden ermöglichen den zusätzliche Optionen im Hinzufügen von Zeitintervallen. Sie können z. B. eine Anzahl von Tagen, gerundet auf die nächste Millisekunde gerundet zu Hinzufügen einer `Date` Variablen wie folgt:  
+  
+```vb  
+Dim NextTime As Date = Now        ' Current date and time.  
+NextTime = NextTime.AddDays(3.4)  ' Increment by 3 2/5 days.  
+```  
+  
+ Die `Interval` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Zeichenfolge|Einheit des Zeitintervalls hinzufügen|  
+|-----------------------|------------|----------------------------------|  
+|`DateInterval.Day`|T|Tag; auf den ganzzahligen Wert gekürzt.|  
+|`DateInterval.DayOfYear`|y|Tag; auf den ganzzahligen Wert gekürzt.|  
+|`DateInterval.Hour`|h|Stunde; auf die nächste Millisekunde gerundet|  
+|`DateInterval.Minute`|n|Minute; auf die nächste Millisekunde gerundet|  
+|`DateInterval.Month`|m|Monat; auf den ganzzahligen Wert gekürzt.|  
+|`DateInterval.Quarter`|q|Quartal; auf den ganzzahligen Wert gekürzt.|  
+|`DateInterval.Second`|s|Sekunde; auf die nächste Millisekunde gerundet|  
+|`DateInterval.Weekday`|m|Tag; auf den ganzzahligen Wert gekürzt.|  
+|`DateInterval.WeekOfYear`|weltweit|Woche. auf den ganzzahligen Wert gekürzt.|  
+|`DateInterval.Year`|yyyy|Jahr; auf den ganzzahligen Wert gekürzt.|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird ein Datum und mithilfe der `DateAdd` funktioniert, zeigt einem entsprechenden Datum eine angegebene Anzahl von Monaten in der Zukunft.  
+  
+ [!code-vb[VbVbalrFunctions#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="DateValue" />ist nicht in umgewandelt <see langword="Date" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Interval" /> ist nicht gültig.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Berechnetes Datum liegt vor 00:00:00 am 1. Januar des Jahres 1 oder höher ist als 23:59:59 am 31. Dezember 9999.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DateAdd">
+      <MemberSignature Language="C#" Value="public static DateTime DateAdd (string Interval, double Number, object DateValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.DateTime DateAdd(string Interval, float64 Number, object DateValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.DateAdd(System.String,System.Double,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Interval" Type="System.String" />
+        <Parameter Name="Number" Type="System.Double" />
+        <Parameter Name="DateValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Interval">Erforderlich. <see langword="DateInterval" />Enumerationswert oder <see langword="String" /> Ausdruck, der das Zeitintervall, das Sie hinzufügen möchten darstellt.</param>
+        <param name="Number">Erforderlich. <see langword="Double" />. Gleitkomma-Ausdruck, der die Anzahl der Intervalle darstellt, die Sie hinzufügen möchten. <c>Anzahl</c> kann positiv (für Datum/Uhrzeit-Werte in der Zukunft) oder negativ (für Datum/Uhrzeit-Werte in der Vergangenheit) sein. Kann Nachkommastellen enthalten Teil, wenn <c>Intervall</c> Stunden, Minuten oder Sekunden angibt. Für andere Werte von <c>Intervall</c>alle Dezimalstellen Teil <c>Anzahl</c> wird ignoriert.</param>
+        <param name="DateValue">Erforderlich. <see langword="Date" />. Ein Ausdruck darstellt, das Datum und die Uhrzeit, zu dem das Intervall hinzugefügt werden. <c>DateValue</c> selbst wird nicht geändert, in dem aufrufenden Programm.</param>
+        <summary>Gibt eine <see langword="Date" /> Wert, der einen Datums- und Uhrzeitangabe enthält, denen ein angegebenes Zeitintervall hinzugefügt wurde.</summary>
+        <returns>Gibt eine <see langword="Date" /> Wert, der einen Datums- und Uhrzeitangabe enthält, denen ein angegebenes Zeitintervall hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die `DateAdd` Funktion zum Hinzufügen oder ein angegebenes Zeitintervall von einem Datum subtrahieren. Beispielsweise können Sie ein Datum 30 Tage ab heute oder eine Uhrzeit 45 Minuten, bevor Sie jetzt berechnen.  
+  
+ Tage hinzufügen `DateValue`, können Sie `DateInterval.Day`, `DateInterval.DayOfYear`, oder `DateInterval.Weekday`. Diese werden als gleichwertig betrachtet, da `DayOfYear` und `Weekday` sind keine sinnvollen Zeitintervalle.  
+  
+ Die `DateAdd` Funktion nie ein ungültiges Datum zurückgegeben. Bei Bedarf wird der Tagesteil von das resultierende Datum nach unten bis zum letzten Tag des Monats im resultierenden Jahr resultierende angepasst. Im folgenden Beispiel wird ein Monat bis zum 31. Januar:  
+  
+```vb  
+Dim NextMonth As Date = DateAdd(DateInterval.Month, 1, #1/31/1995#)  
+```  
+  
+ In diesem Beispiel `DateAdd` gibt `#2/28/1995#`, nicht `#2/31/1995#`. Wenn `DateValue` ist `#1/31/1996#`, gibt `#2/29/1996#` da 1996 ein Schaltjahr ist.  
+  
+> [!NOTE]
+>  `DateAdd`verwendet die aktuelle Einstellung der Kalender aus der <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Eigenschaft von der <xref:System.Globalization.CultureInfo> -Klasse in der <xref:System.Globalization> Namespace. Die Standardeinstellung <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Werte bestimmt werden, indem **Systemsteuerung** Einstellungen.  
+  
+ Da jeder `Date` Wert wird von unterstützt eine <xref:System.DateTime> Struktur, seine Methoden ermöglichen den zusätzliche Optionen im Hinzufügen von Zeitintervallen. Sie können z. B. eine Anzahl von Tagen, gerundet auf die nächste Millisekunde gerundet zu Hinzufügen einer `Date` Variablen wie folgt:  
+  
+```vb  
+Dim NextTime As Date = Now        ' Current date and time.  
+NextTime = NextTime.AddDays(3.4)  ' Increment by 3 2/5 days.  
+```  
+  
+ Die `Interval` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Zeichenfolge|Einheit des Zeitintervalls hinzufügen|  
+|-----------------------|------------|----------------------------------|  
+|`DateInterval.Day`|T|Tag; auf den ganzzahligen Wert gekürzt.|  
+|`DateInterval.DayOfYear`|y|Tag; auf den ganzzahligen Wert gekürzt.|  
+|`DateInterval.Hour`|h|Stunde; auf die nächste Millisekunde gerundet|  
+|`DateInterval.Minute`|n|Minute; auf die nächste Millisekunde gerundet|  
+|`DateInterval.Month`|m|Monat; auf den ganzzahligen Wert gekürzt.|  
+|`DateInterval.Quarter`|q|Quartal; auf den ganzzahligen Wert gekürzt.|  
+|`DateInterval.Second`|s|Sekunde; auf die nächste Millisekunde gerundet|  
+|`DateInterval.Weekday`|m|Tag; auf den ganzzahligen Wert gekürzt.|  
+|`DateInterval.WeekOfYear`|weltweit|Woche. auf den ganzzahligen Wert gekürzt.|  
+|`DateInterval.Year`|yyyy|Jahr; auf den ganzzahligen Wert gekürzt.|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird ein Datum und mithilfe der `DateAdd` funktioniert, zeigt einem entsprechenden Datum eine angegebene Anzahl von Monaten in der Zukunft.  
+  
+ [!code-vb[VbVbalrFunctions#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="DateValue" />ist nicht in umgewandelt <see langword="Date" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Interval" /> ist nicht gültig.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Berechnetes Datum liegt vor 00:00:00 am 1. Januar des Jahres 1 oder höher ist als 23:59:59 am 31. Dezember 9999.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DateDiff">
+      <MemberSignature Language="C#" Value="public static long DateDiff (Microsoft.VisualBasic.DateInterval Interval, DateTime Date1, DateTime Date2, Microsoft.VisualBasic.FirstDayOfWeek DayOfWeek = Microsoft.VisualBasic.FirstDayOfWeek.Sunday, Microsoft.VisualBasic.FirstWeekOfYear WeekOfYear = Microsoft.VisualBasic.FirstWeekOfYear.Jan1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int64 DateDiff(valuetype Microsoft.VisualBasic.DateInterval Interval, valuetype System.DateTime Date1, valuetype System.DateTime Date2, valuetype Microsoft.VisualBasic.FirstDayOfWeek DayOfWeek, valuetype Microsoft.VisualBasic.FirstWeekOfYear WeekOfYear) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.DateDiff(Microsoft.VisualBasic.DateInterval,System.DateTime,System.DateTime,Microsoft.VisualBasic.FirstDayOfWeek,Microsoft.VisualBasic.FirstWeekOfYear)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Interval" Type="Microsoft.VisualBasic.DateInterval" />
+        <Parameter Name="Date1" Type="System.DateTime" />
+        <Parameter Name="Date2" Type="System.DateTime" />
+        <Parameter Name="DayOfWeek" Type="Microsoft.VisualBasic.FirstDayOfWeek" />
+        <Parameter Name="WeekOfYear" Type="Microsoft.VisualBasic.FirstWeekOfYear" />
+      </Parameters>
+      <Docs>
+        <param name="Interval">Erforderlich. <see langword="DateInterval" />Enumerationswert oder <see langword="String" /> Ausdruck, der das Zeitintervall, das Sie als Einheit für den Unterschied zwischen verwenden möchten darstellt <c>Date1</c> und <c>Date2</c>.</param>
+        <param name="Date1">Erforderlich. <see langword="Date" />. Das erste Datum/Uhrzeit-Wert, die, den Sie bei der Berechnung verwenden möchten.</param>
+        <param name="Date2">Erforderlich. <see langword="Date" />. Der zweite Datum/Uhrzeit-Wert in der Berechnung verwendet werden soll.</param>
+        <param name="DayOfWeek">Dies ist optional. Ein Wert aus der <see langword="FirstDayOfWeek" /> Enumeration, die den ersten Tag der Woche angibt. Wenn dieser nicht angegeben wurde, wird <see langword="FirstDayOfWeek.Sunday" /> verwendet.</param>
+        <param name="WeekOfYear">Dies ist optional. Ein Wert aus der <see langword="FirstWeekOfYear" /> -Enumeration, die erste Woche des Jahres angibt. Wenn dieser nicht angegeben wurde, wird <see langword="FirstWeekOfYear.Jan1" /> verwendet.</param>
+        <summary>Gibt eine <see langword="Long" /> Wert, der die Anzahl der Zeitintervalle zwischen zwei angibt <see langword="Date" /> Werte.</summary>
+        <returns>Gibt eine <see langword="Long" /> Wert, der die Anzahl der Zeitintervalle zwischen zwei angibt <see langword="Date" /> Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die `DateDiff` Funktion, um zu bestimmen, wie viele angegebene Zeitintervalle zwischen zwei Datums-/Uhrzeitwerte vorhanden sind. Sie können z. B. verwenden `DateDiff` um die Anzahl von Tagen zwischen zwei Datumsangaben oder die Anzahl der Wochen zwischen dem aktuellen und dem Ende des Jahres zu berechnen.  
+  
+## <a name="behavior"></a>Verhalten  
+  
+-   **Behandlung von Parametern.** `DateDiff`Subtrahiert den Wert der `Date1` aus dem Wert des `Date2` um den Unterschied zu erzeugen. Keiner der beiden Werte wird in dem aufrufenden Programm geändert.  
+  
+-   **Werden Werte zurückgegeben.** Da `Date1` und `Date2` werden von der `Date` -Datentyp, sie enthalten Datums-und Uhrzeitwerte Genauigkeit von 100-Nanosekunden-Ticks Systemzeitgeber. Allerdings `DateDiff` immer gibt die Anzahl der Zeiträume als eine `Long` Wert.  
+  
+     Wenn `Date1` stellt ein späteres Datum und Uhrzeit als `Date2`, `DateDiff` eine negative Zahl zurückgegeben.  
+  
+-   **Tagesintervallen.** Wenn `Interval` festgelegt ist, um `DateInterval.DayOfYear`, wird dies behandelt identisch `DateInterval.Day`, da `DayOfYear` ist keine sinnvolle Einheit für ein Zeitintervall.  
+  
+-   **Woche-Intervallen.** Wenn `Interval` festgelegt ist, um `DateInterval.WeekOfYear`, der zurückgegebene Wert stellt die Anzahl der Wochen zwischen dem ersten Tag der Woche mit `Date1` und den ersten Tag der Woche mit `Date2`. Das folgende Beispiel zeigt, wie dies unterschiedliche Ergebnisse erzeugt `DateInterval.Weekday`.  
+  
+     [!code-vb[VbVbalrFunctions#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#60)]  
+  
+     Im vorherigen Beispiel `DateDiff` gibt 0, `wD` zurück, da der Unterschied zwischen den beiden Datumsangaben beträgt weniger als sieben Tage, 1 bis `wY` da ein siebentägige Unterschied zwischen der ersten Tage des entsprechenden Kalenders besteht Wochen.  
+  
+-   **Größere Intervalle.** Wenn `Interval` festgelegt ist, um `DateInterval.Year`, der Rückgabewert wird ausschließlich von der Jahreswerte berechnet `Date1` und `Date2`. Ebenso ist der Rückgabewert für `DateInterval.Month` wird berechnet, rein aus den Jahres- und Monatswert Teilen der Argumente und für `DateInterval.Quarter` aus Quartalen mit zwei Datumsangaben.  
+  
+     Angenommen, für den Vergleich am 31. Dezember auf den 1. Januar des Jahres folgenden `DateDiff` gibt 1 für `DateInterval.Year`, `DateInterval.Quarter`, oder `DateInterval.Month`, auch wenn jeweils nur ein Tag vergangen ist.  
+  
+     Kulturen, z. B. Japanisch, die mehrere Zeiträume haben die `DateDiff` Methode gibt keinen Unterschied in Jahren zurück, wenn der Unterschied zwei oder mehr Zeiträume umfasst. Stattdessen können Sie die unterschiedlichen Werte zurückgegebenes Berechnen der <xref:System.DateTime.Year%2A> -Eigenschaft verwenden, wie im folgenden Beispiel gezeigt: `date2.Year - date1.Year`.  
+  
+-   **Andere Intervalle.** Da jede `Date` Wert wird vom unterstützt eine <xref:System.DateTime> Struktur, dessen Methoden ermöglichen den zusätzliche Optionen bei der Suche nach Zeiträume, in. Können z. B. die `Subtract` Methode in einer der überladenen Versionen: <xref:System.DateTime.Subtract%2A?displayProperty=nameWithType> subtrahiert eine <xref:System.TimeSpan> aus einer `Date` Variable an eine andere zurückgeben `Date` Wert, und <xref:System.DateTime.Subtract%2A?displayProperty=nameWithType> subtrahiert eine `Date` Wert Zurückgeben einer <xref:System.TimeSpan>. Sie können Zeit einen Prozess aus, um herauszufinden, wie viele Millisekunden dauert, wie im folgenden Beispiel gezeigt.  
+  
+     [!code-vb[VbVbalrFunctions#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#61)]  
+  
+ Die `Interval` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Zeichenfolgenwert|Einheit der Zeitunterschied|  
+|-----------------------|------------------|-----------------------------|  
+|`DateInterval.Day`|"d"|Day|  
+|`DateInterval.DayOfYear`|"y" |Day|  
+|`DateInterval.Hour`|"h" |Hour|  
+|`DateInterval.Minute`|"n"|Minute|  
+|`DateInterval.Month`|"m"|Monat|  
+|`DateInterval.Quarter`|"Q"|Quartal|  
+|`DateInterval.Second`|"s"|Second|  
+|`DateInterval.Weekday`|"w"|Woche|  
+|`DateInterval.WeekOfYear`|"weltweit"|Kalenderwoche|  
+|`DateInterval.Year`|"yyyy" |Jahr|  
+  
+ Die `DayOfWeek` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Wert|Beschreibung|  
+|-----------------------|-----------|-----------------|  
+|`FirstDayOfWeek.System`|0|Erster Tag der Woche, die in den Systemeinstellungen angegeben|  
+|`FirstDayOfWeek.Sunday`|1|Sonntag (Standard)|  
+|`FirstDayOfWeek.Monday`|2|Montag (entspricht ISO-standard 8601, Abschnitt 3.17)|  
+|`FirstDayOfWeek.Tuesday`|3|Dienstag|  
+|`FirstDayOfWeek.Wednesday`|4|Mittwoch|  
+|`FirstDayOfWeek.Thursday`|5|Donnerstag|  
+|`FirstDayOfWeek.Friday`|6|Freitag|  
+|`FirstDayOfWeek.Saturday`|7|Samstag|  
+  
+ Die `WeekOfYear` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Wert|Beschreibung|  
+|-----------------------|-----------|-----------------|  
+|`FirstWeekOfYear.System`|0|Erste Woche des Jahres wird angegeben, die in den Systemeinstellungen|  
+|`FirstWeekOfYear.Jan1`|1|Woche, in dem 1. Januar auftritt (Standard)|  
+|`FirstWeekOfYear.FirstFourDays`|2|Woche, die ins neue Jahr mindestens vier Tagen verfügt (entspricht ISO-standard 8601, Abschnitt 3.17)|  
+|`FirstWeekOfYear.FirstFullWeek`|3|Die erste vollständige Woche ins neue Jahr|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `DateDiff` -Funktion zur Anzeige der Anzahl von Tagen zwischen einem angegebenen Datum und heute.  
+  
+ [!code-vb[VbVbalrFunctions#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Date1" />, <paramref name="Date2" />, oder <paramref name="DayofWeek" /> liegt außerhalb des gültigen Bereichs.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="Date1" />oder <paramref name="Date2" /> weist einen ungültigen Typ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DateDiff">
+      <MemberSignature Language="C#" Value="public static long DateDiff (string Interval, object Date1, object Date2, Microsoft.VisualBasic.FirstDayOfWeek DayOfWeek = Microsoft.VisualBasic.FirstDayOfWeek.Sunday, Microsoft.VisualBasic.FirstWeekOfYear WeekOfYear = Microsoft.VisualBasic.FirstWeekOfYear.Jan1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int64 DateDiff(string Interval, object Date1, object Date2, valuetype Microsoft.VisualBasic.FirstDayOfWeek DayOfWeek, valuetype Microsoft.VisualBasic.FirstWeekOfYear WeekOfYear) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.DateDiff(System.String,System.Object,System.Object,Microsoft.VisualBasic.FirstDayOfWeek,Microsoft.VisualBasic.FirstWeekOfYear)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Interval" Type="System.String" />
+        <Parameter Name="Date1" Type="System.Object" />
+        <Parameter Name="Date2" Type="System.Object" />
+        <Parameter Name="DayOfWeek" Type="Microsoft.VisualBasic.FirstDayOfWeek" />
+        <Parameter Name="WeekOfYear" Type="Microsoft.VisualBasic.FirstWeekOfYear" />
+      </Parameters>
+      <Docs>
+        <param name="Interval">Erforderlich. <see langword="DateInterval" />Enumerationswert oder <see langword="String" /> Ausdruck, der das Zeitintervall, das Sie als Einheit für den Unterschied zwischen verwenden möchten darstellt <c>Date1</c> und <c>Date2</c>.</param>
+        <param name="Date1">Erforderlich. <see langword="Date" />. Das erste Datum/Uhrzeit-Wert, die, den Sie bei der Berechnung verwenden möchten.</param>
+        <param name="Date2">Erforderlich. <see langword="Date" />. Der zweite Datum/Uhrzeit-Wert in der Berechnung verwendet werden soll.</param>
+        <param name="DayOfWeek">Dies ist optional. Ein Wert aus der <see langword="FirstDayOfWeek" /> Enumeration, die den ersten Tag der Woche angibt. Wenn dieser nicht angegeben wurde, wird <see langword="FirstDayOfWeek.Sunday" /> verwendet.</param>
+        <param name="WeekOfYear">Dies ist optional. Ein Wert aus der <see langword="FirstWeekOfYear" /> -Enumeration, die erste Woche des Jahres angibt. Wenn dieser nicht angegeben wurde, wird <see langword="FirstWeekOfYear.Jan1" /> verwendet.</param>
+        <summary>Gibt eine <see langword="Long" /> Wert, der die Anzahl der Zeitintervalle zwischen zwei angibt <see langword="Date" /> Werte.</summary>
+        <returns>Gibt eine <see langword="Long" /> Wert, der die Anzahl der Zeitintervalle zwischen zwei angibt <see langword="Date" /> Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die `DateDiff` Funktion, um zu bestimmen, wie viele angegebene Zeitintervalle zwischen zwei Datums-/Uhrzeitwerte vorhanden sind. Sie können z. B. verwenden `DateDiff` um die Anzahl von Tagen zwischen zwei Datumsangaben oder die Anzahl der Wochen zwischen dem aktuellen und dem Ende des Jahres zu berechnen.  
+  
+## <a name="behavior"></a>Verhalten  
+  
+-   **Behandlung von Parametern.** `DateDiff`Subtrahiert den Wert der `Date1` aus dem Wert des `Date2` um den Unterschied zu erzeugen. Keiner der beiden Werte wird in dem aufrufenden Programm geändert.  
+  
+-   **Werden Werte zurückgegeben.** Da `Date1` und `Date2` werden von der `Date` -Datentyp, sie enthalten Datums-und Uhrzeitwerte Genauigkeit von 100-Nanosekunden-Ticks Systemzeitgeber. Allerdings `DateDiff` immer gibt die Anzahl der Zeiträume als eine `Long` Wert.  
+  
+     Wenn `Date1` stellt ein späteres Datum und Uhrzeit als `Date2`, `DateDiff` eine negative Zahl zurückgegeben.  
+  
+-   **Tagesintervallen.** Wenn `Interval` festgelegt ist, um `DateInterval.DayOfYear`, wird dies behandelt identisch `DateInterval.Day`, da `DayOfYear` ist keine sinnvolle Einheit für ein Zeitintervall.  
+  
+-   **Woche-Intervallen.** Wenn `Interval` festgelegt ist, um `DateInterval.WeekOfYear`, der zurückgegebene Wert stellt die Anzahl der Wochen zwischen dem ersten Tag der Woche mit `Date1` und den ersten Tag der Woche mit `Date2`. Das folgende Beispiel zeigt, wie dies unterschiedliche Ergebnisse erzeugt `DateInterval.Weekday`.  
+  
+     [!code-vb[VbVbalrFunctions#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#60)]  
+  
+     Im vorherigen Beispiel `DateDiff` gibt 0, `wD` zurück, da der Unterschied zwischen den beiden Datumsangaben beträgt weniger als sieben Tage, 1 bis `wY` da ein siebentägige Unterschied zwischen der ersten Tage des entsprechenden Kalenders besteht Wochen.  
+  
+-   **Größere Intervalle.** Wenn `Interval` festgelegt ist, um `DateInterval.Year`, der Rückgabewert wird ausschließlich von der Jahreswerte berechnet `Date1` und `Date2`. Ebenso ist der Rückgabewert für `DateInterval.Month` wird berechnet, rein aus den Jahres- und Monatswert Teilen der Argumente und für `DateInterval.Quarter` aus Quartalen mit zwei Datumsangaben.  
+  
+     Angenommen, für den Vergleich am 31. Dezember auf den 1. Januar des Jahres folgenden `DateDiff` gibt 1 für `DateInterval.Year`, `DateInterval.Quarter`, oder `DateInterval.Month`, auch wenn jeweils nur ein Tag vergangen ist.  
+  
+     Kulturen, z. B. Japanisch, die mehrere Zeiträume haben die `DateDiff` Methode gibt keinen Unterschied in Jahren zurück, wenn der Unterschied zwei oder mehr Zeiträume umfasst. Stattdessen können Sie die unterschiedlichen Werte zurückgegebenes Berechnen der <xref:System.DateTime.Year%2A> -Eigenschaft verwenden, wie im folgenden Beispiel gezeigt: `date2.Year - date1.Year`.  
+  
+-   **Andere Intervalle.** Da jede `Date` Wert wird vom unterstützt eine <xref:System.DateTime> Struktur, dessen Methoden ermöglichen den zusätzliche Optionen bei der Suche nach Zeiträume, in. Können z. B. die `Subtract` Methode in einer der überladenen Versionen: <xref:System.DateTime.Subtract%2A?displayProperty=nameWithType> subtrahiert eine <xref:System.TimeSpan> aus einer `Date` Variable an eine andere zurückgeben `Date` Wert, und <xref:System.DateTime.Subtract%2A?displayProperty=nameWithType> subtrahiert eine `Date` Wert Zurückgeben einer <xref:System.TimeSpan>. Sie können Zeit einen Prozess aus, um herauszufinden, wie viele Millisekunden dauert, wie im folgenden Beispiel gezeigt.  
+  
+     [!code-vb[VbVbalrFunctions#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#61)]  
+  
+ Die `Interval` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Zeichenfolgenwert|Einheit der Zeitunterschied|  
+|-----------------------|------------------|-----------------------------|  
+|`DateInterval.Day`|"d"|Day|  
+|`DateInterval.DayOfYear`|"y" |Day|  
+|`DateInterval.Hour`|"h" |Hour|  
+|`DateInterval.Minute`|"n"|Minute|  
+|`DateInterval.Month`|"m"|Monat|  
+|`DateInterval.Quarter`|"Q"|Quartal|  
+|`DateInterval.Second`|"s"|Second|  
+|`DateInterval.Weekday`|"w"|Woche|  
+|`DateInterval.WeekOfYear`|"weltweit"|Kalenderwoche|  
+|`DateInterval.Year`|"yyyy" |Jahr|  
+  
+ Die `DayOfWeek` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Wert|Beschreibung|  
+|-----------------------|-----------|-----------------|  
+|`FirstDayOfWeek.System`|0|Erster Tag der Woche, die in den Systemeinstellungen angegeben|  
+|`FirstDayOfWeek.Sunday`|1|Sonntag (Standard)|  
+|`FirstDayOfWeek.Monday`|2|Montag (entspricht ISO-standard 8601, Abschnitt 3.17)|  
+|`FirstDayOfWeek.Tuesday`|3|Dienstag|  
+|`FirstDayOfWeek.Wednesday`|4|Mittwoch|  
+|`FirstDayOfWeek.Thursday`|5|Donnerstag|  
+|`FirstDayOfWeek.Friday`|6|Freitag|  
+|`FirstDayOfWeek.Saturday`|7|Samstag|  
+  
+ Die `WeekOfYear` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Wert|Beschreibung|  
+|-----------------------|-----------|-----------------|  
+|`FirstWeekOfYear.System`|0|Erste Woche des Jahres wird angegeben, die in den Systemeinstellungen|  
+|`FirstWeekOfYear.Jan1`|1|Woche, in dem 1. Januar auftritt (Standard)|  
+|`FirstWeekOfYear.FirstFourDays`|2|Woche, die ins neue Jahr mindestens vier Tagen verfügt (entspricht ISO-standard 8601, Abschnitt 3.17)|  
+|`FirstWeekOfYear.FirstFullWeek`|3|Die erste vollständige Woche ins neue Jahr|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `DateDiff` -Funktion zur Anzeige der Anzahl von Tagen zwischen einem angegebenen Datum und heute.  
+  
+ [!code-vb[VbVbalrFunctions#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Date1" />, <paramref name="Date2" />, oder <paramref name="DayofWeek" /> liegt außerhalb des gültigen Bereichs.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="Date1" />oder <paramref name="Date2" /> weist einen ungültigen Typ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DatePart">
+      <MemberSignature Language="C#" Value="public static int DatePart (Microsoft.VisualBasic.DateInterval Interval, DateTime DateValue, Microsoft.VisualBasic.FirstDayOfWeek FirstDayOfWeekValue = Microsoft.VisualBasic.FirstDayOfWeek.Sunday, Microsoft.VisualBasic.FirstWeekOfYear FirstWeekOfYearValue = Microsoft.VisualBasic.FirstWeekOfYear.Jan1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 DatePart(valuetype Microsoft.VisualBasic.DateInterval Interval, valuetype System.DateTime DateValue, valuetype Microsoft.VisualBasic.FirstDayOfWeek FirstDayOfWeekValue, valuetype Microsoft.VisualBasic.FirstWeekOfYear FirstWeekOfYearValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.DatePart(Microsoft.VisualBasic.DateInterval,System.DateTime,Microsoft.VisualBasic.FirstDayOfWeek,Microsoft.VisualBasic.FirstWeekOfYear)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Interval" Type="Microsoft.VisualBasic.DateInterval" />
+        <Parameter Name="DateValue" Type="System.DateTime" />
+        <Parameter Name="FirstDayOfWeekValue" Type="Microsoft.VisualBasic.FirstDayOfWeek" />
+        <Parameter Name="FirstWeekOfYearValue" Type="Microsoft.VisualBasic.FirstWeekOfYear" />
+      </Parameters>
+      <Docs>
+        <param name="Interval">Erforderlich. <see langword="DateInterval" />Enumerationswert oder <see langword="String" /> Ausdruck, darstellt, des Teils der Datum/Uhrzeit-Wert, der zurückgegeben werden soll.</param>
+        <param name="DateValue">Erforderlich. <see langword="Date" />Wert, der Sie auswerten möchten.</param>
+        <param name="FirstDayOfWeekValue">Dies ist optional. Ein Wert aus der <see langword="FirstDayOfWeek" /> Enumeration, die den ersten Tag der Woche angibt. Wenn dieser nicht angegeben wurde, wird <see langword="FirstDayOfWeek.Sunday" /> verwendet.</param>
+        <param name="FirstWeekOfYearValue">Dies ist optional. Ein Wert aus der <see langword="FirstWeekOfYear" /> -Enumeration, die erste Woche des Jahres angibt. Wenn dieser nicht angegeben wurde, wird <see langword="FirstWeekOfYear.Jan1" /> verwendet.</param>
+        <summary>Gibt eine <see langword="Integer" /> -Wert, der die angegebene Komponente enthält eine bestimmte <see langword="Date" /> Wert.</summary>
+        <returns>Gibt eine <see langword="Integer" /> -Wert, der die angegebene Komponente enthält eine bestimmte <see langword="Date" /> Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die `DatePart` Funktion, um einen Datums-/Uhrzeitwert ausgewertet und eine bestimmte Komponente zurückgegeben. Sie können z. B. verwenden `DatePart` den Tag der Woche oder die aktuelle Stunde zu berechnen.  
+  
+ Falls gewünscht `DateInterval.Weekday` für die `Interval` Argument der zurückgegebene Wert ist konsistent mit den Werten der `FirstDayOfWeek` Enumeration. Falls gewünscht `DateInterval.WeekOfYear`, `DatePart` verwendet die <xref:System.Globalization.Calendar> und <xref:System.Globalization.CultureInfo> Klassen von der <xref:System.Globalization> Namespace, um die aktuellen Einstellungen zu bestimmen.  
+  
+ Die `FirstDayOfWeekValue` Argument wirkt sich auf Berechnungen, mit denen die `DateInterval.Weekday` und `DateInterval.WeekOfYear` `Interval` Einstellungen. Die `FirstWeekOfYearValue` Argument wirkt sich auf Berechnungen, die angeben, `DateInterval.WeekOfYear` für `Interval`.  
+  
+ Da jede `Date` Wert wird unterstützt, indem Sie eine <xref:System.DateTime> Struktur seine Methoden ermöglichen den zusätzliche Optionen im Abrufen von Datum/Uhrzeit-teilen. Sie erhalten z. B. den gesamten Date-Wert, der eine `Date` Variable, mit den Zeitwert Mitternacht festgelegt, wie folgt:  
+  
+```vb  
+Dim CurrDatTim As Date = Now   ' Current date and time.  
+Dim LastMidnight As Date = CurrDatTim.Date   ' At midnight.  
+```  
+  
+ Die `Interval` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Zeichenfolge|Teil des zurückzugebenden Datum/Uhrzeit-Wert|  
+|-----------------------|------------|----------------------------------------|  
+|`DateInterval.Day`|T|Tag des Monats (1 bis 31)|  
+|`DateInterval.DayOfYear`|y|Tag des Jahres (1 bis 366)|  
+|`DateInterval.Hour`|h|Hour|  
+|`DateInterval.Minute`|n|Minute|  
+|`DateInterval.Month`|m|Monat|  
+|`DateInterval.Quarter`|q|Quartal|  
+|`DateInterval.Second`|s|Second|  
+|`DateInterval.Weekday`|m|Tag der Woche (1 bis 7)|  
+|`DateInterval.WeekOfYear`|weltweit|Woche des Jahres (1 bis 53)|  
+|`DateInterval.Year`|yyyy|Jahr|  
+  
+ Die `FirstDayOfWeekValue` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Wert|Beschreibung|  
+|-----------------------|-----------|-----------------|  
+|`FirstDayOfWeek.System`|0|Erster Tag der Woche, die in den Systemeinstellungen angegeben|  
+|`FirstDayOfWeek.Sunday`|1|Sonntag (Standard)|  
+|`FirstDayOfWeek.Monday`|2|Montag (entspricht ISO-standard 8601, Abschnitt 3.17)|  
+|`FirstDayOfWeek.Tuesday`|3|Dienstag|  
+|`FirstDayOfWeek.Wednesday`|4|Mittwoch|  
+|`FirstDayOfWeek.Thursday`|5|Donnerstag|  
+|`FirstDayOfWeek.Friday`|6|Freitag|  
+|`FirstDayOfWeek.Saturday`|7|Samstag|  
+  
+ Die `FirstWeekOfYearValue` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Wert|Beschreibung|  
+|-----------------------|-----------|-----------------|  
+|`FirstWeekOfYear.System`|0|Erste Woche des Jahres wird angegeben, die in den Systemeinstellungen|  
+|`FirstWeekOfYear.Jan1`|1|Woche, in dem 1. Januar auftritt (Standard)|  
+|`FirstWeekOfYear.FirstFourDays`|2|Woche, die ins neue Jahr mindestens vier Tagen verfügt (entspricht ISO-standard 8601, Abschnitt 3.17)|  
+|`FirstWeekOfYear.FirstFullWeek`|3|Die erste vollständige Woche im Jahr neu|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird ein Datum und mithilfe der `DatePart` funktioniert, zeigt das Quartal des Jahres, in dem es auftritt.  
+  
+ [!code-vb[VbVbalrFunctions#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#27)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Interval" /> ist nicht gültig.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="DateValue" />ist nicht in umgewandelt <see langword="Date" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DatePart">
+      <MemberSignature Language="C#" Value="public static int DatePart (string Interval, object DateValue, Microsoft.VisualBasic.FirstDayOfWeek DayOfWeek = Microsoft.VisualBasic.FirstDayOfWeek.Sunday, Microsoft.VisualBasic.FirstWeekOfYear WeekOfYear = Microsoft.VisualBasic.FirstWeekOfYear.Jan1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 DatePart(string Interval, object DateValue, valuetype Microsoft.VisualBasic.FirstDayOfWeek DayOfWeek, valuetype Microsoft.VisualBasic.FirstWeekOfYear WeekOfYear) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.DatePart(System.String,System.Object,Microsoft.VisualBasic.FirstDayOfWeek,Microsoft.VisualBasic.FirstWeekOfYear)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Interval" Type="System.String" />
+        <Parameter Name="DateValue" Type="System.Object" />
+        <Parameter Name="DayOfWeek" Type="Microsoft.VisualBasic.FirstDayOfWeek" />
+        <Parameter Name="WeekOfYear" Type="Microsoft.VisualBasic.FirstWeekOfYear" />
+      </Parameters>
+      <Docs>
+        <param name="Interval">Erforderlich. <see langword="DateInterval" />Enumerationswert oder <see langword="String" /> Ausdruck, darstellt, des Teils der Datum/Uhrzeit-Wert, der zurückgegeben werden soll.</param>
+        <param name="DateValue">Erforderlich. <see langword="Date" />Wert, der Sie auswerten möchten.</param>
+        <param name="DayOfWeek">Dies ist optional. Ein Wert aus der <see langword="FirstDayOfWeek" /> Enumeration, die den ersten Tag der Woche angibt. Wenn dieser nicht angegeben wurde, wird <see langword="FirstDayOfWeek.Sunday" /> verwendet.</param>
+        <param name="WeekOfYear">Dies ist optional. Ein Wert aus der <see langword="FirstWeekOfYear" /> -Enumeration, die erste Woche des Jahres angibt. Wenn dieser nicht angegeben wurde, wird <see langword="FirstWeekOfYear.Jan1" /> verwendet.</param>
+        <summary>Gibt eine <see langword="Integer" /> -Wert, der die angegebene Komponente enthält eine bestimmte <see langword="Date" /> Wert.</summary>
+        <returns>Gibt eine <see langword="Integer" /> -Wert, der die angegebene Komponente enthält eine bestimmte <see langword="Date" /> Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die `DatePart` Funktion, um einen Datums-/Uhrzeitwert ausgewertet und eine bestimmte Komponente zurückgegeben. Sie können z. B. verwenden `DatePart` den Tag der Woche oder die aktuelle Stunde zu berechnen.  
+  
+ Falls gewünscht `DateInterval.Weekday` für die `Interval` Argument der zurückgegebene Wert ist konsistent mit den Werten der `FirstDayOfWeek` Enumeration. Falls gewünscht `DateInterval.WeekOfYear`, `DatePart` verwendet die <xref:System.Globalization.Calendar> und <xref:System.Globalization.CultureInfo> Klassen von der <xref:System.Globalization> Namespace, um die aktuellen Einstellungen zu bestimmen.  
+  
+ Die `FirstDayOfWeekValue` Argument wirkt sich auf Berechnungen, mit denen die `DateInterval.Weekday` und `DateInterval.WeekOfYear` `Interval` Einstellungen. Die `FirstWeekOfYearValue` Argument wirkt sich auf Berechnungen, die angeben, `DateInterval.WeekOfYear` für `Interval`.  
+  
+ Da jede `Date` Wert wird unterstützt, indem Sie eine <xref:System.DateTime> Struktur seine Methoden ermöglichen den zusätzliche Optionen im Abrufen von Datum/Uhrzeit-teilen. Sie erhalten z. B. den gesamten Date-Wert, der eine `Date` Variable, mit den Zeitwert Mitternacht festgelegt, wie folgt:  
+  
+```vb  
+Dim CurrDatTim As Date = Now   ' Current date and time.  
+Dim LastMidnight As Date = CurrDatTim.Date   ' At midnight.  
+```  
+  
+ Die `Interval` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Zeichenfolge|Teil des zurückzugebenden Datum/Uhrzeit-Wert|  
+|-----------------------|------------|----------------------------------------|  
+|`DateInterval.Day`|T|Tag des Monats (1 bis 31)|  
+|`DateInterval.DayOfYear`|y|Tag des Jahres (1 bis 366)|  
+|`DateInterval.Hour`|h|Hour|  
+|`DateInterval.Minute`|n|Minute|  
+|`DateInterval.Month`|m|Monat|  
+|`DateInterval.Quarter`|q|Quartal|  
+|`DateInterval.Second`|s|Second|  
+|`DateInterval.Weekday`|m|Tag der Woche (1 bis 7)|  
+|`DateInterval.WeekOfYear`|weltweit|Woche des Jahres (1 bis 53)|  
+|`DateInterval.Year`|yyyy|Jahr|  
+  
+ Die `FirstDayOfWeekValue` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Wert|Beschreibung|  
+|-----------------------|-----------|-----------------|  
+|`FirstDayOfWeek.System`|0|Erster Tag der Woche, die in den Systemeinstellungen angegeben|  
+|`FirstDayOfWeek.Sunday`|1|Sonntag (Standard)|  
+|`FirstDayOfWeek.Monday`|2|Montag (entspricht ISO-standard 8601, Abschnitt 3.17)|  
+|`FirstDayOfWeek.Tuesday`|3|Dienstag|  
+|`FirstDayOfWeek.Wednesday`|4|Mittwoch|  
+|`FirstDayOfWeek.Thursday`|5|Donnerstag|  
+|`FirstDayOfWeek.Friday`|6|Freitag|  
+|`FirstDayOfWeek.Saturday`|7|Samstag|  
+  
+ Die `FirstWeekOfYearValue` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Wert|Beschreibung|  
+|-----------------------|-----------|-----------------|  
+|`FirstWeekOfYear.System`|0|Erste Woche des Jahres wird angegeben, die in den Systemeinstellungen|  
+|`FirstWeekOfYear.Jan1`|1|Woche, in dem 1. Januar auftritt (Standard)|  
+|`FirstWeekOfYear.FirstFourDays`|2|Woche, die ins neue Jahr mindestens vier Tagen verfügt (entspricht ISO-standard 8601, Abschnitt 3.17)|  
+|`FirstWeekOfYear.FirstFullWeek`|3|Die erste vollständige Woche im Jahr neu|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird ein Datum und mithilfe der `DatePart` funktioniert, zeigt das Quartal des Jahres, in dem es auftritt.  
+  
+ [!code-vb[VbVbalrFunctions#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#27)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Interval" /> ist ungültig.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="DateValue" />ist nicht in umgewandelt <see langword="Date" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DateSerial">
+      <MemberSignature Language="C#" Value="public static DateTime DateSerial (int Year, int Month, int Day);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.DateTime DateSerial(int32 Year, int32 Month, int32 Day) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.DateSerial(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Year" Type="System.Int32" />
+        <Parameter Name="Month" Type="System.Int32" />
+        <Parameter Name="Day" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Year">Erforderlich. <see langword="Integer" />der Ausdruck von 1 bis 9999. Werte unterhalb dieses Bereichs werden jedoch ebenfalls akzeptiert. Wenn <c>Jahr</c> liegt zwischen 0 und 99, er wird als wird zwischen 1930 und 2029 interpretiert, wie im Abschnitt "Hinweise" weiter unten erläutert. Wenn <c>Jahr</c> ist kleiner als 1 ist, wird er vom laufenden Jahr subtrahiert.</param>
+        <param name="Month">Erforderlich. <see langword="Integer" />der Ausdruck von 1 bis 12. Werte außerhalb dieses Bereichs werden jedoch ebenfalls akzeptiert. Der Wert der <c>Monat</c> um 1 verringert und auf Januar des Jahres berechnete angewendet wird. Das heißt, (<c>Monat</c> - 1) Januar hinzugefügt wird. Das Jahr wird bei Bedarf neu berechnet. Die folgenden Ergebnisse veranschaulichen diesen Effekt:  
+  
+ Wenn <c>Monat</c> ist 1. Januar des Jahres berechnete entsteht.  
+  
+ Wenn <c>Monat</c> 0 ist, das Ergebnis des vorherigen Jahres.  
+  
+ Wenn <c>Monat</c> ist-1. November des vorherigen Jahres entsteht.  
+  
+ Wenn <c>Monat</c> 13 ist, ist das Ergebnis ist Januar des Jahres folgenden.</param>
+        <param name="Day">Erforderlich. <see langword="Integer" />der Ausdruck zwischen 1 und 31. Werte außerhalb dieses Bereichs werden jedoch ebenfalls akzeptiert. Der Wert der <c>Tag</c> um 1 verringert und auf den ersten Tag des Monats berechnete angewendet wird. Das heißt, (<c>Tag</c> - 1) hinzugefügt wird, um den ersten Tag des Monats. Monat und Jahr werden bei Bedarf neu berechnet. Die folgenden Ergebnisse veranschaulichen diesen Effekt:  
+  
+ Wenn <c>Tag</c> 1, ist das Ergebnis ist der erste Tag des Monats berechnete.  
+  
+ Wenn <c>Tag</c> gleich 0 ist, das Ergebnis ist der letzte Tag des vorherigen Monats.  
+  
+ Wenn <c>Tag</c> ist-1 und das Ergebnis ist die vorletzte Tag des vorherigen Monats.  
+  
+ Wenn <c>Tag</c> ist das Ende des aktuellen Monats, das Ergebnis das entsprechende Tag des Folgemonats ist. Z. B. wenn <c>Monat</c> ist 4 und <c>Tag</c> lautet 31, die das Ergebnis ist 1. Mai.</param>
+        <summary>Gibt eine <see langword="Date" /> Wert, der einen angegebenen Werten für Jahr, Monat und Tag mit der auf Mitternacht festgelegten Zeitinformation darstellt (00: 00:00).</summary>
+        <returns>Gibt eine <see langword="Date" /> Wert, der einen angegebenen Werten für Jahr, Monat und Tag mit der auf Mitternacht festgelegten Zeitinformation darstellt (00: 00:00).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unter Windows 98 oder Windows 2000 zweistellige Jahresangaben für die `Year` Argument basierend auf benutzerdefinierten computereinstellungen interpretiert werden. Die Standardeinstellungen sind Werte von 0 bis 29 als die Jahre 2000 bis 2029 interpretiert und Werte von 30 bis 99 werden als die Jahre 1930 – 1999 interpretiert. Für alle anderen `Year` Argumente, verwenden ein vierstelliges Jahr, z. B. 1924.  
+  
+ Frühere Versionen von Windows interpretieren zweistelliger Jahre basierend auf den zuvor beschriebenen Standardeinstellungen. Um sicherzustellen, dass die Funktion den korrekten Wert zurückgibt, verwenden Sie eine vierstellige Jahresangabe `Year`.  
+  
+ Das folgende Beispiel zeigt negativ ist, 0 (null) und positive Argumentwerte gelten. Hier die `DateSerial` -Funktion zurückgegeben wird ein `Date` für den Tag vor dem ersten Tag im März des Jahres 10 Jahre vor dem aktuellen Jahr; in anderen Worten: der letzte Tag des Februar zehn Jahren.  
+  
+```vb  
+Dim EndFeb As Date = DateSerial(-10, 3, 0)  
+```  
+  
+ Wenn entweder `Month` oder `Day` den normalen Bereich überschreitet, wird Sie auf das nächstgrößere Einheit angewendet. Z. B. Wenn Sie 32 Tage angeben, es wird ausgewertet als einen Monat und eine bis vier Tage, abhängig vom Wert des `Month`. Wenn `Year` ist größer als 9999, oder wenn ein Argument außerhalb des Bereichs von -2.147.483.648 bis 2.147.483.647, ist ein <xref:System.ArgumentException> Fehler auftritt. Wenn das durch die drei Argumente angegebene Datum vor 00:00:00 am 1. Januar des Jahres 1 oder höher ist als 23:59:59 am 31. Dezember 9999, liegt ein <xref:System.ArgumentOutOfRangeException> Fehler auftritt.  
+  
+ Die `Date` -Datentyp enthält Zeitkomponenten. `DateSerial`Wartefunktion aktiviert alle Attribute auf 0 (null), sodass der zurückgegebene Wert den Anfang des berechneten Tages darstellt.  
+  
+ Da jeder `Date` Wert wird unterstützt, indem Sie eine <xref:System.DateTime> Struktur seine Methoden ermöglichen den zusätzliche Optionen im zusammenstellen eine `Date` Wert. Beispielsweise können Sie eine der überladenen <xref:System.DateTime.%23ctor%2A> Konstruktoren zum Auffüllen einer `Date` Variable, die mit der gewünschten Kombination von Komponenten. Im folgenden Beispiel wird `NewDateTime` zum 6. Mai 1978 ein Zehntel der einer Sekunde vor 8:30 Uhr morgens:  
+  
+```vb  
+Dim NewDateTime As Date = New Date(1978, 5, 6, 8, 29, 59, 900)  
+```  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `DateSerial` Funktion zum Zurückgeben des Datums für den angegebenen Werten für Jahr, Monat und Tag.  
+  
+ [!code-vb[VbVbalrFunctions#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DateString">
+      <MemberSignature Language="C#" Value="public static string DateString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string DateString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.DateAndTime.DateString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zurück oder legt einen <see langword="String" /> Wert, der das aktuelle Datum gemäß Ihrem System darstellt.</summary>
+        <value>Zurück oder legt einen <see langword="String" /> Wert, der das aktuelle Datum gemäß Ihrem System darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `DateString`Gibt das Systemdatum im Format MM-TT-JJJJ, das den abgekürzten Monatsnamen verwendet. Die akzeptierte Formate für Datum werden M-d-Yyyy M / d-y dd.mm.yyyy und m/y. Dies gilt für alle Systemgebietsschemas mit Ausnahme derjenigen, die einen Doppelbyte-Zeichensatz (DBCS) verwenden. Wenn das Gebietsschema des Systems einen Doppelbyte-Zeichensatz verwendet `DateString` gibt das Systemdatum im Format JJJJ-MM-TT zurück. Das Gebietsschema des Systems festgelegt ist, mithilfe der **Zeit, Sprache und Region** Element **Systemsteuerung**.  
+  
+ **Hinweis** der `DateString` Eigenschaft gibt das Systemdatum zurück, nur im Format JJJJ-MM-TT für die `zh` (Chinesisch, vereinfacht), `ko` (Koreanisch) und `ja` (Japanisch) Systemgebietsschemas ausgeführtes Visual Basic innerhalb von Silverlight.  
+  
+ Zum Abrufen oder Festlegen der aktuellen Systemzeit als eine `String`, verwenden Sie die <xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A> Eigenschaft.  
+  
+ Geben Sie zum Abrufen des aktuellen Systems Datum oder Uhrzeit im Format Ihres Gebietsschemas oder in einem benutzerdefinierten Format der <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> Eigenschaft, um die <xref:Microsoft.VisualBasic.Strings.Format%2A> Funktion, die entweder eine vordefinierte oder benutzerdefinierte Datum/Uhrzeit-Format angibt. Dies wird im folgenden Beispiel veranschaulicht:  
+  
+```  
+MsgBox("The formatted date is " & Format(Now, "dddd, d MMM yyyy"))  
+```  
+  
+ Das aktuelle Systemdatum als den Zugriff auf eine `Date`, verwenden Sie die <xref:Microsoft.VisualBasic.DateAndTime.Today%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Einstellen des Datums- oder Zeitangabe erfordert die Berechtigung für nicht verwalteten Code, der die Ausführung in teilweise vertrauenswürdigen Umgebungen auswirken. Weitere Informationen finden Sie unter <xref:System.Security.Permissions.SecurityPermission> und [Codezugriffsberechtigungen](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `DateString` Eigenschaft, um das aktuelle Systemdatum anzuzeigen.  
+  
+ [!code-vb[VbVbalrDateProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Ungültiges Format verwendet, um das Festlegen des Werts <see langword="DateString" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DateValue">
+      <MemberSignature Language="C#" Value="public static DateTime DateValue (string StringDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.DateTime DateValue(string StringDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.DateValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="StringDate" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="StringDate">Erforderlich. <see langword="String" />Ausdruck, der ein Datum/Uhrzeit zwischen 00:00:00 am 1. Januar des Jahres 1 bis 23:59:59 am 31. Dezember 9999 darstellt.</param>
+        <summary>Gibt eine <see langword="Date" /> Wert, der durch eine Zeichenfolge, wobei die Uhrzeitinformationen auf Mitternacht festgelegt dargestellte Datumsinformationen enthält (00: 00:00).</summary>
+        <returns>
+          <see langword="Date" />Wert, der durch eine Zeichenfolge, wobei die Uhrzeitinformationen auf Mitternacht festgelegt dargestellte Datumsinformationen enthält (00: 00:00).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `StringDate` enthält nur Zahlen von 1 bis 12 getrennt durch gültige Datumstrennzeichen `DateValue` erkennt die Reihenfolge für Monat, Tag und Jahr entsprechend dem kurzen Datumsformat für Ihr System angegeben. `DateValue`verwendet die aktuelle Einstellung der Kalender aus der <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Eigenschaft von der <xref:System.Globalization.CultureInfo> -Klasse in der <xref:System.Globalization> Namespace. Die Standardeinstellung <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Werte bestimmt werden, indem **Systemsteuerung** Einstellungen. Können Sie das kurze Datumsformat überschreiben, indem die <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A> Eigenschaft von der <xref:System.Globalization.DateTimeFormatInfo> -Klasse in der <xref:System.Globalization> Namespace.  
+  
+ `DateValue`erkennt Monatsnamen in langen, abgekürzten und numerische Format an. Beispielsweise zusätzlich zu erkennen, 12/30/1991 und 12/30/91 `DateValue` erkennt außerdem 30. Dezember 1991 und am 30. Dezember 1991.  
+  
+ Wenn die Jahresangabe `StringDate` weggelassen wird, `DateValue` verwendet das aktuelle Jahr Systemdatum des Computers.  
+  
+ Wenn die `StringDate` Argument enthält eine Zeitangabe, `DateValue` nicht in den zurückgegebenen Wert enthalten. Jedoch wenn `StringDate` enthält ungültige Zeitinformationen, z. B. "89: 98", ein <xref:System.InvalidCastException> Fehler auftritt.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `DateValue` Funktion zum Konvertieren einer Zeichenfolge in ein Datum. Sie können auch Datumsliterale verwenden, um ein Datum direkt zuweisen einer `Object` oder `Date` Variable, z. B. `oldDate = #2/12/69#`.  
+  
+ [!code-vb[VbVbalrFunctions#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="StringDate" />Ungültige Zeitangabe enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Day">
+      <MemberSignature Language="C#" Value="public static int Day (DateTime DateValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Day(valuetype System.DateTime DateValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.Day(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="DateValue" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="DateValue">Erforderlich. <see langword="Date" />der Wert von dem der Tag extrahiert werden sollen.</param>
+        <summary>Gibt eine <see langword="Integer" /> Wert zwischen 1 und 31 zurück, die den Tag des Monats darstellt.</summary>
+        <returns>Gibt eine <see langword="Integer" /> Wert zwischen 1 und 31 zurück, die den Tag des Monats darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung der `Day` Funktion möglicherweise müssen Sie zusammen mit der `Microsoft.VisualBasic` Namespace, da die <xref:System.Windows.Forms> -Namespace definiert <xref:System.Windows.Forms.Day> als eine Enumeration. Das folgende Beispiel zeigt wie qualifizierenden `Day` löst diese Mehrdeutigkeit:  
+  
+```vb  
+Dim thisDay As Integer = Microsoft.VisualBasic.DateAndTime.Day(Now)  
+```  
+  
+ Sie können auch den Tag des Monats abrufen, durch den Aufruf `DatePart` und Angeben von `DateInterval.Day` für die *Intervall* Argument.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Day` Funktion, um den Tag des Monats aus einem bestimmten Datum zu erhalten. In der Entwicklungsumgebung wird das Datumsliteral in standard Kurzformat (z. B. "02/12/1969") mit den gebietsschemaeinstellungen des Codes angezeigt.  
+  
+ [!code-vb[VbVbalrFunctions#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#30)]  
+  
+ `Day`ist qualifiziert, um die Unterscheidung von den <xref:System.Windows.Forms.Day?displayProperty=nameWithType> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hour">
+      <MemberSignature Language="C#" Value="public static int Hour (DateTime TimeValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Hour(valuetype System.DateTime TimeValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.Hour(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="TimeValue" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="TimeValue">Erforderlich. <see langword="Date" />der Wert aus dem die Stunde extrahiert werden sollen.</param>
+        <summary>Gibt eine <see langword="Integer" /> Wert von 0 bis 23, die die Stunde des Tages darstellt.</summary>
+        <returns>Gibt eine <see langword="Integer" /> Wert von 0 bis 23, die die Stunde des Tages darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch die Stunde des Tages abrufen, durch den Aufruf `DatePart` und Angeben von `DateInterval.Hour` für die `Interval` Argument.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `Hour` Funktion, die die Stunde aus einem bestimmten Zeitpunkt abgerufen. In der Entwicklungsumgebung wird die Uhrzeit-Literal in kurzer Zeit-Format, die mit den gebietsschemaeinstellungen des Codes angezeigt.  
+  
+ [!code-vb[VbVbalrFunctions#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minute">
+      <MemberSignature Language="C#" Value="public static int Minute (DateTime TimeValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Minute(valuetype System.DateTime TimeValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.Minute(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="TimeValue" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="TimeValue">Erforderlich. <see langword="Date" />der Wert aus dem die Minute extrahiert werden sollen.</param>
+        <summary>Gibt eine <see langword="Integer" /> Wert von 0 bis 59, die die Minute einer Stunde darstellt.</summary>
+        <returns>Gibt eine <see langword="Integer" /> Wert von 0 bis 59, die die Minute einer Stunde darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch die Minute einer Stunde abrufen, durch den Aufruf `DatePart` und Angeben von `DateInterval.Minute` für die `Interval` Argument.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `Minute` Funktion, die die Minute einer Stunde aus einem bestimmten Zeitpunkt abgerufen. In der Entwicklungsumgebung wird die Uhrzeit-Literal in kurzer Zeit-Format, die mit den gebietsschemaeinstellungen des Codes angezeigt.  
+  
+ [!code-vb[VbVbalrFunctions#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#42)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Month">
+      <MemberSignature Language="C#" Value="public static int Month (DateTime DateValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Month(valuetype System.DateTime DateValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.Month(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="DateValue" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="DateValue">Erforderlich. <see langword="Date" />der Wert von dem der Monat extrahiert werden sollen.</param>
+        <summary>Gibt eine <see langword="Integer" /> Wert zwischen 1 und 12, die den Monat des Jahres darstellt.</summary>
+        <returns>Gibt eine <see langword="Integer" /> Wert zwischen 1 und 12, die den Monat des Jahres darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch den Monat des Jahres abrufen, durch den Aufruf `DatePart` und Angeben von `DateInterval.Month` für die `Interval` Argument.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `Month` Funktion, um den Monat aus einem bestimmten Datum zu erhalten. In der Entwicklungsumgebung das Datum, an das Literal angezeigt wird in kurzen Datumsformat mithilfe von den gebietsschemaeinstellungen des Codes.  
+  
+ [!code-vb[VbVbalrFunctions#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#43)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MonthName">
+      <MemberSignature Language="C#" Value="public static string MonthName (int Month, bool Abbreviate = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string MonthName(int32 Month, bool Abbreviate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.MonthName(System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Month" Type="System.Int32" />
+        <Parameter Name="Abbreviate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Month">Erforderlich. <see langword="Integer" />. Die numerische Bezeichnung des Monats, von 1 bis 13; 1 zeigt Januar und 12 Dezember. Sie können den Wert 13 mit einer Kalender mit 13 Monaten. Wenn Ihr System einen 12-Monats-Kalender verwendet und <c>Monat</c> ist 13, <see langword="MonthName" /> eine leere Zeichenfolge zurückgegeben.</param>
+        <param name="Abbreviate">Dies ist optional. <see langword="Boolean" />Wert, der angibt, ob der Name des Monats wird abgekürzt werden. Wenn nicht angegeben, ist die Standardeinstellung <see langword="False" />, was bedeutet, dass der Name des Monats wird nicht abgekürzt.</param>
+        <summary>Gibt eine <see langword="String" /> Wert, der den Namen des angegebenen Monats enthält.</summary>
+        <returns>Gibt eine <see langword="String" /> Wert, der den Namen des angegebenen Monats enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Zeichenfolge `MonthName` hängt nicht nur auf die Eingabeargumente, sondern auch die **regionale** in Windows angegebenen Einstellungen **Systemsteuerung**.  
+  
+> [!NOTE]
+>  `MonthName`verwendet die aktuelle Einstellung der Kalender aus der <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Eigenschaft von der <xref:System.Globalization.CultureInfo> -Klasse in der <xref:System.Globalization> Namespace. Die Standardeinstellung <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Werte bestimmt werden, indem **Systemsteuerung** Einstellungen.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `MonthName` Funktion, um den Namen des Monats, durch die angegebene ganze Zahl zu bestimmen. Der boolesche Wert wird bestimmt, ob der vollständige Name (`False`) oder den abgekürzten Namen (`True`) wird angezeigt.  
+  
+ [!code-vb[VbVbalrFunctions#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#44)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Month" />ist kleiner als 1 oder größer als 13.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Now">
+      <MemberSignature Language="C#" Value="public static DateTime Now { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.DateTime Now" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.DateAndTime.Now" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine <see langword="Date" /> Wert, der das aktuelle Datum und Uhrzeit des Systems enthält.</summary>
+        <value>Gibt eine <see langword="Date" /> Wert, der das aktuelle Datum und Uhrzeit des Systems enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Festlegen des Systemdatums die <xref:Microsoft.VisualBasic.DateAndTime.Today%2A> Eigenschaft. Verwenden Sie zum Festlegen der Systemzeit der <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Now` Eigenschaft, um das aktuelle Systemdatum und die Uhrzeit zurück.  
+  
+ [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Second">
+      <MemberSignature Language="C#" Value="public static int Second (DateTime TimeValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Second(valuetype System.DateTime TimeValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.Second(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="TimeValue" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="TimeValue">Erforderlich. <see langword="Date" />der Wert aus dem die Sekunde extrahiert werden sollen.</param>
+        <summary>Gibt eine <see langword="Integer" /> Wert von 0 bis 59, die die Sekunde einer Minute darstellt.</summary>
+        <returns>Gibt eine <see langword="Integer" /> Wert von 0 bis 59, die die Sekunde einer Minute darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch die Sekunde einer Minute abrufen, durch den Aufruf `DatePart` und Angeben von `DateInterval.Second` für die `Interval` Argument.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Second` Funktion, die die Sekunde einer Minute aus einem bestimmten Zeitpunkt abgerufen. In der Entwicklungsumgebung wird die Uhrzeit-Literal in kurzer Zeit-Format, die mit den gebietsschemaeinstellungen des Codes angezeigt.  
+  
+ [!code-vb[VbVbalrFunctions#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#46)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeOfDay">
+      <MemberSignature Language="C#" Value="public static DateTime TimeOfDay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.DateTime TimeOfDay" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.DateAndTime.TimeOfDay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zurück oder legt einen <see langword="Date" /> Wert, der die aktuelle Tageszeit gemäß Ihrem Systems enthält.</summary>
+        <value>Zurück oder legt einen <see langword="Date" /> Wert, der die aktuelle Tageszeit gemäß Ihrem Systems enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Date` -Datentyp enthält Datumskomponenten. Wenn die Systemzeit zurückgeben `TimeOfDay` diese alle auf 1 festgelegt, damit der zurückgegebene Wert den ersten Tag des Jahres 1 darstellt. Beim Festlegen der Systemzeit `TimeOfDay` ignoriert die Datumskomponenten.  
+  
+ Die aktuelle Systemzeit als den Zugriff auf eine `String`, verwenden Sie die <xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A> Eigenschaft.  
+  
+ Verwenden Sie zum Abrufen oder Festlegen des aktuellen Systemdatums, die <xref:Microsoft.VisualBasic.DateAndTime.Today%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Einstellen des Datums- oder Zeitangabe erfordert die Berechtigung für nicht verwalteten Code, der die Ausführung in teilweise vertrauenswürdigen Umgebungen auswirken. Weitere Informationen finden Sie unter <xref:System.Security.Permissions.SecurityPermission> und [Codezugriffsberechtigungen](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `TimeOfDay` Eigenschaft, um die aktuelle Systemzeit zurückzugeben.  
+  
+ [!code-vb[VbVbalrDateProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timer">
+      <MemberSignature Language="C#" Value="public static double Timer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property float64 Timer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.DateAndTime.Timer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine <see langword="Double" /> Wert, der die Anzahl der Sekunden seit Mitternacht vergangenen.</summary>
+        <value>Gibt eine <see langword="Double" /> Wert, der die Anzahl der Sekunden seit Mitternacht vergangenen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Timer` Eigenschaft gibt die Sekunden und Millisekunden seit der letzten Mitternacht zurück. Die Sekunden werden in der ganzzahlige Teil des Rückgabewerts, und die Millisekunden in den Teil mit Bruchzahlen enthält.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `Timer` Eigenschaft, um die Anwendung zu unterbrechen. Sie können andere Verarbeitung während der Pause ausführen.  
+  
+ [!code-vb[VbVbalrTimerProperty#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTimerProperty/VB/Form1.vb#1)]  
+  
+ Qualifizieren müssen die `Timer` Eigenschaft mit der <xref:Microsoft.VisualBasic?displayProperty=nameWithType> Namespace, da `Timer` ist auch eine definierte Klasse in der <xref:System.Threading?displayProperty=nameWithType>, <xref:System.Timers?displayProperty=nameWithType>, und <xref:System.Windows.Forms?displayProperty=nameWithType> Namespaces.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeSerial">
+      <MemberSignature Language="C#" Value="public static DateTime TimeSerial (int Hour, int Minute, int Second);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.DateTime TimeSerial(int32 Hour, int32 Minute, int32 Second) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.TimeSerial(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Hour" Type="System.Int32" />
+        <Parameter Name="Minute" Type="System.Int32" />
+        <Parameter Name="Second" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Hour">Erforderlich. <see langword="Integer" />der Ausdruck zwischen 0 und 23. Werte außerhalb dieses Bereichs werden jedoch ebenfalls akzeptiert.</param>
+        <param name="Minute">Erforderlich. <see langword="Integer" />der Ausdruck zwischen 0 und 59. Werte außerhalb dieses Bereichs werden jedoch ebenfalls akzeptiert. Der Wert der <c>Minute</c> auf die berechneten Stunde hinzugefügt, sodass ein negativer Wert Minuten vor dieser Stunde angibt.</param>
+        <param name="Second">Erforderlich. <see langword="Integer" />der Ausdruck zwischen 0 und 59. Werte außerhalb dieses Bereichs werden jedoch ebenfalls akzeptiert. Der Wert der <c>zweite</c> auf die berechneten Minute hinzugefügt, sodass ein negativer Wert Sekunden vor dieser Minute angibt.</param>
+        <summary>Gibt eine <see langword="Date" /> Wert, der eine angegebene Stunde, Minute und Sekunde darstellt werden, wobei die Datumsinformationen relativ zum 1. Januar des Jahres 1 festgelegt.</summary>
+        <returns>Gibt eine <see langword="Date" /> Wert, der eine angegebene Stunde, Minute und Sekunde darstellt werden, wobei die Datumsinformationen relativ zum 1. Januar des Jahres 1 festgelegt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Beispiel zeigt negativ ist, 0 (null) und positive Argumentwerte gelten. Die `TimeSerial` Funktion gibt einen Zeitraum, der 15 Minuten vor drei Stunden vor Mittag oder 8:45:00 Uhr darstellt.  
+  
+```vb  
+Dim alarmTime As Date = TimeSerial(12 - 3, -15, 0)  
+```  
+  
+ Wenn entweder `Minute` oder `Second` den normalen Bereich überschreitet, wird Sie auf das nächstgrößere Einheit angewendet. Wenn Sie 75 Minuten angeben, wird sie z. B. als eine Stunde und 15 Minuten ausgewertet.  
+  
+ `TimeSerial`verringert die Gesamtanzahl von Sekunden modulo 86.400, also die Anzahl der Sekunden an einem Tag. Deshalb ist die zurückgegebene Zeit immer zwischen 00:00:00 und 23:59:59.  
+  
+ Die `Date` -Datentyp enthält Datumskomponenten. `TimeSerial`festgelegt auf 1, damit der zurückgegebene Wert den ersten Tag des Jahres 1 darstellt. Wenn die Werte der Argumente dazu führen, die berechnete Zeit 24 Stunden nicht überschreiten dass, wird das Tag jedoch nach Bedarf erhöht. Im folgenden Beispiel die Werte der `Hour` und `Minute` dazu führen, einer zusammengefassten Zeit mehr als 24 Stunden.  
+  
+```vb  
+MsgBox(TimeSerial(23, 75, 0))   
+' The preceding statement displays "1/2/0001 12:15:00 AM".  
+```  
+  
+ Wenn die Werte der Argumente in einer negativen berechnete führen, die Datumsinformationen auf 1/1/0001 festgelegt ist, und die Zeitinformationen so angepasst, dass zwischen 00:00:00 und 23:59:59 liegen. Jedoch, wenn die berechnete Zeit weniger als negative 24 Stunden, wird ein <xref:System.ArgumentOutOfRangeException> Fehler auftritt.  
+  
+ Da jeder `Date` Wert wird unterstützt, indem Sie eine <xref:System.DateTime?displayProperty=nameWithType> Struktur seine Methoden ermöglichen den zusätzliche Optionen im zusammenstellen eine `Date` Wert. Beispielsweise können Sie verwenden eine der überladenen <xref:System.DateTime.%23ctor%2A> Konstruktoren zum Auffüllen einer `Date` Variable, die mit der gewünschten Kombination von Komponenten. Im folgenden Beispiel wird `newDateTime` zum 6. Mai 1978 ein Zehntel der einer Sekunde vor 8:30 Uhr morgens:  
+  
+```vb  
+Dim newDateTime As Date = New Date(1978, 5, 6, 8, 29, 59, 900)  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `TimeSerial` Funktion, um eine Uhrzeit für die angegebene Stunde, Minute und Sekunde zurückzugeben.  
+  
+ [!code-vb[VbVbalrFunctions#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ein Argument ist außerhalb des Bereichs von -2.147.483.648 bis 2.147.483.647</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Berechnete Zeit ist weniger als 24 Stunden negativ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeString">
+      <MemberSignature Language="C#" Value="public static string TimeString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string TimeString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.DateAndTime.TimeString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zurück oder legt einen <see langword="String" /> Wert, der die aktuelle Tageszeit gemäß Ihrem System darstellt.</summary>
+        <value>Zurück oder legt einen <see langword="String" /> Wert, der die aktuelle Tageszeit gemäß Ihrem System darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `TimeString`die Systemzeit als "Hh", wird immer gibt, wird ein 24-Stunden-Format. Dieses Format ist kulturinvarianten, d. h. wird nicht geändert, auch wenn Sie ändern die **regionale** in **Systemsteuerung**.  
+  
+ Zum Abrufen oder Festlegen des aktuellen Systemdatums als eine `String`, verwenden Sie die <xref:Microsoft.VisualBasic.DateAndTime.DateString%2A> Eigenschaft.  
+  
+ Geben Sie zum Abrufen des aktuellen Systems Datum oder Uhrzeit im Format Ihres Gebietsschemas oder in einem benutzerdefinierten Format der <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> Eigenschaft, um die <xref:Microsoft.VisualBasic.Strings.Format%2A> Funktion, die entweder eine vordefinierte oder benutzerdefinierte Datum/Uhrzeit-Format angibt. Dies wird im folgenden Beispiel veranschaulicht:  
+  
+```  
+MsgBox("The formatted time is " & Format(Now, "hh.mm.ss.fff tt"))  
+```  
+  
+ Die aktuelle Systemzeit als den Zugriff auf eine `Date`, verwenden Sie die <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Einstellen des Datums- oder Zeitangabe erfordert die Berechtigung für nicht verwalteten Code, der die Ausführung in teilweise vertrauenswürdigen Umgebungen auswirken. Weitere Informationen finden Sie unter <xref:System.Security.Permissions.SecurityPermission> und [Codezugriffsberechtigungen](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `TimeString` Eigenschaft, um die aktuelle Systemzeit anzuzeigen.  
+  
+ [!code-vb[VbVbalrDateProperties#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Ungültiges Format verwendet, um das Festlegen des Werts <see langword="TimeString" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeValue">
+      <MemberSignature Language="C#" Value="public static DateTime TimeValue (string StringTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.DateTime TimeValue(string StringTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.TimeValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="StringTime" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="StringTime">Erforderlich. <see langword="String" />Ausdruck, der ein Datum/Uhrzeit zwischen 00:00:00 am 1. Januar des Jahres 1 bis 23:59:59 am 31. Dezember 9999 darstellt.</param>
+        <summary>Gibt eine <see langword="Date" /> Wert, enthält die Zeitinformationen, dargestellt durch eine Zeichenfolge, wobei die Datumsinformationen auf den 1. Januar des Jahres 1 festgelegt.</summary>
+        <returns>Gibt eine <see langword="Date" /> Wert, enthält die Zeitinformationen, dargestellt durch eine Zeichenfolge, wobei die Datumsinformationen auf den 1. Januar des Jahres 1 festgelegt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Zeitangaben 12- oder 24-Stunden-Format. Beispielsweise `"2:24 P.M."` und `"14:24"` sind beide gültig `StringTime` Argumente.  
+  
+ Wenn die `StringTime` Argument enthält Datumsinformationen, `TimeValue` nicht in den zurückgegebenen Wert enthalten. Jedoch wenn `StringTime` Ungültiges Datumsinformationen, z. B. "Januar 32," enthält ein <xref:System.InvalidCastException> Fehler auftritt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `TimeValue` Funktion zum Konvertieren einer Zeichenfolge in eine Uhrzeit. Sie können auch Datumsliterale direkt eine Zeit zum Zuweisen einer `Date` Variable.  
+  
+ [!code-vb[VbVbalrFunctions#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#51)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="StringTime" />enthält ungültige Datumsinformationen an.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Today">
+      <MemberSignature Language="C#" Value="public static DateTime Today { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.DateTime Today" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.DateAndTime.Today" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zurück oder legt einen <see langword="Date" /> Wert, der das aktuelle Datum gemäß Ihrem Systems enthält.</summary>
+        <value>Zurück oder legt einen <see langword="Date" /> Wert, der das aktuelle Datum gemäß Ihrem Systems enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Date` -Datentyp enthält Zeitkomponenten. Bei der Rückgabe des Systemdatums `Today` Wartefunktion aktiviert alle Attribute auf 0 (null), sodass der Rückgabewert Mitternacht (00: 00:00). Beim Festlegen des Systemdatums `Today` die Zeitkomponenten ignoriert.  
+  
+ Das aktuelle Systemdatum als den Zugriff auf eine `String`, verwenden Sie die <xref:Microsoft.VisualBasic.DateAndTime.DateString%2A> Eigenschaft.  
+  
+ Verwenden Sie zum Abrufen oder Festlegen der aktuellen Systemzeit, die <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Einstellen des Datums- oder Zeitangabe erfordert die Berechtigung für nicht verwalteten Code, der die Ausführung in teilweise vertrauenswürdigen Umgebungen auswirken. Weitere Informationen finden Sie unter <xref:System.Security.Permissions.SecurityPermission> und [Codezugriffsberechtigungen](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `Today` Eigenschaft, um das aktuelle Systemdatum zurückzugeben.  
+  
+ [!code-vb[VbVbalrDateProperties#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Weekday">
+      <MemberSignature Language="C#" Value="public static int Weekday (DateTime DateValue, Microsoft.VisualBasic.FirstDayOfWeek DayOfWeek = Microsoft.VisualBasic.FirstDayOfWeek.Sunday);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Weekday(valuetype System.DateTime DateValue, valuetype Microsoft.VisualBasic.FirstDayOfWeek DayOfWeek) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.Weekday(System.DateTime,Microsoft.VisualBasic.FirstDayOfWeek)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="DateValue" Type="System.DateTime" />
+        <Parameter Name="DayOfWeek" Type="Microsoft.VisualBasic.FirstDayOfWeek" />
+      </Parameters>
+      <Docs>
+        <param name="DateValue">Erforderlich. <see langword="Date" />der Wert für die Sie den Tag der Woche bestimmen möchten.</param>
+        <param name="DayOfWeek">Dies ist optional. Ein Wert aus der <see langword="FirstDayOfWeek" /> Enumeration, die den ersten Tag der Woche angibt. Wenn dieser nicht angegeben wurde, wird <see langword="FirstDayOfWeek.Sunday" /> verwendet.</param>
+        <summary>Gibt eine <see langword="Integer" /> Wert mit einer Zahl, die den Tag der Woche darstellt.</summary>
+        <returns>Gibt eine <see langword="Integer" /> Wert mit einer Zahl, die den Tag der Woche darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Wert den `Weekday` Funktion entspricht den Werten der der `FirstDayOfWeek` Enumeration; d. h. 1 gibt Sonntag und 7 an Samstag.  
+  
+> [!NOTE]
+>  `Weekday`verwendet die aktuelle Einstellung der Kalender aus der <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Eigenschaft von der <xref:System.Globalization.CultureInfo> -Klasse in der <xref:System.Globalization> Namespace. Die Standardeinstellung <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Werte bestimmt werden, indem **Systemsteuerung** Einstellungen.  
+  
+ Die `DayOfWeek` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Wert|Beschreibung|  
+|-----------------------|-----------|-----------------|  
+|`FirstDayOfWeek.System`|0|Erster Tag der Woche, die in den Systemeinstellungen angegeben|  
+|`FirstDayOfWeek.Sunday`|1|Sonntag (Standard)|  
+|`FirstDayOfWeek.Monday`|2|Montag (entspricht ISO-standard 8601, Abschnitt 3.17)|  
+|`FirstDayOfWeek.Tuesday`|3|Dienstag|  
+|`FirstDayOfWeek.Wednesday`|4|Mittwoch|  
+|`FirstDayOfWeek.Thursday`|5|Donnerstag|  
+|`FirstDayOfWeek.Friday`|6|Freitag|  
+|`FirstDayOfWeek.Saturday`|7|Samstag|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Weekday` Funktion, um den Tag der Woche aus einem bestimmten Datum zu erhalten.  
+  
+ [!code-vb[VbVbalrFunctions#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#57)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="DayOfWeek" />ist kleiner als 0 oder größer als 7.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WeekdayName">
+      <MemberSignature Language="C#" Value="public static string WeekdayName (int Weekday, bool Abbreviate = false, Microsoft.VisualBasic.FirstDayOfWeek FirstDayOfWeekValue = Microsoft.VisualBasic.FirstDayOfWeek.System);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string WeekdayName(int32 Weekday, bool Abbreviate, valuetype Microsoft.VisualBasic.FirstDayOfWeek FirstDayOfWeekValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.WeekdayName(System.Int32,System.Boolean,Microsoft.VisualBasic.FirstDayOfWeek)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Weekday" Type="System.Int32" />
+        <Parameter Name="Abbreviate" Type="System.Boolean" />
+        <Parameter Name="FirstDayOfWeekValue" Type="Microsoft.VisualBasic.FirstDayOfWeek" />
+      </Parameters>
+      <Docs>
+        <param name="Weekday">Erforderlich. <see langword="Integer" />. Die numerische Bezeichnung für den Wochentag an, von 1 bis 7; 1 gibt den ersten Tag der Woche aus, und 7 an den letzten Tag der Woche. Die Identitäten der ersten und letzten Tage richten sich nach der Einstellung der <c>FirstDayOfWeekValue</c>.</param>
+        <param name="Abbreviate">Dies ist optional. <see langword="Boolean" />Wert, der angibt, ob der Name des Wochentags wird abgekürzt werden. Wenn nicht angegeben, ist die Standardeinstellung <see langword="False" />, was bedeutet, dass der Name des Wochentags wird nicht abgekürzt.</param>
+        <param name="FirstDayOfWeekValue">Dies ist optional. Ein Wert aus der <see langword="FirstDayOfWeek" /> Enumeration, die den ersten Tag der Woche angibt. Wenn dieser nicht angegeben wurde, wird <see langword="FirstDayOfWeek.System" /> verwendet.</param>
+        <summary>Gibt eine <see langword="String" /> Wert, der den Namen des angegebenen Wochentags enthält.</summary>
+        <returns>Gibt eine <see langword="String" /> Wert, der den Namen des angegebenen Wochentags enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Zeichenfolge `WeekdayName` hängt nicht nur auf die Eingabeargumente, sondern auch die **regionale** in Windows angegebenen Einstellungen **Systemsteuerung**.  
+  
+> [!NOTE]
+>  `WeekdayName`verwendet die aktuelle Einstellung der Kalender aus der <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Eigenschaft von der <xref:System.Globalization.CultureInfo> -Klasse in der <xref:System.Globalization> Namespace. Die Standardeinstellung <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Werte bestimmt werden, indem **Systemsteuerung** Einstellungen.  
+  
+ Die `FirstDayOfWeekValue` Argument kann einen der folgenden Einstellungen haben.  
+  
+|Enumerationswert|Wert|Beschreibung|  
+|-----------------------|-----------|-----------------|  
+|`FirstDayOfWeek.System`|0|Erster Tag der Woche, die im System angegeben Einstellungen (Standard)|  
+|`FirstDayOfWeek.Sunday`|1|Sonntag|  
+|`FirstDayOfWeek.Monday`|2|Montag (entspricht ISO-standard 8601, Abschnitt 3.17)|  
+|`FirstDayOfWeek.Tuesday`|3|Dienstag|  
+|`FirstDayOfWeek.Wednesday`|4|Mittwoch|  
+|`FirstDayOfWeek.Thursday`|5|Donnerstag|  
+|`FirstDayOfWeek.Friday`|6|Freitag|  
+|`FirstDayOfWeek.Saturday`|7|Samstag|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Weekday` -Funktion den Tag der Woche aus einem angegebenen Datum abrufen und dann die `WeekDayName` Funktion, um den Namen des Wochentags aus der Reihe zu erhalten.  
+  
+ [!code-vb[VbVbalrFunctions#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#58)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Weekday" />ist kleiner als 1 oder größer als 7 oder <paramref name="FirstDayOfWeekValue" /> ist kleiner als 0 oder größer als 7.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Year">
+      <MemberSignature Language="C#" Value="public static int Year (DateTime DateValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Year(valuetype System.DateTime DateValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.DateAndTime.Year(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="DateValue" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="DateValue">Erforderlich. <see langword="Date" />der Wert aus dem das Jahr extrahiert werden sollen.</param>
+        <summary>Gibt eine <see langword="Integer" /> Wert zwischen 1 und 9999 für das Jahr.</summary>
+        <returns>Gibt eine <see langword="Integer" /> Wert zwischen 1 und 9999 für das Jahr.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch das Jahr abrufen, durch den Aufruf `DatePart` und Angeben von `DateInterval.Year` für die `Interval` Argument.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Year` Funktion, um das Jahr aus einem angegebenen Datum abzurufen. In der Entwicklungsumgebung das Datum, an das Literal angezeigt wird in kurzen Datumsformat mithilfe von den gebietsschemaeinstellungen des Codes.  
+  
+ [!code-vb[VbVbalrFunctions#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#59)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

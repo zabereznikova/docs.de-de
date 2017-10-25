@@ -1,0 +1,742 @@
+<Type Name="MethodAttributes" FullName="System.Reflection.MethodAttributes">
+  <TypeSignature Language="C#" Value="public enum MethodAttributes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MethodAttributes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.MethodAttributes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Flags für Methodenattribute an. Diese Flags sind in der Datei „corhdr.h“ definiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Attribute der angegebenen Methode.  
+  
+ [!code-cpp[Classic MethodAttributes Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodAttributes Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodAttributes Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodAttributes Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodAttributes Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodAttributes Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abstract">
+      <MemberSignature Language="C#" Value="Abstract" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes Abstract = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.Abstract" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Klasse eine Implementierung dieser Methode nicht bereitstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="Assembly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes Assembly = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.Assembly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode für alle dieser Assembly zugegriffen werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAccessOnOverride">
+      <MemberSignature Language="C#" Value="CheckAccessOnOverride" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes CheckAccessOnOverride = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.CheckAccessOnOverride" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode nur überschrieben werden kann, wenn Sie auch darauf zugreifen können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FamANDAssem">
+      <MemberSignature Language="C#" Value="FamANDAssem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes FamANDAssem = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.FamANDAssem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode wird für Member dieses Typs und seiner abgeleiteten Typen, die in dieser Assembly nur sind verfügbar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Family">
+      <MemberSignature Language="C#" Value="Family" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes Family = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.Family" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode nur auf Mitglieder der diese Klasse und abgeleitete Klassen zugegriffen werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FamORAssem">
+      <MemberSignature Language="C#" Value="FamORAssem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes FamORAssem = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.FamORAssem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode für eine beliebige Stelle der abgeleiteten Klassen als auch für jede Klasse in der Assembly verfügbar ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Final">
+      <MemberSignature Language="C#" Value="Final" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes Final = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.Final" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode nicht überschrieben werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HasSecurity">
+      <MemberSignature Language="C#" Value="HasSecurity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes HasSecurity = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.HasSecurity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode Sicherheit zugeordnet hat. Reservierten Flag für die Common Language Runtime nur verwendet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HideBySig">
+      <MemberSignature Language="C#" Value="HideBySig" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes HideBySig = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.HideBySig" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode mit Namen und derselben Signatur verdeckt. andernfalls nur mit dem Namen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberAccessMask">
+      <MemberSignature Language="C#" Value="MemberAccessMask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes MemberAccessMask = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.MemberAccessMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Informationen über Eingabehilfen ab.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSlot">
+      <MemberSignature Language="C#" Value="NewSlot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes NewSlot = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.NewSlot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode immer einen neuen Platz im Vtable erhält.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PinvokeImpl">
+      <MemberSignature Language="C#" Value="PinvokeImpl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes PinvokeImpl = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.PinvokeImpl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Implementierung der Methode über PInvoke (Platform Invocation Services) weitergeleitet wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Private">
+      <MemberSignature Language="C#" Value="Private" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes Private = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.Private" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode nur für die aktuelle Klasse zugänglich ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateScope">
+      <MemberSignature Language="C#" Value="PrivateScope" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes PrivateScope = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.PrivateScope" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Element verwiesen werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Public">
+      <MemberSignature Language="C#" Value="Public" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes Public = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.Public" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode zugegriffen werden kann, auf ein beliebiges Objekt ist für die dieses Objekt im Gültigkeitsbereich ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireSecObject">
+      <MemberSignature Language="C#" Value="RequireSecObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes RequireSecObject = int32(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.RequireSecObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode, eine andere Methode aufruft, die Sicherheitscode enthält. Reservierten Flag für die Common Language Runtime nur verwendet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservedMask">
+      <MemberSignature Language="C#" Value="ReservedMask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes ReservedMask = int32(53248)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.ReservedMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen reservierten Flag für die Verwendung der Runtime nur an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReuseSlot">
+      <MemberSignature Language="C#" Value="ReuseSlot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes ReuseSlot = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.ReuseSlot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode einen vorhandenen Slot in Vtable wiederverwendet. Dies ist das Standardverhalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RTSpecialName">
+      <MemberSignature Language="C#" Value="RTSpecialName" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes RTSpecialName = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.RTSpecialName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die common Language Runtime die Codierung von Namen überprüft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecialName">
+      <MemberSignature Language="C#" Value="SpecialName" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes SpecialName = int32(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.SpecialName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass spezielle Methode handelt. Der Name wird beschrieben, wie diese Methode spezielle ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Static">
+      <MemberSignature Language="C#" Value="Static" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes Static = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.Static" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode für den Typ definiert ist. Andernfalls wird es pro Instanz definiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnmanagedExport">
+      <MemberSignature Language="C#" Value="UnmanagedExport" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes UnmanagedExport = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.UnmanagedExport" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die verwaltete Methode über Thunk zu nicht verwaltetem Code exportiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Virtual">
+      <MemberSignature Language="C#" Value="Virtual" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes Virtual = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.Virtual" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Methode virtuell ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VtableLayoutMask">
+      <MemberSignature Language="C#" Value="VtableLayoutMask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.MethodAttributes VtableLayoutMask = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.MethodAttributes.VtableLayoutMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Attribute der Vtable ab.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

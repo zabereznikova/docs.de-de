@@ -1,0 +1,65 @@
+<Type Name="PropertyLockMode" FullName="System.EnterpriseServices.PropertyLockMode">
+  <TypeSignature Language="C#" Value="public enum PropertyLockMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed PropertyLockMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.PropertyLockMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Modus für den Zugriff auf freigegebene Eigenschaften in den Gruppen-Manager für gemeinsam verwendete Eigenschaft.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="Method" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.PropertyLockMode Method = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.PropertyLockMode.Method" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.PropertyLockMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sperrt alle Eigenschaften in der Gruppe freigegebene Eigenschaft für die ausschließliche Verwendung durch den Aufrufer, solange die aktuelle Methode des Aufrufers ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Verwenden Sie keine <xref:System.EnterpriseServices.PropertyLockMode.Method> beim Erstellen einer Eigenschaftengruppe in einem Konstruktor, da dies zu einen Deadlock führen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGet">
+      <MemberSignature Language="C#" Value="SetGet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.PropertyLockMode SetGet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.PropertyLockMode.SetGet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.PropertyLockMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sperren eine Eigenschaft während eines Get oder Set, Abrufens oder set-Vorgang für eine freigegebene Eigenschaft ist atomarisch.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

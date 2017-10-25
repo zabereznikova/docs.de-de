@@ -1,0 +1,84 @@
+<Type Name="ResolveCompletedEventArgs" FullName="System.Net.PeerToPeer.ResolveCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class ResolveCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.ResolveCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Wird in Verbindung mit der <see cref="E:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted" /> -Ereignis, das signalisiert wird, wenn eine auflösungsanforderung für einen bestimmten <see cref="T:System.Net.PeerToPeer.PeerName" /> wurde abgeschlossen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um das ResolveCompletedEventArgs-Objekt zu verwenden, Instanziieren einer <xref:System.Net.PeerToPeer.PeerNameResolver> Objekt, und verwenden Sie eine der Resolve-Methoden. Verwenden Sie für die asynchrone Verarbeitung der <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> Methode.  
+  
+ Wenn der Konfliktlöser demnächst von den Wolken zum Abfragen der <xref:System.Net.PeerToPeer.PeerName>, oder der zeichnet Einträge für die maximale Anzahl erreicht wurde die <xref:System.Net.PeerToPeer.PeerNameRecordCollection> es besteht darin zu konstruieren, das Ereignis zum Abschließen des Prozesses Resolve ausgelöst wird, und des zugehörigen Delegaten bewirkt, dass ResolveAsync abgeschlossen. Das Ereignis kann auch für einen anormalen Abschluss ausgelöst werden, die eine Auflistung nicht zurückgeben.  
+  
+ Dieses Ereignis wird ausgelöst, nur einmal Wenn alle Endpunkte gefunden wurden.  
+  
+ Alle Verweise auf diese Instanz des Objekts Konfliktlöser werden mit einem angegebenen Token, das einen eindeutigen, Entwickler bestimmt Bezeichner für diese asynchrone Anforderung ist koordiniert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveCompletedEventArgs (System.Net.PeerToPeer.PeerNameRecordCollection peerNameRecordCollection, Exception error, bool canceled, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.PeerToPeer.PeerNameRecordCollection peerNameRecordCollection, class System.Exception error, bool canceled, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.ResolveCompletedEventArgs.#ctor(System.Net.PeerToPeer.PeerNameRecordCollection,System.Exception,System.Boolean,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="peerNameRecordCollection" Type="System.Net.PeerToPeer.PeerNameRecordCollection" />
+        <Parameter Name="error" Type="System.Exception" />
+        <Parameter Name="canceled" Type="System.Boolean" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="peerNameRecordCollection">Die Auflistung, die dem aufgelösten Peernamen zugeordnet ist.</param>
+        <param name="error">Gibt eine Ausnahme zurück, wenn ein Fehler aufgetreten ist.</param>
+        <param name="canceled">
+          <see langword="True" />, wenn der <see cref="Overload:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync" />-Vorgang abgebrochen wurde, andernfalls <see langword="False" />.</param>
+        <param name="userToken">Das Benutzertoken, das beim Starten eines <see cref="Overload:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync" />-Vorgangs angegeben wurde.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.PeerToPeer.ResolveCompletedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerNameRecordCollection">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.PeerNameRecordCollection PeerNameRecordCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.PeerNameRecordCollection PeerNameRecordCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.ResolveCompletedEventArgs.PeerNameRecordCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerNameRecordCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Net.PeerToPeer.PeerNameRecordCollection" /> Objekt zur konfliktlösung.</summary>
+        <value>Die <see cref="T:System.Net.PeerToPeer.PeerNameRecordCollection" /> Objekt zur konfliktlösung ist das gefunden wurde, als Antwort auf eine <see cref="Overload:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync" /> -Vorgang für einen bestimmten <see cref="T:System.Net.PeerToPeer.PeerName" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn dieser Peername aller Clouds abgefragt wurde oder die maximale Anzahl der Datensätze des Peer Name abgerufen wurde. Es wird ausgelöst, indem der Peer Name Auflistung in der <xref:System.Net.PeerToPeer.ResolveCompletedEventArgs> Ereignisargument für die die OnResolveCompleted-Methode erwartet wird.  Die Zustandsänderung des Prozesses.  
+  
+ Sofern nicht explizit angegeben wird, ist der Standardwert für alle Eigenschaften `null` für Referenztypen und 0 (null) für Eigenschaften vom Typ `int`. Wenn keine Datensätze gefunden wurden, `null` wird zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

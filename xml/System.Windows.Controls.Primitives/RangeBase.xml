@@ -1,0 +1,552 @@
+<Type Name="RangeBase" FullName="System.Windows.Controls.Primitives.RangeBase">
+  <TypeSignature Language="C#" Value="public abstract class RangeBase : System.Windows.Controls.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract RangeBase extends System.Windows.Controls.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.RangeBase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ValueChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Value")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Element, dessen Wert innerhalb eines bestimmten Bereichs.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.Primitives.RangeBase> Steuerelement verfügt über eine <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> zwischen festgelegt werden können die <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> und <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> Eigenschaften.  Die <xref:System.Windows.Controls.Primitives.RangeBase> visuell seine <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>.  In einigen Fällen kann die Benutzer interaktiv einen Wert festlegen; in anderen Fällen kann der Wert nur programmgesteuert festgelegt werden.  Der Benutzer kann festlegen, die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> von der <xref:System.Windows.Controls.Primitives.ScrollBar> und <xref:System.Windows.Controls.Slider>, aber nicht die <xref:System.Windows.Controls.ProgressBar>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RangeBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.RangeBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Primitives.RangeBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeChange">
+      <MemberSignature Language="C#" Value="public double LargeChange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LargeChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.RangeBase.LargeChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert addiert oder von diesem subtrahiert werden die <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> von einem <see cref="T:System.Windows.Controls.Primitives.RangeBase" /> Steuerelement.</summary>
+        <value>
+          <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" />zum Hinzufügen oder Entfernen aus der <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> von der <see cref="T:System.Windows.Controls.Primitives.RangeBase" /> Element. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Steuerelement, das von erbt <xref:System.Windows.Controls.Primitives.RangeBase> bestimmt, wie diese Eigenschaft verwendet wird.  
+  
+ Klickt der Benutzer die <xref:System.Windows.Controls.Primitives.Track> von einer <xref:System.Windows.Controls.Primitives.ScrollBar>, <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> Eigenschaft erhöht oder verringert den Wert des <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A>.  
+  
+ Aufruft, wenn der Benutzer die <xref:System.Windows.Controls.Slider.DecreaseLarge%2A> oder <xref:System.Windows.Controls.Slider.IncreaseLarge%2A> Befehle eine <xref:System.Windows.Controls.Slider>, <xref:System.Windows.Controls.Primitives.RangeBase.ValueProperty> der Schieberegleränderungen durch den Wert des <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A>.  
+  
+ Die <xref:System.Windows.Controls.ProgressBar> verwenden diese Eigenschaft nicht.  
+  
+<a name="dependencyPropertyInfo_LargeChange"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.RangeBase.LargeChangeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeChangeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LargeChangeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LargeChangeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.RangeBase.LargeChangeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.RangeBase.LargeChange" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public double Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.RangeBase.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die höchstmögliche <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> des Range-Elements.</summary>
+        <value>Die höchstmögliche <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> des Range-Elements. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Slider>die Metadaten für diese Eigenschaft überschreibt und dessen Standardwert auf 10 festgelegt. <xref:System.Windows.Controls.ProgressBar>die Metadaten für diese Eigenschaft überschreibt und dessen Standardwert auf 100 festgelegt. Weitere Informationen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/dependency-properties-overview.md).  
+  
+<a name="dependencyPropertyInfo_Maximum"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.RangeBase.MaximumProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ <xref:System.Windows.Controls.Primitives.RangeBase>Steuert, wie z. B. <xref:System.Windows.Controls.Slider> und <xref:System.Windows.Controls.ProgressBar> erben die <xref:System.Windows.Controls.Primitives.RangeBase> Eigenschaften. Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.Slider> , verwendet die <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> Eigenschaft.  
+  
+ [!code-csharp[Slider#Basic](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#basic)]
+ [!code-vb[Slider#Basic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#basic)]
+ [!code-xaml[Slider#Basic](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#basic)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaximumProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaximumProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.RangeBase.MaximumProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public double Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.RangeBase.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" /> möglich <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> des Bereichselements.</summary>
+        <value>
+          <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" />Mögliche <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> des Range-Elements. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Minimum"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.RangeBase.MinimumProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ <xref:System.Windows.Controls.Primitives.RangeBase>Steuert, wie z. B. <xref:System.Windows.Controls.Slider> und <xref:System.Windows.Controls.ProgressBar> erben die <xref:System.Windows.Controls.Primitives.RangeBase> Eigenschaften. Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.Slider> , verwendet die <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> Eigenschaft.  
+  
+ [!code-csharp[Slider#Basic](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#basic)]
+ [!code-vb[Slider#Basic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#basic)]
+ [!code-xaml[Slider#Basic](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#basic)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinimumProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinimumProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.RangeBase.MinimumProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMaximumChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnMaximumChanged (double oldMaximum, double newMaximum);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMaximumChanged(float64 oldMaximum, float64 newMaximum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.RangeBase.OnMaximumChanged(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldMaximum" Type="System.Double" />
+        <Parameter Name="newMaximum" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="oldMaximum">Der alte Wert der <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" /> Eigenschaft.</param>
+        <param name="newMaximum">Der neue Wert der <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" /> Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" /> -Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterklasse von der <xref:System.Windows.Controls.Primitives.RangeBase> verwenden Sie diese Methode kann um auf die Value-Eigenschaft anstelle von Änderungen zu reagieren die <xref:System.Windows.FrameworkPropertyMetadata> , geben Sie einen neuen <xref:System.Windows.PropertyChangedCallback> Funktion. Weitere Informationen finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMinimumChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnMinimumChanged (double oldMinimum, double newMinimum);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMinimumChanged(float64 oldMinimum, float64 newMinimum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.RangeBase.OnMinimumChanged(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldMinimum" Type="System.Double" />
+        <Parameter Name="newMinimum" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="oldMinimum">Der alte Wert der <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" /> Eigenschaft.</param>
+        <param name="newMinimum">Der neue Wert der <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" /> Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" /> -Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterklasse von der <xref:System.Windows.Controls.Primitives.RangeBase> verwenden Sie diese Methode kann um auf die Value-Eigenschaft anstelle von Änderungen zu reagieren die <xref:System.Windows.FrameworkPropertyMetadata> , geben Sie einen neuen <xref:System.Windows.PropertyChangedCallback> Funktion. Weitere Informationen finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValueChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnValueChanged (double oldValue, double newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnValueChanged(float64 oldValue, float64 newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.RangeBase.OnValueChanged(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldValue" Type="System.Double" />
+        <Parameter Name="newValue" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="oldValue">Der alte Wert der <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> Eigenschaft</param>
+        <param name="newValue">Der neue Wert der <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> Eigenschaft</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.Primitives.RangeBase.ValueChanged" /> Routingereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterklasse von der <xref:System.Windows.Controls.Primitives.RangeBase> verwenden Sie diese Methode kann um auf die Value-Eigenschaft anstelle von Änderungen zu reagieren die <xref:System.Windows.FrameworkPropertyMetadata> , geben Sie einen neuen <xref:System.Windows.PropertyChangedCallback> Funktion. Weitere Informationen finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+  
+ Die <xref:System.Windows.Controls.Primitives.RangeBase.OnValueChanged%2A>-Methode löst das <xref:System.Windows.Controls.Primitives.RangeBase.ValueChanged>-Ereignis aus. Zum Überschreiben <xref:System.Windows.Controls.Primitives.RangeBase.OnValueChanged%2A> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <xref:System.Windows.Controls.Primitives.RangeBase.OnValueChanged%2A> Methode, damit registrierte Delegaten das Ereignis empfangen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallChange">
+      <MemberSignature Language="C#" Value="public double SmallChange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SmallChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.RangeBase.SmallChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> addiert oder von diesem subtrahiert werden die <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> von einem <see cref="T:System.Windows.Controls.Primitives.RangeBase" /> Steuerelement.</summary>
+        <value>
+          <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" />zum Hinzufügen oder Entfernen aus der <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> von der <see cref="T:System.Windows.Controls.Primitives.RangeBase" /> Element. Der Standardwert ist 0,1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Steuerelement, das von erbt <xref:System.Windows.Controls.Primitives.RangeBase> bestimmt, wie diese Eigenschaft verwendet wird.  
+  
+ Klickt der Benutzer die <xref:System.Windows.Controls.Primitives.Track> von einer <xref:System.Windows.Controls.Primitives.ScrollBar>, <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> Eigenschaft erhöht oder verringert den Wert des <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A>.  
+  
+ Aufruft, wenn der Benutzer die <xref:System.Windows.Controls.Slider.DecreaseSmall%2A> oder <xref:System.Windows.Controls.Slider.IncreaseSmall%2A> Befehl eine <xref:System.Windows.Controls.Slider>, <xref:System.Windows.Controls.Primitives.RangeBase.ValueProperty> der Schieberegleränderungen durch den Wert des <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A>.  
+  
+ Die <xref:System.Windows.Controls.ProgressBar> verwenden diese Eigenschaft nicht.  
+  
+<a name="dependencyPropertyInfo_SmallChange"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.RangeBase.SmallChangeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallChangeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SmallChangeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SmallChangeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.RangeBase.SmallChangeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.RangeBase.SmallChange" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.RangeBase.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine Zeichenfolgendarstellung einer <see cref="T:System.Windows.Controls.Primitives.RangeBase" /> Objekt.</summary>
+        <returns>Gibt die Zeichenfolgendarstellung einer <see cref="T:System.Windows.Controls.Primitives.RangeBase" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Zeichenfolge, die die Werte der bietet die <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A>, <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A>, und <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public double Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.RangeBase.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die aktuelle Größe des Bereichssteuerelements.</summary>
+        <value>Die aktuelle Größe des Bereichssteuerelements. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Primitives.RangeBase> Steuerelement visuell die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> Eigenschaft in irgendeiner Form. Der Schieberegler und Scrollbar-Steuerelemente haben z. B. einen Bildlauffeld, die mit dem synchronisiert wird die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> des Steuerelements.  
+  
+ Wenn Sie festlegen, <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> in eine Zahl, die kleiner als das <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> Eigenschaft <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> auf festgelegt ist <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A>. Wenn Sie festlegen, <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> in eine Zahl, die größer ist als die <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> Eigenschaft <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> auf festgelegt ist <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A>.  
+  
+<a name="dependencyPropertyInfo_Value"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.RangeBase.ValueProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedPropertyChangedEventHandler&lt;double&gt; ValueChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedPropertyChangedEventHandler`1&lt;float64&gt; ValueChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.RangeBase.ValueChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedPropertyChangedEventHandler&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Bereichswert ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_ValueChanged"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.RangeBase.ValueChangedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.RoutedPropertyChangedEventHandler%601>, Zeilenumbruchalgorithmus<xref:System.Double>|  
+  
+<a name="xamlAttributeUsage_ValueChanged"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object ValueChanged="RoutedPropertyChangedEventHandler"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ValueChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ValueChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.RangeBase.ValueChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.Primitives.RangeBase.ValueChanged" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ValueProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ValueProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.RangeBase.ValueProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,366 @@
+<Type Name="SiteIdentityPermission" FullName="System.Security.Permissions.SiteIdentityPermission">
+  <TypeSignature Language="C#" Value="public sealed class SiteIdentityPermission : System.Security.CodeAccessPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SiteIdentityPermission extends System.Security.CodeAccessPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.SiteIdentityPermission" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Identitätsberechtigung für die Website, von der der Code stammt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden diese Klasse, ist es möglich, stellen Sie sicher, dass der Aufrufer von einer bestimmten Website sind. Identität der Site wird nur für Code von URLs mit HTTP, HTTPS und FTP-Protokolle definiert. Eine Website ist die Zeichenfolge zwischen dem "/ /" nach dem Protokoll eine URL und dem folgenden "/", falls vorhanden, z. B. www.fourthcoffee.com in der URL http://www.fourthcoffee.com/process/grind.htm. Dies umfasst nicht die Portnummern. Wenn eine angegebene URL Http://www.fourthcoffee.com:8000 ist / der Standort www.fourthcoffee.com, nicht www.fourthcoffee.com: 8000 ist.  
+  
+ Standorte können abgeglichen werden, genau oder anhand eines Platzhalters ("*") am Punkttrennzeichen Präfix. Z. B. den Website-Namenszeichenfolge *. fourthcoffee.com entspricht fourthcoffee.com sowie www.fourthcoffee.com. Ohne Platzhalter muss der Namen der Website eine genaue Übereinstimmung. Die Website-Namenszeichenfolge * entspricht einem beliebigen Standort, nicht jedoch Code, der keinen Evidence Standort aufweist.  
+  
+> [!IMPORTANT]
+>  Beginnend mit der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], Identitätsberechtigungen nicht verwendet werden.  
+>   
+>  In der .NET Framework-Versionen 1.0 und 1.1 treten Nachfrage nach der Identitätsberechtigungen, selbst wenn die aufrufende Assembly vollständig vertrauenswürdig ist. Obwohl die aufrufende Assembly volle Vertrauenswürdigkeit verfügt, fehlschlägt eine Anforderung für eine Identitätsberechtigung, also, wenn die Assembly die angeforderten Kriterien nicht erfüllen. Beginnend mit .NET Framework, Version 2.0, sind Forderungen nach Identitätsberechtigungen wirkungslos, wenn die aufrufende Assembly volle Vertrauenswürdigkeit verfügt. Dies gewährleistet die Konsistenz für alle Berechtigungen, die die Behandlung von Identitätsberechtigungen als Sonderfall eliminieren.  
+  
+> [!NOTE]
+>  In Versionen von .NET Framework vor der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], können Sie die <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=nameWithType> Methode, um das unbeabsichtigten Zugriff auf Systemressourcen von vertrauenswürdigem Code zu verhindern. <xref:System.Security.CodeAccessPermission.Deny%2A>ist mittlerweile veraltet, und den Zugriff auf Ressourcen wird jetzt ausschließlich durch den gewährten Berechtigungssatz für eine Assembly bestimmt. Um den Zugriff auf Dateien zu beschränken, müssen Sie teilweise vertrauenswürdigen Code in einem Sandkasten ausgeführt und weisen sie Berechtigungen nur für Ressourcen, die der Code zugreifen darf. Informationen zum Ausführen einer Anwendung in einem Sandkasten finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigen Code in einem Sandkasten](~/docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+  
+> [!NOTE]
+>  In der .NET Framework-Versionen 1.0 und 1.1 Identitätsberechtigungen kein <xref:System.Security.Permissions.PermissionState.Unrestricted> Berechtigung-Status-Wert. Beginnend mit .NET Framework, Version 2.0 können Identitätsberechtigungen ausnahmslos Zustand Berechtigung verfügen. Dies bedeutet, dass in den Versionen 2.0 und höher, Identitätsberechtigungen das gleiche Verhalten wie Berechtigungen verfügen, implementieren die <xref:System.Security.Permissions.IUnrestrictedPermission> Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteIdentityPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.SiteIdentityPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der <see cref="T:System.Security.Permissions.PermissionState" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Permissions.SiteIdentityPermission" />-Klasse mit der angegebenen <see cref="T:System.Security.Permissions.PermissionState" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der vollständig eingeschränkten Zustand der <xref:System.Security.Permissions.SiteIdentityPermission> entspricht keine Standorte. Dieser Konstruktor wird aus Gründen der Konsistenz mit dem Entwurf anderer Berechtigungen erteilt, aber Sie eignet sich nicht in der Praxis.  
+  
+> [!NOTE]
+>  In der .NET Framework-Versionen 1.0 und 1.1 Identitätsberechtigungen kein <xref:System.Security.Permissions.PermissionState.Unrestricted> Berechtigung-Status-Wert. Beginnend mit .NET Framework, Version 2.0 können Identitätsberechtigungen ausnahmslos Zustand Berechtigung verfügen. Dies bedeutet, dass in den Versionen 2.0 und höher, Identitätsberechtigungen das gleiche Verhalten wie Berechtigungen verfügen, implementieren die <xref:System.Security.Permissions.IUnrestrictedPermission> Schnittstelle. D. h. erfolgreich ist immer eine Anforderung für eine Identität, unabhängig von der Identität der Assembly, wenn die Assembly volle Vertrauenswürdigkeit gewährt wurde.  
+  
+ In der .NET Framework-Versionen 1.0 und 1.1 treten Nachfrage nach der Identitätsberechtigungen, selbst wenn die aufrufende Assembly vollständig vertrauenswürdig ist. Obwohl die aufrufende Assembly volle Vertrauenswürdigkeit verfügt, fehlschlägt eine Anforderung für eine Identitätsberechtigung, also, wenn die Assembly die angeforderten Kriterien nicht erfüllen. Beginnend mit .NET Framework, Version 2.0, sind Forderungen nach Identitätsberechtigungen wirkungslos, wenn die aufrufende Assembly volle Vertrauenswürdigkeit verfügt. Dies gewährleistet die Konsistenz für alle Berechtigungen, die die Behandlung von Identitätsberechtigungen als Sonderfall eliminieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="state" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.PermissionState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteIdentityPermission (string site);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string site) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.SiteIdentityPermission.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="site" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="site">Der Standortnamen oder Platzhalterausdruck.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.SiteIdentityPermission" /> -Klasse zur Darstellung der angegebenen Standortidentität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Identität der Site wird nur für Code von URLs mit HTTP, HTTPS und FTP-Protokolle definiert. Eine Website ist die Zeichenfolge zwischen dem "/ /" nach dem Protokoll eine URL und dem folgenden "/", falls vorhanden, z. B. www.fourthcoffee.com im URL http://www.fourthcoffee.com/process/grind.htm/. Dies umfasst nicht die Portnummern. Wenn eine angegebene URL Http://www.fourthcoffee.com:8000 ist / der Standort www.fourthcoffee.com, nicht www.fourthcoffee.com: 8000 ist.  
+  
+ Standorte können abgeglichen werden, genau oder anhand eines Platzhalters ("*") am Punkttrennzeichen Präfix. Z. B. den Website-Namenszeichenfolge *. fourthcoffee.com entspricht fourthcoffee.com sowie www.fourthcoffee.com. Ohne Platzhalter muss der Namen der Website eine genaue Übereinstimmung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="site" /> Parameter ist keine gültige Zeichenfolge oder stimmt nicht mit einen gültigen Platzhalter-Standortnamen überein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.SiteIdentityPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine identische Kopie der aktuellen Berechtigung und gibt sie zurück.</summary>
+        <returns>Eine Kopie der aktuellen Berechtigung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Kopie der Berechtigung stellt den gleichen Zugriff auf Ressourcen oder die gleiche Website-Identität wie die ursprüngliche Berechtigung dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement esd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement esd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.SiteIdentityPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="esd" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="esd">Die XML-Codierung zur Wiederherstellung der Berechtigung.</param>
+        <summary>Stellt eine Berechtigung mit einem angegebenen Zustand aus einer XML-Codierung wieder her.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="esd" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="esd" /> -Parameter ist kein gültiges Berechtigungselement.  
+  
+ - oder -   
+  
+ Die <paramref name="esd" /> Versionsnummer des Parameters ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.SiteIdentityPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung für die Überschneidung mit der aktuellen Berechtigung. Sie muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Erstellt eine Berechtigung als Schnittmenge der aktuellen und der angegebenen Berechtigung und gibt diese zurück.</summary>
+        <returns>Eine neue Berechtigung, die die Schnittmenge der aktuellen und der angegebenen Berechtigung darstellt. Diese neue Berechtigung ist <see langword="null" /> , wenn die Schnittmenge leer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Schnittmenge zweier Berechtigungen ist eine Berechtigung, die die Standorte zu beschreiben, die beide gemeinsam beschreiben. Nur eine Anforderung, die beide ursprünglichen Berechtigungen erfolgreich durchläuft, wird die Schnittmenge übergeben. Z. B. die Schnittmenge einer Berechtigung, die Zugriff auf www.fourthcoffee.com und eine darstellt, die für den Zugriff auf *. fourthcoffee.com ist eine Berechtigung, die Zugriff auf www.fourthcoffee.com darstellt.  
+  
+ Die Schnittmenge von zwei identische Identität Websiteberechtigungen ist dieselbe Berechtigung. Die Schnittmenge von zwei verschiedenen (keine Platzhalter) Ausdrücken ist eine leere Berechtigung. Die Schnittmenge der ein Platzhalterausdruck und eine entsprechende Website ist die Site. Die Schnittmenge zweier Ausdrücke mit Platzhalterzeichen, die mit übereinstimmen, ist der längere der beiden Ausdrücke spezifischere.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.SiteIdentityPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung, die auf die Teilmengenbeziehung geprüft werden soll. Diese Berechtigung muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Bestimmt, ob die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Berechtigung ist eine Teilmenge der angegebenen Berechtigung, wenn die aktuelle Berechtigung eine Site angibt, die vollständig in die angegebene Berechtigung enthalten ist.  
+  
+ Die folgende Tabelle zeigt den Wert des <xref:System.Security.Permissions.SiteIdentityPermission.IsSubsetOf%2A> für einen Bereich von Werten der aktuellen Berechtigung und die angegebene Berechtigung.  
+  
+|Aktuelle Berechtigung|Angegebene Berechtigung|IsSubsetOf|  
+|------------------------|--------------------------|----------------|  
+|www.fourthcoffee.com|www.fourthcoffee.com|`true`|  
+|www.fourthcoffee.com|www.tailspintoys.com|`false`|  
+|www.fourthcoffee.com|*. fourthcoffee.com|`true`|  
+|www.fourthcoffee.com|"*.com"|`true`|  
+|*. fourthcoffee.com|www.fourthcoffee.com|`false`|  
+|*. fourthcoffee.com|*. fourthcoffee.com|`true`|  
+|*. fourthcoffee.com|"*.com"|`true`|  
+|Alles außer`None`|*|`true`|  
+|`None`|Alle Elemente|`true`|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public string Site { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Site" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SiteIdentityPermission.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Site ab oder legt sie fest.</summary>
+        <value>Die aktuelle Site.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Identität der Site wird nur für Code von URLs mit HTTP, HTTPS und FTP-Protokolle definiert. Eine Website ist die Zeichenfolge zwischen dem "/ /" nach dem Protokoll eine URL und dem folgenden "/", falls vorhanden, z. B. www.fourthcoffee.com im URL http://www.fourthcoffee.com/process/grind.htm/. Dies umfasst nicht die Portnummern. Wenn eine angegebene URL Http://www.fourthcoffee.com:8000 ist / der Standort www.fourthcoffee.com, nicht www.fourthcoffee.com: 8000 ist.  
+  
+ Standorte können abgeglichen werden, genau oder anhand eines Platzhalters ("*") am Punkttrennzeichen Präfix. Z. B. den Website-Namenszeichenfolge *. fourthcoffee.com entspricht fourthcoffee.com sowie www.fourthcoffee.com. Ohne Platzhalter muss der Namen der Website eine genaue Übereinstimmung. Die Website-Namenszeichenfolge * entspricht einem beliebigen Standort, nicht jedoch Code, der keinen Evidence Standort aufweist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Identität der Site kann nicht abgerufen werden, da sie eine mehrdeutige Identität aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.SiteIdentityPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine XML-Codierung der Berechtigung und ihres aktuellen Zustands.</summary>
+        <returns>Eine XML-Codierung der Berechtigung, einschließlich aller Zustandsinformationen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.SiteIdentityPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung, die mit der aktuellen Berechtigung kombiniert werden soll. Sie muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Erstellt eine Berechtigung als Kombination der aktuellen und der angegebenen Berechtigung.</summary>
+        <returns>Eine neue Berechtigung, die die Kombination der aktuellen und der angegebenen Berechtigung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ergebnis eines Aufrufs von <xref:System.Security.Permissions.SiteIdentityPermission.Union%2A> eine Berechtigung, alle Standorte, die dargestellt darstellt, wird von der aktuellen Berechtigung und der angegebenen Berechtigung ist. Jede Anforderung, entweder Berechtigung durchläuft, übergibt die Union. Angenommen, die Union einer Berechtigung, die Zugriff auf www.fourthcoffee.com und eine darstellt, die für den Zugriff auf *. fourthcoffee.com ist eine Berechtigung, die für den Zugriff auf *. fourthcoffee.com.  
+  
+ Die Union einer Berechtigung und `null` ist die Berechtigung, die nicht `null`. Die Union einer Berechtigung und eine Teilmenge der über diese Berechtigung ist die Berechtigung, die die Teilmenge enthält. Eine beliebige andere Kombination führt zu einer <xref:System.ArgumentException> ausgelöst wird. Beispielsweise führt die Union der Site-Identität www.fourthcoffee.com und der Standort Identität www.tailspintoys.com eine Ausnahme, da keines von beiden ist eine Teilmenge der jeweils anderen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.  
+  
+ - oder -   
+  
+ Die Berechtigungen sind nicht gleich, und eine Berechtigung ist keine Teilmenge der jeweils anderen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

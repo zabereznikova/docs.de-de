@@ -1,0 +1,156 @@
+<Type Name="Handle" FullName="System.Activities.Handle">
+  <TypeSignature Language="C#" Value="public abstract class Handle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Handle extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Handle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Typ dar, dessen Lebensdauer von der Workflowlaufzeit gesteuert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Lebensdauer von Typen, die von <xref:System.Activities.Handle> abgeleitet sind, wird von der Workflowlaufzeit gesteuert. Für Workflowvariablen von Handletypen erstellt die Laufzeit mithilfe des erforderlichen Standardkonstruktors eine Instanz des Typs, weist sie <xref:System.Activities.Variable> zu und ruft <xref:System.Activities.Handle.OnInitialize%2A> auf, wenn die Umgebung initialisiert wird. Wenn sich die Variable nicht mehr im Gültigkeitsbereich befindet, wird <xref:System.Activities.Handle.OnUninitialize%2A> aufgerufen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Handle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Handle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Handle" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die von <xref:System.Activities.Handle> abgeleitet sind, müssen einen Standardkonstruktor bereitstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionPropertyName">
+      <MemberSignature Language="C#" Value="public string ExecutionPropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExecutionPropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Handle.ExecutionPropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen ab, der von diesem <see cref="T:System.Activities.Handle" /> verwendet werden soll, wenn er den Ausführungseigenschaften einer Aktivität hinzugefügt wird.</summary>
+        <value>Der Name des abgeleiteten Typs, wie von <see cref="P:System.Type.FullName" /> angegeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitialize">
+      <MemberSignature Language="C#" Value="protected virtual void OnInitialize (System.Activities.HandleInitializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInitialize(class System.Activities.HandleInitializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Handle.OnInitialize(System.Activities.HandleInitializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.HandleInitializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die Umgebung, in der das Handle erstellt wird.</param>
+        <summary>Wird von der Workflowlaufzeit aufgerufen, wenn die Umgebung, die <see cref="T:System.Activities.Handle" /> enthält, initialisiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUninitialize">
+      <MemberSignature Language="C#" Value="protected virtual void OnUninitialize (System.Activities.HandleInitializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUninitialize(class System.Activities.HandleInitializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Handle.OnUninitialize(System.Activities.HandleInitializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.HandleInitializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die Umgebung, in der das Handle erstellt wurde.</param>
+        <summary>Wird von der Workflowlaufzeit aufgerufen, wenn sich die <see cref="T:System.Activities.Variable" /> für <see cref="T:System.Activities.Handle" /> nicht mehr im Gültigkeitsbereich befindet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.Activities.ActivityInstance Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.ActivityInstance Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Handle.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.ActivityInstance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Activities.ActivityInstance" /> ab, die die <see cref="T:System.Activities.Variable" /> enthält, die <see cref="T:System.Activities.Handle" /> enthält.</summary>
+        <value>Die Aktivitätsinstanz, die die <see cref="T:System.Activities.Variable" /> enthält, die <see cref="T:System.Activities.Handle" /> enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowIfUninitialized">
+      <MemberSignature Language="C#" Value="protected void ThrowIfUninitialized ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ThrowIfUninitialized() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Handle.ThrowIfUninitialized" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst eine <see cref="T:System.InvalidOperationException" /> aus, wenn <see cref="T:System.Activities.Handle" /> nicht initialisiert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.Handle.ThrowIfUninitialized%2A> stellt Autoren von Klassen, die von benutzerdefinierten Handles abgeleitet sind, eine zweckmäßige Methode bereit, um Methoden oder Eigenschaften der abgeleiteten Klasse aufzurufen, die nicht gültig sind, wenn <xref:System.Activities.Handle> deinitialisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

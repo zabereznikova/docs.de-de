@@ -1,0 +1,143 @@
+<Type Name="ServiceHostingEnvironment" FullName="System.ServiceModel.ServiceHostingEnvironment">
+  <TypeSignature Language="C#" Value="public static class ServiceHostingEnvironment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ServiceHostingEnvironment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ServiceHostingEnvironment" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Informationen über die aktuelle hostumgebung, die in der Windows Communication Foundation (WCF)-Dienste ausgeführt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse macht Einstellungen für die gesamte Anwendungsdomäne verfügbar, die keinem einzelnen Dienst ausdrücklich zugeordnet sind. Diese Klasse kann nur auf der Anwendungs- bzw. Computerkonfigurationsebene verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AspNetCompatibilityEnabled">
+      <MemberSignature Language="C#" Value="public static bool AspNetCompatibilityEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool AspNetCompatibilityEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostingEnvironment.AspNetCompatibilityEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dieser Dienst im Kontext der HTTP-Anwendungspipeline von [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />, wenn ASP.NET-Kompatibilität für die aktuelle Anwendungsdomäne aktiviert ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert reflektiert den Wert festlegen, indem die <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.AspNetCompatibilityEnabled%2A> Konfigurationselement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureInitialized">
+      <MemberSignature Language="C#" Value="public static void EnsureInitialized ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnsureInitialized() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostingEnvironment.EnsureInitialized" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Den Dienst initialisiert, wenn er nicht bereits initialisiert wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureServiceAvailable">
+      <MemberSignature Language="C#" Value="public static void EnsureServiceAvailable (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnsureServiceAvailable(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostingEnvironment.EnsureServiceAvailable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad zum Dienst.</param>
+        <summary>Stellt sicher, dass ein Dienst im bereitgestellten virtuellen Pfad aktiviert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von anderen Transportentwicklern verwendet, um den Dienst im bereitgestellten virtuellen Pfad zu aktivieren, wenn dieser Dienst noch nicht aktiv ist. Die Methode ist idempotent, da ein erneuter Aufruf mit dem gleichen `virtualPath` insofern sicher ist, dass er keine Auswirkungen hat.  
+  
+ Das erwartete virtuelle Pfadformat ist `/<app-name>/<sub-directory/<service-name>.svc` oder `~/<sub-directory/<service-name>.svc`, wobei `<app-name>` für den Anwendungsnamen, `<sub-directory>` für das virtuelle IIS-Verzeichnis und `<service-name>` für den Dienstnamen steht.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.EndpointNotFoundException">Ein Dienst in einem angegebenen virtuellen Pfad kann nicht gefunden werden.</exception>
+        <exception cref="T:System.ServiceModel.ServiceActivationException">Der Dienst kann nicht aktiviert werden.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Dienst wird in der gehosteten Umgebung nicht ausgeführt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="virtualPath" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="virtualPath" /> ist ein absoluter URI oder nicht gültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MultipleSiteBindingsEnabled">
+      <MemberSignature Language="C#" Value="public static bool MultipleSiteBindingsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool MultipleSiteBindingsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob beim Diensthost mehrere Sitebindungen zulässig sind.</summary>
+        <value>
+          <see langword="true" />Wenn mehrere websitebindungen aktiviert sind; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Unterstützen mehrere IIS-Sitebindungen](~/docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

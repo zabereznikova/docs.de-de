@@ -1,0 +1,118 @@
+<Type Name="BypassElement" FullName="System.Net.Configuration.BypassElement">
+  <TypeSignature Language="C#" Value="public sealed class BypassElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BypassElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.BypassElement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Adressinformationen für Ressourcen, die über einen Proxyserver nicht abgerufen werden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse entspricht dem `address` Attribut des der [ &lt;hinzufügen&gt; -Element für Bypasslist (Network Settings)](~/docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md) Konfigurationselement.  
+  
+ Diese Klasse wird verwendet, um anzugeben, wenn ein Proxyserver nicht verwendet werden sollte, behandeln Anforderungen durch die <xref:System.Net.WebRequest> und <xref:System.Net.WebClient> Klassen. Eine Ressource in der Umgehungsliste wird direkt vom Server abgerufen, in dem er sich befindet.  
+  
+ Diese Klasse bietet programmgesteuerten Zugriff auf Informationen, die in Konfigurationsdateien gespeichert werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BypassElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.BypassElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Configuration.BypassElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BypassElement (string address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.BypassElement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="address">Eine Zeichenfolge, die die Adresse einer Ressource identifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Configuration.BypassElement" /> -Klasse mit dem angegebenen Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Configuration.BypassElement.Address%2A>-Eigenschaft ist auf `address` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public string Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Address" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.BypassElement.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("address", Options=System.Configuration.ConfigurationPropertyOptions.IsRequired | System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Adressen von Ressourcen, die den Proxyserver umgehen.</summary>
+        <value>Eine Zeichenfolge, die eine Ressource identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält die Adresse einer Ressource, die ohne Verwendung eines Proxyservers abgerufen werden. Anforderungen für die Ressource werden direkt an den Server gesendet, in dem sich die Ressource befindet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.BypassElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,292 @@
+<Type Name="MulticastOption" FullName="System.Net.Sockets.MulticastOption">
+  <TypeSignature Language="C#" Value="public class MulticastOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MulticastOption extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.MulticastOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält <see cref="T:System.Net.IPAddress" /> Werte, die zum Hinzufügen und Löschen von multicast-Gruppen verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.Net.Sockets.MulticastOption> zum Speichern der <xref:System.Net.IPAddress> einer Multicastgruppe, die Sie hinzufügen oder löschen möchten. Verwenden der <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> Methode mit den folgenden Parametern an eine Multicastgruppe.  
+  
+|Parameter|Wert|  
+|---------------|-----------|  
+|socketOptionLevel|<xref:System.Net.Sockets.SocketOptionLevel?displayProperty=nameWithType>|  
+|socketOptionName|<xref:System.Net.Sockets.SocketOptionName.AddMembership>|  
+|object|<xref:System.Net.Sockets.MulticastOption>|  
+  
+ Verwendung <xref:System.Net.Sockets.SocketOptionName.DropMembership> zu einer Multicastgruppe.  
+  
+   
+  
+## Examples  
+ In den folgenden Beispielen verknüpfen Sie die Standard-IP-Schnittstelle mit einer IP-multicast-Gruppe. Sie gehen davon aus, der Multicast-IP-Adresse im Bereich von 224.0.0.0 bis 239.255.255.255 zu gruppieren.  
+  
+ [!code-cpp[System.Net.Sockets.MulticastOptionListener#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/CPP/listener.cpp#1)]
+ [!code-csharp[System.Net.Sockets.MulticastOptionListener#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/CS/listener.cs#1)]
+ [!code-vb[System.Net.Sockets.MulticastOptionListener#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/VB/listener.vb#1)]  
+  
+ [!code-cpp[System.Net.Sockets.MulticastOptionSender#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionSender/CPP/sender.cpp#1)]
+ [!code-csharp[System.Net.Sockets.MulticastOptionSender#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionSender/CS/sender.cs#1)]
+ [!code-vb[System.Net.Sockets.MulticastOptionSender#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionSender/VB/sender.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MulticastOption (System.Net.IPAddress group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.IPAddress group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.MulticastOption.#ctor(System.Net.IPAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="group" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="group">Die <see cref="T:System.Net.IPAddress" /> der multicast-Gruppe.</param>
+        <summary>Initialisiert eine neue Version der <see cref="T:System.Net.Sockets.MulticastOption" /> Klasse für die angegebene IP-multicast-Gruppe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie für Computer mit mehreren Netzwerkkarten diesen Konstruktor nicht. Verwenden Sie den Konstruktor, der eine Gruppe und eine lokale IP-Adresse akzeptiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="group" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MulticastOption (System.Net.IPAddress group, int interfaceIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.IPAddress group, int32 interfaceIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.MulticastOption.#ctor(System.Net.IPAddress,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="group" Type="System.Net.IPAddress" />
+        <Parameter Name="interfaceIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="group">Die <see cref="T:System.Net.IPAddress" /> der multicast-Gruppe.</param>
+        <param name="interfaceIndex">Der Index der Schnittstelle, die zum Senden und Empfangen von Multicastpakete verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Sockets.MulticastOption" /> Klasse mit dem angegebenen IP-multicast-Gruppe-Adresse und die Schnittstelle-Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MulticastOption (System.Net.IPAddress group, System.Net.IPAddress mcint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.IPAddress group, class System.Net.IPAddress mcint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.MulticastOption.#ctor(System.Net.IPAddress,System.Net.IPAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="group" Type="System.Net.IPAddress" />
+        <Parameter Name="mcint" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="group">Die Gruppe <see cref="T:System.Net.IPAddress" />.</param>
+        <param name="mcint">Die lokale <see cref="T:System.Net.IPAddress" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Sockets.MulticastOption" /> -Klasse mit der angegebenen IP-Multicast gruppieren und lokale IP-Adresse einer Netzwerkschnittstelle zugeordnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Computer mit mehreren Netzwerkkarten müssen Sie diesen Konstruktor verwenden, um erstellen <xref:System.Net.Sockets.MulticastOption> Instanzen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Net.Sockets.MulticastOption> Objekt.  
+  
+ [!code-cpp[System.Net.Sockets.MulticastOptionListener#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/CPP/listener.cpp#2)]
+ [!code-csharp[System.Net.Sockets.MulticastOptionListener#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/CS/listener.cs#2)]
+ [!code-vb[System.Net.Sockets.MulticastOptionListener#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/VB/listener.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="group" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="mcint" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress Group { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPAddress Group" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.MulticastOption.Group" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die IP-Adresse eine Multicastgruppe.</summary>
+        <value>Ein <see cref="T:System.Net.IPAddress" /> , enthält die Internetadresse des eine Multicastgruppe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige IP-Adressen für Multicastpakete liegen im Bereich von 224.0.0.0 bis 239.255.255.255.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[System.Net.Sockets.MulticastOptionListener#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/CPP/listener.cpp#3)]
+ [!code-csharp[System.Net.Sockets.MulticastOptionListener#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/CS/listener.cs#3)]
+ [!code-vb[System.Net.Sockets.MulticastOptionListener#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/VB/listener.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterfaceIndex">
+      <MemberSignature Language="C#" Value="public int InterfaceIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InterfaceIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.MulticastOption.InterfaceIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index der Schnittstelle, die verwendet wird, zum Senden und Empfangen von Multicastpakete fest.</summary>
+        <value>Eine ganze Zahl, die den Index des darstellt ein <see cref="T:System.Net.NetworkInformation.NetworkInterface" /> Arrayelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalAddress">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress LocalAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPAddress LocalAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.MulticastOption.LocalAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die lokale Adresse eine Multicastgruppe zugeordnet.</summary>
+        <value>Ein <see cref="T:System.Net.IPAddress" /> , enthält die lokale Adresse eine Multicastgruppe zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.MulticastOption.LocalAddress%2A> Eigenschaft enthält die IP-Adresse der Schnittstelle, die die Mitgliedschaft in der multicast zugeordnet. Wenn <xref:System.Net.Sockets.MulticastOption.LocalAddress%2A> festgelegt ist, um <xref:System.Net.IPAddress.Any>, die Standardschnittstelle wird verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[System.Net.Sockets.MulticastOptionListener#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/CPP/listener.cpp#3)]
+ [!code-csharp[System.Net.Sockets.MulticastOptionListener#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/CS/listener.cs#3)]
+ [!code-vb[System.Net.Sockets.MulticastOptionListener#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/VB/listener.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

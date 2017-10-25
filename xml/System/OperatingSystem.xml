@@ -1,0 +1,394 @@
+<Type Name="OperatingSystem" FullName="System.OperatingSystem">
+  <TypeSignature Language="C#" Value="public sealed class OperatingSystem : ICloneable, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit OperatingSystem extends System.Object implements class System.ICloneable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.OperatingSystem" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Informationen über ein Betriebssystem dar, wie Versions- und Plattformbezeichner. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.OperatingSystem> -Klasse enthält Informationen über ein Betriebssystem installiert ist.  
+  
+ Abrufen von Informationen über das aktuelle Betriebssystem für die Common Language Runtime, die <xref:System.OperatingSystem> zurückgegebenes Objekt die <xref:System.Environment.OSVersion%2A?displayProperty=nameWithType> Eigenschaft. Eine Liste der Windows Betriebssystemversionen und ihre zugehörigen Versionsnummern zurückgegebenes der <xref:System.OperatingSystem.Version%2A> und <xref:System.OperatingSystem.VersionString%2A> Eigenschaften und die <xref:System.OperatingSystem.ToString%2A> -Methode finden Sie unter [Betriebssystemversion](https://msdn.microsoft.com/library/windows/desktop/ms724832.aspx) auf dem Windows Dev Center.  
+  
+ Programmbedingt die <xref:System.OperatingSystem> Klasse ist eine allgemeine Möglichkeit zur Beschreibung eines Betriebssystems, und Sie können nicht abgeleitet werden, einen umfassender Typ aus der <xref:System.OperatingSystem> Klasse. Wenn Sie einen Typ, um weitere Informationen zu einem Betriebssystem enthalten, einen eigenen Typ erstellen, und enthalten ein Feld vom Typ <xref:System.OperatingSystem> und alle zusätzlichen Felder, Eigenschaften oder Methoden, die erforderlich sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.OperatingSystem> Objekt zum Anzeigen von Informationen über das Betriebssystem Common Language Runtime.  
+  
+ [!code-csharp[System.Environment.OSVersion#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.environment.osversion/cs/osinfo1.cs#1)]
+ [!code-vb[System.Environment.OSVersion#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.environment.osversion/vb/osinfo1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OperatingSystem (PlatformID platform, Version version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.PlatformID platform, class System.Version version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.OperatingSystem.#ctor(System.PlatformID,System.Version)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="platform" Type="System.PlatformID" />
+        <Parameter Name="version" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="platform">Einer der <see cref="T:System.PlatformID" />-Werte, der die Betriebssystemplattform angibt.</param>
+        <param name="version">Ein <see cref="T:System.Version" />-Objekt, das die Version des Betriebssystems angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.OperatingSystem" />-Klasse unter Verwendung des angegebenen Plattformbezeichners und Versionsobjekts.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="platform" />ist eine <see cref="T:System.PlatformID" /> -Enumerationswert.</exception>
+        <block subset="none" type="usage">
+          <para>Bei Verwendung der <see cref="T:System.OperatingSystem" /> -Klasse zum Abrufen von Informationen über das Betriebssystem Common Language Runtime, Sie sollten nicht aufrufen dieses Konstruktors zum Instanziieren einer <see cref="T:System.OperatingSystem" /> Objekt. Sie können stattdessen abrufen eine <see cref="T:System.OperatingSystem" /> -Objekt, das Betriebssystem vom beschreibt, die <see cref="P:System.Environment.OSVersion" /> Eigenschaft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.OperatingSystem.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein <see cref="T:System.OperatingSystem" />-Objekt, das mit dieser Instanz identisch ist.</summary>
+        <returns>Ein <see cref="T:System.OperatingSystem" />-Objekt, das eine Kopie dieser Instanz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.OperatingSystem.Clone%2A> Methode, um eine Kopie einer <xref:System.OperatingSystem> Objekt. Der Klon wird mit dem ursprünglichen Objekt angezeigt wird, sind sie nicht das gleiche Objekt verglichen.  
+  
+ [!code-cpp[System.OperatingSystem.Clone#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.OperatingSystem.Clone/CPP/clone.cpp#1)]
+ [!code-csharp[System.OperatingSystem.Clone#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.OperatingSystem.Clone/CS/clone.cs#1)]
+ [!code-vb[System.OperatingSystem.Clone#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.OperatingSystem.Clone/VB/clone.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.OperatingSystem.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das mit Serialisierungsinformationen aufgefüllt werden soll.</param>
+        <param name="context">Der Ort zum Speichern und Abrufen von serialisierten Daten. Für zukünftige Verwendung reserviert.</param>
+        <summary>Füllt ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit den für das Deserialisieren dieser Instanz erforderlichen Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `context` Parameter ist für die zukünftige Verwendung reserviert; er ist derzeit nicht im implementiert die <xref:System.OperatingSystem.GetObjectData%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter der Methode <xref:System.Runtime.Serialization.SerializationInfo.AddValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für das Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Platform">
+      <MemberSignature Language="C#" Value="public PlatformID Platform { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.PlatformID Platform" />
+      <MemberSignature Language="DocId" Value="P:System.OperatingSystem.Platform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.PlatformID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.PlatformID" />-Enumerationswert ab, der die Betriebssystemplattform identifiziert.</summary>
+        <value>Einer der <see cref="T:System.PlatformID" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt mehrere <xref:System.OperatingSystem> Objekten und zeigt die <xref:System.OperatingSystem.Platform%2A> für jede Eigenschaft.  
+  
+ [!code-cpp[System.OperatingSystem.Platform_Version#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.OperatingSystem.Platform_Version/CPP/plat_ver.cpp#1)]
+ [!code-csharp[System.OperatingSystem.Platform_Version#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.OperatingSystem.Platform_Version/CS/plat_ver.cs#1)]
+ [!code-vb[System.OperatingSystem.Platform_Version#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.OperatingSystem.Platform_Version/VB/plat_ver.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServicePack">
+      <MemberSignature Language="C#" Value="public string ServicePack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServicePack" />
+      <MemberSignature Language="DocId" Value="P:System.OperatingSystem.ServicePack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die durch dieses <see cref="T:System.OperatingSystem" />-Objekt dargestellte Service Pack-Version ab.</summary>
+        <value>Die Service Pack-Version, wenn Service Packs unterstützt werden und mindestens eines installiert ist; andernfalls eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Servicepack wird verwendet, um Softwareupdates für das Betriebssystem zu verteilen, auf dem er installiert ist. Allerdings verwendet nicht jedes Betriebssystem, Servicepacks.  
+  
+ Service Pack-Version wird ggf. bereits ordnungsgemäß für die Anzeige formatiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.OperatingSystem.ServicePack%2A> Eigenschaft.  
+  
+ [!code-cpp[OperatingSystem.ServicePack#1](~/samples/snippets/cpp/VS_Snippets_CLR/OperatingSystem.ServicePack/CPP/sp.cpp#1)]
+ [!code-csharp[OperatingSystem.ServicePack#1](~/samples/snippets/csharp/VS_Snippets_CLR/OperatingSystem.ServicePack/CS/sp.cs#1)]
+ [!code-vb[OperatingSystem.ServicePack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/OperatingSystem.ServicePack/VB/sp.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.OperatingSystem.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Wert dieses <see cref="T:System.OperatingSystem" />-Objekts in die entsprechende Zeichenfolgendarstellung.</summary>
+        <returns>Die Zeichenfolgendarstellung der von den Eigenschaften <see cref="P:System.OperatingSystem.Platform" />, <see cref="P:System.OperatingSystem.Version" /> und <see cref="P:System.OperatingSystem.ServicePack" /> zurückgegebenen Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Finden Sie unter [Betriebssystemversion](http://msdn.microsoft.com/library/windows/desktop/ms724832.aspx) im Windows Developer Center für eine Liste der Windows-Betriebssystemversionen und ihre zugehörigen Versionsnummern.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.OperatingSystem.ToString%2A> anzuzeigenden Methode <xref:System.OperatingSystem> Objekte.  
+  
+ [!code-cpp[System.OperatingSystem.Ctor_ToString#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.OperatingSystem.Ctor_ToString/CPP/ctor_tostr.cpp#1)]
+ [!code-csharp[System.OperatingSystem.Ctor_ToString#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.OperatingSystem.Ctor_ToString/CS/ctor_tostr.cs#1)]
+ [!code-vb[System.OperatingSystem.Ctor_ToString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.OperatingSystem.Ctor_ToString/VB/ctor_tostr.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.OperatingSystem.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Version" />-Objekt ab, das das Betriebssystem identifiziert.</summary>
+        <value>Ein <see cref="T:System.Version" />-Objekt, das die Hauptversions-, Nebenversions-, Build- und Revisionsnummer des Betriebssystems beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Finden Sie unter [Betriebssystemversion](http://msdn.microsoft.com/library/windows/desktop/ms724832.aspx) im Windows Developer Center für eine Liste der Windows-Betriebssystemversionen und ihre zugehörigen Versionsnummern.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt mehrere <xref:System.OperatingSystem> Objekten und zeigt die <xref:System.OperatingSystem.Version%2A> für jede Eigenschaft.  
+  
+ [!code-cpp[System.OperatingSystem.Platform_Version#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.OperatingSystem.Platform_Version/CPP/plat_ver.cpp#1)]
+ [!code-csharp[System.OperatingSystem.Platform_Version#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.OperatingSystem.Platform_Version/CS/plat_ver.cs#1)]
+ [!code-vb[System.OperatingSystem.Platform_Version#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.OperatingSystem.Platform_Version/VB/plat_ver.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VersionString">
+      <MemberSignature Language="C#" Value="public string VersionString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VersionString" />
+      <MemberSignature Language="DocId" Value="P:System.OperatingSystem.VersionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die verkettete Zeichenfolgendarstellung des Plattformbezeichners, der Version und des Service Packs ab, die momentan auf dem Betriebssystem installiert sind.</summary>
+        <value>Die Zeichenfolgendarstellung der von den Eigenschaften <see cref="P:System.OperatingSystem.Platform" />, <see cref="P:System.OperatingSystem.Version" /> und <see cref="P:System.OperatingSystem.ServicePack" /> zurückgegebenen Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird der Wert von zurückgegeben <xref:System.OperatingSystem.VersionString%2A> entspricht der zurückgegebene Wert die <xref:System.OperatingSystem.ToString%2A> Methode. Allerdings kann eine Implementierung von .NET Framework für eine andere Plattform eine geeignetere Zeichenfolge für diese Plattform zurück.  
+  
+ Finden Sie unter [Betriebssystemversion](http://msdn.microsoft.com/library/windows/desktop/ms724832.aspx) im Windows Developer Center für eine Liste der Windows-Betriebssystemversionen und ihre zugehörigen Versionsnummern.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.OperatingSystem.VersionString%2A> Eigenschaft.  
+  
+ [!code-cpp[OperatingSystem.VersionString#1](~/samples/snippets/cpp/VS_Snippets_CLR/OperatingSystem.VersionString/CPP/osvs.cpp#1)]
+ [!code-csharp[OperatingSystem.VersionString#1](~/samples/snippets/csharp/VS_Snippets_CLR/OperatingSystem.VersionString/CS/osvs.cs#1)]
+ [!code-vb[OperatingSystem.VersionString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/OperatingSystem.VersionString/VB/osvs.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

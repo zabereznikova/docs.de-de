@@ -1,0 +1,138 @@
+<Type Name="CodePropertyReferenceExpression" FullName="System.CodeDom.CodePropertyReferenceExpression">
+  <TypeSignature Language="C#" Value="public class CodePropertyReferenceExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodePropertyReferenceExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodePropertyReferenceExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Verweis auf den Wert einer Eigenschaft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodePropertyReferenceExpression>kann verwendet werden, um einen Verweis auf den Wert einer Eigenschaft darzustellen.  
+  
+ Die <xref:System.CodeDom.CodePropertyReferenceExpression.TargetObject%2A> Eigenschaft gibt das Objekt mit der Eigenschaft zu verweisen. Die <xref:System.CodeDom.CodePropertyReferenceExpression.PropertyName%2A> Eigenschaft gibt den Namen der Eigenschaft zu verweisen.  
+  
+ Dieses Objekt verfügt nicht über die Eigenschaft, um anzugeben, ob der Verweis in verwendet wird eine `get` oder `set`. Wenn der Eigenschaftenverweis tritt auf, auf der linken Seite zugewiesen, Seite einer zuweisungsanweisung ist eine `set`.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht die Verwendung von einem <xref:System.CodeDom.CodePropertyReferenceExpression> auf eine Eigenschaft verweisen.  
+  
+ [!code-cpp[CodeReferenceExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeReferenceExample/CPP/codereferenceexample.cpp#3)]
+ [!code-csharp[CodeReferenceExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeReferenceExample/CS/codereferenceexample.cs#3)]
+ [!code-vb[CodeReferenceExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeReferenceExample/VB/codereferenceexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodePropertyReferenceExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodePropertyReferenceExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodePropertyReferenceExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodePropertyReferenceExpression (System.CodeDom.CodeExpression targetObject, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression targetObject, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodePropertyReferenceExpression.#ctor(System.CodeDom.CodeExpression,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetObject" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetObject">Ein <see cref="T:System.CodeDom.CodeExpression" /> , die angibt, dass des Objekts, das die Eigenschaft zu verweisen.</param>
+        <param name="propertyName">Der Name der Eigenschaft zu verweisen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodePropertyReferenceExpression" /> -Klasse unter Verwendung der angegebenen Objekt und Eigenschaft Zielname.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodePropertyReferenceExpression.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Eigenschaft zu verweisen.</summary>
+        <value>Der Name der Eigenschaft zu verweisen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetObject">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression TargetObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression TargetObject" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodePropertyReferenceExpression.TargetObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Objekt, das die Eigenschaft zu verweisen.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeExpression" /> , die angibt, dass des Objekts, das die Eigenschaft zu verweisen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

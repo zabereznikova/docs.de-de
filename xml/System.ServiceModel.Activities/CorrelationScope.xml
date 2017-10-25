@@ -1,0 +1,160 @@
+<Type Name="CorrelationScope" FullName="System.ServiceModel.Activities.CorrelationScope">
+  <TypeSignature Language="C#" Value="public class CorrelationScope : System.Activities.NativeActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CorrelationScope extends System.Activities.NativeActivity" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.CorrelationScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.NativeActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die implizite <see cref="T:System.ServiceModel.Activities.CorrelationHandle" />-Verwaltung für untergeordnete Messagingaktivitäten bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Activities.CorrelationScope>-Aktivität behält einen impliziten <xref:System.ServiceModel.Activities.CorrelationHandle> bei, der nur für untergeordnete Aktivitäten sichtbar ist. Wenn die <xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A>-Eigenschaft vom Benutzer festgelegt wird, wird es als implizites <xref:System.ServiceModel.Activities.CorrelationScope>-Handle verwendet. Im Fall von geschachteltem <xref:System.ServiceModel.Activities.CorrelationScope> können untergeordnete Elemente des inneren Bereichs nicht auf auf das implizite Handle des äußeren Bereichs zugreifen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie ein <xref:System.ServiceModel.Activities.CorrelationScope> erstellt wird. In diesem Beispiel wird eine <xref:System.ServiceModel.Activities.Sequence> erstellt und (neben anderen Aktivitäten) ein <xref:System.ServiceModel.Activities.CorrelationScope> hinzugefügt. Der <xref:System.ServiceModel.Activities.CorrelationScope> enthält eine <xref:System.ServiceModel.Activities.Sequence>, die aus einer <xref:System.ServiceModel.Activities.Send>-Aktivität und einer <xref:System.ServiceModel.Activities.ReceiveReply>-Aktivität besteht.  
+  
+ [!code-csharp[ContentBasedCorrelation#3](~/samples/snippets/csharp/VS_Snippets_CFX/contentbasedcorrelation/cs/client.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CorrelationScope ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.CorrelationScope.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.CorrelationScope" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Body { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Body" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.CorrelationScope.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausführungslogik der Aktivität ab oder legt sie fest.</summary>
+        <value>Die Ausführungslogik der Aktivität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.NativeActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.NativeActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.CorrelationScope.CacheMetadata(System.Activities.NativeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.NativeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Die Metadaten der Aktivität, die die Argumente, Variablen, untergeordnete Aktivitäten und Aktivitätsdelegaten der Aktivität kapseln.</param>
+        <summary>Erstellt und überprüft eine Beschreibung der Argumente, Variablen, untergeordneten Aktivitäten und Aktivitätsdelegaten der Aktivität.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelatesWith">
+      <MemberSignature Language="C#" Value="public System.Activities.InArgument&lt;System.ServiceModel.Activities.CorrelationHandle&gt; CorrelatesWith { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.InArgument`1&lt;class System.ServiceModel.Activities.CorrelationHandle&gt; CorrelatesWith" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;System.ServiceModel.Activities.CorrelationHandle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das von den untergeordneten Messagingaktivitäten verwendete <see cref="T:System.ServiceModel.Activities.CorrelationHandle" /> ab oder legt es fest.</summary>
+        <value>Das von den untergeordneten Messagingaktivitäten verwendete Korrelationshandle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist zur Laufzeit schreibgeschützt. Wenn der Wert zur Laufzeit festgelegt wird, wird eine <xref:System.InvalidOperationException> ausgelöst.  
+  
+ Die Common Language Runtime verwendet die <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> für die Korrelation, sofern vorhanden, andernfalls die **CorrelatesWith** -Eigenschaft der Messagingaktivität verwendet.  Wenn keines der beiden Elemente vorhanden ist, wird das von <xref:System.ServiceModel.Activities.CorrelationScope> bereitgestellte Ambient-Handle oder der Workflowdienst verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override void Execute (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Execute(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.CorrelationScope.Execute(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der aktuelle systemeigene Aktivitätsausführungskontext.</param>
+        <summary>Wird von der Workflowlaufzeit zum Ausführen der <see cref="T:System.ServiceModel.Activities.CorrelationScope" />-Aktivität aufgerufen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeCorrelatesWith">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeCorrelatesWith ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeCorrelatesWith() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.CorrelationScope.ShouldSerializeCorrelatesWith" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith" />- Eigenschaft serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,216 @@
+<Type Name="Compiler" FullName="System.Web.Configuration.Compiler">
+  <TypeSignature Language="C#" Value="public sealed class Compiler : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Compiler extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.Compiler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Compiler, der verwendet wird, um die Kompilierung-Infrastruktur von Webanwendungen unterstützen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.Compiler> Klasse bietet eine Möglichkeit, ein Compilerkonfigurationselement programmgesteuert zugreifen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Compiler (string compilerOptions, string extension, string language, string type, int warningLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string compilerOptions, string extension, string language, string type, int32 warningLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.Compiler.#ctor(System.String,System.String,System.String,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="compilerOptions" Type="System.String" />
+        <Parameter Name="extension" Type="System.String" />
+        <Parameter Name="language" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="warningLevel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="compilerOptions">Listet compilerspezifisch Zusatzoptionen, um während der Kompilierung zu übergeben.</param>
+        <param name="extension">Enthält eine durch Semikolons getrennte Liste der Dateinamenerweiterungen für dynamische Code-Behind-Dateien verwendet. Z. B. "cs".</param>
+        <param name="language">Enthält eine durch Semikolons getrennte Liste der Sprachen, die in dynamischen Kompilierungsdateien verwendet. Z. B. "c#; Cs; Csharp".</param>
+        <param name="type">Gibt eine durch Trennzeichen getrennte Klassen-Assembly aus, die .NET Framework-Klasse angibt.</param>
+        <param name="warningLevel">Gibt die Compilerwarnstufen an.</param>
+        <summary>Erstellt eine Instanz einer <see cref="T:System.Web.Configuration.Compiler" /> mit der bereitgestellten Werte initialisiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompilerOptions">
+      <MemberSignature Language="C#" Value="public string CompilerOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CompilerOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.Compiler.CompilerOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("compilerOptions", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der compilerspezifisch-Optionen, um bei der Kompilierung verwendet.</summary>
+        <value>Ein Wert, der die compilerspezifisch-Optionen, während der Kompilierung verwendet. Dies ist nicht zusammengeführte Menge jedoch stattdessen überschreibt alle zuvor definierten Werte in früheren Konfigurationseinträge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extension">
+      <MemberSignature Language="C#" Value="public string Extension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Extension" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.Compiler.Extension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("extension", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Dateinamenerweiterungen für dynamische Code-Behind-Dateien verwendet.</summary>
+        <value>Ein-Wert, der Dateinamenerweiterungen für dynamische Code-Behind-Dateien verwendet, auf Dateien in das Codeverzeichnis und andere Dateien verweisen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Liste der Dateinamenerweiterungen mehr als eine Erweiterung enthält, ist die Liste durch Semikolon getrennt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public string Language { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.Compiler.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("language", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von Programmiersprachen, die in dynamischen Kompilierungsdateien verwendet.</summary>
+        <value>Ein Wert, der die Programmiersprachen, die in dynamischen Kompilierungsdateien verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Liste der Programmiersprachen mehr als einer Sprache enthält, ist die Liste durch Semikolon getrennt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.Compiler.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.Compiler.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Compilertypnamen des Language-Anbieters für dynamische Kompilierungsdateien ab.</summary>
+        <value>Ein Wert, der den Typnamen des Sprachcompilers, die in dynamischen Kompilierungsdateien verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt den Typnamen des Sprachanbieters, einschließlich des Namens der Assembly, die die Implementierung eines Anbieters enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WarningLevel">
+      <MemberSignature Language="C#" Value="public int WarningLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WarningLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.Compiler.WarningLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("warningLevel", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=4, MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Compiler-Warnstufe ab.</summary>
+        <value>Ein Wert, der die Warnstufe für den Compiler.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die Warnstufe für Standard-Compiler. Bestimmt die Ebene an, an der der Sprachanbieter Kompilierung Warnungen als Fehler behandelt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

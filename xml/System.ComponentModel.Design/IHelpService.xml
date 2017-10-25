@@ -1,0 +1,282 @@
+<Type Name="IHelpService" FullName="System.ComponentModel.Design.IHelpService">
+  <TypeSignature Language="C#" Value="public interface IHelpService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHelpService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IHelpService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Anzeigen von Hilfethemen sowie das Hinzufügen und Entfernen von Hilfeschlüsselwörtern zur Entwurfszeit bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die entwurfszeitumgebung bietet ein Hilfe, die versucht, suchen Sie die relevanten Hilfethemen angezeigt werden, wenn ein Benutzer F1 drückt. Das Hilfesystem verwaltet einen Satz von aktuellen Kontextschlüsselwörter, die verwendet werden, um relevante Themen zu identifizieren, wenn Hilfe angefordert wird. Standardmäßig sind Schlüsselwörter in der ausgewählten Klassenobjekte und Eigenschaften von Objekten in der entwurfszeitumgebung zugeordnet. Das Default-Schlüsselwort für eine Komponente oder die Eigenschaft ist seinem vollqualifizierten Namen der Klasse oder eine Eigenschaft an. Bestimmte Schlüsselwörter sind auch bestimmte Modi, z. B. wenn mehrere Objekte ausgewählt sind zugeordnet. Wenn eine benutzerdefinierte Hilfesammlung von seiner Konfiguration für einen Anbieter externe Hilfe in der entwurfszeitumgebung integriert ist, kann eine dokumentationsanbieter ein Themas für eine bestimmte Komponente-Klasse oder eine Eigenschaft mit einem Schlüsselwort vollständig bestehend aus des Elements zuordnen. Name des qualifizierten Typ oder Member.  
+  
+ Die <xref:System.ComponentModel.Design.IHelpService> dienen zum Aufrufen des Diensts Help mit einer angegebenen Schlüsselwort unter Verwendung der <xref:System.ComponentModel.Design.IHelpService.ShowHelpFromKeyword%2A> -Methode, oder zum Aufrufen von ein Hilfethema mit einer angegebenen URL unter Verwendung der <xref:System.ComponentModel.Design.IHelpService.ShowHelpFromUrl%2A> Methode.  
+  
+ Die <xref:System.ComponentModel.Design.IHelpService> kann auch zum Hinzufügen oder Entfernen von Hilfeschlüsselwörter zur Entwurfszeit verwendet werden. Wählen eine Komponente oder-Eigenschaft zur Entwurfs-Zeit eine Default-Schlüsselwort, Kontext bestehend aus den vollqualifizierten Typ oder Membernamen der Auswahl festlegt und die Schlüsselwörter für alle zuvor ausgewählten entfernt und nicht mehr ausgewählten Komponenten oder Eigenschaften.  
+  
+ Da das Hilfesystem benutzerdefinierte Hilfeschlüsselwörter nicht automatisch entfernt, müssen Sie ein benutzerdefiniertes Schlüsselwort explizit entfernen, wenn es nicht mehr gültig. Sie können überwachen, Ereignissen, definiert durch die <xref:System.ComponentModel.Design.ISelectionService> Schnittstelle, um zu bestimmen, wenn eine Komponente ausgewählt wird. Basierend auf diesen Ereignissen, können Sie ein Attribut des Hilfe-Kontext für eine Komponente hinzufügen, wenn diese Option ausgewählt ist und entfernen Sie dann das Kontextattribut Hilfe, wenn die Auswahl die Komponente nicht mehr enthält.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Designer, verwendet der <xref:System.ComponentModel.Design.IHelpService> hinzufügen und entfernen die Hilfe-Kontext-Attribute für das enthaltene Steuerelement. Um dieses Beispiel zu verwenden, kompilieren Sie ihn in eine Klassenbibliothek, und fügen Sie eine Instanz des Steuerelements auf eine <xref:System.Windows.Forms.Form>. In der Entwurfsansicht versucht bei Auswahl der Komponente, und drücken F1 relevanten Hilfethemen, die basierend auf dem aktuellen Kontext Hilfeschlüsselwort oder Schlüsselwörter zu suchen. Mit der rechten Maustaste in der Komponente und im Kontextmenü werden Befehle angezeigt, einschließlich der beiden benutzerdefinierten <xref:System.ComponentModel.Design.DesignerVerb> Befehle, die mit dem Namen `Add IHelpService Help Keyword` und `Remove IHelpService Help Keyword`. Diese Befehle dienen zum Hinzufügen oder entfernen ein Hilfekontext-Schlüsselwort mit dem Wert "IHelpService", zum Auslösen der <xref:System.ComponentModel.Design.IHelpService> Thema, wenn die F1-Taste gedrückt wird.  
+  
+ [!code-cpp[IHelpServiceExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IHelpServiceExample/CPP/source.cpp#1)]
+ [!code-csharp[IHelpServiceExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IHelpServiceExample/CS/source.cs#1)]
+ [!code-vb[IHelpServiceExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IHelpServiceExample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddContextAttribute">
+      <MemberSignature Language="C#" Value="public void AddContextAttribute (string name, string value, System.ComponentModel.Design.HelpKeywordType keywordType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddContextAttribute(string name, string value, valuetype System.ComponentModel.Design.HelpKeywordType keywordType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IHelpService.AddContextAttribute(System.String,System.String,System.ComponentModel.Design.HelpKeywordType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="keywordType" Type="System.ComponentModel.Design.HelpKeywordType" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Attributs auf Hinzufügen.</param>
+        <param name="value">Der Wert des Attributs.</param>
+        <param name="keywordType">Der Typ des Schlüsselworts aus der Enumeration <see cref="T:System.ComponentModel.Design.HelpKeywordType" />.</param>
+        <summary>Dem Dokument hinzugefügt einen Namenskontext-Attribut.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kontextattribute werden verwendet, um kontextbezogene Hilfe für Benutzer bereitzustellen. Der Designerhost fügt automatisch Kontextattribute aus verfügbaren Hilfe Attribute auf bestimmte Komponenten und Eigenschaften hinzu. Diese Methode können Sie kontextbezogene Hilfe weiter anpassen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearContextAttributes">
+      <MemberSignature Language="C#" Value="public void ClearContextAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearContextAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IHelpService.ClearContextAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle vorhandenen Kontextattribute aus dem Dokument.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLocalContext">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.IHelpService CreateLocalContext (System.ComponentModel.Design.HelpContextType contextType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.Design.IHelpService CreateLocalContext(valuetype System.ComponentModel.Design.HelpContextType contextType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IHelpService.CreateLocalContext(System.ComponentModel.Design.HelpContextType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.IHelpService</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextType" Type="System.ComponentModel.Design.HelpContextType" />
+      </Parameters>
+      <Docs>
+        <param name="contextType">Der Prioritätstyp der Prioritätstyp des hinzufügen.</param>
+        <summary>Erstellt einen lokalen <see cref="T:System.ComponentModel.Design.IHelpService" /> zum Verwalten von untergeordneten Kontexten.</summary>
+        <returns>Der neu erstellte <see cref="T:System.ComponentModel.Design.IHelpService" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveContextAttribute">
+      <MemberSignature Language="C#" Value="public void RemoveContextAttribute (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveContextAttribute(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IHelpService.RemoveContextAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu entfernenden Attributs.</param>
+        <param name="value">Der Wert des zu entfernenden Attributs.</param>
+        <summary>Entfernt einen zuvor hinzugefügten Namenskontext-Attribut.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveLocalContext">
+      <MemberSignature Language="C#" Value="public void RemoveLocalContext (System.ComponentModel.Design.IHelpService localContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveLocalContext(class System.ComponentModel.Design.IHelpService localContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IHelpService.RemoveLocalContext(System.ComponentModel.Design.IHelpService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localContext" Type="System.ComponentModel.Design.IHelpService" />
+      </Parameters>
+      <Docs>
+        <param name="localContext">Der lokale Kontext <see cref="T:System.ComponentModel.Design.IHelpService" /> zu entfernen.</param>
+        <summary>Entfernt einen Kontext mit erstellt <see cref="M:System.ComponentModel.Design.IHelpService.CreateLocalContext(System.ComponentModel.Design.HelpContextType)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelpFromKeyword">
+      <MemberSignature Language="C#" Value="public void ShowHelpFromKeyword (string helpKeyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowHelpFromKeyword(string helpKeyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IHelpService.ShowHelpFromKeyword(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="helpKeyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="helpKeyword">Das Schlüsselwort des anzuzeigenden Hilfethemas.</param>
+        <summary>Zeigt das Hilfethema an, das dem angegebenen Schlüsselwort entspricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Thema "des integrated Development Environment des Visual Studio Help System" angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelpFromUrl">
+      <MemberSignature Language="C#" Value="public void ShowHelpFromUrl (string helpUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowHelpFromUrl(string helpUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IHelpService.ShowHelpFromUrl(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="helpUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="helpUrl">Die URL des anzuzeigenden Hilfethemas.</param>
+        <summary>Zeigt das Hilfethema an, das der angegebenen URL entspricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Thema "des integrated Development Environment des Visual Studio Help System" angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

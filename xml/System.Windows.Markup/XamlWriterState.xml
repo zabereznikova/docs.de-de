@@ -1,0 +1,57 @@
+<Type Name="XamlWriterState" FullName="System.Windows.Markup.XamlWriterState">
+  <TypeSignature Language="C#" Value="public enum XamlWriterState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XamlWriterState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.XamlWriterState" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt mögliche schreiben-Status für einen benutzerdefinierten XAML-Writer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Keine vorhandenen [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] -API verwendet diese Enumeration für ihre Werte. Er kann für einen benutzerdefinierten XAML-Writer verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Finished">
+      <MemberSignature Language="C#" Value="Finished" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Markup.XamlWriterState Finished = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Markup.XamlWriterState.Finished" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.XamlWriterState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Markup.XamlWriter" /> Staffelung abgeschlossen wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Starting">
+      <MemberSignature Language="C#" Value="Starting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Markup.XamlWriterState Starting = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Markup.XamlWriterState.Starting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.XamlWriterState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Markup.XamlWriter" /> Staffelung wurde gestartet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

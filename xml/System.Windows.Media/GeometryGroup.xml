@@ -1,0 +1,275 @@
+<Type Name="GeometryGroup" FullName="System.Windows.Media.GeometryGroup">
+  <TypeSignature Language="C#" Value="public sealed class GeometryGroup : System.Windows.Media.Geometry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GeometryGroup extends System.Windows.Media.Geometry" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.GeometryGroup" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Geometry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Children")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine zusammengesetzte Geometrie, bestehend aus anderen <see cref="T:System.Windows.Media.Geometry" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusammengesetzte Geometrie-Objekte können erstellt werden, mithilfe einer <xref:System.Windows.Media.GeometryGroup>, <xref:System.Windows.Media.CombinedGeometry>, oder durch Aufrufen der statischen <xref:System.Windows.Media.Geometry> Methode <xref:System.Windows.Media.Geometry.Combine%2A>. Ein <xref:System.Windows.Media.CombinedGeometry> erstellt eine zusammengesetzte Geometrie aus genau zwei Geometry-Objekten. Ein <xref:System.Windows.Media.GeometryGroup>, andererseits, erstellt eine zusammengesetzte Geometrie aus einer beliebigen Anzahl von Geometry-Objekten.  
+  
+ <xref:System.Windows.Media.GeometryGroup>verwendet die <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Eigenschaft, um anzugeben, wie die Geometry-Objekten kombiniert werden. Finden Sie unter [wie: Steuern des Ausfüllens einer zusammengesetzten Form](~/docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md) für Weitere Informationen finden Sie unter <xref:System.Windows.Media.GeometryGroup.FillRule%2A>.  
+  
+ Geometrien kombiniert werden können, auf unterschiedliche Weise: Verwenden einer <xref:System.Windows.Media.GeometryGroup>, eine <xref:System.Windows.Media.CombinedGeometry>, oder die <xref:System.Windows.Media.Geometry.Combine%2A> Methode der <xref:System.Windows.Media.Geometry> Klasse.  
+  
+-   Ein <xref:System.Windows.Media.GeometryGroup> erstellt eine zusammengesetzte Geometrie aus einer oder mehreren <xref:System.Windows.Media.Geometry> Objekte.  
+  
+-   Ein <xref:System.Windows.Media.CombinedGeometry> verwendet eine angegebene boolesche Operation zum Kombinieren von zwei beschriebenen Bereichs <xref:System.Windows.Media.Geometry> Objekte.  
+  
+-   Die statische <xref:System.Windows.Media.Geometry.Combine%2A> Methode der <xref:System.Windows.Media.Geometry> Klasse verhält sich genau die gleiche Weise wie die <xref:System.Windows.Media.CombinedGeometry> Objekt.  
+  
+ Ist anzumerken, die eine <xref:System.Windows.Media.GeometryCollection> selbst ist keine zusammengesetzte Geometrie, jedoch werden die <xref:System.Windows.Media.GeometryGroup> Klasse zum Speichern von <xref:System.Windows.Media.Geometry> Objekte.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeometryGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeometryGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.GeometryGroup" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GeometryCollection Children { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.GeometryCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GeometryGroup.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GeometryCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der <see cref="T:System.Windows.Media.GeometryCollection" />, die das Objekt enthält, das diese <see cref="T:System.Windows.Media.GeometryGroup" /> definiert.</summary>
+        <value>Eine Auflistung, die die untergeordneten Elemente der <see cref="T:System.Windows.Media.GeometryGroup" /> enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Children"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.GeometryGroup.ChildrenProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildrenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ChildrenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ChildrenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.GeometryGroup.ChildrenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.GeometryGroup.Children" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GeometryGroup Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.GeometryGroup Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeometryGroup.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GeometryGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.GeometryGroup" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GeometryGroup CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.GeometryGroup CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeometryGroup.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GeometryGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.GeometryGroup" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeometryGroup.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillRule">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FillRule FillRule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.FillRule FillRule" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GeometryGroup.FillRule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FillRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, wie die sich überschneidenden Bereiche der Objekte in dieser enthaltenen <see cref="T:System.Windows.Media.GeometryGroup" /> kombiniert werden.</summary>
+        <value>Gibt an, wie die sich überschneidenden Bereiche kombiniert werden, um den resultierenden Bereich zu bilden.  Der Standardwert ist <c>EvenOdd</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **EvenOdd** bestimmt, ob"eines Punkts auf die Form durch ein unendlicher Strahl von diesem Punkt in eine beliebige Richtung gezeichnet und zählen der Anzahl der Pfadsegmente in der angegebenen Form, die den Strahl schneidet. Bei einer ungeraden Zahl liegt der Punkt innen, und bei einer geraden Zahl liegt er außen.  
+  
+ **Ungleich NULL** bestimmt, die "ob" eines Punkts auf der Form indem ein unendlicher Strahl von diesem Punkt in eine beliebige Richtung gezeichnet und anschließend die Stellen untersucht, in denen ein Segment der Form den Strahl schneidet. Beginnen Sie mit dem Wert 0 (null), und addieren Sie für jede Stelle, an der ein Segment den Strahl von links nach rechts schneidet, den Wert 1. Wenn das Ergebnis nach dem Zählen der Überschneidungen 0 (null) ist, liegt der Punkt außerhalb des Pfads. Andernfalls liegt er innerhalb des Pfads.  
+  
+ ![Füllungsregel-Darstellung](~/add/media/ref-mil-fillrule-stars.PNG "Füllungsregel-Darstellung")  
+Beispiel für FillRule  
+  
+<a name="dependencyPropertyInfo_FillRule"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.GeometryGroup.FillRuleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillRuleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FillRuleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FillRuleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.GeometryGroup.FillRuleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.GeometryGroup.FillRule" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public override bool IsEmpty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsEmpty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeometryGroup.IsEmpty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dies <see cref="T:System.Windows.Media.GeometryGroup" /> Objekt leer ist.</summary>
+        <returns>**"true"** Wenn diese <see cref="T:System.Windows.Media.GeometryGroup" /> leer ist; andernfalls, **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MayHaveCurves">
+      <MemberSignature Language="C#" Value="public override bool MayHaveCurves ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MayHaveCurves() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeometryGroup.MayHaveCurves" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dies <see cref="T:System.Windows.Media.GeometryGroup" /> Objekt möglicherweise gekrümmte Segmente aufweisen.</summary>
+        <returns>**"true"** Wenn diese <see cref="T:System.Windows.Media.GeometryGroup" /> Objekt möglicherweise gekrümmte Segmente aufweisen, andernfalls **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

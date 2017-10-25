@@ -1,0 +1,235 @@
+<Type Name="SqlNotificationSource" FullName="System.Data.SqlClient.SqlNotificationSource">
+  <TypeSignature Language="C#" Value="public enum SqlNotificationSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlNotificationSource extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlNotificationSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Quelle der Benachrichtigung von der Abhängigkeit-Ereignishandler empfangen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `SqlNotificationSource` Enumeration wird von einer Instanz von verwiesen die <xref:System.Data.SqlClient.SqlNotificationEventArgs> Klasse.  
+  
+ Abfragebenachrichtigungen werden nur für SELECT-Anweisungen unterstützt, die bestimmte Anforderungen erfüllen. Die folgende Tabelle enthält Links zur SQL Server-Onlinedokumentation zu Service Broker und Abfragebenachrichtigungen.  
+  
+ **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
+  
+-   [Erstellen eine Abfrage für die Benachrichtigung](http://msdn.microsoft.com/library/ms181122.aspx)  
+  
+-   [Sicherheitsaspekte für Service Broker](http://msdn.microsoft.com/library/ms166059.aspx)  
+  
+-   [Sicherheit und Schutz (Service Broker)](http://msdn.microsoft.com/library/bb522911.aspx)  
+  
+-   [Sicherheitsaspekte für Notification Services](http://msdn.microsoft.com/library/ms172604.aspx)  
+  
+-   [Berechtigungen für Abfragebenachrichtigungen](http://msdn.microsoft.com/library/ms188311.aspx)  
+  
+-   [Internationale Gesichtspunkte bei Service Broker](http://msdn.microsoft.com/library/ms166028.aspx)  
+  
+-   [Überlegungen zu Lösungsentwürfen (Service Broker)](http://msdn.microsoft.com/library/bb522899.aspx)  
+  
+-   [Service Broker-Entwickler (InfoCenter)](http://msdn.microsoft.com/library/ms166100.aspx)  
+  
+-   [Entwicklerhandbuch (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Client">
+      <MemberSignature Language="C#" Value="Client" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationSource Client = int32(-2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationSource.Client" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Benachrichtigung vom Client initiierte aufgetreten ist, z. B. ein clientseitiges Timeout oder als Ergebnis der Versuch, einen Befehl für eine Abhängigkeit hinzufügen, die bereits ausgelöst wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="Data" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationSource Data = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationSource.Data" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Daten geändert hat. Beispielsweise ist aufgetreten, eine INSERT-, Update-, DELETE- oder truncate-Vorgang.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Database">
+      <MemberSignature Language="C#" Value="Database" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationSource Database = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationSource.Database" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Datenbankstatus geändert; die Datenbank, die im Zusammenhang mit der Abfrage wurde z. B. gelöscht oder getrennt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Environment">
+      <MemberSignature Language="C#" Value="Environment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationSource Environment = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationSource.Environment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Laufzeitumgebung war nicht kompatibel mit Benachrichtigungen. beispielsweise die Isolationsstufe auf Snapshot festgelegt wurde, oder eine oder mehrere SET-Optionen sind nicht kompatibel.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Execution">
+      <MemberSignature Language="C#" Value="Execution" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationSource Execution = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationSource.Execution" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Während der Ausführung ist ein Laufzeitfehler aufgetreten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Object">
+      <MemberSignature Language="C#" Value="Object" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationSource Object = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationSource.Object" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Datenbankobjekt geändert; Angenommen, wurde ein zugrunde liegendes Objekt im Zusammenhang mit der Abfrage gelöscht oder geändert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="Owner" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationSource Owner = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationSource.Owner" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur intern; sollen nicht in Ihrem Code verwendet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Statement">
+      <MemberSignature Language="C#" Value="Statement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationSource Statement = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationSource.Statement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Transact-SQL-Anweisung ist nicht gültig für Benachrichtigungen. z. B. wurde eine SELECT-Anweisung, die nicht benachrichtigt werden konnte oder eine nicht-SELECT-Anweisung ausgeführt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="System" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationSource System = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationSource.System" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine systembedingte Ereignis aufgetreten ist. Ein interner Fehler aufgetreten, der Server wurde neu gestartet oder knappe Systemressourcen verursacht der Ungültigkeitserklärung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="Timeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationSource Timeout = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationSource.Timeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Abonnement ist abgelaufen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationSource Unknown = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationSource.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwendet, wenn die vom Server gesendete Quelloption vom Client nicht erkannt wurde.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

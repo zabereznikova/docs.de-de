@@ -1,0 +1,1942 @@
+<Type Name="ImmutableSortedSet&lt;T&gt;" FullName="System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class ImmutableSortedSet&lt;T&gt; : System.Collections.Generic.ICollection&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyCollection&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.ISet&lt;T&gt;, System.Collections.IList, System.Collections.Immutable.IImmutableSet&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ImmutableSortedSet`1&lt;T&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;!T&gt;, class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.Generic.IList`1&lt;!T&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;!T&gt;, class System.Collections.Generic.IReadOnlyList`1&lt;!T&gt;, class System.Collections.Generic.ISet`1&lt;!T&gt;, class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList, class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Immutable.ImmutableSortedSet`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Immutable</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>1.2.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IList&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyList&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ISet&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Immutable.IImmutableSet&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">Der Typ der Elemente in der Gruppe.</typeparam>
+    <summary>Stellt die Implementierung einer unveränderlichen sortierten Gruppe dar.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellen Sie eine neue unveränderliche sortierte Gruppe, die vorab mit Daten aufgefüllt ist mit Elementen mithilfe der <xref:System.Collections.Immutable.ImmutableSortedSet.CreateRange%2A> Methode. Wenn Sie bearbeiten eine unveränderliche Gruppe mit Methoden wie z. B. <xref:System.Collections.Immutable.ImmutableSortedSet%601.Add%2A>, <xref:System.Collections.Immutable.ImmutableSortedSet%601.Reverse%2A> oder <xref:System.Collections.Immutable.ImmutableSortedSet%601.Remove%2A>, eine Kopie der ursprünglichen sortierten Gruppe erfolgt, Manipulationen angewendet und es wird eine neue unveränderliche sortierte Gruppe zurückgegeben.  
+  
+ Wenn Sie mehrere Vorgänge auf eine unveränderliche Auflistung, um die Effizienz zu erhöhen, können Sie kopieren, müssen die <xref:System.Collections.Immutable.ImmutableSortedSet%601> auf eine <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder>unter Verwendung der <xref:System.Collections.Immutable.ImmutableSortedSet%601.ToBuilder%2A> -Methode, bearbeiten, und stellen Sie es erneut mit unveränderlichen die <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder.ToImmutable%2A> Methode. Dadurch wird die ursprüngliche unveränderliche sortierte Gruppe nicht geändert.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableSortedSet&lt;T&gt; Add (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableSortedSet`1&lt;!T&gt; Add(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der hinzuzufügende Wert.</param>
+        <summary>Fügt dieser unveränderlichen sortierten Gruppe den angegebenen Wert hinzu.</summary>
+        <returns>Eine neue Gruppe mit dem hinzugefügten Element oder diese Gruppe, wenn das Element bereits in dieser Gruppe enthalten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableSortedSet&lt;T&gt; Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableSortedSet`1&lt;!T&gt; Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der unveränderlichen sortierten Gruppe.</summary>
+        <returns>Eine leere Gruppe, aus der die Elemente entfernt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu suchende Wert.</param>
+        <summary>Ermittelt, ob diese unveränderliche sortierte Gruppe den angegebenen Wert enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn die Gruppe den angegebenen Wert enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der unveränderlich sortierten Gruppe ab.</summary>
+        <value>Die Anzahl der Elemente in der unveränderlichen sortierten Gruppe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Collections.Immutable.ImmutableSortedSet&lt;T&gt; Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Collections.Immutable.ImmutableSortedSet`1&lt;!T&gt; Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Collections.Immutable.ImmutableSortedSet`1.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine leere unveränderliche sortierte Gruppe ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Except">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableSortedSet&lt;T&gt; Except (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableSortedSet`1&lt;!T&gt; Except(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.Except(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Elemente, die aus der Gruppe entfernt werden sollen.</param>
+        <summary>Entfernt eine angegebene Gruppe von Elementen aus dieser unveränderlichen sortierten Gruppe.</summary>
+        <returns>Eine neue Gruppe, aus der die Elemente entfernt wurden; oder die ursprüngliche Gruppe, wenn keines der Elemente in der Gruppe enthalten war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;.Enumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableSortedSet`1/Enumerator&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;+Enumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die unveränderliche sortierte Gruppe durchläuft.</summary>
+        <returns>Ein Enumerator, der zum Durchlaufen der Gruppe verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Bei der Verwendung dieser Enumerator als Wert eingeben (das heißt, wenn dieser geschachtelt ist nicht), nicht kopieren, ihn einer zweiten Variable zuweisen oder durch Übergabe an eine andere Methode. Wenn dieser Enumerator verworfen wird und es gibt einen änderbare Verweis Typ Stapel, an einen Ressourcenpool zurück, wenn der Wert typenumerator kopiert wird (die einfach unbeabsichtigt kann passieren, wenn der Wert um übergeben werden), besteht das Risiko, die einen Stapel, der bereits stattgefunden hat zurückgegeben, auf die Ressource Pool noch nicht von einem der Enumerator Kopien, was zu datenbeschädigung und Ausnahmen.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.IndexOf(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Der Wert, dessen Position gesucht wird.</param>
+        <summary>Ruft die Position, an der der angegebene Wert auftritt, innerhalb dieser unveränderlichen sortierten Gruppe ab.</summary>
+        <returns>Der Index des angegebenen <paramref name="item" /> in der sortierten Gruppe, sofern <paramref name="item" /> gefunden wurde. Wenn <paramref name="item" /> nicht gefunden wurde und kleiner als mindestens ein Element in dieser Gruppe ist, gibt diese Methode eine negative Zahl zurück, die das bitweise Komplement des Indexes des ersten Elements darstellt, das größer als der Wert ist. Wenn <paramref name="item" /> nicht gefunden wurde und größer als alle Elemente in der Gruppe ist, gibt diese Methode eine negative Zahl zurück, die das bitweise Komplement des Indexes des letzten Elements plus 1 darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableSortedSet&lt;T&gt; Intersect (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableSortedSet`1&lt;!T&gt; Intersect(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.Intersect(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Gruppe, deren Schnittmenge mit dieser gebildet werden soll.</param>
+        <summary>Erstellt eine unveränderliche sortierte Gruppe, die Elemente enthält, die sowohl in dieser Gruppe als auch in der angegebenen Gruppe vorhanden sind.</summary>
+        <returns>Eine neue unveränderliche sortierte Gruppe, die Elemente enthält, die in beiden Gruppen vorhanden sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob diese unveränderliche sortierte Gruppe leer ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Gruppe leer ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsProperSubsetOf">
+      <MemberSignature Language="C#" Value="public bool IsProperSubsetOf (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsProperSubsetOf(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.IsProperSubsetOf(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle unveränderliche sortierte Gruppe eine echte (strikte) Teilmenge der angegebenen Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Gruppe eine echte Teilmenge von <paramref name="other" /> ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine leere Menge ist eine echte Teilmenge von einer anderen Sammlung an. Aus diesem Grund gibt diese Methode zurück `true` ist die aktuelle Gruppe leer ist, es sei denn, die `other` Sammlung wird auch leer.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsProperSupersetOf">
+      <MemberSignature Language="C#" Value="public bool IsProperSupersetOf (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsProperSupersetOf(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.IsProperSupersetOf(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle unveränderliche sortierte Gruppe eine echte Obermenge einer angegebenen Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Gruppe eine echte Obermenge von <paramref name="other" /> ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine leere Menge ist eine echte Obermenge von einer anderen Sammlung an. Deshalb Methodenrückgabe `true` , wenn die Auflistung von dargestellt die `other` Parameter ist leer, wenn die aktuelle Gruppe ebenfalls leer ist.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public bool IsSubsetOf (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSubsetOf(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.IsSubsetOf(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle unveränderliche sortierte Gruppe eine Teilmenge einer angegebenen Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Gruppe eine Teilmenge von <paramref name="other" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine leere Menge ist eine Teilmenge eines anderen Satzes, einschließlich einer anderen leerer Satz. Aus diesem Grund gibt diese Methode zurück `true` ist die aktuelle Gruppe leer ist, auch wenn die `other` Sammlung wird auch leer.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupersetOf">
+      <MemberSignature Language="C#" Value="public bool IsSupersetOf (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSupersetOf(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.IsSupersetOf(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle unveränderliche sortierte Gruppe eine Obermenge einer angegebenen Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Gruppe eine Obermenge von <paramref name="other" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Auflistungen, einschließlich leerer Mengen sind Obermengen ein leeres Resultset. Aus diesem Grund Methodenrückgabe `true` , wenn die Auflistung von dargestellt die `other` Parameter leer ist, auch wenn die aktuelle sortiert-Satz ist leer.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public T this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements, das aus der sortierten Gruppe abgerufen werden soll.</param>
+        <summary>Ruft das Element der unveränderlichen sortierten Gruppe am angegebenen Index ab.</summary>
+        <value>Das Element am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyComparer">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IComparer&lt;T&gt; KeyComparer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IComparer`1&lt;!T&gt; KeyComparer" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.KeyComparer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IComparer&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vergleich ab, der zum Sortieren von Schlüsseln in der unveränderlichen sortierten Gruppe verwendet wird.</summary>
+        <value>Der zum Sortieren von Schlüsseln verwendete Vergleich.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Max">
+      <MemberSignature Language="C#" Value="public T Max { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Max" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.Max" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den durch den Vergleich definierten Höchstwert in der unveränderlich sortierten Gruppe ab.</summary>
+        <value>Der Höchstwert in der Gruppe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Min">
+      <MemberSignature Language="C#" Value="public T Min { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Min" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.Min" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den durch den Vergleich definierten Mindestwert in der unveränderlich sortierten Gruppe ab.</summary>
+        <value>Der Mindestwert in der Gruppe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Overlaps">
+      <MemberSignature Language="C#" Value="public bool Overlaps (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Overlaps(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.Overlaps(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle unveränderliche sortierte Gruppe und eine angegebene Auflistung gemeinsame Elemente enthalten.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Auflistung und <paramref name="other" /> über mindestens ein gemeinsames Element verfügen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableSortedSet&lt;T&gt; Remove (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableSortedSet`1&lt;!T&gt; Remove(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu entfernende Element.</param>
+        <summary>Entfernt den angegebenen Wert aus dieser unveränderlichen sortierten Gruppe.</summary>
+        <returns>Eine neue unveränderliche sortierte Gruppe, aus der das Element entfernt wurde, oder diese Gruppe, wenn das Element in der Gruppe nicht gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reverse">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;T&gt; Reverse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!T&gt; Reverse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.Reverse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt <see cref="T:System.Collections.Generic.IEnumerable`1" /> zum Durchlaufen dieser unveränderlichen sortierten Gruppe in umgekehrter Reihenfolge zurück.</summary>
+        <returns>Ein Enumerator, der die unveränderliche sortierte Gruppe in umgekehrter Reihenfolge durchläuft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEquals">
+      <MemberSignature Language="C#" Value="public bool SetEquals (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetEquals(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.SetEquals(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle unveränderliche sortierte Gruppe und die angegebene Auflistung dieselben Elemente enthalten.</summary>
+        <returns>
+          <see langword="true" />, wenn die Gruppen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SymmetricExcept">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableSortedSet&lt;T&gt; SymmetricExcept (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableSortedSet`1&lt;!T&gt; SymmetricExcept(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.SymmetricExcept(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die andere Sequenz von Elementen.</param>
+        <summary>Erstellt eine unveränderliche sortierte Gruppe, die Elemente enthält, die entweder in dieser Gruppe oder in einer angegebenen Sequenz, aber nicht in beiden vorhanden sind.</summary>
+        <returns>Die neue unveränderliche sortierte Gruppe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.Add">
+      <MemberSignature Language="C#" Value="void ICollection&lt;T&gt;.Add (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;T&gt;.Add(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#ICollection&lt;T&gt;#Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Der hinzuzufügende Wert.</param>
+        <summary>Fügt der Auflistung den angegebenen Wert hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Generic.ICollection%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.Clear">
+      <MemberSignature Language="C#" Value="void ICollection&lt;T&gt;.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;T&gt;.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#ICollection&lt;T&gt;#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Generic.ICollection%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection&lt;T&gt;.CopyTo (T[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;T&gt;.CopyTo(!T[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#ICollection&lt;T&gt;#CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array, das das Ziel der aus der Auflistung kopierten Elemente ist. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="arrayIndex">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der Auflistung in ein Array, wobei an einem bestimmten Arrayindex begonnen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Generic.ICollection%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#ICollection&lt;T&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Finden Sie unter der <see cref="T:System.Collections.Generic.ICollection`1" /> Schnittstelle.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.Remove">
+      <MemberSignature Language="C#" Value="bool ICollection&lt;T&gt;.Remove (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;T&gt;.Remove(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#ICollection&lt;T&gt;#Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das aus der Auflistung zu entfernende Objekt.</param>
+        <summary>Entfernt das erste Vorkommen eines bestimmten Objekts aus der Auflistung.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="item" /> erfolgreich aus der Auflistung entfernt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Generic.ICollection%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;T&gt; IEnumerable&lt;T&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#IEnumerable&lt;T&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Auflistung durchläuft.</summary>
+        <returns>Ein Enumerator, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;T&gt;.Insert">
+      <MemberSignature Language="C#" Value="void IList&lt;T&gt;.Insert (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IList&lt;T&gt;.Insert(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#IList&lt;T&gt;#Insert(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Element</c> eingefügt werden soll.</param>
+        <param name="item">Das in die Gruppe einzufügende Objekt.</param>
+        <summary>Fügt ein Element am angegebenen Index in die Gruppe ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Generic.IList%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;T&gt;.Item">
+      <MemberSignature Language="C#" Value="T System.Collections.Generic.IList&lt;T&gt;.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T System.Collections.Generic.IList&lt;T&gt;.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#IList&lt;T&gt;#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>Finden Sie unter der <see cref="T:System.Collections.Generic.IList`1" /> Schnittstelle.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;T&gt;.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList&lt;T&gt;.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IList&lt;T&gt;.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#IList&lt;T&gt;#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Generic.IList%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ISet&lt;T&gt;.Add">
+      <MemberSignature Language="C#" Value="bool ISet&lt;T&gt;.Add (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ISet&lt;T&gt;.Add(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#ISet&lt;T&gt;#Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Der Element, das zur Menge hinzugefügt wird.</param>
+        <summary>Fügt der aktuellen Gruppe ein Element hinzu und gibt einen Wert zurück, um anzugeben, ob das Element erfolgreich hinzugefügt wurde.</summary>
+        <returns>
+          <see langword="true" />, wenn das Element der Gruppe hinzugefügt wurde. <see langword="false" />, wenn das Element bereits in der Gruppe enthalten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Generic.ISet%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ISet&lt;T&gt;.ExceptWith">
+      <MemberSignature Language="C#" Value="void ISet&lt;T&gt;.ExceptWith (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ISet&lt;T&gt;.ExceptWith(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#ISet&lt;T&gt;#ExceptWith(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung der Elemente, die aus der Gruppe entfernt werden sollen.</param>
+        <summary>Entfernt alle Elemente in der angegebenen Auflistung aus der aktuellen Gruppe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Generic.ISet%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ISet&lt;T&gt;.IntersectWith">
+      <MemberSignature Language="C#" Value="void ISet&lt;T&gt;.IntersectWith (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ISet&lt;T&gt;.IntersectWith(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#ISet&lt;T&gt;#IntersectWith(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Ändert die aktuelle Gruppe, sodass sie nur Elemente enthält, die in einer angegebenen Auflistung ebenfalls enthalten sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Generic.ISet%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ISet&lt;T&gt;.SymmetricExceptWith">
+      <MemberSignature Language="C#" Value="void ISet&lt;T&gt;.SymmetricExceptWith (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ISet&lt;T&gt;.SymmetricExceptWith(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#ISet&lt;T&gt;#SymmetricExceptWith(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Ändert die aktuelle Gruppe, sodass sie nur Elemente enthält, die entweder in der aktuellen Gruppe oder in der angegebenen Auflistung, nicht jedoch in beiden vorhanden sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Generic.ISet%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ISet&lt;T&gt;.UnionWith">
+      <MemberSignature Language="C#" Value="void ISet&lt;T&gt;.UnionWith (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ISet&lt;T&gt;.UnionWith(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Generic#ISet&lt;T&gt;#UnionWith(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Ändert die aktuelle Gruppe, sodass sie alle Elemente enthält, die entweder in der aktuellen Gruppe oder in der angegebenen Auflistung vorhanden sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Generic.ISet%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array, das das Ziel der aus der Gruppe kopierten Elemente ist. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der Gruppe in ein Array, wobei an einem bestimmten Arrayindex begonnen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Finden Sie unter der <see cref="T:System.Collections.ICollection" /> Schnittstelle.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Siehe <see cref="T:System.Collections.ICollection" />.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der eine Auflistung durchläuft.</summary>
+        <returns>Ein Enumeratorobjekt, mit dessen Hilfe die Auflistung durchlaufen werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.IEnumerable>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das der Gruppe hinzugefügt werden soll.</param>
+        <summary>Fügt der Gruppe ein Element hinzu.</summary>
+        <returns>Die Position, an der das neue Element eingefügt wurde, oder -1, um anzugeben, dass das Element nicht in die Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Gruppe schreibgeschützt ist oder eine feste Größe aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der Gruppe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das in der Gruppe gesucht werden soll.</param>
+        <summary>Ermittelt, ob die Gruppe einen bestimmten Wert enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn das Objekt in der Gruppe gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das in der Gruppe gesucht werden soll.</param>
+        <summary>Bestimmt den Index eines bestimmten Elements in der Gruppe.</summary>
+        <returns>Der Index von <paramref name="value" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Wert</c> eingefügt werden soll.</param>
+        <param name="value">Das in die Gruppe einzufügende Objekt.</param>
+        <summary>Fügt ein Element am angegebenen Index in die Gruppe ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Gruppe schreibgeschützt ist oder eine feste Größe aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Collections.IList" /> eine feste Größe aufweist.</summary>
+        <value>True, wenn die <see cref="T:System.Collections.IList" /> hat eine feste Größe, andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist.</summary>
+        <value>True, wenn die <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist, andernfalls "false" ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index.</param>
+        <summary>Ruft die <see cref="T:System.Object" />-Klasse am angegebenen Index ab oder legt diese fest.</summary>
+        <value>Die <see cref="T:System.Object" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das aus der Gruppe zu entfernende Objekt.</param>
+        <summary>Entfernt das erste Vorkommen eines bestimmten Objekts aus der Gruppe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Gruppe schreibgeschützt ist oder eine feste Größe aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element am angegebenen Index aus der Gruppe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Gruppe schreibgeschützt ist oder eine feste Größe aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableSet&lt;T&gt;.Add">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableSet&lt;T&gt; IImmutableSet&lt;T&gt;.Add (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; System.Collections.Immutable.IImmutableSet&lt;T&gt;.Add(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Immutable#IImmutableSet&lt;T&gt;#Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende Element.</param>
+        <summary>Fügt dieser unveränderlichen Gruppe das angegebene Element hinzu.</summary>
+        <returns>Eine neue Gruppe mit dem hinzugefügten Element oder diese Gruppe, wenn das Element bereits in der Gruppe enthalten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableSet%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableSet&lt;T&gt;.Clear">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableSet&lt;T&gt; IImmutableSet&lt;T&gt;.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; System.Collections.Immutable.IImmutableSet&lt;T&gt;.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Immutable#IImmutableSet&lt;T&gt;#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine leere unveränderliche Gruppe ab, die dieselbe Sortierungs- und Reihenfolgensematik wie diese Instanz besitzt.</summary>
+        <returns>Eine leere unveränderliche Gruppe, die dieselbe Sortierungs- und Reihenfolgensematik wie diese Instanz besitzt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableSet%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableSet&lt;T&gt;.Except">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableSet&lt;T&gt; IImmutableSet&lt;T&gt;.Except (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; System.Collections.Immutable.IImmutableSet&lt;T&gt;.Except(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Immutable#IImmutableSet&lt;T&gt;#Except(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Elemente, die aus der Gruppe entfernt werden sollen.</param>
+        <summary>Entfernt die Elemente in der angegebenen Auflistung aus der aktuellen unveränderlichen Gruppe.</summary>
+        <returns>Die neue Gruppe, aus der die Elemente entfernt wurden; oder die ursprüngliche Gruppe, wenn keines der Elemente in der Gruppe enthalten war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableSet%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableSet&lt;T&gt;.Intersect">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableSet&lt;T&gt; IImmutableSet&lt;T&gt;.Intersect (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; System.Collections.Immutable.IImmutableSet&lt;T&gt;.Intersect(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Immutable#IImmutableSet&lt;T&gt;#Intersect(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Erstellt eine unveränderliche Gruppe, die Elemente enthält, die sowohl in dieser Gruppe als auch in der angegebenen Gruppe vorhanden sind.</summary>
+        <returns>Eine neue unveränderliche Gruppe, die alle Elemente enthält, die in beiden Gruppen vorhanden sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableSet%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableSet&lt;T&gt;.Remove">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableSet&lt;T&gt; IImmutableSet&lt;T&gt;.Remove (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; System.Collections.Immutable.IImmutableSet&lt;T&gt;.Remove(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Immutable#IImmutableSet&lt;T&gt;#Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu entfernende Element.</param>
+        <summary>Fügt dieser unveränderlichen Gruppe das angegebene Element hinzu.</summary>
+        <returns>Eine neue Gruppe, aus der das angegebene Element entfernt wurde, oder die aktuelle Gruppe, wenn das Element in der Gruppe nicht gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableSet%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableSet&lt;T&gt;.SymmetricExcept">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableSet&lt;T&gt; IImmutableSet&lt;T&gt;.SymmetricExcept (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; System.Collections.Immutable.IImmutableSet&lt;T&gt;.SymmetricExcept(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Immutable#IImmutableSet&lt;T&gt;#SymmetricExcept(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Erstellt eine unveränderliche Gruppe, die nur Elemente enthält, die entweder in der aktuellen Gruppe oder in der angegebenen Auflistung, aber nicht in beiden vorhanden sind.</summary>
+        <returns>Eine neue Gruppe mit den Elementen, die nur in der aktuellen Gruppe oder in der angegebenen Auflistung, aber nicht in beiden vorhanden sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableSet%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableSet&lt;T&gt;.Union">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableSet&lt;T&gt; IImmutableSet&lt;T&gt;.Union (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; System.Collections.Immutable.IImmutableSet&lt;T&gt;.Union(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.System#Collections#Immutable#IImmutableSet&lt;T&gt;#Union(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, aus der Elemente hinzugefügt werden sollen.</param>
+        <summary>Erstellt eine unveränderliche Gruppe, die alle Elemente enthält, die entweder in der aktuellen Gruppe oder in der angegebenen Auflistung vorhanden sind.</summary>
+        <returns>Eine neue unveränderliche Gruppe mit den hinzugefügten Elementen; oder die ursprüngliche Gruppe, wenn alle Elemente bereits in der Gruppe enthalten waren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableSortedSet%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableSet%601>-Schnittstelle umgewandelt wird.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToBuilder">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;.Builder ToBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableSortedSet`1/Builder&lt;!T&gt; ToBuilder() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.ToBuilder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;+Builder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Auflistung, die denselben Inhalt wie diese unveränderliche sortierte Gruppe aufweist und mithilfe änderbarer Standardschnittstellen effizient bearbeitet werden kann.</summary>
+        <returns>Der Generator für sortierte Gruppen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie mehrere Vorgänge auf eine unveränderliche Auflistung, um die Effizienz zu erhöhen, können Sie kopieren, müssen die <xref:System.Collections.Immutable.ImmutableSortedSet%601> auf eine <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder>unter Verwendung der <xref:System.Collections.Immutable.ImmutableSortedSet%601.ToBuilder%2A> -Methode, bearbeiten, und stellen Sie es erneut mit unveränderlichen die <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder.ToImmutable%2A> Methode. Dadurch wird die ursprüngliche unveränderliche sortierte Gruppe nicht geändert.  
+  
+ Dies ist ein o(1)-Vorgang und führt nur eine (klein) speicherbelegung. Die änderbare Auflistung, die zurückgegeben wird, ist nicht threadsicher.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (T equalValue, out T actualValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(!T equalValue, [out] !T&amp; actualValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.TryGetValue(`0,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equalValue" Type="T" />
+        <Parameter Name="actualValue" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="equalValue">Der zu suchende Wert.</param>
+        <param name="actualValue">Der bei der Suche in der Gruppe gefundene Wert, oder der ursprüngliche Wert, wenn die Suche keine Übereinstimmung ergeben hat.</param>
+        <summary>Durchsucht die Gruppe nach einem angegebenen Wert und gibt ggf. den identischen Wert zurück, sofern vorhanden.</summary>
+        <returns>Ein Wert, der angibt, ob die Suche erfolgreich war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies kann nützlich sein, wenn Sie möchten einen zuvor gespeicherten Verweis statt einer neu erstellten wiederverwenden (sodass weitere Freigabe der Verweise erfolgen kann) oder um einen Wert zu suchen, die umfangreichere Daten als der Wert, der Sie derzeit verwenden, verfügt, obwohl ihre Comparer-Funktionen Zeigen sie gleich sind.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableSortedSet&lt;T&gt; Union (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableSortedSet`1&lt;!T&gt; Union(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.Union(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die hinzuzufügenden Elemente.</param>
+        <summary>Fügt dieser unveränderlichen sortierten Gruppe eine bestimmte Gruppe von Elementen hinzu.</summary>
+        <returns>Die neue Gruppe mit den hinzugefügten Elementen; oder die ursprüngliche Gruppe, wenn alle Elemente bereits in der Gruppe enthalten waren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithComparer">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableSortedSet&lt;T&gt; WithComparer (System.Collections.Generic.IComparer&lt;T&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableSortedSet`1&lt;!T&gt; WithComparer(class System.Collections.Generic.IComparer`1&lt;!T&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedSet`1.WithComparer(System.Collections.Generic.IComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">Der zu suchende Vergleich.</param>
+        <summary>Gibt die unveränderliche sortierte Gruppe mit dem angegebenen Schlüsselvergleich zurück.</summary>
+        <returns>Die unveränderliche sortierte Gruppe mit dem angegebenen Schlüsselvergleich.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

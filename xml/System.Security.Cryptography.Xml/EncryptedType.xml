@@ -1,0 +1,476 @@
+<Type Name="EncryptedType" FullName="System.Security.Cryptography.Xml.EncryptedType">
+  <TypeSignature Language="C#" Value="public abstract class EncryptedType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EncryptedType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.EncryptedType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die abstrakte Basisklasse dar, von dem die Klassen <see cref="T:System.Security.Cryptography.Xml.EncryptedData" /> und <see cref="T:System.Security.Cryptography.Xml.EncryptedKey" /> abgeleitet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse stellt die abstrakte Basisklasse dar, von dem die Klassen <xref:System.Security.Cryptography.Xml.EncryptedData> und <xref:System.Security.Cryptography.Xml.EncryptedKey> abgeleitet werden. Diese beiden Klassen enthalten die tatsächlichen verschlüsselten Daten oder die Schlüsselinformationen in XML-Verschlüsselung. Um die XML-Verschlüsselungsstandards zu erfüllen, sollten Sie diese beiden abgeleiteten Klassen verwenden.  
+  
+ Weitere Informationen zu XML-Verschlüsselungsstandards finden Sie unter http://www.w3.org/TR/xmlenc-core/.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln eines XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> von abgeleitete Klasse die <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse.  
+  
+ [!code-csharp[Cryptography.XML-EncryptedData - EncryptedType#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML-EncryptedData - EncryptedType/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML-EncryptedData - EncryptedType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML-EncryptedData - EncryptedType/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EncryptedType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedType.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.EncryptedType" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine neue Instanz der dem <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse. Diese Klasse stellt die abstrakte Basisklasse dar, von dem die Klassen <xref:System.Security.Cryptography.Xml.EncryptedData> und <xref:System.Security.Cryptography.Xml.EncryptedKey> abgeleitet werden. Um die XML-Verschlüsselungsstandards zu erfüllen, sollten Sie die zwei abgeleiteten Klassen verwenden. Weitere Informationen zu XML-Verschlüsselungsstandards finden Sie unter http://www.w3.org/TR/xmlenc-core/.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln eines XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> von abgeleitete Klasse die <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse.  
+  
+ [!code-csharp[Cryptography.XML-EncryptedData - EncryptedType#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML-EncryptedData - EncryptedType/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML-EncryptedData - EncryptedType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML-EncryptedData - EncryptedType/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddProperty">
+      <MemberSignature Language="C#" Value="public void AddProperty (System.Security.Cryptography.Xml.EncryptionProperty ep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddProperty(class System.Security.Cryptography.Xml.EncryptionProperty ep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedType.AddProperty(System.Security.Cryptography.Xml.EncryptionProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ep" Type="System.Security.Cryptography.Xml.EncryptionProperty" />
+      </Parameters>
+      <Docs>
+        <param name="ep">Ein <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" />-Objekt.</param>
+        <summary>Fügt eine <see langword="&lt;EncryptionProperty&gt;" /> untergeordnetes Element der <see langword="&lt;EncryptedProperties&gt;" /> Element in der aktuellen <see cref="T:System.Security.Cryptography.Xml.EncryptedType" /> Objekt in XML-Verschlüsselung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, um hinzuzufügen `<EncryptionProperty>` untergeordneten Elementen können die `<EncryptedProperties>` Element. Die `<EncryptedProperties>` Element enthält zusätzliche Informationen für die `<EncryptedType>` Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CipherData">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.Xml.CipherData CipherData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.CipherData CipherData" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedType.CipherData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.CipherData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Security.Cryptography.Xml.CipherData" /> Wert für eine Instanz von einer <see cref="T:System.Security.Cryptography.Xml.EncryptedType" /> Klasse.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Xml.CipherData" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `<CipherData>` Element ist ein erforderliches Element in XML-Verschlüsselung, das die verschlüsselten Daten bereitstellt. Es muss entweder die verschlüsselte Oktettsequenz als base64-codierte Text enthalten die <xref:System.Security.Cryptography.Xml.CipherData.CipherValue%2A> -Eigenschaft, oder geben Sie einen Verweis auf einen externen Speicherort, enthält die verschlüsselte Oktett Sequenz unter Verwendung der <xref:System.Security.Cryptography.Xml.CipherData.CipherReference%2A> Eigenschaft.  
+  
+ Weitere Informationen zu diesem Element finden Sie unter <xref:System.Security.Cryptography.Xml.CipherData>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln eines XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> von abgeleitete Klasse die <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse.  
+  
+ [!code-csharp[Cryptography.XML-EncryptedData - EncryptedType#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML-EncryptedData - EncryptedType/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML-EncryptedData - EncryptedType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML-EncryptedData - EncryptedType/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="P:System.Security.Cryptography.Xml.EncryptedType.CipherData" /> -Eigenschaft wurde festgelegt, um <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public virtual string Encoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedType.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see langword="Encoding" /> Attribut eine <see cref="T:System.Security.Cryptography.Xml.EncryptedType" /> Instanz in XML-Verschlüsselung.</summary>
+        <value>Eine Zeichenfolge, die die Codierung der verschlüsselten Daten beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft beschreibt die Codierung der verschlüsselten Daten. Beispielsweise ist die verschlüsselten Daten eine base64-codierte PNG, konnte die Codierung werden als "http://www.w3.org/2000/09/xmldsig#base64" angegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln eines XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> von abgeleitete Klasse die <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse. Dieses Beispiel zeigt dann die verschiedenen Eigenschaften der <xref:System.Security.Cryptography.Xml.EncryptedData> Klasse an die Konsole.  
+  
+ [!code-csharp[Cryptography.XML.EncryptedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptedData/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptedData/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionMethod">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.Xml.EncryptionMethod EncryptionMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.EncryptionMethod EncryptionMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.EncryptionMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see langword="&lt;EncryptionMethod&gt;" /> -Element für XML-Verschlüsselung.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Xml.EncryptionMethod" /> -Objekt, das stellt die <see langword="&lt;EncryptionMethod&gt;" /> Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `<EncryptionMethod>` ist ein optionales Element, das beschreibt, des Verschlüsselungsalgorithmus, der auf die verschlüsselten Daten angewendet. Wenn das Element nicht vorhanden ist, der Verschlüsselungsalgorithmus muss bekannt sein, durch den Empfänger oder Entschlüsselung fehl.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln eines XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> von abgeleitete Klasse die <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse.  
+  
+ [!code-csharp[Cryptography.XML-EncryptedData - EncryptedType#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML-EncryptedData - EncryptedType/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML-EncryptedData - EncryptedType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML-EncryptedData - EncryptedType/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionProperties">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.Xml.EncryptionPropertyCollection EncryptionProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.EncryptionPropertyCollection EncryptionProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedType.EncryptionProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.EncryptionPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see langword="&lt;EncryptionProperties&gt;" /> Element im XML-Verschlüsselung.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `<EncryptionProperties>` Element enthält möglicherweise weitere Informationen über die Erstellung der <xref:System.Security.Cryptography.Xml.EncryptedType> Instanz, z. B. ein Datum- und Zeitstempel oder die Seriennummer der bei der Verschlüsselung verwendeten Kryptografiehardware.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln eines XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> von abgeleitete Klasse die <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse. Dieses Beispiel zeigt dann die verschiedenen Eigenschaften der <xref:System.Security.Cryptography.Xml.EncryptedData> Klasse an die Konsole.  
+  
+ [!code-csharp[Cryptography.XML.EncryptedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptedData/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptedData/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedType.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.EncryptedType" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlElement" /> -Objekt, das stellt die <see langword="&lt;EncryptedType&gt;" /> Element im XML-Verschlüsselung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie die Ausgabe der `<EncryptedType>` XML-Dokument.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public virtual string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedType.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see langword="Id" /> Attribut eine <see cref="T:System.Security.Cryptography.Xml.EncryptedType" /> Instanz in XML-Verschlüsselung.</summary>
+        <value>Eine Zeichenfolge mit der <see langword="Id" /> Attribut von der <see langword="&lt;EncryptedType&gt;" /> Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Id` -Attribut ist ein optionales Attribut von der `<EncryptedType>` -Element, das eine Standardmethode zum Zuweisen von ein Zeichenfolgenbezeichner für ein Element in einem XML-Dokument enthält.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln eines XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> von abgeleitete Klasse die <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse. Dieses Beispiel zeigt dann die verschiedenen Eigenschaften der <xref:System.Security.Cryptography.Xml.EncryptedData> Klasse an die Konsole.  
+  
+ [!code-csharp[Cryptography.XML.EncryptedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptedData/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptedData/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyInfo">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.KeyInfo KeyInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.KeyInfo KeyInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedType.KeyInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.KeyInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see langword="&lt;KeyInfo&gt;" /> Element im XML-Verschlüsselung.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Xml.KeyInfo" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `<KeyInfo>` Element ist ein optionales Element, das Informationen über die zum Verschlüsseln der Daten verwendeten Schlüssel enthält.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln eines XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> von abgeleitete Klasse die <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse. Dieses Beispiel zeigt dann die verschiedenen Eigenschaften der <xref:System.Security.Cryptography.Xml.EncryptedData> Klasse an die Konsole.  
+  
+ [!code-csharp[Cryptography.XML.EncryptedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptedData/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptedData/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public abstract void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedType.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Xml.XmlElement" /> Objekt, das ein XML-Element zur Verwendung in darstellt der <see langword="&lt;EncryptedType&gt;" /> Element.</param>
+        <summary>Lädt XML-Informationen in den <see langword="&lt;EncryptedType&gt;" /> Element im XML-Verschlüsselung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Laden eines vorhandenen XML-Elements in der <xref:System.Security.Cryptography.Xml.EncryptedType> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln eines XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> von abgeleitete Klasse die <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse.  
+  
+ [!code-csharp[Cryptography.XML-EncryptedData - EncryptedType#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML-EncryptedData - EncryptedType/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML-EncryptedData - EncryptedType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML-EncryptedData - EncryptedType/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="value" /> bereitgestellt ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MimeType">
+      <MemberSignature Language="C#" Value="public virtual string MimeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MimeType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedType.MimeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see langword="MimeType" /> Attribut eine <see cref="T:System.Security.Cryptography.Xml.EncryptedType" /> Instanz in XML-Verschlüsselung.</summary>
+        <value>Eine Zeichenfolge, die den Medientyp der verschlüsselten Daten beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `MimeType` -Attribut ist ein optionales Attribut, das den Medientyp der verschlüsselten Daten beschreibt. Der Wert dieses Attributs ist eine Zeichenfolge mit Werten, die durch definierten [RFC 2045: Multipurpose Internet Mail Extensions (MIME), Teil 1: Format of Internet Message Bodies](http://www.ietf.org/rfc/rfc2045.txt). Angenommen, die Daten, die eine base64-codierte PNG, ist die `Encoding` Attribut wäre "http://www.w3.org/2000/09/xmldsig#base64" und die `MimeType` wäre "Image/Png". Dieses Attribut ist optional und keine Validierung der `MimeType` Informationen sind erforderlich. Das Attribut, nicht dass die Anwendung für die Verschlüsselung zusätzliche Verarbeitungsschritte ausführen muss. Beachten Sie, dass diese Informationen u. u. nicht erforderlich, wenn es bereits an den Bezeichner im gebunden ist die `Type` Attribut.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln eines XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> von abgeleitete Klasse die <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse. Dieses Beispiel zeigt dann die verschiedenen Eigenschaften der <xref:System.Security.Cryptography.Xml.EncryptedData> Klasse an die Konsole.  
+  
+ [!code-csharp[Cryptography.XML.EncryptedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptedData/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptedData/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public virtual string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedType.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see langword="Type" /> Attribut eine <see cref="T:System.Security.Cryptography.Xml.EncryptedType" /> Instanz in XML-Verschlüsselung.</summary>
+        <value>Eine Zeichenfolge, die Text-Format der verschlüsselten Daten beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Type` -Attribut ist ein optionales Attribut, die Typinformationen über den Text-Format des verschlüsselten Inhalts identifiziert. Zwar optional, wird dies ist ein wichtiges Attribut und werden in die obligatorische Verarbeitung, die in beschriebenen [Processing Rules: Entschlüsselung](http://www.w3.org/TR/xmlenc-core/) (Abschnitt 4.2) der XML Encryption Syntax and Processing-Spezifikation (http://www.w3.org/TR/xmlenc-core/). Wenn die `<EncryptedData>` Element enthält die Daten des Typs `'element'` oder Element `'content'`, und ersetzt wird, dass die Daten in einem XML-Dokument, die wir empfehlen dringend die `Type` Attribut angegeben werden. Ohne diese Informationen werden nicht automatisch das XML-Dokument in seiner ursprünglichen Textform wiederherstellen die Anwendung versucht, die Informationen zu entschlüsseln.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln eines XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> von abgeleitete Klasse die <xref:System.Security.Cryptography.Xml.EncryptedType> Klasse.  
+  
+ [!code-csharp[Cryptography.XML-EncryptedData - EncryptedType#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML-EncryptedData - EncryptedType/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML-EncryptedData - EncryptedType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML-EncryptedData - EncryptedType/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

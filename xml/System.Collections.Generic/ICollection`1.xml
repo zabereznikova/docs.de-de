@@ -1,0 +1,334 @@
+<Type Name="ICollection&lt;T&gt;" FullName="System.Collections.Generic.ICollection&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface ICollection&lt;T&gt; : System.Collections.Generic.IEnumerable&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICollection`1&lt;T&gt; implements class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.ICollection`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">Der Typ der Elemente in der Auflistung.</typeparam>
+    <summary>Definiert Methoden zum Ändern generischer Auflistungen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.Generic.ICollection%601> Schnittstelle ist die Basisschnittstelle für Klassen in der <xref:System.Collections.Generic?displayProperty=nameWithType> Namespace.  
+  
+ Die <xref:System.Collections.Generic.ICollection%601> -Schnittstelle erweitert <xref:System.Collections.Generic.IEnumerable%601>; <xref:System.Collections.Generic.IDictionary%602> und <xref:System.Collections.Generic.IList%601> spezialisiertere Schnittstellen, die erweitert werden <xref:System.Collections.Generic.ICollection%601>. Ein <xref:System.Collections.Generic.IDictionary%602> Implementierung ist eine Auflistung von Schlüssel-/Wertpaaren, z. B. die <xref:System.Collections.Generic.Dictionary%602> Klasse. Ein <xref:System.Collections.Generic.IList%601> Implementierung ist eine Auflistung von Werten, und ihre Member können z. B. nach Index zugegriffen werden die <xref:System.Collections.Generic.List%601> Klasse.  
+  
+ Wenn weder die <xref:System.Collections.Generic.IDictionary%602> Schnittstelle noch die <xref:System.Collections.Generic.IList%601> Schnittstelle erfüllen die Anforderungen der erforderlichen Sammlung, leiten Sie die neue Auflistungsklasse aus der <xref:System.Collections.Generic.ICollection%601> stattdessen eine Schnittstelle für mehr Flexibilität.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel implementiert die <xref:System.Collections.Generic.ICollection%601> Schnittstelle zum Erstellen einer Sammlung von benutzerdefinierten `Box` Objekte, die mit dem Namen `BoxCollection`. Jede `Box` weist Höhe, Länge und Breiteneigenschaften, die verwendet werden, um auf Gleichheit zu definieren. Alle Dimensionen werden von der gleichen oder das Volume wird die gleiche kann auf Gleichheit definiert werden. Die `Box` -Klasse implementiert die <xref:System.IEquatable%601> Schnittstelle, um die Standardgleichheit als Dimensionen übereinstimmen definieren.  
+  
+ Die `BoxCollection` -Klasse implementiert die <xref:System.Collections.Generic.ICollection%601.Contains%2A> Methode, um die Gleichheit Standardeinstellung zu verwenden, um zu bestimmen, ob eine `Box` ist in der Auflistung. Diese Methode wird verwendet, indem Sie die <xref:System.Collections.Generic.ICollection%601.Add%2A> Methode sodass jedes `Box` hinzugefügt, die Auflistung verfügt über einen eindeutigen Satz von Dimensionen. Der `BoxCollection` Klasse bietet auch eine Überladung der <xref:System.Collections.Generic.ICollection%601.Contains%2A> Methode, die ein angegebenes annimmt <xref:System.Collections.Generic.EqualityComparer%601> Objekt, wie `BoxSameDimensions` und `BoxSameVol` Klassen im Beispiel.  
+  
+ In diesem Beispiel implementiert auch eine <xref:System.Collections.Generic.IEnumerator%601> eine Schnittstelle für die `BoxCollection` Klasse, damit die Auflistung aufgezählt werden kann.  
+  
+ [!code-csharp[System.Collections.Generic.BoxExamples#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.boxexamples/cs/program.cs#1)]
+ [!code-vb[System.Collections.Generic.BoxExamples#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.boxexamples/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.ICollection`1.Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Objekt, das <see cref="T:System.Collections.Generic.ICollection`1" /> hinzugefügt werden soll.</param>
+        <summary>Fügt der <see cref="T:System.Collections.Generic.ICollection`1" /> ein Element hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Collections.Generic.ICollection`1" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.ICollection`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.ICollection%601.Count%2A> muss auf 0 (null) festgelegt werden, und Verweise auf andere Objekte von Elementen der Auflistung müssen freigegeben werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Collections.Generic.ICollection`1" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.ICollection`1.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das im <see cref="T:System.Collections.Generic.ICollection`1" /> zu suchende Objekt.</param>
+        <summary>Ermittelt, ob die <see cref="T:System.Collections.Generic.ICollection`1" /> einen bestimmten Wert enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn das <paramref name="item" /> in der <see cref="T:System.Collections.Generic.ICollection`1" /> gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementierungen können variieren, bestimmen die Gleichheit von Objekten. beispielsweise <xref:System.Collections.Generic.List%601> verwendet <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType>, wohingegen <xref:System.Collections.Generic.Dictionary%602> ermöglicht die Angabe der <xref:System.Collections.Generic.IComparer%601> -Implementierung zum Vergleichen von Schlüsseln verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(!T[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Collections.Generic.ICollection`1" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="arrayIndex">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der <see cref="T:System.Collections.Generic.ICollection`1" /> in ein <see cref="T:System.Array" />, beginnend bei einem bestimmten <see cref="T:System.Array" />-Index.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="arrayIndex" /> ist kleiner als 0.</exception>
+        <exception cref="T:System.ArgumentException">Die Anzahl der Elemente in der Quell-<see cref="T:System.Collections.Generic.ICollection`1" /> ist größer als der verfügbare Platz vom <paramref name="arrayIndex" /> bis zum Ende des Ziel-<paramref name="array" />s.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.ICollection`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente ab, die in <see cref="T:System.Collections.Generic.ICollection`1" /> enthalten sind.</summary>
+        <value>Die Anzahl der Elemente, die in <see cref="T:System.Collections.Generic.ICollection`1" /> enthalten sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.ICollection`1.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Auflistung, die schreibgeschützt ist lässt das Hinzufügen oder Entfernen von Elementen nach dem Erstellen der Auflistung nicht zu. Beachten Sie, dass schreibgeschützte in diesem Kontext nicht an, ob die einzelnen Elemente der Auflistung geändert werden können, da die <xref:System.Collections.Generic.ICollection%601> -Schnittstelle unterstützt nur das Hinzufügen und entfernen-Vorgänge. Z. B. die <xref:System.Collections.Generic.ICollection%601.IsReadOnly%2A> Eigenschaft eines Arrays, das umgewandelt oder konvertiert einen <xref:System.Collections.Generic.ICollection%601> -Objekt gibt `true`, obwohl der einzelnen Arrayelemente geändert werden können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.ICollection`1.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das aus der <see cref="T:System.Collections.Generic.ICollection`1" /> zu entfernende Objekt.</param>
+        <summary>Entfernt das erste Vorkommen eines angegebenen Objekts aus der <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="item" /> erfolgreich aus der <see cref="T:System.Collections.Generic.ICollection`1" /> entfernt wurde, andernfalls <see langword="false" />. Diese Methode gibt auch dann <see langword="false" /> zurück, wenn <paramref name="item" /> nicht in der ursprünglichen <see cref="T:System.Collections.Generic.ICollection`1" /> gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementierungen können die Gleichheit von Objekten auf verschiedene Arten bestimmen. So verwendet <xref:System.Collections.Generic.List%601> beispielsweise <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType>, bei <xref:System.Collections.Generic.Dictionary%602> kann der Benutzer hingegen angeben, welche <xref:System.Collections.Generic.IComparer%601>-Implementierung zum Vergleichen von Schlüsseln verwendet werden soll.  
+  
+ In Auflistungen mit zusammenhängenden Elementen, beispielsweise Listen, wird die nach dem Entfernen eines Elements entstandene Lücke durch Verschieben aller nachfolgenden Elemente gefüllt. Wenn die Auflistung indiziert ist, werden auch die Indizes der verschobenen Elemente aktualisiert. Dies gilt nicht für Auflistungen, in denen die Elemente konzeptionell in Buckets gruppiert sind, beispielsweise Hashtabellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Collections.Generic.ICollection`1" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

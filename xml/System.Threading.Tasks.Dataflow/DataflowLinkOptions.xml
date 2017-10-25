@@ -1,0 +1,119 @@
+<Type Name="DataflowLinkOptions" FullName="System.Threading.Tasks.Dataflow.DataflowLinkOptions">
+  <TypeSignature Language="C#" Value="public class DataflowLinkOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataflowLinkOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Dataflow.DataflowLinkOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.1.0</AssemblyVersion>
+    <AssemblyVersion>4.6.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Optionen bereit, die verwendet werden, um einen Link zwischen Datenflussblöcken zu konfigurieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die TPL-Datenflussbibliothek (<xref:System.Threading.Tasks.Dataflow>-Namespace) ist nicht in [!INCLUDE[net_v45](~/includes/net-v45-md.md)] enthalten. So installieren Sie die <xref:System.Threading.Tasks.Dataflow> -Namespace öffnen Sie das Projekt in [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)], wählen Sie **NuGet-Pakete verwalten** aus der Menüs "Projekt", und suchen Sie online nach der `Microsoft.Tpl.Dataflow` Paket.  
+  
+ <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions>ist änderbar und über seine Eigenschaften konfiguriert werden können.  
+  
+ Wenn bestimmte Konfigurationsoptionen nicht festgelegt werden, werden die folgenden Standardeinstellungen verwendet:  
+  
+|Optionen|Standard|  
+|-------------|-------------|  
+|PropagateCompletion|False|  
+|MaxMessages|DataflowBlockOptions.Unbounded (-1)|  
+|Anfügen|True|  
+  
+ Datenflussblöcke erfassen den Zustand der Optionen auf verknüpfen. Nachfolgende Änderungen an der bereitgestellten <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions> Instanz sollte keinen Einfluss auf das Verhalten einer Verknüpfung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataflowLinkOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowLinkOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert das <see cref="T:System.Threading.Tasks.Dataflow.DataflowLinkOptions" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public bool Append { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Append" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowLinkOptions.Append" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob der Link an die Quelle der Liste der Links angefügt werden sollen, oder ob er vorangestellt werden soll.</summary>
+        <value>Gibt <see cref="T:System.Boolean" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxMessages">
+      <MemberSignature Language="C#" Value="public int MaxMessages { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxMessages" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowLinkOptions.MaxMessages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl von Nachrichten, die über die Verbindung genutzt werden kann.</summary>
+        <value>Gibt <see cref="T:System.Int32" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropagateCompletion">
+      <MemberSignature Language="C#" Value="public bool PropagateCompletion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PropagateCompletion" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowLinkOptions.PropagateCompletion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob das verknüpfte Ziel Abschluss müssen und fehlgeschlagenen Benachrichtigung an sie automatisch weitergegeben.</summary>
+        <value>Gibt <see cref="T:System.Boolean" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

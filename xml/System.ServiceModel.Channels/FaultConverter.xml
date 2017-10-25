@@ -1,0 +1,250 @@
+<Type Name="FaultConverter" FullName="System.ServiceModel.Channels.FaultConverter">
+  <TypeSignature Language="C#" Value="public abstract class FaultConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FaultConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.FaultConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert von einem Kanal ausgelöste Ausnahmen in SOAP-Fehlernachrichten, die dem Protokoll des Kanals entsprechen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FaultConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.FaultConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.FaultConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultFaultConverter">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.FaultConverter GetDefaultFaultConverter (System.ServiceModel.Channels.MessageVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.FaultConverter GetDefaultFaultConverter(class System.ServiceModel.Channels.MessageVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.FaultConverter.GetDefaultFaultConverter(System.ServiceModel.Channels.MessageVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.FaultConverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Die Nachrichtenversion.</param>
+        <summary>Ruft den Standard-FaultConverter ab.</summary>
+        <returns>Eine Instanz von <see cref="T:System.ServiceModel.Channels.FaultConverter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Transportkanäle sollten eine Delegierung an diese Methode ausführen, um den standardmäßigen FaultConverter der SOAP/WS-Adressierung abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTryCreateException">
+      <MemberSignature Language="C#" Value="protected abstract bool OnTryCreateException (System.ServiceModel.Channels.Message message, System.ServiceModel.Channels.MessageFault fault, out Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnTryCreateException(class System.ServiceModel.Channels.Message message, class System.ServiceModel.Channels.MessageFault fault, [out] class System.Exception&amp; exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.FaultConverter.OnTryCreateException(System.ServiceModel.Channels.Message,System.ServiceModel.Channels.MessageFault,System.Exception@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="fault" Type="System.ServiceModel.Channels.MessageFault" />
+        <Parameter Name="exception" Type="System.Exception&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlernachricht.</param>
+        <param name="fault">Der Fehler.</param>
+        <param name="exception">Die SOAP-Ausnahme, bei erfolgreicher Konvertierung , als <see langword="out" />-Parameter zurückgegeben.</param>
+        <summary>Versucht, die Ausnahme zu erstellen.</summary>
+        <returns>
+          <see langword="true" />, wenn der Fehler erfolgreich konvertiert wurde, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Damit eine Kanalschicht `GetProperty<FaultConverter>` zur Unterstützung der Konvertierung von Fehlernachrichten in SOAP-Ausnahmen unterstützt, wird diese Methode überschrieben, um anhand der folgenden Schritte eine Ausnahme zu erstellen:  
+  
+-   Überprüfen der Fehlernachricht  
+  
+-   Wenn erkannt, wird die entsprechende Konvertierung durchgeführt  
+  
+-   Wenn sie nicht erkannt wird, wird sie durch einen Aufruf von `GetProperty<FaultConverter>` für den inneren Kanal konvertiert  
+  
+ Transportkanäle sollten eine Delegierung an <xref:System.ServiceModel.Channels.FaultConverter.GetDefaultFaultConverter%2A> durchführen, um den standardmäßigen FaultConverter der SOAP/WS-Adressierung abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTryCreateFaultMessage">
+      <MemberSignature Language="C#" Value="protected abstract bool OnTryCreateFaultMessage (Exception exception, out System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnTryCreateFaultMessage(class System.Exception exception, [out] class System.ServiceModel.Channels.Message&amp; message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.FaultConverter.OnTryCreateFaultMessage(System.Exception,System.ServiceModel.Channels.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die SOAP-Ausnahme.</param>
+        <param name="message">Die Fehlernachricht, als <see langword="out" />-Parameter zurückgegeben.</param>
+        <summary>Versucht, die Fehlernachricht zu erstellen, sobald der Fehler in eine SOAP-Ausnahme konvertiert wurde.</summary>
+        <returns>
+          <see langword="true" />, wenn die Fehlernachricht erfolgreich erstellt wurde, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kanäle, die die Fehlerkonvertierung unterstützen, implementieren `GetProperty<FaultConverter>` und überschreiben diese Methode, um folgendes durchzuführen. Wenn eine Schicht die Ausnahme konvertieren kann, wird dies durchgeführt; andernfalls wird `GetProperty<FaultConverter>` für den inneren Kanal aufgerufen. Transportkanäle sollten eine Delegierung an <xref:System.ServiceModel.Channels.FaultConverter.GetDefaultFaultConverter%2A> durchführen, um den standardmäßigen FaultConverter der SOAP/WS-Adressierung abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCreateException">
+      <MemberSignature Language="C#" Value="public bool TryCreateException (System.ServiceModel.Channels.Message message, System.ServiceModel.Channels.MessageFault fault, out Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryCreateException(class System.ServiceModel.Channels.Message message, class System.ServiceModel.Channels.MessageFault fault, [out] class System.Exception&amp; exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.FaultConverter.TryCreateException(System.ServiceModel.Channels.Message,System.ServiceModel.Channels.MessageFault,System.Exception@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="fault" Type="System.ServiceModel.Channels.MessageFault" />
+        <Parameter Name="exception" Type="System.Exception&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlernachricht.</param>
+        <param name="fault">Der Fehler.</param>
+        <param name="exception">Die SOAP-Ausnahme, bei erfolgreicher Konvertierung , als <see langword="out" />-Parameter zurückgegeben.</param>
+        <summary>Schließt <see cref="M:System.ServiceModel.Channels.FaultConverter.OnTryCreateException(System.ServiceModel.Channels.Message,System.ServiceModel.Channels.MessageFault,System.Exception@)" /> mit Fehlerüberprüfung ein.</summary>
+        <returns>
+          <see langword="true" />, wenn der Fehler erfolgreich konvertiert wurde, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.FaultConverter.OnTryCreateException%2A> ist eine abstrakte Klasse, die Sie implementieren müssen. Die aktuelle Methode bindet mehrere Parameterfehlertests in einen Aufruf dieser Methode ein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="M:System.ServiceModel.Channels.FaultConverter.OnTryCreateException(System.ServiceModel.Channels.Message,System.ServiceModel.Channels.MessageFault,System.Exception@)" /> hat <see langword="false" /> zurückgegeben, <paramref name="exception" /> ist jedoch nicht <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCreateFaultMessage">
+      <MemberSignature Language="C#" Value="public bool TryCreateFaultMessage (Exception exception, out System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryCreateFaultMessage(class System.Exception exception, [out] class System.ServiceModel.Channels.Message&amp; message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.FaultConverter.TryCreateFaultMessage(System.Exception,System.ServiceModel.Channels.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die SOAP-Ausnahme.</param>
+        <param name="message">Die Fehlernachricht, als <see langword="out" />-Parameter zurückgegeben.</param>
+        <summary>Schließt <see cref="M:System.ServiceModel.Channels.FaultConverter.OnTryCreateFaultMessage(System.Exception,System.ServiceModel.Channels.Message@)" /> mit Fehlerüberprüfung ein.</summary>
+        <returns>
+          <see langword="true" />, wenn die Fehlernachricht erfolgreich erstellt wurde, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.FaultConverter.OnTryCreateFaultMessage%2A> ist eine abstrakte Klasse, die Sie implementieren müssen. Die aktuelle Methode bindet mehrere Fehlertests in einen Aufruf dieser Methode ein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="M:System.ServiceModel.Channels.FaultConverter.OnTryCreateException(System.ServiceModel.Channels.Message,System.ServiceModel.Channels.MessageFault,System.Exception@)" /> hat <see langword="false" /> zurückgegeben, <paramref name="message" /> ist jedoch nicht <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

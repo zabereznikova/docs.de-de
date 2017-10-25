@@ -1,0 +1,98 @@
+<Type Name="BindingMode" FullName="System.Windows.Data.BindingMode">
+  <TypeSignature Language="C#" Value="public enum BindingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BindingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.BindingMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt die Richtung des Datenflusses in einer Bindung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingMode Default = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingMode.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwendet die standardmäßige <see cref="P:System.Windows.Data.Binding.Mode" /> Wert des Bindungsziels. Der Standardwert ist für jede Abhängigkeitseigenschaft unterschiedlich. In der Regel haben von einem Benutzer bearbeitbare Steuerelementeigenschaften, z. B. solche von Textfeldern und Kontrollkästchen, standardmäßig bidirektionale Bindungen, wogegen die meisten anderen Eigenschaften standardmäßig unidirektionale Bindungen haben. Eine programmgesteuerte Methode zum bestimmen, ob eine Abhängigkeitseigenschaft standardmäßig uni- oder bidirektional bindet wird zum Abrufen der Metadaten der Eigenschaft mit <see cref="M:System.Windows.DependencyProperty.GetMetadata(System.Type)" /> und überprüfen Sie dann den booleschen Wert, der die <see cref="P:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault" /> Eigenschaft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OneTime">
+      <MemberSignature Language="C#" Value="OneTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingMode OneTime = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingMode.OneTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktualisiert das Bindungsziel, wenn die Anwendung gestartet oder der Datenkontext geändert wird. Dieser Bindungstyp empfiehlt sich, wenn Sie Daten verwenden, bei denen eine Momentaufnahme des aktuellen Zustands verwendet werden kann oder die Daten tatsächlich statisch sind. Dieser Bindungstyp ist auch hilfreich, wenn die Zieleigenschaft mit einem bestimmten Wert der Quelleigenschaft initialisiert werden soll und der Datenkontext vorab nicht bekannt ist. Dies ist eine wesentlich einfachere Form der <see cref="F:System.Windows.Data.BindingMode.OneWay" /> Bindung dar, bietet eine bessere Leistung in Fällen, in denen der Quellwert nicht ändert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OneWay">
+      <MemberSignature Language="C#" Value="OneWay" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingMode OneWay = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingMode.OneWay" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktualisiert die Bindungsziel-Eigenschaft (Zieleigenschaft), wenn die Bindungsquelle (Quelle) geändert wird. Dieser Bindungstyp empfiehlt sich, wenn das gebundene Steuerelement implizit als schreibgeschützt festgelegt wurde. Sie können beispielsweise eine Bindung an eine Quelle wie einen Börsenticker erstellen. Möglicherweise ist für die Zieleigenschaft auch keine Steuerungsoberfläche zum Vornehmen von Änderungen verfügbar, beispielsweise eine datengebundene Hintergrundfarbe einer Tabelle. Ist nicht erforderlich, die Änderungen der Zieleigenschaft nicht überwacht, mithilfe der <see cref="F:System.Windows.Data.BindingMode.OneWay" /> -Bindungsmodus den Mehraufwand für die <see cref="F:System.Windows.Data.BindingMode.TwoWay" /> Bindungsmodus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OneWayToSource">
+      <MemberSignature Language="C#" Value="OneWayToSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingMode OneWayToSource = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingMode.OneWayToSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktualisiert die Quelleigenschaft, wenn die Zieleigenschaft geändert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoWay">
+      <MemberSignature Language="C#" Value="TwoWay" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingMode TwoWay = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingMode.TwoWay" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bewirkt, dass bei Änderungen an der Quell- bzw. der Zieleigenschaft die jeweils andere automatisch aktualisiert wird. Dieser Typ von Bindung ist für bearbeitbare Formulare und sonstige vollständig interaktive [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)]-Szenarien geeignet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

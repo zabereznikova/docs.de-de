@@ -1,0 +1,366 @@
+<Type Name="DataProtector" FullName="System.Security.Cryptography.DataProtector">
+  <TypeSignature Language="C#" Value="public abstract class DataProtector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataProtector extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.DataProtector" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisklasse für Daten Schutzvorrichtungen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse schützt gespeicherte Daten anzeigen und Manipulationen an. Der Zugriff auf die geschützten Daten erhalten Sie durch eine Instanz dieser Klasse erstellen und verwenden die genaue Zweck-Zeichenfolgen, die zum Schutz der Daten verwendet wurden.  Der Aufrufer ist nicht erforderlich, einen Schlüssel zu schützen oder Aufheben des Schutzes von Daten. Der Schlüssel wird von den Verschlüsselungsalgorithmus bereitgestellt.  
+  
+ Abgeleitete Klassen überschreiben, müssen die <xref:System.Security.Cryptography.DataProtector.ProviderProtect%2A> und <xref:System.Security.Cryptography.DataProtector.Unprotect%2A> Methoden, die die <xref:System.Security.Cryptography.DataProtector> -Basisklasse ruft wieder. Sie müssen auch überschreiben die <xref:System.Security.Cryptography.DataProtector.IsReprotectRequired%2A> -Methode, die immer zurückgeben kann `true` mit einem kleinen Verlust der Effizienz beim Aktualisieren von Anwendungen ihre Datenbank gespeicherte verschlüsseltem Text. Abgeleitete Klassen sollten einen Konstruktor, der den Basisklassenkonstruktor aufruft, der legt angeben der <xref:System.Security.Cryptography.DataProtector.ApplicationName%2A>, <xref:System.Security.Cryptography.DataProtector.SpecificPurposes%2A>, und <xref:System.Security.Cryptography.DataProtector.PrimaryPurpose%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie eine Schutzvorrichtung erstellt, die eine Schutz-Klasse mit einer Option für die zusätzliche Entropie verwendet. Wird standardmäßig die <xref:System.Security.Cryptography.DataProtector> Klasse voran, der Hashwert der Zweck Eigenschaften auf die zu verschlüsselnden Daten. Sie können diese Funktion deaktivieren und den Hash Zweck als zusätzliche Entropie beim Aufrufen eine Schlüsselschutzvorrichtung für Computerdaten mit eine zusätzliche Entropie-Option.  
+  
+ [!code-csharp[Cryptography.DataProtector#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.dataprotector/cs/class1.cs#1)]
+ [!code-vb[Cryptography.DataProtector#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.dataprotector/vb/class1.vb#1)]  
+  
+ Das folgende Beispiel zeigt eine einfache Datenschutz, der verwendet die <xref:System.Security.Cryptography.DataProtector.PrependHashedPurposeToPlaintext%2A> Funktionalität von der <xref:System.Security.Cryptography.DataProtector> Klasse.  
+  
+ [!code-csharp[Cryptography.MemoryProtector#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.memoryprotector/cs/class1.cs#1)]
+ [!code-vb[Cryptography.MemoryProtector#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.memoryprotector/vb/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataProtector (string applicationName, string primaryPurpose, string[] specificPurposes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string applicationName, string primaryPurpose, string[] specificPurposes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DataProtector.#ctor(System.String,System.String,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="applicationName" Type="System.String" />
+        <Parameter Name="primaryPurpose" Type="System.String" />
+        <Parameter Name="specificPurposes" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="applicationName">Der Name der Anwendung.</param>
+        <param name="primaryPurpose">Der Hauptzweck für die geschützten Daten.</param>
+        <param name="specificPurposes">Die bestimmte Zwecke für die geschützten Daten.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Security.Cryptography.DataProtector" /> Klasse, indem der Name der bereitgestellten Anwendung dienen in erster Linie und bestimmte Zwecke.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.Security.Cryptography.DataProtector.ApplicationName%2A>, <xref:System.Security.Cryptography.DataProtector.PrimaryPurpose%2A>, und <xref:System.Security.Cryptography.DataProtector.SpecificPurposes%2A> Eigenschaften. Die Kombination dieser drei Eigenschaften muss die Daten, die Sie schützen, eindeutig identifizieren. Wenn die Daten nicht eindeutig identifiziert werden, lesen Sie versehentlich den falschen Datentyp oder andere Daten möglicherweise für Ihre ersetzt werden. Beispiele von Paaren von primären und bestimmten Zweck sind "invoice" und Rechnung, Anzahl, "Grußkarte" und Geschenkkartennummer, "Password" und URL-Zeichenfolge.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="applicationName" />ist eine leere Zeichenfolge oder <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="primaryPurpose" />ist eine leere Zeichenfolge oder <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="specificPurposes" />enthält eine leere Zeichenfolge oder <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="protected string ApplicationName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.DataProtector.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Anwendung ab.</summary>
+        <value>Der Name der Anwendung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.DataProtector Create (string providerClass, string applicationName, string primaryPurpose, params string[] specificPurposes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.DataProtector Create(string providerClass, string applicationName, string primaryPurpose, string[] specificPurposes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DataProtector.Create(System.String,System.String,System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.DataProtector</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerClass" Type="System.String" />
+        <Parameter Name="applicationName" Type="System.String" />
+        <Parameter Name="primaryPurpose" Type="System.String" />
+        <Parameter Name="specificPurposes" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="providerClass">Der Name der Klasse für den Datenschutz.</param>
+        <param name="applicationName">Der Name der Anwendung.</param>
+        <param name="primaryPurpose">Der Hauptzweck für die geschützten Daten.</param>
+        <param name="specificPurposes">Die bestimmte Zwecke für die geschützten Daten.</param>
+        <summary>Erstellt eine Instanz der Implementierung ein Daten-Schutzvorrichtung mit angegebenen Klassennamen, der den Datenschutz, den Namen der Anwendung dienen in erster Linie und bestimmte Zwecke.</summary>
+        <returns>Ein Objekt der Daten Schutzvorrichtung-Implementierung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="providerClass" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashedPurpose">
+      <MemberSignature Language="C#" Value="protected virtual byte[] GetHashedPurpose ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] GetHashedPurpose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DataProtector.GetHashedPurpose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Hash der Eigenschaftswerte, die vom Konstruktor angegeben.</summary>
+        <returns>Ein Array von Bytes, die den Hash des enthalten die <see cref="P:System.Security.Cryptography.DataProtector.ApplicationName" />, <see cref="P:System.Security.Cryptography.DataProtector.PrimaryPurpose" />, und <see cref="P:System.Security.Cryptography.DataProtector.SpecificPurposes" /> Eigenschaften.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.DataProtector.GetHashedPurpose%2A>berechnet den Hash, der den Namen der Anwendung und den vollständigen Zweck.  Der vollständige Zweck besteht aus einer Verkettung aller der <xref:System.Security.Cryptography.DataProtector.PrimaryPurpose%2A> und <xref:System.Security.Cryptography.DataProtector.SpecificPurposes%2A> Eigenschaften.  Jedem der drei Teile wird mit seiner Länge vorangestellt, damit der Hash umgekehrt werden kann.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Security.Cryptography.DataProtector.GetHashedPurpose%2A> Methode, um den Zweck-Eigenschaften für die Verwendung als zusätzliche Entropie hash.  Sie ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.DataProtector> Klasse.  
+  
+ [!code-csharp[Cryptography.DataProtector#3](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.dataprotector/cs/class1.cs#3)]
+ [!code-vb[Cryptography.DataProtector#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.dataprotector/vb/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReprotectRequired">
+      <MemberSignature Language="C#" Value="public abstract bool IsReprotectRequired (byte[] encryptedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsReprotectRequired(unsigned int8[] encryptedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DataProtector.IsReprotectRequired(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptedData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encryptedData">Die verschlüsselten Daten ausgewertet werden soll.</param>
+        <summary>Bestimmt, ob die erneute Verschlüsselung für den angegebenen verschlüsselten Daten erforderlich ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Daten neu verschlüsselt werden müssen; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrependHashedPurposeToPlaintext">
+      <MemberSignature Language="C#" Value="protected virtual bool PrependHashedPurposeToPlaintext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrependHashedPurposeToPlaintext" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.DataProtector.PrependHashedPurposeToPlaintext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Hash für das Textarray vor der Verschlüsselung vorangestellt wird.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird davon ausgegangen, dass abgeleitete Klassen den Hash des vorangestellt werden die <xref:System.Security.Cryptography.DataProtector.ApplicationName%2A>, <xref:System.Security.Cryptography.DataProtector.PrimaryPurpose%2A>, und <xref:System.Security.Cryptography.DataProtector.SpecificPurposes%2A> Eigenschaften, die nur-Text vor Verschlüsselung und wird überprüfen und den Hash bei der Entschlüsselung.  Wenn möchte, dass eine abgeleitete Klasse die vorangestellten Daten selbst angeben (z. B. als ein optionaler Entropiewert), diese Eigenschaft überschreiben und festgelegt werden kann zurückzugebenden `false`.  Wenn <xref:System.Security.Cryptography.DataProtector.PrependHashedPurposeToPlaintext%2A> ist `false`, <xref:System.Security.Cryptography.DataProtector.Protect%2A> und <xref:System.Security.Cryptography.DataProtector.Unprotect%2A> übergibt direkt über die <xref:System.Security.Cryptography.DataProtector.ProviderProtect%2A> und <xref:System.Security.Cryptography.DataProtector.ProviderUnprotect%2A> überschreibt ohne das Bytearray zu ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimaryPurpose">
+      <MemberSignature Language="C#" Value="protected string PrimaryPurpose { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrimaryPurpose" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.DataProtector.PrimaryPurpose" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft dienen in erster Linie für die geschützten Daten.</summary>
+        <value>Der Hauptzweck für die geschützten Daten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Protect">
+      <MemberSignature Language="C#" Value="public byte[] Protect (byte[] userData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Protect(unsigned int8[] userData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DataProtector.Protect(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="userData">Die zu schützenden Daten.</param>
+        <summary>Schützt die angegebenen Daten.</summary>
+        <returns>Ein Bytearray, das die verschlüsselten Daten enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="userData" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderProtect">
+      <MemberSignature Language="C#" Value="protected abstract byte[] ProviderProtect (byte[] userData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] ProviderProtect(unsigned int8[] userData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DataProtector.ProviderProtect(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="userData">Die zu verschlüsselnden Daten.</param>
+        <summary>Gibt die Delegatmethode in der abgeleiteten Klasse, die die <see cref="M:System.Security.Cryptography.DataProtector.Protect(System.Byte[])" /> Methode in der Basisklasse wieder aufgerufen wird.</summary>
+        <returns>Ein Bytearray, das die verschlüsselten Daten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der <xref:System.Security.Cryptography.DataProtector.ProviderProtect%2A>-Methode veranschaulicht.  Sie ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.DataProtector> Klasse.  
+  
+ [!code-csharp[Cryptography.MemoryProtector#3](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.memoryprotector/cs/class1.cs#3)]
+ [!code-vb[Cryptography.MemoryProtector#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.memoryprotector/vb/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderUnprotect">
+      <MemberSignature Language="C#" Value="protected abstract byte[] ProviderUnprotect (byte[] encryptedData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] ProviderUnprotect(unsigned int8[] encryptedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DataProtector.ProviderUnprotect(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptedData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encryptedData">Die zu entschlüsselnden Daten.</param>
+        <summary>Gibt die Delegatmethode in der abgeleiteten Klasse, die die <see cref="M:System.Security.Cryptography.DataProtector.Unprotect(System.Byte[])" /> Methode in der Basisklasse wieder aufgerufen wird.</summary>
+        <returns>Die entschlüsselten Daten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der <xref:System.Security.Cryptography.DataProtector.ProviderUnprotect%2A>-Methode veranschaulicht.  Sie ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.DataProtector> Klasse.  
+  
+ [!code-csharp[Cryptography.MemoryProtector#4](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.memoryprotector/cs/class1.cs#4)]
+ [!code-vb[Cryptography.MemoryProtector#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.memoryprotector/vb/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecificPurposes">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.IEnumerable&lt;string&gt; SpecificPurposes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; SpecificPurposes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.DataProtector.SpecificPurposes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die bestimmte Zwecke für die geschützten Daten.</summary>
+        <value>Eine Auflistung von bestimmten Gründe für die geschützten Daten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unprotect">
+      <MemberSignature Language="C#" Value="public byte[] Unprotect (byte[] encryptedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Unprotect(unsigned int8[] encryptedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DataProtector.Unprotect(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptedData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encryptedData">Die verschlüsselten Daten nicht geschützt werden.</param>
+        <summary>Hebt den Schutz für der angegebenen geschützten Daten.</summary>
+        <returns>Ein Bytearray, das nur-Text-Daten enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="encryptedData" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="encryptedData" />enthielt einen ungültige Zweck.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

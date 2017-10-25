@@ -1,0 +1,164 @@
+<Type Name="ITemplateEditingService" FullName="System.Web.UI.Design.ITemplateEditingService">
+  <TypeSignature Language="C#" Value="public interface ITemplateEditingService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITemplateEditingService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ITemplateEditingService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use of this type is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Dienste für die Bearbeitung von Steuerelementvorlagen zur Entwurfszeit bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingService> Schnittstelle ist veraltet. Stellen Sie Vorlagen über die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Eigenschaft von einem Steuerelement-Designer. Der Entwurfshost erstellt eine <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion> für jede <xref:System.Web.UI.Design.TemplateGroup> für ein Steuerelement-Designer definiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateFrame">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.ITemplateEditingFrame CreateFrame (System.Web.UI.Design.TemplatedControlDesigner designer, string frameName, string[] templateNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.ITemplateEditingFrame CreateFrame(class System.Web.UI.Design.TemplatedControlDesigner designer, string frameName, string[] templateNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingService.CreateFrame(System.Web.UI.Design.TemplatedControlDesigner,System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ITemplateEditingFrame</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Web.UI.Design.TemplatedControlDesigner" />
+        <Parameter Name="frameName" Type="System.String" />
+        <Parameter Name="templateNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="designer">Der <see cref="T:System.Web.UI.Design.TemplatedControlDesigner" />, der den Vorlagenbearbeitungsrahmen verwendet.</param>
+        <param name="frameName">Der Name des Bearbeitungsrahmens, der in dem Rahmen angezeigt wird. Dies ist normalerweise identisch mit der <see cref="P:System.ComponentModel.Design.DesignerVerb.Text" /> Eigenschaft als Menütext für verwendet die <see cref="T:System.Web.UI.Design.TemplateEditingVerb" /> , die zum Erstellen des Rahmens aufgerufen wird.</param>
+        <param name="templateNames">Ein Array von Namen für die Vorlagen, die der Vorlagenbearbeitungsrahmen enthält.</param>
+        <summary>Erstellt für den angegebenen aus einer Vorlage gebildeten Steuerelement-Designer einen neuen Vorlagenbearbeitungsrahmen, wobei der angegebene Name und die angegebenen Vorlagen verwendet werden.</summary>
+        <returns>Die neue <see cref="T:System.Web.UI.Design.ITemplateEditingFrame" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingService> Schnittstelle ist veraltet. Stellen Sie Vorlagen über die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Eigenschaft von einem Steuerelement-Designer. Der Entwurfshost erstellt eine <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion> für jede <xref:System.Web.UI.Design.TemplateGroup> für ein Steuerelement-Designer definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFrame">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.ITemplateEditingFrame CreateFrame (System.Web.UI.Design.TemplatedControlDesigner designer, string frameName, string[] templateNames, System.Web.UI.WebControls.Style controlStyle, System.Web.UI.WebControls.Style[] templateStyles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.ITemplateEditingFrame CreateFrame(class System.Web.UI.Design.TemplatedControlDesigner designer, string frameName, string[] templateNames, class System.Web.UI.WebControls.Style controlStyle, class System.Web.UI.WebControls.Style[] templateStyles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingService.CreateFrame(System.Web.UI.Design.TemplatedControlDesigner,System.String,System.String[],System.Web.UI.WebControls.Style,System.Web.UI.WebControls.Style[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ITemplateEditingFrame</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Web.UI.Design.TemplatedControlDesigner" />
+        <Parameter Name="frameName" Type="System.String" />
+        <Parameter Name="templateNames" Type="System.String[]" />
+        <Parameter Name="controlStyle" Type="System.Web.UI.WebControls.Style" />
+        <Parameter Name="templateStyles" Type="System.Web.UI.WebControls.Style[]" />
+      </Parameters>
+      <Docs>
+        <param name="designer">Der <see cref="T:System.Web.UI.Design.TemplatedControlDesigner" />, der den Vorlagenbearbeitungsrahmen verwendet.</param>
+        <param name="frameName">Der Name des Bearbeitungsrahmens, der in dem Rahmen angezeigt wird. Dies ist normalerweise identisch mit der <see cref="P:System.ComponentModel.Design.DesignerVerb.Text" /> Eigenschaft als Menütext für verwendet die <see cref="T:System.Web.UI.Design.TemplateEditingVerb" /> , die zum Erstellen des Rahmens aufgerufen wird.</param>
+        <param name="templateNames">Ein Array von Namen für die Vorlagen, die der Vorlagenbearbeitungsrahmen enthält.</param>
+        <param name="controlStyle">Der Steuerelement-<see cref="T:System.Web.UI.WebControls.Style" /> für den Bearbeitungsrahmen.</param>
+        <param name="templateStyles">Ein Array vom Typ <see cref="T:System.Web.UI.WebControls.Style" />, das die Vorlagenformate für den Bearbeitungsrahmen darstellt.</param>
+        <summary>Erstellt einen neuen Vorlagenbearbeitungsrahmen für das angegebene <see cref="T:System.Web.UI.Design.TemplatedControlDesigner" />, mit dem angegebenen Namen, Vorlagennamens, Steuerelementformats und Vorlagenformats.</summary>
+        <returns>Die neue <see cref="T:System.Web.UI.Design.ITemplateEditingFrame" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingService> Schnittstelle ist veraltet. Stellen Sie Vorlagen über die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Eigenschaft von einem Steuerelement-Designer. Der Entwurfshost erstellt eine <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion> für jede <xref:System.Web.UI.Design.TemplateGroup> für ein Steuerelement-Designer definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContainingTemplateName">
+      <MemberSignature Language="C#" Value="public string GetContainingTemplateName (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetContainingTemplateName(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingService.GetContainingTemplateName(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das <see cref="T:System.Web.UI.Control" />, für das der Name der übergeordneten Vorlage abgerufen werden soll.</param>
+        <summary>Ruft den Namen der übergeordneten Vorlage ab.</summary>
+        <returns>Der Name der übergeordneten Vorlage.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingService> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion.TemplateDefinition%2A> Eigenschaft von der <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion> entsprechende Entwurfszeitfunktionalität-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsNestedTemplateEditing">
+      <MemberSignature Language="C#" Value="public bool SupportsNestedTemplateEditing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsNestedTemplateEditing" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingService.SupportsNestedTemplateEditing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Dienst das Bearbeiten geschachtelter Vorlagen unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Dienst das Bearbeiten verschachtelter Vorlagen unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, ob ein Vorlageneditor von einer Komponente von einer übergeordneten Vorlage-Editor-Steuerelement mit Vorlagen aufgerufen werden kann. Dies wird Bearbeiten verschachtelter Vorlagen bezeichnet, da ein Vorlagen-Editor für eine Komponente eines Steuerelements aufgerufen wird, für die ein Vorlagen-Editor bereits ausgeführt wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingService> Schnittstelle ist veraltet. Stellen Sie Vorlagen über die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Eigenschaft von einem Steuerelement-Designer. Der Entwurfshost erstellt eine <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion> für jede <xref:System.Web.UI.Design.TemplateGroup> für ein Steuerelement-Designer definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

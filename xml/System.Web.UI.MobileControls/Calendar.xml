@@ -1,0 +1,573 @@
+<Type Name="Calendar" FullName="System.Web.UI.MobileControls.Calendar">
+  <TypeSignature Language="C#" Value="public class Calendar : System.Web.UI.MobileControls.MobileControl, System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Calendar extends System.Web.UI.MobileControls.MobileControl implements class System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Calendar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.MobileControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("SelectionChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("SelectedDate")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Web.UI.Design.MobileControls.CalendarDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Web.UI.Design.WebControlToolboxItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.DataBindingHandler(typeof(System.Web.UI.Design.MobileControls.CalendarDataBindingHandler))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.MobileControls.DesignerAdapter(typeof(System.Web.UI.Design.MobileControls.Adapters.DesignerCalendarAdapter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:Calendar runat="server"&gt;&lt;/{0}:Calendar&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Steuerungsfunktionen zum Anzeigen eines Kalenders bereit. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die angezeigten Kalender ist nach Tag, Woche oder Monat. Ob ein gesamten Monat auf einem mobilen Gerät gerendert wird, hängt von den Funktionen des Geräts ab. Im Allgemeinen die <xref:System.Web.UI.MobileControls.Calendar> Steuerelement ermöglicht die Auswahl eines Datums.  
+  
+ Die Mobile <xref:System.Web.UI.MobileControls.Calendar> Steuerelement dient als Wrapper für eine Web Forms <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Obwohl die Mobile <xref:System.Web.UI.MobileControls.Calendar> Steuerelement imitiert, einige Eigenschaften, Methoden und Ereignisse des zugrunde liegenden Steuerelements, es macht nicht die anderen Eigenschaften, die spezifisch für HTML-Rendering. Um diese zu ändern, können Sie das zugrunde liegende Steuerelement über Zugriff auf die <xref:System.Web.UI.MobileControls.Calendar.WebCalendar%2A> Eigenschaft und die Einstellungen direkt ändern.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht wie die <xref:System.Web.UI.MobileControls.Calendar.SelectionMode%2A> Eigenschaft im Codeblock Seite laden ermöglicht dem Benutzer einen Tag, Woche oder innerhalb eines Monats Zeitblocks auswählen. In diesem Beispiel wird die <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> und <xref:System.Web.UI.WebControls.WebControl.BackColor%2A> Eigenschaften der <xref:System.Web.UI.MobileControls.Calendar> Klasse, um die Benutzerauswahl zu unterscheiden.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileCalendarExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileCalendarExample/cs/MobileCalendarExample.aspx#1)]
+ [!code-aspx-vb[MobileCalendarExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileCalendarExample/vb/MobileCalendarExample.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Calendar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Calendar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.Calendar" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarEntryText">
+      <MemberSignature Language="C#" Value="public string CalendarEntryText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CalendarEntryText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Calendar.CalendarEntryText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die auf cHTML- und WML-Geräten verwendet werden, um geben die <see cref="T:System.Web.UI.MobileControls.Calendar" /> Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Zeichenfolge, die auf cHTML- und WML-Geräten verwendet werden, um geben die <see cref="T:System.Web.UI.MobileControls.Calendar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft festgelegt wird, um `null`, der Standardwert ist die lokalisierte Zeichenfolge (z. B. "Kalender").  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.Calendar.CalendarEntryText%2A> Eigenschaft, um den Text festzulegen, die dem Benutzer angezeigt wird. In diesem Beispiel ist Teil einer größeren Codebeispiel für die <xref:System.Web.UI.MobileControls.Calendar> (Übersicht).  
+  
+ [!code-csharp[MobileCalendarExample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileCalendarExample/cs/MobileCalendarExample.aspx#2)]
+ [!code-vb[MobileCalendarExample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileCalendarExample/vb/MobileCalendarExample.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWebCalendar">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.Calendar CreateWebCalendar ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.Calendar CreateWebCalendar() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Calendar.CreateWebCalendar" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Calendar</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine überschriebene <see cref="T:System.Web.UI.MobileControls.Calendar" /> Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Eine überschriebene <see cref="T:System.Web.UI.MobileControls.Calendar" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird bereitgestellt, für Entwickler von Steuerelementen zum Überschreiben der <xref:System.Web.UI.MobileControls.Calendar> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstDayOfWeek">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.FirstDayOfWeek FirstDayOfWeek { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.FirstDayOfWeek FirstDayOfWeek" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Calendar.FirstDayOfWeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Tag der Woche, in der ersten Spalte eines Kalenders anzuzeigen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Tag der Woche, in der ersten Spalte eines Kalenders angezeigt. Der Standardwert ist <see cref="F:System.Web.UI.WebControls.FirstDayOfWeek.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der API ASP.NET die <xref:System.Web.UI.MobileControls.Calendar.FirstDayOfWeek%2A> Enumeration enthält jeden Tag der Woche, mit dem Standardwert des Servers lokale Einstellung für den ersten Tag der Woche zurückgibt.  
+  
+ Diese Eigenschaft funktioniert genauso wie die <xref:System.Web.UI.WebControls.Calendar.FirstDayOfWeek%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Calendar.OnSelectionChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das <see cref="E:System.Web.UI.MobileControls.Calendar.SelectionChanged" />-Ereignis aus. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Calendar.SelectionChanged> Ereignis wird ausgelöst, wenn der Benutzer einen Tag, Woche oder einen gesamten Monat auswählt, indem Sie auf die Steuerelemente des Selektor.  
+  
+ Mit der <xref:System.Web.UI.MobileControls.Calendar.OnSelectionChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+> [!NOTE]
+>  Zum Überschreiben der <xref:System.Web.UI.MobileControls.Calendar.OnSelectionChanged%2A> Methode in einer abgeleiteten Klasse sicher, dass der Basisklasse aufgerufen werden <xref:System.Web.UI.MobileControls.Calendar.OnSelectionChanged%2A> Methode, damit registrierte Delegaten das Ereignis empfangen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Calendar.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Ein <see langword="string" /> mit Daten zum Verarbeiten des Ereignisses erforderlich sind.</param>
+        <summary>Löst Ereignisse für das <see cref="T:System.Web.UI.MobileControls.Calendar" />-Steuerelement aus, wenn es ein Postback an den Server ausführt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Steuerelemententwicklern benutzerdefinierte verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseSelectionChangedEvent">
+      <MemberSignature Language="C#" Value="public void RaiseSelectionChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseSelectionChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Calendar.RaiseSelectionChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, um das Auslösen eines Ereignisses, gibt an, dass die Auswahl geändert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird intern von ASP.NET aufgerufen. Sie stellt einen Wrapper zum Auslösen der <xref:System.Web.UI.MobileControls.Calendar.SelectionChanged> Ereignis aus, wenn ein Datum vom Benutzer ausgewählt wird. Im Gegensatz zu den <xref:System.Web.UI.MobileControls.Calendar.OnSelectionChanged%2A> -Methode, diese Methode ist öffentlich und kann von verschiedenen Adaptern aufgerufen werden, wenn sie das ausgewählte Datum erfasst haben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedDate">
+      <MemberSignature Language="C#" Value="public DateTime SelectedDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime SelectedDate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Calendar.SelectedDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.DateTime), "1/1/0001")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das derzeit ausgewählte Datum fest. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das derzeit ausgewählte Datum. Der Standardwert ist <see cref="F:System.DateTime.MinValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel verwenden Sie diese Eigenschaft zusammen mit der <xref:System.Web.UI.MobileControls.Calendar.SelectionMode%2A> Eigenschaft, um zu bestimmen, von das ausgewählte Datum ein <xref:System.Web.UI.MobileControls.Calendar> Steuerelement. Legen Sie hierzu die <xref:System.Web.UI.MobileControls.Calendar.SelectionMode%2A> Eigenschaft <xref:System.Web.UI.WebControls.CalendarSelectionMode.Day> -mit dieser Einstellung kann nur eine einzelnes Datum eine Auswahl aus der <xref:System.Web.UI.MobileControls.Calendar> Steuerelement.  
+  
+ Navigieren zum nächsten oder vorherigen Monat wird diese Eigenschaft nicht aktualisiert werden.  
+  
+ Diese Eigenschaft hat die gleiche Funktionalität wie ASP.NET <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Verwendung der <xref:System.Web.UI.MobileControls.Calendar.SelectedDate%2A> Eigenschaft zum Verweisen auf den ausgewählten Tag. In diesem Beispiel ist Teil einer größeren Codebeispiel für die <xref:System.Web.UI.MobileControls.Calendar> (Übersicht).  
+  
+ [!code-csharp[MobileCalendarExample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileCalendarExample/cs/MobileCalendarExample.aspx#4)]
+ [!code-vb[MobileCalendarExample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileCalendarExample/vb/MobileCalendarExample.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedDates">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.SelectedDatesCollection SelectedDates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.SelectedDatesCollection SelectedDates" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Calendar.SelectedDates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SelectedDatesCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von ausgewählten Datumsangaben vom ASP.NET <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Eine Auflistung von ausgewählten Datumsangaben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt eine Auflistung von ausgewählten Datumsangaben in einem <xref:System.Web.UI.MobileControls.Calendar> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.Calendar.SelectedDates%2A> Eigenschaft, um alle Mittwoch im aktuellen Monat auszuwählen. In diesem Beispiel ist Teil einer größeren Codebeispiel für die <xref:System.Web.UI.MobileControls.Calendar> (Übersicht).  
+  
+ [!code-csharp[MobileCalendarExample#8](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileCalendarExample/cs/MobileCalendarExample.aspx#8)]
+ [!code-vb[MobileCalendarExample#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileCalendarExample/vb/MobileCalendarExample.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.Calendar.SelectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, sobald der Benutzer, täglich, wöchentlich oder ein Monat in auswählt der <see cref="T:System.Web.UI.MobileControls.Calendar" /> Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.CalendarSelectionMode SelectionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.CalendarSelectionMode SelectionMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Calendar.SelectionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CalendarSelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Auswahlmodus des ein <see cref="T:System.Web.UI.MobileControls.Calendar" /> Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Auswahlmodus des Monatskalender-Steuerelement. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.CalendarSelectionMode.Day" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Web Forms <xref:System.Web.UI.WebControls.CalendarSelectionMode> Enumeration stellt die Auswahl in der folgenden Tabelle beschrieben.  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|<xref:System.Web.UI.WebControls.CalendarSelectionMode.Day>|Ein einzelnes Datum ausgewählt werden kann, auf die <xref:System.Web.UI.MobileControls.Calendar> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.CalendarSelectionMode.DayWeek>|Ein einzelnes Datum oder die gesamte Woche kann ausgewählt werden die <xref:System.Web.UI.MobileControls.Calendar> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.CalendarSelectionMode.DayWeekMonth>|Ein einzelnes Datum, die Woche oder den ganzen Monat können ausgewählt werden die <xref:System.Web.UI.MobileControls.Calendar> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.CalendarSelectionMode.None>|Kein Datum ausgewählt werden können, auf die <xref:System.Web.UI.MobileControls.Calendar> Steuerelement. **Hinweis:** vermeiden Verwendung dieses Werts, da von einigen Browsern noch der Benutzer ein Datum auswählen können.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert ist nicht der <see cref="T:System.Web.UI.WebControls.CalendarSelectionMode" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDayHeader">
+      <MemberSignature Language="C#" Value="public bool ShowDayHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowDayHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Calendar.ShowDayHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob das Steuerelement die Namen der Tage der Woche im Header Kalenders angezeigt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn die Namen der Tage der Woche im Header Kalenders angezeigt werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft hat die gleiche Funktionalität wie die Web Forms <xref:System.Web.UI.WebControls.Calendar.ShowDayHeader%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.Calendar.ShowDayHeader%2A> Eigenschaft, um die Header für die Tage anzeigen. In diesem Beispiel ist Teil einer größeren Codebeispiel für die <xref:System.Web.UI.MobileControls.Calendar> (Übersicht).  
+  
+ [!code-csharp[MobileCalendarExample#5](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileCalendarExample/cs/MobileCalendarExample.aspx#5)]
+ [!code-vb[MobileCalendarExample#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileCalendarExample/vb/MobileCalendarExample.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Calendar.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Argumente, die an den Ereignishandler übergeben werden.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.Calendar>-Instanz in eine <xref:System.Web.UI.IPostBackEventHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleDate">
+      <MemberSignature Language="C#" Value="public DateTime VisibleDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime VisibleDate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Calendar.VisibleDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.DateTime), "1/1/0001")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert ein Datum aus, der angibt, den Monat angezeigt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Datum, das angibt, den Monat angezeigt. Die Standardeinstellung ist <see cref="F:System.DateTime.MinValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Calendar.VisibleDate%2A> -Eigenschaft wird aktualisiert, nachdem die <xref:System.Web.UI.WebControls.Calendar.VisibleMonthChanged?displayProperty=nameWithType> Ereignis wird ausgelöst.  
+  
+ Das Datum kann einem beliebigen Tag im Monat an. Nur der Month-Wert, der die <xref:System.DateTime> Objekt verwendet wird.  
+  
+ Diese Eigenschaft hat die gleiche Funktionalität wie die Web Forms <xref:System.Web.UI.WebControls.Calendar.VisibleDate%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.Calendar.VisibleDate%2A> Eigenschaft, um die sichtbaren Datumsangaben im Kalender festzulegen. In diesem Beispiel ist Teil einer größeren Codebeispiel für die <xref:System.Web.UI.MobileControls.Calendar> (Übersicht).  
+  
+ [!code-csharp[MobileCalendarExample#9](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileCalendarExample/cs/MobileCalendarExample.aspx#9)]
+ [!code-vb[MobileCalendarExample#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileCalendarExample/vb/MobileCalendarExample.aspx#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebCalendar">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Calendar WebCalendar { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Calendar WebCalendar" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Calendar.WebCalendar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Calendar</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den zugrunde liegenden Web Forms <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die zugrunde liegenden Web Forms <see cref="T:System.Web.UI.WebControls.Calendar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET mobile-Steuerelemente nicht die Eigenschaften der ASP.NET Web Forms duplizieren <xref:System.Web.UI.WebControls.Calendar> Steuerelement, das auf mobilen Geräten nicht unterstützt werden. Daher sollten Sie Funktionen verwenden, die für das zugrunde liegende verfügbar sind <xref:System.Web.UI.WebControls.Calendar> -Steuerelement, dazu den Zugriff auf die <xref:System.Web.UI.WebControls.Calendar?displayProperty=nameWithType> -Objekt über die <xref:System.Web.UI.MobileControls.Calendar.WebCalendar%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.MobileControls.Calendar.WebCalendar%2A> Eigenschaft Formatierung angewendet, die nur zur Verfügung, in der zugrunde liegenden <xref:System.Web.UI.WebControls.Calendar?displayProperty=nameWithType> Steuerelement. In diesem Beispiel ist Teil einer größeren Codebeispiel für die <xref:System.Web.UI.MobileControls.Calendar> (Übersicht).  
+  
+ [!code-csharp[MobileCalendarExample#10](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileCalendarExample/cs/MobileCalendarExample.aspx#10)]
+ [!code-vb[MobileCalendarExample#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileCalendarExample/vb/MobileCalendarExample.aspx#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

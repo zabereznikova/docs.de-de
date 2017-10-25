@@ -1,0 +1,3038 @@
+<Type Name="SqlDataRecord" FullName="Microsoft.SqlServer.Server.SqlDataRecord">
+  <TypeSignature Language="C#" Value="public class SqlDataRecord : System.Data.IDataRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlDataRecord extends System.Object implements class System.Data.IDataRecord" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlDataRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.IDataRecord</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine einzelne Zeile mit Daten und die zugehörigen Metadaten dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient zusammen mit <xref:Microsoft.SqlServer.Server.SqlPipe> aus verwaltetem Code gespeicherte Prozeduren Resultsets an den Client zu senden.  
+  
+ Wenn common Language Runtime (CLR)-Anwendungen schreiben, sollten Sie erneut verwenden vorhandene `SqlDataRecord` Objekte, anstatt jedes Mal neu erstellt. Erstellen viele neue `SqlDataRecord` Objekte können den Arbeitsspeicher stark auslasten und Leistung beeinträchtigen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Erstellen mehrerer <xref:Microsoft.SqlServer.Server.SqlMetaData> Objekte, die die Spaltenmetadaten eines Datensatzes zu beschreiben, und erstellen eine <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  Den Spaltenwerten der der <xref:Microsoft.SqlServer.Server.SqlDataRecord> festgelegt sind und die <xref:Microsoft.SqlServer.Server.SqlDataRecord> an das aufrufende Programm gesendet wird, mithilfe der <xref:Microsoft.SqlServer.Server.SqlContext> Klasse.  
+  
+ [!code-csharp[DataWorks SqlDataRecord Samples#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDataRecord Samples/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlDataRecord Samples#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDataRecord Samples/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlDataRecord (params Microsoft.SqlServer.Server.SqlMetaData[] metaData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.SqlServer.Server.SqlMetaData[] metaData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.#ctor(Microsoft.SqlServer.Server.SqlMetaData[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="metaData" Type="Microsoft.SqlServer.Server.SqlMetaData[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="metaData">Ein Array von <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" />-Objekten, die jede Spalte in der <see cref="T:Microsoft.SqlServer.Server.SqlDataRecord" /> beschreiben.</param>
+        <summary>Initialisiert eine neue <see cref="T:Microsoft.SqlServer.Server.SqlDataRecord" />-Instanz mit dem Schema auf Grundlage des Arrays von <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" />-Objekten, die als Argument übergeben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:Microsoft.SqlServer.Server.SqlDataRecord> Objekt aus den beiden <xref:Microsoft.SqlServer.Server.SqlMetaData> Objekte, die in der Spalte Name und Datentyp anzugeben.  
+  
+ [!code-csharp[DataWorks SqlDataRecord Samples#2](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDataRecord Samples/CS/source.cs#2)]
+ [!code-vb[DataWorks SqlDataRecord Samples#2](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDataRecord Samples/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="metaData" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldCount">
+      <MemberSignature Language="C#" Value="public virtual int FieldCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FieldCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Spalten in der Datenzeile ab. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Die Anzahl der Spalten in der Datenzeile als ganze Zahl.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolean">
+      <MemberSignature Language="C#" Value="public virtual bool GetBoolean (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetBoolean(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetBoolean(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Boolean" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Boolean" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByte">
+      <MemberSignature Language="C#" Value="public virtual byte GetByte (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 GetByte(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetByte(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Byte" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Byte" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public virtual long GetBytes (int ordinal, long fieldOffset, byte[] buffer, int bufferOffset, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 GetBytes(int32 ordinal, int64 fieldOffset, unsigned int8[] buffer, int32 bufferOffset, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="fieldOffset" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="bufferOffset" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="fieldOffset">Der Offset im Feldwert, ab dem Bytes abgerufen werden sollen.</param>
+        <param name="buffer">Der Zielpuffer, in den Bytes kopiert werden sollen.</param>
+        <param name="bufferOffset">Der Offset im Puffer, ab dem Bytes kopiert werden sollen.</param>
+        <param name="length">Die Anzahl von Bytes, die in den Puffer kopiert werden sollen.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als Array von <see cref="T:System.Byte" />-Objekten ab.</summary>
+        <returns>Die Anzahl der kopierten Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht einen Binärwert in einem einzigen Aufruf oder in Segmenten abrufen. Abrufen des Werts in Segmenten eignet sich für große Werte oder Unbekannter Größe.  
+  
+ Zum Abrufen des Werts in mehrere Segmente belegen ein Bytearray mit der Segment-Größe und rufen <xref:Microsoft.SqlServer.Server.SqlDataRecord.GetBytes%2A> wiederholt, Anpassen der `fieldOffset` Parameter entsprechend in den einzelnen aufrufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChar">
+      <MemberSignature Language="C#" Value="public virtual char GetChar (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance char GetChar(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetChar(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Char" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Char" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChars">
+      <MemberSignature Language="C#" Value="public virtual long GetChars (int ordinal, long fieldOffset, char[] buffer, int bufferOffset, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 GetChars(int32 ordinal, int64 fieldOffset, char[] buffer, int32 bufferOffset, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="fieldOffset" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="bufferOffset" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="fieldOffset">Der Offset im Feldwert, ab dem Zeichen abgerufen werden sollen.</param>
+        <param name="buffer">Der Zielpuffer, in den Zeichen kopiert werden sollen.</param>
+        <param name="bufferOffset">Der Offset im Puffer, ab dem die kopierten Zeichen eingesetzt werden sollen.</param>
+        <param name="length">Die Anzahl der in den Puffer zu kopierenden Zeichen.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als Array von <see cref="T:System.Char" />-Objekten ab.</summary>
+        <returns>Die Anzahl von kopierten Zeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode können Sie den Wert eines Zeichens in einem einzigen Aufruf oder in Segmenten abrufen. Abrufen des Werts in Segmenten eignet sich für große Werte oder Unbekannter Größe.  
+  
+ Zum Abrufen des Werts in mehrere Segmente belegen Char Array von der Segmentgröße und rufen <xref:Microsoft.SqlServer.Server.SqlDataRecord.GetChars%2A> wiederholt Anpassen der `fieldOffset` Parameter entsprechend in den einzelnen aufrufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public virtual System.Data.IDataReader GetData (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.IDataReader GetData(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetData(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataTypeName">
+      <MemberSignature Language="C#" Value="public virtual string GetDataTypeName (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetDataTypeName(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetDataTypeName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Gibt den Namen des Datentyps der durch das Ordnungszahlargument angegebenen Spalte zurück.</summary>
+        <returns>Ein <see cref="T:System.String" />, der den Datentyp der Spalte enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Typnamen wie in der SQL Server-Typsystem bezeichnet. Für benutzerdefinierte Typen (UDTs) wird der dreiteilige Name, der verwendet wurde, zum Registrieren des Typs mit SQL Server zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDateTime">
+      <MemberSignature Language="C#" Value="public virtual DateTime GetDateTime (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.DateTime GetDateTime(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetDateTime(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.DateTime" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.DateTime" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDateTimeOffset">
+      <MemberSignature Language="C#" Value="public virtual DateTimeOffset GetDateTimeOffset (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.DateTimeOffset GetDateTimeOffset(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetDateTimeOffset(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Gibt die Daten in der angegebenen Spalte als <see cref="T:System.DateTimeOffset" /> zurück.</summary>
+        <returns>Der Wert der angegebenen Spalte als <see cref="T:System.DateTimeOffset" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecimal">
+      <MemberSignature Language="C#" Value="public virtual decimal GetDecimal (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Decimal GetDecimal(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetDecimal(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Decimal" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Decimal" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDouble">
+      <MemberSignature Language="C#" Value="public virtual double GetDouble (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 GetDouble(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetDouble(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Double" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Double" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFieldType">
+      <MemberSignature Language="C#" Value="public virtual Type GetFieldType (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetFieldType(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetFieldType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Gibt ein <see cref="T:System.Type" />-Objekt zurück, das den CLR-Typ (Common Language Runtime) darstellt, der dem SQL Server-Typ zugeordnet ist, der durch das <paramref name="ordinal" />-Argument angegeben ist.</summary>
+        <returns>Der Spaltentyp als ein <see cref="T:System.Type" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.TypeLoadException">Die Spalte hat einen benutzerdefinierten Typ, der in der aufrufenden Anwendungsdomäne nicht verfügbar ist.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Spalte hat einen benutzerdefinierten Typ, der in der aufrufenden Anwendungsdomäne nicht verfügbar ist.</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFloat">
+      <MemberSignature Language="C#" Value="public virtual float GetFloat (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float32 GetFloat(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetFloat(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see langword="float" /> ab.</summary>
+        <returns>Der Spaltenwert als <see langword="float" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGuid">
+      <MemberSignature Language="C#" Value="public virtual Guid GetGuid (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Guid GetGuid(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetGuid(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Guid" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Guid" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt16">
+      <MemberSignature Language="C#" Value="public virtual short GetInt16 (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int16 GetInt16(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetInt16(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Int16" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Int16" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt32">
+      <MemberSignature Language="C#" Value="public virtual int GetInt32 (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetInt32(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetInt32(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Int32" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Int32" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt64">
+      <MemberSignature Language="C#" Value="public virtual long GetInt64 (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 GetInt64(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetInt64(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Int64" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Int64" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Die durch <paramref name="ordinal" /> angegebene Spalte ist 0 (null).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public virtual string GetName (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetName(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Gibt den Namen der durch das Ordnungszahlargument angegebenen Spalte zurück.</summary>
+        <returns>Eine <see cref="T:System.String" />, die den Spaltennamen enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrdinal">
+      <MemberSignature Language="C#" Value="public virtual int GetOrdinal (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetOrdinal(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetOrdinal(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte, die gesucht werden soll.</param>
+        <summary>Gibt die durch den Spaltennamen angegebene Ordnungszahl der Spalte zurück.</summary>
+        <returns>Die nullbasierte Ordnungszahl der Spalte als Ganzzahl.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Der Spaltenname wurde nicht gefunden.</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlBinary">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlBinary GetSqlBinary (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlBinary GetSqlBinary(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlBinary(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBinary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlBinary" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlBinary" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlBoolean">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlBoolean GetSqlBoolean (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlBoolean GetSqlBoolean(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlBoolean(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlBoolean" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlBoolean" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlByte">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlByte GetSqlByte (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlByte GetSqlByte(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlByte(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlByte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlByte" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlByte" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlBytes">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlBytes GetSqlBytes (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.SqlTypes.SqlBytes GetSqlBytes(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlBytes(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBytes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlBytes" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlBytes" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlChars">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlChars GetSqlChars (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.SqlTypes.SqlChars GetSqlChars(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlChars(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlChars</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlChars" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlChars" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlDateTime">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlDateTime GetSqlDateTime (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlDateTime GetSqlDateTime(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlDateTime(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlDateTime" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlDateTime" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlDecimal">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlDecimal GetSqlDecimal (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlDecimal GetSqlDecimal(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlDecimal(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDecimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlDecimal" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlDecimal" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlDouble">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlDouble GetSqlDouble (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlDouble GetSqlDouble(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlDouble(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlDouble" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlDouble" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlFieldType">
+      <MemberSignature Language="C#" Value="public virtual Type GetSqlFieldType (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetSqlFieldType(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlFieldType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Gibt ein <see cref="T:System.Type" />-Objekt zurück, das den Typ darstellt (als einen in <see cref="N:System.Data.SqlTypes" /> definierter SQL Server-Typ), der dem SQL Server-Typ der Spalte zugeordnet wird.</summary>
+        <returns>Der Spaltentyp als ein <see cref="T:System.Type" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.TypeLoadException">Die Spalte hat einen benutzerdefinierten Typ, der in der aufrufenden Anwendungsdomäne nicht verfügbar ist.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Spalte hat einen benutzerdefinierten Typ, der in der aufrufenden Anwendungsdomäne nicht verfügbar ist.</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlGuid">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlGuid GetSqlGuid (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlGuid GetSqlGuid(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlGuid(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlGuid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlGuid" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlGuid" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlInt16">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlInt16 GetSqlInt16 (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlInt16 GetSqlInt16(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlInt16(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlInt16" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlInt16" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlInt32">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlInt32 GetSqlInt32 (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlInt32 GetSqlInt32(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlInt32(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlInt32" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlInt32" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlInt64">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlInt64 GetSqlInt64 (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlInt64 GetSqlInt64(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlInt64(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlInt64" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlInt64" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlMetaData">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.SqlServer.Server.SqlMetaData GetSqlMetaData (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.SqlServer.Server.SqlMetaData GetSqlMetaData(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlMetaData(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.SqlMetaData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Gibt ein <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" />-Objekt zurück, das die Metadaten der Spalte beschreibt, die von der Spaltenordnungszahl angegeben wird.</summary>
+        <returns>Die Spaltenmetadaten als <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlMoney">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlMoney GetSqlMoney (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlMoney GetSqlMoney(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlMoney(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlMoney</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlMoney" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlMoney" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlSingle">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlSingle GetSqlSingle (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlSingle GetSqlSingle(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlSingle(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlSingle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlSingle" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlSingle" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlString">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlString GetSqlString (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlString GetSqlString(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlString</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlString" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlString" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlValue">
+      <MemberSignature Language="C#" Value="public virtual object GetSqlValue (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetSqlValue(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Gibt den gespeicherten Datenwert in der Spalte, die durch die Spaltenordnungszahl angegeben ist, als SQL Server-Typ ausgedrückt zurück.</summary>
+        <returns>Der Wert der Spalte, als SQL Server-Typ ausgedrückt, als ein <see cref="T:System.Object" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Null-Werte eine Instanz des SQL Server-Typ zurückgegeben, wenn die <xref:System.Data.SqlTypes.INullable.IsNull%2A> Eigenschaft ist "true".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlValues">
+      <MemberSignature Language="C#" Value="public virtual int GetSqlValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetSqlValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Das Array, in das die Spaltenwerte kopiert werden sollen.</param>
+        <summary>Gibt die Werte für alle Spalten im Datensatz, ausgedrückt als SQL Server-Typen, in einem Array zurück.</summary>
+        <returns>Ein <see cref="T:System.Int32" />-Objekt, das die Anzahl der kopierten Spalten angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die SQL Server-Typ-Werte der Spalte werden kopiert, in der `values` Array, das als Parameter übergeben wird. Null-Werte, eine Instanz des Sql-Datentyps zurückgegeben, wenn die <xref:System.Data.SqlTypes.INullable.IsNull%2A> Eigenschaft ist "true".  
+  
+ Die Länge der `values` Array muss nicht mit der Anzahl der Spalten im Datensatz übereinstimmen. Ist die Länge des Arrays größer als die Anzahl der Spalten, werden alle Spaltenwerte in das Array kopiert werden; Wenn sie kleiner ist, werden nur die Array Länge Anzahl von Spaltenwerten in das Array, beginnend mit dem Spaltenwert mit der Ordnungszahl 0 kopiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="values" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlXml">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlXml GetSqlXml (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.SqlTypes.SqlXml GetSqlXml(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetSqlXml(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlXml</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.Data.SqlTypes.SqlXml" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.Data.SqlTypes.SqlXml" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public virtual string GetString (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetString(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert für die durch die Ordnungszahl angegebene Spalte als <see cref="T:System.String" /> ab.</summary>
+        <returns>Der Spaltenwert als <see cref="T:System.String" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTimeSpan">
+      <MemberSignature Language="C#" Value="public virtual TimeSpan GetTimeSpan (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.TimeSpan GetTimeSpan(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetTimeSpan(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Gibt die Daten in der angegebenen Spalte als <see cref="T:System.TimeSpan" /> zurück.</summary>
+        <returns>Der Wert der angegebenen Spalte als <see cref="T:System.TimeSpan" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public virtual object GetValue (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetValue(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Gibt den CLR-Typwert (Common Language Runtime) für die durch das Ordnungszahlargument angegebene Spalte zurück.</summary>
+        <returns>Der CLR-Typwert der durch die Ordnungszahl angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Spalten mit null-Wert <xref:System.DBNull.Value> zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public virtual int GetValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.GetValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Das Array, in das die Spaltenwerte kopiert werden sollen.</param>
+        <summary>Gibt die Werte für alle Spalten im Datensatz, ausgedrückt als CLR-Typen (Common Language Runtime), in ein Array zurück.</summary>
+        <returns>Ein <see cref="T:System.Int32" />-Objekt, das die Anzahl der kopierten Spalten angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kopiert die Werte des CLR-Typ der Spalte in der `values` Array, das als Parameter übergeben wird. Für Spalten mit null-Wert <xref:System.DBNull.Value> zurückgegeben.  
+  
+ Die Länge der `values` Array muss nicht mit der Anzahl der Spalten im Datensatz übereinstimmen. Ist die Länge des Arrays größer als die Anzahl der Spalten, werden alle Spaltenwerte in das Array kopiert werden; Wenn sie kleiner ist, wird nur das Array Länge Anzahl von Spaltenwerten in das Array, beginnend mit dem Spaltenwert mit der Ordnungszahl 0 kopiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="values" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">Es liegt ein Typenkonflikt vor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDBNull">
+      <MemberSignature Language="C#" Value="public virtual bool IsDBNull (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDBNull(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.IsDBNull(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Gibt "true" zurück, wenn die durch den Parameter für die Spaltenordnungszahl angegebene Spalte null ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die Spalte null ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[int ordinal] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlDataRecord.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den CLR-Typwert (Common Language Runtime) für die durch das <paramref name="ordinal" />-Argument angegebene Spalte ab.</summary>
+        <value>Der CLR-Typwert der durch <paramref name="ordinal" /> angegebenen Spalte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Spalten mit null-Wert <xref:System.DBNull.Value> zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlDataRecord.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <summary>Ruft den CLR-Typwert (Common Language Runtime) für die durch das <paramref name="name" />-Argument angegebene Spalte ab.</summary>
+        <value>Der CLR-Typwert der durch <paramref name="name" /> angegebenen Spalte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Spalten mit null-Wert <xref:System.DBNull.Value> zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoolean">
+      <MemberSignature Language="C#" Value="public virtual void SetBoolean (int ordinal, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetBoolean(int32 ordinal, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetBoolean(System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Boolean" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetByte">
+      <MemberSignature Language="C#" Value="public virtual void SetByte (int ordinal, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetByte(int32 ordinal, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetByte(System.Int32,System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Byte" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBytes">
+      <MemberSignature Language="C#" Value="public virtual void SetBytes (int ordinal, long fieldOffset, byte[] buffer, int bufferOffset, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetBytes(int32 ordinal, int64 fieldOffset, unsigned int8[] buffer, int32 bufferOffset, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="fieldOffset" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="bufferOffset" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="fieldOffset">Der Offset im Feldwert, ab dem Bytes kopiert werden sollen.</param>
+        <param name="buffer">Der Zielpuffer, aus dem Bytes kopiert werden sollen.</param>
+        <param name="bufferOffset">Der Offset im Puffer, ab dem Bytes kopiert werden sollen.</param>
+        <param name="length">Die Anzahl von Bytes, die aus dem Puffer kopiert werden sollen.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf das angegebene Array von <see cref="T:System.Byte" />-Werten fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetChar">
+      <MemberSignature Language="C#" Value="public virtual void SetChar (int ordinal, char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetChar(int32 ordinal, char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetChar(System.Int32,System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Char" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetChars">
+      <MemberSignature Language="C#" Value="public virtual void SetChars (int ordinal, long fieldOffset, char[] buffer, int bufferOffset, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetChars(int32 ordinal, int64 fieldOffset, char[] buffer, int32 bufferOffset, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="fieldOffset" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="bufferOffset" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="fieldOffset">Der Offset im Feldwert, ab dem Zeichen kopiert werden sollen.</param>
+        <param name="buffer">Der Zielpuffer, aus dem Zeichen kopiert werden sollen.</param>
+        <param name="bufferOffset">Der Offset im Puffer, ab dem Zeichen kopiert werden sollen.</param>
+        <param name="length">Die Anzahl der aus dem Puffer zu kopierenden Zeichen.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf das angegebene Array von <see cref="T:System.Char" />-Werten fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDateTime">
+      <MemberSignature Language="C#" Value="public virtual void SetDateTime (int ordinal, DateTime value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDateTime(int32 ordinal, valuetype System.DateTime value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetDateTime(System.Int32,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.DateTime" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDateTimeOffset">
+      <MemberSignature Language="C#" Value="public virtual void SetDateTimeOffset (int ordinal, DateTimeOffset value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDateTimeOffset(int32 ordinal, valuetype System.DateTimeOffset value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetDateTimeOffset(System.Int32,System.DateTimeOffset)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt den Wert der angegebenen Spalte auf den <see cref="T:System.DateTimeOffset" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDBNull">
+      <MemberSignature Language="C#" Value="public virtual void SetDBNull (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDBNull(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetDBNull(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Legt den Wert in der angegebenen Spalte auf <see cref="T:System.DBNull" /> fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDecimal">
+      <MemberSignature Language="C#" Value="public virtual void SetDecimal (int ordinal, decimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDecimal(int32 ordinal, valuetype System.Decimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetDecimal(System.Int32,System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Decimal" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDouble">
+      <MemberSignature Language="C#" Value="public virtual void SetDouble (int ordinal, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDouble(int32 ordinal, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetDouble(System.Int32,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Double" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFloat">
+      <MemberSignature Language="C#" Value="public virtual void SetFloat (int ordinal, float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetFloat(int32 ordinal, float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetFloat(System.Int32,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see langword="float" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGuid">
+      <MemberSignature Language="C#" Value="public virtual void SetGuid (int ordinal, Guid value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetGuid(int32 ordinal, valuetype System.Guid value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetGuid(System.Int32,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Guid" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetInt16">
+      <MemberSignature Language="C#" Value="public virtual void SetInt16 (int ordinal, short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetInt16(int32 ordinal, int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetInt16(System.Int32,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Int16" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetInt32">
+      <MemberSignature Language="C#" Value="public virtual void SetInt32 (int ordinal, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetInt32(int32 ordinal, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetInt32(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Int32" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetInt64">
+      <MemberSignature Language="C#" Value="public virtual void SetInt64 (int ordinal, long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetInt64(int32 ordinal, int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetInt64(System.Int32,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Int64" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlBinary">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlBinary (int ordinal, System.Data.SqlTypes.SqlBinary value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlBinary(int32 ordinal, valuetype System.Data.SqlTypes.SqlBinary value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlBinary(System.Int32,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlBinary" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlBoolean">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlBoolean (int ordinal, System.Data.SqlTypes.SqlBoolean value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlBoolean(int32 ordinal, valuetype System.Data.SqlTypes.SqlBoolean value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlBoolean(System.Int32,System.Data.SqlTypes.SqlBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlBoolean" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlByte">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlByte (int ordinal, System.Data.SqlTypes.SqlByte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlByte(int32 ordinal, valuetype System.Data.SqlTypes.SqlByte value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlByte(System.Int32,System.Data.SqlTypes.SqlByte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlByte" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlByte" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlBytes">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlBytes (int ordinal, System.Data.SqlTypes.SqlBytes value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlBytes(int32 ordinal, class System.Data.SqlTypes.SqlBytes value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlBytes(System.Int32,System.Data.SqlTypes.SqlBytes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlBytes" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlBytes" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlChars">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlChars (int ordinal, System.Data.SqlTypes.SqlChars value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlChars(int32 ordinal, class System.Data.SqlTypes.SqlChars value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlChars(System.Int32,System.Data.SqlTypes.SqlChars)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlChars" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlChars" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlDateTime">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlDateTime (int ordinal, System.Data.SqlTypes.SqlDateTime value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlDateTime(int32 ordinal, valuetype System.Data.SqlTypes.SqlDateTime value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlDateTime(System.Int32,System.Data.SqlTypes.SqlDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlDateTime" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlDecimal">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlDecimal (int ordinal, System.Data.SqlTypes.SqlDecimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlDecimal(int32 ordinal, valuetype System.Data.SqlTypes.SqlDecimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlDecimal(System.Int32,System.Data.SqlTypes.SqlDecimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlDecimal" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlDecimal" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlDouble">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlDouble (int ordinal, System.Data.SqlTypes.SqlDouble value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlDouble(int32 ordinal, valuetype System.Data.SqlTypes.SqlDouble value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlDouble(System.Int32,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlDouble" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlGuid">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlGuid (int ordinal, System.Data.SqlTypes.SqlGuid value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlGuid(int32 ordinal, valuetype System.Data.SqlTypes.SqlGuid value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlGuid(System.Int32,System.Data.SqlTypes.SqlGuid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlGuid" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlGuid" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlInt16">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlInt16 (int ordinal, System.Data.SqlTypes.SqlInt16 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlInt16(int32 ordinal, valuetype System.Data.SqlTypes.SqlInt16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlInt16(System.Int32,System.Data.SqlTypes.SqlInt16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlInt16" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlInt16" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlInt32">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlInt32 (int ordinal, System.Data.SqlTypes.SqlInt32 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlInt32(int32 ordinal, valuetype System.Data.SqlTypes.SqlInt32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlInt32(System.Int32,System.Data.SqlTypes.SqlInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlInt32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlInt32" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlInt64">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlInt64 (int ordinal, System.Data.SqlTypes.SqlInt64 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlInt64(int32 ordinal, valuetype System.Data.SqlTypes.SqlInt64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlInt64(System.Int32,System.Data.SqlTypes.SqlInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlInt64" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlInt64" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlMoney">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlMoney (int ordinal, System.Data.SqlTypes.SqlMoney value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlMoney(int32 ordinal, valuetype System.Data.SqlTypes.SqlMoney value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlMoney(System.Int32,System.Data.SqlTypes.SqlMoney)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlMoney" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlMoney" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlSingle">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlSingle (int ordinal, System.Data.SqlTypes.SqlSingle value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlSingle(int32 ordinal, valuetype System.Data.SqlTypes.SqlSingle value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlSingle(System.Int32,System.Data.SqlTypes.SqlSingle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlSingle" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlSingle" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlString">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlString (int ordinal, System.Data.SqlTypes.SqlString value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlString(int32 ordinal, valuetype System.Data.SqlTypes.SqlString value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlString(System.Int32,System.Data.SqlTypes.SqlString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlString" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlString" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSqlXml">
+      <MemberSignature Language="C#" Value="public virtual void SetSqlXml (int ordinal, System.Data.SqlTypes.SqlXml value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSqlXml(int32 ordinal, class System.Data.SqlTypes.SqlXml value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetSqlXml(System.Int32,System.Data.SqlTypes.SqlXml)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlXml" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.Data.SqlTypes.SqlXml" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetString">
+      <MemberSignature Language="C#" Value="public virtual void SetString (int ordinal, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetString(int32 ordinal, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetString(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt die in der Spalte gespeicherten Daten auf den angegebenen <see cref="T:System.String" />-Wert fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTimeSpan">
+      <MemberSignature Language="C#" Value="public virtual void SetTimeSpan (int ordinal, TimeSpan value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetTimeSpan(int32 ordinal, valuetype System.TimeSpan value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetTimeSpan(System.Int32,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert der Spalte.</param>
+        <summary>Legt den Wert der angegebenen Spalte auf <see cref="T:System.TimeSpan" /> fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Das übergebene <paramref name="ordinal" /> ist eine negative Zahl.</exception>
+        <exception cref="T:System.ArgumentException">Der übergebene <see cref="T:System.TimeSpan" />-Wert ist größer als 24 Stunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public virtual void SetValue (int ordinal, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(int32 ordinal, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetValue(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="value">Der neue Wert für die angegebene Spalte.</param>
+        <summary>Legt einen neuen Wert fest, der als CLR-Typwert (Common Language Runtime) für die Spalte ausgedrückt wird, die von der Spaltenordnungszahl angegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `value`ist ein SQL-Typ wird als geschachtelter eine <xref:System.Object> Instanz.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValues">
+      <MemberSignature Language="C#" Value="public virtual int SetValues (params object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 SetValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.SetValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="values">Das Array neuer Werte als CLR-Typen für die <see cref="T:Microsoft.SqlServer.Server.SqlDataRecord" />-Instanz, die als <see cref="T:System.Object" />-Verweise geschachtelt sind.</param>
+        <summary>Legt neue Werte für alle Spalten im <see cref="T:Microsoft.SqlServer.Server.SqlDataRecord" /> fest. Diese Werte werden in Form von CLR-Typen (Common Language Runtime) ausgedrückt.</summary>
+        <returns>Die Anzahl der Spaltenwerte als ganze Zahl.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Länge der Werte der Anzahl der Spalten im entsprechen den <xref:Microsoft.SqlServer.Server.SqlDataRecord> Instanz.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="values" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Größe der Werte stimmt nicht mit der Anzahl der Spalten in der <see cref="T:Microsoft.SqlServer.Server.SqlDataRecord" />-Instanz überein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDataRecord.GetData">
+      <MemberSignature Language="C#" Value="System.Data.IDataReader IDataRecord.GetData (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Data.IDataReader System.Data.IDataRecord.GetData(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlDataRecord.System#Data#IDataRecord#GetData(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Wird in dieser Version nicht unterstützt.</summary>
+        <returns>
+          <see cref="T:System.Data.IDataReader" />  
+  
+ Löst immer eine Ausnahme aus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in dieser Version nicht unterstützt und löst <xref:System.NotSupportedException> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="ordinal" /> ist kleiner als 0 oder größer als die Anzahl der Spalten (d. h. <see cref="P:Microsoft.SqlServer.Server.SqlDataRecord.FieldCount" />).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

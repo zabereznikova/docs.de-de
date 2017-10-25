@@ -1,0 +1,1161 @@
+<Type Name="NameValueCollection" FullName="System.Collections.Specialized.NameValueCollection">
+  <TypeSignature Language="C#" Value="public class NameValueCollection : System.Collections.Specialized.NameObjectCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit NameValueCollection extends System.Collections.Specialized.NameObjectCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Specialized.NameValueCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Specialized</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Specialized.NameObjectCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung einander zugeordneter <see cref="T:System.String" />-Schlüssel und <see cref="T:System.String" />-Werte dar, auf die entweder über den Schlüssel oder über den Index zugegriffen werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Auflistung basiert auf der <xref:System.Collections.Specialized.NameObjectCollectionBase> Klasse. Anders als bei der <xref:System.Collections.Specialized.NameObjectCollectionBase>, diese Klasse speichert mehrere Zeichenfolgenwerte unter einem einzelnen Schlüssel.  
+  
+ Diese Klasse kann für Header, Abfragezeichenfolgen und Formulardaten verwendet werden.  
+  
+ Jedes Element ist ein Schlüssel/Wert-Paar.  
+  
+ Sammlungen dieses Typs nicht die Reihenfolge des Elements beibehalten, und keine bestimmte Reihenfolge garantiert wird, wenn die Auflistung in einer Enumeration.  
+  
+ Die Kapazität einer <xref:System.Collections.Specialized.NameValueCollection> ist die Anzahl der Elemente der <xref:System.Collections.Specialized.NameValueCollection> aufnehmen kann. Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Specialized.NameValueCollection>, die Kapazität wird automatisch erhöht, nach Bedarf über die neuzuordnung.  
+  
+ Die Hashcodeanbieter Hashcodes für Schlüssel in der <xref:System.Collections.Specialized.NameValueCollection>. Der Hashcode-Standardanbieter ist die <xref:System.Collections.CaseInsensitiveHashCodeProvider>.  
+  
+ Der Vergleich bestimmt, ob zwei Schlüssel gleich sind. Ist der Standardvergleich die <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ In .NET Framework, Version 1.0 verwendet diese Klasse kulturabhängige Zeichenfolgenvergleiche. In .NET Framework, Version 1.1 und höher, verwendet diese Klasse jedoch <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> beim Vergleichen von Zeichenfolgen. Weitere Informationen zu den Auswirkungen der Kultur auf Vergleiche und Sortiervorgänge finden Sie unter [Durchführen kulturunabhängiger Zeichenfolgenoperationen](~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md).  
+  
+ `null`wird als Schlüssel oder als Wert zulässig.  
+  
+> [!CAUTION]
+>  Die <xref:System.Collections.Specialized.NameValueCollection.Get%2A> Methode unterscheidet nicht zwischen `null` der zurückgegeben wird, da der angegebene Schlüssel nicht gefunden wird und `null` der zurückgegeben wird, weil der Wert, der dem Schlüssel zugeordnet ist `null`.  
+  
+   
+  
+## Examples  
+ [!code-cpp[System.Collections.Specialized.NameValueCollection2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameValueCollection2/CPP/nvc.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameValueCollection2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameValueCollection2/CS/nvc.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameValueCollection2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameValueCollection2/VB/nvc.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Öffentliche statische (<see langword="Shared" /> in Visual Basic) Member dieses Typs sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.  
+  
+ Diese Implementierung bietet keinem synchronisierten (threadsicheren) Wrapper für ein <see cref="T:System.Collections.Specialized.NameValueCollection" />, abgeleitete Klassen können jedoch Erstellen ihrer eigenen synchronisierten Versionen der der <see cref="T:System.Collections.Specialized.NameValueCollection" /> mithilfe der <see cref="P:System.Collections.ICollection.SyncRoot" /> Eigenschaft von der <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> Klasse.  
+  
+ Einer Auflistung ist systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameValueCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Klasse mit der anfänglichen Standardkapazität, wobei der Hashcode-Standardanbieter und die Standardvergleichsfunktion (Standardcomparer) verwendet werden, die beide die Groß- und Kleinschreibung nicht berücksichtigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Specialized.NameValueCollection> ist die Anzahl der Elemente, die die <xref:System.Collections.Specialized.NameValueCollection> aufnehmen kann. Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Specialized.NameValueCollection>, die Kapazität wird automatisch erhöht Neuzuordnen des internen Arrays wie erforderlich.  
+  
+ Wenn die Größe der Auflistung geschätzt werden kann, die anfängliche Kapazität angeben entfällt die Notwendigkeit einer Reihe von größenänderungsvorgänge beim Hinzufügen von Elementen zum Ausführen der <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+ Die Hashcodeanbieter Hashcodes für Schlüssel in der <xref:System.Collections.Specialized.NameValueCollection>. Der Hashcode-Standardanbieter ist die <xref:System.Collections.CaseInsensitiveHashCodeProvider>.  
+  
+ Der Vergleich bestimmt, ob zwei Schlüssel gleich sind. Ist der Standardvergleich die <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ Dieser Konstruktor ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameValueCollection (System.Collections.IEqualityComparer equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.IEqualityComparer equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.#ctor(System.Collections.IEqualityComparer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="equalityComparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="equalityComparer">Das <see cref="T:System.Collections.IEqualityComparer" />-Objekt wird verwendet, um zu ermitteln, ob zwei Schlüssel gleich sind, und um Hashcodes für die in der Auflistung befindlichen Schlüssel zu generieren.</param>
+        <summary>Initialisiert eine neue, leere Instanz der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Klasse mit der anfänglichen Standardkapazität und dem angegebenen <see cref="T:System.Collections.IEqualityComparer" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Specialized.NameValueCollection> Objekt ist die Anzahl der Elemente, die die <xref:System.Collections.Specialized.NameValueCollection> aufnehmen kann. Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Specialized.NameValueCollection>, die Kapazität wird automatisch erhöht Neuzuordnen des internen Arrays wie erforderlich.  
+  
+ Wenn die Größe der Auflistung geschätzt werden kann, die anfängliche Kapazität angeben entfällt die Notwendigkeit einer Reihe von größenänderungsvorgänge beim Hinzufügen von Elementen zum Ausführen der <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+ Die <xref:System.Collections.IEqualityComparer> -Objekt kombiniert den Comparer und den Hashcodeanbieter.  Die Hashcodeanbieter Hashcodes für Schlüssel in der <xref:System.Collections.Specialized.NameValueCollection>.  Der Vergleich bestimmt, ob zwei Schlüssel gleich sind.  
+  
+ Dieser Konstruktor ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameValueCollection (System.Collections.Specialized.NameValueCollection col);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.NameValueCollection col) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.#ctor(System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="col" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="col">Die <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz, die in die neue <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz kopiert werden soll.</param>
+        <summary>Kopiert die Einträge aus dem angegebenen <see cref="T:System.Collections.Specialized.NameValueCollection" />-Objekt in ein neues <see cref="T:System.Collections.Specialized.NameValueCollection" />-Objekt, dessen Anfangskapazität der Anzahl von kopierten Einträge entspricht, und verwendet denselben Hashcodeanbieter und Comparer wie die Quellauflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Specialized.NameValueCollection> ist die Anzahl der Elemente, die die <xref:System.Collections.Specialized.NameValueCollection> aufnehmen kann. Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Specialized.NameValueCollection>, die Kapazität wird automatisch erhöht Neuzuordnen des internen Arrays wie erforderlich.  
+  
+ Wenn die Größe der Auflistung geschätzt werden kann, die anfängliche Kapazität angeben entfällt die Notwendigkeit einer Reihe von größenänderungsvorgänge beim Hinzufügen von Elementen zum Ausführen der <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+ Die Hashcodeanbieter Hashcodes für Schlüssel in der <xref:System.Collections.Specialized.NameValueCollection>. Der Hashcode-Standardanbieter ist die <xref:System.Collections.CaseInsensitiveHashCodeProvider>.  
+  
+ Der Vergleich bestimmt, ob zwei Schlüssel gleich sind. Ist der Standardvergleich die <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ Die Elemente der neuen <xref:System.Collections.Specialized.NameValueCollection> werden in derselben Reihenfolge wie in der Quelle sortiert <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+ Dieser Konstruktor ist eine O (`n`) Vorgang, wobei `n` ist die Anzahl der Elemente im `col`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="col" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameValueCollection (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die anfängliche Anzahl von Einträgen, die das <see cref="T:System.Collections.Specialized.NameValueCollection" />-Objekt enthalten kann.</param>
+        <summary>Initialisiert eine neue, leere Instanz der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Klasse mit der angegebenen Anfangskapazität, wobei der Hashcode-Standardanbieter und der Standardcomparer verwendet werden, die beide die Groß- und Kleinschreibung nicht berücksichtigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Specialized.NameValueCollection> ist die Anzahl der Elemente, die die <xref:System.Collections.Specialized.NameValueCollection> aufnehmen kann. Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Specialized.NameValueCollection>, die Kapazität wird automatisch erhöht Neuzuordnen des internen Arrays wie erforderlich.  
+  
+ Wenn die Größe der Auflistung geschätzt werden kann, die anfängliche Kapazität angeben entfällt die Notwendigkeit einer Reihe von größenänderungsvorgänge beim Hinzufügen von Elementen zum Ausführen der <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+ Die Hashcodeanbieter Hashcodes für Schlüssel in der <xref:System.Collections.Specialized.NameValueCollection>. Der Hashcode-Standardanbieter ist die <xref:System.Collections.CaseInsensitiveHashCodeProvider>.  
+  
+ Der Vergleich bestimmt, ob zwei Schlüssel gleich sind. Ist der Standardvergleich die <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ Dieser Konstruktor ist eine O (`n`) Vorgang, wobei `n` ist `capacity`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner als Null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameValueCollection (System.Collections.IHashCodeProvider hashProvider, System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.IHashCodeProvider hashProvider, class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.#ctor(System.Collections.IHashCodeProvider,System.Collections.IComparer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Please use NameValueCollection(IEqualityComparer) instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="hashProvider" Type="System.Collections.IHashCodeProvider" />
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="hashProvider">Der <see cref="T:System.Collections.IHashCodeProvider" />, der die Hashcodes für sämtliche Schlüssel in der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz bereitstellt.</param>
+        <param name="comparer">Der <see cref="T:System.Collections.IComparer" />, mit dem ermittelt wird, ob zwei Schlüssel gleich sind.</param>
+        <summary>Initialisiert eine neue, leere Instanz der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Klasse mit der standardmäßigen Anfangskapazität, wobei der angegebene Hashcodeanbieter und Comparer verwendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Specialized.NameValueCollection> ist die Anzahl der Elemente, die die <xref:System.Collections.Specialized.NameValueCollection> aufnehmen kann. Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Specialized.NameValueCollection>, die Kapazität wird automatisch erhöht Neuzuordnen des internen Arrays wie erforderlich.  
+  
+ Wenn die Größe der Auflistung geschätzt werden kann, die anfängliche Kapazität angeben entfällt die Notwendigkeit einer Reihe von größenänderungsvorgänge beim Hinzufügen von Elementen zum Ausführen der <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+ Die Hashcodeanbieter Hashcodes für Schlüssel in der <xref:System.Collections.Specialized.NameValueCollection>. Der Hashcode-Standardanbieter ist die <xref:System.Collections.CaseInsensitiveHashCodeProvider>.  
+  
+ Der Vergleich bestimmt, ob zwei Schlüssel gleich sind. Ist der Standardvergleich die <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ Dieser Konstruktor ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameValueCollection (int capacity, System.Collections.IEqualityComparer equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity, class System.Collections.IEqualityComparer equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.#ctor(System.Int32,System.Collections.IEqualityComparer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+        <Parameter Name="equalityComparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die anfängliche Anzahl von Einträgen, die das <see cref="T:System.Collections.Specialized.NameValueCollection" />-Objekt enthalten kann.</param>
+        <param name="equalityComparer">Das <see cref="T:System.Collections.IEqualityComparer" />-Objekt wird verwendet, um zu ermitteln, ob zwei Schlüssel gleich sind, und um Hashcodes für die in der Auflistung befindlichen Schlüssel zu generieren.</param>
+        <summary>Initialisiert eine neue, leere Instanz der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Klasse mit der angegebenen Anfangskapazität und dem angegebenen <see cref="T:System.Collections.IEqualityComparer" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Specialized.NameValueCollection> Objekt ist die Anzahl der Elemente, die die <xref:System.Collections.Specialized.NameValueCollection> aufnehmen kann. Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Specialized.NameValueCollection>, die Kapazität wird automatisch erhöht Neuzuordnen des internen Arrays wie erforderlich.  
+  
+ Wenn die Größe der Auflistung geschätzt werden kann, die anfängliche Kapazität angeben entfällt die Notwendigkeit einer Reihe von größenänderungsvorgänge beim Hinzufügen von Elementen zum Ausführen der <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+ Die <xref:System.Collections.IEqualityComparer> -Objekt kombiniert den Comparer und den Hashcodeanbieter.  Die Hashcodeanbieter Hashcodes für Schlüssel in der <xref:System.Collections.Specialized.NameValueCollection>.  Der Vergleich bestimmt, ob zwei Schlüssel gleich sind.  
+  
+ Dieser Konstruktor ist eine O (`n`) Vorgang, wobei `n` ist die `capacity` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner als Null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameValueCollection (int capacity, System.Collections.Specialized.NameValueCollection col);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity, class System.Collections.Specialized.NameValueCollection col) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.#ctor(System.Int32,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+        <Parameter Name="col" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die anfängliche Anzahl von Einträgen, die das <see cref="T:System.Collections.Specialized.NameValueCollection" />-Objekt enthalten kann.</param>
+        <param name="col">Die <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz, die in die neue <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz kopiert werden soll.</param>
+        <summary>Kopiert die Einträge aus dem angegebenen <see cref="T:System.Collections.Specialized.NameValueCollection" />-Objekt in ein neues <see cref="T:System.Collections.Specialized.NameValueCollection" />-Objekt mit der angegebenen Anfangskapazität bzw. mit einer Anfangskapazität, die der Anzahl der kopierten Einträge entspricht, je nachdem, welche größer ist. Es werden der Hashcode-Standardanbieter und der Standardcomparer verwendet, die die Groß- und Kleinschreibung nicht berücksichtigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Specialized.NameValueCollection> ist die Anzahl der Elemente, die die <xref:System.Collections.Specialized.NameValueCollection> aufnehmen kann. Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Specialized.NameValueCollection>, die Kapazität wird automatisch erhöht Neuzuordnen des internen Arrays wie erforderlich.  
+  
+ Wenn die Größe der Auflistung geschätzt werden kann, die anfängliche Kapazität angeben entfällt die Notwendigkeit einer Reihe von größenänderungsvorgänge beim Hinzufügen von Elementen zum Ausführen der <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+ Die Hashcodeanbieter Hashcodes für Schlüssel in der <xref:System.Collections.Specialized.NameValueCollection>. Der Hashcode-Standardanbieter ist die <xref:System.Collections.CaseInsensitiveHashCodeProvider>.  
+  
+ Der Vergleich bestimmt, ob zwei Schlüssel gleich sind. Ist der Standardvergleich die <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ Dieser Konstruktor ist eine O (`n`) Vorgang, wobei `n` ist `capacity`.  Wenn die Anzahl der Elemente im `col` ist größer als `capacity`, dieser Konstruktor wird eine O (`n` + `m`)-Vorgang, in dem `n` ist `capacity` und `m` ist die Anzahl der Elemente in `col`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="col" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NameValueCollection (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit den zum Serialisieren der neuen <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz erforderlichen Informationen.</param>
+        <param name="context">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />-Objekt mit der Quelle und dem Ziel des serialisierten Streams, der der neuen <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Klasse, die serialisierbar ist und die angegebene <see cref="T:System.Runtime.Serialization.SerializationInfo" /> und den angegebenen <see cref="T:System.Runtime.Serialization.StreamingContext" /> verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameValueCollection (int capacity, System.Collections.IHashCodeProvider hashProvider, System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity, class System.Collections.IHashCodeProvider hashProvider, class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.#ctor(System.Int32,System.Collections.IHashCodeProvider,System.Collections.IComparer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Please use NameValueCollection(Int32, IEqualityComparer) instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+        <Parameter Name="hashProvider" Type="System.Collections.IHashCodeProvider" />
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die anfängliche Anzahl von Einträgen, die das <see cref="T:System.Collections.Specialized.NameValueCollection" />-Objekt enthalten kann.</param>
+        <param name="hashProvider">Der <see cref="T:System.Collections.IHashCodeProvider" />, der die Hashcodes für sämtliche Schlüssel in der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz bereitstellt.</param>
+        <param name="comparer">Der <see cref="T:System.Collections.IComparer" />, mit dem ermittelt wird, ob zwei Schlüssel gleich sind.</param>
+        <summary>Initialisiert eine neue, leere Instanz der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Klasse mit der angegebenen Anfangskapazität, wobei der angegebene Hashcodeanbieter und Comparer verwendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Specialized.NameValueCollection> ist die Anzahl der Elemente, die die <xref:System.Collections.Specialized.NameValueCollection> aufnehmen kann. Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Specialized.NameValueCollection>, die Kapazität wird automatisch erhöht Neuzuordnen des internen Arrays wie erforderlich.  
+  
+ Wenn die Größe der Auflistung geschätzt werden kann, die anfängliche Kapazität angeben entfällt die Notwendigkeit einer Reihe von größenänderungsvorgänge beim Hinzufügen von Elementen zum Ausführen der <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+ Die Hashcodeanbieter Hashcodes für Schlüssel in der <xref:System.Collections.Specialized.NameValueCollection>. Der Hashcode-Standardanbieter ist die <xref:System.Collections.CaseInsensitiveHashCodeProvider>.  
+  
+ Der Vergleich bestimmt, ob zwei Schlüssel gleich sind. Ist der Standardvergleich die <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ Dieser Konstruktor ist eine O (`n`) Vorgang, wobei `n` ist `capacity`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner als Null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Collections.Specialized.NameValueCollection c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Collections.Specialized.NameValueCollection c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.Add(System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="c">Die <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz, die in die aktuelle <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz kopiert werden soll.</param>
+        <summary>Kopiert die Einträge in der angegebenen <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz in die aktuelle <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Schlüssel in `c` bereits im Ziel <xref:System.Collections.Specialized.NameValueCollection> Instanz, in der zugeordneten Wert `c` wird hinzugefügt, der vorhandenen durch Trennzeichen getrennte Liste von Werten, die den gleichen Schlüssel im Ziel zugeordnet <xref:System.Collections.Specialized.NameValueCollection> Instanz.  
+  
+ Wenn <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A> bereits gleich der Kapazität, die Kapazität der <xref:System.Collections.Specialized.NameValueCollection> wird von automatisch Neuzuordnen des internen Arrays erhöht und die vorhandenen Elemente werden in das neue Array kopiert, bevor das neue Element hinzugefügt wird.  
+  
+ Wenn <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A> ist kleiner als die Kapazität dieser Methode ist ein o(1)-Vorgang. Wenn die Kapazität für das neue Element erhöht werden muss, wird diese Methode eine O (`n`)-Vorgang, in dem `n` ist <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="c" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der <see cref="T:System.String" />-Schlüssel des hinzuzufügenden Eintrags. Der Schlüssel kann <see langword="null" /> sein.</param>
+        <param name="value">Der <see cref="T:System.String" />-Wert des hinzuzufügenden Eintrags. Der Wert kann <see langword="null" /> sein.</param>
+        <summary>Fügt der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz einen Eintrag mit dem angegebenen Schlüssel und Wert hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der angegebene Schlüssel in das Ziel bereits <xref:System.Collections.Specialized.NameValueCollection> Instanz, der angegebene Wert wird hinzugefügt, der vorhandenen durch Trennzeichen getrennte Liste von Werten in der Form `"value1,value2,value3"`. Die Werte sind mit demselben Schlüssel in das Ziel zugeordneten <xref:System.Collections.Specialized.NameValueCollection> Instanz.  
+  
+ Wenn <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A> bereits gleich der Kapazität, die Kapazität der <xref:System.Collections.Specialized.NameValueCollection> wird von automatisch Neuzuordnen des internen Arrays erhöht und die vorhandenen Elemente werden in das neue Array kopiert, bevor das neue Element hinzugefügt wird.  
+  
+ Wenn <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A> ist kleiner als die Kapazität dieser Methode ist ein o(1)-Vorgang. Wenn die Kapazität für das neue Element erhöht werden muss, wird diese Methode eine O (`n`)-Vorgang, in dem `n` ist <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public virtual string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NameValueCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Schlüssel in der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz ab.</summary>
+        <value>Ein <see cref="T:System.String" />-Array, das alle Schlüssel der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Auflistung leer ist, gibt diese Methode ein leeres <xref:System.String> array, keine `null`.  
+  
+ Die zurückgegebene Arrays <xref:System.Collections.Specialized.NameValueCollection.AllKeys%2A> für eine bessere Leistung zwischengespeichert werden und werden automatisch aktualisiert, wenn die Auflistung ändert. Eine abgeleitete Klasse kann die zwischengespeicherte Version ungültig, durch den Aufruf <xref:System.Collections.Specialized.NameValueCollection.InvalidateCachedArrays%2A>, wodurch die Arrays neu erstellt werden.  
+  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erklärt die zwischengespeicherten Arrays für ungültig und entfernt alle Einträge aus der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Collections.Specialized.NameValueCollection" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Dest</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die gesamte <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz in ein kompatibles eindimensionales <see cref="T:System.Array" />, beginnend am angegebenen Index des Zielarrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das angegebene Array muss einen kompatiblen Typ aufweisen.  
+  
+ Diese Methode verwendet <xref:System.Array.Copy%2A?displayProperty=nameWithType> die Elemente kopiert.  
+  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dest" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="dest" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der Quell-<see cref="T:System.Collections.Specialized.NameValueCollection" /> ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Ziel-<paramref name="dest" />s.</exception>
+        <exception cref="T:System.InvalidCastException">Der Typ des Quell-<see cref="T:System.Collections.Specialized.NameValueCollection" />s kann nicht automatisch in den Typ des Ziel-<paramref name="dest" />s umgewandelt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public virtual string Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Eintrags, der die aus der Auflistung abzurufenden Werte enthält.</param>
+        <summary>Ruft die Werte am angegebenen Index der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz ab, die in einer einzigen, durch Trennzeichen getrennten Liste zusammengefasst werden.</summary>
+        <returns>Ein <see cref="T:System.String" />, der am angegebenen Index der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz eine Liste mit durch Trennzeichen getrennten Werten enthält, sofern gefunden; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist die Anzahl der Werte am angegebenen Index.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />liegt außerhalb des gültigen Bereichs von Indizes für die Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public virtual string Get (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Get(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der <see cref="T:System.String" />-Schlüssel des Eintrags, der die abzurufenden Werte enthält. Der Schlüssel kann <see langword="null" /> sein.</param>
+        <summary>Ruft die dem angegebenen Schlüssel zugeordneten Werte aus der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz ab, die in einer einzigen, durch Trennzeichen getrennten Liste zusammengefasst werden.</summary>
+        <returns>Ein <see cref="T:System.String" />, der eine Liste mit durch Trennzeichen getrennten Werten enthält, die dem angegebenen Schlüssel aus der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz zugeordnet sind, sofern gefunden; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Diese Methode gibt `null` in den folgenden Fällen: 1) Wenn der angegebene Schlüssel nicht gefunden wurde. und 2) Wenn der angegebene Schlüssel gefunden wird und des zugehörigen Werts `null`. Diese Methode unterscheidet nicht zwischen den beiden Fällen.  
+  
+ Diese Methode ist eine O (`n`)-Vorgang, in dem `n` die Anzahl der Werte, die dem angegebenen Schlüssel zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public virtual string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des aus der Auflistung abzurufenden Schlüssels.</param>
+        <summary>Ruft den Schlüssel am angegebenen Index der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz ab.</summary>
+        <returns>Ein <see cref="T:System.String" />, der den Schlüssel am angegebenen Index der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz enthält, sofern gefunden; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />liegt außerhalb des gültigen Bereichs von Indizes für die Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public virtual string[] GetValues (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetValues(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.GetValues(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Eintrags, der die aus der Auflistung abzurufenden Werte enthält.</param>
+        <summary>Ruft die Werte am angegebenen Index der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz ab.</summary>
+        <returns>Ein <see cref="T:System.String" />-Array, das die Werte am angegebenen Index der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz enthält, sofern gefunden; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist die Anzahl der Werte am angegebenen Index.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />liegt außerhalb des gültigen Bereichs von Indizes für die Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public virtual string[] GetValues (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetValues(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.GetValues(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der <see cref="T:System.String" />-Schlüssel des Eintrags, der die abzurufenden Werte enthält. Der Schlüssel kann <see langword="null" /> sein.</param>
+        <summary>Ruft aus der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz die Werte ab, die dem angegebenen Schlüssel zugeordnet sind.</summary>
+        <returns>Ein <see cref="T:System.String" />-Array mit den Werten, die dem angegebenen Schlüssel aus der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz zugeordnet sind, sofern gefunden; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Diese Methode gibt `null` in den folgenden Fällen: 1) Wenn der angegebene Schlüssel nicht gefunden wurde. und 2) Wenn der angegebene Schlüssel gefunden wird und des zugehörigen Werts `null`. Diese Methode unterscheidet nicht zwischen den beiden Fällen.  
+  
+ Diese Methode ist eine O (`n`)-Vorgang, in dem `n` die Anzahl der Werte, die dem angegebenen Schlüssel zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasKeys">
+      <MemberSignature Language="C#" Value="public bool HasKeys ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasKeys() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.HasKeys" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz Schlüssel enthält, die nicht <see langword="null" /> sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz Schlüssel enthält, die nicht <see langword="null" /> sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidateCachedArrays">
+      <MemberSignature Language="C#" Value="protected void InvalidateCachedArrays ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InvalidateCachedArrays() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.InvalidateCachedArrays" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die zwischengespeicherten Arrays der Auflistung auf <see langword="null" /> zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Arrays <xref:System.Collections.Specialized.NameValueCollection.AllKeys%2A> für eine bessere Leistung zwischengespeichert werden und werden automatisch aktualisiert, wenn die Auflistung ändert. Eine abgeleitete Klasse kann die zwischengespeicherte Version ungültig, durch den Aufruf <xref:System.Collections.Specialized.NameValueCollection.InvalidateCachedArrays%2A>, wodurch die Arrays neu erstellt werden.  
+  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NameValueCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Eintrags, der in der Auflistung gesucht werden soll.</param>
+        <summary>Ruft den Eintrag am angegebenen Index der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz ab.</summary>
+        <value>Ein <see cref="T:System.String" />, der am angegebenen Index der Auflistung die Liste von durch Trennzeichen getrennten Werten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht den Zugriff auf ein bestimmtes Element in der Auflistung mithilfe folgender Syntax: `myCollection[index]`.  
+  
+ Diese Eigenschaft kann nicht festgelegt werden. Verwenden Sie zum Festlegen des Werts am angegebenen Index `Item[GetKey(index)]`.  
+  
+ Die Programmiersprache c# verwendet das Schlüsselwort der Indexer definieren die <xref:System.Collections.Specialized.NameValueCollection.Item%2A> Eigenschaft. Visual Basic implementiert <xref:System.Collections.Specialized.NameValueCollection.Item%2A> als Standardeigenschaft und stellt auf diese Weise dieselbe Indizierungsfunktionalität bereit.  
+  
+ Abrufen der Werte am angegebenen Index ist eine O (`n`) Vorgang, wobei `n` ist die Anzahl der Werte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />liegt außerhalb des gültigen Bereichs von Indizes für die Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[string name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NameValueCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der <see cref="T:System.String" />-Schlüssel des zu suchenden Eintrags. Der Schlüssel kann <see langword="null" /> sein.</param>
+        <summary>Ruft den Eintrag mit dem angegebenen Schlüssel in der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.String" />, der die Liste mit durch Trennzeichen getrennten Werten enthält, die dem angegebenen Schlüssel zugeordnet sind, sofern dieser gefunden wurde; andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht den Zugriff auf ein bestimmtes Element in der Auflistung mithilfe folgender Syntax: `myCollection[name]`.  
+  
+ Wenn der angegebene Schlüssel bereits in der Auflistung vorhanden ist, wird durch Festlegen dieser Eigenschaft die vorhandene Liste der Werte mit dem angegebenen Wert überschrieben. Um den neuen Wert an die vorhandene Liste der Werte angefügt werden soll, verwenden Sie die <xref:System.Collections.Specialized.NameValueCollection.Add%2A> Methode.  
+  
+ Wenn der angegebene Schlüssel nicht in der Auflistung vorhanden ist, erstellt das Festlegen dieser Eigenschaft einen neuen Eintrag mit dem angegebenen Schlüssel und dem angegebenen Wert.  
+  
+> [!CAUTION]
+>  Diese Eigenschaft gibt `null` in den folgenden Fällen: 1) Wenn der angegebene Schlüssel nicht gefunden wurde. und 2) Wenn der angegebene Schlüssel gefunden wird und des zugehörigen Werts `null`. Diese Eigenschaft unterscheidet nicht zwischen den beiden Fällen.  
+  
+ Die Programmiersprache c# verwendet das Schlüsselwort der Indexer definieren die <xref:System.Collections.Specialized.NameValueCollection.Item%2A> Eigenschaft. Visual Basic implementiert <xref:System.Collections.Specialized.NameValueCollection.Item%2A> als Standardeigenschaft und stellt auf diese Weise dieselbe Indizierungsfunktionalität bereit.  
+  
+ Zum Abrufen oder Festlegen der Werte, die dem angegebenen Schlüssel zugeordnet ist eine O (`n`) Vorgang, wobei `n` ist die Anzahl der Werte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung schreibgeschützt ist, und der Vorgang versucht, auf die Auflistung zu ändern.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der <see cref="T:System.String" />-Schlüssel des zu entfernenden Eintrags. Der Schlüssel kann <see langword="null" /> sein.</param>
+        <summary>Entfernt die Einträge mit dem angegebenen Schlüssel aus der <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />-Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Collections.Specialized.NameValueCollection> enthält ein Element mit dem angegebenen Schlüssel keine der <xref:System.Collections.Specialized.NameValueCollection> bleibt unverändert. Es werden keine Ausnahmen ausgelöst.  
+  
+ In Auflistungen mit zusammenhängenden Elementen, beispielsweise Listen, wird die nach dem Entfernen eines Elements entstandene Lücke durch Verschieben aller nachfolgenden Elemente gefüllt. Wenn die Auflistung indiziert ist, werden auch die Indizes der verschobenen Elemente aktualisiert. Dies gilt nicht für Auflistungen, in denen die Elemente konzeptionell in Buckets gruppiert sind, beispielsweise Hashtabellen.  
+  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public virtual void Set (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Set(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameValueCollection.Set(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der <see cref="T:System.String" />-Schlüssel des Eintrags, dem der neue Wert hinzugefügt werden soll. Der Schlüssel kann <see langword="null" /> sein.</param>
+        <param name="value">Das <see cref="T:System.Object" />, das den neuen Wert darstellt, der dem angegebenen Eintag hinzugefügt werden soll. Der Wert kann <see langword="null" /> sein.</param>
+        <summary>Legt den Wert eines Eintrags in der <see cref="T:System.Collections.Specialized.NameValueCollection" />-Instanz fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der angegebene Schlüssel bereits in der Auflistung vorhanden ist, überschreibt diese Methode die vorhandene Liste der Werte mit dem angegebenen Wert fest. Um den neuen Wert an die vorhandene Liste der Werte angefügt werden soll, verwenden Sie die <xref:System.Collections.Specialized.NameValueCollection.Add%2A> Methode.  
+  
+ Wenn der angegebene Schlüssel nicht in der Auflistung vorhanden ist, erstellt diese Methode einen neuen Eintrag mit dem angegebenen Schlüssel und dem angegebenen Wert.  
+  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

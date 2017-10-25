@@ -1,0 +1,94 @@
+<Type Name="IComponentDiscoveryService" FullName="System.ComponentModel.Design.IComponentDiscoveryService">
+  <TypeSignature Language="C#" Value="public interface IComponentDiscoveryService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IComponentDiscoveryService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IComponentDiscoveryService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht die Enumeration von Komponenten zur Entwurfszeit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung des der <xref:System.ComponentModel.Design.IComponentDiscoveryService> Schnittstelle ermöglicht, während der Entwurfszeit-Enumeration, der Komponenten in der Toolbox.  
+  
+ Sie können eine benutzerdefinierte Implementierung bereitstellen, die für andere Typen, die zur Entwurfszeit verfügbar zählt. Beispielsweise konnte Ihre Implementierung der Komponenten aufgelistet werden, die in einem bestimmten Designer vorhanden sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.ComponentModel.Design.IComponentDiscoveryService> alle Typen zu suchen, die Ableitung der <xref:System.Windows.Forms.ScrollableControl> Typ.  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerServices#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerServices/CS/Form1.cs#13)]
+ [!code-vb[System.ComponentModel.Design.DesignerServices#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerServices/VB/Form1.vb#13)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetComponentTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection GetComponentTypes (System.ComponentModel.Design.IDesignerHost designerHost, Type baseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection GetComponentTypes(class System.ComponentModel.Design.IDesignerHost designerHost, class System.Type baseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IComponentDiscoveryService.GetComponentTypes(System.ComponentModel.Design.IDesignerHost,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="baseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">Der Designerhost, der zur Entwurfszeit Dienste bereitstellt. Kann <see langword="null" />.</param>
+        <param name="baseType">Der Basistyp angeben die Komponenten zum Abrufen. Kann <see langword="null" />.</param>
+        <summary>Ruft die Liste der verfügbaren Komponententypen ab.</summary>
+        <returns>Die Liste der verfügbaren Komponententypen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.IComponentDiscoveryService.GetComponentTypes%2A> Methode ruft die Liste der verfügbaren Komponententypen, die Typen sind ab implementieren die <xref:System.ComponentModel.IComponent> Schnittstelle. Wenn die `baseType` Parameter ist `null`, alle Komponenten abgerufen werden; andernfalls nur Komponententypen abgeleitet `baseType` werden zurückgegeben.  
+  
+ Wenn Sie übergeben einen Wert für die `designerHost` Parameter typauflösung Bereich `designerHost`. Dies bedeutet, dass es ist ein <xref:System.Drawing.Design.ToolboxItem> , dessen Typ auf dem Datenträger ist, und nicht in den globalen Assemblycache einschließen, dessen Typ kann nicht über laden `designerHost`.  
+  
+ Wenn Sie übergeben `null` für `designerHost`, es gibt alle Typen, die aus dem globalen Assemblycache abgefragt werden können oder die <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.Design.IComponentDiscoveryService.GetComponentTypes%2A> Methode, um alle Typen zu ermitteln, die Ableitung der <xref:System.Windows.Forms.ScrollableControl> Typ.  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerServices#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerServices/CS/Form1.cs#13)]
+ [!code-vb[System.ComponentModel.Design.DesignerServices#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerServices/VB/Form1.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

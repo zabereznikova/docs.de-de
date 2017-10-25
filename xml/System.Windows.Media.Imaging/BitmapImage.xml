@@ -1,0 +1,947 @@
+<Type Name="BitmapImage" FullName="System.Windows.Media.Imaging.BitmapImage">
+  <TypeSignature Language="C#" Value="public sealed class BitmapImage : System.Windows.Media.Imaging.BitmapSource, System.ComponentModel.ISupportInitialize, System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BitmapImage extends System.Windows.Media.Imaging.BitmapSource implements class System.ComponentModel.ISupportInitialize, class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.BitmapImage" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Imaging.BitmapSource</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine spezielle <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> , die zum Laden von Bildern mit der Extensible Application Markup Language (XAML) optimiert ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.BitmapImage>vorhanden ist in erster Linie zur Unterstützung von [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Syntax und stellt zusätzliche Eigenschaften für die Bitmap laden, die nicht von definiert werden <xref:System.Windows.Media.Imaging.BitmapSource>.  
+  
+ <xref:System.Windows.Media.Imaging.BitmapImage>implementiert die <xref:System.ComponentModel.ISupportInitialize> Schnittstelle, um die Initialisierung für mehrere Eigenschaften zu optimieren. Eigenschaftenänderungen können nur während der Objektinitialisierung erfolgen. Rufen Sie <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> zu signalisieren, dass die Initialisierung wurde gestartet und <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> um zu signalisieren, dass die Initialisierung abgeschlossen hat. Nach der Initialisierung werden die eigenschaftenänderungen ignoriert.  
+  
+ <xref:System.Windows.Media.Imaging.BitmapImage>Objekte, die erstellt, mit der <xref:System.Windows.Media.Imaging.BitmapImage.%23ctor%2A> Konstruktor automatisch initialisiert wird und eigenschaftenänderungen werden ignoriert.  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispiele veranschaulichen, wie eine <xref:System.Windows.Media.Imaging.BitmapImage> in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und Code.  
+  
+ [!code-xaml[ImageElementExample#SimpleXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/SimpleImageExample.xaml#simplexaml2)]
+ [!code-xaml[ImageElementExample#SimpleXAML2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/SimpleImageExample.xaml#simplexaml2)]  
+  
+ [!code-csharp[ImageElementExample#SimpleCSharp1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/SimpleImageExample.xaml.cs#simplecsharp1)]
+ [!code-vb[ImageElementExample#SimpleCSharp1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/SimpleImageExample.xaml.vb#simplecsharp1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapImage.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Imaging.BitmapImage" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.BitmapImage>implementiert die <xref:System.ComponentModel.ISupportInitialize> Schnittstelle, um die Initialisierung für mehrere Eigenschaften zu optimieren. Zum Initialisieren einer <xref:System.Windows.Media.Imaging.BitmapImage> erstellt haben, verwenden diesen Konstruktor, führen Sie eigenschaftsinitialisierung zwischen <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> und <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> Aufrufe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapImage (Uri uriSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uriSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapImage.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uriSource" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uriSource">Die <see cref="T:System.Uri" /> für die Verwendung als Quelle für die <see cref="T:System.Windows.Media.Imaging.BitmapImage" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Imaging.BitmapImage" /> Klasse mit dem bereitgestellten <see cref="T:System.Uri" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.BitmapImage>mit diesem Konstruktor erstellten Objekte werden automatisch initialisiert. Nach der Initialisierung werden die eigenschaftenänderungen ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="uriSource" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei, die gemäß der <paramref name="uriSource" /> Parameter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapImage (Uri uriSource, System.Net.Cache.RequestCachePolicy uriCachePolicy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uriSource, class System.Net.Cache.RequestCachePolicy uriCachePolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapImage.#ctor(System.Uri,System.Net.Cache.RequestCachePolicy)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uriSource" Type="System.Uri" />
+        <Parameter Name="uriCachePolicy" Type="System.Net.Cache.RequestCachePolicy" />
+      </Parameters>
+      <Docs>
+        <param name="uriSource">Die <see cref="T:System.Uri" /> für die Verwendung als Quelle für die <see cref="T:System.Windows.Media.Imaging.BitmapImage" />.</param>
+        <param name="uriCachePolicy">Die <see cref="T:System.Net.Cache.RequestCachePolicy" /> , angibt, dass die cacheanforderungen für Bilder, die über HTTP abgerufen werden.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Windows.Media.Imaging.BitmapImage" /> Klasse mit einem Bild, dessen Quelle, ein <see cref="T:System.Uri" />, und zwischengespeichert wird gemäß der bereitgestellten <see cref="T:System.Net.Cache.RequestCachePolicy" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.BitmapImage>mit diesem Konstruktor erstellten Objekte werden automatisch initialisiert. Nach der Initialisierung werden die eigenschaftenänderungen ignoriert.  
+  
+ <xref:System.Windows.Media.Imaging.BitmapImage.%23ctor%28System.Uri%2CSystem.Net.Cache.RequestCachePolicy%29>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="uriSource" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei, die gemäß der <paramref name="uriSource" /> Parameter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="public Uri BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapImage.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die Basis <see cref="T:System.Uri" /> des aktuellen <see cref="T:System.Windows.Media.Imaging.BitmapImage" /> Kontext.</summary>
+        <value>Die Basis <see cref="T:System.Uri" /> des aktuellen Kontexts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapImage.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert den Anfang der <see cref="T:System.Windows.Media.Imaging.BitmapImage" /> Initialisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaftsinitialisierung muss erfolgen, zwischen <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> und <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> aufrufen. Sobald die <xref:System.Windows.Media.Imaging.BitmapImage> wurde initialisiert, eigenschaftenänderungen werden ignoriert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Initialisieren einer <xref:System.Windows.Media.Imaging.BitmapImage> mit einem Satz von Eigenschaften mit den <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> und <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> Methoden.  
+  
+ [!code-csharp[BitmapImageProps#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#1)]
+ [!code-vb[BitmapImageProps#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Windows.Media.Imaging.BitmapImage" /> gerade initialisiert wird. <see cref="M:System.Windows.Media.Imaging.BitmapImage.BeginInit" />wurde bereits aufgerufen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Windows.Media.Imaging.BitmapImage" /> wurde bereits initialisiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheOption">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapCacheOption CacheOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Imaging.BitmapCacheOption CacheOption" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapImage.CacheOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapCacheOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Imaging.BitmapCacheOption" /> für diese Instanz verwenden <see cref="T:System.Windows.Media.Imaging.BitmapImage" />.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Imaging.BitmapCacheOption" /> verwendet wird, für die <see cref="T:System.Windows.Media.Imaging.BitmapImage" />. Die Standardeinstellung ist <see cref="F:System.Windows.Media.Imaging.BitmapCacheOption.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Media.Imaging.BitmapImage.CacheOption%2A> auf <xref:System.Windows.Media.Imaging.BitmapCacheOption?displayProperty=nameWithType> gegebenenfalls schließen einen Stream, der zum Erstellen der <xref:System.Windows.Media.Imaging.BitmapImage>. Die Standardeinstellung <xref:System.Windows.Media.Imaging.BitmapCacheOption.OnDemand> cacheOption behält Zugriff auf den Stream, bis das Bild benötigt wird, und Bereinigung wird durch den Garbage Collector behandelt.  
+  
+<a name="dependencyPropertyInfo_CacheOption"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.BitmapImage.CacheOptionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Windows.Media.Imaging.BitmapImage.CacheOption%2A> von einem <xref:System.Windows.Media.Imaging.BitmapImage> mithilfe von Code.  
+  
+ [!code-csharp[BitmapImageProps#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#1)]
+ [!code-vb[BitmapImageProps#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheOptionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CacheOptionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CacheOptionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapImage.CacheOptionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.BitmapImage.CacheOption" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapImage Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Imaging.BitmapImage Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapImage.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapImage</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Imaging.BitmapImage" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressource Ressourcenverweise und datenbindungen (möglicherweise nicht mehr aufgelöst), jedoch keine Animationen oder ihre aktuellen Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapImage.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapImage CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Imaging.BitmapImage CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapImage.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapImage</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Imaging.BitmapImage" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Des geklonten Objekts <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft <see langword="false" /> selbst wenn der Quelle <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft ist <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapImage.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapImage.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOptions">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapCreateOptions CreateOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Imaging.BitmapCreateOptions CreateOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapImage.CreateOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapCreateOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Imaging.BitmapCreateOptions" /> für eine <see cref="T:System.Windows.Media.Imaging.BitmapImage" />.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Imaging.BitmapCreateOptions" /> verwendet für diesen <see cref="T:System.Windows.Media.Imaging.BitmapImage" />. Die Standardeinstellung ist <see cref="F:System.Windows.Media.Imaging.BitmapCreateOptions.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CreateOptions"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.BitmapImage.CreateOptionsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Windows.Media.Imaging.BitmapImage.CreateOptions%2A> von einem <xref:System.Windows.Media.Imaging.BitmapImage> mithilfe von Code.  
+  
+ [!code-csharp[BitmapImageProps#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#1)]
+ [!code-vb[BitmapImageProps#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOptionsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CreateOptionsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CreateOptionsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapImage.CreateOptionsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.BitmapImage.CreateOptions" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecodePixelHeight">
+      <MemberSignature Language="C#" Value="public int DecodePixelHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DecodePixelHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe in Pixel ab, in der das Bild decodiert wird, oder legt diese fest.</summary>
+        <value>Die Höhe in Pixel, in der das Bild decodiert wird. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> auch festgelegt ist, wird das Seitenverhältnis des Bitmap wird ignoriert. Wenn <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> ist nicht festgelegt ist, wird das Seitenverhältnis bleibt unverändert.  
+  
+ Die [!INCLUDE[TLA#tla_jpeg](~/includes/tlasharptla-jpeg-md.md)] und [!INCLUDE[TLA#tla_png](~/includes/tlasharptla-png-md.md)] Codecs decodieren systemintern das Bild in die angegebene Größe; andere Codecs sind das Bild in seiner ursprünglichen Größe decodieren und skaliert das Bild auf die gewünschte Größe.  
+  
+<a name="dependencyPropertyInfo_DecodePixelHeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeight%2A> Eigenschaft mithilfe von Code.  
+  
+ [!code-csharp[BitmapImageProps#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#1)]
+ [!code-vb[BitmapImageProps#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecodePixelHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DecodePixelHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DecodePixelHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecodePixelWidth">
+      <MemberSignature Language="C#" Value="public int DecodePixelWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DecodePixelWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite in Pixel ab, in der das Bild decodiert wird, oder legt diese fest.</summary>
+        <value>Die Breite in, in der das Bild decodiert wird. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeight%2A> auch festgelegt ist, wird das Seitenverhältnis des Bitmap wird ignoriert. Wenn <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeight%2A> ist nicht festgelegt ist, wird das Seitenverhältnis bleibt unverändert.  
+  
+ Die [!INCLUDE[TLA#tla_jpeg](~/includes/tlasharptla-jpeg-md.md)] und [!INCLUDE[TLA#tla_png](~/includes/tlasharptla-png-md.md)] Codecs decodieren systemintern das Bild in die angegebene Größe; andere Codecs sind das Bild in seiner ursprünglichen Größe decodieren und skaliert das Bild auf die gewünschte Größe.  
+  
+<a name="dependencyPropertyInfo_DecodePixelWidth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> Eigenschaft mithilfe von Code.  
+  
+ [!code-csharp[BitmapImageProps#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#1)]
+ [!code-vb[BitmapImageProps#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecodePixelWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DecodePixelWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DecodePixelWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapImage.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert das Ende der <see cref="T:System.Windows.Media.Imaging.BitmapImage" /> Initialisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaftsinitialisierung muss erfolgen, zwischen <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> und <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> aufrufen. Sobald die <xref:System.Windows.Media.Imaging.BitmapImage> wurde initialisiert, eigenschaftenänderungen werden ignoriert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Initialisieren einer <xref:System.Windows.Media.Imaging.BitmapImage> mit einem Satz von Eigenschaften mit den <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> und <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> Methoden.  
+  
+ [!code-csharp[BitmapImageProps#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#1)]
+ [!code-vb[BitmapImageProps#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Media.Imaging.BitmapImage.UriSource" /> oder <see cref="P:System.Windows.Media.Imaging.BitmapImage.StreamSource" /> Eigenschaften sind <see langword="null" />.  
+  
+ - oder -   
+  
+ Die <see cref="M:System.Windows.Media.Imaging.BitmapImage.EndInit" /> Methode wird aufgerufen, ohne dass zuvor <see cref="M:System.Windows.Media.Imaging.BitmapImage.BeginInit" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapImage.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapImage.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDownloading">
+      <MemberSignature Language="C#" Value="public override bool IsDownloading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDownloading" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapImage.IsDownloading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Media.Imaging.BitmapImage" /> wird derzeit von Inhalt heruntergeladen.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Media.Imaging.BitmapImage" /> Herunterladen von Inhalten ist, andernfalls wird <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf die Überprüfung des Werts der <xref:System.Windows.Media.Imaging.BitmapImage.IsDownloading%2A> Eigenschaft mithilfe von Code. Der Wert der Eigenschaft wird ausgegeben, um eine <xref:System.Windows.MessageBox> als eine <xref:System.String>.  
+  
+ [!code-csharp[BitmapImageProps#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#1)]
+ [!code-vb[BitmapImageProps#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.ImageMetadata Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.ImageMetadata Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapImage.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ImageMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wird nicht unterstützt. <see cref="T:System.Windows.Media.Imaging.BitmapImage" />unterstützt nicht die <see cref="P:System.Windows.Media.Imaging.BitmapImage.Metadata" /> Eigenschaft und löst eine <see cref="T:System.NotSupportedException" />.</summary>
+        <value>Wird nicht unterstützt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Beim Lesen der <see cref="P:System.Windows.Media.Imaging.BitmapImage.Metadata" /> auftritt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotation">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.Rotation Rotation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Imaging.Rotation Rotation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapImage.Rotation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.Rotation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Winkel fest, die dies <see cref="T:System.Windows.Media.Imaging.BitmapImage" /> um gedreht wird.</summary>
+        <value>Die Rotation für die verwendeten die <see cref="T:System.Windows.Media.Imaging.BitmapImage" />. Die Standardeinstellung ist <see cref="F:System.Windows.Media.Imaging.Rotation.Rotate0" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Drehung erfolgt nach dem skalieren. Dies bedeutet, dass ein Image mit einer <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> von <xref:System.Windows.Media.Imaging.Rotation.Rotate90>, <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> 10 und <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeight%2A> 5 führt dazu, ein Image mit einer Breite von 5 und eine Höhe von 10.  
+  
+<a name="dependencyPropertyInfo_Rotation"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.BitmapImage.RotationProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein Bild mit Drehen [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und Code.  
+  
+ [!code-xaml[ImageElementExample#TransformedXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
+  
+ [!code-csharp[ImageElementExample#TransformedCSharp1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml.cs#transformedcsharp1)]
+ [!code-vb[ImageElementExample#TransformedCSharp1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/TransformedImageExample.xaml.vb#transformedcsharp1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RotationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RotationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapImage.RotationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.BitmapImage.Rotation" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceRect">
+      <MemberSignature Language="C#" Value="public System.Windows.Int32Rect SourceRect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Int32Rect SourceRect" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapImage.SourceRect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Int32Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Rechteck, das verwendet wird, als Quelle für die <see cref="T:System.Windows.Media.Imaging.BitmapImage" />.</summary>
+        <value>Das Rechteck, das verwendet wird, als Quelle für die <see cref="T:System.Windows.Media.Imaging.BitmapImage" />. Die Standardeinstellung ist <see cref="P:System.Windows.Int32Rect.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_SourceRect"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.BitmapImage.SourceRectProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceRectProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SourceRectProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SourceRectProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapImage.SourceRectProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.BitmapImage.SourceRect" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamSource">
+      <MemberSignature Language="C#" Value="public System.IO.Stream StreamSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream StreamSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapImage.StreamSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Datenstromquelle, der die <see cref="T:System.Windows.Media.Imaging.BitmapImage" />.</summary>
+        <value>Die Datenstromquelle, der die <see cref="T:System.Windows.Media.Imaging.BitmapImage" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Media.Imaging.BitmapImage.StreamSource%2A> und <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A> festgelegt werden, die <xref:System.Windows.Media.Imaging.BitmapImage.StreamSource%2A> Wert wird ignoriert.  
+  
+ Festlegen der <xref:System.Windows.Media.Imaging.BitmapImage.CacheOption%2A> Eigenschaft <xref:System.Windows.Media.Imaging.BitmapCacheOption?displayProperty=nameWithType> gegebenenfalls den Datenstrom nach dem Schließen der <xref:System.Windows.Media.Imaging.BitmapImage> wird erstellt. Die Standardeinstellung <xref:System.Windows.Media.Imaging.BitmapCacheOption.OnDemand> cacheOption behält Zugriff auf den Stream, bis die Bitmap benötigt wird, und Bereinigung wird durch den Garbage Collector behandelt.  
+  
+<a name="dependencyPropertyInfo_StreamSource"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.BitmapImage.StreamSourceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamSourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StreamSourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StreamSourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapImage.StreamSourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.BitmapImage.StreamSource" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UriCachePolicy">
+      <MemberSignature Language="C#" Value="public System.Net.Cache.RequestCachePolicy UriCachePolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Cache.RequestCachePolicy UriCachePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapImage.UriCachePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Media.RequestCachePolicyConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.RequestCachePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die Cacherichtlinie für Bilder darstellt, die von einer HTTP-Quelle stammen.</summary>
+        <value>Die Basis <see cref="T:System.Net.Cache.RequestCachePolicy" /> des aktuellen Kontexts. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.BitmapImage.UriCachePolicy%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UriCachePolicyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty UriCachePolicyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty UriCachePolicyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapImage.UriCachePolicyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.BitmapImage.UriCachePolicy" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.BitmapImage.UriCachePolicyProperty>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UriSource">
+      <MemberSignature Language="C#" Value="public Uri UriSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri UriSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapImage.UriSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Uri" /> Quelle des der <see cref="T:System.Windows.Media.Imaging.BitmapImage" />.</summary>
+        <value>Die <see cref="T:System.Uri" />-Quelle des <see cref="T:System.Windows.Media.Imaging.BitmapImage" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Media.Imaging.BitmapImage.StreamSource%2A> und <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A> festgelegt werden, die <xref:System.Windows.Media.Imaging.BitmapImage.StreamSource%2A> Wert wird ignoriert.  
+  
+<a name="dependencyPropertyInfo_IsDownloading"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.BitmapImage.UriSourceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A> Eigenschaft im [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und Code.  
+  
+ [!code-xaml[imageelementexample#SimpleXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/SimpleImageExample.xaml#simplexaml2)]
+ [!code-xaml[imageelementexample#SimpleXAML2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/SimpleImageExample.xaml#simplexaml2)]  
+  
+ [!code-csharp[imageelementexample#SimpleCSharp1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/SimpleImageExample.xaml.cs#simplecsharp1)]
+ [!code-vb[imageelementexample#SimpleCSharp1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/SimpleImageExample.xaml.vb#simplecsharp1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UriSourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty UriSourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty UriSourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapImage.UriSourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.BitmapImage.UriSource" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

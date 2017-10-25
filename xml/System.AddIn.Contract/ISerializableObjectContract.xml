@@ -1,0 +1,67 @@
+<Type Name="ISerializableObjectContract" FullName="System.AddIn.Contract.ISerializableObjectContract">
+  <TypeSignature Language="C#" Value="public interface ISerializableObjectContract : System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISerializableObjectContract implements class System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract, class System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract, class System.AddIn.Contract.Collections.IRemoteArgumentEnumerableContract, class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.ISerializableObjectContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert einen Vertrag, der Informationen über ein serialisierbares Objekt bereitstellt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetCanonicalName">
+      <MemberSignature Language="C#" Value="public string GetCanonicalName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetCanonicalName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.ISerializableObjectContract.GetCanonicalName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den kanonischen Namen des Typs des Objekts zurück, die von diesem <see cref="T:System.AddIn.Contract.ISerializableObjectContract" /> beschreibt.</summary>
+        <returns>Der kanonische Name des Typs des Objekts, die von diesem <see cref="T:System.AddIn.Contract.ISerializableObjectContract" /> beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der kanonische Name ist ein global eindeutiger Name, z. B. einen vollqualifizierten Typnamen. Zeichenfolgen im Format \< *Assemblyname*>, \< *voll qualifizierten Typnamen*> für verwaltete Typen empfohlen werden. Zeichenfolgen im Format \< *Typbibliotheksnamen*>, \< *Typnamen*> werden für COM-Typen empfohlen.  
+  
+ Den kanonischen Name für einen Typ kann nicht geändert werden, nach der Typ der Veröffentlichung. Ändern den kanonischen Namen für einen Typ in einer zukünftigen Version von einer Komponentenkompatibilität zwischen der Komponente und des Clients, die den Typ bereits aufgehoben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSerializableObjectData">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.SerializableObjectData GetSerializableObjectData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.AddIn.Contract.SerializableObjectData GetSerializableObjectData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.ISerializableObjectContract.GetSerializableObjectData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.SerializableObjectData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Daten, die beim Deserialisieren des Objekts verwendet werden können, die von diesem <see cref="T:System.AddIn.Contract.ISerializableObjectContract" /> beschreibt.</summary>
+        <returns>Ein <see cref="T:System.AddIn.Contract.SerializableObjectData" /> , das Daten über das Objekt enthält, die von diesem <see cref="T:System.AddIn.Contract.ISerializableObjectContract" /> beschreibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

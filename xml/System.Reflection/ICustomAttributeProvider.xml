@@ -1,0 +1,176 @@
+<Type Name="ICustomAttributeProvider" FullName="System.Reflection.ICustomAttributeProvider">
+  <TypeSignature Language="C#" Value="public interface ICustomAttributeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICustomAttributeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ICustomAttributeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt benutzerdefinierte Attribute für Reflexionsobjekte bereit, die diese unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fast alle Reflektionsklassen können Attribute, die ihnen zugeordneten haben. Attribute können standard werden ("Public", "Privat", "HelpString") oder benutzerdefinierte.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ICustomAttributeProvider.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">Wenn <see langword="true" />, suchen Sie die Hierarchiekette für das geerbte benutzerdefinierte Attribut.</param>
+        <summary>Gibt – mit Ausnahme benannter Attribute – ein Array mit allen für diesen Member definierten benutzerdefinierten Attributen zurück – oder ein leeres Array , wenn keine benutzerdefinierten Attribute vorhanden sind.</summary>
+        <returns>Ein Objektarray, das alle benutzerdefinierten Attribute darstellt, oder ein leeres Array .</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Reflection.ICustomAttributeProvider.GetCustomAttributes%2A?displayProperty=nameWithType> auf <xref:System.Reflection.PropertyInfo> oder <xref:System.Reflection.EventInfo> bei der `inherit` Parameter `GetCustomAttributes` ist `true` die Typhierarchie nicht durchlaufen. Verwendung <xref:System.Attribute?displayProperty=nameWithType> benutzerdefinierte Attribute geerbt.  
+  
+ Diese Methode gibt die direkt auf nur einen nicht vererbten Member definierten benutzerdefinierten Attribute zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.TypeLoadException">Der benutzerdefinierte Attributtyp kann nicht geladen werden.</exception>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Es sind mehrere Attribute des Typs <paramref name="attributeType" /> für diesen Member definiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public object[] GetCustomAttributes (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] GetCustomAttributes(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ICustomAttributeProvider.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Der Typ der benutzerdefinierten Attribute.</param>
+        <param name="inherit">Wenn <see langword="true" />, suchen Sie die Hierarchiekette für das geerbte benutzerdefinierte Attribut.</param>
+        <summary>Gibt ein Array mit für diesen Member definierten benutzerdefinierten Attributen zurück – identifiziert nach Typ – oder ein leeres Array , wenn keine benutzerdefinierten Attribute vorhanden sind.</summary>
+        <returns>Ein Objektarray, das alle benutzerdefinierten Attribute darstellt, oder ein leeres Array .</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `attributeType` ist eine Basisklasse oder Schnittstelle, die diese Methode gibt alle Implementierung dieses Typs.  
+  
+ Diese Methode gibt die direkt auf nur einen nicht vererbten Member definierten benutzerdefinierten Attribute zurück.  
+  
+ Aufrufen von <xref:System.Reflection.ICustomAttributeProvider.GetCustomAttributes%2A?displayProperty=nameWithType> auf <xref:System.Reflection.PropertyInfo> oder <xref:System.Reflection.EventInfo> bei der `inherit` Parameter `GetCustomAttributes` ist `true` die Typhierarchie nicht durchlaufen. Verwendung <xref:System.Attribute?displayProperty=nameWithType> benutzerdefinierte Attribute geerbt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.TypeLoadException">Der benutzerdefinierte Attributtyp kann nicht geladen werden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="attributeType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public bool IsDefined (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDefined(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ICustomAttributeProvider.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Der Typ der benutzerdefinierten Attribute.</param>
+        <param name="inherit">Wenn <see langword="true" />, suchen Sie die Hierarchiekette für das geerbte benutzerdefinierte Attribut.</param>
+        <summary>Gibt an, ob mindestens eine Instanz von <paramref name="attributeType" /> für diesen Member definiert ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der <paramref name="attributeType" /> für diesen Member definiert ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,205 @@
+<Type Name="CSharpBinderFlags" FullName="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags">
+  <TypeSignature Language="C#" Value="public enum CSharpBinderFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CSharpBinderFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CSharp</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Informationen zu dynamischen C#-Vorgängen dar, die nicht spezifisch für bestimmte Argumente einer Aufrufsite sind. Instanzen dieser Klasse werden vom C#-Compiler generiert.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="BinaryOperationLogical">
+      <MemberSignature Language="C#" Value="BinaryOperationLogical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags BinaryOperationLogical = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags.BinaryOperationLogical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Binder stellt eine logische und OR logische oder Teil einer bedingten logischen Operators Evaluierung.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CheckedContext">
+      <MemberSignature Language="C#" Value="CheckedContext" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags CheckedContext = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags.CheckedContext" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Auswertung für diesen Binder erfolgt in einem überprüften Kontext.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertArrayIndex">
+      <MemberSignature Language="C#" Value="ConvertArrayIndex" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags ConvertArrayIndex = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags.ConvertArrayIndex" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Binder stellt eine implizite Konvertierung für die Verwendung in einem Arrayerstellungsausdruck dar.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertExplicit">
+      <MemberSignature Language="C#" Value="ConvertExplicit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags ConvertExplicit = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags.ConvertExplicit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Binder stellt eine explizite Konvertierung dar.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeSimpleName">
+      <MemberSignature Language="C#" Value="InvokeSimpleName" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags InvokeSimpleName = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags.InvokeSimpleName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Binder stellt einen Aufruf für einen einfachen Namen dar.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeSpecialName">
+      <MemberSignature Language="C#" Value="InvokeSpecialName" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags InvokeSpecialName = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags.InvokeSpecialName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Binder stellt einen Aufruf für eine mit "SpecialName" dar.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es sind keine zusätzlichen Informationen, die für diese Binder erforderlich sind.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResultDiscarded">
+      <MemberSignature Language="C#" Value="ResultDiscarded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags ResultDiscarded = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags.ResultDiscarded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Binder wird an einer Position verwendet, die ein Ergebnis ist nicht erforderlich und kann daher für eine "void" zurückgebenden Methode binden.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResultIndexed">
+      <MemberSignature Language="C#" Value="ResultIndexed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags ResultIndexed = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags.ResultIndexed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Ergebnis einer Bindung wird als indizierte Get einen Index festlegen oder Binder zum Abrufen.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ValueFromCompoundAssignment">
+      <MemberSignature Language="C#" Value="ValueFromCompoundAssignment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags ValueFromCompoundAssignment = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags.ValueFromCompoundAssignment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Verbundzuweisungsoperator stammt der Wert in diesem Satz Index oder Set-Member.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

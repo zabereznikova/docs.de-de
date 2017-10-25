@@ -1,0 +1,163 @@
+<Type Name="AudioSignalProblemOccurredEventArgs" FullName="System.Speech.Recognition.AudioSignalProblemOccurredEventArgs">
+  <TypeSignature Language="C#" Value="public class AudioSignalProblemOccurredEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AudioSignalProblemOccurredEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <c>AudioSignalProblemOccurred</c> -Ereignis für ein <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> oder ein <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs> wird erstellt, wenn die <xref:System.Speech.Recognition.SpeechRecognitionEngine> oder <xref:System.Speech.Recognition.SpeechRecognizer> -Objekt löst ein `AudioSignalProblemOccurred` Ereignis. Zum Abrufen von Informationen im Zusammenhang mit einem `AudioSignalProblemOccurred` Ereignis, Zugriff auf die folgenden Eigenschaften im Handler für das Ereignis:  
+  
+-   <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.AudioLevel%2A>  
+  
+-   <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.AudioPosition%2A>  
+  
+-   <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.AudioSignalProblem%2A>  
+  
+-   <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.RecognizerAudioPosition%2A>  
+  
+ Die <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.AudioPosition%2A> -Eigenschaft verweist auf das Eingabegerät Position in der generierten Audiostream. Im Gegensatz dazu, die <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.RecognizerAudioPosition%2A> Eigenschaft verweist auf die Erkennung Position innerhalb der Audioeingabe. Diese Positionen können unterschiedlich sein. Weitere Informationen finden Sie unter [mit Spracherkennung Recognition Ereignissen](http://msdn.microsoft.com/en-us/01c598ca-2e0e-4e89-b303-cd1cef9e8482).  
+  
+ Die <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.AudioSignalProblem%2A> Eigenschaft angibt, welches Problem aufgetreten ist.  
+  
+ <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs> wird von <xref:System.EventArgs> abgeleitet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert einen Ereignishandler, die sammelt Informationen über ein <xref:System.Speech.Recognition.SpeechRecognitionEngine.AudioSignalProblemOccurred> Ereignis.  
+  
+```csharp  
+  
+private SpeechRecognitionEngine sre;  
+  
+// Initialize the speech recognition engine.  
+private void Initialize()  
+{  
+  sre = new SpeechRecognitionEngine();  
+  
+  // Add a handler for the AudioSignalProblemOccurred event.  
+  sre.AudioSignalProblemOccurred += new EventHandler<AudioSignalProblemOccurredEventArgs>(sre_AudioSignalProblemOccurred);  
+}  
+  
+// Gather information when the AudioSignalProblemOccurred event is raised.  
+void sre_AudioSignalProblemOccurred(object sender, AudioSignalProblemOccurredEventArgs e)  
+{  
+  StringBuilder details = new StringBuilder();  
+  
+  details.AppendLine("Audio signal problem information:");  
+  details.AppendFormat(  
+    " Audio level:               {0}" + Environment.NewLine +  
+    " Audio position:            {1}" + Environment.NewLine +  
+    " Audio signal problem:      {2}" + Environment.NewLine +  
+    " Recognition engine audio position: {3}" + Environment.NewLine,  
+    e.AudioLevel, e.AudioPosition,  e.AudioSignalProblem,  
+    e.RecognizerAudioPosition);  
+  
+  // Insert additional event handler code here.  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AudioLevel">
+      <MemberSignature Language="C#" Value="public int AudioLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AudioLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.AudioLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem Ereignis zugeordneten audio Ebene ab.</summary>
+        <value>Das Maß an Audio Eingabe, wenn die <c>AudioSignalProblemOccurred</c> Ereignis ausgelöst wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioPosition">
+      <MemberSignature Language="C#" Value="public TimeSpan AudioPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan AudioPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.AudioPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position in das Eingabegerät Audiostream, der angibt, wo das Problem aufgetreten ist.</summary>
+        <value>Die Position in das Eingabegerät, das Audiosignal des streamen, wenn die <c>AudioSignalProblemOccurred</c> Ereignis ausgelöst wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.AudioPosition%2A> -Eigenschaft verweist auf das Eingabegerät Position in der generierten Audiostream. Im Gegensatz dazu, die <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.RecognizerAudioPosition%2A> Eigenschaft verweist auf die Erkennung Position innerhalb der Audioeingabe. Diese Positionen können unterschiedlich sein. Weitere Informationen finden Sie unter [mit Spracherkennung Recognition Ereignissen](http://msdn.microsoft.com/en-us/01c598ca-2e0e-4e89-b303-cd1cef9e8482).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioSignalProblem">
+      <MemberSignature Language="C#" Value="public System.Speech.Recognition.AudioSignalProblem AudioSignalProblem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Recognition.AudioSignalProblem AudioSignalProblem" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.AudioSignalProblem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.AudioSignalProblem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Audiosignal Problem ab.</summary>
+        <value>Das Audiosignal verantwortliche Problem der <c>AudioSignalProblemOccurred</c> Ereignis ausgelöst wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecognizerAudioPosition">
+      <MemberSignature Language="C#" Value="public TimeSpan RecognizerAudioPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RecognizerAudioPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.RecognizerAudioPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position in der audio Eingabe, die die Erkennung empfangen hat, die angibt, wo das Problem aufgetreten ist.</summary>
+        <value>Die Position in der Audioeingabe, dass die Erkennung beim empfangen hat die <c>AudioSignalProblemOccurred</c> Ereignis ausgelöst wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.AudioPosition%2A> -Eigenschaft verweist auf das Eingabegerät Position in der generierten Audiostream. Im Gegensatz dazu, die <xref:System.Speech.Recognition.AudioSignalProblemOccurredEventArgs.RecognizerAudioPosition%2A> Eigenschaft verweist auf die Erkennung Position innerhalb der Audioeingabe. Diese Positionen können unterschiedlich sein. Weitere Informationen finden Sie unter [mit Spracherkennung Recognition Ereignissen](http://msdn.microsoft.com/en-us/01c598ca-2e0e-4e89-b303-cd1cef9e8482).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

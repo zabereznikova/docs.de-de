@@ -1,0 +1,105 @@
+<Type Name="ListControlDataBindingHandler" FullName="System.Web.UI.Design.WebControls.ListControlDataBindingHandler">
+  <TypeSignature Language="C#" Value="public class ListControlDataBindingHandler : System.Web.UI.Design.DataBindingHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListControlDataBindingHandler extends System.Web.UI.Design.DataBindingHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.ListControlDataBindingHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.DataBindingHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Führt eine Datenbindung von einem <see cref="T:System.Web.UI.WebControls.ListControl" /> -Webserversteuerelement in einem visuellen Designer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.ListControlDataBindingHandler> Klasse führt Entwurfszeitdaten Bindung von einem <xref:System.Web.UI.WebControls.ListControl> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.ListControlDataBindingHandler> Klasse verweist auf die <xref:System.Web.UI.WebControls.ListControl> mithilfe der <xref:System.Web.UI.DataBindingHandlerAttribute> Klasse.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.ListControlDataBindingHandler.DataBindControl%2A> Methode führt die Entwurfszeitdaten-Bindung.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Die erste Vorlage veranschaulicht, wie ein Steuerelement abgeleitet werden die <xref:System.Web.UI.WebControls.RadioButtonList> steuern und die Bindung Datenhandler zuordnen. Im zweiten Beispiel wird veranschaulicht, wie das Ableiten einer Klasse von der <xref:System.Web.UI.Design.WebControls.ListControlDataBindingHandler> Klasse.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Ableiten der `SimpleRadioButtonList` -Steuerelement aus der <xref:System.Web.UI.WebControls.RadioButtonList> steuern, und wenden Sie dann die <xref:System.Web.UI.DataBindingHandlerAttribute> Attribut zum Zuordnen der `SimpleRadioButtonList` Steuerelements mit dessen Datenhandler für die Bindung, die `SimpleRadioButtonListDataBindingHandler` Klasse.  
+  
+ [!code-csharp[ListControlDesigner_Samples#5](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlDesigner_Samples/CS/SimpleRadioButtonList.cs#5)]
+ [!code-vb[ListControlDesigner_Samples#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlDesigner_Samples/VB/simpleradiobuttonlist.vb#5)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Ableiten der `SimpleRadioButtonListDataBindingHandler` -Klasse aus den <xref:System.Web.UI.Design.WebControls.ListControlDataBindingHandler> Klasse. Es überschreibt die <xref:System.Web.UI.Design.WebControls.ListControlDataBindingHandler.DataBindControl%2A> Methode zum Hinzufügen einer Nachricht an die zugeordnete `SimpleRadioButtonList` steuern, wenn das Steuerelement gebunden wird.  
+  
+ [!code-csharp[ListControlDesigner_Samples#6](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlDesigner_Samples/CS/SimpleRadioButtonListDataBindingHandler.cs#6)]
+ [!code-vb[ListControlDesigner_Samples#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlDesigner_Samples/VB/simpleradiobuttonlistdatabindinghandler.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListControlDataBindingHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListControlDataBindingHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.ListControlDataBindingHandler" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.ListControlDataBindingHandler> Klasse bei der die Klasse verwiesen wird ein <xref:System.Web.UI.DataBindingHandlerAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindControl">
+      <MemberSignature Language="C#" Value="public override void DataBindControl (System.ComponentModel.Design.IDesignerHost designerHost, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DataBindControl(class System.ComponentModel.Design.IDesignerHost designerHost, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListControlDataBindingHandler.DataBindControl(System.ComponentModel.Design.IDesignerHost,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> für das Dokument, das das Steuerelement enthält.</param>
+        <param name="control">Das zu bindende <see cref="T:System.Web.UI.Control" />.</param>
+        <summary>Führt eine Datenbindung auf das angegebene Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.ListControl> Steuerelement, das angegeben wird `control` verfügt über eine Datenquelle innerhalb angegebener seine <xref:System.Web.UI.IDataBindingsAccessor.DataBindings%2A> -Eigenschaft, die <xref:System.Web.UI.Design.WebControls.ListControlDataBindingHandler.DataBindControl%2A> -Methode löscht die <xref:System.Web.UI.WebControls.ListControl.Items%2A> Auflistung von der <xref:System.Web.UI.WebControls.ListControl>, und fügt dann eine zeichenfolgenmeldung Gibt an, dass die <xref:System.Web.UI.WebControls.ListControl> datengebunden ist auf die <xref:System.Web.UI.WebControls.ListControl.Items%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.ListControlDataBindingHandler.DataBindControl%2A> Methode zum Hinzufügen einer Zeichenfolgennachricht an die zugeordnete `SimpleRadioButtonList` steuern, wenn das Steuerelement gebunden wird.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.WebControls.ListControlDataBindingHandler> Klasse.  
+  
+ [!code-csharp[ListControlDesigner_Samples#7](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlDesigner_Samples/CS/SimpleRadioButtonListDataBindingHandler.cs#7)]
+ [!code-vb[ListControlDesigner_Samples#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlDesigner_Samples/VB/simpleradiobuttonlistdatabindinghandler.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

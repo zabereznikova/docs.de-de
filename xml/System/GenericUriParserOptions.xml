@@ -1,0 +1,360 @@
+<Type Name="GenericUriParserOptions" FullName="System.GenericUriParserOptions">
+  <TypeSignature Language="C#" Value="public enum GenericUriParserOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GenericUriParserOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.GenericUriParserOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Optionen für eine <see cref="T:System.UriParser" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine dieser Optionen so konfigurieren Sie einen generischen URI-Parser übergeben als Parameter für die Optionen kombinieren der <xref:System.GenericUriParser.%23ctor%28System.GenericUriParserOptions%29?displayProperty=nameWithType> Konstruktor.  
+  
+ Die vorhandene <xref:System.Uri?displayProperty=nameWithType> Klasse wurde erweitert, damit die Unterstützung für RFC 3987 International Resource Identifiers (IRI) basiert. Derzeitige Benutzer werden keine Änderung gegenüber dem .NET Framework 2.0-Verhalten feststellen, außer IRI wird explizit aktiviert. Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.  
+  
+ Die Konfigurationseinstellung für die <xref:System.Configuration.IdnElement?displayProperty=nameWithType> wird indirekt gesteuert, indem die <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> Konfigurationseinstellung, steuert die IRI-Verarbeitung in die <xref:System.Uri?displayProperty=nameWithType> Klasse. Die IRI-Verarbeitung muss aktiviert werden, damit die IDN-Verarbeitung überhaupt möglich ist. Ist die IRI-Verarbeitung deaktiviert, wird die IDN-Verarbeitung auf die Standardeinstellung festgelegt. Darin wird aus Kompatibilitätsgründen das .NET Framework 2.0-Verhalten verwendet, und IDN-Namen werden nicht verwendet.  
+  
+ IDN-Verarbeitung wird nur das Attribut Internationalized Domain Name (IDN) gesteuert. Alle anderen IRI-Verarbeitung (z. B. die Normalisierung von Zeichen) wird standardmäßig ausgeführt.  
+  
+ Weitere Informationen zur IRI-Unterstützung finden Sie im Abschnitt "Hinweise" der <xref:System.Uri?displayProperty=nameWithType> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllowEmptyAuthority">
+      <MemberSignature Language="C#" Value="AllowEmptyAuthority" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GenericUriParserOptions AllowEmptyAuthority = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.GenericUriParserOptions.AllowEmptyAuthority" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GenericUriParserOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Parser lässt einen URI ohne Zertifizierungsstelle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GenericUriParserOptions Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.GenericUriParserOptions.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GenericUriParserOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Parser:</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   benötigt eine Zertifizierungsstelle  
+  
+-   Wandelt umgekehrte Schrägstriche in Schrägstriche  
+  
+-   Pfadpunkten, Schrägstriche und umgekehrten Schrägstrichen  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DontCompressPath">
+      <MemberSignature Language="C#" Value="DontCompressPath" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GenericUriParserOptions DontCompressPath = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.GenericUriParserOptions.DontCompressPath" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GenericUriParserOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Parser ist den URI nicht umwandeln.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DontConvertPathBackslashes">
+      <MemberSignature Language="C#" Value="DontConvertPathBackslashes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GenericUriParserOptions DontConvertPathBackslashes = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.GenericUriParserOptions.DontConvertPathBackslashes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GenericUriParserOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Parser keine umgekehrten Schrägstriche in Schrägstriche konvertiert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DontUnescapePathDotsAndSlashes">
+      <MemberSignature Language="C#" Value="DontUnescapePathDotsAndSlashes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GenericUriParserOptions DontUnescapePathDotsAndSlashes = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.GenericUriParserOptions.DontUnescapePathDotsAndSlashes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GenericUriParserOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Parser unescape Pfadpunkten, Schrägstrichen oder umgekehrten Schrägstrichen nicht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericAuthority">
+      <MemberSignature Language="C#" Value="GenericAuthority" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GenericUriParserOptions GenericAuthority = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.GenericUriParserOptions.GenericAuthority" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GenericUriParserOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Parser lässt eine registrierungsbasierte Zertifizierungsstelle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Idn">
+      <MemberSignature Language="C#" Value="Idn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GenericUriParserOptions Idn = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.GenericUriParserOptions.Idn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GenericUriParserOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Parser unterstützt Internationalized Domain Name (IDN) Hostnamen (IDN) analysieren. Durch die Konfigurationswerte wird bestimmt, ob IDN verwendet wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IriParsing">
+      <MemberSignature Language="C#" Value="IriParsing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GenericUriParserOptions IriParsing = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.GenericUriParserOptions.IriParsing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GenericUriParserOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Parser unterstützt die in RFC 3987 für International Resource Identifiers (IRI) angegebenen Analyseregeln. Durch die Konfigurationswerte wird bestimmt, ob IRI verwendet wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoFragment">
+      <MemberSignature Language="C#" Value="NoFragment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GenericUriParserOptions NoFragment = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.GenericUriParserOptions.NoFragment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GenericUriParserOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Schema ist ein Fragmentteil nicht definiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoPort">
+      <MemberSignature Language="C#" Value="NoPort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GenericUriParserOptions NoPort = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.GenericUriParserOptions.NoPort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GenericUriParserOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Schema definiert einen Port nicht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoQuery">
+      <MemberSignature Language="C#" Value="NoQuery" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GenericUriParserOptions NoQuery = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.GenericUriParserOptions.NoQuery" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GenericUriParserOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Abfrageteil definiert das Schema nicht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoUserInfo">
+      <MemberSignature Language="C#" Value="NoUserInfo" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GenericUriParserOptions NoUserInfo = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.GenericUriParserOptions.NoUserInfo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GenericUriParserOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Schema definiert ein Benutzerinformationsteils nicht.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

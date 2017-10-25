@@ -1,0 +1,1770 @@
+<Type Name="DataObject" FullName="System.Windows.DataObject">
+  <TypeSignature Language="C#" Value="public sealed class DataObject : System.Runtime.InteropServices.ComTypes.IDataObject, System.Windows.IDataObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataObject extends System.Object implements class System.Runtime.InteropServices.ComTypes.IDataObject, class System.Windows.IDataObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DataObject" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices.ComTypes.IDataObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.IDataObject</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Bietet eine grundlegende Implementierung der <see cref="T:System.Windows.IDataObject" /> -Schnittstelle, die einen Format unabhängigen Mechanismus zum Übertragen von Daten definiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_DataObject"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung dieser Klasse veranschaulicht.  
+  
+ [!code-csharp[dragdrop_dragdropmisccode#_DragDrop_CreateDataObject_TypeString](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_typestring)]
+ [!code-vb[dragdrop_dragdropmisccode#_DragDrop_CreateDataObject_TypeString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_typestring)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.DataObject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObject (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Ein Objekt, das die Daten darstellt, die in diesem Datenobjekt gespeichert werden sollen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.DataObject" /> Klasse, die die angegebenen Daten enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird ein neues Datenobjekt erstellt und verwendet diesen Konstruktor, um das Datenobjekt mit einer Zeichenfolge zu initialisieren.  In diesem Fall wird ein entsprechende Datenformat wird automatisch anhand der Typ der gespeicherten Daten bestimmt, und automatische Konvertieren der gespeicherten Daten ist standardmäßig zulässig.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Simple](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_simple)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Simple](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_simple)]  
+  
+ Im folgende Beispiel ist eine verkürzte Version des vorherigen Beispiels.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Simple_Condensed](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_simple_condensed)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Simple_Condensed](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_simple_condensed)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="data" />Verweise ein <see cref="T:System.Windows.DataObject" /> Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObject (string format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge, die das Format für die Daten angibt. Für einen Satz vordefinierter Datenformate, finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <param name="data">Ein Objekt, das die Daten darstellt, die in diesem Datenobjekt gespeichert werden sollen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.DataObject" /> Klasse, die die angegebenen Daten und das zugeordnete Format enthält; das Format wird durch eine Zeichenfolge angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird ein neues Datenobjekt erstellt und verwendet diesen Konstruktor initialisiert das Datenobjekt mit einer Zeichenfolge und einem angegebenen Format.  In diesem Fall wird das Datenformat durch eine Zeichenfolge angegeben. die <xref:System.Windows.DataFormats> Klasse bietet eine Reihe von vordefinierten Typzeichenfolgen. Automatische Konvertieren der gespeicherten Daten ist standardmäßig zulässig.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_typestring)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_typestring)]  
+  
+ Im folgende Beispiel ist eine verkürzte Version des vorherigen Beispiels.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString_Condensed](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_typestring_condensed)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString_Condensed](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_typestring_condensed)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> oder <paramref name="format" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObject (Type format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.#ctor(System.Type,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein <see cref="T:System.Type" /> , die das Format für die Daten angibt. Für einen Satz vordefinierter Datenformate, finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <param name="data">Die Daten in diesem Datenobjekt gespeichert werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.DataObject" /> Klasse, die die angegebenen Daten und das zugeordnete Format enthält; das Datenformat wird angegeben, indem eine <see cref="T:System.Type" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird ein neues Datenobjekt erstellt und verwendet diesen Konstruktor initialisiert das Datenobjekt mit einer Zeichenfolge und einem angegebenen Format.  In diesem Fall wird das Datenformat angegeben, indem eine <xref:System.Type> Parameter.  Automatische Konvertieren der gespeicherten Daten ist standardmäßig zulässig.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Type](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_type)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Type](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_type)]  
+  
+ Im folgende Beispiel ist eine verkürzte Version des vorherigen Beispiels.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Type_Condensed](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_type_condensed)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Type_Condensed](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_type_condensed)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> oder <paramref name="format" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObject (string format, object data, bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string format, object data, bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.#ctor(System.String,System.Object,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge, die das Format für die Daten angibt. Für einen Satz vordefinierter Datenformate, finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <param name="data">Die Daten in diesem Datenobjekt gespeichert werden soll.</param>
+        <param name="autoConvert">
+          <see langword="true" />um die Daten in ein anderes Format auf Abruf konvertiert werden können. <see langword="false" /> zu verhindern, dass die Daten in ein anderes Format auf Abruf konvertiert wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.DataObject" /> Klasse, die die angegebenen Daten und das zugeordnete Format enthält; das Format wird durch eine Zeichenfolge angegeben. Diese Überladung umfasst eine <see langword="Boolean" /> Kennzeichen, das angibt, ob die Daten in ein anderes Format auf Abruf konvertiert werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird ein neues Datenobjekt erstellt und verwendet diesen Konstruktor initialisiert das Datenobjekt mit einer Zeichenfolge und einem angegebenen Format.  In diesem Fall wird das Datenformat durch eine Zeichenfolge angegeben. die <xref:System.Windows.DataFormats> Klasse bietet eine Reihe von vordefinierten Typzeichenfolgen.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_autoconvert)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_autoconvert)]  
+  
+ Im folgende Beispiel ist eine verkürzte Version des obigen Beispiels.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert_Condensed](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_autoconvert_condensed)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert_Condensed](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_autoconvert_condensed)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> oder <paramref name="format" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCopyingHandler">
+      <MemberSignature Language="C#" Value="public static void AddCopyingHandler (System.Windows.DependencyObject element, System.Windows.DataObjectCopyingEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddCopyingHandler(class System.Windows.DependencyObject element, class System.Windows.DataObjectCopyingEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.AddCopyingHandler(System.Windows.DependencyObject,System.Windows.DataObjectCopyingEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DataObjectCopyingEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DataObject.Copying" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DataObject.Copying> Ereignis tritt auf, wenn ein Kopiervorgang abgeschlossen ist, Konvertieren des ausgewählten Inhalts in alle angegebenen Daten formatiert alle Datenformate gespeichert hat, in dem Objekt zugeordneten Daten und ist bereit, die das Datenobjekt in der Zwischenablage des Systems zu speichern oder zu ziehen beginnen der Vorgang.  
+  
+ Verwenden Sie dieses Ereignis zum Überprüfen oder ändern ein Datenobjekt nach Abschluss des Kopiervorgangs und vor dem Fortfahren mit folgenden Operationen. Der gesamte Kopiervorgang kann abgebrochen werden, durch den Aufruf <xref:System.Windows.DataObjectEventArgs.CancelCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPastingHandler">
+      <MemberSignature Language="C#" Value="public static void AddPastingHandler (System.Windows.DependencyObject element, System.Windows.DataObjectPastingEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPastingHandler(class System.Windows.DependencyObject element, class System.Windows.DataObjectPastingEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.AddPastingHandler(System.Windows.DependencyObject,System.Windows.DataObjectPastingEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DataObjectPastingEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DataObject.Pasting" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe dieses Ereignisses können Sie um ein Datenobjekt zu überprüfen, bevor die Daten eingefügt werden und möglicherweise für eine alternative Vorgehensweise, wie z. B. entscheiden:  
+  
+-   **Abbrechen des Einfügevorgangs** -brechen Sie den gesamten Einfügevorgang durch Aufrufen der <xref:System.Windows.DataObjectEventArgs.CancelCommand%2A> Methode.  
+  
+-   **Wählen Sie ein Alternativformat** -ändern Sie das Einfügeformat des ausgewählten, indem Sie einen neuen Wert für die <xref:System.Windows.DataObjectPastingEventArgs.FormatToApply%2A> Eigenschaft. Das neu ausgewählte Format muss durch unterstützt, durch das Datenobjekt, das eingefügt werden.  
+  
+    > [!NOTE]
+    >  Wenn der Einfügeformat geändert wird, stellen Sie sicher, dass das Ziel des Einfügevorgangs das neu angegebene Format unterstützt.  
+  
+-   **Fügen Sie ein neues Format** – Wenn Sie feststellen, dass das Datenobjekt einfügen nicht das gewünschte Format zu unterstützen, aktualisieren das Datenobjekt, um eine Version der Daten im gewünschten Format enthalten. Benutzerdefinierte Daten Typkonverter werden häufig als Teil dieses Prozesses verwendet.  
+  
+ Ändern den Inhalt eines Datenobjekts einfügen (<xref:System.Windows.DataObjectPastingEventArgs.DataObject%2A>) wird nicht geändert, die die Daten in die Zwischenablage des Systems gespeichert; solche Änderungen gelten nur für das Datenobjekt, das mit dem Einfügebefehl zugeordneten verknüpft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSettingDataHandler">
+      <MemberSignature Language="C#" Value="public static void AddSettingDataHandler (System.Windows.DependencyObject element, System.Windows.DataObjectSettingDataEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddSettingDataHandler(class System.Windows.DependencyObject element, class System.Windows.DataObjectSettingDataEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.AddSettingDataHandler(System.Windows.DependencyObject,System.Windows.DataObjectSettingDataEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DataObjectSettingDataEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DataObject.SettingData" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DataObject.SettingData> Ereignis tritt auf, als Teil eines Befehls kopieren oder ziehen, einmal für jedes Datenformat, das dem Objekt zugeordneten Daten hinzufügen. In der Regel wird dieses Ereignis mit verbunden ist ein Steuerelement, z. B. <xref:System.Windows.Controls.TextBox>.  
+  
+ Ein Handler für dieses Ereignis kann verwendet werden, um selektiv unerwünschte Datenformate verhindern, die auf das Datenobjekt, dadurch werden die Konvertierung Datenverarbeitung für redundante Datenformate und verbessert die allgemeine Leistung eines Kopiervorgangs hinzugefügt werden. Um ein bestimmtes Datenformat überspringen möchten, rufen Sie die <xref:System.Windows.DataObjectEventArgs.CancelCommand%2A> Methode und geben Sie das Format in übersprungen werden sollen die <xref:System.Windows.DataObjectSettingDataEventArgs.Format%2A> Eigenschaft. Aufrufen der <xref:System.Windows.DataObjectEventArgs.CancelCommand%2A> Methode für dieses Ereignis bricht den zugeordneten Kopier- oder nicht Befehl ziehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsAudio">
+      <MemberSignature Language="C#" Value="public bool ContainsAudio ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsAudio() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.ContainsAudio" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abfragen ein Datenobjekts für das Vorhandensein von Daten in die <see cref="F:System.Windows.DataFormats.WaveAudio" /> Datenformat.</summary>
+        <returns>
+          <see langword="true" />enthält das Datenobjekt Daten in der <see cref="F:System.Windows.DataFormats.WaveAudio" /> Datenformat ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `true` nur, wenn das angegebene Datenformat systemintern in das Datenobjekt; vorhanden ist diese Methode überprüft nicht auf das Vorhandensein des Auto-Datenformate.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsFileDropList">
+      <MemberSignature Language="C#" Value="public bool ContainsFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.ContainsFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abfragen ein Datenobjekts für das Vorhandensein von Daten in die <see cref="F:System.Windows.DataFormats.FileDrop" /> Datenformat.</summary>
+        <returns>
+          <see langword="true" />enthält das Datenobjekt Daten in der <see cref="F:System.Windows.DataFormats.FileDrop" /> Datenformat ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `true` nur, wenn das angegebene Datenformat systemintern in das Datenobjekt; vorhanden ist diese Methode überprüft nicht auf das Vorhandensein des Auto-Datenformate.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsImage">
+      <MemberSignature Language="C#" Value="public bool ContainsImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.ContainsImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abfragen ein Datenobjekts für das Vorhandensein von Daten in die <see cref="F:System.Windows.DataFormats.Bitmap" /> Datenformat.</summary>
+        <returns>
+          <see langword="true" />enthält das Datenobjekt Daten in der <see cref="F:System.Windows.DataFormats.Bitmap" /> Datenformat ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `true` nur, wenn das angegebene Datenformat systemintern in das Datenobjekt; vorhanden ist diese Methode überprüft nicht auf das Vorhandensein des Auto-Datenformate.  
+  
+ Eine Bitmap eine Computergrafik als ein Array von Bits im Arbeitsspeicher darstellt, und diese Bits die Attribute der einzelnen Pixel Bestandteil eines Abbilds dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public bool ContainsText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.ContainsText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abfragen ein Datenobjekts für das Vorhandensein von Daten in die <see cref="F:System.Windows.DataFormats.UnicodeText" /> Format.</summary>
+        <returns>
+          <see langword="true" />enthält das Datenobjekt Daten in der <see cref="F:System.Windows.DataFormats.UnicodeText" /> Datenformat ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `true` nur, wenn das angegebene Datenformat systemintern in das Datenobjekt; vorhanden ist diese Methode überprüft nicht auf das Vorhandensein des Auto-Datenformate.  
+  
+ Die <xref:System.Windows.DataFormats.UnicodeText> Datenformat kennzeichnet 16-Bit-Zeichen codiert Unicode, auch als UTF-16 und USC-2 bezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public bool ContainsText (System.Windows.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsText(valuetype System.Windows.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.ContainsText(System.Windows.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein Mitglied der <see cref="T:System.Windows.TextDataFormat" /> Enumeration, die das Textformat der Daten zur Abfrage angibt.</param>
+        <summary>Abfragen ein Datenobjekts für das Vorhandensein von Daten in einem Text-Datenformat.</summary>
+        <returns>
+          <see langword="true" />Wenn das Datenobjekt Daten in einem Textformat-Daten enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `true` nur, wenn das angegebene Datenformat systemintern in das Datenobjekt; vorhanden ist diese Methode überprüft nicht auf das Vorhandensein des Auto-Datenformate.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" />Gibt keinen gültigen Mitglied <see cref="T:System.Windows.TextDataFormat" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyingEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent CopyingEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent CopyingEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DataObject.CopyingEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DataObject.Copying" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAudioStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetAudioStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream GetAudioStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetAudioStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Stream, der Daten in der <see cref="F:System.Windows.DataFormats.WaveAudio" /> Datenformat.</summary>
+        <returns>Ein Datenstrom, der Daten in der <see cref="F:System.Windows.DataFormats.WaveAudio" /> Format, oder <see langword="null" /> , wenn die Daten in diesem Format nicht verfügbar ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt nur ein Datenstrom, wenn das angegebene Format ist in das Datenobjekt; systemintern vorhanden. Diese Methode gibt keinen automatisch konvertierbare zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge, die das Format für die Daten angibt. Für einen Satz vordefinierter Datenformate, finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <summary>Gibt die Daten in einem Format, angegeben durch eine Zeichenfolge zurück.</summary>
+        <returns>Ein Objekt, das die Daten im angegebenen Format enthält oder <see langword="null" /> , wenn die Daten im angegebenen Format nicht verfügbar ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird diese Methode zunächst überprüft, ob ein angegebenes Datenformat verfügbar ist (durch systemeigene Funktionen oder durch automatische Konvertierung); Wenn das angegebene Format verfügbar ist, ruft das Beispiel die Daten mithilfe der <xref:System.Windows.DataObject.GetData%28System.String%29> Methode.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getspecificdataformat)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getspecificdataformat)]  
+  
+ Der folgende Beispielcode verwendet die <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> Methode, um zuerst überprüfen Sie, ob ein angegebenes Datenformat systemintern verfügbar ist (Auto-Datenformate werden gefiltert); Wenn das angegebene Format verfügbar ist, ruft das Beispiel die Daten mithilfe der <xref:System.Windows.DataObject.GetData%28System.String%29>Methode.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat_Native](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getspecificdataformat_native)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat_Native](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getspecificdataformat_native)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (Type format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetData(class System.Type format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetData(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein <see cref="T:System.Type" /> , die das Format für die Daten angibt. Für einen Satz vordefinierter Datenformate, finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <summary>Gibt ein Datenobjekt in einem Format gemäß einem <see cref="T:System.Type" /> Objekt.</summary>
+        <returns>Ein Objekt mit den Daten im angegebenen Format oder <see langword="null" /> , wenn die Daten im angegebenen Format nicht verfügbar ist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (string format, bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetData(string format, bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetData(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge, die das Format für die Daten angibt. Für einen Satz vordefinierter Datenformate, finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <param name="autoConvert">
+          <see langword="true" />der Versuch, die Daten automatisch in das angegebene Format zu konvertieren; <see langword="false" /> für keine Datenkonvertierung-Format.</param>
+        <summary>Gibt ein Datenobjekt in einem angegebenen Format, konvertiert die Daten optional in das angegebene Format zurück.</summary>
+        <returns>Ein Objekt mit den Daten im angegebenen Format oder <see langword="null" /> , wenn die Daten im angegebenen Format nicht verfügbar ist.  
+  
+ Wenn die <paramref name="autoConvert" /> Parameter ist <see langword="true" /> und die Daten nicht in das angegebene Format konvertiert werden oder wenn die automatische Konvertierung deaktiviert ist (durch Aufrufen <see cref="M:System.Windows.DataObject.SetData(System.String,System.Object,System.Boolean)" /> mit der <paramref name="autoConvert" /> Parametersatz auf <see langword="false" />), Methodenrückgabe <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" />ist **null**.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetDataPresent">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Bestimmt, ob die Daten in verfügbar ist, oder in einem angegebenen Format konvertiert werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Windows.DataObject.GetDataPresent%2A> zu bestimmen, ob ein Format zur Verfügung, in diesem Datenobjekt vor dem Aufruf <xref:System.Windows.DataObject.GetData%2A>. Rufen Sie <xref:System.Windows.DataObject.GetFormats%2A> um eine Liste mit allen Formaten abzurufen, die in diesem Datenobjekt verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetDataPresent">
+      <MemberSignature Language="C#" Value="public bool GetDataPresent (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetDataPresent(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetDataPresent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge, die das Format für die Daten angibt. Für einen Satz vordefinierter Datenformate, finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <summary>Bestimmt, ob die Daten in verfügbar ist, oder in einem durch eine Zeichenfolge angegebene Format konvertiert werden können.</summary>
+        <returns>
+          <see langword="true" />Wenn die Daten befindet sich in oder in das angegebene Format konvertiert werden können. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Windows.DataObject.GetDataPresent%2A> zu bestimmen, ob ein Format zur Verfügung, in diesem Datenobjekt vor dem Aufruf <xref:System.Windows.DataObject.GetData%2A>. Rufen Sie <xref:System.Windows.DataObject.GetFormats%2A> um eine Liste mit allen Formaten abzurufen, die in diesem Datenobjekt verfügbar sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird dieser Methode eine Abfrage für ein bestimmtes Datenformat das Vorhandensein von sicherheitsbeschreibungs-Zeichenfolge.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_String](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_string)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_String](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_string)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataPresent">
+      <MemberSignature Language="C#" Value="public bool GetDataPresent (Type format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetDataPresent(class System.Type format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetDataPresent(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein <see cref="T:System.Type" /> , die zu überprüfende Datenformat angibt. F oder einen Satz vordefinierter Datenformate finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <summary>Bestimmt, ob die Daten in verfügbar ist, oder können, um eine vom angegebenen Format konvertiert werden eine <see cref="T:System.Type" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Daten befindet sich in oder in das angegebene Format konvertiert werden können. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Windows.DataObject.GetDataPresent%2A> zu bestimmen, ob ein Format zur Verfügung, in diesem Datenobjekt vor dem Aufruf <xref:System.Windows.DataObject.GetData%2A>. Rufen Sie <xref:System.Windows.DataObject.GetFormats%2A> um eine Liste mit allen Formaten abzurufen, die in diesem Datenobjekt verfügbar sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Methode, um die Abfrage das Vorhandensein eines bestimmten Datenformats nach Typ.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Type](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_type)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Type](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_type)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataPresent">
+      <MemberSignature Language="C#" Value="public bool GetDataPresent (string format, bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetDataPresent(string format, bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetDataPresent(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge, die zu überprüfende Datenformat angibt. Für einen Satz vordefinierter Datenformate, finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <param name="autoConvert">
+          <see langword="false" />nur für das angegebene Format überprüft; <see langword="true" /> auch überprüft, ob die Daten, die in diesem Datenobjekt gespeichert, die in das angegebene Format konvertiert werden können.</param>
+        <summary>Bestimmt, ob die Daten in verfügbar ist, oder in einem angegebenen Format konvertiert werden können. Ein <see langword="Boolean" /> Flag gibt an, ob das Vorhandensein der Daten in das angegebene Format konvertiert werden können, wenn er nicht in diesem Format verfügbar ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Daten befindet sich in oder in das angegebene Format konvertiert werden können. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Windows.DataObject.GetDataPresent%2A> zu bestimmen, ob ein Format zur Verfügung, in diesem Datenobjekt vor dem Aufruf <xref:System.Windows.DataObject.GetData%2A>. Rufen Sie <xref:System.Windows.DataObject.GetFormats%2A> um eine Liste mit allen Formaten abzurufen, die in diesem Datenobjekt verfügbar sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird mit dieser Methode eine Abfrage Daten mithilfe der sicherheitsbeschreibungs-Zeichenfolge und gibt an, wie Datenformate, die automatisch behandelt werden sollen.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Autoconvert](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_autoconvert)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Autoconvert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_autoconvert)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDropList">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection GetFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Specialized.StringCollection GetFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung von Zeichenfolgen, die eine Liste von abgelegten Dateien enthält.</summary>
+        <returns>Eine Auflistung von Zeichenfolgen, wobei jede Zeichenfolge den Namen einer Datei in der Liste der gelöschten Dateien angibt, oder <see langword="null" /> , wenn die Daten in diesem Format nicht verfügbar ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormats">
+      <MemberSignature Language="C#" Value="public string[] GetFormats ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetFormats() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetFormats" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Liste der Formate in denen die Daten in diesem Datenobjekt gespeichert ist, oder konvertiert werden können.</summary>
+        <returns>Ein Array von Zeichenfolgen, wobei jede Zeichenfolge, die den Namen des ein Format, dieses Datenobjekt unterstützt, angeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für einen Satz vordefinierter Datenformate, finden Sie unter der <xref:System.Windows.DataFormats> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Methode ein Array von Zeichenfolgen, die alle verfügbaren Datenformate in ein Datenobjekt (systemeigene und automatisch konvertierbare) abrufen.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormats">
+      <MemberSignature Language="C#" Value="public string[] GetFormats (bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetFormats(bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetFormats(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="autoConvert">
+          <see langword="true" />Um alle Formate abzurufen, in denen die Daten in diesem Datenobjekt gespeichert ist, oder konvertiert werden können; <see langword="false" /> abzurufenden nur Formate, in dem die Daten in diesem Datenobjekt gespeichert ist.</param>
+        <summary>Gibt eine Liste der Formate, die in denen die Daten in diesem Datenobjekt gespeichert werden. Ein <see langword="Boolean" /> Flag gibt an, ob auch Formate umfassen, die die Daten automatisch in konvertiert werden können.</summary>
+        <returns>Ein Array von Zeichenfolgen, wobei jede Zeichenfolge, die den Namen eines Formats, das von diesem Datenobjekt unterstützt angeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für einen Satz vordefinierter Datenformate, finden Sie unter der <xref:System.Windows.DataFormats> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Methode ein Array von Zeichenfolgen, die nur verfügbaren Datenformate in ein Datenobjekt (Auto-Datenformate Datenformate werden gefiltert) abrufen.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats_NativeOnly](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats_nativeonly)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats_NativeOnly](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats_nativeonly)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapSource GetImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Imaging.BitmapSource GetImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> Objekt mit Daten in der <see cref="F:System.Windows.DataFormats.Bitmap" /> Format.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> Objekt mit Daten in der <see cref="F:System.Windows.DataFormats.Bitmap" /> Format, oder <see langword="null" /> , wenn die Daten in diesem Format nicht verfügbar ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt ein <xref:System.Windows.Media.Imaging.BitmapSource> entweder Objekts, wenn Sie Daten im System verfügbar ist oder wann können Daten automatisch in konvertiert werden die <xref:System.Windows.DataFormats.Bitmap> Datenformat.  
+  
+ Eine Bitmap eine Computergrafik als ein Array von Bits im Arbeitsspeicher darstellt, und diese Bits die Attribute der einzelnen Pixel Bestandteil eines Abbilds dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public string GetText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, enthält die <see cref="F:System.Windows.DataFormats.UnicodeText" /> Daten in diesem Datenobjekt.</summary>
+        <returns>Eine Zeichenfolge, enthält die <see cref="F:System.Windows.DataFormats.UnicodeText" /> Daten oder eine leere Zeichenfolge, wenn kein <see cref="F:System.Windows.DataFormats.UnicodeText" /> Daten verfügbar sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DataFormats.UnicodeText> Datenformat kennzeichnet 16-Bit-Zeichen codiert Unicode, auch als UTF-16 und USC-2 bezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public string GetText (System.Windows.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetText(valuetype System.Windows.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.GetText(System.Windows.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein Mitglied <see cref="T:System.Windows.TextDataFormat" /> , die die abzurufenden Textdatenformat angibt.</param>
+        <summary>Gibt eine Zeichenfolge, die im angegebenen Format in diesem Datenobjekt Textdaten enthält.</summary>
+        <returns>Eine Zeichenfolge, enthält die Textdaten in dem angegebenen Datenformat oder eine leere Zeichenfolge, wenn keine entsprechenden Textdaten verfügbar ist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" />Gibt keinen gültigen Mitglied <see cref="T:System.Windows.TextDataFormat" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PastingEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PastingEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PastingEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DataObject.PastingEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DataObject.Pasting" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCopyingHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveCopyingHandler (System.Windows.DependencyObject element, System.Windows.DataObjectCopyingEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveCopyingHandler(class System.Windows.DependencyObject element, class System.Windows.DataObjectCopyingEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.RemoveCopyingHandler(System.Windows.DependencyObject,System.Windows.DataObjectCopyingEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DataObjectCopyingEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DataObject.Copying" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePastingHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePastingHandler (System.Windows.DependencyObject element, System.Windows.DataObjectPastingEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePastingHandler(class System.Windows.DependencyObject element, class System.Windows.DataObjectPastingEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.RemovePastingHandler(System.Windows.DependencyObject,System.Windows.DataObjectPastingEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DataObjectPastingEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DataObject.Pasting" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSettingDataHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveSettingDataHandler (System.Windows.DependencyObject element, System.Windows.DataObjectSettingDataEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveSettingDataHandler(class System.Windows.DependencyObject element, class System.Windows.DataObjectSettingDataEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.RemoveSettingDataHandler(System.Windows.DependencyObject,System.Windows.DataObjectSettingDataEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DataObjectSettingDataEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DataObject.SettingData" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public void SetAudio (byte[] audioBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAudio(unsigned int8[] audioBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.SetAudio(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioBytes" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="audioBytes">Ein Bytearray, das zum Speichern in das Datenobjekt audio Daten enthält.</param>
+        <summary>Speichert Audiodaten (<see cref="F:System.Windows.DataFormats.WaveAudio" /> Datenformat) in diesem Datenobjekt. Das audio Daten als Bytearray angegeben ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Daten mit automatische Konvertierung deaktiviert (der gleiche wie das Aufrufen <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> mit `autoConvert` festgelegt `false`).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="audioBytes" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public void SetAudio (System.IO.Stream audioStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAudio(class System.IO.Stream audioStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.SetAudio(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="audioStream">Ein Datenstrom, der Audiodaten zum Speichern im Datenobjekt enthält.</param>
+        <summary>Speichert Audiodaten (<see cref="F:System.Windows.DataFormats.WaveAudio" /> Datenformat) in diesem Datenobjekt.  Das audio Daten als Stream angegeben ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Daten mit automatische Konvertierung deaktiviert (der gleiche wie das Aufrufen <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> mit `autoConvert` festgelegt `false`).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="audioStream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.SetData(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Ein Objekt, das die Daten darstellt, die in diesem Datenobjekt gespeichert werden sollen.</param>
+        <summary>Speichert die angegebenen Daten in diesem Datenobjekt, das Datenformat aus der Objekttyp der Datenquelle automatisch ermittelt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Daten mit automatische Konvertierung aktiviert (der gleiche wie das Aufrufen <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> mit `autoConvert` festgelegt `true`).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für die Berechtigung zum Übertragen von Daten in die Zwischenablage des Systems.  Zugeordnete Enumeration: **AllClipboard**.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (string format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(string format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.SetData(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge, die das Format für die Daten angibt. Für einen Satz vordefinierter Datenformate, finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <param name="data">Ein Objekt, das die Daten darstellt, die in diesem Datenobjekt gespeichert werden sollen.</param>
+        <summary>Speichert die angegebenen Daten in diesem Datenobjekt zusammen mit einem oder mehreren angegebenen Datenformaten. Das Datenformat wird durch eine Zeichenfolge angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Daten mit automatische Konvertierung aktiviert (der gleiche wie das Aufrufen <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> mit `autoConvert` festgelegt `true`).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> oder <paramref name="format" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für die Berechtigung zum Übertragen von Daten in die Zwischenablage des Systems.  Zugeordnete Enumeration: **AllClipboard**.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (Type format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(class System.Type format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.SetData(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein <see cref="T:System.Type" /> Objekt, das das Format für die Daten angibt. Für einen Satz vordefinierter Datenformate, finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <param name="data">Ein Objekt, das die Daten darstellt, die in diesem Datenobjekt gespeichert werden sollen.</param>
+        <summary>Speichert die angegebenen Daten in diesem Datenobjekt zusammen mit einem oder mehreren angegebenen Datenformaten. das Datenformat wird angegeben, indem eine <see cref="T:System.Type" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Daten mit automatische Konvertierung aktiviert (der gleiche wie das Aufrufen <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> mit `autoConvert` festgelegt `true`).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> oder <paramref name="format" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für die Berechtigung zum Übertragen von Daten in die Zwischenablage des Systems.  Zugeordnete Enumeration: **AllClipboard**.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (string format, object data, bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(string format, object data, bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.SetData(System.String,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge, die das Format für die Daten angibt. Für einen Satz vordefinierter Datenformate, finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <param name="data">Ein Objekt, das die Daten darstellt, die in diesem Datenobjekt gespeichert werden sollen.</param>
+        <param name="autoConvert">
+          <see langword="true" />um die Daten in ein anderes Format auf Abruf konvertiert werden können. <see langword="false" /> zu verhindern, dass die Daten in ein anderes Format auf Abruf konvertiert wird.</param>
+        <summary>Speichert die angegebenen Daten in diesem Datenobjekt zusammen mit einem oder mehreren angegebenen Datenformaten. Diese Überladung umfasst eine <see langword="Boolean" /> Kennzeichen, das angibt, ob die Daten in ein anderes Format auf Abruf konvertiert werden können.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> oder <paramref name="format" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für die Berechtigung zum Übertragen von Daten in die Zwischenablage des Systems.  Zugeordnete Enumeration: **AllClipboard**.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFileDropList">
+      <MemberSignature Language="C#" Value="public void SetFileDropList (System.Collections.Specialized.StringCollection fileDropList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFileDropList(class System.Collections.Specialized.StringCollection fileDropList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.SetFileDropList(System.Collections.Specialized.StringCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileDropList" Type="System.Collections.Specialized.StringCollection" />
+      </Parameters>
+      <Docs>
+        <param name="fileDropList">Eine Auflistung von Zeichenfolgen, die Liste der gelöschten Dateien zum Speichern in das Datenobjekt enthält.</param>
+        <summary>Speichert <see cref="F:System.Windows.DataFormats.FileDrop" /> Daten in diesem Datenobjekt.  Die Liste der gelöschten Datei wird als eine Auflistung von Zeichenfolgen angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Daten mit automatische Konvertierung aktiviert (der gleiche wie das Aufrufen <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> mit `autoConvert` festgelegt `true`).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileDropList" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="fileDropList" />enthält 0 (null) Zeichenfolgen oder den vollständige Pfad zur Datei, die in der Liste angegebenen kann nicht aufgelöst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImage">
+      <MemberSignature Language="C#" Value="public void SetImage (System.Windows.Media.Imaging.BitmapSource image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetImage(class System.Windows.Media.Imaging.BitmapSource image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.SetImage(System.Windows.Media.Imaging.BitmapSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="image" Type="System.Windows.Media.Imaging.BitmapSource" />
+      </Parameters>
+      <Docs>
+        <param name="image">Ein <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> Objekt, das die Bilddaten zum Speichern in das Datenobjekt enthält.</param>
+        <summary>Speichert <see cref="F:System.Windows.DataFormats.Bitmap" /> Daten in diesem Datenobjekt.  Die Bilddaten werden angegeben, wie eine <see cref="T:System.Windows.Media.Imaging.BitmapSource" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Bitmap eine Computergrafik als ein Array von Bits im Arbeitsspeicher darstellt, und diese Bits die Attribute der einzelnen Pixel Bestandteil eines Abbilds dar.  
+  
+ Diese Methode fügt Daten mit automatische Konvertierung aktiviert (der gleiche wie das Aufrufen <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> mit `autoConvert` festgelegt `true`).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="image" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public void SetText (string textData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetText(string textData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.SetText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textData" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="textData">Eine Zeichenfolge, enthält die <see cref="F:System.Windows.DataFormats.UnicodeText" /> Daten in das Datenobjekt gespeichert.</param>
+        <summary>Speichert <see cref="F:System.Windows.DataFormats.UnicodeText" /> Daten, die als eine Zeichenfolge, in diesem Datenobjekt angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Format Gibt an, dass 16-Bit-Zeichen codierten Unicode, auch bezeichnet als UTF-16 und USC-2.  
+  
+ Diese Methode fügt Daten mit automatische Konvertierung deaktiviert (der gleiche wie das Aufrufen <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> mit `autoConvert` festgelegt `false`).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="textData" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public void SetText (string textData, System.Windows.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetText(string textData, valuetype System.Windows.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.SetText(System.String,System.Windows.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textData" Type="System.String" />
+        <Parameter Name="format" Type="System.Windows.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="textData">Eine Zeichenfolge, die die Textdaten in das Datenobjekt speichern enthält.</param>
+        <param name="format">Ein Mitglied <see cref="T:System.Windows.TextDataFormat" /> , die das Textformat der Daten zum Speichern von angibt.</param>
+        <summary>Speichert in diesem Datenobjekt Textdaten. Das Format zum Speichern von Textdaten wird angegeben, mit einem Mitglied <see cref="T:System.Windows.TextDataFormat" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Daten mit automatische Konvertierung deaktiviert (der gleiche wie das Aufrufen <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> mit `autoConvert` festgelegt `false`).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="textData" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingDataEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent SettingDataEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent SettingDataEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DataObject.SettingDataEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DataObject.SettingData" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise">
+      <MemberSignature Language="C#" Value="int IDataObject.DAdvise (ref System.Runtime.InteropServices.ComTypes.FORMATETC pFormatetc, System.Runtime.InteropServices.ComTypes.ADVF advf, System.Runtime.InteropServices.ComTypes.IAdviseSink pAdvSink, out int pdwConnection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise(valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; pFormatetc, valuetype System.Runtime.InteropServices.ComTypes.ADVF advf, class System.Runtime.InteropServices.ComTypes.IAdviseSink pAdvSink, [out] int32&amp; pdwConnection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#DAdvise(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.ADVF,System.Runtime.InteropServices.ComTypes.IAdviseSink,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pFormatetc" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="advf" Type="System.Runtime.InteropServices.ComTypes.ADVF" />
+        <Parameter Name="pAdvSink" Type="System.Runtime.InteropServices.ComTypes.IAdviseSink" />
+        <Parameter Name="pdwConnection" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pFormatetc">Ein <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur übergeben als Verweis, der definiert, das Format, Zielgerät Aspekt und Mittel, die für zukünftige Benachrichtigungen verwendet werden.</param>
+        <param name="advf">Eines der <see cref="T:System.Runtime.InteropServices.ComTypes.ADVF" /> Werte, die eine Gruppe von Flags zum Kontrollieren der Advise-Verbindungs angibt.</param>
+        <param name="pAdvSink">Ein Zeiger auf die <see cref="T:System.Runtime.InteropServices.ComTypes.IAdviseSink" /> Schnittstelle auf die Advise-Senke, die die Benachrichtigung erhalten sollen.</param>
+        <param name="pdwConnection">Enthält nach dem Beenden dieser Methode einen Zeiger auf ein DWORD-Token, das diese Verbindung identifiziert. Sie können dieses Token später die Advise-Verbindung löschen, indem Sie die Übergabe an <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise(System.Int32)" />. Wenn dieser Wert 0 (null) ist, wurde die Verbindung nicht hergestellt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Erstellt eine Verbindung zwischen einem Datenobjekt und einer Advise-Senke. Diese Methode wird von einem Objekt aufgerufen, das eine Advise-Senke unterstützt, und aktiviert die Advise-Senke für den Empfang von Änderungsbenachrichtigungen für Daten des Objekts.</summary>
+        <returns>Diese Methode unterstützt die Standardrückgabewerte E_INVALIDARG, E_UNEXPECTED und E_OUTOFMEMORY sowie die folgenden Werte:</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.DataObject>-Instanz in eine <xref:System.Runtime.InteropServices.ComTypes.IDataObject>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise">
+      <MemberSignature Language="C#" Value="void IDataObject.DUnadvise (int dwConnection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise(int32 dwConnection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#DUnadvise(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dwConnection" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dwConnection">Ein DWORD-Token, das die zu entfernende Verbindung angibt. Verwenden Sie den von <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.ADVF,System.Runtime.InteropServices.ComTypes.IAdviseSink,System.Int32@)" /> beim Herstellen der ursprünglichen Verbindung zurückgegebenen Wert.</param>
+        <summary>Zerstört eine Benachrichtigungsverbindung, die zuvor hergestellt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.DataObject>-Instanz in eine <xref:System.Runtime.InteropServices.ComTypes.IDataObject>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.EnumDAdvise">
+      <MemberSignature Language="C#" Value="int IDataObject.EnumDAdvise (out System.Runtime.InteropServices.ComTypes.IEnumSTATDATA enumAdvise);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Runtime.InteropServices.ComTypes.IDataObject.EnumDAdvise([out] class System.Runtime.InteropServices.ComTypes.IEnumSTATDATA&amp; enumAdvise) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#EnumDAdvise(System.Runtime.InteropServices.ComTypes.IEnumSTATDATA@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumAdvise" Type="System.Runtime.InteropServices.ComTypes.IEnumSTATDATA&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="enumAdvise">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Runtime.InteropServices.ComTypes.IEnumSTATDATA" /> , die den Schnittstellenzeiger auf das neue Enumeratorobjekt empfängt. Wenn die Implementierung legt <c>EnumAdvise</c> zu <see langword="null" />, zu diesem Zeitpunkt keine Verbindungen zu Advise-Senken sind. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Erstellt ein Objekt, mit dem die aktuellen Advise-Verbindungen aufgelistet werden können.</summary>
+        <returns>Diese Methode unterstützt den Standardrückgabewert E_OUTOFMEMORY sowie die folgenden Werte:  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>Das Enumeratorobjekt wurde erfolgreich instanziiert, oder es sind keine Verbindungen.  
+  
+ </description></item><item><term>OLE_E_ADVISENOTSUPPORTED  
+  
+ </term><description>Dieses Objekt unterstützt keine Advise-Benachrichtigungen.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.DataObject>-Instanz in eine <xref:System.Runtime.InteropServices.ComTypes.IDataObject>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.EnumFormatEtc">
+      <MemberSignature Language="C#" Value="System.Runtime.InteropServices.ComTypes.IEnumFORMATETC IDataObject.EnumFormatEtc (System.Runtime.InteropServices.ComTypes.DATADIR dwDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Runtime.InteropServices.ComTypes.IEnumFORMATETC System.Runtime.InteropServices.ComTypes.IDataObject.EnumFormatEtc(valuetype System.Runtime.InteropServices.ComTypes.DATADIR dwDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#EnumFormatEtc(System.Runtime.InteropServices.ComTypes.DATADIR)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.IEnumFORMATETC</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dwDirection" Type="System.Runtime.InteropServices.ComTypes.DATADIR" />
+      </Parameters>
+      <Docs>
+        <param name="dwDirection">Eines der <see cref="T:System.Runtime.InteropServices.ComTypes.DATADIR" /> Werte, der die Richtung der Daten angibt.</param>
+        <summary>Erstellt ein Objekt zum Aufzählen der <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Strukturen für ein Datenobjekt. Diese Strukturen sind in Aufrufen verwendet <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> oder <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean)" />.</summary>
+        <returns>Diese Methode unterstützt die Standardrückgabewerte E_INVALIDARG und E_OUTOFMEMORY sowie die folgenden Werte:  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>Das Enumeratorobjekt wurde erfolgreich erstellt.  
+  
+ </description></item><item><term>E_NOTIMPL  
+  
+ </term><description>Die Richtung, die gemäß der <paramref name="direction" /> Parameter wird nicht unterstützt.  
+  
+ </description></item><item><term>OLE_S_USEREG  
+  
+ </term><description>Fordert an, dass OLE aufgelistet, die Formate aus der Registrierung.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.DataObject>-Instanz in eine <xref:System.Runtime.InteropServices.ComTypes.IDataObject>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc">
+      <MemberSignature Language="C#" Value="int IDataObject.GetCanonicalFormatEtc (ref System.Runtime.InteropServices.ComTypes.FORMATETC pformatetcIn, out System.Runtime.InteropServices.ComTypes.FORMATETC pformatetcOut);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc(valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; pformatetcIn, [out] valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; pformatetcOut) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#GetCanonicalFormatEtc(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.FORMATETC@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pformatetcIn" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="pformatetcOut" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pformatetcIn">Ein Zeiger auf eine <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur übergeben als Verweis, der definiert, das Format, Mittel und Zielgerät, das der Aufrufer verwenden, z. B. in einem nachfolgenden Aufruf Datenempfang möchten <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />. Die <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" /> Member spielt keine Rolle in diesem Fall und sollte ignoriert werden.</param>
+        <param name="pformatetcOut">Wenn diese Methode zurückgibt, enthält einen Zeiger auf eine <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> -Struktur, die meisten allgemeine Informationen für ein bestimmtes Rendering, wodurch die kanonisch äquivalent zu enthält <c>FormatetIn</c>. Der Aufrufer muss diese Struktur zuordnen und die <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.FORMATETC@)" /> Methode muss in den Daten füllen. Zum Abrufen von Daten in einem nachfolgenden Aufruf wie z. B. <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />, der Aufrufer verwendet den angegebenen Wert des <c>FormatOut</c>, es sei denn, der bereitgestellte Wert ist <see langword="null" />. Dieser Wert ist <see langword="null" /> , wenn der Methodenrückgabe <see langword="DATA_S_SAMEFORMATETC" />. Die <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" /> Member spielt keine Rolle in diesem Fall und sollte ignoriert werden. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ein Standard <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> -Struktur, die einer komplexeren Struktur logisch entspricht. Verwenden Sie diese Methode, um festzustellen, ob zwei unterschiedliche <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Strukturen würde die gleichen Daten, die Erfordernis für doppelte Rendering zurückgeben.</summary>
+        <returns>Diese Methode unterstützt die Standardrückgabewerte E_INVALIDARG, E_UNEXPECTED und E_OUTOFMEMORY sowie die folgenden Werte:  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>Das zurückgegebene <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur unterscheidet sich vom das Projekt, das übergeben wurde.  
+  
+ </description></item><item><term>DATA_S_SAMEFORMATETC  
+  
+ </term><description>Die <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Strukturen sind identisch und <see langword="null" /> wird zurückgegeben, der <paramref name="formatOut" /> Parameter.  
+  
+ </description></item><item><term>DV_E_LINDEX  
+  
+ </term><description>Es ist kein gültiger Wert für <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; derzeit wird nur-1 unterstützt.  
+  
+ </description></item><item><term>DV_E_FORMATETC  
+  
+ </term><description>Es ist kein gültiger Wert für die <paramref name="pFormatetc" /> Parameter.  
+  
+ </description></item><item><term>OLE_E_NOTRUNNING  
+  
+ </term><description>Die Anwendung wird nicht ausgeführt.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.DataObject>-Instanz in eine <xref:System.Runtime.InteropServices.ComTypes.IDataObject>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.GetData">
+      <MemberSignature Language="C#" Value="void IDataObject.GetData (ref System.Runtime.InteropServices.ComTypes.FORMATETC formatetc, out System.Runtime.InteropServices.ComTypes.STGMEDIUM medium);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices.ComTypes.IDataObject.GetData(valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; formatetc, [out] valuetype System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp; medium) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatetc" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="medium" Type="System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="formatetc">Ein Zeiger auf eine <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur übergeben als Verweis, der das Format, Mittel und Zielgerät zu verwendende übergeben der Daten definiert. Mithilfe des booleschen Operators OR können auch mehrere Medien angegeben werden, sodass die Methode das beste Medium aus den angegebenen Medien auswählen kann.</param>
+        <param name="medium">Rückkehr dieser Methode enthält einen Zeiger auf die <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> -Struktur, die das Speichermedium mit den zurückgegebenen Daten über ihre <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.tymed" /> Element und die Verantwortung für die Freigabe der Mittel über den Wert von dessen <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" />Member. Wenn <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> ist <see langword="null" />, der Empfänger des Mediums ist verantwortlich für die freigegeben wurde, andernfalls <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> verweist auf die <see langword="IUnknown" /> -Schnittstelle für das entsprechende Objekt also die <see langword="Release" /> Methode kann aufgerufen werden. Das Medium zugeordnet und ausgefüllt werden muss <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft Daten aus einem Quelldatenobjekt ab. Die <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> -Methode, die von einem Datenconsumer aufgerufen wird, rendert die Daten beschrieben, die im angegebenen <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur und überträgt diese über den angegebenen <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> Struktur. Der Aufrufer übernimmt die Verantwortung für die Freigabe, klicken Sie dann die <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.DataObject>-Instanz in eine <xref:System.Runtime.InteropServices.ComTypes.IDataObject>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere">
+      <MemberSignature Language="C#" Value="void IDataObject.GetDataHere (ref System.Runtime.InteropServices.ComTypes.FORMATETC formatetc, ref System.Runtime.InteropServices.ComTypes.STGMEDIUM medium);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere(valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; formatetc, valuetype System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp; medium) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#GetDataHere(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatetc" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="medium" Type="System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="formatetc">Ein Zeiger auf eine <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur übergeben als Verweis, der das Format, Mittel und Zielgerät zu verwendende übergeben der Daten definiert. Nur ein Medium kann angegeben werden, <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" />, und nur die folgenden <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" /> Werte sind gültig: <see cref="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTORAGE" />, <see cref="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTREAM" />, <see cref="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_HGLOBAL" />, oder <see cref="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_FILE" />.</param>
+        <param name="medium">Ein <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" />, übergeben als Verweis, der das Speichermedium mit der übertragenen Daten definiert. Das Medium muss vom Aufrufer zugeordnet wird und von ausgefüllt <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />. Der Aufrufer muss das Medium auch freigeben. Die Implementierung dieser Methode muss immer den Wert der <see langword="null" /> für die <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> Mitglied der <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> -Struktur, die dieser Parameter verweist.</param>
+        <summary>Ruft Daten aus einem Quelldatenobjekt ab. Diese Methode, die von einem Datenconsumer aufgerufen wird, unterscheidet sich von der <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> Methode insofern, dass der Aufrufer muss reservieren und Freigeben von der angegebenen Speichermedium.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.DataObject>-Instanz in eine <xref:System.Runtime.InteropServices.ComTypes.IDataObject>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.QueryGetData">
+      <MemberSignature Language="C#" Value="int IDataObject.QueryGetData (ref System.Runtime.InteropServices.ComTypes.FORMATETC formatetc);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Runtime.InteropServices.ComTypes.IDataObject.QueryGetData(valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; formatetc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#QueryGetData(System.Runtime.InteropServices.ComTypes.FORMATETC@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatetc" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="formatetc">Ein Zeiger auf eine <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur übergeben als Verweis, der das Format, Mittel und Zielgerät für die Abfrage definiert.</param>
+        <summary>Bestimmt, ob das Datenobjekt Rendern der Daten, die in beschriebenen kann die <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur. Versucht, einen einfügen oder Drop-Vorgang kann diese Methode vor dem Aufruf aufrufen Objekte <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> um zu bestimmen, ob der Vorgang erfolgreich durchgeführt werden kann.</summary>
+        <returns>Diese Methode unterstützt die Standardrückgabewerte E_INVALIDARG, E_UNEXPECTED und E_OUTOFMEMORY sowie die folgenden Werte:  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>Ein nachfolgender Aufruf von <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> wäre wahrscheinlich erfolgreich.  
+  
+ </description></item><item><term>DV_E_LINDEX  
+  
+ </term><description>Ein ungültiger Wert für <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; derzeit wird nur-1 unterstützt.  
+  
+ </description></item><item><term>DV_E_FORMATETC  
+  
+ </term><description>Ein ungültiger Wert für die <paramref name="pFormatetc" /> Parameter.  
+  
+ </description></item><item><term>DV_E_TYMED  
+  
+ </term><description>Eine ungültige <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.tymed" /> Wert.  
+  
+ </description></item><item><term>DV_E_DVASPECT  
+  
+ </term><description>Eine ungültige <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.dwAspect" /> Wert.  
+  
+ </description></item><item><term>OLE_E_NOTRUNNING  
+  
+ </term><description>Die Anwendung wird nicht ausgeführt.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.DataObject>-Instanz in eine <xref:System.Runtime.InteropServices.ComTypes.IDataObject>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.SetData">
+      <MemberSignature Language="C#" Value="void IDataObject.SetData (ref System.Runtime.InteropServices.ComTypes.FORMATETC pFormatetcIn, ref System.Runtime.InteropServices.ComTypes.STGMEDIUM pmedium, bool fRelease);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices.ComTypes.IDataObject.SetData(valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; pFormatetcIn, valuetype System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp; pmedium, bool fRelease) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pFormatetcIn" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="pmedium" Type="System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp;" RefType="ref" />
+        <Parameter Name="fRelease" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pFormatetcIn">Ein <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur übergeben als Verweis, der das Format von das Datenobjekt beim Interpretieren der Daten in das Speichermedium definiert.</param>
+        <param name="pmedium">Ein <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> Struktur übergeben als Verweis, der das Speichermedium definiert, in dem die Daten übergeben werden.</param>
+        <param name="fRelease">
+          <see langword="true" />um anzugeben, dass das Datenobjekt aufgerufen wird, implementiert <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean)" />, das Speichermedium nach der Rückkehr des Aufrufs besitzt. Dies bedeutet, dass das Datenobjekt das Medium freigeben muss, nachdem es durch den Aufruf verwendet wurde, hat die <see langword="ReleaseStgMedium" /> Funktion. <see langword="false" />um anzugeben, dass der Aufrufer das Speichermedium behält, und das Datenobjekt wird aufgerufen, das Speichermedium für die Dauer des Aufrufs nur verwendet an.</param>
+        <summary>Überträgt Daten an das Objekt, das diese Methode implementiert. Diese Methode wird von einem Objekt aufgerufen, das eine Datenquelle enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.DataObject>-Instanz in eine <xref:System.Runtime.InteropServices.ComTypes.IDataObject>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

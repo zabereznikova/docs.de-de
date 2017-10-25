@@ -1,0 +1,13 @@
+<Namespace Name="System.Data.Common.CommandTrees">
+  <Docs>
+    <summary>Der <see cref="N:System.Data.Common.CommandTrees" />-Namespace stellt Klassen zum Erstellen von Ausdrücken bereit, die die Befehlsstruktur bilden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Befehlsstruktur ist eine Objektmodelldarstellung einer Abfrage, die zum Darstellen von Abfrage-, Aktualisierungs-, Einfüge- und Löschbefehlen in den ADO.NET-EDM (Entity Data Model)- und Speichermetadaten verwendet werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

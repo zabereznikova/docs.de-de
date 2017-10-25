@@ -1,0 +1,45 @@
+<Type Name="ObjectDataSourceObjectEventHandler" FullName="System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ObjectDataSourceObjectEventHandler(object sender, ObjectDataSourceEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ObjectDataSourceObjectEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.ObjectDataSourceEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.ObjectDataSourceEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating" /> und <see cref="E:System.Web.UI.WebControls.ObjectDataSource.ObjectCreated" /> Ereignisse der <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>-Delegaten geben Sie die Methode für die Ereignisbehandlung an. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.ObjectDataSource> -Steuerelement mit einem Geschäftsobjekt und einem <xref:System.Web.UI.WebControls.GridView> Steuerelement abrufen und Anzeigen von Informationen. In diesem Beispiel, wie viele reale Szenarien möglicherweise nicht möglich oder sinnvoll sein, der das Geschäftsobjekt mit eine Standardinstanz verwenden die <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement. In diesem Beispiel wird die <xref:System.Web.UI.WebControls.ObjectDataSource> den Standardkonstruktor kann nicht erfolgreich aufgerufen werden, da eine Ausnahme ausgelöst wird. In einigen Fällen kann der Standardkonstruktor geschützt werden, und in anderen möglicherweise nicht initialisiert werden das Geschäftsobjekt auf einen gewünschten Zustand. Unabhängig vom Grund können Sie das Geschäft instanziieren selbst, und legen Sie die Instanz, auf die <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs.ObjectInstance%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs> -Objekt, das an den Ereignishandler übergeben wird. Dies ist das Geschäftsobjekt Instanz, die <xref:System.Web.UI.WebControls.ObjectDataSource> verwendet, um seine Funktion auszuführen.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_15#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/CS/objds15cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_15#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/VB/objds15vb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, die grundlegende Business-Beispielobjekt, die im vorherigen Beispiel verwendet.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ObjectDataSource_15#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/CS/northwindemployee15.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ObjectDataSource_15#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/VB/northwindemployee15.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

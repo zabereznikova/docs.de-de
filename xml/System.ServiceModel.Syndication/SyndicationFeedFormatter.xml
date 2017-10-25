@@ -1,0 +1,1533 @@
+<Type Name="SyndicationFeedFormatter" FullName="System.ServiceModel.Syndication.SyndicationFeedFormatter">
+  <TypeSignature Language="C#" Value="public abstract class SyndicationFeedFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SyndicationFeedFormatter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Syndication.SyndicationFeedFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine abstrakte Klasse, die als Basisklasse für andere Formatierungsprogramme (beispielsweise <see cref="T:System.ServiceModel.Syndication.Atom10FeedFormatter" />) verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist abstrakt und kann nicht direkt instanziiert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SyndicationFeedFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationFeedFormatter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SyndicationFeedFormatter (System.ServiceModel.Syndication.SyndicationFeed feedToWrite);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Syndication.SyndicationFeed feedToWrite) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.#ctor(System.ServiceModel.Syndication.SyndicationFeed)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="feedToWrite" Type="System.ServiceModel.Syndication.SyndicationFeed" />
+      </Parameters>
+      <Docs>
+        <param name="feedToWrite">Das zu schreibende <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationFeedFormatter" />-Klasse mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> muss über ein zugeordnetes <xref:System.ServiceModel.Syndication.SyndicationFeed> verfügen. Dann kann das <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> das <xref:System.ServiceModel.Syndication.SyndicationFeed> in einem <xref:System.Xml.XmlReader> ausgeben. Die einzige Möglichkeit, einem <xref:System.ServiceModel.Syndication.SyndicationFeed> einen <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> zuzuordnen, ist die Verwendung dieses Konstruktors.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public abstract bool CanRead (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanRead(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.CanRead(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein zu überprüfender XML-Reader.</param>
+        <summary>Prüft, ob der angegebene <see cref="T:System.Xml.XmlReader" /> einen gültigen Syndication-Feed enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn der XML-Reader einen gültigen Syndication-Feed enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft, ob der Name von Startelement und Namespace mit dem Namen des Startelements und Namespace der RSS&#160;2.0- oder Atom&#160;1.0-Spezifikation übereinstimmt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCategory">
+      <MemberSignature Language="C#" Value="protected static System.ServiceModel.Syndication.SyndicationCategory CreateCategory (System.ServiceModel.Syndication.SyndicationFeed feed);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig class System.ServiceModel.Syndication.SyndicationCategory CreateCategory(class System.ServiceModel.Syndication.SyndicationFeed feed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.CreateCategory(System.ServiceModel.Syndication.SyndicationFeed)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationCategory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feed" Type="System.ServiceModel.Syndication.SyndicationFeed" />
+      </Parameters>
+      <Docs>
+        <param name="feed">Die zum Erstellen des neuen <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" /> verwendete <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />.</param>
+        <summary>Erstellt eine neue Instanz der Klasse <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" /> mit Hilfe der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz.</summary>
+        <returns>Eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neu erstellte <xref:System.ServiceModel.Syndication.SyndicationCategory>-Instanz wird nicht automatisch der zum Erstellen verwendeten <xref:System.ServiceModel.Syndication.SyndicationFeed>-Instanz hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCategory">
+      <MemberSignature Language="C#" Value="protected static System.ServiceModel.Syndication.SyndicationCategory CreateCategory (System.ServiceModel.Syndication.SyndicationItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig class System.ServiceModel.Syndication.SyndicationCategory CreateCategory(class System.ServiceModel.Syndication.SyndicationItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.CreateCategory(System.ServiceModel.Syndication.SyndicationItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationCategory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.ServiceModel.Syndication.SyndicationItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Der <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />, der zum Erstellen des <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />s verwendet wurde.</param>
+        <summary>Erstellt eine neue Instanz der Klasse <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" /> mit Hilfe der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</summary>
+        <returns>Eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neu erstellte <xref:System.ServiceModel.Syndication.SyndicationCategory>-Instanz wird nicht automatisch der zum Erstellen verwendeten <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFeedInstance">
+      <MemberSignature Language="C#" Value="protected abstract System.ServiceModel.Syndication.SyndicationFeed CreateFeedInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Syndication.SyndicationFeed CreateFeedInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.CreateFeedInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationFeed</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Klasse.</summary>
+        <returns>Eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neu erstellte <xref:System.ServiceModel.Syndication.SyndicationFeed>-Instanz wird nicht automatisch der zum Erstellen verwendeten <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>-Instanz hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItem">
+      <MemberSignature Language="C#" Value="protected static System.ServiceModel.Syndication.SyndicationItem CreateItem (System.ServiceModel.Syndication.SyndicationFeed feed);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig class System.ServiceModel.Syndication.SyndicationItem CreateItem(class System.ServiceModel.Syndication.SyndicationFeed feed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.CreateItem(System.ServiceModel.Syndication.SyndicationFeed)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feed" Type="System.ServiceModel.Syndication.SyndicationFeed" />
+      </Parameters>
+      <Docs>
+        <param name="feed">Der <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />, der zum Erstellen des <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />s verwendet wurde.</param>
+        <summary>Erstellt eine neue Instanz der Klasse <see cref="T:System.ServiceModel.Syndication.SyndicationItem" /> mit Hilfe der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz.</summary>
+        <returns>Eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neu erstellte <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz wird nicht automatisch der zum Erstellen verwendeten <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>-Instanz hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLink">
+      <MemberSignature Language="C#" Value="protected static System.ServiceModel.Syndication.SyndicationLink CreateLink (System.ServiceModel.Syndication.SyndicationFeed feed);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig class System.ServiceModel.Syndication.SyndicationLink CreateLink(class System.ServiceModel.Syndication.SyndicationFeed feed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.CreateLink(System.ServiceModel.Syndication.SyndicationFeed)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationLink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feed" Type="System.ServiceModel.Syndication.SyndicationFeed" />
+      </Parameters>
+      <Docs>
+        <param name="feed">Das <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />, das zur Erstellung des neuen <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />s verwendet wurde.</param>
+        <summary>Erstellt eine neue Instanz der Klasse <see cref="T:System.ServiceModel.Syndication.SyndicationLink" /> mit dem angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />.</summary>
+        <returns>Eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neu erstellte <xref:System.ServiceModel.Syndication.SyndicationLink>-Instanz wird nicht automatisch der zum Erstellen verwendeten <xref:System.ServiceModel.Syndication.SyndicationFeed>-Instanz hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLink">
+      <MemberSignature Language="C#" Value="protected static System.ServiceModel.Syndication.SyndicationLink CreateLink (System.ServiceModel.Syndication.SyndicationItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig class System.ServiceModel.Syndication.SyndicationLink CreateLink(class System.ServiceModel.Syndication.SyndicationItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.CreateLink(System.ServiceModel.Syndication.SyndicationItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationLink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.ServiceModel.Syndication.SyndicationItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />, das zur Erstellung des neuen <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />s verwendet wurde.</param>
+        <summary>Erstellt eine neue Instanz der Klasse <see cref="T:System.ServiceModel.Syndication.SyndicationLink" /> mit dem angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />.</summary>
+        <returns>Eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neu erstellte <xref:System.ServiceModel.Syndication.SyndicationLink>-Instanz wird nicht automatisch der zum Erstellen verwendeten <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePerson">
+      <MemberSignature Language="C#" Value="protected static System.ServiceModel.Syndication.SyndicationPerson CreatePerson (System.ServiceModel.Syndication.SyndicationFeed feed);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig class System.ServiceModel.Syndication.SyndicationPerson CreatePerson(class System.ServiceModel.Syndication.SyndicationFeed feed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.CreatePerson(System.ServiceModel.Syndication.SyndicationFeed)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationPerson</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feed" Type="System.ServiceModel.Syndication.SyndicationFeed" />
+      </Parameters>
+      <Docs>
+        <param name="feed">Die <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz, die zur Erstellung der neuen <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz verwendet wurde.</param>
+        <summary>Erstellt eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz mit Hilfe der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz.</summary>
+        <returns>Eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neu erstellte <xref:System.ServiceModel.Syndication.SyndicationPerson>-Instanz wird nicht automatisch der zum Erstellen verwendeten <xref:System.ServiceModel.Syndication.SyndicationFeed>-Instanz hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePerson">
+      <MemberSignature Language="C#" Value="protected static System.ServiceModel.Syndication.SyndicationPerson CreatePerson (System.ServiceModel.Syndication.SyndicationItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig class System.ServiceModel.Syndication.SyndicationPerson CreatePerson(class System.ServiceModel.Syndication.SyndicationItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.CreatePerson(System.ServiceModel.Syndication.SyndicationItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationPerson</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.ServiceModel.Syndication.SyndicationItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz, die zur Erstellung der neuen <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz verwendet wurde.</param>
+        <summary>Erstellt eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz mit Hilfe der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</summary>
+        <returns>Eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neu erstellte <xref:System.ServiceModel.Syndication.SyndicationPerson>-Instanz wird nicht automatisch der zum Erstellen verwendeten <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Feed">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.SyndicationFeed Feed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Syndication.SyndicationFeed Feed" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationFeedFormatter.Feed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationFeed</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das dem Formatierungsprogramm zugewiesene <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" /> ab.</summary>
+        <value>Das dem Formatierungsprogramm zugewiesene <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ServiceModel.Syndication.SyndicationFeed> wird dem <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> zugewiesen, indem eine Instanz des <xref:System.ServiceModel.Syndication.SyndicationFeed> an den Konstruktor des <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> übergeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadElementExtensions">
+      <MemberSignature Language="C#" Value="protected static void LoadElementExtensions (System.Xml.XmlReader reader, System.ServiceModel.Syndication.SyndicationCategory category, int maxExtensionSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void LoadElementExtensions(class System.Xml.XmlReader reader, class System.ServiceModel.Syndication.SyndicationCategory category, int32 maxExtensionSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.LoadElementExtensions(System.Xml.XmlReader,System.ServiceModel.Syndication.SyndicationCategory,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="category" Type="System.ServiceModel.Syndication.SyndicationCategory" />
+        <Parameter Name="maxExtensionSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="category">Die <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />, in die die Elementerweiterungen geladen werden sollen.</param>
+        <param name="maxExtensionSize">Die maximale zulässige Größe einer Elementerweiterung (in Byte).</param>
+        <summary>Lädt Elementerweiterungen in die angegebene <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" /> unter Verwendung des angegebenen <see cref="T:System.Xml.XmlReader" /> und der maximalen Erweiterungsgröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Spezifikationen RSS&#160;2.0 und Atom&#160;1.0 ermöglichen das Hinzufügen eigener Elementerweiterungen zu einem Syndication-Feed. Diese Methode ermöglicht das Einlesen dieser Elementerweiterungen von einem <xref:System.Xml.XmlReader> aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadElementExtensions">
+      <MemberSignature Language="C#" Value="protected static void LoadElementExtensions (System.Xml.XmlReader reader, System.ServiceModel.Syndication.SyndicationFeed feed, int maxExtensionSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void LoadElementExtensions(class System.Xml.XmlReader reader, class System.ServiceModel.Syndication.SyndicationFeed feed, int32 maxExtensionSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.LoadElementExtensions(System.Xml.XmlReader,System.ServiceModel.Syndication.SyndicationFeed,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="feed" Type="System.ServiceModel.Syndication.SyndicationFeed" />
+        <Parameter Name="maxExtensionSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="feed">Die <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />, in die die Elementerweiterungen geladen werden sollen.</param>
+        <param name="maxExtensionSize">Die maximale zulässige Größe einer Elementerweiterung (in Byte).</param>
+        <summary>Lädt Elementerweiterungen in die angegebene <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" /> unter Verwendung des angegebenen <see cref="T:System.Xml.XmlReader" /> und der maximalen Erweiterungsgröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Spezifikationen RSS&#160;2.0 und Atom&#160;1.0 ermöglichen das Hinzufügen eigener Elementerweiterungen zu einem Syndication-Feed. Diese Methode ermöglicht das Einlesen dieser Elementerweiterungen von einem <xref:System.Xml.XmlReader> aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadElementExtensions">
+      <MemberSignature Language="C#" Value="protected static void LoadElementExtensions (System.Xml.XmlReader reader, System.ServiceModel.Syndication.SyndicationItem item, int maxExtensionSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void LoadElementExtensions(class System.Xml.XmlReader reader, class System.ServiceModel.Syndication.SyndicationItem item, int32 maxExtensionSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.LoadElementExtensions(System.Xml.XmlReader,System.ServiceModel.Syndication.SyndicationItem,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="item" Type="System.ServiceModel.Syndication.SyndicationItem" />
+        <Parameter Name="maxExtensionSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="item">Die <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />, in die die Elementerweiterungen geladen werden sollen.</param>
+        <param name="maxExtensionSize">Die maximale zulässige Größe einer Elementerweiterung (in Byte).</param>
+        <summary>Lädt Elementerweiterungen in die angegebene <see cref="T:System.ServiceModel.Syndication.SyndicationItem" /> unter Verwendung des angegebenen <see cref="T:System.Xml.XmlReader" /> und der maximalen Erweiterungsgröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Spezifikationen RSS&#160;2.0 und Atom&#160;1.0 ermöglichen das Hinzufügen eigener Elementerweiterungen zu einem Syndication-Feed. Diese Methode ermöglicht das Einlesen dieser Elementerweiterungen von einem <xref:System.Xml.XmlReader> aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadElementExtensions">
+      <MemberSignature Language="C#" Value="protected static void LoadElementExtensions (System.Xml.XmlReader reader, System.ServiceModel.Syndication.SyndicationLink link, int maxExtensionSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void LoadElementExtensions(class System.Xml.XmlReader reader, class System.ServiceModel.Syndication.SyndicationLink link, int32 maxExtensionSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.LoadElementExtensions(System.Xml.XmlReader,System.ServiceModel.Syndication.SyndicationLink,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="link" Type="System.ServiceModel.Syndication.SyndicationLink" />
+        <Parameter Name="maxExtensionSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="link">Die <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />, in die die Elementerweiterungen geladen werden sollen.</param>
+        <param name="maxExtensionSize">Die maximale zulässige Größe einer Elementerweiterung (in Byte).</param>
+        <summary>Lädt Elementerweiterungen in die angegebene <see cref="T:System.ServiceModel.Syndication.SyndicationLink" /> unter Verwendung des angegebenen <see cref="T:System.Xml.XmlReader" /> und der maximalen Erweiterungsgröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Spezifikationen RSS&#160;2.0 und Atom&#160;1.0 ermöglichen das Hinzufügen eigener Elementerweiterungen zu einem Syndication-Feed. Diese Methode ermöglicht das Einlesen dieser Elementerweiterungen von einem <xref:System.Xml.XmlReader> aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadElementExtensions">
+      <MemberSignature Language="C#" Value="protected static void LoadElementExtensions (System.Xml.XmlReader reader, System.ServiceModel.Syndication.SyndicationPerson person, int maxExtensionSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void LoadElementExtensions(class System.Xml.XmlReader reader, class System.ServiceModel.Syndication.SyndicationPerson person, int32 maxExtensionSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.LoadElementExtensions(System.Xml.XmlReader,System.ServiceModel.Syndication.SyndicationPerson,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="person" Type="System.ServiceModel.Syndication.SyndicationPerson" />
+        <Parameter Name="maxExtensionSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="person">Die <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />, in die die Elementerweiterungen geladen werden sollen.</param>
+        <param name="maxExtensionSize">Die maximale zulässige Größe einer Elementerweiterung (in Byte).</param>
+        <summary>Lädt Elementerweiterungen in die angegebene <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" /> unter Verwendung des angegebenen <see cref="T:System.Xml.XmlReader" /> und der maximalen Erweiterungsgröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Spezifikationen RSS&#160;2.0 und Atom&#160;1.0 ermöglichen das Hinzufügen eigener Elementerweiterungen zu einem Syndication-Feed. Diese Methode ermöglicht das Einlesen dieser Elementerweiterungen von einem <xref:System.Xml.XmlReader> aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadFrom">
+      <MemberSignature Language="C#" Value="public abstract void ReadFrom (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReadFrom(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <summary>Liest ein <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" /> aus dem angegebenen <see cref="T:System.Xml.XmlReader" /> ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt einen neuen <xref:System.ServiceModel.Syndication.SyndicationFeed>, ordnet ihn dem <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> zu und liest den Feed in die <xref:System.ServiceModel.Syndication.SyndicationFeed>-Instanz.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">Ungültige XML-Daten während des Lesens erkannt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFeed">
+      <MemberSignature Language="C#" Value="protected virtual void SetFeed (System.ServiceModel.Syndication.SyndicationFeed feed);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void SetFeed(class System.ServiceModel.Syndication.SyndicationFeed feed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.SetFeed(System.ServiceModel.Syndication.SyndicationFeed)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feed" Type="System.ServiceModel.Syndication.SyndicationFeed" />
+      </Parameters>
+      <Docs>
+        <param name="feed">Das <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />, das <see cref="T:System.ServiceModel.Syndication.SyndicationFeedFormatter" /> zugewiesen wird.</param>
+        <summary>Ordnet eine <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz dem <see cref="T:System.ServiceModel.Syndication.SyndicationFeedFormatter" /> zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird geschützt und kann nicht von Benutzercode aufgerufen werden. Für die Zuweisung einer <xref:System.ServiceModel.Syndication.SyndicationFeed>-Instanz mit einem <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> entweder eine <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>-Instanz erstellen und dem Konstruktor eine <xref:System.ServiceModel.Syndication.SyndicationFeed>-Instanz übergeben oder eine <xref:System.ServiceModel.Syndication.SyndicationFeed>-Instanz in das <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> laden. Hierzu die Methode <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolgendarstellung der <see cref="T:System.ServiceModel.Syndication.SyndicationFeedFormatter" />-Instanz ab.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Syndication.SyndicationFeedFormatter" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseAttribute">
+      <MemberSignature Language="C#" Value="protected static bool TryParseAttribute (string name, string ns, string value, System.ServiceModel.Syndication.SyndicationCategory category, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig bool TryParseAttribute(string name, string ns, string value, class System.ServiceModel.Syndication.SyndicationCategory category, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.TryParseAttribute(System.String,System.String,System.String,System.ServiceModel.Syndication.SyndicationCategory,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="category" Type="System.ServiceModel.Syndication.SyndicationCategory" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements.</param>
+        <param name="ns">Der Namespace des Elements.</param>
+        <param name="value">Das zu analysierende Attribut.</param>
+        <param name="category">Die zu verwendende <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, eine Attributerweiterung mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz zu analysieren.</summary>
+        <returns>
+          <see langword="true" />Wenn das Attribut erfolgreich analysiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leiten Sie zum Steuern der Analyse von Attributerweiterungen eine eigene Klasse von <xref:System.ServiceModel.Syndication.SyndicationCategory> ab, und überschreiben Sie die <xref:System.ServiceModel.Syndication.SyndicationCategory.TryParseAttribute%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseAttribute">
+      <MemberSignature Language="C#" Value="protected static bool TryParseAttribute (string name, string ns, string value, System.ServiceModel.Syndication.SyndicationFeed feed, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig bool TryParseAttribute(string name, string ns, string value, class System.ServiceModel.Syndication.SyndicationFeed feed, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.TryParseAttribute(System.String,System.String,System.String,System.ServiceModel.Syndication.SyndicationFeed,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="feed" Type="System.ServiceModel.Syndication.SyndicationFeed" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements.</param>
+        <param name="ns">Der Namespace des Elements.</param>
+        <param name="value">Das zu analysierende Attribut.</param>
+        <param name="feed">Die zu verwendende <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, eine Attributerweiterung mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz zu analysieren.</summary>
+        <returns>
+          <see langword="true" />Wenn das Attribut erfolgreich analysiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leiten Sie zum Steuern der Analyse von Attributerweiterungen eine eigene Klasse von <xref:System.ServiceModel.Syndication.SyndicationFeed> ab, und überschreiben Sie die <xref:System.ServiceModel.Syndication.SyndicationFeed.TryParseAttribute%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseAttribute">
+      <MemberSignature Language="C#" Value="protected static bool TryParseAttribute (string name, string ns, string value, System.ServiceModel.Syndication.SyndicationItem item, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig bool TryParseAttribute(string name, string ns, string value, class System.ServiceModel.Syndication.SyndicationItem item, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.TryParseAttribute(System.String,System.String,System.String,System.ServiceModel.Syndication.SyndicationItem,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="item" Type="System.ServiceModel.Syndication.SyndicationItem" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements.</param>
+        <param name="ns">Der Namespace des Elements.</param>
+        <param name="value">Das zu analysierende Attribut.</param>
+        <param name="item">Die zu verwendende <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, eine Attributerweiterung mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz zu analysieren.</summary>
+        <returns>
+          <see langword="true" />Wenn das Attribut erfolgreich analysiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leiten Sie zum Steuern der Analyse von Attributerweiterungen eine eigene Klasse von <xref:System.ServiceModel.Syndication.SyndicationItem> ab, und überschreiben Sie die <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseAttribute%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseAttribute">
+      <MemberSignature Language="C#" Value="protected static bool TryParseAttribute (string name, string ns, string value, System.ServiceModel.Syndication.SyndicationLink link, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig bool TryParseAttribute(string name, string ns, string value, class System.ServiceModel.Syndication.SyndicationLink link, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.TryParseAttribute(System.String,System.String,System.String,System.ServiceModel.Syndication.SyndicationLink,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="link" Type="System.ServiceModel.Syndication.SyndicationLink" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements.</param>
+        <param name="ns">Der Namespace des Elements.</param>
+        <param name="value">Das zu analysierende Attribut.</param>
+        <param name="link">Die zu verwendende <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />-Instanz.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, eine Attributerweiterung mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />-Instanz zu analysieren.</summary>
+        <returns>
+          <see langword="true" />Wenn das Attribut erfolgreich analysiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leiten Sie zum Steuern der Analyse von Attributerweiterungen eine eigene Klasse von <xref:System.ServiceModel.Syndication.SyndicationLink> ab, und überschreiben Sie die <xref:System.ServiceModel.Syndication.SyndicationLink.TryParseAttribute%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseAttribute">
+      <MemberSignature Language="C#" Value="protected static bool TryParseAttribute (string name, string ns, string value, System.ServiceModel.Syndication.SyndicationPerson person, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig bool TryParseAttribute(string name, string ns, string value, class System.ServiceModel.Syndication.SyndicationPerson person, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.TryParseAttribute(System.String,System.String,System.String,System.ServiceModel.Syndication.SyndicationPerson,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="person" Type="System.ServiceModel.Syndication.SyndicationPerson" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements.</param>
+        <param name="ns">Der Namespace des Elements.</param>
+        <param name="value">Das zu analysierende Attribut.</param>
+        <param name="person">Die zu verwendende <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, eine Attributerweiterung mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz zu analysieren.</summary>
+        <returns>
+          <see langword="true" />Wenn das Attribut erfolgreich analysiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leiten Sie zum Steuern der Analyse von Attributerweiterungen eine eigene Klasse von <xref:System.ServiceModel.Syndication.SyndicationPerson> ab, und überschreiben Sie die <xref:System.ServiceModel.Syndication.SyndicationPerson.TryParseAttribute%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseContent">
+      <MemberSignature Language="C#" Value="protected static bool TryParseContent (System.Xml.XmlReader reader, System.ServiceModel.Syndication.SyndicationItem item, string contentType, string version, out System.ServiceModel.Syndication.SyndicationContent content);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig bool TryParseContent(class System.Xml.XmlReader reader, class System.ServiceModel.Syndication.SyndicationItem item, string contentType, string version, [out] class System.ServiceModel.Syndication.SyndicationContent&amp; content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.TryParseContent(System.Xml.XmlReader,System.ServiceModel.Syndication.SyndicationItem,System.String,System.String,System.ServiceModel.Syndication.SyndicationContent@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="item" Type="System.ServiceModel.Syndication.SyndicationItem" />
+        <Parameter Name="contentType" Type="System.String" />
+        <Parameter Name="version" Type="System.String" />
+        <Parameter Name="content" Type="System.ServiceModel.Syndication.SyndicationContent&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="item">Die zu verwendende <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</param>
+        <param name="contentType">Der Inhaltstyp.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <param name="content">Der zu analysierende Inhalt.</param>
+        <summary>Versucht, Syndication-Elementinhalt mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz zu analysieren.</summary>
+        <returns>
+          <see langword="true" />Wenn der Inhalt erfolgreich analysiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Kontrolle der Analyse von Syndication-Inhalten eine eigene Klasse von <xref:System.ServiceModel.Syndication.SyndicationItem> ableiten und die   
+  
+ <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseContent%28System.Xml.XmlReader%2CSystem.String%2CSystem.String%2CSystem.ServiceModel.Syndication.SyndicationContent%40%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseElement">
+      <MemberSignature Language="C#" Value="protected static bool TryParseElement (System.Xml.XmlReader reader, System.ServiceModel.Syndication.SyndicationCategory category, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig bool TryParseElement(class System.Xml.XmlReader reader, class System.ServiceModel.Syndication.SyndicationCategory category, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.TryParseElement(System.Xml.XmlReader,System.ServiceModel.Syndication.SyndicationCategory,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="category" Type="System.ServiceModel.Syndication.SyndicationCategory" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="category">Die zu verwendende <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz eine Elementerweiterung zu analysieren.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element erfolgreich analysiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Elementerweiterungen analysiert werden, leiten Sie eine eigene Klasse von <xref:System.ServiceModel.Syndication.SyndicationCategory> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationCategory.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseElement">
+      <MemberSignature Language="C#" Value="protected static bool TryParseElement (System.Xml.XmlReader reader, System.ServiceModel.Syndication.SyndicationFeed feed, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig bool TryParseElement(class System.Xml.XmlReader reader, class System.ServiceModel.Syndication.SyndicationFeed feed, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.TryParseElement(System.Xml.XmlReader,System.ServiceModel.Syndication.SyndicationFeed,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="feed" Type="System.ServiceModel.Syndication.SyndicationFeed" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="feed">Die zu verwendende <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz eine Elementerweiterung zu analysieren.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element erfolgreich analysiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Elementerweiterungen analysiert werden, leiten Sie eine eigene Klasse von <xref:System.ServiceModel.Syndication.SyndicationFeed> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationFeed.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseElement">
+      <MemberSignature Language="C#" Value="protected static bool TryParseElement (System.Xml.XmlReader reader, System.ServiceModel.Syndication.SyndicationItem item, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig bool TryParseElement(class System.Xml.XmlReader reader, class System.ServiceModel.Syndication.SyndicationItem item, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.TryParseElement(System.Xml.XmlReader,System.ServiceModel.Syndication.SyndicationItem,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="item" Type="System.ServiceModel.Syndication.SyndicationItem" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="item">Die zu verwendende <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz eine Elementerweiterung zu analysieren.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element erfolgreich analysiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Elementerweiterungen analysiert werden, leiten Sie eine eigene Klasse von <xref:System.ServiceModel.Syndication.SyndicationItem> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseElement">
+      <MemberSignature Language="C#" Value="protected static bool TryParseElement (System.Xml.XmlReader reader, System.ServiceModel.Syndication.SyndicationLink link, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig bool TryParseElement(class System.Xml.XmlReader reader, class System.ServiceModel.Syndication.SyndicationLink link, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.TryParseElement(System.Xml.XmlReader,System.ServiceModel.Syndication.SyndicationLink,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="link" Type="System.ServiceModel.Syndication.SyndicationLink" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="link">Die zu verwendende <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />-Instanz eine Elementerweiterung zu analysieren.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element erfolgreich analysiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Elementerweiterungen analysiert werden, leiten Sie eine eigene Klasse von <xref:System.ServiceModel.Syndication.SyndicationLink> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationLink.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseElement">
+      <MemberSignature Language="C#" Value="protected static bool TryParseElement (System.Xml.XmlReader reader, System.ServiceModel.Syndication.SyndicationPerson person, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig bool TryParseElement(class System.Xml.XmlReader reader, class System.ServiceModel.Syndication.SyndicationPerson person, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.TryParseElement(System.Xml.XmlReader,System.ServiceModel.Syndication.SyndicationPerson,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="person" Type="System.ServiceModel.Syndication.SyndicationPerson" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="person">Die zu verwendende <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz eine Elementerweiterung zu analysieren.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element erfolgreich analysiert wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Elementerweiterungen analysiert werden, leiten Sie eine eigene Klasse von <xref:System.ServiceModel.Syndication.SyndicationPerson> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationPerson.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public abstract string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationFeedFormatter.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Syndication-Version des Formatierungsprogramms ab.</summary>
+        <value>Die Syndication-Version des Formatierungsprogramms.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)] unterstützt die Spezifikationen RSS&#160;2.0 und Atom&#160;1.0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAttributeExtensions">
+      <MemberSignature Language="C#" Value="protected static void WriteAttributeExtensions (System.Xml.XmlWriter writer, System.ServiceModel.Syndication.SyndicationCategory category, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void WriteAttributeExtensions(class System.Xml.XmlWriter writer, class System.ServiceModel.Syndication.SyndicationCategory category, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.WriteAttributeExtensions(System.Xml.XmlWriter,System.ServiceModel.Syndication.SyndicationCategory,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="category" Type="System.ServiceModel.Syndication.SyndicationCategory" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den die Erweiterungen geschrieben werden sollen.</param>
+        <param name="category">Die <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz, die die zu schreibenden Attributerweiterungen enthält.</param>
+        <param name="version">Die Syndication-Version, in der die Attributerweiterungen geschrieben werden.</param>
+        <summary>Schreibt die Attributerweiterungen in der <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz in den angegebenen <see cref="T:System.Xml.XmlWriter" /> in der angegebenen Syndication-Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Attributerweiterungen von der <xref:System.ServiceModel.Syndication.SyndicationCategory>-Instanz geschrieben werden, leiten Sie eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationCategory> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationCategory.WriteAttributeExtensions%28System.Xml.XmlWriter%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAttributeExtensions">
+      <MemberSignature Language="C#" Value="protected static void WriteAttributeExtensions (System.Xml.XmlWriter writer, System.ServiceModel.Syndication.SyndicationFeed feed, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void WriteAttributeExtensions(class System.Xml.XmlWriter writer, class System.ServiceModel.Syndication.SyndicationFeed feed, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.WriteAttributeExtensions(System.Xml.XmlWriter,System.ServiceModel.Syndication.SyndicationFeed,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="feed" Type="System.ServiceModel.Syndication.SyndicationFeed" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den die Erweiterungen geschrieben werden sollen.</param>
+        <param name="feed">Die <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz, die die zu schreibenden Attributerweiterungen enthält.</param>
+        <param name="version">Die Syndication-Version, in der die Attributerweiterungen geschrieben werden.</param>
+        <summary>Schreibt die Attributerweiterungen in der <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz in den angegebenen <see cref="T:System.Xml.XmlWriter" /> in der angegebenen Syndication-Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Attributerweiterungen von der <xref:System.ServiceModel.Syndication.SyndicationFeed>-Instanz geschrieben werden, leiten Sie eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationFeed> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationFeed.WriteAttributeExtensions%28System.Xml.XmlWriter%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAttributeExtensions">
+      <MemberSignature Language="C#" Value="protected static void WriteAttributeExtensions (System.Xml.XmlWriter writer, System.ServiceModel.Syndication.SyndicationItem item, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void WriteAttributeExtensions(class System.Xml.XmlWriter writer, class System.ServiceModel.Syndication.SyndicationItem item, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.WriteAttributeExtensions(System.Xml.XmlWriter,System.ServiceModel.Syndication.SyndicationItem,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="item" Type="System.ServiceModel.Syndication.SyndicationItem" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den die Erweiterungen geschrieben werden sollen.</param>
+        <param name="item">Die <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz, die die zu schreibenden Attributerweiterungen enthält.</param>
+        <param name="version">Die Syndication-Version, in der die Attributerweiterungen geschrieben werden.</param>
+        <summary>Schreibt die Attributerweiterungen in der <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz in den angegebenen <see cref="T:System.Xml.XmlWriter" /> in der angegebenen Syndication-Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Attributerweiterungen von der <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz geschrieben werden, leiten Sie eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationItem> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationItem.WriteAttributeExtensions%28System.Xml.XmlWriter%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAttributeExtensions">
+      <MemberSignature Language="C#" Value="protected static void WriteAttributeExtensions (System.Xml.XmlWriter writer, System.ServiceModel.Syndication.SyndicationLink link, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void WriteAttributeExtensions(class System.Xml.XmlWriter writer, class System.ServiceModel.Syndication.SyndicationLink link, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.WriteAttributeExtensions(System.Xml.XmlWriter,System.ServiceModel.Syndication.SyndicationLink,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="link" Type="System.ServiceModel.Syndication.SyndicationLink" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den die Erweiterungen geschrieben werden sollen.</param>
+        <param name="link">Die <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />-Instanz, die die zu schreibenden Attributerweiterungen enthält.</param>
+        <param name="version">Die Syndication-Version, in der die Attributerweiterungen geschrieben werden.</param>
+        <summary>Schreibt die Attributerweiterungen in der <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />-Instanz in den angegebenen <see cref="T:System.Xml.XmlWriter" /> in der angegebenen Syndication-Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Attributerweiterungen von der <xref:System.ServiceModel.Syndication.SyndicationLink>-Instanz geschrieben werden, leiten Sie eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationLink> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationLink.WriteAttributeExtensions%28System.Xml.XmlWriter%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAttributeExtensions">
+      <MemberSignature Language="C#" Value="protected static void WriteAttributeExtensions (System.Xml.XmlWriter writer, System.ServiceModel.Syndication.SyndicationPerson person, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void WriteAttributeExtensions(class System.Xml.XmlWriter writer, class System.ServiceModel.Syndication.SyndicationPerson person, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.WriteAttributeExtensions(System.Xml.XmlWriter,System.ServiceModel.Syndication.SyndicationPerson,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="person" Type="System.ServiceModel.Syndication.SyndicationPerson" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den die Erweiterungen geschrieben werden sollen.</param>
+        <param name="person">Die <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz, die die zu schreibenden Attributerweiterungen enthält.</param>
+        <param name="version">Die Syndication-Version, in der die Attributerweiterungen geschrieben werden.</param>
+        <summary>Schreibt die Attributerweiterungen in der <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz in den angegebenen <see cref="T:System.Xml.XmlWriter" /> in der angegebenen Syndication-Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Attributerweiterungen von der <xref:System.ServiceModel.Syndication.SyndicationPerson>-Instanz geschrieben werden, leiten Sie eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationPerson> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationCategory.WriteAttributeExtensions%28System.Xml.XmlWriter%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteElementExtensions">
+      <MemberSignature Language="C#" Value="protected static void WriteElementExtensions (System.Xml.XmlWriter writer, System.ServiceModel.Syndication.SyndicationCategory category, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void WriteElementExtensions(class System.Xml.XmlWriter writer, class System.ServiceModel.Syndication.SyndicationCategory category, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.WriteElementExtensions(System.Xml.XmlWriter,System.ServiceModel.Syndication.SyndicationCategory,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="category" Type="System.ServiceModel.Syndication.SyndicationCategory" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den die Erweiterungen geschrieben werden sollen.</param>
+        <param name="category">Die <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz, die die zu schreibenden Elementerweiterungen enthält.</param>
+        <param name="version">Die Syndication-Version, in der die Erweiterungen geschrieben werden.</param>
+        <summary>Schreibt die Elementerweiterungen in der <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz in den angegebenen <see cref="T:System.Xml.XmlWriter" /> in der angegebenen Syndication-Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Elementerweiterungen von der <xref:System.ServiceModel.Syndication.SyndicationCategory>-Instanz geschrieben werden, leiten Sie eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationCategory> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationCategory.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteElementExtensions">
+      <MemberSignature Language="C#" Value="protected static void WriteElementExtensions (System.Xml.XmlWriter writer, System.ServiceModel.Syndication.SyndicationFeed feed, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void WriteElementExtensions(class System.Xml.XmlWriter writer, class System.ServiceModel.Syndication.SyndicationFeed feed, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.WriteElementExtensions(System.Xml.XmlWriter,System.ServiceModel.Syndication.SyndicationFeed,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="feed" Type="System.ServiceModel.Syndication.SyndicationFeed" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den die Erweiterungen geschrieben werden sollen.</param>
+        <param name="feed">Die <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz, die die zu schreibenden Elementerweiterungen enthält.</param>
+        <param name="version">Die Syndication-Version, in der die Erweiterungen geschrieben werden.</param>
+        <summary>Schreibt die Elementerweiterungen in der <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz in den angegebenen <see cref="T:System.Xml.XmlWriter" /> in der angegebenen Syndication-Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Elementerweiterungen von der <xref:System.ServiceModel.Syndication.SyndicationFeed>-Instanz geschrieben werden, leiten Sie eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationFeed> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationFeed.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteElementExtensions">
+      <MemberSignature Language="C#" Value="protected static void WriteElementExtensions (System.Xml.XmlWriter writer, System.ServiceModel.Syndication.SyndicationItem item, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void WriteElementExtensions(class System.Xml.XmlWriter writer, class System.ServiceModel.Syndication.SyndicationItem item, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.WriteElementExtensions(System.Xml.XmlWriter,System.ServiceModel.Syndication.SyndicationItem,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="item" Type="System.ServiceModel.Syndication.SyndicationItem" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den die Erweiterungen geschrieben werden sollen.</param>
+        <param name="item">Die <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz, die die zu schreibenden Elementerweiterungen enthält.</param>
+        <param name="version">Die Syndication-Version, in der die Erweiterungen geschrieben werden.</param>
+        <summary>Schreibt die Elementerweiterungen in der <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz in den angegebenen <see cref="T:System.Xml.XmlWriter" /> in der angegebenen Syndication-Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Elementerweiterungen von der <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz geschrieben werden, leiten Sie eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationItem> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteElementExtensions">
+      <MemberSignature Language="C#" Value="protected static void WriteElementExtensions (System.Xml.XmlWriter writer, System.ServiceModel.Syndication.SyndicationLink link, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void WriteElementExtensions(class System.Xml.XmlWriter writer, class System.ServiceModel.Syndication.SyndicationLink link, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.WriteElementExtensions(System.Xml.XmlWriter,System.ServiceModel.Syndication.SyndicationLink,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="link" Type="System.ServiceModel.Syndication.SyndicationLink" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den die Erweiterungen geschrieben werden sollen.</param>
+        <param name="link">Die <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />-Instanz, die die zu schreibenden Elementerweiterungen enthält.</param>
+        <param name="version">Die Syndication-Version, in der die Erweiterungen geschrieben werden.</param>
+        <summary>Schreibt die Elementerweiterungen in der <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />-Instanz in den angegebenen <see cref="T:System.Xml.XmlWriter" /> in der angegebenen Syndication-Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Elementerweiterungen von der <xref:System.ServiceModel.Syndication.SyndicationLink>-Instanz geschrieben werden, leiten Sie eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationLink> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationLink.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteElementExtensions">
+      <MemberSignature Language="C#" Value="protected static void WriteElementExtensions (System.Xml.XmlWriter writer, System.ServiceModel.Syndication.SyndicationPerson person, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void WriteElementExtensions(class System.Xml.XmlWriter writer, class System.ServiceModel.Syndication.SyndicationPerson person, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.WriteElementExtensions(System.Xml.XmlWriter,System.ServiceModel.Syndication.SyndicationPerson,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="person" Type="System.ServiceModel.Syndication.SyndicationPerson" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den die Erweiterungen geschrieben werden sollen.</param>
+        <param name="person">Die <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz, die die zu schreibenden Elementerweiterungen enthält.</param>
+        <param name="version">Die Syndication-Version, in der die Erweiterungen geschrieben werden.</param>
+        <summary>Schreibt die Elementerweiterungen in der <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Instanz in den angegebenen <see cref="T:System.Xml.XmlWriter" /> in der angegebenen Syndication-Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Elementerweiterungen von der <xref:System.ServiceModel.Syndication.SyndicationPerson>-Instanz geschrieben werden, leiten Sie eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationPerson> ab und überschreiben die <xref:System.ServiceModel.Syndication.SyndicationPerson.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public abstract void WriteTo (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteTo(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationFeedFormatter.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den der <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" /> geschrieben werden soll.</param>
+        <summary>Schreibt den <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" /> in die angegebene <see cref="T:System.Xml.XmlWriter" />-Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

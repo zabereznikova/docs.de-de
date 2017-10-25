@@ -1,0 +1,101 @@
+<Type Name="ICommandSource" FullName="System.Windows.Input.ICommandSource">
+  <TypeSignature Language="C#" Value="public interface ICommandSource" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICommandSource" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ICommandSource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert ein Objekt, das über die Fähigkeit zum Aufrufen eines Befehls verfügt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Befehlsquelle definiert, wie ein Befehl vom jeweiligen Objekt aufgerufen wird.  Z. B. wenn ein <xref:System.Windows.Controls.Button> bezieht sich auf einen Befehl, der Befehl aufgerufen wird, wenn die <xref:System.Windows.Controls.Button> geklickt wird.  
+  
+ Eine Befehlsquelle wird normalerweise selbst deaktiviert, wenn der Befehl, dem sie zugeordnet sind für das aktuelle Befehlsziel ausgeführt werden kann.  Z. B. eine <xref:System.Windows.Controls.MenuItem> zugeordneten der <xref:System.Windows.Input.ApplicationCommands.Paste%2A> Befehl grau selbst, wenn die <xref:System.Windows.Input.ApplicationCommands.Paste%2A> Befehl kann nicht für das aktuelle Befehlsziel ausgeführt werden.  
+  
+ In der Regel wird eine Befehlsquelle überwacht die <xref:System.Windows.Input.ICommand.CanExecuteChanged> -Ereignis für den Befehl.  Damit wird die Befehlsquelle mitgeteilt, wenn Bedingungen für das Befehlsziel, z. B. Verlust des Tastaturfokus ändern.  Die Befehlsquelle klicken Sie dann die Abfrage kann der Befehl mit der <xref:System.Windows.Input.ICommand.CanExecute%2A> Methode.  
+  
+ Einige der Klassen in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] implementiert, <xref:System.Windows.Input.ICommandSource> sind: <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, und <xref:System.Windows.Documents.Hyperlink>.  
+  
+ In der [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] Befehlssystem, die <xref:System.Windows.Input.InputBinding.CommandTarget%2A> Eigenschaft auf einen <xref:System.Windows.Input.ICommandSource> ist nur anwendbar, wenn die <xref:System.Windows.Input.ICommand> ist eine <xref:System.Windows.Input.RoutedCommand>.  Wenn die <xref:System.Windows.Input.InputBinding.CommandTarget%2A> festgelegt ist, auf eine <xref:System.Windows.Input.ICommandSource> und der entsprechende Befehl ist keine <xref:System.Windows.Input.RoutedCommand>, das Befehlsziel wird ignoriert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ICommand Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ICommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ICommandSource.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Befehl ab, der ausgeführt wird, wenn die Befehlsquelle aufgerufen wird.</summary>
+        <value>Der Befehl, der ausgeführt wird, wenn die Befehlsquelle aufgerufen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandParameter">
+      <MemberSignature Language="C#" Value="public object CommandParameter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ICommandSource.CommandParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen benutzerdefinierten Datenwert dar, der bei der Ausführung an den Befehl übergeben werden kann.</summary>
+        <value>Die befehlsspezifischen Daten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird die <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> wird verwendet, um bestimmte Informationen an den Befehl übergeben werden, bei der Ausführung.  Der Typ der Daten wird vom Befehl definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTarget">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement CommandTarget { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement CommandTarget" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ICommandSource.CommandTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Objekt, auf das der Befehl angewendet wird.</summary>
+        <value>Das Objekt, auf das der Befehl angewendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] Befehlssystem, die <xref:System.Windows.Input.InputBinding.CommandTarget%2A> Eigenschaft auf einen <xref:System.Windows.Input.ICommandSource> ist nur anwendbar, wenn die <xref:System.Windows.Input.ICommand> ist eine <xref:System.Windows.Input.RoutedCommand>.  Wenn die <xref:System.Windows.Input.InputBinding.CommandTarget%2A> festgelegt ist, auf eine <xref:System.Windows.Input.ICommandSource> und der entsprechende Befehl ist keine <xref:System.Windows.Input.RoutedCommand>, das Befehlsziel wird ignoriert.  
+  
+ Bei Verwendung mit einem <xref:System.Windows.Input.RoutedCommand>, das Befehlsziel ist das Objekt auf dem die <xref:System.Windows.Input.CommandManager.Executed> und <xref:System.Windows.Input.CommandManager.CanExecute> Ereignisse ausgelöst werden. Wenn die <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> Eigenschaft nicht festgelegt ist, wird das Element mit dem Tastaturfokus als Ziel verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

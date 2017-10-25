@@ -1,0 +1,273 @@
+<Type Name="DrawTreeNodeEventArgs" FullName="System.Windows.Forms.DrawTreeNodeEventArgs">
+  <TypeSignature Language="C#" Value="public class DrawTreeNodeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DrawTreeNodeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DrawTreeNodeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.TreeView.DrawNode" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.TreeView.DrawNode> Ereignis zum Anpassen der Darstellung von Knoten in einem <xref:System.Windows.Forms.TreeView> -Steuerelement mit dem Ownerdrawing.  
+  
+ Die <xref:System.Windows.Forms.TreeView.DrawNode> Ereignis wird durch eine <xref:System.Windows.Forms.TreeView> steuern, wann die seiner <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType> -Eigenschaftensatz auf <xref:System.Windows.Forms.TreeViewDrawMode?displayProperty=nameWithType> oder <xref:System.Windows.Forms.TreeViewDrawMode?displayProperty=nameWithType> und ein Knoten angezeigt oder aktualisiert wird. Die <xref:System.Windows.Forms.DrawTreeNodeEventArgs> übergeben an das Ereignis-Handler enthält Informationen zum Knoten gezeichnet werden soll, sowie Methoden bereitgestellt, um Sie beim Zeichnen des Knotens unterstützen.  
+  
+ Verwenden der <xref:System.Windows.Forms.DrawTreeNodeEventArgs.State%2A> oder <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Node%2A> Eigenschaften zum Abrufen von Informationen über den Knoten gezeichnet werden soll. Verwenden der <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Graphics%2A> Eigenschaft, um die eigentliche Zeichenvorgang innerhalb des Bereichs, die gemäß der <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Bounds%2A> Eigenschaft. Damit das Betriebssystem ein Knotens zu zeichnen, die nicht Besitzer gezeichnet werden muss, legen die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> Eigenschaft `true`.  
+  
+ Bei der <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType> -Eigenschaftensatz auf <xref:System.Windows.Forms.TreeViewDrawMode?displayProperty=nameWithType>, Bereich angegeben wird, durch die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Bounds%2A> Eigenschaft enthält die Bezeichnung nur der Knoten Teil. Wenn die <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType> -Eigenschaftensatz auf <xref:System.Windows.Forms.TreeViewDrawMode?displayProperty=nameWithType>, die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Bounds%2A> Bereich enthält den gesamten Knoten, einschließlich des in der Regel verwendeten für Symbole, Kontrollkästchen, Plus- und Minuszeichen, Bereichs und Linien zwischen den Knoten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anpassen einer <xref:System.Windows.Forms.TreeView> -Steuerelement mit dem Ownerdrawing. Die <xref:System.Windows.Forms.TreeView> -Steuerelement im Beispiel zeigt die optionalen Knotentags zusammen mit dem Knoten "standard"-Bezeichnungen. Mit Knotentags angegeben. die <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> Eigenschaft. Die <xref:System.Windows.Forms.TreeView> Steuerelement auch benutzerdefinierte Farben, einschließlich einer benutzerdefinierten Hervorhebungsfarbe verwendet.  
+  
+ Sie können anpassen, dass die meisten der <xref:System.Windows.Forms.TreeView> Farben durch Einstellung color-Eigenschaften, aber die Hervorhebungsfarbe für die Auswahl ist nicht als Eigenschaft verfügbar. Darüber hinaus erweitert die standardmäßige Auswahl hervorgehobene Rechteck nur um eine Bezeichnung ein. Ownerdrawing muss, zeichnen Sie die Knotentags und zum Zeichnen von einer benutzerdefinierten hervorgehobene Rechteck, die groß genug ist, mit einem Knotentag verwendet werden.  
+  
+ Im Beispiel einen Handler für das <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> Ereignis zeichnet die Knotentags und die benutzerdefinierte Auswahl manuell markieren. Nicht markierte Knoten ist die Anpassung nicht erforderlich. Für diese die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> -Eigenschaftensatz auf `true` , damit sie vom Betriebssystem gezeichnet werden.  
+  
+ Darüber hinaus einen Handler für das <xref:System.Windows.Forms.Control.MouseDown?displayProperty=nameWithType> Ereignis bietet Treffertests. Standardmäßig kann ein Knoten nur durch Klicken auf die Region aus, um seine Bezeichnung ausgewählt werden. Die <xref:System.Windows.Forms.Control.MouseDown?displayProperty=nameWithType> Ereignishandler wählt einen Knoten, der an einer beliebigen Stelle in dieser Region oder in den Bereich um ein Knotentag geklickt wird, falls vorhanden.  
+  
+ [!code-cpp[TreeViewOwnerDraw#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#1)]
+ [!code-csharp[TreeViewOwnerDraw#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#1)]
+ [!code-vb[TreeViewOwnerDraw#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DrawTreeNodeEventArgs (System.Drawing.Graphics graphics, System.Windows.Forms.TreeNode node, System.Drawing.Rectangle bounds, System.Windows.Forms.TreeNodeStates state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics graphics, class System.Windows.Forms.TreeNode node, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.TreeNodeStates state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawTreeNodeEventArgs.#ctor(System.Drawing.Graphics,System.Windows.Forms.TreeNode,System.Drawing.Rectangle,System.Windows.Forms.TreeNodeStates)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.TreeNodeStates" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> Oberfläche, auf dem gezeichnet werden soll.</param>
+        <param name="node">Das zu zeichnende <see cref="T:System.Windows.Forms.TreeNode" />.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> innerhalb der gezeichnet werden soll.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TreeNodeStates" /> , der angibt, des aktuellen Status der Werte der <see cref="T:System.Windows.Forms.TreeNode" /> gezeichnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DrawTreeNodeEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawTreeNodeEventArgs.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe und Position von der <see cref="T:System.Windows.Forms.TreeNode" /> gezeichnet werden soll.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen des darstellt die <see cref="T:System.Windows.Forms.TreeNode" /> gezeichnet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Von dieser Eigenschaft angegebene Speicherort ist relativ zur linken oberen Ecke von der <xref:System.Windows.Forms.TreeView> Steuerelement.  
+  
+ Wenn die <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType> -Eigenschaftensatz auf <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawText>, der vom angegebenen Bereich der <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Bounds%2A> Eigenschaft ist für die Region, in dem ein Knoten geklickt werden kann, um ihn auszuwählen. Wenn Sie außerhalb dieses Bereichs Treffertest gezeichnet werden soll, sollten Sie Ihren eigenen Code bereitstellen, für einen Knoten auswählen, wenn der sichtbare Bereich geklickt wird. Möchten Sie möglicherweise auch eine eigene Treffertest beim Codieren der <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType> -Eigenschaftensatz auf <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll>. In diesem Modus kann die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Bounds%2A> Eigenschaft umfasst den gesamten Knoten über die gesamte Breite des der <xref:System.Windows.Forms.TreeView> zu steuern, anstatt nur treffertestbereich.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anpassen einer <xref:System.Windows.Forms.TreeView> -Steuerelement mit dem Ownerdrawing. Die <xref:System.Windows.Forms.TreeView> -Steuerelement im Beispiel zeigt die optionalen Knotentags zusammen mit dem Knoten "standard"-Bezeichnungen. Mit Knotentags angegeben. die <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> Eigenschaft. Die <xref:System.Windows.Forms.TreeView> Steuerelement auch benutzerdefinierte Farben, einschließlich einer benutzerdefinierten Hervorhebungsfarbe verwendet.  
+  
+ Sie können anpassen, dass die meisten der <xref:System.Windows.Forms.TreeView> Farben durch Einstellung color-Eigenschaften, aber die Hervorhebungsfarbe für die Auswahl ist nicht als Eigenschaft verfügbar. Darüber hinaus erweitert die standardmäßige Auswahl hervorgehobene Rechteck nur um eine Bezeichnung ein. Ownerdrawing muss, zeichnen Sie die Knotentags und zum Zeichnen von einer benutzerdefinierten hervorgehobene Rechteck, die groß genug ist, mit einem Knotentag verwendet werden.  
+  
+ Im Beispiel einen Handler für das <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> Ereignis zeichnet die Knotentags und die benutzerdefinierte Auswahl manuell markieren. Nicht markierte Knoten ist die Anpassung nicht erforderlich. Für diese die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> -Eigenschaftensatz auf `true` , damit sie vom Betriebssystem gezeichnet werden.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.DrawTreeNodeEventArgs> Verweis Übersichtsthema.  
+  
+ [!code-cpp[TreeViewOwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#3)]
+ [!code-csharp[TreeViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#3)]
+ [!code-vb[TreeViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawDefault">
+      <MemberSignature Language="C#" Value="public bool DrawDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DrawDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.TreeNode" /> vom Betriebssystem gezeichnet werden soll, anstatt Besitzer gezeichnet wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Knoten vom Betriebssystem gezeichnet werden soll; <see langword="false" /> , wenn der Knoten im Ereignishandler gezeichnet wird. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf `true` für Knoten, die Sie nicht anpassen, wenn Sie behandeln möchten die <xref:System.Windows.Forms.TreeView.DrawNode> Ereignis. Dies ist beispielsweise nützlich, wenn Sie nur Knoten, die sich in einem bestimmten Zustand befinden, anpassen möchten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft. Im Beispiel einen Handler für das <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> Ereignis zeichnet das Knotentag, und markieren Sie eine benutzerdefinierte Farbe für den ausgewählten Knoten manuell. Nicht ausgewählte Knoten ist die Anpassung nicht erforderlich. Für nicht ausgewählte Knoten der <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> -Eigenschaftensatz auf `true` , damit sie vom Betriebssystem gezeichnet werden und keine benutzerdefinierte Darstellung.  
+  
+> [!NOTE]
+>  Wenn Sie einen Knoten zeichnen manuell und auch die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> Eigenschaft `true`, einiger oder aller, was Sie zeichnen vom Betriebssystem überschrieben werden.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.DrawTreeNodeEventArgs> Verweis Übersichtsthema.  
+  
+ [!code-cpp[TreeViewOwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#3)]
+ [!code-csharp[TreeViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#3)]
+ [!code-vb[TreeViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawTreeNodeEventArgs.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Drawing.Graphics" /> Objekt, mit dem Zeichnen der <see cref="T:System.Windows.Forms.TreeNode" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Graphics" /> zum Zeichnen der <see cref="T:System.Windows.Forms.TreeNode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Graphics> Klasse stellt Eigenschaften und Methoden für das Zeichnen auf dem Anzeigegerät bereit.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anpassen einer <xref:System.Windows.Forms.TreeView> -Steuerelement mit dem Ownerdrawing. Die <xref:System.Windows.Forms.TreeView> -Steuerelement im Beispiel zeigt die optionalen Knotentags zusammen mit dem Knoten "standard"-Bezeichnungen. Mit Knotentags angegeben. die <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> Eigenschaft. Die <xref:System.Windows.Forms.TreeView> Steuerelement auch benutzerdefinierte Farben, einschließlich einer benutzerdefinierten Hervorhebungsfarbe verwendet.  
+  
+ Sie können anpassen, dass die meisten der <xref:System.Windows.Forms.TreeView> Farben durch Einstellung color-Eigenschaften, aber die Hervorhebungsfarbe für die Auswahl ist nicht als Eigenschaft verfügbar. Darüber hinaus erweitert die standardmäßige Auswahl hervorgehobene Rechteck nur um eine Bezeichnung ein. Ownerdrawing muss, zeichnen Sie die Knotentags und zum Zeichnen von einer benutzerdefinierten hervorgehobene Rechteck, die groß genug ist, mit einem Knotentag verwendet werden.  
+  
+ Im Beispiel einen Handler für das <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> Ereignis zeichnet die Knotentags und die benutzerdefinierte Auswahl manuell markieren. Nicht markierte Knoten ist die Anpassung nicht erforderlich. Für diese die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> -Eigenschaftensatz auf `true` , damit sie vom Betriebssystem gezeichnet werden.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.DrawTreeNodeEventArgs> Verweis Übersichtsthema.  
+  
+ [!code-cpp[TreeViewOwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#3)]
+ [!code-csharp[TreeViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#3)]
+ [!code-vb[TreeViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode Node" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawTreeNodeEventArgs.Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.TreeNode" /> gezeichnet werden soll.</summary>
+        <value>Das zu zeichnende <see cref="T:System.Windows.Forms.TreeNode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft den Zugriff auf die <xref:System.Windows.Forms.TreeNode> Objekt gezeichnet werden soll. Dies ist hilfreich, wenn die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.State%2A> Eigenschaft bietet keine ausreichende Informationen gemäß Ihren Anforderungen anpassen. Die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.State%2A> Eigenschaft ermöglicht nur grundlegende Zustandsinformationen, die Sie z. B. verwenden können, um festzustellen, ob ein Knoten ausgewählt, überprüft oder mit Fokus ist. Die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Node%2A> Eigenschaft andererseits, ermöglicht den Zugriff auf alle Member der <xref:System.Windows.Forms.TreeNode> Objekt. Sie müssen den Knoten direkt, z. B. zugreifen, wenn der Erweiterungszustand bestimmt werden soll.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anpassen einer <xref:System.Windows.Forms.TreeView> -Steuerelement mit dem Ownerdrawing. Die <xref:System.Windows.Forms.TreeView> -Steuerelement im Beispiel zeigt die optionalen Knotentags zusammen mit dem Knoten "standard"-Bezeichnungen. Mit Knotentags angegeben. die <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> Eigenschaft. Die <xref:System.Windows.Forms.TreeView> Steuerelement auch benutzerdefinierte Farben, einschließlich einer benutzerdefinierten Hervorhebungsfarbe verwendet.  
+  
+ Sie können anpassen, dass die meisten der <xref:System.Windows.Forms.TreeView> Farben durch Einstellung color-Eigenschaften, aber die Hervorhebungsfarbe für die Auswahl ist nicht als Eigenschaft verfügbar. Darüber hinaus erweitert die standardmäßige Auswahl hervorgehobene Rechteck nur um eine Bezeichnung ein. Ownerdrawing muss, zeichnen Sie die Knotentags und zum Zeichnen von einer benutzerdefinierten hervorgehobene Rechteck, die groß genug ist, mit einem Knotentag verwendet werden.  
+  
+ Im Beispiel einen Handler für das <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> Ereignis zeichnet die Knotentags und die benutzerdefinierte Auswahl manuell markieren. Nicht markierte Knoten ist die Anpassung nicht erforderlich. Für diese die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> -Eigenschaftensatz auf `true` , damit sie vom Betriebssystem gezeichnet werden.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.DrawTreeNodeEventArgs> Verweis Übersichtsthema.  
+  
+ [!code-cpp[TreeViewOwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#3)]
+ [!code-csharp[TreeViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#3)]
+ [!code-vb[TreeViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNodeStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.TreeNodeStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawTreeNodeEventArgs.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Status des der <see cref="T:System.Windows.Forms.TreeNode" /> gezeichnet werden soll.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TreeNodeStates" /> , der angibt, des aktuellen Status der Werte der <see cref="T:System.Windows.Forms.TreeNode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um zu überprüfen, ob die <xref:System.Windows.Forms.TreeNode> zu zeichnenden Objekt wird in einem bestimmten Status. Diese Eigenschaft ermöglicht nur grundlegende Zustandsinformationen über den Knoten. Diese Eigenschaft können bestimmen, ob ein Knoten ausgewählt, überprüft oder mit Fokus ist. Wenn Sie weitere Informationen benötigen, rufen Sie den Knoten über die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Node%2A> Eigenschaft. Z. B. um zu bestimmen, ob der Knoten erweitert ist, müssen Sie den Knoten abrufen und überprüfen Sie die <xref:System.Windows.Forms.TreeNode.IsExpanded%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anpassen einer <xref:System.Windows.Forms.TreeView> -Steuerelement mit dem Ownerdrawing. Die <xref:System.Windows.Forms.TreeView> -Steuerelement im Beispiel zeigt die optionalen Knotentags zusammen mit dem Knoten "standard"-Bezeichnungen. Mit Knotentags angegeben. die <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> Eigenschaft. Die <xref:System.Windows.Forms.TreeView> Steuerelement auch benutzerdefinierte Farben, einschließlich einer benutzerdefinierten Hervorhebungsfarbe verwendet.  
+  
+ Sie können anpassen, dass die meisten der <xref:System.Windows.Forms.TreeView> Farben durch Einstellung color-Eigenschaften, aber die Hervorhebungsfarbe für die Auswahl ist nicht als Eigenschaft verfügbar. Darüber hinaus erweitert die standardmäßige Auswahl hervorgehobene Rechteck nur um eine Bezeichnung ein. Ownerdrawing muss, zeichnen Sie die Knotentags und zum Zeichnen von einer benutzerdefinierten hervorgehobene Rechteck, die groß genug ist, mit einem Knotentag verwendet werden.  
+  
+ Im Beispiel einen Handler für das <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> Ereignis zeichnet die Knotentags und die benutzerdefinierte Auswahl manuell markieren. Nicht markierte Knoten ist die Anpassung nicht erforderlich. Für diese die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> -Eigenschaftensatz auf `true` , damit sie vom Betriebssystem gezeichnet werden.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.DrawTreeNodeEventArgs> Verweis Übersichtsthema.  
+  
+ [!code-cpp[TreeViewOwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#3)]
+ [!code-csharp[TreeViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#3)]
+ [!code-vb[TreeViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

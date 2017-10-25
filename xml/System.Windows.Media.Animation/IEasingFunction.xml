@@ -1,0 +1,52 @@
+<Type Name="IEasingFunction" FullName="System.Windows.Media.Animation.IEasingFunction">
+  <TypeSignature Language="C#" Value="public interface IEasingFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEasingFunction" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.IEasingFunction" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die grundlegende Funktionalität eines eine Beschleunigungsfunktion.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ermöglicht es Ihnen, eigene Beschleunigungsfunktionen erstellen, indem Sie normalisierte Zeit (ein Wert zwischen 0 und 1) und den gewünschten Wert zurückgeben.  
+  
+ Diese Schnittstelle stellt eine Transformation der normalisierte Zeit (Fortschritt) dar. Animationen verwenden Sie diese, um ihren Status zu transformieren. Klassen, die diese Schnittstelle implementieren, können die Geschwindigkeit steuern, an der eine Animation ausgeführt wird.  
+  
+ Ableiten von der <xref:System.Windows.Media.Animation.EasingFunctionBase> Klasse, um eine eigene benutzerdefinierte Beschleunigungsfunktionen implementieren Funktionen.  
+  
+> [!NOTE]
+>  Die WPF-Implementierung von Beschleunigungsfunktionen ist kompatibel mit der Silverlight-Implementierung. Wenn Sie XAML verfügen, Beschleunigungsfunktionen in einer Technologie verwendet, kann es ohne Änderung in der anderen verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ease">
+      <MemberSignature Language="C#" Value="public double Ease (double normalizedTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 Ease(float64 normalizedTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.IEasingFunction.Ease(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="normalizedTime" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="normalizedTime">Die normalisierte Zeit (Fortschritt) der Animation.</param>
+        <summary>Transformiert normalisierte Zeit, um die Geschwindigkeit einer Animation zu steuern.</summary>
+        <returns>Den transformierten Fortschritt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,8 @@
+<Namespace Name="System.ServiceModel.Activation.Configuration">
+  <Docs>
+    <summary>Stellt die Konfigurationseinstellungen für das Tool SMSvcHost.exe dar.  
+  
+ Dieser Namespace stellt die Konfigurationselemente, die in der Datei SMSvcHost.exe.config konfiguriert werden können. Sie enthält insbesondere alle computerweiten Einstellungen, die konfiguriert werden müssen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

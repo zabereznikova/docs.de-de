@@ -1,0 +1,137 @@
+<Type Name="LocationReferenceEnvironment" FullName="System.Activities.LocationReferenceEnvironment">
+  <TypeSignature Language="C#" Value="public abstract class LocationReferenceEnvironment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LocationReferenceEnvironment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.LocationReferenceEnvironment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Darstellung der Umgebung von Variablen und Argumenten, die einer Aktivität zur Laufzeit zur Verfügung steht.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LocationReferenceEnvironment ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.LocationReferenceEnvironment.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Wird von abgeleiteten Klassenkonstruktoren aufgerufen, um das Objekt zu initialisieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocationReferences">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.Activities.LocationReference&gt; GetLocationReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Activities.LocationReference&gt; GetLocationReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.LocationReferenceEnvironment.GetLocationReferences" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Activities.LocationReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt bei Überschreibung in einer abgeleiteten Klasse eine Auflistung von <see cref="T:System.Activities.LocationReference" />-Objekten im aktuellen Bereich zurück.</summary>
+        <returns>Eine Auflistung der Speicherortverweisobjekte im aktuellen Bereich.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public abstract bool IsVisible (System.Activities.LocationReference locationReference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsVisible(class System.Activities.LocationReference locationReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.LocationReferenceEnvironment.IsVisible(System.Activities.LocationReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="locationReference" Type="System.Activities.LocationReference" />
+      </Parameters>
+      <Docs>
+        <param name="locationReference">Der auszuwertende Speicherortverweis.</param>
+        <summary>Bestimmt bei Überschreibung in einer abgeleiteten Klasse, ob das angegebene <see cref="T:System.Activities.LocationReference" />-Objekt im aktuellen Bereich sichtbar ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Activities.LocationReference" /> ist im aktuellen Bereich sichtbar ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Activities.LocationReferenceEnvironment Parent { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.LocationReferenceEnvironment Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.LocationReferenceEnvironment.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.LocationReferenceEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die enthaltende <see cref="T:System.Activities.LocationReferenceEnvironment" />-Umgebung ab bzw. legt sie fest.</summary>
+        <value>Die enthaltende <see cref="T:System.Activities.LocationReferenceEnvironment" />-Umgebung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Root">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Activity Root { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Root" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.LocationReferenceEnvironment.Root" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aktivität ab, die die Bereichsregeln für diese Umgebung bestimmt.</summary>
+        <value>Die Aktivität zur Bestimmung der Bereichsregeln für diese Umgebung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetLocationReference">
+      <MemberSignature Language="C#" Value="public abstract bool TryGetLocationReference (string name, out System.Activities.LocationReference result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetLocationReference(string name, [out] class System.Activities.LocationReference&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.LocationReferenceEnvironment.TryGetLocationReference(System.String,System.Activities.LocationReference@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="result" Type="System.Activities.LocationReference&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der abzurufenden <see cref="T:System.Activities.LocationReference" />.</param>
+        <param name="result">Diese Methode gibt <see langword="true" />, <c>Ergebnis</c> enthält die <see cref="T:System.Activities.LocationReference" /> mit dem angegebenen Namen ist, andernfalls <see langword="null" />. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht bei Überschreibung in einer abgeleiteten Klasse, das angegebene <see cref="T:System.Activities.LocationReference" />-Objekt abzurufen.</summary>
+        <returns>
+          <see langword="true" />Wenn eine <see cref="T:System.Activities.LocationReference" /> mit dem angegebenen Namen ist vorhanden, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

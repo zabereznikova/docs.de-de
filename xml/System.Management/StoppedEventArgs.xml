@@ -1,0 +1,49 @@
+<Type Name="StoppedEventArgs" FullName="System.Management.StoppedEventArgs">
+  <TypeSignature Language="C#" Value="public class StoppedEventArgs : System.Management.ManagementEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StoppedEventArgs extends System.Management.ManagementEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Management.StoppedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.ManagementEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Ereignisdaten für die <see cref="E:System.Management.ManagementEventWatcher.Stopped" /> Ereignis.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementStatus Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.ManagementStatus Status" />
+      <MemberSignature Language="DocId" Value="P:System.Management.StoppedEventArgs.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abschlussstatus des Vorgangs ab.</summary>
+        <value>Gibt eine <see cref="T:System.Management.ManagementStatus" /> mit dem Status des Vorgangs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Ein <xref:System.Management.ManagementStatus> Wert, der den Status des Vorgangs darstellt.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

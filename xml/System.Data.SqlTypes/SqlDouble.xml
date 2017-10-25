@@ -1,0 +1,2138 @@
+<Type Name="SqlDouble" FullName="System.Data.SqlTypes.SqlDouble">
+  <TypeSignature Language="C#" Value="public struct SqlDouble : IComparable, System.Data.SqlTypes.INullable, System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit SqlDouble extends System.ValueType implements class System.Data.SqlTypes.INullable, class System.IComparable, class System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlTypes.SqlDouble" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.SqlTypes.INullable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Xml.Serialization.IXmlSerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlSchemaProvider("GetXsdType")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Gleitkommazahl Zahl innerhalb des Bereichs von - 1,79E + 308 bis 1,79E + 308 gespeichert oder aus einer Datenbank abgerufen werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlDouble (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.#ctor(System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Double-Wert, dessen Wert für die neue verwendet <see cref="T:System.Data.SqlTypes.SqlDouble" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.SqlTypes.SqlDouble" /> -Struktur unter Verwendung der angegebenen double-Parameter der neue festzulegende <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur <see cref="P:System.Data.SqlTypes.SqlDouble.Value" /> Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlDouble Add (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlDouble Add(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.Add(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Der Additionsoperator berechnet die Summe der beiden <see cref="T:System.Data.SqlTypes.SqlDouble" /> Operanden.</summary>
+        <returns>Die Summe der beiden <see cref="T:System.Data.SqlTypes.SqlDouble" /> Operanden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (System.Data.SqlTypes.SqlDouble value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 CompareTo(valuetype System.Data.SqlTypes.SqlDouble value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.CompareTo(System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu vergleichende <see cref="T:System.Data.SqlTypes.SqlDouble" />.</param>
+        <summary>Vergleicht dieses <see cref="T:System.Data.SqlTypes.SqlDouble" /> Instanz mit dem angegebenen <see cref="T:System.Data.SqlTypes.SqlDouble" /> und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.</summary>
+        <returns>Eine Zahl mit Vorzeichen, die die relativen Werte dieser Instanz und das Objekt angibt.  
+  
+ <list type="table"><listheader><term>Rückgabewert  
+  
+ </term><description>Bedingung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description>Diese Instanz ist kleiner als das Objekt.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description>Diese Instanz ist mit dem Objekt identisch.  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description>Diese Instanz ist größer als das Objekt  
+  
+ - oder -   
+  
+ Das Objekt ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic)  
+  
+ </description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu vergleichende <see cref="T:System.Object" />.</param>
+        <summary>Vergleicht dieses <see cref="T:System.Data.SqlTypes.SqlDouble" /> Instanz mit dem angegebenen <see cref="T:System.Object" /> und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.</summary>
+        <returns>Eine Zahl mit Vorzeichen, die die relativen Werte dieser Instanz und das Objekt angibt.  
+  
+ <list type="table"><listheader><term>Rückgabewert  
+  
+ </term><description>Bedingung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description>Diese Instanz ist kleiner als das Objekt.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description>Diese Instanz ist mit dem Objekt identisch.  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description>Diese Instanz ist größer als das Objekt  
+  
+ - oder -   
+  
+ Das Objekt ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic).  
+  
+ </description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Divide">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlDouble Divide (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlDouble Divide(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.Divide(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Der Divisionsoperator dividiert den ersten <see cref="T:System.Data.SqlTypes.SqlDouble" /> durch den zweiten Operanden.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur mit den Ergebnissen des divisionsvorgangs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.SqlTypes.SqlDouble.Divide%28System.Data.SqlTypes.SqlDouble%2CSystem.Data.SqlTypes.SqlDouble%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu vergleichende Objekt.</param>
+        <summary>Vergleicht den-Parameter angegebene Objekt mit dem <see cref="P:System.Data.SqlTypes.SqlDateTime.Value" /> Eigenschaft von der <see cref="T:System.Data.SqlTypes.SqlDouble" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Werte gleich sind. Andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean Equals (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBoolean Equals(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.Equals(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Führt einen logischen Vergleich von zwei Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> zu bestimmen, ob sie gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Werte gleich sind. Andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese <see cref="T:System.Data.SqlTypes.SqlDouble" /> Structure.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXsdType">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlQualifiedName GetXsdType (System.Xml.Schema.XmlSchemaSet schemaSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlQualifiedName GetXsdType(class System.Xml.Schema.XmlSchemaSet schemaSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.GetXsdType(System.Xml.Schema.XmlSchemaSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaSet" Type="System.Xml.Schema.XmlSchemaSet" />
+      </Parameters>
+      <Docs>
+        <param name="schemaSet">Eine <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</param>
+        <summary>Gibt die XML-Schemadefinitionssprache (XSD) des angegebenen <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <returns>Ein <see langword="string" /> Wert an der angegebenen XSD <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThan">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean GreaterThan (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBoolean GreaterThan(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.GreaterThan(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> zu bestimmen, ob die erste größer als das zweite ist.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlBoolean" /> also <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> ist die erste Instanz größer als die zweite Instanz. Andernfalls <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> null ist, die <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> von der <see cref="T:System.Data.SqlTypes.SqlBoolean" /> werden <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean GreaterThanOrEqual (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBoolean GreaterThanOrEqual(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.GreaterThanOrEqual(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> zu bestimmen, ob die erste größer als oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlBoolean" /> also <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> , wenn die erste Instanz größer oder gleich der zweiten Instanz ist. Andernfalls <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> null ist, die <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> von der <see cref="T:System.Data.SqlTypes.SqlBoolean" /> werden <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlDouble.IsNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen booleschen Wert, der angibt, ob dies <see cref="T:System.Data.SqlTypes.SqlDouble" /> -Instanz null ist.</summary>
+        <value>
+          <see langword="true" />Wenn <see cref="P:System.Data.SqlTypes.SqlDouble.Value" /> ist null. Andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Behandlung von Null-Werte](~/docs/framework/data/adonet/sql/handling-null-values.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThan">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean LessThan (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBoolean LessThan(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.LessThan(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> zu bestimmen, ob der erste kleiner ist als der zweite.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlBoolean" /> also <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> , wenn die erste Instanz kleiner ist als die zweite Instanz. Andernfalls <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> null ist, die <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> von der <see cref="T:System.Data.SqlTypes.SqlBoolean" /> werden <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean LessThanOrEqual (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBoolean LessThanOrEqual(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.LessThanOrEqual(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> zu bestimmen, ob der erste kleiner oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlBoolean" /> also <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> , wenn die erste Instanz kleiner oder gleich der zweiten Instanz befindet. Andernfalls <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> null ist, die <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> von der <see cref="T:System.Data.SqlTypes.SqlBoolean" /> werden <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxValue">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.SqlTypes.SqlDouble MaxValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.SqlTypes.SqlDouble MaxValue" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlTypes.SqlDouble.MaxValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Konstante, die den maximalen Wert für darstellt eine <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert ist 1, 79E + 308  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinValue">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.SqlTypes.SqlDouble MinValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.SqlTypes.SqlDouble MinValue" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlTypes.SqlDouble.MinValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Konstante, die den minimalen möglichen Wert von darstellt <see cref="T:System.Data.SqlTypes.SqlDouble" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert ist - 1, 79E + 308  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlDouble Multiply (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlDouble Multiply(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.Multiply(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Der Multiplikationsoperator berechnet das Produkt der beiden <see cref="T:System.Data.SqlTypes.SqlDouble" /> Operanden.</summary>
+        <returns>Das Produkt der beiden <see cref="T:System.Data.SqlTypes.SqlDouble" /> Operanden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.SqlTypes.SqlDouble.Multiply%28System.Data.SqlTypes.SqlDouble%2CSystem.Data.SqlTypes.SqlDouble%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotEquals">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean NotEquals (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBoolean NotEquals(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.NotEquals(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> um zu bestimmen, ob diese ungleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlBoolean" /> also <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> , wenn die beiden Instanzen ungleich sind oder <see cref="F:System.Data.SqlTypes.SqlBoolean.False" /> , wenn die beiden Instanzen gleich sind. Wenn eine der Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> null ist, die <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> von der <see cref="T:System.Data.SqlTypes.SqlBoolean" /> werden <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.SqlTypes.SqlDouble Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.SqlTypes.SqlDouble Null" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlTypes.SqlDouble.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine <see cref="T:System.DBNull" /> für die Instanz zugewiesen werden kann die <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Null`fungiert als eine Konstante für die <xref:System.Data.SqlTypes.SqlDouble> Struktur. Weitere Informationen finden Sie unter [Behandlung von Null-Werte](~/docs/framework/data/adonet/sql/handling-null-values.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlDouble operator + (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Addition(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Addition(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Der Additionsoperator berechnet die Summe der beiden <see cref="T:System.Data.SqlTypes.SqlDouble" /> Operanden.</summary>
+        <returns>Die Summe der beiden <see cref="T:System.Data.SqlTypes.SqlDouble" /> Operanden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.SqlTypes.SqlDouble.Add%28System.Data.SqlTypes.SqlDouble%2CSystem.Data.SqlTypes.SqlDouble%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Division">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlDouble operator / (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Division(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Division(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Der Divisionsoperator dividiert den ersten <see cref="T:System.Data.SqlTypes.SqlDouble" /> durch den zweiten Operanden.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur mit den Ergebnissen des divisionsvorgangs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.SqlTypes.SqlDouble.Divide%28System.Data.SqlTypes.SqlDouble%2CSystem.Data.SqlTypes.SqlDouble%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean operator == (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBoolean op_Equality(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Equality(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Führt einen logischen Vergleich von zwei Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> zu bestimmen, ob sie gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Werte gleich sind. Andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.SqlTypes.SqlDouble.Equals%28System.Data.SqlTypes.SqlDouble%2CSystem.Data.SqlTypes.SqlDouble%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Data.SqlTypes.SqlDouble (System.Data.SqlTypes.SqlBoolean x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Explicit(valuetype System.Data.SqlTypes.SqlBoolean x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Explicit(System.Data.SqlTypes.SqlBoolean)~System.Data.SqlTypes.SqlDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator double (System.Data.SqlTypes.SqlDouble x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname float64 op_Explicit(valuetype System.Data.SqlTypes.SqlDouble x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Explicit(System.Data.SqlTypes.SqlDouble)~System.Double" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Data.SqlTypes.SqlDouble (System.Data.SqlTypes.SqlString x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Explicit(valuetype System.Data.SqlTypes.SqlString x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Explicit(System.Data.SqlTypes.SqlString)~System.Data.SqlTypes.SqlDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlString" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean operator &gt; (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBoolean op_GreaterThan(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_GreaterThan(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> zu bestimmen, ob die erste größer als das zweite ist.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlBoolean" /> also <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> ist die erste Instanz größer als die zweite Instanz. Andernfalls <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> null ist, die <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> von der <see cref="T:System.Data.SqlTypes.SqlBoolean" /> werden <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.SqlTypes.SqlDouble.GreaterThan%28System.Data.SqlTypes.SqlDouble%2CSystem.Data.SqlTypes.SqlDouble%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean operator &gt;= (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBoolean op_GreaterThanOrEqual(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_GreaterThanOrEqual(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> zu bestimmen, ob die erste größer als oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlBoolean" /> also <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> , wenn die erste Instanz größer oder gleich der zweiten Instanz ist. Andernfalls <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> null ist, die <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> von der <see cref="T:System.Data.SqlTypes.SqlBoolean" /> werden <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.SqlTypes.SqlDouble.GreaterThanOrEqual%28System.Data.SqlTypes.SqlDouble%2CSystem.Data.SqlTypes.SqlDouble%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.SqlTypes.SqlDouble (System.Data.SqlTypes.SqlByte x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Implicit(valuetype System.Data.SqlTypes.SqlByte x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Implicit(System.Data.SqlTypes.SqlByte)~System.Data.SqlTypes.SqlDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlByte" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.SqlTypes.SqlDouble (System.Data.SqlTypes.SqlDecimal x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Implicit(valuetype System.Data.SqlTypes.SqlDecimal x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Implicit(System.Data.SqlTypes.SqlDecimal)~System.Data.SqlTypes.SqlDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDecimal" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.SqlTypes.SqlDouble (System.Data.SqlTypes.SqlInt16 x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Implicit(valuetype System.Data.SqlTypes.SqlInt16 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Implicit(System.Data.SqlTypes.SqlInt16)~System.Data.SqlTypes.SqlDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlInt16" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.SqlTypes.SqlDouble (System.Data.SqlTypes.SqlInt32 x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Implicit(valuetype System.Data.SqlTypes.SqlInt32 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Implicit(System.Data.SqlTypes.SqlInt32)~System.Data.SqlTypes.SqlDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlInt32" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.SqlTypes.SqlDouble (System.Data.SqlTypes.SqlInt64 x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Implicit(valuetype System.Data.SqlTypes.SqlInt64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Implicit(System.Data.SqlTypes.SqlInt64)~System.Data.SqlTypes.SqlDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlInt64" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.SqlTypes.SqlDouble (System.Data.SqlTypes.SqlMoney x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Implicit(valuetype System.Data.SqlTypes.SqlMoney x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Implicit(System.Data.SqlTypes.SqlMoney)~System.Data.SqlTypes.SqlDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlMoney" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.SqlTypes.SqlDouble (System.Data.SqlTypes.SqlSingle x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Implicit(valuetype System.Data.SqlTypes.SqlSingle x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Implicit(System.Data.SqlTypes.SqlSingle)~System.Data.SqlTypes.SqlDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlSingle" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.SqlTypes.SqlDouble (double x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Implicit(float64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Implicit(System.Double)~System.Data.SqlTypes.SqlDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean operator != (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBoolean op_Inequality(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Inequality(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> zu bestimmen, ob diese ungleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlBoolean" /> also <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> , wenn die beiden Instanzen ungleich sind oder <see cref="F:System.Data.SqlTypes.SqlBoolean.False" /> , wenn die beiden Instanzen gleich sind. Wenn eine der Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> null ist, die <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> von der <see cref="T:System.Data.SqlTypes.SqlBoolean" /> werden <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.SqlTypes.SqlDouble.NotEquals%28System.Data.SqlTypes.SqlDouble%2CSystem.Data.SqlTypes.SqlDouble%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean operator &lt; (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBoolean op_LessThan(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_LessThan(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> zu bestimmen, ob der erste kleiner ist als der zweite.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlBoolean" /> also <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> , wenn die erste Instanz kleiner ist als die zweite Instanz. Andernfalls <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> null ist, die <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> von der <see cref="T:System.Data.SqlTypes.SqlBoolean" /> werden <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.SqlTypes.SqlDouble.LessThan%28System.Data.SqlTypes.SqlDouble%2CSystem.Data.SqlTypes.SqlDouble%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean operator &lt;= (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBoolean op_LessThanOrEqual(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_LessThanOrEqual(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> zu bestimmen, ob der erste kleiner oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlBoolean" /> also <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> , wenn die erste Instanz kleiner oder gleich der zweiten Instanz befindet. Andernfalls <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.SqlTypes.SqlDouble" /> null ist, die <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> von der <see cref="T:System.Data.SqlTypes.SqlBoolean" /> werden <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.SqlTypes.SqlDouble.LessThanOrEqual%28System.Data.SqlTypes.SqlDouble%2CSystem.Data.SqlTypes.SqlDouble%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlDouble operator * (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Multiply(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Multiply(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Der Multiplikationsoperator berechnet das Produkt der beiden <see cref="T:System.Data.SqlTypes.SqlDouble" /> Operanden.</summary>
+        <returns>Das Produkt der beiden <see cref="T:System.Data.SqlTypes.SqlDouble" /> Operanden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.SqlTypes.SqlDouble.Multiply%28System.Data.SqlTypes.SqlDouble%2CSystem.Data.SqlTypes.SqlDouble%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlDouble operator - (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_Subtraction(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_Subtraction(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Der Subtraktionsoperator die zweite <see cref="T:System.Data.SqlTypes.SqlDouble" /> Operanden vom ersten.</summary>
+        <returns>Die Ergebnisse der Subtraktion.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.SqlTypes.SqlDouble.Subtract%28System.Data.SqlTypes.SqlDouble%2CSystem.Data.SqlTypes.SqlDouble%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_UnaryNegation">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlDouble operator - (System.Data.SqlTypes.SqlDouble x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlDouble op_UnaryNegation(valuetype System.Data.SqlTypes.SqlDouble x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.op_UnaryNegation(System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Gibt den negierten Wert des angegebenen <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlDouble" /> -Struktur, die den negierten Wert enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlDouble Parse (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlDouble Parse(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see langword="String" /> analysiert werden.</param>
+        <summary>Konvertiert die <see cref="T:System.String" /> Zeichenfolgendarstellung einer Zahl in die Gleitkommazahl mit doppelter Genauigkeit.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlDouble" /> , enthält den dargestellte Wert den <see langword="String" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlDouble Subtract (System.Data.SqlTypes.SqlDouble x, System.Data.SqlTypes.SqlDouble y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlDouble Subtract(valuetype System.Data.SqlTypes.SqlDouble x, valuetype System.Data.SqlTypes.SqlDouble y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.Subtract(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlDouble" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur.</param>
+        <summary>Der Subtraktionsoperator die zweite <see cref="T:System.Data.SqlTypes.SqlDouble" /> Operanden vom ersten.</summary>
+        <returns>Die Ergebnisse der Subtraktion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.GetSchema">
+      <MemberSignature Language="C#" Value="System.Xml.Schema.XmlSchema IXmlSerializable.GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Xml.Schema.XmlSchema System.Xml.Serialization.IXmlSerializable.GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.System#Xml#Serialization#IXmlSerializable#GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</summary>
+        <returns>Ein XML-Schema von .NET Framework verwendet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.ReadXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.ReadXml (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.ReadXml(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.System#Xml#Serialization#IXmlSerializable#ReadXml(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlReader" />.</param>
+        <summary>Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.WriteXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.WriteXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.WriteXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.System#Xml#Serialization#IXmlSerializable#WriteXml(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Xml.XmlWriter" />.</param>
+        <summary>Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSqlBoolean">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlBoolean ToSqlBoolean ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlBoolean ToSqlBoolean() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.ToSqlBoolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert diese <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur zu <see cref="T:System.Data.SqlTypes.SqlBoolean" />.</summary>
+        <returns>Ein <see langword="SqlBoolean" /> Struktur, deren <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> werden <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> Wenn die <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur <see cref="P:System.Data.SqlTypes.SqlDouble.Value" /> ist ungleich NULL ist, <see cref="F:System.Data.SqlTypes.SqlBoolean.False" /> Wenn die <see cref="T:System.Data.SqlTypes.SqlDouble" /> 0 (null) und <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" /> Wenn die <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur ist <see cref="F:System.Data.SqlTypes.SqlDouble.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSqlByte">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlByte ToSqlByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlByte ToSqlByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.ToSqlByte" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlByte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert diese <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur zu <see cref="T:System.Data.SqlTypes.SqlByte" />.</summary>
+        <returns>Ein <see langword="SqlByte" /> Struktur, deren <see langword="Value" /> entspricht der <see langword="Value" /> dieses <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSqlDecimal">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlDecimal ToSqlDecimal ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlDecimal ToSqlDecimal() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.ToSqlDecimal" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDecimal</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert diese <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur zu <see cref="T:System.Data.SqlTypes.SqlDecimal" />.</summary>
+        <returns>Ein neues <see langword="SqlDecimal" /> Struktur, deren konvertierter Wert dem gerundeten Wert dieses gleich <see langword="SqlDouble" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSqlInt16">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlInt16 ToSqlInt16 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlInt16 ToSqlInt16() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.ToSqlInt16" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlInt16</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert diese <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur zu <see cref="T:System.Data.SqlTypes.SqlInt16" />.</summary>
+        <returns>Ein neues <see cref="T:System.Data.SqlTypes.SqlInt16" /> Struktur, deren <see langword="Value" /> entspricht den ganzzahlige Teil der <see cref="T:System.Data.SqlTypes.SqlDouble" /> -Struktur-Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSqlInt32">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlInt32 ToSqlInt32 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlInt32 ToSqlInt32() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.ToSqlInt32" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlInt32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert diese <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur zu <see cref="T:System.Data.SqlTypes.SqlInt32" />.</summary>
+        <returns>Ein neues <see cref="T:System.Data.SqlTypes.SqlInt32" /> Struktur, deren <see langword="Value" /> entspricht den ganzzahlige Teil der <see cref="T:System.Data.SqlTypes.SqlDouble" /> -Struktur-Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSqlInt64">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlInt64 ToSqlInt64 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlInt64 ToSqlInt64() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.ToSqlInt64" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlInt64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert diese <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur zu <see cref="T:System.Data.SqlTypes.SqlInt64" />.</summary>
+        <returns>Ein neues <see cref="T:System.Data.SqlTypes.SqlInt64" /> Struktur, deren <see langword="Value" /> entspricht den ganzzahlige Teil der <see cref="T:System.Data.SqlTypes.SqlDouble" /> -Struktur-Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSqlMoney">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlMoney ToSqlMoney ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlMoney ToSqlMoney() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.ToSqlMoney" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlMoney</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert diese <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur zu <see cref="T:System.Data.SqlTypes.SqlMoney" />.</summary>
+        <returns>Ein neues <see langword="SqlMoney" /> Struktur, deren <see cref="P:System.Data.SqlTypes.SqlMoney.Value" /> ist gleich dem Wert dieses <see cref="T:System.Data.SqlTypes.SqlDouble" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSqlSingle">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlSingle ToSqlSingle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlSingle ToSqlSingle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.ToSqlSingle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlSingle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert diese <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur zu <see cref="T:System.Data.SqlTypes.SqlSingle" />.</summary>
+        <returns>Ein neues <see langword="SqlSingle" /> Struktur, deren <see cref="P:System.Data.SqlTypes.SqlSingle.Value" /> ist gleich der <see cref="P:System.Data.SqlTypes.SqlDouble.Value" /> dieses <see cref="T:System.Data.SqlTypes.SqlDouble" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSqlString">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlString ToSqlString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlString ToSqlString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.ToSqlString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlString</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert diese <see cref="T:System.Data.SqlTypes.SqlDouble" />-Struktur zu <see cref="T:System.Data.SqlTypes.SqlString" />.</summary>
+        <returns>Ein <see langword="SqlString" /> darstellt der <see cref="P:System.Data.SqlTypes.SqlDouble.Value" /> dieses <see cref="T:System.Data.SqlTypes.SqlDouble" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlDouble.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert dieses <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur in eine Zeichenfolge.</summary>
+        <returns>Eine Zeichenfolge, die <see cref="P:System.Data.SqlTypes.SqlDouble.Value" /> dieses <see cref="T:System.Data.SqlTypes.SqlDouble" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public double Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlDouble.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Der Wert, der die <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zero">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.SqlTypes.SqlDouble Zero;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.SqlTypes.SqlDouble Zero" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlTypes.SqlDouble.Zero" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen Wert von 0 (null), die zugewiesen werden, können, die <see cref="P:System.Data.SqlTypes.SqlDouble.Value" /> -Eigenschaft einer Instanz von der <see cref="T:System.Data.SqlTypes.SqlDouble" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Zero` Feld ist eine Konstante für die <xref:System.Data.SqlTypes.SqlDouble> Struktur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

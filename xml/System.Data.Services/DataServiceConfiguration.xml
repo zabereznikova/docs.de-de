@@ -1,0 +1,375 @@
+<Type Name="DataServiceConfiguration" FullName="System.Data.Services.DataServiceConfiguration">
+  <TypeSignature Language="C#" Value="public sealed class DataServiceConfiguration : System.Data.Services.IDataServiceConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataServiceConfiguration extends System.Object implements class System.Data.Services.IDataServiceConfiguration" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.DataServiceConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.Services.IDataServiceConfiguration</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Verwaltet die Konfiguration von WCF Data Services.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird die Code-Behind-Seite für einen Northwind-basierten Datendienst veranschaulicht, wobei Zugriff auf ausgewählte Entitätenmengen gewährt wird.  
+  
+ [!code-csharp[Astoria Quickstart Service#NorthwindServiceFull](~/samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#northwindservicefull)]
+ [!code-vb[Astoria Quickstart Service#NorthwindServiceFull](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#northwindservicefull)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataServiceBehavior">
+      <MemberSignature Language="C#" Value="public System.Data.Services.DataServiceBehavior DataServiceBehavior { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Services.DataServiceBehavior DataServiceBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceConfiguration.DataServiceBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.DataServiceBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Data.Services.DataServiceBehavior" /> -Objekt, das zusätzliche Verhaltensweisen des Datendiensts definiert.</summary>
+        <value>Ein <see cref="T:System.Data.Services.DataServiceBehavior" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTypeAccess">
+      <MemberSignature Language="C#" Value="public void EnableTypeAccess (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableTypeAccess(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataServiceConfiguration.EnableTypeAccess(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der mit dem Namespace qualifizierte Name des Typs, der zur Verwendung mit dem benutzerdefinierten Datendienstanbieter aktiviert wird.</param>
+        <summary>Registriert einen Datentyp bei der Datendienstlaufzeit, damit er von einem benutzerdefinierten Datendienstanbieter verwendet werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.DataServiceConfiguration.EnableTypeAccess%2A>-Methode wird verwendet, um einen Typ bei der Datendienstlaufzeit zu registrieren. Nach der Registrierung kann ein Typ in den Eigenschaften eines offenen Typs zurückgegeben werden. Dadurch wird der Typ im sichtbar `$metadata` Ausgabe und vom Datendienst verwendet werden kann.  
+  
+ Der angegebene `typeName`-Parameter muss im gleichen Format wie ein Typ im Datenmodell definiert sein, nicht als CLR-Typ. Die registrierten Typen werden den Typen hinzugefügt, die bereits durch Aufruf der <xref:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule%2A>-Methode verfügbar gemacht wurden.  
+  
+ Die Datendienstlaufzeit kann erst bestimmen, welcher Art von Datentyp `typeName` entspricht, wenn Typinformationen vom zugrunde liegenden Anbieter abgerufen werden können.  
+  
+ Für `typeName` kann der Wert '*' angegeben werden, der allen Typen entspricht.  
+  
+ Wenn die Datendienstlaufzeit Typen auflistet oder einen Typ vom zugrunde liegenden Datenanbieter abrufen muss, muss Sie zuerst bestimmen, ob der Typ beim Aufruf der <xref:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule%2A>-Methode sichtbar sein muss. Wenn der Typ auf diese Weise nicht verfügbar ist, werden mit der <xref:System.Data.Services.DataServiceConfiguration.EnableTypeAccess%2A>-Methode registrierte Typen überprüft. Wenn ein Typ nicht sichtbar gemacht wird mithilfe einer der folgenden Mechanismen, ist dieses Typs nicht in der Antwort an enthalten eine `$metadata` Anforderung und Instanzen dieses Typs werden nicht an den Client zurückgegeben als Antwort auf eine Anforderung an den Datendienst.  
+  
+ Die <xref:System.Data.Services.DataServiceConfiguration.EnableTypeAccess%2A>-Methode kann mehrfach mit dem gleichen Typnamen aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTypeConversion">
+      <MemberSignature Language="C#" Value="public bool EnableTypeConversion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTypeConversion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceConfiguration.EnableTypeConversion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob die Datendienstlaufzeit den in der Nutzlast enthaltenen Typ in den in der Anforderung angegebenen tatsächlichen Eigenschaftstyp konvertieren soll.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die Konvertierung auszuführen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBatchCount">
+      <MemberSignature Language="C#" Value="public int MaxBatchCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxBatchCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceConfiguration.MaxBatchCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Changesets und Abfragevorgängen, die in einem einzelnen Batch zulässig sind, ab oder legt sie fest.</summary>
+        <value>Ein Wert, der die maximale Anzahl von Changesets ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxChangesetCount">
+      <MemberSignature Language="C#" Value="public int MaxChangesetCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxChangesetCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceConfiguration.MaxChangesetCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Änderungen, die in einem einzelnen Changeset enthalten sein können, ab oder legt sie fest.</summary>
+        <value>Die maximale zulässige Anzahl von Änderungen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxExpandCount">
+      <MemberSignature Language="C#" Value="public int MaxExpandCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxExpandCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceConfiguration.MaxExpandCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl von verknüpften Entitäten, die in einer einzelnen Anforderung mit aufgenommen werden kann die <see langword="$expand" /> Operator.</summary>
+        <value>Die maximale Anzahl von verknüpften Entitäten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxExpandDepth">
+      <MemberSignature Language="C#" Value="public int MaxExpandDepth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxExpandDepth" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceConfiguration.MaxExpandDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abzurufen, oder legt die maximale Anzahl von verknüpften Entitäten, die in aufgenommen werden kann ein <see langword="$expand" /> Pfad in einer einzelnen Anforderung.</summary>
+        <value>Die maximale Tiefe ein <see langword="$expand" /> Pfad.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxObjectCountOnInsert">
+      <MemberSignature Language="C#" Value="public int MaxObjectCountOnInsert { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxObjectCountOnInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von einzufügenden Objekten, die in einer einzelnen POST-Anforderung enthalten sein können, ab oder legt sie fest.</summary>
+        <value>Die maximale Anzahl von Objekten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxResultsPerCollection">
+      <MemberSignature Language="C#" Value="public int MaxResultsPerCollection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxResultsPerCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Elementen in jeder zurückgegebenen Auflistung ab oder legt sie fest.</summary>
+        <value>Die maximale Anzahl von Elementen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Maximalwert gilt auch für geschachtelte Auflistungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterKnownType">
+      <MemberSignature Language="C#" Value="public void RegisterKnownType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterKnownType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataServiceConfiguration.RegisterKnownType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Typ, auf die Auflistung bekannter Typen hinzugefügt werden soll.</param>
+        <summary>Fügt der Liste der vom Datendienst erkannten Typen einen Typ hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Anbieter kann mithilfe der <xref:System.Data.Services.DataServiceConfiguration.RegisterKnownType%2A>-Methode einen Typ registrieren, wenn er nicht von der Laufzeit mit dem Standardsatz von Regeln erkannt werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEntitySetAccessRule">
+      <MemberSignature Language="C#" Value="public void SetEntitySetAccessRule (string name, System.Data.Services.EntitySetRights rights);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetEntitySetAccessRule(string name, valuetype System.Data.Services.EntitySetRights rights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule(System.String,System.Data.Services.EntitySetRights)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="rights" Type="System.Data.Services.EntitySetRights" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Entitätenmenge für das Berechtigungen festgelegt.</param>
+        <param name="rights">Zugriffsrechte auf diese Ressource, die als übergeben erteilt werden ein <see cref="T:System.Data.Services.EntitySetRights" /> Wert.</param>
+        <summary>Legt die Berechtigungen für die angegebene Entitätenmengenressource fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Wert ein Sternchen angeben (`*`) für die `name` Parameter, Berechtigungen festgelegt sind für alle Entitätenmengen, denen keine Berechtigungen, die explizit festgelegt sind.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird die Code-Behind-Seite für einen Northwind-basierten Datendienst veranschaulicht, wobei Zugriff auf ausgewählte Entitätenmengen gewährt wird.  
+  
+ [!code-csharp[Astoria Quickstart Service#NorthwindServiceFull](~/samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#northwindservicefull)]
+ [!code-vb[Astoria Quickstart Service#NorthwindServiceFull](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#northwindservicefull)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEntitySetPageSize">
+      <MemberSignature Language="C#" Value="public void SetEntitySetPageSize (string name, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEntitySetPageSize(string name, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataServiceConfiguration.SetEntitySetPageSize(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name der Entität für das Festlegen der Seitengröße fest.</param>
+        <param name="size">Die Seitengröße für die Entität festgelegt Ressource, die im angegebenen <c>Namen</c>.</param>
+        <summary>Legt die maximale Seitengröße für eine Entitätenmengenressource fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Wert '*' für den `name`-Parameter angeben, wird der Seitengrößenwert für alle Entitätenmengen festgelegt, deren Seitengröße nicht explizit festgelegt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetServiceOperationAccessRule">
+      <MemberSignature Language="C#" Value="public void SetServiceOperationAccessRule (string name, System.Data.Services.ServiceOperationRights rights);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetServiceOperationAccessRule(string name, valuetype System.Data.Services.ServiceOperationRights rights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataServiceConfiguration.SetServiceOperationAccessRule(System.String,System.Data.Services.ServiceOperationRights)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="rights" Type="System.Data.Services.ServiceOperationRights" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Dienstvorgangs, für das Berechtigungen festgelegt.</param>
+        <param name="rights">Zugriffsrechte auf diese Ressource, die als übergeben erteilt werden ein <see cref="T:System.Data.Services.ServiceOperationRights" /> Wert.</param>
+        <summary>Legt die Berechtigungen für den angegebenen Dienstvorgang fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Wert '*' für den `name`-Parameter angeben, werden Berechtigungen für alle Dienstvorgänge festgelegt, deren Berechtigungen nicht explizit festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseVerboseErrors">
+      <MemberSignature Language="C#" Value="public bool UseVerboseErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseVerboseErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceConfiguration.UseVerboseErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob ausführliche Fehler vom Datendienst zurückgegeben werden soll.</summary>
+        <value>Gibt an, ob ausführliche Fehler zurückgegeben werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A>-Eigenschaft legt das standardmäßige ausführliche Fehlerverhalten für den ganzen Dienst fest. Einzelne Antworten können sich abhängig vom Wert der <xref:System.Data.Services.HandleExceptionArgs.UseVerboseErrors%2A>-Eigenschaft der Argumente für die <xref:System.Data.Services.DataService%601.HandleException%2A>-Methode in der <xref:System.Data.Services.DataService%601>-Klasse anders verhalten.  
+  
+ Aus Sicherheitsgründen sollten ausführliche Fehler nur während der Entwicklung und nicht in Produktionsumgebungen aktiviert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

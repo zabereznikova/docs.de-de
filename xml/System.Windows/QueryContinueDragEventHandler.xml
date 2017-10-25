@@ -1,0 +1,50 @@
+<Type Name="QueryContinueDragEventHandler" FullName="System.Windows.QueryContinueDragEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void QueryContinueDragEventHandler(object sender, QueryContinueDragEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed QueryContinueDragEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.QueryContinueDragEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.QueryContinueDragEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, an das der Ereignishandler angefügt ist.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt eine Methode, die die Routingereignisse behandelt, die eines Drag &amp; Drop-Vorgangs durch die Quelle des Ziehvorgangs abgebrochen werden, z. B. ermöglichen <see cref="E:System.Windows.UIElement.QueryContinueDrag" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat wird mit den folgenden angefügten Ereignissen verwendet:  
+  
+-   <xref:System.Windows.DragDrop.QueryContinueDrag?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.DragDrop.PreviewQueryContinueDrag?displayProperty=nameWithType>  
+  
+ Dieser Delegat ist auch mit den folgenden Routingereignissen für Basiselemente verwendet. Diese weitergeleitete Ereignisse weiterleiten, die zuvor aufgelisteten angefügte Ereignisse damit diese mehr zugegriffen werden kann, das Modell der allgemeinen Element im [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  
+  
+-   <xref:System.Windows.UIElement.QueryContinueDrag?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewQueryContinueDrag?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.QueryContinueDrag?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewQueryContinueDrag?displayProperty=nameWithType>  
+  
+ Angefügte Ereignisse und die Ereignisse weitergeleitet Basiselement nutzen ihre Ereignisdaten und die bubbling und tunneling-Versionen Routingereignisse Ereignisdaten auch freigeben. Dies kann die behandelten Eigenschaften des Ereignisses beeinträchtigen, während der Übertragung der Ereignisroute. Weitere Informationen finden Sie unter [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ Die <xref:System.Windows.DragDrop.QueryContinueDrag?displayProperty=nameWithType> -Ereignis tritt während eines Drag & Drop-Vorgangs und ermöglicht die Quelle des Ziehvorgangs bestimmen, ob der Drag-and-Drop-Vorgang abgebrochen werden soll.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

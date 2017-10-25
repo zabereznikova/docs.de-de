@@ -1,0 +1,2196 @@
+<Type Name="ElementHost" FullName="System.Windows.Forms.Integration.ElementHost">
+  <TypeSignature Language="C#" Value="public class ElementHost : System.Windows.Forms.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ElementHost extends System.Windows.Forms.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Integration.ElementHost" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsFormsIntegration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ChildChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer("WindowsFormsIntegration.Design.ElementHostCodeDomSerializer, WindowsFormsIntegration.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.ComponentModel.Design.Serialization.CodeDomSerializer, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("WindowsFormsIntegration.Design.ElementHostDesigner, WindowsFormsIntegration.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("code")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Child")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Windows Forms-Steuerelement, das zum Hosten von Windows Presentation Foundation (WPF)-Element verwendet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement platzieren einer [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement> auf Ihre [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] Steuerelements oder Formulars.  
+  
+ Auf Host eine [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] -Steuerelement in einer [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] -Element verwenden die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element.  
+  
+> [!NOTE]
+>  WindowsFormsIntegration.dll wird installiert, mit der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Assemblys. Der Standardspeicherort für die Assembly ist %programfiles%\Reference Assemblies\Microsoft\Framework\v3.0\WindowsFormsIntegration.dll.  
+  
+ Auf Host eine [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Element in einem Windows Form, die Sie zuweisen müssen die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Element, um die <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> Eigenschaft zuweisen von benutzerdefinierten Zuordnungen zwischen einer <xref:System.Windows.Forms.Integration.ElementHost> -Steuerelement und seine gehostete [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Element. Weitere Informationen finden Sie unter [Eigenschaftenzuordnung von Windows Forms und WPF](~/docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.Integration.ElementHost> zu hostende Steuerelement eine [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Element. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Hosten eines 3D zusammengesetzten WPF-Steuerelements in Windows Forms](~/docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).  
+  
+ [!code-csharp[HostingWpfUserControlInWf#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/WpfUserControlHost/Form1.cs#11)]
+ [!code-vb[HostingWpfUserControlInWf#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWpfUserControlInWf/VisualBasic/WpfUserControlHost/Form1.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ElementHost ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Integration.ElementHost" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">für volle Vertrauenswürdigkeit für allen Aufrufern einer höheren Ebene in der Aufrufliste. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.ElementHost.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Größe des Steuerelements automatisch an dessen Inhalt angepasst wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement seine Größe eng an dessen Inhalt angepasst anpasst; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColorTransparent">
+      <MemberSignature Language="C#" Value="public bool BackColorTransparent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BackColorTransparent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.ElementHost.BackColorTransparent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das gehostete Element einen transparenten Hintergrund verfügt.</summary>
+        <value>
+          <see langword="true" />Wenn das gehostete Element einen transparenten Hintergrund hat. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> Eigenschaft können mithilfe einer Bitmap zu kopieren, wodurch Elemente gehostete um Transparenz über den Hostcontainer zu verwenden. Dies ist hilfreich, wenn das Element über ein Bild oder einen Farbverlaufshintergrund befindet.  
+  
+ Aus Gründen der Leistung der <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> Eigenschaft ist standardmäßig deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingContextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BindingContextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BindingContextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.BindingContextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="T:System.Windows.Forms.BindingContext" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.BindingContextChanged>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanEnableIme">
+      <MemberSignature Language="C#" Value="protected override bool CanEnableIme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanEnableIme" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.ElementHost.CanEnableIme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="P:System.Windows.Forms.Control.ImeMode" /> Eigenschaft auf einen aktiven Wert festgelegt werden kann, um IME-Unterstützung zu aktivieren.</summary>
+        <value>
+          <see langword="true" />Wenn <see cref="T:System.Windows.Forms.Integration.ElementHost" /> verfügt über eine <see cref="P:System.Windows.Forms.Integration.ElementHost.Child" /> Element ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Child">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement Child { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement Child" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.ElementHost.Child" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.UIElement" /> gehostet werden, indem die <see cref="T:System.Windows.Forms.Integration.ElementHost" /> Steuerelement.</summary>
+        <value>Das gehostete [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur ein Element aufgenommen werden kann, aber <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> kann eine beliebige Anzahl von untergeordneten Elementen verfügen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> Eigenschaft zuweisen eines gehosteten [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Element. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Hosten eines 3D zusammengesetzten WPF-Steuerelements in Windows Forms](~/docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).  
+  
+ [!code-csharp[HostingWpfUserControlInWf#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/WpfUserControlHost/Form1.cs#11)]
+ [!code-vb[HostingWpfUserControlInWf#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWpfUserControlInWf/VisualBasic/WpfUserControlHost/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.Integration.ChildChangedEventArgs&gt; ChildChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.Integration.ChildChangedEventArgs&gt; ChildChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.ChildChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.Integration.ChildChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Child" /> festgelegt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Klicken auf das Steuerelement ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.Click>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.Click?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ClientSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ClientSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.ClientSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.ClientSize" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.ClientSizeChanged>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.ClientSizeChanged?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlAdded">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ControlEventHandler ControlAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ControlEventHandler ControlAdded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.ControlAdded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="T:System.Windows.Forms.Control.ControlCollection" /> ein neues Steuerelement hinzugefügt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.ControlAdded>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.ControlAdded?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlRemoved">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ControlEventHandler ControlRemoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ControlEventHandler ControlRemoved" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.ControlRemoved" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Entfernen des Steuerelements aus der <see cref="T:System.Windows.Forms.Control.ControlCollection" /> ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.ControlRemoved>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.ControlRemoved?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CursorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CursorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.CursorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.Cursor" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den <xref:System.Windows.Forms.Integration.ElementHost.CursorChanged> -Ereignis finden Sie unter <xref:System.Windows.Forms.Control.CursorChanged?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.ElementHost.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardgröße des Steuerelements ab.</summary>
+        <value>Die Standard-<see cref="T:System.Drawing.Size" /> des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den <xref:System.Windows.Forms.Integration.ElementHost.DefaultSize%2A> Eigenschaft finden Sie unter <xref:System.Windows.Forms.Control.DefaultSize%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt alle von verwendeten Systemressourcen sofort frei der <see cref="T:System.Windows.Forms.Integration.ElementHost" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Windows.Forms.Integration.ElementHost> verweist. Diese Methode ruft die `Dispose`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Doppelklicken auf das Steuerelement ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.DoubleClick>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.DoubleClick?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragDrop">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DragEventHandler DragDrop;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DragEventHandler DragDrop" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.DragDrop" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein Drag &amp; Drop-Vorgang abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.DragDrop>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.DragDrop?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragEnter">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DragEventHandler DragEnter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DragEventHandler DragEnter" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.DragEnter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein Objekt in die Begrenzungen des Steuerelements gezogen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.DragEnter>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.DragEnter?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragLeave">
+      <MemberSignature Language="C#" Value="public event EventHandler DragLeave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DragLeave" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.DragLeave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein Objekt aus den Grenzen des Steuerelements gezogen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.DragLeave>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.DragLeave>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragOver">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DragEventHandler DragOver;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DragEventHandler DragOver" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.DragOver" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein Objekt über die Begrenzungen des Steuerelements gezogen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.DragOver>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.DragOver?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableModelessKeyboardInterop">
+      <MemberSignature Language="C#" Value="public static void EnableModelessKeyboardInterop (System.Windows.Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableModelessKeyboardInterop(class System.Windows.Window window) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(System.Windows.Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="window" Type="System.Windows.Window" />
+      </Parameters>
+      <Docs>
+        <param name="window">Die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Fenster nicht modalen Modus geöffnet werden.</param>
+        <summary>Ermöglicht eine <see cref="T:System.Windows.Window" /> um tastaturmeldungen ordnungsgemäß zu erhalten, wenn sie von nicht modalen Modus geöffnet ist [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)].</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> Methode, um alle weiterleiten Tastatur Instanznachrichten an, wenn eine [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Fenster nicht modalen Modus geöffnet ist. Die <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> Methode installiert einen Meldungsfilter in der [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)]-basierten Anwendung. Der Filter werden alle tastaturmeldungen weitergeleitet, wenn nicht modale Fenster aktiv ist.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">für volle Vertrauenswürdigkeit für allen Aufrufern einer höheren Ebene in der Aufrufliste. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Enter">
+      <MemberSignature Language="C#" Value="public event EventHandler Enter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Enter" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.Enter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Eintreten in den Bereich des Steuerelements ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.Enter>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.Enter?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focused">
+      <MemberSignature Language="C#" Value="public override bool Focused { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Focused" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.ElementHost.Focused" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Steuerelement den Eingabefokus besitzt.</summary>
+        <value>
+          <see langword="true" />, wenn das Steuerelement den Fokus besitzt, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler FontChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FontChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.FontChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Windows.Forms.Control.Font" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.FontChanged>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.FontChanged?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ForeColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ForeColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.ForeColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Windows.Forms.Control.ForeColor" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.ForeColorChanged>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.ForeColorChanged?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size GetPreferredSize (System.Drawing.Size proposedSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Size GetPreferredSize(valuetype System.Drawing.Size proposedSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.GetPreferredSize(System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="proposedSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="proposedSize">Der Bereich mit benutzerdefinierter Größe für eine [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Element.</param>
+        <summary>Überschreibt die basisklassenimplementierung <see cref="M:System.Windows.Forms.Control.GetPreferredSize(System.Drawing.Size)" /> richtiges Layout für das Verhalten für das gehostete bereitstellen [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Elemente.</summary>
+        <returns>Die <see cref="T:System.Drawing.Size" /> berechnet, indem die <see cref="T:System.Windows.Forms.Integration.ElementHost" /> -Steuerelements entsprechend die Einschränkungen, die gemäß <paramref name="proposedSize" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GiveFeedback">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.GiveFeedbackEventHandler GiveFeedback;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.GiveFeedbackEventHandler GiveFeedback" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.GiveFeedback" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GiveFeedbackEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt während eines Ziehvorgangs ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.GiveFeedback>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.GiveFeedback?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GotFocus">
+      <MemberSignature Language="C#" Value="public event EventHandler GotFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler GotFocus" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.GotFocus" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Steuerelement den Fokus erhält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.GotFocus>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.GotFocus?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostContainer">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Panel HostContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Panel HostContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.ElementHost.HostContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Panel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den übergeordneten Container des gehosteten [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Element.</summary>
+        <value>Der übergeordnete Container.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hostcontainer ist die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement>, dies ist der übergeordnete Container für das gehostete Element. Der Hostcontainer ist immer auf der Stammebene des der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Hierarchie der Elemente. Um das übergeordnete Element des gehosteten Element zuzugreifen, zugreifen <xref:System.Windows.Forms.Integration.ElementHost.HostContainer%2A> direkt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeBase">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ImeMode ImeModeBase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode ImeModeBase" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.ElementHost.ImeModeBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den IME-Modus eines Steuerelements ab oder legt diesen fest.</summary>
+        <value>Der IME-Modus des Steuerelements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidated">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.InvalidateEventHandler Invalidated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.InvalidateEventHandler Invalidated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.Invalidated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.InvalidateEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn für die Anzeige eines Steuerelements eine Neuzeichnung erforderlich ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.Invalidated>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.Invalidated?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInputChar">
+      <MemberSignature Language="C#" Value="protected override bool IsInputChar (char charCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsInputChar(char charCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.IsInputChar(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charCode" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="charCode">Das weiterzuleitende Zeichen.</param>
+        <summary>Stellt sicher, dass alle WM_CHAR-Tastenmeldungen zum gehosteten Element weitergeleitet werden.</summary>
+        <returns>
+          <see langword="true" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das gehostete [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Element verarbeitet keine `charCode`, <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement verarbeitet sie mit der <xref:System.Windows.Forms.Control.ProcessDialogChar%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.KeyDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn eine Taste gedrückt wird, während das Steuerelement den Fokus hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.KeyDown>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.KeyDown?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPress">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyPressEventHandler KeyPress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyPressEventHandler KeyPress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.KeyPress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyPressEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn eine Taste gedrückt wird, während das Steuerelement den Fokus hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.KeyPress>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.KeyPress?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.KeyUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn eine Taste losgelassen wird, während das Steuerelement den Fokus hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.KeyUp>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.KeyUp?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Layout">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.LayoutEventHandler Layout;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.LayoutEventHandler Layout" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.Layout" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LayoutEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein Steuerelement seine untergeordneten Steuerelemente neu positionieren muss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.Layout>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.Layout?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Leave">
+      <MemberSignature Language="C#" Value="public event EventHandler Leave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Leave" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.Leave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Eingabefokus das Steuerelement verlässt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.Leave>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.Leave?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LostFocus">
+      <MemberSignature Language="C#" Value="public event EventHandler LostFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LostFocus" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.LostFocus" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Steuerelement den Fokus verliert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.LostFocus>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.LostFocus?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseCaptureChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MouseCaptureChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseCaptureChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.MouseCaptureChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Steuerelement beginnt oder aufhört, Mauseingaben aufzufangen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.MouseCaptureChanged>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.MouseCaptureChanged?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.MouseClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn mit der Maus auf das Steuerelement geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.MouseClick>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.MouseClick?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDoubleClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.MouseDoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn mit der Maus auf das Steuerelement doppelgeklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.MouseDoubleClick>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.MouseDoubleClick?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.MouseDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Mauszeiger über dem Steuerelement befindet und eine Maustaste gedrückt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.MouseDown>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.MouseDown?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseEnter">
+      <MemberSignature Language="C#" Value="public event EventHandler MouseEnter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseEnter" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.MouseEnter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Mauszeiger in den Bereich des Steuerelements eintritt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.MouseEnter>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.MouseEnter?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseHover">
+      <MemberSignature Language="C#" Value="public event EventHandler MouseHover;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseHover" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.MouseHover" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Mauszeiger auf dem Steuerelement verbleibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.MouseHover>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.MouseHover?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseLeave">
+      <MemberSignature Language="C#" Value="public event EventHandler MouseLeave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseLeave" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.MouseLeave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Mauszeiger den Bereich des Steuerelements verlässt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.MouseLeave>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.MouseLeave?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseMove">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseMove;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseMove" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.MouseMove" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Mauszeiger über dem Steuerelement bewegt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.MouseMove>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.MouseMove?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.MouseUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Mauszeiger über dem Steuerelement befindet und eine Maustaste losgelassen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.MouseUp>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.MouseUp?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseWheel">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseWheel;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseWheel" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.MouseWheel" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Mausrad gedreht wird, während das Steuerelement fokussiert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.MouseWheel>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.MouseWheel?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnabledChanged">
+      <MemberSignature Language="C#" Value="protected override void OnEnabledChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnabledChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.OnEnabledChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.EnabledChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.Integration.ElementHost.OnEnabledChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.Integration.ElementHost.OnEnabledChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.Integration.ElementHost.OnEnabledChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGotFocus">
+      <MemberSignature Language="C#" Value="protected override void OnGotFocus (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGotFocus(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.OnGotFocus(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Integration.ElementHost.GotFocus" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur <xref:System.Windows.Forms.Integration.ElementHost.OnGotFocus%2A>-Methode finden Sie unter <xref:System.Windows.Forms.Control.OnGotFocus%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.HandleCreated" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur <xref:System.Windows.Forms.Integration.ElementHost.OnHandleCreated%2A>-Methode finden Sie unter <xref:System.Windows.Forms.Control.OnHandleCreated%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLeave">
+      <MemberSignature Language="C#" Value="protected override void OnLeave (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLeave(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.OnLeave(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.Leave" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur <xref:System.Windows.Forms.Integration.ElementHost.OnLeave%2A>-Methode finden Sie unter <xref:System.Windows.Forms.Control.OnLeave%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.Paint" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Integration.ElementHost> Implementierung der <xref:System.Windows.Forms.Integration.ElementHost.OnPaint%2A> Methode weitergeleitet werden, um die Implementierung der Basisklasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Implementierung der nicht der <see cref="M:System.Windows.Forms.Integration.ElementHost.OnPaint(System.Windows.Forms.PaintEventArgs)" /> Methode. Die <see cref="T:System.Windows.Forms.Integration.ElementHost" /> Steuerelement verwaltet, das das gehostete Element zeichnen, und das Überschreiben <see cref="M:System.Windows.Forms.Integration.ElementHost.OnPaint(System.Windows.Forms.PaintEventArgs)" /> führt dazu, dass zu unvorhersehbaren Ergebnissen führt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaintBackground">
+      <MemberSignature Language="C#" Value="protected override void OnPaintBackground (System.Windows.Forms.PaintEventArgs pevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaintBackground(class System.Windows.Forms.PaintEventArgs pevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.OnPaintBackground(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pevent" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="pevent">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" /> mit Informationen zum zu zeichnenden Steuerelement.</param>
+        <summary>Zeichnet den Hintergrund des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Integration.ElementHost.OnPaintBackground%2A> Methode zeichnet den Hintergrund des übergeordneten Steuerelements in einer HBITMAP außerhalb des BILDSCHIRMBEREICHS. Diese Bitmap dient als Hintergrund im gehosteten Element zur Unterstützung von Transparenz.  
+  
+ Diese Methode unterstützt die [!INCLUDE[TLA#tla_net](~/includes/tlasharptla-net-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPrint">
+      <MemberSignature Language="C#" Value="protected override void OnPrint (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPrint(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.OnPrint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Rendert das Steuerelement unter Verwendung der angegebenen <see cref="T:System.Drawing.Graphics" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="public virtual void OnPropertyChanged (string propertyName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnPropertyChanged(string propertyName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.OnPropertyChanged(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der Eigenschaft, die sich geändert hat und übersetzt werden muss.</param>
+        <param name="value">Der neue Wert der Eigenschaft.</param>
+        <summary>Benachrichtigt den <see cref="P:System.Windows.Forms.Integration.ElementHost.PropertyMap" /> , die eine Eigenschaft geändert wurde.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisibleChanged">
+      <MemberSignature Language="C#" Value="protected override void OnVisibleChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnVisibleChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.OnVisibleChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.VisibleChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur <xref:System.Windows.Forms.Integration.ElementHost.OnVisibleChanged%2A>-Methode finden Sie unter <xref:System.Windows.Forms.Control.OnVisibleChanged%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Abstand des Steuerelements geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.PaddingChanged>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.PaddingChanged?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PaintEventHandler Paint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PaintEventHandler Paint" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.Paint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PaintEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das <see cref="T:System.Windows.Forms.Integration.ElementHost" />-Steuerelement neu gezeichnet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung dieses Ereignisses fügt Ereignishandler <xref:System.Windows.Controls.Control> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewKeyDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PreviewKeyDownEventHandler PreviewKeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PreviewKeyDownEventHandler PreviewKeyDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.PreviewKeyDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PreviewKeyDownEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt vor dem <see cref="E:System.Windows.Forms.Control.KeyDown" />-Ereignis ein, wenn eine Taste gedrückt wird, während dieses Steuerelement den Fokus besitzt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.PreviewKeyDown>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.PreviewKeyDown?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCmdKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessCmdKey (ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessCmdKey(valuetype System.Windows.Forms.Message&amp; msg, valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Eine als Verweis übergebene <see cref="T:System.Windows.Forms.Message" />, die die zu verarbeitende Fenstermeldung darstellt.</param>
+        <param name="keyData">Eines der <see cref="T:System.Windows.Forms.Keys" /> Werte, die die zu verarbeitende Taste darstellen.</param>
+        <summary>Verarbeitet eine Befehlstaste sicherstellen, dass das gehostete Element Gelegenheit den Befehl aus, bevor die normale behandeln verfügt [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] verarbeiten.</summary>
+        <returns>
+          <see langword="true" />Wenn das Zeichen eine [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Verknüpfung, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine tastenmeldung nicht behandelt wird durch die gehosteten [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Element wird oben weitergeleitet der [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] Klassenhierarchie für die Verarbeitung.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMnemonic">
+      <MemberSignature Language="C#" Value="protected override bool ProcessMnemonic (char charCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessMnemonic(char charCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.ProcessMnemonic(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charCode" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="charCode">Das zu verarbeitende Zeichen.</param>
+        <summary>Verarbeitet ein mnemonisches Zeichen, die sicherstellen, dass das gehostete Element das mnemonische Zeichen, bevor die normale behandeln verfügt [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] verarbeiten.</summary>
+        <returns>
+          <see langword="true" />Wenn das Zeichen eine [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Verknüpfung, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine tastenmeldung nicht behandelt wird durch die gehosteten [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Element wird oben weitergeleitet der [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] Klassenhierarchie für die Verarbeitung.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyMap">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Integration.PropertyMap PropertyMap { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Integration.PropertyMap PropertyMap" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.ElementHost.PropertyMap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Integration.PropertyMap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die eigenschaftenzuordnung, die festlegt, wie Festlegen von Eigenschaften für die <see cref="T:System.Windows.Forms.Integration.ElementHost" /> Steuerelement wirkt sich auf die gehosteten [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Element.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Integration.PropertyMap" /> ordnet <see cref="T:System.Windows.Forms.Integration.ElementHost" /> den Eigenschaften der gehosteten [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] und [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Technologien können zwei ähnliche, aber nicht identische Eigenschaft Modelle. *Eigenschaftenzuordnung* Interoperation zwischen den beiden Architekturen unterstützt. Weitere Informationen finden Sie unter [Eigenschaftenzuordnung von Windows Forms und WPF](~/docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> zu übersetzenden Eigenschaft der <xref:System.Windows.FrameworkElement.Margin%2A> -Eigenschaft für eine gehostete [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Element. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mithilfe der ElementHost-Steuerelement](~/docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md).  
+  
+ [!code-csharp[PropertyMappingWithElementHost#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
+ [!code-vb[PropertyMappingWithElementHost#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryContinueDrag">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.QueryContinueDragEventHandler QueryContinueDrag;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.QueryContinueDragEventHandler QueryContinueDrag" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.QueryContinueDrag" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.QueryContinueDragEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt während eines Drag &amp; Drop-Vorgangs ein. Dadurch kann die Quelle des Ziehvorgangs bestimmen, ob der Drag &amp; Drop-Vorgang abgebrochen werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.QueryContinueDrag>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public event EventHandler Resize;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Resize" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.Resize" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Ändern der Größe des Steuerelements ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.Resize>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.Resize?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.RightToLeftChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Windows.Forms.Control.RightToLeft" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.RightToLeftChanged>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.RightToLeftChanged?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleCore">
+      <MemberSignature Language="C#" Value="protected override void ScaleCore (float dx, float dy);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ScaleCore(float32 dx, float32 dy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.ScaleCore(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="dx">Der Skalierungsfaktor für die x-Achse.</param>
+        <param name="dy">Der Skalierungsfaktor für die y-Achse.</param>
+        <summary>Skaliert den übergeordneten Container und das gehostete [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="protected override void Select (bool directed, bool forward);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Select(bool directed, bool forward) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.Select(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="directed" Type="System.Boolean" />
+        <Parameter Name="forward" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="directed">
+          <see langword="true" />, um die Richtung für die Auswahl des Steuerelements anzugeben, andernfalls <see langword="false" />.</param>
+        <param name="forward">
+          <see langword="true" />, um sich in der Aktivierreihenfolge vorwärts zu bewegen, <see langword="false" />, um sich rückwärts zu bewegen.</param>
+        <summary>Aktiviert das gehostete Element an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> Methode aktiviert das gehostete Element. Wenn mehr als ein gehosteten Element vorhanden ist, das erste oder letzte Element ist aktiviert, abhängig von der `directed` und `forward` Parameter.  
+  
+ Wiederholte Aufrufe von der <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> Methode durchläuft die gehosteten Elemente nicht. Aufrufen, um nachfolgende Elemente auszuwählen, die <xref:System.Windows.FrameworkElement.MoveFocus%2A> Methode für die <xref:System.Windows.Forms.Integration.ElementHost.HostContainer%2A> Eigenschaft.  
+  
+ Diese Implementierung leitet die Tab-Taste aus [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] auf [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.SizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Windows.Forms.Control.Size" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.SizeChanged>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.SizeChanged?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.ElementHost.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Windows.Forms.Control.Text" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum <xref:System.Windows.Forms.Integration.ElementHost.TextChanged>-Ereignis finden Sie unter <xref:System.Windows.Forms.Control.TextChanged?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ElementHost.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Eine zu verarbeitende Meldung.</param>
+        <summary>Verarbeitet Windows-Meldungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur <xref:System.Windows.Forms.Integration.ElementHost.WndProc%2A>-Methode finden Sie unter <xref:System.Windows.Forms.Control.WndProc%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

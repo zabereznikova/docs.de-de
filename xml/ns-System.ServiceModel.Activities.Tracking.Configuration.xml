@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Activities.Tracking.Configuration">
+  <Docs>
+    <summary>Der System.ServiceModel.Activities.Tracking.Configuration-Namespace enthält Klassen, die zum Konfigurieren der Überwachung für den gehosteten Dienst Workflows verwendet. Mit diesen Klassen können Sie die Nachverfolgungsinformationen angeben, die der Workflowdienst generieren soll.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

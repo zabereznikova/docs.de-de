@@ -1,0 +1,409 @@
+<Type Name="RectangleGeometry" FullName="System.Windows.Media.RectangleGeometry">
+  <TypeSignature Language="C#" Value="public sealed class RectangleGeometry : System.Windows.Media.Geometry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RectangleGeometry extends System.Windows.Media.Geometry" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.RectangleGeometry" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Geometry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt ein zweidimensionales Rechteck.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RectangleGeometry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RectangleGeometry.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.RectangleGeometry" /> -Klasse und erstellt ein Rechteck mit 0 (null).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RectangleGeometry (System.Windows.Rect rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Rect rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RectangleGeometry.#ctor(System.Windows.Rect)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Ein <see cref="T:System.Windows.Rect" /> Struktur mit dem Rechteck Dimensionen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.RectangleGeometry" /> -Klasse und gibt seine Dimensionen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RectangleGeometry (System.Windows.Rect rect, double radiusX, double radiusY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Rect rect, float64 radiusX, float64 radiusY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RectangleGeometry.#ctor(System.Windows.Rect,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="radiusX" Type="System.Double" />
+        <Parameter Name="radiusY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Ein <see cref="T:System.Windows.Rect" /> Struktur mit dem Rechteck Dimensionen.</param>
+        <param name="radiusX">Der Radius der abgerundeten Ecke, in dem sie eine Verbindung mit den oberen und unteren Rands des Rechtecks herstellt.</param>
+        <param name="radiusY">Der Radius der abgerundeten Ecke, in dem er eine Verbindung mit der linken und rechten Randes des Rechtecks herstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.RectangleGeometry" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RectangleGeometry (System.Windows.Rect rect, double radiusX, double radiusY, System.Windows.Media.Transform transform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Rect rect, float64 radiusX, float64 radiusY, class System.Windows.Media.Transform transform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RectangleGeometry.#ctor(System.Windows.Rect,System.Double,System.Double,System.Windows.Media.Transform)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="radiusX" Type="System.Double" />
+        <Parameter Name="radiusY" Type="System.Double" />
+        <Parameter Name="transform" Type="System.Windows.Media.Transform" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Ein <see cref="T:System.Windows.Rect" /> Struktur mit dem Rechteck Dimensionen.</param>
+        <param name="radiusX">Der Radius der abgerundeten Ecke, in dem sie eine Verbindung mit den oberen und unteren Rands des Rechtecks herstellt.</param>
+        <param name="radiusY">Der Radius der abgerundeten Ecke, in dem er eine Verbindung mit der linken und rechten Randes des Rechtecks herstellt.</param>
+        <param name="transform">Die Transformation, die auf die Geometrie angewendet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.RectangleGeometry" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public override System.Windows.Rect Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.RectangleGeometry.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Rect" /> , die angibt, dass des umgebenden Felds einer <see cref="T:System.Windows.Media.RectangleGeometry" />. Diese Methode berücksichtigt nicht Stifte.</summary>
+        <value>Das umgebende Feld der <see cref="T:System.Windows.Media.RectangleGeometry" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Animationen vorhanden sind, die Basiswerte von der <xref:System.Windows.Media.RectangleGeometry> Objekt werden zum Berechnen des umgebenden Felds.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.RectangleGeometry Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.RectangleGeometry Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RectangleGeometry.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.RectangleGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.RectangleGeometry" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.RectangleGeometry CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.RectangleGeometry CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RectangleGeometry.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.RectangleGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.RectangleGeometry" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RectangleGeometry.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArea">
+      <MemberSignature Language="C#" Value="public override double GetArea (double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float64 GetArea(float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RectangleGeometry.GetArea(System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="tolerance">Die Fehlertoleranz.</param>
+        <param name="type">Gibt an, wie die Fehlertoleranz interpretiert werden.</param>
+        <summary>Ruft das ausgefüllte Bereich dieses <see cref="T:System.Windows.Media.RectangleGeometry" /> Objekt.</summary>
+        <returns>Die ausgefüllte Bereich dieses <see cref="T:System.Windows.Media.RectangleGeometry" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public override bool IsEmpty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsEmpty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RectangleGeometry.IsEmpty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dies <see cref="T:System.Windows.Media.RectangleGeometry" /> Objekt leer ist.</summary>
+        <returns>**"true"** Wenn diese <see cref="T:System.Windows.Media.RectangleGeometry" /> leer ist; andernfalls, **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MayHaveCurves">
+      <MemberSignature Language="C#" Value="public override bool MayHaveCurves ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MayHaveCurves() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RectangleGeometry.MayHaveCurves" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dies <see cref="T:System.Windows.Media.RectangleGeometry" /> Objekt möglicherweise gekrümmte Segmente aufweisen.</summary>
+        <returns>**"true"** Wenn diese <see cref="T:System.Windows.Media.RectangleGeometry" /> Objekt möglicherweise gekrümmte Segmente aufweisen, andernfalls **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadiusX">
+      <MemberSignature Language="C#" Value="public double RadiusX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 RadiusX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.RectangleGeometry.RadiusX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den X-Radius der Ellipse ab, der zum Abrunden der Ecken des Rechtecks verwendet wird, bzw. legt diesen fest.</summary>
+        <value>Ein Wert, der größer als oder gleich 0 (null) und kleiner als oder gleich der Hälfte der Breite des Rechtecks ist, das den X-Radius der Ellipse beschreibt, der zum Abrunden der Ecken des Rechtecks verwendet wird. Werte, die größer als die Hälfte der Breite des Rechtecks sind, werden gleichermaßen wie die Hälfte der Breite des Rechtecks behandelt. Negative Werte werden als positive Werte behandelt. Die Standardeinstellung ist <c>0,0</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für das Rechteck abgerundete Ecken haben sowohl die <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> und <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> Eigenschaften müssen ungleich NULL sein.  
+  
+<a name="dependencyPropertyInfo_RadiusX"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.RectangleGeometry.RadiusXProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadiusXProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RadiusXProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RadiusXProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.RectangleGeometry.RadiusXProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.RectangleGeometry.RadiusX" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadiusY">
+      <MemberSignature Language="C#" Value="public double RadiusY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 RadiusY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.RectangleGeometry.RadiusY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Y-Radius der Ellipse ab, der zum Abrunden der Ecken des Rechtecks verwendet wird, bzw. legt diesen fest.</summary>
+        <value>Ein Wert, der größer als oder gleich 0 (null) und kleiner als oder gleich der Hälfte der Breite des Rechtecks ist, das den Y-Radius der Ellipse beschreibt, der zum Abrunden der Ecken des Rechtecks verwendet wird. Werte, die größer als die Hälfte der Breite des Rechtecks sind, werden gleichermaßen wie die Hälfte der Breite des Rechtecks behandelt. Negative Werte werden als positive Werte behandelt. Die Standardeinstellung ist <c>0,0</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für das Rechteck abgerundete Ecken haben sowohl die <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> und <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> Eigenschaften müssen ungleich NULL sein.  
+  
+<a name="dependencyPropertyInfo_RadiusY"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.RectangleGeometry.RadiusYProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadiusYProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RadiusYProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RadiusYProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.RectangleGeometry.RadiusYProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.RectangleGeometry.RadiusY" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rect">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect Rect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect Rect" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.RectangleGeometry.Rect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Abmessungen des Rechtecks ab oder legt sie fest.</summary>
+        <value>Die Position und Größe des Rechtecks. Die Standardeinstellung ist <see cref="P:System.Windows.Rect.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Rect"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.RectangleGeometry.RectProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RectProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RectProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RectProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.RectangleGeometry.RectProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.RectangleGeometry.Rect" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

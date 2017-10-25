@@ -1,0 +1,329 @@
+<Type Name="BoundColumn" FullName="System.Web.UI.WebControls.BoundColumn">
+  <TypeSignature Language="C#" Value="public class BoundColumn : System.Web.UI.WebControls.DataGridColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BoundColumn extends System.Web.UI.WebControls.DataGridColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.BoundColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataGridColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Spaltentyp für die <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement, das auf ein Feld in einer Datenquelle gebunden ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BoundColumn> Spaltentyp in einer <xref:System.Web.UI.WebControls.DataGrid> Steuerelement, um den Inhalt eines Felds in der Datenquelle anzuzeigen. Die Werte werden in einer einzelnen Spalte aufgeführt. Das Feld verknüpft ist die <xref:System.Web.UI.WebControls.BoundColumn>, sodass alle Updates in der Datenquelle, in den entsprechenden Zellen widerspiegeln das <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+> [!NOTE]
+>  Dieser Spaltentyp ist die Standardeinstellung für die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ Verwenden die Formateigenschaften zum Steuern der Darstellung dieser Spalte die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+> [!CAUTION]
+>  Text ist nicht HTML-codiert vor der Anzeige in der <xref:System.Web.UI.WebControls.BoundColumn>. Dadurch können Skripts in HTML-Tags im Text eingebettet. Wenn die Werte für diese Spalte aus Benutzereingaben stammen, achten Sie darauf, dass Sie zum Überprüfen der Werte, um Sicherheitsrisiken zu reduzieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Web.UI.WebControls.BoundColumn> Spaltentyp in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement, um die Felder in einer Datenquelle anzuzeigen.  
+  
+ [!code-aspx-csharp[Classic BoundColumn Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic BoundColumn Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic BoundColumn Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic BoundColumn Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BoundColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.BoundColumn" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.BoundColumn> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Erstellen und initialisieren eine neue Instanz der dem <xref:System.Web.UI.WebControls.BoundColumn> Klasse und fügen Sie diese der <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung.  
+  
+ [!code-aspx-csharp[DataGridCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridCtor/CS/datagridctorcs.aspx#1)]
+ [!code-aspx-vb[DataGridCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridCtor/VB/datagridctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataField">
+      <MemberSignature Language="C#" Value="public virtual string DataField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundColumn.DataField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie den Feldnamen aus der Datenquelle zum Binden an die <see cref="T:System.Web.UI.WebControls.BoundColumn" />.</summary>
+        <value>Der Name des Felds zum Binden an die <see cref="T:System.Web.UI.WebControls.BoundColumn" />. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BoundColumn.DataField%2A> Eigenschaft an, dass das Feld zum Binden an die <xref:System.Web.UI.WebControls.BoundColumn>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BoundColumn.DataField%2A> -Eigenschaft an den Namen des Felds in der Datenquelle zum Binden an die <xref:System.Web.UI.WebControls.BoundColumn>.  
+  
+ [!code-aspx-csharp[Classic BoundColumn Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic BoundColumn Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic BoundColumn Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic BoundColumn Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataFormatString">
+      <MemberSignature Language="C#" Value="public virtual string DataFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundColumn.DataFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die das Anzeigeformat für Elemente in der Spalte angibt.</summary>
+        <value>Eine Formatierungszeichenfolge, die das Anzeigeformat von Elementen in der Spalte angibt. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BoundColumn.DataFormatString%2A> Eigenschaft, um ein benutzerdefiniertes Format für die Elemente in der Spalte bereitzustellen.  
+  
+ Daten-Formatzeichenfolge besteht aus zwei Teilen, getrennt durch einen Doppelpunkt, im Format { `A` : `Bxx` }. Die Formatierungszeichenfolge {0: F2} zeigt z. B. eine Festkommazahl mit zwei Dezimalstellen an.  
+  
+> [!NOTE]
+>  In der geschweiften Klammern, um anzugeben, dass es auf einer Formatzeichenfolge und keine Literale Zeichenfolge ist, muss die gesamte Zeichenfolge eingeschlossen werden. Beliebiger Text außerhalb der Klammern wird als Literaltext angezeigt.  
+  
+ Der Wert vor dem Doppelpunkt (`A` im allgemeinen Beispiel) gibt an, die Parameter-Index in einer nullbasierten Liste von Parametern.  
+  
+> [!NOTE]
+>  Dieser Wert kann nur auf 0 festgelegt werden, da nur ein Wert in jeder Zelle vorhanden ist.  
+  
+ Die Zeichen nach dem Doppelpunkt (`B` im allgemeinen Beispiel) gibt das Format, um den Wert in anzuzeigen. Die folgende Tabelle enthält die gängigen Formaten.  
+  
+|Formatzeichen|Beschreibung|  
+|----------------------|-----------------|  
+|`C`|Zeigt numerische Werte im Währungsformat an.|  
+|`D`|Zeigt die numerische Werte im Dezimalformat.|  
+|`E`|Numerischen Werte in wissenschaftlicher (exponentieller) Format angezeigt.|  
+|`F`|Numerischen Werte in festgelegten Format angezeigt.|  
+|`G`|Im Allgemeinen formatieren Sie numerische Werte angezeigt.|  
+|`N`|Numerischen Werte im Zahlenformat angezeigt.|  
+|`X`|Numerischen Werte im Hexadezimalformat angezeigt.|  
+  
+> [!NOTE]
+>  Das Formatzeichen ist keine Groß-/Kleinschreibung beachtet, mit Ausnahme von `X`, woraufhin die hexadezimalen Zeichen im angegebenen Fall.  
+  
+ Der Wert nach der Formatzeichen (`xx` im allgemeinen Beispiel) gibt die Anzahl der signifikanten Ziffern oder Dezimalstellen an.  
+  
+ Weitere Informationen zum Formatieren von Zeichenfolgen finden Sie unter [Formatierungstypen](~/docs/standard/base-types/formatting-types.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BoundColumn.DataFormatString%2A> -Eigenschaft an verschiedene Formate für die Spalten in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Die `Qty` Spalte ist als eine ganze Zahl formatiert die `Price` Spalte als Währung formatiert die `Weight` Spalte ist als eine Dezimalzahl formatiert und die `Expires` Spalte als kurzes Datum und Uhrzeit-Zeichenfolge formatiert ist.  
+  
+ [!code-aspx-csharp[BoundColumnDataFormatString#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BoundColumnDataFormatString/cs/BoundColumnSampleCS.aspx#1)]
+ [!code-aspx-vb[BoundColumnDataFormatString#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BoundColumnDataFormatString/vb/BoundColumnSampleVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatDataValue">
+      <MemberSignature Language="C#" Value="protected virtual string FormatDataValue (object dataValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string FormatDataValue(object dataValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundColumn.FormatDataValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataValue">Der zu formatierende Wert.</param>
+        <summary>Konvertiert den angegebenen Wert in das Format, angegeben durch die <see cref="P:System.Web.UI.WebControls.BoundColumn.DataFormatString" /> Eigenschaft.</summary>
+        <returns>Der angegebene Wert in das angegebene Format konvertiert durch die <see cref="P:System.Web.UI.WebControls.BoundColumn.DataFormatString" /> Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BoundColumn.FormatDataValue%2A> Methode, um den angegebenen Wert in das Format zu konvertieren, angegeben durch die <xref:System.Web.UI.WebControls.BoundColumn.DataFormatString%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Diese Methode gibt die Zeichenfolge uhrzeitentsprechung des Werts Wenn die <xref:System.Web.UI.WebControls.BoundColumn.DataFormatString%2A> Eigenschaft nicht festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundColumn.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="T:System.Web.UI.WebControls.BoundColumn" /> auf ihren ursprünglichen Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BoundColumn.Initialize%2A> -Methode zum Zurücksetzen der <xref:System.Web.UI.WebControls.BoundColumn> auf ihren ursprünglichen Zustand.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCell">
+      <MemberSignature Language="C#" Value="public override void InitializeCell (System.Web.UI.WebControls.TableCell cell, int columnIndex, System.Web.UI.WebControls.ListItemType itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeCell(class System.Web.UI.WebControls.TableCell cell, int32 columnIndex, valuetype System.Web.UI.WebControls.ListItemType itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundColumn.InitializeCell(System.Web.UI.WebControls.TableCell,System.Int32,System.Web.UI.WebControls.ListItemType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.TableCell" />
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Ein <see cref="T:System.Web.UI.WebControls.TableCell" /> -Objekt, das Zurücksetzen der Zelle darstellt.</param>
+        <param name="columnIndex">Die Nummer der Spalte, in denen die Zelle befindet.</param>
+        <param name="itemType">Einer der <see cref="T:System.Web.UI.WebControls.ListItemType" />-Werte.</param>
+        <summary>Setzt die angegebene Zelle in der <see cref="T:System.Web.UI.WebControls.BoundColumn" /> auf ihren ursprünglichen Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundColumn.InitializeCell%2A> Methode setzt die angegebene Zelle in der <xref:System.Web.UI.WebControls.BoundColumn> auf ihren ursprünglichen Zustand.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundColumn.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Elemente in der <see cref="T:System.Web.UI.WebControls.BoundColumn" /> bearbeitet werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Elemente in der <see cref="T:System.Web.UI.WebControls.BoundColumn" /> kann nicht bearbeitet werden; andernfalls, <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BoundColumn.ReadOnly%2A> Eigenschaft, um anzugeben, ob die Elemente in der <xref:System.Web.UI.WebControls.BoundColumn> bearbeitet werden kann. Diese Eigenschaft kann auch verwendet werden, um programmgesteuert zu ermitteln, ob die Spalte schreibgeschützt ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BoundColumn.ReadOnly%2A> Eigenschaft angeben, dass eine <xref:System.Web.UI.WebControls.BoundColumn> ist schreibgeschützt. Die ASPX-Datei definiert drei BoundColumn-Steuerelemente und legt die Elementspalte in den schreibgeschützten Modus.  
+  
+ [!code-aspx-csharp[BoundColumnReadOnly#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BoundColumnReadOnly/CS/boundcolumnreadonlycs.aspx#1)]
+ [!code-aspx-vb[BoundColumnReadOnly#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BoundColumnReadOnly/VB/boundcolumnreadonlyvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="thisExpr">
+      <MemberSignature Language="C#" Value="public static readonly string thisExpr;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string thisExpr" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BoundColumn.thisExpr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die Zeichenfolge "!". Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BoundColumn.thisExpr> Feld zur Darstellung der "!" Zeichenfolge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

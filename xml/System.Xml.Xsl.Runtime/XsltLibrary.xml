@@ -1,0 +1,469 @@
+<Type Name="XsltLibrary" FullName="System.Xml.Xsl.Runtime.XsltLibrary">
+  <TypeSignature Language="C#" Value="public sealed class XsltLibrary" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XsltLibrary extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.Runtime.XsltLibrary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlXml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert verschiedene <see langword="XPath" /> und <see langword="XSLT" /> Funktionen.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="CheckScriptNamespace">
+      <MemberSignature Language="C#" Value="public int CheckScriptNamespace (string nsUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 CheckScriptNamespace(string nsUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.CheckScriptNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nsUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="nsUri">Der Namespace-URI.</param>
+        <summary>Überprüft, dass kein Konflikt zwischen Erweiterungs- und Skriptnamespace vorhanden ist.</summary>
+        <returns>Eine nur für die interne Infrastruktur verwendete ganze Zahl.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ElementAvailable">
+      <MemberSignature Language="C#" Value="public bool ElementAvailable (System.Xml.XmlQualifiedName name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ElementAvailable(class System.Xml.XmlQualifiedName name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.ElementAvailable(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der qualifizierte XML-Name.</param>
+        <summary>Wertet das Argument als eine Zeichenfolge aus, die ein qualifizierter XML-Name ist. Diese Methode implementiert die <c>Element verfügbaren</c> Funktion anhand des [W3C XSL Transformations (XSLT)](http://go.microsoft.com/fwlink/?LinkID=49919).</summary>
+        <returns>
+          <see langword="true" />Wenn die [erweiterten Namen](http://go.microsoft.com/fwlink/?LinkId=148269) ist der Name einer Anweisung. Wenn die <see langword="expanded name" /> hat einen Namespace mit dem URI entspricht den XSLT-Namespace-URI verweist auf ein Element von XSLT definiert. Andernfalls verweist der expanded-name auf ein Erweiterungselement. Wenn die <see langword="expanded name" /> verfügt über einen null-Namespace-URI, ein Element verfügbare Funktion zurück <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der qualifizierte Name ist in erweitert eine `expanded name` mithilfe der Namespacedeklarationen im Bereich für den Ausdruck. Die <xref:System.Xml.Xsl.Runtime.XsltLibrary.ElementAvailable%2A> -Funktion gibt `true` nur, wenn die `expanded name` ist der Name einer Anweisung.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityOperator">
+      <MemberSignature Language="C#" Value="public bool EqualityOperator (double opCode, System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt; left, System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool EqualityOperator(float64 opCode, class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathItem&gt; left, class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathItem&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.EqualityOperator(System.Double,System.Collections.Generic.IList{System.Xml.XPath.XPathItem},System.Collections.Generic.IList{System.Xml.XPath.XPathItem})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="opCode" Type="System.Double" />
+        <Parameter Name="left" Type="System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt;" />
+        <Parameter Name="right" Type="System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="opCode">
+          <see cref="T:System.Double" />die die auszuführende Operation angibt</param>
+        <param name="left">
+          <see cref="T:System.Collections.Generic.IList`1" />Der Typ <see cref="T:System.Xml.XPath.XPathItem" />.</param>
+        <param name="right">
+          <see cref="T:System.Collections.Generic.IList`1" />Der Typ <see cref="T:System.Xml.XPath.XPathItem" />.</param>
+        <summary>Bestimmt die Gleichheit zwischen Sammlungen des Typs <see cref="T:System.Xml.XPath.XPathItem" />.</summary>
+        <returns>Gibt <see langword="true" /> Wenn Auflistungen gleich, andernfalls sind <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FormatMessage">
+      <MemberSignature Language="C#" Value="public string FormatMessage (string res, System.Collections.Generic.IList&lt;string&gt; args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string FormatMessage(string res, class System.Collections.Generic.IList`1&lt;string&gt; args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.FormatMessage(System.String,System.Collections.Generic.IList{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="res" Type="System.String" />
+        <Parameter Name="args" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="res">Eine Zeichenfolge, die die Meldungsressource enthält.</param>
+        <param name="args">Eine Liste von Zeichenfolgen, die Argumente für die Methode darstellen.</param>
+        <summary>Formate eine Ausnahmemeldung besteht aus einer Formatzeichenfolge, die vom der <paramref name="res" /> Parameter und Argumente enthalten die <paramref name="args" /> Parameter.</summary>
+        <returns>Eine Zeichenfolge, die die formatierte Ausnahmemeldung enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FormatNumberDynamic">
+      <MemberSignature Language="C#" Value="public string FormatNumberDynamic (double value, string formatPicture, System.Xml.XmlQualifiedName decimalFormatName, string errorMessageName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string FormatNumberDynamic(float64 value, string formatPicture, class System.Xml.XmlQualifiedName decimalFormatName, string errorMessageName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.FormatNumberDynamic(System.Double,System.String,System.Xml.XmlQualifiedName,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="formatPicture" Type="System.String" />
+        <Parameter Name="decimalFormatName" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="errorMessageName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <see cref="T:System.Double" />den zu formatierende Wert enthält.</param>
+        <param name="formatPicture">Eine Zeichenfolge, die das Formatbild enthält.</param>
+        <param name="decimalFormatName">
+          <see cref="T:System.Xml.XmlQualifiedName" />enthält den Formatnamen.</param>
+        <param name="errorMessageName">Eine Zeichenfolge, die den Namen der Fehlermeldung enthält.</param>
+        <summary>Implementiert die format-number()-XSLT-Funktion. Weitere Informationen finden Sie unter der [Zahlenformate](http://go.microsoft.com/fwlink/?LinkId=144247) Abschnitt in der W3C-Empfehlung.</summary>
+        <returns>Gibt eine Zeichenfolge zurück, die das Zahlenformat angibt. Weitere Informationen finden Sie unter der [Zahlenformate](http://go.microsoft.com/fwlink/?LinkId=144247) Abschnitt in der W3C-Empfehlung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Xsl.Runtime.XsltLibrary.FormatNumberDynamic%2A> Methode Formate `value` mithilfe der `formatPicture` und Dezimalformat [erweiterten Namen](http://go.microsoft.com/fwlink/?LinkID=148269). Die `errorMessageName` wird nur für die Fehlerberichterstattung verwendet und muss den qualifizierten Namen des Objekts Dezimalformat enthalten.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FormatNumberStatic">
+      <MemberSignature Language="C#" Value="public string FormatNumberStatic (double value, double decimalFormatterIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string FormatNumberStatic(float64 value, float64 decimalFormatterIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.FormatNumberStatic(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="decimalFormatterIndex" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <see cref="T:System.Double" />So formatieren Sie Wert enthält.</param>
+        <param name="decimalFormatterIndex">
+          <see cref="T:System.Double" />den Formatierungsindex enthält.</param>
+        <summary>Implementiert die format-number()-XSLT-Funktion. Weitere Informationen finden Sie unter der [Zahlenformate](http://go.microsoft.com/fwlink/?LinkId=144247) Abschnitt in der W3C-Empfehlung.</summary>
+        <returns>Eine Zeichenfolge, die das Format angibt. Weitere Informationen finden Sie unter der [Zahlenformate](http://go.microsoft.com/fwlink/?LinkId=144247) Abschnitt in der W3C-Empfehlung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Xsl.Runtime.XsltLibrary.FormatNumberStatic%2A> -Methode formatiert den angegebenen Wert mit dem angegebenen Dezimalformatierungsobjekt, erstellt, indem <xref:System.Xml.Xsl.Runtime.XsltLibrary.RegisterDecimalFormatter%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FunctionAvailable">
+      <MemberSignature Language="C#" Value="public bool FunctionAvailable (System.Xml.XmlQualifiedName name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FunctionAvailable(class System.Xml.XmlQualifiedName name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.FunctionAvailable(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+          <see cref="T:System.Xml.XmlQualifiedName" />Name-Objekt.</param>
+        <summary>Implementiert die [function-available()](http://go.microsoft.com/fwlink/?LinkId=144249) XSLT-Funktion.</summary>
+        <returns>Ein boolescher Wert, der <see langword="true" /> Wenn von die Funktion identifiziert <paramref name="name" /> verfügbar ist.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsSameNodeSort">
+      <MemberSignature Language="C#" Value="public bool IsSameNodeSort (System.Xml.XPath.XPathNavigator nav1, System.Xml.XPath.XPathNavigator nav2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsSameNodeSort(class System.Xml.XPath.XPathNavigator nav1, class System.Xml.XPath.XPathNavigator nav2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.IsSameNodeSort(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nav1" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="nav2" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="nav1">
+          <see cref="T:System.Xml.XPath.XPathNavigator" />zu vergleichende Objekt.</param>
+        <param name="nav2">
+          <see cref="T:System.Xml.XPath.XPathNavigator" />zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob zwei Knoten den gleichen Knotentyp und, wenn Knoten dieses Knotentyps über erweiterte Namen verfügen, den gleichen erweiterten Namen aufweisen.</summary>
+        <returns>Ein boolescher Wert, der <see langword="true" /> Wenn zwei Knoten den gleichen Knotentyp und, wenn Knoten dieses Knotentyps Namen erweitert haben, den gleichen Namen erweiterten.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LangToLcid">
+      <MemberSignature Language="C#" Value="public int LangToLcid (string lang, bool forwardCompatibility);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 LangToLcid(string lang, bool forwardCompatibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.LangToLcid(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lang" Type="System.String" />
+        <Parameter Name="forwardCompatibility" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="lang">Eine Zeichenfolge, die die Sprache angibt.</param>
+        <param name="forwardCompatibility">Ein boolescher Wert, der true ist, wenn die Sprache aufwärtskompatibel ist.</param>
+        <summary>Konvertiert die Sprachen-ID (nach den Angaben in der <see langword="xml:lang" /> Attribut) auf die Kultur-ID (LCID).</summary>
+        <returns>Eine Zeichenfolge, die den Kulturbezeichner enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NumberFormat">
+      <MemberSignature Language="C#" Value="public string NumberFormat (System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt; value, string formatString, double lang, string letterValue, string groupingSeparator, double groupingSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string NumberFormat(class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathItem&gt; value, string formatString, float64 lang, string letterValue, string groupingSeparator, float64 groupingSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.NumberFormat(System.Collections.Generic.IList{System.Xml.XPath.XPathItem},System.String,System.Double,System.String,System.String,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt;" />
+        <Parameter Name="formatString" Type="System.String" />
+        <Parameter Name="lang" Type="System.Double" />
+        <Parameter Name="letterValue" Type="System.String" />
+        <Parameter Name="groupingSeparator" Type="System.String" />
+        <Parameter Name="groupingSize" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <see cref="T:System.Collections.Generic.IList`1" />von Zeichenfolgen, die Argumente der Methode darstellen.</param>
+        <param name="formatString">
+          <see cref="T:System.Double" />Wert, der die Zeichenfolge angibt.</param>
+        <param name="lang">
+          <see cref="T:System.Double" />Wert, der die Sprache angibt.</param>
+        <param name="letterValue">Eine Zeichenfolge, die den Buchstabenwert enthält.</param>
+        <param name="groupingSeparator">Eine Zeichenfolge, die das Gruppierungstrennzeichen enthält.</param>
+        <param name="groupingSize">
+          <see cref="T:System.Double" />die Gruppierungsgröße enthält.</param>
+        <summary>Ruft eine Zeichenfolge ab, die das Zahlenformat angibt.</summary>
+        <returns>Eine Zeichenfolge, die das Zahlenformat angibt. Wird nur für die interne Infrastruktur verwendet.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterDecimalFormat">
+      <MemberSignature Language="C#" Value="public int RegisterDecimalFormat (System.Xml.XmlQualifiedName name, string infinitySymbol, string nanSymbol, string characters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 RegisterDecimalFormat(class System.Xml.XmlQualifiedName name, string infinitySymbol, string nanSymbol, string characters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.RegisterDecimalFormat(System.Xml.XmlQualifiedName,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="infinitySymbol" Type="System.String" />
+        <Parameter Name="nanSymbol" Type="System.String" />
+        <Parameter Name="characters" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+          <see cref="T:System.Xml.XmlQualifiedName" />ein Objekt, das Namen enthält.</param>
+        <param name="infinitySymbol">Eine Zeichenfolge, die das Unendlichkeitssymbol enthält.</param>
+        <param name="nanSymbol">Eine Zeichenfolge, die das NaN-Symbol enthält.</param>
+        <param name="characters">Eine Zeichenfolge, die zu formatierende Zeichen enthält.</param>
+        <summary>Registriert ein Dezimalformat mit dem angegebenen erweiterten Namen. Weitere Informationen finden Sie unter der [Zahlenformate](http://go.microsoft.com/fwlink/?LinkId=144247) Abschnitt in der W3C-Empfehlung.</summary>
+        <returns>In der aktuellen Implementierung ist der Rückgabewert immer 0.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterDecimalFormatter">
+      <MemberSignature Language="C#" Value="public double RegisterDecimalFormatter (string formatPicture, string infinitySymbol, string nanSymbol, string characters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 RegisterDecimalFormatter(string formatPicture, string infinitySymbol, string nanSymbol, string characters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.RegisterDecimalFormatter(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatPicture" Type="System.String" />
+        <Parameter Name="infinitySymbol" Type="System.String" />
+        <Parameter Name="nanSymbol" Type="System.String" />
+        <Parameter Name="characters" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formatPicture">Eine Zeichenfolge, die das Formatbild enthält.</param>
+        <param name="infinitySymbol">Eine Zeichenfolge, die das Unendlichkeitssymbol enthält.</param>
+        <param name="nanSymbol">Eine Zeichenfolge, die das NaN-Symbol enthält.</param>
+        <param name="characters">Eine Zeichenfolge, die zu formatierende Zeichen enthält.</param>
+        <summary>Registriert ein Dezimalformatierungsobjekt und gibt einen eindeutigen Index zurück, der ihm zugewiesen ist. Das Dezimalformatierungsobjekt wird von der format-number()-XSLT-Funktion verwendet. Weitere Informationen finden Sie unter der [Zahlenformate](http://go.microsoft.com/fwlink/?LinkId=144247) Abschnitt in der W3C-Empfehlung.</summary>
+        <returns>Gibt einen eindeutigen Index vom Typ <see cref="T:System.Double" /> ein Dezimalformatierungsobjekt zugewiesen.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RelationalOperator">
+      <MemberSignature Language="C#" Value="public bool RelationalOperator (double opCode, System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt; left, System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RelationalOperator(float64 opCode, class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathItem&gt; left, class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathItem&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XsltLibrary.RelationalOperator(System.Double,System.Collections.Generic.IList{System.Xml.XPath.XPathItem},System.Collections.Generic.IList{System.Xml.XPath.XPathItem})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="opCode" Type="System.Double" />
+        <Parameter Name="left" Type="System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt;" />
+        <Parameter Name="right" Type="System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="opCode">Gibt an, wie zwei Ausdrücke ausgewertet werden:  
+  
+ Wenn OpCode gleich 2 ist, wertet die XPath-Ausdruck "left &lt; rechten".  
+  
+ Wenn OpCode gleich 3 ist, wertet die XPath-Ausdruck "left &lt;= Right".  
+  
+ Wenn OpCode gleich 4 ist, wertet die XPath-Ausdruck "left &gt; rechten".  
+  
+ Wenn OpCode gleich 5 ist, wertet die XPath-Ausdruck "left &gt;= Right"</param>
+        <param name="left">Der auszuwertende Ausdruck.</param>
+        <param name="right">Der auszuwertende Ausdruck.</param>
+        <summary>Ausgewertet wird, ob die <paramref name="left" /> Ausdruck ist größer als oder gleich oder kleiner als oder gleich der <paramref name="right" /> Ausdruck auf der Grundlage der <paramref name="opCode" /> übergeben.</summary>
+        <returns>Ein boolescher Wert, der true ist, wenn der linke Ausdruck größer oder gleich dem rechten Ausdruck ist.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,53 @@
+<Type Name="FormViewModeEventHandler" FullName="System.Web.UI.WebControls.FormViewModeEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void FormViewModeEventHandler(object sender, FormViewModeEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormViewModeEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewModeEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.FormViewModeEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.FormViewModeEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die <see cref="E:System.Web.UI.WebControls.FormView.ModeChanging" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormView.ModeChanging> Ereignis wird ausgelöst, wenn ein <xref:System.Web.UI.WebControls.FormView> Steuerelement versucht, wechseln Sie zwischen bearbeiten, einfügen und nur-Lese-Modus, jedoch bevor der Modus tatsächlich ändert. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die führt eine benutzerdefinierte Routine, z. B. das Konfigurieren der <xref:System.Web.UI.WebControls.FormView> für einen bestimmten Modus zu steuern oder die Änderung Modus abbrechen, wenn dieses Ereignis tritt auf.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.FormViewModeEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie programmgesteuert hinzufügen einer <xref:System.Web.UI.WebControls.FormViewModeEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.FormView.ModeChanging> -Ereignis für eine <xref:System.Web.UI.WebControls.FormView> Steuerelement.  
+  
+> [!IMPORTANT]
+>  Das Steuerelement in diesem Beispiel hat ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewModeEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewModeEventHandler/CS/formviewmodeeventhandlercs.aspx#1)]
+ [!code-aspx-vb[FormViewModeEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewModeEventHandler/VB/formviewmodeeventhandlervb.aspx#1)]  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie deklarativ hinzufügen eine <xref:System.Web.UI.WebControls.FormViewModeEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.FormView.ModeChanging> -Ereignis für ein <xref:System.Web.UI.WebControls.FormView> Steuerelement.  
+  
+> [!IMPORTANT]
+>  Das Steuerelement in diesem Beispiel hat ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewModeEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewModeEventArgs/CS/formviewmodeeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewModeEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewModeEventArgs/VB/formviewmodeeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

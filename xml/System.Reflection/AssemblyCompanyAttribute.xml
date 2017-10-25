@@ -1,0 +1,113 @@
+<Type Name="AssemblyCompanyAttribute" FullName="System.Reflection.AssemblyCompanyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyCompanyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyCompanyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.AssemblyCompanyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert ein benutzerdefiniertes Attribut für den Unternehmensnamen in einem Assemblymanifest.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie anzuwendenden Attribute, einschließlich der <xref:System.Reflection.AssemblyCompanyAttribute> Attribut, um eine dynamische Assembly. Im Beispiel wird die Assembly auf dem Datenträger gespeichert und kann den Wert des Attributs angezeigt werden, mithilfe der **Windows Dateieigenschaften** Dialogfeld.  
+  
+ [!code-cpp[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/CPP/assemblybuilder_defineversioninforesource.cpp#1)]
+ [!code-csharp[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/CS/assemblybuilder_defineversioninforesource.cs#1)]
+ [!code-vb[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/VB/assemblybuilder_defineversioninforesource.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyCompanyAttribute (string company);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string company) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyCompanyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="company" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="company">Informationen über den Firmennamen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.AssemblyCompanyAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Company">
+      <MemberSignature Language="C#" Value="public string Company { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Company" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyCompanyAttribute.Company" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Unternehmen Informationen ab.</summary>
+        <value>Eine Zeichenfolge mit der Firmenname.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

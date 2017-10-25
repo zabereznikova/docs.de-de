@@ -1,0 +1,67 @@
+<Type Name="HitTestResult" FullName="System.Windows.Media.HitTestResult">
+  <TypeSignature Language="C#" Value="public abstract class HitTestResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HitTestResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.HitTestResult" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt für mehrere abgeleitete Klassen die Basisklasse bereit, die den Rückgabewert aus einem Treffertest darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.PointHitTestResult>, <xref:System.Windows.Media.GeometryHitTestResult>, und <xref:System.Windows.Media.Media3D.RayHitTestResult> Klassen ableiten <xref:System.Windows.Media.HitTestResult>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Abrufen der <xref:System.Windows.Media.HitTestResult> Rückgabewert aus der <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> Methode.  
+  
+ [!code-csharp[HitTestingOverview#100](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#100)]
+ [!code-vb[HitTestingOverview#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#100)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="VisualHit">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject VisualHit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyObject VisualHit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.HitTestResult.VisualHit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das visuelle Objekt ab, das ermittelt wurde.</summary>
+        <value>Ein <see cref="T:System.Windows.DependencyObject" /> Wert, der das ermittelte visuelle Objekt darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.DependencyObject>weist den Typ statt <xref:System.Windows.Media.Visual> , damit Treffertests 2D- und 3D-Ausrichtung Strukturen über einen Viewport verbinden können.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Abrufen der <xref:System.Windows.Media.HitTestResult.VisualHit%2A> Eigenschaftswert in einer Treffertest-Rückrufmethode.  
+  
+ [!code-csharp[HitTestingOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#102)]
+ [!code-vb[HitTestingOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

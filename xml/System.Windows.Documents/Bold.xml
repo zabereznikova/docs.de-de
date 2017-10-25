@@ -1,0 +1,138 @@
+<Type Name="Bold" FullName="System.Windows.Documents.Bold">
+  <TypeSignature Language="C#" Value="public class Bold : System.Windows.Documents.Span" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Bold extends System.Windows.Documents.Span" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Bold" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Span</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Element für fortlaufenden Inhalt auf Inlineebene, durch das Inhalt mit Fettschriftbreite gerendert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.Bold>Erzwingt ein starkes Inhaltsmodell für den untergeordneten Inhalt an. Finden Sie unter [Übersicht über das TextElement](~/docs/framework/wpf/advanced/textelement-content-model-overview.md) Weitere Informationen zu den <xref:System.Windows.Documents.Bold> Inhaltsmodell.  
+  
+ Das Objekt ist das Äquivalent einer <xref:System.Windows.Documents.Span> mit <xref:System.Windows.FontWeight> festgelegt <xref:System.Windows.FontWeights.Bold%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bold ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Bold.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der dem <see cref="T:System.Windows.Documents.Bold" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bold (System.Windows.Documents.Inline childInline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Inline childInline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Bold.#ctor(System.Windows.Documents.Inline)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="childInline" Type="System.Windows.Documents.Inline" />
+      </Parameters>
+      <Docs>
+        <param name="childInline">Ein <see cref="T:System.Windows.Documents.Inline" /> angeben die anfänglichen Inhalte des neuen Objekts <see cref="T:System.Windows.Documents.Bold" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.Bold" /> -Klasse, wobei eine angegebene <see cref="T:System.Windows.Documents.Inline" /> Objekt als die anfänglichen Inhalte des neuen <see cref="T:System.Windows.Documents.Bold" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung dieses Konstruktors.  
+  
+ [!code-csharp[SpanSnippets#_Bold_Const1](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_bold_const1)]
+ [!code-vb[SpanSnippets#_Bold_Const1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_bold_const1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bold (System.Windows.Documents.Inline childInline, System.Windows.Documents.TextPointer insertionPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Inline childInline, class System.Windows.Documents.TextPointer insertionPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Bold.#ctor(System.Windows.Documents.Inline,System.Windows.Documents.TextPointer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="childInline" Type="System.Windows.Documents.Inline" />
+        <Parameter Name="insertionPosition" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="childInline">Ein <see cref="T:System.Windows.Documents.Inline" /> angeben die anfänglichen Inhalte des neuen Objekts <see cref="T:System.Windows.Documents.Bold" />.  Dieser Parameter ist möglicherweise <see langword="null" />, in diesem Fall keine <see cref="T:System.Windows.Documents.Inline" /> eingefügt wird.</param>
+        <param name="insertionPosition">Ein <see cref="T:System.Windows.Documents.TextPointer" /> eine Einfügeposition ab dem Einfügen der <see cref="T:System.Windows.Documents.Bold" /> Element, nachdem es erstellt wurde, oder <see langword="null" /> für kein automatisches einfügen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.Bold" /> -Klasse, wobei eine angegebene <see cref="T:System.Windows.Documents.Inline" /> Objekt als die anfänglichen Inhalte des neuen <see cref="T:System.Windows.Documents.Bold" />, und ein <see cref="T:System.Windows.Documents.TextPointer" /> eine Einfügeposition für den neuen <see cref="T:System.Windows.Documents.Inline" /> Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung dieses Konstruktors.  
+  
+ [!code-csharp[SpanSnippets#_Bold_Const2](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_bold_const2)]
+ [!code-vb[SpanSnippets#_Bold_Const2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_bold_const2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bold (System.Windows.Documents.TextPointer start, System.Windows.Documents.TextPointer end);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.TextPointer start, class System.Windows.Documents.TextPointer end) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Bold.#ctor(System.Windows.Documents.TextPointer,System.Windows.Documents.TextPointer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="start" Type="System.Windows.Documents.TextPointer" />
+        <Parameter Name="end" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="start">Ein <see cref="T:System.Windows.Documents.TextPointer" /> , der angibt, der des Anfang einer Auswahl von Inhalten für die neue enthalten sein <see cref="T:System.Windows.Documents.Bold" />.</param>
+        <param name="end">Ein <see cref="T:System.Windows.Documents.TextPointer" /> , die das Ende einer Auswahl von Inhalten für die neue enthalten sein <see cref="T:System.Windows.Documents.Bold" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.Bold" /> -Klasse, indem zwei <see cref="T:System.Windows.Documents.TextPointer" /> Objekte, die angeben, Anfang und Ende einer Auswahl von Inhalten für die neue enthalten sein <see cref="T:System.Windows.Documents.Bold" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor dient zur Initialisierung einer neuen <xref:System.Windows.Documents.Bold> content-Element so, dass es sich um eine Auswahl von bereits vorhandenen umschließt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung dieses Konstruktors.  
+  
+ [!code-csharp[SpanSnippets#_Bold_Const3](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_bold_const3)]
+ [!code-vb[SpanSnippets#_Bold_Const3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_bold_const3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <paramref name="start" /> oder <paramref name="end" /> ist **null**.</exception>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn <paramref name="start" /> und <paramref name="end" /> nicht auf einen Bereich von Inhaltsbereich durch Auflösen einer <see cref="T:System.Windows.Documents.Bold" /> Element, z. B. wenn <paramref name="start" /> und <paramref name="end" /> Positionen in anderen Absätzen anzugeben.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

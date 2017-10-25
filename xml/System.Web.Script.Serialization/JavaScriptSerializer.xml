@@ -1,0 +1,628 @@
+<Type Name="JavaScriptSerializer" FullName="System.Web.Script.Serialization.JavaScriptSerializer">
+  <TypeSignature Language="C#" Value="public class JavaScriptSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JavaScriptSerializer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Script.Serialization.JavaScriptSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>[Json.NET](http://www.newtonsoft.com/json) Serialisierung und Deserialisierung verwendet werden soll. Stellt die Serialisierungs- und Deserialisierungsfunktionen für AJAX-aktivierte Anwendungen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Script.Serialization.JavaScriptSerializer> Klasse wird von der Schicht für die asynchrone Kommunikation zum Serialisieren und Deserialisieren der Daten, die zwischen dem Browser und dem Webserver übergeben werden intern verwendet. Sie können nicht auf diese Instanz des Serialisierungsprogramms zugreifen. Diese Klasse stellt jedoch eine öffentliche API. Aus diesem Grund können Sie die Klasse, wenn Sie mit JavaScript Object Notation (JSON) in verwaltetem Code arbeiten möchten.  
+  
+ Um ein Objekt zu serialisieren, verwenden die <xref:System.Web.Script.Serialization.JavaScriptSerializer.Serialize%2A> Methode. Verwenden Sie zum Deserialisieren einer JSON-Zeichenfolge der <xref:System.Web.Script.Serialization.JavaScriptSerializer.Deserialize%2A> oder <xref:System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject%2A> Methoden. Zum Serialisieren und Deserialisieren von Typen, die keine systemeigene Unterstützung bietet <xref:System.Web.Script.Serialization.JavaScriptSerializer>, Implementieren von benutzerdefinierten Konverter mithilfe der <xref:System.Web.Script.Serialization.JavaScriptConverter> Klasse. Registrieren Sie den Konverter mithilfe der <xref:System.Web.Script.Serialization.JavaScriptSerializer.RegisterConverters%2A> Methode.  
+  
+## <a name="mapping-between-managed-types-and-json"></a>Die Zuordnung zwischen verwalteten Typen und JSON  
+ Die folgende Tabelle zeigt die Zuordnung zwischen verwalteten Typen und JSON für den Serialisierungsprozess. Diese verwalteten Typen werden von systemeigen unterstützt <xref:System.Web.Script.Serialization.JavaScriptSerializer>. Bei der Deserialisierung aus einer JSON-Zeichenfolge in einen verwalteten Typ gilt die gleiche Zuordnung. Allerdings kann die Deserialisierung asymmetrischen sein; nicht alle serialisierbare verwaltete Typen können aus JSON deserialisiert werden.  
+  
+> [!NOTE]
+>  Ein mehrdimensionales Array als ein eindimensionales Array serialisiert wird, und sollten Sie es als flache Arrays verwenden.  
+  
+|Verwalteten Typ|JSON-Entsprechung|  
+|------------------|---------------------|  
+|<xref:System.String>(UTF-8-Codierung nur).|Zeichenfolge|  
+|<xref:System.Char>|Zeichenfolge|  
+|Einzelne null-Zeichen (z. B. \0)|Null|  
+|<xref:System.Boolean>|Boolesch. Dargestellt in JSON als `true` oder`false`|  
+|`null`(`null` Objektverweise und <xref:System.Nullable> Werttypen).|Ein String-Wert von null|  
+|<xref:System.DBNull>|Ein String-Wert von null|  
+|Primitive numerische (oder numerisch-kompatible) Typen: <xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Double>, und <xref:System.Single>. Die Zeichenfolgendarstellung der Kultur wird verwendet.|Anzahl|  
+|<xref:System.DateTime>|Date-Objekt dargestellt in JSON als "\\/Date (Anzahl der Ticks)\\/". Die Anzahl der Ticks ist eine positive oder negative long-Wert, der die Anzahl der Ticks (in Millisekunden) angibt, die seit 01 Januar 1970 UTC vergangen sind.<br /><br /> Die maximal unterstützte Datum ist der Wert <xref:System.DateTime.MaxValue> (12/31/9999 11:59:59 Uhr) und der minimalen unterstützten Datumswert ist <xref:System.DateTime.MinValue> (1/1/0001 12:00:00 Uhr).|  
+|Enumerationen des ganzzahligen Typs|Ganzzahlige Entsprechung des Enumerationswerts|  
+|Typen implementiert, <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> , die keine sind auch Implementierungen der <xref:System.Collections.IDictionary> oder <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>. Dazu gehören auch die Typen <xref:System.Array>, <xref:System.Collections.ArrayList>, und <xref:System.Collections.Generic.List%601>.|Array, das JSON-Array-Syntax verwendet.|  
+|Typen implementiert, <xref:System.Collections.IDictionary> oder <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>. Dazu gehören auch die Typen <xref:System.Collections.Generic.Dictionary%602> und <xref:System.Collections.Hashtable>.|JavaScript-Objekt, das JSON-Wörterbuch-Syntax verwendet.|  
+|Benutzerdefinierte konkrete (nicht abstrakte)-Typen, die öffentlichen Instanzeigenschaften verfügen, die sind get-Accessoren oder öffentliche Instanzenfelder.<br /><br /> Beachten Sie, dass mit öffentlichen WriteOnly-Eigenschaften, die öffentliche Eigenschaft oder öffentlichen Feldattributen gekennzeichnet <xref:System.Web.Script.Serialization.ScriptIgnoreAttribute>, und die öffentliche indizierte Eigenschaften in diesen Typen werden ignoriert.|JavaScript-Objekt, das JSON-Wörterbuch-Syntax verwendet. Eine spezielle Metadateneigenschaft, die mit dem Namen "__type" wird eingeschlossen, um die richtige Deserialisierung sicherzustellen. Stellen Sie sicher, dass die öffentlichen Eigenschaften verfügen über get- und set-Accessoren, um die richtige Deserialisierung sicherzustellen.|  
+|<xref:System.Guid>|Die Zeichenfolgendarstellung einer GUID|  
+|<xref:System.Uri>|Entspricht der Zeichenfolgendarstellung des Rückgabewerts der<xref:System.Uri.GetComponents%2A>|  
+  
+   
+  
+## Examples  
+ Im erste Beispiel bietet eine einfache Veranschaulichung zum Serialisieren und Deserialisieren von Datenobjekten. Er erfordert einen Klassennamen Person der unten angezeigt wird.  
+  
+ [!code-csharp[System.Web.Script.Serialization.JavaScriptSerializer#1](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.script.serialization.javascriptserializer/cs/default.aspx.cs#1)]
+ [!code-vb[System.Web.Script.Serialization.JavaScriptSerializer#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.script.serialization.javascriptserializer/vb/default.aspx.vb#1)]  
+  
+ [!code-csharp[System.Web.Script.Serialization.JavaScriptSerializer#2](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.script.serialization.javascriptserializer/cs/person.cs#2)]
+ [!code-vb[System.Web.Script.Serialization.JavaScriptSerializer#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.script.serialization.javascriptserializer/vb/person.vb#2)]  
+  
+ Das nächste Beispiel zeigt ein mehr komplizierte und vollständige Projekt, verwendet die <xref:System.Web.Script.Serialization.JavaScriptSerializer> -Klasse zum Speichern und Wiederherstellen des Zustands eines Objekts mithilfe von JSON-Serialisierung. Dieser Code verwendet einen benutzerdefinierten Konverter, die aus Gründen der <xref:System.Web.Script.Serialization.JavaScriptConverter> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.Script.Serialization#4](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.Script.Serialization/CS/Default.aspx#4)]
+ [!code-aspx-vb[System.Web.Script.Serialization#4](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.Script.Serialization/VB/Default.aspx#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JavaScriptSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Script.Serialization.JavaScriptSerializer" />-Klasse, die über keinen Typresolver verfügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Web.Script.Serialization.JavaScriptSerializer> -Klasse ohne ein Typresolver keine Metadaten-Typeigenschaften (mit dem Namen "__type") in die serialisierte JSON-Zeichenfolge umfasst. Eine Typ Metadata-Eigenschaft wird verwendet, durch die <xref:System.Web.Script.Serialization.JavaScriptSerializer.Deserialize%2A> und <xref:System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject%2A> Geben Sie Methoden zur Bestimmung der entsprechenden verwaltet, die die JSON-Zeichenfolge konvertiert wird. Informationen zu Typ Konfliktlöser finden Sie unter der <xref:System.Web.Script.Serialization.JavaScriptTypeResolver> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JavaScriptSerializer (System.Web.Script.Serialization.JavaScriptTypeResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.Script.Serialization.JavaScriptTypeResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptSerializer.#ctor(System.Web.Script.Serialization.JavaScriptTypeResolver)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resolver" Type="System.Web.Script.Serialization.JavaScriptTypeResolver" />
+      </Parameters>
+      <Docs>
+        <param name="resolver">Das benutzerdefinierte Typresolverobjekt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Script.Serialization.JavaScriptSerializer" />-Klasse, die über einen benutzerdefinierten Typresolver verfügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Serialisieren eines Objekts, das <xref:System.Web.Script.Serialization.JavaScriptSerializer> -Klasse verwendet die `resolver` Parameter, um zu bestimmen, den entsprechenden Wert in die serialisierte JSON-Zeichenfolge für die Metadaten-Typeigenschaft ("__type") eingeschlossen werden sollen. Auf ähnliche Weise, wenn die <xref:System.Web.Script.Serialization.JavaScriptSerializer> -Klasse ist eine JSON-Zeichenfolge deserialisiert, löst Wert der Eigenschaft in den entsprechenden verwalteten Typ mit den Abhängigkeitskonfliktlöser-Instanz.  
+  
+ Sie können festlegen, die `resolver` Parameter an `null`, dies entspricht dem Aufrufen der <xref:System.Web.Script.Serialization.JavaScriptSerializer.%23ctor%2A> Konstruktor.  
+  
+ Die Instanz von <xref:System.Web.Script.Serialization.JavaScriptSerializer> , von der Schicht für die asynchrone Kommunikation verwendet wird, für einen besonderen Typresolver Aufrufen von Webdiensten von Clientskripts verwendet werden. Dieser Typresolver schränkt die Typen, die deserialisiert werden können, die in der Methodensignatur des Webdiensts oder diejenigen mit definierten der <xref:System.Web.Script.Services.GenerateScriptTypeAttribute> angewendet. Diese integrierten Typresolver kann nicht programmgesteuert geändert werden.  
+  
+> [!IMPORTANT]
+>  Verwenden einer Instanz dieses Objekts mit einem benutzerdefinierten Typresolver initialisiert wurde, kann ein Sicherheitsrisiko darstellen. Verwenden Sie dieses Objekt nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToType">
+      <MemberSignature Language="C#" Value="public object ConvertToType (object obj, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ConvertToType(object obj, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptSerializer.ConvertToType(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu konvertierende Objekt.</param>
+        <param name="targetType">Der Typ, in den das Objekt konvertiert werden soll.</param>
+        <summary>Konvertiert das angegebene Objekt in den angegebenen Typ.</summary>
+        <returns>Die serialisierte JSON-Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.Script.Serialization.JavaScriptSerializer> Instanz einen Typ für den benutzerdefinierter Konverter registriert ist, ruft das Serialisierungsprogramm serialisiert die <xref:System.Web.Script.Serialization.JavaScriptConverter.Serialize%2A> Methode, um das Wörterbuch von Name/Wert-Paare abzurufen, die in eine JSON-formatierte Zeichenfolge konvertiert wird.  
+  
+ Die <xref:System.Web.Script.Serialization.JavaScriptSerializer.Serialize%2A> Methode kann auch Ausnahmen auslösen, wenn das Objektdiagramm zu komplex ist oder registrierte Instanzen von <xref:System.Web.Script.Serialization.JavaScriptConverter> Konverterrekursion verursacht haben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die resultierende JSON-formatierte Zeichenfolge überschreitet den Wert von <see cref="P:System.Web.Script.Serialization.JavaScriptSerializer.MaxJsonLength" />.  
+  
+ - oder -   
+  
+ <paramref name="obj" />enthält einen Zirkelverweis. Ein Zirkelverweis tritt auf, wenn ein untergeordnetes Objekt einen Verweis auf ein übergeordnetes Objekt enthält und das übergeordnete Objekt einen Verweis auf das untergeordnete Objekt enthält.</exception>
+        <exception cref="T:System.ArgumentException">Das rekursionslimit durch definierten <see cref="P:System.Web.Script.Serialization.JavaScriptSerializer.RecursionLimit" /> wurde überschritten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToType&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T ConvertToType&lt;T&gt; (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T ConvertToType&lt;T&gt;(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptSerializer.ConvertToType``1(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ, den <c>Obj</c> konvertiert.</typeparam>
+        <param name="obj">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert das angegebene Objekt in den angegebenen Typ.</summary>
+        <returns>Das Objekt, das in den Zieltyp konvertiert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Script.Serialization.JavaScriptSerializer.ConvertToType%2A> Methode versucht, die die Objektinstanz zu konvertieren, die durch dargestellt wird `obj` mit einer Instanz des Typs `T`. Bei der Konvertierung besteht es keine Garantie, dass Objektverweisgleichheit beibehalten wird. Aus diesem Grund kann nicht davon ausgehen, die `obj` und `T` auf dasselbe Objekt verweisen.  
+  
+ <xref:System.Web.Script.Serialization.JavaScriptSerializer.ConvertToType%2A>soll verwendet werden, wenn Sie eine Klasse implementieren, die abgeleitet <xref:System.Web.Script.Serialization.JavaScriptConverter>. Konvertercode muss einen Wert annehmen, der im Wörterbuch enthalten ist, die das Serialisierungsprogramm an ihn übergibt, und konvertieren Sie diesen Wert mit einer Instanz des Typs `T`. Anstelle den benutzerdefinierten Konvertierungscode zur Ausführung dieser Aufgabe erneut zu implementieren, rufen Sie die <xref:System.Web.Script.Serialization.JavaScriptSerializer.ConvertToType%2A> Methode aus den Konvertercode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.Script.Serialization.JavaScriptSerializer.ConvertToType%2A> Methode zum Abrufen einer <xref:System.Web.UI.WebControls.ListItem> Objekt aus einem Wert in das Wörterbuch, das an den Konverter übergeben wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Script.Serialization.JavaScriptSerializer> Klasse.  
+  
+ [!code-csharp[System.Web.Script.Serialization#5](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.Script.Serialization/CS/App_Code/ListItemCollectionConverter.cs#5)]
+ [!code-vb[System.Web.Script.Serialization#5](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.Script.Serialization/VB/App_Code/ListItemCollectionConverter.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="obj" />(oder einen geschachtelten Member <paramref name="obj" />) enthält eine "__type"-Eigenschaft, der angibt, einen benutzerdefinierten Typ, aber der Resolver des Typs, die das Serialisierungsprogramm zugeordnet ist, kann keinen entsprechenden verwalteten Typ gefunden.  
+  
+ - oder -   
+  
+ <paramref name="obj" />(oder einen geschachtelten Member <paramref name="obj" />) enthält eine "__type"-Eigenschaft, der angibt, einen benutzerdefinierten Typ, aber das Ergebnis der Deserialisierung der entsprechenden JSON-Zeichenfolge kann nicht in den erwarteten Zieltyp zugewiesen werden.  
+  
+ - oder -   
+  
+ <paramref name="obj" />(oder einen geschachtelten Member <paramref name="obj" />) enthält eine "__type"-Eigenschaft, die entweder ein Hinweis darauf <see cref="T:System.Object" /> oder eine nicht-instanziierbaren Typen (z. B. einen abstrakten Typ oder eine Schnittstelle).  
+  
+ - oder -   
+  
+ Es wurde versucht, zu konvertierende <paramref name="obj" /> auf einen arrayähnlichen verwalteten Typ, der nicht unterstützt für die Verwendung als Deserialisierungsziel.  
+  
+ - oder -   
+  
+ Es ist nicht möglich, konvertieren <paramref name="obj" /> auf <paramref name="T" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="obj" />ist ein Wörterbuch, und ein Schlüsselwert für die keine Zeichenfolgenmethoden wurde gefunden.  
+  
+ - oder -   
+  
+ <paramref name="obj" />enthält Definitionen für die Elemente, die nicht für den Typ verfügbar sind <paramref name="T" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (string input, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Deserialize(string input, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die JSON-Zeichenfolge, die deserialisiert werden soll.</param>
+        <param name="targetType">Der Typ des resultierenden Objekts.</param>
+        <summary>Konvertiert eine JSON-formatierte Zeichenfolge in ein Objekt des angegebenen Typs.</summary>
+        <returns>Das deserialisierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode für die Deserialisierung versucht nicht, den Stamm des Objektdiagramms auf einen bestimmten Typ, wie umzuwandeln, die die <xref:System.Web.Script.Serialization.JavaScriptSerializer.Deserialize%2A> Methode hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="input" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Länge des <paramref name="input" /> überschreitet den Wert von <see cref="P:System.Web.Script.Serialization.JavaScriptSerializer.MaxJsonLength" />.  
+  
+ - oder -   
+  
+ Das rekursionslimit durch definierten <see cref="P:System.Web.Script.Serialization.JavaScriptSerializer.RecursionLimit" /> wurde überschritten.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthält eine Sequenz ein unerwartetes Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="input" />ist ein Wörterbuch, und ein Schlüsselwert für die keine Zeichenfolgenmethoden wurde gefunden.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthält Definitionen für die Elemente, die auf den Zieltyp nicht verfügbar sind.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="input" />enthält eine "__type"-Eigenschaft, die angibt, dass ein benutzerdefinierter Typ, aber der Resolver des Typs, die das Serialisierungsprogramm zugeordnet ist einen entsprechenden verwalteten Typ nicht gefunden.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthält eine "__type"-Eigenschaft, die angibt, dass ein benutzerdefinierter Typ, aber das Ergebnis der Deserialisierung der entsprechenden JSON-Zeichenfolge in den erwarteten Zieltyp zugewiesen werden kann.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthält eine "__type"-Eigenschaft, die entweder ein Hinweis darauf <see cref="T:System.Object" /> oder eine nicht-instanziierbaren Typen (z. B. einen abstrakten Typ oder eine Schnittstelle).  
+  
+ - oder -   
+  
+ Es wurde versucht, ein JSON-Array in einen arrayähnlichen verwalteten Typ zu konvertieren, die für die Verwendung als JSON-Deserialisierungsziel nicht unterstützt wird.  
+  
+ - oder -   
+  
+ Es ist nicht möglich, konvertieren Sie <paramref name="input" /> in den Zieltyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Deserialize&lt;T&gt; (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Deserialize&lt;T&gt;(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptSerializer.Deserialize``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des resultierenden Objekts.</typeparam>
+        <param name="input">Die zu deserialisierende JSON-Zeichenfolge.</param>
+        <summary>Konvertiert die angegebene JSON-Zeichenfolge in ein Objekt vom Typ <paramref name="T" />.</summary>
+        <returns>Das deserialisierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Script.Serialization.JavaScriptSerializer.Deserialize%2A> Methode entspricht der ersten Verwendung der <xref:System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject%2A> Methode, um ein Objektdiagramm enthalten sind und versuchen Sie dann das Ergebnis in den Typ umwandeln abzurufen `T`.  
+  
+ Während der Deserialisierung wird die aktuelle Typresolver das Serialisierungsprogramm bestimmt den verwalteten Typ zu verwenden, wenn Elemente zu konvertieren, die in Arrays und Wörterbuchtypen geschachtelt sind verwiesen. Bei der Deserialisierung werden folglich durchläuft alle geschachtelten Elemente von `input`. Weitere Informationen zu Typ Konfliktlöser, finden Sie unter der <xref:System.Web.Script.Serialization.JavaScriptTypeResolver> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel stellt eine einfache Veranschaulichung zum Serialisieren und Deserialisieren von Datenobjekten bereit. Er erfordert einen Klassennamen Person der unten angezeigt wird.  
+  
+<!-- TODO: review snippet reference  [!CODE [System.Web.Script.JavaScriptSerializer#1](System.Web.Script.JavaScriptSerializer#1)]  
+  
+<!-- TODO: review snippet reference  [!CODE [System.Web.Script.JavaScriptSerializer#2](System.Web.Script.JavaScriptSerializer#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="input" /> länger als den Wert des <see cref="P:System.Web.Script.Serialization.JavaScriptSerializer.MaxJsonLength" />.  
+  
+ - oder -   
+  
+ Das rekursionslimit durch definierten <see cref="P:System.Web.Script.Serialization.JavaScriptSerializer.RecursionLimit" /> wurde überschritten.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthält eine Sequenz ein unerwartetes Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="input" />ist ein Wörterbuch, und ein Schlüsselwert für die keine Zeichenfolgenmethoden wurde gefunden.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthält Definitionen für die Elemente, die nicht für den Typ verfügbar sind <paramref name="T" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="input" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="input" />enthält eine "__type"-Eigenschaft, die angibt, dass ein benutzerdefinierter Typ, aber das Serialisierungsprogramm zugeordnete Typresolver einen entsprechenden verwalteten Typ nicht finden kann.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthält eine "__type"-Eigenschaft, die angibt, dass ein benutzerdefinierter Typ, aber das Ergebnis der Deserialisierung der entsprechenden JSON-Zeichenfolge in den erwarteten Zieltyp zugewiesen werden kann.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthält eine "__type"-Eigenschaft, die entweder ein Hinweis darauf <see cref="T:System.Object" /> oder eine nicht-instanziierbaren Typen (z. B. einen abstrakten Typ oder eine Schnittstelle).  
+  
+ - oder -   
+  
+ Es wurde versucht, ein JSON-Array in einen arrayähnlichen verwalteten Typ zu konvertieren, die für die Verwendung als JSON-Deserialisierungsziel nicht unterstützt wird.  
+  
+ - oder -   
+  
+ Es ist nicht möglich, konvertieren <paramref name="input" /> auf <paramref name="T" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeObject">
+      <MemberSignature Language="C#" Value="public object DeserializeObject (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object DeserializeObject(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu deserialisierende JSON-Zeichenfolge.</param>
+        <summary>Konvertiert die angegebene JSON-Zeichenfolge in ein Objektdiagramm.</summary>
+        <returns>Das deserialisierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode für die Deserialisierung versucht nicht, den Stamm des Objektdiagramms auf einen bestimmten Typ umzuwandeln wie bei der <xref:System.Web.Script.Serialization.JavaScriptSerializer.Deserialize%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="input" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="input" /> länger als den Wert des <see cref="P:System.Web.Script.Serialization.JavaScriptSerializer.MaxJsonLength" />.  
+  
+ - oder -   
+  
+ Das rekursionslimit durch definierten <see cref="P:System.Web.Script.Serialization.JavaScriptSerializer.RecursionLimit" /> wurde überschritten.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthält eine Sequenz ein unerwartetes Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="input" />ist ein Wörterbuch, und ein Schlüsselwert für die keine Zeichenfolgenmethoden wurde gefunden.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthält Definitionen für die Elemente, die auf den Zieltyp nicht verfügbar sind.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="input" />enthält eine "__type"-Eigenschaft, die angibt, dass ein benutzerdefinierter Typ, aber der Resolver des Typs, die das Serialisierungsprogramm zugeordnet ist einen entsprechenden verwalteten Typ nicht gefunden.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthält eine "__type"-Eigenschaft, die angibt, dass ein benutzerdefinierter Typ, aber das Ergebnis der Deserialisierung der entsprechenden JSON-Zeichenfolge in den erwarteten Zieltyp zugewiesen werden kann.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthält eine "__type"-Eigenschaft, die entweder ein Hinweis darauf <see cref="T:System.Object" /> oder eine nicht-instanziierbaren Typen (z. B. einen abstrakten Typ oder eine Schnittstelle).  
+  
+ - oder -   
+  
+ Es wurde versucht, ein JSON-Array in einen arrayähnlichen verwalteten Typ zu konvertieren, die für die Verwendung als JSON-Deserialisierungsziel nicht unterstützt wird.  
+  
+ - oder -   
+  
+ Es ist nicht möglich, konvertieren Sie <paramref name="input" /> in den Zieltyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxJsonLength">
+      <MemberSignature Language="C#" Value="public int MaxJsonLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxJsonLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Script.Serialization.JavaScriptSerializer.MaxJsonLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Länge von JSON-Zeichenfolgen ab, die von der <see cref="T:System.Web.Script.Serialization.JavaScriptSerializer" />-Klasse akzeptiert werden, oder legt diese fest.</summary>
+        <value>Die maximale Länge von JSON-Zeichenfolgen. Der Standardwert ist 2097152 Zeichen, dies entspricht 4 MB Unicode-Zeichenfolgendaten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert von der <xref:System.Web.Script.Serialization.JavaScriptSerializer.MaxJsonLength%2A> Eigenschaft gilt nur beim explizit eine Instanz des Erstellen der <xref:System.Web.Script.Serialization.JavaScriptSerializer> Klasse. Verwenden der `jsonSerialization` Element der Konfigurationsdatei die maximale Länge für die interne serialisiererinstanz festlegen, die von der Schicht für die asynchrone Kommunikation verwendet wird. Weitere Informationen zu Konfigurationselementen für die Serialisierung, finden Sie unter [Vorgehensweise: Konfigurieren von ASP.NET Services in Microsoft Ajax](http://msdn.microsoft.com/library/ea4fb56e-bc1d-405a-9877-00cf5e552a30).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert festgelegt, der kleiner als 1 ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RecursionLimit">
+      <MemberSignature Language="C#" Value="public int RecursionLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RecursionLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Script.Serialization.JavaScriptSerializer.RecursionLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Grenzwert für die Anzahl von Objektebenen für die Verarbeitung ab oder legt diesen fest.</summary>
+        <value>Die Anzahl der Objektebenen. Der Standard ist 100.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Script.Serialization.JavaScriptSerializer.RecursionLimit%2A> Eigenschaft bezieht sich auf die Anzahl der Ebenen in der Objekthierarchie, <xref:System.Web.Script.Serialization.JavaScriptSerializer> verarbeitet, in den folgenden Fällen:  
+  
+-   Wenn die <xref:System.Web.Script.Serialization.JavaScriptSerializer> -Klasse deserialisiert eine JSON-Zeichenfolge.  
+  
+-   Wenn die <xref:System.Web.Script.Serialization.JavaScriptSerializer> Klasse wird ein Objektdiagramm durchlaufen, während der Serialisierung.  
+  
+ Der Wert der <xref:System.Web.Script.Serialization.JavaScriptSerializer.RecursionLimit%2A> gilt nur bei explizit eine Instanz von der Erstellung der <xref:System.Web.Script.Serialization.JavaScriptSerializer> Klasse. Verwenden der `jsonSerialization` Element der Konfigurationsdatei zum Festlegen der Anzahl der Objektebenen für die interne serialisiererinstanz verarbeitet, die von der Schicht für die asynchrone Kommunikation verwendet wird. Weitere Informationen zu Konfigurationselementen für die Serialisierung, finden Sie unter [Vorgehensweise: Konfigurieren von ASP.NET Services in Microsoft Ajax](http://msdn.microsoft.com/library/ea4fb56e-bc1d-405a-9877-00cf5e552a30).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert festgelegt, der kleiner als 1 ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterConverters">
+      <MemberSignature Language="C#" Value="public void RegisterConverters (System.Collections.Generic.IEnumerable&lt;System.Web.Script.Serialization.JavaScriptConverter&gt; converters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterConverters(class System.Collections.Generic.IEnumerable`1&lt;class System.Web.Script.Serialization.JavaScriptConverter&gt; converters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptSerializer.RegisterConverters(System.Collections.Generic.IEnumerable{System.Web.Script.Serialization.JavaScriptConverter})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="converters" Type="System.Collections.Generic.IEnumerable&lt;System.Web.Script.Serialization.JavaScriptConverter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="converters">Ein Array, das die zu registrierenden benutzerdefinierten Konverter enthält.</param>
+        <summary>Registriert bei der Instanz von <see cref="T:System.Web.Script.Serialization.JavaScriptSerializer" /> einen benutzerdefinierten Konverter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine oder mehrere benutzerdefinierte Konverter mit Registrieren einer <xref:System.Web.Script.Serialization.JavaScriptSerializer> Instanz mithilfe der <xref:System.Web.Script.Serialization.JavaScriptSerializer.RegisterConverters%2A> Methode. Bei benutzerdefinierten Konverter registriert sind, <xref:System.Web.Script.Serialization.JavaScriptSerializer> verwendet den Einsatz von Typkonvertern zum Serialisieren von verwalteter Typen und JSON-Zeichenfolgen in verwaltete Typen zu deserialisieren.  
+  
+ Können mehrere Konverter registriert werden, mit dem gleichen <xref:System.Web.Script.Serialization.JavaScriptSerializer> Instanz, und diese Konverter Unterstützung für den gleichen Typparameter angeben können. Daher ist der letzte Konverter, die für einen bestimmten Typ registriert ist dasjenige, das von verwendet wird <xref:System.Web.Script.Serialization.JavaScriptSerializer> zum Serialisieren des Typs.  
+  
+ Weitere Informationen zu benutzerdefinierten Konverter, finden Sie unter der <xref:System.Web.Script.Serialization.JavaScriptConverter> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie einen benutzerdefinierten Konverter mit Registrieren einer <xref:System.Web.Script.Serialization.JavaScriptSerializer> Instanz. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Script.Serialization.JavaScriptSerializer> Klasse.  
+  
+ [!code-csharp[System.Web.Script.Serialization#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.Script.Serialization/CS/Default.aspx#1)]
+ [!code-vb[System.Web.Script.Serialization#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.Script.Serialization/VB/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="converters" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public string Serialize (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string Serialize(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptSerializer.Serialize(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu serialisierende Objekt.</param>
+        <summary>Konvertiert ein Objekt in eine JSON-Zeichenfolge.</summary>
+        <returns>Die serialisierte JSON-Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.Script.Serialization.JavaScriptSerializer> Instanz einen Typ für den benutzerdefinierter Konverter registriert ist, ruft das Serialisierungsprogramm serialisiert die <xref:System.Web.Script.Serialization.JavaScriptConverter.Serialize%2A> Methode, um das Wörterbuch von Name/Wert-Paare abzurufen, die in einer JSON-Zeichenfolge konvertiert wird.  
+  
+ Die <xref:System.Web.Script.Serialization.JavaScriptSerializer.Serialize%2A> Methode kann auch Ausnahmen auslösen, wenn das Objektdiagramm zu komplex ist oder registrierte Instanzen von <xref:System.Web.Script.Serialization.JavaScriptConverter> Konverterrekursion verursacht haben.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel stellt eine einfache Veranschaulichung zum Serialisieren und Deserialisieren von Datenobjekten bereit. Er erfordert einen Klassennamen Person der unten angezeigt wird.  
+  
+<!-- TODO: review snippet reference  [!CODE [System.Web.Script.JavaScriptSerializer#1](System.Web.Script.JavaScriptSerializer#1)]  
+  
+<!-- TODO: review snippet reference  [!CODE [System.Web.Script.JavaScriptSerializer#2](System.Web.Script.JavaScriptSerializer#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die resultierende JSON-Zeichenfolge überschreitet den Wert von <see cref="P:System.Web.Script.Serialization.JavaScriptSerializer.MaxJsonLength" />.  
+  
+ - oder -   
+  
+ <paramref name="obj" />enthält einen Zirkelverweis. Ein Zirkelverweis tritt auf, wenn ein untergeordnetes Objekt einen Verweis auf ein übergeordnetes Objekt enthält und das übergeordnete Objekt einen Verweis auf das untergeordnete Objekt enthält.</exception>
+        <exception cref="T:System.ArgumentException">Das rekursionslimit durch definierten <see cref="P:System.Web.Script.Serialization.JavaScriptSerializer.RecursionLimit" /> wurde überschritten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (object obj, System.Text.StringBuilder output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(object obj, class System.Text.StringBuilder output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptSerializer.Serialize(System.Object,System.Text.StringBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="output" Type="System.Text.StringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu serialisierende Objekt.</param>
+        <param name="output">Das <see cref="T:System.Text.StringBuilder" />-Objekt, das zum Schreiben der JSON-Zeichenfolge verwendet wird.</param>
+        <summary>Serialisiert ein Objekt und schreibt die resultierende JSON-Zeichenfolge in das angegebene <see cref="T:System.Text.StringBuilder" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.Script.Serialization.JavaScriptSerializer> Instanz einen Typ für den benutzerdefinierter Konverter registriert ist, ruft das Serialisierungsprogramm serialisiert die <xref:System.Web.Script.Serialization.JavaScriptConverter.Serialize%2A> Methode, um das Wörterbuch von Name/Wert-Paare abzurufen, die in einer JSON-Zeichenfolge konvertiert wird.  
+  
+ Die <xref:System.Web.Script.Serialization.JavaScriptSerializer.Serialize%2A> Methode kann auch Ausnahmen auslösen, wenn das Objektdiagramm zu komplex ist oder registrierte Instanzen von <xref:System.Web.Script.Serialization.JavaScriptConverter> Konverterrekursion verursacht haben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die resultierende JSON-Zeichenfolge überschreitet den Wert von <see cref="P:System.Web.Script.Serialization.JavaScriptSerializer.MaxJsonLength" />.  
+  
+ - oder -   
+  
+ <paramref name="obj" />enthält einen Zirkelverweis. Ein Zirkelverweis tritt auf, wenn ein untergeordnetes Objekt einen Verweis auf ein übergeordnetes Objekt enthält und das übergeordnete Objekt einen Verweis auf das untergeordnete Objekt enthält.</exception>
+        <exception cref="T:System.ArgumentException">Das rekursionslimit durch definierten <see cref="P:System.Web.Script.Serialization.JavaScriptSerializer.RecursionLimit" /> wurde überschritten.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="output" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

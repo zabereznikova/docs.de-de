@@ -1,0 +1,323 @@
+<Type Name="XamlParseException" FullName="System.Windows.Markup.XamlParseException">
+  <TypeSignature Language="C#" Value="public class XamlParseException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit XamlParseException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.XamlParseException" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Ausnahmeklasse für parserspezifische Ausnahmen aus einem WPF XAML-Parser dar. Diese Ausnahme wird bei Verwendung von XAML-API oder WPF-XAML-Parservorgängen aus .NET Framework 3.0 und .NET Framework 3.5 oder für bestimmte Verwendung von der WPF XAML-Parser verwendet, durch den Aufruf <see cref="T:System.Windows.Markup.XamlReader" /> API.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.XamlParseException>wird nur für WPF implementierten XAML-Parser verwendet, analysieren und Laden von XAML für WPF-Anwendungen ausführt. Insbesondere ist die Ausnahme nur relevant, wenn eine Anwendung Ziele [!INCLUDE[net_v30_short](~/includes/net-v30-short-md.md)] und [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)]. Die Ausnahme kann auch aus Benutzercode in zur Laufzeit Aufrufen von APIs, die die WPF implementierten XAML-Parser zum Laden von XAML innerhalb einer ausgeführten WPF-Anwendung einbinden stammen (z. B. Aufrufe von <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>).  
+  
+ Für [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], <xref:System.Xaml.XamlParseException> Ausnahme, die Ausnahmen bei der Verwendung von XAML-Verarbeitung in der Regel Berichte in einem anderen Namespace definiert ist (<xref:System.Xaml>) und einer anderen Assembly ("System.xaml").  
+  
+ Es sei denn, Sie schreiben eine Entsprechung für den WPF XAML-Parser oder Arbeiten mit [!INCLUDE[net_v30_short](~/includes/net-v30-short-md.md)] und [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)] verwenden möchten, Sie in der Regel keine Ausnahme auslöst, <xref:System.Windows.Markup.XamlParseException> aus Ihrem eigenen Code. Behandlung der Ausnahme ist jedoch manchmal erforderlich. Für die Anwendungsszenarien, in denen Sie möglicherweise XAML-Analysefehler unterdrücken möchten, eine <xref:System.Windows.Threading.Dispatcher> <xref:System.Windows.Threading.Dispatcher.UnhandledException> -Ereignishandler auf Anwendungsebene ist eine Möglichkeit, eine Laufzeit-behandeln <xref:System.Windows.Markup.XamlParseException>. Hängt von, ob Ausnahmen unterdrückt, oder informieren sie sich in Benutzercode wie Ihrer Anwendung zum Zweck Entwerfen der Laden von XAML und lädt die Vertrauensebene der XAML-Code die Anwendung zuweisen. Weitere Informationen finden Sie unter [XAML-Sicherheitsüberlegungen](~/docs/framework/xaml-services/xaml-security-considerations.md) oder im Abschnitt "XAML-Sicherheit" [XAML Overview (WPF)](~/docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+  
+ Für Seiten einer Anwendung Wenn die <xref:System.Windows.Markup.XamlParseException> ist ausgelöst wird, ist dies normalerweise im Rahmen der `InitializeComponent` Aufruf durch die Page-Klasse, der Einstiegspunkt für das WPF-Anwendungsmodell Verwendung der WPF XAML-Parser Ebene der pro Seite ist. Aus diesem Grund eine weitere mögliche Behandlung von Strategie besteht darin zu platzieren `try/catch` Blöcke in `InitializeComponent`. Allerdings diese Technik lässt sich nicht gut mit Vorlagen, visuelle Entwurfsoberflächen integrieren und andere generierte Quellen verknüpft sich `InitializeComponent`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlParseException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlParseException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.XamlParseException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlParseException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlParseException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Markup.XamlParseException" /> -Klasse unter Verwendung der angegebenen Ausnahmemeldungszeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XamlParseException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlParseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Enthält alle Informationen, die zum Serialisieren oder Deserialisieren des Objekts erforderlich ist.</param>
+        <param name="context">Die Quelle und das Ziel eines serialisierten Datenstroms.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.XamlParseException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird für die Serialisierung verwendet, wenn eine Ausnahme dieses Typs über eine Anwendung Domänen- oder -Grenze hinweg zu marshallen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlParseException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlParseException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="innerException">Die erste Ausnahme, die aufgetreten sind.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Markup.XamlParseException" /> -Klasse unter Verwendung der angegebenen Zeichenfolge und der inneren Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird sollte einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt den gleichen Wert zurück, der an den Konstruktor übergeben wird, oder `null`, wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft den Wert der inneren Ausnahme nicht an den Konstruktor übergibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlParseException (string message, int lineNumber, int linePosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, int32 lineNumber, int32 linePosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlParseException.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="linePosition" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="lineNumber">Die Zeilennummer, in dem die Ausnahme aufgetreten ist.</param>
+        <param name="linePosition">Die Position in der Zeile, in der die Ausnahme aufgetreten ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Markup.XamlParseException" /> Klasse, mit die Meldungszeichenfolge für die angegebene Ausnahme und der angegebenen Zeilennummer und in der Zeile positionieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlParseException (string message, int lineNumber, int linePosition, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, int32 lineNumber, int32 linePosition, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlParseException.#ctor(System.String,System.Int32,System.Int32,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="linePosition" Type="System.Int32" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="lineNumber">Die Zeilennummer, in dem die Ausnahme aufgetreten ist.</param>
+        <param name="linePosition">Die Position in der Zeile, in der die Ausnahme aufgetreten ist.</param>
+        <param name="innerException">Die erste Ausnahme, die aufgetreten sind.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Markup.XamlParseException" /> -Klasse unter Verwendung der angegebenen Ausnahmemeldung, die innere Ausnahme, die Zeilennummer und die Position in der Zeile.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird sollte einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt den gleichen Wert zurück, der an den Konstruktor übergeben wird, oder `null`, wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft den Wert der inneren Ausnahme nicht an den Konstruktor übergibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="public Uri BaseUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XamlParseException.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Basis-URI-Informationen an, wenn die Ausnahme ausgelöst wird.</summary>
+        <value>Die Parserkontext Basis-URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Basis-URI ist aufgrund von Parserkontext potenziell verfügbar, wenn die Ausnahme aufgetreten ist. Zu wissen, der Basis kann URI nützlich zum Debuggen von Fällen, in denen eine Auflösung Ressourcenfehlers die zugrunde liegende Ursache.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlParseException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die hinzuzufügende die Serialisierungsdaten Serialisierungsinformationsobjekt.</param>
+        <param name="context">Das Ziel dieser Serialisierung.</param>
+        <summary>Ruft die Daten, die erforderlich ist, um das angegebene Objekt zu serialisieren, durch das angegebene Auffüllen <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.XamlParseException.GetObjectData%2A>Legt eine <xref:System.Runtime.Serialization.SerializationInfo> Objekt mit allen Daten des Ausnahmeobjekts für die Serialisierung vorgesehen. Während der Deserialisierung wird die Ausnahme aus der über den Stream übertragenen <xref:System.Runtime.Serialization.SerializationInfo> wiederhergestellt.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für das Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /> Sicherheitsaktion: <see cref="M:System.Security.PermissionSet.Demand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyContext">
+      <MemberSignature Language="C#" Value="public object KeyContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object KeyContext" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XamlParseException.KeyContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert des Elements in einem Wörterbuch, in dem die Ausnahme aufgetreten ist.</summary>
+        <value>Die relevanten XAML <see langword="x:Key" /> Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XamlParseException.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeilennummer ab, in dem die Ausnahme aufgetreten ist.</summary>
+        <value>Die Zeilennummer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePosition">
+      <MemberSignature Language="C#" Value="public int LinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XamlParseException.LinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position in der Zeile, in dem die Ausnahme aufgetreten ist.</summary>
+        <value>Die Zeilenposition.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameContext">
+      <MemberSignature Language="C#" Value="public string NameContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NameContext" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XamlParseException.NameContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Verwendung von XAML-Name des Objekts, in dem die Ausnahme aufgetreten ist.</summary>
+        <value>Der XAML-Name des Objekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UidContext">
+      <MemberSignature Language="C#" Value="public string UidContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UidContext" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XamlParseException.UidContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die [X: Uid-Direktive](~/docs/framework/xaml-services/x-uid-directive.md) des Objekts, in dem die Ausnahme aufgetreten ist.</summary>
+        <value>Der Wert, der die <see langword="Uid" /> Zeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

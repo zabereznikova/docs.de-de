@@ -1,0 +1,208 @@
+<Type Name="CharacterHit" FullName="System.Windows.Media.TextFormatting.CharacterHit">
+  <TypeSignature Language="C#" Value="public struct CharacterHit : IEquatable&lt;System.Windows.Media.TextFormatting.CharacterHit&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit CharacterHit extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Windows.Media.TextFormatting.CharacterHit&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.CharacterHit" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Windows.Media.TextFormatting.CharacterHit&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Informationen zu einem ermittelten Zeichen innerhalb einer Glyphe Ausführung dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.TextFormatting.CharacterHit> Struktur enthält Informationen über den Index des ersten Zeichens, das ermittelten sowie Informationen zum führenden oder nachgestellten Rand.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CharacterHit (int firstCharacterIndex, int trailingLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 firstCharacterIndex, int32 trailingLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterHit.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="firstCharacterIndex" Type="System.Int32" />
+        <Parameter Name="trailingLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="firstCharacterIndex">Der Index des ersten Zeichens, das ermittelt wurde.</param>
+        <param name="trailingLength">Bei einem führenden Rand ist dieser Wert 0. Bei einem nachfolgenden Rand ist dieser Wert die Anzahl der Codepunkte bis zur nächsten gültigen CaretPosition an.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.TextFormatting.CharacterHit" />-Struktur.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterHit.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dem aktuellen <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" />-Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Objekt und das aktuelle <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" />-Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> gleich dem aktuellen <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" />-Objekt ist; andernfalls <see langword="false" />. Wenn <paramref name="obj" /> keine <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> Objekt <see langword="false" /> wird zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Media.TextFormatting.CharacterHit obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Windows.Media.TextFormatting.CharacterHit obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterHit.Equals(System.Windows.Media.TextFormatting.CharacterHit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Windows.Media.TextFormatting.CharacterHit" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> für den Vergleich mit dem aktuellen <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> Objekt.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> ist gleich dem aktuellen <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> gleich dem aktuellen <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" />-Objekt ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstCharacterIndex">
+      <MemberSignature Language="C#" Value="public int FirstCharacterIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FirstCharacterIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.CharacterHit.FirstCharacterIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des ersten Zeichens, das ermittelt wurde.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der den Index darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterHit.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" />. Sie eignet sich für die Verwendung in Hashalgorithmen und Datenstrukturen, z. B. einer Hashtabelle.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> Wert, der den Hashcode für das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Media.TextFormatting.CharacterHit left, System.Windows.Media.TextFormatting.CharacterHit right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Media.TextFormatting.CharacterHit left, valuetype System.Windows.Media.TextFormatting.CharacterHit right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterHit.op_Equality(System.Windows.Media.TextFormatting.CharacterHit,System.Windows.Media.TextFormatting.CharacterHit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Media.TextFormatting.CharacterHit" />
+        <Parameter Name="right" Type="System.Windows.Media.TextFormatting.CharacterHit" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" />.</param>
+        <summary>Vergleichen Sie zwei <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> Zeichenfolgen auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn die Werte der <see cref="P:System.Windows.Media.TextFormatting.CharacterHit.FirstCharacterIndex" /> und <see cref="P:System.Windows.Media.TextFormatting.CharacterHit.TrailingLength" /> Eigenschaften sind für beide Objekte gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Media.TextFormatting.CharacterHit left, System.Windows.Media.TextFormatting.CharacterHit right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Media.TextFormatting.CharacterHit left, valuetype System.Windows.Media.TextFormatting.CharacterHit right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterHit.op_Inequality(System.Windows.Media.TextFormatting.CharacterHit,System.Windows.Media.TextFormatting.CharacterHit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Media.TextFormatting.CharacterHit" />
+        <Parameter Name="right" Type="System.Windows.Media.TextFormatting.CharacterHit" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" />.</param>
+        <summary>Vergleichen Sie zwei <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> Zeichenfolgen auf Ungleichheit.</summary>
+        <returns>
+          <see langword="false" />Wenn die Werte der <see cref="P:System.Windows.Media.TextFormatting.CharacterHit.FirstCharacterIndex" /> und <see cref="P:System.Windows.Media.TextFormatting.CharacterHit.TrailingLength" /> Eigenschaften sind für beide Objekte gleich sind, andernfalls <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrailingLength">
+      <MemberSignature Language="C#" Value="public int TrailingLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TrailingLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.CharacterHit.TrailingLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wert für die Länge für das Zeichen, das ermittelt wurde.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der die nachfolgende Länge darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem führenden Rand ist dieser Wert 0. Bei einem nachfolgenden Rand ist dieser Wert die Anzahl der Codepunkte bis zur nächsten gültigen CaretPosition an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

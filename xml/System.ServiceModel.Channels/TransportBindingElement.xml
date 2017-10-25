@@ -1,0 +1,276 @@
+<Type Name="TransportBindingElement" FullName="System.ServiceModel.Channels.TransportBindingElement">
+  <TypeSignature Language="C#" Value="public abstract class TransportBindingElement : System.ServiceModel.Channels.BindingElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TransportBindingElement extends System.ServiceModel.Channels.BindingElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.TransportBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.BindingElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine <see langword="abstract" />-Basisklasse, die ein Transportbindungselement darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse bestimmt die gemeinsamen Eigenschaften der Transportbindungselemente, die von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] bereitgestellt werden. Dabei wird die Übersetzung der grundlegenden Transporteinstellungen in Laufzeitmanifestationen ausgeführt. Die Übersetzung der transportspezifischen Einstellungslogik (z.&#160;B. HttpProxySettings für HTTP) wird in die konkreten Transportbindungen der abgeleiteten Klasse delegiert. Dazu gehören folgende Klassen:  
+  
+-   <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
+  
+-   <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+  
+-   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+  
+-   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+  
+-   <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
+  
+-   <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
+  
+-   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
+  
+-   <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+  
+> [!NOTE]
+>  Entwickler von benutzerdefinierten Transportbindungselementen müssen von dieser Klasse erben, die von der <xref:System.ServiceModel.Channels.BindingElement>-Klasse abgeleitet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TransportBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransportBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz dieser Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TransportBindingElement (System.ServiceModel.Channels.TransportBindingElement elementToBeCloned);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.TransportBindingElement elementToBeCloned) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransportBindingElement.#ctor(System.ServiceModel.Channels.TransportBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementToBeCloned" Type="System.ServiceModel.Channels.TransportBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="elementToBeCloned">Der <see cref="T:System.ServiceModel.Channels.TransportBindingElement" />, der geklont werden soll.</param>
+        <summary>Erstellt eine neue Instanz dieser Klasse aus einer vorhandenen Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransportBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Die abzurufende Eigenschaft.</typeparam>
+        <param name="context">Ein <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Ruft eine Eigenschaft aus dem angegebenen <see cref="T:System.ServiceModel.Channels.BindingContext" /> ab.</summary>
+        <returns>Die Eigenschaft für den angegebenen <see cref="T:System.ServiceModel.Channels.BindingContext" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode empfängt einen Bindungskontext als Eingabeparameter. Dieser stellt den Stapel von Bindungselementen dar. Mit dieser Methode werden die angegebenen Objekte direkt abgerufen, die Anfrage wird an das nächstniedrigere Bindungselement im Stapel delegiert, oder beide Vorgänge werden kombiniert. Beim Delegieren der Anfrage kann der Kontext geändert werden. Dieser Prozess kann im Rahmen einer Delegierung von allen Bindungselementen im Stapel wiederholt werden, bis das Ende des Stapels erreicht ist. Das zurückgegebene Objekt stellt normalerweise eine Auflistung von Eigenschaften dar.  
+  
+ Wenn der `T`-Typ gleich <xref:System.ServiceModel.Security.ChannelProtectionRequirements>, <xref:System.Xml.XmlDictionaryReaderQuotas> oder <xref:System.ServiceModel.Channels.MessageVersion> ist, wird eine Instanz der Klasse zurückgegeben. Wenn der `T`-Typ einer Instanz in <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A> entspricht, wird diese Instanz zurückgegeben.  
+  
+ Diese Methode wird sowohl von Bindungselementen als auch von Laufzeitobjekten wie <xref:System.ServiceModel.Channels.IChannelFactory>, <xref:System.ServiceModel.Channels.IChannelListener> und <xref:System.ServiceModel.Channels.IChannel> implementiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManualAddressing">
+      <MemberSignature Language="C#" Value="public virtual bool ManualAddressing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ManualAddressing" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eine manuelle Adressierung der Nachricht erforderlich ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die manuelle Adressierung der Nachricht erforderlich ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird i.&#160;d.&#160;R. in Routerumgebungen verwendet, wenn das Ziel der Nachricht von der Anwendung bestimmt wird.  
+  
+ Wenn diese Eigenschaft auf `true` festgelegt ist, wird vom Kanal angenommen, dass die Nachricht bereits adressiert wurde, und es werden keinen weiteren Informationen hinzugefügt.  
+  
+ Wenn `false`, die gesendet Kanal wendet die <xref:System.ServiceModel.EndpointAddress> als konfiguriert die `To` Adressaten auf den Kanal für ausgehende Nachrichten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferPoolSize">
+      <MemberSignature Language="C#" Value="public virtual long MaxBufferPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxBufferPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TransportBindingElement.MaxBufferPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Größe des Pufferpools, die vom Transport in Bytes.</summary>
+        <value>Die maximale Größe des Pufferpools. Der Standardwert ist 524.288 Byte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Viele Bereiche von WCF verwenden Puffer. Das Erstellen und Zerstören von Puffern bei jeder Verwendung ist kostspielig. Dasselbe gilt für die Garbage Collection für Puffer.  
+  
+ Bei Pufferpools können Sie einen zu verwendenden Puffer aus dem Pool nehmen und ihn nach der Verwendung wieder dem Pool zuführen. So wird der Aufwand beim Erstellen und Zerstören von Puffern vermieden. Der Nachteil ist ein erhöhter Speicherbedarf aufgrund der ausbleibenden Garbage Collection für die Puffer. Wenn die <xref:System.ServiceModel.Channels.TransportBindingElement.MaxBufferPoolSize%2A> festgelegt ist auf 0 werden keine Puffer an den Pool zurückgegeben, und stattdessen die Garbagecollection beginnt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxReceivedMessageSize">
+      <MemberSignature Language="C#" Value="public virtual long MaxReceivedMessageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxReceivedMessageSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die maximale zulässige Nachrichtengröße in Bytes, die empfangen werden können.</summary>
+        <value>Die maximale zulässige Nachrichtengröße, die empfangen werden kann. Der Standardwert beträgt 65.536 Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann zur Abwehr von Hackerangriffen verwendet werden, bei denen sehr große oder unendlich große Nachrichten gesendet werden oder bei denen Daten fortlaufend an eine verbundene benannte Pipe gesendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public abstract string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TransportBindingElement.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das URI-Schema für den Transport ab.</summary>
+        <value>Gibt das URI-Schema für den Transport in Abhängigkeit von der abgeleiteten Klasse zurück, die diese Methode implementiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies wird durch jede konkrete Implementierung eines Transports überschrieben und zur Validierung von Bindungen anhand von Basisadressen bereitgestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

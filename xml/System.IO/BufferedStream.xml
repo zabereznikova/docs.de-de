@@ -1,0 +1,1161 @@
+<Type Name="BufferedStream" FullName="System.IO.BufferedStream">
+  <TypeSignature Language="C#" Value="public sealed class BufferedStream : System.IO.Stream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BufferedStream extends System.IO.Stream" />
+  <TypeSignature Language="DocId" Value="T:System.IO.BufferedStream" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Stream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fügt eine Pufferebene zu Lese- und Schreibvorgängen auf einem anderen Stream hinzu. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Puffer ist, einen Block von Bytes im Speicher zum Zwischenspeichern von Daten, wodurch die Anzahl der Aufrufe an das Betriebssystem verwendet wird. Puffer lesen verbessern und schreibleistung. Ein Puffer kann für entweder lesen oder schreiben, aber nicht beides gleichzeitig verwendet werden. Die <xref:System.IO.BufferedStream.Read%2A> und <xref:System.IO.BufferedStream.Write%2A> Methoden der `BufferedStream` automatisch verwalten den Puffer.  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ `BufferedStream`können auf bestimmte Arten von Streams zusammengesetzt werden. Er enthält Implementierungen, zum Lesen und Schreiben von Bytes in einer zugrunde liegenden Datenquelle oder das Repository. Verwendung <xref:System.IO.BinaryReader> und <xref:System.IO.BinaryWriter> zum Lesen und Schreiben anderer Datentypen. `BufferedStream`Dient zum verhindern, dass des Puffers Eingabe und Ausgabe verlangsamt, wenn der Puffer nicht benötigt wird. Wenn Sie immer lesen und dann größer als die Größe des internen Puffers schreiben `BufferedStream` möglicherweise nicht den internen Puffer selbst zuweisen. `BufferedStream`Außerdem puffert liest und schreibt in einen gemeinsamen Puffer. Es wird vorausgesetzt, dass Sie fast immer werden eine Reihe von Lese- oder Schreibvorgänge ausführen, jedoch selten zwischen den beiden von ihnen wechseln.  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispiele zeigen, wie mithilfe der `BufferedStream` Klasse über die `NetworkStream` Klasse, um die Leistung bestimmter e/a-Vorgänge zu erhöhen. Starten Sie den Server vor dem Starten des Clients auf einem Remotecomputer befindet. Geben Sie als Befehlszeilenargument Namen des Remotecomputers an, beim Starten des Clients. Verändern der `dataArraySize` und `streamBufferSize` Konstanten, um deren Auswirkung auf die Leistung anzuzeigen.  
+  
+ Das erste Beispiel zeigt den Code, der auf dem Client ausgeführt wird, und das zweite Beispiel zeigt den Code, der auf dem Server ausgeführt wird.  
+  
+ **Beispiel 1: Code, der auf dem Client ausgeführt wird.**  
+  
+ [!code-cpp[System.IO.BufferedStream1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CPP/client.cpp#1)]
+ [!code-csharp[System.IO.BufferedStream1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CS/client.cs#1)]
+ [!code-vb[System.IO.BufferedStream1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BufferedStream1/VB/client.vb#1)]  
+  
+ **Beispiel 2: Code, der auf dem Server ausgeführt wird.**  
+  
+ [!code-cpp[System.IO.BufferedStream2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BufferedStream2/CPP/server.cpp#1)]
+ [!code-csharp[System.IO.BufferedStream2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BufferedStream2/CS/server.cs#1)]
+ [!code-vb[System.IO.BufferedStream2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BufferedStream2/VB/server.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BufferedStream (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der aktuelle Stream.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.BufferedStream" /> -Klasse mit einer Standardpuffergröße von 4096 Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein freigegebenen Lese-/Schreibzugriff Puffer erhält erstmalig eine `BufferedStream` Objekt wird mit diesem Konstruktor initialisiert. Der gemeinsam verwendete Puffer wird nicht verwendet werden, wenn alle Lese- und Schreibvorgänge größer als oder gleich sind `bufferSize`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BufferedStream (System.IO.Stream stream, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.#ctor(System.IO.Stream,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der aktuelle Stream.</param>
+        <param name="bufferSize">Die Puffergröße in Byte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.BufferedStream" /> Klasse mit der angegebenen Puffergröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein freigegebenen Lese-/Schreibzugriff Puffer erhält erstmalig eine `BufferedStream` Objekt wird mit diesem Konstruktor initialisiert. Der gemeinsam verwendete Puffer wird nicht verwendet werden, wenn alle Lese- und Schreibvorgänge größer als oder gleich sind `bufferSize`.  
+  
+   
+  
+## Examples  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.BufferedStream> Klasse.  
+  
+ [!code-cpp[System.IO.BufferedStream1#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CPP/client.cpp#2)]
+ [!code-csharp[System.IO.BufferedStream1#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CS/client.cs#2)]
+ [!code-vb[System.IO.BufferedStream1#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BufferedStream1/VB/client.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="bufferSize" /> ist ein negativer Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRead">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginRead (byte[] buffer, int offset, int count, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginRead(unsigned int8[] buffer, int32 offset, int32 count, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, in den die Daten gelesen werden sollen.</param>
+        <param name="offset">Der Byteoffset im <c>Puffer</c> an dem aus dem Stream gelesene Daten geschrieben werden soll.</param>
+        <param name="count">Die maximale Anzahl der zu lesenden Bytes.</param>
+        <param name="callback">Ein optionaler asynchroner Rückruf, der nach Abschluss des Lesevorgangs aufgerufen werden soll.</param>
+        <param name="state">Ein vom Benutzer bereitgestelltes Objekt, das diese asynchrone Leseanforderung von anderen Anforderungen unterscheidet.</param>
+        <summary>Beginnt einen asynchronen Lesevorgang. (Erwägen <see cref="M:System.IO.BufferedStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" /> stattdessen.)</summary>
+        <returns>Ein Objekt, das den asynchronen Lesevorgang darstellt, der möglicherweise noch aussteht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der .NET Framework 4 und früheren Versionen müssen Sie Methoden verwenden, z. B. <xref:System.IO.Stream.BeginRead%2A> und <xref:System.IO.Stream.EndRead%2A> zum Implementieren asynchroner Vorgänge. Diese Methoden sind weiterhin verfügbar, in der [!INCLUDE[net_v45](~/includes/net-v45-md.md)] zur Unterstützung von legacy-Code; allerdings der neuen asynchronen Methoden, wie z. B. <xref:System.IO.BufferedStream.ReadAsync%2A>, <xref:System.IO.BufferedStream.WriteAsync%2A>, und <xref:System.IO.BufferedStream.FlushAsync%2A>, Hilfe, die Sie implementieren leichter asynchrone Dateivorgänge.  
+  
+ <xref:System.IO.BufferedStream.EndWrite%2A>muss genau einmal für jeden Aufruf aufgerufen werden <xref:System.IO.BufferedStream.BeginRead%2A>. Wegen eines Fehlers beim ein Lesevorgang beendet vor dem Beginn einer anderen Lesevorgang kann unerwünschtes Verhalten wie z. B. Deadlocks verursachen.  
+  
+> [!NOTE]
+>  Verwenden der <xref:System.IO.BufferedStream.CanRead%2A> Eigenschaft, um zu bestimmen, ob die aktuelle Instanz Lesevorgänge unterstützt.  
+  
+ <xref:System.IO.BufferedStream.EndRead%2A>muss aufgerufen werden, dabei <xref:System.IAsyncResult> um herauszufinden, wie viele Bytes gelesen wurden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> oder <paramref name="count" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.IO.IOException">Versucht, einen asynchronen Lesevorgang nach dem Ende des Streams.</exception>
+        <exception cref="T:System.ArgumentException">Die Pufferlänge minus <paramref name="offset" /> ist kleiner als <paramref name="count" />.</exception>
+        <exception cref="T:System.NotSupportedException">Der aktuelle Stream unterstützt nicht den Lesevorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWrite">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginWrite (byte[] buffer, int offset, int count, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginWrite(unsigned int8[] buffer, int32 offset, int32 count, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer mit den Daten, die in den aktuellen Stream geschrieben werden sollen.</param>
+        <param name="offset">Der nullbasierte Byteoffset im <c>Puffer</c> ab dem Bytes in den aktuellen Stream kopiert werden sollen.</param>
+        <param name="count">Die maximale Anzahl der zu schreibenden Bytes.</param>
+        <param name="callback">Die Methode, die aufgerufen werden soll, wenn der asynchrone Schreibvorgang abgeschlossen ist.</param>
+        <param name="state">Ein vom Benutzer bereitgestelltes Objekt, das diese asynchrone Schreibanforderung von anderen Anforderungen unterscheidet.</param>
+        <summary>Beginnt einen asynchronen Schreibvorgang. (Erwägen <see cref="M:System.IO.BufferedStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" /> stattdessen.)</summary>
+        <returns>Ein Objekt, das den asynchronen Schreibvorgang verweist, der möglicherweise noch aussteht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der .NET Framework 4 und früheren Versionen müssen Sie Methoden verwenden, z. B. <xref:System.IO.Stream.BeginWrite%2A> und <xref:System.IO.Stream.EndWrite%2A> zum Implementieren asynchroner Vorgänge. Diese Methoden sind weiterhin verfügbar, in der [!INCLUDE[net_v45](~/includes/net-v45-md.md)] zur Unterstützung von legacy-Code; allerdings der neuen asynchronen Methoden, wie z. B. <xref:System.IO.BufferedStream.ReadAsync%2A>, <xref:System.IO.BufferedStream.WriteAsync%2A>, und <xref:System.IO.BufferedStream.FlushAsync%2A>, Hilfe, die Sie implementieren leichter asynchrone Dateivorgänge.  
+  
+ <xref:System.IO.BufferedStream.EndWrite%2A>muss genau einmal aufgerufen werden, für jede <xref:System.IAsyncResult> aus <xref:System.IO.BufferedStream.BeginWrite%2A>. <xref:System.IO.BufferedStream.EndWrite%2A>blockiert, bis die e/a-Operation abgeschlossen ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="buffer" />die Länge minus <paramref name="offset" /> ist kleiner als <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> oder <paramref name="count" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.NotSupportedException">Der Stream unterstützt das Schreiben nicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferSize">
+      <MemberSignature Language="C#" Value="public int BufferSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.IO.BufferedStream.BufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRead" />
+      <MemberSignature Language="DocId" Value="P:System.IO.BufferedStream.CanRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der aktuelle Stream Lesevorgänge unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Stream Lesevorgänge unterstützt, <see langword="false" />, wenn der Stream geschlossen ist oder ausschließlich mit Schreibzugriff geöffnet wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn von eine Klasse abgeleitet <xref:System.IO.Stream> keine Lesevorgänge unterstützt, werden Aufrufe von der <xref:System.IO.BufferedStream.Read%2A>, <xref:System.IO.BufferedStream.ReadByte%2A>, <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A>, und die `Peek` Methoden der <xref:System.IO.StreamReader>, <xref:System.IO.StringReader>, und <xref:System.IO.TextReader> Auslösen einer <xref:System.NotSupportedException>.  
+  
+ Wenn der Stream geschlossen ist, gibt diese Eigenschaft `false`.  
+  
+   
+  
+## Examples  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.BufferedStream> Klasse.  
+  
+ [!code-cpp[System.IO.BufferedStream1#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CPP/client.cpp#5)]
+ [!code-csharp[System.IO.BufferedStream1#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CS/client.cs#5)]
+ [!code-vb[System.IO.BufferedStream1#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BufferedStream1/VB/client.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSeek">
+      <MemberSignature Language="C#" Value="public override bool CanSeek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSeek" />
+      <MemberSignature Language="DocId" Value="P:System.IO.BufferedStream.CanSeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der aktuelle Stream Suchvorgänge unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn der Stream Suchvorgänge unterstützt <see langword="false" /> , wenn der Stream geschlossen ist oder wenn der Stream, von einem Betriebssystemhandle, z. B. einer Pipe oder einer Ausgabe an die Konsole erstellt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn von eine Klasse abgeleitet <xref:System.IO.Stream> Suchvorgänge nicht unterstützt, werden Aufrufe von <xref:System.IO.BufferedStream.Length%2A>, <xref:System.IO.BufferedStream.SetLength%2A>, <xref:System.IO.BufferedStream.Position%2A>, und <xref:System.IO.BufferedStream.Seek%2A> Auslösen einer <xref:System.NotSupportedException>.  
+  
+ Wenn der Stream geschlossen ist, gibt diese Eigenschaft `false`.  
+  
+   
+  
+## Examples  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.BufferedStream> Klasse.  
+  
+ [!code-cpp[System.IO.BufferedStream1#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CPP/client.cpp#3)]
+ [!code-csharp[System.IO.BufferedStream1#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CS/client.cs#3)]
+ [!code-vb[System.IO.BufferedStream1#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BufferedStream1/VB/client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWrite">
+      <MemberSignature Language="C#" Value="public override bool CanWrite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWrite" />
+      <MemberSignature Language="DocId" Value="P:System.IO.BufferedStream.CanWrite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der aktuelle Stream Schreibvorgänge unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Stream Schreibvorgänge unterstützt, <see langword="false" />, wenn der Stream geschlossen ist oder mit schreibgeschütztem Zugriff geöffnet wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn von eine Klasse abgeleitet <xref:System.IO.Stream> unterstützt nicht das Schreiben von einem Aufruf von <xref:System.IO.BufferedStream.SetLength%2A>, <xref:System.IO.BufferedStream.Write%2A>, oder <xref:System.IO.BufferedStream.WriteByte%2A> löst eine <xref:System.NotSupportedException>.  
+  
+ Wenn der Stream geschlossen ist, gibt diese Eigenschaft `false`.  
+  
+   
+  
+## Examples  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.BufferedStream> Klasse.  
+  
+ [!code-cpp[System.IO.BufferedStream1#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CPP/client.cpp#4)]
+ [!code-csharp[System.IO.BufferedStream1#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CS/client.cs#4)]
+ [!code-vb[System.IO.BufferedStream1#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BufferedStream1/VB/client.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRead">
+      <MemberSignature Language="C#" Value="public override int EndRead (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 EndRead(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.EndRead(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Der Verweis auf die ausstehende asynchrone Anforderung, die abgewartet werden soll.</param>
+        <summary>Wartet, bis der ausstehende asynchrone Lesevorgang abgeschlossen ist. (Erwägen <see cref="M:System.IO.BufferedStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" /> stattdessen.)</summary>
+        <returns>Die Anzahl der aus dem Stream gelesenen Bytes. Diese Anzahl kann zwischen 0 und der Anzahl der angeforderten Bytes liegen. Streams geben nur am Ende des Streams 0 nur zurück, andernfalls sollten sie blockieren, bis mindestens 1 Byte verfügbar ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der .NET Framework 4 und früheren Versionen müssen Sie Methoden verwenden, z. B. <xref:System.IO.Stream.BeginRead%2A> und <xref:System.IO.Stream.EndRead%2A> zum Implementieren asynchroner Vorgänge. Diese Methoden sind weiterhin verfügbar, in der [!INCLUDE[net_v45](~/includes/net-v45-md.md)] zur Unterstützung von legacy-Code; allerdings der neuen asynchronen Methoden, wie z. B. <xref:System.IO.BufferedStream.ReadAsync%2A>, <xref:System.IO.BufferedStream.WriteAsync%2A>, und <xref:System.IO.BufferedStream.FlushAsync%2A>, Hilfe, die Sie implementieren leichter asynchrone Dateivorgänge.  
+  
+ <xref:System.IO.BufferedStream.EndRead%2A>muss aufgerufen werden, dabei <xref:System.IAsyncResult> um herauszufinden, wie viele Bytes gelesen wurden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Dieses <see cref="T:System.IAsyncResult" />-Objekt wurde nicht durch Aufrufen von <see cref="M:System.IO.BufferedStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" /> für diese Klasse erstellt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWrite">
+      <MemberSignature Language="C#" Value="public override void EndWrite (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndWrite(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.EndWrite(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Die ausstehende asynchrone Anforderung.</param>
+        <summary>Beendet einen asynchronen Schreibvorgang und blockiert, bis die E/A-Operation abgeschlossen wurde. (Erwägen <see cref="M:System.IO.BufferedStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" /> stattdessen.)</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der .NET Framework 4 und früheren Versionen müssen Sie Methoden verwenden, z. B. <xref:System.IO.Stream.BeginWrite%2A> und <xref:System.IO.Stream.EndWrite%2A> zum Implementieren asynchroner Vorgänge. Diese Methoden sind weiterhin verfügbar, in der [!INCLUDE[net_v45](~/includes/net-v45-md.md)] zur Unterstützung von legacy-Code; allerdings der neuen asynchronen Methoden, wie z. B. <xref:System.IO.BufferedStream.ReadAsync%2A>, <xref:System.IO.BufferedStream.WriteAsync%2A>, und <xref:System.IO.BufferedStream.FlushAsync%2A>, Hilfe, die Sie implementieren leichter asynchrone Dateivorgänge.  
+  
+ <xref:System.IO.BufferedStream.EndWrite%2A>muss genau einmal für jeden Aufruf aufgerufen werden <xref:System.IO.BufferedStream.BeginRead%2A>. Wegen eines Fehlers beim Beenden eines Prozesses lesen, stellen Sie vor Beginn kann ein anderer Lesevorgang Deadlocks oder anderen unerwünschtes Verhalten verursachen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Dieses <see cref="T:System.IAsyncResult" />-Objekt wurde nicht durch Aufrufen von <see cref="M:System.IO.BufferedStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" /> für diese Klasse erstellt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht sämtliche Puffer für diesen Datenstrom, und veranlasst die Ausgabe aller gepufferten Daten an das zugrunde liegende Gerät geschrieben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Leeren des Streams wird die zugrunde liegende Encoder nicht entleert, es sei denn, Sie explizit aufrufen `Flush` oder <xref:System.IO.Stream.Close%2A>.  
+  
+ Bei Verwendung der <xref:System.IO.BufferedStream.%23ctor%2A> Konstruktor angeben somit die Größe des Puffers beim Erstellen der `BufferedStream` -Objekt, der Inhalt wird geleert, wenn sie die Größe des Puffers erreicht. Angenommen, code wie z. B. `BufferedStream bs = new BufferedStream(bs, 5)` wegschreibt den Inhalt aus, wenn die Puffergröße 5 Bytes erreicht.  
+  
+ Alle Lese- und Schreibberechtigungen Methoden der `BufferedStream` automatisch verwalten den Puffer, daher keine Notwendigkeit zum Aufrufen besteht `Flush` beim hin und her wechseln zwischen Lesen und schreiben.  
+  
+   
+  
+## Examples  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.BufferedStream> Klasse.  
+  
+ [!code-cpp[System.IO.BufferedStream1#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CPP/client.cpp#6)]
+ [!code-csharp[System.IO.BufferedStream1#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CS/client.cs#6)]
+ [!code-vb[System.IO.BufferedStream1#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BufferedStream1/VB/client.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Stream wurde verworfen.</exception>
+        <exception cref="T:System.IO.IOException">Die Datenquelle oder das Repository ist nicht geöffnet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task FlushAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task FlushAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.FlushAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Das Token zum überwachen von Abbruchanforderungen .</param>
+        <summary>Löscht alle Puffer für diesen Stream asynchron, veranlasst die Ausgabe aller gepufferten Daten an das zugrunde liegende Gerät und überwacht Abbruchanforderungen.</summary>
+        <returns>Eine Aufgabe, die die asynchrone Leerung darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Stream wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public override long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.IO.BufferedStream.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge des Streams in Bytes ab.</summary>
+        <value>Die Länge des Streams in Bytes.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException">Der zugrunde liegende Stream <see langword="null" /> "oder" geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Vom Stream wird Suchen nicht unterstützt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Es wurden Methoden aufgerufen, nachdem der Stream geschlossen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public override long Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Position" />
+      <MemberSignature Language="DocId" Value="P:System.IO.BufferedStream.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position im aktuellen Stream ab.</summary>
+        <value>Die Position im aktuellen Stream.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `get` Accessor ruft <xref:System.IO.BufferedStream.Seek%2A> zum Abrufen der aktuellen Position im zugrunde liegenden Stream und anschließend diesen Wert entsprechend der aktuellen Position innerhalb des Puffers passt.  
+  
+ Die `set` Accessor kopiert alle Daten, die zuvor in den Puffer in den zugrunde liegenden Stream geschrieben, und ruft dann <xref:System.IO.BufferedStream.Seek%2A>.  
+  
+ Suchvorgänge, die an einem beliebigen Speicherort überschreitet die Länge des Streams wird unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert, der an übergebene <see cref="M:System.IO.BufferedStream.Seek(System.Int64,System.IO.SeekOrigin)" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.IO.IOException">Ein e/a-Fehler auftritt, z. B. der Stream geschlossen wird.</exception>
+        <exception cref="T:System.NotSupportedException">Vom Stream wird Suchen nicht unterstützt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Es wurden Methoden aufgerufen, nachdem der Stream geschlossen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override int Read (byte[] array, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read([out] unsigned int8[] array, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.Read(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Der Puffer, zu dem Bytes sind, kopiert werden soll.</param>
+        <param name="offset">Der Byteoffset im Puffer, ab dem mit dem Lesen von Bytes begonnen werden soll.</param>
+        <param name="count">Die Anzahl der zu lesenden Bytes.</param>
+        <summary>Kopiert Bytes aus dem aktuellen gepufferten Stream in ein Array.</summary>
+        <returns>Die Gesamtanzahl der Bytes in den gelesen <paramref name="array" />. Dies kann weniger als die Anzahl der angeforderten Bytes, wenn viele Bytes sind zurzeit nicht verfügbar, oder 0, wenn das Ende des Streams, vor allen anderen Daten erreicht ist können gelesen werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Read` Methode gibt 0 zurück, nur dann, wenn das Ende des Streams erreicht ist. In allen anderen Fällen `Read` liest immer mindestens ein Byte aus dem Stream vor der Rückgabe. Per Definition, wenn keine Daten verfügbar, aus dem Stream bei einem Aufruf sind `Read`die `Read` Methode gibt 0 (das Ende des Streams erreicht ist automatisch) zurück. Eine Implementierung kann weniger Bytes als angefordert zurückgeben, selbst wenn das Ende des Streams nicht erreicht wurde.  
+  
+ Verwendung <xref:System.IO.BinaryReader> zum Lesen von primitiven Datentypen.  
+  
+   
+  
+## Examples  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.BufferedStream> Klasse.  
+  
+ [!code-cpp[System.IO.BufferedStream1#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CPP/client.cpp#7)]
+ [!code-csharp[System.IO.BufferedStream1#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CS/client.cs#7)]
+ [!code-vb[System.IO.BufferedStream1#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BufferedStream1/VB/client.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Länge des <paramref name="array" /> minus <paramref name="offset" /> ist kleiner als <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> oder <paramref name="count" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.IO.IOException">Der Stream ist nicht geöffnet oder ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Lesevorgänge werden vom Stream nicht unterstützt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Es wurden Methoden aufgerufen, nachdem der Stream geschlossen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;int&gt; ReadAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;int32&gt; ReadAsync(unsigned int8[] buffer, int32 offset, int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, in den die Daten geschrieben werden sollen.</param>
+        <param name="offset">Der Byteoffset im <c>Puffer</c> ab dem Daten aus dem Stream geschrieben.</param>
+        <param name="count">Die maximale Anzahl der zu lesenden Bytes.</param>
+        <param name="cancellationToken">Das Token zum überwachen von Abbruchanforderungen .</param>
+        <summary>Liest eine Folge von Bytes asynchron aus dem aktuellen Stream, erhöht die Position im Stream um die Anzahl der gelesenen Bytes und überwacht Abbruchanfragen.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Lesevorgang darstellt. Der Wert des <paramref name="TResult" />-Parameters enthält die Gesamtzahl der Bytes, die in den Puffer gelesen werden. Der Ergebniswert kann niedriger als die Anzahl der angeforderten Bytes sein, wenn die Anzahl an derzeit verfügbaren Bytes kleiner ist als die angeforderte Anzahl, oder sie kann 0 (null) sein, wenn das Datenstromende erreicht ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie erstellen ein Abbruchtoken, das Erstellen einer Instanz von der <xref:System.Threading.CancellationTokenSource> Klasse und die Übertragung der <xref:System.Threading.CancellationTokenSource.Token%2A> -Eigenschaft der `cancellationToken` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> oder <paramref name="count" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.ArgumentException">Die Summe von <paramref name="offset" /> und <paramref name="count" /> ist größer als die Pufferlänge.</exception>
+        <exception cref="T:System.NotSupportedException">Lesevorgänge werden vom Stream nicht unterstützt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream wurde verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Stream wird zurzeit von einem vorherigen Lesevorgang verwendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="public override int ReadByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.ReadByte" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest ein Byte aus dem zugrunde liegenden Stream und gibt das Byte, umgewandelt in ein <see langword="int" />, oder-1 zurück, wenn das Ende des Streams liest.</summary>
+        <returns>Das Byte, umgewandelt in ein <see langword="int" />, oder-1 zurück, wenn das Ende des Streams liest.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException">Ein e/a-Fehler auftritt, z. B. der Stream geschlossen wird.</exception>
+        <exception cref="T:System.NotSupportedException">Lesevorgänge werden vom Stream nicht unterstützt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Es wurden Methoden aufgerufen, nachdem der Stream geschlossen wurde.</exception>
+        <block subset="none" type="overrides">
+          <para>Die standardmäßige Implementierung auf <see langword="Stream" /> erstellt ein neues Single-Byte-Array und ruft dann <see cref="M:System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)" />. Während dies formal richtig ist, ist es ineffizient. Jeder Stream mit einem internen Puffer sollte diese Methode überschreiben und eine wesentlich effizienter Version, die den Puffer direkt, liest die Zuordnung zusätzlichen Array bei jedem Aufruf zu vermeiden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public override long Seek (long offset, System.IO.SeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 Seek(int64 offset, valuetype System.IO.SeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.Seek(System.Int64,System.IO.SeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="origin" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Ein Byteoffset relativ zum <c>Ursprung</c>.</param>
+        <param name="origin">Ein Wert vom Typ <see cref="T:System.IO.SeekOrigin" /> , der angibt, das der Bezugspunkt ist von der die neue Position abgerufen werden sollen.</param>
+        <summary>Legt die Position innerhalb der aktuellen gepufferten Datenstrom.</summary>
+        <returns>Die neue Position innerhalb der aktuellen gepufferten Datenstrom.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `offset` ist negativ ist, die neue Position der angegebenen Position vorangestellt wird `origin` durch die Anzahl der Bytes, die vom angegebenen `offset`. Wenn `offset` beträgt 0, ist die neue Position der angegebenen Position `origin`. Wenn `offset` positiv ist, wird die neue Position der angegebenen Position befolgen `origin` durch die Anzahl der Bytes, die vom angegebenen `offset`.  
+  
+ Wenn eine <xref:System.IO.BufferedStream> Objekt ist der basisdatenstrom für eine <xref:System.IO.StreamReader> -Objekt Aufrufen der <xref:System.IO.BufferedStream.Seek%2A> Methode kann dazu führen, dass die Position im Stream um die Position des internen Puffers im Reader nicht mehr übereinstimmen. Um den internen Puffer zurückzusetzen, rufen Sie die <xref:System.IO.StreamReader.DiscardBufferedData%2A?displayProperty=nameWithType> Methode jedoch diese Methode durch die die Leistung und sollte aufgerufen werden, nur wenn unbedingt nötig.  
+  
+ Suchvorgänge, die an einem beliebigen Speicherort überschreitet die Länge des Streams wird unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Stream ist nicht geöffnet oder ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Vom Stream wird Suchen nicht unterstützt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Es wurden Methoden aufgerufen, nachdem der Stream geschlossen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLength">
+      <MemberSignature Language="C#" Value="public override void SetLength (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetLength(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.SetLength(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine ganze Zahl, die die gewünschte Länge des aktuellen gepufferten Streams in Bytes angibt.</param>
+        <summary>Legt die Länge der gepufferten Datenstrom.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Puffer wird vor dem Festlegen der Länge der zugrunde liegenden Datenquelle oder Repository geleert. Wenn der angegebene Wert kleiner als die aktuelle Länge der gepufferten Datenstrom ist, wird der gepufferte Datenstrom abgeschnitten. Wenn der angegebene Wert größer als die aktuelle Länge der gepufferten Datenstrom ist, wird der gepufferte Datenstrom erweitert. Der gepufferte Datenstrom erweitert ist, werden die Inhalte den gepufferten Datenstrom zwischen den alten und neuen Länge nicht definiert.  
+  
+ `SetLength`Leert alle gepufferten Schreibvorgänge an, bei Bedarf.  
+  
+ Ein Stream muss Schreib- und Suchvorgänge für unterstützen `SetLength` arbeiten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.IO.IOException">Der Stream ist nicht geöffnet oder ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Der Stream unterstützt nicht gleichzeitig Schreib- und Suchvorgänge.</exception>
+        <exception cref="T:System.ObjectDisposedException">Es wurden Methoden aufgerufen, nachdem der Stream geschlossen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlyingStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream UnderlyingStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream UnderlyingStream" />
+      <MemberSignature Language="DocId" Value="P:System.IO.BufferedStream.UnderlyingStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (byte[] array, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(unsigned int8[] array, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Bytearray, aus dem kopiert <c>Anzahl</c> Bytes in den aktuellen gepufferten Datenstrom.</param>
+        <param name="offset">Der Offset im Puffer, ab dem Bytes in den aktuellen gepufferten Datenstrom kopiert werden soll.</param>
+        <param name="count">Die Anzahl der Bytes in den aktuellen gepufferten Datenstrom geschrieben werden sollen.</param>
+        <summary>Kopiert Bytes in den gepufferten Datenstrom und verschiebt die aktuelle Position in den gepufferten Datenstrom durch die Anzahl der geschriebenen Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.BufferedStream> Klasse.  
+  
+ [!code-cpp[System.IO.BufferedStream1#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CPP/client.cpp#6)]
+ [!code-csharp[System.IO.BufferedStream1#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BufferedStream1/CS/client.cs#6)]
+ [!code-vb[System.IO.BufferedStream1#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BufferedStream1/VB/client.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Länge des <paramref name="array" /> minus <paramref name="offset" /> ist kleiner als <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> oder <paramref name="count" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.IO.IOException">Der Stream geschlossen ist oder <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Der Stream unterstützt das Schreiben nicht.</exception>
+        <exception cref="T:System.ObjectDisposedException">Es wurden Methoden aufgerufen, nachdem der Stream geschlossen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(unsigned int8[] buffer, int32 offset, int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, aus dem Daten geschrieben werden sollen.</param>
+        <param name="offset">Der nullbasierte Byteoffset im <c>Puffer</c> aus dem Bytes in den Stream kopiert werden soll.</param>
+        <param name="count">Die maximale Anzahl der zu schreibenden Bytes.</param>
+        <param name="cancellationToken">Das Token zum überwachen von Abbruchanforderungen .</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse eine Folge von Bytes asynchron in den aktuellen Stream und erhöht die aktuelle Position im Stream um die Anzahl der geschriebenen Bytes und überwacht Abbruchanforderungen.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Schreibvorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie erstellen ein Abbruchtoken, das Erstellen einer Instanz von der <xref:System.Threading.CancellationTokenSource> Klasse und die Übertragung der <xref:System.Threading.CancellationTokenSource.Token%2A> -Eigenschaft der `cancellationToken` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> oder <paramref name="count" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.ArgumentException">Die Summe von <paramref name="offset" /> und <paramref name="count" /> ist größer als die Pufferlänge.</exception>
+        <exception cref="T:System.NotSupportedException">Der Stream unterstützt das Schreiben nicht.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream wurde verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Stream wird zurzeit von einem vorherigen Schreibvorgang verwendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="public override void WriteByte (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteByte(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BufferedStream.WriteByte(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Byte, das in den Stream geschrieben werden soll.</param>
+        <summary>Schreibt ein Byte an die aktuelle Position in den gepufferten Datenstrom.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Der Stream unterstützt das Schreiben nicht.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Es wurden Methoden aufgerufen, nachdem der Stream geschlossen wurde.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

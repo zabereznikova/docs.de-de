@@ -1,0 +1,48 @@
+<Type Name="CssClassPropertyAttribute" FullName="System.Web.UI.CssClassPropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class CssClassPropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CssClassPropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.CssClassPropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fügt Cascading Stylesheet (CSS) Bearbeitungsfunktionen auf eine Eigenschaft zur Entwurfszeit an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.CssClassPropertyAttribute> Klasse wird von Entwicklern verwendet, eine Eigenschaft in einem Eigenschaftenraster Entwurf Zeit Cascading Stylesheet (CSS) Bearbeitungsfunktionen hinzu.  
+  
+ <xref:System.Web.UI.CssClassPropertyAttribute>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CssClassPropertyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CssClassPropertyAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.CssClassPropertyAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

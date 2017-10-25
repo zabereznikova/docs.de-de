@@ -1,0 +1,298 @@
+<Type Name="SamlAction" FullName="System.IdentityModel.Tokens.SamlAction">
+  <TypeSignature Language="C#" Value="public class SamlAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SamlAction extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SamlAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das <see langword="&lt;saml:Action&gt;" />-Element innerhalb einer SAML-Assertion dar, die eine Aktion auf einer angegebenen Ressource enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlAction>-Klasse entspricht dem `<saml:Action>`-XML-Element, das in der OASIS SAML v1.1-Spezifikation definiert wird.  
+  
+ Verwenden Sie die <xref:System.IdentityModel.Tokens.SamlAction>-Klasse, wenn Sie einen Anspruch über die Fähigkeit einer Subjekt-<xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement> angeben, um eine angegebene Aktion für eine angegebene Ressource auszuführen. Verwenden Sie die <xref:System.IdentityModel.Tokens.SamlAction>-Klasse zum Angeben der gewünschten Aktion und der <xref:System.IdentityModel.Tokens.SamlAccessDecision>-Klasse zu Angabe der Zugriffsentscheidung. Die <xref:System.IdentityModel.Tokens.SamlAction.Action%2A>-Eigenschaft stellt die Aktion dar, und die <xref:System.IdentityModel.Tokens.SamlAction.Namespace%2A>-Eigenschaft gibt den XML-Namespace an, in der die Aktion definiert ist.  
+  
+ Die <xref:System.IdentityModel.Tokens.SamlAction>-Position in der SAML-Objekthierarchie lautet:  
+  
+ <xref:System.IdentityModel.Tokens.SamlSecurityToken>  
+  
+ <xref:System.IdentityModel.Tokens.SamlAssertion>  
+  
+ <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement>  
+  
+ <xref:System.IdentityModel.Tokens.SamlAction>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SamlAction" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie Beim Verwenden dieses Konstruktors zum Angeben des gewünschten Namespace für eine <xref:System.IdentityModel.Tokens.SamlAction>-Anweisung die <xref:System.IdentityModel.Tokens.SamlAction.Namespace%2A>-Eigenschaft fest. Legen Sie zum Angeben der gewünschten Aktion die <xref:System.IdentityModel.Tokens.SamlAction.Action%2A>-Eigenschaft fest.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlAction (string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAction.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Aktion, die das Subjekt des <see cref="T:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement" />-Sicherheitstokens für die angegebenen Ressourcen ausführen möchte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SamlAction" />-Klasse unter Verwendung der angegebenen Aktion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `action`-Parameter legt die <xref:System.IdentityModel.Tokens.SamlAction.Action%2A>-Eigenschaft fest.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="action" /> ist <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlAction (string action, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string action, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAction.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Aktion, die das Subjekt des <see cref="T:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement" />-Sicherheitstokens für die angegebenen Ressourcen ausführen möchte.</param>
+        <param name="ns">Die XML-Namespace, in dem die <c>Aktion</c> Parameter definiert ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SamlAction" />-Klasse unter Verwendung der angegebenen Aktion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `action`-Parameter legt die <xref:System.IdentityModel.Tokens.SamlAction.Action%2A>-Eigenschaft fest.  
+  
+ Der `ns`-Parameter legt die <xref:System.IdentityModel.Tokens.SamlAction.Namespace%2A>-Eigenschaft fest.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="action" /> ist <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAction.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aktion ab oder legt diese fest, die das ##Thema vom <see cref="T:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement" /> auf der angegebenen Ressource ausführen kann.</summary>
+        <value>Ruft die Aktion ab oder legt diese fest, die das Subjekt des <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstokens für die angegebenen Ressourcen ausführen möchte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlAction.Action%2A>-Eigenschaft entspricht dem Text des `<saml:Action>`-XML-Elements, das in der OASIS SAML 1.1-Spezifikation definiert ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.IdentityModel.Tokens.SamlAction.Action" />-Eigenschaft ist auf <see langword="null" /> festgelegt.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IdentityModel.Tokens.SamlAction.Action" />-Eigenschaft ist auf <see cref="F:System.String.Empty" /> festgelegt.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <see cref="P:System.IdentityModel.Tokens.SamlAction.IsReadOnly" />-Eigenschaft ist <see langword="true" />, und die <see cref="P:System.IdentityModel.Tokens.SamlAction.Action" />-Eigenschaft wird festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAction.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Eigenschaften dieser Instanz schreibgeschützt sind.</summary>
+        <value>
+          <see langword="true" />, wenn die Eigenschaften dieser Instanz schreibgeschützt sind, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Instanz der <xref:System.IdentityModel.Tokens.SamlAction.IsReadOnly%2A>-Klasse schreibgeschützt machen möchten, rufen Sie die <xref:System.IdentityModel.Tokens.SamlAction.MakeReadOnly%2A>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeReadOnly">
+      <MemberSignature Language="C#" Value="public void MakeReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MakeReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAction.MakeReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass diese Instanz schreibgeschützt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.SamlAction.MakeReadOnly%2A>-Methode aufgerufen wird, wird die <xref:System.IdentityModel.Tokens.SamlAction.IsReadOnly%2A>-Eigenschaft auf `true` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAction.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den XML-Namespace ab oder legt diesen fest, in dem die <see cref="P:System.IdentityModel.Tokens.SamlAction.Action" />-Eigenschaft definiert wird.</summary>
+        <value>Der XML-Namespace, in dem die <see cref="P:System.IdentityModel.Tokens.SamlAction.Action" />-Eigenschaft definiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlAction.Namespace%2A>-Eigenschaft entspricht dem `Namespace`-Attribut des `<saml:Action>`-XML-Element, das in der OASIS SAML 1.1-Spezifikation definiert wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.IdentityModel.Tokens.SamlAction.IsReadOnly" />-Eigenschaft ist <see langword="true" />, und die <see cref="P:System.IdentityModel.Tokens.SamlAction.Namespace" />-Eigenschaft wird festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXml">
+      <MemberSignature Language="C#" Value="public virtual void ReadXml (System.Xml.XmlDictionaryReader reader, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoTokenSerializer, System.IdentityModel.Selectors.SecurityTokenResolver outOfBandTokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReadXml(class System.Xml.XmlDictionaryReader reader, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoTokenSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver outOfBandTokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAction.ReadXml(System.Xml.XmlDictionaryReader,System.IdentityModel.Tokens.SamlSerializer,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlDictionaryReader" /> zum Lesen des <see langword="&lt;saml:Action&gt;" />-XML-Elements.</param>
+        <param name="samlSerializer">Ein <see cref="T:System.IdentityModel.Tokens.SamlSerializer" />, der XML-Elemente in der SAML-Assertion lesen kann, die in der SAML-Spezifikation festgelegt wurden.</param>
+        <param name="keyInfoTokenSerializer">To be added.</param>
+        <param name="outOfBandTokenResolver">Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" />, der das Sicherheitstoken bestimmt, das die digitale Signatur für SAML-Assertionen erstellt hat, auf die das <see langword="&lt;saml:Advice&gt;" />-XML-Element verweist.</param>
+        <summary>Liest das <see langword="&lt;saml:Action&gt;" />-Element mithilfe des angegebenen XML-Readers.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="samlSerializer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXml">
+      <MemberSignature Language="C#" Value="public virtual void WriteXml (System.Xml.XmlDictionaryWriter writer, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoTokenSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteXml(class System.Xml.XmlDictionaryWriter writer, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoTokenSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAction.WriteXml(System.Xml.XmlDictionaryWriter,System.IdentityModel.Tokens.SamlSerializer,System.IdentityModel.Selectors.SecurityTokenSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Xml.XmlDictionaryWriter" /> zum Schreiben des <see langword="&lt;saml:Action&gt;" />-Elements.</param>
+        <param name="samlSerializer">Ein <see cref="T:System.IdentityModel.Tokens.SamlSerializer" />, das das <see langword="&lt;saml:Action&gt;" />-Element und seine untergeordneten Elemente und Attribute schreiben kann, die in der SAML-Spezifikation definiert sind.</param>
+        <param name="keyInfoTokenSerializer">To be added.</param>
+        <summary>Schreibt die <see cref="T:System.IdentityModel.Tokens.SamlAction" /> als <see langword="&lt;saml:Action&gt;" />-Element in den angegebenen XML-Writer.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="samlSerializer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

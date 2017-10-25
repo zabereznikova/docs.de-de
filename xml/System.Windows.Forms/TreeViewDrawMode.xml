@@ -1,0 +1,86 @@
+<Type Name="TreeViewDrawMode" FullName="System.Windows.Forms.TreeViewDrawMode">
+  <TypeSignature Language="C#" Value="public enum TreeViewDrawMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TreeViewDrawMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeViewDrawMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Konstanten, die die Möglichkeiten darstellen einer <see cref="T:System.Windows.Forms.TreeView" /> gezeichnet werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, indem Sie die <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType> Eigenschaft, um anzugeben, ob Knoten oder Knoten-Bezeichnungen, der eine <xref:System.Windows.Forms.TreeView> ownerdrawn-sind. Weitere Informationen finden Sie beim <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>-Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anpassen einer <xref:System.Windows.Forms.TreeView> mithilfe seiner Ownerdrawn-Funktion zu steuern. Die <xref:System.Windows.Forms.TreeView> -Steuerelement im Beispiel zeigt die optionalen Knotentags zusammen mit dem Knoten "standard"-Bezeichnungen. Mit Knotentags angegeben. die <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> Eigenschaft. Die <xref:System.Windows.Forms.TreeView> Steuerelement auch benutzerdefinierte Farben, einschließlich einer benutzerdefinierten Hervorhebungsfarbe verwendet.  
+  
+ Sie können anpassen, dass die meisten der <xref:System.Windows.Forms.TreeView> Farben durch Einstellung color-Eigenschaften, aber die Hervorhebungsfarbe für die Auswahl ist nicht als Eigenschaft verfügbar. Darüber hinaus erweitert die standardmäßige Auswahl hervorgehobene Rechteck nur um eine Bezeichnung ein. Ownerdrawing muss, zeichnen Sie die Knotentags und zum Zeichnen von einer benutzerdefinierten hervorgehobene Rechteck, die groß genug ist, mit einem Knotentag verwendet werden.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> Referenzthema.  
+  
+ [!code-cpp[TreeViewOwnerDraw#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#2)]
+ [!code-csharp[TreeViewOwnerDraw#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#2)]
+ [!code-vb[TreeViewOwnerDraw#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeViewDrawMode Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeViewDrawMode.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeViewDrawMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Forms.TreeView" /> wird vom Betriebssystem gezeichnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDrawAll">
+      <MemberSignature Language="C#" Value="OwnerDrawAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeViewDrawMode OwnerDrawAll = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeViewDrawMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Elemente von einem <see cref="T:System.Windows.Forms.TreeView" /> Knoten werden manuell gezeichnet, einschließlich der Symbole, Kontrollkästchen, Plus- und Minuszeichen sowie Verbindungslinien zwischen den Knoten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDrawText">
+      <MemberSignature Language="C#" Value="OwnerDrawText" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeViewDrawMode OwnerDrawText = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeViewDrawMode.OwnerDrawText" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeViewDrawMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Bezeichnung Teil der <see cref="T:System.Windows.Forms.TreeView" /> Knoten manuell gezeichnet werden. Andere Knotenelemente werden vom Betriebssystem, einschließlich der Symbole, Kontrollkästchen, Plus- und Minuszeichen sowie Verbindungslinien zwischen den Knoten gezeichnet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

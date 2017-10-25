@@ -1,0 +1,352 @@
+<Type Name="EntityTagHeaderValue" FullName="System.Net.Http.Headers.EntityTagHeaderValue">
+  <TypeSignature Language="C#" Value="public class EntityTagHeaderValue : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityTagHeaderValue extends System.Object implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.Headers.EntityTagHeaderValue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Entitätstag-Headerwert dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entitätstags dienen zum Vergleichen von zwei oder mehr Entitäten aus der gleichen angeforderte Ressource.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityTagHeaderValue (string tag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.EntityTagHeaderValue.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tag">Eine Zeichenfolge, enthält eine <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityTagHeaderValue (string tag, bool isWeak);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tag, bool isWeak) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.EntityTagHeaderValue.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tag" Type="System.String" />
+        <Parameter Name="isWeak" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="tag">Eine Zeichenfolge, enthält eine <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />.</param>
+        <param name="isWeak">Ein Wert, der angibt, wenn der Entitäts-Tag-Header ein Validator schwach ist. Wenn der Entitäts-Tag-Header schwache Validierungssteuerelement angegeben, dann ist <c>IsWeak</c> sollte festgelegt werden, um <see langword="true" />. Wenn der Entitäts-Tag-Header ein sicheres Validierungssteuerelement angegeben, dann ist <c>IsWeak</c> sollte festgelegt werden, um <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Any">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.Headers.EntityTagHeaderValue Any { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.Http.Headers.EntityTagHeaderValue Any" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.EntityTagHeaderValue.Any" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.Headers.EntityTagHeaderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Entitätstag-Headerwert ab.</summary>
+        <value>Gibt <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Entitätstag-Headerwert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.EntityTagHeaderValue.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dem aktuellen Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Object" /> und das aktuelle <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />-Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see cref="T:System.Object" /> gleich dem aktuellen Objekt ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.EntityTagHeaderValue.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für ein <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />-Objekt.</summary>
+        <returns>Ein Hashcode für das aktuelle Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Hashcode ist ein numerischer Wert, der zum Identifizieren eines Objekts während der Gleichheitstests der auf verwendet wird. Es kann auch als Index für ein Objekt in einer Auflistung dienen.  
+  
+ Die <xref:System.Net.Http.Headers.AuthenticationHeaderValue.GetHashCode%2A> Methode eignet sich für die Verwendung in Hashalgorithmen und Datenstrukturen wie Hashtabellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWeak">
+      <MemberSignature Language="C#" Value="public bool IsWeak { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWeak" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.EntityTagHeaderValue.IsWeak" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob dem Entitätstag ein Schwächenindikator vorangestellt ist.</summary>
+        <value>
+          <see langword="true" />, wenn dem Entitätstag ein Schwächenindikator vorangestellt ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.Headers.EntityTagHeaderValue Parse (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Http.Headers.EntityTagHeaderValue Parse(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.EntityTagHeaderValue.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.Headers.EntityTagHeaderValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">Eine Zeichenfolge, die Entitätstag-Headerwertinformationen darstellt.</param>
+        <summary>Konvertiert eine Zeichenfolge in eine <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />-Instanz.</summary>
+        <returns>Eine <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="input" /> ist ein <see langword="null" />-Verweis.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="input" /> ist keine gültige Entitätstag-Headerwertinformation.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.EntityTagHeaderValue.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />-Instanz ist.</summary>
+        <returns>Eine Kopie der aktuellen Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public string Tag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.EntityTagHeaderValue.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die undurchsichtige Zeichenfolge in Anführungszeichen ab.</summary>
+        <value>Eine undurchsichtige Zeichenfolge in Anführungszeichen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.EntityTagHeaderValue.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />-Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (string input, out System.Net.Http.Headers.EntityTagHeaderValue parsedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(string input, [out] class System.Net.Http.Headers.EntityTagHeaderValue&amp; parsedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.EntityTagHeaderValue.TryParse(System.String,System.Net.Http.Headers.EntityTagHeaderValue@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="parsedValue" Type="System.Net.Http.Headers.EntityTagHeaderValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu überprüfende Zeichenfolge.</param>
+        <param name="parsedValue">Die <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />-Version der Zeichenfolge.</param>
+        <summary>Bestimmt, ob eine Zeichenfolge eine gültige <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />-Information ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="input" /> eine gültige <see cref="T:System.Net.Http.Headers.EntityTagHeaderValue" />-Information ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

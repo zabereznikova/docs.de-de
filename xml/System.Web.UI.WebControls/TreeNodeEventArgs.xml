@@ -1,0 +1,105 @@
+<Type Name="TreeNodeEventArgs" FullName="System.Web.UI.WebControls.TreeNodeEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class TreeNodeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TreeNodeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TreeNodeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.WebControls.TreeView.TreeNodeCheckChanged" />, <see cref="E:System.Web.UI.WebControls.TreeView.TreeNodeCollapsed" />, <see cref="E:System.Web.UI.WebControls.TreeView.TreeNodeDataBound" />, <see cref="E:System.Web.UI.WebControls.TreeView.TreeNodeExpanded" />, und <see cref="E:System.Web.UI.WebControls.TreeView.TreeNodePopulate" /> Ereignisse der <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeNodeEventArgs> Klasse wird verwendet, um Daten für das Ereignis zu speichern, die an eine Ereignisbehandlungsmethode übergeben wird.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von der <xref:System.Web.UI.WebControls.TreeNodeEventArgs> Klasse, finden Sie unter <xref:System.Web.UI.WebControls.TreeNodeEventArgs.%23ctor%28System.Web.UI.WebControls.TreeNode%29>.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Auffüllen eines Knotens dynamisch mit der <xref:System.Web.UI.WebControls.TreeNodeEventArgs> -Objekt, das an die Ereignisbehandlungsmethode übergeben wird.  
+  
+ [!code-aspx-csharp[TreeViewPopulateNodesFromClient#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewPopulateNodesFromClient/CS/treeviewpopulatenodesfromclientcs.aspx#1)]
+ [!code-aspx-vb[TreeViewPopulateNodesFromClient#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewPopulateNodesFromClient/VB/treeviewpopulatenodesfromclientvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNodeEventArgs (System.Web.UI.WebControls.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeEventArgs.#ctor(System.Web.UI.WebControls.TreeNode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="node" Type="System.Web.UI.WebControls.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Ein <see cref="T:System.Web.UI.WebControls.TreeNode" /> , das den aktuellen Knoten darstellt, wenn das Ereignis ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.TreeNodeEventArgs" />-Klasse mit dem angegebenen <see cref="T:System.Web.UI.WebControls.TreeNode" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeEventArgs.%23ctor%2A> Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.TreeNodeEventArgs> Klasse.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.TreeNodeEventArgs.%23ctor%2A> Konstruktor beim Auslösen von Ereignissen wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von der <xref:System.Web.UI.WebControls.TreeNodeEventArgs> Klasse.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.TreeNodeEventArgs.Node%2A>|Die <xref:System.Web.UI.WebControls.TreeNode> in enthaltenen `node`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TreeNode Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TreeNode Node" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeEventArgs.Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Knoten ab, der das Ereignis ausgelöst hat.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TreeNode" /> , die den Knoten, der das Ereignis ausgelöst hat darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeEventArgs.Node%2A> Eigenschaft, um die Eigenschaften des Knotens zuzugreifen, die das Ereignis ausgelöst hat. Die <xref:System.Web.UI.WebControls.TreeNodeEventArgs.Node%2A> -Eigenschaft gibt ein <xref:System.Web.UI.WebControls.TreeNode> -Objekt an und wird häufig verwendet, um zu bestimmen, den Inhalt des Knotens, um die Eigenschaften des Knotens ändern oder untergeordnete Knoten dynamisch hinzugefügt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeEventArgs.Node%2A> Methode, um den Textwert eines erweiterten Knotens festzulegen.  
+  
+ [!code-aspx-csharp[TreeViewTreeNodeExpand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewTreeNodeExpand/CS/treeviewtreenodeexpandcs.aspx#1)]
+ [!code-aspx-vb[TreeViewTreeNodeExpand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewTreeNodeExpand/VB/treeviewtreenodeexpandvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

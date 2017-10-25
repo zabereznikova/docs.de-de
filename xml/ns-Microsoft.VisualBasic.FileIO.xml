@@ -1,0 +1,13 @@
+<Namespace Name="Microsoft.VisualBasic.FileIO">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.VisualBasic.FileIO" /> -Namespace enthält Typen, die die <see langword="My" /> Dateisystemobjekt in Visual Basic.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den `My` Systemobjekt, finden Sie unter <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,62 @@
+<Type Name="ICompositionElement" FullName="System.ComponentModel.Composition.Primitives.ICompositionElement">
+  <TypeSignature Language="C#" Value="public interface ICompositionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICompositionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Primitives.ICompositionElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Element, das in der Zusammensetzung beteiligt ist.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ICompositionElement.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen des Elements Komposition ab.</summary>
+        <value>Der lesbare Anzeigename, der die <see cref="T:System.ComponentModel.Composition.Primitives.ICompositionElement" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der Implementierung dieser Eigenschaft sollte nie zurückgeben `null` oder eine leere Zeichenfolge ("").  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Origin">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Primitives.ICompositionElement Origin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Composition.Primitives.ICompositionElement Origin" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ICompositionElement.Origin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ICompositionElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Kompositionselement, das von dem das aktuelle Kompositionselement stammt.</summary>
+        <value>Die Kompositionselement, aus dem aktuellen <see cref="T:System.ComponentModel.Composition.Primitives.ICompositionElement" /> verursacht wurde, oder <see langword="null" /> Wenn die <see cref="T:System.ComponentModel.Composition.Primitives.ICompositionElement" /> ist das Stammelement der Komposition.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

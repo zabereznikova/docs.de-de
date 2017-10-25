@@ -1,0 +1,454 @@
+<Type Name="FontWeight" FullName="System.Windows.FontWeight">
+  <TypeSignature Language="C#" Value="public struct FontWeight : IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit FontWeight extends System.ValueType implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontWeight" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.FontWeightConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bezieht sich auf die Dichte für eine Schriftart, im Hinblick auf fein oder breit Striche.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gewichtung Unterschiede unterscheiden sich in der Regel von einem verstärkten Strich oder Stärke, die ein angegebenes Zeichen in einer Schriftart, im Vergleich zu einem "normalen" Zeichen in der gleichen Schriftart zugeordnet ist.  
+  
+ **Hinweis** nicht alle Gewichtungen für alle Schriftarten verfügbar sind. Wenn eine Gewichtung nicht für eine Schriftart verfügbar ist, wird die ähnlichste Schriftbreite zurückgegeben.  
+  
+<a name="xamlAttributeUsage_FontWeight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object fontWeightProperty="fontWeightsValue"/>  
+```  
+  
+<a name="xamlValues_FontWeight"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *fontWeightsValue*  
+ Ein <xref:System.Windows.FontWeights> Eigenschaft ein, z. B. "Light", "Normal" oder "UltraBold".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel die <xref:System.Windows.FontWeight> auf "UltraBold" festgelegt ist.  
+  
+ [!code-xaml[FontSnippets#FontSnippet12](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/Window1.xaml#fontsnippet12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public static int Compare (System.Windows.FontWeight left, System.Windows.FontWeight right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Compare(valuetype System.Windows.FontWeight left, valuetype System.Windows.FontWeight right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.Compare(System.Windows.FontWeight,System.Windows.FontWeight)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontWeight" />
+        <Parameter Name="right" Type="System.Windows.FontWeight" />
+      </Parameters>
+      <Docs>
+        <param name="left">Das erste zu vergleichende <see cref="T:System.Windows.FontWeight" />-Objekt.</param>
+        <param name="right">Das zweite zu vergleichende <see cref="T:System.Windows.FontWeight" />-Objekt.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Windows.FontWeight" />.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> -Wert, der die Beziehung zwischen den beiden Instanzen des angibt <see cref="T:System.Windows.FontWeight" />. Wenn der Rückgabewert ist kleiner als 0 (null), <paramref name="left" /> ist kleiner als <paramref name="right" />. Wenn dieser Wert 0 (null) ist, gibt es an, dass beide Operanden gleich sind. Wenn der Wert größer als 0 (null) ist, bedeutet dies, dass <paramref name="left" /> ist größer als <paramref name="right" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geringere Schriftbreiten sind kleiner als größere Schriftbreiten. Eine Schriftbreite "Light" oder "Normal" ist z. B. kleiner als ein Schriftbreite "UltraBold".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel die <xref:System.Windows.FontWeight.Compare%2A> Methode wird verwendet, um zwei auswerten <xref:System.Windows.FontWeight> Objekte.  
+  
+ [!code-csharp[FontSnippets#FontSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/Window1.xaml.cs#fontsnippet11)]
+ [!code-vb[FontSnippets#FontSnippet11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/window1.xaml.vb#fontsnippet11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Object" /> auf Gleichheit verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle <see cref="T:System.Windows.FontWeight" /> -Objekt mit einem angegebenen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Instanzen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.FontWeight obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.FontWeight obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.Equals(System.Windows.FontWeight)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Windows.FontWeight" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die Instanz von <see cref="T:System.Windows.FontWeight" /> auf Gleichheit verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle <see cref="T:System.Windows.FontWeight" /> -Objekt gleich einem angegebenen <see cref="T:System.Windows.FontWeight" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Instanzen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromOpenTypeWeight">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight FromOpenTypeWeight (int weightValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.FontWeight FromOpenTypeWeight(int32 weightValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.FromOpenTypeWeight(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="weightValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="weightValue">Eine ganze Zahl zwischen 1 und 999, die entspricht der <c>UsWeightClass</c> -Definition in der [!INCLUDE[TLA2#tla_opentype](~/includes/tla2sharptla-opentype-md.md)] Spezifikation.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Windows.FontWeight" /> , entspricht der [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] <c>UsWeightClass</c> Wert.</summary>
+        <returns>Eine neue Instanz von <see cref="T:System.Windows.FontWeight" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] `usWeightClass` Wert, finden Sie unter der ["Schriftart Dateitabellen"](http://www.microsoft.com/typography/otspec/otff.htm) Abschnitt der OpenType-Spezifikation.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für dieses Objekt ab.</summary>
+        <returns>Ein 32-Bit-Hashcode, d. h. eine Ganzzahl mit Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Wert fungiert als Hashfunktion für einen bestimmten Typ, der für geeignet, die in Hashalgorithmen und Datenstrukturen, z. B. einer Hashtabelle verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.FontWeight left, System.Windows.FontWeight right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.FontWeight left, valuetype System.Windows.FontWeight right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.op_Equality(System.Windows.FontWeight,System.Windows.FontWeight)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontWeight" />
+        <Parameter Name="right" Type="System.Windows.FontWeight" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.FontWeight" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.FontWeight" />.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Windows.FontWeight" /> auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />, wenn die Instanzen von <see cref="T:System.Windows.FontWeight" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static bool operator &gt; (System.Windows.FontWeight left, System.Windows.FontWeight right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_GreaterThan(valuetype System.Windows.FontWeight left, valuetype System.Windows.FontWeight right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.op_GreaterThan(System.Windows.FontWeight,System.Windows.FontWeight)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontWeight" />
+        <Parameter Name="right" Type="System.Windows.FontWeight" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.FontWeight" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.FontWeight" />.</param>
+        <summary>Wertet zwei Instanzen von <see cref="T:System.Windows.FontWeight" /> zu bestimmen, ob eine Instanz größer als das andere ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> größer als <paramref name="right" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geringere Schriftbreiten sind kleiner als größere Schriftbreiten. Eine Schriftbreite "Light" oder "Normal" ist z. B. kleiner als ein Schriftbreite "UltraBold".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static bool operator &gt;= (System.Windows.FontWeight left, System.Windows.FontWeight right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_GreaterThanOrEqual(valuetype System.Windows.FontWeight left, valuetype System.Windows.FontWeight right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.op_GreaterThanOrEqual(System.Windows.FontWeight,System.Windows.FontWeight)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontWeight" />
+        <Parameter Name="right" Type="System.Windows.FontWeight" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.FontWeight" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.FontWeight" />.</param>
+        <summary>Wertet zwei Instanzen von <see cref="T:System.Windows.FontWeight" /> zu bestimmen, ob eine Instanz größer als oder gleich dem anderem ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> größer oder gleich <paramref name="right" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geringere Schriftbreiten sind kleiner als größere Schriftbreiten. Eine Schriftbreite "Light" oder "Normal" ist z. B. kleiner als ein Schriftbreite "UltraBold".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.FontWeight left, System.Windows.FontWeight right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.FontWeight left, valuetype System.Windows.FontWeight right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.op_Inequality(System.Windows.FontWeight,System.Windows.FontWeight)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontWeight" />
+        <Parameter Name="right" Type="System.Windows.FontWeight" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.FontWeight" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.FontWeight" />.</param>
+        <summary>Wertet zwei Instanzen von <see cref="T:System.Windows.FontWeight" /> Ungleichheit zu bestimmen.</summary>
+        <returns>
+          <see langword="false" />, wenn <paramref name="left" /> und <paramref name="right" /> gleich sind, andernfalls <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static bool operator &lt; (System.Windows.FontWeight left, System.Windows.FontWeight right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_LessThan(valuetype System.Windows.FontWeight left, valuetype System.Windows.FontWeight right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.op_LessThan(System.Windows.FontWeight,System.Windows.FontWeight)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontWeight" />
+        <Parameter Name="right" Type="System.Windows.FontWeight" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.FontWeight" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.FontWeight" />.</param>
+        <summary>Wertet zwei Instanzen von <see cref="T:System.Windows.FontWeight" /> zu bestimmen, ob eine Instanz, die kleiner als das andere ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> kleiner als <paramref name="right" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geringere Schriftbreiten sind kleiner als größere Schriftbreiten. Eine Schriftbreite "Light" oder "Normal" ist z. B. kleiner als ein Schriftbreite "UltraBold".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static bool operator &lt;= (System.Windows.FontWeight left, System.Windows.FontWeight right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_LessThanOrEqual(valuetype System.Windows.FontWeight left, valuetype System.Windows.FontWeight right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.op_LessThanOrEqual(System.Windows.FontWeight,System.Windows.FontWeight)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontWeight" />
+        <Parameter Name="right" Type="System.Windows.FontWeight" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.FontWeight" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.FontWeight" />.</param>
+        <summary>Wertet zwei Instanzen von <see cref="T:System.Windows.FontWeight" /> zu bestimmen, ob eine Instanz kleiner oder gleich dem anderen ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> kleiner oder gleich <paramref name="right" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geringere Schriftbreiten sind kleiner als größere Schriftbreiten. Eine Schriftbreite "Light" oder "Normal" ist z. B. kleiner als ein Schriftbreite "UltraBold".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Die <see cref="T:System.String" /> das zu verwendende Format angeben.  
+  
+ - oder -   
+  
+ <see langword="null" />Verwenden Sie das Standardformat für den Typ des definiert die <see cref="T:System.IFormattable" /> Implementierung.</param>
+        <param name="provider">Die <see cref="T:System.IFormatProvider" /> zum Formatieren des Werts verwenden.  
+  
+ - oder -   
+  
+ <see langword="null" />um die Zahlenformatinformationen aus dem aktuellen Gebietsschema des Betriebssystems abzurufen.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />.</summary>
+        <returns>Ein <see cref="T:System.String" /> mit dem Wert der aktuellen Instanz im angegebenen Format.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToOpenTypeWeight">
+      <MemberSignature Language="C#" Value="public int ToOpenTypeWeight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 ToOpenTypeWeight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.ToOpenTypeWeight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert darstellt, die die [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] <c>UsWeightClass</c> für die <see cref="T:System.Windows.FontWeight" /> Objekt.</summary>
+        <returns>Eine ganze Zahl zwischen 1 und 999, die entspricht der <c>UsWeightClass</c> -Definition in der [!INCLUDE[TLA2#tla_opentype](~/includes/tla2sharptla-opentype-md.md)] Spezifikation.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] `usWeightClass` Wert, finden Sie unter der ["Schriftart Dateitabellen"](http://www.microsoft.com/typography/otspec/otff.htm) Abschnitt der OpenType-Spezifikation.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontWeight.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die den Wert des darstellt der <see cref="T:System.Windows.FontWeight" /> Objekt und basieren auf den <see cref="P:System.Globalization.CultureInfo.CurrentCulture" /> Eigenschaftsinformationen.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die den Wert des darstellt der <see cref="T:System.Windows.FontWeight" /> Objekt, z. B. "Light", "Normal" oder "UltraBold".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

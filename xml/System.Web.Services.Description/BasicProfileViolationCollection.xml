@@ -1,0 +1,210 @@
+<Type Name="BasicProfileViolationCollection" FullName="System.Web.Services.Description.BasicProfileViolationCollection">
+  <TypeSignature Language="C#" Value="public class BasicProfileViolationCollection : System.Collections.CollectionBase, System.Collections.Generic.IEnumerable&lt;System.Web.Services.Description.BasicProfileViolation&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BasicProfileViolationCollection extends System.Collections.CollectionBase implements class System.Collections.Generic.IEnumerable`1&lt;class System.Web.Services.Description.BasicProfileViolation&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.BasicProfileViolationCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Web.Services.Description.BasicProfileViolation&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Enthält eine stark typisierte Auflistung von <see cref="T:System.Web.Services.Description.BasicProfileViolation" />-Objekten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BasicProfileViolationCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.BasicProfileViolationCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Web.Services.Description.BasicProfileViolationCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.Services.Description.BasicProfileViolation violation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.Services.Description.BasicProfileViolation violation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.BasicProfileViolationCollection.Contains(System.Web.Services.Description.BasicProfileViolation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="violation" Type="System.Web.Services.Description.BasicProfileViolation" />
+      </Parameters>
+      <Docs>
+        <param name="violation">Die <see cref="T:System.Web.Services.Description.BasicProfileViolation" /> in der Auflistung zu suchende Objekt.</param>
+        <summary>Überprüft, ob die Auflistung das angegebene enthält <see cref="T:System.Web.Services.Description.BasicProfileViolation" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.Services.Description.BasicProfileViolation" /> Objekt vorhanden ist, in der Auflistung ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.Services.Description.BasicProfileViolation[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.Services.Description.BasicProfileViolation[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.BasicProfileViolationCollection.CopyTo(System.Web.Services.Description.BasicProfileViolation[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.Services.Description.BasicProfileViolation[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array vom Typ <see cref="T:System.Web.Services.Description.BasicProfileViolation" /> , an den der Inhalt der Auflistung kopiert.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente aus der Auflistung in ein Array, beginnend am angegebenen Index des Arrays.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.Services.Description.BasicProfileViolation violation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.Services.Description.BasicProfileViolation violation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.BasicProfileViolationCollection.IndexOf(System.Web.Services.Description.BasicProfileViolation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="violation" Type="System.Web.Services.Description.BasicProfileViolation" />
+      </Parameters>
+      <Docs>
+        <param name="violation">Der <see cref="T:System.Web.Services.Description.BasicProfileViolation" />, der in der Auflistung gesucht werden soll.</param>
+        <summary>Gibt den nullbasierten Index eines angegebenen <see cref="T:System.Web.Services.Description.BasicProfileViolation" /> in der Auflistung.</summary>
+        <returns>Der nullbasierte Index des angegebenen <see cref="T:System.Web.Services.Description.BasicProfileViolation" />, oder -1, wenn das Element nicht in der Auflistung gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.Services.Description.BasicProfileViolation violation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.Services.Description.BasicProfileViolation violation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.BasicProfileViolationCollection.Insert(System.Int32,System.Web.Services.Description.BasicProfileViolation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="violation" Type="System.Web.Services.Description.BasicProfileViolation" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index in der Auflistung ab dem Einfügen der <c>Verstoß</c>.</param>
+        <param name="violation">Der einzufügende <see cref="T:System.Web.Services.Description.BasicProfileViolation" />.</param>
+        <summary>Fügt eine <see cref="T:System.Web.Services.Description.BasicProfileViolation" /> auf die Auflistung am angegebenen Speicherort.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.BasicProfileViolation this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.BasicProfileViolation Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.BasicProfileViolationCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.BasicProfileViolation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index in der Auflistung.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.Services.Description.BasicProfileViolation" /> Element am angegebenen Index in der Auflistung.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Description.BasicProfileViolation" /> -Objekt, das am angegebenen Index vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Services.Description.BasicProfileViolation violation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Services.Description.BasicProfileViolation violation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.BasicProfileViolationCollection.Remove(System.Web.Services.Description.BasicProfileViolation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="violation" Type="System.Web.Services.Description.BasicProfileViolation" />
+      </Parameters>
+      <Docs>
+        <param name="violation">Die aus der Auflistung zu entfernende <see cref="T:System.Web.Services.Description.BasicProfileViolation" />.</param>
+        <summary>Entfernt ein angegebenes <see cref="T:System.Web.Services.Description.BasicProfileViolation" /> aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.Web.Services.Description.BasicProfileViolation&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Web.Services.Description.BasicProfileViolation&gt; IEnumerable&lt;BasicProfileViolation&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Web.Services.Description.BasicProfileViolation&gt; System.Collections.Generic.IEnumerable&lt;System.Web.Services.Description.BasicProfileViolation&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.BasicProfileViolationCollection.System#Collections#Generic#IEnumerable&lt;System#Web#Services#Description#BasicProfileViolation&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Web.Services.Description.BasicProfileViolation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, der eine Auflistung von durchläuft <see cref="T:System.Web.Services.Description.BasicProfileViolation" /> Objekte.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.BasicProfileViolationCollection.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.String" /> Darstellung der <see cref="T:System.Web.Services.Description.BasicProfileViolation" /> Objekte in der Auflistung.</summary>
+        <returns>Ein <see cref="T:System.String" /> Darstellung der <see cref="T:System.Web.Services.Description.BasicProfileViolation" /> Objekte in der Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

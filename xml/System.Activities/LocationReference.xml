@@ -1,0 +1,137 @@
+<Type Name="LocationReference" FullName="System.Activities.LocationReference">
+  <TypeSignature Language="C#" Value="public abstract class LocationReference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LocationReference extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.LocationReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Mechanismus bereit, mit dem ein <see cref="T:System.Activities.Location" />-Element zur Laufzeit aufgelöst werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei <xref:System.Activities.Variable>, <xref:System.Activities.RuntimeArgument> und <xref:System.Activities.DelegateArgument> handelt es sich jeweils um <xref:System.Activities.LocationReference>-Elemente. Die Laufzeit verwaltet den Zustand in einer Umgebung, die jedem <xref:System.Activities.ActivityInstance>-Element zugeordnet ist. Ein <xref:System.Activities.Location>-Element ist ein Lese-/Schreibproxy zu einem in dieser Umgebung gespeicherten Wert. Ein <xref:System.Activities.LocationReference>-Element stellt einen Mechanismus bereit, mit dem ein <xref:System.Activities.Location>-Element zur Laufzeit aufgelöst werden kann.  
+  
+ Dies ist eine abstrakte Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LocationReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.LocationReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.LocationReference" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocation">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Location GetLocation (System.Activities.ActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Location GetLocation(class System.Activities.ActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.LocationReference.GetLocation(System.Activities.ActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Location</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die Informationen zur Aktivitätsausführungsumgebung, einschließlich der Werte für Variablen, Argumente und Delegatargumente, die dieser Umgebung zugeordnet sind.</param>
+        <summary>Extrahiert bei Implementierung in einer abgeleiteten Klasse die Position für ein <see cref="T:System.Activities.LocationReference" />-Element aus einem <see cref="T:System.Activities.ActivityContext" />-Objekt.</summary>
+        <returns>Der Speicherort eines Variablen-, Argument- oder Delegatargumentwerts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.LocationReference.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der <see cref="T:System.Activities.LocationReference" /> ab oder legt diesen fest.</summary>
+        <value>Der Name des <see cref="T:System.Activities.LocationReference" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameCore">
+      <MemberSignature Language="C#" Value="protected abstract string NameCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NameCore" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.LocationReference.NameCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Implementieren durch eine abgeleitete Klasse die für die jeweilige Kultur lokalisierte Version des Namens von <see cref="T:System.Activities.LocationReference" /> ab oder legt diese fest.</summary>
+        <value>Die lokalisierte Version des Namens von <see cref="T:System.Activities.LocationReference" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.LocationReference.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des <see cref="T:System.Activities.LocationReference" /> ab oder legt ihn fest.</summary>
+        <value>Der Typ des <see cref="T:System.Activities.LocationReference" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeCore">
+      <MemberSignature Language="C#" Value="protected abstract Type TypeCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TypeCore" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.LocationReference.TypeCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft bei Implementierung in einer abgeleiteten Klasse die für die jeweilige Kultur lokalisierte Version des Typs von <see cref="T:System.Activities.LocationReference" /> ab oder legt diese fest.</summary>
+        <value>Die lokalisierte Version des Typs von <see cref="T:System.Activities.LocationReference" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

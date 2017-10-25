@@ -1,0 +1,131 @@
+<Type Name="IEnumerator&lt;T&gt;" FullName="System.Collections.Generic.IEnumerator&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IEnumerator&lt;out T&gt; : IDisposable, System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEnumerator`1&lt;+ T&gt; implements class System.Collections.IEnumerator, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.IEnumerator`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">Der Typ der aufzulistenden Objekte.</typeparam>
+    <summary>Unterstützt eine einfache Iteration durch eine generische Auflistung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.IEnumerator%601>ist die Basisschnittstelle für alle generischen Enumeratoren.  
+  
+ Die `foreach` -Anweisung der Programmiersprache c# (`for each` in C++ `For Each` in Visual Basic) verbirgt die Komplexität der Enumeratoren.  Daher empfiehlt es sich, `foreach` zu verwenden und den Enumerator nicht direkt zu ändern.  
+  
+ Mit Enumeratoren können die Daten in der Auflistung zwar gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ Zu Beginn wird der Enumerator vor das erste Element in der Auflistung positioniert. An dieser Position ist <xref:System.Collections.Generic.IEnumerator%601.Current%2A> nicht definiert. Daher muss der Enumerator durch einen Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> auf das erste Element der Auflistung gesetzt werden, bevor der Wert von <xref:System.Collections.Generic.IEnumerator%601.Current%2A> gelesen werden kann.  
+  
+ <xref:System.Collections.Generic.IEnumerator%601.Current%2A> gibt solange dasselbe Objekt zurück, bis <xref:System.Collections.IEnumerator.MoveNext%2A> aufgerufen wird. <xref:System.Collections.IEnumerator.MoveNext%2A> legt <xref:System.Collections.Generic.IEnumerator%601.Current%2A> auf das nächste Element fest.  
+  
+ Wenn <xref:System.Collections.IEnumerator.MoveNext%2A> übergibt am Ende der Auflistung der Enumerator hinter dem letzten Element in der Auflistung positioniert ist und <xref:System.Collections.IEnumerator.MoveNext%2A> gibt `false`. Wenn der Enumerator ist an dieser Position ist nachfolgende Aufrufe <xref:System.Collections.IEnumerator.MoveNext%2A> auch zurückgeben `false`. Wenn der letzte Aufruf <xref:System.Collections.IEnumerator.MoveNext%2A> zurückgegebene `false`, <xref:System.Collections.Generic.IEnumerator%601.Current%2A> ist nicht definiert. Sie können <xref:System.Collections.Generic.IEnumerator%601.Current%2A> nicht erneut auf das erste Element der Auflistung festlegen, sondern müssen eine neue Enumeratorinstanz erstellen.  
+  
+ Die <xref:System.Collections.IEnumerator.Reset%2A> Methode wird bereitgestellt, für COM-Interoperabilität. Es muss nicht unbedingt implementiert werden; Implementierer festgehaltenen stattdessen einfach eine <xref:System.NotSupportedException>. Jedoch, wenn Sie hierzu auswählen, stellen Sie sicher keine Aufrufer werden auf der vertrauenden Seite die <xref:System.Collections.IEnumerator.Reset%2A> Funktionalität.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn die Änderungen werden auf die Auflistung, z. B. das Hinzufügen, ändern oder Löschen von Elementen aus, das der Enumerator unwiederbringlich seine ist ungültig, und der nächste Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> löst eine <xref:System.InvalidOperationException>.  
+  
+ Der Enumerator hat keinen exklusiven Zugriff auf die Auflistung; daher ist die Enumeration einer Auflistung systembedingt kein threadsicheres Verfahren. Um während der Enumeration Threadsicherheit zu garantieren, können Sie die Auflistung während der gesamten Enumeration sperren. Um den Lese- und Schreibzugriff auf diese Auflistung durch mehrere Threads zuzulassen, müssen Sie eine eigene Synchronisierung implementieren.  
+  
+ Standardimplementierungen der Auflistungen im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace werden nicht synchronisiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung der <xref:System.Collections.Generic.IEnumerator%601> Schnittstelle für eine Auflistungsklasse von benutzerdefinierten Objekten. Das benutzerdefinierte Objekt ist eine Instanz des Typs `Box`, und die Auflistungsklasse ist `BoxCollection`. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.ICollection%601> Schnittstelle.  
+  
+ [!code-csharp[System.Collections.Generic.BoxExamples#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.boxexamples/cs/program.cs#3)]
+ [!code-vb[System.Collections.Generic.BoxExamples#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.boxexamples/vb/program.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Implementieren diese Schnittstelle ist erforderlich, die nicht generische Implementierung <see cref="T:System.Collections.IEnumerator" /> Schnittstelle. Die <see cref="M:System.Collections.IEnumerator.MoveNext" /> und <see cref="M:System.Collections.IEnumerator.Reset" /> Methoden hängen nicht davon <typeparamref name="T" />, und nur für die nicht generische Schnittstelle angezeigt. Die <see cref="P:System.Collections.Generic.IEnumerator`1.Current" /> Eigenschaft wird auf beide Schnittstellen, und verfügt über verschiedene Rückgabetypen. Implementieren Sie die nicht generische <see cref="P:System.Collections.IEnumerator.Current" /> Eigenschaft als eine explizite schnittstellenimplementierung. Dadurch wird jeder Consumer der nicht generischen Schnittstelle, die generische Schnittstelle verwenden.  
+  
+ Darüber hinaus <see cref="T:System.Collections.Generic.IEnumerator`1" /> implementiert <see cref="T:System.IDisposable" />, wofür Sie implementieren die <see cref="M:System.IDisposable.Dispose" /> Methode. Dadurch können Sie zum Schließen von Verbindungen mit der Datenbank oder Dateihandles oder ähnlichen Vorgängen freigeben, wenn Sie andere Ressourcen verwenden. Wenn es keine zusätzlichen Ressourcen sind freizugeben, geben Sie eine leere <see cref="M:System.IDisposable.Dispose" /> Implementierung.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public T Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Current" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.IEnumerator`1.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element in der Auflistung an der aktuellen Position des Enumerators ab.</summary>
+        <value>Das Element in der Auflistung an der aktuellen Position des Enumerators.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.IEnumerator%601.Current%2A>Wenn Sie eine der folgenden Bedingungen ist nicht definiert werden:  
+  
+-   Der Enumerator ist vor dem ersten Element in der Auflistung positioniert, sofort nach dem Erstellen des Enumerators.   <xref:System.Collections.IEnumerator.MoveNext%2A>muss aufgerufen werden, um den Enumerator auf das erste Element der Auflistung vor dem Lesen des Werts von <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
+  
+-   Der letzte Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> zurückgegebene `false`, gibt das Ende der Auflistung an.  
+  
+-   Der Enumerator ist aufgrund von Änderungen in der Auflistung, z. B. hinzufügen, bearbeiten oder Löschen von Elementen für ungültig erklärt.  
+  
+ <xref:System.Collections.Generic.IEnumerator%601.Current%2A> gibt solange dasselbe Objekt zurück, bis <xref:System.Collections.IEnumerator.MoveNext%2A> aufgerufen wird. <xref:System.Collections.IEnumerator.MoveNext%2A> legt <xref:System.Collections.Generic.IEnumerator%601.Current%2A> auf das nächste Element fest.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Implementieren diese Schnittstelle ist erforderlich, die nicht generische Implementierung <see cref="T:System.Collections.IEnumerator" /> Schnittstelle. Die <see cref="P:System.Collections.Generic.IEnumerator`1.Current" /> Eigenschaft wird auf beide Schnittstellen, und verfügt über verschiedene Rückgabetypen. Implementieren Sie die nicht generische <see cref="P:System.Collections.IEnumerator.Current" /> Eigenschaft als eine explizite schnittstellenimplementierung. Dadurch wird jeder Consumer der nicht generischen Schnittstelle, die generische Schnittstelle verwenden.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

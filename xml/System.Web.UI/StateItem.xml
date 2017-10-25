@@ -1,0 +1,73 @@
+<Type Name="StateItem" FullName="System.Web.UI.StateItem">
+  <TypeSignature Language="C#" Value="public sealed class StateItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StateItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.StateItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Element, das gespeichert wird die <see cref="T:System.Web.UI.StateBag" /> Klasse bei der Ansichtszustandsinformationen zwischen webanforderungen beibehalten wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Ansichtszustand besteht in der Ansammlung der Eigenschaftswerte für einer Seite oder ein ASP.NET-Serversteuerelement und an den anfordernden Browser in einem ausgeblendeten Feld gesendet.  
+  
+ Können Sie explizit hinzufügen <xref:System.Web.UI.StateItem> Objekte ein ASP.NET-Serversteuerelement <xref:System.Web.UI.StateBag> Objekte mithilfe der <xref:System.Web.UI.StateBag.Item%2A> Eigenschaft oder die <xref:System.Web.UI.StateBag.Add%2A> Methode. Die <xref:System.Web.UI.StateBag> dann alle Elemente, die sie speichert Änderungen verfolgt. Alle Änderungen an einer <xref:System.Web.UI.StateItem> Objekt im wiedergegeben seine <xref:System.Web.UI.StateItem.IsDirty%2A> Eigenschaft. Diese Änderungen werden gespeichert, durch einen Aufruf der <xref:System.Web.UI.Control.SaveViewState%2A> Methode beim Speichervorgang anzeigen Zustand Phase Server Steuerelement zu verarbeiten, kurz bevor das Steuerelement auf der Seite gerendert wird. Weitere Informationen finden Sie unter [NIB: ASP.NET-Webserversteuerelemente](http://msdn.microsoft.com/en-us/e18eb2f2-cf00-47ae-b1a1-dfc188a6dea1).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.StateItem.Value%2A> und <xref:System.Web.UI.StateItem.IsDirty%2A> Eigenschaften der <xref:System.Web.UI.StateItem> Klasse, um den Zustand einer einfachen benutzerdefinierten ASP.NET-Steuerelementklasse speichern `StateBagSample`. Wenn die Seite an den Server zurückgesendet wurde die <xref:System.Web.UI.StateItem.IsDirty%2A> -Eigenschaft überprüft, ob das Element geändert wurde. Die Statuswerte werden angezeigt, durch den Zugriff auf die <xref:System.Web.UI.StateItem.Value%2A> Eigenschaft.  
+  
+ [!code-csharp[StateBag_IStateManager_Sample1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/StateBag_IStateManager_Sample1/CS/ism_statebag_samples.cs#1)]
+ [!code-vb[StateBag_IStateManager_Sample1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StateBag_IStateManager_Sample1/VB/ism_statebag_samples.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public bool IsDirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateItem.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.StateItem" /> Objekt geändert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die gespeicherte <see cref="T:System.Web.UI.StateItem" /> Objekt wurde geändert wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateItem.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <see cref="T:System.Web.UI.StateItem" /> -Objekt, das in gespeichert ist die <see cref="T:System.Web.UI.StateBag" /> Objekt.</summary>
+        <value>Der Wert von der <see cref="T:System.Web.UI.StateItem" /> gespeichert, der <see cref="T:System.Web.UI.StateBag" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

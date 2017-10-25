@@ -1,0 +1,221 @@
+<Type Name="ActionMessageFilter" FullName="System.ServiceModel.Dispatcher.ActionMessageFilter">
+  <TypeSignature Language="C#" Value="public class ActionMessageFilter : System.ServiceModel.Dispatcher.MessageFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActionMessageFilter extends System.ServiceModel.Dispatcher.MessageFilter" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.ActionMessageFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Dispatcher.MessageFilter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Abfrage dar, die testet, ob die Aktion einer Nachricht zu dem Satz der angegebenen Aktionen gehört.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist ungültig, einen <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> ohne Aktionen zu erstellen.  
+  
+ Dieser Typ ist als <xref:System.Runtime.Serialization.DataContractAttribute> serialisierbar.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden zwei <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> erstellt, die Aktionszeichenfolge aus einem der Filter unter Verwendung der <xref:System.ServiceModel.Dispatcher.ActionMessageFilter.Actions%2A>-Eigenschaft abgerufen, eine Nachricht mithilfe der Aktionsfilter getestet und das Ergebnis der Anwendung des Filters angezeigt.  
+  
+ [!code-csharp[UEActionFilter#1](~/samples/snippets/csharp/VS_Snippets_CFX/ueactionfilter/cs/actionfilter.cs#1)]
+ [!code-vb[UEActionFilter#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/ueactionfilter/vb/actionfilter.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionMessageFilter (params string[] actions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] actions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ActionMessageFilter.#ctor(System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="actions" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="actions">Das <see cref="T:System.Array" />, der den Satz von Aktionen enthält, den der Filter testet.</param>
+        <summary>Initialisiert eine neue Instanz dieser Klasse mit dem Satz von Aktionen, den sie testet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Array von `actions`, das zum Auffüllen von <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> bereitgestellt wird, doppelte Aktionen enthält, werden diese Duplikate entfernt und nur eine der Aktionen wird zu <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> hinzugefügt. Die <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> von `actions`, die im <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> enthalten ist, wird über die <xref:System.ServiceModel.Dispatcher.ActionMessageFilter.Actions%2A>-Eigenschaft aufgerufen und kann nach der Instanziierung des <xref:System.ServiceModel.Dispatcher.ActionMessageFilter>-Objekts nicht mehr geändert werden.  
+  
+   
+  
+## Examples  
+ [!code-csharp[UEActionFilter#2](~/samples/snippets/csharp/VS_Snippets_CFX/ueactionfilter/cs/actionfilter.cs#2)]
+ [!code-vb[UEActionFilter#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/ueactionfilter/vb/actionfilter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="actions" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Das <paramref name="actions" />-Array ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Actions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; Actions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; Actions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ActionMessageFilter.Actions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine schreibgeschützte Kopie von Aktionszeichenfolgen ab, die <see cref="T:System.ServiceModel.Dispatcher.ActionMessageFilter" /> testet.</summary>
+        <value>Die <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />, die die Aktionszeichenfolgen enthält, die <see cref="T:System.ServiceModel.Dispatcher.ActionMessageFilter" /> testet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Aktionen in der zurückgegebenen schreibgeschützten Auflistung können nicht geändert werden, nachdem das <xref:System.ServiceModel.Dispatcher.ActionMessageFilter>-Objekt instanziiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFilterTable&lt;FilterData&gt;">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Dispatcher.IMessageFilterTable&lt;FilterData&gt; CreateFilterTable&lt;FilterData&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.ServiceModel.Dispatcher.IMessageFilterTable`1&lt;!!FilterData&gt; CreateFilterTable&lt;FilterData&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ActionMessageFilter.CreateFilterTable``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IMessageFilterTable&lt;FilterData&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="FilterData" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="FilterData">Den Filtern in der Tabelle zugeordnete Daten.</typeparam>
+        <summary>Erstellt eine neue Filtertabelle, die effizient auf Nachrichtenaktionen testet.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Dispatcher.IMessageFilterTable`1" />-Objekt, dem <see cref="T:System.ServiceModel.Dispatcher.ActionMessageFilter" /> und zugeordnete <paramref name="FilterData" /> hinzugefügt werden können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gibt eine Instanz von <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601> zurück.  
+  
+ Diese Methode ist nicht dafür vorgesehen, direkt aufgerufen zu werden. Wenn Sie eine Instanz von <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601> benötigen, erstellen Sie diese, indem Sie einen Konstruktor für den gewünschten Typ von Filtertabelle aufrufen. Im Allgemeinen sollten <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> Instanzen von <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> hinzugefügt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Match">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Testet, ob eine Nachricht oder eine gepufferte Nachricht zu einer der Aktionen passt, die für den Filter konfiguriert wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Unterschied zwischen den zwei Überladungen besteht darin, dass eine Überladung einen <xref:System.ServiceModel.Channels.Message>-Parameter entgegennimmt und den Nachrichtentext nicht überprüfen kann, während die andere einen <xref:System.ServiceModel.Channels.MessageBuffer>-Parameter entgegennimmt und alle Teile der Nachricht überprüfen kann.  Da ein Aktionsfilter den Nachrichtentext nicht überprüft, sind diese Methoden äquivalent.  
+  
+ Wenn Sie die Nachricht für mehrere <xref:System.ServiceModel.Dispatcher.ActionMessageFilter>-Objekte prüfen müssen, fügen Sie die Filter in <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601> ein, und verwenden Sie dann die passende Funktion, die die Tabelle bereitstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ActionMessageFilter.Match(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.Message" />.</param>
+        <summary>Testet, ob die Aktion einer Nachricht zu einer der Aktionen passt, die in <see cref="T:System.ServiceModel.Dispatcher.ActionMessageFilter" /> angegeben werden.</summary>
+        <returns>
+          <see langword="true" />, wenn der Header der <see cref="T:System.ServiceModel.Channels.Message" />-Aktion zu einer der angegebenen Aktionen passt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung von <xref:System.ServiceModel.Dispatcher.ActionMessageFilter.Match%2A>, wenn eine Nachricht bezüglich mehrerer Aktionen in einem einzigen Filter getestet werden muss und <xref:System.ServiceModel.Channels.Message> verfügbar ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (System.ServiceModel.Channels.MessageBuffer buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(class System.ServiceModel.Channels.MessageBuffer buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ActionMessageFilter.Match(System.ServiceModel.Channels.MessageBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBuffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <summary>Testet, ob der Aktionsheader einer gepufferten Nachricht zu einer der Aktionen passt, die in <see cref="T:System.ServiceModel.Dispatcher.ActionMessageFilter" /> angegeben werden.</summary>
+        <returns>
+          <see langword="true" />, wenn der Header der <see cref="T:System.ServiceModel.Channels.MessageBuffer" />-Aktion zu einer der angegebenen Aktionen passt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung der <xref:System.ServiceModel.Dispatcher.ActionMessageFilter.Match%2A>-Methode, wenn eine Nachricht bezüglich mehrerer Aktionen in einem einzigen Filter getestet werden muss und <xref:System.ServiceModel.Channels.MessageBuffer> verfügbar ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

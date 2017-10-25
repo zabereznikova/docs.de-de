@@ -1,0 +1,59 @@
+<Type Name="ChtmlMobileTextWriter" FullName="System.Web.UI.MobileControls.Adapters.ChtmlMobileTextWriter">
+  <TypeSignature Language="C#" Value="public class ChtmlMobileTextWriter : System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChtmlMobileTextWriter extends System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.ChtmlMobileTextWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Geräte, die das Ziel der cHTML Adaptersatz bereit TextWriter-Funktionen. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.ChtmlMobileTextWriter> Klasse erbt von der <xref:System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter> Klasse, und alle seine Member erbt.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChtmlMobileTextWriter (System.IO.TextWriter writer, System.Web.Mobile.MobileCapabilities device);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer, class System.Web.Mobile.MobileCapabilities device) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ChtmlMobileTextWriter.#ctor(System.IO.TextWriter,System.Web.Mobile.MobileCapabilities)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="device" Type="System.Web.Mobile.MobileCapabilities" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die Basis TextWriter-Objekt.</param>
+        <param name="device">Ein Objekt von der <see cref="T:System.Web.Mobile.MobileCapabilities" /> Klasse, die Informationen über die Funktionen für das jeweilige Gerät bereitstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.MobileControls.Adapters.ChtmlMobileTextWriter" /> Klasse für ein bestimmtes Gerät mithilfe der <paramref name="writer" /> Parameter als Basis Writer-Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Writer werden im Allgemeinen durch eine entsprechende Seitenadapter erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

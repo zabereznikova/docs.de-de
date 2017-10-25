@@ -1,0 +1,147 @@
+<Type Name="ValidationService" FullName="System.Activities.Presentation.Validation.ValidationService">
+  <TypeSignature Language="C#" Value="public class ValidationService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidationService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Validation.ValidationService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die erforderliche Funktionalität zur Verfügung, um einen Workflowaktivitätsdesigner zu überprüfen, während er bearbeitet wird, und um die Ergebnisse der Validierung bereitzustellen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationService (System.Activities.Presentation.EditingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Presentation.EditingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Validation.ValidationService.#ctor(System.Activities.Presentation.EditingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.Presentation.EditingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, das permanente und flüchtige Zustandskontextinformationen zu einer Designerinstanz enthält.</param>
+        <summary>Erstellt eine neue Instanz vom <see cref="T:System.Activities.Presentation.Validation.ValidationService" />, der permanente und flüchtige Zustandskontextinformationen zu einem Aktivitätsdesigner verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beispiele für das, was im Zustandsinformationenobjekt enthalten sein kann, haben einen permanenten Zustand (eine Liste der im Designer ausgeführten Dienste) und einen flüchtigen Zustand (ein Satz der gegenwärtig ausgewählten Elementen).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateToError">
+      <MemberSignature Language="C#" Value="public void NavigateToError (System.Activities.Presentation.Validation.ValidationErrorInfo validationErrorInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NavigateToError(class System.Activities.Presentation.Validation.ValidationErrorInfo validationErrorInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Validation.ValidationService.NavigateToError(System.Activities.Presentation.Validation.ValidationErrorInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validationErrorInfo" Type="System.Activities.Presentation.Validation.ValidationErrorInfo" />
+      </Parameters>
+      <Docs>
+        <param name="validationErrorInfo">Die Informationen des Überprüfungsfehlers.</param>
+        <summary>Verschiebt den Tastaturfokus auf der Arbeitsoberfläche an die Position eines Fehlers in einer Aktivität.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateToError">
+      <MemberSignature Language="C#" Value="public void NavigateToError (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NavigateToError(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Validation.ValidationService.NavigateToError(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Eine Fehler-ID.</param>
+        <summary>Verschiebt den Tastaturfokus auf der Arbeitsoberfläche an die Position eines Fehlers in einer Aktivität.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidationCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnValidationCompleted ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnValidationCompleted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Validation.ValidationService.OnValidationCompleted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst eine neue Validierung eines abgeschlossenen Ereignisses aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Settings">
+      <MemberSignature Language="C#" Value="public System.Activities.Validation.ValidationSettings Settings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Validation.ValidationSettings Settings" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Validation.ValidationService.Settings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Validation.ValidationSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einstellungen für die Überprüfung der aktuellen Aktivitätsstruktur ab</summary>
+        <value>Ein Objekt, das die überprüfungseinstellungen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Validierungseinstellungen werden Kernpunkte konfiguriert, z. B. der Typ der ausgeführten Validierung, die Position des Schemanamespaces, zulässige und unzulässige Datentypen sowie andere Bedingungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateWorkflow">
+      <MemberSignature Language="C#" Value="public void ValidateWorkflow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ValidateWorkflow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Validation.ValidationService.ValidateWorkflow" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Validierung einer Aktivitätsstruktur auf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

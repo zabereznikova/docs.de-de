@@ -1,0 +1,1134 @@
+<Type Name="MediaCommands" FullName="System.Windows.Input.MediaCommands">
+  <TypeSignature Language="C#" Value="public static class MediaCommands" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit MediaCommands extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.MediaCommands" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Standardsatz medienbezogener Befehle bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Befehle in der <xref:System.Windows.Input.MediaCommands> Klasse und Befehle in der anderen Befehl Bibliotheksklassen, z. B. <xref:System.Windows.Input.ComponentCommands> und <xref:System.Windows.Input.ApplicationCommands>, sollen einen Satz von allgemeinen Befehlen darstellen, die Anwendungsprogrammierer häufig stoßen.  Nur die Befehle darstellen, die Instanz von der <xref:System.Windows.Input.RoutedCommand> und nicht auf die Implementierungslogik für den Befehl. Die Implementierungslogik gebunden ist, an den Befehl über eine <xref:System.Windows.UIElement.CommandBindings%2A>.  Z. B. wenn die <xref:System.Windows.Input.MediaCommands.Play%2A> Befehl für ein Steuerelement die Logik der ausgeführt werden (das Befehlsziel) ausgeführt wird die <xref:System.Windows.Input.MediaCommands.Play%2A> Befehl möglicherweise nicht bereitgestellten durch das Befehlsziel also der Anwendungs-Writer zum Schreiben von der Logik, die zuständig ist Bestimmt, wie das Ziel des Befehls den Befehl behandelt.  
+  
+ Viele Steuerelemente bieten Implementierungslogik für viele der Befehle in der Befehlsbibliothek.  Z. B. die <xref:System.Windows.Controls.TextBox> Klasse stellt die Logik für die <xref:System.Windows.Input.ApplicationCommands.Paste%2A> Befehl <xref:System.Windows.Input.ApplicationCommands.Cut%2A> Befehl <xref:System.Windows.Input.ApplicationCommands.Copy%2A> Befehl, <xref:System.Windows.Input.ApplicationCommands.Undo%2A> Befehl, und <xref:System.Windows.Input.ApplicationCommands.Redo%2A> Befehl.  
+  
+ Weitere Informationen zu Befehlen und Befehle finden Sie unter der [Befehle (Übersicht)](~/docs/framework/wpf/advanced/commanding-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BoostBass">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand BoostBass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand BoostBass" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.BoostBass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Bass verstärken“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Bass verstärken  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Standardendpunkte Verstärkung ein- und auszuschalten.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_BoostBass"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="BoostBass"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ChannelDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ChannelDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.ChannelDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Channel nach unten“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Channel nach unten  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass der Wert des Kanals zu verringern.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ChannelDown"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ChannelDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ChannelUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ChannelUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.ChannelUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Channel nach oben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Channel nach oben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass der Wert des Kanals zu erhöhen.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ChannelUp"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ChannelUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseBass">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DecreaseBass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DecreaseBass" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.DecreaseBass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Bass verringern“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>"Bass verringern"  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass der Bass verringern.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_DecreaseBass"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="DecreaseBass"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseMicrophoneVolume">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DecreaseMicrophoneVolume { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DecreaseMicrophoneVolume" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.DecreaseMicrophoneVolume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Mikrofonlautstärke verringern“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Mikrofonlautstärke verringern  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Mikrofonlautstärke verringern.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_DecreaseMicrophoneVolume"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="DecreaseMicrophoneVolume"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseTreble">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DecreaseTreble { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DecreaseTreble" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.DecreaseTreble" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Höhen verringern“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Höhen verringern  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Höhen verringern.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_DecreaseTreble"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="DecreaseTreble"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseVolume">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DecreaseVolume { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DecreaseVolume" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.DecreaseVolume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Lautstärke verringern“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Leiser  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass das Volume verkleinern.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_DecreaseVolume"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="DecreaseVolume"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FastForward">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand FastForward { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand FastForward" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.FastForward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Schneller Vorlauf“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Schneller Vorwärtscursor  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Wiedergabe beschleunigt wird.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_FastForward"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="FastForward"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseBass">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand IncreaseBass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand IncreaseBass" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.IncreaseBass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Bass erhöhen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>"Bass erhöhen"  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass der Bass erhöhen.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_IncreaseBass"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="IncreaseBass"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseMicrophoneVolume">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand IncreaseMicrophoneVolume { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand IncreaseMicrophoneVolume" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.IncreaseMicrophoneVolume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Mikrofonlautstärke erhöhen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Mikrofonlautstärke erhöhen  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Mikrofonlautstärke erhöhen.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_IncreaseMicrophoneVolume"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="IncreaseMicrophoneVolume"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseTreble">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand IncreaseTreble { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand IncreaseTreble" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.IncreaseTreble" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Höhe erhöhen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Höhen erhöhen  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Höhen erhöht wird.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_IncreaseTreble"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="IncreaseTreble"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseVolume">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand IncreaseVolume { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand IncreaseVolume" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.IncreaseVolume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Lautstärke erhöhen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Erhöhen der Lautstärke  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht zum Erhöhen der Lautstärke.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_IncreaseVolume"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="IncreaseVolume"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MuteMicrophoneVolume">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MuteMicrophoneVolume { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MuteMicrophoneVolume" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.MuteMicrophoneVolume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Mikrofonlautstärke stumm schalten“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Mikrofonlautstärke stumm schalten  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass das Mikrofon stumm geschaltet wird.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MuteMicrophoneVolume"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MuteMicrophoneVolume"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MuteVolume">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MuteVolume { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MuteVolume" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.MuteVolume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Lautstärke stumm schalten“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Lautstärke stumm schalten  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Lautstärke stumm geschaltet wird.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MuteVolume"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MuteVolume"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextTrack">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand NextTrack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand NextTrack" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.NextTrack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Nächster Titel“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Nächsten Titel  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, wählen Sie den nächsten Verlauf an.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_NextTrack"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NextTrack"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pause">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Pause { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Pause" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.Pause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Anhalten“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Anhalten  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht Wiedergabe angehalten.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Pause"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Pause"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Play">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Play { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Play" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.Play" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Wiedergeben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Wiedergeben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, starten Sie die Wiedergabe der aktuellen Position an.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Play"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Play"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousTrack">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand PreviousTrack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand PreviousTrack" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.PreviousTrack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Vorheriger Titel“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Für den vorherigen Titel  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, die für den vorherigen Titel auswählen.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_PreviousTrack"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="PreviousTrack"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Record">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Record { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Record" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.Record" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Aufzeichnen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Datensatz  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Aufzeichnung zu starten.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Record"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Record"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rewind">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Rewind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Rewind" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.Rewind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Zurückspulen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Rewind  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht Wiedergabe Reihenfolge umgekehrt werden soll.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Rewind"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Rewind"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Select { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Select" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.Select" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Auswählen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Wählen Sie  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht, die Medien im Auswahlmodus eingefügt werden soll.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Select"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Select"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Stop { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Stop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.Stop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Beenden“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Beenden  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass beim Beenden der Wiedergabe.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Stop"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Stop"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleMicrophoneOnOff">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleMicrophoneOnOff { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleMicrophoneOnOff" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.ToggleMicrophoneOnOff" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Mikrofon ein-/ausschalten“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Mikrofon ein-/ausschalten  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass das Mikrofon ein- und auszuschalten.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ToggleMicrophoneOnOff"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ToggleMicrophoneOnOff"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TogglePlayPause">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand TogglePlayPause { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand TogglePlayPause" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MediaCommands.TogglePlayPause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Zwischen Wiedergabe und Pause umschalten“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Wiedergabe und Pause umschalten  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Wiedergabe zwischen Wiedergabe und Pause umschalten.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_TogglePlayPause"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="TogglePlayPause"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

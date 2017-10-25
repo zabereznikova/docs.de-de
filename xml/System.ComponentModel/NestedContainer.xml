@@ -1,0 +1,284 @@
+<Type Name="NestedContainer" FullName="System.ComponentModel.NestedContainer">
+  <TypeSignature Language="C#" Value="public class NestedContainer : System.ComponentModel.Container, IDisposable, System.ComponentModel.INestedContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NestedContainer extends System.ComponentModel.Container implements class System.ComponentModel.IContainer, class System.ComponentModel.INestedContainer, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.NestedContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Container</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INestedContainer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die basisimplementierung für die <see cref="T:System.ComponentModel.INestedContainer" /> -Schnittstelle, die Container haben eine eigene Komponente ermöglicht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.NestedContainer> Klasse ist eine einfache Implementierung der <xref:System.ComponentModel.INestedContainer> -Schnittstelle, die eine Komponente definiert, die logisch 0 oder mehr Komponenten enthält und von einer übergeordneten Komponente gehört. Das Verhalten von geschachtelten Containern unterscheidet sich von einer standardmäßigen <xref:System.ComponentModel.Container> eine Reihe von Möglichkeiten, u. a. folgende:  
+  
+-   Merkmale wie Standort <xref:System.ComponentModel.Component.DesignMode%2A> und <xref:System.ComponentModel.Component.GetService%2A> werden durch die besitzende Komponente Standort weitergeleitet.  
+  
+-   Der Website <xref:System.ComponentModel.ISite.Name%2A> Eigenschaft ist ein qualifizierter Name, der die besitzende Komponente Namen gefolgt von einem Punkt (.) und den Namen der untergeordneten Komponente enthält.  
+  
+-   <xref:System.ComponentModel.NestedContainer.GetService%2A>bietet Unterstützung für die <xref:System.ComponentModel.INestedContainer> als Dienst.  
+  
+-   Wenn die besitzende Komponente gelöscht wird, wird der Container als auch verworfen.  
+  
+ Darüber hinaus behandelt Designer geschachtelter Container unterschiedlich. Ein Designerhost ist nur in einem Container Interesse – eine mit dem Host zugeordnet ist. Aus diesem Grund Komponente hinzufügen und Entfernen von Ereignissen werden nicht ausgelöst, wenn eine Komponente hinzugefügt oder aus einem geschachtelten Container entfernt wird. Da Dienste durch die geschachtelten Container übergeben werden, sind jedoch Komponentenänderungsereignisse ausgelöst, wenn eine Komponente in einem geschachtelten Container geändert wird.  
+  
+ Diese Deltadatei in ereignisüberwachung wirkt sich auch zum Rückgängigmachen bereit; diese ist eng mit der Serialisierung verbunden ist. Das standardmäßige Rückgängigmodul verwendet die <xref:System.ComponentModel.Design.IReferenceService> zum Nachverfolgen von Änderungen an den Komponenten. Wenn das Modul "Rückgängig" einen Namen für eine Komponente über den Verweisdienst ermitteln kann, wird das Modul alle Änderungen für die jeweilige Komponente ignoriert. Der Dienst erkennt automatisch Änderungen an den darin enthaltenen Komponenten nur, wenn sie als öffentliche schreibgeschützte Eigenschaften mit demselben Namen in ihren Besitzer verfügbar gemacht werden. Andernfalls muss der Entwickler Komponentenänderungsereignisse bis zu der Besitzer übergeben. Angenommen, einer geschachtelte Komponente `Text` Eigenschaft wird auf der besitzenden Komponente als auftaucht ein `Address` Eigenschaft, wenn die `Text` -Eigenschaft geändert wird, die Änderung einer Eigenschaft muss programmgesteuert vorgenommen werden, für den entsprechenden `Address` Eigenschaft, da sonst die Änderung wird nicht von "Rückgängig" nachverfolgt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NestedContainer (System.ComponentModel.IComponent owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IComponent owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.NestedContainer.#ctor(System.ComponentModel.IComponent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.ComponentModel.IComponent" /> , die diesen geschachtelten Container besitzt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.NestedContainer" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor trägt sich in dessen Besitzers <xref:System.ComponentModel.IComponent.Disposed> Ereignis, damit die geschachtelten Containers <xref:System.ComponentModel.NestedContainer.Dispose%2A> Methode wird automatisch aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="owner" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSite">
+      <MemberSignature Language="C#" Value="protected override System.ComponentModel.ISite CreateSite (System.ComponentModel.IComponent component, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ComponentModel.ISite CreateSite(class System.ComponentModel.IComponent component, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.NestedContainer.CreateSite(System.ComponentModel.IComponent,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISite</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die <see cref="T:System.ComponentModel.IComponent" /> zum Erstellen einer Website für.</param>
+        <param name="name">Der Name, zugewiesen <c>Komponente</c>, oder <see langword="null" /> zum Überspringen der zugewiesene Name.</param>
+        <summary>Erstellt eine Website für die Komponente innerhalb des Containers.</summary>
+        <returns>Der neu erstellte <see cref="T:System.ComponentModel.ISite" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `name` Parameter ist `null`die <xref:System.ComponentModel.IComponent> die geschachtelten Container ohne einen kennzeichnenden Namen hinzugefügt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="component" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.NestedContainer.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die vom geschachtelte Container verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.ComponentModel.NestedContainer> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected override object GetService (Type service);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetService(class System.Type service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.NestedContainer.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="service">Der <see cref="T:System.Type" /> des abzurufenden Dienstes.</param>
+        <summary>Ruft das Dienstobjekt des angegebenen Typs ab, sofern es verfügbar ist.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , das den angeforderten Dienst implementiert oder <see langword="null" /> , wenn der Dienst nicht aufgelöst werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die <xref:System.ComponentModel.Container.GetService%2A?displayProperty=nameWithType> Methode. Diese Implementierung löst nur Anforderungen für die <xref:System.ComponentModel.INestedContainer> und <xref:System.ComponentModel.IContainer> Dienste.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent Owner" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.NestedContainer.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die besitzende Komponente für diesen geschachtelten Container ab.</summary>
+        <value>Die <see cref="T:System.ComponentModel.IComponent" /> , die diesen geschachtelten Container besitzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die besitzende Komponente ist das Merkmal, das geschachtelte Container von gewöhnlichen Containern unterscheidet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerName">
+      <MemberSignature Language="C#" Value="protected virtual string OwnerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.NestedContainer.OwnerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der übergeordneten Komponente.</summary>
+        <value>Der Name der besitzenden Komponente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann überschrieben werden, um einen benutzerdefinierten Besitzernamen bereitzustellen. Die standardmäßige Implementierung sucht des Besitzers der Website für <xref:System.ComponentModel.INestedSite> und ruft <xref:System.ComponentModel.INestedSite.FullName%2A>, oder <xref:System.ComponentModel.ISite.Name%2A> Wenn keine geschachtelten Standort vorhanden ist. Wenn keiner verfügbar ist, gibt diese Eigenschaft `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

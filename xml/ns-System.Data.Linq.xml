@@ -1,0 +1,13 @@
+<Namespace Name="System.Data.Linq">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.Linq" /> -Namespace enthält Klassen, die Interaktion mit relationalen Datenbanken in LINQ to SQL-Anwendungen zu unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]ist eine Technologie, die eine Laufzeitinfrastruktur zum Verwalten relationaler Daten als Objekte bereitstellt. Weitere Informationen finden Sie unter [LINQ to SQL](http://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

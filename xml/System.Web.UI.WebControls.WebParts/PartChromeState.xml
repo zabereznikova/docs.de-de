@@ -1,0 +1,72 @@
+<Type Name="PartChromeState" FullName="System.Web.UI.WebControls.WebParts.PartChromeState">
+  <TypeSignature Language="C#" Value="public enum PartChromeState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PartChromeState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PartChromeState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob ein Steuerelement und Rahmens um es in einer normalen oder minimierten Zustand befinden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PartChromeState> -Enumeration stellt dar, die sichtbar Statuswerte, die im Webparts-Steuerelement und seine Rahmen umgeben sein können.  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispiele veranschaulichen die deklarative Verwendung des der <xref:System.Web.UI.WebControls.WebParts.PartChromeState> Enumeration mithilfe ein benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement auf einer ASP.NET-Webseite verwiesen wird. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ Der erste Teil des Beispiels enthält den Code für das benutzerdefinierte Steuerelement, mit dem Namen `TextDisplayWebPart`. Da das Steuerelement abgeleitet <xref:System.Web.UI.WebControls.WebParts.WebPart>, es erbt außerdem die allgemeinen Eigenschaften, die <xref:System.Web.UI.WebControls.WebParts.Part> Klasse bereitstellt, einschließlich der <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> -Eigenschaft, die verwendet die <xref:System.Web.UI.WebControls.WebParts.PartChromeState> Enumeration als Rückgabetyp.  
+  
+ [!code-csharp[WebParts_Part_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Part_Overview/CS/textdisplaywebpart.cs#2)]
+ [!code-vb[WebParts_Part_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Part_Overview/VB/textdisplaywebpart.vb#2)]  
+  
+ Beachten Sie, die im deklarativen Markup für die Web-Seite, die zweite Instanz von der `TextDisplayWebPart` -Steuerelement legt seine <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> Eigenschaft. Nachdem Sie die Seite in einem Browser geladen haben, wird die zweite Instanz des Steuerelements minimiert angezeigt.  
+  
+ [!code-aspx-csharp[WebParts_Part_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Part_Overview/CS/partoverviewcs.aspx#1)]
+ [!code-aspx-vb[WebParts_Part_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Part_Overview/VB/partoverviewvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Minimized">
+      <MemberSignature Language="C#" Value="Minimized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PartChromeState Minimized = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PartChromeState.Minimized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Steuerelement und der Rahmen in einem reduzierten oder minimierten Zustand.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PartChromeState Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PartChromeState.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Steuerelement und der Rahmen in einem normalen Status befinden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

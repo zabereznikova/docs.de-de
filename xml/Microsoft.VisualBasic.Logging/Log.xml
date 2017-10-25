@@ -1,0 +1,692 @@
+<Type Name="Log" FullName="Microsoft.VisualBasic.Logging.Log">
+  <TypeSignature Language="C#" Value="public class Log" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Log extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Logging.Log" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis-und Ausnahmeinformationen in die Anwendung-Protokolllistener bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Application.Log` Objekt stellt einen einfachen Einstiegspunkt für den Zugriff auf die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]Protokollierdienste. Die `WriteEntry` und `WriteException` Methoden Nachrichten in der Anwendung-Protokolllistener schreiben. Die Listener können durch die Konfigurationsdatei der Anwendung konfiguriert werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Ändern von "My.Application.log" schreibt Informationen Where](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md) und [arbeiten mit Anwendungsprotokollen](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ Die `My.Application.Log` Objekt ist nur für Clientanwendungen verfügbar. Verwenden Sie für Webanwendungen, `My.Log`. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Logging.AspLog>.  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `My.Application.Log` Objekt.  
+  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Schreiben von Ereignisinformationen in die Anwendung Protokolllistener|[Gewusst wie: Schreiben von Protokollmeldungen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
+|Schreibt Ausnahmeinformationen in die Protokolllistener der Anwendung|[Gewusst wie: Protokollieren von Ausnahmen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
+|Bestimmen des Installationsorts `My.Application.Log` Informationen schreibt|[Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt die Verwendung der `My.Application.Log.WriteEntry` -Methode zum Protokollieren von Ablaufprotokollinformationen. Weitere Informationen finden Sie unter [wie: Schreiben von Protokollmeldungen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md).  
+  
+ [!code-vb[VbVbalrMyApplicationLog#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Log ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.Log.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Logging.Log" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Log (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.Log.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+          <see cref="T:System.String" />. Den Namen, um die <see cref="P:Microsoft.VisualBasic.Logging.Log.TraceSource" /> Property-Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Logging.Log" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultFileLogWriter">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Logging.FileLogTraceListener DefaultFileLogWriter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Logging.FileLogTraceListener DefaultFileLogWriter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.FileLogTraceListener</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Datei ab, die <see cref="T:Microsoft.VisualBasic.Logging.FileLogTraceListener" /> -Objekt, das zugrunde liegt die <see langword="Log" /> Objekt.</summary>
+        <value>Gibt die <see cref="T:Microsoft.VisualBasic.Logging.FileLogTraceListener" /> -Objekt, das zugrunde liegt die <see langword="Log" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um zu bestimmen, die aktuelle Konfiguration des der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Objekt.  
+  
+ In Clientanwendungen die `Log` Objekt kann über die `My.Application.Log` Objekt. In Webanwendungen die `Log` Objekt kann über die `My.Log` Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Steuert die Fähigkeit, auf Dateien und Ordner zuzugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeWithDefaultsSinceNoConfigExists">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeWithDefaultsSinceNoConfigExists ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblynewslot virtual instance void InitializeWithDefaultsSinceNoConfigExists() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.Log.InitializeWithDefaultsSinceNoConfigExists" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:Microsoft.VisualBasic.Logging.FileLogTraceListener" /> -Objekt und fügt es der <see cref="P:System.Diagnostics.TraceSource.Listeners" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt ein neues <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>, legt dessen Name `FileLog`, und konfiguriert ihn zum Protokollieren von Nachrichten mit einem Schweregrad <xref:System.Diagnostics.SourceLevels.Information> und höher. Die neue <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Objekt wird dann hinzugefügt, um die <xref:System.Diagnostics.TraceSource.Listeners%2A> Auflistung.  
+  
+ Die <xref:Microsoft.VisualBasic.Logging.Log.%23ctor%2A> Ruft die Methode aus, wenn die <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> Eigenschaft wurde nicht konfiguriert. Die Ablaufverfolgungsquelle kann in der Anwendungskonfigurationsdatei konfiguriert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceSource">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.TraceSource TraceSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.TraceSource TraceSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.Log.TraceSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Diagnostics.TraceSource" /> -Objekt, das zugrunde liegt die <see langword="Log" /> Objekt.</summary>
+        <value>Gibt die <see cref="T:System.Diagnostics.TraceSource" /> -Objekt, das zugrunde liegt die <see langword="Log" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um zu bestimmen, die aktuelle Konfiguration des der `Log` Objekt.  
+  
+ In Clientanwendungen die `Log` Objekt kann über die `My.Application.Log` Objekt. In Webanwendungen die `Log` Objekt kann über die `My.Log` Objekt.  
+  
+ Dies ist ein erweiterter Member. Es werden keine in IntelliSense angezeigt, es sei denn, Sie wählen die **alle** Registerkarte.  
+  
+ Die folgende Tabelle enthält ein Beispiel für eine Aufgabe mit der `TraceSource` Eigenschaft.  
+  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Abrufen von Informationen für jede der `Log` Protokolllistener des Objekts.|[Problembehandlung: Protokolllistener](~/docs/visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|**Ja**|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEntry">
+      <MemberSignature Language="C#" Value="public void WriteEntry (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void WriteEntry(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.Log.WriteEntry(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Erforderlich. Die zu protokollierende Meldung. Wenn <c>Nachricht</c> ist <see langword="Nothing" />, wird eine leere Zeichenfolge verwendet.</param>
+        <summary>Schreibt eine Meldung in Protokolllistener der Anwendung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `WriteEntry` -Methode schreibt eine Meldung an Ereignisprotokoll Listener, die Anwendung.  
+  
+ In Clientanwendungen die `Log` Objekt kann über die `My.Application.Log` Objekt. In Webanwendungen die `Log` Objekt kann über die `My.Log` Objekt.  
+  
+ Um zu erfahren, welches Protokoll Listener empfangen die `WriteEntry` Methode-Nachrichten finden Sie unter [Exemplarische Vorgehensweise: bestimmen, wohin "My.Application.log" schreibt Informationen](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md). Sie können die standardmäßigen Protokolllistener ändern. Weitere Informationen finden Sie unter [Arbeiten mit Anwendungsprotokollen](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ Für Überladungen, die keinen akzeptieren die `id` Argument, das `id` geschrieben wird das Protokoll in der folgenden Tabelle definiert.  
+  
+|`severity`|Standardwert`id`|  
+|----------------|------------------|  
+|<xref:System.Diagnostics.TraceEventType.Information>|0|  
+|<xref:System.Diagnostics.TraceEventType.Warning>|1|  
+|<xref:System.Diagnostics.TraceEventType.Error>|2|  
+|<xref:System.Diagnostics.TraceEventType.Critical>|3|  
+|<xref:System.Diagnostics.TraceEventType.Start>|4|  
+|<xref:System.Diagnostics.TraceEventType.Stop>|5|  
+|<xref:System.Diagnostics.TraceEventType.Suspend>|6|  
+|<xref:System.Diagnostics.TraceEventType.Resume>|7|  
+|<xref:System.Diagnostics.TraceEventType.Verbose>|8|  
+|<xref:System.Diagnostics.TraceEventType.Transfer>|9|  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `WriteEntry` Methode.  
+  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Schreiben von Ereignisinformationen in die Anwendung Protokolllistener|[Gewusst wie: Schreiben von Protokollmeldungen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
+|Bestimmen des Installationsorts `Log` Informationen schreibt|[Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|**Ja**|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt die Verwendung der `My.Application.Log.WriteEntry` -Methode zum Protokollieren von Ablaufprotokollinformationen. Weitere Informationen finden Sie unter [wie: Schreiben von Protokollmeldungen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md).  
+  
+ [!code-vb[VbVbalrMyApplicationLog#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#11)]  
+  
+ Dieses Codebeispiel kann nur im Rahmen einer Clientanwendung ausführen. Änderung `My.Application.Log.WriteEntry` auf `My.Log.WriteEntry` für Webanwendungen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Code mit teilweiser Vertrauenswürdigkeit die Methode aufruft, sondern schreibt in ein Ereignisprotokoll-Listener, der volle Vertrauenswürdigkeit erforderlich sind.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Steuert die Fähigkeit, auf Dateien und Ordner zuzugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEntry">
+      <MemberSignature Language="C#" Value="public void WriteEntry (string message, System.Diagnostics.TraceEventType severity);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void WriteEntry(string message, valuetype System.Diagnostics.TraceEventType severity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.Log.WriteEntry(System.String,System.Diagnostics.TraceEventType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+      </Parameters>
+      <Docs>
+        <param name="message">Erforderlich. Die zu protokollierende Meldung. Wenn <c>Nachricht</c> ist <see langword="Nothing" />, wird eine leere Zeichenfolge verwendet.</param>
+        <param name="severity">Der Typ der Meldung. Standardmäßig <see langword="TraceEventType.Information" />.</param>
+        <summary>Schreibt eine Meldung in Protokolllistener der Anwendung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `WriteEntry` -Methode schreibt eine Meldung an Ereignisprotokoll Listener, die Anwendung.  
+  
+ In Clientanwendungen die `Log` Objekt kann über die `My.Application.Log` Objekt. In Webanwendungen die `Log` Objekt kann über die `My.Log` Objekt.  
+  
+ Um zu erfahren, welches Protokoll Listener empfangen die `WriteEntry` Methode-Nachrichten finden Sie unter [Exemplarische Vorgehensweise: bestimmen, wohin "My.Application.log" schreibt Informationen](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md). Sie können die standardmäßigen Protokolllistener ändern. Weitere Informationen finden Sie unter [Arbeiten mit Anwendungsprotokollen](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ Für Überladungen, die keinen akzeptieren die `id` Argument, das `id` geschrieben wird das Protokoll in der folgenden Tabelle definiert.  
+  
+|`severity`|Standardwert`id`|  
+|----------------|------------------|  
+|<xref:System.Diagnostics.TraceEventType.Information>|0|  
+|<xref:System.Diagnostics.TraceEventType.Warning>|1|  
+|<xref:System.Diagnostics.TraceEventType.Error>|2|  
+|<xref:System.Diagnostics.TraceEventType.Critical>|3|  
+|<xref:System.Diagnostics.TraceEventType.Start>|4|  
+|<xref:System.Diagnostics.TraceEventType.Stop>|5|  
+|<xref:System.Diagnostics.TraceEventType.Suspend>|6|  
+|<xref:System.Diagnostics.TraceEventType.Resume>|7|  
+|<xref:System.Diagnostics.TraceEventType.Verbose>|8|  
+|<xref:System.Diagnostics.TraceEventType.Transfer>|9|  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `WriteEntry` Methode.  
+  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Schreiben von Ereignisinformationen in die Anwendung Protokolllistener|[Gewusst wie: Schreiben von Protokollmeldungen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
+|Bestimmen des Installationsorts `Log` Informationen schreibt|[Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|**Ja**|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt die Verwendung der `My.Application.Log.WriteEntry` -Methode zum Protokollieren von Ablaufprotokollinformationen. Weitere Informationen finden Sie unter [wie: Schreiben von Protokollmeldungen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md).  
+  
+ [!code-vb[VbVbalrMyApplicationLog#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#11)]  
+  
+ Dieses Codebeispiel kann nur im Rahmen einer Clientanwendung ausführen. Änderung `My.Application.Log.WriteEntry` auf `My.Log.WriteEntry` für Webanwendungen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Nachrichtentyp ist nicht die <see cref="T:System.Diagnostics.TraceEventType" /> Enumerationswerte.</exception>
+        <exception cref="T:System.Security.SecurityException">Code mit teilweiser Vertrauenswürdigkeit die Methode aufruft, sondern schreibt in ein Ereignisprotokoll-Listener, der volle Vertrauenswürdigkeit erforderlich sind.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Steuert die Fähigkeit, auf Dateien und Ordner zuzugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEntry">
+      <MemberSignature Language="C#" Value="public void WriteEntry (string message, System.Diagnostics.TraceEventType severity, int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void WriteEntry(string message, valuetype System.Diagnostics.TraceEventType severity, int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.Log.WriteEntry(System.String,System.Diagnostics.TraceEventType,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Erforderlich. Die zu protokollierende Meldung. Wenn <c>Nachricht</c> ist <see langword="Nothing" />, wird eine leere Zeichenfolge verwendet.</param>
+        <param name="severity">Der Typ der Meldung. Standardmäßig <see langword="TraceEventType.Information" />.</param>
+        <param name="id">Nachrichten-ID in der Regel für die Korrelation verwendet. Wird standardmäßig im Zusammenhang mit <c>EntryType</c> wie in der Tabelle beschrieben.</param>
+        <summary>Schreibt eine Meldung in Protokolllistener der Anwendung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `WriteEntry` -Methode schreibt eine Meldung an Ereignisprotokoll Listener, die Anwendung.  
+  
+ In Clientanwendungen die `Log` Objekt kann über die `My.Application.Log` Objekt. In Webanwendungen die `Log` Objekt kann über die `My.Log` Objekt.  
+  
+ Um zu erfahren, welches Protokoll Listener empfangen die `WriteEntry` Methode-Nachrichten finden Sie unter [Exemplarische Vorgehensweise: bestimmen, wohin "My.Application.log" schreibt Informationen](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md). Sie können die standardmäßigen Protokolllistener ändern. Weitere Informationen finden Sie unter [Arbeiten mit Anwendungsprotokollen](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ Für Überladungen, die keinen akzeptieren die `id` Argument, das `id` geschrieben wird das Protokoll in der folgenden Tabelle definiert.  
+  
+|`severity`|Standardwert`id`|  
+|----------------|------------------|  
+|<xref:System.Diagnostics.TraceEventType.Information>|0|  
+|<xref:System.Diagnostics.TraceEventType.Warning>|1|  
+|<xref:System.Diagnostics.TraceEventType.Error>|2|  
+|<xref:System.Diagnostics.TraceEventType.Critical>|3|  
+|<xref:System.Diagnostics.TraceEventType.Start>|4|  
+|<xref:System.Diagnostics.TraceEventType.Stop>|5|  
+|<xref:System.Diagnostics.TraceEventType.Suspend>|6|  
+|<xref:System.Diagnostics.TraceEventType.Resume>|7|  
+|<xref:System.Diagnostics.TraceEventType.Verbose>|8|  
+|<xref:System.Diagnostics.TraceEventType.Transfer>|9|  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `WriteEntry` Methode.  
+  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Schreiben von Ereignisinformationen in die Anwendung Protokolllistener|[Gewusst wie: Schreiben von Protokollmeldungen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
+|Bestimmen des Installationsorts `Log` Informationen schreibt|[Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|**Ja**|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt die Verwendung der `My.Application.Log.WriteEntry` -Methode zum Protokollieren von Ablaufprotokollinformationen. Weitere Informationen finden Sie unter [wie: Schreiben von Protokollmeldungen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md).  
+  
+ [!code-vb[VbVbalrMyApplicationLog#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#11)]  
+  
+ Dieses Codebeispiel kann nur im Rahmen einer Clientanwendung ausführen. Änderung `My.Application.Log.WriteEntry` auf `My.Log.WriteEntry` für Webanwendungen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Nachrichtentyp ist nicht die <see cref="T:System.Diagnostics.TraceEventType" /> Enumerationswerte.</exception>
+        <exception cref="T:System.Security.SecurityException">Code mit teilweiser Vertrauenswürdigkeit die Methode aufruft, sondern schreibt in ein Ereignisprotokoll-Listener, der volle Vertrauenswürdigkeit erforderlich sind.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Steuert die Fähigkeit, auf Dateien und Ordner zuzugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteException">
+      <MemberSignature Language="C#" Value="public void WriteException (Exception ex);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void WriteException(class System.Exception ex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.Log.WriteException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ex" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="ex">Erforderlich. Zu protokollierende Ausnahme.</param>
+        <summary>Schreibt Ausnahmeinformationen in Protokolllistener der Anwendung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `WriteException` Methode schreibt die Informationen in eine Ausnahme von Ereignis-Protokolllistener der Anwendung enthalten sind.  
+  
+ In Clientanwendungen die `Log` Objekt kann über die `My.Application.Log` Objekt. In Webanwendungen die `Log` Objekt kann über die `My.Log` Objekt.  
+  
+ Um zu erfahren, welches Protokoll Listener empfangen die `WriteException` Methode-Nachrichten finden Sie unter [Exemplarische Vorgehensweise: bestimmen, wohin "My.Application.log" schreibt Informationen](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md). Sie können die standardmäßigen Protokolllistener ändern. Weitere Informationen finden Sie unter [Arbeiten mit Anwendungsprotokollen](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ Für Überladungen, die keinen akzeptieren die `id` Argument an, die Bezeichner in das Protokoll geschrieben wird in der folgenden Tabelle definiert.  
+  
+|`severity`|Standardwert`id`|  
+|----------------|------------------|  
+|<xref:System.Diagnostics.TraceEventType.Information>|0|  
+|<xref:System.Diagnostics.TraceEventType.Warning>|1|  
+|<xref:System.Diagnostics.TraceEventType.Error>|2|  
+|<xref:System.Diagnostics.TraceEventType.Critical>|3|  
+|<xref:System.Diagnostics.TraceEventType.Start>|4|  
+|<xref:System.Diagnostics.TraceEventType.Stop>|5|  
+|<xref:System.Diagnostics.TraceEventType.Suspend>|6|  
+|<xref:System.Diagnostics.TraceEventType.Resume>|7|  
+|<xref:System.Diagnostics.TraceEventType.Verbose>|8|  
+|<xref:System.Diagnostics.TraceEventType.Transfer>|9|  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `WriteException` Methode.  
+  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Schreiben Sie Informationen zur Ausnahme in der Anwendung, Ereignis-Protokolllistener.|[Gewusst wie: Protokollieren von Ausnahmen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
+|Bestimmen Sie, wohin `Log` Informationen schreibt.|[Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|**Ja**|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die `My.Application.Log.WriteException` Methode zum Protokollieren von Ausnahmen. Heben Sie die Auskommentierung der Zeilen `Dim` und `MsgBox` auf, um eine <xref:System.NullReferenceException>-Ausnahme auszulösen. Weitere Informationen finden Sie unter [Vorgehensweise: Ausnahmen Protokolldatei](~/docs/visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+  
+ [!code-vb[VbVbalrMyApplicationLog#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#10)]  
+  
+ Dieses Codebeispiel kann nur im Rahmen einer Clientanwendung ausführen. Änderung `My.Application.Log.WriteException` auf `My.Log.WriteException` für Webanwendungen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ex" /> ist <see langword="Nothing" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Code mit teilweiser Vertrauenswürdigkeit die Methode aufruft, sondern schreibt in ein Ereignisprotokoll-Listener, der volle Vertrauenswürdigkeit erforderlich sind.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Steuert die Fähigkeit, auf Dateien und Ordner zuzugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteException">
+      <MemberSignature Language="C#" Value="public void WriteException (Exception ex, System.Diagnostics.TraceEventType severity, string additionalInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void WriteException(class System.Exception ex, valuetype System.Diagnostics.TraceEventType severity, string additionalInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.Log.WriteException(System.Exception,System.Diagnostics.TraceEventType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ex" Type="System.Exception" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="additionalInfo" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ex">Erforderlich. Zu protokollierende Ausnahme.</param>
+        <param name="severity">Der Typ der Meldung. Standardmäßig <see cref="F:System.Diagnostics.TraceEventType.Error" />.</param>
+        <param name="additionalInfo">Zeichenfolge, die an die Nachricht angefügt werden soll. Standardmäßig ist dies eine leere Zeichenfolge.</param>
+        <summary>Schreibt Ausnahmeinformationen in Protokolllistener der Anwendung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `WriteException` Methode schreibt die Informationen in eine Ausnahme von Ereignis-Protokolllistener der Anwendung enthalten sind.  
+  
+ In Clientanwendungen die `Log` Objekt kann über die `My.Application.Log` Objekt. In Webanwendungen die `Log` Objekt kann über die `My.Log` Objekt.  
+  
+ Um zu erfahren, welches Protokoll Listener empfangen die `WriteException` Methode-Nachrichten finden Sie unter [Exemplarische Vorgehensweise: bestimmen, wohin "My.Application.log" schreibt Informationen](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md). Sie können die standardmäßigen Protokolllistener ändern. Weitere Informationen finden Sie unter [Arbeiten mit Anwendungsprotokollen](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ Für Überladungen, die keinen akzeptieren die `id` Argument an, die Bezeichner in das Protokoll geschrieben wird in der folgenden Tabelle definiert.  
+  
+|`severity`|Standardwert`id`|  
+|----------------|------------------|  
+|<xref:System.Diagnostics.TraceEventType.Information>|0|  
+|<xref:System.Diagnostics.TraceEventType.Warning>|1|  
+|<xref:System.Diagnostics.TraceEventType.Error>|2|  
+|<xref:System.Diagnostics.TraceEventType.Critical>|3|  
+|<xref:System.Diagnostics.TraceEventType.Start>|4|  
+|<xref:System.Diagnostics.TraceEventType.Stop>|5|  
+|<xref:System.Diagnostics.TraceEventType.Suspend>|6|  
+|<xref:System.Diagnostics.TraceEventType.Resume>|7|  
+|<xref:System.Diagnostics.TraceEventType.Verbose>|8|  
+|<xref:System.Diagnostics.TraceEventType.Transfer>|9|  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `WriteException` Methode.  
+  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Schreiben Sie Informationen zur Ausnahme in der Anwendung, Ereignis-Protokolllistener.|[Gewusst wie: Protokollieren von Ausnahmen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
+|Bestimmen Sie, wohin `Log` Informationen schreibt.|[Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|**Ja**|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die `My.Application.Log.WriteException` Methode zum Protokollieren von Ausnahmen. Heben Sie die Auskommentierung der Zeilen `Dim` und `MsgBox` auf, um eine <xref:System.NullReferenceException>-Ausnahme auszulösen. Weitere Informationen finden Sie unter [Vorgehensweise: Ausnahmen Protokolldatei](~/docs/visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+  
+ [!code-vb[VbVbalrMyApplicationLog#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#10)]  
+  
+ Dieses Codebeispiel kann nur im Rahmen einer Clientanwendung ausführen. Änderung `My.Application.Log.WriteException` auf `My.Log.WriteException` für Webanwendungen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ex" /> ist <see langword="Nothing" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Nachrichtentyp ist nicht die <see cref="T:System.Diagnostics.TraceEventType" /> Enumerationswerte.</exception>
+        <exception cref="T:System.Security.SecurityException">Code mit teilweiser Vertrauenswürdigkeit die Methode aufruft, sondern schreibt in ein Ereignisprotokoll-Listener, der volle Vertrauenswürdigkeit erforderlich sind.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Steuert die Fähigkeit, auf Dateien und Ordner zuzugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteException">
+      <MemberSignature Language="C#" Value="public void WriteException (Exception ex, System.Diagnostics.TraceEventType severity, string additionalInfo, int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void WriteException(class System.Exception ex, valuetype System.Diagnostics.TraceEventType severity, string additionalInfo, int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.Log.WriteException(System.Exception,System.Diagnostics.TraceEventType,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ex" Type="System.Exception" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="additionalInfo" Type="System.String" />
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ex">Erforderlich. Zu protokollierende Ausnahme.</param>
+        <param name="severity">Der Typ der Meldung. Standardmäßig <see cref="F:System.Diagnostics.TraceEventType.Error" />.</param>
+        <param name="additionalInfo">Zeichenfolge, die an die Nachricht angefügt werden soll. Standardmäßig ist dies eine leere Zeichenfolge.</param>
+        <param name="id">Nachrichten-ID in der Regel für die Korrelation verwendet. Wird standardmäßig im Zusammenhang mit <c>EntryType</c> wie beschrieben in der Tabelle im Abschnitt "Hinweise".</param>
+        <summary>Schreibt Ausnahmeinformationen in Protokolllistener der Anwendung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `WriteException` Methode schreibt die Informationen in eine Ausnahme von Ereignis-Protokolllistener der Anwendung enthalten sind.  
+  
+ In Clientanwendungen die `Log` Objekt kann über die `My.Application.Log` Objekt. In Webanwendungen die `Log` Objekt kann über die `My.Log` Objekt.  
+  
+ Um zu erfahren, welches Protokoll Listener empfangen die `WriteException` Methode-Nachrichten finden Sie unter [Exemplarische Vorgehensweise: bestimmen, wohin "My.Application.log" schreibt Informationen](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md). Sie können die standardmäßigen Protokolllistener ändern. Weitere Informationen finden Sie unter [Arbeiten mit Anwendungsprotokollen](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ Für Überladungen, die keinen akzeptieren die `id` Argument an, die Bezeichner in das Protokoll geschrieben wird in der folgenden Tabelle definiert.  
+  
+|`severity`|Standardwert`id`|  
+|----------------|------------------|  
+|<xref:System.Diagnostics.TraceEventType.Information>|0|  
+|<xref:System.Diagnostics.TraceEventType.Warning>|1|  
+|<xref:System.Diagnostics.TraceEventType.Error>|2|  
+|<xref:System.Diagnostics.TraceEventType.Critical>|3|  
+|<xref:System.Diagnostics.TraceEventType.Start>|4|  
+|<xref:System.Diagnostics.TraceEventType.Stop>|5|  
+|<xref:System.Diagnostics.TraceEventType.Suspend>|6|  
+|<xref:System.Diagnostics.TraceEventType.Resume>|7|  
+|<xref:System.Diagnostics.TraceEventType.Verbose>|8|  
+|<xref:System.Diagnostics.TraceEventType.Transfer>|9|  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `WriteException` Methode.  
+  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Schreiben Sie Informationen zur Ausnahme in der Anwendung, Ereignis-Protokolllistener.|[Gewusst wie: Protokollieren von Ausnahmen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
+|Bestimmen Sie, wohin `Log` Informationen schreibt.|[Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|**Ja**|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die `My.Application.Log.WriteException` Methode zum Protokollieren von Ausnahmen. Heben Sie die Auskommentierung der Zeilen `Dim` und `MsgBox` auf, um eine <xref:System.NullReferenceException>-Ausnahme auszulösen. Weitere Informationen finden Sie unter [Vorgehensweise: Ausnahmen Protokolldatei](~/docs/visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+  
+ [!code-vb[VbVbalrMyApplicationLog#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#10)]  
+  
+ Dieses Codebeispiel kann nur im Rahmen einer Clientanwendung ausführen. Änderung `My.Application.Log.WriteException` auf `My.Log.WriteException` für Webanwendungen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ex" /> ist <see langword="Nothing" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Nachrichtentyp ist nicht die <see cref="T:System.Diagnostics.TraceEventType" /> Enumerationswerte.</exception>
+        <exception cref="T:System.Security.SecurityException">Code mit teilweiser Vertrauenswürdigkeit die Methode aufruft, sondern schreibt in ein Ereignisprotokoll-Listener, der volle Vertrauenswürdigkeit erforderlich sind.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Steuert die Fähigkeit, auf Dateien und Ordner zuzugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,166 @@
+<Type Name="StreamUpgradeAcceptor" FullName="System.ServiceModel.Channels.StreamUpgradeAcceptor">
+  <TypeSignature Language="C#" Value="public abstract class StreamUpgradeAcceptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit StreamUpgradeAcceptor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.StreamUpgradeAcceptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Zur Implementierung eines Empfängers benutzerdefinierter Upgrades, der aus dieser <see langword="abstract" />-Basisklasse vererbt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel für ein Streamupgrade ist das Erstellen eines Komprimierungsstreams direkt über dem Transportstream.  
+  
+ Diese Klasse wird mit <xref:System.ServiceModel.Channels.StreamUpgradeInitiator> und <xref:System.ServiceModel.Channels.StreamUpgradeProvider> verwendet, um ein benutzerdefiniertes Streamupgrade zu implementieren.  
+  
+ Eine ausführliche Beschreibung der Aktualisierung finden Sie unter dem <xref:System.ServiceModel.Channels.StreamUpgradeProvider>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StreamUpgradeAcceptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeAcceptor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.StreamUpgradeAcceptor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptUpgrade">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Stream AcceptUpgrade (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream AcceptUpgrade(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der zu aktualisierende Stream.</param>
+        <summary>Aktualisiert den Transportstream und gibt den aktualisierten Stream zurück.</summary>
+        <returns>Gibt den aktualisierten Stream zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, um den bestehenden Transportstream durch die Bereitstellung zusätzlicher Funktionen, wie beispielsweise eines Komprimierungsstreams, einzubinden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAcceptUpgrade">
+      <MemberSignature Language="C#" Value="public abstract IAsyncResult BeginAcceptUpgrade (System.IO.Stream stream, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginAcceptUpgrade(class System.IO.Stream stream, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeAcceptor.BeginAcceptUpgrade(System.IO.Stream,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der zu aktualisierende Stream.</param>
+        <param name="callback">Die Methode, die aufgerufen werden muss, wenn der <see langword="AcceptUpgrade" />-Aufruf abgeschlossen wurde.</param>
+        <param name="state">Statusinformationen für den <see langword="AcceptUpgrade" />-Aufruf.</param>
+        <summary>Asynchrone Version von <see cref="M:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade(System.IO.Stream)" />.</summary>
+        <returns>Gibt einen Ergebniscode zurück, der in EndAcceptUpgrade übergeben wird, um auf den aktualisierten Stream zuzugreifen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Hinweisen zu <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUpgrade">
+      <MemberSignature Language="C#" Value="public abstract bool CanUpgrade (string contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanUpgrade(string contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">Der Typ des Inhalts, der überprüft werden soll.</param>
+        <summary>Bestimmt, ob das angeforderte Upgrade von diesem Empfänger des Upgrades unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn diese Art von Upgrade unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Entwickler kann den angeforderten Inhaltstyp prüfen und bestimmen, ob das resultierende Upgrade von diesem Empfänger des Upgrades durchgeführt werden kann. Dieser Inhaltstyp resultiert aus der `GetNextUpgrade`-Methode auf den passenden Empfänger des Upgrades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAcceptUpgrade">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Stream EndAcceptUpgrade (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream EndAcceptUpgrade(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeAcceptor.EndAcceptUpgrade(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Vom <see langword="BeginAcceptUpgrade" /> zurückgegebenes IAsyncResult.</param>
+        <summary>Asynchrone Version von <see cref="M:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade(System.IO.Stream)" />.</summary>
+        <returns>Gibt den aktualisierten Stream zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Hinweisen in <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

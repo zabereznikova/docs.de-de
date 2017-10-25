@@ -1,0 +1,98 @@
+<Type Name="MessageBoxButton" FullName="System.Windows.MessageBoxButton">
+  <TypeSignature Language="C#" Value="public enum MessageBoxButton" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MessageBoxButton extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.MessageBoxButton" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Schaltflächen, die in einem Meldungsfeld angezeigt werden. Als Argument verwendet den <see cref="Overload:System.Windows.MessageBox.Show" /> Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.MessageBox.Show%2A> Methode der <xref:System.Windows.MessageBox> Typ zeigt ein Meldungsfeld mit einer **OK** Schaltfläche. Können Sie Überladungen von der <xref:System.Windows.MessageBox.Show%2A> -Methode, die akzeptiert eine <xref:System.Windows.MessageBoxButton> Argument, um verschiedene Kombinationen von Schaltflächen, anzugeben, darunter **OK**, **OK** / ** "Abbrechen"**, **Ja**/**keine**, und **Ja**/**keine** / **"Abbrechen"**.  
+  
+ Wenn Sie YesNo angeben, deaktivieren Sie die **schließen** Schaltfläche in der Titelleiste der Nachricht. Allerdings die **schließen** Schaltfläche ist für alle anderen Optionen aktiviert. Ein Benutzer klickt der **schließen** Schaltfläche oder das Drücken der **ESC** Schlüssel, ein Meldungsfeld gibt einen Ergebniswert des <xref:System.Windows.MessageBoxResult>. Jedoch wenn nur ein Meldungsfeld angezeigt ein **OK** Schaltfläche klicken, die **schließen** Schaltfläche oder das Drücken der **ESC** Schlüssel bewirkt, dass ein Meldungsfeld einen Ergebniswert des zurückzugebenden <xref:System.Windows.MessageBoxResult.Cancel>.  
+  
+ Der Wert der Schaltfläche, die ein Benutzer klickt zurückgegebenes <xref:System.Windows.MessageBox.Show%2A> und ist einer der Werte von der <xref:System.Windows.MessageBoxResult> Enumeration.  
+  
+   
+  
+## Examples  
+ Weitere Informationen finden Sie unter [MessageBox Sample](http://go.microsoft.com/fwlink/?LinkID=160023).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OK">
+      <MemberSignature Language="C#" Value="OK" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.MessageBoxButton OK = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.MessageBoxButton.OK" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld zeigt eine **OK** Schaltfläche.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OKCancel">
+      <MemberSignature Language="C#" Value="OKCancel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.MessageBoxButton OKCancel = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.MessageBoxButton.OKCancel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld zeigt **OK** und **"Abbrechen"** Schaltflächen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="YesNo">
+      <MemberSignature Language="C#" Value="YesNo" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.MessageBoxButton YesNo = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.MessageBoxButton.YesNo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld zeigt **Ja** und **keine** Schaltflächen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="YesNoCancel">
+      <MemberSignature Language="C#" Value="YesNoCancel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.MessageBoxButton YesNoCancel = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.MessageBoxButton.YesNoCancel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld zeigt **Ja**, **keine**, und **"Abbrechen"** Schaltflächen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,252 @@
+<Type Name="IDataSourceFieldSchema" FullName="System.Web.UI.Design.IDataSourceFieldSchema">
+  <TypeSignature Language="C#" Value="public interface IDataSourceFieldSchema" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataSourceFieldSchema" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IDataSourceFieldSchema" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisfunktionen für die Beschreibung der Struktur eines Datenfelds zur Entwurfszeit bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.IDataSourceFieldSchema> Schnittstelle ermöglicht es, eine Klasse, um einen Satz von Eigenschaften implementieren, die ein Feld in einer Datenquelle zu beschreiben. Die <xref:System.Web.UI.Design.DataSetFieldSchema>-Klasse implementiert die <xref:System.Web.UI.Design.IDataSourceFieldSchema>-Schnittstelle.  
+  
+ Klassen, in denen die <xref:System.Web.UI.Design.IDataSourceFieldSchema> von benutzerdefiniertes Steuerelement-Designer-Komponenten zum Bereitstellen von Listen mit Datenquellenfeldern und Eigenschaften für datengebundene Steuerelemente zur Entwurfszeit verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataType">
+      <MemberSignature Language="C#" Value="public Type DataType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DataType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataSourceFieldSchema.DataType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der in das Feld gespeicherten Daten ab.</summary>
+        <value>Ein <see cref="T:System.Type" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public bool Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataSourceFieldSchema.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Wert des Felds für jede neue Zeile automatisch inkrementiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn des Felds <see cref="P:System.Web.UI.Design.IDataSourceFieldSchema.DataType" /> numerisch ist und die zugrunde liegende Feld Inkremente automatisch als neue Zeilen hinzugefügt wurde, andernfalls sind <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine <xref:System.Data.DataColumn> -Objekt, das <xref:System.Web.UI.Design.IDataSourceFieldSchema.Identity%2A> Eigenschaft entspricht der <xref:System.Data.DataColumn.AutoIncrement%2A> Eigenschaft. In SQL Server ist eine Identitätsspalte eine numerische Spalte, die automatisch mit jeder hinzugefügten Datensatz inkrementiert, dadurch wird sichergestellt, dass der Wert dieser Datensatz eindeutig identifiziert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataSourceFieldSchema.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Feld bearbeitet werden.</summary>
+        <value>
+          <see langword="true" />Wenn das Feld schreibgeschützt ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine <xref:System.Data.DataColumn>, <xref:System.Web.UI.Design.IDataSourceFieldSchema.IsReadOnly%2A> Eigenschaft entspricht der <xref:System.Data.DataColumn.ReadOnly%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnique">
+      <MemberSignature Language="C#" Value="public bool IsUnique { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUnique" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataSourceFieldSchema.IsUnique" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Werte in das Feld erforderlich sind, eindeutig sein.</summary>
+        <value>
+          <see langword="true" />Wenn Daten in das Feld eindeutig sein müssen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine <xref:System.Data.DataColumn> -Objekt, das <xref:System.Web.UI.Design.IDataSourceFieldSchema.IsUnique%2A> Eigenschaft entspricht der <xref:System.Data.DataColumn.Unique%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataSourceFieldSchema.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Größe der Daten, die in das Feld gespeichert werden können angibt.</summary>
+        <value>Die Anzahl der Bytes, die das Feld gespeichert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine <xref:System.Data.DataColumn> -Objekt, das <xref:System.Web.UI.Design.IDataSourceFieldSchema.Length%2A> Eigenschaft entspricht der <xref:System.Data.DataColumn.MaxLength%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataSourceFieldSchema.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Felds ab.</summary>
+        <value>Der Name des Felds.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine <xref:System.Data.DataColumn> -Objekt, das <xref:System.Web.UI.Design.IDataSourceFieldSchema.Name%2A> Eigenschaft entspricht der <xref:System.Data.DataColumn.ColumnName%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Nullable">
+      <MemberSignature Language="C#" Value="public bool Nullable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Nullable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataSourceFieldSchema.Nullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, ob das Feld akzeptiert <see langword="null" /> Werte.</summary>
+        <value>
+          <see langword="true" />Wenn das Feld akzeptiert <see langword="null" /> Werte; anderenfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine <xref:System.Data.DataColumn> -Objekt, das <xref:System.Web.UI.Design.IDataSourceFieldSchema.Nullable%2A> Eigenschaft entspricht der <xref:System.Data.DataColumn.AllowDBNull%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Precision">
+      <MemberSignature Language="C#" Value="public int Precision { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Precision" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataSourceFieldSchema.Precision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Ziffern für einen numerischen Wert im Feld darstellen.</summary>
+        <value>Die maximale Anzahl von Ziffern für die Werte des Felds darzustellen, wenn die <see cref="P:System.Web.UI.Design.IDataSourceFieldSchema.DataType" /> -Eigenschaft des Felds einen numerischen Typ darstellt. Wenn diese Eigenschaft nicht implementiert wird, sollte er-1 zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimaryKey">
+      <MemberSignature Language="C#" Value="public bool PrimaryKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrimaryKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataSourceFieldSchema.PrimaryKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Feld in der Primärschlüssel ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Feld in den primären Schlüssel ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public int Scale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Scale" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataSourceFieldSchema.Scale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Dezimalstellen, auf die numerische Werte im Feld aufgelöst werden.</summary>
+        <value>Wenn die <see cref="P:System.Web.UI.Design.IDataSourceFieldSchema.DataType" /> -Eigenschaft des Felds einen numerischen Typ darstellt, gibt die Anzahl der Dezimalstellen, die auf die Werte, andernfalls aufgelöst werden <see langword="-1" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

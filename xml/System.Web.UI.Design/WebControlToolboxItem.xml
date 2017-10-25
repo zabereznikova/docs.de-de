@@ -1,0 +1,272 @@
+<Type Name="WebControlToolboxItem" FullName="System.Web.UI.Design.WebControlToolboxItem">
+  <TypeSignature Language="C#" Value="public class WebControlToolboxItem : System.Drawing.Design.ToolboxItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WebControlToolboxItem extends System.Drawing.Design.ToolboxItem" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControlToolboxItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.ToolboxItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Basisklasse für ein Webserversteuerelement <see cref="T:System.Drawing.Design.ToolboxItem" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.WebControlToolboxItem>Stellt eine Basisklasse für Toolboxelemente, die Webserver-Steuerelemente zu erstellen. Diese Klasse erweitert <xref:System.Drawing.Design.ToolboxItem> und bietet die folgenden zusätzlichen Methoden:  
+  
+-   <xref:System.Web.UI.Design.WebControlToolboxItem.GetToolAttributeValue%2A>Ruft den Wert eines Attributs des Toolboxelements ab.  
+  
+-   <xref:System.Web.UI.Design.WebControlToolboxItem.GetToolHtml%2A>Ruft den HTML-Code, der den Ausgangszustand des Steuerelements darstellt.  
+  
+-   <xref:System.Web.UI.Design.WebControlToolboxItem.GetToolType%2A>Ruft den Typ der zugeordneten Laufzeitkomponente ab.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebControlToolboxItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControlToolboxItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControlToolboxItem" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Design.ToolboxItem.DisplayName%2A> auf eine Kurzversion des Typnamens festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebControlToolboxItem (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControlToolboxItem.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> des Tools für dieses Toolboxelement.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Web.UI.Design.WebControlToolboxItem" /> -Klasse mithilfe des angegebenen Typs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Design.ToolboxItem.DisplayName%2A> auf eine Kurzversion des Typnamens festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebControlToolboxItem (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControlToolboxItem.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein SerializationInfo-Objekt mit Informationen, die zum Instanziieren des Websteuerelements durch Deserialisierung erforderlich sind.</param>
+        <param name="context">Ein StreamingContext-Objekt.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Web.UI.Design.WebControlToolboxItem" /> -Klasse unter Verwendung der bereitgestellten <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt und <see cref="T:System.Runtime.Serialization.StreamingContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateComponentsCore">
+      <MemberSignature Language="C#" Value="protected override System.ComponentModel.IComponent[] CreateComponentsCore (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ComponentModel.IComponent[] CreateComponentsCore(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControlToolboxItem.CreateComponentsCore(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> für das aktuelle Design-Dokument.</param>
+        <summary>Erstellt Objekte von jedem Typ enthalten, die in diesem <see cref="T:System.Drawing.Design.ToolboxItem" />, und der angegebene Designer hinzugefügt.</summary>
+        <returns>Ein Array von erstellten <see cref="T:System.ComponentModel.IComponent" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.WebControlToolboxItem.CreateComponentsCore%2A>löst immer eine Ausnahme aus, gibt an, dass die Methode geerbt <xref:System.Drawing.Design.ToolboxItem> und ausschließlich für die Verwendung mit Windows Forms.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Die <see cref="M:System.Web.UI.Design.WebControlToolboxItem.CreateComponentsCore(System.ComponentModel.Design.IDesignerHost)" /> Methode ist nur in Windows Forms verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="protected override void Deserialize (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Deserialize(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControlToolboxItem.Deserialize(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Der <see cref="T:System.Runtime.Serialization.SerializationInfo" />, der die <see cref="T:System.Web.UI.Design.WebControlToolboxItem" /> beschreibt.</param>
+        <param name="context">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" /> , der die Merkmale des Serialisierungsstreams angibt.</param>
+        <summary>Lädt den Zustand des Toolboxelements aus dem angegebenen Serialisierungsinformationsobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolAttributeValue">
+      <MemberSignature Language="C#" Value="public object GetToolAttributeValue (System.ComponentModel.Design.IDesignerHost host, Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetToolAttributeValue(class System.ComponentModel.Design.IDesignerHost host, class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControlToolboxItem.GetToolAttributeValue(System.ComponentModel.Design.IDesignerHost,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> für das aktuelle Design-Dokument.</param>
+        <param name="attributeType">Der Typ des abzurufenden den Wert des Attributs.</param>
+        <summary>Ruft den Wert des angegebenen Typs des Attributs des Toolboxelements ab.</summary>
+        <returns>Der Wert des angegebenen Typs des Attributs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung löst ein <xref:System.ArgumentException> Wenn die `attributeType` Parameter ist alles andere als eine <xref:System.Web.UI.PersistChildrenAttribute>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="attributeType" /> -Parameter ist ein <see cref="T:System.Web.UI.PersistChildrenAttribute" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolHtml">
+      <MemberSignature Language="C#" Value="public string GetToolHtml (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetToolHtml(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControlToolboxItem.GetToolHtml(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> für das aktuelle Design-Dokument.</param>
+        <summary>Ruft den HTML-Code für die Web-Steuerelement, das das Tool erstellt.</summary>
+        <returns>Der HTML-Code für das Websteuerelement, das das Tool erstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolType">
+      <MemberSignature Language="C#" Value="public Type GetToolType (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetToolType(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControlToolboxItem.GetToolType(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> für das aktuelle Design-Dokument.</param>
+        <summary>Ruft den Typ dieses Toolboxelement ab.</summary>
+        <returns>Die <see cref="T:System.Type" /> dieses Toolboxelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControlToolboxItem.Initialize(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> für das Web-Steuerelement-Toolbox-Element.</param>
+        <summary>Initialisiert dieses Toolboxelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="protected override void Serialize (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Serialize(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControlToolboxItem.Serialize(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> verwendet, um den Zustand der speichern die <see cref="T:System.Web.UI.Design.WebControlToolboxItem" />.</param>
+        <param name="context">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" /> , der die Merkmale des Serialisierungsstreams angibt.</param>
+        <summary>Speichert den Zustand des Toolboxelements in dem angegebenen Serialisierungsinformationsobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

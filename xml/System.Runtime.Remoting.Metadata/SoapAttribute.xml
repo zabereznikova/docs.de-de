@@ -1,0 +1,171 @@
+<Type Name="SoapAttribute" FullName="System.Runtime.Remoting.Metadata.SoapAttribute">
+  <TypeSignature Language="C#" Value="public class SoapAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Metadata.SoapAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Standardfunktionen für alle SOAP-Attribute.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Metadata.SoapAttribute> ist nicht funktionsfähig und kann nur als Basisklasse für SOAP-Attribute verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.SoapAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz von <see cref="T:System.Runtime.Remoting.Metadata.SoapAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Embedded">
+      <MemberSignature Language="C#" Value="public virtual bool Embedded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Embedded" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.SoapAttribute.Embedded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Typ während der SOAP-Serialisierung geschachtelt werden muss.</summary>
+        <value>
+          <see langword="true" />Wenn das Zielobjekt während der SOAP-Serialisierung; geschachtelt sein muss andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtXmlNamespace">
+      <MemberSignature Language="C#" Value="protected string ProtXmlNamespace;" />
+      <MemberSignature Language="ILAsm" Value=".field family string ProtXmlNamespace" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Metadata.SoapAttribute.ProtXmlNamespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der XML-Namespace, in dem das Ziel des aktuellen SOAP-Attribut serialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können abrufen oder festlegen den Wert von der <xref:System.Runtime.Remoting.Metadata.SoapAttribute.ProtXmlNamespace> über das öffentliche Feld <xref:System.Runtime.Remoting.Metadata.SoapAttribute.XmlNamespace%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectInfo">
+      <MemberSignature Language="C#" Value="protected object ReflectInfo;" />
+      <MemberSignature Language="ILAsm" Value=".field family object ReflectInfo" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Metadata.SoapAttribute.ReflectInfo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Reflektionsobjekt, das von Attributklassen abgeleitet, die <see cref="T:System.Runtime.Remoting.Metadata.SoapAttribute" /> Klasse Informationen über XML-Serialisierung festgelegt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen nicht mit der <xref:System.Runtime.Remoting.Metadata.SoapAttribute.ReflectInfo> Feld direkt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAttribute">
+      <MemberSignature Language="C#" Value="public virtual bool UseAttribute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.SoapAttribute.UseAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Ziel des aktuellen Attributs als XML-Attribut statt eines Felds XML serialisiert werden.</summary>
+        <value>
+          <see langword="true" />Wenn das Zielobjekt des aktuellen Attributs als XML-Attribut serialisiert werden muss; <see langword="false" /> , wenn das Zielobjekt als Unterelement serialisiert werden muss.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angenommen, ein Feld `FieldA` eines Objekts `ObjectB` ist qualifiziert, mit der `SoapFieldAttribute(UseAttribute=true)` -Attribut, `FieldA` serialisiert als `<ObjectB><FieldA>5</FieldA></ObjectB>`. Wenn die <xref:System.Runtime.Remoting.Metadata.SoapAttribute.UseAttribute%2A> -Eigenschaftensatz auf `false`, `FieldA` serialisiert als `<ObjectB FieldA="5"></ObjectB>`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNamespace">
+      <MemberSignature Language="C#" Value="public virtual string XmlNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.SoapAttribute.XmlNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der XML-Namespace fest.</summary>
+        <value>Der Name des XML-Namespaces, die unter dem das Ziel des aktuellen Attributs serialisiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die aktuelle Eigenschaft zurückgibt `null`, und klicken Sie dann der Namespace nicht qualifiziert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

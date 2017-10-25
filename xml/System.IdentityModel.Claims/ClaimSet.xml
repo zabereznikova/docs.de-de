@@ -1,0 +1,344 @@
+<Type Name="ClaimSet" FullName="System.IdentityModel.Claims.ClaimSet">
+  <TypeSignature Language="C#" Value="public abstract class ClaimSet : System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Claims.Claim&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ClaimSet extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Claims.Claim&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Claims.ClaimSet" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Claims.Claim&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract(Namespace="http://schemas.xmlsoap.org/ws/2005/05/identity")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Auflistung von Ansprüchen dar, die einer Entität zugeordnet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachdem die <xref:System.IdentityModel.Claims.ClaimSet>-Klasse erstellt wurde, kann diese nicht mehr geändert werden.  
+  
+ Bei der Verwendung der anspruchbasierten Autorisierung muss häufig der Inhalt eines <xref:System.IdentityModel.Claims.ClaimSet> für bestimmte Anspruchstypen überprüft werden. Verwenden Sie die <xref:System.IdentityModel.Claims.ClaimSet>-Methode, um <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%2A> auf das Vorhandensein eines bestimmten Anspruchs zu überprüfen. Diese Methode ist leistungsstärker als eine direkte Iteration über den <xref:System.IdentityModel.Claims.ClaimSet>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[c_ClaimSet#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_claimset/cs/service.cs#1)]
+ [!code-vb[c_ClaimSet#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_claimset/vb/myauthorizationpolicy.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ClaimSet ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.ClaimSet.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Claims.ClaimSet" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für zukünftige Verwendung reserviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsClaim">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsClaim (System.IdentityModel.Claims.Claim claim);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsClaim(class System.IdentityModel.Claims.Claim claim) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.ClaimSet.ContainsClaim(System.IdentityModel.Claims.Claim)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claim" Type="System.IdentityModel.Claims.Claim" />
+      </Parameters>
+      <Docs>
+        <param name="claim">Der zu suchende <see cref="T:System.IdentityModel.Claims.Claim" />.</param>
+        <summary>Bestimmt, ob der <see cref="T:System.IdentityModel.Claims.ClaimSet" /> den angegebenen <see cref="T:System.IdentityModel.Claims.Claim" /> enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Anspruch in dem <see cref="T:System.IdentityModel.Claims.ClaimSet" /> enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um den angegebenen Anspruch zu suchen, rufen Sie die <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%28System.String%2CSystem.String%29>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsClaim">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsClaim (System.IdentityModel.Claims.Claim claim, System.Collections.Generic.IEqualityComparer&lt;System.IdentityModel.Claims.Claim&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsClaim(class System.IdentityModel.Claims.Claim claim, class System.Collections.Generic.IEqualityComparer`1&lt;class System.IdentityModel.Claims.Claim&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.ClaimSet.ContainsClaim(System.IdentityModel.Claims.Claim,System.Collections.Generic.IEqualityComparer{System.IdentityModel.Claims.Claim})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claim" Type="System.IdentityModel.Claims.Claim" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;System.IdentityModel.Claims.Claim&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="claim">Der zu suchende <see cref="T:System.IdentityModel.Claims.Claim" />.</param>
+        <param name="comparer">Das für den Vergleich verwendete <see cref="T:System.Collections.Generic.IEqualityComparer`1" />-Objekt.</param>
+        <summary>Bestimmt anhand des angegebenen <see cref="T:System.IdentityModel.Claims.ClaimSet" />-Objekts, ob der <see cref="T:System.IdentityModel.Claims.Claim" /> den angegebenen <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Anspruch in dem <see cref="T:System.IdentityModel.Claims.ClaimSet" /> enthalten ist, andernfalls <see langword="false." />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um den angegebenen Anspruch zu suchen, rufen Sie die <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%28System.String%2CSystem.String%29>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public abstract int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.ClaimSet.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Anzahl der Ansprüche in diesem Satz von Ansprüchen ab.</summary>
+        <value>Die Anzahl der Ansprüche in diesem <see cref="T:System.IdentityModel.Claims.ClaimSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Abrufen eines einzelnen Anspruchs die <xref:System.IdentityModel.Claims.ClaimSet.Item%2A>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindClaims">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Claims.Claim&gt; FindClaims (string resourceType, string right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Claims.Claim&gt; FindClaims(string resourceType, string right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.ClaimSet.FindClaims(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+        <Parameter Name="right" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceType">To be added.</param>
+        <param name="right">Der URI des Rechts, das dem neuen Anspruch zugeordnet ist. Mehrere Rechte sind als statische Eigenschaften der <see cref="T:System.IdentityModel.Claims.Rights" />-Klasse verfügbar.</param>
+        <summary>Sucht beim Überschreiben in einer abgeleiteten Klasse ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das mit dem angegebenen Anspruchtyp und den Rechten im <see cref="T:System.IdentityModel.Claims.ClaimSet" /> übereinstimmt.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> vom Typ <see cref="T:System.IdentityModel.Claims.Claim" /> zum Auflisten der Ansprüche, die den angegebenen Kriterien entsprechen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu bestimmen, ob dieser <xref:System.IdentityModel.Claims.ClaimSet> den Anspruch enthält, ohne ihn zurückzugeben, rufen Sie die <xref:System.IdentityModel.Claims.ClaimSet.ContainsClaim%2A>-Methode auf.  
+  
+   
+  
+## Examples  
+ [!code-csharp[c_ClaimSet#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_claimset/cs/service.cs#2)]
+ [!code-vb[c_ClaimSet#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_claimset/vb/myauthorizationpolicy.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerator&lt;System.IdentityModel.Claims.Claim&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.IdentityModel.Claims.Claim&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.ClaimSet.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.IdentityModel.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse einen <see cref="T:System.Collections.Generic.IEnumerator`1" /> auf, der zum Auflisten des <see cref="T:System.IdentityModel.Claims.Claim" />-Objekts in dem <see cref="T:System.IdentityModel.Claims.ClaimSet" /> verwendet werden kann.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" />-Objekt, das zum Auflisten des <see cref="T:System.IdentityModel.Claims.Claim" />-Objekts im <see cref="T:System.IdentityModel.Claims.ClaimSet" /> verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `foreach`-Anweisung der Programmiersprache C# (`for each` in Visual Basic) verbirgt die Komplexität der Enumeratoren. Daher empfiehlt es sich, `foreach` zu verwenden und den Enumerator nicht direkt zu ändern.  
+  
+ Mit Enumeratoren können die Daten in der Auflistung zwar gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Issuer">
+      <MemberSignature Language="C#" Value="public abstract System.IdentityModel.Claims.ClaimSet Issuer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Claims.ClaimSet Issuer" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.ClaimSet.Issuer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.ClaimSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Entität ab, die diesen <see cref="T:System.IdentityModel.Claims.ClaimSet" /> ausgestellt hat.</summary>
+        <value>Das <see cref="T:System.IdentityModel.Claims.ClaimSet" />-Objekt, das dieses <see cref="T:System.IdentityModel.Claims.ClaimSet" />-Objekt ausgestellt hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aussteller des Satzes von Ansprüchen, der von der <xref:System.IdentityModel.Claims.ClaimSet.System%2A>-Eigenschaft zurückgegeben wird, ist der <xref:System.IdentityModel.Claims.DefaultClaimSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract System.IdentityModel.Claims.Claim this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Claims.Claim Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.ClaimSet.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Anspruchs, der abgerufen werden soll.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse den <see cref="T:System.IdentityModel.Claims.Claim" /> für den angegebenen Index ab.</summary>
+        <value>Der <see cref="T:System.IdentityModel.Claims.Claim" /> am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.ClaimSet System { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.IdentityModel.Claims.ClaimSet System" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.ClaimSet.System" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.ClaimSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.IdentityModel.Claims.ClaimSet" />-Objekt ab, das einen für die Anwendung vertrauenswürdigen Aussteller darstellt.</summary>
+        <value>Das <see cref="T:System.IdentityModel.Claims.ClaimSet" />-Objekt des Systems.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Typ des <xref:System.IdentityModel.Claims.ClaimSet>-Objekts wird in der Regel als Wert für die <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A>-Eigenschaft von einem <xref:System.IdentityModel.Claims.ClaimSet> verwendet, der von der aktuellen Anwendung ausgestellt wird.  
+  
+ Nachdem eine Anwendung einen Benutzernamen und ein Kennwort authentifiziert hat, erstellt es beispielsweise einen <xref:System.IdentityModel.Claims.ClaimSet>, der den Benutzer mit dem Wert <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> für die <xref:System.IdentityModel.Claims.ClaimSet.System%2A>-Eigenschaft darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.ClaimSet.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Collections.Generic.IEnumerator`1" /> ab, der zum Auflisten des <see cref="T:System.IdentityModel.Claims.Claim" />-Objekts im <see cref="T:System.IdentityModel.Claims.ClaimSet" /> verwendet werden kann.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" />-Objekt, das zum Auflisten des <see cref="T:System.IdentityModel.Claims.Claim" />-Objekts im <see cref="T:System.IdentityModel.Claims.ClaimSet" /> verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `foreach`-Anweisung der Programmiersprache C# (`for each` in Visual Basic) verbirgt die Komplexität der Enumeratoren. Daher empfiehlt es sich, `foreach` zu verwenden und den Enumerator nicht direkt zu ändern.  
+  
+ Mit Enumeratoren können die Daten in der Auflistung zwar gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Windows">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.ClaimSet Windows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.IdentityModel.Claims.ClaimSet Windows" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.ClaimSet.Windows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.ClaimSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Satz von Ansprüchen ab, der Windows-Sicherheits-IDs enthält.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Claims.ClaimSet" />-Objekt, das mindestens einen Anspruch des <see cref="P:System.IdentityModel.Claims.ClaimTypes.Sid" />-Typs enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Typ des <xref:System.IdentityModel.Claims.ClaimSet>-Objekts wird in der Regel als Wert für die <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A>-Eigenschaft von einem <xref:System.IdentityModel.Claims.ClaimSet> verwendet, der von Windows ausgestellt wird. Nachdem eine Anwendung einen Benutzernamen und ein Kennwort über die Windows-Authentifizierung authentifiziert hat, erstellt es beispielsweise einen <xref:System.IdentityModel.Claims.ClaimSet>, bei dem für die <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A>-Eigenschaft der Wert <xref:System.IdentityModel.Claims.ClaimSet.Windows%2A> festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

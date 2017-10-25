@@ -1,0 +1,235 @@
+<Type Name="PolicyConversionContext" FullName="System.ServiceModel.Description.PolicyConversionContext">
+  <TypeSignature Language="C#" Value="public abstract class PolicyConversionContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PolicyConversionContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.PolicyConversionContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Klasse, mit der Bindungsassertionen in Metadaten abgerufen und implementierende Bindungselemente im entsprechenden Bereich angefügt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Implementierung von <xref:System.ServiceModel.Description.PolicyConversionContext> wird an <xref:System.ServiceModel.Description.IPolicyExportExtension>-Objekte und <xref:System.ServiceModel.Description.IPolicyImportExtension>-Objekte übergeben, um benutzerdefinierte Richtlinienassertionen in und aus Metadaten zu exportieren bzw. importieren. Beim Export wird eine Auflistung von Richtlinienassertionen abgerufen, um benutzerdefinierte Assertionen hinzuzufügen. Beim Import werden die Assertionen abgerufen, sodass bestimmte Assertionen importiert und Bindungselemente entsprechend konfiguriert werden können.  
+  
+-   Die <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>-Methode gibt alle Richtlinienassertionen für die Bindung zurück.  
+  
+-   Die <xref:System.ServiceModel.Description.PolicyConversionContext.GetFaultBindingAssertions%2A>-Methode gibt alle Richtlinienassertionen für eine bestimmte Fehlermeldung zurück.  
+  
+-   Die <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A>-Methode gibt alle Richtlinienassertionen für eine bestimmte Nachricht zurück.  
+  
+-   Die <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A>-Methode gibt alle Richtlinienassertionen für einen bestimmten Vorgang zurück.  
+  
+-   Die <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A>-Eigenschaft ruft die Bindungselemente für die zu beschreibende oder zu konfigurierende Bindung zurück.  
+  
+-   Die <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A>-Eigenschaft ruft die Vertragsbeschreibung ab, für die die Bindung beschrieben oder konfiguriert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Implementierung der <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A>-Methode veranschaulicht, die alle Richtlinienassertionen in die Konsole schreibt. Die Codekommentare beschreiben, wie eine bestimmte benutzerdefinierte Richtlinienassertion gesucht wird, wie ein implementierendes Bindungselement erstellt und eingefügt wird und wie die Assertion aus der Auflistung entfernt wird.  
+  
+ [!code-csharp[S_UEPolicyConversionContext#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uepolicyconversioncontext/cs/program.cs#0)]  
+  
+ Das folgende Codebeispiel zeigt, wie <xref:System.ServiceModel.Description.IPolicyImportExtension>-Implementierungen mit dem `<policyImporters>`-Konfigurationsabschnitt registriert werden.  
+  
+ [!code-xml[S_UEPolicyConversionContext#100](~/samples/snippets/csharp/VS_Snippets_CFX/s_uepolicyconversioncontext/common/app.config#100)]   
+  
+ Das folgende Codebeispiel zeigt, wie ein benutzerdefiniertes Bindungselement <xref:System.ServiceModel.Description.IPolicyExportExtension> implementieren kann, um eine benutzerdefinierte Richtlinienassertion an die Bindungsassertionen anzufügen.  
+  
+ [!code-csharp[S_UEPolicyConversionContext#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uepolicyconversioncontext/cs/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PolicyConversionContext (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.PolicyConversionContext.#ctor(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> für den Richtlinienkontext.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> -Klasse mit den angegebenen Endpunkt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingElements">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.BindingElementCollection BindingElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.BindingElementCollection BindingElements" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.PolicyConversionContext.BindingElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Bindungselementen ab, denen benutzerdefinierte Bindungselemente hinzugefügt werden, die Richtlinienassertionen implementieren.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Channels.BindingElementCollection" />, die die Bindungselemente für einen Endpunkt enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contract">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ContractDescription Contract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ContractDescription Contract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.PolicyConversionContext.Contract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ContractDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vertrag für den Endpunkt ab.</summary>
+        <value>Der Vertrag für den Endpunkt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBindingAssertions">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Description.PolicyAssertionCollection GetBindingAssertions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Description.PolicyAssertionCollection GetBindingAssertions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PolicyAssertionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung der Richtlinienassertionen von Metadaten ab.</summary>
+        <returns><see cref="T:System.Collections.Generic.ICollection`1" /> vom Typ <see cref="T:System.Xml.XmlElement" />, die Bindungsrichtlinienassertionen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A> zurückgegebene Auflistung ist keine Kopie. Sie können Assertionen wie erforderlich hinzufügen und entfernen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Implementierung der <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A>-Methode veranschaulicht, die alle Richtlinienassertionen in die Konsole schreibt. Die Codekommentare beschreiben, wie eine bestimmte benutzerdefinierte Richtlinienassertion gesucht wird, wie ein implementierendes Bindungselement erstellt und eingefügt wird und wie die Assertion aus der Auflistung entfernt wird.  
+  
+ [!code-csharp[S_UEPolicyConversionContext#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uepolicyconversioncontext/cs/program.cs#0)]  
+  
+ Das folgende Codebeispiel zeigt, wie <xref:System.ServiceModel.Description.IPolicyImportExtension>-Implementierungen mit dem `<policyImporters>`-Konfigurationsabschnitt registriert werden.  
+  
+ [!code-xml[S_UEPolicyConversionContext#100](~/samples/snippets/csharp/VS_Snippets_CFX/s_uepolicyconversioncontext/common/app.config#100)]   
+  
+ Das folgende Codebeispiel zeigt, wie ein benutzerdefiniertes Bindungselement <xref:System.ServiceModel.Description.IPolicyExportExtension> implementieren kann, um eine benutzerdefinierte Richtlinienassertion an die Bindungsassertionen anzufügen.  
+  
+ [!code-csharp[S_UEPolicyConversionContext#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uepolicyconversioncontext/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFaultBindingAssertions">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Description.PolicyAssertionCollection GetFaultBindingAssertions (System.ServiceModel.Description.FaultDescription fault);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Description.PolicyAssertionCollection GetFaultBindingAssertions(class System.ServiceModel.Description.FaultDescription fault) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.PolicyConversionContext.GetFaultBindingAssertions(System.ServiceModel.Description.FaultDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PolicyAssertionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fault" Type="System.ServiceModel.Description.FaultDescription" />
+      </Parameters>
+      <Docs>
+        <param name="fault">Die <see cref="T:System.ServiceModel.Description.FaultDescription" /> Objekt, für welche Richtlinienassertionen hinzugefügt werden, sind oder welche Bindungen konfiguriert werden sollen.</param>
+        <summary>Gibt eine Auflistung von Richtlinienassertionen für den angegebenen SOAP-Fehler zurück.</summary>
+        <returns>Eine Auflistung von Richtlinienassertionen für den angegebenen SOAP-Fehler.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von <xref:System.ServiceModel.Description.PolicyConversionContext.GetFaultBindingAssertions%2A> zurückgegebene Auflistung ist keine Kopie. Sie können Assertionen wie erforderlich hinzufügen und entfernen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMessageBindingAssertions">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Description.PolicyAssertionCollection GetMessageBindingAssertions (System.ServiceModel.Description.MessageDescription message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Description.PolicyAssertionCollection GetMessageBindingAssertions(class System.ServiceModel.Description.MessageDescription message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions(System.ServiceModel.Description.MessageDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PolicyAssertionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Description.MessageDescription" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die <see cref="T:System.ServiceModel.Description.MessageDescription" />, für die Bindungsassertionen bestehen.</param>
+        <summary>Ruft eine Auflistung von Richtlinienassertionen für eine Nachricht ab.</summary>
+        <returns>Eine Auflistung von Richtlinienassertionen für die angegebene Nachricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A> zurückgegebene Auflistung ist keine Kopie. Sie können Assertionen wie erforderlich hinzufügen und entfernen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperationBindingAssertions">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Description.PolicyAssertionCollection GetOperationBindingAssertions (System.ServiceModel.Description.OperationDescription operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Description.PolicyAssertionCollection GetOperationBindingAssertions(class System.ServiceModel.Description.OperationDescription operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PolicyAssertionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="operation">Die <see cref="T:System.ServiceModel.Description.OperationDescription" /> Objekt, für welche Richtlinienassertionen hinzugefügt werden, sind oder welche Bindungen konfiguriert werden sollen.</param>
+        <summary>Gibt eine Auflistung von Richtlinienassertionen für den angegebenen SOAP-Vorgang zurück.</summary>
+        <returns>Die Richtlinienassertionen für den Vorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A> zurückgegebene Auflistung ist keine Kopie. Sie können Assertionen wie erforderlich hinzufügen und entfernen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

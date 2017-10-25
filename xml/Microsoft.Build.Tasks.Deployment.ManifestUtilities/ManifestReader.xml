@@ -1,0 +1,124 @@
+<Type Name="ManifestReader" FullName="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader">
+  <TypeSignature Language="C#" Value="public static class ManifestReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ManifestReader extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Liest eine XML-Manifestdatei in eine Objektdarstellung ein.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReadManifest">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest (System.IO.Stream input, bool preserveStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest(class System.IO.Stream input, bool preserveStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader.ReadManifest(System.IO.Stream,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.IO.Stream" />
+        <Parameter Name="preserveStream" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="input">Gibt einen Eingabestream an.</param>
+        <param name="preserveStream">Gibt an, ob der Eingabestream in der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream" /> -Eigenschaft des resultierenden. Verwendet von <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter" /> um Eingaben wiederherzustellen, der nicht in der objektdarstellung dargestellt wird.</param>
+        <summary>Liest die angegebene Manifest-XML und gibt eine Objektdarstellung zurück.</summary>
+        <returns>Ein <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" /> -objektdarstellung des Manifests. Umgewandelt werden kann, um <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest" />, <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest" />, oder <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest" /> auf spezifischere Funktionen zuzugreifen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadManifest">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest (string path, bool preserveStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest(string path, bool preserveStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader.ReadManifest(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="preserveStream" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der vollqualifizierte Pfadname der Eingabedatei. Der vollständige Pfad kann z. B. C:\Verzeichnis\Ordner\Dateiname.manifest lauten.</param>
+        <param name="preserveStream">Gibt an, ob der Eingabestream in der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream" /> -Eigenschaft des resultierenden. Verwendet von <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter" /> um Eingaben wiederherzustellen, der nicht in der objektdarstellung dargestellt wird.</param>
+        <summary>Liest die angegebene Manifest-XML und gibt eine Objektdarstellung zurück.</summary>
+        <returns>Ein <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" /> -objektdarstellung des Manifests. Umgewandelt werden kann, um <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest" />, <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest" />, oder <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest" /> auf spezifischere Funktionen zuzugreifen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadManifest">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest (string manifestType, System.IO.Stream input, bool preserveStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest(string manifestType, class System.IO.Stream input, bool preserveStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader.ReadManifest(System.String,System.IO.Stream,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manifestType" Type="System.String" />
+        <Parameter Name="input" Type="System.IO.Stream" />
+        <Parameter Name="preserveStream" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="manifestType">Gibt den erwarteten Typ des Manifests an. Gültige Werte sind <see langword="AssemblyManifest" />, <see langword="ApplicationManifest" /> oder <see langword="DeployManifest" />.</param>
+        <param name="input">Gibt einen Eingabestream an.</param>
+        <param name="preserveStream">Gibt an, ob der Eingabestream in der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream" /> -Eigenschaft des resultierenden. Verwendet von <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter" /> um Eingaben wiederherzustellen, der nicht in der objektdarstellung dargestellt wird.</param>
+        <summary>Liest die angegebene Manifest-XML und gibt eine Objektdarstellung zurück.</summary>
+        <returns>Ein <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" /> -objektdarstellung des Manifests. Umgewandelt werden kann, um <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest" />, <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest" />, oder <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest" /> auf spezifischere Funktionen zuzugreifen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadManifest">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest (string manifestType, string path, bool preserveStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest(string manifestType, string path, bool preserveStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader.ReadManifest(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manifestType" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="preserveStream" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="manifestType">Gibt den erwarteten Typ des Manifests an. Gültige Werte sind <see langword="AssemblyManifest" />, <see langword="ApplicationManifest" /> oder <see langword="DeployManifest" />.</param>
+        <param name="path">Der Pfadname der Eingabedatei.</param>
+        <param name="preserveStream">Gibt an, ob der Eingabestream in der <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream" /> -Eigenschaft des resultierenden. Verwendet von <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter" /> um Eingaben wiederherzustellen, der nicht in der objektdarstellung dargestellt wird.</param>
+        <summary>Liest die angegebene Manifest-XML und gibt eine Objektdarstellung zurück.</summary>
+        <returns>Ein <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" /> -objektdarstellung des Manifests. Umgewandelt werden kann, um <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest" />, <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest" />, oder <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest" /> auf spezifischere Funktionen zuzugreifen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

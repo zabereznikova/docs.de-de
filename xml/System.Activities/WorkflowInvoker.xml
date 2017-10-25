@@ -1,0 +1,1329 @@
+<Type Name="WorkflowInvoker" FullName="System.Activities.WorkflowInvoker">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowInvoker" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowInvoker extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowInvoker" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet ein Instrument zum Aufrufen eines Workflows, als ob es sich dabei um einen Methodenaufruf handeln würde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.WorkflowInvoker> enthält Instanz- und statische Methoden zum synchronen Aufrufen von Workflows sowie Instanzmethoden zum asynchronen Aufrufen von Workflows.  
+  
+ <xref:System.Activities.WorkflowInvoker> lässt keine Instanzsteuerung wie Beibehalten, Entladen oder Wiederaufnehmen von Lesezeichen zu. Wenn Instanzsteuerung gewünscht ist, verwenden Sie stattdessen <xref:System.Activities.WorkflowApplication>.  
+  
+ Um Workflows ohne Instanzsteuerung synchron auszuführen, rufen Sie die <xref:System.Activities.WorkflowInvoker.Invoke%2A>-Methode auf. Um einen Workflow ohne Instanzsteuerung asynchron auszuführen, verwenden Sie die Methodenpaare <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A> und <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> oder die <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A>-Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird mit <xref:System.Activities.Statements.WriteLine> ein Workflow synchron aufgerufen, der aus einer einzelnen <xref:System.Activities.WorkflowInvoker>-Aktivität besteht.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowInvoker (System.Activities.Activity workflow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Activity workflow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.#ctor(System.Activities.Activity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="workflow">Die Workflowdefinition des Workflows, der von dieser Instanz der <see cref="T:System.Activities.WorkflowInvoker" />-Klasse aufgerufen werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.WorkflowInvoker" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.WorkflowInvoker> enthält Instanz- und statische Methoden zum synchronen Aufrufen von Workflows sowie Instanzmethoden zum asynchronen Aufrufen von Workflows.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer einzelnen <xref:System.Activities.Statements.WriteLine>-Aktivität besteht.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="BeginInvoke">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft einen Workflow mithilfe des asynchronen <see cref="T:System.IAsyncResult" />-Entwurfsmusters asynchron auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über die asynchrone Programmierung](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.BeginInvoke(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Die Methode, die aufgerufen werden muss, wenn der Workflow abgeschlossen wurde.</param>
+        <param name="state">Ein optionales, anwendungsspezifisches Objekt, das Informationen über die asynchrone Operation enthält.</param>
+        <summary>Ruft einen Workflow mithilfe des angegebenen <see cref="T:System.AsyncCallback" /> und des vom Benutzer bereitgestellten Status asynchron auf.</summary>
+        <returns>Ein Verweis auf den asynchronen Aufrufvorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen ist, und um die Ausgabeparameter des Workflows abzurufen, rufen Sie <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> der `callback`-Methode auf. Wenn <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> aufgerufen wird, bevor der Workflow abgeschlossen ist, erfolgt eine Sperre bis zum Abschluss des Workflows. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+ Diese Methode ruft einen Workflow mithilfe des asynchronen <xref:System.IAsyncResult>-Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über die asynchrone Programmierung](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Diese werden abgerufen, indem <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> aufgerufen wird. Wenn der Aufruf von <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> zurückgegeben wird, werden die einzelnen Ausgabeargumente nach Argumentname sortiert im Ausgabewörterbuch zurückgegeben.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#32](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.BeginInvoke(System.Collections.Generic.IDictionary{System.String,System.Object},System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <param name="callback">Die Methode, die aufgerufen werden muss, wenn der Workflow abgeschlossen wurde.</param>
+        <param name="state">Ein optionales, anwendungsspezifisches Objekt, das Informationen über die asynchrone Operation enthält.</param>
+        <summary>Ruft einen Workflow mithilfe des angegebenen <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern, <see cref="T:System.AsyncCallback" /> und des vom Benutzer bereitgestellten Status asynchron auf.</summary>
+        <returns>Ein Verweis auf den asynchronen Aufrufvorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen ist, und um die Ausgabeparameter des Workflows abzurufen, rufen Sie <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> der `callback`-Methode auf. Wenn <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> aufgerufen wird, bevor der Workflow abgeschlossen ist, erfolgt eine Sperre bis zum Abschluss des Workflows.  Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+ Diese Methode ruft einen Workflow mithilfe des asynchronen <xref:System.IAsyncResult>-Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über die asynchrone Programmierung](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Diese werden abgerufen, indem <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> aufgerufen wird. Wenn der Aufruf von <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> zurückgegeben wird, werden die einzelnen Ausgabeargumente nach Argumentname sortiert im Ausgabewörterbuch zurückgegeben.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#32](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.BeginInvoke(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Das Intervall, in dem der Workflow abgeschlossen werden muss, bevor er abgebrochen und eine <see cref="T:System.TimeoutException" /> ausgelöst wird.</param>
+        <param name="callback">Die Methode, die aufgerufen werden muss, wenn der Workflow abgeschlossen wurde.</param>
+        <param name="state">Ein optionales, anwendungsspezifisches Objekt, das Informationen über die asynchrone Operation enthält.</param>
+        <summary>Ruft einen Workflow mithilfe des angegebenen Timeoutintervalls, <see cref="T:System.AsyncCallback" /> und des vom Benutzer bereitgestellten Status asynchron auf.</summary>
+        <returns>Ein Verweis auf den asynchronen Aufrufvorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen ist, und um die Ausgabeparameter des Workflows abzurufen, rufen Sie <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> der `callback`-Methode auf. Wenn <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> aufgerufen wird, bevor der Workflow abgeschlossen ist, erfolgt eine Sperre bis zum Abschluss des Workflows. Falls der Workflow innerhalb des angegebenen Timeoutintervalls nicht abgeschlossen wird, wird der Workflow abgebrochen, und eine <xref:System.TimeoutException> wird ausgelöst, wenn die <xref:System.Activities.WorkflowInvoker.EndInvoke%2A>-Methode aufgerufen wird.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+ Diese Methode ruft einen Workflow mithilfe des asynchronen <xref:System.IAsyncResult>-Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über die asynchrone Programmierung](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Diese werden abgerufen, indem <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> aufgerufen wird. Wenn der Aufruf von <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> zurückgegeben wird, werden die einzelnen Ausgabeargumente nach Argumentname sortiert im Ausgabewörterbuch zurückgegeben.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#32](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.BeginInvoke(System.Collections.Generic.IDictionary{System.String,System.Object},System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <param name="timeout">Das Intervall, in dem der Workflow abgeschlossen werden muss, bevor er abgebrochen und eine <see cref="T:System.TimeoutException" /> ausgelöst wird.</param>
+        <param name="callback">Die Methode, die aufgerufen werden muss, wenn der Workflow abgeschlossen wurde.</param>
+        <param name="state">Ein optionales, anwendungsspezifisches Objekt, das Informationen über die asynchrone Operation enthält.</param>
+        <summary>Ruft einen Workflow mithilfe des angegebenen <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern, des Timeoutintervalls, <see cref="T:System.AsyncCallback" /> und des vom Benutzer bereitgestellten Status asynchron auf.</summary>
+        <returns>Ein Verweis auf den asynchronen Aufrufvorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen ist, und um die Ausgabeparameter des Workflows abzurufen, rufen Sie <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> der `callback`-Methode auf. Wenn <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> aufgerufen wird, bevor der Workflow abgeschlossen ist, erfolgt eine Sperre bis zum Abschluss des Workflows. Falls der Workflow innerhalb des angegebenen Timeoutintervalls nicht abgeschlossen wird, wird der Workflow abgebrochen, und eine <xref:System.TimeoutException> wird ausgelöst, wenn <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> aufgerufen wird.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+ Diese Methode ruft einen Workflow mithilfe des asynchronen <xref:System.IAsyncResult>-Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über die asynchrone Programmierung](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Diese werden abgerufen, indem <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> aufgerufen wird. Wenn der Aufruf von <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> zurückgegeben wird, werden die einzelnen Ausgabeargumente nach Argumentname sortiert im Ausgabewörterbuch zurückgegeben.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#32](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelAsync">
+      <MemberSignature Language="C#" Value="public void CancelAsync (object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelAsync(object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.CancelAsync(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userState">Das Token für den abzubrechenden Workflow.</param>
+        <summary>Versucht, den Workflow abzubrechen, der mit dem angegebenen <paramref name="userState" /> aufgerufen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur ein Workflow, der von einer der <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A>-Überladungen, die einen `userState`-Parameter annehmen kann, aufgerufen wurde, kann abgebrochen werden.  
+  
+ Wenn der Abbruch erfolgreich ist, die <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> Eigenschaft der <xref:System.Activities.InvokeCompletedEventArgs> übergeben, um die <xref:System.Activities.WorkflowInvoker.InvokeCompleted> Handler auf festgelegt ist `true`ist, andernfalls festgelegt ist `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Nach dem Aufrufen des Workflows versucht der Host, den Workflow abzubrechen.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#34](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInvoke">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; EndInvoke (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; EndInvoke(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.EndInvoke(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das auf den <see cref="Overload:System.Activities.WorkflowInvoker.BeginInvoke" />-Vorgang verweist, der den Workflow gestartet hat.</param>
+        <summary>Gibt die Ergebnisse eines Workflows zurück, der mit einer der <see cref="Overload:System.Activities.WorkflowInvoker.BeginInvoke" />-Überladungen aufgerufen wurde.</summary>
+        <returns>Ein Wörterbuch von <see cref="T:System.Activities.OutArgument" />- und <see cref="T:System.Activities.InOutArgument" />-Werten der Stammaktivität, nach Argumentnamen geordnet, das die Ausgaben des Workflows darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen ist, und um die Ausgabeparameter des Workflows abzurufen, rufen Sie <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> der `callback`-Methode auf, angegeben von <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>. Wenn <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> aufgerufen wird, bevor der Workflow abgeschlossen ist, erfolgt eine Sperre bis zum Abschluss des Workflows.  
+  
+ Diese Methode gibt die Ergebnisse eines Workflows zurück, der mithilfe des asynchronen <xref:System.IAsyncResult>-Entwurfsmusters asynchron aufgerufen wurde. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über die asynchrone Programmierung](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Diese werden abgerufen, indem <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> aufgerufen wird. Wenn der Aufruf von <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> zurückgegeben wird, werden die einzelnen Ausgabeargumente nach Argumentname sortiert im Ausgabewörterbuch zurückgegeben.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#32](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.Activities.Hosting.WorkflowInstanceExtensionManager Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Hosting.WorkflowInstanceExtensionManager Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowInvoker.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Hosting.WorkflowInstanceExtensionManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Collections.ObjectModel.Collection`1" /> von Erweiterungen ab, die für von einer <see cref="T:System.Activities.WorkflowInvoker" />-Instanz aufgerufene Workflows zur Verfügung stehen.</summary>
+        <value>Die <see cref="T:System.Collections.ObjectModel.Collection`1" /> von Erweiterungen, die für von einer <see cref="T:System.Activities.WorkflowInvoker" />-Instanz aufgerufene Workflows zur Verfügung stehen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird von Workflow-Hostautoren verwendet, um der <xref:System.Activities.WorkflowInvoker>-Instanz Erweiterungen hinzuzufügen, damit sie für Workflows zur Verfügung stehen, die davon aufgerufen werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein benutzerdefinierter <xref:System.Activities.Tracking.TrackingParticipant> in der <xref:System.Activities.WorkflowInvoker.Extensions%2A>-Auflistung einer <xref:System.Activities.WorkflowInvoker>-Instanz registriert. Dieses Codebeispiel ist Teil der [benutzerdefinierte nachverfolgung](~/docs/framework/windows-workflow-foundation/samples/custom-tracking.md) Beispiel.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#40](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#40)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Invoke">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft einen Workflow synchron auf und gibt ein Wörterbuch von <see cref="T:System.Activities.OutArgument" />- und <see cref="T:System.Activities.InOutArgument" />-Werten der Stammaktivität zurück, nach Argumentnamen geordnet, das die Ausgaben des Workflows darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.Invoke%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Workflow mit der an den <see cref="M:System.Activities.WorkflowInvoker.#ctor(System.Activities.Activity)" />-Konstruktor übergebenen Workflowdefinition synchron auf.</summary>
+        <returns>Ein Wörterbuch von <see cref="T:System.Activities.OutArgument" />- und <see cref="T:System.Activities.InOutArgument" />-Werten der Stammaktivität, nach Argumentnamen geordnet, das die Ausgaben des Workflows darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.Invoke%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer einzelnen `DiceRoll`-Aktivität besteht. Die `DiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Aufruf von `Invoke` zurückgegeben wird, werden die einzelnen Ausgabeargumente nach Argumentname sortiert im Ausgabewörterbuch zurückgegeben. Der Workflow wird aufgerufen und mithilfe der Workflowdefinition in übergeben werden, um die `WorkflowInvoker` Konstruktor.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#130](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#130)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#31](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#31)]  
+  
+ Wenn die Stammaktivität des Workflows keine Ausgabeargumente aufweist oder diese vom Host nicht benötigt werden, können sie ignoriert werden. Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer einzelnen <xref:System.Activities.Statements.WriteLine>-Aktivität ohne Ausgabeargumente besteht.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (System.Activities.Activity workflow);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(class System.Activities.Activity workflow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="workflow">Die Workflowdefinition des aufzurufenden Workflows.</param>
+        <summary>Ruft einen Workflow mithilfe der angegebenen Workflowdefinition synchron auf.</summary>
+        <returns>Ein Wörterbuch von <see cref="T:System.Activities.OutArgument" />- und <see cref="T:System.Activities.InOutArgument" />-Werten der Stammaktivität, nach Argumentnamen geordnet, das die Ausgaben des Workflows darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.Invoke%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer einzelnen `DiceRoll`-Aktivität besteht. Die `DiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Aufruf von `Invoke` zurückgegeben wird, werden die einzelnen Ausgabeargumente nach Argumentname sortiert im Ausgabewörterbuch zurückgegeben.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#130](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#130)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#30](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#30)]  
+  
+ Wenn die Stammaktivität des Workflows keine Ausgabeargumente aufweist oder diese vom Host nicht benötigt werden, können sie ignoriert werden. Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer einzelnen <xref:System.Activities.Statements.WriteLine>-Aktivität ohne Ausgabeargumente besteht.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <summary>Ruft die Aktivität, die an den <see cref="M:System.Activities.WorkflowInvoker.#ctor(System.Activities.Activity)" />-Konstruktor übergeben wurde, synchron mit dem angegebenen <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern auf.</summary>
+        <returns>Ein Wörterbuch von <see cref="T:System.Activities.OutArgument" />- und <see cref="T:System.Activities.InOutArgument" />-Werten der Stammaktivität, nach Argumentnamen geordnet, das die Ausgaben des Workflows darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.Invoke%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer einzelnen `Divide`-Aktivität besteht, die über zwei Eingabeargumente und zwei Ausgabeargumente verfügt. Beim Aufrufen des Workflows wird das `arguments`-Wörterbuch übergeben, das die Werte für die einzelnen Eingabeargumente sortiert nach Argumentname enthält. Wenn der Aufruf von `Invoke` zurückgegeben wird, werden die einzelnen Ausgabeargumente nach Argumentname sortiert im `outputs`-Wörterbuch zurückgegeben.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#120](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#120)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#22](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#22)]  
+  
+ Wenn der Workflow abgeleitet <xref:System.Activities.ActivityWithResult>, wie z. B. `CodeActivity<TResult>` oder `Activity<TResult>`, und Ausgabeargumente zusätzlich zum gut definierten <xref:System.Activities.Activity%601.Result%2A> ausgabeargument, das eine nicht generische Überladung von `Invoke`, wie folgt, muss in verwendet werden die Reihenfolge, die zusätzlichen Argumente abzurufen. Zu diesem Zweck übergebene Workflowdefinition in die `WorkflowInvoker` Konstruktor muss vom Typ <xref:System.Activities.Activity>. In diesem Beispiel wird die `Divide` Aktivität leitet sich von `CodeActivity<int>`, aber als deklariert ist <xref:System.Activities.Activity> , damit dieser Überladung von `Invoke`, die ein Wörterbuch mit Argumenten anstelle eines einzelnen Rückgabewerts zurückgibt, wird verwendet.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#121](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#121)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#23](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Das Intervall, in dem der Workflow abgeschlossen werden muss, bevor er abgebrochen und eine <see cref="T:System.TimeoutException" /> ausgelöst wird.</param>
+        <summary>Ruft einen Workflow mit dem angegebenen Timeoutintervall synchron auf.</summary>
+        <returns>Ein Wörterbuch von <see cref="T:System.Activities.OutArgument" />- und <see cref="T:System.Activities.InOutArgument" />-Werten der Stammaktivität, nach Argumentnamen geordnet, das die Ausgaben des Workflows darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Falls der Workflow innerhalb des angegebenen Timeoutintervalls nicht abgeschlossen wird, wird der Workflow abgebrochen, und eine <xref:System.TimeoutException> wird ausgelöst.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der zwei <xref:System.Activities.Statements.WriteLine>-Aktivitäten sowie eine <xref:System.Activities.Statements.Delay>-Aktivität enthält, die mit einer <xref:System.Activities.Statements.Delay.Duration%2A> von einer Minute konfiguriert ist. Dieser Workflow wird zweimal aufgerufen: das erste Mal mit einem Timeoutintervall von zwei Minuten und das zweite Mal mit einem Timeoutintervall von 30 Sekunden. Der erste Workflow wird erfolgreich abgeschlossen, der zweite jedoch nicht, sodass eine <xref:System.TimeoutException> ausgelöst wird und die folgende Meldung angezeigt wird.  
+  
+```Output  
+The operation did not complete within the allotted timeout of 00:00:30.   
+The time allotted to this operation may have been a portion of a longer timeout.  
+```  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#51](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#51)]  
+  
+ Ein Beispiel der Verwendung von `Invoke` mit Ausgabeargumente, sehen Sie die Überladung der <xref:System.Activities.WorkflowInvoker.Invoke%2A> mit denselben Parametern wie dieser Überladung ohne das Timeoutintervall.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (System.Activities.Activity workflow, System.Collections.Generic.IDictionary&lt;string,object&gt; inputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(class System.Activities.Activity workflow, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.Activities.Activity,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity" />
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="workflow">Die Workflowdefinition des aufzurufenden Workflows.</param>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <summary>Ruft einen Workflow mithilfe der angegebenen Workflowdefinition und des <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern synchron auf.</summary>
+        <returns>Ein Wörterbuch von <see cref="T:System.Activities.OutArgument" />- und <see cref="T:System.Activities.InOutArgument" />-Werten der Stammaktivität, nach Argumentnamen geordnet, das die Ausgaben des Workflows darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.Invoke%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer einzelnen `Divide`-Aktivität besteht, die über zwei Eingabeargumente und zwei Ausgabeargumente verfügt. Beim Aufrufen des Workflows wird das `arguments`-Wörterbuch übergeben, das die Werte für die einzelnen Eingabeargumente sortiert nach Argumentname enthält. Wenn der Aufruf von `Invoke` zurückgegeben wird, werden die einzelnen Ausgabeargumente nach Argumentname sortiert im `outputs`-Wörterbuch zurückgegeben.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#120](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#120)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#20](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#20)]  
+  
+ Wenn der Workflow abgeleitet <xref:System.Activities.ActivityWithResult>, wie z. B. `CodeActivity<TResult>` oder `Activity<TResult>`, und Ausgabeargumente zusätzlich zum gut definierten <xref:System.Activities.Activity%601.Result%2A> ausgabeargument, das eine nicht generische Überladung von `Invoke`, wie folgt, muss in verwendet werden die Reihenfolge, die zusätzlichen Argumente abzurufen. Hierzu muss die an `Invoke` übergebene Workflowdefinition den Typ <xref:System.Activities.Activity> aufweisen. In diesem Beispiel wird die `Divide` Aktivität leitet sich von `CodeActivity<int>`, aber als deklariert ist <xref:System.Activities.Activity> , damit dieser Überladung von `Invoke`, die ein Wörterbuch mit Argumenten anstelle eines einzelnen Rückgabewerts zurückgibt, wird verwendet.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#121](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#121)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#21](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (System.Activities.Activity workflow, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(class System.Activities.Activity workflow, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.Activities.Activity,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="workflow">Die Workflowdefinition des aufzurufenden Workflows.</param>
+        <param name="timeout">Das Intervall, in dem der Workflow abgeschlossen werden muss, bevor er abgebrochen und eine <see cref="T:System.TimeoutException" /> ausgelöst wird.</param>
+        <summary>Ruft einen Workflow mithilfe der angegebenen Workflowdefinition und des Timeoutintervalls synchron auf.</summary>
+        <returns>Ein Wörterbuch von <see cref="T:System.Activities.OutArgument" />- und <see cref="T:System.Activities.InOutArgument" />-Werten der Stammaktivität, nach Argumentnamen geordnet, das die Ausgaben des Workflows darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Falls der Workflow innerhalb des angegebenen Timeoutintervalls nicht abgeschlossen wird, wird der Workflow abgebrochen, und eine <xref:System.TimeoutException> wird ausgelöst.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der zwei <xref:System.Activities.Statements.WriteLine>-Aktivitäten sowie eine <xref:System.Activities.Statements.Delay>-Aktivität enthält, die mit einer <xref:System.Activities.Statements.Delay.Duration%2A> von einer Minute konfiguriert ist. Dieser Workflow wird zweimal aufgerufen: das erste Mal mit einem Timeoutintervall von zwei Minuten und das zweite Mal mit einem Timeoutintervall von 30 Sekunden. Der erste Workflow wird erfolgreich abgeschlossen, der zweite jedoch nicht, sodass eine <xref:System.TimeoutException> ausgelöst wird.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#50](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#50)]  
+  
+ Ein Beispiel der Verwendung von `Invoke` mit Ausgabeargumente, sehen Sie die Überladung der <xref:System.Activities.WorkflowInvoker.Invoke%2A> mit denselben Parametern wie dieser Überladung ohne das Timeoutintervall.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.Collections.Generic.IDictionary{System.String,System.Object},System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <param name="timeout">Das Intervall, in dem der Workflow abgeschlossen werden muss, bevor er abgebrochen und eine <see cref="T:System.TimeoutException" /> ausgelöst wird.</param>
+        <summary>Ruft die Aktivität, die an den <see cref="M:System.Activities.WorkflowInvoker.#ctor(System.Activities.Activity)" />-Konstruktor übergeben wurde, synchron mit dem angegebenen <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern und dem angegebenen Timeoutintervall auf.</summary>
+        <returns>Ein Wörterbuch von <see cref="T:System.Activities.OutArgument" />- und <see cref="T:System.Activities.InOutArgument" />-Werten der Stammaktivität, nach Argumentnamen geordnet, das die Ausgaben des Workflows darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Falls der Workflow innerhalb des angegebenen Timeoutintervalls nicht abgeschlossen wird, wird der Workflow abgebrochen, und eine <xref:System.TimeoutException> wird ausgelöst.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der zwei <xref:System.Activities.Statements.WriteLine>-Aktivitäten sowie eine <xref:System.Activities.Statements.Delay>-Aktivität enthält, die mit einer <xref:System.Activities.Statements.Delay.Duration%2A> von einer Minute konfiguriert ist. Dieser Workflow wird zweimal aufgerufen: das erste Mal mit einem Timeoutintervall von zwei Minuten und das zweite Mal mit einem Timeoutintervall von 30 Sekunden. Der erste Workflow wird erfolgreich abgeschlossen, der zweite jedoch nicht, sodass eine <xref:System.TimeoutException> ausgelöst wird und die folgende Meldung angezeigt wird.  
+  
+```Output  
+The operation did not complete within the allotted timeout of 00:00:30.   
+The time allotted to this operation may have been a portion of a longer timeout.  
+```  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#51](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#51)]  
+  
+ Ein Beispiel der Verwendung von `Invoke` mit Eingabe- und Argumenten finden Sie die Überladung der <xref:System.Activities.WorkflowInvoker.Invoke%2A> mit denselben Parametern wie dieser Überladung ohne das Timeoutintervall.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (System.Activities.Activity workflow, System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(class System.Activities.Activity workflow, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.Activities.Activity,System.Collections.Generic.IDictionary{System.String,System.Object},System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity" />
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="workflow">Die Workflowdefinition des aufzurufenden Workflows.</param>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <param name="timeout">Das Intervall, in dem der Workflow abgeschlossen werden muss, bevor er abgebrochen und eine <see cref="T:System.TimeoutException" /> ausgelöst wird.</param>
+        <summary>Ruft einen Workflow mithilfe der angegebenen Workflowdefinition, des <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern und des Timeoutintervalls synchron auf.</summary>
+        <returns>Ein Wörterbuch von <see cref="T:System.Activities.OutArgument" />- und <see cref="T:System.Activities.InOutArgument" />-Werten der Stammaktivität, nach Argumentnamen geordnet, das die Ausgaben des Workflows darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Falls der Workflow innerhalb des angegebenen Timeoutintervalls nicht abgeschlossen wird, wird der Workflow abgebrochen, und eine <xref:System.TimeoutException> wird ausgelöst.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der zwei <xref:System.Activities.Statements.WriteLine>-Aktivitäten sowie eine <xref:System.Activities.Statements.Delay>-Aktivität enthält, die mit einer <xref:System.Activities.Statements.Delay.Duration%2A> von einer Minute konfiguriert ist. Dieser Workflow wird zweimal aufgerufen: das erste Mal mit einem Timeoutintervall von zwei Minuten und das zweite Mal mit einem Timeoutintervall von 30 Sekunden. Der erste Workflow wird erfolgreich abgeschlossen, der zweite jedoch nicht, sodass eine <xref:System.TimeoutException> ausgelöst wird.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#50](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#50)]  
+  
+ Ein Beispiel der Verwendung von `Invoke` mit Eingabe- und Argumenten finden Sie die Überladung der <xref:System.Activities.WorkflowInvoker.Invoke%2A> mit denselben Parametern wie dieser Überladung ohne das Timeoutintervall.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static TResult Invoke&lt;TResult&gt; (System.Activities.Activity&lt;TResult&gt; workflow);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TResult Invoke&lt;TResult&gt;(class System.Activities.Activity`1&lt;!!TResult&gt; workflow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke``1(System.Activities.Activity{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity&lt;TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ des Workflows.</typeparam>
+        <param name="workflow">Die Workflowdefinition des aufzurufenden Workflows. Die Workflowdefinition muss von <see cref="T:System.Activities.ActivityWithResult" /> abgeleitet sind.</param>
+        <summary>Ruft einen Workflow mit der an den <see cref="M:System.Activities.WorkflowInvoker.#ctor(System.Activities.Activity)" />-Konstruktor übergebenen Workflowdefinition synchron auf.</summary>
+        <returns>Ein Wert des Typs TResult mit dem Ergebnis der Aktivitätsausführung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.Invoke%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird einen Workflow, bestehend aus einer einzelnes `Add` Aktivität, die über zwei Eingabeargumente verfügt, und da er abgeleitet `CodeActivity<int>` weist einen klar definierten <xref:System.Activities.Activity%601.Result%2A> -ausgabeargument. Beim Aufrufen des Workflows wird das `arguments`-Wörterbuch übergeben, das die Werte für die einzelnen Eingabeargumente sortiert nach Argumentname enthält. Wenn der Aufruf von `Invoke` zurückgibt, den Wert des der <xref:System.Activities.Activity%601.Result%2A> Ausgabeargumente zurückgegeben. Dieses Codebeispiel basiert die [verwenden der WorkflowInvoker-Klasse](~/docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md) Beispiel.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#110](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#110)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static TResult Invoke&lt;TResult&gt; (System.Activities.Activity&lt;TResult&gt; workflow, System.Collections.Generic.IDictionary&lt;string,object&gt; inputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TResult Invoke&lt;TResult&gt;(class System.Activities.Activity`1&lt;!!TResult&gt; workflow, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke``1(System.Activities.Activity{``0},System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity&lt;TResult&gt;" />
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ des Workflows.</typeparam>
+        <param name="workflow">Die Workflowdefinition des aufzurufenden Workflows.</param>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <summary>Ruft einen Workflow mithilfe der angegebenen Workflowdefinition und des <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern synchron auf.</summary>
+        <returns>Ein Wert des Typs TResult mit dem Ergebnis der Aktivitätsausführung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.Invoke%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird einen Workflow, bestehend aus einer einzelnes `Add` Aktivität, die über zwei Eingabeargumente verfügt, und da er abgeleitet `CodeActivity<int>` weist einen klar definierten <xref:System.Activities.Activity%601.Result%2A> -ausgabeargument. Beim Aufrufen des Workflows wird das `arguments`-Wörterbuch übergeben, das die Werte für die einzelnen Eingabeargumente sortiert nach Argumentname enthält. Wenn der Aufruf von `Invoke` zurückgibt, den Wert des der <xref:System.Activities.Activity%601.Result%2A> Ausgabeargumente zurückgegeben. Dieses Codebeispiel basiert die [verwenden der WorkflowInvoker-Klasse](~/docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md) Beispiel.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#110](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#110)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static TResult Invoke&lt;TResult&gt; (System.Activities.Activity&lt;TResult&gt; workflow, System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TResult Invoke&lt;TResult&gt;(class System.Activities.Activity`1&lt;!!TResult&gt; workflow, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke``1(System.Activities.Activity{``0},System.Collections.Generic.IDictionary{System.String,System.Object},System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity&lt;TResult&gt;" />
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ des Workflows.</typeparam>
+        <param name="workflow">Die Workflowdefinition des aufzurufenden Workflows.</param>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <param name="timeout">Das Intervall, in dem der Workflow abgeschlossen werden muss, bevor er abgebrochen und eine <see cref="T:System.TimeoutException" /> ausgelöst wird.</param>
+        <summary>Ruft einen Workflow mithilfe der angegebenen Workflowdefinition, des <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern und des Timeoutintervalls synchron auf.</summary>
+        <returns>Ein Wert des Typs TResult mit dem Ergebnis der Aktivitätsausführung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Falls der Workflow innerhalb des angegebenen Timeoutintervalls nicht abgeschlossen wird, wird der Workflow abgebrochen, und eine <xref:System.TimeoutException> wird ausgelöst.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird einen Workflow, bestehend aus einer einzelnes `Add` Aktivität, die über zwei Eingabeargumente verfügt, und da er abgeleitet `CodeActivity<int>` weist einen klar definierten <xref:System.Activities.Activity%601.Result%2A> -ausgabeargument. Beim Aufrufen des Workflows wird das `arguments`-Wörterbuch übergeben, das die Werte für die einzelnen Eingabeargumente sortiert nach Argumentname enthält. Wenn der Aufruf von `Invoke` zurückgibt, den Wert des der <xref:System.Activities.Activity%601.Result%2A> Ausgabeargumente zurückgegeben. Dieses Codebeispiel basiert die [verwenden der WorkflowInvoker-Klasse](~/docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md) Beispiel.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#110](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#110)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static TResult Invoke&lt;TResult&gt; (System.Activities.Activity&lt;TResult&gt; workflow, System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, out System.Collections.Generic.IDictionary&lt;string,object&gt; additionalOutputs, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TResult Invoke&lt;TResult&gt;(class System.Activities.Activity`1&lt;!!TResult&gt; workflow, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, [out] class System.Collections.Generic.IDictionary`2&lt;string, object&gt;&amp; additionalOutputs, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke``1(System.Activities.Activity{``0},System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.IDictionary{System.String,System.Object}@,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity&lt;TResult&gt;" />
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="additionalOutputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;&amp;" RefType="out" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ des Workflows.</typeparam>
+        <param name="workflow">Die Workflowdefinition des aufzurufenden Workflows.</param>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <param name="additionalOutputs">Das Wörterbuch von zusätzlichen Ausgabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <param name="timeout">Das Intervall, in dem der Workflow abgeschlossen werden muss, bevor er abgebrochen und eine <see cref="T:System.TimeoutException" /> ausgelöst wird.</param>
+        <summary>Ruft einen Workflow mithilfe der angegebenen Workflowdefinition, des <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern, des <see cref="T:System.Collections.Generic.IDictionary`2" /> von zusätzlichen Ausgabeparametern und des Timeoutintervalls synchron auf.</summary>
+        <returns>Ein Wert des Typs TResult mit dem Ergebnis der Aktivitätsausführung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis der Workflow abgeschlossen ist, einschließlich der Leerlaufzeit. Die gesamte Workflowausführung erfolgt immer auf dem aufrufenden Thread. Falls der Workflow innerhalb des angegebenen Timeoutintervalls nicht abgeschlossen wird, wird der Workflow abgebrochen, und eine <xref:System.TimeoutException> wird ausgelöst.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird einen Workflow, bestehend aus einer einzelnes `Add` Aktivität, die über zwei Eingabeargumente verfügt, und da er abgeleitet `CodeActivity<int>` weist einen klar definierten <xref:System.Activities.Activity%601.Result%2A> -ausgabeargument. Beim Aufrufen des Workflows wird das `arguments`-Wörterbuch übergeben, das die Werte für die einzelnen Eingabeargumente sortiert nach Argumentname enthält. Wenn der Aufruf von `Invoke` zurückgibt, den Wert des der <xref:System.Activities.Activity%601.Result%2A> Ausgabeargumente zurückgegeben. Dieses Codebeispiel basiert die [verwenden der WorkflowInvoker-Klasse](~/docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md) Beispiel.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#110](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#110)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="InvokeAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft einen Workflow mithilfe des ereignisbasierten asynchronen Entwurfsmusters asynchron auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen wurde, verarbeiten Sie <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+ Diese Methode ruft einen Workflow mithilfe des ereignisbasierten asynchronen Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über ereignisbasierte asynchrone Muster](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Workflow asynchron auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen wurde, verarbeiten Sie <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+ Diese Methode ruft einen Workflow mithilfe des ereignisbasierten asynchronen Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über ereignisbasierte asynchrone Muster](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Workflow abgeschlossen ist, werden diese im <xref:System.Activities.WorkflowInvoker.InvokeCompleted>-Handler abgerufen.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <summary>Ruft einen Workflow mithilfe des angegebenen <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern asynchron auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen wurde, verarbeiten Sie <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+ Diese Methode ruft einen Workflow mithilfe des ereignisbasierten asynchronen Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über ereignisbasierte asynchrone Muster](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Workflow abgeschlossen ist, werden diese im <xref:System.Activities.WorkflowInvoker.InvokeCompleted>-Handler abgerufen.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userState">Ein vom Benutzer bereitgestelltes Objekt, mit dem dieser spezielle asynchrone Aufrufvorgang von anderen aktuellen asynchronen Aufrufvorgängen unterschieden wird.</param>
+        <summary>Ruft einen Workflow mithilfe des angegebenen eindeutigen Bezeichners asynchron auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `userState`-Parameter muss in allen gerade ausgeführten <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A>-Vorgängen für die aktuelle Aktivität eindeutig sein. Wenn der `userState`-Parameter nicht eindeutig ist, wird eine <xref:System.ArgumentException> ausgelöst. Mit `userState` wird der Workflow in <xref:System.Activities.WorkflowInvoker.InvokeCompleted> identifiziert und mit <xref:System.Activities.WorkflowInvoker.CancelAsync%2A> abgebrochen.  
+  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen wurde, verarbeiten Sie <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+ Diese Methode ruft einen Workflow mithilfe des ereignisbasierten asynchronen Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über ereignisbasierte asynchrone Muster](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Workflow abgeschlossen ist, werden diese im <xref:System.Activities.WorkflowInvoker.InvokeCompleted>-Handler abgerufen.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Das Intervall, in dem der Workflow abgeschlossen werden muss, bevor er abgebrochen und eine <see cref="T:System.TimeoutException" /> ausgelöst wird.</param>
+        <summary>Ruft einen Workflow mit dem angegebenen Timeoutintervall asynchron auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen wurde, verarbeiten Sie <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Falls der Workflow innerhalb des angegebenen Timeoutintervalls nicht abgeschlossen wird, wird der Workflow abgebrochen, und eine <xref:System.TimeoutException> wird ausgelöst.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+ Diese Methode ruft einen Workflow mithilfe des ereignisbasierten asynchronen Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über ereignisbasierte asynchrone Muster](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Workflow abgeschlossen ist, werden diese im <xref:System.Activities.WorkflowInvoker.InvokeCompleted>-Handler abgerufen.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.Collections.Generic.IDictionary{System.String,System.Object},System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <param name="userState">Ein vom Benutzer bereitgestelltes Objekt, mit dem dieser spezielle asynchrone Aufrufvorgang von anderen aktuellen asynchronen Aufrufvorgängen unterschieden wird.</param>
+        <summary>Ruft einen Workflow mithilfe des angegebenen <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern und einem eindeutigen Bezeichner asynchron auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `userState`-Parameter muss in allen gerade ausgeführten <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A>-Vorgängen für die aktuelle Aktivität eindeutig sein. Wenn `userState` nicht eindeutig ist, wird eine <xref:System.ArgumentException> ausgelöst. Mit `userState` wird der Workflow in <xref:System.Activities.WorkflowInvoker.InvokeCompleted> identifiziert und mit <xref:System.Activities.WorkflowInvoker.CancelAsync%2A> abgebrochen.  
+  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen wurde, verarbeiten Sie <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Um ein anderes Timeoutintervall für den Abschluss des Workflows zu konfigurieren, verwenden Sie eine der <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A>-Überladungen, die einen <xref:System.TimeSpan> annehmen.  
+  
+ Diese Methode ruft einen Workflow mithilfe des ereignisbasierten asynchronen Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über ereignisbasierte asynchrone Muster](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Workflow abgeschlossen ist, werden diese im <xref:System.Activities.WorkflowInvoker.InvokeCompleted>-Handler abgerufen.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.Collections.Generic.IDictionary{System.String,System.Object},System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <param name="timeout">Das Intervall, in dem der Workflow abgeschlossen werden muss, bevor er abgebrochen und eine <see cref="T:System.TimeoutException" /> ausgelöst wird.</param>
+        <summary>Ruft einen Workflow mithilfe des angegebenen <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern und des angegebenen Timeoutintervalls asynchron auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen wurde, verarbeiten Sie <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Falls der Workflow innerhalb des angegebenen Timeoutintervalls nicht abgeschlossen wird, wird der Workflow abgebrochen, und eine <xref:System.TimeoutException> wird ausgelöst.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+ Diese Methode ruft einen Workflow mithilfe des ereignisbasierten asynchronen Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über ereignisbasierte asynchrone Muster](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Workflow abgeschlossen ist, werden diese im <xref:System.Activities.WorkflowInvoker.InvokeCompleted>-Handler abgerufen.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (TimeSpan timeout, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(valuetype System.TimeSpan timeout, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.TimeSpan,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Das Intervall, in dem der Workflow abgeschlossen werden muss, bevor er abgebrochen und eine <see cref="T:System.TimeoutException" /> ausgelöst wird.</param>
+        <param name="userState">Ein vom Benutzer bereitgestelltes Objekt, mit dem dieser spezielle asynchrone Aufrufvorgang von anderen aktuellen asynchronen Aufrufvorgängen unterschieden wird.</param>
+        <summary>Ruft einen Workflow mit dem angegebenen Timeoutintervall und einem eindeutigen Bezeichner asynchron auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `userState`-Parameter muss in allen gerade ausgeführten <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A>-Vorgängen für die aktuelle Aktivität eindeutig sein. Wenn `userState` nicht eindeutig ist, wird eine <xref:System.ArgumentException> ausgelöst. Mit `userState` wird der Workflow in <xref:System.Activities.WorkflowInvoker.InvokeCompleted> identifiziert und mit <xref:System.Activities.WorkflowInvoker.CancelAsync%2A> abgebrochen.  
+  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen wurde, verarbeiten Sie <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Falls der Workflow innerhalb des angegebenen Timeoutintervalls nicht abgeschlossen wird, wird der Workflow abgebrochen, und eine <xref:System.TimeoutException> wird ausgelöst.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+ Diese Methode ruft einen Workflow mithilfe des ereignisbasierten asynchronen Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über ereignisbasierte asynchrone Muster](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Workflow abgeschlossen ist, werden diese im <xref:System.Activities.WorkflowInvoker.InvokeCompleted>-Handler abgerufen.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, TimeSpan timeout, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, valuetype System.TimeSpan timeout, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.Collections.Generic.IDictionary{System.String,System.Object},System.TimeSpan,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Das Wörterbuch von Eingabeparametern für den Workflow, nach Argumentname geordnet.</param>
+        <param name="timeout">Das Intervall, in dem der Workflow abgeschlossen werden muss, bevor er abgebrochen und eine <see cref="T:System.TimeoutException" /> ausgelöst wird.</param>
+        <param name="userState">Ein vom Benutzer bereitgestelltes Objekt, mit dem dieser spezielle asynchrone Aufrufvorgang von anderen aktuellen asynchronen Aufrufvorgängen unterschieden wird.</param>
+        <summary>Ruft einen Workflow mithilfe des angegebenen <see cref="T:System.Collections.Generic.IDictionary`2" /> von Eingabeparametern, des angegebenen Timeoutintervalls und einem eindeutigen Bezeichner asynchron auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `userState`-Parameter muss in allen gerade ausgeführten <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A>-Vorgängen für die aktuelle Aktivität eindeutig sein. Wenn `userState` nicht eindeutig ist, wird eine <xref:System.ArgumentException> ausgelöst. Mit `userState` wird der Workflow in <xref:System.Activities.WorkflowInvoker.InvokeCompleted> identifiziert und mit <xref:System.Activities.WorkflowInvoker.CancelAsync%2A> abgebrochen.  
+  
+ Um benachrichtigt zu werden, wenn der Workflow abgeschlossen wurde, verarbeiten Sie <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Falls der Workflow innerhalb des angegebenen Timeoutintervalls nicht abgeschlossen wird, wird der Workflow abgebrochen, und eine <xref:System.TimeoutException> wird ausgelöst.  
+  
+> [!NOTE]
+>  Das <xref:System.TimeoutException>-Objekt wird nur ausgelöst, wenn das Timeoutintervall verstreicht und der Workflow während der Ausführung in den Leerlauf wechselt. Ein Workflow, der erst nach dem angegebenen Timeoutintervall abgeschlossen wird, wird dennoch erfolgreich beendet, wenn der Workflow nicht in den Leerlauf wechselt.  
+  
+ Diese Methode ruft einen Workflow mithilfe des ereignisbasierten asynchronen Entwurfsmusters asynchron auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über ereignisbasierte asynchrone Muster](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Workflow abgeschlossen ist, werden diese im <xref:System.Activities.WorkflowInvoker.InvokeCompleted>-Handler abgerufen.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Activities.InvokeCompletedEventArgs&gt; InvokeCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Activities.InvokeCompletedEventArgs&gt; InvokeCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.WorkflowInvoker.InvokeCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Activities.InvokeCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der von einer der <see cref="Overload:System.Activities.WorkflowInvoker.InvokeAsync" />-Überladungen aufgerufene Workflow abgeschlossen oder abgebrochen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln Sie dieses, um zu bestimmen, ob ein Workflow, der mit einer der <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A>-Überladungen aufgerufen wurde, erfolgreich abgeschlossen wurde, und um die Ausgabeargumente des abgeschlossenen Workflows abzurufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der aus einer `LongRunningDiceRoll`-Aktivität besteht. Die `LongRunningDiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Workflow abgeschlossen ist, werden diese im <xref:System.Activities.WorkflowInvoker.InvokeCompleted>-Handler abgerufen.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

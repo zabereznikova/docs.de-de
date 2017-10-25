@@ -1,0 +1,1266 @@
+<Type Name="ThreadPool" FullName="System.Threading.ThreadPool">
+  <TypeSignature Language="C#" Value="public static class ThreadPool" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ThreadPool extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.ThreadPool" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Threadpool bereit, der verwendet werden kann, um Aufgaben auszuführen, Arbeitsaufgaben bereitzustellen, asynchrone E/A zu verarbeiten, im Auftrag anderer Threads zu warten und Zeitgeber zu verarbeiten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Viele Anwendungen erstellen, Threads, die Ausgaben viel Zeit in den inaktiven Status Warten auf ein Ereignis ausgelöst wird. Andere Threads können einen inaktiven Status nur für die in regelmäßigen Abständen aktiviert werden, um eine Änderung abrufen oder Aktualisieren von Statusinformationen eingeben. Der Threadpool können Sie Threads effizienter durch die Bereitstellung der Anwendung einen Pool von Arbeitsthreads, die vom System verwaltet werden. Die folgenden: Beispiele für Vorgänge, die Threads im Threadpool zu verwenden  
+  
+-   Beim Erstellen einer <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> Objekt, das eine Aufgabe standardmäßig asynchron ausgeführt wird, führen Sie die Aufgabe wird zur Ausführung auf einem Thread im Threadpool geplant.  
+  
+-   Asynchroner Zeitgeber verwenden den Threadpool. Threads im Threadpool ausführen Rückrufe aus der <xref:System.Threading.Timer?displayProperty=nameWithType> Klasse und Auslösen von Ereignissen aus der <xref:System.Timers.Timer?displayProperty=nameWithType> Klasse.  
+  
+-   Bei Verwendung von registrierten Wait-Handles überwacht Systemthread den Status des Wait-Handles. Wenn ein Wait-Vorgang abgeschlossen ist, führt ein Arbeitsthread aus dem Threadpool die entsprechende Rückruffunktion an.  
+  
+-   Beim Aufrufen der <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> Methode, um eine Methode für die Ausführung auf ein Thread des Threadpools in die Warteschlange. Die Methode übergeben Sie dazu eine <xref:System.Threading.WaitCallback> delegieren.   Der Delegat hat die Signatur  
+  
+    ```csharp  
+    void WaitCallback(Object state)  
+    ```  
+  
+    ```vb  
+    Sub WaitCallback(state As Object)  
+    ```  
+  
+     wobei `state` ist ein Objekt, das Daten enthält, durch den Delegaten verwendet werden. Die tatsächlichen Daten an den Delegaten übergeben werden können, durch Aufrufen der <xref:System.Threading.ThreadPool.QueueUserWorkItem%28System.Threading.WaitCallback%2CSystem.Object%29> Methode.  
+  
+> [!NOTE]
+>  Die Threads in dem verwalteten Threadpool sind Hintergrundthreads. D. h. deren <xref:System.Threading.Thread.IsBackground%2A> Eigenschaften sind `true`. Dies bedeutet, dass eine <xref:System.Threading.ThreadPool> Thread hält sich nicht auf eine Anwendung ausgeführt wird, nachdem alle Vordergrundthreads beendet wurden.  
+  
+> [!IMPORTANT]
+>  Bei der Threadpool einen Thread wiederverwendet, löscht es keinen Daten im threadlokalen Speicher oder mit markierten Felder die <xref:System.ThreadStaticAttribute> Attribut. Daher, wenn eine Methode untersucht threadlokalen Speicher oder Felder, die mit markiert die <xref:System.ThreadStaticAttribute> -Attribut, die gefundenen Werte möglicherweise werden übrig geblieben aus einer früheren Verwendung von Threadpoolthreads.  
+  
+ Sie können auch Arbeitsaufgaben Warteschlange, die nicht mit einem "Wait"-Vorgang für den Threadpool verknüpft sind. Aufrufen, um anzufordern, dass eine Arbeitsaufgabe von einem Thread im Threadpool behandelt werden, die <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> Methode. Diese Methode verwendet als Parameter einen Verweis auf die Methode oder der Delegat, der von den aus dem Threadpool ausgewählten Thread aufgerufen wird. Es gibt keine Möglichkeit, eine Arbeitsaufgabe abzubrechen, nachdem er in die Warteschlange gestellt wurde.  
+  
+ Zeitgeberwarteschlange Zeitgeber und registrierte Wartevorgänge, auch den Threadpool verwenden. Die Rückruffunktionen werden an den Threadpool der Warteschlange.  
+  
+ Es ist ein-Threadpool pro Prozess. Ab [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] ist die Standardgröße des Threadpools für einen Prozess von mehreren Faktoren abhängig, z. B. von der Größe des virtuellen Adressraums. Ein Prozess kann die <xref:System.Threading.ThreadPool.GetMaxThreads%2A>-Methode aufrufen, um die Anzahl der Threads zu bestimmen.  Die Anzahl der Threads im Threadpool kann geändert werden, mithilfe der <xref:System.Threading.ThreadPool.SetMaxThreads%2A> Methode. Jeder Thread verwendet die standardmäßige Stapelgröße und wird mit Standardpriorität ausgeführt.  
+  
+> [!NOTE]
+>  Nicht verwalteten Code, der das .NET Framework hostet, kann die Größe des Threadpools ändern, indem Sie mit der `CorSetMaxThreads` Funktion, die in der Datei mscoree.h definiert.  
+  
+ Der Threadpool stellt neue Arbeitsthreads oder e/a-Abschlussthreads bei Bedarf bereit, bis der Mindestwert für jede Kategorie erreicht ist. Wenn ein Minimum erreicht wird, kann der Threadpool Weitere Threads in dieser Kategorie erstellen oder warten, bis einige Aufgaben abgeschlossen. Ab [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] erstellt und zerstört der Threadpool Arbeitsthreads, um den Durchsatz zu optimieren. Der Durchsatz ist als die Anzahl der Aufgaben definiert, die pro Zeiteinheit abgeschlossen werden. Bei zu wenigen Threads werden die verfügbaren Ressourcen möglicherweise nicht optimal genutzt, wohingegen bei zu vielen Threads Ressourcenkonflikte auftreten können.   
+  
+> [!NOTE]
+>  Wenn die Anforderungen niedrig sind, kann die tatsächliche Anzahl der Threads im Threadpool unterhalb der Mindestwerte liegen.  
+  
+ Sie können die <xref:System.Threading.ThreadPool.GetMinThreads%2A>-Methode verwenden, um diese Mindestwerte abzurufen.   
+  
+> [!CAUTION]
+>  Sie können die <xref:System.Threading.ThreadPool.SetMinThreads%2A> Methode, um die minimale Anzahl von Threads zu erhöhen. Allerdings kann ein unnötiges Erhöhen dieses Wertes zu Leistungsproblemen führen. Wenn zu viele Aufgaben gleichzeitig gestartet werden, werden möglicherweise alle Aufgaben zu langsam ausgeführt. In den meisten Fällen erreicht der Threadpool mit dem eigenen Algorithmus für die Zuordnung von Threads eine bessere Leistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel Warteschlangen Thread der hauptanwendung eine Methode namens `ThreadProc` auszuführende über einen Threadpoolthread wechselt in den Ruhezustand für 1 Sekunde und wird dann beendet. Die `ThreadProc` Methode zeigt einfach eine Nachricht an.  
+  
+ [!code-cpp[System.Threading.ThreadPool QueueUserWorkItem0#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem0/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool QueueUserWorkItem0#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem0/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool QueueUserWorkItem0#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem0/VB/source.vb#1)]  
+  
+ Wenn Sie den Aufruf von Auskommentieren der <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> -Methode der Hauptthread beendet wird, vor dem Ausführen der Methode auf dem Thread des Threadpools.  Der Threadpool verwendet Hintergrundthreads, die keine aufzeichnen die Anwendung ausgeführt wird, wenn alle Vordergrundthreads beendet haben.  (Dies ist ein einfaches Beispiel einer Racebedingung.)  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="BindHandle">
+      <MemberSignature Language="C#" Value="public static bool BindHandle (IntPtr osHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool BindHandle(native int osHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.BindHandle(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("ThreadPool.BindHandle(IntPtr) has been deprecated.  Please use ThreadPool.BindHandle(SafeHandle) instead.", false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="osHandle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="osHandle">Ein <see cref="T:System.IntPtr" />, das den Handle enthält. Das Handle muss für überlappende E/A auf der nicht verwalteten Seite geöffnet worden sein.</param>
+        <summary>Bindet ein Betriebssystemhandle an den <see cref="T:System.Threading.ThreadPool" />.</summary>
+        <returns>
+          <see langword="true" />, wenn das Handle gebunden ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit, nicht verwalteten Code aufrufen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BindHandle">
+      <MemberSignature Language="C#" Value="public static bool BindHandle (System.Runtime.InteropServices.SafeHandle osHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool BindHandle(class System.Runtime.InteropServices.SafeHandle osHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.BindHandle(System.Runtime.InteropServices.SafeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="osHandle" Type="System.Runtime.InteropServices.SafeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="osHandle">Ein <see cref="T:System.Runtime.InteropServices.SafeHandle" /> , das das Betriebssystemhandle enthält. Das Handle muss für überlappende E/A auf der nicht verwalteten Seite geöffnet worden sein.</param>
+        <summary>Bindet ein Betriebssystemhandle an den <see cref="T:System.Threading.ThreadPool" />.</summary>
+        <returns>
+          <see langword="true" />, wenn das Handle gebunden ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `osHandle` Parameter muss ein <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, der von der abstrakten abgeleitet <xref:System.Runtime.InteropServices.SafeHandle> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="osHandle" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit, nicht verwalteten Code aufrufen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAvailableThreads">
+      <MemberSignature Language="C#" Value="public static void GetAvailableThreads (out int workerThreads, out int completionPortThreads);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetAvailableThreads([out] int32&amp; workerThreads, [out] int32&amp; completionPortThreads) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.GetAvailableThreads(System.Int32@,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workerThreads" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="completionPortThreads" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="workerThreads">Die Anzahl der verfügbaren Arbeitsthreads.</param>
+        <param name="completionPortThreads">Die Anzahl der verfügbaren asynchronen E/A-Threads.</param>
+        <summary>Ruft die Differenz zwischen der von der <see cref="M:System.Threading.ThreadPool.GetMaxThreads(System.Int32@,System.Int32@)" />-Methode zurückgegebenen maximalen Anzahl der Threads im Threadpool und der Anzahl der gerade aktiven Threads ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Threading.ThreadPool.GetAvailableThreads%2A> zurückgibt, die von angegebene Variable `workerThreads` enthält die Anzahl der zusätzlichen Arbeitsthreads, die gestartet werden können und die von angegebene Variable `completionPortThreads` enthält die Anzahl der zusätzlichen asynchronen e/a-Threads, die sein kann wurde gestartet.  
+  
+ Es sind keine verfügbaren Threads, bleiben durch zusätzliche Threads Pool Anforderungen in der Warteschlange, bis die Threads des Threadpools verfügbar sind.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Anzahl der Arbeitsthreads und e/a-Threads zur Verfügung stehen, wenn eine einfache app gestartet wird.  
+  
+ [!code-csharp[System.Threading.ThreadPool.GetAvailableThreads#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool.GetAvailableThreads/CS/Example2.cs#2)]
+ [!code-vb[System.Threading.ThreadPool.GetAvailableThreads#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool.GetAvailableThreads/VB/Example2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMaxThreads">
+      <MemberSignature Language="C#" Value="public static void GetMaxThreads (out int workerThreads, out int completionPortThreads);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetMaxThreads([out] int32&amp; workerThreads, [out] int32&amp; completionPortThreads) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.GetMaxThreads(System.Int32@,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workerThreads" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="completionPortThreads" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="workerThreads">Die maximale Anzahl der Arbeitsthreads im Threadpool.</param>
+        <param name="completionPortThreads">Die maximale Anzahl asynchroner E/A-Threads im Threadpool.</param>
+        <summary>Ruft die Anzahl der Anforderungen für den Threadpool ab, die gleichzeitig aktiv sein können. Alle über diese Zahl hinausgehenden Anforderungen bleiben in der Warteschlange, bis die Threads des Threadpools verfügbar sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Threading.ThreadPool.GetMaxThreads%2A> zurückgibt, die von angegebene Variable `workerThreads` enthält die maximale Anzahl von Arbeitsthreads im Threadpool zulässig, und die Variable, die vom angegebenen `completionPortThreads` enthält die maximale Anzahl von asynchronen e/a-Threads in der ThreadPool.  
+  
+ Sie können die <xref:System.Threading.ThreadPool.GetAvailableThreads%2A> Methode, um die tatsächliche Anzahl von Threads im Threadpool zu einem beliebigen Zeitpunkt zu ermitteln.  
+  
+ Sie können die <xref:System.Threading.ThreadPool.SetMaxThreads%2A> , legen Sie die maximale Anzahl von Arbeitsthreads und asynchrone e/a-Threads im Threadpool.  
+  
+ Sie können die Warteschlange, wie viele Anforderungen Pool thread wie der Systemarbeitsspeicher zulässt. Wenn es mehr Anforderungen als Thread des Threadpools sind, zusätzlichen Anforderungen in der Warteschlange bleiben bis die Threads des Threadpools verfügbar sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der maximalen und der verfügbaren Anzahl an Threads im Threadpool. Ein Arbeitselement wird in die Warteschlange, die verwendet `FileStream` asynchron in zwei Dateien zu schreiben. Rückrufmethoden zeitlich überlappen. Ein Arbeitsthread behandelt die Arbeitsaufgabe, und abhängig von der Geschwindigkeit und die Anzahl der Prozessoren auf dem Computer, ein oder zwei Port Abschlussthreads behandelt die Schreibvorgänge.  
+  
+ [!code-cpp[System.Threading.ThreadPool.GetAvailableThreads#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool.GetAvailableThreads/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool.GetAvailableThreads#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool.GetAvailableThreads/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool.GetAvailableThreads#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool.GetAvailableThreads/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMinThreads">
+      <MemberSignature Language="C#" Value="public static void GetMinThreads (out int workerThreads, out int completionPortThreads);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetMinThreads([out] int32&amp; workerThreads, [out] int32&amp; completionPortThreads) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.GetMinThreads(System.Int32@,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workerThreads" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="completionPortThreads" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="workerThreads">Enthält nach der Rückgabe dieser Methode die Mindestanzahl von Arbeitsthreads, die der Threadpool bei Bedarf erstellt.</param>
+        <param name="completionPortThreads">Enthält nach der Rückgabe dieser Methode die Mindestanzahl von asynchronen E/A-Threads, die der Threadpool bei Bedarf erstellt.</param>
+        <summary>Ruft die Mindestanzahl von Threads ab, die der Threadpool bei Bedarf erstellt, wenn neue Anforderungen gestellt werden, bevor zu einem Algorithmus zum Verwalten von Threaderstellung und -löschung gewechselt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Threadpool stellt neue Arbeitsthreads oder e/a-Abschlussthreads bei Bedarf bereit, bis der Mindestwert für jede Kategorie erreicht ist. Standardmäßig ist die Anzahl der Prozessoren auf einem System die Mindestanzahl von Threads fest. Wenn das Minimum erreicht wird, kann der Threadpool Weitere Threads in dieser Kategorie erstellen oder warten Sie, bis einige Aufgaben abgeschlossen. Beginnend mit der [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], der Threadpool erstellt und zerstört Threads um den Durchsatz zu optimieren, der als die Anzahl der Aufgaben definiert ist, die pro Zeiteinheit abgeschlossen. Bei zu wenigen Threads werden die verfügbaren Ressourcen möglicherweise nicht optimal genutzt, wohingegen bei zu vielen Threads Ressourcenkonflikte auftreten können.   
+  
+> [!NOTE]
+>  Wenn die Anforderungen niedrig sind, kann die tatsächliche Anzahl der Threads im Threadpool unterhalb der Mindestwerte liegen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die minimale Anzahl von Arbeitsthreads auf vier und behält den ursprünglichen Wert für die Mindestanzahl von asynchronen e/a-Abschlussthreads.  
+  
+ [!code-cpp[System.Threading.ThreadPool.GetSetMinThreads#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool.GetSetMinThreads/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool.GetSetMinThreads#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool.GetSetMinThreads/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool.GetSetMinThreads#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool.GetSetMinThreads/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueUserWorkItem">
+      <MemberSignature Language="C#" Value="public static bool QueueUserWorkItem (System.Threading.WaitCallback callBack);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool QueueUserWorkItem(class System.Threading.WaitCallback callBack) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.QueueUserWorkItem(System.Threading.WaitCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callBack" Type="System.Threading.WaitCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callBack">Ein <see cref="T:System.Threading.WaitCallback" />, der die auszuführende Methode darstellt.</param>
+        <summary>Fügt der Warteschlange eine auszuführende Methode hinzu. Die Methode wird ausgeführt, wenn ein Thread des Threadpools verfügbar wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die Methode erfolgreich in die Warteschlange gestellt wurde. <see cref="T:System.NotSupportedException" /> wird ausgelöst, wenn die Arbeitsaufgabe nicht in die Warteschlange gestellt werden konnte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können Daten, die Methode in den Instanzfeldern der Klasse, in dem die Methode definiert ist, oder Sie können, in der Warteschlange benötigt Platzieren der <xref:System.Threading.ThreadPool.QueueUserWorkItem%28System.Threading.WaitCallback%2CSystem.Object%29> Überladung, die ein Objekt mit den erforderlichen Daten akzeptiert.  
+  
+> [!NOTE]
+>  Visual Basic-Benutzer können weglassen der <xref:System.Threading.WaitCallback> Konstruktor, und verwenden Sie einfach die `AddressOf` Operator bei der Übergabe an der Rückrufmethode <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Visual Basic ruft automatisch den richtigen Delegatkonstruktor.  
+  
+## <a name="version-information"></a>Versionsinformationen  
+ In .NET Framework, Version 2.0 die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> Eigenschaftswert an Arbeitsthreads weitergegeben, in der Warteschlange mit der <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> Methode. In früheren Versionen wird die wichtigsten Informationen nicht weitergegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Threading.ThreadPool.QueueUserWorkItem%28System.Threading.WaitCallback%29> -methodenüberladung, um eine Aufgabe in die Warteschlange der dargestellt wird, indem Sie die `ThreadProc` Methode ausführen, wenn ein Thread verfügbar ist. Es sind keine Taskinformationen wird mit dieser Überladung bereitgestellt. Aus diesem Grund die Informationen, die zur Verfügung steht die `ThreadProc` Methode ist beschränkt auf das Objekt, das die Methode gehört.  
+  
+ [!code-cpp[System.Threading.ThreadPool QueueUserWorkItem0#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem0/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool QueueUserWorkItem0#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem0/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool QueueUserWorkItem0#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem0/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callBack" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Die common Language Runtime (CLR) gehostet wird, und diese Aktion werden vom Host nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueUserWorkItem">
+      <MemberSignature Language="C#" Value="public static bool QueueUserWorkItem (System.Threading.WaitCallback callBack, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool QueueUserWorkItem(class System.Threading.WaitCallback callBack, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.QueueUserWorkItem(System.Threading.WaitCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callBack" Type="System.Threading.WaitCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callBack">Ein <see cref="T:System.Threading.WaitCallback" />, der die auszuführende Methode darstellt.</param>
+        <param name="state">Ein Objekt, das die von der Methode zu verwendenden Daten enthält.</param>
+        <summary>Fügt der Warteschlange eine auszuführende Methode hinzu und gibt ein Objekt an, das die von der Methode zu verwendenden Daten enthält. Die Methode wird ausgeführt, wenn ein Thread des Threadpools verfügbar wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die Methode erfolgreich in die Warteschlange gestellt wurde. <see cref="T:System.NotSupportedException" /> wird ausgelöst, wenn die Arbeitsaufgabe nicht in die Warteschlange gestellt werden konnte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Rückrufmethode komplexe Daten erforderlich sind, können Sie eine Klasse, um die Daten enthalten definieren.  
+  
+> [!NOTE]
+>  Visual Basic-Benutzer können weglassen der <xref:System.Threading.WaitCallback> Konstruktor, und verwenden Sie einfach die `AddressOf` Operator bei der Übergabe an der Rückrufmethode <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Visual Basic ruft automatisch den richtigen Delegatkonstruktor.  
+  
+## <a name="version-information"></a>Versionsinformationen  
+ In .NET Framework, Version 2.0 die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> Eigenschaftswert an Arbeitsthreads weitergegeben, in der Warteschlange mit der <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> Methode. In früheren Versionen wird die wichtigsten Informationen nicht weitergegeben.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein Objekt erstellt, die Informationen zum Vorgang enthält. Es wird veranschaulicht, wie dieses Objekt an eine Aufgabe, die für die Ausführung in die Warteschlange eingereiht wird durch den Threadpool übergeben wird.  
+  
+ [!code-cpp[System.Threading.ThreadPool QueueUserWorkItem1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem1/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool QueueUserWorkItem1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem1/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool QueueUserWorkItem1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die common Language Runtime (CLR) gehostet wird, und diese Aktion werden vom Host nicht unterstützt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callBack" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterWaitForSingleObject">
+      <MemberSignature Language="C#" Value="public static System.Threading.RegisteredWaitHandle RegisterWaitForSingleObject (System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, int millisecondsTimeOutInterval, bool executeOnlyOnce);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.RegisteredWaitHandle RegisterWaitForSingleObject(class System.Threading.WaitHandle waitObject, class System.Threading.WaitOrTimerCallback callBack, object state, int32 millisecondsTimeOutInterval, bool executeOnlyOnce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.RegisterWaitForSingleObject(System.Threading.WaitHandle,System.Threading.WaitOrTimerCallback,System.Object,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.RegisteredWaitHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitObject" Type="System.Threading.WaitHandle" />
+        <Parameter Name="callBack" Type="System.Threading.WaitOrTimerCallback" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="millisecondsTimeOutInterval" Type="System.Int32" />
+        <Parameter Name="executeOnlyOnce" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitObject">Die zu registrierende <see cref="T:System.Threading.WaitHandle" />. Verwenden Sie ein anderes <see cref="T:System.Threading.WaitHandle" /> als <see cref="T:System.Threading.Mutex" />.</param>
+        <param name="callBack">Die <see cref="T:System.Threading.WaitOrTimerCallback" /> Delegaten aufrufen, wenn die <c>WaitObject</c> -Parameter signalisiert wird.</param>
+        <param name="state">Das an den Delegaten übergebene Objekt.</param>
+        <param name="millisecondsTimeOutInterval">Das Timeout in Millisekunden. Wenn die <c>MillisecondsTimeOutInterval</c> -Parameter ist 0 (null), die Funktion testet den Zustand des Objekts und kehrt sofort zurück. Wenn <c>MillisecondsTimeOutInterval</c> Wert-1 hat, läuft das Timeoutintervall der Funktion nie.</param>
+        <param name="executeOnlyOnce">
+          <see langword="true" />um anzugeben, dass der Thread nicht mehr wartet auf die <c>WaitObject</c> Parameter nach der Delegat aufgerufen wurde. <see langword="false" /> um anzugeben, dass der Timer zurückgesetzt wird, jedes Mal, wenn die "Wait"-Vorgang abgeschlossen ist, bis der Wartevorgang aufgehoben wird.</param>
+        <summary>Registriert einen Delegaten, der auf eine <see cref="T:System.Threading.WaitHandle" />-Klasse wartet, wobei für das Timeout in Millisekunden eine 32-Bit-Ganzzahl mit Vorzeichen angegeben wird.</summary>
+        <returns>Das <see cref="T:System.Threading.RegisteredWaitHandle" />, das das systemeigene Handle kapselt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie fertig sind mit den <xref:System.Threading.RegisteredWaitHandle> , die von dieser Methode zurückgegeben wird, rufen Sie die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode, um Verweise auf das Wait-Handle freigeben. Es wird empfohlen, Sie rufen Sie immer die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> -Methode, auch wenn Sie angeben, `true` für `executeOnlyOnce`. Die Garbagecollection funktioniert mehr effizient beim Aufrufen der <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode anstelle eines je nach den Finalizer für das registrierte Wait-Handle.  
+  
+ Die <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode fügt den angegebenen Delegaten für den Threadpool der Warteschlange hinzu. Ein Arbeitsthread wird der Delegat ausgeführt, wenn eines der folgenden Ereignisse eintritt:  
+  
+-   Das angegebene Objekt ist in den signalisierten Zustand aufweisen.  
+  
+-   Das Timeoutintervall verstreicht.  
+  
+ Die <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode überprüft den aktuellen Zustand des angegebenen Objekts <xref:System.Threading.WaitHandle>. Wenn der Zustand des Objekts nicht signalisierten ist, registriert die Methode eine "Wait"-Vorgang aus. Der Wartevorgang wird von einem Thread aus dem Threadpool ausgeführt. Der Delegat wird von keinem Arbeitsthread ausgeführt, wenn der Zustand des Objekts signalisiert wird oder das Timeoutintervall verstreicht. Wenn die `timeOutInterval` Parameter ist nicht 0 (null) und die `executeOnlyOnce` Parameter ist `false`, der Zeitgeber wird zurückgesetzt, jedes Mal, wenn das Ereignis signalisiert wird, oder das Timeoutintervall verstreicht.  
+  
+> [!IMPORTANT]
+>  Mit einem <xref:System.Threading.Mutex> für `waitObject` bietet keine gegenseitigen Ausschluss für die Rückrufe, da die zugrunde liegende Win32-API die verwendet `WT_EXECUTEDEFAULT` kennzeichnen, sodass jeder Rückruf auf einem separaten Thread des Threadpools verteilt wird. Statt eine <xref:System.Threading.Mutex>, verwenden Sie eine <xref:System.Threading.Semaphore> mit einer maximalen Anzahl von 1.  
+  
+ Um die "Wait"-Vorgang abzubrechen, rufen die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode.  
+  
+ Der Wait-Thread verwendet die Win32 `WaitForMultipleObjects` Funktion registrierte Wartevorgänge überwachen. Aus diesem Grund, wenn Sie die gleichen systemeigenes Betriebssystemhandle, in verwenden, müssen mehrere Aufrufe <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>, müssen Sie das mithilfe der Win32-Handle duplizieren `DuplicateHandle` Funktion. Beachten Sie, dass Sie nicht auf ein Ereignisobjekt, das an Impuls sollten <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>, da der Wait-Thread möglicherweise nicht erkennt, dass das Ereignis signalisiert wird, bevor er zurückgesetzt wird.  
+  
+ Vor der Rückgabe, ändert die Funktion den Zustand des einige Typen von Synchronisierungsobjekten. Änderung wird nur für das Objekt, dessen Zustand "signalisiert" die Wartezeit Bedingung erfüllt ist verursacht. Beispielsweise wird die Anzahl der ein Semaphor um eins verringert.  
+  
+## <a name="version-information"></a>Versionsinformationen  
+ Beginnend mit .NET Framework, Version 2.0, die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> Eigenschaftswert an Arbeitsthreads weitergegeben, in der Warteschlange mit der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode. In früheren Versionen wird die wichtigsten Informationen nicht weitergegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="millisecondsTimeOutInterval" /> Parameter ist kleiner als -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterWaitForSingleObject">
+      <MemberSignature Language="C#" Value="public static System.Threading.RegisteredWaitHandle RegisterWaitForSingleObject (System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, long millisecondsTimeOutInterval, bool executeOnlyOnce);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.RegisteredWaitHandle RegisterWaitForSingleObject(class System.Threading.WaitHandle waitObject, class System.Threading.WaitOrTimerCallback callBack, object state, int64 millisecondsTimeOutInterval, bool executeOnlyOnce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.RegisterWaitForSingleObject(System.Threading.WaitHandle,System.Threading.WaitOrTimerCallback,System.Object,System.Int64,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.RegisteredWaitHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitObject" Type="System.Threading.WaitHandle" />
+        <Parameter Name="callBack" Type="System.Threading.WaitOrTimerCallback" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="millisecondsTimeOutInterval" Type="System.Int64" />
+        <Parameter Name="executeOnlyOnce" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitObject">Die zu registrierende <see cref="T:System.Threading.WaitHandle" />. Verwenden Sie ein anderes <see cref="T:System.Threading.WaitHandle" /> als <see cref="T:System.Threading.Mutex" />.</param>
+        <param name="callBack">Die <see cref="T:System.Threading.WaitOrTimerCallback" /> Delegaten aufrufen, wenn die <c>WaitObject</c> -Parameter signalisiert wird.</param>
+        <param name="state">Das an den Delegaten übergebene Objekt.</param>
+        <param name="millisecondsTimeOutInterval">Das Timeout in Millisekunden. Wenn die <c>MillisecondsTimeOutInterval</c> -Parameter ist 0 (null), die Funktion testet den Zustand des Objekts und kehrt sofort zurück. Wenn <c>MillisecondsTimeOutInterval</c> Wert-1 hat, läuft das Timeoutintervall der Funktion nie.</param>
+        <param name="executeOnlyOnce">
+          <see langword="true" />um anzugeben, dass der Thread nicht mehr wartet auf die <c>WaitObject</c> Parameter nach der Delegat aufgerufen wurde. <see langword="false" /> um anzugeben, dass der Timer zurückgesetzt wird, jedes Mal, wenn die "Wait"-Vorgang abgeschlossen ist, bis der Wartevorgang aufgehoben wird.</param>
+        <summary>Registriert einen Delegaten, der auf eine <see cref="T:System.Threading.WaitHandle" />-Klasse wartet, wobei für das Timeout in Millisekunden eine 64-Bit-Ganzzahl mit Vorzeichen angegeben wird.</summary>
+        <returns>Das <see cref="T:System.Threading.RegisteredWaitHandle" />, das das systemeigene Handle kapselt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie fertig sind mit den <xref:System.Threading.RegisteredWaitHandle> , die von dieser Methode zurückgegeben wird, rufen Sie die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode, um Verweise auf das Wait-Handle freigeben. Es wird empfohlen, Sie rufen Sie immer die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> -Methode, auch wenn Sie angeben, `true` für `executeOnlyOnce`. Die Garbagecollection funktioniert mehr effizient beim Aufrufen der <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode anstelle eines je nach den Finalizer für das registrierte Wait-Handle.  
+  
+ Die <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode fügt den angegebenen Delegaten für den Threadpool der Warteschlange hinzu. Ein Arbeitsthread wird der Delegat ausgeführt, wenn eines der folgenden Ereignisse eintritt:  
+  
+-   Das angegebene Objekt ist in den signalisierten Zustand aufweisen.  
+  
+-   Das Timeoutintervall verstreicht.  
+  
+ Die <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode überprüft den aktuellen Zustand des angegebenen Objekts <xref:System.Threading.WaitHandle>. Wenn der Zustand des Objekts nicht signalisierten ist, registriert die Methode eine "Wait"-Vorgang aus. Der Wartevorgang wird von einem Thread aus dem Threadpool ausgeführt. Der Delegat wird von keinem Arbeitsthread ausgeführt, wenn der Zustand des Objekts signalisiert wird oder das Timeoutintervall verstreicht. Wenn die `timeOutInterval` Parameter ist nicht 0 (null) und die `executeOnlyOnce` Parameter ist `false`, der Zeitgeber wird zurückgesetzt, jedes Mal, wenn das Ereignis signalisiert wird, oder das Timeoutintervall verstreicht.  
+  
+> [!IMPORTANT]
+>  Mit einem <xref:System.Threading.Mutex> für `waitObject` bietet keine gegenseitigen Ausschluss für die Rückrufe, da die zugrunde liegende Win32-API die verwendet `WT_EXECUTEDEFAULT` kennzeichnen, sodass jeder Rückruf auf einem separaten Thread des Threadpools verteilt wird. Statt eine <xref:System.Threading.Mutex>, verwenden Sie eine <xref:System.Threading.Semaphore> mit einer maximalen Anzahl von 1.  
+  
+ Um die "Wait"-Vorgang abzubrechen, rufen die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode.  
+  
+ Der Wait-Thread verwendet die Win32 `WaitForMultipleObjects` Funktion registrierte Wartevorgänge überwachen. Aus diesem Grund, wenn Sie die gleichen systemeigenes Betriebssystemhandle, in verwenden, müssen mehrere Aufrufe <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>, müssen Sie das mithilfe der Win32-Handle duplizieren `DuplicateHandle` Funktion. Beachten Sie, dass Sie nicht auf ein Ereignisobjekt, das an Impuls sollten <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>, da der Wait-Thread möglicherweise nicht erkennt, dass das Ereignis signalisiert wird, bevor er zurückgesetzt wird.  
+  
+ Vor der Rückgabe, ändert die Funktion den Zustand des einige Typen von Synchronisierungsobjekten. Änderung wird nur für das Objekt, dessen Zustand "signalisiert" die Wartezeit Bedingung erfüllt ist verursacht. Beispielsweise wird die Anzahl der ein Semaphor um eins verringert.  
+  
+## <a name="version-information"></a>Versionsinformationen  
+ Beginnend mit .NET Framework, Version 2.0, die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> Eigenschaftswert an Arbeitsthreads weitergegeben, in der Warteschlange mit der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode. In früheren Versionen wird die wichtigsten Informationen nicht weitergegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="millisecondsTimeOutInterval" /> Parameter ist kleiner als -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterWaitForSingleObject">
+      <MemberSignature Language="C#" Value="public static System.Threading.RegisteredWaitHandle RegisterWaitForSingleObject (System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, TimeSpan timeout, bool executeOnlyOnce);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.RegisteredWaitHandle RegisterWaitForSingleObject(class System.Threading.WaitHandle waitObject, class System.Threading.WaitOrTimerCallback callBack, object state, valuetype System.TimeSpan timeout, bool executeOnlyOnce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.RegisterWaitForSingleObject(System.Threading.WaitHandle,System.Threading.WaitOrTimerCallback,System.Object,System.TimeSpan,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.RegisteredWaitHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitObject" Type="System.Threading.WaitHandle" />
+        <Parameter Name="callBack" Type="System.Threading.WaitOrTimerCallback" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="executeOnlyOnce" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitObject">Die zu registrierende <see cref="T:System.Threading.WaitHandle" />. Verwenden Sie ein anderes <see cref="T:System.Threading.WaitHandle" /> als <see cref="T:System.Threading.Mutex" />.</param>
+        <param name="callBack">Die <see cref="T:System.Threading.WaitOrTimerCallback" /> Delegaten aufrufen, wenn die <c>WaitObject</c> -Parameter signalisiert wird.</param>
+        <param name="state">Das an den Delegaten übergebene Objekt.</param>
+        <param name="timeout">Das durch eine <see cref="T:System.TimeSpan" /> dargestellte Timeout. Wenn <c>Timeout</c> ist 0 (null), die Funktion testet den Zustand des Objekts und kehrt sofort zurück. Wenn <c>Timeout</c> Wert-1 hat, läuft das Timeoutintervall der Funktion nie.</param>
+        <param name="executeOnlyOnce">
+          <see langword="true" />um anzugeben, dass der Thread nicht mehr wartet auf die <c>WaitObject</c> Parameter nach der Delegat aufgerufen wurde. <see langword="false" /> um anzugeben, dass der Timer zurückgesetzt wird, jedes Mal, wenn die "Wait"-Vorgang abgeschlossen ist, bis der Wartevorgang aufgehoben wird.</param>
+        <summary>Registriert einen Delegaten, der auf ein <see cref="T:System.Threading.WaitHandle" /> wartet, und gibt einen <see cref="T:System.TimeSpan" />-Wert für das Timeout an.</summary>
+        <returns>Das <see cref="T:System.Threading.RegisteredWaitHandle" />, das das systemeigene Handle kapselt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie fertig sind mit den <xref:System.Threading.RegisteredWaitHandle> , die von dieser Methode zurückgegeben wird, rufen Sie die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode, um Verweise auf das Wait-Handle freigeben. Es wird empfohlen, Sie rufen Sie immer die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> -Methode, auch wenn Sie angeben, `true` für `executeOnlyOnce`. Die Garbagecollection funktioniert mehr effizient beim Aufrufen der <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode anstelle eines je nach den Finalizer für das registrierte Wait-Handle.  
+  
+ Die <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode fügt den angegebenen Delegaten für den Threadpool der Warteschlange hinzu. Ein Arbeitsthread wird der Delegat ausgeführt, wenn eines der folgenden Ereignisse eintritt:  
+  
+-   Das angegebene Objekt ist in den signalisierten Zustand aufweisen.  
+  
+-   Das Timeoutintervall verstreicht.  
+  
+ Die <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode überprüft den aktuellen Zustand des angegebenen Objekts <xref:System.Threading.WaitHandle>. Wenn der Zustand des Objekts nicht signalisierten ist, registriert die Methode eine "Wait"-Vorgang aus. Der Wartevorgang wird von einem Thread aus dem Threadpool ausgeführt. Der Delegat wird von keinem Arbeitsthread ausgeführt, wenn der Zustand des Objekts signalisiert wird oder das Timeoutintervall verstreicht. Wenn die `timeOutInterval` Parameter ist nicht 0 (null) und die `executeOnlyOnce` Parameter ist `false`, der Zeitgeber wird zurückgesetzt, jedes Mal, wenn das Ereignis signalisiert wird, oder das Timeoutintervall verstreicht.  
+  
+> [!IMPORTANT]
+>  Mit einem <xref:System.Threading.Mutex> für `waitObject` bietet keine gegenseitigen Ausschluss für die Rückrufe, da die zugrunde liegende Win32-API die verwendet `WT_EXECUTEDEFAULT` kennzeichnen, sodass jeder Rückruf auf einem separaten Thread des Threadpools verteilt wird. Statt eine <xref:System.Threading.Mutex>, verwenden Sie eine <xref:System.Threading.Semaphore> mit einer maximalen Anzahl von 1.  
+  
+ Um die "Wait"-Vorgang abzubrechen, rufen die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode.  
+  
+ Der Wait-Thread verwendet die Win32 `WaitForMultipleObjects` Funktion registrierte Wartevorgänge überwachen. Aus diesem Grund, wenn Sie die gleichen systemeigenes Betriebssystemhandle, in verwenden, müssen mehrere Aufrufe <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>, müssen Sie das mithilfe der Win32-Handle duplizieren `DuplicateHandle` Funktion. Beachten Sie, dass Sie nicht auf ein Ereignisobjekt, das an Impuls sollten <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>, da der Wait-Thread möglicherweise nicht erkennt, dass das Ereignis signalisiert wird, bevor er zurückgesetzt wird.  
+  
+ Vor der Rückgabe, ändert die Funktion den Zustand des einige Typen von Synchronisierungsobjekten. Änderung wird nur für das Objekt, dessen Zustand "signalisiert" die Wartezeit Bedingung erfüllt ist verursacht. Beispielsweise wird die Anzahl der ein Semaphor um eins verringert.  
+  
+## <a name="version-information"></a>Versionsinformationen  
+ Beginnend mit .NET Framework, Version 2.0, die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> Eigenschaftswert an Arbeitsthreads weitergegeben, in der Warteschlange mit der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode. In früheren Versionen wird die wichtigsten Informationen nicht weitergegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="timeout" /> Parameter ist kleiner als -1.</exception>
+        <exception cref="T:System.NotSupportedException">Die <paramref name="timeout" /> -Parameters ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterWaitForSingleObject">
+      <MemberSignature Language="C#" Value="public static System.Threading.RegisteredWaitHandle RegisterWaitForSingleObject (System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, uint millisecondsTimeOutInterval, bool executeOnlyOnce);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.RegisteredWaitHandle RegisterWaitForSingleObject(class System.Threading.WaitHandle waitObject, class System.Threading.WaitOrTimerCallback callBack, object state, unsigned int32 millisecondsTimeOutInterval, bool executeOnlyOnce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.RegisterWaitForSingleObject(System.Threading.WaitHandle,System.Threading.WaitOrTimerCallback,System.Object,System.UInt32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.RegisteredWaitHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitObject" Type="System.Threading.WaitHandle" />
+        <Parameter Name="callBack" Type="System.Threading.WaitOrTimerCallback" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="millisecondsTimeOutInterval" Type="System.UInt32" />
+        <Parameter Name="executeOnlyOnce" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitObject">Die zu registrierende <see cref="T:System.Threading.WaitHandle" />. Verwenden Sie ein anderes <see cref="T:System.Threading.WaitHandle" /> als <see cref="T:System.Threading.Mutex" />.</param>
+        <param name="callBack">Die <see cref="T:System.Threading.WaitOrTimerCallback" /> Delegaten aufrufen, wenn die <c>WaitObject</c> -Parameter signalisiert wird.</param>
+        <param name="state">Das an den Delegaten übergebene Objekt.</param>
+        <param name="millisecondsTimeOutInterval">Das Timeout in Millisekunden. Wenn die <c>MillisecondsTimeOutInterval</c> -Parameter ist 0 (null), die Funktion testet den Zustand des Objekts und kehrt sofort zurück. Wenn <c>MillisecondsTimeOutInterval</c> Wert-1 hat, läuft das Timeoutintervall der Funktion nie.</param>
+        <param name="executeOnlyOnce">
+          <see langword="true" />um anzugeben, dass der Thread nicht mehr wartet auf die <c>WaitObject</c> Parameter nach der Delegat aufgerufen wurde. <see langword="false" /> um anzugeben, dass der Timer zurückgesetzt wird, jedes Mal, wenn die "Wait"-Vorgang abgeschlossen ist, bis der Wartevorgang aufgehoben wird.</param>
+        <summary>Registriert einen Delegaten, der auf eine <see cref="T:System.Threading.WaitHandle" />-Klasse wartet, wobei für das Timeout in Millisekunden eine 32-Bit-Ganzzahl ohne Vorzeichen angegeben wird.</summary>
+        <returns>Das <see cref="T:System.Threading.RegisteredWaitHandle" />, mit dem der registrierte Wartevorgang abgebrochen werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie fertig sind mit den <xref:System.Threading.RegisteredWaitHandle> , die von dieser Methode zurückgegeben wird, rufen Sie die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode, um Verweise auf das Wait-Handle freigeben. Es wird empfohlen, Sie rufen Sie immer die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> -Methode, auch wenn Sie angeben, `true` für `executeOnlyOnce`. Die Garbagecollection funktioniert mehr effizient beim Aufrufen der <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode anstelle eines je nach den Finalizer für das registrierte Wait-Handle.  
+  
+ Die <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode fügt den angegebenen Delegaten für den Threadpool der Warteschlange hinzu. Ein Arbeitsthread wird der Delegat ausgeführt, wenn eines der folgenden Ereignisse eintritt:  
+  
+-   Das angegebene Objekt ist in den signalisierten Zustand aufweisen.  
+  
+-   Das Timeoutintervall verstreicht.  
+  
+ Die <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode überprüft den aktuellen Zustand des angegebenen Objekts <xref:System.Threading.WaitHandle>. Wenn der Zustand des Objekts nicht signalisierten ist, registriert die Methode eine "Wait"-Vorgang aus. Der Wartevorgang wird von einem Thread aus dem Threadpool ausgeführt. Der Delegat wird von keinem Arbeitsthread ausgeführt, wenn der Zustand des Objekts signalisiert wird oder das Timeoutintervall verstreicht. Wenn die `timeOutInterval` Parameter ist nicht 0 (null) und die `executeOnlyOnce` Parameter ist `false`, der Zeitgeber wird zurückgesetzt, jedes Mal, wenn das Ereignis signalisiert wird, oder das Timeoutintervall verstreicht.  
+  
+> [!IMPORTANT]
+>  Mit einem <xref:System.Threading.Mutex> für `waitObject` bietet keine gegenseitigen Ausschluss für die Rückrufe, da die zugrunde liegende Win32-API die verwendet `WT_EXECUTEDEFAULT` kennzeichnen, sodass jeder Rückruf auf einem separaten Thread des Threadpools verteilt wird. Statt eine <xref:System.Threading.Mutex>, verwenden Sie eine <xref:System.Threading.Semaphore> mit einer maximalen Anzahl von 1.  
+  
+ Um die "Wait"-Vorgang abzubrechen, rufen die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode.  
+  
+ Der Wait-Thread verwendet die Win32 `WaitForMultipleObjects` Funktion registrierte Wartevorgänge überwachen. Aus diesem Grund, wenn Sie die gleichen systemeigenes Betriebssystemhandle, in verwenden, müssen mehrere Aufrufe <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>, müssen Sie das mithilfe der Win32-Handle duplizieren `DuplicateHandle` Funktion. Beachten Sie, dass Sie nicht auf ein Ereignisobjekt, das an Impuls sollten <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>, da der Wait-Thread möglicherweise nicht erkennt, dass das Ereignis signalisiert wird, bevor er zurückgesetzt wird.  
+  
+ Vor der Rückgabe, ändert die Funktion den Zustand des einige Typen von Synchronisierungsobjekten. Änderung wird nur für das Objekt, dessen Zustand "signalisiert" die Wartezeit Bedingung erfüllt ist verursacht. Beispielsweise wird die Anzahl der ein Semaphor um eins verringert.  
+  
+## <a name="version-information"></a>Versionsinformationen  
+ Beginnend mit .NET Framework, Version 2.0, die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> Eigenschaftswert an Arbeitsthreads weitergegeben, in der Warteschlange mit der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode. In früheren Versionen wird die wichtigsten Informationen nicht weitergegeben.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode, um eine angegebene Rückrufmethode ausführen, wenn eine angegebene Wait-Handle signalisiert wird. In diesem Beispiel wird die Rückrufmethode `WaitProc`, und das Wait-Handle ist ein <xref:System.Threading.AutoResetEvent>.  
+  
+ Im Beispiel definiert eine `TaskInfo` Klasse, die Informationen aufnimmt, die an den Rückruf übergeben wird, wenn er ausgeführt wird. Das Beispiel erstellt eine `TaskInfo` Objekt, und weist ihm einige Zeichenfolgendaten. Die <xref:System.Threading.RegisteredWaitHandle> zurückgegebene der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode zugewiesen ist die `Handle` Feld der `TaskInfo` Objekt, sodass die Rückrufmethode auf zugreifen der <xref:System.Threading.RegisteredWaitHandle>.  
+  
+ Zusätzlich zum angeben `TaskInfo` wie das Objekt für die Übergabe an die Rückrufmethode, die den Aufruf von der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode gibt die <xref:System.Threading.AutoResetEvent> , die die Aufgabe wartet, eine <xref:System.Threading.WaitOrTimerCallback> Delegat, der darstellt der `WaitProc` Rückrufmethode darstellt, ein eine zweite Timeoutintervalls und mehrere Rückrufe.  
+  
+ Wenn der Hauptthread signalisiert der <xref:System.Threading.AutoResetEvent> durch Aufrufen seiner <xref:System.Threading.EventWaitHandle.Set%2A> -Methode, die <xref:System.Threading.WaitOrTimerCallback> Delegat aufgerufen wird. Die `WaitProc` Methode Tests <xref:System.Threading.RegisteredWaitHandle> um zu bestimmen, ob ein Timeout aufgetreten ist. Wenn der Rückruf aufgerufen wurde, weil das Wait-Handle signalisiert wurde, die `WaitProc` Methode hebt die Registrierung der <xref:System.Threading.RegisteredWaitHandle>, zusätzliche Rückrufe zu beenden. Im Falle eines Timeouts weiterhin die Aufgabe warten. Die `WaitProc` Methode beendet eine Meldung an die Konsole ausgegeben.  
+  
+ [!code-cpp[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="millisecondsTimeOutInterval" /> Parameter ist kleiner als -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMaxThreads">
+      <MemberSignature Language="C#" Value="public static bool SetMaxThreads (int workerThreads, int completionPortThreads);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool SetMaxThreads(int32 workerThreads, int32 completionPortThreads) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.SetMaxThreads(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workerThreads" Type="System.Int32" />
+        <Parameter Name="completionPortThreads" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="workerThreads">Die maximale Anzahl der Arbeitsthreads im Threadpool.</param>
+        <param name="completionPortThreads">Die maximale Anzahl asynchroner E/A-Threads im Threadpool.</param>
+        <summary>Legt die Anzahl der Anforderungen für den Threadpool fest, die gleichzeitig aktiv sein können. Alle über diese Zahl hinausgehenden Anforderungen bleiben in der Warteschlange, bis die Threads des Threadpools verfügbar sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die Änderung erfolgreich ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nicht die maximale Anzahl von Arbeitsthreads oder e/a-Abschlussthreads auf eine Zahl kleiner als die Anzahl der Prozessoren auf dem Computer festgelegt. Um zu bestimmen, wie viele Prozessoren vorhanden sind, rufen Sie den Wert der <xref:System.Environment.ProcessorCount%2A?displayProperty=nameWithType> Eigenschaft. Darüber hinaus kann nicht die maximale Anzahl von Arbeitsthreads oder e/a-Abschlussthreads auf eine Zahl kleiner als die entsprechenden minimale Anzahl von Arbeitsthreads oder e/a-Abschlussthreads festlegen. Um die Größe des mindestens erforderlichen Threadanzahl zu ermitteln, rufen die <xref:System.Threading.ThreadPool.GetMinThreads%2A> Methode.  
+  
+ Wenn die common Language Runtime gehostet wird, z. B. durch Internet Information Services (IIS) oder SQL Server, kann der Host begrenzen oder Änderungen auf die Threadpoolgröße verhindern.  
+  
+ Seien Sie vorsichtig, wenn Sie die maximale Anzahl von Threads im Threadpool zu ändern. Während der Code von Vorteil sein könnte, möglicherweise die Änderungen eine negative Auswirkung auf Codebibliotheken, die Sie verwenden.  
+  
+ Festlegen der Threadpoolgröße zu groß, kann zu Leistungsproblemen führen. Wenn zu viele Threads gleichzeitig ausgeführt werden, wird der Task Wechsel Mehraufwand ein wichtiger Faktor.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">die Möglichkeit zur Steuerung von Threads. Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlThread" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMinThreads">
+      <MemberSignature Language="C#" Value="public static bool SetMinThreads (int workerThreads, int completionPortThreads);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool SetMinThreads(int32 workerThreads, int32 completionPortThreads) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.SetMinThreads(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workerThreads" Type="System.Int32" />
+        <Parameter Name="completionPortThreads" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="workerThreads">Die Mindestanzahl von Arbeitsthreads, die der Threadpool bei Bedarf erstellt.</param>
+        <param name="completionPortThreads">Die Mindestanzahl von asynchronen E/A-Threads, die der Threadpool bei Bedarf erstellt.</param>
+        <summary>Legt die Mindestanzahl von Threads fest, die der Threadpool bei Bedarf erstellt, wenn neue Anforderungen gestellt werden, bevor zu einem Algorithmus zum Verwalten von Threaderstellung und -löschung gewechselt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die Änderung erfolgreich ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Threadpool stellt neue Arbeitsthreads oder e/a-Abschlussthreads bei Bedarf bereit, bis der Mindestwert für jede Kategorie erreicht ist. Wenn das Minimum erreicht wird, kann der Threadpool Weitere Threads in dieser Kategorie erstellen oder warten Sie, bis einige Aufgaben abgeschlossen. Beginnend mit der [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], der Threadpool erstellt und zerstört Threads um den Durchsatz zu optimieren, der als die Anzahl der Aufgaben definiert ist, die pro Zeiteinheit abgeschlossen. Bei zu wenigen Threads werden die verfügbaren Ressourcen möglicherweise nicht optimal genutzt, wohingegen bei zu vielen Threads Ressourcenkonflikte auftreten können.   
+  
+ Wenn die Anforderungen niedrig sind, kann die tatsächliche Anzahl der Threads im Threadpool unterhalb der Mindestwerte liegen.  
+  
+ Wenn Sie eine negative Zahl oder eine Zahl größer als die maximale Anzahl der aktiven Threads im Threadpool angeben (mittels abgerufen <xref:System.Threading.ThreadPool.GetMaxThreads%2A>), <xref:System.Threading.ThreadPool.SetMinThreads%2A> gibt `false` und keiner der Mindestwerte wird geändert.  
+  
+> [!CAUTION]
+>  Standardmäßig ist die Anzahl der Prozessoren auf einem System die Mindestanzahl von Threads fest. Sie können die <xref:System.Threading.ThreadPool.SetMinThreads%2A> Methode, um die minimale Anzahl Ofthreads erhöhen. Allerdings kann ein unnötiges Erhöhen dieses Wertes zu Leistungsproblemen führen. Wenn zu viele Aufgaben gleichzeitig gestartet werden, werden möglicherweise alle Aufgaben zu langsam ausgeführt. In den meisten Fällen wird der Threadpool mit dem eigenen Algorithmus für die Zuordnung von Threads eine bessere Leistung. Die Mindestanzahl auf weniger als die Anzahl der Prozessoren auch Leistung beeinträchtigt werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die minimale Anzahl von Arbeitsthreads auf vier und behält den ursprünglichen Wert für die Mindestanzahl von asynchronen e/a-Abschlussthreads.  
+  
+ [!code-cpp[System.Threading.ThreadPool.GetSetMinThreads#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool.GetSetMinThreads/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool.GetSetMinThreads#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool.GetSetMinThreads/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool.GetSetMinThreads#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool.GetSetMinThreads/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">die Möglichkeit zur Steuerung von Threads. Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlThread" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeQueueNativeOverlapped">
+      <MemberSignature Language="C#" Value="public static bool UnsafeQueueNativeOverlapped (System.Threading.NativeOverlapped* overlapped);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool UnsafeQueueNativeOverlapped(valuetype System.Threading.NativeOverlapped* overlapped) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.UnsafeQueueNativeOverlapped(System.Threading.NativeOverlapped*)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="overlapped" Type="System.Threading.NativeOverlapped*" />
+      </Parameters>
+      <Docs>
+        <param name="overlapped">Die <see cref="T:System.Threading.NativeOverlapped" />-Struktur, die in die Warteschlange gestellt werden soll.</param>
+        <summary>Stellt einen überlappenden E/A-Vorgang zur Ausführung in die Warteschlange.</summary>
+        <returns>
+          <see langword="true" />, wenn die Operation erfolgreich in die Warteschlange eines E/A-Abschlussanschlusses gestellt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zum Verwenden von systemeigenen Win32-e/a overlapped, finden Sie unter der <xref:System.Threading.Overlapped> -Klasse, die <xref:System.Threading.NativeOverlapped> -Struktur, und die `OVERLAPPED` Struktur im Win32-Plattform-SDK.  
+  
+> [!CAUTION]
+>  Mithilfe der <xref:System.Threading.ThreadPool.UnsafeQueueNativeOverlapped%2A> Methode kann eine Sicherheitslücke unbeabsichtigt. Codezugriffssicherheit Basen seine berechtigungsüberprüfungen für die Berechtigungen aller Aufrufer auf dem Stapel an. Wenn Arbeit wird in die Warteschlange ein Thread im Threadpool mit <xref:System.Threading.ThreadPool.UnsafeQueueNativeOverlapped%2A>, der Stapel des Threadpoolthreads verfügt nicht über den Kontext des tatsächlichen Aufrufers. Bösartiger Code möglicherweise nutzen Sie diese Option, um berechtigungsprüfungen zu vermeiden.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeQueueUserWorkItem">
+      <MemberSignature Language="C#" Value="public static bool UnsafeQueueUserWorkItem (System.Threading.WaitCallback callBack, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool UnsafeQueueUserWorkItem(class System.Threading.WaitCallback callBack, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.UnsafeQueueUserWorkItem(System.Threading.WaitCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callBack" Type="System.Threading.WaitCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callBack">Ein <see cref="T:System.Threading.WaitCallback" />, der den Delegaten darstellt, der aufgerufen werden soll, wenn ein Thread im Threadpool die Arbeitsaufgabe aufnimmt.</param>
+        <param name="state">Das Objekt, das an den Delegaten übergeben wird, wenn die Bearbeitung aus dem Threadpool erfolgt.</param>
+        <summary>Stellt den angegebenen Delegaten in eine Warteschlange für den Threadpool, leitet die Aufrufliste jedoch nicht an den Arbeitsthread weiter.</summary>
+        <returns>
+          <see langword="true" />, wenn die Methode erfolgreich ist. <see cref="T:System.OutOfMemoryException" /> wird ausgelöst, wenn die Arbeitsaufgabe nicht in die Warteschlange gestellt werden konnte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> Methode <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A> leitet den aufrufenden Stapel an den Arbeitsthread nicht weiter. Dies ermöglicht Code, den aufrufenden Stapel nicht mehr und dadurch die Sicherheit für die rechteerweiterung.  
+  
+> [!CAUTION]
+>  Mithilfe von <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A> kann unbeabsichtigt eine Sicherheitslücke. Codezugriffssicherheit Basen seine berechtigungsüberprüfungen für die Berechtigungen aller Aufrufer auf dem Stapel an. Wenn Arbeit wird in die Warteschlange ein Thread im Threadpool mit <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A>, der Stapel des Threadpoolthreads müssen sich nicht auf den Kontext des tatsächlichen Aufrufers. Bösartiger Code möglicherweise nutzen Sie diese Option, um berechtigungsprüfungen zu vermeiden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ApplicationException">Eine Out-of-Memory-Bedingung wurde gefunden.</exception>
+        <exception cref="T:System.OutOfMemoryException">Die Arbeitsaufgabe konnte nicht in die Warteschlange eingereiht werden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callBack" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeRegisterWaitForSingleObject">
+      <MemberSignature Language="C#" Value="public static System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject (System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, int millisecondsTimeOutInterval, bool executeOnlyOnce);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(class System.Threading.WaitHandle waitObject, class System.Threading.WaitOrTimerCallback callBack, object state, int32 millisecondsTimeOutInterval, bool executeOnlyOnce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject(System.Threading.WaitHandle,System.Threading.WaitOrTimerCallback,System.Object,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.RegisteredWaitHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitObject" Type="System.Threading.WaitHandle" />
+        <Parameter Name="callBack" Type="System.Threading.WaitOrTimerCallback" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="millisecondsTimeOutInterval" Type="System.Int32" />
+        <Parameter Name="executeOnlyOnce" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitObject">Die zu registrierende <see cref="T:System.Threading.WaitHandle" />. Verwenden Sie ein anderes <see cref="T:System.Threading.WaitHandle" /> als <see cref="T:System.Threading.Mutex" />.</param>
+        <param name="callBack">Der Delegat, der beim Aufrufen der <c>WaitObject</c> -Parameter signalisiert wird.</param>
+        <param name="state">Das an den Delegaten übergebene Objekt.</param>
+        <param name="millisecondsTimeOutInterval">Das Timeout in Millisekunden. Wenn die <c>MillisecondsTimeOutInterval</c> -Parameter ist 0 (null), die Funktion testet den Zustand des Objekts und kehrt sofort zurück. Wenn <c>MillisecondsTimeOutInterval</c> Wert-1 hat, läuft das Timeoutintervall der Funktion nie.</param>
+        <param name="executeOnlyOnce">
+          <see langword="true" />um anzugeben, dass der Thread nicht mehr wartet auf die <c>WaitObject</c> Parameter nach der Delegat aufgerufen wurde. <see langword="false" /> um anzugeben, dass der Timer zurückgesetzt wird, jedes Mal, wenn die "Wait"-Vorgang abgeschlossen ist, bis der Wartevorgang aufgehoben wird.</param>
+        <summary>Registriert einen Delegaten, der auf eine <see cref="T:System.Threading.WaitHandle" />-Klasse wartet, wobei für das Timeout in Millisekunden eine 32-Bit-Ganzzahl mit Vorzeichen verwendet wird. Diese Methode leitet den aufrufenden Stapel nicht an den Arbeitsthread weiter.</summary>
+        <returns>Das <see cref="T:System.Threading.RegisteredWaitHandle" />-Objekt, mit dem der registrierte Wartevorgang abgebrochen werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A> leitet den aufrufenden Stapel an den Arbeitsthread nicht weiter. Dies ermöglicht Code, den aufrufenden Stapel nicht mehr und dadurch die Sicherheit für die rechteerweiterung.  
+  
+> [!CAUTION]
+>  Mithilfe von <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A> kann unbeabsichtigt eine Sicherheitslücke. Codezugriffssicherheit Basen seine berechtigungsüberprüfungen für die Berechtigungen aller Aufrufer auf dem Stapel an. Wenn Arbeit wird in die Warteschlange ein Thread im Threadpool mit <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A>, der Stapel des Threadpoolthreads müssen sich nicht auf den Kontext des tatsächlichen Aufrufers. Bösartiger Code möglicherweise nutzen Sie diese Option, um berechtigungsprüfungen zu vermeiden.  
+  
+ Mit einem <xref:System.Threading.Mutex> für `waitObject` bietet keine gegenseitigen Ausschluss für die Rückrufe, da die zugrunde liegende Win32-API die verwendet `WT_EXECUTEDEFAULT` kennzeichnen, sodass jeder Rückruf auf einem separaten Thread des Threadpools verteilt wird.  
+  
+ Wenn Sie fertig sind mit den <xref:System.Threading.RegisteredWaitHandle> , die von dieser Methode zurückgegeben wird, rufen Sie die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode, um Verweise auf das Wait-Handle freigeben. Es wird empfohlen, Sie rufen Sie immer die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> -Methode, auch wenn Sie angeben, `true` für `executeOnlyOnce`. Die Garbagecollection funktioniert mehr effizient beim Aufrufen der <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode anstelle eines je nach den Finalizer für das registrierte Wait-Handle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="millisecondsTimeOutInterval" /> Parameter ist kleiner als -1.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeRegisterWaitForSingleObject">
+      <MemberSignature Language="C#" Value="public static System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject (System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, long millisecondsTimeOutInterval, bool executeOnlyOnce);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(class System.Threading.WaitHandle waitObject, class System.Threading.WaitOrTimerCallback callBack, object state, int64 millisecondsTimeOutInterval, bool executeOnlyOnce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject(System.Threading.WaitHandle,System.Threading.WaitOrTimerCallback,System.Object,System.Int64,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.RegisteredWaitHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitObject" Type="System.Threading.WaitHandle" />
+        <Parameter Name="callBack" Type="System.Threading.WaitOrTimerCallback" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="millisecondsTimeOutInterval" Type="System.Int64" />
+        <Parameter Name="executeOnlyOnce" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitObject">Die zu registrierende <see cref="T:System.Threading.WaitHandle" />. Verwenden Sie ein anderes <see cref="T:System.Threading.WaitHandle" /> als <see cref="T:System.Threading.Mutex" />.</param>
+        <param name="callBack">Der Delegat, der beim Aufrufen der <c>WaitObject</c> -Parameter signalisiert wird.</param>
+        <param name="state">Das an den Delegaten übergebene Objekt.</param>
+        <param name="millisecondsTimeOutInterval">Das Timeout in Millisekunden. Wenn die <c>MillisecondsTimeOutInterval</c> -Parameter ist 0 (null), die Funktion testet den Zustand des Objekts und kehrt sofort zurück. Wenn <c>MillisecondsTimeOutInterval</c> Wert-1 hat, läuft das Timeoutintervall der Funktion nie.</param>
+        <param name="executeOnlyOnce">
+          <see langword="true" />um anzugeben, dass der Thread nicht mehr wartet auf die <c>WaitObject</c> Parameter nach der Delegat aufgerufen wurde. <see langword="false" /> um anzugeben, dass der Timer zurückgesetzt wird, jedes Mal, wenn die "Wait"-Vorgang abgeschlossen ist, bis der Wartevorgang aufgehoben wird.</param>
+        <summary>Registriert einen Delegaten, der auf eine <see cref="T:System.Threading.WaitHandle" />-Klasse wartet, wobei für das Timeout in Millisekunden eine 64-Bit-Ganzzahl mit Vorzeichen angegeben wird. Diese Methode leitet den aufrufenden Stapel nicht an den Arbeitsthread weiter.</summary>
+        <returns>Das <see cref="T:System.Threading.RegisteredWaitHandle" />-Objekt, mit dem der registrierte Wartevorgang abgebrochen werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A> leitet den aufrufenden Stapel an den Arbeitsthread nicht weiter. Dies ermöglicht Code, den aufrufenden Stapel nicht mehr und dadurch die Sicherheit für die rechteerweiterung.  
+  
+> [!CAUTION]
+>  Mithilfe von <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A> kann unbeabsichtigt eine Sicherheitslücke. Codezugriffssicherheit Basen seine berechtigungsüberprüfungen für die Berechtigungen aller Aufrufer auf dem Stapel an. Wenn Arbeit wird in die Warteschlange ein Thread im Threadpool mit <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A>, der Stapel des Threadpoolthreads müssen sich nicht auf den Kontext des tatsächlichen Aufrufers. Bösartiger Code möglicherweise nutzen Sie diese Option, um berechtigungsprüfungen zu vermeiden.  
+  
+ Mit einem <xref:System.Threading.Mutex> für `waitObject` bietet keine gegenseitigen Ausschluss für die Rückrufe, da die zugrunde liegende Win32-API die verwendet `WT_EXECUTEDEFAULT` kennzeichnen, sodass jeder Rückruf auf einem separaten Thread des Threadpools verteilt wird.  
+  
+ Wenn Sie fertig sind mit den <xref:System.Threading.RegisteredWaitHandle> , die von dieser Methode zurückgegeben wird, rufen Sie die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode, um Verweise auf das Wait-Handle freigeben. Es wird empfohlen, Sie rufen Sie immer die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> -Methode, auch wenn Sie angeben, `true` für `executeOnlyOnce`. Die Garbagecollection funktioniert mehr effizient beim Aufrufen der <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode anstelle eines je nach den Finalizer für das registrierte Wait-Handle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="millisecondsTimeOutInterval" /> Parameter ist kleiner als -1.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeRegisterWaitForSingleObject">
+      <MemberSignature Language="C#" Value="public static System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject (System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, TimeSpan timeout, bool executeOnlyOnce);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(class System.Threading.WaitHandle waitObject, class System.Threading.WaitOrTimerCallback callBack, object state, valuetype System.TimeSpan timeout, bool executeOnlyOnce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject(System.Threading.WaitHandle,System.Threading.WaitOrTimerCallback,System.Object,System.TimeSpan,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.RegisteredWaitHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitObject" Type="System.Threading.WaitHandle" />
+        <Parameter Name="callBack" Type="System.Threading.WaitOrTimerCallback" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="executeOnlyOnce" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitObject">Die zu registrierende <see cref="T:System.Threading.WaitHandle" />. Verwenden Sie ein anderes <see cref="T:System.Threading.WaitHandle" /> als <see cref="T:System.Threading.Mutex" />.</param>
+        <param name="callBack">Der Delegat, der beim Aufrufen der <c>WaitObject</c> -Parameter signalisiert wird.</param>
+        <param name="state">Das an den Delegaten übergebene Objekt.</param>
+        <param name="timeout">Das durch eine <see cref="T:System.TimeSpan" /> dargestellte Timeout. Wenn <c>Timeout</c> ist 0 (null), die Funktion testet den Zustand des Objekts und kehrt sofort zurück. Wenn <c>Timeout</c> Wert-1 hat, läuft das Timeoutintervall der Funktion nie.</param>
+        <param name="executeOnlyOnce">
+          <see langword="true" />um anzugeben, dass der Thread nicht mehr wartet auf die <c>WaitObject</c> Parameter nach der Delegat aufgerufen wurde. <see langword="false" /> um anzugeben, dass der Timer zurückgesetzt wird, jedes Mal, wenn die "Wait"-Vorgang abgeschlossen ist, bis der Wartevorgang aufgehoben wird.</param>
+        <summary>Registriert einen Delegaten, der auf ein <see cref="T:System.Threading.WaitHandle" /> wartet, und gibt einen <see cref="T:System.TimeSpan" />-Wert für das Timeout an. Diese Methode leitet den aufrufenden Stapel nicht an den Arbeitsthread weiter.</summary>
+        <returns>Das <see cref="T:System.Threading.RegisteredWaitHandle" />-Objekt, mit dem der registrierte Wartevorgang abgebrochen werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A> leitet den aufrufenden Stapel an den Arbeitsthread nicht weiter. Dies ermöglicht Code, den aufrufenden Stapel nicht mehr und dadurch die Sicherheit für die rechteerweiterung.  
+  
+> [!CAUTION]
+>  Mithilfe von <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A> kann unbeabsichtigt eine Sicherheitslücke. Codezugriffssicherheit Basen seine berechtigungsüberprüfungen für die Berechtigungen aller Aufrufer auf dem Stapel an. Wenn Arbeit wird in die Warteschlange ein Thread im Threadpool mit <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A>, der Stapel des Threadpoolthreads müssen sich nicht auf den Kontext des tatsächlichen Aufrufers. Bösartiger Code möglicherweise nutzen Sie diese Option, um berechtigungsprüfungen zu vermeiden.  
+  
+ Mit einem <xref:System.Threading.Mutex> für `waitObject` bietet keine gegenseitigen Ausschluss für die Rückrufe, da die zugrunde liegende Win32-API die verwendet `WT_EXECUTEDEFAULT` kennzeichnen, sodass jeder Rückruf auf einem separaten Thread des Threadpools verteilt wird.  
+  
+ Wenn Sie fertig sind mit den <xref:System.Threading.RegisteredWaitHandle> , die von dieser Methode zurückgegeben wird, rufen Sie die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode, um Verweise auf das Wait-Handle freigeben. Es wird empfohlen, Sie rufen Sie immer die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> -Methode, auch wenn Sie angeben, `true` für `executeOnlyOnce`. Die Garbagecollection funktioniert mehr effizient beim Aufrufen der <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode anstelle eines je nach den Finalizer für das registrierte Wait-Handle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="timeout" /> Parameter ist kleiner als -1.</exception>
+        <exception cref="T:System.NotSupportedException">Die <paramref name="timeout" /> -Parameters ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeRegisterWaitForSingleObject">
+      <MemberSignature Language="C#" Value="public static System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject (System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, uint millisecondsTimeOutInterval, bool executeOnlyOnce);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(class System.Threading.WaitHandle waitObject, class System.Threading.WaitOrTimerCallback callBack, object state, unsigned int32 millisecondsTimeOutInterval, bool executeOnlyOnce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject(System.Threading.WaitHandle,System.Threading.WaitOrTimerCallback,System.Object,System.UInt32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.RegisteredWaitHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitObject" Type="System.Threading.WaitHandle" />
+        <Parameter Name="callBack" Type="System.Threading.WaitOrTimerCallback" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="millisecondsTimeOutInterval" Type="System.UInt32" />
+        <Parameter Name="executeOnlyOnce" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitObject">Die zu registrierende <see cref="T:System.Threading.WaitHandle" />. Verwenden Sie ein anderes <see cref="T:System.Threading.WaitHandle" /> als <see cref="T:System.Threading.Mutex" />.</param>
+        <param name="callBack">Der Delegat, der beim Aufrufen der <c>WaitObject</c> -Parameter signalisiert wird.</param>
+        <param name="state">Das an den Delegaten übergebene Objekt.</param>
+        <param name="millisecondsTimeOutInterval">Das Timeout in Millisekunden. Wenn die <c>MillisecondsTimeOutInterval</c> -Parameter ist 0 (null), die Funktion testet den Zustand des Objekts und kehrt sofort zurück. Wenn <c>MillisecondsTimeOutInterval</c> Wert-1 hat, läuft das Timeoutintervall der Funktion nie.</param>
+        <param name="executeOnlyOnce">
+          <see langword="true" />um anzugeben, dass der Thread nicht mehr wartet auf die <c>WaitObject</c> Parameter nach der Delegat aufgerufen wurde. <see langword="false" /> um anzugeben, dass der Timer zurückgesetzt wird, jedes Mal, wenn die "Wait"-Vorgang abgeschlossen ist, bis der Wartevorgang aufgehoben wird.</param>
+        <summary>Registriert einen Delegaten, der auf eine <see cref="T:System.Threading.WaitHandle" />-Klasse wartet, wobei für das Timeout in Millisekunden eine 32-Bit-Ganzzahl ohne Vorzeichen angegeben wird. Diese Methode leitet den aufrufenden Stapel nicht an den Arbeitsthread weiter.</summary>
+        <returns>Das <see cref="T:System.Threading.RegisteredWaitHandle" />-Objekt, mit dem der registrierte Wartevorgang abgebrochen werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A> leitet den aufrufenden Stapel an den Arbeitsthread nicht weiter. Dies ermöglicht Code, den aufrufenden Stapel nicht mehr und dadurch die Sicherheit für die rechteerweiterung.  
+  
+> [!CAUTION]
+>  Mithilfe von <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A> kann unbeabsichtigt eine Sicherheitslücke. Codezugriffssicherheit Basen seine berechtigungsüberprüfungen für die Berechtigungen aller Aufrufer auf dem Stapel an. Wenn Arbeit wird in die Warteschlange ein Thread im Threadpool mit <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A>, der Stapel des Threadpoolthreads müssen sich nicht auf den Kontext des tatsächlichen Aufrufers. Bösartiger Code möglicherweise nutzen Sie diese Option, um berechtigungsprüfungen zu vermeiden.  
+  
+ Mit einem <xref:System.Threading.Mutex> für `waitObject` bietet keine gegenseitigen Ausschluss für die Rückrufe, da die zugrunde liegende Win32-API die verwendet `WT_EXECUTEDEFAULT` kennzeichnen, sodass jeder Rückruf auf einem separaten Thread des Threadpools verteilt wird.  
+  
+ Wenn Sie fertig sind mit den <xref:System.Threading.RegisteredWaitHandle> , die von dieser Methode zurückgegeben wird, rufen Sie die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode, um Verweise auf das Wait-Handle freigeben. Es wird empfohlen, Sie rufen Sie immer die <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> -Methode, auch wenn Sie angeben, `true` für `executeOnlyOnce`. Die Garbagecollection funktioniert mehr effizient beim Aufrufen der <xref:System.Threading.RegisteredWaitHandle.Unregister%2A?displayProperty=nameWithType> Methode anstelle eines je nach den Finalizer für das registrierte Wait-Handle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

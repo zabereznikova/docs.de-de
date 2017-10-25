@@ -1,0 +1,62 @@
+<Type Name="EntitySet" FullName="System.Data.Metadata.Edm.EntitySet">
+  <TypeSignature Language="C#" Value="public class EntitySet : System.Data.Metadata.Edm.EntitySetBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntitySet extends System.Data.Metadata.Edm.EntitySetBase" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.EntitySet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Metadata.Edm.EntitySetBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Entitätenmenge in einem konzeptionellen Modell dar. Eine <see cref="T:System.Data.Metadata.Edm.EntitySet" /> für einen <see cref="T:System.Data.Metadata.Edm.EntityType" /> enthält Instanzen des <see cref="T:System.Data.Metadata.Edm.EntityType" /> oder eines Untertyps. Es kann mehr als eine <see cref="T:System.Data.Metadata.Edm.EntitySet" /> definiert werden, wenn derselbe <see cref="T:System.Data.Metadata.Edm.EntityType" /> verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Entität in einem konzeptionellen Modell finden Sie unter [Entity Sets (EDM)](http://msdn.microsoft.com/en-us/464334ee-6a65-4b9e-b081-65efbc182807).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuiltInTypeKind">
+      <MemberSignature Language="C#" Value="public override System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EntitySet.BuiltInTypeKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.BuiltInTypeKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die integrierte Typart für <see cref="T:System.Data.Metadata.Edm.EntitySet" /> auf.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.BuiltInTypeKind" />-Objekt, das die integrierte Typart für <see cref="T:System.Data.Metadata.Edm.EntitySet" /> darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EntityType ElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.EntityType ElementType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EntitySet.ElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EntityType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Entitätstyp von <see cref="T:System.Data.Metadata.Edm.EntitySet" /> ab.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.EntityType" />-Objekt, das den Entitätstyp dieser <see cref="T:System.Data.Metadata.Edm.EntitySet" /> darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

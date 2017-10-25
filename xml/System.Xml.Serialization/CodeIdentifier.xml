@@ -1,0 +1,191 @@
+<Type Name="CodeIdentifier" FullName="System.Xml.Serialization.CodeIdentifier">
+  <TypeSignature Language="C#" Value="public class CodeIdentifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CodeIdentifier extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.CodeIdentifier" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt statische Methoden zum Konvertieren von Eingabetext in Namen für Entitäten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methoden der <xref:System.Xml.Serialization.CodeIdentifier> Klasse werden von der Serialisierungsinfrastruktur XML beim Erzeugen von .NET Framework-Typen aus XML-Element- und -Typdefinitionen verwendet. XML-Element oder Attribut Namen bieten in der Regel die Methoden Eingabetext.  
+  
+ Sie müssen nicht die Methoden von Aufrufen der <xref:System.Xml.Serialization.CodeIdentifier> Klasse direkt aus dem Code. Verwenden Sie stattdessen die verschiedenen Tools und APIs, die von .NET Framework für die XML-Serialisierung, bereitgestellt werden, z. B. die <xref:System.Xml.Serialization.XmlSerializer>, oder die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) Tool.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeIdentifier ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifier.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This class should never get constructed as it contains only static methods.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.CodeIdentifier" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MakeCamel">
+      <MemberSignature Language="C#" Value="public static string MakeCamel (string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string MakeCamel(string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifier.MakeCamel(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Der Name einer Entität mit Code, z. B. einem Methodenparameter, die in der Regel aus einem XML-Element oder Attribut Namen erstellt.</param>
+        <summary>Erzeugt eine Camel-Case-Zeichenfolge aus einer Eingabezeichenfolge.</summary>
+        <returns>Eine Camel-Case-Version der Parameterzeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.CodeIdentifier.MakeCamel%2A> Methode konvertiert das erste Zeichen in einen Großbuchstaben in Kleinbuchstaben, bei Bedarf.  
+  
+ Sie müssen nicht direkt aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MakePascal">
+      <MemberSignature Language="C#" Value="public static string MakePascal (string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string MakePascal(string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifier.MakePascal(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Der Name einer Entität mit Code, z. B. einem Methodenparameter, die in der Regel aus einem XML-Element oder Attribut Namen erstellt.</param>
+        <summary>Erzeugt eine Pascal-Schreibweise Zeichenfolge aus einer Eingabezeichenfolge.</summary>
+        <returns>Eine Zeichenfolge für die Pascal-Schreibweise-Version.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.CodeIdentifier.MakePascal%2A> -Methode konvertiert das erste Zeichen von Kleinbuchstaben in Großbuchstaben, falls erforderlich.  
+  
+ Sie müssen nicht direkt aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MakeValid">
+      <MemberSignature Language="C#" Value="public static string MakeValid (string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string MakeValid(string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifier.MakeValid(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Der Name einer Entität mit Code, z. B. einem Methodenparameter, die in der Regel aus einem XML-Element oder Attribut Namen erstellt.</param>
+        <summary>Erzeugt einen gültigen Code Entitätsname aus einer Eingabezeichenfolge.</summary>
+        <returns>Eine Zeichenfolge, die als Codebezeichner, z. B. den Namen eines Methodenparameters verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.CodeIdentifier.MakeValid%2A> -Methode entfernt alle Zeichen, die angezeigt werden, können nicht in einem Codebezeichner. Er gibt die Zeichenfolge "Item", wenn keine Zeichen gültig sind. Das Präfix der Zeichenfolge "Item" zu einer Eingabe, die z. B. mit einem ungültiger Zeichen beginnt, eine Ziffer oder ein Währungssymbol.  
+  
+ Sie müssen nicht direkt aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,46 @@
+<Type Name="NotifyInputEventHandler" FullName="System.Windows.Input.NotifyInputEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void NotifyInputEventHandler(object sender, NotifyInputEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NotifyInputEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.NotifyInputEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.NotifyInputEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode für die Behandlung <see cref="E:System.Windows.Input.InputManager.PreNotifyInput" /> und <see cref="E:System.Windows.Input.InputManager.PostNotifyInput" /> Ereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eingabe im Stagingbereich verarbeitet Eingaben in [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Ereignisse.  
+  
+ Die <xref:System.Windows.Input.NotifyInputEventHandler> wird verwendet, mit der <xref:System.Windows.Input.InputManager.PreNotifyInput> und <xref:System.Windows.Input.InputManager.PostNotifyInput> Ereignisse.  
+  
+ Verarbeitung von Eingaben in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] in den folgenden Phasen:  
+  
+1.  Phase vor der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreProcessInput> Ereignis.  
+  
+2.  Phase vor der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreNotifyInput> Ereignis.  
+  
+3.  Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eingabeereignis oder Ereignisse ausgelöst werden.  
+  
+4.  Phase nach der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostNotifyInput> Ereignis.  
+  
+5.  Phase nach der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostProcessInput> Ereignis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

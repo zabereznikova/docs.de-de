@@ -1,0 +1,144 @@
+<Type Name="IActivationObject" FullName="Microsoft.JScript.IActivationObject">
+  <TypeSignature Language="C#" Value="public interface IActivationObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IActivationObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.IActivationObject" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Methoden zum Auflösen von Bereich. Diese Schnittstelle wird von allen Objekten implementiert, die Teil einer Bereichshierarchie akzeptieren.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetDefaultThisObject">
+      <MemberSignature Language="C#" Value="public object GetDefaultThisObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetDefaultThisObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IActivationObject.GetDefaultThisObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bei Implementierung in einer Klasse ruft den aktuellen Standardbereich ab. Die darin enthaltenen Objekte von einem <see langword="with" /> Anweisung, oder der globale Gültigkeitsbereich.</summary>
+        <returns>Der aktuelle Standardbereich.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetField">
+      <MemberSignature Language="C#" Value="public System.Reflection.FieldInfo GetField (string name, int lexLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.FieldInfo GetField(string name, int32 lexLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IActivationObject.GetField(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="lexLevel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu suchenden Felds.</param>
+        <param name="lexLevel">Die lexikalische Ebene, gesucht werden soll.</param>
+        <summary>Bei Implementierung in einer Klasse gibt ein Feld, das dem angegebenen Namen ab, indem die Bereichshierarchie zurück. Diese Methode sucht nur den Bereich, der durch die lexikalische Ebene angegeben ist.</summary>
+        <returns>Ein <see cref="T:System.Reflection.FieldInfo" /> -Objekt, das dem angegebenen Namen ab.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gilt für Felder, die zum Zeitpunkt der Kompilierung nicht aufgelöst werden können. Dies geschieht, wenn ein `eval` Ausdruck bezieht sich auf ein Feld im äußeren Gültigkeitsbereich. Da die `eval` Ausdruck kann ein lokales Feld mit dem gleichen Namen zu deklarieren, das Feld darf nicht auf das Feld im äußeren Bereich früh gebunden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetGlobalScope">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.GlobalScope GetGlobalScope ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.JScript.GlobalScope GetGlobalScope() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IActivationObject.GetGlobalScope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.GlobalScope</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bei Implementierung in einer Klasse ruft der globalen Gültigkeitsbereich durch die Bereichshierarchie bis er einen Bereich findet, der statische Variablen, z. B. eine Geltungsbereichs des Moduls enthält.</summary>
+        <returns>Der globale Bereich.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalField">
+      <MemberSignature Language="C#" Value="public System.Reflection.FieldInfo GetLocalField (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.FieldInfo GetLocalField(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IActivationObject.GetLocalField(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Felds.</param>
+        <summary>Bei Implementierung in einer Klasse ruft die lokale Deklaration eines Felds, das dem angegebenen Namen ab. Dies ist zum Zeitpunkt der Kompilierung für die Überprüfung von Fehlern verwendet.</summary>
+        <returns>Die lokale Deklaration des Felds.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetMemberValue">
+      <MemberSignature Language="C#" Value="public object GetMemberValue (string name, int lexlevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetMemberValue(string name, int32 lexlevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IActivationObject.GetMemberValue(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="lexlevel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu suchenden Elements.</param>
+        <param name="lexlevel">Die lexikalische Ebene, gesucht werden soll.</param>
+        <summary>Bei Implementierung in einer Klasse ruft den Wert des angegebenen Elements ab, durch die Bereichshierarchie. Diese Methode sucht nur den Bereich, der durch die lexikalische Ebene angegeben ist.</summary>
+        <returns>Der Wert des Elements <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gilt für Elemente, die zum Zeitpunkt der Kompilierung nicht aufgelöst werden können. Dies tritt auf, wenn ein `eval` Ausdruck bezieht sich auf ein Element im äußeren Gültigkeitsbereich. Da die `eval` Ausdruck kann einen lokalen Member mit demselben Namen zu deklarieren, das Element nicht an den Member im äußeren Bereich früh gebunden werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

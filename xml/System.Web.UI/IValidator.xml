@@ -1,0 +1,133 @@
+<Type Name="IValidator" FullName="System.Web.UI.IValidator">
+  <TypeSignature Language="C#" Value="public interface IValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Eigenschaften und Methoden, die Objekte, die in Web Forms-Überprüfung einbezogen implementieren müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die diese Schnittstelle implementieren, stellen eine mögliche Fehler in Benutzereingaben dar. Wenn die <xref:System.Web.UI.IValidator.Validate%2A> -Methode aufgerufen wird, aktualisiert die Klasse der <xref:System.Web.UI.IValidator.IsValid%2A> Eigenschaft, um anzugeben, ob der Fehler aufgetreten ist. Die <xref:System.Web.UI.IValidator.ErrorMessage%2A> Eigenschaft enthält eine Beschreibung des Fehlerzustands, die Sie anzeigen können, wenn der Fehler auftritt.  
+  
+ Die <xref:System.Web.UI.WebControls.BaseValidator> -Klasse implementiert diese Schnittstelle ist und alle anderen ASP.NET Überprüfung Serversteuerelementklassen von <xref:System.Web.UI.WebControls.BaseValidator>. Informationen auf der Validierungssteuerelemente für Server und ihrer Funktionsweise finden Sie unter [ASP.NET-Validierungssteuerelementen](http://msdn.microsoft.com/library/fa2aa14d-a461-492e-9a79-c990904613ef).  
+  
+ Weitere Informationen zum Entwickeln von benutzerdefinierter ASP.NET-Serversteuerelementen für die Validierung finden Sie unter [Vorgehensweise: Überprüfen mit einer benutzerdefinierten Funktion für ASP.NET-Serversteuerelemente](http://msdn.microsoft.com/library/f3ece2ad-2e88-40df-bb8b-3fe53ecf21ab).  
+  
+   
+  
+## Examples  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[IValidator_IsValid_Resubmit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/IValidator_IsValid_ReSubmit/CS/ivalidator_isvalid.cs.aspx#1)]
+ [!code-aspx-vb[IValidator_IsValid_Resubmit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/IValidator_IsValid_ReSubmit/VB/ivalidator_isvalid.vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ErrorMessage">
+      <MemberSignature Language="C#" Value="public string ErrorMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IValidator.ErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei der Implementierung durch eine Klasse ruft ab, oder legt ihn fest der Text der Fehlermeldung generiert, wenn die validierten Bedingung ein Fehler auftritt.</summary>
+        <value>Die Fehlermeldung generiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET-Entwickler Zugriff auf diese Eigenschaft deklarativ im öffnenden Tag eines Server-Validierungssteuerelements. Weitere Informationen finden Sie unter [Validation Server Control Syntax](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+   
+  
+## Examples  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[IValidator_IsValid_Resubmit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/IValidator_IsValid_ReSubmit/CS/ivalidator_isvalid.cs.aspx#1)]
+ [!code-aspx-vb[IValidator_IsValid_Resubmit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/IValidator_IsValid_ReSubmit/VB/ivalidator_isvalid.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IValidator.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei der Implementierung durch eine Klasse ruft ab oder legt einen Wert, der angibt, ob die Überprüfung ist erfolgreich, die Benutzereingaben in das angegebene Steuerelement fest.</summary>
+        <value>
+          <see langword="true" />Wenn der Inhalt gültig ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[IValidator_IsValid_Resubmit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/IValidator_IsValid_ReSubmit/CS/ivalidator_isvalid.cs.aspx#1)]
+ [!code-aspx-vb[IValidator_IsValid_Resubmit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/IValidator_IsValid_ReSubmit/VB/ivalidator_isvalid.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IValidator.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bei der Implementierung durch eine Klasse, ergibt die Bedingung, überprüft und aktualisiert, die <see cref="P:System.Web.UI.IValidator.IsValid" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[IValidator_IsValid_Resubmit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/IValidator_IsValid_ReSubmit/CS/ivalidator_isvalid.cs.aspx#1)]
+ [!code-aspx-vb[IValidator_IsValid_Resubmit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/IValidator_IsValid_ReSubmit/VB/ivalidator_isvalid.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

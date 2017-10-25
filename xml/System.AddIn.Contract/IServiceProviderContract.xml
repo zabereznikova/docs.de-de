@@ -1,0 +1,58 @@
+<Type Name="IServiceProviderContract" FullName="System.AddIn.Contract.IServiceProviderContract">
+  <TypeSignature Language="C#" Value="public interface IServiceProviderContract : System.AddIn.Contract.IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IServiceProviderContract implements class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.IServiceProviderContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert einen Mechanismus zum Abrufen eines Dienstvertrags von einer Komponente an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.AddIn.Contract.IServiceProviderContract> Schnittstelle definiert einen Vertrag, der aktiviert eine Komponente, um einen benutzerdefinierten Dienst zum Abrufen, die von einer anderen Komponente definiert wird. Eine Komponente, die implementiert <xref:System.AddIn.Contract.IServiceProviderContract> als Dienstanbieter bekannt ist. Service-Anbieter implementieren die <xref:System.AddIn.Contract.IServiceProviderContract.QueryService%2A> -Methode zur Rückgabe einer <xref:System.AddIn.Contract.IContract> , das einen Dienst implementiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="QueryService">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.IContract QueryService (string serviceIdentifier, string serviceContractIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.AddIn.Contract.IContract QueryService(string serviceIdentifier, string serviceContractIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IServiceProviderContract.QueryService(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.IContract</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceIdentifier" Type="System.String" />
+        <Parameter Name="serviceContractIdentifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceIdentifier">Der Name des Diensts, der angefordert wird.</param>
+        <param name="serviceContractIdentifier">Der Dienstvertrag, die angefordert wird.</param>
+        <summary>Gibt einen Dienstvertrag, der von dieser Implementierung ist <see cref="T:System.AddIn.Contract.IServiceProviderContract" />.</summary>
+        <returns>Ein <see cref="T:System.AddIn.Contract.IContract" /> , die einen Dienstvertrag, der vom Client angefordert wird stellt die <see cref="T:System.AddIn.Contract.IServiceProviderContract" />; <see langword="null" /> Wenn die <see cref="T:System.AddIn.Contract.IServiceProviderContract" /> den angeforderten Vertrag nicht implementiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Formate für die Zeichenfolgen, die Dienste zu identifizieren und -Dienstverträge werden definiert, durch die <xref:System.AddIn.Contract.IServiceProviderContract> Implementierung. Es wird empfohlen, <xref:System.AddIn.Contract.IServiceProviderContract> Implementierungen zu identifizieren, einen Dienstvertrag, indem Sie die <xref:System.Type.AssemblyQualifiedName%2A> Eigenschaft des Typs, der den Dienstvertrag implementiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

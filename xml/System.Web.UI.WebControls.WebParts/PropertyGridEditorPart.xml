@@ -1,0 +1,346 @@
+<Type Name="PropertyGridEditorPart" FullName="System.Web.UI.WebControls.WebParts.PropertyGridEditorPart">
+  <TypeSignature Language="C#" Value="public sealed class PropertyGridEditorPart : System.Web.UI.WebControls.WebParts.EditorPart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PropertyGridEditorPart extends System.Web.UI.WebControls.WebParts.EditorPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.EditorPart</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Editor-Steuerelement, mit dem Endbenutzer benutzerdefinierte Eigenschaften eines zugeordneten bearbeiten kann <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder Serversteuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> bietet eine generische Benutzeroberfläche (UI), die Benutzern ermöglicht, benutzerdefinierte Eigenschaften auf Bearbeiten <xref:System.Web.UI.WebControls.WebParts.WebPart> und Serversteuerelemente in <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zonen. Im Gegensatz dazu sind die anderen <xref:System.Web.UI.WebControls.WebParts.EditorPart> steuert, wie z. B. die <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> und <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart> Steuerelemente, die nur vorhandene bearbeiten, die Benutzeroberflächenautomatisierungs-Eigenschaften aus der <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse.  
+  
+ Genauso wie in der Webparts-Steuerelementsatz Tool-orientierten Zonen vorhanden sind (Einzelheiten finden Sie in der <xref:System.Web.UI.WebControls.WebParts.ToolZone> klassenüberblick), Tool-orientierte Teilsteuerelemente vorhanden sind und jede dieser muss sich in einen entsprechenden Typ von ToolZone befinden. Diese Art von Steuerelementen im Webparts-Steuerelementsatz haben zwei charakteristische Merkmalen:  
+  
+-   Sie sind Hilfssteuerelemente, mit die können Endbenutzer, die Steuerelemente zu personalisieren, die die primäre Benutzeroberfläche einer Seite in einer Webparts-Anwendung bilden.  
+  
+-   Sie sind nur in bestimmten Seitenanzeigemodi angezeigt.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> -Steuerelement ist eine spezielle Steuerelement, und es sichtbar wird, nur, wenn eine Webseite im Bearbeitungsmodus befindet und wenn eine bestimmte <xref:System.Web.UI.WebControls.WebParts.WebPart> oder Serversteuerelement von einem Benutzer für die Bearbeitung ausgewählt wurde. Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> wie alle anderen <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelemente müssen befinden sich in einem <xref:System.Web.UI.WebControls.WebParts.EditorZone> Zone auf der Seite.  
+  
+> [!IMPORTANT]
+>  Ein <xref:System.Web.UI.WebControls.WebParts.EditorZone> Zone darf nur <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelemente und <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente können nicht in einen anderen Typ der Zone platziert werden.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement bietet eine Benutzeroberfläche zum bearbeitende für Eigenschaften, die im Quellcode mit markiert sind die `WebBrowsable` Attribut (aus der <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute> Klasse). Wenn eine Eigenschaft mit diesem Attribut gekennzeichnet ist ein <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement die bearbeitungs-UI basierend auf dem Typ der Eigenschaft erstellt und verwendet eine <xref:System.ComponentModel.PropertyDescriptor> Objekt, wenn es erforderlich, um den Wert in jedem Bearbeitungssteuerelement in den Typ der Eigenschaft zu konvertieren. Sie können auch hinzufügen, andere Attribute, mit deren Hilfe die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> -Steuerelement zum Anzeigen der Benutzeroberflächenautomatisierungs zum Bearbeiten. Die `WebDisplayName` Attribut (aus der <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute> Klasse) bietet die Möglichkeit, geben Sie den Text für die Bezeichnung, die angezeigt wird, mit der jedes Steuerelement in der Benutzeroberfläche zum Bearbeiten. Die `WebDescription` Attribut (aus der <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute> Klasse) können Sie eine Zeichenfolge angeben, der als QuickInfo für jedes Steuerelement in der Benutzeroberfläche zum Bearbeiten angezeigt wird.  
+  
+ In der folgenden Tabelle werden die Steuerelemente erstellt, um das Bearbeiten der Eigenschaften der verschiedenen Typen aufgeführt.  
+  
+|Eigenschaftentyp|Zum Bearbeiten der Eigenschaft erstellte Steuerelement|  
+|-------------------|------------------------------------------|  
+|Zeichenfolge|<xref:System.Web.UI.WebControls.TextBox>|  
+|"Int", "float",-Einheit|<xref:System.Web.UI.WebControls.TextBox>|  
+|Boolesch|<xref:System.Web.UI.WebControls.CheckBox>|  
+|<xref:System.Enum>|<xref:System.Web.UI.WebControls.DropDownList>(enthält die Liste aufgezählter Werte)|  
+|<xref:System.DateTime>|<xref:System.Web.UI.WebControls.TextBox>|  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> -Klasse verfügt über eine <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> -Eigenschaft, die zum Abrufen oder Festlegen des sichtbare Titeltextes für das Steuerelement verwendet wird. Es ist auch eine geschützte <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display%2A> -Eigenschaft, die bestimmt, ob das Steuerelement angezeigt wird, wenn die Seite den Bearbeitungsmodus wechselt.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> -Klasse verfügt auch über zwei wichtige Methoden <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart.ApplyChanges%2A> und <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart.SyncChanges%2A>, die es erbt die <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Klasse ab und überschreibt. Die Methoden sind entscheidend, da der bieten die abrufen und Festlegen von Eigenschaftswerten zwischen den Feldwerten des Steuerelements und die Eigenschaften für die <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern bearbeitet wird.  
+  
+ Da die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement ermöglicht es Ihnen, nur benutzerdefinierte Eigenschaften bearbeiten, benötigen Sie die andere <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente im Webparts-Steuerelementsatz so bearbeiten Sie die Darstellung, Layout und Verhalten der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Die anderen Steuerelemente umfassen die <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart>, <xref:System.Web.UI.WebControls.WebParts.LayoutEditorPart>, und die <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> Steuerelemente. Diese <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente sollten die meisten Features bereitstellen erforderlich, um bearbeiten <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelemente, aber falls notwendig können Sie auch einen benutzerdefinierten Editorsteuerelement erstellen durch Erben von der <xref:System.Web.UI.WebControls.WebParts.EditorPart> Klasse. Ein Codebeispiel finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.EditorPart> Übersichtsthema.  
+  
+> [!NOTE]
+>  Barrierefreiheit, verbessern die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement gerendert wird, innerhalb einer `<fieldset>` Element. Die `<fieldset>` Element gruppiert verbundenen Satz von Steuerelementen zur Bearbeitung im, verwendet der <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> -Steuerelement, und es Registerkartennavigation zwischen diesen Steuerelementen für visueller Benutzer-Agents (z. B. normale Webbrowser) und Speech-orientierte Benutzer-Agents ( z. B. eine Software des Lesens von RFID-Bildschirm).  
+  
+## <a name="accessibility"></a>Barrierefreiheit  
+ Das Markup gerendert wird, wird standardmäßig für dieses Steuerelement kann nicht Accessibility Standards wie die Web Content Accessibility Guidelines 1.0 (WCAG) Priorität 1-Richtlinien entsprechen. Ausführliche Informationen zu Accessibility-Unterstützung für das genannte Steuerelement finden Sie unter [ASP.NET-Steuerelemente und Barrierefreiheit](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Deklarieren einer <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> auf einer Webseite gesteuert, und aktivieren Sie ihn so bearbeiten Sie mehrere Eigenschaften der Benutzeroberfläche eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Webseite mit einer <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement und ein <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> zusammen mit einem Verweis auf ein benutzerdefiniertes Steuerelement <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+-   Eine Klasse, die benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels an, wenn Sie die Seite in einem Browser zu laden.  
+  
+ Der Quellcode für das Benutzersteuerelement stammen aus einem anderen Thema. Für dieses Codebeispiel funktioniert, müssen Sie die ASCX-Datei für das Benutzersteuerelement aus der [Exemplarische Vorgehensweise: Ändern von Anzeigemodi auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0) Thema, und platzieren Sie die Datei im gleichen Ordner wie die ASPX-Seite in diesem Codebeispiel wird.  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Sie enthält einen deklarativen Verweis auf ein <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement mit einem untergeordneten `<zonetemplate>` -Element, enthält einen deklarativen Verweis auf, ein <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement. Die Seite verweist auf das benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, mit einer `Register` Richtlinie für die Assembly und die `<aspSample:UserInfoWebPart>` Element für das Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_PropertyGridEditorPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/propertyGridEditorPartCS.aspx#1)]
+ [!code-aspx-vb[WebParts_PropertyGridEditorPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/propertyGridEditorPartVB.aspx#1)]  
+  
+ Der dritte Teil des Codebeispiels wird eine benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse mit dem Namen `UserInfoWebPart`, die auf der Webseite verwiesen wird. Beachten Sie, dass die verschiedenen Eigenschaften, die Informationen zu einem Benutzer enthalten sind, die mit markiert die `WebBrowsable` Attribut. Dies ermöglicht die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement die Benutzeroberfläche zum Bearbeiten dieser Eigenschaften bereitstellen. Die Eigenschaften werden ebenfalls mit markiert ein `WebDisplayName` -Attribut, um den Text der Bezeichnung anzugeben, die neben jedes Steuerelement in der Benutzeroberfläche zum Bearbeiten angezeigt wird.  
+  
+ Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[WebParts_PropertyGridEditorPart_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/userinfowebpart.cs#5)]
+ [!code-vb[WebParts_PropertyGridEditorPart_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/userinfowebpart.vb#5)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, wählen Sie **Bearbeitungsmodus** in der **Anzeigemodus** Dropdown-Listensteuerelement, um den Bearbeitungsmodus zu wechseln. Sie können die Verbmenü (Pfeil nach unten) in der Titelleiste des klicken Sie auf die **Benutzer Informationen WebPart** Steuerelement, und klicken Sie auf **bearbeiten** so bearbeiten Sie das Steuerelement. Wenn die Benutzeroberfläche zum bearbeitende angezeigt wird, sehen Sie die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement. Beachten Sie, die ein Steuerelement, für die einzelnen Eigenschaften gerendert wird der `UserInfoWebPart` -Klasse, basierend auf dem Typ der Eigenschaft. Wenn Sie in der Bearbeitung Benutzeroberfläche und auf einige Änderungen vornehmen der **übernehmen** Schaltfläche können Sie die **Anzeigemodus** Dropdown-Liste, um die Seite, um die Durchsuchen-Modus und die vollständige Auswirkung von der Bearbeitung feststellen, zurückzugeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyGridEditorPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.%23ctor%2A> Konstruktor ist ein Standard ist kein Konstruktor deklariert, der <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Klasse und daher keine besonderen Aufgaben durchgeführt werden, wenn eine neue Instanz der Klasse erstellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyChanges">
+      <MemberSignature Language="C#" Value="public override bool ApplyChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ApplyChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Werte aus einer <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" /> Steuerelement in den entsprechenden Eigenschaften in der zugeordneten <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <returns>
+          <see langword="true" />Wenn das Speichern von Werten der <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" /> auf die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> erfolgreich ist; andernfalls (wenn ein Fehler auftritt), <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> Methode ist eine wichtige Methode für ein <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement. Die Methode speichert die Werte, die ein Benutzer wurde festgelegt, auf eine <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement in den entsprechenden Eigenschaften in der zugeordneten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Das zugeordnete Steuerelement verwiesen wird, der <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> des Steuerelements geerbt <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Sie darf nicht außer Kraft setzen die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> Methode da die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Typ ist versiegelt, um zu verhindern, dass von ihm erben. Jedoch ggf. Weitere programmgesteuerte Kontrolle über den Prozess des Bearbeitens verschiedener <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelementeigenschaften als die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement bereitgestellt werden, erstellen Sie eine benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.EditorPart> steuern und eine eigene Implementierung dieser Methode bereitstellen. Ein Codebeispiel finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> Methode.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> Methode versucht, den Wert für die öffentlichen Eigenschaften in der zugeordneten festlegen <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, vorausgesetzt, dass diese Eigenschaften verfügen über eine `[WebBrowsable(true)]` Attribut.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> Methode wird aufgerufen, klickt der Benutzer eine Schaltfläche OK oder anwenden-Verb der Bearbeitung Benutzeroberfläche (UI) darstellt. Sie können auch aufrufen, es direkt aus Ihrem eigenen Code Wenn eine Notwendigkeit besteht, speichern Sie die bearbeitete Werte abgesehen von Benutzeraktionen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Fehler beim Versuch, legen Sie den Wert für eine Eigenschaft auf dem zugeordneten <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultButton">
+      <MemberSignature Language="C#" Value="public override string DefaultButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.DefaultButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überschreibt die Basiseigenschaft geerbt von der <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement die Eigenschaft Designer auszublenden und zu verhindern, dass es von Designs betroffen sind.</summary>
+        <value>Eine Zeichenfolge, die die ID des enthält die <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement, das Fokus in der Standardeinstellung ein <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser öffentlich ist, wird diese Eigenschaft ist für das standardmäßige Rendern dieses Steuerelements verwendet und nicht vom Entwicklercode aufgerufen werden soll.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public override bool Display { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Display" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Steuerelement sein sollten angezeigt, wenn die zugehörigen <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement befindet sich im Bearbeitungsmodus befindet.</summary>
+        <value>Ein boolescher Wert, der angibt, ob das Steuerelement angezeigt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display%2A> -Eigenschaft gibt `false` ist der Wert der Basiseigenschaft auch `false`. Wenn das Steuerelement bearbeitet werden nicht ist, andernfalls `null`, und klicken Sie dann die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement angezeigt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display%2A> Eigenschaft gilt nur, wenn eine Seite im Bearbeitungsmodus befindet, ist und ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement zum Bearbeiten ausgewählt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncChanges">
+      <MemberSignature Language="C#" Value="public override void SyncChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SyncChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Werte aus einer <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> steuern und die entsprechenden Steuerelemente verwendet, um diese Eigenschaftswerte innerhalb bearbeiten aktualisiert eine <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges%2A> Methode ist eine wichtige Methode für ein <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement. Implementiert die <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A?displayProperty=nameWithType> Methode von der Basisklasse, ruft die aktuellen Werte aus dem zugeordneten <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern und aktualisiert die Steuerelemente in der <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> -Steuerelement mit diesen Werten, sodass diese von ein Benutzer bearbeitet werden kann.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges%2A> Methode wird aufgerufen, wenn die Werte in der zugeordneten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement möglicherweise geändert. Für eine <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> -Steuerelement, die <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Zone, die das Steuerelement ruft enthält die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges%2A> Methode sofort nach dem Aufruf der <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> -Methode, damit die Werte in der <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement sind immer synchronisiert, mit den Werten in der zugeordnete <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Ein weiterer Fall, in dem die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges%2A> Methode wird aufgerufen, ist, wenn ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement in den Bearbeitungsmodus wechselt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public override string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Titel für das Editorsteuerelement.</summary>
+        <value>Eine Zeichenfolge, die als Titel des Steuerelements verwendet wird. Der Standardwert ist eine vom Webparts-Steuerelementsatz bereitgestellte Name des berechneten Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> Eigenschaftswert wird angezeigt, in der Titelleiste des eine <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> steuern, wenn das Steuerelement im Bearbeitungsmodus sichtbar ist. Wenn das Steuerelement auf einer Seite deklariert wird, können Sie festlegen, dass einen Wert für die `Title` Attribut. Wenn Sie einen Wert für den Titel nicht angeben, wird ein kulturspezifische Standardwert bereitgestellt.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> Eigenschaft überschreibt die Basiseigenschaft, sodass kein Titelwert angegeben wird, der Standardwert für Titel einer <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement kann durch die Webparts-Steuerelementsatz bereitgestellt werden.  
+  
+   
+  
+## Examples  
+ In diesem Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Übersichtsthema.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie für den Titel festlegen einer <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement deklarativ in einer Webseite.  
+  
+ [!code-aspx-csharp[WebParts_PropertyGridEditorPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/propertyGridEditorPartCS.aspx#2)]
+ [!code-aspx-vb[WebParts_PropertyGridEditorPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/propertyGridEditorPartVB.aspx#2)]  
+  
+ Im nächsten Teil des Codebeispiels wird veranschaulicht, wie zum Festlegen des Werts, der die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> Eigenschaft programmgesteuert. Um den programmgesteuert zugewiesenen Wert beizubehalten, eine statische Variable mit dem Namen `editControlTitle` verwendet wird, und dieser Wert wird zugewiesen, um die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> Eigenschaft jedes Mal, die das Steuerelement initialisiert wird, so, dass der Wert zwischen postback Ereignisse beibehalten wird.  
+  
+ [!code-csharp[WebParts_PropertyGridEditorPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/propertyGridEditorPartCS.aspx#3)]
+ [!code-vb[WebParts_PropertyGridEditorPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/propertyGridEditorPartVB.aspx#3)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie auswählen **Bearbeitungsmodus** in der **Anzeigemodus** Dropdown-Listensteuerelement, um den Bearbeitungsmodus zu wechseln. Können Sie die Verbmenü (Pfeil nach unten) in der Titelleiste des Klicken die **Benutzer Informationen WebPart** Steuerelement, und klicken Sie auf **bearbeiten** Bearbeitung beginnen. Wenn die Bearbeitung Benutzeroberfläche (UI) angezeigt wird, sehen Sie die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement und einer Schaltfläche und das Textfeld oben positioniert. Beachten Sie, dass der Titel des der <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> -Steuerelement ist in deklarativen Markup der Webseite zugewiesene Wert. Wenn Sie Text in das Textfeld neben Geben Sie die **EditorPart Updatetitel** Schaltfläche aus, und klicken Sie dann auf die Schaltfläche "", den Titel für das Steuerelement aktualisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

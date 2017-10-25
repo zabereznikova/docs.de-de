@@ -1,0 +1,160 @@
+<Type Name="WindowInteropHelper" FullName="System.Windows.Interop.WindowInteropHelper">
+  <TypeSignature Language="C#" Value="public sealed class WindowInteropHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WindowInteropHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.WindowInteropHelper" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Unterstützt die Interoperation zwischen Windows Presentation Foundation (WPF) und Win32-Code.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Member dieser Klasse kann der Aufrufer internen Zugriff auf die [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] HWND und das übergeordnete HWND von einer [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window>.  Mitglieder werden die richtigen sicherheitsüberprüfungen ausgeführt.  
+  
+ Verwenden Sie diese Klasse benötigt ein spezifischeres Objekt basierend auf seinem HWND werden sollen.  
+  
+ Ein Beispielszenario ist, wenn Sie zum Hosten müssen einer [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] im Dialogfeld eine [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] Anwendung. Initialisieren der <xref:System.Windows.Interop.WindowInteropHelper> mit einem [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Fensterobjekt für das Dialogfeld. Rufen Sie dann die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Fensterhandle (HWND) aus der <xref:System.Windows.Interop.WindowInteropHelper.Handle%2A> Eigenschaft, und geben Sie den Besitzer für die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Fenster mit der <xref:System.Windows.Interop.WindowInteropHelper.Owner%2A> Eigenschaft. Im folgenden Codebeispiel wird veranschaulicht, wie <xref:System.Windows.Interop.WindowInteropHelper> beim Hosten einer [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] im Dialogfeld eine [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] Anwendung.  
+  
+ [!code-csharp[CorePseudocode#WindowInteropHelper](~/samples/snippets/csharp/VS_Snippets_Wpf/CorePseudocode/CSharp/corepseudocode.cs#windowinterophelper)]
+ [!code-vb[CorePseudocode#WindowInteropHelper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CorePseudocode/visualbasic/corepseudocode.vb#windowinterophelper)]  
+  
+ Ein weiteres Szenario, die von dieser Klasse unterstützt wird, zum Abrufen einer <xref:System.Windows.Interop.HwndSource> -Objekt aus einem [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> Objekt. Die <xref:System.Windows.Interop.HwndSource> ermöglicht die direkte Verarbeitung von [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] Meldungen über die <xref:System.Windows.Interop.HwndSource.AddHook%2A> Methode. Mithilfe von <xref:System.Windows.Interop.HwndSource> und <xref:System.Windows.Interop.HwndSource.AddHook%2A> anstelle von einer <xref:System.Windows.Window> können Sie weiterhin Nachrichten nicht äquivalent oder Behandeln von, in denen behandeln [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]. Erstellen einer <xref:System.Windows.Interop.WindowInteropHelper> mit der <xref:System.Windows.Window> Datenquelle aus, und rufen Sie dann <xref:System.Windows.Interop.WindowInteropHelper.Handle%2A> auf die <xref:System.Windows.Interop.WindowInteropHelper> zum Abrufen von HWND auf <xref:System.Windows.Interop.HwndSource>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowInteropHelper (System.Windows.Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Window window) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.WindowInteropHelper.#ctor(System.Windows.Window)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="window" Type="System.Windows.Window" />
+      </Parameters>
+      <Docs>
+        <param name="window">Ein [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] -Fensterobjekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Interop.WindowInteropHelper" /> Klasse für ein angegebenes [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Fenster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Fenster kann ein Dialogfeld oder ein Fenster, das andernfalls nicht geeignet für das Hosten innerhalb der Grenzen des ist eine [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] Anwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureHandle">
+      <MemberSignature Language="C#" Value="public IntPtr EnsureHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance native int EnsureHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.WindowInteropHelper.EnsureHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt das HWND des Fensters an, wenn das HWND noch nicht erstellt wurde.</summary>
+        <returns>Ein <see cref="T:System.IntPtr" /> , der das HWND darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Interop.WindowInteropHelper.EnsureHandle%2A> Methode, wenn Sie Handle (HWND) fenstererstellung aus den tatsächlichen mit der verwalteten trennen möchten <xref:System.Windows.Window>. Dies ist hilfreich, wenn Automatisierungsclient vorliegen, der die Aufgaben ohne die Notwendigkeit zum Anzeigen eines Fensters können.  
+  
+ Wenn das systemeigene Fenster noch nicht erstellt wurde, erstellt diese Methode das systemeigene Fenster, legt die <xref:System.Windows.Interop.WindowInteropHelper.Handle%2A> Eigenschaft aus und gibt das HWND zurück. Wenn das systemeigene Fenster bereits erstellt wurde, wird das Handle des vorhandenen systemeigenen Fensters zurückgegeben.  
+  
+ Wenn das systemeigene Fenster erstellt wird, als Ergebnis beim Aufrufen dieser Methode die <xref:System.Windows.Window.SourceInitialized> Ereignis wird ausgelöst.  
+  
+ Abfragen der <xref:System.Windows.Interop.WindowInteropHelper.Handle%2A> Eigenschaft nach der <xref:System.Windows.Interop.WindowInteropHelper.EnsureHandle%2A> Methode wird aufgerufen, gibt das vorhandene Fensterhandle zurück. Die visuelle Struktur ist nicht angefügt an das Fenster erst nach der <xref:System.Windows.Window.Show%2A> -Methode aufgerufen wird.  
+  
+ Aufrufen der <xref:System.Windows.Interop.WindowInteropHelper.EnsureHandle%2A> Methode mehr als einmal erstellt keine neuen Fensterhandles. Aufrufen der <xref:System.Windows.Interop.WindowInteropHelper.EnsureHandle%2A> Methode, wenn das Handle bereits durch einen Aufruf erstellt wurde die <xref:System.Windows.Window.Show%2A> Methode erstellt ein neues Fensterhandle. Ein systemeigenes Fenster wird nur erstellt, wenn kein Handle vorhanden ist. wenn die <xref:System.Windows.Interop.WindowInteropHelper.EnsureHandle%2A> Methode wird aufgerufen.  
+  
+ Eigenschaften, die festgelegt werden, mithilfe von systemeigenen Fenster-APIs über p/Invoke Aufrufen möglicherweise nicht in den verwalteten APIs-Fenster angezeigt. Angenommen, wenn Sie das Fenster, um die obersten werden mit dem systemeigenen MS_EX_TOPMOST-Flag nach dem Festlegen der <xref:System.Windows.Interop.WindowInteropHelper.EnsureHandle%2A> -Methode aufgerufen wird, die <xref:System.Windows.Window.Topmost%2A> Eigenschaft ist nicht garantiert die systemeigene Einstellung reflektiert.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Erstellen und Zugriff auf ein Fensterhandle. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public IntPtr Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.WindowInteropHelper.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Fensterhandle für eine [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Fenster, das verwendet wird, zum Erstellen dieser <see cref="T:System.Windows.Interop.WindowInteropHelper" />.</summary>
+        <value>Die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Fensterhandle (HWND).</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Um ein Fensterhandle abzurufen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public IntPtr Owner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.WindowInteropHelper.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Handle für die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Besitzerfenster.</summary>
+        <value>Der Besitzer Fensterhandle (HWND).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können Windows neu zuordnen, indem Sie diese Eigenschaft festlegen. "True" ist für allgemeine [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] programmieren, nicht neu zuordnen Fenster, die bereits in Verwendung sind.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Abrufen oder Festlegen der Wert dieser Eigenschaft. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,54 @@
+<Type Name="CursorInteropHelper" FullName="System.Windows.Interop.CursorInteropHelper">
+  <TypeSignature Language="C#" Value="public static class CursorInteropHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CursorInteropHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.CursorInteropHelper" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine statische Hilfsklasse für die Interoperation von WPF/Win32 mit einer Methode, die verwendet wird, um eine Windows Presentation Foundation (WPF) abzurufen <see cref="T:System.Windows.Input.Cursor" /> -Objekt auf Grundlage eines bereitgestellten Win32-Handles für Cursor.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor Create (System.Runtime.InteropServices.SafeHandle cursorHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Input.Cursor Create(class System.Runtime.InteropServices.SafeHandle cursorHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.CursorInteropHelper.Create(System.Runtime.InteropServices.SafeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cursorHandle" Type="System.Runtime.InteropServices.SafeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="cursorHandle">Verwenden Sie für die Interoperation Cursorverweis.</param>
+        <summary>Gibt eine [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] <see cref="T:System.Windows.Input.Cursor" /> -Objekt auf Grundlage eines bereitgestellten [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)] Cursorhandle.</summary>
+        <returns>Die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Cursorobjekts auf Grundlage der bereitgestellten [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)] Cursorhandle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen einer benutzerdefinierten Cursor Image Sicherheitsberechtigungen erfordert, selbst wenn reine geschieht [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] programmieren. Siehe <xref:System.Windows.Input.Cursor>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Diese Methode aufgerufen wird. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,223 @@
+<Type Name="ProcessPriorityClass" FullName="System.Diagnostics.ProcessPriorityClass">
+  <TypeSignature Language="C#" Value="public enum ProcessPriorityClass" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProcessPriorityClass extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.ProcessPriorityClass" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Process</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Priorität an, die das System einem Prozess zuordnet. Dieser Wert bestimmt, gemeinsam mit dem Prioritätswert für jeden Thread des Prozesses, die Basisprioritätsebene jedes Threads.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Prioritätsklasse eines Prozesses umfasst einen Bereich von Prioritätsstufen Thread. Threads mit unterschiedlichen Prioritäten im Prozess ausgeführt, die relativ zur Prioritätsklasse für den Prozess ausgeführt werden. Das Betriebssystem verwendet die Basisprioritätsebene aller ausführbaren Threads, um zu ermitteln, welcher Thread das nächste Segment der Prozessorzeit abruft.  
+  
+ Win32 verwendet vier Prioritätsklassen mit sieben Basisprioritätsebenen pro Klasse. Basierend auf der Zeit, die verstrichene anderen Prozessen, das Betriebssystem die Basisprioritätsebene ändern können, wenn ein Prozess muss vor anderen für den Zugriff auf den Prozessor abgelegt werden. Sie können außerdem festlegen <xref:System.Diagnostics.Process.PriorityBoostEnabled%2A> zeitweilig die Prioritätsstufe der Threads erhöht, die den Wartezustand verlässt ausgeführt wurden. Die Priorität wird zurückgesetzt, wenn der Prozess in den Wartezustand zurückkehrt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AboveNormal">
+      <MemberSignature Language="C#" Value="AboveNormal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessPriorityClass AboveNormal = int32(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessPriorityClass.AboveNormal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessPriorityClass</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Prozess eine höhere Priorität als <see langword="Normal" /> aufweist, aber eine niedrigere als <see cref="F:System.Diagnostics.ProcessPriorityClass.High" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BelowNormal">
+      <MemberSignature Language="C#" Value="BelowNormal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessPriorityClass BelowNormal = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessPriorityClass.BelowNormal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessPriorityClass</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Prozess eine höhere Priorität als <see langword="Idle" /> aufweist, aber eine niedrigere als <see langword="Normal" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessPriorityClass High = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessPriorityClass.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessPriorityClass</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Prozess zeitkritische Aufgaben ausführt, die sofort ausgeführt werden müssen, z. B. für das Dialogfeld <see langword="Task List" />, das beim Aufruf durch den Benutzer unabhängig von der Last des Betriebssystems schnell angezeigt werden muss. Die Threads des Prozesses haben Vorrang vor den Threads von Prozessen in den Prioritätsklassen mit normaler oder Leerlaufpriorität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Verwenden Sie vorsichtig beim Angeben von `High` für Prioritätsklasse für den Prozess, da eine Anwendung mit hoher Priorität Klasse fast alle verfügbaren Prozessorzeit verwenden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Idle">
+      <MemberSignature Language="C#" Value="Idle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessPriorityClass Idle = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessPriorityClass.Idle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessPriorityClass</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Threads dieses Prozesses nur ausgeführt werden, wenn sich das System im Leerlauf befindet. Trifft z. B. auf einen Bildschirmschoner zu. Vor den Threads dieses Prozesses haben die Threads eines beliebigen Prozesses Vorrang, der mit einer höheren Prioritätsklasse ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die im Leerlauf Prioritätsklasse wird von untergeordneten Prozessen geerbt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessPriorityClass Normal = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessPriorityClass.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessPriorityClass</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass für den Prozess keine besondere Planung erforderlich ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RealTime">
+      <MemberSignature Language="C#" Value="RealTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessPriorityClass RealTime = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessPriorityClass.RealTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessPriorityClass</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Prozess die höchstmögliche Priorität aufweist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Die Threads eines Prozesses mit `RealTime` Priorität haben Vorrang vor den Threads aller anderen Prozesse, einschließlich Betriebssystemprozesse wichtige Aufgaben ausführen. Folglich eine `RealTime` Priorität-Prozess, der ausgeführt wird, für mehr als ein sehr kurzen Zeitraum kann dazu führen, dass Datenträgercaches nicht leeren oder dazu führen, dass die Maus nicht mehr reagiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

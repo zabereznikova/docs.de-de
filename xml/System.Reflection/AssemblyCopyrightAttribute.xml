@@ -1,0 +1,113 @@
+<Type Name="AssemblyCopyrightAttribute" FullName="System.Reflection.AssemblyCopyrightAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyCopyrightAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyCopyrightAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.AssemblyCopyrightAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert ein benutzerdefiniertes Attribut für die Copyrightangabe in einem Assemblymanifest.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie anzuwendenden Attribute, einschließlich der <xref:System.Reflection.AssemblyCopyrightAttribute> Attribut, um eine dynamische Assembly. Im Beispiel wird die Assembly auf dem Datenträger gespeichert und kann den Wert des Attributs angezeigt werden, mithilfe der **Windows Dateieigenschaften** Dialogfeld.  
+  
+ [!code-cpp[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/CPP/assemblybuilder_defineversioninforesource.cpp#1)]
+ [!code-csharp[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/CS/assemblybuilder_defineversioninforesource.cs#1)]
+ [!code-vb[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/VB/assemblybuilder_defineversioninforesource.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyCopyrightAttribute (string copyright);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string copyright) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyCopyrightAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="copyright" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="copyright">Die copyright-Informationen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.AssemblyCopyrightAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copyright">
+      <MemberSignature Language="C#" Value="public string Copyright { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Copyright" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyCopyrightAttribute.Copyright" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Copyrightinformationen an.</summary>
+        <value>Eine Zeichenfolge, die die copyright-Informationen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

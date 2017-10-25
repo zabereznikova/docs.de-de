@@ -1,0 +1,164 @@
+<Type Name="ScaffoldColumnAttribute" FullName="System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute">
+  <TypeSignature Language="C#" Value="public class ScaffoldColumnAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScaffoldColumnAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob eine Klasse oder eine Datenspalte Gerüstbau verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gerüstbau ist der Mechanismus zum Generieren von Webseitenvorlagen anhand des Datenbankschemas. ASP.NET Dynamic Data verwendet Gerüstbau webbasierte Benutzeroberfläche generiert, mit dem einen Benutzer zum Anzeigen und Aktualisieren einer Datenbank. Diese Klasse verwendet die <xref:System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute.Scaffold%2A> Eigenschaft zum Aktivieren des Gerüsts in einer Dynamic Data-Website.  
+  
+ Gerüstbau erhöht ASP.NET-Seitenframework, indem dynamisch basierende auf dem Datenmodell keine physische Seiten benötigt Seiten angezeigt werden.  
+  
+ Gerüstbau bietet die folgenden Funktionen:  
+  
+-   Minimalen oder keinen Code zum Erstellen eines datengesteuerten-Webanwendung.  
+  
+-   Schnelle Entwicklungszeit.  
+  
+-   Seiten, die mit sind voll funktionsfähig und anzeigen, einfügen, bearbeiten, löschen, Sortieren und Paging Funktionen enthalten.  
+  
+-   Integrierte datenvalidierung, die das Datenbankschema basiert.  
+  
+-   Filter, die erstellt werden für jede foreign key- oder boolescher Felder.  
+  
+ Diese Klasse kann verwendet werden, aktivieren oder Deaktivieren von Gerüstbau für Datenspalten in einem Datenmodell durch Anwenden dieses Attributs auf die entsprechenden Daten Field-Objekt in der Klasse, die die Tabelle darstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Spalte ProductID der Products-Tabelle in der AdventureWorksLT-Datenbank durch das Gerüst-Eigenschaft auf das Objekt "ProductID" in der partiellen Klasse für Produkte angewendet, und bei der Einstellung macht `true.` blendet es aus der ThumbnailPhotoFileName-Spalte die Gerüst-Eigenschaft auf das ThumbnailPhotoFileName-Objekt angewendet werden und bei der Einstellung `false`.  
+
+```csharp  
+[MetadataType(typeof(ProductMetadata))]  
+public partial class Product  
+{  
+  
+}  
+  
+public class ProductMetadata  
+{  
+    [ScaffoldColumn(true)]  
+    public object ProductID;  
+  
+    [ScaffoldColumn(false)]  
+    public object ThumbnailPhotoFileName;  
+  
+}  
+```    
+  
+```vb  
+<MetadataType(GetType(ProductMetadata))>  
+Public Partial Class Product   
+  
+End Class   
+  
+Public Class ProductMetadata   
+    <ScaffoldColumn(True)>  
+    Public ProductID As Object   
+  
+    <ScaffoldColumn(False)>   
+    Public ThumbnailPhotoFileName As Object  
+  
+End Class  
+  
+```  
+  
+ Zum Kompilieren des Beispielcodes benötigen Sie Folgendes:  
+  
+-   Visual Studio 2008 Service Pack 1 oder Visual Developer 2008 Express Edition Service Pack 1.  
+  
+-   Die Beispieldatenbank "AdventureWorksLT". Informationen zum Herunterladen und Installieren der SQL Server-Beispieldatenbank finden Sie unter [Microsoft SQL Server Product Samples: Database](http://go.microsoft.com/fwlink/?LinkId=117483) auf der CodePlex-Website. Stellen Sie sicher, dass Sie die richtige Version der Beispieldatenbank für die Version von SQL Server installieren, dass Sie (SQL Server 2005 oder SQL Server 2008) ausgeführt werden.  
+  
+-   Eine Dynamic Data-Website. Dadurch können Sie erstellen einen Datenkontext für die Datenbank und die Klasse, die im Datenfeld anpassen und die Methoden überschreiben. Außerdem erstellt es die Umgebung aus, die die zuvor beschriebene Seite verwenden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: erstellen eine neue dynamische Website mithilfe von Datengerüstbau](http://msdn.microsoft.com/library/1564aef2-9103-436a-9806-c8ad7abd616a).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScaffoldColumnAttribute (bool scaffold);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool scaffold) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scaffold" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="scaffold">Der Wert, der angibt, ob Gerüstbau aktiviert ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute" /> mithilfe der <see cref="P:System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute.Scaffold" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können festlegen, `scaffold` auf `true` für das gesamte Datenmodell, um alle Datenspalten in der Datenbank für CRUD (Create, Read, Update und Delete) durch Festlegen von verfügbar zu machen `scaffold` zu `true` in der Global.asax-Datei oder einzelne Daten verfügbar machen Spalten in einer Datentabelle für CRUD-Vorgänge durch Festlegen von `scaffold` zu `true` in der partiellen Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scaffold">
+      <MemberSignature Language="C#" Value="public bool Scaffold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Scaffold" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute.Scaffold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert, der angibt, ob Gerüstbau aktiviert ist.</summary>
+        <value>
+          <see langword="true" />, wenn Gerüstbau aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft zum Aktivieren des Gerüsts in einzelne Datenspalten in einem Datenmodell verwenden. Wenn Sie diese Eigenschaft, um festlegen `true` in der Datei "Global.asax" macht das gesamte Datenmodell alle Datenspalten in der Datenbank für CRUD (Create, Read, Update und Delete).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

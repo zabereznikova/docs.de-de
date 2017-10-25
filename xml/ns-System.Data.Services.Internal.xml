@@ -1,0 +1,15 @@
+<Namespace Name="System.Data.Services.Internal">
+  <Docs>
+    <summary>Diese Klasse ist nicht für die öffentliche Verwendung und wird intern vom System verwendet, um Unterstützung für Abfragen mit unverzüglichem Laden von verknüpften Entitäten implementiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Namespace enthält eine Reihe von Variationen der `ExpandedWrapper` Klasse.  
+  
+ © 2009 Microsoft Corporation. Alle Rechte vorbehalten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

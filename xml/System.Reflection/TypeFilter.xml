@@ -1,0 +1,59 @@
+<Type Name="TypeFilter" FullName="System.Reflection.TypeFilter">
+  <TypeSignature Language="C#" Value="public delegate bool TypeFilter(Type m, object filterCriteria);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed TypeFilter extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.TypeFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="m" Type="System.Type" />
+    <Parameter Name="filterCriteria" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="m">Das <see langword="Type" />-Objekt, auf das der Filter angewendet wird.</param>
+    <param name="filterCriteria">Ein beliebiges, zum Filtern der Liste verwendetes Objekt.</param>
+    <summary>Filtert die Klassen, die in einem Array aus <see cref="T:System.Type" />-Objekten dargestellt werden.</summary>
+    <returns>
+      <see langword="true" />, um den <see cref="T:System.Type" /> in die gefilterte Liste aufzunehmen; andernfalls <see langword="false" />.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `TypeFilter` Delegat wird verwendet, um eine Liste der Klassen zu filtern. Verwenden sie insbesondere zum Filtern der Klassen dargestellt, die in einem Array von <xref:System.Type> Objekte. Die <xref:System.Type.FindInterfaces%2A?displayProperty=nameWithType> Methode verwendet dieser Delegat zum Filtern der Liste der Schnittstellen, die zurückgegeben. Alle abgeleiteten Klassen von <xref:System.Delegate> und <xref:System.MulticastDelegate> verfügt über einen Konstruktor und eine `DynamicInvoke` Methode. Finden Sie im Visual C++-Codebeispiel in die Beschreibung für den angegebenen `Delegate`.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel veranschaulicht die Definition einer Methode der <xref:System.Reflection.TypeFilter> Delegaten Prototyp, und Sie können mithilfe der Reflektion gefiltert oder eine Teilmenge der übereinstimmende Einträge zurückgegeben.  
+  
+ [!code-vb[Typefilter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TypeFilter/VB/Typefilter.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

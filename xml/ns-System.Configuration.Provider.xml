@@ -1,0 +1,6 @@
+<Namespace Name="System.Configuration.Provider">
+  <Docs>
+    <summary>Die <see cref="N:System.Configuration.Provider" /> -Namespace enthält die Basisklassen von sowohl Server- und Clientanwendungen zur Unterstützung eines austauschbaren Modells zum Hinzufügen und Entfernen von Funktionen gemeinsam verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,100 @@
+<Type Name="XData" FullName="System.Windows.Markup.XData">
+  <TypeSignature Language="C#" Value="public sealed class XData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.XData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Text")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Literale Daten, die als Wert für angezeigt werden, können eine <see langword="Value" /> Knoten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.XData.Text%2A>ist die Verwendung von XAML-Inhaltseigenschaft für <xref:System.Windows.Markup.XData>. Lesen von Werten aus einem XAML-Knotenstream Where `XData` wird zurückgegeben, erhalten die <xref:System.Windows.Markup.XData.Text%2A> Eigenschaftswert.  
+  
+ Codierung Überlegungen, die auf XML der obersten Ebene deklariert werden und sind im Allgemeinen UTF-8 standardmäßig.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.XData" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XData.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Literalwert-Zeichenfolge, die dies <see cref="T:System.Windows.Markup.XData" /> umschließt.</summary>
+        <value>Der Literalwert-Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.XData.Text%2A>ist die Verwendung von XAML-Inhaltseigenschaft für <xref:System.Windows.Markup.XData>. Lesen von Werten aus einem XAML-Knotenstream Where `XData` wird zurückgegeben, erhalten die <xref:System.Windows.Markup.XData.Text%2A> Eigenschaftswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlReader">
+      <MemberSignature Language="C#" Value="public object XmlReader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object XmlReader" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XData.XmlReader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Reader für die Literaldaten.</summary>
+        <value>Einen Reader für die Literaldaten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn kein Reader für zuvor eingerichtet ist `XData`, Aufrufen des Get-Accessors erstellt ein neues <xref:System.Xml.XmlReader> für diesen Zweck.  
+  
+ Der Typ dieser Eigenschaft ist <xref:System.Object> statt <xref:System.Xml.XmlReader> um eine Optimierung Weg für Aufrufer bereitzustellen, die nicht einschließen möchten die `System.Xml` Assembly nur für den Basistypdefinitionen und wer den Standardreader verwenden möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

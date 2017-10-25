@@ -1,0 +1,671 @@
+<Type Name="EventLogRecord" FullName="System.Diagnostics.Eventing.Reader.EventLogRecord">
+  <TypeSignature Language="C#" Value="public class EventLogRecord : System.Diagnostics.Eventing.Reader.EventRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventLogRecord extends System.Diagnostics.Eventing.Reader.EventRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventLogRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.Eventing.Reader.EventRecord</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Eigenschaften einer Ereignisinstanz für ein Ereignis, das vom empfangen wird ein <see cref="T:System.Diagnostics.Eventing.Reader.EventLogReader" /> Objekt. Die Ereigniseigenschaften bieten Informationen zum Ereignis z. B. den Namen des Computers, auf dem das Ereignis protokolliert wurde, und die Uhrzeit der Erstellung des Ereignisses.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActivityId">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;Guid&gt; ActivityId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Guid&gt; ActivityId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.ActivityId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den globally unique Identifier (GUID) für die Aktivität im Prozess für die das Ereignis beteiligt ist. Dieser Funktion können Consumer gruppiert verwandte Aktivitäten auf.</summary>
+        <value>Ein GUID-Wert zurückgegeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bookmark">
+      <MemberSignature Language="C#" Value="public override System.Diagnostics.Eventing.Reader.EventBookmark Bookmark { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.Eventing.Reader.EventBookmark Bookmark" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.Bookmark" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventBookmark</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Platzhalter (Lesezeichen) entspricht, die auf dieses Ereignis ab. Dies kann als Platzhalter in einen Datenstrom von Ereignissen verwendet werden.</summary>
+        <value>Gibt ein <see cref="T:System.Diagnostics.Eventing.Reader.EventBookmark" />-Objekt zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerLog">
+      <MemberSignature Language="C#" Value="public string ContainerLog { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContainerLog" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.ContainerLog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der im Ereignisprotokoll oder in der Ereignisprotokolldatei, in der das Ereignis gespeichert ist.</summary>
+        <value>Gibt eine Zeichenfolge mit dem Namen der im Ereignisprotokoll oder in der Ereignisprotokolldatei, in der das Ereignis gespeichert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogRecord.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Die von diesem Objekt verwendeten nicht verwalteten Ressourcen frei, und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatDescription">
+      <MemberSignature Language="C#" Value="public override string FormatDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string FormatDescription() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogRecord.FormatDescription" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die ereignismeldung in das aktuelle Gebietsschema ab.</summary>
+        <returns>Gibt eine Zeichenfolge, die in der ereignismeldung wird im aktuellen Gebietsschema enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatDescription">
+      <MemberSignature Language="C#" Value="public override string FormatDescription (System.Collections.Generic.IEnumerable&lt;object&gt; values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string FormatDescription(class System.Collections.Generic.IEnumerable`1&lt;object&gt; values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogRecord.FormatDescription(System.Collections.Generic.IEnumerable{System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.Generic.IEnumerable&lt;System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="values">Die Werte für Variablen in der ereignismeldung ersetzen. Variablen werden durch %n dargestellt, wobei n eine Zahl ist.</param>
+        <summary>Ruft die ereignismeldung, und Ersetzen Sie Variablen in der Nachricht durch den angegebenen Werten ab.</summary>
+        <returns>Gibt eine Zeichenfolge, die in der ereignismeldung wird im aktuellen Gebietsschema enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;object&gt; GetPropertyValues (System.Diagnostics.Eventing.Reader.EventLogPropertySelector propertySelector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;object&gt; GetPropertyValues(class System.Diagnostics.Eventing.Reader.EventLogPropertySelector propertySelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogRecord.GetPropertyValues(System.Diagnostics.Eventing.Reader.EventLogPropertySelector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertySelector" Type="System.Diagnostics.Eventing.Reader.EventLogPropertySelector" />
+      </Parameters>
+      <Docs>
+        <param name="propertySelector">Wählt die Eigenschaftswerte zurückgegeben.</param>
+        <summary>Ruft die Enumeration der Werte von der vom Benutzer bereitgestellte Ereigniseigenschaften oder die Ergebnisse der XPath-basierten Daten ab, ob das Ereignis XML-Darstellung hat.</summary>
+        <returns>Gibt eine Liste von Objekten zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public override int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner für dieses Ereignis ab. Alle Ereignisse mit diesem Bezeichnerwert stellen den gleichen Typ des Ereignisses dar.</summary>
+        <value>Gibt einen Ganzzahlwert zurück. Dieser Wert kann null sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keywords">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;long&gt; Keywords { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; Keywords" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.Keywords" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schlüsselwortmaske des Ereignisses ab. Rufen Sie den Wert, der die <see cref="P:System.Diagnostics.Eventing.Reader.EventLogRecord.KeywordsDisplayNames" /> Eigenschaft, um den Namen der Schlüsselwörter in dieser Maske abzurufen.</summary>
+        <value>Gibt einen long-Wert zurück. Dieser Wert kann null sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Schlüsselwörter für ein Ereignis werden verwendet, um das Ereignis mit anderen ähnlichen Ereignisse basierend auf der Nutzung der Ereignisse zu gruppieren. Jedes Schlüsselwort stellt ein bit in einer 64-Bit-Maske. Vordefinierte Bitwerte und reservierten Bits belegen die oberen 16 Positionen dieser Maske, die das Manifest, um alle Bits zwischen 0 x 0000000000000001 und 0 x 0000800000000000 verwenden lassen.  
+  
+ Die standard-Ereignis-Schlüsselwörter werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeywordsDisplayNames">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;string&gt; KeywordsDisplayNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; KeywordsDisplayNames" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.KeywordsDisplayNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzeigenamen der Schlüsselwörter ab, die in der Schlüsselwortmaske für dieses Ereignis verwendet werden.</summary>
+        <value>Gibt eine aufzählbare Sammlung von Zeichenfolgen zurück, die die Anzeigenamen der Schlüsselwörter enthalten, die in der Schlüsselwortmaske für dieses Ereignis verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standard-Ereignis-Schlüsselwörter werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;byte&gt; Level { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;unsigned int8&gt; Level" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ereignisebene ab. Die Ebene gibt den Schweregrad des Ereignisses. Für den Namen der Ebene, erhalten Sie den Wert der <see cref="P:System.Diagnostics.Eventing.Reader.EventLogRecord.LevelDisplayName" /> Eigenschaft.</summary>
+        <value>Gibt einen Byte-Wert zurück. Dieser Wert kann null sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der standard-Ereignisebenen werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventLevel> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LevelDisplayName">
+      <MemberSignature Language="C#" Value="public override string LevelDisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LevelDisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.LevelDisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen der Ebene für dieses Ereignis ab.</summary>
+        <value>Gibt eine Zeichenfolge, die den Anzeigenamen der Ebene für dieses Ereignis enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der standard-Ereignisebenen werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventLevel> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogName">
+      <MemberSignature Language="C#" Value="public override string LogName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LogName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.LogName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Ereignisprotokolls ab, in dem dieses Ereignis protokolliert wird.</summary>
+        <value>Gibt eine Zeichenfolge, die einen Namen des Ereignisprotokolls enthält, die dieses Ereignis enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public override string MachineName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Computers, auf dem dieses Ereignis protokolliert wurde.</summary>
+        <value>Gibt eine Zeichenfolge mit dem Namen des Computers, auf dem dieses Ereignis protokolliert wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchedQueryIds">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;int&gt; MatchedQueryIds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;int32&gt; MatchedQueryIds" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.MatchedQueryIds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von Abfrage-IDs, die dieses Ereignis entspricht. Dieses Ereignis stimmt mit einer Abfrage aus, wenn die Abfrage zurückgeben würde.</summary>
+        <value>Gibt eine aufzählbare Auflistung von ganzzahligen Werten zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opcode">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;short&gt; Opcode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int16&gt; Opcode" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.Opcode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int16&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Opcode des Ereignisses ab. Der Opcode definiert einen numerischen Wert, der angibt, die Aktivität oder einem Punkt in eine Aktivität, die der Anwendung durchgeführt wurde, wenn sie das Ereignis ausgelöst hat. Für den Namen der Opcode, erhalten Sie den Wert der <see cref="P:System.Diagnostics.Eventing.Reader.EventLogRecord.OpcodeDisplayName" /> Eigenschaft.</summary>
+        <value>Gibt einen kurzen Wert zurück. Dieser Wert kann null sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standard-Ereignis Opcodes werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventOpcode> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpcodeDisplayName">
+      <MemberSignature Language="C#" Value="public override string OpcodeDisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OpcodeDisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.OpcodeDisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen des Opcodes für dieses Ereignis ab.</summary>
+        <value>Gibt eine Zeichenfolge, die den Anzeigenamen des Opcodes für dieses Ereignis enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standard-Ereignis Opcodes werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventOpcode> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessId">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;int&gt; ProcessId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; ProcessId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.ProcessId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Prozess-ID für den Ereignisanbieter, der dieses Ereignis protokolliert.</summary>
+        <value>Gibt einen Ganzzahlwert zurück. Dieser Wert kann null sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventProperty&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Diagnostics.Eventing.Reader.EventProperty&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benutzerdefinierte Eigenschaften des Ereignisses ab.</summary>
+        <value>Gibt eine Liste von <see cref="T:System.Diagnostics.Eventing.Reader.EventProperty" /> Objekte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderId">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;Guid&gt; ProviderId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Guid&gt; ProviderId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.ProviderId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den global eindeutigen Bezeichner (GUID) des Ereignisanbieters, die dieses Ereignis veröffentlicht.</summary>
+        <value>Ein GUID-Wert zurückgegeben. Dieser Wert kann null sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public override string ProviderName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.ProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Ereignisanbieters, die dieses Ereignis veröffentlicht.</summary>
+        <value>Gibt eine Zeichenfolge, die den Namen des Ereignisanbieters enthält, die dieses Ereignis veröffentlicht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Qualifiers">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;int&gt; Qualifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; Qualifiers" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.Qualifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Qualifizierer Zahlen, die für die Ereignis-ID verwendet werden.</summary>
+        <value>Gibt einen Ganzzahlwert zurück. Dieser Wert kann null sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordId">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;long&gt; RecordId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; RecordId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.RecordId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ereignisbezeichner Eintrag des Ereignisses im Protokoll.</summary>
+        <value>Gibt einen long-Wert zurück. Dieser Wert kann null sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedActivityId">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;Guid&gt; RelatedActivityId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Guid&gt; RelatedActivityId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.RelatedActivityId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen global eindeutigen Bezeichner (GUID) für eine verwandte Aktivität in einem Prozess für den ein Ereignis beteiligt ist.</summary>
+        <value>Ein GUID-Wert zurückgegeben. Dieser Wert kann null sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Ereignisanbieter kann den Wert des Attributs "ActivityId" festgelegt, vor dem Veröffentlichen von Ereignissen. Alle Ereignisse, die veröffentlicht werden, nachdem diese ID festgelegt ist, müssen die Aktivitäts-ID-Attribut, das auf den angegebenen Wert festgelegt. Dadurch erhalten die Möglichkeit, einfache Beziehungen zwischen Ereignissen angeben. Die Ereignisse, die veröffentlicht werden, sind Teil der gleichen Aktivität. Ein Anbieter muss eine neue, jedoch miteinander verknüpften Aktivität beginnen, kann der Verleger ein Übertragungsereignis veröffentlichen und geben Sie die neue Aktivitäts-ID. Diese neue ID wird als RelatedActivityID-Attribut angezeigt. Dieser Funktion können Consumer gruppiert verwandte Aktivitäten auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Task">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;int&gt; Task { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; Task" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.Task" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Aufgabenbezeichner für einen Teil einer Anwendung oder eine Komponente, die ein Ereignis veröffentlicht. Ein Task ist ein 16-Bit-Wert mit der ersten 16 Werte reserviert. Dieser Typ kann einen beliebigen Wert zwischen 0 x 0000 und 0xffef verwendet werden. Für den Namen des Tasks, erhalten Sie den Wert der <see cref="P:System.Diagnostics.Eventing.Reader.EventLogRecord.TaskDisplayName" /> Eigenschaft.</summary>
+        <value>Gibt einen Ganzzahlwert zurück. Dieser Wert kann null sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standard-Ereignis Aufgaben werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventTask> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskDisplayName">
+      <MemberSignature Language="C#" Value="public override string TaskDisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskDisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.TaskDisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen des Tasks für das Ereignis ab.</summary>
+        <value>Gibt eine Zeichenfolge, die den Anzeigenamen des Tasks für das Ereignis enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standard-Ereignis Aufgaben werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventTask> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadId">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;int&gt; ThreadId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; ThreadId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.ThreadId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Threadbezeichner des Threads, die der Ereignisanbieter ausgeführt wird.</summary>
+        <value>Gibt einen Ganzzahlwert zurück. Dieser Wert kann null sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeCreated">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;DateTime&gt; TimeCreated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; TimeCreated" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.TimeCreated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeit ab, in <see cref="T:System.DateTime" /> zu formatieren, dass das Ereignis erstellt wurde.</summary>
+        <value>Gibt einen <see cref="T:System.DateTime" />-Wert zurück. Der Wert kann leer sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override string ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogRecord.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die XML-Darstellung des Ereignisses ab. Alle Ereigniseigenschaften werden in XML des Ereignisses dargestellt. Der XML-Code entspricht den [Ereignisschema](http://go.microsoft.com/fwlink/?LinkId=81771).</summary>
+        <returns>Gibt eine Zeichenfolge, die die XML-Darstellung des Ereignisses enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserId">
+      <MemberSignature Language="C#" Value="public override System.Security.Principal.SecurityIdentifier UserId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.SecurityIdentifier UserId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.UserId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.SecurityIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sicherheitsbeschreibung des Benutzers, dessen Kontext verwendet wird, um das Ereignis zu veröffentlichen.</summary>
+        <value>Gibt einen <see cref="T:System.Security.Principal.SecurityIdentifier" />-Wert zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;byte&gt; Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;unsigned int8&gt; Version" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogRecord.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionsnummer für das Ereignis ab.</summary>
+        <value>Gibt einen Byte-Wert zurück. Dieser Wert kann null sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

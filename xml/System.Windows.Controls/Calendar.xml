@@ -1,0 +1,1358 @@
+<Type Name="Calendar" FullName="System.Windows.Controls.Calendar">
+  <TypeSignature Language="C#" Value="public class Calendar : System.Windows.Controls.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Calendar extends System.Windows.Controls.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Calendar" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_Root", Type=typeof(System.Windows.Controls.Panel))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_CalendarItem", Type=typeof(System.Windows.Controls.Primitives.CalendarItem))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement dar, mit dessen Hilfe der Benutzer unter Verwendung einer visuellen Kalenderansicht ein Datum auswählen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.Calendar> -Steuerelement kann allein oder als Teil einer Dropdownliste verwendet werden, wenn ein <xref:System.Windows.Controls.DatePicker> Steuerelement. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.DatePicker>.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Controls.Calendar> unterstützt nur den gregorianischen Kalender.  
+  
+ Die folgende Tabelle enthält Informationen zu Aufgaben, die in der Regel zugeordnet sind die <xref:System.Windows.Controls.Calendar>.  
+  
+|Aufgabe|Implementierung|  
+|----------|--------------------|  
+|Haben die <xref:System.Windows.Controls.Calendar> einen Monat, ein ganzes Jahr oder ein Jahrzehnt anzeigen.|Legen Sie die <xref:System.Windows.Controls.Calendar.DisplayMode%2A> Eigenschaft, um Monat, Jahr oder Jahrzehnt.|  
+|Geben Sie, ob der Benutzer ein Datum auswählen kann, einen Datumsbereich oder mehrere Datumsbereiche.|Verwenden der <xref:System.Windows.Controls.Calendar.SelectionMode%2A>.|  
+|Geben Sie die Datumsangaben, die nicht ausgewählt werden können.|Verwenden Sie die <xref:System.Windows.Controls.Calendar.BlackoutDates%2A>-Eigenschaft.|  
+|Geben Sie den Bereich der Datumsangaben, die die <xref:System.Windows.Controls.Calendar> angezeigt.|Verwenden Sie die <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A>-Eigenschaft und die <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A>-Eigenschaft.|  
+|Geben Sie an, ob das aktuelle Datum hervorgehoben ist.|Verwenden Sie die <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A>-Eigenschaft. Standardmäßig <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> ist `true`.|  
+|Ändern der Größe der <xref:System.Windows.Controls.Calendar>.|Verwenden einer <xref:System.Windows.Controls.Viewbox> oder Festlegen der <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Eigenschaft, um eine <xref:System.Windows.Media.ScaleTransform>.  Beachten Sie, dass, wenn Sie festlegen, die <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften eine <xref:System.Windows.Controls.Calendar>, der tatsächliche Kalender ändert seine Größe nicht.|  
+  
+ Die <xref:System.Windows.Controls.Calendar> Steuerelement stellt grundlegende Navigation per Maus oder Tastatur. In der folgenden Tabelle werden die Tastaturnavigation zusammengefasst.  
+  
+|Tastenkombination|<xref:System.Windows.Controls.Calendar.DisplayMode%2A>|Aktion|  
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|------------|  
+|PFEIL|<xref:System.Windows.Controls.CalendarMode.Month>|Ändert die <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Eigenschaft Wenn die <xref:System.Windows.Controls.Calendar.SelectionMode%2A> Eigenschaft nicht festgelegt ist, um <xref:System.Windows.Controls.CalendarSelectionMode.None>.|  
+|PFEIL|<xref:System.Windows.Controls.CalendarMode.Year>|Ändert den Monat des der <xref:System.Windows.Controls.Calendar.DisplayDate%2A> Eigenschaft.  Beachten Sie, dass die <xref:System.Windows.Controls.Calendar.SelectedDate%2A> ändert sich nicht.|  
+|PFEIL|<xref:System.Windows.Controls.CalendarMode.Decade>|Ändert das Jahr des der <xref:System.Windows.Controls.Calendar.DisplayDate%2A>.  Beachten Sie, dass die <xref:System.Windows.Controls.Calendar.SelectedDate%2A> ändert sich nicht.|  
+|UMSCHALTTASTE + PFEILTASTE|<xref:System.Windows.Controls.CalendarMode.Month>|Wenn <xref:System.Windows.Controls.Calendar.SelectionMode%2A> nicht festgelegt ist, um <xref:System.Windows.Controls.CalendarSelectionMode.SingleDate> oder <xref:System.Windows.Controls.CalendarSelectionMode.None>, wird der Bereich der ausgewählten Datumsangaben erweitert.|  
+|START|<xref:System.Windows.Controls.CalendarMode.Month>|Ändert die <xref:System.Windows.Controls.Calendar.SelectedDate%2A> auf den ersten Tag des aktuellen Monats.|  
+|START|<xref:System.Windows.Controls.CalendarMode.Year>|Ändert den Monat des der <xref:System.Windows.Controls.Calendar.DisplayDate%2A> zum ersten Monat des Jahres. Die <xref:System.Windows.Controls.Calendar.SelectedDate%2A> ändert sich nicht.|  
+|START|<xref:System.Windows.Controls.CalendarMode.Decade>|Ändert das Jahr des der <xref:System.Windows.Controls.Calendar.DisplayDate%2A> des ersten Jahres von den zehn Jahren. Die <xref:System.Windows.Controls.Calendar.SelectedDate%2A> ändert sich nicht.|  
+|ENDE|<xref:System.Windows.Controls.CalendarMode.Month>|Ändert die <xref:System.Windows.Controls.Calendar.SelectedDate%2A> bis zum letzten Tag des aktuellen Monats.|  
+|ENDE|<xref:System.Windows.Controls.CalendarMode.Year>|Ändert den Monat des der <xref:System.Windows.Controls.Calendar.DisplayDate%2A> in den letzten Monat des Jahres. Die <xref:System.Windows.Controls.Calendar.SelectedDate%2A> ändert sich nicht.|  
+|ENDE|<xref:System.Windows.Controls.CalendarMode.Decade>|Ändert das Jahr des der <xref:System.Windows.Controls.Calendar.DisplayDate%2A> auf das letzte Jahr von den zehn Jahren. Die <xref:System.Windows.Controls.Calendar.SelectedDate%2A> ändert sich nicht.|  
+|STRG+NACH-OBEN|Beliebig|Wechselt zum nächsten größeren <xref:System.Windows.Controls.Calendar.DisplayMode%2A>. Wenn <xref:System.Windows.Controls.Calendar.DisplayMode%2A> ist bereits <xref:System.Windows.Controls.CalendarMode.Decade>, keine Aktion.|  
+|STRG+NACH-UNTEN|Beliebig|Wechselt zum nächsten kleinere <xref:System.Windows.Controls.Calendar.DisplayMode%2A>. Wenn <xref:System.Windows.Controls.Calendar.DisplayMode%2A> ist bereits <xref:System.Windows.Controls.CalendarMode.Month>, keine Aktion.|  
+|LEERTASTE oder EINGABETASTE|<xref:System.Windows.Controls.CalendarMode.Year> oder <xref:System.Windows.Controls.CalendarMode.Decade>|Switches <xref:System.Windows.Controls.Calendar.DisplayMode%2A> auf die <xref:System.Windows.Controls.CalendarMode.Month> oder <xref:System.Windows.Controls.CalendarMode.Year> durch fokussierte Element dargestellt wird.|  
+  
+## <a name="customizing-the-calendar-control"></a>Anpassen der Calendar-Steuerelement  
+ Zum Anwenden der gleichen eigenschafteneinstellungen mit mehreren <xref:System.Windows.Controls.Calendar> -Steuerelemente verwenden die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, finden Sie unter [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Um anzuzeigen, die Teile und Zustände, die spezifisch für die <xref:System.Windows.Controls.Calendar>, finden Sie unter [Kalender Stile und Vorlagen](~/docs/framework/wpf/controls/calendar-styles-and-templates.md).  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Festlegen einer visuellen Eigenschaft haben nur Auswirkungen, wenn diese Eigenschaft sowohl in vorhanden ist <xref:System.Windows.Controls.Calendar> Steuerelement die Standardvorlage und festgelegt ist, mit ein. Sie finden eine Liste der Eigenschaften visueller Elemente im Abschnitt "Ändern der visuellen Struktur eines Steuerelements" [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+<a name="xamlObjectElementUsage_Calendar"></a>   
+## <a name="xaml-object-element-usage"></a>Verwendung von XAML-Objektelementen  
+  
+```  
+<Calendar .../>  
+```  
+  
+   
+  
+## Examples  
+ Die folgende Abbildung zeigt zwei <xref:System.Windows.Controls.Calendar> Steuerelemente, die mit der Auswahl und Datumsangaben der Stromausfälle und eines ohne.  
+  
+ ![Monatskalender-Steuerelementen](~/add/media/ndp-calendarcontrols.png "Monatskalender-Steuerelementen")  
+Calendar-Steuerelemente  
+  
+ Der folgende Code und die Verwendung von XAML-erstellt eine Seite mit zwei <xref:System.Windows.Controls.Calendar> Steuerelemente, die in der vorherigen Abbildung ähnelt.  
+  
+ [!code-csharp[CalendarSnippets#1](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#1)]
+ [!code-vb[CalendarSnippets#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#1)]
+ [!code-xaml[CalendarSnippets#1](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Calendar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Calendar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Calendar" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlackoutDates">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.CalendarBlackoutDatesCollection BlackoutDates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.CalendarBlackoutDatesCollection BlackoutDates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.BlackoutDates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.CalendarBlackoutDatesCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Datumsangaben, die als nicht auswählbar markiert sind.</summary>
+        <value>Eine Auflistung von Datumsangaben, die nicht ausgewählt werden können. Der Standardwert ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datumsangaben in dieser Auflistung werden grau und durchgestrichen out im Kalender angezeigt.  
+  
+ Alle Datumsangaben in der Vergangenheit als nicht auswählbar festlegen, können Sie die <xref:System.Windows.Controls.CalendarBlackoutDatesCollection.AddDatesInPast%2A> Methode bereitgestellt wird, der von dieser Eigenschaft zurückgegebene Auflistung.  
+  
+<a name="xamlPropertyElementUsage_BlackoutDates"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.BlackoutDates>  
+    oneOrMoreCalendarDateRanges  
+  </object.BlackoutDates>  
+</object>  
+```  
+  
+<a name="xamlValues_BlackoutDates"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *oneOrMoreCalendarDateRanges*  
+ Mindestens ein Objekt Elementen des Typs <xref:System.Windows.Controls.CalendarDateRange>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.Calendar> , hat einige Daten, die nicht ausgewählt werden können.  
+  
+ [!code-csharp[CalendarSnippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#3)]
+ [!code-vb[CalendarSnippets#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#3)]
+ [!code-xaml[CalendarSnippets#3](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#3)]  
+  
+ Das Ergebnis des vorhergehenden Beispiels ähnelt der folgenden Abbildung.  
+  
+ ![Kalender mit Datumsangaben, die nicht ausgewählt werden können. ] (~/add/media/ndp-calendarblackout.png "Kalender mit Datumsangaben, die nicht ausgewählt werden können.")  
+Kalender mit Datumsangaben, die nicht ausgewählt werden können  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarButtonStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style CalendarButtonStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style CalendarButtonStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.CalendarButtonStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Style" /> mit dem Steuerelement interne verknüpfte <see cref="T:System.Windows.Controls.Primitives.CalendarButton" /> Objekt.</summary>
+        <value>Die aktuelle Darstellung der <see cref="T:System.Windows.Controls.Primitives.CalendarButton" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_CalendarButtonStyle"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object CalendarButtonStyle="{resourceExtension styleResourceKey"/>  
+  
+```  
+  
+<a name="xamlValues_CalendarButtonStyle"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *resourceExtension*  
+ Eines der folgenden: `StaticResource` oder `DynamicResource`. Weitere Informationen finden Sie unter [XAML-Ressourcen](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ *styleResourceKey*  
+ Der Schlüssel, der angeforderten Ressource identifiziert. Der Schlüssel verweist auf eine vorhandene Ressource in einem <xref:System.Windows.ResourceDictionary>.  
+  
+<a name="dependencyPropertyInfo_CalendarButtonStyle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Calendar.CalendarButtonStyleProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarButtonStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CalendarButtonStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CalendarButtonStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Calendar.CalendarButtonStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Calendar.CalendarButtonStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarDayButtonStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style CalendarDayButtonStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style CalendarDayButtonStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.CalendarDayButtonStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Style" /> mit dem Steuerelement interne verknüpfte <see cref="T:System.Windows.Controls.Primitives.CalendarDayButton" /> Objekt.</summary>
+        <value>Die aktuelle Darstellung der <see cref="T:System.Windows.Controls.Primitives.CalendarDayButton" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_CalendarDayButtonStyle"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object CalendarDayButtonStyle="{resourceExtension styleResourceKey}"/>  
+  
+```  
+  
+<a name="xamlValues_CalendarDayButtonStyle"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *resourceExtension*  
+ Eines der folgenden: `StaticResource` oder `DynamicResource`. Weitere Informationen finden Sie unter [XAML-Ressourcen](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ *styleResourceKey*  
+ Der Schlüssel, der angeforderten Ressource identifiziert. Der Schlüssel verweist auf eine vorhandene Ressource in einem <xref:System.Windows.ResourceDictionary>.  
+  
+<a name="dependencyPropertyInfo_CalendarDayButtonStyle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Calendar.CalendarDayButtonStyleProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarDayButtonStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CalendarDayButtonStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CalendarDayButtonStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Calendar.CalendarDayButtonStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Calendar.CalendarDayButtonStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarItemStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style CalendarItemStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style CalendarItemStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.CalendarItemStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Style" /> mit dem Steuerelement interne verknüpfte <see cref="T:System.Windows.Controls.Primitives.CalendarItem" /> Objekt.</summary>
+        <value>Die aktuelle Darstellung der <see cref="T:System.Windows.Controls.Primitives.CalendarItem" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_CalendarItemStyle"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object CalendarItemStyle="{resourceExtension styleResourceKey}"/>  
+  
+```  
+  
+<a name="xamlValues_CalendarItemStyle"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *resourceExtension*  
+ Eines der folgenden: `StaticResource` oder `DynamicResource`. Weitere Informationen finden Sie unter [XAML-Ressourcen](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ *styleResourceKey*  
+ Der Schlüssel, der angeforderten Ressource identifiziert. Der Schlüssel verweist auf eine vorhandene Ressource in einem <xref:System.Windows.ResourceDictionary>.  
+  
+<a name="dependencyPropertyInfo_CalendarItemStyle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Calendar.CalendarItemStyleProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarItemStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CalendarItemStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CalendarItemStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Calendar.CalendarItemStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Calendar.CalendarItemStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayDate">
+      <MemberSignature Language="C#" Value="public DateTime DisplayDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime DisplayDate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.DisplayDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Datum angezeigt.</summary>
+        <value>Das Datum angezeigt. Die Standardeinstellung ist <see cref="P:System.DateTime.Today" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Calendar.DisplayDate%2A> und <xref:System.Windows.Controls.Calendar.DisplayMode%2A> Eigenschaften angeben, was anzeigt, dass der Kalender und was innerhalb des Kalenders den Fokus besitzt.  Der Benutzer ändern kann die <xref:System.Windows.Controls.Calendar.SelectedDate%2A> nur, wenn <xref:System.Windows.Controls.Calendar.DisplayMode%2A> festgelegt ist, auf den Monat, aber der Benutzer kann sich ändern die <xref:System.Windows.Controls.Calendar.DisplayDate%2A> Wenn Jahr-und Jahrzehnt der Kalender wird.  In der folgenden Tabelle wird beschrieben, wie der Modus ändert die <xref:System.Windows.Controls.Calendar.DisplayDate%2A>.  
+  
+|"DisplayMode"|Aktion|  
+|-----------------|------------|  
+|Monat|<xref:System.Windows.Controls.Calendar.DisplayDate%2A>Änderungen, wenn der Benutzer zu einem anderen Monat navigiert.|  
+|Jahr|Der Monat <xref:System.Windows.Controls.Calendar.DisplayDate%2A> geändert, wenn der Benutzer klickt oder zu einem anderen Monat navigiert.|  
+|Jahrzehnt|Das Jahr des <xref:System.Windows.Controls.Calendar.DisplayDate%2A> geändert, wenn der Benutzer klickt oder zu einem anderen Jahr navigiert.|  
+  
+ <xref:System.Windows.Controls.Calendar.DisplayDate%2A>wird ignoriert, wenn der Wert liegt außerhalb des Bereichs von Datumsangaben, mit der angegeben wird <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> und <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> Eigenschaften.  
+  
+<a name="dependencyPropertyInfo_DisplayDate"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Calendar.DisplayDateProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+<a name="xamlAttributeUsage_DisplayDate"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<Calendar DisplayDate="dateTimeString"/>  
+```  
+  
+<a name="xamlValues_DisplayDate"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *dateTimeString*  
+ Ein Datum in einem der Formate, die in aufgeführt sind die ["DateTime" Verwendung von XAML-Syntax](~/docs/framework/wpf/advanced/datetime-xaml-syntax.md) Thema.  
+  
+   
+  
+## Examples  
+ Der folgende Code richtet eine <xref:System.Windows.Controls.Calendar> mit einem bestimmten Bereich von Datumsangaben und legt das Datum angezeigt.  
+  
+ [!code-csharp[CalendarSnippets#2](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#2)]
+ [!code-vb[CalendarSnippets#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#2)]
+ [!code-xaml[CalendarSnippets#2](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayDateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Controls.CalendarDateChangedEventArgs&gt; DisplayDateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Controls.CalendarDateChangedEventArgs&gt; DisplayDateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Calendar.DisplayDateChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Controls.CalendarDateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die <see cref="P:System.Windows.Controls.Calendar.DisplayDate" />-Eigenschaft geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, nachdem <xref:System.Windows.Controls.Calendar.DisplayDate%2A> ist der neue Wert zugewiesen.  
+  
+<a name="xamlAttributeUsage_DisplayDateChanged"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<Calendar DisplayDateChanged="eventhandler"/>  
+```  
+  
+   
+  
+## Examples  
+ Der folgende Ereignishandler aktualisiert eine <xref:System.Windows.Controls.TextBox> mit Informationen aus der <xref:System.Windows.Controls.Calendar.DisplayDateChanged> Ereignis. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Controls.Calendar> (Übersicht).  
+  
+ [!code-xaml[CalendarSnippets#6](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayDateEnd">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; DisplayDateEnd { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; DisplayDateEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.DisplayDateEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das letzte Datum in den Datumsbereich, der im Kalender verfügbar ist.</summary>
+        <value>Das letzte Datum, das im Kalender verfügbar ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den Bereich der Einschränken einer <xref:System.Windows.Controls.Calendar> durch Festlegen der <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> und <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> Eigenschaften.  Ein Benutzer kann nicht einen Bildlauf zu oder Datumsangaben außerhalb dieses Bereichs auswählen.  Wenn Sie festlegen, die <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Eigenschaft, um ein Datum, nach dem <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A>, <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> festgelegt ist, auf den gleichen Wert wie <xref:System.Windows.Controls.Calendar.SelectedDate%2A>.  
+  
+<a name="dependencyPropertyInfo_DisplayDateEnd"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Calendar.DisplayDateEndProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+<a name="xamlAttributeUsage_DisplayDateEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<Calendar DisplayDateEnd="dateTimeString"/>  
+```  
+  
+<a name="xamlValues_DisplayDateEnd"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *dateTimeString*  
+ Ein Datum in einem der Formate, die in aufgeführt sind die ["DateTime" Verwendung von XAML-Syntax](~/docs/framework/wpf/advanced/datetime-xaml-syntax.md) Thema.  
+  
+   
+  
+## Examples  
+ Der folgende Code richtet eine <xref:System.Windows.Controls.Calendar> mit einem bestimmten Bereich von Datumsangaben und legt das Datum angezeigt.  
+  
+ [!code-csharp[CalendarSnippets#2](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#2)]
+ [!code-vb[CalendarSnippets#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#2)]
+ [!code-xaml[CalendarSnippets#2](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayDateEndProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DisplayDateEndProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DisplayDateEndProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Calendar.DisplayDateEndProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Calendar.DisplayDateEnd" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayDateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DisplayDateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DisplayDateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Calendar.DisplayDateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Calendar.DisplayDate" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayDateStart">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; DisplayDateStart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; DisplayDateStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.DisplayDateStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das erste Datum, das im Kalender verfügbar ist.</summary>
+        <value>Das erste Datum, das im Kalender verfügbar ist. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den Bereich eines Kalenders einschränken, durch Festlegen der <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> und <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> Eigenschaften.  Ein Benutzer kann nicht einen Bildlauf zu oder Datumsangaben außerhalb dieses Bereichs auswählen.  Wenn Sie festlegen, die <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Eigenschaft, um ein Datum vor dem <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A>, <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> festgelegt ist, auf den gleichen Wert wie <xref:System.Windows.Controls.Calendar.SelectedDate%2A>.  
+  
+<a name="dependencyPropertyInfo_DisplayDateStart"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Calendar.DisplayDateStartProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+<a name="xamlAttributeUsage_DisplayDateStart"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<Calendar DisplayDateStart="dateTimeString"/>  
+```  
+  
+<a name="xamlValues_DisplayDateStart"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *dateTimeString*  
+ Ein Datum in einem der Formate, die in aufgeführt sind die ["DateTime" Verwendung von XAML-Syntax](~/docs/framework/wpf/advanced/datetime-xaml-syntax.md) Thema.  
+  
+   
+  
+## Examples  
+ Der folgende Code richtet eine <xref:System.Windows.Controls.Calendar> mit einem bestimmten Bereich von Datumsangaben und legt das Datum angezeigt.  
+  
+ [!code-csharp[CalendarSnippets#2](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#2)]
+ [!code-vb[CalendarSnippets#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#2)]
+ [!code-xaml[CalendarSnippets#2](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayDateStartProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DisplayDateStartProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DisplayDateStartProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Calendar.DisplayDateStartProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Calendar.DisplayDateStart" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.CalendarMode DisplayMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.CalendarMode DisplayMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.DisplayMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.CalendarMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob im Kalender ein Monat, Jahr oder Jahrzehnt angezeigt.</summary>
+        <value>Ein Wert, der gibt an, welche Zeitdauer der <see cref="T:System.Windows.Controls.Calendar" /> sollte angezeigt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Kalender kann einen Monat, Jahr oder ein Jahrzehnt anzeigen. Die folgende Tabelle enthält, wie der Benutzer zu jedem Modus navigiert.  
+  
+|"DisplayMode"|Aktion|  
+|-----------------|------------|  
+|Monat|Um in den Modus des Jahres zu navigieren, klicken Sie auf die Monatsüberschrift.|  
+|Jahr|Zum Jahrzehntmodus zu navigieren, klicken Sie auf die Jahresüberschrift. Um in den Modus des Monats zu navigieren, klicken Sie auf einen der angezeigten Monate.|  
+|Jahrzehnt|Um in den Modus des Jahres zu navigieren, klicken Sie auf eines der angezeigten Jahre.|  
+  
+<a name="dependencyPropertyInfo_DisplayMode"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Calendar.DisplayModeProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt einen Kalender, der die Monate in einem Jahr und den Handles angezeigt der <xref:System.Windows.Controls.Calendar.DisplayModeChanged> Ereignis, wenn der Benutzer auf einen Monat oder Jahr klickt, wird der Kalender nicht ändern seiner <xref:System.Windows.Controls.Calendar.DisplayMode%2A>.  
+  
+ [!code-csharp[CalendarSnippets#4](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#4)]
+ [!code-vb[CalendarSnippets#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#4)]
+ [!code-xaml[CalendarSnippets#4](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#4)]  
+  
+ [!code-csharp[CalendarSnippets#5](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#5)]
+ [!code-vb[CalendarSnippets#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Controls.CalendarModeChangedEventArgs&gt; DisplayModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Controls.CalendarModeChangedEventArgs&gt; DisplayModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Calendar.DisplayModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Controls.CalendarModeChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die <see cref="P:System.Windows.Controls.Calendar.DisplayMode" />-Eigenschaft geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_DisplayModeChanged"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<Calendar DisplayModeChanged="eventhandler"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt einen Kalender, der die Monate in einem Jahr und den Handles angezeigt der <xref:System.Windows.Controls.Calendar.DisplayModeChanged> Ereignis, wenn der Benutzer auf einen Monat oder Jahr klickt, wird der Kalender nicht ändern seiner <xref:System.Windows.Controls.Calendar.DisplayMode%2A>.  
+  
+ [!code-csharp[CalendarSnippets#4](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#4)]
+ [!code-vb[CalendarSnippets#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#4)]
+ [!code-xaml[CalendarSnippets#4](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#4)]  
+  
+ [!code-csharp[CalendarSnippets#5](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#5)]
+ [!code-vb[CalendarSnippets#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DisplayModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DisplayModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Calendar.DisplayModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Calendar.DisplayMode" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstDayOfWeek">
+      <MemberSignature Language="C#" Value="public DayOfWeek FirstDayOfWeek { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DayOfWeek FirstDayOfWeek" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.FirstDayOfWeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DayOfWeek</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen des Tages, der den Beginn der Woche betrachtet wird.</summary>
+        <value>Ein <see cref="T:System.DayOfWeek" /> , die den Beginn der Woche darstellt. Die Standardeinstellung ist die <see cref="P:System.Globalization.DateTimeFormatInfo.FirstDayOfWeek" /> , richtet sich nach der aktuellen Kultur.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_FirstDayOfWeek"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Calendar.FirstDayOfWeekProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+<a name="xamlAttributeUsage_FirstDayOfWeek"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ \<Kalender **"FirstDayOfWeek"**= "<xref:System.DayOfWeek>" / >  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Controls.Calendar.FirstDayOfWeek%2A> Eigenschaft <xref:System.DayOfWeek.Monday>.  
+  
+ [!code-xaml[CalendarSnippets#8](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstDayOfWeekProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FirstDayOfWeekProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FirstDayOfWeekProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Calendar.FirstDayOfWeekProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Calendar.FirstDayOfWeek" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTodayHighlighted">
+      <MemberSignature Language="C#" Value="public bool IsTodayHighlighted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTodayHighlighted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.IsTodayHighlighted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das aktuelle Datum hervorgehoben ist.</summary>
+        <value>
+          <see langword="true" />Wenn das aktuelle Datum hervorgehoben ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsTodayHighlighted"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Calendar.IsTodayHighlightedProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+<a name="xamlAttributeUsage_IsTodayHighlighted"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<Calendar IsTodayHighlighted="bool"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.Calendar> , in dem das aktuelle Datum nicht hervorgehoben ist.  
+  
+ [!code-csharp[CalendarSnippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#3)]
+ [!code-vb[CalendarSnippets#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#3)]
+ [!code-xaml[CalendarSnippets#3](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTodayHighlightedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsTodayHighlightedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsTodayHighlightedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Calendar.IsTodayHighlightedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Calendar.IsTodayHighlighted" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Calendar.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die visuelle Struktur für die <see cref="T:System.Windows.Controls.Calendar" /> steuern, wenn eine neue Vorlage angewendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird immer dann aufgerufen, wenn Anwendungscode oder ein interner Prozess, wie das Neuerstellen Layoutdurchlauf, ruft der <xref:System.Windows.FrameworkElement.ApplyTemplate%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Calendar.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Windows.Automation.Peers.CalendarAutomationPeer" /> für die Verwendung durch die [!INCLUDE[silverlight](~/includes/silverlight-md.md)] Automatisierungsinfrastruktur.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.CalendarAutomationPeer" /> für die <see cref="T:System.Windows.Controls.Calendar" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt ein neues <xref:System.Windows.Automation.Peers.CalendarAutomationPeer> Instanz, sofern noch nicht für die Instanz des Steuerelements erstellt wurde; andernfalls gibt es die <xref:System.Windows.Automation.Peers.CalendarAutomationPeer> zuvor erstellt haben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDisplayDateChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDisplayDateChanged (System.Windows.Controls.CalendarDateChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDisplayDateChanged(class System.Windows.Controls.CalendarDateChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Calendar.OnDisplayDateChanged(System.Windows.Controls.CalendarDateChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.CalendarDateChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.Calendar.DisplayDateChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Controls.Calendar.OnDisplayDateChanged(System.Windows.Controls.CalendarDateChangedEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Controls.Calendar.OnDisplayDateChanged(System.Windows.Controls.CalendarDateChangedEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDisplayModeChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDisplayModeChanged (System.Windows.Controls.CalendarModeChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDisplayModeChanged(class System.Windows.Controls.CalendarModeChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Calendar.OnDisplayModeChanged(System.Windows.Controls.CalendarModeChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.CalendarModeChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.Calendar.DisplayModeChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Controls.Calendar.OnDisplayModeChanged(System.Windows.Controls.CalendarModeChangedEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Controls.Calendar.OnDisplayModeChanged(System.Windows.Controls.CalendarModeChangedEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Calendar.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.KeyDown" /> Routingereignis, das auftritt, wenn der Benutzer eine Taste drückt, während dieses Steuerelement den Fokus besitzt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Calendar>überschreibt die <xref:System.Windows.Controls.Calendar.OnKeyDown%2A> -Methode zur Unterstützung der Tastaturnavigation.  Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Controls.Calendar>-Klasse. Diese Implementierung kennzeichnet die <xref:System.Windows.UIElement.KeyDown> Ereignis als behandelt, indem die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft der Ereignisdaten zu `true` Wenn eine Tastatureingabe, z. B. durch Drücken einer Taste eine Navigationsaktion ausführt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see cref="M:System.Windows.Controls.Calendar.OnKeyDown(System.Windows.Input.KeyEventArgs)" />, rufen Sie immer die grundlegende Implementierung Ihrer <see cref="M:System.Windows.Controls.Calendar.OnKeyDown(System.Windows.Input.KeyEventArgs)" /> Implementierung. Die basisimplementierung aufgerufen wird verhindert, dass Basisklassen Behandlung des Ereignisses mit einem Klassenhandler, der das Laufzeitverhalten der endgültigen Klasse ändern kann. Sie können die grundlegende Implementierung entweder vor oder nach Ihrem besondere Behandlung, je nach Ihren Anforderungen aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyUp">
+      <MemberSignature Language="C#" Value="protected override void OnKeyUp (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyUp(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Calendar.OnKeyUp(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.KeyUp" /> Routingereignis, das auftritt, wenn der Benutzer eine Taste loslässt, während dieses Steuerelement den Fokus besitzt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Calendar>überschreibt die <xref:System.Windows.Controls.Calendar.OnKeyDown%2A> -Methode zur Unterstützung der Tastaturnavigation.  Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Controls.Calendar>-Klasse. Diese Implementierung ändert nicht zum behandelten Zustand (die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft) von der <xref:System.Windows.UIElement.KeyUp> Ereignisdaten.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see cref="M:System.Windows.Controls.Calendar.OnKeyUp(System.Windows.Input.KeyEventArgs)" />, rufen Sie immer die grundlegende Implementierung Ihrer <see cref="M:System.Windows.Controls.Calendar.OnKeyUp(System.Windows.Input.KeyEventArgs)" /> Implementierung. Die basisimplementierung aufgerufen wird verhindert, dass Basisklassen Behandlung des Ereignisses mit einem Klassenhandler, der das Laufzeitverhalten der endgültigen Klasse ändern kann. Sie können die grundlegende Implementierung entweder vor oder nach Ihrem besondere Behandlung, je nach Ihren Anforderungen aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectedDatesChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectedDatesChanged (System.Windows.Controls.SelectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectedDatesChanged(class System.Windows.Controls.SelectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Calendar.OnSelectedDatesChanged(System.Windows.Controls.SelectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.SelectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.Calendar.SelectedDatesChanged" /> Routingereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löst das Steuerelement die <xref:System.Windows.Controls.Calendar.SelectedDatesChanged> Ereignis durch Aufrufen von <xref:System.Windows.UIElement.RaiseEvent%2A>. Weitere Informationen finden Sie unter [Ereignisübersicht weitergeleitet](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Controls.Calendar.OnSelectedDatesChanged(System.Windows.Controls.SelectionChangedEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Controls.Calendar.OnSelectedDatesChanged(System.Windows.Controls.SelectionChangedEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionModeChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionModeChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionModeChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Calendar.OnSelectionModeChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.Calendar.SelectionModeChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Controls.Calendar.OnSelectionModeChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Controls.Calendar.OnSelectionModeChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedDate">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; SelectedDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; SelectedDate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.SelectedDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das derzeit ausgewählte Datum fest.</summary>
+        <value>Das derzeit ausgewählte Datum. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_SelectedDate"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Calendar.SelectedDateProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+ Verwenden Sie diese Eigenschaft beim <xref:System.Windows.Controls.Calendar.SelectionMode%2A> festgelegt ist, um <xref:System.Windows.Controls.CalendarSelectionMode.SingleDate>. Diese Eigenschaft wird in anderen Modi werden immer das erste Datum im <xref:System.Windows.Controls.Calendar.SelectedDates%2A>.  
+  
+<a name="xamlAttributeUsage_SelectedDate"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<Calendar SelectedDate="dateTimeString"/>  
+```  
+  
+<a name="xamlValues_SelectedDate"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *dateTimeString*  
+ Ein Datum in einem der Formate, die in aufgeführt sind die ["DateTime" Verwendung von XAML-Syntax](~/docs/framework/wpf/advanced/datetime-xaml-syntax.md) Thema.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.Calendar> mit einem bestimmten Bereich von Datumsangaben und legt das Datum angezeigt.  
+  
+ [!code-csharp[CalendarSnippets#2](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#2)]
+ [!code-vb[CalendarSnippets#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#2)]
+ [!code-xaml[CalendarSnippets#2](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Das angegebene Datum liegt außerhalb des Bereichs von angegebenen <see cref="P:System.Windows.Controls.Calendar.DisplayDateStart" /> und<see cref="P:System.Windows.Controls.Calendar.DisplayDateEnd" />  
+  
+ - oder -   
+  
+ Das angegebene Datum ist der <see cref="P:System.Windows.Controls.Calendar.BlackoutDates" /> Auflistung.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn festgelegt zu beliebiegen Dokumentbestandteilen außer <see langword="null" /> Wenn <see cref="P:System.Windows.Controls.Calendar.SelectionMode" /> festgelegt ist, um <see cref="F:System.Windows.Controls.CalendarSelectionMode.None" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedDateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectedDateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectedDateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Calendar.SelectedDateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Calendar.SelectedDate" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedDates">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.SelectedDatesCollection SelectedDates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.SelectedDatesCollection SelectedDates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.SelectedDates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.SelectedDatesCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von ausgewählten Datumsangaben ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.SelectedDatesCollection" /> -Objekt, das den derzeit ausgewählten Datumsangaben enthält. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datumsangaben können der Auflistung hinzugefügt werden, entweder einzeln oder in einem Bereich von der <xref:System.Windows.Controls.SelectedDatesCollection.AddRange%2A> Methode. Abhängig vom Wert der <xref:System.Windows.Controls.Calendar.SelectionMode%2A> -Eigenschaft, ein Datum oder ein Datumsbereich zur Auflistung hinzufügen möglicherweise gelöscht. Die folgende Tabelle enthält, wie <xref:System.Windows.Controls.CalendarSelectionMode> wirkt sich auf die <xref:System.Windows.Controls.Calendar.SelectedDates%2A> Eigenschaft.  
+  
+|CalendarSelectionMode|Beschreibung|  
+|---------------------------|-----------------|  
+|<xref:System.Windows.Controls.CalendarSelectionMode.None>|Es ist keine Auswahl sind zulässig. <xref:System.Windows.Controls.Calendar.SelectedDate%2A>kann nicht festgelegt werden und können keine Werte hinzugefügt werden, um <xref:System.Windows.Controls.Calendar.SelectedDates%2A>.|  
+|<xref:System.Windows.Controls.CalendarSelectionMode.SingleDate>|Nur ein einzelnes Datum kann ausgewählt werden, entweder durch Festlegen <xref:System.Windows.Controls.Calendar.SelectedDate%2A> oder den ersten Wert in <xref:System.Windows.Controls.Calendar.SelectedDates%2A>. <xref:System.Windows.Controls.SelectedDatesCollection.AddRange%2A>kann nicht verwendet werden.|  
+|<xref:System.Windows.Controls.CalendarSelectionMode.SingleRange>|Ein einzelnen Bereich von Datumsangaben kann ausgewählt werden. Festlegen von <xref:System.Windows.Controls.Calendar.SelectedDate%2A>, ein Datum einzeln hinzufügen <xref:System.Windows.Controls.Calendar.SelectedDates%2A>, oder über <xref:System.Windows.Controls.SelectedDatesCollection.AddRange%2A> werden gelöscht, die von allen vorherige Werten <xref:System.Windows.Controls.Calendar.SelectedDates%2A>.|  
+|<xref:System.Windows.Controls.CalendarSelectionMode.MultipleRange>|Mehrere nicht zusammenhängende Datumsbereiche können ausgewählt werden. Hinzufügen eines Datums einzeln <xref:System.Windows.Controls.Calendar.SelectedDates%2A> oder <xref:System.Windows.Controls.SelectedDatesCollection.AddRange%2A> werden nicht gelöscht <xref:System.Windows.Controls.Calendar.SelectedDates%2A>. Festlegen von <xref:System.Windows.Controls.Calendar.SelectedDate%2A> wird immer noch löschen <xref:System.Windows.Controls.Calendar.SelectedDates%2A>, aber zusätzliche Datumsangaben oder Bereiche dann hinzugefügt werden. Hinzufügen eines Bereichs, die Datumsangaben, die bereits ausgewählt sind enthält oder überschneidet sich mit einem anderen Bereich Ergebnisse in der Union der Bereiche und führt nicht dazu, dass eine Ausnahme.|  
+  
+<a name="xamlPropertyElementUsage_SelectedDates"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.SelectedDates>  
+    oneOrMoreDateTimeObjects  
+  </object.SelectedDates>  
+</object>  
+  
+```  
+  
+<a name="xamlValues_SelectedDates"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *oneOrMoreDateTimeObjects*  
+ Eine oder mehrere <xref:System.DateTime> Objektelemente.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.Calendar> , die mehrere Datumsbereiche ausgewählt wurde.  
+  
+ [!code-csharp[CalendarSnippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#3)]
+ [!code-vb[CalendarSnippets#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#3)]
+ [!code-xaml[CalendarSnippets#3](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedDatesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Controls.SelectionChangedEventArgs&gt; SelectedDatesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Controls.SelectionChangedEventArgs&gt; SelectedDatesChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Calendar.SelectedDatesChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Controls.SelectionChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Auflistung von zurückgegeben der <see cref="P:System.Windows.Controls.Calendar.SelectedDates" /> -Eigenschaft geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_SelectedDatesChanged"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<Calendar SelectedDatesChanged="eventhandler"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedDatesChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent SelectedDatesChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent SelectedDatesChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Calendar.SelectedDatesChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.Calendar.SelectedDatesChanged" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.CalendarSelectionMode SelectionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.CalendarSelectionMode SelectionMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Calendar.SelectionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.CalendarSelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, welche Art von Auswahl sind zulässig.</summary>
+        <value>Ein Wert, der den aktuellen Auswahlmodus angibt. Die Standardeinstellung ist <see cref="F:System.Windows.Controls.CalendarSelectionMode.SingleDate" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_SelectionMode"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Calendar.SelectionModeProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+ Diese Eigenschaft bestimmt, ob die <xref:System.Windows.Controls.Calendar> keine Auswahl, die Auswahl der ein einzelnes Datum oder die Auswahl mehrerer Datumsangaben zulässt. Der Auswahlmodus wird angegeben, mit der <xref:System.Windows.Controls.CalendarSelectionMode> Enumeration.  
+  
+ Wenn diese Eigenschaft geändert wird, werden alle ausgewählte Datumsangaben gelöscht.  
+  
+<a name="xamlAttributeUsage_SelectionMode"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ \<Kalender **"selectedmode"**= "<xref:System.Windows.Controls.CalendarSelectionMode>" / >  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.Calendar> , die mehrere Datumsbereiche ausgewählt wurde.  
+  
+ [!code-csharp[CalendarSnippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/calendarsnippets/csharp/window1.xaml.cs#3)]
+ [!code-vb[CalendarSnippets#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/calendarsnippets/visualbasic/window1.xaml.vb#3)]
+ [!code-xaml[CalendarSnippets#3](~/samples/snippets/xaml/VS_Snippets_Wpf/calendarsnippets/xaml/window1.xaml#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt; SelectionModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; SelectionModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Calendar.SelectionModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Controls.Calendar.SelectionMode" /> ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Calendar.SelectionModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Calendar.SelectionMode" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Calendar.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine Textdarstellung des ausgewählten Datums.</summary>
+        <returns>Eine Textdarstellung für das ausgewählte Datum oder eine leere Zeichenfolge Wenn <see cref="P:System.Windows.Controls.Calendar.SelectedDate" /> ist <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

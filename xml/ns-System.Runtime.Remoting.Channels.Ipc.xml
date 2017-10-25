@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.Remoting.Channels.Ipc">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Remoting.Channels.Ipc" /> -Namespace definiert einen Kommunikationskanal für das Remoting, der prozessübergreifende Kommunikationssystem (IPC) des Windows-Betriebssystems verwendet. Da es keine Netzwerkkommunikation verwendet werden, die IPC-Kanal ist wesentlich schneller als die HTTP- und TCP-Kanäle, aber kann nur für die Kommunikation zwischen Anwendungsdomänen auf demselben physischen Computer verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

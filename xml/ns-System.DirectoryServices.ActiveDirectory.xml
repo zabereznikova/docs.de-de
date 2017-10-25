@@ -1,0 +1,19 @@
+<Namespace Name="System.DirectoryServices.ActiveDirectory">
+  <Docs>
+    <summary>Die <see cref="N:System.DirectoryServices.ActiveDirectory" /> -Namespace stellt ein hohem Abstraktionsgrad-Objektmodell, mit dem Microsoft Active Directory erstellt services-Tasks. Die Active Directory-Konzepte, wie z. B. Gesamtstruktur, Domäne, Standort, Subnetz, Partition und Schema sind Teil des Objektmodells.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.DirectoryServices.ActiveDirectory> Namespace wird verwendet, um die Active Directory-Verwaltungsaufgaben zu automatisieren. <xref:System.DirectoryServices.ActiveDirectory>wird nicht verwendet, um auf Daten zuzugreifen, die in Active Directory oder einem anderen Verzeichnisdienst befindet. Die <xref:System.DirectoryServices> Namespace für diesen Zweck verwendet werden soll.  
+  
+ Der <xref:System.DirectoryServices.ActiveDirectory>-Namespace ist für die Verwendung durch Anwendungsentwickler vorgesehen, die die .NET Framework-Programmierung mit Visual Basic .NET oder C# beherrschen. Kenntnisse über das Programmieren von Verzeichnisdiensten sind ebenfalls hilfreich.  
+  
+ <xref:System.DirectoryServices.ActiveDirectory>ist Bestandteil des [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] und wird auf allen Betriebssystemen unterstützt, die [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] mit kompatibel ist.  
+  
+ Viele der Klassen, Methoden und Eigenschaften in der <xref:System.DirectoryServices.ActiveDirectory> Namespace verwenden die <xref:System.Security.Permissions.SecurityAction.LinkDemand> Codezugriffssicherheits-Option. Dies bedeutet, dass der Code Access Security Bedarf nur während der Just-in-Time-Kompilierung erfolgt und, dass die Anforderung nur auf der aufrufenden Assembly und nicht auf die gesamte Aufrufliste ausgeführt wird. Aus diesem Grund sollten Aufrufer keine Objekte aus diesem Namespace zur Laufzeit erstellt werden, um nicht vertrauenswürdigen Code übergeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

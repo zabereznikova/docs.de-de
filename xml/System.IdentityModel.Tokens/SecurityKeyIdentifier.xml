@@ -1,0 +1,370 @@
+<Type Name="SecurityKeyIdentifier" FullName="System.IdentityModel.Tokens.SecurityKeyIdentifier">
+  <TypeSignature Language="C#" Value="public class SecurityKeyIdentifier : System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SecurityKeyIdentifierClause&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityKeyIdentifier extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Tokens.SecurityKeyIdentifierClause&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SecurityKeyIdentifierClause&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Schlüsselbezeichner dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird der <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> nicht verwendet, es sei denn, es wird ein benutzerdefinierter Sicherheitstokendienst erstellt. Wenn ein Sicherheitstokendienst ein Sicherheitstoken zurückgibt, enthält das ausgegebene Sicherheitstoken Verweise auf angefügte und nicht angefügte Sicherheitstoken. Angefügte Verweise beziehen sich auf Sicherheitstoken, die im Sicherheitsheader einer SOAP-Nachricht enthalten sind, während sich nicht angefügte Verweise auf Sicherheitstoken beziehen, die nicht im Sicherheitsheader einer SOAP-Nachricht enthalten sind. Diese Verweise bestätigen in der Regel die Echtheit des ausgegebenen Sicherheitstokens. Sie werden durch Klassen dargestellt, die sich von der <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>-Klasse ableiten. Die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>-Klasse enthält eine Auflistung dieser Verweise.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityKeyIdentifier ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifier.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityKeyIdentifier (params System.IdentityModel.Tokens.SecurityKeyIdentifierClause[] identifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause[] identifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifier.#ctor(System.IdentityModel.Tokens.SecurityKeyIdentifierClause[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="clauses" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="identifiers">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" />-Klasse mithilfe der angegebenen Schlüsselbezeichnerklausel.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identifiers" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.IdentityModel.Tokens.SecurityKeyIdentifierClause item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifier.Add(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="item">To be added.</param>
+        <summary>Fügt eine Schlüsselbezeichnerklausel dem Ende der Liste hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <see cref="P:System.IdentityModel.Tokens.SecurityKeyIdentifier.IsReadOnly" />-Eigenschaft ist <see langword="true" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateKey">
+      <MemberSignature Language="C#" Value="public bool CanCreateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanCreateKey" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityKeyIdentifier.CanCreateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob für mindestens eine Schlüsselbezeichnerklausel ein Schlüssel erstellt werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn für mindestens eine Schlüsselbezeichnerklausel ein Schlüssel erstellt werden kann, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityKeyIdentifier.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Schlüsselbezeichnerklauseln ab.</summary>
+        <value>Die Anzahl der Schlüsselbezeichnerklauseln.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKey">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKey CreateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityKey CreateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifier.CreateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKey</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Schlüssel für eine der Schlüsselbezeichnerklauseln.</summary>
+        <returns><see cref="T:System.IdentityModel.Tokens.SecurityKey" />, der den erstellten Schlüssel darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene <xref:System.IdentityModel.Tokens.SecurityKey> gilt für die erste Schlüsselbezeichnerklausel in der Auflistung, für die ein Schlüssel erstellt werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Für die eine der angegebenen Schlüsselbezeichnerklauseln konnte kein Schlüssel erstellt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Find&lt;TClause&gt;">
+      <MemberSignature Language="C#" Value="public TClause Find&lt;TClause&gt; () where TClause : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TClause Find&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) TClause&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifier.Find``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TClause</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TClause">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TClause"><see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />, die den Typ der Schlüsselbezeichnerklausel darstellt, nach dem die Auflistung durchsucht werden soll.</typeparam>
+        <summary>Sucht eine Schlüsselbezeichnerklausel des angegebenen Typs und gibt das erste Vorkommen innerhalb der gesamten Auflistung zurück.</summary>
+        <returns>Die erste <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> in der Auflistung, die dem im <paramref name="TClause" />-Parameter angegebenen Typ entspricht.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="TClause" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Auflistung enthält keine Schlüsselbezeichnerklausel des im <paramref name="TClause" />-Parameter angegebenen Typs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.IdentityModel.Tokens.SecurityKeyIdentifierClause&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.IdentityModel.Tokens.SecurityKeyIdentifierClause&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifier.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.IdentityModel.Tokens.SecurityKeyIdentifierClause&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Auflistung der Schlüsselbezeichnerklauseln durchläuft.</summary>
+        <returns><see cref="T:System.Collections.Generic.List`1.Enumerator" /> des <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />-Typs für die Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityKeyIdentifier.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Eigenschaften dieser Instanz schreibgeschützt sind.</summary>
+        <value>
+          <see langword="true" />, wenn die Eigenschaften dieser Instanz schreibgeschützt sind, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Instanz der <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>-Klasse schreibgeschützt machen möchten, rufen Sie die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier.MakeReadOnly%2A>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyIdentifierClause this[int i] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityKeyIdentifier.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">To be added.</param>
+        <summary>Ruft die Schlüsselbezeichnerklausel an dem angegebenen Index ab.</summary>
+        <value>Der <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="i" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="i" /> ist größer oder gleich <see cref="P:System.IdentityModel.Tokens.SecurityKeyIdentifier.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeReadOnly">
+      <MemberSignature Language="C#" Value="public void MakeReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MakeReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifier.MakeReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass diese Instanz schreibgeschützt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier.MakeReadOnly%2A>-Methode abgerufen wird, wird die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier.IsReadOnly%2A>-Eigenschaft als `true` festgelegt, und die Eigenschaften dieser Instanz können nicht mehr festgelegt werden. Zum Beispiel kann diesem Objekt keine Schlüsselbezeichnerklausel hinzugefügt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifier.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Auflistung der Schlüsselbezeichnerklauseln durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifier.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das aktuelle Objekt zurück.</summary>
+        <returns>Das aktuelle Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier.ToString%2A>-Methode gibt Einzelheiten zu allen Schlüsselbezeichnerklauseln im Schlüsselbezeichner zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryFind&lt;TClause&gt;">
+      <MemberSignature Language="C#" Value="public bool TryFind&lt;TClause&gt; (out TClause result) where TClause : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryFind&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) TClause&gt;([out] !!TClause&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifier.TryFind``1(``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TClause">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="clause" Type="TClause&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TClause"><see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />, die den Typ der Schlüsselbezeichnerklausel darstellt, nach dem die Auflistung durchsucht werden soll.</typeparam>
+        <param name="result">To be added.</param>
+        <summary>Sucht eine Schlüsselbezeichnerklausel des angegebenen Typs, und gibt einen Wert zurück, der kennzeichnet, ob eine Klausel dieses Typs gefunden wurde. Wenn ein entsprechender Typ gefunden wurde, wird er im <see langword="out" />-Parameter zurückgegeben.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Schlüsselbezeichnerklausel des im <paramref name="TClause" />-Parameter angegebenen Typs in der Auflistung vorhanden ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Schlüsselbezeichnerklausel des im `TClause`-Parameter angegebenen Typs in der Auflistung nicht enthalten ist, ist der `clause` out-Parameter `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

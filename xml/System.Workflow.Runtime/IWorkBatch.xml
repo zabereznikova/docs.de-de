@@ -1,0 +1,62 @@
+<Type Name="IWorkBatch" FullName="System.Workflow.Runtime.IWorkBatch">
+  <TypeSignature Language="C#" Value="public interface IWorkBatch" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWorkBatch" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.IWorkBatch" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Methoden bereit, um einem Arbeitsbatch Arbeit hinzuzufügen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Dienste verwenden diese Schnittstelle, um dem <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch%2A> anstehende Arbeit hinzuzufügen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Workflow.Runtime.IPendingWork work, object workItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Workflow.Runtime.IPendingWork work, object workItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.IWorkBatch.Add(System.Workflow.Runtime.IPendingWork,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="work" Type="System.Workflow.Runtime.IPendingWork" />
+        <Parameter Name="workItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="work">Ein <see cref="T:System.Workflow.Runtime.IPendingWork" /> zugeordnete Objekt der <c>WorkItem</c>.</param>
+        <param name="workItem">Ein Objekt, für das Arbeit ausgeführt werden soll.</param>
+        <summary>Fügt eine anstehendes Arbeitselement einem Arbeitsbatch hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um einem Arbeitsbatch anstehende Arbeitselemente hinzuzufügen. Das dem Batch hinzugefügte `workItem`-Objekt ist `work` zugeordnet. Dabei handelt es sich um ein Objekt, das die <xref:System.Workflow.Runtime.IPendingWork>-Schnittstelle implementiert. Von diesem <xref:System.Workflow.Runtime.IPendingWork>-Objekt bereitgestellte Methoden werden aufgerufen, um den nachfolgenden Commit des `workItem` zu verarbeiten. Dienste verwenden diese Methode, um dem <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch%2A> anstehende Arbeit hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,100 @@
+<Type Name="ParallelLoopResult" FullName="System.Threading.Tasks.ParallelLoopResult">
+  <TypeSignature Language="C#" Value="public struct ParallelLoopResult" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ParallelLoopResult extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.ParallelLoopResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt den ausführungstatus bei der Ausführung einer <see cref="T:System.Threading.Tasks.Parallel" /> Schleife.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Threading.Tasks.ParallelLoopResult.IsCompleted%2A> gibt "true" zurück, und klicken Sie dann die Schleife zum Abschluss ausgeführt wurde, so, dass alle Iterationen der Schleife ausgeführt wurden. Wenn <xref:System.Threading.Tasks.ParallelLoopResult.IsCompleted%2A> "false" zurückgibt und <xref:System.Threading.Tasks.ParallelLoopResult.LowestBreakIteration%2A> gibt null zurück, einen Aufruf von <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> wurde verwendet, um die Schleife vorzeitig beendet. Wenn <xref:System.Threading.Tasks.ParallelLoopResult.IsCompleted%2A> "false" zurückgibt und <xref:System.Threading.Tasks.ParallelLoopResult.LowestBreakIteration%2A> gibt einen ganzzahligen Wert ungleich Null, <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> wurde verwendet, um die Schleife vorzeitig beendet.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Alle öffentlichen Member des <see cref="T:System.Threading.Tasks.ParallelLoopResult" /> sind threadsicher und können von mehreren Threads gleichzeitig aufgerufen werden.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="IsCompleted">
+      <MemberSignature Language="C#" Value="public bool IsCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelLoopResult.IsCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die Schleife zum Abschluss ausgeführt wurde, dass alle Iterationen der Schleife ausgeführt wurden und die Schleife erhalten eine Anforderung vorzeitig beendet.</summary>
+        <value>"true", wenn die Schleife zum Abschluss ausgeführt wurde; andernfalls "false";</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LowestBreakIteration">
+      <MemberSignature Language="C#" Value="public Nullable&lt;long&gt; LowestBreakIteration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; LowestBreakIteration" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelLoopResult.LowestBreakIteration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index die niedrigste Iteration ab, von dem <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> aufgerufen wurde.</summary>
+        <value>Gibt eine ganze Zahl, die die niedrigste Iteration darstellt, von der die Break-Anweisung aufgerufen wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> wurde nicht eingesetzt wird, diese Eigenschaft gibt null zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

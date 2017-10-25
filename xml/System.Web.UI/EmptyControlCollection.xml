@@ -1,0 +1,139 @@
+<Type Name="EmptyControlCollection" FullName="System.Web.UI.EmptyControlCollection">
+  <TypeSignature Language="C#" Value="public class EmptyControlCollection : System.Web.UI.ControlCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EmptyControlCollection extends System.Web.UI.ControlCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.EmptyControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Unterstützung für eine <see cref="T:System.Web.UI.ControlCollection" /> -Auflistung, die immer leer ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird verwendet, wenn Sie möchten ein benutzerdefiniertes Steuerelement zu definieren, das keine untergeordneten Steuerelemente zulässt.  
+  
+   
+  
+## Examples  
+ [!code-csharp[SystemWebUI_EmptyControlCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_EmptyControlCollection/CS/emptycontrolcollection.cs#1)]
+ [!code-vb[SystemWebUI_EmptyControlCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_EmptyControlCollection/VB/emptycontrolcollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EmptyControlCollection (System.Web.UI.Control owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Control owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.EmptyControlCollection.#ctor(System.Web.UI.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.Web.UI.Control" /> , besitzt dieser Auflistung als Auflistung von untergeordneten Steuerelementen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.EmptyControlCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird versucht, füllen ein Steuerelement mit untergeordneten Steuerelementen, die eine Ausnahme auszulösen. Dies ist, da das Containersteuerelement keine untergeordneten Steuerelemente zulässt. Im folgenden finden die Befehlszeile verwendet, um die ausführbare Datei erstellt.  
+  
+```vb  
+vbc /r:System.dll /r:System.Web.dll /t:library  
+       /out:myWebAppPath/bin/vb_myEmptyControlCollection.dll  
+       myEmptyControlCollection.vb  
+```  
+  
+```csharp  
+csc /t:library /out:myWebAppPath/bin/cs_myEmptyControlCollection.dll  
+    myEmptyControlCollection.cs  
+```  
+  
+ [!code-csharp[SystemWebUI_EmptyControlCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_EmptyControlCollection/CS/emptycontrolcollection.cs#1)]
+ [!code-vb[SystemWebUI_EmptyControlCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_EmptyControlCollection/VB/emptycontrolcollection.vb#1)]  
+  
+ Im folgenden Codebeispiel wird die leere benutzerdefinierte Steuerelement oben verwendet. Wenn Sie dieses Beispiel ausführen zu können, erhalten Sie eine Ausnahme. Beachten Sie, dass die Werte in der `Register` Richtlinie die vorherige Befehlszeile widerspiegeln.  
+  
+```vb  
+<%@ Register TagPrefix="custom" Assembly="vb_myEmptyControlCollection" Namespace="CustomControls" %>  
+ <html>  
+  <body>  
+  <h1>Using an Empty Control</h1>  
+  <custom:MyVB_EmptyControl id="vbEmptyControlId" runat="server"/>  
+  </body>  
+ </html>  
+```  
+  
+```csharp  
+<%@ Register TagPrefix="custom" Assembly="cs_myEmptyControlCollection" Namespace="CustomControls" %>  
+ <html>  
+  <body>  
+  <h1>Using an Empty Control </h1>  
+  <custom:MyCS_EmptyControl id="csEmptyControlId" runat="server"/>  
+  </body>  
+ </html>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.EmptyControlCollection.Add(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="child">Die hinzuzufügende <see cref="T:System.Web.UI.Control" />-Instanz. Dieser Parameter wird immer ignoriert.</param>
+        <summary>Das Hinzufügen des angegebenen verweigert <see cref="T:System.Web.UI.Control" /> Objekt der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">Immer ausgegeben, da das Steuerelement keine untergeordneten Steuerelemente zulässt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public override void AddAt (int index, System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddAt(int32 index, class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.EmptyControlCollection.AddAt(System.Int32,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index, an dem Hinzufügen der <see cref="T:System.Web.UI.Control" />. Dieser Parameter wird immer ignoriert.</param>
+        <param name="child">Die hinzuzufügende <see cref="T:System.Web.UI.Control" />-Instanz. Dieser Parameter wird immer ignoriert.</param>
+        <summary>Das Hinzufügen des angegebenen verweigert <see cref="T:System.Web.UI.Control" /> Objekt der Auflistung, an der angegebenen Indexposition befindet.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">Immer ausgegeben, da das Steuerelement keine untergeordneten Steuerelemente zulässt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

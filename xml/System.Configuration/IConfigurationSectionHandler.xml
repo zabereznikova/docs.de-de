@@ -1,0 +1,72 @@
+<Type Name="IConfigurationSectionHandler" FullName="System.Configuration.IConfigurationSectionHandler">
+  <TypeSignature Language="C#" Value="public interface IConfigurationSectionHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConfigurationSectionHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.IConfigurationSectionHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Behandelt den Zugriff auf bestimmte Konfigurationsabschnitte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Wichtige** <xref:System.Configuration.IConfigurationSectionHandler> ist in .NET Framework 2.0 und höher veraltet. Aber, da er intern verwendet wird, wurde er beibehalten. Sie finden ein Beispiel am [Vorgehensweise: Erstellen benutzerdefinierter Configuration Sections Using IConfigurationSectionHandler](http://msdn.microsoft.com/library/07f68a3f-2920-4665-a824-47bda744e662). Wenn Sie im vorherige Beispiel verwenden, erstellen Sie sie mit .NET Framework, Version 1.0 oder 1.1.  
+  
+ In .NET Framework, Version 2.0 und höher, Sie müssen stattdessen leiten Sie von der <xref:System.Configuration.ConfigurationSection> Klasse, um die zugehörigen Konfigurationsabschnittshandler zu implementieren. Sie finden ein Beispiel am [Vorgehensweise: Erstellen benutzerdefinierter Configuration Sections Using ConfigurationSection](http://msdn.microsoft.com/library/febaca98-c727-4017-95ed-82e2fb6cf234).  
+  
+ Instanzen der <xref:System.Configuration.IConfigurationSectionHandler> Klasse muss threadsicher und zustandslos. Die <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> Methode muss gleichzeitig von mehreren Threads aufgerufen werden.  
+  
+ Darüber hinaus das Konfigurationsobjekt generiert, indem die <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> Methode muss threadsicher und unveränderlich sein. Da die Konfigurationsobjekte vom Konfigurationssystem zwischengespeichert werden, ist nicht auf das übergeordnete Argument zum Ändern der <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> Methode. Beispielsweise, wenn der Rückgabewert der <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> ist nur eine kleine Änderung des übergeordneten Elements, die tatsächliche Änderungen vorgenommen werden, auf einen Klon des übergeordneten Elements, nicht das Original.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public object Create (object parent, object configContext, System.Xml.XmlNode section);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Create(object parent, object configContext, class System.Xml.XmlNode section) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IConfigurationSectionHandler.Create(System.Object,System.Object,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Object" />
+        <Parameter Name="configContext" Type="System.Object" />
+        <Parameter Name="section" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Übergeordnetes Objekt.</param>
+        <param name="configContext">Konfigurationskontextobjekt.</param>
+        <param name="section">Abschnitts-XML-Knoten.</param>
+        <summary>Erstellt einen Konfigurationsabschnittshandler.</summary>
+        <returns>Das Handlerobjekt erstellte Abschnitt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanzen der <xref:System.Configuration.IConfigurationSectionHandler> Klasse muss threadsicher und zustandslos. Die <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> Methode muss gleichzeitig von mehreren Threads aufgerufen werden.  
+  
+ Darüber hinaus das Konfigurationsobjekt generiert, indem die <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> Methode muss threadsicher und unveränderlich sein. Da die Konfigurationsobjekte vom Konfigurationssystem zwischengespeichert werden, ist wichtig, nicht das übergeordnete Argument zu ändern <xref:System.Configuration.IConfigurationSectionHandler.Create%2A>. Beispielsweise, wenn der Rückgabewert der <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> ist nur eine kleine Änderung des übergeordneten Elements, die tatsächliche Änderungen vorgenommen werden, auf einen Klon des übergeordneten Elements, nicht das Original.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

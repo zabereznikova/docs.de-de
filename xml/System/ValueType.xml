@@ -1,0 +1,248 @@
+<Type Name="ValueType" FullName="System.ValueType">
+  <TypeSignature Language="C#" Value="public abstract class ValueType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit ValueType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ValueType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse für Werttypen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ValueType>überschreibt die virtuelle Methoden aus <xref:System.Object> mit geeigneter Implementierungen für Werttypen. Siehe auch <xref:System.Enum>, erbt die <xref:System.ValueType>.  
+  
+ Datentypen werden in Werttypen und Verweistypen aufgeteilt. Werttypen sind entweder Stapel zugeordneten oder Inline in einer Struktur zugewiesen. Verweistypen werden Heaps zugewiesen. Typen von Verweis- und die übergeordnete Basisklasse abgeleitet sind <xref:System.Object>. In Fällen, in denen es für einen Werttyp an verhält sich wie ein Objekt erforderlich ist, wird ein Wrapper, der den Werttyp anscheinend ein Verweis-Objekt ist auf dem Heap reserviert und wird der Werttyp Wert hinein kopiert. Die Wrapper wird markiert, damit das System weiß, dass es sich um einen Werttyp enthält. Dieser Prozess wird als Boxing bezeichnet, und der umgekehrte Vorgang wird als unboxing bezeichnet. Boxing und unboxing können einen beliebigen Typ als ein Objekt behandelt werden soll.  
+  
+ Obwohl <xref:System.ValueType> ist die implizite Basisklasse für Werttypen, können nicht Sie erstellen Sie eine Klasse, die von erben <xref:System.ValueType> direkt. Stattdessen einzelne Compiler geben Sie ein Schlüsselwort oder zu erstellen (z. B. `struct` in C# geschrieben und `Structure`...`End Structure` in Visual Basic) unterstützen die Erstellung von Werttypen.  
+  
+ Abgesehen von dient als Basisklasse für Werttypen in .NET Framework die <xref:System.ValueType> Struktur wird in der Regel nicht direkt im Code verwendet. Allerdings können sie als Parameter in Methodenaufrufen möglichen Argumente in Werttypen anstelle aller Objekte eingeschränkt werden, oder eine Methode zur Handhabung einer Anzahl von verschiedenen Werttypen gestatten verwendet werden. Im folgende Beispiel wird veranschaulicht, wie <xref:System.ValueType> verhindert, dass Verweistypen an Methoden übergeben werden. Definiert eine Klasse namens `Utility` , enthält vier Methoden: `IsNumeric`, der angibt, ob das Argument eine Zahl ist. `IsInteger`, der angibt, ob das Argument eine ganze Zahl ist; `IsFloat`, der angibt, ob das Argument eine Gleitkommazahl; ist und `Compare`, gibt die Beziehung zwischen zwei numerische Werte an. In jedem Fall werden die Methodenparameter des Typs <xref:System.ValueType>, und Verweistypen werden daran gehindert, die an die Methode übergeben werden.  
+  
+ [!code-csharp[System.ValueType.Structure#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.valuetype.structure/cs/example1.cs#1)]
+ [!code-vb[System.ValueType.Structure#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.valuetype.structure/vb/example1.vb#1)]  
+  
+ Das folgende Beispiel veranschaulicht Aufrufe der Methoden von der `Utility` Klasse.  
+  
+ [!code-csharp[System.ValueType.Structure#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.valuetype.structure/cs/example1.cs#2)]
+ [!code-vb[System.ValueType.Structure#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.valuetype.structure/vb/example1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ValueType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueType.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ValueType" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueType.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt an, ob diese Instanz und ein angegebenes Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> und diese Instanz denselben Typ aufweisen und denselben Wert darstellen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ValueType.Equals%28System.Object%29?displayProperty=nameWithType> methodenüberschreibungen <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> und stellt die Standardimplementierung von Wertgleichheit für alle Typen in .NET Framework bereit.  
+  
+ Wenn keines der Felder der aktuellen Instanz und `obj` sind Referenztypen, die <xref:System.ValueType.Equals%2A> -Methode führt einen Byte-pro-Byte-Vergleich der beiden Objekte im Arbeitsspeicher. Andernfalls es Reflektion verwendet, um den entsprechenden Feldern von Vergleichen `obj` und dieser Instanz.  
+  
+> [!TIP]
+>  Insbesondere, wenn der Werttyp Felder, die Verweistypen sind enthält, sollten Sie überschreiben die <xref:System.ValueType.Equals%28System.Object%29> Methode. Dies kann die Leistung verbessern und ermöglichen es Ihnen, die Bedeutung der Gleichheit für den Typ genauer darstellen.  
+  
+## <a name="notes-for-the-includewrtincludeswrt-mdmd"></a>Hinweise für die[!INCLUDE[wrt](~/includes/wrt-md.md)]  
+ Beim Aufrufen der <xref:System.ValueType.Equals%2A> Methode auf eine [!INCLUDE[wrt](~/includes/wrt-md.md)] -Struktur, stellt er das Standardverhalten für Werttypen, die nicht außer Kraft setzen <xref:System.ValueType.Equals%2A>. Dies ist Teil der Unterstützung von .NET Framework für die [!INCLUDE[wrt](~/includes/wrt-md.md)] (siehe [.NET Framework Unterstützung für Windows Store-Apps und Windows-Runtime](~/docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)). [!INCLUDE[wrt](~/includes/wrt-md.md)]Strukturen können nicht überschreiben <xref:System.ValueType.Equals%2A>, selbst wenn sie mit c# oder Visual Basic geschrieben sind, da diese Methoden besitzen dürfen. (Darüber hinaus Strukturen in den [!INCLUDE[wrt](~/includes/wrt-md.md)] selbst nicht erben <xref:System.ValueType>.) Allerdings sie angezeigt werden, damit <xref:System.ValueType.ToString%2A>, <xref:System.ValueType.Equals%2A>, und <xref:System.ValueType.GetHashCode%2A> Methoden, wenn Sie in c# oder Visual Basic-Code werden verwendet, und die .NET Framework das Standardverhalten für diese Methoden bietet.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie die <xref:System.ValueType.Equals%2A> Methode kann durch einen abgeleiteten Typ überschrieben werden.  
+  
+ [!code-cpp[ValueType.Equals Example#1](~/samples/snippets/cpp/VS_Snippets_CLR/ValueType.Equals Example/CPP/source.cpp#1)]
+ [!code-csharp[ValueType.Equals Example#1](~/samples/snippets/csharp/VS_Snippets_CLR/ValueType.Equals Example/CS/source.cs#1)]
+ [!code-vb[ValueType.Equals Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ValueType.Equals Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueType.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen. Diese ist der Hashcode für die Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ValueType.GetHashCode%2A> Methode gilt für abgeleitet Typen <xref:System.ValueType>. Ein oder mehrere Felder des abgeleiteten Typs wird verwendet, um den Rückgabewert zu berechnen. Wenn Sie des abgeleiteten Typs aufrufen `GetHashCode` -Methode, der Rückgabewert wahrscheinlich nicht für die Verwendung als Schlüssel in einer Hashtabelle geeignet sein. Darüber hinaus kann Änderung des Werts aus einem oder mehreren dieser Felder nicht geeignet für die Verwendung in einer Hashtabelle als Schlüssel zurückgegeben werden. In beiden Fällen sollten Sie Ihre eigene Implementierung der die <xref:System.ValueType.GetHashCode%2A> Methode, die das Konzept der ein Hashcode für den Typ genauer darstellt.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> und <xref:System.Collections.Hashtable?displayProperty=nameWithType>.  
+  
+## <a name="notes-for-the-includewrtincludeswrt-mdmd"></a>Hinweise für die[!INCLUDE[wrt](~/includes/wrt-md.md)]  
+ Beim Aufrufen der <xref:System.ValueType.GetHashCode%2A> Methode auf eine [!INCLUDE[wrt](~/includes/wrt-md.md)] -Struktur, stellt er das Standardverhalten für Werttypen, die nicht außer Kraft setzen <xref:System.ValueType.GetHashCode%2A>. Dies ist Teil der Unterstützung von .NET Framework für die [!INCLUDE[wrt](~/includes/wrt-md.md)] (siehe [.NET Framework Unterstützung für Windows Store-Apps und Windows-Runtime](~/docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)). [!INCLUDE[wrt](~/includes/wrt-md.md)]Strukturen können nicht überschreiben <xref:System.ValueType.GetHashCode%2A>, selbst wenn sie mit c# oder Visual Basic geschrieben sind, da diese Methoden besitzen dürfen. (Darüber hinaus Strukturen in den [!INCLUDE[wrt](~/includes/wrt-md.md)] selbst nicht erben <xref:System.ValueType>.) Allerdings sie angezeigt werden, damit <xref:System.ValueType.ToString%2A>, <xref:System.ValueType.Equals%2A>, und <xref:System.ValueType.GetHashCode%2A> Methoden, wenn Sie in c# oder Visual Basic-Code werden verwendet, und die .NET Framework das Standardverhalten für diese Methoden bietet.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie die <xref:System.ValueType.GetHashCode%2A> Methode kann durch einen abgeleiteten Typ überschrieben werden.  
+  
+ [!code-cpp[ValueType.Equals Example#1](~/samples/snippets/cpp/VS_Snippets_CLR/ValueType.Equals Example/CPP/source.cpp#1)]
+ [!code-csharp[ValueType.Equals Example#1](~/samples/snippets/csharp/VS_Snippets_CLR/ValueType.Equals Example/CS/source.cs#1)]
+ [!code-vb[ValueType.Equals Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ValueType.Equals Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueType.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den voll qualifizierten Typnamen dieser Instanz zurück.</summary>
+        <returns>Der vollqualifizierte Typname.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ValueType.ToString%2A?displayProperty=nameWithType> methodenüberschreibungen der <xref:System.Object.ToString%2A?displayProperty=nameWithType> Methode und stellt die Standardimplementierung von der `ToString` Methode für Werttypen. (Werttypen sind Typen, die definiert, indem Sie die `struct` Schlüsselwort in C# geschrieben und von der `Structure`... `End Structure` in Visual Basic erstellen.) Funktionell die Implementierung ist jedoch das gleiche wie der <xref:System.Object.ToString%2A?displayProperty=nameWithType>: die Methode gibt den voll qualifizierten Typnamen zurück.  
+  
+ Werttypen, die definiert, indem Sie die `struct` -Schlüsselwort in c# und die `Structure`... `End Structure` Konstrukt in Visual Basic in der Regel überschreiben die <xref:System.ValueType.ToString%2A?displayProperty=nameWithType> Methode, um eine aussagekräftigere Zeichenfolgendarstellung des Werttyps bereitzustellen. Der Unterschied wird im folgenden Beispiel veranschaulicht. Er definiert zwei Werttypen `EmployeeA` und `EmployeeB`, erstellt eine Instanz von jeder und ruft seine `ToString` Methode. Da die `EmployeeA` überschreibt die Struktur nicht die <xref:System.ValueType.ToString%2A?displayProperty=nameWithType> -Methode, es zeigt nur den voll qualifizierten Typnamen an. Die `EmployeeB.ToString` -Methode, andererseits, aussagekräftige Informationen über das Objekt enthält.  
+  
+ [!code-csharp[System.ValueType.ToString#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ValueType.ToString/cs/ToString2.cs#1)]
+ [!code-vb[System.ValueType.ToString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ValueType.ToString/vb/ToString2.vb#1)]  
+  
+ Beachten Sie, dass obwohl Enumerationstypen auch Werttypen sind, von Ableiten der <xref:System.Enum> Klasse, welche Außerkraftsetzungen <xref:System.ValueType.ToString%2A?displayProperty=nameWithType>.  
+  
+## <a name="notes-for-the-windows-runtime"></a>Hinweise für die Windows-Runtime  
+ Beim Aufrufen der <xref:System.ValueType.ToString%2A> Methode auf eine [!INCLUDE[wrt](~/includes/wrt-md.md)] -Struktur, stellt er das Standardverhalten für Werttypen, die nicht außer Kraft setzen <xref:System.ValueType.ToString%2A>. Dies ist Teil der Unterstützung von .NET Framework für die [!INCLUDE[wrt](~/includes/wrt-md.md)] (siehe [.NET Framework Unterstützung für Windows Store-Apps und Windows-Runtime](~/docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)). [!INCLUDE[wrt](~/includes/wrt-md.md)]Strukturen können nicht überschreiben <xref:System.ValueType.ToString%2A>, selbst wenn sie mit c# oder Visual Basic geschrieben sind, da diese Methoden besitzen dürfen. (Darüber hinaus Strukturen in den [!INCLUDE[wrt](~/includes/wrt-md.md)] selbst nicht erben <xref:System.ValueType>.) Allerdings sie angezeigt werden, damit <xref:System.ValueType.ToString%2A>, <xref:System.ValueType.Equals%2A>, und <xref:System.ValueType.GetHashCode%2A> Methoden, wenn Sie in c# oder Visual Basic-Code werden verwendet, und die .NET Framework das Standardverhalten für diese Methoden bietet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

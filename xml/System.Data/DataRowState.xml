@@ -1,0 +1,172 @@
+<Type Name="DataRowState" FullName="System.Data.DataRowState">
+  <TypeSignature Language="C#" Value="public enum DataRowState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataRowState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataRowState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ruft den Status einer <see cref="T:System.Data.DataRow" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataRowState> Enumeration wird zurückgegeben, indem Sie die <xref:System.Data.DataRow.RowState%2A> Eigenschaft von der <xref:System.Data.DataRow> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt zuerst eine neue <xref:System.Data.DataTable> mit einer Spalte erstellt dann ein einzelnes <xref:System.Data.DataRow>. Als die <xref:System.Data.DataRow> erstellt, hinzugefügt, geändert und gelöscht wird, wird seine <xref:System.Data.DataRow.RowState%2A> gedruckt wird.  
+  
+ [!code-csharp[Classic WebData DataRowState Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowState Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowState Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowState Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Added">
+      <MemberSignature Language="C#" Value="Added" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataRowState Added = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataRowState.Added" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeile hinzugefügt wurde eine <see cref="T:System.Data.DataRowCollection" />, und <see cref="M:System.Data.DataRow.AcceptChanges" /> nicht aufgerufen wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Deleted">
+      <MemberSignature Language="C#" Value="Deleted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataRowState Deleted = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataRowState.Deleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeile gelöscht wurde, mithilfe der <see cref="M:System.Data.DataRow.Delete" /> Methode der <see cref="T:System.Data.DataRow" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Detached">
+      <MemberSignature Language="C#" Value="Detached" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataRowState Detached = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataRowState.Detached" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeile wurde zwar erstellt, gehört aber keiner <see cref="T:System.Data.DataRowCollection" /> an. Ein <see cref="T:System.Data.DataRow" /> ist in diesem Zustand, unmittelbar nachdem es erstellt wurde und bevor es einer Auflistung hinzugefügt wird oder wenn es aus einer Auflistung entfernt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Modified">
+      <MemberSignature Language="C#" Value="Modified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataRowState Modified = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataRowState.Modified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeile wurde geändert und <see cref="M:System.Data.DataRow.AcceptChanges" /> nicht aufgerufen wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unchanged">
+      <MemberSignature Language="C#" Value="Unchanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataRowState Unchanged = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataRowState.Unchanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeile wurde seit dem letzten Aufruf von <see cref="M:System.Data.DataRow.AcceptChanges" /> nicht geändert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

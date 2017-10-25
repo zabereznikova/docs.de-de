@@ -1,0 +1,427 @@
+<Type Name="ObjectDataProvider" FullName="System.Windows.Data.ObjectDataProvider">
+  <TypeSignature Language="C#" Value="public class ObjectDataProvider : System.Windows.Data.DataSourceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectDataProvider extends System.Windows.Data.DataSourceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.ObjectDataProvider" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Data.DataSourceProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Umschließt und erstellt ein Objekt, das Sie als Bindungsquelle verwenden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  <xref:System.Windows.Data.ObjectDataProvider>schlägt fehl, wenn sie nicht über Berechtigungen zum Durchführen der Reflektion für den angegebenen Typ oder Member verfügt. Weitere Informationen finden Sie unter Berechtigungen Anforderungen in [Quellen Übersicht über Datenbindung](~/docs/framework/wpf/data/binding-sources-overview.md).  
+  
+ Es gibt viele Möglichkeiten zum Erstellen eines Objekts, das als Bindungsquelle verwendet. Beispielsweise können Sie erstellen ein Objekt im Ressourcenabschnitt des Ihrer [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Seite, oder Sie können im Code erstellen und legen Sie ihn als das `DataContext` des Fensters.  
+  
+ <xref:System.Windows.Data.ObjectDataProvider>ermöglicht das Erstellen des Objekts in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] und ihn als Bindungsquelle verfügbar machen. Es bietet die folgenden Eigenschaften, mit denen Sie eine Abfrage für das Objekt ausführen, und Binden an die Ergebnisse.  
+  
+-   Verwenden der <xref:System.Windows.Data.ObjectDataProvider.ConstructorParameters%2A> Eigenschaft zum Übergeben von Parametern an den Konstruktor des Objekts.  
+  
+-   Verwenden Sie die <xref:System.Windows.Data.ObjectDataProvider.MethodName%2A> Eigenschaft, um einen Aufruf einer Methode und die <xref:System.Windows.Data.ObjectDataProvider.MethodParameters%2A> Eigenschaft zum Übergeben von Parametern an die Methode. Sie können dann auf die Ergebnisse der Methode binden.  
+  
+ Sie können auch die <xref:System.Windows.Data.ObjectDataProvider.IsAsynchronous%2A> Eigenschaft, um anzugeben, ob die Erstellung des Objekts in einem Arbeitsthread oder im aktiven Kontext ausgeführt.  
+  
+ Diese Klasse ist auch nützlich, wenn Sie Ihre aktuellen Bindungsquellobjekt mit einem anderen Objekt ersetzen möchten und die zugehörigen Bindungen aktualisiert werden wurden.  
+  
+ <xref:System.Windows.Data.ObjectDataProvider>bietet eine einfache Möglichkeit zum Erstellen und Verwenden von Objekten als Quelle Bindungsobjekten in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], jedoch nicht vorhandenen Datenmodellen ersetzen.  
+  
+ Wenn Sie Ihre eigenen Objekte für die Datenbindung implementieren, finden Sie unter [Übersicht über Bindungsquellen](~/docs/framework/wpf/data/binding-sources-overview.md) Informationen und Empfehlungen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDataProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.ObjectDataProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Data.ObjectDataProvider" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginQuery">
+      <MemberSignature Language="C#" Value="protected override void BeginQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.ObjectDataProvider.BeginQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet das angeforderte Objekt erstellen, entweder sofort oder in einem Hintergrundthread, basierend auf dem Wert von der <see cref="P:System.Windows.Data.ObjectDataProvider.IsAsynchronous" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Data.DataSourceProvider.InitialLoad%2A> und <xref:System.Windows.Data.DataSourceProvider.Refresh%2A> Methoden der Basisklasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstructorParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.IList ConstructorParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList ConstructorParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.ObjectDataProvider.ConstructorParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der an den Konstruktor zu übergebenden Parameter an.</summary>
+        <value>Die Liste der an den Konstruktor zu übergebenden Parameter. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implizit durch Ändern dieser Auflistung führt dazu, dass die <xref:System.Windows.Data.ObjectDataProvider> zu aktualisieren. Wenn Sie mehrere Aktualisierung verursacht-Eigenschaften, die Verwendung von ändern <xref:System.Windows.Data.DataSourceProvider.DeferRefresh%2A> wird empfohlen.  
+  
+<a name="xamlPropertyElementUsage_ConstructorParameters"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.ConstructorParameters>  
+    parameterValues  
+  </object.ConstructorParameters>  
+</object>  
+```  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft verwendet wird:  
+  
+ [!code-xaml[SimpleBinding#ODPCP](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml#odpcp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsynchronous">
+      <MemberSignature Language="C#" Value="public bool IsAsynchronous { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAsynchronous" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.ObjectDataProvider.IsAsynchronous" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Erstellung des Objekts in einem Arbeitsthread oder im aktiven Kontext ausgeführt.</summary>
+        <value>
+          <see langword="true" />zum Erstellen von Objekten in einem Arbeitsthread ausführen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich, wenn Sie externe Daten Objekte binden, die nur langsam verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.ObjectDataProvider.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der aufzurufenden Methode ab oder legt ihn fest.</summary>
+        <value>Der Name der aufzurufenden Methode. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft auf einen Aufruf einer Methode für das Objekt und die <xref:System.Windows.Data.ObjectDataProvider.MethodParameters%2A> Eigenschaft zum Übergeben von Parametern an die Methode. Sie können dann auf die Ergebnisse der Methode binden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.IList MethodParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList MethodParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.ObjectDataProvider.MethodParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Parameter ab, die an die Methode übergeben werden sollen.</summary>
+        <value>Die Liste der Parameter, die an die Methode übergeben werden sollen. Der Standardwert ist eine leere Liste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Data.ObjectDataProvider.MethodName%2A> Eigenschaft, um einen Aufruf einer Methode für das Objekt und die <xref:System.Windows.Data.ObjectDataProvider.MethodParameters%2A> Eigenschaft zum Übergeben von Parametern an die Methode. Sie können dann auf die Ergebnisse der Methode binden.  
+  
+ Implizit durch Ändern dieser Auflistung führt dazu, dass die <xref:System.Windows.Data.ObjectDataProvider> Objekt zu aktualisieren. Wenn Sie mehrere Aktualisierung verursacht-Eigenschaften, die Verwendung von ändern <xref:System.Windows.Data.DataSourceProvider.DeferRefresh%2A> wird empfohlen.  
+  
+<a name="xamlPropertyElementUsage_MethodParameters"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.MethodParameters>  
+    parameterValues  
+  </object.MethodParameters>  
+</object>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectInstance">
+      <MemberSignature Language="C#" Value="public object ObjectInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ObjectInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.ObjectDataProvider.ObjectInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das als Bindungsquelle verwendet wird, oder legt es fest.</summary>
+        <value>Die Instanz des Objekts aus erstellt <see cref="P:System.Windows.Data.ObjectDataProvider.ObjectType" /> und <see cref="P:System.Windows.Data.ObjectDataProvider.ConstructorParameters" />, oder die <see cref="T:System.Windows.Data.DataSourceProvider" /> von denen die <see cref="P:System.Windows.Data.DataSourceProvider.Data" /> dient als die <see cref="P:System.Windows.Data.ObjectDataProvider.ObjectInstance" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Data.ObjectDataProvider.ObjectType%2A> festgelegt ist, auf einen Wert ungleich Null, enthält die Eigenschaft, die das Objekt des Typs gemäß <xref:System.Windows.Data.ObjectDataProvider.ObjectType%2A>. Wenn <xref:System.Windows.Data.ObjectDataProvider.ObjectInstance%2A> zugewiesen ist, durch den Benutzer der <xref:System.Windows.Data.ObjectDataProvider.ObjectType%2A> Eigenschaft gibt den Typ des zugeordneten Objekts zurück. Wenn <xref:System.Windows.Data.ObjectDataProvider.ObjectInstance%2A> festgelegt ist, um eine <xref:System.Windows.Data.DataSourceProvider>, die <xref:System.Windows.Data.ObjectDataProvider> verwendet die <xref:System.Windows.Data.DataSourceProvider.Data%2A> des zugeordneten Datenquellen-Anbieters, wie die effektive <xref:System.Windows.Data.ObjectDataProvider.ObjectInstance%2A>.  
+  
+ Wenn <xref:System.Windows.Data.DataSourceProvider.DeferRefresh%2A> verwendet wird, <xref:System.Windows.Data.ObjectDataProvider.ObjectInstance%2A> und <xref:System.Windows.Data.DataSourceProvider.Data%2A> werden nicht aktualisiert werden, bis <xref:System.Windows.Data.DataSourceProvider.Refresh%2A> aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="T:System.Windows.Data.ObjectDataProvider" />Beide zugewiesen ist ein <see cref="P:System.Windows.Data.ObjectDataProvider.ObjectType" /> und ein <see cref="P:System.Windows.Data.ObjectDataProvider.ObjectInstance" />; nur eins davon ist zulässig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectType">
+      <MemberSignature Language="C#" Value="public Type ObjectType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.ObjectDataProvider.ObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Objekts ab, von dem eine Instanz erstellt werden soll, oder legt diesen fest.</summary>
+        <value>Diese Eigenschaft ist <see langword="null" /> bei der <see cref="T:System.Windows.Data.ObjectDataProvider" /> ist nicht initialisiert oder explizit auf Null gesetzt. Wenn <see cref="P:System.Windows.Data.ObjectDataProvider.ObjectInstance" /> zugewiesen wird, <see cref="P:System.Windows.Data.ObjectDataProvider.ObjectType" /> gibt den Typ des Objekts oder Null zurück, wenn das Objekt null ist. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Data.DataSourceProvider.DeferRefresh%2A> verwendet wird, <xref:System.Windows.Data.ObjectDataProvider.ObjectInstance%2A> und <xref:System.Windows.Data.DataSourceProvider.Data%2A> erst aktualisiert, <xref:System.Windows.Data.DataSourceProvider.Refresh%2A> aufgerufen wird.  
+  
+<a name="xamlAttributeUsage_ObjectType"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object ObjectType="myDataType"/>  
+```  
+  
+<a name="xamlValues_ObjectType"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *myDataType*  
+ Der Datentyp zum Erstellen einer Instanz von. Verwenden der [X: Type-Markuperweiterung](~/docs/framework/xaml-services/x-type-markup-extension.md) auf einen Typ festgelegt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="T:System.Windows.Data.ObjectDataProvider" />Beide zugewiesen ist ein <see cref="P:System.Windows.Data.ObjectDataProvider.ObjectType" /> und ein <see cref="P:System.Windows.Data.ObjectDataProvider.ObjectInstance" />; nur eins davon ist zulässig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeConstructorParameters">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeConstructorParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeConstructorParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.ObjectDataProvider.ShouldSerializeConstructorParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:System.Windows.Data.ObjectDataProvider.ConstructorParameters" />-Eigenschaft beibehalten werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der Eigenschaftswert geändert wurde und nicht mehr dem Standardwert entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `ShouldSerialize` Methode wird bereitgestellt, da die <xref:System.Windows.Data.ObjectDataProvider.ConstructorParameters%2A> Eigenschaft verfügt nicht über einen einfachen Standardwert. Diese Methode gibt an, ob die-Eigenschaft ihren Standardwert geändert hat. Diese Methode wird in der Regel aufgerufen, wenn Sie entweder einen Designer für das Entwickeln der <xref:System.Windows.Data.ObjectDataProvider> oder entwickeln eine eigene Steuerelement einbinden der <xref:System.Windows.Data.ObjectDataProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMethodParameters">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMethodParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMethodParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.ObjectDataProvider.ShouldSerializeMethodParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:System.Windows.Data.ObjectDataProvider.MethodParameters" />-Eigenschaft beibehalten werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der Eigenschaftswert geändert wurde und nicht mehr dem Standardwert entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `ShouldSerialize` Methode wird bereitgestellt, da die <xref:System.Windows.Data.ObjectDataProvider.MethodParameters%2A> Eigenschaft verfügt nicht über einen einfachen Standardwert. Diese Methode gibt an, ob die-Eigenschaft ihren Standardwert geändert hat. Diese Methode wird in der Regel aufgerufen, wenn Sie entweder einen Designer für das Entwickeln der <xref:System.Windows.Data.ObjectDataProvider> oder entwickeln eine eigene Steuerelement einbinden der <xref:System.Windows.Data.ObjectDataProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeObjectInstance">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeObjectInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeObjectInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.ObjectDataProvider.ShouldSerializeObjectInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:System.Windows.Data.ObjectDataProvider.ObjectInstance" />-Eigenschaft beibehalten werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der Eigenschaftswert geändert wurde und nicht mehr dem Standardwert entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `ShouldSerialize` Methode wird bereitgestellt, da die <xref:System.Windows.Data.ObjectDataProvider.ObjectInstance%2A> Eigenschaft verfügt nicht über einen einfachen Standardwert. Diese Methode gibt an, ob die-Eigenschaft ihren Standardwert geändert hat. Diese Methode wird in der Regel aufgerufen, wenn Sie entweder einen Designer für das Entwickeln der <xref:System.Windows.Data.ObjectDataProvider> oder entwickeln eine eigene Steuerelement einbinden der <xref:System.Windows.Data.ObjectDataProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeObjectType">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeObjectType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeObjectType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.ObjectDataProvider.ShouldSerializeObjectType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:System.Windows.Data.ObjectDataProvider.ObjectType" />-Eigenschaft beibehalten werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der Eigenschaftswert geändert wurde und nicht mehr dem Standardwert entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `ShouldSerialize` Methode wird bereitgestellt, da die <xref:System.Windows.Data.ObjectDataProvider.ObjectType%2A> Eigenschaft verfügt nicht über einen einfachen Standardwert. Diese Methode gibt an, ob die-Eigenschaft ihren Standardwert geändert hat. Diese Methode wird in der Regel aufgerufen, wenn Sie entweder einen Designer für das Entwickeln der <xref:System.Windows.Data.ObjectDataProvider> oder entwickeln eine eigene Steuerelement einbinden der <xref:System.Windows.Data.ObjectDataProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

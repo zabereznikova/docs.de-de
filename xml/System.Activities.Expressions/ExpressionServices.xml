@@ -1,0 +1,337 @@
+<Type Name="ExpressionServices" FullName="System.Activities.Expressions.ExpressionServices">
+  <TypeSignature Language="C#" Value="public static class ExpressionServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ExpressionServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Expressions.ExpressionServices" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Transformations-API, die verwendet wird, um umgebungsfähige Ausdrücke in eine Aktivitätsstruktur zu konvertieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Konvertierungsmethoden in dieser Klasse transformation die angegebenen Lambda-Ausdrücke, die mehrere Teilausdrücke enthalten können, in Aktivitätsstrukturen, die aus einer Hierarchie von Aktivitäten bestehen. Es wird dringend empfohlen, die Ausdrucksaktivitäten nicht direkt zu instanziieren, sondern diese Konvertierungsmethoden zu verwenden, da sie eine höhere Abstraktionsebene bereitstellen und es Ihnen ermöglichen, den Workflow intuitiver zu implementieren. Weitere Informationen finden Sie in den Beispielen.  
+  
+ Die Konvertierungsmethoden in <xref:System.Activities.Expressions.ExpressionServices> dienen zum Arbeiten mit Variablen und Konstanten, die im Workflow definiert sind oder die mittels Argumenten an den Workflow übergeben werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>-Element aufgerufen, um die Summe aus dem Arrayelement bei Index 0 und dem Arrayelement bei Index 1 zu berechnen. Dann wird die sich daraus ergebende Summe einer Variablen zugewiesen und auf der Konsole ausgegeben.  
+  
+```  
+  
+public static void ComputeSumWithConvert()  
+{  
+    var arrayvar = new Variable<int[]>("arrayvar", new int[] { 1, 2 });  
+    var intvar = new Variable<int>("intvar");              
+  
+    // Use ExpressionServices.Convert() to convert the composite lambda expression  
+    // that represents the sum of array elements at index 0 and 1.  
+    Activity<int> activity1 = ExpressionServices.Convert<int>(ctx => arrayvar.Get(ctx)[0] + arrayvar.Get(ctx)[1]);  
+  
+    Activity seq = new Sequence  
+    {  
+        Variables = { arrayvar, intvar },  
+        Activities =  
+        {                      
+            // Get the sum value.  
+            new Assign<int>  
+            {  
+                To = intvar,  
+                Value = activity1,  
+            },  
+            // Print the sum value of 3 to the console.  
+            new WriteLine  
+            {                          
+                Text = new InArgument<string>(ctx => intvar.Get(ctx).ToString()),  
+            },  
+        }  
+    };  
+  
+    WorkflowInvoker.Invoke(seq);  
+  
+}  
+  
+```  
+  
+ Das folgende Codebeispiel wird zu Vergleichszwecken bereitgestellt. In diesem zweiten Beispiel wird gezeigt, wie die Summe berechnet wird, indem die <xref:System.Activities.Expressions.Add%603>-Ausdrucksaktivität instanziiert wird. Die Funktionsweise der zwei Beispiele ist gleich. Wie jedoch zu erkennen ist, fällt für den zweiten Ansatz mehr Codierungsaufwand an, und es ist einfacher, das <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>-Element aufzurufen. Daher wird das erste Beispiel empfohlen.  
+  
+```  
+  
+public static void ComputeSumWithExpressionActivity()  
+{  
+    var arrayvar = new Variable<int[]>("arrayvar", new int[] { 1, 2 });  
+    var intvar = new Variable<int>("intvar");  
+  
+    // Create an Add activity to compute the sum of array elements at index 0 and 1.  
+    Activity<int> activity1 = new Add<int, int, int>  
+    {  
+        Left = new ArrayItemValue<int>  
+        {  
+            Array = arrayvar,  
+            Index = 0,  
+        },  
+        Right = new ArrayItemValue<int>  
+        {  
+            Array = arrayvar,  
+            Index = 1,  
+        }  
+    };              
+  
+    Activity seq = new Sequence  
+    {  
+        Variables = { arrayvar, intvar },  
+        Activities =  
+        {  
+            // Get the sum value.  
+            new Assign<int>  
+            {  
+                To = intvar,  
+                Value = activity1,  
+            },  
+            // Print the sum value of 3 to the console.   
+            new WriteLine  
+            {                          
+                Text = new InArgument<string>(ctx => intvar.Get(ctx).ToString()),  
+            },                      
+        }  
+    };  
+  
+    WorkflowInvoker.Invoke(seq);  
+  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Convert&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity&lt;TResult&gt; Convert&lt;TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;System.Activities.ActivityContext,TResult&gt;&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity`1&lt;!!TResult&gt; Convert&lt;TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.Activities.ActivityContext, !!TResult&gt;&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.ExpressionServices.Convert``1(System.Linq.Expressions.Expression{System.Func{System.Activities.ActivityContext,``0}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.Activities.ActivityContext,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ. in den der Ausdruck konvertiert wird.</typeparam>
+        <param name="expression">Der Ausdruck, der konvertiert wird.</param>
+        <summary>Konvertiert einen workflowumgebungsfähigen Ausdruck in eine Aktivitätsstruktur.</summary>
+        <returns>Der konvertierte Ausdruck.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Codebeispiel für <xref:System.Activities.Expressions.ExpressionServices.Convert%2A> finden Sie unter <xref:System.Activities.Expressions.ExpressionServices.ConvertReference%2A>.  
+  
+ Die Konvertierungsmethoden in <xref:System.Activities.Expressions.ExpressionServices> dienen zum Arbeiten mit Variablen und Konstanten, die im Workflow definiert sind oder die mittels Argumenten an den Workflow übergeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertReference&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity&lt;System.Activities.Location&lt;TResult&gt;&gt; ConvertReference&lt;TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;System.Activities.ActivityContext,TResult&gt;&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity`1&lt;class System.Activities.Location`1&lt;!!TResult&gt;&gt; ConvertReference&lt;TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.Activities.ActivityContext, !!TResult&gt;&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.ExpressionServices.ConvertReference``1(System.Linq.Expressions.Expression{System.Func{System.Activities.ActivityContext,``0}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity&lt;System.Activities.Location&lt;TResult&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.Activities.ActivityContext,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ. in den der Ausdruck konvertiert wird.</typeparam>
+        <param name="expression">Der Ausdruck, der konvertiert wird.</param>
+        <summary>Konvertiert einen Verweis auf einen workflowumgebungsfähigen Ausdruck in eine Aktivitätsstruktur.</summary>
+        <returns>Der konvertierte Ausdruck.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Konvertierungsmethoden in <xref:System.Activities.Expressions.ExpressionServices> dienen zum Arbeiten mit Variablen und Konstanten, die im Workflow definiert sind oder die mittels Argumenten an den Workflow übergeben werden.  
+  
+   
+  
+## Examples  
+ In den folgenden zwei Codebeispielen wird die Verwendung des <xref:System.Activities.Expressions.ExpressionServices.ConvertReference%2A>-Elements und des <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>-Elements veranschaulicht. Im ersten Codebeispiel wird das <xref:System.Activities.Expressions.ExpressionServices.ConvertReference%2A>-Element in einer `Assign`-Aktivität verwendet, um einen Lambda-Ausdruck in eine Zeichenfolgeneigenschaft zu konvertieren, der ein Wert zugewiesen wird. Dann wird das <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>-Element aufgerufen, um einen Lambda-Ausdruck in einen Zeichenfolgeneigenschaftswert zu konvertieren, der in der `WriteLine`-Aktivität auf der Konsole ausgegeben wird.  
+  
+```  
+  
+// Define a struct with a property named AProperty.  
+struct StructWithProperty  
+{  
+    public string AProperty { get; set; }  
+}  
+  
+public static void ConvertReferenceForValueTypePropertyReferenceSample()  
+{              
+    // Create a variable of type StructWithProperty to store the property.  
+    var swpvar = new Variable<StructWithProperty>("swpvar", new StructWithProperty());  
+  
+    Activity myActivity = new Sequence  
+    {  
+        Variables = { swpvar },  
+        Activities =   
+        {                      
+            // Create an Assign activity to assign a value to the AProperty property.  
+            new Assign<string>  
+            {  
+                To = ExpressionServices.ConvertReference<string>(ctx => swpvar.Get(ctx).AProperty),  
+                // Assign a string literal to AProperty.  
+                Value = "Hello",  
+            },  
+            // Print the new property value to the console.  
+            new WriteLine()  
+            {  
+                Text = ExpressionServices.Convert<string>(ctx => swpvar.Get(ctx).AProperty),  
+            }  
+        }  
+    };  
+  
+    // Invoke the Sequence activity.  
+    WorkflowInvoker.Invoke(myActivity);  
+}  
+  
+```  
+  
+ Das folgende Codebeispiel ähnelt dem vorherigen, nur ist der zu konvertierende Ausdruck ein Verweis auf ein Element in einem mehrdimensionalen Array.  
+  
+```  
+  
+public static void ConvertReferenceForMultidimensionalArrayItemReferenceSample()  
+{  
+    // Create a variable to store a multidimensional array.  
+    var arrayvar = new Variable<int[,]>("arrayvar", new int[4, 5]);  
+  
+    Activity myActivity = new Sequence  
+    {  
+        Variables = { arrayvar },  
+        Activities =   
+        {                      
+            // Create an Assign activity to assign a value to the array item at index [1,2].  
+            new Assign<int>  
+            {  
+                To = ExpressionServices.ConvertReference<int>(ctx => arrayvar.Get(ctx)[1, 2]),  
+                // Assign an integer value to the array item at row 1 column 2.  
+                Value = 1,  
+            },  
+            // Print the array item value to the console.  
+            new WriteLine()  
+            {  
+                Text = ExpressionServices.Convert<string>(ctx => arrayvar.Get(ctx)[1, 2].ToString()),  
+            }  
+        }  
+    };  
+  
+    // Invoke the Sequence activity.  
+    WorkflowInvoker.Invoke(myActivity);  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryConvert&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryConvert&lt;TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;System.Activities.ActivityContext,TResult&gt;&gt; expression, out System.Activities.Activity&lt;TResult&gt; result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryConvert&lt;TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.Activities.ActivityContext, !!TResult&gt;&gt; expression, [out] class System.Activities.Activity`1&lt;!!TResult&gt;&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.ExpressionServices.TryConvert``1(System.Linq.Expressions.Expression{System.Func{System.Activities.ActivityContext,``0}},System.Activities.Activity{``0}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.Activities.ActivityContext,TResult&gt;&gt;" />
+        <Parameter Name="result" Type="System.Activities.Activity&lt;TResult&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ. in den der Ausdruck konvertiert wird.</typeparam>
+        <param name="expression">Der Ausdruck, der konvertiert wird.</param>
+        <param name="result">Der konvertierte Ausdruck.</param>
+        <summary>Konvertiert einen workflowumgebungsfähigen Ausdruck in eine Aktivitätsstruktur.</summary>
+        <returns>
+          <see langword="true" />Wenn der Ausdruck konvertiert werden kann. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Konvertierungsmethoden in <xref:System.Activities.Expressions.ExpressionServices> dienen zum Arbeiten mit Variablen und Konstanten, die im Workflow definiert sind oder die mittels Argumenten an den Workflow übergeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryConvertReference&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryConvertReference&lt;TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;System.Activities.ActivityContext,TResult&gt;&gt; expression, out System.Activities.Activity&lt;System.Activities.Location&lt;TResult&gt;&gt; result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryConvertReference&lt;TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.Activities.ActivityContext, !!TResult&gt;&gt; expression, [out] class System.Activities.Activity`1&lt;class System.Activities.Location`1&lt;!!TResult&gt;&gt;&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.ExpressionServices.TryConvertReference``1(System.Linq.Expressions.Expression{System.Func{System.Activities.ActivityContext,``0}},System.Activities.Activity{System.Activities.Location{``0}}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.Activities.ActivityContext,TResult&gt;&gt;" />
+        <Parameter Name="result" Type="System.Activities.Activity&lt;System.Activities.Location&lt;TResult&gt;&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ. in den der Ausdruck konvertiert wird.</typeparam>
+        <param name="expression">Der Ausdruck, der konvertiert wird.</param>
+        <param name="result">Der konvertierte Ausdruck.</param>
+        <summary>Konvertiert einen Verweis auf einen workflowumgebungsfähigen Ausdruck in eine Aktivitätsstruktur.</summary>
+        <returns>
+          <see langword="true" />Wenn der Ausdruck konvertiert werden kann. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Konvertierungsmethoden in <xref:System.Activities.Expressions.ExpressionServices> dienen zum Arbeiten mit Variablen und Konstanten, die im Workflow definiert sind oder die mittels Argumenten an den Workflow übergeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,726 @@
+<Type Name="TemplatedControlDesigner" FullName="System.Web.UI.Design.TemplatedControlDesigner">
+  <TypeSignature Language="C#" Value="public abstract class TemplatedControlDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TemplatedControlDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TemplatedControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erweitert das Entwurfszeitverhalten für vorlagenbasierte Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Steuerelement-Designer-Klasse erstellen, die Vorlagen verwendet und leitet sich von der <xref:System.Web.UI.Design.ControlDesigner> Klasse.  
+  
+ Zum Ausführen des Beispiels Kompilieren des Codes, und klicken Sie dann in einen Entwurf hosten, wie z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], zeigen Sie die Seite in der Entwurfsansicht. Wählen Sie das Steuerelement, klicken Sie auf die Liste der Aktionen zum Auswählen einer Vorlage zu ändern und dann verwenden Sie die Drag-and-Drop-Funktion, um die Steuerelemente in die Vorlage verschoben.  
+  
+> [!NOTE]
+>  Das Projekt benötigen einen Verweis auf die `System.Design` Assembly.  
+  
+ [!code-csharp[DesignerTemplateGroupSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerTemplateGroupSample/CS/TemplateGroupsSample.cs#1)]
+ [!code-vb[DesignerTemplateGroupSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.vb#1)]  
+[!code-aspx-vb[DesignerTemplateGroupSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Obwohl diese Klasse nicht veraltet ist, er ist überflüssig, da Vorlagenbearbeitungsmodus Funktionen integriert wurden <see cref="T:System.Web.UI.Design.ControlDesigner" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplatedControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.TemplatedControlDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveTemplateEditingFrame">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.ITemplateEditingFrame ActiveTemplateEditingFrame { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.ITemplateEditingFrame ActiveTemplateEditingFrame" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplatedControlDesigner.ActiveTemplateEditingFrame" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this property is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ITemplateEditingFrame</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktiven Vorlagenbearbeitungsrahmen ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.ITemplateEditingFrame" /> , der derzeit aktiven Vorlagenbearbeitungsrahmen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplatedControlDesigner.ActiveTemplateEditingFrame%2A>-Eigenschaft ist veraltet. Verwenden der <xref:System.Web.UI.Design.TemplatedControlDesigner.TemplateGroups%2A> Eigenschaft zur Verfügung oder Auflisten von Vorlagen innerhalb eines Designers für Vorlagenbasierte Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanEnterTemplateMode">
+      <MemberSignature Language="C#" Value="public bool CanEnterTemplateMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanEnterTemplateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplatedControlDesigner.CanEnterTemplateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ab, unabhängig davon, ob dieser Designer anzeigen oder Bearbeiten von Vorlagen zulässt.</summary>
+        <value>
+          <see langword="true" />Wenn der Designer anzeigen oder Bearbeiten von Vorlagen zulässig ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTemplateEditingFrame">
+      <MemberSignature Language="C#" Value="protected abstract System.Web.UI.Design.ITemplateEditingFrame CreateTemplateEditingFrame (System.Web.UI.Design.TemplateEditingVerb verb);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.Design.ITemplateEditingFrame CreateTemplateEditingFrame(class System.Web.UI.Design.TemplateEditingVerb verb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.CreateTemplateEditingFrame(System.Web.UI.Design.TemplateEditingVerb)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ITemplateEditingFrame</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verb" Type="System.Web.UI.Design.TemplateEditingVerb" />
+      </Parameters>
+      <Docs>
+        <param name="verb">Die Vorlage Verb zum Vorlagenbearbeitungsrahmen für erstellen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird einen Vorlagenbearbeitungsrahmen für das angegebene Verb erstellt.</summary>
+        <returns>Die neuen Vorlagenbearbeitungsrahmen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindingsEnabled">
+      <MemberSignature Language="C#" Value="protected override bool DataBindingsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DataBindingsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplatedControlDesigner.DataBindingsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Designer-Datenbindung ermöglicht.</summary>
+        <value>
+          <see langword="true" />, wenn der Designer die Datenbindung zulässt andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterTemplateMode">
+      <MemberSignature Language="C#" Value="public void EnterTemplateMode (System.Web.UI.Design.ITemplateEditingFrame newTemplateEditingFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnterTemplateMode(class System.Web.UI.Design.ITemplateEditingFrame newTemplateEditingFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.EnterTemplateMode(System.Web.UI.Design.ITemplateEditingFrame)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newTemplateEditingFrame" Type="System.Web.UI.Design.ITemplateEditingFrame" />
+      </Parameters>
+      <Docs>
+        <param name="newTemplateEditingFrame">Die Vorlage bearbeiten Frame-Objekt im Designer zu öffnen.</param>
+        <summary>Wird eine bestimmte Vorlage auf der Frame-Objekt zur Bearbeitung im Designer geöffnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplatedControlDesigner.EnterTemplateMode%2A> Methode ist veraltet. Verwenden der <xref:System.Web.UI.Design.TemplatedControlDesigner.TemplateGroups%2A> Eigenschaft zum Bearbeiten von Vorlagen in einem Designer für Vorlagenbasierte Steuerelemente.  
+  
+ Wenn Sie bereits im Vorlagenmodus und eine andere Vorlage Vorlagenbearbeitungsrahmen, diese Methode ruft <xref:System.Web.UI.Design.TemplatedControlDesigner.ExitTemplateMode%2A> sämtliche Vorlagen speichern und Rahmen zu schließen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitTemplateMode">
+      <MemberSignature Language="C#" Value="public void ExitTemplateMode (bool fSwitchingTemplates, bool fNested, bool fSave);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExitTemplateMode(bool fSwitchingTemplates, bool fNested, bool fSave) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.ExitTemplateMode(System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fSwitchingTemplates" Type="System.Boolean" />
+        <Parameter Name="fNested" Type="System.Boolean" />
+        <Parameter Name="fSave" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fSwitchingTemplates">
+          <see langword="true" />Beim Wechseln von einem Vorlagenbearbeitungsrahmen; andernfalls <see langword="false" />.</param>
+        <param name="fNested">
+          <see langword="true" />Wenn dieser Designer (eine oder mehrere Stufen) in ein anderes Steuerelement, dessen-Designer ist ebenfalls im Vorlagenbearbeitungsmodus; geschachtelt andernfalls <see langword="false" />.</param>
+        <param name="fSave">
+          <see langword="true" />Wenn beim Beenden Vorlagen gespeichert werden soll; andernfalls <see langword="false" />.</param>
+        <summary>Schließt die derzeit aktiven Vorlagenbearbeitungsrahmen, nachdem alle relevanten Änderungen gespeichert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplatedControlDesigner.ExitTemplateMode%2A> Methode ist veraltet. Verwenden der <xref:System.Web.UI.Design.TemplatedControlDesigner.TemplateGroups%2A> Eigenschaft zum Bearbeiten von Vorlagen in einem Designer für Vorlagenbasierte Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCachedTemplateEditingVerbs">
+      <MemberSignature Language="C#" Value="protected abstract System.Web.UI.Design.TemplateEditingVerb[] GetCachedTemplateEditingVerbs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.Design.TemplateEditingVerb[] GetCachedTemplateEditingVerbs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.GetCachedTemplateEditingVerbs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateEditingVerb[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die zwischengespeicherte Vorlage bearbeiten Verben ab.</summary>
+        <returns>Ein Array von <see cref="T:System.Web.UI.Design.TemplateEditingVerb" /> Objekte, sofern vorhanden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplatedControlDesigner.GetCachedTemplateEditingVerbs%2A> Methode ist veraltet. Verwenden der <xref:System.Web.UI.Design.TemplatedControlDesigner.TemplateGroups%2A> Eigenschaft zum Bearbeiten von Vorlagen in einem Designer für Vorlagenbasierte Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemplateContainerDataItemProperty">
+      <MemberSignature Language="C#" Value="public virtual string GetTemplateContainerDataItemProperty (string templateName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetTemplateContainerDataItemProperty(string templateName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataItemProperty(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templateName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="templateName">Der Name der Vorlage.</param>
+        <summary>Ruft die Datenelementeigenschaft des Containers für die Vorlage ab.</summary>
+        <returns>Eine Zeichenfolge, die die Daten darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataItemProperty%2A> Methode ist veraltet. Verwenden der <xref:System.Web.UI.Design.TemplateGroup.Templates%2A> Eigenschaft von der <xref:System.Web.UI.Design.TemplatedControlDesigner.TemplateGroups%2A> Auflistungselemente untersuchen Sie die Metadaten der Vorlage innerhalb eines Designers für Vorlagenbasierte Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemplateContainerDataSource">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerable GetTemplateContainerDataSource (string templateName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerable GetTemplateContainerDataSource(string templateName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataSource(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templateName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="templateName">Der Name der Vorlage.</param>
+        <summary>Ruft die Datenquelle des Containers für die Vorlage ab.</summary>
+        <returns>Die Datenquelle des Containers der angegebenen Vorlage.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemplateContent">
+      <MemberSignature Language="C#" Value="public abstract string GetTemplateContent (System.Web.UI.Design.ITemplateEditingFrame editingFrame, string templateName, out bool allowEditing);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetTemplateContent(class System.Web.UI.Design.ITemplateEditingFrame editingFrame, string templateName, [out] bool&amp; allowEditing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContent(System.Web.UI.Design.ITemplateEditingFrame,System.String,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingFrame" Type="System.Web.UI.Design.ITemplateEditingFrame" />
+        <Parameter Name="templateName" Type="System.String" />
+        <Parameter Name="allowEditing" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="editingFrame">Der Vorlagenbearbeitungsrahmen um den Inhalt abzurufen.</param>
+        <param name="templateName">Der Name der Vorlage.</param>
+        <param name="allowEditing">
+          <see langword="true" />Wenn der Inhalt der Vorlage bearbeitet werden kann. <see langword="false" /> , wenn der Inhalt schreibgeschützt ist.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Inhalt der Vorlage ab.</summary>
+        <returns>Der Inhalt der Vorlage.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemplateEditingVerbs">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.TemplateEditingVerb[] GetTemplateEditingVerbs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.Design.TemplateEditingVerb[] GetTemplateEditingVerbs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateEditingVerbs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateEditingVerb[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Vorlage für den Designer verfügbaren Verben bearbeiten.</summary>
+        <returns>Die Vorlage in den Designer verfügbaren Verben zum Bearbeiten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemplateFromText">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.ITemplate GetTemplateFromText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Web.UI.ITemplate GetTemplateFromText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateFromText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text, rufen eine Vorlage aus.</param>
+        <summary>Erstellt eine Vorlage aus dem angegebenen Text.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.ITemplate" /> aus dem angegebenen Text.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemplatePropertyParentType">
+      <MemberSignature Language="C#" Value="public virtual Type GetTemplatePropertyParentType (string templateName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetTemplatePropertyParentType(string templateName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.GetTemplatePropertyParentType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templateName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="templateName">Der Name der Vorlage, die den Typ des übergeordneten Elements für zurückzugeben.</param>
+        <summary>Ruft den Typ des übergeordneten Elements die Template-Eigenschaft ab.</summary>
+        <returns>Der Typ des Objekts, das die Template-Eigenschaft aufweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplatePropertyParentType%2A> Methode ist veraltet. Verwenden der <xref:System.Web.UI.Design.TemplateGroup.Templates%2A> Eigenschaft von der <xref:System.Web.UI.Design.TemplatedControlDesigner.TemplateGroups%2A> Auflistungselemente untersuchen Sie die Metadaten der Vorlage innerhalb eines Designers für Vorlagenbasierte Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextFromTemplate">
+      <MemberSignature Language="C#" Value="protected string GetTextFromTemplate (System.Web.UI.ITemplate template);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetTextFromTemplate(class System.Web.UI.ITemplate template) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.GetTextFromTemplate(System.Web.UI.ITemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="template" Type="System.Web.UI.ITemplate" />
+      </Parameters>
+      <Docs>
+        <param name="template">Die <see cref="T:System.Web.UI.ITemplate" /> in Text konvertiert.</param>
+        <summary>Ruft eine Zeichenfolge von Text, der die angegebene Vorlage darstellt.</summary>
+        <returns>Eine Zeichenfolge, die die angegebene Vorlage darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="template" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das Steuerelement, das entworfen wird.</param>
+        <summary>Initialisiert den Designer, und lädt die angegebene Komponente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InTemplateMode">
+      <MemberSignature Language="C#" Value="public bool InTemplateMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InTemplateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplatedControlDesigner.InTemplateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is System.Web.UI.Design.ControlDesigner.InTemplateMode. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Designer-Dokument im Vorlagenmodus.</summary>
+        <value>
+          <see langword="true" />Wenn das Designer-Dokument im Vorlagenmodus wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplatedControlDesigner.InTemplateMode%2A?displayProperty=nameWithType>-Eigenschaft ist veraltet. Verwenden der <xref:System.Web.UI.Design.ControlDesigner.InTemplateMode%2A?displayProperty=nameWithType> -Eigenschaft für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ Ein Dokument ist im Vorlagenmodus, wenn eine Vorlage ist zurzeit angezeigt oder bearbeitet werden, in der Forms-Designer verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBehaviorAttached">
+      <MemberSignature Language="C#" Value="protected override void OnBehaviorAttached ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBehaviorAttached() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.OnBehaviorAttached" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is ControlDesigner.Tag. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bietet die Möglichkeit zum Ausführen zusätzlicher Verarbeitungsaufwand, wenn ein Verhalten in den Designer zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplatedControlDesigner.OnBehaviorAttached%2A> Methode ist veraltet. Verwenden der <xref:System.Web.UI.Design.IControlDesignerTag.SetAttribute%2A> und <xref:System.Web.UI.Design.IControlDesignerTag.GetAttribute%2A> Methoden für die <xref:System.Web.UI.Design.ControlDesigner.Tag%2A> Eigenschaften Formatvorlagen zuzuordnenden Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanged">
+      <MemberSignature Language="C#" Value="public override void OnComponentChanged (object sender, System.ComponentModel.Design.ComponentChangedEventArgs ce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnComponentChanged(object sender, class System.ComponentModel.Design.ComponentChangedEventArgs ce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="ce" Type="System.ComponentModel.Design.ComponentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das das Ereignis zu senden.</param>
+        <param name="ce">Ein <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" />, das Daten für das Ereignis bereitstellt.</param>
+        <summary>Delegat, der die Komponente behandelt das geänderte Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, nachdem eine Eigenschaft geändert wurde. Dadurch kann der Implementierung Nachbearbeitung auszuführen, die nach der Änderung einer Eigenschaft möglicherweise benötigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetParent">
+      <MemberSignature Language="C#" Value="public override void OnSetParent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnSetParent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.OnSetParent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bietet die Möglichkeit zum Ausführen zusätzlicher Verarbeitungsaufwand, wenn das übergeordnete Element dieses Designers geändert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTemplateModeChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnTemplateModeChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTemplateModeChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bietet die Möglichkeit zum Ausführen zusätzlicher Verarbeitungsaufwand, wenn der Vorlagenmodus geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> Ereignis wird vom Designerhost für bestimmte Aktionen für ein Steuerelement in der Entwurfsoberfläche angezeigt. Beispielsweise wird ein Ereignis ausgelöst, wenn der Benutzer betritt oder verlässt Vorlagenbearbeitungsmodus für ein Steuerelement.  
+  
+ Die <xref:System.Web.UI.Design.TemplatedControlDesigner> -Klasse stellt ein Delegat standardmäßig behandelt der <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> Ereignis. Klassen, die von der <xref:System.Web.UI.Design.TemplatedControlDesigner> überschreiben die <xref:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged%2A> Methode zum Verarbeiten von Ereignissen, die ausgelöst werden, wenn der Vorlagenmodus für das zugeordnete Steuerelement geändert wird.  
+  
+ Die <xref:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged%2A> Methode kann abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ Der Delegat standardmäßig führt die Updates, die für eine Vorlage Modus Change-Ereignis in der Basisklasse erforderlich sind <xref:System.Web.UI.Design.TemplatedControlDesigner> -Klasse, und ruft dann die <xref:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged%2A> Methode. Die Basis <xref:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged%2A> Methode in der <xref:System.Web.UI.Design.TemplatedControlDesigner> Klasse zurückgibt, ohne dass eine zusätzliche Verarbeitung für das Ereignis. Wenn von eine Klasse abgeleitet ist die <xref:System.Web.UI.Design.TemplatedControlDesigner> und überschreibt die <xref:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged%2A> Methodenaufrufe, das die Überschreibungsmethode in der Standarddelegat in der abgeleiteten Klasse.  
+  
+ Verwenden der <xref:System.Web.UI.Design.ControlDesigner.InTemplateMode%2A> -Eigenschaft können Sie bestimmen, ob der Steuerelement-Designer im Vorlagenbearbeitungsmodus derzeit befindet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Der Standarddelegat, der vom bereitgestellte der <see cref="T:System.Web.UI.Design.TemplatedControlDesigner" /> Klasse führt alle erforderlichen Updates für das für die Basisklasse vor dem Aufruf der <see cref="M:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged" /> Methode. Überschreiben der <see cref="M:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged" /> Methode in Klassen ableiten von der <see cref="T:System.Web.UI.Design.TemplatedControlDesigner" /> können Sie zusätzliche Verarbeitungsschritte für Änderungsereignisse des Vorlagenmodus für Steuerelemente auf der Entwurfsoberfläche angezeigt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveActiveTemplateEditingFrame">
+      <MemberSignature Language="C#" Value="protected void SaveActiveTemplateEditingFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SaveActiveTemplateEditingFrame() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.SaveActiveTemplateEditingFrame" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert das aktive Vorlagenbearbeitungsrahmen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTemplateContent">
+      <MemberSignature Language="C#" Value="public abstract void SetTemplateContent (System.Web.UI.Design.ITemplateEditingFrame editingFrame, string templateName, string templateContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetTemplateContent(class System.Web.UI.Design.ITemplateEditingFrame editingFrame, string templateName, string templateContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.SetTemplateContent(System.Web.UI.Design.ITemplateEditingFrame,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingFrame" Type="System.Web.UI.Design.ITemplateEditingFrame" />
+        <Parameter Name="templateName" Type="System.String" />
+        <Parameter Name="templateContent" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="editingFrame">Der Vorlagenbearbeitungsrahmen um Inhalte für bereit.</param>
+        <param name="templateName">Der Name der Vorlage.</param>
+        <param name="templateContent">Der Inhalt für die Vorlage festlegen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse legt die angegebene Vorlage-Inhalt auf den angegebenen Inhalt fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateGroups">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.TemplateGroupCollection TemplateGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroupCollection TemplateGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplatedControlDesigner.TemplateGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Vorlagengruppen, jeweils eine Vorlagendefinition enthalten.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Web.UI.Design.TemplateGroup" />-Elementen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override void UpdateDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void UpdateDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedControlDesigner.UpdateDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert die Entwurfszeit HTML-Code.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode, um die zur Entwurfszeit-Anzeige zu aktualisieren, wenn die Vorlage Frames ohne Aufruf von Methoden, die automatisch, die während der Entwurfszeit-HTML aktualisiert geändert wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

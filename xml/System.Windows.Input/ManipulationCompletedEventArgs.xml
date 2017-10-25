@@ -1,0 +1,192 @@
+<Type Name="ManipulationCompletedEventArgs" FullName="System.Windows.Input.ManipulationCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ManipulationCompletedEventArgs : System.Windows.Input.InputEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManipulationCompletedEventArgs extends System.Windows.Input.InputEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ManipulationCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.UIElement.ManipulationCompleted" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu Manipulationen, finden Sie unter der [Input Overview](~/docs/framework/wpf/advanced/input-overview.md). Ein Beispiel für eine Anwendung, die auf Manipulationen reagiert, finden Sie unter [Exemplarische Vorgehensweise: Erstellen Ihrer ersten Touch Application](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ManipulationCompletedEventArgs.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht die Manipulation ab.</summary>
+        <returns>
+          <see langword="true" />Wenn die Bearbeitung erfolgreich abgebrochen wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Methode erfolgreich ausgeführt wird, die Standardeinstellung <xref:System.Windows.Input.TouchDevice> sendet vorherigen Berührungsereignisse als Maus Mauszeigerposition oder Ereignisse auf das Element mit der Maus. Touch kann nicht in Mausereignisse heraufgestuft werden, wenn die <xref:System.Windows.UIElement.ManipulationCompleted> Ereignis tritt auf, während der Trägheit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinalVelocities">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ManipulationVelocities FinalVelocities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ManipulationVelocities FinalVelocities" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationCompletedEventArgs.FinalVelocities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ManipulationVelocities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Geschwindigkeiten, die für die Bearbeitung verwendet werden.</summary>
+        <value>Die Geschwindigkeiten, die für die Bearbeitung verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ManipulationCompletedEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="genericTarget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInertial">
+      <MemberSignature Language="C#" Value="public bool IsInertial { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInertial" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationCompletedEventArgs.IsInertial" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="E:System.Windows.UIElement.ManipulationCompleted" /> Ereignis tritt auf, während der Trägheit.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="E:System.Windows.UIElement.ManipulationCompleted" /> Ereignis tritt auf, während der Trägheit; <see langword="false" /> , wenn das Ereignis tritt auf, während der Benutzer Kontakt mit hat die <see cref="T:System.Windows.UIElement" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManipulationContainer">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement ManipulationContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement ManipulationContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationCompletedEventArgs.ManipulationContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Container ab, der die Koordinaten für die Bearbeitung definiert.</summary>
+        <value>Der Container, die die Koordinaten für die Bearbeitung definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManipulationOrigin">
+      <MemberSignature Language="C#" Value="public System.Windows.Point ManipulationOrigin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point ManipulationOrigin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationCompletedEventArgs.ManipulationOrigin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Punkt, die Manipulation stammt, ab.</summary>
+        <value>Der Punkt, von dem die Manipulation stammt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn zwei Kontaktpunkte Manipulation, initiiert der <xref:System.Windows.Input.ManipulationCompletedEventArgs.ManipulationOrigin%2A> Eigenschaft ist der Punkt zwischen den beiden Punkten des Kontakts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Manipulators">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Windows.Input.IManipulator&gt; Manipulators { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Input.IManipulator&gt; Manipulators" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationCompletedEventArgs.Manipulators" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Windows.Input.IManipulator&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Objekten, die die Fingereingabekontakte für die Manipulation darstellt.</summary>
+        <value>Eine Auflistung von Objekten, die die Fingereingabekontakte für die Manipulation darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalManipulation">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ManipulationDelta TotalManipulation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ManipulationDelta TotalManipulation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationCompletedEventArgs.TotalManipulation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ManipulationDelta</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die gesamte Transformation, die während der aktuellen Bearbeitung auftritt.</summary>
+        <value>Die gesamte Transformation, die während der aktuellen Bearbeitung auftritt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

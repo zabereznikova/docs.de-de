@@ -1,0 +1,70 @@
+<Type Name="JumpItemsRemovedEventArgs" FullName="System.Windows.Shell.JumpItemsRemovedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class JumpItemsRemovedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit JumpItemsRemovedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shell.JumpItemsRemovedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Shell.JumpList.JumpItemsRemovedByUser" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JumpItemsRemovedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.JumpItemsRemovedEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Shell.JumpItemsRemovedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JumpItemsRemovedEventArgs (System.Collections.Generic.IList&lt;System.Windows.Shell.JumpItem&gt; removedItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IList`1&lt;class System.Windows.Shell.JumpItem&gt; removedItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.JumpItemsRemovedEventArgs.#ctor(System.Collections.Generic.IList{System.Windows.Shell.JumpItem})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="removedItems" Type="System.Collections.Generic.IList&lt;System.Windows.Shell.JumpItem&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="removedItems">Die Liste der Sprungliste-Elemente, die vom Benutzer seit entfernt wurden <see cref="M:System.Windows.Shell.JumpList.Apply" /> zuletzt aufgerufen wurde.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Shell.JumpItemsRemovedEventArgs" /> -Klasse, die den angegebenen Parametern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovedItems">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Windows.Shell.JumpItem&gt; RemovedItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Windows.Shell.JumpItem&gt; RemovedItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.JumpItemsRemovedEventArgs.RemovedItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Windows.Shell.JumpItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Sprungliste-Elemente, die vom Benutzer seit entfernt wurden die <see cref="M:System.Windows.Shell.JumpList.Apply" /> -Methode zuletzt aufgerufen wurde.</summary>
+        <value>Die Liste der Sprungliste-Elemente, die vom Benutzer seit entfernt wurden die <see cref="M:System.Windows.Shell.JumpList.Apply" /> -Methode zuletzt aufgerufen wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

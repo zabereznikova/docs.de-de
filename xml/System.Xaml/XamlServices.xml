@@ -1,0 +1,494 @@
+<Type Name="XamlServices" FullName="System.Xaml.XamlServices">
+  <TypeSignature Language="C#" Value="public static class XamlServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit XamlServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlServices" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet auf höherer Ebene Dienste (statische Methoden) für die gemeinsamen Verwendung von XAML-Aufgaben XAML Lesen und Schreiben von einem Objektdiagramm. oder ein Objektdiagramm lesen und Schreiben der Ausgabe von XAML-Datei für Serialisierungszwecke.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Modi des der <xref:System.Xaml.XamlServices> Klasse, die verwendet werden, die am häufigsten verwendeten XAML-Datei lesen und Schreiben von Szenarien zum Erstellen von Instanzen des XAML-Readern und XAML-Writer basieren. Diese Reader und Writer sind spezielle jedoch interne Implementierungen der öffentlichen Klassen, z. B. <xref:System.Xml.XmlReader>, <xref:System.Xaml.XamlXmlReader>, und <xref:System.Xaml.XamlObjectWriter>. Mit <xref:System.Xaml.XamlServices> in den meisten Szenarien können Sie basieren auf den internen standardimplementierungen, die Ergebnisse zu erhalten, die Sie möchten. Für spezialisierter Szenarien möglicherweise Sie Readern und Writern selbst definieren, und übergeben Sie sie als Argumente für Überladungen der der <xref:System.Xaml.XamlServices> Methoden.  
+  
+> [!IMPORTANT]
+>  <xref:System.Xaml.XamlServices>nicht empfohlene Verwendung von XAML-Lesen oder XAML-schreibt-API festgelegt werden, wenn Sie WPF-Typen verarbeiten oder Typen auf Grundlage von WPF. Für [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Verwendung "," Verwendung <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> zum Lesen oder Laden von XAML (oder BAML) und <xref:System.Windows.Markup.XamlWriter?displayProperty=nameWithType> für das Rückschreiben von XAML. Diese Klassen verwenden .NET Framework-XAML-Dienste-APIs und die XAML-Readern und XAML-Writern intern in ihrer Implementierung. Allerdings bieten auch Unterstützung und spezielle XAML-Schemakontext für WPF-spezifische Konzepte, wie z. B. Optimierungen für Abhängigkeitseigenschaften und bekannte WPF-Typen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static object Load (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Load(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Load(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Stream, der als Eingabe zu laden.</param>
+        <summary>Lädt eine <see cref="T:System.IO.Stream" /> Quelle für einen XAML-Reader und schreibt die Ausgabe als Objektdiagramm.</summary>
+        <returns>Das Objektdiagramm, das als Ausgabe geschrieben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Andere Signaturen für die <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> Methode geben Sie verschiedene Arten von Eingaben für die XAML-Quelle. Die <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> interne Implementierung erstellt zunächst eine <xref:System.Xml.XmlReader> durch Aufrufen von <xref:System.Xml.XmlReader.Create%28System.IO.Stream%29> und erstellt dann eine neue Instanz der ein spezieller <xref:System.Xaml.XamlReader> , die die Eingabe verarbeitet.  
+  
+ In der Reihenfolge für die <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> aufrufen, um ein Objektdiagramm erfolgreich zu erstellen, muss Folgendes zutreffen:  
+  
+-   Die Quelle ist wohlgeformt und gültiges XML.  
+  
+-   Die Quelle ist gültiges XAML auf Sprachebene.  
+  
+-   Die Verwendung von XAML-Typen, die in der Quelle angegebenen Identitätsspaltenwerte muss-XAML-Unterstützungstypen in die entsprechende XAML-Namespaces auflösen. XAML-Typen für WPF-Namespaces können z. B. eine WPF-XAML-Namespace entsprechend den Angaben in der XAML beheben; die WPF-Assemblys müssen im Projekt enthalten oder zur Laufzeit verfügbar sein; Und so weiter.  
+  
+> [!IMPORTANT]
+>  <xref:System.Xaml.XamlServices>ist nicht die empfohlene Verwendung von XAML-Lesen oder XAML-API schreiben festgelegt wird, bei der Verarbeitung [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Typen oder Typen, die basierend auf [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]. Für [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Verwendung "," Verwendung <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> zum Lesen oder Laden von XAML; und <xref:System.Windows.Markup.XamlWriter?displayProperty=nameWithType> für das Rückschreiben von XAML. Diese Klassen verwenden <xref:System.Xaml> APIs intern in ihrer Implementierung; allerdings auch angebotenen Unterstützung für WPF-spezifische Konzepte, die die Art der XAML-Lesen und schreiben, z. B. Optimierungen für Abhängigkeitseigenschaften auswirken.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static object Load (System.IO.TextReader textReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Load(class System.IO.TextReader textReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Load(System.IO.TextReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textReader" Type="System.IO.TextReader" />
+      </Parameters>
+      <Docs>
+        <param name="textReader">Die <see cref="T:System.IO.TextReader" /> verwendet als Grundlage für das erstellte <see cref="T:System.Xml.XmlReader" />.</param>
+        <summary>Erstellt einen XAML-Reader, aus einem <see cref="T:System.IO.TextReader" />, und gibt ein Objektdiagramm zurück.</summary>
+        <returns>Das Objektdiagramm, das zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Zurückgeben des Objektdiagramms der `textReader` Eingabe mithilfe der entsprechenden Eingabe erstellt werden soll. Beispielsweise sollten sie übergeben ein <xref:System.IO.StringReader> , die erstellt wird, verwenden eine gültige XAML-als-Zeichenfolgeneingabe für die <xref:System.IO.StringReader.%23ctor%28System.String%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="textReader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static object Load (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Load(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Load(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei geladen und als Quelle verwenden.</param>
+        <summary>Lädt eine <see cref="T:System.IO.Stream" /> Quelle für einen XAML-Reader und gibt ein Objektdiagramm zurück.</summary>
+        <returns>Das Objektdiagramm, das zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Andere Signaturen für die <xref:System.Xaml.XamlServices.Load%2A> Methode geben Sie verschiedene Arten von Eingaben für die XAML-Quelle. Die <xref:System.Xaml.XamlServices.Load%2A> interne Implementierung erstellt zunächst eine <xref:System.Xml.XmlReader> durch Aufrufen von <xref:System.Xml.XmlReader.Create%28System.String%29> und erstellt dann eine neue Instanz der ein spezieller <xref:System.Xaml.XamlReader> , die die Eingabe verarbeitet.  
+  
+ In der Reihenfolge für die <xref:System.Xaml.XamlServices.Load%28System.String%29> aufrufen, um ein Objektdiagramm erfolgreich zu erstellen, muss Folgendes zutreffen:  
+  
+-   Die Quelle ist wohlgeformt und gültiges XML.  
+  
+-   Die Quelle ist gültiges XAML auf Sprachebene.  
+  
+-   Die Verwendung von XAML-Typen, die in der Quelle angegebenen Identitätsspaltenwerte muss-XAML-Unterstützungstypen in die entsprechende XAML-Namespaces auflösen. XAML-Typen für WPF-Namespaces können z. B. eine WPF-XAML-Namespace entsprechend den Angaben in der XAML beheben; die WPF-Assemblys im Projekt enthalten sein müssen oder zur Laufzeit verfügbar sein. Und so weiter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" />Eingabe ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static object Load (System.Xaml.XamlReader xamlReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Load(class System.Xaml.XamlReader xamlReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Load(System.Xaml.XamlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlReader" Type="System.Xaml.XamlReader" />
+      </Parameters>
+      <Docs>
+        <param name="xamlReader">Die Verwendung von XAML-Reader Implementierung, die als Reader für diesen <see langword="Load" /> Vorgang.</param>
+        <summary>Lädt eine spezifische Implementierung der XAML-Reader und gibt ein Objektdiagramm zurück.</summary>
+        <returns>Das Objektdiagramm, das zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten diese Signatur in der Regel nur in den folgenden Fällen verwenden:  
+  
+-   Sie definiert eine eigene Implementierung von einem <xref:System.Xaml.XamlReader>.  
+  
+-   Einstellungen für die Angabe einer <xref:System.Xaml.XamlReader> , die von den Standardeinstellungen abweichen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlReader" />Eingabe ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static object Load (System.Xml.XmlReader xmlReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Load(class System.Xml.XmlReader xmlReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Load(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">Die <see cref="T:System.Xml.XmlReader" /> Implementierung, die als Reader für diesen <see langword="Load" /> Vorgang.</param>
+        <summary>Lädt eine spezifische Implementierung der XML-Reader und gibt ein Objektdiagramm zurück.</summary>
+        <returns>Die Ausgabe-Objektdiagramm.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten in der Regel verwenden Sie diese Signatur nur, wenn Sie eine eigene Implementierung von definiert eine <xref:System.Xml.XmlReader>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlReader" />Eingabe ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static object Parse (string xaml);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Parse(string xaml) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xaml" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xaml">Die Verwendung von XAML-Zeichenfolgeneingabe analysiert.</param>
+        <summary>Liest XAML als Zeichenfolge ausgegeben und gibt ein Objektdiagramm zurück.</summary>
+        <returns>Das Objektdiagramm, das zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Reihenfolge für die <xref:System.Xaml.XamlServices.Parse%2A> aufrufen, um die eine Objektstruktur erfolgreich zu erstellen, muss Folgendes zutreffen:  
+  
+-   Die `xaml` Eingabe wohlgeformt ist und gültiges XML.  
+  
+-   Die `xaml` Eingabe ist ungültig XAML auf Sprachebene.  
+  
+-   Die XAML-Typen, die im angegebenen die `xaml` Eingabe muss in Unterstützungstypen in die entsprechende XAML-Namespaces aufgelöst werden. XAML-Typen für ein WPF-Namespace können z. B. eine WPF-XAML-Namespace entsprechend den Angaben in der XAML beheben; die WPF-Assemblys im Projekt enthalten sein müssen oder zur Laufzeit verfügbar sein. Und so weiter.  
+  
+> [!IMPORTANT]
+>  <xref:System.Xaml.XamlServices>ist nicht die empfohlene Verwendung von XAML-Lesen oder XAML-API schreiben festgelegt wird, bei der Verarbeitung [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Typen oder Typen, die basierend auf [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]. Für [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Verwendung "," Verwendung <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> zum Lesen oder Laden von XAML-Code und <xref:System.Windows.Markup.XamlWriter?displayProperty=nameWithType> für das Rückschreiben von XAML. Diese Klassen verwenden <xref:System.Xaml> APIs intern in ihrer Implementierung; allerdings auch angebotenen Unterstützung für WPF-spezifische Konzepte, die die Art der XAML-Lesen und schreiben, z. B. Optimierungen für Abhängigkeitseigenschaften auswirken.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xaml" />Eingabe ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static string Save (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Save(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Save(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Der Stamm des Objektdiagramms zu verarbeiten.</param>
+        <summary>Struktur eines angegebenen Objekts in eine Darstellung der Verwendung von XAML-Knoten verarbeitet, und gibt eine Zeichenfolgendarstellung der Ausgabe XAML zurück.</summary>
+        <returns>Die Verwendung von XAML-Markup-Ausgabe als Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe aus dieser Methode ist die `ToString` Ergebnis ein <xref:System.Xml.XmlWriter> , das vom Aufruf Methode erstellt wird. Dass <xref:System.Xml.XmlWriter> wird mit den folgenden Einstellungen erstellt: <xref:System.Xml.XmlWriterSettings.Indent%2A?displayProperty=nameWithType> ist `true`; und <xref:System.Xml.XmlWriterSettings.OmitXmlDeclaration%2A?displayProperty=nameWithType> ist `true`.  
+  
+ Die zurückgegebene Zeichenfolge kann geladen werden, als gültigen XML-Code über die <xref:System.Xml.XmlReader.Create%2A> Methode, wenn Sie die Zeichenfolge in einen Stream oder in einen genauer gesagt dedizierte Reader für XAML verarbeitet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static void Save (System.IO.Stream stream, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Save(class System.IO.Stream stream, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Save(System.IO.Stream,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Zieldatenstrom.</param>
+        <param name="instance">Der Stamm des Objektdiagramms zu verarbeiten.</param>
+        <summary>Verarbeitet ein Objektdiagramm bereitgestellten, in eine Darstellung der Verwendung von XAML-Knoten, und klicken Sie dann in einen Ausgabestream für die Serialisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  <xref:System.Xaml.XamlServices>ist nicht die empfohlene Verwendung von XAML-Lesen oder XAML-API schreiben festgelegt wird, bei der Verarbeitung [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Typen oder Typen, die basierend auf [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]. Für [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Verwendung "," Verwendung <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> zum Lesen oder Laden von XAML; und <xref:System.Windows.Markup.XamlWriter?displayProperty=nameWithType> für das Rückschreiben von XAML. Diese Klassen verwenden <xref:System.Xaml> APIs intern in ihrer Implementierung; allerdings auch angebotenen Unterstützung für WPF-spezifische Konzepte, die die Art der XAML-Lesen und schreiben, z. B. Optimierungen für Abhängigkeitseigenschaften auswirken.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" />Eingabe ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static void Save (System.IO.TextWriter writer, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Save(class System.IO.TextWriter writer, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Save(System.IO.TextWriter,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.IO.TextWriter" /> , schreibt die Ausgabe.</param>
+        <param name="instance">Der Stamm des Objektdiagramms zu verarbeiten.</param>
+        <summary>Verarbeitet ein bereitgestellten Objektdiagramm in eine Darstellung der Verwendung von XAML-Knoten und anschließend in eine Ausgabe, die auf dem bereitgestellten geht <see cref="T:System.IO.TextWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" />Eingabe ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static void Save (string fileName, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Save(string fileName, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Save(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name und Speicherort der Datei, die die Ausgabe geschrieben werden soll.</param>
+        <param name="instance">Der Stamm des Objektdiagramms zu verarbeiten.</param>
+        <summary>Verarbeitet ein bereitgestellten Objektdiagramm in eine Darstellung der Verwendung von XAML-Knoten, und klicken Sie dann in eine Ausgabedatei an einer angegebenen Position geschrieben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `fileName` Parameterwert dient als die `outputFileName` Eingabe für einen Aufruf von <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType>, erstellt eine <xref:System.Xml.XmlWriter> als Teil des Methodenaufrufs.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="fileName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static void Save (System.Xaml.XamlWriter writer, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Save(class System.Xaml.XamlWriter writer, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Save(System.Xaml.XamlWriter,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xaml.XamlWriter" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Xaml.XamlWriter" /> Implementierung zu verwenden.</param>
+        <param name="instance">Der Stamm des Objektdiagramms zu verarbeiten.</param>
+        <summary>Verarbeitet ein bereitgestellten Objektdiagramm in eine Darstellung der Verwendung von XAML-Knoten, und klicken Sie dann in den angegebenen XAML-Writer geschrieben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten diese Signatur in der Regel nur in den folgenden Fällen verwenden:  
+  
+-   Sie definiert eine eigene Implementierung von einem <xref:System.Xaml.XamlWriter>.  
+  
+-   Einstellungen für die Angabe der <xref:System.Xaml.XamlWriter> , die von den Standardeinstellungen abweichen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" />Eingabe ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static void Save (System.Xml.XmlWriter writer, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Save(class System.Xml.XmlWriter writer, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Save(System.Xml.XmlWriter,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Xml.XmlWriter" /> Implementierung zu verwenden.</param>
+        <param name="instance">Der Stamm des Objektdiagramms zu verarbeiten.</param>
+        <summary>Ein Diagramm für die angegebene Objekt in eine Darstellung der Verwendung von XAML-Knoten verarbeitet und schreibt ihn dann in der bereitgestellten <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" />Eingabe ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public static void Transform (System.Xaml.XamlReader xamlReader, System.Xaml.XamlWriter xamlWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Transform(class System.Xaml.XamlReader xamlReader, class System.Xaml.XamlWriter xamlWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Transform(System.Xaml.XamlReader,System.Xaml.XamlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlReader" Type="System.Xaml.XamlReader" />
+        <Parameter Name="xamlWriter" Type="System.Xaml.XamlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="xamlReader">Die <see cref="T:System.Xaml.XamlReader" /> Implementierung zu verwenden.</param>
+        <param name="xamlWriter">Der zu verwendende <see cref="T:System.Xaml.XamlWriter" />.</param>
+        <summary>Verbindet einen <see cref="T:System.Xaml.XamlReader" /> und ein <see cref="T:System.Xaml.XamlWriter" /> eine allgemeine XAML-Knotengruppe zwischengeschalteten verwenden. Potenziell transformiert den Inhalt, je nach Art der Reader und Writer, die bereitgestellt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein Wrapper um <xref:System.Xaml.XamlServices.Transform%28System.Xaml.XamlReader%2CSystem.Xaml.XamlWriter%2CSystem.Boolean%29>, wobei `closeWriter` angegeben ist, als `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlReader" />oder <paramref name="xamlWriter" /> Eingabe ist <see langword="null" />.</exception>
+        <exception cref="T:System.Xaml.XamlException">Der XAML-Schemakontext entspricht nicht zwischen den bereitgestellten <paramref name="xamlReader" /> und <paramref name="xamlWriter" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public static void Transform (System.Xaml.XamlReader xamlReader, System.Xaml.XamlWriter xamlWriter, bool closeWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Transform(class System.Xaml.XamlReader xamlReader, class System.Xaml.XamlWriter xamlWriter, bool closeWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlServices.Transform(System.Xaml.XamlReader,System.Xaml.XamlWriter,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlReader" Type="System.Xaml.XamlReader" />
+        <Parameter Name="xamlWriter" Type="System.Xaml.XamlWriter" />
+        <Parameter Name="closeWriter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="xamlReader">Die <see cref="T:System.Xaml.XamlReader" /> Implementierung zu verwenden.</param>
+        <param name="xamlWriter">Der zu verwendende <see cref="T:System.Xaml.XamlWriter" />.</param>
+        <param name="closeWriter">
+          <see langword="true" />auf den Writer geschlossen wird, nachdem der Aufruf abgeschlossen ist; <see langword="false" /> , den Writer an der Position des letzten geschriebenen aktiv lassen.</param>
+        <summary>Verbindet einen <see cref="T:System.Xaml.XamlReader" /> und ein <see cref="T:System.Xaml.XamlWriter" /> eine allgemeine XAML-Knotengruppe zwischengeschalteten verwenden. Potenziell transformiert den Inhalt, je nach Art der Reader und Writer, die bereitgestellt werden. Stellt einen Parameter für die Angabe, ob den Writer geschlossen werden nach Abschluss des Aufrufs bereit.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlReader" />oder <paramref name="xamlWriter" /> Eingabe ist <see langword="null" />.</exception>
+        <exception cref="T:System.Xaml.XamlException">Der XAML-Schemakontext entspricht nicht zwischen den bereitgestellten <paramref name="xamlReader" /> und <paramref name="xamlWriter" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

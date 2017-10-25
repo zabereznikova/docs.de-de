@@ -1,0 +1,170 @@
+<Type Name="ActivityDesignerVerb" FullName="System.Workflow.ComponentModel.Design.ActivityDesignerVerb">
+  <TypeSignature Language="C#" Value="public class ActivityDesignerVerb : System.ComponentModel.Design.DesignerVerb" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivityDesignerVerb extends System.ComponentModel.Design.DesignerVerb" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ActivityDesignerVerb" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.DesignerVerb</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erstellt ein neues Verb für den Designer, von dem die zugeordnete Verbgruppe sowie der zugeordnete Text und der Ereignishandler verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.Design.ActivityDesignerVerb> beschreibt eine Aktion, die für eine Workflowkomponente auszuführen ist. <xref:System.Workflow.ComponentModel.Design.ActivityDesignerVerb>-Optionen werden in der Menüleiste und Kontextmenüs während der Entwurfszeit angezeigt.  
+  
+ <xref:System.Workflow.ComponentModel.Design.ActivityDesignerVerb> wird mit anderen Verben gruppiert, die der gleichen <xref:System.Workflow.ComponentModel.Design.DesignerVerbGroup> zugeordnet sind. Diese werden zur Entwurfszeit in den entsprechenden Untermenüs angezeigt.  
+  
+ Der beim Erstellen eines neuen Verbs übergebene Ereignishandler wird aufgerufen, wenn das Verb im Menü ausgewählt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityDesignerVerb (System.Workflow.ComponentModel.Design.ActivityDesigner activityDesigner, System.Workflow.ComponentModel.Design.DesignerVerbGroup verbGroup, string text, EventHandler invokeHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Design.ActivityDesigner activityDesigner, valuetype System.Workflow.ComponentModel.Design.DesignerVerbGroup verbGroup, string text, class System.EventHandler invokeHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityDesignerVerb.#ctor(System.Workflow.ComponentModel.Design.ActivityDesigner,System.Workflow.ComponentModel.Design.DesignerVerbGroup,System.String,System.EventHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityDesigner" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+        <Parameter Name="verbGroup" Type="System.Workflow.ComponentModel.Design.DesignerVerbGroup" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="invokeHandler" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="activityDesigner">Der <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />, der dem neuen Verb zugeordnet werden soll.</param>
+        <param name="verbGroup">Die <see cref="T:System.Workflow.ComponentModel.Design.DesignerVerbGroup" />, in die das neue Verb gehört.</param>
+        <param name="text">Die Beschreibung des Verbs, die im Menü angezeigt werden soll.</param>
+        <param name="invokeHandler">Der <see cref="T:System.EventHandler" />, von dem das Menüauswahlereignis behandelt wird.</param>
+        <summary>Initialisiert eine Instanz von <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerVerb" /> unter Verwendung von <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />, eines <see cref="T:System.Workflow.ComponentModel.Design.DesignerVerbGroup" />-Werts, einer Beschreibung des Verbs sowie eines <see cref="T:System.EventHandler" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> ist leer oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).  
+  
+ - oder -   
+  
+ <paramref name="invokeHandler" /> ist ein NULL-Verweis (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityDesignerVerb (System.Workflow.ComponentModel.Design.ActivityDesigner activityDesigner, System.Workflow.ComponentModel.Design.DesignerVerbGroup verbGroup, string text, EventHandler invokeHandler, EventHandler statusHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Design.ActivityDesigner activityDesigner, valuetype System.Workflow.ComponentModel.Design.DesignerVerbGroup verbGroup, string text, class System.EventHandler invokeHandler, class System.EventHandler statusHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityDesignerVerb.#ctor(System.Workflow.ComponentModel.Design.ActivityDesigner,System.Workflow.ComponentModel.Design.DesignerVerbGroup,System.String,System.EventHandler,System.EventHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityDesigner" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+        <Parameter Name="verbGroup" Type="System.Workflow.ComponentModel.Design.DesignerVerbGroup" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="invokeHandler" Type="System.EventHandler" />
+        <Parameter Name="statusHandler" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="activityDesigner">Das <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />, das <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerVerb" /> zugewiesen wird.</param>
+        <param name="verbGroup">Die <see cref="T:System.Workflow.ComponentModel.Design.DesignerVerbGroup" />, in die <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerVerb" /> gehört.</param>
+        <param name="text">Die Beschreibung des Verbs, die im Menü angezeigt werden soll.</param>
+        <param name="invokeHandler">Der Ereignishandler, von dem das Menüauswahlereignis behandelt wird.</param>
+        <param name="statusHandler">Der Ereignishandler, von dem Statusaktualisierungen behandelt werden.</param>
+        <summary>Initialisiert eine Instanz von <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerVerb" /> unter Verwendung von <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />, eines <see cref="T:System.Workflow.ComponentModel.Design.DesignerVerbGroup" />-Werts, einer Beschreibung des Verbs und zwei <see cref="T:System.EventHandler" />-Objekten (eins zum Behandeln von Menüauswahlereignissen und eins zum Behandeln von Statusaktualisierungen).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandID">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.CommandID CommandID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.CommandID CommandID" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerVerb.CommandID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft für <see cref="T:System.ComponentModel.Design.CommandID" /> eine neue <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerVerb" /> ab.</summary>
+        <value>Ein neues <see cref="P:System.Workflow.ComponentModel.Design.ActivityDesignerVerb.CommandID" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.CommandID> ist beim Platzieren von Elementen auf einer Menüleiste oder in einem Kontextmenü hilfreich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.DesignerVerbGroup Group { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.Design.DesignerVerbGroup Group" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerVerb.Group" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.DesignerVerbGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Workflow.ComponentModel.Design.DesignerVerbGroup" /> ab, der dem <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerVerb" /> zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.Workflow.ComponentModel.Design.DesignerVerbGroup" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Workflow.ComponentModel.Design.DesignerVerbGroup>, um Verben auf einer Menüleiste oder in einem Kontextmenü zuzuordnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OleStatus">
+      <MemberSignature Language="C#" Value="public override int OleStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OleStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerVerb.OleStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine ganze Zahl ab, von der der Status von <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerVerb" /> beschrieben wird.</summary>
+        <value>Eine <see langword="int" /> zum Beschreiben des <see langword="OleStatus" /> von <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerVerb" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `OleStatus` enthält eine Mischung von Flags, von denen der Zustand dieses Menüelements dargestellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

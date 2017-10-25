@@ -1,0 +1,13 @@
+<Namespace Name="System.Diagnostics.Eventing">
+  <Docs>
+    <summary>Enthält die Klassen, die zum Instrumentieren der Anwendung verwendet werden. Sofern aktiviert, protokolliert die Instrumentierung die Ereignisdaten im Ablaufverfolgungs-Subsystem Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW). Eine vollständige Beschreibung der ETW, finden Sie unter <see href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb968803(v=vs.85).aspx">Event Tracing for Windows</see>.aspx).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in diesem Namespace können nur unter Windows Vista und höher.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

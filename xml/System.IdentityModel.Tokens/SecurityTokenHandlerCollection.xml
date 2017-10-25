@@ -1,0 +1,745 @@
+<Type Name="SecurityTokenHandlerCollection" FullName="System.IdentityModel.Tokens.SecurityTokenHandlerCollection">
+  <TypeSignature Language="C#" Value="public class SecurityTokenHandlerCollection : System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.SecurityTokenHandler&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityTokenHandlerCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.IdentityModel.Tokens.SecurityTokenHandler&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.SecurityTokenHandler&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.IdentityModel.Tokens.SecurityTokenHandler</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von Sicherheitstokenhandlern dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenHandlerCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue Sammlung enthält keine Handler.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenHandlerCollection (System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SecurityTokenHandler&gt; handlers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Tokens.SecurityTokenHandler&gt; handlers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.#ctor(System.Collections.Generic.IEnumerable{System.IdentityModel.Tokens.SecurityTokenHandler})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handlers" Type="System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SecurityTokenHandler&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handlers">Die token Handler mit dem die neue Instanz initialisiert werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollection" /> Klasse mit dem angegebenen token Handler.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor nicht versucht, eine Instanz von Klonen der <xref:System.IdentityModel.Tokens.SecurityTokenHandlerCollection> Klasse, verwenden Sie die **Klon** Methode stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenHandlerCollection (System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.#ctor(System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configuration" Type="System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="configuration">Die Basiskonfiguration der Auflistung zugeordnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollection" /> Klasse mit der angegebenen Konfiguration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue Sammlung enthält keine Handler.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenHandlerCollection (System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SecurityTokenHandler&gt; handlers, System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Tokens.SecurityTokenHandler&gt; handlers, class System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.#ctor(System.Collections.Generic.IEnumerable{System.IdentityModel.Tokens.SecurityTokenHandler},System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handlers" Type="System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SecurityTokenHandler&gt;" />
+        <Parameter Name="configuration" Type="System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="handlers">Die token Handler mit dem die neue Instanz initialisiert werden.</param>
+        <param name="configuration">Die Basiskonfiguration der Auflistung zugeordnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollection" /> Klasse mit dem angegebenen Tokenhandler und Konfiguration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor nicht versucht, eine Instanz von Klonen der <xref:System.IdentityModel.Tokens.SecurityTokenHandlerCollection> Klasse, verwenden Sie die **Klon** Methode stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOrReplace">
+      <MemberSignature Language="C#" Value="public void AddOrReplace (System.IdentityModel.Tokens.SecurityTokenHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOrReplace(class System.IdentityModel.Tokens.SecurityTokenHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.AddOrReplace(System.IdentityModel.Tokens.SecurityTokenHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.IdentityModel.Tokens.SecurityTokenHandler" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Der Tokenhandler in der Auflistung hinzu.</param>
+        <summary>Fügt das angegebenen token Handler, die dieser Sammlung. Wenn ein Handler mit dem gleichen Token Bezeichner eingeben, da der angegebene Handler in der Auflistung bereits vorhanden ist, wird er mit dem angegebenen Handler ersetzt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public bool CanReadKeyIdentifierClause (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanReadKeyIdentifierClause(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.CanReadKeyIdentifierClause(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement positioniert. Der Leser sollte nicht erweitert werden.</param>
+        <summary>Gibt einen Wert, der angibt, ob die angegebene schlüsselbezeichnerklausel kann von einem Handler in dieser Auflistung oder vom Basistyp gelesen werden <see cref="T:System.ServiceModel.Security.WSSecurityTokenSerializer" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die schlüsselbezeichnerklausel gelesen werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadKeyIdentifierClauseCore">
+      <MemberSignature Language="C#" Value="protected virtual bool CanReadKeyIdentifierClauseCore (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanReadKeyIdentifierClauseCore(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.CanReadKeyIdentifierClauseCore(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement positioniert. Der Leser sollte nicht erweitert werden.</param>
+        <summary>Gibt einen Wert, der angibt, ob die angegebene schlüsselbezeichnerklausel kann von einem Handler in der Auflistung oder vom Basistyp gelesen werden <see cref="T:System.ServiceModel.Security.WSSecurityTokenSerializer" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die schlüsselbezeichnerklausel gelesen werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadToken">
+      <MemberSignature Language="C#" Value="public bool CanReadToken (string tokenString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanReadToken(string tokenString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.CanReadToken(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tokenString">Das Token als Zeichenfolge dargestellt wird.</param>
+        <summary>Gibt einen Wert, der angibt, ob die angegebene Zeichenfolgendarstellung eines Tokens von einem Handler in dieser Auflistung gelesen werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die Auflistung eine Tokenhandler, die das angegebene Token gelesen werden können enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode ruft die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%28System.String%29?displayProperty=nameWithType> Methode für die Tokenhandler (<xref:System.IdentityModel.Tokens.SecurityTokenHandler>) in der Auflistung zu bestimmen, ob das Token gelesen werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der <paramref name="tokenString" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadToken">
+      <MemberSignature Language="C#" Value="public bool CanReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.CanReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement positioniert. Der Leser sollte nicht erweitert werden.</param>
+        <summary>Gibt einen Wert, der angibt, ob das angegebene Token von einem Handler in dieser Auflistung gelesen werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn das Token gelesen werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteToken">
+      <MemberSignature Language="C#" Value="public bool CanWriteToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanWriteToken(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.CanWriteToken(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Sicherheitstoken, das serialisiert werden.</param>
+        <summary>Gibt einen Wert, der angibt, ob das angegebene Token serialisiert werden kann von einem Handler in dieser Auflistung zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn das Token von einem Handler serialisiert werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItems">
+      <MemberSignature Language="C#" Value="protected override void ClearItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.ClearItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle der Handler aus dieser Auflistung. (Überschreibt die Basisklassenmethode.)</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Configuration">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration Configuration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration Configuration" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.Configuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Basiskonfiguration für die Sicherheit Tokenhandler-Auflistung.</summary>
+        <value>Die Konfiguration für die Tokenhandler-Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultSecurityTokenHandlerCollection">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Tokens.SecurityTokenHandlerCollection CreateDefaultSecurityTokenHandlerCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Tokens.SecurityTokenHandlerCollection CreateDefaultSecurityTokenHandlerCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.CreateDefaultSecurityTokenHandlerCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine standardauflistung System grundlegende Sicherheitstyp Tokenhandler, von die jedes die Standardkonfiguration System verfügt. Der Tokenhandler in dieser Auflistung müssen mit bestimmten Dienstdaten konfiguriert werden, bevor sie verwendet werden können.</summary>
+        <returns>Eine Auflistung der Security-Tokenhandler, die der Standard, basic Sicherheitstokenhandler enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultSecurityTokenHandlerCollection">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Tokens.SecurityTokenHandlerCollection CreateDefaultSecurityTokenHandlerCollection (System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Tokens.SecurityTokenHandlerCollection CreateDefaultSecurityTokenHandlerCollection(class System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.CreateDefaultSecurityTokenHandlerCollection(System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configuration" Type="System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="configuration">Die Konfiguration der Handlerauflistung zugeordnet werden soll.</param>
+        <summary>Erstellt eine System-standardauflistung von grundlegenden Sicherheitstokenhandler und ordnet die angegebene Konfiguration mit der neuen Sammlung. Jeden der Handler hat die Standard-Systemkonfiguration. Der Tokenhandler in dieser Auflistung müssen mit bestimmten Dienstdaten konfiguriert werden, bevor sie verwendet werden können.</summary>
+        <returns>Eine Auflistung der Security-Tokenhandler, die der Standard, basic Sicherheitstokenhandler enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken CreateToken (System.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken CreateToken(class System.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.CreateToken(System.IdentityModel.Tokens.SecurityTokenDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenDescriptor" Type="System.IdentityModel.Tokens.SecurityTokenDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="tokenDescriptor">Der token Deskriptor, von dem das Token ist, erstellt werden. Eigenschaften des Deskriptors token werden festgelegt, bevor diese Methode aufgerufen wird.</param>
+        <summary>Erstellt ein Token aus dem angegebenen token Deskriptor.</summary>
+        <returns>Ein Sicherheitstoken, das die Eigenschaften des Deskriptors token entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.IdentityModel.Tokens.SecurityTokenHandler item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.IdentityModel.Tokens.SecurityTokenHandler item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.InsertItem(System.Int32,System.IdentityModel.Tokens.SecurityTokenHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.IdentityModel.Tokens.SecurityTokenHandler" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem der Handler eingefügt werden soll.</param>
+        <param name="item">Der Tokenhandler eingefügt.</param>
+        <summary>Fügt der angegebenen Tokenhandler in dieser Auflistung am angegebenen Index ein. (Überschreibt die Basisklassenmethode.)</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenHandler this[System.IdentityModel.Tokens.SecurityToken token] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenHandler Item(class System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.Item(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Token für das der Handler zurückgegeben werden sollen.</param>
+        <summary>Ruft eine Tokenhandler aus dieser Sammlung, die das angegebene Sicherheitstoken verarbeiten kann.</summary>
+        <value>Ein token Handler, der das angegebene Token verarbeiten kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenHandler this[string tokenTypeIdentifier] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenHandler Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenTypeIdentifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tokenTypeIdentifier">Ein URI, der den Tokentyp identifiziert.</param>
+        <summary>Ruft eine Tokenhandler aus dieser Auflistung, die den Bezeichner des angegebenen Typs behandeln kann.</summary>
+        <value>Ein token Handler, der Token verarbeiten kann, die den angegebenen Typ-Bezeichner entsprechen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenHandler this[Type tokenType] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenHandler Item(class System.Type)" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.Item(System.Type)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="tokenType">Der Typ des Tokens behandelt werden.</param>
+        <summary>Ruft den Handler aus dieser Auflistung, die den angegebenen Tokentyp verarbeiten kann.</summary>
+        <value>Ein token Handler, der Token des angegebenen Typs behandeln kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClause (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClause(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.ReadKeyIdentifierClause(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement des der XML-Code in die schlüsselbezeichnerklausel deserialisiert werden.</param>
+        <summary>Deserialisiert eine schlüsselbezeichnerklausel aus dem angegebenen XML-Reader.</summary>
+        <returns>Die schlüsselbezeichnerklausel aus XML deserialisiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKeyIdentifierClauseCore">
+      <MemberSignature Language="C#" Value="protected virtual System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClauseCore (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClauseCore(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.ReadKeyIdentifierClauseCore(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement des der XML-Code in die schlüsselbezeichnerklausel deserialisiert werden.</param>
+        <summary>Deserialisiert eine schlüsselbezeichnerklausel aus dem angegebenen XML-Reader.</summary>
+        <returns>Die schlüsselbezeichnerklausel aus XML deserialisiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken ReadToken (string tokenString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken ReadToken(string tokenString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.ReadToken(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tokenString">Die Zeichenfolge, aus dem das Token deserialisiert werden soll.</param>
+        <summary>Deserialisiert ein Sicherheitstoken aus der angegebenen Zeichenfolge.</summary>
+        <returns>Das Token, das aus der angegebenen Zeichenfolge deserialisiert wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken ReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.ReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement des Tokens positioniert.</param>
+        <summary>Deserialisiert ein Sicherheitstoken vom angegebenen XML-Reader.</summary>
+        <returns>Das Sicherheitstoken aus XML deserialisiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.RemoveItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Handler.</param>
+        <summary>Wird den Ereignishandler am angegebenen Index aus dieser Sammlung entfernt. (Überschreibt die Basisklassenmethode.)</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.IdentityModel.Tokens.SecurityTokenHandler item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.IdentityModel.Tokens.SecurityTokenHandler item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.SetItem(System.Int32,System.IdentityModel.Tokens.SecurityTokenHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.IdentityModel.Tokens.SecurityTokenHandler" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu ersetzenden Elements.</param>
+        <param name="item">Das neue token Handler für das Element am angegebenen Index.</param>
+        <summary>Ersetzt die Tokenhandler am angegebenen Index in der Auflistung mit dem angegebenen Handler.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenTypeIdentifiers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; TokenTypeIdentifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; TokenTypeIdentifiers" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.TokenTypeIdentifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Typ-IDs der Token behandelt, indem die Handler in dieser Auflistung ab.</summary>
+        <value>Die Liste der Typbezeichner URIs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Type&gt; TokenTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; TokenTypes" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.TokenTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Objekttypen, für die Token, die vom Handler in dieser Sammlung behandelt.</summary>
+        <value>Die Liste der Typen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateToken">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt; ValidateToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Security.Claims.ClaimsIdentity&gt; ValidateToken(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.ValidateToken(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Token zu überprüfen.</param>
+        <summary>Überprüft das angegebene Sicherheitstoken an.</summary>
+        <returns>Die im Token enthaltenen Identitäten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public void WriteKeyIdentifierClause (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteKeyIdentifierClause(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.WriteKeyIdentifierClause(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer.</param>
+        <param name="keyIdentifierClause">Die schlüsselbezeichnerklausel zu serialisieren.</param>
+        <summary>Serialisiert die angegebene schlüsselbezeichnerklausel in XML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKeyIdentifierClauseCore">
+      <MemberSignature Language="C#" Value="protected virtual void WriteKeyIdentifierClauseCore (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteKeyIdentifierClauseCore(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.WriteKeyIdentifierClauseCore(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer.</param>
+        <param name="keyIdentifierClause">Die schlüsselbezeichnerklausel zu serialisieren.</param>
+        <summary>Serialisiert die angegebene schlüsselbezeichnerklausel in XML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToken">
+      <MemberSignature Language="C#" Value="public string WriteToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string WriteToken(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.WriteToken(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das zu serialisierende Token.</param>
+        <summary>Serialisiert das angegebene Sicherheitstoken in eine Zeichenfolge.</summary>
+        <returns>Die Zeichenfolge, die aus dem Token serialisiert wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Sammlung enthält keinen Handler, der das angegebene Token serialisieren kann.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToken">
+      <MemberSignature Language="C#" Value="public void WriteToken (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteToken(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollection.WriteToken(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer.</param>
+        <param name="token">Das zu serialisierende Token.</param>
+        <summary>Serialisiert das angegebene Sicherheitstoken in XML.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="writer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Sammlung enthält keinen Handler, der das angegebene Token serialisieren kann.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,260 @@
+<Type Name="FileOptions" FullName="System.IO.FileOptions">
+  <TypeSignature Language="C#" Value="public enum FileOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed FileOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.FileOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt erweiterte Optionen zum Erstellen einer <see cref="T:System.IO.FileStream" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung von asynchronen Wert beim Erstellen eines Dateistream.  
+  
+ [!code-csharp[IO.FileStream.ctor2#2](~/samples/snippets/csharp/VS_Snippets_CLR/IO.FileStream.ctor2/CS/example2.cs#2)]
+ [!code-vb[IO.FileStream.ctor2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.FileStream.ctor2/VB/example2.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Asynchronous">
+      <MemberSignature Language="C#" Value="Asynchronous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileOptions Asynchronous = int32(1073741824)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileOptions.Asynchronous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Datei zum asynchronen Lesen und Schreiben verwendet werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteOnClose">
+      <MemberSignature Language="C#" Value="DeleteOnClose" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileOptions DeleteOnClose = int32(67108864)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileOptions.DeleteOnClose" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Datei automatisch gelöscht wird, wenn es nicht mehr verwendet wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypted">
+      <MemberSignature Language="C#" Value="Encrypted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileOptions Encrypted = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileOptions.Encrypted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Datei verschlüsselt ist und entschlüsselt werden kann, nur durch mit dem gleichen Benutzerkonto an, die für die Verschlüsselung verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass keine zusätzlichen Optionen verwendet werden soll, für die Erstellung einer <see cref="T:System.IO.FileStream" /> Objekt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RandomAccess">
+      <MemberSignature Language="C#" Value="RandomAccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileOptions RandomAccess = int32(268435456)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileOptions.RandomAccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Datei nach dem Zufallsprinzip zugegriffen wird. Das System kann dies als Hinweis verwenden, um die Zwischenspeicherung von Dateien zu optimieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SequentialScan">
+      <MemberSignature Language="C#" Value="SequentialScan" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileOptions SequentialScan = int32(134217728)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileOptions.SequentialScan" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Datei von Anfang bis Ende sequenziell zugegriffen werden. Das System kann dies als Hinweis verwenden, um die Zwischenspeicherung von Dateien zu optimieren. Wenn eine Anwendung den Dateizeiger für zufälligen Zugriff eine optimale Zwischenspeichern u. u. nicht erkannt verschiebt; richtige Vorgang ist jedoch weiterhin gewährleistet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Flag angeben kann Leistung von Anwendungen erhöhen, die große Dateien, die mit sequenziellen Zugriff gelesen. Leistungssteigerungen können sogar noch stärker für Anwendungen bestehen, bemerkbar, die größtenteils sequenziell, große Dateien zu lesen, jedoch gelegentlich kleine Bytebereiche überspringen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteThrough">
+      <MemberSignature Language="C#" Value="WriteThrough" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileOptions WriteThrough = int32(-2147483648)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileOptions.WriteThrough" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das System durch jeden Zwischencache schreiben soll, und wechseln Sie direkt auf den Datenträger.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

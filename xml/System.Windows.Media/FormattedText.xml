@@ -1,0 +1,1587 @@
+<Type Name="FormattedText" FullName="System.Windows.Media.FormattedText">
+  <TypeSignature Language="C#" Value="public class FormattedText" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormattedText extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.FormattedText" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht die systemnahe Steuerung für das Zeichnen von Text in Windows Presentation Foundation (WPF)-Anwendungen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.FormattedText> Objekts können Sie mehrzeilige Zeichnen von Text, in dem jedes Zeichen im Text einzeln formatiert werden kann. Das folgende Beispiel zeigt Text mit mehreren angewendeten Formaten:  
+  
+ ![Mit dem FormattedText-Objekt angezeigter Text](~/add/media/formattedtext01.jpg "mit dem FormattedText-Objekt angezeigter Text")  
+Beispiel für eine formatierte Zeichenfolge  
+  
+ Im Hinblick auf zerlegte Textmerkmale in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Media.FormattedText> wird "Low-Level" angesehen, da er Text als grafische Elemente verarbeitet. Andere Aspekte des Texts im [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] behandeln im Kontext von Steuerelementen, die für den Text vorgesehen sind (<xref:System.Windows.Controls.TextBlock>, <xref:System.Windows.Controls.TextBox>), des flussdokumentmodells implementieren (finden Sie unter [Nachrichtenfluss-Dokument (Übersicht)](~/docs/framework/wpf/advanced/flow-document-overview.md)), oder die unterstützen[!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokumentmodell (finden Sie unter [Dokumente in WPF](~/docs/framework/wpf/advanced/documents-in-wpf.md)).  
+  
+ Der Setter-Methoden in vielen <xref:System.Windows.Media.FormattedText> haben ähnlichkeiten mit angefügten Eigenschaften, die von unterstützt werden <xref:System.Windows.Documents.TextElement>, aber die <xref:System.Windows.Documents.TextElement> angefügte Eigenschaften gelten für den Text auf höherer Ebene unterstützen entweder für Ablauf oder [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)].  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Media.FormattedText> Objekt, und klicken Sie dann mehrere Formatierungsstile auf den Text angewendet.  
+  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormattedText (string textToFormat, System.Globalization.CultureInfo culture, System.Windows.FlowDirection flowDirection, System.Windows.Media.Typeface typeface, double emSize, System.Windows.Media.Brush foreground);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string textToFormat, class System.Globalization.CultureInfo culture, valuetype System.Windows.FlowDirection flowDirection, class System.Windows.Media.Typeface typeface, float64 emSize, class System.Windows.Media.Brush foreground) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.#ctor(System.String,System.Globalization.CultureInfo,System.Windows.FlowDirection,System.Windows.Media.Typeface,System.Double,System.Windows.Media.Brush)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use the PixelsPerDip override", false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="textToFormat" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="flowDirection" Type="System.Windows.FlowDirection" />
+        <Parameter Name="typeface" Type="System.Windows.Media.Typeface" />
+        <Parameter Name="emSize" Type="System.Double" />
+        <Parameter Name="foreground" Type="System.Windows.Media.Brush" />
+      </Parameters>
+      <Docs>
+        <param name="textToFormat">Der anzuzeigende Text.</param>
+        <param name="culture">Die spezifische Kultur des Texts.</param>
+        <param name="flowDirection">Die Richtung, in der der Text gelesen wird.</param>
+        <param name="typeface">Schriftfamilie, -stärke, -schnitt und -breite der einzelnen Zeichen für die Formatierung des Texts.</param>
+        <param name="emSize">Der Schriftgrad, mit dem der Text formatiert werden soll.</param>
+        <param name="foreground">Der Pinsel, der zum Zeichnen der einzelnen Glyphe verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.FormattedText" /> Klasse mit dem angegebenen Text, Kultur, flussrichtung, Schriftart, Schriftgrad und Pinsel.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormattedText (string textToFormat, System.Globalization.CultureInfo culture, System.Windows.FlowDirection flowDirection, System.Windows.Media.Typeface typeface, double emSize, System.Windows.Media.Brush foreground, double pixelsPerDip);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string textToFormat, class System.Globalization.CultureInfo culture, valuetype System.Windows.FlowDirection flowDirection, class System.Windows.Media.Typeface typeface, float64 emSize, class System.Windows.Media.Brush foreground, float64 pixelsPerDip) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.#ctor(System.String,System.Globalization.CultureInfo,System.Windows.FlowDirection,System.Windows.Media.Typeface,System.Double,System.Windows.Media.Brush,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="textToFormat" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="flowDirection" Type="System.Windows.FlowDirection" />
+        <Parameter Name="typeface" Type="System.Windows.Media.Typeface" />
+        <Parameter Name="emSize" Type="System.Double" />
+        <Parameter Name="foreground" Type="System.Windows.Media.Brush" />
+        <Parameter Name="pixelsPerDip" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="textToFormat">Der anzuzeigende Text.</param>
+        <param name="culture">Die spezifische Kultur des Texts.</param>
+        <param name="flowDirection">Die Richtung, in der der Text gelesen wird.</param>
+        <param name="typeface">Schriftfamilie, -stärke, -schnitt und -breite der einzelnen Zeichen für die Formatierung des Texts.</param>
+        <param name="emSize">Der Schriftgrad für das Geviertmaß des Texts, angegeben in [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</param>
+        <param name="foreground">Der Pinsel, der zum Zeichnen der einzelnen Glyphe verwendet.</param>
+        <param name="pixelsPerDip">Der Wert für Pixel pro dichteunabhängigem Pixel, der dem Skalierungsfaktor entspricht. Wenn der DPI-Wert für einen Bildschirm z.B. 120 beträgt (oder 1,25, da 120/96 = 1,25), werden 1,25 Pixel pro dichteunabhängigem Pixel gezeichnet. DIP ist die von WPF verwendete Maßeinheit, um einen von Geräteauflösung und DPI-Werten unabhängigen Wert anzugeben.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.FormattedText" />-Klasse mit den angegebenen Werten für Text, Kultur, Flussrichtung, Schriftart, Schriftgrad, Vordergrundpinsel und pixelsPerDip.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormattedText (string textToFormat, System.Globalization.CultureInfo culture, System.Windows.FlowDirection flowDirection, System.Windows.Media.Typeface typeface, double emSize, System.Windows.Media.Brush foreground, System.Windows.Media.NumberSubstitution numberSubstitution);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string textToFormat, class System.Globalization.CultureInfo culture, valuetype System.Windows.FlowDirection flowDirection, class System.Windows.Media.Typeface typeface, float64 emSize, class System.Windows.Media.Brush foreground, class System.Windows.Media.NumberSubstitution numberSubstitution) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.#ctor(System.String,System.Globalization.CultureInfo,System.Windows.FlowDirection,System.Windows.Media.Typeface,System.Double,System.Windows.Media.Brush,System.Windows.Media.NumberSubstitution)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use the PixelsPerDip override", false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="textToFormat" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="flowDirection" Type="System.Windows.FlowDirection" />
+        <Parameter Name="typeface" Type="System.Windows.Media.Typeface" />
+        <Parameter Name="emSize" Type="System.Double" />
+        <Parameter Name="foreground" Type="System.Windows.Media.Brush" />
+        <Parameter Name="numberSubstitution" Type="System.Windows.Media.NumberSubstitution" />
+      </Parameters>
+      <Docs>
+        <param name="textToFormat">Der anzuzeigende Text.</param>
+        <param name="culture">Die spezifische Kultur des Texts.</param>
+        <param name="flowDirection">Die Richtung, in der der Text gelesen wird.</param>
+        <param name="typeface">Schriftfamilie, -stärke, -schnitt und -breite der einzelnen Zeichen für die Formatierung des Texts.</param>
+        <param name="emSize">Der Schriftgrad für das Geviertmaß des Texts, angegeben in [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</param>
+        <param name="foreground">Der Pinsel, der zum Zeichnen der einzelnen Glyphe verwendet.</param>
+        <param name="numberSubstitution">Die Zahl auf den Text anzuwendende Ersatz-Verhalten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.FormattedText" /> -Klasse mit den angegebenen Text, Kultur, flussrichtung, Schriftart, Schriftgrad, Pinsel und Anzahl Ersetzung Verhalten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormattedText (string textToFormat, System.Globalization.CultureInfo culture, System.Windows.FlowDirection flowDirection, System.Windows.Media.Typeface typeface, double emSize, System.Windows.Media.Brush foreground, System.Windows.Media.NumberSubstitution numberSubstitution, double pixelsPerDip);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string textToFormat, class System.Globalization.CultureInfo culture, valuetype System.Windows.FlowDirection flowDirection, class System.Windows.Media.Typeface typeface, float64 emSize, class System.Windows.Media.Brush foreground, class System.Windows.Media.NumberSubstitution numberSubstitution, float64 pixelsPerDip) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.#ctor(System.String,System.Globalization.CultureInfo,System.Windows.FlowDirection,System.Windows.Media.Typeface,System.Double,System.Windows.Media.Brush,System.Windows.Media.NumberSubstitution,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="textToFormat" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="flowDirection" Type="System.Windows.FlowDirection" />
+        <Parameter Name="typeface" Type="System.Windows.Media.Typeface" />
+        <Parameter Name="emSize" Type="System.Double" />
+        <Parameter Name="foreground" Type="System.Windows.Media.Brush" />
+        <Parameter Name="numberSubstitution" Type="System.Windows.Media.NumberSubstitution" />
+        <Parameter Name="pixelsPerDip" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="textToFormat">Der anzuzeigende Text.</param>
+        <param name="culture">Die spezifische Kultur des Texts.</param>
+        <param name="flowDirection">Die Richtung, in der der Text gelesen wird.</param>
+        <param name="typeface">Schriftfamilie, -stärke, -schnitt und -breite der einzelnen Zeichen für die Formatierung des Texts.</param>
+        <param name="emSize">Der Schriftgrad für das Geviertmaß des Texts, angegeben in [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</param>
+        <param name="foreground">Der Pinsel, der zum Zeichnen der einzelnen Glyphe verwendet.</param>
+        <param name="numberSubstitution">Gibt an, wie Zahlen im Text angezeigt werden, basierend auf <see cref="T:System.Windows.Media.NumberSubstitution" />. Dieser Wert kann <see langword="null" /> sein.</param>
+        <param name="pixelsPerDip">Der Wert für Pixel pro dichteunabhängigem Pixel, der dem Skalierungsfaktor entspricht. Wenn der DPI-Wert für einen Bildschirm z.B. 120 beträgt (oder 1,25, da 120/96 = 1,25), werden 1,25 Pixel pro dichteunabhängigem Pixel gezeichnet. DIP ist die von WPF verwendete Maßeinheit, um einen von Geräteauflösung und DPI-Werten unabhängigen Wert anzugeben.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.FormattedText" />-Klasse mit den angegebenen Werten für Text, Kultur, Flussrichtung, Schriftart, Schriftgrad, Vordergrundpinsel, Verhalten bei Zahlenersetzung und pixelsPerDip.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormattedText (string textToFormat, System.Globalization.CultureInfo culture, System.Windows.FlowDirection flowDirection, System.Windows.Media.Typeface typeface, double emSize, System.Windows.Media.Brush foreground, System.Windows.Media.NumberSubstitution numberSubstitution, System.Windows.Media.TextFormattingMode textFormattingMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string textToFormat, class System.Globalization.CultureInfo culture, valuetype System.Windows.FlowDirection flowDirection, class System.Windows.Media.Typeface typeface, float64 emSize, class System.Windows.Media.Brush foreground, class System.Windows.Media.NumberSubstitution numberSubstitution, valuetype System.Windows.Media.TextFormattingMode textFormattingMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.#ctor(System.String,System.Globalization.CultureInfo,System.Windows.FlowDirection,System.Windows.Media.Typeface,System.Double,System.Windows.Media.Brush,System.Windows.Media.NumberSubstitution,System.Windows.Media.TextFormattingMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use the PixelsPerDip override", false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="textToFormat" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="flowDirection" Type="System.Windows.FlowDirection" />
+        <Parameter Name="typeface" Type="System.Windows.Media.Typeface" />
+        <Parameter Name="emSize" Type="System.Double" />
+        <Parameter Name="foreground" Type="System.Windows.Media.Brush" />
+        <Parameter Name="numberSubstitution" Type="System.Windows.Media.NumberSubstitution" />
+        <Parameter Name="textFormattingMode" Type="System.Windows.Media.TextFormattingMode" />
+      </Parameters>
+      <Docs>
+        <param name="textToFormat">Der anzuzeigende Text.</param>
+        <param name="culture">Die spezifische Kultur des Texts.</param>
+        <param name="flowDirection">Die Richtung, in der der Text gelesen wird.</param>
+        <param name="typeface">Schriftfamilie, -stärke, -schnitt und -breite der einzelnen Zeichen für die Formatierung des Texts.</param>
+        <param name="emSize">Der Schriftgrad für das Geviertmaß des Texts, angegeben in [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</param>
+        <param name="foreground">Der Pinsel, der zum Zeichnen der einzelnen Glyphe verwendet.</param>
+        <param name="numberSubstitution">Die Zahl auf den Text anzuwendende Ersatz-Verhalten.</param>
+        <param name="textFormattingMode">Die <see cref="T:System.Windows.Media.TextFormattingMode" /> auf den Text angewendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.FormattedText" /> Klasse mit dem angegebenen Text, Kultur, flussrichtung, Schriftart, Schriftgrad, Pinsel, Anzahl Ersetzung Verhalten und textformatierung Modus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormattedText (string textToFormat, System.Globalization.CultureInfo culture, System.Windows.FlowDirection flowDirection, System.Windows.Media.Typeface typeface, double emSize, System.Windows.Media.Brush foreground, System.Windows.Media.NumberSubstitution numberSubstitution, System.Windows.Media.TextFormattingMode textFormattingMode, double pixelsPerDip);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string textToFormat, class System.Globalization.CultureInfo culture, valuetype System.Windows.FlowDirection flowDirection, class System.Windows.Media.Typeface typeface, float64 emSize, class System.Windows.Media.Brush foreground, class System.Windows.Media.NumberSubstitution numberSubstitution, valuetype System.Windows.Media.TextFormattingMode textFormattingMode, float64 pixelsPerDip) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.#ctor(System.String,System.Globalization.CultureInfo,System.Windows.FlowDirection,System.Windows.Media.Typeface,System.Double,System.Windows.Media.Brush,System.Windows.Media.NumberSubstitution,System.Windows.Media.TextFormattingMode,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="textToFormat" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="flowDirection" Type="System.Windows.FlowDirection" />
+        <Parameter Name="typeface" Type="System.Windows.Media.Typeface" />
+        <Parameter Name="emSize" Type="System.Double" />
+        <Parameter Name="foreground" Type="System.Windows.Media.Brush" />
+        <Parameter Name="numberSubstitution" Type="System.Windows.Media.NumberSubstitution" />
+        <Parameter Name="textFormattingMode" Type="System.Windows.Media.TextFormattingMode" />
+        <Parameter Name="pixelsPerDip" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="textToFormat">Der anzuzeigende Text.</param>
+        <param name="culture">Die spezifische Kultur des Texts.</param>
+        <param name="flowDirection">Die Richtung, in der der Text gelesen wird.</param>
+        <param name="typeface">Schriftfamilie, -stärke, -schnitt und -breite der einzelnen Zeichen für die Formatierung des Texts.</param>
+        <param name="emSize">Der Schriftgrad für das Geviertmaß des Texts, angegeben in [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</param>
+        <param name="foreground">Der Pinsel, der zum Zeichnen jeder Glyphe verwendet.</param>
+        <param name="numberSubstitution">Gibt an, wie Zahlen im Text angezeigt werden, basierend auf <see cref="T:System.Windows.Media.NumberSubstitution" />. Dieser Wert kann <see langword="null" /> sein.</param>
+        <param name="textFormattingMode">Der Formatierungsmodus, der sich auf die Anzeige von Text durch WPF auswirkt.</param>
+        <param name="pixelsPerDip">Der Wert für Pixel pro dichteunabhängigem Pixel, der dem Skalierungsfaktor entspricht. Wenn der DPI-Wert für einen Bildschirm z.B. 120 beträgt (oder 1,25, da 120/96 = 1,25), werden 1,25 Pixel pro dichteunabhängigem Pixel gezeichnet. DIP ist die von WPF verwendete Maßeinheit, um einen von Geräteauflösung und DPI-Werten unabhängigen Wert anzugeben.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.FormattedText" />-Klasse mit den angegebenen Werten für Text, Kultur, Flussrichtung, Schriftart, Schriftgrad, Vordergrundpinsel, Verhalten bei Zahlenersetzung und pixelsPerDip.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Baseline">
+      <MemberSignature Language="C#" Value="public double Baseline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Baseline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.Baseline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand vom oberen Rand der ersten Zeile auf die Baseline der ersten Zeile von einem <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <value>Der Abstand vom oberen Rand der ersten Zeile auf die Baseline der ersten Zeile im bereitgestellten [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry BuildGeometry (System.Windows.Point origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Geometry BuildGeometry(valuetype System.Windows.Point origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.BuildGeometry(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="origin" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="origin">Der linken oberen Ursprung der resultierenden Geometry-Instanz.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Media.Geometry" /> Objekt, das den formatierten Text, einschließlich aller Symbole und Textdekorationen darstellt.</summary>
+        <returns>Die <see cref="T:System.Windows.Media.Geometry" /> -objektdarstellung des formatierten Text.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Text konvertiert wird, wird ein <xref:System.Windows.Media.Geometry> -Objekt, es ist nicht mehr eine Auflistung von Zeichen – die Zeichen in der Textzeichenfolge kann nicht geändert werden. Sie können jedoch die Darstellung des konvertierten Texts durch Ändern der Strich- und Füllungseigenschaften ändern.  
+  
+ Die folgenden Beispiele veranschaulichen verschiedene Methoden zum Erstellen von visuellen Effekte durch Ändern des Strichs und Füllung der konvertierte Text.  
+  
+ ![Text mit unterschiedlichen Farben für Füllung und Strich](~/add/media/outlinedtext03.jpg "Text mit unterschiedlichen Farben für Füllung und Strich")  
+Beispiel für das Festlegen von unterschiedlichen Farben für Strich und Füllung  
+  
+ ![Text mit auf Strich angewendeten Bildpinsel](~/add/media/outlinedtext04.jpg "Text mit auf Strich angewendeten Bildpinsel")  
+Beispiel für die Anwendung eines Bildpinsels auf den Strich  
+  
+ Text, der in konvertiert und als eine <xref:System.Windows.Media.Geometry> Objekt möglicherweise nicht Erscheinungsbild ist dasselbe wie Text direkt gerendert:  
+  
+-   In Text konvertiert eine <xref:System.Windows.Media.Geometry> Objekt ist nicht mit ClearType gerendert. Darüber hinaus wird die Grundlinie der konvertierten nicht um eine gesamte Anzeigepixel "angedockt".  
+  
+-   Kleine Schriftarten, z. B. die häufigsten im Text-Text möglicherweise schlechter lesbar, weichgezeichnete angezeigt und die berichtspräsentation im Aussehen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Media.FormattedText> Objekt und zum Abrufen von Geometrien den formatierten Text und seine umgebenden Felds.  
+  
+ [!code-csharp[OutlineTextControlViewer#CreateText](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#createtext)]
+ [!code-vb[OutlineTextControlViewer#CreateText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#createtext)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildHighlightGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry BuildHighlightGeometry (System.Windows.Point origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Geometry BuildHighlightGeometry(valuetype System.Windows.Point origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.BuildHighlightGeometry(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="origin" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="origin">Der Ursprung der Region hervorheben.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Media.Geometry" /> Objekt, das die Hervorhebung umgebenden Felds des formatierten Text darstellt.</summary>
+        <returns>Die <see cref="T:System.Windows.Media.Geometry" /> Objekt, das die Hervorhebung umgebenden Felds des formatierten Text darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Bereich des umgebenden Felds enthält den gesamten formatierten Textbereich ab, an dem Punkt gemäß `origin`. Das zurückgegebene <xref:System.Windows.Media.Geometry> Objekt enthält nur das umgebende Feld des markierten Texts und keinen gerenderten Text.  
+  
+ Das folgende Beispiel veranschaulicht eine Möglichkeit zum Erstellen von visuellen Effekte durch Ändern des Strichs und die Markierung der konvertierte Text.  
+  
+ ![Text mit auf Strich angewendeten Bildpinsel](~/add/media/outlinedtext05.jpg "Text mit auf Strich angewendeten Bildpinsel")  
+Beispiel für die Anwendung eines Bildpinsels auf den Strich und die Hervorhebung  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Media.FormattedText> Objekt und zum Abrufen von Geometrien den formatierten Text und seine umgebenden Felds.  
+  
+ [!code-csharp[OutlineTextControlViewer#CreateText](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#createtext)]
+ [!code-vb[OutlineTextControlViewer#CreateText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#createtext)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildHighlightGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry BuildHighlightGeometry (System.Windows.Point origin, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Geometry BuildHighlightGeometry(valuetype System.Windows.Point origin, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.BuildHighlightGeometry(System.Windows.Point,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="origin" Type="System.Windows.Point" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="origin">Der Ursprung der Region hervorheben.</param>
+        <param name="startIndex">Der Index des ersten Zeichens für die Hervorhebung Grenzen bezogen werden soll.</param>
+        <param name="count">Die Anzahl der Zeichen, die die Hervorhebung Grenzen enthalten soll.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Media.Geometry" /> Objekt, das die Hervorhebung Begrenzungsrahmen für eine angegebene Teilzeichenfolge des formatierten Text darstellt.</summary>
+        <returns>Die <see cref="T:System.Windows.Media.Geometry" /> -Objekt, das umgebende Feld Hervorhebung der Teilzeichenfolge formatierter Text darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.Windows.Media.Geometry> Objekt enthält nur das umgebende Feld des markierten Texts und keinen gerenderten Text.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extent">
+      <MemberSignature Language="C#" Value="public double Extent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Extent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.Extent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand zwischen dem obersten gezeichneten Pixel der ersten Zeile und dem untersten gezeichneten Pixel der letzten Zeile ab.</summary>
+        <value>Der Abstand zwischen dem obersten gezeichneten Pixel der ersten Zeile und dem untersten gezeichneten Pixel Rand der letzten Zeile im bereitgestellten [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Block enthält grafische Elemente, die in ein Symbol, einschließlich dekorativen Elemente, die die Zeilenhöhe, geplante oder Überhängen verlassen können vorhanden sein können. Dieser Wert ist abhängig von Zeichen in der Zeile angezeigt werden und wird daher nicht verwendet (und sollte nicht verwendet werden) Zeilenabstand abgeleitet werden. Es kann jedoch zum Ausrichten von oben oder unten Absätze mit grafischen Elementen oder für Treffertests verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.FlowDirection FlowDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FlowDirection FlowDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.FlowDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.FlowDirection" /> von eine <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <value>Die <see cref="T:System.Windows.FlowDirection" /> des formatierten Text.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMaxTextWidths">
+      <MemberSignature Language="C#" Value="public double[] GetMaxTextWidths ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64[] GetMaxTextWidths() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.GetMaxTextWidths" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array von Textbreiten ab. Jedes Element im Array darstellt, die maximale Textbreite aufeinander folgender Textzeilen.</summary>
+        <returns>Ein Array von maximalen Textgröße Breiten, jede Breite in bereitgestellten [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Textzeilen die Anzahl der Elemente im Array überschreitet, wird der letzte Elementwert für die verbleibenden Zeilen verwendet. Wenn das Array der Länge nicht `null`, auf die Arraywerte von <xref:System.Windows.Media.FormattedText.GetMaxTextWidths%2A> anstelle von der <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> Eigenschaftswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public double Height { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand vom oberen Rand der ersten Zeile am Ende der letzten Zeile der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <value>Der Abstand vom oberen Rand der ersten Zeile zum unteren Rand der letzten Zeile im bereitgestellten [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeight">
+      <MemberSignature Language="C#" Value="public double LineHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LineHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.LineHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeilenhöhe oder der Abstand zwischen Textzeilen.</summary>
+        <value>Der Zeilenabstand zwischen Textzeilen, bereitgestellt [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardzeilenhöhe wird automatisch berechnet, und basiert auf der Schriftart-Wert, der als Parameter übergeben wird, die <xref:System.Windows.Media.FormattedText.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLineCount">
+      <MemberSignature Language="C#" Value="public int MaxLineCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxLineCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.MaxLineCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl der anzuzeigenden Zeilen. Text überschreiten die <see cref="P:System.Windows.Media.FormattedText.MaxLineCount" /> nicht angezeigt.</summary>
+        <value>Die maximale Anzahl der anzuzeigenden Zeilen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.FormattedText.Trimming%2A> Eigenschaft, um Text zu steuern wird dargestellt, wenn der Text überschreitet die <xref:System.Windows.Media.FormattedText.MaxLineCount%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxTextHeight">
+      <MemberSignature Language="C#" Value="public double MaxTextHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MaxTextHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.MaxTextHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Höhe einer Text-Spalte.</summary>
+        <value>Die maximale Höhe einer Textspalte in bereitgestellten [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die letzte Zeile des angezeigten Texts ist die letzte ganze Zeile, die innerhalb von passen die <xref:System.Windows.Media.FormattedText.MaxTextHeight%2A> Grenzwert oder die Nummer der Zeile, die nicht überschreitet die <xref:System.Windows.Media.FormattedText.MaxLineCount%2A> -Eigenschaft, welches Ereignis zuerst eintritt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Media.FormattedText> Objekt, und anschließend werden mehrere Formatierungsstile auf den Text, einschließlich <xref:System.Windows.Media.FormattedText.MaxTextHeight%2A>.  
+  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxTextWidth">
+      <MemberSignature Language="C#" Value="public double MaxTextWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MaxTextWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.MaxTextWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Breite (Länge) für eine Textzeile fest.</summary>
+        <value>Die maximale Breite für eine Textzeile [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Text wird umbrochen, zur Vermeidung überschreiten der <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> Grenzwert.  
+  
+ Glyphe Ausrichtung Kanten müssen innerhalb der Zeile Anzahl Grenzwerte gehalten werden. Da viele Schriftarten Symbole, die etwas Überhängen enthalten, können Sie Rand von mindestens 1/6 Em (Schriftgrad) über die Anzahl der Zeilen angefordert, um Platz für solche überhängen, aus.  
+  
+ Ein Nullwert für die Zeilenanzahl wird als unendliche Zeilenanzahl behandelt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Media.FormattedText> Objekt, und anschließend werden mehrere Formatierungsstile auf den Text, einschließlich <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>.  
+  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinWidth">
+      <MemberSignature Language="C#" Value="public double MinWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MinWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.MinWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die kleinste mögliche Textbreite, die vollständig angegebenen Text enthalten sein kann.</summary>
+        <value>Die minimale Textbreite der Textquelle [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im folgende dargestellte Text verwendet die minimale Textbreite im Quelltext, die in mehreren Zeilen angezeigt. Die minimale Textbreite entspricht dem Wort mit der größten Breite – in diesem Fall das Wort "übersprungen". Beachten Sie, dass mehrere Wörter in der gleichen Zeile angezeigt werden können, solange die Gesamtbreite nicht die minimale Textbreite überschreitet.  
+  
+ ![TextFormatter mit Mindestabsatzbreite](~/add/media/textformatter03.png "TextFormatter mit Mindestabsatzbreite")  
+Minimale Textbreite  
+  
+ Wenn der Wert zu übergeben <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> ist größer als oder gleich dem Wert des <xref:System.Windows.Media.FormattedText.MinWidth%2A>, wird der Text ohne Auslassungszeichen formatiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Media.FormattedText.MinWidth%2A> Eigenschaft, um die minimale Textbreite für die formatierten Textzeilen generiert.  
+  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets3)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverhangAfter">
+      <MemberSignature Language="C#" Value="public double OverhangAfter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 OverhangAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.OverhangAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand vom unteren Rand der letzten Zeile des Texts auf der untersten gezeichneten Pixel ab.</summary>
+        <value>Der Abstand zwischen dem unteren Rand der letzten Zeile und dem untersten gezeichneten Pixel im bereitgestellten [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert ist positiv, wenn das unterste gezeichnete Pixel der untersten Zeile unter- und ist ein negativer Wert ist (oder höher) der Zeile.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverhangLeading">
+      <MemberSignature Language="C#" Value="public double OverhangLeading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 OverhangLeading" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.OverhangLeading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Entfernung aus der führende Ausrichtungspunkt an und dem führenden gezeichneten Pixel einer Zeile.</summary>
+        <value>Der maximale Abstand zwischen dem führenden Ausrichtungspunkt zeigen Sie auf eine Zeile in die führenden gezeichneten Pixel [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die führende Ausrichtungspunkt vor dem führenden gezeichneten Pixel geschaltet wird, ist der Wert negativ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverhangTrailing">
+      <MemberSignature Language="C#" Value="public double OverhangTrailing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 OverhangTrailing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.OverhangTrailing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Entfernung aus dem nachfolgenden gezeichneten Pixel und die nachfolgenden Ausrichtungspunkt einer Zeile ab.</summary>
+        <value>Der maximale Abstand zwischen dem nachfolgenden gezeichneten Pixel und eine Zeile in der nachfolgenden Ausrichtungspunkt [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.FormattedText.OverhangTrailing%2A> Wert wird positiv sein, wenn das nachfolgende gezeichnete Pixel vor dem nachfolgenden Ausrichtungspunkt steht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelsPerDip">
+      <MemberSignature Language="C#" Value="public double PixelsPerDip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PixelsPerDip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.PixelsPerDip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die PixelsPerDip ab, wo der Text gerendert werden soll, oder legt sie fest.</summary>
+        <value>Der aktuelle <see cref="P:System.Windows.Media.FormattedText.PixelsPerDip" />-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCulture">
+      <MemberSignature Language="C#" Value="public void SetCulture (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCulture(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetCulture(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Die <see cref="T:System.Globalization.CultureInfo" /> zum Formatieren von Text verwendet.</param>
+        <summary>Legt die <see cref="T:System.Globalization.CultureInfo" /> für den gesamten Satz von Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureInfo> -Klasse enthält kulturspezifische Informationen, z. B. die zugeordnete Sprache, untersprachen, Land/Region, Kalender und kulturelle Konventionen. Diese Klasse bietet außerdem Zugriff auf kulturspezifische Instanzen <xref:System.Globalization.DateTimeFormatInfo>, <xref:System.Globalization.NumberFormatInfo>, <xref:System.Globalization.CompareInfo>, und <xref:System.Globalization.TextInfo>. Diese Objekte enthalten, die Informationen für kulturabhängige Vorgänge, z. B. Groß-/Kleinschreibung, dem Formatieren von Datumsangaben und Zahlen, und Vergleichen von Zeichenfolgen.  
+  
+ Diese Methode legt den Informationswert Kultur für die gesamte Zeichenfolge fest. Verwenden Sie zum Festlegen der Kultur Informationswert für eine Teilmenge der Textzeichenfolge der <xref:System.Windows.Media.FormattedText.SetCulture%28System.Globalization.CultureInfo%2CSystem.Int32%2CSystem.Int32%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCulture">
+      <MemberSignature Language="C#" Value="public void SetCulture (System.Globalization.CultureInfo culture, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCulture(class System.Globalization.CultureInfo culture, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetCulture(System.Globalization.CultureInfo,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Die <see cref="T:System.Globalization.CultureInfo" /> zum Formatieren von Text verwendet.</param>
+        <param name="startIndex">Der Startindex des ersten Zeichens, um die Änderung zu übernehmen.</param>
+        <param name="count">Die Anzahl der Zeichen, denen auf die Änderung angewendet werden soll.</param>
+        <summary>Legt die <see cref="T:System.Globalization.CultureInfo" /> für eine bestimmte Teilmenge der Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureInfo> -Klasse enthält kulturspezifische Informationen, z. B. die zugeordnete Sprache, untersprachen, Land/Region, Kalender und kulturelle Konventionen. Diese Klasse bietet außerdem Zugriff auf kulturspezifische Instanzen <xref:System.Globalization.DateTimeFormatInfo>, <xref:System.Globalization.NumberFormatInfo>, <xref:System.Globalization.CompareInfo>, und <xref:System.Globalization.TextInfo>. Diese Objekte enthalten, die Informationen für kulturabhängige Vorgänge, z. B. Groß-/Kleinschreibung, dem Formatieren von Datumsangaben und Zahlen, und Vergleichen von Zeichenfolgen.  
+  
+ Um den Informationswert Kultur für die gesamte Zeichenfolge festzulegen, verwenden die <xref:System.Windows.Media.FormattedText.SetCulture%28System.Globalization.CultureInfo%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontFamily">
+      <MemberSignature Language="C#" Value="public void SetFontFamily (string fontFamily);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontFamily(string fontFamily) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontFamily(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fontFamily" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fontFamily">Eine Zeichenfolge, die erstellt die <see cref="T:System.Windows.Media.FontFamily" /> zum Formatieren von Text verwendet. Der Zugriffe sind zulässig. Weitere Informationen finden Sie unter <see cref="T:System.Windows.Media.FontFamily" />.</param>
+        <summary>Legt die Schriftfamilie für den gesamten Satz von Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt den Wert der Schriftfamilie für die gesamte Zeichenfolge fest. Um den Wert der Schriftfamilie für eine Teilmenge der Textzeichenfolge festzulegen, verwenden die <xref:System.Windows.Media.FormattedText.SetFontFamily%28System.String%2CSystem.Int32%2CSystem.Int32%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontFamily">
+      <MemberSignature Language="C#" Value="public void SetFontFamily (System.Windows.Media.FontFamily fontFamily);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontFamily(class System.Windows.Media.FontFamily fontFamily) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontFamily(System.Windows.Media.FontFamily)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fontFamily" Type="System.Windows.Media.FontFamily" />
+      </Parameters>
+      <Docs>
+        <param name="fontFamily">Die <see cref="T:System.Windows.Media.FontFamily" /> zum Formatieren von Text verwendet.</param>
+        <summary>Legt die Schriftfamilie für eine <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt den Wert der Schriftfamilie für die gesamte Zeichenfolge fest. Um den Wert der Schriftfamilie für eine Teilmenge der Textzeichenfolge festzulegen, verwenden die <xref:System.Windows.Media.FormattedText.SetFontFamily%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontFamily">
+      <MemberSignature Language="C#" Value="public void SetFontFamily (string fontFamily, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontFamily(string fontFamily, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontFamily(System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fontFamily" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fontFamily">Eine Zeichenfolge, die erstellt die <see cref="T:System.Windows.Media.FontFamily" /> zum Formatieren von Text verwendet. Der Zugriffe sind zulässig. Weitere Informationen finden Sie unter <see cref="T:System.Windows.Media.FontFamily" />.</param>
+        <param name="startIndex">Der Startindex des ersten Zeichens der Schriftfamilie anzuwendende zum Ändern.</param>
+        <param name="count">Die Anzahl der Zeichen, denen die Änderung angewendet werden sollen.</param>
+        <summary>Legt die Schriftfamilie für eine bestimmte Teilmenge der Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um den Wert der Schriftfamilie für die gesamte Zeichenfolge festzulegen, verwenden die <xref:System.Windows.Media.FormattedText.SetFontFamily%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontFamily">
+      <MemberSignature Language="C#" Value="public void SetFontFamily (System.Windows.Media.FontFamily fontFamily, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontFamily(class System.Windows.Media.FontFamily fontFamily, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontFamily(System.Windows.Media.FontFamily,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fontFamily" Type="System.Windows.Media.FontFamily" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fontFamily">Die <see cref="T:System.Windows.Media.FontFamily" /> zum Formatieren von Text verwendet.</param>
+        <param name="startIndex">Der Startindex des ersten Zeichens der Schriftfamilie anzuwendende zum Ändern.</param>
+        <param name="count">Die Anzahl der Zeichen, denen die Änderung angewendet werden sollen.</param>
+        <summary>Legt die Schriftfamilie für eine bestimmte Teilmenge der Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um den Wert der Schriftfamilie für die gesamte Zeichenfolge festzulegen, verwenden die <xref:System.Windows.Media.FormattedText.SetFontFamily%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontSize">
+      <MemberSignature Language="C#" Value="public void SetFontSize (double emSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontSize(float64 emSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontSize(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="emSize" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="emSize">Die Schriftart angegebene Geviertgröße "messen Sie die Größe im bereitgestellten [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</param>
+        <summary>Legt den Schriftgrad für den gesamten Satz von Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt den Wert des Schriftgrads für die gesamte Zeichenfolge fest. Um den Wert des Schriftgrads für eine Teilmenge der Textzeichenfolge festzulegen, verwenden die <xref:System.Windows.Media.FormattedText.SetFontSize%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontSize">
+      <MemberSignature Language="C#" Value="public void SetFontSize (double emSize, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontSize(float64 emSize, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontSize(System.Double,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="emSize" Type="System.Double" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="emSize">Die Schriftart angegebene Geviertgröße "messen Sie die Größe im bereitgestellten [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</param>
+        <param name="startIndex">Der Startindex des ersten Zeichens, um die Schriftgröße anzuwenden.</param>
+        <param name="count">Die Anzahl der Zeichen, um die Schriftgröße anzuwenden.</param>
+        <summary>Legt den Schriftgrad für eine bestimmte Teilmenge der Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um den Wert des Schriftgrads für die gesamte Zeichenfolge festzulegen, verwenden die <xref:System.Windows.Media.FormattedText.SetFontSize%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Media.FormattedText> Objekt, und anschließend werden mehrere Formatierungsstile auf den Text, einschließlich <xref:System.Windows.Media.FormattedText.SetFontSize%2A>.  
+  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontStretch">
+      <MemberSignature Language="C#" Value="public void SetFontStretch (System.Windows.FontStretch stretch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontStretch(valuetype System.Windows.FontStretch stretch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontStretch(System.Windows.FontStretch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stretch" Type="System.Windows.FontStretch" />
+      </Parameters>
+      <Docs>
+        <param name="stretch">Die gewünschte <see cref="T:System.Windows.FontStretch" /> Wert, der zum Formatieren von Text verwendet.</param>
+        <summary>Legt den Font-Stretch-Wert für den gesamten Satz von Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Font-Stretch-Wert verweist auf den Grad, zu dem eine Schriftart, auf dem Bildschirm gestreckt wird. <xref:System.Windows.FontStretch>unterstützt Typkonvertierungsverhalten solche, die statische Werte von der <xref:System.Windows.FontStretches> Klasse kann verwendet werden, um initialisieren <xref:System.Windows.FontStretch> und füllen Sie die Parameter vom Typ <xref:System.Windows.FontStretch>. Sie können auch aufrufen <xref:System.Windows.FontStretch.FromOpenTypeStretch%2A> ordnungsgemäß initialisierter erstellen <xref:System.Windows.FontStretch>.  
+  
+ Diese Methode legt den Wert der Schriftart Stretch für die gesamte Zeichenfolge fest. Verwenden Sie zum Festlegen des Font-Stretch-Wert für eine Teilmenge der Textzeichenfolge der <xref:System.Windows.Media.FormattedText.SetFontStretch%28System.Windows.FontStretch%2CSystem.Int32%2CSystem.Int32%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontStretch">
+      <MemberSignature Language="C#" Value="public void SetFontStretch (System.Windows.FontStretch stretch, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontStretch(valuetype System.Windows.FontStretch stretch, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontStretch(System.Windows.FontStretch,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stretch" Type="System.Windows.FontStretch" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="stretch">Die gewünschte <see cref="T:System.Windows.FontStretch" /> Wert, der zum Formatieren von Text verwendet.</param>
+        <param name="startIndex">Der Startindex des ersten Zeichens der Font-Stretch auf anwenden.</param>
+        <param name="count">Die Anzahl der Zeichen die Schriftart anzuwendende stretch auf.</param>
+        <summary>Legt den Wert der Schriftart Stretch für eine bestimmte Teilmenge der Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Font-Stretch-Wert verweist auf den Grad, zu dem eine Schriftart, auf dem Bildschirm gestreckt wird.  
+  
+ <xref:System.Windows.FontStretch>unterstützt Typkonvertierungsverhalten solche, die statische Werte von der <xref:System.Windows.FontStretches> Klasse kann verwendet werden, um initialisieren <xref:System.Windows.FontStretch> und füllen Sie die Parameter vom Typ <xref:System.Windows.FontStretch>. Sie können auch aufrufen <xref:System.Windows.FontStretch.FromOpenTypeStretch%2A> ordnungsgemäß initialisierter erstellen <xref:System.Windows.FontStretch>.  
+  
+ Verwenden Sie zum Festlegen des Font-Stretch-Werts für die gesamte Zeichenfolge die <xref:System.Windows.Media.FormattedText.SetFontStretch%28System.Windows.FontStretch%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontStyle">
+      <MemberSignature Language="C#" Value="public void SetFontStyle (System.Windows.FontStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontStyle(valuetype System.Windows.FontStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontStyle(System.Windows.FontStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Windows.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">Die <see cref="T:System.Windows.FontStyle" /> Wert, der zum Formatieren von Text verwendet.</param>
+        <summary>Legt den Schriftschnitt für den gesamten Satz von Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontStyle>unterstützt Typkonvertierungsverhalten solche, die statische Werte von der <xref:System.Windows.FontStyles> Klasse kann verwendet werden, um initialisieren <xref:System.Windows.FontStyle> und füllen Sie die Parameter vom Typ <xref:System.Windows.FontStyle>.  
+  
+ Diese Methode legt den Schriftschnitt für die gesamte Zeichenfolge fest. Um den Schriftschnitt für eine Teilmenge der Textzeichenfolge festzulegen, verwenden die <xref:System.Windows.Media.FormattedText.SetFontStyle%28System.Windows.FontStyle%2CSystem.Int32%2CSystem.Int32%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontStyle">
+      <MemberSignature Language="C#" Value="public void SetFontStyle (System.Windows.FontStyle style, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontStyle(valuetype System.Windows.FontStyle style, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontStyle(System.Windows.FontStyle,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Windows.FontStyle" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="style">Die <see cref="T:System.Windows.FontStyle" /> Wert, der zum Formatieren von Text verwendet.</param>
+        <param name="startIndex">Der Startindex des ersten Zeichens den Schriftschnitt angewendet werden soll.</param>
+        <param name="count">Die Anzahl der Zeichen, die den Schriftschnitt angewendet werden soll.</param>
+        <summary>Legt den Schriftschnitt für eine bestimmte Teilmenge der Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontStyle>unterstützt Typkonvertierungsverhalten solche, die statische Werte von der <xref:System.Windows.FontStyles> Klasse kann verwendet werden, um initialisieren <xref:System.Windows.FontStyle> und füllen Sie die Parameter vom Typ <xref:System.Windows.FontStyle>.  
+  
+ Um den Schriftschnitt für die gesamte Zeichenfolge festzulegen, verwenden die <xref:System.Windows.Media.FormattedText.SetFontStyle%28System.Windows.FontStyle%29> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Media.FormattedText> Objekt, und anschließend werden mehrere Formatierungsstile auf den Text, einschließlich <xref:System.Windows.Media.FormattedText.SetFontStyle%2A>.  
+  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontTypeface">
+      <MemberSignature Language="C#" Value="public void SetFontTypeface (System.Windows.Media.Typeface typeface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontTypeface(class System.Windows.Media.Typeface typeface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontTypeface(System.Windows.Media.Typeface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeface" Type="System.Windows.Media.Typeface" />
+      </Parameters>
+      <Docs>
+        <param name="typeface">Die <see cref="T:System.Windows.Media.Typeface" /> zum Formatieren von Text verwendet.</param>
+        <summary>Legt die Schriftart für den gesamten Satz von Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Typeface>Stellt eine Kombination von <xref:System.Windows.Media.FontFamily>, <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStyle>, und <xref:System.Windows.FontStretch>. <xref:System.Windows.Media.Typeface>unterstützt mehrere Konstruktoren, die basierend auf einer Schriftart Konstrukte Namen, von denen anderer diskrete für Werte <xref:System.Windows.Media.FontFamily>, <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStyle>, und <xref:System.Windows.FontStretch>.  
+  
+ Diese Methode legt die Schriftart für die gesamte Zeichenfolge fest. Um die Schriftart für eine Teilmenge der Textzeichenfolge festzulegen, verwenden die <xref:System.Windows.Media.FormattedText.SetFontTypeface%28System.Windows.Media.Typeface%2CSystem.Int32%2CSystem.Int32%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontTypeface">
+      <MemberSignature Language="C#" Value="public void SetFontTypeface (System.Windows.Media.Typeface typeface, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontTypeface(class System.Windows.Media.Typeface typeface, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontTypeface(System.Windows.Media.Typeface,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeface" Type="System.Windows.Media.Typeface" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="typeface">Die <see cref="T:System.Windows.Media.Typeface" /> zum Formatieren von Text verwendet.</param>
+        <param name="startIndex">Der Startindex des ersten Zeichens der Schriftart angewendet werden soll.</param>
+        <param name="count">Die Anzahl der Zeichen in der Schriftart angewendet.</param>
+        <summary>Legt die Schriftart für eine bestimmte Teilmenge der Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Typeface>Stellt eine Kombination von <xref:System.Windows.Media.FontFamily>, <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStyle>, und <xref:System.Windows.FontStretch>. <xref:System.Windows.Media.Typeface>unterstützt mehrere Konstruktoren, die basierend auf einer Schriftart Konstrukte Namen, von denen anderer diskrete für Werte <xref:System.Windows.Media.FontFamily>, <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStyle>, und <xref:System.Windows.FontStretch>.  
+  
+ Um die Schriftart für die gesamte Zeichenfolge festzulegen, verwenden die <xref:System.Windows.Media.FormattedText.SetFontTypeface%28System.Windows.Media.Typeface%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontWeight">
+      <MemberSignature Language="C#" Value="public void SetFontWeight (System.Windows.FontWeight weight);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontWeight(valuetype System.Windows.FontWeight weight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontWeight(System.Windows.FontWeight)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="weight" Type="System.Windows.FontWeight" />
+      </Parameters>
+      <Docs>
+        <param name="weight">Die <see cref="T:System.Windows.FontWeight" /> zum Formatieren von Text verwendet.</param>
+        <summary>Legt die Schriftbreite für den gesamten Satz von Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontWeight>unterstützt Typkonvertierungsverhalten solche, die statische Werte von der <xref:System.Windows.FontWeights> Klasse kann verwendet werden, um initialisieren <xref:System.Windows.FontWeight> und füllen Sie die Parameter vom Typ <xref:System.Windows.FontWeight>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontWeight">
+      <MemberSignature Language="C#" Value="public void SetFontWeight (System.Windows.FontWeight weight, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontWeight(valuetype System.Windows.FontWeight weight, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetFontWeight(System.Windows.FontWeight,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="weight" Type="System.Windows.FontWeight" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="weight">Die Schriftbreite für das Formatieren von Text verwendet.</param>
+        <param name="startIndex">Der Startindex des ersten Zeichens, auf die Schriftbreite angewendet werden soll.</param>
+        <param name="count">Die Anzahl der Zeichen, die die Schriftbreite angewendet werden soll.</param>
+        <summary>Ändert die <see cref="T:System.Windows.FontWeight" /> für den angegebenen Text in einem <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontWeight>unterstützt Typkonvertierungsverhalten solche, die statische Werte von der <xref:System.Windows.FontWeights> Klasse kann verwendet werden, um initialisieren <xref:System.Windows.FontWeight> und füllen Sie die Parameter vom Typ <xref:System.Windows.FontWeight>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Media.FormattedText> Objekt, und anschließend werden mehrere Formatierungsstile auf den Text, einschließlich <xref:System.Windows.Media.FormattedText.SetFontWeight%2A>.  
+  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetForegroundBrush">
+      <MemberSignature Language="C#" Value="public void SetForegroundBrush (System.Windows.Media.Brush foregroundBrush);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetForegroundBrush(class System.Windows.Media.Brush foregroundBrush) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetForegroundBrush(System.Windows.Media.Brush)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="foregroundBrush" Type="System.Windows.Media.Brush" />
+      </Parameters>
+      <Docs>
+        <param name="foregroundBrush">Der Pinsel, der für den Textvordergrund verwendet werden soll.</param>
+        <summary>Ändert den Vordergrund <see cref="T:System.Windows.Media.Brush" /> für eine gesamte <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt den Vordergrundpinsel für die gesamte Zeichenfolge fest. Verwenden Sie zum Festlegen der Vordergrundpinsel für eine Teilmenge der Textzeichenfolge der <xref:System.Windows.Media.FormattedText.SetForegroundBrush%28System.Windows.Media.Brush%2CSystem.Int32%2CSystem.Int32%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetForegroundBrush">
+      <MemberSignature Language="C#" Value="public void SetForegroundBrush (System.Windows.Media.Brush foregroundBrush, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetForegroundBrush(class System.Windows.Media.Brush foregroundBrush, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetForegroundBrush(System.Windows.Media.Brush,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="foregroundBrush" Type="System.Windows.Media.Brush" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="foregroundBrush">Der Pinsel, der für den Textvordergrund verwendet werden soll.</param>
+        <param name="startIndex">Der Startindex des ersten Zeichens Vordergrundpinsel angewendet werden soll.</param>
+        <param name="count">Die Anzahl der Zeichen, die die Vordergrundpinsel angewendet.</param>
+        <summary>Ändert den Vordergrund <see cref="T:System.Windows.Media.Brush" /> für den angegebenen Text in einem <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um den Vordergrundpinsel für die gesamte Zeichenfolge festzulegen, verwenden die <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Media.FormattedText> Objekt, und anschließend werden mehrere Formatierungsstile auf den Text, einschließlich <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A>.  
+  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMaxTextWidths">
+      <MemberSignature Language="C#" Value="public void SetMaxTextWidths (double[] maxTextWidths);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMaxTextWidths(float64[] maxTextWidths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetMaxTextWidths(System.Double[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxTextWidths" Type="System.Double[]" />
+      </Parameters>
+      <Docs>
+        <param name="maxTextWidths">Ein Array von maximalen Textgröße Breiten, jede Breite in bereitgestellten [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</param>
+        <summary>Legt ein Array von maximalen Textgröße breiten innerhalb der <see cref="T:System.Windows.Media.FormattedText" />, regelmäßig pro Zeile. Jedes Element im Array darstellt, die maximale Textbreite aufeinander folgender Textzeilen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Textzeilen die Anzahl der Elemente im Array überschreitet, wird der letzte Wert im Array der verbleibenden Zeilen verwendet. Ein gültiges Array <xref:System.Windows.Media.FormattedText.SetMaxTextWidths%2A> für bereitgestellten Wert überschreibt die <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNumberSubstitution">
+      <MemberSignature Language="C#" Value="public void SetNumberSubstitution (System.Windows.Media.NumberSubstitution numberSubstitution);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetNumberSubstitution(class System.Windows.Media.NumberSubstitution numberSubstitution) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetNumberSubstitution(System.Windows.Media.NumberSubstitution)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numberSubstitution" Type="System.Windows.Media.NumberSubstitution" />
+      </Parameters>
+      <Docs>
+        <param name="numberSubstitution">Anzahl Ersetzung Verhalten auf den Text angewendet. kann <see langword="null" />, in diesem Fall die Anzahl Ersetzung Standardmethode für die Kultur Text verwendet wird.</param>
+        <summary>Legt die Anzahl Ersetzung Verhalten für den gesamten Satz von Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.NumberSubstitution> Klasse gibt an, wie Zahlen im Text angezeigt werden. Diese Methode legt die Anzahl Ersetzung-Verhalten für die gesamte Zeichenfolge fest. Verwenden Sie zum Festlegen der Anzahl Ersetzung Verhalten für eine Teilmenge der Textzeichenfolge der <xref:System.Windows.Media.FormattedText.SetNumberSubstitution%28System.Windows.Media.NumberSubstitution%2CSystem.Int32%2CSystem.Int32%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNumberSubstitution">
+      <MemberSignature Language="C#" Value="public void SetNumberSubstitution (System.Windows.Media.NumberSubstitution numberSubstitution, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetNumberSubstitution(class System.Windows.Media.NumberSubstitution numberSubstitution, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetNumberSubstitution(System.Windows.Media.NumberSubstitution,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numberSubstitution" Type="System.Windows.Media.NumberSubstitution" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="numberSubstitution">Anzahl Ersetzung Verhalten auf den Text angewendet. kann <see langword="null" />, in diesem Fall die Anzahl Ersetzung Standardmethode für die Kultur Text verwendet wird.</param>
+        <param name="startIndex">Der Startindex des ersten Zeichens, um die Änderung zu übernehmen.</param>
+        <param name="count">Die Anzahl der Zeichen, denen auf die Änderung angewendet werden soll.</param>
+        <summary>Setzt die Anzahl Ersetzung Verhalten für den angegebenen Text in einem <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.NumberSubstitution> Klasse gibt an, wie Zahlen im Text angezeigt werden. Verwenden Sie zum Festlegen der Anzahl Ersetzung-Verhalten für die gesamte Zeichenfolge die <xref:System.Windows.Media.FormattedText.SetNumberSubstitution%28System.Windows.Media.NumberSubstitution%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTextDecorations">
+      <MemberSignature Language="C#" Value="public void SetTextDecorations (System.Windows.TextDecorationCollection textDecorations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetTextDecorations(class System.Windows.TextDecorationCollection textDecorations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetTextDecorations(System.Windows.TextDecorationCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textDecorations" Type="System.Windows.TextDecorationCollection" />
+      </Parameters>
+      <Docs>
+        <param name="textDecorations">Die <see cref="T:System.Windows.TextDecorationCollection" /> auf den Text angewendet.</param>
+        <summary>Legt die <see cref="T:System.Windows.TextDecorationCollection" /> für den gesamten Satz von Zeichen in der <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.TextDecorationCollection> Klasse gibt die Typen von Textdekorationen auf den Text angewendet. Es gibt vier Arten von Textdekorationen: "Unterstreichen", die Baseline, durchgestrichen und Überstrichen. Diese werden als beschrieben <xref:System.Windows.TextDecorationLocation> , um für jedes Element in festgelegte Werte der <xref:System.Windows.TextDecorationCollection>. Es ist üblich, die <xref:System.Windows.TextDecorationCollection> Auflistung enthält nur eine Dekoration, aber die Eigenschaft wird die Sammlung erweiterte Decoration Effekte bereit, durch Anwenden von mehreren Ergänzungen, die auf den gleichen Text verwendet.  
+  
+ Die folgende Abbildung zeigt die Speicherorte der Textdekorationen relativ zu dem Text.  
+  
+ ![Diagramm der Textergänzungsstellen](~/add/media/textdecoration01.gif "Diagramm der Textergänzungsstellen")  
+Beispiel für die Text-Decoration-Typen  
+  
+ Diese Methode legt die <xref:System.Windows.TextDecorationCollection> für die gesamte Textzeichenfolge. Festlegen der <xref:System.Windows.TextDecorationCollection> verwenden Sie für eine Teilmenge der Textzeichenfolge, die <xref:System.Windows.Media.FormattedText.SetTextDecorations%28System.Windows.TextDecorationCollection%2CSystem.Int32%2CSystem.Int32%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTextDecorations">
+      <MemberSignature Language="C#" Value="public void SetTextDecorations (System.Windows.TextDecorationCollection textDecorations, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetTextDecorations(class System.Windows.TextDecorationCollection textDecorations, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FormattedText.SetTextDecorations(System.Windows.TextDecorationCollection,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textDecorations" Type="System.Windows.TextDecorationCollection" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="textDecorations">Die <see cref="T:System.Windows.TextDecorationCollection" /> auf den Text angewendet.</param>
+        <param name="startIndex">Der Startindex des ersten Zeichens der Textdekorationen angewendet werden soll.</param>
+        <param name="count">Die Anzahl der Zeichen, die die Textdekorationen angewendet werden soll.</param>
+        <summary>Legt die <see cref="T:System.Windows.TextDecorationCollection" /> für den angegebenen Text in einem <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.TextDecorationCollection> Klasse gibt die Typen von Textdekorationen auf den Text angewendet. Es gibt vier Arten von Textdekorationen: "Unterstreichen", die Baseline, durchgestrichen und Überstrichen. Diese werden als beschrieben <xref:System.Windows.TextDecorationLocation> , um für jedes Element in festgelegte Werte der <xref:System.Windows.TextDecorationCollection>. Es ist üblich, die <xref:System.Windows.TextDecorationCollection> Auflistung enthält nur eine Dekoration, aber die Eigenschaft wird die Sammlung erweiterte Decoration Effekte bereit, durch Anwenden von mehreren Ergänzungen, die auf den gleichen Text verwendet.  
+  
+ Die folgende Abbildung zeigt die Speicherorte der Textdekorationen relativ zu dem Text.  
+  
+ ![Diagramm der Textergänzungsstellen](~/add/media/textdecoration01.gif "Diagramm der Textergänzungsstellen")  
+Beispiel für die Text-Decoration-Typen  
+  
+ Festlegen der <xref:System.Windows.TextDecorationCollection> verwenden Sie für die gesamte Zeichenfolge, die <xref:System.Windows.Media.FormattedText.SetTextDecorations%28System.Windows.TextDecorationCollection%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichenfolge der anzuzeigende Text.</summary>
+        <value>Die Textzeichenfolge, die angezeigt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nicht festgelegt werden, auf einen konstruierten <xref:System.Windows.Media.FormattedText> Objekt. Sie müssen ein neues erstellen <xref:System.Windows.Media.FormattedText> um anderen Text festzulegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.TextAlignment TextAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.TextAlignment TextAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.TextAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung des Texts innerhalb einer <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</summary>
+        <value>Eines der <see cref="T:System.Windows.TextAlignment" /> Werte, der angibt, die Ausrichtung des Texts innerhalb einer <see cref="T:System.Windows.Media.FormattedText" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trimming">
+      <MemberSignature Language="C#" Value="public System.Windows.TextTrimming Trimming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.TextTrimming Trimming" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.Trimming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextTrimming</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die Mittel, durch die die Auslassung des Texts bezeichnet wird.</summary>
+        <value>Eines der <see cref="T:System.Windows.TextTrimming" /> Werte, der angibt, wie die Auslassung des Texts angegeben wird. Die Standardeinstellung ist <see cref="F:System.Windows.TextTrimming.WordEllipsis" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public double Width { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Abstand zwischen der führende und nachfolgende Ausrichtungspunkte einer Zeile, die ausgeschlossen ruft Leerzeichen nachfolgende.</summary>
+        <value>Die Breite zwischen dem führenden und nachfolgenden Ausrichtungspunkt einer Zeile, die jeder nachfolgenden Leerzeichen ausgeschlossen werden soll. Im bereitgestellten [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für mehrzeilige Texteingabe, die längste Zeile verwendet wird, für die <xref:System.Windows.Media.FormattedText.Width%2A> Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WidthIncludingTrailingWhitespace">
+      <MemberSignature Language="C#" Value="public double WidthIncludingTrailingWhitespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 WidthIncludingTrailingWhitespace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FormattedText.WidthIncludingTrailingWhitespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Abstand zwischen der führende und nachfolgende Ausrichtungspunkte einer Zeile, einschließlich ruft Leerzeichen nachfolgende.</summary>
+        <value>Die Breite zwischen dem führenden und nachfolgenden Ausrichtungspunkt einer Zeile, einschließlich jeglicher nachfolgenden Leerzeichen. Im bereitgestellten [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für mehrzeilige Texteingabe, die längste Zeile verwendet wird, für die <xref:System.Windows.Media.FormattedText.WidthIncludingTrailingWhitespace%2A> Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,362 @@
+<Type Name="DataBindingCollection" FullName="System.Web.UI.DataBindingCollection">
+  <TypeSignature Language="C#" Value="public sealed class DataBindingCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataBindingCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataBindingCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Web.UI.DataBinding" /> Objekte für ein ASP.NET-Serversteuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Auflistung ist ein Wörterbuch, das alle enthält die <xref:System.Web.UI.DataBinding> Objekte auf ein ASP.NET-Serversteuerelement. Sie können die Objekte in dieser Auflistung über enthaltenen zugreifen der <xref:System.Web.UI.Control> Implementierung der Klasse die <xref:System.Web.UI.IDataBindingsAccessor> Schnittstelle. Alle <xref:System.Web.UI.DataBinding> oder <xref:System.Web.UI.DataBindingCollection> Serversteuerelement zugewiesenen Objekte vorhanden sind, nur zur Entwurfszeit. Sie sind nicht zur Laufzeit vorhanden und werden deshalb nicht während der Laufzeit zugegriffen werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataBindingCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataBindingCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.DataBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.DataBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingCollection.Add(System.Web.UI.DataBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Web.UI.DataBinding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die Datenbindung-Objekt, das der Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.DataBinding" /> -Objekt an die <see cref="T:System.Web.UI.DataBindingCollection" /> Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changed">
+      <MemberSignature Language="C#" Value="public event EventHandler Changed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Changed" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.DataBindingCollection.Changed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Auflistung der <see cref="T:System.Web.UI.DataBinding" /> Objekte geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das changed-Ereignis tritt auf, wenn die <xref:System.Web.UI.DataBindingCollection.Add%2A> -Methode, die <xref:System.Web.UI.DataBindingCollection.Clear%2A> -Methode, oder die <xref:System.Web.UI.DataBindingCollection.Remove%2A> Methode wird aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Web.UI.DataBinding" /> Objekte aus der <see cref="T:System.Web.UI.DataBindingCollection" /> Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name des Objekts in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob die Datenbindung Auflistung einen bestimmten <see cref="T:System.Web.UI.DataBinding" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.DataBindingCollection" /> enthält ein Element mit dem angegebenen Namen ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Web.UI.DataBindingCollection" /> kopierten Werte ist.</param>
+        <param name="index">Der Index im Array, angegeben durch die <c>Array</c> -Parameter, in dem Kopiervorgang beginnt.</param>
+        <summary>Kopiert die <see cref="T:System.Web.UI.DataBindingCollection" /> Werte in ein eindimensionales <see cref="T:System.Array" />, beginnend bei der <see cref="T:System.Array" /> Objekt des angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBindingCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der <see cref="T:System.Web.UI.DataBinding" /> Objekte in der <see cref="T:System.Web.UI.DataBindingCollection" /> Objekt.</summary>
+        <value>Die Anzahl der <see cref="T:System.Web.UI.DataBinding" /> Objekte in der <see cref="T:System.Web.UI.DataBindingCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zum Durchlaufen der <see cref="T:System.Web.UI.DataBindingCollection" /> Objekt.</summary>
+        <returns>Eine <see cref="T:System.Collections.IEnumerator" /> , die Member der Auflistung enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBindingCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Web.UI.DataBindingCollection" />-Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistung schreibgeschützt ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBindingCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Web.UI.DataBindingCollection" />-Auflistung synchronisiert (threadsicher) ist.</summary>
+        <value>Immer <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataBinding this[string propertyName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataBinding Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBindingCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataBinding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der zu suchenden Eigenschaft.</param>
+        <summary>Ruft die <see cref="T:System.Web.UI.DataBinding" /> Objekt mit dem angegebenen Eigenschaftsnamen.</summary>
+        <value>Die <see cref="T:System.Web.UI.DataBinding" /> mit dem angegebenen Eigenschaftsnamen. Wenn kein Objekt mit dem angegebenen Namen vorhanden ist, ist dieser Wert <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Den Namen der Eigenschaft zugeordnete der <see cref="T:System.Web.UI.DataBinding" /> entfernt werden soll.</param>
+        <summary>Entfernt die <see cref="T:System.Web.UI.DataBinding" /> Objekt zugewiesen ist, mit dem angegebenen Eigenschaftsnamen aus der <see cref="T:System.Web.UI.DataBindingCollection" /> Sammlung und fügt es der <see cref="P:System.Web.UI.DataBindingCollection.RemovedBindings" /> Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.DataBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.DataBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingCollection.Remove(System.Web.UI.DataBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Web.UI.DataBinding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die <see cref="T:System.Web.UI.DataBinding" /> aus zu entfernenden der <see cref="T:System.Web.UI.DataBindingCollection" />.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Web.UI.DataBinding" /> -Objekt aus der <see cref="T:System.Web.UI.DataBindingCollection" /> Sammlung und fügt es der <see cref="P:System.Web.UI.DataBindingCollection.RemovedBindings" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird entfernt eine <xref:System.Web.UI.DataBinding> -Objekt aus der <xref:System.Web.UI.DataBindingCollection> Sammlung mit dieser Version von den <xref:System.Web.UI.DataBindingCollection.Remove%2A> -Methode und Angeben einer Instanz von der <xref:System.Web.UI.DataBinding> Klasse, mit dem Namen `myDataBinding1`.  
+  
+ [!code-cpp[DataBinding#18](~/samples/snippets/cpp/VS_Snippets_CLR/DataBinding/CPP/webcustomcontrol1.cpp#18)]
+ [!code-csharp[DataBinding#18](~/samples/snippets/csharp/VS_Snippets_CLR/DataBinding/CS/webcustomcontrol1.cs#18)]
+ [!code-vb[DataBinding#18](~/samples/snippets/visualbasic/VS_Snippets_CLR/DataBinding/VB/webcustomcontrol1.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string propertyName, bool addToRemovedList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string propertyName, bool addToRemovedList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBindingCollection.Remove(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="addToRemovedList" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Die zugeordnete Eigenschaft der <see cref="T:System.Web.UI.DataBinding" /> entfernt werden soll.</param>
+        <param name="addToRemovedList">Ein boolescher Wert, der angibt, ob Sie den Namen der Eigenschaft zum Hinzufügen der <see cref="P:System.Web.UI.DataBindingCollection.RemovedBindings" /> Liste. <see langword="true" />Gibt an, dass die <c>PropertyName</c> werden Parameter hinzugefügt werden, um die <see cref="P:System.Web.UI.DataBindingCollection.RemovedBindings" /> -Eigenschaft, und <see langword="false" /> gibt an, dass <c>PropertyName</c> werden nicht hinzugefügt werden, um die <see cref="P:System.Web.UI.DataBindingCollection.RemovedBindings" /> Eigenschaft.</param>
+        <summary>Entfernt die <see cref="T:System.Web.UI.DataBinding" /> Objekt, mit dem angegebenen Eigenschaftsnamen verknüpft sind, aus der <see cref="T:System.Web.UI.DataBindingCollection" /> Auflistung und steuert, ob die Bindung hinzugefügt der <see cref="P:System.Web.UI.DataBindingCollection.RemovedBindings" /> Liste.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovedBindings">
+      <MemberSignature Language="C#" Value="public string[] RemovedBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] RemovedBindings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBindingCollection.RemovedBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array mit den Namen der ab dem <see cref="T:System.Web.UI.DataBinding" /> Objekte aus der Auflistung entfernt.</summary>
+        <value>Das Array der Namen von der <see cref="T:System.Web.UI.DataBinding" /> Objekte aus der Auflistung entfernt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBindingCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf die <see cref="T:System.Web.UI.DataBindingCollection" />-Auflistung synchronisiert werden kann.</summary>
+        <value>Die <see cref="T:System.Object" /> zum Synchronisieren des Zugriffs auf die Auflistung verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,125 @@
+<Type Name="UnhandledExceptionAction" FullName="System.Activities.UnhandledExceptionAction">
+  <TypeSignature Language="C#" Value="public enum UnhandledExceptionAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UnhandledExceptionAction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.UnhandledExceptionAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Aktion an, die eintritt, wenn eine Ausnahme den Stamm eines Workflows mit Escapezeichen schützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Funktion wird aufgerufen, wenn eine Ausnahme den Stamm des Workflows mit Escapezeichen schützt. Das <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> bietet Zugriff auf die Ausnahme sowie einen Zeiger auf die <xref:System.Activities.Activity>, die die Ausnahme generiert hat. Beenden ist die Standardaktion, wenn kein <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> Handler angegeben ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der eine Ausnahme auslöst. Die Ausnahme wird vom Workflow nicht behandelt, und der <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler wird aufgerufen. Die <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> werden überprüft, um Informationen zur Ausnahme bereitzustellen, und der Workflow wird beendet.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#6](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="Abort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.UnhandledExceptionAction Abort = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.UnhandledExceptionAction.Abort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.UnhandledExceptionAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Activities.WorkflowApplication" /> den Workflow abbrechen soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies führt zum Aufruf von <xref:System.Activities.WorkflowApplication.Aborted%2A>, wenn das Abbrechen abgeschlossen ist. Die nicht behandelte Ausnahme wird als Abbruchgrund verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der eine Ausnahme auslöst. Die Ausnahme wird vom Workflow nicht behandelt, und der <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler wird aufgerufen. Die <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> werden überprüft, um Informationen zur Ausnahme bereitzustellen, und der Workflow wird abgebrochen.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="Cancel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.UnhandledExceptionAction Cancel = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.UnhandledExceptionAction.Cancel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.UnhandledExceptionAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Activities.WorkflowApplication" /> den Abbruch der Stammaktivität planen und die Ausführung fortsetzen soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies führt zum Aufruf von <xref:System.Activities.WorkflowApplication.Completed%2A>, wenn der Abbruchvorgang abgeschlossen ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der eine Ausnahme auslöst. Die Ausnahme wird vom Workflow nicht behandelt, und der <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler wird aufgerufen. Die <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> werden überprüft, um Informationen zur Ausnahme bereitzustellen, und der Workflow wird abgebrochen.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#8](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Terminate">
+      <MemberSignature Language="C#" Value="Terminate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.UnhandledExceptionAction Terminate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.UnhandledExceptionAction.Terminate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.UnhandledExceptionAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Activities.WorkflowApplication" /> die Beendigung der Stammaktivität planen und die Ausführung fortsetzen soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies führt zum Aufruf von <xref:System.Activities.WorkflowApplication.Completed%2A>, wenn die Beendigung abgeschlossen ist. Die nicht behandelte Ausnahme wird als Beendigungsgrund verwendet. Beenden ist die Standardaktion, wenn kein <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> Handler angegeben ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der eine Ausnahme auslöst. Die Ausnahme wird vom Workflow nicht behandelt, und der <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler wird aufgerufen. Die <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> werden überprüft, um Informationen zur Ausnahme bereitzustellen, und der Workflow wird beendet.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#6](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

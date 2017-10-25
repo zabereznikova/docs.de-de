@@ -1,0 +1,335 @@
+<Type Name="MaskDescriptor" FullName="System.Windows.Forms.Design.MaskDescriptor">
+  <TypeSignature Language="C#" Value="public abstract class MaskDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MaskDescriptor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.MaskDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Menge von Elementen für abgeleitete Klassen, um Optionen für die Typ-Editor von maskierten Textfeld Feld Benutzeroberfläche bereitzustellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.MaskDescriptor> abstrakte Klasse definiert den allgemeinen Satz von Eigenschaften, die alle Maskendeskriptoren implementiert werden müssen. Können Sie vordefinierte Maskenoptionen für die Verwendung in der Benutzeroberfläche für Typ-Editor erstellen Maskendeskriptoren der <xref:System.Windows.Forms.MaskedTextBox>. Beispielsweise [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] bietet vordefinierte Masken für Daten, z. B. die Postal Code, die Zeit, die verschiedene Datumsformate und die Telefonnummer. Alle vordefinierte Masken zugeordnet werden die <xref:System.ComponentModel.MaskedTextProvider> Analysemodul.  
+  
+ Sie können ermitteln, <xref:System.Windows.Forms.Design.MaskDescriptor> Typen zur Entwurfszeit durch Abfragen der <xref:System.ComponentModel.Design.ITypeDiscoveryService> Dienstanbieter.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MaskDescriptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.MaskDescriptor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.MaskDescriptor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.Design.MaskDescriptor.%23ctor%2A>ist ein vom Compiler bereitgestellte Standardkonstruktor. Ein Standardkonstruktor ist erforderlich, durch die <xref:System.ComponentModel.Design.ITypeDiscoveryService> Dienstanbieter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public virtual System.Globalization.CultureInfo Culture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Culture" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.MaskDescriptor.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Globalization.CultureInfo" /> das Gebietsschema darstellt, die Maske ist für erstellt.</summary>
+        <value>Ein <see cref="T:System.Globalization.CultureInfo" /> das Gebietsschema darstellt, die Maske ist für erstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object maskDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object maskDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.MaskDescriptor.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maskDescriptor" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="maskDescriptor">Das <see cref="T:System.Windows.Forms.Design.MaskDescriptor" />, das mit dem aktuellen <see cref="T:System.Windows.Forms.Design.MaskDescriptor" /> verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Windows.Forms.Design.MaskDescriptor" /> und das aktuelle <see cref="T:System.Windows.Forms.Design.MaskDescriptor" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see cref="T:System.Windows.Forms.Design.MaskDescriptor" /> gleich der aktuellen <see cref="T:System.Windows.Forms.Design.MaskDescriptor" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.MaskDescriptor.Equals%2A> Methode bestimmt, ob `maskDescriptor` und der aktuellen Maskendeskriptor dieselbe Maske beschreiben.  
+  
+ Diese Methode gibt `true` Wenn in beiden Maskendeskriptoren die folgenden Bedingungen erfüllt sind.  
+  
+ 1. Die <xref:System.Windows.Forms.Design.MaskDescriptor.Mask%2A> Eigenschaft ist für beide Deskriptoren maskieren.  
+  
+ 2. Der Validierungstyp gilt für beide Maskendeskriptoren.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Design.MaskDescriptor.Name%2A> Eigenschaft wird nicht berücksichtigt, da die <xref:System.ComponentModel.MaskedTextProvider> und <xref:System.Windows.Forms.MaskedTextBox> Klassen nicht verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.MaskDescriptor.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fungiert als Hashfunktion für einen besonderen Typ.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Object" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidMaskDescriptor">
+      <MemberSignature Language="C#" Value="public static bool IsValidMaskDescriptor (System.Windows.Forms.Design.MaskDescriptor maskDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsValidMaskDescriptor(class System.Windows.Forms.Design.MaskDescriptor maskDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.MaskDescriptor.IsValidMaskDescriptor(System.Windows.Forms.Design.MaskDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maskDescriptor" Type="System.Windows.Forms.Design.MaskDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="maskDescriptor">Der Maskendeskriptor auf Gültigkeit zu prüfende.</param>
+        <summary>Gibt einen Wert, der angibt, ob der angegebenen Maskendeskriptor gültig ist und der Maskenliste hinzugefügt werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="maskDescriptor" /> gültig ist, andernfalls wird <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.MaskDescriptor.IsValidMaskDescriptor%2A> Methode bestimmt, ob `maskDescriptor` gültig ist und der Masken-Liste hinzugefügt werden können.  
+  
+ Ein gültiger <xref:System.Windows.Forms.Design.MaskDescriptor> müssen die folgenden Bedingungen erfüllen.  
+  
+-   Nicht `null`.  
+  
+-   Nicht `null` oder eine leere Maske.  
+  
+-   Nicht `null` oder einen leeren Namen.  
+  
+-   Nicht `null` oder ein leeres Beispiel.  
+  
+-   Im Beispiel wird basierend auf der Maske richtig, und alle erforderlichen Zeichen angegeben wurden. Dies bedeutet, dass die Maske abgeschlossen, aber nicht notwendigerweise voll ist.  
+  
+-   Das Beispiel gilt basierend auf den <xref:System.Windows.Forms.Design.MaskDescriptor.ValidatingType%2A> Objekt, sofern vorhanden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidMaskDescriptor">
+      <MemberSignature Language="C#" Value="public static bool IsValidMaskDescriptor (System.Windows.Forms.Design.MaskDescriptor maskDescriptor, out string validationErrorDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsValidMaskDescriptor(class System.Windows.Forms.Design.MaskDescriptor maskDescriptor, [out] string&amp; validationErrorDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.MaskDescriptor.IsValidMaskDescriptor(System.Windows.Forms.Design.MaskDescriptor,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maskDescriptor" Type="System.Windows.Forms.Design.MaskDescriptor" />
+        <Parameter Name="validationErrorDescription" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="maskDescriptor">Der Maskendeskriptor auf Gültigkeit zu prüfende.</param>
+        <param name="validationErrorDescription">Eine Zeichenfolge, die einen Validierungsfehler darstellt. Wenn kein Überprüfungsfehler aufgetreten, der <c>ValidationErrorDescription</c> ist <see cref="F:System.String.Empty" />.</param>
+        <summary>Gibt einen Wert, der angibt, ob der angegebenen Maskendeskriptor gültig ist, und eine fehlerbeschreibung, bietet wenn er nicht gültig ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="maskDescriptor" /> gültig ist, andernfalls wird <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.MaskDescriptor.IsValidMaskDescriptor%2A> Methode bestimmt, ob `maskDescriptor` gültig ist und der Masken-Liste hinzugefügt werden können.  
+  
+ Ein gültiger <xref:System.Windows.Forms.Design.MaskDescriptor> müssen die folgenden Bedingungen erfüllen.  
+  
+-   Nicht `null`.  
+  
+-   Nicht `null` oder eine leere Maske.  
+  
+-   Nicht `null` oder einen leeren Namen.  
+  
+-   Nicht `null` oder ein leeres Beispiel.  
+  
+-   Im Beispiel wird basierend auf der Maske richtig, und alle erforderlichen Zeichen angegeben wurden. Dies bedeutet, dass die Maske abgeschlossen, aber nicht notwendigerweise voll ist.  
+  
+-   Das Beispiel gilt basierend auf den <xref:System.Windows.Forms.Design.MaskDescriptor.ValidatingType%2A> Objekt, sofern vorhanden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mask">
+      <MemberSignature Language="C#" Value="public abstract string Mask { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Mask" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.MaskDescriptor.Mask" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Maske, die definiert wird.</summary>
+        <value>Ein <see cref="T:System.String" /> mit der Maske, die definiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Maske darf nur gültige Zeichen gemäß der <xref:System.ComponentModel.MaskedTextProvider.IsValidMaskChar%2A> Methode der <xref:System.ComponentModel.MaskedTextProvider> Klasse. Wenn eine vordefinierte Maske aktiviert ist, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], dessen <xref:System.Windows.Forms.Design.MaskDescriptor.Mask%2A> Eigenschaft wird angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.MaskDescriptor.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den benutzerfreundlichen Namen der Maske ab.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Namen oder eine kurze Beschreibung der <see cref="P:System.Windows.Forms.Design.MaskDescriptor.Mask" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.MaskDescriptor.Name%2A> Eigenschaft wird angezeigt, der **Maske Beschreibung** Spalte in der visuellen Editor für den <xref:System.Windows.Forms.MaskedTextBox> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sample">
+      <MemberSignature Language="C#" Value="public abstract string Sample { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Sample" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.MaskDescriptor.Sample" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Beispiel für eine formatierte Zeichenfolge für die Maske ab.</summary>
+        <value>Ein <see cref="T:System.String" /> mit formatierter Text mit der <see cref="P:System.Windows.Forms.Design.MaskDescriptor.Mask" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.MaskDescriptor.Sample%2A> Eigenschaft wird angezeigt, der **Datenformat** Spalte in der visuellen Editor für den <xref:System.Windows.Forms.MaskedTextBox> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.MaskDescriptor.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatingType">
+      <MemberSignature Language="C#" Value="public abstract Type ValidatingType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ValidatingType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.MaskDescriptor.ValidatingType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Maske zugeordnete Validierung bereitstellt.</summary>
+        <value>Die <see cref="T:System.Type" /> , die die formatierte Zeichenfolge überprüft wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.MaskDescriptor.ValidatingType%2A> Eigenschaft wird verwendet, um die Eingabezeichenfolge zu überprüfen, nachdem die Maske darauf angewendet wurde. Es entspricht direkt der <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Windows.Forms.MaskedTextBox> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

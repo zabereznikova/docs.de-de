@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Data">
+  <Docs>
+    <summary>Enthält Klassen, die für die Bindungseigenschaften für Datenquellen, Anbieters der Datenquellenklassen und Data-spezifische Implementierungen von Sammlungen und Ansichten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,168 @@
+<Type Name="RouteData" FullName="System.Web.Routing.RouteData">
+  <TypeSignature Language="C#" Value="public class RouteData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RouteData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Routing.RouteData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Routing, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Kapselt Informationen zu einer Route.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Routing.RouteData> Klasse enthält die Werte für eine angeforderte Route. Normalerweise rufen Sie eine <xref:System.Web.Routing.RouteData> Objekt durch Aufrufen der <xref:System.Web.Routing.RouteCollection.GetRouteData%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RouteData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.RouteData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Routing.RouteData" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RouteData (System.Web.Routing.RouteBase route, System.Web.Routing.IRouteHandler routeHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.Routing.RouteBase route, class System.Web.Routing.IRouteHandler routeHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.RouteData.#ctor(System.Web.Routing.RouteBase,System.Web.Routing.IRouteHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="route" Type="System.Web.Routing.RouteBase" />
+        <Parameter Name="routeHandler" Type="System.Web.Routing.IRouteHandler" />
+      </Parameters>
+      <Docs>
+        <param name="route">Ein Objekt, das die Route definiert.</param>
+        <param name="routeHandler">Ein Objekt, das die Anforderung verarbeitet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Routing.RouteData" /> -Klasse unter Verwendung der angegebenen Route und des routenhandlers.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTokens">
+      <MemberSignature Language="C#" Value="public System.Web.Routing.RouteValueDictionary DataTokens { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Routing.RouteValueDictionary DataTokens" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.RouteData.DataTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RouteValueDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von benutzerdefinierten Werten ab, die dem Routenhandler übergeben werden, die aber nicht vom ASP.NET-Routing verwendet werden, um zu bestimmen, ob die Route einer Anforderung entspricht.</summary>
+        <value>Ein Objekt, das benutzerdefinierte Werte enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Web.Routing.RouteData.DataTokens%2A> Eigenschaft zum Abrufen von Werten, die die Route zugeordnet, die nicht verwendet werden, wenn mittels ASP.NET-Routing bestimmt, ob eine Route mit einer Anforderung übereinstimmt. Ein benutzerdefinierte Routenhandler möglicherweise zum Abrufen dieser Werte, wenn er die Anforderung verarbeitet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequiredString">
+      <MemberSignature Language="C#" Value="public string GetRequiredString (string valueName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetRequiredString(string valueName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.RouteData.GetRequiredString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="valueName">Der Schlüssel des abzurufenden Werts.</param>
+        <summary>Ruft den Wert mit dem angegebenen Bezeichner ab.</summary>
+        <returns>Das Element in der <see cref="P:System.Web.Routing.RouteData.Values" /> Eigenschaft, deren Schlüssel entspricht <paramref name="valueName" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Ein Wert ist nicht vorhanden, für die <paramref name="valueName" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Route">
+      <MemberSignature Language="C#" Value="public System.Web.Routing.RouteBase Route { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Routing.RouteBase Route" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.RouteData.Route" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RouteBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das eine Route darstellt, oder legt dieses fest.</summary>
+        <value>Ein Objekt, das die Routendefinition darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouteHandler">
+      <MemberSignature Language="C#" Value="public System.Web.Routing.IRouteHandler RouteHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Routing.IRouteHandler RouteHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.RouteData.RouteHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.IRouteHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das eine angeforderte Route verarbeitet, oder legt es fest.</summary>
+        <value>Ein Objekt, das die Routenanforderung verarbeitet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Web.Routing.RouteValueDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Routing.RouteValueDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.RouteData.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RouteValueDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von URL-Parameterwerten und Standardwerten für die Route ab.</summary>
+        <value>Ein Objekt, das Werte enthält, die durch Analyse aus der URL und aus Standardwerten gewonnen werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

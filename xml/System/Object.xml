@@ -1,0 +1,1042 @@
+<Type Name="Object" FullName="System.Object">
+  <TypeSignature Language="C#" Value="public class Object" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit object" />
+  <TypeSignature Language="DocId" Value="T:System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDual)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Unterstützt sämtliche Klassen in der Hierarchie von .NET Framework-Klassen und stellt abgeleiteten Klassen Low-Level-Dienste zur Verfügung. Dies ist die allen Klassen von .NET Framework übergeordnete Basisklasse und stellt den Stamm der Typhierarchie dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die .NET Framework-Quellcodes für diesen Typ finden Sie unter der [Verweisquelle](http://referencesource.microsoft.com/#mscorlib/system/object.cs#d9262ceecc1719ab). Sie können den Quellcode online Durchsuchen, Referenz für die Offlineanzeige herunterladen und schrittweise durchlaufen (inklusive Patches und Updates) während des Debuggens; finden Sie unter [Anweisungen](http://referencesource.microsoft.com/).  
+  
+ Sprachen erfordern in der Regel keine Klasse zur Deklaration der Vererbung von <xref:System.Object> , da die Vererbung implizit ist.  
+  
+ Da alle Klassen in .NET Framework abgeleitet sind <xref:System.Object>, jede Methode definiert, die der <xref:System.Object> Klasse steht in allen Objekten im System. Abgeleitete Klassen, und überschreiben Sie einigen dieser Methoden, einschließlich:  
+  
+-   <xref:System.Object.Equals%2A>– Unterstützt Vergleiche zwischen Objekten.  
+  
+-   <xref:System.Object.Finalize%2A>– Führt Bereinigungsvorgänge durch, bevor ein Objekt automatisch freigegeben wird.  
+  
+-   <xref:System.Object.GetHashCode%2A>-Generiert eine Zahl, die entsprechend dem Wert des Objekts zur Unterstützung einer Hashtabelle.  
+  
+-   <xref:System.Object.ToString%2A>– Stellt eine lesbare Zeichenfolge, die eine Instanz der Klasse beschreibt.  
+  
+## <a name="performance-considerations"></a>Überlegungen zur Leistung  
+ Wenn Sie eine Klasse, z. B. eine Auflistung entwerfen, die jede Art von Objekt behandelt werden müssen, können Sie Klassenmember, die Instanzen von akzeptieren erstellen die <xref:System.Object> Klasse. Der Prozess von Boxing und unboxing eines Typs birgt jedoch Kosten der Leistung. Wenn Sie wissen, dass die neue Klasse häufig bestimmte Werttypen behandelt, können Sie eine der beiden Taktiken Boxing begegnet verwenden.  
+  
+-   Erstellen Sie eine allgemeine Methode, die akzeptiert ein <xref:System.Object> Typ und einen Satz von typspezifische methodenüberladungen, die jeden Typ Sie erwarten, die Klasse akzeptieren dass, um häufig zu behandeln. Wenn eine typspezifischen Methode vorhanden, das den Parametertyp des aufrufenden akzeptiert ist, keine Boxing-Konvertierung tritt ein, und die typspezifischen Methode aufgerufen wird. Ist keine Methodenargument, das dem aufrufenden Parametertyp übereinstimmt, wird der Parameter geschachtelt und allgemeine aufgerufen wird.  
+  
+-   Entwerfen Sie Ihren Typ und ihre Member zum Verwenden von Generika. Die common Language Runtime erstellt geschlossenen generischen Typs an, wenn Sie eine Instanz der Klasse erstellen, und geben Sie ein generisches Typargument. Die generische Methode ist typspezifische und aufgerufen werden kann, ohne den aufrufenden Parameter boxing.  
+  
+ Obwohl es in einigen Fällen notwendig ist, allgemeine Klassen zu entwickeln, akzeptieren und zurückgeben <xref:System.Object> Typen, können Sie die Leistung verbessern, durch die Bereitstellung auch einer typspezifische-Klasse, um einen häufig verwendeten Typ behandeln. Bereitstellen einer Klasse, die zum Festlegen und Abrufen von booleschen Werten entfällt z. B. die Kosten für Boxing und unboxing boolesche Werte.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert einen Punkttyp abgeleitet wurde. die <xref:System.Object> -Klasse und überschreibt viele der virtuellen Methoden für die <xref:System.Object> Klasse. Darüber hinaus wird im Beispiel gezeigt, wie viele der statischen aufrufen und Instanzmethoden von der <xref:System.Object> Klasse.  
+  
+ [!code-cpp[ObjectX#1](~/samples/snippets/cpp/VS_Snippets_CLR/ObjectX/cpp/ObjectX.cpp#1)]
+ [!code-csharp[ObjectX#1](~/samples/snippets/csharp/VS_Snippets_CLR/ObjectX/CS/ObjectX.cs#1)]
+ [!code-vb[ObjectX#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObjectX/vb/objectX.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Öffentliche statische (<see langword="Shared" /> in Visual Basic) Member dieses Typs sind threadsicher. Instanzmember sind nicht unbedingt threadsicher sein.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Object ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Object.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Object" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird von Konstruktoren in abgeleiteten Klassen aufgerufen, aber es kann auch direkt erstellen eine Instanz von verwendet die <xref:System.Object> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Object.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dem aktuellen Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene Objekt und das aktuelle Objekt gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ des Vergleichs zwischen der aktuellen Instanz und die `obj` Parameter, hängt davon ab, ob die aktuelle Instanz ein Verweistyp oder ein Werttyp ist.  
+  
+-   Wenn die aktuelle Instanz ein Verweistyp ist die <xref:System.Object.Equals%28System.Object%29> Methode Tests hinsichtlich ihrer Verweisgleichheit und einem Aufruf von der <xref:System.Object.Equals%28System.Object%29> Methode ist äquivalent zu einem Aufruf von der <xref:System.Object.ReferenceEquals%2A> Methode. Verweisgleichheit bedeutet, dass die Objektvariablen, die verglichen werden auf dasselbe Objekt verweisen. Das folgende Beispiel veranschaulicht das Ergebnis von einem solchen Vergleich werden. Definiert eine `Person` Klasse, die ein Verweistyp ist, und ruft die `Person` Klassenkonstruktor zwei neue instanziieren `Person` Objekte `person1a` und `person2`, die den gleichen Wert aufweisen. Außerdem weist er `person1a` auf einem anderen Objektvariable `person1b`. Wie die Ausgabe des Beispiels zeigt `person1a` und `person1b` gleich sind, da sie dasselbe Objekt verweisen. Allerdings `person1a` und `person2` ungleich sind, obwohl sie den gleichen Wert aufweisen.  
+  
+     [!code-csharp[System.Object.Equals#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.equals/cs/equals_ref.cs#2)]
+     [!code-vb[System.Object.Equals#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.equals/vb/equals_ref.vb#2)]  
+  
+-   Wenn die aktuelle Instanz ein Werttyp ist, ist die <xref:System.Object.Equals%28System.Object%29> Methode Wertgleichheit. Wertgleichheit bedeutet Folgendes:  
+  
+    -   Die beiden Objekte sind vom gleichen Typ. Wie im folgenden Beispiel wird gezeigt, eine <xref:System.Byte> -Objekt, das den Wert 12 hat stimmt nicht mit einer <xref:System.Int32> -Objekt, das den Wert 12, aufweist, da die beiden Objekte zur Laufzeit verschiedene verfügen.  
+  
+         [!code-csharp[System.Object.Equals#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.equals/cs/equals_val1.cs#3)]
+         [!code-vb[System.Object.Equals#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.equals/vb/equals_val1.vb#3)]  
+  
+    -   Die Werte der öffentliche und private Felder der beiden Objekte sind gleich. Das folgende Beispiel testet Wertgleichheit. Definiert eine `Person` -Struktur, die ein Werttyp ist, und ruft die `Person` Klassenkonstruktor zwei neue instanziieren `Person` Objekte `person1` und `person2`, die den gleichen Wert aufweisen. Wie die Ausgabe des Beispiels zeigt, obwohl die beiden Objektvariablen auf unterschiedliche Objekte verweisen, `person1` und `person2` gleich sind, da sie den gleichen Wert für die Private aufweisen `personName` Feld.  
+  
+         [!code-csharp[System.Object.Equals#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.equals/cs/equals_val2.cs#4)]
+         [!code-vb[System.Object.Equals#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.equals/vb/equals_val2.vb#4)]  
+  
+ Da die <xref:System.Object> Klasse ist die Basisklasse für alle Typen in .NET Framework, die <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> Methode bietet die Standard-Gleichheitsvergleich für alle anderen Typen. Typen jedoch häufig überschreiben die <xref:System.Object.Equals%2A> Methode für die Implementierung der Wertgleichheit. Weitere Informationen finden Sie unter die Anmerkungen zu dieser Aufrufer und Hinweise für Vererber Abschnitte.  
+  
+## <a name="notes-for-the-includewrtincludeswrt-mdmd"></a>Hinweise für die[!INCLUDE[wrt](~/includes/wrt-md.md)]  
+ Beim Aufrufen der <xref:System.Object.Equals%28System.Object%29> methodenüberladung für eine Klasse in der [!INCLUDE[wrt](~/includes/wrt-md.md)], es stellt das Standardverhalten für Klassen, die nicht außer Kraft setzen <xref:System.Object.Equals%28System.Object%29>. Dies ist Teil der Unterstützung von .NET Framework für die [!INCLUDE[wrt](~/includes/wrt-md.md)] (siehe [.NET Framework Unterstützung für Windows Store-Apps und Windows-Runtime](~/docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)). Klassen in der [!INCLUDE[wrt](~/includes/wrt-md.md)] erben nicht <xref:System.Object>, und zurzeit nicht implementieren eine <xref:System.Object.Equals%28System.Object%29> Methode. Allerdings sie angezeigt werden, damit <xref:System.Object.ToString%2A>, <xref:System.Object.Equals%28System.Object%29>, und <xref:System.Object.GetHashCode%2A> Methoden, wenn Sie in c# oder Visual Basic-Code werden verwendet, und die .NET Framework das Standardverhalten für diese Methoden bietet.  
+  
+> [!NOTE]
+>  [!INCLUDE[wrt](~/includes/wrt-md.md)]Klassen, die in c# oder Visual Basic geschrieben sind, können außer Kraft setzen die <xref:System.Object.Equals%28System.Object%29> -methodenüberladung.  
+  
+## <a name="notes-for-callers"></a>Hinweise für Aufrufer  
+ Abgeleitete Klassen überschreiben, die häufig die <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> Methode für die Implementierung der Wertgleichheit. Darüber hinaus auch häufig bieten eine zusätzliche stark typisierte Überladung für die `Equals` Methode, in der Regel durch die Implementierung der <xref:System.IEquatable%601> Schnittstelle. Beim Aufrufen der `Equals` Methode auf Gleichheit, sollten Sie wissen, ob die aktuelle Instanz überschreibt <xref:System.Object.Equals%2A?displayProperty=nameWithType> und zu verstehen, wie ein bestimmter Aufruf eine `Equals` Methode aufgelöst wird. Hingegen Sie werden einen Test durchführen, Gleichheit unterscheidet sich von was Sie beabsichtigt haben, und die Methode kann einen unerwarteten Wert zurückgeben.  
+  
+ Dies wird im folgenden Beispiel veranschaulicht. Drei instanziiert <xref:System.Text.StringBuilder> Objekte mit Zeichenfolgen identisch, und stellt anschließend vier Aufrufe zu `Equals` Methoden. Die erste Methode aufrufen, gibt `true`, und die verbleibenden drei Rückgabe `false`.  
+  
+ [!code-csharp[System.Object.Equals#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.equals/cs/equalssb1.cs#5)]
+ [!code-vb[System.Object.Equals#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.equals/vb/equalssb1.vb#5)]  
+  
+ Im ersten Fall, die stark typisierte <xref:System.Text.StringBuilder.Equals%28System.Text.StringBuilder%29?displayProperty=nameWithType> -methodenüberladung, der Wertgleichheit getestet wird, aufgerufen wird. Da die beiden Zeichenfolgen zugewiesen <xref:System.Text.StringBuilder> -Objekte gleich sind, gibt die Methode zurück `true`. Allerdings <xref:System.Text.StringBuilder> überschreibt nicht <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Aus diesem Grund beim der <xref:System.Text.StringBuilder> Objekt umgewandelt wird ein <xref:System.Object>, wenn eine <xref:System.Text.StringBuilder> Instanz einer Variablen vom Typ zugewiesen <xref:System.Object>, und wann die <xref:System.Object.Equals%28System.Object%2CSystem.Object%29?displayProperty=nameWithType> Methode werden zwei übergeben <xref:System.Text.StringBuilder> Objekte, die Standardeinstellung <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> Methode wird aufgerufen. Da <xref:System.Text.StringBuilder> ist ein Verweistyp, dies entspricht dem Übergeben der beiden <xref:System.Text.StringBuilder> -Objekte und die <xref:System.Object.ReferenceEquals%2A> Methode. Obwohl alle drei <xref:System.Text.StringBuilder> Objekte enthalten identische Zeichenfolgen, die sie auf drei unterschiedliche Objekte verweisen. Daher diese drei Methodenaufrufe return `false`.  
+  
+ Sie können das aktuelle Objekt einem anderen Objekt auf Verweisgleichheit vergleichen, durch Aufrufen der <xref:System.Object.ReferenceEquals%2A> Methode. In Visual Basic können Sie auch die `is` Schlüsselwort (z. B. `If Me Is otherObject Then ...`).  
+  
+## <a name="notes-for-inheritors"></a>Hinweise zur Vererbung  
+ Wenn Sie einen eigenen Typ definieren, erbt dieses Typs Funktionen, die definiert die `Equals` Methode des Basistyps. Die folgende Tabelle enthält die standardmäßige Implementierung des der `Equals` Methode für die Hauptkategorien von Typen in .NET Framework.  
+  
+|Typkategorie|Durch definierten Gleichheit|Kommentare|  
+|-------------------|-------------------------|--------------|  
+|Direkte abgeleitete Klasse<xref:System.Object>|<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>|Verweisgleichheit; entspricht dem Aufruf von <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>.|  
+|Struktur|<xref:System.ValueType.Equals%2A?displayProperty=nameWithType>|Wertgleichheit; direkte Byte-pro-Byte-Vergleich oder Feld-nach-Feld-Vergleich über Reflektion ermöglicht.|  
+|Enumeration|<xref:System.Enum.Equals%2A?displayProperty=nameWithType>|Werte müssen den gleichen Enumerationstyp und den gleichen zugrunde liegenden Wert aufweisen.|  
+|Delegate|<xref:System.MulticastDelegate.Equals%2A?displayProperty=nameWithType>|Delegaten müssen den gleichen Typ mit identischen Aufruflisten besitzen.|  
+|Schnittstelle|<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>|Verweisgleichheit.|  
+  
+ Für einen Werttyp aufweist, sollten Sie immer überschreiben <xref:System.Object.Equals%2A>, da Tests Gleichheit, die auf Reflektion beruhen, denen eine schlechte Leistung bieten. Sie können auch die standardmäßige Implementierung des überschreiben <xref:System.Object.Equals%2A> für Verweistypen, um Wertgleichheit statt Verweisgleichheit zu testen und um die genaue Bedeutung der Wertgleichheit zu definieren. Solche Implementierungen von <xref:System.Object.Equals%2A> zurückgeben `true` , wenn die beiden Objekte den gleichen Wert verfügen, auch wenn sie nicht dieselbe Instanz sind. Der Implementierung des Typs entscheidet, woraus sich der Wert eines Objekts zusammensetzt, aber es ist in der Regel einige oder alle Daten in den Instanzvariablen des Objekts gespeichert. Beispielsweise den Wert der eine <xref:System.String> Objekt wird anhand der Zeichen der Zeichenfolge; der <xref:System.String.Equals%28System.Object%29?displayProperty=nameWithType> methodenüberschreibungen der <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> -Methode zur Rückgabe `true` für eine beliebige Zeichenfolge zwei Instanzen, die die gleichen Zeichen in der gleichen Reihenfolge enthalten.  
+  
+ Das folgende Beispiel veranschaulicht das Überschreiben der <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> Methode zum Testen Wertgleichheit. Es überschreibt die <xref:System.Object.Equals%2A> Methode für die `Person` Klasse. Wenn `Person` seiner Basisklasse-Implementierung von Gleichheit, akzeptiert zwei `Person` Objekte wäre nur gleich, wenn sie ein einzelnes Objekt, auf die verwiesen wird. In diesem Fall jedoch zwei `Person` Objekte sind gleich, wenn sie den gleichen Wert für die `Person.Id` Eigenschaft.  
+  
+ [!code-csharp[System.Object.Equals#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.equals/cs/equalsoverride.cs#6)]
+ [!code-vb[System.Object.Equals#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.equals/vb/equalsoverride.vb#6)]  
+  
+ Neben dem Außerkraftsetzen von <xref:System.Object.Equals%2A>, können Sie implementieren die <xref:System.IEquatable%601> Schnittstelle, um eine stark typisierte Test auf Gleichheit bereitzustellen.  
+  
+ Die folgenden Anweisungen müssen für alle Implementierungen von "true" werden die <xref:System.Object.Equals%28System.Object%29> Methode. In der Liste `x`, `y`, und `z` darstellen von Objektverweisen, die nicht **null**.  
+  
+-   `x.Equals(x)`Gibt `true`, es sei denn, die Gleitkommatypen einschließen. Finden Sie unter ISO/IEC/IEEE 60559:2011, Informationstechnologie--Mikroprozessor Systeme--Gleitkommazahlen.  
+  
+-   `x.Equals(y)`Gibt den gleichen Wert wie `y.Equals(x)`.  
+  
+-   `x.Equals(y)`Gibt `true` Wenn beide `x` und `y` sind `NaN`.  
+  
+-   Wenn `(x.Equals(y) && y.Equals(z))` gibt `true`, klicken Sie dann `x.Equals(z)` gibt `true`.  
+  
+-   Aufeinander folgende Aufrufe von `x.Equals(y)` zurückgeben, denselben Wert, solange die Objekte verweist `x` und `y` werden nicht geändert.  
+  
+-   `x.Equals(null)` gibt `false` zurück.  
+  
+ Implementierungen von <xref:System.Object.Equals%2A> darf keine Ausnahmen auslösen, sollten sie stets einen Wert zurückgeben. Z. B. wenn `obj` ist `null`, <xref:System.Object.Equals%2A> -Methode zurückgeben sollte `false` statt einer <xref:System.ArgumentNullException>.  
+  
+ Befolgen Sie diese Richtlinien zum Überschreiben <xref:System.Object.Equals%28System.Object%29>:  
+  
+-   Typen implementiert, <xref:System.IComparable> müssen überschreiben <xref:System.Object.Equals%28System.Object%29>.  
+  
+-   Diese Außerkraftsetzung Typen <xref:System.Object.Equals%28System.Object%29> müssen auch überschreiben <xref:System.Object.GetHashCode%2A>ist, andernfalls Hashtabellen funktionieren eventuell nicht richtig.  
+  
+-   Sie sollten erwägen, implementieren die <xref:System.IEquatable%601> -Schnittstelle zur Unterstützung von stark typisierten Gleichheit. Ihre <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> Implementierung sollten Ergebnisse zurück, die mit konsistent sind <xref:System.Object.Equals%2A>.  
+  
+-   Wenn Ihre Programmiersprache unterstützt Überladen von Operatoren und Sie den Gleichheitsoperator für einen angegebenen Typ überladen, müssen Sie auch überschreiben die <xref:System.Object.Equals%28System.Object%29> Methode, um das gleiche Ergebnis wie den Gleichheitsoperator zurückzugeben. So kann sichergestellt werden, die verwendet diese Klassenbibliothekscode <xref:System.Object.Equals%2A> (z. B. <xref:System.Collections.ArrayList> und <xref:System.Collections.Hashtable>) verhält sich in einer Weise, die konsistent mit der Funktionsweise des Gleichheitsoperators wird vom Anwendungscode verwendet.  
+  
+### <a name="guidelines-for-reference-types"></a>Richtlinien für Referenztypen  
+ Die folgenden Richtlinien gelten für überschreiben <xref:System.Object.Equals%28System.Object%29> für einen Referenztyp darstellt:  
+  
+-   Betrachten Sie überschreiben <xref:System.Object.Equals%2A> , wenn die Semantik des Typs ist, basiert sowohl, dass der Typ einige Werte darstellt.  
+  
+-   Die meisten Verweistypen müssen nicht den Gleichheitsoperator überladen, auch wenn sie außer Kraft setzen <xref:System.Object.Equals%2A>. Wenn Sie einen Verweistyp implementieren, der Wertsemantik, z. B. eine komplexe Zahl Typ besitzen müssen Sie den Gleichheitsoperator überschreiben.  
+  
+-   Sie sollten nicht überschreiben <xref:System.Object.Equals%2A> auf einen änderbaren Referenztyp. Dies ist, da überschreiben <xref:System.Object.Equals%2A> erfordert, dass Sie auch überschreiben die <xref:System.Object.GetHashCode%2A> -Methode, wie im vorherigen Abschnitt erläutert. Dies bedeutet, dass der Hashcode für eine Instanz des einen änderbaren Referenztyp während seiner Lebensdauer ändern kann, die das Objekt, das verloren geht, werden in einer Hashtabelle verursachen können.  
+  
+### <a name="guidelines-for-value-types"></a>Richtlinien für Werttypen  
+ Die folgenden Richtlinien gelten für überschreiben <xref:System.Object.Equals%28System.Object%29> für einen Werttyp:  
+  
+-   Wenn Sie einen Werttyp definieren, die eine oder mehrere Felder enthält, deren Werte Verweistypen sind, sollten Sie überschreiben <xref:System.Object.Equals%28System.Object%29>. Die <xref:System.Object.Equals%28System.Object%29> Implementierung, die <xref:System.ValueType> führt einen Byte-pro-Byte-Vergleich für, deren Werttypen Felder sind alle Werttypen, aber es verwendet Reflektion, um ein Feld-nach-Feld-Vergleich von Werttypen durchgeführt werden, deren Felder enthalten, Referenztypen sind.  
+  
+-   Wenn Sie außer Kraft setzen <xref:System.Object.Equals%2A> und Ihre Entwicklungssprache unterstützt Operatoren überladen, müssen Sie den Gleichheitsoperator überladen.  
+  
+-   Implementieren Sie die <xref:System.IEquatable%601> Schnittstelle. Aufrufen der stark typisierten <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> Methode wird vermieden, Boxing der `obj` Argument.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine `Point` -Klasse, überschreibt die <xref:System.Object.Equals%2A> Methode, um Wertgleichheit, bereitzustellen und eine `Point3D` -Klasse, die abgeleitet ist `Point`. Da `Point` überschreibt <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> Wertgleichheit, Testen der <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> Methode wird nicht aufgerufen. Allerdings `Point3D.Equals` Aufrufe `Point.Equals` da `Point` implementiert <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> in einer Weise, die Wertgleichheit bereitstellt.  
+  
+ [!code-csharp[ECMA-System.Object.Equals2#1](~/samples/snippets/csharp/VS_Snippets_CLR/ECMA-System.Object.Equals2/CS/equals2.cs#1)]
+ [!code-vb[ECMA-System.Object.Equals2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ECMA-System.Object.Equals2/VB/equals2.vb#1)]  
+  
+ Die `Point.Equals` Methode überprüft, um sicherzustellen, dass die `obj` Argument ist kein **null** und eine Instanz des gleichen Typs wie dieses Objekt verweist. Wenn entweder ein Fehler auftritt überprüfen, gibt die Methode `false`.  
+  
+ Die `Point.Equals` Methodenaufrufe der <xref:System.Object.GetType%2A> Methode, um zu bestimmen, ob die Laufzeit-Typen der beiden Objekte identisch sind. Wenn die Methode eine Prüfung des Formulars verwendet `obj is Point` in c# oder `TryCast(obj, Point)` in Visual Basic die Überprüfung zurückgeben würde `true` in Fällen, in denen `obj` ist eine Instanz einer abgeleiteten Klasse von `Point`, obwohl `obj` und der aktuelle Instanz sind nicht vom gleichen Typ zur Laufzeit. Wenn Sie überprüft haben, dass beide Objekte denselben Typ, die Methode Umwandlungen sind `obj` Eingabe `Point` und gibt das Ergebnis des Vergleichs den Instanzfelder der beiden Objekte zurück.  
+  
+ In `Point3D.Equals`, die geerbte `Point.Equals` -Methode, die überschreibt <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>, wird aufgerufen, bevor Sie etwas anderes erfolgt. Da `Point3D` ist eine versiegelte Klasse (`NotInheritable` in Visual Basic), eine Überprüfung in der Form `obj is Point` in c# oder `TryCast(obj, Point)` in Visual Basic ist ausreichend, um sicherzustellen, dass `obj` ist ein `Point3D` Objekt. Wird jedoch eine `Point3D` -Objekt, der Umwandlung in einen `Point` -Objekt und übergeben der basisklassenimplementierung <xref:System.Object.Equals%2A>. Nur, wenn die geerbte `Point.Equals` -Methode zurückkehrt `true` wird von der Methode Vergleich der `z` Instanzenfelder in der abgeleiteten Klasse eingeführt.  
+  
+ Das folgende Beispiel definiert eine `Rectangle` Klasse, die intern ein Rechteck als zwei implementiert `Point` Objekte. Die `Rectangle` -Klasse überschreibt außerdem <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> Wertgleichheit bereit.  
+  
+ [!code-csharp[ECMA-System.Object.Equals3#1](~/samples/snippets/csharp/VS_Snippets_CLR/ECMA-System.Object.Equals3/CS/equals3.cs#1)]
+ [!code-vb[ECMA-System.Object.Equals3#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ECMA-System.Object.Equals3/VB/equals3.vb#1)]  
+  
+ In einigen Sprachen wie c# und Visual Basic unterstützt Operatoren überladen. Wenn ein Typ den Gleichheitsoperator überlädt, muss er auch überschreiben die <xref:System.Object.Equals%28System.Object%29> Methode, um die gleiche Funktionalität bereitzustellen. Dies erfolgt in der Regel durch Schreiben der <xref:System.Object.Equals%28System.Object%29> Methode im Hinblick auf den überladenen Gleichheitsoperator, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[ECMA-System.Object.Equals4#1](~/samples/snippets/csharp/VS_Snippets_CLR/ECMA-System.Object.Equals4/CS/equals4.cs#1)]
+ [!code-vb[ECMA-System.Object.Equals4#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ECMA-System.Object.Equals4/vb/equals4.vb#1)]  
+  
+ Da `Complex` ist ein Werttyp ist, es kann nicht abgeleitet werden.  Aus diesem Grund die Außerkraftsetzung so, <xref:System.Object.Equals%28System.Object%29> Methode nicht aufrufen muss <xref:System.Object.GetType%2A> um zu bestimmen, der genaue Laufzeittyp der einzelnen Objekte, kann aber stattdessen verwenden die `is` Operator in c# oder der `TypeOf` -Operator in Visual Basic zum Überprüfen des Typs der `obj` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (object objA, object objB);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(object objA, object objB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Object.Equals(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objA" Type="System.Object" />
+        <Parameter Name="objB" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objA">Das erste zu vergleichende Objekt.</param>
+        <param name="objB">Das zweite zu vergleichende Objekt.</param>
+        <summary>Stellt fest, ob die angegebenen Objektinstanzen als gleich betrachtet werden.</summary>
+        <returns>
+          <see langword="true" />, wenn die Objekte als gleich betrachtet werden, andernfalls <see langword="false" />. Wenn beide <paramref name="objA" /> und <paramref name="objB" /> sind **null**, gibt die Methode <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die statische <xref:System.Object.Equals%28System.Object%2CSystem.Object%29> Methode gibt an, ob zwei Objekte, `objA` und `objB`, gleich sind. Außerdem können Sie Objekte zu testen, deren Wert **null** Gleichheit. Es vergleicht `objA` und `objB` Gleichheit wie folgt:  
+  
+-   Sie bestimmt, ob die beiden Objekte den gleichen Objektverweis darstellen. Wenn dies der Fall, gibt die Methode `true`. Dieser Test entspricht dem Aufrufen der <xref:System.Object.ReferenceEquals%2A> Methode. Darüber hinaus, wenn beide `objA` und `objB` sind **null**, gibt die Methode `true`.  
+  
+-   Bestimmt, ob entweder `objA` oder `objB` ist **null**. Wenn also zurückgegeben `false`.  
+  
+-   Wenn die beiden Objekte nicht den gleichen Objektverweis darstellen und weder ist **null**, ruft er `objA`.`Equals` (`objB`) und gibt das Ergebnis zurück. Dies bedeutet, dass bei `objA` überschreibt die <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> Methode, diese Außerkraftsetzung wird aufgerufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Object.Equals%28System.Object%2CSystem.Object%29> Methode und vergleicht ihn mit der <xref:System.Object.ReferenceEquals%2A> Methode.  
+  
+ [!code-csharp[System.Object.Equals#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.equals/cs/equals_static2.cs#1)]
+ [!code-vb[System.Object.Equals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.equals/vb/equals_static2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~Object ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Object.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einem Objekt Gelegenheit zu dem Versuch, Ressourcen freizugeben und andere Bereinigungen durchzuführen, bevor es von der Garbage Collection freigegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Object.Finalize%2A> Methode wird verwendet, um Bereinigungsvorgänge für nicht verwaltete Ressourcen, die durch das aktuelle Objekt gehalten werden, bevor das Objekt zerstört wird. Die Methode wird geschützt und wird daher nur über diese Klasse oder durch eine abgeleitete Klasse zugegriffen werden.  
+  
+ In diesem Abschnitt  
+  
+-   [Funktionsweise der Finalisierung](#How)  
+  
+-   [Hinweise für Implementierer](#Notes)  
+  
+-   [Die SafeHandle-alternative](#SafeHandle)  
+  
+<a name="How"></a>   
+## <a name="how-finalization-works"></a>Funktionsweise der Finalisierung  
+ Die <xref:System.Object> Klasse enthält keine Implementierung für die <xref:System.Object.Finalize%2A> -Methode und der Garbage Collector nicht von abgeleitete Typen markieren <xref:System.Object> auf einen Abschluss warten, wenn sie außer Kraft setzen die <xref:System.Object.Finalize%2A> Methode.  
+  
+ Wenn ein Typ überschreibt die <xref:System.Object.Finalize%2A> -Methode der Garbage Collector wird ein Eintrag für jede Instanz des Typs in eine interne Struktur, die die Warteschlange der Abschluss aufgerufen. Die Abschluss Warteschlange enthält Einträge für alle Objekte im verwalteten Heap, dessen Abschluss Code ausgeführt werden muss, bevor der Garbage Collector den Arbeitsspeicher freigeben kann. Anschließend ruft der Garbage Collector die <xref:System.Object.Finalize%2A> Methode automatisch in den folgenden Situationen:  
+  
+-   Nachdem der Garbage Collector ermittelt hat, dass ein Objekt kann nicht zugegriffen werden, es sei denn, das Objekt von der Finalisierung durch einen Aufruf von ausgenommen wurde die <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> Methode.  
+  
+-   Während des Herunterfahrens einer Anwendungsdomäne es sei denn, das Objekt von der Finalisierung ausgeschlossen ist. Während des Herunterfahrens können sogar Objekte, die immer noch zugänglich sind abgeschlossen.  
+  
+ <xref:System.Object.Finalize%2A>wird automatisch aufgerufen nur einmal auf eine bestimmte Instanz, es sei denn, das Objekt erneut registriert wird, wie z. B. mit einem Mechanismus <xref:System.GC.ReRegisterForFinalize%2A?displayProperty=nameWithType> und die <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> Methode nicht anschließend aufgerufen wurde.  
+  
+ <xref:System.Object.Finalize%2A>Vorgänge weisen die folgenden Einschränkungen:  
+  
+-   Die genaue Uhrzeit, wann der Finalizer ausgeführt wird, ist nicht definiert. Um deterministische Freigabe von Ressourcen für Instanzen Ihrer Klasse implementiert sicherzustellen, dass eine `Close` Methode, oder geben Sie einen <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> Implementierung.  
+  
+-   Die Finalizer zweier Objekte werden nicht in einer bestimmten Reihenfolge ausgeführt garantiert, selbst wenn ein Objekt in den anderen verweist. D. h. wenn Objekt A verfügt über einen Verweis auf das Objekt B, und beide Finalizer besitzen, Objekt B möglicherweise bereits beendet wurden, wenn der Finalizer des Objekts ein beginnt.  
+  
+-   Der Thread, auf dem der Finalizer ausgeführt wird, ist nicht angegeben.  
+  
+ Die <xref:System.Object.Finalize%2A> Methode möglicherweise nicht bis zum Abschluss ausgeführt, oder unter den folgenden außergewöhnlichen Umständen möglicherweise nicht alle ausgeführt:  
+  
+-   Wenn eine andere Finalizer auf unbestimmte Zeit blockiert (wechselt in eine Endlosschleife versucht, eine Sperre kann es nie zu erhalten und so weiter). Da die Runtime versucht, Finalizer bis zum Abschluss ausgeführt, möglicherweise andere Finalizer nicht wenn ein Finalizer blockiert unbegrenzt aufgerufen werden.  
+  
+-   Wenn der Prozess beendet, ohne dadurch die Möglichkeit zum Bereinigen von der Laufzeitmoduls. In diesem Fall wird die Laufzeit die erste Benachrichtigung für Beendigung des Prozesses eine DLL_PROCESS_DETACH-Benachrichtigung.  
+  
+ Die Common Language Runtime weiterhin Threadobjekte während des Herunterfahrens nur, während die Anzahl der finalisierbare Objekte weiterhin verringern.  
+  
+ Wenn <xref:System.Object.Finalize%2A> oder eine Überschreibung der <xref:System.Object.Finalize%2A> löst eine Ausnahme aus, und die Common Language Runtime nicht von einer Anwendung, die die Standardrichtlinie überschreibt gehostet wird, die Runtime beendet den Prozess und keine aktiven `try` / `finally` Blöcke oder Finalizer werden ausgeführt. Dieses Verhalten wird Prozessintegrität sichergestellt, wenn der Finalizer nicht freigeben oder Löschen von Ressourcen.  
+  
+<a name="Notes"></a>   
+## <a name="overriding-the-finalize-method"></a>Überschreiben der Finalize-Methode 
+ Sie sollten überschreiben <xref:System.Object.Finalize%2A> für eine Klasse, die nicht verwaltete Ressourcen wie Dateihandles oder Datenbankverbindungen, die freigegeben werden müssen, wenn das verwaltete Objekt, das sie verwendet, während der Garbagecollection verworfen wird verwendet. Sie sollten nicht implementieren eine <xref:System.Object.Finalize%2A> Methode für verwaltete Objekte auf, da der Garbage Collector automatisch verwendeten verwaltete Ressourcen frei.  
+  
+> [!IMPORTANT]
+>  Wenn eine <xref:System.Runtime.InteropServices.SafeHandle> Objekt ist verfügbar, die nicht verwaltete Ressource einschließt, die empfohlene Alternative ist das Implementieren des Dispose-Musters mit einem sicheren Handle und nicht überschreiben <xref:System.Object.Finalize%2A>. Weitere Informationen finden Sie unter [die SafeHandle-Alternative](#SafeHandle) Abschnitt.  
+  
+ Die <xref:System.Object.Finalize%2A?displayProperty=nameWithType> Methode hat keine Funktion in der Standardeinstellung, aber Sie sollten überschreiben <xref:System.Object.Finalize%2A> nur, wenn erforderlich, und dies nur auf nicht verwaltete Ressourcen freizugeben. Freigeben von Arbeitsspeicher ist länger dauert, wenn ein Finalisierung-Vorgang ausgeführt wird, da er mindestens zwei Garbage Collections erforderlich ist. Darüber hinaus sollten Sie überschreiben die <xref:System.Object.Finalize%2A> Methode Referenzzwecken nur Typen. Die common Language Runtime finalisiert nur Verweistypen. Finalizer für Werttypen werden ignoriert.  
+
+Der Geltungsbereich der <xref:System.Object.Finalize%2A?displayProperty=nameWithType> Methode ist `protected`. Sie sollten diesen eingeschränkten Gültigkeitsbereich beibehalten, wenn Sie die Methode in der Klasse überschreiben. Hält einen <xref:System.Object.Finalize%2A> geschützte Methode, können Benutzer der Anwendung ein Objekt aufrufen <xref:System.Object.Finalize%2A> -Methode direkt.
+  
+ Jede Implementierung von <xref:System.Object.Finalize%2A> müssen in einem abgeleiteten Typ seinem Basistyp Implementierung von Aufrufen <xref:System.Object.Finalize%2A>. Dies ist der einzige Fall, in der Anwendung Code aufrufen darf <xref:System.Object.Finalize%2A>. Ein Objekt <xref:System.Object.Finalize%2A> darf keine Methode eine Methode aufrufen, auf alle Objekte, die von ihrer Basisklasse. Der Grund hierfür ist, dass das aufrufende Objekt möglicherweise zur gleichen Zeit an die Garbage Collection übergeben wird wie die anderen aufgerufenen Objekte, z. B. wenn eine Common Language Runtime beendet wird. 
+  
+> [!NOTE]
+>  Der C#-Compiler lässt nicht zu, Sie überschreiben die <xref:System.Object.Finalize%2A> Methode. Stattdessen Sie einen Finalizer bereitstellen, durch die Implementierung einer [Destruktor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) für die Klasse. Ein C#-Destruktor ruft automatisch den Destruktor ihrer Basisklasse.  
+>   
+>  Visual C++ bietet auch eine eigene Syntax für die Implementierung der <xref:System.Object.Finalize%2A> Methode. Weitere Informationen finden Sie im Abschnitt "Destruktoren und Finalizer" [wie: definieren und Verarbeiten von Klassen und Strukturen (C + c++ / CLI)](http://msdn.microsoft.com/library/1c03cb0d-1459-4b5e-af65-97d6b3094fd7).  
+  
+ Da der Garbagecollection nicht deterministisch ist, wissen Sie nicht genau, wenn der Garbage Collector Finalisierung ausführt. Um Ressourcen freizugeben sofort Wunsch können Sie zum Implementieren der [dispose-Muster](~/docs/standard/design-guidelines/dispose-pattern.md) und <xref:System.IDisposable> Schnittstelle. Die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> Implementierung kann aufgerufen werden, durch den Consumer Ihrer Klasse das Freigeben von nicht verwalteten Ressourcen und können Sie die <xref:System.Object.Finalize%2A> Methode, um nicht verwaltete Ressourcen freizugeben, wenn die <xref:System.IDisposable.Dispose%2A> Methode wird nicht aufgerufen.  
+  
+ <xref:System.Object.Finalize%2A>dauert die nahezu jede Aktion, z. B. kann ein Objekt (die das Objekt wieder zugänglich gemacht werden,) zugänglich. nachdem sie während der Garbagecollection bereinigt wurden. Allerdings kann das Objekt nur einmal wieder zugänglich gemacht werden; <xref:System.Object.Finalize%2A> kann nicht wieder zugänglich gemachte Objekte während der Garbagecollection aufgerufen werden. Es ist eine Aktion, die Ihre Implementierung von <xref:System.Object.Finalize%2A> abwartet, nie: sollten sie nie eine Ausnahme auslösen. Bei einem von Methoden ausgelösten Ausnahmen in Aufruf der <xref:System.Object.Finalize%2A> Methode werden nicht behandelt, durch die <xref:System.Object.Finalize%2A> -Methode, die Common Language Runtime setzt voraus, dass die <xref:System.Object.Finalize%2A> Methode zurückgegeben, und rufen Sie weiterhin die <xref:System.Object.Finalize%2A> Methoden anderer Objekte. 
+  
+<a name="SafeHandle"></a>   
+## <a name="the-safehandle-alternative"></a>Die SafeHandle-Alternative  
+ Zuverlässige Finalizer ist oft schwierig, da Sie Annahmen über den Zustand der Anwendung vornehmen können, und wie z. B. Systemausnahmen nicht behandelt <xref:System.OutOfMemoryException> und <xref:System.StackOverflowException> den Finalizer zu beenden. Anstatt zu implementieren einen Finalizer für die Klasse, um nicht verwaltete Ressourcen freizugeben, können Sie ein Objekt, das von abgeleitet ist die <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> -Klasse Wrapper für die nicht verwalteten Ressourcen und anschließenden Implementieren des Dispose-Musters, ohne einen Finalizer. .NET Framework bietet die folgenden Klassen in der <xref:Microsoft.Win32?displayProperty=nameWithType> Namespace, die von der abgeleiteten <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>:  
+  
+-   <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>ist eine Wrapperklasse für ein Dateihandle.  
+  
+-   <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle>ist eine Wrapperklasse für die Speicherabbilddatei Handles an.  
+  
+-   <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle>ist eine Wrapperklasse für ein Zeiger auf einen nicht verwalteten Speicherblock.  
+  
+-   <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle>, und <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> Wrapperklassen für kryptografische behandelt werden.  
+  
+-   <xref:Microsoft.Win32.SafeHandles.SafePipeHandle>ist eine Wrapperklasse für Pipehandles an.  
+  
+-   <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle>ist eine Wrapperklasse für ein Handle für einen Registrierungsschlüssel an.  
+  
+-   <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>ist eine Wrapperklasse für ein Wait-Handle.  
+  
+ Im folgenden Beispiel wird die [dispose-Muster](~/docs/standard/design-guidelines/dispose-pattern.md) mit SafeHandles anstelle von der <xref:System.Object.Finalize%2A> Methode. Definiert eine `FileAssociation` Klasse, die Registrierungsinformationen zur Anwendung umschließt, die Dateien mit einer bestimmten Dateierweiterung behandelt. Die zwei Registrierungshandles zurückgegeben als `out` Parameter durch Windows [RegOpenKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724897.aspx) an Funktionsaufrufe übergeben werden die <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> Konstruktor. Der Typ der geschützte `Dispose` -Methode ruft dann die `SafeRegistryHandle.Dispose` Methode, um diese zwei Handles freizugeben.  
+  
+ [!code-csharp[System.Object.Finalize#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.finalize/cs/finalize_safe.cs#2)]
+ [!code-vb[System.Object.Finalize#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.finalize/vb/finalize_safe.vb#2)]  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird überprüft, ob die <xref:System.Object.Finalize%2A> Methode wird aufgerufen, wenn ein Objekt, das überschreibt <xref:System.Object.Finalize%2A> zerstört wird. Beachten Sie, dass in einer produktionsanwendung die <xref:System.Object.Finalize%2A> Methode würde überschrieben werden, um nicht verwaltete Ressourcen frei, die für das Objekt freizugeben. Beachten Sie, dass im C#-Beispiel einen Destruktor anstelle von bietet die <xref:System.Object.Finalize%2A> Methode.  
+  
+ [!code-csharp[System.Object.Finalize#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.finalize/cs/finalize1.cs#1)]
+ [!code-vb[System.Object.Finalize#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.finalize/vb/finalize1.vb#1)]  
+  
+ Für ein weiteres Beispiel, die überschreibt die <xref:System.Object.Finalize%2A> -Methode finden Sie unter der <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public virtual int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Object.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fungiert als die Standardhashfunktion.</summary>
+        <returns>Ein Hashcode für das aktuelle Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Hashcode ist ein numerischer Wert, der verwendet wird, zum Einfügen und identifizieren z. B. ein Objekt in einer Auflistung hashbasierten der <xref:System.Collections.Generic.Dictionary%602> -Klasse, die <xref:System.Collections.Hashtable> Klasse oder einen Typ abgeleitet wurde. die <xref:System.Collections.DictionaryBase> Klasse. Die <xref:System.Object.GetHashCode%2A> Methode bietet diese Hashcode für Algorithmen, die schnelle Überprüfung der Objektgleichheit benötigen.  
+  
+> [!NOTE]
+>  Informationen zur Verwendung von Hashcodes in Hashtabellen sowie einige zusätzliche Code Hashalgorithmen finden Sie unter der [Hashfunktion](http://en.wikipedia.org/wiki/Hash_function) Eintrag in Wikipedia.  
+  
+ Zwei Objekte gleich return Hashcodes, die gleich sind. Das Gegenteil stimmt aber nicht "true": gleich Hashcodes implizieren keine Objektgleichheit, da verschiedene (ungleich) Objekte identische Hashcodes verfügen können. .NET Framework gewährleistet zudem nicht die standardmäßige Implementierung des der <xref:System.Object.GetHashCode%2A> -Methode, und der Wert, der diese Methode gibt unterschiedlich ausfallen, zwischen .NET Framework-Versionen und Plattformen, wie z. B. 32-Bit und 64-Bit-Plattformen. Aus diesen Gründen verwenden Sie nicht die standardmäßige Implementierung dieser Methode als eine eindeutige Objekt-ID für hashing Zwecke. Führen Sie die zwei Konsequenzen aus diesem:  
+  
+-   Sie sollten nicht davon ausgehen, dass gleich Hashcodes Objektgleichheit hinweisen.  
+  
+-   Sie sollten nie beibehalten oder einen Hashcode außerhalb der Anwendungsdomäne, in der es erstellt wurde, verwenden, da das gleiche Objekt zwischen Anwendungsdomänen, Prozessen und Plattformen hash kann.  
+  
+> [!WARNING]
+>  Ein Hashcode richtet effizientes einfügen und Suche in Sammlungen, die auf eine Hashtabelle basieren. Ein Hashcode ist kein permanente Wert. Aus diesem Grund:  
+>   
+>  -   Serialisieren Sie Hashwerte für Code nicht, und in Datenbanken zu speichern.  
+> -   Verwenden Sie nicht den Hash als Schlüssel an, um ein Objekt aus einer schlüsselgebundenen Auflistung abzurufen.  
+> -   Senden Sie über Anwendungsdomänen oder Prozessen nicht Hashcodes. In einigen Fällen können der Hashcodes pro Domäne pro Prozess oder pro Anwendung berechnet werden.  
+> -   Verwenden Sie nicht den Hashcode, statt eines Werts von einer kryptografischen Hashfunktion zurückgegeben, wenn Sie einen kryptografisch starken Hash benötigen. Verwenden Sie für kryptografische Hashes eine abgeleitete Klasse die <xref:System.Security.Cryptography.HashAlgorithm?displayProperty=nameWithType> oder <xref:System.Security.Cryptography.KeyedHashAlgorithm?displayProperty=nameWithType> Klasse.  
+> -   Testen Sie nicht auf die Gleichheit von Hashcodes, um zu bestimmen, ob zwei Objekte gleich sind. (Ungleich Objekte können identische Hashcodes verfügen.) Um auf Gleichheit zu testen, rufen Sie die <xref:System.Object.ReferenceEquals%2A> oder <xref:System.Object.Equals%2A> Methode.  
+  
+ Die <xref:System.Object.GetHashCode%2A> Methode kann durch einen abgeleiteten Typ überschrieben werden. Wenn <xref:System.Object.GetHashCode%2A> wird nicht überschrieben, Hashcodes für Verweistypen berechnet werden, durch Aufrufen der <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> Methode der Basisklasse, die einen Hashcode berechnet basierend auf ein Objekt Verweis; Weitere Informationen, finden Sie unter <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A?displayProperty=nameWithType>. Das heißt, zwei Objekte auf dem die <xref:System.Object.ReferenceEquals%2A> -Methode zurückkehrt `true` haben identische Hashcodes. Wenn Werttypen nicht außer Kraft setzen <xref:System.Object.GetHashCode%2A>die <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> -Methode der Basisklasse verwendet Reflektion, um den Hashcode anhand der Werte der Felder des Typs zu berechnen. Werttypen, deren Felder identische Werte haben, haben also gleich Hashcodes. Weitere Informationen zum Überschreiben <xref:System.Object.GetHashCode%2A>, finden Sie im Abschnitt "Hinweise zur Vererbung".  
+  
+> [!WARNING]
+>  Wenn Sie überschreiben die <xref:System.Object.GetHashCode%2A> , Sie sollten auch-methodenüberschreibung <xref:System.Object.Equals%2A>, und umgekehrt. Wenn die überschriebene <xref:System.Object.Equals%2A> -Methode zurückkehrt `true` Wenn werden zwei Objekte auf Gleichheit, die außer Kraft gesetzte getestet <xref:System.Object.GetHashCode%2A> Methode muss für die beiden Objekte den gleichen Wert zurück.  
+  
+ Wenn ein Objekt, das in einer Hashtabelle als Schlüssel verwendet wird, keine geeignete Implementierung von bietet <xref:System.Object.GetHashCode%2A>, Sie können einen Hashcode-Standardanbieter angeben, durch Angabe einer <xref:System.Collections.IEqualityComparer> -Implementierung, die eine der Überladungen der der <xref:System.Collections.Hashtable> Klassenkonstruktor.  
+  
+## <a name="notes-for-the-includewrtincludeswrt-mdmd"></a>Hinweise für die[!INCLUDE[wrt](~/includes/wrt-md.md)]  
+ Beim Aufrufen der <xref:System.Object.GetHashCode%2A> Methode einer Klasse in der [!INCLUDE[wrt](~/includes/wrt-md.md)], es stellt das Standardverhalten für Klassen, die nicht außer Kraft setzen <xref:System.Object.GetHashCode%2A>. Dies ist Teil der Unterstützung von .NET Framework für die [!INCLUDE[wrt](~/includes/wrt-md.md)] (siehe [.NET Framework Unterstützung für Windows Store-Apps und Windows-Runtime](~/docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)). Klassen in der [!INCLUDE[wrt](~/includes/wrt-md.md)] erben nicht <xref:System.Object>, und zurzeit nicht implementieren eine <xref:System.Object.GetHashCode%2A>. Allerdings sie angezeigt werden, damit <xref:System.Object.ToString%2A>, <xref:System.Object.Equals%28System.Object%29>, und <xref:System.Object.GetHashCode%2A> Methoden, wenn Sie in c# oder Visual Basic-Code werden verwendet, und die .NET Framework das Standardverhalten für diese Methoden bietet.  
+  
+> [!NOTE]
+>  [!INCLUDE[wrt](~/includes/wrt-md.md)]Klassen, die in c# oder Visual Basic geschrieben sind, können außer Kraft setzen die <xref:System.Object.GetHashCode%2A> Methode.  
+  
+   
+  
+## Examples  
+ Einer der einfachsten Möglichkeiten, einen Hashcode für einen numerischen Wert zu berechnen, der der gleichen oder einer kleineren Bereich als hat die <xref:System.Int32> ist einfach, der Wert zurückgegeben. Das folgende Beispiel zeigt eine Implementierung für eine `Number` Struktur.  
+  
+ [!code-csharp[System.Object.GetHashCode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.gethashcode/cs/direct1.cs#1)]
+ [!code-vb[System.Object.GetHashCode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.gethashcode/vb/direct1.vb#1)]  
+  
+ In vielen Fällen hat einen Typ mehrere Datenfelder, die beim Generieren des Hashcodes einbezogen werden können. Eine Möglichkeit, einen Hashcode zu generieren, kombinieren diese Felder mithilfe von ist ein `XOR (eXclusive OR)` Vorgang, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[System.Object.GetHashCode#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.gethashcode/cs/xor1.cs#2)]
+ [!code-vb[System.Object.GetHashCode#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.gethashcode/vb/xor1.vb#2)]  
+  
+ Das vorherige Beispiel gibt den gleichen Hashcode für (n1, n2) und (n2 n1), und somit weitere Konflikte als erwünscht sind Aktivierungscode generieren. Eine Reihe von Lösungen sind verfügbar, sodass Hashcodes in diesen Fällen nicht identisch sind. Eine besteht darin, den Hashcode des Zurückgeben einer `Tuple` -Objekt, das die Reihenfolge der jedes Feld entspricht. Das folgende Beispiel zeigt eine mögliche Implementierung, verwendet die <xref:System.Tuple%602> Klasse. Beachten Sie jedoch, die die Beeinträchtigung der Systemleistung der Instanziierung einer `Tuple` Objekt kann erhebliche Auswirkungen auf die allgemeine Leistung einer Anwendung, in der großen Anzahl von Objekten in Hashtabellen gespeichert.  
+  
+ [!code-csharp[System.Object.GetHashCode#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.gethashcode/cs/xor2.cs#3)]
+ [!code-vb[System.Object.GetHashCode#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.gethashcode/vb/xor2.vb#3)]  
+  
+ Eine zweite alternative Lösung umfasst die Gewichtung der einzelnen Hashcodes von links-Verschiebung der Hashcodes von aufeinander folgenden Feldern von zwei oder mehr Bits. Optimal, anstatt verworfen werden, Bits verschoben hinter Bit 31 umschließen soll statt verworfen werden. Da von der Left Shift-Operatoren in c# und Visual Basic Bits verworfen werden, erfordert dies eine linke UMSCHALT-Wrap-Methode wie folgt erstellen:  
+  
+ [!code-csharp[System.Object.GetHashCode#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.gethashcode/cs/shift1.cs#4)]
+ [!code-vb[System.Object.GetHashCode#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.gethashcode/vb/shift1.vb#4)]  
+  
+ Im folgende Beispiel verwendet dann diese UMSCHALT-Wrap-Methode den Hashcode berechnet die `Point` Struktur, die in den vorherigen Beispielen verwendet.  
+  
+ [!code-csharp[System.Object.GetHashCode#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.gethashcode/cs/shift1.cs#5)]
+ [!code-vb[System.Object.GetHashCode#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.gethashcode/vb/shift1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Eine Hashfunktion wird verwendet, um schnell eine Zahl (Hashcode) generieren, die auf den Wert eines Objekts entspricht. Hashfunktionen für jeden Typ in der Regel spezifisch sind und für die Eindeutigkeit, müssen mindestens eines der Instanzfelder als Eingabe verwenden. Hashcodes sollten nicht mit den Werten von statischen Feldern berechnet werden.  
+  
+ Für Klassen abgeleitete <see cref="T:System.Object" />, <see langword="GetHashCode" /> -Methode der Basisklasse delegieren kann <see cref="M:System.Object.GetHashCode" /> Implementierung nur, wenn die abgeleitete Klasse Gleichheit als Verweisgleichheit definiert. Die standardmäßige Implementierung des <see cref="M:System.Object.GetHashCode" /> Referenzzwecken Typen zurückgibt einen Hashcode, der zurückgegeben wird, indem Sie entspricht der <see cref="M:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode(System.Object)" /> Methode. Sie können außer Kraft setzen <see cref="M:System.Object.GetHashCode" /> für unveränderliche Verweistypen. Im Allgemeinen für änderbare Referenztypen, Sie sollten eine Überschreibung <see cref="M:System.Object.GetHashCode" /> nur, wenn:  
+  
+-   Sie können den Hashcode von Feldern zu berechnen, die nicht veränderbar sind; oder  
+  
+-   Sie können sicherstellen, dass der Hashcode des ein änderbares Objekt nicht ändert, während das Objekt in einer Auflistung enthalten ist, die abhängig von dessen Hashcode.  
+  
+ Andernfalls können Sie vorstellen, dass ein änderbare Objekt in der Hashtabelle verloren gegangen ist. Wenn Sie sich entschließen, überschreiben <see cref="M:System.Object.GetHashCode" /> für einen änderbaren Referenztyp Ihrer Dokumentation sollte unbedingt verdeutlicht werden, dass Benutzer Ihres Typs Objektwerte nicht ändern sollten, während das Objekt in einer Hashtabelle gespeichert ist.  
+  
+ Bei Werttypen <see cref="M:System.ValueType.GetHashCode" /> Hash Code stellt eine Standardimplementierung bereit, die Reflektion verwendet. Erwägen Sie, ob Sie es für eine bessere Leistung zu überschreiben.  
+  
+ <block subset="none" type="note"><para>  
+ Weitere Informationen und Beispiele, mit die eine Vielzahl von Möglichkeiten Hashcodes berechnet, finden Sie in Abschnitt "Beispiele".  
+  
+</para></block>  
+  
+ Eine Hashfunktion muss die folgenden Eigenschaften aufweisen:  
+  
+-   Wenn zwei Objekte als gleich, vergleichen die <see cref="M:System.Object.GetHashCode" /> Methode für jedes Objekt muss den gleichen Wert zurück. Jedoch, wenn die beiden Objekte nicht gleich, Vergleich der <see cref="M:System.Object.GetHashCode" /> Methoden für die beiden Objekte müssen keine unterschiedliche Werte zurückgeben.  
+  
+-   Die <see cref="M:System.Object.GetHashCode" /> Methode für ein Objekt muss immer zurückgeben, denselben Hashcode, solange es ist keine Änderung an der Zustand des Objekts, das den Rückgabewert, der des Objekts bestimmt [System.Object.Equals](xref:System.Object.Equals*) Methode. Beachten Sie, dass dies nur während der aktuellen Ausführung einer Anwendung "true" ist und ein anderen Hashcode zurückgegeben werden kann, wenn die Anwendung erneut ausgeführt wird.  
+  
+-   Für die optimale Leistung sollte eine Hashfunktion generieren eine gleichmäßige Verteilung für alle Eingaben, einschließlich Eingabe, die stark gruppiert ist. Eine Folge ist, dass kleinere Änderungen an den Objektzustand in umfangreichen Änderungen an den resultierenden Hashcode für eine optimale Leistung der Hash-Tabelle führen soll.  
+  
+-   Hashfunktionen sollten kostengünstigen berechnet werden.  
+  
+-   Die <see cref="M:System.Object.GetHashCode" /> Methode sollte keine Ausnahmen auslösen.  
+  
+ Z. B. die Implementierung von der <see cref="M:System.String.GetHashCode" /> Methode bereitgestellt wird, indem Sie die <see cref="T:System.String" /> Klasse gibt identische Hashcodes für identische Zeichenfolgenwerte zurück. Aus diesem Grund zwei <see cref="T:System.String" /> Objekte den gleichen Hashcode zurückgeben, wenn diese denselben Zeichenfolgenwert darstellen. Die Methode verwendet außerdem alle Zeichen in der Zeichenfolge verhältnismäßig zufällig verteilte Ausgabe zu generieren, auch wenn die Eingabe in bestimmten Bereichen gruppiert ist (z. B. möglicherweise viele Benutzer Zeichenfolgen, die nur die unteren 128 ASCII-Zeichen, obwohl enthalten ein Zeichenfolge kann die 65.535 Unicode-Zeichen enthalten).  
+  
+ Bietet eine gute Hashfunktion für eine Klasse kann die Leistung dieser Objekte hinzugefügt. eine Hashtabelle spürbar verringern. In einer Hashtabelle mit Schlüsseln, die eine gute Implementierung einer Hashfunktion bereitstellen, wird die Suche nach einem Element Konstanten Zeit (z. B. eine o(1)-Operation). In einer Hashtabelle durch eine schlechte Implementierung einer Hashfunktion, die Leistung einer Suche hängt die Anzahl der Elemente in der Hashtabelle (z. B. eine O (`n`) Vorgang, wobei `n` ist die Anzahl der Elemente in der Hashtabelle). Ein böswilliger Benutzer kann Daten einzugeben, die die Anzahl der Konflikte, vergrößert die deutlich die Leistung der Anwendung beeinträchtigen können, die abhängig von Hashtabellen in den folgenden Situationen:  
+  
+-   Wenn Hashfunktionen häufig Konflikte erzeugen.  
+  
+-   Wenn eine große Menge von Objekten in einer Hashtabelle Hashcodes, die gleich sind oder ungefähr gleich untereinander erzeugen.  
+  
+-   Wenn Benutzer die Eingabe der Daten aus denen berechnete Hashcode.  
+  
+ Abgeleitete Klassen, die außer Kraft setzen <see cref="M:System.Object.GetHashCode" /> müssen auch überschreiben <see cref="M:System.Object.Equals(System.Object)" /> um sicherzustellen, dass zwei Objekte als gleich betrachtet, denselben Hashcode haben, andernfalls die <see cref="T:System.Collections.Hashtable" /> Typ funktionieren eventuell nicht richtig.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Object.GetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Type" /> der aktuellen Instanz ab.</summary>
+        <returns>Der genaue Laufzeittyp der aktuellen Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da <xref:System.Object?displayProperty=nameWithType> ist die Basisklasse für alle Typen in der .NET Framework-Typsystem, das <xref:System.Object.GetType%2A> Methode kann verwendet werden, um zurückgeben <xref:System.Type> Objekte, die alle .NET Framework-Typen darstellen. .NET Framework erkennt die folgenden fünf Typkategorien:  
+  
+-   Klassen, die abgeleitet sind <xref:System.Object?displayProperty=nameWithType>,  
+  
+-   Werttypen abgeleitet sind <xref:System.ValueType?displayProperty=nameWithType>.  
+  
+-   Schnittstellen, die abgeleitet sind <xref:System.Object?displayProperty=nameWithType> beginnend mit .NET Framework 2.0.  
+  
+-   Enumerationen abgeleitet sind <xref:System.Enum?displayProperty=nameWithType>.  
+  
+-   Delegaten, die abgeleitet sind <xref:System.MulticastDelegate?displayProperty=nameWithType>.  
+  
+ Für zwei Objekte `x` und `y` identische-Runtime-Typen, deren `Object.ReferenceEquals(x.GetType(),y.GetType())` gibt `true`. Im folgenden Beispiel wird die <xref:System.Object.GetType%2A> Methode mit der <xref:System.Object.ReferenceEquals%2A> Methode, um zu bestimmen, ob eine numerische Wert als zwei numerische Werte desselben Typs ist.  
+  
+ [!code-csharp[System.Object.GetType#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.gettype/cs/gettype1.cs#1)]
+ [!code-vb[System.Object.GetType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.gettype/vb/gettype1.vb#1)]  
+  
+> [!NOTE]
+>  Um zu bestimmen, ob ein Objekt eines bestimmten Typs ist, verwenden Sie Ihre Sprache Typ Vergleich Schlüsselwort oder zu erstellen. Beispielsweise können Sie die `TypeOf…Is` in Visual Basic erstellen oder die `is` -Schlüsselwort in c#.  
+  
+ Die <xref:System.Object.GetType%2A> Methode wird von allen Typen, die abgeleitet geerbt <xref:System.Object>. Dies bedeutet, dass zusätzlich zur Verwendung Ihrer eigenen Sprache Vergleich-Schlüsselwort, das Sie verwenden können die <xref:System.Object.GetType%2A> Methode, um den Typ eines bestimmten Objekts zu bestimmen, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[System.Object.GetType#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.gettype/cs/GetTypeEx2.cs#2)]
+ [!code-vb[System.Object.GetType#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.gettype/vb/GetTypeEx2.vb#2)]  
+  
+ Die <xref:System.Type> Objekt macht die Klasse des aktuellen zugeordnete Metadaten <xref:System.Object>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, dass <xref:System.Object.GetType%2A> gibt den Laufzeittyp der aktuellen Instanz zurück.  
+  
+ [!code-cpp[ECMA-System.Object.GetType#1](~/samples/snippets/cpp/VS_Snippets_CLR/ECMA-System.Object.GetType/CPP/gettype.cpp#1)]
+ [!code-csharp[ECMA-System.Object.GetType#1](~/samples/snippets/csharp/VS_Snippets_CLR/ECMA-System.Object.GetType/CS/gettype.cs#1)]
+ [!code-vb[ECMA-System.Object.GetType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ECMA-System.Object.GetType/VB/gettype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberwiseClone">
+      <MemberSignature Language="C#" Value="protected object MemberwiseClone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object MemberwiseClone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Object.MemberwiseClone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine flache Kopie des aktuellen <see cref="T:System.Object" />.</summary>
+        <returns>Eine flache Kopie des aktuellen <see cref="T:System.Object" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Object.MemberwiseClone%2A> Methode erstellt eine flache Kopie durch Erstellen eines neuen Objekts, und klicken Sie dann die nicht statische Felder des aktuellen Objekts in das neue Objekt kopiert. Wenn ein Feld ein Werttyp ist, erfolgt eine Bit für Bit-Kopie des Felds. Wenn ein Feld ein Verweistyp ist, wird der Verweis kopiert, aber das referenzierte Objekt ist nicht; das ursprüngliche Objekt und dessen Klon sich daher auf das gleiche Objekt beziehen.  
+  
+ Angenommen Sie, ein Objekt namens X, das auf die Objekte A und B, c References-Objekt Eine flache Kopie von X erstellt neue Objekt X2, das auch Objekte A und b verweist Im Gegensatz dazu eine tiefe Kopie von X erstellt ein neues Objekt X2, die verweist auf die neuen Objekte A2 und B2, die Kopien von A und b B2 verweist wiederum auf das neue Objekt C2, also eine Kopie des c Das Beispiel veranschaulicht den Unterschied zwischen einem flachen und eine tiefe Kopie-Vorgang.  
+  
+ Es gibt zahlreiche Möglichkeiten, einen tiefe Kopie-Vorgang zu implementieren, wenn der flachen Kopie-durch Vorgangs die <xref:System.Object.MemberwiseClone%2A> Methode Ihren Anforderungen nicht erfüllt. Hierzu gehört Folgendes:  
+  
+-   Rufen Sie einen Klassenkonstruktor des Objekts kopiert werden soll, um ein zweites Objekt mit Eigenschaftswerten, die das erste Objekt entnommen zu erstellen. Dies setzt voraus, dass die Werte eines Objekts von den Klassenkonstruktor vollständig definiert werden.  
+  
+-   Rufen Sie die <xref:System.Object.MemberwiseClone%2A> Methode, um eine flache Kopie eines Objekts zu erstellen, und weisen Sie ihm anschließend neue Objekte, deren Werte identisch mit der ursprünglichen Objekt auf Eigenschaften oder Felder sind, deren Werte Referenztypen sind. Die `DeepCopy` -Methode im Beispiel veranschaulicht diese Vorgehensweise.  
+  
+-   Serialisiert das Objekt, um umfassende werden kopiert, und klicken Sie dann die serialisierten Daten zu einer anderen Objektvariable wiederherstellen.  
+  
+-   Mithilfe der Reflektion zum Ausführen des Vorgangs tiefe Kopie mit Rekursion.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Object.MemberwiseClone%2A> Methode. Definiert eine `ShallowCopy` Methode, die aufgerufen der <xref:System.Object.MemberwiseClone%2A> Methode zum eine flache Kopie eines Vorgangs auf ein `Person` Objekt. Er definiert außerdem eine `DeepCopy` -Methode, die eine tiefe Kopie-Operation für wird ein `Person` Objekt.  
+  
+ [!code-csharp[System.Object.MemberwiseClone#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.memberwiseclone/cs/memberwiseclone1.cs#1)]
+ [!code-vb[System.Object.MemberwiseClone#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.memberwiseclone/vb/memberwiseclone1.vb#1)]  
+  
+ In diesem Beispiel wird die `Person.IdInfo` -Eigenschaft gibt ein `IdInfo` Objekt. Wie die Ausgabe des Beispiels zeigt Wenn ein `Person` -Objekt geklont wird durch Aufrufen der <xref:System.Object.MemberwiseClone%2A> -Methode, das die geklonte `Person` Objekt ist eine unabhängige Kopie des ursprünglichen Objekts, mit dem Unterschied, dass sie dieselbe `Person.IdInfo` -Objektverweis. Daher ändern Sie des Klons `Person.IdInfo` eigenschaftsänderungen des ursprünglichen Objekts `Person.IdInfo` Eigenschaft. Wenn andererseits, ein tiefe Kopie-Vorgang ausgeführt wird, das die geklonte `Person` Objekts, einschließlich seiner `Person.IdInfo` -Eigenschaft, können ohne Auswirkungen auf das ursprüngliche Objekt geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferenceEquals">
+      <MemberSignature Language="C#" Value="public static bool ReferenceEquals (object objA, object objB);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ReferenceEquals(object objA, object objB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Object.ReferenceEquals(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objA" Type="System.Object" />
+        <Parameter Name="objB" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objA">Das erste zu vergleichende Objekt.</param>
+        <param name="objB">Das zweite zu vergleichende Objekt.</param>
+        <summary>Stellt fest, ob die angegebenen <see cref="T:System.Object" />-Instanzen dieselbe Instanz sind.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="objA" /> wird von die gleiche Instanz wie <paramref name="objB" /> oder beide **null**ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Object.Equals%2A> -Methode und den Gleichheitsoperator, der <xref:System.Object.ReferenceEquals%2A> Methode kann nicht überschrieben werden. Aus diesem Grund, wenn Sie testen möchten, zwei Objektverweise auf Gleichheit, und Sie zur Implementierung von nicht sicher sind, dass die `Equals` -Methode, die Sie aufrufen können die <xref:System.Object.ReferenceEquals%2A> Methode.  
+  
+ Allerdings den Rückgabewert der <xref:System.Object.ReferenceEquals%2A> Methode möglicherweise anomale in diesen zwei Szenarien:  
+  
+-   Bei Werttypen vergleichen zu können. Wenn `objA` und `objB` sind Werttypen, sie verschachtelt sind, vor der Übergabe an die <xref:System.Object.ReferenceEquals%2A> Methode. Dies bedeutet, dass, wenn beide `objA` und `objB` derselben Instanz eines Werttyps darstellen der <xref:System.Object.ReferenceEquals%2A> trotzdem Methodenrückgabe `false`, wie im folgende Beispiel gezeigt.  
+  
+     [!code-csharp[System.Object.ReferenceEquals#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.referenceequals/cs/referenceequals4.cs#1)]
+     [!code-vb[System.Object.ReferenceEquals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.referenceequals/vb/referenceequals4.vb#1)]  
+  
+     Informationen zu Boxing-Werttypen finden Sie unter [Boxing und Unboxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).  
+  
+-   Beim Vergleichen von Zeichenfolgen. Wenn `objA` und `objB` sind Zeichenfolgen, die <xref:System.Object.ReferenceEquals%2A> -Methode zurückkehrt `true` , wenn die Zeichenfolge intern gespeichert werden. Er führt einen Test keine Wertgleichheit.  Im folgenden Beispiel `s1` und `s2` gleich sind, da sie zwei Instanzen von einer einzelnen Zeichenfolge für die im Internpool vorhanden sind. Allerdings `s3` und `s4` ungleich sind, da auch sie werden identische Werte aufweisen, die Zeichenfolge nicht intern gespeichert werden.  
+  
+     [!code-csharp[System.Object.ReferenceEquals#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.referenceequals/cs/referenceequalsa.cs#2)]
+     [!code-vb[System.Object.ReferenceEquals#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.referenceequals/vb/referenceequalsa.vb#2)]  
+  
+     Weitere Informationen zur Internalisierung finden Sie unter <xref:System.String.IsInterned%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Object.ReferenceEquals%2A> zu bestimmen, ob zwei Objekte dieselbe Instanz sind.  
+  
+ [!code-cpp[ECMA-System.Object.ReferenceEquals#1](~/samples/snippets/cpp/VS_Snippets_CLR/ECMA-System.Object.ReferenceEquals/CPP/referenceequals.cpp#1)]
+ [!code-csharp[ECMA-System.Object.ReferenceEquals#1](~/samples/snippets/csharp/VS_Snippets_CLR/ECMA-System.Object.ReferenceEquals/CS/referenceequals.cs#1)]
+ [!code-vb[ECMA-System.Object.ReferenceEquals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ECMA-System.Object.ReferenceEquals/vb/referenceequals.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public virtual string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Object.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Object.ToString%2A?displayProperty=nameWithType>die Hauptversionsnummer, der-Methode in .NET Framework Formatierung. Konvertiert ein Objekt in seine Zeichenfolgendarstellung, damit er für die Anzeige geeignet ist. (Weitere Informationen zur Formatierung-Unterstützung in .NET Framework finden Sie unter [Formatierung von Typen](~/docs/standard/base-types/formatting-types.md).) Standardimplementierungen der der <xref:System.Object.ToString%2A?displayProperty=nameWithType> Methode zurück, der vollqualifizierte Name, der den Typ des Objekts.  
+  
+> [!IMPORTANT]
+>  Haben Sie möglicherweise auf dieser Seite erreicht, indem Sie die folgenden Links aus der Memberliste eines anderen Typs. Liegt darin, dass dieses Typs nicht überschreibt <xref:System.Object.ToString%2A?displayProperty=nameWithType>. Stattdessen erbt es die Funktionalität der <xref:System.Object.ToString%2A?displayProperty=nameWithType> Methode.  
+  
+ Typen, die häufig überschreiben die <xref:System.Object.ToString%2A?displayProperty=nameWithType> Methode, um ein geeigneter Zeichenfolgendarstellung eines bestimmten Typs bereitzustellen. Typen auch häufig überladen der <xref:System.Object.ToString%2A?displayProperty=nameWithType> Methode, um die Formatzeichenfolgen oder kulturabhängige Formatierung unterstützen.  
+  
+ In diesem Abschnitt  
+  
+ [Die Standard-Object.ToString()-Methode](#Default)   
+ [Überschreiben der Object.ToString()-Methode](#Overriding)   
+ [Überladen der ToString-Methode](#Overloading)   
+ [Erweitern Sie die Object.ToString-Methode](#Extending)   
+ [Hinweise für die Windows-Runtime](#WinRT)  
+  
+<a name="Default"></a>   
+## <a name="the-default-objecttostring-method"></a>Die Standard-Object.ToString()-Methode  
+ Die standardmäßige Implementierung des der <xref:System.Object.ToString%2A> Methodenrückgabe der vollqualifizierte Name des Typs von der <xref:System.Object>, wie im folgende Beispiel gezeigt.  
+  
+ [!code-cpp[System.Object.ToString#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.object.tostring/cpp/tostring1.cpp#1)]
+ [!code-csharp[System.Object.ToString#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.tostring/cs/tostring1.cs#1)]
+ [!code-vb[System.Object.ToString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.tostring/vb/tostring1.vb#1)]  
+  
+ Da <xref:System.Object> ist die Basisklasse aller Verweistypen in .NET Framework wird dieses Verhalten von Verweistypen, die nicht außer Kraft setzen geerbt die <xref:System.Object.ToString%2A> Methode. Dies wird anhand des folgenden Beispiels veranschaulicht. Definiert eine Klasse namens `Object1` , akzeptiert die standardmäßige Implementierung aller <xref:System.Object> Elemente. Die <xref:System.Object.ToString%2A> Methodenrückgabe voll qualifizierten Typnamen des Objekts.  
+  
+ [!code-cpp[System.Object.ToString#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.object.tostring/cpp/tostring2.cpp#2)]
+ [!code-csharp[System.Object.ToString#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.tostring/cs/tostring2.cs#2)]
+ [!code-vb[System.Object.ToString#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.tostring/vb/tostring2.vb#2)]  
+  
+<a name="Overriding"></a>   
+## <a name="overriding-the-objecttostring-method"></a>Überschreiben der Object.ToString()-Methode  
+ Überschreiben Sie die Typen im Allgemeinen die <xref:System.Object.ToString%2A?displayProperty=nameWithType> Methode, um eine Zeichenfolge zurückzugeben, die die Objektinstanz darstellt. Beispielsweise, wie z. B. die Basistypen <xref:System.Char>, <xref:System.Int32>, und <xref:System.String> bieten <xref:System.Object.ToString%2A> Implementierungen, die den Wert der Form einer Zeichenfolge zurückgeben, die das Objekt darstellt. Das folgende Beispiel definiert eine Klasse `Object2`, überschreibt die <xref:System.Object.ToString%2A> Methode, um den Typnamen zusammen mit seinen Wert zurückzugeben.  
+  
+ [!code-cpp[System.Object.ToString#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.object.tostring/cpp/tostring3.cpp#3)]
+ [!code-csharp[System.Object.ToString#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.tostring/cs/tostring3.cs#3)]
+ [!code-vb[System.Object.ToString#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.tostring/vb/tostring3.vb#3)]  
+  
+ Die folgende Tabelle listet die Kategorien in .NET Framework und gibt an, und zwar unabhängig davon, ob sie überschreiben die <xref:System.Object.ToString%2A?displayProperty=nameWithType> Methode.  
+  
+|Typkategorie|Außerkraftsetzungen Object.ToString()|Verhalten|  
+|-------------------|-----------------------------------|--------------|  
+|Klasse|nicht verfügbar|nicht verfügbar|  
+|Struktur|Ja (<xref:System.ValueType.ToString%2A?displayProperty=nameWithType>)|Identisch mit Object.ToString()|  
+|Enumeration|Ja (<xref:System.Enum.ToString?displayProperty=nameWithType>)|Der Elementname|  
+|Schnittstelle|Nein|nicht verfügbar|  
+|Delegate|Nein|nicht verfügbar|  
+  
+ Finden Sie unter Hinweise zu erben-Abschnitt, um weitere Informationen zum Überschreiben <xref:System.Object.ToString%2A>.  
+  
+<a name="Overloading"></a>   
+## <a name="overloading-the-tostring-method"></a>Überladen der ToString-Methode  
+ Zusätzlich zum Überschreiben der parameterlosen <xref:System.Object.ToString?displayProperty=nameWithType> Methode, die viele Typen Überladen der `ToString` Methode, um Versionen der Methode bereitzustellen, die Parameter akzeptieren. In den meisten Fällen wird dadurch auch Variablen und kulturabhängige Formatierung unterstützen.  
+  
+ Das folgende Beispiel Überladungen der `ToString` Methode, um eine Ergebniszeichenfolge zurückzugeben, die den Wert der verschiedenen Felder des enthält eine `Automobile` Klasse. Es werden vier Formatzeichenfolgen definiert: G, den Modellnamen und Jahr zurück. D, die den Modellnamen, Jahr und Anzahl von Türen zurückgibt; C, die den Modellnamen, den Jahr und die Anzahl der Zylinder zurückgibt; und ein, die eine Zeichenfolge mit allen vier Feldwerte zurückgibt.  
+  
+ [!code-csharp[System.Object.ToString#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.tostring/cs/tostringoverload1.cs#4)]
+ [!code-vb[System.Object.ToString#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.tostring/vb/tostringoverload1.vb#4)]  
+  
+ Das folgende Beispiel ruft den überladenen <xref:System.Decimal.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> Methode, um kulturabhängige Formatierung, der einen Währungswert anzuzeigen.  
+  
+ [!code-csharp[System.Object.ToString#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.tostring/cs/tostringoverload2.cs#5)]
+ [!code-vb[System.Object.ToString#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.tostring/vb/tostringoverload2.vb#5)]  
+  
+ Weitere Informationen zu Formatzeichenfolgen und kulturabhängige Formatierung, finden Sie unter [Formatierung von Typen](~/docs/standard/base-types/formatting-types.md). Die Formatzeichenfolgen, die von numerischen Werten unterstützt, finden Sie unter [Standard Numeric Format Strings](~/docs/standard/base-types/standard-numeric-format-strings.md) und [benutzerdefinierte Zahlenformatzeichenfolgen](~/docs/standard/base-types/custom-numeric-format-strings.md). Die Formatzeichenfolgen, die von Datums-und Uhrzeitwerte unterstützt, finden Sie unter [Standardformatbezeichner für Datum und Uhrzeit-Formatzeichenfolgen](~/docs/standard/base-types/standard-date-and-time-format-strings.md) und [benutzerdefinierte Datums- und Uhrzeit-Formatzeichenfolgen](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+<a name="Extending"></a>   
+## <a name="extending-the-objecttostring-method"></a>Erweitern Sie die Object.ToString-Methode  
+ Da den Standardwert erbt <xref:System.Object.ToString%2A?displayProperty=nameWithType> -Methode, können Sie finden Sie dessen Verhalten unerwünscht und ändern möchten. Dies gilt insbesondere dann von Arrays und Auflistungsklassen. Während Sie erwarten, dass möglicherweise die `ToString` Methode ein Array- oder Auflistungselement Klasse zum Anzeigen der Werte von Membern, zeigt er stattdessen der vollqualifizierte Typname, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[System.Object.ToString#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.tostring/cs/array1.cs#6)]
+ [!code-vb[System.Object.ToString#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.tostring/vb/array1.vb#6)]  
+  
+ Sie haben mehrere Optionen für die resultierende Zeichenfolge zu erzeugen, die Sie möchten.  
+  
+-   Wenn der Typ ist ein Array, ein Auflistungsobjekt oder ein Objekt, implementiert die <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601> Schnittstellen, Sie können die Elemente auflisten, mit der `foreach` -Anweisung in c# oder der `For Each...Next` in Visual Basic erstellen.  
+  
+-   Wenn die Klasse nicht `sealed` (in c#) oder `NotInheritable` (in Visual Basic) entwickeln Sie eine Wrapperklasse, die von der Basisklasse, deren erbt <xref:System.Object.ToString%2A?displayProperty=nameWithType> Methode, die Sie anpassen möchten. Mindestens erfordert dies, dass Sie die folgenden Schritte aus:  
+  
+    1.  Implementieren Sie keine Konstruktoren erforderlich. Abgeleitete Klassen erben nicht die Konstruktoren ihrer Basisklasse.  
+  
+    2.  Überschreiben Sie die <xref:System.Object.ToString%2A?displayProperty=nameWithType> Methode, um die Ergebniszeichenfolge zurückzugeben, die Sie möchten.  
+  
+     Das folgende Beispiel definiert eine Wrapperklasse für die <xref:System.Collections.Generic.List%601> Klasse. Es überschreibt die <xref:System.Object.ToString%2A?displayProperty=nameWithType> Methode, um den Wert der einzelnen Methoden der Auflistung und nicht den vollqualifizierten Typnamen anzuzeigen.  
+  
+     [!code-csharp[System.Object.ToString#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.tostring/cs/customize1.cs#7)]
+     [!code-vb[System.Object.ToString#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.tostring/vb/customize1.vb#7)]  
+  
+-   Entwickeln einer [Erweiterungsmethode](~/docs/standard/design-guidelines/extension-methods.md) , die die Ergebniszeichenfolge die gewünschten zurückgibt. Beachten Sie, dass Sie die Standardeinstellung außer Kraft setzen können nicht <xref:System.Object.ToString%2A?displayProperty=nameWithType> Methode auf diese Weise (d. h. der Erweiterungsklasse (in c#) oder des Moduls (in Visual Basic) sind keine parameterlose Methode, die mit dem Namen `ToString` , die anstelle des ursprünglichen Typs aufgerufen wird `ToString` Methode . Sie müssen einen anderen Namen für Ihre parameterlosen bieten `ToString` Ersatz.  
+  
+     Das folgende Beispiel definiert zwei Methoden, mit denen erweitert die <xref:System.Collections.Generic.List%601> Klasse: eine parameterlose `ToString2` -Methode, und ein `ToString` Methode mit einer <xref:System.String> Parameter, der eine Formatzeichenfolge darstellt.  
+  
+     [!code-csharp[System.Object.ToString#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.tostring/cs/customize2.cs#8)]
+     [!code-vb[System.Object.ToString#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.tostring/vb/customize2.vb#8)]  
+  
+<a name="WinRT"></a>   
+## <a name="notes-for-the-includewrtincludeswrt-mdmd"></a>Hinweise für die[!INCLUDE[wrt](~/includes/wrt-md.md)]  
+ Beim Aufrufen der <xref:System.Object.ToString%2A> Methode einer Klasse in der [!INCLUDE[wrt](~/includes/wrt-md.md)], es stellt das Standardverhalten für Klassen, die nicht außer Kraft setzen <xref:System.Object.ToString%2A>. Dies ist Teil der Unterstützung von .NET Framework für die [!INCLUDE[wrt](~/includes/wrt-md.md)] (siehe [.NET Framework Unterstützung für Windows Store-Apps und Windows-Runtime](~/docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)). Klassen in der [!INCLUDE[wrt](~/includes/wrt-md.md)] erben nicht <xref:System.Object>, und implementieren nicht immer eine <xref:System.Object.ToString%2A>. Allerdings immer erscheinen haben <xref:System.Object.ToString%2A>, <xref:System.Object.Equals%28System.Object%29>, und <xref:System.Object.GetHashCode%2A> Methoden, wenn Sie in c# oder Visual Basic-Code werden verwendet, und die .NET Framework ein Standardverhalten für diese Methoden bietet.  
+  
+ Beginnend mit der [!INCLUDE[net_v451](~/includes/net-v451-md.md)], verwendet die common Language Runtime [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) auf eine [!INCLUDE[wrt](~/includes/wrt-md.md)] Objekt vor dem Fallback auf die standardmäßige Implementierung des <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  [!INCLUDE[wrt](~/includes/wrt-md.md)]Klassen, die in c# oder Visual Basic geschrieben sind, können außer Kraft setzen die <xref:System.Object.ToString%2A> Methode.  
+  
+### <a name="the-includewrtincludeswrt-mdmd-and-the-istringable-interface"></a>Die [!INCLUDE[wrt](~/includes/wrt-md.md)] und der IStringable-Schnittstelle  
+ Beginnend mit [!INCLUDE[win81](~/includes/win81-md.md)], [!INCLUDE[wrt](~/includes/wrt-md.md)] enthält ein [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) Schnittstelle, deren einzige Methode, [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), eine grundlegende formatierungsunterstützung vergleichbar mit der bietet von bereitgestellten <xref:System.Object.ToString%2A?displayProperty=nameWithType>. Sie sollten nicht implementieren, um Mehrdeutigkeit zu vermeiden, [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) auf verwalteten Typen.  
+  
+ Wenn verwaltete Objekte aufgerufen werden, vom systemeigenen Code oder durch Code, die in Sprachen wie JavaScript oder C++ geschriebene c++ / CX können sie anscheinend implementieren [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx). Die common Language Runtime leitet die Aufrufe von automatisch [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) auf <xref:System.Object.ToString%2A?displayProperty=nameWithType> im Ereignis [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) nicht auf das verwaltete Objekt implementiert wird.  
+  
+> [!WARNING]
+>  Da die common Language Runtime automatisch-implementiert [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) für alle verwalteten Typen in [!INCLUDE[win8_appstore_long](~/includes/win8-appstore-long-md.md)] apps, es wird empfohlen, dass Sie keine eigene haben [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) Implementierung. Implementieren von [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) führen möglicherweise zu unerwartetem Verhalten, beim Aufrufen `ToString` aus der [!INCLUDE[wrt](~/includes/wrt-md.md)], C + c++ / CX oder JavaScript.  
+  
+ Wenn Sie sich entschließen, implementieren [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) in einem öffentlich verwalteten Typ, der im exportiert wird eine [!INCLUDE[wrt](~/includes/wrt-md.md)] Komponente, gelten die folgenden Einschränkungen:  
+  
+-   Sie können definieren, die [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) -Schnittstelle nur in einer "class Implements"-Beziehung, z. B.  
+  
+    ```  
+    public class NewClass : IStringable  
+    ```  
+  
+     in C# oder  
+  
+    ```  
+    Public Class NewClass : Implements IStringable  
+    ```  
+  
+     in Visual Basic.  
+  
+-   Sie können nicht implementieren [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) in einer Schnittstelle.  
+  
+-   Einen Parameter vom Typ kann nicht deklariert werden [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx).  
+  
+-   [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) kann nicht der Rückgabetyp einer Methode, eine Eigenschaft oder ein Feld sein.  
+  
+-   Sie können nicht ausgeblendet werden Ihre [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) Implementierung von Basisklassen mithilfe eine Methodendefinition wie die folgenden:  
+  
+    ```  
+  
+    public class NewClass : IStringable  
+    {  
+       public new string ToString()  
+       {  
+          return "New ToString in NewClass";  
+       }  
+    }  
+  
+    ```  
+  
+     Stattdessen die [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) Implementierung muss die basisklassenimplementierung immer überschreiben. Sie können eine `ToString`-Implementierung nur ausblenden, indem Sie sie auf einer stark typisierten Klasseninstanz aufrufen.  
+  
+ Beachten Sie, die unter bestimmten Bedingungen Aufrufe von systemeigenem Code zu einem verwalteten Typ, der implementiert [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) oder blendet Sie aus der [ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) Implementierung kann zu unerwartetem Verhalten führen.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie Ihre eigenen Typen implementieren, sollten Sie überschreiben die <see cref="M:System.Object.ToString" /> Methode, um Werte zurückzugeben, die für diese Typen von Bedeutung sind. Abgeleitete Klassen, die mehr Kontrolle über die Formatierung als erfordern <see cref="M:System.Object.ToString" /> bietet können implementieren die <see cref="T:System.IFormattable" /> Schnittstelle. Die <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" /> Methode ermöglicht es Ihnen, Formatzeichenfolgen zu definieren, Steuern der Formatierung, und verwendet eine <see cref="T:System.IFormatProvider" /> Objekt, das für kulturabhängige Formatierung bereitstellen kann.  
+  
+ Der überschreibt die <see cref="M:System.Object.ToString" /> Methode sollte die folgenden Richtlinien:  
+  
+-   Die zurückgegebene Zeichenfolge muss benutzerfreundliche und von Menschen lesbar.  
+  
+-   Die zurückgegebene Zeichenfolge muss den Wert der Objektinstanz eindeutig identifizieren.  
+  
+-   Die zurückgegebene Zeichenfolge sollte so kurz wie möglich sein, damit er für die Anzeige von einem Debugger geeignet ist.  
+  
+-   Ihre <see cref="M:System.Object.ToString" /> keine Außerkraftsetzung zurückgeben soll <see cref="F:System.String.Empty" /> oder eine null-Zeichenfolge.  
+  
+-   Ihre <see cref="M:System.Object.ToString" /> Außerkraftsetzung sollte keine Ausnahme ausgelöst.  
+  
+-   Wenn die angegebene Zeichenfolgendarstellung einer Instanz kulturabhängig ist oder auf verschiedene Weise formatiert werden kann, implementieren die <see cref="T:System.IFormattable" /> Schnittstelle.  
+  
+-   Wenn die zurückgegebene Zeichenfolge vertrauliche Informationen enthält, sollten Sie zuerst über die entsprechende Berechtigung anfordern. Wenn die Anforderung erfolgreich ist, können Sie die vertrauliche Informationen zurückgegeben. Andernfalls sollten Sie eine Zeichenfolge zurückgeben, die die vertrauliche Informationen ausschließt.  
+  
+-   Ihre <see cref="M:System.Object.ToString" /> überschreiben müssen keine Observable Nebeneffekte Komplikationen beim Debuggen zu vermeiden. Z. B. einen Aufruf der <see cref="M:System.Object.ToString" /> Methode sollte nicht den Wert der Instanzfelder ändern.  
+  
+-   Wenn der Typ eine Analysemethode implementiert (oder <see langword="Parse" /> oder <see langword="TryParse" /> -Methode, einen Konstruktor oder eine andere statische Methode, die eine Instanz des Typs aus einer Zeichenfolge instanziiert), Sie sollten sicherstellen, dass die zurückgegebene Zeichenfolge den <see cref="M:System.Object.ToString" /> Methode kann Folgendes sein Konvertiert eine Objektinstanz.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

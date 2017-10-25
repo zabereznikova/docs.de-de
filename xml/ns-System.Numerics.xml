@@ -1,0 +1,19 @@
+<Namespace Name="System.Numerics">
+  <Docs>
+    <summary>Die <see cref="N:System.Numerics" /> -Namespace enthält numerische Typen, die die numerischen primitiven, z. B. ergänzt <see cref="T:System.Byte" />, <see cref="T:System.Double" />, und <see cref="T:System.Int32" />, die von .NET definiert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Namespace enthält die folgenden Typen:  
+  
+-   Die <xref:System.Numerics.BigInteger> -Struktur, die einen nicht primitiven Ganzzahltyp ist, die beliebig große ganze Zahlen unterstützt. Ein integraler primitive Typ, z. B. <xref:System.Byte> oder <xref:System.Int32> enthält eine `MinValue` und eine `MaxValue` -Eigenschaft, die die unter- und Obergrenze, die von diesem Datentyp unterstützt definieren. Im Gegensatz dazu die <xref:System.Numerics.BigInteger> Struktur verfügt über keine unteren oder oberen Grenze und den Wert, der eine beliebige ganze Zahl enthalten.  
+  
+-   Die <xref:System.Numerics.Complex> -Struktur, die eine komplexe Zahl darstellt. Eine komplexe Zahl ist eine Zahl im Formular *eine* + *b*i, in denen *eine* ist der reelle Teil und *b* der imaginäre Teil.  
+  
+-   Die SIMD-fähigen vektortypen, darunter <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3>, <xref:System.Numerics.Vector4>, <xref:System.Numerics.Matrix3x2>, <xref:System.Numerics.Matrix4x4>, <xref:System.Numerics.Plane>, und <xref:System.Numerics.Quaternion>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

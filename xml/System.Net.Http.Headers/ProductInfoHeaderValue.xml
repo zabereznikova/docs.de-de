@@ -1,0 +1,346 @@
+<Type Name="ProductInfoHeaderValue" FullName="System.Net.Http.Headers.ProductInfoHeaderValue">
+  <TypeSignature Language="C#" Value="public class ProductInfoHeaderValue : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProductInfoHeaderValue extends System.Object implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.Headers.ProductInfoHeaderValue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Wert, der entweder ein Produkt oder einen Kommentar in einem Benutzer-Agent-Header werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Http.Headers.ProductInfoHeaderValue> Klasse bietet Unterstützung für das Produkt und Kommentar Token Werte, die in einem Benutzer-Agent-Header verwendet wird, gemäß [RFC 2616](http://go.microsoft.com/fwlink/?LinkID=241642) durch die IETF.  
+  
+ Das Feld Benutzer-Agent enthält Informationen zu dem Benutzeragent, der die Anforderung stammt. Das Feld kann mehrere Produkt Token und Kommentare, die Identifizierung der Benutzer-Agent und jeder untergeordnete Produkte enthalten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProductInfoHeaderValue (System.Net.Http.Headers.ProductHeaderValue product);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Http.Headers.ProductHeaderValue product) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ProductInfoHeaderValue.#ctor(System.Net.Http.Headers.ProductHeaderValue)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="product" Type="System.Net.Http.Headers.ProductHeaderValue" />
+      </Parameters>
+      <Docs>
+        <param name="product">Ein <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" /> Objekt, das zum Initialisieren der neuen Instanz verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProductInfoHeaderValue (string comment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string comment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ProductInfoHeaderValue.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="comment" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="comment">Ein kommentarwert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProductInfoHeaderValue (string productName, string productVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string productName, string productVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ProductInfoHeaderValue.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="productName" Type="System.String" />
+        <Parameter Name="productVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="productName">Der Product Name-Wert.</param>
+        <param name="productVersion">Der Product-Version-Wert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comment">
+      <MemberSignature Language="C#" Value="public string Comment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comment" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.ProductInfoHeaderValue.Comment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Kommentar aus dem <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Objekt ab.</summary>
+        <value>Der Kommentarwert ist <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ProductInfoHeaderValue.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dem aktuellen Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Object" /> und das aktuelle <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see cref="T:System.Object" /> gleich dem aktuellen Objekt ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ProductInfoHeaderValue.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für ein <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Objekt.</summary>
+        <returns>Ein Hashcode für das aktuelle Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Hashcode ist ein numerischer Wert, der zum Identifizieren eines Objekts während der Gleichheitstests der auf verwendet wird. Es kann auch als Index für ein Objekt in einer Auflistung dienen.  
+  
+ Die <xref:System.Net.Http.Headers.ProductInfoHeaderValue.GetHashCode%2A> Methode eignet sich für die Verwendung in Hashalgorithmen und Datenstrukturen wie Hashtabellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.Headers.ProductInfoHeaderValue Parse (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Http.Headers.ProductInfoHeaderValue Parse(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ProductInfoHeaderValue.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.Headers.ProductInfoHeaderValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">Eine Zeichenfolge, die Produktinfo- Headerwertinformationen darstellt.</param>
+        <summary>Konvertiert eine Zeichenfolge in eine <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Instanz.</summary>
+        <returns>Eine <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="input" /> ist ein <see langword="null" />-Verweis.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="input" /> ist keine gültige Produktinfo- Headerwertinformation.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Product">
+      <MemberSignature Language="C#" Value="public System.Net.Http.Headers.ProductHeaderValue Product { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Http.Headers.ProductHeaderValue Product" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.ProductInfoHeaderValue.Product" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.Headers.ProductHeaderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Produkt aus dem <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Objekt ab.</summary>
+        <value>Der Produktwert aus diesem <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ProductInfoHeaderValue.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Instanz ist.</summary>
+        <returns>Eine Kopie der aktuellen Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ProductInfoHeaderValue.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (string input, out System.Net.Http.Headers.ProductInfoHeaderValue parsedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(string input, [out] class System.Net.Http.Headers.ProductInfoHeaderValue&amp; parsedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ProductInfoHeaderValue.TryParse(System.String,System.Net.Http.Headers.ProductInfoHeaderValue@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="parsedValue" Type="System.Net.Http.Headers.ProductInfoHeaderValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu überprüfende Zeichenfolge.</param>
+        <param name="parsedValue">Die <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Version der Zeichenfolge.</param>
+        <summary>Bestimmt, ob eine Zeichenfolge eine gültige <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Information ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="input" /> eine gültige <see cref="T:System.Net.Http.Headers.ProductInfoHeaderValue" />-Information ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

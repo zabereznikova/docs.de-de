@@ -1,0 +1,329 @@
+<Type Name="EndpointDispatcher" FullName="System.ServiceModel.Dispatcher.EndpointDispatcher">
+  <TypeSignature Language="C#" Value="public sealed class EndpointDispatcher" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EndpointDispatcher extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.EndpointDispatcher" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Entspricht dem Laufzeitobjekt, das Eigenschaften verfügbar macht, durch die das Einfügen von Laufzeiterweiterungen oder Änderungen für Nachrichten in Dienstanwendungen ermöglicht wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Klasse und die <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType>-Klasse machen die Laufzeitanpassungspunkte für Endpunkte in einem Dienst verfügbar. Der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> kann verwendet werden, um die Nachrichten, die er verarbeiten kann, und bestimmte auf den Endpunkt bezogene Informationen zu steuern. Die <xref:System.ServiceModel.Dispatcher.DispatchRuntime> verfügt über eine große Anzahl von Eigenschaften, die verwendet werden, um benutzerdefinierte Erweiterungen in die endpunktweite Laufzeit einzufügen.  
+  
+ Das <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Objekt ist verantwortlich für das Verarbeiten von Nachrichten von einem <xref:System.ServiceModel.Dispatcher.ChannelDispatcher?displayProperty=nameWithType>, wenn die Zieladresse einer Nachricht mit der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>-Eigenschaft übereinstimmt und die Nachrichtenaktion mit der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>-Eigenschaft übereinstimmt. Wenn zwei <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Objekte eine Nachricht akzeptieren können, bestimmt der Wert der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A>-Eigenschaft den Endpunkt mit höherer Priorität.  
+  
+ Verwenden Sie das <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Objekt, um den Prozess des Empfangs von Nachrichten vom zugeordneten <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> zu konfigurieren oder zu erweitern, wobei Nachrichtenobjekte in als Parameter verwendete Objekte konvertiert werden und ein Endpunktvorgang sowie der umgekehrte Vorgang aufgerufen werden.  
+  
+ In der Regel wird der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> für einen Endpunkt durch Implementieren der <xref:System.ServiceModel.Description.IEndpointBehavior>-Schnittstelle ermittelt, aber Sie können auch von anderen Verhaltensschnittstellen auf den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> zugreifen.  
+  
+ Die folgenden <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Eigenschaften können verwendet werden:  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>-Eigenschaft ermöglicht es, ein <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekt abzurufen oder festzulegen, das der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ChannelDispatcher%2A> verwendet, um zu ermitteln, ob der Endpunkt eine bestimmte Nachricht verarbeiten kann.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ChannelDispatcher%2A>-Eigenschaft ruft das zugeordnete <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>-Objekt ab, das Nachrichten an den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> sendet und von diesem empfängt und das verwendet werden kann, um andere auf den Kanal bezogene Werte und Verhaltensweisen zu überprüfen oder zu ändern.  
+  
+-   Der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> ruft das <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekt ab, das verwendet wird, um zu ermitteln, ob eine Nachricht für diesen Vertrag bestimmt ist.  
+  
+-   Die Eigenschaften <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractName%2A> und <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractNamespace%2A> geben den Namen und den Namespace des Endpunktvertrags zurück.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A>-Eigenschaft gibt das <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Objekt zurück, das Sie verwenden können, um Laufzeitwerte zu ändern oder benutzerdefinierte Laufzeiterweiterungen für den gesamten Endpunkt einzufügen.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.EndpointAddress%2A>-Eigenschaft ruft die Adresse des Endpunkts ab.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A>-Eigenschaft gibt die Priorität des zusammengesetzten Filters zurück, den der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ChannelDispatcher%2A> verwendet, um den Endpunkt zu ermitteln, der die Nachricht verarbeiten soll.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> zum Suchen nach der <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType> für den Endpunkt verwendet wird. Außerdem wird ein benutzerdefinierter Nachrichteninspektor unter Verwendung eines Endpunktverhaltens eingefügt.  
+  
+ [!code-csharp[IEndpointBehavior#4](~/samples/snippets/csharp/VS_Snippets_CFX/iendpointbehavior/cs/iendpointbehaviormessageinspector.cs#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointDispatcher (System.ServiceModel.EndpointAddress address, string contractName, string contractNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointAddress address, string contractName, string contractNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.EndpointDispatcher.#ctor(System.ServiceModel.EndpointAddress,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="contractName" Type="System.String" />
+        <Parameter Name="contractNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="address">Die Endpunktadresse.</param>
+        <param name="contractName">Der Name des Endpunktvertrags.</param>
+        <param name="contractNamespace">Der Namespace des Endpunktvertrags.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.EndpointDispatcher" />-Klasse mit der angegebenen Adresse und dem angegebenen Namen und Namespace des Vertrags.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, um einen Endpunkt zu erstellen, der sich nicht in der Beschreibung befindet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointDispatcher (System.ServiceModel.EndpointAddress address, string contractName, string contractNamespace, bool isSystemEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointAddress address, string contractName, string contractNamespace, bool isSystemEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.EndpointDispatcher.#ctor(System.ServiceModel.EndpointAddress,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="contractName" Type="System.String" />
+        <Parameter Name="contractNamespace" Type="System.String" />
+        <Parameter Name="isSystemEndpoint" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="address">Die Endpunktadresse.</param>
+        <param name="contractName">Der Name des Endpunktvertrags.</param>
+        <param name="contractNamespace">Der Namespace des Endpunktvertrags.</param>
+        <param name="isSystemEndpoint">
+          <see langword="true" />um anzugeben, dass der Endpunkt intern vom Server und nicht vom Benutzer erstellt wird. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.EndpointDispatcher" />-Klasse mit der angegebenen Adresse, dem Vertragsnamen, dem Namespace des Vertrags und der Angabe, ob der Endpunkt ein öffentlicher Systemendpunkt ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressFilter">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.MessageFilter AddressFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.MessageFilter AddressFilter" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.MessageFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />-Objekt ab oder legt dieses fest, das verwendet wird, um zu ermitteln, ob eine bestimmte Nachricht für die Endpunktadresse bestimmt ist.</summary>
+        <value>Der Adressfilter, der verwendet wird, um die Nachricht an den entsprechenden Endpunkt weiterzuleiten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher?displayProperty=nameWithType> hat einen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> für jeden Endpunkt, den der Kanal unterstützen kann. Die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>-Eigenschaft ist ein <xref:System.ServiceModel.Dispatcher.MessageFilter?displayProperty=nameWithType>-Objekt, das mit der Zielendpunktadresse der Nachricht übereinstimmt. Der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> kombiniert den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>-Wert mit dem <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>-Wert, um zu ermitteln, ob eine Nachricht an diesen Endpunkt weitergeleitet werden soll.  
+  
+ Falls zwei passende <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Objekte eine Nachricht verarbeiten können, wird die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A>-Eigenschaft verwendet, um einen Endpunkt auszuwählen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelDispatcher">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.ChannelDispatcher ChannelDispatcher { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.ChannelDispatcher ChannelDispatcher" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.ChannelDispatcher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.ChannelDispatcher</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das zugeordnete <see cref="T:System.ServiceModel.Dispatcher.ChannelDispatcher" />-Objekt ab, das verwendet werden kann, um andere auf den Kanal bezogene Werte und Verhaltensweisen zu überprüfen oder zu ändern.</summary>
+        <value>Der Kanalverteiler, der verwendet werden kann, um andere auf den Kanal bezogene Werte und Verhaltensweisen zu überprüfen oder zu ändern.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>-Objekt empfängt eine Nachricht von einem Kanal und verwendet die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>-Eigenschaft, die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>-Eigenschaft und die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A>-Eigenschaft, um zu ermitteln durch welchen Endpunkt die Nachricht verarbeitet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractFilter">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.MessageFilter ContractFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.MessageFilter ContractFilter" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.MessageFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />-Objekt ab oder legt dieses fest, das verwendet wird, um zu ermitteln, ob eine Nachricht für diesen Vertrag bestimmt ist.</summary>
+        <value>Der Filter, der verwendet wird, um Nachrichten an den entsprechenden Vertrag weiterzuleiten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>-Eigenschaft ist ein <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekt, das mit der Aktion einer Nachricht abgeglichen wird. Der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> kombiniert den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>-Wert mit dem <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>-Wert, um zu ermitteln, ob eine Nachricht an diesen Endpunkt weitergeleitet werden soll.  
+  
+ Falls zwei passende <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Objekte eine Nachricht verarbeiten können, wird die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A>-Eigenschaft verwendet, um einen Endpunkt auszuwählen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractName">
+      <MemberSignature Language="C#" Value="public string ContractName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContractName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Endpunktvertrags ab.</summary>
+        <value>Der Name des Endpunktvertrags.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractNamespace">
+      <MemberSignature Language="C#" Value="public string ContractNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContractNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace des Endpunktvertrags ab.</summary>
+        <value>Der Namespace des Endpunktvertrags.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DispatchRuntime">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.DispatchRuntime DispatchRuntime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.DispatchRuntime DispatchRuntime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.DispatchRuntime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.ServiceModel.Dispatcher.DispatchRuntime" />-Objekt ab, das verwendet wird, um das Laufzeitverhalten in einem Dienstendpunkt oder einem Clientrückruf-Endpunkt zu prüfen, zu ändern oder zu erweitern.</summary>
+        <value>Das <see cref="P:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime" />-Objekt, das verwendet wird, um das Laufzeitverhalten in einem Dienstendpunkt oder einem Clientrückruf-Endpunkt zu prüfen, zu ändern oder zu erweitern.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A>-Eigenschaft, um das <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Objekt zu ermitteln, das Sie verwenden können, um Laufzeitwerte zu ändern oder benutzerdefinierte Laufzeiterweiterungen für den gesamten Endpunkt einzufügen. Von der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A>-Eigenschaft können Sie auch zur <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType>-Auflistung für den Endpunkt navigieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> zum Suchen nach der <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType> für den Endpunkt verwendet wird. Außerdem wird ein benutzerdefinierter Nachrichteninspektor unter Verwendung eines Endpunktverhaltens eingefügt.  
+  
+ [!code-csharp[IEndpointBehavior#4](~/samples/snippets/csharp/VS_Snippets_CFX/iendpointbehavior/cs/iendpointbehaviormessageinspector.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress EndpointAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress EndpointAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.EndpointAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Adresse des Endpunkts ab.</summary>
+        <value>Die Adresse des Endpunkts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterPriority">
+      <MemberSignature Language="C#" Value="public int FilterPriority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FilterPriority" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Priorität der Kombination von <see cref="P:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter" /> und <see cref="P:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter" /> ab bzw. legt diese fest, wenn der <see cref="P:System.ServiceModel.Dispatcher.EndpointDispatcher.ChannelDispatcher" /> Endpunkte auswählt.</summary>
+        <value>Die Priorität des Filters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> kombiniert den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>-Wert mit dem <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>-Wert, um zu ermitteln, ob eine Nachricht an diesen Endpunkt weitergeleitet werden soll.  
+  
+ Falls zwei passende <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Objekte eine Nachricht verarbeiten können, wird die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A>-Eigenschaft verwendet, um einen Endpunkt auszuwählen.  
+  
+ Wenn zwei Endpunkte eine Nachricht verarbeiten können und der Wert ihrer <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A>-Eigenschaft übereinstimmt, wird eine <xref:System.ServiceModel.Dispatcher.MultipleFilterMatchesException?displayProperty=nameWithType> ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSystemEndpoint">
+      <MemberSignature Language="C#" Value="public bool IsSystemEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSystemEndpoint" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.IsSystemEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Endpunkt intern vom Server und nicht vom Benutzer erstellt wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Endpunkt vom System generiert wurde. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

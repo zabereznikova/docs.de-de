@@ -1,0 +1,2980 @@
+<Type Name="InkCanvas" FullName="System.Windows.Controls.InkCanvas">
+  <TypeSignature Language="C#" Value="public class InkCanvas : System.Windows.FrameworkElement, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi InkCanvas extends System.Windows.FrameworkElement implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.InkCanvas" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Children")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert einen Bereich, der empfängt und Strichen anzeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.InkCanvas> ist ein Element, das zum Empfangen und Anzeigen von Freihandeingaben verwendet werden kann. Dies erfolgt häufig durch die Verwendung von einem Tablettstift, die Interaktion mit einem Digitizer befindet, um ein Stift oder eine Maus mit Strichen zu erzeugen. Die erstellten Striche werden als dargestellt <xref:System.Windows.Ink.Stroke> Objekte und kann basierend auf Benutzereingaben oder programmgesteuert bearbeitet. Die <xref:System.Windows.Controls.InkCanvas> ermöglicht Benutzern das Ändern oder Löschen eines vorhandenen <xref:System.Windows.Ink.Stroke>.  
+  
+ Die <xref:System.Windows.Controls.InkCanvas> an eine Datenquelle gebunden werden kann. Sie können z. B. Binden der <xref:System.Windows.Controls.InkCanvas.Strokes%2A> Eigenschaft: eine Base-64-codierte Zeichenfolge, die Freihandeingaben enthält Daten in Ink Serialized format (ISF); oder sogar die <xref:System.Windows.Controls.InkCanvas.Strokes%2A> Eigenschaft eines anderen <xref:System.Windows.Controls.InkCanvas>. Sie können auch Eigenschaften, z. B. binden <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> und <xref:System.Windows.Controls.InkCanvas.EditingMode%2A>, für andere Datenquellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Verwendung eines Stiftes und eine Hervorhebung auf dem gleichen simulieren <xref:System.Windows.Controls.InkCanvas>. Im Beispiel wird davon ausgegangen, dass das Stammelement in der Markup Language (XAML)-Datei ist eine <xref:System.Windows.Controls.DockPanel> aufgerufen `root`. Außerdem wird angenommen, dass es ist ein <xref:System.Windows.Controls.Button> aufgerufen `switchHighlighter` und sowohl die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> und <xref:System.Windows.FrameworkElement.Loaded> Ereignisse mit der Beispiel-Ereignishandler verbunden sind.  
+  
+ [!code-csharp[DrawingAttributes#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingAttributes/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[DrawingAttributes#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingAttributes/VisualBasic/Window1.xaml.vb#3)]  
+  
+ Das folgende Beispiel deklariert zwei <xref:System.Windows.Controls.InkCanvas> -Objekte in XAML und stellt die Datenbindung zwischen ihnen und anderen Datenquellen her. Die erste <xref:System.Windows.Controls.InkCanvas>namens `ic`, mit zwei Datenquellen gebunden ist. Die <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> und <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> Eigenschaften auf `ic` gebunden <xref:System.Windows.Controls.ListBox> Objekte, die wiederum in der XAML-definierte Arrays gebunden sind,. Die <xref:System.Windows.Controls.InkCanvas.EditingMode%2A>, <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>, und <xref:System.Windows.Controls.InkCanvas.Strokes%2A> Eigenschaften des zweiten <xref:System.Windows.Controls.InkCanvas> gebunden sind mit dem ersten <xref:System.Windows.Controls.InkCanvas> in den folgenden Code.  
+  
+ [!code-xaml[InkCanvasBindingSnippet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window1.xaml#1)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InkCanvas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der InkCanvas-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveEditingMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.InkCanvasEditingMode ActiveEditingMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.InkCanvasEditingMode ActiveEditingMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.ActiveEditingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.InkCanvasEditingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Bearbeitungsmodus der <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>Der aktuelle Bearbeitungsmodus des der <see cref="T:System.Windows.Controls.InkCanvas" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.InkCanvas.ActiveEditingMode%2A> Eigenschaft gibt das aktuelle <xref:System.Windows.Controls.InkCanvasEditingMode> von der <xref:System.Windows.Controls.InkCanvas>.  Nehmen wir an, die die <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> festgelegt ist, um <xref:System.Windows.Controls.InkCanvasEditingMode.Ink> und <xref:System.Windows.Controls.InkCanvas.EditingModeInverted%2A> auf festgelegt ist <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>.  Wenn der Tablettstift in einer invertierten Position verwendet wird <xref:System.Windows.Controls.InkCanvas.ActiveEditingMode%2A> hat den Wert <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>. Andernfalls wird der Wert <xref:System.Windows.Controls.InkCanvasEditingMode.Ink>.  
+  
+<a name="dependencyPropertyInfo_ActiveEditingMode"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkCanvas.ActiveEditingModeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird der Wert von <xref:System.Windows.Controls.InkCanvas.ActiveEditingMode%2A> sobald er sich ändert.  
+  
+ [!code-csharp[InkCanvasSamples#36](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#36)]
+ [!code-vb[InkCanvasSamples#36](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#36)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveEditingModeChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler ActiveEditingModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler ActiveEditingModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.ActiveEditingModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der aktuelle Bearbeitungsmodus ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.InkCanvas.ActiveEditingMode%2A> Eigenschaft ändert, wenn die <xref:System.Windows.Controls.InkCanvas> wird eine neue Bearbeitungsmodus. Nehmen wir beispielsweise an, die die <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> festgelegt ist, um <xref:System.Windows.Controls.InkCanvasEditingMode.Ink> und die <xref:System.Windows.Controls.InkCanvas.EditingModeInverted%2A> festgelegt ist, um <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>. Wenn der Benutzer mit die Spitze des Tablettstifts ändert die <xref:System.Windows.Controls.InkCanvas.ActiveEditingModeChanged> Ereignis auftritt.  
+  
+<a name="routedEventInfo_ActiveEditingModeChanged"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkCanvas.ActiveEditingModeChangedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird der Wert von <xref:System.Windows.Controls.InkCanvas.ActiveEditingMode%2A> sobald er sich ändert.  
+  
+ [!code-csharp[InkCanvasSamples#36](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#36)]
+ [!code-vb[InkCanvasSamples#36](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#36)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveEditingModeChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ActiveEditingModeChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ActiveEditingModeChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.ActiveEditingModeChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.InkCanvas.ActiveEditingModeChanged" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveEditingModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ActiveEditingModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ActiveEditingModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.ActiveEditingModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.InkCanvas.ActiveEditingMode" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">Der letzte Bereich im übergeordneten Element, den dieses Element verwenden soll, um sich selbst und seine untergeordneten Elemente anzuordnen.</param>
+        <summary>Positioniert untergeordnete Elemente und bestimmt die Größe für das <see cref="T:System.Windows.Controls.InkCanvas" />-Objekt.</summary>
+        <returns>Die tatsächlich verwendete Größe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Background { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Background" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.Background" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Media.Brush" />. Der Pinsel wird verwendet, um die Rahmen Bereich umgebenden Füllen einer <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.Brush" /> zum Füllen der Bereich umgebenden Rahmen eine <see cref="T:System.Windows.Controls.InkCanvas" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Background"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkCanvas.BackgroundProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Controls.InkCanvas.Background%2A> Eigenschaft auf eine <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#37](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#37)]
+ [!code-vb[InkCanvasSamples#37](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#37)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.BackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.InkCanvas.Background" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BottomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BottomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.BottomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.InkCanvas.Bottom" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanPaste">
+      <MemberSignature Language="C#" Value="public bool CanPaste ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanPaste() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.CanPaste" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob der Inhalt der Zwischenablage in eingefügt werden, können die <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der Inhalt der Zwischenablage eingefügt werden können; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.InkCanvas> kann Daten in der Zwischenablage unterstützen [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Format [!INCLUDE[TLA#tla_isf](~/includes/tlasharptla-isf-md.md)], und Text-Format.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Element in die Zwischenablage kopiert und fügt sie an der <xref:System.Windows.Controls.InkCanvas>. In diesem Beispiel wird davon ausgegangen, dass ein aufgerufen Element `rect1`, und dass die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignisse an die Ereignishandler im Beispiel angeschlossen wurden.  
+  
+ [!code-csharp[InkCanvasSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[InkCanvasSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Berechtigung zum Einfügen von Inhalt aus der Zwischenablage in die <see cref="T:System.Windows.Controls.InkCanvas" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.UIElementCollection Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.UIElementCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.UIElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die untergeordneten Elemente des ab der <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>Eine Auflistung von untergeordneten Elementen befindet sich auf die <see cref="T:System.Windows.Controls.InkCanvas" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_Children"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  OneOrMoreUIElements  
+</object>  
+```  
+  
+<a name="xamlValues_Children"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *OneOrMoreUIElements*  
+ Eine oder mehrere <xref:System.Windows.UIElement> Objekte.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Controls.TextBlock> auf eine <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#8)]
+ [!code-vb[InkCanvasSamples#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopySelection">
+      <MemberSignature Language="C#" Value="public void CopySelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopySelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.CopySelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kopiert ausgewählte Striche und/oder Elemente in die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.InkCanvas> kann Daten in der Zwischenablage unterstützen [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Format [!INCLUDE[TLA#tla_isf](~/includes/tlasharptla-isf-md.md)], und Text-Format. Striche in der Zwischenablage befinden sich beide [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Format [!INCLUDE[TLA#tla_isf](~/includes/tlasharptla-isf-md.md)].  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wählt zwei Elemente auf einer <xref:System.Windows.Controls.InkCanvas> und kopiert sie in die Zwischenablage. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBox> aufgerufen `textbox1` und ein <xref:System.Windows.Controls.Button> aufgerufen `button1 -` und Thatboth-Steuerelemente sind untergeordnete Elemente von der <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[InkCanvasSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CutSelection">
+      <MemberSignature Language="C#" Value="public void CutSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CutSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.CutSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die ausgewählten Striche und Elemente, und kopiert sie in die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.InkCanvas> kann Daten in der Zwischenablage unterstützen [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Format [!INCLUDE[TLA#tla_isf](~/includes/tlasharptla-isf-md.md)], und Text-Format. Striche in der Zwischenablage befinden sich beide [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Format [!INCLUDE[TLA#tla_isf](~/includes/tlasharptla-isf-md.md)].  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wählt aus, und schneidet zwei Elemente auf einer <xref:System.Windows.Controls.InkCanvas>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBox> aufgerufen `textbox1` und ein <xref:System.Windows.Controls.Button> aufgerufen `button1` - und, dass beide Steuerelemente über untergeordnete Elemente von der <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#4)]
+ [!code-vb[InkCanvasSamples#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDrawingAttributes">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.DrawingAttributes DefaultDrawingAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Ink.DrawingAttributes DefaultDrawingAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.DrawingAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichnungsattribute auf neue Strichen vorgenommen werden, auf die angewendeten der <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>Die Standardeinstellung Zeichnungsattribute für die <see cref="T:System.Windows.Controls.InkCanvas" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft wirkt sich auf nur neue Striche aus, die vorgenommen werden, nachdem diese Eigenschaft festgelegt ist. Neue Zeichnungsattribute für bereits erstellte anzuwendende <xref:System.Windows.Ink.Stroke> Zugriff auf Objekte, sie einzeln mithilfe der <xref:System.Windows.Controls.InkCanvas.Strokes%2A> Eigenschaft.  
+  
+<a name="dependencyPropertyInfo_DefaultDrawingAttributes"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributesProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zwei <xref:System.Windows.Ink.DrawingAttributes> -Objekten, die Erfahrung beim Verwenden eines Stiftes und eine Hervorhebung auf dem gleichen simulieren <xref:System.Windows.Controls.InkCanvas>. Im Beispiel wird davon ausgegangen, dass das Stammelement in der Markup Language (XAML)-Datei ist eine <xref:System.Windows.Controls.DockPanel> aufgerufen `root`. Außerdem wird angenommen, dass es ist ein <xref:System.Windows.Controls.Button> aufgerufen `switchHilighter` und dass die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis an den Ereignishandler verbunden ist.  
+  
+ [!code-csharp[DrawingAttributes#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingAttributes/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[DrawingAttributes#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingAttributes/VisualBasic/Window1.xaml.vb#3)]  
+  
+ Das folgende Beispiel veranschaulicht das Binden der <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> Eigenschaft mit einer Datenquelle.  
+  
+ [!code-xaml[InkCanvasBindingSnippet#3](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window2.xaml#3)]  
+ [!code-xaml[InkCanvasBindingSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window2.xaml#4)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDrawingAttributesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DefaultDrawingAttributesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DefaultDrawingAttributesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.DefaultDrawingAttributesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDrawingAttributesReplaced">
+      <MemberSignature Language="C#" Value="public event System.Windows.Ink.DrawingAttributesReplacedEventHandler DefaultDrawingAttributesReplaced;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Ink.DrawingAttributesReplacedEventHandler DefaultDrawingAttributesReplaced" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.DefaultDrawingAttributesReplaced" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.DrawingAttributesReplacedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes" /> Eigenschaft ersetzt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel überprüft den Wert der <xref:System.Windows.Ink.DrawingAttributes.IsHighlighter%2A> -Eigenschaft der neuen <xref:System.Windows.Ink.DrawingAttributes> Objekt.  
+  
+ [!code-csharp[DrawingAttributes#17](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingAttributes/CSharp/Window1.xaml.cs#17)]
+ [!code-vb[DrawingAttributes#17](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingAttributes/VisualBasic/Window1.xaml.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultStylusPointDescription">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StylusPointDescription DefaultStylusPointDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.StylusPointDescription DefaultStylusPointDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.DefaultStylusPointDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschreibung der Tablettstift für eine <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>Beschreibung der Tablettstift für eine <see cref="T:System.Windows.Controls.InkCanvas" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Controls.InkCanvas> speichert nur die <xref:System.Windows.Input.StylusPointProperties.X>, <xref:System.Windows.Input.StylusPointProperties.Y>, und <xref:System.Windows.Input.StylusPointProperties.NormalPressure> Eigenschaften für die einzelnen <xref:System.Windows.Input.StylusPoint> eines Strichs. Sie können die DefaultStylusPointDescription-Eigenschaft verwenden, um zusätzliche Informationen zu den Punkten, umfasst die Striche auf Speichern einer <xref:System.Windows.Controls.InkCanvas>. Durch Festlegen dieser Eigenschaft wirkt sich auf nur neue Striche aus, die vorgenommen werden, nachdem die Eigenschaft festgelegt ist.  
+  
+<a name="xamlTextUsage_DefaultStylusPointDescription"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Sie können keine diese Eigenschaft in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Controls.InkCanvas.DefaultStylusPointDescription%2A> , damit der Tablettstiftpunkte Striche auf dem <xref:System.Windows.Controls.InkCanvas> enthalten die <xref:System.Windows.Input.StylusPointProperties.X>, <xref:System.Windows.Input.StylusPointProperties.Y>, <xref:System.Windows.Input.StylusPointProperties.NormalPressure>, und <xref:System.Windows.Input.StylusPointProperties.TipButton> Eigenschaften.  
+  
+> [!NOTE]
+>  Nur die Striche, die hinzugefügt werden, die <xref:System.Windows.Controls.InkCanvas> nach der <xref:System.Windows.Controls.InkCanvas.DefaultStylusPointDescription%2A> enthalten die zusätzliche Eigenschaft festgelegt ist.  
+  
+ [!code-csharp[InkCanvasSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#9)]
+ [!code-vb[InkCanvasSamples#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicRenderer">
+      <MemberSignature Language="C#" Value="protected System.Windows.Input.StylusPlugIns.DynamicRenderer DynamicRenderer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.StylusPlugIns.DynamicRenderer DynamicRenderer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.DynamicRenderer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPlugIns.DynamicRenderer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest den Renderer, die dynamisch Zeichnet Freihandeingaben der <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>Der Renderer, der dynamisch Freihand zeichnet auf die <see cref="T:System.Windows.Controls.InkCanvas" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können festlegen, die <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> Eigenschaft für eine benutzerdefinierte <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Wenn Freihandeingaben angepasst werden soll.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> ist ein Mitglied der <xref:System.Windows.UIElement.StylusPlugIns%2A> Auflistung. Beim Festlegen der <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>, <xref:System.Windows.Controls.InkCanvas> entfernt die alte <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> aus der <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> und fügt den neuen <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> an das Ende der Auflistung. Dies kann das Verhalten der Ändern der <xref:System.Windows.Controls.InkCanvas>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.InkCanvasEditingMode EditingMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.InkCanvasEditingMode EditingMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.EditingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.InkCanvasEditingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Benutzer Vorlagenbearbeitungsmodus, die von einem aktiven Zeigegerät verwendet.</summary>
+        <value>Der Bearbeitungsmodus verwendet, wenn ein Zeigegerät (z. B. einem Tablettstift oder der Maus) aktiv ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung für <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> ist <xref:System.Windows.Controls.InkCanvasEditingMode.Ink>. Ändern der <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> löscht keine vorhandenen Auswahl.  
+  
+ Die <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> gibt den Modus des Zeigegeräts bei der Interaktion mit der <xref:System.Windows.Controls.InkCanvas>. <xref:System.Windows.Controls.InkCanvas.EditingModeInverted%2A>wird von einigen Digitizer verwendet werden, wenn "Radiererende" der Stift den Digitizer bewegt Kontakt aufnimmt.  
+  
+<a name="dependencyPropertyInfo_EditingMode"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkCanvas.EditingModeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Anwendung, die verschiedenen Typen von Bearbeitungsmodi auf verwendet, eine <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[ICEditingModeSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ICEditingModeSample/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ICEditingModeSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ICEditingModeSample/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingModeChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler EditingModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler EditingModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.EditingModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Windows.Controls.InkCanvas.EditingMode" /> Eigenschaft ein <see cref="T:System.Windows.Controls.InkCanvas" /> Objekt geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, nachdem der Bearbeitungsmodus geändert wurde; die Änderungen werden angezeigt, der <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> Eigenschaft von der <xref:System.Windows.Controls.InkCanvas>.  
+  
+<a name="routedEventInfo_EditingModeChanged"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkCanvas.EditingModeChangedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird überprüft, ob die <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.InkCanvasEditingMode.Ink> oder <xref:System.Windows.Controls.InkCanvasEditingMode.Select>.  
+  
+ [!code-csharp[InkCanvasSamples#21](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#21)]
+ [!code-vb[InkCanvasSamples#21](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingModeChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent EditingModeChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent EditingModeChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.EditingModeChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.InkCanvas.EditingModeChanged" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingModeInverted">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.InkCanvasEditingMode EditingModeInverted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.InkCanvasEditingMode EditingModeInverted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.EditingModeInverted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.InkCanvasEditingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Benutzer Vorlagenbearbeitungsmodus, wenn der Tablettstift umgekehrt wird, bei der Interaktion der <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>Der invertierte Bearbeitungsmodus des der <see cref="T:System.Windows.Controls.InkCanvas" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft steuert die Aktionen, die ausgeführt werden, wenn der Tablettstift umgekehrt ist.  
+  
+ Auf ähnliche Weise die <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> Eigenschaft steuert Aktionen, die ausgeführt werden, wenn der Tablettstift in einer standardmäßigen, Tipp Dropdownelement Position für den Digitizer bewegt wird.  
+  
+<a name="dependencyPropertyInfo_EditingModeInverted"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkCanvas.EditingModeInvertedProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie damit einen Benutzer Striche teilweise mit der invertierte Spitze des Tablettstifts löschen kann. Ein elliptischer Cursor angezeigt, auf die <xref:System.Windows.Controls.InkCanvas> Wenn der Benutzer Freihandeingaben löscht.  
+  
+ [!code-csharp[InkCanvasSamples#6](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#6)]
+ [!code-vb[InkCanvasSamples#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingModeInvertedChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler EditingModeInvertedChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler EditingModeInvertedChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.EditingModeInvertedChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Windows.Controls.InkCanvas.EditingModeInverted" /> Eigenschaft ein <see cref="T:System.Windows.Controls.InkCanvas" /> Objekt geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, nachdem der invertierte Bearbeitungsmodus geändert wurde. Diese Änderungen werden der <xref:System.Windows.Controls.InkCanvas.EditingModeInverted%2A> Eigenschaft von der <xref:System.Windows.Controls.InkCanvas>.  
+  
+<a name="routedEventInfo_EditingModeInvertedChanged"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkCanvas.EditingModeInvertedChangedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird überprüft, ob die <xref:System.Windows.Controls.InkCanvas.EditingModeInverted%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint> oder <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByStroke>.  
+  
+ [!code-csharp[InkCanvasSamples#20](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#20)]
+ [!code-vb[InkCanvasSamples#20](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingModeInvertedChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent EditingModeInvertedChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent EditingModeInvertedChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.EditingModeInvertedChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.InkCanvas.EditingModeInvertedChanged" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingModeInvertedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty EditingModeInvertedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty EditingModeInvertedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.EditingModeInvertedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.InkCanvas.EditingModeInverted" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty EditingModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty EditingModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.EditingModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.InkCanvas.EditingMode" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EraserShape">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.StylusShape EraserShape { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Ink.StylusShape EraserShape" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.EraserShape" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StylusShape</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Ink.StylusShape" /> verwendet, um die Punkt-Löschen von Freihand ein <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>Die Form "Radierer" zugeordneten der <see cref="T:System.Windows.Controls.InkCanvas" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Form wird verwendet, um das Löschen von Freihand ein <xref:System.Windows.Controls.InkCanvas> beim aktuellen <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> auf festgelegt ist <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>.  
+  
+ Einzelne Eigenschaften von einem <xref:System.Windows.Ink.StylusShape> kann nicht geändert werden, nachdem die Form erstellt wurde.  
+  
+ Wenn Sie ändern die <xref:System.Windows.Controls.InkCanvas.EraserShape%2A>, den Cursor auf gerendert, die die <xref:System.Windows.Controls.InkCanvas> wird nicht aktualisiert werden, bis die nächste <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> ändern.  
+  
+<a name="xamlTextUsage_EraserShape"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Diese Eigenschaft wird nicht in der Regel im verwendet [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie damit einen Benutzer Striche teilweise mit der invertierte Spitze des Tablettstifts löschen kann. Ein elliptischer Cursor angezeigt, auf die <xref:System.Windows.Controls.InkCanvas> Wenn der Benutzer Freihandeingaben löscht.  
+  
+ [!code-csharp[InkCanvasSamples#6](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#6)]
+ [!code-vb[InkCanvasSamples#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gesture">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.InkCanvasGestureEventHandler Gesture;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.InkCanvasGestureEventHandler Gesture" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.Gesture" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.InkCanvasGestureEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Windows.Controls.InkCanvas" /> eine Geste erkennt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_Gesture"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkCanvas.GestureEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.Controls.InkCanvasGestureEventHandler>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Einrichten einer <xref:System.Windows.Controls.InkCanvas> Anwendung Gesten zu erkennen.  
+  
+ [!code-csharp[GestureSample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureSample/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[GestureSample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureSample/VisualBasic/Window1.xaml.vb#3)]  
+[!code-csharp[GestureSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureSample/CSharp/Window1.xaml.cs#1)]
+[!code-vb[GestureSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureSample/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GestureEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent GestureEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent GestureEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.GestureEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.InkCanvas.Gesture" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBottom">
+      <MemberSignature Language="C#" Value="public static double GetBottom (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetBottom(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.GetBottom(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element der abzurufenden Bottom-Eigenschaft.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.InkCanvas.Bottom" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <returns>Die untere Koordinate des Abhängigkeitsobjekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Position des abzurufenden eine <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[InkCanvasSamples#34](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#34)]
+ [!code-vb[InkCanvasSamples#34](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnabledGestures">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Ink.ApplicationGesture&gt; GetEnabledGestures ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Windows.Ink.ApplicationGesture&gt; GetEnabledGestures() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.GetEnabledGestures" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Ink.ApplicationGesture&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung der Anwendung Gesten, die von erkannt werden <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <returns>Eine Auflistung von Aktionen, die die <see cref="T:System.Windows.Controls.InkCanvas" /> erkennt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die aktivierte Anwendung Gesten aus Abrufen der <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#24](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#24)]
+ [!code-vb[InkCanvasSamples#24](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Controls.InkCanvas.IsGestureRecognizerAvailable" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLeft">
+      <MemberSignature Language="C#" Value="public static double GetLeft (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetLeft(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.GetLeft(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, von dem die left-Eigenschaft abgerufen werden soll.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.InkCanvas.Left" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <returns>Die linke Koordinate des Abhängigkeitsobjekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Position des abzurufenden eine <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[InkCanvasSamples#31](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#31)]
+ [!code-vb[InkCanvasSamples#31](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRight">
+      <MemberSignature Language="C#" Value="public static double GetRight (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetRight(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.GetRight(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, von dem die right-Eigenschaft abgerufen werden soll.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.InkCanvas.Right" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <returns>Die rechte Koordinate des Abhängigkeitsobjekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Position des abzurufenden eine <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[InkCanvasSamples#32](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#32)]
+ [!code-vb[InkCanvasSamples#32](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectedElements">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.UIElement&gt; GetSelectedElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.UIElement&gt; GetSelectedElements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.GetSelectedElements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.UIElement&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.FrameworkElement" /> Objekte, die im ausgewählten der <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <returns>Array von <see cref="T:System.Windows.FrameworkElement" /> Objekte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt nur <xref:System.Windows.FrameworkElement> Objekte, aber keine <xref:System.Windows.Ink.Stroke> Objekte.  
+  
+ Zum Abrufen der ausgewählten <xref:System.Windows.Ink.Stroke> Objekte Aufrufen der <xref:System.Windows.Controls.InkCanvas.GetSelectedStrokes%2A> Methode.  
+  
+ Wenn die <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> von <xref:System.Windows.Controls.InkCanvas> festgelegt ist, um <xref:System.Windows.Controls.InkCanvas.EditingMode%2A>, Benutzer auswählen können, <xref:System.Windows.Ink.Stroke> Objekte und <xref:System.Windows.FrameworkElement> Objekte. Alternativ können Sie beide Arten von Objekten ausgewählt werden können mithilfe von Code: Rufen Sie einfach die <xref:System.Windows.Controls.InkCanvas.Select%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel verdoppelt die Höhe und Breite jedes ausgewählte Element auf ein <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#12)]
+ [!code-vb[InkCanvasSamples#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectedStrokes">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.StrokeCollection GetSelectedStrokes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Ink.StrokeCollection GetSelectedStrokes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.GetSelectedStrokes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StrokeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Ink.StrokeCollection" /> die darstellt, ausgewählt <see cref="T:System.Windows.Ink.Stroke" /> Objekte auf der <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <returns>Die Auflistung der ausgewählten Striche.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt <xref:System.Windows.Ink.Stroke> nur die Objekte. Zum Abrufen der ausgewählten <xref:System.Windows.FrameworkElement> Objekte Aufrufen der <xref:System.Windows.Controls.InkCanvas.GetSelectedElements%2A> Methode.  
+  
+ Wenn die <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> von <xref:System.Windows.Controls.InkCanvas> festgelegt ist, um <xref:System.Windows.Controls.InkCanvas.EditingMode%2A>, Benutzer auswählen können, <xref:System.Windows.Ink.Stroke> Objekte und <xref:System.Windows.FrameworkElement> Objekte. Alternativ können Sie beide Arten von Objekten ausgewählt werden können mithilfe von Code: Rufen Sie einfach die <xref:System.Windows.Controls.InkCanvas.Select%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ändert sich die Farbe der einzelnen ausgewählten Striche auf eine <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#11)]
+ [!code-vb[InkCanvasSamples#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectionBounds">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect GetSelectionBounds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Rect GetSelectionBounds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.GetSelectionBounds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Grenzen der ausgewählten Striche und der Elemente auf der <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <returns>Das kleinste Rechteck, das alle ausgewählten Striche und Elemente umfasst.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird verhindert, dass der Benutzer eine Auswahl getroffen, die kleiner als die ursprüngliche Größe.  
+  
+ [!code-csharp[InkCanvasSamples#16](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#16)]
+ [!code-vb[InkCanvasSamples#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTop">
+      <MemberSignature Language="C#" Value="public static double GetTop (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetTop(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.GetTop(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, von dem die Top-Eigenschaft abgerufen werden soll.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.InkCanvas.Top" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <returns>Die obere Koordinate des Abhängigkeitsobjekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Position des abzurufenden eine <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[InkCanvasSamples#33](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#33)]
+ [!code-vb[InkCanvasSamples#33](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisualChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Visual GetVisualChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Visual GetVisualChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.GetVisualChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des angeforderten untergeordneten Elements in der Auflistung.</param>
+        <summary>Überschreibt <see cref="M:System.Windows.Media.Visual.GetVisualChild(System.Int32)" />, und gibt ein untergeordnetes Element am angegebenen Index aus einer Auflistung von untergeordneten Elementen zurück.</summary>
+        <returns>Das angeforderte untergeordnete Element. Dies sollte keine zurückgeben <see langword="null" />; der angegebene Index ist von Bereichs liegt, wird eine Ausnahme ausgelöst.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.HitTestResult HitTestCore (System.Windows.Media.PointHitTestParameters hitTestParams);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.HitTestResult HitTestCore(class System.Windows.Media.PointHitTestParameters hitTestParams) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.HitTestCore(System.Windows.Media.PointHitTestParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.HitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hitTestParams" Type="System.Windows.Media.PointHitTestParameters" />
+      </Parameters>
+      <Docs>
+        <param name="hitTestParams">Ein Objekt, der angibt, die <see cref="T:System.Windows.Point" /> , für den ein Treffertest durchgeführt.</param>
+        <summary>Bestimmt, ob es sich bei einem bestimmten Zeitpunkt innerhalb der Renderinggrenzen liegt eine <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <returns>Ein Objekt, das stellt die <see cref="T:System.Windows.Media.Visual" /> , die von einem Treffertest zurückgegeben wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestSelection">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.InkCanvasSelectionHitResult HitTestSelection (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Controls.InkCanvasSelectionHitResult HitTestSelection(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.HitTestSelection(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.InkCanvasSelectionHitResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der Punkt, Treffertest ausgeführt werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, welcher Teil der Auswahl Funktionsindikator überschneidet oder schließt den angegebenen Punkt zurück.</summary>
+        <returns>Ein Wert, der angibt, welcher Teil der Funktionsindikator für die Auswahl überschneidet, oder einen angegebenen Punkt umgibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Controls.InkCanvas.HitTestSelection%2A> Methode, um zu bestimmen, ob der Punkt innerhalb der Grenzen einer Kontur Auswahl oder einem der acht Ziehpunkte ist.  Dies ist hilfreich, wenn das Ausführen von Drag & drop-Operationen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie <xref:System.Windows.Controls.InkCanvas.HitTestSelection%2A> bestimmt, ob zum Erstellen einer <xref:System.Windows.DataObject> zum Initiieren von Drag und drop.  Zum Implementieren von Drag und drop zwischen zwei <xref:System.Windows.Controls.InkCanvas> anzuzeigen, [Vorgehensweise: Drag- and -Drop Ink](~/docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md).  
+  
+ [!code-csharp[InkDragDrop#3](~/samples/snippets/csharp/VS_Snippets_Wpf/InkDragDrop/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[InkDragDrop#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkDragDrop/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InkPresenter">
+      <MemberSignature Language="C#" Value="protected System.Windows.Controls.InkPresenter InkPresenter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.InkPresenter InkPresenter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.InkPresenter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.InkPresenter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Freihand-Referenten, die Freihandeingaben angezeigt der <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>Freihand-Referenten, die Freihandeingaben angezeigt der <see cref="T:System.Windows.Controls.InkCanvas" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGestureRecognizerAvailable">
+      <MemberSignature Language="C#" Value="public bool IsGestureRecognizerAvailable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGestureRecognizerAvailable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.IsGestureRecognizerAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab (bestimmt), ob die Bewegung Recognition-Komponente auf dem System des Benutzers verfügbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Anerkennung Komponente verfügbar ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Konfigurieren einer <xref:System.Windows.Controls.InkCanvas> Anwendung Gesten zu erkennen.  
+  
+ [!code-csharp[GestureSample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureSample/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[GestureSample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureSample/VisualBasic/Window1.xaml.vb#3)]  
+[!code-csharp[GestureSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureSample/CSharp/Window1.xaml.cs#1)]
+[!code-vb[GestureSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureSample/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LeftProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LeftProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.LeftProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.InkCanvas.Left" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Enumerator zum logischen untergeordneten Element zurück.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size availableSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size availableSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="availableSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="availableSize">Die verfügbare Größe, die dieses Element untergeordneten Elementen bereitstellen kann. „Unendlich“ kann als Wert angegeben werden, um festzulegen, dass das Element an die Größe des jeweiligen Inhalts angepasst wird.</param>
+        <summary>Misst die für untergeordnete Elemente im Layout benötigte Größe und bestimmt eine Größe für das <see cref="System.Windows.Controls.InkCanvas" />-Objekt.</summary>
+        <returns>Die für dieses Element beim Layout benötigte Größe, basierend auf der Berechnung der Größen der untergeordneten Elemente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveEnabled">
+      <MemberSignature Language="C#" Value="public bool MoveEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MoveEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.MoveEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob der Benutzer, zum Verschieben von ausgewählten Strichen und/oder Elemente aktiviert ist auf der <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>
+          <see langword="true" />Wenn ein Benutzer Striche und/oder Elemente verschieben kann, auf die <see cref="T:System.Windows.Controls.InkCanvas" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft, um festgelegt wird `true`, um Strichen und/oder Elemente wird ein Adornerrahmen gezeichnet, bei der Auswahl. Dieser Rahmen ermöglicht dem Benutzer, die ausgewählten Objekte zu verschieben. Wenn <xref:System.Windows.Controls.InkCanvas.ResizeEnabled%2A> ist `true`, Adorner ermöglicht dem Benutzer die Striche und/oder Elemente sowie die Größe ändern.  
+  
+ Wenn diese Eigenschaft, um festgelegt wird `false` während mindestens Strichen und/oder Elemente ausgewählt sind, der Adornerrahmen automatisch entfernt aus den ausgewählten Objekten.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird verhindert, dass einen Benutzer verschieben und Ändern der Größe der Elemente und Striche auf eine <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#7](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#7)]
+ [!code-vb[InkCanvasSamples#7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActiveEditingModeChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnActiveEditingModeChanged (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnActiveEditingModeChanged(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnActiveEditingModeChanged(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.ActiveEditingModeChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine geeignete <see cref="T:System.Windows.Automation.Peers.InkCanvasAutomationPeer" /> Implementierung für dieses Steuerelement als Teil der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Infrastruktur.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDefaultDrawingAttributesReplaced">
+      <MemberSignature Language="C#" Value="protected virtual void OnDefaultDrawingAttributesReplaced (System.Windows.Ink.DrawingAttributesReplacedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDefaultDrawingAttributesReplaced(class System.Windows.Ink.DrawingAttributesReplacedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnDefaultDrawingAttributesReplaced(System.Windows.Ink.DrawingAttributesReplacedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Ink.DrawingAttributesReplacedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.DefaultDrawingAttributesReplaced" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEditingModeChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnEditingModeChanged (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEditingModeChanged(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnEditingModeChanged(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.EditingModeChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, nachdem der Bearbeitungsmodus geändert wurde; die Änderungen werden angezeigt, der <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> Eigenschaft von der <xref:System.Windows.Controls.InkCanvas>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEditingModeInvertedChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnEditingModeInvertedChanged (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEditingModeInvertedChanged(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnEditingModeInvertedChanged(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.EditingModeInvertedChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, nachdem der invertierte Bearbeitungsmodus geändert wurde; die Änderungen berücksichtigt, die der <xref:System.Windows.Controls.InkCanvas.EditingModeInverted%2A> Eigenschaft von der <xref:System.Windows.Controls.InkCanvas>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGesture">
+      <MemberSignature Language="C#" Value="protected virtual void OnGesture (System.Windows.Controls.InkCanvasGestureEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnGesture(class System.Windows.Controls.InkCanvasGestureEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnGesture(System.Windows.Controls.InkCanvasGestureEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.InkCanvasGestureEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.Gesture" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten, die die geänderte Eigenschaft beschreibt, sowie die alten und neuen Werte.</param>
+        <summary>Wird aufgerufen, wenn der effektive Wert einer Abhängigkeitseigenschaft für dieses <see cref="T:System.Windows.FrameworkElement" /> aktualisiert wurde. Welche spezifische Abhängigkeitseigenschaft geändert wird, wird im Argumentparameter gemeldet. Überschreibt <see cref="M:System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnSelectionChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.SelectionChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, nachdem ein Satz von Strichen und/oder Elemente vom Benutzer ausgewählt wurde und die Änderung der Auswahl angewendet wurde. Bevor die Änderung angewendet wird, die <xref:System.Windows.Controls.InkCanvas.OnSelectionChanging%2A> -Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionChanging">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionChanging (System.Windows.Controls.InkCanvasSelectionChangingEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionChanging(class System.Windows.Controls.InkCanvasSelectionChangingEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnSelectionChanging(System.Windows.Controls.InkCanvasSelectionChangingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.InkCanvasSelectionChangingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.SelectionChanging" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn eine neue Auswahl Striche und/oder Elemente erfolgt durch den Benutzer, aber bevor die Änderung angewendet wird. Nachdem die Änderung angewendet wurde, die <xref:System.Windows.Controls.InkCanvas.OnSelectionChanged%2A> -Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionMoved">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionMoved (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionMoved(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnSelectionMoved(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Nicht verwendet.</param>
+        <summary>Ein Ereignis, dass der Benutzer ausgewählt und eine Auswahl von Striche und/oder Elemente verschoben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, nachdem eine Auswahl von Striche und/oder Elemente vom Benutzer verschoben wurde und die Änderung angewendet wurde. Bevor die Änderung angewendet wird, die <xref:System.Windows.Controls.InkCanvas.OnSelectionMoving%2A> -Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionMoving">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionMoving (System.Windows.Controls.InkCanvasSelectionEditingEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionMoving(class System.Windows.Controls.InkCanvasSelectionEditingEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnSelectionMoving(System.Windows.Controls.InkCanvasSelectionEditingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.InkCanvasSelectionEditingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.SelectionMoving" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, nachdem der Benutzer fordert, dass eine Auswahl von Striche und/oder Elemente verschoben werden und bevor die Änderung angewendet wird. Nachdem die Änderung angewendet wurde, die <xref:System.Windows.Controls.InkCanvas.OnSelectionMoved%2A> -Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionResized">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionResized (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionResized(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnSelectionResized(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.SelectionResized" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, nachdem eine Auswahl von Striche und/oder Elemente vom Benutzer geändert wurde wurde und die Änderung angewendet wurde. Bevor die Änderung angewendet wird, die <xref:System.Windows.Controls.InkCanvas.OnSelectionResizing%2A> -Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionResizing">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionResizing (System.Windows.Controls.InkCanvasSelectionEditingEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionResizing(class System.Windows.Controls.InkCanvasSelectionEditingEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnSelectionResizing(System.Windows.Controls.InkCanvasSelectionEditingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.InkCanvasSelectionEditingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.SelectionResizing" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, nachdem der Benutzer fordert eine Auswahl von Striche und/oder Elemente geändert werden und bevor die Änderung angewendet wird. Nachdem die Änderung angewendet wurde, die <xref:System.Windows.Controls.InkCanvas.OnSelectionResized%2A> Methode wird aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStrokeCollected">
+      <MemberSignature Language="C#" Value="protected virtual void OnStrokeCollected (System.Windows.Controls.InkCanvasStrokeCollectedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStrokeCollected(class System.Windows.Controls.InkCanvasStrokeCollectedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnStrokeCollected(System.Windows.Controls.InkCanvasStrokeCollectedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.InkCanvasStrokeCollectedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.StrokeCollected" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A>wird aufgerufen, wenn ein Benutzer physisch ein Strichs abgeschlossen z. B. hat durch das Auslösen der Tablettstift nach dem Herstellen einer Bewegung.  
+  
+ Programmgesteuerten Hinzufügen von Striche der <xref:System.Windows.Controls.InkCanvas.Strokes%2A> Auflistung kein Aufruf der <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStrokeErased">
+      <MemberSignature Language="C#" Value="protected virtual void OnStrokeErased (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStrokeErased(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnStrokeErased(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.StrokeErased" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStrokeErasing">
+      <MemberSignature Language="C#" Value="protected virtual void OnStrokeErasing (System.Windows.Controls.InkCanvasStrokeErasingEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStrokeErasing(class System.Windows.Controls.InkCanvasStrokeErasingEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnStrokeErasing(System.Windows.Controls.InkCanvasStrokeErasingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.InkCanvasStrokeErasingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.StrokeErasing" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStrokesReplaced">
+      <MemberSignature Language="C#" Value="protected virtual void OnStrokesReplaced (System.Windows.Controls.InkCanvasStrokesReplacedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStrokesReplaced(class System.Windows.Controls.InkCanvasStrokesReplacedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.OnStrokesReplaced(System.Windows.Controls.InkCanvasStrokesReplacedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.InkCanvasStrokesReplacedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.InkCanvas.StrokesReplaced" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Paste">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fügt den Inhalt der Zwischenablage in die <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.InkCanvas> kann Daten in der Zwischenablage unterstützen [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Format [!INCLUDE[TLA#tla_isf](~/includes/tlasharptla-isf-md.md)], und Text-Format.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Paste">
+      <MemberSignature Language="C#" Value="public void Paste ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Paste() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.Paste" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt den Inhalt der Zwischenablage in der oberen linken Ecke des der <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.InkCanvas> kann Daten in der Zwischenablage unterstützen [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Format [!INCLUDE[TLA#tla_isf](~/includes/tlasharptla-isf-md.md)], und Text-Format.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Element in die Zwischenablage kopiert und fügt sie an der <xref:System.Windows.Controls.InkCanvas>. In diesem Beispiel wird davon ausgegangen, dass ein aufgerufen Element `rect1`, und dass die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignisse an die Ereignishandler im Beispiel angeschlossen wurden.  
+  
+ [!code-csharp[InkCanvasSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[InkCanvasSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Einfügen von Inhalt aus der Zwischenablage in die <see cref="T:System.Windows.Controls.InkCanvas" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Paste">
+      <MemberSignature Language="C#" Value="public void Paste (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Paste(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.Paste(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der Punkt, an dem die Striche eingefügt werden soll.</param>
+        <summary>Fügt den Inhalt der Zwischenablage in die <see cref="T:System.Windows.Controls.InkCanvas" /> zu einem bestimmten Zeitpunkt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.InkCanvas> kann Daten in der Zwischenablage unterstützen [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Format [!INCLUDE[TLA#tla_isf](~/includes/tlasharptla-isf-md.md)], und Text-Format.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Element in die Zwischenablage kopiert und fügt sie an der <xref:System.Windows.Controls.InkCanvas>. In diesem Beispiel wird davon ausgegangen, dass ein aufgerufen Element `rect1`, und dass die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignisse an die Ereignishandler im Beispiel verbunden sind.  
+  
+ [!code-csharp[InkCanvasSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[InkCanvasSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Berechtigung zum Einfügen von Inhalt aus der Zwischenablage in die <see cref="T:System.Windows.Controls.InkCanvas" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredPasteFormats">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Windows.Controls.InkCanvasClipboardFormat&gt; PreferredPasteFormats { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Controls.InkCanvasClipboardFormat&gt; PreferredPasteFormats" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.PreferredPasteFormats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Windows.Controls.InkCanvasClipboardFormat&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest Formate, die auf eingefügt werden, können die <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>Eine Auflistung von Enumerationswerten. Die Standardeinstellung ist <see cref="F:System.Windows.Controls.InkCanvasClipboardFormat.InkSerializedFormat" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_PreferredPasteFormats"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.PreferredPasteFormats>  
+    InkCanvasClipboardFormats  
+  </object.PreferredPasteFormats>  
+</object>  
+```  
+  
+<a name="xamlValues_PreferredPasteFormats"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *InkCanvasClipboardFormats*  
+ Ein Array von <xref:System.Windows.Controls.InkCanvasClipboardFormat> Enumerationswerte. Angabe eines Arrays in XAML erfordert `x:Array` Verwendung. Einen Enumerationswert als ein Element, das einen Arraymember deklariert erfordert `x:Static` Verwendung. Weitere Informationen finden Sie unter [X: Array-Markuperweiterung](~/docs/framework/xaml-services/x-array-markup-extension.md) und [X: statische Markuperweiterung](~/docs/framework/xaml-services/x-static-markup-extension.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Controls.InkCanvas.PreferredPasteFormats%2A> vornehmen der <xref:System.Windows.Controls.InkCanvas> akzeptieren [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Format [!INCLUDE[TLA#tla_isf](~/includes/tlasharptla-isf-md.md)].  
+  
+ [!code-csharp[InkCanvasSamples#26](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#26)]
+ [!code-vb[InkCanvasSamples#26](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#26)]  
+  
+ Im folgenden Beispiel wird die gleiche Botschaft [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)].  
+  
+ [!code-xaml[InkCanvasSamples#38](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window2.xaml#38)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeEnabled">
+      <MemberSignature Language="C#" Value="public bool ResizeEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ResizeEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.ResizeEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob der Benutzer auf ausgewählten Strichen und/oder Elemente ändern kann die <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>
+          <see langword="true" />Wenn ein Benutzer auf Striche und/oder Elemente ändern kann die <see cref="T:System.Windows.Controls.InkCanvas" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft, um festgelegt wird `true`, um Strichen und/oder Elemente wird ein Adornerrahmen gezeichnet, bei der Auswahl. Dieser Rahmen ermöglicht es den Benutzer, die Größe der ausgewählten Objekte zu ändern. Wenn <xref:System.Windows.Controls.InkCanvas.MoveEnabled%2A> ist `true`, Adorner ermöglicht dem Benutzer die Striche und/oder Elemente ebenfalls verschoben.  
+  
+ Wenn diese Eigenschaft, um festgelegt wird `false` während mindestens Strichen und/oder Elemente ausgewählt sind, wird der Adornerrahmen automatisch aus den ausgewählten Objekten entfernt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird verhindert, dass einen Benutzer verschieben und Ändern der Größe der Elemente und Striche auf eine <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#7](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#7)]
+ [!code-vb[InkCanvasSamples#7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.RightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="P:System.Windows.Controls.InkCanvas.Right" /> Ereignis angefügt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Select">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Wählt einen Satz von Freihand- <see cref="T:System.Windows.Ink.Stroke" /> Objekte und/oder <see cref="T:System.Windows.FrameworkElement" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.InkCanvas> darf <xref:System.Windows.Ink.Stroke> Objekte, die als Antwort auf eine Benutzereingabe auf Tablettstift erstellt werden, und <xref:System.Windows.FrameworkElement> Objekte, z. B. <xref:System.Windows.Controls.Image> und <xref:System.Windows.Controls.Button> Objekte.  
+  
+ Ausgewählten Striche werden ein Adorner darum zur Vereinfachung der Erkennung und-Bearbeitung angezeigt. <xref:System.Windows.FrameworkElement>Objekte werden bei Auswahl unverändert angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public void Select (System.Collections.Generic.IEnumerable&lt;System.Windows.UIElement&gt; selectedElements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Select(class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.UIElement&gt; selectedElements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.Select(System.Collections.Generic.IEnumerable{System.Windows.UIElement})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedElements" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.UIElement&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="selectedElements">Eine Auflistung von <see cref="T:System.Windows.UIElement" /> auszuwählenden Objekte.</param>
+        <summary>Wählt einen Satz von <see cref="T:System.Windows.UIElement" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.InkCanvas> darf <xref:System.Windows.Ink.Stroke> Objekte, die als Antwort auf eine Benutzereingabe auf Tablettstift erstellt werden und <xref:System.Windows.UIElement> Objekte, z. B. <xref:System.Windows.Controls.Image> und <xref:System.Windows.Controls.Button> Objekte.  
+  
+ Ein Adorner darum zur Vereinfachung der Erkennung und-Bearbeitung werden ausgewählte Striche angezeigt. <xref:System.Windows.UIElement>Objekte werden bei Auswahl unverändert angezeigt. Wenn eine <xref:System.Windows.UIElement> in `selectedElements` befindet sich nicht in der Auflistung untergeordneter Elemente <xref:System.Windows.Controls.InkCanvas.Select%2A> ignoriert die <xref:System.Windows.UIElement>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wählt alle Striche und zwei Elemente auf einer <xref:System.Windows.Controls.InkCanvas>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBox> aufgerufen `textbox1` und ein <xref:System.Windows.Controls.Button> aufgerufen `button1` - und, dass beide Steuerelemente über untergeordnete Elemente von der <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[InkCanvasSamples#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public void Select (System.Windows.Ink.StrokeCollection selectedStrokes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Select(class System.Windows.Ink.StrokeCollection selectedStrokes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.Select(System.Windows.Ink.StrokeCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedStrokes" Type="System.Windows.Ink.StrokeCollection" />
+      </Parameters>
+      <Docs>
+        <param name="selectedStrokes">Eine Auflistung von <see cref="T:System.Windows.Ink.Stroke" /> auszuwählenden Objekte.</param>
+        <summary>Wählt einen Satz von Freihand- <see cref="T:System.Windows.Ink.Stroke" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.InkCanvas> darf <xref:System.Windows.Ink.Stroke> Objekte, die als Antwort auf eine Benutzereingabe auf Tablettstift erstellt werden, und <xref:System.Windows.FrameworkElement> Objekte, z. B. <xref:System.Windows.Controls.Image> und <xref:System.Windows.Controls.Button> Objekte.  
+  
+ Ein Adorner darum zur Vereinfachung der Erkennung und-Bearbeitung werden ausgewählte Striche angezeigt. <xref:System.Windows.FrameworkElement>Objekte werden nicht anders angezeigt, wenn ausgewählt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wählt alle Striche und zwei Elemente auf einer <xref:System.Windows.Controls.InkCanvas>.  In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBox> aufgerufen `textbox1` und ein <xref:System.Windows.Controls.Button> aufgerufen `button1` - und, dass beide Steuerelemente über untergeordnete Elemente von der <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[InkCanvasSamples#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Eine oder mehrere Striche in <paramref name="selectedStrokes" /> befindet sich nicht in der <see cref="P:System.Windows.Controls.InkCanvas.Strokes" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public void Select (System.Windows.Ink.StrokeCollection selectedStrokes, System.Collections.Generic.IEnumerable&lt;System.Windows.UIElement&gt; selectedElements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Select(class System.Windows.Ink.StrokeCollection selectedStrokes, class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.UIElement&gt; selectedElements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.Select(System.Windows.Ink.StrokeCollection,System.Collections.Generic.IEnumerable{System.Windows.UIElement})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedStrokes" Type="System.Windows.Ink.StrokeCollection" />
+        <Parameter Name="selectedElements" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.UIElement&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="selectedStrokes">Eine Auflistung von <see cref="T:System.Windows.Ink.Stroke" /> auszuwählenden Objekte.</param>
+        <param name="selectedElements">Eine Auflistung von <see cref="T:System.Windows.UIElement" /> auszuwählenden Objekte.</param>
+        <summary>Wählt eine Kombination aus <see cref="T:System.Windows.Ink.Stroke" /> und <see cref="T:System.Windows.UIElement" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.InkCanvas> darf <xref:System.Windows.Ink.Stroke> Objekte, die als Antwort auf eine Benutzereingabe auf Tablettstift erstellt werden und <xref:System.Windows.UIElement> Objekte, z. B. <xref:System.Windows.Controls.Image> und <xref:System.Windows.Controls.Button> Objekte.  
+  
+ Ausgewählten Striche werden ein Adorner darum zur Vereinfachung der Erkennung und-Bearbeitung angezeigt. <xref:System.Windows.UIElement>Objekte werden bei Auswahl unverändert angezeigt. Wenn eine <xref:System.Windows.UIElement> in `selectedElements` befindet sich nicht in der Auflistung untergeordneter Elemente <xref:System.Windows.Controls.InkCanvas.Select%2A> ignoriert die <xref:System.Windows.UIElement>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wählt alle Striche und zwei Elemente auf einer <xref:System.Windows.Controls.InkCanvas>.  In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBox> aufgerufen `textbox1` und ein <xref:System.Windows.Controls.Button> aufgerufen `button1` - und, dass beide Steuerelemente über untergeordnete Elemente von der <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[InkCanvasSamples#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Eine oder mehrere Striche in <paramref name="selectedStrokes" /> ist nicht enthalten, der <see cref="P:System.Windows.Controls.InkCanvas.Strokes" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.SelectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Auswahl in der <see cref="T:System.Windows.Controls.InkCanvas" /> ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, nachdem ein Satz von Strichen und/oder Elemente ausgewählt und durch den Benutzer angewendet wurde.  
+  
+ Wenn stattdessen Sie, eine Anforderung, die eine Gruppe von Strichen und/oder Elemente auswählen behandeln müssen, bevor die Auswahl angewendet wird, fügen Sie einen Ereignishandler an das <xref:System.Windows.Controls.InkCanvas.SelectionChanging> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird verhindert, dass der Benutzer eine Auswahl getroffen, die kleiner als die ursprüngliche Größe.  
+  
+ [!code-csharp[InkCanvasSamples#16](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#16)]
+ [!code-vb[InkCanvasSamples#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionChanging">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.InkCanvasSelectionChangingEventHandler SelectionChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.InkCanvasSelectionChangingEventHandler SelectionChanging" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.SelectionChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.InkCanvasSelectionChangingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn Sie ein neuer Satz von Strichen und/oder Elemente ausgewählt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.InkCanvas.SelectionChanging> Ereignis wird ausgelöst, wenn Striche und/oder Elemente ausgewählt sind, vom Benutzer - aber bevor die Änderung angewendet wird.  
+  
+ Die <xref:System.Windows.Controls.InkCanvas.SelectionChanging> -Ereignis verarbeitet wird bei der <xref:System.Windows.Controls.InkCanvasSelectionChangingEventHandler> empfängt eine <xref:System.Windows.Controls.InkCanvasSelectionChangingEventArgs> Objekt. <xref:System.Windows.Controls.InkCanvasSelectionChangingEventArgs>Stellt Methoden für den Zugriff auf <xref:System.Windows.FrameworkElement> und <xref:System.Windows.Ink.StrokeCollection> Objekte nach dem vom Benutzer ausgewählt wurden.  
+  
+ Nachdem die Änderung angewendet wurde, die <xref:System.Windows.Controls.InkCanvas.SelectionChanged> Ereignis wird ausgelöst.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Controls.InkCanvas.SelectionChanging> Ereignis tritt nicht auf, wenn die ausgewählten Striche gelöscht werden oder wenn die <xref:System.Windows.Controls.InkCanvas.ActiveEditingMode%2A> -Eigenschaft ändert.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel werden die ausgewählten Striche royal Blau.  
+  
+ [!code-csharp[InkCanvasSamples#14](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#14)]
+ [!code-vb[InkCanvasSamples#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionMoved">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectionMoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectionMoved" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.SelectionMoved" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem der Benutzer eine Auswahl von Striche und/oder Elemente verschoben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, nachdem eine Auswahl von Striche und/oder Elemente verschoben wird, aber vor dem Strich oder Element Daten aktualisiert werden, um seiner neuen Position aufzeichnen. Fügen Sie einen Ereignishandler an das <xref:System.Windows.Controls.InkCanvas.SelectionMoving> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel hebt die Auswahl Elemente auf einer <xref:System.Windows.Controls.InkCanvas> , nachdem der Benutzer sie verschoben.  
+  
+ [!code-csharp[InkCanvasSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#19)]
+ [!code-vb[InkCanvasSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionMoving">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.InkCanvasSelectionEditingEventHandler SelectionMoving;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.InkCanvasSelectionEditingEventHandler SelectionMoving" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.SelectionMoving" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.InkCanvasSelectionEditingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor ausgewählten Striche und Elemente verschoben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, nachdem der Benutzer fordert, dass eine Auswahl von Striche und/oder Elemente verschoben werden, aber bevor die Änderung angewendet wird.  
+  
+ Der Ereignishandler empfängt ein Argument des Typs <xref:System.Windows.Controls.InkCanvasSelectionEditingEventArgs> mit zwei Eigenschaften: <xref:System.Windows.Controls.InkCanvasSelectionEditingEventArgs.OldRectangle%2A> und <xref:System.Windows.Controls.InkCanvasSelectionEditingEventArgs.NewRectangle%2A>. <xref:System.Windows.Controls.InkCanvasSelectionEditingEventArgs.OldRectangle%2A>definiert die Grenzen der Auswahl vor dem Verschieben und <xref:System.Windows.Controls.InkCanvasSelectionEditingEventArgs.NewRectangle%2A> definiert die Grenzen der Auswahl nach dem verschieben.  
+  
+ Nachdem die Änderung angewendet wurde, die <xref:System.Windows.Controls.InkCanvas.SelectionMoved> Ereignis erfolgt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird verhindert, dass den Benutzer Verschieben von ausgewählten Elementen vertikal auf einer <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#13](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#13)]
+ [!code-vb[InkCanvasSamples#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionResized">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectionResized;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectionResized" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.SelectionResized" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Auswahl von Striche und/oder Elemente vom Benutzer geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, nachdem eine Auswahl von Striche und/oder Elemente angepasst wird.  
+  
+ Wenn stattdessen Sie, eine Anforderung behandeln müssen an eine Auswahl zu ändern, bevor die Striche und/oder Elemente angepasst werden, fügen Sie einen Ereignishandler an das <xref:System.Windows.Controls.InkCanvas.SelectionResizing> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel hebt die Auswahl aller Elemente auf einer <xref:System.Windows.Controls.InkCanvas> nachdem der Benutzer die Größe der Auswahl erneut.  
+  
+ [!code-csharp[InkCanvasSamples#23](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#23)]
+ [!code-vb[InkCanvasSamples#23](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionResizing">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.InkCanvasSelectionEditingEventHandler SelectionResizing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.InkCanvasSelectionEditingEventHandler SelectionResizing" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.SelectionResizing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.InkCanvasSelectionEditingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor ausgewählten Striche und Elemente angepasst werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, nachdem der Benutzer angefordert, dass eine Auswahl von Striche und/oder Elemente angepasst werden, aber bevor die Änderung angewendet wird.  
+  
+ Der Ereignishandler empfängt ein Argument des Typs <xref:System.Windows.Controls.InkCanvasSelectionEditingEventArgs> enthält zwei Eigenschaften: <xref:System.Windows.Controls.InkCanvasSelectionEditingEventArgs.OldRectangle%2A> und <xref:System.Windows.Controls.InkCanvasSelectionEditingEventArgs.NewRectangle%2A>. <xref:System.Windows.Controls.InkCanvasSelectionEditingEventArgs.OldRectangle%2A>definiert die Grenzen der Auswahl vor dem Ändern der Größe und <xref:System.Windows.Controls.InkCanvasSelectionEditingEventArgs.NewRectangle%2A> definiert die Grenzen der Auswahl nach dem Ändern der Größe an.  
+  
+ Nachdem die Striche und/oder Elemente mit der neuen Größe aktualisiert wurden die <xref:System.Windows.Controls.InkCanvas.SelectionResized> Ereignis wird ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird verhindert, dass der Benutzer eine Auswahl getroffen, die kleiner als die ursprüngliche Größe.  
+  
+ [!code-csharp[InkCanvasSamples#16](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#16)]
+ [!code-vb[InkCanvasSamples#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBottom">
+      <MemberSignature Language="C#" Value="public static void SetBottom (System.Windows.UIElement element, double length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetBottom(class System.Windows.UIElement element, float64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.SetBottom(System.Windows.UIElement,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="length" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für das Bottom-Eigenschaft festgelegt werden soll.</param>
+        <param name="length">Die untere Koordinate des <c>Element</c>.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.InkCanvas.Bottom" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Position des festzulegenden eine <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[InkCanvasSamples#28](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#28)]
+ [!code-vb[InkCanvasSamples#28](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEnabledGestures">
+      <MemberSignature Language="C#" Value="public void SetEnabledGestures (System.Collections.Generic.IEnumerable&lt;System.Windows.Ink.ApplicationGesture&gt; applicationGestures);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEnabledGestures(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Ink.ApplicationGesture&gt; applicationGestures) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.SetEnabledGestures(System.Collections.Generic.IEnumerable{System.Windows.Ink.ApplicationGesture})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationGestures" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Ink.ApplicationGesture&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="applicationGestures">Eine Auflistung von Anwendung zu Aktionen, die die <see cref="T:System.Windows.Controls.InkCanvas" /> erkennt.</param>
+        <summary>Legt den Anwendung Gesten, die die <see cref="T:System.Windows.Controls.InkCanvas" /> erkennt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Beispiel veranschaulicht das Einrichten einer <xref:System.Windows.Controls.InkCanvas> Anwendung Gesten zu erkennen.  
+  
+ [!code-csharp[GestureSample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureSample/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[GestureSample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureSample/VisualBasic/Window1.xaml.vb#3)]  
+[!code-csharp[GestureSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureSample/CSharp/Window1.xaml.cs#1)]
+[!code-vb[GestureSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureSample/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Controls.InkCanvas.IsGestureRecognizerAvailable" />-Eigenschaft ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLeft">
+      <MemberSignature Language="C#" Value="public static void SetLeft (System.Windows.UIElement element, double length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetLeft(class System.Windows.UIElement element, float64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.SetLeft(System.Windows.UIElement,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="length" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für die die left-Eigenschaft festgelegt werden soll.</param>
+        <param name="length">Die linke Koordinate der <c>Element</c>.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.InkCanvas.Left" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Position des festzulegenden eine <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[InkCanvasSamples#29](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#29)]
+ [!code-vb[InkCanvasSamples#29](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRight">
+      <MemberSignature Language="C#" Value="public static void SetRight (System.Windows.UIElement element, double length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetRight(class System.Windows.UIElement element, float64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.SetRight(System.Windows.UIElement,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="length" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für die right-Eigenschaft festgelegt werden soll.</param>
+        <param name="length">Die rechte Koordinate des <c>Element</c>.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.InkCanvas.Right" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Position des festzulegenden eine <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[InkCanvasSamples#30](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#30)]
+ [!code-vb[InkCanvasSamples#30](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTop">
+      <MemberSignature Language="C#" Value="public static void SetTop (System.Windows.UIElement element, double length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetTop(class System.Windows.UIElement element, float64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.SetTop(System.Windows.UIElement,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="length" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für das die Top-Eigenschaft festgelegt werden soll.</param>
+        <param name="length">Die obere Koordinate der <c>Element</c>.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.InkCanvas.Top" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Position des festzulegenden eine <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[InkCanvasSamples#27](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#27)]
+ [!code-vb[InkCanvasSamples#27](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#27)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeCollected">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.InkCanvasStrokeCollectedEventHandler StrokeCollected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.InkCanvasStrokeCollectedEventHandler StrokeCollected" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.StrokeCollected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.InkCanvasStrokeCollectedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Strich gezeichnet, die vom Benutzer hinzugefügt wird die <see cref="P:System.Windows.Controls.InkCanvas.Strokes" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn ein Benutzer ein Strichs mit einem Zeigegerät abgeschlossen ist. Beispielsweise kann ein Benutzer einen Tablettstift vom Digitizer entfernt ist eine auslösen nach dem Herstellen einer Bewegung und Abschließen eines Strichs.  
+  
+ Der Ereignishandler empfängt ein Argument des Typs <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs>, das auf den abgeschlossenen Strich verweist. Der Strich wird ebenfalls hinzugefügt der <xref:System.Windows.Controls.InkCanvas.Strokes%2A> Eigenschaft von der <xref:System.Windows.Controls.InkCanvas>.  
+  
+ Das programmgesteuerte Hinzufügen eine <xref:System.Windows.Ink.Stroke> -Objekt an die <xref:System.Windows.Controls.InkCanvas.Strokes%2A> Auflistung wird dieses Ereignis nicht ausgelöst.  
+  
+<a name="routedEventInfo_StrokeCollected"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkCanvas.StrokeCollectedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.Controls.InkCanvasStrokeCollectedEventHandler>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel speichert die Zeit als benutzerdefinierte Eigenschaft, wenn ein Benutzer ein Strichs, fügt die <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#22](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#22)]
+ [!code-vb[InkCanvasSamples#22](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeCollectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StrokeCollectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StrokeCollectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.StrokeCollectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.InkCanvas.StrokeCollected" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeErased">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler StrokeErased;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler StrokeErased" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.StrokeErased" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer einen Strich löscht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, wenn ein Benutzer Freihand löscht und gibt an, ob die <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint> oder <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByStroke>.  
+  
+<a name="routedEventInfo_StrokeErasing"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkCanvas.StrokeErasedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel gibt die Anzahl der Striche auf eine <xref:System.Windows.Controls.InkCanvas> bei der <xref:System.Windows.Controls.InkCanvas.StrokeErased> Ereignis auftritt. Wenn <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> festgelegt ist, um <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint> und der Benutzer die Mitte eines Strichs, der Anzahl der Striche auf löscht die <xref:System.Windows.Controls.InkCanvas> erhöht. Dies liegt daran die alten Strich durch zwei neue Striche ersetzt wurde.  
+  
+ [!code-csharp[InkCanvasSamples#18](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#18)]
+ [!code-vb[InkCanvasSamples#18](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeErasedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StrokeErasedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StrokeErasedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.StrokeErasedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.InkCanvas.StrokeErased" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeErasing">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.InkCanvasStrokeErasingEventHandler StrokeErasing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.InkCanvasStrokeErasingEventHandler StrokeErasing" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.StrokeErasing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.InkCanvasStrokeErasingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, unmittelbar bevor ein Benutzer einen Strich löscht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln Sie dieses Ereignis, wenn Sie überprüfen möchten, ob ein Strich gelöscht werden soll. Legen Sie die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true` ggf. verhindern, dass den Strich gelöscht wird. Sie können diese Technik verwenden bei der <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> oder <xref:System.Windows.Controls.InkCanvas.EditingModeInverted%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByStroke> oder <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird verhindert, dass alle Konturen gerendert als Textmarker gelöscht wird. Das Beispiel setzt voraus, dass die <xref:System.Windows.Controls.InkCanvas> an den Ereignishandler verbunden ist.  
+  
+ [!code-csharp[DrawingAttributes#16](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingAttributes/CSharp/Window1.xaml.cs#16)]
+ [!code-vb[DrawingAttributes#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingAttributes/VisualBasic/Window1.xaml.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Strokes">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.StrokeCollection Strokes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Ink.StrokeCollection Strokes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.Strokes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StrokeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der Freihandeingaben <see cref="T:System.Windows.Ink.Stroke" /> Objekte gesammelt werden, indem Sie die <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+        <value>Die Auflistung der <see cref="T:System.Windows.Ink.Stroke" /> Objekte innerhalb der <see cref="T:System.Windows.Controls.InkCanvas" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Strokes"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkCanvas.StrokesProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zwei <xref:System.Windows.Ink.StrokeCollection> Objekte für die gleichen <xref:System.Windows.Controls.InkCanvas>. In diesem Beispiel Spieler 1 und Spieler zwei jedes verwenden Sie eine einzelne "Freihand Fläche", obwohl sie den gleichen <xref:System.Windows.Controls.InkCanvas>. In diesem Beispiel wird davon ausgegangen, das Click-Ereignis verbunden ist, an den Ereignishandler `switchPlayersButton_Click`.  
+  
+ [!code-csharp[InkCanvasSamples#15](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#15)]
+ [!code-vb[InkCanvasSamples#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#15)]  
+  
+ Das folgende Beispiel veranschaulicht das Binden der <xref:System.Windows.Controls.InkCanvas.Strokes%2A> Eigenschaft ein <xref:System.Windows.Controls.InkCanvas> in eine andere <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-xaml[InkCanvasBindingSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window2.xaml#2)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StrokesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StrokesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.StrokesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.InkCanvas.Strokes" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokesReplaced">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.InkCanvasStrokesReplacedEventHandler StrokesReplaced;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.InkCanvasStrokesReplacedEventHandler StrokesReplaced" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.InkCanvas.StrokesReplaced" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.InkCanvasStrokesReplacedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Windows.Controls.InkCanvas.Strokes" /> Eigenschaft ersetzt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zwei <xref:System.Windows.Ink.StrokeCollection> Objekte, die auf dem gleichen zusammengestellt sind <xref:System.Windows.Controls.InkCanvas>. In diesem Beispiel Spieler 1 und Spieler zwei jedes verwenden Sie eine einzelne "Freihand Fläche", obwohl sie den gleichen <xref:System.Windows.Controls.InkCanvas>. In diesem Beispiel wird vorausgesetzt, dass die `switchPlayersButton_Click` Ereignis an den Ereignishandler verbunden ist.  
+  
+ [!code-csharp[InkCanvasSamples#15](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#15)]
+ [!code-vb[InkCanvasSamples#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende untergeordnete Objekt.</param>
+        <summary>Fügt der <see cref="T:System.Windows.Controls.InkCanvas" /> das angegebene Objekt hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string textData);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string textData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkCanvas.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textData" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="textData">Nicht verwendet.</param>
+        <summary>Fügt den Text innerhalb der Tags im Markup. Löst immer eine <see cref="T:System.ArgumentException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TopProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TopProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkCanvas.TopProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.InkCanvas.Top" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseCustomCursor">
+      <MemberSignature Language="C#" Value="public bool UseCustomCursor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseCustomCursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.UseCustomCursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob Standard überschreiben <see cref="T:System.Windows.Controls.InkCanvas" /> Cursorfunktionalität um einen benutzerdefinierten Cursor zu unterstützen.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.InkCanvas" /> wird mithilfe eines benutzerdefiniertes Cursors ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.InkCanvas> ändert sich den Cursor-Stil entsprechend den aktuellen <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> während sich der Cursor innerhalb der Grenzen der <xref:System.Windows.Controls.InkCanvas>. Wenn dieses Verhalten nicht, z. B. gewünscht wird die <xref:System.Windows.Controls.InkCanvas> verwendet eine benutzerdefinierte Cursor, legen Sie diese Eigenschaft auf `true`, und der Cursor ändert sich nicht mit der <xref:System.Windows.Controls.InkCanvas.EditingMode%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie einen Cursor verwenden, unterscheiden, die vom ist, die <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[InkCanvasSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasSamples/CSharp/Window1.xaml.cs#5)]
+ [!code-vb[InkCanvasSamples#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasSamples/VisualBasic/Window1.xaml.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int VisualChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisualChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkCanvas.VisualChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der sichtbaren untergeordneten Elemente innerhalb dieses Elements ab.</summary>
+        <value>Die Anzahl der sichtbaren untergeordneten Elemente für dieses Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

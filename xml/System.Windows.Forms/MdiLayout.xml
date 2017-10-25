@@ -1,0 +1,89 @@
+<Type Name="MdiLayout" FullName="System.Windows.Forms.MdiLayout">
+  <TypeSignature Language="C#" Value="public enum MdiLayout" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MdiLayout extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MdiLayout" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das Layout der untergeordneten Fenstern der multiple Document Interface (MDI) in ein übergeordnetes MDI-Fenster an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Member dieser Enumeration, beim Aufrufen der <xref:System.Windows.Forms.Form.LayoutMdi%2A> Methode der <xref:System.Windows.Forms.Form> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ArrangeIcons">
+      <MemberSignature Language="C#" Value="ArrangeIcons" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MdiLayout ArrangeIcons = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MdiLayout.ArrangeIcons" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MdiLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle untergeordneten MDI-Symbole werden im Clientbereich des übergeordneten MDI-Formulars angeordnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Cascade">
+      <MemberSignature Language="C#" Value="Cascade" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MdiLayout Cascade = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MdiLayout.Cascade" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MdiLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle untergeordneten MDI-Fenster im Clientbereich des übergeordneten MDI-Formulars überlappen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TileHorizontal">
+      <MemberSignature Language="C#" Value="TileHorizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MdiLayout TileHorizontal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MdiLayout.TileHorizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MdiLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle untergeordneten MDI-Fenster werden horizontal im Clientbereich des übergeordneten MDI-Formulars angeordnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TileVertical">
+      <MemberSignature Language="C#" Value="TileVertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MdiLayout TileVertical = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MdiLayout.TileVertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MdiLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle untergeordneten MDI-Fenster werden vertikal im Clientbereich des übergeordneten MDI-Formulars angeordnet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

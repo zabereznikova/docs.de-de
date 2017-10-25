@@ -1,0 +1,258 @@
+<Type Name="SettingsPropertyValue" FullName="System.Configuration.SettingsPropertyValue">
+  <TypeSignature Language="C#" Value="public class SettingsPropertyValue" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SettingsPropertyValue extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsPropertyValue" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält den Wert, der einer Einstellungseigenschaft, die geladen und von einer Instanz von gespeichert werden kann <see cref="T:System.Configuration.SettingsBase" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Klasse Darstellung der tatsächlichen Datenelements Profil. Ein <xref:System.Configuration.SettingsProperty> -Instanz beschreibt einen innerhalb einer Instanz von gespeicherten Wert einen <xref:System.Configuration.SettingsPropertyValue> Objekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsPropertyValue (System.Configuration.SettingsProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Configuration.SettingsProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsPropertyValue.#ctor(System.Configuration.SettingsProperty)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="property" Type="System.Configuration.SettingsProperty" />
+      </Parameters>
+      <Docs>
+        <param name="property">Gibt eine <see cref="T:System.Configuration.SettingsProperty" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Configuration.SettingsPropertyValue" /> -Klasse auf Grundlage der angegebenen Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Die <xref:System.Configuration.SettingsProperty> Objekt beschreibt, Informationen zu dem vom gespeicherten Wert der <xref:System.Configuration.SettingsPropertyValue> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialized">
+      <MemberSignature Language="C#" Value="public bool Deserialized { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Deserialized" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.Deserialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob der Wert des einem <see cref="T:System.Configuration.SettingsProperty" /> Objekt deserialisiert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert des einem <see cref="T:System.Configuration.SettingsProperty" /> deserialisierte ist, andernfalls ein Objekt wurde <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Deserialisierung von Eigenschaftswerten wird nur bei Bedarf ausgeführt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public bool IsDirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob der Wert des einem <see cref="T:System.Configuration.SettingsProperty" /> Objekts hat sich geändert.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert des eine <see cref="T:System.Configuration.SettingsProperty" /> Objekt geändert hat, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingsPropertyValue.IsDirty%2A> Eigenschaft gibt an, dass die von dieser Klasse gespeicherte Wert geändert wurde. Die Standardeinstellung ist `false`. Die <xref:System.Configuration.SettingsPropertyValue.IsDirty%2A> -Eigenschaftensatz auf `true` in den folgenden Situationen:  
+  
+1.  Der Wert in der <xref:System.Configuration.SettingsPropertyValue> Objekt geändert wird.  
+  
+2.  Der Wert in der <xref:System.Configuration.SettingsPropertyValue> Objekt zugegriffen wird, und der Wert ist eine Zeichenfolge oder einen primitiven Typ wie z. B. `int`, `float`, `real`, oder `DateTime`. Wenn der Wert von verwaltet eine <xref:System.Configuration.SettingsPropertyValue> Objekt ist ein komplexer Typ (z. B. ein <xref:System.Collections.ArrayList>), besteht keine Möglichkeit für eine <xref:System.Configuration.SettingsPropertyValue> Objekt erkennen, wenn Änderungen vorgenommen wurden. Daher die <xref:System.Configuration.SettingsPropertyValue> Objekt pessimistisch setzt voraus, dass es sich bei ein komplexer Typ geändert wurde, sobald es vom zugegriffen wurde die <xref:System.Configuration.SettingsPropertyValue.PropertyValue%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Eigenschaft aus dem zugeordneten <see cref="T:System.Configuration.SettingsProperty" /> Objekt.</summary>
+        <value>Der Name des <see cref="T:System.Configuration.SettingsProperty" />-Objekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public System.Configuration.SettingsProperty Property { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingsProperty Property" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Configuration.SettingsProperty" />-Objekt ab.</summary>
+        <value>Die <see cref="T:System.Configuration.SettingsProperty" /> Objekt, das beschreibt die <see cref="T:System.Configuration.SettingsPropertyValue" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyValue">
+      <MemberSignature Language="C#" Value="public object PropertyValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object PropertyValue" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.PropertyValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des <see cref="T:System.Configuration.SettingsProperty" />-Objekts ab oder legt diesen fest.</summary>
+        <value>Der Wert, der die <see cref="T:System.Configuration.SettingsProperty" /> Objekt. Wenn dieser Wert festgelegt ist, die <see cref="P:System.Configuration.SettingsPropertyValue.IsDirty" /> -Eigenschaftensatz auf <see langword="true" /> und <see cref="P:System.Configuration.SettingsPropertyValue.UsingDefaultValue" /> festgelegt ist, um <see langword="false" />.  
+  
+ Wenn ein Wert zuerst erfolgt über die <see cref="P:System.Configuration.SettingsPropertyValue.PropertyValue" /> -Eigenschaft, und der Wert war ursprünglich gespeichert, in der <see cref="T:System.Configuration.SettingsPropertyValue" /> Objekt als eine serialisierte Darstellung mit der <see cref="P:System.Configuration.SettingsPropertyValue.SerializedValue" /> -Eigenschaft, die <see cref="P:System.Configuration.SettingsPropertyValue.PropertyValue" /> Eigenschaft Deserialisierung ausgelöst wird der zugrunde liegenden Wert.  Als Nebeneffekt die <see cref="P:System.Configuration.SettingsPropertyValue.Deserialized" /> -Eigenschaftensatz auf <see langword="true" />.  
+  
+ Wenn diese Kette von Ereignissen in ASP.NET auftritt, und während der Deserialisierung ein Fehler auftritt, wird der Fehler protokolliert, mit der Systemüberwachung Funktion von ASP.NET. In der Standardeinstellung bedeutet dies, dass es sich bei Deserialisierungsfehler im Anwendungsereignisprotokoll angezeigt werden, wenn unter ASP.NET ausgeführt. Wenn dieser Vorgang außerhalb von ASP.NET erfolgt, und während der Deserialisierung ein Fehler auftritt, wird der Fehler unterdrückt, und die übrigen Logik, die während der Deserialisierung tritt auf. Es ist keine zu deserialisierende serialisierte Wert bei die Deserialisierung versucht wurde, klicken Sie dann <see cref="T:System.Configuration.SettingsPropertyValue" /> Objekt vielmehr versucht, einen Standardwert zurückgeben, wenn ein konfiguriert ist, auf dem zugeordneten gemäß <see cref="T:System.Configuration.SettingsProperty" /> Instanz. In diesem Fall wenn die <see cref="P:System.Configuration.SettingsProperty.DefaultValue" /> -Eigenschaft wurde entweder festgelegt <see langword="null" />, oder die Zeichenfolge "[Null]", und dann die <see cref="T:System.Configuration.SettingsPropertyValue" /> Objekt zu initialisieren der <see cref="P:System.Configuration.SettingsPropertyValue.PropertyValue" /> -Eigenschaft entweder <see langword="null" /> für Verweistypen, oder klicken Sie auf den Standardwert für die zugeordnete Werttyp.  Andererseits, wenn <see cref="P:System.Configuration.SettingsProperty.DefaultValue" /> Eigenschaft enthält einen gültigen Objektnamen Verweis oder Zeichenfolge Wert (als "[Null]"), und klicken Sie dann die <see cref="P:System.Configuration.SettingsProperty.DefaultValue" /> -Eigenschaft stattdessen zurückgegeben wird.  
+  
+ Ist kein serialisierter Wert zu deserialisieren, wenn die Deserialisierung wird versucht, und kein Standardwert angegeben wurde, wird eine leere Zeichenfolge für Zeichenfolgentypen zurückgegeben werden. Für alle anderen Datentypen eine Standardinstanz wird zurückgegeben werden, indem <see cref="M:System.Activator.CreateInstance(System.Type)" /> – für das bedeutet, dass Versuch versucht Referenztypen wird, eine Objektinstanz mit dem Standardkonstruktor erstellt.  Wenn dieser Versuch, klicken Sie dann fehlschlägt <see langword="null" /> zurückgegeben wird.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Beim Versuch, verwenden Sie den Standardwert aus der <see cref="P:System.Configuration.SettingsProperty.DefaultValue" /> -Eigenschaft ist ein Fehler aufgetreten.  Entweder ist der Versuch zu konvertierende <see cref="P:System.Configuration.SettingsProperty.DefaultValue" /> Eigenschaft auf einen gültigen fehlgeschlagen ist oder der resultierende Wert war nicht kompatibel mit dem Typ von definierten <see cref="P:System.Configuration.SettingsProperty.PropertyType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializedValue">
+      <MemberSignature Language="C#" Value="public object SerializedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SerializedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.SerializedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den serialisierten Wert von der <see cref="T:System.Configuration.SettingsProperty" /> Objekt.</summary>
+        <value>Die serialisierten Wert von einem <see cref="T:System.Configuration.SettingsProperty" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Configuration.SettingsPropertyValue> Instanz erkennt, die die <xref:System.Configuration.SettingsPropertyValue.PropertyValue%2A> Eigenschaft wurde geändert, seit der letzten Ausführung der <xref:System.Configuration.SettingsPropertyValue.SerializedValue%2A> -Eigenschaft wurde aufgerufen, er führt dazu, dass <xref:System.Configuration.SettingsPropertyValue.PropertyValue%2A> Eigenschaft in die serialisierte Darstellung konvertiert werden. Der spezifische Serialisierungsmechanismus zu verwendende wird definiert, indem die <xref:System.Configuration.SettingsProperty.SerializeAs%2A> Eigenschaft auf die <xref:System.Configuration.SettingsProperty> zugeordnete Instanz der <xref:System.Configuration.SettingsPropertyValue> Instanz. Die aktuelle unterstützte Serialisierungsoptionen sind, konvertieren das Objekt in eine Zeichenfolge mit einer Zeichenfolge Typkonverter, serialisieren mit der <xref:System.Xml.Serialization.XmlSerializer>, oder führen Sie die binären Serialisierung.  
+  
+> [!NOTE]
+>  Die zugrunde liegenden Serialisierungsprogramme können während des Serialisierungsprozesses Ausnahmen auslösen.  
+  
+ Für den unmittelbaren Aufrufercode müssen die <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> Berechtigung (die Berechtigungen, die als verfügbar Teil <xref:System.Security.Permissions.SecurityPermission>) der Getter oder Setter für diese Eigenschaft aufrufen.  Durch diese Berechtigung wird erzwungen, mit einem <xref:System.Security.Permissions.SecurityAction.LinkDemand> -Enumerationswert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Serialisierungsoptionen für die Eigenschaft angegeben, die Verwendung eines Zeichenfolgentypkonverters, aber ein Typkonverter war nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UsingDefaultValue">
+      <MemberSignature Language="C#" Value="public bool UsingDefaultValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsingDefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.UsingDefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der angibt, ob der Wert des der <see cref="T:System.Configuration.SettingsPropertyValue" /> Objekt ist der Standardwert, gemäß der <see cref="P:System.Configuration.SettingsProperty.DefaultValue" /> Eigenschaftswert auf dem zugeordneten <see cref="T:System.Configuration.SettingsProperty" /> Objekt.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert der <see cref="T:System.Configuration.SettingsProperty" /> Objekt ist der Standardwert ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

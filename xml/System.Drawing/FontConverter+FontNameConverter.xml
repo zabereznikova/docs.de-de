@@ -1,0 +1,192 @@
+<Type Name="FontConverter+FontNameConverter" FullName="System.Drawing.FontConverter+FontNameConverter">
+  <TypeSignature Language="C#" Value="public sealed class FontConverter.FontNameConverter : System.ComponentModel.TypeConverter, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed beforefieldinit FontConverter/FontNameConverter extends System.ComponentModel.TypeConverter implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.FontConverter.FontNameConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+      <see cref="T:System.Drawing.FontConverter.FontNameConverter" />ist ein Typkonverter, mit dem Namen einer Schriftart konvertieren in andere und aus verschiedenen anderen Darstellungen bereit.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontNameConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontConverter.FontNameConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.FontConverter.FontNameConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontConverter.FontNameConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , die verwendet werden kann, um zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen. Dies ist möglicherweise <see langword="null" />, daher immer überprüft werden soll. Auch Eigenschaften des Kontextobjekts gelegten <see langword="null" />.</param>
+        <param name="sourceType">Der Typ, die, dem Sie konvertieren möchten.</param>
+        <summary>Bestimmt, ob dieser Konverter ein Objekt vom angegebenen Quelltyp in den systemeigenen Typ des Konverters konvertieren kann.</summary>
+        <returns>
+          <see langword="true" />Wenn der Konverter die Konvertierung durchführen kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontConverter.FontNameConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , die verwendet werden kann, um zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen. Dies ist möglicherweise <see langword="null" />, daher immer überprüft werden soll. Auch Eigenschaften des Kontextobjekts gelegten <see langword="null" />.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> zu verwenden, um die Konvertierung auszuführen.</param>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert das angegebene Objekt in systemeigenen Typ des Konverters.</summary>
+        <returns>Das konvertierte Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht abgeschlossen werden.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontConverter.FontNameConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , die verwendet werden kann, um zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen. Dies ist möglicherweise <see langword="null" />, daher immer überprüft werden soll. Auch Eigenschaften des Kontextobjekts gelegten <see langword="null" />.</param>
+        <summary>Ruft eine Auflistung mit einem Satz von Standardwerten für den Datentyp, den, dem dieser Konverter vorgesehen ist.</summary>
+        <returns>Eine Auflistung, die einen Standardsatz gültiger Werte enthält oder <see langword="null" />. Die Standardeinstellung ist <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontConverter.FontNameConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , die verwendet werden kann, um zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen. Dies ist möglicherweise <see langword="null" />, daher immer überprüft werden soll. Auch Eigenschaften des Kontextobjekts gelegten <see langword="null" />.</param>
+        <summary>Bestimmt, ob die Liste von Standardwerten zurückgegeben, aus der <see cref="Overload:System.Drawing.FontConverter.FontNameConverter.GetStandardValues" /> Methode ist eine exklusive Liste darstellt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Sammlung von zurückgegeben <see cref="Overload:System.Drawing.FontConverter.FontNameConverter.GetStandardValues" /> wird eine exklusive Liste möglicher Werte darstellt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Liste exklusiv ist, sind keine anderen Werte gültig ist, z. B. bei einem Enumerationsdatentyp. Wenn die Liste nicht exklusiv ist, gibt es neben der Liste von Standardwerten auch andere gültige Werte sind <xref:System.Drawing.FontConverter.FontNameConverter.GetStandardValues%2A> bereitstellt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontConverter.FontNameConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , die verwendet werden kann, um zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen. Dies ist möglicherweise <see langword="null" />, daher immer überprüft werden soll. Auch Eigenschaften des Kontextobjekts gelegten <see langword="null" />.</param>
+        <summary>Bestimmt, ob dieses Objekt einen Standardsatz von Werten unterstützt, die aus einer Liste ausgewählt werden können.</summary>
+        <returns>
+          <see langword="true" />, wenn <see cref="Overload:System.Drawing.FontConverter.FontNameConverter.GetStandardValues" /> aufgerufen werden muss, um eine vom Objekt unterstützte Standardmenge von Werten zu ermitteln, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.FontConverter.FontNameConverter.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt anwendungsspezifische Aufgaben durch, die mit der Freigabe, der Zurückgabe oder dem Zurücksetzen von nicht verwalteten Ressourcen zusammenhängen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

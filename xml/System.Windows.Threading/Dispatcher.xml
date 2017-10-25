@@ -1,0 +1,2071 @@
+<Type Name="Dispatcher" FullName="System.Windows.Threading.Dispatcher">
+  <TypeSignature Language="C#" Value="public sealed class Dispatcher" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Dispatcher extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.Dispatcher" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Dienste für die Verwaltung von der Warteschlange von Arbeitsaufgaben für einen Thread.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Threading.Dispatcher> verwaltet eine priorisierte Warteschlange von Arbeitsaufgaben für einen bestimmten Thread.  
+  
+ Wenn eine <xref:System.Windows.Threading.Dispatcher> wird erstellt in einem Thread wird nur <xref:System.Windows.Threading.Dispatcher> , dem Thread zugeordnet werden kann auch dann, wenn die <xref:System.Windows.Threading.Dispatcher> wird heruntergefahren.  
+  
+ Wenn Sie versuchen, erhalten die <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> für den aktuellen Thread und einem <xref:System.Windows.Threading.Dispatcher> ist nicht mit dem Thread zugeordneten eine <xref:System.Windows.Threading.Dispatcher> erstellt werden. Ein <xref:System.Windows.Threading.Dispatcher> wird auch erstellt, bei der Erstellung einer <xref:System.Windows.Threading.DispatcherObject>. Wenn Sie erstellen eine <xref:System.Windows.Threading.Dispatcher> in einem Hintergrundthread werden sicher, dass der Verteiler Herunterfahren, bevor der Thread wird beendet.  
+  
+ Wenn eine <xref:System.Windows.Threading.Dispatcher> beendet wird, er kann nicht neu gestartet werden.  
+  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Threading.DispatcherObject> kann nur zugegriffen werden, indem die <xref:System.Windows.Threading.Dispatcher> er zugeordnet ist.  Beispielsweise kann kein Hintergrundthread aktualisiert den Inhalt des eine <xref:System.Windows.Controls.Button> zugeordneten der <xref:System.Windows.Threading.Dispatcher> auf die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Thread.  In der Hintergrundthread, den Zugriff auf die <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft von der <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> zugeordnet der [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Thread.  Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist.  Der Vorgang wird hinzugefügt, in die Warteschlange des der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ Wenn <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> aufgerufen wird, auf eine <xref:System.Windows.Threading.Dispatcher> , die heruntergefahren wurde, der Status-Eigenschaft des zurückgegebenen <xref:System.Windows.Threading.DispatcherOperation> festgelegt ist, um <xref:System.Windows.Threading.DispatcherOperationStatus.Aborted>.  
+  
+ Alle Methoden auf <xref:System.Windows.Threading.Dispatcher>, mit Ausnahme von <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>, Freethread-sind.  
+  
+ Objekte, die Ableitung <xref:System.Windows.Threading.DispatcherObject> Threadaffinität.  
+  
+ Objekte, die Ableitung <xref:System.Windows.Freezable> sind Freethread-Wenn sie fixiert werden.  Weitere Informationen finden Sie unter der [Übersicht über Freezable-Objekte](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie an eine Operation auf eine <xref:System.Windows.Threading.Dispatcher>.  Der vollständige Quellcode dieses Beispiels, finden Sie unter [Singlethread-Anwendung mit der lang andauernde Berechnung Beispiel](http://go.microsoft.com/fwlink/?LinkID=160038).  
+  
+ Zuerst wird ein Delegat erstellt, die keine Argumente akzeptiert.  
+  
+ [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberInit](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberinit)] 
+ [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberinit)]   
+  
+ Als Nächstes <xref:System.Windows.Threading.Dispatcher.BeginInvoke%28System.Windows.Threading.DispatcherPriority%2CSystem.Delegate%29> aufgerufen wird.  Dieser Aufruf <xref:System.Windows.Threading.Dispatcher.BeginInvoke%28System.Windows.Threading.DispatcherPriority%2CSystem.Delegate%29> akzeptiert zwei Parameter: die Priorität, die festgelegt wird, dass <xref:System.Windows.Threading.DispatcherPriority?displayProperty=nameWithType>, und der Rückruf, der über eine Instanz des Delegaten übergeben wird `NextPrimeDelegate`.  
+  
+ [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberBeginInvoke](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberbegininvoke)] 
+ [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberBeginInvoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberbegininvoke)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="BeginInvoke">
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Führt einen Delegaten asynchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen.  Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde.  In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet.  Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist.  Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>ist asynchron. aus diesem Grund gibt Steuerelement sofort an das aufrufende Objekt zurück, nachdem er aufgerufen wird.  
+  
+ <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>Gibt eine <xref:System.Windows.Threading.DispatcherOperation> -Objekt, das verwendet werden kann, um die Interaktion mit dem Delegaten, wenn der Delegat in der Warteschlange befindet.  
+  
+ Die <xref:System.Windows.Threading.DispatcherOperation> zurückgegebenes Objekt <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> können auf verschiedene Weise für die Interaktion mit den angegebenen Delegaten verwendet werden:  
+  
+-   Ändern der <xref:System.Windows.Threading.DispatcherPriority> des Delegaten entspricht ausstehende Ausführung im Ereignis in die Warteschlange.  
+  
+-   Entfernen den Delegaten aus der Ereigniswarteschlange.  
+  
+-   Es wird darauf gewartet, dass der Delegat zurückgegeben.  
+  
+-   Abrufen des Werts, die der Delegat, nachdem er zurückgegeben ausgeführt wird.  
+  
+ Wenn mehrere <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> Aufrufe gleichzeitig <xref:System.Windows.Threading.DispatcherPriority>, werden sie in der Reihenfolge der Aufrufe wurden ausgeführt.  
+  
+ Wenn <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> aufgerufen wird, auf eine <xref:System.Windows.Threading.Dispatcher> , die heruntergefahren wurde, der Status-Eigenschaft des zurückgegebenen <xref:System.Windows.Threading.DispatcherOperation> festgelegt ist, um <xref:System.Windows.Threading.DispatcherOperationStatus.Aborted>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperation BeginInvoke (Delegate method, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Threading.DispatcherOperation BeginInvoke(class System.Delegate method, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.BeginInvoke(System.Delegate,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="method">Der Delegat, der eine Methode, die im angegebenen Parameter <c>Args</c>, die zu leisten ist die <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <param name="args">Ein Array von Objekten, die als Argumente an die angegebene Methode übergeben werden sollen. Kann <see langword="null" />.</param>
+        <summary>Führt den angegebenen Delegaten asynchron mit den angegebenen Argumenten für den Thread, der <see cref="T:System.Windows.Threading.Dispatcher" /> erstellt wurde.</summary>
+        <returns>Ein Objekt, das unmittelbar auf zurückgegebene <see cref="Overload:System.Windows.Threading.Dispatcher.BeginInvoke" /> aufgerufen wird, die verwendet werden kann, für die Interaktion mit der Delegat, als es ausstehende Ausführung in der Warteschlange befindet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Threading.DispatcherOperation> zurückgegebenes Objekt <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> können auf verschiedene Weise für die Interaktion mit den angegebenen Delegaten verwendet werden:  
+  
+-   Ändern der <xref:System.Windows.Threading.DispatcherPriority> des Delegaten entspricht ausstehende Ausführung im Ereignis in die Warteschlange.  
+  
+-   Entfernen den Delegaten aus der Ereigniswarteschlange.  
+  
+-   Es wird darauf gewartet, dass der Delegat zurückgegeben.  
+  
+-   Abrufen des Werts, die der Delegat, nachdem er zurückgegeben ausgeführt wird.  
+  
+ <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>ist asynchron. aus diesem Grund gibt Steuerelement sofort an das aufrufende Objekt zurück, nachdem er aufgerufen wird.  
+  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen. Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde. In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet. Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist. Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ Wenn <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> aufgerufen wird, auf eine <xref:System.Windows.Threading.Dispatcher> , die heruntergefahren wurde, der Status-Eigenschaft des zurückgegebenen <xref:System.Windows.Threading.DispatcherOperation> festgelegt ist, um <xref:System.Windows.Threading.DispatcherOperationStatus.Aborted>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperation BeginInvoke (System.Windows.Threading.DispatcherPriority priority, Delegate method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Threading.DispatcherOperation BeginInvoke(valuetype System.Windows.Threading.DispatcherPriority priority, class System.Delegate method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="method" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="priority">Die Priorität im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange, der die angegebene Methode wird aufgerufen.</param>
+        <param name="method">Der Delegat, der eine Methode, die akzeptiert keine Argumente, die auf abgelegt wird die <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <summary>Führt den angegebenen Delegaten asynchron mit der angegebenen Priorität für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Ein Objekt, das unmittelbar auf zurückgegebene <see cref="Overload:System.Windows.Threading.Dispatcher.BeginInvoke" /> aufgerufen wird, die verwendet werden kann, für die Interaktion mit der Delegat, als es ausstehende Ausführung in der Warteschlange befindet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn mehrere <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> Aufrufe gleichzeitig <xref:System.Windows.Threading.DispatcherPriority>, werden sie in der Reihenfolge der Aufrufe wurden ausgeführt.  
+  
+ <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>Gibt eine <xref:System.Windows.Threading.DispatcherOperation> -Objekt, das verwendet werden kann, um die Interaktion mit dem Delegaten, wenn der Delegat in der Warteschlange befindet.  
+  
+ Die <xref:System.Windows.Threading.DispatcherOperation> zurückgegebenes Objekt <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> können auf verschiedene Weise für die Interaktion mit den angegebenen Delegaten verwendet werden:  
+  
+-   Ändern der <xref:System.Windows.Threading.DispatcherPriority> des Delegaten entspricht ausstehende Ausführung im Ereignis in die Warteschlange.  
+  
+-   Entfernen den Delegaten aus der Ereigniswarteschlange.  
+  
+-   Es wird darauf gewartet, dass der Delegat zurückgegeben.  
+  
+-   Abrufen des Werts, die der Delegat, nachdem er zurückgegeben ausgeführt wird.  
+  
+ <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>ist asynchron. aus diesem Grund gibt Steuerelement sofort an das aufrufende Objekt zurück, nachdem er aufgerufen wird.  
+  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen.  Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde.  In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet.  Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist.  Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ Wenn <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> aufgerufen wird, auf eine <xref:System.Windows.Threading.Dispatcher> , die heruntergefahren wurde, der Status-Eigenschaft des zurückgegebenen <xref:System.Windows.Threading.DispatcherOperation> festgelegt ist, um <xref:System.Windows.Threading.DispatcherOperationStatus.Aborted>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie an eine Operation auf eine <xref:System.Windows.Threading.Dispatcher>.  Der vollständige Quellcode dieses Beispiels, finden Sie unter [Singlethread-Anwendung mit der lang andauernde Berechnung Beispiel](http://go.microsoft.com/fwlink/?LinkID=160038).  
+  
+ Zuerst wird ein Delegat erstellt, die keine Argumente akzeptiert.  
+  
+ [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberInit](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberinit)] 
+ [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberinit)]   
+  
+ Als Nächstes <xref:System.Windows.Threading.Dispatcher.BeginInvoke%28System.Windows.Threading.DispatcherPriority%2CSystem.Delegate%29> aufgerufen wird.  Da jede <xref:System.Windows.Threading.DispatcherObject> verfügt über eine Eigenschaft, die zurückgibt der <xref:System.Windows.Threading.Dispatcher> zugeordnet ist, den gewünschten <xref:System.Windows.Threading.Dispatcher> erhalten, indem Sie Abfragen der <xref:System.Windows.Threading.DispatcherObject>, in diesem Fall eine <xref:System.Windows.Controls.Button> mit dem Namen `startStopButton`.   Der Aufruf von <xref:System.Windows.Threading.Dispatcher.BeginInvoke%28System.Windows.Threading.DispatcherPriority%2CSystem.Delegate%29> akzeptiert zwei Parameter: die Priorität, die festgelegt wird, dass <xref:System.Windows.Threading.DispatcherPriority?displayProperty=nameWithType>, und der Rückruf, der über eine Instanz des Delegaten übergeben wird `NextPrimeDelegate`.  
+  
+ [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberBeginInvoke](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberbegininvoke)] 
+ [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberBeginInvoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberbegininvoke)]   
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="method" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="priority" /> ist kein gültiger <see cref="T:System.Windows.Threading.DispatcherPriority" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperation BeginInvoke (Delegate method, System.Windows.Threading.DispatcherPriority priority, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Threading.DispatcherOperation BeginInvoke(class System.Delegate method, valuetype System.Windows.Threading.DispatcherPriority priority, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.BeginInvoke(System.Delegate,System.Windows.Threading.DispatcherPriority,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="method">Der Delegat, der eine Methode, die im angegebenen Parameter <c>Args</c>, die zu leisten ist die <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <param name="priority">Die Priorität im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange, der die angegebene Methode wird aufgerufen.</param>
+        <param name="args">Ein Array von Objekten, die als Argumente an die angegebene Methode übergeben werden sollen. Kann <see langword="null" />.</param>
+        <summary>Führt den angegebenen Delegaten asynchron mit den angegebenen Argumenten, mit der angegebenen Priorität für den Thread, der <see cref="T:System.Windows.Threading.Dispatcher" /> erstellt wurde.</summary>
+        <returns>Ein Objekt, das unmittelbar auf zurückgegebene <see cref="Overload:System.Windows.Threading.Dispatcher.BeginInvoke" /> aufgerufen wird, die verwendet werden kann, für die Interaktion mit der Delegat, als es ausstehende Ausführung in der Warteschlange befindet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Threading.DispatcherOperation> zurückgegebenes Objekt <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> können auf verschiedene Weise für die Interaktion mit den angegebenen Delegaten verwendet werden:  
+  
+-   Ändern der <xref:System.Windows.Threading.DispatcherPriority> des Delegaten entspricht ausstehende Ausführung im Ereignis in die Warteschlange.  
+  
+-   Entfernen den Delegaten aus der Ereigniswarteschlange.  
+  
+-   Es wird darauf gewartet, dass der Delegat zurückgegeben.  
+  
+-   Abrufen des Werts, die der Delegat, nachdem er zurückgegeben ausgeführt wird.  
+  
+ <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>ist asynchron. aus diesem Grund gibt Steuerelement sofort an das aufrufende Objekt zurück, nachdem er aufgerufen wird.  
+  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen. Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde. In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet. Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist. Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ Wenn <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> aufgerufen wird, auf eine <xref:System.Windows.Threading.Dispatcher> , die heruntergefahren wurde, der Status-Eigenschaft des zurückgegebenen <xref:System.Windows.Threading.DispatcherOperation> festgelegt ist, um <xref:System.Windows.Threading.DispatcherOperationStatus.Aborted>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperation BeginInvoke (System.Windows.Threading.DispatcherPriority priority, Delegate method, object arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Threading.DispatcherOperation BeginInvoke(valuetype System.Windows.Threading.DispatcherPriority priority, class System.Delegate method, object arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority,System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="arg" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="priority">Die Priorität im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange, der die angegebene Methode wird aufgerufen.</param>
+        <param name="method">Ein Delegat, der eine Methode, die ein Argument akzeptiert, die auf abgelegt wird die <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <param name="arg">Das Objekt, das als Argument an die angegebene Methode übergeben.</param>
+        <summary>Führt den angegebenen Delegaten asynchron mit der angegebenen Priorität und dem angegebenen Argument für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Ein Objekt, das unmittelbar auf zurückgegebene <see cref="Overload:System.Windows.Threading.Dispatcher.BeginInvoke" /> aufgerufen wird, die verwendet werden kann, für die Interaktion mit der Delegat, als es ausstehende Ausführung in der Warteschlange befindet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Arg`kann `null` Wenn keine Argumente benötigt werden.  
+  
+ <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>Gibt eine <xref:System.Windows.Threading.DispatcherOperation> -Objekt, das verwendet werden kann, um die Interaktion mit dem Delegaten, wenn der Delegat in der Warteschlange befindet.  
+  
+ Die <xref:System.Windows.Threading.DispatcherOperation> zurückgegebenes Objekt <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> können auf verschiedene Weise für die Interaktion mit den angegebenen Delegaten verwendet werden:  
+  
+-   Ändern der <xref:System.Windows.Threading.DispatcherPriority> des Delegaten entspricht ausstehende Ausführung im Ereignis in die Warteschlange.  
+  
+-   Entfernen den Delegaten aus der Ereigniswarteschlange.  
+  
+-   Es wird darauf gewartet, dass der Delegat zurückgegeben.  
+  
+-   Abrufen des Werts, die der Delegat, nachdem er zurückgegeben ausgeführt wird.  
+  
+ <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>ist asynchron. aus diesem Grund gibt Steuerelement sofort an das aufrufende Objekt zurück, nachdem er aufgerufen wird.  
+  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen.  Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde.  In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet.  Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist.  Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ Wenn mehrere <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> Aufrufe gleichzeitig <xref:System.Windows.Threading.DispatcherPriority>, werden sie in der Reihenfolge der Aufrufe wurden ausgeführt.  
+  
+ Wenn <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> aufgerufen wird, auf eine <xref:System.Windows.Threading.Dispatcher> , die heruntergefahren wurde, der Status-Eigenschaft des zurückgegebenen <xref:System.Windows.Threading.DispatcherOperation> festgelegt ist, um <xref:System.Windows.Threading.DispatcherOperationStatus.Aborted>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie an eine Operation auf eine <xref:System.Windows.Threading.Dispatcher>.  
+  
+ Zuerst wird ein Delegat erstellt, das ein Argument, in diesem Fall eine Zeichenfolge akzeptiert.  
+  
+ [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherDelegates](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherdelegates)]
+ [!code-vb[ThreadingWeatherForecast#ThreadingWeatherDelegates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherdelegates)]  
+  
+ Als Nächstes <xref:System.Windows.Threading.Dispatcher.BeginInvoke%28System.Windows.Threading.DispatcherPriority%2CSystem.Delegate%2CSystem.Object%29> aufgerufen wird.  Da jede <xref:System.Windows.Threading.DispatcherObject> verfügt über eine Eigenschaft, die zurückgibt der <xref:System.Windows.Threading.Dispatcher> zugeordnet ist, den gewünschten <xref:System.Windows.Threading.Dispatcher> erhalten, indem Sie Abfragen der <xref:System.Windows.Threading.DispatcherObject>, in diesem Fall eine <xref:System.Windows.Controls.Grid> mit dem Namen `tomorrowsWeather`. Der Aufruf von <xref:System.Windows.Threading.Dispatcher.BeginInvoke%28System.Windows.Threading.DispatcherPriority%2CSystem.Delegate%2CSystem.Object%29> akzeptiert drei Parameter: die Priorität, die festgelegt wird, dass <xref:System.Windows.Threading.DispatcherPriority?displayProperty=nameWithType>; der Rückruf, der über eine Instanz des Delegaten übergeben wird `OneArgDelegate`; und eine Zeichenfolge mit dem Namen `weather`, dies ist das Argument für den Rückruf bereit.  
+  
+ [!code-csharp[threadingweatherforecast#ThreadingWeatherDispatcherOneArge](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherdispatcheronearge)]
+ [!code-vb[threadingweatherforecast#ThreadingWeatherDispatcherOneArge](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherdispatcheronearge)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="method" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="priority" /> ist kein gültiger <see cref="T:System.Windows.Threading.DispatcherPriority" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperation BeginInvoke (System.Windows.Threading.DispatcherPriority priority, Delegate method, object arg, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Threading.DispatcherOperation BeginInvoke(valuetype System.Windows.Threading.DispatcherPriority priority, class System.Delegate method, object arg, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority,System.Delegate,System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="arg" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="priority">Die Priorität im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange, der die angegebene Methode wird aufgerufen.</param>
+        <param name="method">Ein Delegat zu einer Methode die mehrere Argumente akzeptiert, wird auf abgelegt der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <param name="arg">Das Objekt, das als Argument an die angegebene Methode übergeben.</param>
+        <param name="args">Ein Array von Objekten, die als Argumente an die angegebene Methode übergeben werden sollen.</param>
+        <summary>Führt den angegebenen Delegaten asynchron mit der angegebenen Priorität und dem angegebenen Array von Argumenten für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Ein Objekt, das unmittelbar nach dem zurückgegebenen <see cref="Overload:System.Windows.Threading.Dispatcher.BeginInvoke" /> aufgerufen wird, die verwendet werden kann, für die Interaktion mit den Delegaten, steht der Ausführung in der <see cref="T:System.Windows.Threading.Dispatcher" /> Warteschlange.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `arg` Parameter möglich `null` Wenn keine Argumente benötigt werden.  
+  
+ <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>Gibt eine <xref:System.Windows.Threading.DispatcherOperation> -Objekt, das verwendet werden kann, um die Interaktion mit dem Delegaten, wenn der Delegat in der Warteschlange befindet.  
+  
+ Die <xref:System.Windows.Threading.DispatcherOperation> zurückgegebenes Objekt <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> können auf verschiedene Weise für die Interaktion mit den angegebenen Delegaten verwendet werden:  
+  
+-   Ändern der <xref:System.Windows.Threading.DispatcherPriority> des Delegaten entspricht ausstehende Ausführung im Ereignis in die Warteschlange.  
+  
+-   Entfernen den Delegaten aus der Ereigniswarteschlange.  
+  
+-   Es wird darauf gewartet, dass der Delegat zurückgegeben.  
+  
+-   Abrufen des Werts, die der Delegat, nachdem er zurückgegeben ausgeführt wird.  
+  
+ <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>ist asynchron. aus diesem Grund gibt Steuerelement sofort an das aufrufende Objekt zurück, nachdem er aufgerufen wird.  
+  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen.  Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde.  In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet.  Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist.  Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ Wenn mehrere <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> Aufrufe gleichzeitig <xref:System.Windows.Threading.DispatcherPriority>, werden sie in der Reihenfolge der Aufrufe wurden ausgeführt.  
+  
+ Wenn <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> aufgerufen wird, auf eine <xref:System.Windows.Threading.Dispatcher> , die heruntergefahren wurde, der Status-Eigenschaft des zurückgegebenen <xref:System.Windows.Threading.DispatcherOperation> festgelegt ist, um <xref:System.Windows.Threading.DispatcherOperationStatus.Aborted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="method" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <see cref="T:System.Windows.Threading.DispatcherPriority" />ist keine gültige Priorität.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvokeShutdown">
+      <MemberSignature Language="C#" Value="public void BeginInvokeShutdown (System.Windows.Threading.DispatcherPriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginInvokeShutdown(valuetype System.Windows.Threading.DispatcherPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.BeginInvokeShutdown(System.Windows.Threading.DispatcherPriority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+      </Parameters>
+      <Docs>
+        <param name="priority">Die Priorität auf dem Verteiler heruntergefahren werden soll.</param>
+        <summary>Startet das Herunterfahren der <see cref="T:System.Windows.Threading.Dispatcher" /> asynchron.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Threading.Dispatcher.BeginInvokeShutdown%2A>setzt uneingeschränkte Benutzeroberflächen-Berechtigungen.  
+  
+ Wenn die <xref:System.Windows.Threading.Dispatcher> zum Herunterfahren beginnt die <xref:System.Windows.Threading.Dispatcher.ShutdownStarted> Ereignis wird ausgelöst, und <xref:System.Windows.Threading.Dispatcher.HasShutdownStarted%2A> auf festgelegt ist `true`.  
+  
+ Die <xref:System.Windows.Threading.Dispatcher> ist nicht vollständig heruntergefahren, bis die Ereigniswarteschlange abgearbeitet wurde.  
+  
+ Nach Abschluss der Verteiler heruntergefahren wird, die <xref:System.Windows.Threading.Dispatcher.ShutdownFinished> Ereignis wird ausgelöst, und die <xref:System.Windows.Threading.Dispatcher.HasShutdownFinished%2A> -Eigenschaftensatz auf `true`.  
+  
+ Nachdem der Prozess des Herunterfahrens eingeleitet wurde, werden alle anstehenden Arbeitsaufgaben Elemente in der Warteschlange abgebrochen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Verteiler beendet.  Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAccess">
+      <MemberSignature Language="C#" Value="public bool CheckAccess ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CheckAccess() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.CheckAccess" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob der aufrufende Thread zugeordnet ist <see cref="T:System.Windows.Threading.Dispatcher" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der aufrufende Thread zugeordnet ist <see cref="T:System.Windows.Threading.Dispatcher" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur die <xref:System.Windows.Threading.Dispatcher> , die eine <xref:System.Windows.Threading.DispatcherObject> wird erstellt, auf auf das Objekt zugreifen kann.  Verwendung <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> auf das Objekt von einem anderen Thread zuzugreifen.  
+  
+ <xref:System.Windows.Threading.Dispatcher.CheckAccess%2A>kann von jedem Thread aufgerufen werden.  
+  
+ Der Unterschied zwischen <xref:System.Windows.Threading.Dispatcher.CheckAccess%2A> und <xref:System.Windows.Threading.Dispatcher.VerifyAccess%2A> ist <xref:System.Windows.Threading.Dispatcher.CheckAccess%2A> gibt einen booleschen Wert, der angibt, ob der aufrufende Thread Zugriff auf die <xref:System.Windows.Threading.Dispatcher> und <xref:System.Windows.Threading.Dispatcher.VerifyAccess%2A> löst eine Ausnahme aus.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Windows.Threading.Dispatcher.CheckAccess%2A> zu bestimmen, ob ein Thread den Zugriff auf verfügt über eine <xref:System.Windows.Controls.Button>.  Der <xref:System.Windows.Threading.Dispatcher.CheckAccess%2A> Methode für die <xref:System.Windows.Threading.Dispatcher> zugeordneten der <xref:System.Windows.Controls.Button> wird aufgerufen, um den Zugriff auf den Thread zu überprüfen.  Verfügt der aufrufende Thread den Zugriff auf die <xref:System.Windows.Threading.Dispatcher>, die <xref:System.Windows.Controls.Button> wird aktualisiert, indem Sie den Zugriff auf die Mitglieder der der <xref:System.Windows.Controls.Button>ist, andernfalls ein Delegat, der akzeptiert eine <xref:System.Windows.Controls.Button> als Argument in platziert die <xref:System.Windows.Threading.Dispatcher>.  Die <xref:System.Windows.Threading.Dispatcher> delegiert die Arbeit aktualisieren die <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[DispatcherAccessSample#DispatcherAccessCheckAccess](~/samples/snippets/csharp/VS_Snippets_Wpf/DispatcherAccessSample/CSharp/Window1.xaml.cs#dispatcheraccesscheckaccess)]
+ [!code-vb[DispatcherAccessSample#DispatcherAccessCheckAccess](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DispatcherAccessSample/visualbasic/window1.xaml.vb#dispatcheraccesscheckaccess)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentDispatcher">
+      <MemberSignature Language="C#" Value="public static System.Windows.Threading.Dispatcher CurrentDispatcher { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Threading.Dispatcher CurrentDispatcher" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.Dispatcher.CurrentDispatcher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.Dispatcher</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Threading.Dispatcher" /> für den Thread gerade ausgeführt und erstellt einen neuen <see cref="T:System.Windows.Threading.Dispatcher" /> Wenn noch nicht dem Thread zugeordnet ist.</summary>
+        <value>Der Verteiler, die dem aktuellen Thread zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Windows.Threading.Dispatcher> ist nicht mit den aktuellen Thread verknüpft ein neues <xref:System.Windows.Threading.Dispatcher> erstellt werden.  Dies ist bei der <xref:System.Windows.Threading.Dispatcher.FromThread%2A>-Methode nicht der Fall.  <xref:System.Windows.Threading.Dispatcher.FromThread%2A>Gibt zurück, `null` besteht kein Verteiler den angegebenen Thread zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableProcessing">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherProcessingDisabled DisableProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Threading.DispatcherProcessingDisabled DisableProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.DisableProcessing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherProcessingDisabled</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Deaktiviert die Verarbeitung der <see cref="T:System.Windows.Threading.Dispatcher" /> Warteschlange.</summary>
+        <returns>Eine Struktur verwendet, um die Verarbeitung durch den Verteiler erneut zu aktivieren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Deaktivieren von Verteiler, die Verarbeitung ist eine erweiterte Methode, die vorgesehen ist, um das Risiko von nicht verknüpfte Reentranz zu vermeiden.  
+  
+ Die Auswirkungen des Deaktivierens von Verarbeitung lauten wie folgt:  
+  
+-   [!INCLUDE[TLA2#tla_clr#initcap](~/includes/tla2sharptla-clrsharpinitcap-md.md)]Sperren werden intern nicht Nachrichten weiterleiten.  
+  
+-   <xref:System.Windows.Threading.DispatcherFrame>Objekte dürfen nicht verschoben werden.  
+  
+-   Verarbeitung von Nachrichten ist nicht zulässig.  
+  
+ Die <xref:System.Windows.Threading.DispatcherProcessingDisabled> Datenstruktur, <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A> zurückgegeben, wenn sie aufgerufen wird, können verwendet werden, um die Verarbeitung durch den Verteiler erneut zu aktivieren.  Aufrufen von <xref:System.Windows.Threading.DispatcherProcessingDisabled.Dispose%2A> auf die <xref:System.Windows.Threading.DispatcherProcessingDisabled> Struktur ermöglicht die Verarbeitung erneut.  
+  
+ <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>kann nur auf dem Thread aufgerufen werden der <xref:System.Windows.Threading.Dispatcher> zugeordnet ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verarbeitung durch den Verteiler deaktivieren und erneutes Aktivieren Verarbeitung durch den Verteiler.  <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>wird aufgerufen, einem **mit** Anweisung.  <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>Gibt eine <xref:System.Windows.Threading.DispatcherProcessingDisabled> -Struktur, die dem Objekt verwendet wird, um freigegeben sein, wenn die **mit** -block abgeschlossen ist.  Wenn <xref:System.Windows.Threading.DispatcherProcessingDisabled.Dispose%2A> aufgerufen wird, auf die <xref:System.Windows.Threading.DispatcherProcessingDisabled> -Struktur, die Verarbeitung durch den Verteiler wird wieder aktiviert.  
+  
+ [!code-csharp[DispatcherSnippets#DispatcherDisableProcessing](~/samples/snippets/csharp/VS_Snippets_Wpf/DispatcherSnippets/CSharp/Window1.xaml.cs#dispatcherdisableprocessing)]
+ [!code-vb[DispatcherSnippets#DispatcherDisableProcessing](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DispatcherSnippets/visualbasic/window1.xaml.vb#dispatcherdisableprocessing)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitAllFrames">
+      <MemberSignature Language="C#" Value="public static void ExitAllFrames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ExitAllFrames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.ExitAllFrames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Anforderungen, die alle Frames zu beenden, einschließlich geschachtelter Frames.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für das Aufrufen dieser Methode. Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromThread">
+      <MemberSignature Language="C#" Value="public static System.Windows.Threading.Dispatcher FromThread (System.Threading.Thread thread);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Threading.Dispatcher FromThread(class System.Threading.Thread thread) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.FromThread(System.Threading.Thread)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.Dispatcher</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thread" Type="System.Threading.Thread" />
+      </Parameters>
+      <Docs>
+        <param name="thread">Der Thread zum Abrufen der <see cref="T:System.Windows.Threading.Dispatcher" /> aus.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Threading.Dispatcher" /> für den angegebenen Thread.</summary>
+        <returns>Der Verteiler für <paramref name="thread" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Verteiler nicht verfügbar für den angegebenen Thread ist `null` zurückgegeben werden.  
+  
+ <xref:System.Windows.Threading.Dispatcher.FromThread%2A>erstellt keine <xref:System.Windows.Threading.Dispatcher> in einem Thread, der keinem <xref:System.Windows.Threading.Dispatcher>.   Ein neues <xref:System.Windows.Threading.Dispatcher> wird auf einen Thread, der noch nicht erstellt eine <xref:System.Windows.Threading.Dispatcher> beim Abrufen der <xref:System.Windows.Threading.Dispatcher> mithilfe der <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasShutdownFinished">
+      <MemberSignature Language="C#" Value="public bool HasShutdownFinished { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasShutdownFinished" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.Dispatcher.HasShutdownFinished" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob die <see cref="T:System.Windows.Threading.Dispatcher" /> heruntergefahren wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der Verteiler die Beendigung abgeschlossen wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Threading.Dispatcher> zum Herunterfahren beginnt die <xref:System.Windows.Threading.Dispatcher.ShutdownStarted> Ereignis wird ausgelöst, und <xref:System.Windows.Threading.Dispatcher.HasShutdownStarted%2A> auf festgelegt ist `true`.  
+  
+ Die <xref:System.Windows.Threading.Dispatcher> wird vollständig beendet, bis die Ereigniswarteschlange abgearbeitet wurde.  
+  
+ Nach Abschluss der Verteiler heruntergefahren wird, die <xref:System.Windows.Threading.Dispatcher.ShutdownFinished> Ereignis wird ausgelöst, und die <xref:System.Windows.Threading.Dispatcher.HasShutdownFinished%2A> -Eigenschaftensatz auf `true`.  
+  
+ Nachdem der Prozess des Herunterfahrens eingeleitet wurde, werden alle anstehenden Arbeitsaufgaben Elemente in der Warteschlange abgebrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasShutdownStarted">
+      <MemberSignature Language="C#" Value="public bool HasShutdownStarted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasShutdownStarted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.Dispatcher.HasShutdownStarted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob die <see cref="T:System.Windows.Threading.Dispatcher" /> wird heruntergefahren.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Threading.Dispatcher" /> gestarteten heruntergefahren wird, andernfalls, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Threading.Dispatcher> zum Herunterfahren beginnt die <xref:System.Windows.Threading.Dispatcher.ShutdownStarted> Ereignis wird ausgelöst, und <xref:System.Windows.Threading.Dispatcher.HasShutdownStarted%2A> auf festgelegt ist `true`.  
+  
+ Die <xref:System.Windows.Threading.Dispatcher> ist nicht vollständig heruntergefahren, bis die Ereigniswarteschlange abgearbeitet wurde.  
+  
+ Nach Abschluss der Verteiler heruntergefahren wird, die <xref:System.Windows.Threading.Dispatcher.ShutdownFinished> Ereignis wird ausgelöst, und die <xref:System.Windows.Threading.Dispatcher.HasShutdownFinished%2A> -Eigenschaftensatz auf `true`.  
+  
+ Nachdem der Prozess des Herunterfahrens eingeleitet wurde, werden alle anstehenden Arbeitsaufgaben Elemente in der Warteschlange abgebrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hooks">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherHooks Hooks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Threading.DispatcherHooks Hooks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.Dispatcher.Hooks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherHooks</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Hooks, die Weitere Informationen zum Bereitstellen der <see cref="T:System.Windows.Threading.Dispatcher" />.</summary>
+        <value>Die zugeordnete Hooks <see cref="T:System.Windows.Threading.Dispatcher" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Threading.DispatcherHooks> Klasse enthält weitere Informationen über die <xref:System.Windows.Threading.Dispatcher>, z. B. wenn die <xref:System.Windows.Threading.Dispatcher> inaktiv ist oder wenn ein Vorgang abgeschlossen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Abrufen dieser Eigenschaft.  Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Invoke">
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Führt den angegebenen Delegaten synchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen.  Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde.  In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet.  Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist.  Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist ein synchroner Vorgang. aus diesem Grund gibt Steuerelement nicht an das aufrufende Objekt erst zurück, nachdem der Rückruf zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Delegat auf eine <xref:System.Windows.Threading.Dispatcher> am <xref:System.Windows.Threading.DispatcherPriority.Normal> mit <xref:System.Windows.Threading.Dispatcher.Invoke%2A>.  
+  
+ [!code-csharp[invalidaterequerywithsystemtimer#SystemTimerDispatcherInvoke](~/samples/snippets/csharp/VS_Snippets_Wpf/InvalidateRequeryWithSystemTimer/CSharp/Window1.xaml.cs#systemtimerdispatcherinvoke)]
+ [!code-vb[invalidaterequerywithsystemtimer#SystemTimerDispatcherInvoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InvalidateRequeryWithSystemTimer/visualbasic/window1.xaml.vb#systemtimerdispatcherinvoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke (Action callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invoke(class System.Action callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <summary>Führt das angegebene <see cref="T:System.Action" /> synchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke (Action callback, System.Windows.Threading.DispatcherPriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invoke(class System.Action callback, valuetype System.Windows.Threading.DispatcherPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Action,System.Windows.Threading.DispatcherPriority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <param name="priority">Die Priorität, der bestimmt, in welcher Reihenfolge die angegebene Rückruf aufgerufen wird, im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" />.</param>
+        <summary>Führt das angegebene <see cref="T:System.Action" /> synchron mit der angegebenen Priorität für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (Delegate method, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(class System.Delegate method, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Delegate,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="method">Ein Delegat, der eine Methode, die im angegebenen Parameter <c>Args</c>, die zu leisten ist die <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <param name="args">Ein Array von Objekten, die als Argumente an die angegebene Methode übergeben werden sollen. Kann <see langword="null" />.</param>
+        <summary>Führt den angegebenen Delegaten mit den angegebenen Argumenten synchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Der Rückgabewert des aufgerufenen Delegaten bzw. <see langword="null" /> Wenn der Delegat keinen Wert zurückgibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen. Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde. In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet. Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist. Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist ein synchroner Vorgang. aus diesem Grund gibt Steuerelement nicht an das aufrufende Objekt erst zurück, nachdem der Rückruf zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (System.Windows.Threading.DispatcherPriority priority, Delegate method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(valuetype System.Windows.Threading.DispatcherPriority priority, class System.Delegate method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="method" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="priority">Die Priorität im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange, der die angegebene Methode wird aufgerufen.</param>
+        <param name="method">Ein Delegat zu einer Methode, die akzeptiert keine Argumente, die auf abgelegt wird die <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <summary>Führt den angegebenen Delegaten synchron mit der angegebenen Priorität für den Thread auf dem die <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Der Rückgabewert des aufgerufenen Delegaten bzw. <see langword="null" /> Wenn der Delegat keinen Wert zurückgibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen.  Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde.  In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet.  Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist.  Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist ein synchroner Vorgang. aus diesem Grund gibt Steuerelement nicht an das aufrufende Objekt erst zurück, nachdem der Rückruf zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Delegat auf eine <xref:System.Windows.Threading.Dispatcher> am <xref:System.Windows.Threading.DispatcherPriority.Normal> mit <xref:System.Windows.Threading.Dispatcher.Invoke%2A>.  
+  
+ [!code-csharp[invalidaterequerywithsystemtimer#SystemTimerDispatcherInvoke](~/samples/snippets/csharp/VS_Snippets_Wpf/InvalidateRequeryWithSystemTimer/CSharp/Window1.xaml.cs#systemtimerdispatcherinvoke)]
+ [!code-vb[invalidaterequerywithsystemtimer#SystemTimerDispatcherInvoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InvalidateRequeryWithSystemTimer/visualbasic/window1.xaml.vb#systemtimerdispatcherinvoke)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="priority" /> ist gleich <see cref="F:System.Windows.Threading.DispatcherPriority.Inactive" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="priority" />ist keine gültige Priorität.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="method" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke (Action callback, System.Windows.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invoke(class System.Action callback, valuetype System.Windows.Threading.DispatcherPriority priority, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Action,System.Windows.Threading.DispatcherPriority,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <param name="priority">Die Priorität, der bestimmt, in welcher Reihenfolge die angegebene Rückruf aufgerufen wird, im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" />.</param>
+        <param name="cancellationToken">Ein Objekt, das angibt, ob die aktuelle Aktion abzubrechen.</param>
+        <summary>Führt das angegebene <see cref="T:System.Action" /> synchron mit der angegebenen Priorität für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (Delegate method, TimeSpan timeout, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(class System.Delegate method, valuetype System.TimeSpan timeout, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Delegate,System.TimeSpan,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="method">Ein Delegat, der eine Methode, die im angegebenen Parameter <c>Args</c>, die zu leisten ist die <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <param name="timeout">Die maximale Zeitspanne, die auf den Abschluss der Operation gewartet wird.</param>
+        <param name="args">Ein Array von Objekten, die als Argumente an die angegebene Methode übergeben werden sollen. Kann <see langword="null" />.</param>
+        <summary>Führt den angegebenen Delegaten innerhalb des festgelegten Zeitraums mit der angegebenen Priorität mit den angegebenen Argumenten synchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Der Rückgabewert des aufgerufenen Delegaten bzw. <see langword="null" /> Wenn der Delegat keinen Wert zurückgibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen. Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde. In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet. Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist. Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist ein synchroner Vorgang. aus diesem Grund gibt Steuerelement nicht an das aufrufende Objekt erst zurück, nachdem der Rückruf zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (Delegate method, System.Windows.Threading.DispatcherPriority priority, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(class System.Delegate method, valuetype System.Windows.Threading.DispatcherPriority priority, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Delegate,System.Windows.Threading.DispatcherPriority,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="method">Ein Delegat, der eine Methode, die im angegebenen Parameter <c>Args</c>, die zu leisten ist die <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <param name="priority">Die Priorität im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange, der die angegebene Methode wird aufgerufen.</param>
+        <param name="args">Ein Array von Objekten, die als Argumente an die angegebene Methode übergeben werden sollen. Kann <see langword="null" />.</param>
+        <summary>Führt den angegebenen Delegaten mit der angegebenen Priorität mit den angegebenen Argumenten synchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Der Rückgabewert des aufgerufenen Delegaten bzw. <see langword="null" /> Wenn der Delegat keinen Wert zurückgibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen. Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde. In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet. Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist. Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist ein synchroner Vorgang. aus diesem Grund gibt Steuerelement nicht an das aufrufende Objekt erst zurück, nachdem der Rückruf zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (System.Windows.Threading.DispatcherPriority priority, Delegate method, object arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(valuetype System.Windows.Threading.DispatcherPriority priority, class System.Delegate method, object arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority,System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="arg" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="priority">Die Priorität im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange, der die angegebene Methode wird aufgerufen.</param>
+        <param name="method">Ein Delegat, der eine Methode, die ein Argument akzeptiert, die auf abgelegt wird die <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <param name="arg">Ein Objekt, das als Argument an die angegebene Methode übergeben.</param>
+        <summary>Führt den angegebenen Delegaten mit der angegebenen Priorität mit dem angegebenen Argument synchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Der Rückgabewert des aufgerufenen Delegaten bzw. <see langword="null" /> Wenn der Delegat keinen Wert zurückgibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Arg`kann `null` Wenn ein Argument nicht benötigt wird  
+  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen.  Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde.  In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet.  Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist.  Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist ein synchroner Vorgang. aus diesem Grund gibt Steuerelement nicht an das aufrufende Objekt erst zurück, nachdem der Rückruf zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="priority" /> ist gleich <see cref="F:System.Windows.Threading.DispatcherPriority.Inactive" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="priority" />ist keine gültige Priorität.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="method" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (System.Windows.Threading.DispatcherPriority priority, TimeSpan timeout, Delegate method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(valuetype System.Windows.Threading.DispatcherPriority priority, valuetype System.TimeSpan timeout, class System.Delegate method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority,System.TimeSpan,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="method" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="priority">Die Priorität im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange, der die angegebene Methode wird aufgerufen.</param>
+        <param name="timeout">Die maximale Zeit zu warten, bis der Vorgang mit Latenz beendet wird.</param>
+        <param name="method">Der Delegat, der eine Methode, die akzeptiert keine Argumente, die auf abgelegt wird die <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <summary>Führt den angegebenen Delegaten synchron mit der angegebenen Priorität und mit dem angegebenen Timeoutwert für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> erstellt wurde.</summary>
+        <returns>Der Rückgabewert des aufgerufenen Delegaten bzw. <see langword="null" /> Wenn der Delegat keinen Wert zurückgibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen.  Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde.  In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet.  Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist.  Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist ein synchroner Vorgang. aus diesem Grund gibt Steuerelement nicht an das aufrufende Objekt erst zurück, nachdem der Rückruf zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke (Action callback, System.Windows.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invoke(class System.Action callback, valuetype System.Windows.Threading.DispatcherPriority priority, valuetype System.Threading.CancellationToken cancellationToken, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Action,System.Windows.Threading.DispatcherPriority,System.Threading.CancellationToken,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <param name="priority">Die Priorität, der bestimmt, in welcher Reihenfolge die angegebene Rückruf aufgerufen wird, im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" />.</param>
+        <param name="cancellationToken">Ein Objekt, das angibt, ob die aktuelle Aktion abzubrechen.</param>
+        <param name="timeout">Die Mindestmenge an Zeit zum Starten des Vorgangs warten.</param>
+        <summary>Führt das angegebene <see cref="T:System.Action" /> synchron mit der angegebenen Priorität für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (Delegate method, TimeSpan timeout, System.Windows.Threading.DispatcherPriority priority, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(class System.Delegate method, valuetype System.TimeSpan timeout, valuetype System.Windows.Threading.DispatcherPriority priority, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Delegate,System.TimeSpan,System.Windows.Threading.DispatcherPriority,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="method">Ein Delegat, der eine Methode, die im angegebenen Parameter <c>Args</c>, die zu leisten ist die <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <param name="timeout">Die maximale Zeitspanne, die auf den Abschluss der Operation gewartet wird.</param>
+        <param name="priority">Die Priorität im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange, der die angegebene Methode wird aufgerufen.</param>
+        <param name="args">Ein Array von Objekten, die als Argumente an die angegebene Methode übergeben werden sollen. Kann <see langword="null" />.</param>
+        <summary>Führt den angegebenen Delegaten innerhalb des festgelegten Zeitraums mit der angegebenen Priorität mit den angegebenen Argumenten synchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Der Rückgabewert des aufgerufenen Delegaten bzw. <see langword="null" /> Wenn der Delegat keinen Wert zurückgibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen. Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde. In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet. Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist. Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist ein synchroner Vorgang. aus diesem Grund gibt Steuerelement nicht an das aufrufende Objekt erst zurück, nachdem der Rückruf zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (System.Windows.Threading.DispatcherPriority priority, Delegate method, object arg, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(valuetype System.Windows.Threading.DispatcherPriority priority, class System.Delegate method, object arg, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority,System.Delegate,System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="arg" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="priority">Die Priorität im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange, der die angegebene Methode wird aufgerufen.</param>
+        <param name="method">Ein Delegat zu einer Methode die mehrere Argumente akzeptiert, wird auf abgelegt der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <param name="arg">Ein Objekt, das als Argument an die angegebene Methode übergeben.</param>
+        <param name="args">Ein Array von Objekten, die als Argumente an die angegebene Methode übergeben werden sollen.</param>
+        <summary>Führt den angegebenen Delegaten mit der angegebenen Priorität mit den angegebenen Argumenten synchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Der Rückgabewert des aufgerufenen Delegaten bzw. <see langword="null" /> Wenn der Delegat keinen Wert zurückgibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Arg`kann `null` Wenn ein Argument nicht benötigt wird  
+  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen.  Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde.  In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet.  Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist.  Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist ein synchroner Vorgang. aus diesem Grund gibt Steuerelement nicht an das aufrufende Objekt erst zurück, nachdem der Rückruf zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="priority" /> ist gleich <see cref="F:System.Windows.Threading.DispatcherPriority.Inactive" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="priority" />ist keine gültige Priorität.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="method" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (System.Windows.Threading.DispatcherPriority priority, TimeSpan timeout, Delegate method, object arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(valuetype System.Windows.Threading.DispatcherPriority priority, valuetype System.TimeSpan timeout, class System.Delegate method, object arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority,System.TimeSpan,System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="arg" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="priority">Die Priorität im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange, der die angegebene Methode wird aufgerufen.</param>
+        <param name="timeout">Die maximale Zeit zu warten, bis der Vorgang mit Latenz beendet wird.</param>
+        <param name="method">Ein Delegat zu einer Methode die mehrere Argumente akzeptiert, wird auf abgelegt der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <param name="arg">Ein Objekt, das als Argument an die angegebene Methode übergeben. Dies kann <see langword="null" /> sein, wenn keine Argumente benötigt werden.</param>
+        <summary>Führt den angegebenen Delegaten mit der angegebenen Priorität mit dem angegebenen Argument synchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Der Rückgabewert des aufgerufenen Delegaten bzw. <see langword="null" /> Wenn der Delegat keinen Wert zurückgibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Arg`kann `null` Wenn ein Argument nicht benötigt wird  
+  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen.  Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde.  In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet.  Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist.  Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist ein synchroner Vorgang. aus diesem Grund gibt Steuerelement nicht an das aufrufende Objekt erst zurück, nachdem der Rückruf zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="priority" /> ist gleich <see cref="F:System.Windows.Threading.DispatcherPriority.Inactive" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="priority" />ist keine gültige Priorität.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="method" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (System.Windows.Threading.DispatcherPriority priority, TimeSpan timeout, Delegate method, object arg, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(valuetype System.Windows.Threading.DispatcherPriority priority, valuetype System.TimeSpan timeout, class System.Delegate method, object arg, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority,System.TimeSpan,System.Delegate,System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="arg" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="priority">Die Priorität im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange, der die angegebene Methode wird aufgerufen.</param>
+        <param name="timeout">Die maximale Zeit zu warten, bis der Vorgang mit Latenz beendet wird.</param>
+        <param name="method">Ein Delegat zu einer Methode die mehrere Argumente akzeptiert, wird auf abgelegt der <see cref="T:System.Windows.Threading.Dispatcher" /> Ereigniswarteschlange.</param>
+        <param name="arg">Ein Objekt, das als Argument an die angegebene Methode übergeben.</param>
+        <param name="args">Ein Array von Objekten, die als Argumente an die angegebene Methode übergeben werden sollen.</param>
+        <summary>Führt den angegebenen Delegaten mit der angegebenen Priorität mit den angegebenen Argumenten synchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Der Rückgabewert des aufgerufenen Delegaten bzw. <see langword="null" /> Wenn der Delegat keinen Wert zurückgibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Arg`kann `null` Wenn ein Argument nicht benötigt wird.  
+  
+ In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Threads, der erstellt eine <xref:System.Windows.Threading.DispatcherObject> kann dieses Objekt zugreifen.  Z. B. ein Hintergrundthread, der aus dem Hauptbenutzeroberflächen-Thread eröffnet kann nicht den Inhalt des aktualisiert eine <xref:System.Windows.Controls.Button> , die im UI-Thread erstellt wurde.  In der Reihenfolge des Hintergrundthreads, die Content-Eigenschaft für den Zugriff auf die <xref:System.Windows.Controls.Button>, der Hintergrundthread die Verarbeitung zur delegieren muss die <xref:System.Windows.Threading.Dispatcher> im UI-Thread zugeordnet.  Dies wird erreicht, indem Sie entweder <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist synchron und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> asynchron ist.  Der Vorgang wird hinzugefügt, auf die Ereigniswarteschlange von der <xref:System.Windows.Threading.Dispatcher> an der angegebenen <xref:System.Windows.Threading.DispatcherPriority>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.Invoke%2A>ist ein synchroner Vorgang. aus diesem Grund gibt Steuerelement nicht an das aufrufende Objekt erst zurück, nachdem der Rückruf zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="priority" /> ist gleich <see cref="F:System.Windows.Threading.DispatcherPriority.Inactive" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="priority" /> ist kein gültiger <see cref="T:System.Windows.Threading.DispatcherPriority" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="method" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public TResult Invoke&lt;TResult&gt; (Func&lt;TResult&gt; callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TResult Invoke&lt;TResult&gt;(class System.Func`1&lt;!!TResult&gt; callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke``1(System.Func{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Func&lt;TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Rückgabewert-Typ, der den angegebenen Delegaten.</typeparam>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <summary>Führt das angegebene <see cref="T:System.Func`1" /> synchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert von `callback`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public TResult Invoke&lt;TResult&gt; (Func&lt;TResult&gt; callback, System.Windows.Threading.DispatcherPriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TResult Invoke&lt;TResult&gt;(class System.Func`1&lt;!!TResult&gt; callback, valuetype System.Windows.Threading.DispatcherPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke``1(System.Func{``0},System.Windows.Threading.DispatcherPriority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Func&lt;TResult&gt;" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Rückgabewert-Typ, der den angegebenen Delegaten.</typeparam>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <param name="priority">Die Priorität, der bestimmt, in welcher Reihenfolge die angegebene Rückruf aufgerufen wird, im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" />.</param>
+        <summary>Führt das angegebene <see cref="T:System.Func`1" /> synchron mit der angegebenen Priorität für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert von `callback`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public TResult Invoke&lt;TResult&gt; (Func&lt;TResult&gt; callback, System.Windows.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TResult Invoke&lt;TResult&gt;(class System.Func`1&lt;!!TResult&gt; callback, valuetype System.Windows.Threading.DispatcherPriority priority, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke``1(System.Func{``0},System.Windows.Threading.DispatcherPriority,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Func&lt;TResult&gt;" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Rückgabewert-Typ, der den angegebenen Delegaten.</typeparam>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <param name="priority">Die Priorität, der bestimmt, in welcher Reihenfolge die angegebene Rückruf aufgerufen wird, im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" />.</param>
+        <param name="cancellationToken">Ein Objekt, das angibt, ob den Vorgang "Abbrechen".</param>
+        <summary>Führt das angegebene <see cref="T:System.Func`1" /> synchron mit der angegebenen Priorität für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert von `callback`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public TResult Invoke&lt;TResult&gt; (Func&lt;TResult&gt; callback, System.Windows.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TResult Invoke&lt;TResult&gt;(class System.Func`1&lt;!!TResult&gt; callback, valuetype System.Windows.Threading.DispatcherPriority priority, valuetype System.Threading.CancellationToken cancellationToken, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Invoke``1(System.Func{``0},System.Windows.Threading.DispatcherPriority,System.Threading.CancellationToken,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Func&lt;TResult&gt;" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Rückgabewert-Typ, der den angegebenen Delegaten.</typeparam>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <param name="priority">Die Priorität, der bestimmt, in welcher Reihenfolge die angegebene Rückruf aufgerufen wird, im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" />.</param>
+        <param name="cancellationToken">Ein Objekt, das angibt, ob den Vorgang "Abbrechen".</param>
+        <param name="timeout">Die Mindestmenge an Zeit zum Starten des Vorgangs warten.</param>
+        <summary>Führt das angegebene <see cref="T:System.Func`1" /> synchron mit der angegebenen Priorität für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert von `callback`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperation InvokeAsync (Action callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Threading.DispatcherOperation InvokeAsync(class System.Action callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.InvokeAsync(System.Action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <summary>Führt das angegebene <see cref="T:System.Action" /> asynchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Ein Objekt, das unmittelbar auf zurückgegebene <see cref="M:System.Windows.Threading.Dispatcher.InvokeAsync(System.Action)" /> aufgerufen wird, die verwendet werden kann, für die Interaktion mit der Delegat, als es ausstehende Ausführung in der Warteschlange befindet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperation InvokeAsync (Action callback, System.Windows.Threading.DispatcherPriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Threading.DispatcherOperation InvokeAsync(class System.Action callback, valuetype System.Windows.Threading.DispatcherPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.InvokeAsync(System.Action,System.Windows.Threading.DispatcherPriority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <param name="priority">Die Priorität, der bestimmt, in welcher Reihenfolge die angegebene Rückruf aufgerufen wird, im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" />.</param>
+        <summary>Führt das angegebene <see cref="T:System.Action" /> asynchron mit der angegebenen Priorität für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Ein Objekt, das unmittelbar auf zurückgegebene <see cref="M:System.Windows.Threading.Dispatcher.InvokeAsync(System.Action,System.Windows.Threading.DispatcherPriority)" /> aufgerufen wird, die verwendet werden kann, für die Interaktion mit der Delegat, als es ausstehende Ausführung in der Warteschlange befindet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperation InvokeAsync (Action callback, System.Windows.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Threading.DispatcherOperation InvokeAsync(class System.Action callback, valuetype System.Windows.Threading.DispatcherPriority priority, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.InvokeAsync(System.Action,System.Windows.Threading.DispatcherPriority,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <param name="priority">Die Priorität, der bestimmt, in welcher Reihenfolge die angegebene Rückruf aufgerufen wird, im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" />.</param>
+        <param name="cancellationToken">Ein Objekt, das angibt, ob die aktuelle Aktion abzubrechen.</param>
+        <summary>Führt das angegebene <see cref="T:System.Action" /> asynchron mit der angegebenen Priorität für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Ein Objekt, das unmittelbar auf zurückgegebene <see cref="M:System.Windows.Threading.Dispatcher.InvokeAsync(System.Action,System.Windows.Threading.DispatcherPriority,System.Threading.CancellationToken)" /> aufgerufen wird, die verwendet werden kann, für die Interaktion mit der Delegat, als es ausstehende Ausführung in der Warteschlange befindet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperation&lt;TResult&gt; InvokeAsync&lt;TResult&gt; (Func&lt;TResult&gt; callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Threading.DispatcherOperation`1&lt;!!TResult&gt; InvokeAsync&lt;TResult&gt;(class System.Func`1&lt;!!TResult&gt; callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.InvokeAsync``1(System.Func{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Func&lt;TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Rückgabewert-Typ, der den angegebenen Delegaten.</typeparam>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <summary>Führt das angegebene <see cref="T:System.Func`1" /> asynchron für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Ein Objekt, das unmittelbar auf zurückgegebene <see cref="M:System.Windows.Threading.Dispatcher.InvokeAsync``1(System.Func{``0})" /> aufgerufen wird, die verwendet werden kann, für die Interaktion mit der Delegat, als es ausstehende Ausführung in der Warteschlange befindet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperation&lt;TResult&gt; InvokeAsync&lt;TResult&gt; (Func&lt;TResult&gt; callback, System.Windows.Threading.DispatcherPriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Threading.DispatcherOperation`1&lt;!!TResult&gt; InvokeAsync&lt;TResult&gt;(class System.Func`1&lt;!!TResult&gt; callback, valuetype System.Windows.Threading.DispatcherPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.InvokeAsync``1(System.Func{``0},System.Windows.Threading.DispatcherPriority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Func&lt;TResult&gt;" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Rückgabewert-Typ, der den angegebenen Delegaten.</typeparam>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <param name="priority">Die Priorität, der bestimmt, in welcher Reihenfolge die angegebene Rückruf aufgerufen wird, im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" />.</param>
+        <summary>Führt das angegebene <see cref="T:System.Func`1" /> asynchron mit der angegebenen Priorität für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Ein Objekt, das unmittelbar auf zurückgegebene <see cref="M:System.Windows.Threading.Dispatcher.InvokeAsync``1(System.Func{``0},System.Windows.Threading.DispatcherPriority)" /> aufgerufen wird, die verwendet werden kann, für die Interaktion mit der Delegat, als es ausstehende Ausführung in der Warteschlange befindet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperation&lt;TResult&gt; InvokeAsync&lt;TResult&gt; (Func&lt;TResult&gt; callback, System.Windows.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Threading.DispatcherOperation`1&lt;!!TResult&gt; InvokeAsync&lt;TResult&gt;(class System.Func`1&lt;!!TResult&gt; callback, valuetype System.Windows.Threading.DispatcherPriority priority, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.InvokeAsync``1(System.Func{``0},System.Windows.Threading.DispatcherPriority,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Func&lt;TResult&gt;" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Rückgabewert-Typ, der den angegebenen Delegaten.</typeparam>
+        <param name="callback">Ein Delegat zum Aufrufen durch den Verteiler.</param>
+        <param name="priority">Die Priorität, der bestimmt, in welcher Reihenfolge die angegebene Rückruf aufgerufen wird, im Vergleich zu anderen ausstehenden Vorgänge in der <see cref="T:System.Windows.Threading.Dispatcher" />.</param>
+        <param name="cancellationToken">Ein Objekt, das angibt, ob den Vorgang "Abbrechen".</param>
+        <summary>Führt das angegebene <see cref="T:System.Func`1" /> synchron mit der angegebenen Priorität für den Thread der <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <returns>Ein Objekt, das unmittelbar auf zurückgegebene <see cref="M:System.Windows.Threading.Dispatcher.InvokeAsync``1(System.Func{``0},System.Windows.Threading.DispatcherPriority,System.Threading.CancellationToken)" /> aufgerufen wird, die verwendet werden kann, für die Interaktion mit der Delegat, als es ausstehende Ausführung in der Warteschlange befindet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeShutdown">
+      <MemberSignature Language="C#" Value="public void InvokeShutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeShutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.InvokeShutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initiiert den Prozess des Herunterfahrens von der <see cref="T:System.Windows.Threading.Dispatcher" /> synchron.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Threading.Dispatcher.InvokeShutdown%2A>setzt uneingeschränkte Benutzeroberflächen-Berechtigungen.  
+  
+ Wenn die <xref:System.Windows.Threading.Dispatcher> zum Herunterfahren beginnt die <xref:System.Windows.Threading.Dispatcher.ShutdownStarted> Ereignis wird ausgelöst, und <xref:System.Windows.Threading.Dispatcher.HasShutdownStarted%2A> auf festgelegt ist `true`.  
+  
+ Die <xref:System.Windows.Threading.Dispatcher> ist nicht vollständig heruntergefahren, bis die Ereigniswarteschlange abgearbeitet wurde.  
+  
+ Nach Abschluss der Verteiler heruntergefahren wird, die <xref:System.Windows.Threading.Dispatcher.ShutdownFinished> Ereignis wird ausgelöst, und die <xref:System.Windows.Threading.Dispatcher.HasShutdownFinished%2A> -Eigenschaftensatz auf `true`.  
+  
+ Nachdem der Prozess des Herunterfahrens eingeleitet wurde, werden alle anstehenden Arbeitsaufgaben Elemente in der Warteschlange abgebrochen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Verteiler beendet.  Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PushFrame">
+      <MemberSignature Language="C#" Value="public static void PushFrame (System.Windows.Threading.DispatcherFrame frame);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PushFrame(class System.Windows.Threading.DispatcherFrame frame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.PushFrame(System.Windows.Threading.DispatcherFrame)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frame" Type="System.Windows.Threading.DispatcherFrame" />
+      </Parameters>
+      <Docs>
+        <param name="frame">Der Frame für den Verteiler verarbeitet werden soll.</param>
+        <summary>Wird in einer Ausführungsschleife.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Threading.DispatcherFrame> stellt eine Schleife, die anstehende Arbeitsaufgaben verarbeitet.  
+  
+ Der Verteiler verarbeitet die Warteschlange in einer Schleife.  Die Schleife wird als Frame bezeichnet.  Die ursprüngliche Schleife wird in der Regel durch Aufrufen von der Anwendung initiiert <xref:System.Windows.Threading.Dispatcher.Run%2A>.  
+  
+ <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>Wechselt in einer Schleife, die vom Parameter dargestellten `frame`.  Bei jeder Iteration der Schleife die <xref:System.Windows.Threading.Dispatcher> prüft die <xref:System.Windows.Threading.DispatcherFrame.Continue%2A> Eigenschaft auf die <xref:System.Windows.Threading.DispatcherFrame> Klasse, um zu bestimmen, ob die Schleife fortgesetzt werden soll oder ob er beendet werden sollte.  
+  
+ <xref:System.Windows.Threading.DispatcherFrame>ermöglicht die <xref:System.Windows.Threading.DispatcherFrame.Continue%2A> -Eigenschaft explizit festgelegt werden und berücksichtigt die <xref:System.Windows.Threading.Dispatcher.HasShutdownStarted%2A> Eigenschaft auf die <xref:System.Windows.Threading.Dispatcher>.  Dies bedeutet, dass bei der <xref:System.Windows.Threading.Dispatcher> startet, beendet, Frames, die die standardmäßige <xref:System.Windows.Threading.DispatcherFrame> Implementierung wird beendet, wodurch alle geschachtelten Frames zu beenden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Threading.DispatcherFrame> als ähnliche Ergebnisse erzielen die [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Application.DoEvents%2A> Methode.  
+  
+ [!code-csharp[dispatchersnippets#DispatcherDispatcherFrameDoEvents](~/samples/snippets/csharp/VS_Snippets_Wpf/DispatcherSnippets/CSharp/Window1.xaml.cs#dispatcherdispatcherframedoevents)]
+ [!code-vb[dispatchersnippets#DispatcherDispatcherFrameDoEvents](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DispatcherSnippets/visualbasic/window1.xaml.vb#dispatcherdispatcherframedoevents)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="frame" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Threading.Dispatcher.HasShutdownFinished" /> ist gleich <see langword="true" />.  
+  
+ - oder -   
+  
+ <paramref name="frame" />wird ausgeführt auf einem anderen <see cref="T:System.Windows.Threading.Dispatcher" />.  
+  
+ - oder -   
+  
+ Verarbeitung durch den Verteiler wurde deaktiviert.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für betätigen einen Frame Ausführung.  Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public static void Run ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Run() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Run" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Es wird die Hauptausführungsframe auf die Ereigniswarteschlange von der <see cref="T:System.Windows.Threading.Dispatcher" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Threading.Dispatcher> die Ereigniswarteschlange in einer Schleife verarbeitet.  Die Schleife wird als Frame bezeichnet.  Die ursprüngliche Schleife wird in der Regel durch Aufrufen von der Anwendung initiiert <xref:System.Windows.Threading.Dispatcher.Run%2A>.  
+  
+ Die Hauptausführungsframe wird fortgesetzt, bis die <xref:System.Windows.Threading.Dispatcher> heruntergefahren wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShutdownFinished">
+      <MemberSignature Language="C#" Value="public event EventHandler ShutdownFinished;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ShutdownFinished" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Threading.Dispatcher.ShutdownFinished" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Windows.Threading.Dispatcher" /> beendet, heruntergefahren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Prozess des Herunterfahrens von einer <xref:System.Windows.Threading.Dispatcher> gestartet wird, die <xref:System.Windows.Threading.Dispatcher.ShutdownStarted> Ereignis wird ausgelöst, und <xref:System.Windows.Threading.Dispatcher.HasShutdownStarted%2A> auf festgelegt ist `true`.  
+  
+ Die <xref:System.Windows.Threading.Dispatcher> wird vollständig beendet, bis die Ereigniswarteschlange abgearbeitet wurde.  
+  
+ Nach Abschluss der Verteiler heruntergefahren wird, die <xref:System.Windows.Threading.Dispatcher.ShutdownFinished> Ereignis wird ausgelöst, und die <xref:System.Windows.Threading.Dispatcher.HasShutdownFinished%2A> -Eigenschaftensatz auf `true`.  
+  
+ Nachdem der Prozess des Herunterfahrens eingeleitet wurde, werden alle anstehenden Arbeitsaufgaben Elemente in der Warteschlange abgebrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShutdownStarted">
+      <MemberSignature Language="C#" Value="public event EventHandler ShutdownStarted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ShutdownStarted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Threading.Dispatcher.ShutdownStarted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Windows.Threading.Dispatcher" /> zum Herunterfahren beginnt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Prozess des Herunterfahrens von einer <xref:System.Windows.Threading.Dispatcher> gestartet wird, die <xref:System.Windows.Threading.Dispatcher.ShutdownStarted> Ereignis wird ausgelöst, und <xref:System.Windows.Threading.Dispatcher.HasShutdownStarted%2A> auf festgelegt ist `true`.  
+  
+ Die <xref:System.Windows.Threading.Dispatcher> wird vollständig beendet, bis die Ereigniswarteschlange abgearbeitet wurde.  
+  
+ Nach Abschluss der Verteiler heruntergefahren wird, die <xref:System.Windows.Threading.Dispatcher.ShutdownFinished> Ereignis wird ausgelöst, und die <xref:System.Windows.Threading.Dispatcher.HasShutdownFinished%2A> -Eigenschaftensatz auf `true`.  
+  
+ Nachdem der Prozess des Herunterfahrens eingeleitet wurde, werden alle anstehenden Arbeitsaufgaben Elemente in der Warteschlange abgebrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thread">
+      <MemberSignature Language="C#" Value="public System.Threading.Thread Thread { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.Thread Thread" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.Dispatcher.Thread" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Thread</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Thread dies <see cref="T:System.Windows.Threading.Dispatcher" /> zugeordnet ist.</summary>
+        <value>Der Thread.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnhandledException">
+      <MemberSignature Language="C#" Value="public event System.Windows.Threading.DispatcherUnhandledExceptionEventHandler UnhandledException;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Threading.DispatcherUnhandledExceptionEventHandler UnhandledException" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Threading.Dispatcher.UnhandledException" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherUnhandledExceptionEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Threadausnahme ausgelöst und nicht während der Ausführung eines Delegaten von abgefangene <see cref="Overload:System.Windows.Threading.Dispatcher.Invoke" /> oder <see cref="Overload:System.Windows.Threading.Dispatcher.BeginInvoke" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn eine Ausnahme, die ausgelöst wurde, während der Ausführung eines Delegaten von <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> nicht abgefangen wird.  
+  
+ Ein Handler kann die Ausnahme als behandelt markiert, die interne Ausnahmehandler hindert aufgerufen werden.  
+  
+ Ereignishandler für dieses Ereignis müssen mit großer Sorgfalt zur Vermeidung der Erstellung der sekundären Ausnahmen und zum Abfangen, die auftreten, geschrieben werden. Es wird empfohlen, um zu vermeiden, belegen von Speicher oder ressourcenintensiven Operationen im Handler durchzuführen.  
+  
+ Die <xref:System.Windows.Threading.Dispatcher.UnhandledExceptionFilter> Ereignis bietet eine Möglichkeit zum Auslösen der <xref:System.Windows.Threading.Dispatcher.UnhandledException> Ereignis.  Die <xref:System.Windows.Threading.Dispatcher.UnhandledExceptionFilter> Ereignis wird zuerst ausgelöst und, wenn <xref:System.Windows.Threading.DispatcherUnhandledExceptionFilterEventArgs.RequestCatch%2A> auf die <xref:System.Windows.Threading.DispatcherUnhandledExceptionFilterEventArgs> auf festgelegt ist `false`, die <xref:System.Windows.Threading.Dispatcher.UnhandledException> -Ereignis wird nicht ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnhandledExceptionFilter">
+      <MemberSignature Language="C#" Value="public event System.Windows.Threading.DispatcherUnhandledExceptionFilterEventHandler UnhandledExceptionFilter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Threading.DispatcherUnhandledExceptionFilterEventHandler UnhandledExceptionFilter" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Threading.Dispatcher.UnhandledExceptionFilter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherUnhandledExceptionFilterEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Threadausnahme ausgelöst und nicht während der Ausführung eines Delegaten von abgefangene <see cref="Overload:System.Windows.Threading.Dispatcher.Invoke" /> oder <see cref="Overload:System.Windows.Threading.Dispatcher.BeginInvoke" /> im Filter-Phase.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, während der Phase Filter für eine Ausnahme, die ausgelöst wird, während der Ausführung eines Delegaten mithilfe von <xref:System.Windows.Threading.Dispatcher.Invoke%2A> oder <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> und nicht abgefangen wird.  
+  
+ Die Aufrufliste wird nicht entladen an dieser Stelle (erste Chance Ausnahme).  
+  
+ Ereignishandler für dieses Ereignis müssen mit großer Sorgfalt zur Vermeidung der Erstellung der sekundären Ausnahmen und zum Abfangen, die auftreten, geschrieben werden.  Es wird empfohlen, um zu vermeiden, belegen von Speicher oder ressourcenintensiven Operationen im Handler durchzuführen.  
+  
+ Die <xref:System.Windows.Threading.Dispatcher.UnhandledExceptionFilter> Ereignis bietet eine Möglichkeit zum Auslösen der <xref:System.Windows.Threading.Dispatcher.UnhandledException> Ereignis.  Die <xref:System.Windows.Threading.Dispatcher.UnhandledExceptionFilter> Ereignis wird zuerst ausgelöst und, wenn <xref:System.Windows.Threading.DispatcherUnhandledExceptionFilterEventArgs.RequestCatch%2A> auf die <xref:System.Windows.Threading.DispatcherUnhandledExceptionFilterEventArgs> auf festgelegt ist `false`, die <xref:System.Windows.Threading.Dispatcher.UnhandledException> -Ereignis wird nicht ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für das Hinzufügen oder entfernen einen Handler für dieses Ereignis.  Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatePriority">
+      <MemberSignature Language="C#" Value="public static void ValidatePriority (System.Windows.Threading.DispatcherPriority priority, string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ValidatePriority(valuetype System.Windows.Threading.DispatcherPriority priority, string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.ValidatePriority(System.Windows.Threading.DispatcherPriority,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="priority">Die Priorität zu überprüfen.</param>
+        <param name="parameterName">Eine Zeichenfolge, die von der Ausnahme zurückgegeben werden, die auftritt, wenn die Priorität ungültig ist.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Windows.Threading.DispatcherPriority" /> ist eine gültige Priorität.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="priority" /> ist kein gültiger <see cref="T:System.Windows.Threading.DispatcherPriority" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyAccess">
+      <MemberSignature Language="C#" Value="public void VerifyAccess ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void VerifyAccess() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.VerifyAccess" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob der aufrufende Thread den Zugriff auf diese hat <see cref="T:System.Windows.Threading.Dispatcher" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur der Thread den <xref:System.Windows.Threading.Dispatcher> wird erstellt, auf kann zugegriffen werden, die <xref:System.Windows.Threading.Dispatcher>.  
+  
+ Diese Methode ist öffentlich. Jeder Thread kann daher überprüfen, um festzustellen, ob sie Zugriff auf hat die <xref:System.Windows.Threading.Dispatcher>.  
+  
+ Der Unterschied zwischen <xref:System.Windows.Threading.Dispatcher.CheckAccess%2A> und <xref:System.Windows.Threading.Dispatcher.VerifyAccess%2A> ist <xref:System.Windows.Threading.Dispatcher.CheckAccess%2A> gibt einen booleschen Wert zurück, wenn der aufrufende Thread keinen Zugriff auf die <xref:System.Windows.Threading.Dispatcher> und <xref:System.Windows.Threading.Dispatcher.VerifyAccess%2A> löst eine Ausnahme aus.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Windows.Threading.Dispatcher.VerifyAccess%2A> bestimmen, ob ein Thread den Zugriff auf den Thread verfügt, die eine <xref:System.Windows.Controls.Button> erstellt wurde.  Die Methode nimmt ein Objekt als Argument, das in umgewandelt wird eine <xref:System.Windows.Controls.Button>.  Die <xref:System.Windows.Threading.Dispatcher.VerifyAccess%2A> Methode für die <xref:System.Windows.Threading.Dispatcher> von der <xref:System.Windows.Controls.Button> wird aufgerufen, um den Zugriff auf den Thread zu überprüfen.  
+  
+ Verfügt der aufrufende Thread den Zugriff auf die <xref:System.Windows.Threading.Dispatcher>, die <xref:System.Windows.Controls.Button> wird aktualisiert, indem Sie nur Zugriff auf die Mitglieder der <xref:System.Windows.Controls.Button>.  
+  
+ Wenn der aufrufende Thread nicht über Zugriff verfügt, wird eine <xref:System.InvalidOperationException> ausgelöst wird.  In diesem Beispiel fängt die Ausnahme ab und legt einen Delegaten, die akzeptiert eine <xref:System.Windows.Controls.Button> als Argument, auf die <xref:System.Windows.Threading.Dispatcher> von der <xref:System.Windows.Controls.Button>.  Dies <xref:System.Windows.Threading.Dispatcher> kommt die Arbeit aktualisieren die <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[DispatcherAccessSample#DispatcherAccessVerifyAccess](~/samples/snippets/csharp/VS_Snippets_Wpf/DispatcherAccessSample/CSharp/Window1.xaml.cs#dispatcheraccessverifyaccess)]
+ [!code-vb[DispatcherAccessSample#DispatcherAccessVerifyAccess](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DispatcherAccessSample/visualbasic/window1.xaml.vb#dispatcheraccessverifyaccess)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">der aufrufende Thread hat keinen Zugriff auf diese <see cref="T:System.Windows.Threading.Dispatcher" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Yield">
+      <MemberSignature Language="C#" Value="public static System.Windows.Threading.DispatcherPriorityAwaitable Yield ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Threading.DispatcherPriorityAwaitable Yield() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Yield" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriorityAwaitable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine awaitable-Objekt, das asynchron gibt die Steuerung wieder an den aktuellen Verteiler und bietet eine Möglichkeit für den Verteiler für die Verarbeitung anderer Ereignisse an.</summary>
+        <returns>Ein awaitable-Objekt, das asynchron gibt die Steuerung wieder an den aktuellen Verteiler und bietet eine Möglichkeit für den Verteiler auf andere Ereignisse verarbeiten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit, ausführungssteuerung an den aktuellen Verteiler vorübergehend freigegeben, sodass es andere arbeiten, wie z. B. andere Ereignisse verarbeiten durchführen kann. Verwenden der `await`, oder `Await` in Visual Basic Operator für den Rückgabewert, um die Steuerung an den aktuellen Verteiler zurückzugeben. Verwenden Sie diese Methode, wenn möchten, Ihre app zu ermöglichen, um Ereignisse zu verarbeiten, während Ihre app sehr viel Arbeit an der UI-Thread ausgeführt wird. Beispielsweise können Sie diese Methode in einer Schleife langer verwenden, die ein Steuerelement aktualisiert.  
+  
+ Diese Methode entspricht dem Aufrufen der <xref:System.Windows.Threading.Dispatcher.Yield%28System.Windows.Threading.DispatcherPriority%29> -Methode und übergeben <xref:System.Windows.Threading.DispatcherPriority?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yield">
+      <MemberSignature Language="C#" Value="public static System.Windows.Threading.DispatcherPriorityAwaitable Yield (System.Windows.Threading.DispatcherPriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Threading.DispatcherPriorityAwaitable Yield(valuetype System.Windows.Threading.DispatcherPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.Dispatcher.Yield(System.Windows.Threading.DispatcherPriority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriorityAwaitable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+      </Parameters>
+      <Docs>
+        <param name="priority">Die Priorität, um die Fortsetzung zu planen.</param>
+        <summary>Erstellt eine awaitable-Objekt, das asynchron gibt die Steuerung wieder an den aktuellen Verteiler und bietet eine Möglichkeit für den Verteiler für die Verarbeitung anderer Ereignisse an.  Die Arbeit, die tritt auf, wenn die Steuerung an den Code mit dem Warten auf das Ergebnis dieser Methode zurückgibt, wird mit der angegebenen Priorität geplant.</summary>
+        <returns>Ein awaitable-Objekt, das asynchron gibt die Steuerung wieder an den aktuellen Verteiler und bietet eine Möglichkeit für den Verteiler auf andere Ereignisse verarbeiten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit, ausführungssteuerung an den aktuellen Verteiler vorübergehend freigegeben, sodass es andere arbeiten, wie z. B. andere Ereignisse verarbeiten durchführen kann. Verwenden der `await`, oder `Await` in Visual Basic Operator für den Rückgabewert, um die Steuerung an den aktuellen Verteiler zurückzugeben. Verwenden Sie diese Methode, wenn möchten, Ihre app zu ermöglichen, um Ereignisse zu verarbeiten, während Ihre app sehr viel Arbeit an der UI-Thread ausgeführt wird. Beispielsweise können Sie diese Methode in einer Schleife langer verwenden, die ein Steuerelement aktualisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

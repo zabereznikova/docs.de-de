@@ -1,0 +1,181 @@
+<Type Name="AcknowledgeTypes" FullName="System.Messaging.AcknowledgeTypes">
+  <TypeSignature Language="C#" Value="public enum AcknowledgeTypes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed AcknowledgeTypes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.AcknowledgeTypes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Typen der Bestätigungsnachricht, die Message Queuing an die sendende Anwendung zurückgesendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.AcknowledgeTypes> -Klasse stellt einer Gruppe von Flags, kombiniert werden können, um eine oder mehrere Kategorien von Bestätigungsnachrichten anzufordern.  
+  
+ Wenn eine Anwendung eine Nachricht sendet, können sie anfordern, dass Message Queuing Bestätigungsnachrichten, der angibt, den Erfolg oder Misserfolg der ursprünglichen Nachricht zurückgeben. Message Queuing sendet diese Bestätigungsnachrichten an die Verwaltungswarteschlange, die Sie angeben. Bestätigung-Typen können grob in vier Gruppen aufgeteilt werden: positive Ankunft Bestätigungen, positive read Bestätigungen Ankunft negative Bestätigungen und unbestätigte lesen. Anfordern von Bestätigungen ermöglicht der Anwendung, die Benachrichtigungen zu bestimmten Vorkommen – z. B. eine Nachricht die Zielwarteschlange, eine Nachricht abgerufen wird oder ein Timeout, die verhindern, dass einer Nachricht erreicht oder abgerufen wird, aus der die Zielwarteschlange.  
+  
+ Beim Verwenden der <xref:System.Messaging.Message> -Klasse zum Senden von Nachrichten an eine Warteschlange, geben Sie die Typen von Bestätigungen die Anwendung in empfängt sollte der <xref:System.Messaging.Message.AcknowledgeType%2A> Eigenschaft als auch die Verwaltungswarteschlange, die in die Bestätigungsnachricht empfängt die <xref:System.Messaging.Message.AdministrationQueue%2A> Eigenschaft.  
+  
+ Bei Verwendung der <xref:System.Messaging.Message> -Klasse zum Lesen von Bestätigungsnachrichten in der Verwaltungswarteschlange, die Instanz des <xref:System.Messaging.Message.Acknowledgment%2A> Eigenschaft gibt die Bedingung, die verantwortlich für die Bestätigungsnachricht, z. B., wenn ein Timeout, bevor abgelaufen die ursprüngliche Nachricht wurde aus der Warteschlange gelesen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel sendet und empfängt eine Nachricht, die eine Bestellung in und aus einer Warteschlange enthält. Eine positive Bestätigung wird ausdrücklich angefordert, wenn die ursprüngliche Nachricht erreicht wurde oder wird aus der Warteschlange abgerufen.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FullReachQueue">
+      <MemberSignature Language="C#" Value="FullReachQueue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes FullReachQueue = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.FullReachQueue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske verwendet, um positive Bestätigung anzufordern, wenn die ursprüngliche Nachricht die Warteschlange oder eine negative Bestätigung erreicht, wenn es sich bei Ablauf des Zeitgebers Zeit Reach-Warteschlange oder die Originalnachricht nicht authentifiziert werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FullReceive">
+      <MemberSignature Language="C#" Value="FullReceive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes FullReceive = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.FullReceive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske verwendet, um positive Bestätigung anfordern, wenn die ursprüngliche Nachricht aus der Warteschlange empfangen wird, bevor seine Zeit auf den empfangen-Zeitgeber abläuft, oder andernfalls die negative Bestätigung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NegativeReceive">
+      <MemberSignature Language="C#" Value="NegativeReceive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes NegativeReceive = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.NegativeReceive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske verwendet, um eine negative Bestätigung anzufordern, wenn die ursprüngliche Nachricht nicht aus der Warteschlange empfangen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe der <xref:System.Messaging.MessageQueue.Peek%2A?displayProperty=nameWithType> Methode wird eine Meldung nicht aus der Warteschlange entfernt werden, sodass dieser Bestätigungstyp zurückgegeben werden kann, selbst wenn Sie die Meldung eingesehen haben. Nur die <xref:System.Messaging.MessageQueue.Receive%2A?displayProperty=nameWithType> Methode (oder die verknüpfte asynchroner <xref:System.Messaging.MessageQueue.BeginReceive%2A?displayProperty=nameWithType> Methode) eine Nachricht aus der Warteschlange entfernt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske verwendet, um anzufordern, dass keine Bestätigungsnachrichten (positiv oder negativ) bereitgestellt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAcknowledgeReachQueue">
+      <MemberSignature Language="C#" Value="NotAcknowledgeReachQueue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes NotAcknowledgeReachQueue = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.NotAcknowledgeReachQueue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske verwendet, um eine negative Bestätigung angefordert wird, wenn die ursprüngliche Nachricht die Warteschlange nicht erreichen kann. Dies kann geschehen, beim Ablaufen des Zeitgebers Zeit Reach-Warteschlange, oder wenn eine Nachricht nicht authentifiziert werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAcknowledgeReceive">
+      <MemberSignature Language="C#" Value="NotAcknowledgeReceive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes NotAcknowledgeReceive = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.NotAcknowledgeReceive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske verwendet, um eine negative Bestätigung angefordert wird, wenn ein Fehler auftritt, wird verhindert, dass die ursprüngliche Nachricht aus der Warteschlange empfangen werden, bevor seine Zeit auf den empfangen-Zeitgeber abläuft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PositiveArrival">
+      <MemberSignature Language="C#" Value="PositiveArrival" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes PositiveArrival = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.PositiveArrival" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske verwendet, um eine positive Bestätigung anzufordern, wenn die ursprüngliche Nachricht die Warteschlange erreicht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PositiveReceive">
+      <MemberSignature Language="C#" Value="PositiveReceive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes PositiveReceive = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.PositiveReceive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske verwendet, um eine positive Bestätigung anzufordern, wenn die ursprüngliche Nachricht erfolgreich aus der Warteschlange abgerufen wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

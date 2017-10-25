@@ -1,0 +1,96 @@
+<Type Name="EvidenceBase" FullName="System.Security.Policy.EvidenceBase">
+  <TypeSignature Language="C#" Value="public abstract class EvidenceBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit EvidenceBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.EvidenceBase" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Basisklasse, von der alle Objekte, die verwendet werden, da Beweis abgeleitet werden muss.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bevor Sie die [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], fast jedes Objekt kann als ein Beweisobjekt verwendet werden, wenn als Beweis des Hostcodes wollten. Einige .NET Framework-Code beispielsweise erkannt <xref:System.Uri?displayProperty=nameWithType> Objekte als Beweis. Die common Language Runtime (CLR) als Beweis-Objekte als betrachtet <xref:System.Object?displayProperty=nameWithType> verweist, und alle typsicherheit konnte nicht auf sie anwenden.  
+  
+ Dies ein Problem angezeigt, da gab es implizite Einschränkungen für die Typen als Beweis-Objekte verwendet werden können. Insbesondere alle als Beweis verwendete Objekt musste serialisierbar sein und konnte nicht `null`. Wenn diese Anforderungen nicht erfüllt wurden, hat die CLR eine Ausnahme ausgelöst, wenn ein Vorgang, der eines der folgenden Annahmen erforderlich ausgeführt wurde.  
+  
+ Die <xref:System.Security.Policy.EvidenceBase> -Klasse, die Beweis-Objekte, die alle von abgeleitet werden müssen, seit die [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] um Einschränkungen für die Typen von Objekten zu aktivieren, die als Beweis verwendet werden kann und bieten die Möglichkeit, neue Funktionen und Anforderungen an alle Beweise hinzuzufügen -Objekte. Die <xref:System.Security.Policy.EvidenceBase> Klasse wird sichergestellt, bei der Instanziierung, dass das Beweisobjekt serialisierbar ist. Darüber hinaus ermöglicht er neue Beweis-Anforderungen durch Hinzufügen von neuen standardimplementierungen der Basisklasse erstellt werden soll.  
+  
+ Alle Typen, die von der CLR verwendet werden, wie die Aktualisierung Beweisobjekte in der [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] Ableitung <xref:System.Security.Policy.EvidenceBase>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EvidenceBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.EvidenceBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Policy.EvidenceBase" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Objekte, die als Beweis verwendet werden, müssen serialisierbar sein. Da die serializable-Attribut nicht auf die abgeleitete Klassen weitergegeben wird, müssen Sie alle abgeleiteten Typen als serialisierbar markieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ein Objekt, das als Beweis verwendet werden, ist nicht serialisierbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Policy.EvidenceBase Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Policy.EvidenceBase Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.EvidenceBase.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.EvidenceBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine vollständige Kopie der aktuellen Instanz ist.</summary>
+        <returns>Eine duplizierte Kopie dieses Beweisobjekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die doppelte Kopie ist eine vollständige Kopie, die den Beweis-Objekte in der Auflistung enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

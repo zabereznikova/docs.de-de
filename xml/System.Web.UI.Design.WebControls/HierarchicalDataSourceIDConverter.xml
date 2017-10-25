@@ -1,0 +1,80 @@
+<Type Name="HierarchicalDataSourceIDConverter" FullName="System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter">
+  <TypeSignature Language="C#" Value="public class HierarchicalDataSourceIDConverter : System.Web.UI.Design.WebControls.DataSourceIDConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HierarchicalDataSourceIDConverter extends System.Web.UI.Design.WebControls.DataSourceIDConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.DataSourceIDConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine Liste von auswählbaren hierarchische-Datenquellennamen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter> Klasse ist eine <xref:System.ComponentModel.TypeConverter> -Objekt, das in der Regel verweist die <xref:System.ComponentModel.TypeConverterAttribute> Attribut. Alle Elemente außer der <xref:System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter.IsValidDataSource%2A> Methode erbt von der <xref:System.Web.UI.Design.WebControls.DataSourceIDConverter>.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter.IsValidDataSource%2A> Methode gibt an, ob die angegebene Komponente implementiert die <xref:System.Web.UI.IHierarchicalDataSource> Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HierarchicalDataSourceIDConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter> Klasse bei der die Klasse verwiesen wird ein <xref:System.ComponentModel.TypeConverterAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidDataSource">
+      <MemberSignature Language="C#" Value="protected override bool IsValidDataSource (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsValidDataSource(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter.IsValidDataSource(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein Objekt, implementiert die <see cref="T:System.ComponentModel.IComponent" />.</param>
+        <summary>Ruft einen Wert, der angibt, ob die angegebene Komponente eine gültige Datenquelle ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="component" /> ist eine gültige Datenquelle ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter.IsValidDataSource%2A> Methode betrachtet `component` eine gültige Datenquelle, wenn es implementiert die <xref:System.Web.UI.IHierarchicalDataSource> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,90 @@
+<Type Name="HierarchicalDataSourceView" FullName="System.Web.UI.HierarchicalDataSourceView">
+  <TypeSignature Language="C#" Value="public abstract class HierarchicalDataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HierarchicalDataSourceView extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HierarchicalDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Datenansicht auf einem Knoten oder eine Auflistung von Knoten in einer hierarchischen Datenstruktur für ein <see cref="T:System.Web.UI.HierarchicalDataSourceControl" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET unterstützt eine Datenbindungsarchitektur, mit der Webserver-Steuerelemente an Daten binden, und sie auf konsistente Weise präsentieren kann. Webserversteuerelemente, die an Daten gebunden werden datengebundene Steuerelemente, die Klassen, die diese Bindung ermöglichen sind aufgerufen und Datenquellensteuerelemente. Datenquellensteuerelemente können jede beliebige Datenquelle darstellen: eine Datei, einen Stream, eine relationale Datenbank, ein Geschäftsobjekt usw.. Datenquelle steuert die Darstellung der Daten auf konsistente Weise für datengebundene Steuerelemente, unabhängig von der Quelle oder das Format der zugrunde liegenden Daten.  
+  
+ Leiten Sie Steuerelementen für Datenquellen, die hierarchische Daten darstellen, von der abstrakten <xref:System.Web.UI.HierarchicalDataSourceControl> Klasse. Sie können von einem Datenquellensteuerelement vorstellen, als Kombination aus dem Steuerelement Datenquellenobjekt und den zugehörigen Sichten für die zugrunde liegenden Daten, die vom Datenquellensicht-Objekte dargestellt werden. Hierarchische Datenquellensteuerelemente unterstützen eine hierarchische Datenquellensicht für jede hierarchische Daten, die sie darstellen. Die Datenquellensichten sind nicht benannt, z. B. die <xref:System.Web.UI.DataSourceView> Objekte zugeordnet sind und eine <xref:System.Web.UI.DataSourceControl> steuern, jedoch werden durch ihren eindeutigen hierarchischen Pfad identifiziert.  
+  
+ Datenquellensichten definieren, das die Funktionen des ein Datenquellen-Steuerelement. Alle Datenquellensicht-Objekte, einschließlich <xref:System.Web.UI.HierarchicalDataSourceView>, unterstützen das Abrufen von Daten aus der zugrunde liegenden Datenquelle mithilfe der <xref:System.Web.UI.HierarchicalDataSourceView.Select%2A> -Methode, die eine hierarchische Liste von Daten als abruft ein <xref:System.Web.UI.IHierarchicalEnumerable> Objekt. Alle Datenquellensicht an, die Objekte unterstützen optional eine Reihe grundlegende Funktionen, einschließlich Vorgänge wie z. B. <xref:System.Web.UI.DataSourceView.Insert%2A>, <xref:System.Web.UI.DataSourceView.Update%2A>, <xref:System.Web.UI.DataSourceView.Delete%2A>, und sortieren. Ein datengebundenes Steuerelement erkennen, das die Funktionen des ein Datenquellensteuerelement durch Abrufen von einer Datenquelle zugeordneten Daten anzeigen, mit der <xref:System.Web.UI.HierarchicalDataSourceControl.GetHierarchicalView%2A> -Methode und die Ansicht abfragt, zur Entwurfszeit oder zur Laufzeit. <xref:System.Web.UI.HierarchicalDataSourceView>unterstützt derzeit keine <xref:System.Web.UI.DataSourceView.Insert%2A>, <xref:System.Web.UI.DataSourceView.Update%2A> oder <xref:System.Web.UI.DataSourceView.Delete%2A> Vorgänge.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Ableiten einer Klasse von der <xref:System.Web.UI.HierarchicalDataSourceView> Klasse zum Abrufen von Daten aus einer hierarchischen Datenspeicher, in diesem Fall ein Dateisystem. Die `FileSystemDataSourceView` Klasse ist eine stark typisierte <xref:System.Web.UI.HierarchicalDataSourceView> -Instanz, die hierarchische Webserversteuerelemente, wie z. B. ermöglicht die <xref:System.Web.UI.WebControls.TreeView> Steuerelement binden einer `FileSystemDataSource` steuern und Systeminformationen anzuzeigen. Dateisysteminformationen aus Gründen der Sicherheit wird nur angezeigt, wenn die Datenquellen-Steuerelements in einer "localhost" verwendet wird, authentifiziert Szenario und startet nur mit dem virtuellen Verzeichnis, dem das Web Forms-Seite mit den Datenquellen-Steuerelements befindet. Andernfalls die `viewPath` an den Konstruktor übergebene Parameter zum Erstellen einer Ansicht basierend auf den aktuellen Dateisystempfad verwendet werden kann. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.HierarchicalDataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/CS/filesystemdatasource.cs#3)]
+ [!code-vb[Urtue.Samples.Alexkr.FileSystemDataSource_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/VB/filesystemdatasource.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Wenn Sie von <see cref="T:System.Web.UI.HierarchicalDataSourceView" /> erben, müssen Sie folgenden Member überschreiben: <see cref="M:System.Web.UI.HierarchicalDataSourceView.Select" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HierarchicalDataSourceView ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HierarchicalDataSourceView.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HierarchicalDataSourceView" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public abstract System.Web.UI.IHierarchicalEnumerable Select ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.IHierarchicalEnumerable Select() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HierarchicalDataSourceView.Select" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchicalEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Liste aller Elemente der Daten in der Ansicht ab.</summary>
+        <returns>Eine <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> Auflistung von Datenelementen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HierarchicalDataSourceView.Select%2A> Methode gibt ein <xref:System.Web.UI.IHierarchicalEnumerable> Auflistung von Datenelementen in der aktuellen Ansicht. Sie erreichen die <xref:System.Collections.IEnumerable.GetEnumerator%2A> Methode zum Abrufen einer <xref:System.Collections.IEnumerator> Objekt, und Durchlaufen der Auflistung von Datenelementen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HierarchicalDataSourceView.Select%2A> Methode in einer Klasse, die von abgeleitet ist die <xref:System.Web.UI.HierarchicalDataSourceView> -Klasse zum Abrufen von hierarchischen <xref:System.IO.FileSystemInfo> Daten aus einem Dateisystem. Dateisysteminformationen aus Gründen der Sicherheit wird nur angezeigt, wenn die Datenquellen-Steuerelements in einer "localhost" verwendet wird, authentifiziert Szenario und startet nur mit dem virtuellen Verzeichnis, dem das Web Forms-Seite mit den Datenquellen-Steuerelements befindet. Andernfalls die `viewPath` übergebenen an den Konstruktor des View-Objekts zum Erstellen einer Ansicht basierend auf den aktuellen Dateisystempfad verwendet werden kann. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.HierarchicalDataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/CS/filesystemdatasource.cs#3)]
+ [!code-vb[Urtue.Samples.Alexkr.FileSystemDataSource_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/VB/filesystemdatasource.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

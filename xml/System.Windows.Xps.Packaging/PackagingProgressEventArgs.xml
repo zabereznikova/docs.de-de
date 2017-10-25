@@ -1,0 +1,163 @@
+<Type Name="PackagingProgressEventArgs" FullName="System.Windows.Xps.Packaging.PackagingProgressEventArgs">
+  <TypeSignature Language="C#" Value="public class PackagingProgressEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PackagingProgressEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.PackagingProgressEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Xps.Serialization.XpsPackagingPolicy.PackagingProgressEvent" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PackagingProgressEventArgs (System.Windows.Xps.Packaging.PackagingAction action, int numberCompleted);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Xps.Packaging.PackagingAction action, int32 numberCompleted) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.PackagingProgressEventArgs.#ctor(System.Windows.Xps.Packaging.PackagingAction,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Windows.Xps.Packaging.PackagingAction" />
+        <Parameter Name="numberCompleted" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Aktion, die des Verpackungsprozesses derzeit ausgeführt werden.</param>
+        <param name="numberCompleted">Die Anzahl der gleichzeitigen wie oft das dem angegebenen <c>Aktion</c> aufgetreten ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Xps.Packaging.PackagingProgressEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In bestimmten Situationen und für bestimmte Typen treten mehrere Fortschrittsereignisse zur gleichen Zeit. Diese Ereignisse logisch verschiedenen jedoch zeitlich identisch sind, werden zu einem einzelnen kombiniert <xref:System.Windows.Xps.Serialization.XpsPackagingPolicy.PackagingProgressEvent> und `numberCompleted` ist größer als 1. Beispielsweise, wenn Sie drucken, Schriftart, die Teilmengen erfolgt alle vier Seiten. Jede Seite muss bis zum Abschluss der Arbeiten mit Teilmengen für zwischengespeichert werden, und klicken Sie dann alle vier <xref:System.Windows.Xps.Packaging.PackagingAction.FixedPageCompleted> Ereignisse, die zur gleichen Zeit auftreten. Der Konstruktor für die resultierende <xref:System.Windows.Xps.Packaging.PackagingProgressEventArgs> legt `action` auf <xref:System.Windows.Xps.Packaging.PackagingAction.FixedPageCompleted> und legt `numberCompleted` auf 4.  
+  
+ Wenn ein Paket einem einzelnen vier Einzelseiten-Dokument besteht aus, die eine Schriftart und keine Bilder oder andere Ressourcen verwendet, kann z. B. die Abfolge der Ereignisse auftreten, wie in der folgenden Tabelle gezeigt.  
+  
+ **Die Abfolge von Ereignissen für ein einfaches Paket**  
+  
+ AddingDocumentSequence  
+ 1  
+  
+ AddingFixedDocument  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ FontAdded  
+ 1  
+  
+ FixedPageCompleted  
+ 4  
+  
+ FixedDocumentCompleted  
+ 1  
+  
+ DocumentSequenceCompleted  
+ 1  
+  
+ XpsDocumentCommitted  
+ 1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.PackagingAction Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Xps.Packaging.PackagingAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.PackagingProgressEventArgs.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, welche Aktion im Paketprozess gerade ausgeführt wird.</summary>
+        <value>Ein <see cref="T:System.Windows.Xps.Packaging.PackagingAction" /> , den Teil des Verpackungsprozesses, das derzeit auftritt darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberCompleted">
+      <MemberSignature Language="C#" Value="public int NumberCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.PackagingProgressEventArgs.NumberCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft der Anzahl der gleichzeitigen ab, die die Aktion, die im identifizierten <see cref="P:System.Windows.Xps.Packaging.PackagingProgressEventArgs.Action" /> aufgetreten.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , die die Anzahl der gleichzeitigen darstellt, die Aktion, die im identifizierten <see cref="P:System.Windows.Xps.Packaging.PackagingProgressEventArgs.Action" /> aufgetreten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In bestimmten Situationen und für bestimmte Typen treten mehrere Fortschrittsereignisse zur gleichen Zeit. Diese Ereignisse logisch verschiedenen jedoch zeitlich identisch sind, werden zu einem einzelnen kombiniert <xref:System.Windows.Xps.Serialization.XpsPackagingPolicy.PackagingProgressEvent> und <xref:System.Windows.Xps.Packaging.PackagingProgressEventArgs.NumberCompleted%2A> ist größer als 1. Beispielsweise, wenn Sie drucken, Schriftart, die Teilmengen erfolgt alle vier Seiten. Jede Seite muss bis zum Abschluss der Arbeiten mit Teilmengen für zwischengespeichert werden, und klicken Sie dann alle vier <xref:System.Windows.Xps.Packaging.PackagingAction.FixedPageCompleted> Ereignisse, die zur gleichen Zeit auftreten. Das resultierende <xref:System.Windows.Xps.Packaging.PackagingProgressEventArgs> legt <xref:System.Windows.Xps.Packaging.PackagingProgressEventArgs.Action%2A> zu <xref:System.Windows.Xps.Packaging.PackagingAction.FixedPageCompleted> und legt <xref:System.Windows.Xps.Packaging.PackagingProgressEventArgs.NumberCompleted%2A> auf 4.  
+  
+ Wenn ein Paket einem einzelnen vier Einzelseiten-Dokument besteht aus, die eine Schriftart und keine Bilder oder andere Ressourcen verwendet, kann z. B. die Abfolge der Ereignisse auftreten, wie in der folgenden Tabelle gezeigt:  
+  
+ **Die Abfolge von Ereignissen für ein einfaches Paket**  
+  
+ AddingDocumentSequence  
+ 1  
+  
+ AddingFixedDocument  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ FontAdded  
+ 1  
+  
+ FixedPageCompleted  
+ 4  
+  
+ FixedDocumentCompleted  
+ 1  
+  
+ DocumentSequenceCompleted  
+ 1  
+  
+ XpsDocumentCommitted  
+ 1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

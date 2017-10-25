@@ -1,0 +1,650 @@
+<Type Name="Menu" FullName="System.Windows.Forms.Menu">
+  <TypeSignature Language="C#" Value="public abstract class Menu : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Menu extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Menu" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Windows.Forms")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisfunktionalität für alle Menüs dar. Obwohl <see cref="T:System.Windows.Forms.ToolStripDropDown" /> und <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" /> ersetzt und funktionell die <see cref="T:System.Windows.Forms.Menu" /> -Steuerelement früherer Versionen <see cref="T:System.Windows.Forms.Menu" /> wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist die Basisklasse für die <xref:System.Windows.Forms.MainMenu>, <xref:System.Windows.Forms.MenuItem>, und <xref:System.Windows.Forms.ContextMenu> Klassen. Eine Instanz dieser Klasse kann nicht erstellt werden. Die Menüs für eine Anwendung bestehen aus <xref:System.Windows.Forms.MenuItem> Objekte. Diese können andere enthalten <xref:System.Windows.Forms.MenuItem> Objekten, die Untermenüelemente darstellen. Die <xref:System.Windows.Forms.MenuItem> Objekte gespeichert werden können, einer <xref:System.Windows.Forms.MainMenu> für die Anzeige als eine gesamte Menüstruktur für ein Formular oder ein <xref:System.Windows.Forms.ContextMenu> dient außerdem zur Anzeige des Kontextmenüs. Diese Klasse stellt die Funktionalität, die für den Menüklassen bereit.  
+  
+ Im Gegensatz zu vielen Basisklassen die <xref:System.Windows.Forms.Menu> Klasse davon abgeleiteten Klassen verwendet, um viele Eigenschaften definieren. Wenn Sie das Menü in einer Anwendung Multiple Document Interface (MDI) verwenden, können Sie die <xref:System.Windows.Forms.Menu.MdiListItem%2A> -Eigenschaft an eine <xref:System.Windows.Forms.MenuItem> , die zeigt eine Liste der geöffneten untergeordneten MDI-Formulare in der Anwendung. Die <xref:System.Windows.Forms.Menu.MenuItems%2A> Eigenschaft enthält eine Liste der <xref:System.Windows.Forms.MenuItem> Objekte, die in der Menüklasse gespeichert. Für eine <xref:System.Windows.Forms.MainMenu> oder <xref:System.Windows.Forms.ContextMenu>, diese Eigenschaft enthält alle der <xref:System.Windows.Forms.MenuItem> Objekte angezeigt werden. Für eine <xref:System.Windows.Forms.MenuItem>die <xref:System.Windows.Forms.Menu.MenuItems%2A> Eigenschaft darstellt, die Untermenüelemente zugeordnet.  
+  
+ Zusätzlich zu den Eigenschaften, die für alle abgeleiteten Menüklassen bereitgestellt werden die <xref:System.Windows.Forms.Menu> Klasse stellt auch Methoden bereit, z. B. <xref:System.Windows.Forms.Menu.CloneMenu%2A> und <xref:System.Windows.Forms.Menu.MergeMenu%2A>, ermöglichen es Ihnen, neue Menüs aus vorhandenen Menüs erstellen, und außerdem das Zusammenführen von zwei im Menüstrukturen zusammen.  
+  
+ Die <xref:System.Windows.Forms.Menu> Klasse definiert auch die geschachtelte Klasse <xref:System.Windows.Forms.Menu.MenuItemCollection>. Diese Klasse definiert die Auflistung von <xref:System.Windows.Forms.MenuItem> Objekte, die die <xref:System.Windows.Forms.Menu.MenuItems%2A> Eigenschaft. Können Sie die Methoden der <xref:System.Windows.Forms.Menu.MenuItemCollection> Klasse hinzufügen und Entfernen von Menüelementen aus einem <xref:System.Windows.Forms.MainMenu>, <xref:System.Windows.Forms.ContextMenu>, oder <xref:System.Windows.Forms.MenuItem>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel verwendet die abgeleitete Klasse <xref:System.Windows.Forms.MenuItem>, um einer Menüstruktur eines Formulars zu erstellen. Fügt der Beispielcode ein <xref:System.Windows.Forms.MenuItem> zur Darstellung von Menüelement der obersten Ebene ein Untermenüelement hinzugefügt, für die Auswahl von Schriftgröße und fügt dann zwei Untermenüelemente hinzu, Menüelement, das Groß und klein Schriftart-Optionen in einer Anwendung darzustellen. Im Beispiel erfordert, ergibt sich eine <xref:System.Windows.Forms.MainMenu> Objekt mit dem Namen `mainMenu1` und vier <xref:System.Windows.Forms.MenuItem> Objekte, die mit dem Namen `menuItem1`, `menuItem2`, `menuItem3`, und `menuItem4`.  
+  
+ [!code-cpp[Classic Menu Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Menu Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Menu Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Menu Example/CS/source.cs#1)]
+ [!code-vb[Classic Menu Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Menu Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Menu (System.Windows.Forms.MenuItem[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.MenuItem[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.#ctor(System.Windows.Forms.MenuItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="items" Type="System.Windows.Forms.MenuItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="items">Ein Array vom Typ <see cref="T:System.Windows.Forms.MenuItem" /> mit den Objekten, die dem Menü hinzufügen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Menu" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da <xref:System.Windows.Forms.Menu> ist eine abstrakte Klasse, nur die geerbte Klassen den Menü-Konstruktor aufrufen können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneMenu">
+      <MemberSignature Language="C#" Value="protected void CloneMenu (System.Windows.Forms.Menu menuSrc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void CloneMenu(class System.Windows.Forms.Menu menuSrc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.CloneMenu(System.Windows.Forms.Menu)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="menuSrc" Type="System.Windows.Forms.Menu" />
+      </Parameters>
+      <Docs>
+        <param name="menuSrc">Das <see cref="T:System.Windows.Forms.Menu" />, das kopiert werden soll.</param>
+        <summary>Kopiert die <see cref="T:System.Windows.Forms.Menu" /> , die als Parameter übergeben wird, mit dem aktuellen <see cref="T:System.Windows.Forms.Menu" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kopiert die gesamte Liste der <xref:System.Windows.Forms.MenuItem> Objekte (gespeichert der <xref:System.Windows.Forms.Menu> übergebene zu `menuSrc`) in der aktuellen Menü. Sie können diese Methode in der abgeleiteten Klasse Klonen <xref:System.Windows.Forms.MenuItem> Objekte. Klicken Sie dann von anderen Klassen, die davon Herleiten wiederverwendet werden <xref:System.Windows.Forms.Menu>, wie z. B. <xref:System.Windows.Forms.MainMenu>, <xref:System.Windows.Forms.ContextMenu>, und <xref:System.Windows.Forms.MenuItem>.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel erstellt eine im Hauptmenü `mainMenu1`, mit drei Menüelemente: `File`, `Edit`, und `View`. Es verwendet dann die <xref:System.Windows.Forms.Menu.CloneMenu%2A> Methode, um kopieren `mainMenu1` in `mainMenu2`. Das geklonte Menü wird dann dem Formular zugewiesenen und angezeigt. Dieses Programm erfordert, dass Sie bereits erstellt haben eine <xref:System.Windows.Forms.Form> mit dem Namen `Form1`.  
+  
+ [!code-cpp[CloneMenu#1](~/samples/snippets/cpp/VS_Snippets_Winforms/CloneMenu/CPP/form1.cpp#1)]
+ [!code-csharp[CloneMenu#1](~/samples/snippets/csharp/VS_Snippets_Winforms/CloneMenu/CS/form1.cs#1)]
+ [!code-vb[CloneMenu#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CloneMenu/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMenuHandle">
+      <MemberSignature Language="C#" Value="protected virtual IntPtr CreateMenuHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance native int CreateMenuHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.CreateMenuHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Handle für die <see cref="T:System.Windows.Forms.Menu" />.</summary>
+        <returns>Ein Handle für das Menü, wenn die Methode erfolgreich ausgeführt wird, andernfalls <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt mit Ausnahme des Speichers die von der <see cref="T:System.Windows.Forms.Menu" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Windows.Forms.Menu.Dispose%2A> auf, wenn Sie <xref:System.Windows.Forms.Menu> nicht mehr benötigen. Die <xref:System.Windows.Forms.Menu.Dispose%2A>-Methode bewirkt, dass <xref:System.Windows.Forms.Menu> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Windows.Forms.Menu.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Windows.Forms.Menu> , damit der belegte Arbeitsspeicher von der Garbagecollection wieder zugänglich gemacht werden kann.  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Windows.Forms.Menu.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.Windows.Forms.Menu> freigeben. Andernfalls, die Ressourcen der <xref:System.Windows.Forms.Menu> ist mit bleiben reserviert, bis die Garbage Collection-Aufrufe der <xref:System.Windows.Forms.Menu> Destruktor des Objekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindHandle">
+      <MemberSignature Language="C#" Value="public const int FindHandle = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 FindHandle = (0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Menu.FindHandle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="M:System.Windows.Forms.Menu.FindMenuItem(System.Int32,System.IntPtr)" /> -Methode für ein Handle suchen soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMenuItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.MenuItem FindMenuItem (int type, IntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.MenuItem FindMenuItem(int32 type, native int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.FindMenuItem(System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Int32" />
+        <Parameter Name="value" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Elements zum Suchen der <see cref="T:System.Windows.Forms.MenuItem" />.</param>
+        <param name="value">Das Element zum Suchen der <see cref="T:System.Windows.Forms.MenuItem" />.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.MenuItem" /> , die den angegebenen Wert enthält.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.MenuItem" /> Wert entspricht, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zu suchende eine <xref:System.Windows.Forms.MenuItem> mithilfe eines Handles, übergeben Sie die <xref:System.Windows.Forms.Menu.FindHandle> -Felds ist, als den Typ und das Handle für die <xref:System.Windows.Forms.MenuItem> Sie als Wert suchen möchten.  
+  
+ Zu suchende eine <xref:System.Windows.Forms.MenuItem> verwenden das Verfahren abzukürzen, übergeben Sie die <xref:System.Windows.Forms.Menu.FindShortcut> -Felds ist, als der Typ und die Verknüpfung-Wert für die <xref:System.Windows.Forms.MenuItem> Sie als Wert suchen möchten.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für Steuerelemente, diese Methode aufzurufen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMergePosition">
+      <MemberSignature Language="C#" Value="protected int FindMergePosition (int mergeOrder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance int32 FindMergePosition(int32 mergeOrder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.FindMergePosition(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mergeOrder" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="mergeOrder">Der Position der Merge-Ordnung für das Menüelement zusammengeführt werden sollen.</param>
+        <summary>Gibt die Position, an der ein Menüelement in das Menü eingefügt werden soll.</summary>
+        <returns>Die Position, an der ein Menüelement in das Menü eingefügt werden soll.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Merge-Ordnung eines Menüelements gibt die relative Position, die dieses Menüelement wird davon ausgegangen wird, wenn die Menüstruktur der <xref:System.Windows.Forms.MenuItem> enthalten ist in mit einer anderen zusammengeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindShortcut">
+      <MemberSignature Language="C#" Value="public const int FindShortcut = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 FindShortcut = (1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Menu.FindShortcut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="M:System.Windows.Forms.Menu.FindMenuItem(System.Int32,System.IntPtr)" /> Methode sollte für eine Verknüpfung zu suchen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContextMenu">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ContextMenu GetContextMenu ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.ContextMenu GetContextMenu() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.GetContextMenu" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenu</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.ContextMenu" /> dieses Menü enthält.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ContextMenu" /> dieses Menü enthält. Die Standardeinstellung ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht das Abrufen eines Verweises auf die <xref:System.Windows.Forms.ContextMenu> , die in diesem Menü enthalten ist. Diese Eigenschaft gibt `null` , wenn das Menü sich nicht in befindet einem <xref:System.Windows.Forms.ContextMenu>. Dies kann auftreten, wenn das Menü sich in befindet einem <xref:System.Windows.Forms.MenuItem> oder <xref:System.Windows.Forms.MainMenu>, oder wenn das Menü nicht in keinem Menü enthalten ist. Sie können diese Eigenschaft verwenden, um festzustellen, ob ein Menü derzeit verwendet wird und bestimmt, welches.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel verwenden Sie die <xref:System.Windows.Forms.Menu.GetContextMenu%2A> Methode, um einen Verweis auf das Kontextmenü abzurufen, die enthält `menuItem1` oder `menuItem2`, und die Informationen zum Kontextmenü in einem Meldungsfeld anzuzeigen. Programmgesteuert erstellen Sie ein Kontextmenü mit zwei Elementen `New` und `Open`. Anschließend fügen Sie Funktionen für diese Elemente durch die entsprechenden Ereignishandler erstellen. Wenn Sie das Beispiel ausführen, erhalten Sie ein Meldungsfeld an, die Aufschluss Form mit der rechten Maustaste um das Kontextmenü anzuzeigen. Klicken Sie dann, wenn Sie ein Menüelement klicken, erhalten Sie eine andere Meldung, der angibt, welches Element geklickt wurde, und zeigt die Informationen im enthaltenden Kontextmenü. Dieses Beispiel benötigen Sie, dass Sie bereits erstellt haben eine <xref:System.Windows.Forms.Form> mit dem Namen `Form1`.  
+  
+ [!code-cpp[GetContextMenu2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GetContextMenu2/CPP/form1.cpp#1)]
+ [!code-csharp[GetContextMenu2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GetContextMenu2/CS/form1.cs#1)]
+ [!code-vb[GetContextMenu2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GetContextMenu2/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMainMenu">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.MainMenu GetMainMenu ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.MainMenu GetMainMenu() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.GetMainMenu" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MainMenu</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.MainMenu" /> dieses Menü enthält.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.MainMenu" /> dieses Menü enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht das Abrufen eines Verweises auf die <xref:System.Windows.Forms.MainMenu> dieses Menü befindet sich derzeit im. Diese Eigenschaft gibt `null` , wenn das Menü sich nicht in befindet einem <xref:System.Windows.Forms.MainMenu>. Dies kann auftreten, wenn das Menü sich in befindet einem <xref:System.Windows.Forms.MenuItem> oder <xref:System.Windows.Forms.ContextMenu>, oder wenn das Menü nicht in keinem Menü enthalten ist. Sie können diese Eigenschaft verwenden, um festzustellen, ob ein Menü derzeit verwendet wird und bestimmt, welches.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel deklariert eine <xref:System.Windows.Forms.MainMenu>, `mainMenu1`, und vier Menüelementen `menuItem1`, `menuItem2`, `menuItem3`, und `menuItem4`. Nur die ersten drei Menüelemente werden hinzugefügt, um `mainMenu1` für die Anzeige. Das Programm dann überprüft, ob `menuItem3` verwendet wird, also `true`, und bestimmt die Form, in dem er verwendet wird. Eine Bezeichnungstext wird verwendet, um den Namen des Formulars anzuzeigen, die hostet die <xref:System.Windows.Forms.MainMenu>. Wenn Sie das Menüelement zum getesteten ändern `menuItem4`, ergibt die Bedingung `false` da `menuItem4` nie verwendet wurde. Dieses Beispiel benötigen Sie nach der Erstellung einer <xref:System.Windows.Forms.Form> mit dem Namen `MyForm` , umfasst eine <xref:System.Windows.Forms.Label> mit dem Namen `label1`.  
+  
+ [!code-cpp[GetMainMenu#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GetMainMenu/CPP/form1.cpp#1)]
+ [!code-csharp[GetMainMenu#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GetMainMenu/CS/form1.cs#1)]
+ [!code-vb[GetMainMenu#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GetMainMenu/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public IntPtr Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, das das Fensterhandle für das Menü darstellt.</summary>
+        <value>Der HMENU-Wert des Menüs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um das Handle für das Menü besondere Operationen für das Menü außerhalb von dieser Klasse oder den abgeleiteten Klassen bereitgestellten Funktionen zu erhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsParent">
+      <MemberSignature Language="C#" Value="public virtual bool IsParent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsParent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.IsParent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Menü alle Menüelemente enthält. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>
+          <see langword="true" />Wenn das Menü enthält <see cref="T:System.Windows.Forms.MenuItem" /> Objekte; anderenfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, um zu bestimmen, ob bei einem <xref:System.Windows.Forms.MenuItem> Objekte in diesem Menü zugewiesen werden. Dies entspricht dem Suchen nach `null` in der <xref:System.Windows.Forms.Menu.MenuItems%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.MainMenu> mit zwei <xref:System.Windows.Forms.MenuItem> Objekte. Es verwendet dann die <xref:System.Windows.Forms.Menu.IsParent%2A> -Eigenschaft können Sie bestimmen, ob `mainMenu1` Menüelemente enthält. Ergibt die Bedingung `true`, wird die <xref:System.Windows.Forms.MainMenu.RightToLeft%2A> Eigenschaft `true` und bindet Sie im Hauptmenü auf die <xref:System.Windows.Forms.Form>. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> erstellte mit der Bezeichnung `Form1`.  
+  
+ [!code-cpp[IsParent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IsParent/CPP/form1.cpp#1)]
+ [!code-csharp[IsParent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IsParent/CS/form1.cs#1)]
+ [!code-vb[IsParent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IsParent/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MdiListItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.MenuItem MdiListItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.MenuItem MdiListItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.MdiListItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, die <see cref="T:System.Windows.Forms.MenuItem" /> , wird verwendet, um eine Liste der untergeordneten Formulare der multiple Document Interface (MDI) anzuzeigen.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.MenuItem" /> , der dem Menüelement, das eine Liste von untergeordneten MDI-Formulare, die in der Anwendung geöffnet sind darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um zu bestimmen, ob eine <xref:System.Windows.Forms.MenuItem> angegeben wurde, um die Liste der geöffneten untergeordneten Fenster in einer MDI-Anwendung anzuzeigen. Verwendung einen bestimmten <xref:System.Windows.Forms.MenuItem> als MDI-Liste, legen Sie die <xref:System.Windows.Forms.MenuItem.MdiList%2A> Eigenschaft in der <xref:System.Windows.Forms.MenuItem> verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuItems">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Menu.MenuItemCollection MenuItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Menu/MenuItemCollection MenuItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.MenuItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Menu+MenuItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, der auflistungs der <see cref="T:System.Windows.Forms.MenuItem" /> Objekte mit dem Menü zugeordnet sind.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Menu.MenuItemCollection" /> , die repräsentiert die Liste der <see cref="T:System.Windows.Forms.MenuItem" /> im Menü gespeicherten Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um einen Verweis auf die Liste der Menüelemente zu erhalten, die im Menü aktuell gespeichert sind. Für <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu> Objekte, die <xref:System.Windows.Forms.Menu.MenuItems%2A> Eigenschaft enthält die gesamte Menüstruktur im Steuerelement. Für die <xref:System.Windows.Forms.MenuItem> -Klasse, die <xref:System.Windows.Forms.Menu.MenuItems%2A> Eigenschaft enthält die Liste der zugeordneten Untermenüelemente der <xref:System.Windows.Forms.MenuItem>. Mit dem Verweis auf die Auflistung von Menüelementen für das Menü (der von dieser Eigenschaft bereitgestellt wird) können Sie hinzufügen und Entfernen von Menüelementen, die Gesamtzahl der Menüelemente bestimmen und löschen Sie die Liste der Menüelemente aus der Auflistung. Weitere Informationen zum Verwalten der Auflistung von Menüelementen für ein Menü finden Sie unter der <xref:System.Windows.Forms.Menu.MenuItemCollection?displayProperty=nameWithType> Dokumentation.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz der abgeleiteten Klasse <xref:System.Windows.Forms.MainMenu>, und fügt eine <xref:System.Windows.Forms.MenuItem> Objekt der Auflistung der <xref:System.Windows.Forms.MenuItem> Objekte. Dieses Beispiel erfordert, dass die in diesem Beispiel definierte Methode innerhalb der Klasse für ein Formular und von einer Methode in dieser Form-Klasse aufgerufen wird.  
+  
+ [!code-cpp[Classic Menu.MenuItems Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Menu.MenuItems Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Menu.MenuItems Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Menu.MenuItems Example/CS/source.cs#1)]
+ [!code-vb[Classic Menu.MenuItems Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Menu.MenuItems Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeMenu">
+      <MemberSignature Language="C#" Value="public virtual void MergeMenu (System.Windows.Forms.Menu menuSrc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MergeMenu(class System.Windows.Forms.Menu menuSrc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MergeMenu(System.Windows.Forms.Menu)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="menuSrc" Type="System.Windows.Forms.Menu" />
+      </Parameters>
+      <Docs>
+        <param name="menuSrc">Die <see cref="T:System.Windows.Forms.Menu" /> , dessen Menüelemente mit den Menüelementen des aktuellen Menüs zusammengeführt werden.</param>
+        <summary>Führt die <see cref="T:System.Windows.Forms.MenuItem" /> -Objekte eines Menüs mit dem aktuellen Menü.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode führt <xref:System.Windows.Forms.MenuItem> Objekte aus einem Menü mit den aktuellen. <xref:System.Windows.Forms.MenuItem>Objekte werden nach den Werten der zusammengeführt der <xref:System.Windows.Forms.MenuItem.MergeType%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.MenuItem.MergeOrder%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ Das Zusammenführen von Menüs erfolgt in der Regel um die Menüs von einer übergeordneten Formulars (MDI, Multiple Document Interface), mit denen die aktive untergeordnete MDI-Formular zusammenzuführen. Dies wird automatisch von der common Language Runtime von .NET Framework ausgeführt werden. Beispielsweise führen, wenn ein übergeordnetes MDI-Formular eine Reihe von Menüs enthält für die Behandlung von Dateien und Ihre untergeordneten MDI-Formulars verfügt auch über dateibezogene Menüelemente, im Menü wird automatisch zusammen in einem einzelnen Dateimenü festgelegt, wenn das untergeordnete Formular im übergeordneten MDI-Formulars angezeigt wird.  
+  
+ Sie können die <xref:System.Windows.Forms.Menu.MergeMenu%2A> Methode, wenn Sie zwei im Menüstrukturen zusammenführen, die nicht Teil einer MDI-Anwendung sind. Diese Implementierung kann aufgerufen werden, indem Sie die <xref:System.Windows.Forms.MainMenu> oder <xref:System.Windows.Forms.ContextMenu> Klassen zum Zusammenführen von zwei oder mehr Objekte, die davon Herleiten <xref:System.Windows.Forms.Menu>.  
+  
+ Zusammenführen von zwei <xref:System.Windows.Forms.MenuItem> Objekten der <xref:System.Windows.Forms.MenuItem.MergeMenu%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel erstellt zwei Menüs `mainMenu1` und `mainMenu2`. Das erste Menü enthält mindestens ein <xref:System.Windows.Forms.MenuItem>, `File`, und die zweite enthält mindestens ein <xref:System.Windows.Forms.MenuItem>, `Edit`. Mithilfe der <xref:System.Windows.Forms.Menu.MergeMenu%2A> Methode `mainMenu2` mit zusammengeführt `mainMenu1`. Bei der Anzeige, `mainMenu1` enthält zwei Menüelemente `File` und `Edit`. Dieses Beispiel benötigen Sie nach der Erstellung einer <xref:System.Windows.Forms.Form> mit dem Namen `Form1`.  
+  
+ [!code-cpp[MergeMenu#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MergeMenu/CPP/form1.cpp#1)]
+ [!code-csharp[MergeMenu#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MergeMenu/CS/form1.cs#1)]
+ [!code-vb[MergeMenu#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MergeMenu/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Es wurde versucht, das Menü mit sich selbst zusammengeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der <see cref="T:System.Windows.Forms.Menu" /> ab oder legt diesen fest.</summary>
+        <value>Eine Zeichenfolge, die den Namen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Entwurfszeit ist diese Eigenschaft auf den programmatischen Bezeichner des Steuerelements festgelegt. Diese Eigenschaft hat jedoch keinen Einfluss auf das Steuerelement zur Laufzeit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCmdKey">
+      <MemberSignature Language="C#" Value="protected virtual bool ProcessCmdKey (ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ProcessCmdKey(valuetype System.Windows.Forms.Message&amp; msg, valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Ein <see cref="T:System.Windows.Forms.Message" />, übergeben als Verweis, der die zu verarbeitende fenstermeldung darstellt.</param>
+        <param name="keyData">Einer der <see cref="T:System.Windows.Forms.Keys" />-Werte, die die zu verarbeitende Taste darstellen.</param>
+        <summary>Verarbeitet eine Befehlstaste.</summary>
+        <returns>
+          <see langword="true" />, wenn das Zeichen vom Steuerelement verarbeitet wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest benutzerdefinierten Daten, die dem Steuerelement zugeordnet.</summary>
+        <value>Ein Objekt, das Daten darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.String" /> darstellt, die die <see cref="T:System.Windows.Forms.Menu" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.String" />, der den aktuellen <see cref="T:System.Windows.Forms.Menu" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Menu.ToString%2A> Methode gibt ein <xref:System.String> , enthält den Typ und die Anzahl der Elemente in der <xref:System.Windows.Forms.Menu.MenuItems%2A> Eigenschaft des Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

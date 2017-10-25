@@ -1,0 +1,639 @@
+<Type Name="UniqueId" FullName="System.Xml.UniqueId">
+  <TypeSignature Language="C#" Value="public class UniqueId" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UniqueId extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.UniqueId" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein für GUIDs optimierter eindeutiger Bezeichner.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kann jeden Zeichenfolgenwert enthalten, verfügt jedoch über Optimierungen für den Umgang mit <xref:System.Guid>s.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz dieser Klasse mit einer neuen, eindeutigen GUID.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueId (byte[] guid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] guid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="guid" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="guid">Ein Bytearray, das <see cref="T:System.Guid" /> darstellt.</param>
+        <summary>Erstellt eine neue Instanz dieser Klasse mit einem Bytearray, das <see cref="T:System.Guid" /> darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden nur die ersten 16 Bytes des Arrays verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="guid" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="guid" /> stellt weniger als 16 gültige Bytes bereit.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueId (Guid guid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid guid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="guid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="guid">Ein <see cref="T:System.Guid" />.</param>
+        <summary>Erstellt mit <see cref="T:System.Guid" /> eine neue Instanz dieser Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="guid" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueId (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine Zeichenfolge, die zur Generierung von <see cref="T:System.Xml.UniqueId" /> verwendet wird.</param>
+        <summary>Erstellt mit einer Zeichenfolge eine neue Instanz dieser Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Zeichenfolge ungleich 0 (null) ist ein gültiger Wert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">Die Länge von <paramref name="value" /> ist 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueId (byte[] guid, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] guid, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.#ctor(System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="guid" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="guid">Ein <see langword="byte" />-Array, das <see cref="T:System.Guid" /> darstellt.</param>
+        <param name="offset">Offsetposition innerhalb des <see langword="byte" />-Arrays, das <see cref="T:System.Guid" /> darstellt.</param>
+        <summary>Erstellt eine neue Instanz dieser Klasse und beginnt dabei bei einem Offset innerhalb eines <see langword="byte" />-Arrays, das <see cref="T:System.Guid" /> darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden nur die ersten 16 Bytes im angegebenen Offset verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="guid" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als 0 (null) oder größer als die Länge des Arrays.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="guid" />und <paramref name="offset" /> stellen weniger als 16 gültige Bytes bereit.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueId (char[] chars, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(char[] chars, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.#ctor(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="chars">Ein <see langword="char" />-Array, das <see cref="T:System.Guid" /> darstellt.</param>
+        <param name="offset">Offsetposition innerhalb des <see langword="char" />-Arrays, das <see cref="T:System.Guid" /> darstellt.</param>
+        <param name="count">Anzahl der zu verwendenden Arrayeinträgen beginnend <c>Offset</c>.</param>
+        <summary>Erstellt eine neue Instanz dieser Klasse und beginnt dabei bei einem Offset innerhalb von <see langword="char" /> mit einer bestimmten Anzahl Einträge.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" /> ist kleiner als 0 (null) oder größer als die Länge des Arrays minus <paramref name="offset" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="count" /> entspricht 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CharArrayLength">
+      <MemberSignature Language="C#" Value="public int CharArrayLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CharArrayLength" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.UniqueId.CharArrayLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge der Zeichenfolgendarstellung von <see cref="T:System.Xml.UniqueId" /> ab.</summary>
+        <value>Die Länge der Zeichenfolgendarstellung von <see cref="T:System.Xml.UniqueId" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende Objekt.</param>
+        <summary>Testet, ob ein Objekt <see cref="T:System.Xml.UniqueId" /> entspricht.</summary>
+        <returns>
+          <see langword="true" />, wenn das Objekt <see cref="T:System.Xml.UniqueId" /> entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Hashcodedarstellung von <see cref="T:System.Xml.UniqueId" />.</summary>
+        <returns>Eine ganzzahlige Hashcodedarstellung von <see cref="T:System.Xml.UniqueId" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGuid">
+      <MemberSignature Language="C#" Value="public bool IsGuid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGuid" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.UniqueId.IsGuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob <see cref="T:System.Xml.UniqueId" /> <see cref="T:System.Guid" /> ist.</summary>
+        <value>
+          <see langword="true" />, wenn <see cref="T:System.Xml.UniqueId" /> <see cref="T:System.Guid" /> ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Xml.UniqueId id1, System.Xml.UniqueId id2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Xml.UniqueId id1, class System.Xml.UniqueId id2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.op_Equality(System.Xml.UniqueId,System.Xml.UniqueId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id1" Type="System.Xml.UniqueId" />
+        <Parameter Name="id2" Type="System.Xml.UniqueId" />
+      </Parameters>
+      <Docs>
+        <param name="id1">Die erste <see cref="T:System.Xml.UniqueId" />.</param>
+        <param name="id2">Das zweite <see cref="T:System.Xml.UniqueId" />.</param>
+        <summary>Überschreibt den Gleichheitsoperator, um auf die Gleichheit von zwei <see cref="T:System.Xml.UniqueId" />s zu testen.</summary>
+        <returns>
+          <see langword="true" />, wenn beide <see cref="T:System.Xml.UniqueId" />s gleich oder <see langword="null" /> sind; <see langword="false" />, wenn sie nicht gleich sind oder nur eine <see langword="null" /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Xml.UniqueId.Equals%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Xml.UniqueId id1, System.Xml.UniqueId id2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Xml.UniqueId id1, class System.Xml.UniqueId id2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.op_Inequality(System.Xml.UniqueId,System.Xml.UniqueId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id1" Type="System.Xml.UniqueId" />
+        <Parameter Name="id2" Type="System.Xml.UniqueId" />
+      </Parameters>
+      <Docs>
+        <param name="id1">Die erste <see cref="T:System.Xml.UniqueId" />.</param>
+        <param name="id2">Das zweite <see cref="T:System.Xml.UniqueId" />.</param>
+        <summary>Überschreibt den Gleichheitsoperator, um auf die Ungleichheit von zwei <see cref="T:System.Xml.UniqueId" />s zu testen.</summary>
+        <returns>
+          <see langword="true" />, wenn der überschriebene Gleichheitsoperator <see langword="false" /> zurückgibt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist die Negation des<xref:System.Xml.UniqueId.Equals%2A>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToCharArray">
+      <MemberSignature Language="C#" Value="public int ToCharArray (char[] chars, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 ToCharArray(char[] chars, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.ToCharArray(System.Char[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="chars">Das <see langword="char" />-Array.</param>
+        <param name="offset">Position im <see langword="char" />-Array, um mit dem Einfügen des <see cref="T:System.Xml.UniqueId" />-Werts zu beginnen.</param>
+        <summary>Legt den <see cref="T:System.Xml.UniqueId" />-Wert in ein <see langword="char" />-Array ab.</summary>
+        <returns>Anzahl der Einträge im <see langword="char" />-Array, die vom <see cref="T:System.Xml.UniqueId" />-Wert gefüllt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist `unsafe`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als 0 (null) oder größer als die Länge des Arrays.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="guid" />und <paramref name="offset" /> stellen weniger als 16 gültige Bytes bereit.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt den <see cref="T:System.Xml.UniqueId" />-Wert im Zeichenfolgenformat an.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see cref="T:System.Xml.UniqueId" />-Werts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetGuid">
+      <MemberSignature Language="C#" Value="public bool TryGetGuid (out Guid guid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetGuid([out] valuetype System.Guid&amp; guid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.TryGetGuid(System.Guid@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="guid" Type="System.Guid&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="guid"><see cref="T:System.Guid" />, wenn erfolgreich, andernfalls <see cref="F:System.Guid.Empty" />.</param>
+        <summary>Versucht, den Wert von <see cref="T:System.Xml.UniqueId" /> als <see cref="T:System.Guid" /> abzurufen.</summary>
+        <returns>
+          <see langword="true" />, wenn UniqueId <see cref="T:System.Guid" /> darstellt, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="buffer" />und <paramref name="offset" /> stellen weniger als 16 gültige Bytes bereit.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetGuid">
+      <MemberSignature Language="C#" Value="public bool TryGetGuid (byte[] buffer, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetGuid(unsigned int8[] buffer, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.UniqueId.TryGetGuid(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">
+          <see langword="byte" />-Array, das <see cref="T:System.Guid" /> enthält.</param>
+        <param name="offset">Position im <see langword="byte" />-Array, um mit dem Einfügen des <see cref="T:System.Guid" />-Werts zu beginnen.</param>
+        <summary>Versucht, den Wert von <see cref="T:System.Xml.UniqueId" /> als <see cref="T:System.Guid" /> abzurufen und im gegebenen Bytearray beim entsprechenden Offset zu speichern.</summary>
+        <returns>
+          <see langword="true" />, wenn der Wert, der in dieser Instanz von <see cref="T:System.Xml.UniqueId" /> gespeichert ist, <see cref="T:System.Guid" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist `unsafe`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als 0 (null) oder größer als die Länge des Arrays.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="buffer" />und <paramref name="offset" /> stellen weniger als 16 gültige Bytes bereit.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

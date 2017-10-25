@@ -1,0 +1,124 @@
+<Type Name="HttpCacheability" FullName="System.Web.HttpCacheability">
+  <TypeSignature Language="C#" Value="public enum HttpCacheability" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpCacheability extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpCacheability" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Stellt Enumerationswerte, die verwendet werden, Festlegen der <see langword="Cache-Control" /> HTTP-Header.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter RFC 2616: Hypertext Transfer Protocol--HTTP/1.1, auf die [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125) Website. Insbesondere für ausführliche Informationen finden Sie in Abschnitt 14.9 "Cache-Control" und Abschnitt 13, "Caching in HTTP".  
+  
+> [!NOTE]
+>  `NoCache`sendet keine Anforderung übliche HTTP 1.0-Direktive `Pragma: no-cache`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NoCache">
+      <MemberSignature Language="C#" Value="NoCache" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCacheability NoCache = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCacheability.NoCache" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt die <see langword="Cache-Control: no-cache" /> Header. Ohne einen Feldnamen, die Richtlinie gilt, für die gesamte Anforderung und eine freigegebene (Proxyserver) Cache muss eine erfolgreiche erneute Überprüfung mit dem Webserver Ursprung kann die Anforderung erst zu erzwingen. Mit einem Feldnamen gilt die Richtlinie nur für das benannte Feld; der Rest der Antwort möglicherweise aus einem geteilten Datencache angegeben werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Private">
+      <MemberSignature Language="C#" Value="Private" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCacheability Private = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCacheability.Private" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Standardwert. Legt <see langword="Cache-Control: private" /> angeben, dass die Antwort nur auf dem Client zwischengespeichert werden kann und nicht von Caches (Proxyserver freigegebenen).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Public">
+      <MemberSignature Language="C#" Value="Public" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCacheability Public = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCacheability.Public" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt <see langword="Cache-Control: public" /> um anzugeben, dass die Antwort von Clients und freigegebenen (Proxy) wird zwischengespeichert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="Server" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCacheability Server = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCacheability.Server" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Antwort nur auf dem Ausgangsserver zwischengespeichert wird. Ähnlich wie die <see cref="F:System.Web.HttpCacheability.NoCache" /> Option. Clients empfangen ein <see langword="Cache-Control: no-cache" /> Richtlinie, sondern das Dokument auf dem Ursprungsserver zwischengespeichert wird. Entspricht <see cref="F:System.Web.HttpCacheability.ServerAndNoCache" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerAndNoCache">
+      <MemberSignature Language="C#" Value="ServerAndNoCache" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCacheability ServerAndNoCache = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCacheability.ServerAndNoCache" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wendet die Einstellungen sowohl <see cref="F:System.Web.HttpCacheability.Server" /> und <see cref="F:System.Web.HttpCacheability.NoCache" /> , um anzugeben, dass die Inhalte auf dem Server zwischengespeichert, aber alle anderen sind die Möglichkeit, die Zwischenspeicherung der Antwort explizit verweigert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerAndPrivate">
+      <MemberSignature Language="C#" Value="ServerAndPrivate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCacheability ServerAndPrivate = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCacheability.ServerAndPrivate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Antwort auf dem Server und der Client jedoch an keiner anderen Stelle zwischengespeichert wird. Die Zwischenspeicherung der Antwort durch Proxyserver ist nicht zulässig.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

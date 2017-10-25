@@ -1,0 +1,356 @@
+<Type Name="XmlNodeEventArgs" FullName="System.Xml.Serialization.XmlNodeEventArgs">
+  <TypeSignature Language="C#" Value="public class XmlNodeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlNodeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlNodeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Xml.Serialization.XmlSerializer.UnknownNode" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Die <xref:System.Xml.Serialization.XmlSerializer.UnknownNode> Ereignis kann auftreten, die nur bei einem Aufruf der <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.Serialization.XmlSerializer.UnknownNode> -Ereignis für die <xref:System.Xml.Serialization.XmlSerializer> So drucken Sie verschiedene Eigenschaften eines unbekannten XML-Knotens, der beim Aufruf der <xref:System.Xml.Serialization.XmlSerializer> Klasse <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> Methode.  
+  
+ [!code-cpp[Classic XmlSerializer.UnknownNode Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownNode Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.UnknownNode Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownNode Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.UnknownNode Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.UnknownNode Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlNodeEventArgs.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeilennummer des unbekannten XML-Knotens ab.</summary>
+        <value>Die Zeilennummer des unbekannten XML-Knotens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[Classic XmlSerializer.UnknownNode Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownNode Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.UnknownNode Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownNode Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.UnknownNode Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.UnknownNode Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePosition">
+      <MemberSignature Language="C#" Value="public int LinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlNodeEventArgs.LinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position in der Zeile das unbekannte XML-Knotens ab.</summary>
+        <value>Die Positionsnummer des unbekannten XML-Knotens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[Classic XmlSerializer.UnknownNode Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownNode Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.UnknownNode Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownNode Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.UnknownNode Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.UnknownNode Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalName">
+      <MemberSignature Language="C#" Value="public string LocalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlNodeEventArgs.LocalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lokalen XML-Namen des zu deserialisierenden XML-Knotens ab.</summary>
+        <value>Der XML-lokale Name des Knotens deserialisiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlNodeEventArgs.LocalName%2A> Eigenschaft gibt den lokalen Namen (auch bekannt als ein lokaler Teil) einen qualifizierten XML-Namen zurück. Die <xref:System.Xml.Serialization.XmlNodeEventArgs.LocalName%2A> Eigenschaft entspricht der 1999 http://www.w3.org Spezifikation `Namespaces in XML`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.Serialization.XmlNodeEventArgs.LocalName%2A> eines unbekannten XML-Knotens, der beim Aufruf der <xref:System.Xml.Serialization.XmlSerializer> Klasse <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> Methode.  
+  
+ [!code-cpp[Classic XmlNodeEventArgs.LocalName Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlNodeEventArgs.LocalName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlNodeEventArgs.LocalName Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlNodeEventArgs.LocalName Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlNodeEventArgs.LocalName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlNodeEventArgs.LocalName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlNodeEventArgs.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des zu deserialisierenden XML-Knotens ab.</summary>
+        <value>Der Name des Knotens deserialisiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird der Name des unbekannten Knotens, der aufgrund der <xref:System.Xml.Serialization.XmlSerializer.UnknownNode> Ereignis auftritt.  
+  
+ [!code-cpp[Classic XmlNodeEventArgs.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlNodeEventArgs.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlNodeEventArgs.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlNodeEventArgs.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlNodeEventArgs.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlNodeEventArgs.Name Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceURI">
+      <MemberSignature Language="C#" Value="public string NamespaceURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceURI" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlNodeEventArgs.NamespaceURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace-URI, der den zu deserialisierenden XML-Knoten zugeordnet ist.</summary>
+        <value>Der Namespace-URI, der den zu deserialisierenden XML-Knoten zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel gibt den URI des unbekannten XML-Knotens, der verursacht die <xref:System.Xml.Serialization.XmlSerializer.UnknownNode> Ereignis auftritt.  
+  
+ [!code-cpp[Classic XmlNodeEventArgs.NamespaceURI Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlNodeEventArgs.NamespaceURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlNodeEventArgs.NamespaceURI Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlNodeEventArgs.NamespaceURI Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlNodeEventArgs.NamespaceURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlNodeEventArgs.NamespaceURI Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlNodeEventArgs.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des zu deserialisierenden XML-Knotens ab.</summary>
+        <value>Die <see cref="T:System.Xml.XmlNodeType" /> , die den zu deserialisierenden XML-Knoten darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlNodeType> Enumeration gibt eine Beschreibung des Knotens deserialisiert wird. Beispielsweise gibt es "Kommentar" zurück, wenn der Knoten ein Kommentar ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Beschreibung des unbekannten Knotens, der aufgrund der <xref:System.Xml.Serialization.XmlSerializer.UnknownNode> Ereignis auftritt.  
+  
+ [!code-cpp[Classic XmlNodeEventArgs.NodeType Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlNodeEventArgs.NodeType Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlNodeEventArgs.NodeType Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlNodeEventArgs.NodeType Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlNodeEventArgs.NodeType Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlNodeEventArgs.NodeType Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectBeingDeserialized">
+      <MemberSignature Language="C#" Value="public object ObjectBeingDeserialized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ObjectBeingDeserialized" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlNodeEventArgs.ObjectBeingDeserialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt deserialisiert wird.</summary>
+        <value>Die <see cref="T:System.Object" /> deserialisiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel gibt den Rückgabewert von der <xref:System.Object.ToString%2A> Methode bei der <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> Methode trifft einen unbekannten XML-Knoten.  
+  
+ [!code-cpp[Classic XmlNodeEventArgs.ObjectBeingDeserialized Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlNodeEventArgs.ObjectBeingDeserialized Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlNodeEventArgs.ObjectBeingDeserialized Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlNodeEventArgs.ObjectBeingDeserialized Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlNodeEventArgs.ObjectBeingDeserialized Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlNodeEventArgs.ObjectBeingDeserialized Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlNodeEventArgs.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Text des zu deserialisierenden XML-Knotens ab.</summary>
+        <value>Der Text des XML-Knotens deserialisiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird den Text des unbekannten XML-Knotens, der verursacht die <xref:System.Xml.Serialization.XmlSerializer.UnknownNode> Ereignis auftritt.  
+  
+ [!code-cpp[Classic XmlNodeEventArgs.Text Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlNodeEventArgs.Text Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlNodeEventArgs.Text Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlNodeEventArgs.Text Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlNodeEventArgs.Text Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlNodeEventArgs.Text Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

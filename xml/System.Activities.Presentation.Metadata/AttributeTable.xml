@@ -1,0 +1,223 @@
+<Type Name="AttributeTable" FullName="System.Activities.Presentation.Metadata.AttributeTable">
+  <TypeSignature Language="C#" Value="public sealed class AttributeTable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AttributeTable extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Metadata.AttributeTable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Attributtabelle ist eine schreibgeschützte Auflistung von Metadatenattributen, die bestimmten Typen, Membern und Abhängigkeiten zugeordnet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Tabelle wird mit dem <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> erstellt und wird vom <xref:System.Activities.Presentation.Metadata.MetadataStore> verwendet.  
+  
+ Die <xref:System.Activities.Presentation.Metadata.AttributeTable> wird mit dem <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> erstellt und vom <xref:System.Activities.Presentation.Metadata.MetadataStore> verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AttributedTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Type&gt; AttributedTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; AttributedTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Metadata.AttributeTable.AttributedTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Enumeration aller Typen zurück, die Attributüberschreibungen aufweisen, für eine Eigenschaft, einen Member oder den Typ selbst.</summary>
+        <value>Gibt <see cref="T:System.Collections.Generic.IEnumerable`1" />zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies kann verwendet werden, um zu bestimmen, welche Typen aktualisiert werden, wenn dem Metadatenspeicher diese Attributtabelle hinzugefügt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsAttributes">
+      <MemberSignature Language="C#" Value="public bool ContainsAttributes (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsAttributes(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.AttributeTable.ContainsAttributes(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, für den auf Metadaten überprüft wird.</param>
+        <summary>Bestimmt, ob diese Tabelle Metadaten für den angegebenen Typ enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn die Tabelle enthält die Metadaten für den Typ auf Klassenebene oder zugeordneten Metadaten mit einem <see langword="DependencyProperty" /> oder <see langword="MemberDescriptor" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetCustomAttributes">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt eine Enumeration aller Attribute zurück, die für die angegebenen Argumente bereitgestellt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt nie eine NULL-Enumeration zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable GetCustomAttributes (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable GetCustomAttributes(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.AttributeTable.GetCustomAttributes(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, für den Attribute auf Klassenebene abgerufen werden sollen.</param>
+        <summary>Gibt eine Enumeration aller Attribute auf Klassenebene zurück, die für den angegebenen Typ bereitgestellt werden.</summary>
+        <returns>Eine Enumeration von Attributen, die den Kriterien entsprechen. Es wird nie eine NULL-Enumeration zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable GetCustomAttributes (Type ownerType, System.ComponentModel.MemberDescriptor descriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable GetCustomAttributes(class System.Type ownerType, class System.ComponentModel.MemberDescriptor descriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.AttributeTable.GetCustomAttributes(System.Type,System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="descriptor" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="ownerType">Der Typ, der den Member enthält.</param>
+        <param name="descriptor">Ein Memberdeskriptor, für den benutzerdefinierte Attribute abgerufen werden sollen.</param>
+        <summary>Gibt eine Enumeration aller Attribute zurück, die für den angegebenen Member des angegebenen Typs bereitgestellt werden.</summary>
+        <returns>Eine Enumeration von Attributen, die den Kriterien entsprechen. Es wird nie eine NULL-Enumeration zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ownerType" /> oder <paramref name="descriptor" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable GetCustomAttributes (Type ownerType, System.Reflection.MemberInfo member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable GetCustomAttributes(class System.Type ownerType, class System.Reflection.MemberInfo member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.AttributeTable.GetCustomAttributes(System.Type,System.Reflection.MemberInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="member" Type="System.Reflection.MemberInfo" />
+      </Parameters>
+      <Docs>
+        <param name="ownerType">Der Typ, der den Member enthält.</param>
+        <param name="member">Der Member, für den Attribute bereitgestellt werden sollen.</param>
+        <summary>Gibt eine Enumeration aller Attribute zurück, die für den angegebenen Member des angegebenen Typs bereitgestellt werden.</summary>
+        <returns>Eine Enumeration von Attributen, die den Kriterien entsprechen. Es wird nie eine NULL-Enumeration zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ownerType" /> oder <paramref name="member" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable GetCustomAttributes (Type ownerType, string memberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable GetCustomAttributes(class System.Type ownerType, string memberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.AttributeTable.GetCustomAttributes(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="memberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ownerType">Der Besitzertyp der Abhängigkeitseigenschaft.</param>
+        <param name="memberName">Der Name des Members, für den Attribute bereitgestellt werden sollen.</param>
+        <summary>Gibt eine Enumeration aller Attribute zurück, die für den angegebenen Member des angegebenen Typs bereitgestellt werden.</summary>
+        <returns>Eine Enumeration von Attributen, die den Kriterien entsprechen. Es wird nie eine NULL-Enumeration zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ownerType" /> oder <paramref name="memberName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable GetCustomAttributes (Type ownerType, System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable GetCustomAttributes(class System.Type ownerType, class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.AttributeTable.GetCustomAttributes(System.Type,System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="ownerType">Der Besitzertyp der Abhängigkeitseigenschaft.</param>
+        <param name="dp">Eine Abhängigkeitseigenschaft, für die benutzerdefinierte Attribute abgerufen werden sollen.</param>
+        <summary>Gibt eine Enumeration aller Attribute zurück, die für die angegebene Abhängigkeit des angegebenen Typs bereitgestellt werden.</summary>
+        <returns>Eine Enumeration von Attributen, die den Kriterien entsprechen. Es wird nie eine NULL-Enumeration zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ownerType" /> oder <paramref name="dp" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,60 @@
+<Type Name="WorkflowSuspendedEventArgs" FullName="System.Workflow.Runtime.WorkflowSuspendedEventArgs">
+  <TypeSignature Language="C#" Value="public class WorkflowSuspendedEventArgs : System.Workflow.Runtime.WorkflowEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowSuspendedEventArgs extends System.Workflow.Runtime.WorkflowEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.WorkflowSuspendedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.WorkflowEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Es gibt drei Möglichkeiten, eine Workflowinstanz zu unterbrechen: Der Host ruft <xref:System.Workflow.Runtime.WorkflowInstance.Suspend%2A?displayProperty=nameWithType> auf, eine <xref:System.Workflow.ComponentModel.SuspendActivity>-Aktivität wird innerhalb der Workflowinstanz aufgerufen oder das Workflowlaufzeitmodul unterbricht die Workflowinstanz. Wenn die Workflowinstanz unterbrochen wird, löst das Workflowlaufzeitmodul das <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended?displayProperty=nameWithType>-Ereignis aus. Der Host kann dieses Ereignis abonnieren, indem er <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended?displayProperty=nameWithType> einen Ereignishandler hinzufügt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public string Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Error" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowSuspendedEventArgs.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung dazu ab, warum die Workflowinstanz unterbrochen wurde.</summary>
+        <value>Die Beschreibung, warum die Workflowinstanz unterbrochen wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Host die Workflowinstanz unterbricht, gibt er den Grund für die Unterbrechung im `string`-Parameter für <xref:System.Workflow.Runtime.WorkflowInstance.Suspend%2A?displayProperty=nameWithType> an. Wenn der Workflow von einer <xref:System.Workflow.ComponentModel.SuspendActivity>-Aktivität unterbrochen wird, wird der Grund über <xref:System.Workflow.ComponentModel.SuspendActivity.Error%2A?displayProperty=nameWithType> angegeben. Andernfalls gibt das Workflowlaufzeitmodul einen Grund für die Unterbrechung an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

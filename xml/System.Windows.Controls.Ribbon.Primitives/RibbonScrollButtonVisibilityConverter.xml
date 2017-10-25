@@ -1,0 +1,120 @@
+<Type Name="RibbonScrollButtonVisibilityConverter" FullName="System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter">
+  <TypeSignature Language="C#" Value="public sealed class RibbonScrollButtonVisibilityConverter : System.Windows.Data.IMultiValueConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RibbonScrollButtonVisibilityConverter extends System.Object implements class System.Windows.Data.IMultiValueConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Data.IMultiValueConverter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Konvertiert eine Bildlaufleiste Sichtbarkeit und Scroll Position <see cref="T:System.Windows.Visibility" /> Werte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabHeadersPanel> und <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel> horizontalen Bildlauf-Verhalten für das Menüband bereitzustellen. Beim Durchführen eines Bildlaufs erforderlich ist, ersetzt das Menüband die typische Bildlaufleiste mit Wiederholen-Schaltfläche an beiden Enden des Menübands. Dieser Konverter verwendet die Sichtbarkeit und der Position der Bildlaufleiste zum Bestimmen der Sichtbarkeit der einzelnen wiederholten Schaltflächen an.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonScrollButtonVisibilityConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public object Convert (object[] values, Type targetType, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Convert(object[] values, class System.Type targetType, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="values">Die zu konvertierenden Werte. Vier Werte werden erwartet, eine <see cref="T:System.Windows.Visibility" /> -Objekt, das darstellt, Sichtbarkeit der Bildlaufleiste und drei <see cref="T:System.Double" /> Werte, die die Position der Bildlaufleiste darstellen.</param>
+        <param name="targetType">Der Typ konvertiert werden. Die <see cref="T:System.Windows.Visibility" /> wird erwartet.</param>
+        <param name="parameter">Der gewünschte Prozentsatz, dass im Menüband auf der rechten Seite Bildlauf durchgeführt wird, bevor die Bildlaufschaltfläche ausgeblendet wird. Ein <see cref="T:System.Double" /> wird erwartet.</param>
+        <param name="culture">Die Kultur zu verwendende konvertieren.</param>
+        <summary>Konvertiert eine Bildlaufleiste Sichtbarkeit und Scroll Position auf einer <see cref="T:System.Windows.Visibility" /> Wert.</summary>
+        <returns>Ein <see cref="T:System.Windows.Visibility" /> Objekt, das die Sichtbarkeit der Bildlaufschaltfläche darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die drei <xref:System.Double> Werte, die die Position der Bildlaufleiste darstellen, sind die <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel.HorizontalOffset%2A>, <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel.ExtentWidth%2A>, und <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel.ViewportWidth%2A> Eigenschaftswerte die <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel> oder <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabHeadersPanel>. Diese Eigenschaften enthalten die Werte in der Systemsteuerung interne <xref:System.Windows.Controls.ScrollViewer>.  
+  
+ Die `parameter` Wert stellt den gewünschten Prozentsatz dar, die im Menüband wird ein Bildlauf durchgeführt rechts vor der Bildlaufschaltfläche ausgeblendet ist. Standardmäßig die linke Bildlaufschaltfläche 0 als Parameter übergibt, und wird ausgeblendet, wenn das Menüband 0 Prozent auf der rechten Seite ist. Die Rechte Bildlaufschaltfläche übergibt 100 als Parameter und wird ausgeblendet, wenn das Menüband 100 Prozent auf der rechten Seite ist.  
+  
+ Übergibt `null` oder unerwarteter Parametertypen können dazu führen, dass diese Methode zurückgeben <xref:System.Windows.DependencyProperty.UnsetValue>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertBack">
+      <MemberSignature Language="C#" Value="public object[] ConvertBack (object value, Type[] targetTypes, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] ConvertBack(object value, class System.Type[] targetTypes, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetTypes" Type="System.Type[]" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Diese API ist nicht implementiert.</param>
+        <param name="targetTypes">Diese API ist nicht implementiert.</param>
+        <param name="parameter">Diese API ist nicht implementiert.</param>
+        <param name="culture">Diese API ist nicht implementiert.</param>
+        <summary>Diese API ist nicht implementiert.</summary>
+        <returns>
+          <see cref="F:System.Windows.Data.Binding.DoNothing" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Data.Binding.DoNothing?displayProperty=nameWithType>wird zurückgegeben, um anzugeben, dass die Bindung den Fallback oder Default-Wert übernehmen sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

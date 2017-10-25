@@ -1,0 +1,161 @@
+<Type Name="EventQuery" FullName="System.Management.EventQuery">
+  <TypeSignature Language="C#" Value="public class EventQuery : System.Management.ManagementQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventQuery extends System.Management.ManagementQuery" />
+  <TypeSignature Language="DocId" Value="T:System.Management.EventQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.ManagementQuery</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine WMI *Ereignisabfrage*.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie der Client die Benachrichtigung, wenn eine Instanz von empfängt **Win32_Process** erstellt, da die Ereignisklasse **__InstanceCreationEvent**. Weitere Informationen finden Sie unter der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library. Der Client empfängt Ereignisse synchron durch Aufrufen der <xref:System.Management.ManagementEventWatcher.WaitForNextEvent%2A>-Methode. Während der Beispielcode ausgeführt wird, kann dieses Beispiel durch Starten eines Prozesses wie Editor getestet werden.  
+  
+ [!code-csharp[wminet_EventQuery#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventQuery/cs/EventQuery.cs#1)]
+ [!code-vb[wminet_EventQuery#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventQuery/vb/EventQuery.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EventQuery.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Management.EventQuery" />-Klasse. Dies ist der Standardkonstruktor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie der Client die Benachrichtigung, wenn eine Instanz von empfängt **Win32_Process** erstellt, da die Ereignisklasse **__InstanceCreationEvent**. Weitere Informationen finden Sie unter der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library. Der Client empfängt Ereignisse synchron durch Aufrufen der <xref:System.Management.ManagementEventWatcher.WaitForNextEvent%2A>-Methode. Während der Beispielcode ausgeführt wird, kann dieses Beispiel durch Starten eines Prozesses wie Editor getestet werden.  
+  
+ [!code-csharp[wminet_EventQuery#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventQuery/cs/EventQuery.cs#1)]
+ [!code-vb[wminet_EventQuery#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventQuery/vb/EventQuery.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EventQuery.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Eine Textdarstellung der <c>Ereignisabfrage</c>.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.EventQuery" /> Klasse für die angegebene Abfrage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie der Client die Benachrichtigung, wenn eine Instanz von empfängt **Win32_Process** erstellt, da die Ereignisklasse **__InstanceCreationEvent**. Weitere Informationen finden Sie unter der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library. Der Client empfängt Ereignisse synchron durch Aufrufen der <xref:System.Management.ManagementEventWatcher.WaitForNextEvent%2A>-Methode. Während der Beispielcode ausgeführt wird, kann dieses Beispiel durch Starten eines Prozesses wie Editor getestet werden.  
+  
+ [!code-csharp[wminet_EventQuery-1#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventQuery-1/cs/EventQuery-1.cs#1)]
+ [!code-vb[wminet_EventQuery-1#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventQuery-1/vb/EventQuery-1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventQuery (string language, string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string language, string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EventQuery.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="language" Type="System.String" />
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="language">Die Sprache, in der die Abfragezeichenfolge angegeben wird.</param>
+        <param name="query">Die Zeichenfolgendarstellung der Abfrage.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.EventQuery" /> Klasse für die angegebene Sprache und Abfrage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie der Client die Benachrichtigung, wenn eine Instanz von empfängt **Win32_Process** erstellt, da die Ereignisklasse **__InstanceCreationEvent**. Weitere Informationen finden Sie unter der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library. Der Client empfängt Ereignisse synchron durch Aufrufen der <xref:System.Management.ManagementEventWatcher.WaitForNextEvent%2A>-Methode. Während der Beispielcode ausgeführt wird, kann dieses Beispiel durch Starten eines Prozesses wie Editor getestet werden.  
+  
+ [!code-csharp[wminet_EventQuery-2#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventQuery-2/cs/EventQuery-2.cs#1)]
+ [!code-vb[wminet_EventQuery-2#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventQuery-2/vb/EventQuery-2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EventQuery.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie des Objekts zurück.</summary>
+        <returns>Das geklonte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,183 @@
+<Type Name="ConfigurationConverterBase" FullName="System.Configuration.ConfigurationConverterBase">
+  <TypeSignature Language="C#" Value="public abstract class ConfigurationConverterBase : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ConfigurationConverterBase extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationConverterBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Basisklasse für die Konverter Konfigurationstypen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationConverterBase> ist die Basisklasse für den Konverter Konfigurationstypen. Hierbei handelt es sich um Typen, die Konvertierung von Zeichenfolgen, in verschiedene andere und aus den stark typisierten Eigenschaften der Konfigurationsdatei gefunden.  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispiele zeigen, wie Ableitung der <xref:System.Configuration.ConfigurationConverterBase> Klasse zum Erstellen eines benutzerdefinierten <xref:System.TimeSpan> Typkonverters. Darüber hinaus den folgenden Beispielen wie dieses Typs in einem benutzerdefinierten Abschnitt verwendet.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine benutzerdefinierte <xref:System.TimeSpan> Typkonverters aus der <xref:System.Configuration.ConfigurationConverterBase> Klasse.  
+  
+ [!code-csharp[System.Configuration.TimeSpanMinutesConverter#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/CS/TimeSpanMinutesConverter.cs#1)]
+ [!code-vb[System.Configuration.TimeSpanMinutesConverter#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/VB/TimeSpanMinutesConverter.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einen benutzerdefinierten Abschnitt zu definieren, das vorherige benutzerdefinierte verwendet <xref:System.TimeSpan> Konverter.  
+  
+ [!code-csharp[System.Configuration.ConfigurationConvertersCustomSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationConvertersCustomSection/CS/ConfigurationConvertersCustomSection.cs#1)]
+ [!code-vb[System.Configuration.ConfigurationConvertersCustomSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationConvertersCustomSection/VB/ConfigurationConvertersCustomSection.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Konfigurationsdatei mit den vorherigen benutzerdefinierten Abschnitt zu erstellen.  
+  
+ [!code-csharp[System.Configuration.ConfigurationConverterBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationConverterBase/CS/ConfigurationConverterBase.cs#1)]
+ [!code-vb[System.Configuration.ConfigurationConverterBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationConverterBase/VB/ConfigurationConverterBase.vb#1)]  
+  
+ Im folgenden finden einen Konfigurationsauszug wie im vorherigen Beispiel verwendet.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+  <configSections>  
+    <section name="CustomSection"   
+      type="Samples.AspNet.CustomSection,   
+      ConfigurationConverters,   
+      Version=1.0.0.0, Culture=neutral,   
+      PublicKeyToken=null"   
+      allowDefinition="Everywhere"   
+      allowExeDefinition="MachineToApplication"   
+      restartOnExternalChanges="true" />  
+  </configSections>  
+  <CustomSection fileName="default.txt" maxIdleTime="90" />  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConfigurationConverterBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationConverterBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationConverterBase" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da Sie normalerweise die Konvertertypen, die vom System bereitgestellte verwenden, werden nur dann müssen Sie die <xref:System.Configuration.ConfigurationConverterBase.%23ctor%2A> Konstruktor ist, wenn Sie eine eigene Umrechnungstyp erstellen müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext ctx, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationConverterBase.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">Die <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> für Typumwandlungen verwendete Objekt.</param>
+        <param name="type">Die <see cref="T:System.Type" /> konvertiert.</param>
+        <summary>Bestimmt, ob die Konvertierung zulässig ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Konvertierung zulässig ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationConverterBase.CanConvertFrom%2A> Methode bestimmt, ob eine Konvertierung für stark typisierte Eigenschaften zum Abrufen von Zeichenfolgen verwendet werden, in der Konfigurationsdatei ausgeführt werden kann.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht das Überschreiben der <xref:System.Configuration.ConfigurationConverterBase.CanConvertFrom%2A> Methode zum Erstellen eines benutzerdefinierten <xref:System.TimeSpan> Typkonverters. Das Beispiel zeigt auch, wie Sie diesen Typ in einem benutzerdefinierten Abschnitt zu verwenden.  
+  
+ [!code-csharp[System.Configuration.TimeSpanMinutesConverter#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/CS/TimeSpanMinutesConverter.cs#3)]
+ [!code-vb[System.Configuration.TimeSpanMinutesConverter#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/VB/TimeSpanMinutesConverter.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext ctx, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationConverterBase.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">Die <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> Objekt, das für die typkonvertierung verwendet.</param>
+        <param name="type">Der Typ, in den konvertiert werden soll.</param>
+        <summary>Bestimmt, ob die Konvertierung zulässig ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Konvertierung zulässig ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationConverterBase.CanConvertFrom%2A> Methode bestimmt, ob die in der Konfigurationsdatei enthaltenen Zeichenfolgen in die stark typisierten Eigenschaften konvertiert werden können.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht das Überschreiben der <xref:System.Configuration.ConfigurationConverterBase.CanConvertFrom%2A> Methode zum Erstellen eines benutzerdefinierten <xref:System.TimeSpan> Typkonverters. Das Beispiel zeigt auch, wie Sie diesen Typ in einem benutzerdefinierten Abschnitt zu verwenden.  
+  
+ [!code-csharp[System.Configuration.TimeSpanMinutesConverter#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/CS/TimeSpanMinutesConverter.cs#2)]
+ [!code-vb[System.Configuration.TimeSpanMinutesConverter#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/VB/TimeSpanMinutesConverter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

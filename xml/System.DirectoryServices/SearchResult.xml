@@ -1,0 +1,430 @@
+<Type Name="SearchResult" FullName="System.DirectoryServices.SearchResult">
+  <TypeSignature Language="C#" Value="public class SearchResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SearchResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.SearchResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.SearchResult" /> Klasse kapselt einen Knoten in der Active Directory-Domänendienste-Hierarchie, während eine Suche durch zurückgegeben wird <see cref="T:System.DirectoryServices.DirectorySearcher" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanzen der <xref:System.DirectoryServices.SearchResult> Klasse sind sehr ähnlich Instanzen <xref:System.DirectoryServices.DirectoryEntry> Klasse. Die entscheidende Unterschied besteht darin, die die <xref:System.DirectoryServices.DirectoryEntry> Klasse ruft seine Informationen aus der Active Directory-Domänendienste-Hierarchie jedes Mal ein neues Objekt zugegriffen wird, während die Daten für <xref:System.DirectoryServices.SearchResult> steht bereits aus, in der <xref:System.DirectoryServices.SearchResultCollection>, in dem er ruft zurückgegebene aus einer Abfrage, die mit erfolgt die <xref:System.DirectoryServices.DirectorySearcher> Klasse. Nur die Eigenschaften, die über angegeben sind die <xref:System.DirectoryServices.DirectorySearcher.PropertiesToLoad%2A?displayProperty=nameWithType> -Auflistung in der Abfrage von stehen <xref:System.DirectoryServices.SearchResult>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.DirectoryServices.DirectoryEntry> Objekt mit den gewünschten Pfad und verwendet die <xref:System.DirectoryServices.DirectorySearcher.FindOne%2A> Methode, um die Suche zu starten. Nach dem Ausführen der Suche ist im Beispiel wird die <xref:System.DirectoryServices.SearchResult.GetDirectoryEntry%2A> Methode, um die in den Suchergebnissen identifizierten tatsächlichen Verzeichniseintrag abzurufen.  
+  
+```vb  
+Imports System  
+Imports System.DirectoryServices  
+Imports Microsoft.VisualBasic  
+  
+Public Class MySample  
+   Public Shared Sub Main()  
+      Dim myLDAPPath As String = ""  
+      Try  
+         ' Create a 'DirectoryEntry' object to search.  
+         Console.WriteLine("Enter the path ( Ex : 'LDAP://MyServer')")  
+         myLDAPPath = Console.ReadLine()  
+         Dim mySearchRoot As New DirectoryEntry(myLDAPPath)  
+  
+         Dim myDirectorySearcher As New DirectorySearcher(mySearchRoot)  
+  
+         ' Get the first entry of the search.  
+         Dim mySearchResult As SearchResult = myDirectorySearcher.FindOne()  
+         If Not (mySearchResult Is Nothing) Then  
+            ' Get the 'DirectoryEntry' that corresponds to 'mySearchResult'.  
+            Dim myDirectoryEntry As DirectoryEntry = mySearchResult.GetDirectoryEntry()  
+            Console.WriteLine(ControlChars.Newline + "The name of the 'myDirectoryEntry' " + _  
+                        "directory entry that corresponds to the " + _  
+                        "'mySearchResult' search result is : {0}" + _  
+                        ControlChars.Newline, myDirectoryEntry.Name)  
+            Dim mySearchResultPath As String = mySearchResult.Path  
+            Console.WriteLine("The path for the 'mySearchResult' search result is : {0}" + _  
+                              ControlChars.Newline, mySearchResultPath)  
+            ' Get the properties of the 'mySearchResult'.  
+            Dim myResultPropColl As ResultPropertyCollection  
+            myResultPropColl = mySearchResult.Properties  
+            Console.WriteLine("The properties of the 'mySearchResult' are :")  
+            Dim myKey As String  
+            For Each myKey In  myResultPropColl.PropertyNames  
+               Dim tab1 As String = "    "  
+               Console.WriteLine(myKey + " = ")  
+               Dim myCollection As Object  
+               For Each myCollection In  myResultPropColl(myKey)  
+                  Console.WriteLine(tab1 + myCollection)  
+               Next myCollection  
+            Next myKey  
+            myDirectoryEntry.Dispose()  
+            mySearchRoot.Dispose()  
+         Else  
+            Console.WriteLine("The '" + myLDAPPath + "' path not found.")  
+         End If  
+      Catch e As Exception  
+         Console.WriteLine("The '" + myLDAPPath + "' path not found.")  
+         Console.WriteLine("Exception : " & e.Message)  
+      End Try  
+   End Sub 'Main  
+End Class 'MySample  
+```  
+  
+```csharp  
+using System;  
+using System.DirectoryServices;  
+  
+public class MySample  
+{  
+    public static void Main()  
+    {  
+        string myLDAPPath = "";  
+        try  
+        {  
+            // Create a 'DirectoryEntry' object to search.  
+            Console.WriteLine("Enter the path ( Ex : 'LDAP://MyServer')");  
+            myLDAPPath = Console.ReadLine();  
+  
+            DirectoryEntry mySearchRoot = new DirectoryEntry(myLDAPPath);  
+            DirectorySearcher myDirectorySearcher =   
+                    new DirectorySearcher(mySearchRoot);  
+  
+            // Get the first entry of the search.  
+            SearchResult mySearchResult = myDirectorySearcher.FindOne();  
+  
+            if ( mySearchResult != null )  
+            {  
+                // Get the 'DirectoryEntry' that corresponds to 'mySearchResult'.  
+                DirectoryEntry myDirectoryEntry =   
+                mySearchResult.GetDirectoryEntry();  
+                Console.WriteLine("\nThe name of the 'myDirectoryEntry' " +  
+                        "directory entry that corresponds to the " +  
+                        "'mySearchResult' search result is : {0}\n",  
+                        myDirectoryEntry.Name);  
+                string mySearchResultPath = mySearchResult.Path;  
+                Console.WriteLine("The path for the 'mySearchResult' search "  
+                        + "result is : {0}\n", mySearchResultPath);  
+  
+                // Get the properties of the 'mySearchResult'.  
+                ResultPropertyCollection myResultPropColl;  
+                myResultPropColl = mySearchResult.Properties;  
+                Console.WriteLine("The properties of the " +   
+                        "'mySearchResult' are :");  
+  
+                foreach( string myKey in myResultPropColl.PropertyNames)  
+                {  
+                    string tab = "    ";  
+                    Console.WriteLine(myKey + " = ");  
+                    foreach( Object myCollection in myResultPropColl[myKey])  
+                    {  
+                        Console.WriteLine(tab + myCollection);  
+                    }  
+                }  
+                mySearchRoot.Dispose();  
+                myDirectoryEntry.Dispose();  
+            }  
+            else  
+            {  
+                Console.WriteLine("The '" + myLDAPPath + "' path not found.");  
+            }  
+        }  
+        catch(Exception e)  
+        {  
+            Console.WriteLine("The '" + myLDAPPath + "' path not found.");  
+            Console.WriteLine("Exception : " + e.Message);  
+        }  
+    }  
+  
+}  
+```  
+  
+```cpp#  
+#using <mscorlib.dll>  
+#using <System.dll>  
+#using <System.Directoryservices.dll>  
+  
+using namespace System;  
+using namespace System::Collections;  
+using namespace System::DirectoryServices;  
+using namespace stdcli::language;  
+  
+int main()   
+{  
+    String^ myLDAPPath = "";  
+    try   
+    {  
+        // Create a 'DirectoryEntry' object to search.  
+        Console::WriteLine("Enter the path ( Ex : 'LDAP://MyServer')");  
+        myLDAPPath = Console::ReadLine();  
+        DirectoryEntry^ mySearchRoot = gcnew DirectoryEntry(myLDAPPath);  
+  
+        DirectorySearcher^ myDirectorySearcher = gcnew DirectorySearcher(mySearchRoot);  
+  
+        // Get the first entry of the search.  
+        SearchResult^ mySearchResult = myDirectorySearcher->FindOne();  
+        if (mySearchResult)   
+        {  
+            // Get the 'DirectoryEntry' that corresponds to 'mySearchResult'.  
+            DirectoryEntry^ myDirectoryEntry = mySearchResult->GetDirectoryEntry();  
+            Console::WriteLine(  
+                String::Concat("\nThe name of the 'myDirectoryEntry' ",  
+                "directory entry that corresponds to the ",  
+                "'mySearchResult' search result is : {0}\n"),  
+                myDirectoryEntry->Name);  
+  
+            String^ mySearchResultPath = mySearchResult->Path;  
+            Console::WriteLine("The path for the 'mySearchResult' search result is :  
+                    {0}\n", mySearchResultPath);  
+  
+            // Get the properties of the 'mySearchResult'.  
+            ResultPropertyCollection^ myResultPropColl = mySearchResult->Properties;  
+            Console::WriteLine("The properties of the 'mySearchResult' are :");  
+            IEnumerator^ myEnum = myResultPropColl->PropertyNames->GetEnumerator();  
+            while (myEnum->MoveNext())   
+            {  
+                String^ myKey = safe_cast<String^>(myEnum->Current);  
+                Console::WriteLine("{0} = ", myKey);  
+                IEnumerator^ myEnum = myResultPropColl->Item[myKey]->GetEnumerator();  
+                while (myEnum->MoveNext())   
+                {  
+                    Console::WriteLine("\t{0}", myEnum->Current);  
+                }  
+            }  
+            myDirectoryEntry->Dispose();  
+            mySearchRoot->Dispose();   
+        }   
+        else   
+        {  
+            Console::WriteLine("The '{0}' path not found.", myLDAPPath);  
+        }  
+    }   
+    catch (Exception^ e)   
+    {  
+        Console::WriteLine("The '{0}' path not found.",  myLDAPPath);  
+        Console::WriteLine("Exception : {0}", e->Message);  
+    }  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+      <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+    </permission>
+  </Docs>
+  <Members>
+    <Member MemberName="GetDirectoryEntry">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DirectoryEntry GetDirectoryEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.DirectoryEntry GetDirectoryEntry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResult.GetDirectoryEntry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryEntry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="T:System.DirectoryServices.DirectoryEntry" /> , entspricht der <see cref="T:System.DirectoryServices.SearchResult" /> aus der Active Directory-Domänendienste-Hierarchie.</summary>
+        <returns>Die <see cref="T:System.DirectoryServices.DirectoryEntry" /> , entspricht der <see cref="T:System.DirectoryServices.SearchResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.DirectoryServices.SearchResult.GetDirectoryEntry%2A> Wenn Sie den tatsächlichen Eintrag anstelle der Eintrag betrachten, die über zurückgegebener möchten <xref:System.DirectoryServices.DirectorySearcher>, oder wenn eine Methode für das Objekt aufrufen, der zurückgegeben werden sollen.  
+  
+> [!NOTE]
+>  Aufrufen von <xref:System.DirectoryServices.SearchResult.GetDirectoryEntry%2A> auf jedem <xref:System.DirectoryServices.SearchResult> durch zurückgegebenen <xref:System.DirectoryServices.DirectorySearcher> können langsam sein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ist ein Auszug aus dem Beispiel in <xref:System.DirectoryServices.SearchResult>. Das ursprüngliche Beispiel erstellt ein neues <xref:System.DirectoryServices.DirectoryEntry> Objekt mit den gewünschten Pfad und verwendet die <xref:System.DirectoryServices.DirectorySearcher.FindOne%2A> Methode, um die Suche zu starten. Nach dem Ausführen der Suche ist im Beispiel wird die <xref:System.DirectoryServices.SearchResult.GetDirectoryEntry%2A> Methode, um den tatsächlichen Verzeichniseintrag abzurufen, die in den Suchergebnissen identifiziert wird.  
+  
+```vb  
+' Get the 'DirectoryEntry' that corresponds to 'mySearchResult'.  
+Dim myDirectoryEntry As DirectoryEntry = mySearchResult.GetDirectoryEntry()  
+Console.WriteLine(ControlChars.Newline + "The name of the 'myDirectoryEntry' " + _  
+            "directory entry that corresponds to the " + _  
+            "'mySearchResult' search result is : {0}" + _  
+            ControlChars.Newline, myDirectoryEntry.Name)  
+  
+```  
+  
+```csharp  
+// Get the 'DirectoryEntry' that corresponds to 'mySearchResult'.  
+DirectoryEntry myDirectoryEntry =   
+                           mySearchResult.GetDirectoryEntry();  
+Console.WriteLine("\nThe name of the 'myDirectoryEntry' " +  
+                  "directory entry that corresponds to the " +  
+                  "'mySearchResult' search result is : {0}\n",  
+                  myDirectoryEntry.Name);  
+  
+```  
+  
+```cpp#  
+// Get the 'DirectoryEntry' that corresponds to 'mySearchResult'.  
+DirectoryEntry^ myDirectoryEntry = mySearchResult->GetDirectoryEntry();  
+Console::WriteLine(  
+    String::Concat("\nThe name of the 'myDirectoryEntry' ",  
+    "directory entry that corresponds to the ",  
+    "'mySearchResult' search result is : {0}\n"),  
+    myDirectoryEntry->Name);  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResult.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad für diese <see cref="T:System.DirectoryServices.SearchResult" />.</summary>
+        <value>Der Pfad zu <see cref="T:System.DirectoryServices.SearchResult" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.DirectoryServices.SearchResult.Path%2A> Eigenschaft hat dieses Eintrags in der Active Directory-Domänendienste-Hierarchie eindeutig identifiziert. Der Eintrag kann mithilfe dieser Pfad immer abgerufen werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ist ein Auszug aus dem Beispiel in <xref:System.DirectoryServices.SearchResult>. Das ursprüngliche Beispiel erstellt ein neues <xref:System.DirectoryServices.DirectoryEntry> Objekt mit den gewünschten Pfad und verwendet die <xref:System.DirectoryServices.DirectorySearcher.FindOne%2A> Methode, um die Suche zu starten. Nach dem Ausführen der Suche ist im Beispiel wird die <xref:System.DirectoryServices.SearchResult.GetDirectoryEntry%2A> Methode, um den tatsächlichen Verzeichniseintrag abzurufen, die in den Suchergebnissen identifiziert wird.  
+  
+ In diesem Beispiel wird gezeigt, wie beim Analysieren der <xref:System.DirectoryServices.SearchResult.Path%2A> Eigenschaft aus dem Ergebnis der Suche.  
+  
+```vb  
+Dim mySearchResultPath As String = mySearchResult.Path  
+Console.WriteLine("The path for the 'mySearchResult' search result is : {0}" + _  
+                  ControlChars.Newline, mySearchResultPath)  
+  
+```  
+  
+```csharp  
+string mySearchResultPath = mySearchResult.Path;  
+Console.WriteLine("The path for the 'mySearchResult' search "  
+                  + "result is : {0}\n", mySearchResultPath);  
+```  
+  
+```cpp#  
+String^ mySearchResultPath = mySearchResult->Path;  
+Console::WriteLine("The path for the 'mySearchResult' search result is : {0}\n", mySearchResultPath);  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ResultPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ResultPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResult.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ResultPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.DirectoryServices.ResultPropertyCollection" /> Auflistung von Eigenschaften für dieses Objekt.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ResultPropertyCollection" /> von Eigenschaften für dieses Objekt festlegen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Auflistung enthält nur die Eigenschaften, die explizit über angefordert wurden <xref:System.DirectoryServices.DirectorySearcher.PropertiesToLoad%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ist ein Auszug aus dem Beispiel in <xref:System.DirectoryServices.SearchResult>. Das ursprüngliche Beispiel erstellt ein neues <xref:System.DirectoryServices.DirectoryEntry> Objekt mit den gewünschten Pfad und verwendet die <xref:System.DirectoryServices.DirectorySearcher.FindOne%2A> Methode, um die Suche zu starten. Nach dem Ausführen der Suche ist im Beispiel wird die <xref:System.DirectoryServices.SearchResult.GetDirectoryEntry%2A> Methode, um den tatsächlichen Verzeichniseintrag abzurufen, die in den Suchergebnissen identifiziert wird.  
+  
+ In diesem Beispiel wird das Suchergebnis abgelegt wird eine <xref:System.DirectoryServices.ResultPropertyCollection>. Anschließend wird jede Eigenschaft im Konsolenfenster angezeigt.  
+  
+```vb  
+' Get the properties for 'mySearchResult'.  
+Dim myResultPropColl As ResultPropertyCollection  
+myResultPropColl = mySearchResult.Properties  
+Console.WriteLine("The properties of the 'mySearchResult' are :")  
+Dim myKey As String  
+For Each myKey In  myResultPropColl.PropertyNames  
+   Dim tab1 As String = "    "  
+   Console.WriteLine(myKey + " = ")  
+   Dim myCollection As Object  
+   For Each myCollection In  myResultPropColl(myKey)  
+      Console.WriteLine(tab1 + myCollection)  
+   Next myCollection  
+Next myKey  
+  
+```  
+  
+```csharp  
+// Get the properties for 'mySearchResult'.  
+ResultPropertyCollection myResultPropColl;  
+myResultPropColl = mySearchResult.Properties;  
+Console.WriteLine("The properties of the " +   
+                  "'mySearchResult' are :");  
+foreach( string myKey in myResultPropColl.PropertyNames)  
+{  
+   string tab = "    ";  
+   Console.WriteLine(myKey + " = ");  
+   foreach( Object myCollection in myResultPropColl[myKey])  
+   {  
+      Console.WriteLine(tab + myCollection);  
+   }  
+}  
+  
+```  
+  
+```cpp#  
+// Get the properties for 'mySearchResult'.  
+ResultPropertyCollection^ myResultPropColl = mySearchResult->Properties;  
+Console::WriteLine("The properties of the 'mySearchResult' are :");  
+IEnumerator^ myEnum = myResultPropColl->PropertyNames->GetEnumerator();  
+while (myEnum->MoveNext())   
+{  
+    String^ myKey = safe_cast<String^>(myEnum->Current);  
+    Console::WriteLine("{0} = ", myKey);  
+    IEnumerator^ myEnum = myResultPropColl->Item[myKey]->GetEnumerator();  
+    while (myEnum->MoveNext())   
+    {  
+        Console::WriteLine("\t{0}", myEnum->Current);  
+    }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

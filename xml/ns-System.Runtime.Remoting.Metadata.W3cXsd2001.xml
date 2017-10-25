@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Remoting.Metadata.W3cXsd2001">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Remoting.Metadata.W3cXsd2001" /> -Namespace enthält die XML Schema Definition (XSD), die vom World Wide Web Consortium (W3C) 2001 definiert wurde. XML Schema Part 2: Datatypes-Spezifikation von W3C identifiziert, Format und das Verhalten der verschiedenen Datentypen. Dieser Namespace enthält Wrapperklassen für die Datentypen, die der W3C-Spezifikation entsprechen. Alle Datums- und Uhrzeittypen entsprechen der Spezifikation der ISO-Standards.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den XML Schema Part 2: Datatypes-Spezifikation finden Sie unter http://www.w3.org/TR/xmlschema-2/.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

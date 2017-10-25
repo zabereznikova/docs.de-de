@@ -1,0 +1,1012 @@
+<Type Name="NextPreviousPagerField" FullName="System.Web.UI.WebControls.NextPreviousPagerField">
+  <TypeSignature Language="C#" Value="public class NextPreviousPagerField : System.Web.UI.WebControls.DataPagerField" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NextPreviousPagerField extends System.Web.UI.WebControls.DataPagerField" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.NextPreviousPagerField" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataPagerField</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Feld, das Navigationssteuerelemente in zeigt ein <see cref="T:System.Web.UI.WebControls.DataPager" /> Kontrolle ermöglichen Benutzern das Durchblättern der Daten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.NextPreviousPagerField> Klasse stellt ein Feld, das Navigationssteuerelemente in zeigt ein <xref:System.Web.UI.WebControls.DataPager> Steuerelement. Diese Steuerelemente für die Seitennavigation genutzt werden Durchblättern der Daten, die von einem Steuerelement angezeigt werden, implementiert die <xref:System.Web.UI.WebControls.IPageableItemContainer> Schnittstelle, wie die <xref:System.Web.UI.WebControls.ListView> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.NextPreviousPagerField> Klasse stellt Schaltflächen, mit denen Benutzer über die Seiten von einer Datenseite zu einem Zeitpunkt navigieren oder auf der ersten bzw. letzten Datenseite springen.  
+  
+ Sie können die Darstellung Anpassen der <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt mithilfe der <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonCssClass%2A> Eigenschaft, um den Stil der Schaltflächen festzulegen. Sie können auch die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> Eigenschaft, um den Typ der Schaltfläche auswählen, die angezeigt wird. In der folgenden Tabelle werden die verfügbaren Schaltflächentypen aufgeführt.  
+  
+|Schaltflächentyp|Beschreibung|  
+|-----------------|-----------------|  
+|<xref:System.Web.UI.WebControls.ButtonType.Button>|Ein <xref:System.Web.UI.WebControls.Button>-Steuerelement.|  
+|<xref:System.Web.UI.WebControls.ButtonType.Image>|Ein <xref:System.Web.UI.WebControls.ImageButton>-Steuerelement.|  
+|<xref:System.Web.UI.WebControls.ButtonType.Link>|Ein <xref:System.Web.UI.WebControls.LinkButton>-Steuerelement.|  
+  
+ Können Sie Ausblenden einer <xref:System.Web.UI.WebControls.NextPreviousPagerField> -Objekt in ein <xref:System.Web.UI.WebControls.DataPager> Steuerelement durch Festlegen der <xref:System.Web.UI.WebControls.DataPagerField.Visible%2A> Eigenschaft, um `false`. Sie können die einzelnen Schaltflächen (die erste Seite, vorherige Seite nächsten Seite und letzten Seite Schaltflächen) auch ausblenden, durch Festlegen der <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowFirstPageButton%2A>, <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowPreviousPageButton%2A>, <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowNextPageButton%2A>, und <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowLastPageButton%2A> Eigenschaften `false`.  
+  
+ Die <xref:System.Web.UI.WebControls.NextPreviousPagerField> Steuerelement ermöglicht Ihnen das Festlegen benutzerdefinierten Text für jede Schaltfläche mithilfe der <xref:System.Web.UI.WebControls.NextPreviousPagerField.FirstPageText%2A>, <xref:System.Web.UI.WebControls.NextPreviousPagerField.PreviousPageText%2A>, <xref:System.Web.UI.WebControls.NextPreviousPagerField.NextPageText%2A>, und <xref:System.Web.UI.WebControls.NextPreviousPagerField.LastPageText%2A> Eigenschaften.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> -Eigenschaftensatz auf `ButtonType.Image`, müssen Sie die URL zu einem Bild, das angezeigt wird, für die Schaltfläche angeben. Sie können Bilder für jede Schaltfläche einzeln festlegen, durch Festlegen der <xref:System.Web.UI.WebControls.NextPreviousPagerField.FirstPageImageUrl%2A>, <xref:System.Web.UI.WebControls.NextPreviousPagerField.PreviousPageImageUrl%2A>, <xref:System.Web.UI.WebControls.NextPreviousPagerField.NextPageImageUrl%2A>, und <xref:System.Web.UI.WebControls.NextPreviousPagerField.LastPageImageUrl%2A> Eigenschaften.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> -Eigenschaftensatz auf `ButtonType.Image`, die entsprechende Texteigenschaft als alternativer Text für das Bild. Beispielsweise der Text, der angegeben wird die <xref:System.Web.UI.WebControls.NextPreviousPagerField.FirstPageText%2A> Eigenschaft wird als alternativer Text für die erste Seite, Bild-Schaltfläche angezeigt. In Browsern mit Unterstützung von QuickInfos, wird dieser Text auch als QuickInfo angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt durchblättern in angezeigten Daten eine <xref:System.Web.UI.WebControls.ListView> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerField/CS/NextPreviousPagerFieldCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerField/VB/NextPreviousPagerFieldVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NextPreviousPagerField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.NextPreviousPagerField.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.NextPreviousPagerField.%23ctor%2A> Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.NextPreviousPagerField> Klasse. Dieser Konstruktor wird normalerweise verwendet, beim Hinzufügen von Feldern zu einem dynamisch erstellten <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ Hinzufügen einer <xref:System.Web.UI.WebControls.NextPreviousPagerField> -Objekt dynamisch eine <xref:System.Web.UI.WebControls.DataPager> steuern, erstellen Sie ein neues <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt, dessen Eigenschaften festlegen und fügen Sie ihn anschließend auf die feldauflistung für das <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie mithilfe des Konstruktors dynamisch Hinzufügen einer <xref:System.Web.UI.WebControls.NextPreviousPagerField> -Objekt an eine <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerField.Ctor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerField.Ctor/CS/NextPreviousPagerFieldCtorCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerField.Ctor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerField.Ctor/VB/NextPreviousPagerFieldCtorVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonCssClass">
+      <MemberSignature Language="C#" Value="public string ButtonCssClass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ButtonCssClass" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.ButtonCssClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.CssClassProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die cascading Stylesheet (CSS)-Klasse, die zum Rendern der Schaltflächen des Pagerfelds "auf den Browser verwendet wird.</summary>
+        <value>Die CSS-Klasse, die zum Rendern der Schaltflächen des Pagerfelds "auf dem Client verwendet. Der Standardwert ist eine leere Zeichenfolge ist, der angibt, dass die <see cref="P:System.Web.UI.WebControls.NextPreviousPagerField.ButtonCssClass" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonCssClass%2A> Eigenschaft, um die CSS-Klasse zum Rendern im Browser für die Schaltflächen des Pagerfelds anzugeben. Diese Eigenschaft wird immer als dem Klassenattribut, unabhängig von den Browser gerendert werden.  
+  
+> [!NOTE]
+>  In Browsern, die CSS-Einstellung nicht unterstützen die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonCssClass%2A> Eigenschaft hat keine Auswirkungen.  
+  
+ Der Wert dieser Eigenschaft ist in "ViewState" Speichern gespeichert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonCssClass%2A> -Eigenschaft an eine CSS-Klasse für Schaltflächen in der <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt des ein <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerFieldText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldText/CS/NextPreviousPagerTextCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerFieldText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldText/VB/NextPreviousPagerTextVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ButtonType ButtonType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ButtonType ButtonType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert den Schaltflächentyp im Feld "Pager" angezeigt.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.ButtonType" />-Werte. Die Standardeinstellung ist <see langword="ButtonType.Link" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> Eigenschaft, um anzugeben, welche Art von Schaltfläche in einem Schaltflächenfeld angezeigt wird. In der folgenden Tabelle werden die verfügbaren Schaltflächentypen aufgeführt.  
+  
+|Schaltfläche Typwert|Beschreibung|  
+|-----------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.ButtonType.Button>|Ein <xref:System.Web.UI.WebControls.Button>-Steuerelement.|  
+|<xref:System.Web.UI.WebControls.ButtonType.Image>|Ein <xref:System.Web.UI.WebControls.ImageButton>-Steuerelement.|  
+|<xref:System.Web.UI.WebControls.ButtonType.Link>|Ein <xref:System.Web.UI.WebControls.LinkButton>-Steuerelement.|  
+  
+ Wenn <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> festgelegt ist, um `ButtonType.Image`, müssen Sie das Bild, das für die Schaltflächen angezeigt werden, mithilfe der in der folgenden Tabelle aufgeführten Eigenschaften festlegen.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.NextPreviousPagerField.FirstPageImageUrl%2A>|Die URL zu einem Bild, das für die erste Seite-Schaltfläche angezeigt werden soll.|  
+|<xref:System.Web.UI.WebControls.NextPreviousPagerField.PreviousPageImageUrl%2A>|Die URL zu einem Bild, das für die vorherige Seite Schaltfläche angezeigt werden soll.|  
+|<xref:System.Web.UI.WebControls.NextPreviousPagerField.NextPageImageUrl%2A>|Die URL zu einem Bild, das für die nächste Seite-Schaltfläche angezeigt werden soll.|  
+|<xref:System.Web.UI.WebControls.NextPreviousPagerField.LastPageImageUrl%2A>|Die URL zu einem Bild, das für die letzte Seite-Schaltfläche angezeigt werden soll.|  
+  
+ Der Wert, der die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> Eigenschaft befindet sich in "ViewState" speichern.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> Eigenschaft, um anzugeben, dass im Bild Schaltflächen angezeigt werden die <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt ein <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerFieldUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldUrl/CS/NextPreviousPagerUrlCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerFieldUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldUrl/VB/NextPreviousPagerUrlVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert für die <see cref="P:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType" /> Eigenschaft ist nicht die <see cref="T:System.Web.UI.WebControls.ButtonType" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperties">
+      <MemberSignature Language="C#" Value="protected override void CopyProperties (System.Web.UI.WebControls.DataPagerField newField);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyProperties(class System.Web.UI.WebControls.DataPagerField newField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.NextPreviousPagerField.CopyProperties(System.Web.UI.WebControls.DataPagerField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newField" Type="System.Web.UI.WebControls.DataPagerField" />
+      </Parameters>
+      <Docs>
+        <param name="newField">Die <see cref="T:System.Web.UI.WebControls.DataPagerField" /> So kopieren Sie die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> an.</param>
+        <summary>Kopiert die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt mit dem angegebenen <see cref="T:System.Web.UI.WebControls.DataPagerField" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.NextPreviousPagerField.CopyProperties%2A> Methode ist eine Hilfsmethode. Wird verwendet, durch die <xref:System.Web.UI.WebControls.DataPagerField.CloneField%2A?displayProperty=nameWithType> Methode, um die Eigenschaften des aktuellen kopieren <xref:System.Web.UI.WebControls.NextPreviousPagerField> -Objekt an die <xref:System.Web.UI.WebControls.DataPagerField> -Objekt, das übergeben wird die `newField` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Web.UI.WebControls.NextPreviousPagerField.CopyProperties(System.Web.UI.WebControls.DataPagerField)" /> Methode, um die neuen Eigenschaften zu kopieren, die in der abgeleiteten Klasse erstellt wurden. Achten Sie darauf, dass Sie der Basisklasse aufgerufen <see cref="M:System.Web.UI.WebControls.NextPreviousPagerField.CopyProperties(System.Web.UI.WebControls.DataPagerField)" /> Methode, damit die Eigenschaften der <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Klasse werden ebenfalls kopiert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDataPagers">
+      <MemberSignature Language="C#" Value="public override void CreateDataPagers (System.Web.UI.WebControls.DataPagerFieldItem container, int startRowIndex, int maximumRows, int totalRowCount, int fieldIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CreateDataPagers(class System.Web.UI.WebControls.DataPagerFieldItem container, int32 startRowIndex, int32 maximumRows, int32 totalRowCount, int32 fieldIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.NextPreviousPagerField.CreateDataPagers(System.Web.UI.WebControls.DataPagerFieldItem,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Web.UI.WebControls.DataPagerFieldItem" />
+        <Parameter Name="startRowIndex" Type="System.Int32" />
+        <Parameter Name="maximumRows" Type="System.Int32" />
+        <Parameter Name="totalRowCount" Type="System.Int32" />
+        <Parameter Name="fieldIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="container">Der Container, die verwendet wird, um die Steuerelemente zu speichern.</param>
+        <param name="startRowIndex">Der Index des ersten Datensatzes auf der Seite.</param>
+        <param name="maximumRows">Die maximale Anzahl von Elementen auf einer Seite.</param>
+        <param name="totalRowCount">Die Gesamtanzahl von Elementen.</param>
+        <param name="fieldIndex">Der Index des Pagers Datenfelds in der <see cref="P:System.Web.UI.WebControls.DataPager.Fields" /> Auflistung.</param>
+        <summary>Erstellt den Benutzer Steuerelemente der Benutzeroberfläche (UI) für die Pager-Field-Objekt und dem angegebenen Container hinzugefügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.NextPreviousPagerField.CreateDataPagers%2A> Methode wird verwendet, durch die <xref:System.Web.UI.WebControls.DataPager.CreatePagerFields%2A?displayProperty=nameWithType> Methode zum Erstellen der Benutzeroberfläche gesteuert wird, für die Pagerfeld, z. B. die Schaltflächen "zurück" und "Weiter".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.DataPagerField CreateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.DataPagerField CreateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.NextPreviousPagerField.CreateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataPagerField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine neue Instanz der <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" />-Klasse zurück.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" />-Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.NextPreviousPagerField.CreateField%2A> Methode ist eine Hilfsmethode, die von verwendet wird, die <xref:System.Web.UI.WebControls.DataPagerField.CloneField%2A> Methode der Basisklasse zum Erstellen eines leeren <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Web.UI.WebControls.NextPreviousPagerField.CreateField" /> Methode, um eine neue Instanz der abgeleiteten Klasse zurückzugeben. Rufen Sie nicht die <see cref="M:System.Web.UI.WebControls.NextPreviousPagerField.CreateField" /> Methode der Basisklasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.NextPreviousPagerField.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das zu vergleichende mit dem aktuellen Objekt <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Instanz.</param>
+        <summary>Bestimmt, ob das angegebene Objekt und das aktuelle <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" />-Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene Objekt und das aktuelle <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" />-Objekt gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.NextPreviousPagerField.Equals%2A> Methode, um zu bestimmen, ob die aktuelle <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt gleich dem Objekt, das angegeben wird die `o` Parameter. <xref:System.Web.UI.WebControls.NextPreviousPagerField.Equals%2A>Gibt `true` , wenn die beiden Objekte genau die gleichen Werte für alle öffentlichen Eigenschaften des enthalten die <xref:System.Web.UI.WebControls.NextPreviousPagerField> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstPageImageUrl">
+      <MemberSignature Language="C#" Value="public string FirstPageImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FirstPageImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.FirstPageImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.ImageUrlEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild, das für die erste Seite-Schaltfläche angezeigt wird.</summary>
+        <value>Die URL zu einem Bild, das für die erste Seite-Schaltfläche angezeigt wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.NextPreviousPagerField.FirstPageImageUrl" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> -Eigenschaftensatz auf `ButtonType.Image` und die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowFirstPageButton%2A> -Eigenschaftensatz auf `true`, verwenden die <xref:System.Web.UI.WebControls.NextPreviousPagerField.FirstPageImageUrl%2A> Eigenschaft, um die URL zu einem Bild anzugeben, die für die erste Seite-Schaltfläche angezeigt wird. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP und So weiter), die im Browser unterstützt wird.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> Eigenschaft wird auf einen Wert festgelegt, außer `ButtonType.Image`wird durch das Festlegen der <xref:System.Web.UI.WebControls.NextPreviousPagerField.FirstPageImageUrl%2A> Eigenschaft hat keine Auswirkungen.  
+  
+ Der Wert dieser Eigenschaft ist in "ViewState" Speichern gespeichert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.FirstPageImageUrl%2A> Eigenschaft zum Anzeigen eines Bilds für die erste Seite-Schaltfläche in der <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt ein <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerFieldUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldUrl/CS/NextPreviousPagerUrlCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerFieldUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldUrl/VB/NextPreviousPagerUrlVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstPageText">
+      <MemberSignature Language="C#" Value="public string FirstPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FirstPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.FirstPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der für die erste Seite-Schaltfläche angezeigt wird.</summary>
+        <value>Der Text, der für die erste Seite-Schaltfläche angezeigt wird. Der Standardwert ist "Zuerst".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowFirstPageButton%2A> -Eigenschaftensatz auf `true`, verwenden Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.FirstPageText%2A> Eigenschaft an, der für die erste Seite-Schaltfläche anzuzeigende Text.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> -Eigenschaftensatz auf `ButtonType.Image`, das Bild nicht angezeigt wird und die <xref:System.Web.UI.WebControls.NextPreviousPagerField.FirstPageText%2A> Eigenschaft fungiert als die alternativen Text für das Bild. In Browsern, die QuickInfos unterstützen, wird dieser Text auch als QuickInfo angezeigt.  
+  
+ Der Wert dieser Eigenschaft wird in "ViewState" Speichern gespeichert, und sie können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A> Eigenschaft zum Anpassen des Texts für die erste Seite-Schaltfläche des Pagerfelds "in einem <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerFieldText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldText/CS/NextPreviousPagerTextCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerFieldText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldText/VB/NextPreviousPagerTextVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.NextPreviousPagerField.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für die <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Klasse.</summary>
+        <returns>Ein Hashcode für das aktuelle <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleEvent">
+      <MemberSignature Language="C#" Value="public override void HandleEvent (System.Web.UI.WebControls.CommandEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void HandleEvent(class System.Web.UI.WebControls.CommandEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.NextPreviousPagerField.HandleEvent(System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Behandelt Ereignisse, die bei der <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> steuern und die entsprechende Aktion ausgeführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.NextPreviousPagerField.HandleEvent%2A> Methode ist eine Hilfsmethode, die vom verwendet die <xref:System.Web.UI.WebControls.DataPager.OnBubbleEvent%2A?displayProperty=nameWithType> Methode. Wird aufgerufen, um Ereignisse zu behandeln, die bei der <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt, wenn eine der Schaltflächen auf das Steuerelement geklickt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.NextPreviousPagerField.HandleEvent%2A> -Methode untersucht die <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.CommandEventArgs> -Objekt, das in enthalten ist die `e` Parameter, und führt dann die entsprechende Aktion.  
+  
+ Die folgende Tabelle enthält die Schaltflächen, die von bereitgestellt werden die <xref:System.Web.UI.WebControls.NextPreviousPagerField> Steuerelement und die Aktion, die ausgeführt wird, wenn die Schaltfläche geklickt wird.  
+  
+|Schaltfläche|CommandName-Wert|Aktion|  
+|------------|-----------------------|------------|  
+|Erste Seite|<xref:System.Web.UI.WebControls.DataControlCommands.FirstPageCommandArgument?displayProperty=nameWithType>|Navigiert zur ersten Seite der Daten.|  
+|Vorherige Seite|<xref:System.Web.UI.WebControls.DataControlCommands.PreviousPageCommandArgument?displayProperty=nameWithType>|Wechselt zur vorherigen Seite der Daten.|  
+|Nächste Seite|<xref:System.Web.UI.WebControls.DataControlCommands.NextPageCommandArgument?displayProperty=nameWithType>|Navigiert zur nächsten Seite der Daten.|  
+|Letzte Seite|<xref:System.Web.UI.WebControls.DataControlCommands.LastPageCommandArgument?displayProperty=nameWithType>|Navigiert zur letzten Seite der Daten.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastPageImageUrl">
+      <MemberSignature Language="C#" Value="public string LastPageImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LastPageImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.LastPageImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.ImageUrlEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild, das für die letzte Seite-Schaltfläche in angezeigt wird der <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt.</summary>
+        <value>Die URL zu einem Bild, das für die letzte Seite-Schaltfläche in angezeigt wird der <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.NextPreviousPagerField.LastPageImageUrl" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> -Eigenschaftensatz auf `ButtonType.Image` und die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowLastPageButton%2A> -Eigenschaftensatz auf `true`, verwenden die <xref:System.Web.UI.WebControls.NextPreviousPagerField.LastPageImageUrl%2A> Eigenschaft, um die URL zu einem Bild anzugeben, die für die letzte Seite-Schaltfläche angezeigt wird. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP und So weiter), die im Browser unterstützt wird.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> Eigenschaft wird auf einen Wert festgelegt, außer `ButtonType.Image`wird durch das Festlegen der <xref:System.Web.UI.WebControls.NextPreviousPagerField.LastPageImageUrl%2A> Eigenschaft hat keine Auswirkungen.  
+  
+ Der Wert dieser Eigenschaft ist in "ViewState" Speichern gespeichert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.LastPageImageUrl%2A> Eigenschaft zum Anzeigen eines Bilds für die letzte Seite-Schaltfläche in der <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt ein <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerFieldUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldUrl/CS/NextPreviousPagerUrlCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerFieldUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldUrl/VB/NextPreviousPagerUrlVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastPageText">
+      <MemberSignature Language="C#" Value="public string LastPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LastPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.LastPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der für die letzte Seite-Schaltfläche angezeigt wird.</summary>
+        <value>Der Text, der für die letzte Seite-Schaltfläche angezeigt wird. Der Standardwert ist "Last".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowLastPageButton%2A> -Eigenschaftensatz auf `true`, verwenden Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.LastPageText%2A> Eigenschaft an, der für die letzte Seite-Schaltfläche anzuzeigende Text.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> -Eigenschaftensatz auf `ButtonType.Image`, das Bild nicht angezeigt wird und die <xref:System.Web.UI.WebControls.NextPreviousPagerField.LastPageText%2A> Eigenschaft fungiert als die alternativen Text für das Bild. In Browsern, die QuickInfos unterstützen, wird dieser Text auch als QuickInfo angezeigt.  
+  
+ Der Wert dieser Eigenschaft wird in "ViewState" Speichern gespeichert, und sie können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.PagerSettings.LastPageText%2A> Eigenschaft zum Anpassen des Texts für die letzte Seite-Schaltfläche des Pagerfelds "in einem <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerFieldText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldText/CS/NextPreviousPagerTextCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerFieldText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldText/VB/NextPreviousPagerTextVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextPageImageUrl">
+      <MemberSignature Language="C#" Value="public string NextPageImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NextPageImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.NextPageImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild, das für die nächste Seite-Schaltfläche in angezeigt wird der <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt.</summary>
+        <value>Die URL zu einem Bild, das für die nächste Seite-Schaltfläche in angezeigt wird der <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.NextPreviousPagerField.NextPageImageUrl" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> -Eigenschaftensatz auf `ButtonType.Image` und die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowNextPageButton%2A> -Eigenschaftensatz auf `true`, verwenden die <xref:System.Web.UI.WebControls.NextPreviousPagerField.NextPageImageUrl%2A> Eigenschaft, um die URL zu einem Bild anzugeben, die für die nächste Seite-Schaltfläche angezeigt wird. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP und So weiter), die im Browser unterstützt wird.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> Eigenschaft wird auf einen Wert festgelegt, außer `ButtonType.Image`wird durch das Festlegen der <xref:System.Web.UI.WebControls.NextPreviousPagerField.NextPageImageUrl%2A> Eigenschaft hat keine Auswirkungen.  
+  
+ Der Wert dieser Eigenschaft ist in "ViewState" Speichern gespeichert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.NextPageImageUrl%2A> Eigenschaft zum Anzeigen eines Bilds für die nächste Seite-Schaltfläche in der <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt ein <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerFieldUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldUrl/CS/NextPreviousPagerUrlCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerFieldUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldUrl/VB/NextPreviousPagerUrlVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextPageText">
+      <MemberSignature Language="C#" Value="public string NextPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NextPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.NextPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der für die nächste Seite-Schaltfläche angezeigt wird.</summary>
+        <value>Der Text, der für die nächste Seite-Schaltfläche angezeigt wird. Der Standardwert ist "Weiter".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowNextPageButton%2A> -Eigenschaftensatz auf `true`, verwenden Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.NextPageText%2A> Eigenschaft an, der für die nächste Seite-Schaltfläche anzuzeigende Text.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> -Eigenschaftensatz auf `ButtonType.Image`, das Bild nicht angezeigt wird und die <xref:System.Web.UI.WebControls.NextPreviousPagerField.NextPageText%2A> Eigenschaft fungiert als die alternativen Text für das Bild. In Browsern, die QuickInfos unterstützen, wird dieser Text auch als QuickInfo angezeigt.  
+  
+ Der Wert dieser Eigenschaft wird in "ViewState" Speichern gespeichert, und sie können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.PagerSettings.NextPageText%2A> Eigenschaft zum Anpassen des Texts für die nächste Seite-Schaltfläche des Pagerfelds "in einem <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerFieldText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldText/CS/NextPreviousPagerTextCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerFieldText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldText/VB/NextPreviousPagerTextVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousPageImageUrl">
+      <MemberSignature Language="C#" Value="public string PreviousPageImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreviousPageImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.PreviousPageImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.ImageUrlEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild, das für die vorherige Seite-Schaltfläche in angezeigt wird der <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt.</summary>
+        <value>Die URL zu einem Bild, das für die vorherige Seite-Schaltfläche in angezeigt wird der <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.NextPreviousPagerField.PreviousPageImageUrl" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> -Eigenschaftensatz auf `ButtonType.Image` und die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowPreviousPageButton%2A> -Eigenschaftensatz auf `true`, verwenden die <xref:System.Web.UI.WebControls.NextPreviousPagerField.PreviousPageImageUrl%2A> Eigenschaft, um die URL zu einem Bild anzugeben, die für die vorherige Seite-Schaltfläche angezeigt wird. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP und So weiter), die im Browser unterstützt wird.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> Eigenschaft wird auf einen Wert festgelegt, außer `ButtonType.Image`wird durch das Festlegen der <xref:System.Web.UI.WebControls.NextPreviousPagerField.PreviousPageImageUrl%2A> Eigenschaft hat keine Auswirkungen.  
+  
+ Der Wert dieser Eigenschaft ist in "ViewState" Speichern gespeichert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.PreviousPageImageUrl%2A> Eigenschaft zum Anzeigen eines Bilds für die vorherige Seite-Schaltfläche in der <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt ein <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerFieldUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldUrl/CS/NextPreviousPagerUrlCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerFieldUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldUrl/VB/NextPreviousPagerUrlVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousPageText">
+      <MemberSignature Language="C#" Value="public string PreviousPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreviousPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.PreviousPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der für die vorherige Seite-Schaltfläche angezeigt wird.</summary>
+        <value>Der Text, der für die vorherige Seite-Schaltfläche angezeigt wird. Der Standardwert ist "Zurück".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowPreviousPageButton%2A> -Eigenschaftensatz auf `true`, verwenden die <xref:System.Web.UI.WebControls.NextPreviousPagerField.PreviousPageText%2A> Eigenschaft an, der für die vorherige Seite-Schaltfläche anzuzeigende Text.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> -Eigenschaftensatz auf `ButtonType.Image`, das Bild nicht angezeigt wird und die <xref:System.Web.UI.WebControls.NextPreviousPagerField.PreviousPageText%2A> Eigenschaft fungiert als die alternativen Text für das Bild. In Browsern, die QuickInfos unterstützen, wird dieser Text auch als QuickInfo angezeigt.  
+  
+ Der Wert dieser Eigenschaft wird in "ViewState" Speichern gespeichert, und sie können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageText%2A> Eigenschaft zum Anpassen des Texts für die vorherige Seite-Schaltfläche des Pagerfelds "in einem <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerFieldText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldText/CS/NextPreviousPagerTextCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerFieldText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldText/VB/NextPreviousPagerTextVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderDisabledButtonsAsLabels">
+      <MemberSignature Language="C#" Value="public bool RenderDisabledButtonsAsLabels { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RenderDisabledButtonsAsLabels" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.RenderDisabledButtonsAsLabels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob deaktivierte Schaltflächen als gerendert werden <see cref="T:System.Web.UI.WebControls.Label" /> steuert durch die <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt.</summary>
+        <value>
+          <see langword="true" />Wenn deaktivierte Schaltflächen als gerendert werden <see cref="T:System.Web.UI.WebControls.Label" /> steuert; anderenfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.NextPreviousPagerField.RenderDisabledButtonsAsLabels%2A> Eigenschaft, um anzugeben, ob deaktivierte Schaltflächen als gerendert werden <xref:System.Web.UI.WebControls.Label> steuert durch die <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt. Die Schaltflächen sind deaktiviert, indem die <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt, wenn die Schaltfläche mit den zugeordneten Funktion kann nicht ausgeführt werden. Wenn Sie auf der ersten Seite der Daten sind, sind z. B. die erste Seite und zur vorherigen Seite Schaltflächen deaktiviert.  
+  
+ Wird standardmäßig die <xref:System.Web.UI.WebControls.NextPreviousPagerField> -Objekt rendert die deaktivierten Schaltflächen mit den Steuerelementtyp ", die gemäß der <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonType%2A> Eigenschaft. Außerdem wird die <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> Eigenschaft des Steuerelements `false`.  
+  
+ Wenn <xref:System.Web.UI.WebControls.NextPreviousPagerField.RenderDisabledButtonsAsLabels%2A> auf festgelegt ist `true`, die <xref:System.Web.UI.WebControls.NextPreviousPagerField> -Objekt verwendet die <xref:System.Web.UI.WebControls.Label> -Steuerelement zum Rendern der deaktivierten Schaltflächen. Den Wert des der <xref:System.Web.UI.WebControls.NextPreviousPagerField.ButtonCssClass%2A> Eigenschaft wird zum Festlegen der <xref:System.Web.UI.WebControls.WebControl.CssClass%2A> Eigenschaft der <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ Der Wert dieser Eigenschaft ist in "ViewState" Speichern gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderNonBreakingSpacesBetweenControls">
+      <MemberSignature Language="C#" Value="public bool RenderNonBreakingSpacesBetweenControls { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RenderNonBreakingSpacesBetweenControls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.RenderNonBreakingSpacesBetweenControls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob geschützte Leerzeichen zwischen Steuerelementen gerendert werden.</summary>
+        <value>
+          <see langword="true" />Wenn Sie geschütztes Leerzeichen zwischen Steuerelementen gerendert werden. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.NextPreviousPagerField.RenderNonBreakingSpacesBetweenControls%2A> Eigenschaft, um anzugeben, ob geschützte Leerzeichen (HTML `&nbsp;` Zeichen) zwischen der Navigationssteuerelemente gerendert werden die <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt. Sie können festlegen, <xref:System.Web.UI.WebControls.NextPreviousPagerField.RenderNonBreakingSpacesBetweenControls%2A> zu `false` , wenn Sie mehr Kontrolle über das Layout benötigen, die Sie mit Klassen cascading Stylesheet (CSS) erstellen.  
+  
+ Der Wert dieser Eigenschaft ist in "ViewState" Speichern gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowFirstPageButton">
+      <MemberSignature Language="C#" Value="public bool ShowFirstPageButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowFirstPageButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.ShowFirstPageButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die erste Seite-Schaltfläche, in angezeigt wird einem <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt.</summary>
+        <value>
+          <see langword="true" />Wenn die erste Seite-Schaltfläche, in angezeigt wird eine <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowFirstPageButton%2A> Eigenschaft ein-oder Ausblenden der Schaltfläche "erste Seite", der eine <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt. Um die erste Seite-Schaltfläche anzuzeigen, legen die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowFirstPageButton%2A> Eigenschaft `true`.  
+  
+ Der Wert dieser Eigenschaft ist in "ViewState" Speichern gespeichert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowFirstPageButton%2A> Eigenschaft, um anzugeben, dass die erste Seite-Schaltfläche angezeigt werden soll.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerField/CS/NextPreviousPagerFieldCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerField/VB/NextPreviousPagerFieldVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowLastPageButton">
+      <MemberSignature Language="C#" Value="public bool ShowLastPageButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowLastPageButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.ShowLastPageButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die letzte Seite-Schaltfläche, in angezeigt wird einem <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt.</summary>
+        <value>
+          <see langword="true" />Wenn die letzte Seite-Schaltfläche, in angezeigt wird eine <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowLastPageButton%2A> Eigenschaft ein-oder Ausblenden der Schaltfläche "Letzte Seite-", der eine <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt. Um die letzte Seite-Schaltfläche anzuzeigen, legen die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowLastPageButton%2A> Eigenschaft `true`.  
+  
+ Der Wert dieser Eigenschaft ist in "ViewState" Speichern gespeichert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowLastPageButton%2A> Eigenschaft, um anzugeben, dass die letzte Seite-Schaltfläche angezeigt werden soll.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerField/CS/NextPreviousPagerFieldCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerField/VB/NextPreviousPagerFieldVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowNextPageButton">
+      <MemberSignature Language="C#" Value="public bool ShowNextPageButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowNextPageButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.ShowNextPageButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die nächste Seite-Schaltfläche, in angezeigt wird einem <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt.</summary>
+        <value>
+          <see langword="true" />Wenn die nächste Seite-Schaltfläche, in angezeigt wird eine <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowNextPageButton%2A> Eigenschaft ein-oder Ausblenden der Schaltfläche "Nächste Seite" von einem <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt.  
+  
+ Der Wert dieser Eigenschaft ist in "ViewState" Speichern gespeichert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowNextPageButton%2A> Eigenschaft, um anzugeben, dass die nächste Seite-Schaltfläche nicht angezeigt werden soll.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerFieldShowPage#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldShowPage/CS/NextPreviousPagerShowPageCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerFieldShowPage#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldShowPage/VB/NextPreviousPagerShowPageVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowPreviousPageButton">
+      <MemberSignature Language="C#" Value="public bool ShowPreviousPageButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowPreviousPageButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.NextPreviousPagerField.ShowPreviousPageButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die vorherige Seite Schaltfläche, in angezeigt wird einem <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt.</summary>
+        <value>
+          <see langword="true" />Wenn die vorherige Seite Schaltfläche, in angezeigt wird eine <see cref="T:System.Web.UI.WebControls.NextPreviousPagerField" /> Objekt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowPreviousPageButton%2A> Eigenschaft ein-oder Ausblenden der Schaltfläche "Vorherige Seite", der eine <xref:System.Web.UI.WebControls.NextPreviousPagerField> Objekt.  
+  
+ Der Wert dieser Eigenschaft ist in "ViewState" Speichern gespeichert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.NextPreviousPagerField.ShowPreviousPageButton%2A> Eigenschaft, um anzugeben, dass die vorherige Seite Schaltfläche nicht angezeigt werden soll.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NextPreviousPagerFieldShowPage#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldShowPage/CS/NextPreviousPagerShowPageCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NextPreviousPagerFieldShowPage#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NextPreviousPagerFieldShowPage/VB/NextPreviousPagerShowPageVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

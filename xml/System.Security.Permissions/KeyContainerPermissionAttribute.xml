@@ -1,0 +1,319 @@
+<Type Name="KeyContainerPermissionAttribute" FullName="System.Security.Permissions.KeyContainerPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class KeyContainerPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit KeyContainerPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.KeyContainerPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht, dass Sicherheitsaktionen für <see cref="T:System.Security.Permissions.KeyContainerPermission" /> unter Verwendung deklarativer Sicherheit auf Code angewendet werden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Gültigkeitsbereich der Deklaration, die zulässig ist, hängt die <xref:System.Security.Permissions.SecurityAction> Wert, der verwendet wird.  
+  
+ Die Sicherheitsinformationen, die von einem Sicherheitsattribut deklariert wird in den Metadaten des Attributziels gespeichert und vom System zur Laufzeit erfolgt. <xref:System.Security.Permissions.KeyContainerPermissionAttribute>wird nur für deklarative Sicherheit verwendet. Verwenden Sie für imperative Sicherheit die <xref:System.Security.Permissions.KeyContainerPermission> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyContainerPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Einer der <see cref="T:System.Security.Permissions.SecurityAction" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.KeyContainerPermissionAttribute" /> Klasse mit der angegebenen Aktion.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue <see cref="T:System.Security.Permissions.KeyContainerPermission" /> und gibt diese zurück.</summary>
+        <returns>Ein <see cref="T:System.Security.Permissions.KeyContainerPermission" /> , das Attribut entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte nur durch das Sicherheitssystem nie von Anwendungscode aufgerufen werden.  
+  
+ Zum Zeitpunkt der Kompilierung konvertieren Attribute Sicherheitsdeklarationen in serialisierter Form in Metadaten an. Die Metadaten werden aus Berechtigungsobjekts erstellt, die diese Methode zurückgibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.KeyContainerPermissionFlags Flags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.KeyContainerPermissionFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAttribute.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Berechtigungen für die Schlüsselcontainer.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Security.Permissions.KeyContainerPermissionFlags" />-Werte. Die Standardeinstellung ist <see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.NoFlags" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Viele dieser Flags sind leistungsstark, und lassen Sie den Zugriff auf Schlüsselcontainer, die nur für hoch vertrauenswürdigen Code erteilt werden sollte.  
+  
+ Die leistungsstärksten der Flags sind <xref:System.Security.Permissions.KeyContainerPermissionFlags.Create>, <xref:System.Security.Permissions.KeyContainerPermissionFlags.Delete>, <xref:System.Security.Permissions.KeyContainerPermissionFlags.Import>, <xref:System.Security.Permissions.KeyContainerPermissionFlags.Export>, <xref:System.Security.Permissions.KeyContainerPermissionFlags.Sign>, <xref:System.Security.Permissions.KeyContainerPermissionFlags.Decrypt>, und <xref:System.Security.Permissions.KeyContainerPermissionFlags.AllFlags>. Bestimmte Bedrohung durch die Verwendung eines dieser Flags finden Sie Beschreibungen der einzelnen Flags.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyContainerName">
+      <MemberSignature Language="C#" Value="public string KeyContainerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyContainerName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAttribute.KeyContainerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Schlüsselcontainers.</summary>
+        <value>Der Name des Schlüsselcontainers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den Wert "*" den Zugriffseintrag auf alle Schlüsselcontainer innerhalb des angegebenen Anbieternamen und Anbietertyp anwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySpec">
+      <MemberSignature Language="C#" Value="public int KeySpec { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySpec" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAttribute.KeySpec" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schlüssel-Spezifikation.</summary>
+        <value>Einer der in der Headerdatei Wincrypt.h definierten AT_-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn kein Wert angegeben ist, wird der Wert AT_KEYEXCHANGE (1) verwendet. Gültige Werte für diese Eigenschaft sind AT_KEYEXCHANGE (1) und AT_SIGNATURE (2).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyStore">
+      <MemberSignature Language="C#" Value="public string KeyStore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyStore" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAttribute.KeyStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Schlüsselspeicher.</summary>
+        <value>Der Name der Schlüsselspeicher. Die Standardeinstellung ist "*".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Werte sind "User", "Machine" und "*". Wenn `null` angegeben ist, wird der Wert wird festgelegt, um "\*".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public string ProviderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAttribute.ProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Anbieternamen fest.</summary>
+        <value>Der Name des Anbieters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel für einen Anbieternamen ist "Microsoft Enhanced Cryptographic Provider". Wenn `null` angegeben ist, wird der erweiterte Kryptografieanbieter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderType">
+      <MemberSignature Language="C#" Value="public int ProviderType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProviderType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAttribute.ProviderType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Anbietertyp.</summary>
+        <value>Einer der in der Headerdatei Wincrypt.h definierten PROV_-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn kein Wert angegeben ist, wird PROV_RSA_FULL (1) verwendet.  
+  
+ Die folgenden Werte sind in der Headerdatei Wincrypt.h definiert:  
+  
+-   \#Definieren von PROV_RSA_FULL 1  
+  
+-   \#Definieren von PROV_RSA_SIG 2  
+  
+-   \#Definieren von PROV_DSS 3  
+  
+-   \#Definieren von PROV_FORTEZZA 4  
+  
+-   \#Definieren von PROV_MS_EXCHANGE 5  
+  
+-   \#Definieren von PROV_SSL 6  
+  
+-   \#Definieren von PROV_RSA_SCHANNEL 12  
+  
+-   \#Definieren von PROV_DSS_DH 13  
+  
+-   \#Definieren von PROV_EC_ECDSA_SIG 14  
+  
+-   \#Definieren von PROV_EC_ECNRA_SIG 15  
+  
+-   \#Definieren von PROV_EC_ECDSA_FULL 16  
+  
+-   \#Definieren von PROV_EC_ECNRA_FULL 17  
+  
+-   \#Definieren von PROV_DH_SCHANNEL 18  
+  
+-   \#Definieren von PROV_SPYRUS_LYNKS 20  
+  
+-   \#Definieren von PROV_RNG 21  
+  
+-   \#Definieren von PROV_INTEL_SEC 22  
+  
+-   \#Definieren von PROV_REPLACE_OWF 23  
+  
+-   \#Definieren von PROV_RSA_AES 24  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

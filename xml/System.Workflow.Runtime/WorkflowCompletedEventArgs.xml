@@ -1,0 +1,98 @@
+<Type Name="WorkflowCompletedEventArgs" FullName="System.Workflow.Runtime.WorkflowCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class WorkflowCompletedEventArgs : System.Workflow.Runtime.WorkflowEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowCompletedEventArgs extends System.Workflow.Runtime.WorkflowEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.WorkflowCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.WorkflowEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Wenn der Workflow abgeschlossen wird, löst das Workflowlaufzeitmodul das <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted>-Ereignis aus. Das Workflowlaufzeitmodul übergibt alle Ausgabeparameter des Workflows über <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs>.  Dies schließt die Parameter `out` und `ref` des Workflows ein.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine Ereignishandlermethode, die <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs> als Parameter erfordert. Die `OnWorkflowCompleted`-Methode wird aufgerufen, wenn das <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted>-Ereignis ausgelöst wird. Der Code verwendet die <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs.OutputParameters%2A>-Eigenschaft, um den Wert zu erhalten, der dem `Status`-Schlüssel zugeordnet ist, und schreibt ihn auf die Konsole.  
+  
+ Dieses Codebeispiel ist Teil des Sequential Workflow with Parameters SDK-Beispiels in der Datei Program.cs. Weitere Informationen finden Sie unter [sequenzieller Workflow mit Parametern](http://msdn.microsoft.com/en-us/17157f2d-8fed-4848-a386-e4efa381b66b).  
+  
+ [!code-csharp[wf_samples#192](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#192)]
+ [!code-vb[wf_samples#192](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#192)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OutputParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,object&gt; OutputParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, object&gt; OutputParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowCompletedEventArgs.OutputParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausgabe aus dem Workflow ab.</summary>
+        <value>Ein <see cref="T:System.Collections.Generic.Dictionary`2" /> mit Werten, die von dem Parameternamen festgelegt wurden, der die Ausgabeparameter des Workflows enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs.OutputParameters%2A> enthält die Parameter `out` und `ref` des Workflows.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie einen Wert aus einem Schlüssel abrufen, der in der <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs.OutputParameters%2A>-Eigenschaft gespeichert ist. Die `OnWorkflowCompleted`-Methode verfügt über einen Parameter, der ein <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs>-Element erfordert. Diese Methode wird aufgerufen, wenn das <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted>-Ereignis ausgelöst wird. Der Code verwendet die <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs.OutputParameters%2A>-Eigenschaft, um den Wert zu erhalten, der dem `Status`-Schlüssel zugeordnet ist, und schreibt ihn auf die Konsole.  
+  
+ Dieses Codebeispiel ist Teil des Sequential Workflow with Parameters SDK-Beispiels in der Datei Program.cs. Weitere Informationen finden Sie unter [sequenzieller Workflow mit Parametern](http://msdn.microsoft.com/en-us/17157f2d-8fed-4848-a386-e4efa381b66b).  
+  
+ [!code-csharp[WF_Samples#192](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#192)]
+ [!code-vb[WF_Samples#192](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#192)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowDefinition">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Activity WorkflowDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Activity WorkflowDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowCompletedEventArgs.WorkflowDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Workflow.ComponentModel.Activity" /> ab, die die Workflowdefinition bei Abschluss der Workflowinstanz darstellt.</summary>
+        <value>Eine <see cref="T:System.Workflow.ComponentModel.Activity" />, die die Workflowdefinition bei Abschluss der Workflowinstanz darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

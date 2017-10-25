@@ -1,0 +1,174 @@
+<Type Name="IPersonalizable" FullName="System.Web.UI.WebControls.WebParts.IPersonalizable">
+  <TypeSignature Language="C#" Value="public interface IPersonalizable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPersonalizable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.IPersonalizable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert zusätzliche Verwaltungsfunktionen für die Anwendung und Extraktion von Personalisierung Status an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusätzlich zur Verwendung der `Personalizable` Attribut auf Steuerelementeigenschaften, auch ein Steuerelement implementieren kann <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> für zusätzliche Verwaltungsfunktionen für die Anwendung und Extraktion von Personalisierungszustand. Beispielsweise sollten Steuerelemente, die private Zustandsinformationen verwalten müssen diese Schnittstelle implementieren. Steuerelemente, die durch komplexe Mechanismen, z. B. benutzerdefinierte Lösungen, -Datenpersistenz, Mainframes oder XML-Webdienste, personalisierte Datenzugriff sollten auch diese Schnittstelle implementieren.  
+  
+> [!IMPORTANT]
+>  Sie sollten nicht Typen auf Grundlage der im Verzeichnis App_Code definierten Klassen hinzufügen und anschließend richten sich nach den Standardmechanismus für die binäre Serialisierung. App_Code-basierte Artefakte sind nicht lückenlos binär serialisierbar, darauf zurückzuführen, dass sie ihre Assemblynamen zu zufälligen Zeitpunkten zeitlich geändert haben können.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> Schnittstelle. Das Beispiel besteht aus einer ASPX-Seite, ein Webpart-Steuerelement namens verweist `UrlListWebPart`. Der folgende Code ist die ASPX-Datei für das Beispiel.  
+  
+ [!code-aspx-csharp[WebParts_IPersonalizable_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable_Overview/CS/IPersonalizableCS.aspx#1)]
+ [!code-aspx-vb[WebParts_IPersonalizable_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable_Overview/VB/IPersonalizableVB.aspx#1)]  
+  
+ Der folgende Code ist die Quelle für die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Diese Datei sollte in das Verzeichnis ' App_Code '.  
+  
+ [!code-csharp[WebParts_IPersonalizable_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable_Overview/CS/urllistwebpart.cs#2)]
+ [!code-vb[WebParts_IPersonalizable_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable_Overview/VB/urllistwebpart.vb#2)]  
+  
+ Laden Sie die Seite in einem Browser. Geben Sie einen Namen darstellen einer URL, und fügen eine tatsächliche URL beginnend mit `http://`, und klicken Sie auf die **hinzufügen** Schaltfläche, um die URL hinzuzufügen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public bool IsDirty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.IPersonalizable.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die benutzerdefinierte Daten, die ein Steuerelement verwaltet geändert hat.</summary>
+        <value>
+          <see langword="true" />Wenn verwaltet die benutzerdefinierten Daten mit den <see cref="T:System.Web.UI.WebControls.WebParts.IPersonalizable" /> Schnittstelle geändert hat, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Daten von einem Steuerelement verwaltet geändert wurden, ist das Steuerelement "unsaubere" betrachtet. Ein Steuerelement sollte zurückgeben `true` , wenn die benutzerdefinierten Daten über die It verwaltet die <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> Schnittstelle wurde geändert. Wenn ein Steuerelement gibt `true` der von dieser Eigenschaft, das Steuerelement des <xref:System.Web.UI.WebControls.WebParts.IPersonalizable.Save%2A> schnittstellenimplementierung-Methode wird aufgerufen, während der Extraktion der Eigenschaft-Wert.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird automatisch während der letzten Phasen der Verarbeitung einer POST-Anforderung von der Personalisierungsinfrastruktur überprüft. Allerdings für GET-Anforderungen, der Rückgabewert aus der <xref:System.Web.UI.WebControls.WebParts.IPersonalizable.IsDirty%2A> -Eigenschaft wird nicht überprüft. Einige andere Ereignis muss das Steuerelement "unsaubere" für alle Steuerelementzustand und nicht nur die Daten von verwalteten angesehen vorliegt <xref:System.Web.UI.WebControls.WebParts.IPersonalizable>--gespeichert werden sollen. Wenn ein Steuerelement während einer GET-Anforderung als "geändert" markieren kann, oder die Personalisierungsinfrastruktur unter einige sehr speziellen Bedingungen für die Grenze ein Steuerelements "unsaubere" während einer GET-Anforderung erwägt <xref:System.Web.UI.WebControls.WebParts.IPersonalizable.Save%2A> wird immer aufgerufen werden.  
+  
+ Ein Steuerelement kann auf die zugehörigen verweisen <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern und überprüfen Sie die <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.Scope%2A> Methode, um den aktuellen Bereich festzulegen. Die "unsaubere" Status von benutzerdefinierten Daten eines Steuerelements sollte für den aktuellen Bereich geeignet sein.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.IPersonalizable.IsDirty%2A> Eigenschaft. Der erste Teil des Beispiels ist die Webseite, hostet ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_IPersonalizable_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable_Overview/CS/IPersonalizableCS.aspx#1)]
+ [!code-aspx-vb[WebParts_IPersonalizable_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable_Overview/VB/IPersonalizableVB.aspx#1)]  
+  
+ Der zweite Teil des Beispiels ist der Code für die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement namens `UrlListWebPart`. Diese Datei sollte in das Verzeichnis "App_Code" zum Ausführen des Beispiels. Beachten Sie, die der Quellcode der <xref:System.Web.UI.WebControls.WebParts.IPersonalizable.IsDirty%2A> Eigenschaft.  
+  
+ [!code-csharp[WebParts_IPersonalizable_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable_Overview/CS/urllistwebpart.cs#2)]
+ [!code-vb[WebParts_IPersonalizable_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable_Overview/VB/urllistwebpart.vb#2)]  
+  
+ Laden Sie die Seite in einem Browser. Geben Sie einen Namen darstellen einer URL, und fügen eine tatsächliche URL beginnend mit `http://`, und klicken Sie auf die **hinzufügen** Schaltfläche, um die URL hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (System.Web.UI.WebControls.WebParts.PersonalizationDictionary state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Load(class System.Web.UI.WebControls.WebParts.PersonalizationDictionary state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.IPersonalizable.Load(System.Web.UI.WebControls.WebParts.PersonalizationDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Web.UI.WebControls.WebParts.PersonalizationDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> enthält benutzerdefinierte Bereichsbezogene Daten, die aus dem zugrunde liegenden Datenspeicher geladen wurde.</param>
+        <summary>Benutzerdefinierte Daten in einem Steuerelement geladen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird auf ein Steuerelement, damit sie zum Laden von benutzerdefinierter Daten in sich selbst können aufgerufen werden. Sie können auch einen Wert zurückgeben, der angibt, ob eine benutzerdefinierte Steuerelementzustand zurückgeschrieben werden muss im zugrunde liegenden Datenspeicher, unabhängig davon, ob andere Personalisierungsdaten auf der Seite geändert hat. Ein Steuerelement kann eine eigene benutzerdefinierte Eigenschaften festlegen und zusätzliche interne Logik, die auf Grundlage der Werte im Personalisierungswörterbuch enthaltenen führen. Diese Methode wird von der Webparts-Steuerelementsatz beim Anwenden von Personalisierungsdaten auf ein Steuerelement aufgerufen.  
+  
+ Sollten auch das Verhalten der Zusammenführung des beachtet werden <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User>-Bereich im Vergleich zu <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared>-Eigenschaften, die in enthaltenen Gültigkeitsbereich der <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> Objekt. Die `state` Parameter enthält eine zusammengeführte Darstellung der benutzerdefinierten Daten, die aus dem zugrunde liegenden Datenspeicher geladen wurde. In <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich, der alle Werte, die zuvor hinzugefügt wurden, wenn die Seite selbst wurde <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich zur Verfügung. In <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Gültigkeitsbereich, wenn ein Wert zugeordnet <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Personalisierungsbereich wurde ein Wert hinzugefügt, wenn die Seite in war <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich und einen anderen Wert, wenn die Seite in war <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Bereich, und klicken Sie dann die Personalisierungsinfrastruktur würde nur der <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User>-Wert (im Gegensatz zu den <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich Wert) innerhalb der `state` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine Implementierung der <xref:System.Web.UI.WebControls.WebParts.IPersonalizable.Load%2A> Methode in einem benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Der vollständige Code erforderlich, um dieses Beispiel auszuführen, finden Sie im Beispielabschnitt in der <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> -Klassenübersicht.  
+  
+ [!code-csharp[WebParts_IPersonalizable_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable_Overview/CS/urllistwebpart.cs#2)]
+ [!code-vb[WebParts_IPersonalizable_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable_Overview/VB/urllistwebpart.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.Web.UI.WebControls.WebParts.PersonalizationDictionary state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save(class System.Web.UI.WebControls.WebParts.PersonalizationDictionary state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.IPersonalizable.Save(System.Web.UI.WebControls.WebParts.PersonalizationDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Web.UI.WebControls.WebParts.PersonalizationDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> enthält benutzerdefinierte Bereichsbezogene Daten, die aus dem zugrunde liegenden Datenspeicher geladen wurde.</param>
+        <summary>Benutzerdefinierte Eigenschaften als auch interne Zustandsinformationen in des Steuerelements speichert <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Serversteuerelement kann eigene benutzerdefinierte Eigenschaften als auch interne Zustandsinformationen speichern die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> angegebenen, in der `state` Parameter. Die Informationen werden als eine Reihe von Name/Wert-Paare gespeichert. Es liegt in der Verantwortung des Steuerelements mit Name/Wert-Paare, die sie während der nachfolgenden Aufrufe an das Steuerelement über erkennen kann die <xref:System.Web.UI.WebControls.WebParts.IPersonalizable.Load%2A> Methode.  
+  
+ Ein Steuerelement kann auf die zugehörigen verweisen <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern und überprüfen Sie die <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope> Objekt, das den aktuellen Bereich zu bestimmen. Benutzerdefinierte Zustandsinformationen sollte für den aktuellen Bereich geeignet sein. Beachten Sie, dass jedes <xref:System.Web.UI.WebControls.WebParts.PersonalizationEntry> -Wert, der hinzugefügt wird die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> Objekt sollte mit der entsprechenden Bereichswert verknüpft sein, da die Personalisierungsinfrastruktur für dieses abhängig, beim Zusammenführen von ist <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User>-Bereich von benutzerdefinierten Daten vor der Übergabe an die <xref:System.Web.UI.WebControls.WebParts.IPersonalizable.Load%2A> Methode.  
+  
+ Bei Verwendung der standardmäßige ASP.NET-Implementierung von Webparts Steuerelemente müssen stellen Sie sicher, dass Objekte, die in das Anwendungszustands-Wörterbuch platziert von ASP.NET serialisiert werden können <xref:System.Web.UI.ObjectStateFormatter> Klasse. In der Praxis bedeutet dies Folgendes:  
+  
+-   Primitive .NET Framework-Typen, Zeichenfolgen und .NET Framework-Typen wie z. B. Arrays, Array Listen, Hashtabellen und Wörterbücher Hybrid sammlungsassistenten sind automatisch serialisierbar.  
+  
+-   Benutzerdefinierte Typen, die ihre eigenen angeben <xref:System.ComponentModel.TypeConverter> Klassen kann zum Serialisieren und Deserialisieren von Zeichenfolgen werden als serialisierbar angesehen.  
+  
+-   Benutzerdefinierte Typen, die von serialisiert werden, können die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> gelten als Klasse serialisierbar.  
+  
+> [!IMPORTANT]
+>  Sie sollten nicht Typen auf Grundlage der im Verzeichnis App_Code definierten Klassen hinzufügen und anschließend richten sich nach den Standardmechanismus für die binäre Serialisierung. App_Code-basierte Artefakte sind nicht lückenlos binär serialisierbar, darauf zurückzuführen, dass sie ihre Assemblynamen zu zufälligen Zeitpunkten zeitlich geändert haben können.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, implementieren die <xref:System.Web.UI.WebControls.WebParts.IPersonalizable.Save%2A> Methode in einem benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Der vollständige Code erforderlich, um dieses Beispiel auszuführen, finden Sie im Beispielabschnitt in der <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> -Klassenübersicht.  
+  
+ [!code-csharp[WebParts_IPersonalizable_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable_Overview/CS/urllistwebpart.cs#2)]
+ [!code-vb[WebParts_IPersonalizable_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable_Overview/VB/urllistwebpart.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

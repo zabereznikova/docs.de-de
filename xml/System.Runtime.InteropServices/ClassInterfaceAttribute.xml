@@ -1,0 +1,175 @@
+<Type Name="ClassInterfaceAttribute" FullName="System.Runtime.InteropServices.ClassInterfaceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ClassInterfaceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ClassInterfaceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ClassInterfaceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Art der Klassenschnittstelle an, die für eine für COM verfügbar gemachte Klasse generiert werden soll (sofern überhaupt eine Schnittstelle generiert wird).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Assemblys oder Klassen anwenden.  
+  
+ Dieses Attribut steuert, ob das Type Library Exporter (Tlbexp.exe) automatisch eine Klassenschnittstelle für die attributierte Klasse generiert. Eine Klassenschnittstelle hat den gleichen Namen wie die Klasse selbst, aber der Name mit einem Unterstrich vorangestellt wird. Wenn verfügbar gemacht, die Klassenschnittstelle enthält alle der `public`, nicht- `static` Mitglieder der verwalteten Klasse, einschließlich der Member von ihrer Basisklasse vererbt. Verwaltete Klassen können nicht auf eine Klassenschnittstelle zugreifen und haben nicht erforderlich, da sie direkt auf die Member zugreifen können. Tlbexp.exe generiert einen eindeutigen Schnittstellenbezeichner (IID) für die Klassenschnittstelle.  
+  
+ Klassenschnittstellen können duale oder auf Dispatch beschränkte Schnittstellen sein. Optional können Sie die Generierung der Klassenschnittstelle zu unterdrücken und stattdessen eine benutzerdefinierte Schnittstelle. Verfügbar machen oder eine Klassenschnittstelle zu unterdrücken, durch Angeben einer <xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=nameWithType> Enumerationsmember. Beim Anwenden von <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> zu einer Assembly, das Attribut bezieht sich auf alle Klassen in der Assembly, wenn die einzelnen Klassen die Einstellung mit ihren eigenen Attribut überschreiben.  
+  
+ Obwohl Klassenschnittstellen explizit für jede Klasse Schnittstellen definieren die Aufgabe vermeiden, ist ihre Verwendung in Produktionsanwendungen dringend abgeraten. Duale Klassenschnittstellen ermöglichen Clients an ein bestimmtes Schnittstellenlayout binden, die geändert werden kann, wie die Klasse weiterentwickelt. Betrachten Sie beispielsweise eine verwaltete Klasse, die eine Klassenschnittstelle für COM-Clients verfügbar macht. Die erste Version der Klasse enthält Methoden `North` und `South`. Ein nicht verwalteter Client kann auf die Klassenschnittstelle, die bietet binden `North` als die erste Methode in der Klassenschnittstelle und Methode `South` als die zweite Methode. Nun sehen wir uns die nächste Version der Klasse, die eine neue Methode, `East`, zwischen Methoden eingefügten `North` und `South`. Nicht verwaltete Clients, die versuchen, eine Bindung an die neue Klasse über die alte Klassenschnittstelle enden Aufrufen `East` beim Aufrufen der Methode werden sollen `South`, da die Positionierung der Methoden in der Benutzeroberfläche geändert hat. Darüber hinaus wirkt sich auf alle Änderungen an das Layout einer Basisklasse auch das Layout der Klassenschnittstelle für alle abgeleiteten Klassen. Clients, die Bindung direkt auf Klassen, nicht auf die gleichen Versionsprobleme wird verwaltet. Bestimmte Richtlinien für eine Klassenschnittstelle verwenden, finden Sie unter [COM Callable Wrapper](~/docs/framework/interop/com-callable-wrapper.md).  
+  
+ Die [Tlbimp.exe (Type Library Importer-Tool)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) bezieht sich immer auf importierten Klassen der <xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=nameWithType> Enumerationsmember um anzugeben, dass vorhandene COM nie machen Klassen verwaltete Schnittstellen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Anwenden der <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> mit der <xref:System.Runtime.InteropServices.ClassInterfaceType> Wert <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch>, die generiert eine `IDispatch` eine Schnittstelle für `MyClass`.  
+  
+ [!code-cpp[Classic ClassInterfaceAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ClassInterfaceAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ClassInterfaceAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ClassInterfaceAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic ClassInterfaceAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ClassInterfaceAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClassInterfaceAttribute (short classInterfaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int16 classInterfaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ClassInterfaceAttribute.#ctor(System.Int16)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="classInterfaceType" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="classInterfaceType">Beschreibt den Typ der Schnittstelle, die für eine Klasse generiert wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.ClassInterfaceAttribute" /> Klasse mit dem angegebenen <see cref="T:System.Runtime.InteropServices.ClassInterfaceType" /> -Enumerationswert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor nimmt eine zugrunde liegende 16-Bit-Ganzzahl mit Vorzeichen an, die jeweils darstellen <xref:System.Runtime.InteropServices.ClassInterfaceType> Enumerationsmember. Die [Tlbimp.exe (Type Library Importer-Tool)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) dieser Konstruktor verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClassInterfaceAttribute (System.Runtime.InteropServices.ClassInterfaceType classInterfaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.InteropServices.ClassInterfaceType classInterfaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ClassInterfaceAttribute.#ctor(System.Runtime.InteropServices.ClassInterfaceType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="classInterfaceType" Type="System.Runtime.InteropServices.ClassInterfaceType" />
+      </Parameters>
+      <Docs>
+        <param name="classInterfaceType">Eines der <see cref="T:System.Runtime.InteropServices.ClassInterfaceType" /> Werten, die den Typ der Schnittstelle beschreiben, die für eine Klasse generiert wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.ClassInterfaceAttribute" /> Klasse mit dem angegebenen <see cref="T:System.Runtime.InteropServices.ClassInterfaceType" /> Enumerationsmember.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie für Code übersichtlicher gestalten, die weniger fehleranfällig ist immer diesen Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.ClassInterfaceType Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.ClassInterfaceType Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ClassInterfaceAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ClassInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Runtime.InteropServices.ClassInterfaceType" /> Wert, der beschreibt, welche Art von Schnittstelle für die Klasse generiert werden soll.</summary>
+        <value>Die <see cref="T:System.Runtime.InteropServices.ClassInterfaceType" /> Wert, der beschreibt, welche Art von Schnittstelle für die Klasse generiert werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

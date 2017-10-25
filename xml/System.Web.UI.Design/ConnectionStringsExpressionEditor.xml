@@ -1,0 +1,113 @@
+<Type Name="ConnectionStringsExpressionEditor" FullName="System.Web.UI.Design.ConnectionStringsExpressionEditor">
+  <TypeSignature Language="C#" Value="public class ConnectionStringsExpressionEditor : System.Web.UI.Design.ExpressionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConnectionStringsExpressionEditor extends System.Web.UI.Design.ExpressionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ConnectionStringsExpressionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ExpressionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften und Methoden für die Auswahl eines Verbindung-Ausdrucks, der zur Entwurfszeit eine Steuerelementeigenschaft zugeordnet ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein visuellen Designer hosten, wie z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], verwendet der <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor> Klasse auf eine Verbindungszeichenfolge aus der `connectionStrings` Konfigurationsabschnitt.  
+  
+ Die <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor> abgeleitete Klasse wird von der <xref:System.Web.UI.Design.ExpressionEditor> -Klasse, und öffentliche aus technischen Gründen, es ist jedoch keinen Vorteil daraus ableiten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionStringsExpressionEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ConnectionStringsExpressionEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.ConnectionStringsExpressionEditor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public override object EvaluateExpression (string expression, object parseTimeData, Type propertyType, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EvaluateExpression(string expression, object parseTimeData, class System.Type propertyType, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ConnectionStringsExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="parseTimeData" Type="System.Object" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Eine Verbindung auszuwertenden Zeichenfolgenausdruck fest. Der Ausdruck schließt nicht die <see langword="ConnectionStrings" /> Ausdruckspräfix.</param>
+        <param name="parseTimeData">Ein Objekt mit zusätzlichen Analyseinformationen für die Auswertung des Ausdrucks.</param>
+        <param name="propertyType">Der Typ der Steuerelementeigenschaft.</param>
+        <param name="serviceProvider">Eine Implementierung von Service Provider bereitgestellten vom Designerhost verwendet, um zusätzliche Entwurfszeitdienste abzurufen.</param>
+        <summary>Wertet einen Ausdruck für Verbindungszeichenfolgen und den Wert zur Entwurfszeit eine Steuerelementeigenschaft bereitstellt.</summary>
+        <returns>Das Objekt, auf die durch die Zeichenfolge ausgewerteter Ausdruck verwiesen wird, wenn die Auswertung von Ausdrücken erfolgreich war. andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor.EvaluateExpression%2A> Methode sucht von Verbindungsname und vom angegebenen Typ `expression`, und klicken Sie dann die Verbindung zurück.  
+  
+ Der visuelle Designer verwendet die <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor.EvaluateExpression%2A> Methode zum Auswerten von Zeichenfolgenausdruck für die Verbindung, und geben Sie den Wert zur Entwurfszeit für eine Eigenschaft des zugeordneten Steuerelements. Der visuelle Designer verwendet die <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.ParseExpression%2A?displayProperty=nameWithType> Methode analysiert die Ausdruckszeichenfolge zur Entwurfszeit und ruft dann die <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor.EvaluateExpression%2A> Methode mit den Daten des analysierten Ausdrucks. Der visuelle Designer verwendet das Ergebnis des ausgewerteten Ausdrucks Steuerelement Eigenschaftswerte zugewiesen, die auf der Entwurfsoberfläche gerendert werden.  
+  
+ Zur Laufzeit verwendet der Parser den <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.EvaluateExpression%2A> und <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetCodeExpression%2A> Methoden des entsprechenden <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder> Implementierung zum Auswerten eines Ausdrucks, und geben Sie den Wert zur Laufzeit für eine Eigenschaft des zugeordneten Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionEditorSheet">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet (string expression, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet(string expression, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ConnectionStringsExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ExpressionEditorSheet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Die Ausdruckszeichenfolge, legen Sie bei einer Steuerelementeigenschaft verwendet, um das Blatt der Ausdrucks-Editor zu initialisieren. Der Ausdruck schließt nicht die <see langword="ConnectionStrings" /> Ausdruckspräfix.</param>
+        <param name="serviceProvider">Eine Implementierung von Service Provider bereitgestellten vom Designerhost verwendet, um zusätzliche Entwurfszeitdienste abzurufen.</param>
+        <summary>Gibt ein Ausdrucks-Editor-Blatt für einen Ausdruck für Verbindungszeichenfolgen zurück.</summary>
+        <returns>Eine <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> -Instanz, die Verbindungszeichenfolgeneigenschaften Ausdruck definiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor.GetExpressionEditorSheet%2A> Methode gibt einen Editor Blatt Implementierung für Verbindungszeichenfolgenausdrücke zurück. Das Editorblatt für Verbindungszeichenfolgenausdrücke ermöglicht Benutzern das Auswählen eines Verbindungs-Namens und Typs, basierend auf der aktuellen Verbindungszeichenfolgen, die in definiert werden die [ConnectionStrings-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b6ffbb2e-a4d1-410e-8f7e-9755e92c65de) im Abschnitt Die Webkonfigurationsdatei. Nach dem Benutzer die Verbindungseigenschaften für den Ausdruck auswählen, kombiniert die Implementierung Blatt Verbindungsname und Typ in einen Ausdruck für Verbindungszeichenfolgen, die an den visuellen Designer zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

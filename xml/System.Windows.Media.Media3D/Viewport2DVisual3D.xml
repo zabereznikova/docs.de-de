@@ -1,0 +1,411 @@
+<Type Name="Viewport2DVisual3D" FullName="System.Windows.Media.Media3D.Viewport2DVisual3D">
+  <TypeSignature Language="C#" Value="public sealed class Viewport2DVisual3D : System.Windows.Media.Media3D.Visual3D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Viewport2DVisual3D extends System.Windows.Media.Media3D.Visual3D" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.Viewport2DVisual3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.Visual3D</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Visual")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Rendert die 2D-untergeordneten Elemente innerhalb der Grenzen des angegebenen 3D Viewport an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Viewport2DVisual3D>ermöglicht es Ihnen, interaktiven 2D-Inhalt auf ein 3D-Objekt zu platzieren. Ist die Entsprechung der <xref:System.Windows.Media.Media3D.Viewport3DVisual> Klasse, die ein visuelles 2D-mit untergeordneten 3D-Objekten ist.  
+  
+ <xref:System.Windows.Media.Media3D.Viewport2DVisual3D>wird in .NET Framework, Version 3.5 eingeführt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Schaltfläche, ein 2-D-Objekt, auf ein 3D-Objekt platziert wird. Beachten Sie, dass Sie müssen die <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.IsVisualHostMaterial%2A> -Eigenschaft für das Material, auf denen Sie die 2D-visuelle platziert haben möchten.  
+  
+ [!code-xaml[Viewport2DVisual3DExample#Viewport3D](~/samples/snippets/csharp/VS_Snippets_Wpf/Viewport2DVisual3DExample/CS/window1.xaml#viewport3d)]  
+  
+ Das vollständige Beispiel finden Sie unter [interaktiv 2D-auf 3D Stichprobe](http://go.microsoft.com/fwlink/?LinkID=160007).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Viewport2DVisual3D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Viewport2DVisual3D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Media3D.Viewport2DVisual3D" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.%23ctor%2A>wird in .NET Framework, Version 3.5 eingeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.CacheMode CacheMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.CacheMode CacheMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport2DVisual3D.CacheMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.CacheMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine zwischengespeicherte Repräsentation der <see cref="T:System.Windows.Media.Media3D.Viewport2DVisual3D" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.CacheMode" /> , enthält eine zwischengespeicherte Repräsentation der <see cref="T:System.Windows.Media.Media3D.Viewport2DVisual3D" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie die <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.CacheMode%2A> Eigenschaft, wenn Sie müssen zum Erhöhen der Leistung für Inhalte, die zum Rendern zeitaufwendig ist. Weitere Informationen finden Sie unter <xref:System.Windows.Media.BitmapCache>.  
+  
+ Die <xref:System.Windows.Media.Media3D.Viewport2DVisual3D> Klasse projiziert 3D-Inhalt in 2D-ordnungsgemäß Größe den 2D-Inhalt im 3D-Element.  
+  
+ Da immer das caching basiert auf der Größe des Elements, anstelle der Transformation angewendet wird, beim Festlegen der <xref:System.Windows.Media.CacheMode> Eigenschaft zunächst Ihre Inhalte möglicherweise angezeigt Zuschauern. Dies ist, da es gerade Bilddateien auf einer viel größeren Größe als es zwischengespeichert wurde. Sie können dieses Problem beheben, durch Erhöhen der Größe der lokalen eines visuellen Elements 2D-durch Festlegen der <xref:System.Windows.FrameworkElement.Height%2A> oder <xref:System.Windows.FrameworkElement.Width%2A> Eigenschaften. Sie können darüber hinaus erhöhen die <xref:System.Windows.Media.BitmapCache.RenderAtScale%2A> auf die <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.CacheMode%2A> bis der Inhalt der Klarheit ein akzeptables Niveau erreicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CacheModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CacheModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.Viewport2DVisual3D.CacheModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.Viewport2DVisual3D.CacheMode" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Geometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Geometry3D Geometry { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Geometry3D Geometry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport2DVisual3D.Geometry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Geometry3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Geometrie 3D für diesen <see cref="T:System.Windows.Media.Media3D.Viewport2DVisual3D" />.</summary>
+        <value>Die 3D Geometrie dafür <see cref="T:System.Windows.Media.Media3D.Viewport2DVisual3D" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.Geometry%2A>wird in .NET Framework, Version 3.5 eingeführt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Schaltfläche, ein 2-D-Objekt, auf ein 3D-Objekt platziert wird:  
+  
+ [!code-xaml[Viewport2DVisual3DExample#Viewport3D](~/samples/snippets/csharp/VS_Snippets_Wpf/Viewport2DVisual3DExample/CS/window1.xaml#viewport3d)]  
+  
+ Das vollständige Beispiel finden Sie unter [interaktiv 2D-auf 3D Stichprobe](http://go.microsoft.com/fwlink/?LinkID=160007).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeometryProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty GeometryProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty GeometryProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.Viewport2DVisual3D.GeometryProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.Viewport2DVisual3D.Geometry" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.GeometryProperty>wird in .NET Framework, Version 3.5 eingeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsVisualHostMaterial">
+      <MemberSignature Language="C#" Value="public static bool GetIsVisualHostMaterial (System.Windows.Media.Media3D.Material element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsVisualHostMaterial(class System.Windows.Media.Media3D.Material element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Viewport2DVisual3D.GetIsVisualHostMaterial(System.Windows.Media.Media3D.Material)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Media.Media3D.Material" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem der Eigenschaftswert gelesen wird.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Media.Media3D.Viewport2DVisual3D.IsVisualHostMaterial" /> angefügte Eigenschaft für ein angegebenes <see cref="T:System.Windows.UIElement" />.</summary>
+        <returns>Die <see cref="P:System.Windows.Media.Media3D.Viewport2DVisual3D.IsVisualHostMaterial" /> Eigenschaftswert für das Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.GetIsVisualHostMaterial%2A>wird in .NET Framework, Version 3.5 eingeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisual3DChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Media3D.Visual3D GetVisual3DChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Media3D.Visual3D GetVisual3DChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Viewport2DVisual3D.GetVisual3DChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Visual3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisualHostMaterialProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsVisualHostMaterialProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsVisualHostMaterialProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.Viewport2DVisual3D.IsVisualHostMaterialProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Media.Media3D.Viewport2DVisual3D.IsVisualHostMaterial" />-Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.IsVisualHostMaterialProperty>wird in .NET Framework, Version 3.5 eingeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Material">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Material Material { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Material Material" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport2DVisual3D.Material" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Material</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das Material, das die Darstellung des 3D Objekts beschreibt.</summary>
+        <value>Das Material für das 3D-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen festlegen, die <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.IsVisualHostMaterial%2A> -Eigenschaft für das Material, auf denen Sie die 2D-visuelle platziert haben möchten.  
+  
+ <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.Material%2A>wird in .NET Framework, Version 3.5 eingeführt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie das Material angegeben, in dem die 2D-Visualisierung (Schaltfläche) sollte durch Festlegen dieser Eigenschaft sowie das Festlegen der <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.IsVisualHostMaterial%2A> -Eigenschaft auf `true`:  
+  
+ [!code-xaml[Viewport2DVisual3DExample#Viewport3D](~/samples/snippets/csharp/VS_Snippets_Wpf/Viewport2DVisual3DExample/CS/window1.xaml#viewport3d)]  
+  
+ Das vollständige Beispiel finden Sie unter [interaktiv 2D-auf 3D Stichprobe](http://go.microsoft.com/fwlink/?LinkID=160007).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaterialProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaterialProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaterialProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.Viewport2DVisual3D.MaterialProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.Viewport2DVisual3D.Material" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.MaterialProperty>wird in .NET Framework, Version 3.5 eingeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsVisualHostMaterial">
+      <MemberSignature Language="C#" Value="public static void SetIsVisualHostMaterial (System.Windows.Media.Media3D.Material element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsVisualHostMaterial(class System.Windows.Media.Media3D.Material element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Viewport2DVisual3D.SetIsVisualHostMaterial(System.Windows.Media.Media3D.Material,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Media.Media3D.Material" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, in das die angefügte Eigenschaft geschrieben wird.</param>
+        <param name="value">Die erforderliche <see cref="P:System.Windows.Media.Media3D.Viewport2DVisual3D.IsVisualHostMaterial" /> Wert.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Media.Media3D.Viewport2DVisual3D.IsVisualHostMaterial" /> -Eigenschaft auf ein angegebenes Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.SetIsVisualHostMaterial%2A>wird in .NET Framework, Version 3.5 eingeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visual">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Visual Visual { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Visual Visual" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport2DVisual3D.Visual" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen die 2D-Visualisierung auf das 3D-Objekt platziert wird.</summary>
+        <value>Das visuelle Element auf das 3D-Objekt platziert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das visuelle Element wird zuerst angewendet, um die <xref:System.Windows.Media.VisualBrush>, der dann das 3D-Objekt verwendet wird.  
+  
+ <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.Visual%2A>wird in .NET Framework, Version 3.5 eingeführt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Schaltfläche, ein 2-D-Objekt, auf ein 3D-Objekt platziert wird:  
+  
+ [!code-xaml[Viewport2DVisual3DExample#Viewport3D](~/samples/snippets/csharp/VS_Snippets_Wpf/Viewport2DVisual3DExample/CS/window1.xaml#viewport3d)]  
+  
+ Das vollständige Beispiel finden Sie unter [interaktiv 2D-auf 3D Stichprobe](http://go.microsoft.com/fwlink/?LinkID=160007).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visual3DChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int Visual3DChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Visual3DChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport2DVisual3D.Visual3DChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VisualProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VisualProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.Viewport2DVisual3D.VisualProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.Viewport2DVisual3D.Visual" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Viewport2DVisual3D.VisualProperty>wird in .NET Framework, Version 3.5 eingeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

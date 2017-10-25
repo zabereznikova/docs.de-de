@@ -1,0 +1,57 @@
+<Type Name="MatrixOrder" FullName="System.Drawing.Drawing2D.MatrixOrder">
+  <TypeSignature Language="C#" Value="public enum MatrixOrder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MatrixOrder extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.MatrixOrder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Reihenfolge von Matrixtransformationen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Matrixtransformationen sind nicht unbedingt kommutativ. Die Reihenfolge, in der sie angewendet werden, ist wichtig.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="Append" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.MatrixOrder Append = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.MatrixOrder.Append" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.MatrixOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die neue Operation wird nach der alten angewendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Prepend">
+      <MemberSignature Language="C#" Value="Prepend" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.MatrixOrder Prepend = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.MatrixOrder.Prepend" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.MatrixOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die neue Operation wird vor der alten angewendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

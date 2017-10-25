@@ -1,0 +1,66 @@
+<Type Name="IIssuanceSecurityTokenAuthenticator" FullName="System.ServiceModel.Security.Tokens.IIssuanceSecurityTokenAuthenticator">
+  <TypeSignature Language="C#" Value="public interface IIssuanceSecurityTokenAuthenticator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IIssuanceSecurityTokenAuthenticator" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.IIssuanceSecurityTokenAuthenticator" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt den Vertrag an, der von einem benutzerdefinierten Sicherheitstokenauthentifizierer implementiert werden soll, der Token an den Client ausgibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von [!INCLUDE[indigo2](~/includes/indigo2-md.md)] verwendeten Tokenauthentifizierer, die SSLNEGO/SPNEGO-`SecurityContextToken` oder SecureConversation-basierte `SecurityContextToken` ausstellen, sind `IIssuanceSecurityTokenAuthenticator`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IssuedSecurityTokenHandler">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler IssuedSecurityTokenHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler IssuedSecurityTokenHandler" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IIssuanceSecurityTokenAuthenticator.IssuedSecurityTokenHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Handler ab, wenn das Token ausgestellt wird, oder legt ihn fest.</summary>
+        <value>Ein Delegat, der das Ereignis verarbeitet, wenn ein Token ausgestellt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenewedSecurityTokenHandler">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.Tokens.RenewedSecurityTokenHandler RenewedSecurityTokenHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.Tokens.RenewedSecurityTokenHandler RenewedSecurityTokenHandler" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IIssuanceSecurityTokenAuthenticator.RenewedSecurityTokenHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.RenewedSecurityTokenHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Handler ab, wenn das Token erneuert wird, oder legt ihn fest.</summary>
+        <value>Ein Delegat, der das Ereignis verarbeitet, wenn ein Token erneuert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat sollte nur aufgerufen werden, wenn der Tokenauthentifizierer die Erneuerung ausgestellter Token verarbeitet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,139 @@
+<Type Name="SecurityTokenProvider+SecurityTokenAsyncResult" FullName="System.IdentityModel.Selectors.SecurityTokenProvider+SecurityTokenAsyncResult">
+  <TypeSignature Language="C#" Value="protected class SecurityTokenProvider.SecurityTokenAsyncResult : IAsyncResult" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit SecurityTokenProvider/SecurityTokenAsyncResult extends System.Object implements class System.IAsyncResult" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.SecurityTokenProvider.SecurityTokenAsyncResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IAsyncResult</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Kapselt die Ergebnisse eines asynchronen Vorgangs für einen Delegaten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenAsyncResult (System.IdentityModel.Tokens.SecurityToken token, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityToken token, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.SecurityTokenAsyncResult.#ctor(System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="token">Ein Sicherheitstoken zur Instanziierung des <see cref="T:System.IdentityModel.Selectors.SecurityTokenProvider.SecurityTokenAsyncResult" />es.</param>
+        <param name="callback">Die Rückrufmethode, die bei Beendigung des asynchronen Vorgangs aufgerufen werden soll.</param>
+        <param name="state">Das Objekt, das als letzter Parameter des asynchronen Methodenaufrufs bereitgestellt wurde.</param>
+        <summary>Erstellt eine neue Instanz von <see cref="T:System.IdentityModel.Selectors.SecurityTokenProvider.SecurityTokenAsyncResult" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncState">
+      <MemberSignature Language="C#" Value="public object AsyncState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object AsyncState" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenProvider.SecurityTokenAsyncResult.AsyncState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das als letzter Parameter des asynchronen Methodenaufrufs übergeben wurde.</summary>
+        <value>Gibt <see cref="T:System.Object" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncWaitHandle">
+      <MemberSignature Language="C#" Value="public System.Threading.WaitHandle AsyncWaitHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.WaitHandle AsyncWaitHandle" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenProvider.SecurityTokenAsyncResult.AsyncWaitHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.WaitHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Threading.WaitHandle" /> ab, der Win32-Synchronisierungshandles kapselt.</summary>
+        <value>Gibt <see cref="T:System.Threading.WaitHandle" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletedSynchronously">
+      <MemberSignature Language="C#" Value="public bool CompletedSynchronously { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CompletedSynchronously" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenProvider.SecurityTokenAsyncResult.CompletedSynchronously" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt <see langword="true" /> Wenn der Aufruf, asynchron ist, andernfalls abgeschlossen <see langword="false" />.</summary>
+        <value>Gibt <see cref="T:System.Boolean" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Tokens.SecurityToken End (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Tokens.SecurityToken End(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.SecurityTokenAsyncResult.End(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das Ergebnis des asynchronen Vorgangs.</param>
+        <summary>Beendet den asynchronen Vorgang mit dem angegebenen Ergebnis.</summary>
+        <returns>Gibt <see cref="T:System.IdentityModel.Tokens.SecurityToken" />zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompleted">
+      <MemberSignature Language="C#" Value="public bool IsCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenProvider.SecurityTokenAsyncResult.IsCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt <see langword="true" /> Wenn der asynchrone Aufruf abgeschlossen ist, anderfalls <see langword="false" />.</summary>
+        <value>Gibt <see cref="T:System.Boolean" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

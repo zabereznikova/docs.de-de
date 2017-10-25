@@ -1,0 +1,354 @@
+<Type Name="ProjectUsingTaskElement" FullName="Microsoft.Build.Construction.ProjectUsingTaskElement">
+  <TypeSignature Language="C#" Value="public class ProjectUsingTaskElement : Microsoft.Build.Construction.ProjectElementContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectUsingTaskElement extends Microsoft.Build.Construction.ProjectElementContainer" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectUsingTaskElement" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Construction.ProjectElementContainer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("TaskName={TaskName} AssemblyName={AssemblyName} AssemblyFile={AssemblyFile} Condition={Condition} Runtime={Runtime} Architecture={Architecture}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine [UsingTask-Element (MSBuild)](http://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43) in einem MSBuild-Projekt. UsingTask-Element wird Inline-Tasks und vorkompilierte Aufgaben verwendet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddParameterGroup">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.UsingTaskParameterGroupElement AddParameterGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.UsingTaskParameterGroupElement AddParameterGroup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectUsingTaskElement.AddParameterGroup" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.UsingTaskParameterGroupElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt ein neues ParameterGroup-Element für diese Inlineaufgabe an.</summary>
+        <returns>Gibt die neue Parametergruppe zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddUsingTaskBody">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectUsingTaskBodyElement AddUsingTaskBody (string evaluate, string taskBody);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectUsingTaskBodyElement AddUsingTaskBody(string evaluate, string taskBody) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectUsingTaskElement.AddUsingTaskBody(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectUsingTaskBodyElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evaluate" Type="System.String" />
+        <Parameter Name="taskBody" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="evaluate">Ein Flag, das bei "true", wird das Element und die Eigenschaftswerte in der Aufgabentext erweitert. Dieses Kennzeichen ist standardmäßig "true".</param>
+        <param name="taskBody">Der Text der Aufgabe als Zeichenfolge.</param>
+        <summary>Fügt ein neues TaskBody-Element für diese Inlineaufgabe an.</summary>
+        <returns>Gibt den neuen Aufgabentext zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Architecture">
+      <MemberSignature Language="C#" Value="public string Architecture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Architecture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.Architecture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Architektur Attribut dieser Inlineaufgabe.</summary>
+        <value>Gibt den Wert des Attributs Architektur. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArchitectureLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ArchitectureLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ArchitectureLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.ArchitectureLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort des Attributs Architektur für dieses Element, sofern vorhanden.</summary>
+        <value>Gibt den Speicherort der Architektur-Attribut zurück. Wenn kein solches Attribut vorhanden ist, gibt Sie null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyFile">
+      <MemberSignature Language="C#" Value="public string AssemblyFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des AssemblyFile-Attributs, das den Namen der zu ladenden Assembly auswählt.</summary>
+        <value>Gibt den Wert des Attributs AssemblyFile zurück. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Assembly einen starken Namen haben kann und kann sich im GAC befinden. Entweder die `AssemblyFile` oder `AssemblyName` Attribut muss vorhanden, aber nicht beides sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyFileLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation AssemblyFileLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation AssemblyFileLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyFileLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort des Attributs AssemblyFile für dieses Element, sofern vorhanden.</summary>
+        <value>Gibt den Speicherort der AssemblyFile-Attribut zurück. Wenn kein solches Attribut vorhanden ist, gibt Sie null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab und legt den Wert des Attributs AssemblyName.</summary>
+        <value>Gibt den Wert des Attributs AssemblyName. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Dateipfad, auf die Assembly, die einen vollständigen Pfad oder ein relativer Pfad sein kann. Relative Pfade sind relativ zum Verzeichnis der Projektdatei, die diese UsingTask enthält. Entweder die `AssemblyFile` oder `AssemblyName` Attribut muss vorhanden, aber nicht beides sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyNameLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation AssemblyNameLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation AssemblyNameLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyNameLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort des Attributs "AssemblyName" für dieses Element, sofern vorhanden.</summary>
+        <value>Gibt den Speicherort der AssemblyName-Attribut zurück. Wenn kein solches Attribut vorhanden ist, gibt Sie null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterGroup">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.UsingTaskParameterGroupElement ParameterGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.UsingTaskParameterGroupElement ParameterGroup" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.ParameterGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.UsingTaskParameterGroupElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein ParameterGroup-Element für diese Inlineaufgabe ab.</summary>
+        <value>Gibt die Parametergruppe zurück. Gibt null zurück, wenn keine Parametergruppe vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Runtime">
+      <MemberSignature Language="C#" Value="public string Runtime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Runtime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.Runtime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest-Runtime-Attribut dieser Inlineaufgabe.</summary>
+        <value>Gibt den Wert des Attributs Common Language Runtime. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuntimeLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation RuntimeLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation RuntimeLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.RuntimeLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speicherort des Runtime-Attribut für dieses Element, sofern vorhanden.</summary>
+        <value>Gibt den Speicherort der Common Language Runtime-Attribut zurück. Wenn kein solches Attribut vorhanden ist, gibt Sie null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskBody">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectUsingTaskBodyElement TaskBody { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ProjectUsingTaskBodyElement TaskBody" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.TaskBody" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectUsingTaskBodyElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das innere XML-Inhalt, der diese Inlineaufgabe ab.</summary>
+        <value>Gibt die inneren XML-Inhalt des Tasks "Inline". Gibt null zurück, wenn kein Text vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der innere XML-Inhalt ist der Source Codetext, der die Inlineaufgabe und direkt für die Aufgabenfactory als Zeichenfolge übergeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskFactory">
+      <MemberSignature Language="C#" Value="public string TaskFactory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskFactory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.TaskFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab und legt den Wert des Attributs TaskFactory dieser Inlineaufgabe.</summary>
+        <value>Gibt den Wert des Attributs TaskFactory zurück. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wählt die Aufgabe Factoryklassennamen, die zum Erstellen von Instanzen dieses Tasks verwendet. TaskFactory wird zusammen mit der AssemblyName oder AssemblyFile-Attribut verwendet, um die Aufgabenfactory zu suchen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskFactoryLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation TaskFactoryLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation TaskFactoryLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.TaskFactoryLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort des Attributs TaskFactory für dieses Element, sofern vorhanden.</summary>
+        <value>Gibt den Wert des Attributs TaskFactory zurück. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskName">
+      <MemberSignature Language="C#" Value="public string TaskName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.TaskName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab und legt den Wert des Attributs TaskName fest.</summary>
+        <value>Gibt den Wert des Attributs TaskName zurück. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt den Namen dieser vorkompilierten oder Inlineaufgabe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskNameLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation TaskNameLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation TaskNameLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.TaskNameLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort des Attributs TaskName für dieses Element, sofern vorhanden.</summary>
+        <value>Gibt den Wert des Attributs TaskName zurück. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

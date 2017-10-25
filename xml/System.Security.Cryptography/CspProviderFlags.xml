@@ -1,0 +1,280 @@
+<Type Name="CspProviderFlags" FullName="System.Security.Cryptography.CspProviderFlags">
+  <TypeSignature Language="C#" Value="public enum CspProviderFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CspProviderFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CspProviderFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Flags an, die das Verhalten der Kryptografiedienstanbieter (Cryptographic Service Provider, CSP) ändern.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateEphemeralKey">
+      <MemberSignature Language="C#" Value="CreateEphemeralKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CspProviderFlags CreateEphemeralKey = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CspProviderFlags.CreateEphemeralKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CspProviderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellen Sie einen temporären Schlüssel, der freigegeben wird, wenn das zugeordnete RSA-Objekt (Rivest-Shamir-Adleman) geschlossen wird. Verwenden Sie dieses Flag nicht, wenn Sie möchten, dass der Schlüssel vom RSA-Objekt unabhängig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Das CreateEphemeralKey-Flag ermöglicht temporären Schlüsseln zuverlässigere Bereinigung. Wenn dieses Flag nicht verwendet wird, generiert die common Language Runtime (CLR) einen zufällig benannten Schlüssel an, wenn ein RSA-Objekt erstellt wird. Wenn das Objekt abgeschlossen oder freigegeben wird, wird der Schlüssel gelöscht. Wenn der Identitätswechsel aktiviert ist, nicht explizit aufrufen `Dispose` können potenziell ein Problem erstellen. Z. B. Wenn Sie Identitätswechsel verwenden, erstellen Sie ein RSA-Objekt, und es nicht freigeben, im Finalizer-Thread (die keinen Identitätswechsel ausführt) kann fehlschlagen, den Schlüssel löschen, und klicken Sie dann eine Ausnahme auslöst. Diese Ausnahme nicht behandelt wird, und kann den Prozess beenden. Die Ressourcen, die dem Schlüssel zugeordnet sind nicht wiederhergestellt, was zu einem Speicherverlust. Die <xref:System.Security.Permissions.KeyContainerPermission> Anforderung wird durch dieses Flag unterdrückt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoFlags">
+      <MemberSignature Language="C#" Value="NoFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CspProviderFlags NoFlags = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CspProviderFlags.NoFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CspProviderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Geben Sie keine Einstellung an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoPrompt">
+      <MemberSignature Language="C#" Value="NoPrompt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CspProviderFlags NoPrompt = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CspProviderFlags.NoPrompt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CspProviderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verhindern Sie, dass der Kryptografiedienstanbieter irgendeine Benutzeroberfläche (UI) für diesen Kontext anzeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseArchivableKey">
+      <MemberSignature Language="C#" Value="UseArchivableKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CspProviderFlags UseArchivableKey = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CspProviderFlags.UseArchivableKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CspProviderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lassen Sie zu, dass ein Schlüssel zur Archivierung oder Wiederherstellung exportiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultKeyContainer">
+      <MemberSignature Language="C#" Value="UseDefaultKeyContainer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CspProviderFlags UseDefaultKeyContainer = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CspProviderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie Schlüsselinformationen aus dem Standardschlüsselcontainer.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseExistingKey">
+      <MemberSignature Language="C#" Value="UseExistingKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CspProviderFlags UseExistingKey = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CspProviderFlags.UseExistingKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CspProviderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie Schlüsselinformationen aus dem aktuellen Schlüssel.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseMachineKeyStore">
+      <MemberSignature Language="C#" Value="UseMachineKeyStore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CspProviderFlags UseMachineKeyStore = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CspProviderFlags.UseMachineKeyStore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CspProviderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie Schlüsselinformationen aus dem Schlüsselspeicher des Computers.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseNonExportableKey">
+      <MemberSignature Language="C#" Value="UseNonExportableKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CspProviderFlags UseNonExportableKey = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CspProviderFlags.UseNonExportableKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CspProviderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie Schlüsselinformationen, die nicht exportiert werden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseUserProtectedKey">
+      <MemberSignature Language="C#" Value="UseUserProtectedKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CspProviderFlags UseUserProtectedKey = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CspProviderFlags.UseUserProtectedKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CspProviderFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Benachrichtigen Sie den Benutzer über ein Dialogfeld oder eine andere Methode, wenn bestimmte Aktionen versuchen, einen Schlüssel zu verwenden.  Dieses Flag ist nicht mit dem <see cref="F:System.Security.Cryptography.CspProviderFlags.NoPrompt" />-Flag kompatibel.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

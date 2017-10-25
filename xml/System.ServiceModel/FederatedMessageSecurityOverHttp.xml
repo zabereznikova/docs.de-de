@@ -1,0 +1,534 @@
+<Type Name="FederatedMessageSecurityOverHttp" FullName="System.ServiceModel.FederatedMessageSecurityOverHttp">
+  <TypeSignature Language="C#" Value="public sealed class FederatedMessageSecurityOverHttp" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FederatedMessageSecurityOverHttp extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.FederatedMessageSecurityOverHttp" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konfiguriert die Sicherheit der <see langword="WSFederationHttpBinding" />-Bindung auf Nachrichtenebene.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse enthält Eigenschaften, mit der verschiedene Aspekte der Sicherheitskonfiguration zwischen Client und Dienst gesteuert werden können, einschließlich Einzelheiten zum Aussteller, von dem der Client Verbundanmeldeinformationen für den Dienst abrufen soll.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FederatedMessageSecurityOverHttp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FederatedMessageSecurityOverHttp.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FederatedMessageSecurityOverHttp" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmSuite">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FederatedMessageSecurityOverHttp.AlgorithmSuite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Algorithmussammlung ab, die die Nachrichtenverschlüsselung und Key Wrap-Algorithmen angibt, oder legt sie fest.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />. Die Standardeinstellung ist <see cref="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-Objekt enthält zahlreiche Eigenschaften, die die Sicherheitsalgorithmen angeben, die unter bestimmten Bedingungen verwendet werden sollen. Es beschreibt auch verschiedene Sicherheitsfunktionen des Diensts.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie auf diese Eigenschaft von der Bindung zugegriffen wird und wie sie festgelegt wird.  
+  
+ [!code-csharp[WSFederationHttpSecurity#5](~/samples/snippets/csharp/VS_Snippets_CFX/wsfederationhttpsecurity/cs/source.cs#5)]
+ [!code-vb[WSFederationHttpSecurity#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/wsfederationhttpsecurity/vb/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimTypeRequirements">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt; ClaimTypeRequirements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt; ClaimTypeRequirements" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der <see cref="T:System.ServiceModel.Security.Tokens.ClaimTypeRequirement" />-Instanzen für diese Bindung ab.</summary>
+        <value><see cref="T:System.Collections.ObjectModel.Collection`1" /> vom Typ <see cref="T:System.ServiceModel.Security.Tokens.ClaimTypeRequirement" />. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von dieser Eigenschaft zurückgegebene Auflistung wird vom Dienst verwendet, um erforderliche und optionale Ansprüche anzugeben, die sich in dem vom Client für den Dienstzugriff verwendeten ausgestellten Token befinden müssen. Der Dienst macht die erforderlichen Anspruchstypen in Metadaten verfügbar, wenn die WSDL-Veröffentlichung aktiviert wurde, aber WCF erfordert nicht, dass das ausgestellte Token die angegebenen Anspruchstypen enthält.  Dienste, die versuchen, erforderliche Anspruchstypen durchzusetzen, sollten mit Autorisierungsrichtlinien verwendet werden.  
+  
+ Bei verbundenen Clients enthält diese Auflistung die Liste erforderlicher und optionaler Ansprüche, die an den Sicherheitstokendienst in der Clientanforderung für einen ausgestellten Token gesendet wird.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie auf diese Eigenschaft von der Bindung zugegriffen wird und wie sie festgelegt wird.  
+  
+ [!code-csharp[WSFederationHttpSecurity#11](~/samples/snippets/csharp/VS_Snippets_CFX/wsfederationhttpsecurity/cs/source.cs#11)]
+ [!code-vb[WSFederationHttpSecurity#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/wsfederationhttpsecurity/vb/source.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EstablishSecurityContext">
+      <MemberSignature Language="C#" Value="public bool EstablishSecurityContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EstablishSecurityContext" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FederatedMessageSecurityOverHttp.EstablishSecurityContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob ein Sicherheitskontext eingesetzt werden muss.</summary>
+        <value>
+          <see langword="true" />Wenn der Sicherheitskontext erfordert platzieren. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuedKeyType">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyType IssuedKeyType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IdentityModel.Tokens.SecurityKeyType IssuedKeyType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Typ des auszustellenden Schlüssels an.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Tokens.SecurityKeyType" />. Die Standardeinstellung ist <see cref="F:System.IdentityModel.Tokens.SecurityKeyType.SymmetricKey" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Werte von <xref:System.IdentityModel.Tokens.SecurityKeyType> sind <xref:System.IdentityModel.Tokens.SecurityKeyType.SymmetricKey> und <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey>.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie auf diese Eigenschaft von der Bindung zugegriffen wird und wie sie festgelegt wird.  
+  
+ [!code-csharp[WSFederationHttpSecurity#7](~/samples/snippets/csharp/VS_Snippets_CFX/wsfederationhttpsecurity/cs/source.cs#7)]
+ [!code-vb[WSFederationHttpSecurity#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/wsfederationhttpsecurity/vb/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kein gültiger <see cref="T:System.IdentityModel.Tokens.SecurityKeyType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuedTokenType">
+      <MemberSignature Language="C#" Value="public string IssuedTokenType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IssuedTokenType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Typ des Tokens an, das vom Sicherheitstokendienst ausgegeben werden soll.</summary>
+        <value>Der Typ des Tokens, der ausgestellt werden soll. Der Standard ist <see langword="null" />, der bewirkt, dass WCF einen SAML-Sicherheitstoken von STS anfordert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft wird der Tokentyp angegeben, den der Dienst erwartet, und gesteuert, welcher SecurityTokenAuthenticator beim Dienst erstellt wird. Auf dem Client steuert sie den Typ, der an den Sicherheitstokendienst in der Clientanforderung für einen ausgestellten Token gesendet wird.  
+  
+ Der IssuedTokenType hat in der Regel das Format einer URI.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie auf diese Eigenschaft von der Bindung zugegriffen wird und wie sie festgelegt wird.  
+  
+ [!code-csharp[WSFederationHttpSecurity#4](~/samples/snippets/csharp/VS_Snippets_CFX/wsfederationhttpsecurity/cs/source.cs#4)]
+ [!code-vb[WSFederationHttpSecurity#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/wsfederationhttpsecurity/vb/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress IssuerAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress IssuerAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endpunktadresse der Sicherheitstokendiensts ab, der Anmeldeinformationen für den Dienst ausgibt, oder legt sie fest.</summary>
+        <value>Die <see cref="T:System.ServiceModel.EndpointAddress" /> des Sicherheitstokendiensts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Adresse wird als Endpunkt für den Sicherheitstokendienst verwendet, der Anmeldeinformationen für den Dienst ausgibt. Dienste machen die Ausstelleradresse in Metadaten verfügbar, wenn WSDL aktiviert ist, aber verwenden sie nicht anderweitig. Clients verwenden die Ausstelleradresse, um mit dem Sicherheitstokendienst zu kommunizieren. Wenn die IssuerAddress NULL ist, verwenden die Clients unter Umständen den Sicherheitstokendienst, der über die LocalIssuerAddress-Eigenschaft und die LocalIssuerBinding-Eigenschaft in IssuedTokenClientCredential angegeben wird.  
+  
+ Ist dieser Wert oder die anonyme WS-AddressingIdentity-URI am Client auf `null` festgelegt, wird CardSpace aktiviert, wenn ClientCredentials.SupportInteractive unter bestimmten Umständen True ist.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie auf diese Eigenschaft von der Bindung zugegriffen wird und wie sie festgelegt wird.  
+  
+ [!code-csharp[WSFederationHttpSecurity#8](~/samples/snippets/csharp/VS_Snippets_CFX/wsfederationhttpsecurity/cs/source.cs#8)]
+ [!code-vb[WSFederationHttpSecurity#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/wsfederationhttpsecurity/vb/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerBinding">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Binding IssuerBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.Binding IssuerBinding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bindung ab, die vom Client bei der Kommunikation mit dem Sicherheitstokendienst verwendet werden soll, dessen Endpunktadresse <see cref="P:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress" /> entspricht.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Channels.Binding" />, die vom Client bei der Kommunikation mit dem Sicherheitstokendienst verwendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, um die Bindung anzugeben, die vom Client zwischen dem Client und dem Sicherheitstokendienst beim Abrufen der Anmeldeinformationen für den Dienst verwendet werden soll.  
+  
+ Diese Eigenschaft muss nicht vom Dienst bereitgestellt werden, da sie nur vom Client verwendet wird.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie auf diese Eigenschaft von der Bindung zugegriffen wird und wie sie festgelegt wird.  
+  
+ [!code-csharp[WSFederationHttpSecurity#9](~/samples/snippets/csharp/VS_Snippets_CFX/wsfederationhttpsecurity/cs/source.cs#9)]
+ [!code-vb[WSFederationHttpSecurity#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/wsfederationhttpsecurity/vb/source.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerMetadataAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress IssuerMetadataAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress IssuerMetadataAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endpunktadresse für die Kommunikation mit dem Sicherheitstokendienst außerhalb des Bereichs ab oder legt sie fest.</summary>
+        <value>Die zu verwendende <see cref="T:System.ServiceModel.Channels.Binding" />, wenn mit dem Sicherheitstokendienst außerhalb des Bereichs kommuniziert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Adresse wird als Endpunkt für den Sicherheitstokendienst verwendet, der Anmeldeinformationen für den Dienst außerhalb des Bereichs ausgibt.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie auf diese Eigenschaft von der Bindung zugegriffen wird und wie sie festgelegt wird.  
+  
+ [!code-csharp[WSFederationHttpSecurity#10](~/samples/snippets/csharp/VS_Snippets_CFX/wsfederationhttpsecurity/cs/source.cs#10)]
+ [!code-vb[WSFederationHttpSecurity#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/wsfederationhttpsecurity/vb/source.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NegotiateServiceCredential">
+      <MemberSignature Language="C#" Value="public bool NegotiateServiceCredential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NegotiateServiceCredential" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob eine SSL-Verhandlung auf Nachrichtenebene durchgeführt wird, um das Dienstzertifikat zu erhalten.</summary>
+        <value>
+          <see langword="true" />, wenn das Dienstzertifikat ausgehandelt wird; <see langword="false" />, wenn das Dienstzertifikat außerhalb des Bereichs zur Verfügung steht. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, ob das Dienstzertifikat automatisch zwischen dem Client und dem Dienst ausgehandelt wird. Wenn diese Eigenschaft `true` ist, dann tritt eine solche Aushandlung auf. Wenn diese Eigenschaft `false` ist, muss das Dienstzertifikat auf dem Client vor der Kommunikation mit dem Dienst angegeben werden.  
+  
+ Dienste müssen immer ein Zertifikat angeben.  
+  
+ Wenn diese Eigenschaft True ist, tritt die SSL-Aushandlung auf Nachrichtenebene für das Dienstzertifikat auf, bevor der durch die IssuerAddress-Eigenschaft und die IssuerBinding-Eigenschaft (oder die LocalIssuerAddress-Eigenschaft und die LocalIssuerBinding-Eigenschaft) angegebene Sicherheitstokendienst ein Sicherheitstoken ausstellen muss.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie auf diese Eigenschaft von der Bindung zugegriffen wird und wie sie festgelegt wird.  
+  
+ [!code-csharp[WSFederationHttpSecurity#6](~/samples/snippets/csharp/VS_Snippets_CFX/wsfederationhttpsecurity/cs/source.cs#6)]
+ [!code-vb[WSFederationHttpSecurity#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/wsfederationhttpsecurity/vb/source.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeAlgorithmSuite">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeAlgorithmSuite ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeAlgorithmSuite() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FederatedMessageSecurityOverHttp.ShouldSerializeAlgorithmSuite" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die Algorithmussammlung zum Sichern von Nachrichten auf der SOAP-Ebene serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die algorithmussammlung serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeClaimTypeRequirements">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeClaimTypeRequirements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeClaimTypeRequirements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FederatedMessageSecurityOverHttp.ShouldSerializeClaimTypeRequirements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, dass alle vorhandenen Anspruchstypanforderungen serialisiert werden können.</summary>
+        <returns>
+          <see langword="true" />Wenn es befinden sich die Anforderungen zum Serialisieren; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeEstablishSecurityContext">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeEstablishSecurityContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeEstablishSecurityContext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FederatedMessageSecurityOverHttp.ShouldSerializeEstablishSecurityContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Anzeichen zurück, ob der Sicherheitskontext nicht der Standard ist und daher serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn der Kontext serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeIssuedKeyType">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeIssuedKeyType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeIssuedKeyType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FederatedMessageSecurityOverHttp.ShouldSerializeIssuedKeyType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Anzeichen dafür zurück, ob der ausgegebene Schlüsseltyp nicht der Standard ist und daher serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn der Typ serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeNegotiateServiceCredential">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeNegotiateServiceCredential ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeNegotiateServiceCredential() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FederatedMessageSecurityOverHttp.ShouldSerializeNegotiateServiceCredential" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Anzeichen dafür zurück, ob das Aushandeln von Dienstanmeldeinformationen nicht der Standardprozess ist und daher serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn der Prozess serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeTokenRequestParameters">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeTokenRequestParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeTokenRequestParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FederatedMessageSecurityOverHttp.ShouldSerializeTokenRequestParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Anzeichen dafür zurück, dass alle vorhandenen Tokenanforderungsparameter serialisiert werden können.</summary>
+        <returns>
+          <see langword="true" />Wenn Parameter zu serialisierende vorhanden sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenRequestParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Xml.XmlElement&gt; TokenRequestParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Xml.XmlElement&gt; TokenRequestParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Xml.XmlElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellt eine Auflistung der XML-Elemente, die bei der Anforderung eines Tokens im Textkörper an den Sicherheitstokendienst gesendet werden sollen.</summary>
+        <value><see cref="T:System.Collections.ObjectModel.Collection`1" /> vom Typ <see cref="T:System.Xml.XmlElement" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von dieser Eigenschaft zurückgegebene Auflistung kann dazu verwendet werden, zusätzliche XML-Elemente anzugeben, die bei der Anforderung eines Tokens im Textkörper an den Sicherheitstokendienst gesendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

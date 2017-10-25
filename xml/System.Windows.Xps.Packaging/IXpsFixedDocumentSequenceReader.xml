@@ -1,0 +1,142 @@
+<Type Name="IXpsFixedDocumentSequenceReader" FullName="System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader">
+  <TypeSignature Language="C#" Value="public interface IXpsFixedDocumentSequenceReader" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXpsFixedDocumentSequenceReader" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Methoden zum Lesen der Bestandteile einer <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, so erhalten Sie einen Verweis auf ein Objekt, das diese Schnittstelle implementiert wird.  
+  
+ [!code-csharp[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsReadWriteSign/CSharp/SignatureDialog.xaml.cs#signaturedefinitioncommandhandler)]
+ [!code-vb[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsReadWriteSign/visualbasic/signaturedialog.xaml.vb#signaturedefinitioncommandhandler)]  
+  
+ Das folgende Beispiel zeigt, wie Sie erhalten eine <xref:System.Windows.Xps.Packaging.XpsDocument.FixedDocumentSequenceReader%2A> Zugriff <xref:System.Windows.Documents.FixedDocument> Teile einer <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ [!code-csharp[DocumentStructure#DocStrucFixedDoc](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentStructure/CSharp/Window1.xaml.cs#docstrucfixeddoc)]
+ [!code-vb[DocumentStructure#DocStrucFixedDoc](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocumentStructure/visualbasic/window1.xaml.vb#docstrucfixeddoc)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FixedDocuments">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Xps.Packaging.IXpsFixedDocumentReader&gt; FixedDocuments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Xps.Packaging.IXpsFixedDocumentReader&gt; FixedDocuments" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader.FixedDocuments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Xps.Packaging.IXpsFixedDocumentReader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Windows.Documents.FixedDocument" /> Leser für jedes Dokument in einem <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Windows.Documents.FixedDocument" /> Leser, jeweils eines für jedes Dokument in einem <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader.FixedDocuments%2A> Eigenschaft zum Abrufen einer Auflistung von <xref:System.Windows.Documents.FixedDocument> Leser.  
+  
+ [!code-csharp[DocumentStructure#DocStrucFixedDoc](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentStructure/CSharp/Window1.xaml.cs#docstrucfixeddoc)]
+ [!code-vb[DocumentStructure#DocStrucFixedDoc](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocumentStructure/visualbasic/window1.xaml.vb#docstrucfixeddoc)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFixedDocument">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.IXpsFixedDocumentReader GetFixedDocument (Uri documentSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.IXpsFixedDocumentReader GetFixedDocument(class System.Uri documentSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader.GetFixedDocument(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.IXpsFixedDocumentReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentSource" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="documentSource">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des festen Dokuments.</param>
+        <summary>Ruft einen Reader für die <see cref="T:System.Windows.Documents.FixedDocument" /> mit dem angegebenen [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintTicket PrintTicket { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket PrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader.PrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Printing.PrintTicket" />, sofern, die zugeordnet ist vorhanden, die <see cref="T:System.Windows.Documents.FixedDocument" />.</summary>
+        <value>Ein <see cref="T:System.Printing.PrintTicket" /> , enthält die Standard-Druckoptionen für die Sequenz; oder <see langword="null" />, wenn kein Druckticket für das Dokument vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu der <xref:System.Printing.PrintTicket> Teil ein [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] sequenzieren, finden Sie im Kapitel 2 die [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] -Spezifikation, die Sie, am erhalten können [XPS: Spezifikation und License Downloads](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thumbnail">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsThumbnail Thumbnail { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Xps.Packaging.XpsThumbnail Thumbnail" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader.Thumbnail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsThumbnail</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Miniaturbild ab, sofern, die zugeordnet ist vorhanden, die <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Xps.Packaging.XpsThumbnail" /> , der Bild darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] von <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> ab.</summary>
+        <value>Ein <see cref="T:System.Uri" /> darstellt, die die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] für die Sequenz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

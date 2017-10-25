@@ -1,0 +1,86 @@
+<Type Name="PersonalizationScope" FullName="System.Web.UI.WebControls.WebParts.PersonalizationScope">
+  <TypeSignature Language="C#" Value="public enum PersonalizationScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PersonalizationScope extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Personalisierungsbereich für eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Objekt oder den Personalisierungsbereich, die an eine Eigenschaft in einer Webparts-Steuerelement angewendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Personalisierung ist ein Schlüsselkonzept bei Webparts-Personalisierung und eng mit anderen Einstellungen, einschließlich des Gültigkeitsbereichs, der Seite ", bis die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern, ist in ausgeführt wird; jede Eigenschaft für ein Steuerelement und die Art zugeordnete Bereich in der das Steuerelement auf der Seite hinzugefügt wurde. Weitere Informationen zum Gültigkeitsbereich Personalisierung finden Sie unter [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+ Personalisierungsbereich bezieht sich auf wie Personalisierungsdaten kann auf verschiedene Gruppen von Benutzern angewendet werden. Einige Personalisierungsdaten gilt für nur einen bestimmten Benutzer und -Steuerelement auf einer Seite zur Verfügung. Andere Personalisierungsdaten gilt für alle Benutzer, die mit eine Website angezeigt. Personalisierungsbereich wird in verschiedenen Bereichen der Personalisierung verwendet, um anzugeben, welchen Satz von Daten abgerufen und angezeigt werden soll.  
+  
+ Wenn eine Seite im freigegebenen Personalisierungsbereich ausgeführt wird, bedeutet dies, dass nur die Personalisierungsdaten für ein bestimmtes Steuerelement, gilt für alle Benutzer, die das Steuerelement anzeigen geladen werden sollen. Abhängig von der aktuell ausgeführten Benutzerrechte können auch diese umfassend anwendbaren Daten geändert und wieder in den Datenspeicher gespeichert. Wenn eine Seite im Personalisierung Benutzerbereich ausgeführt wird, bedeutet dies, dass die aktuell ausführende Benutzer ein Steuerelement Personalisierung Daten gespeichert und geladen werden anhand. Im Allgemeinen bedeutet dies benutzerspezifische Daten geladen und auf einem Steuerelement gespeichert werden, während Allgemein zutreffend Daten (oder freigegebene) nur auf dem Steuerelement angezeigt werden können werden können.  
+  
+ Ein <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement, das die allgemeine Lebenszyklus der Personalisierung verwaltet, in einem der beiden Personalisierungsbereiche ausgeführt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Enumeration.  
+  
+ [!code-csharp[WebParts_PersAdmin#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PersAdmin/CS/PersAdmin.ascx#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="Shared" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope Shared = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Verweisen auf den Bereich auf die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement <see langword="Shared" /> Bereich bedeutet, dass Personalisierungsdaten für alle Benutzer für alle personalisierbar Steuerelemente auf einer Seite gilt und steht auch auf der Seite gespeichert werden sollen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Verweisen auf eine Steuerelementeigenschaft Webparts zugeordnete Bereich `Shared` Bereich gibt an, dass die Eigenschaft normalerweise lässt nur das Laden oder Speichern von Daten, die allen Benutzern zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="User" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope User = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.User" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Verweisen auf den Bereich auf die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement <see langword="User" /> Bereich bedeutet, dass Personalisierungsdaten, die spezifisch sind, sowie Personalisierungsdaten, die für alle Benutzer gilt für alle personalisierbar Steuerelemente auf einer Seite geladen werden. Personalisierungsdaten, die spezifisch sind, können auf der Seite gespeichert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Verweisen auf eine Steuerelementeigenschaft Webparts zugeordnete Bereich `User` Bereich gibt an, dass die Eigenschaft nur kann laden und Speichern von Daten, die allen Benutzern zur Ausführung auf einer Seite in `Shared` Bereich. Jedoch, wenn die Eigenschaft Steuerelement ausgeführt wird auf einer Seite in `User` Bereich, der pro Benutzer und die Daten für alle Benutzer der Eigenschaft werden geladen und zusammengeführt werden. In diesem Fall jedoch nur pro-Benutzer wird werden gespeichert, wenn eine Seite, im ausgeführt wird `User` Bereich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

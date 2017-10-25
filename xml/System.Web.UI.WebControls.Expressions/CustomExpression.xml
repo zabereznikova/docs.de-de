@@ -1,0 +1,110 @@
+<Type Name="CustomExpression" FullName="System.Web.UI.WebControls.Expressions.CustomExpression">
+  <TypeSignature Language="C#" Value="public class CustomExpression : System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomExpression extends System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Expressions.CustomExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "Parameters")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet die Möglichkeit, eine benutzerdefinierte LINQ-Abfrage anzugeben, die als Antwort auf ein Ereignis aufgerufen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Expressions.CustomExpression> Klasse wird verwendet, mit der <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement. Die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement unterstützt eine Vielzahl von Optionen, die Sie verwenden können, um Daten zu filtern. Die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement unterstützt Filter, mit denen Sie Suchen von Zeichenfolgen, Werte zwischen einem angegebenen Bereich zu suchen, einen Eigenschaftswert in einer Tabelle mit einem angegebenen Wert vergleichen und Sortieren von Daten. Diese Optionen dienen als LINQ-Ausdrücke in der <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement. Sie können diese Filterausdrücke verwenden, oder Sie können einen benutzerdefinierten Ausdruck für die Verwendung in Bereitstellen der <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement. Die <xref:System.Web.UI.WebControls.Expressions.CustomExpression> -Klasse ermöglicht es Ihnen, geben Sie einen benutzerdefinierten Ausdruck in der Anwendung und ihn in einem Ereignishandler aufzurufen.  
+  
+> [!NOTE]
+>  Bieten Sie eine benutzerdefinierte Abfrage, die mit einer anderen Methode anstelle von einem Ereignishandler aufgerufen wird, mithilfe der <xref:System.Web.UI.WebControls.Expressions.MethodExpression> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Web.UI.WebControls.Expressions.CustomExpression> -Objekt, das von verwendet wird, die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement. Der benutzerdefinierte Ausdruck ruft die `FilterProducts` -Methode, die einen benutzerdefinierte LINQ-Ausdruck enthält. Das Ergebnis der Filteroperation wird angezeigt, einem <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+  
+  
+ Das folgende Beispiel zeigt einen Ereignishandler, der eine benutzerdefinierte LINQ-Abfrage enthält. Der Ausdruck filtert die Product-Tabelle in der AdventureWorks-Datenbank und zeigt Produkte, die einen Listenpreis größer als oder gleich $3.500,00 enthalten.  
+  
+ [!code-csharp[QueryExtenderCustomFiltering#2](~/samples/snippets/csharp/VS_Snippets_WebNet/queryextendercustomfiltering/cs/queryextendercustomfiltering.cs#2)]
+ [!code-vb[QueryExtenderCustomFiltering#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/queryextendercustomfiltering/vb/queryextendercustomfiltering.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.CustomExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Expressions.CustomExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryable">
+      <MemberSignature Language="C#" Value="public override System.Linq.IQueryable GetQueryable (System.Linq.IQueryable source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Linq.IQueryable GetQueryable(class System.Linq.IQueryable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.CustomExpression.GetQueryable(System.Linq.IQueryable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Datenquelle, die <see cref="T:System.Linq.IQueryable" /> -Objekt verwendet.</param>
+        <summary>Ermöglicht den Zugriff auf die geänderte <see cref="T:System.Linq.IQueryable" /> Objekt, das von der Datenquelle verwendet.</summary>
+        <returns>Eine Instanz der geänderten Datenquelle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Querying">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.Expressions.CustomExpressionEventArgs&gt; Querying;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.Expressions.CustomExpressionEventArgs&gt; Querying" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Expressions.CustomExpression.Querying" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.Expressions.CustomExpressionEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Linq.IQueryable" /> Datenquellenwert festgelegt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Expressions.CustomExpression> Objekt können Sie einen benutzerdefinierten Ausdruck in einem Ereignishandler anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

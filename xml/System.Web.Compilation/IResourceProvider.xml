@@ -1,0 +1,103 @@
+<Type Name="IResourceProvider" FullName="System.Web.Compilation.IResourceProvider">
+  <TypeSignature Language="C#" Value="public interface IResourceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IResourceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.IResourceProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Schnittstelle, die eine Klasse implementieren muss, um als Ressourcenanbieter fungieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Ressourcenanbieter erleichtert das Abrufen von Werten aus einer Ressourcendatei gespeichert. Wenn ein Ausdruck der Form `<%$ Resources: classKey, resourceKey %>` auftritt, wird bei der Seitenanalyse der Ressourcenanbieter den lokalisierten Wert für die Ressource zurückgibt. Die <xref:System.Web.Compilation.ResourceProviderFactory> Klasse erstellt Instanzen von <xref:System.Web.Compilation.IResourceProvider> Objekte für die Verwendung zum Abrufen der Werte.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine benutzerdefinierte Ressourcenanbieterfactory, die zwischengespeicherten Werte abruft. Die Ressourcenanbieterfactory erstellt eine Instanz einer Klasse, die implementiert <xref:System.Web.Compilation.IResourceProvider>.  
+  
+ [!code-csharp[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public object GetObject (string resourceKey, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject(string resourceKey, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.IResourceProvider.GetObject(System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">Der Schlüssel, der eine bestimmte Ressource identifiziert.</param>
+        <param name="culture">Die Kultur, die einen lokalisierten Wert für die Ressource identifiziert.</param>
+        <summary>Gibt ein Ressourcenobjekt für den Schlüssel und die Kultur zurück.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , enthält den Ressourcenwert für die <paramref name="resourceKey" /> und <paramref name="culture" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Implementierung der <xref:System.Web.Compilation.IResourceProvider.GetObject%2A> Methodenrückgabe den lokalisierten Wert für ein Ressourcenschlüssel basierend auf der aktuellen Kultur. Die implementierende Klasse abrufen konnte die <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> Eigenschaft, wenn kein Wert für die `culture` Parameter nicht übergeben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine benutzerdefinierte Ressourcenanbieterfactory, die zwischengespeicherten Werte abruft. Die Ressourcenanbieterfactory erstellt eine Instanz eines benutzerdefinierten Ressourcenanbieters, die implementiert <xref:System.Web.Compilation.IResourceProvider>. Der Ressourcenanbieter enthält eine benutzerdefinierte <xref:System.Web.Compilation.IResourceProvider.GetObject%2A> Methode.  
+  
+ [!code-csharp[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceReader">
+      <MemberSignature Language="C#" Value="public System.Resources.IResourceReader ResourceReader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Resources.IResourceReader ResourceReader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.IResourceProvider.ResourceReader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.IResourceReader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt zum Lesen von Ressourcenwerte aus einer Quelle ab.</summary>
+        <value>Die <see cref="T:System.Resources.IResourceReader" /> der aktuellen Ressourcenanbieter zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Resources.IResourceReader> Objekt liest die sequenziellen Name/Wert-Paare aus einer Quelle. Die <xref:System.Resources.ResourceReader> und <xref:System.Resources.ResXResourceReader> Klassen bieten standardmäßige <xref:System.Resources.IResourceReader> bzw. schnittstellenimplementierung zum Lesen von Resources und RESX-Dateien. Andere Implementierungen von der <xref:System.Web.Compilation.IResourceProvider> Schnittstelle konnte aus beliebigen Quellen, die Ressourcenwerte gelesen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine benutzerdefinierte Ressourcenanbieterfactory, die zwischengespeicherten Werte abruft. Die Ressourcenanbieterfactory erstellt eine Instanz eines benutzerdefinierten Ressourcenanbieters, die implementiert <xref:System.Web.Compilation.IResourceProvider>. Der Ressourcenanbieter enthält eine benutzerdefinierte <xref:System.Web.Compilation.IResourceProvider.ResourceReader%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

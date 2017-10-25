@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Persistence">
+  <Docs>
+    <summary>Die <see cref="N:System.ServiceModel.Persistence" /> -Namespace enthält Klassen, mit denen Workflowdienste (WCF-Dienste als Workflows implementiert) in den persistenten Speicher beibehalten werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

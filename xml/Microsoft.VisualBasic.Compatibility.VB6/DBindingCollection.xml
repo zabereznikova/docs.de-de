@@ -1,0 +1,286 @@
+<Type Name="DBindingCollection" FullName="Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection">
+  <TypeSignature Language="C#" Value="public interface DBindingCollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DBindingCollection implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Schnittstelle, um mit COM-basierten Datenbindung in einer Anwendung ein Upgrade von Visual Basic 6.0 zu ersetzen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+    </remarks>
+    <altCompliant cref="T:System.Windows.Forms.BindingsCollection" />
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Compatibility.VB6.DBinding Add (object obj, string propertyName, string dataField, Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp dataFormat = null, string key = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance class Microsoft.VisualBasic.Compatibility.VB6.DBinding Add(object obj, string propertyName, string dataField, class Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp dataFormat, string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.Add(System.Object,System.String,System.String,Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.DBinding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataField" Type="System.String" />
+        <Parameter Name="dataFormat" Type="Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp" />
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein <see cref="T:System.Object" /> , das Daten enthält.</param>
+        <param name="propertyName">Ein <see langword="String" /> , die einen Eigenschaftsnamen enthält.</param>
+        <param name="dataField">Ein <see langword="String" /> , der den Namen eines Datenfelds enthält.</param>
+        <param name="dataFormat">Dies ist optional. Eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp" />-Schnittstelle.</param>
+        <param name="key">Dies ist optional. Ein <see langword="String" /> , der den Schlüsselwert enthält.</param>
+        <summary>Fügt eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding" /> zu einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" />.</summary>
+        <returns>Ein <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding" /> Schnittstelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Auflistung aus Bindungsobjekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtanzahl der Bindungen in der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" />.</summary>
+        <value>Ein <see langword="Integer" /> , der die Anzahl enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataMember">
+      <MemberSignature Language="C#" Value="public string DataMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataMember" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.DataMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Datenelement für ein <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" />.</summary>
+        <value>Eine Zeichenfolge, die den Namen des Datenmembers enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public msdatasrc.DataSource DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class msdatasrc.DataSource DataSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>msdatasrc.DataSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Datenquelle für eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" />.</summary>
+        <value>Ein COM-basierter <see langword="msdatasrc.DataSource" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="T:System.Windows.Forms.BindingSource" />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Compatibility.VB6.DBinding this[object index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Compatibility.VB6.DBinding Item(object)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.DBinding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Eine <see cref="T:System.Object" /> , die den Index darstellt.</param>
+        <summary>Ruft den <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding" /> am angegebenen Index ab.</summary>
+        <value>Ein <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding" /> Schnittstelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object index);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void Remove(object index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Eine <see cref="T:System.Object" /> , die den Index darstellt.</param>
+        <summary>Entfernt eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding" /> -Schnittstelle aus einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateControls">
+      <MemberSignature Language="C#" Value="public void UpdateControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void UpdateControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.UpdateControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die aktuelle Zeile aus der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" /> Datenquelle und setzt den Inhalt der gebundenen Steuerelemente über das Objekt des Objekts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateMode">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Compatibility.VB6.UpdateMode UpdateMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.VisualBasic.Compatibility.VB6.UpdateMode UpdateMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.UpdateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.UpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.UpdateMode" /> für eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" />.</summary>
+        <value>Eine <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.UpdateMode" />-Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

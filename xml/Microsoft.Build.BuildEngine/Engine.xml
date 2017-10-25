@@ -1,0 +1,1022 @@
+<Type Name="Engine" FullName="Microsoft.Build.BuildEngine.Engine">
+  <TypeSignature Language="C#" Value="public class Engine" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Engine extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.Engine" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("This class has been deprecated. Please use Microsoft.Build.Evaluation.ProjectCollection from the Microsoft.Build assembly instead.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die MSBuild-Modul dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem Projekt zu Projekt Abhängigkeiten die <xref:Microsoft.Build.BuildEngine.Engine> verwaltet das Erstellen von Projekten, wodurch zu vermeiden, erstellen das gleiche Ziel im selben Projekt mehr als einmal in einem bestimmten Build.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Engine> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> Methode, um eine Projektdatei zu erstellen. Die <xref:Microsoft.Build.BuildEngine.FileLogger> Klasse wird verwendet, um Informationen in einer Datei protokollieren.  
+  
+ [!code-csharp[msbuild_BuildAProject#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BuildAProject/CS/Program.cs#1)]
+ [!code-vb[msbuild_BuildAProject#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.Engine" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Engine> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> Methode, um eine Projektdatei zu erstellen. Die <xref:Microsoft.Build.BuildEngine.FileLogger> Klasse wird verwendet, um Informationen in einer Datei protokollieren.  
+  
+ [!code-csharp[msbuild_BuildAProject#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BuildAProject/CS/Program.cs#1)]
+ [!code-vb[msbuild_BuildAProject#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Engine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.Engine" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Engine> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> Methode, um eine Projektdatei zu erstellen. Die <xref:Microsoft.Build.BuildEngine.FileLogger> Klasse wird verwendet, um Informationen in einer Datei protokollieren.  
+  
+ [!code-csharp[msbuild_BuildAProject#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BuildAProject/CS/Program.cs#1)]
+ [!code-vb[msbuild_BuildAProject#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Engine (Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.#ctor(Microsoft.Build.BuildEngine.BuildPropertyGroup)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" />
+      </Parameters>
+      <Docs>
+        <param name="globalProperties">Ein <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> , die Eigenschaften darstellt, die an das untergeordnete Modul übergeben werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.Engine" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Engine (Microsoft.Build.BuildEngine.ToolsetDefinitionLocations locations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Build.BuildEngine.ToolsetDefinitionLocations locations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.#ctor(Microsoft.Build.BuildEngine.ToolsetDefinitionLocations)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" />
+      </Parameters>
+      <Docs>
+        <param name="locations">Ein <see cref="T:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" /> -Enumeration, der den Speicherort der Toolsetdefinition angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.Engine" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Engine (string binPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string binPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("If you were simply passing in the .NET Framework location as the BinPath, just change to the parameterless Engine() constructor. Otherwise, you can define custom toolsets in the registry or config file, or by adding elements to the Engine's ToolsetCollection. Then use either the Engine() or Engine(ToolsetLocations) constructor instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="binPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="binPath">Der Pfad zur MSBuild.exe.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.Build.BuildEngine.Engine" /> Klasse mit dem angegebenen <see cref="P:Microsoft.Build.BuildEngine.Engine.BinPath" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Engine (Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, Microsoft.Build.BuildEngine.ToolsetDefinitionLocations locations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, valuetype Microsoft.Build.BuildEngine.ToolsetDefinitionLocations locations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.#ctor(Microsoft.Build.BuildEngine.BuildPropertyGroup,Microsoft.Build.BuildEngine.ToolsetDefinitionLocations)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" />
+        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" />
+      </Parameters>
+      <Docs>
+        <param name="globalProperties">Ein <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> , die Eigenschaften darstellt, die an das untergeordnete Modul übergeben werden.</param>
+        <param name="locations">Ein <see cref="T:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" /> Enumeration gibt den Speicherort der Toolsetdefinition.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.Engine" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Engine (Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, Microsoft.Build.BuildEngine.ToolsetDefinitionLocations locations, int numberOfCpus, string localNodeProviderParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, valuetype Microsoft.Build.BuildEngine.ToolsetDefinitionLocations locations, int32 numberOfCpus, string localNodeProviderParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.#ctor(Microsoft.Build.BuildEngine.BuildPropertyGroup,Microsoft.Build.BuildEngine.ToolsetDefinitionLocations,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" />
+        <Parameter Name="locations" Type="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" />
+        <Parameter Name="numberOfCpus" Type="System.Int32" />
+        <Parameter Name="localNodeProviderParameters" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="globalProperties">Ein <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> , die Eigenschaften darstellt, die an das untergeordnete Modul übergeben werden.</param>
+        <param name="locations">Ein <see cref="T:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" /> Enumeration gibt den Speicherort der Toolsetdefinition.</param>
+        <param name="numberOfCpus">Eine ganze Zahl, die die Anzahl der Prozessoren oder Kerne im System angibt.</param>
+        <param name="localNodeProviderParameters">Eine Zeichenfolge mit Parametern, die verwendet werden, so konfigurieren Sie die [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] Modul. Sie müssen die Parameter wie formatieren <c>ParameterName</c>=<c>%ParameterValue</c>. Der gültige vom durch Semikolons getrennte, optionalen Parameter lauten wie folgt:  
+  
+ <see langword="MSBUILDLOCATION" />Gibt an, wo die während des Erstellungsprozesses MSBuild.exe erhalten. Dieser Pfad ermöglicht die [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] Datenbankmoduls MSBuild.exe suchen und starten Sie ihn als lokalen Knoten. <see langword="MSBUILDLOCATION" />ist der einzige unbedingt erforderliche Parameter für einen Host an. Der Standardwert ist C:\Windows\Microsoft.Net\Framework\v3.5\\.  
+  
+ <see langword="NODEREUSE" />Gibt an, ob die untergeordneten Knoten nach Abschluss des Buildvorgangs bleiben soll, für den Fall, dass sie später von einem anderen Build verwendet werden können. Die Knoten werden automatisch nach einer Minute nicht verwendet wurden verworfen. Der Standardwert ist <see langword="true" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.Engine" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BinPath">
+      <MemberSignature Language="C#" Value="public string BinPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BinPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Engine.BinPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Avoid setting BinPath. If you were simply passing in the .NET Framework location as the BinPath, no other action is necessary. Otherwise, define Toolsets instead in the registry or config file, or by adding elements to the Engine's ToolsetCollection, in order to use a custom BinPath.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad für MSBuild.exe fest.</summary>
+        <value>Der Pfad zur MSBuild.exe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] 3.5 verwendet wird, die "Anwendungsbasis" wird ersetzt durch "ToolsPath." Aus diesem Grund in die. TARGETS-Datei, MSBuildToolsPath statt MBBuildBinPath verwenden. In der [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] Objektmodell "Anwendungsbasis" bezieht sich auf das Toolset, das Sie ausführen. Die Schritte zum Abrufen des Pfads vom Buildmodul lauten folgendermaßen:  
+  
+1.  Abgerufen Sie die standardmäßige Toolsversion werden.  
+  
+2.  Abrufen der Zuordnung Toolset.  
+  
+3.  Suchen Sie das Toolset, das auf der Grundlage der Zeichenfolge in der Zuordnung.  
+  
+4.  Rufen Sie das Toolset.  
+  
+5.  Rufen Sie den Pfad aus Toolsets an.  
+  
+ Dieses Verfahren ist nicht erforderlich, wenn Sie das Modul erstellen. In diesem Fall wissen Sie bereits den Toolsetpfad.  
+  
+ Da Projekte in einer Projektmappe mit unterschiedlichen Toolsets verwenden können, können Sie auch den Pfad von MSBuild.exe aus dem Projekt wie folgt abrufen.  
+  
+```  
+project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue   
+```  
+  
+ Weitere Informationen zu Toolsets finden Sie unter `MSBuild Tool Set (ToolsVersion)`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Engine> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> Methode, um eine Projektdatei zu erstellen. Die <xref:Microsoft.Build.BuildEngine.FileLogger> Klasse wird verwendet, um Informationen in einer Datei protokollieren.  
+  
+ [!code-csharp[msbuild_BuildAProject#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BuildAProject/CS/Program.cs#1)]
+ [!code-vb[msbuild_BuildAProject#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEnabled">
+      <MemberSignature Language="C#" Value="public bool BuildEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BuildEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Engine.BuildEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Erstellung von Zielen im Projekt aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Erstellung von Zielen im Projekt aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProject">
+      <MemberSignature Language="C#" Value="public bool BuildProject (Microsoft.Build.BuildEngine.Project project);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProject(class Microsoft.Build.BuildEngine.Project project) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.Build.BuildEngine.Project" />
+      </Parameters>
+      <Docs>
+        <param name="project">Die <see cref="T:Microsoft.Build.BuildEngine.Project" /> zu erstellen.</param>
+        <summary>Erstellt das angegebene <see cref="T:Microsoft.Build.BuildEngine.Project" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProject">
+      <MemberSignature Language="C#" Value="public bool BuildProject (Microsoft.Build.BuildEngine.Project project, string targetName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProject(class Microsoft.Build.BuildEngine.Project project, string targetName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.Build.BuildEngine.Project" />
+        <Parameter Name="targetName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="project">Die <see cref="T:Microsoft.Build.BuildEngine.Project" /> zu erstellen.</param>
+        <param name="targetName">Die <see langword="Name" /> Attribut des Zielelements zu erstellen.</param>
+        <summary>Erstellt das angegebene Ziel des angegebenen <see cref="T:Microsoft.Build.BuildEngine.Project" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProject">
+      <MemberSignature Language="C#" Value="public bool BuildProject (Microsoft.Build.BuildEngine.Project project, string[] targetNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProject(class Microsoft.Build.BuildEngine.Project project, string[] targetNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.Build.BuildEngine.Project" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="project">Die <see cref="T:Microsoft.Build.BuildEngine.Project" /> zu erstellen.</param>
+        <param name="targetNames">Ein Array mit den <see langword="Name" /> Attribute der Ziel-Elemente zu erstellen.</param>
+        <summary>Erstellt die angegebenen Ziele des angegebenen <see cref="T:Microsoft.Build.BuildEngine.Project" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProject">
+      <MemberSignature Language="C#" Value="public bool BuildProject (Microsoft.Build.BuildEngine.Project project, string[] targetNames, System.Collections.IDictionary targetOutputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProject(class Microsoft.Build.BuildEngine.Project project, string[] targetNames, class System.Collections.IDictionary targetOutputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project,System.String[],System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.Build.BuildEngine.Project" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="project">Die <see cref="T:Microsoft.Build.BuildEngine.Project" /> zu erstellen.</param>
+        <param name="targetNames">Ein Array mit den <see langword="Name" /> Attribute der Ziel-Elemente zu erstellen.</param>
+        <param name="targetOutputs">Die Ausgaben der erstellten Ziele. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) Wenn Ausgaben nicht erforderlich sind.</param>
+        <summary>Erstellt die angegebenen Ziele des angegebenen <see cref="T:Microsoft.Build.BuildEngine.Project" />, und gibt die Ausgaben der Ziele zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProject">
+      <MemberSignature Language="C#" Value="public bool BuildProject (Microsoft.Build.BuildEngine.Project project, string[] targetNames, System.Collections.IDictionary targetOutputs, Microsoft.Build.BuildEngine.BuildSettings buildFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProject(class Microsoft.Build.BuildEngine.Project project, string[] targetNames, class System.Collections.IDictionary targetOutputs, valuetype Microsoft.Build.BuildEngine.BuildSettings buildFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project,System.String[],System.Collections.IDictionary,Microsoft.Build.BuildEngine.BuildSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.Build.BuildEngine.Project" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
+        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" />
+      </Parameters>
+      <Docs>
+        <param name="project">Die <see cref="T:Microsoft.Build.BuildEngine.Project" /> zu erstellen.</param>
+        <param name="targetNames">Ein Array mit den <see langword="Name" /> Attribute der Ziel-Elemente zu erstellen.</param>
+        <param name="targetOutputs">Die Ausgaben der erstellten Ziele. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) Wenn Ausgaben nicht erforderlich sind.</param>
+        <param name="buildFlags">Die <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> für den Build angewendet.</param>
+        <summary>Erstellt die angegebenen Ziele des angegebenen <see cref="T:Microsoft.Build.BuildEngine.Project" /> mit dem angegebenen <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" />, und gibt die Ausgaben der Ziele zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="BuildProjectFile">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Lädt die angegebene Projektdatei und erstellt das Projekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Engine> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> Methode, um eine Projektdatei zu erstellen. Die <xref:Microsoft.Build.BuildEngine.FileLogger> Klasse wird verwendet, um Informationen in einer Datei protokollieren.  
+  
+ [!code-csharp[msbuild_BuildAProject#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BuildAProject/CS/Program.cs#1)]
+ [!code-vb[msbuild_BuildAProject#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="BuildProjectFile">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFile (string projectFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProjectFile(string projectFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Die Projektdatei zu laden und zu erstellen.</param>
+        <summary>Lädt die angegebene Projektdatei und erstellt das Projekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Engine> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> Methode, um eine Projektdatei zu erstellen. Die <xref:Microsoft.Build.BuildEngine.FileLogger> Klasse wird verwendet, um Informationen in einer Datei protokollieren.  
+  
+ [!code-csharp[msbuild_BuildAProject#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BuildAProject/CS/Program.cs#1)]
+ [!code-vb[msbuild_BuildAProject#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProjectFile">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFile (string projectFile, string targetName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProjectFile(string projectFile, string targetName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Die Projektdatei zu laden und zu erstellen.</param>
+        <param name="targetName">Die <see langword="Name" /> Attribut des Zielelements zu erstellen.</param>
+        <summary>Lädt die angegebene Projektdatei und erstellt das angegebene Ziel des Projekts.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProjectFile">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFile (string projectFile, string[] targetNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProjectFile(string projectFile, string[] targetNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Die Projektdatei zu laden und zu erstellen.</param>
+        <param name="targetNames">Ein Array mit den <see langword="Name" /> Attribute der Ziel-Elemente zu erstellen.</param>
+        <summary>Lädt die angegebene Projektdatei und erstellt die angegebenen Ziele des Projekts.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProjectFile">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFile (string projectFile, string[] targetNames, Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProjectFile(string projectFile, string[] targetNames, class Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[],Microsoft.Build.BuildEngine.BuildPropertyGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Die Projektdatei zu laden und zu erstellen.</param>
+        <param name="targetNames">Ein Array mit den <see langword="Name" /> Attribute der Ziel-Elemente zu erstellen.</param>
+        <param name="globalProperties">Die <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" /> für den Build angewendet.</param>
+        <summary>Lädt die angegebene Projektdatei und erstellt die angegebenen Ziele des Projekts mit dem angegebenen <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" />, und gibt die Ausgaben der Ziele zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProjectFile">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFile (string projectFile, string[] targetNames, Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, System.Collections.IDictionary targetOutputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProjectFile(string projectFile, string[] targetNames, class Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, class System.Collections.IDictionary targetOutputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[],Microsoft.Build.BuildEngine.BuildPropertyGroup,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" />
+        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Die Projektdatei zu laden und zu erstellen.</param>
+        <param name="targetNames">Ein Array mit den <see langword="Name" /> Attribute der Ziel-Elemente zu erstellen.</param>
+        <param name="globalProperties">Die <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" /> für den Build angewendet.</param>
+        <param name="targetOutputs">Die Ausgaben der erstellten Ziele. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) Wenn Ausgaben nicht erforderlich sind.</param>
+        <summary>Lädt die angegebene Projektdatei und erstellt die angegebenen Ziele des Projekts mit dem angegebenen <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" />, und gibt die Ausgaben der Ziele zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProjectFile">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFile (string projectFile, string[] targetNames, Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, System.Collections.IDictionary targetOutputs, Microsoft.Build.BuildEngine.BuildSettings buildFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProjectFile(string projectFile, string[] targetNames, class Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, class System.Collections.IDictionary targetOutputs, valuetype Microsoft.Build.BuildEngine.BuildSettings buildFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[],Microsoft.Build.BuildEngine.BuildPropertyGroup,System.Collections.IDictionary,Microsoft.Build.BuildEngine.BuildSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" />
+        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
+        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Die Projektdatei zu laden und zu erstellen.</param>
+        <param name="targetNames">Ein Array mit den <see langword="Name" /> Attribute der Ziel-Elemente zu erstellen.</param>
+        <param name="globalProperties">Die <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" /> für den Build angewendet.</param>
+        <param name="targetOutputs">Die Ausgaben der erstellten Ziele. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) Wenn Ausgaben nicht erforderlich sind.</param>
+        <param name="buildFlags">Die <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> für den Build angewendet.</param>
+        <summary>Lädt die angegebene Projektdatei und erstellt die angegebenen Ziele des Projekts mit dem angegebenen <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> und <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" />, und gibt die Ausgaben der Ziele zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProjectFile">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFile (string projectFile, string[] targetNames, Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, System.Collections.IDictionary targetOutputs, Microsoft.Build.BuildEngine.BuildSettings buildFlags, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProjectFile(string projectFile, string[] targetNames, class Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, class System.Collections.IDictionary targetOutputs, valuetype Microsoft.Build.BuildEngine.BuildSettings buildFlags, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[],Microsoft.Build.BuildEngine.BuildPropertyGroup,System.Collections.IDictionary,Microsoft.Build.BuildEngine.BuildSettings,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="globalProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" />
+        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
+        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Der Name des Projekts zu erstellen.</param>
+        <param name="targetNames">Ein <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> verschiedene Ziele für jedes Projekt. Kann <see langword="null" /> die Standardziele für das Projekt erstellt werden sollen.</param>
+        <param name="globalProperties">Ein <see cref="T:System.Collections.IDictionary" /> Array von Eigenschaften für jedes Projekt. Kann <see langword="null" /> , wenn keine globalen Eigenschaften erforderlich sind.</param>
+        <param name="targetOutputs">Ein <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> Array von Tabellen für die Zielausgaben. Kann <see langword="null" /> wenn Ausgaben nicht erforderlich sind.</param>
+        <param name="buildFlags">Ein Zeichenfolgenarray von zusätzliche Flags.</param>
+        <param name="toolsVersion">Die ToolsVersion, um auf das Projekt im Build zu erzwingen.</param>
+        <summary>Eine Projektdatei wird vom Datenträger geladen und erstellt die angegebenen Ziele.</summary>
+        <returns>
+          <see langword="true" />Wenn der Build erfolgreich ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung nimmt einen Satz von globalen Eigenschaften für jedes Projekt für den Build verwenden, gibt die Zielausgaben und auch ermöglicht dem Aufrufer zusätzliche Flags angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProjectFiles">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFiles (string[] projectFiles, string[][] targetNamesPerProject, Microsoft.Build.BuildEngine.BuildPropertyGroup[] globalPropertiesPerProject, System.Collections.IDictionary[] targetOutputsPerProject, Microsoft.Build.BuildEngine.BuildSettings buildFlags, string[] toolsVersions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool BuildProjectFiles(string[] projectFiles, string[][] targetNamesPerProject, class Microsoft.Build.BuildEngine.BuildPropertyGroup[] globalPropertiesPerProject, class System.Collections.IDictionary[] targetOutputsPerProject, valuetype Microsoft.Build.BuildEngine.BuildSettings buildFlags, string[] toolsVersions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFiles(System.String[],System.String[][],Microsoft.Build.BuildEngine.BuildPropertyGroup[],System.Collections.IDictionary[],Microsoft.Build.BuildEngine.BuildSettings,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFiles" Type="System.String[]" />
+        <Parameter Name="targetNamesPerProject" Type="System.String[][]" />
+        <Parameter Name="globalPropertiesPerProject" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup[]" />
+        <Parameter Name="targetOutputsPerProject" Type="System.Collections.IDictionary[]" />
+        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" />
+        <Parameter Name="toolsVersions" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="projectFiles">Eine Zeichenfolgenliste der zu erstellenden Projektdateien. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="targetNamesPerProject">Ein <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> verschiedene Ziele für jedes Projekt.</param>
+        <param name="globalPropertiesPerProject">Ein <see cref="T:System.Collections.IDictionary" /> Array von Eigenschaften für jedes Projekt. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="targetOutputsPerProject">Ein <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> Array von Tabellen für die Zielausgaben. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="buildFlags">Ein Zeichenfolgenarray von zusätzliche Flags.</param>
+        <param name="toolsVersions">Die ToolsVersion, um auf das Projekt im Build zu erzwingen.</param>
+        <summary>Lädt eine Reihe von Projekt vom Datenträger, und erstellt dann auf die angegebene Liste der Ziele für jedes Projekt.</summary>
+        <returns>
+          <see langword="true" />Wenn das Projekt erfolgreich erstellt. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung nimmt einen Satz von globalen Eigenschaften für jedes Projekt für den Build verwenden, gibt die Zielausgaben und auch ermöglicht dem Aufrufer zusätzliche Flags angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewProject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.Project CreateNewProject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.Project CreateNewProject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.CreateNewProject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.Project</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein leeres <see cref="T:Microsoft.Build.BuildEngine.Project" /> -Objekt, das mit dieser verknüpft ist <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
+        <returns>Das erstellte <see cref="T:Microsoft.Build.BuildEngine.Project" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultToolsVersion">
+      <MemberSignature Language="C#" Value="public string DefaultToolsVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultToolsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Engine.DefaultToolsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Standardwert dieser Buildmodul beide die ToolsVersion.</summary>
+        <value>Eine Zeichenfolge, die standardmäßige ToolsVersion darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ -Projekte verwenden dieser ToolsVersion, wenn sie die ToolsVersion, verwenden Sie andernfalls nicht angewiesen sind. Dieser Wert wird abgerufen, entweder die. exe.config-Datei oder die Registrierung. Wenn weder eine standardmäßige ToolsVersion angeben, ist die Version fest programmiert, dass die Version "2.0". Weitere Informationen zu ToolsVersion finden Sie unter [für bestimmte Versionen von .NET Framework erstellen](http://msdn.microsoft.com/en-us/24a6530c-e837-4774-9da0-6893614524d8).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLoadedProject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.Project GetLoadedProject (string projectFullFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.Project GetLoadedProject(string projectFullFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.GetLoadedProject(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.Project</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFullFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFullFileName">Den vollqualifizierten Pfad zum der Projektdatei, der die <see cref="T:Microsoft.Build.BuildEngine.Project" /> Objekt.</param>
+        <summary>Gibt die <see cref="T:Microsoft.Build.BuildEngine.Project" /> -Objekt, das der angegebenen Projektdatei zugeordnet ist.</summary>
+        <returns>Die <see cref="T:Microsoft.Build.BuildEngine.Project" /> -Objekt, das der angegebenen Projektdatei zugeordnet. Wenn kein <see cref="T:Microsoft.Build.BuildEngine.Project" /> Objekt mit der angegebenen Projektdatei verknüpft ist, gibt die Methode einen null-Verweis zurück (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]).</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalEngine">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.BuildEngine.Engine GlobalEngine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Build.BuildEngine.Engine GlobalEngine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Engine.GlobalEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.Engine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:Microsoft.Build.BuildEngine.Engine" /> , die global (freigegeben) ist für diesen <see cref="T:System.AppDomain" />.</summary>
+        <value>Die <see cref="T:Microsoft.Build.BuildEngine.Engine" /> , die global (freigegeben) ist für diesen <see cref="T:System.AppDomain" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalProperties">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildPropertyGroup GlobalProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.BuildPropertyGroup GlobalProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildPropertyGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Auflistung der globalen Eigenschaften für das Projekt.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> , enthält die globalen Eigenschaften für das Projekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Globale Eigenschaften sind Eigenschaften, die festlegen, indem sind die **"/ Property"** wechseln Sie für die Befehlszeile oder die Eigenschaften, die von der integrierten Entwicklungsumgebung (IDE) festgelegt werden, bevor ein Projekt erstellt wird. Globalen Eigenschaften gelten für alle Projekte, die erstellt werden, mithilfe dieses <xref:Microsoft.Build.BuildEngine.Engine>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBuilding">
+      <MemberSignature Language="C#" Value="public bool IsBuilding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBuilding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Engine.IsBuilding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob ein Projekt gerade erstellt wird.</summary>
+        <value>
+          <see langword="true" />Wenn ein Buildvorgang ausgeführt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann überprüft werden, um zu verhindern, dass ein Projekt geändert wird, während es erstellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyLogCriticalEvents">
+      <MemberSignature Language="C#" Value="public bool OnlyLogCriticalEvents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OnlyLogCriticalEvents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Engine.OnlyLogCriticalEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob nur wichtige Ereignisse, wie Warnungen und Fehler, während der Builderstellung protokolliert.</summary>
+        <value>
+          <see langword="true" />Wenn nur wichtige Ereignisse protokolliert werden sollen; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterDistributedLogger">
+      <MemberSignature Language="C#" Value="public void RegisterDistributedLogger (Microsoft.Build.Framework.ILogger centralLogger, Microsoft.Build.BuildEngine.LoggerDescription forwardingLogger);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterDistributedLogger(class Microsoft.Build.Framework.ILogger centralLogger, class Microsoft.Build.BuildEngine.LoggerDescription forwardingLogger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.RegisterDistributedLogger(Microsoft.Build.Framework.ILogger,Microsoft.Build.BuildEngine.LoggerDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="centralLogger" Type="Microsoft.Build.Framework.ILogger" />
+        <Parameter Name="forwardingLogger" Type="Microsoft.Build.BuildEngine.LoggerDescription" />
+      </Parameters>
+      <Docs>
+        <param name="centralLogger">Eine <see cref="T:Microsoft.Build.Framework.ILogger" /> , die die zentrale Protokollierung darstellt.</param>
+        <param name="forwardingLogger">Ein <see cref="T:Microsoft.Build.BuildEngine.LoggerDescription" /> , die die weiterleitungsprotokollierung darstellt.</param>
+        <summary>Register verteilte Protokollierungen mit dem Buildmodul.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher. Um uniform Verhalten zu gewährleisten, sollten alle Protokollierungen registrieren, bevor der Build gestartet wird. Weitere Informationen finden Sie unter [Schreiben von Multi-Processor-Aware Protokollierungen](http://msdn.microsoft.com/library/ff987d1b-1798-4803-9ef6-cc8fcc263516).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterLogger">
+      <MemberSignature Language="C#" Value="public void RegisterLogger (Microsoft.Build.Framework.ILogger logger);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterLogger(class Microsoft.Build.Framework.ILogger logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.RegisterLogger(Microsoft.Build.Framework.ILogger)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="logger" Type="Microsoft.Build.Framework.ILogger" />
+      </Parameters>
+      <Docs>
+        <param name="logger">Die Protokollierung zum Zuordnen der <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</param>
+        <summary>Registriert die angegebene Protokollierung mit der <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Protokollierung registriert wird, mit der <xref:Microsoft.Build.BuildEngine.Engine>, sie allen Buildereignissen empfängt.  
+  
+ Verwenden Sie zum Aufheben der Registrierung Protokollierungen die <xref:Microsoft.Build.BuildEngine.Engine.UnregisterAllLoggers%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Engine> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> Methode, um eine Projektdatei zu erstellen. Die <xref:Microsoft.Build.BuildEngine.FileLogger> Klasse wird verwendet, um Informationen in einer Datei protokollieren.  
+  
+ [!code-csharp[msbuild_BuildAProject#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BuildAProject/CS/Program.cs#1)]
+ [!code-vb[msbuild_BuildAProject#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn der Host mit diesem Buildmodul fertig ist. Er hebt die Registrierung Protokollierungen und Knoten heruntergefahren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Toolsets">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.ToolsetCollection Toolsets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.ToolsetCollection Toolsets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Engine.Toolsets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.ToolsetCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt fest oder ruft die Auflistung der Toolsets, die von dieser Instanz des Datenbankmoduls Build erkannt werden.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" /> Tools Sätze von dieser Instanz des Datenbankmoduls erkannt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu ToolSets finden Sie unter [für bestimmte Versionen von .NET Framework erstellen](http://msdn.microsoft.com/en-us/24a6530c-e837-4774-9da0-6893614524d8).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnloadAllProjects">
+      <MemberSignature Language="C#" Value="public void UnloadAllProjects ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnloadAllProjects() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.UnloadAllProjects" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Verweise auf <see cref="T:Microsoft.Build.BuildEngine.Project" /> Objekte aus der <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnloadProject">
+      <MemberSignature Language="C#" Value="public void UnloadProject (Microsoft.Build.BuildEngine.Project project);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnloadProject(class Microsoft.Build.BuildEngine.Project project) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.UnloadProject(Microsoft.Build.BuildEngine.Project)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.Build.BuildEngine.Project" />
+      </Parameters>
+      <Docs>
+        <param name="project">Der <see cref="T:Microsoft.Build.BuildEngine.Project" />, der aus der <see cref="T:Microsoft.Build.BuildEngine.Engine" /> entfernt werden soll.</param>
+        <summary>Entfernt den Verweis auf den angegebenen <see cref="T:Microsoft.Build.BuildEngine.Project" /> aus der <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterAllLoggers">
+      <MemberSignature Language="C#" Value="public void UnregisterAllLoggers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnregisterAllLoggers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Engine.UnregisterAllLoggers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hebt die Registrierung auf alle Protokollierungen aus der <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.Build.BuildEngine.Engine.UnregisterAllLoggers%2A> Methodenaufrufe der <xref:Microsoft.Build.Framework.ILogger.Shutdown%2A> -Methode für jedes registrierte Protokollierungsmodul vor dem Aufheben der Registrierung für jede von ihnen aus dem <xref:Microsoft.Build.BuildEngine.Engine>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Engine> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> Methode, um eine Projektdatei zu erstellen. Die <xref:Microsoft.Build.BuildEngine.FileLogger> Klasse wird verwendet, um Informationen in einer Datei protokollieren.  
+  
+ [!code-csharp[msbuild_BuildAProject#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BuildAProject/CS/Program.cs#1)]
+ [!code-vb[msbuild_BuildAProject#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public static Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Engine.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version der <see cref="T:Microsoft.Build.BuildEngine.Engine" /> ab.</summary>
+        <value>Die Version der <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

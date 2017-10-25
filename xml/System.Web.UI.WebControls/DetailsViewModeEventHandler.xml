@@ -1,0 +1,47 @@
+<Type Name="DetailsViewModeEventHandler" FullName="System.Web.UI.WebControls.DetailsViewModeEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DetailsViewModeEventHandler(object sender, DetailsViewModeEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DetailsViewModeEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewModeEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.DetailsViewModeEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.DetailsViewModeEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die <see cref="E:System.Web.UI.WebControls.DetailsView.ModeChanging" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DetailsView.ModeChanging> Ereignis wird ausgelöst, wenn eine <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement versucht, wechseln zwischen bearbeiten, einfügen und nur-Lese-Modus, jedoch bevor der Modus tatsächlich ändert. Dadurch können Sie einen Ereignishandler bereitstellen, die führt eine benutzerdefinierte Routine, z. B. das Konfigurieren der <xref:System.Web.UI.WebControls.DetailsView> für einen bestimmten Modus zu steuern oder die Änderung Modus abbrechen, wenn dieses Ereignis tritt auf.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.DetailsViewModeEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuert hinzufügen eine <xref:System.Web.UI.WebControls.DetailsViewModeEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.DetailsView.ModeChanging> -Ereignis für ein <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ [!code-aspx-csharp[DetailsViewModeEventHandlerInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewModeEventHandlerInline/CS/detailsviewmodeeventhandlerinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewModeEventHandlerInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewModeEventHandlerInline/VB/detailsviewmodeeventhandlerinlinevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie deklarativ hinzufügen, eine <xref:System.Web.UI.WebControls.DetailsViewModeEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.DetailsView.ModeChanging> -Ereignis für eine <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ [!code-aspx-csharp[DetailsViewModeEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewModeEventHandler/CS/detailsviewmodeeventhandlercs.aspx#1)]
+ [!code-aspx-vb[DetailsViewModeEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewModeEventHandler/VB/detailsviewmodeeventhandlervb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

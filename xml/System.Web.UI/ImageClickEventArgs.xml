@@ -1,0 +1,151 @@
+<Type Name="ImageClickEventArgs" FullName="System.Web.UI.ImageClickEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ImageClickEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ImageClickEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ImageClickEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für alle Ereignisse, die auftreten, wenn ein Benutzer z. B. eine abbildbasierte ASP.NET-Serversteuerelement, klickt der <see cref="T:System.Web.UI.HtmlControls.HtmlInputImage" /> oder <see cref="T:System.Web.UI.WebControls.ImageButton" /> Serversteuerelemente. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse übergibt den Speicherort, in denen ein Benutzer geklickt hat, eine <xref:System.Web.UI.HtmlControls.HtmlInputImage> -Steuerelement oder ein <xref:System.Web.UI.WebControls.ImageButton> -Webserversteuerelement. Klicken auf eine <xref:System.Web.UI.HtmlControls.HtmlInputImage> Webserversteuerelement bewirkt, dass eine <xref:System.Web.UI.HtmlControls.HtmlInputImage.ServerClick> Ereignis auftritt, während Sie auf eine <xref:System.Web.UI.WebControls.ImageButton> Webserversteuerelement bewirkt, dass ein <xref:System.Web.UI.WebControls.ImageButton.Click> Ereignis auftritt. Ereignishandler können dann um programmgesteuert auf das Ereignis anhand des Werts, der diese Koordinaten zu reagieren.  
+  
+> [!NOTE]
+>  Die Ursprungskoordinaten (0,0) befinden sich in der oberen linken Ecke des Bilds.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine ASP.NET-Seite auf, die von dieser Klasse bereitgestellten Informationen verwendet, die Koordinaten der Klick eines Benutzers auf ein Bild angezeigt werden sollen.  
+  
+ [!code-csharp[SystemWebUI.ImageClickEventArgs Sample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI.ImageClickEventArgs Sample/CS/imageclickeventargscs.aspx#1)]
+ [!code-vb[SystemWebUI.ImageClickEventArgs Sample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI.ImageClickEventArgs Sample/VB/imageclickeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageClickEventArgs (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ImageClickEventArgs.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate, in denen der Benutzer eine abbildbasierte ASP.NET-Serversteuerelement geklickt hat.</param>
+        <param name="y">Die y-Koordinate, in denen der Benutzer eine abbildbasierte ASP.NET-Serversteuerelement geklickt hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.ImageClickEventArgs" /> -Klasse unter Verwendung der <paramref name="x" /> und <paramref name="y" /> Parameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageClickEventArgs (int x, int y, double xRaw, double yRaw);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 x, int32 y, float64 xRaw, float64 yRaw) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ImageClickEventArgs.#ctor(System.Int32,System.Int32,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="xRaw" Type="System.Double" />
+        <Parameter Name="yRaw" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate, in denen ein Benutzer eine abbildbasierte ASP.NET-Serversteuerelement geklickt hat.</param>
+        <param name="y">Die y-Koordinate, in denen ein Benutzer eine abbildbasierte ASP.NET-Serversteuerelement geklickt hat.</param>
+        <param name="xRaw">Die unformatierte X-Koordinate, in denen ein Benutzer eine abbildbasierte ASP.NET-Serversteuerelement geklickt hat.</param>
+        <param name="yRaw">Die unformatierte y-Koordinate, in denen ein Benutzer eine abbildbasierte ASP.NET-Serversteuerelement geklickt hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.ImageClickEventArgs" /> -Klasse unter Verwendung der <paramref name="x" />, <paramref name="y" />, <paramref name="xRaw" />, und <paramref name="yRaw" /> Parameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public int X;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 X" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ImageClickEventArgs.X" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine ganze Zahl, die die X-Koordinate darstellt, in denen ein Benutzer eine abbildbasierte ASP.NET-Serversteuerelement geklickt hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XRaw">
+      <MemberSignature Language="C#" Value="public double XRaw;" />
+      <MemberSignature Language="ILAsm" Value=".field public float64 XRaw" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ImageClickEventArgs.XRaw" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine ganze Zahl, die die Rohdaten X-Koordinate darstellt, in denen ein Benutzer eine abbildbasierte ASP.NET-Serversteuerelement geklickt hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public int Y;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 Y" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ImageClickEventArgs.Y" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine ganze Zahl, die die y-Koordinate darstellt, in denen ein Benutzer eine abbildbasierte ASP.NET-Serversteuerelement geklickt hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YRaw">
+      <MemberSignature Language="C#" Value="public double YRaw;" />
+      <MemberSignature Language="ILAsm" Value=".field public float64 YRaw" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ImageClickEventArgs.YRaw" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine ganze Zahl, die die Rohdaten y-Koordinate darstellt, in denen ein Benutzer eine abbildbasierte ASP.NET-Serversteuerelement geklickt hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1978 @@
+<Type Name="DbConnectionStringBuilder" FullName="System.Data.Common.DbConnectionStringBuilder">
+  <TypeSignature Language="C#" Value="public class DbConnectionStringBuilder : System.Collections.IDictionary, System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DbConnectionStringBuilder extends System.Object implements class System.Collections.ICollection, class System.Collections.IDictionary, class System.Collections.IEnumerable, class System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DbConnectionStringBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ICustomTypeDescriptor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Basisklasse für stark typisierte Verbindungszeichenfolgen-Generatoren bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.DbConnectionStringBuilder> Klasse stellt die Basisklasse, die aus dem string stark typisierte Verbindungszeichenfolgen-Generatoren bereit (<xref:System.Data.SqlClient.SqlConnectionStringBuilder>, <xref:System.Data.OleDb.OleDbConnectionStringBuilder>usw.) abgeleitet werden. Die Verbindungszeichenfolgen-Generatoren können Entwickler programmgesteuert syntaktisch korrekte Verbindungszeichenfolgen zu erstellen und zu analysieren und neu erstellen vorhandene Verbindungszeichenfolgen.  
+  
+ Die <xref:System.Data.Common.DbConnectionStringBuilder> in einer Weise Unabhängigkeit von der Datenbank definiert wurde. Durch das Hinzufügen von der <xref:System.Data.Common> Namespace Entwickler erfordern eine Basisklasse für die Programmierung, um Verbindungszeichenfolgen zu erstellen, die für eine beliebige Datenbank arbeiten können. Aus diesem Grund die <xref:System.Data.Common.DbConnectionStringBuilder> Klasse kann Benutzer beliebige Schlüssel-/Wertpaaren zuweisen und die resultierende Verbindungszeichenfolge zu einem stark typisierten Anbieter übergeben. Alle Datenanbieter, die als Bestandteil von .NET Framework enthalten sind, bieten eine stark typisierte Klasse, die von erben <xref:System.Data.Common.DbConnectionStringBuilder>: <xref:System.Data.SqlClient.SqlConnectionStringBuilder>, <xref:System.Data.OracleClient.OracleConnectionStringBuilder>, <xref:System.Data.Odbc.OdbcConnectionStringBuilder>, und <xref:System.Data.OleDb.OleDbConnectionStringBuilder>.  
+  
+ Der Entwickler kann erstellen, zuweisen und Bearbeiten von Verbindungszeichenfolgen für einen beliebigen Anbieter. Für Anbieter, die bestimmte Schlüssel/Wert-Paare zu unterstützen, bietet der Verbindungszeichenfolgen-Generator stark typisierte Eigenschaften mit den bekannten Paaren entsprechen. Um den Anbieter zu unterstützen, die die Fähigkeit zur Unterstützung der unbekannte Werte erfordern, können Entwickler auch beliebige Schlüssel/Wert-Paare angeben.  
+  
+ Die <xref:System.Data.Common.DbConnectionStringBuilder>-Klasse implementiert die <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle. Dies bedeutet, dass die Klasse mit Visual Studio-Designer zur Entwurfszeit funktioniert. Wenn Entwickler den Designer zum Erstellen von DataSets mit starker Typisierung und stark typisierte Verbindungen innerhalb von Visual Studio verwenden, zeigt die Eigenschaften für den Typ und Typkonverter, die können außerdem müssen die stark typisierte Verbindungszeichenfolgen-Generatorklasse Ordnen Sie häufig verwendete Werte für die bekannten Schlüssel.  
+  
+ Entwickler, die Verbindungszeichenfolgen zu erstellen, die Teil von Anwendungen verwenden kann, müssen die <xref:System.Data.Common.DbConnectionStringBuilder> Klasse oder eine ihrer stark typisierte Ableitung Verbindungszeichenfolgen zu erstellen. Die <xref:System.Data.Common.DbConnectionStringBuilder> Klasse vereinfacht auch die in einer Anwendungskonfigurationsdatei gespeicherte Verbindungszeichenfolgen zu verwalten.  
+  
+ Entwickler können Verbindungszeichenfolgen, die entweder eine stark typisierte Verbindungszeichenfolgen-Generatorklasse erstellen, oder sie können die <xref:System.Data.Common.DbConnectionStringBuilder> Klasse. Die <xref:System.Data.Common.DbConnectionStringBuilder> führt keine Überprüfungen auf gültige Schlüssel-Wert-Paare. Daher ist es mit dieser Klasse möglich, ungültige Verbindungszeichenfolgen zu erstellen. Die <xref:System.Data.SqlClient.SqlConnectionStringBuilder> unterstützt nur Schlüssel/Wert-Paaren, die von SQL Server unterstützt werden, die versuchen, ungültige Paare hinzuzufügen, wird eine Ausnahme ausgelöst.  
+  
+ Sowohl die <xref:System.Data.Common.DbConnectionStringBuilder.Add%2A> Methode und <xref:System.Data.Common.DbConnectionStringBuilder.Item%2A> -Eigenschaft behandeln Versuche, Einfügung von böswilligen Einträgen. Der folgende Code schützt beispielsweise ordnungsgemäß geschachtelte Schlüssel/Wert-Paar:  
+  
+```vb  
+Dim builder As New System.Data.Common.DbConnectionStringBuilder  
+builder("Data Source") = "(local)"  
+builder("integrated sSecurity") = True  
+builder("Initial Catalog") = "AdventureWorks;NewValue=Bad"  
+```  
+  
+```csharp  
+System.Data.Common.DbConnectionStringBuilder builder =   
+    new System.Data.Common.DbConnectionStringBuilder();  
+builder["Data Source"] = "(local)";  
+builder["integrated Security"] = true;  
+builder["Initial Catalog"] = "AdventureWorks;NewValue=Bad";  
+```  
+  
+ Das Ergebnis ist die folgende Verbindungszeichenfolge, die den ungültigen Wert sicher behandelt:  
+  
+```  
+data source=(local);integrated security=True;  
+initial catalog="AdventureWorks;NewValue=Bad"  
+```  
+  
+   
+  
+## Examples  
+ Die folgende Konsolenanwendung erstellt zwei Verbindungszeichenfolgen, eine für Microsoft Jet-Datenbank und eine für eine [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] Datenbank. In jedem Fall verwendet der Code eine generische <xref:System.Data.Common.DbConnectionStringBuilder> Klasse zum Erstellen der Verbindungszeichenfolge und übergibt dann die <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString%2A> Eigenschaft von der <xref:System.Data.Common.DbConnectionStringBuilder> Instanz an den Konstruktor der stark typisierten Verbindungsklasse. Dies ist nicht erforderlich; der Code konnte auch einzelne stark typisierte Verbindungszeichenfolgen-Generator Zeichenfolgeninstanzen erstellt haben. Auch eine vorhandene Verbindungszeichenfolge analysiert, und zeigt verschiedene Möglichkeiten für das Bearbeiten des Inhalts der Verbindungszeichenfolge.  
+  
+ [!code-csharp[DataWorks DbConnectionStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DbConnectionStringBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Common.DbConnectionStringBuilder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DbConnectionStringBuilder (bool useOdbcRules);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool useOdbcRules) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="useOdbcRules" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useOdbcRules">
+          <see langword="true" /> zum Begrenzen von Feldern mit {}, <see langword="false" /> zum Verwenden von Anführungszeichen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Common.DbConnectionStringBuilder" />-Klasse, wobei optional ODBC-Regeln zum Zitieren von Werten verwendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `useOdbcRules` ist `true`, gibt diese <xref:System.Data.Common.DbConnectionStringBuilder> verwendet ODBC-Regeln zum Zitieren von Werten (Werte mit geschweiften Klammern ({})). Wenn `useOdbcRules` ist `false`, gibt diese <xref:System.Data.Common.DbConnectionStringBuilder> verwendet Anführungszeichen ("") zur Begrenzung von Werten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string keyword, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string keyword, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">Der <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> hinzuzufügende Schlüssel.</param>
+        <param name="value">Der Wert des angegebenen Schlüssels.</param>
+        <summary>Fügt dem <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> einen Eintrag mit dem angegebenen Schlüssel und Wert hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.DbConnectionStringBuilder.Item%2A> Eigenschaft kann auch verwendet werden, um neue Elemente hinzufügen, indem Sie den Wert eines Schlüssels, das nicht existiert im Wörterbuch festlegen. Beispiel: `myCollection["myNonexistentKey"] = myValue`.  
+  
+ Aufrufen der <xref:System.Data.Common.DbConnectionStringBuilder.Add%2A> Methode durch Übergeben eines Nullschlüssels (`Nothing` in Visual Basic) wird ein <xref:System.ArgumentNullException>. Bei Aufruf der <xref:System.Data.Common.DbConnectionStringBuilder.Add%2A> Methode einen null-Wert übergeben, indem entfernt das Schlüssel/Wert-Paar.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.Common.DbConnectionStringBuilder> und fügt Elemente hinzu. Der Code veranschaulicht auch das Überschreiben eines vorhandenen Elements mithilfe der <xref:System.Data.Common.DbConnectionStringBuilder.Add%2A> -Methode, und enthält einen kommentierten Block, der eine Ausnahme ausgelöst ein <xref:System.ArgumentNullException>.  
+  
+> [!NOTE]
+>  Das Beispiel umfasst ein Kennwort zur Veranschaulichung der Funktion von <xref:System.Data.Common.DbConnectionStringBuilder> mit Verbindungszeichenfolgen. In den Anwendungen wird die Verwendung der Windows-Authentifizierung empfohlen. Wenn Sie ein Kennwort verwenden müssen, schließen Sie kein hartcodiertes Kennwort in die Anwendung ein.  
+  
+ [!code-csharp[DataWorks DbConnectionStringBuilder.Add#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.Add/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder.Add#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.Add/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Data.Common.DbConnectionStringBuilder" /> ist schreibgeschützt.  
+  
+ - oder -   
+  
+ <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> hat eine feste Größe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendKeyValuePair">
+      <MemberSignature Language="C#" Value="public static void AppendKeyValuePair (System.Text.StringBuilder builder, string keyword, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AppendKeyValuePair(class System.Text.StringBuilder builder, string keyword, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.AppendKeyValuePair(System.Text.StringBuilder,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+        <Parameter Name="keyword" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="builder">Der <see cref="T:System.Text.StringBuilder" />, dem das Schlüssel-Wert-Paar hinzugefügt werden soll.</param>
+        <param name="keyword">Der hinzuzufügende Schlüssel.</param>
+        <param name="value">Der Wert für den bereitgestellten Schlüssel.</param>
+        <summary>Bietet eine effiziente und sichere Möglichkeit, einen Schlüssel und Wert an ein vorhandenes <see cref="T:System.Text.StringBuilder" />-Objekt anzufügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Methode können Entwickler mithilfe einer <xref:System.Text.StringBuilder> zum Erstellen einer Auflistung von Schlüssel/Wert-Paaren, um die Features nutzen zu können die <xref:System.Data.Common.DbConnectionStringBuilder> Klasse, wenn Sie Schlüssel/Wert-Paare hinzufügen, ohne den Mehraufwand der Erstellung und Verwalten einer <xref:System.Data.Common.DbConnectionStringBuilder> Instanz. Die `AppendKeyValuePair` -Methode den Schlüssel und Wert ordnungsgemäß formatiert und fügt die neue Zeichenfolge mit dem angegebenen <xref:System.Text.StringBuilder>.  
+  
+   
+  
+## Examples  
+ Wenn ein Prozess eine Verbindungszeichenfolge erstellt wurde, jetzt eine Anwendung eine einfache Änderung dieser Verbindungszeichenfolge durchführen muss, ist es möglicherweise effizienter, die Schlüssel/Wert-Paar mit lediglich zu addieren ein <xref:System.Text.StringBuilder> Objekt. Statt ein neues <xref:System.Data.Common.DbConnectionStringBuilder>, können Entwickler Aufrufen der `AppendKeyValuePair` -Methode auf und übergibt eine <xref:System.Text.StringBuilder> , die die bereitgestellte Verbindungszeichenfolge enthält. Das folgende Verfahren zeigt ein einfaches Beispiel für dieses Verfahren.  
+  
+ [!code-csharp[DataWorks DbConnectionStringBuilder.AppendKeyValuePair#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.AppendKeyValuePair/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder.AppendKeyValuePair#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.AppendKeyValuePair/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendKeyValuePair">
+      <MemberSignature Language="C#" Value="public static void AppendKeyValuePair (System.Text.StringBuilder builder, string keyword, string value, bool useOdbcRules);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AppendKeyValuePair(class System.Text.StringBuilder builder, string keyword, string value, bool useOdbcRules) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.AppendKeyValuePair(System.Text.StringBuilder,System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+        <Parameter Name="keyword" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="useOdbcRules" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="builder">Der <see cref="T:System.Text.StringBuilder" />, dem das Schlüssel-Wert-Paar hinzugefügt werden soll.</param>
+        <param name="keyword">Der hinzuzufügende Schlüssel.</param>
+        <param name="value">Der Wert für den bereitgestellten Schlüssel.</param>
+        <param name="useOdbcRules">
+          <see langword="true" />Verwenden Sie zum Begrenzen von Feldern mit {} <see langword="false" /> , Anführungszeichen zu verwenden.</param>
+        <summary>Bietet eine effiziente und sichere Möglichkeit, einen Schlüssel und Wert an ein vorhandenes <see cref="T:System.Text.StringBuilder" />-Objekt anzufügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Methode können Entwickler mithilfe einer <xref:System.Text.StringBuilder> zum Erstellen einer Auflistung von Schlüssel/Wert-Paaren, um die Features nutzen zu können die <xref:System.Data.Common.DbConnectionStringBuilder> Klasse bei der Schlüssel/Wert-Paare hinzufügen, ohne den Mehraufwand der Erstellung und Verwalten einer <xref:System.Data.Common.DbConnectionStringBuilder> Instanz. Die `AppendKeyValuePair` -Methode den Schlüssel und Wert ordnungsgemäß formatiert und fügt die neue Zeichenfolge mit dem angegebenen <xref:System.Text.StringBuilder>.  
+  
+ Obwohl die meisten Datenquellen Begrenzen von Feldern mit Anführungszeichen können, unterstützt ODBC nicht für ODBC-Verbindungszeichenfolgen, müssen Sie die geschweifte Klammern ({}) verwenden. Um die <xref:System.Data.Common.DbConnectionStringBuilder> ODBC-Regeln zum Begrenzen von Feldern verwenden, legen Sie die `useOdbcRules` Parameter `true`.  
+  
+   
+  
+## Examples  
+ Wenn ein Prozess eine Verbindungszeichenfolge erstellt wurde, aber jetzt eine Anwendung eine einfache Änderung dieser Verbindungszeichenfolge durchführen muss, ist es möglicherweise effizienter, lediglich die Schlüssel/Wert-Paar mit addieren ein <xref:System.Text.StringBuilder> Objekt. Statt ein neues <xref:System.Data.Common.DbConnectionStringBuilder>, können Entwickler Aufrufen der `AppendKeyValuePair` -Methode auf und übergibt eine <xref:System.Text.StringBuilder> , die die bereitgestellte Verbindungszeichenfolge enthält. Das folgende Verfahren zeigt ein einfaches Beispiel für dieses Verfahren, mit ODBC-Regeln zum Zitieren von Werten.  
+  
+ [!code-csharp[DataWorks DbConnectionStringBuilder.AppendKeyValuePair#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.AppendKeyValuePair/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder.AppendKeyValuePair#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.AppendKeyValuePair/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrowsableConnectionString">
+      <MemberSignature Language="C#" Value="public bool BrowsableConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BrowsableConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.BrowsableConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="P:System.Data.Common.DbConnectionStringBuilder.ConnectionString" /> Eigenschaft in Visual Studio-Designern sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Verbindungszeichenfolge in Designern sichtbar ist; <see langword="false" /> andernfalls. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entwickler, die Designer erstellen, die nutzen die <xref:System.Data.Common.DbConnectionStringBuilder> Klasse muss in der Lage, die Verbindungszeichenfolge innerhalb des Designers Eigenschaftenraster sichtbar oder unsichtbar zu machen. Die <xref:System.Data.Common.DbConnectionStringBuilder.BrowsableConnectionString%2A> Eigenschaft ermöglicht Entwicklern, die darauf hinweisen, dass die Eigenschaft nicht sichtbar sein soll, indem die Eigenschaft auf `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht den Inhalt der <see cref="T:System.Data.Common.DbConnectionStringBuilder" />-Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.DbConnectionStringBuilder.Clear%2A> -Methode entfernt alle Schlüssel-Wert-Paare aus dem <xref:System.Data.Common.DbConnectionStringBuilder> und alle entsprechenden Eigenschaften werden zurückgesetzt. Dies beinhaltet das Festlegen der <xref:System.Data.Common.DbConnectionStringBuilder.Count%2A> Eigenschaft auf 0 und die <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString%2A> Eigenschaft auf eine leere Zeichenfolge.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Data.Common.DbConnectionStringBuilder" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearPropertyDescriptors">
+      <MemberSignature Language="C#" Value="protected void ClearPropertyDescriptors ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void ClearPropertyDescriptors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.ClearPropertyDescriptors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Auflistung von <see cref="T:System.ComponentModel.PropertyDescriptor" />-Objekten, die dem <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> zugeordnet sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird vom Designer verwendet, deaktivieren Sie alle zugeordneten Eigenschaftendeskriptoren auf die <xref:System.Data.Common.DbConnectionStringBuilder>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionString">
+      <MemberSignature Language="C#" Value="public string ConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.ConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> zugeordnete Verbindungszeichenfolge ab oder legt sie fest.</summary>
+        <value>Die aktuelle Verbindungszeichenfolge, die aus den im <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> enthaltenen Schlüssel-Wert-Paaren erstellt wird. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt eine durch Semikolons getrennte Liste von Schlüssel/Wert-Paaren, die innerhalb der Auflistung von verwalteten gespeicherten der <xref:System.Data.Common.DbConnectionStringBuilder>. Jedes Paar enthält die Schlüssel und Wert durch ein Gleichheitszeichen getrennt. Das folgende Beispiel zeigt eine typische Verbindungszeichenfolge.  
+  
+```  
+"Persist Security Info=False;Integrated Security=SSPI;Initial Catalog=AdventureWorks;Data Source=(local)"  
+```  
+  
+ Datenanbieter erwarten möglicherweise bestimmte Schlüssel und Werte für jede Verbindungszeichenfolgen-Eigenschaft. , Diese Werte werden einzeln dokumentiert. Die <xref:System.Data.Common.DbConnectionStringBuilder> Klasse überprüft nicht die Schlüssel-/Wertpaaren seine Verbindungszeichenfolge zugeordnet, obwohl Klassen, die von ihm erben können.  
+  
+ Die <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString%2A> Eigenschaft von der <xref:System.Data.Common.DbConnectionStringBuilder> Klasse dient im Allgemeinen als Mechanismus zum Erstellen und Analysieren von durch Semikolons getrennte Listen von Schlüssel/Wert-Paaren durch Gleichheitszeichen getrennt. Es stellt keine Validierung oder andere spezielle Unterstützung für Verbindungszeichenfolgen bereit. Wenn Sie Elemente zum Hinzufügen der <xref:System.Data.Common.DbConnectionStringBuilder> -Auflistung, die <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString%2A> -Eigenschaft reflektiert es die Änderungen. Wenn Sie einen Wert zuweisen der <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString%2A> -Eigenschaft, die <xref:System.Data.Common.DbConnectionStringBuilder> wird versucht, den Wert unter Verwendung der Semikolon und Gleichheitszeichen Trennzeichen analysiert werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die mögliche Verhaltensweisen von der <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString%2A> Eigenschaft. Beispiel:  
+  
+-   Erstellt eine Verbindungszeichenfolge durch Hinzufügen von Schlüssel-/Wertpaaren, jeweils einzeln, um eine leere <xref:System.Data.Common.DbConnectionStringBuilder>.  
+  
+-   Weist eine vollständige Verbindungszeichenfolge für die <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString%2A> Eigenschaft von der <xref:System.Data.Common.DbConnectionStringBuilder> Instanz, und ändert ein einzelnes Schlüssel/Wert-Paar innerhalb der Zeichenfolge.  
+  
+-   Weist einen beliebigen Satz von Schlüssel/Wert-Paaren, die <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString%2A> Eigenschaft (d. h. eine Zeichenfolge, die keine Verbindungszeichenfolge darstellt), und ändert einen der Werte.  
+  
+-   Weist eine ungültige Verbindungszeichenfolge für die <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString%2A> -Eigenschaft, veranschaulicht die Ausnahme, die ausgelöst wird.  
+  
+> [!NOTE]
+>  Das Beispiel umfasst ein Kennwort zur Veranschaulichung der Funktion von <xref:System.Data.Common.DbConnectionStringBuilder> mit Verbindungszeichenfolgen. In den Anwendungen wird die Verwendung der Windows-Authentifizierung empfohlen. Wenn Sie ein Kennwort verwenden müssen, schließen Sie kein hartcodiertes Kennwort in die Anwendung ein.  
+  
+ [!code-csharp[DataWorks DbConnectionStringBuilder.ConnectionString#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.ConnectionString/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder.ConnectionString#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.ConnectionString/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Es wurde ein ungültiges Argument für eine Verbindungszeichenfolge bereitgestellt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsKey (string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">Der im <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> zu suchende Schlüssel.</param>
+        <summary>Stellt fest, ob der <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> einen bestimmten Schlüssel enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> einen Eintrag mit dem angegebenen Schlüssel enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[DataWorks DbConnectionStringBuilder.ContainsKey#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.ContainsKey/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder.ContainsKey#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.ContainsKey/VB/source.vb#1)]  
+  
+ Dieser Code erzeugt die folgende Ausgabe:  
+  
+```  
+Contents of the DbConnectionStringBuilder:  
+provider="Provider=Microsoft.Jet.OLEDB.4.0";data   
+source=C:\MyExcel.xls;extended  
+properties="Excel 8.0;HDR=Yes;IMEX=1"  
+The collection contains the key "Data Source".  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Anzahl von Schlüsseln ab, die in der <see cref="P:System.Data.Common.DbConnectionStringBuilder.ConnectionString" />-Eigenschaft enthalten sind.</summary>
+        <value>Die Anzahl der Schlüssel in der Verbindungszeichenfolge, die von der <see cref="T:System.Data.Common.DbConnectionStringBuilder" />-Instanz verwaltet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Data.Common.DbConnectionStringBuilder.Count%2A> Eigenschaft vor und nach dem Ändern des Inhalts der <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString%2A> Eigenschaft.  
+  
+ [!code-csharp[DataWorks DbConnectionStringBuilder.Count#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.Count/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder.Count#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.Count/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EquivalentTo">
+      <MemberSignature Language="C#" Value="public virtual bool EquivalentTo (System.Data.Common.DbConnectionStringBuilder connectionStringBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EquivalentTo(class System.Data.Common.DbConnectionStringBuilder connectionStringBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.EquivalentTo(System.Data.Common.DbConnectionStringBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionStringBuilder" Type="System.Data.Common.DbConnectionStringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="connectionStringBuilder">Der <see cref="T:System.Data.Common.DbConnectionStringBuilder" />, der mit diesem <see cref="T:System.Data.Common.DbConnectionStringBuilder" />-Objekt verglichen werden soll.</param>
+        <summary>Vergleicht die Verbindungsinformationen in diesem <see cref="T:System.Data.Common.DbConnectionStringBuilder" />-Objekt mit den Verbindungsinformationen im angegebenen Objekt.</summary>
+        <returns>
+          <see langword="true" />, wenn die Verbindungsinformationen in beiden <see cref="T:System.Data.Common.DbConnectionStringBuilder" />-Objekten eine gleichwertige Verbindungszeichenfolge ergeben, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vergleiche für Schlüsselnamen sind Groß-/Kleinschreibung beachtet. Wertvergleiche werden die Groß-/Kleinschreibung beachtet.  
+  
+ Die <xref:System.Data.Common.DbConnectionStringBuilder.EquivalentTo%2A> -Methode zurückkehrt `true` , wenn die Schlüssel/Wert-Paare gleich, unabhängig von der Reihenfolge sind. Das Verbindungsverhalten zwei Verbindungszeichenfolgen sind gleichwertig, da Reihenfolge nie in Verbindungszeichenfolgen signifikant ist. Jedoch kann anderen Reihenfolge Verbindungspoolingverhalten Verbindungen basierend auf diese Verbindungszeichenfolgen auswirken.  
+  
+   
+  
+## Examples  
+ [!code-csharp[DataWorks DbConnectionStringBuilder.EquivalentTo#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.EquivalentTo/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder.EquivalentTo#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.EquivalentTo/VB/source.vb#1)]  
+  
+ Dieses Beispiel zeigt die folgende Ausgabe:  
+  
+```  
+builder1 = value1=SomeValue;value2=20;value3=30;value4=40  
+builder2 = value2=20;value3=30;value4=40;value1=SomeValue  
+builder3 = value2=20;value3=30;value4=40;value1=SOMEVALUE  
+builder1.EquivalentTo(builder2) = True  
+builder2.EquivalentTo(builder3) = False  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="protected virtual void GetProperties (System.Collections.Hashtable propertyDescriptors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetProperties(class System.Collections.Hashtable propertyDescriptors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.GetProperties(System.Collections.Hashtable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyDescriptors" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="propertyDescriptors">Die <see cref="T:System.Collections.Hashtable" /> mit Informationen zu diesem gefüllt werden <see cref="T:System.Data.Common.DbConnectionStringBuilder" />.</param>
+        <summary>Füllt eine angegebene <see cref="T:System.Collections.Hashtable" /> mit Informationen zu allen Eigenschaften dieses <see cref="T:System.Data.Common.DbConnectionStringBuilder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public virtual bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> eine feste Größe hat.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> hat eine feste Größe, und andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Auflistung mit fester Größe lässt nicht zu, hinzufügen oder Entfernen von Elementen nach dem Erstellen der Auflistung, aber das Ändern von vorhandenen Elementen zugelassen.  
+  
+ Eine Auflistung mit fester Größe ist eine Auflistung mit einem Wrapper, der verhindert, dass hinzufügen und Entfernen von Elementen. Wenn Änderungen, auf die zugrunde liegende Auflistung vorgenommen werden, einschließlich hinzufügen und Entfernen von Elementen, spiegelt der Auflistung mit fester Größe aus diesem Grund diese Änderungen wider.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="T:System.Data.Common.DbConnectionStringBuilder" />-Auflistung schreibgeschützt ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine schreibgeschützte Auflistung lässt nicht zu, hinzufügen, entfernen oder Ändern von Elementen nach dem Erstellen der Auflistung.  
+  
+ Eine schreibgeschützte Auflistung ist eine Auflistung mit einem Wrapper, der verhindert, dass die Auflistung zu ändern. Wenn Änderungen an der zugrunde liegenden Auflistung vorgenommen werden, spiegelt die schreibgeschützte Auflistung daher diese Änderungen wider.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[string keyword] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">Der Schlüssel des abzurufenden oder festzulegenden Elements.</param>
+        <summary>Ruft den Wert ab, der dem angegebenen Schlüssel zugeordnet ist, oder legt diesen fest.</summary>
+        <value>Der dem angegebenen Schlüssel zugeordnete Wert. Wenn der angegebene Schlüssel nicht gefunden wird, beim Abrufen dieses gibt einen null-Verweis zurück (<see langword="Nothing" /> in Visual Basic), und beim Festlegen wird ein neues Element mit dem angegebenen Schlüssel erstellt.  
+  
+ Übergeben eines Nullschlüssels (<see langword="Nothing" /> in Visual Basic) wird ein <see cref="T:System.ArgumentNullException" />. Durch Zuweisen eines NULL-Werts wird das Schlüssel-Wert-Paar entfernt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Eigenschaft festlegen, wenn der angegebene Schlüssel bereits im Wörterbuch vorhanden ist, wird der Wert ersetzt. Andernfalls wird ein neues Element erstellt.  
+  
+   
+  
+## Examples  
+ Die folgende Konsolenanwendung erstellt eine neue <xref:System.Data.Common.DbConnectionStringBuilder> und seine Verbindung Schlüssel/Wert-Paare hinzugefügt "string", mit der <xref:System.Data.Common.DbConnectionStringBuilder.Item%2A> Eigenschaft.  
+  
+ [!code-csharp[DataWorks DbConnectionStringBuilder.Item#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.Item/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder.Item#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.Item/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.NotSupportedException">Die Eigenschaft wird festgelegt, und die <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> ist schreibgeschützt.  
+  
+ - oder -   
+  
+ Die Eigenschaft wird festgelegt, <paramref name="keyword" /> in der Auflistung nicht vorhanden und der <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> eine feste Größe aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Collections.ICollection" /> ab, die die Schlüssel im <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> enthält.</summary>
+        <value>Eine <see cref="T:System.Collections.ICollection" />, die die Schlüssel im <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Werte in der <xref:System.Collections.ICollection> ist nicht vorgegeben, doch es handelt sich um die gleiche Reihenfolge, die auch bei den zugehörigen Werten in der <xref:System.Collections.ICollection> verwendet wird, die von der der <xref:System.Data.Common.DbConnectionStringBuilder.Values%2A>-Eigenschaft zurückgegeben wird.  
+  
+ Das zurückgegebene <xref:System.Collections.ICollection> ist keine statische Kopie; stattdessen die <xref:System.Collections.ICollection> verweist auf die Schlüssel in der ursprünglichen <xref:System.Data.Common.DbConnectionStringBuilder>. Daher ändert sich in der <xref:System.Data.Common.DbConnectionStringBuilder> wiedergegeben werden, der <xref:System.Collections.ICollection>.  
+  
+   
+  
+## Examples  
+ Im folgenden Konsolenanwendungsbeispiel erstellt ein neues <xref:System.Data.Common.DbConnectionStringBuilder>, und einige Schlüssel hinzugefügt. Der Code durchläuft die <xref:System.Collections.ICollection> zurückgegebenes der <xref:System.Data.Common.DbConnectionStringBuilder.Keys%2A> Eigenschaft anzeigen von den Schlüssel/Wert-Paare an, und fügt dann einen neuen Schlüssel. Da die <xref:System.Data.Common.DbConnectionStringBuilder.Keys%2A> Eigenschaft gibt eine dynamische <xref:System.Collections.ICollection>, die zweite Schleife werden alle Schlüssel/Wert-Paare, einschließlich des neuesten Elements angezeigt.  
+  
+ [!code-csharp[DataWorks DbConnectionStringBuilder.Keys#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.Keys/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder.Keys#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.Keys/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual bool Remove (string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">Der Schlüssel des Schlüssel-Wert-Paars, das aus der Verbindungszeichenfolge in diesem <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> entfernt werden soll.</param>
+        <summary>Entfernt den Eintrag mit dem angegebenen Schlüssel aus der <see cref="T:System.Data.Common.DbConnectionStringBuilder" />-Instanz.</summary>
+        <returns>
+          <see langword="true" />, wenn der Schlüssel in der Verbindungszeichenfolge vorhanden war und entfernt wurde, <see langword="false" />, wenn der Schlüssel nicht vorhanden war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Data.Common.DbConnectionStringBuilder.Remove%2A> Methodenrückgabe einen Wert, der der Vorgang erfolgreich war, ist es nicht erforderlich für den Schlüssel gesucht werden soll, bevor Sie versuchen, das Schlüssel/Wert-Paar aus entfernt die <xref:System.Data.Common.DbConnectionStringBuilder> Instanz.  
+  
+   
+  
+## Examples  
+ [!code-csharp[DataWorks DbConnectionStringBuilder.Remove#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.Remove/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder.Remove#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.Remove/VB/source.vb#1)]  
+  
+ Dieses Beispiel zeigt die folgende Ausgabe:  
+  
+```  
+Removed 'Provider'  
+data source=C:\Demo.mdb;jet oledb:system database=system.mdw  
+Unable to remove 'User ID'  
+data source=C:\Demo.mdb;jet oledb:system database=system.mdw  
+Removed 'DATA SOURCE'  
+jet oledb:system database=system.mdw  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" /> ist NULL (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.NotSupportedException">Die <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> ist schreibgeschützt, oder die <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> eine feste Größe aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerialize">
+      <MemberSignature Language="C#" Value="public virtual bool ShouldSerialize (string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldSerialize(string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.ShouldSerialize(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">Der im <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> zu suchende Schlüssel.</param>
+        <summary>Gibt an, ob der angegebene Schlüssel in dieser <see cref="T:System.Data.Common.DbConnectionStringBuilder" />-Instanz vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> einen Eintrag mit dem angegebenen Schlüssel enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode weist ein identisches Verhalten wie die <xref:System.Data.Common.DbConnectionStringBuilder.ContainsKey%2A>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Collections.ICollection" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der <see cref="T:System.Collections.ICollection" /> in ein <see cref="T:System.Array" />, beginnend bei einem bestimmten <see cref="T:System.Array" />-Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ Eine Beschreibung dieses Elements finden Sie unter <xref:System.Collections.ICollection.CopyTo%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf das <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Collections.ICollection.IsSynchronized%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Collections.ICollection.SyncRoot%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Add">
+      <MemberSignature Language="C#" Value="void IDictionary.Add (object keyword, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Add(object keyword, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#Collections#IDictionary#Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">Das <see cref="T:System.Object" />, das als Schlüssel für das hinzuzufügende Element verwendet werden soll.</param>
+        <param name="value">Das <see cref="T:System.Object" />, das als Wert für das hinzuzufügende Element verwendet werden soll.</param>
+        <summary>Fügt dem <see cref="T:System.Collections.IDictionary" />-Objekt ein Element mit dem angegebenen Schlüssel und Wert hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.Collections.IDictionary>-Schnittstelle umgewandelt wird.  
+  
+ Eine Beschreibung dieses Elements finden Sie unter <xref:System.Collections.IDictionary.Add%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Contains">
+      <MemberSignature Language="C#" Value="bool IDictionary.Contains (object keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IDictionary.Contains(object keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#Collections#IDictionary#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">Der im <see cref="T:System.Collections.IDictionary" />-Objekt zu suchende Schlüssel.</param>
+        <summary>Ermittelt, ob das <see cref="T:System.Collections.IDictionary" />-Objekt ein Element mit dem angegebenen Schlüssel enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.IDictionary" /> ein Element mit dem Schlüssel enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.Collections.IDictionary>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Collections.IDictionary.Contains%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IDictionaryEnumerator IDictionary.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator System.Collections.IDictionary.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#Collections#IDictionary#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Collections.IDictionaryEnumerator" />-Objekt für das <see cref="T:System.Collections.IDictionary" />-Objekt zurück.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionaryEnumerator" />-Objekt für das <see cref="T:System.Collections.IDictionary" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.Collections.IDictionary>-Schnittstelle umgewandelt wird.  
+  
+ Eine Beschreibung dieses Elements finden Sie unter <xref:System.Collections.IDictionary.GetEnumerator%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IDictionary.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IDictionary.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.System#Collections#IDictionary#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IDictionary.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IDictionary.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.System#Collections#IDictionary#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IDictionary.Item[object keyword] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IDictionary.Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.System#Collections#IDictionary#Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">Der Schlüssel des Elements, das abgerufen oder festgelegt werden soll.</param>
+        <summary>Ruft das Element mit dem angegebenen Schlüssel ab oder legt dieses fest.</summary>
+        <value>Das Element mit dem angegebenen Schlüssel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.Collections.IDictionary>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Collections.IDictionary.Item%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Remove">
+      <MemberSignature Language="C#" Value="void IDictionary.Remove (object keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Remove(object keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#Collections#IDictionary#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">Der Schlüssel des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element mit dem angegebenen Schlüssel aus dem <see cref="T:System.Collections.IDictionary" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.Collections.IDictionary>-Schnittstelle umgewandelt wird.  
+  
+ Eine Beschreibung dieses Elements finden Sie unter <xref:System.Collections.IDictionary.Remove%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der eine Auflistung durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.Collections.IEnumerable>-Schnittstelle umgewandelt wird.  
+  
+ Eine Beschreibung dieses Elements finden Sie unter <xref:System.Collections.IEnumerable.GetEnumerator%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetAttributes">
+      <MemberSignature Language="C#" Value="System.ComponentModel.AttributeCollection ICustomTypeDescriptor.GetAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.AttributeCollection System.ComponentModel.ICustomTypeDescriptor.GetAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#ComponentModel#ICustomTypeDescriptor#GetAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung benutzerdefinierter Attribute für diese Instanz einer Komponente zurück.</summary>
+        <returns>Eine <see cref="T:System.ComponentModel.AttributeCollection" /> , die die Attribute für dieses Objekt enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ Eine Beschreibung dieses Elements finden Sie unter <xref:System.ComponentModel.ICustomTypeDescriptor.GetAttributes%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetClassName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetClassName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetClassName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#ComponentModel#ICustomTypeDescriptor#GetClassName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Klassennamen dieser Instanz einer Komponente zurück.</summary>
+        <returns>Der Klassenname des Objekts oder <see langword="null" /> , wenn die Klasse nicht über einen Namen verfügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ Eine Beschreibung dieses Elements finden Sie unter <xref:System.ComponentModel.ICustomTypeDescriptor.GetClassName%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetComponentName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetComponentName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetComponentName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#ComponentModel#ICustomTypeDescriptor#GetComponentName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Namen dieser Instanz einer Komponente zurück.</summary>
+        <returns>Der Name des Objekts, oder <see langword="null" /> , wenn das Objekt nicht über einen Namen verfügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.ComponentModel.ICustomTypeDescriptor.GetComponentName%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetConverter">
+      <MemberSignature Language="C#" Value="System.ComponentModel.TypeConverter ICustomTypeDescriptor.GetConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.TypeConverter System.ComponentModel.ICustomTypeDescriptor.GetConverter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#ComponentModel#ICustomTypeDescriptor#GetConverter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Typkonverter für diese Instanz einer Komponente zurück.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.TypeConverter" /> , der der Konverter für dieses Objekt oder <see langword="null" /> liegt keine <see cref="T:System.ComponentModel.TypeConverter" /> für dieses Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ Eine Beschreibung dieses Elements finden Sie unter <xref:System.ComponentModel.ICustomTypeDescriptor.GetConverter%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptor ICustomTypeDescriptor.GetDefaultEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#ComponentModel#ICustomTypeDescriptor#GetDefaultEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Standardereignis für diese Instanz einer Komponente zurück.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.EventDescriptor" /> , das das Standardereignis für dieses Objekt darstellt oder <see langword="null" /> Wenn dieses Objekt keine Ereignisse aufweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ Eine Beschreibung dieses Elements finden Sie unter <xref:System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptor ICustomTypeDescriptor.GetDefaultProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#ComponentModel#ICustomTypeDescriptor#GetDefaultProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Standardeigenschaft für diese Instanz einer Komponente zurück.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , die die Standardeigenschaft für dieses Objekt darstellt oder <see langword="null" /> Wenn dieses Objekt keine Eigenschaften besitzt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ Eine Beschreibung dieses Elements finden Sie unter <xref:System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEditor">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetEditor (Type editorBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetEditor(class System.Type editorBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#ComponentModel#ICustomTypeDescriptor#GetEditor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="editorBaseType">Ein <see cref="T:System.Type" /> , die der Editor für dieses Objekt darstellt.</param>
+        <summary>Gibt einen Editor des angegebenen Typs für diese Instanz einer Komponente zurück.</summary>
+        <returns>Ein <see cref="T:System.Object" /> des angegebenen Typs, das den Editor für dieses Objekt ist oder <see langword="null" /> , wenn der Editor nicht gefunden werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.ComponentModel.ICustomTypeDescriptor.GetEditor%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#ComponentModel#ICustomTypeDescriptor#GetEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Ereignisse für diese Instanz einer Komponente zurück.</summary>
+        <returns>Eine <see cref="T:System.ComponentModel.EventDescriptorCollection" /> , die die Ereignisse für diese Komponenteninstanz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.ComponentModel.ICustomTypeDescriptor.GetEvents%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#ComponentModel#ICustomTypeDescriptor#GetEvents(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Ein Array vom Typ <see cref="T:System.Attribute" /> , die als Filter verwendet wird.</param>
+        <summary>Gibt die Ereignisse für diese Instanz einer Komponente zurück, wobei das angegebene Attributarray als Filter verwendet wird.</summary>
+        <returns>Eine <see cref="T:System.ComponentModel.EventDescriptorCollection" /> , die die gefilterten Ereignisse für diese Komponenteninstanz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.ComponentModel.ICustomTypeDescriptor.GetEvents%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#ComponentModel#ICustomTypeDescriptor#GetProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Eigenschaften für diese Instanz einer Komponente zurück.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , die die Eigenschaften für diese Komponenteninstanz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.ComponentModel.ICustomTypeDescriptor.GetProperties%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#ComponentModel#ICustomTypeDescriptor#GetProperties(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Ein Array vom Typ <see cref="T:System.Attribute" /> , die als Filter verwendet wird.</param>
+        <summary>Gibt die Eigenschaften für diese Instanz einer Komponente zurück, wobei das Attributarray als Filter verwendet wird.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , das die gefilterten Eigenschaften für diese Komponenteninstanz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.ComponentModel.ICustomTypeDescriptor.GetProperties%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetPropertyOwner (System.ComponentModel.PropertyDescriptor pd);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner(class System.ComponentModel.PropertyDescriptor pd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.System#ComponentModel#ICustomTypeDescriptor#GetPropertyOwner(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pd" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="pd">Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , das die Eigenschaft, deren Besitzer zu findenden darstellt.</param>
+        <summary>Gibt ein Objekt zurück, das die Eigenschaft enthält, die durch den Eigenschaftendeskriptor angegeben ist.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , den Besitzer der angegebenen Eigenschaft darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnectionStringBuilder>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Verbindungszeichenfolge zugeordnete <see cref="T:System.Data.Common.DbConnectionStringBuilder" />.</summary>
+        <returns>Die aktuelle <see cref="P:System.Data.Common.DbConnectionStringBuilder.ConnectionString" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public virtual bool TryGetValue (string keyword, out object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(string keyword, [out] object&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnectionStringBuilder.TryGetValue(System.String,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+        <Parameter Name="value" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">Der Schlüssel des abzurufenden Elements.</param>
+        <param name="value">Der Wert entspricht der <c>Schlüssel</c>.</param>
+        <summary>Ruft einen Wert ab, der dem von diesem <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> bereitgestellten Schlüssel entspricht.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="keyword" /> wurde in der Verbindungszeichenfolge gefunden <see langword="false" /> andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.DbConnectionStringBuilder.TryGetValue%2A> -Methode können Entwickler sicher Abrufen eines Werts aus einer <xref:System.Data.Common.DbConnectionStringBuilder> ohne rufen Sie zuerst die <xref:System.Data.Common.DbConnectionStringBuilder.ContainsKey%2A> Methode. Da <xref:System.Data.Common.DbConnectionStringBuilder.TryGetValue%2A> wird keine Ausnahme auslösen, wenn Sie ihn in einem nicht existierenden Schlüssel übergeben aufrufen, müssen Sie nicht nach einem Schlüssel gesucht werden soll, bevor der Wert abgerufen. Aufrufen von <xref:System.Data.Common.DbConnectionStringBuilder.TryGetValue%2A> platzieren mit einem nicht existierenden Schlüssel den null-Wert (`Nothing` in Visual Basic) in der `value` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.Common.DbConnectionStringBuilder.TryGetValue%2A> -Methode, mehrere mögliche Ergebnisse veranschaulicht.  
+  
+ [!code-csharp[DataWorks DbConnectionStringBuilder.TryGetValue#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.TryGetValue/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder.TryGetValue#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.TryGetValue/VB/source.vb#1)]  
+  
+ In diesem Beispiel werden die folgenden Ergebnisse angezeigt:  
+  
+```  
+Provider=sqloledb  
+DATA SOURCE=192.168.168.1,1433  
+Unable to retrieve value for //InvalidKey//  
+Unable to retrieve value for null key.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" /> enthält einen NULL-Wert (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnectionStringBuilder.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Collections.ICollection" /> ab, das die Werte im <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> enthält.</summary>
+        <value>Eine <see cref="T:System.Collections.ICollection" />, die die Werte aus den <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Werte in der <xref:System.Collections.ICollection> ist nicht vorgegeben, aber die zugehörigen Schlüssel in der Reihenfolge der <xref:System.Collections.ICollection> zurückgegebenes die <xref:System.Data.Common.DbConnectionStringBuilder.Keys%2A> Methode.  
+  
+ Das zurückgegebene <xref:System.Collections.ICollection> ist keine statische Kopie; stattdessen die <xref:System.Collections.ICollection> verweist auf die Werte in der ursprünglichen <xref:System.Data.Common.DbConnectionStringBuilder>. Daher ändert sich in der <xref:System.Data.Common.DbConnectionStringBuilder> wiedergegeben werden, der <xref:System.Collections.ICollection>.  
+  
+   
+  
+## Examples  
+  
+> [!NOTE]
+>  Das Beispiel umfasst ein Kennwort zur Veranschaulichung der Funktion von <xref:System.Data.Common.DbConnectionStringBuilder> mit Verbindungszeichenfolgen. In den Anwendungen wird die Verwendung der Windows-Authentifizierung empfohlen. Wenn Sie ein Kennwort verwenden müssen, schließen Sie kein hartcodiertes Kennwort in die Anwendung ein.  
+  
+ [!code-csharp[DataWorks DbConnectionStringBuilder.Values#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.Values/CS/source.cs#1)]
+ [!code-vb[DataWorks DbConnectionStringBuilder.Values#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbConnectionStringBuilder.Values/VB/source.vb#1)]  
+  
+ Zeigt die folgende Ausgabe:  
+  
+```  
+MSDataShape.1  
+false  
+MSDAORA  
+orac  
+username  
+*******  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

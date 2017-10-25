@@ -1,0 +1,293 @@
+<Type Name="IImmutableDictionary&lt;TKey,TValue&gt;" FullName="System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;">
+  <TypeSignature Language="C#" Value="public interface IImmutableDictionary&lt;TKey,TValue&gt; : System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IReadOnlyCollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IImmutableDictionary`2&lt;TKey, TValue&gt; implements class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IReadOnlyDictionary`2&lt;!TKey, !TValue&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Immutable.IImmutableDictionary`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Immutable</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>1.2.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey" />
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TKey">Der Typ der Schlüssel im Wörterbuch.</typeparam>
+    <typeparam name="TValue">Der Typ der Werte im Wörterbuch.</typeparam>
+    <summary>Stellt eine unveränderliche Auflistung von Schlüssel-Wert-Paaren dar.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Collections.Immutable.IImmutableDictionary%602> erfordert eine vergleichsimplementierung, die auf Gleichheit zu bestimmen, ob zwei Schlüssel gleich sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; Add (TKey key, TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; Add(!TKey key, !TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.Add(`0,`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des hinzuzufügenden Elements.</param>
+        <param name="value">Der Wert des hinzuzufügenden Elements.</param>
+        <summary>Fügt dem Wörterbuch ein Element mit dem angegebenen Schlüssel und Wert hinzu.</summary>
+        <returns>Ein neues unveränderliches Wörterbuch, das das zusätzliche Schlüssel-Wert-Paar enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene Schlüssel/Wert-Paar im Wörterbuch vorhanden ist, gibt diese Methode die vorhandene Instanz des Wörterbuchs.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der angegebene Schlüssel ist bereits im Wörterbuch vorhanden ist jedoch einen anderen Wert aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; AddRange (System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; pairs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; AddRange(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt; pairs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.AddRange(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pairs" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pairs">Die Schlüssel-Wert-Paare, die hinzugefügt werden sollen.</param>
+        <summary>Fügt dem Wörterbuch die angegebenen Schlüssel-Wert-Paare hinzu.</summary>
+        <returns>Ein neues unveränderliches Wörterbuch, das die zusätzlichen Schlüssel-Wert-Paare enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Einer der angegebenen Schlüssel bereits im Wörterbuch vorhanden ist, aber einen anderen Wert aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein leeres Wörterbuch ab, das über dieselben Sortier- und Schlüssel-Wert-Vergleichsregeln wie diese Wörterbuchinstanz verfügt.</summary>
+        <returns>Ein leeres Wörterbuch mit äquivalenten Sortier- und Schlüssel-Wert-Vergleichsregeln.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt; pair);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt; pair) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.Contains(System.Collections.Generic.KeyValuePair{`0,`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pair" Type="System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pair">Das Schlüssel-Wert-Paar, das gesucht werden soll.</param>
+        <summary>Bestimmt, ob das unveränderliche Wörterbuch das angegebene Schlüssel-Wert-Paar enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene Schlüssel-Wert-Paar im Wörterbuch gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; Remove (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; Remove(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element mit dem angegebenen Schlüssel aus dem unveränderlichen Wörterbuch.</summary>
+        <returns>Ein neues unveränderliches Wörterbuch, aus dem das angegebene Element entfernt wurde, oder diese Instanz, wenn der angegebene Schlüssel im Wörterbuch nicht gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRange">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; RemoveRange (System.Collections.Generic.IEnumerable&lt;TKey&gt; keys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; RemoveRange(class System.Collections.Generic.IEnumerable`1&lt;!TKey&gt; keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.RemoveRange(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.Generic.IEnumerable&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Die Schlüssel der zu entfernenden Elemente.</param>
+        <summary>Entfernt die Elemente mit den angegebenen Schlüsseln aus dem unveränderlichen Wörterbuch.</summary>
+        <returns>Ein neues unveränderliches Wörterbuch, aus dem die angegebenen Schlüssel entfernt wurden, oder diese Instanz, wenn die angegebenen Schlüssel im Wörterbuch nicht gefunden wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; SetItem (TKey key, TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; SetItem(!TKey key, !TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.SetItem(`0,`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des hinzuzufügenden Eintrags.</param>
+        <param name="value">Der Schlüsselwert, der festgelegt werden soll.</param>
+        <summary>Legt den angegebenen Schlüssel und Wert im unveränderlichen Wörterbuch fest, wobei ein vorhandener Wert für den Schlüssel überschrieben werden kann.</summary>
+        <returns>Ein neues unveränderliches Wörterbuch, das das angegebene Schlüssel-Wert-Paar enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene Schlüssel-Wert-Paar im Wörterbuch vorhanden ist, gibt diese Methode die vorhandene Instanz zurück. Wenn der Schlüssel bereits vorhanden ist, aber einen anderen Wert aufweist, gibt diese Methode eine neue Instanz des Wörterbuchs mit dem Wert überschrieben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItems">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; SetItems (System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; SetItems(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.SetItems(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items">Die Schlüssel-Wert-Paare, die im Wörterbuch festgelegt werden sollen. Falls ein Schlüssel bereits im Wörterbuch vorhanden ist, überschreibt diese Methode dessen vorherigen Wert.</param>
+        <summary>Legt die angegebenen Schlüssel-Wert-Paare im unveränderlichen Wörterbuch fest, wobei vorhandene Werte für die Schlüssel überschrieben werden können.</summary>
+        <returns>Ein neues unveränderliches Wörterbuch, das die angegebenen Schlüssel-Wert-Paare enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetKey">
+      <MemberSignature Language="C#" Value="public bool TryGetKey (TKey equalKey, out TKey actualKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetKey(!TKey equalKey, [out] !TKey&amp; actualKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.TryGetKey(`0,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equalKey" Type="TKey" />
+        <Parameter Name="actualKey" Type="TKey&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="equalKey">Der zu suchende Schlüssel.</param>
+        <param name="actualKey">Der übereinstimmende Schlüssel im Wörterbuch gesucht werden, wenn gefunden, oder <c>Equalkey</c> , wenn keine Übereinstimmung gefunden wird.</param>
+        <summary>Ermittelt, ob das Wörterbuch einen bestimmten Schlüssel enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Übereinstimmung für <paramref name="equalKey" /> gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es folgen einige Szenarien, in denen <xref:System.Collections.Immutable.IImmutableDictionary%602.TryGetKey%2A> kann nützlich sein:  
+  
+-   Möchten Sie einen zuvor gespeicherten Objektverweis, statt einen neuen Verweis wiederverwenden.  
+  
+-   Den kanonischen Wert eines Objekts gesucht werden soll.  
+  
+-   Vollständigere Daten über ein Objekt abgerufen werden soll  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

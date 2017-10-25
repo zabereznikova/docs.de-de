@@ -1,0 +1,34 @@
+<Type Name="DispatcherUnhandledExceptionEventHandler" FullName="System.Windows.Threading.DispatcherUnhandledExceptionEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DispatcherUnhandledExceptionEventHandler(object sender, DispatcherUnhandledExceptionEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DispatcherUnhandledExceptionEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.DispatcherUnhandledExceptionEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Threading.DispatcherUnhandledExceptionEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Windows.Threading.Dispatcher.UnhandledException" />-Ereignisses dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Threading.Dispatcher.UnhandledException> Ereignis tritt auf, wenn code ausführen, der die <xref:System.Windows.Threading.Dispatcher> löst eine Ausnahme, die nicht behandelt wird.  
+  
+ Die <xref:System.Windows.Threading.Dispatcher.UnhandledExceptionFilter> Ereignis bietet eine Möglichkeit zum Auslösen der <xref:System.Windows.Threading.Dispatcher.UnhandledException> Ereignis.  Die <xref:System.Windows.Threading.Dispatcher.UnhandledExceptionFilter> Ereignis wird zuerst ausgelöst und, wenn <xref:System.Windows.Threading.DispatcherUnhandledExceptionFilterEventArgs.RequestCatch%2A> auf die <xref:System.Windows.Threading.DispatcherUnhandledExceptionFilterEventArgs> auf festgelegt ist `false`, die <xref:System.Windows.Threading.Dispatcher.UnhandledException> -Ereignis wird nicht ausgelöst werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

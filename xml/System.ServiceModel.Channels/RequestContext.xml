@@ -1,0 +1,447 @@
+<Type Name="RequestContext" FullName="System.ServiceModel.Channels.RequestContext">
+  <TypeSignature Language="C#" Value="public abstract class RequestContext : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RequestContext extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.RequestContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Antwort bereit, die mit einer eingehenden Anforderung korreliert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie erhalten einen Anforderungskontext von einem <xref:System.ServiceModel.Channels.IReplyChannel>. Jeder <xref:System.ServiceModel.Channels.RequestContext> kapselt die Informationen, die zum Antworten auf die Anforderung notwendig sind, so dass Sie beim Warten auf den Erhalt einer Antwort für eine Anforderungsnachricht den Kanal nicht blockieren müssen.  
+  
+ Im Anforderungs-/Antwortmodell ist das <xref:System.ServiceModel.Channels.RequestContext>-Objekt die Verknüpfung zwischen der eingehenden Anforderung und der ausgehenden Antwort. Wenn der Server eine Anforderung erhält, stellt er eine <xref:System.ServiceModel.Channels.RequestContext>-Instanz bereit, die die Anforderung an den Kanal darstellt. Der Anforderungskontext enthält die ursprüngliche Anforderungsnachricht, neben weiteren nützlichen Eigenschaften. Dieser Anforderungskontext wird dann im <xref:System.ServiceModel.OperationContext> für den Abruf durch den Dienst bereitgehalten. Sie verwenden die <xref:System.ServiceModel.OperationContext.Current%2A>-Eigenschaft in der Regel, um auf die Anforderung des aktuellen Vorgangs zuzugreifen.  
+  
+ Der Wert des <xref:System.ServiceModel.Channels.RequestContext> kann `null` sein. Da der Anforderungskontext dazu dient, Anforderungen mit Antworten zu verknüpfen, ist es nicht sinnvoll, einen Anforderungskontext zu verwenden, wenn keine Antwort vorliegt; daher wird der Kontext in diesem auf `null` festgelegt. Bei einem unidirektionalen Vorgang, der das Anforderungs-/Antwortmodell ergänzt, empfängt der Server eine Anforderung, sendet jedoch keine Antwort zurück an den Client. Wenn der <xref:System.ServiceModel.Channels.RequestContext> daher unerwartet den Wert `null` aufweist, überprüfen Sie zunächst, ob der Vorgangsvertrag IsOneWay lautet.  
+  
+ Spezieller Hinweis für Benutzer von Managed C++, die von dieser Klasse ableiten:  
+  
+-   Fügen Sie den Bereinigungscode in (On)(Begin)Close (and/or OnAbort) ein, nicht in einen Destruktor.  
+  
+-   Vermeiden Sie Destruktoren: Sie bewirken, dass der Compiler <xref:System.IDisposable> automatisch generiert.  
+  
+-   Vermeiden Sie Member ohne Verweis: Sie können bewirken, dass der Compiler <xref:System.IDisposable> automatisch generiert.  
+  
+-   Vermeiden Sie Finalizer. Wenn Sie dennoch einen Finalizer verwenden, sollten Sie die Buildwarnung unterdrücken und <xref:System.GC.SuppressFinalize%28System.Object%29> sowie den Finalizer über (On)(Begin)Close (and/or OnAbort) aufrufen, um das ansonsten automatisch generierte <xref:System.IDisposable>-Verhalten zu emulieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RequestContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RequestContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.RequestContext" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public abstract void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RequestContext.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht beim Überschreiben in einer abgeleiteten Klasse die Verarbeitung der Anforderung, die mit einem Kontext verknüpft ist, ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="BeginReply">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Startet einen asynchronen Vorgang, um auf die dem aktuellen Kontext zugeordnete Anforderung zu antworten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der asynchrone Vorgang ist mit oder ohne ein explizites Timeout verfügbar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="BeginReply">
+      <MemberSignature Language="C#" Value="public abstract IAsyncResult BeginReply (System.ServiceModel.Channels.Message message, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginReply(class System.ServiceModel.Channels.Message message, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RequestContext.BeginReply(System.ServiceModel.Channels.Message,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die eingehende <see cref="T:System.ServiceModel.Channels.Message" />, die die Anforderung enthält.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den Abschluss des asynchronen Antwortvorgangs empfängt.</param>
+        <param name="state">Ein von der Anwendung definiertes Objekt, das dem asynchronen Antwortvorgang zugeordnete Zustandsinformationen enthält.</param>
+        <summary>Startet beim Überschreiben in einer abgeleiteten Klasse einen asynchronen Vorgang, um auf die Anforderung zu antworten, die mit dem aktuellen Kontext verknüpft ist.</summary>
+        <returns>Das <see cref="T:System.IAsyncResult" />, das auf den asynchronen Antwortvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die asynchrone <xref:System.ServiceModel.Channels.RequestContext.BeginReply%2A>-Methode, wenn die Anwendungsverarbeitung ohne Wartezeiten fortgesetzt werden muss. Verwenden Sie eine der synchronen <xref:System.ServiceModel.Channels.RequestContext.Reply%2A>-Methoden, wenn eine Blockade des aktuellen Threads bis zur Antwort auf die Anforderungsnachricht oder bis zum Ablaufen des Timeoutintervalls akzeptabel ist.  
+  
+ Dieser Methode wird in einem Rückruf die Identität des Ereignishandlers für den Vorgang mitgeteilt. Der Vorgang ist nicht abgeschlossen, bevor entweder eine Antwort gesendet wird oder das Timeout auftritt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Der Vorgang löst eine <see cref="T:System.TimeoutException" /> aus, wenn der festgelegte <paramref name="timeout" />-Wert vor Abschluss überschritten wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginReply">
+      <MemberSignature Language="C#" Value="public abstract IAsyncResult BeginReply (System.ServiceModel.Channels.Message message, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginReply(class System.ServiceModel.Channels.Message message, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RequestContext.BeginReply(System.ServiceModel.Channels.Message,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die eingehende <see cref="T:System.ServiceModel.Channels.Message" />, die die Anforderung enthält.</param>
+        <param name="timeout">Die <see cref="T:System.TimeSpan" />, die das Zeitintervall für das Warten auf die Antwort auf eine verfügbare Anforderung angibt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den Abschluss des asynchronen Antwortvorgangs empfängt.</param>
+        <param name="state">Ein von der Anwendung definiertes Objekt, das dem asynchronen Antwortvorgang zugeordnete Zustandsinformationen enthält.</param>
+        <summary>Startet beim Überschreiben in einer abgeleiteten Klasse einen asynchronen Vorgang innerhalb eines bestimmten Zeitintervalls, um auf die Anforderung zu antworten, die mit dem aktuellen Kontext verknüpft ist.</summary>
+        <returns>Das <see cref="T:System.IAsyncResult" />, das auf den asynchronen Antwortvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die asynchrone <xref:System.ServiceModel.Channels.RequestContext.BeginReply%2A>-Methode, um zu ermöglichen, dass die Anwendungsverarbeitung ohne Wartezeiten für den Abschluss der Anforderung fortgesetzt werden kann.  
+  
+ Verwenden Sie eine der synchronen <xref:System.ServiceModel.Channels.RequestContext.Reply%2A>-Methoden, wenn eine Blockade des aktuellen Threads bis zur Antwort auf die Anforderungsnachricht oder bis zum Ablaufen des Timeoutintervalls akzeptabel ist. Dieser Methode wird in einem Rückruf die Identität des Ereignishandlers für den Vorgang mitgeteilt. Der Vorgang ist nicht abgeschlossen, bevor entweder eine Antwort gesendet wird oder das Timeout auftritt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Der Vorgang löst eine <see cref="T:System.TimeoutException" /> aus, wenn der festgelegte <paramref name="timeout" />-Wert vor Abschluss überschritten wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public abstract void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RequestContext.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet beim Überschreiben in einer abgeleiteten Klasse den Vorgang, der auf den mit dem aktuellen Kontext verknüpften Anforderungskontext antwortet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public abstract void Close (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RequestContext.Close(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Die <see cref="T:System.TimeSpan" />, die das Zeitintervall angibt, in dem der mit dem aktuellen Kontext verknüpfte Antwortvorgang beendet werden muss.</param>
+        <summary>Beendet beim Überschreiben in einer abgeleiteten Klasse den Vorgang, der auf den mit dem aktuellen Kontext verknüpften Anforderungskontext antwortet, innerhalb eines bestimmten Zeitintervalls.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Der Vorgang sollte eine <see cref="T:System.TimeoutException" /> auslösen, wenn das angegebene <paramref name="timeout" /> vor dem Abschluss überschritten wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RequestContext.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die dem Kontext zugeordneten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndReply">
+      <MemberSignature Language="C#" Value="public abstract void EndReply (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndReply(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RequestContext.EndReply(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result"><see cref="T:System.IAsyncResult" />, das von einem Aufruf der <see cref="Overload:System.ServiceModel.Channels.RequestContext.BeginReply" />-Methoden zurückgegeben wurde.</param>
+        <summary>Schließt bei Überschreibung in einer abgeleiteten Klasse einen asynchronen Vorgang zum Antworten auf eine Anforderungsnachricht ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reply">
+      <MemberSignature Language="C#" Value="public abstract void Reply (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reply(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RequestContext.Reply(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die eingehende <see cref="T:System.ServiceModel.Channels.Message" />, die die Anforderung enthält.</param>
+        <summary>Antwortet beim Überschreiben in einer abgeleiteten Klasse auf eine Anforderungsnachricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.ServiceModel.Channels.RequestContext.Reply%2A>¸ wenn eine Blockade des aktuellen Threads beim Antworten auf die Anforderungsnachricht akzeptabel ist. Der Thread wird zum angegebenen `timeout` blockiert.  
+  
+ Wenn die Anwendungsverarbeitung ohne Warten auf den Abschluss der Antwort fortgesetzt werden muss, verwenden Sie die asynchrone <xref:System.ServiceModel.Channels.RequestContext.BeginReply%2A>-Methode. Dieser Methode wird in einem Rückruf die Identität des Ereignishandlers für den Vorgang mitgeteilt. Der Vorgang ist nicht abgeschlossen, bevor entweder eine Nachricht im Kanal verfügbar wird oder ein Timeout auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reply">
+      <MemberSignature Language="C#" Value="public abstract void Reply (System.ServiceModel.Channels.Message message, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reply(class System.ServiceModel.Channels.Message message, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RequestContext.Reply(System.ServiceModel.Channels.Message,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die eingehende <see cref="T:System.ServiceModel.Channels.Message" />, die die Anforderung enthält.</param>
+        <param name="timeout">Die <see cref="T:System.TimeSpan" />, die das Zeitintervall für das Warten auf die Antwort auf eine Anforderung angibt.</param>
+        <summary>Antwortet bei Überschreibung in einer abgeleiteten Klasse innerhalb eines bestimmten Zeitintervalls auf eine Antwortnachricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.ServiceModel.Channels.RequestContext.Reply%2A>¸ wenn eine Blockade des aktuellen Threads beim Antworten auf die Anforderungsnachricht akzeptabel ist. Der Thread wird zum angegebenen `timeout` blockiert.  
+  
+ Wenn die Anwendungsverarbeitung ohne Warten auf den Abschluss der Antwort fortgesetzt werden muss, verwenden Sie die asynchrone <xref:System.ServiceModel.Channels.RequestContext.BeginReply%2A>-Methode. Dieser Methode wird in einem Rückruf die Identität des Ereignishandlers für den Vorgang mitgeteilt. Der Vorgang ist nicht abgeschlossen, bevor entweder eine Nachricht im Kanal verfügbar wird oder ein Timeout auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestMessage">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.Message RequestMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.Message RequestMessage" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RequestContext.RequestMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Nachricht ab, die die Anforderung enthält.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Channels.Message" />, die die Anforderung enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RequestContext.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt sowohl verwaltete als auch nicht verwaltete Ressourcen, die mit dem Kontext verknüpft sind, frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

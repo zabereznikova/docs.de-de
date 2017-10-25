@@ -1,0 +1,438 @@
+<Type Name="PagedControl" FullName="System.Web.UI.MobileControls.PagedControl">
+  <TypeSignature Language="C#" Value="public abstract class PagedControl : System.Web.UI.MobileControls.MobileControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PagedControl extends System.Web.UI.MobileControls.MobileControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.PagedControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.MobileControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fungiert als Basisklasse für Steuerelemente, die die interne Paginierung unterstützen. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.PagedControl> Klasse macht bestimmte Eigenschaften, Methoden und Ereignisse für alle Steuerelemente, die interne Paginierung sind.  
+  
+ Alle Steuerelemente, die von erben die <xref:System.Web.UI.MobileControls.PagedControl> Klasse unterstützt auch benutzerdefinierte Paginierung Segmentierung genannt.  
+  
+ Ähnlich wie die <xref:System.Web.UI.MobileControls.ItemPager> dieser Klasse wird für Steuerelemente, die Länge der langen Text, wie z. B. verwendet ein <xref:System.Web.UI.MobileControls.List>, <xref:System.Web.UI.MobileControls.LiteralText>, oder <xref:System.Web.UI.MobileControls.ObjectList>.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PagedControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.PagedControl" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstVisibleItemIndex">
+      <MemberSignature Language="C#" Value="public int FirstVisibleItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FirstVisibleItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.FirstVisibleItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das erste Element auf der aktuellen Formularseite angezeigt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das erste Element auf der aktuellen Formularseite angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Steuerelement nicht auf die aktuelle Seite des Formulars angezeigt wird, ist dieser Wert-1 auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalItemCount">
+      <MemberSignature Language="C#" Value="protected abstract int InternalItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InternalItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.InternalItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Elementen im Steuerelement ab. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Anzahl der Elemente im Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen <xref:System.Web.UI.MobileControls.PagedControl> müssen diese geerbte Eigenschaft überschreiben.  
+  
+ Der Unterschied zwischen der <xref:System.Web.UI.MobileControls.PagedControl.InternalItemCount%2A> Eigenschaft und die <xref:System.Web.UI.MobileControls.ArrayListCollectionBase.Count%2A> Eigenschaft von der <xref:System.Web.UI.MobileControls.List> und <xref:System.Web.UI.MobileControls.ObjectList> Klassen ist, dass wenn der <xref:System.Web.UI.MobileControls.PagedControl.InternalItemCount%2A> Eigenschaft aufgerufen wird, bevor der steuerelementansichtzustand geladen wird, wird die Anzahl der Elemente in der Ansicht Status, im Gegensatz zu das Verhalten von der <xref:System.Web.UI.MobileControls.ArrayListCollectionBase.Count%2A> Eigenschaft, die 0 (null) zurückgibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCount">
+      <MemberSignature Language="C#" Value="public int ItemCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.ItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Elemente im Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Anzahl der Elemente im Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzerdefinierte Paginierung muss aktiviert sein. Der Standardwert ist 0 (null) gibt an, dass benutzerdefinierte Paginierung verwendet werden kann.  
+  
+ Die Einheiten für ein Element verwendet werden, hängen von des Steuerelements ab. Z. B. eine <xref:System.Web.UI.MobileControls.List> Steuerelement möglicherweise Listenelemente als Einheiten verwenden, wohingegen ein <xref:System.Web.UI.MobileControls.TextView> Steuerelement kann Zeichen verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsPerPage">
+      <MemberSignature Language="C#" Value="public int ItemsPerPage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemsPerPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.ItemsPerPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Elemente, die nach der Paginierung pro Seite angezeigt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Anzahl der Elemente, die nach der Paginierung pro Seite angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert 0 ist, wird die Paginierung von dieser Eigenschaft nicht beeinflusst. Wert ungleich NULL ist, überschreibt Elemente pro Seite angezeigt wird, wenn die Paginierung des Formulars. Der Standardwert ist 0 (null).  
+  
+ Mobile-Steuerelemente, die internen Paginierung unterstützen stellen außerdem eine benutzerdefinierte Paginierung. Solche Steuerelemente müssen in der Regel alle Daten bereitstellen, die sie anzeigen können. Entwickler angeben, die Gesamtanzahl der Elemente, die in der Liste sind die <xref:System.Web.UI.MobileControls.PagedControl.ItemCount%2A> Eigenschaft. Die <xref:System.Web.UI.MobileControls.PagedControl.ItemsPerPage%2A> Eigenschaft gibt an, wie viele Elemente die Steuerelement pro Seite anzeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.PagedControl.ItemsPerPage%2A> Eigenschaft acht Elemente einer Liste mit 200 Elementen pro Seite gerendert.  
+  
+ [!code-aspx-csharp[MobileLoadListEventArgsSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileLoadListEventArgsSample/cs/default.aspx#1)]
+ [!code-aspx-vb[MobileLoadListEventArgsSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileLoadListEventArgsSample/vb/default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemWeight">
+      <MemberSignature Language="C#" Value="protected virtual int ItemWeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.ItemWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ungefähre Gewichtung eines einzelnen Elements im Steuerelement ab. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die ungefähre Gewichtung eines einzelnen Elements im Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert-1 gibt an, dass die standardgewichtung für das Element verwendet werden muss. Die erbende Klasse muss diese Eigenschaft überschreiben. Weitere Informationen zum Überschreiben dieser Eigenschaft finden Sie unter [Unterstützung der Paginierung](http://msdn.microsoft.com/en-us/78f2786d-0b5b-4760-9616-5027357713c2).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und verwendet ein benutzerdefiniertes Listenfeld-Steuerelement. Im Beispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.MobileControls.PagedControl.ItemWeight%2A> Eigenschaft von einem <xref:System.Web.UI.MobileControls.List> Klasse, um ein neues Steuerelement Gewichtung angeben.  
+  
+ [!code-aspx-csharp[MobilePagedControlSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobilePagedControlSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobilePagedControlSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobilePagedControlSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadItems">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.MobileControls.LoadItemsEventHandler LoadItems;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.MobileControls.LoadItemsEventHandler LoadItems" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.PagedControl.LoadItems" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.LoadItemsEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Steuerelement benutzerdefinierte Paginierung durchgeführt und mehr Daten benötigt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Steuerelement benutzerdefinierte Paginierung durchgeführt wird, führen Sie Sie nicht explizit das Steuerelement binden. Nach der Paginierung löst das Steuerelement dieses Ereignis hat, der angibt, welcher Teil der Daten erforderlich ist. Die Anwendung kann dieses Ereignis verarbeiten, und Binden des Steuerelements mit den erforderlichen Daten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.MobileControls.PagedControl.ItemsPerPage%2A> Eigenschaft acht Elemente einer Liste mit 200 Elementen pro Seite gerendert.  
+  
+ [!code-aspx-csharp[MobileLoadListEventArgsSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileLoadListEventArgsSample/cs/default.aspx#1)]
+ [!code-aspx-vb[MobileLoadListEventArgsSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileLoadListEventArgsSample/vb/default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPrivateViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadPrivateViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadPrivateViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.LoadPrivateViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Keine</param>
+        <summary>Lädt den privaten Ansichtszustand. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoadItems">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoadItems (System.Web.UI.MobileControls.LoadItemsEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLoadItems(class System.Web.UI.MobileControls.LoadItemsEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.OnLoadItems(System.Web.UI.MobileControls.LoadItemsEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.MobileControls.LoadItemsEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt, das definiert, indem ein <see cref="T:System.EventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn das Steuerelement eine benutzerdefinierte Paginierung hat und mehr Daten benötigt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung löst die <xref:System.Web.UI.MobileControls.PagedControl.LoadItems> Ereignis. Erbende Klassen kann diese Methode zum Abrufen der erforderlichen Daten überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPageChange">
+      <MemberSignature Language="C#" Value="protected override void OnPageChange (int oldPageIndex, int newPageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPageChange(int32 oldPageIndex, int32 newPageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.OnPageChange(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldPageIndex" Type="System.Int32" />
+        <Parameter Name="newPageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="oldPageIndex">Keine</param>
+        <param name="newPageIndex">Keine</param>
+        <summary>Paginiert ein Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Keine</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaginateRecursive">
+      <MemberSignature Language="C#" Value="public override void PaginateRecursive (System.Web.UI.MobileControls.ControlPager pager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void PaginateRecursive(class System.Web.UI.MobileControls.ControlPager pager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.PaginateRecursive(System.Web.UI.MobileControls.ControlPager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pager" Type="System.Web.UI.MobileControls.ControlPager" />
+      </Parameters>
+      <Docs>
+        <param name="pager">Keine</param>
+        <summary>Paginiert das Steuerelement und seine untergeordneten Elemente. Wird intern von ASP.NET aufgerufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SavePrivateViewState">
+      <MemberSignature Language="C#" Value="protected override object SavePrivateViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SavePrivateViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.SavePrivateViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert alle privaten Ansichtszustandsänderungen, die seit dem Laden der Seite aus dem persistenten Speicher aufgetreten sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Keine</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleItemCount">
+      <MemberSignature Language="C#" Value="public int VisibleItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisibleItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.VisibleItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente, die auf der aktuellen ASP.NET mobile Web Forms-Seite angezeigt werden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Anzahl der Elemente, die auf der aktuellen ASP.NET mobile Web Forms-Seite angezeigt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Steuerelement nicht auf der aktuellen Formularseite angezeigt wird, ist dieser Wert 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleWeight">
+      <MemberSignature Language="C#" Value="public override int VisibleWeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisibleWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.VisibleWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ungefähre Gewichtung des Steuerelements in Zeichen ab. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Keine</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

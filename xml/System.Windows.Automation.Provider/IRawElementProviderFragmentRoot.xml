@@ -1,0 +1,113 @@
+<Type Name="IRawElementProviderFragmentRoot" FullName="System.Windows.Automation.Provider.IRawElementProviderFragmentRoot">
+  <TypeSignature Language="C#" Value="public interface IRawElementProviderFragmentRoot : System.Windows.Automation.Provider.IRawElementProviderFragment" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRawElementProviderFragmentRoot implements class System.Windows.Automation.Provider.IRawElementProviderFragment, class System.Windows.Automation.Provider.IRawElementProviderSimple" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IRawElementProviderFragment</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("620ce2a5-ab8f-40a9-86cb-de3c75599b58")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Methoden und Eigenschaften des Stammelements in einem Fragment verfügbar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wird durch ein Stammelement in einem Framework implementiert; Beispiel: ein Listenfeld, das innerhalb eines Fensters. Andere Elemente im gleichen Fragment, z. B. Listenelemente, implementieren die <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ElementProviderFromPoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderFragment ElementProviderFromPoint (double x, double y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderFragment ElementProviderFromPoint(float64 x, float64 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.ElementProviderFromPoint(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderFragment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate.</param>
+        <param name="y">Die Y-Koordinate.</param>
+        <summary>Ruft das Element in diesem Fragment ab, das sich am angegebenen Punkt befindet.</summary>
+        <returns>Der Anbieter für das untergeordnete Element am angegebenen Punkt (sofern vorhanden) oder der Stammanbieter, wenn sich der Punkt auf diesem Element, jedoch nicht auf einem untergeordneten Element befindet. Andernfalls wird <see langword="null" /> zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Zeitpunkt für ein Element in einem anderen Framework, die von diesem Fragment gehostet wird ist, gibt die Methode das Element, das dieses Fragment hostet.  
+  
+ Der zurückgegebene Anbieter sollte das Element entsprechen, die Mauseingabe am angegebenen Punkt erhalten würde.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine mögliche Implementierung dieser Methode für ein Listenfeld nicht durchführen eines Bildlaufs. Der Index des Listenelements am angegebenen Punkt wird über die Höhe der einzelnen Elemente berechnet, und das Element an diesem Punkt wird zurückgegeben. Wenn an diesem Punkt kein Element vorhanden ist (z. B. einen leeren Bereich des Listenfelds ist, gibt die Methode einen null-Verweis zurück (`Nothing`).  
+  
+ [!code-csharp[UIAFragmentProvider_snip#106](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#106)]
+ [!code-vb[UIAFragmentProvider_snip#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#106)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFocus">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderFragment GetFocus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderFragment GetFocus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.GetFocus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderFragment</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Element in diesem Fragment ab, das über den Eingabefokus verfügt.</summary>
+        <returns>Der Anbieter für das Element in diesem Fragment, das den Eingabefokus hat, falls vorhanden; andernfalls eine Null-Verweis (<see langword="Nothing" /> in Visual Basic).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Fokus auf ein Element in einem anderen Framework, die von diesem Fragment gehostet wird ist, gibt die Methode das Element, das dieses Fragment hostet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine mögliche Implementierung dieser Methode für ein Listenfeld an. Es gibt das aktuell ausgewählte Element in der Liste zurück.  
+  
+ [!code-csharp[UIAFragmentProvider_snip#107](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#107)]
+ [!code-vb[UIAFragmentProvider_snip#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#107)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

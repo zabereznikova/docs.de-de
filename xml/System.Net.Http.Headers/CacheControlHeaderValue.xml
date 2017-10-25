@@ -1,0 +1,767 @@
+<Type Name="CacheControlHeaderValue" FullName="System.Net.Http.Headers.CacheControlHeaderValue">
+  <TypeSignature Language="C#" Value="public class CacheControlHeaderValue : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CacheControlHeaderValue extends System.Object implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.Headers.CacheControlHeaderValue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt den Wert des Cache-Control-Headers dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheControlHeaderValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.CacheControlHeaderValue.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.Headers.CacheControlHeaderValue" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.CacheControlHeaderValue.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dem aktuellen Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Object" /> und das aktuelle <see cref="T:System.Net.Http.Headers.CacheControlHeaderValue" />-Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see cref="T:System.Object" /> gleich dem aktuellen Objekt ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.Net.Http.Headers.NameValueHeaderValue&gt; Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Net.Http.Headers.NameValueHeaderValue&gt; Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Net.Http.Headers.NameValueHeaderValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cacheerweiterungstoken, jeweils mit einem optionalen zugewiesenen Wert.</summary>
+        <value>Eine Sammlung von Cacheerweiterungstoken, jeweils mit einem optionalen zugewiesenen Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die Richtlinie "Cache-Erweiterung" in einem Cache-Control-Header-Feld auf einem HTTP-Anforderung oder eine HTTP-Antwort dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.CacheControlHeaderValue.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für ein <see cref="T:System.Net.Http.Headers.CacheControlHeaderValue" />-Objekt.</summary>
+        <returns>Ein Hashcode für das aktuelle Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Hashcode ist ein numerischer Wert, der zum Identifizieren eines Objekts während der Gleichheitstests der auf verwendet wird. Es kann auch als Index für ein Objekt in einer Auflistung dienen.  
+  
+ Die <xref:System.Net.Http.Headers.CacheControlHeaderValue.GetHashCode%2A> Methode eignet sich für die Verwendung in Hashalgorithmen und Datenstrukturen wie Hashtabellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxAge">
+      <MemberSignature Language="C#" Value="public Nullable&lt;TimeSpan&gt; MaxAge { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; MaxAge" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.MaxAge" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das maximale Alter in Sekunden, das der HTTP-Client für den Empfang einer Antwort akzeptiert.</summary>
+        <value>Die Zeit in Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die "Max-Age"-Direktive in einem Cache-Control-Header-Feld auf einem HTTP-Anforderung oder eine HTTP-Antwort dar.  
+  
+ Wenn die <xref:System.Net.Http.Headers.CacheControlHeaderValue.MaxStale%2A> Eigenschaft auch festgelegt ist, der Client ist nicht bereit, die eine veraltete Antwort nicht akzeptiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxStale">
+      <MemberSignature Language="C#" Value="public bool MaxStale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MaxStale" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.MaxStale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob ein HTTP-Client bereit ist, eine Antwort zu akzeptieren, die den Ablaufzeitpunkt überschritten hat.</summary>
+        <value>
+          <see langword="true" />, wenn der ein HTTP-Client bereit ist, eine Antwort zu akzeptieren, die den Ablaufzeitpunkt überschritten hat; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft darstellt, sofern die Richtlinie "Max-veraltet" in einem Cache-Control-Header-Feld in einer HTTP-Anforderung vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxStaleLimit">
+      <MemberSignature Language="C#" Value="public Nullable&lt;TimeSpan&gt; MaxStaleLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; MaxStaleLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.MaxStaleLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die maximale Zeit in Sekunden, für die ein HTTP-Client eine Antwort akzeptiert, die den Ablaufzeitpunkt überschritten hat.</summary>
+        <value>Die Zeit in Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt den Wert "Max. veraltet" Richtlinie in einem Cache-Control-Header-Feld in einer HTTP-Anforderung zugewiesen.  
+  
+ Wenn die <xref:System.Net.Http.Headers.CacheControlHeaderValue.MaxStaleLimit%2A> -Eigenschaft einen anderen Wert als 0 (null) zugewiesen, und klicken Sie dann der Client ist bereit, die eine Antwort nicht akzeptiert, die der Ablaufzeit von nicht mehr als die angegebene Anzahl von Sekunden überschritten hat. Wenn der Wert 0 (null) zugewiesen ist die <xref:System.Net.Http.Headers.CacheControlHeaderValue.MaxStaleLimit%2A> -Eigenschaft, und klicken Sie dann auf dem Client ist bereit, der ALTER eine veraltete Antwort nicht akzeptiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinFresh">
+      <MemberSignature Language="C#" Value="public Nullable&lt;TimeSpan&gt; MinFresh { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; MinFresh" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.MinFresh" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Lebensdauer der Aktualität in Sekunden, die ein HTTP-Client für den Empfang einer Antwort akzeptiert.</summary>
+        <value>Die Zeit in Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die Direktive "min frisch" in einem Cache-Control-Header-Feld in einer HTTP-Anforderung dar.  
+  
+ Die Eigenschaft gibt an, dass der HTTP-Client bereit ist, die eine Antwort nicht akzeptiert, deren Lebensdauer Aktualität nicht kleiner als die aktuell Alter plus wird die Aktualität Lebensdauer Zeit in Sekunden angegeben. Der Client möchte eine Antwort, die noch für die neue mindestens das aktuelle Alter plus die Aktualität Lebensdauer werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MustRevalidate">
+      <MemberSignature Language="C#" Value="public bool MustRevalidate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MustRevalidate" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.MustRevalidate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Ausgangsserver die erneute Überprüfung eines Cacheeintrags für jede nachfolgende Verwendung erfordert, wenn der Cacheeintrag veraltet ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Ausgangsserver die erneute Überprüfung eines Cacheeintrags für jede nachfolgende Verwendung erfordert, wenn der Cacheeintrag veraltet ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die Direktive "Must-Revalidate" in einem Cache-Control-Header-Feld in einer HTTP-Antwort dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoCache">
+      <MemberSignature Language="C#" Value="public bool NoCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoCache" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.NoCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob ein HTTP-Client bereit ist, eine zwischengespeicherte Antwort zu akzeptieren.</summary>
+        <value>
+          <see langword="true" />, wenn ein HTTP-Client bereit ist, eine zwischengespeicherte Antwort zu akzeptieren; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die Direktive "No-Cache" in einem Cache-Control-Header-Feld auf einem HTTP-Anforderung oder eine HTTP-Antwort dar.  
+  
+ Wenn die <xref:System.Net.Http.Headers.CacheControlHeaderValue.NoCache%2A> -Eigenschaftensatz auf `true` vorhanden in einer HTTP-Anforderungsnachricht, sollten eine Anwendung die Anforderung auf dem Ausgangsserver weiterleiten, auch wenn es hat eine zwischengespeicherte Kopie, was angefordert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoCacheHeaders">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; NoCacheHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; NoCacheHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.NoCacheHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Sammlung von Feldnamen in der „No-Cache“-Richtlinie in einem Cache-Control-Header-Feld auf einer HTTP-Antwort.</summary>
+        <value>Eine Sammlung von Feldnamen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt "FieldNames" in der Direktive "No-Cache" in einem Cache-Control-Header-Feld in einer HTTP-Antwort dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoStore">
+      <MemberSignature Language="C#" Value="public bool NoStore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoStore" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.NoStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob ein Cache weder einen beliebigen Teil der HTTP-Anforderungsnachricht noch eine beliebige Antwort speichern darf.</summary>
+        <value>
+          <see langword="true" />, wenn ein Cache weder einen beliebigen Teil der HTTP-Anforderungsnachricht noch eine beliebige Antwort speichern darf; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die Direktive "ohne-Store" in einem Cache-Control-Header-Feld auf einem HTTP-Anforderung oder eine HTTP-Antwort dar.  
+  
+ Der Zweck der <xref:System.Net.Http.Headers.CacheControlHeaderValue.NoStore%2A> Eigenschaft wird verhindert, dass das unbeabsichtigten Release oder Aufbewahrung von vertraulichen Informationen. Diese Eigenschaft gilt für die gesamte Nachricht und entweder in einer HTTP-Anforderung oder Antwort gesendet werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoTransform">
+      <MemberSignature Language="C#" Value="public bool NoTransform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoTransform" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.NoTransform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob ein Cache oder Proxy einen Aspekt des Entitätstexts ändern darf.</summary>
+        <value>
+          <see langword="true" />, wenn ein Cache oder Proxy keinen Aspekt des Entitätstexts ändern darf, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die Direktive "Nein-transformieren" in einem Cache-Control-Header-Feld auf einem HTTP-Anforderung oder eine HTTP-Antwort dar.  
+  
+ Wenn die <xref:System.Net.Http.Headers.CacheControlHeaderValue.NoTransform%2A> festgelegt ist, um `true`, intermediate Caches oder Rpoxies müssen beliebig Entitätstext nicht ändern. In einer Implementierung der intermediate-Caches und Proxys es sinnvoll, den Medientyp der bestimmten Entität Texte konvertieren gefunden. Ein nicht transparenter Proxy kann, z. B. zwischen Bildformate um Cachespeicher speichern oder verringern Sie den Umfang des Datenverkehrs auf einer langsamen Verbindung konvertiert werden. Schwerwiegende operative Probleme auftreten, allerdings wann diese Transformationen angewendet werden, stellen Entität vorgesehen für bestimmte Arten von Anwendungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyIfCached">
+      <MemberSignature Language="C#" Value="public bool OnlyIfCached { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OnlyIfCached" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.OnlyIfCached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob ein Cache mit einem zwischengespeicherten Eintrag antworten soll, der mit den anderen Einschränkungen der HTTP-Anforderung konsistent ist, oder mit dem Status „504“ (Gatewaytimeout).</summary>
+        <value>
+          <see langword="true" />, wenn ein Cache mit einem zwischengespeicherten Eintrag, der mit den anderen Einschränkungen der HTTP-Anforderung konsistent ist, oder mit dem Status „504“ (Gatewaytimeout) antworten soll. Andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die Richtlinie "nur-If-cached" in einem Cache-Control-Header-Feld in einer HTTP-Anforderung dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.Headers.CacheControlHeaderValue Parse (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Http.Headers.CacheControlHeaderValue Parse(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.CacheControlHeaderValue.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.Headers.CacheControlHeaderValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">Eine Zeichenfolge, die Headerwertinformationen für Cachesteuerelemente darstellt.</param>
+        <summary>Konvertiert eine Zeichenfolge in eine <see cref="T:System.Net.Http.Headers.CacheControlHeaderValue" />-Instanz.</summary>
+        <returns>Eine <see cref="T:System.Net.Http.Headers.CacheControlHeaderValue" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="input" /> ist ein <see langword="null" />-Verweis.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="input" /> ist keine gültige Headerwertinformation für Cachesteuerelemente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Private">
+      <MemberSignature Language="C#" Value="public bool Private { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Private" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.Private" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ob die gesamte HTTP-Antwortnachricht oder nur ein Teil davon für einen einzelnen Benutzer vorgesehen ist, und ob sie nicht von einem gemeinsam genutzten Cache zwischengespeichert werden darf.</summary>
+        <value>
+          <see langword="true" />, wenn die HTTP-Antwortnachricht für einen einzelnen Benutzer vorgesehen ist und nicht von einem gemeinsam genutzten Cache zwischengespeichert werden darf; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die "private"-Direktive in einem Cache-Control-Header-Feld in einer HTTP-Antwort dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateHeaders">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; PrivateHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; PrivateHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.PrivateHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Sammlung von Feldnamen in der „Private“-Richtlinie in einem Cache-Control-Header-Feld auf einer HTTP-Antwort.</summary>
+        <value>Eine Sammlung von Feldnamen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt "FieldNames" in "Privat"-Direktive in einem Cache-Control-Header-Feld in einer HTTP-Antwort dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyRevalidate">
+      <MemberSignature Language="C#" Value="public bool ProxyRevalidate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProxyRevalidate" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.ProxyRevalidate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Ausgangsserver für gemeinsam genutzte Benutzeragentcaches die erneute Überprüfung eines Cacheeintrags für jede nachfolgende Verwendung erfordert, wenn der Cacheeintrag veraltet ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Ausgangsserver für gemeinsam genutzte Benutzeragentcaches die erneute Überprüfung eines Cacheeintrags für jede nachfolgende Verwendung erfordert, wenn der Cacheeintrag veraltet ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die Direktive "Proxy-revalidate-Anweisung" in einem Cache-Control-Header-Feld in einer HTTP-Antwort dar.  
+  
+ Diese Eigenschaft wirkt sich nicht auf nicht freigegebene Benutzer-Agent-Caches aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Public">
+      <MemberSignature Language="C#" Value="public bool Public { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Public" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.Public" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ob eine HTTP-Antwort auch dann in einem beliebigen Cache zwischengespeichert werden darf, wenn sie normalerweise nicht bzw. nur in einem nicht freigegebenen Cache zwischengespeichert werden darf.</summary>
+        <value>
+          <see langword="true" />, wenn die HTTP-Antwort auch dann in einem beliebigen Cache zwischengespeichert werden darf, wenn sie normalerweise nicht bzw. nur in einem nicht freigegebenen Cache zwischengespeichert werden darf; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die "public"-Direktive in einem Cache-Control-Header-Feld in einer HTTP-Antwort dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharedMaxAge">
+      <MemberSignature Language="C#" Value="public Nullable&lt;TimeSpan&gt; SharedMaxAge { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; SharedMaxAge" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.CacheControlHeaderValue.SharedMaxAge" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das in Sekunden angegebene, Höchstalter für freigegebene Caches in einer HTTP-Antwort, das die max-age-Direktive in einem cache-control-Header oder einem Expires-Header für einen freigegebenen Cache überschreibt.</summary>
+        <value>Die Zeit in Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die Direktive "s-Max-Age" in einem Cache-Control-Header-Feld in einer HTTP-Antwort dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.CacheControlHeaderValue.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen <see cref="T:System.Net.Http.Headers.CacheControlHeaderValue" />-Instanz ist.</summary>
+        <returns>Eine Kopie der aktuellen Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.CacheControlHeaderValue.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle <see cref="T:System.Net.Http.Headers.CacheControlHeaderValue" />-Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (string input, out System.Net.Http.Headers.CacheControlHeaderValue parsedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(string input, [out] class System.Net.Http.Headers.CacheControlHeaderValue&amp; parsedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.CacheControlHeaderValue.TryParse(System.String,System.Net.Http.Headers.CacheControlHeaderValue@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="parsedValue" Type="System.Net.Http.Headers.CacheControlHeaderValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu überprüfende Zeichenfolge.</param>
+        <param name="parsedValue">Die <see cref="T:System.Net.Http.Headers.CacheControlHeaderValue" />-Version der Zeichenfolge.</param>
+        <summary>Bestimmt, ob eine Zeichenfolge eine gültige <see cref="T:System.Net.Http.Headers.CacheControlHeaderValue" />-Information ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="input" /> eine gültige <see cref="T:System.Net.Http.Headers.CacheControlHeaderValue" />-Information ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

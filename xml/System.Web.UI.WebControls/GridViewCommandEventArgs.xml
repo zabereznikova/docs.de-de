@@ -1,0 +1,180 @@
+<Type Name="GridViewCommandEventArgs" FullName="System.Web.UI.WebControls.GridViewCommandEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewCommandEventArgs : System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewCommandEventArgs extends System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CommandEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.GridView.RowCommand" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.GridView.RowCommand> Ereignis wird ausgelöst, wenn auf eine Schaltfläche in der <xref:System.Web.UI.WebControls.GridView> Steuerelement geklickt wird. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, wenn dieses Ereignis tritt auf.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.GridView> Steuerelement löst auch andere spezielle Ereignisse bestimmte Schaltflächen geklickt werden (Schaltflächen mit der `CommandName` -Eigenschaft auf "Löschen", "Update" und "Seite" festgelegt werden, z. B.). Wenn Sie eine der folgenden Schaltflächen verwenden, sollten Sie eines der vom Steuerelement bereitgestellte spezielle Ereignisse behandeln (wie z. B. <xref:System.Web.UI.WebControls.GridView.RowDeleted> oder <xref:System.Web.UI.WebControls.GridView.RowDeleting>).  
+  
+ Ein <xref:System.Web.UI.WebControls.GridViewCommandEventArgs> Ereignisbehandlungsmethode, dadurch können Sie zum Bestimmen der Befehlsname und Befehlsargument der Schaltfläche geklickt-Objekt übergeben wird. Name des Befehls und Befehlsargument ermitteln Sie mithilfe der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> und <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> Eigenschaften bzw.. Sie können auch zugreifen, das Schaltflächen-Steuerelement, das das Ereignis ausgelöst, mithilfe hat der <xref:System.Web.UI.WebControls.GridViewCommandEventArgs.CommandSource%2A> Eigenschaft.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.GridViewCommandEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.GridViewCommandEventArgs.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewCommandEventArgs> -Objekt übergeben, auf die Ereignisbehandlung-Methode, die den Befehlsnamen der Schaltfläche zu bestimmen, die das Ereignis ausgelöst hat.  
+  
+ [!code-aspx-csharp[GridViewRowCommmand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowCommmand/CS/gridviewrowcommandcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowCommmand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowCommmand/VB/gridviewrowcommandvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewCommandEventArgs (object commandSource, System.Web.UI.WebControls.CommandEventArgs originalArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object commandSource, class System.Web.UI.WebControls.CommandEventArgs originalArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewCommandEventArgs.#ctor(System.Object,System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandSource" Type="System.Object" />
+        <Parameter Name="originalArgs" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="commandSource">Die Quelle des Befehls.</param>
+        <param name="originalArgs">Ein <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.GridViewCommandEventArgs" /> -Klasse unter Verwendung der angegebenen Quelle des Befehls und der Ereignisargumente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.GridViewCommandEventArgs> Klasse.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Web.UI.WebControls.GridViewCommandEventArgs>-Instanz aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A>|Der Wert des der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.CommandEventArgs> in enthaltenes Objekt die `originalArgs` Parameter.|  
+|<xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A>|Der Wert des der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.CommandEventArgs> in enthaltenes Objekt die `originalArgs` Parameter.|  
+|<xref:System.Web.UI.WebControls.GridViewCommandEventArgs.CommandSource%2A>|Das Objekt in der `commandSource` Parameter.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewCommandEventArgs (System.Web.UI.WebControls.GridViewRow row, object commandSource, System.Web.UI.WebControls.CommandEventArgs originalArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.GridViewRow row, object commandSource, class System.Web.UI.WebControls.CommandEventArgs originalArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewCommandEventArgs.#ctor(System.Web.UI.WebControls.GridViewRow,System.Object,System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="row" Type="System.Web.UI.WebControls.GridViewRow" />
+        <Parameter Name="commandSource" Type="System.Object" />
+        <Parameter Name="originalArgs" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="row">Ein <see cref="T:System.Web.UI.WebControls.GridViewRow" /> Objekt, das die Zeile mit der Schaltfläche darstellt.</param>
+        <param name="commandSource">Die Quelle des Befehls.</param>
+        <param name="originalArgs">Ein <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.GridViewCommandEventArgs" /> -Klasse unter Verwendung der angegebenen Zeile, die Quelle des Befehls und der Ereignisargumente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.GridViewCommandEventArgs> Klasse.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Web.UI.WebControls.GridViewCommandEventArgs>-Instanz aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A>|Der Wert des der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.CommandEventArgs> in enthaltenes Objekt die `originalArgs` Parameter.|  
+|<xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A>|Der Wert des der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.CommandEventArgs> in enthaltenes Objekt die `originalArgs` Parameter.|  
+|<xref:System.Web.UI.WebControls.GridViewCommandEventArgs.CommandSource%2A>|Das Objekt in der `commandSource` Parameter.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandSource">
+      <MemberSignature Language="C#" Value="public object CommandSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewCommandEventArgs.CommandSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Quelle des Befehls ab.</summary>
+        <value>Eine Instanz der dem <see cref="T:System.Object" /> Klasse, die die Quelle des Befehls darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewCommandEventArgs.CommandSource%2A> Eigenschaft, um die Eigenschaften des Objekts zuzugreifen, die die Quelle des Befehls darstellt. Im Fall von einem <xref:System.Web.UI.WebControls.GridViewCommandEventArgs> -Objekt die Quelle des Befehls ist der <xref:System.Web.UI.WebControls.GridView> Steuerelement mit der Schaltfläche der Benutzer geklickt hat.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewCommandEventArgs.CommandSource%2A> aufzurufende Eigenschaft der <xref:System.Web.UI.WebControls.GridView> Steuerelement mit der Schaltfläche der Benutzer geklickt hat.  
+  
+ [!code-aspx-csharp[GridViewCommandEventArgs2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewCommandEventArgs2/CS/gridviewcommandeventargs2cs.aspx#1)]
+ [!code-aspx-vb[GridViewCommandEventArgs2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewCommandEventArgs2/VB/gridviewcommandeventargs2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewCommandEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Steuerelement das Ereignis behandelt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn von datengebundenen Ereigniscode übersprungen wurde oder wurde beendet. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf `true` im Ereignishandler an, dass die <xref:System.Web.UI.WebControls.GridView> Steuerelement sollte das Ereignis nicht behandeln, da Sie es im Code behandeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

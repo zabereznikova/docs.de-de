@@ -1,0 +1,171 @@
+<Type Name="RegisteredScript" FullName="System.Web.UI.RegisteredScript">
+  <TypeSignature Language="C#" Value="public sealed class RegisteredScript" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RegisteredScript extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.RegisteredScript" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf eine Clientskript, das zuvor registriert die <see cref="T:System.Web.UI.Page" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Clientskript wird durch seinen Schlüssel und seinen Typ eindeutig identifiziert. Eine Seite kann nur ein Skript mit ein Paar angegebene Schlüsseltyp registriert.  
+  
+ Clientskripts werden nicht unbedingt in der Reihenfolge ausgegeben, der in dem sie registriert sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddScriptTags">
+      <MemberSignature Language="C#" Value="public bool AddScriptTags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AddScriptTags" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.AddScriptTags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Skriptblock soll, auf der Webseite gerendert werden, eingeschlossen <see langword="&lt;script&gt;" /> Tags.</summary>
+        <value>
+          <see langword="true" />Wenn das Skript auf der Webseite, eingeschlossen gerendert werden soll <see langword="&lt;script&gt;" /> tags; anderenfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Steuerelement, das das Skript registriert.</summary>
+        <value>Ein Verweis auf das Steuerelement, das das Skript registriert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public string Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Key" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel ab, der zusammen mit der <see cref="P:System.Web.UI.RegisteredScript.Type" /> -Wert, der das Skript erkennt.</summary>
+        <value>Der Wert des Schlüssels. Mögliche Werte sind <see langword="null" /> oder leer sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Clientskript wird durch seinen Schlüssel und seinen Typ eindeutig identifiziert. Eine Seite kann nur ein Skript mit ein Paar angegebene Schlüsseltyp registriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Script">
+      <MemberSignature Language="C#" Value="public string Script { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Script" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.Script" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Dateinamen des Skripts ab.</summary>
+        <value>Der Dateiname des Skripts. Mögliche Werte sind <see langword="null" /> oder leer sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.RegisteredScriptType ScriptType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.RegisteredScriptType ScriptType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.ScriptType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.RegisteredScriptType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Skripttyp, der angibt, wenn das Skript ausgeführt werden soll.</summary>
+        <value>Ein Wert, der definiert, indem die <see cref="T:System.Web.UI.RegisteredScriptType" /> Enumeration.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Clientskript Datentyp, der zusammen mit der <see cref="P:System.Web.UI.RegisteredScript.Key" /> -Wert, der das Skript erkennt.</summary>
+        <value>Der Typ des Skripts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird normalerweise angegeben, mit dem Datentyp des Steuerelements, das das Skript registriert.  
+  
+ Ein Clientskript wird durch seinen Schlüssel und seinen Typ eindeutig identifiziert. Eine Seite kann nur ein Skript mit ein Paar angegebene Schlüsseltyp registriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL der Skriptdatei an.</summary>
+        <value>Die URL der Skriptdatei. Mögliche Werte sind <see langword="null" /> oder leer sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

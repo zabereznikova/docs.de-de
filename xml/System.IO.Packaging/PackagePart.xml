@@ -1,0 +1,1029 @@
+<Type Name="PackagePart" FullName="System.IO.Packaging.PackagePart">
+  <TypeSignature Language="C#" Value="public abstract class PackagePart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PackagePart extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.PackagePart" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Packaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Basisklasse für Webparts gespeichert eine <see cref="T:System.IO.Packaging.Package" />.  Diese Klasse ist abstrakt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.IO.Packaging.PackagePart> besteht aus drei grundlegenden Elementen:  
+  
+|Zugriff|Beschreibung|  
+|------------|-----------------|  
+|<xref:System.IO.Packaging.PackagePart.Uri%2A>|Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Teils.|  
+|<xref:System.IO.Packaging.PackagePart.ContentType%2A>|Die [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Typ des inhaltsdatenstroms.|  
+|<xref:System.IO.Packaging.PackagePart.GetStream%2A>|Der Inhalt Datenstrom des Teils.|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Packaging.PackagePart" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [Paket-URI in WPF](~/docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+  
+ [Open Packaging Conventions-Spezifikation](http://go.microsoft.com/fwlink/?LinkID=71255)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PackagePart (System.IO.Packaging.Package package, Uri partUri);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.IO.Packaging.Package package, class System.Uri partUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.#ctor(System.IO.Packaging.Package,System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="package" Type="System.IO.Packaging.Package" />
+        <Parameter Name="partUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="package">Das übergeordnete Element <see cref="T:System.IO.Packaging.Package" /> des Teils.</param>
+        <param name="partUri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Teils, relativ zum übergeordneten <see cref="T:System.IO.Packaging.Package" /> Stamm.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.Packaging.PackagePart" /> Klasse mit einem angegebenen übergeordneten <see cref="P:System.IO.Packaging.PackagePart.Package" /> und Teil [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `partUri`muss gültig sein <xref:System.IO.Packaging.PackagePart> [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] gebildet in Abhängigkeit von der [RFC 3986](http://tools.ietf.org/html/rfc3986) *Uniform Resource Identifier (URI) generische Syntax* Spezifikation und die [Open Packaging Konventionen](http://go.microsoft.com/fwlink/?LinkID=71255) Spezifikation.  
+  
+ Verwenden Sie diesen Konstruktor, wenn der <xref:System.IO.Packaging.PackagePart.ContentType%2A> des Teils nicht sofort bekannt und wird festgelegt werden, wenn <xref:System.IO.Packaging.Package.CreatePart%2A> aufgerufen wird.  
+  
+ Wird standardmäßig die <xref:System.IO.Packaging.PackagePart.CompressionOption%2A> -Eigenschaft des Teils wird initialisiert, um <xref:System.IO.Packaging.CompressionOption.NotCompressed>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="package" /> oder <paramref name="partUri" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PackagePart (System.IO.Packaging.Package package, Uri partUri, string contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.IO.Packaging.Package package, class System.Uri partUri, string contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.#ctor(System.IO.Packaging.Package,System.Uri,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="package" Type="System.IO.Packaging.Package" />
+        <Parameter Name="partUri" Type="System.Uri" />
+        <Parameter Name="contentType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="package">Das übergeordnete Element <see cref="T:System.IO.Packaging.Package" /> des Teils.</param>
+        <param name="partUri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Teils, relativ zum übergeordneten <see cref="T:System.IO.Packaging.Package" /> Stamm.</param>
+        <param name="contentType">Die [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Inhaltstyp des Datenstroms Teil.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.Packaging.PackagePart" /> Klasse mit einem angegebenen übergeordneten <see cref="P:System.IO.Packaging.PackagePart.Package" />, Teil [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)], und [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Inhaltstyp.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `partUri`muss gültig sein <xref:System.IO.Packaging.PackagePart> [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] gebildet in Abhängigkeit von der [RFC 3986](http://tools.ietf.org/html/rfc3986) *Uniform Resource Identifier (URI) generische Syntax* Spezifikation und die [Open Packaging Konventionen](http://go.microsoft.com/fwlink/?LinkID=71255) Spezifikation.  
+  
+ Wird standardmäßig die <xref:System.IO.Packaging.PackagePart.CompressionOption%2A> -Eigenschaft des Teils wird initialisiert, um <xref:System.IO.Packaging.CompressionOption.NotCompressed>.  
+  
+ `contentType`muss ein [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Typ, der in Übereinstimmung mit den [RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616.html) *Hypertext Transfer Protocol - HTTP*, Abschnitt 3.7.  Die folgende Tabelle zeigt ein Beispiel für den Inhalt [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] verwendeten Typen [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Dokumente.  
+  
+|Beschreibung|Inhaltstyp|  
+|-----------------|------------------|  
+|Schriftart|Application/vnd.ms-opentype|  
+|ICC-Profil|application/vnd.ms-Color.iccprofile|  
+|JPEG-Bild|Image/jpeg|  
+|Verborgene Schriftart|application/vnd.ms-Package.obfuscated-OpenType|  
+|PNG-Bild|Image/png|  
+|PrintTicket|application/vnd.ms-Printing.PrintTicket+XML|  
+|TIFF-Bild|Image/tiff|  
+|Windows Media-Bild|/ vnd.ms-Foto|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="package" /> oder <paramref name="partUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partUri" />ist kein gültiger <see cref="T:System.IO.Packaging.PackagePart" /> [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PackagePart (System.IO.Packaging.Package package, Uri partUri, string contentType, System.IO.Packaging.CompressionOption compressionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.IO.Packaging.Package package, class System.Uri partUri, string contentType, valuetype System.IO.Packaging.CompressionOption compressionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.#ctor(System.IO.Packaging.Package,System.Uri,System.String,System.IO.Packaging.CompressionOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="package" Type="System.IO.Packaging.Package" />
+        <Parameter Name="partUri" Type="System.Uri" />
+        <Parameter Name="contentType" Type="System.String" />
+        <Parameter Name="compressionOption" Type="System.IO.Packaging.CompressionOption" />
+      </Parameters>
+      <Docs>
+        <param name="package">Das übergeordnete Element <see cref="T:System.IO.Packaging.Package" /> des Teils.</param>
+        <param name="partUri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Teils, relativ zum übergeordneten <see cref="T:System.IO.Packaging.Package" /> Stamm.</param>
+        <param name="contentType">Die [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Inhaltstyp des Datenstroms des Teils.</param>
+        <param name="compressionOption">Die Komprimierungsoption des Datenstroms Teil.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.Packaging.PackagePart" /> Klasse mit einem angegebenen übergeordneten <see cref="P:System.IO.Packaging.PackagePart.Package" />, Teil [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)], [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Inhaltstyp, und <see cref="T:System.IO.Packaging.CompressionOption" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `partUri`muss gültig sein <xref:System.IO.Packaging.PackagePart> [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] gebildet in Abhängigkeit von der [RFC 3986](http://tools.ietf.org/html/rfc3986) *Uniform Resource Identifier (URI) generische Syntax* Spezifikation und die [Open Packaging Konventionen](http://go.microsoft.com/fwlink/?LinkID=71255) Spezifikation.  
+  
+ `contentType`muss ein [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Typ, der in Übereinstimmung mit den [RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616.html) *Hypertext Transfer Protocol - HTTP*, Abschnitt 3.7.  Die folgende Tabelle zeigt ein Beispiel für den Inhalt [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] verwendeten Typen [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Dokumente.  
+  
+|Beschreibung|Inhaltstyp|  
+|-----------------|------------------|  
+|Schriftart|Application/vnd.ms-opentype|  
+|ICC-Profil|application/vnd.ms-Color.iccprofile|  
+|JPEG-Bild|Image/jpeg|  
+|Verborgene Schriftart|application/vnd.ms-Package.obfuscated-OpenType|  
+|PNG-Bild|Image/png|  
+|PrintTicket|application/vnd.ms-Printing.PrintTicket+XML|  
+|TIFF-Bild|Image/tiff|  
+|Windows Media-Bild|/ vnd.ms-Foto|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="package" /> oder <paramref name="partUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partUri" />ist kein gültiger <see cref="T:System.IO.Packaging.PackagePart" /> [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="compressionOption" /> Wert ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionOption">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.CompressionOption CompressionOption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Packaging.CompressionOption CompressionOption" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackagePart.CompressionOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.CompressionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Komprimierungsoption des inhaltsdatenstroms Teil ab.</summary>
+        <value>Die Komprimierungsoption des inhaltsdatenstroms Teil.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.PackagePart.CompressionOption%2A>ist eine schreibgeschützte Eigenschaft, auf die zugegriffen werden kann nur, wenn das übergeordnete Element <xref:System.IO.Packaging.Package> geöffnet ist.  
+  
+ Die <xref:System.IO.Packaging.PackagePart.CompressionOption%2A> Eigenschaft wird automatisch festgelegt, indem die <xref:System.IO.Packaging.PackagePart.%23ctor%2A> Konstruktor.  Nachdem sie vom Konstruktor festgelegt wurde die <xref:System.IO.Packaging.PackagePart.CompressionOption%2A> kann nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackagePart.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Typ des inhaltsdatenstroms.</summary>
+        <value>Die [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Typ des Datenstroms Inhaltsdaten für den Teil.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.PackagePart.ContentType%2A>ist eine schreibgeschützte Eigenschaft, auf die zugegriffen werden kann nur, wenn das übergeordnete Element <xref:System.IO.Packaging.Package> geöffnet ist.  
+  
+ Die <xref:System.IO.Packaging.PackagePart.ContentType%2A> Eigenschaft wird automatisch festgelegt, indem die <xref:System.IO.Packaging.PackagePart.%23ctor%2A> Konstruktor.  Nachdem sie vom Konstruktor festgelegt wurde die <xref:System.IO.Packaging.PackagePart.ContentType%2A> kann nicht geändert werden.  
+  
+ Die <xref:System.IO.Packaging.PackagePart.ContentType%2A> Eigenschaft ist ein [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Typ, der in Übereinstimmung mit den [RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616.html) *Hypertext Transfer Protocol - HTTP*, Abschnitt 3.7.  Die folgende Tabelle zeigt ein Beispiel für den Inhalt [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] verwendeten Typen [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Dokumente.  
+  
+|Beschreibung|Inhaltstyp|  
+|-----------------|------------------|  
+|Schriftart|Application/vnd.ms-opentype|  
+|ICC-Profil|application/vnd.ms-Color.iccprofile|  
+|JPEG-Bild|Image/jpeg|  
+|Verborgene Schriftart|application/vnd.ms-Package.obfuscated-OpenType|  
+|PNG-Bild|Image/png|  
+|PrintTicket|application/vnd.ms-Printing.PrintTicket+XML|  
+|TIFF-Bild|Image/tiff|  
+|Windows Media-Bild|/ vnd.ms-Foto|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).  
+  
+ - oder -   
+  
+ Die von der abgeleiteten Klasse zurückgegebene Zeichenfolge <see cref="M:System.IO.Packaging.PackagePart.GetContentTypeCore" /> Methode ist leer.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateRelationship">
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt eine Beziehung Teil-Ebene zwischen diesem <see cref="T:System.IO.Packaging.PackagePart" /> an ein angegebenes Ziel <see cref="T:System.IO.Packaging.PackagePart" /> oder eine externe Ressource.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Beziehung Teil-Ebene definiert eine Zuordnung zwischen diesen Teil und einen Teil des Ziels oder eine Ressource.  Eine Beziehung auf möglich zwei Arten.  
+  
+-   Zwischen einer Quelle <xref:System.IO.Packaging.PackagePart> an ein Ziel <xref:System.IO.Packaging.PackagePart> innerhalb der <xref:System.IO.Packaging.Package>.  
+  
+-   Zwischen einer Quelle <xref:System.IO.Packaging.PackagePart> mit einer Zielressource außerhalb des Pakets.  
+  
+ In einem Teil-Beziehung gilt den Teil mit der Datenquelle der "Besitzer" der Beziehung.  Wenn der Teil mit der Datenquelle gelöscht wird, werden alle Beziehungen, die der Bereich ebenfalls gelöscht.  Der Prozess zum Erstellen oder Löschen der Beziehung wird nicht physisch der Zielteil bzw. die Ressource in irgendeiner Weise verändert.  
+  
+ Die <xref:System.IO.Packaging.PackagePart.CreateRelationship%2A> Methode ändert nicht physisch, der Teil mit der Datenquelle, oder das Zielteil oder Ressource in keiner Weise.  
+  
+ Das Ziel einer Beziehung kann nicht auf eine andere Beziehung sein.  
+  
+ Weitere Informationen zu paketbeziehungen finden Sie in Abschnitt 1.3 der *(Open Packaging Conventions, OPC)* Spezifikation zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ Weitere Informationen zum XPS-Dokumente finden Sie unter der *Open XML Paper Specification (XPS)* zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=67000](http://go.microsoft.com/fwlink/?LinkID=67000).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateRelationship">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageRelationship CreateRelationship (Uri targetUri, System.IO.Packaging.TargetMode targetMode, string relationshipType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageRelationship CreateRelationship(class System.Uri targetUri, valuetype System.IO.Packaging.TargetMode targetMode, string relationshipType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageRelationship</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetUri" Type="System.Uri" />
+        <Parameter Name="targetMode" Type="System.IO.Packaging.TargetMode" />
+        <Parameter Name="relationshipType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetUri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] der Zielkomponente.</param>
+        <param name="targetMode">Einer der Enumerationswerte. Beispielsweise <see cref="F:System.IO.Packaging.TargetMode.Internal" /> Wenn das Ziel innerhalb gehört der <see cref="T:System.IO.Packaging.Package" />; oder <see cref="F:System.IO.Packaging.TargetMode.External" /> ist das Ziel einer Ressource außerhalb der <see cref="T:System.IO.Packaging.Package" />.</param>
+        <param name="relationshipType">Die Rolle der Beziehung.</param>
+        <summary>Erstellt eine Beziehung Teil-Ebene zwischen diesem <see cref="T:System.IO.Packaging.PackagePart" /> an ein angegebenes Ziel <see cref="T:System.IO.Packaging.PackagePart" /> oder eine externe Ressource.</summary>
+        <returns>Die Ebene Teil Beziehung zwischen diesem <see cref="T:System.IO.Packaging.PackagePart" /> an das Ziel <see cref="T:System.IO.Packaging.PackagePart" /> oder eine externe Ressource.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Beziehung Teil-Ebene definiert eine Zuordnung zwischen diesen Teil und einen Teil des Ziels oder eine Ressource.  Eine Beziehung auf möglich zwei Arten.  
+  
+-   Zwischen einer Quelle <xref:System.IO.Packaging.PackagePart> an ein Ziel <xref:System.IO.Packaging.PackagePart> innerhalb der <xref:System.IO.Packaging.Package>.  
+  
+-   Zwischen einer Quelle <xref:System.IO.Packaging.PackagePart> mit einer Zielressource außerhalb des Pakets.  
+  
+ In einem Teil-Beziehung gilt den Teil mit der Datenquelle der "Besitzer" der Beziehung.  Wenn der Teil mit der Datenquelle gelöscht wird, werden alle Beziehungen, die der Bereich ebenfalls gelöscht.  Der Prozess zum Erstellen oder Löschen der Beziehung wird nicht physisch der Zielteil bzw. die Ressource in irgendeiner Weise verändert.  
+  
+ Die <xref:System.IO.Packaging.PackagePart.CreateRelationship%2A> Methode ändert nicht physisch, der Teil mit der Datenquelle, oder das Zielteil oder Ressource in keiner Weise.  
+  
+ Das Ziel einer Beziehung kann nicht auf eine andere Beziehung sein.  
+  
+ Wenn `targetMode` angegeben ist, als <xref:System.IO.Packaging.TargetMode.Internal>, `targetUri` muss ein relativer URI, die im Einklang gebildet wird die [RFC 3986](http://tools.ietf.org/html/rfc3986) *generische Syntax Uniform Resource Identifier (URI)* Spezifikation.  Der interne relative URI kann entweder ein absoluter Pfad, der mit einem Schrägstrich ("/"), z. B. beginnt "/ page1.xaml" oder "/ /images/picture4.jpg", oder ein relativer Pfad wie ".. / imagespicture1.jpg ", die für das Stammverzeichnis des Pakets ("/ ") als Basis-URI auflöst.  
+  
+ Wenn `targetMode` angegeben ist, als <xref:System.IO.Packaging.TargetMode.External>, `targetUri` kann entweder ein absoluter oder relativer URI angegeben wird, in Abhängigkeit von der [RFC 3986](http://tools.ietf.org/html/rfc3986) *Uniform Resource Identifier (URI) generische Syntax*Spezifikation.  "http://www.microsoft.com/page2.xml" ist ein Beispiel für ein absoluter URI, der auf eine externe Zielressource "page2.xml" verweist.  "images/picture1.jpg" ist ein Beispiel für einen relativen URI, der auch eine externe Ressource "1.jpg" jedoch aufgelöst wird anhand des URI für das Paket selbst verweist.  
+  
+ `relationshipType`muss eine [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] , wird gebildet, gemäß der [RFC 3986](http://tools.ietf.org/html/rfc3986) *Uniform Resource Identifier (URI) generische Syntax* Spezifikation.  Verschiedene Pakettypen können andere Beziehungstypen Teil-Ebene definieren.  Die folgende Tabelle zeigt die Webpart-Ebene `relationshipType` URIs für Dokumente, die entsprechen definiert die *Open XML Paper Specification (XPS)*.  
+  
+|XPS-Dokument Teil Anwendungsebene Beziehung|Beziehungstyp URI|  
+|-------------------------------------------|---------------------------|  
+|Digitale Signaturdefinitionen|[http://Schemas.Microsoft.com/XPS/2005/06/Signature-Definitions](http://schemas.microsoft.com/xps/2005/06/signature-definitions)|  
+|DiscardControl|http://Schemas.Microsoft.com/XPS/2005/06/Discard-Control|  
+|DocumentStructure|http://Schemas.Microsoft.com/XPS/2005/06/DocumentStructure|  
+|PrintTicket|http://Schemas.Microsoft.com/XPS/2005/06/PrintTicket|  
+|Erforderliche Ressource|http://Schemas.Microsoft.com/XPS/2005/06/Required-Resource|  
+|Eingeschränkte Schriftart|http://Schemas.Microsoft.com/XPS/2005/06/Restricted-Font|  
+|StartPart|http://Schemas.Microsoft.com/XPS/2005/06/fixedrepresentation|  
+|StoryFragments|http://Schemas.Microsoft.com/XPS/2005/06/StoryFragments|  
+  
+ Weitere Informationen zu paketbeziehungen finden Sie in Abschnitt 1.3 der *(Open Packaging Conventions, OPC)* Spezifikation zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ Weitere Informationen zum XPS-Dokumente finden Sie unter der *Open XML Paper Specification (XPS)* zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=67000](http://go.microsoft.com/fwlink/?LinkID=67000).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetUri" /> oder <paramref name="relationshipType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="targetMode" /> Parameter ist kein gültiger <see cref="T:System.IO.Packaging.TargetMode" /> -Enumerationswert.</exception>
+        <exception cref="T:System.ArgumentException">Der Teil von identifiziert die <paramref name="targetUri" /> ist eine Beziehung (das Ziel einer Beziehung kann nicht für den eine andere Beziehung sein).  
+  
+ - oder -   
+  
+ <paramref name="targetMode" />wird angegeben als <see cref="F:System.IO.Packaging.TargetMode.Internal" /> jedoch <paramref name="targetUri" /> ist ein absoluter externer [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist schreibgeschützt (eine neue Beziehung kann nicht hinzugefügt werden).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRelationship">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageRelationship CreateRelationship (Uri targetUri, System.IO.Packaging.TargetMode targetMode, string relationshipType, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageRelationship CreateRelationship(class System.Uri targetUri, valuetype System.IO.Packaging.TargetMode targetMode, string relationshipType, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageRelationship</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetUri" Type="System.Uri" />
+        <Parameter Name="targetMode" Type="System.IO.Packaging.TargetMode" />
+        <Parameter Name="relationshipType" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetUri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] der Zielkomponente.</param>
+        <param name="targetMode">Einer der Enumerationswerte. Beispielsweise <see cref="F:System.IO.Packaging.TargetMode.Internal" /> Wenn das Ziel innerhalb gehört der <see cref="T:System.IO.Packaging.Package" />; oder <see cref="F:System.IO.Packaging.TargetMode.External" /> ist das Ziel einer Ressource außerhalb der <see cref="T:System.IO.Packaging.Package" />.</param>
+        <param name="relationshipType">Die Rolle der Beziehung.</param>
+        <param name="id">Eine eindeutige ID für die Beziehung.</param>
+        <summary>Erstellt eine Beziehung Teil-Ebene zwischen diesem <see cref="T:System.IO.Packaging.PackagePart" /> an ein angegebenes Ziel <see cref="T:System.IO.Packaging.PackagePart" /> oder eine externe Ressource.</summary>
+        <returns>Die Ebene Teil Beziehung zwischen diesem <see cref="T:System.IO.Packaging.PackagePart" /> an das Ziel <see cref="T:System.IO.Packaging.PackagePart" /> oder eine externe Ressource.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Beziehung Teil-Ebene definiert eine Zuordnung zwischen diesen Teil und einen Teil des Ziels oder eine Ressource.  Eine Beziehung auf möglich zwei Arten.  
+  
+-   Zwischen einer Quelle <xref:System.IO.Packaging.PackagePart> an ein Ziel <xref:System.IO.Packaging.PackagePart> innerhalb der <xref:System.IO.Packaging.Package>.  
+  
+-   Zwischen einer Quelle <xref:System.IO.Packaging.PackagePart> mit einer Zielressource außerhalb des Pakets.  
+  
+ In einem Teil-Beziehung gilt den Teil mit der Datenquelle der "Besitzer" der Beziehung.  Wenn der Teil mit der Datenquelle gelöscht wird, werden alle Beziehungen, die der Bereich ebenfalls gelöscht.  Der Prozess zum Erstellen oder Löschen der Beziehung wird nicht physisch der Zielteil bzw. die Ressource in irgendeiner Weise verändert.  
+  
+ `id`ein gültiger XML-Bezeichner muss sein.  Die `id` Typ lautet xsd: ID und muss den der *XML Schema Part 2: Datatypes* Spezifikation (finden Sie unter [http://www.w3.org/TR/xmlschema-2/#ID](http://www.w3.org/TR/xmlschema-2/)).  
+  
+ Die <xref:System.IO.Packaging.PackagePart.CreateRelationship%2A> Methode ändert nicht physisch, der Teil mit der Datenquelle, oder das Zielteil oder Ressource in keiner Weise.  
+  
+ Das Ziel einer Beziehung kann nicht auf eine andere Beziehung sein.  
+  
+ Wenn `targetMode` angegeben ist, als <xref:System.IO.Packaging.TargetMode.Internal>, `targetUri` muss ein relativer URI, die im Einklang gebildet wird die [RFC 3986](http://tools.ietf.org/html/rfc3986) *generische Syntax Uniform Resource Identifier (URI)* Spezifikation.  Der interne relative URI kann entweder ein absoluter Pfad, der mit einem Schrägstrich ("/"), z. B. beginnt "/ page1.xaml" oder "/ /images/picture4.jpg", oder ein relativer Pfad wie ".. / imagespicture1.jpg ", die für das Stammverzeichnis des Pakets ("/ ") als Basis-URI auflöst.  
+  
+ Wenn `targetMode` angegeben ist, als <xref:System.IO.Packaging.TargetMode.External>, `targetUri` kann entweder ein absoluter oder relativer URI angegeben wird, in Abhängigkeit von der [RFC 3986](http://tools.ietf.org/html/rfc3986) *Uniform Resource Identifier (URI) generische Syntax*Spezifikation.  "http://www.microsoft.com/page2.xml" ist ein Beispiel für ein absoluter URI, der auf eine externe Zielressource "page2.xml" verweist.  "images/picture1.jpg" ist ein Beispiel für einen relativen URI, der auch eine externe Ressource "1.jpg" jedoch aufgelöst wird anhand des URI für das Paket selbst verweist.  
+  
+ `relationshipType`muss eine [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] , wird gebildet, gemäß der [RFC 3986](http://tools.ietf.org/html/rfc3986) *Uniform Resource Identifier (URI) generische Syntax* Spezifikation.  Verschiedene Pakettypen können andere Beziehungstypen Teil-Ebene definieren.  Die folgende Tabelle zeigt die Webpart-Ebene `relationshipType` URIs für Dokumente, die entsprechen definiert die *Open XML Paper Specification (XPS)*.  
+  
+|XPS-Dokument Teil Anwendungsebene Beziehung|Beziehungstyp URI|  
+|-------------------------------------------|---------------------------|  
+|Digitale Signaturdefinitionen|http://Schemas.Microsoft.com/XPS/2005/06/Signature-Definitions|  
+|DiscardControl|http://Schemas.Microsoft.com/XPS/2005/06/Discard-Control|  
+|DocumentStructure|http://Schemas.Microsoft.com/XPS/2005/06/DocumentStructure|  
+|PrintTicket|http://Schemas.Microsoft.com/XPS/2005/06/PrintTicket|  
+|Erforderliche Ressource|http://Schemas.Microsoft.com/XPS/2005/06/Required-Resource|  
+|Eingeschränkte Schriftart|http://Schemas.Microsoft.com/XPS/2005/06/Restricted-Font|  
+|StartPart|http://Schemas.Microsoft.com/XPS/2005/06/fixedrepresentation|  
+|StoryFragments|http://Schemas.Microsoft.com/XPS/2005/06/StoryFragments|  
+  
+ Weitere Informationen zu paketbeziehungen finden Sie in Abschnitt 1.3 der *(Open Packaging Conventions, OPC)* Spezifikation zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ Weitere Informationen zum XPS-Dokumente finden Sie unter der *Open XML Paper Specification (XPS)* zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=67000](http://go.microsoft.com/fwlink/?LinkID=67000).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetUri" /> oder <paramref name="relationshipType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="targetMode" /> Parameter ist kein gültiger <see cref="T:System.IO.Packaging.TargetMode" /> -Enumerationswert.</exception>
+        <exception cref="T:System.ArgumentException">Der Teil von identifiziert die <paramref name="targetUri" /> ist eine Beziehung (das Ziel einer Beziehung kann nicht für den eine andere Beziehung sein).  
+  
+ - oder -   
+  
+ <paramref name="targetMode" />wird angegeben als <see cref="F:System.IO.Packaging.TargetMode.Internal" /> jedoch <paramref name="targetUri" /> ist ein absoluter externer [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist schreibgeschützt (eine neue Beziehung kann nicht hinzugefügt werden).</exception>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="id" />ist kein gültiger XML-Bezeichner.  
+  
+ - oder -   
+  
+ Ein Teil mit dem angegebenen <paramref name="id" /> ist bereits vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteRelationship">
+      <MemberSignature Language="C#" Value="public void DeleteRelationship (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteRelationship(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.DeleteRelationship(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die <see cref="P:System.IO.Packaging.PackageRelationship.Id" /> der Beziehung, zu löschen.</param>
+        <summary>Löscht eine angegebene Teil Ebenen <see cref="T:System.IO.Packaging.PackageRelationship" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `id`ein gültiger XML-Bezeichner muss sein.  Die `id` Typ lautet xsd: ID und muss den der *XML Schema Part 2: Datatypes* Spezifikation (finden Sie unter [http://www.w3.org/TR/xmlschema-2/#ID](http://www.w3.org/TR/xmlschema-2/)).  
+  
+ Wenn das angegebene `id` entspricht nicht der <xref:System.IO.Packaging.PackageRelationship.Id%2A> für alle Beziehungen, die in diesem Teil gehören, wird keine Beziehung gelöscht und keine Ausnahme ausgelöst wird.  
+  
+ Ausnahme beim Löschen der angegebenen Beziehung, die <xref:System.IO.Packaging.PackagePart.DeleteRelationship%2A> Methode ändert dieses Parts oder die nicht physisch.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="id" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist schreibgeschützt (Beziehungen können nicht gelöscht werden).</exception>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="id" />ist kein gültiger XML-Bezeichner.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentTypeCore">
+      <MemberSignature Language="C#" Value="protected virtual string GetContentTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetContentTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.GetContentTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse die [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Typ des Inhalts Teil.</summary>
+        <returns>Die [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Typ des Inhalts Teil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.PackagePart.GetContentTypeCore%2A>ist eine virtuelle Methode von der <xref:System.IO.Packaging.PackagePart> abstrakte Basisklasse. Implementieren Sie diese Methode nur in abgeleiteten Typen, in dem der Wert für den Inhaltstyp zum Zeitpunkt der Erstellung bereitgestellt werden kann, oder geben Sie die Berechnung des Inhalts Wert ist ein nicht trivialer oder aufwändiger Vorgang. Der Rückgabewert muss ein gültiger [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] Inhaltstyp.  
+  
+ Abgeleitete Klassen können Aufrufen <xref:System.IO.Packaging.PackagePart.GetContentTypeCore%2A> zum Initialisieren der <xref:System.IO.Packaging.PackagePart.ContentType%2A> Eigenschaft der abgeleiteten Klasse auf einen Standardwert.  Nach der <xref:System.IO.Packaging.PackagePart.ContentType%2A> Eigenschaft festgelegt wurde, kann nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die abgeleitete Klasse bietet eine überschreibungsimplementierung erforderlich für keine der <see cref="M:System.IO.Packaging.PackagePart.GetContentTypeCore" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationship">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageRelationship GetRelationship (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageRelationship GetRelationship(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.GetRelationship(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageRelationship</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die <see cref="P:System.IO.Packaging.PackageRelationship.Id" /> der Beziehung um zurückzugeben.</param>
+        <summary>Gibt die Beziehung, die einem angegebenen <see cref="P:System.IO.Packaging.PackageRelationship.Id" />.</summary>
+        <returns>Die Beziehung, die den angegebenen Plattform entspricht <paramref name="id" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `id`ein gültiger XML-Bezeichner muss sein.  Die `id` Typ lautet xsd: ID und muss den der *XML Schema Part 2: Datatypes* Spezifikation (finden Sie unter [http://www.w3.org/TR/xmlschema-2/#ID](http://www.w3.org/TR/xmlschema-2/)).  
+  
+ Sie können die <xref:System.IO.Packaging.PackagePart.RelationshipExists%2A> Methode, um zu bestimmen, wenn eine Beziehung mit einer angegebenen <xref:System.IO.Packaging.PackageRelationship.Id%2A> ist im Besitz dieses Teils.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="id" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="id" />ist kein gültiger XML-Bezeichner.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="relationshipType" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).  
+  
+ - oder -   
+  
+ Eine Beziehung mit dem angegebenen <paramref name="id" /> im Paket nicht vorhanden.</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist lesegeschützt (Informationen zu tabellenbeziehungen kann nicht gelesen werden).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationships">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageRelationshipCollection GetRelationships ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageRelationshipCollection GetRelationships() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.GetRelationships" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageRelationshipCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung aller Beziehungen, die in diesem Teil gehören.</summary>
+        <returns>Eine Auflistung aller Beziehungen, die von einem Teil gehören.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Auflistung ist nie `null`, aber die Auflistung kann 0 (null) Elemente enthalten, wenn das Webpart keine Beziehungen definiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist lesegeschützt (Informationen zu tabellenbeziehungen kann nicht gelesen werden).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationshipsByType">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageRelationshipCollection GetRelationshipsByType (string relationshipType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageRelationshipCollection GetRelationshipsByType(string relationshipType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.GetRelationshipsByType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageRelationshipCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationshipType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relationshipType">Die <see cref="P:System.IO.Packaging.PackageRelationship.RelationshipType" /> von den Beziehungen zu suchen und in der Auflistung zurück.</param>
+        <summary>Gibt eine Auflistung der Beziehungen, die ein angegebenes entsprechen <see cref="P:System.IO.Packaging.PackageRelationship.RelationshipType" />.</summary>
+        <returns>Eine Auflistung der Beziehungen, die mit der angegebenen Zeichenfolge <paramref name="relationshipType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Auflistung ist nie `null`, aber die Auflistung kann 0 (null) Elemente enthalten, wenn keine Beziehung mit der angegebenen Zeichenfolge `relationshipType` für den Teil definiert ist.  
+  
+ Alle führende oder nachfolgende Leerzeichen in der `relationshipType` Zeichenfolge werden automatisch abgeschnitten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="relationshipType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="relationshipType" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist lesegeschützt (Informationen zu tabellenbeziehungen kann nicht gelesen werden).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream GetStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.GetStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Teil Inhaltsdatenstream zurück.</summary>
+        <returns>Der Inhalt Datenstrom für das Teil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode öffnet des inhaltsdatenstroms mit <xref:System.IO.FileMode> von <xref:System.IO.FileMode.OpenOrCreate> und <xref:System.IO.FileAccess> Berechtigungen, die das übergeordnete Element identisch sind <xref:System.IO.Packaging.Package>.  
+  
+ Die Überladung <xref:System.IO.Packaging.PackagePart.GetStream%2A> Methode können Sie einen bestimmten Satz <xref:System.IO.FileMode>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Streamobjekt zurückgegebene der <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" /> Methode der abgeleiteten Unterklasse ist <see langword="null" />.</exception>
+        <block subset="none" type="usage">
+          <para>
+            <see cref="M:System.IO.Packaging.PackagePart.GetStream" />Intern ruft die abgeleitete <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" /> Methode tatsächlich öffnen und den Datenstrom Teil zurückgeben basierend auf das physische Format in der abgeleiteten Klasse implementiert.  
+  
+ Wird standardmäßig die <see cref="T:System.IO.Packaging.ZipPackagePart" /> Unterklasse Implementierung der abstrakten <see cref="T:System.IO.Packaging.PackagePart" /> Klasse bereitgestellt und verwendet wird.  In der Standardvorgang <see cref="M:System.IO.Packaging.PackagePart.GetStream" /> intern ruft <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" /> von der <see cref="T:System.IO.Packaging.ZipPackagePart" /> Klasse zu öffnen und den Datenstrom Teil aus einem ZIP-Datei zurückzugeben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetStream (System.IO.FileMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream GetStream(valuetype System.IO.FileMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.GetStream(System.IO.FileMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Der e/a-Modus für das Öffnen des Inhaltsstreams.</param>
+        <summary>Gibt die inhaltsdatenstroms, in einen angegebenen e/a geöffnet <see cref="T:System.IO.FileMode" />.</summary>
+        <returns>Die inhaltsdatenstroms des Teils.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.FileAccess> Berechtigungen der zurückgegebenen Inhaltsstreams sind identisch mit den Berechtigungen des übergeordneten Elements <xref:System.IO.Packaging.Package>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="mode" /> Parameter ist kein gültiger <see cref="T:System.IO.FileMode" /> -Enumerationswert.</exception>
+        <exception cref="T:System.IO.IOException">Die <paramref name="mode" /> Parameter ist nicht kompatibel mit dem Paket und Teil-Datenstrom.  
+  
+ - oder -   
+  
+ Das Streamobjekt zurückgegebene der <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" /> Methode der abgeleiteten Unterklasse ist <see langword="null" />.</exception>
+        <block subset="none" type="usage">
+          <para>
+            <see cref="M:System.IO.Packaging.PackagePart.GetStream(System.IO.FileMode)" />Intern ruft die abgeleitete <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" /> Methode tatsächlich öffnen und den Datenstrom Teil zurückgeben basierend auf das physische Format in der abgeleiteten Klasse implementiert.  
+  
+ Wird standardmäßig die <see cref="T:System.IO.Packaging.ZipPackagePart" /> Unterklasse Implementierung der abstrakten <see cref="T:System.IO.Packaging.PackagePart" /> Klasse bereitgestellt und verwendet wird.  In der Standardvorgang <see cref="M:System.IO.Packaging.PackagePart.GetStream(System.IO.FileMode)" /> intern ruft <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" /> von der <see cref="T:System.IO.Packaging.ZipPackagePart" /> Klasse zu öffnen und den Datenstrom Teil aus einem ZIP-Datei zurückzugeben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetStream (System.IO.FileMode mode, System.IO.FileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream GetStream(valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.GetStream(System.IO.FileMode,System.IO.FileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Der e/a-Modus für das Öffnen des Inhaltsstreams.</param>
+        <param name="access">Die Zugriffsberechtigungen zum Öffnen des Inhaltsstreams.</param>
+        <summary>Gibt den Inhalt Teil-Stream mit einem angegebenen geöffnet zurück <see cref="T:System.IO.FileMode" /> und <see cref="T:System.IO.FileAccess" />.</summary>
+        <returns>Der Content-Datenstrom für das Teil.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="mode" /> Parameter ist kein gültiger <see cref="T:System.IO.FileMode" /> -Enumerationswert.  
+  
+ - oder -   
+  
+ Die <paramref name="access" /> Parameter ist kein gültiger <see cref="T:System.IO.FileAccess" /> -Enumerationswert.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="mode" />oder <paramref name="access" /> ist nicht kompatibel mit dem Paket und Teil-Datenstrom.  
+  
+ - oder -   
+  
+ Die <paramref name="access" /> Parameter angegeben wird, als <see cref="F:System.IO.FileAccess.Read" /> aber die <paramref name="mode" /> Parameter muss den Schreibzugriff.  (<see cref="T:System.IO.FileMode" /> Werte <see cref="F:System.IO.FileMode.Create" />, <see cref="F:System.IO.FileMode.CreateNew" />, <see cref="F:System.IO.FileMode.Truncate" />, und <see cref="F:System.IO.FileMode.Append" /> erfordern <see cref="F:System.IO.FileAccess.Write" /> oder <see cref="F:System.IO.FileAccess.ReadWrite" /> zugreifen.)  
+  
+ - oder -   
+  
+ Das Streamobjekt zurückgegebene der <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" /> Methode der abgeleiteten Unterklasse ist <see langword="null" />.</exception>
+        <block subset="none" type="usage">
+          <para>
+            <see cref="M:System.IO.Packaging.PackagePart.GetStream(System.IO.FileMode,System.IO.FileAccess)" />Intern ruft die abgeleitete <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" /> Methode tatsächlich öffnen und den Datenstrom Teil zurückgeben basierend auf das physische Format in der abgeleiteten Klasse implementiert.  
+  
+ Wird standardmäßig die <see cref="T:System.IO.Packaging.ZipPackagePart" /> Unterklasse Implementierung der abstrakten <see cref="T:System.IO.Packaging.PackagePart" /> Klasse bereitgestellt und verwendet wird.  In der Standardvorgang <see cref="M:System.IO.Packaging.PackagePart.GetStream(System.IO.FileMode,System.IO.FileAccess)" /> intern ruft <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" /> von der <see cref="T:System.IO.Packaging.ZipPackagePart" /> Klasse zu öffnen und den Datenstrom Teil aus einem ZIP-Datei zurückzugeben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStreamCore">
+      <MemberSignature Language="C#" Value="protected abstract System.IO.Stream GetStreamCore (System.IO.FileMode mode, System.IO.FileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IO.Stream GetStreamCore(valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Der e/a-Modus für das Öffnen des Inhaltsstreams.</param>
+        <param name="access">Die Zugriffsberechtigungen zum Öffnen des Inhaltsstreams.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt mit einem angegebenen geöffnet Teil inhaltsdatenstroms <see cref="T:System.IO.FileMode" /> und <see cref="T:System.IO.FileAccess" />.</summary>
+        <returns>Der Inhalt Datenstrom des Teils.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungen sollten nicht aufrufen, <xref:System.IO.Packaging.PackagePart.GetStreamCore%2A> direkt, aber stattdessen aufrufen sollte <xref:System.IO.Packaging.PackagePart.GetStream%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die abgeleitete <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" /> Implementierung sollten keine Annahmen über die Reihenfolge oder Operationen der <see cref="Overload:System.IO.Packaging.PackagePart.GetStream" /> Methode, die ihn aufruft.</para>
+        </block>
+        <block subset="none" type="usage">
+          <para>Die abgeleitete <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" /> Methode wird aufgerufen, indem die <see cref="Overload:System.IO.Packaging.PackagePart.GetStream" /> Methoden zu öffnen und den Datenstrom Teil zurückzugeben basierend auf das physische Format in der abgeleiteten Klasse implementiert.  
+  
+ Wird standardmäßig die <see cref="T:System.IO.Packaging.ZipPackagePart" /> Unterklasse Implementierung der abstrakten <see cref="T:System.IO.Packaging.PackagePart" /> Klasse bereitgestellt und verwendet wird.  In der Standardvorgang <see cref="Overload:System.IO.Packaging.PackagePart.GetStream" /> intern ruft <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)" /> von der <see cref="T:System.IO.Packaging.ZipPackagePart" /> Klasse zu öffnen und den Datenstrom Teil aus einem ZIP-Datei zurückzugeben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Package">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.Package Package { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Packaging.Package Package" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackagePart.Package" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.Package</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Element <see cref="T:System.IO.Packaging.Package" /> des Teils.</summary>
+        <value>Das übergeordnete Paket des Teils.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.PackagePart.Package%2A>ist eine schreibgeschützte Eigenschaft, auf die zugegriffen werden kann nur, wenn das übergeordnete Element <xref:System.IO.Packaging.Package> geöffnet ist.  
+  
+ Die <xref:System.IO.Packaging.PackagePart.Package%2A> Eigenschaft wird automatisch festgelegt, indem die <xref:System.IO.Packaging.PackagePart.%23ctor%2A> Konstruktor.  Nachdem dies erfolgt durch den Konstruktor, der das übergeordnete Element ist <xref:System.IO.Packaging.PackagePart.Package%2A> für das Webpart kann nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RelationshipExists">
+      <MemberSignature Language="C#" Value="public bool RelationshipExists (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RelationshipExists(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackagePart.RelationshipExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die <see cref="P:System.IO.Packaging.PackageRelationship.Id" /> der zu suchende Beziehung.</param>
+        <summary>Gibt einen Wert, der angibt, ob dieser Teil eine Beziehung mit einer angegebenen besitzt <see cref="P:System.IO.Packaging.PackageRelationship.Id" />.</summary>
+        <returns>
+          <see langword="true" />Wenn dieser Teil eine Beziehung mit dem angegebenen besitzt <paramref name="id" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `id`ein gültiger XML-Bezeichner muss sein.  Die `id` Typ lautet xsd: ID und muss den der *XML Schema Part 2: Datatypes* Spezifikation (finden Sie unter [http://www.w3.org/TR/xmlschema-2/#ID](http://www.w3.org/TR/xmlschema-2/)).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="id" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="id" />ist kein gültiger XML-Bezeichner.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist lesegeschützt (Informationen zu tabellenbeziehungen kann nicht gelesen werden).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackagePart.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Teils.</summary>
+        <value>Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Teils relativ zum Paketstamm.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.PackagePart.Uri%2A>ist eine schreibgeschützte Eigenschaft, auf die zugegriffen werden kann nur, wenn das übergeordnete Element <xref:System.IO.Packaging.Package> geöffnet ist.  
+  
+ Die <xref:System.IO.Packaging.PackagePart.Uri%2A> Eigenschaft wird automatisch festgelegt, indem die <xref:System.IO.Packaging.PackagePart.%23ctor%2A> Konstruktor.  Nachdem dies erfolgt durch den Konstruktor wird der <xref:System.IO.Packaging.PackagePart.Uri%2A> des Teils kann nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Webpart wurde gelöscht.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Packaging.PackagePart.Package" /> ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

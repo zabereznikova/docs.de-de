@@ -1,0 +1,283 @@
+<Type Name="CompositeDataBoundControl" FullName="System.Web.UI.WebControls.CompositeDataBoundControl">
+  <TypeSignature Language="C#" Value="public abstract class CompositeDataBoundControl : System.Web.UI.WebControls.DataBoundControl, System.Web.UI.INamingContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CompositeDataBoundControl extends System.Web.UI.WebControls.DataBoundControl implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CompositeDataBoundControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataBoundControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.INamingContainer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Basisklasse für ein tabellarisches datengebundenes Steuerelement dar, das aus anderen Serversteuerelementen besteht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CompositeDataBoundControl> Klasse fungiert als Basisklasse für ein zusammengesetztes Serversteuerelement, das Daten aus einer Datenquelle gebunden wird. Ein zusammengesetztes Serversteuerelement ist ein Steuerelement, das aus einer Kombination aus anderen Serversteuerelementen erstellt wird. Entwickler von Seiten verwenden Sie nicht die <xref:System.Web.UI.WebControls.CompositeDataBoundControl> -Klasse direkt; stattdessen wird, Steuerelemente, die von dieser Klasse ableiten. Beispiele für zusammengesetzte datengebundene Steuerelemente sind die <xref:System.Web.UI.WebControls.DetailsView>, <xref:System.Web.UI.WebControls.FormView>, und <xref:System.Web.UI.WebControls.GridView> Steuerelemente.  
+  
+ Klassen, die von erben die <xref:System.Web.UI.WebControls.CompositeDataBoundControl> Steuerelement überschreiben, muss die <xref:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls%28System.Collections.IEnumerable%2CSystem.Boolean%29> Methode, um die Hierarchie der Steuerelemente zu erstellen. Um die untergeordneten Steuerelemente eines zusammengesetzten datengebundenen Steuerelements zuzugreifen, verwenden die <xref:System.Web.UI.WebControls.CompositeDataBoundControl.Controls%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein benutzerdefinierte zusammengesetztes datengebundenes Steuerelement erstellen, das die Werte einer Datenquelle in einer Tabelle anzeigt.  
+  
+ [!code-csharp[System.Web.UI.IDataItemContainer_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/CS/idataitemcontainersample.cs#2)]
+ [!code-vb[System.Web.UI.IDataItemContainer_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/VB/idataitemcontainersample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Web.UI.WebControls.CompositeDataBoundControl" /> -Klasse, müssen Sie die folgenden Member überschreiben: <see cref="M:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls(System.Collections.IEnumerable,System.Boolean)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CompositeDataBoundControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeDataBoundControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.CompositeDataBoundControl" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CompositeDataBoundControl>-Klasse stellt eine abstrakte Klasse dar. Sie können nicht auf eine neue Instanz dieser Klasse erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeDataBoundControl.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der untergeordneten Steuerelemente innerhalb der zusammengesetzten datengebundenen Steuerelements ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ControlCollection" /> , das die untergeordneten Steuerelemente innerhalb der zusammengesetzten datengebundenen Steuerelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein zusammengesetztes datengebundenes Steuerelement ist eine Kombination von Serversteuerelementen für eine oder mehrere. Verwenden der <xref:System.Web.UI.WebControls.CompositeDataBoundControl.Controls%2A> Eigenschaft, um diese untergeordnete Steuerelemente verwalten. Hinzufügen kann, entfernen oder die Serversteuerelemente in der Auflistung durchlaufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die Steuerelementhierarchie, die verwendet wird, zum Rendern eines zusammengesetzten datengebundenen Steuerelements basierend auf den Werten, die im Ansichtszustand gespeichert sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls> Methode ist eine Hilfsmethode, die von Klassen verwendet wird, die Ableitung der <xref:System.Web.UI.WebControls.CompositeDataBoundControl> Klasse, um die Steuerelementhierarchie für ein zusammengesetztes datengebundenes Steuerelement zu erstellen. Diese Überladung der Methode wird die Steuerelementhierarchie basierend auf Werten aus dem Ansichtszustand, anstatt direkt aus der Datenquelle erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected abstract int CreateChildControls (System.Collections.IEnumerable dataSource, bool dataBinding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 CreateChildControls(class System.Collections.IEnumerable dataSource, bool dataBinding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls(System.Collections.IEnumerable,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+        <Parameter Name="dataBinding" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Ein <see cref="T:System.Collections.IEnumerable" /> , das die Werte zum Binden an das Steuerelement enthält.</param>
+        <param name="dataBinding">
+          <see langword="true" />Gibt an, dass die <see cref="M:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls(System.Collections.IEnumerable,System.Boolean)" /> während der Datenbindung aufgerufen wurde, andernfalls <see langword="false" />.</param>
+        <summary>Ruft beim Überschreiben in einer abstrakten Klasse erstellt die Hierarchie der Steuerelemente, die zum Rendern des zusammengesetzten datengebundenen Steuerelements basierend auf den Werten aus der angegebenen Datenquelle verwendet wird.</summary>
+        <returns>Die Anzahl der Elemente erstellt, indem die <see cref="M:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls(System.Collections.IEnumerable,System.Boolean)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls> Methode ist eine Hilfsmethode, die von Klassen verwendet wird, die Ableitung der <xref:System.Web.UI.WebControls.CompositeDataBoundControl> Klasse, um die Steuerelementhierarchie für ein zusammengesetztes datengebundenes Steuerelement zu erstellen. Beim Erweitern der <xref:System.Web.UI.WebControls.CompositeDataBoundControl> -Klasse, die Sie überschreiben müssen die <xref:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls> Hierarchie Erstellen eigener gesteuert wird. Weitere Informationen zum Erstellen eines zusammengesetzten Steuerelements finden Sie unter [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls%28System.Collections.IEnumerable%2CSystem.Boolean%29> -Methode in ein benutzerdefiniertes Steuerelement zum Erstellen der Steuerelementhierarchie.  
+  
+ [!code-csharp[System.Web.UI.IDataItemContainer_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/CS/idataitemcontainersample.cs#2)]
+ [!code-vb[System.Web.UI.IDataItemContainer_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/VB/idataitemcontainersample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteMethod">
+      <MemberSignature Language="C#" Value="protected string DeleteMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeleteMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeDataBoundControl.DeleteMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Methode aufrufen, um Daten zu löschen.</summary>
+        <value>Der Name der Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft führt dazu, dass die modellbindung als die Methode für die Datenbindung verwendet werden soll.  
+  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertMethod">
+      <MemberSignature Language="C#" Value="protected string InsertMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InsertMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeDataBoundControl.InsertMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Methode aufrufen, um Daten einzufügen.</summary>
+        <value>Der Name der Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft führt dazu, dass die modellbindung als die Methode für die Datenbindung verwendet werden soll.  
+  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUsingModelBinders">
+      <MemberSignature Language="C#" Value="protected override bool IsUsingModelBinders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUsingModelBinders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeDataBoundControl.IsUsingModelBinders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das modellbindung verwendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn die modellbindung verwendet wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformDataBinding">
+      <MemberSignature Language="C#" Value="protected override void PerformDataBinding (System.Collections.IEnumerable data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void PerformDataBinding(class System.Collections.IEnumerable data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="data">Ein <see cref="T:System.Collections.IEnumerable" /> , das die Werte zum Binden an das zusammengesetzte datengebundene Steuerelement enthält.</param>
+        <summary>Bindet die Daten aus der Datenquelle an das zusammengesetzte datengebundene Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding%2A> Methode ist eine Hilfsmethode, die von Klassen verwendet wird, die Ableitung der <xref:System.Web.UI.WebControls.CompositeDataBoundControl> Klasse, um die Daten aus der Datenquelle an das zusammengesetzte datengebundene Steuerelement zu binden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateMethod">
+      <MemberSignature Language="C#" Value="protected string UpdateMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UpdateMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeDataBoundControl.UpdateMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Methode aufrufen, um Daten zu aktualisieren.</summary>
+        <value>Der Name der Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft führt dazu, dass die modellbindung als die Methode für die Datenbindung verwendet werden soll.  
+  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

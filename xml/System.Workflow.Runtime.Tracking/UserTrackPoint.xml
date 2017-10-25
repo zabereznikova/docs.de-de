@@ -1,0 +1,175 @@
+<Type Name="UserTrackPoint" FullName="System.Workflow.Runtime.Tracking.UserTrackPoint">
+  <TypeSignature Language="C#" Value="public sealed class UserTrackPoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UserTrackPoint extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.UserTrackPoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert einen Punkt, der einem Benutzerereignis zugeordnet ist und im möglichen Ausführungspfad einer Stammworkflowinstanz nachverfolgt werden soll. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Ein Aktivitätsdesigner oder ein Workflow-Designer kann mit den überladenen Methoden <xref:System.Workflow.ComponentModel.Activity.TrackData%2A?displayProperty=nameWithType> und <xref:System.Workflow.ComponentModel.ActivityExecutionContext.TrackData%2A?displayProperty=nameWithType> einen Workflow oder eine Aktivität so einrichten, dass Daten als Benutzerereignisse an die Laufzeitverfolgungsinfrastruktur ausgegeben werden. Die ausgegebenen Daten werden als Benutzerdaten bezeichnet. Aktivitätsstatusereignisse und Workflowstatusereignisse treten nur bei Statusänderungen ein. Im Unterschied dazu können Benutzerereignisse an jeder in einem Workflow eingerichteten Position stattfinden. Es gibt viele Gründe dafür, warum ein Workflow zum Ausgeben von Benutzerereignissen eingerichtet wird. Möglicherweise möchte ein Workflow-Designer logische Statusinformationen zum Fortschritt eines Workflows  übermitteln, oder ein Aktivitätsdesigner möchte Aktivitätsmembern das Auslösen von Ereignissen nicht nur bei Aktivitätsstatusänderungen ermöglichen.  
+  
+ <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> definiert einen relevanten Punkt im möglichen Ausführungspfad einer Stammworkflowinstanz, die einem Benutzerereignis zugeordnet ist. <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> enthält in den Abgleich eingeschlossene Positionen, vom Abgleich ausgeschlossene Positionen und alle weiteren Daten, die bei einem Abgleich des Überwachungspunkts aus der Workflowinstanz extrahiert werden sollten. Sie können <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> einen <xref:System.Workflow.Runtime.Tracking.TrackingProfile.UserTrackPoints%2A?displayProperty=nameWithType> hinzufügen, um die Laufzeitverfolgungsinfrastruktur anzuweisen, beim Abgleich des Überwachungspunkts <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> an den Überwachungsdienst zu senden. Die Benutzerdaten werden in einem <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord.UserData%2A?displayProperty=nameWithType> zurückgegeben. Ein einzelner <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> kann an verschiedenen Punkten in der Workflowinstanz abgeglichen werden.  
+  
+ <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> enthält Übereinstimmungsbedingungen für eine Position, die einem Benutzerereignis im möglichen Ausführungspfad einer Workflowinstanz zugeordnet ist. Sie können <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A>-Objekte hinzufügen, um Positionen zu definieren, die beim Abgleich mit dem Überwachungspunkt eingeschlossen werden sollen. Dementsprechend können Sie <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A>-Objekte hinzufügen, um Positionen zu definieren, die beim Abgleich mit dem Überwachungspunkt ausgeschlossen werden sollen.  
+  
+ Sie können <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract> <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract>-Objekte und <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts%2A>-Objekte hinzufügen, um Daten anzugeben, die beim Abgleich des Überwachungspunkts aus der Workflowinstanz extrahiert werden sollen. Die extrahierten Daten werden in <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord.Body%2A?displayProperty=nameWithType> zurückgegeben.  
+  
+ Sie können <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations%2A> hinzufügen, um weitere, dem Verfolgungspunkt zugeordnete Informationen anzugeben. Diese Anmerkungen werden in <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations%2A?displayProperty=nameWithType> zurückgegeben.  
+  
+ Ein Beispiel zur Verwendung dieser Klasse finden Sie unter der [Tracking verwenden Benutzer nachverfolgen Punkte Beispiel](http://msdn.microsoft.com/en-us/d894a18a-a4c6-467e-9a42-8be025ecd4d5).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserTrackPoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.UserTrackPoint.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.UserTrackPoint" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert einen leeren Verfolgungspunkt. Keine übereinstimmenden Positionen, ausgeschlossene Positionen, Datenextraktionen oder Anmerkungen werden angegeben. Sie müssen den Verfolgungspunkt konfigurieren, indem Sie <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> mindestens einen <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A> hinzufügen. Sie können optional <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A>, <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts%2A> und <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations%2A> die entsprechenden Objekte hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingAnnotationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Anmerkungen ab, die dem Verfolgungspunkt zugeordnet sind.</summary>
+        <value>Ein <see cref="T:System.Workflow.Runtime.Tracking.TrackingAnnotationCollection" />. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations%2A> Anmerkungen hinzufügen, die beim Abgleich des Verfolgungspunkts in <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations%2A?displayProperty=nameWithType> zurückgegeben werden sollen. Wenn <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations%2A> leer ist, werden dem Verfolgungspunkt keine Anmerkungen zugeordnet.  
+  
+ Anmerkungen sind von Ihnen definierte `strings` mit Informationen, die dem Verfolgungspunkt zugeordnet sind. Eine Anmerkung kann z. &#160;B. Informationen über den möglichen Ausführungspfad enthalten, den der Workflow ab diesem Punkt folgt, oder sie enthält Informationen, die in einer Benutzeroberfläche angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExcludedLocations">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.UserTrackingLocationCollection ExcludedLocations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.UserTrackingLocationCollection ExcludedLocations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.UserTrackingLocationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Positionen ab, die von der Laufzeitverfolgungsinfrastruktur aus dem Verfolgungspunkt ausgeschlossen werden sollen.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocationCollection" /> mit den Positionen, die aus dem Verfolgungspunkt ausgeschlossen werden sollen. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eines der <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation>-Objekte in <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A> mit einem bestimmten Benutzerereignis abgeglichen wird, dann wird der Verfolgungspunkt nicht abgeglichen und kein <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> wird an den Überwachungsdienst gesendet. Wenn <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A> leer ist, werden keine Positionen ausgeschlossen.  
+  
+ Sie können mit <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A> ausschließen, dass bestimmte Positionen von der Laufzeitverfolgungsinfrastruktur verfolgt werden. Sie können z.&#160;B. eine Teilmenge von Positionen ausschließen, die in <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A> angegeben werden. Dadurch können die Positionen, die durch den Verfolgungspunkt nachverfolgt werden sollen, genauer definiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extracts">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.ExtractCollection Extracts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.ExtractCollection Extracts" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.ExtractCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Daten ab, die aus der Workflowinstanz extrahiert und an den Überwachungsdienst gesendet werden sollen.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.ExtractCollection" /> mit Daten, die extrahiert und an den Überwachungsdienst gesendet werden sollen. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abgleich des Verfolgungspunkts sendet die Laufzeitverfolgungsinfrastruktur einen <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> an den Überwachungsdienst. Die Benutzerdaten werden in einem <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord.UserData%2A?displayProperty=nameWithType> zurückgegeben. Die Laufzeitverfolgungsinfrastruktur kann auch Daten, die in <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts%2A> angegeben sind, aus der Workflowinstanz extrahieren und im <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> übermitteln. Die extrahierten Daten werden in <xref:System.Workflow.Runtime.Tracking.TrackingDataItem>-Datensätzen eingekapselt und in <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord.Body%2A?displayProperty=nameWithType> zurückgegeben.  
+  
+ Sie können <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract> <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts%2A>-Objekte hinzufügen, um Memberdaten anzugeben, die aus der Aktivität extrahiert werden sollen, die diesem Benutzerereignis zugeordnet ist. Sie können <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract> auch <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts%2A>-Objekte hinzufügen, um Memberdaten anzugeben, die aus der Stammaktivität des Workflows extrahiert werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchingLocations">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.UserTrackingLocationCollection MatchingLocations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.UserTrackingLocationCollection MatchingLocations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.UserTrackingLocationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Positionen ab, die von der Laufzeitverfolgungsinfrastruktur in den Abgleich des Verfolgungspunkts eingeschlossen werden sollen.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocationCollection" /> mit den Positionen, die mit dem Verfolgungspunkt abgeglichen werden sollen. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A> leer ist, kann der Verfolgungspunkt nicht von der Laufzeitverfolgungsinfrastruktur abgeglichen werden. Fügen Sie <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> mindestens einen <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A> hinzu, damit der <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> abgeglichen werden kann.  
+  
+ Der Verfolgungspunkt wird abgeglichen, wenn <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation>-Objekte in <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A> abgeglichen werden und keines der <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation>-Objekte in <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A> übereinstimmt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

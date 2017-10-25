@@ -1,0 +1,79 @@
+<Type Name="CustomizeMapAreasEventArgs" FullName="System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs">
+  <TypeSignature Language="C#" Value="public class CustomizeMapAreasEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomizeMapAreasEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das CustomizeMapAreas-Ereignis der <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt Daten für die <xref:System.Web.UI.DataVisualization.Charting.Chart.CustomizeMapAreas> -Ereignis für das Diagrammsteuerelement.  
+  
+ Die einzige Eigenschaft dieser Klasse wird die <xref:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs.MapAreaItems%2A>-Eigenschaft, die Entwicklern ermöglicht:  
+  
+-   Löschen Sie oder passen Sie der Zuordnungsbereiche an, die für ein Diagrammobjekt erstellt wurden; alle <xref:System.Web.UI.DataVisualization.Charting.DataPoint>, <xref:System.Web.UI.DataVisualization.Charting.Series>, <xref:System.Web.UI.DataVisualization.Charting.LegendItem> oder <xref:System.Web.UI.DataVisualization.Charting.StripLine> -Objekt, das eine nicht leere `Url`, `MapAreaAttributes` oder `ToolTip` Eigenschaft hat einen zugeordneten Bereich Zuordnungsobjekt.  
+  
+-   Fügen Sie benutzerdefinierte Zuordnungsbereiche, die eine benutzerdefinierte Form und Koordinaten aufweisen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomizeMapAreasEventArgs (System.Web.UI.DataVisualization.Charting.MapAreasCollection areaItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.DataVisualization.Charting.MapAreasCollection areaItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs.#ctor(System.Web.UI.DataVisualization.Charting.MapAreasCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="areaItems" Type="System.Web.UI.DataVisualization.Charting.MapAreasCollection" />
+      </Parameters>
+      <Docs>
+        <param name="areaItems">Eine Sammlung von Strukturbereichen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs" />-Klasse mit der angegebenen Sammlung von Strukturbereichen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapAreaItems">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.MapAreasCollection MapAreaItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.MapAreasCollection MapAreaItems" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs.MapAreaItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.MapAreasCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Web.UI.DataVisualization.Charting.MapAreasCollection" /> Objekt. Kann verwendet werden, entfernen oder Ändern von Zuordnungsbereiche, die auf ein Diagrammobjekt entsprechen, oder benutzerdefinierte Zuordnungsbereiche hinzufügen.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.MapAreasCollection" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft können Sie:  
+  
+-   Löschen Sie oder passen Sie der Zuordnungsbereiche an, die für ein Diagrammobjekt erstellt wurden; alle <xref:System.Web.UI.DataVisualization.Charting.DataPoint>, <xref:System.Web.UI.DataVisualization.Charting.Series>, <xref:System.Web.UI.DataVisualization.Charting.LegendItem> oder <xref:System.Web.UI.DataVisualization.Charting.StripLine> -Objekt, das eine nicht leere `Url`, `MapAreaAttributes` oder `ToolTip` Eigenschaft hat einen zugeordneten Bereich Zuordnungsobjekt.  
+  
+-   Fügen Sie benutzerdefinierte Zuordnungsbereiche, die eine benutzerdefinierte Form und Koordinaten aufweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

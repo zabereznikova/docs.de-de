@@ -1,0 +1,63 @@
+<Type Name="BitmapMetadataBlob" FullName="System.Windows.Media.Imaging.BitmapMetadataBlob">
+  <TypeSignature Language="C#" Value="public class BitmapMetadataBlob" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BitmapMetadataBlob extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.BitmapMetadataBlob" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Platzhalter für Metadatenelemente, die in c# in einen zugrunde liegenden Datentyp konvertiert werden können, die Metadaten beibehält. Das Blob wird in ein Bytearray konvertiert, um den Inhalt beizubehalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]unterstützt die folgenden Schemas für Bildmetadaten: [!INCLUDE[TLA#tla_exif](~/includes/tlasharptla-exif-md.md)], tEXt ([!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] Textdaten), [!INCLUDE[TLA#tla_ifd](~/includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](~/includes/tlasharptla-iptc-md.md)], und [!INCLUDE[TLA#tla_xmp](~/includes/tlasharptla-xmp-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapMetadataBlob (byte[] blob);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] blob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadataBlob.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="blob" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="blob">Platzhaltermetadaten.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Windows.Media.Imaging.BitmapMetadataBlob" /> und konvertiert die Metadaten enthält, in ein Array von Bytes, die den Inhalt beizubehalten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBlobValue">
+      <MemberSignature Language="C#" Value="public byte[] GetBlobValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetBlobValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadataBlob.GetBlobValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Array von Bytes, die den Wert des darstellt eine <see cref="T:System.Windows.Media.Imaging.BitmapMetadataBlob" />.</summary>
+        <returns>Ein Bytearray.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

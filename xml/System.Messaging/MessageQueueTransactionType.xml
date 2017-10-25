@@ -1,0 +1,77 @@
+<Type Name="MessageQueueTransactionType" FullName="System.Messaging.MessageQueueTransactionType">
+  <TypeSignature Language="C#" Value="public enum MessageQueueTransactionType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MessageQueueTransactionType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueTransactionType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ einer Message Queuing-Transaktion.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Lesen oder schreiben eine Nachricht mit einer Überladung von der <xref:System.Messaging.MessageQueue> Klasse <xref:System.Messaging.MessageQueue.Send%2A> oder <xref:System.Messaging.MessageQueue.Receive%2A> Methoden (einschließlich <xref:System.Messaging.MessageQueue.ReceiveById%2A> und <xref:System.Messaging.MessageQueue.ReceiveByCorrelationId%2A>), akzeptiert eine `transactionType` Parameter, können Sie angeben, wie Interaktion mit der die Warteschlange. `Automatic`ermöglicht es Ihnen zum Senden und Empfangen von externe Transaktionen (z. B. wenn datenbankanwendungen Interaktion mit), während er sich `Single` für einzelne Transaktionen interne Message Queuing verwendet wird.  
+  
+ `None`ermöglicht es Ihnen, eine Nachricht von einer Transaktionswarteschlange außerhalb einer Transaktion empfangen oder senden eine Transaktionsnachricht an eine nicht transaktionale Warteschlange. Dies empfiehlt sich beispielsweise beim Weiterleiten von mehreren Nachrichten innerhalb einer einzelnen Transaktion gesendet.  
+  
+ Wenn senden oder Empfangen einer Nachricht mithilfe einer internen Message Queuing-Transaktion jedoch kein interne Transaktion werden sollen, erstellen Sie eine Instanz von der <xref:System.Messaging.MessageQueueTransaction> Klasse, und übergeben Sie ihn an eine Überladung der der <xref:System.Messaging.MessageQueue.Send%2A> oder <xref:System.Messaging.MessageQueue.Receive%2A> Methoden, die eine akzeptiert`transaction` Parameter anstelle eines, das akzeptiert eine `transactionType` Parameter.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Automatic">
+      <MemberSignature Language="C#" Value="Automatic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueTransactionType Automatic = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueTransactionType.Automatic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueTransactionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Transaktionstyp für Microsoft Transaction Server (MTS) oder COM+ 1.0-Dienste verwendet. Wenn bereits ein MTS bereits verwendeten Transaktionskontext vorhanden ist, wird er beim Senden oder Empfangen der Nachricht verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueTransactionType None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueTransactionType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueTransactionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgang wird nicht transaktional sein.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="Single" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueTransactionType Single = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueTransactionType.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueTransactionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Transaktionstyp für einzelne interne Transaktionen verwendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

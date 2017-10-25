@@ -1,0 +1,509 @@
+<Type Name="DataKey" FullName="System.Web.UI.WebControls.DataKey">
+  <TypeSignature Language="C#" Value="public class DataKey : IEquatable&lt;System.Web.UI.WebControls.DataKey&gt;, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataKey extends System.Object implements class System.IEquatable`1&lt;class System.Web.UI.WebControls.DataKey&gt;, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Web.UI.WebControls.DataKey&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt das oder Primärschlüsselfelder eines Datensatzes in einem datengebundenen Steuerelement dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataKey> Klasse wird verwendet, um den primären Schlüssel für einen Datensatz in einem datengebundenen Steuerelement darstellen. Der Primärschlüssel für einen Datensatz kann von einem oder mehreren Feldern aus der Datenquelle erstellt werden. Obwohl die <xref:System.Web.UI.WebControls.DataKey> Klasse ist keine Auflistung, es kann mehrere Schlüsselfeldwerte speichern. Schlüsselfeldwerte werden aufgefüllt, wenn bei mindestens einer der Konstruktoren für die <xref:System.Web.UI.WebControls.DataKey> -Klasse aufgerufen wird. Sie können einen Wert Schlüsselfeld aus Abrufen einer <xref:System.Web.UI.WebControls.DataKey> Objekt auf folgende Weise:  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.DataKey.Item%28System.Int32%29?displayProperty=nameWithType> Eigenschaft zum Abrufen eines Werts Schlüsselfeld an einem bestimmten Index in die <xref:System.Web.UI.WebControls.DataKey> Objekt.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.DataKey.Item%28System.String%29?displayProperty=nameWithType> Eigenschaft zum Abrufen eines Werts Schlüsselfeld eines bestimmten Felds.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.DataKey.Value%2A> Eigenschaft zum Abrufen des Werts des Schlüsselfelds am Index 0 in der <xref:System.Web.UI.WebControls.DataKey> Objekt. Diese Eigenschaft wird häufig als Verknüpfung verwendet, um den Schlüsselwert eines Datensatzes abzurufen, wenn der primäre Schlüssel nur ein Feld enthält.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.DataKey.Values%2A> zu erstellenden Eigenschaft ein <xref:System.Collections.Specialized.IOrderedDictionary> -Objekt, das zum Durchlaufen der Schlüsselfeldwerte verwendet werden kann.  
+  
+ Im allgemeinen <xref:System.Web.UI.WebControls.DataKey> Objekte werden automatisch von datengebundenen generiert gesteuert werden des Steuerelements `DataKeyNames` festgelegt wird. Die <xref:System.Web.UI.WebControls.DataKey> Objekte enthalten die Werte der Felder, die im angegebenen Schlüsselfeld der `DataKeyNames` Eigenschaft. Datengebundene Steuerelemente, die Anzeige eines einzelnen Datensatzes zu einem Zeitpunkt (z. B. <xref:System.Web.UI.WebControls.DetailsView> oder <xref:System.Web.UI.WebControls.FormView>) in der Regel speichern die <xref:System.Web.UI.WebControls.DataKey> Objekt für den aktuellen Datensatz angezeigt, der `DataKey` Eigenschaft des Steuerelements. Datengebundene Steuerelemente, die mehrere Datensätze gleichzeitig anzeigen (z. B. <xref:System.Web.UI.WebControls.GridView>) in der Regel speichern die <xref:System.Web.UI.WebControls.DataKey> Objekte für jeden Datensatz im Steuerelement in einer <xref:System.Web.UI.WebControls.DataKeyArray> Auflistung. Die <xref:System.Web.UI.WebControls.DataKeyArray> Auflistung wird dann gespeichert, der `DataKeys` Eigenschaft des Steuerelements.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, um zu bestimmen, den Wert des Primärschlüssels einen Datensatz in einer <xref:System.Web.UI.WebControls.DetailsView> -Steuerelements mit der <xref:System.Web.UI.WebControls.DataKey.Value%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.DataKey> Objekt.  
+  
+ [!code-aspx-csharp[DataKeyValue#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataKeyValue/CS/DataKeyValuecs.aspx#1)]
+ [!code-aspx-vb[DataKeyValue#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataKeyValue/VB/DataKeyValuevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataKey (System.Collections.Specialized.IOrderedDictionary keyTable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.IOrderedDictionary keyTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKey.#ctor(System.Collections.Specialized.IOrderedDictionary)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyTable" Type="System.Collections.Specialized.IOrderedDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keyTable">Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> , das das Schlüsselfeldwerte enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.DataKey" /> -Klasse unter Verwendung des angegebenen Wörterbuchs der Feldwerte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.DataKey> -Klasse unter Verwendung des angegebenen Wörterbuchs der Feldwerte. Die Feldwerte in enthalten die <xref:System.Collections.Specialized.IOrderedDictionary> für übergebene Objekt die `keyTable` Parameter werden zum Auffüllen der <xref:System.Web.UI.WebControls.DataKey> Objekt.  
+  
+> [!NOTE]
+>  Diese Version des Konstruktors lässt nicht zu, Ihnen die Angabe eine Liste von Feldnamen im Voraus für die <xref:System.Web.UI.WebControls.DataKey> Objekt. Da die Feldnamen nicht im Voraus angegeben werden, werden die Feldnamen und die Werte im Ansichtszustand gespeichert. Um eine Liste von Feldnamen im Voraus angeben möchten, verwenden Sie die <xref:System.Web.UI.WebControls.DataKey.%23ctor%28System.Collections.Specialized.IOrderedDictionary%2CSystem.String%5B%5D%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataKey (System.Collections.Specialized.IOrderedDictionary keyTable, string[] keyNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.IOrderedDictionary keyTable, string[] keyNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKey.#ctor(System.Collections.Specialized.IOrderedDictionary,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyTable" Type="System.Collections.Specialized.IOrderedDictionary" />
+        <Parameter Name="keyNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="keyTable">Das Schlüsselfeld-Werte.</param>
+        <param name="keyNames">Ein Array von Zeichenfolgen, die die Namen der Schlüsselfelder enthalten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.DataKey" /> -Klasse unter Verwendung des angegebenen Wörterbuchs der Schlüsselfeldwerte und das Array von Feldnamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.DataKey> -Klasse unter Verwendung des angegebenen Wörterbuchs der Schlüsselfeldwerte und das Array von Feldnamen. Die Feldwerte in enthalten die <xref:System.Collections.Specialized.IOrderedDictionary> für übergebene Objekt die `keyTable` Parameter werden zum Auffüllen der <xref:System.Web.UI.WebControls.DataKey> Objekt. Mit diesem Konstruktor können Sie eine Liste der Feldnamen für Schlüssel angeben, auch die <xref:System.Web.UI.WebControls.DataKey> Objekt im Voraus über den `keyNames` Parameter. Da die Feldnamen im Voraus angegeben werden, nur das Schlüsselfeld Werte sind im Ansichtszustand gespeichert, wenn dieser Konstruktor verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Web.UI.WebControls.DataKey other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Web.UI.WebControls.DataKey other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKey.Equals(System.Web.UI.WebControls.DataKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Web.UI.WebControls.DataKey" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die <see cref="T:System.Web.UI.WebControls.DataKey" /> mit der aktuellen zu vergleichende Objekt <see cref="T:System.Web.UI.WebControls.DataKey" />. -Objekts.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Web.UI.WebControls.DataKey" /> Array gleich der aktuellen Dek.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrackingViewState">
+      <MemberSignature Language="C#" Value="protected virtual bool IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKey.IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt seine Änderungen am Ansichtszustand nachverfolgt wird.</summary>
+        <value>
+          <see langword="true" />Gibt an, dass die <see cref="T:System.Web.UI.WebControls.DataKey" /> seine Änderungen am Ansichtszustand nachverfolgt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataKey.IsTrackingViewState%2A> Eigenschaft wird verwendet, um zu bestimmen, ob die <xref:System.Web.UI.WebControls.DataKey> Objekt seine Änderungen am Ansichtszustand nachverfolgt wird.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.DataKey" /> -Klasse, überschreiben Sie diese Eigenschaft, um anzugeben, ob Änderungen am Ansichtszustand nachverfolgt werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKey.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an der den Wert des Felds Schlüssel abgerufen.</param>
+        <summary>Ruft den Wert des Schlüsselfelds am angegebenen Index aus einer <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt.</summary>
+        <value>Der Wert des Schlüsselfelds am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataKey.Item%28System.Int32%29> Eigenschaft zum Abrufen des Werts des Schlüsselfelds am angegebenen Index in die <xref:System.Web.UI.WebControls.DataKey> Objekt.  
+  
+> [!NOTE]
+>  Als Alternative können Sie auch die <xref:System.Web.UI.WebControls.DataKey.Item%28System.String%29> Eigenschaft zum Abrufen eines Schlüsselfelds-Werts anhand des Feldnamens.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataKey.Item%28System.Int32%29> Eigenschaft zum Abrufen eines Schlüsselfelds-Werts aus einem bestimmten Index in einem <xref:System.Web.UI.WebControls.DataKey> Objekt.  
+  
+ [!code-aspx-csharp[DataKeyItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/datakeyitem/CS/DataKeyItemcs.aspx#1)]
+ [!code-aspx-vb[DataKeyItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/datakeyitem/VB/DataKeyItemvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKey.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Schlüsselfelds für das Abrufen des Werts Schlüsselfeld.</param>
+        <summary>Ruft den Wert des Schlüsselfelds mit dem angegebenen Feldnamen aus einem <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt.</summary>
+        <value>Der Wert des Schlüsselfelds mit dem angegebenen Feldnamen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataKey.Item%28System.String%29> Eigenschaft zum Abrufen des Werts des angegebenen Schlüsselfelds aus dem <xref:System.Web.UI.WebControls.DataKey> Objekt.  
+  
+> [!NOTE]
+>  Als Alternative können Sie auch die <xref:System.Web.UI.WebControls.DataKey.Item%28System.Int32%29> Eigenschaft, um einen Feldwert nach Index abzurufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataKey.Item%28System.String%29> Eigenschaft zum Abrufen eines Schlüsselfelds-Werts aus einem bestimmten Index in einem <xref:System.Web.UI.WebControls.DataKey> Objekt.  
+  
+ [!code-aspx-csharp[DataKeyItem_String#1](~/samples/snippets/csharp/VS_Snippets_WebNet/datakeyitem_string/CS/DataKeyItem_Stringcs.aspx#1)]
+ [!code-aspx-vb[DataKeyItem_String#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/datakeyitem_string/VB/DataKeyItem_Stringvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected virtual void LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKey.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein Objekt, das den Status der <see cref="T:System.Web.UI.WebControls.DataKey" />.</param>
+        <summary>Lädt den zuvor gespeicherten Ansichtszustand des der <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient in erster Linie durch die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden. Allerdings können Entwickler von Steuerelementen überschreiben Sie diese Methode, um anzugeben, wie ein benutzerdefiniertes Serversteuerelement seinen Ansichtszustand wiederherstellt. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Die <xref:System.Web.UI.WebControls.DataKey.LoadViewState%2A> Methode wird verwendet, um den zuvor gespeicherten Ansichtszustand des laden die <xref:System.Web.UI.WebControls.DataKey> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="state" />ist kein <see langword="null" /> und kann nicht aufgelöst werden, um eine gültige <see cref="P:System.Web.UI.Control.ViewState" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.DataKey" /> -Klasse, überschreiben Sie diese Methode, um eigene Routine zum Laden des Ansichtszustands für das Objekt zu implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected virtual object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKey.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den aktuellen Ansichtszustand des der <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , das den gespeicherten Zustand enthält das <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataKey.SaveViewState%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.DataKey> Klasse, um den Status des Objekts zu speichern.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.DataKey" /> -Klasse, überschreiben Sie diese Methode, um Ihre eigene Routine zum Speichern des Ansichtszustands für das Objekt zu implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKey.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt seine Änderungen am Ansichtszustand nachverfolgt wird.</summary>
+        <value>
+          <see langword="true" />Gibt an, dass die <see cref="T:System.Web.UI.WebControls.DataKey" /> seine Änderungen am Ansichtszustand nachverfolgt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataKey.System%23Web%23UI%23IStateManager%23IsTrackingViewState%2A> Eigenschaft wird verwendet, um zu bestimmen, ob die <xref:System.Web.UI.WebControls.DataKey> Objekt seine Änderungen am Ansichtszustand nachverfolgt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKey.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Object" /> , die den Status des darstellt der <see cref="T:System.Web.UI.WebControls.DataKey" />.</param>
+        <summary>Lädt den zuvor gespeicherten Ansichtszustand des der <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataKey.System%23Web%23UI%23IStateManager%23LoadViewState%2A> Methode wird verwendet, um den zuvor gespeicherten Ansichtszustand des laden die <xref:System.Web.UI.WebControls.DataKey> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKey.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den aktuellen Ansichtszustand des der <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , das den gespeicherten Zustand enthält das <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataKey.System%23Web%23UI%23IStateManager%23SaveViewState%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.DataKey> Klasse, um den Status des Objekts zu speichern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKey.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kennzeichnet den Anfangspunkt, ab dem Nachverfolgen und Speichern von Ansichtszustand Änderungen an, der <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird überschrieben, um den Ausgangspunkt zu kennzeichnen, ab dem Nachverfolgen und Speichern von Änderungen an, der <xref:System.Web.UI.WebControls.DataKey> Objekt als Teil des Zustands des Objekts anzeigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected virtual void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKey.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kennzeichnet den Anfangspunkt, ab dem Nachverfolgen und Speichern von Ansichtszustand Änderungen an, der <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird überschrieben, um den Ausgangspunkt zu kennzeichnen, ab dem Nachverfolgen und Speichern von Änderungen an, der <xref:System.Web.UI.WebControls.DataKey> Objekt als Teil des Zustands des Objekts anzeigen.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.DataKey" /> -Klasse, überschreiben Sie diese Methode, um Ihre eigene Routine zum Nachverfolgen des Ansichtszustands des Objekts zu implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public virtual object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKey.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Schlüsselfelds am Index 0 in der <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt.</summary>
+        <value>Der Wert des Schlüsselfelds am Index 0 in der <see cref="T:System.Web.UI.WebControls.DataKey" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anstelle der <xref:System.Web.UI.WebControls.DataKey.Item%2A> oder die <xref:System.Web.UI.WebControls.DataKey.Values%2A> Eigenschaft zum Abrufen eines Werts Schlüsselfeld aus einer <xref:System.Web.UI.WebControls.DataKey> -Objekt können Sie die <xref:System.Web.UI.WebControls.DataKey.Value%2A> Eigenschaft als Verknüpfung zum Bestimmen des Werts des Schlüsselfelds am Index 0 im die <xref:System.Web.UI.WebControls.DataKey> Objekt. Diese Eigenschaft wird häufig verwendet, um das Schlüsselfeldwert eines Datensatzes zu bestimmen, wenn der Datensatz nur ein Schlüsselfeld aufweist.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.DataKey> Objekt enthält keine Schlüsselfelder sind `null` zurückgegeben wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataKey.Value%2A> -Eigenschaft können Sie den primären Schlüsselwert eines Datensatzes zu bestimmen.  
+  
+ [!code-aspx-csharp[DataKeyValue#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataKeyValue/CS/DataKeyValuecs.aspx#1)]
+ [!code-aspx-vb[DataKeyValue#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataKeyValue/VB/DataKeyValuevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKey.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> -Objekt, das jedes Schlüsselfeld in enthält die <see cref="T:System.Web.UI.WebControls.DataKey" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> , enthält jedes Feld in der <see cref="T:System.Web.UI.WebControls.DataKey" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataKey.Values%2A> Eigenschaft zum Abrufen einer <xref:System.Collections.Specialized.IOrderedDictionary> -Objekt, das jedes Schlüsselfeld in enthält die <xref:System.Web.UI.WebControls.DataKey> Objekt. Die <xref:System.Collections.Specialized.IOrderedDictionary> Objekt wird häufig zum iterieren durch die wichtigsten Felder eines Datensatzes verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Durchlaufen der <xref:System.Collections.Specialized.IOrderedDictionary> zurückgegebenes Objekt die <xref:System.Web.UI.WebControls.DataKey.Values%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[DataKeyValues#1](~/samples/snippets/csharp/VS_Snippets_WebNet/datakeyvalues/CS/DataKeyValuescs.aspx#1)]
+ [!code-aspx-vb[DataKeyValues#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/datakeyvalues/VB/DataKeyValuesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,101 @@
+<Type Name="DateTimePickerFormat" FullName="System.Windows.Forms.DateTimePickerFormat">
+  <TypeSignature Language="C#" Value="public enum DateTimePickerFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DateTimePickerFormat extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DateTimePickerFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das Datum und Uhrzeit-Format an den <see cref="T:System.Windows.Forms.DateTimePicker" /> zeigt steuern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird von Elementen verwendet, z. B. <xref:System.Windows.Forms.DateTimePicker.Format%2A?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Das tatsächliche Datum/Uhrzeit werden Formate von Datum, Uhrzeit und regionale Einstellungen im Betriebssystem des Benutzers bestimmt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Initialisieren einer <xref:System.Windows.Forms.DateTimePicker> Objekt durch Festlegen der <xref:System.Windows.Forms.DateTimePicker.Format%2A> auf eine <xref:System.Windows.Forms.DateTimePickerFormat> Wert. Zum Ausführen dieses Beispiels fügen Sie folgenden code in ein Formular, und rufen `InitializeDateTimePicker` aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-cpp[System.Windows.Forms.DateTimePicker#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePicker/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.DateTimePicker#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePicker/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.DateTimePicker#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePicker/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DateTimePickerFormat Custom = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DateTimePickerFormat.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DateTimePickerFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Forms.DateTimePicker" /> -Steuerelement zeigt die Datums-/Uhrzeitwert in einem benutzerdefinierten Format. Weitere Informationen finden Sie unter <see cref="P:System.Windows.Forms.DateTimePicker.CustomFormat" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Long">
+      <MemberSignature Language="C#" Value="Long" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DateTimePickerFormat Long = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DateTimePickerFormat.Long" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DateTimePickerFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Forms.DateTimePicker" /> -Steuerelement zeigt die Datums-/Uhrzeitwert in das lange Datumsformat, das vom Betriebssystem des Benutzers festgelegt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Short">
+      <MemberSignature Language="C#" Value="Short" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DateTimePickerFormat Short = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DateTimePickerFormat.Short" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DateTimePickerFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Forms.DateTimePicker" /> -Steuerelement zeigt die Datums-/Uhrzeitwert in das kurze Datumsformat, das vom Betriebssystem des Benutzers festgelegt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Time">
+      <MemberSignature Language="C#" Value="Time" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DateTimePickerFormat Time = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DateTimePickerFormat.Time" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DateTimePickerFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Forms.DateTimePicker" /> -Steuerelement zeigt die Datums-/Uhrzeitwert im Uhrzeitformat, die vom Betriebssystem des Benutzers festgelegt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

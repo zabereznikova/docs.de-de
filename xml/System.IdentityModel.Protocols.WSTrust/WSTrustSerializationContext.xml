@@ -1,0 +1,165 @@
+<Type Name="WSTrustSerializationContext" FullName="System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext">
+  <TypeSignature Language="C#" Value="public class WSTrustSerializationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WSTrustSerializationContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert den Serialisierungskontext für WS-Trust-Nachrichten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Container für Objekte, die zum Serialisieren von WS-Trust-Anforderungen (RST) und Antworten (RSTR) verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSTrustSerializationContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSTrustSerializationContext (System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager securityTokenHandlerCollectionManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager securityTokenHandlerCollectionManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext.#ctor(System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityTokenHandlerCollectionManager" Type="System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager" />
+      </Parameters>
+      <Docs>
+        <param name="securityTokenHandlerCollectionManager">Die <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager" /> Objekt, das den Berechtigungssatz enthält <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" /> Objekte, die zum Serialisieren und Überprüfen von Token verwendet, die in der WS-Trust-Nachrichten gefunden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" /> Klasse mit dem angegebenen <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityTokenHandlerCollectionManager" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSTrustSerializationContext (System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager securityTokenHandlerCollectionManager, System.IdentityModel.Selectors.SecurityTokenResolver securityTokenResolver, System.IdentityModel.Selectors.SecurityTokenResolver useKeyTokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager securityTokenHandlerCollectionManager, class System.IdentityModel.Selectors.SecurityTokenResolver securityTokenResolver, class System.IdentityModel.Selectors.SecurityTokenResolver useKeyTokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext.#ctor(System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager,System.IdentityModel.Selectors.SecurityTokenResolver,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityTokenHandlerCollectionManager" Type="System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager" />
+        <Parameter Name="securityTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+        <Parameter Name="useKeyTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="securityTokenHandlerCollectionManager">Die <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager" /> Objekt, das den Berechtigungssatz enthält <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" /> Objekte, die zum Serialisieren und Überprüfen von Token verwendet, die in der WS-Trust-Nachrichten gefunden.</param>
+        <param name="securityTokenResolver">Die <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" /> Objekt, das zum Auflösen von sicherheitstokenverweisen in den meisten Elementen von WS-Trust-Nachrichten verwendet.</param>
+        <param name="useKeyTokenResolver">Die <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" /> Objekt, mit dem Auflösen von im Wst:UseKey-Element der RST-Nachrichten als auch in RST-Nachrichten gefundenen Wst:RenewTarget-Elements sicherheitstokenverweisen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" /> Klasse mit dem angegebenen <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager" />, <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" />, und <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" /> Objekte.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityTokenHandlerCollectionManager" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="securityTokenResolver" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="useKeyTokenResolver" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenHandlerCollectionManager">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager SecurityTokenHandlerCollectionManager { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager SecurityTokenHandlerCollectionManager" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext.SecurityTokenHandlerCollectionManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager" /> , enthält den Satz von <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" /> enthaltenen Objekte, die zum Serialisieren und Überprüfen von Token in WS-Trust-Nachrichten.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenHandlers">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenHandlerCollection SecurityTokenHandlers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenHandlerCollection SecurityTokenHandlers" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext.SecurityTokenHandlers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" /> enthaltenen Objekte, die zum Serialisieren und Überprüfen von Sicherheitstoken in WS-Trust-Nachrichten.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollection" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenResolver">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.SecurityTokenResolver TokenResolver { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.SecurityTokenResolver TokenResolver" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext.TokenResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" /> Objekt zum Auflösen von sicherheitstokenverweisen in den meisten Elementen von WS-Trust-Nachrichten verwendet.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseKeyTokenResolver">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.SecurityTokenResolver UseKeyTokenResolver { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.SecurityTokenResolver UseKeyTokenResolver" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext.UseKeyTokenResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" /> Objekt zum Auflösen von im Wst:UseKey-Element der RST-Nachrichten als auch in RST-Nachrichten gefundenen Wst:RenewTarget-Elements sicherheitstokenverweisen.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,383 @@
+<Type Name="Transform3D" FullName="System.Windows.Media.Media3D.Transform3D">
+  <TypeSignature Language="C#" Value="public abstract class Transform3D : System.Windows.Media.Media3D.GeneralTransform3D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Transform3D extends System.Windows.Media.Media3D.GeneralTransform3D" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.Transform3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.GeneralTransform3D</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine übergeordnete Klasse für alle dreidimensionale Transformationen bereit, einschließlich Übersetzung, Drehung und Skalierungstransformationen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.Media3D.MatrixTransform3D> -Klasse zur Erstellung von Transformationen, die nicht verfügbar ist, aus der <xref:System.Windows.Media.Media3D.RotateTransform3D>, <xref:System.Windows.Media.Media3D.TranslateTransform3D>, und <xref:System.Windows.Media.Media3D.ScaleTransform3D> Klassen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Transform3D Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.Transform3D Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Transform3D.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Transform3D</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Media3D.Transform3D" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressource Ressourcenverweise und datenbindungen (möglicherweise nicht mehr aufgelöst), jedoch keine Animationen oder ihre aktuellen Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Transform3D CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.Transform3D CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Transform3D.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Transform3D</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Media3D.Transform3D" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Des geklonten Objekts <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft <see langword="false" /> selbst wenn der Quelle <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft ist <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Transform3D Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Media3D.Transform3D Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Transform3D.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Transform3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Identitätstransformation ab.</summary>
+        <value>Die Identitätstransformation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Identitätstransformation wirkt sich die für das Objekt mit der Identitätsmatrix multipliziert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inverse">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Media3D.GeneralTransform3D Inverse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.GeneralTransform3D Inverse" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Transform3D.Inverse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.GeneralTransform3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ggf. die inverse Transformation dieses Objekts ab.</summary>
+        <value>Eine Umkehrung dieser Instanz, wenn möglich; andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Transform3D.Inverse%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAffine">
+      <MemberSignature Language="C#" Value="public abstract bool IsAffine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAffine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Transform3D.IsAffine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Matrix affin ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Matrix affine ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine affine Transformation wird die Kollinearität beibehalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Point3D Transform (System.Windows.Media.Media3D.Point3D point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Media.Media3D.Point3D Transform(valuetype System.Windows.Media.Media3D.Point3D point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Transform3D.Transform(System.Windows.Media.Media3D.Point3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="point">Point3D zu transformieren.</param>
+        <summary>Transformiert den angegebenen <see cref="T:System.Windows.Media.Media3D.Point3D" />.</summary>
+        <returns>Transformierte Point3D.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public void Transform (System.Windows.Media.Media3D.Point3D[] points);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Transform(valuetype System.Windows.Media.Media3D.Point3D[] points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Transform3D.Transform(System.Windows.Media.Media3D.Point3D[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Windows.Media.Media3D.Point3D[]" />
+      </Parameters>
+      <Docs>
+        <param name="points">Array von Point3D-Objekte zu transformieren.</param>
+        <summary>Transformiert das angegebene Array von <see cref="T:System.Windows.Media.Media3D.Point3D" /> Objekte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Point4D Transform (System.Windows.Media.Media3D.Point4D point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Media.Media3D.Point4D Transform(valuetype System.Windows.Media.Media3D.Point4D point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Transform3D.Transform(System.Windows.Media.Media3D.Point4D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point4D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point4D" />
+      </Parameters>
+      <Docs>
+        <param name="point">Point4D zu transformieren.</param>
+        <summary>Transformiert den angegebenen <see cref="T:System.Windows.Media.Media3D.Point4D" />.</summary>
+        <returns>Transformierte Point4D.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public void Transform (System.Windows.Media.Media3D.Point4D[] points);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Transform(valuetype System.Windows.Media.Media3D.Point4D[] points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Transform3D.Transform(System.Windows.Media.Media3D.Point4D[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Windows.Media.Media3D.Point4D[]" />
+      </Parameters>
+      <Docs>
+        <param name="points">Array von Point4D-Objekte zu transformieren.</param>
+        <summary>Transformiert das angegebene Array von <see cref="T:System.Windows.Media.Media3D.Point4D" /> Objekte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Vector3D Transform (System.Windows.Media.Media3D.Vector3D vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Media.Media3D.Vector3D Transform(valuetype System.Windows.Media.Media3D.Vector3D vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Transform3D.Transform(System.Windows.Media.Media3D.Vector3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Vector3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vector" Type="System.Windows.Media.Media3D.Vector3D" />
+      </Parameters>
+      <Docs>
+        <param name="vector">Vector3D zu transformieren.</param>
+        <summary>Transformiert den angegebenen <see cref="T:System.Windows.Media.Media3D.Vector3D" />.</summary>
+        <returns>Transformierte Vector3D.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public void Transform (System.Windows.Media.Media3D.Vector3D[] vectors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Transform(valuetype System.Windows.Media.Media3D.Vector3D[] vectors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Transform3D.Transform(System.Windows.Media.Media3D.Vector3D[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vectors" Type="System.Windows.Media.Media3D.Vector3D[]" />
+      </Parameters>
+      <Docs>
+        <param name="vectors">Array von Vector3D-Objekte zu transformieren.</param>
+        <summary>Transformiert das angegebene Array von <see cref="T:System.Windows.Media.Media3D.Vector3D" /> Objekte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformBounds">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Media3D.Rect3D TransformBounds (System.Windows.Media.Media3D.Rect3D rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Windows.Media.Media3D.Rect3D TransformBounds(valuetype System.Windows.Media.Media3D.Rect3D rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Transform3D.TransformBounds(System.Windows.Media.Media3D.Rect3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rect3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Media.Media3D.Rect3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect">3D umgebenden Felds zu transformieren.</param>
+        <summary>Transformiert die angegebene 3D umgebende Feld aus, und gibt ein Achse ausgerichtete 3D umgebendes Feld, das genau groß genug ist, in dem es enthalten ist.</summary>
+        <returns>Die kleinste Achsen ausgerichtete 3D Begrenzungsrahmen möglich, die die transformierten enthält <paramref name="rect" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Transform3D.TransformBounds%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryTransform">
+      <MemberSignature Language="C#" Value="public override bool TryTransform (System.Windows.Media.Media3D.Point3D inPoint, out System.Windows.Media.Media3D.Point3D result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TryTransform(valuetype System.Windows.Media.Media3D.Point3D inPoint, [out] valuetype System.Windows.Media.Media3D.Point3D&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Transform3D.TryTransform(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Point3D@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inPoint" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="result" Type="System.Windows.Media.Media3D.Point3D&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="inPoint">Der 3D-Punkt zu transformieren.</param>
+        <param name="result">Das Ergebnis der Transformation <c>InPoint</c>.</param>
+        <summary>Versucht, den angegebenen 3D-Punkt zu transformieren, und gibt einen Wert, der angibt, ob die Transformation erfolgreich war.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="inPoint" /> wurde transformierten; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Windows.Media.Media3D.GeneralTransform3D.Transform%2A> -Methode, diese Methode ist keine Ausnahme ausgelöst, wenn die Transformation fehlgeschlagen ist.  
+  
+ <xref:System.Windows.Media.Media3D.Transform3D.TryTransform%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.Media3D.Matrix3D Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Matrix3D Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Transform3D.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Matrix3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Media.Media3D.Matrix3D" /> , die den Wert der aktuellen Transformation darstellt.</summary>
+        <value>Matrix3D, die den Wert der aktuellen Transformation darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[matrixtransform3dview#MatrixTransform3DView3DN4](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixTransform3DView/CSharp/Window1.xaml.cs#matrixtransform3dview3dn4)]
+ [!code-vb[matrixtransform3dview#MatrixTransform3DView3DN4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MatrixTransform3DView/visualbasic/window1.xaml.vb#matrixtransform3dview3dn4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

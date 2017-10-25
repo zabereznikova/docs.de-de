@@ -1,0 +1,76 @@
+<Type Name="WebPartDesigner" FullName="System.Web.UI.Design.WebControls.WebParts.WebPartDesigner">
+  <TypeSignature Language="C#" Value="public class WebPartDesigner : System.Web.UI.Design.WebControls.WebParts.PartDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartDesigner extends System.Web.UI.Design.WebControls.WebParts.PartDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.WebParts.PartDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet zur Entwurfszeit visuelle Unterstützung für <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner> Klasse enthält die visuelle Darstellung <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelementen zur Entwurfszeit. Stammt aus dem <xref:System.Web.UI.Design.WebControls.WebParts.PartDesigner> -Klasse und fügt die Überprüfung aus, um sicherzustellen, dass das zugeordnete Steuerelement ist ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement oder abgeleiteten Typ.  
+  
+ <xref:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner>erbt einen <xref:System.Web.UI.Design.WebControls.WebParts.PartDesigner.UsePreviewControl%2A> Eigenschaft aus dem übergeordneten Element, das immer auf `true`. Dies bewirkt, dass die visuelle entwurfsumgebung zum Generieren einer <xref:System.Web.UI.WebControls.View> Steuerelements eine temporäre Kopie des halten die <xref:System.Web.UI.WebControls.WebParts.WebPart> auf der Entwurfsoberfläche wird diese Kopie dann in Markup beibehalten. Wenn Sie außer Kraft setzen die <xref:System.Web.UI.Design.WebControls.WebParts.PartDesigner.UsePreviewControl%2A> -Eigenschaft zum Zurückgeben von `false`, die visuelle entwurfsumgebung generiert Markup direkt aus den tatsächlichen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ Teile Webdesignern Verhalten sich ähnlich wie reguläre Steuerelement-Designer; Ableiten Hauptmethoden zum Festlegen der Entwurfszeit Darstellung der <xref:System.Web.UI.Design.ControlDesigner> Klasse. Sie können insbesondere überschreiben die <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner.GetDesignTimeHtml%2A> -Methode ändern, die zur Entwurfszeit-Markup, das dem Steuerelement zugeordnet. Sie können ebenso überschreiben die <xref:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml%2A> und <xref:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml%2A> Methoden zur Behandlung von Fehlern und leere Zeichenfolgen ("") zugeordnet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Interaktion zwischen einem <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement und die zugehörigen <xref:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner>. Die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement enthält eine <xref:System.Web.UI.WebControls.Calendar> Steuerelement aus dem der Endbenutzer sein eigenes Geburtstag auswählt eine <xref:System.Web.UI.WebControls.Button> Steuerelement zum Übermitteln der Auswahl und ein <xref:System.Web.UI.WebControls.Label> Steuerelement zum Anzeigen einer Meldung auf dem Geburtstag. Die <xref:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner> stellt sicher, dass das zugeordnete Steuerelement dem erwarteten Typ entspricht und passt anschließend das Rendering zur Entwurfszeit besagten Steuerelement. Beachten Sie, dass die visuellen Anpassungen des Designers nur zur Entwurfszeit angezeigt werden, während diese des zugeordneten Steuerelements zur Laufzeit und Entwurfszeit sichtbar sind.  
+  
+ Alle Methoden, die in diesem Beispiel überschreiben Ableiten der <xref:System.Web.UI.Design.ControlDesigner> Basisklasse. Andere verfügbare Member und deren Verwendung finden Sie unter <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>.  
+  
+ [!code-csharp[WebPartsDesigners_WebPartDesigner_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebPartsDesigners_WebPartDesigner_Overview/CS/BirthdayPart.cs#1)] 
+ [!code-vb[WebPartsDesigners_WebPartDesigner_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebPartsDesigners_WebPartDesigner_Overview/vb/birthdaypart.vb#1)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> diesem Designer zugeordnete Steuerelement.</param>
+        <summary>Bindet den Designer mit einem Steuerelement und prüft, ob das Steuerelement ist ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

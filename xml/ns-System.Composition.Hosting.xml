@@ -1,0 +1,6 @@
+<Namespace Name="System.Composition.Hosting">
+  <Docs>
+    <summary>Die <see cref="N:System.Composition.Hosting" /> -Namespace enthält Klassen, die für das Erstellen und konfigurieren einen Kompositionscontainer und Berichtszwecken Ausnahmen aus einer fehlerhaften Komposition.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

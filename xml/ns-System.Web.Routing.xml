@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Routing">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Routing" /> Namespace enthält Klassen, die mit URL-routing verwendet werden. Dies ermöglicht es Ihnen, URLs verwenden, die nicht zu einer physischen Datei zugeordnet sind.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

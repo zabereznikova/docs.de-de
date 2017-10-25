@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Policy">
+  <Docs>
+    <summary>Die <see cref="N:System.Security.Policy" /> Beweise, Codegruppen und mitgliedschaftsbedingungen-Namespace enthält. Diese drei Typen von Klassen werden verwendet, um die vom Sicherheitssystem common Language Runtime Richtlinie angewendeten Regeln zu erstellen. Beweisklassen sind die Eingabe für die Sicherheitsrichtlinie und mitgliedschaftsbedingungen sind die Schalter; zusammen diese richtlinienanweisungen erstellen und ermitteln, welche die erteilte Berechtigung. -Richtlinienebenen und Codegruppen sind die Struktur der Richtlinienhierarchie. Codegruppen sind die Kapselung einer Regel, und in einer Richtlinienebene hierarchisch angeordnet sind.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

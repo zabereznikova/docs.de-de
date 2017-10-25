@@ -1,0 +1,103 @@
+<Type Name="IncrementalLassoHitTester" FullName="System.Windows.Ink.IncrementalLassoHitTester">
+  <TypeSignature Language="C#" Value="public class IncrementalLassoHitTester : System.Windows.Ink.IncrementalHitTester" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IncrementalLassoHitTester extends System.Windows.Ink.IncrementalHitTester" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Ink.IncrementalLassoHitTester" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Ink.IncrementalHitTester</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dynamisch Treffertests eine <see cref="T:System.Windows.Ink.Stroke" /> mit einem Lasso.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.IncrementalLassoHitTester> Treffertests für Striche wird festgestellt, ob eine es umgeben. Verwenden der <xref:System.Windows.Ink.IncrementalHitTester.AddPoints%2A> Methode in der Stylus-Ereignisse zum Hinzufügen der verweist auf die <xref:System.Windows.Ink.IncrementalLassoHitTester>. Wenn die Punkte hinzugefügt der <xref:System.Windows.Ink.IncrementalLassoHitTester> aktiviert bzw. deaktiviert das hebt die Auswahl einer <xref:System.Windows.Ink.Stroke>, <xref:System.Windows.Ink.IncrementalLassoHitTester> löst die <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged> Ereignis  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie Striche in ein benutzerdefiniertes Steuerelement dynamisch auswählen. Das vollständige Beispiel finden Sie unter [Vorgehensweise: Select Ink über ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
+  
+ [!code-csharp[StrokeCollectionMethods#18](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeCollectionMethods/CSharp/InkSelector.cs#18)]
+ [!code-vb[StrokeCollectionMethods#18](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeCollectionMethods/VisualBasic/InkSelector.vb#18)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddPointsCore">
+      <MemberSignature Language="C#" Value="protected override void AddPointsCore (System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt; points);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddPointsCore(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Point&gt; points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.IncrementalLassoHitTester.AddPointsCore(System.Collections.Generic.IEnumerable{System.Windows.Point})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="points">Die hinzuzufügenden Punkte.</param>
+        <summary>Fügt verweist auf die <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionChanged">
+      <MemberSignature Language="C#" Value="protected void OnSelectionChanged (System.Windows.Ink.LassoSelectionChangedEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnSelectionChanged(class System.Windows.Ink.LassoSelectionChangedEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.IncrementalLassoHitTester.OnSelectionChanged(System.Windows.Ink.LassoSelectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="System.Windows.Ink.LassoSelectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Ink.LassoSelectionChangedEventHandler SelectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Ink.LassoSelectionChangedEventHandler SelectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.LassoSelectionChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Lassopfad aktiviert bzw. deaktiviert das hebt die Auswahl einer Freihandeingaben <see cref="T:System.Windows.Ink.Stroke" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie Striche in ein benutzerdefiniertes Steuerelement dynamisch auswählen. Das vollständige Beispiel finden Sie unter [Vorgehensweise: Select Ink über ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
+  
+ [!code-csharp[StrokeCollectionMethods#18](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeCollectionMethods/CSharp/InkSelector.cs#18)]
+ [!code-vb[StrokeCollectionMethods#18](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeCollectionMethods/VisualBasic/InkSelector.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

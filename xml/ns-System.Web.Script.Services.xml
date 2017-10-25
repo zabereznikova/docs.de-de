@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Script.Services">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Script.Services" /> Namespace enthält Attribute, mit denen Sie die Unterstützung für den Webdienst für AJAX-Funktionen in ASP.NET anpassen können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

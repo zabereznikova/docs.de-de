@@ -1,0 +1,330 @@
+<Type Name="SocketAddress" FullName="System.Net.SocketAddress">
+  <TypeSignature Language="C#" Value="public class SocketAddress" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SocketAddress extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.SocketAddress" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Speichert serialisierte Informationen aus <see cref="T:System.Net.EndPoint" /> abgeleitete Klassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die ersten 2 Bytes der zugrunde liegenden Puffer werden reserviert für die <xref:System.Net.Sockets.AddressFamily> Enumerationswert. Wenn die <xref:System.Net.SocketAddress> dient zum Speichern eines serialisierten <xref:System.Net.IPEndPoint>, der dritte und vierte Byte zum Speichern von Informationen zur Zahl Port verwendet werden. Die nächsten Bytes werden zum Speichern der IP-Adresse verwendet. Sie können alle Informationen in diesem zugrunde liegenden Byte-Puffer durch einen Verweis auf die Indexposition zugreifen. Byte-Puffer verwendet nullbasierter Indizierung. Sie können auch die <xref:System.Net.SocketAddress.Family%2A> und <xref:System.Net.SocketAddress.Size%2A> Eigenschaften zum Abrufen der <xref:System.Net.Sockets.AddressFamily> Wert und der Puffer groß ist, bzw.. Um diese Informationen als Zeichenfolge anzuzeigen, verwenden Sie die <xref:System.Net.SocketAddress.ToString%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Net.SocketAddress> zum Serialisieren einer Instanz von der <xref:System.Net.EndPoint> Klasse. Nach der Serialisierung, der zugrunde liegenden Bytepuffer, der die <xref:System.Net.SocketAddress> enthält alle von der <xref:System.Net.IPEndPoint> Zustandsinformationen.  
+  
+ [!code-cpp[Classic SocketAddressExample#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SocketAddressExample/CPP/source.cpp#1)]
+ [!code-csharp[Classic SocketAddressExample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SocketAddressExample/CS/source.cs#1)]
+ [!code-vb[Classic SocketAddressExample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SocketAddressExample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SocketAddress (System.Net.Sockets.AddressFamily family);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.Sockets.AddressFamily family) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.SocketAddress.#ctor(System.Net.Sockets.AddressFamily)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="family" Type="System.Net.Sockets.AddressFamily" />
+      </Parameters>
+      <Docs>
+        <param name="family">Ein <see cref="T:System.Net.Sockets.AddressFamily" />-Enumerationswert.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Net.SocketAddress" /> Klasse für die angegebenen Adressfamilie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung legt die Größe des zugrunde liegenden Puffers auf 32 Bytes fest.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SocketAddress (System.Net.Sockets.AddressFamily family, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.Sockets.AddressFamily family, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.SocketAddress.#ctor(System.Net.Sockets.AddressFamily,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="family" Type="System.Net.Sockets.AddressFamily" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="family">Ein <see cref="T:System.Net.Sockets.AddressFamily" />-Enumerationswert.</param>
+        <param name="size">Die Anzahl der Bytes, die für den zugrunde liegenden Puffer zuzuweisen.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Net.SocketAddress" /> -Klasse unter Verwendung der angegebenen Adresse Familie und Puffer Größe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung, erstellen Sie eine neue Instanz der dem <xref:System.Net.SocketAddress> Klasse mit einer bestimmten Puffergröße der zugrunde liegenden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="size" />ist kleiner als 2. Diese 2 Bytes sind erforderlich zum Speichern von <paramref name="family" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.SocketAddress.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparand" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="comparand">Das <see cref="T:System.Object" />, das mit dem aktuellen <see langword="Object" /> verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see langword="Object" /> und das aktuelle <see langword="Object" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see langword="Object" /> gleich der aktuellen <see langword="Object" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Family">
+      <MemberSignature Language="C#" Value="public System.Net.Sockets.AddressFamily Family { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Sockets.AddressFamily Family" />
+      <MemberSignature Language="DocId" Value="P:System.Net.SocketAddress.Family" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.AddressFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Net.Sockets.AddressFamily" /> aufgezählter Wert des aktuellen <see cref="T:System.Net.SocketAddress" />.</summary>
+        <value>Eines der <see cref="T:System.Net.Sockets.AddressFamily" /> -Enumerationswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die <xref:System.Net.Sockets.AddressFamily> Enumerationswert, der das Adressierungsschema des aktuellen <xref:System.Net.SocketAddress>. Wenn Sie die entsprechende Zeichenfolgendarstellung anzuzeigende <xref:System.Net.Sockets.AddressFamily>, verwenden Sie die <xref:System.Net.SocketAddress.ToString%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.SocketAddress.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fungiert als Hashfunktion für einen bestimmten Typ, der sich für die Verwendung in Hashalgorithmen und Datenstrukturen eignet, z. B. einer Hashtabelle.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Object" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public byte this[int offset] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Net.SocketAddress.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Das Arrayelement des Index für die gewünschten Informationen.</param>
+        <summary>Ruft ab oder legt den angegebenen Index-Element im zugrunde liegenden Puffer.</summary>
+        <value>Der Wert des Elements angegebenen Index in der zugrunde liegenden Puffer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft ab oder legt die angegebenen Byteposition im zugrunde liegenden Puffer.  
+  
+> [!NOTE]
+>  Achten Sie darauf, dass Sie rufen <xref:System.Net.SocketAddress.Size%2A> vor verweisen auf Elemente in der zugrunde liegenden Puffer. Verweisen auf einen Index, der nicht vorhanden ist führt dazu, dass die <xref:System.Net.SocketAddress> ausgelöst werden soll eine <xref:System.IndexOutOfRangeException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der angegebene Index ist nicht in den Puffer vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public int Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Net.SocketAddress.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Puffergröße des zugrunde liegenden der <see cref="T:System.Net.SocketAddress" />.</summary>
+        <value>Die Puffergröße des zugrunde liegenden der <see cref="T:System.Net.SocketAddress" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft die Puffergröße des zugrunde liegenden der <xref:System.Net.SocketAddress> in Bytes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.SocketAddress.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt Informationen über die Socketadresse zurück.</summary>
+        <returns>Eine Zeichenfolge, enthält Informationen zu, den <see cref="T:System.Net.SocketAddress" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.SocketAddress.ToString%2A> Methode gibt eine Zeichenfolge, enthält die <xref:System.Net.Sockets.AddressFamily> Enumerationswert, der die Größe des zugrunde liegenden Puffer von der <xref:System.Net.SocketAddress> Struktur und den restlichen Inhalt des Puffers.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

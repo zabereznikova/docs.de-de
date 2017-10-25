@@ -1,0 +1,172 @@
+<Type Name="WorkflowIdleBehavior" FullName="System.ServiceModel.Activities.Description.WorkflowIdleBehavior">
+  <TypeSignature Language="C#" Value="public class WorkflowIdleBehavior : System.ServiceModel.Description.IServiceBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowIdleBehavior extends System.Object implements class System.ServiceModel.Description.IServiceBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.Description.WorkflowIdleBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IServiceBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ein Dienstverhalten, das steuert, wann Workflowinstanzen im Leerlauf entladen und beibehalten werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> wird festgelegt auf einen Wert größer als der Wert des <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> und der Workflow dann in den Leerlauf übergeht (aufgrund von eine Delay-Aktivität), wenn die Workflowinstanz nicht geändert hat wird durch Aufrufen von Abort, anstatt das Normal durchlaufen aus dem Arbeitsspeicher entfernt werden Entladevorgangs... Dies trägt zur Optimierung der Common Language Runtime und keine Daten verloren gegangen ist, aber ein Entwickler Ablaufverfolgungsprotokoll ansehen möglicherweise ein Abbruch Trace, eine Ablaufverfolgung entladen wird.  
+  
+ Ein Beispiel dafür, wie dieses Verhaltens finden Sie unter [Erweiterbarkeit des Workflowdiensthosts](~/docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowIdleBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz des <see cref="T:System.ServiceModel.Activities.Description.WorkflowIdleBehavior" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddBindingParameters">
+      <MemberSignature Language="C#" Value="public void AddBindingParameters (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase, System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBindingParameters(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase, class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+        <Parameter Name="endpoints" Type="System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt;" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">Die Dienstbeschreibung.</param>
+        <param name="serviceHostBase">Der Diensthost.</param>
+        <param name="endpoints">Die durch den Dienst verfügbar gemachten Endpunkte.</param>
+        <param name="bindingParameters">Die Bindungsparameter, die erforderlich sind, um das Verhalten zu implementieren.</param>
+        <summary>Implementiert die <see cref="M:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)" />-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyDispatchBehavior (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">Die Dienstbeschreibung.</param>
+        <param name="serviceHostBase">Der Diensthost.</param>
+        <summary>Implementiert die <see cref="M:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToPersist">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeToPersist { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeToPersist" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der die <see cref="T:System.TimeSpan" /> angibt, die zwischen dem Zeitpunkt, zu dem der Workflow in den Leerlauf versetzt wird, und dem Zeitpunkt auftritt, zu dem er beibehalten wird.</summary>
+        <value>Die Zeitspanne, die verwendet wurde, um zu bestimmen, wann ein Workflow beibehalten wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.TimeSpan> beginnt zu dem Zeitpunkt, zu dem die Workflowinstanz in den Leerlauf versetzt wird. Diese Eigenschaft ist nützlich, wenn eine Workflowinstanz auf aggressivere Weise beibehalten werden soll, während die Instanz so lange als möglich im Speicher behalten werden soll. Der Standardwert für diese Eigenschaft ist <xref:System.TimeSpan.MaxValue>. Die <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>-Eigenschaft ist nur gültig, wenn ihr Wert kleiner als die <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> ist. Ist er größer, wird das Attribut ignoriert. Wenn die von der <xref:System.TimeSpan> angegebene <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> vor der von der <xref:System.TimeSpan> angegebenen <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> verstreicht, muss die Beibehaltung abgeschlossen werden, bevor der Workflow entladen wird. Dies bedeutet, dass der Entladevorgang möglicherweise verzögert wird, bis der Workflow beibehalten wird. Die Beibehaltungsebene ist für das Behandeln von Wiederholungen für flüchtige Fehler zuständig und löst nur bei nicht behebbaren Fehlern Ausnahmen aus. Daher werden alle während der Beibehaltung ausgelöste Ausnahmen als schwerwiegend behandelt, und die Workflowinstanz wird abgebrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToUnload">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeToUnload { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeToUnload" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der die <see cref="T:System.TimeSpan" /> angibt, die zwischen dem Zeitpunkt, zu dem der Workflow in den Leerlauf versetzt wird, und dem Zeitpunkt auftritt, zu dem er entladen wird.</summary>
+        <value>Die Zeitspanne, die verwendet wurde, um zu bestimmen, wann ein Workflow entladen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert beträgt 1 Minute. Einen Workflow zu entladen impliziert, dass dieser auch beibehalten wird. Wenn die <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> mit 0 (null) festgelegt wird, wird die Workflowinstanz sofort beibehalten und entladen, nachdem der Workflow in den Leerlauf versetzt wurde. Durch das Einstellen der <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> mit dem <xref:System.TimeSpan.MaxValue> wird der Entladevorgang gewissermaßen deaktiviert. Workflowinstanzen im Leerlauf werden nie entladen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">Die Dienstbeschreibung.</param>
+        <param name="serviceHostBase">Der Diensthost.</param>
+        <summary>Implementiert die <see cref="M:System.ServiceModel.Description.IServiceBehavior.Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

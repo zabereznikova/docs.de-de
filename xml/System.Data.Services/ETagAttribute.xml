@@ -1,0 +1,98 @@
+<Type Name="ETagAttribute" FullName="System.Data.Services.ETagAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ETagAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ETagAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.ETagAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dieses Attribut für einen Entitätstyp wird verwendet, um die Eigenschaften anzugeben, die inhaltsänderungen zu bestimmen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Optimistische Parallelität überprüft regelmäßig pro Typ in aktiviert sind [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)]. Weitere Informationen finden Sie unter [vornehmen von Änderungen an Daten (WCF Data Services)](http://msdn.microsoft.com/en-us/c83a5a41-826c-4fe5-8d43-61bc96ddaa19).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ETagAttribute (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.ETagAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Zeichenfolgenwert, der mit Eigenschaften, die im eTag-Wert verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Services.ETagAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ETagAttribute (params string[] propertyNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] propertyNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.ETagAttribute.#ctor(System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyNames" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="propertyNames">Ein Zeichenfolgenwert mit Eigenschaften, die im eTag-Wert verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Services.ETagAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; PropertyNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; PropertyNames" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ETagAttribute.PropertyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Namen von Eigenschaften, die verwendet wird, der <see cref="T:System.Data.Services.ETagAttribute" />.</summary>
+        <value>Ein Zeichenfolgenwert mit Eigenschaftsnamen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parameter für die <xref:System.Data.Services.ETagAttribute> Konstruktoren sind die Sammlung von Eigenschaftennamen, die zum Bilden von des eTag-Werts für den Typ verwendet. Wenn ein Datentyp eTags definiert ist, implementiert der Server automatisch vollständige Parallelität für alle Anforderungen an den Typ überprüft. Wenn eine Schlüsseleigenschaft, eine komplexe Typeigenschaft oder eine Navigationseigenschaft angegeben wird, eine <xref:System.ArgumentException> ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

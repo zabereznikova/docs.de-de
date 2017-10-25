@@ -1,0 +1,63 @@
+<Type Name="DockPattern+DockPatternInformation" FullName="System.Windows.Automation.DockPattern+DockPatternInformation">
+  <TypeSignature Language="C#" Value="public struct DockPattern.DockPatternInformation" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit DockPattern/DockPatternInformation extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.DockPattern.DockPatternInformation" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf die Eigenschaftswerte einer <see cref="T:System.Windows.Automation.DockPattern" /> -Objekt mithilfe seiner <see cref="P:System.Windows.Automation.DockPattern.Current" /> oder <see cref="P:System.Windows.Automation.DockPattern.Cached" /> Accessoren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften in dieser Struktur können auch abgerufen werden, mithilfe von <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> und <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, mit der entsprechenden Bezeichner aus <xref:System.Windows.Automation.DockPattern>. Z. B. die <xref:System.Windows.Automation.DockPattern.DockPatternInformation.DockPosition%2A> Eigenschaft identifizierten der <xref:System.Windows.Automation.DockPattern.DockPositionProperty> Feld. Weitere Informationen zu den einzelnen Eigenschaften finden Sie auf den Referenzseiten für diese Bezeichner; Siehe den Link im Abschnitt "Hinweise" der einzelnen Referenzthema.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DockPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.DockPosition DockPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.DockPosition DockPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.DockPattern.DockPatternInformation.DockPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.DockPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Automation.DockPosition" /> von einem <see cref="T:System.Windows.Automation.AutomationElement" /> innerhalb eines Andockcontainers.</summary>
+        <value>Die <see cref="T:System.Windows.Automation.DockPosition" /> des Elements relativ zu den Begrenzungen des dockingcontainers und anderer Elemente innerhalb des Containers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein dockingcontainer ist ein Steuerelement, das die Anordnung von untergeordneten Elementen, sowohl horizontal oder vertikal relativ zu den Begrenzungen des dockingcontainers und anderer Elemente innerhalb des Containers ermöglicht.  
+  
+ Der Standardwert ist <xref:System.Windows.Automation.DockPosition.None>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.DockPosition> Wert abgerufen wird, die für ein Steuerelement, unterstützt die aktuelle Andockposition darstellt <xref:System.Windows.Automation.DockPattern>.  
+  
+ [!code-csharp[UIADockPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIADockPattern_snip/CSharp/UIADockPattern_snippets.cs#101)]
+ [!code-vb[UIADockPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIADockPattern_snip/VisualBasic/UIADockPattern_snippets.vb#101)]  
+[!code-csharp[UIADockPattern_snip#1025](~/samples/snippets/csharp/VS_Snippets_Wpf/UIADockPattern_snip/CSharp/UIADockPattern_snippets.cs#1025)]
+[!code-vb[UIADockPattern_snip#1025](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIADockPattern_snip/VisualBasic/UIADockPattern_snippets.vb#1025)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

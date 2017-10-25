@@ -1,0 +1,130 @@
+<Type Name="DbLikeExpression" FullName="System.Data.Common.CommandTrees.DbLikeExpression">
+  <TypeSignature Language="C#" Value="public sealed class DbLikeExpression : System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DbLikeExpression extends System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.CommandTrees.DbLikeExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.CommandTrees.DbExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Zeichenfolgenvergleich mit dem angegebenen Muster mit optionaler Escapezeichenfolge dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public override void Accept (System.Data.Common.CommandTrees.DbExpressionVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Accept(class System.Data.Common.CommandTrees.DbExpressionVisitor visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbLikeExpression.Accept(System.Data.Common.CommandTrees.DbExpressionVisitor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Data.Common.CommandTrees.DbExpressionVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">Eine Instanz von <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" />.</param>
+        <summary>Implementiert das Besuchermuster für Ausdrücke, die keinen Ergebniswert erstellen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visitor" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept&lt;TResultType&gt;">
+      <MemberSignature Language="C#" Value="public override TResultType Accept&lt;TResultType&gt; (System.Data.Common.CommandTrees.DbExpressionVisitor&lt;TResultType&gt; visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResultType Accept&lt;TResultType&gt;(class System.Data.Common.CommandTrees.DbExpressionVisitor`1&lt;!!TResultType&gt; visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbLikeExpression.Accept``1(System.Data.Common.CommandTrees.DbExpressionVisitor{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResultType" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Data.Common.CommandTrees.DbExpressionVisitor&lt;TResultType&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResultType">Der Typ des Ergebnisses von erzeugten <c>Besucher</c>.</typeparam>
+        <param name="visitor">Eine Instanz eines typisierten <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" />, der einen Ergebniswert eines bestimmten Typs erstellt.</param>
+        <summary>Implementiert das Besuchermuster für Ausdrücke, die einen Ergebniswert eines bestimmten Typs erstellen.</summary>
+        <returns>Ein Ergebniswert eines bestimmten Typs, der von <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" /> erstellt wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visitor" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Argument">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbExpression Argument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.CommandTrees.DbExpression Argument" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbLikeExpression.Argument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Ausdruck ab, der die mit dem angegebenen Muster zu vergleichende Zeichenfolge angibt, oder legt diesen fest.</summary>
+        <value>Ein Ausdruck, der die mit dem angegebenen Muster zu vergleichende Zeichenfolge angibt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Ausdruck ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Ausdruck ist der Befehlsstruktur von <see cref="T:System.Data.Common.CommandTrees.DbLikeExpression" /> nicht zugeordnet, oder der Ergebnistyp ist kein Zeichenfolgentyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Escape">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbExpression Escape { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.CommandTrees.DbExpression Escape" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbLikeExpression.Escape" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Ausdruck ab, der eine optionale, für den Vergleich zu verwendende Escapezeichenfolge bereitstellt, oder legt diesen fest.</summary>
+        <value>Ein Ausdruck, der eine optionale, für den Vergleich zu verwendende Escapezeichenfolge bereitstellt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Ausdruck ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Ausdruck ist der Befehlsstruktur von <see cref="T:System.Data.Common.CommandTrees.DbLikeExpression" /> nicht zugeordnet, oder der Ergebnistyp ist kein Zeichenfolgentyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbExpression Pattern { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.CommandTrees.DbExpression Pattern" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbLikeExpression.Pattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Ausdruck ab, der das mit der angegebenen Zeichenfolge zu vergleichende Muster angibt, oder legt diesen fest.</summary>
+        <value>Ein Ausdruck, der das mit der angegebenen Zeichenfolge zu vergleichende Muster angibt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Ausdruck ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Ausdruck ist der Befehlsstruktur von <see cref="T:System.Data.Common.CommandTrees.DbLikeExpression" /> nicht zugeordnet, oder der Ergebnistyp ist kein Zeichenfolgentyp.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

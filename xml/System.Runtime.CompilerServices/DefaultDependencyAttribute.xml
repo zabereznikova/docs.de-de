@@ -1,0 +1,125 @@
+<Type Name="DefaultDependencyAttribute" FullName="System.Runtime.CompilerServices.DefaultDependencyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DefaultDependencyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DefaultDependencyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.DefaultDependencyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet ein Hinweis an, der angibt, wie wahrscheinlich einer Abhängigkeit der common Language Runtime (CLR) geladen werden soll. Diese Klasse wird in einer abhängigen Assembly verwendet, um anzugeben, welche Hinweis verwendet werden soll, wenn das übergeordnete Element nicht angegeben wird die <see cref="T:System.Runtime.CompilerServices.DependencyAttribute" /> Attribut.  Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut wird verwendet, durch die [Ngen.exe (Native Image Generator)](~/docs/framework/tools/ngen-exe-native-image-generator.md) Bilder der systemeigenen Assembly zu generieren.  
+  
+ Anwenden der <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> -Attribut auf eine abhängige Assembly, um die bevorzugte standardbindung zu bestimmen.  
+  
+ Eine Abhängigkeit, die wahrscheinlich geladen werden soll (<xref:System.Runtime.CompilerServices.LoadHint.Always>) bewirkt, dass Ngen.exe an die Abhängigkeit gebunden.  Mithilfe dieser Hinweis kann Ngen.exe Code generieren, die sich ergeben, wird in einer reduzierten Arbeitssatz und verbesserten Durchsatz jedoch auf Kosten der immer die Abhängigkeit geladen, wenn die übergeordneten Assembly geladen wird.  
+  
+ Beim Anwenden der <xref:System.Runtime.CompilerServices.DependencyAttribute> -Attribut auf eine Assembly mit einem Wert von <xref:System.Runtime.CompilerServices.LoadHint.Default>, die Generierung von systemeigenen Images Dienst fragt die abhängige Assembly für seine bevorzugte standardbindung, der durch angegeben ist die <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden der <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> -Attribut auf eine Assembly aus, um anzugeben, dass die Abhängigkeit geladen werden soll.  
+  
+ [!code-csharp[Runtime.CompilerServices.DefaultDependencyAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/Runtime.CompilerServices.DefaultDependencyAttribute/cs/example.cs#1)]
+ [!code-vb[Runtime.CompilerServices.DefaultDependencyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Runtime.CompilerServices.DefaultDependencyAttribute/vb/example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultDependencyAttribute (System.Runtime.CompilerServices.LoadHint loadHintArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.CompilerServices.LoadHint loadHintArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.DefaultDependencyAttribute.#ctor(System.Runtime.CompilerServices.LoadHint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="loadHintArgument" Type="System.Runtime.CompilerServices.LoadHint" />
+      </Parameters>
+      <Docs>
+        <param name="loadHintArgument">Eines der <see cref="T:System.Runtime.CompilerServices.LoadHint" /> Werte, der die Bindung Standardvoreinstellung angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.CompilerServices.DefaultDependencyAttribute" /> Klasse mit dem angegebenen <see cref="T:System.Runtime.CompilerServices.LoadHint" /> Bindung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden der <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> -Attribut auf eine Assembly aus, um anzugeben, dass die Abhängigkeit geladen werden soll.  
+  
+ [!code-csharp[Runtime.CompilerServices.DefaultDependencyAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/Runtime.CompilerServices.DefaultDependencyAttribute/cs/example.cs#1)]
+ [!code-vb[Runtime.CompilerServices.DefaultDependencyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Runtime.CompilerServices.DefaultDependencyAttribute/vb/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadHint">
+      <MemberSignature Language="C#" Value="public System.Runtime.CompilerServices.LoadHint LoadHint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.CompilerServices.LoadHint LoadHint" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.CompilerServices.DefaultDependencyAttribute.LoadHint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.LoadHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Runtime.CompilerServices.LoadHint" /> Wert, der angibt, wenn eine Abhängigkeit eine Assembly geladen wird.</summary>
+        <value>Einer der <see cref="T:System.Runtime.CompilerServices.LoadHint" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft den Wert des zurückzugebenden der <xref:System.Runtime.CompilerServices.LoadHint> Enumeration von verwendet die <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,86 @@
+<Type Name="WCFBuildProvider" FullName="System.Web.Compilation.WCFBuildProvider">
+  <TypeSignature Language="C#" Value="public class WCFBuildProvider : System.Web.Compilation.BuildProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WCFBuildProvider extends System.Web.Compilation.BuildProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.WCFBuildProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Compilation.BuildProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Generiert Code der Proxyklasse für Windows Communication Foundation (WCF)-Dienste</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.WCFBuildProvider> Zuordnungsdateien (SVCMAP) verwendet, auf der Stammebene der Web-Anwendung, die WCF-Dienstverweise enthält. Die Zuordnungsdateien geben die Dienste für die Quellcode der Proxyklasse generiert werden muss. Die generierte Proxyklasse wird dann mit anderen Ressourcen während der Kompilierung des Web-Anwendung kompiliert.  
+  
+ Die geerbte <xref:System.Web.Compilation.BuildProvider.VirtualPath%2A> Eigenschaft wird intern definiert und verweist auf das Stammverzeichnis der Web-Anwendung, in denen die SVCMAP-Dateien befinden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WCFBuildProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.WCFBuildProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Compilation.WCFBuildProvider" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public override void GenerateCode (System.Web.Compilation.AssemblyBuilder assemblyBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateCode(class System.Web.Compilation.AssemblyBuilder assemblyBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.WCFBuildProvider.GenerateCode(System.Web.Compilation.AssemblyBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyBuilder" Type="System.Web.Compilation.AssemblyBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyBuilder">Eine Instanz von der <see cref="T:System.Reflection.Emit.AssemblyBuilder" /> -Objekt, das der generierte Proxycode hinzugefügt werden muss. Diese Instanz wird von ASP.NET zur Laufzeit bereitgestellt werden.</param>
+        <summary>Der Quellcode der Proxyklasse Dienst generiert, und der angegebenen Assembly-Generators hinzugefügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht SVCMAP-Dateien in das Stammverzeichnis der Web-Anwendung. Wenn Dateien gefunden wurden, generiert die Methode des Quellcodes einer Proxyklasse für die zugehörigen Dienste in die angegebene `assemblyBuilder`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>In der Regel wird diese Methode analysiert die SVCMAP-Zuordnungsdateien und fügt die generierten Quellcode in den angegebenen <see cref="T:System.Web.Compilation.AssemblyBuilder" /> Objekt. Sie können Quellcode beitragen, auf die Assembly in Form von einer <see cref="T:System.IO.TextWriter" /> Objekt oder einem CodeDOM-Diagramm.  
+  
+ Weitere Informationen finden Sie unter <see cref="T:System.Web.Compilation.BuildProvider" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

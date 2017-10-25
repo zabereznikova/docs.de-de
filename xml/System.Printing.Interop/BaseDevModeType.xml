@@ -1,0 +1,62 @@
+<Type Name="BaseDevModeType" FullName="System.Printing.Interop.BaseDevModeType">
+  <TypeSignature Language="C#" Value="public enum BaseDevModeType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BaseDevModeType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.Interop.BaseDevModeType" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Typ der Standardeinstellung [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Struktur als Basis verwendet [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) für Konvertierungen von verwalteten <see cref="T:System.Printing.PrintTicket" /> zu nicht verwalteten Objekte [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Strukturen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den Wert dieser Enumeration in erster Linie als Parameter in der <xref:System.Printing.Interop.PrintTicketConverter.ConvertPrintTicketToDevMode%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PrinterDefault">
+      <MemberSignature Language="C#" Value="PrinterDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Interop.BaseDevModeType PrinterDefault = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Interop.BaseDevModeType.PrinterDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Interop.BaseDevModeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Standardwert für den Drucker [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Struktur.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserDefault">
+      <MemberSignature Language="C#" Value="UserDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Interop.BaseDevModeType UserDefault = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Interop.BaseDevModeType.UserDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Interop.BaseDevModeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Benutzer standardmäßig [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Struktur.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

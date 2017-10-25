@@ -1,0 +1,65 @@
+<Type Name="TraceDisplayMode" FullName="System.Web.Configuration.TraceDisplayMode">
+  <TypeSignature Language="C#" Value="public enum TraceDisplayMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TraceDisplayMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TraceDisplayMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Reihenfolge, in der die Ablaufverfolgungsinformationen Nachrichten angezeigt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration definiert die Werte Sie beim festlegen können der <xref:System.Web.Configuration.TraceSection.TraceMode%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TraceSection.TraceMode%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.TraceSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.TraceSection2#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/CS/tracesection.cs#8)]
+ [!code-vb[System.Web.Configuration.TraceSection2#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/VB/tracesection.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SortByCategory">
+      <MemberSignature Language="C#" Value="SortByCategory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.TraceDisplayMode SortByCategory = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.TraceDisplayMode.SortByCategory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TraceDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Geben Sie Ablaufverfolgungsmeldungen in alphabetischer Reihenfolge nach Kategorie.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SortByTime">
+      <MemberSignature Language="C#" Value="SortByTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.TraceDisplayMode SortByTime = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.TraceDisplayMode.SortByTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TraceDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausgeben von Ablaufverfolgungsmeldungen in der Reihenfolge, die sie verarbeitet wurden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

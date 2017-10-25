@@ -1,0 +1,126 @@
+<Type Name="CacheVirtualItemsEventArgs" FullName="System.Windows.Forms.CacheVirtualItemsEventArgs">
+  <TypeSignature Language="C#" Value="public class CacheVirtualItemsEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CacheVirtualItemsEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CacheVirtualItemsEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.ListView.CacheVirtualItems" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListView.CacheVirtualItems> Ereignis tritt auf, wenn ein neuer Bereich von einer <xref:System.Windows.Forms.ListView> in der virtuelle Modus wird verfügbar gemacht und die <xref:System.Windows.Forms.ListView> bestimmt ein neuer Bereich von Elementen ist erforderlich.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.CacheVirtualItems> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.CacheVirtualItems> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#465](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#465)]
+ [!code-vb[System.Windows.Forms.EventExamples#465](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#465)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheVirtualItemsEventArgs (int startIndex, int endIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 startIndex, int32 endIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CacheVirtualItemsEventArgs.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="endIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="startIndex">Der Startindex eines Bereichs von Elementen, die erforderlich sind, indem Sie die <see cref="T:System.Windows.Forms.ListView" /> für die nächsten <see cref="E:System.Windows.Forms.ListView.RetrieveVirtualItem" /> auftretende Ereignis.</param>
+        <param name="endIndex">Der Endindex eines Bereichs von Elementen, die erforderlich sind, indem Sie die <see cref="T:System.Windows.Forms.ListView" /> für die nächsten <see cref="E:System.Windows.Forms.ListView.RetrieveVirtualItem" /> auftretende Ereignis.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.CacheVirtualItemsEventArgs" /> -Klasse mit der angegebenen Anfangs- und endIndex.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndIndex">
+      <MemberSignature Language="C#" Value="public int EndIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CacheVirtualItemsEventArgs.EndIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den endIndex für den Bereich der Werte von benötigt eine <see cref="T:System.Windows.Forms.ListView" /> -Steuerelement in der virtuelle Modus.</summary>
+        <value>Der Index, an das Ende des Bereichs von Werten, die erforderlich sind, indem Sie die <see cref="T:System.Windows.Forms.ListView" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wertebereich, die gemäß der <xref:System.Windows.Forms.CacheVirtualItemsEventArgs.StartIndex%2A> und <xref:System.Windows.Forms.CacheVirtualItemsEventArgs.EndIndex%2A> Eigenschaften darstellt, den Bereich der Werte, die sehr wahrscheinlich von einem virtuellen benötigt <xref:System.Windows.Forms.ListView> Steuerelement nach dem nächsten Vorkommen des ein <xref:System.Windows.Forms.ListView.RetrieveVirtualItem> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.CacheVirtualItems?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.CacheVirtualItems?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#465](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#465)]
+ [!code-vb[System.Windows.Forms.EventExamples#465](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#465)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartIndex">
+      <MemberSignature Language="C#" Value="public int StartIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CacheVirtualItemsEventArgs.StartIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anfangsindex für einen Bereich von Werten, die erforderlich sind, indem Sie eine <see cref="T:System.Windows.Forms.ListView" /> -Steuerelement in der virtuelle Modus.</summary>
+        <value>Der Index, an den Anfang des Bereichs von Werten, die erforderlich sind, indem Sie die <see cref="T:System.Windows.Forms.ListView" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wertebereich, die gemäß der <xref:System.Windows.Forms.CacheVirtualItemsEventArgs.StartIndex%2A> und <xref:System.Windows.Forms.CacheVirtualItemsEventArgs.EndIndex%2A> Eigenschaften darstellt, den Bereich der Werte, die sehr wahrscheinlich von einem virtuellen benötigt <xref:System.Windows.Forms.ListView> Steuerelement nach dem nächsten Vorkommen des ein <xref:System.Windows.Forms.ListView.RetrieveVirtualItem> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.CacheVirtualItems?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.CacheVirtualItems?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#465](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#465)]
+ [!code-vb[System.Windows.Forms.EventExamples#465](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#465)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

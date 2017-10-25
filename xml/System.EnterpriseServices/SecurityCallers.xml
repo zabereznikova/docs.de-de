@@ -1,0 +1,91 @@
+<Type Name="SecurityCallers" FullName="System.EnterpriseServices.SecurityCallers">
+  <TypeSignature Language="C#" Value="public sealed class SecurityCallers : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SecurityCallers extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.SecurityCallers" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine geordnete Auflistung von Identitäten in der aktuellen Aufrufkette an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.EnterpriseServices.SecurityCallers> Klasse enthält die Elemente in der COM+- `ISecurityCallersColl` Auflistung als indizierte Eigenschaften.  
+  
+ Neue Instanzen werden nicht programmgesteuert erstellt werden. Sie erhalten Sie vom der <xref:System.EnterpriseServices.SecurityCallContext> Komponente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SecurityCallers.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Aufrufer in der Kette.</summary>
+        <value>Die Anzahl der Aufrufer in der Kette.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.SecurityCallers.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Enumerationsschnittstelle für das Objekt ab.</summary>
+        <returns>Der Enumeratorschnittstelle für die <see langword="ISecurityCallersColl" /> Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.SecurityIdentity this[int idx] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EnterpriseServices.SecurityIdentity Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SecurityCallers.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.SecurityIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="idx" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="idx">Das Element, das über eine Indexnummer zugreifen.</param>
+        <summary>Ruft den angegebenen <see cref="T:System.EnterpriseServices.SecurityIdentity" /> Element.</summary>
+        <value>Ein <see cref="T:System.EnterpriseServices.SecurityIdentity" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

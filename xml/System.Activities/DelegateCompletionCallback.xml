@@ -1,0 +1,34 @@
+<Type Name="DelegateCompletionCallback" FullName="System.Activities.DelegateCompletionCallback">
+  <TypeSignature Language="C#" Value="public delegate void DelegateCompletionCallback(NativeActivityContext context, ActivityInstance completedInstance, IDictionary&lt;string,object&gt; outArguments);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DelegateCompletionCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.DelegateCompletionCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+    <Parameter Name="completedInstance" Type="System.Activities.ActivityInstance" />
+    <Parameter Name="outArguments" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context">Die Ausführungsumgebung der Aktivität, die den Rückruf verarbeitet.</param>
+    <param name="completedInstance">Die abgeschlossene Aktivitätsinstanz des <see cref="T:System.Activities.ActivityDelegate" />-Handlers.</param>
+    <param name="outArguments">Die Ausgabeargumente des abgeschlossenen <see cref="T:System.Activities.ActivityDelegate" />.</param>
+    <summary>Stellt die Methode dar, die beim Abschluss eines <see cref="T:System.Activities.ActivityDelegate" /> aufgerufen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte im `outArguments`-Wörterbuch sind die <xref:System.Activities.ActivityDelegateParameter>-Werte des <xref:System.Activities.ActivityDelegate>, die zugewiesen werden, wenn der <xref:System.Activities.ActivityDelegate> aufgerufen wird, sortiert nach <xref:System.Activities.ActivityDelegateParameter.Name%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

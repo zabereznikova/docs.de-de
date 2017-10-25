@@ -1,0 +1,101 @@
+<Type Name="PresenceChangedEventArgs" FullName="System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class PresenceChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PresenceChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Qualifizierenden Informationen an eine Rückrufmethode beim eine <see cref="E:System.Net.PeerToPeer.Collaboration.ContactManager.PresenceChanged" /> oder <see cref="E:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalPresenceChanged" /> Ereignis auftritt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PeerChangeType">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerChangeType PeerChangeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.PeerToPeer.Collaboration.PeerChangeType PeerChangeType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs.PeerChangeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Typ der Änderung, die den Status Vorhandensein von einem Peer aufgetreten ist.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerChangeType" />das Objekt mit Daten, die die Art der Änderung angibt, die den Status Vorhandensein von einem Peer aufgetreten ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerContact">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerContact PeerContact { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerContact PeerContact" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs.PeerContact" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerContact</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> auf dem die Anwesenheitsinformationen geändert hat.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />mit der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> auf dem die Anwesenheitsinformationen geändert hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> gemäß <xref:System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs.PeerEndPoint%2A> nicht zugeordnet ist ein <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, dieser Wert ist `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerEndPoint">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerEndPoint PeerEndPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerEndPoint PeerEndPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs.PeerEndPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerEndPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> auf dem die Anwesenheitsinformationen geändert hat.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />auf dem die Anwesenheitsinformationen geändert hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerPresenceInfo">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerPresenceInfo PeerPresenceInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerPresenceInfo PeerPresenceInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs.PeerPresenceInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerPresenceInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die geänderten Anwesenheitsinformationen für eine <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> sowie eine Zeichenfolge, die von bereitgestellte <see cref="T:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo" /> Beschreibung des Status des aktualisierten vorhanden ist.</summary>
+        <value>Geänderte Anwesenheitsinformationen für <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> und eine Zeichenfolge, die den aktualisierten Vorhandensein Status beschreibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

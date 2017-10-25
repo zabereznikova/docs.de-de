@@ -1,0 +1,97 @@
+<Type Name="DuplicateKeyException" FullName="System.Data.Linq.DuplicateKeyException">
+  <TypeSignature Language="C#" Value="public class DuplicateKeyException : InvalidOperationException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DuplicateKeyException extends System.InvalidOperationException" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.DuplicateKeyException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.InvalidOperationException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Wird ausgelöst, wenn versucht wird, zum Hinzufügen eines Objekts auf dem Identitäts-Cache mit einem Schlüssel, der bereits verwendet wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DuplicateKeyException (object duplicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object duplicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DuplicateKeyException.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duplicate" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="duplicate">Der doppelte Schlüssel, der die Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Linq.DuplicateKeyException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DuplicateKeyException (object duplicate, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object duplicate, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DuplicateKeyException.#ctor(System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duplicate" Type="System.Object" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="duplicate">Der doppelte Schlüssel, der die Ausnahme verursacht hat.</param>
+        <param name="message">Die Meldung angezeigt, wenn die Ausnahme ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.Linq.DuplicateKeyException" /> Klasse durch Verweisen auf den doppelten Schlüssel und Bereitstellen einer Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DuplicateKeyException (object duplicate, string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object duplicate, string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DuplicateKeyException.#ctor(System.Object,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duplicate" Type="System.Object" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="duplicate">Der doppelte Schlüssel, der die Ausnahme verursacht hat.</param>
+        <param name="message">Die Meldung angezeigt, wenn die Ausnahme ausgelöst wird.</param>
+        <param name="innerException">Die vorherige Ausnahme an, durch die <see cref="T:System.Data.Linq.DuplicateKeyException" /> Ausnahme ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.Linq.DuplicateKeyException" /> Klasse durch Verweisen auf den doppelten Schlüssel, eine Fehlermeldung bereitstellen und Angeben der Ausnahme, die diese Ausnahme ausgelöst wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Object">
+      <MemberSignature Language="C#" Value="public object Object { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Object" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.DuplicateKeyException.Object" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das die Ausnahme verursacht hat.</summary>
+        <value>Das Objekt, das die Ausnahme verursacht hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

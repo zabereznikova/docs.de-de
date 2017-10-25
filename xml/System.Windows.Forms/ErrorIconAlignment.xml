@@ -1,0 +1,130 @@
+<Type Name="ErrorIconAlignment" FullName="System.Windows.Forms.ErrorIconAlignment">
+  <TypeSignature Language="C#" Value="public enum ErrorIconAlignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ErrorIconAlignment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ErrorIconAlignment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Konstanten an, der angibt, die Speicherorte, die ein Fehlersymbol relativ zum Steuerelement mit einem Fehler angezeigt werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, indem Sie <xref:System.Windows.Forms.ErrorProvider>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ErrorProvider> Klasse, um die Benachrichtigung des Benutzers einen Dateneingabefehler. Das Beispiel erstellt eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TextBox> -Steuerelement, ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, und ein <xref:System.Windows.Forms.ComboBox> steuern, von denen jede seinen Inhalt zu überprüfen und eine <xref:System.Windows.Forms.ErrorProvider> für jedes Steuerelement. Im Beispiel wird Fehler Symboloptionen mithilfe der <xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A> und <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A> Eigenschaften und die <xref:System.Windows.Forms.ErrorProvider.SetIconAlignment%2A> und <xref:System.Windows.Forms.ErrorProvider.SetIconPadding%2A> Methoden. Die <xref:System.Windows.Forms.ErrorProvider.SetError%2A> Methode wird aufgerufen, mit oder ohne entsprechenden Fehlertext während eines Steuerelements <xref:System.Windows.Forms.Control.Validated> Ereignis, abhängig von den Inhalt des Steuerelements.  
+  
+ [!code-cpp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CPP/errorproviderexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CS/errorproviderexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/VB/errorproviderexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BottomLeft">
+      <MemberSignature Language="C#" Value="BottomLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorIconAlignment BottomLeft = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorIconAlignment.BottomLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Symbol wird mit dem unteren Rand des Steuerelements und der linken Seite des Steuerelements ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomRight">
+      <MemberSignature Language="C#" Value="BottomRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorIconAlignment BottomRight = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorIconAlignment.BottomRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Symbol wird mit dem unteren Rand des Steuerelements und der rechten Seite des Steuerelements ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleLeft">
+      <MemberSignature Language="C#" Value="MiddleLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorIconAlignment MiddleLeft = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorIconAlignment.MiddleLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Symbol wird die Mitte des Steuerelements und der linken Seite des Steuerelements ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleRight">
+      <MemberSignature Language="C#" Value="MiddleRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorIconAlignment MiddleRight = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorIconAlignment.MiddleRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Symbol wird die Mitte des Steuerelements und der rechten Seite des Steuerelements ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeft">
+      <MemberSignature Language="C#" Value="TopLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorIconAlignment TopLeft = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorIconAlignment.TopLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Symbol wird am oberen des Steuerelements und der linken Seite des Steuerelements ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopRight">
+      <MemberSignature Language="C#" Value="TopRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorIconAlignment TopRight = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorIconAlignment.TopRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Symbol wird am oberen des Steuerelements und dem rechten Rand des Steuerelements ausgerichtet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

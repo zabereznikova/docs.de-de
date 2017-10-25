@@ -1,0 +1,40 @@
+<Type Name="HttpListener+ExtendedProtectionSelector" FullName="System.Net.HttpListener+ExtendedProtectionSelector">
+  <TypeSignature Language="C#" Value="public delegate System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy HttpListener.ExtendedProtectionSelector(HttpListenerRequest request);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed HttpListener/ExtendedProtectionSelector extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.HttpListener.ExtendedProtectionSelector" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.HttpListener</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="request" Type="System.Net.HttpListenerRequest" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="request">Die <see cref="T:System.Net.HttpListenerRequest" /> um zu bestimmen, die erweiterte Schutzrichtlinie, die die <see cref="T:System.Net.HttpListener" /> -Instanz verwendet, um erweiterten Schutz zu bieten.</param>
+    <summary>Ein Delegat wird aufgerufen, um zu bestimmen, die <see cref="T:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy" /> für jeden <see cref="T:System.Net.HttpListener" /> Anforderung.</summary>
+    <returns>Ein <see cref="T:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy" /> Objekt, das die erweiterte Schutzrichtlinie für diese Anforderung angibt.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.HttpListener.ExtendedProtectionSelector> Klasse wird mit integrierter Windows-Authentifizierung verwendet, um erweiterten Schutz zu bieten. Für jede Anforderung, Delegaten können den Einstellungen, die die <xref:System.Net.HttpListener> -Instanz verwendet, um erweiterten Schutz zu bieten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,107 @@
+<Type Name="LogRecord" FullName="System.EnterpriseServices.CompensatingResourceManager.LogRecord">
+  <TypeSignature Language="C#" Value="public sealed class LogRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LogRecord extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.CompensatingResourceManager.LogRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein unstrukturierten Protokolldatensatz, als COM+ übermittelt- <see langword="CrmLogRecordRead" /> Struktur. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unstrukturierte Protokolldatensätze werden als COM+-geliefert `CrmLogRecordRead` Struktur. Zusätzlich zu den Benutzerdaten (ein einzelnes BLOB) enthält diese Spalte weitere Felder, die für das Debuggen und die Fehlersuche hilfreich sind. Die <xref:System.EnterpriseServices.CompensatingResourceManager.LogRecord.Flags%2A> Feld ist ein Bitfeld, die darüber Aufschluss gibt an, ob dieser Datensatz zu einem späteren Zeitpunkt vergessen wurde und wann er geschrieben wurde. Die <xref:System.EnterpriseServices.CompensatingResourceManager.LogRecord.Sequence%2A> Feld enthält die Sequenznummer des Protokolldatensatzes. In den meisten Fällen Sequenznummern sind sequenziell sind jedoch nicht unbedingt aufeinander folgende aufgrund interner Protokolldatensätze, die nicht an den kompensierenden Ressourcen-Manager (CRM) Kompensator übermittelt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Klasse.  
+  
+ [!code-cpp[EnterpriseServices_Crm#28](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#28)]
+ [!code-csharp[EnterpriseServices_Crm#28](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#28)]
+ [!code-vb[EnterpriseServices_Crm#28](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#28)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.CompensatingResourceManager.LogRecordFlags Flags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.CompensatingResourceManager.LogRecordFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.CompensatingResourceManager.LogRecord.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.CompensatingResourceManager.LogRecordFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, wann der Protokolldatensatz geschrieben wurde.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.EnterpriseServices.CompensatingResourceManager.LogRecordFlags" /> Werte, die Informationen darüber, wann dieser Datensatz geschrieben wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Record">
+      <MemberSignature Language="C#" Value="public object Record { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Record" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.CompensatingResourceManager.LogRecord.Record" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Protokolldaten für den Datensatz Benutzer ab.</summary>
+        <value>Ein einzelnes BLOB, das die Benutzerdaten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-cpp[EnterpriseServices_Crm#28](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#28)]
+ [!code-csharp[EnterpriseServices_Crm#28](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#28)]
+ [!code-vb[EnterpriseServices_Crm#28](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sequence">
+      <MemberSignature Language="C#" Value="public int Sequence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Sequence" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.CompensatingResourceManager.LogRecord.Sequence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Sequenznummer des Protokolldatensatzes.</summary>
+        <value>Ein ganzzahliger Wert, der die Sequenznummer des Protokolldatensatzes angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sequenznummern sind nicht unbedingt aufeinander folgende aufgrund interner oder vergessenes Protokolldatensätze an, das nicht an den kompensierenden Ressourcen-Manager (CRM) Kompensator übermittelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

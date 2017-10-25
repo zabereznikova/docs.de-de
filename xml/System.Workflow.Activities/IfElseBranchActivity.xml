@@ -1,0 +1,155 @@
+<Type Name="IfElseBranchActivity" FullName="System.Workflow.Activities.IfElseBranchActivity">
+  <TypeSignature Language="C#" Value="public sealed class IfElseBranchActivity : System.Workflow.Activities.SequenceActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit IfElseBranchActivity extends System.Workflow.Activities.SequenceActivity" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.IfElseBranchActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Activities.SequenceActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Workflow.Activities.IfElseBranchDesigner), typeof(System.ComponentModel.Design.IDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Workflow.Activities.IfElseBranchActivity), "Resources.DecisionBranch.bmp")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Workflow.ComponentModel.Compiler.ActivityValidator(typeof(System.Workflow.Activities.IfElseBranchValidator))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Verzweigung von <see cref="T:System.Workflow.Activities.IfElseActivity" /> dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Vor der Ausführung einer Verzweigung wird die <xref:System.Workflow.ComponentModel.ActivityCondition> jeder Verzweigung wird bestimmt. Die erste <xref:System.Workflow.Activities.IfElseBranchActivity> in <xref:System.Workflow.Activities.IfElseActivity>, die `true` ergibt, wird ausgeführt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IfElseBranchActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.IfElseBranchActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.IfElseBranchActivity" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie zwei neue Instanzen der <xref:System.Workflow.Activities.IfElseBranchActivity>-Klasse erstellt wird.  Dieses Codebeispiel stammt aus dem Compensation SDK-Beispiel in der Datei PurchaseOrder.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Mit Kompensierung](http://msdn.microsoft.com/en-us/c847a694-9978-46af-aa80-5bd1833f813b).  
+  
+ [!code-csharp[wf_samples#38](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#38)]
+ [!code-vb[wf_samples#38](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#38)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IfElseBranchActivity (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.IfElseBranchActivity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der benutzerdefinierte Name der Aktivität.</param>
+        <summary>Initialisiert mithilfe des Aktivitätsnamens eine neue Instanz der <see cref="T:System.Workflow.Activities.IfElseBranchActivity" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.ActivityCondition Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.ActivityCondition Condition" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.IfElseBranchActivity.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Workflow.ComponentModel.ActivityCondition" />-Objektverweis für die aktuelle Verzweigungsaktivität ab, oder legt diesen fest. Bei der Auswertung dieser Bedingung wird ein Wert zurückgegeben, der angibt, ob diese Verzweigung ausgeführt werden sollte.</summary>
+        <value>Eine <see cref="T:System.Workflow.ComponentModel.ActivityCondition" />, von der ein Wert zurückgegeben wird, der angibt, ob diese Verzweigung ausgeführt werden sollte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für die letzte <xref:System.Workflow.Activities.IfElseBranchActivity> in <xref:System.Workflow.Activities.IfElseActivity> optional und in anderen Fällen erforderlich.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Workflow.Activities.IfElseBranchActivity.Condition%2A>-Eigenschaft festgelegt wird. In diesem Code wird davon ausgegangen, dass `Available` vom Typ <xref:System.Workflow.Activities.IfElseBranchActivity> ist. Dieses Codebeispiel stammt aus dem Compensation SDK-Beispiel in der Datei PurchaseOrder.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Mit Kompensierung](http://msdn.microsoft.com/en-us/c847a694-9978-46af-aa80-5bd1833f813b).  
+  
+ [!code-csharp[wf_samples#39](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#39)]
+ [!code-vb[wf_samples#39](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#39)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty ConditionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty ConditionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.IfElseBranchActivity.ConditionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> dar, die sich auf die <see cref="P:System.Workflow.Activities.IfElseBranchActivity.Condition" />-Eigenschaft bezieht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

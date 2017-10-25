@@ -1,0 +1,195 @@
+<Type Name="PortableExecutableKinds" FullName="System.Reflection.PortableExecutableKinds">
+  <TypeSignature Language="C#" Value="public enum PortableExecutableKinds" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed PortableExecutableKinds extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.PortableExecutableKinds" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifiziert die Art des Codes in einer ausführbaren Datei.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Abrufen dieses Werts für ein Modul der <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=nameWithType> Methode.  
+  
+> [!NOTE]
+>  Diese Enumeration entspricht der `CorPEKind` Enumeration in der nicht verwalteten Reflektions-API, die erfolgt durch die nicht verwaltete `GetPEKind` Funktion.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ILOnly">
+      <MemberSignature Language="C#" Value="ILOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.PortableExecutableKinds ILOnly = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.PortableExecutableKinds.ILOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PortableExecutableKinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die ausführbare Datei enthält nur Microsoft intermediate Language (MSIL), und daher in Bezug auf die 32-Bit oder 64-Bit-Plattformen neutral ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAPortableExecutableImage">
+      <MemberSignature Language="C#" Value="NotAPortableExecutableImage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.PortableExecutableKinds NotAPortableExecutableImage = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.PortableExecutableKinds.NotAPortableExecutableImage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PortableExecutableKinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei weist nicht portable ausführbare Datei (PE)-Dateiformat.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PE32Plus">
+      <MemberSignature Language="C#" Value="PE32Plus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.PortableExecutableKinds PE32Plus = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.PortableExecutableKinds.PE32Plus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PortableExecutableKinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die ausführbare Datei erfordert eine 64-Bit-Plattform.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Preferred32Bit">
+      <MemberSignature Language="C#" Value="Preferred32Bit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.PortableExecutableKinds Preferred32Bit = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.PortableExecutableKinds.Preferred32Bit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PortableExecutableKinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die ausführbare Datei plattformunabhängigem ist jedoch auf einer 32-Bit-Plattform möglichst ausgeführt werden soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Required32Bit">
+      <MemberSignature Language="C#" Value="Required32Bit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.PortableExecutableKinds Required32Bit = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.PortableExecutableKinds.Required32Bit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PortableExecutableKinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die ausführbare Datei kann auf einer 32-Bit-Plattform oder in der 32-Bit-Umgebung Windows on Windows (WOW) auf einer 64-Bit-Plattform ausgeführt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unmanaged32Bit">
+      <MemberSignature Language="C#" Value="Unmanaged32Bit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.PortableExecutableKinds Unmanaged32Bit = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.PortableExecutableKinds.Unmanaged32Bit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PortableExecutableKinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die ausführbare Datei enthält reinen nicht verwalteten Code.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

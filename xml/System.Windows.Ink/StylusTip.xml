@@ -1,0 +1,71 @@
+<Type Name="StylusTip" FullName="System.Windows.Ink.StylusTip">
+  <TypeSignature Language="C#" Value="public enum StylusTip" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StylusTip extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Ink.StylusTip" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Tipp zum Zeichnen zu verwendende eine <see cref="T:System.Windows.Ink.Stroke" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können angeben, dass die Form des Tipps, die zum Zeichnen verwendet <xref:System.Windows.Ink.Stroke> Objekte, indem die <xref:System.Windows.Ink.DrawingAttributes.StylusTip%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+<a name="xamlTextUsage_StylusTip"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Diese Klasse wird in der Regel nicht in XAML verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zwei <xref:System.Windows.Ink.DrawingAttributes> Objekte zum Simulieren eines Stiftes und eine Hervorhebung verwenden, auf dem gleichen <xref:System.Windows.Controls.InkCanvas>. Die Hervorhebung <xref:System.Windows.Ink.DrawingAttributes.StylusTip%2A> Eigenschaftensatz Rechteck.  
+  
+ Im Beispiel wird vorausgesetzt, das Stammelement in der Datei "XAML" ist ein <xref:System.Windows.Controls.DockPanel> aufgerufen `root`. Außerdem wird angenommen, dass es ist ein <xref:System.Windows.Controls.Button> aufgerufen `btnToggleHilighter` und dass die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis an den Ereignishandler verbunden wurde.  
+  
+ [!code-csharp[DrawingAttributes#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingAttributes/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[DrawingAttributes#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingAttributes/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ellipse">
+      <MemberSignature Language="C#" Value="Ellipse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Ink.StylusTip Ellipse = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Ink.StylusTip.Ellipse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StylusTip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine Ellipse geformten Tipp dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Rectangle">
+      <MemberSignature Language="C#" Value="Rectangle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Ink.StylusTip Rectangle = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Ink.StylusTip.Rectangle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StylusTip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen rechteckigen Tipp dar.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

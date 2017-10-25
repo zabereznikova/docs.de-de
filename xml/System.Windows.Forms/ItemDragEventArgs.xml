@@ -1,0 +1,159 @@
+<Type Name="ItemDragEventArgs" FullName="System.Windows.Forms.ItemDragEventArgs">
+  <TypeSignature Language="C#" Value="public class ItemDragEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ItemDragEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ItemDragEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Windows.Forms.ListView.ItemDrag" /> -Ereignis für die <see cref="T:System.Windows.Forms.ListView" /> und <see cref="T:System.Windows.Forms.TreeView" /> Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListView.ItemDrag> Ereignis tritt auf, wenn der Benutzer beginnt, ein Element zu ziehen. Ein <xref:System.Windows.Forms.ItemDragEventArgs> Objekt gibt an, welche Maustaste gedrückt wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von <xref:System.Windows.Forms.ItemDragEventArgs> beim Aktivieren von Drag & Drop-Operationen innerhalb einer <xref:System.Windows.Forms.TreeView>. Die <xref:System.Windows.Forms.ItemDragEventArgs.Button%2A> Eigenschaft bestimmt, ob der gezogene Knoten verschoben oder in das Ziel kopiert werden soll. Der Knoten, dargestellt durch die <xref:System.Windows.Forms.ItemDragEventArgs.Item%2A> -Eigenschaft übergeben, die <xref:System.Windows.Forms.TreeView> des Steuerelements <xref:System.Windows.Forms.Control.DoDragDrop%2A> -Methode zusammen mit einem Wert, der angibt, des gewünschten Effekt.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.TreeView.ItemDrag?displayProperty=nameWithType> Referenzthema.  
+  
+ [!code-cpp[TreeViewDragDrop#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewDragDrop/CPP/treeviewdragdrop.cpp#2)]
+ [!code-csharp[TreeViewDragDrop#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewDragDrop/CS/treeviewdragdrop.cs#2)]
+ [!code-vb[TreeViewDragDrop#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewDragDrop/VB/treeviewdragdrop.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ItemDragEventArgs (System.Windows.Forms.MouseButtons button);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.MouseButtons button) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ItemDragEventArgs.#ctor(System.Windows.Forms.MouseButtons)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+      </Parameters>
+      <Docs>
+        <param name="button">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.MouseButtons" /> Werte, angibt, welche Maustasten, gedrückt wurden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ItemDragEventArgs" /> Klasse mit einer angegebenen Maustaste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Version des Konstruktors verwendet wird, wird der Wert, der die <xref:System.Windows.Forms.ItemDragEventArgs.Item%2A> -Eigenschaftensatz wird automatisch auf `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ItemDragEventArgs (System.Windows.Forms.MouseButtons button, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.MouseButtons button, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ItemDragEventArgs.#ctor(System.Windows.Forms.MouseButtons,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="button">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.MouseButtons" /> Werte, angibt, welche Maustasten, gedrückt wurden.</param>
+        <param name="item">Das Element gezogen wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ItemDragEventArgs" /> Klasse mit einer angegebenen los und das Element, das gezogen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Button">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.MouseButtons Button { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.MouseButtons Button" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ItemDragEventArgs.Button" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseButtons</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, welche Maustasten gedrückt wurden, während des Ziehvorgangs.</summary>
+        <value>Eine bitweise Kombination von <see cref="T:System.Windows.Forms.MouseButtons" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft können Sie bestimmen, welche Maustasten gedrückt wurden, während eines Drag & Drop-Vorgangs. Der Wert dieser Eigenschaft kann verwendet werden, um ordnungsgemäß zu bestimmen wie der Drag &-Drop-Vorgang sollte durchgeführt werden. Beispielsweise empfiehlt es sich um ein Element an einem neuen Speicherort verschieben, wenn die linke Maustaste gedrückt wird, und kopieren Sie ihn in den neuen Speicherort aus, wenn die rechte Maustaste gedrückt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.Windows.Forms.ItemDragEventArgs> -Klasse beim Aktivieren von Drag & Drop-Operationen innerhalb einer <xref:System.Windows.Forms.TreeView> Steuerelement. Die <xref:System.Windows.Forms.ItemDragEventArgs.Button%2A> Eigenschaft bestimmt, ob der gezogene Knoten verschoben oder in das Ziel kopiert werden soll. Der Knoten, dargestellt durch die <xref:System.Windows.Forms.ItemDragEventArgs.Item%2A> -Eigenschaft übergeben, die <xref:System.Windows.Forms.TreeView> des Steuerelements <xref:System.Windows.Forms.Control.DoDragDrop%2A> -Methode, zusammen mit einem Wert, der den gewünschten Effekt des Drag & Drop-Vorgangs angibt.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.TreeView.ItemDrag?displayProperty=nameWithType> Referenzthema.  
+  
+ [!code-cpp[TreeViewDragDrop#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewDragDrop/CPP/treeviewdragdrop.cpp#2)]
+ [!code-csharp[TreeViewDragDrop#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewDragDrop/CS/treeviewdragdrop.cs#2)]
+ [!code-vb[TreeViewDragDrop#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewDragDrop/VB/treeviewdragdrop.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ItemDragEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das gezogen wird.</summary>
+        <value>Ein Objekt, das gezogene Element darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um zu bestimmen, welches Element aus der <xref:System.Windows.Forms.TreeView> oder <xref:System.Windows.Forms.ListView> Steuerelemente des Steuerelements gezogen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von <xref:System.Windows.Forms.ItemDragEventArgs> beim Aktivieren von Drag & Drop-Operationen innerhalb einer <xref:System.Windows.Forms.TreeView> Steuerelement. Die <xref:System.Windows.Forms.ItemDragEventArgs.Button%2A> Eigenschaft bestimmt, ob der gezogene Knoten verschoben oder in das Ziel kopiert werden soll. Der Knoten, dargestellt durch die <xref:System.Windows.Forms.ItemDragEventArgs.Item%2A> -Eigenschaft übergeben, die <xref:System.Windows.Forms.TreeView> des Steuerelements <xref:System.Windows.Forms.Control.DoDragDrop%2A> -Methode zusammen mit einem Wert, der den gewünschten Effekt des Drag & Drop-Vorgangs angibt.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.TreeView.ItemDrag?displayProperty=nameWithType> Referenzthema.  
+  
+ [!code-cpp[TreeViewDragDrop#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewDragDrop/CPP/treeviewdragdrop.cpp#2)]
+ [!code-csharp[TreeViewDragDrop#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewDragDrop/CS/treeviewdragdrop.cs#2)]
+ [!code-vb[TreeViewDragDrop#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewDragDrop/VB/treeviewdragdrop.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

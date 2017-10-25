@@ -1,0 +1,248 @@
+<Type Name="IBindingListView" FullName="System.ComponentModel.IBindingListView">
+  <TypeSignature Language="C#" Value="public interface IBindingListView : System.Collections.IList, System.ComponentModel.IBindingList" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBindingListView implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList, class System.ComponentModel.IBindingList" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.IBindingListView" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IBindingList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Erweitert die <see cref="T:System.ComponentModel.IBindingList" /> Schnittstelle durch die Bereitstellung erweiterter Sortier- und Filterfunktionen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.ComponentModel.IBindingListView> -Schnittstelle, die Sie implementieren erweiterte Sortierung als Satz von Eigenschaftendeskriptor-Richtung-Paaren. Sie implementieren die Filterung als eine Zeichenfolge, die vom Data Source-Implementierung interpretiert werden. Die <xref:System.ComponentModel.IBindingListView> Schnittstelle wird implementiert, indem die <xref:System.Windows.Forms.BindingSource> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplySort">
+      <MemberSignature Language="C#" Value="public void ApplySort (System.ComponentModel.ListSortDescriptionCollection sorts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplySort(class System.ComponentModel.ListSortDescriptionCollection sorts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IBindingListView.ApplySort(System.ComponentModel.ListSortDescriptionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sorts" Type="System.ComponentModel.ListSortDescriptionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="sorts">Die <see cref="T:System.ComponentModel.ListSortDescriptionCollection" /> , sortiert die anzuwendende an die Datenquelle enthält.</param>
+        <summary>Sortiert die Datenquelle basierend auf den angegebenen <see cref="T:System.ComponentModel.ListSortDescriptionCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.ListSortDescriptionCollection> ist eine schreibgeschützte Auflistung, die nach der Erstellung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public string Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IBindingListView.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Filter verwendet werden, um Elemente aus der Auflistung der von der Datenquelle zurückgegebenen Elemente auszuschließen.</summary>
+        <value>Die Zeichenfolge, die zum Filtern von Elementen in der von der Datenquelle zurückgegebenen Auflistung von Elementen verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ihre Implementierung von der <xref:System.ComponentModel.IBindingListView.Filter%2A> Eigenschaft sollte Folgendes Verhalten aufweisen bei der <xref:System.ComponentModel.IBindingListView.Filter%2A> festgelegt wird: Gibt nur die Elemente, die den Filterkriterien entsprechen, wenn der Zugriff auf die Liste von Elementindex oder wenn die Liste ist die Datenquelle aufgelistet. Die Definition der Filterzeichenfolge ist abhängig von der Implementierung der Datenquelle, aber das Verhalten, die Verbindung mit dem Festlegen des Filters sollte so modelliert werden auf <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveFilter">
+      <MemberSignature Language="C#" Value="public void RemoveFilter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveFilter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IBindingListView.RemoveFilter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt den aktuellen Filter an die Datenquelle an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.ComponentModel.IBindingListView> Typ implementiertem Filterung als eine Zeichenfolge, die vom Data Source-Implementierung interpretiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortDescriptions">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ListSortDescriptionCollection SortDescriptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ListSortDescriptionCollection SortDescriptions" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IBindingListView.SortDescriptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListSortDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der derzeit auf die Datenquelle angewendeten sortierbeschreibungen ab.</summary>
+        <value>Die <see cref="T:System.ComponentModel.ListSortDescriptionCollection" /> derzeit mit der Datenquelle angewendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.ListSortDescriptionCollection> ist eine schreibgeschützte Auflistung, die nach der Erstellung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsAdvancedSorting">
+      <MemberSignature Language="C#" Value="public bool SupportsAdvancedSorting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsAdvancedSorting" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IBindingListView.SupportsAdvancedSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Datenquelle erweiterte Sortierung unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Datenquelle erweiterte Sortierung unterstützt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erweiterte Sortierung bezieht sich auf die Fähigkeit, nach mehreren Spalten sortieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsFiltering">
+      <MemberSignature Language="C#" Value="public bool SupportsFiltering { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsFiltering" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IBindingListView.SupportsFiltering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Datenquelle die Filterung unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Datenquelle unterstützt das Filtern; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.ComponentModel.IBindingListView.SupportsFiltering%2A> -Eigenschaft, die Sie implementieren Filterung als eine Zeichenfolge, die vom Data Source-Implementierung interpretiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,427 @@
+<Type Name="EventMappingSettingsCollection" FullName="System.Web.Configuration.EventMappingSettingsCollection">
+  <TypeSignature Language="C#" Value="public sealed class EventMappingSettingsCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EventMappingSettingsCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.EventMappingSettingsCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.EventMappingSettings))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekte. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.EventMappingSettings> Klasse entspricht dem `eventMappings` Element für Konfigurationsdateien. Die `eventMappings` Element können Sie Ereignisquellen Anzeigenamen zuweisen. Diese Namen werden dann verwendet, um die verwandte Ereignisconsumer, die als Anbieter bezeichnet, in Ereignisquellen Zuordnen der `rules` -Unterabschnitt des der `healthMonitoring` Abschnitt der Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.EventMappingSettingsCollection> Typ. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#5)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventMappingSettingsCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.EventMappingSettingsCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.EventMappingSettingsCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.HealthMonitoringSection.EventMappings%2A> Eigenschaft von der <xref:System.Web.Configuration.HealthMonitoringSection> Klasse enthält immer eine Instanz von der <xref:System.Web.Configuration.EventMappingSettingsCollection>. Verwenden Sie diese Instanz, anstatt eine eigene Instanz der Klasse erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.EventMappingSettings eventMappingSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.EventMappingSettings eventMappingSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.EventMappingSettingsCollection.Add(System.Web.Configuration.EventMappingSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventMappingSettings" Type="System.Web.Configuration.EventMappingSettings" />
+      </Parameters>
+      <Docs>
+        <param name="eventMappingSettings">Ein <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt, das der Auflistung hinzugefügt.</param>
+        <summary>Fügt der Auflistung ein <see cref="T:System.Web.Configuration.EventMappingSettings" />-Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung darf nicht bereits ein <xref:System.Web.Configuration.EventMappingSettings> Objekt mit demselben Namen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.EventMappingSettingsCollection.Add%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#30](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#30)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#30](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Die <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt bereits in der Auflistung vorhanden ist, oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.EventMappingSettingsCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Web.Configuration.EventMappingSettings" />-Objekte aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `clear` Richtlinie in den entsprechenden Abschnitt der Konfigurationsdatei So löschen Sie alle Verweise auf Elemente in einer Konfigurationsdatei definiert. Entfernt alle Elemente im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.EventMappingSettingsCollection.Clear%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#40](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#40)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#40](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.EventMappingSettingsCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des ein <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt in der Auflistung.</param>
+        <summary>Gibt an, ob die Auflistung enthält ein <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt mit dem angegebenen Namen.</summary>
+        <returns>
+          <see langword="true" />Wenn die Auflistung enthält ein <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt mit dem angegebenen Namen ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `false` , wenn der angegebene Name nicht vorhanden ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.EventMappingSettingsCollection.Contains%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#35](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#35)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#35](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#35)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.EventMappingSettingsCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.EventMappingSettingsCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.EventMappingSettingsCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des ein <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt in der Auflistung.</param>
+        <summary>Gibt den Index des angegebenen <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt.</summary>
+        <returns>Der Index des angegebenen <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt oder-1 zurück, wenn das Objekt nicht in der Auflistung gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.EventMappingSettingsCollection.IndexOf%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#36](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#36)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#36](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#36)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.Configuration.EventMappingSettings eventMappingSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.Configuration.EventMappingSettings eventMappingSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.EventMappingSettingsCollection.Insert(System.Int32,System.Web.Configuration.EventMappingSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="eventMappingSettings" Type="System.Web.Configuration.EventMappingSettings" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein gültiger Index eines ein <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt in der Auflistung.</param>
+        <param name="eventMappingSettings">Die <see cref="T:System.Web.Configuration.EventMappingSettings" /> in die Auflistung einzufügende Objekt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt, das an der angegebenen Index der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Index die Anzahl der Elemente in der Auflistung entspricht, wird der Eintrag an das Ende der Auflistung angefügt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.EventMappingSettingsCollection.Insert%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#33](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#33)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#33](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Die <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt bereits in der Auflistung vorhanden ist, der Index ungültig ist oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.EventMappingSettings this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.EventMappingSettings Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.EventMappingSettingsCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.EventMappingSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein gültiger Index eines ein <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt in der Auflistung.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt an der angegebenen Indexposition.</summary>
+        <value>Die <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt am angegebenen Index oder <see langword="null" /> Wenn an diesem Index kein Objekt vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.EventMappingSettingsCollection.Item%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#45](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#45)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#45](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#45)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.EventMappingSettings this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.EventMappingSettings Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.EventMappingSettingsCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.EventMappingSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des der <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt in der Auflistung enthalten.</param>
+        <summary>Ruft die <see cref="T:System.Web.Configuration.EventMappingSettings" /> -Objekts basierend auf dem angegebenen Schlüssel in der Auflistung.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.EventMappingSettings" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.EventMappingSettingsCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.EventMappingSettingsCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.Web.Configuration.EventMappingSettings" /> aus der Auflistung zu entfernen.</param>
+        <summary>Entfernt ein <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `remove` Element in den entsprechenden Abschnitt der Konfigurationsdatei für jedes Element in einer Konfigurationsdatei definiert. Wenn das Element im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.EventMappingSettingsCollection.Remove%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#38](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#38)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#38](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#38)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Es ist keine <see cref="T:System.Web.Configuration.EventMappingSettings" /> -Objekt mit dem angegebenen Schlüssel in der Auflistung das Element bereits entfernt wurde oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.EventMappingSettingsCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des ein <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt in der Auflistung.</param>
+        <summary>Entfernt ein <see cref="T:System.Web.Configuration.EventMappingSettings" /> Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `remove` Element in den entsprechenden Abschnitt der Konfigurationsdatei für jedes Element in einer Konfigurationsdatei definiert. Wenn das Element im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.EventMappingSettingsCollection.RemoveAt%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#39](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#39)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#39](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#39)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Es ist keine <see cref="T:System.Web.Configuration.EventMappingSettings" /> -Objekt mit dem angegebenen Index in der Auflistung das Element bereits entfernt wurde oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

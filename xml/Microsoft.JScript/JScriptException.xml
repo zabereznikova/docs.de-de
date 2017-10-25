@@ -1,0 +1,458 @@
+<Type Name="JScriptException" FullName="Microsoft.JScript.JScriptException">
+  <TypeSignature Language="C#" Value="public class JScriptException : ApplicationException, Microsoft.JScript.IVsaFullErrorInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit JScriptException extends System.ApplicationException implements class Microsoft.JScript.IVsaFullErrorInfo, class Microsoft.JScript.Vsa.IJSVsaError" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.JScriptException" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ApplicationException</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.JScript.IVsaFullErrorInfo</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Die von JScript ausgelöste Ausnahme zur Benachrichtigung eines CLR-Hosts oder -Programms, dass ein Fehler aufgetreten ist. Eine <see cref="T:Microsoft.JScript.JScriptException" /> verwendet in der Regel einen <see cref="T:Microsoft.JScript.JSError" />-Enumerationswert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:Microsoft.JScript.JScriptException> ist auch ein <xref:Microsoft.JScript.Vsa.IJSVsaError> übergeben werden kann, an den Host über <xref:Microsoft.JScript.Vsa.IJSVsaSite.OnCompilerError*>.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JScriptException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JScriptException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.JScript.JScriptException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JScriptException (Microsoft.JScript.JSError errorNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.JScript.JSError errorNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JScriptException.#ctor(Microsoft.JScript.JSError)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorNumber" Type="Microsoft.JScript.JSError" />
+      </Parameters>
+      <Docs>
+        <param name="errorNumber">Einer der Enumerationswerte. Der Wert gibt den Fehlercode an.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.JScript.JScriptException" /> -Klasse mit dem angegebenen <see cref="T:Microsoft.JScript.JSError" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JScriptException (string m);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JScriptException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="m">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.JScript.JScriptException" /> -Klasse unter Verwendung der angegebenen Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected JScriptException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JScriptException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die serialisierten Objektdaten über die Ausnahme, die ausgelöst wird.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.JScript.JScriptException" /> -Klasse unter Verwendung der angegebenen serialisierten Daten.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JScriptException (string m, Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string m, class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JScriptException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m" Type="System.String" />
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="m">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <param name="e">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.JScript.JScriptException" /> -Klasse unter Verwendung der angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public int Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Column" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Spalte in den Code, in dem der Fehler auftritt.</summary>
+        <value>Die Spalte in den Code, in dem der Fehler auftritt, oder 0, wenn die <see cref="T:Microsoft.JScript.Context" /> ist null.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Meldung, die den Fehler beschreibt.</summary>
+        <value>Eine Meldung mit einer Beschreibung des Fehlers.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EndColumn">
+      <MemberSignature Language="C#" Value="public int EndColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndColumn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.EndColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Spalte in den Code, in dem der Fehler endet.</summary>
+        <value>Die Spalte in den Code, in dem der Fehler endet, oder 0, wenn die <see cref="T:Microsoft.JScript.Context" /> ist null.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EndLine">
+      <MemberSignature Language="C#" Value="public int EndLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndLine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.EndLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Codezeile, in dem der Fehler endet.</summary>
+        <value>Die Codezeile in der der Fehler endet, oder 0, wenn die <see cref="T:Microsoft.JScript.Context" /> ist null.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorNumber">
+      <MemberSignature Language="C#" Value="public int ErrorNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ErrorNumber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.ErrorNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.Exception.HResult" /> Code des Fehlers.</summary>
+        <value>Die <see cref="P:System.Exception.HResult" /> Code des Fehlers.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JScriptException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die serialisierten Objektdaten über die Ausnahme, die ausgelöst wird.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Speichert Informationen über die Ausnahme einschließlich <c>IsError</c> und <c>Code</c> Werte in der <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="public int Line { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Line" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.Line" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Codezeile, in dem der Fehler auftritt.</summary>
+        <value>Die Zeile des Codes, in dem der Fehler tritt auf, oder 0, wenn die <see cref="T:Microsoft.JScript.Context" /> ist null.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LineText">
+      <MemberSignature Language="C#" Value="public string LineText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LineText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.LineText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Text des Codes in der der Fehler auftritt.</summary>
+        <value>Der Text im Code oder eine leere Zeichenfolge Wenn die <see cref="T:Microsoft.JScript.Context" /> ist null.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Meldung, die den Fehler beschreibt.</summary>
+        <value>Eine Meldung mit einer Beschreibung des Fehlers.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.JScript.Vsa.IJSVsaError.Description">
+      <MemberSignature Language="C#" Value="string Microsoft.JScript.Vsa.IJSVsaError.Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Microsoft.JScript.Vsa.IJSVsaError.Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.Microsoft#JScript#Vsa#IJSVsaError#Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Meldung, die den Fehler beschreibt.</summary>
+        <value>Eine Meldung mit einer Beschreibung des Fehlers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.JScript.Vsa.IJSVsaError.Number">
+      <MemberSignature Language="C#" Value="int Microsoft.JScript.Vsa.IJSVsaError.Number { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Microsoft.JScript.Vsa.IJSVsaError.Number" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.Microsoft#JScript#Vsa#IJSVsaError#Number" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.Exception.HResult" /> Code des Fehlers.</summary>
+        <value>Die <see cref="P:System.Exception.HResult" /> Code des Fehlers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Number">
+      <MemberSignature Language="C#" Value="public int Number { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Number" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.Number" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.Exception.HResult" /> Code des Fehlers.</summary>
+        <value>Die <see cref="P:System.Exception.HResult" /> Code des Fehlers.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Severity">
+      <MemberSignature Language="C#" Value="public int Severity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Severity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.Severity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zahl zwischen 0 (schwerwiegendsten) und 4 (niedrigster Schweregrad), die den Schweregrad des Fehlers angibt. Der Standardwert ist 0.</summary>
+        <value>Eine Zahl zwischen 0 und 4.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SourceItem">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItem SourceItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.JScript.Vsa.IJSVsaItem SourceItem" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.SourceItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element der Source-Code, das den Fehler verursacht hat.</summary>
+        <value>Der Code Quellelement; oder löst eine <see cref="T:Microsoft.JScript.NoContextException" /> Wenn die <see cref="T:Microsoft.JScript.Context" /> ist null.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SourceMoniker">
+      <MemberSignature Language="C#" Value="public string SourceMoniker { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceMoniker" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.SourceMoniker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Quellcodedatei an, die den Fehler enthält.</summary>
+        <value>Der Name der Quelle code Datei oder eine Zeichenfolge literal "keine Quelle" Wenn die <see cref="T:Microsoft.JScript.Context" /> ist null.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StackTrace">
+      <MemberSignature Language="C#" Value="public override string StackTrace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StackTrace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.StackTrace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stapelüberwachungsinformationen zum Zeitpunkt des Fehlers ab.</summary>
+        <value>Die Stapelüberwachungsinformationen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StartColumn">
+      <MemberSignature Language="C#" Value="public int StartColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartColumn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JScriptException.StartColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Spalte in den Code, in dem der Fehler auftritt.</summary>
+        <value>Die Spalte in den Code, in dem der Fehler auftritt, oder 0, wenn die <see cref="T:Microsoft.JScript.Context" /> ist null.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

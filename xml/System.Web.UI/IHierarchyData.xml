@@ -1,0 +1,240 @@
+<Type Name="IHierarchyData" FullName="System.Web.UI.IHierarchyData">
+  <TypeSignature Language="C#" Value="public interface IHierarchyData" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHierarchyData" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IHierarchyData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Knoten einer hierarchischen Datenstruktur, einschließlich des Knotenobjekts und einige Eigenschaften, die Merkmale des Knotens beschreiben. -Objekte implementiert, die <see cref="T:System.Web.UI.IHierarchyData" /> Schnittstelle enthalten sein kann, <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> Sammlungen zugewiesen und sind von ASP.NET Websitenavigation und verwendet Daten Datenquellensteuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IHierarchyData> Schnittstelle wird implementiert von Klassen, die Knoten einer hierarchischen Struktur darstellen, und verfolgen die hierarchischen Beziehungen an deren übergeordneten und untergeordneten Knoten. Klassen, in denen die <xref:System.Web.UI.IHierarchyData> Schnittstelle enthalten sein kann, in Auflistungen bereit, implementieren die <xref:System.Web.UI.IHierarchicalEnumerable> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.Web.UI.IHierarchyData> Schnittstelle mit einer Klasse, die umschließt ein <xref:System.IO.FileSystemInfo> Objekt. Die <xref:System.IO.FileSystemInfo> Klasse ist ein gutes Beispiel eines Knotens hierarchische Daten, die die <xref:System.Web.UI.IHierarchyData> Schnittstelle darstellt, für ASP.NET Hierarchische Datenquellensteuerelemente. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.HierarchicalDataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_1#5](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/CS/filesystemdatasource.cs#5)]
+ [!code-vb[Urtue.Samples.Alexkr.FileSystemDataSource_1#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/VB/filesystemdatasource.vb#5)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie rekursiv durchlaufen eine <xref:System.Web.UI.IHierarchicalEnumerable> Extract-Auflistung der <xref:System.Web.UI.IHierarchyData> Element aus dem Enumerator, mit der <xref:System.Web.UI.IHierarchicalEnumerable.GetHierarchyData%2A> -Methode, und grundlegende Vorgänge mit dem Datenelement ausgeführt.  
+  
+ [!code-aspx-csharp[System.Web.UI.IHierarchyData_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IHierarchyData_1/CS/ihd_1.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.IHierarchyData_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IHierarchyData_1/VB/ihd_1.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="public System.Web.UI.IHierarchicalEnumerable GetChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.IHierarchicalEnumerable GetChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IHierarchyData.GetChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchicalEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Enumerationsobjekt, das die untergeordneten Knoten des aktuellen hierarchischen Knotens darstellt.</summary>
+        <returns>Eine <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> Auflistung von untergeordneten Knoten des aktuellen hierarchischen Knotens.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Web.UI.IHierarchyData.HasChildren%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Web.UI.IHierarchyData> Knoten über untergeordnete Knoten verfügt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie überprüft der <xref:System.Web.UI.IHierarchyData.HasChildren%2A> Eigenschaft, um zu bestimmen, ob der aktuelle hierarchische Datenknoten untergeordnete Knoten verfügt und das Abrufen mithilfe der <xref:System.Web.UI.IHierarchyData.GetChildren%2A> Methode. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.IHierarchyData> Schnittstelle.  
+  
+ [!code-csharp[System.Web.UI.IHierarchyData_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IHierarchyData_1/CS/ihd_1.aspx.cs#2)]
+ [!code-vb[System.Web.UI.IHierarchyData_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IHierarchyData_1/VB/ihd_1.aspx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParent">
+      <MemberSignature Language="C#" Value="public System.Web.UI.IHierarchyData GetParent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.IHierarchyData GetParent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IHierarchyData.GetParent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchyData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Web.UI.IHierarchyData" /> -Objekt, das den übergeordneten Knoten des aktuellen hierarchischen Knotens darstellt.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.IHierarchyData" /> -Objekt, das den übergeordneten Knoten des aktuellen hierarchischen Knotens darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IHierarchyData> Schnittstelle definiert keine benutzerfreundliche HasParent-Eigenschaft, damit der Aufrufer überprüfen, müssen den Rückgabewert von der <xref:System.Web.UI.IHierarchyData.GetParent%2A> Methode zum `null` um zu bestimmen, ob das aktuelle <xref:System.Web.UI.IHierarchyData> Knoten ist der Stammknoten der hierarchischen Daten Struktur der Knoten gehört.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.Web.UI.IHierarchyData.GetParent%2A> Methode in einer Klasse, die implementiert die <xref:System.Web.UI.IHierarchyData> Schnittstelle. Die `FileSystemHierarchyData` -Klasse umschließt eine <xref:System.IO.FileSystemInfo> -Objekt, und die <xref:System.Web.UI.IHierarchyData.GetParent%2A> methodenimplementierung überprüft den Typ der <xref:System.IO.FileSystemInfo> Objekt und gibt den entsprechenden übergeordneten Objekt auf Grundlage des Typs. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.IHierarchyData> Schnittstelle und die <xref:System.Web.UI.HierarchicalDataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_1#10](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/CS/filesystemdatasource.cs#10)]
+ [!code-vb[Urtue.Samples.Alexkr.FileSystemDataSource_1#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/VB/filesystemdatasource.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChildren">
+      <MemberSignature Language="C#" Value="public bool HasChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IHierarchyData.HasChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Knoten hierarchische Daten, die die <see cref="T:System.Web.UI.IHierarchyData" /> Objekt stellt hat keine untergeordneten Knoten.</summary>
+        <value>
+          <see langword="true" />Wenn der aktuelle Knoten über untergeordnete Knoten verfügt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IHierarchyData.HasChildren%2A> Eigenschaft ist eine benutzerfreundliche Eigenschaft, die Aufrufer zu überprüfen, ob des Rückgabewerts von ermöglicht die <xref:System.Web.UI.IHierarchyData.GetChildren%2A> Methode zum `null`. Wenn der <xref:System.Web.UI.IHierarchyData.HasChildren%2A> -Eigenschaft gibt `true`, rufen Sie die <xref:System.Web.UI.IHierarchyData.GetChildren%2A> Methode zum Abrufen einer <xref:System.Web.UI.IHierarchicalEnumerable> Sammlung untergeordneter Knoten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine hierarchische datengebundenen ASP.NET-Steuerelements verwendet ein <xref:System.Web.UI.IHierarchyData> Objekt in einer rekursiven Datenbindungsfunktionen-Methode. Die Elemente in einer <xref:System.Web.UI.IHierarchicalEnumerable> Auflistung werden aufgelistet, und für jedes ein <xref:System.Web.UI.IHierarchyData> Objekt abgerufen wird, mit der <xref:System.Web.UI.IHierarchicalEnumerable.GetHierarchyData%2A> Methode. Schließlich die <xref:System.Web.UI.IHierarchyData.HasChildren%2A> Eigenschaft bestimmt, ob in Unterverzeichnissen aktiviert ist. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse.  
+  
+ [!code-csharp[Samples.AspNet.GeneologyTree#5](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/CS/geneologytree.cs#5)]
+ [!code-vb[Samples.AspNet.GeneologyTree#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/VB/geneologytree.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IHierarchyData.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft dem Knoten für hierarchische Daten, die die <see cref="T:System.Web.UI.IHierarchyData" /> -Objekt darstellt.</summary>
+        <value>Ein <see cref="T:System.Object" /> Knotenobjekt für hierarchische Daten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während viele Klassen, die Darstellung von hierarchischen Datenknoten, z. B. die <xref:System.Web.SiteMapNode> -Klasse, implementieren Sie die <xref:System.Web.UI.IHierarchyData> -Schnittstelle direkt, andere Klassen dienen nur als Wrapper für eine Klasse, die die Schnittstelle nicht implementiert wird. Die <xref:System.Web.UI.IHierarchyData.Item%2A> Eigenschaft ist für Situationen entwerfen bereitgestellt, wenn Geschäftsobjekte funktionell gleichwertig sind ein <xref:System.Web.UI.IHierarchyData> Objekt aber kann nicht auf einfache Weise angepasst werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Zugriff auf <xref:System.Web.UI.IHierarchyData> Eigenschaften, überprüfen Sie den Typ des ein <xref:System.Web.UI.IHierarchyData> -Objekt unter Verwendung der <xref:System.Web.UI.IHierarchyData.Type%2A> -Eigenschaft und Umwandlung das Objekt, das weitere typspezifische Vorgänge ausführen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.IHierarchyData> Schnittstelle.  
+  
+ [!code-csharp[System.Web.UI.IHierarchyData_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IHierarchyData_1/CS/ihd_1.aspx.cs#2)]
+ [!code-vb[System.Web.UI.IHierarchyData_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IHierarchyData_1/VB/ihd_1.aspx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IHierarchyData.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den hierarchischen Pfad des Knotens ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , den hierarchischen Pfad relativ zum aktuellen Knoten identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IHierarchyData.Path%2A> Eigenschaft übergeben werden kann, um die <xref:System.Web.UI.HierarchicalDataSourceControl.GetHierarchicalView%2A> Methode zum Abrufen der <xref:System.Web.UI.HierarchicalDataSourceView> Objekt, das die identifizierte Knoten entspricht <xref:System.Web.UI.IHierarchyData.Path%2A>.  
+  
+> [!CAUTION]
+>  Die <xref:System.Web.UI.IHierarchyData.Path%2A> Eigenschaft dürfen nicht keine vertraulichen Informationen über die hostumgebung, da er an den Client in einem datengebundenen Steuerelement gerendert werden kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.Web.UI.IHierarchyData.Path%2A> Eigenschaft in einer Klasse, die implementiert die <xref:System.Web.UI.IHierarchyData> Schnittstelle. Die `FileSystemHierarchyData` -Klasse umschließt eine <xref:System.IO.FileSystemInfo> -Objekt, und die <xref:System.Web.UI.IHierarchyData.Path%2A> eigenschaftenimplementierung gibt seine Dateisystempfad. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.IHierarchyData> Schnittstelle und die <xref:System.Web.UI.HierarchicalDataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_1#7](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/CS/filesystemdatasource.cs#7)]
+ [!code-vb[Urtue.Samples.Alexkr.FileSystemDataSource_1#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/VB/filesystemdatasource.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IHierarchyData.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Typs des <see cref="T:System.Object" /> enthalten sind, der <see cref="P:System.Web.UI.IHierarchyData.Item" /> Eigenschaft.</summary>
+        <value>Der Name des Typs des Objekts, die die <see cref="T:System.Web.UI.IHierarchyData" /> -Objekt darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IHierarchyData.Type%2A> Eigenschaft keinen zurückgibt der <xref:System.Type?displayProperty=nameWithType> des Objekts dargestellt einer <xref:System.Web.UI.IHierarchyData> Objekt. Es gibt einen Namen, die von datengebundenen Steuerelementen verwendet, um die Unterscheidung zwischen Elementen in einer Hierarchie, die unterschiedlichen Bindungseigenschaften zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die grundlegende schreiben <xref:System.Web.UI.IHierarchyData> Eigenschaften ein <xref:System.Web.HttpResponse> streamen, und überprüfen Sie den Typ des ein <xref:System.Web.UI.IHierarchyData> -Objekt unter Verwendung der <xref:System.Web.UI.IHierarchyData.Type%2A> -Eigenschaft und Umwandlung das Objekt, das weitere typspezifische Vorgänge ausführen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.IHierarchyData> Schnittstelle.  
+  
+ [!code-csharp[System.Web.UI.IHierarchyData_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IHierarchyData_1/CS/ihd_1.aspx.cs#2)]
+ [!code-vb[System.Web.UI.IHierarchyData_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IHierarchyData_1/VB/ihd_1.aspx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,263 @@
+<Type Name="RenderCapability" FullName="System.Windows.Media.RenderCapability">
+  <TypeSignature Language="C#" Value="public static class RenderCapability" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit RenderCapability extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.RenderCapability" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>WPF-Anwendungen für die aktuelle Ebene für die zugehörigen Abfragen ermöglicht <see cref="T:System.Windows.Threading.Dispatcher" /> Objekt und Benachrichtigungen zu Änderungen zu registrieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf dem eine [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]-Anwendung ausgeführt wird. Die Funktionen der Grafikhardware, dass die meisten der Renderingebenen beeinflussen, sind die folgenden:  
+  
+-   Video-RAM: Die Zeitspanne, die auf die Grafikhardware bestimmt die Größe und Anzahl der Puffer, die für die Zusammensetzung von Grafiken verwendet werden kann.  
+  
+-   Pixel-Shader: Ein Pixel-Shader ist eine grafikverarbeitungseinheit-Funktion, die Auswirkungen auf Basis eines pro Pixel berechnet. Abhängig von der Auflösung der angezeigten Grafiken kann es mehrere Millionen Pixel geben, die für jeden Frame des Displays verarbeitet werden müssen.  
+  
+-   Vertex-Shader: Vertex-Shader ist eine Funktion, die mathematische Operationen für die Vertexdaten des Objekts ausführt.  
+  
+-   : Hierbei handelt Hierbei handelt es sich um die Möglichkeit, zwei oder mehr unterschiedliche Texturen bei einem Alphablending Vorgang für ein Objekt 3D-Grafiken anzuwenden. Der Grad der Multitexturunterstützung wird durch die Anzahl der Multitextureinheiten in der Grafikhardware bestimmt.  
+  
+ Die Pixel-Shader, Vertex-Shader und Mehrfachtextur Funktionen werden verwendet, um bestimmte definieren [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)] Versionsebenen, die wiederum verwendet werden, definieren Sie die unterschiedlichen Renderingebenen in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]. Eine vollständige Beschreibung der Renderingebenen, finden Sie unter [Renderingebenen für Grafiken](~/docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsPixelShaderVersionSupported">
+      <MemberSignature Language="C#" Value="public static bool IsPixelShaderVersionSupported (short majorVersionRequested, short minorVersionRequested);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsPixelShaderVersionSupported(int16 majorVersionRequested, int16 minorVersionRequested) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderCapability.IsPixelShaderVersionSupported(System.Int16,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="majorVersionRequested" Type="System.Int16" />
+        <Parameter Name="minorVersionRequested" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="majorVersionRequested">Die Hauptversion des Pixelshaders.</param>
+        <param name="minorVersionRequested">Die Nebenversion des Pixelshaders.</param>
+        <summary>Ruft einen Wert, der angibt, ob die angegebene Version des Pixelshaders unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />Wenn die Pixel-Shader-Version von der aktuellen Version von WPF unterstützt wird. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.RenderCapability.IsPixelShaderVersionSupported%2A> -Methode zurückkehrt `true` , wenn die Pixel-Shader-Version von der aktuellen Version von WPF unterstützt wird und ein <xref:System.Windows.Media.Effects.Effect> unter Verwendung der angegebenen Haupt-/Nebenversion kann auf dem GPU ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPixelShaderVersionSupportedInSoftware">
+      <MemberSignature Language="C#" Value="public static bool IsPixelShaderVersionSupportedInSoftware (short majorVersionRequested, short minorVersionRequested);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsPixelShaderVersionSupportedInSoftware(int16 majorVersionRequested, int16 minorVersionRequested) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderCapability.IsPixelShaderVersionSupportedInSoftware(System.Int16,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="majorVersionRequested" Type="System.Int16" />
+        <Parameter Name="minorVersionRequested" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="majorVersionRequested">Die Hauptversion des Pixelshaders.</param>
+        <param name="minorVersionRequested">Die Nebenversion des Pixelshaders.</param>
+        <summary>Ruft einen Wert, der angibt, ob die angegebene Version des Pixelshaders in der Software auf dem aktuellen System gerendert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn der PixelShader in der Software auf dem aktuellen System gerendert werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elemente des Softwarerendering wird nur für Pixel-Shader 2.0 unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsShaderEffectSoftwareRenderingSupported">
+      <MemberSignature Language="C#" Value="public static bool IsShaderEffectSoftwareRenderingSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsShaderEffectSoftwareRenderingSupported" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.RenderCapability.IsShaderEffectSoftwareRenderingSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("IsShaderEffectSoftwareRenderingSupported property is deprecated.  Use IsPixelShaderVersionSupportedInSoftware static method instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das System Bitmapeffekte in der Software gerendert werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn das System Bitmapeffekte in der Software gerendert werden kann; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxHardwareTextureSize">
+      <MemberSignature Language="C#" Value="public static System.Windows.Size MaxHardwareTextureSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Size MaxHardwareTextureSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.RenderCapability.MaxHardwareTextureSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Breite und Höhe für Bitmap-Erstellung des zugrunde liegenden Hardwaregeräts ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Size" /> , die die maximale Breite und Höhe für Hardware-Bitmap-Erstellung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es mehrere Geräte sind <xref:System.Windows.Media.RenderCapability.MaxHardwareTextureSize%2A> gibt die minimale Größe zwischen ihnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPixelShaderInstructionSlots">
+      <MemberSignature Language="C#" Value="public static int MaxPixelShaderInstructionSlots (short majorVersionRequested, short minorVersionRequested);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 MaxPixelShaderInstructionSlots(int16 majorVersionRequested, int16 minorVersionRequested) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderCapability.MaxPixelShaderInstructionSlots(System.Int16,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="majorVersionRequested" Type="System.Int16" />
+        <Parameter Name="minorVersionRequested" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="majorVersionRequested">Die Hauptversion des Pixelshaders.</param>
+        <param name="minorVersionRequested">Die Nebenversion des Pixelshaders.</param>
+        <summary>Ruft die maximale Anzahl von Anweisung Steckplätze, die von der angegebenen Pixel-Shader-Version unterstützt.</summary>
+        <returns>96 Pixel-Shader-2.0 512 oder höher für die Pixel-Shader-3.0, oder 0 für andere Version des Pixel-Shader.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anzahl der Anweisungsslots von Pixel-Shader 3.0 unterstützt variiert, ist jedoch immer mindestens 512.  
+  
+ Nur die Pixel-Shader 2.0 und 3.0 werden unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tier">
+      <MemberSignature Language="C#" Value="public static int Tier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 Tier" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.RenderCapability.Tier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die Ebene des aktuellen Threads angibt.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, dessen höherwertige Wort, auf die Renderingebene für den aktuellen Thread entspricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Ab .NET Framework 4 wurde die Renderingebene 1 neu definiert, um nur Grafikhardware einzuschließen, die [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)] 9.0 oder höher unterstützt. Grafikhardware, die [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)] 7 oder 8 unterstützt, wird jetzt als Renderingebene 0 definiert.  
+  
+ Der Rückgabewert ist eine von drei möglichen Werten:  
+  
+|Rückgabewert|Renderingebene|Notizen|  
+|------------------|--------------------|-----------|  
+|0x00000000|0|Keine Grafiken Hardwarebeschleunigung ist verfügbar für die Anwendung auf dem Gerät. Alle Grafikfunktionen verwenden Softwarebeschleunigung. Die [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)]-Versionsebene ist kleiner als die Version 9.0.|  
+|0x00010000|1|Die meisten Funktionen von Grafiken [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] verwendet die Hardwarebeschleunigung aus, wenn die erforderlichen Systemressourcen verfügbar sind und keine ausgeschöpft wurden. Dies entspricht einer [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)]-Version, die größer als oder gleich 9.0 ist.|  
+|0x00020000|2|Die meisten Funktionen von Grafiken [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Hardwarebeschleunigung wird verwendet, sofern die erforderlichen Systemressourcen nicht ausgeschöpft wurden. Dies entspricht einer [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)]-Version, die größer als oder gleich 9.0 ist.|  
+  
+ Die folgende Tabelle zeigt die Unterschiede in den Anforderungen der Grafikhardware für die Renderingebene 1 und 2:  
+  
+|Funktion|Ebene 1|Ebene 2|  
+|-------------|------------|------------|  
+|[!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)]-Version|Muss größer als oder gleich 9.0 sein.|Muss größer als oder gleich 9.0 sein.|  
+|Video-RAM|Muss größer als oder gleich 60 MB sein.|Muss größer als oder gleich 120 MB sein.|  
+|Pixel-Shader|Die Versionsebene muss größer als oder gleich 2.0 sein.|Die Versionsebene muss größer als oder gleich 2.0 sein.|  
+|Vertex-Shader|Keine Anforderung.|Die Versionsebene muss größer als oder gleich 2.0 sein.|  
+|Multitextur-Einheiten|Keine Anforderung.|Die Anzahl der Einheiten muss größer als oder gleich 4 sein.|  
+  
+ Weitere Informationen über die Definitionen für die Renderingebenen finden Sie unter [Renderingebenen für Grafiken](~/docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+  
+ Wenn der aktuelle Thread eine zugeordnete keinen <xref:System.Windows.Threading.Dispatcher> -Objekt wird automatisch eine neue erstellt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie die Renderingebene für den aktuellen Thread zurückgegeben wird.  
+  
+ [!code-csharp[RenderOptions#RenderCapability1](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#rendercapability1)]
+ [!code-vb[RenderOptions#RenderCapability1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#rendercapability1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TierChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler TierChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TierChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.RenderCapability.TierChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Ebene, für geändert wurde die <see cref="T:System.Windows.Threading.Dispatcher" /> Objekt des aktuellen Threads.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der aktuelle Thread eine zugeordnete keinen <xref:System.Windows.Threading.Dispatcher> -Objekt wird automatisch eine neue erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

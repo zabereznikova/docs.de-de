@@ -1,0 +1,326 @@
+<Type Name="EventMappingSettings" FullName="System.Web.Configuration.EventMappingSettings">
+  <TypeSignature Language="C#" Value="public sealed class EventMappingSettings : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EventMappingSettings extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.EventMappingSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Einstellungen für ASP.NET Ereignisse Zuordnung für Ereignisanbieter. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse entspricht dem `eventMappings` Configuration File-Element. Die `eventMappings` Element können Sie Ereignisquellen Anzeigenamen zuweisen. Diese Namen werden dann verwendet, um die verwandte Ereignisconsumer, die als Anbieter bezeichnet, in Ereignisquellen Zuordnen der `rules` -Unterabschnitt des der `healthMonitoring` Abschnitt der Konfigurationsdatei.  
+  
+ Ereigniscodes zugeordnet sind, zu Ereignissen, definiert durch Konstanten in der <xref:System.Web.Management.WebEventCodes> Objekt. Die Zuordnung wird verwendet, einen Bereich angegeben, mit der <xref:System.Web.Configuration.EventMappingSettings.StartEventCode%2A> und <xref:System.Web.Configuration.EventMappingSettings.EndEventCode%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Der folgende Auszug aus der Datei wird gezeigt, wie Werte für mehrere Eigenschaften der deklarativ angeben, die <xref:System.Web.Configuration.EventMappingSettings> Klasse.  
+  
+```  
+<healthMonitoring>  
+  <eventMappings>  
+    <add name="All Events"  
+      type="System.Web.Management.WebBaseEvent, System.Web,   
+      Version=%ASSEMBLY_VERSION%, Culture=neutral,   
+      PublicKeyToken=%MICROSOFT_PUBLICKEY%"   
+    />  
+    <add name="HeartBeats"  
+      type="System.Web.Management.WebHeartBeatEvent, System.Web,   
+      Version=%ASSEMBLY_VERSION%, Culture=neutral,   
+      PublicKeyToken=%MICROSOFT_PUBLICKEY%"   
+    />  
+        <add name="Application Lifetime Events"  
+            type="System.Web.Management.WebApplicationLifetimeEvent, System.Web, Version=%ASSEMBLY_VERSION%, Culture=neutral, PublicKeyToken=%MICROSOFT_PUBLICKEY%"   
+        />  
+        <add name="Request Processing Events"  
+            type="System.Web.Management.WebRequestEvent, System.Web, Version=%ASSEMBLY_VERSION%, Culture=neutral, PublicKeyToken=%MICROSOFT_PUBLICKEY%"   
+        />  
+        <add name="All Errors"  
+            type="System.Web.Management.WebBaseErrorEvent, System.Web, Version=%ASSEMBLY_VERSION%, Culture=neutral, PublicKeyToken=%MICROSOFT_PUBLICKEY%"   
+        />  
+        <add name="Infrastructure Errors"  
+            type="System.Web.Management.WebErrorEvent, System.Web, Version=%ASSEMBLY_VERSION%, Culture=neutral, PublicKeyToken=%MICROSOFT_PUBLICKEY%"   
+        />  
+        <add name="Request Processing Errors"  
+            type="System.Web.Management.WebRequestErrorEvent, System.Web, Version=%ASSEMBLY_VERSION%, Culture=neutral, PublicKeyToken=%MICROSOFT_PUBLICKEY%"   
+        />  
+        <add name="All Audits"  
+            type="System.Web.Management.WebAuditEvent, System.Web, Version=%ASSEMBLY_VERSION%, Culture=neutral, PublicKeyToken=%MICROSOFT_PUBLICKEY%"   
+        />  
+        <add name="Failure Audits"  
+            type="System.Web.Management.WebFailureAuditEvent, System.Web, Version=%ASSEMBLY_VERSION%, Culture=neutral, PublicKeyToken=%MICROSOFT_PUBLICKEY%"   
+        />  
+        <add name="Success Audits"  
+            type="System.Web.Management.WebSuccessAuditEvent, System.Web, Version=%ASSEMBLY_VERSION%, Culture=neutral, PublicKeyToken=%MICROSOFT_PUBLICKEY%"   
+        />  
+    </eventMappings>  
+</healthMonitoring>   
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventMappingSettings (string name, string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.EventMappingSettings.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.Web.Configuration.EventMappingSettings" /> -Objekt erstellt wird.</param>
+        <param name="type">Der vollqualifizierte Typ der Ereignisklasse verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Configuration.EventMappingSettings" /> -Klasse mit dem angegebenen Namen und Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die Standardeinstellungen, die für diesen Konstruktor verwendet werden.  
+  
+|Einstellung|Standardwert|  
+|-------------|-------------------|  
+|<xref:System.Web.Configuration.EventMappingSettings.StartEventCode%2A>|0.|  
+|<xref:System.Web.Configuration.EventMappingSettings.EndEventCode%2A>|<xref:System.Int32.MaxValue>.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.EventMappingSettings.%23ctor%2A> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#31](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#31)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#31](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventMappingSettings (string name, string type, int startEventCode, int endEventCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string type, int32 startEventCode, int32 endEventCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.EventMappingSettings.#ctor(System.String,System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="startEventCode" Type="System.Int32" />
+        <Parameter Name="endEventCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.Web.Configuration.EventMappingSettings" /> -Objekt erstellt wird.</param>
+        <param name="type">Der vollqualifizierte Typ der Ereignisklasse verwendet werden soll.</param>
+        <param name="startEventCode">Der Start des Bereichs.</param>
+        <param name="endEventCode">Der Endwert des Bereichs.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.BufferModeSettings" />-Klasse unter Verwendung der angegebenen Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.EventMappingSettings.%23ctor%2A> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#32](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#32)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#32](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEventCode">
+      <MemberSignature Language="C#" Value="public int EndEventCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndEventCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.EventMappingSettings.EndEventCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("endEventCode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Code der Endwert des Bereichs.</summary>
+        <value>Der Endwert des Bereichs Ereigniscode. Die Standardeinstellung ist <see cref="F:System.Int32.MaxValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereigniscodes zugeordnet sind, zu Ereignissen, definiert durch Konstanten in der <xref:System.Web.Management.WebEventCodes> Objekt. Die Zuordnung wird verwendet, einen Bereich angegeben, mit der <xref:System.Web.Configuration.EventMappingSettings.StartEventCode%2A> und <xref:System.Web.Configuration.EventMappingSettings.EndEventCode%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.EventMappingSettings.EndEventCode%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#44](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#44)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#44](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#44)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.EventMappingSettings.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des <see cref="T:System.Web.Configuration.EventMappingSettings" />-Objekts ab oder legt ihn fest.</summary>
+        <value>Der Name des <see cref="T:System.Web.Configuration.EventMappingSettings" />-Objekts. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein eindeutiger Name ist erforderlich. Doppelte Namen können in einem Verlust von Daten führen, wenn Konfigurationsabschnitts gespeichert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.EventMappingSettings.Name%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#41](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#41)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#41](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#41)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.EventMappingSettings.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartEventCode">
+      <MemberSignature Language="C#" Value="public int StartEventCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartEventCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.EventMappingSettings.StartEventCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("startEventCode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den ersten Ereigniscode des Bereichs.</summary>
+        <value>Der Start Ereigniscode des Bereichs. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereigniscodes zugeordnet sind, zu Ereignissen, definiert durch Konstanten in der <xref:System.Web.Management.WebEventCodes> Objekt. Die Zuordnung wird verwendet, einen Bereich angegeben, mit der <xref:System.Web.Configuration.EventMappingSettings.StartEventCode%2A> und <xref:System.Web.Configuration.EventMappingSettings.EndEventCode%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.EventMappingSettings.StartEventCode%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#43](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#43)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#43](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#43)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.EventMappingSettings.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein benutzerdefiniertes Ereignis.</summary>
+        <value>Ein gültiger Typverweis oder eine leere Zeichenfolge (""). Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Typ des Ereignisses anzugeben. Der angegebene Typ kann den tatsächlichen Klassentyp oder einen übergeordneten Typ der Ereignisklasse. Ist eine leere Zeichenfolge (""), wird kein Ereignis zugeordnet, und die <xref:System.Web.Configuration.EventMappingSettings> Objekt fungiert als Platzhalter.  
+  
+ Der Typverweis wird wie folgt gebildet (Elemente in Klammern sind nicht erforderlich): *Namespace*.* TypeName*, *Assemblyname*[,] [Version = X,] [Kultur = y,] [PublicKeyToken = Z]. Z. B. "ExampleNameSpace.ExampleType Example.Assembly, Version =" % ASSEMBLY_VERSION ", Culture = Neutral, PublicKeyToken =" % MICROSOFT_PUBLICKEY ""  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.EventMappingSettings.Type%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#42](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#42)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#42](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#42)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

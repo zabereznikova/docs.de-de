@@ -1,0 +1,176 @@
+<Type Name="EventManifestOptions" FullName="System.Diagnostics.Tracing.EventManifestOptions">
+  <TypeSignature Language="C#" Value="public enum EventManifestOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EventManifestOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Tracing.EventManifestOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, wie das ETW-Manifest für die Ereignisquelle generiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine bitweise Kombination der folgenden Werte wird bestimmt, wie das Manifest für die Ereignisquelle geschrieben wird. Beispielsweise können Sie angeben, ob die Ressourcendateien generiert werden und wie strikt die Überprüfung des Manifests ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllCultures">
+      <MemberSignature Language="C#" Value="AllCultures" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventManifestOptions AllCultures = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventManifestOptions.AllCultures" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventManifestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Generiert einen Ressourcenknoten unterhab des Lokalisierungsordners für jede angegebene Satellitenassembly.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowEventSourceOverride">
+      <MemberSignature Language="C#" Value="AllowEventSourceOverride" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventManifestOptions AllowEventSourceOverride = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventManifestOptions.AllowEventSourceOverride" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventManifestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überschreibt das Standardverhalten, dass die aktuelle <see cref="T:System.Diagnostics.Tracing.EventSource" /> die Basisklasse des benutzerdefinierten Typs sein muss, der an die Schreibmethode übergeben wird. Diese Option aktiviert die Validierung von .NET-Ereignisquellen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventManifestOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventManifestOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventManifestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wurden keine Optionen angegeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyIfNeededForRegistration">
+      <MemberSignature Language="C#" Value="OnlyIfNeededForRegistration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventManifestOptions OnlyIfNeededForRegistration = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventManifestOptions.OnlyIfNeededForRegistration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventManifestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Manifest wird generiert, nur die Ereignisquelle muss auf dem Hostcomputer registriert sein.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Strict">
+      <MemberSignature Language="C#" Value="Strict" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventManifestOptions Strict = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventManifestOptions.Strict" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventManifestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Im Fall von Inkonsistenzen beim Schreiben der Manifestdatei wird eine Ausnahme ausgelöst.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

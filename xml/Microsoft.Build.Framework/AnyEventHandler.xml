@@ -1,0 +1,25 @@
+<Type Name="AnyEventHandler" FullName="Microsoft.Build.Framework.AnyEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void AnyEventHandler(object sender, BuildEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AnyEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.AnyEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Build.Framework.BuildEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:Microsoft.Build.Framework.BuildEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:Microsoft.Build.Framework.IEventSource.AnyEventRaised" /> Ereignis eines Builds.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

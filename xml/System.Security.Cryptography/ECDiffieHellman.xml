@@ -1,0 +1,548 @@
+<Type Name="ECDiffieHellman" FullName="System.Security.Cryptography.ECDiffieHellman">
+  <TypeSignature Language="C#" Value="public abstract class ECDiffieHellman : System.Security.Cryptography.AsymmetricAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ECDiffieHellman extends System.Security.Cryptography.AsymmetricAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.ECDiffieHellman" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.AsymmetricAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine abstrakte Basisklasse, ECDH Elliptic Curve Diffie-Hellman () Algorithmus Implementierungen abgeleitet werden können. Diese Klasse stellt den grundlegenden Satz an Vorgängen, die alle ECDH-Implementierungen unterstützen muss.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient als abstrakte Basisklasse für ECDH-Implementierungen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ECDiffieHellman ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.ECDiffieHellman" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird aufgerufen, durch abgeleitete Klassen die <xref:System.Security.Cryptography.ECDiffieHellman> Klasse. Die <xref:System.Security.Cryptography.ECDiffieHellmanCng> Klasse ist die einzige Implementierung, die derzeit in enthalten ist das [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Informationen über das Erstellen einer neuen Implementierung des Algorithmus Elliptic Curve Diffie-Hellman (ECDH) finden Sie unter der <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECDiffieHellman Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ECDiffieHellman Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellman</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der Standardimplementierung des Algorithmus Elliptic Curve Diffie-Hellman (ECDH).</summary>
+        <returns>Eine neue Instanz der Standardimplementierung dieser Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECDiffieHellman Create (System.Security.Cryptography.ECCurve curve);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ECDiffieHellman Create(valuetype System.Security.Cryptography.ECCurve curve) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.Create(System.Security.Cryptography.ECCurve)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellman</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="curve" Type="System.Security.Cryptography.ECCurve" />
+      </Parameters>
+      <Docs>
+        <param name="curve">Die Kurve, die für das Generieren eines neuen Paars aus privatem und öffentlichem Schlüssel verwendet wird.</param>
+        <summary>Erstellt eine neue Instanz der Standardimplementierung des ECDH-Algorithmus (Elliptic Curve Diffie-Hellman) mit einem neuen Paar aus öffentlichem und privatem Schlüssel, das über die angegebene Kurve generiert wurde.</summary>
+        <returns>Eine neue Instanz der Standardimplementierung des ECDH-Algorithmus (Elliptic Curve Diffie-Hellman).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kurve überprüfen muss (d. h. er "true", bei der Übergabe an zurückgeben muss die <xref:System.Security.Cryptography.ECCurve.Validate%2A?displayProperty=nameWithType> Methode.  
+  
+ Merkmal-2-Kurven werden unter Windows nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="curve" /> führt keine Validierung durch.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECDiffieHellman Create (System.Security.Cryptography.ECParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ECDiffieHellman Create(valuetype System.Security.Cryptography.ECParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.Create(System.Security.Cryptography.ECParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellman</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Security.Cryptography.ECParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Die Parameter für den ECC-Algorithmus (Elliptic Curve Cryptography)</param>
+        <summary>Erstellt eine neue Instanz der Standardimplementierung des ECDH-Algorithmus (Elliptic Curve Diffie-Hellman) mit dem Schlüssel, der im angegebenen <see cref="T:System.Security.Cryptography.ECParameters" />-Objekt beschrieben wird.</summary>
+        <returns>Eine neue Instanz der Standardimplementierung des ECDH-Algorithmus (Elliptic Curve Diffie-Hellman).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `parameters`Überprüfen müssen (d. h. es muss zurückgegeben werden `true`) bei der Übergabe an die <xref:System.Security.Cryptography.ECParameters.Validate%2A?displayProperty=nameWithType> Methode. Parameter über implizite Kurven werden nicht unterstützt.  
+  
+ Merkmal-2-Kurven werden unter Windows nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="parameters" /> führt keine Validierung durch.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECDiffieHellman Create (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ECDiffieHellman Create(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellman</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der Name einer Implementierung des ECDH-Algorithmus.</param>
+        <summary>Erstellt eine neue Instanz der angegebenen Implementierung des ECDH-Algorithmus (Elliptic Curve Diffie-Hellman)</summary>
+        <returns>Eine neue Instanz der angegebenen Implementierung dieser Klasse. Wenn der angegebene Name des Algorithmus keiner ECDH-Implementierung zugeordnet ist, gibt diese Methode <see langword="null" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie Ihre eigene Implementierung der entwickeln eine <xref:System.Security.Cryptography.ECDiffieHellman> -Objekt können Sie die <xref:System.Security.Cryptography.ECDiffieHellman.Create%28System.String%29> -methodenüberladung, um das Erstellen eines benutzerdefinierten `algorithm` Zeichenfolge, die Ihre Implementierung angibt.  
+  
+ Die `algorithm` Parameter gibt den Namen der Implementierung des ECDH-Algorithmus. In der folgenden Zeichenfolgen, die alle finden Sie in der gleichen-Implementierung, die derzeit die einzige Implementierung ist unterstützt das [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]:  
+  
+-   "ECDH"  
+  
+-   "ECDiffieHellman"  
+  
+-   "ECDiffieHellmanCng"  
+  
+-   "System.Security.Cryptography.ECDiffieHellmanCng"  
+  
+ Sie können auch angeben, den Namen einer benutzerdefinierten ECDH-Implementierung für die `algorithm` Parameter. Wenn in diesem Fall wird die <xref:System.Security.Cryptography.CryptoConfig> Objekt wird verwendet, um zu bestimmen, ob ein ECDH-Objekt erstellt werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="algorithm" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeriveKeyFromHash">
+      <MemberSignature Language="C#" Value="public byte[] DeriveKeyFromHash (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] DeriveKeyFromHash(class System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash(System.Security.Cryptography.ECDiffieHellmanPublicKey,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherPartyPublicKey" Type="System.Security.Cryptography.ECDiffieHellmanPublicKey" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="otherPartyPublicKey">Der öffentliche Schlüssel der anderen Partei.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Ableiten des Schlüsselmaterials verwendet werden soll.</param>
+        <summary>Leitet Bytes ab, die mithilfe einer Hashfunktion als Schlüssel verwendet werden können. Der öffentliche Schlüssel einer anderen Partei und der Name des Hashalgorithmus werden übergeben.</summary>
+        <returns>Das Schlüsselmaterial aus dem Schlüsselaustausch mit dem öffentlichen Schlüssel der anderen Partei.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung ruft die <xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%2A> Methode übergeben `null` als die Stellen, und fügt Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeriveKeyFromHash">
+      <MemberSignature Language="C#" Value="public virtual byte[] DeriveKeyFromHash (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[] secretPrepend, byte[] secretAppend);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] DeriveKeyFromHash(class System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, unsigned int8[] secretPrepend, unsigned int8[] secretAppend) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash(System.Security.Cryptography.ECDiffieHellmanPublicKey,System.Security.Cryptography.HashAlgorithmName,System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherPartyPublicKey" Type="System.Security.Cryptography.ECDiffieHellmanPublicKey" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="secretPrepend" Type="System.Byte[]" />
+        <Parameter Name="secretAppend" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="otherPartyPublicKey">Der öffentliche Schlüssel der anderen Partei.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Ableiten des Schlüsselmaterials verwendet werden soll.</param>
+        <param name="secretPrepend">Ein Wert, der dem abgeleiteten geheimen Schlüssel vor dem Hashverfahren vorangestellt wird.</param>
+        <param name="secretAppend">Ein Wert, der dem abgeleiteten geheimen Schlüssel vor dem Hashverfahren angefügt wird.</param>
+        <summary>Leitet bei Implementierung in einer abgeleiteten Klasse Bytes ab, die mithilfe einer Hashfunktion als Schlüssel verwendet werden können. Der öffentliche Schlüssel einer anderen Partei, der Name des Hashalgorithmus, ein vorangestellter und ein angefügter Wert werden übergeben.</summary>
+        <returns>Das Schlüsselmaterial aus dem Schlüsselaustausch mit dem öffentlichen Schlüssel der anderen Partei.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeriveKeyFromHmac">
+      <MemberSignature Language="C#" Value="public byte[] DeriveKeyFromHmac (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[] hmacKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] DeriveKeyFromHmac(class System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, unsigned int8[] hmacKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac(System.Security.Cryptography.ECDiffieHellmanPublicKey,System.Security.Cryptography.HashAlgorithmName,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherPartyPublicKey" Type="System.Security.Cryptography.ECDiffieHellmanPublicKey" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="hmacKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="otherPartyPublicKey">Der öffentliche Schlüssel der anderen Partei.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Ableiten des Schlüsselmaterials verwendet werden soll.</param>
+        <param name="hmacKey">Der Schlüssel für den HMAC.</param>
+        <summary>Leitet Bytes ab, die als Schlüssel mit einem Hash-based Message Authentication Code (HMAC) verwendet werden können.</summary>
+        <returns>Das Schlüsselmaterial aus dem Schlüsselaustausch mit dem öffentlichen Schlüssel der anderen Partei.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung ruft die <xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%2A> Methode übergeben `null` als die Stellen, und fügt Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeriveKeyFromHmac">
+      <MemberSignature Language="C#" Value="public virtual byte[] DeriveKeyFromHmac (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[] hmacKey, byte[] secretPrepend, byte[] secretAppend);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] DeriveKeyFromHmac(class System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, unsigned int8[] hmacKey, unsigned int8[] secretPrepend, unsigned int8[] secretAppend) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac(System.Security.Cryptography.ECDiffieHellmanPublicKey,System.Security.Cryptography.HashAlgorithmName,System.Byte[],System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherPartyPublicKey" Type="System.Security.Cryptography.ECDiffieHellmanPublicKey" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="hmacKey" Type="System.Byte[]" />
+        <Parameter Name="secretPrepend" Type="System.Byte[]" />
+        <Parameter Name="secretAppend" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="otherPartyPublicKey">Der öffentliche Schlüssel der anderen Partei.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Ableiten des Schlüsselmaterials verwendet werden soll.</param>
+        <param name="hmacKey">Der Schlüssel für den HMAC.</param>
+        <param name="secretPrepend">Ein Wert, der dem abgeleiteten geheimen Schlüssel vor dem Hashverfahren vorangestellt wird.</param>
+        <param name="secretAppend">Ein Wert, der dem abgeleiteten geheimen Schlüssel vor dem Hashverfahren angefügt wird.</param>
+        <summary>Leitet bei Implementierung in eine abgeleitete Klasse Bytes ab, die mit einem Hash-based Message Authentication Code (HMAC) als Schlüssel verwendet werden können.</summary>
+        <returns>Das Schlüsselmaterial aus dem Schlüsselaustausch mit dem öffentlichen Schlüssel der anderen Partei.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeriveKeyMaterial">
+      <MemberSignature Language="C#" Value="public virtual byte[] DeriveKeyMaterial (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] DeriveKeyMaterial(class System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.DeriveKeyMaterial(System.Security.Cryptography.ECDiffieHellmanPublicKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherPartyPublicKey" Type="System.Security.Cryptography.ECDiffieHellmanPublicKey" />
+      </Parameters>
+      <Docs>
+        <param name="otherPartyPublicKey">Der öffentliche Schlüssel der anderen Partei.</param>
+        <summary>Leitet die öffentlichen Schlüssel für eine andere Partei Bytes, die als Schlüssel verwendet werden können.</summary>
+        <returns>Das Schlüsselmaterial aus dem Schlüsselaustausch mit dem öffentlichen Schlüssel der anderen Partei.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu öffentlichen Schlüsseln finden Sie unter der <xref:System.Security.Cryptography.ECDiffieHellmanPublicKey> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeriveKeyTls">
+      <MemberSignature Language="C#" Value="public virtual byte[] DeriveKeyTls (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, byte[] prfLabel, byte[] prfSeed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] DeriveKeyTls(class System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, unsigned int8[] prfLabel, unsigned int8[] prfSeed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.DeriveKeyTls(System.Security.Cryptography.ECDiffieHellmanPublicKey,System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherPartyPublicKey" Type="System.Security.Cryptography.ECDiffieHellmanPublicKey" />
+        <Parameter Name="prfLabel" Type="System.Byte[]" />
+        <Parameter Name="prfSeed" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="otherPartyPublicKey">Der öffentliche Schlüssel der anderen Partei.</param>
+        <param name="prfLabel">Die ASCII-codierte PRF-Bezeichnung.</param>
+        <param name="prfSeed">Der 64-Byte-PRF-Startwert.</param>
+        <summary>Leitet bei Implementierung in einer abgeleiteten Klasse Bytes ab, die mithilfe eines Transport Layer Security-Pseudo-Random Function-Ableitungsalgorithmus (TLS, PRF) als Schlüssel verwendet werden können.</summary>
+        <returns>Das Schlüsselmaterial aus dem Schlüsselaustausch mit dem öffentlichen Schlüssel der anderen Partei.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportExplicitParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.ECParameters ExportExplicitParameters (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Security.Cryptography.ECParameters ExportExplicitParameters(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.ExportExplicitParameters(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECParameters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" />, wenn private Parameter angegeben werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Exportiert beim Überschreiben in einer abgeleiteten Klasse, die Öffentlichkeit oder die öffentliche und private Schlüsselinformationen, die mit dem expliziten Kurve Formular aus einer funktionierenden <see cref="T:System.Security.Cryptography.ECDiffieHellman" /> um eine <see cref="T:System.Security.Cryptography.ECParameters" /> strukturieren, sodass es zum übergeben werden kann die <see cref="M:System.Security.Cryptography.ECDiffieHellman.ImportParameters(System.Security.Cryptography.ECParameters)" /> Methode.</summary>
+        <returns>Ein Objekt, das unter Verwendung des expliziten Kurvenformats den Punkt auf der Kurve für diesen Schlüssel darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.ECParameters ExportParameters (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Security.Cryptography.ECParameters ExportParameters(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.ExportParameters(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECParameters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" />, um private Parameter einzuschließen, oder <see langword="false" />, um nur die öffentlichen Parameter einzuschließen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse exportiert den öffentlichen oder die öffentliche und private Schlüsselinformationen aus einer funktionierenden <see cref="T:System.Security.Cryptography.ECDiffieHellman" /> um eine <see cref="T:System.Security.Cryptography.ECParameters" /> strukturieren, sodass es zum übergeben werden kann die <see cref="M:System.Security.Cryptography.ECDiffieHellman.ImportParameters(System.Security.Cryptography.ECParameters)" /> Methode.</summary>
+        <returns>Ein Objekt, das den Punkt auf der Kurve für diesen Schlüssel darstellt. Es kann an die <see cref="M:System.Security.Cryptography.ECDiffieHellman.ImportParameters(System.Security.Cryptography.ECParameters)" />-Methode übergeben werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Kurve einen Namen besitzt, die <xref:System.Security.Cryptography.ECParameters.Curve> Eigenschaft benannte Kurvenzugparameter enthält; andernfalls enthält es explizite Parametern.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateKey">
+      <MemberSignature Language="C#" Value="public virtual void GenerateKey (System.Security.Cryptography.ECCurve curve);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateKey(valuetype System.Security.Cryptography.ECCurve curve) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.GenerateKey(System.Security.Cryptography.ECCurve)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="curve" Type="System.Security.Cryptography.ECCurve" />
+      </Parameters>
+      <Docs>
+        <param name="curve">Die Kurve, die für das Generieren eines kurzlebigen Paars aus privatem und öffentlichem Schlüssel verwendet wird.</param>
+        <summary>Generiert beim Überschreiben in einer abgeleiteten Klasse ein neues kurzlebiges Paar aus privatem und öffentlichem Schlüssel für die angegebene Kurve.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `curve`Überprüfen müssen (d. h. es muss zurückgegeben werden `true`) bei der Übergabe an die <xref:System.Security.Cryptography.ECCurve.Validate%2A?displayProperty=nameWithType> Methode) und nicht implizit sein.  
+  
+ Merkmal-2-Kurven werden unter Windows nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="curve" /> führt keine Validierung durch.</exception>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportParameters">
+      <MemberSignature Language="C#" Value="public virtual void ImportParameters (System.Security.Cryptography.ECParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ImportParameters(valuetype System.Security.Cryptography.ECParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellman.ImportParameters(System.Security.Cryptography.ECParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Security.Cryptography.ECParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Die zu importierenden Parameter der Kurve.</param>
+        <summary>Importiert beim Überschreiben in einer abgeleiteten Klasse die angegebenen Parameter für eine <see cref="T:System.Security.Cryptography.ECCurve" /> als einen kurzlebigen Schlüssel in das aktuelle <see cref="T:System.Security.Cryptography.ECDiffieHellman" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `parameters`Überprüfen müssen (d. h. es muss zurückgegeben werden `true`) bei der Übergabe an die <xref:System.Security.Cryptography.ECParameters.Validate%2A?displayProperty=nameWithType> Methode. Parameter über implizite Kurven werden nicht unterstützt.  
+  
+ Merkmal-2-Kurven werden unter Windows nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="parameters" /> führt keine Validierung durch.</exception>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyExchangeAlgorithm">
+      <MemberSignature Language="C#" Value="public override string KeyExchangeAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyExchangeAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDiffieHellman.KeyExchangeAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Algorithmus für den Schlüsselaustausch ab.</summary>
+        <value>Der Name des Algorithmus für den Schlüsselaustausch.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung (nicht überschrieben) für diese Eigenschaft gibt die Zeichenfolge "ECDiffieHellman" zurück.  
+  
+ Diese Eigenschaft wird geerbt, aus der <xref:System.Security.Cryptography.AsymmetricAlgorithm> Basisklasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicKey">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.ECDiffieHellmanPublicKey PublicKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.ECDiffieHellmanPublicKey PublicKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDiffieHellman.PublicKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellmanPublicKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den öffentlichen Schlüssel, der von der aktuellen Elliptic Curve Diffie-Hellman (ECDH) Instanz verwendet wird.</summary>
+        <value>Den öffentlichen Teil des Schlüsselpaars ECDH, die von diesem verwendeten <see cref="T:System.Security.Cryptography.ECDiffieHellman" /> Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureAlgorithm">
+      <MemberSignature Language="C#" Value="public override string SignatureAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignatureAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDiffieHellman.SignatureAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Signaturalgorithmus ab.</summary>
+        <value>Immer <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird geerbt, aus der <xref:System.Security.Cryptography.AsymmetricAlgorithm> Basisklasse.  
+  
+ Der Algorithmus Elliptic Curve Diffie-Hellman (ECDH) wird verwendet, für die schlüsselableitung, keine digitale Signatur Generation. Diese Eigenschaft daher gibt `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

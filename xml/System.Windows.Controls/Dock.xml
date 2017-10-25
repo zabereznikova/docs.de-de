@@ -1,0 +1,89 @@
+<Type Name="Dock" FullName="System.Windows.Controls.Dock">
+  <TypeSignature Language="C#" Value="public enum Dock" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Dock extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Dock" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die <see cref="T:System.Windows.Controls.Dock" />-Position eines untergeordneten Elements an, das sich innerhalb eines <see cref="T:System.Windows.Controls.DockPanel" /> befindet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie auf der Platte festlegen. LastChildFill-Eigenschaft, um `true`, dies die Standardeinstellung ist, füllt das letzte untergeordnete Element von einem Platte immer den verbleibenden Platz, docken Sie unabhängig von einem anderen Wert an, die Sie auf das letzte untergeordnete Element festlegen. Um ein untergeordnetes Element in einer anderen Richtung anzudocken, muss der Platte festgelegt werden. LastChildFill-Eigenschaft, um `false` und muss auch festlegen, eine Richtung Andocken explizit auf das letzte untergeordnete Element.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Dock Bottom = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Dock.Bottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Dock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein untergeordnetes Element, das sich unten auf dem <see cref="T:System.Windows.Controls.DockPanel" /> befindet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Dock Left = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Dock.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Dock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein untergeordnetes Element, das sich auf der linken Seite vom <see cref="T:System.Windows.Controls.DockPanel" /> befindet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Dock Right = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Dock.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Dock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein untergeordnetes Element, das sich auf der rechten Seite vom <see cref="T:System.Windows.Controls.DockPanel" /> befindet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Dock Top = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Dock.Top" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Dock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein untergeordnetes Element, das sich oben auf dem <see cref="T:System.Windows.Controls.DockPanel" /> befindet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

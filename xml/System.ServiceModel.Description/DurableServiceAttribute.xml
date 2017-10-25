@@ -1,0 +1,193 @@
+<Type Name="DurableServiceAttribute" FullName="System.ServiceModel.Description.DurableServiceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DurableServiceAttribute : Attribute, System.ServiceModel.Description.IServiceBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DurableServiceAttribute extends System.Attribute implements class System.ServiceModel.Description.IServiceBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.DurableServiceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.WorkflowServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IServiceBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The WF3 types are deprecated.  Instead, please use the new WF4 types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt das interne Ausführungsverhalten einer permanenten Dienstvertragsimplementierung an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Elemente werden als Teil der Validierungslogik für permanente Dienste überprüft:  
+  
+-   Alle sitzungsbasierten Bindungen verfügen über ein Kontextbindungselement wie <xref:System.ServiceModel.Configuration.WSHttpContextBindingElement> oder <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>.  
+  
+-   Der <xref:System.ServiceModel.ConcurrencyMode>-Wert darf nicht auf "Multiple" festgelegt werden.  
+  
+-   Der <xref:System.ServiceModel.InstanceContextMode>-Wert muss "PerSession" sein.  
+  
+-   Es muss ein für den Dienst konfigurierter sitzungsbasierter Endpunkt vorhanden sein.  
+  
+-   Wenn der Vertrag keine Sitzungen zulässt, muss <xref:System.ServiceModel.Description.DurableOperationAttribute.CanCreateInstance%2A> für alle Vorgänge auf `true` festgelegt werden.  
+  
+-   Wenn der Vertrag Sitzungen zulässt, müssen alle Vorgänge, für die <xref:System.ServiceModel.Description.DurableOperationAttribute.CanCreateInstance%2A> auf `true` festgelegt ist, Anforderungs-Antwort-Vorgänge sein, d.&#160;h., <xref:System.Workflow.Activities.OperationInfo.IsOneWay%2A> kann nicht auf `true` festgelegt werden.  
+  
+-   Wenn <xref:System.ServiceModel.Description.DurableServiceAttribute.SaveStateInOperationTransaction%2A> auf `true` festgelegt ist, müssen alle Vorgänge auf dem Dienst entweder mit <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A?displayProperty=nameWithType>, festgelegt auf `true`, oder mit <xref:System.ServiceModel.TransactionFlowOption?displayProperty=nameWithType> markiert sein. Zusätzlich muss <xref:System.ServiceModel.ConcurrencyMode> auf "Single" festgelegt sein.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DurableServiceAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DurableServiceAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.DurableServiceAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddBindingParameters">
+      <MemberSignature Language="C#" Value="public void AddBindingParameters (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase, System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBindingParameters(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase, class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DurableServiceAttribute.AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+        <Parameter Name="endpoints" Type="System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt;" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">Nicht implementiert.</param>
+        <param name="serviceHostBase">Nicht implementiert.</param>
+        <param name="endpoints">Nicht implementiert.</param>
+        <param name="bindingParameters">Nicht implementiert.</param>
+        <summary>In <see cref="T:System.ServiceModel.Description.DurableServiceAttribute" /> nicht implementiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyDispatchBehavior (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DurableServiceAttribute.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">Die Dienstbeschreibung.</param>
+        <param name="serviceHostBase">Der Diensthost.</param>
+        <summary>Passt die Dienstlaufzeit zur Unterstützung permanenter Dienstverhaltenseigenschaften an, z.&amp;#160;B. durch Angeben eines <see cref="T:System.ServiceModel.Persistence.PersistenceProvider" /> für den Dienst.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveStateInOperationTransaction">
+      <MemberSignature Language="C#" Value="public bool SaveStateInOperationTransaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SaveStateInOperationTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.DurableServiceAttribute.SaveStateInOperationTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob der Dienstinstanzzustand im <see cref="T:System.ServiceModel.Persistence.PersistenceProvider" /> unter Verwendung der gleichen Transaktion beibehalten wird, unter der der Vorgang ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />, wenn der Dienstinstanzzustand mit der gleichen Transaktion beibehalten wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.ServiceModel.Description.DurableServiceAttribute.SaveStateInOperationTransaction%2A> auf `true` festgelegt ist, müssen alle Vorgänge auf dem Dienst entweder mit <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A?displayProperty=nameWithType>, festgelegt auf `true`, oder mit <xref:System.ServiceModel.TransactionFlowOption?displayProperty=nameWithType> markiert sein. Zusätzlich muss <xref:System.ServiceModel.ConcurrencyMode> auf "Single" festgelegt sein.  
+  
+ Durch das Festlegen von <xref:System.ServiceModel.Description.DurableServiceAttribute.SaveStateInOperationTransaction%2A> auf `true` wird der Dienstzustand transaktional mit der Vorgangstransaktion gemacht. Dies bedeutet, dass bei einem Rollback der Vorgangstransaktion auch für den Dienstzustand ein Rollback ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownExceptionAction">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.UnknownExceptionAction UnknownExceptionAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Description.UnknownExceptionAction UnknownExceptionAction" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.DurableServiceAttribute.UnknownExceptionAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.UnknownExceptionAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den dem permanenten Dienst zugeordneten <see cref="T:System.ServiceModel.Description.UnknownExceptionAction" />-Enumerationswert ab oder legt ihn fest.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Description.UnknownExceptionAction" />-Enumerationswert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.ServiceModel.Description.DurableServiceAttribute> instanziiert ist, legt es diesen Eigenschaftswert auf <xref:System.ServiceModel.Description.UnknownExceptionAction.TerminateInstance> fest. Dies bedeutet, dass bei jedem Feststellen einer unbekannten Ausnahme durch den permanenten Dienst die Dienstinstanz beendet wird und alle Zustandsinformationen aus dem persistenten Speicher gelöscht werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DurableServiceAttribute.Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">Die Dienstbeschreibung.</param>
+        <param name="serviceHostBase">Der Diensthost.</param>
+        <summary>Überprüft, ob alle permanenten Operationen auf dem Dienst ordnungsgemäß eingerichtet sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

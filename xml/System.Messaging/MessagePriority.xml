@@ -1,0 +1,168 @@
+<Type Name="MessagePriority" FullName="System.Messaging.MessagePriority">
+  <TypeSignature Language="C#" Value="public enum MessagePriority" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MessagePriority extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessagePriority" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Priorität Message Queuing eine Nachricht gilt während des Sendens an eine Warteschlange, und beim Einfügen von der Nachricht in die Zielwarteschlange an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.MessagePriority> Enumeration wird verwendet, durch die <xref:System.Messaging.Message> Klasse <xref:System.Messaging.Message.Priority%2A> Eigenschaft. Diese Eigenschaft wirkt sich wie Message Queuing-Nachricht verarbeitet, während des Routings und des endgültigen erreichen. Nachrichten höherer Priorität werden beim Routing bevorzugt und gegen Anfang der Zielwarteschlange eingefügt. Nachrichten mit der gleichen Priorität werden entsprechend ihrer Ankunftszeit in der Warteschlange platziert.  
+  
+ Wenn Message Queuing eine Nachricht an eine öffentliche Warteschlange weitergeleitet wird, wird die Prioritätsstufe der Nachricht die Prioritätsstufe der öffentlichen Warteschlange hinzugefügt (die Sie über zugreifen können die <xref:System.Messaging.MessageQueue> Klasse <xref:System.Messaging.MessageQueue.BasePriority%2A> Eigenschaft). Die Prioritätsstufe der Warteschlange hat keine Auswirkungen auf wie Nachrichten in der Warteschlange, nur auf Message Queuing-Nachricht während des Sendens Behandlung platziert werden.  
+  
+ Basispriorität gilt nur für Öffentliche Warteschlangen. Für eine private Warteschlange ist die Basispriorität immer 0 (null).  
+  
+ Sie können eine sinnvolle Priorität nur für nicht transaktionale Nachrichten festlegen. Message Queuing legt automatisch die Priorität für die transaktionale Nachrichten `Lowest`, wodurch Transaktionsnachricht Priorität, ignoriert werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel zwei Nachrichten unterschiedliche Prioritäten an die Warteschlange sendet, und sie werden später abgerufen.  
+  
+ [!code-cpp[Message.DefaultPropertiesToSend#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CPP/message_defaultandpriority.cpp#1)]
+ [!code-csharp[Message.DefaultPropertiesToSend#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CS/message_defaultandpriority.cs#1)]
+ [!code-vb[Message.DefaultPropertiesToSend#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/VB/message_defaultandpriority.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AboveNormal">
+      <MemberSignature Language="C#" Value="AboveNormal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessagePriority AboveNormal = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessagePriority.AboveNormal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessagePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zwischen <see cref="F:System.Messaging.MessagePriority.High" /> und <see cref="F:System.Messaging.MessagePriority.Normal" /> Nachricht Priorität.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessagePriority High = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessagePriority.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessagePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Nachrichtenpriorität ist hoch.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Highest">
+      <MemberSignature Language="C#" Value="Highest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessagePriority Highest = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessagePriority.Highest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessagePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Höchste Priorität für Nachrichten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Low">
+      <MemberSignature Language="C#" Value="Low" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessagePriority Low = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessagePriority.Low" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessagePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Mit niedriger Nachrichtenpriorität.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Lowest">
+      <MemberSignature Language="C#" Value="Lowest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessagePriority Lowest = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessagePriority.Lowest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessagePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Niedrigste Priorität für Nachrichten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessagePriority Normal = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessagePriority.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessagePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Nachrichtenpriorität ist normal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VeryHigh">
+      <MemberSignature Language="C#" Value="VeryHigh" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessagePriority VeryHigh = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessagePriority.VeryHigh" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessagePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zwischen <see langword="Highest" /> und <see langword="High" /> Nachricht Priorität.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VeryLow">
+      <MemberSignature Language="C#" Value="VeryLow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessagePriority VeryLow = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessagePriority.VeryLow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessagePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zwischen <see langword="Low" /> und <see langword="Lowest" /> Nachricht Priorität.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

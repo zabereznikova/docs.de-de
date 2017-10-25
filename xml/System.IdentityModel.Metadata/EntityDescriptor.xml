@@ -1,0 +1,149 @@
+<Type Name="EntityDescriptor" FullName="System.IdentityModel.Metadata.EntityDescriptor">
+  <TypeSignature Language="C#" Value="public class EntityDescriptor : System.IdentityModel.Metadata.MetadataBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityDescriptor extends System.IdentityModel.Metadata.MetadataBase" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Metadata.EntityDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Metadata.MetadataBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Entitätsdeskriptor dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityDescriptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Metadata.EntityDescriptor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Metadata.EntityDescriptor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Metadata.EntityDescriptor.EntityId%2A> -Eigenschaft wird mit initialisiert `null` in der neuen Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityDescriptor (System.IdentityModel.Metadata.EntityId entityId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Metadata.EntityId entityId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Metadata.EntityDescriptor.#ctor(System.IdentityModel.Metadata.EntityId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="entityId" Type="System.IdentityModel.Metadata.EntityId" />
+      </Parameters>
+      <Docs>
+        <param name="entityId">Die Entitäts-ID. Initialisiert die <see cref="P:System.IdentityModel.Metadata.EntityDescriptor.EntityId" /> Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Metadata.EntityDescriptor" /> -Klasse, die die angegebene Entität-ID verfügt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contacts">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.IdentityModel.Metadata.ContactPerson&gt; Contacts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.IdentityModel.Metadata.ContactPerson&gt; Contacts" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.EntityDescriptor.Contacts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.IdentityModel.Metadata.ContactPerson&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.IdentityModel.Metadata.ContactPerson" /> für dieses Deskriptors.</summary>
+        <value>Die Auflistung der Kontaktperson-Objekte. Der Standard ist eine leere Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityId">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Metadata.EntityId EntityId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Metadata.EntityId EntityId" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.EntityDescriptor.EntityId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Metadata.EntityId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Entitäts-ID für dieses Deskriptors.</summary>
+        <value>Die Entitäts-ID. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FederationId">
+      <MemberSignature Language="C#" Value="public string FederationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FederationId" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.EntityDescriptor.FederationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Verbund-ID für dieses Deskriptors.</summary>
+        <value>Die Verbund-ID. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Organization">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Metadata.Organization Organization { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Metadata.Organization Organization" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.EntityDescriptor.Organization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Metadata.Organization</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Organisation für dieses Deskriptors.</summary>
+        <value>Die Organisation. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoleDescriptors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.IdentityModel.Metadata.RoleDescriptor&gt; RoleDescriptors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.IdentityModel.Metadata.RoleDescriptor&gt; RoleDescriptors" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.EntityDescriptor.RoleDescriptors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.IdentityModel.Metadata.RoleDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Rolle Deskriptoren für dieses Deskriptors ab.</summary>
+        <value>Die Auflistung der Rolle Deskriptoren. Der Standard ist eine leere Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

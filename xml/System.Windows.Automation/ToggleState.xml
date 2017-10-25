@@ -1,0 +1,91 @@
+<Type Name="ToggleState" FullName="System.Windows.Automation.ToggleState">
+  <TypeSignature Language="C#" Value="public enum ToggleState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToggleState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.ToggleState" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("ad7db4af-7166-4478-a402-ad5b77eab2fa")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Werte, die den <see cref="T:System.Windows.Automation.ToggleState" /> eines Benutzeroberflächenautomatisierungs-Elements angeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Steuerelement muss durchlaufen seiner <xref:System.Windows.Automation.ToggleState> in dieser Reihenfolge: On, Off und, falls unterstützt, unbestimmt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Indeterminate">
+      <MemberSignature Language="C#" Value="Indeterminate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ToggleState Indeterminate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ToggleState.Indeterminate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ToggleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Benutzeroberflächenautomatisierungs-Element hat einen unbestimmten Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die unbestimmte-Eigenschaft kann verwendet werden, um anzugeben, ob der Benutzer auf ein Steuerelement abgearbeitet wurde. Beispielsweise können Sie das Kontrollkästchen aktiviert und abgeblendet, der angibt, eines unbestimmten Zustands angezeigt.  
+  
+ Erstellen ggf. einen unbestimmten Zustand unterscheidet sich vom Deaktivieren des Steuerelements. Folglich kann ein Kontrollkästchen in den unbestimmten Zustand weiterhin den Fokus erhalten. Wenn der Benutzer ein unbestimmtes Steuerelement klickt der <xref:System.Windows.Automation.ToggleState.Indeterminate> überdauern, bis dessen nächsten Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Off">
+      <MemberSignature Language="C#" Value="Off" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ToggleState Off = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ToggleState.Off" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ToggleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Benutzeroberflächenautomatisierungs-Element ist nicht ausgewählt, aktiviert, markiert oder auf andere Weise aktiviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="On">
+      <MemberSignature Language="C#" Value="On" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ToggleState On = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ToggleState.On" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ToggleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Benutzeroberflächenautomatisierungs-Element ist ausgewählt, aktiviert, markiert oder auf andere Weise aktiviert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

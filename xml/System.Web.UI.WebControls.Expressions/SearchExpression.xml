@@ -1,0 +1,180 @@
+<Type Name="SearchExpression" FullName="System.Web.UI.WebControls.Expressions.SearchExpression">
+  <TypeSignature Language="C#" Value="public class SearchExpression : System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SearchExpression extends System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Expressions.SearchExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Möglichkeit, ein oder mehrere Felder nach Zeichenfolgenwerten zu durchsuchen und diese mit einem angegebenen Zeichenfolgenwert zu vergleichen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement bietet die Möglichkeit zum Filtern von Daten auf einer Webseite mithilfe der <xref:System.Web.UI.WebControls.Expressions.SearchExpression> Klasse. Die <xref:System.Web.UI.WebControls.Expressions.SearchExpression> Klasse vergleicht eine angegebene Zeichenfolge in ein Feld oder Felder auf einen Wert, den Sie angeben. Der Ausdruck führt einen "beginnt mit", "enthält" oder "endet mit" suchen. Geben Sie Werte für die <xref:System.Web.UI.WebControls.Expressions.SearchExpression.SearchType%2A> und <xref:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields%2A> Eigenschaften um geben den Typ der Suche, die Sie ausführen möchten und die Datenfelder, die Sie suchen möchten. Wenn der LINQ-Anbieter, mit denen Sie in der <xref:System.Web.UI.WebControls.QueryExtender> -Steuerelement unterstützt die Groß-/Kleinschreibung berücksichtigt, können Sie mithilfe der <xref:System.Web.UI.WebControls.Expressions.SearchExpression.ComparisonType%2A> Eigenschaft aktivieren, oder ignorieren von Groß-/Kleinschreibung.  
+  
+ Der zu suchende Wert kann angegeben werden, indem ein [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Steuerelement. Legen Sie zum Angeben der <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.ControlParameter> -Klasse in der <xref:System.Web.UI.WebControls.Expressions.SearchExpression> Objekt, das die ID des eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Steuerelement. Wenn der Wert für die Suche in einem Textfeld eingegeben wird z. B. die <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> Eigenschaft muss festgelegt werden, um die ID des Textfeld-Steuerelement. Können Sie die <xref:System.Web.UI.WebControls.Expressions.SearchExpression> in Kombination mit anderen Ausdrücken haben die Klasse, die die <xref:System.Web.UI.WebControls.QueryExtender> unterstützt, z. B. die <xref:System.Web.UI.WebControls.Expressions.RangeExpression> Filter. Sie können z. B. für Produktnamen suchen, die die Zeichenfolge "Tee" und einem Listenpreis zwischen 100 und 200 enthalten.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie die Name-Spalte in der Products-Tabelle der AdventureWorks-Datenbank für Produkte gesucht werden soll, deren, die mit der Zeichenfolge, die im angegebenen beginnen, der `SearchTextBox` Steuerelement. Das Ergebnis, das von zurückgegeben wird das <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement wird angezeigt, einem <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, die in bereitgestellten [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite mithilfe von deklarativer Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields" /> Eigenschaft <see langword="null" /> (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)])</exception>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SearchExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.SearchExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Expressions.SearchExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComparisonType">
+      <MemberSignature Language="C#" Value="public StringComparison ComparisonType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.StringComparison ComparisonType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.SearchExpression.ComparisonType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringComparison</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der auszuführenden Zeichenfolgenvergleichs an.</summary>
+        <value>Der Typ der auszuführenden Zeichenfolgenvergleichs an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht Ihnen die Verwendung der <xref:System.StringComparison> Enumeration, um festzulegen, wie die Suche ausgeführt wird. Die <xref:System.StringComparison> Enumeration wird verwendet, um anzugeben, ob ein Zeichenfolgenvergleich der aktuellen Kultur oder der invarianten Kultur verwendet, und gibt an, ob Text oder Ordinalsortierung verwendet. Wenn der Datenanbieter, die die <xref:System.Web.UI.WebControls.QueryExtender> verwendet unterstützt die Groß-/Kleinschreibung berücksichtigt, können Sie eine der Eigenschaften des Vergleichs aktivieren oder zu ignorieren von Groß-/Kleinschreibung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataFields">
+      <MemberSignature Language="C#" Value="public string DataFields { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataFields" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert ein einzelnes Feld oder eine durch Trennzeichen getrennte Liste von Feldern zu suchen.</summary>
+        <value>Das Feld oder Felder, die durchsucht werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Expressions.SearchExpression> Klasse führt die Suche in eine oder mehrere Datenfelder in der angegebenen Tabelle. Mindestens ein Datenfeld muss angegeben werden, der <xref:System.Web.UI.WebControls.Expressions.SearchExpression> Instanz. Wenn Sie mehr als ein Datenfeld angeben, trennen Sie die Felder durch ein Komma.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie der Name und ProductNumber Datenfelder in der Products-Tabelle der AdventureWorks-Datenbank für Produkte gesucht, deren Namen, die mit einer angegebenen Zeichenfolge beginnen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite mithilfe von deklarativer Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:SearchExpression SearchType="StartsWith"   
+      DataFields="Name","ProductNumber" >  
+  <asp:ControlParameter ControlID="SearchTextBox" />  
+</asp:SearchExpression>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryable">
+      <MemberSignature Language="C#" Value="public override System.Linq.IQueryable GetQueryable (System.Linq.IQueryable source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Linq.IQueryable GetQueryable(class System.Linq.IQueryable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.SearchExpression.GetQueryable(System.Linq.IQueryable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+      </Parameters>
+      <Docs>
+        <param name="source">Zu verwendendes Objekt.</param>
+        <summary>Wendet eine <see cref="T:System.Web.UI.WebControls.Expressions.SearchExpression" /> Objekt mit dem angegebenen <see cref="T:System.Linq.IQueryable" /> -Objekt auf Grundlage der <see cref="T:System.Web.UI.WebControls.Expressions.SearchType" /> Objekt.</summary>
+        <returns>Eine Instanz von der <see cref="T:System.Linq.IQueryable" /> Objekt, mit dem <see cref="T:System.Web.UI.WebControls.Expressions.SearchExpression" /> angewendet wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wertet die Auflistung von Parametern, die verwendet werden die <xref:System.Web.UI.WebControls.Expressions.SearchExpression> Objekt, und wendet den Ausdruck auf die <xref:System.Linq.IQueryable> Objekt. Wenn mehrere Datenfelder angegeben werden, die `AND` Operator auf die Datenfelder angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SearchType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Expressions.SearchType SearchType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Expressions.SearchType SearchType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.SearchExpression.SearchType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Expressions.SearchType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.UI.WebControls.Expressions.SearchType" /> -Wert, der festlegt, in der Zeichenfolge, in dem die Suche erfolgt.</summary>
+        <value>Der Typ der auszuführenden Suche.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Expressions.SearchType> Eigenschaft verwendet die <xref:System.Web.UI.WebControls.Expressions.SearchType> -Enumeration, die die Suche zu verwenden, in einer Instanz von enthält die <xref:System.Web.UI.WebControls.Expressions.SearchExpression> Klasse.  
+  
+ Die folgende Tabelle enthält die möglichen Enumerationswerte.  
+  
+|Enumeration|Beschreibung|  
+|-----------------|-----------------|  
+|<xref:System.Web.UI.WebControls.Expressions.SearchType.StartsWith>|Gibt eine Suche, die an einer beliebigen Stelle in einem Feld beginnt.|  
+|<xref:System.Web.UI.WebControls.Expressions.SearchType.Contains>|Gibt eine Suche, die beginnt, am Anfang eines Felds an.|  
+|<xref:System.Web.UI.WebControls.Expressions.SearchType.EndsWith>|Gibt eine Suche an, die am Ende eines Felds.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

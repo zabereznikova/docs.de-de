@@ -1,0 +1,96 @@
+<Type Name="OdbcRowUpdatedEventArgs" FullName="System.Data.Odbc.OdbcRowUpdatedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class OdbcRowUpdatedEventArgs : System.Data.Common.RowUpdatedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OdbcRowUpdatedEventArgs extends System.Data.Common.RowUpdatedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Odbc.OdbcRowUpdatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Odbc</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.RowUpdatedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Data.Odbc.OdbcDataAdapter.RowUpdated" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Odbc.OdbcDataAdapter.RowUpdated> Ereignis wird ausgelöst, wenn ein Update auf eine Zeile abgeschlossen ist.  
+  
+ Bei Verwendung der `Update` -Methode, es gibt zwei Ereignisse, die für jede Datenzeile aktualisiert auftreten: <xref:System.Data.Odbc.OdbcDataAdapter.RowUpdating> und <xref:System.Data.Odbc.OdbcDataAdapter.RowUpdated>. Die Reihenfolge der Ausführung für eine <xref:System.Data.Common.DbDataAdapter.Update%2A> lautet wie folgt:  
+  
+1.  Die Werte in der <xref:System.Data.DataRow> in die Parameterwerte verschoben werden.  
+  
+2.  Das <xref:System.Data.Common.DbDataAdapter.OnRowUpdating%2A>-Ereignis wird ausgelöst.  
+  
+3.  Der Befehl ausgeführt wird.  
+  
+4.  Wenn der Befehl auf FirstReturnedRecord festgelegt ist, befindet sich das erste zurückgegebene Ergebnis der <xref:System.Data.DataRow>.  
+  
+5.  Wenn Output-Parameter vorhanden sind, werden sie platziert, der <xref:System.Data.DataRow>.  
+  
+6.  Das <xref:System.Data.Common.DbDataAdapter.OnRowUpdated%2A>-Ereignis wird ausgelöst.  
+  
+7.  <xref:System.Data.DataRow.AcceptChanges%2A> wird aufgerufen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OdbcRowUpdatedEventArgs (System.Data.DataRow row, System.Data.IDbCommand command, System.Data.StatementType statementType, System.Data.Common.DataTableMapping tableMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataRow row, class System.Data.IDbCommand command, valuetype System.Data.StatementType statementType, class System.Data.Common.DataTableMapping tableMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcRowUpdatedEventArgs.#ctor(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" />
+        <Parameter Name="command" Type="System.Data.IDbCommand" />
+        <Parameter Name="statementType" Type="System.Data.StatementType" />
+        <Parameter Name="tableMapping" Type="System.Data.Common.DataTableMapping" />
+      </Parameters>
+      <Docs>
+        <param name="row">Die <see langword="DataRow" /> durch einen Updatevorgang gesendet.</param>
+        <param name="command">Die <see cref="T:System.Data.Odbc.OdbcCommand" /> ausgeführt wird, wenn <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> aufgerufen wird.</param>
+        <param name="statementType">Eines der <see cref="T:System.Data.StatementType" /> Werte, die den Typ der ausgeführten Abfrage angibt.</param>
+        <param name="tableMapping">Die <see cref="T:System.Data.Common.DataTableMapping" /> gesendeter <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Odbc.OdbcRowUpdatedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcCommand Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Odbc.OdbcCommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcRowUpdatedEventArgs.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.Odbc.OdbcCommand" /> ausgeführt wird, wenn <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> aufgerufen wird.</summary>
+        <value>Die <see cref="T:System.Data.Odbc.OdbcCommand" /> ausgeführt wird, wenn <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> aufgerufen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

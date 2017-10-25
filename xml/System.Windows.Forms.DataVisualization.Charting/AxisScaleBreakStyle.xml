@@ -1,0 +1,307 @@
+<Type Name="AxisScaleBreakStyle" FullName="System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle">
+  <TypeSignature Language="C#" Value="public class AxisScaleBreakStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AxisScaleBreakStyle extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Enabled")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine skalierungsunterbrechung auf der Y-Achse des Diagramms an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Skalierungsunterbrechungen sind absichtliche Diskontinuitäten auf der Y-Achse, die am häufigsten verwendet werden, die Datenpunkte in einer Reihe in einem Diagramm neu zu verteilen. Diese Funktion verbessert die Lesbarkeit, wenn große Unterschiede zwischen den hohen und niedrigen Werten der Daten in einer Reihe gezeichnet wird. Skalierungsunterbrechungen werden nicht aufgrund der Unterschiede zwischen den Daten in mehreren Reihen gezeichnet.  
+  
+ Standardmäßig sind skalierungsunterbrechungen deaktiviert. Sie können auf der Y-Achse skalierungsunterbrechungen aktivieren, durch Festlegen der <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.Enabled%2A> Eigenschaft `true`. Um den vertikalen Abstand der skalierungsunterbrechung zu ändern, geben Sie einen <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.Spacing%2A> Wert. Dies wird als Prozentsatz der Y-Achse Skala berechnet.  
+  
+ Benötigen Sie ausreichende Trennung zwischen Bereichen von Datenpunkten in einer einzelnen Reihe eine skalierungsunterbrechung gezeichnet werden soll. Standardmäßig kann eine skalierungsunterbrechung hinzugefügt werden, nur dann, wenn eine Trennung zwischen den Datenbereichen eines Diagramms mindestens 25 % ausmacht. Wenn Sie eine skalierungsunterbrechung aktivieren, aber es nicht angezeigt wird, auch wenn zwischen den Datenbereichen ein ausreichender Abstand herrscht, Sie festlegen können, die <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.CollapsibleSpaceThreshold%2A> Eigenschaft auf einen Wert kleiner als 25.  
+  
+ Diagramme unterstützen bis zu fünf skalierungsunterbrechungen pro Diagramm. Allerdings kann das Diagramm werden nicht lesbar, wenn Sie mehr als eine skalierungsunterbrechung anzuzeigen. Wenn Sie mehr als zwei Datenbereiche haben, erwägen Sie, die eine andere Methode zum Anzeigen der Daten. Verwenden der <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.MaxNumberOfBreaks%2A> Eigenschaft zum Reduzieren der Anzahl von skalierungsunterbrechungen, die im Diagramm angezeigt werden können.  
+  
+ Wenn eine skalierungsunterbrechung verwendet wird, die Y-Achse Bezeichnungen können versetzt werden. Um die Bezeichnungsoffset zu deaktivieren, legen die <xref:System.Windows.Forms.DataVisualization.Charting.LabelStyle.IsStaggered%2A> Eigenschaft `false`.  
+  
+ Skalierungsunterbrechungen werden unter einer der folgenden Bedingungen nicht unterstützt:  
+  
+-   Kreis-, Ring-, Trichter-, Pyramidendiagramme, "Radial" oder alle gestapelten Diagrammtypen verwendet werden.  
+  
+-   Benutzerdefinierte Intervalle für Bezeichnungen, Teilstriche oder Gitternetzlinien aktiviert sind.  
+  
+-   Der minimale oder maximale Wert für die Achse festgelegt ist.  
+  
+-   Benutzerdefinierte Bezeichnungen werden verwendet.  
+  
+-   Eine logarithmische Y-Achse wird angegeben.  
+  
+-   Achsenansichten auf der Y-Achse z., die b. Durchführen eines Bildlaufs und zoomen, dienen.  
+  
+-   3D-Diagramme verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AxisScaleBreakStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakLineStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.BreakLineStyle BreakLineStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.BreakLineStyle BreakLineStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.BreakLineStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.BreakLineStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Stil der Zeile unterbrechen, die zum Zeichnen der skalierungsunterbrechung verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.BreakLineStyle" />-Enumerationswert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollapsibleSpaceThreshold">
+      <MemberSignature Language="C#" Value="public int CollapsibleSpaceThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CollapsibleSpaceThreshold" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.CollapsibleSpaceThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(25)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schwellenwert des Speicherplatzes im Diagramm, an dem skalierungsunterbrechungen gezeichnet werden.</summary>
+        <value>Ein <see langword="integer" /> Wert, der den Schwellenwert des Speicherplatzes im Diagramm gibt an, welche Größenordnungen Pausen gezeichnet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird als Prozentsatz der Y-Achse Skala gemessen. Standardmäßig ist der Wert auf 25 festgelegt. Dies bedeutet, dass die Datenpunkte in einer Reihe, die über einen Unterschied von mindestens 25 % der Skala mit einer skalierungsunterbrechung reduziert werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob skalierungsunterbrechungen aktiviert sind.</summary>
+        <value>Ein <see langword="Boolean" /> Wert, der angibt, ob skalierungsunterbrechungen aktiviert sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color LineColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color LineColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.LineColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe der Skalierungsunterbrechungslinie fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der die Farbe der Skalierungsunterbrechungslinie darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineDashStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartDashStyle LineDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartDashStyle LineDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.LineDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Stil der Skalierungsunterbrechungslinie.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartDashStyle" /> Wert, der den Stil der Skalierungsunterbrechungslinie darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineWidth">
+      <MemberSignature Language="C#" Value="public int LineWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.LineWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite der Skalierungsunterbrechungslinie.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die Breite der Skalierungsunterbrechungslinie darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxNumberOfBreaks">
+      <MemberSignature Language="C#" Value="public int MaxNumberOfBreaks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxNumberOfBreaks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.MaxNumberOfBreaks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl von skalierungsunterbrechungen, die im Diagramm angezeigt werden.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die maximale Anzahl von Dezimalstellen darstellt, die im Diagramm angezeigt werden unterbrochen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Chart> kann bis zu fünf skalierungsunterbrechungen anzeigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Spacing">
+      <MemberSignature Language="C#" Value="public double Spacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Spacing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.Spacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1.5)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Abstand zwischen den Zeilen der skalierungsunterbrechung. Der Abstand wird als Prozentsatz der Y-Achse dargestellt.</summary>
+        <value>Ein <see langword="double" /> -Wert, den den Abstand zwischen den Zeilen der skalierungsunterbrechung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartFromZero">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.StartFromZero StartFromZero { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.StartFromZero StartFromZero" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.StartFromZero" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.StartFromZero</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Forms.DataVisualization.Charting.StartFromZero" /> -Enumerationswert ab, der angibt, ob die Skala beginnt Unterbrechen von 0 (null).</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.StartFromZero" /> -Enumerationswert ab, der angibt, ob die Skala beginnt Unterbrechen von 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.StartFromZero%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.StartFromZero.Auto>, berechnet das Diagramm automatisch, ob die Y-Achse Skalierung mindestens aus dem niedrigsten Wert in der Reihe oder 0 (null) gestartet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

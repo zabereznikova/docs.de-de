@@ -1,0 +1,1027 @@
+<Type Name="EventLogInstaller" FullName="System.Diagnostics.EventLogInstaller">
+  <TypeSignature Language="C#" Value="public class EventLogInstaller : System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventLogInstaller extends System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventLogInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.Install</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.ComponentInstaller</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht das Installieren und konfigurieren ein Ereignisprotokoll, die Ihre Anwendung liest aus, oder beim Ausführen auf geschrieben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.EventLogInstaller> dient der [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md) bei der Installation ein Ereignisprotokoll. Die <xref:System.Diagnostics.EventLogInstaller> Klasse kann Ereignisprotokolle nur auf dem lokalen Computer installieren.  
+  
+ Verwenden Sie die <xref:System.Diagnostics.EventLogInstaller> Klasse bei die Anwendung in ein Ereignisprotokoll schreibt; es ist nicht notwendig, einen Ereignisprotokoll-Installer für Ihre Anwendung verwenden, um ein Ereignisprotokoll lesen. Anwendungen und Dienste sollten auf Windows-Anwendungsprotokoll oder ein benutzerdefiniertes Protokoll schreiben. Gerätetreiber sollten im Systemprotokoll schreiben.  
+  
+> [!NOTE]
+>  Das Sicherheitsprotokoll ist schreibgeschützt.  
+  
+ Das Installationsprogramm erstellt die Ereignisquelle an die von Ihnen in der <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft und registriert, die sie für das Ereignisprotokoll in angegebenen <xref:System.Diagnostics.EventLogInstaller.Log%2A> Eigenschaft. Dieses Verhalten ist vergleichbar mit einem Aufruf <xref:System.Diagnostics.EventLog.CreateEventSource%2A> auf die <xref:System.Diagnostics.EventLog> Komponente.  
+  
+ Verwenden der <xref:System.Diagnostics.EventLog.WriteEvent%2A> und <xref:System.Diagnostics.EventLog.WriteEntry%2A> Methoden, Ereignisse in ein Ereignisprotokoll schreiben. Sie müssen eine Ereignisquelle zum Schreiben von Ereignissen angeben. Sie müssen erstellen und konfigurieren die Ereignisquelle vor dem Schreiben des ersten Eintrags mit der Quelle.  
+  
+ Erstellen Sie die neue Ereignisquelle während der Installation der Anwendung. Dadurch wird die Zeit für das Betriebssystem, um die Liste der registrierten Ereignisquellen und ihre Konfigurationen zu aktualisieren. Wenn das Betriebssystem hat seine Liste der Ereignisquellen nicht aktualisiert, und Sie versuchen, ein Ereignis mit der neuen Datenquelle zu schreiben, der Schreibvorgang fehl. Sie können konfigurieren, eine neue Datenquelle mit einer <xref:System.Diagnostics.EventLogInstaller>, oder mithilfe der <xref:System.Diagnostics.EventLog.CreateEventSource%2A> Methode. Sie benötigen Administratorrechte auf dem Computer eine neue Ereignisquelle erstellen.  
+  
+ Sie können eine Ereignisquelle für ein vorhandenes Ereignisprotokoll oder ein neues Ereignisprotokoll erstellen. Wenn Sie eine neue Datenquelle für ein neues Ereignisprotokoll erstellen, registriert das System die Quelle für das Protokoll geschrieben, aber das Protokoll wird nicht erstellt werden, bis der erste Eintrag darin geschrieben wird.  
+  
+ Um ein Ereignisprotokoll zu installieren, erstellen Sie eine Projekt Installerklasse, die von erben <xref:System.Configuration.Install.Installer>, und legen Sie die <xref:System.ComponentModel.RunInstallerAttribute> für die Klasse, um `true`. Erstellen Sie in Ihrem Projekt eine <xref:System.Diagnostics.EventLogInstaller> für jedes Ereignis-Protokoll, dass Ihre Anwendung zu schreiben und die Instanz der Klasse Installer hinzuzufügen.  
+  
+ Wenn die [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md) wird aufgerufen, es geht um die <xref:System.ComponentModel.RunInstallerAttribute>. Ist er `true`, installiert das Tool alle Elemente in der <xref:System.Configuration.Install.Installer.Installers%2A> -Auflistung, die Ihr Projektinstallationsprogramm zugeordnet sind. Wenn <xref:System.ComponentModel.RunInstallerAttribute> ist `false`, ignoriert das Tool die Projekt-Installer.  
+  
+ Ändern Sie andere Eigenschaften des ein <xref:System.Diagnostics.EventLogInstaller> entweder vor oder nach dem Hinzufügen der Instanz um die <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung von Ihrem Projekt Installer, aber bevor das Installationstool ausgeführt wird. Sie müssen festlegen, die <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft, wenn Ihre Anwendung in das Ereignisprotokoll geschrieben werden.  
+  
+ Verwenden Sie <xref:System.Diagnostics.EventLogInstaller> zum Registrieren einer neuen Quelle für ein neues oder vorhandenes Ereignisprotokoll; verwenden Sie keine <xref:System.Diagnostics.EventLogInstaller> zum Ändern einer vorhandenen Quelle. Die <xref:System.Diagnostics.EventLogInstaller> Klasse ändert nicht die Konfigurationseigenschaften einer vorhandenen Datenquelle entsprechend die angegebenen Installationseigenschaften. Die <xref:System.Diagnostics.EventLogInstaller.Install%2A> Methode löst eine Ausnahme aus, wenn die <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft entspricht den Quellnamen, die für ein anderes Ereignisprotokoll auf dem Computer registriert ist. Die <xref:System.Diagnostics.EventLogInstaller.Install%2A> Methode nicht die Quelle registriert, wenn die <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft entspricht den Quellnamen, die bereits für die gleichen in angegebene Ereignisprotokoll registriert ist die <xref:System.Diagnostics.EventLogInstaller.Log%2A> Eigenschaft.  
+  
+ Sie können die Ereignisquelle mit lokalisierten Ressourcendateien für die Ereignis-Zeichenfolgen für Eigenschaftenkategorien und Nachricht registrieren. Schreiben der Anwendung kann Einträge im Ereignisprotokoll mithilfe der Ressourcen-IDs, anstatt die tatsächliche Zeichenfolge anzugeben. Die Ereignisanzeige verwendet den Ressourcenbezeichner suchen und Anzeigen der entsprechenden Zeichenfolge aus der lokalisierten Ressourcendatei basierend auf der aktuellen spracheinstellungen. Sie können eine separate Datei für Ereigniskategorien, Nachrichten und Einfügung Parameterzeichenfolgen registrieren, oder Sie können die gleichen Ressourcendatei für alle drei Typen von Zeichenfolgen. Verwenden der <xref:System.Diagnostics.EventLogInstaller.CategoryCount%2A>, <xref:System.Diagnostics.EventLogInstaller.CategoryResourceFile%2A>, <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A>, und <xref:System.Diagnostics.EventLogInstaller.ParameterResourceFile%2A> Eigenschaften zur Konfiguration der Quelle zum Schreiben lokalisierter Einträge in das Ereignisprotokoll geschrieben. Wenn Ihre Anwendung Zeichenfolgenwerte direkt in das Ereignisprotokoll schreibt, müssen Sie nicht zum Festlegen dieser Eigenschaften.  
+  
+ Die Quelle muss zum Schreiben lokalisierter Einträge oder zum Schreiben direkter Zeichenfolgen konfiguriert werden. Wenn Ihre Anwendung Einträge mithilfe der Ressourcen-IDs und Zeichenfolgenwerte schreibt, müssen Sie zwei separate Quellen registrieren. Z. B. eine Quelle mit Ressourcendateien konfigurieren und verwenden Sie diese Quelle in die <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode, um die Einträge mithilfe der Ressourcen-IDs in das Ereignisprotokoll zu schreiben. Erstellen Sie eine andere Quelle ohne Ressourcendateien, und verwenden Sie diese Quelle in die <xref:System.Diagnostics.EventLog.WriteEntry%2A> Methode zum Schreiben von Zeichenfolgen direkt in das Ereignisprotokoll, die mit dieser Quelle.  
+  
+ In der Regel rufen Sie nicht die Methoden der <xref:System.Diagnostics.EventLogInstaller> -Klasse aus dem Code heraus; sie werden in der Regel nur von Installutil.exe aufgerufen. Ruft das Tool automatisch die <xref:System.Diagnostics.EventLogInstaller.Install%2A> Methode während der Installation. Fehler werden behoben, bei Bedarf durch Aufrufen der <xref:System.Diagnostics.EventLogInstaller.Rollback%2A> Methode für das Objekt, das die Ausnahme generiert hat.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Installationseigenschaften für eine neue Ereignisquelle. Im Codebeispiel legt den Quelldateinamen und Name des Ereignisprotokolls und fügt die <xref:System.Diagnostics.EventLogInstaller> auf die <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung.  
+  
+ [!code-cpp[EventLogInstaller#1](~/samples/snippets/cpp/VS_Snippets_CLR/EventLogInstaller/CPP/eventloginstaller.cpp#1)]
+ [!code-csharp[EventLogInstaller#1](~/samples/snippets/csharp/VS_Snippets_CLR/EventLogInstaller/CS/eventloginstaller.cs#1)]
+ [!code-vb[EventLogInstaller#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLogInstaller/VB/eventloginstaller.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.EventLogInstaller" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryCount">
+      <MemberSignature Language="C#" Value="public int CategoryCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CategoryCount" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.CategoryCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Kategorien in der Kategorie-Ressourcendatei.</summary>
+        <value>Die Anzahl der Kategorien in der Kategorie-Ressourcendatei. Der Standardwert ist 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.EventLogInstaller.CategoryCount%2A> und <xref:System.Diagnostics.EventLogInstaller.CategoryResourceFile%2A> Eigenschaften zum Schreiben von Ereignissen mit lokalisierte Kategoriezeichenfolgen. Die Ereignisanzeige werden die Kategorie für eine Ereigniseintrag angezeigt, wenn Sie eine Kategorie angeben, wenn Sie das Ereignis schreiben. Ereignisprotokoll-Kategorien sind anwendungsdefinierte Zeichenfolgen, die Hilfe Ereignisse gefiltert werden soll, oder geben Sie Informationen für ein Ereignis. Beispielsweise kann die Anwendung separate Kategorien für unterschiedliche Komponenten oder verschiedene Vorgänge definieren.  
+  
+ Ereigniskategorien sind optional. Wenn Ihre Anwendung keine Kategorien verwendet werden, legen Sie keine der <xref:System.Diagnostics.EventLogInstaller.CategoryCount%2A> und <xref:System.Diagnostics.EventLogInstaller.CategoryResourceFile%2A> Eigenschaften.  
+  
+ Details zum Definieren von ereignismeldungen und Erstellen von Ressourcendateien Ereignis, finden Sie unter dem Thema "Meldungscompiler" in der Platform SDK-Dokumentation unter [http://msdn.microsoft.com](http://msdn.microsoft.com/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Installationseigenschaften für eine neue Ereignisquelle. Im Codebeispiel wird der Name der Ereignisquelle Ereignisprotokollname und Ressourcendatei für lokalisierte Ereignistext.  
+  
+ [!code-cpp[EventLogInstaller_Resources#1](~/samples/snippets/cpp/VS_Snippets_CLR/eventlogInstaller_Resources/CPP/source.cpp#1)]
+ [!code-csharp[EventLogInstaller_Resources#1](~/samples/snippets/csharp/VS_Snippets_CLR/eventlogInstaller_Resources/CS/source.cs#1)]
+ [!code-vb[EventLogInstaller_Resources#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlogInstaller_Resources/VB/source.vb#1)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryResourceFile">
+      <MemberSignature Language="C#" Value="public string CategoryResourceFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryResourceFile" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.CategoryResourceFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.FileNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad der Ressourcendatei, die Kategoriezeichenfolgen für die Quelle enthält.</summary>
+        <value>Der Pfad der Kategorieressourcendatei. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.EventLogInstaller.CategoryCount%2A> und <xref:System.Diagnostics.EventLogInstaller.CategoryResourceFile%2A> Eigenschaften zum Schreiben von Ereignissen mit lokalisierte Kategoriezeichenfolgen. Die Ereignisanzeige werden die Kategorie für einen Eintrag des Ereignisses angezeigt, wenn Sie eine Kategorie angeben, wenn Sie das Ereignis schreiben. Ereignisprotokoll-Kategorien sind anwendungsdefinierte Zeichenfolgen, die Hilfe Ereignisse gefiltert werden soll, oder geben Sie Informationen zu einem Ereignis. Z. B. möglicherweise Ihre Anwendung separate Kategorien für unterschiedliche Komponenten oder unterschiedliche Vorgänge.  
+  
+ Ereigniskategorien sind optional. Wenn Ihre Anwendung keine Kategorien verwendet werden, legen Sie keine der <xref:System.Diagnostics.EventLogInstaller.CategoryCount%2A> und <xref:System.Diagnostics.EventLogInstaller.CategoryResourceFile%2A> Eigenschaften.  
+  
+ Details zum Definieren von ereignismeldungen und Erstellen von Ressourcendateien Ereignis, finden Sie unter dem Thema "Meldungscompiler" in der Platform SDK-Dokumentation unter [http://msdn.microsoft.com](http://msdn.microsoft.com/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Installationseigenschaften für eine neue Ereignisquelle. Im Codebeispiel wird der Name der Ereignisquelle Ereignisprotokollname und Ressourcendatei für lokalisierte Ereignistext.  
+  
+ [!code-cpp[EventLogInstaller_Resources#1](~/samples/snippets/cpp/VS_Snippets_CLR/eventlogInstaller_Resources/CPP/source.cpp#1)]
+ [!code-csharp[EventLogInstaller_Resources#1](~/samples/snippets/csharp/VS_Snippets_CLR/eventlogInstaller_Resources/CS/source.cs#1)]
+ [!code-vb[EventLogInstaller_Resources#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlogInstaller_Resources/VB/source.vb#1)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFromComponent">
+      <MemberSignature Language="C#" Value="public override void CopyFromComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFromComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogInstaller.CopyFromComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein <see cref="T:System.ComponentModel.IComponent" /> für die Verwendung als Vorlage für die <see cref="T:System.Diagnostics.EventLogInstaller" />.</param>
+        <summary>Kopiert die Eigenschaftswerte einer <see cref="T:System.Diagnostics.EventLog" /> Komponente, die bei der Installation für ein Ereignisprotokoll erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Komponente, die gemäß der `component` Parameter muss ein <xref:System.Diagnostics.EventLog>ist, andernfalls wird eine Ausnahme ausgelöst.  
+  
+ In der Regel rufen Sie nicht die Methoden der <xref:System.Diagnostics.EventLogInstaller> von innerhalb des Codes; sie werden in der Regel aufgerufen nur durch die [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md). <xref:System.Diagnostics.EventLogInstaller.CopyFromComponent%2A>die Eigenschaftswerte für die festzulegende Installutil.exe dient der <xref:System.Diagnostics.EventLogInstaller> auf die Werte eines vorhandenen <xref:System.Diagnostics.EventLog>.  
+  
+ Wenn die <xref:System.Diagnostics.EventLog.Log%2A> von der <xref:System.Diagnostics.EventLog> also übergeben, ist eine leere Zeichenfolge (""), müssen Sie festlegen der <xref:System.Diagnostics.EventLog.Log%2A> Eigenschaft auf einen gültigen Wert vor der Ausführung des Installationsprogramms.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die angegebene Komponente ist ein <see cref="T:System.Diagnostics.EventLog" />.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Diagnostics.EventLog.Log" /> oder <see cref="P:System.Diagnostics.EventLog.Source" /> Eigenschaft der angegebenen Komponente ist entweder <see langword="null" /> oder leer sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public override void Install (System.Collections.IDictionary stateSaver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Install(class System.Collections.IDictionary stateSaver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogInstaller.Install(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateSaver" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="stateSaver">Ein <see cref="T:System.Collections.IDictionary" /> verwendet, um die zum Ausführen eines Rollback- oder Deinstallationsvorgangs erforderlichen Daten gespeichert.</param>
+        <summary>Führt die Installation aus, und schreibt Ereignisprotokollinformationen in der Registrierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.EventLogInstaller.Install%2A> -Methode schreibt Ereignisprotokollinformationen in der Registrierung und ordnet das Ereignisprotokoll ein Protokoll, das angegeben wird die <xref:System.Diagnostics.EventLogInstaller.Log%2A> Eigenschaft. Wenn das Protokoll noch nicht vorhanden (und eine Quelle angegeben), <xref:System.Diagnostics.EventLogInstaller.Install%2A> erstellt ein Protokoll und die neue Datenquelle mit dieser verknüpft.  
+  
+ In der Regel rufen Sie nicht die Methoden der <xref:System.Diagnostics.EventLogInstaller> von innerhalb des Codes; sie werden in der Regel aufgerufen nur durch die [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md). Ruft das Tool automatisch die <xref:System.Diagnostics.EventLogInstaller.Install%2A> Methode während des Installationsvorgangs Registrierungsinformationen zu schreiben, die im Ereignisprotokoll installierenden zugeordnet ist. Installation ist transaktional, daher ist es ein Fehler in der jeder Komponente während der Installation, die zuvor installierte Komponenten in ihren Zustand vor der Installation Rollback ausgeführt werden. Dies erfolgt durch Aufrufen der einzelnen Komponenten <xref:System.Diagnostics.EventLogInstaller.Rollback%2A> Methode.  
+  
+ Verwenden Sie <xref:System.Diagnostics.EventLogInstaller> zum Registrieren einer neuen Quelle für ein neues oder vorhandenes Ereignisprotokoll; verwenden Sie keine <xref:System.Diagnostics.EventLogInstaller> zum Ändern einer vorhandenen Quelle. Die <xref:System.Diagnostics.EventLogInstaller> Klasse ändert nicht die Konfigurationseigenschaften einer vorhandenen Datenquelle entsprechend die angegebenen Installationseigenschaften. Die <xref:System.Diagnostics.EventLogInstaller.Install%2A> Methode löst eine Ausnahme aus, wenn die <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft entspricht den Quellnamen, die für ein anderes Ereignisprotokoll auf dem Computer registriert ist. Die <xref:System.Diagnostics.EventLogInstaller.Install%2A> Methode überspringt, registrieren die Quelle aus, wenn die <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft entspricht den Quellnamen, die bereits für die gleichen in angegebene Ereignisprotokoll registriert ist die <xref:System.Diagnostics.EventLogInstaller.Log%2A> Eigenschaft.  
+  
+ Installationsroutine einer Anwendung verwendet die Projekt-Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> Eigenschaft, um Informationen zu den Komponenten, die bereits installiert wurden, automatisch zu verwalten. Diese Statusinformationen, die übergeben werden <xref:System.Diagnostics.EventLogInstaller.Install%2A> als die `stateSaver` -Parameter wird ständig aktualisiert, während das Tool installiert wird, jede <xref:System.Diagnostics.EventLogInstaller>. In der Regel ist es nicht erforderlich für Ihren Code so ändern Sie diese Statusinformationen explizit.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform, die das Installationsprogramm verwenden möchte, ist nicht Windows NT 4.0 oder höher.</exception>
+        <exception cref="T:System.ArgumentException">Der Name angegeben, der <see cref="P:System.Diagnostics.EventLogInstaller.Source" /> Eigenschaft wurde bereits für ein anderes Ereignisprotokoll registriert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEquivalentInstaller">
+      <MemberSignature Language="C#" Value="public override bool IsEquivalentInstaller (System.Configuration.Install.ComponentInstaller otherInstaller);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsEquivalentInstaller(class System.Configuration.Install.ComponentInstaller otherInstaller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherInstaller" Type="System.Configuration.Install.ComponentInstaller" />
+      </Parameters>
+      <Docs>
+        <param name="otherInstaller">Das Installationsprogramm, verglichen werden soll.</param>
+        <summary>Bestimmt, ob ein Installationsprogramm und einem anderen angegebenen mit der gleichen Quelle verweisen.</summary>
+        <returns>
+          <see langword="true" />Wenn dieses Installationsprogramm und die vom angegebenen der <paramref name="otherInstaller" /> Parameter installieren oder deinstallieren die gleiche Quelle würden, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel rufen Sie nicht die Methoden der <xref:System.Diagnostics.EventLogInstaller> von innerhalb des Codes; sie werden in der Regel aufgerufen nur durch das Installer-Tool (Installutil.exe).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public string Log { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Log" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.Log" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Protokolls auf die Quelle festgelegt werden soll.</summary>
+        <value>Der Name des Protokolls. Dies kann die Anwendung bzw. Systemprotokoll oder ein benutzerdefinierter Protokollname sein. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Diagnostics.EventLogInstaller.Log%2A> Eigenschaft, um die Quelle zu verknüpfen, Sie in geben, der <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft mit einem vorhandenen Protokoll oder ein neues Protokoll auf dem lokalen Computer. Die [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md) verwendet diese Informationen zum Zuordnen von der Quelle in das Protokoll in der Registrierung des Computers. Anwendungen und Dienste sollten auf Windows-Anwendungsprotokoll oder ein benutzerdefiniertes Protokoll schreiben. Gerätetreiber sollten im Systemprotokoll schreiben.  
+  
+ Um die Einträge in ein Ereignisprotokoll schreiben, müssen Sie eine Datenquelle erstellen und registrieren Sie ihn für ein Ereignisprotokoll. Eine Ereignisquelle kann jeweils nur ein Protokoll schreiben. Das Installationsprogramm verwendet den Wert der <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft, um die Anwendung der im Ereignisprotokoll als gültige Quelle für Einträge zu registrieren. Wenn Sie einen Protokollnamen vor dem Ausführen des Installationsprogramms nicht angeben, registriert das Installationsprogramm die Quelle in das Anwendungsprotokoll. Wenn Sie eine neue Quelle und ein vorhandenes Protokoll angeben, wird das Installationsprogramm erstellt eine neue Ereignisquelle und ordnet sie das Protokoll, das Sie angeben. Wenn Sie eine neue Quelle und ein neues Protokoll angeben, ordnet das Installationsprogramm die neue Quelle für das neue Protokoll in der Registrierung, aber das Protokoll wird nicht erstellt werden, bis der erste Eintrag darin geschrieben wird.  
+  
+ Das Betriebssystem speichert Ereignisprotokolle als Dateien. Bei Verwendung von <xref:System.Diagnostics.EventLogInstaller> oder die <xref:System.Diagnostics.EventLog.CreateEventSource%2A> -Methode erstellt ein neues Ereignisprotokoll, die zugehörige Datei im Verzeichnis %SystemRoot%\System32\Config auf dem angegebenen Computer gespeichert ist. Der Dateiname wird festgelegt, durch die ersten 8 Zeichen Anhängen der <xref:System.Diagnostics.EventLogInstaller.Log%2A> Eigenschaft mit der Dateinamenerweiterung ".evt".  
+  
+ Verwenden Sie <xref:System.Diagnostics.EventLogInstaller> zum Registrieren einer neuen Quelle für ein neues oder vorhandenes Ereignisprotokoll; verwenden Sie keine <xref:System.Diagnostics.EventLogInstaller> zum Ändern einer vorhandenen Quelle. Die <xref:System.Diagnostics.EventLogInstaller> Klasse ändert nicht die Konfigurationseigenschaften einer vorhandenen Datenquelle entsprechend die angegebenen Installationseigenschaften. Die <xref:System.Diagnostics.EventLogInstaller.Install%2A> Methode löst eine Ausnahme aus, wenn die <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft entspricht den Quellnamen, die für ein anderes Ereignisprotokoll auf dem Computer registriert ist. Die <xref:System.Diagnostics.EventLogInstaller.Install%2A> Methode nicht die Quelle registriert, wenn die <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft entspricht den Quellnamen, die bereits für die gleichen in angegebene Ereignisprotokoll registriert ist die <xref:System.Diagnostics.EventLogInstaller.Log%2A> Eigenschaft.  
+  
+ Ausführlichere Informationen zum Verhalten von Ereignisprotokollen und Datenquellen finden Sie unter der <xref:System.Diagnostics.EventLog> -Klasse Dokumentation für die <xref:System.Diagnostics.EventLog.Log%2A> und <xref:System.Diagnostics.EventLog.Source%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageResourceFile">
+      <MemberSignature Language="C#" Value="public string MessageResourceFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MessageResourceFile" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.MessageResourceFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.FileNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad der Ressourcendatei, die Nachricht Formatieren von Zeichenfolgen für die Quelle enthält.</summary>
+        <value>Der Pfad der Datei der Ressource. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A> Eigenschaft so konfigurieren Sie eine Ereignisprotokoll-Quelle zum Schreiben lokalisierter ereignismeldungen. -Ereignismeldungen sind anwendungsdefinierte Zeichenfolgen, die das Ereignis an den Benutzer zu beschreiben.  
+  
+ Die Anwendung kann mit Ressourcenbezeichner Einträge im Ereignisprotokoll schreiben. Ein Ressourcenbezeichner indiziert eine Nachricht befindet sich in der <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A>. Die Ereignisanzeige verwendet den Ressourcenbezeichner suchen und Anzeigen der entsprechenden Zeichenfolge aus der lokalisierten Ressourcendatei basierend auf der aktuellen spracheinstellungen.  
+  
+ Die Ereignisquelle muss zum Schreiben lokalisierter Einträge oder zum Schreiben direkter Zeichenfolgen konfiguriert werden. Verwenden der <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode zum Schreiben lokalisierter Einträge für eine Datenquelle mit einer Meldungsressourcendatei konfiguriert.  
+  
+ Wenn Ihre Anwendung Meldungs-Ereignis direkt, schreibt anstatt mit einem Ressourcenbezeichner in einer lokalisierten Ressourcendatei legen Sie keine der <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A> Eigenschaft.  
+  
+ Wenn die <xref:System.Diagnostics.EventLog.MachineName%2A> Eigenschaft ist nicht als Bezeichner für den lokalen Computer ("."), .NET Framework wird davon ausgegangen, dass die Ressourcendatei auf einem Remotecomputer befindet. Wenn die <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A> Eigenschaftswert einen Laufwerkbuchstaben enthält, wird davon ausgegangen, dass die Ressourcendatei auf dem \\ \\< Machinename\>\\< Laufwerk\>$-Freigabe (z. B. \\\server \c$). Wenn der Wert der Zeichenfolge "% SystemRoot%" enthält, die Ressourcendatei wird davon ausgegangen, dass auf die \\ \\< Machinename\>\admin$ befindet (z. B. \\\server\admin$).  
+  
+ Details zum Definieren von ereignismeldungen und Erstellen von Ressourcendateien Ereignis, finden Sie unter dem Thema "Meldungscompiler" in der Platform SDK-Dokumentation unter [http://msdn.microsoft.com](http://msdn.microsoft.com/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Installationseigenschaften für eine neue Ereignisquelle. Im Codebeispiel wird der Name der Ereignisquelle Ereignisprotokollname und Ressourcendatei für lokalisierte Ereignistext.  
+  
+ [!code-cpp[EventLogInstaller_Resources#1](~/samples/snippets/cpp/VS_Snippets_CLR/eventlogInstaller_Resources/CPP/source.cpp#1)]
+ [!code-csharp[EventLogInstaller_Resources#1](~/samples/snippets/csharp/VS_Snippets_CLR/eventlogInstaller_Resources/CS/source.cs#1)]
+ [!code-vb[EventLogInstaller_Resources#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlogInstaller_Resources/VB/source.vb#1)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterResourceFile">
+      <MemberSignature Language="C#" Value="public string ParameterResourceFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterResourceFile" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.ParameterResourceFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.FileNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad der Ressourcendatei, die Nachricht Parameterzeichenfolgen für die Quelle enthält.</summary>
+        <value>Der Pfad der Meldungsressourcendatei der Parameter. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.EventLogInstaller.ParameterResourceFile%2A> Eigenschaft so konfigurieren Sie eine Ereignisprotokoll-Quelle zum Schreiben lokalisierter ereignismeldungen mit eingefügten Parameterzeichenfolgen. Jede lokalisierte ereignismeldung angegeben, der <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A> Eigenschaft kann Platzhalter für den einfügen-Zeichenfolgen enthalten. Diese Platzhalter werden verwendet, um die Position und den Ressourcenbezeichner für eine sprachunabhängige-Zeichenfolge in der ereignismeldung wird angegeben. Die Ereignisanzeige ersetzt die Platzhalter durch die entsprechenden Zeichenfolgen aus dem <xref:System.Diagnostics.EventLogInstaller.ParameterResourceFile%2A> und formatiert die Meldung im Ereignisprotokoll für den lokalisierten Ereigniseintrag.  
+  
+ Im folgende Abschnitt einer Textdatei Nachricht definiert z. B. eine Zeichenfolge mit einem Parameterplatzhalter für:  
+  
+```  
+  
+MessageId = 1501  
+Severity = Success  
+Facility = Application  
+SymbolicName = COMPONENT_STARTING  
+Language=English  
+Component %%6050 is starting.  
+.  
+```  
+  
+ In der Parameterressourcendatei muss der Einfügezeichenfolge mit den Ressourcenbezeichner, der den Platzhalter, entspricht definiert werden, wie unten dargestellt:  
+  
+```  
+MessageId = 6050  
+Severity = Success  
+Facility = Application  
+SymbolicName = COMPONENT_NAME_MSGID  
+Language=English  
+TRIGGER.EXE  
+.  
+```  
+  
+ Die Ereignisquelle muss zum Schreiben lokalisierter Einträge oder zum Schreiben direkter Zeichenfolgen konfiguriert werden. Verwenden der <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode zum Schreiben lokalisierter Einträge für eine Datenquelle mit einer Meldungsressourcendatei konfiguriert.  
+  
+ Wenn die Anwendung die Nachricht Ereigniszeichenfolgen direkt in das Ereignisprotokoll schreibt, oder wenn Ihre <xref:System.Diagnostics.EventLogInstaller.MessageResourceFile%2A> enthält keine Nachrichten mit Platzhaltern für Parameter einfügen, stellen Sie keine der <xref:System.Diagnostics.EventLogInstaller.ParameterResourceFile%2A> Eigenschaft.  
+  
+ Details zum Definieren von ereignismeldungen und Erstellen von Ressourcendateien Ereignis, finden Sie unter dem Thema "Meldungscompiler" in der Platform SDK-Dokumentation unter [http://msdn.microsoft.com](http://msdn.microsoft.com/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Installationseigenschaften für eine neue Ereignisquelle. Im Codebeispiel wird der Name der Ereignisquelle Ereignisprotokollname und Ressourcendatei für lokalisierte Ereignistext.  
+  
+ [!code-cpp[EventLogInstaller_Resources#1](~/samples/snippets/cpp/VS_Snippets_CLR/eventlogInstaller_Resources/CPP/source.cpp#1)]
+ [!code-csharp[EventLogInstaller_Resources#1](~/samples/snippets/csharp/VS_Snippets_CLR/eventlogInstaller_Resources/CS/source.cs#1)]
+ [!code-vb[EventLogInstaller_Resources#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlogInstaller_Resources/VB/source.vb#1)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen. Insbesondere verwendet die Nachricht, die für den Ressourcenbezeichner 1004 definiert einen Platzhalter für eine Parameterzeichenfolge für Ressourcenbezeichner 5002 definiert.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public override void Rollback (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Rollback(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogInstaller.Rollback(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Collections.IDictionary" />-Objekt, das Informationen über den Zustand enthält, in dem sich der Computer vor der Installation befand.</param>
+        <summary>Stellt den Zustand, in der vor der Installation durch ein Rollback für die Ereignisprotokollinformationen der Installationsprozedur in die Registrierung geschrieben wurde der Computer wieder her.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.EventLogInstaller.Rollback%2A> Methode macht die Auswirkungen der <xref:System.Diagnostics.EventLogInstaller.Install%2A> Methode. <xref:System.Diagnostics.EventLogInstaller.Rollback%2A>wird aufgerufen, wenn die Installation der Komponenten in das Projekt für die Installation schlägt fehl. Die <xref:System.Diagnostics.EventLogInstaller.Install%2A> Methode erstellt, oder legt die Eigenschaften für ein Ereignisprotokoll und die Ereignisquelle. <xref:System.Diagnostics.EventLogInstaller.Rollback%2A>Löscht das Ereignisprotokoll und die Quelle oder setzt die Eigenschaften einer bereits vorhandenen Quelle auf die Werte vor der Installation.  
+  
+ In der Regel rufen Sie nicht die Methoden der <xref:System.Diagnostics.EventLogInstaller> von innerhalb des Codes; sie werden in der Regel aufgerufen nur durch die [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md). Das Tool Ruft die <xref:System.Diagnostics.EventLogInstaller.Rollback%2A> Methode, wenn dieser oder einer anderen Komponente fehlgeschlagen ist, installieren, um alle Änderungen rückgängig machen, die während des Installationsvorgangs bereits durchgeführt wurden.  
+  
+ Installationsroutine einer Anwendung verwendet die Projekt-Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> Eigenschaft, um Informationen zu den Komponenten, die bereits installiert wurden, automatisch zu verwalten. Diese Statusinformationen, die übergeben werden <xref:System.Diagnostics.EventLogInstaller.Rollback%2A> als die `savedState` -Parameter wird ständig aktualisiert werden, wie das Tool wird ein Sichern <xref:System.Diagnostics.EventLogInstaller>. In der Regel ist es nicht erforderlich für Ihren Code so ändern Sie diese Statusinformationen explizit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Quellnamen um das Protokoll zu registrieren.</summary>
+        <value>Der Name, der im Ereignisprotokoll als Quelle für Einträge zu registrieren. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ereignisquelle gibt an, was das Ereignis protokolliert. Es ist häufig der Name der Anwendung oder den Namen einer Komponente innerhalb einer großen Anwendung.  
+  
+ Das Installationsprogramm verwendet den Wert der <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft, um die Anwendung der im Ereignisprotokoll als gültige Quelle für Einträge zu registrieren. Ein neuen Quellennamen kann nicht mit den Datenquellennamen einer vorhandenen oder einen vorhandenen Ereignisprotokollnamen übereinstimmen. Jede Quelle kann jeweils nur ein Ereignisprotokoll schreiben. Allerdings kann Ihre Anwendung mehreren Quellen verwenden, um mehrere Ereignisprotokolle geschrieben. Ihre Anwendung erfordert z. B. möglicherweise mehrere Quellen für unterschiedliche Ereignisprotokolle oder Ressourcendateien konfiguriert.  
+  
+ Anwendungen und Dienste sollten auf Windows-Anwendungsprotokoll oder ein benutzerdefiniertes Protokoll schreiben. Gerätetreiber sollten im Systemprotokoll schreiben. Wenn Sie einen Protokollnamen vor dem Ausführen des Installationsprogramms nicht angeben, registriert das Installationsprogramm die Quelle in das Anwendungsprotokoll. Wenn Sie den Namen eines Protokolls, die nicht vorhanden ist angeben, registriert das System die <xref:System.Diagnostics.EventLogInstaller.Source%2A> in das Protokoll geschrieben, aber das Protokoll wird nicht erstellt werden, bis der erste Eintrag darin geschrieben wird.  
+  
+ Verwenden Sie <xref:System.Diagnostics.EventLogInstaller> zum Registrieren einer neuen Quelle für ein neues oder vorhandenes Ereignisprotokoll; verwenden Sie keine <xref:System.Diagnostics.EventLogInstaller> zum Ändern einer vorhandenen Quelle. Die <xref:System.Diagnostics.EventLogInstaller> Klasse ändert nicht die Konfigurationseigenschaften einer vorhandenen Datenquelle entsprechend die angegebenen Installationseigenschaften. Die <xref:System.Diagnostics.EventLogInstaller.Install%2A> Methode löst eine Ausnahme aus, wenn die <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft entspricht den Quellnamen, die für ein anderes Ereignisprotokoll auf dem Computer registriert ist. Die <xref:System.Diagnostics.EventLogInstaller.Install%2A> Methode nicht die Quelle registriert, wenn die <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaft entspricht den Quellnamen, die bereits für die gleichen in angegebene Ereignisprotokoll registriert ist die <xref:System.Diagnostics.EventLogInstaller.Log%2A> Eigenschaft.  
+  
+ Ausführlichere Informationen zum Verhalten von Ereignisprotokollen und Datenquellen finden Sie unter der <xref:System.Diagnostics.EventLog> -Klasse Dokumentation für die <xref:System.Diagnostics.EventLog.Log%2A> und <xref:System.Diagnostics.EventLog.Source%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public override void Uninstall (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Uninstall(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogInstaller.Uninstall(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Collections.IDictionary" />-Objekt, das Informationen über den Zustand enthält, in dem sich der Computer vor der Installation befand.</param>
+        <summary>Entfernt eine Installation von Ereignisprotokollinformationen aus der Registrierung entfernen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Diagnostics.EventLogInstaller.UninstallAction%2A> Eigenschaftswert ist `Remove`, <xref:System.Diagnostics.EventLogInstaller.Uninstall%2A> -Methode löscht die Quelle und das zugeordnete Protokoll, das Installationsprogramm erstellt, wenn die <xref:System.Diagnostics.EventLogInstaller.Log%2A> und <xref:System.Diagnostics.EventLogInstaller.Source%2A> Eigenschaften angegeben, die Erstellung eines neuen Ereignisprotokolls und Quelle.  
+  
+ In der Regel rufen Sie nicht die Methoden der <xref:System.Diagnostics.EventLogInstaller> von innerhalb des Codes; sie werden in der Regel aufgerufen nur durch die [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md) im Deinstallationsmodus. Ruft das Tool automatisch die <xref:System.Diagnostics.EventLogInstaller.Uninstall%2A> Methode, um die Teile des Systems wiederherzustellen, die durch die Installation in ihren Zustand vor der Installation betroffen sind. Dies umfasst Informationen in der Registrierung, der das Ereignisprotokoll, die zu deinstallierenden zugeordnet ist.  
+  
+ Deinstallieren Sie eine Anwendung routinemäßige verwendet des Projektinstallationsprogramms <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> Eigenschaft, um Informationen zu den Komponenten, die bereits deinstalliert wurde, automatisch zu verwalten. Diese Statusinformationen, die übergeben werden <xref:System.Diagnostics.EventLogInstaller.Uninstall%2A> als die `savedState` -Parameter wird ständig aktualisiert werden, wie das Tool jede deinstalliert <xref:System.Diagnostics.EventLogInstaller>. In der Regel ist es nicht erforderlich für Ihren Code so ändern Sie diese Statusinformationen explizit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UninstallAction">
+      <MemberSignature Language="C#" Value="public System.Configuration.Install.UninstallAction UninstallAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.Install.UninstallAction UninstallAction" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogInstaller.UninstallAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Install.UninstallAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md) sollten das Ereignisprotokoll oder in dem Zustand zur Deinstallation belassen Zeit entfernen.</summary>
+        <value>Eines der <see cref="T:System.Configuration.Install.UninstallAction" /> Werte, der angibt, welchem Zustand sich das Ereignisprotokoll in beim Verlassen der <see cref="T:System.Diagnostics.EventLog" /> deinstalliert wird. Die Standardeinstellung ist <see langword="Remove" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Installation eines Ereignisprotokolls können Sie optional in einem vorhandenen Protokoll verbinden. Wenn Sie dies tun, müssen Sie entscheiden, ob das Protokoll in den Zustand vor der Installation zurück oder in seinem aktuellen Zustand nach der Installation verbleiben soll. Wenn Sie festlegen, im Ereignisprotokoll den Status vor der Installation wiederherstellen ob, werden Änderungen an der Einträge im Ereignisprotokoll während der Installation nicht wiederhergestellt. Sie können nur die Eigenschaften des Ereignisprotokolls, die zugeordnet sind Zurücksetzen der <xref:System.Diagnostics.EventLogInstaller> auf ihre Werte vor der Installation.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <see cref="P:System.Diagnostics.EventLogInstaller.UninstallAction" /> enthält einen ungültigen Wert. Die einzigen gültigen Werte für diese Eigenschaft sind <see langword="Remove" /> und <see langword="NoAction" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

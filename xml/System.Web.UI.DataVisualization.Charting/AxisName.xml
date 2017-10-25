@@ -1,0 +1,102 @@
+<Type Name="AxisName" FullName="System.Web.UI.DataVisualization.Charting.AxisName">
+  <TypeSignature Language="C#" Value="public enum AxisName" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AxisName extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.AxisName" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Namen einer Achse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.AxisName> Enumeration stellt die vier verschiedenen Achsen, die für ein Diagramm verwendet werden können.  
+  
+ Balken- und gestapelte Balkendiagramme haben die Achsen gedreht 90 Grad im Uhrzeigersinn. Beispielsweise ist die primäre X-Achse für diese zwei Diagramme die linke vertikale Achse.  
+  
+ Sind für alle Diagramme außer Balken, gestapelter Balken Ring- und Kreisdiagrammen, die primären und sekundären Achsen wie folgt:  
+  
+|Der Achsentyp|Beschreibung|  
+|---------------|-----------------|  
+|Primäre X-Achse|Untere horizontale Achse.|  
+|Sekundäre X-Achse|Obere horizontale Achse.|  
+|Primäre Y-Achse|Linke vertikale Achse.|  
+|Sekundäre Y-Achse|Vertikale Achse.|  
+  
+ Balken- und gestapelte Balkendiagramme haben die Achsen gedreht 90 Grad im Uhrzeigersinn. Beispielsweise ist die primäre X-Achse für diese zwei Diagramme die linke vertikale Achse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="X" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.AxisName X = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.AxisName.X" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.AxisName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Primäre X-Achse.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="X2">
+      <MemberSignature Language="C#" Value="X2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.AxisName X2 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.AxisName.X2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.AxisName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sekundäre X-Achse.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="Y" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.AxisName Y = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.AxisName.Y" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.AxisName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Primäre Y-Achse.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Y2">
+      <MemberSignature Language="C#" Value="Y2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.AxisName Y2 = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.AxisName.Y2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.AxisName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sekundäre Y-Achse.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

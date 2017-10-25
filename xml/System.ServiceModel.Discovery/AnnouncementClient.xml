@@ -1,0 +1,800 @@
+<Type Name="AnnouncementClient" FullName="System.ServiceModel.Discovery.AnnouncementClient">
+  <TypeSignature Language="C#" Value="public sealed class AnnouncementClient : IDisposable, System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AnnouncementClient extends System.Object implements class System.IDisposable, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.AnnouncementClient" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.ICommunicationObject</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Wird von Diensten verwendet, um Ermittlungsankündigungsmeldungen zu senden. Clients können den Ermittlungsmechanismus verwenden, insbesondere die entsprechende <see cref="T:System.ServiceModel.Discovery.AnnouncementService" />-Klasse, um Ankündigungsmeldungen zu überwachen und zu bearbeiten. Eine Ankündigungsmeldung enthält Informationen zum Dienst, z. B. seinen vollqualifizierten Vertragsnamen, Bereiche, in denen der Dienst durchgeführt wird, sowie benutzerdefinierte Metadaten, die der Dienst senden will.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Dienst das <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>-Verhalten hinzufügt, und einen <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> angibt, sendet der Dienst automatisch Ankündigungsmeldungen, wenn der Dienst in den Online- oder Offline-Modus wechselt. Verwenden Sie diese Klasse, wenn Sie sich die Ankündigungsmeldungen ausdrücklich selbst senden möchten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnouncementClient ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.AnnouncementClient" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnouncementClient (System.ServiceModel.Discovery.AnnouncementEndpoint announcementEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Discovery.AnnouncementEndpoint announcementEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.#ctor(System.ServiceModel.Discovery.AnnouncementEndpoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="announcementEndpoint" Type="System.ServiceModel.Discovery.AnnouncementEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="announcementEndpoint">Der Ankündigungsendpunkt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.AnnouncementClient" />-Klasse mit der angegebenen <see cref="T:System.ServiceModel.Discovery.AnnouncementEndpoint" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnouncementClient (string endpointConfigurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string endpointConfigurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpointConfigurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="endpointConfigurationName">Der Name der zu verwendenden Endpunktkonfiguration.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.AnnouncementClient" />-Klasse mit der angegebenen Endpunktkonfiguration.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnounceOffline">
+      <MemberSignature Language="C#" Value="public void AnnounceOffline (System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AnnounceOffline(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.AnnounceOffline(System.ServiceModel.Discovery.EndpointDiscoveryMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="discoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryMetadata">Die Endpunktermittlungsmetadaten.</param>
+        <summary>Bedingt, dass eine Offlineankündigungsmeldung (Bye) mit den angegebenen Endpunktermittlungsmetadaten gesendet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnounceOfflineAsync">
+      <MemberSignature Language="C#" Value="public void AnnounceOfflineAsync (System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AnnounceOfflineAsync(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.AnnounceOfflineAsync(System.ServiceModel.Discovery.EndpointDiscoveryMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="discoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryMetadata">Die Endpunktermittlungsmetadaten.</param>
+        <summary>Bedingt, dass eine Offlineankündigungsmeldung (Bye) mit den angegebenen Endpunktermittlungsmetadaten asynchron gesendet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnounceOfflineAsync">
+      <MemberSignature Language="C#" Value="public void AnnounceOfflineAsync (System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AnnounceOfflineAsync(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.AnnounceOfflineAsync(System.ServiceModel.Discovery.EndpointDiscoveryMetadata,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="discoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryMetadata">Die Endpunktermittlungsmetadaten.</param>
+        <param name="userState">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Bedingt, dass eine Offlineankündigungsmeldung (Bye) mit den angegebenen Endpunktermittlungsmetadaten und dem benutzerdefinierten Zustand asynchron gesendet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnounceOfflineCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; AnnounceOfflineCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; AnnounceOfflineCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Discovery.AnnouncementClient.AnnounceOfflineCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine asynchrone Offlineankündigung (Bye) abgeschlossen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt nicht auf, wenn eine Offlineankündigung synchron gesendet wird, indem <xref:System.ServiceModel.Discovery.AnnouncementClient.AnnounceOffline%2A> aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnounceOfflineTaskAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task AnnounceOfflineTaskAsync (System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task AnnounceOfflineTaskAsync(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.AnnounceOfflineTaskAsync(System.ServiceModel.Discovery.EndpointDiscoveryMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="discoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryMetadata">Die Endpunktermittlungsmetadaten.</param>
+        <summary>Bewirkt, dass eine Aufgabe offline-ankündigungsnachricht (Bye) mit den angegebenen endpunktermittlungsmetadaten asynchron gesendet wird.</summary>
+        <returns>Eine Aufgabe offline-ankündigungsnachricht asynchron gesendet wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnounceOnline">
+      <MemberSignature Language="C#" Value="public void AnnounceOnline (System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AnnounceOnline(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.AnnounceOnline(System.ServiceModel.Discovery.EndpointDiscoveryMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="discoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryMetadata">Die Endpunktermittlungsmetadaten.</param>
+        <summary>Bewirkt, dass eine onlineankündigungsmeldung (Hello) gesendet werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnounceOnlineAsync">
+      <MemberSignature Language="C#" Value="public void AnnounceOnlineAsync (System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AnnounceOnlineAsync(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.AnnounceOnlineAsync(System.ServiceModel.Discovery.EndpointDiscoveryMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="discoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryMetadata">Die Endpunktermittlungsmetadaten.</param>
+        <summary>Bedingt, dass eine Onlineankündigungsmeldung (Hello) mit den angegebenen Endpunktermittlungsmetadaten asynchron gesendet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnounceOnlineAsync">
+      <MemberSignature Language="C#" Value="public void AnnounceOnlineAsync (System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AnnounceOnlineAsync(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.AnnounceOnlineAsync(System.ServiceModel.Discovery.EndpointDiscoveryMetadata,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="discoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryMetadata">Die Endpunktermittlungsmetadaten.</param>
+        <param name="userState">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Bedingt, dass eine Onlineankündigungsmeldung (Hello) mit den angegebenen Endpunktermittlungsmetadaten und dem benutzerdefinierten Zustand asynchron gesendet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnounceOnlineCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; AnnounceOnlineCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; AnnounceOnlineCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Discovery.AnnouncementClient.AnnounceOnlineCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine asynchrone Onlineankündigung (Hello) abgeschlossen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt nicht auf, wenn eine Onlineankündigung synchron gesendet wird, indem <xref:System.ServiceModel.Discovery.AnnouncementClient.AnnounceOnline%2A> aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnounceOnlineTaskAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task AnnounceOnlineTaskAsync (System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task AnnounceOnlineTaskAsync(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.AnnounceOnlineTaskAsync(System.ServiceModel.Discovery.EndpointDiscoveryMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="discoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryMetadata">Die Endpunktermittlungsmetadaten.</param>
+        <summary>Bewirkt, dass eine Aufgabe online-ankündigungsnachricht (Hello) mit den angegebenen endpunktermittlungsmetadaten asynchron gesendet wird.</summary>
+        <returns>Ein online-Ankündigung Aufgabennachricht asynchron gesendet wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAnnounceOffline">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAnnounceOffline (System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAnnounceOffline(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.BeginAnnounceOffline(System.ServiceModel.Discovery.EndpointDiscoveryMetadata,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="discoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryMetadata">Die Endpunktermittlungsmetadaten.</param>
+        <param name="callback">Die <see cref="T:System.AsyncCallback" />.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Bedingt, dass eine Offlineankündigungsmeldung (Bye) mit den angegebenen Endpunktermittlungsmetadaten und dem benutzerdefinierten Zustand asynchron gesendet wird. Der angegebene <see cref="T:System.AsyncCallback" /> wird aufgerufen, wenn der Vorgang abgeschlossen wird.</summary>
+        <returns>Eine <see cref="T:System.IAsyncResult" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAnnounceOnline">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAnnounceOnline (System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAnnounceOnline(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata discoveryMetadata, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.BeginAnnounceOnline(System.ServiceModel.Discovery.EndpointDiscoveryMetadata,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="discoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryMetadata">Die Endpunktermittlungsmetadaten.</param>
+        <param name="callback">Die <see cref="T:System.AsyncCallback" />.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Bedingt, dass eine Onlineankündigungsmeldung (Hello) mit den angegebenen Endpunktermittlungsmetadaten und dem benutzerdefinierten Zustand asynchron gesendet wird. Der angegebene <see cref="T:System.AsyncCallback" /> wird aufgerufen, wenn der Vorgang abgeschlossen wird.</summary>
+        <returns>Eine <see cref="T:System.IAsyncResult" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelFactory">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ChannelFactory ChannelFactory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.ChannelFactory ChannelFactory" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.AnnouncementClient.ChannelFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ChannelFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Channelfactory ab, die dem <see cref="T:System.ServiceModel.Discovery.AnnouncementClient" /> zugeordnet ist.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.ChannelFactory" />-Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCredentials">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ClientCredentials ClientCredentials { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ClientCredentials ClientCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.AnnouncementClient.ClientCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ClientCredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem <see cref="T:System.ServiceModel.Discovery.AnnouncementClient" /> zugeordneten Clientanmeldeinformationen ab.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Description.ClientCredentials" />-Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den <see cref="T:System.ServiceModel.Discovery.AnnouncementClient" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAnnounceOffline">
+      <MemberSignature Language="C#" Value="public void EndAnnounceOffline (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndAnnounceOffline(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.EndAnnounceOffline(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Ein Verweis auf den ausstehenden asynchronen Vorgang.</param>
+        <summary>Wartet, bis eine ausstehende asynchrone Offlineankündigung abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAnnounceOnline">
+      <MemberSignature Language="C#" Value="public void EndAnnounceOnline (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndAnnounceOnline(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.EndAnnounceOnline(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Ein Verweis auf den ausstehenden asynchronen Vorgang.</param>
+        <summary>Wartet, bis eine ausstehende asynchrone Onlineankündigung abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint Endpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ServiceEndpoint Endpoint" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.AnnouncementClient.Endpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> ab, der dem <see cref="T:System.ServiceModel.Discovery.AnnouncementClient" /> zugeordnet ist.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerChannel">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.IClientChannel InnerChannel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.IClientChannel InnerChannel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.AnnouncementClient.InnerChannel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.IClientChannel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den inneren Channel ab, der dem <see cref="T:System.ServiceModel.Discovery.AnnouncementClient" /> zugeordnet ist.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.IClientChannel" />-Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageSequenceGenerator">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator MessageSequenceGenerator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator MessageSequenceGenerator" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.AnnouncementClient.MessageSequenceGenerator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Meldungssequenzgenerator ab oder legt diesen fest, der dem <see cref="T:System.ServiceModel.Discovery.AnnouncementClient" /> zugeordnet ist.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator" />-Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Öffnet den <see cref="T:System.ServiceModel.Discovery.AnnouncementClient" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt anwendungsspezifische Aufgaben durch, die mit der Freigabe, der Zurückgabe oder dem Zurücksetzen von nicht verwalteten Ressourcen zusammenhängen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.ICommunicationObject.Abort">
+      <MemberSignature Language="C#" Value="void ICommunicationObject.Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.ICommunicationObject.Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.System#ServiceModel#ICommunicationObject#Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass ein Kommunikationsobjekt unmittelbar vom aktuellen Zustand in den geschlossenen Zustand übergeht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.ICommunicationObject.BeginClose">
+      <MemberSignature Language="C#" Value="IAsyncResult ICommunicationObject.BeginClose (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.IAsyncResult System.ServiceModel.ICommunicationObject.BeginClose(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.System#ServiceModel#ICommunicationObject#BeginClose(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den Abschluss des asynchronen Schließvorgangs empfängt.</param>
+        <param name="state">Ein von der Anwendung angegebenes Objekt, das dem asynchronen Schließvorgang zugeordnete Statusinformationen enthält.</param>
+        <summary>Startet einen asynchronen Vorgang, um ein Kommunikationsobjekt zu schließen.</summary>
+        <returns>Die <see cref="T:System.IAsyncResult" />-Einstellung, die auf den asynchronen Schließvorgang verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.ICommunicationObject.BeginClose">
+      <MemberSignature Language="C#" Value="IAsyncResult ICommunicationObject.BeginClose (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.IAsyncResult System.ServiceModel.ICommunicationObject.BeginClose(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.System#ServiceModel#ICommunicationObject#BeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Sendevorgang bleibt, bevor ein Timeout eintritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den Abschluss des asynchronen Schließvorgangs empfängt.</param>
+        <param name="state">Ein von der Anwendung angegebenes Objekt, das dem asynchronen Schließvorgang zugeordnete Statusinformationen enthält.</param>
+        <summary>Startet einen asynchronen Vorgang, um ein Kommunikationsobjekt mit einem festgelegten Timeout zu schließen.</summary>
+        <returns>Die <see cref="T:System.IAsyncResult" />-Einstellung, die auf den asynchronen Schließvorgang verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.ICommunicationObject.BeginOpen">
+      <MemberSignature Language="C#" Value="IAsyncResult ICommunicationObject.BeginOpen (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.IAsyncResult System.ServiceModel.ICommunicationObject.BeginOpen(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.System#ServiceModel#ICommunicationObject#BeginOpen(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung erhält, dass der asynchrone Öffnungsvorgang abgeschlossen wurde.</param>
+        <param name="state">Ein durch die Anwendung festgelegtes Objekt, das dem asynchronen Öffnungsvorgang zugeordnete Zustandsinformationen enthält.</param>
+        <summary>Startet einen asynchronen Vorgang, um ein Kommunikationsobjekt zu öffnen.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />-Wert, der auf den asynchronen Öffnungsvorgang verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.ICommunicationObject.BeginOpen">
+      <MemberSignature Language="C#" Value="IAsyncResult ICommunicationObject.BeginOpen (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.IAsyncResult System.ServiceModel.ICommunicationObject.BeginOpen(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.System#ServiceModel#ICommunicationObject#BeginOpen(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Sendevorgang bleibt, bevor ein Timeout eintritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung erhält, dass der asynchrone Öffnungsvorgang abgeschlossen wurde.</param>
+        <param name="state">Ein durch die Anwendung festgelegtes Objekt, das dem asynchronen Öffnungsvorgang zugeordnete Zustandsinformationen enthält.</param>
+        <summary>Startet einen asynchronen Vorgang, um ein Kommunikationsobjekt innerhalb eines festgelegten Zeitraums zu öffnen.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />-Wert, der auf den asynchronen Öffnungsvorgang verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.ICommunicationObject.Close">
+      <MemberSignature Language="C#" Value="void ICommunicationObject.Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.ICommunicationObject.Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.System#ServiceModel#ICommunicationObject#Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass ein Kommunikationsobjekt vom aktuellen Zustand in den geschlossenen Zustand übergeht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.ICommunicationObject.Close">
+      <MemberSignature Language="C#" Value="void ICommunicationObject.Close (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.ICommunicationObject.Close(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.System#ServiceModel#ICommunicationObject#Close(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Sendevorgang bleibt, bevor ein Timeout eintritt.</param>
+        <summary>Bewirkt den Übergang eines Kommunikationsobjekts innerhalb eines angegebenen Zeitraums vom aktuellen Zustand in den geschlossenen Zustand.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.ICommunicationObject.EndClose">
+      <MemberSignature Language="C#" Value="void ICommunicationObject.EndClose (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.ICommunicationObject.EndClose(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.System#ServiceModel#ICommunicationObject#EndClose(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das von einem Aufruf der <see cref="Overload:System.ServiceModel.ICommunicationObject.BeginClose" />-Methode zurückgegeben wird.</param>
+        <summary>Beendet einen asynchronen Vorgang, um ein Kommunikationsobjekt zu schließen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.ICommunicationObject.EndOpen">
+      <MemberSignature Language="C#" Value="void ICommunicationObject.EndOpen (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.ICommunicationObject.EndOpen(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.System#ServiceModel#ICommunicationObject#EndOpen(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das von einem Aufruf der <see cref="Overload:System.ServiceModel.ICommunicationObject.BeginOpen" />-Methode zurückgegeben wird.</param>
+        <summary>Beendet einen asynchronen Vorgang, um ein Kommunikationsobjekt zu öffnen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.ICommunicationObject.Open">
+      <MemberSignature Language="C#" Value="void ICommunicationObject.Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.ICommunicationObject.Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.System#ServiceModel#ICommunicationObject#Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt den Übergang eines Kommunikationsobjekts aus dem Erstellt-Zustand in den Geöffnet-Zustand.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.ICommunicationObject.Open">
+      <MemberSignature Language="C#" Value="void ICommunicationObject.Open (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.ICommunicationObject.Open(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementClient.System#ServiceModel#ICommunicationObject#Open(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Sendevorgang bleibt, bevor ein Timeout eintritt.</param>
+        <summary>Bewirkt den Übergang eines Kommunikationsobjekts innerhalb eines angegebenen Zeitraums vom Erstellt-Zustand in den Geöffnet-Zustand.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.ICommunicationObject.State">
+      <MemberSignature Language="C#" Value="System.ServiceModel.CommunicationState System.ServiceModel.ICommunicationObject.State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.CommunicationState System.ServiceModel.ICommunicationObject.State" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.AnnouncementClient.System#ServiceModel#ICommunicationObject#State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.CommunicationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Zustand des kommunikationsorientierten Objekts ab.</summary>
+        <value>Der Wert für <see cref="T:System.ServiceModel.CommunicationState" /> des Objekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

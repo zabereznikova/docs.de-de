@@ -1,0 +1,1237 @@
+<Type Name="Forest" FullName="System.DirectoryServices.ActiveDirectory.Forest">
+  <TypeSignature Language="C#" Value="public class Forest : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Forest extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.Forest" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> -Klasse stellt eine Active Directory-Domänendienste-Gesamtstruktur.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationPartitions">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ApplicationPartitionCollection ApplicationPartitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ApplicationPartitionCollection ApplicationPartitions" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Forest.ApplicationPartitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ApplicationPartitionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller Anwendungspartitionen in der Gesamtstruktur ab.</summary>
+        <value>Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartitionCollection" /> -Objekt, das alle Anwendungspartitionen in dieser Gesamtstruktur enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLocalSideOfTrustRelationship">
+      <MemberSignature Language="C#" Value="public void CreateLocalSideOfTrustRelationship (string targetForestName, System.DirectoryServices.ActiveDirectory.TrustDirection direction, string trustPassword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateLocalSideOfTrustRelationship(string targetForestName, valuetype System.DirectoryServices.ActiveDirectory.TrustDirection direction, string trustPassword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.CreateLocalSideOfTrustRelationship(System.String,System.DirectoryServices.ActiveDirectory.TrustDirection,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForestName" Type="System.String" />
+        <Parameter Name="direction" Type="System.DirectoryServices.ActiveDirectory.TrustDirection" />
+        <Parameter Name="trustPassword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetForestName">Der DNS-Name der Gesamtstruktur, mit der die Vertrauensstellung erstellt wird.</param>
+        <param name="direction">Einer der <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" />-Member, der die Richtung der Vertrauensstellung relativ zu dieser Gesamtstruktur bestimmt.</param>
+        <param name="trustPassword">Das Kennwort für die Vertrauensstellung.</param>
+        <summary>Erstellt die lokale Seite einer Vertrauensstellung mit der angegebenen Gesamtstruktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Seite einer Vertrauensstellung. Die Vertrauensstellung ist nicht eingerichtet werden, bis beide Seiten der Vertrauensstellung erstellt wurden.  
+  
+ Die `trustPassword` Parameter ordnet der erstellten Vertrauensstellung ein Kennwort. Bei die anderen Seite der Vertrauensstellung erstellt wird, wird das gleiche Kennwort wird bereitgestellt, und klicken Sie dann die zwei lokalen Vertrauensstellungen miteinander gebunden sind.  
+  
+ Verwenden Sie zum programmgesteuerten Erstellen von beiden Seiten einer Vertrauensstellung in einem einzelnen Methodenaufruf der <xref:System.DirectoryServices.ActiveDirectory.Forest.CreateTrustRelationship%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException">Die Vertrauensstellung ist bereits vorhanden.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">
+          Der <paramref name="targetForest" />-Name oder die <paramref name="trustPassword" />-Zeichenfolge ist leer.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForest" /> oder <paramref name="trustPassword" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="direction" /> ist kein gültiger <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" />-Wert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTrustRelationship">
+      <MemberSignature Language="C#" Value="public void CreateTrustRelationship (System.DirectoryServices.ActiveDirectory.Forest targetForest, System.DirectoryServices.ActiveDirectory.TrustDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateTrustRelationship(class System.DirectoryServices.ActiveDirectory.Forest targetForest, valuetype System.DirectoryServices.ActiveDirectory.TrustDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.CreateTrustRelationship(System.DirectoryServices.ActiveDirectory.Forest,System.DirectoryServices.ActiveDirectory.TrustDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForest" Type="System.DirectoryServices.ActiveDirectory.Forest" />
+        <Parameter Name="direction" Type="System.DirectoryServices.ActiveDirectory.TrustDirection" />
+      </Parameters>
+      <Docs>
+        <param name="targetForest">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />-Objekt, das die Gesamtstruktur darstellt, mit der die Vertrauensstellung hergestellt wird.</param>
+        <param name="direction">Einer der <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" />-Member, der die Richtung der Vertrauensstellung relativ zu dieser Gesamtstruktur bestimmt.</param>
+        <summary>Erstellt beide Seiten einer Vertrauensstellung mit der angegebenen Gesamtstruktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt beide Seiten einer Vertrauensstellung mit einem einzelnen Methodenaufruf. Die <xref:System.DirectoryServices.ActiveDirectory.Forest.CreateLocalSideOfTrustRelationship%2A?displayProperty=nameWithType> Methode wird verwendet, um nur eine Seite einer Vertrauensstellung zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException">Die Vertrauensstellung ist bereits vorhanden.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForest" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="direction" /> ist kein gültiger <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" />-Wert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteLocalSideOfTrustRelationship">
+      <MemberSignature Language="C#" Value="public void DeleteLocalSideOfTrustRelationship (string targetForestName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteLocalSideOfTrustRelationship(string targetForestName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.DeleteLocalSideOfTrustRelationship(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForestName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetForestName">Der DNS-Name der Gesamtstruktur, mit der die Vertrauensstellung besteht.</param>
+        <summary>Löscht die lokale Seite einer Vertrauensstellung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Seite einer Vertrauensstellung gelöscht wird, ist nicht mehr die Vertrauensstellung eingerichtet.  
+  
+ Um beide Seiten einer Vertrauensstellung mit einem Methodenaufruf zu löschen, verwenden Sie die <xref:System.DirectoryServices.ActiveDirectory.Forest.DeleteTrustRelationship%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es ist keine Vertrauensstellung mit dem <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />-Objekt vorhanden, das durch den <paramref name="targetForestName" />-Parameter angegeben ist.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetForestName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForestName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteTrustRelationship">
+      <MemberSignature Language="C#" Value="public void DeleteTrustRelationship (System.DirectoryServices.ActiveDirectory.Forest targetForest);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteTrustRelationship(class System.DirectoryServices.ActiveDirectory.Forest targetForest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.DeleteTrustRelationship(System.DirectoryServices.ActiveDirectory.Forest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForest" Type="System.DirectoryServices.ActiveDirectory.Forest" />
+      </Parameters>
+      <Docs>
+        <param name="targetForest">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />-Objekt, das die Gesamtstruktur darstellt, mit der die Vertrauensstellung besteht.</param>
+        <summary>Löscht beide Seiten einer Vertrauensstellung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nur eine Seite einer Vertrauensstellung zu löschen, verwenden Sie die <xref:System.DirectoryServices.ActiveDirectory.Forest.DeleteLocalSideOfTrustRelationship%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es besteht keine Vertrauensstellung mit der angegebenen <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForest" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom Objekt reservierten verwalteten und nicht verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Ein <see cref="T:System.Boolean" />-Wert, der bestimmt, ob die verwalteten Ressourcen freigegeben werden sollen. <see langword="true" />, wenn die verwalteten Ressourcen freigegeben werden sollen, <see langword="false" />, wenn nur die nicht verwalteten Ressourcen freigegeben werden sollen.</param>
+        <summary>Gibt die vom Objekt verwendeten verwalteten Ressourcen und optional auch die nicht verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Domains">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainCollection Domains { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DomainCollection Domains" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Forest.Domains" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller Domänen in der Gesamtstruktur ab.</summary>
+        <value>Eine <see cref="T:System.DirectoryServices.ActiveDirectory.DomainCollection" />-Auflistung, die die <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" />-Domänen im aktuellen <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> enthalten.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllDiscoverableGlobalCatalogs">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection FindAllDiscoverableGlobalCatalogs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection FindAllDiscoverableGlobalCatalogs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.FindAllDiscoverableGlobalCatalogs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sucht alle erkennbaren globalen Kataloge in dieser Gesamtstruktur.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection" /> , enthält die Auflistung der globalen Kataloge, die gefunden wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können erkennbaren Domänencontroller durch Abfragen von DNS-SRV-Einträge suchen.  Nur globale Kataloge, die eine generische, Standort-spezifische, GC SRV-Eintrag registriert werden von dieser Methode zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllDiscoverableGlobalCatalogs">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection FindAllDiscoverableGlobalCatalogs (string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection FindAllDiscoverableGlobalCatalogs(string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.FindAllDiscoverableGlobalCatalogs(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">Der Name des zu durchsuchenden Standorts.</param>
+        <summary>Sucht alle erkennbaren globalen Kataloge in dieser Gesamtstruktur in einem angegebenen Standort.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection" /> , enthält die Auflistung der globalen Kataloge, die gefunden wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erkennbaren globalen Kataloge erhalten durch Abfragen von DNS-SRV-Einträge.  Wenn ein globaler Katalog einen GC-SRV-Eintrag für die angegebene Site nicht registriert wird, wird es nicht von dieser Methode zurückgegeben werden, auch wenn der globale Katalog physisch in diesem Standort befindet.  
+  
+ Alle globalen Kataloge, die einen GC SRV-Datensatz für den angegebenen Standort registrieren werden von dieser Methode zurückgegeben werden, auch wenn sie möglicherweise nicht physisch in diesem Standort.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="siteName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllGlobalCatalogs">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection FindAllGlobalCatalogs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection FindAllGlobalCatalogs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.FindAllGlobalCatalogs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sucht alle globalen Kataloge in dieser Gesamtstruktur.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection" /> , enthält die Auflistung der globalen Kataloge, die gefunden wurden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllGlobalCatalogs">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection FindAllGlobalCatalogs (string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection FindAllGlobalCatalogs(string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.FindAllGlobalCatalogs(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">Der Name des zu durchsuchenden Standorts.</param>
+        <summary>Sucht alle globalen Kataloge in dieser Gesamtstruktur für einen angegebenen Standort.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection" /> -Objekt, das die Auflistung der globalen Kataloge enthält, die gefunden wurden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="siteName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindGlobalCatalog">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.GlobalCatalog FindGlobalCatalog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.GlobalCatalog FindGlobalCatalog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.FindGlobalCatalog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.GlobalCatalog</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sucht alle globalen Kataloge in dieser Gesamtstruktur.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> dieses <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es kann kein globaler Katalog gefunden werden.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindGlobalCatalog">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.GlobalCatalog FindGlobalCatalog (System.DirectoryServices.ActiveDirectory.LocatorOptions flag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.GlobalCatalog FindGlobalCatalog(valuetype System.DirectoryServices.ActiveDirectory.LocatorOptions flag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.FindGlobalCatalog(System.DirectoryServices.ActiveDirectory.LocatorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.GlobalCatalog</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flag" Type="System.DirectoryServices.ActiveDirectory.LocatorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="flag">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.LocatorOptions" /> Wert, der das standortkriterium angibt.</param>
+        <summary>Sucht einen globalen Katalog in dieser Gesamtstruktur für ein angegebenes Standortkriterium.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> -Objekt für das angegebene standortkriterium.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es kann kein globaler Katalog gefunden werden.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindGlobalCatalog">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.GlobalCatalog FindGlobalCatalog (string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.GlobalCatalog FindGlobalCatalog(string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.FindGlobalCatalog(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.GlobalCatalog</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">Der Name des zu durchsuchenden Standorts.</param>
+        <summary>Sucht einen globalen Katalog in dieser Gesamtstruktur für einen angegebenen Standort.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> Objekt für den angegebenen Standort.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es kann kein globaler Katalog gefunden werden.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="siteName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindGlobalCatalog">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.GlobalCatalog FindGlobalCatalog (string siteName, System.DirectoryServices.ActiveDirectory.LocatorOptions flag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.GlobalCatalog FindGlobalCatalog(string siteName, valuetype System.DirectoryServices.ActiveDirectory.LocatorOptions flag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.FindGlobalCatalog(System.String,System.DirectoryServices.ActiveDirectory.LocatorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.GlobalCatalog</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String" />
+        <Parameter Name="flag" Type="System.DirectoryServices.ActiveDirectory.LocatorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">Der Name des zu durchsuchenden Standorts.</param>
+        <param name="flag">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.LocatorOptions" /> Wert, der das standortkriterium angibt.</param>
+        <summary>Sucht einen globalen Katalog in dieser Gesamtstruktur für einen angegebenen Standort und angegebene Standortkriterien.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> -Objekt für den angegebenen Standort und angegebene standortkriterien.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es kann kein globaler Katalog gefunden werden.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="siteName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForestMode">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ForestMode ForestMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.ForestMode ForestMode" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Forest.ForestMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ForestMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Betriebsmodus der Gesamtstruktur ab.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ForestMode" /> -Wert, der den aktuellen Gesamtstrukturmodus dieser <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForestModeLevel">
+      <MemberSignature Language="C#" Value="public int ForestModeLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ForestModeLevel" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Forest.ForestModeLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Betriebsmodusstufe der Gesamtstruktur ab.</summary>
+        <value>Die Betriebsmodusstufe der Gesamtstruktur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllTrustRelationships">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection GetAllTrustRelationships ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection GetAllTrustRelationships() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.GetAllTrustRelationships" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung der Vertrauensstellungen der aktuellen Gesamtstruktur ab.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection" /> Sammlung mit <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> -Objekten, die Vertrauensstellungen der aktuellen <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentForest">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.Forest GetCurrentForest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.Forest GetCurrentForest() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.GetCurrentForest" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.Forest</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> Objekt für den Kontext des aktuellen Benutzers.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> Objekt, das die aktuelle Gesamtstruktur darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForest">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.Forest GetForest (System.DirectoryServices.ActiveDirectory.DirectoryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.Forest GetForest(class System.DirectoryServices.ActiveDirectory.DirectoryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.GetForest(System.DirectoryServices.ActiveDirectory.DirectoryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.Forest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> -Objekt, das das Ziel und die Anmeldeinformationen zum Abrufen des Objekts enthält.</param>
+        <summary>Ruft eine <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> Objekt für den angegebenen Kontext.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> -Objekt, das die Gesamtstruktur darstellt, die von dieser Methode abgerufen wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Eine Verbindung mit dem Ziel, das im angegebenen <paramref name="context" /> konnte nicht hergestellt werden.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="context" /> ist nicht gültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectiveAuthenticationStatus">
+      <MemberSignature Language="C#" Value="public bool GetSelectiveAuthenticationStatus (string targetForestName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetSelectiveAuthenticationStatus(string targetForestName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.GetSelectiveAuthenticationStatus(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForestName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetForestName">Der DNS-Name der <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> für das die eingehende Vertrauensstellung vorhanden ist.</param>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob selektive Authentifizierung für die eingehende Vertrauensstellung mit der angegebenen Gesamtstruktur aktiviert ist.  <see langword="true" />Wenn die selektive Authentifizierung aktiviert ist; andernfalls <see langword="false" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die selektive Authentifizierung aktiviert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine Gesamtstruktur-Vertrauensstellung Wenn Sie für die selektive Authentifizierung entscheiden müssen Berechtigungen manuell aktiviert werden für jede Domäne und Ressource in der lokalen Gesamtstruktur, Benutzer in der anderen Gesamtstruktur Zugriff haben soll.  
+  
+ Wenn ein Benutzer über eine Vertrauensstellung authentifiziert, die für die selektive Authentifizierung aktiviert ist, eine andere Organisation Sicherheits-ID (SID) des Benutzers Autorisierungsdaten hinzugefügt wird. Das Vorhandensein dieser SID löst eine Überprüfung der Ressourcendomäne aus, mit der sichergestellt wird, dass sich der Benutzer bei diesem Service authentifizieren darf. Nachdem der Benutzer authentifiziert ist, fügt die Server, der der Benutzer authentifiziert sich die SID für diese Organisation aus, wenn SID andere Organisation nicht bereits vorhanden ist. Der Kontext eines authentifizierten Benutzers kann nur eine dieser speziellen SIDs enthalten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es besteht keine Vertrauensstellung mit der <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> angegebenen <paramref name="targetForestName" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Beim Aufruf von LsaQueryTrustedDomainInfoByName ist ein Fehler aufgetreten. Weitere Informationen finden Sie im Thema [LsaQueryTrustedDomainInfoByName](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/secmgmt/security/lsaquerytrusteddomaininfobyname.asp) in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetForestName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForestName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSidFilteringStatus">
+      <MemberSignature Language="C#" Value="public bool GetSidFilteringStatus (string targetForestName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetSidFilteringStatus(string targetForestName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.GetSidFilteringStatus(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForestName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetForestName">Der DNS-Name der <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> -Objekt mit der die Vertrauensstellung vorhanden ist.</param>
+        <summary>Ruft den Status der SID-Filterung einer Vertrauensstellung ab.</summary>
+        <returns>
+          <see langword="true" />Wenn die SID-Filterung aktiviert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es besteht keine Vertrauensstellung mit der <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> von angegebene Objekt <paramref name="targetForestName" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetForestName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForestName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTrustRelationship">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipInformation GetTrustRelationship (string targetForestName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipInformation GetTrustRelationship(string targetForestName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.GetTrustRelationship(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipInformation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForestName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetForestName">Der Name des der <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> Objekt, für das die Vertrauensstellungsinformationen abgerufen werden.</param>
+        <summary>Ruft die Vertrauensstellung zwischen dieser Gesamtstruktur und der angegebenen Gesamtstruktur ab.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipInformation" /> Objekt, das die Vertrauensstellung zwischen dieser Gesamtstruktur und der angegebenen Gesamtstruktur darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es besteht keine Vertrauensstellung mit der <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> angegebenen <paramref name="targetForestName" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetForestName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForestName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalCatalogs">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection GlobalCatalogs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection GlobalCatalogs" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Forest.GlobalCatalogs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller globalen Kataloge in der Gesamtstruktur ab.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection" /> Sammlung mit den <see cref="T:System.DirectoryServices.ActiveDirectory.GlobalCatalog" /> globalen Kataloge in der aktuellen <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Forest.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Gesamtstruktur ab.</summary>
+        <value>Der Name dieses <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NamingRoleOwner">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainController NamingRoleOwner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DomainController NamingRoleOwner" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Forest.NamingRoleOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Domänencontroller ab, der die FSMO-Namensmasterfunktion für die Gesamtstruktur enthält.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> -Objekt, das den Domänencontroller darstellt, der die FSMO-Namensmaster dieser <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseForestFunctionality">
+      <MemberSignature Language="C#" Value="public void RaiseForestFunctionality (System.DirectoryServices.ActiveDirectory.ForestMode forestMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseForestFunctionality(valuetype System.DirectoryServices.ActiveDirectory.ForestMode forestMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.RaiseForestFunctionality(System.DirectoryServices.ActiveDirectory.ForestMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forestMode" Type="System.DirectoryServices.ActiveDirectory.ForestMode" />
+      </Parameters>
+      <Docs>
+        <param name="forestMode">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ForestMode" /> -Enumerationswert ab, der die neue Betriebsebene für die Gesamtstruktur angibt.</param>
+        <summary>Löst den Betriebsmodus für die Gesamtstruktur aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.DirectoryServices.ActiveDirectory.ForestMode> Wert ausgelöst, aber nicht verringert werden kann. Dies bedeutet, dass durch das Auslösen der Funktionsebene der Gesamtstruktur nicht rückgängig gemacht kann und die Entscheidung zu diesem Zweck sorgfältig vorgenommen werden muss.  
+  
+ Weitere Informationen zu den Gesamtstrukturbetriebsmodi finden Sie unter [Domänen-und Gesamtstrukturfunktionalität](http://www.microsoft.com/resources/documentation/WindowsServ/2003/standard/proddocs/en-us/sag_levels.asp).  
+  
+ Die folgende Tabelle definiert die gültigen Werte für `forestMode` basierend auf dem aktuellen Betriebsmodus der Gesamtstruktur.  
+  
+|Der aktuelle Modus|Modus kann mit potenziert werden soll|  
+|------------------|---------------------------|  
+|<xref:System.DirectoryServices.ActiveDirectory.ForestMode.Windows2000Forest>|<xref:System.DirectoryServices.ActiveDirectory.ForestMode.Windows2003InterimForest><br /><br /> <xref:System.DirectoryServices.ActiveDirectory.ForestMode.Windows2003Forest>|  
+|<xref:System.DirectoryServices.ActiveDirectory.ForestMode.Windows2003InterimForest>|<xref:System.DirectoryServices.ActiveDirectory.ForestMode.Windows2003Forest>|  
+|<xref:System.DirectoryServices.ActiveDirectory.ForestMode.Windows2003Forest>|Keine|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">Basierend auf dem aktuellen Betriebsmodus der Gesamtstruktur, der angegebene Wert für <paramref name="forestMode" /> ist ungültig.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="forestMode" /> ist kein gültiger <see cref="T:System.DirectoryServices.ActiveDirectory.ForestMode" />-Enumerationswert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseForestFunctionalityLevel">
+      <MemberSignature Language="C#" Value="public void RaiseForestFunctionalityLevel (int forestMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseForestFunctionalityLevel(int32 forestMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.RaiseForestFunctionalityLevel(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forestMode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="forestMode">Auf diese Ebene anheben.</param>
+        <summary>Hebt die Funktionsebene der Gesamtstruktur auf die angegebene Einstellung an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepairTrustRelationship">
+      <MemberSignature Language="C#" Value="public void RepairTrustRelationship (System.DirectoryServices.ActiveDirectory.Forest targetForest);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RepairTrustRelationship(class System.DirectoryServices.ActiveDirectory.Forest targetForest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.RepairTrustRelationship(System.DirectoryServices.ActiveDirectory.Forest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForest" Type="System.DirectoryServices.ActiveDirectory.Forest" />
+      </Parameters>
+      <Docs>
+        <param name="targetForest">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> Objekt, das das Gesamtstrukturobjekt darstellt, mit der die Vertrauensstellung vorhanden ist.</param>
+        <summary>Repariert eine Vertrauensstellung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es besteht keine Vertrauensstellung mit der <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> von angegebene Objekt <paramref name="targetForest" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForest" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RootDomain">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.Domain RootDomain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.Domain RootDomain" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Forest.RootDomain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.Domain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die erste Domäne ab, die in einer Gesamtstruktur erstellt wurde.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> -Objekt, das die erste Domäne darstellt, die in diesem erstellt wurde <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema Schema" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Forest.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Schema der Gesamtstruktur ab.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema" /> -Objekt, das das Schema des aktuellen darstellt <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaRoleOwner">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainController SchemaRoleOwner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DomainController SchemaRoleOwner" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Forest.SchemaRoleOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Domänencontroller ab, der die FSMO-Schemamasterfunktion für die Gesamtstruktur enthält.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> -Objekt, das den Domänencontroller darstellt, der die FSMO-Schemamaster dieser <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSelectiveAuthenticationStatus">
+      <MemberSignature Language="C#" Value="public void SetSelectiveAuthenticationStatus (string targetForestName, bool enable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSelectiveAuthenticationStatus(string targetForestName, bool enable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.SetSelectiveAuthenticationStatus(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForestName" Type="System.String" />
+        <Parameter Name="enable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="targetForestName">Der DNS-Name der <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> -Objekt mit der die eingehende Vertrauensstellung vorhanden ist.</param>
+        <param name="enable">
+          <see langword="true" />Wenn die selektive Authentifizierung aktiviert ist; andernfalls <see langword="false" />.</param>
+        <summary>Aktiviert oder deaktiviert die selektive Authentifizierung für eine eingehende Vertrauensstellung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es besteht keine Vertrauensstellung mit der vom angegebenen Gesamtstruktur <paramref name="targetForestName" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetForestName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForestName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSidFilteringStatus">
+      <MemberSignature Language="C#" Value="public void SetSidFilteringStatus (string targetForestName, bool enable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSidFilteringStatus(string targetForestName, bool enable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.SetSidFilteringStatus(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForestName" Type="System.String" />
+        <Parameter Name="enable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="targetForestName">Der DNS-Name der <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> -Objekt mit der die Vertrauensstellung vorhanden ist.</param>
+        <param name="enable">
+          <see langword="true" />Wenn die SID-Filterung aktiviert werden; andernfalls <see langword="false" />.</param>
+        <summary>Legt den SID-Filterstatus mit der angegebenen Gesamtstruktur fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig neue externe und Gesamtstruktur-Vertrauensstellungen [!INCLUDE[winxpsvr](~/includes/winxpsvr-md.md)] SID-Filterung für Active Directory-Domänendiensten erzwungen.  SID-Filter Dient zum Verhindern von Angriffen durch böswillige Benutzer, die versuchen, ein anderes Benutzerkonto erhöhten Rechte erteilen.  Erzwingen der SID-Filterung für Gesamtstruktur-Vertrauensstellungen verhindert nicht, dass Migrationen Domänen innerhalb der gleichen Gesamtstruktur, mit der SID-Verlauf und wirkt sich nicht auf die Zugriffssteuerungsstrategie universellen Gruppe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es besteht keine Vertrauensstellung mit der vom angegebenen Gesamtstruktur <paramref name="targetForestName" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetForestName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForestName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sites">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection Sites { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection Sites" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Forest.Sites" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Standorten ab, die in der Gesamtstruktur enthalten sind.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection" /> , enthält die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" /> Standorte in der aktuellen <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung der aktuellen Gesamtstruktur zurück.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die den DNS-Namen darstellt, die <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateLocalSideOfTrustRelationship">
+      <MemberSignature Language="C#" Value="public void UpdateLocalSideOfTrustRelationship (string targetForestName, string newTrustPassword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateLocalSideOfTrustRelationship(string targetForestName, string newTrustPassword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.UpdateLocalSideOfTrustRelationship(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForestName" Type="System.String" />
+        <Parameter Name="newTrustPassword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetForestName">Der Name des der <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> Objekt, für die das Kennwort der lokalen Vertrauensstellung geändert werden.</param>
+        <param name="newTrustPassword">Das neue Kennwort für die Vertrauensstellung.</param>
+        <summary>Aktualisiert das Kennwort für die lokale Seite einer Vertrauensstellung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es besteht keine Vertrauensstellung mit der vom angegebenen Gesamtstruktur <paramref name="targetForestName" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetForestName" />oder <paramref name="newTrustPassword" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForestName" /> oder <paramref name="newTrustPassword" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateLocalSideOfTrustRelationship">
+      <MemberSignature Language="C#" Value="public void UpdateLocalSideOfTrustRelationship (string targetForestName, System.DirectoryServices.ActiveDirectory.TrustDirection newTrustDirection, string newTrustPassword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateLocalSideOfTrustRelationship(string targetForestName, valuetype System.DirectoryServices.ActiveDirectory.TrustDirection newTrustDirection, string newTrustPassword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.UpdateLocalSideOfTrustRelationship(System.String,System.DirectoryServices.ActiveDirectory.TrustDirection,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForestName" Type="System.String" />
+        <Parameter Name="newTrustDirection" Type="System.DirectoryServices.ActiveDirectory.TrustDirection" />
+        <Parameter Name="newTrustPassword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetForestName">Der Name des der <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> Objekt für die der lokalen vertrauensstellungsrichtung und das Kennwort geändert werden müssen.</param>
+        <param name="newTrustDirection">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> Wert für die neue Richtung der Vertrauensstellung.</param>
+        <param name="newTrustPassword">Das neue Kennwort für die Vertrauensstellung.</param>
+        <summary>Aktualisiert das Kennwort und die Vertrauensrichtung für die lokale Seite einer Vertrauensstellung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es besteht keine Vertrauensstellung mit der <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> von angegebene Objekt <paramref name="targetForestName" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetForestName" />oder <paramref name="newTrustPassword" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForestName" /> oder <paramref name="newTrustPassword" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Die <paramref name="newTrustDirection" /> Parameter ist kein gültiger <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> Wert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateTrustRelationship">
+      <MemberSignature Language="C#" Value="public void UpdateTrustRelationship (System.DirectoryServices.ActiveDirectory.Forest targetForest, System.DirectoryServices.ActiveDirectory.TrustDirection newTrustDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateTrustRelationship(class System.DirectoryServices.ActiveDirectory.Forest targetForest, valuetype System.DirectoryServices.ActiveDirectory.TrustDirection newTrustDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.UpdateTrustRelationship(System.DirectoryServices.ActiveDirectory.Forest,System.DirectoryServices.ActiveDirectory.TrustDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForest" Type="System.DirectoryServices.ActiveDirectory.Forest" />
+        <Parameter Name="newTrustDirection" Type="System.DirectoryServices.ActiveDirectory.TrustDirection" />
+      </Parameters>
+      <Docs>
+        <param name="targetForest">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> -Objekt für die die Richtungen der Vertrauensstellung geändert werden muss.</param>
+        <param name="newTrustDirection">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> Wert, der die neue Richtung der Vertrauensstellung angibt.</param>
+        <summary>Aktualisiert die Richtung der Vertrauensstellung für eine Vertrauensstellung. Die Richtungen der Vertrauensstellung werden auf beiden Seiten der Vertrauensstellung aktualisiert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es besteht keine Vertrauensstellung mit der vom angegebenen Gesamtstruktur <paramref name="targetForest" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForest" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="newTrustDirection" /> ist kein gültiger <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" />-Wert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyOutboundTrustRelationship">
+      <MemberSignature Language="C#" Value="public void VerifyOutboundTrustRelationship (string targetForestName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void VerifyOutboundTrustRelationship(string targetForestName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.VerifyOutboundTrustRelationship(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForestName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetForestName">Der DNS-Name der Domäne, mit der die Vertrauensstellung vorhanden ist.</param>
+        <summary>Überprüft, ob eine zuvor eingerichtete ausgehende Vertrauensstellung mit der angegebenen Gesamtstruktur gültig ist.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es ist keine ausgehende Vertrauensstellung mit der Gesamtstruktur, die von angegeben wird <paramref name="targetForestName" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetForestName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForestName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyTrustRelationship">
+      <MemberSignature Language="C#" Value="public void VerifyTrustRelationship (System.DirectoryServices.ActiveDirectory.Forest targetForest, System.DirectoryServices.ActiveDirectory.TrustDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void VerifyTrustRelationship(class System.DirectoryServices.ActiveDirectory.Forest targetForest, valuetype System.DirectoryServices.ActiveDirectory.TrustDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Forest.VerifyTrustRelationship(System.DirectoryServices.ActiveDirectory.Forest,System.DirectoryServices.ActiveDirectory.TrustDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetForest" Type="System.DirectoryServices.ActiveDirectory.Forest" />
+        <Parameter Name="direction" Type="System.DirectoryServices.ActiveDirectory.TrustDirection" />
+      </Parameters>
+      <Docs>
+        <param name="targetForest">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> Objekt, für das die Vertrauensstellung überprüft.</param>
+        <param name="direction">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> Wert, der die Richtung der Vertrauensstellung relativ zu dieser Gesamtstruktur angibt.</param>
+        <summary>Überprüft, ob eine zuvor eingerichtete Vertrauensstellung mit der angegebenen Gesamtstruktur gültig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft, dass eine Vertrauensstellung vollständig eingerichtet wurde. Die Vertrauensstellung ist nicht eingerichtet werden, bis beide Seiten der Vertrauensstellung erstellt wurden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es besteht keine Vertrauensstellung mit der vom angegebenen Gesamtstruktur <paramref name="targetForest" />, oder die Zielgesamtstruktur verfügt nicht über die durch angegebene vertrauensstellungsrichtung <paramref name="direction" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetForest" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Die <paramref name="direction" /> Parameter ist kein gültiger <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> Wert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,119 @@
+<Type Name="TextElementEditingBehaviorAttribute" FullName="System.Windows.Documents.TextElementEditingBehaviorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TextElementEditingBehaviorAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TextElementEditingBehaviorAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.TextElementEditingBehaviorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, wie eine <see cref="T:System.Windows.Controls.RichTextBox" /> ein benutzerdefiniertes Textelement behandelt werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ein benutzerdefiniertes Textelement erstellen, können Sie die <xref:System.Windows.Documents.TextElementEditingBehaviorAttribute> Attribut, um anzugeben, dass das Element als eine einzige untrennbares Einheit behandelt werden sollen.  Wenn die <xref:System.Windows.Documents.TextElementEditingBehaviorAttribute.IsMergeable%2A> und <xref:System.Windows.Documents.TextElementEditingBehaviorAttribute.IsTypographicOnly%2A> Eigenschaften werden festgelegt, um `false`, <xref:System.Windows.Controls.RichTextBox> behält die Grenzen und den Inhalt des Elements, wenn der Benutzer bearbeitet die <xref:System.Windows.Controls.RichTextBox>.  Im Allgemeinen das benutzerdefinierte Element weist ein ähnliches Verhalten zu einer <xref:System.Windows.Documents.Hyperlink>.  Das folgende Verhalten tritt auf, wenn verwenden Sie diese Klasse und setzen Sie beide Eigenschaften auf `false`:  
+  
+-   Wenn ein Benutzer kopiert und einen Teil des Inhalts in einem benutzerdefinierten Element eingefügt, wird die Formatierung der den kopierten Text nicht beibehalten.  
+  
+-   Wenn Sie ein Benutzer vor oder nach dem Inhalt des Elements benutzerdefinierte Typen, wird der neue Inhalt nicht Formatierungsinformationen für das benutzerdefinierte Element abrufen.  
+  
+-   Der Benutzer kann nicht in das benutzerdefinierte Element einen Zeilenumbruch einfügen.  
+  
+ Verwenden Sie beim Erstellen eines benutzerdefinierten Elements der <xref:System.Windows.Documents.TextRange.Save%28System.IO.Stream%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> -Methode und Set `preserveTextElements` zu `true` das benutzerdefinierte Element und die Eigenschaftswerte erhalten bleiben, wenn Sie auf den Datenträger oder die Zwischenablage serialisieren..  
+  
+ <xref:System.Windows.Documents.TextElementEditingBehaviorAttribute>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextElementEditingBehaviorAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextElementEditingBehaviorAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Documents.TextElementEditingBehaviorAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.TextElementEditingBehaviorAttribute>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMergeable">
+      <MemberSignature Language="C#" Value="public bool IsMergeable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMergeable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElementEditingBehaviorAttribute.IsMergeable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.RichTextBox" /> können zwei angrenzende Textelemente zusammenführen.</summary>
+        <value>
+          <see langword="true" />Wenn eine <see cref="T:System.Windows.Controls.RichTextBox" /> angrenzende benutzerdefinierte Textelemente zusammenführen, die über identische Eigenschaftswerte verfügen, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Documents.TextElementEditingBehaviorAttribute.IsMergeable%2A> ist `true`, die Entscheidung, angrenzende Textelemente zu kombinieren, die über identische Eigenschaftswerte verfügen bleibt bis zu der <xref:System.Windows.Controls.RichTextBox>.  Wenn <xref:System.Windows.Documents.TextElementEditingBehaviorAttribute.IsMergeable%2A> ist `false`ein <xref:System.Windows.Controls.RichTextBox> zwei angrenzende Textelemente kann nicht kombiniert werden.  
+  
+ <xref:System.Windows.Documents.TextElementEditingBehaviorAttribute>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTypographicOnly">
+      <MemberSignature Language="C#" Value="public bool IsTypographicOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTypographicOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextElementEditingBehaviorAttribute.IsTypographicOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein Wert, der angibt,, ob das Textelement bietet Formatierung Zeichen oder die Formatierung auf das gesamte Element angewendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Formatierung auf die einzelnen Zeichen angewendet werden soll; <see langword="false" /> , wenn die Formatierung auf das gesamte Element angewendet werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Documents.TextElementEditingBehaviorAttribute.IsTypographicOnly%2A> ist `true` und der Benutzer kopiert und fügt Sie Teil des Inhalts eines Elements benutzerdefinierter Text, die Formatierung wird beibehalten.  Wenn <xref:System.Windows.Documents.TextElementEditingBehaviorAttribute.IsTypographicOnly%2A> ist `false`, die Formatierung ist nur beibehalten, wenn der Benutzer kopiert und fügt den gesamten Inhalt des benutzerdefinierten Textelements.  
+  
+ <xref:System.Windows.Documents.TextElementEditingBehaviorAttribute>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

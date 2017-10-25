@@ -1,0 +1,98 @@
+<Type Name="Table+RowControlCollection" FullName="System.Web.UI.WebControls.Table+RowControlCollection">
+  <TypeSignature Language="C#" Value="protected class Table.RowControlCollection : System.Web.UI.ControlCollection" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit Table/RowControlCollection extends System.Web.UI.ControlCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Table.RowControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Auflistung der <see cref="T:System.Web.UI.WebControls.TableRow" /> Objekte in einem <see cref="T:System.Web.UI.WebControls.Table" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.WebControls.Table.RowControlCollection> Auflistung wird zurückgegeben, durch die <xref:System.Web.UI.Control.Controls%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Table> Steuerelement. Nur <xref:System.Web.UI.WebControls.TableRow> können Objekte hinzugefügt werden, um dies <xref:System.Web.UI.WebControls.Table.RowControlCollection>.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Table.RowControlCollection.Add(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="child">Das <see cref="T:System.Web.UI.Control" />, das in <see cref="T:System.Web.UI.WebControls.Table.RowControlCollection" /> eingefügt werden soll.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.Control" /> -Objekt an die <see cref="T:System.Web.UI.WebControls.Table.RowControlCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Table.RowControlCollection.Add%2A> Methode, um ein neues Steuerelement zum Hinzufügen der <xref:System.Web.UI.WebControls.Table.RowControlCollection> Auflistung. Das angegebene Steuerelement wird am Ende des Arrays hinzugefügt. Das Steuerelement kann nur eine Instanz von einem <xref:System.Web.UI.WebControls.TableRow> Steuerelement.  
+  
+ Hinzufügen des Steuerelements an die <xref:System.Web.UI.WebControls.Table.RowControlCollection> Auflistung an einer bestimmten Indexposition verwenden die <xref:System.Web.UI.WebControls.Table.RowControlCollection.AddAt%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Objekt vom angegebenen <paramref name="child" /> ist eine <see cref="T:System.Web.UI.WebControls.TableRow" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public override void AddAt (int index, System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddAt(int32 index, class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Table.RowControlCollection.AddAt(System.Int32,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position im Array, an dem das untergeordnete Steuerelement hinzugefügt werden soll.</param>
+        <param name="child">Die <see langword="Control" /> hinzuzufügendes Objekt die <see cref="T:System.Web.UI.WebControls.Table.RowControlCollection" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.Control" /> -Objekt an die <see cref="T:System.Web.UI.WebControls.Table.RowControlCollection" /> Auflistung. Das neue Steuerelement wird in das Array an der angegebenen Indexposition hinzugefügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Table.RowControlCollection.AddAt%2A> Methode, um ein neues Steuerelement zum Hinzufügen der <xref:System.Web.UI.WebControls.Table.RowControlCollection> Auflistung am angegebenen Speicherort. Das Steuerelement kann nur eine Instanz von einem <xref:System.Web.UI.WebControls.TableRow> Steuerelement.  
+  
+ Hinzufügen des Steuerelements auf der <xref:System.Web.UI.WebControls.Table.RowControlCollection> am Ende der <xref:System.Web.UI.WebControls.Table.RowControlCollection>, verwenden Sie die <xref:System.Web.UI.WebControls.Table.RowControlCollection.Add%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das Steuerelement lässt keine untergeordneten Steuerelemente zu.</exception>
+        <exception cref="T:System.ArgumentException">Der Wert des untergeordneten Elements ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das Objekt ist eine <see cref="T:System.Web.UI.WebControls.TableRow" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

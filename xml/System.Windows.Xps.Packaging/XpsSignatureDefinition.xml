@@ -1,0 +1,305 @@
+<Type Name="XpsSignatureDefinition" FullName="System.Windows.Xps.Packaging.XpsSignatureDefinition">
+  <TypeSignature Language="C#" Value="public class XpsSignatureDefinition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XpsSignatureDefinition extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.XpsSignatureDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> digitale Signatur.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den Signaturdefinitionen in [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] -Pakete, finden Sie in Kapitel 10 in XML Paper Specification (XPS), die am [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ Informationen zu <xref:System.IO.Packaging.Package> digitale Signaturen finden Sie im MSDN-Artikel Digital signieren Framework von der Open Packaging Conventions unter [http://go.microsoft.com/fwlink/?LinkId=74494](http://go.microsoft.com/fwlink/?LinkId=74494).  
+  
+ Informationen zu [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] finden Sie unter XML Paper Specification (XPS), die am [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Erstellen und Festlegen der Eigenschaften einer <xref:System.Windows.Xps.Packaging.XpsSignatureDefinition>.  
+  
+ [!code-csharp[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsReadWriteSign/CSharp/SignatureDialog.xaml.cs#signaturedefinitioncommandhandler)]
+ [!code-vb[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsReadWriteSign/visualbasic/signaturedialog.xaml.vb#signaturedefinitioncommandhandler)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XpsSignatureDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.XpsSignatureDefinition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Xps.Packaging.XpsSignatureDefinition" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsReadWriteSign/CSharp/SignatureDialog.xaml.cs#signaturedefinitioncommandhandler)]
+ [!code-vb[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsReadWriteSign/visualbasic/signaturedialog.xaml.vb#signaturedefinitioncommandhandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo Culture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Culture" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsSignatureDefinition.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Globalization.CultureInfo" /> der Signatur.</summary>
+        <value>Die kulturinformationen der Signatur.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Xps.Packaging.XpsSignatureDefinition.Culture%2A> Eigenschaft ist optional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBeenModified">
+      <MemberSignature Language="C#" Value="public bool HasBeenModified { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasBeenModified" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsSignatureDefinition.HasBeenModified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob geleerten eigenschaftenänderungen für vorhanden sind die <see cref="T:System.Windows.Xps.Packaging.XpsSignatureDefinition" /> -Klasse und in das Paket Stream geschrieben werden muss.</summary>
+        <value>
+          <see langword="true" />Wenn nicht gespeicherte Änderungen vorhanden. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intent">
+      <MemberSignature Language="C#" Value="public string Intent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Intent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsSignatureDefinition.Intent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Zeichenfolgenwert der Signatur Absicht Vereinbarung, der der Signaturgeber anhand Anmelden ist fest.</summary>
+        <value>Ein <see cref="T:System.String" /> , der die Absicht Vereinbarung darstellt; z. B. "Ich gelesen und stimme zu." Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu der `Intent` Element von Signaturdefinitionen in [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] -Paketen finden Sie in Kapitel 10 in der [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] -Spezifikation, die Sie, am erhalten können [XPS: Spezifikation und License Downloads](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird das Festlegen dieser Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsReadWriteSign/CSharp/SignatureDialog.xaml.cs#signaturedefinitioncommandhandler)]
+ [!code-vb[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsReadWriteSign/visualbasic/signaturedialog.xaml.vb#signaturedefinitioncommandhandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedSigner">
+      <MemberSignature Language="C#" Value="public string RequestedSigner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestedSigner" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsSignatureDefinition.RequestedSigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Identität der Person, die das Paket zum Signieren von angefordert wird (oder Computerstart) fest.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den Signaturgeber darstellt, z. B. "Mary Jones, Marketing-Abteilung" Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der `SignerName` Attribut von der `SignatureDefinition` Element in einer [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Paket. Beachten Sie den Unterschied in den Namen ein.  
+  
+ Weitere Informationen zu der `SignerName` -Attribut angegeben wird, finden Sie in Kapitel 10 in der die [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] -Spezifikation, die Sie, am erhalten können [XPS: Spezifikation und License Downloads](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird das Festlegen dieser Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsReadWriteSign/CSharp/SignatureDialog.xaml.cs#signaturedefinitioncommandhandler)]
+ [!code-vb[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsReadWriteSign/visualbasic/signaturedialog.xaml.vb#signaturedefinitioncommandhandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignBy">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; SignBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; SignBy" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsSignatureDefinition.SignBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Datum und Uhrzeit, die mit dem angeforderten Signaturgebers die Teile des angegebenen Dokuments anmelden muss.</summary>
+        <value>A (<see cref="T:System.Nullable" />) <see cref="T:System.DateTime" /> , den Stichtag Signaturgebers muss mit dem das Paket anmelden darstellt. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu der `SignBy` Element von Signaturdefinitionen in [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] -Paketen finden Sie die [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] -Spezifikation, die Sie, am erhalten können [XPS: Spezifikation und die Lizenz heruntergeladen](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird das Festlegen dieser Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsReadWriteSign/CSharp/SignatureDialog.xaml.cs#signaturedefinitioncommandhandler)]
+ [!code-vb[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsReadWriteSign/visualbasic/signaturedialog.xaml.vb#signaturedefinitioncommandhandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningLocale">
+      <MemberSignature Language="C#" Value="public string SigningLocale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SigningLocale" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsSignatureDefinition.SigningLocale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die rechtliche Zuständigkeit, in dem das Paket signiert ist.</summary>
+        <value>Ein <see cref="T:System.String" /> , darstellt, die Zuständigkeit, z. B. "Bundesstaat Utah, USA." Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der `SigningLocation` Element von Signaturdefinitionen in [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Pakete. Beachten Sie den Unterschied in den Namen ein.  
+  
+ Der ursprüngliche Hersteller des der [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Paket kann diese Eigenschaft festlegen. Optional kann der Unterzeichner legen Sie die Eigenschaft zum Zeitpunkt der Signieren des Pakets, wenn niemand sonst noch nicht angemeldet hat.  
+  
+ Weitere Informationen zu der `SigningLocation` Element finden Sie in Kapitel 10 in der [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] -Spezifikation, die Sie, am erhalten können [XPS: Specification and License Downloads](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird das Festlegen dieser Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsReadWriteSign/CSharp/SignatureDialog.xaml.cs#signaturedefinitioncommandhandler)]
+ [!code-vb[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsReadWriteSign/visualbasic/signaturedialog.xaml.vb#signaturedefinitioncommandhandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpotId">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Guid&gt; SpotId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Guid&gt; SpotId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsSignatureDefinition.SpotId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen eindeutigen Bezeichner für dieses <see cref="T:System.Windows.Xps.Packaging.XpsSignatureDefinition" />.</summary>
+        <value>A (<see cref="T:System.Nullable" />) <see cref="T:System.Guid" /> darstellt, die die [!INCLUDE[TLA2#tla_id](~/includes/tla2sharptla-id-md.md)] der Signaturdefinition. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verknüpfen einer `Signature` Element dieser <xref:System.Windows.Xps.Packaging.XpsSignatureDefinition>, müssen Sie festlegen der `Id` Attribut des der `Signature` auf den Wert des der <xref:System.Windows.Xps.Packaging.XpsSignatureDefinition.SpotId%2A> Eigenschaft. Weitere Informationen zu `Signature` Elemente finden Sie unter der [Open Packaging Conventions](http://www.microsoft.com/whdc/xps/xpspkg.mspx) Schema.  
+  
+ Weitere Informationen zu der `SpotID` Attribut des der `SignatureDefinition` Element in eine [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Verpacken, finden Sie in Kapitel 10 der [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] -Spezifikation, die Sie, am erhalten können [XPS: Spezifikation und License Downloads](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird das Festlegen dieser Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsReadWriteSign/CSharp/SignatureDialog.xaml.cs#signaturedefinitioncommandhandler)]
+ [!code-vb[XpsReadWriteSign#SignatureDefinitionCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsReadWriteSign/visualbasic/signaturedialog.xaml.vb#signaturedefinitioncommandhandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpotLocation">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.SpotLocation SpotLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Xps.Packaging.SpotLocation SpotLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsSignatureDefinition.SpotLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.SpotLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Speicherort, der angibt, wo die sichtbare digitale Signatur im angezeigt ein [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Dokument.</summary>
+        <value>Ein <see cref="T:System.Windows.Xps.Packaging.SpotLocation" /> , der den Speicherort des Pakets, wo eine sichtbare Anforderung für eine Signatur angezeigt, darstellt. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu der `SpotLocation` Element von Signaturdefinitionen in [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] -Paketen finden Sie in Kapitel 10 in der [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] -Spezifikation, die Sie, am erhalten können [XPS: Spezifikation und License Downloads](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

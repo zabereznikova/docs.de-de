@@ -1,0 +1,641 @@
+<Type Name="MasterPage" FullName="System.Web.UI.MasterPage">
+  <TypeSignature Language="C#" Value="public class MasterPage : System.Web.UI.UserControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MasterPage extends System.Web.UI.UserControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MasterPage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.UserControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("Microsoft.VisualStudio.Web.WebForms.MasterPageWebFormDesigner, Microsoft.VisualStudio.Web, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.ComponentModel.Design.IRootDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.MasterPageControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fungiert als Vorlage und zusammenführungscontainer für Seiten, die nur von bestehen <see cref="T:System.Web.UI.WebControls.Content" /> Steuerelemente und ihre jeweiligen untergeordneten Steuerelementen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Masterseite fungiert als Vorlagencontainer und Zusammenführen von Seite Inhaltsseiten in Ihre ASP.NET-Webanwendung. Masterseiten bieten eine einfache Möglichkeit, die Struktur und Inhalt für einen Satz von Inhaltsseiten freigeben. Mit der Platzhalter für Inhalte in den Abschnitten der Masterseite mit dem Inhalt der Inhaltsseiten ersetzt werden.  
+  
+ Bei Verwendung einer Masterseite und die entsprechenden Inhaltsseiten fügen Sie die erforderlichen XHTML-Dokument-Tags (z. B. `html`, `head`, und `body`) nur für die Gestaltungsvorlage und nicht länger erstellen Sie Ihre andere ASPX-Dateien (ASP.NET-Seiten) als eigenständigen-Website Seiten. Inhaltsseiten legen Sie den Inhalt So fügen Sie die Platzhalter in der Masterseite.  
+  
+ Wenn eine HTTP-Anforderung für eine Seite zur Laufzeit erfolgt, werden die Gestaltungsvorlage und Inhaltsseiten in eine einzelne Klasse mit dem gleichen Namen wie die Inhaltsseiten zusammengefasst. Das resultierende kompiliert, zusammengeführte Klasse abgeleitet wird, aus der <xref:System.Web.UI.Page> Klasse.  
+  
+ Eine Masterseite kann direkte Markup und Serversteuerelemente sowie Containersteuerelemente enthalten. Jedes Element, das in die Masterseite außerhalb von platziert wird ein <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement auf allen Seiten, die bei der Zusammenführung der Gestaltungsvorlage und Inhaltsseiten gerendert wird.  
+  
+ Jeder Inhaltsseite, die auf der Masterseite bezieht, muss die Gestaltungsvorlage in verweisen eine `MasterPageFile` Attribut, dessen Richtlinie. Inhalt Seiten darf nur eine `@ Page` Richtlinie und eine oder mehrere <xref:System.Web.UI.WebControls.Content> Steuerelemente. Alle Ihre Steuerelemente der Seite Text, Markup und Server müssen Hauptvideos <xref:System.Web.UI.WebControls.Content> Steuerelemente. Bestimmen Sie die <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement einem Masterauftrag für eine <xref:System.Web.UI.WebControls.Content> Steuerelement zugeordnet ist, durch Festlegen der <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> Eigenschaft des der <xref:System.Web.UI.WebControls.Content> Steuerelement.  
+  
+ Zur Laufzeit werden die dynamischen Inhalt aus allen <xref:System.Web.UI.WebControls.Content> -Steuerelement in die angeforderte Seite ist mit der Masterseite in den genauen Speicherort der zugehörigen zusammengeführt <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement. Alle anderen Markup und Steuerelemente in die Masterseite sind nicht betroffen. Ereignishandler können in beide der master-Klasse und auf der Seite Inhalt definiert werden. Weitere Informationen finden Sie unter [Ereignisse in ASP.NET Master "und" Inhaltsseiten](http://msdn.microsoft.com/library/b3ab2d01-9e37-4788-82d0-c6065e3ff5bd).  
+  
+ Die <xref:System.Web.UI.MasterPage> Klasse Dateien mit der Erweiterung .master zugeordnet ist. Diese Dateien werden zur Laufzeit als kompiliert <xref:System.Web.UI.MasterPage> Objekte und werden im Arbeitsspeicher des Servers zwischengespeichert.  
+  
+ Die Masterseite der Inhaltsseite über zur Verfügung gestellt wird die <xref:System.Web.UI.Page.Master%2A> Eigenschaft des basistexts <xref:System.Web.UI.Page> Klasse. Die <xref:System.Web.UI.Page.Master%2A> Eigenschaft gibt die Instanz der Masterseite; er ist jedoch als Basis eingegeben <xref:System.Web.UI.MasterPage> Klasse. Zugriff auf Steuerelemente, Eigenschaften und Funktionen der Masterseite die <xref:System.Web.UI.Page.Master%2A> Eigenschaft umgewandelt werden kann, um eine <xref:System.Web.UI.MasterPage> Objekt. Der Klassenname der Masterseite wird definiert, mit der `ClassName` Attribut der Richtlinie.  
+  
+> [!NOTE]
+>  Dateien mit folgenden Erweiterungen werden in einem Browser nicht bedient.  
+  
+ Die Direktiven, die auf einer Masterseite gültig sind identisch mit denen, die verfügbar sind, sind ein <xref:System.Web.UI.UserControl> Objekt. Sie können die folgenden Attribute enthalten:  
+  
+-   `AutoEventWireup`  
+  
+-   `ClassName`  
+  
+-   `CodeFile`  
+  
+-   `CompilerMode`  
+  
+-   `CompilerOptions`  
+  
+-   `Debug`  
+  
+-   `Description`  
+  
+-   `EnableTheming`  
+  
+-   `EnableViewState`  
+  
+-   `Explicit`  
+  
+-   `Inherits`  
+  
+-   `Language`  
+  
+-   `LinePragmas`  
+  
+-   `MasterPageFile`  
+  
+-   `Src`  
+  
+-   `Strict`  
+  
+-   `WarningLevel`  
+  
+ Gestaltungsvorlage Direktiven überschreiben die Anweisungen auf einzelne Inhaltsseiten nicht.  
+  
+ Gestaltungsvorlagen werden am häufigsten deklarativ erstellt werden. Wenn Sie eine Masterseite programmgesteuert erstellen möchten, leiten Sie direkt aus der <xref:System.Web.UI.MasterPage> Klasse. Neben der Erweiterung von der <xref:System.Web.UI.MasterPage> -Klasse, müssen Sie die Master-Datei, um die Benutzeroberfläche (UI) anzuzeigen, die die Klassen zugeordnet ist, die Sie in der Quelldatei aufgerufen haben erstellen.  
+  
+> [!NOTE]
+>  Wenn Sie eine Masterseite erstellen, indem Sie zuerst eine eigene Klasse erstellen, müssen Sie alle Namespaces einschließen, die für die Klassen erforderlich sind, die von der Seite verwendet werden.  
+  
+ Weitere Informationen zu Masterseiten, finden Sie unter [ASP.NET Masterseiten](http://msdn.microsoft.com/library/4e53eedf-8304-4e7a-aed1-691a2623b28b).  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält vier Codebeispiele:  
+  
+-   Im ersten Codebeispiel wird veranschaulicht, wie eine Masterseite deklarativ erstellt wird.  
+  
+-   Das zweite Codebeispiel stellt der Inhaltsseite, die die Gestaltungsvorlage zugeordnet ist, die im ersten Codebeispiel erstellt wurde.  
+  
+-   Das dritte Codebeispiel veranschaulicht das Hinzufügen einer Eigenschaft zu einer Masterseite.  
+  
+-   Im vierten Codebeispiel wird veranschaulicht, wie auf eine Inhaltsseite zu verwenden, um Zugriff auf eine öffentliche Eigenschaft auf der Masterseite.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Masterseite deklarativ erstellt und mithilfe einer Inhaltsseite Inhalt hinzugefügt wird. Die erste Webseite ist die master-Seite mit dem Namen `MasterPageSample_1.master`.  
+  
+```csharp  
+<%@ Master Language="C#" %>  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
+<html >  
+<head runat="server">  
+    <title>MasterPage Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" />  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+```vb  
+<%@ Master Language="VB" %>  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
+<html >  
+<head runat="server">  
+    <title>MasterPage Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" />  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+ Im folgenden Beispiel dargestellt, das zugeordnete Inhaltsseite `MasterPageSample_1.master`. Er enthält eine <xref:System.Web.UI.WebControls.Content> steuern und identifiziert die <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement, das der Inhalt mithilfe von zugeordnet ist die <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> Eigenschaft.  
+  
+```csharp  
+<%@ Page Language="C#" MasterPageFile="~/MasterPageSample_1cs.master" Title="Content Page"%>  
+  
+<asp:content   
+    runat="server"  
+    contentplaceholderid="ContentPlaceHolder1" >Hello, Master Pages!</asp:content>  
+```  
+  
+```vb  
+<%@ Page Language="VB" MasterPageFile="~/MasterPageSample_1vb.master" Title="Content Page"%>  
+  
+<asp:content   
+    runat="server"  
+    contentplaceholderid="ContentPlaceHolder1" >Hello, Master Pages!</asp:content>  
+```  
+  
+ Das folgende Beispiel veranschaulicht das Hinzufügen einer Eigenschaft zu einer Masterseite. Die `ClassName` Attribut wird verwendet, um die Masterseite benannt.  
+  
+```csharp  
+<%@ Master Language="C#" ClassName="MasterExample" %>  
+  
+<script runat="server">  
+        public string SiteName  
+        {  
+            get { return "My Site Name"; }  
+        }  
+</script>  
+  
+<html >  
+<head runat="server">  
+    <title>MasterPage Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+```vb  
+<%@ Master Language="VB" ClassName="MasterExample" %>  
+  
+<script runat="server">  
+  Public ReadOnly Property SiteName() As String  
+    Get  
+      Return "My Site Name"  
+    End Get  
+  End Property  
+  
+</script>  
+  
+<html >  
+<head runat="server">  
+    <title>MasterPage Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+ Im folgende Beispiel wird gezeigt, wie auf eine Inhaltsseite zu verwenden, um Zugriff auf die öffentliche Eigenschaft `SiteName` auf der Masterseite im vorangehenden Codebeispiel.  
+  
+```csharp  
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="MasterPage Example" %>  
+  
+<script runat="server">  
+  protected void Page_Load(object sender, EventArgs e)  
+  {  
+    MasterExample m = (MasterExample)Page.Master;  
+    mylabel.Text = m.SiteName;  
+  }  
+</script>  
+  
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">  
+    Hello, Master Pages!  
+    <asp:Label runat="server" Text="Label" ID="mylabel"></asp:Label>  
+</asp:Content>  
+```  
+  
+```vb  
+<%@ Page Language="VB" MasterPageFile="~/MasterPage.master" Title="MasterPage Example" %>  
+  
+<script runat="server">  
+  
+  Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs)  
+    Dim m As MasterExample = CType(Page.Master, MasterPage)  
+    mylabel.Text = m.SiteName  
+  End Sub  
+</script>  
+  
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">  
+    Hello, Master Pages!  
+    <asp:Label runat="server" Text="Label" ID="mylabel"></asp:Label>  
+</asp:Content>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MasterPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MasterPage.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.UI.MasterPage" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddContentTemplate">
+      <MemberSignature Language="C#" Value="protected void AddContentTemplate (string templateName, System.Web.UI.ITemplate template);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void AddContentTemplate(string templateName, class System.Web.UI.ITemplate template) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MasterPage.AddContentTemplate(System.String,System.Web.UI.ITemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templateName" Type="System.String" />
+        <Parameter Name="template" Type="System.Web.UI.ITemplate" />
+      </Parameters>
+      <Docs>
+        <param name="templateName">Einen eindeutigen Namen für die <see cref="T:System.Web.UI.WebControls.Content" />.</param>
+        <param name="template">Die <see cref="T:System.Web.UI.WebControls.Content" />.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.WebControls.Content" /> die Steuerung an die <see cref="P:System.Web.UI.MasterPage.ContentTemplates" /> Wörterbuch.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gestaltungsvorlage für abgeleitete Klassen können hinzufügen <xref:System.Web.UI.WebControls.Content> -Steuerelementen an die <xref:System.Web.UI.MasterPage.ContentTemplates%2A> Wörterbuch mit der <xref:System.Web.UI.MasterPage.AddContentTemplate%2A> Methode. Abgeleitete Typen in der Regel überschreiben nicht die <xref:System.Web.UI.MasterPage.AddContentTemplate%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Ein <see cref="T:System.Web.UI.WebControls.Content" /> Steuerelement mit dem gleichen Namen bereits vorhanden ist, dem <see cref="P:System.Web.UI.MasterPage.ContentTemplates" /> Wörterbuch.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentPlaceHolders">
+      <MemberSignature Language="C#" Value="protected System.Collections.IList ContentPlaceHolders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList ContentPlaceHolders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MasterPage.ContentPlaceHolders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" /> Inhaltsbereiche für Steuerelemente, die die Gestaltungsvorlage verwendet wird, um verschiedene zu definieren.</summary>
+        <value>Ein <see cref="T:System.Collections.IList" /> von <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" /> Steuerelemente, die als Platzhalter für die Gestaltungsvorlage verwendet <see cref="T:System.Web.UI.WebControls.Content" /> Steuerelemente auf Inhaltsseiten gefunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Masterseite Klassen greifen auf die <xref:System.Web.UI.MasterPage.ContentPlaceHolders%2A> Eigenschaft, um die aktuelle Liste <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelemente, die vom Master enthalten sind. Abgeleitete Typen in der Regel überschreiben nicht die <xref:System.Web.UI.MasterPage.ContentPlaceHolders%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplates">
+      <MemberSignature Language="C#" Value="protected System.Collections.IDictionary ContentTemplates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary ContentTemplates" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MasterPage.ContentTemplates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von Inhaltssteuerelementen, die der Masterseite zugeordnet sind.</summary>
+        <value>Ein <see cref="T:System.Collections.IList" /> von Inhaltssteuerelementen Masterseite zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Masterseite Klassen greifen auf die <xref:System.Web.UI.MasterPage.ContentTemplates%2A> Eigenschaft zum Abrufen des aktuellen <xref:System.Web.UI.WebControls.Content> Steuerelemente, die gemäß der Definition von zugeordneten Inhaltsseiten. Abgeleitete Typen in der Regel überschreiben nicht die <xref:System.Web.UI.MasterPage.ContentTemplates%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstantiateInContentPlaceHolder">
+      <MemberSignature Language="C#" Value="public void InstantiateInContentPlaceHolder (System.Web.UI.Control contentPlaceHolder, System.Web.UI.ITemplate template);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InstantiateInContentPlaceHolder(class System.Web.UI.Control contentPlaceHolder, class System.Web.UI.ITemplate template) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MasterPage.InstantiateInContentPlaceHolder(System.Web.UI.Control,System.Web.UI.ITemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentPlaceHolder" Type="System.Web.UI.Control" />
+        <Parameter Name="template" Type="System.Web.UI.ITemplate" />
+      </Parameters>
+      <Docs>
+        <param name="contentPlaceHolder">Das Steuerelement, das den Container des Inhalts darstellt.</param>
+        <param name="template">Die zu verwendende <see cref="T:System.Web.UI.WebControls.Content" />-Instanz.</param>
+        <summary>Stellt eine Methode, um das aktuelle Vorlagensteuerelement zu einer Seite festzulegen, die die Masterseite besitzt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Master">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MasterPage Master { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MasterPage Master" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MasterPage.Master" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MasterPage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Element Masterseite des aktuellen Masters in geschachtelten Masterseiten-Szenarien.</summary>
+        <value>Die Gestaltungsvorlage, die das übergeordnete Element der aktuellen Seite ist; andernfalls <see langword="null" />, wenn die aktuelle Gestaltungsvorlage kein übergeordnetes Element besitzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MasterPage.Master%2A> Eigenschaft ist schreibgeschützt, da die Masterseite Hierarchien zur Laufzeit erstellt werden können.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält drei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie zum Erstellen einer geschachtelten Masterseite`.` im zweiten Codebeispiel wird veranschaulicht, wie auf die Masterseite verweisen, die im ersten Codebeispiel erstellt wurde. Im dritten Codebeispiel wird veranschaulicht, wie auf eine Inhaltsseite zu verwenden, um die Gestaltungsvorlage verweisen, die im zweiten Codebeispiel erstellt wurde.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine geschachtelte Masterseite und stellt die übergeordnete Masterseite mit dem Namen `ParentMasterPage_1`.  
+  
+```csharp  
+<%@ Master Language="C#" %>  
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
+  
+<html >  
+<head runat="server">  
+    <title>Nested Master Page Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <h1>This is content in the parent master page.</h1>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+```vb  
+<%@ Master Language="VB" %>  
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
+  
+<html >  
+<head runat="server">  
+    <title>Nested Master Page Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <h1>This is content in the parent master page.</h1>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine geschachtelte Masterseite mit dem Namen `ChildMasterPage_1` , verweist die Masterseite, die im vorangehenden Codebeispiel erstellt wurde.  
+  
+```csharp  
+<%@ Master Language="C#" MasterPageFile="~/ParentMasterPage_1cs.master" %>  
+  
+<asp:Content Runat="Server" ContentPlaceHolderID="ContentPlaceHolder1">  
+    <h2>This is the content of a nested Master Page.</h2>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder2" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+</asp:Content>  
+```  
+  
+```vb  
+<%@ Master Language="VB" MasterPageFile="~/ParentMasterPage_1vb.master" %>  
+  
+<asp:Content Runat="Server" ContentPlaceHolderID="ContentPlaceHolder1">  
+    <h2>This is the content of a nested Master Page.</h2>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder2" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+</asp:Content>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe eine Inhaltsseite mit dem Namen `ContentPage` , verweist der `ChildMasterPage_1` , die im vorangehenden Codebeispiel erstellt wurde.  
+  
+```csharp  
+<%@ Page Language="C#" MasterPageFile="~/ChildMasterPage_1cs.master" Title="Untitled Page"%>  
+  
+<asp:content runat="server" contentplaceholderid="ContentPlaceHolder2">  
+This is the content of a Content control.  
+</asp:content>  
+```  
+  
+```vb  
+<%@ Page Language="VB" MasterPageFile="~/ChildMasterPage_1vb.master" Title="Untitled Page"%>  
+  
+<asp:content runat="server" contentplaceholderid="ContentPlaceHolder2">  
+This is the content of a Content control.  
+</asp:content>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MasterPageFile">
+      <MemberSignature Language="C#" Value="public string MasterPageFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MasterPageFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MasterPage.MasterPageFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Masterseite, die den aktuellen Inhalt enthält.</summary>
+        <value>Der Name der Masterseite, die das übergeordnete Element der aktuellen Seite ist; andernfalls <see langword="null" />, wenn die aktuelle Gestaltungsvorlage kein übergeordnetes Element besitzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieser Abschnitt enthält drei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie zum Erstellen einer geschachtelten Masterseite`.` im zweiten Codebeispiel wird veranschaulicht, wie auf die Masterseite verweisen, die im ersten Codebeispiel erstellt wurde. Im dritten Codebeispiel wird veranschaulicht, wie auf eine Inhaltsseite zu verwenden, um die Gestaltungsvorlage verweisen, die im zweiten Codebeispiel erstellt wurde.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine geschachtelte Masterseite und stellt die übergeordnete Masterseite mit dem Namen `ParentMasterPage_1`.  
+  
+```csharp  
+<%@ Master Language="C#" %>  
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
+  
+<html >  
+<head runat="server">  
+    <title>Nested Master Page Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <h1>This is content in the parent master page.</h1>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+```vb  
+<%@ Master Language="VB" %>  
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
+  
+<html >  
+<head runat="server">  
+    <title>Nested Master Page Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <h1>This is content in the parent master page.</h1>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine geschachtelte Masterseite mit dem Namen `ChildMasterPage_1` , verweist die Masterseite, die im vorangehenden Codebeispiel erstellt wurde.  
+  
+```csharp  
+<%@ Master Language="C#" MasterPageFile="~/ParentMasterPage_1cs.master" %>  
+  
+<asp:Content Runat="Server" ContentPlaceHolderID="ContentPlaceHolder1">  
+    <h2>This is the content of a nested Master Page.</h2>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder2" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+</asp:Content>  
+```  
+  
+```vb  
+<%@ Master Language="VB" MasterPageFile="~/ParentMasterPage_1vb.master" %>  
+  
+<asp:Content Runat="Server" ContentPlaceHolderID="ContentPlaceHolder1">  
+    <h2>This is the content of a nested Master Page.</h2>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder2" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+</asp:Content>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe eine Inhaltsseite mit dem Namen `ContentPage` , verweist der `ChildMasterPage_1` , die im vorangehenden Codebeispiel erstellt wurde.  
+  
+```csharp  
+<%@ Page Language="C#" MasterPageFile="~/ChildMasterPage_1cs.master" Title="Untitled Page"%>  
+  
+<asp:content runat="server" contentplaceholderid="ContentPlaceHolder2">  
+This is the content of a Content control.  
+</asp:content>  
+```  
+  
+```vb  
+<%@ Page Language="VB" MasterPageFile="~/ChildMasterPage_1vb.master" Title="Untitled Page"%>  
+  
+<asp:content runat="server" contentplaceholderid="ContentPlaceHolder2">  
+This is the content of a Content control.  
+</asp:content>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.MasterPage.MasterPageFile" /> Eigenschaft kann nur festgelegt werden, in oder vor der <see cref="E:System.Web.UI.Page.PreInit" /> Ereignis.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

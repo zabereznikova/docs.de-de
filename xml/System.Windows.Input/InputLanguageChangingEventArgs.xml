@@ -1,0 +1,71 @@
+<Type Name="InputLanguageChangingEventArgs" FullName="System.Windows.Input.InputLanguageChangingEventArgs">
+  <TypeSignature Language="C#" Value="public class InputLanguageChangingEventArgs : System.Windows.Input.InputLanguageEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InputLanguageChangingEventArgs extends System.Windows.Input.InputLanguageEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.InputLanguageChangingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputLanguageEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Argumente, die mit der <see cref="E:System.Windows.Input.InputLanguageManager.InputLanguageChanging" /> Ereignis.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InputLanguageChangingEventArgs (System.Globalization.CultureInfo newLanguageId, System.Globalization.CultureInfo previousLanguageId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Globalization.CultureInfo newLanguageId, class System.Globalization.CultureInfo previousLanguageId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputLanguageChangingEventArgs.#ctor(System.Globalization.CultureInfo,System.Globalization.CultureInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newLanguageId" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="previousLanguageId" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="newLanguageId">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das eine neue aktuelle Eingabesprache darstellt.</param>
+        <param name="previousLanguageId">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die vorherige aktuelle Eingabesprache darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.InputLanguageChangingEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ruft die <xref:System.Windows.Input.InputLanguageEventArgs> Basiskonstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rejected">
+      <MemberSignature Language="C#" Value="public bool Rejected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Rejected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputLanguageChangingEventArgs.Rejected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die initiierte Änderung der Eingabesprache akzeptiert oder abgelehnt werden sollte.</summary>
+        <value>**"true"** , die initiierte Änderung der Eingabesprache abzulehnen, andernfalls **"false"**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Input.InputLanguageManager.InputLanguageChanging> Ereignis wird ausgelöst, wenn eine Änderung der Eingabesprache initiiert, aber nicht abgeschlossen wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

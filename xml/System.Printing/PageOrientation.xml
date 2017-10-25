@@ -1,0 +1,123 @@
+<Type Name="PageOrientation" FullName="System.Printing.PageOrientation">
+  <TypeSignature Language="C#" Value="public enum PageOrientation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PageOrientation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PageOrientation" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie die Seiten des Inhalts auf Drucken Medien ausgerichtet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Werte dieses Typs hauptsächlich für folgende Zwecke:  
+  
+-   Als Mitglied der <xref:System.Printing.PrintCapabilities.PageOrientationCapability%2A> -Auflistung, die eine Eigenschaft des <xref:System.Printing.PrintCapabilities>, diese Werte zeigen die Ausrichtung, die ein Drucker unterstützt.  
+  
+-   Als Wert für die <xref:System.Printing.PrintTicket.PageOrientation%2A> Eigenschaft des eine <xref:System.Printing.PrintTicket>, weist der Wert den Drucker an eine bestimmte Ausrichtung zu verwenden.  
+  
+ Die **unbekannte** Wert wird in den Eigenschaften der nie verwendet <xref:System.Printing.PrintCapabilities> Objekte.  
+  
+ Sollten Sie niemals Festlegen einer <xref:System.Printing.PrintTicket> Eigenschaft, um **unbekannte**. Wenn eine andere <xref:System.Printing.PrintTicket> erstellt wurde, erzeugt die Anwendung eine *PrintTicket-Dokument* das Feature für die Ausrichtung auf eine unbekannte Option festlegt (also eine Option, die nicht in definiert ist die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)), wird eine <xref:System.Printing.PrintTicket> -Objekt in der Anwendung, die mit diesem Dokument erstellt wird **unbekannte** als Wert für die <xref:System.Printing.PrintTicket.PageOrientation%2A> Eigenschaft.  
+  
+ Obwohl die <xref:System.Printing.PrintTicket> und <xref:System.Printing.PrintCapabilities> Klassen können nicht vererbt werden, können Sie erweitern die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Druckgerät Funktionen zu erkennen, die nicht in berücksichtigt werden die <xref:System.Printing.PrintTicket> oder <xref:System.Printing.PrintCapabilities> Klassen. Weitere Informationen finden Sie unter [nicht im Build: Vorgehensweise: Erweitern der Druckschema und Erstellen von neuen Druckserver Systemklassen](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie mit dieser Enumeration festgelegt <xref:System.Printing.PrintTicket> Werte.  
+  
+ [!code-csharp[XpsPrint#OutputColorAndPageOrientation](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#outputcolorandpageorientation)]
+ [!code-vb[XpsPrint#OutputColorAndPageOrientation](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#outputcolorandpageorientation)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Landscape">
+      <MemberSignature Language="C#" Value="Landscape" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageOrientation Landscape = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageOrientation.Landscape" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inhalt des Druckbereichs wird auf der Seite um 90 Grad gegen den Uhrzeigersinn von Standard (Hochformat) Ausrichtung gedreht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Portrait">
+      <MemberSignature Language="C#" Value="Portrait" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageOrientation Portrait = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageOrientation.Portrait" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Standard-Ausrichtung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReverseLandscape">
+      <MemberSignature Language="C#" Value="ReverseLandscape" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageOrientation ReverseLandscape = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageOrientation.ReverseLandscape" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inhalt des Druckbereichs wird auf der Seite um 90 Grad im Uhrzeigersinn aus Standard (Hochformat) Ausrichtung gedreht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReversePortrait">
+      <MemberSignature Language="C#" Value="ReversePortrait" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageOrientation ReversePortrait = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageOrientation.ReversePortrait" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Inhalt des Druckbereichs ist stehend im Verhältnis zur Ausrichtung Standard (Hochformat).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageOrientation Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageOrientation.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Funktion (deren Optionen durch diese Enumeration dargestellt werden) ist eine Option festgelegt, nicht definiert, der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

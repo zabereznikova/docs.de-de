@@ -1,0 +1,268 @@
+<Type Name="CustomLabelsCollection" FullName="System.Web.UI.DataVisualization.Charting.CustomLabelsCollection">
+  <TypeSignature Language="C#" Value="public class CustomLabelsCollection : System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.CustomLabel&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomLabelsCollection extends System.Web.UI.DataVisualization.Charting.ChartElementCollection`1&lt;class System.Web.UI.DataVisualization.Charting.CustomLabel&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.CustomLabel&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Web.UI.DataVisualization.Charting.CustomLabel</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabel" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection> Klasse stellt eine Auflistung von <xref:System.Web.UI.DataVisualization.Charting.CustomLabel> Bezeichnungen auf Objekte, die wiederum die benutzerdefinierte darstellen, die ein <xref:System.Web.UI.DataVisualization.Charting.Axis> Objekt verwenden kann. Diese Klasse wird verfügbar gemacht, als die <xref:System.Web.UI.DataVisualization.Charting.Axis.CustomLabels%2A> Auflistungseigenschaft einer <xref:System.Web.UI.DataVisualization.Charting.Axis> Objekt.  
+  
+> [!NOTE]
+>  Sie können automatisch die gesamte Bezeichnungszeile einer Achse mit benutzerdefinierten Auffüllen <xref:System.DateTime> "Bezeichnungen" mit einer <xref:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add%2A> Methodendefinition, die enthält ein `DateTimeIntervalType` Argument.  
+  
+ Die <xref:System.Collections.ObjectModel.Collection%601.Count%2A> Eigenschaft gibt die Gesamtzahl der Elemente in der Auflistung und wird häufig verwendet werden, um die Obergrenze für die Sammlung zu suchen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (double labelsStep, System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(float64 labelsStep, valuetype System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Web.UI.DataVisualization.Charting.DateTimeIntervalType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="labelsStep" Type="System.Double" />
+        <Parameter Name="intervalType" Type="System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" />
+      </Parameters>
+      <Docs>
+        <param name="labelsStep">Ein <see langword="Double" /> Wert, der bestimmt, wie oft die benutzerdefinierten Bezeichnungen gezeichnet werden.</param>
+        <param name="intervalType">Ein <see cref="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" /> -Enumerationswert, der den Intervalltyp bestimmt.</param>
+        <summary>Fügt mehrere <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabel" /> Objekte des Typs <see cref="T:System.DateTime" /> auf die Auflistung. Füllt die gesamte erste Zeile einer Achse mit Bezeichnungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add%2A> Methode erstellt und initialisiert <xref:System.Web.UI.DataVisualization.Charting.CustomLabel> Objekte für den gesamten ersten Bezeichnungszeile einer Achse mit <xref:System.DateTime> Bezeichnungen des angegebenen Typs.  
+  
+ Die `labelsStep` Parameter bestimmt, wie oft die benutzerdefinierten Bezeichnungen gezeichnet werden.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.RecalculateAxesScale%2A> muss vor dem Aufrufen dieser bestimmten Methodendefinition aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.CustomLabel Add (double fromPosition, double toPosition, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.CustomLabel Add(float64 fromPosition, float64 toPosition, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Double,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CustomLabel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromPosition" Type="System.Double" />
+        <Parameter Name="toPosition" Type="System.Double" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fromPosition">Der Mindestwert des Achsenbereichs auf die die Bezeichnung angewendet wird.</param>
+        <param name="toPosition">Der Höchstwert des Achsenbereichs auf die die Bezeichnung angewendet wird.</param>
+        <param name="text">Der Bezeichnungstext.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabel" /> Objekt der Auflistung unter Verwendung des angegebenen Achsenbereich und Text.</summary>
+        <returns>Die neu hinzugefügte <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabel" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fügt eine benutzerdefinierte Bezeichnung an der ersten Bezeichnungszeile der relevanten Achse an. Es wird keine Beschriftung-Markierung verwendet.  
+  
+ Wenn eine benutzerdefinierte Bezeichnung an einer beliebigen Stelle in der ersten Bezeichnungszeile verwendet wird, werden keine Bezeichnungen automatisch für die erste Zeile generiert.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.RecalculateAxesScale%2A> muss vor dem Aufrufen dieser bestimmten Methodendefinition aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (double labelsStep, System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(float64 labelsStep, valuetype System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Web.UI.DataVisualization.Charting.DateTimeIntervalType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="labelsStep" Type="System.Double" />
+        <Parameter Name="intervalType" Type="System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="labelsStep">Ein <see langword="Double" /> Wert, der bestimmt, wie oft die benutzerdefinierten Bezeichnungen gezeichnet werden.</param>
+        <param name="intervalType">Ein <see cref="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" /> -Enumerationswert, der bestimmt, die Maßeinheit für die <c>LabelsStep</c> Parameter.</param>
+        <param name="format">Ein Wert, der das Format der benutzerdefinierten Bezeichnung bestimmt. Weitere Informationen finden Sie unter Datums- und Uhrzeit-Formatzeichenfolgen.</param>
+        <summary>Fügt mehrere <see cref="T:System.DateTime" /> <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection" /> -Objekte der Auflistung. Füllt die gesamte erste Zeile einer Achse mit Bezeichnungen mit dem angegebenen Format.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt und initialisiert <xref:System.Web.UI.DataVisualization.Charting.CustomLabel> Objekte für eine Achse gesamte erste Bezeichnung mit Zeile <xref:System.DateTime> Bezeichnungen des angegebenen Typs.  
+  
+ Der Schritt wird bestimmt, wie oft die benutzerdefinierten Bezeichnungen gezeichnet werden, und optionale Bezeichnung Formatierung kann angegeben werden, ebenfalls.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.RecalculateAxesScale%2A> muss vor dem Aufrufen dieser bestimmten Methodendefinition aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.CustomLabel Add (double fromPosition, double toPosition, string text, int rowIndex, System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.CustomLabel Add(float64 fromPosition, float64 toPosition, string text, int32 rowIndex, valuetype System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Double,System.String,System.Int32,System.Web.UI.DataVisualization.Charting.LabelMarkStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CustomLabel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromPosition" Type="System.Double" />
+        <Parameter Name="toPosition" Type="System.Double" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="markStyle" Type="System.Web.UI.DataVisualization.Charting.LabelMarkStyle" />
+      </Parameters>
+      <Docs>
+        <param name="fromPosition">Der Mindestwert des Achsenbereichs, die Bezeichnung angewendet wird.</param>
+        <param name="toPosition">Der Höchstwert des Achsenbereichs, die Bezeichnung angewendet wird.</param>
+        <param name="text">Der Bezeichnungstext.</param>
+        <param name="rowIndex">Der Zeilenindex für die Bezeichnung.</param>
+        <param name="markStyle">Ein <see cref="T:System.Web.UI.DataVisualization.Charting.LabelMarkstyle" /> Enumerationswert, der angibt, das Häkchen markieren, für die Bezeichnung verwendete Format.</param>
+        <summary>Fügt eine benutzerdefinierte Bezeichnung an der Auflistung unter Verwendung der angegebenen Achsenbereich, Text, Zeilenindex, und markieren die Formatvorlage an.</summary>
+        <returns>Die neu hinzugefügte <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabel" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (double labelsStep, System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType, string format, int rowIndex, System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(float64 labelsStep, valuetype System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType, string format, int32 rowIndex, valuetype System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Web.UI.DataVisualization.Charting.DateTimeIntervalType,System.String,System.Int32,System.Web.UI.DataVisualization.Charting.LabelMarkStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="labelsStep" Type="System.Double" />
+        <Parameter Name="intervalType" Type="System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="markStyle" Type="System.Web.UI.DataVisualization.Charting.LabelMarkStyle" />
+      </Parameters>
+      <Docs>
+        <param name="labelsStep">Ein <see langword="Double" /> Wert, der bestimmt, wie oft die benutzerdefinierten Bezeichnungen gezeichnet werden.</param>
+        <param name="intervalType">Ein <see cref="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" /> -Enumerationswert, der bestimmt, die Maßeinheit für die <c>LabelsStep</c> Parameter.</param>
+        <param name="format">Das Label-Text-Format.</param>
+        <param name="rowIndex">Der Zeilenindex für die Bezeichnung.</param>
+        <param name="markStyle">Ein <see cref="T:System.Web.UI.DataVisualization.Charting.LabelMarkstyle" /> Enumerationswert, der angibt, das Häkchen markieren, für die Bezeichnung verwendete Format.</param>
+        <summary>Mehrere benutzerdefinierte Etiketten und der Auflistung hinzugefügt. Werden die Bezeichnungen <see cref="T:System.DateTime" /> Bezeichnungen mit den angegebenen Intervalltyp Textformat, Zeile Index und der Markierung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.CustomLabel Add (double fromPosition, double toPosition, string text, int rowIndex, System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle, System.Web.UI.DataVisualization.Charting.GridTickTypes gridTick);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.CustomLabel Add(float64 fromPosition, float64 toPosition, string text, int32 rowIndex, valuetype System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle, valuetype System.Web.UI.DataVisualization.Charting.GridTickTypes gridTick) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Double,System.String,System.Int32,System.Web.UI.DataVisualization.Charting.LabelMarkStyle,System.Web.UI.DataVisualization.Charting.GridTickTypes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CustomLabel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromPosition" Type="System.Double" />
+        <Parameter Name="toPosition" Type="System.Double" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="markStyle" Type="System.Web.UI.DataVisualization.Charting.LabelMarkStyle" />
+        <Parameter Name="gridTick" Type="System.Web.UI.DataVisualization.Charting.GridTickTypes" />
+      </Parameters>
+      <Docs>
+        <param name="fromPosition">Der Mindestwert des Achsenbereichs, die Bezeichnung angewendet wird.</param>
+        <param name="toPosition">Der Höchstwert des Achsenbereichs, die Bezeichnung angewendet wird.</param>
+        <param name="text">Der Bezeichnungstext.</param>
+        <param name="rowIndex">Der Zeilenindex für die Bezeichnung.</param>
+        <param name="markStyle">Ein <see cref="T:System.Web.UI.DataVisualization.Charting.LabelMarkstyle" /> Enumerationswert, der angibt, das Häkchen markieren, für die Bezeichnung verwendete Format.</param>
+        <param name="gridTick">Ein <see cref="T:System.Web.UI.DataVisualization.Charting.GridTickTypes" /> -Enumerationswert, der angibt, das Raster Teilstrichen Typ, der für die Bezeichnung verwendet.</param>
+        <summary>Fügt eine benutzerdefinierte Bezeichnung in die Auflistung unter Verwendung der angegebenen Achsenbereich, Text, Zeilenindex, Markierungstyp Stil und einem Raster Teilstriche an.</summary>
+        <returns>Die neu hinzugefügte <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabel" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (double labelsStep, System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType, double min, double max, string format, int rowIndex, System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(float64 labelsStep, valuetype System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType, float64 min, float64 max, string format, int32 rowIndex, valuetype System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Web.UI.DataVisualization.Charting.DateTimeIntervalType,System.Double,System.Double,System.String,System.Int32,System.Web.UI.DataVisualization.Charting.LabelMarkStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="labelsStep" Type="System.Double" />
+        <Parameter Name="intervalType" Type="System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" />
+        <Parameter Name="min" Type="System.Double" />
+        <Parameter Name="max" Type="System.Double" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="markStyle" Type="System.Web.UI.DataVisualization.Charting.LabelMarkStyle" />
+      </Parameters>
+      <Docs>
+        <param name="labelsStep">Ein <see langword="Double" /> Wert, der bestimmt, wie oft die benutzerdefinierten Bezeichnungen gezeichnet werden.</param>
+        <param name="intervalType">Ein <see cref="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" /> -Enumerationswert, der bestimmt, die Maßeinheit für die <c>LabelsStep</c> Parameter.</param>
+        <param name="min">Der Mindestwert des Achsenbereichs.</param>
+        <param name="max">Der Höchstwert des Achsenbereichs.</param>
+        <param name="format">Das Label-Text-Format.</param>
+        <param name="rowIndex">Der Zeilenindex für die Bezeichnung.</param>
+        <param name="markStyle">Ein <see cref="T:System.Web.UI.DataVisualization.Charting.LabelMarkstyle" /> Enumerationswert, der angibt, das Häkchen markieren, für die Bezeichnung verwendete Format.</param>
+        <summary>Mehrere benutzerdefinierte Etiketten und der Auflistung hinzugefügt. Werden die Bezeichnungen <see cref="T:System.DateTime" /> "Bezeichnungen" mit dem angegebenen Intervall und generiert werden, für die Achsenbereich, die vom bestimmt die <paramref name="min" /> und <paramref name="max" /> Argumente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

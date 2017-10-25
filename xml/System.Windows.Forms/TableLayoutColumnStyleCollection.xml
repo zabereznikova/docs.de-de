@@ -1,0 +1,203 @@
+<Type Name="TableLayoutColumnStyleCollection" FullName="System.Windows.Forms.TableLayoutColumnStyleCollection">
+  <TypeSignature Language="C#" Value="public class TableLayoutColumnStyleCollection : System.Windows.Forms.TableLayoutStyleCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TableLayoutColumnStyleCollection extends System.Windows.Forms.TableLayoutStyleCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TableLayoutColumnStyleCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.TableLayoutStyleCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Auflistung, speichert <see cref="T:System.Windows.Forms.ColumnStyle" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutColumnStyleCollection> Klasse stellt die Auflistung aller Formate, die zur Beschreibung der Spalten in einem zugeordneten <xref:System.Windows.Forms.TableLayoutPanel>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie festzulegende <xref:System.Windows.Forms.ColumnStyle> für eine <xref:System.Windows.Forms.TableLayoutColumnStyleCollection>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.  
+  
+ [!code-csharp[System.Windows.Forms.TableLayoutPanel#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel/CS/form1.cs#8)]
+ [!code-vb[System.Windows.Forms.TableLayoutPanel#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel/VB/form1.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Windows.Forms.ColumnStyle columnStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Windows.Forms.ColumnStyle columnStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutColumnStyleCollection.Add(System.Windows.Forms.ColumnStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnStyle" Type="System.Windows.Forms.ColumnStyle" />
+      </Parameters>
+      <Docs>
+        <param name="columnStyle">Das <see cref="T:System.Windows.Forms.ColumnStyle" />, das in <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" /> eingefügt werden soll.</param>
+        <summary>Fügt der <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" /> ein Element hinzu.</summary>
+        <returns>Die Position, an der das neue Element eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutColumnStyleCollection.Add%2A> Methode das Tabellenlayout für alle Steuerelemente in der aktuellen <xref:System.Windows.Forms.TableLayoutPanel> Container.  
+  
+ Die Anzahl der in einer Auflistung gespeicherten Stile wird nur durch den verfügbaren Speicher beschränkt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Forms.ColumnStyle columnStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Forms.ColumnStyle columnStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutColumnStyleCollection.Contains(System.Windows.Forms.ColumnStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnStyle" Type="System.Windows.Forms.ColumnStyle" />
+      </Parameters>
+      <Docs>
+        <param name="columnStyle">Das <see cref="T:System.Windows.Forms.ColumnStyle" />, das in der <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" /> gesucht werden soll. Der Wert kann <see langword="null" /> sein.</param>
+        <summary>Bestimmt, ob die angegebene <see cref="T:System.Windows.Forms.ColumnStyle" /> in der Auflistung enthalten ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <see cref="T:System.Windows.Forms.ColumnStyle" /> in der <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" /> gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Forms.ColumnStyle columnStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Forms.ColumnStyle columnStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutColumnStyleCollection.IndexOf(System.Windows.Forms.ColumnStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnStyle" Type="System.Windows.Forms.ColumnStyle" />
+      </Parameters>
+      <Docs>
+        <param name="columnStyle">Das <see cref="T:System.Windows.Forms.ColumnStyle" />, das in der <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" /> gesucht werden soll.</param>
+        <summary>Bestimmt den Index eines bestimmten Elements in der <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" />.</summary>
+        <returns>Der Index des <paramref name="columnStyle" /> Wenn gefunden, die der <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" />ist, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutColumnStyleCollection.IndexOf%2A> Methode beginnt die Suche auf das erste Element des der <xref:System.Windows.Forms.TableLayoutColumnStyleCollection> und endet, wenn er findet eine Übereinstimmung oder das letzte Element erreicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Windows.Forms.ColumnStyle columnStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Windows.Forms.ColumnStyle columnStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutColumnStyleCollection.Insert(System.Int32,System.Windows.Forms.ColumnStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="columnStyle" Type="System.Windows.Forms.ColumnStyle" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <see cref="T:System.Windows.Forms.ColumnStyle" /> eingefügt werden soll.</param>
+        <param name="columnStyle">Die <see cref="T:System.Windows.Forms.ColumnStyle" /> zum Einfügen in die <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" />.</param>
+        <summary>Fügt eine <see cref="T:System.Windows.Forms.ColumnStyle" /> in der <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" /> an der angegebenen Position.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutColumnStyleCollection.Insert%2A> Methode das Tabellenlayout für alle Steuerelemente in der aktuellen <xref:System.Windows.Forms.TableLayoutPanel> Container.  
+  
+ Die Anzahl der in einer Auflistung gespeicherten Stile wird nur durch den verfügbaren Speicher beschränkt.  
+  
+ In Auflistungen mit zusammenhängenden Elementen z. B. die <xref:System.Windows.Forms.TableLayoutColumnStyleCollection> -Klasse, die Elemente hinter der Einfügemarke nach unten verschoben, um das eingefügte Element aufzunehmen. Auch werden die Indizes der verschobenen Elemente aktualisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ColumnStyle this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ColumnStyle Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutColumnStyleCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ColumnStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index von <see cref="T:System.Windows.Forms.ColumnStyle" />, der abgerufen oder festgelegt werden soll.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.ColumnStyle" />-Klasse am angegebenen Index ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ColumnStyle" /> am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Forms.ColumnStyle columnStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Forms.ColumnStyle columnStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutColumnStyleCollection.Remove(System.Windows.Forms.ColumnStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnStyle" Type="System.Windows.Forms.ColumnStyle" />
+      </Parameters>
+      <Docs>
+        <param name="columnStyle">Der <see cref="T:System.Windows.Forms.ColumnStyle" />, der aus der <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" /> entfernt werden soll. Der Wert kann <see langword="null" /> sein.</param>
+        <summary>Entfernt das erste Vorkommen einer bestimmten <see cref="T:System.Windows.Forms.ColumnStyle" /> aus <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutColumnStyleCollection.Remove%2A> Methode das Tabellenlayout für alle Steuerelemente in der aktuellen <xref:System.Windows.Forms.TableLayoutPanel> Container.  
+  
+ In Auflistungen mit zusammenhängenden Elementen z. B. die <xref:System.Windows.Forms.TableLayoutColumnStyleCollection> -Klasse, die Elemente hinter der Löschposition nach nach oben zu verschieben, die frei gewordene Stelle einzunehmen. Auch werden die Indizes der verschobenen Elemente aktualisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

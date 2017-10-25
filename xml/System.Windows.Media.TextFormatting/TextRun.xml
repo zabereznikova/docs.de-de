@@ -1,0 +1,116 @@
+<Type Name="TextRun" FullName="System.Windows.Media.TextFormatting.TextRun">
+  <TypeSignature Language="C#" Value="public abstract class TextRun" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextRun extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextRun" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Folge von Zeichen, die einen einzigen Eigenschaftensatz gemeinsam nutzen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine textausführung ist eine Folge von Zeichen, die Freigabe eines einzigen Eigenschaftensatz. Jede Änderung in das Format, z. B. Schriftschnitt, Vordergrundfarbe, Schriftfamilie oder andere Formatierung unwirksam, unterbricht den Lauftext. Im folgende Beispiel wird veranschaulicht, wie Änderungen bei der Formatierung in einem Text Ergebnisse Zeichenfolge in einer Reihe von textausführungen – jeder TextRun verfügt über einen gemeinsamen Satz von Eigenschaften formatieren.  
+  
+ Die <xref:System.Windows.Media.TextFormatting.TextRun> Klasse ist der Stamm einer Typhierarchie mehrere Typen von Textinhalten von verarbeiteten darstellt <xref:System.Windows.Media.TextFormatting.TextFormatter>. Jede Klasse, die abgeleitet ist <xref:System.Windows.Media.TextFormatting.TextRun> einen unterschiedlichen Typ von Textinhalt darstellt.  
+  
+|Klasse|Beschreibung|  
+|-----------|-----------------|  
+|<xref:System.Windows.Media.TextFormatting.TextRun>|Der Stamm der Hierarchie. Definiert eine Gruppe von Zeichen, die den gleichen Satz von Zeicheneigenschaften gemeinsam nutzen.|  
+|<xref:System.Windows.Media.TextFormatting.TextCharacters>|Definiert eine Auflistung von Symbolen von Zeichen aus einer eindeutigen physischen Schriftart an.|  
+|<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|Definiert einen Typ von Textinhalt, in welche messen, Treffertests, und Zeichnen des gesamten Inhalts erfolgt als eine eindeutige Entität. Ein Beispiel für diese Art von Inhalt ist eine Schaltfläche in der Mitte der Zeile des Texts.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfLine>|Definiert einen Zeilenumbruch Zeichencode.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfParagraph>|Definiert einen Absatzmarke Zeichencode. Wird von <xref:System.Windows.Media.TextFormatting.TextEndOfLine> abgeleitet.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfSegment>|Definiert einen Segment Break-Marker.|  
+|<xref:System.Windows.Media.TextFormatting.TextHidden>|Definiert einen Bereich von Zeichen nicht sichtbar.|  
+|<xref:System.Windows.Media.TextFormatting.TextModifier>|Definiert den Anfang eines Änderungsbereichs.|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel eine Außerkraftsetzung für die <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> Methode implementiert wird.  
+  
+ [!code-csharp[TextFormattingSnippets#TextFormattingSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormattingSnippets/CSharp/CustomTextClasses.cs#textformattingsnippet4)]
+ [!code-vb[TextFormattingSnippets#TextFormattingSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormattingSnippets/visualbasic/customtextclasses.vb#textformattingsnippet4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TextRun ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextRun.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz eines <see cref="T:System.Windows.Media.TextFormatting.TextRun" />-Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharacterBufferReference">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.TextFormatting.CharacterBufferReference CharacterBufferReference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.TextFormatting.CharacterBufferReference CharacterBufferReference" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRun.CharacterBufferReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.CharacterBufferReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf den Text, der Zeichenpuffer ausführen.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> Wert, der die Zeichen in der textausführung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public abstract int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRun.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Zeichen in der textausführung ab.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der die Anzahl von Zeichen darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.TextFormatting.TextRunProperties Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.TextFormatting.TextRunProperties Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRun.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.TextRunProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz von Eigenschaften von Text, die von jedem Zeichen in der textausführung, z. B. Schriftart oder Vordergrundpinsel gemeinsam verwendet werden.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.TextFormatting.TextRunProperties" /> Wert, der den Satz von freigegebenen Eigenschaften von Text.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,290 @@
+<Type Name="CimType" FullName="System.Management.CimType">
+  <TypeSignature Language="C#" Value="public enum CimType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CimType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Management.CimType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt die möglichen CIM-Typen für Eigenschaften, *Qualifizierer*, oder Methodenparameter.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Boolean">
+      <MemberSignature Language="C#" Value="Boolean" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType Boolean = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.Boolean" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein boolescher Wert. Dieser Wert ordnet die <see cref="T:System.Boolean" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Char16">
+      <MemberSignature Language="C#" Value="Char16" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType Char16 = int32(103)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.Char16" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein 16-Bit-Zeichen. Dieser Wert ordnet die <see cref="T:System.Char" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTime">
+      <MemberSignature Language="C#" Value="DateTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType DateTime = int32(101)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.DateTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Datums- oder Uhrzeitwert fest, die in einer Zeichenfolge im DMTF-Datum/Uhrzeit-Format dargestellt: *yyyymmddHHMMSS.mmmmmmsUUU*, wobei *Yyyymmdd* ist das Datum im Jahr/Monat/Tag; *HHMMSS* ist die Zeit in Stunden/Minuten/Sekunden; *Mmmmmm* ist die Anzahl von Mikrosekunden 6 Ziffern; und *sUUU* ist ein Vorzeichen (+ oder -) und eine 3-Ziffern-UTC-zeitverschiebung. Dieser Wert ordnet die <see cref="T:System.DateTime" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein NULL-Wert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Object">
+      <MemberSignature Language="C#" Value="Object" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType Object = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.Object" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein eingebettetes Objekt. Beachten Sie, dass eingebettete Objekte von Verweisen unterscheiden, das eingebettete Objekt verfügt nicht über einen Pfad und der Lebensdauer von der Lebensdauer des enthaltenden Objekts identisch ist. Dieser Wert ordnet die <see cref="T:System.Object" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Real32">
+      <MemberSignature Language="C#" Value="Real32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType Real32 = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.Real32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine 32-Bit-Gleitkommazahl. Dieser Wert ordnet die <see cref="T:System.Single" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Real64">
+      <MemberSignature Language="C#" Value="Real64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType Real64 = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.Real64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Gleitkommawert 64-Bit-Zahl. Dieser Wert ordnet die <see cref="T:System.Double" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Reference">
+      <MemberSignature Language="C#" Value="Reference" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType Reference = int32(102)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.Reference" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Verweis auf ein anderes Objekt. Dies wird durch eine Zeichenfolge mit dem Pfad das referenzierte Objekt dargestellt. Dieser Wert ordnet die <see cref="T:System.Int16" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SInt16">
+      <MemberSignature Language="C#" Value="SInt16" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType SInt16 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.SInt16" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine ganze 16-Bit-Zahl mit Vorzeichen. Dieser Wert ordnet die <see cref="T:System.Int16" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SInt32">
+      <MemberSignature Language="C#" Value="SInt32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType SInt32 = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.SInt32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine 32-Bit-Ganzzahl mit Vorzeichen. Dieser Wert ordnet die <see cref="T:System.Int32" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SInt64">
+      <MemberSignature Language="C#" Value="SInt64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType SInt64 = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.SInt64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine 64-Bit-Ganzzahl mit Vorzeichen. Dieser Wert ordnet die <see cref="T:System.Int64" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SInt8">
+      <MemberSignature Language="C#" Value="SInt8" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType SInt8 = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.SInt8" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine 8-Bit-Ganzzahl mit Vorzeichen. Dieser Wert ordnet die <see cref="T:System.SByte" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="String">
+      <MemberSignature Language="C#" Value="String" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType String = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.String" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge. Dieser Wert ordnet die <see cref="T:System.String" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UInt16">
+      <MemberSignature Language="C#" Value="UInt16" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType UInt16 = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.UInt16" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine 16-Bit-Ganzzahl ohne Vorzeichen. Dieser Wert ordnet die <see cref="T:System.UInt16" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UInt32">
+      <MemberSignature Language="C#" Value="UInt32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType UInt32 = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.UInt32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine 32-Bit-Ganzzahl ohne Vorzeichen. Dieser Wert ordnet die <see cref="T:System.UInt32" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UInt64">
+      <MemberSignature Language="C#" Value="UInt64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType UInt64 = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.UInt64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine 64-Bit-Ganzzahl ohne Vorzeichen. Dieser Wert ordnet die <see cref="T:System.UInt64" /> Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UInt8">
+      <MemberSignature Language="C#" Value="UInt8" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.CimType UInt8 = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.CimType.UInt8" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine 8-Bit-Ganzzahl ohne Vorzeichen. Dieser Wert ordnet die <see cref="T:System.Byte" /> Typ.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

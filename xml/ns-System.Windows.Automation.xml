@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Automation">
+  <Docs>
+    <summary>Bietet Unterstützung für Windows Presentation Foundation (WPF) Benutzeroberflächenautomatisierungs-Clients.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

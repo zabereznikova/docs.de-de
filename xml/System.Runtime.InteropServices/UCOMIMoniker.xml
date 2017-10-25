@@ -1,0 +1,663 @@
+<Type Name="UCOMIMoniker" FullName="System.Runtime.InteropServices.UCOMIMoniker">
+  <TypeSignature Language="C#" Value="public interface UCOMIMoniker" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract UCOMIMoniker" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.UCOMIMoniker" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0000000f-0000-0000-c000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwenden Sie stattdessen <see cref="T:System.Runtime.InteropServices.ComTypes.IMoniker" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den `IMoniker`, `IPersist`, und `IPersistStream` Schnittstellen, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BindToObject">
+      <MemberSignature Language="C#" Value="public void BindToObject (System.Runtime.InteropServices.UCOMIBindCtx pbc, System.Runtime.InteropServices.UCOMIMoniker pmkToLeft, ref Guid riidResult, out object ppvResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BindToObject(class System.Runtime.InteropServices.UCOMIBindCtx pbc, class System.Runtime.InteropServices.UCOMIMoniker pmkToLeft, [in]valuetype System.Guid&amp; riidResult, [out] object&amp; ppvResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.BindToObject(System.Runtime.InteropServices.UCOMIBindCtx,System.Runtime.InteropServices.UCOMIMoniker,System.Guid@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pbc" Type="System.Runtime.InteropServices.UCOMIBindCtx" />
+        <Parameter Name="pmkToLeft" Type="System.Runtime.InteropServices.UCOMIMoniker" />
+        <Parameter Name="riidResult" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="ppvResult" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pbc">Ein Verweis auf die <see langword="IBindCtx" /> Schnittstelle für die Bindung Context-Objekt in dieser Bindungsvorgang verwendet.</param>
+        <param name="pmkToLeft">Ein Verweis auf den Moniker links neben diesen Moniker, wenn der Moniker Teil eines zusammengesetzten Monikers ist.</param>
+        <param name="riidResult">Der Schnittstellenbezeichner (IID) der Schnittstelle, die der Client kommunizieren möchte mit dem Objekt, das der Moniker identifiziert.</param>
+        <param name="ppvResult">Nach erfolgreicher Rückkehr zu verweisen, auf die Schnittstelle, die vom angeforderten <c>RiidResult</c>.</param>
+        <summary>Verwendet den Moniker zum Binden an das Objekt identifizierte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::BindToObject`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindToStorage">
+      <MemberSignature Language="C#" Value="public void BindToStorage (System.Runtime.InteropServices.UCOMIBindCtx pbc, System.Runtime.InteropServices.UCOMIMoniker pmkToLeft, ref Guid riid, out object ppvObj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BindToStorage(class System.Runtime.InteropServices.UCOMIBindCtx pbc, class System.Runtime.InteropServices.UCOMIMoniker pmkToLeft, [in]valuetype System.Guid&amp; riid, [out] object&amp; ppvObj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.BindToStorage(System.Runtime.InteropServices.UCOMIBindCtx,System.Runtime.InteropServices.UCOMIMoniker,System.Guid@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pbc" Type="System.Runtime.InteropServices.UCOMIBindCtx" />
+        <Parameter Name="pmkToLeft" Type="System.Runtime.InteropServices.UCOMIMoniker" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="ppvObj" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pbc">Ein Verweis auf die <see langword="IBindCtx" /> Schnittstelle, die der Bind Context-Objekts, die während dieses Bindungsvorgangs verwendet.</param>
+        <param name="pmkToLeft">Ein Verweis auf den Moniker links neben diesen Moniker, wenn der Moniker Teil eines zusammengesetzten Monikers ist.</param>
+        <param name="riid">Der Schnittstellenbezeichner (IID) von der Speicherschnittstelle angefordert wird.</param>
+        <param name="ppvObj">Nach erfolgreicher Rückkehr ein Verweis auf die Schnittstelle, die vom angeforderten <c>Riid</c>.</param>
+        <summary>Ruft einen Schnittstellenzeiger auf den Speicher, der vom Moniker identifizierten Objekts enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::BindToStorage`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonPrefixWith">
+      <MemberSignature Language="C#" Value="public void CommonPrefixWith (System.Runtime.InteropServices.UCOMIMoniker pmkOther, out System.Runtime.InteropServices.UCOMIMoniker ppmkPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CommonPrefixWith(class System.Runtime.InteropServices.UCOMIMoniker pmkOther, [out] class System.Runtime.InteropServices.UCOMIMoniker&amp; ppmkPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.CommonPrefixWith(System.Runtime.InteropServices.UCOMIMoniker,System.Runtime.InteropServices.UCOMIMoniker@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pmkOther" Type="System.Runtime.InteropServices.UCOMIMoniker" />
+        <Parameter Name="ppmkPrefix" Type="System.Runtime.InteropServices.UCOMIMoniker&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pmkOther">Ein Verweis auf die <see langword="IMoniker" /> Schnittstelle für einen anderen Moniker, für die ein gemeinsames Präfix mit dieser verglichen werden soll.</param>
+        <param name="ppmkPrefix">Nach erfolgreicher Rückkehr enthält den Moniker, der das gemeinsame Präfix von diesem Moniker und <c>pmkOther darstellt</c>.</param>
+        <summary>Erstellt einen neuen Moniker basierend auf einem gemeinsamen Präfix, das diesen Moniker mit einem anderen Moniker freigibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::CommonPrefixWith`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComposeWith">
+      <MemberSignature Language="C#" Value="public void ComposeWith (System.Runtime.InteropServices.UCOMIMoniker pmkRight, bool fOnlyIfNotGeneric, out System.Runtime.InteropServices.UCOMIMoniker ppmkComposite);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ComposeWith(class System.Runtime.InteropServices.UCOMIMoniker pmkRight, bool fOnlyIfNotGeneric, [out] class System.Runtime.InteropServices.UCOMIMoniker&amp; ppmkComposite) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.ComposeWith(System.Runtime.InteropServices.UCOMIMoniker,System.Boolean,System.Runtime.InteropServices.UCOMIMoniker@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pmkRight" Type="System.Runtime.InteropServices.UCOMIMoniker" />
+        <Parameter Name="fOnlyIfNotGeneric" Type="System.Boolean" />
+        <Parameter Name="ppmkComposite" Type="System.Runtime.InteropServices.UCOMIMoniker&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pmkRight">Ein Verweis auf die <see langword="IMoniker" /> -Schnittstelle für den Moniker, am Ende dieser Moniker zu verfassen.</param>
+        <param name="fOnlyIfNotGeneric">Wenn <see langword="true" />, der Aufrufer eine nicht generische Komposition benötigt, damit der Vorgang fortgesetzt wird, nur dann, wenn <c>PmkRight</c> ist eine Monikerklasse, die diesen Moniker in irgendeiner Form als bilden eine generische Komposition mit verfassen kann. Wenn <see langword="false" />, kann die Methode eine generische zusammengesetzte bei Bedarf erstellen.</param>
+        <param name="ppmkComposite">Bei erfolgreicher Rückgabe einen Verweis auf den sich ergebenden zusammengesetzten Moniker.</param>
+        <summary>Kombiniert den aktuellen Moniker mit einem anderen Moniker, erstellen einen neuen zusammengesetzten Moniker.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::ComposeWith`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enum">
+      <MemberSignature Language="C#" Value="public void Enum (bool fForward, out System.Runtime.InteropServices.UCOMIEnumMoniker ppenumMoniker);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Enum(bool fForward, [out] class System.Runtime.InteropServices.UCOMIEnumMoniker&amp; ppenumMoniker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.Enum(System.Boolean,System.Runtime.InteropServices.UCOMIEnumMoniker@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fForward" Type="System.Boolean" />
+        <Parameter Name="ppenumMoniker" Type="System.Runtime.InteropServices.UCOMIEnumMoniker&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="fForward">Wenn <see langword="true" />, listet die Moniker von links nach rechts. Wenn <see langword="false" />, listet die von rechts nach links.</param>
+        <param name="ppenumMoniker">Nach erfolgreicher Rückkehr verweist auf das Enumeratorobjekt für den Moniker.</param>
+        <summary>Gibt einen Zeiger auf einen Enumerator ab, der die Bestandteile eines zusammengesetzten Monikers auflisten kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::Enum`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassID">
+      <MemberSignature Language="C#" Value="public void GetClassID (out Guid pClassID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetClassID([out] valuetype System.Guid&amp; pClassID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.GetClassID(System.Guid@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pClassID" Type="System.Guid&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pClassID">Enthält bei erfolgreicher Rückkehr die CLSID.</param>
+        <summary>Ruft den Klassenbezeichner (CLSID) eines Objekts ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IPersist::GetClassID`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDisplayName">
+      <MemberSignature Language="C#" Value="public void GetDisplayName (System.Runtime.InteropServices.UCOMIBindCtx pbc, System.Runtime.InteropServices.UCOMIMoniker pmkToLeft, out string ppszDisplayName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetDisplayName(class System.Runtime.InteropServices.UCOMIBindCtx pbc, class System.Runtime.InteropServices.UCOMIMoniker pmkToLeft, [out] string&amp; ppszDisplayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.GetDisplayName(System.Runtime.InteropServices.UCOMIBindCtx,System.Runtime.InteropServices.UCOMIMoniker,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pbc" Type="System.Runtime.InteropServices.UCOMIBindCtx" />
+        <Parameter Name="pmkToLeft" Type="System.Runtime.InteropServices.UCOMIMoniker" />
+        <Parameter Name="ppszDisplayName" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pbc">Ein Verweis auf den Bindungskontext, das bei diesem Vorgang verwenden.</param>
+        <param name="pmkToLeft">Ein Verweis auf den Moniker links neben diesen Moniker, wenn der Moniker Teil eines zusammengesetzten Monikers ist.</param>
+        <param name="ppszDisplayName">Enthält bei erfolgreicher Rückkehr Zeichenfolge des Anzeigenamens.</param>
+        <summary>Ruft den Anzeigenamen, also eine Benutzer-lesbare Darstellung der Moniker ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::GetDisplayName`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSizeMax">
+      <MemberSignature Language="C#" Value="public void GetSizeMax (out long pcbSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetSizeMax([out] int64&amp; pcbSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.GetSizeMax(System.Int64@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcbSize" Type="System.Int64&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcbSize">Nach erfolgreicher Rückkehr enthält eine <see langword="long" /> Wert, der angibt, der Größe in Bytes des Streams und zum Speichern dieses Objekts erforderlich sind.</param>
+        <summary>Gibt die Größe in Bytes des Streams und zum Speichern des Objekts erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IPersistStream::GetSizeMax`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTimeOfLastChange">
+      <MemberSignature Language="C#" Value="public void GetTimeOfLastChange (System.Runtime.InteropServices.UCOMIBindCtx pbc, System.Runtime.InteropServices.UCOMIMoniker pmkToLeft, out System.Runtime.InteropServices.FILETIME pFileTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTimeOfLastChange(class System.Runtime.InteropServices.UCOMIBindCtx pbc, class System.Runtime.InteropServices.UCOMIMoniker pmkToLeft, [out] valuetype System.Runtime.InteropServices.FILETIME&amp; pFileTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.GetTimeOfLastChange(System.Runtime.InteropServices.UCOMIBindCtx,System.Runtime.InteropServices.UCOMIMoniker,System.Runtime.InteropServices.FILETIME@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pbc" Type="System.Runtime.InteropServices.UCOMIBindCtx" />
+        <Parameter Name="pmkToLeft" Type="System.Runtime.InteropServices.UCOMIMoniker" />
+        <Parameter Name="pFileTime" Type="System.Runtime.InteropServices.FILETIME&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pbc">Ein Verweis auf den Bindungskontext in dieser Bindung verwendet werden.</param>
+        <param name="pmkToLeft">Ein Verweis auf den Moniker links neben diesen Moniker, wenn der Moniker Teil eines zusammengesetzten Monikers ist.</param>
+        <param name="pFileTime">Nach erfolgreicher Rückkehr enthält den Zeitpunkt der letzten Änderung.</param>
+        <summary>Stellt eine Zahl, die Uhrzeit der letzten Änderung der von diesen Moniker identifizierten Objekts darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::GetTimeOfLastChange`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hash">
+      <MemberSignature Language="C#" Value="public void Hash (out int pdwHash);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Hash([out] int32&amp; pdwHash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.Hash(System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pdwHash" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pdwHash">Nach erfolgreicher Rückkehr enthält den Hashwert für diesen Moniker.</param>
+        <summary>Berechnet eine 32-Bit-Ganzzahl, die mit dem internen Zustand des Monikers an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::Hash`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inverse">
+      <MemberSignature Language="C#" Value="public void Inverse (out System.Runtime.InteropServices.UCOMIMoniker ppmk);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Inverse([out] class System.Runtime.InteropServices.UCOMIMoniker&amp; ppmk) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.Inverse(System.Runtime.InteropServices.UCOMIMoniker@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ppmk" Type="System.Runtime.InteropServices.UCOMIMoniker&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ppmk">Nach erfolgreicher Rückkehr enthält einen Moniker, das Gegenteil der Moniker.</param>
+        <summary>Stellt einen Moniker bereit, wenn von einem ItemsControl rechts neben diesen Moniker oder eine ähnliche Struktur auf nichts verweist verfasst.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::Inverse`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public int IsDirty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IsDirty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.IsDirty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Änderungen des Objekts überprüft, seit es zuletzt gespeichert wurde.</summary>
+        <returns>Ein <see langword="S_OK" /> <see langword="HRESULT" /> -Wert, wenn das Objekt geändert wurde; andernfalls eine <see langword="S_FALSE" /> <see langword="HRESULT" /> Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IPersistStream::IsDirty`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEqual">
+      <MemberSignature Language="C#" Value="public void IsEqual (System.Runtime.InteropServices.UCOMIMoniker pmkOtherMoniker);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void IsEqual(class System.Runtime.InteropServices.UCOMIMoniker pmkOtherMoniker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.IsEqual(System.Runtime.InteropServices.UCOMIMoniker)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pmkOtherMoniker" Type="System.Runtime.InteropServices.UCOMIMoniker" />
+      </Parameters>
+      <Docs>
+        <param name="pmkOtherMoniker">Ein Verweis auf den Moniker für den Vergleich verwendet werden.</param>
+        <summary>Vergleicht diesen Moniker mit einem angegebenen Moniker und gibt an, ob sie identisch sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::IsEqual`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRunning">
+      <MemberSignature Language="C#" Value="public void IsRunning (System.Runtime.InteropServices.UCOMIBindCtx pbc, System.Runtime.InteropServices.UCOMIMoniker pmkToLeft, System.Runtime.InteropServices.UCOMIMoniker pmkNewlyRunning);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void IsRunning(class System.Runtime.InteropServices.UCOMIBindCtx pbc, class System.Runtime.InteropServices.UCOMIMoniker pmkToLeft, class System.Runtime.InteropServices.UCOMIMoniker pmkNewlyRunning) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.IsRunning(System.Runtime.InteropServices.UCOMIBindCtx,System.Runtime.InteropServices.UCOMIMoniker,System.Runtime.InteropServices.UCOMIMoniker)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pbc" Type="System.Runtime.InteropServices.UCOMIBindCtx" />
+        <Parameter Name="pmkToLeft" Type="System.Runtime.InteropServices.UCOMIMoniker" />
+        <Parameter Name="pmkNewlyRunning" Type="System.Runtime.InteropServices.UCOMIMoniker" />
+      </Parameters>
+      <Docs>
+        <param name="pbc">Ein Verweis auf den Bindungskontext in dieser Bindung verwendet werden.</param>
+        <param name="pmkToLeft">Ein Verweis auf den Moniker links neben diesen Moniker diesen Moniker ist Bestandteil eines zusammengesetzten Datenelement.</param>
+        <param name="pmkNewlyRunning">Ein Verweis auf den Moniker der Running Object Table zuletzt hinzugefügt wurde.</param>
+        <summary>Bestimmt, ob das Objekt, das von diesem Moniker identifiziert wird gerade geladen und ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::IsRunning`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSystemMoniker">
+      <MemberSignature Language="C#" Value="public void IsSystemMoniker (out int pdwMksys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void IsSystemMoniker([out] int32&amp; pdwMksys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.IsSystemMoniker(System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pdwMksys" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pdwMksys">Ein Zeiger auf eine ganze Zahl, die einen der Werte aus den <see langword="MKSYS" /> Enumeration und bezieht sich auf eine der Klassen, COM-Moniker.</param>
+        <summary>Gibt an, ob eine der vom System bereitgestellten Monikerklassen diesen Moniker handelt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausführliche Informationen über die Werte der `MKSYS` Enumeration und Informationen zur `IMoniker::IsSystemMoniker`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (System.Runtime.InteropServices.UCOMIStream pStm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Load(class System.Runtime.InteropServices.UCOMIStream pStm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.Load(System.Runtime.InteropServices.UCOMIStream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pStm" Type="System.Runtime.InteropServices.UCOMIStream" />
+      </Parameters>
+      <Docs>
+        <param name="pStm">Der Stream, aus dem das Objekt geladen wird.</param>
+        <summary>Initialisiert ein Objekt aus dem Stream, in dem sie zuvor gespeichert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IPersistStream::Load`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseDisplayName">
+      <MemberSignature Language="C#" Value="public void ParseDisplayName (System.Runtime.InteropServices.UCOMIBindCtx pbc, System.Runtime.InteropServices.UCOMIMoniker pmkToLeft, string pszDisplayName, out int pchEaten, out System.Runtime.InteropServices.UCOMIMoniker ppmkOut);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ParseDisplayName(class System.Runtime.InteropServices.UCOMIBindCtx pbc, class System.Runtime.InteropServices.UCOMIMoniker pmkToLeft, string pszDisplayName, [out] int32&amp; pchEaten, [out] class System.Runtime.InteropServices.UCOMIMoniker&amp; ppmkOut) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.ParseDisplayName(System.Runtime.InteropServices.UCOMIBindCtx,System.Runtime.InteropServices.UCOMIMoniker,System.String,System.Int32@,System.Runtime.InteropServices.UCOMIMoniker@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pbc" Type="System.Runtime.InteropServices.UCOMIBindCtx" />
+        <Parameter Name="pmkToLeft" Type="System.Runtime.InteropServices.UCOMIMoniker" />
+        <Parameter Name="pszDisplayName" Type="System.String" />
+        <Parameter Name="pchEaten" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="ppmkOut" Type="System.Runtime.InteropServices.UCOMIMoniker&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pbc">Ein Verweis auf den Bindungskontext in dieser Bindung verwendet werden.</param>
+        <param name="pmkToLeft">Ein Verweis auf den Moniker, der aus den Anzeigenamen bis zu diesem Zeitpunkt erstellt wurde.</param>
+        <param name="pszDisplayName">Ein Verweis auf die Zeichenfolge, enthält die verbleibenden Anzeigenamen analysiert.</param>
+        <param name="pchEaten">Nach erfolgreicher Rückkehr enthält die Anzahl der Zeichen in <c>PszDisplayName</c> , die in diesem Schritt verarbeitet wurden.</param>
+        <param name="ppmkOut">Verweis auf den Moniker, der erstellt wurde <c>PszDisplayName</c>.</param>
+        <summary>Liest so viele Zeichen des angegebenen Anzeigenamens versteht und erstellt einen Moniker ist der gelesenen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::ParseDisplayName`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reduce">
+      <MemberSignature Language="C#" Value="public void Reduce (System.Runtime.InteropServices.UCOMIBindCtx pbc, int dwReduceHowFar, ref System.Runtime.InteropServices.UCOMIMoniker ppmkToLeft, out System.Runtime.InteropServices.UCOMIMoniker ppmkReduced);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reduce(class System.Runtime.InteropServices.UCOMIBindCtx pbc, int32 dwReduceHowFar, class System.Runtime.InteropServices.UCOMIMoniker&amp; ppmkToLeft, [out] class System.Runtime.InteropServices.UCOMIMoniker&amp; ppmkReduced) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.Reduce(System.Runtime.InteropServices.UCOMIBindCtx,System.Int32,System.Runtime.InteropServices.UCOMIMoniker@,System.Runtime.InteropServices.UCOMIMoniker@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pbc" Type="System.Runtime.InteropServices.UCOMIBindCtx" />
+        <Parameter Name="dwReduceHowFar" Type="System.Int32" />
+        <Parameter Name="ppmkToLeft" Type="System.Runtime.InteropServices.UCOMIMoniker&amp;" RefType="ref" />
+        <Parameter Name="ppmkReduced" Type="System.Runtime.InteropServices.UCOMIMoniker&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pbc">Ein Verweis auf die <see langword="IBindCtx" /> -Schnittstelle für den Bindungskontext in dieser Bindung verwendet werden.</param>
+        <param name="dwReduceHowFar">Gibt an, wie weit diese Moniker reduziert werden soll.</param>
+        <param name="ppmkToLeft">Ein Verweis auf den Moniker links neben diesen Moniker.</param>
+        <param name="ppmkReduced">Bei erfolgreicher Rückgabe einen Verweis auf das reduzierte Formular dieses Monikers werden die <see langword="null" /> , wenn ein Fehler auftritt oder diesen Moniker auf ' Nothing ' reduziert wird.</param>
+        <summary>Gibt einen reduzierten Moniker, einen anderen Moniker, die auf dasselbe Objekt als diesen Moniker verweist jedoch mit gleich großer oder größerer Effizienz gebunden werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::Reduce`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativePathTo">
+      <MemberSignature Language="C#" Value="public void RelativePathTo (System.Runtime.InteropServices.UCOMIMoniker pmkOther, out System.Runtime.InteropServices.UCOMIMoniker ppmkRelPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RelativePathTo(class System.Runtime.InteropServices.UCOMIMoniker pmkOther, [out] class System.Runtime.InteropServices.UCOMIMoniker&amp; ppmkRelPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.RelativePathTo(System.Runtime.InteropServices.UCOMIMoniker,System.Runtime.InteropServices.UCOMIMoniker@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pmkOther" Type="System.Runtime.InteropServices.UCOMIMoniker" />
+        <Parameter Name="ppmkRelPath" Type="System.Runtime.InteropServices.UCOMIMoniker&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pmkOther">Ein Verweis auf den Moniker, den ein relativer Pfad verwendet werden soll.</param>
+        <param name="ppmkRelPath">Bei erfolgreicher Rückgabe einen Verweis auf den relativen Moniker.</param>
+        <summary>Stellt einen Moniker, beim Anfügen an diesen Moniker (oder eine mit einer ähnlichen Struktur), den angegebenen Moniker ergibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IMoniker::RelativePath`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.Runtime.InteropServices.UCOMIStream pStm, bool fClearDirty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save(class System.Runtime.InteropServices.UCOMIStream pStm, bool fClearDirty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIMoniker.Save(System.Runtime.InteropServices.UCOMIStream,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pStm" Type="System.Runtime.InteropServices.UCOMIStream" />
+        <Parameter Name="fClearDirty" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pStm">Der Stream, in dem das Objekt gespeichert wird.</param>
+        <param name="fClearDirty">Gibt an, ob das Änderungsflag löschen nach Abschluss der speichern.</param>
+        <summary>Speichert ein Objekt im angegebenen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IPersistStream::Save`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

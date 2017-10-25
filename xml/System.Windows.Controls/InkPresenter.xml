@@ -1,0 +1,311 @@
+<Type Name="InkPresenter" FullName="System.Windows.Controls.InkPresenter">
+  <TypeSignature Language="C#" Value="public class InkPresenter : System.Windows.Controls.Decorator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InkPresenter extends System.Windows.Controls.Decorator" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.InkPresenter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Decorator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Rendert Freihandeingaben auf einer Oberfläche.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Freihandrendering erfolgt auf zwei Arten: dynamische und statische. Dynamische Rendering erfolgt, wenn Freihandeingaben in ein Freihand-Oberfläche geschrieben wird: der Strich gerendert wird, wie es gesammelt wird. Statische Rendern tritt auf, nachdem Strichdaten gesammelt und an einen neuen Strich angefügt.  
+  
+ Auf dynamische Rendering mithilfe der <xref:System.Windows.Controls.InkPresenter>, Anfügen der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> Eigenschaft eine <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> auf die <xref:System.Windows.Controls.InkPresenter> mithilfe der <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A> Methode. Fügen Sie zum Rendern von Freihandeingaben statisch Stroke-Objekte, die <xref:System.Windows.Controls.InkPresenter.Strokes%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird programmgesteuert ein Strich erstellt und fügt es der <xref:System.Windows.Controls.InkPresenter>. Nur statische Rendering erfolgt in diesem Beispiel, in dem annimmt, dass die <xref:System.Windows.FrameworkElement.Loaded> Ereignis verbunden ist, an den Ereignishandler `WindowLoaded`.  
+  
+ [!code-csharp[InkPresenterSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkPresenterSample/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[InkPresenterSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkPresenterSample/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InkPresenter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkPresenter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.InkPresenter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkPresenter.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">Die <see cref="T:System.Windows.Size" /> dieses Element verwendet wird, um untergeordneten Inhalt anzuordnen.</param>
+        <summary>Ordnet den Inhalt einer <see cref="T:System.Windows.Controls.Decorator" /> Element.</summary>
+        <returns>Die <see cref="T:System.Windows.Size" /> , die die angeordnete Größe dieses darstellt <see cref="T:System.Windows.Controls.Decorator" /> -Elements und seines untergeordneten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachVisuals">
+      <MemberSignature Language="C#" Value="public void AttachVisuals (System.Windows.Media.Visual visual, System.Windows.Ink.DrawingAttributes drawingAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachVisuals(class System.Windows.Media.Visual visual, class System.Windows.Ink.DrawingAttributes drawingAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkPresenter.AttachVisuals(System.Windows.Media.Visual,System.Windows.Ink.DrawingAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="drawingAttributes" Type="System.Windows.Ink.DrawingAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Das visuelle Element von einem <see cref="T:System.Windows.Input.StylusPlugIns.DynamicRenderer" />.</param>
+        <param name="drawingAttributes">Die <see cref="T:System.Windows.Ink.DrawingAttributes" /> , die die Darstellung der dynamisch gerenderte angibt.</param>
+        <summary>Fügt das visuelle Element von einem <see cref="T:System.Windows.Input.StylusPlugIns.DynamicRenderer" /> auf ein <see cref="T:System.Windows.Controls.InkPresenter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fügen Sie die Visualisierung von einer <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> auf die <xref:System.Windows.Controls.InkPresenter> Freihandeingaben auf das Steuerelement dynamisch zu rendern.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie das visuelle Element anfügen und <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.DrawingAttributes%2A> von einer <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> auf eine <xref:System.Windows.Controls.InkPresenter>.  
+  
+ [!code-csharp[StylusPluginSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/StylusControl.cs#3)]
+ [!code-vb[StylusPluginSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/StylusControl.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="visual" />ist bereits mit einer visuellen Struktur angefügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DetachVisuals">
+      <MemberSignature Language="C#" Value="public void DetachVisuals (System.Windows.Media.Visual visual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DetachVisuals(class System.Windows.Media.Visual visual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkPresenter.DetachVisuals(System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Das visuelle Element von der <see cref="T:System.Windows.Input.StylusPlugIns.DynamicRenderer" /> zu trennen.</param>
+        <summary>Trennt das visuelle Element von der <see cref="T:System.Windows.Input.StylusPlugIns.DynamicRenderer" /> aus der <see cref="T:System.Windows.Controls.InkPresenter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Windows.Ink.DrawingAttributes> auf ein benutzerdefiniertes Steuerelement geändert wird, das visuelle Element von der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> muss neu zugeordnet werden die <xref:System.Windows.Controls.InkPresenter>.  Rufen Sie die <xref:System.Windows.Controls.InkPresenter.DetachVisuals%2A> und <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A> Methoden, um das visuelle Element anschließend erneut Anfügen der <xref:System.Windows.Controls.InkPresenter>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Visualisierung von angefügt eine <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> auf die <xref:System.Windows.Controls.InkPresenter> immer die <xref:System.Windows.Ink.DrawingAttributes> der vorgenommenen Änderungen.  In diesem Beispiel wird vorausgesetzt, dass die <xref:System.Windows.Ink.DrawingAttributes.AttributeChanged> Ereignis an den Ereignishandler angefügt ist.  
+  
+ [!code-csharp[StrokeCollectionMethods#39](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeCollectionMethods/CSharp/InkSelector.cs#39)]
+ [!code-vb[StrokeCollectionMethods#39](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeCollectionMethods/VisualBasic/InkSelector.vb#39)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="visual" />ist nicht angefügt, um die <see cref="T:System.Windows.Controls.InkPresenter" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLayoutClip">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Geometry GetLayoutClip (System.Windows.Size layoutSlotSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Geometry GetLayoutClip(valuetype System.Windows.Size layoutSlotSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkPresenter.GetLayoutClip(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="layoutSlotSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="layoutSlotSize">Die verfügbare Größe des Elements.</param>
+        <summary>Gibt eine Clippinggeometrie zurück, der den Bereich angibt, die Wenn abgeschnitten werden, wird die <see cref="P:System.Windows.UIElement.ClipToBounds" /> -Eigenschaftensatz auf <see langword="true" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.Geometry" /> , das den Bereich, der darstellt abgeschnitten, wenn <see cref="P:System.Windows.UIElement.ClipToBounds" /> ist <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisualChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Visual GetVisualChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Visual GetVisualChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkPresenter.GetVisualChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition des untergeordneten Elements.</param>
+        <summary>Ruft das untergeordnete Element <see cref="T:System.Windows.Media.Visual" /> Element am angegebenen <paramref name="index" /> Position.</summary>
+        <returns>Das untergeordnete Element am angegebenen <paramref name="index" /> Position.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkPresenter.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Eine Obergrenze <see cref="T:System.Windows.Size" /> nicht überschritten werden darf.</param>
+        <summary>Misst das untergeordnete Element von einem <see cref="T:System.Windows.Controls.Decorator" /> bereit, um sie beim Vorbereiten der <see cref="M:System.Windows.Controls.Decorator.ArrangeOverride(System.Windows.Size)" /> übergeben.</summary>
+        <returns>Das Ziel <see cref="T:System.Windows.Size" /> des Elements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.InkPresenter.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine geeignete <see cref="T:System.Windows.Automation.Peers.InkPresenterAutomationPeer" /> Implementierung für dieses Steuerelement als Teil der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Infrastruktur.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Strokes">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.StrokeCollection Strokes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Ink.StrokeCollection Strokes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkPresenter.Strokes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StrokeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Striche, die die <see cref="T:System.Windows.Controls.InkPresenter" /> angezeigt.</summary>
+        <value>Die Striche, die die <see cref="T:System.Windows.Controls.InkPresenter" /> angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Strokes"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.InkPresenter.StrokesProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird programmgesteuert ein Strich erstellt und fügt es der <xref:System.Windows.Controls.InkPresenter>. Das Beispiel setzt voraus, dass die <xref:System.Windows.FrameworkElement.Loaded> Ereignis verbunden ist, an den Ereignishandler `WindowLoaded`.  
+  
+ [!code-csharp[InkPresenterSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkPresenterSample/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[InkPresenterSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkPresenterSample/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StrokesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StrokesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.InkPresenter.StrokesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.InkPresenter.Strokes" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int VisualChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisualChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.InkPresenter.VisualChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der gleich der Anzahl der untergeordneten visuellen Elemente dieser Instanz von <see cref="T:System.Windows.Controls.Decorator" /> ist.</summary>
+        <value>Die Anzahl der sichtbaren untergeordneten Elemente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

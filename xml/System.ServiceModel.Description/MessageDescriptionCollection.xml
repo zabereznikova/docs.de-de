@@ -1,0 +1,120 @@
+<Type Name="MessageDescriptionCollection" FullName="System.ServiceModel.Description.MessageDescriptionCollection">
+  <TypeSignature Language="C#" Value="public class MessageDescriptionCollection : System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MessageDescription&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageDescriptionCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.MessageDescription&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.MessageDescriptionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MessageDescription&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.ServiceModel.Description.MessageDescription</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung bereit, die zum Speichern von Beschreibungen der Meldungen verwendet wird, aus denen ein zu einem Vertrag gehörender Vorgang besteht. </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ServiceModel.Description.ContractDescription> wird verwendet, um Verträge und die ihnen zugeordneten Vorgänge zu beschreiben. Jeder Vertragsvorgang verfügt über eine entsprechende <xref:System.ServiceModel.Description.OperationDescription>, die Aspekte dieses Vorgangs beschreibt, wie beispielsweise, ob es sich um einen unidirektionalen Vorgang oder um einen Anforderung/Antwort-Vorgang handelt. Jede <xref:System.ServiceModel.Description.OperationDescription> beschreibt dann wiederum die Nachrichten, aus denen der Vorgang besteht, unter Verwendung einer Auflistung von <xref:System.ServiceModel.Description.MessageDescription>.  
+  
+   
+  
+## Examples  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.MessageDescription Find (string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.MessageDescription Find(string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MessageDescriptionCollection.Find(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MessageDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Aktion der gesuchten Meldung.</param>
+        <summary>Sucht die erste Meldungsbeschreibung in einer Auflistung für eine Meldung mit einer angegebenen Aktion und gibt sie zurück.</summary>
+        <returns>Der erste <see cref="T:System.ServiceModel.Description.MessageDescription" /> einer Auflistung, dessen Meldung den angegebenen <paramref name="action" /> enthält, und <see langword="null" />, wenn kein entsprechender <paramref name="action" /> gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie alle <xref:System.ServiceModel.Description.MessageDescription>-Objekte in der Auflistung suchen möchten, die dem angegebenen `action` entsprechen, verwenden Sie stattdessen die <xref:System.ServiceModel.Description.MessageDescriptionCollection.FindAll%28System.String%29>-Methode.  
+  
+   
+  
+## Examples  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MessageDescription&gt; FindAll (string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.MessageDescription&gt; FindAll(string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MessageDescriptionCollection.FindAll(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MessageDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Aktion der gesuchten Meldungen.</param>
+        <summary>Sucht alle Meldungsbeschreibungen in einer Auflistung, deren Meldungen eine angegebene Aktion enthalten, und gibt sie zurück.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Description.MessageDescriptionCollection" />, der die Auflistungsmeldungsbeschreibungen der aktuellen Auflistung enthält, deren Meldungen über den angegebenen <paramref name="action" /> verfügen. Wenn keine entsprechenden <see cref="T:System.ServiceModel.Description.MessageDescription" />-Objekte gefunden werden, wird eine leere Auflistung zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die erste Instanz des <xref:System.ServiceModel.Description.MessageDescription> in der Auflistung suchen möchten, die dem angegebenen `action` entsprechen, verwenden Sie stattdessen die <xref:System.ServiceModel.Description.MessageDescriptionCollection.Find%28System.String%29>-Methode.  
+  
+   
+  
+## Examples  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

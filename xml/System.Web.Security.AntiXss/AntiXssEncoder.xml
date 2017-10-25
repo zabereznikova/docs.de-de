@@ -1,0 +1,1069 @@
+<Type Name="AntiXssEncoder" FullName="System.Web.Security.AntiXss.AntiXssEncoder">
+  <TypeSignature Language="C#" Value="public class AntiXssEncoder : System.Web.Util.HttpEncoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AntiXssEncoder extends System.Web.Util.HttpEncoder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.AntiXss.AntiXssEncoder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Util.HttpEncoder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Codiert eine Zeichenfolge für die Verwendung in HTML-, XML-, CSS- und URL-Zeichenfolgen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Web.Security.AntiXss.AntiXssEncoder> Klasse überschreiben die <xref:System.Web.Util.HttpEncoder> -Klasse, die standardmäßig verwendet wird, zum Codieren und Decodieren von Zeichenfolgen in Methoden von Klassen wie z. B. <xref:System.Web.HttpUtility>, <xref:System.Web.HttpServerUtility>, und <xref:System.Net.HttpResponseHeader>.  
+  
+ In der <xref:System.Web.Security.AntiXss.AntiXssEncoder> -Klasse werden alle Zeichen, die nicht in der Sicherungsliste gefunden werden durch codiert die <xref:System.Web.Security.AntiXss.AntiXssEncoder.HtmlAttributeEncode%2A> und <xref:System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode%2A> Methoden.  
+  
+ Ersetzt die <xref:System.Web.Util.HttpEncoder> -Klasse mit der <xref:System.Web.Security.AntiXss.AntiXssEncoder> Klasse, registrieren Sie ihn mithilfe der `encoderType` -Attribut des HttpRuntime-Elements in der Datei "Web.config" wie im folgenden Beispiel gezeigt:  
+  
+```  
+<httpRuntime encoderType="System.Web.Security.AntiXss.AntiXssEncoder" />  
+```  
+  
+ Eine Liste der sicheren Standardzeichen für verschiedene Codierungsmethoden finden Sie in den Hinweisen für die <xref:System.Web.Security.AntiXss.AntiXssEncoder.HtmlAttributeEncode%2A>, <xref:System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode%2A>, <xref:System.Web.Security.AntiXss.AntiXssEncoder.XmlAttributeEncode%2A>, und <xref:System.Web.Security.AntiXss.AntiXssEncoder.XmlEncode%2A> Methoden. Die sichere Standardliste kann geändert werden, mithilfe der <xref:System.Web.Security.AntiXss.AntiXssEncoder.MarkAsSafe%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AntiXssEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Security.AntiXss.AntiXssEncoder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CssEncode">
+      <MemberSignature Language="C#" Value="public static string CssEncode (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CssEncode(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.CssEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu codierende Zeichenfolge.</param>
+        <summary>Codiert die angegebene Zeichenfolge für die Verwendung in CSS (Cascading Stylesheets).</summary>
+        <returns>Die codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind.  
+  
+> [!NOTE]
+>  Setzen von Anführungszeichen ("") für die resultierende Zeichenfolge, bevor Sie ihn auf ein cascading Stylesheet hinzufügen.  
+  
+ Die folgende Tabelle enthält die sicheren Standardzeichen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert\000028\000027XSS\000020Attack\000021\000027\000029\00003B`|  
+|`user@contoso.com`|`user\000040contoso\00002Ecom`|  
+|`Anti-Cross Site Scripting Namespace`|`Anti\00002DCross\000020Site\000020Scripting\000020Namespace`|  
+  
+ Die CSS-Escapesequenz besteht aus einem umgekehrten Schrägstrich (\\) gefolgt von bis zu sechs hexadezimalen Ziffern, die einen Zeichencode, aus dem ISO 10646-Standard darstellen. (Der standard ISO 10646 entspricht effektiv Unicode.) Jedes Zeichen als eine hexadezimale Ziffer beendet die-Escapesequenz. Wenn ein Zeichen, das die-Escapesequenz folgt auch eine gültige Hexadezimalziffer ist, muss es sechs Ziffern in der Escapesequenz einschließen oder verwenden ein Leerzeichen, um die-Escapesequenz zu beenden. Beispielsweise `\000020` gibt ein Leerzeichen an.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:Microsoft.Security.Application.InvalidUnicodeValueException">
+          <paramref name="input" />enthält ein Zeichen, die einen ungültigen Unicode-Wert aufweist.</exception>
+        <exception cref="T:Microsoft.Security.Application.InvalidSurrogatePairException">
+          <paramref name="input" />enthalten einen hoher Ersatzzeichencodepunkt, der durch ein niedriger Ersatzzeichencodepunkt nicht eingehalten wurde.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthalten einen niedriger Ersatzzeichencodepunkt, der kein hoher Ersatzzeichencodepunkt vorangestellt wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlAttributeEncode">
+      <MemberSignature Language="C#" Value="protected override void HtmlAttributeEncode (string value, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void HtmlAttributeEncode(string value, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.HtmlAttributeEncode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu codierende Zeichenfolge.</param>
+        <param name="output">Der Textwriter, der verwendet werden soll, um die Zeichenfolge auszugeben.</param>
+        <summary>Codiert und gibt die angegebene Zeichenfolge für die Verwendung in einem HTML-Attribut aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `&#DECIMAL;` Notation.  
+  
+> [!NOTE]
+>  Setzen von doppelten Anführungszeichen ("") oder einzelne Anführungszeichen ("") für die resultierende Zeichenfolge, bevor Sie ihn auf einer Seite hinzufügen.  
+  
+ Die folgende Tabelle enthält die sicheren Standardzeichen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Lateinische Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Lateinische Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|!|Ausrufezeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|#|Nummernzeichen hash|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|$|Dollarzeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|%|Prozentzeichen (%)|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|( )|Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|*|Sternchen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|+|Pluszeichen (+)|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|,|Komma|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum, Punkt, vollständige Beendigung|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|/|Schrägstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|:|Doppelpunkt|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|;|Semikolon|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|=|Gleichheitszeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|?|Fragezeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|@|Kommerzieller at-Zeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|[ ]|eckige Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|\|Umgekehrter Schrägstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|^|Einfügemarke|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|`|Gravis-Akzent|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|{ }|Geschweifte Klammern, geschweifte Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|&#124;|Vertikale Linie|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+|[C1 Steuerelemente und Latein-1, Ergänzung](http://www.unicode.org/charts/PDF/U0080.pdf)|von 0x00A1 - 0x00AC|Sonderzeichen zwischen von 0x00A1 (161 dezimal) und 0x00AC (172 dezimal).|  
+|[C1 Steuerelemente und Latein-1, Ergänzung](http://www.unicode.org/charts/PDF/U0080.pdf)|0x00AE - 0x00FF|Sonderzeichen zwischen 0x00AE (174 dezimal) und 0x00FF (255 dezimal).|  
+|[Latin-erweiterte A](http://www.unicode.org/charts/PDF/U0100.pdf)|0 x 0100 - 0x017F|Lateinisch Sonderzeichen zwischen 0 x 0100 (256 dezimal) und 0x017F (383 dezimal).|  
+|[Lateinisch erweiterte B](http://www.unicode.org/charts/PDF/U0180.pdf)|von 0 x 0180 - 0x024F|Lateinisch Sonderzeichen zwischen von 0 x 0180 (decimal 384) und 0x024F (591 dezimal).|  
+|[IPA-Erweiterung](http://www.unicode.org/charts/PDF/U0250.pdf)|0x0250 - 0x02AF|IPA-Erweiterung Zeichen zwischen 0x0250 (592 dezimal) und 0x02AF (687 dezimal).|  
+|[Abstand Modifizierer Buchstaben](http://www.unicode.org/charts/PDF/U02B0.pdf)|0x02B0 - 0x02FF|Modifizierer Buchstaben Zeichen mit Zwischenraum zwischen 0x02B0 (688 dezimal) und 0x02FF (767 dezimal).|  
+Kombinieren von diakritischen Zeichen] (http://www.unicode.org/charts/PDF/U0300.pdf)|0 x 0300 - 0x036F|Kombinieren von diakritisches Zeichen zwischen 0 x 0300 (768 dezimal) und 0x036F (879 dezimal).|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert(&#39;XSS&#32;Attack!&#39;);`|  
+|`<script>alert('XSS Attack!');</script>`|`&lt;script&gt;alert(&#39;XSS Attack!&#39;);&lt;/script&gt;`|  
+|`alert('XSSあAttack!');`|`alert(&#39;XSS&#12354;Attack!&#39;);`|  
+|`user@contoso.com`|`user@contoso.com`|  
+|`"Anti-Cross Site Scripting Namespace"`|`&quot;Anti-Cross&#32;Site&#32;Scripting&#32;Namespace&quot;`|  
+  
+ Rufen Sie zum Anpassen der Liste der sicheren die <xref:System.Web.Security.AntiXss.AntiXssEncoder.MarkAsSafe%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:Microsoft.Security.Application.InvalidUnicodeValueException">
+          <paramref name="input" />enthält ein Zeichen, die einen ungültigen Unicode-Wert aufweist.</exception>
+        <exception cref="T:Microsoft.Security.Application.InvalidSurrogatePairException">
+          <paramref name="input" />enthalten einen hoher Ersatzzeichencodepunkt, der durch ein niedriger Ersatzzeichencodepunkt nicht eingehalten wurde.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthalten einen niedriger Ersatzzeichencodepunkt, der kein hoher Ersatzzeichencodepunkt vorangestellt wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public static string HtmlEncode (string input, bool useNamedEntities);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string HtmlEncode(string input, bool useNamedEntities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="useNamedEntities" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu codierende Zeichenfolge.</param>
+        <param name="useNamedEntities">
+          <see langword="true" />Verwendung von HTML 4.0 benannte Entitäten für bestimmte zeichencodierungen; <see langword="false" /> codieren, indem Sie nur <c> &amp;#DECIMAL;</c> Notation.</param>
+        <summary>Codiert die angegebene Zeichenfolge für die Verwendung als Text im HTML-Markup und gibt optional an, ob HTML 4.0 benannte Entitäten verwendet.</summary>
+        <returns>Die codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `&#DECIMAL;` Notation.  
+  
+> [!NOTE]
+>  Setzen von doppelten Anführungszeichen ("") oder einzelne Anführungszeichen ("") für die resultierende Zeichenfolge, bevor Sie ihn auf einer Seite hinzufügen.  
+  
+ Die folgende Tabelle enthält die sicheren Standardzeichen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Lateinische Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Lateinische Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|(Leerzeichen)|Leerzeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|!|Ausrufezeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|#|Nummernzeichen hash|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|$|Dollarzeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|%|Prozentzeichen (%)|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|( )|Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|*|Sternchen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|+|Pluszeichen (+)|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|,|Komma|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum, Punkt, vollständige Beendigung|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|/|Schrägstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|:|Doppelpunkt|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|;|Semikolon|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|=|Gleichheitszeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|?|Fragezeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|@|At-Zeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|[ ]|eckige Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|\|Umgekehrter Schrägstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|^|Einfügemarke|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|`|Gravis-Akzent|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|{ }|Geschweifte Klammern, geschweifte Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|&#124;|Vertikale Linie|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+|[C1 Steuerelemente und Latein-1, Ergänzung](http://www.unicode.org/charts/PDF/U0080.pdf)|von 0x00A1 - 0x00AC|Sonderzeichen zwischen von 0x00A1 (161 dezimal) und 0x00AC (172 dezimal). Zeichen in diesem Bereich werden codiert, wenn `useNamedEntities` ist `true`.|  
+|[C1 Steuerelemente und Latein-1, Ergänzung](http://www.unicode.org/charts/PDF/U0080.pdf)|0x00AE - 0x00FF|Sonderzeichen zwischen 0x00AE (174 dezimal) und 0x00FF (255 dezimal). Zeichen in diesem Bereich werden codiert, wenn `useNamedEntities` ist `true`.|  
+|[Erweitertes Lateinisch-A](http://www.unicode.org/charts/PDF/U0100.pdf)|0 x 0100 - 0x017F|Lateinisch Sonderzeichen zwischen 0 x 0100 (256 dezimal) und 0x017F (383 dezimal).|  
+|[Erweiterte Lateinisch-B](http://www.unicode.org/charts/PDF/U0180.pdf)|von 0 x 0180 - 0x024F|Lateinisch Sonderzeichen zwischen von 0 x 0180 (decimal 384) und 0x024F (591 dezimal).|  
+|[IPA-Erweiterung](http://www.unicode.org/charts/PDF/U0250.pdf)|0x0250 - 0x02AF|IPA-Erweiterung Zeichen zwischen 0x0250 (592 dezimal) und 0x02AF (687 dezimal).|  
+|[Abstand Modifizierer Buchstaben](http://www.unicode.org/charts/PDF/U02B0.pdf)|0x02B0 - 0x02FF|Modifizierer Buchstaben Zeichen mit Zwischenraum zwischen 0x02B0 (688 dezimal) und 0x02FF (767 dezimal).|  
+Kombinieren von diakritischen Zeichen] (http://www.unicode.org/charts/PDF/U0300.pdf)|0 x 0300 - 0x036F|Kombinieren von diakritisches Zeichen zwischen 0 x 0300 (768 dezimal) und 0x036F (879 dezimal).|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert(&#39;XSS&#32;Attack!&#39;);`|  
+|`<script>alert('XSS Attack!');</script>`|`&lt;script&gt;alert(&#39;XSS Attack!&#39;);&lt;/script&gt;`|  
+|`alert('XSSあAttack!');`|`alert(&#39;XSS&#12354;Attack!&#39;);`|  
+|`user@contoso.com`|`user@contoso.com`|  
+|`"Anti-Cross Site Scripting Namespace"`|`&quot;Anti-Cross&#32;Site&#32;Scripting&#32;Namespace&quot;`|  
+  
+ Rufen Sie zum Anpassen der Liste der sicheren die <xref:System.Web.Security.AntiXss.AntiXssEncoder.MarkAsSafe%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:Microsoft.Security.Application.InvalidUnicodeValueException">
+          <paramref name="input" />enthält ein Zeichen, die einen ungültigen Unicode-Wert aufweist.</exception>
+        <exception cref="T:Microsoft.Security.Application.InvalidSurrogatePairException">
+          <paramref name="input" />enthalten einen hoher Ersatzzeichencodepunkt, der durch ein niedriger Ersatzzeichencodepunkt nicht eingehalten wurde.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthalten einen niedriger Ersatzzeichencodepunkt, der kein hoher Ersatzzeichencodepunkt vorangestellt wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="protected override void HtmlEncode (string value, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void HtmlEncode(string value, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu codierende Zeichenfolge.</param>
+        <param name="output">Der Textwriter, der verwendet werden soll, um die Zeichenfolge auszugeben.</param>
+        <summary>Codiert die angegebene Zeichenfolge zur Verwendung als Text im HTML-Markup und gibt die Zeichenfolge unter Verwendung des angegebenen Textwriter aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `&#DECIMAL;` Notation.  
+  
+> [!NOTE]
+>  Setzen von doppelten Anführungszeichen ("") oder einzelne Anführungszeichen ("") für die resultierende Zeichenfolge, bevor Sie ihn auf einer Seite hinzufügen.  
+  
+ Die folgende Tabelle enthält die sicheren Standardzeichen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Lateinische Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Lateinische Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|(Leerzeichen)|Leerzeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|!|Ausrufezeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|#|Nummernzeichen hash|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|$|Dollarzeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|%|Prozentzeichen (%)|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|( )|Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|*|Sternchen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|+|Pluszeichen (+)|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|,|Komma|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum, Punkt, vollständige Beendigung|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|/|Schrägstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|:|Doppelpunkt|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|;|Semikolon|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|=|Gleichheitszeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|?|Fragezeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|@|At-Zeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|[ ]|eckige Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|\|Umgekehrter Schrägstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|^|Einfügemarke|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|`|Gravis-Akzent|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|{ }|Geschweifte Klammern, geschweifte Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|&#124;|Vertikale Linie|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+|[C1 Steuerelemente und Latein-1, Ergänzung](http://www.unicode.org/charts/PDF/U0080.pdf)|von 0x00A1 - 0x00AC|Sonderzeichen zwischen von 0x00A1 (161 dezimal) und 0x00AC (172 dezimal). Zeichen in diesem Bereich werden codiert, wenn `useNamedEntities` ist `true`.|  
+|[C1 Steuerelemente und Latein-1, Ergänzung](http://www.unicode.org/charts/PDF/U0080.pdf)|0x00AE - 0x00FF|Sonderzeichen zwischen 0x00AE (174 dezimal) und 0x00FF (255 dezimal). Zeichen in diesem Bereich werden codiert, wenn `useNamedEntities` ist `true`.|  
+|[Erweitertes Lateinisch-A](http://www.unicode.org/charts/PDF/U0100.pdf)|0 x 0100 - 0x017F|Lateinisch Sonderzeichen zwischen 0 x 0100 (256 dezimal) und 0x017F (383 dezimal).|  
+|[Erweiterte Lateinisch-B](http://www.unicode.org/charts/PDF/U0180.pdf)|von 0 x 0180 - 0x024F|Lateinisch Sonderzeichen zwischen von 0 x 0180 (decimal 384) und 0x024F (591 dezimal).|  
+|[IPA-Erweiterung](http://www.unicode.org/charts/PDF/U0250.pdf)|0x0250 - 0x02AF|IPA-Erweiterung Zeichen zwischen 0x0250 (592 dezimal) und 0x02AF (687 dezimal).|  
+|[Abstand Modifizierer Buchstaben](http://www.unicode.org/charts/PDF/U02B0.pdf)|0x02B0 - 0x02FF|Modifizierer Buchstaben Zeichen mit Zwischenraum zwischen 0x02B0 (688 dezimal) und 0x02FF (767 dezimal).|  
+Kombinieren von diakritischen Zeichen] (http://www.unicode.org/charts/PDF/U0300.pdf)|0 x 0300 - 0x036F|Kombinieren von diakritisches Zeichen zwischen 0 x 0300 (768 dezimal) und 0x036F (879 dezimal).|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert(&#39;XSS&#32;Attack!&#39;);`|  
+|`<script>alert('XSS Attack!');</script>`|`&lt;script&gt;alert(&#39;XSS Attack!&#39;);&lt;/script&gt;`|  
+|`alert('XSSあAttack!');`|`alert(&#39;XSS&#12354;Attack!&#39;);`|  
+|`user@contoso.com`|`user@contoso.com`|  
+|`"Anti-Cross Site Scripting Namespace"`|`&quot;Anti-Cross&#32;Site&#32;Scripting&#32;Namespace&quot;`|  
+  
+ Rufen Sie zum Anpassen der Liste der sicheren die <xref:System.Web.Security.AntiXss.AntiXssEncoder.MarkAsSafe%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:Microsoft.Security.Application.InvalidUnicodeValueException">
+          <paramref name="input" />enthält ein Zeichen, die einen ungültigen Unicode-Wert aufweist.</exception>
+        <exception cref="T:Microsoft.Security.Application.InvalidSurrogatePairException">
+          <paramref name="input" />enthalten einen hoher Ersatzzeichencodepunkt, der durch ein niedriger Ersatzzeichencodepunkt nicht eingehalten wurde.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthalten einen niedriger Ersatzzeichencodepunkt, der kein hoher Ersatzzeichencodepunkt vorangestellt wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlFormUrlEncode">
+      <MemberSignature Language="C#" Value="public static string HtmlFormUrlEncode (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string HtmlFormUrlEncode(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.HtmlFormUrlEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu codierende Zeichenfolge.</param>
+        <summary>Codiert die angegebene Zeichenfolge für die Verwendung in Formularübermittlung, deren MIME-Typ "application/x-www-form-urlencoded" ist.</summary>
+        <returns>Die codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `%SINGLE_BYTE_HEX` Notation.  
+  
+> [!NOTE]
+>  Setzen von doppelten Anführungszeichen ("") oder einzelne Anführungszeichen ("") für die resultierende Zeichenfolge, bevor Sie ihn auf einer Seite hinzufügen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum, Punkt, vollständige Beendigung|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert%28%27XSS+Attack%21%27%29%3b`|  
+|`<script>alert('XSS Attack!');</script>`|`%3cscript%3ealert%28%27XSS+Attack%21%27%29%3b%3c%2fscript%3e`|  
+|`alert('XSSあAttack!');`|`alert%28%27XSS%e3%81%82Attack%21%27%29%3b`|  
+|`user@contoso.com`|`user@contoso.com`|  
+|`Anti-Cross Site Scripting Namespace`|`Anti-Cross+Site+Scripting+Namespace`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlFormUrlEncode">
+      <MemberSignature Language="C#" Value="public static string HtmlFormUrlEncode (string input, int codePage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string HtmlFormUrlEncode(string input, int32 codePage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.HtmlFormUrlEncode(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="codePage" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu codierende Zeichenfolge.</param>
+        <param name="codePage">Die Codepage verwenden, um die <c>input</c> Zeichenfolge.</param>
+        <summary>Codiert die angegebene Zeichenfolge für die Verwendung in Formularübermittlung, deren MIME-Typ "application/x-www-form-urlencoded" lautet, indem die angegebene Codepage verwendet wird.</summary>
+        <returns>Die codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `%SINGLE_BYTE_HEX` Notation.  
+  
+> [!NOTE]
+>  Setzen von doppelten Anführungszeichen ("") oder einzelne Anführungszeichen ("") für die resultierende Zeichenfolge, bevor Sie ihn auf einer Seite hinzufügen.  
+  
+ Die folgende Tabelle enthält die sicheren Standardzeichen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum, Punkt, vollständige Beendigung|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert%28%27XSS+Attack%21%27%29%3b`|  
+|`<script>alert('XSS Attack!');</script>`|`%3cscript%3ealert%28%27XSS+Attack%21%27%29%3b%3c%2fscript%3e`|  
+|`alert('XSSあAttack!');`|`alert%28%27XSS%e3%81%82Attack%21%27%29%3b`|  
+|`user@contoso.com`|`user%40contoso.com`|  
+|`Anti-Cross Site Scripting Namespace`|`Anti-Cross+Site+Scripting+Namespace`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlFormUrlEncode">
+      <MemberSignature Language="C#" Value="public static string HtmlFormUrlEncode (string input, System.Text.Encoding inputEncoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string HtmlFormUrlEncode(string input, class System.Text.Encoding inputEncoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.HtmlFormUrlEncode(System.String,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="inputEncoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu codierende Zeichenfolge.</param>
+        <param name="inputEncoding">Der Eingabecodiertyp.</param>
+        <summary>Codiert die angegebene Zeichenfolge für die Formularübermittlung, deren MIME-Typ "application/x-www-form-urlencoded" ist, indem er den angegebenen Zeichencodierungstyp verwendet.</summary>
+        <returns>Die codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `%SINGLE_BYTE_HEX` Notation.  
+  
+> [!NOTE]
+>  Setzen von doppelten Anführungszeichen ("") oder einzelne Anführungszeichen ("") für die resultierende Zeichenfolge, bevor Sie ihn auf einer Seite hinzufügen.  
+  
+ Die folgende Tabelle enthält die sicheren Standardzeichen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum, Punkt, vollständige Beendigung|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert%28%27XSS+Attack%21%27%29%3b`|  
+|`<script>alert('XSS Attack!');</script>`|`%3cscript%3ealert%28%27XSS+Attack%21%27%29%3b%3c%2fscript%3e`|  
+|`alert('XSSあAttack!');`|`alert%28%27XSS%e3%81%82Attack%21%27%29%3b`|  
+|`user@contoso.com`|`user%40contoso.com`|  
+|`Anti-Cross Site Scripting Namespace`|`Anti-Cross+Site+Scripting+Namespace`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkAsSafe">
+      <MemberSignature Language="C#" Value="public static void MarkAsSafe (System.Web.Security.AntiXss.LowerCodeCharts lowerCodeCharts, System.Web.Security.AntiXss.LowerMidCodeCharts lowerMidCodeCharts, System.Web.Security.AntiXss.MidCodeCharts midCodeCharts, System.Web.Security.AntiXss.UpperMidCodeCharts upperMidCodeCharts, System.Web.Security.AntiXss.UpperCodeCharts upperCodeCharts);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void MarkAsSafe(valuetype System.Web.Security.AntiXss.LowerCodeCharts lowerCodeCharts, valuetype System.Web.Security.AntiXss.LowerMidCodeCharts lowerMidCodeCharts, valuetype System.Web.Security.AntiXss.MidCodeCharts midCodeCharts, valuetype System.Web.Security.AntiXss.UpperMidCodeCharts upperMidCodeCharts, valuetype System.Web.Security.AntiXss.UpperCodeCharts upperCodeCharts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.MarkAsSafe(System.Web.Security.AntiXss.LowerCodeCharts,System.Web.Security.AntiXss.LowerMidCodeCharts,System.Web.Security.AntiXss.MidCodeCharts,System.Web.Security.AntiXss.UpperMidCodeCharts,System.Web.Security.AntiXss.UpperCodeCharts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lowerCodeCharts" Type="System.Web.Security.AntiXss.LowerCodeCharts" />
+        <Parameter Name="lowerMidCodeCharts" Type="System.Web.Security.AntiXss.LowerMidCodeCharts" />
+        <Parameter Name="midCodeCharts" Type="System.Web.Security.AntiXss.MidCodeCharts" />
+        <Parameter Name="upperMidCodeCharts" Type="System.Web.Security.AntiXss.UpperMidCodeCharts" />
+        <Parameter Name="upperCodeCharts" Type="System.Web.Security.AntiXss.UpperCodeCharts" />
+      </Parameters>
+      <Docs>
+        <param name="lowerCodeCharts">Die Kombination aus unteren Zeichentabellen, die als sicher zu kennzeichnen sind.</param>
+        <param name="lowerMidCodeCharts">Die Kombination aus Zeichentabellen des unteren Mittelfelds, die als sicher zu kennzeichnen sind.</param>
+        <param name="midCodeCharts">Die Kombination aus mittleren Zeichentabellen, die als sicher zu kennzeichnen sind.</param>
+        <param name="upperMidCodeCharts">Die Kombination aus Zeichentabellen des oberen Mittelfelds, die als sicher zu kennzeichnen sind.</param>
+        <param name="upperCodeCharts">Die Kombination aus oberen Zeichentabellen, die als sicher zu kennzeichnen sind.</param>
+        <summary>Markiert Zeichen angegebener Unicode-Codeübersichten als sicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Liste die sichere wirkt sich auf alle HTML-XML, CSS- und URL-Codierung Methoden.  
+  
+ Bis auf einige Ausnahmen Unicode-codeübersichten Schriftsprachen keine direkte Entsprechung. Zum Hinzufügen der Unterstützung für eine bestimmte Sprache oder eine Gruppe von Sprachen häufig erfordert mehrere Zeichentabellen als sicher zu kennzeichnen.  
+  
+ Verwenden Sie zum Hinzufügen der Unterstützung für die japanische Sprache Englisch können weiterhin die folgende Syntax:  
+  
+```  
+  
+MarkAsSafe(  
+            LowerCodeCharts.Default,  
+            LowerMidCodeCharts.HangulJamo,  
+            MidCodeCharts.None,  
+            UpperMidCodeCharts.CjkRadicalsSupplement |   
+            UpperMidCodeCharts.CjkSymbolsAndPunctuation |   
+            UpperMidCodeCharts.Hiragana |   
+            UpperMidCodeCharts.Katakana |   
+            UpperMidCodeCharts.KatakanaPhoneticExtensions |   
+            UpperMidCodeCharts.LatinExtendedD |  
+            UpperMidCodeCharts.CjkUnifiedIdeographs,  
+            UpperCodeCharts.None);  
+```  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Security.AntiXss.AntiXssEncoder.MarkAsSafe%2A> -Methode muss aufgerufen werden, der `Application_Start` Methode in der Datei "Global.asax".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="M:System.Web.Security.AntiXss.AntiXssEncoder.MarkAsSafe(System.Web.Security.AntiXss.LowerCodeCharts,System.Web.Security.AntiXss.LowerMidCodeCharts,System.Web.Security.AntiXss.MidCodeCharts,System.Web.Security.AntiXss.UpperMidCodeCharts,System.Web.Security.AntiXss.UpperCodeCharts)" /> Methode wurde aufgerufen, außerhalb der <see langword="Application_Start" /> Methode in der Datei "Global.asax".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncode">
+      <MemberSignature Language="C#" Value="public static string UrlEncode (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlEncode(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.UrlEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu codierende Zeichenfolge.</param>
+        <summary>Codiert die angegebene Zeichenfolge für die Verwendung in einer URL.</summary>
+        <returns>Die codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `%SINGLE_BYTE_HEX` Notation.  
+  
+ Die folgende Tabelle enthält die sicheren Standardzeichen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum, Punkt, vollständige Beendigung|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert%28%27XSS%20Attack%21%27%29%3b`|  
+|`<script>alert('XSS Attack!');</script>`|`%3cscript%3ealert%28%27XSS%20Attack%21%27%29%3b%3c%2fscript%3e`|  
+|`alert('XSSあAttack!');`|`alert%28%27XSS%e3%81%82Attack%21%27%29%3b`|  
+|`user@contoso.com`|`user%40contoso.com`|  
+|`"Anti-Cross Site Scripting Namespace"`|`%22Anti-Cross%20Site%20Scripting%20Namespace%22`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncode">
+      <MemberSignature Language="C#" Value="public static string UrlEncode (string input, int codePage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlEncode(string input, int32 codePage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.UrlEncode(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="codePage" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu codierende Zeichenfolge.</param>
+        <param name="codePage">Die Codepage verwenden, um die <c>input</c> Zeichenfolge.</param>
+        <summary>Codiert die angegebene Zeichenfolge für die Verwendung in einem URL unter Verwendung der angegebenen Codepage.</summary>
+        <returns>Die codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `%SINGLE_BYTE_HEX` Notation.  
+  
+ Die folgende Tabelle enthält die sicheren Standardzeichen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum, Punkt, vollständige Beendigung|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert%28%27XSS%20Attack%21%27%29%3b`|  
+|`<script>alert('XSS Attack!');</script>`|`%3cscript%3ealert%28%27XSS%20Attack%21%27%29%3b%3c%2fscript%3e`|  
+|`alert('XSSあAttack!');`|`alert%28%27XSS%e3%81%82Attack%21%27%29%3b`|  
+|`user@contoso.com`|`user%40contoso.com`|  
+|`"Anti-Cross Site Scripting Namespace"`|`%22Anti-Cross%20Site%20Scripting%20Namespace%22`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncode">
+      <MemberSignature Language="C#" Value="public static string UrlEncode (string input, System.Text.Encoding inputEncoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlEncode(string input, class System.Text.Encoding inputEncoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.UrlEncode(System.String,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="inputEncoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu codierende Zeichenfolge.</param>
+        <param name="inputEncoding">Der Eingabecodiertyp.</param>
+        <summary>Codiert die angegebene Zeichenfolge für die Verwendung in einem URL unter Verwendung des angegebenen Zeichencodierungstyps.</summary>
+        <returns>Die codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `%SINGLE_BYTE_HEX` Notation.  
+  
+ Die folgende Tabelle enthält die sicheren Standardzeichen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum, Punkt, vollständige Beendigung|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert%28%27XSS%20Attack%21%27%29%3b`|  
+|`<script>alert('XSS Attack!');</script>`|`%3cscript%3ealert%28%27XSS%20Attack%21%27%29%3b%3c%2fscript%3e`|  
+|`alert('XSSあAttack!');`|`alert%28%27XSS%e3%81%82Attack%21%27%29%3b`|  
+|`user@contoso.com`|`user%40contoso.com`|  
+|`"Anti-Cross Site Scripting Namespace"`|`%22Anti-Cross%20Site%20Scripting%20Namespace%22`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncode">
+      <MemberSignature Language="C#" Value="protected override byte[] UrlEncode (byte[] bytes, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance unsigned int8[] UrlEncode(unsigned int8[] bytes, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.UrlEncode(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Das zu codierende Bytearray.</param>
+        <param name="offset">Der Index des ersten zu codierenden Bytes.</param>
+        <param name="count">Die Anzahl von zu codierenden Bytes.</param>
+        <summary>Codiert das angegebene Bytearray zur Verwendung in einer URL, beginnend beim angegebenen Offset im Bytearray und codiert die angegebene Anzahl von Bytes.</summary>
+        <returns>Das codierte Bytearray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `%SINGLE_BYTE_HEX` Notation.  
+  
+ Die folgende Tabelle enthält die sicheren Standardzeichen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum, Punkt, vollständige Beendigung|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert%28%27XSS%20Attack%21%27%29%3b`|  
+|`<script>alert('XSS Attack!');</script>`|`%3cscript%3ealert%28%27XSS%20Attack%21%27%29%3b%3c%2fscript%3e`|  
+|`alert('XSSあAttack!');`|`alert%28%27XSS%e3%81%82Attack%21%27%29%3b`|  
+|`user@contoso.com`|`user%40contoso.com`|  
+|`"Anti-Cross Site Scripting Namespace"`|`%22Anti-Cross%20Site%20Scripting%20Namespace%22`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlPathEncode">
+      <MemberSignature Language="C#" Value="protected override string UrlPathEncode (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance string UrlPathEncode(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.UrlPathEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu codierende Zeichenfolge.</param>
+        <summary>Codiert Pfadzeichenfolgen für die Verwendung in einer URL.</summary>
+        <returns>Die URL, die den codierten Pfad enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `%SINGLE_BYTE_HEX` Notation.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|#|Nummernzeichen hash|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|%|Prozentzeichen (%)|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|( )|Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum, Punkt, vollständige Beendigung|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|/|Schrägstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|\|Umgekehrter Schrägstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|{ }|Geschweifte Klammern, geschweifte Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|&#124;|Vertikale Linie|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`http://www.contoso.com:8080/<en-us>/[page].htm?v={value1}#x=[amount]`|`http://www.contoso.com:8080/%3cen-us%3e/%5bpage%5d.htm?v={value1}#x=[amount]`|  
+|`alert('XSS Attack!');`|`alert(%27XSS%20Attack%21%27)%3b`|  
+|`<script>alert('XSS Attack!');</script>`|`%3cscript%3ealert(%27XSS%20Attack%21%27)%3b%3c/script%3e`|  
+|`alert('XSSあAttack!');`|`alert(%27XSS%e3%81%82Attack%21%27)%3b`|  
+|`user@contoso.com`|`user%40contoso.com`|  
+|`"Anti-Cross Site Scripting Namespace"`|`%22Anti-Cross%20Site%20Scripting%20Namespace%22`|  
+  
+ Diese Methode nur den Pfad einer URL codiert wird. Diese Methode wird das Schema nicht codieren (z. B. `http:`, `ftp:`, oder `file:`), die Autorität (z. B. `www.northwind.com` oder `www.contoso.com:8080`), oder die Abfrage- oder Fragmentteil (z. B. `?v=s978dfs9#x=103`). Wenn kein Schema oder die Autorität für die in der Zeichenfolge vorhanden ist, wird davon ausgegangen, dass die Zeichenfolge ein relativer Pfad sein, und der Pfad wird codiert. In der folgenden URL, die nur die Teilzeichenfolge `/default.htm` codiert ist:  
+  
+ `http://www.contoso.com:8080/default.htm?v=s978dfs9#x=103`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlAttributeEncode">
+      <MemberSignature Language="C#" Value="public static string XmlAttributeEncode (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string XmlAttributeEncode(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.XmlAttributeEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu codierende Zeichenfolge.</param>
+        <summary>Codiert die angegebene Zeichenfolge für die Verwendung in XML-Attributen.</summary>
+        <returns>Die codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `&#DECIMAL;` Notation.  
+  
+> [!NOTE]
+>  Setzen von doppelten Anführungszeichen ("") oder einzelne Anführungszeichen ("") für die resultierende Zeichenfolge, bevor Sie ihn auf einer Seite hinzufügen.  
+  
+ Die folgende Tabelle enthält die sicheren Standardzeichen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Lateinische Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Lateinische Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|!|Ausrufezeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|#|Nummernzeichen hash|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|$|Dollarzeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|%|Prozentzeichen (%)|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|( )|Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|*|Sternchen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|+|Pluszeichen (+)|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|,|Komma|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum, Punkt, vollständige Beendigung|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|/|Schrägstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|:|Doppelpunkt|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|;|Semikolon|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|=|Gleichheitszeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|?|Fragezeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|@|Kommerzieller at-Zeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|[ ]|eckige Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|\|Umgekehrter Schrägstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|^|Einfügemarke|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|`|Gravis-Akzent|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|{ }|Geschweifte Klammern, geschweifte Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|&#124;|Vertikale Linie|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+|[C1 Steuerelemente und Latein-1, Ergänzung](http://www.unicode.org/charts/PDF/U0080.pdf)|von 0x00A1 - 0x00AC|Sonderzeichen zwischen von 0x00A1 (161 dezimal) und 0x00AC (172 dezimal).|  
+|[C1 Steuerelemente und Latein-1, Ergänzung](http://www.unicode.org/charts/PDF/U0080.pdf)|0x00AE - 0x00FF|Sonderzeichen zwischen 0x00AE (174 dezimal) und 0x00FF (255 dezimal).|  
+|[Erweitertes Lateinisch-A](http://www.unicode.org/charts/PDF/U0100.pdf)|0 x 0100 - 0x017F|Lateinisch Sonderzeichen zwischen 0 x 0100 (256 dezimal) und 0x017F (383 dezimal).|  
+|[Erweiterte Lateinisch-B](http://www.unicode.org/charts/PDF/U0180.pdf)|von 0 x 0180 - 0x024F|Lateinisch Sonderzeichen zwischen von 0 x 0180 (decimal 384) und 0x024F (591 dezimal).|  
+|[IPA-Erweiterung](http://www.unicode.org/charts/PDF/U0250.pdf)|0x0250 - 0x02AF|IPA-Erweiterung Zeichen zwischen 0x0250 (592 dezimal) und 0x02AF (687 dezimal).|  
+|[Abstand Modifizierer Buchstaben](http://www.unicode.org/charts/PDF/U02B0.pdf)|0x02B0 - 0x02FF|Modifizierer Buchstaben Zeichen mit Zwischenraum zwischen 0x02B0 (688 dezimal) und 0x02FF (767 dezimal).|  
+Kombinieren von diakritischen Zeichen] (http://www.unicode.org/charts/PDF/U0300.pdf)|0 x 0300 - 0x036F|Kombinieren von diakritisches Zeichen zwischen 0 x 0300 (768 dezimal) und 0x036F (879 dezimal).|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert(&apos;XSS&#32;Attack!&apos;);`|  
+|`<script>alert('XSS Attack!');</script>`|`&lt;script&gt;alert(&apos;XSS&#32;Attack!&apos;);&lt;/script&gt;`|  
+|`alert('XSSあAttack!');`|`alert(&apos;XSS&#12354;Attack!&apos;);`|  
+|`user@contoso.com`|`user@contoso.com`|  
+|`"Anti-Cross Site Scripting Namespace"`|`&quot;Anti-Cross&#32;Site&#32;Scripting&#32;Namespace&quot;`|  
+  
+ Rufen Sie zum Anpassen der Liste der sicheren die <xref:System.Web.Security.AntiXss.AntiXssEncoder.MarkAsSafe%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:Microsoft.Security.Application.InvalidUnicodeValueException">
+          <paramref name="input" />enthält ein Zeichen, die einen ungültigen Unicode-Wert aufweist.</exception>
+        <exception cref="T:Microsoft.Security.Application.InvalidSurrogatePairException">
+          <paramref name="input" />enthalten einen hoher Ersatzzeichencodepunkt, der durch ein niedriger Ersatzzeichencodepunkt nicht eingehalten wurde.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthalten einen niedriger Ersatzzeichencodepunkt, der kein hoher Ersatzzeichencodepunkt vorangestellt wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncode">
+      <MemberSignature Language="C#" Value="public static string XmlEncode (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string XmlEncode(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AntiXss.AntiXssEncoder.XmlEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu codierende Zeichenfolge.</param>
+        <summary>Codiert die angegebene Zeichenfolge für die Verwendung in XML-Attributen.</summary>
+        <returns>Die codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert alle Zeichen mit Ausnahme derjenigen, die in der Liste sicherer sind. Zeichen codiert werden, indem `&#DECIMAL;` Notation.  
+  
+> [!NOTE]
+>  Setzen von doppelten Anführungszeichen ("") oder einzelne Anführungszeichen ("") für die resultierende Zeichenfolge, bevor Sie ihn auf einer Seite hinzufügen.  
+  
+ Die folgende Tabelle enthält die sicheren Standardzeichen.  
+  
+|Diagramm der Unicode-code|Zeichen|Beschreibung|  
+|------------------------|--------------------|-----------------|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|A-Z|Lateinische Großbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|a-z|Lateinische Kleinbuchstaben|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|0-9|Zahlen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|(Leerzeichen)|Leerzeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|!|Ausrufezeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|#|Nummernzeichen hash|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|$|Dollarzeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|%|Prozentzeichen (%)|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|( )|Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|*|Sternchen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|+|Pluszeichen (+)|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|,|Komma|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|-|Bindestrich minus|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|.|Zeitraum|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|/|Schrägstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|:|Doppelpunkt|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|;|Semikolon|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|=|Gleichheitszeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|?|Fragezeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|@|At-Zeichen|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|[ ]|eckige Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|\|Umgekehrter Schrägstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|^|Einfügemarke|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|_|Unterstrich|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|`|Gravis-Akzent|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|{ }|Geschweifte Klammern, geschweifte Klammern|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|&#124;|Vertikale Linie|  
+|[C0 Steuerelemente und die grundlegenden lateinischen](http://www.unicode.org/charts/PDF/U0000.pdf)|~|Tilde|  
+|[C1 Steuerelemente und Latein-1, Ergänzung](http://www.unicode.org/charts/PDF/U0080.pdf)|von 0x00A1 - 0x00AC|Sonderzeichen zwischen von 0x00A1 (161 dezimal) und 0x00AC (172 dezimal). Zeichen in diesem Bereich werden codiert, wenn `useNamedEntities` ist `true`.|  
+|[C1 Steuerelemente und Latein-1, Ergänzung](http://www.unicode.org/charts/PDF/U0080.pdf)|0x00AE - 0x00FF|Sonderzeichen zwischen 0x00AE (174 dezimal) und 0x00FF (255 dezimal). Zeichen in diesem Bereich werden codiert, wenn `useNamedEntities` ist `true`.|  
+|[Erweitertes Lateinisch-A](http://www.unicode.org/charts/PDF/U0100.pdf)|0 x 0100 - 0x017F|Lateinisch Sonderzeichen zwischen 0 x 0100 (256 dezimal) und 0x017F (383 dezimal).|  
+|[Erweiterte Lateinisch-B](http://www.unicode.org/charts/PDF/U0180.pdf)|von 0 x 0180 - 0x024F|Lateinisch Sonderzeichen zwischen von 0 x 0180 (decimal 384) und 0x024F (591 dezimal).|  
+|[IPA-Erweiterung](http://www.unicode.org/charts/PDF/U0250.pdf)|0x0250 - 0x02AF|IPA-Erweiterung Zeichen zwischen 0x0250 (592 dezimal) und 0x02AF (687 dezimal).|  
+|[Abstand Modifizierer Buchstaben](http://www.unicode.org/charts/PDF/U02B0.pdf)|0x02B0 - 0x02FF|Modifizierer Buchstaben Zeichen mit Zwischenraum zwischen 0x02B0 (688 dezimal) und 0x02FF (767 dezimal).|  
+Kombinieren von diakritischen Zeichen] (http://www.unicode.org/charts/PDF/U0300.pdf)|0 x 0300 - 0x036F|Kombinieren von diakritisches Zeichen zwischen 0 x 0300 (768 dezimal) und 0x036F (879 dezimal).|  
+  
+ Die folgende Tabelle enthält Beispiele für Eingaben und den entsprechenden codierten Ausgaben.  
+  
+|||  
+|-|-|  
+|`alert('XSS Attack!');`|`alert(&#39;XSS&#32;Attack!&#39;);`|  
+|`<script>alert('XSS Attack!');</script>`|`&lt;script&gt;alert(&apos;XSS Attack!&apos;);&lt;/script&gt;`|  
+|`alert('XSSあAttack!');`|`alert(&apos;XSS&#12354;Attack!&apos;);`|  
+|`user@contoso.com`|`user@contoso.com`|  
+|`"Anti-Cross Site Scripting Namespace"`|`&quot;Anti-Cross&#32;Site&#32;Scripting&#32;Namespace&quot;`|  
+  
+ Rufen Sie zum Anpassen der Liste der sicheren die <xref:System.Web.Security.AntiXss.AntiXssEncoder.MarkAsSafe%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:Microsoft.Security.Application.InvalidUnicodeValueException">
+          <paramref name="input" />enthält ein Zeichen, die einen ungültigen Unicode-Wert aufweist.</exception>
+        <exception cref="T:Microsoft.Security.Application.InvalidSurrogatePairException">
+          <paramref name="input" />enthalten einen hoher Ersatzzeichencodepunkt, der durch ein niedriger Ersatzzeichencodepunkt nicht eingehalten wurde.  
+  
+ - oder -   
+  
+ <paramref name="input" />enthalten einen niedriger Ersatzzeichencodepunkt, der kein hoher Ersatzzeichencodepunkt vorangestellt wurde.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

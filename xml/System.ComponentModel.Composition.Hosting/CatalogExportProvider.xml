@@ -1,0 +1,241 @@
+<Type Name="CatalogExportProvider" FullName="System.ComponentModel.Composition.Hosting.CatalogExportProvider">
+  <TypeSignature Language="C#" Value="public class CatalogExportProvider : System.ComponentModel.Composition.Hosting.ExportProvider, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CatalogExportProvider extends System.ComponentModel.Composition.Hosting.ExportProvider implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Composition.Hosting.ExportProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ruft Exporte aus einem Katalog.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CatalogExportProvider (System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CatalogExportProvider.#ctor(System.ComponentModel.Composition.Primitives.ComposablePartCatalog)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="catalog" Type="System.ComponentModel.Composition.Primitives.ComposablePartCatalog" />
+      </Parameters>
+      <Docs>
+        <param name="catalog">Der Katalog, die die <see cref="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" /> verwendet, um erzeugen <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> Objekte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" /> Klasse mit dem angegebenen Katalog.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="catalog" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CatalogExportProvider (System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog, bool isThreadSafe);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog, bool isThreadSafe) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CatalogExportProvider.#ctor(System.ComponentModel.Composition.Primitives.ComposablePartCatalog,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="catalog" Type="System.ComponentModel.Composition.Primitives.ComposablePartCatalog" />
+        <Parameter Name="isThreadSafe" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="catalog">Der Katalog, die die <see cref="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" /> verwendet, um erzeugen <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> Objekte.</param>
+        <param name="isThreadSafe">
+          <see langword="true" />Wenn dieses Objekt threadsicher sein muss; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" /> Klasse mit dem angegebenen Katalog und optional threadsichere-Modus.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="catalog" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CatalogExportProvider (System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog, System.ComponentModel.Composition.Hosting.CompositionOptions compositionOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog, valuetype System.ComponentModel.Composition.Hosting.CompositionOptions compositionOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CatalogExportProvider.#ctor(System.ComponentModel.Composition.Primitives.ComposablePartCatalog,System.ComponentModel.Composition.Hosting.CompositionOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="catalog" Type="System.ComponentModel.Composition.Primitives.ComposablePartCatalog" />
+        <Parameter Name="compositionOptions" Type="System.ComponentModel.Composition.Hosting.CompositionOptions" />
+      </Parameters>
+      <Docs>
+        <param name="catalog">Der Katalog, die die <see cref="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" /> verwendet, um erzeugen <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> Objekte.</param>
+        <param name="compositionOptions">Optionen, die das Verhalten dieses Anbieters bestimmt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" /> Klasse mit den angegebenen Katalog und die Zusammensetzung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="catalog" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Catalog">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Primitives.ComposablePartCatalog Catalog { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Composition.Primitives.ComposablePartCatalog Catalog" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.CatalogExportProvider.Catalog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ComposablePartCatalog</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Katalog ab, das Exporte bereitstellen.</summary>
+        <value>Der Katalog, die die <see cref="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" /> verwendet, um erzeugen <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> Objekte.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Der <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CatalogExportProvider.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie `Dispose` auf, wenn Sie <xref:System.ComponentModel.Composition.Hosting.CatalogExportProvider> nicht mehr benötigen. Die `Dispose`-Methode bewirkt, dass <xref:System.ComponentModel.Composition.Hosting.CatalogExportProvider> nicht mehr verwendet werden kann. Nach dem Aufruf `Dispose`, müssen Sie alle Verweise auf Freigeben der <xref:System.ComponentModel.Composition.Hosting.CatalogExportProvider> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.ComponentModel.Composition.Hosting.CatalogExportProvider> belegt wurde.  
+  
+ Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer `Dispose` auf, bevor Sie den letzten Verweis auf das <xref:System.ComponentModel.Composition.Hosting.CatalogExportProvider> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.ComponentModel.Composition.Hosting.CatalogExportProvider>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CatalogExportProvider.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportsCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt; GetExportsCore (System.ComponentModel.Composition.Primitives.ImportDefinition definition, System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.Export&gt; GetExportsCore(class System.ComponentModel.Composition.Primitives.ImportDefinition definition, class System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CatalogExportProvider.GetExportsCore(System.ComponentModel.Composition.Primitives.ImportDefinition,System.ComponentModel.Composition.Hosting.AtomicComposition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ImportDefinition" />
+        <Parameter Name="atomicComposition" Type="System.ComponentModel.Composition.Hosting.AtomicComposition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">Die Bedingungen für die <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> Objekte zurückgegeben werden.</param>
+        <param name="atomicComposition">Die Kompositionstransaktion zu verwendenden oder <see langword="null" /> transaktionale Zusammensetzung zu deaktivieren.</param>
+        <summary>Gibt alle Exporte, die mit die Bedingungen für den angegebenen Import übereinstimmen.</summary>
+        <returns>Eine Auflistung, die alle Exporte enthält, die mit die angegebene Bedingung übereinstimmen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementierer Kardinalität bezogene Konflikte sollten nicht als Fehler behandeln und sollte keine Ausnahmen für die Kardinalität bezogene Konflikte auslösen. Angenommen, wenn der Import genau einen Export anfordert und der Anbieter hat keine übereinstimmenden Exporte oder mehr als eine der <xref:System.ComponentModel.Composition.Hosting.CatalogExportProvider.GetExportsCore%2A> -Methode gibt ein leeres <xref:System.Collections.Generic.IEnumerable%601> Auflistung von <xref:System.ComponentModel.Composition.Primitives.Export> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceProvider">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Hosting.ExportProvider SourceProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Composition.Hosting.ExportProvider SourceProvider" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.CatalogExportProvider.SourceProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Hosting.ExportProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Exportanbieter, der Zugriff auf zusätzliche Exporte bietet.</summary>
+        <value>Der Exportanbieter, der bietet die <see cref="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" /> Zugriff auf zusätzliche <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> Objekte. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss festgelegt werden, bevor Sie alle für den Zugriff auf Methoden der <xref:System.ComponentModel.Composition.Hosting.CatalogExportProvider> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der <see cref="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" /> wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Diese Eigenschaft wurde bereits festgelegt.  
+  
+ - oder -   
+  
+ Die Methoden für die <see cref="T:System.ComponentModel.Composition.Hosting.CatalogExportProvider" /> Objekt bereits zugegriffen wurde.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

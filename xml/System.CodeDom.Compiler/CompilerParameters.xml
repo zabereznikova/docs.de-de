@@ -1,0 +1,722 @@
+<Type Name="CompilerParameters" FullName="System.CodeDom.Compiler.CompilerParameters">
+  <TypeSignature Language="C#" Value="public class CompilerParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CompilerParameters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.CompilerParameters" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt die Parameter zum Aufrufen eines Compilers verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.CodeDom.Compiler.CompilerParameters> Objekt stellt die Einstellungen und Optionen für eine <xref:System.CodeDom.Compiler.ICodeCompiler> Schnittstelle.  
+  
+ Wenn Sie ein ausführbares Programm kompilieren, müssen Sie festlegen der <xref:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable%2A> Eigenschaft `true`. Wenn die <xref:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable%2A> festgelegt ist, um `false`, generiert der Compiler eine Klassenbibliothek. Wird standardmäßig ein neues <xref:System.CodeDom.Compiler.CompilerParameters> wird initialisiert, indem seine <xref:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable%2A> -Eigenschaftensatz auf `false`. Wenn Sie eine ausführbare Datei aus einem CodeDOM-Diagramm kompilieren, muss eine <xref:System.CodeDom.CodeEntryPointMethod> im Diagramm definiert werden. Wenn es mehrere Einstiegspunkte für Code sind, können Sie angeben, dass die Klasse, die den Einstiegspunkt für durch Festlegen der Name der Klasse, die definiert die <xref:System.CodeDom.Compiler.CompilerParameters.MainClass%2A> Eigenschaft.  
+  
+ Sie können angeben, einen Dateinamen für die Ausgabeassembly in der <xref:System.CodeDom.Compiler.CompilerParameters.OutputAssembly%2A> Eigenschaft. Andererseits wird ein Standardname für die Ausgabedatei verwendet. Legen Sie für die Einbeziehung der Debuginformationen in eine generierte Assembly die <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A> Eigenschaft `true`. Wenn Ihr Projekt Verweise auf Assemblys enthält, müssen Sie die Assemblynamen angeben, wie Elemente in einer <xref:System.Collections.Specialized.StringCollection> legen Sie auf der <xref:System.CodeDom.Compiler.CompilerParameters.ReferencedAssemblies%2A> Eigenschaft von der <xref:System.CodeDom.Compiler.CompilerParameters> beim Aufruf der Kompilierung verwendet.  
+  
+ Können Sie eine Assembly, die Arbeitsspeicher statt auf Datenträger geschrieben wird, durch Festlegen von Kompilieren der <xref:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory%2A> Eigenschaft `true`. Wenn eine Assembly im Speicher generiert wird, kann Ihr Code einen Verweis aus einer <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A>-Eigenschaft einer <xref:System.CodeDom.Compiler.CompilerResults> für die generierte Assembly abrufen. Wenn eine Assembly in geschrieben werden Datenträger, erhalten Sie den Pfad zur generierten Assembly aus der <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A> Eigenschaft eine <xref:System.CodeDom.Compiler.CompilerResults>.  
+  
+ Wenn Sie eine Warnstufe angeben möchten, an der Sie die Kompilierung anhalten möchten, legen Sie die <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A>-Eigenschaft auf einen Integer fest, der die Warnstufe darstellt, an der die Kompilierung angehalten werden soll. Sie können auch konfigurieren, den Compiler um Kompilierung anzuhalten, wenn Warnungen durch Festlegen auftreten der <xref:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors%2A> Eigenschaft `true`.  
+  
+ Um einen benutzerdefinierte Argumentzeichenfolge auf Befehlszeilenebene anzugeben, die Sie beim Aufruf des Kompilierungsprozesses verwenden, legen Sie die Zeichenfolge in der <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A>-Eigenschaft fest. Wenn ein Win32-Sicherheitstoken erforderlich ist, um den Compilerprozess auszurufen, geben Sie das Token in der <xref:System.CodeDom.Compiler.CompilerParameters.UserToken%2A>-Eigenschaft an. Um .NET Framework-Ressourcendateien in die kompilierte Assembly einzuschließen, fügen Sie die Namen der Ressourcendateien, die <xref:System.CodeDom.Compiler.CompilerParameters.EmbeddedResources%2A> Eigenschaft. Um .NET Framework-Ressourcen in einer anderen Assembly zu verweisen, fügen Sie die Namen der Ressourcendateien, die <xref:System.CodeDom.Compiler.CompilerParameters.LinkedResources%2A> Eigenschaft. Um eine Win32-Ressourcendatei in die kompilierte Assembly einzuschließen, geben Sie den Namen der Win32-Ressourcendatei in die <xref:System.CodeDom.Compiler.CompilerParameters.Win32Resource%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Diese Klasse enthält einen Linkaufruf und einer vererbungsanforderung auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder die abgeleitete Klasse volle Vertrauenswürdigkeit verfügt. Weitere Informationen zu sicherheitsforderungen, finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) und [Vererbungsanforderungen](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein CodeDOM-Quelldiagramm für ein einfaches Hello World-Programm.  Die Quelle wird in eine Datei, in eine ausführbare Datei kompiliert, und führen dann gespeichert werden. Die `CompileCode` Methode zeigt, wie die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse, um verschiedene Optionen und compilereinstellungen anzugeben.  
+  
+ [!code-cpp[CompilerParametersExample#1](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#1)]
+ [!code-csharp[CompilerParametersExample#1](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#1)]
+ [!code-vb[CompilerParametersExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilerParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerParameters.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.Compiler.CompilerParameters" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung <xref:System.CodeDom.Compiler.CompilerParameters> verschiedene compilereinstellungen und Optionen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse.  
+  
+ [!code-cpp[CompilerParametersExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#2)]
+ [!code-csharp[CompilerParametersExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#2)]
+ [!code-vb[CompilerParametersExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilerParameters (string[] assemblyNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] assemblyNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerParameters.#ctor(System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assemblyNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyNames">Die Namen der Assemblys verweisen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> -Klasse unter Verwendung der angegebenen Assemblynamen.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilerParameters (string[] assemblyNames, string outputName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] assemblyNames, string outputName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerParameters.#ctor(System.String[],System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assemblyNames" Type="System.String[]" />
+        <Parameter Name="outputName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyNames">Die Namen der Assemblys verweisen.</param>
+        <param name="outputName">Der Name der Ausgabedatei.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> -Klasse mit dem angegebenen Assemblynamen und den Ausgabedateinamen an.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilerParameters (string[] assemblyNames, string outputName, bool includeDebugInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] assemblyNames, string outputName, bool includeDebugInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerParameters.#ctor(System.String[],System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assemblyNames" Type="System.String[]" />
+        <Parameter Name="outputName" Type="System.String" />
+        <Parameter Name="includeDebugInformation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyNames">Die Namen der Assemblys verweisen.</param>
+        <param name="outputName">Der Name der Ausgabedatei.</param>
+        <param name="includeDebugInformation">
+          <see langword="true" />Debuginformationen einschließen; <see langword="false" /> Debuginformationen ausschließen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> -Klasse unter Verwendung der angegebenen Assemblynamen, Ausgabename und einen Wert, der angibt, ob Debuginformationen einschließen.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CompilerOptions">
+      <MemberSignature Language="C#" Value="public string CompilerOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CompilerOptions" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.CompilerOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest optionale Befehlszeilenargumente beim Aufrufen des Compilers verwendet.</summary>
+        <value>Alle zusätzlichen Befehlszeilenargumente für den Compiler.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.CodeDom.Compiler.ICodeCompiler> enthält in der Regel diese Zeichenfolge in der Befehlszeile aus, wenn Sie einen Befehlszeilencompiler aufrufen. Standardmäßig enthält diese Eigenschaft eine leere Zeichenfolge.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung <xref:System.CodeDom.Compiler.CompilerParameters> verschiedene compilereinstellungen und Optionen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse.  
+  
+ [!code-cpp[CompilerParametersExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#2)]
+ [!code-csharp[CompilerParametersExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#2)]
+ [!code-vb[CompilerParametersExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CoreAssemblyFileName">
+      <MemberSignature Language="C#" Value="public string CoreAssemblyFileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CoreAssemblyFileName" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.CoreAssemblyFileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Core oder standard-Assembly, die grundlegende Typen, z. B. enthält <see cref="T:System.Object" />, <see cref="T:System.String" />, oder <see cref="T:System.Int32" />.</summary>
+        <value>Der Name der Core-Assembly, die grundlegenden Typen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert dieser Eigenschaft eine leere Zeichenfolge ist oder `null`, verwendet der Compiler die Standard-Core-Assembly. Abhängig von der Compilerversion möglicherweise die Standardassembly Core mscorlib.dll oder System.Runtime.dll in einer Frameworkverzeichnis oder verweisverzeichnisses-Assembly. Wenn der Wert dieser Eigenschaft nicht leer ist, wird das Code Document Object Model (CodeDOM) explizit verweist auf die angegebene Assembly und Compileroptionen, die dazu führen, dass den Compiler nicht auf alle Assemblys während der Kompilierung implizit verweisen ausgibt... Für Compiler, mit die die Core oder standard-Assembly, nur implizit von Verweisen default, kann diese Eigenschaft selbst verwendet werden. Für Compiler, die implizit Assemblys außerdem die Core oder standard-Assembly verweisen, verwenden diese Option möglicherweise zusätzliche Einträge in angeben der <xref:System.CodeDom.Compiler.CompilerParameters.ReferencedAssemblies%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+> [!NOTE]
+>  Ein <xref:System.CodeDom.Compiler.ICodeCompiler> oder <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung können diese Eigenschaft ignoriert werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmbeddedResources">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection EmbeddedResources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection EmbeddedResources" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.EmbeddedResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die .NET Framework-Ressourcendateien einschließen, wenn die Assemblyausgabe zu kompilieren.</summary>
+        <value>Eine Auflistung, die die Dateipfade der .NET Framework-Ressourcen zum Einschließen in die generierte Assembly enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eingebettete Ressourcen werden in die generierte Assembly-Ausgabedatei erstellt. Einfügen von Dateien über diese Eigenschaft entspricht der `/resource` Befehlszeilenargument, das von vielen der .NET Framework-Compiler unterstützt.  
+  
+ Nicht alle Compiler unterstützen .NET Framework-Ressourcendateien, damit Sie diese Unterstützung durch den Aufruf getestet werden soll die <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> Methode mit dem Flag <xref:System.CodeDom.Compiler.GeneratorSupport.Resources>.  
+  
+ Fügen Sie eine oder mehrere .NET Framework-Ressource-Dateipfade auf das zurückgegebene <xref:System.Collections.Specialized.StringCollection> die Ressourcen in die kompilierte Assembly eingebettet werden sollen. Hinzufügen von ein Duplikat oder eine ungültige Datei Pfad Ergebnisse in Kompilierungsfehler; Stellen Sie sicher, dass jede Zeichenfolge einen eindeutigen Pfad zu einer gültigen .NET Framework-Ressourcendatei angibt.  
+  
+ Verwenden Sie <xref:System.CodeDom.Compiler.CompilerParameters.EmbeddedResources%2A> an Standardeinstellung oder .NET Framework-Ressourcen der neutralen Kultur für eine Assembly; enthalten verwenden die <xref:System.CodeDom.Compiler.CompilerParameters.LinkedResources%2A> Eigenschaft, um .NET Framework-Ressourcen in Satellitenassemblys verweisen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung <xref:System.CodeDom.Compiler.CompilerParameters> verschiedene compilereinstellungen und Optionen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse.  
+  
+ [!code-cpp[CompilerParametersExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#2)]
+ [!code-csharp[CompilerParametersExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#2)]
+ [!code-vb[CompilerParametersExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evidence">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.Evidence Evidence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.Evidence Evidence" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.Evidence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("CAS policy is obsolete and will be removed in a future release of the .NET Framework. Please see http://go2.microsoft.com/fwlink/?LinkId=131738 for more information.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.Evidence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Beweisobjekt, das die Sicherheitsberechtigungen für die Richtlinie für die kompilierte Assembly erteilen darstellt.</summary>
+        <value>Ein Objekt, das die Sicherheitsberechtigungen für die Richtlinie für die kompilierte Assembly erteilen darstellt.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Steuerung des Beweises. Berechtigungswert: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateExecutable">
+      <MemberSignature Language="C#" Value="public bool GenerateExecutable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GenerateExecutable" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine ausführbare Datei zu generieren.</summary>
+        <value>
+          <see langword="true" />Wenn eine ausführbare Datei generiert werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert dieser Eigenschaft ist `false`, eine DLL generiert werden. Standardmäßig ist der Wert dieser Eigenschaft `false`.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung <xref:System.CodeDom.Compiler.CompilerParameters> verschiedene compilereinstellungen und Optionen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse.  
+  
+ [!code-cpp[CompilerParametersExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#2)]
+ [!code-csharp[CompilerParametersExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#2)]
+ [!code-vb[CompilerParametersExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateInMemory">
+      <MemberSignature Language="C#" Value="public bool GenerateInMemory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GenerateInMemory" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Ausgabe im Arbeitsspeicher zu generieren.</summary>
+        <value>
+          <see langword="true" />Wenn der Compiler die Ausgabe im Speicher generiert werden sollen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung <xref:System.CodeDom.Compiler.CompilerParameters> verschiedene compilereinstellungen und Optionen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse.  
+  
+ [!code-cpp[CompilerParametersExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#2)]
+ [!code-csharp[CompilerParametersExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#2)]
+ [!code-vb[CompilerParametersExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeDebugInformation">
+      <MemberSignature Language="C#" Value="public bool IncludeDebugInformation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeDebugInformation" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Debuginformationen in die kompilierte ausführbare Datei enthalten.</summary>
+        <value>
+          <see langword="true" />Wenn Debuginformationen generiert werden sollte. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkedResources">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection LinkedResources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection LinkedResources" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.LinkedResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die .NET Framework-Ressourcendateien, auf die verwiesen wird, werden in der aktuellen Quelle ab.</summary>
+        <value>Eine Auflistung, die die Dateipfade der .NET Framework-Ressourcen enthält, die von der Quelle verwiesen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verknüpfte Ressourcendateien ermöglichen die Assembly für die .NET Framework-Ressourcen zu verweisen, ohne die tatsächlichen Ressourcen in der Assembly einbetten. Verweisen auf Dateien über diese Eigenschaft ist vergleichbar mit der `/linkresource` Befehlszeilenargument, das von vielen der .NET Framework-Compiler unterstützt.  
+  
+ Nicht alle Compiler unterstützen .NET Framework-Ressourcendateien, damit Sie diese Unterstützung durch den Aufruf getestet werden soll die <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> Methode mit dem Flag <xref:System.CodeDom.Compiler.GeneratorSupport.Resources>.  
+  
+ Fügen Sie eine oder mehrere .NET Framework-Ressource-Dateipfade auf das zurückgegebene <xref:System.Collections.Specialized.StringCollection> Links für die Ressourcen in der kompilierten Assembly zu erstellen. Hinzufügen von ein Duplikat oder eine ungültige Datei Pfad Ergebnisse in Kompilierungsfehler; Stellen Sie sicher, dass jede Zeichenfolge einen eindeutigen Pfad zu einer gültigen .NET Framework-Ressourcendatei angibt.  
+  
+ Verwenden Sie <xref:System.CodeDom.Compiler.CompilerParameters.LinkedResources%2A> auf .NET Framework-Ressourcen in Satellitenassemblys, verweisen, die für eine bestimmte Kultur lokalisiert; verwenden Sie die <xref:System.CodeDom.Compiler.CompilerParameters.EmbeddedResources%2A> Eigenschaft, um die Ressourcen in die kompilierte Assembly einzubetten.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung <xref:System.CodeDom.Compiler.CompilerParameters> verschiedene compilereinstellungen und Optionen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse.  
+  
+ [!code-cpp[CompilerParametersExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#2)]
+ [!code-csharp[CompilerParametersExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#2)]
+ [!code-vb[CompilerParametersExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MainClass">
+      <MemberSignature Language="C#" Value="public string MainClass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MainClass" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.MainClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Haupt-Klasse.</summary>
+        <value>Der Name der Haupt-Klasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Hauptklasse enthält den Einstiegspunkt für das Programm an.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung <xref:System.CodeDom.Compiler.CompilerParameters> verschiedene compilereinstellungen und Optionen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse.  
+  
+ [!code-cpp[CompilerParametersExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#2)]
+ [!code-csharp[CompilerParametersExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#2)]
+ [!code-vb[CompilerParametersExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputAssembly">
+      <MemberSignature Language="C#" Value="public string OutputAssembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OutputAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.OutputAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Ausgabeassembly fest.</summary>
+        <value>Der Name der Ausgabeassembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung <xref:System.CodeDom.Compiler.CompilerParameters> verschiedene compilereinstellungen und Optionen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse.  
+  
+ [!code-cpp[CompilerParametersExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#2)]
+ [!code-csharp[CompilerParametersExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#2)]
+ [!code-vb[CompilerParametersExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferencedAssemblies">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection ReferencedAssemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection ReferencedAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.ReferencedAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Assemblys, die auf das aktuelle Projekt verweist.</summary>
+        <value>Eine Auflistung, die die Assemblynamen enthält, die von der Quelle für die Kompilierung verwiesen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung von Zeichenfolgen sollte bestehen oder einzuschließen, Assemblys, auf das aktuelle Projekt verweist. Hinzufügen von Dateinamen für die Assembly auf das zurückgegebene <xref:System.Collections.Specialized.StringCollection> importieren das Assemblymanifest und die Assembly-Typinformationen im aktuellen Projekt zu verweisen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung <xref:System.CodeDom.Compiler.CompilerParameters> verschiedene compilereinstellungen und Optionen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse.  
+  
+ [!code-cpp[CompilerParametersExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#2)]
+ [!code-csharp[CompilerParametersExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#2)]
+ [!code-vb[CompilerParametersExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TempFiles">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.TempFileCollection TempFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.Compiler.TempFileCollection TempFiles" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.TempFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.TempFileCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung, die die temporären Dateien enthält.</summary>
+        <value>Eine Auflistung, die die temporären Dateien enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die temporären Dateien in der Auflistung werden beibehalten oder gelöscht werden, nach dem Abschluss der Compiler-Aktivität, die anhand des Werts von der <xref:System.CodeDom.Compiler.TempFileCollection.KeepFiles%2A> Eigenschaft in der Auflistung. Die <xref:System.CodeDom.Compiler.TempFileCollection.KeepFiles%2A> Eigenschaft wird festgelegt, wenn die Auflistung erstellt wird, mithilfe der <xref:System.CodeDom.Compiler.TempFileCollection.%23ctor%28System.String%2CSystem.Boolean%29> Konstruktor mit der `keepFiles` Parameter festgelegt wird, um `true`.  
+  
+> [!NOTE]
+>  Diese Klasse enthält einen Linkaufruf und einer vererbungsanforderung auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder die abgeleitete Klasse volle Vertrauenswürdigkeit verfügt. Weitere Informationen zu sicherheitsforderungen, finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) und [Vererbungsanforderungen](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung <xref:System.CodeDom.Compiler.CompilerParameters> verschiedene compilereinstellungen und Optionen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse.  
+  
+ [!code-cpp[CompilerParametersExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#2)]
+ [!code-csharp[CompilerParametersExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#2)]
+ [!code-vb[CompilerParametersExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TreatWarningsAsErrors">
+      <MemberSignature Language="C#" Value="public bool TreatWarningsAsErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TreatWarningsAsErrors" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Warnungen als Fehler behandelt werden sollen.</summary>
+        <value>
+          <see langword="true" />Wenn Warnungen als Fehler behandelt werden sollen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung <xref:System.CodeDom.Compiler.CompilerParameters> verschiedene compilereinstellungen und Optionen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse.  
+  
+ [!code-cpp[CompilerParametersExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#2)]
+ [!code-csharp[CompilerParametersExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#2)]
+ [!code-vb[CompilerParametersExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserToken">
+      <MemberSignature Language="C#" Value="public IntPtr UserToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int UserToken" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.UserToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest-Benutzertoken zu verwenden, wenn den Compilerprozess zu erstellen.</summary>
+        <value>Das Benutzertoken zu verwenden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WarningLevel">
+      <MemberSignature Language="C#" Value="public int WarningLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WarningLevel" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.WarningLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Warnstufe, an der der Compiler die Kompilierung abbricht.</summary>
+        <value>Die Warnstufe, an der der Compiler die Kompilierung abbricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung <xref:System.CodeDom.Compiler.CompilerParameters> verschiedene compilereinstellungen und Optionen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerParameters> Klasse.  
+  
+ [!code-cpp[CompilerParametersExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerParametersExample/CPP/source.cpp#2)]
+ [!code-csharp[CompilerParametersExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerParametersExample/CS/source.cs#2)]
+ [!code-vb[CompilerParametersExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerParametersExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Win32Resource">
+      <MemberSignature Language="C#" Value="public string Win32Resource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Win32Resource" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerParameters.Win32Resource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Dateiname der Win32-Ressourcendatei in die kompilierte Assembly zu verknüpfen.</summary>
+        <value>Eine Win32-Ressourcendatei, die in der kompilierten Assembly verknüpft werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verknüpfen von Dateien über diese Eigenschaft entspricht der `/winres` und `/winresource` Befehlszeilenargumente, die von vielen der .NET Framework-Compiler unterstützt.  
+  
+ Verwendung <xref:System.CodeDom.Compiler.CompilerParameters.Win32Resource%2A> Win32-Ressourcendatei in die Assembly zu kompilieren. Verwendung <xref:System.CodeDom.Compiler.CompilerParameters.EmbeddedResources%2A> oder <xref:System.CodeDom.Compiler.CompilerParameters.LinkedResources%2A> mit .NET Framework-Ressourcendateien zu kompilieren.  
+  
+ Nicht alle Compiler unterstützen Win32-Ressourcendateien, sollten Sie testen, einen Codegenerator für diese Unterstützung vor dem Verknüpfen einer Ressourcendatei durch Aufrufen der <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> Methode mit dem Flag <xref:System.CodeDom.Compiler.GeneratorSupport.Win32Resources>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

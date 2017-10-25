@@ -1,0 +1,1491 @@
+<Type Name="WebHeaderCollection" FullName="System.Net.WebHeaderCollection">
+  <TypeSignature Language="C#" Value="public class WebHeaderCollection : System.Collections.Specialized.NameValueCollection, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WebHeaderCollection extends System.Collections.Specialized.NameValueCollection implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.WebHeaderCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.Collections.Specialized.NameValueCollection</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält die einer Anforderung oder einer Antwort zugewiesenen Protokollheader.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebHeaderCollection> Klasse erfolgt in der Regel über <xref:System.Net.WebRequest.Headers%2A?displayProperty=nameWithType> oder <xref:System.Net.WebResponse.Headers%2A?displayProperty=nameWithType>. Einige allgemeine Header gelten eingeschränkt, und es werden entweder direkt von der API verfügbar gemacht (z. B. `Content-Type`) oder durch das System geschützt und kann nicht geändert werden.  
+  
+ Die eingeschränkten Header sind:  
+  
+-   Akzeptieren  
+  
+-   Verbindung  
+  
+-   Content-Length  
+  
+-   Inhaltstyp  
+  
+-   Datum  
+  
+-   erwartet  
+  
+-   Host  
+  
+-   If-Modified-Since  
+  
+-   Bereich  
+  
+-   Referer  
+  
+-   Transfer-Encoding  
+  
+-   Benutzer-Agent  
+  
+-   Proxy-Verbindung  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebHeaderCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.WebHeaderCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebHeaderCollection (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den zum Serialisieren der <see cref="T:System.Net.WebHeaderCollection" /> erforderlichen Informationen.</param>
+        <param name="streamingContext">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" /> mit der Quelle des serialisierten Streams für die neue <see cref="T:System.Net.WebHeaderCollection" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.WebHeaderCollection" />-Klasse aus den angegebenen Instanzen der <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Klasse und der <see cref="T:System.Runtime.Serialization.StreamingContext" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor implementiert die <xref:System.Runtime.Serialization.ISerializable> eine Schnittstelle für die <xref:System.Net.WebHeaderCollection> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="headerName" />enthält ungültige Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="headerName" />ist ein null-Verweis oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="header">Der hinzuzufügende Header, wobei Name und Wert durch einen Doppelpunkt getrennt werden.</param>
+        <summary>Fügt den angegebenen Header in die Auflistung ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `header` Parameter muss im Format "Name: Wert" angegeben werden. Wenn der angegebene Header in der Auflistung nicht vorhanden ist, wird die Auflistung ein neuer Header hinzugefügt.  
+  
+ Wenn der Header in angegeben `header` existiert bereits in der Auflistung der Wertteil des der `header` mit dem vorhandenen Wert verkettet ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Name/Wert-Paar ein <xref:System.Net.WebHeaderCollection> mithilfe der <xref:System.Net.WebHeaderCollection.Add%2A> Methode.  
+  
+ [!code-cpp[WebHeaderCollection_Add#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebHeaderCollection_Add/CPP/webheadercollection_add.cpp#1)]
+ [!code-csharp[WebHeaderCollection_Add#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebHeaderCollection_Add/CS/webheadercollection_add.cs#1)]
+ [!code-vb[WebHeaderCollection_Add#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebHeaderCollection_Add/VB/webheadercollection_add.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="header" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="header" />enthält einen Doppelpunkt (:)) nicht.  
+  
+ Die Länge des <paramref name="value" /> ist größer als 65535 sein.  
+  
+ - oder -   
+  
+ Der Teil des Namens des <paramref name="header" /> ist <see cref="F:System.String.Empty" /> oder enthält ungültige Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="header" />ist ein eingeschränkter Header, der mit einer Eigenschaft festgelegt werden soll.  
+  
+ - oder -   
+  
+ Der Wertteil des <paramref name="header" /> enthält ungültige Zeichen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge die Zeichenfolge nach dem Doppelpunkt (:) ist größer als 65535 sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Net.HttpRequestHeader header, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(valuetype System.Net.HttpRequestHeader header, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Add(System.Net.HttpRequestHeader,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.Net.HttpRequestHeader" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="header">Der Header, der der Auflistung hinzugefügt werden soll.</param>
+        <param name="value">Der Inhalt des Headers.</param>
+        <summary>Fügt den angegebenen Header mit dem angegebenen Wert in die Auflistung ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der angegebene Header nicht vorhanden ist, die <xref:System.Net.WebHeaderCollection.Add%2A> Methode fügt einen neuen Header in der Liste von Name/Wert-Paaren für Header.  
+  
+ Wenn der angegebene Header bereits vorhanden ist, ist `value` wird hinzugefügt, der durch Trennzeichen getrennte Liste von Werten, die dem Header zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des <paramref name="value" /> ist größer als 65535 sein.</exception>
+        <exception cref="T:System.InvalidOperationException">Dies <see cref="T:System.Net.WebHeaderCollection" /> -Instanz gestattet keine Instanzen von <see cref="T:System.Net.HttpRequestHeader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Net.HttpResponseHeader header, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(valuetype System.Net.HttpResponseHeader header, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Add(System.Net.HttpResponseHeader,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.Net.HttpResponseHeader" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="header">Der Header, der der Auflistung hinzugefügt werden soll.</param>
+        <param name="value">Der Inhalt des Headers.</param>
+        <summary>Fügt den angegebenen Header mit dem angegebenen Wert in die Auflistung ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der angegebene Header nicht vorhanden ist, die <xref:System.Net.WebHeaderCollection.Add%2A> Methode fügt einen neuen Header in der Liste von Name/Wert-Paaren für Header.  
+  
+ Wenn der angegebene Header bereits vorhanden ist, ist `value` wird hinzugefügt, der durch Trennzeichen getrennte Liste von Werten, die dem Header zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des <paramref name="value" /> ist größer als 65535 sein.</exception>
+        <exception cref="T:System.InvalidOperationException">Dies <see cref="T:System.Net.WebHeaderCollection" /> -Instanz gestattet keine Instanzen von <see cref="T:System.Net.HttpResponseHeader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Header, der der Auflistung hinzugefügt werden soll.</param>
+        <param name="value">Der Inhalt des Headers.</param>
+        <summary>Fügt einen Header mit dem angegebenen Wert und Namen in die Auflistung ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Header in angegeben `name` ist nicht vorhanden, die <xref:System.Net.WebHeaderCollection.Add%2A> Methode fügt einen neuen Header in der Liste von Name/Wert-Paaren für Header.  
+  
+ Wenn der Header in angegeben `name` ist bereits vorhanden, `value` der vorhandenen, durch Trennzeichen getrennte Liste der zugeordneten Werte hinzugefügt `name`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Name/Wert-Paar ein <xref:System.Net.WebHeaderCollection> mithilfe der <xref:System.Net.WebHeaderCollection.Add%2A> Methode.  
+  
+ [!code-cpp[WebHeaderCollection_Add#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebHeaderCollection_Add/CPP/webheadercollection_add.cpp#1)]
+ [!code-csharp[WebHeaderCollection_Add#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebHeaderCollection_Add/CS/webheadercollection_add.cs#1)]
+ [!code-vb[WebHeaderCollection_Add#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebHeaderCollection_Add/VB/webheadercollection_add.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />ist <see langword="null" />, <see cref="F:System.String.Empty" />, oder enthält ungültige Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="name" />Festlegen von ist ein eingeschränkter Header, der mit einer Eigenschaft festgelegt werden muss.  
+  
+ - oder -   
+  
+ <paramref name="value" />enthält ungültige Zeichen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des <paramref name="value" /> ist größer als 65535 sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddWithoutValidate">
+      <MemberSignature Language="C#" Value="protected void AddWithoutValidate (string headerName, string headerValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddWithoutValidate(string headerName, string headerValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.AddWithoutValidate(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headerName" Type="System.String" />
+        <Parameter Name="headerValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="headerName">Der Header, der der Auflistung hinzugefügt werden soll.</param>
+        <param name="headerValue">Der Inhalt des Headers.</param>
+        <summary>Fügt einen Header in die Auflistung ein, ohne zu überprüfen, ob der Header in der Liste der eingeschränkten Header aufgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebHeaderCollection.AddWithoutValidate%2A> Methode fügt einen Header für die Sammlung, ohne zu überprüfen, ob der Header in der Liste der eingeschränkten Header aufgeführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="headerName" />ist <see langword="null" />, <see cref="F:System.String.Empty" />, oder enthält ungültige Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="headerValue" />enthält ungültige Zeichen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="headerName" />ist kein <see langword="null" /> und die Länge des <paramref name="headerValue" /> ist zu lang (größer als 65.535 Zeichen).</exception>
+        <block subset="none" type="overrides">
+          <para>Verwenden der <see cref="M:System.Net.WebHeaderCollection.AddWithoutValidate(System.String,System.String)" /> Methode zum Hinzufügen von Headern, die normalerweise durch Eigenschaften verfügbar gemacht werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public override string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebHeaderCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Headernamen (Schlüssel) in der Auflistung ab.</summary>
+        <value>Ein Array vom Typ <see cref="T:System.String" />, das alle Headernamen in einer Webanforderung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Net.WebHeaderCollection.AllKeys%2A> Eigenschaft, um die Namen von Spaltenüberschriften ein <xref:System.Net.WebHeaderCollection>.  
+  
+ [!code-csharp[WebHeaderCollection_Get_Values_2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/webheadercollection_get_values_2/CS/webheadercollection_newprops.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public override void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Header aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird löscht die Header in einer <xref:System.Net.WebHeaderCollection>.  
+  
+ [!code-csharp[WebHeaderCollection_Get_Values_2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/webheadercollection_get_values_2/CS/webheadercollection_newprops.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebHeaderCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Header in der Auflistung ab.</summary>
+        <value>Ein <see cref="T:System.Int32" />-Typ, der die Anzahl der Header in einer Anforderung angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Net.WebHeaderCollection.Count%2A> Eigenschaft zum Durchlaufen einer <xref:System.Net.WebHeaderCollection>.  
+  
+ [!code-csharp[WebHeaderCollection_Get_Values_2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/webheadercollection_get_values_2/CS/webheadercollection_newprops.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public override string Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des aus der Auflistung abzurufenden Schlüssels.</param>
+        <summary>Ruft den Wert eines durch einen Index angegebenen Headers in der Auflistung ab.</summary>
+        <returns>Ein <see cref="T:System.String" /> mit dem Wert des angegebenen Headers.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Net.WebHeaderCollection.Get%2A> Methode zum Abrufen eines Werts Header in einer <xref:System.Net.WebHeaderCollection>.  
+  
+ [!code-csharp[WebHeaderCollection_Get_Values_2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/webheadercollection_get_values_2/CS/webheadercollection_newprops.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist ein negativer Wert.  
+  
+ - oder -   
+  
+ <paramref name="index" />überschreitet die Größe der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public override string Get (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string Get(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Webheaders.</param>
+        <summary>Ruft den Wert eines durch seinen Namen angegebenen Headers in der Auflistung ab.</summary>
+        <returns>Eine <see cref="T:System.String" /> mit dem Wert des angegebenen Headers.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `null` liegt keine `name` Header in der Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Net.WebHeaderCollection.Get%2A> abzurufende Headerwerten in einem <xref:System.Net.WebHeaderCollection>.  
+  
+ [!code-csharp[WebHeaderCollection_Get_Values_2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/webheadercollection_get_values_2/CS/webheadercollection_newprops.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:System.Net.WebHeaderCollection" />-Instanz durchlaufen kann.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für das <see cref="T:System.Net.WebHeaderCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public override string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des aus der Auflistung abzurufenden Schlüssels.</param>
+        <summary>Ruft den Headernamen an der angegebenen Position in der Auflistung ab.</summary>
+        <returns>Ein <see cref="T:System.String" /> mit dem Headernamen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Net.WebHeaderCollection.GetKey%2A> zum Abrufen eines Header-Namens eine <xref:System.Net.WebHeaderCollection>.  
+  
+ [!code-csharp[WebHeaderCollection_Get_Values_2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/webheadercollection_get_values_2/CS/webheadercollection_newprops.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist ein negativer Wert.  
+  
+ - oder -   
+  
+ <paramref name="index" />überschreitet die Größe der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Die mit Daten zu füllende <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</param>
+        <param name="streamingContext">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />, der das Ziel für diese Serialisierung angibt.</param>
+        <summary>Füllt eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den Daten auf, die zum Serialisieren des Zielobjekts erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Objekte eingeschlossen wurden die <xref:System.Runtime.Serialization.SerializationInfo> automatisch nachverfolgt und vom Formatierungsprogramm serialisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public override string[] GetValues (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetValues(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.GetValues(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der zurückzugebende Headerindex.</param>
+        <summary>Ruft ein Array von in der <paramref name="index" />-Position der Headerauflistung gespeicherten Headerwerten ab.</summary>
+        <returns>Ein Array von Headerzeichenfolgen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebHeaderCollection.GetValues%2A>Gibt den Inhalt des angegebenen Headers als Array zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public override string[] GetValues (string header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetValues(string header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.GetValues(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="header">Der zurückzugebende Header.</param>
+        <summary>Ruft ein Array von Headerwerten ab, die in einem Header gespeichert sind.</summary>
+        <returns>Ein Array von Headerzeichenfolgen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebHeaderCollection.GetValues%2A>Gibt den Inhalt des angegebenen Headers als Array zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebHeaderCollection.GetValues%2A> Methode zum Abrufen eines Arrays von Werten für jeden Header in der <xref:System.Net.WebHeaderCollection>.  
+  
+ [!code-cpp[WebHeaderCollection_GetValues_1#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebHeaderCollection_GetValues_1/CPP/webheadercollection_getvalues_1.cpp#1)]
+ [!code-csharp[WebHeaderCollection_GetValues_1#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebHeaderCollection_GetValues_1/CS/webheadercollection_getvalues_1.cs#1)]
+ [!code-vb[WebHeaderCollection_GetValues_1#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebHeaderCollection_GetValues_1/VB/webheadercollection_getvalues_1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRestricted">
+      <MemberSignature Language="C#" Value="public static bool IsRestricted (string headerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsRestricted(string headerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.IsRestricted(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="headerName">Der zu überprüfende Header.</param>
+        <summary>Überprüft, ob der angegebene HTTP-Header für die Anforderung festgelegt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der Header eingeschränkt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebHeaderCollection.IsRestricted%2A> -Methode zurückkehrt `true` um anzugeben, dass ein Header eingeschränkt ist, und mithilfe von Eigenschaften statt direkt festgelegt werden muss oder vom System festgelegt ist. Die eingeschränkten Header sind:  
+  
+-   Akzeptieren  
+  
+-   Verbindung  
+  
+-   Content-Length  
+  
+-   Inhaltstyp  
+  
+-   Datum  
+  
+-   erwartet  
+  
+-   Host  
+  
+-   If-Modified-Since  
+  
+-   Bereich  
+  
+-   Referer  
+  
+-   Transfer-Encoding  
+  
+-   Benutzer-Agent  
+  
+-   Proxy-Verbindung  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft die <xref:System.Net.WebHeaderCollection.IsRestricted%2A> Eigenschaft, um festzustellen, ob der Header festgelegt wird, verboten sind.  
+  
+ [!code-cpp[WebHeaderCollection_IsRestricted#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebHeaderCollection_IsRestricted/CPP/webheadercollection_isrestricted.cpp#1)]
+ [!code-csharp[WebHeaderCollection_IsRestricted#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebHeaderCollection_IsRestricted/CS/webheadercollection_isrestricted.cs#1)]
+ [!code-vb[WebHeaderCollection_IsRestricted#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebHeaderCollection_IsRestricted/VB/webheadercollection_isrestricted.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="headerName" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="headerName" />enthält ungültige Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRestricted">
+      <MemberSignature Language="C#" Value="public static bool IsRestricted (string headerName, bool response);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsRestricted(string headerName, bool response) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.IsRestricted(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headerName" Type="System.String" />
+        <Parameter Name="response" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="headerName">Der zu überprüfende Header.</param>
+        <param name="response">Soll .NET Framework die Antwort oder die Anforderung überprüfen?</param>
+        <summary>Überprüft, ob der angegebene HTTP-Header für die Anforderung oder die Antwort festgelegt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der Header eingeschränkt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebHeaderCollection.IsRestricted%2A> -Methode zurückkehrt `true` um anzugeben, dass ein Anforderung oder Antwort-Header eingeschränkt ist, und mithilfe von Eigenschaften statt direkt festgelegt werden muss, oder vom System festgelegt ist. Die eingeschränkten Header sind:  
+  
+-   Akzeptieren  
+  
+-   Verbindung  
+  
+-   Content-Length  
+  
+-   Inhaltstyp  
+  
+-   Datum  
+  
+-   erwartet  
+  
+-   Host  
+  
+-   If-Modified-Since  
+  
+-   Bereich  
+  
+-   Referer  
+  
+-   Transfer-Encoding  
+  
+-   Benutzer-Agent  
+  
+-   Proxy-Verbindung  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft die <xref:System.Net.WebHeaderCollection.IsRestricted%2A> Eigenschaft, um festzustellen, ob die Anforderungsheader sind nicht zulässig festgelegt wird.  
+  
+ [!code-cpp[WebHeaderCollection_IsRestricted#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebHeaderCollection_IsRestricted/CPP/webheadercollection_isrestricted.cpp#1)]
+ [!code-csharp[WebHeaderCollection_IsRestricted#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebHeaderCollection_IsRestricted/CS/webheadercollection_isrestricted.cs#1)]
+ [!code-vb[WebHeaderCollection_IsRestricted#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebHeaderCollection_IsRestricted/VB/webheadercollection_isrestricted.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="headerName" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="headerName" />enthält ungültige Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[System.Net.HttpRequestHeader header] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(valuetype System.Net.HttpRequestHeader)" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebHeaderCollection.Item(System.Net.HttpRequestHeader)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.Net.HttpRequestHeader" />
+      </Parameters>
+      <Docs>
+        <param name="header">Der Wert des Anforderungsheaders.</param>
+        <summary>Ruft den angegebenen Anforderungsheader ab oder legt diesen fest.</summary>
+        <value>Eine <see cref="T:System.String" />-Instanz, die den angegebenen Headerwert enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Dies <see cref="T:System.Net.WebHeaderCollection" /> -Instanz gestattet keine Instanzen von <see cref="T:System.Net.HttpRequestHeader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[System.Net.HttpResponseHeader header] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(valuetype System.Net.HttpResponseHeader)" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebHeaderCollection.Item(System.Net.HttpResponseHeader)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.Net.HttpResponseHeader" />
+      </Parameters>
+      <Docs>
+        <param name="header">Der Wert des Antwortheaders.</param>
+        <summary>Ruft den angegebenen Antwortheader ab oder legt diesen fest.</summary>
+        <value>Eine <see cref="T:System.String" />-Instanz, die den angegebenen Header enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des <paramref name="value" /> ist größer als 65535 sein.</exception>
+        <exception cref="T:System.InvalidOperationException">Dies <see cref="T:System.Net.WebHeaderCollection" /> -Instanz gestattet keine Instanzen von <see cref="T:System.Net.HttpResponseHeader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[string name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebHeaderCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public override System.Collections.Specialized.NameObjectCollectionBase.KeysCollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameObjectCollectionBase/KeysCollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebHeaderCollection.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameObjectCollectionBase+KeysCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Headernamen (Schlüssel) in der Auflistung ab.</summary>
+        <value>Eine <see cref="T:System.Collections.Specialized.NameObjectCollectionBase.KeysCollection" />, die alle Headernamen in einer Webanforderung enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserialization">
+      <MemberSignature Language="C#" Value="public override void OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Deserialisierungsereignisses.</param>
+        <summary>Implementiert die <see cref="T:System.Runtime.Serialization.ISerializable" />-Schnittstelle und löst das Deserialisierungsereignis aus, sobald die Deserialisierung abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Net.HttpRequestHeader header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(valuetype System.Net.HttpRequestHeader header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Remove(System.Net.HttpRequestHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.Net.HttpRequestHeader" />
+      </Parameters>
+      <Docs>
+        <param name="header">Die aus der Auflistung zu entfernende <see cref="T:System.Net.HttpRequestHeader" />-Instanz.</param>
+        <summary>Entfernt den angegebenen Header aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebHeaderCollection.Remove%2A>Löscht den angegebenen Header aus der Auflistung. Wenn der angegebene Header nicht vorhanden ist, wird die Methode keine Aktion ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Dies <see cref="T:System.Net.WebHeaderCollection" /> -Instanz gestattet keine Instanzen von <see cref="T:System.Net.HttpRequestHeader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Net.HttpResponseHeader header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(valuetype System.Net.HttpResponseHeader header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Remove(System.Net.HttpResponseHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.Net.HttpResponseHeader" />
+      </Parameters>
+      <Docs>
+        <param name="header">Die aus der Auflistung zu entfernende <see cref="T:System.Net.HttpResponseHeader" />-Instanz.</param>
+        <summary>Entfernt den angegebenen Header aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebHeaderCollection.Remove%2A>Löscht den angegebenen Header aus der Auflistung. Wenn der angegebene Header nicht vorhanden ist, wird die Methode keine Aktion ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Dies <see cref="T:System.Net.WebHeaderCollection" /> -Instanz gestattet keine Instanzen von <see cref="T:System.Net.HttpResponseHeader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public override void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Headers, der aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt den angegebenen Header aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebHeaderCollection.Remove%2A>Löscht den angegebenen Header aus der Auflistung. Wenn der angegebene Header nicht vorhanden ist, erfolgt die Methodenrückgabe.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebHeaderCollection.Remove%2A> -Methode entfernt einen Header aus der <xref:System.Net.WebHeaderCollection>. Nach dem Entfernen des Headers wird im Beispiel aller vorhandenen Header auf dem Bildschirm, um nachzuweisen, dass es entfernt wurde.  
+  
+ [!code-cpp[WebHeaderCollection_Remove#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebHeaderCollection_Remove/CPP/webheadercollection_remove.cpp#1)]
+ [!code-csharp[WebHeaderCollection_Remove#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebHeaderCollection_Remove/CS/webheadercollection_remove.cs#1)]
+ [!code-vb[WebHeaderCollection_Remove#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebHeaderCollection_Remove/VB/webheadercollection_remove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" />ist <see langword="null" /> <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />ist ein eingeschränkter Header.  
+  
+ - oder -   
+  
+ <paramref name="name" />enthält ungültige Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (System.Net.HttpRequestHeader header, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(valuetype System.Net.HttpRequestHeader header, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Set(System.Net.HttpRequestHeader,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.Net.HttpRequestHeader" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="header">Der festzulegende <see cref="T:System.Net.HttpRequestHeader" />-Wert.</param>
+        <param name="value">Der Inhalt des festzulegenden Headers.</param>
+        <summary>Legt den angegebenen Header auf den angegebenen Wert fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der im Header angegebene Header nicht vorhanden ist, die <xref:System.Net.WebHeaderCollection.Set%2A> Methode fügt einen neuen Header in der Liste von Name/Wert-Paaren für Header.  
+  
+ Wenn der Header in angegeben `header` ist bereits vorhanden, `value` ersetzt den vorhandenen Wert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des <paramref name="value" /> ist größer als 65535 sein.</exception>
+        <exception cref="T:System.InvalidOperationException">Dies <see cref="T:System.Net.WebHeaderCollection" /> -Instanz gestattet keine Instanzen von <see cref="T:System.Net.HttpRequestHeader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (System.Net.HttpResponseHeader header, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(valuetype System.Net.HttpResponseHeader header, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Set(System.Net.HttpResponseHeader,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.Net.HttpResponseHeader" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="header">Der festzulegende <see cref="T:System.Net.HttpResponseHeader" />-Wert.</param>
+        <param name="value">Der Inhalt des festzulegenden Headers.</param>
+        <summary>Legt den angegebenen Header auf den angegebenen Wert fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der im Header angegebene Header nicht vorhanden ist, die <xref:System.Net.WebHeaderCollection.Set%2A> Methode fügt einen neuen Header in der Liste von Name/Wert-Paaren für Header.  
+  
+ Wenn der Header in angegeben `header` ist bereits vorhanden, `value` ersetzt den vorhandenen Wert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des <paramref name="value" /> ist größer als 65535 sein.</exception>
+        <exception cref="T:System.InvalidOperationException">Dies <see cref="T:System.Net.WebHeaderCollection" /> -Instanz gestattet keine Instanzen von <see cref="T:System.Net.HttpResponseHeader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public override void Set (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Set(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.Set(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der festzulegende Header.</param>
+        <param name="value">Der Inhalt des festzulegenden Headers.</param>
+        <summary>Legt den angegebenen Header auf den angegebenen Wert fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der im Header angegebene Header nicht vorhanden ist, die <xref:System.Net.WebHeaderCollection.Set%2A> Methode fügt einen neuen Header in der Liste von Name/Wert-Paaren für Header.  
+  
+ Wenn der Header in angegeben `header` ist bereits vorhanden, `value` ersetzt den vorhandenen Wert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebHeaderCollection.Set%2A> Methode zum Festlegen des Werts eines vorhandenen Headers.  
+  
+ [!code-cpp[WebHeaderCollection_Set#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebHeaderCollection_Set/CPP/webheadercollection_set.cpp#1)]
+ [!code-csharp[WebHeaderCollection_Set#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebHeaderCollection_Set/CS/webheadercollection_set.cs#1)]
+ [!code-vb[WebHeaderCollection_Set#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebHeaderCollection_Set/VB/webheadercollection_set.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des <paramref name="value" /> ist größer als 65535 sein.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />ist ein eingeschränkter Header.  
+  
+ - oder -   
+  
+ <paramref name="name" />oder <paramref name="value" /> enthält ungültige Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Das Objekt, in das diese <see cref="T:System.Net.WebHeaderCollection" /> serialisiert wird.</param>
+        <param name="streamingContext">Das Ziel der Serialisierung.</param>
+        <summary>Serialisiert diese Instanz in das angegebene <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByteArray">
+      <MemberSignature Language="C#" Value="public byte[] ToByteArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ToByteArray() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.ToByteArray" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert die <see cref="T:System.Net.WebHeaderCollection" /> in ein Bytearray.</summary>
+        <returns>Ein <see cref="T:System.Byte" />-Array mit der Headerauflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebHeaderCollection.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese Methode ist veraltet.</summary>
+        <returns>Die <see cref="T:System.String" />-Entsprechung der Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

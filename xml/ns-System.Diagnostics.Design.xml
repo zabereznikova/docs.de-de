@@ -1,0 +1,6 @@
+<Namespace Name="System.Diagnostics.Design">
+  <Docs>
+    <summary>Die <see cref="N:System.Diagnostics.Design" /> -Namespace enthält Klassen, die zum Erweitern der entwurfszeitunterstützung für anwendungsüberwachung und -Instrumentation verwendet werden können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,71 @@
+<Type Name="SaveOptions" FullName="System.Data.Objects.SaveOptions">
+  <TypeSignature Language="C#" Value="public enum SaveOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SaveOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.SaveOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt das Verhalten der Objektkontext bei der <see cref="M:System.Data.Objects.ObjectContext.SaveChanges(System.Data.Objects.SaveOptions)" /> -Methode aufgerufen wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceptAllChangesAfterSave">
+      <MemberSignature Language="C#" Value="AcceptAllChangesAfterSave" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Objects.SaveOptions AcceptAllChangesAfterSave = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Objects.SaveOptions.AcceptAllChangesAfterSave" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.SaveOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nachdem die Änderungen gespeichert wurden, die <see cref="M:System.Data.Objects.ObjectContext.AcceptAllChangesAfterSave" /> -Methode aufgerufen wird, wird die änderungsnachverfolgung in setzt die <see cref="T:System.Data.Objects.ObjectStateManager" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DetectChangesBeforeSave">
+      <MemberSignature Language="C#" Value="DetectChangesBeforeSave" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Objects.SaveOptions DetectChangesBeforeSave = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Objects.SaveOptions.DetectChangesBeforeSave" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.SaveOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vor dem Speichern von Änderungen, die <see cref="M:System.Data.Objects.ObjectContext.DetectChanges" /> Methode wird aufgerufen, um die Eigenschaftswerte von Objekten zu synchronisieren, die an Daten in den Objektkontext angefügt werden die <see cref="T:System.Data.Objects.ObjectStateManager" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Objects.SaveOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Objects.SaveOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.SaveOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Änderungen werden gespeichert, ohne die <see cref="M:System.Data.Objects.ObjectContext.DetectChanges" /> oder <see cref="M:System.Data.Objects.ObjectContext.AcceptAllChangesAfterSave" /> Methoden aufgerufen werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

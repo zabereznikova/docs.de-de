@@ -1,0 +1,242 @@
+<Type Name="XmlSchemaAttributeGroup" FullName="System.Xml.Schema.XmlSchemaAttributeGroup">
+  <TypeSignature Language="C#" Value="public class XmlSchemaAttributeGroup : System.Xml.Schema.XmlSchemaAnnotated" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaAttributeGroup extends System.Xml.Schema.XmlSchemaAnnotated" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaAttributeGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaAnnotated</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die <see langword="attributeGroup" /> Element aus dem XML-Schema gemäß World Wide Web Consortium (W3C). AttributesGroups stellt einen Mechanismus zum Gruppieren einer Reihe von Attributdeklarationen bereit, sodass diese als Gruppe in komplexe Typdefinitionen integriert werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Attributgruppe kann nur als untergeordnetes Element des definiert werden die `schema` Element. In diesem Fall die `name` Attribut muss vorhanden sein und darf die `attribute`, `attributeGroup`, oder `anyAttribute` Elemente, aus denen die Attributgruppe besteht. Wenn eine `complexType` oder ein `attributeGroup` Element enthält eine Attributgruppe aus, die `ref` Attribut muss vorhanden sein und die `name` Attribut ist nicht zulässig.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt die `attributeGroup` Element.  
+  
+ [!code-cpp[Classic WebData XmlSchemaAttributeGroup Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlSchemaAttributeGroup Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaAttributeGroup Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlSchemaAttributeGroup Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaAttributeGroup Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlSchemaAttributeGroup Example/VB/source.vb#1)]  
+  
+ Für das vorhergehende Codebeispiel wird die folgende XML-Datei generiert.  
+  
+ [!code-xml[Classic WebData XmlSchemaAttributeGroup Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlSchemaAttributeGroup Example/XML/source.xml#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaAttributeGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaAttributeGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Schema.XmlSchemaAttributeGroup" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnyAttribute">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaAnyAttribute AnyAttribute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaAnyAttribute AnyAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaAttributeGroup.AnyAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("anyAttribute")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaAnyAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Xml.Schema.XmlSchemaAnyAttribute" /> Komponente der Attributgruppe.</summary>
+        <value>Das World Wide Web Consortium (W3C) <see langword="anyAttribute" /> Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaAttributeGroup.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("attribute", typeof(System.Xml.Schema.XmlSchemaAttribute))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("attributeGroup", typeof(System.Xml.Schema.XmlSchemaAttributeGroupRef))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Attributen für die Attributgruppe ab. Enthält <see langword="XmlSchemaAttribute" /> und <see langword="XmlSchemaAttributeGroupRef" /> Elemente.</summary>
+        <value>Die Auflistung von Attributen für die Attributgruppe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaAttributeGroup.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("name")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Attributgruppe ab oder legt diesen fest.</summary>
+        <value>Der Name der Attributgruppe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name muss ein NCName (Namen ohne Doppelpunkt) sein, wie in der W3C XML-Namespaces-Spezifikation definiert. Wenn eine `complexType` oder `attributeGroup` Element enthält den Namen der Attributgruppe die `attributeGroup` Element wird zum die `ref` Attribut. Dieser Wert muss ein NCName sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QualifiedName">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName QualifiedName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName QualifiedName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaAttributeGroup.QualifiedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den qualifizierten Namen der Attributgruppe ab.</summary>
+        <value>Der qualifizierte Namen der Attributgruppe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedefinedAttributeGroup">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaAttributeGroup RedefinedAttributeGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaAttributeGroup RedefinedAttributeGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaAttributeGroup.RedefinedAttributeGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaAttributeGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die neu definierte Attributgruppeneigenschaft aus dem XML-Schema ab.</summary>
+        <value>Die neu definierte Attributgruppeneigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

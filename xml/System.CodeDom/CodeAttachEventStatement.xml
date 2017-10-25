@@ -1,0 +1,160 @@
+<Type Name="CodeAttachEventStatement" FullName="System.CodeDom.CodeAttachEventStatement">
+  <TypeSignature Language="C#" Value="public class CodeAttachEventStatement : System.CodeDom.CodeStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeAttachEventStatement extends System.CodeDom.CodeStatement" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeAttachEventStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Anweisung, die ein Ereignishandlerdelegat an ein Ereignis angefügt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeAttachEventStatement>kann verwendet werden, um eine Anweisung darzustellen, die ein Ereignishandlerdelegat für ein Ereignis hinzugefügt. Die <xref:System.CodeDom.CodeAttachEventStatement.Event%2A> Eigenschaft gibt an, das Ereignis, um den Ereignishandler angefügt. Die <xref:System.CodeDom.CodeAttachEventStatement.Listener%2A> Eigenschaft gibt an, der Ereignishandler angefügt.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht die Verwendung von einem <xref:System.CodeDom.CodeAttachEventStatement> einen Ereignishandler mit einem Ereignis anfügen.  
+  
+ [!code-cpp[CodeAttachEventStatementExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeAttachEventStatementExample/CPP/codeattacheventstatementexample.cpp#3)]
+ [!code-csharp[CodeAttachEventStatementExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeAttachEventStatementExample/CS/codeattacheventstatementexample.cs#3)]
+ [!code-vb[CodeAttachEventStatementExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeAttachEventStatementExample/VB/codeattacheventstatementexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeAttachEventStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeAttachEventStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeAttachEventStatement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeAttachEventStatement (System.CodeDom.CodeEventReferenceExpression eventRef, System.CodeDom.CodeExpression listener);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeEventReferenceExpression eventRef, class System.CodeDom.CodeExpression listener) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeAttachEventStatement.#ctor(System.CodeDom.CodeEventReferenceExpression,System.CodeDom.CodeExpression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventRef" Type="System.CodeDom.CodeEventReferenceExpression" />
+        <Parameter Name="listener" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="eventRef">Ein <see cref="T:System.CodeDom.CodeEventReferenceExpression" /> , fügen Sie einen Ereignishandler an das Ereignis angibt.</param>
+        <param name="listener">Ein <see cref="T:System.CodeDom.CodeExpression" /> , der den neuen Ereignishandler angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeAttachEventStatement" /> -Klasse mit dem angegebenen Ereignis und Delegaten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeAttachEventStatement (System.CodeDom.CodeExpression targetObject, string eventName, System.CodeDom.CodeExpression listener);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression targetObject, string eventName, class System.CodeDom.CodeExpression listener) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeAttachEventStatement.#ctor(System.CodeDom.CodeExpression,System.String,System.CodeDom.CodeExpression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetObject" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="eventName" Type="System.String" />
+        <Parameter Name="listener" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="targetObject">Ein <see cref="T:System.CodeDom.CodeExpression" /> , der angibt, dass des Objekts, das das Ereignis enthält.</param>
+        <param name="eventName">Der Name des Ereignisses, fügen Sie einen Ereignishandler an.</param>
+        <param name="listener">Ein <see cref="T:System.CodeDom.CodeExpression" /> , der den neuen Ereignishandler angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeAttachEventStatement" /> -Klasse unter Verwendung des angegebenen Objekts mit das Ereignis, Ereignisnamen und Ereignishandlerdelegat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Event">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeEventReferenceExpression Event { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeEventReferenceExpression Event" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeAttachEventStatement.Event" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeEventReferenceExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das Ereignis ein Ereignishandlerdelegat zum Anfügen.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeEventReferenceExpression" /> , fügen Sie einen Ereignishandler an das Ereignis angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Listener">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression Listener { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression Listener" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeAttachEventStatement.Listener" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den neuen Ereignishandler-Delegat, die an das Ereignis anfügen.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeExpression" /> , der den neuen Ereignishandler für die Verbindung angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

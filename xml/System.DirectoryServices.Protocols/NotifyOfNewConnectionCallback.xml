@@ -1,0 +1,40 @@
+<Type Name="NotifyOfNewConnectionCallback" FullName="System.DirectoryServices.Protocols.NotifyOfNewConnectionCallback">
+  <TypeSignature Language="C#" Value="public delegate bool NotifyOfNewConnectionCallback(LdapConnection primaryConnection, LdapConnection referralFromConnection, string newDistinguishedName, LdapDirectoryIdentifier identifier, LdapConnection newConnection, NetworkCredential credential, long currentUserToken, int errorCodeFromBind);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NotifyOfNewConnectionCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.NotifyOfNewConnectionCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="primaryConnection" Type="System.DirectoryServices.Protocols.LdapConnection" />
+    <Parameter Name="referralFromConnection" Type="System.DirectoryServices.Protocols.LdapConnection" />
+    <Parameter Name="newDistinguishedName" Type="System.String" />
+    <Parameter Name="identifier" Type="System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />
+    <Parameter Name="newConnection" Type="System.DirectoryServices.Protocols.LdapConnection" />
+    <Parameter Name="credential" Type="System.Net.NetworkCredential" />
+    <Parameter Name="currentUserToken" Type="System.Int64" />
+    <Parameter Name="errorCodeFromBind" Type="System.Int32" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="primaryConnection">Ein <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> Objekt, das die primäre Verbindung angibt.</param>
+    <param name="referralFromConnection">Ein <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> Objekt, das die Verbindung angibt, die die Referenz bereitstellt.</param>
+    <param name="newDistinguishedName">Ein <see cref="T:System.String" /> -Objekt, das den distinguished Name des gewünschten Eintrags gibt an, auf dem Server verwiesen wird.</param>
+    <param name="identifier">Ein <see cref="T:System.DirectoryServices.Protocols.LdapDirectoryIdentifier" /> -Objekt, das den Bezeichner der genannten LDAP-Verzeichnis angibt.</param>
+    <param name="newConnection">Ein <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> Objekt, das die neue Verbindung erstellt, die im Verlauf eine Referenz nachjagen angibt.</param>
+    <param name="credential">Ein <see cref="T:System.Net.NetworkCredential" /> Objekt, das die Anmeldeinformationen für die Übergabe an den genannten Server angibt.</param>
+    <param name="currentUserToken">Die LUID des aktuellen Benutzers.</param>
+    <param name="errorCodeFromBind">Ein <see cref="T:System.Int32" /> Objekt, das den Fehlercode aus dem Bindungsvorgang angibt.</param>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.NotifyOfNewConnectionCallback" /> Delegat wird aufgerufen, wenn eine neue Verbindung, beim nachjagen eines Verweis erstellt wurde.</summary>
+    <returns>
+      <see langword="true" />Wenn die Verbindung zwischengespeichert werden soll.  <see langword="false" />Wenn Sie nicht erforderlich, um die Verbindung zwischengespeichert.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,92 @@
+<Type Name="SetStateEventArgs" FullName="System.Workflow.Activities.SetStateEventArgs">
+  <TypeSignature Language="C#" Value="public class SetStateEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SetStateEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.SetStateEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Klasse dar, die als Argument verwendet wird, um den Zustand von <see cref="T:System.Workflow.Activities.StateMachineWorkflowActivity" /> festzulegen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Activities.StateMachineWorkflowActivity> ermöglicht das Festlegen des Zustands von der Hostanwendung. Dadurch wird der Hostanwendung das Überschreiben des aktuellen Zustands eines Statuscomputers ermöglicht. Dies erfolgt durch Setzen einer Instanz der <xref:System.Workflow.Activities.SetStateEventArgs>-Klasse in die Workflowwarteschlange, die durch die Konstante <xref:System.Workflow.Activities.StateMachineWorkflowActivity?displayProperty=nameWithType> benannt ist.  
+  
+ Mit der <xref:System.Workflow.Activities.StateMachineWorkflowInstance.SetState%2A>-Methode in der <xref:System.Workflow.Activities.StateMachineWorkflowInstance>-Klasse kann dies einfacher umgesetzt werden.  
+  
+ Ein SetState-Vorgang kann mit der <xref:System.Workflow.Activities.StateMachineWorkflowInstance.SetState%2A>-Methode vom Host oder manuell durch Setzen eines Ereignisses in die Warteschlange des Zustandsautomat-Workflows durchgeführt werden (siehe folgendes Beispiel).  
+  
+```  
+public void SetState(string targetStateName)  
+{  
+      if (targetStateName == null)  
+      {  
+            throw new ArgumentNullException("targetStateName");  
+      }  
+      SetStateEventArgs args1 = new SetStateEventArgs(targetStateName);  
+      this.WorkflowInstance.EnqueueItemOnIdle("SetStateQueue", args1, null, null);  
+}  
+```  
+  
+ Für den Zustandsautomat-Workflow wird eine besondere Warteschlange mit der Bezeichnung `SetStateQueue` verwendet, um an diesen besonderen Ereignissen zu lauschen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetStateEventArgs (string targetStateName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string targetStateName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.SetStateEventArgs.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetStateName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetStateName">Der Zustand, auf den <see cref="T:System.Workflow.Activities.StateActivity" /> gesetzt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.SetStateEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetStateName">
+      <MemberSignature Language="C#" Value="public string TargetStateName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetStateName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.SetStateEventArgs.TargetStateName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand ab, auf den <see cref="T:System.Workflow.Activities.StateActivity" /> gesetzt werden soll.</summary>
+        <value>Der Zustand, auf den <see cref="T:System.Workflow.Activities.StateActivity" /> gesetzt werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

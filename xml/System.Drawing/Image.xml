@@ -1,0 +1,1623 @@
+<Type Name="Image" FullName="System.Drawing.Image">
+  <TypeSignature Language="C#" Value="public abstract class Image : MarshalByRefObject, ICloneable, IDisposable, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit Image extends System.MarshalByRefObject implements class System.ICloneable, class System.IDisposable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Image" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Drawing.Design.ImageEditor, System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ImmutableObject(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ImageConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine abstrakte Basisklasse, die Funktionen für die von <see cref="T:System.Drawing.Bitmap" /> und <see cref="T:System.Drawing.Imaging.Metafile" /> abgeleiteten Klassen bereitstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Zeichnen einer <xref:System.Drawing.Image> in einem Windows Form, kehren Sie mithilfe einer der der <xref:System.Drawing.Graphics.DrawImage%2A> Methoden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert. Dies ist ein Handler für das <xref:System.Windows.Forms.Control.Paint> Ereignis. Ein <xref:System.Drawing.Graphics> -Objekt an das Ereignis übergeben wird, und wird verwendet, um das Bild auf dem Formular zu zeichnen. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt ein Image aus einer Datei namens SampImag.jpg an. Diese Datei muss im gleichen Ordner wie die ausführbare Datei der Anwendung befinden.  
+  
+-   Erstellt einen Punkt, an dem der oberen linken Ecke des Bilds gezeichnet werden soll.  
+  
+-   Zeichnet das Bild auf dem Formular an.  
+  
+ [!code-cpp[System.Drawing.ClassicGraphicsExamples#55](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicGraphicsExamples/CPP/form1.cpp#55)]
+ [!code-csharp[System.Drawing.ClassicGraphicsExamples#55](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicGraphicsExamples/CS/form1.cs#55)]
+ [!code-vb[System.Drawing.ClassicGraphicsExamples#55](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicGraphicsExamples/VB/form1.vb#55)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine genaue Kopie von dieser <see cref="T:System.Drawing.Image" />.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.Drawing.Image" />, umgewandelt in ein Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Dispose">
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt alle von dieser <see cref="T:System.Drawing.Image" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Drawing.Image.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.Drawing.Image> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Drawing.Image>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von dieser <see cref="T:System.Drawing.Image" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Drawing.Image.Dispose%2A> -Methode ermöglicht es, die von diesem verwendeten Ressourcen <xref:System.Drawing.Image> neu für andere Zwecke reserviert werden.  
+  
+ Rufen Sie <xref:System.Drawing.Image.Dispose%2A> auf, wenn Sie <xref:System.Drawing.Image> nicht mehr benötigen. Die <xref:System.Drawing.Image.Dispose%2A>-Methode bewirkt, dass <xref:System.Drawing.Image> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Drawing.Image.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Drawing.Image> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Drawing.Image> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Drawing.Image.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.Drawing.Image> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Drawing.Image>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Drawing.Image" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Drawing.Image.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.Drawing.Image> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Drawing.Image>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~Image ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einem Objekt Gelegenheit zu dem Versuch, Ressourcen freizugeben und andere Bereinigungen durchzuführen, bevor es von der Garbage Collection freigegeben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public int Flags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Attributflags für die Pixeldaten dieses <see cref="T:System.Drawing.Image" /> ab.</summary>
+        <value>Die ganze Zahl, die eine bitweise Kombination von <see cref="T:System.Drawing.Imaging.ImageFlags" /> für dieses <see cref="T:System.Drawing.Image" /> darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der ganzzahlige Wert von dieser Methode zurückgegebene entspricht einer Summe von <xref:System.Drawing.Imaging.ImageFlags>, wie in der folgenden Tabelle beschrieben.  
+  
+|ImageFlag-Wert|Integer-Darstellung|  
+|---------------------|----------------------------|  
+|`ImageFlagsNone`|0|  
+|`ImageFlagsScalable`|1|  
+|`ImageFlagsHasAlpha`|2|  
+|`ImageFlagsHasTranslucent`|4|  
+|`ImageFlagsPartiallyScalable`|8|  
+|`ImageFlagsColorSpaceRGB`|16|  
+|`ImageFlagsColorSpaceCMYK`|32|  
+|`ImageFlagsColorSpaceGRAY`|64|  
+|`ImageFlagsColorSpaceYCBCR`|128|  
+|`ImageFlagsColorSpaceYCCK`|256|  
+|`ImageFlagsHasRealDPI`|4096|  
+|`ImageFlagsHasRealPixelSize`|8192|  
+|`ImageFlagsReadOnly`|65536|  
+|`ImageFlagsCaching`|131072|  
+  
+ Z. B. wenn die <xref:System.Drawing.Image.Flags%2A> Eigenschaft für ein Bild zurückgegeben 77960, die <xref:System.Drawing.Imaging.ImageFlags> für das Bild <xref:System.Drawing.Imaging.ImageFlags.ReadOnly>, <xref:System.Drawing.Imaging.ImageFlags.HasRealDpi>, <xref:System.Drawing.Imaging.ImageFlags.HasRealPixelSize>, <xref:System.Drawing.Imaging.ImageFlags.ColorSpaceYcbcr>, und <xref:System.Drawing.Imaging.ImageFlags.PartiallyScalable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameDimensionsList">
+      <MemberSignature Language="C#" Value="public Guid[] FrameDimensionsList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid[] FrameDimensionsList" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.FrameDimensionsList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von GUIDs ab, die die Abmessungen der Rahmen in diesem <see cref="T:System.Drawing.Image" /> darstellen.</summary>
+        <value>Ein Array von GUIDs, die die Abmessungen der Rahmen von den höchstwertigen bis zu den niederstwertigen in diesem <see cref="T:System.Drawing.Image" /> angeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt Informationen zu mehreren Rahmen-Images, die in zwei Formaten stammen: mehrere Seiten- und mehrere Auflösung.  
+  
+ Ein mehrseitiges-Image ist ein Bild, das mehr als ein Bild enthält. Jede Seite enthält eine einzelne Bild (oder Rahmen). Diese Seiten (oder Bilder oder Bilder) werden in der Regel nacheinander erzeugt eine animierte Sequenz ist, z. B. eine animiertes GIF-Datei angezeigt.  
+  
+ Ein Bild mit mehreren-Auflösung ist ein Bild, das mehr als eine Kopie eines Bilds in unterschiedlichen Auflösungen enthält. Dies wird häufig von MIP-Zuordnung verwendet, wenn die Auflösung des Bilds zum Zeichnen verwendeten bestimmt die angezeigten Bildgröße. [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]kann eine beliebige Anzahl von Seiten (Bilder oder Bilder), sowie eine beliebige Anzahl von Lösungen unterstützen. Die definierten Dimensionen sind Eigenschaften von der <xref:System.Drawing.Imaging.FrameDimension>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromFile">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Image FromFile (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Image FromFile(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.FromFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Eine Zeichenfolge, die den Namen der Datei enthält, aus der <see cref="T:System.Drawing.Image" /> erstellt werden soll.</param>
+        <summary>Erstellt ein <see cref="T:System.Drawing.Image" /> aus der angegebenen Datei.</summary>
+        <returns>Die <see cref="T:System.Drawing.Image" />, die von dieser Methode erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Managed GDI + verfügt über integrierte Encoder und Decoder, die folgenden Dateitypen unterstützen:  
+  
+-   BMP  
+  
+-   GIF  
+  
+-   JPEG  
+  
+-   PNG  
+  
+-   TIFF  
+  
+ Die Datei bleibt gesperrt, bis die <xref:System.Drawing.Image> verworfen wird.  
+  
+ Wenn die Datei kein gültiges Bildformat nicht vorhanden ist oder wenn [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] unterstützt nicht das Pixelformat der Datei, löst diese Methode eine <xref:System.OutOfMemoryException> Ausnahme.  
+  
+> [!NOTE]
+>  Die <xref:System.Drawing.Image> Klasse unterstützt keine alpha Transparenz in Bitmaps. Um alpha Transparenz zu aktivieren, verwenden Sie PNG-Bilder mit 32 Bits pro Pixel.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Image.FromFile%2A> <xref:System.Drawing.Image.GetPropertyItem%2A> und <xref:System.Drawing.Image.SetPropertyItem%2A> Methoden. In diesem Beispiel dient, die mit Windows Forms verwendet werden. Um dieses Beispiel auszuführen, fügen Sie ihn in ein Formular und behandeln Sie des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis durch Aufrufen der `DemonstratePropertyItem` -Methode auf und übergibt `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.ImageExample#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.ImageExample#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.ImageExample#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OutOfMemoryException">Die Datei kein gültiges Bildformat keinen.  
+  
+ - oder -   
+  
+ [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]Das Pixelformat der Datei unterstützt nicht.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die angegebene Datei ist nicht vorhanden.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="filename" />ist eine <see cref="T:System.Uri" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromFile">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Image FromFile (string filename, bool useEmbeddedColorManagement);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Image FromFile(string filename, bool useEmbeddedColorManagement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.FromFile(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="useEmbeddedColorManagement" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Eine Zeichenfolge, die den Namen der Datei enthält, aus der <see cref="T:System.Drawing.Image" /> erstellt werden soll.</param>
+        <param name="useEmbeddedColorManagement">Legen Sie <see langword="true" /> fest, um die in der Bilddatei enthaltenen Farbverwaltungsinformationen zu verwenden, andernfalls <see langword="false" />.</param>
+        <summary>Erstellt ein <see cref="T:System.Drawing.Image" /> aus der angegebenen Datei unter Verwendung der in der Datei eingebetteten Farbverwaltungsinformationen.</summary>
+        <returns>Die <see cref="T:System.Drawing.Image" />, die von dieser Methode erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Managed GDI + verfügt über integrierte Encoder und Decoder, die folgenden Dateitypen unterstützen:  
+  
+-   BMP  
+  
+-   GIF  
+  
+-   JPEG  
+  
+-   PNG  
+  
+-   TIFF  
+  
+ Wenn die Datei kein gültiges Bildformat nicht vorhanden ist oder wenn [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] unterstützt nicht das Pixelformat der Datei, löst diese Methode eine <xref:System.OutOfMemoryException> Ausnahme.  
+  
+ Die Datei bleibt gesperrt, bis die <xref:System.Drawing.Image> verworfen wird.  
+  
+ Die `useEmbeddedColorManagement` Parameter gibt an, ob das neue <xref:System.Drawing.Image> gilt Farbkorrektur entsprechend Farbverwaltungsinformationen, die in der Bilddatei enthaltenen eingebettet ist. Eingebettete Informationen zählen International Farbe Consortium (ICC) Profilen, Gammawerte und Chromatizität.  
+  
+> [!NOTE]
+>  Die <xref:System.Drawing.Image> Klasse unterstützt keine alpha Transparenz in Bitmaps. Um alpha Transparenz zu aktivieren, verwenden Sie PNG-Bilder mit 32 Bits pro Pixel.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine neue Bitmap mit Abrufen der <xref:System.Drawing.Image.FromFile%2A> Methode. Außerdem zeigt es ein <xref:System.Drawing.TextureBrush>.  
+  
+ In diesem Beispiel dient, die mit Windows Forms verwendet werden. Erstellen Sie ein Formular, das eine Schaltfläche mit dem Namen `Button2`. Fügen Sie den Code in das Formular, und ordnen Sie die `Button2_Click` Methode mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+ [!code-cpp[System.Drawing.ImageExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ImageExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ImageExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OutOfMemoryException">Die Datei kein gültiges Bildformat keinen.  
+  
+ - oder -   
+  
+ [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]Das Pixelformat der Datei unterstützt nicht.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die angegebene Datei ist nicht vorhanden.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="filename" />ist eine <see cref="T:System.Uri" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromHbitmap">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Bitmap FromHbitmap (IntPtr hbitmap);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Bitmap FromHbitmap(native int hbitmap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.FromHbitmap(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Bitmap</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hbitmap" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hbitmap">Das [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)]-Bitmaphandle, aus dem die <see cref="T:System.Drawing.Bitmap" /> erstellt werden soll.</param>
+        <summary>Erstellt eine <see cref="T:System.Drawing.Bitmap" /> aus einem Handle für eine GDI-Bitmap.</summary>
+        <returns>Die <see cref="T:System.Drawing.Bitmap" />, die von dieser Methode erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Image.FromHbitmap%2A> Methode erstellt eine Kopie der [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] Bitmap; damit Sie den eingehenden freigeben können [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] bitmap mithilfe der [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] `DeleteObject` Methode sofort nach dem Erstellen des neuen <xref:System.Drawing.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromHbitmap">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Bitmap FromHbitmap (IntPtr hbitmap, IntPtr hpalette);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Bitmap FromHbitmap(native int hbitmap, native int hpalette) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.FromHbitmap(System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Bitmap</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hbitmap" Type="System.IntPtr" />
+        <Parameter Name="hpalette" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hbitmap">Das [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)]-Bitmaphandle, aus dem die <see cref="T:System.Drawing.Bitmap" /> erstellt werden soll.</param>
+        <param name="hpalette">Ein Handle für ein [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] verwendet, um die Bitmapfarben definiert werden, wenn die Bitmap in angegeben Palette der <c>hBitmap</c> -Parameter ist eine geräteunabhängige Bitmap (DIB).</param>
+        <summary>Erstellt eine <see cref="T:System.Drawing.Bitmap" /> aus einem Handle für eine GDI-Bitmap und einem Handle für eine GDI-Palette.</summary>
+        <returns>Die <see cref="T:System.Drawing.Bitmap" />, die von dieser Methode erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Image.FromHbitmap%2A> Methode erstellt eine Kopie der [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] Bitmap; damit Sie den eingehenden freigeben können [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] bitmap mithilfe der [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] `DeleteObject` Methode sofort nach dem Erstellen des neuen <xref:System.Drawing.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromStream">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Image FromStream (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Image FromStream(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.FromStream(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Ein <see cref="T:System.IO.Stream" />, der die Daten für diese <see cref="T:System.Drawing.Image" /> enthält.</param>
+        <summary>Erstellt eine <see cref="T:System.Drawing.Image" /> aus dem angegebenen Datenstream.</summary>
+        <returns>Die <see cref="T:System.Drawing.Image" />, die von dieser Methode erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen den Stream geöffnet lassen, für die Lebensdauer der <xref:System.Drawing.Image>.  
+  
+ Der Stream wird auf 0 (null) zurückgesetzt, wenn diese Methode mit dem gleichen Stream nacheinander aufgerufen wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Drawing.Image> Klasse unterstützt keine alpha Transparenz in Bitmaps. Um alpha Transparenz zu aktivieren, verwenden Sie PNG-Bilder mit 32 Bits pro Pixel.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Stream besitzt kein gültiges Bildformat keine  
+  
+ - oder -   
+  
+ <paramref name="stream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromStream">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Image FromStream (System.IO.Stream stream, bool useEmbeddedColorManagement);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Image FromStream(class System.IO.Stream stream, bool useEmbeddedColorManagement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.FromStream(System.IO.Stream,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="useEmbeddedColorManagement" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Ein <see cref="T:System.IO.Stream" />, der die Daten für diese <see cref="T:System.Drawing.Image" /> enthält.</param>
+        <param name="useEmbeddedColorManagement">
+          <see langword="true" /> für die Verwendung der im Datenstream eingebetteten Farbverwaltungsinformationen, andernfalls <see langword="false" />.</param>
+        <summary>Erstellt ein <see cref="T:System.Drawing.Image" /> aus dem angegebenen Datenstream unter optionaler Verwendung der im Stream eingebetteten Farbverwaltungsinformationen.</summary>
+        <returns>Die <see cref="T:System.Drawing.Image" />, die von dieser Methode erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen den Stream geöffnet lassen, für die Lebensdauer der <xref:System.Drawing.Image>.  
+  
+ Die `useEmbeddedColorManagement` Parameter gibt an, ob das neue <xref:System.Drawing.Image> Farbkorrektur entsprechend Farbverwaltungsinformationen, der im Datenstream eingebetteten anwendet. Eingebettete Informationen zählen International Farbe Consortium (ICC) Profilen, Gammawerte und Chromatizität.  
+  
+ Der Stream wird auf 0 (null) zurückgesetzt, wenn diese Methode mit dem gleichen Stream nacheinander aufgerufen wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Drawing.Image> Klasse unterstützt keine alpha Transparenz in Bitmaps. Um alpha Transparenz zu aktivieren, verwenden Sie PNG-Bilder mit 32 Bits pro Pixel.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Stream besitzt kein gültiges Bildformat keine  
+  
+ - oder -   
+  
+ <paramref name="stream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromStream">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Image FromStream (System.IO.Stream stream, bool useEmbeddedColorManagement, bool validateImageData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Image FromStream(class System.IO.Stream stream, bool useEmbeddedColorManagement, bool validateImageData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.FromStream(System.IO.Stream,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="useEmbeddedColorManagement" Type="System.Boolean" />
+        <Parameter Name="validateImageData" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Ein <see cref="T:System.IO.Stream" />, der die Daten für diese <see cref="T:System.Drawing.Image" /> enthält.</param>
+        <param name="useEmbeddedColorManagement">
+          <see langword="true" /> für die Verwendung der im Datenstream eingebetteten Farbverwaltungsinformationen, andernfalls <see langword="false" />.</param>
+        <param name="validateImageData">
+          <see langword="true" /> für die Überprüfung der Bilddaten, andernfalls <see langword="false" />.</param>
+        <summary>Erstellt ein <see cref="T:System.Drawing.Image" /> aus dem angegebenen Datenstream. Optional werden dabei eingebettete Farbverwaltungsinformationen verwendet und die Bilddaten überprüft.</summary>
+        <returns>Die <see cref="T:System.Drawing.Image" />, die von dieser Methode erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `useEmbeddedColorManagement` Parameter gibt an, ob das neue <xref:System.Drawing.Image> Farbkorrektur entsprechend Farbverwaltungsinformationen, der im Datenstream eingebetteten anwendet. Eingebettete Informationen zählen International Farbe Consortium (ICC) Profilen, Gammawerte und Chromatizität.  
+  
+> [!NOTE]
+>  Die <xref:System.Drawing.Image> Klasse unterstützt keine alpha Transparenz in Bitmaps. Um alpha Transparenz zu aktivieren, verwenden Sie PNG-Bilder mit 32 Bits pro Pixel.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Stream muss ein gültiges Bildformat nicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.RectangleF GetBounds (ref System.Drawing.GraphicsUnit pageUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.RectangleF GetBounds(valuetype System.Drawing.GraphicsUnit&amp; pageUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.GetBounds(System.Drawing.GraphicsUnit@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageUnit" Type="System.Drawing.GraphicsUnit&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="pageUnit">Einer der <see cref="T:System.Drawing.GraphicsUnit" />-Werte, der die Maßeinheit für das umschließende Rechteck angibt.</param>
+        <summary>Ruft die Grenzen des Bilds in der angegebenen Einheit ab.</summary>
+        <returns>Das <see cref="T:System.Drawing.RectangleF" />, das die Grenzen des Bilds in der angegebenen Einheit darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Bitmap aus geladen ein <xref:System.Drawing.Icon> behandeln Sie mithilfe der <xref:System.Drawing.GraphicsUnit> Enumeration sowie zum Verwenden der <xref:System.Drawing.Rectangle.Round%2A> Methode Rechtecks einer Bitmap gezeichnet werden soll.  
+  
+ In diesem Beispiel dient, die mit Windows Forms verwendet werden. Erstellen Sie ein Formular, das eine Schaltfläche mit dem Namen enthält `Button2`. Fügen Sie den Code in das Formular, und ordnen Sie diese Methode mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+ [!code-cpp[System.Drawing.BitmapMembers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.BitmapMembers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.BitmapMembers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BitmapMembers/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEncoderParameterList">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.EncoderParameters GetEncoderParameterList (Guid encoder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Imaging.EncoderParameters GetEncoderParameterList(valuetype System.Guid encoder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.GetEncoderParameterList(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Eine GUID, die den Bildencoder angibt.</param>
+        <summary>Gibt Informationen über die Parameter zurück, die vom angegebenen Bildencoder unterstützt werden.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Drawing.Imaging.EncoderParameters" />, die ein Array von <see cref="T:System.Drawing.Imaging.EncoderParameter" />-Objekten enthält. Jeder <see cref="T:System.Drawing.Imaging.EncoderParameter" /> enthält Informationen zu einem der vom angegebenen Bildencoder unterstützten Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFrameCount">
+      <MemberSignature Language="C#" Value="public int GetFrameCount (System.Drawing.Imaging.FrameDimension dimension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetFrameCount(class System.Drawing.Imaging.FrameDimension dimension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.GetFrameCount(System.Drawing.Imaging.FrameDimension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dimension" Type="System.Drawing.Imaging.FrameDimension" />
+      </Parameters>
+      <Docs>
+        <param name="dimension">Eine <see cref="T:System.Drawing.Imaging.FrameDimension" />, die die Identität des Abmessungstyps angibt.</param>
+        <summary>Gibt die Anzahl der Rahmen in der angegebenen Abmessung zurück.</summary>
+        <returns>Die Anzahl der Rahmen in der angegebenen Abmessung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt Informationen zu mehreren Rahmen-Images, die in zwei Formaten stammen: mehrere Seiten- und mehrere Auflösung.  
+  
+ Ein mehrseitiges-Image ist ein Bild, das mehr als ein Bild enthält. Jede Seite enthält eine einzelne Bild (oder Rahmen). Diese Seiten (oder Bilder oder Bilder) werden in der Regel nacheinander erzeugt eine animierte Sequenz ist, z. B. eine animiertes GIF-Datei angezeigt.  
+  
+ Ein Bild mit mehreren-Auflösung ist ein Bild, das mehr als eine Kopie eines Bilds in unterschiedlichen Auflösungen enthält. Dies wird häufig von MIP-Zuordnung verwendet, wenn die Auflösung des Bilds zum Zeichnen verwendeten bestimmt die angezeigten Bildgröße. [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]kann eine beliebige Anzahl von Seiten (Bilder oder Bilder), sowie eine beliebige Anzahl von Lösungen unterstützen. Die definierten Dimensionen sind Eigenschaften von der <xref:System.Drawing.Imaging.FrameDimension>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPixelFormatSize">
+      <MemberSignature Language="C#" Value="public static int GetPixelFormatSize (System.Drawing.Imaging.PixelFormat pixfmt);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetPixelFormatSize(valuetype System.Drawing.Imaging.PixelFormat pixfmt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.GetPixelFormatSize(System.Drawing.Imaging.PixelFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pixfmt" Type="System.Drawing.Imaging.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="pixfmt">Der <see cref="T:System.Drawing.Imaging.PixelFormat" />-Member, der das Format angibt, für das die Größe gesucht werden soll.</param>
+        <summary>Gibt die Farbtiefe des angegebenen Pixelformats in der Anzahl der Bits pro Pixel zurück.</summary>
+        <returns>Die Farbtiefe des angegebenen Pixelformats.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyItem">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.PropertyItem GetPropertyItem (int propid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Imaging.PropertyItem GetPropertyItem(int32 propid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.GetPropertyItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PropertyItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propid" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="propid">Die ID des abzurufenden Eigenschaftenelements.</param>
+        <summary>Ruft das angegebene Eigenschaftenelement aus diesem <see cref="T:System.Drawing.Image" /> ab.</summary>
+        <returns>Das von dieser Methode abgerufene <see cref="T:System.Drawing.Imaging.PropertyItem" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der Eigenschaftenelement-IDs und Links zu weiteren Informationen, finden Sie unter <xref:System.Drawing.Imaging.PropertyItem.Id%2A>.  
+  
+ Es ist schwierig, Eigenschaftenelemente festgelegt, da die <xref:System.Drawing.Imaging.PropertyItem> -Klasse verfügt über keine öffentlichen Konstruktoren. Eine Möglichkeit zum Umgehen dieser Einschränkung besteht darin, abzurufen eine <xref:System.Drawing.Imaging.PropertyItem> durch Abrufen der <xref:System.Drawing.Image.PropertyItems%2A> Eigenschaftswert oder das Aufrufen der <xref:System.Drawing.Image.GetPropertyItem%2A> Methode eine <xref:System.Drawing.Image> schon Items-Eigenschaft. Können Sie die Felder der Festlegen der <xref:System.Drawing.Imaging.PropertyItem> und übergeben sie an <xref:System.Drawing.Image.SetPropertyItem%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Image.GetPropertyItem%2A> und <xref:System.Drawing.Image.SetPropertyItem%2A> Methoden. Dieses Beispiel ruft <xref:System.Drawing.Image.GetPropertyItem%2A> einen ID-Wert übergeben. Für eine Liste von ID-finden Sie unter Werte <xref:System.Drawing.Imaging.PropertyItem.Id%2A>. In diesem Beispiel dient, die mit Windows Forms verwendet werden. Um dieses Beispiel auszuführen, fügen Sie ihn in ein Formular und behandeln Sie des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis durch Aufrufen der `DemonstratePropertyItem` -Methode auf und übergibt `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.ImageExample#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.ImageExample#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.ImageExample#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Bildformat dieses Bilds unterstützt nicht die Eigenschaftselemente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetThumbnailImage">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image GetThumbnailImage (int thumbWidth, int thumbHeight, System.Drawing.Image.GetThumbnailImageAbort callback, IntPtr callbackData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Image GetThumbnailImage(int32 thumbWidth, int32 thumbHeight, class System.Drawing.Image/GetThumbnailImageAbort callback, native int callbackData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.GetThumbnailImage(System.Int32,System.Int32,System.Drawing.Image.GetThumbnailImageAbort,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thumbWidth" Type="System.Int32" />
+        <Parameter Name="thumbHeight" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.Drawing.Image+GetThumbnailImageAbort" />
+        <Parameter Name="callbackData" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="thumbWidth">Die Breite der angeforderten Miniaturansicht in Pixel.</param>
+        <param name="thumbHeight">Die Höhe der angeforderten Miniaturansicht in Pixel.</param>
+        <param name="callback">Ein <see cref="T:System.Drawing.Image.GetThumbnailImageAbort" />-Delegat.  
+  
+ **Hinweis** müssen Sie einen Delegaten erstellen und übergeben Sie einen Verweis auf den Delegaten als die <c>Rückruf</c> Parameter der Delegat wird jedoch nicht verwendet.</param>
+        <param name="callbackData">Dieser Wert muss <see cref="F:System.IntPtr.Zero" /> sein.</param>
+        <summary>Gibt eine Miniaturansicht für dieses <see cref="T:System.Drawing.Image" /> zurück.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Image" />, das die Miniaturansicht darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Drawing.Image> eingebettete Miniaturansicht, enthält diese Methode ruft die eingebettete Miniaturansicht ab und wird auf die angeforderte Größe skaliert. Wenn die <xref:System.Drawing.Image> enthält keine eingebettete Miniaturansicht, diese Methode erstellt ein Miniaturbild durch zentrales Skalieren der Hauptbild.  
+  
+ Die <xref:System.Drawing.Image.GetThumbnailImage%2A> Methode funktioniert gut, wenn die angeforderte Miniaturansicht eine Größe von ca. 120 x 120 Pixel aufweist. Wenn Sie eine große Miniaturansicht (z. B. 300 x 300) von Anfordern einer <xref:System.Drawing.Image> , der eine eingebettete Miniaturansicht hat, gibt es möglicherweise einen deutlichen Qualität der Miniaturansicht. Es könnte besser sein, der (statt Skalierung eingebettete Miniaturansicht) durch den Aufruf zu skalieren, die <xref:System.Drawing.Graphics.DrawImage%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt, und es wird eine Miniaturansicht angezeigt. Dieser Delegat wird nie aufgerufen.  
+  
+ [!code-csharp[System.Drawing.Misc3#GetThumbnail](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#getthumbnail)]
+ [!code-vb[System.Drawing.Misc3#GetThumbnail](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#getthumbnail)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe dieses <see cref="T:System.Drawing.Image" /> in Pixel ab.</summary>
+        <value>Die Höhe dieser <see cref="T:System.Drawing.Image" /> in Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer neuen Bitmap aus einer Datei mit der <xref:System.Drawing.Bitmap.GetPixel%2A> und <xref:System.Drawing.Bitmap.SetPixel%2A> Methoden zum Neueinfärben des Bilds. Darüber hinaus verwendet der <xref:System.Drawing.Image.PixelFormat%2A> und <xref:System.Drawing.Image.Height%2A> Eigenschaften.  
+  
+ Dieses Beispiel wurde entworfen, um mit einer Windows Forms verwendet werden, enthalten eine <xref:System.Windows.Forms.Label>, <xref:System.Windows.Forms.PictureBox>, und <xref:System.Windows.Forms.Button> mit dem Namen `Label1`, `PictureBox1`, und `Button1`zugeordnet. Fügen Sie den Code in das Formular, und ordnen Sie die `Button1_Click` Methode mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+ [!code-cpp[System.Drawing.ImageExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ImageExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ImageExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalResolution">
+      <MemberSignature Language="C#" Value="public float HorizontalResolution { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 HorizontalResolution" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.HorizontalResolution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die horizontale Auflösung dieses <see cref="T:System.Drawing.Image" /> in Pixel pro Zoll ab.</summary>
+        <value>Die horizontale Auflösung dieses <see cref="T:System.Drawing.Image" /> in Pixel pro Zoll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAlphaPixelFormat">
+      <MemberSignature Language="C#" Value="public static bool IsAlphaPixelFormat (System.Drawing.Imaging.PixelFormat pixfmt);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsAlphaPixelFormat(valuetype System.Drawing.Imaging.PixelFormat pixfmt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.IsAlphaPixelFormat(System.Drawing.Imaging.PixelFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pixfmt" Type="System.Drawing.Imaging.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="pixfmt">Der zu überprüfende <see cref="T:System.Drawing.Imaging.PixelFormat" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Pixelformat für dieses <see cref="T:System.Drawing.Image" /> Alphainformationen enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="pixfmt" /> Alphainformationen enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCanonicalPixelFormat">
+      <MemberSignature Language="C#" Value="public static bool IsCanonicalPixelFormat (System.Drawing.Imaging.PixelFormat pixfmt);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsCanonicalPixelFormat(valuetype System.Drawing.Imaging.PixelFormat pixfmt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.IsCanonicalPixelFormat(System.Drawing.Imaging.PixelFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pixfmt" Type="System.Drawing.Imaging.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="pixfmt">Der zu überprüfende <see cref="T:System.Drawing.Imaging.PixelFormat" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Pixelformat 32 Bits pro Pixel beträgt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="pixfmt" /> kanonisch ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das kanonische Pixelformat gibt ein Pixelformat 32 Bits pro Pixel an. Dieses Format Gibt 24-Bit-Farbtiefe und einen 8-Bit-alpha-Kanal.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExtendedPixelFormat">
+      <MemberSignature Language="C#" Value="public static bool IsExtendedPixelFormat (System.Drawing.Imaging.PixelFormat pixfmt);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsExtendedPixelFormat(valuetype System.Drawing.Imaging.PixelFormat pixfmt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.IsExtendedPixelFormat(System.Drawing.Imaging.PixelFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pixfmt" Type="System.Drawing.Imaging.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="pixfmt">Die zu überprüfende <see cref="T:System.Drawing.Imaging.PixelFormat" />-Enumeration.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Pixelformat 64 Bits pro Pixel beträgt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="pixfmt" /> erweitert wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Palette">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.ColorPalette Palette { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Imaging.ColorPalette Palette" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.Palette" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ColorPalette</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die für dieses <see cref="T:System.Drawing.Image" /> verwendete Farbpalette ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Drawing.Imaging.ColorPalette" />, die die für dieses <see cref="T:System.Drawing.Image" /> verwendete Farbpalette darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt eine Kopie der <xref:System.Drawing.Imaging.ColorPalette> verwendet, die von diesem Objekt <xref:System.Drawing.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhysicalDimension">
+      <MemberSignature Language="C#" Value="public System.Drawing.SizeF PhysicalDimension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.SizeF PhysicalDimension" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.PhysicalDimension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.SizeF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite und Höhe dieses Bilds ab.</summary>
+        <value>Eine <see cref="T:System.Drawing.SizeF" />-Struktur, die die Breite und Höhe dieses <see cref="T:System.Drawing.Image" /> darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Bild eine Bitmap ist, werden die Breite und Höhe in Pixel zurückgegeben. Wenn das Bild eine Metadatei ist, werden die Breite und Höhe in Einheiten von 0,01 Millimeter zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelFormat">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.PixelFormat PixelFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Imaging.PixelFormat PixelFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.PixelFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Pixelformat für dieses <see cref="T:System.Drawing.Image" /> ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.PixelFormat" />, das das Pixelformat für dieses <see cref="T:System.Drawing.Image" /> darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer neuen Bitmap aus einer Datei mit der <xref:System.Drawing.Bitmap.GetPixel%2A> und <xref:System.Drawing.Bitmap.SetPixel%2A> Methoden zum Neueinfärben des Bilds. Darüber hinaus verwendet die <xref:System.Drawing.Image.PixelFormat%2A> Eigenschaft.  
+  
+ Dieses Beispiel wurde entworfen, um mit einem Windows Form verwendet werden, enthalten eine <xref:System.Windows.Forms.Label>, <xref:System.Windows.Forms.PictureBox> und <xref:System.Windows.Forms.Button> mit dem Namen `Label1`, `PictureBox1`, und `Button1`zugeordnet. Fügen Sie den Code in das Formular, und ordnen Sie die `Button1_Click` Methode mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+ [!code-cpp[System.Drawing.ImageExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ImageExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ImageExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyIdList">
+      <MemberSignature Language="C#" Value="public int[] PropertyIdList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] PropertyIdList" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.PropertyIdList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft IDs für die in diesem <see cref="T:System.Drawing.Image" /> gespeicherten Eigenschaftenelemente ab.</summary>
+        <value>Ein Array von Eigenschaften-IDs mit je einer Eigenschaften-ID für jedes in diesem Bild gespeicherte Eigenschaftenelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Bild keine Eigenschaftenelemente hat oder das Bildformat Eigenschaftenelemente nicht unterstützt die <xref:System.Drawing.Image.PropertyIdList%2A> Eigenschaft gibt ein leeres Array (d. h. ein Array der Länge 0 (null)).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyItems">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.PropertyItem[] PropertyItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Imaging.PropertyItem[] PropertyItems" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.PropertyItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PropertyItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle in diesem <see cref="T:System.Drawing.Image" /> gespeicherten Eigenschaftenelemente (Metadaten) ab.</summary>
+        <value>Ein Array von <see cref="T:System.Drawing.Imaging.PropertyItem" />-Objekten, eines für jedes im Bild gespeicherte Eigenschaftenelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Bild keine Eigenschaftenelemente hat oder das Bildformat Eigenschaftenelemente nicht unterstützt <xref:System.Drawing.Image.PropertyItems%2A> ein leeres Array (d. h. ein Array der Länge 0 (null)) zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Anzeigen der Metadaten in einem Image mithilfe der <xref:System.Drawing.Imaging.PropertyItem?displayProperty=nameWithType> Klasse und die <xref:System.Drawing.Image.PropertyItems%2A> Eigenschaft.  
+  
+ In diesem Beispiel soll eine verwendet ein Windows-Formular, importiert der <xref:System.Drawing.Imaging?displayProperty=nameWithType> Namespace. Fügen Sie den Code in das Formular, und ändern Sie den Pfad `fakePhoto.jpg` so zu einer Bilddatei auf Ihrem System verweist. Rufen Sie die `ExtractMetaData` Methode beim Verarbeiten des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.ImageExample#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.ImageExample#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.ImageExample#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawFormat">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.ImageFormat RawFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Imaging.ImageFormat RawFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.RawFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Dateiformat dieses <see cref="T:System.Drawing.Image" /> ab.</summary>
+        <value>Das <see cref="T:System.Drawing.Imaging.ImageFormat" />, das das Dateiformat dieses <see cref="T:System.Drawing.Image" /> darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePropertyItem">
+      <MemberSignature Language="C#" Value="public void RemovePropertyItem (int propid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemovePropertyItem(int32 propid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.RemovePropertyItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propid" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="propid">Die ID des zu entfernenden Eigenschaftenelements.</param>
+        <summary>Entfernt das angegebene Eigenschaftenelement aus diesem <see cref="T:System.Drawing.Image" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist schwierig, Eigenschaftenelemente festgelegt, da die <xref:System.Drawing.Imaging.PropertyItem> -Klasse verfügt über keine öffentlichen Konstruktoren. Eine Möglichkeit zum Umgehen dieser Einschränkung besteht darin, abzurufen eine <xref:System.Drawing.Imaging.PropertyItem> durch Abrufen der <xref:System.Drawing.Image.PropertyItems%2A> Eigenschaftswert oder das Aufrufen der <xref:System.Drawing.Image.GetPropertyItem%2A> Methode eine <xref:System.Drawing.Image> schon Items-Eigenschaft. Können Sie die Felder der Festlegen der <xref:System.Drawing.Imaging.PropertyItem> und übergeben sie an <xref:System.Drawing.Image.SetPropertyItem%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Bild enthält nicht die angeforderte Eigenschaft-Element.  
+  
+ - oder -   
+  
+ Das Bildformat für dieses Image unterstützt Items-Eigenschaft nicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateFlip">
+      <MemberSignature Language="C#" Value="public void RotateFlip (System.Drawing.RotateFlipType rotateFlipType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateFlip(valuetype System.Drawing.RotateFlipType rotateFlipType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.RotateFlip(System.Drawing.RotateFlipType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rotateFlipType" Type="System.Drawing.RotateFlipType" />
+      </Parameters>
+      <Docs>
+        <param name="rotateFlipType">Ein <see cref="T:System.Drawing.RotateFlipType" />-Member, der den Typ der Drehung bzw. des Kippens für das Bild angibt.</param>
+        <summary>Dreht und/oder kippt das <see cref="T:System.Drawing.Image" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Image.RotateFlip%2A> Methode wird das Bild im Uhrzeigersinn gedreht.  
+  
+ Wenn Sie möchten auf einem Bild gezeichnet werden soll, sobald es gedreht wurde, sollten Sie immer ein neues Grafikobjekt aus dem Image abrufen andernfalls kann eine Ausnahme auftreten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Aufrufen der <xref:System.Drawing.Image.RotateFlip%2A> Methode auf eine <xref:System.Drawing.Image> und <xref:System.Drawing.RotateFlipType> Enumeration.  
+  
+ Dieses Beispiel wurde entworfen, um mit einem Windows Form verwendet werden, enthalten eine <xref:System.Windows.Forms.PictureBox> mit dem Namen `PictureBox1` und eine Schaltfläche mit dem Namen `Button1`. Fügen Sie den Code in ein Formular, rufen `InitializeBitmap` vom Konstruktor des Formulars und das Verknüpfen `Button1_Click` mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis. Stellen Sie sicher, dass der Dateipfad für die Bitmap auf Ihrem System gültig ist.  
+  
+ [!code-cpp[System.Drawing.BitmapMembers#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.BitmapMembers#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.BitmapMembers#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BitmapMembers/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.Save(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Eine Zeichenfolge, die den Namen der Datei enthält, in der dieses <see cref="T:System.Drawing.Image" /> gespeichert werden soll.</param>
+        <summary>Speichert dieses <see cref="T:System.Drawing.Image" /> in der angegebenen Datei oder dem Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn für das Dateiformat des Bilds kein Encoder vorhanden ist, wird der Encoder Portable Network Graphics (PNG) verwendet. Bei Verwendung der <xref:System.Drawing.Image.Save%2A> Methode, um ein Bild als Windows Metafile-Format (WMF) oder Enhanced Metafile-Format (EMF)-Datei, die sich ergebende Datei speichern als Portable Network Graphics (PNG)-Datei gespeichert ist. Dieses Verhalten tritt auf, weil die [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] -Komponente von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verfügt nicht über einen Encoder, die Sie verwenden können, um Dateien als WMF oder EMF-Dateien zu speichern.  
+  
+ Speichern das Bild in die gleiche Datei, die von der Erstellung ist nicht zulässig und löst eine Ausnahme aus.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Aufrufen der <xref:System.Drawing.Image.Save%2A> Methode. In diesem Beispiel dient, die mit Windows Forms verwendet werden. Erstellen Sie ein Formular, das eine Schaltfläche mit dem Namen enthält `Button5`. Fügen Sie den Code in das Formular, und ordnen Sie die Methode, mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+ [!code-cpp[System.Drawing.ImageExample#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.ImageExample#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.ImageExample#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filename" /> ist gleich <see langword="null." />.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Das Image wurde mit dem falschen Bildformat gespeichert.  
+  
+ - oder -   
+  
+ Das Image wurde in die gleiche Datei gespeichert, die es erstellt wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.IO.Stream stream, System.Drawing.Imaging.ImageFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.Stream stream, class System.Drawing.Imaging.ImageFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.Save(System.IO.Stream,System.Drawing.Imaging.ImageFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="format" Type="System.Drawing.Imaging.ImageFormat" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der <see cref="T:System.IO.Stream" /> zum Speichern des Bilds.</param>
+        <param name="format">Ein <see cref="T:System.Drawing.Imaging.ImageFormat" />, das das Format des gespeicherten Bilds angibt.</param>
+        <summary>Speichert dieses Bild im angegebenen Format im angegebenen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten das Speichern eines Bilds in der gleichen Stream, der zur Erstellung verwendet wurde. Auf diese Weise kann der Stream beschädigt.  
+  
+ Das Bild muss in den Stream mit einem Offset von 0 (null) gespeichert werden. Wenn zusätzlichen Daten in den Stream geschrieben wurde, und speichern Sie das Bild, werden das Image-Daten im Datenstrom beschädigt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> oder <paramref name="format" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Das Image wurde mit dem falschen Bildformat gespeichert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string filename, System.Drawing.Imaging.ImageFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string filename, class System.Drawing.Imaging.ImageFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.Save(System.String,System.Drawing.Imaging.ImageFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="format" Type="System.Drawing.Imaging.ImageFormat" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Eine Zeichenfolge, die den Namen der Datei enthält, in der dieses <see cref="T:System.Drawing.Image" /> gespeichert werden soll.</param>
+        <param name="format">Das <see cref="T:System.Drawing.Imaging.ImageFormat" /> für dieses <see cref="T:System.Drawing.Image" />.</param>
+        <summary>Speichert dieses <see cref="T:System.Drawing.Image" /> im angegebenen Format in der angegebenen Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Bitmap aus einem Typ erstellt und zum Verwenden der <xref:System.Drawing.Image.Save%2A> Methode. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `ConstructFromResourceSaveAsGif` -Methode auf und übergibt `e` als<xref:System.Windows.Forms.PaintEventArgs>  
+  
+ [!code-cpp[System.Drawing.BmpCtorAndSave#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BmpCtorAndSave/cpp/form1.cpp#1)]
+ [!code-csharp[System.Drawing.BmpCtorAndSave#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BmpCtorAndSave/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.BmpCtorAndSave#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BmpCtorAndSave/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filename" />oder <paramref name="format" /> ist<see langword="null." /></exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Das Image wurde mit dem falschen Bildformat gespeichert.  
+  
+ - oder -   
+  
+ Das Image wurde in die gleiche Datei gespeichert, die es erstellt wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.IO.Stream stream, System.Drawing.Imaging.ImageCodecInfo encoder, System.Drawing.Imaging.EncoderParameters encoderParams);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.Stream stream, class System.Drawing.Imaging.ImageCodecInfo encoder, class System.Drawing.Imaging.EncoderParameters encoderParams) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.Save(System.IO.Stream,System.Drawing.Imaging.ImageCodecInfo,System.Drawing.Imaging.EncoderParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.ImageCodecInfo" />
+        <Parameter Name="encoderParams" Type="System.Drawing.Imaging.EncoderParameters" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der <see cref="T:System.IO.Stream" /> zum Speichern des Bilds.</param>
+        <param name="encoder">Das <see cref="T:System.Drawing.Imaging.ImageCodecInfo" /> für dieses <see cref="T:System.Drawing.Image" />.</param>
+        <param name="encoderParams">Eine Instanz von <see cref="T:System.Drawing.Imaging.EncoderParameters" />, die die vom Bildencoder verwendeten Parameter angibt.</param>
+        <summary>Speichert dieses Bild mit den angegebenen Encoder- und Bildencoderparametern im angegebenen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Speichern Sie ein Bild nicht in den gleichen Stream, der verwendet wurde, um das Image zu erstellen. Auf diese Weise kann der Stream beschädigt.  
+  
+ Das Bild muss in den Stream mit einem Offset von 0 (null) gespeichert werden. Wenn zusätzlichen Daten in den Stream geschrieben wurde, und speichern Sie das Bild, werden das Image-Daten im Datenstrom beschädigt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Das Image wurde mit dem falschen Bildformat gespeichert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string filename, System.Drawing.Imaging.ImageCodecInfo encoder, System.Drawing.Imaging.EncoderParameters encoderParams);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string filename, class System.Drawing.Imaging.ImageCodecInfo encoder, class System.Drawing.Imaging.EncoderParameters encoderParams) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.Save(System.String,System.Drawing.Imaging.ImageCodecInfo,System.Drawing.Imaging.EncoderParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.ImageCodecInfo" />
+        <Parameter Name="encoderParams" Type="System.Drawing.Imaging.EncoderParameters" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Eine Zeichenfolge, die den Namen der Datei enthält, in der dieses <see cref="T:System.Drawing.Image" /> gespeichert werden soll.</param>
+        <param name="encoder">Das <see cref="T:System.Drawing.Imaging.ImageCodecInfo" /> für dieses <see cref="T:System.Drawing.Image" />.</param>
+        <param name="encoderParams">Eine Instanz von <see cref="T:System.Drawing.Imaging.EncoderParameters" />, die für dieses <see cref="T:System.Drawing.Image" /> verwendet werden soll.</param>
+        <summary>Speichert dieses <see cref="T:System.Drawing.Image" /> mit den angegebenen Encoder- und Bildencoderparametern in der angegebenen Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Speichern das Bild in die gleiche Datei, die von der Erstellung ist nicht zulässig und löst eine Ausnahme aus.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Drawing.Bitmap> Objekt aus einer BMP-Datei. Der Code speichert die Bitmap in drei JPEG-Dateien mit einer anderen Qualitätsstufe.  
+  
+ [!code-cpp[System.Drawing.ClassicImagingEndcoder3#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEndcoder3/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicImagingEndcoder3#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEndcoder3/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicImagingEndcoder3#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImagingEndcoder3/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filename" />oder <paramref name="encoder" /> ist<see langword="null." /></exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Das Image wurde mit dem falschen Bildformat gespeichert.  
+  
+ - oder -   
+  
+ Das Image wurde in die gleiche Datei gespeichert, die es erstellt wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAdd">
+      <MemberSignature Language="C#" Value="public void SaveAdd (System.Drawing.Imaging.EncoderParameters encoderParams);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveAdd(class System.Drawing.Imaging.EncoderParameters encoderParams) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.SaveAdd(System.Drawing.Imaging.EncoderParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoderParams" Type="System.Drawing.Imaging.EncoderParameters" />
+      </Parameters>
+      <Docs>
+        <param name="encoderParams">Eine Instanz von <see cref="T:System.Drawing.Imaging.EncoderParameters" /> mit Parametern, die für den Bildencoder erforderlich sind, der zum Speichern und Hinzufügen verwendet wird.</param>
+        <summary>Fügt der in einem vorherigen Aufruf der <see cref="Overload:System.Drawing.Image.Save" />-Methode angegebenen Datei bzw. dem Stream einen Rahmen hinzu. Mit dieser Methode speichern Sie ausgewählte Rahmen eines Bilds mit mehreren Rahmen in einem anderen Bild mit mehreren Rahmen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAdd">
+      <MemberSignature Language="C#" Value="public void SaveAdd (System.Drawing.Image image, System.Drawing.Imaging.EncoderParameters encoderParams);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveAdd(class System.Drawing.Image image, class System.Drawing.Imaging.EncoderParameters encoderParams) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.SaveAdd(System.Drawing.Image,System.Drawing.Imaging.EncoderParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="encoderParams" Type="System.Drawing.Imaging.EncoderParameters" />
+      </Parameters>
+      <Docs>
+        <param name="image">Ein <see cref="T:System.Drawing.Image" />, das den hinzuzufügenden Rahmen enthält.</param>
+        <param name="encoderParams">Eine Instanz von <see cref="T:System.Drawing.Imaging.EncoderParameters" /> mit Parametern, die für den Bildencoder erforderlich sind, der zum Speichern und Hinzufügen verwendet wird.</param>
+        <summary>Fügt der in einem vorherigen Aufruf der <see cref="Overload:System.Drawing.Image.Save" />-Methode angegebenen Datei bzw. dem Stream einen Rahmen hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="image" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectActiveFrame">
+      <MemberSignature Language="C#" Value="public int SelectActiveFrame (System.Drawing.Imaging.FrameDimension dimension, int frameIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 SelectActiveFrame(class System.Drawing.Imaging.FrameDimension dimension, int32 frameIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.SelectActiveFrame(System.Drawing.Imaging.FrameDimension,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dimension" Type="System.Drawing.Imaging.FrameDimension" />
+        <Parameter Name="frameIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dimension">Eine <see cref="T:System.Drawing.Imaging.FrameDimension" />, die die Identität des Abmessungstyps angibt.</param>
+        <param name="frameIndex">Der Index des aktiven Rahmens.</param>
+        <summary>Wählt den durch die angegebene Abmessung und den Index angegebenen Rahmen aus.</summary>
+        <returns>Gibt immer 0 zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die möglichen Werte für die `dimensionID` Parameter sind Eigenschaften von der <xref:System.Drawing.Imaging.FrameDimension>. Diese können verwendet werden, um ein Image zu identifizieren, indem die Zeit, die Auflösung oder die Seitenzahl.  
+  
+ Beim Aufrufen dieser Methode bewirkt, dass alle Änderungen, die auf den vorherigen Frame verworfen werden. Bevor Sie einen anderen Frame auswählen, speichern Sie alle Änderungen an den aktuellen Frame, einschließlich Änderungen am Pixelwerte und Eigenschaften. Wenn der Aufruf der <xref:System.Drawing.Image.SelectActiveFrame%2A> Methode erfolgreich ist (eine Ausnahme tritt nicht auf), die Methode gibt 0 zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyItem">
+      <MemberSignature Language="C#" Value="public void SetPropertyItem (System.Drawing.Imaging.PropertyItem propitem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPropertyItem(class System.Drawing.Imaging.PropertyItem propitem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.SetPropertyItem(System.Drawing.Imaging.PropertyItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propitem" Type="System.Drawing.Imaging.PropertyItem" />
+      </Parameters>
+      <Docs>
+        <param name="propitem">Das zu speichernde <see cref="T:System.Drawing.Imaging.PropertyItem" />.</param>
+        <summary>Speichert ein Eigenschaftenelement (Metadaten) in diesem <see cref="T:System.Drawing.Image" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Bildformat Eigenschaftenelemente nicht unterstützt, löst diese Methode <xref:System.ArgumentException> mit der Meldung "Die Eigenschaft nicht unterstützt." Wenn das Bildformat Eigenschaftenelemente unterstützt jedoch keine die speziellen Eigenschaft, die Sie festlegen möchten, wird diese Methode ignoriert den Versuch, jedoch wird keine Ausnahme ausgelöst.  
+  
+ Es ist schwierig, Eigenschaftenelemente festgelegt, da die <xref:System.Drawing.Imaging.PropertyItem> -Klasse verfügt über keine öffentlichen Konstruktoren. Eine Möglichkeit zum Umgehen dieser Einschränkung besteht darin, abzurufen eine <xref:System.Drawing.Imaging.PropertyItem> durch Abrufen der <xref:System.Drawing.Image.PropertyItems%2A> Eigenschaftswert oder das Aufrufen der <xref:System.Drawing.Image.GetPropertyItem%2A> Methode eine <xref:System.Drawing.Image> schon Items-Eigenschaft. Können Sie die Felder der Festlegen der <xref:System.Drawing.Imaging.PropertyItem> und übergeben sie an <xref:System.Drawing.Image.SetPropertyItem%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Image.GetPropertyItem%2A> und <xref:System.Drawing.Image.SetPropertyItem%2A> Methoden. In diesem Beispiel dient, die mit Windows Forms verwendet werden. Um dieses Beispiel auszuführen, fügen Sie ihn in ein Formular und behandeln Sie des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis durch Aufrufen der `DemonstratePropertyItem` -Methode auf und übergibt `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.ImageExample#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.ImageExample#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.ImageExample#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Bildformat dieses Bilds unterstützt nicht die Eigenschaftselemente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite und Höhe dieses Bilds in Pixel ab.</summary>
+        <value>Eine <see cref="T:System.Drawing.Size" />-Struktur, die die Breite und Höhe dieses Bilds in Pixel darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Image.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">Die mit Daten zu füllende <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</param>
+        <param name="context">Das Ziel (siehe <see cref="T:System.Runtime.Serialization.StreamingContext" />) dieser Serialisierung.</param>
+        <summary>Füllt eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den Daten auf, die zum Serialisieren des Zielobjekts erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, das zusätzliche Daten zu dem Bild bereitstellt, oder legt dieses Objekt fest.</summary>
+        <value>Das <see cref="T:System.Object" />, das zusätzliche Daten zu dem Bild bereitstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalResolution">
+      <MemberSignature Language="C#" Value="public float VerticalResolution { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 VerticalResolution" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.VerticalResolution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vertikale Auflösung dieses <see cref="T:System.Drawing.Image" /> in Pixel pro Zoll ab.</summary>
+        <value>Die vertikale Auflösung dieses <see cref="T:System.Drawing.Image" /> in Pixel pro Zoll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Image.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite dieses <see cref="T:System.Drawing.Image" /> in Pixel ab.</summary>
+        <value>Die Breite dieses <see cref="T:System.Drawing.Image" /> in Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine neue <xref:System.Drawing.Bitmap> aus einer Datei mit der <xref:System.Drawing.Bitmap.GetPixel%2A> und <xref:System.Drawing.Bitmap.SetPixel%2A> Methoden zum Neueinfärben des Bilds. Darüber hinaus verwendet der <xref:System.Drawing.Image.PixelFormat%2A>, <xref:System.Drawing.Image.Width%2A>, und <xref:System.Drawing.Image.Height%2A> Eigenschaften.  
+  
+ Dieses Beispiel wurde entworfen, um mit einer Windows Forms verwendet werden, enthalten eine <xref:System.Windows.Forms.Label> ,<xref:System.Windows.Forms.PictureBox> und <xref:System.Windows.Forms.Button> mit dem Namen `Label1`, `PictureBox1` und `Button1`zugeordnet. Fügen Sie den Code in das Formular, und ordnen Sie die `Button1_Click` Methode mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+ [!code-cpp[System.Drawing.ImageExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ImageExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ImageExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

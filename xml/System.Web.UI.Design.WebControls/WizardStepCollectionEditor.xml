@@ -1,0 +1,124 @@
+<Type Name="WizardStepCollectionEditor" FullName="System.Web.UI.Design.WebControls.WizardStepCollectionEditor">
+  <TypeSignature Language="C#" Value="public class WizardStepCollectionEditor : System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WizardStepCollectionEditor extends System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WizardStepCollectionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.CollectionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen während der Entwurfszeit-Editor in einem Entwurfshost, z. B. Visual Studio 2005 für eine <see cref="T:System.Web.UI.WebControls.WizardStepCollection" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WizardStepCollectionEditor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WizardStepCollectionEditor.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> von Elementen in der Auflistung.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Web.UI.Design.WebControls.WizardStepCollectionEditor" /> -Klasse unter Verwendung der angegebenen <see cref="T:System.Type" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSelectMultipleInstances">
+      <MemberSignature Language="C#" Value="protected override bool CanSelectMultipleInstances ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanSelectMultipleInstances() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WizardStepCollectionEditor.CanSelectMultipleInstances" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob mehrere Instanzen ausgewählt werden können.</summary>
+        <returns>
+          <see langword="true" />Wenn mehrere Elemente gleichzeitig ausgewählt werden können andernfalls <see langword="false" />. Diese Implementierung gibt immer <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCollectionForm">
+      <MemberSignature Language="C#" Value="protected override System.ComponentModel.Design.CollectionEditor.CollectionForm CreateCollectionForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ComponentModel.Design.CollectionEditor/CollectionForm CreateCollectionForm() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WizardStepCollectionEditor.CreateCollectionForm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CollectionEditor+CollectionForm</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Formular zum Anzeigen und Bearbeiten der aktuellen Auflistung.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.Design.CollectionEditor.CollectionForm" /> als Benutzeroberfläche bereitstellen, für die Bearbeitung der auflistungs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected override object CreateInstance (Type itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object CreateInstance(class System.Type itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WizardStepCollectionEditor.CreateInstance(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Die <see cref="T:System.Type" /> Sammlung zu erstellen.</param>
+        <summary>Erstellt eine Instanz der Auflistung des angegebenen <see cref="T:System.Type" />.</summary>
+        <returns>Eine Auflistung des angegebenen <paramref name="itemType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewItemTypes">
+      <MemberSignature Language="C#" Value="protected override Type[] CreateNewItemTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type[] CreateNewItemTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WizardStepCollectionEditor.CreateNewItemTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Datentypen, die dieser Auflistung enthalten kann.</summary>
+        <returns>Ein Array von <see cref="T:System.Type" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung sieht in der Auflistung für die Eigenschaft "" und gibt die Rückgabe des Typs des Elements zurück. Rufen Sie nicht dies direkt. Verwenden Sie stattdessen die <xref:System.ComponentModel.Design.CollectionEditor.NewItemTypes%2A> Eigenschaft der Basisklasse. Verwenden der <xref:System.Web.UI.Design.WebControls.WizardStepCollectionEditor.CreateNewItemTypes%2A> -Methode, die standardmäßige Implementierung überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

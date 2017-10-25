@@ -1,0 +1,41 @@
+<Type Name="ToolBarButtonClickEventHandler" FullName="System.Windows.Forms.ToolBarButtonClickEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ToolBarButtonClickEventHandler(object sender, ToolBarButtonClickEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolBarButtonClickEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolBarButtonClickEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.ToolBarButtonClickEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.ToolBarButtonClickEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Windows.Forms.ToolBar.ButtonClick" />-Ereignisses eines <see cref="T:System.Windows.Forms.ToolBar" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Windows.Forms.ToolBarButtonClickEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zur Behandlung von Ereignissen mit Delegaten finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> Steuerelemente. Schaltflächen die Symbolleiste auf die Schaltfläche Auflistung zugewiesen sind, die Auflistung der Symbolleiste zugewiesen ist und die Symbolleiste zum Formular hinzugefügt wird. Auf der <xref:System.Windows.Forms.ToolBar.ButtonClick> -Ereignis für die Symbolleiste die <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> Eigenschaft von der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> ausgewertet wird, und das entsprechende Dialogfeld geöffnet. Dieser Code setzt voraus, dass eine <xref:System.Windows.Forms.Form>, wird ein <xref:System.Windows.Forms.OpenFileDialog>, <xref:System.Windows.Forms.SaveFileDialog>, und ein <xref:System.Windows.Forms.PrintDialog> instanziiert wurden.  
+  
+ [!code-cpp[Classic ToolBar.ToolBar Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBar.ToolBar Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBar.ToolBar Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

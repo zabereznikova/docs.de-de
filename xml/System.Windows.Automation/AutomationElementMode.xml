@@ -1,0 +1,69 @@
+<Type Name="AutomationElementMode" FullName="System.Windows.Automation.AutomationElementMode">
+  <TypeSignature Language="C#" Value="public enum AutomationElementMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AutomationElementMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.AutomationElementMode" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enthält Werte, die den Typ des Verweises, der beim Zurückgeben der Benutzeroberflächenautomatisierungs-Elemente angeben. Diese Werte werden verwendet, der <see cref="P:System.Windows.Automation.CacheRequest.AutomationElementMode" /> Eigenschaft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vollständige ist die Standardeinstellung, und gibt an, dass die zurückgegebenen Elemente ein vollständigen Verweises auf die zugrunde liegende enthalten [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)]. None gibt an, dass die zurückgegebenen Elemente über keinen Verweis auf die zugrunde liegende Benutzeroberfläche verfügen und nur zwischengespeicherte Informationen enthalten.  
+  
+ Bestimmte Operationen für Elemente, wie z. B. <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> oder <xref:System.Windows.Automation.AutomationElement.SetFocus%2A>, erfordern eine vollständige Referenz; es wird versucht, zum Ausführen dieser auf ein Element, das keine verfügt, führt zu einer <xref:System.InvalidOperationException>.  
+  
+ Verwenden keine kann gegebenenfalls nur Eigenschaften können Sie effizienter sein, wie es der Mehraufwand vermieden wird, Einrichten von vollständigen Verweise beteiligt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Sie den Modus auf einem <xref:System.Windows.Automation.CacheRequest>.  
+  
+ [!code-csharp[UIAClient_snip#183](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#183)]
+ [!code-vb[UIAClient_snip#183](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#183)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="Full" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.AutomationElementMode Full = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.AutomationElementMode.Full" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die zurückgegebenen Elemente einen vollständigen Verweis auf die zugrunde liegende verfügen [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.AutomationElementMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.AutomationElementMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die zurückgegebenen Elemente kein Verweis auf die zugrunde liegende haben [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] und nur zwischengespeicherte Informationen enthalten. In diesem Modus kann verwendet werden, um die Namen von Elementen in einem Listenfeld abzurufen, ohne Verweise auf die Elemente selbst.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

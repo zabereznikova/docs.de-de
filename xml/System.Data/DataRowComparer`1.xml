@@ -1,0 +1,137 @@
+<Type Name="DataRowComparer&lt;TRow&gt;" FullName="System.Data.DataRowComparer&lt;TRow&gt;">
+  <TypeSignature Language="C#" Value="public sealed class DataRowComparer&lt;TRow&gt; : System.Collections.Generic.IEqualityComparer&lt;TRow&gt; where TRow : DataRow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataRowComparer`1&lt;(class System.Data.DataRow) TRow&gt; extends System.Object implements class System.Collections.Generic.IEqualityComparer`1&lt;!TRow&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataRowComparer`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TRow">
+      <Constraints>
+        <BaseTypeName>System.Data.DataRow</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEqualityComparer&lt;TRow&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TRow">Der Typ der Objekte in der Regel verglichen werden <see cref="T:System.Data.DataRow" />.</typeparam>
+    <summary>Vergleicht zwei <see cref="T:System.Data.DataRow" /> Objekte auf Äquivalenz mit wertbasierte Vergleich.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse implementiert die <xref:System.Collections.Generic.IEqualityComparer%601> Schnittstelle und wertbasierte Semantik vergleichen <xref:System.Data.DataRow> Objekte. Diese Klasse ist erforderlich, da die standardmäßigen Implementierungen einiger satzbasierten Vorgänge (wie z. B. <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, und <xref:System.Linq.Enumerable.Except%2A>) verweisbasierten Semantik verwenden, um zu vergleichen <xref:System.Data.DataRow> Objektverweise anstelle von Vergleichen der <xref:System.Data.DataRow> Objektwerten. Die <xref:System.Data.DataRowComparer%601.Default%2A> Klasse wird verwendet, um die Werte von Vergleichen die <xref:System.Data.DataRow> Objekte und nicht die Objektverweise verglichen.  
+  
+ Diese Klasse kann nicht direkt instanziiert werden. Stattdessen die <xref:System.Data.DataRowComparer%601.Default%2A> Eigenschaft muss verwendet werden, um eine Singletoninstanz des Zurückgeben der <xref:System.Data.DataRowComparer%601.Default%2A> Klasse.  
+  
+ Diese Klasse ist statusfrei.  
+  
+ Diese Klasse ist versiegelt und kann nicht abgeleitet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Data.DataRowComparer&lt;TRow&gt; Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Data.DataRowComparer`1&lt;!TRow&gt; Default" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRowComparer`1.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowComparer&lt;TRow&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Singletoninstanz des <see cref="T:System.Data.DataRowComparer`1" />. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Eine Instanz von einem <see cref="T:System.Data.DataRowComparer`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (TRow leftRow, TRow rightRow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(!TRow leftRow, !TRow rightRow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowComparer`1.Equals(`0,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="leftRow" Type="TRow" />
+        <Parameter Name="rightRow" Type="TRow" />
+      </Parameters>
+      <Docs>
+        <param name="leftRow">Das erste zu vergleichende <see cref="T:System.Data.DataRow" />-Objekt.</param>
+        <param name="rightRow">Das zweite zu vergleichende <see cref="T:System.Data.DataRow" />-Objekt.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.DataRow" /> Objekte durch einen-spaltenweise, wertbasierten Vergleich.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden <see cref="T:System.Data.DataRow" /> Objekte bestellt Sätze von Spaltenwerten, die gleich; andernfalls sind, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Schema der beiden <xref:System.Data.DataRow> Objekte nicht aktiviert ist. Wenn beide <xref:System.Data.DataRow> Objekte verfügen über genau den gleichen geordnete Menge von Spaltenwerten, werden sie als gleich angesehen.  
+  
+ Nur die aktuellen Werte von der <xref:System.Data.DataRow> Objekte werden überprüft. Den Status der <xref:System.Data.DataRow> Objekte nicht aktiviert ist.  
+  
+ Die <xref:System.Data.DataRowComparer`1.Equals*> Methode ist die wertbasierte Vergleichs-Implementierung von der <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Eine oder beide der Quelle <see cref="T:System.Data.DataRow" /> Objekte sind <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public int GetHashCode (TRow row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetHashCode(!TRow row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowComparer`1.GetHashCode(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="TRow" />
+      </Parameters>
+      <Docs>
+        <param name="row">Die <see cref="T:System.Data.DataRow" /> den Hashcode berechnet.</param>
+        <summary>Gibt einen Hashcode für das angegebene <see cref="T:System.Data.DataRow" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> Wert, der den Hashcode der Zeile darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataRowComparer%601.GetHashCode%2A> Methode ist die wertbasierte Vergleichs-Implementierung von der <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Quelle <see cref="T:System.Data.DataRow" /> Objekte gehört nicht zu einer <see cref="T:System.Data.DataTable" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Die Quelle <see cref="T:System.Data.DataRow" /> Objekte <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

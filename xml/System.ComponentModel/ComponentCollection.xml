@@ -1,0 +1,210 @@
+<Type Name="ComponentCollection" FullName="System.ComponentModel.ComponentCollection">
+  <TypeSignature Language="C#" Value="public class ComponentCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComponentCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ComponentCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen schreibgeschützten Container für eine Auflistung von <see cref="T:System.ComponentModel.IComponent" />-Objekten bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Auflistung erbt von <xref:System.Collections.ReadOnlyCollectionBase>. Die einzige Möglichkeit zum Hinzufügen <xref:System.ComponentModel.IComponent> Objekte, die dieser Sammlung ist die Verwendung den Klassenkonstruktor.  
+  
+ Diese Auflistung bietet zwei Indexereigenschaften, einen Zeichenfolgenindexer und einen Integer-Indexer. Die Indexer-Eigenschaft gibt eine Komponente in der Auflistung anhand des Namens Wenn die <xref:System.ComponentModel.IComponent.Site%2A> Eigenschaft einer Komponente in der Auflistung ist nicht `null` und <xref:System.ComponentModel.ISite.Name%2A> Eigenschaft von der <xref:System.ComponentModel.IComponent.Site%2A> Eigenschaft der Komponente entspricht dem angegebenen Zeichenfolge. Gibt die ganze Zahl Indexer-Eigenschaft der <xref:System.ComponentModel.IComponent> am angegebenen Auflistungsindex. Die <xref:System.ComponentModel.ComponentCollection.CopyTo%2A> Methode kopiert den Inhalt der Auflistung in ein angegebenes Array, das Schreiben in das Array am angegebenen Index ab.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.ComponentModel.ComponentCollection> zum Aufzählen einer Auflistung von benutzerdefinierten `BookComponent` Objekte.  
+  
+ [!code-cpp[ContainerExmpl#2](~/samples/snippets/cpp/VS_Snippets_Winforms/ContainerExmpl/CPP/librarycontainer.cpp#2)]
+ [!code-csharp[ContainerExmpl#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ContainerExmpl/CS/librarycontainer.cs#2)]
+ [!code-vb[ContainerExmpl#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContainerExmpl/VB/librarycontainer.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentCollection (System.ComponentModel.IComponent[] components);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IComponent[] components) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ComponentCollection.#ctor(System.ComponentModel.IComponent[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="components" Type="System.ComponentModel.IComponent[]" />
+      </Parameters>
+      <Docs>
+        <param name="components">Ein Array von <see cref="T:System.ComponentModel.IComponent" /> Objekte in die Auflistung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.ComponentCollection" /> -Klasse unter Verwendung des angegebenen Arrays von Komponenten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt jeder <xref:System.ComponentModel.IComponent> im angegebenen <xref:System.ComponentModel.IComponent> Array in der Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.ComponentModel.ComponentCollection> aus einem Array von `BookComponent` Objekte.  
+  
+ [!code-cpp[ContainerExmpl#2](~/samples/snippets/cpp/VS_Snippets_Winforms/ContainerExmpl/CPP/librarycontainer.cpp#2)]
+ [!code-csharp[ContainerExmpl#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ContainerExmpl/CS/librarycontainer.cs#2)]
+ [!code-vb[ContainerExmpl#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContainerExmpl/VB/librarycontainer.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.ComponentModel.IComponent[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.ComponentModel.IComponent[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ComponentCollection.CopyTo(System.ComponentModel.IComponent[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.ComponentModel.IComponent[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein <see cref="T:System.ComponentModel.IComponent" /> Array, die Objekte in der Auflistung kopiert werden.</param>
+        <param name="index">Der Index des der <c>Array</c> an dem der Kopiervorgang zu beginnen soll.</param>
+        <summary>Kopiert die gesamte Auflistung in ein Array, beginnend Schreiben am angegebenen Arrayindex begonnen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.IComponent this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ComponentCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Auflistungsindex der der <see cref="T:System.ComponentModel.Component" /> abgerufen.</param>
+        <summary>Ruft die <see cref="T:System.ComponentModel.Component" /> in der Auflistung am angegebenen Auflistungsindex.</summary>
+        <value>Der <see cref="T:System.ComponentModel.IComponent" /> am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann durch eine abgeleitete Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Wenn der angegebene Index nicht innerhalb des Indexbereichs der Auflistung enthalten ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.IComponent this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ComponentCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.ComponentModel.IComponent" /> abgerufen.</param>
+        <summary>Ruft eine beliebige Komponente in der Auflistung, die dem angegebenen Namen entspricht.</summary>
+        <value>Eine Komponente mit einem Namen entsprechend dem Namen gemäß der <paramref name="name" /> -Parameter oder <see langword="null" /> , wenn die benannte Komponente in der Auflistung nicht gefunden werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann durch eine abgeleitete Klasse überschrieben werden.  
+  
+ Diese Eigenschaft gibt ein <xref:System.ComponentModel.IComponent> in der Auflistung wenn seine <xref:System.ComponentModel.IComponent.Site%2A> Eigenschaft ist nicht `null` und die <xref:System.ComponentModel.ISite.Name%2A> Eigenschaft seine <xref:System.ComponentModel.IComponent.Site%2A> Eigenschaft mit der angegebene Zeichenfolge übereinstimmt.  
+  
+> [!NOTE]
+>  Dieser Zeichenfolgenindexer funktioniert nur, wenn die Komponente platziert wird, in der Regel nur zur Entwurfszeit. Standort eine <xref:System.ComponentModel.Component> zur Laufzeit Festlegen der <xref:System.ComponentModel.Component.Site%2A> Eigenschaft der <xref:System.ComponentModel.Component>. Die <xref:System.ComponentModel.ISite.Name%2A> Eigenschaft von der <xref:System.ComponentModel.ISite> legen Sie auf der <xref:System.ComponentModel.IComponent.Site%2A> Eigenschaft muss auch für diese Eigenschaft zum Zurückgeben der Komponente festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

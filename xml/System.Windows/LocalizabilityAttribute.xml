@@ -1,0 +1,180 @@
+<Type Name="LocalizabilityAttribute" FullName="System.Windows.LocalizabilityAttribute">
+  <TypeSignature Language="C#" Value="public sealed class LocalizabilityAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LocalizabilityAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.LocalizabilityAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Lokalisierungsattribute für eine binäre XAML (BAML)-Klasse bzw. des Klassenmembers.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut kann auf eine Klasse, Eigenschaft oder Methode angewendet werden.  
+  
+ Weitere Informationen zum Verwenden der Lokalisierungsattribute finden Sie unter [Lokalisierungsattribute und Kommentare](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LocalizabilityAttribute (System.Windows.LocalizationCategory category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.LocalizationCategory category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LocalizabilityAttribute.#ctor(System.Windows.LocalizationCategory)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="System.Windows.LocalizationCategory" />
+      </Parameters>
+      <Docs>
+        <param name="category">Die Lokalisierungskategorie.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.LocalizabilityAttribute" /> Klasse mit einer angegebenen Lokalisierungskategorie.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public System.Windows.LocalizationCategory Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LocalizationCategory Category" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.LocalizabilityAttribute.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kategorie-Einstellung der Zielwert für die Lokalisierung des Attributs ab.</summary>
+        <value>Die Kategorie-Einstellung des Attributs Lokalisierung werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die Einstellungen der Änderbarkeit des Attributs Lokalisierung.  
+  
+|-Kategorieneinstellung|Bedeutung|  
+|----------------------|-------------|  
+|<xref:System.Windows.LocalizationCategory.None>|Ressource gehört nicht zu einer standard-Kategorie.|  
+|<xref:System.Windows.LocalizationCategory.Text>|Einen langen beschreibenden Text.|  
+|<xref:System.Windows.LocalizationCategory.Title>|Eine einzelne Textzeile, z. B. einen Titel.|  
+|<xref:System.Windows.LocalizationCategory.Label>|Eine kurze Textzeichenfolge, z. B. eine Steuerelement-Bezeichnung.|  
+|<xref:System.Windows.LocalizationCategory.Button>|Ein <xref:System.Windows.Controls.Button> oder ein verwandtes Steuerelement.|  
+|<xref:System.Windows.LocalizationCategory.CheckBox>|Ein <xref:System.Windows.Controls.CheckBox> oder ein verwandtes Steuerelement.|  
+|<xref:System.Windows.LocalizationCategory.ComboBox>|Ein <xref:System.Windows.Controls.ComboBox> oder Steuerelement, z. B. verwandte <xref:System.Windows.Controls.ComboBoxItem>.|  
+|<xref:System.Windows.LocalizationCategory.ListBox>|Ein <xref:System.Windows.Controls.ListBox> oder Steuerelement, z. B. verwandte <xref:System.Windows.Controls.ListBoxItem>.|  
+|<xref:System.Windows.LocalizationCategory.Menu>|Ein <xref:System.Windows.Controls.Menu> oder Steuerelement, z. B. verwandte <xref:System.Windows.Controls.MenuItem>.|  
+|<xref:System.Windows.LocalizationCategory.RadioButton>|Ein <xref:System.Windows.Controls.RadioButton> oder ein verwandtes Steuerelement.|  
+|<xref:System.Windows.LocalizationCategory.ToolTip>|Ein <xref:System.Windows.Controls.ToolTip> oder ein verwandtes Steuerelement.|  
+|<xref:System.Windows.LocalizationCategory.Hyperlink>|Ein <xref:System.Windows.Documents.Hyperlink> oder ein verwandtes Steuerelement.|  
+|<xref:System.Windows.LocalizationCategory.TextFlow>|Ein <xref:System.Windows.Documents.FlowDocument> oder ein anderer Bereich, die Text enthalten kann.|  
+|<xref:System.Windows.LocalizationCategory.XmlData>|[!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)]Daten.|  
+|<xref:System.Windows.LocalizationCategory.Font>|Schriftart produktbezogene Daten wie Schriftfamilie, Schriftschnitt und Schriftgröße.|  
+|<xref:System.Windows.LocalizationCategory.Inherit>|Erbt die Kategorie von übergeordneten Knoten.|  
+|<xref:System.Windows.LocalizationCategory.Ignore>|Diese Ressource nicht lokalisiert werden. Dies gilt nicht für alle untergeordneten Knoten der Ressource.|  
+|<xref:System.Windows.LocalizationCategory.NeverLocalize>|Dieser Ressource und alle untergeordneten Knoten, deren Kategorie auf festgelegt ist, nicht lokalisiert <xref:System.Windows.LocalizationCategory.Inherit>.|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Kategorie Einstellungen Lokalisierung-Attribute, die für eine Schaltfläche definiert.  
+  
+ [!code-xaml[AttributesSnippets#AttributesSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/AttributesSnippets/CSharp/Attributes.xaml#attributessnippet1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifiability">
+      <MemberSignature Language="C#" Value="public System.Windows.Modifiability Modifiability { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Modifiability Modifiability" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.LocalizabilityAttribute.Modifiability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Modifiability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Einstellung der Änderbarkeit der Zielwert für die Lokalisierung des Attributs.</summary>
+        <value>Die Änderbarkeit-Einstellung des Attributs Lokalisierung werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die Einstellungen der Änderbarkeit des Attributs Lokalisierung.  
+  
+|Die Änderbarkeit-Einstellung|Bedeutung|  
+|---------------------------|-------------|  
+|<xref:System.Windows.Modifiability.Modifiable>|Der Zielwert wird durch Lokalisierungsexperten geändert werden kann.|  
+|<xref:System.Windows.Modifiability.Unmodifiable>|Der Zielwert ist nicht durch Lokalisierungsexperten geändert werden kann.|  
+|<xref:System.Windows.Modifiability.Inherit>|Die Änderbarkeit des Zielwerts wird vom übergeordneten Knoten geerbt.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Einstellung Änderbarkeit der Lokalisierungsattribute, die für eine Schaltfläche definiert.  
+  
+ [!code-xaml[AttributesSnippets#AttributesSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/AttributesSnippets/CSharp/Attributes.xaml#attributessnippet1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Readability">
+      <MemberSignature Language="C#" Value="public System.Windows.Readability Readability { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Readability Readability" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.LocalizabilityAttribute.Readability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Readability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder setzt die Lesbarkeit der Zielwert für die Lokalisierung des Attributs.</summary>
+        <value>Die Lesbarkeit-Einstellung des Attributs Lokalisierung werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die Einstellungen für die Lesbarkeit des Attributs Lokalisierung.  
+  
+|Lesbarkeit-Einstellung|Bedeutung|  
+|-------------------------|-------------|  
+|<xref:System.Windows.Readability.Readable>|Der Zielwert ist Diagnoseausgaben als Klartext.|  
+|<xref:System.Windows.Readability.Unreadable>|Der Zielwert ist nicht lesbar.|  
+|<xref:System.Windows.Readability.Inherit>|Der Zielwert Lesbarkeit wird vom übergeordneten Knoten geerbt.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Lesbarkeit Einstellung Lokalisierung-Attribute, die für einen Textblock definiert.  
+  
+ [!code-xaml[AttributesSnippets#AttributesSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/AttributesSnippets/CSharp/Comments.xaml#attributessnippet4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

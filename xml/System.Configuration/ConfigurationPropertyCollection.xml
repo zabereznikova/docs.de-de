@@ -1,0 +1,463 @@
+<Type Name="ConfigurationPropertyCollection" FullName="System.Configuration.ConfigurationPropertyCollection">
+  <TypeSignature Language="C#" Value="public class ConfigurationPropertyCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConfigurationPropertyCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationPropertyCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von Konfigurationselementeigenschaften.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationPropertyCollection> -Klasse stellt die Auflistung von der <xref:System.Configuration.ConfigurationProperty> Objekte, Attribute werden können, oder <xref:System.Configuration.ConfigurationElement> Objekte eines Konfigurationselements.  
+  
+ Die <xref:System.Configuration.ConfigurationProperty> Klasse stellt eine einzelne Konfigurationseinstellung dar. Sie können Sie zum Abrufen oder Festlegen der Name, Typ und Standardwert für eine bestimmte Konfigurationsentität (Attribut oder Element). Zusätzliche Optionen können Sie angeben, ob das Attribut erforderlich ist, ein Elementschlüssel ist oder eine standardauflistung des Elements darstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine mögliche Verwendung der der <xref:System.Configuration.ConfigurationPropertyCollection>. Finden Sie im Beispiel Monitortyp <xref:System.Configuration.ConfigurationProperty>.  
+  
+  
+  
+ Im folgenden ist ein Auszug aus der Konfiguration, die im obigen Beispiel verwendet.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+  <configSections>  
+    <section name="CustomSection" type="Samples.AspNet, ConfigurationProperty, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" allowDefinition="Everywhere" allowExeDefinition="MachineToApplication" restartOnExternalChanges="true" />  
+    </configSections>  
+    <CustomSection fileName="default.txt" alias="alias.txt" maxUsers="1000"  
+      maxIdleTime="00:05:00" />  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationPropertyCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationPropertyCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Configuration.ConfigurationPropertyCollection.%23ctor%2A> auf eine neue Sammlung erstellen, enthält die <xref:System.Configuration.ConfigurationProperty> Objekte, wie sie Ihre Konfigurationselement gelten.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung des <xref:System.Configuration.ConfigurationPropertyCollection.%23ctor%2A>-Konstruktors veranschaulicht.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Configuration.ConfigurationProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Configuration.ConfigurationProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationPropertyCollection.Add(System.Configuration.ConfigurationProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.Configuration.ConfigurationProperty" />
+      </Parameters>
+      <Docs>
+        <param name="property">Das hinzuzufügende <see cref="T:System.Configuration.ConfigurationProperty" />.</param>
+        <summary>Fügt eine Konfigurationseigenschaft der Auflistung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Configuration.ConfigurationPropertyCollection.Add%2A> Methode fügen die angegebene <xref:System.Configuration.ConfigurationProperty> Objekt, wenn es nicht bereits in der Auflistung enthalten ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Configuration.ConfigurationPropertyCollection.Add%2A>-Methode gezeigt.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationPropertyCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Konfiguration Property-Objekte aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Configuration.ConfigurationPropertyCollection.Clear%2A>-Methode gezeigt.  
+  
+  
+  
+ Das folgende Beispiel zeigt, wie rufen Sie die oben genannten Methode, und speichern Sie die Änderungen an der Konfigurationsdatei.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationPropertyCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein Bezeichner für die <see cref="T:System.Configuration.ConfigurationProperty" /> überprüfen.</param>
+        <summary>Gibt an, ob die Konfigurationseigenschaft in dieser Auflistung enthalten ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Configuration.ConfigurationProperty" /> in der Auflistung enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Configuration.ConfigurationPropertyCollection.Contains%2A>-Methode gezeigt.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Configuration.ConfigurationProperty[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Configuration.ConfigurationProperty[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationPropertyCollection.CopyTo(System.Configuration.ConfigurationProperty[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Configuration.ConfigurationProperty[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Array in das kopiert werden soll.</param>
+        <param name="index">Der Index, an der Kopiervorgang beginnt.</param>
+        <summary>Diese ConfigurationPropertyCollection kopiert in ein Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Configuration.ConfigurationPropertyCollection.CopyTo%2A>-Methode gezeigt.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationPropertyCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Eigenschaften in der Auflistung ab.</summary>
+        <value>Die Anzahl der Eigenschaften in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationPropertyCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Collections.IEnumerator" /> Objekt wie sich auf die Auflistung bezieht.</summary>
+        <returns>Die <see cref="T:System.Collections.IEnumerator" /> Objekt wie sich auf die Auflistung bezieht</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Configuration.ConfigurationPropertyCollection.GetEnumerator%2A>-Methode gezeigt.  
+  
+  
+  
+ Im folgende Beispiel wird gezeigt, wie die oben dargestellte Methode zum Auflisten von Aufrufen der <xref:System.Configuration.ConfigurationProperty> Objekte in der Auflistung.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationPropertyCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die Auflistung synchronisiert ist (threadsicher).</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> synchronisiert ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Abrufen der <xref:System.Configuration.ConfigurationPropertyCollection.IsSynchronized%2A> Eigenschaftswert.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationProperty this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationProperty Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationPropertyCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der zurückzugebende <see cref="T:System.Configuration.ConfigurationProperty" />.</param>
+        <summary>Ruft das sammelelement mit dem angegebenen Namen ab.</summary>
+        <value>Das <see cref="T:System.Configuration.ConfigurationProperty" /> mit dem angegebenen <paramref name="name" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Configuration.ConfigurationPropertyCollection.Count%2A>-Eigenschaft veranschaulicht.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationPropertyCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Das zu entfernende <see cref="T:System.Configuration.ConfigurationProperty" />-Element.</param>
+        <summary>Entfernt eine Konfigurationseigenschaft aus der Auflistung.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Configuration.ConfigurationProperty" /> entfernt wurde; andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Rückgabewert von `false` gibt an, dass das angegebene <xref:System.Configuration.ConfigurationProperty> Objekt wurde nicht in der Auflistung enthalten.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Configuration.ConfigurationPropertyCollection.Remove%2A>-Methode gezeigt.  
+  
+  
+  
+ Das folgende Beispiel zeigt, wie rufen Sie die oben genannten Methode, und speichern Sie die Änderungen an der Konfigurationsdatei.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationPropertyCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt zum Synchronisieren des Zugriffs auf die Auflistung ab.</summary>
+        <value>Das Objekt, mit dem der Zugriff auf die Auflistung synchronisiert werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Abrufen der <xref:System.Configuration.ConfigurationPropertyCollection.SyncRoot%2A> Eigenschaftswert.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationPropertyCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array, in das kopiert werden soll.</param>
+        <param name="index">Die Indexposition, an der Kopiervorgang beginnt.</param>
+        <summary>Dieser Auflistung kopiert in ein Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,253 @@
+<Type Name="XmlAttributeEventArgs" FullName="System.Xml.Serialization.XmlAttributeEventArgs">
+  <TypeSignature Language="C#" Value="public class XmlAttributeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlAttributeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlAttributeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Xml.Serialization.XmlSerializer.UnknownAttribute" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisübersicht](~/docs/framework/winforms/events-overview-windows-forms.md).  
+  
+ Die <xref:System.Xml.Serialization.XmlSerializer.UnknownAttribute> Ereignis tritt auf, wenn Sie nur Aufrufen der <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse deserialisiert `Group` aus einer Datei mit dem Namen UnknownAttributes.xml. Wenn ein Element in der Datei gefunden wird, die kein entsprechenden Member in der Klasse hat die <xref:System.Xml.Serialization.XmlSerializer.UnknownAttribute> Ereignis auftritt. Um das Beispiel zu testen, fügen Sie den folgenden XML-Code in eine Datei mit dem Namen UnknownAttributes.xml ein.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" GroupType = 'Technical' GroupNumber = '42' GroupBase = 'Red'>  
+  <GroupName>MyGroup</GroupName>  
+</Group>  
+```  
+  
+ [!code-cpp[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attr">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlAttribute Attr { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlAttribute Attr" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributeEventArgs.Attr" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das unbekannte XML-Attribut darstellt.</summary>
+        <value>Eine <see cref="T:System.Xml.XmlAttribute" /> , die das unbekannte XML-Attribut darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse deserialisiert `Group` aus einer Datei mit dem Namen UnknownAttributes.xml. Wenn ein Element in der Datei gefunden wird, die kein entsprechenden Member in der Klasse hat die <xref:System.Xml.Serialization.XmlSerializer.UnknownAttribute> Ereignis auftritt. Um das Beispiel zu testen, fügen Sie den folgenden XML-Code in eine Datei mit dem Namen UnknownAttributes.xml ein.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" GroupType = 'Technical' GroupNumber = '42' GroupBase = 'Red'>  
+  <GroupName>MyGroup</GroupName>  
+</Group>  
+```  
+  
+ [!code-cpp[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpectedAttributes">
+      <MemberSignature Language="C#" Value="public string ExpectedAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExpectedAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributeEventArgs.ExpectedAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine durch Trennzeichen getrennte Liste von XML-Attribut, von denen erwartet wird, werden in einer XML-Dokumentinstanz ab.</summary>
+        <value>Eine durch Trennzeichen getrennte Liste von XML-Attributnamen. Jeder Name wird im folgenden Format: <paramref name="namespace" />:<paramref name="name" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributeEventArgs.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeilennummer des unbekannten XML-Attributs ab.</summary>
+        <value>Die Zeilennummer des unbekannten XML-Attributs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse deserialisiert `Group` aus einer Datei mit dem Namen UnknownAttributes.xml. Wenn ein Element in der Datei gefunden wird, die kein entsprechenden Member in der Klasse hat die <xref:System.Xml.Serialization.XmlSerializer.UnknownAttribute> Ereignis auftritt. Um das Beispiel zu testen, fügen Sie den folgenden XML-Code in eine Datei mit dem Namen UnknownAttributes.xml ein.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" GroupType = 'Technical' GroupNumber = '42' GroupBase = 'Red'>  
+  <GroupName>MyGroup</GroupName>  
+</Group>  
+```  
+  
+ [!code-cpp[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePosition">
+      <MemberSignature Language="C#" Value="public int LinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributeEventArgs.LinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position in der Zeile das unbekannte XML-Attribut ab.</summary>
+        <value>Die Positionsnummer des unbekannten XML-Attributs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse deserialisiert `Group` aus einer Datei mit dem Namen UnknownAttributes.xml. Wenn ein Element in der Datei gefunden wird, die kein entsprechenden Member in der Klasse hat die <xref:System.Xml.Serialization.XmlSerializer.UnknownAttribute> Ereignis auftritt. Um das Beispiel zu testen, fügen Sie den folgenden XML-Code in eine Datei mit dem Namen UnknownAttributes.xml ein.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" GroupType = 'Technical' GroupNumber = '42' GroupBase = 'Red'>  
+  <GroupName>MyGroup</GroupName>  
+</Group>  
+```  
+  
+ [!code-cpp[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectBeingDeserialized">
+      <MemberSignature Language="C#" Value="public object ObjectBeingDeserialized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ObjectBeingDeserialized" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributeEventArgs.ObjectBeingDeserialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt deserialisiert wird.</summary>
+        <value>Das Objekt deserialisiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel gibt den Rückgabewert von der <xref:System.Object.ToString%2A> Methode bei der <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> Methode trifft, ein unbekanntes Attribut.  
+  
+ [!code-cpp[Classic XmlAttributeEventArgs.ObjectBeingDeserialized Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributeEventArgs.ObjectBeingDeserialized Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributeEventArgs.ObjectBeingDeserialized Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributeEventArgs.ObjectBeingDeserialized Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributeEventArgs.ObjectBeingDeserialized Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributeEventArgs.ObjectBeingDeserialized Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

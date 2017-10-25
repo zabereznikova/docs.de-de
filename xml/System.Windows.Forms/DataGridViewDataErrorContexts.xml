@@ -1,0 +1,214 @@
+<Type Name="DataGridViewDataErrorContexts" FullName="System.Windows.Forms.DataGridViewDataErrorContexts">
+  <TypeSignature Language="C#" Value="public enum DataGridViewDataErrorContexts" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewDataErrorContexts extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewDataErrorContexts" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den Status des ein datengebundenes <see cref="T:System.Windows.Forms.DataGridView" /> steuern, wann ein Datenfehler aufgetreten ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Member dieser Enumeration möglicherweise kombiniert werden, verwenden die bitweise OR-Operation zur Darstellung des Status der ein datengebundenes <xref:System.Windows.Forms.DataGridView> beim Auftreten eines Fehlers. Z. B. wenn ein Benutzer eingibt, einen ungültigen Zellenwert (z. B. einen Namen einzugeben, in einer Zelle, die ein Datum erwartet) und wählt dann eine andere Zelle der <xref:System.Windows.Forms.DataGridView> wird versucht, die ungültige Zellenwert commit. Wenn dies fehlschlägt, die <xref:System.Windows.Forms.DataGridView> löst eine <xref:System.Windows.Forms.DataGridView.DataError> Ereignis, dessen <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs.Context%2A> Eigenschaft weist einen Wert von Commit- und CurrentCellChange.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. In diesem Beispiel ist Teil eines umfangreicheren Beispiels in [wie: Behandeln Fehler, dass auftreten, während der Dateneingabe im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/handle-errors-that-occur-during-data-entry-in-the-datagrid.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView.DataError#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridView.DataError#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#20)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClipboardContent">
+      <MemberSignature Language="C#" Value="ClipboardContent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewDataErrorContexts ClipboardContent = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewDataErrorContexts.ClipboardContent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewDataErrorContexts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Daten-Fehler beim Kopieren von Inhalt in die Zwischenablage. Dieser Wert gibt an, dass der Wert der Zelle nicht in eine Zeichenfolge konvertiert werden konnte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="Commit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewDataErrorContexts Commit = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewDataErrorContexts.Commit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewDataErrorContexts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Daten-Fehler beim Ausführen eines Commits für Änderungen im Datenspeicher. Dieser Wert gibt an, dass in einer Zelle eingegebene Daten nicht mit dem zugrunde liegenden Datenspeicher ein Commit ausgeführt werden konnte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentCellChange">
+      <MemberSignature Language="C#" Value="CurrentCellChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewDataErrorContexts CurrentCellChange = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewDataErrorContexts.CurrentCellChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewDataErrorContexts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Daten-Fehler bei der Auswahlcursor in einer anderen Zelle bewegt. Dieser Wert gibt an, dass ein Benutzer eine Zelle ausgewählt wird, wenn die zuvor ausgewählte Zelle eine fehlerbedingung hatten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="Display" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewDataErrorContexts Display = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewDataErrorContexts.Display" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewDataErrorContexts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Daten-Fehler beim Anzeigen einer Zelle, die von einer Datenquelle aufgefüllt wurde. Dieser Wert gibt an, dass der Wert aus der Datenquelle kann nicht von der Zelle angezeigt werden, oder eine Zuordnung, die den Wert aus der Datenquelle auf die Zelle übersetzt nicht vorhanden ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Formatting">
+      <MemberSignature Language="C#" Value="Formatting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewDataErrorContexts Formatting = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewDataErrorContexts.Formatting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewDataErrorContexts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Daten-Fehler beim Versuch, die zum Formatieren von Daten, die entweder in einem Datenspeicher gesendet werden, oder aus einem Datenspeicher geladen werden. Dieser Wert gibt an, dass eine Änderung an einer Zelle konnte nicht ordnungsgemäß formatiert. Entweder muss der neue Zellenwert behoben werden, oder die Formatierung der Zelle geändert werden muss.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialValueRestoration">
+      <MemberSignature Language="C#" Value="InitialValueRestoration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewDataErrorContexts InitialValueRestoration = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewDataErrorContexts.InitialValueRestoration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewDataErrorContexts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Daten-Fehler beim Wiederherstellen einer Zelle auf seinen ursprünglichen Wert. Dieser Wert gibt an, dass eine Zelle, es wurde versucht, eine Bearbeitung und das Rollback auf den ursprünglichen Wert "Abbrechen" ist fehlgeschlagen. Dies kann auftreten, wenn die Formatierung der Zelle geändert, sodass es den Anfangswert nicht kompatibel ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeaveControl">
+      <MemberSignature Language="C#" Value="LeaveControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewDataErrorContexts LeaveControl = int32(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewDataErrorContexts.LeaveControl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewDataErrorContexts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Einen Fehler aufgetreten ist, wenn die <see cref="T:System.Windows.Forms.DataGridView" /> Fokus. Dieser Wert gibt an, dass die <see cref="T:System.Windows.Forms.DataGridView" /> benutzeränderungen nach dem verlieren des Fokus konnte kein Commit ausgeführt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Parsing">
+      <MemberSignature Language="C#" Value="Parsing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewDataErrorContexts Parsing = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewDataErrorContexts.Parsing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewDataErrorContexts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Daten-Fehler beim Analysieren von neuer Daten. Dieser Wert gibt an, dass die <see cref="T:System.Windows.Forms.DataGridView" /> konnte nicht analysiert werden neue Daten, die vom Benutzer eingegeben oder aus dem zugrunde liegenden Datenspeicher geladen wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredSize">
+      <MemberSignature Language="C#" Value="PreferredSize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewDataErrorContexts PreferredSize = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewDataErrorContexts.PreferredSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewDataErrorContexts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Daten-Fehler beim Berechnen der bevorzugte Größe einer Zelle. Dieser Wert gibt an, dass die <see cref="T:System.Windows.Forms.DataGridView" /> konnte nicht die bevorzugte Breite oder Höhe einer Zelle zu berechnen, wenn der Größe einer Spalte oder Zeile programmgesteuert ändern. Dies kann auftreten, wenn die Zelle fehlgeschlagen ist, um seinen Wert zu formatieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RowDeletion">
+      <MemberSignature Language="C#" Value="RowDeletion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewDataErrorContexts RowDeletion = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewDataErrorContexts.RowDeletion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewDataErrorContexts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Daten-Fehler beim Löschen einer Zeile. Dieser Wert gibt an, dass die zugrunde liegenden Datenspeicher hat eine Ausnahme aus, wenn ein datengebundenes ausgelöst <see cref="T:System.Windows.Forms.DataGridView" /> eine Zeile gelöscht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Scroll">
+      <MemberSignature Language="C#" Value="Scroll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewDataErrorContexts Scroll = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewDataErrorContexts.Scroll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewDataErrorContexts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Datenfehler beim Bildlauf einer neuen Region anzuzeigen. Dieser Wert gibt an, dass eine Zelle mit Datenfehler programmgesteuert oder mithilfe der Bildlaufleiste einen angezeigt Bildlauf.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

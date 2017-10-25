@@ -1,0 +1,316 @@
+<Type Name="BezierSegment" FullName="System.Windows.Media.BezierSegment">
+  <TypeSignature Language="C#" Value="public sealed class BezierSegment : System.Windows.Media.PathSegment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BezierSegment extends System.Windows.Media.PathSegment" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.BezierSegment" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.PathSegment</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine kubische Bézier-Kurve, die zwischen zwei Punkten gezeichnete dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.Windows.Media.PathFigure> Objekt zum Speichern von <xref:System.Windows.Media.BezierSegment> Objekte und andere Segmente.  
+  
+ Eine kubische Bézier-Kurve wird durch vier Punkte definiert: einen Startpunkt, einen Endpunkt (<xref:System.Windows.Media.BezierSegment.Point3%2A>), und die beiden Steuerpunkte (<xref:System.Windows.Media.BezierSegment.Point1%2A> und <xref:System.Windows.Media.BezierSegment.Point2%2A>). Die <xref:System.Windows.Media.BezierSegment> Klasse enthält keine Eigenschaft für den Anfangspunkt der Kurve; sie definiert nur den Endpunkt. Der Anfangspunkt der Kurve ist der aktuelle der <xref:System.Windows.Media.PathFigure> , der die <xref:System.Windows.Media.BezierSegment> hinzugefügt wird.  
+  
+ Die beiden Steuerpunkte, der eine kubische Bézier-Kurve Verhalten sich wie Magnete attraktiv Abschnitte einer geraden Linie gegen sich selbst und erzeugt eine Kurve. Der erste Kontrollpunkt, <xref:System.Windows.Media.BezierSegment.Point1%2A>, wirkt sich auf den Anfang Teil der Kurve; der zweite Kontrollpunkt <xref:System.Windows.Media.BezierSegment.Point2%2A>, wirkt sich auf den Endabschnitt der Kurve. Beachten Sie, dass die Kurve nicht unbedingt über entweder die Steuerpunkte bestanden haben. Jeder Kontrollpunkt verschiebt die Teil der Zeile, die gegen sich selbst, aber nicht über sich selbst.  
+  
+## <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
+ Ein <xref:System.Windows.Media.BezierSegment> ist eine Art von <xref:System.Windows.Freezable> Objekt. Informationen zu <xref:System.Windows.Freezable> Funktionen, z. B. Einfrieren und Klonen, finden Sie unter der [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BezierSegment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.BezierSegment.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.BezierSegment" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine kubische Bézier-Kurve wird durch vier Punkte definiert: einen Startpunkt, einen Endpunkt (`point3`), und die beiden Steuerpunkte (`point1` und `point2`). Diese Methode ermöglicht Ihnen die Angabe der Anfangspunkt der Kurve keine; die Kurve beginnt am aktuellen Punkt von der <xref:System.Windows.Media.PathFigure> Objekt, mit dem die <xref:System.Windows.Media.BezierSegment> hinzugefügt wird.  
+  
+ Die beiden Steuerpunkte, der eine kubische Bézier-Kurve Verhalten sich wie Magnete attraktiv Abschnitte einer geraden Linie gegen sich selbst und erzeugt eine Kurve. Der erste Kontrollpunkt, `point1`, wirkt sich auf den Anfang Teil der Kurve; der zweite Kontrollpunkt `point2`, wirkt sich auf den Endabschnitt der Kurve. Beachten Sie, dass die Kurve nicht unbedingt über entweder die Steuerpunkte bestanden haben. Jeder Kontrollpunkt verschiebt die Teil der Zeile, die gegen sich selbst, aber nicht über sich selbst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BezierSegment (System.Windows.Point point1, System.Windows.Point point2, System.Windows.Point point3, bool isStroked);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point point1, valuetype System.Windows.Point point2, valuetype System.Windows.Point point3, bool isStroked) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.BezierSegment.#ctor(System.Windows.Point,System.Windows.Point,System.Windows.Point,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point2" Type="System.Windows.Point" />
+        <Parameter Name="point3" Type="System.Windows.Point" />
+        <Parameter Name="isStroked" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Der erste Kontrollpunkt, der den Anfangsabschnitt der Kurve bestimmt.</param>
+        <param name="point2">Der zweite Kontrollpunkt, der den Endabschnitt der Kurve bestimmt.</param>
+        <param name="point3">Der Punkt, bis zu dem die Kurve gezeichnet wird.</param>
+        <param name="isStroked">
+          <see langword="true" />, um die Kurve zu zeichnen, wenn ein <see cref="T:System.Windows.Media.Pen" /> zum Rendern des Segments verwendet wird, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.BezierSegment" />-Klasse mit den angegebenen Kontrollpunkten, dem angegebenen Endpunkt und der angegebenen Strichoption.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine kubische Bézier-Kurve wird durch vier Punkte definiert: einen Startpunkt, einen Endpunkt (`point3`), und die beiden Steuerpunkte (`point1` und `point2`). Diese Methode ermöglicht Ihnen die Angabe der Anfangspunkt der Kurve keine; die Kurve beginnt am aktuellen Punkt von der <xref:System.Windows.Media.PathFigure> Objekt, mit dem die <xref:System.Windows.Media.BezierSegment> hinzugefügt wird.  
+  
+ Die beiden Steuerpunkte, der eine kubische Bézier-Kurve Verhalten sich wie Magnete attraktiv Abschnitte einer geraden Linie gegen sich selbst und erzeugt eine Kurve. Der erste Kontrollpunkt, `point1`, wirkt sich auf den Anfang Teil der Kurve; der zweite Kontrollpunkt `point2`, wirkt sich auf den Endabschnitt der Kurve. Beachten Sie, dass die Kurve nicht unbedingt über entweder die Steuerpunkte bestanden haben. Jeder Kontrollpunkt verschiebt die Teil der Zeile, die gegen sich selbst, aber nicht über sich selbst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.BezierSegment Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.BezierSegment Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.BezierSegment.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BezierSegment</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.BezierSegment" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.BezierSegment CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.BezierSegment CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.BezierSegment.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BezierSegment</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.BezierSegment" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.BezierSegment.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point1">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Point1 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Point1" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.BezierSegment.Point1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den ersten Kontrollpunkt der Kurve ab oder legt ihn fest.</summary>
+        <value>Der erste Kontrollpunkt der Kurve.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die beiden Steuerpunkte, der eine kubische Bézier-Kurve Verhalten sich wie Magnete attraktiv Abschnitte einer geraden Linie gegen sich selbst und erzeugt eine Kurve. Der erste Kontrollpunkt, <xref:System.Windows.Media.BezierSegment.Point1%2A>, wirkt sich auf den Anfang Teil der Kurve; der zweite Kontrollpunkt <xref:System.Windows.Media.BezierSegment.Point2%2A>, wirkt sich auf den Endabschnitt der Kurve. Beachten Sie, dass die Kurve nicht unbedingt über entweder die Steuerpunkte bestanden haben. Jeder Kontrollpunkt verschiebt die Teil der Zeile, die gegen sich selbst, aber nicht über sich selbst.  
+  
+<a name="dependencyPropertyInfo_Point1"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.BezierSegment.Point1Property>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point1Property">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty Point1Property;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty Point1Property" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.BezierSegment.Point1Property" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.BezierSegment.Point1" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point2">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Point2 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Point2" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.BezierSegment.Point2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den zweiten Kontrollpunkt der Kurve ab oder legt ihn fest.</summary>
+        <value>Der zweite Kontrollpunkt der Kurve.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die beiden Steuerpunkte, der eine kubische Bézier-Kurve Verhalten sich wie Magnete attraktiv Abschnitte einer geraden Linie gegen sich selbst und erzeugt eine Kurve. Der erste Kontrollpunkt, <xref:System.Windows.Media.BezierSegment.Point1%2A>, wirkt sich auf den Anfang Teil der Kurve; der zweite Kontrollpunkt <xref:System.Windows.Media.BezierSegment.Point2%2A>, wirkt sich auf den Endabschnitt der Kurve. Beachten Sie, dass die Kurve nicht unbedingt über entweder die Steuerpunkte bestanden haben. Jeder Kontrollpunkt verschiebt die Teil der Zeile, die gegen sich selbst, aber nicht über sich selbst.  
+  
+<a name="dependencyPropertyInfo_Point2"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.BezierSegment.Point2Property>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point2Property">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty Point2Property;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty Point2Property" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.BezierSegment.Point2Property" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.BezierSegment.Point2" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point3">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Point3 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Point3" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.BezierSegment.Point3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Endpunkt der Kurve ab oder legt diesen fest.</summary>
+        <value>Der Endpunkt der Kurve.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.BezierSegment> Klasse enthält keine Eigenschaft für den Anfangspunkt der Kurve; sie definiert nur den Endpunkt. Der Anfangspunkt der Kurve ist der aktuelle der <xref:System.Windows.Media.PathFigure> , der die <xref:System.Windows.Media.BezierSegment> hinzugefügt wird.  
+  
+<a name="dependencyPropertyInfo_Point3"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.BezierSegment.Point3Property>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point3Property">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty Point3Property;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty Point3Property" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.BezierSegment.Point3Property" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.BezierSegment.Point3" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

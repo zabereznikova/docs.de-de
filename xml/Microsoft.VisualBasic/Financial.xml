@@ -1,0 +1,663 @@
+<Type Name="Financial" FullName="Microsoft.VisualBasic.Financial">
+  <TypeSignature Language="C#" Value="public sealed class Financial" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Financial extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Financial" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.VisualBasic.CompilerServices.StandardModule</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see langword="Financial" /> Modul enthält Prozeduren zum Ausführen finanzieller Vorgänge verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Modul unterstützt die Member der Visual Basic-Laufzeitbibliothek, die finanzielle Berechnungen wie Abschreibung, aktuelle und zukünftige Werte, Zinssätzen, Raten der Rückgabe und Zahlungen ausführen.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `Rate` Funktion den Zinssatz eines Darlehens berechnet die Gesamtzahl der Zahlungen erhält (`TotPmts`), die Menge der Kredit Zahlung (`Payment`), den Barwert oder Prinzipal, der das Darlehen (`PVal`), die Zukunft Wert, der das Darlehen (`FVal`), eine Zahl, die angibt, ob die Zahlung fällig am Anfang oder Ende der Zahlungsfrist ist (`PayType`), und einen Näherungswert der erwarteten Zinssatz (`Guess`).  
+  
+ [!code-vb[VbVbalrMath#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DDB">
+      <MemberSignature Language="C#" Value="public static double DDB (double Cost, double Salvage, double Life, double Period, double Factor = 2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 DDB(float64 Cost, float64 Salvage, float64 Life, float64 Period, float64 Factor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.DDB(System.Double,System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Cost" Type="System.Double" />
+        <Parameter Name="Salvage" Type="System.Double" />
+        <Parameter Name="Life" Type="System.Double" />
+        <Parameter Name="Period" Type="System.Double" />
+        <Parameter Name="Factor" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="Cost">Erforderlich. <see langword="Double" />Angeben von anfänglichen Kosten für das Medienobjekt.</param>
+        <param name="Salvage">Erforderlich. <see langword="Double" />Wert des Medienobjekts am Ende der Nutzungsdauer angeben.</param>
+        <param name="Life">Erforderlich. <see langword="Double" />Länge der Nutzungsdauer der Ressource angibt.</param>
+        <param name="Period">Erforderlich. <see langword="Double" />Angeben von Zeitraum für die Anlage veralten von Ressourcen berechnet wird.</param>
+        <param name="Factor">Dies ist optional. <see langword="Double" />Angeben von Rate der vermindert. Wenn nicht angegeben, wird davon ausgegangen, dass 2 (degressiven Methode).</param>
+        <summary>Gibt eine <see langword="Double" /> angeben die Abschreibung einer Anlage für einen bestimmten Zeitraum mithilfe der degressiven Doppelraten oder eine andere Methode, die Sie angeben.</summary>
+        <returns>Gibt eine <see langword="Double" /> angeben die Abschreibung einer Anlage für einen bestimmten Zeitraum mithilfe der degressiven Doppelraten oder eine andere Methode, die Sie angeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der degressiven Doppelraten berechnet eine beschleunigte Abschreibung. Abschreibung ist in der ersten Periode am höchsten und nimmt in aufeinander folgenden Punkte.  
+  
+ Die `Life` und `Period` Argumente müssen in den gleichen Einheiten ausgedrückt werden. Z. B. wenn `Life` erhält in Monaten `Period` muss ebenfalls in Monaten angegeben werden. Alle Argumente müssen positive Zahlen sein.  
+  
+ Die `DDB` Funktion verwendet die folgende Formel zum Berechnen von Abschreibungen für einen bestimmten Zeitraum:  
+  
+ Abschreibung / Zeitraum = ((Cost – Salvage) * Faktor) / leben  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `DDB` -Funktion die Abschreibung einer Anlage für einen bestimmten Zeitraum die anfängliche Kosten für zurückgibt (`InitCost`), der Restwert am Ende der Lebensdauer des Medienobjekts (`SalvageVal`), die insgesamt Nutzungsdauer in Jahren (`LifeTime`), und für den Zeitraum in Jahren für den das veralten von Ressourcen berechnet wird (`Depr`).  
+  
+ [!code-vb[VbVbalrMath#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Factor" />&lt;= 0, <paramref name="Salvage" /> &lt; 0, <paramref name="Period" /> &lt;= 0 (null) oder <paramref name="Period" /> &gt;<paramref name="Life." /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FV">
+      <MemberSignature Language="C#" Value="public static double FV (double Rate, double NPer, double Pmt, double PV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 FV(float64 Rate, float64 NPer, float64 Pmt, float64 PV, valuetype Microsoft.VisualBasic.DueDate Due) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.FV(System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="NPer" Type="System.Double" />
+        <Parameter Name="Pmt" Type="System.Double" />
+        <Parameter Name="PV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Erforderlich. <see langword="Double" />Angeben von Zinssatz pro Zeitraum. Wenn Sie einen Autokredit mit einer jährlichen Prozentsatz Rate (APR) von 10 Prozent erhalten und monatliche Zahlungen, ist die Rate pro Zeitraum beispielsweise 0,1/12 oder 0,0083.</param>
+        <param name="NPer">Erforderlich. <see langword="Double" />Gesamtzahl der Punkte Zahlung angeben in Rente. Wenn Sie auf einen Kredit vier Jahre Car monatlichen Zahlungen vornehmen, hat beispielsweise Kredit insgesamt 4 x 12 (oder 48) Perioden.</param>
+        <param name="Pmt">Erforderlich. <see langword="Double" />Angeben von Zahlung jede periodische Struktur. Zahlungen enthalten normalerweise Kapital und Zinsen, die während der Lebensdauer der Annuität nicht ändern.</param>
+        <param name="PV">Dies ist optional. <see langword="Double" />Barwert (oder Zahlung Summe), einer Reihe von zukünftigen Zahlungen angeben. Beispielsweise ist ein Auto Kredit Kreditbetrag zu dem Kreditgeber der monatlichen Car Zahlungen, die Sie vornehmen, werden der vorhandene Wert an. Wenn nicht angegeben, wird 0 angenommen.</param>
+        <param name="Due">Dies ist optional. Objekt des Typs <see cref="T:Microsoft.VisualBasic.DueDate" /> , die angibt, wann Zahlungen fällig sind. Dieses Argument muss entweder <see langword="DueDate.EndOfPeriod" /> , wenn am Ende der Zahlungsfrist Zahlungen fällig sind oder <see langword="DueDate.BegOfPeriod" /> , wenn die zu Beginn des Zeitraums Zahlungen fällig sind. Wenn nicht angegeben, <see langword="DueDate.EndOfPeriod" /> wird angenommen.</param>
+        <summary>Gibt eine <see langword="Double" /> angeben den zukünftigen Wert einer Annuität basierend auf periodischen, festen Zahlungen und einem festen Zinssatz.</summary>
+        <returns>Gibt eine <see langword="Double" /> angeben den zukünftigen Wert einer Annuität basierend auf periodischen, festen Zahlungen und einem festen Zinssatz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Annuität ist eine Reihe von festen Bargeld Zahlungen, die mit der Zeit vorgenommen. Eine Annuität kann es sich um einen Kredit (z. B. eine Hypotheken) oder einer Investition (z. B. einen monatlichen einsparungen Plan) sein.  
+  
+ Die `Rate` und `NPer` Argumente müssen mit der in den gleichen Einheiten ausgedrückt Perioden berechnet werden. Z. B. wenn `Rate` wird in Monaten berechnet, `NPer` auch Monaten berechnet werden muss.  
+  
+ Für alle Argumente wird (z. B. einzahlungen zu einsparungen) ausgezahlt Bargeld durch negative Zahlen dargestellt; Erhaltener (z. B. Dividend überprüft) wird durch positive Zahlen dargestellt.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `FV` rate von Funktion, um den zukünftigen Wert einer Investition zurückzugeben, die pro Zeitraum anfallen (`APR / 12`), die Gesamtzahl der Zahlungen (`TotPmts`), die Zahlung (`Payment`), der aktuelle Wert der die Investition (`PVal`), und eine Zahl, die angibt, ob die Zahlung am Anfang oder Ende der Zahlungsfrist (`PayType`). Beachten Sie, dass, weil `Payment` Bargeld ausgezahlt, stellt es eine negative Zahl ist.  
+  
+ [!code-vb[VbVbalrMath#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IPmt">
+      <MemberSignature Language="C#" Value="public static double IPmt (double Rate, double Per, double NPer, double PV, double FV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 IPmt(float64 Rate, float64 Per, float64 NPer, float64 PV, float64 FV, valuetype Microsoft.VisualBasic.DueDate Due) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.IPmt(System.Double,System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="Per" Type="System.Double" />
+        <Parameter Name="NPer" Type="System.Double" />
+        <Parameter Name="PV" Type="System.Double" />
+        <Parameter Name="FV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Erforderlich. <see langword="Double" />Angeben von Zinssatz pro Zeitraum. Wenn Sie einen Autokredit mit einer jährlichen Prozentsatz Rate (APR) von 10 Prozent erhalten und monatliche Zahlungen, ist die Rate pro Zeitraum beispielsweise 0,1/12 oder 0,0083.</param>
+        <param name="Per">Erforderlich. <see langword="Double" />Angabe Zahlungsfrist im Bereich von 1 bis <c>Zzr</c>.</param>
+        <param name="NPer">Erforderlich. <see langword="Double" />Gesamtzahl der Punkte Zahlung angeben in Rente. Wenn Sie auf einen Kredit vier Jahre Car monatlichen Zahlungen vornehmen, hat beispielsweise Kredit insgesamt 4 x 12 (oder 48) Perioden.</param>
+        <param name="PV">Erforderlich. <see langword="Double" />angeben vorhanden Wert oder eine Reihe von zukünftigen Zahlungen oder Empfangsbestätigungen heutigen Wert. Beispielsweise ist ein Auto Kredit Kreditbetrag zu dem Kreditgeber der monatlichen Car Zahlungen, die Sie vornehmen, werden der vorhandene Wert an.</param>
+        <param name="FV">Dies ist optional. <see langword="Double" />Angeben von Endwerten oder Kontostand, Sie möchten, nachdem Sie die letzte Zahlung vorgenommen haben. Beispielsweise ist der zukünftige Wert eines Darlehens $0, da dies der Wert nach der letzten Zahlung ist. Jedoch, wenn Sie 50.000 Dollar über 18 Jahre Education Ihres Kindes speichern möchten, ist 50.000 Dollar der zukünftige Wert. Wenn nicht angegeben, wird 0 angenommen.</param>
+        <param name="Due">Dies ist optional. Objekt des Typs <see cref="T:Microsoft.VisualBasic.DueDate" /> , die angibt, wann Zahlungen fällig sind. Dieses Argument muss entweder <c>DueDate.EndOfPeriod</c> , wenn am Ende der Zahlungsfrist Zahlungen fällig sind oder <c>DueDate.BegOfPeriod</c> , wenn die zu Beginn des Zeitraums Zahlungen fällig sind. Wenn nicht angegeben, <c>DueDate.EndOfPeriod</c> angenommen.</param>
+        <summary>Gibt eine <see langword="Double" /> die zinszahlung für einen bestimmten Zeitraum einer Annuität basierend auf periodischen, festen Zahlungen und einem festen Zinssatz.</summary>
+        <returns>Gibt eine <see langword="Double" /> die zinszahlung für einen bestimmten Zeitraum einer Annuität basierend auf periodischen, festen Zahlungen und einem festen Zinssatz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Annuität ist eine Reihe von festen Bargeld Zahlungen, die mit der Zeit vorgenommen. Eine Annuität kann es sich um einen Kredit (z. B. eine Hypotheken) oder einer Investition (z. B. einen monatlichen einsparungen Plan) sein.  
+  
+ Die `Rate` und `NPer` Argumente müssen mit der in den gleichen Einheiten ausgedrückt Perioden berechnet werden. Z. B. wenn `Rate` wird in Monaten berechnet, `NPer` auch Monaten berechnet werden muss.  
+  
+ Für alle Argumente wird (z. B. einzahlungen zu einsparungen) ausgezahlt Bargeld durch negative Zahlen dargestellt; Erhaltener (z. B. Dividend überprüft) wird durch positive Zahlen dargestellt.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `IPmt` Funktion berechnet, wie viel eine Zahlung ist der zu überwachende, wenn alle Zahlungen denselben Wert aufweisen. Bei den Zinssatz pro Zeitraum sind (`APR / 12`), der für die der relevante Teil gewünscht Zahlungsfrist (`Period`), die Gesamtzahl der Zahlungen (`TotPmts`), den Barwert oder Prinzipal, der das Darlehen (`PVal`), die zukünftige Wert, der das Darlehen (`FVal`), und eine Zahl, die angibt, ob die Zahlung fällig am Anfang oder Ende der Zahlungsfrist ist (`PayType`).  
+  
+ [!code-vb[VbVbalrMath#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Per" />&lt;= 0 oder <paramref name="Per" /> &gt;<paramref name="NPer" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IRR">
+      <MemberSignature Language="C#" Value="public static double IRR (ref double[] ValueArray, double Guess = 0.1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 IRR(float64[]&amp; ValueArray, float64 Guess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.IRR(System.Double[]@,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ValueArray" Type="System.Double[]&amp;" RefType="ref" />
+        <Parameter Name="Guess" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="ValueArray">Erforderlich. Array von <see langword="Double" /> zahlungswerte angeben. Das Array muss mindestens einen negativen Wert (eine Zahlung) und einen positiven Wert (eine Bestätigung) enthalten.</param>
+        <param name="Guess">Dies ist optional. Objekt, das Sie schätzen Wert angibt zurückgegebenes <see langword="IRR" />. Wenn nicht angegeben, <c>erraten</c> ist 0,1 (10 Prozent).</param>
+        <summary>Gibt eine <see langword="Double" /> die interne Rendite für eine Reihe periodischer Cashflows (Ausgänge und Eingänge) angibt.</summary>
+        <returns>Gibt eine <see langword="Double" /> die interne Rendite für eine Reihe periodischer Cashflows (Ausgänge und Eingänge) angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die interne Rendite ist den Zinssatz für eine Investition bestehend aus Ausgänge und Eingänge, die in regelmäßigen Abständen auftreten.  
+  
+ Die `IRR` Funktion verwendet die Reihenfolge der Werte innerhalb des Arrays, um die Reihenfolge der Ausgänge und Eingänge zu interpretieren. Achten Sie darauf, dass die Einnahmen und Ausgaben in der richtigen Reihenfolge eingeben. Die Cashflow für jede periodische Struktur muss nicht behoben werden muss, wie für eine Annuität angibt.  
+  
+ `IRR`wird pro Iteration berechnet. Beginnend mit dem Wert des `Guess`, `IRR` Navigieren durch die Berechnung, bis das Ergebnis auf 0,00001 Prozent genau ist. Wenn `IRR` wurde nicht gefunden, ein Ergebnis nach 20 versucht, ein Fehler auftritt.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird die `IRR` Funktion gibt die interne Rendite für eine Reihe von fünf Cashflows im Array `Values()`. Das erste Arrayelement ist ein negativer Cashflow, die Start-Geschäftskosten darstellt. Die übrigen vier Cashflows stellen positive Cashflows für die folgenden vier Jahre dar. `Guess`ist die geschätzte interne Rendite.  
+  
+ [!code-vb[VbVbalrMath#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Array-Argumentwerte sind ungültig oder <paramref name="Guess" /> &lt;=-1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MIRR">
+      <MemberSignature Language="C#" Value="public static double MIRR (ref double[] ValueArray, double FinanceRate, double ReinvestRate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 MIRR(float64[]&amp; ValueArray, float64 FinanceRate, float64 ReinvestRate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.MIRR(System.Double[]@,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ValueArray" Type="System.Double[]&amp;" RefType="ref" />
+        <Parameter Name="FinanceRate" Type="System.Double" />
+        <Parameter Name="ReinvestRate" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="ValueArray">Erforderlich. Array von <see langword="Double" /> Cashflow Werte angegeben. Das Array muss mindestens einen negativen Wert (eine Zahlung) und einen positiven Wert (eine Bestätigung) enthalten.</param>
+        <param name="FinanceRate">Erforderlich. <see langword="Double" />Zinssatz angeben bezahlt als die Kosten für die Finanzierung.</param>
+        <param name="ReinvestRate">Erforderlich. <see langword="Double" />Gewinne aus Kapital empfangen Zinssatz angibt.</param>
+        <summary>Gibt eine <see langword="Double" /> , die die geänderte interne Rendite für eine Reihe periodischer Cashflows (Ausgänge und Eingänge) angibt.</summary>
+        <returns>Gibt eine <see langword="Double" /> , die die geänderte interne Rendite für eine Reihe periodischer Cashflows (Ausgänge und Eingänge) angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die geänderte interne Rendite ist die interne Rendite aus, wenn Ausgänge und Eingänge mit unterschiedlichen Raten finanziert werden. Die `MIRR` Funktion berücksichtigt sowohl die Kosten der Investition (`FinanceRate`) und den Zinssatz, Bargeld (`ReinvestRate`).  
+  
+ Die `FinanceRate` und `ReinvestRatearguments` Prozentsätze als Dezimalwerte ausgedrückt werden. 12 Prozent wird z. B. als 0,12 ausgedrückt.  
+  
+ Die `MIRR` Funktion verwendet die Reihenfolge der Werte innerhalb des Arrays, um die Reihenfolge der Ausgänge und Eingänge zu interpretieren. Achten Sie darauf, dass die Einnahmen und Ausgaben in der richtigen Reihenfolge eingeben.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `MIRR` Funktion, um die geänderte interner Ertragssätze für eine Reihe von Cashflows im Array zurückzugeben `Values()`. `LoanAPR`Stellt die Finanzierung Zinsen und `InvAPR` den Zinssatz Wiederanlage darstellt.  
+  
+ [!code-vb[VbVbalrMath#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Rang <paramref name="ValueArray" /> ist nicht gleich 1, <paramref name="FinanceRate" /> =-1, oder <paramref name="ReinvestRate" /> =-1</exception>
+        <exception cref="T:System.DivideByZeroException">Division durch 0 (null) aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NPer">
+      <MemberSignature Language="C#" Value="public static double NPer (double Rate, double Pmt, double PV, double FV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 NPer(float64 Rate, float64 Pmt, float64 PV, float64 FV, valuetype Microsoft.VisualBasic.DueDate Due) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.NPer(System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="Pmt" Type="System.Double" />
+        <Parameter Name="PV" Type="System.Double" />
+        <Parameter Name="FV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Erforderlich. <see langword="Double" />Angeben von Zinssatz pro Zeitraum. Wenn Sie einen Autokredit mit einer jährlichen Prozentsatz Rate (APR) von 10 Prozent erhalten und monatliche Zahlungen, ist die Rate pro Zeitraum beispielsweise 0,1/12 oder 0,0083.</param>
+        <param name="Pmt">Erforderlich. <see langword="Double" />Angeben von Zahlung jede periodische Struktur. Zahlungen enthalten normalerweise Kapital und Zinsen, die während der Lebensdauer der Annuität nicht ändert.</param>
+        <param name="PV">Erforderlich. <see langword="Double" />angeben vorhanden Wert oder eine Reihe von zukünftigen Zahlungen oder Empfangsbestätigungen heutigen Wert. Beispielsweise ist ein Auto Kredit Kreditbetrag zu dem Kreditgeber der monatlichen Car Zahlungen, die Sie vornehmen, werden der vorhandene Wert an.</param>
+        <param name="FV">Dies ist optional. <see langword="Double" />Angeben von Endwerten oder Kontostand, Sie möchten, nachdem Sie die letzte Zahlung vorgenommen haben. Beispielsweise ist der zukünftige Wert eines Darlehens $0, da dies der Wert nach der letzten Zahlung ist. Jedoch, wenn Sie 50.000 Dollar über 18 Jahre Education Ihres Kindes speichern möchten, ist 50.000 Dollar der zukünftige Wert. Wenn nicht angegeben, wird 0 angenommen.</param>
+        <param name="Due">Dies ist optional. Objekt des Typs <see cref="T:Microsoft.VisualBasic.DueDate" /> , die angibt, wann Zahlungen fällig sind. Dieses Argument muss entweder <c>DueDate.EndOfPeriod</c> , wenn am Ende der Zahlungsfrist Zahlungen fällig sind oder <c>DueDate.BegOfPeriod</c> , wenn die zu Beginn des Zeitraums Zahlungen fällig sind. Wenn nicht angegeben, <c>DueDate.EndOfPeriod</c> angenommen.</param>
+        <summary>Gibt eine <see langword="Double" /> angeben der Anzahl der Zeiträume für eine Annuität basierend auf periodischen, festen Zahlungen und einem festen Zinssatz.</summary>
+        <returns>Gibt eine <see langword="Double" /> angeben der Anzahl der Zeiträume für eine Annuität basierend auf periodischen, festen Zahlungen und einem festen Zinssatz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Annuität ist eine Reihe von konstanten Barzahlungen über einen Zeitraum an. Eine Annuität kann es sich um einen Kredit (z. B. eine Hypotheken) oder einer Investition (z. B. einen monatlichen einsparungen Plan) sein.  
+  
+ Für alle Argumente wird (z. B. einzahlungen zu einsparungen) ausgezahlt Bargeld durch negative Zahlen dargestellt; Erhaltener (z. B. Dividend überprüft) wird durch positive Zahlen dargestellt.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `NPer` Funktion, um die Anzahl von Zeiträumen zurückzugeben, währenddessen Zahlungen erfolgen müssen, damit ein Kredit bezahlen, dessen Wert, befindet sich im `PVal`. Darüber hinaus sind die Zinssatz pro Zeitraum (`APR / 12`), die Zahlung (`Payment`), der zukünftige Wert, der das Darlehen (`FVal`), und eine Zahl, die angibt, ob die Zahlung fällig am Anfang oder Ende der Zahlungsfrist ist (`PayType`).  
+  
+ [!code-vb[VbVbalrMath#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Rate" />0 = und <paramref name="Pmt" /> = 0</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NPV">
+      <MemberSignature Language="C#" Value="public static double NPV (double Rate, ref double[] ValueArray);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 NPV(float64 Rate, float64[]&amp; ValueArray) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.NPV(System.Double,System.Double[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="ValueArray" Type="System.Double[]&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Erforderlich. <see langword="Double" />Angeben von kalkulationszinsfuß über die Länge des Zeitraums, ausgedrückt als Dezimalzahl.</param>
+        <param name="ValueArray">Erforderlich. Array von <see langword="Double" /> zahlungswerte angeben. Das Array muss mindestens einen negativen Wert (eine Zahlung) und einen positiven Wert (eine Bestätigung) enthalten.</param>
+        <summary>Gibt eine <see langword="Double" /> angeben den Nettobarwert einer Investition basierend auf einer Reihe von periodischen Cashflows (Ausgänge und Eingänge) und einem Rabattsatz.</summary>
+        <returns>Gibt eine <see langword="Double" /> angeben den Nettobarwert einer Investition basierend auf einer Reihe von periodischen Cashflows (Ausgänge und Eingänge) und einem Rabattsatz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Nettobarwert einer Investition ist der aktuelle Wert einer zukünftigen Reihe von Ausgänge und Eingänge.  
+  
+ Die `NPV` Funktion verwendet die Reihenfolge der Werte innerhalb des Arrays, um die Reihenfolge der Ausgänge und Eingänge zu interpretieren. Achten Sie darauf, dass die Einnahmen und Ausgaben in der richtigen Reihenfolge eingeben.  
+  
+ Die `NPV` Investitionen einen Zeitraum vor dem Datum der ersten Zahlungswert beginnt und endet mit dem letzten Cashflow-Wert im Array.  
+  
+ Die Berechnung des Werts basiert auf zukünftigen Cashflows zu berücksichtigen. Wenn der erste Cashflow am Anfang der ersten Periode auftritt, muss der erste Wert hinzugefügt werden, um den Rückgabewert von `NPV` und darf nicht in den Werten Cashflow einbezogen werden `ValueArray`.  
+  
+ Die `NPV` Funktion ist vergleichbar mit der `PV` Funktion (Barwert), außer dass die `PV` Funktion ermöglicht Cashflows am Ende oder am Anfang eines Zeitraums beginnen. Im Gegensatz zu den Variablen `NPV` zahlungswerte, `PV` Cashflows während der Investition korrigiert werden muss.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `NPV` Funktion, um den Nettobarwert für eine Reihe von Cashflows im Array zurückzugeben `values()`. Der Rückgabewert, gespeichert `FixedRetRate`, die feste interne Rendite darstellt.  
+  
+ [!code-vb[VbVbalrMath#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ValueArray" />ist <see langword="Nothing" />, Rang von <paramref name="ValueArray" /> &lt; &gt; 1 oder <paramref name="Rate" /> =-1</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pmt">
+      <MemberSignature Language="C#" Value="public static double Pmt (double Rate, double NPer, double PV, double FV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 Pmt(float64 Rate, float64 NPer, float64 PV, float64 FV, valuetype Microsoft.VisualBasic.DueDate Due) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.Pmt(System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="NPer" Type="System.Double" />
+        <Parameter Name="PV" Type="System.Double" />
+        <Parameter Name="FV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Erforderlich. <see langword="Double" />Gibt den Zinssatz pro Zeitraum an. Wenn Sie einen Autokredit mit einer jährlichen Prozentsatz Rate (APR) von 10 Prozent erhalten und monatliche Zahlungen, ist die Rate pro Zeitraum beispielsweise 0,1/12 oder 0,0083.</param>
+        <param name="NPer">Erforderlich. <see langword="Double" />Die Gesamtanzahl der Zahlungszeiträume angibt die Annuität. Wenn Sie auf einen Kredit vier Jahre Car monatlichen Zahlungen vornehmen, hat Kredit beispielsweise insgesamt 4 × 12 (oder 48) Perioden.</param>
+        <param name="PV">Erforderlich. <see langword="Double" />Gibt an, die vorhanden (oder Zahlung Summe), dass eine Reihe von zukünftig zu zahlenden Zahlungen sollte jetzt ist. Beispielsweise ist ein Auto Kredit Kreditbetrag zu dem Kreditgeber der monatlichen Car Zahlungen, die Sie vornehmen, werden der vorhandene Wert an.</param>
+        <param name="FV">Dies ist optional. <see langword="Double" />Angeben von Endwerten oder Kontostand, Sie möchten, nachdem Sie die letzte Zahlung vorgenommen haben. Beispielsweise ist der zukünftige Wert eines Darlehens $0, da dies der Wert nach der letzten Zahlung ist. Jedoch, wenn Sie 50.000 Dollar Ihres Kindes Education über 18 Jahre speichern möchten, ist 50.000 Dollar der zukünftige Wert. Wenn nicht angegeben, wird 0 angenommen.</param>
+        <param name="Due">Dies ist optional. Objekt des Typs <see cref="T:Microsoft.VisualBasic.DueDate" /> , die angibt, wann Zahlungen fällig sind. Dieses Argument muss entweder <c>DueDate.EndOfPeriod</c> , wenn am Ende der Zahlungsfrist Zahlungen fällig sind oder <c>DueDate.BegOfPeriod</c> , wenn die zu Beginn des Zeitraums Zahlungen fällig sind. Wenn nicht angegeben, <c>DueDate.EndOfPeriod</c> angenommen.</param>
+        <summary>Gibt eine <see langword="Double" /> , der die Zahlung für eine Annuität basierend auf periodischen, festen Zahlungen und einem festen Zinssatz.</summary>
+        <returns>Gibt eine <see langword="Double" /> , der die Zahlung für eine Annuität basierend auf periodischen, festen Zahlungen und einem festen Zinssatz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Annuität ist eine Reihe von festen Bargeld Zahlungen, die eine bestimmte Zeitspanne vorgenommen. Eine Annuität kann es sich um einen Kredit (z. B. eine Hypotheken) oder einer Investition (z. B. einen monatlichen einsparungen Plan) sein.  
+  
+ Die `Rate` und `NPer` Argumente müssen mit der in den gleichen Einheiten ausgedrückt Perioden berechnet werden. Z. B. wenn `Rate` wird in Monaten berechnet, `NPer` auch Monaten berechnet werden muss.  
+  
+ Für alle Argumente wird (z. B. einzahlungen zu einsparungen) bezahlt Bargeld durch negative Zahlen dargestellt; Erhaltener (z. B. Dividend überprüft) wird durch positive Zahlen dargestellt.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `Pmt` Funktion, um die monatliche Zahlung für einen Kredit während eines festen Zeitraums zurückgeben. Bei den Zinssatz pro Zeitraum sind (`APR / 12`), die Gesamtzahl der Zahlungen (`TotPmts`), den Barwert oder Prinzipal, der das Darlehen (`PVal`), der zukünftige Wert, der das Darlehen (`FVal`), und eine Zahl, der angibt, ob die die Zahlung ist fällig am Anfang oder Ende der Zahlungsfrist`(PayType).`  
+  
+ [!code-vb[VbVbalrMath#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="NPer" /> = 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PPmt">
+      <MemberSignature Language="C#" Value="public static double PPmt (double Rate, double Per, double NPer, double PV, double FV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 PPmt(float64 Rate, float64 Per, float64 NPer, float64 PV, float64 FV, valuetype Microsoft.VisualBasic.DueDate Due) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.PPmt(System.Double,System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="Per" Type="System.Double" />
+        <Parameter Name="NPer" Type="System.Double" />
+        <Parameter Name="PV" Type="System.Double" />
+        <Parameter Name="FV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Erforderlich. <see langword="Double" />Gibt den Zinssatz pro Zeitraum an. Wenn Sie einen Autokredit mit einer jährlichen Prozentsatz Rate (APR) von 10 Prozent erhalten und monatliche Zahlungen, ist die Rate pro Zeitraum beispielsweise 0,1/12 oder 0,0083.</param>
+        <param name="Per">Erforderlich. <see langword="Double" />Gibt an, die Zahlungsfrist im Bereich von 1 bis <c>Zzr</c>.</param>
+        <param name="NPer">Erforderlich. <see langword="Double" />Die Gesamtanzahl der Zahlungszeiträume angibt die Annuität. Wenn Sie auf einen Kredit vier Jahre Car monatlichen Zahlungen vornehmen, hat beispielsweise Kredit insgesamt 4 x 12 (oder 48) Perioden.</param>
+        <param name="PV">Erforderlich. <see langword="Double" />Gibt den aktuellen Wert einer Reihe von zukünftiger Einnahmen oder Ausgaben. Beispielsweise ist ein Auto Kredit Kreditbetrag zu dem Kreditgeber der monatlichen Car Zahlungen, die Sie vornehmen, werden der vorhandene Wert an.</param>
+        <param name="FV">Dies ist optional. <see langword="Double" />Angeben von Endwerten oder Kontostand, Sie möchten, nachdem Sie die letzte Zahlung vorgenommen haben. Beispielsweise ist der zukünftige Wert eines Darlehens $0, da dies der Wert nach der letzten Zahlung ist. Jedoch, wenn Sie 50.000 Dollar über 18 Jahre Education Ihres Kindes speichern möchten, ist 50.000 Dollar der zukünftige Wert. Wenn nicht angegeben, wird 0 angenommen.</param>
+        <param name="Due">Dies ist optional. Objekt des Typs <see cref="T:Microsoft.VisualBasic.DueDate" /> , die angibt, wann Zahlungen fällig sind. Dieses Argument muss entweder <c>DueDate.EndOfPeriod</c> , wenn am Ende der Zahlungsfrist Zahlungen fällig sind oder <c>DueDate.BegOfPeriod</c> , wenn die zu Beginn des Zeitraums Zahlungen fällig sind. Wenn nicht angegeben, <c>DueDate.EndOfPeriod</c> angenommen.</param>
+        <summary>Gibt eine <see langword="Double" /> , der die principal Zahlungsprozess für einen bestimmten Zeitraum einer Annuität basierend auf periodischen, festen Zahlungen und einem festen Zinssatz.</summary>
+        <returns>Gibt eine <see langword="Double" /> , der die principal Zahlungsprozess für einen bestimmten Zeitraum einer Annuität basierend auf periodischen, festen Zahlungen und einem festen Zinssatz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Annuität ist eine Reihe von konstanten Barzahlungen über einen Zeitraum an. Eine Annuität kann es sich um einen Kredit (z. B. eine Hypotheken) oder einer Investition (z. B. einen monatlichen einsparungen Plan) sein.  
+  
+ Die `Rate` und `NPer` Argumente müssen mit der in den gleichen Einheiten ausgedrückt Perioden berechnet werden. Z. B. wenn `Rate` wird in Monaten berechnet, `NPer` auch Monaten berechnet werden muss.  
+  
+ Für alle Argumente wird (z. B. einzahlungen zu einsparungen) bezahlt Bargeld durch negative Zahlen dargestellt; Erhaltener (z. B. Dividend überprüft) wird durch positive Zahlen dargestellt.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `PPmt` Funktion berechnet, wie viel eine Zahlung für einen bestimmten Zeitraum Prinzipal ist, wenn alle Zahlungen denselben Wert aufweisen. Bei den Zinssatz pro Zeitraum sind (`APR / 12`), die Zahlungsfrist für die Hauptteils gewünscht (`Period`), die Gesamtzahl der Zahlungen (`TotPmts`), den Barwert oder Prinzipal, der das Darlehen (`PVal`), die zukünftige Wert, der das Darlehen (`FVal`), und eine Zahl, die angibt, ob die Zahlung fällig am Anfang oder Ende der Zahlungsfrist ist (`PayType`).  
+  
+ [!code-vb[VbVbalrMath#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Per" />&lt;= 0 oder <paramref name="Per" /> &gt; <paramref name="NPer" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PV">
+      <MemberSignature Language="C#" Value="public static double PV (double Rate, double NPer, double Pmt, double FV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 PV(float64 Rate, float64 NPer, float64 Pmt, float64 FV, valuetype Microsoft.VisualBasic.DueDate Due) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.PV(System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="NPer" Type="System.Double" />
+        <Parameter Name="Pmt" Type="System.Double" />
+        <Parameter Name="FV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Erforderlich. <see langword="Double" />Gibt den Zinssatz pro Zeitraum an. Wenn Sie einen Autokredit mit einer jährlichen Prozentsatz Rate (APR) von 10 Prozent erhalten und monatliche Zahlungen, ist die Rate pro Zeitraum beispielsweise 0,1/12 oder 0,0083.</param>
+        <param name="NPer">Erforderlich. <see langword="Double" />Die Gesamtanzahl der Zahlungszeiträume angibt die Annuität. Wenn Sie auf einen Kredit vier Jahre Car monatlichen Zahlungen vornehmen, hat Kredit beispielsweise Perioden 4 x 12 (oder 48).</param>
+        <param name="Pmt">Erforderlich. <see langword="Double" />Gibt die Zahlung jede periodische Struktur an. Zahlungen enthalten normalerweise Kapital und Zinsen, die während der Lebensdauer der Annuität nicht ändert.</param>
+        <param name="FV">Dies ist optional. <see langword="Double" />Gibt den zukünftigen Wert oder Kontostand, nachdem Sie die letzte Zahlung vorgenommen werden sollen. Beispielsweise ist der zukünftige Wert eines Darlehens $0, da dies der Wert nach der letzten Zahlung ist. Jedoch, wenn Sie 50.000 Dollar über 18 Jahre Education Ihres Kindes speichern möchten, ist 50.000 Dollar der zukünftige Wert. Wenn nicht angegeben, wird 0 angenommen.</param>
+        <param name="Due">Dies ist optional. Objekt des Typs <see cref="T:Microsoft.VisualBasic.DueDate" /> , die angibt, wann Zahlungen fällig sind. Dieses Argument muss entweder <c>DueDate.EndOfPeriod</c> , wenn am Ende der Zahlungsfrist Zahlungen fällig sind oder <c>DueDate.BegOfPeriod</c> , wenn die zu Beginn des Zeitraums Zahlungen fällig sind. Wenn nicht angegeben, <c>DueDate.EndOfPeriod</c> angenommen.</param>
+        <summary>Gibt eine <see langword="Double" /> den aktuellen Wert einer Annuität basierend auf periodischen, festen Zahlungen zukünftig zu zahlenden und einem festen Zinssatz.</summary>
+        <returns>Gibt eine <see langword="Double" /> den aktuellen Wert einer Annuität basierend auf periodischen, festen Zahlungen zukünftig zu zahlenden und einem festen Zinssatz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Annuität ist eine Reihe von konstanten Barzahlungen über einen Zeitraum an. Eine Annuität kann es sich um einen Kredit (z. B. eine Hypotheken) oder einer Investition (z. B. einen monatlichen einsparungen Plan) sein.  
+  
+ Die `Rate` und `NPer` Argumente müssen mit der in den gleichen Einheiten ausgedrückt Perioden berechnet werden. Z. B. wenn `Rate` wird in Monaten berechnet, `NPer` auch Monaten berechnet werden muss.  
+  
+ Für alle Argumente wird (z. B. einzahlungen zu einsparungen) ausgezahlt Bargeld durch negative Zahlen dargestellt; Erhaltener (z. B. Dividend überprüft) wird durch positive Zahlen dargestellt.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird die `PV` Funktion gibt den Barwert einer Annuität 1.000.000 $vorliegt, die 50.000 Dollar pro Jahr für den nächsten 20 Jahren bereitstellt. Bereitgestellten sind die erwarteten jährlichen Prozentsatz (`APR`), die Gesamtzahl der Zahlungen (`TotPmts`), jede Zahlungsbetrag (`YrIncome`), die zukünftige Gesamtwert der Investition (`FVal`), und eine Zahl, der angibt, ob jede die Zahlung erfolgt am Anfang oder Ende der Zahlungsfrist (`PayType`). Beachten Sie, dass `YrIncome` eine negative Zahl ist, da er Zahlungsausgang von der Annuität darstellt.  
+  
+ [!code-vb[VbVbalrMath#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rate">
+      <MemberSignature Language="C#" Value="public static double Rate (double NPer, double Pmt, double PV, double FV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod, double Guess = 0.1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 Rate(float64 NPer, float64 Pmt, float64 PV, float64 FV, valuetype Microsoft.VisualBasic.DueDate Due, float64 Guess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.Rate(System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="NPer" Type="System.Double" />
+        <Parameter Name="Pmt" Type="System.Double" />
+        <Parameter Name="PV" Type="System.Double" />
+        <Parameter Name="FV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+        <Parameter Name="Guess" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="NPer">Erforderlich. <see langword="Double" />Die Gesamtanzahl der Zahlungszeiträume angibt die Annuität. Wenn Sie auf einen Kredit vier Jahre Car monatlichen Zahlungen vornehmen, hat beispielsweise Kredit insgesamt 4 * 12 (oder 48) Perioden.</param>
+        <param name="Pmt">Erforderlich. <see langword="Double" />Gibt die Zahlung jede periodische Struktur an. Zahlungen enthalten normalerweise Kapital und Zinsen, die während der Lebensdauer der Annuität nicht ändern.</param>
+        <param name="PV">Erforderlich. <see langword="Double" />Gibt den Barwert oder Wert noch heute, einer Reihe von zukünftiger Einnahmen oder Ausgaben. Beispielsweise ist ein Auto Kredit Kreditbetrag zu dem Kreditgeber der monatlichen Car Zahlungen, die Sie vornehmen, werden der vorhandene Wert an.</param>
+        <param name="FV">Dies ist optional. <see langword="Double" />Gibt den zukünftigen Wert oder Kontostand, nachdem Sie die letzte Zahlung vorgenommen werden sollen. Beispielsweise ist der zukünftige Wert eines Darlehens $0, da dies der Wert nach der letzten Zahlung ist. Jedoch, wenn Sie 50.000 Dollar über 18 Jahre Education Ihres Kindes speichern möchten, ist 50.000 Dollar der zukünftige Wert. Wenn nicht angegeben, wird 0 angenommen.</param>
+        <param name="Due">Dies ist optional. Objekt des Typs <see cref="T:Microsoft.VisualBasic.DueDate" /> , die angibt, wann Zahlungen fällig sind. Dieses Argument muss entweder <c>DueDate.EndOfPeriod</c> , wenn am Ende der Zahlungsfrist Zahlungen fällig sind oder <c>DueDate.BegOfPeriod</c> , wenn die zu Beginn des Zeitraums Zahlungen fällig sind. Wenn nicht angegeben, <c>DueDate.EndOfPeriod</c> angenommen.</param>
+        <param name="Guess">Dies ist optional. <see langword="Double" />Wert Sie schätzen, zurückgegebenes <see langword="Rate" />. Wenn nicht angegeben, <c>erraten</c> ist 0,1 (10 Prozent).</param>
+        <summary>Gibt eine <see langword="Double" /> den Zinssatz pro Zeitraum für eine Annuität angibt.</summary>
+        <returns>Gibt eine <see langword="Double" /> den Zinssatz pro Zeitraum für eine Annuität angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Annuität ist eine Reihe von konstanten Barzahlungen über einen Zeitraum an. Eine Annuität kann es sich um einen Kredit (z. B. eine Hypotheken) oder einer Investition (z. B. einen monatlichen einsparungen Plan) sein.  
+  
+ Für alle Argumente wird (z. B. einzahlungen zu einsparungen) ausgezahlt Bargeld durch negative Zahlen dargestellt; Erhaltener (z. B. Dividend überprüft) wird durch positive Zahlen dargestellt.  
+  
+ `Rate`wird pro Iteration berechnet. Beginnend mit dem Wert des `Guess`, `Rate` Navigieren durch die Berechnung, bis das Ergebnis auf 0,00001 Prozent genau ist. Wenn `Rate` wurde nicht gefunden, ein Ergebnis nach 20 versucht, ein Fehler auftritt. Wenn die Zahl 10 Prozent ist und `Rate` ein Fehler auftritt, versuchen Sie einen anderen Wert für `Guess`.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `Rate` Funktion berechnet den Zinssatz eines Darlehens erhält die Gesamtzahl der Zahlungen (`TotPmts`), die Menge der Kredit Zahlung (`Payment`), den Barwert oder Prinzipal, der das Darlehen (`PVal`), die Zukunft Wert, der das Darlehen (`FVal`), eine Zahl, die angibt, ob die Zahlung fällig am Anfang oder Ende der Zahlungsfrist ist (`PayType`), und einen Näherungswert der erwarteten Zinssatz (`Guess`).  
+  
+ [!code-vb[VbVbalrMath#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="NPer" /> &lt;= 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SLN">
+      <MemberSignature Language="C#" Value="public static double SLN (double Cost, double Salvage, double Life);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 SLN(float64 Cost, float64 Salvage, float64 Life) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.SLN(System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Cost" Type="System.Double" />
+        <Parameter Name="Salvage" Type="System.Double" />
+        <Parameter Name="Life" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="Cost">Erforderlich. <see langword="Double" />Angeben von anfänglichen Kosten für das Medienobjekt.</param>
+        <param name="Salvage">Erforderlich. <see langword="Double" />Wert des Medienobjekts am Ende der Nutzungsdauer angeben.</param>
+        <param name="Life">Erforderlich. <see langword="Double" />Länge der Nutzungsdauer der Ressource angibt.</param>
+        <summary>Gibt eine <see langword="Double" /> die lineare Abschreibung einer Anlage für einen einzelnen Zeitraum angibt.</summary>
+        <returns>Gibt eine <see langword="Double" /> die lineare Abschreibung einer Anlage für einen einzelnen Zeitraum angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zeitraum der Abschreibung muss in derselben Einheit als ausgedrückt werden die `Life` Argument. Alle Argumente müssen positive Zahlen sein.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `SLN` -Funktion die lineare Abschreibung einer Anlage für einen bestimmten Zeitraum anfänglichen Kosten für das Medienobjekt zurückgibt (`InitCost`), der Restwert am Ende der Lebensdauer des Medienobjekts (`SalvageVal`), und die gesamte Lebensdauer des das Medienobjekt in Jahren (`LifeTime`).  
+  
+ [!code-vb[VbVbalrMath#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Life" /> = 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SYD">
+      <MemberSignature Language="C#" Value="public static double SYD (double Cost, double Salvage, double Life, double Period);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 SYD(float64 Cost, float64 Salvage, float64 Life, float64 Period) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.SYD(System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Cost" Type="System.Double" />
+        <Parameter Name="Salvage" Type="System.Double" />
+        <Parameter Name="Life" Type="System.Double" />
+        <Parameter Name="Period" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="Cost">Erforderlich. <see langword="Double" />Angeben der anfänglichen Kosten für das Medienobjekt.</param>
+        <param name="Salvage">Erforderlich. <see langword="Double" />der Wert des Medienobjekts am Ende der Nutzungsdauer angeben.</param>
+        <param name="Life">Erforderlich. <see langword="Double" />die Länge der Nutzungsdauer der Ressource angegeben.</param>
+        <param name="Period">Erforderlich. <see langword="Double" />Angabe des Zeitraums, für welche Bestand veralten von Ressourcen berechnet wird.</param>
+        <summary>Gibt eine <see langword="Double" /> die Summe von Jahren Ziffern Abschreibung einer Anlage für einen bestimmten Zeitraum angeben.</summary>
+        <returns>Gibt eine <see langword="Double" /> die Summe von Jahren Ziffern Abschreibung einer Anlage für einen bestimmten Zeitraum angeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Life` und `Period` Argumente müssen in den gleichen Einheiten ausgedrückt werden. Z. B. wenn `Life` erhält in Monaten `Period` muss ebenfalls in Monaten angegeben werden. Alle Argumente müssen positive Zahlen sein.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `SYD` -Funktion die Abschreibung einer Anlage für einen bestimmten Zeitraum anfänglichen Kosten für das Medienobjekt zurückgibt (`InitCost`), der Restwert am Ende der Lebensdauer des Medienobjekts (`SalvageVal`), sowie die gesamte Lebensdauer des Medienobjekts in Jahre (`LifeTime`).  
+  
+ [!code-vb[VbVbalrMath#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Salvage" />&lt; 0, <paramref name="Period" /> &gt; <paramref name="Life" />, oder <paramref name="Period" /> &lt;= 0.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

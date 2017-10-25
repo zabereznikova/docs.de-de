@@ -1,0 +1,6 @@
+<Namespace Name="System.Text.RegularExpressions">
+  <Docs>
+    <summary>Die <see cref="N:System.Text.RegularExpressions" /> -Namespace enthält Klassen, die Zugriff auf die .NET Framework-Modul für reguläre Ausdrücke ermöglichen. Der Namespace stellt Funktionalität für reguläre Ausdrücke, die verwendet werden kann, aus allen Plattformen oder Sprache, die in Microsoft .NET Framework ausgeführt wird. Zusätzlich zu den in diesem Namespace enthaltenen Typen der <see cref="T:System.Configuration.RegexStringValidator" /> -Klasse ermöglicht es Ihnen zu bestimmen, ob eine bestimmte Zeichenfolge dem Muster eines regulären Ausdrucks entspricht.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

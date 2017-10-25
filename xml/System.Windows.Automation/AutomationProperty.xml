@@ -1,0 +1,63 @@
+<Type Name="AutomationProperty" FullName="System.Windows.Automation.AutomationProperty">
+  <TypeSignature Language="C#" Value="public class AutomationProperty : System.Windows.Automation.AutomationIdentifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AutomationProperty extends System.Windows.Automation.AutomationIdentifier" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.AutomationProperty" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.AutomationIdentifier</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt eine Eigenschaft einer <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse gibt die Eigenschaften, nicht die Werte der Eigenschaften. Statische Objekte dieses Typs werden als Felder des gefunden <xref:System.Windows.Automation.AutomationElement> und Klassen für Steuerelementmuster.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird einen geänderte Eigenschaften ausgelöste Ereignishandler und der Ereignishandler überprüft die <xref:System.Windows.Automation.AutomationPropertyChangedEventArgs.Property%2A> Member die Ereignisargumente für die Eigenschaft zu bestimmen, die geändert wurde.  
+  
+ [!code-csharp[UIAClient_snip#172](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/PropertySnips.cs#172)]
+ [!code-vb[UIAClient_snip#172](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/PropertySnips.vb#172)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LookupById">
+      <MemberSignature Language="C#" Value="public static System.Windows.Automation.AutomationProperty LookupById (int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Automation.AutomationProperty LookupById(int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.AutomationProperty.LookupById(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="id">Der Eigenschaftenbezeichner.</param>
+        <summary>Ruft ein <see cref="T:System.Windows.Automation.AutomationProperty" /> , das einen angegebenen numerischen Bezeichner kapselt.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaften werden in der Regel identifiziert, indem ein <xref:System.Windows.Automation.AutomationProperty> Objekt. Diese Methode kann verwendet werden, zum Erstellen eines Objekts bei der nur den numerischen Bezeichner (die <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> geerbt von <xref:System.Windows.Automation.AutomationIdentifier>) bekannt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

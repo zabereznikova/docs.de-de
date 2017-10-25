@@ -1,0 +1,31 @@
+<Namespace Name="System.Speech.Synthesis.TtsEngine">
+  <Docs>
+    <summary>Unterstützt die Erstellung von Speech Sprachsynthese Markup Language (SSML) basieren benutzerdefinierte Modulen für das Rendern von Text-zu-Sprache (Sprachausgabe).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Mitglieder der <xref:System.Speech.Synthesis.TtsEngine> Namespace Stellen verfügbar Windows Desktop Speech-Technologie für die Spracherkennung Sprachsynthese Markup Language (SSML) Markupsprache und die zur Erstellung von synthetischen Spracherkennungsmodule zu unterstützen.  
+  
+ Die SSML-Markupsprache ist der Industriestandard eine reichhaltige, XML-basierte Sprache für die Unterstützung der synthetischen Spracherkennungsmodule angeben. Es wird von Microsoft und unsere Mitbewerber suggeriert. Weitere Informationen zu der SSML, finden Sie unter [Spracherkennung Sprachsynthese Markup Language Specification](http://go.microsoft.com/fwlink/?LinkId=15144).  
+  
+ Erstellen einer neuen synthetische Speech-Modul verwendet <xref:System.Speech.Synthesis.TtsEngine> erfordert die Implementierung und die Registrierung eines Objekts, das von der abstrakten Basisklasse abgeleitete <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml>.  
+  
+ <xref:System.Speech.Synthesis.TtsEngine>Basis synthetische Spracherkennungsmodule erfolgt über Windows-Desktop-Speech-Technologie-Infrastruktur, die mit den Tools in der <xref:System.Speech.Synthesis> -Namespace, insbesondere <xref:System.Speech.Synthesis.SpeechSynthesizer> -Objekt und niemals direkt von Anwendungen verwendet werden.  
+  
+ Die Windows-Desktop-Speech-Technologie-Infrastrukturen wird sichergestellt, dass alle an eine synthetische Sprachmodul übergebenen Parameter werden überprüft und Threads synchronisiert.  
+  
+ Eine von synthetischen Sprachmodul mit implementiert <xref:System.Speech.Synthesis.TtsEngine> Technologie kann:  
+  
+-   Empfangen von Eingaben, (siehe <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak%2A>,.<xref:System.Speech.Synthesis.TtsEngine.TextFragment>, <xref:System.Speech.Synthesis.TtsEngine.FragmentState>, und <xref:System.Speech.Synthesis.TtsEngine.SkipInfo> )  
+  
+-   Ereignisse in die Warteschlange, und geben Sie die Aktionen (finden Sie unter <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction>, <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite>, <xref:System.Speech.Synthesis.TtsEngine.EventParameterType>, <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo>).  
+  
+-   Steuern Sie das Steuerelement die Tonhöhe, sprechrate und-Lautstärke der Spracherkennung Ausgabe (siehe <xref:System.Speech.Synthesis.TtsEngine.ContourPoint>, <xref:System.Speech.Synthesis.TtsEngine.ContourPointChangeType>, <xref:System.Speech.Synthesis.TtsEngine.EmphasisBreak>, <xref:System.Speech.Synthesis.TtsEngine.EmphasisWord>, <xref:System.Speech.Synthesis.TtsEngine.Prosody>, <xref:System.Speech.Synthesis.TtsEngine.ProsodyNumber>, <xref:System.Speech.Synthesis.TtsEngine.ProsodyPitch>, <xref:System.Speech.Synthesis.TtsEngine.ProsodyRange>, <xref:System.Speech.Synthesis.TtsEngine.ProsodyRate>, <xref:System.Speech.Synthesis.TtsEngine.ProsodyUnit>, und <xref:System.Speech.Synthesis.TtsEngine.ProsodyVolume>)  
+  
+-   Bestimmen Sie Verbrauch und Ausgabe Ziel Sprachsynthese (finden Sie unter <xref:System.Speech.Synthesis.TtsEngine.SayAs>, <xref:System.Speech.Synthesis.TtsEngine.SpeakOutputFormat>)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

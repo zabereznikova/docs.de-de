@@ -1,0 +1,442 @@
+<Type Name="PropertyValueCollection" FullName="System.DirectoryServices.PropertyValueCollection">
+  <TypeSignature Language="C#" Value="public class PropertyValueCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyValueCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.PropertyValueCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Werte der enthält einem <see cref="T:System.DirectoryServices.DirectoryEntry" /> Eigenschaft.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+      <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+    </permission>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyValueCollection.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.DirectoryServices.PropertyValueCollection" /> Objekt, das dieser Auflistung angefügt werden soll.</param>
+        <summary>Fügt das angegebene <see cref="T:System.DirectoryServices.PropertyValueCollection" /> Objekt, das dieser Auflistung.</summary>
+        <returns>Der nullbasierte Index des der <see cref="T:System.DirectoryServices.PropertyValueCollection" /> Objekt, das dieser Auflistung angefügt wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Während des Aufrufs der zugrunde liegenden Schnittstelle ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentNullException">Der Eigenschaftswert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.DirectoryServices.PropertyValueCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.DirectoryServices.PropertyValueCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyValueCollection.AddRange(System.DirectoryServices.PropertyValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DirectoryServices.PropertyValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.DirectoryServices.PropertyValueCollection" /> -Objekt, das die zu dieser Auflistung angefügt Objekte enthält.</param>
+        <summary>Fügt den Inhalt der <see cref="T:System.DirectoryServices.PropertyValueCollection" /> Objekt, das dieser Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Eigenschaftswert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (object[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(object[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyValueCollection.AddRange(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.DirectoryServices.PropertyValueCollection" /> Array mit den Objekten, das dieser Auflistung angefügt werden soll.</param>
+        <summary>Fügt den Inhalt des angegebenen <see cref="T:System.DirectoryServices.PropertyValueCollection" /> Objekt, das dieser Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Eigenschaftswert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyValueCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das <see cref="T:System.DirectoryServices.PropertyValueCollection" />-Objekt, das in dieser Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.DirectoryServices.PropertyValueCollection" /> Objekt befindet sich in dieser Auflistung.</summary>
+        <returns>
+          <see langword="true" />, wenn die angegebene Eigenschaft zu dieser Auflistung gehört, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (object[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(object[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyValueCollection.CopyTo(System.Object[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Object[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array von <see cref="T:System.DirectoryServices.PropertyValueCollection" />-Objekten, das die Elemente dieser Auflistung empfängt.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> , in dem diese Methode mit dem Kopieren dieser Auflistung beginnt.</param>
+        <summary>Kopiert alle <see cref="T:System.DirectoryServices.PropertyValueCollection" /> Objekte in dieser Auflistung in das angegebene Array, beginnend am angegebenen Index im Zielarray.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyValueCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Den zu suchenden Eigenschaftswert.</param>
+        <summary>Ruft den Index eines angegebenen Eigenschaftswerts in dieser Auflistung ab.</summary>
+        <returns>Der nullbasierte Index des angegebenen Eigenschaftswerts. Wenn das Objekt nicht gefunden wird, wird der Wert-1 zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyValueCollection.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem den Eigenschaftswert eingefügt werden soll.</param>
+        <param name="value">Der Eigenschaftswert eingefügt werden soll.</param>
+        <summary>Fügt einem Eigenschaftswert am angegebenen Index in diese Sammlung ein.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Eigenschaftswert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Während des Aufrufs der zugrunde liegenden Schnittstelle ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Der Index ist kleiner als 0 (null) oder größer als die Größe der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyValueCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Eigenschaftswerts.</param>
+        <summary>Ruft ab oder legt den Wert der Eigenschaft, der auf einem angegebenen Index dieser Auflistung befindet.</summary>
+        <value>Der Eigenschaftswert am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In C# ist diese Eigenschaft der Indexer für die <xref:System.DirectoryServices.PropertyValueCollection>-Klasse.  
+  
+ In JScript können Sie die von einem Typ definierten indizierten Standardeigenschaften verwenden, jedoch keine eigenen Eigenschaften explizit definieren. Allerdings Angabe des Expando-Attributs für eine Klasse automatisch eine indizierte Standardeigenschaft bereitgestellt, deren Typ Object und-Indextyp <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Eigenschaftswert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Der Index ist kleiner als 0 (null) oder größer als die Größe der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClearComplete">
+      <MemberSignature Language="C#" Value="protected override void OnClearComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClearComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyValueCollection.OnClearComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="M:System.Collections.CollectionBase.OnClearComplete" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />wird ausgeführt, wenn eine Anwendung diese Eigenschaft festlegt, wenn die <see cref="P:System.DirectoryServices.DirectoryEntry.UsePropertyCache" /> ist <see langword="false" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsertComplete">
+      <MemberSignature Language="C#" Value="protected override void OnInsertComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsertComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyValueCollection.OnInsertComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem einzufügende <c>Wert</c>.</param>
+        <param name="value">Der neue Wert des Elements am <c>Index</c>.</param>
+        <summary>Setzt die <see cref="M:System.Collections.CollectionBase.OnInsertComplete(System.Int32,System.Object)" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />wird ausgeführt, wenn eine Anwendung diese Eigenschaft festlegt, wenn die <see cref="P:System.DirectoryServices.DirectoryEntry.UsePropertyCache" /> ist <see langword="false" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemoveComplete">
+      <MemberSignature Language="C#" Value="protected override void OnRemoveComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemoveComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyValueCollection.OnRemoveComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem sich der Wert befindet.</param>
+        <param name="value">Der Wert des Elements, das Entfernen von <c>Index</c>.</param>
+        <summary>Setzt die <see cref="M:System.Collections.CollectionBase.OnRemoveComplete(System.Int32,System.Object)" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />wird ausgeführt, wenn eine Anwendung diese Eigenschaft festlegt, wenn die <see cref="P:System.DirectoryServices.DirectoryEntry.UsePropertyCache" /> ist <see langword="false" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetComplete">
+      <MemberSignature Language="C#" Value="protected override void OnSetComplete (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSetComplete(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyValueCollection.OnSetComplete(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>OldValue</c> gefunden werden können.</param>
+        <param name="oldValue">Der Wert, der durch Ersetzen <c>NewValue</c>.</param>
+        <param name="newValue">Der neue Wert des Elements am <c>Index</c>.</param>
+        <summary>Setzt die <see cref="M:System.Collections.CollectionBase.OnSetComplete(System.Int32,System.Object,System.Object)" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />wird ausgeführt, wenn eine Anwendung diese Eigenschaft festlegt, wenn die <see cref="P:System.DirectoryServices.DirectoryEntry.UsePropertyCache" /> ist <see langword="false" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyValueCollection.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Eigenschaftennamen für die Attribute in die Wert-Auflistung ab.</summary>
+        <value>Eine Zeichenfolge, die den Namen der Eigenschaft mit den Werten enthält, die in diesem enthalten sind <see cref="T:System.DirectoryServices.PropertyValueCollection" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyValueCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu entfernende Eigenschaftswert.</param>
+        <summary>Entfernt einen angegebenen Eigenschaftswert aus dieser Sammlung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Arbeit mit eine mehrwertige Zeichenfolge-Eigenschaftswert, der <xref:System.DirectoryServices.PropertyValueCollection.Remove%2A> Methode wird das richtige Element erfolgreich entfernt. Identifizieren die richtigen Elemente anhand des Namens ist jedoch schwierig, mit einem mehrwertigen DNWithString-Eigenschaftswert, (wie DNWithString COM-Klasse, die verwendet wird, um die DNWithString-Elemente zu speichern, 2 Zeichenfolgeneigenschaften, das Element darstellt, hat). Die Möglichkeit, entfernen Sie solche Elemente zu suchen, rufen das Objekt in der Auflistung (nach einer Schleife durchlaufen werden alle Elemente), dann ist die <xref:System.DirectoryServices.PropertyValueCollection.Remove%2A> -Funktion mit dem Objektzeiger, die Sie soeben gefunden.  Dies wird im folgenden Beispiel veranschaulicht.  
+  
+   
+  
+## Examples  
+  
+```csharp  
+  
+// Bind to the AD object  
+DirectoryEntry myUser = new DirectoryEntry("LDAP://AdServer:389/CN=MyUsername,CN=Users,DC=contoso,DC=com");  
+  
+// Get the attribute  
+PropertyValueCollection testAttribute = myUser.Properties["someAttribute"];  
+  
+// Find the item in the collection that we want to delete  
+DNWithString dnwsItemToRemove = null;  
+foreach (DNWithString dnwsItem in testAttribute)  
+{  
+    if (dnwsItem.StringValue.Equals("SomeValue"))  
+    {  
+        dnwsItemToRemove = dnwsItem;  
+        break;  
+    }  
+}  
+  
+// Delete it  
+testAttribute.Remove(dnwsItemToRemove);  
+  
+// Store the data  
+myUser.CommitChanges();  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Eigenschaftswert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Während des Aufrufs der zugrunde liegenden Schnittstelle ist ein Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyValueCollection.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Werte der Auflistung fest.</summary>
+        <value>Wenn die Auflistung leer ist, wird der Eigenschaftswert ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic). Wenn die Auflistung einen Wert enthält, geht der Eigenschaftswert diesen Wert an. Wenn die Auflistung mehrere Werte enthält, entspricht den Wert der Eigenschaft eine Kopie eines Arrays mit diesen Werten an.  
+  
+ Wenn diese Eigenschaft festlegen, den Wert oder Werte hinzugefügt werden die <see cref="T:System.DirectoryServices.PropertyValueCollection" />. Wenn diese Eigenschaft auf einen null-Verweis (<see langword="Nothing" />) Löscht die Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um mehrere Werte hinzuzufügen, legen Sie diese Eigenschaft auf ein Array mit den Werten aus.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />wird ausgeführt, wenn eine Anwendung diese Eigenschaft festlegt, wenn die <see cref="P:System.DirectoryServices.DirectoryEntry.UsePropertyCache" /> ist <see langword="false" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

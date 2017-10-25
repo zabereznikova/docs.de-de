@@ -1,0 +1,121 @@
+<Type Name="ICancelAddNew" FullName="System.ComponentModel.ICancelAddNew">
+  <TypeSignature Language="C#" Value="public interface ICancelAddNew" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICancelAddNew" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ICancelAddNew" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Transaktionale Funktionen hinzugefügt, wenn Sie eine Auflistung ein neues Element hinzufügen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.ICancelAddNew> Schnittstelle kann eine Auflistung in eine erweiterbare Weise ein neues Element hinzu. Das neue Element anschließend kann ein Commit oder Rollback. Die <xref:System.ComponentModel.IBindingList.AddNew%2A> -Methode der Auflistung wird verwendet, um das Element vorläufig hinzuzufügen, was die anschließend über die folgenden Vorgänge durchgeführt wird:  
+  
+-   Die <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> Methode führt explizit ein commit für die ausstehende Hinzufügung.  
+  
+-   Ausführen einer anderen Auflistung-Vorgangs, z. B. eine Einfügung, entfernen oder verschieben commit der anstehenden Hinzufügung implizit.  
+  
+-   Die <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> Methode Rollback ausstehende hinzufügen, wenn sie noch kein Commit ausgeführt wurde.  
+  
+> [!NOTE]
+>  In einigen Szenarien, z. B. Windows Forms komplexe Datenbindung, die Auflistung möglicherweise <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> oder <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> erfordert, dass der neu hinzugefügten Elemente. (Jedes Element ist in der Regel eine Zeile in eine Data source View). Ignorieren Sie diese Aufrufe. "Abbrechen", oder übernehmen Sie das neue Element, wenn der Index des Elements angegeben ist.  
+  
+ Es gibt zwei Modelle, die transaktionale Hinzufügen eines Elements zu einer Auflistung von datengebundenen zuzulassen:  
+  
+-   Das ältere Modell stützt sich direkt auf eine Auflistung, die implementiert die <xref:System.ComponentModel.IBindingList> -Schnittstelle und direkt mit datengebundenen ist die <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType> Klasse. Die <xref:System.Windows.Forms.CurrencyManager.AddNew%2A>, <xref:System.Windows.Forms.CurrencyManager.EndCurrentEdit%2A>, und <xref:System.Windows.Forms.CurrencyManager.CancelCurrentEdit%2A> Methoden die <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType> Klasse sind verantwortlich für die transaktionale Unterstützung für das Hinzufügen neuer Elemente. Diese Funktionalität jedoch hängt die Elemente, die Unterstützung von Transaktionsverhalten über die <xref:System.ComponentModel.IEditableObject> Schnittstelle. Falls die Elemente dieser Schnittstelle nicht unterstützt werden, das Element wird immer zur Liste hinzugefügt werden die, unabhängig von der nachfolgende Aufrufe <xref:System.Windows.Forms.CurrencyManager.CancelCurrentEdit%2A>.  
+  
+-   Das neuere Modell unterstützt eine robustere Datenbindungsszenario über die generische <xref:System.ComponentModel.BindingList%601> Klasse implementiert die <xref:System.ComponentModel.IBindingList> und <xref:System.ComponentModel.ICancelAddNew> Schnittstellen. In diesem Fall erfolgt die transaktionale Unterstützung durch die <xref:System.ComponentModel.BindingList%601> Auflistung direkt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CancelNew">
+      <MemberSignature Language="C#" Value="public void CancelNew (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelNew(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICancelAddNew.CancelNew(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">Der Index des Elements, das der Auflistung zuvor hinzugefügt wurde.</param>
+        <summary>Entfernt ein anstehendes neues Element aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> Methode Rollback für eine ausstehende Hinzufügung (<xref:System.ComponentModel.IBindingList.AddNew%2A>) eines Elements, das zuvor hinzugefügt haben, auf die Auflistung an der Position `itemIndex`. Der Indexparameter ist erforderlich, da mehrere neue Elemente gleichzeitig ausstehend sein können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndNew">
+      <MemberSignature Language="C#" Value="public void EndNew (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndNew(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICancelAddNew.EndNew(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">Der Index des Elements, das der Auflistung zuvor hinzugefügt wurde.</param>
+        <summary>Übergibt ein anstehendes neues Element an die Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> führt einen Commit für eine ausstehende Hinzufügung (<xref:System.ComponentModel.IBindingList.AddNew%2A>) eines Elements, das zuvor hinzugefügt haben, auf die Auflistung an der Position `itemIndex`. Der Indexparameter ist erforderlich, da mehrere neue Elemente gleichzeitig ausstehend sein können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

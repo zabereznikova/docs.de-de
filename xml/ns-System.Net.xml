@@ -1,0 +1,8 @@
+<Namespace Name="System.Net">
+  <Docs>
+    <summary>Die <see cref="N:System.Net" /> Namespace bietet eine einfache Programmierschnittstelle für viele der Protokolle, die gegenwärtig in Netzwerken verwendet. Die <see cref="T:System.Net.WebRequest" /> und <see cref="T:System.Net.WebResponse" /> Klassen bilden die Grundlage für die genannten austauschbare Protokolle, um eine Implementierung der Netzwerkdienste, mit dem Sie Anwendungen entwickeln, die Ressourcen im Internet verwenden, unabhängig von den spezifischen Details, der einzelne Protokolle.  
+  
+ Klassen in der <see cref="N:System.Net" /> Namespace zum Entwickeln von Windows Store-apps oder desktop-apps verwendet werden kann. Bei Verwendung in einer Windows Store-app-Klassen in der <see cref="N:System.Net" /> Namespace von Netzwerk Feature "Benutzerisolation", Teil der Anwendungssicherheitsmodell von Windows Developer Preview verwendeten betroffen sind. Die entsprechenden Funktionen müssen im app-Manifest für Windows Store-Apps für das System den Netzwerkzugriff von Windows Store-Apps aktiviert werden. Weitere Informationen finden Sie unter der [Netzwerk Isolation für Windows Store-Apps](~/docs/framework/network-programming/network-isolation-for-windows-store-apps.md).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

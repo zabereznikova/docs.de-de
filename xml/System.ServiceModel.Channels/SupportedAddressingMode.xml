@@ -1,0 +1,87 @@
+<Type Name="SupportedAddressingMode" FullName="System.ServiceModel.Channels.SupportedAddressingMode">
+  <TypeSignature Language="C#" Value="public enum SupportedAddressingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SupportedAddressingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.SupportedAddressingMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob ein Dienst das Senden von Antworten nur an anonyme Adressen, nur an nicht anonyme Adressen oder beides unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird zur Angabe der Funktionen eines Servers verwendet, die wiederum als Anforderungen für die Clients gelten.  
+  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)] hat eine Vielzahl von Adressierungs-Steuerelementen, um anzugeben, wohin Nachrichten gesendet werden sollten. Beispielsweise gibt es eine logische <xref:System.ServiceModel.Channels.MessageHeaders.To%2A>-Adresse für das Nachrichtenziel, die physische Adresse ("Via"), die vom Transport verwendet und von einem Dienst überwacht wird, sowie die <xref:System.ServiceModel.Channels.MessageHeaders.ReplyTo%2A>-Adresse des Endpunkts, der die Adresse des Clientendpunkts angibt.  
+  
+ Im einfachsten Fall, wenn zwei Teilnehmer Nachrichten nur untereinander austauschen, ist es nicht notwendig, diese Adressen separat anzugeben. Da der Austausch jedoch andere Nachrichtenziele umfassen kann, müssen Sie bestimmen können, wann Adressen explizit bereitgestellt werden müssen. Selbst zwischen zwei Teilnehmern ist dies manchmal erforderlich, z. B. bei dualem HTTP, wenn der Server eigene HTTP-Anforderungen erstellen muss. Die folgenden Arten von Beziehungen werden von der <xref:System.ServiceModel.Channels.SupportedAddressingMode>-Enumeration definiert, um diese Nachrichtenmuster zu erfassen:  
+  
+-   Anonyme Adressen sind die grundlegendste Form der Adressierung. Anonyme Adressierung wird verwendet, wenn es einen Standardpfad für eine Antwort gibt. TCP ist ein bidirektionaler Kommunikationstransport, und die Antwort auf eine TCP-Nachricht kann an die andere Seite des Sockets gesendet werden, die die Originalnachricht gesendet hat. Auf ähnliche Weise sendet das Anforderungs-Antwort-Modell von HTTP Antworten durch den HTTP-Antwortkanal. Keine dieser Antworten erfordert die Angabe, wohin die Antwortnachrichten gehen. Wenn ein Server anonyme Antworten vom Client erforderlich ist, wird der anonyme Wert der Enumeration verwendet. Die [!INCLUDE[indigo2](~/includes/indigo2-md.md)] vom System bereitgestellte <xref:System.ServiceModel.NetTcpBinding>, <xref:System.ServiceModel.BasicHttpBinding> und <xref:System.ServiceModel.WSHttpBinding> Bindungen immer anonyme Adressen verwenden.  
+  
+-   Nicht anonyme Adressen werden beim Senden der Antwort ist zum Erstellen eines neuen Kanals für die Kommunikation verwendet. Die [!INCLUDE[indigo2](~/includes/indigo2-md.md)] vom System bereitgestellte <xref:System.ServiceModel.WSDualHttpBinding> Bindung verwendet, eine nicht anonyme Adresse. Mit dualem HTTP erstellt der Client eine HTTP-Anforderung zum Senden einer Nachricht, anschließend muss der Server eine eigene HTTP-Anforderung zum Senden der Antwort erstellen. Da der Server das Senden initiiert, muss er einen bestimmten Endpunkt haben, um die Verbindung herzustellen. Sie müssen dem Server die Adresse eines Endpunkts für die Antwort geben. Auf ähnliche Weise, wenn ein Dienst auf eine unidirektionale Nachricht, die empfangen wurde reagieren muss, muss dieser ebenfalls eine NonAnonymous zu beheben, da kein Rückkanal für die Kommunikation verfügbar ist. Wenn der Server eine Nachricht zurücksendet, ist ein völlig separater Vorgang von dem zum Senden der ersten Nachricht erforderlich.  
+  
+-   Gemischt ist eine dritte Form der Adressierung, die anonyme Authentifizierung und NonAnonymous Adressen abhängig von der Nachricht kombiniert, die gesendet werden. Ein typisches Beispiel einer Adressierung im gemischten Modus ist die Verwendung eines dedizierten Computers für die Verarbeitung von fehlerhaften oder Bestätigungsnachrichten. Wenn die standardaustauschsequenz für Antworten HTTP oder TCP ist, verwenden die Antworten anonyme Adressierung, aber verwenden Sie die Fehler nicht anonyme Adressierung. Während [!INCLUDE[indigo2](~/includes/indigo2-md.md)] bietet keine gemischten-Adressierungsfunktion in den standardbindungen, es ist möglich, einen Kanal zu schreiben, mit dem den Dienst zum Senden von Antworten direkt auf den Rückkanal (wenn die Antwortadresse anonym ist) oder auf einem separaten Kanal (wenn die Antwortadresse NonAnonymous ist). In diesem Fall wird das Bindungselement des Kanals festzulegende verwendet <xref:System.ServiceModel.Channels.SupportedAddressingMode> Mixed.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Anonymous">
+      <MemberSignature Language="C#" Value="Anonymous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.SupportedAddressingMode Anonymous = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.SupportedAddressingMode.Anonymous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SupportedAddressingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Server unterstützt nur anonyme Adressen, und Clients müssen eine anonyme Antwortadresse angeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Mixed">
+      <MemberSignature Language="C#" Value="Mixed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.SupportedAddressingMode Mixed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.SupportedAddressingMode.Mixed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SupportedAddressingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Server unterstützt sowohl anonyme als auch nicht anonyme Adressen, und Clients können eine von beiden oder beide verwenden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NonAnonymous">
+      <MemberSignature Language="C#" Value="NonAnonymous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.SupportedAddressingMode NonAnonymous = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.SupportedAddressingMode.NonAnonymous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SupportedAddressingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Server unterstützt nur nicht anonyme Adressen, und Clients müssen eine nicht anonyme Antwortadresse angeben.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

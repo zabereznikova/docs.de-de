@@ -1,0 +1,87 @@
+<Type Name="TypeSchema" FullName="System.Web.UI.Design.TypeSchema">
+  <TypeSignature Language="C#" Value="public sealed class TypeSchema : System.Web.UI.Design.IDataSourceSchema" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypeSchema extends System.Object implements class System.Web.UI.Design.IDataSourceSchema" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TypeSchema" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.Design.IDataSourceSchema</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Struktur bzw. das Schema eines Objekttyps.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.TypeSchema> Klasse enthält Informationen zu einer bestimmten Klasse, die eine Instanz dieser Klasse angegeben. Angenommen, ein <xref:System.Data.DataSet> -Objekt, ein <xref:System.Web.UI.WebControls.GridView> Objekt oder eine Instanz einer benutzerdefinierten Klasse, die Sie erstellen, die Methoden und Eigenschaften enthalten Informationen über die Klasse, die von der das Objekt abgeleitet wird. Es bietet keine Informationen über die jeweilige Instanz, jedoch über die Klasse.  
+  
+ Die <xref:System.Web.UI.Design.TypeSchema> -Klasse wird von benutzerdefinierten Steuerelement-Designer verwendet, um Unterstützung bei der Vorbereitung von Beispieldaten für die Vorschau von benutzerdefinierten Steuerelementen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeSchema (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TypeSchema.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Type" /> , der ein Objekt beschreibt.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Web.UI.Design.TypeSchema" /> -Klasse unter Verwendung der bereitgestellten <see cref="T:System.Type" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViews">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceViewSchema[] GetViews ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IDataSourceViewSchema[] GetViews() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TypeSchema.GetViews" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array von Schemadeskriptoren für Ansichten in einer Datenquelle ab.</summary>
+        <returns>Ein Array von Instanzen von <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" />, oder von Instanzen einer Klasse, implementiert die <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" /> Schnittstelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl die <xref:System.Web.UI.Design.TypeSchema.GetViews%2A> Methode gibt immer ein Array von <xref:System.Web.UI.Design.IDataSourceViewSchema> Objekten implementiert, die <xref:System.Web.UI.Design.IDataSourceViewSchema> -Schnittstelle, die genaue Rückgabewert ist abhängig von das Objekt, das bereitgestellt wird, beim Erstellen der Instanz von der <xref:System.Web.UI.Design.TypeSchema> Klasse.  
+  
+ Die folgende Tabelle enthält Beispiele für Rückgabewerte.  
+  
+|Zugrunde liegender Typ|Rückgabewert|  
+|---------------------|------------------|  
+|Eine <xref:System.Data.DataSet>|Ein Array vom Typ <xref:System.Web.UI.Design.DataSetViewSchema>, einer für jede <xref:System.Data.DataTable>.|  
+|Eine <xref:System.Data.DataTable>|Ein Array von einem Element mit einem <xref:System.Web.UI.Design.DataSetViewSchema>.|  
+|Ein <xref:System.Collections.IEnumerable> Typ|Ein Array von einem Element mit einem <xref:System.Web.UI.Design.IDataSourceViewSchema>.|  
+|Einen anderen Typ|Ein Array von einem Element mit einem <xref:System.Web.UI.Design.IDataSourceViewSchema>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

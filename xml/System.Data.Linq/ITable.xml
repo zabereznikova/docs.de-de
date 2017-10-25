@@ -1,0 +1,400 @@
+<Type Name="ITable" FullName="System.Data.Linq.ITable">
+  <TypeSignature Language="C#" Value="public interface ITable : System.Collections.IEnumerable, System.Linq.IQueryable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITable implements class System.Collections.IEnumerable, class System.Linq.IQueryable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.ITable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.IQueryable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Schwach typisierte Abfrageszenarios verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu Methoden finden Sie unter <xref:System.Data.Linq.Table%601>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="Attach">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ermöglicht das deserialisierte Entitäten eine neue Instanz der zugeordnet werden soll eine <see cref="T:System.Data.Linq.DataContext" /> , damit sie aktualisiert oder aus der Datenbank gelöscht werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Datenabruf und CUD-Operationen in N-Tier-Anwendungen (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ Wenn ein erforderlicher Member fehlt, wird eine <xref:System.Data.Linq.ChangeConflictException> wird ausgelöst, während der <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Attach(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ITable.Attach(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die angefügt werden.</param>
+        <summary>Fügt eine Entität, die <see cref="T:System.Data.Linq.DataContext" /> in einer unveränderten Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Datenabruf und CUD-Operationen in N-Tier-Anwendungen (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (object entity, bool asModified);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Attach(object entity, bool asModified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ITable.Attach(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="asModified" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Auflistung von Entitäten.</param>
+        <param name="asModified">
+          <see langword="true" />die Entitäten angefügt geändert wurde.</param>
+        <summary>Fügt alle Entitäten einer Auflistung, die <see cref="T:System.Data.Linq.DataContext" /> in einem geänderten oder unveränderten Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Datenabruf und CUD-Operationen in N-Tier-Anwendungen (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (object entity, object original);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Attach(object entity, object original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ITable.Attach(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="original" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die angefügt werden.</param>
+        <param name="original">Eine Instanz des gleichen Entitätstyps Datenmember, die die ursprünglichen Werten enthalten.</param>
+        <summary>Fügt eine Entität, die <see cref="T:System.Data.Linq.DataContext" /> in einem geänderten oder unveränderten Zustand durch Angabe der Entität und den ursprünglichen Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Datenabruf und CUD-Operationen in N-Tier-Anwendungen (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachAll">
+      <MemberSignature Language="C#" Value="public void AttachAll (System.Collections.IEnumerable entities);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AttachAll(class System.Collections.IEnumerable entities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ITable.AttachAll(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="entities">Die Auflistung von Entitäten.</param>
+        <summary>Fügt alle Entitäten einer Auflistung, die <see cref="T:System.Data.Linq.DataContext" /> in einem geänderten oder unveränderten Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Datenabruf und CUD-Operationen in N-Tier-Anwendungen (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachAll">
+      <MemberSignature Language="C#" Value="public void AttachAll (System.Collections.IEnumerable entities, bool asModified);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AttachAll(class System.Collections.IEnumerable entities, bool asModified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ITable.AttachAll(System.Collections.IEnumerable,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.IEnumerable" />
+        <Parameter Name="asModified" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="entities">Die Auflistung von Entitäten.</param>
+        <param name="asModified">
+          <see langword="true" />die Entitäten angefügt geändert wurde.</param>
+        <summary>Fügt alle Entitäten einer Auflistung, die <see cref="T:System.Data.Linq.DataContext" /> in einem geänderten oder unveränderten Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Datenabruf und CUD-Operationen in N-Tier-Anwendungen (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.DataContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.DataContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.ITable.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.DataContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.Linq.DataContext" /> , wurde verwendet, um diesen abzurufen <see cref="T:System.Data.Linq.ITable" />.</summary>
+        <value>Die <see cref="T:System.Data.Linq.DataContext" /> zum Abrufen der <see cref="T:System.Data.Linq.ITable" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteAllOnSubmit">
+      <MemberSignature Language="C#" Value="public void DeleteAllOnSubmit (System.Collections.IEnumerable entities);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteAllOnSubmit(class System.Collections.IEnumerable entities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ITable.DeleteAllOnSubmit(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="entities">Die Auflistung, aus der alle Elemente entfernt wurden.</param>
+        <summary>Setzt alle Entitäten aus der Auflistung in ein <see langword="pending delete" /> Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> auf das eigentliche löschen in der Datenbank ausführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteOnSubmit">
+      <MemberSignature Language="C#" Value="public void DeleteOnSubmit (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteOnSubmit(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ITable.DeleteOnSubmit(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die entfernt werden soll.</param>
+        <summary>Fügt eine Entität aus der Tabelle in einem <see langword="pending delete" /> Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Getrennte Entitäten müssen angefügt werden, bevor sie gelöscht werden können. Rufen Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> auf das eigentliche löschen in der Datenbank ausführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetModifiedMembers">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.ModifiedMemberInfo[] GetModifiedMembers (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.Linq.ModifiedMemberInfo[] GetModifiedMembers(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ITable.GetModifiedMembers(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.ModifiedMemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, von dem das Array abgerufen werden soll.</param>
+        <summary>Gibt ein Array von geänderten Elementen, die ihre aktuellen und ursprünglichen Werte zurück.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOriginalEntityState">
+      <MemberSignature Language="C#" Value="public object GetOriginalEntityState (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetOriginalEntityState(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ITable.GetOriginalEntityState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, deren ursprünglichen Wert abgerufen werden sollen.</param>
+        <summary>Ruft die ursprünglichen Werte ab.</summary>
+        <returns>Eine Kopie der ursprünglichen Entität. Der Wert ist null, wenn die übergebene Entität nicht überwacht wird. Getrennte Entitäten, die von einem Client gesendet müssen angefügt werden, bevor die <see cref="T:System.Data.Linq.DataContext" /> kann beginnen, um ihren Status zu verfolgen. "Originalzustand" einer neu angefügten Entität wird basierend auf Werten, die vom Client bereitgestellte eingerichtet. Der Datenkontext verfolgt nicht den Status der nicht verbundenen Entitäten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie Folgendes:  
+  
+-   Das Entitätsargument muss ungleich Null sein. Andernfalls wird eine null-Argument-Ausnahme ausgelöst.  
+  
+-   Im Fall von stark typisierten (`TEntity`)-Methode, der Typ muss zugeordnet sein und muss ein Entitätstyp. D. h., muss sie Objekt-ID-Informationen in seine Zuordnung verfügen. Andernfalls wird eine Ausnahme des falschen Typs ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertAllOnSubmit">
+      <MemberSignature Language="C#" Value="public void InsertAllOnSubmit (System.Collections.IEnumerable entities);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InsertAllOnSubmit(class System.Collections.IEnumerable entities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ITable.InsertAllOnSubmit(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="entities">Die Entitäten hinzufügen.</param>
+        <summary>Fügt alle Entitäten einer Auflistung an der <see cref="T:System.Data.Linq.DataContext" /> in einem <see langword="pending insert" /> Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> das tatsächliche Einfügen in die Datenbank ausführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertOnSubmit">
+      <MemberSignature Language="C#" Value="public void InsertOnSubmit (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InsertOnSubmit(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ITable.InsertOnSubmit(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die hinzugefügt werden.</param>
+        <summary>Fügt eine Entität in einer <see langword="pending insert" /> Zustands, in dieser Tabelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> das tatsächliche Einfügen in die Datenbank ausführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.ITable.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Typ der Entitäten in diesem enthalten <see cref="T:System.Data.Linq.ITable" /> Instanz über einen Primärschlüssel verfügt.</summary>
+        <value>Gibt <see langword="true" /> , wenn der Entitätstyp nicht über einen Primärschlüssel; verfügt, andernfalls false.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

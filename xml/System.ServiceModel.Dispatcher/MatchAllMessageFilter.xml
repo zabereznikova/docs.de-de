@@ -1,0 +1,115 @@
+<Type Name="MatchAllMessageFilter" FullName="System.ServiceModel.Dispatcher.MatchAllMessageFilter">
+  <TypeSignature Language="C#" Value="public class MatchAllMessageFilter : System.ServiceModel.Dispatcher.MessageFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MatchAllMessageFilter extends System.ServiceModel.Dispatcher.MessageFilter" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.MatchAllMessageFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Dispatcher.MessageFilter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Abfrage dar, die von jeder Nicht-<see langword="null" />-Nachricht erfüllt wird, die sie testet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt einen Filter bereit, der jede Nachricht durchlässt. Die <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter.Match%2A>-Methoden geben `true` für jede Nachricht zurück, die nicht `null` ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MatchAllMessageFilter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MatchAllMessageFilter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.MatchAllMessageFilter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor kann verwendet werden, um unterschiedliche Instanzen von <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MatchAllMessageFilter.Match(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">Das zu überprüfende <see cref="T:System.ServiceModel.Channels.Message" />-Objekt.</param>
+        <summary>Diese Methode gibt <see langword="true" /> für jede Nachricht zurück, die nicht <see langword="null" /> ist.</summary>
+        <returns>Gibt <see langword="true" />zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Unterschied zwischen den zwei Überladungen der <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter.Match%2A>-Methode besteht darin, dass die eine Überladung den <xref:System.ServiceModel.Channels.MessageBuffer>-Parameter verwendet und den gesamten Inhalt einer Nachricht (einschl. des Textkörpers) puffert, während die andere den <xref:System.ServiceModel.Channels.Message>-Parameter verwendet und den Textkörper nicht puffert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (System.ServiceModel.Channels.MessageBuffer buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(class System.ServiceModel.Channels.MessageBuffer buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MatchAllMessageFilter.Match(System.ServiceModel.Channels.MessageBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBuffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <summary>Die <see cref="M:System.ServiceModel.Dispatcher.MatchAllMessageFilter.Match(System.ServiceModel.Channels.MessageBuffer)" />-Methode gibt <see langword="true" /> für jede Nachricht zurück, die nicht <see langword="null" /> ist.</summary>
+        <returns>Gibt <see langword="true" />zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet den <xref:System.ServiceModel.Channels.MessageBuffer>-Parameter, der den gesamten Inhalt einer Nachricht (einschließlich des Textkörpers) im Speicher puffert und ermöglicht, dass der Textkörper geprüft wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

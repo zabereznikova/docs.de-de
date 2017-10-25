@@ -1,0 +1,388 @@
+<Type Name="RegistryAccessRule" FullName="System.Security.AccessControl.RegistryAccessRule">
+  <TypeSignature Language="C#" Value="public sealed class RegistryAccessRule : System.Security.AccessControl.AccessRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RegistryAccessRule extends System.Security.AccessControl.AccessRule" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.RegistryAccessRule" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.AccessRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Reihe von Zugriffsrechten zugelassen oder verweigert, die für einen Benutzer oder Gruppe. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.AccessControl.RegistryAccessRule> Klasse wird zu einem Satz von Klassen, die die .NET Framework bietet für die Verwaltung von Windows-zugriffssteuerungssicherheit für Registrierungsschlüssel. Einen Überblick über diese Klassen und deren Beziehungen zu den zugrunde liegenden Windows Zugriffssteuerungsstrukturen finden Sie unter <xref:System.Security.AccessControl.RegistrySecurity>.  
+  
+> [!NOTE]
+>  Windows-zugriffssteuerungssicherheit kann nur auf Registrierungsschlüssel angewendet werden. Es kann nicht auf einzelne Schlüssel/Wert-Paaren, die in einem Schlüsselspeicher gespeicherte angewendet werden.  
+  
+ Verwenden Sie zum Abrufen einer Liste der derzeit auf einen Registrierungsschlüssel angewendeten Regeln der <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A?displayProperty=nameWithType> Methode zum Abrufen einer <xref:System.Security.AccessControl.RegistrySecurity> -Objekts und anschließendes verwenden die <xref:System.Security.AccessControl.CommonObjectSecurity.GetAccessRules%2A> Methode zum Abrufen einer Auflistung von <xref:System.Security.AccessControl.RegistryAccessRule> Objekte.  
+  
+ <xref:System.Security.AccessControl.RegistryAccessRule>Objekte zuordnen nicht eins zu eins Zugriffssteuerungseinträge in der zugrunde liegenden Steuerelement besitzerverwaltete Zugriffssteuerungsliste (DACL). Wenn Sie den Satz von alle Zugriffsregeln für einen Registrierungsschlüssel erhalten, enthält der Satz die minimale Anzahl von Regeln, die derzeit erforderlich, um alle Zugriffssteuerungseinträge.  
+  
+> [!NOTE]
+>  Die zugrunde liegenden Zugriffssteuerungseinträge ändern, da Sie Regeln anwenden oder entfernen. Die in Regeln nach Möglichkeit zusammengeführt, um die kleinste Anzahl von Zugriffssteuerungseinträgen zu gewährleisten. Daher beim Lesen der aktuellen Liste der Regeln es sieht möglicherweise nicht genau wie die Liste aller Regeln, die Sie hinzugefügt haben.  
+  
+ Verwendung <xref:System.Security.AccessControl.RegistryAccessRule> Objekte über die Zugriffsrechte für das zulassen oder verweigern einem Benutzer oder Gruppe angeben. Ein <xref:System.Security.AccessControl.RegistryAccessRule> -Objekt immer stellt der Zugriff erlaubt oder verweigert den Zugriff auf niemals beide.  
+  
+ Verwenden Sie zum Anwenden einer Regelsatzes an einem Registrierungsschlüssel die <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A?displayProperty=nameWithType> Methode zum Abrufen der <xref:System.Security.AccessControl.RegistrySecurity> Objekt. Ändern der <xref:System.Security.AccessControl.RegistrySecurity> -Objekt mithilfe seiner Methoden zum Hinzufügen der Regelnamens, und klicken Sie dann die <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType> Methode, um das Sicherheitsobjekt erneut anzufügen.  
+  
+> [!IMPORTANT]
+>  Änderungen an einer <xref:System.Security.AccessControl.RegistrySecurity> Objekt haben keinen Einfluss auf die Zugriffsebenen des Registrierungsschlüssels erst nach dem Aufruf der <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType> Methode, um den Registrierungsschlüssel der geänderten Sicherheitsobjekt zuweisen.  
+  
+ <xref:System.Security.AccessControl.RegistryAccessRule>-Objekte sind unveränderlich. Sicherheit für einen Registrierungsschlüssel mit den Methoden der geändert wird die <xref:System.Security.AccessControl.RegistrySecurity> Klasse zum Hinzufügen oder Entfernen von Regeln, wie in diesem Fall werden die zugrunde liegenden Zugriffssteuerungseinträge geändert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, Zugriffsregeln mit Vererbung und Weitergabe. Das Beispiel erstellt eine <xref:System.Security.AccessControl.RegistrySecurity> -Objekt, erstellt, und fügt zwei Regeln mit den <xref:System.Security.AccessControl.InheritanceFlags.ContainerInherit> Flag. Die erste Regel verfügt über keine Weitergabeflags aus, während die zweite <xref:System.Security.AccessControl.PropagationFlags.NoPropagateInherit> und <xref:System.Security.AccessControl.PropagationFlags.InheritOnly>.  
+  
+ Das Programm zeigt die Regeln in der <xref:System.Security.AccessControl.RegistrySecurity> -Objekt, und klicken Sie dann das Objekt verwendet, um einen Unterschlüssel zu erstellen. Das Programm erstellt einen untergeordneten Unterschlüssel und einen untergeordneten Unterschlüssel, und zeigt dann die Sicherheit für jeden Unterschlüssel. Zum Schluss löscht das Programm die Testschlüssel.  
+  
+ [!code-csharp[System.Security.AccessControl.RegistryAccessRule.ctor2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.RegistryAccessRule.ctor2/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.RegistryAccessRule.ctor2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.RegistryAccessRule.ctor2/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistryAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.RegistryRights registryRights, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.RegistryRights registryRights, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistryAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.RegistryRights,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="registryRights" Type="System.Security.AccessControl.RegistryRights" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Der Benutzer oder Gruppe, die die Regel gilt. Muss vom Typ <see cref="T:System.Security.Principal.SecurityIdentifier" /> oder ein Typ sein wie z. B. <see cref="T:System.Security.Principal.NTAccount" /> , die konvertiert werden kann, auf den Typ <see cref="T:System.Security.Principal.SecurityIdentifier" />.</param>
+        <param name="registryRights">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.RegistryRights" /> Werte, der angibt, die Rechte gewährt oder verweigert.</param>
+        <param name="type">Eines der <see cref="T:System.Security.AccessControl.AccessControlType" /> Werte, der angibt, ob die Rechte gewährt oder verweigert werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.AccessControl.RegistryAccessRule" /> Klasse, die angibt, die Benutzer oder eine Gruppe, die die Regel, die Zugriffsrechte gilt und gibt an, ob die angegebenen Zugriffsrechte gewährt oder verweigert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor gibt an Standardeinstellung Weitergabe und Vererbung. D. h. <xref:System.Security.AccessControl.InheritanceFlags?displayProperty=nameWithType> und <xref:System.Security.AccessControl.PropagationFlags?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="registryRights" />Gibt einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="type" />Gibt einen ungültigen Wert.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="eventRights" /> ist 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identity" />ist nicht vom Typ <see cref="T:System.Security.Principal.SecurityIdentifier" /> noch von einem Typ, z. B. <see cref="T:System.Security.Principal.NTAccount" /> , die konvertiert werden kann, auf den Typ <see cref="T:System.Security.Principal.SecurityIdentifier" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistryAccessRule (string identity, System.Security.AccessControl.RegistryRights registryRights, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identity, valuetype System.Security.AccessControl.RegistryRights registryRights, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistryAccessRule.#ctor(System.String,System.Security.AccessControl.RegistryRights,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="registryRights" Type="System.Security.AccessControl.RegistryRights" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Der Name des Benutzers oder der Gruppe gilt die Regel.</param>
+        <param name="registryRights">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.RegistryRights" /> Werte, der angibt, die Rechte gewährt oder verweigert.</param>
+        <param name="type">Eines der <see cref="T:System.Security.AccessControl.AccessControlType" /> Werte, der angibt, ob die Rechte gewährt oder verweigert werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.AccessControl.RegistryAccessRule" /> -Klasse und gibt den Namen des Benutzers oder der Gruppe, die die Regel, die Zugriffsrechte gilt und gibt an, ob die angegebenen Zugriffsrechte gewährt oder verweigert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor gibt an Standardeinstellung Weitergabe und Vererbung. D. h. <xref:System.Security.AccessControl.InheritanceFlags?displayProperty=nameWithType> und <xref:System.Security.AccessControl.PropagationFlags?displayProperty=nameWithType>.  
+  
+ Dieser Konstruktor entspricht dem Erstellen eine <xref:System.Security.Principal.NTAccount> -Objekts und durch übergeben `identity` auf die <xref:System.Security.Principal.NTAccount.%23ctor%28System.String%29?displayProperty=nameWithType> -Konstruktor übergeben und die neu erstellte <xref:System.Security.Principal.NTAccount> -Objekt an die <xref:System.Security.AccessControl.RegistryAccessRule.%23ctor%28System.Security.Principal.IdentityReference%2CSystem.Security.AccessControl.RegistryRights%2CSystem.Security.AccessControl.AccessControlType%29> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und hinzugefügt eine <xref:System.Security.AccessControl.RegistrySecurity> Objekte, wie Regeln, die zulassen und Verweigern von Berechtigungen getrennt ist, beim kompatible Regeln des gleichen bleiben Kind mit zusammengeführt werden.  
+  
+ [!code-csharp[System.Security.AccessControl.RegistrySecurity.AddAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.AddAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.RegistrySecurity.AddAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.AddAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="registryRights" />Gibt einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="type" />Gibt einen ungültigen Wert.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="registryRights" /> ist 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identity" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="identity" /> ist eine Zeichenfolge mit der Länge 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="identity" />ist länger als 512 Zeichen lang sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistryAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.RegistryRights registryRights, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.RegistryRights registryRights, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistryAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.RegistryRights,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="registryRights" Type="System.Security.AccessControl.RegistryRights" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Der Benutzer oder Gruppe, die die Regel gilt. Muss vom Typ <see cref="T:System.Security.Principal.SecurityIdentifier" /> oder ein Typ sein wie z. B. <see cref="T:System.Security.Principal.NTAccount" /> , die konvertiert werden kann, auf den Typ <see cref="T:System.Security.Principal.SecurityIdentifier" />.</param>
+        <param name="registryRights">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.RegistryRights" /> Werte, die Angabe der Rechte gewährt oder verweigert.</param>
+        <param name="inheritanceFlags">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.InheritanceFlags" /> Flags, die angibt, wie die Zugriffsrechte von anderen Objekten geerbt werden.</param>
+        <param name="propagationFlags">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.PropagationFlags" /> Flags, die angibt, wie Zugriffsrechte auf andere Objekte weitergegeben werden.</param>
+        <param name="type">Eines der <see cref="T:System.Security.AccessControl.AccessControlType" /> Werte, die angibt, ob die Rechte gewährt oder verweigert werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.AccessControl.RegistryAccessRule" /> Klasse angeben, der Benutzer oder eine Gruppe, die die Regel für die Zugriffsrechte, die von Vererbungsflags gilt, die Weitergabe kennzeichnet und gibt an, ob die angegebenen Zugriffsrechte gewährt oder verweigert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Registrierungsschlüssel Container sind Kennzeichen für ausschließlichen Vererbung für Registrierungsschlüssel sinnvoll ist, werden die <xref:System.Security.AccessControl.InheritanceFlags?displayProperty=nameWithType> Flag. Wenn dieses Flag nicht angegeben ist, wird die Weitergabeflags werden ignoriert, und nur der unmittelbare Schlüssel ist betroffen. Wenn das Flag vorhanden ist, wird die Regel weitergegeben, wie in der folgenden Tabelle gezeigt. Die Tabelle wird davon ausgegangen, dass ein Unterschlüssel S mit untergeordneten Unterschlüssel CS und untergeordneten Unterschlüssel GS vorhanden ist. Der Pfad für den untergeordneten Unterschlüssel ist also lautet S\CS\GS.  
+  
+|Weitergabeflags|S|CS|GS|  
+|-----------------------|-------|--------|--------|  
+|<xref:System.Security.AccessControl.PropagationFlags.None>|X|X|X|  
+|<xref:System.Security.AccessControl.PropagationFlags.NoPropagateInherit>|X|X||  
+|<xref:System.Security.AccessControl.PropagationFlags.InheritOnly>||X|X|  
+|<xref:System.Security.AccessControl.PropagationFlags.NoPropagateInherit>, <xref:System.Security.AccessControl.PropagationFlags.InheritOnly>||X||  
+  
+ Das Muster für den untergeordneten Unterschlüssel steuert alle Unterschlüssel, die von den untergeordneten Unterschlüssel enthalten.  
+  
+ Z. B. wenn die <xref:System.Security.AccessControl.InheritanceFlags.ContainerInherit> Flag angegeben wird, für die `inheritanceFlags` und <xref:System.Security.AccessControl.PropagationFlags.InheritOnly> verteilungskennzeichen für angegeben werden `propagationFlags`, diese Regel gilt nicht für den unmittelbaren Unterschlüssel, aber gilt für alle unmittelbar untergeordneten Unterschlüssel und alle Unterschlüssel Sie enthalten.  
+  
+> [!NOTE]
+>  Sie können zwar Festlegen der <xref:System.Security.AccessControl.InheritanceFlags?displayProperty=nameWithType> mit einem flag für `inheritanceFlags`, keinen Sinn in diesem Fall. Für die Zwecke der Zugriffssteuerung sind die Name/Wert-Paare in einem Unterschlüssel keine separate Objekte. Die Zugriffsrechte auf Name/Wert-Paare werden durch die Rechte des Unterschlüssels gesteuert. Darüber hinaus, da alle Unterschlüssel Container sind (d. h., sie können andere Unterschlüssel enthalten), sie sind nicht betroffen von dem <xref:System.Security.AccessControl.InheritanceFlags.ObjectInherit> Flag. Schließlich angeben der <xref:System.Security.AccessControl.InheritanceFlags.ObjectInherit> Flag unnötig etwas komplizierter macht die Verwaltung der Regeln, da er mit der Kombination von andernfalls kompatible Regeln beeinträchtigt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="registryRights" />Gibt einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="type" />Gibt einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="inheritanceFlags" />Gibt einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="propagationFlags" />Gibt einen ungültigen Wert.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="registryRights" /> ist 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identity" />ist nicht vom Typ <see cref="T:System.Security.Principal.SecurityIdentifier" />, noch von einem Typ, z. B. <see cref="T:System.Security.Principal.NTAccount" /> , die konvertiert werden kann, auf den Typ <see cref="T:System.Security.Principal.SecurityIdentifier" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistryAccessRule (string identity, System.Security.AccessControl.RegistryRights registryRights, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identity, valuetype System.Security.AccessControl.RegistryRights registryRights, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistryAccessRule.#ctor(System.String,System.Security.AccessControl.RegistryRights,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="registryRights" Type="System.Security.AccessControl.RegistryRights" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Der Name des Benutzers oder der Gruppe gilt die Regel.</param>
+        <param name="registryRights">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.RegistryRights" /> Werte, der angibt, die Rechte gewährt oder verweigert.</param>
+        <param name="inheritanceFlags">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.InheritanceFlags" /> Flags, die angibt, wie die Zugriffsrechte von anderen Objekten geerbt werden.</param>
+        <param name="propagationFlags">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.PropagationFlags" /> Flags, die angibt, wie Zugriffsrechte auf andere Objekte weitergegeben werden.</param>
+        <param name="type">Eines der <see cref="T:System.Security.AccessControl.AccessControlType" /> Werte, die angibt, ob die Rechte gewährt oder verweigert werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.AccessControl.RegistryAccessRule" /> Klasse den Namen des Benutzers oder der Gruppe, die die Regel für die Zugriffsrechte, die Vererbungsflags gilt angeben die Weitergabe kennzeichnet und gibt an, ob die angegebenen Zugriffsrechte gewährt oder verweigert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Registrierungsschlüssel Container sind Kennzeichen für ausschließlichen Vererbung für Registrierungsschlüssel sinnvoll ist, werden die <xref:System.Security.AccessControl.InheritanceFlags?displayProperty=nameWithType> Flag. Wenn dieses Flag nicht angegeben ist, wird die Weitergabeflags werden ignoriert, und nur der unmittelbare Schlüssel ist betroffen. Wenn das Flag vorhanden ist, wird die Regel weitergegeben, wie in der folgenden Tabelle gezeigt. Die Tabelle wird davon ausgegangen, dass ein Unterschlüssel S mit untergeordneten Unterschlüssel CS und untergeordneten Unterschlüssel GS vorhanden ist. Der Pfad für den untergeordneten Unterschlüssel ist also lautet S\CS\GS.  
+  
+|Weitergabeflags|S|CS|GS|  
+|-----------------------|-------|--------|--------|  
+|<xref:System.Security.AccessControl.PropagationFlags.None>|X|X|X|  
+|<xref:System.Security.AccessControl.PropagationFlags.NoPropagateInherit>|X|X||  
+|<xref:System.Security.AccessControl.PropagationFlags.InheritOnly>||X|X|  
+|<xref:System.Security.AccessControl.PropagationFlags.NoPropagateInherit>, <xref:System.Security.AccessControl.PropagationFlags.InheritOnly>||X||  
+  
+ Das Muster für den untergeordneten Unterschlüssel steuert alle Unterschlüssel, die von den untergeordneten Unterschlüssel enthalten.  
+  
+ Z. B. wenn die <xref:System.Security.AccessControl.InheritanceFlags.ContainerInherit> Flag angegeben wird, für die `inheritanceFlags` und <xref:System.Security.AccessControl.PropagationFlags.InheritOnly> verteilungskennzeichen für angegeben werden `propagationFlags`, diese Regel gilt nicht für den unmittelbaren Unterschlüssel, aber gilt für alle unmittelbar untergeordneten Unterschlüssel und alle Unterschlüssel Sie enthalten.  
+  
+> [!NOTE]
+>  Sie können zwar Festlegen der <xref:System.Security.AccessControl.InheritanceFlags?displayProperty=nameWithType> mit einem flag für `inheritanceFlags`, keinen Sinn in diesem Fall. Für die Zwecke der Zugriffssteuerung sind die Name/Wert-Paare in einem Unterschlüssel keine separate Objekte. Die Zugriffsrechte auf Name/Wert-Paare werden durch die Rechte des Unterschlüssels gesteuert. Darüber hinaus, da alle Unterschlüssel Container sind (d. h., sie können andere Unterschlüssel enthalten), sie sind nicht betroffen von dem <xref:System.Security.AccessControl.InheritanceFlags.ObjectInherit> Flag. Schließlich angeben der <xref:System.Security.AccessControl.InheritanceFlags.ObjectInherit> Flag unnötig etwas komplizierter macht die Verwaltung der Regeln, da er mit der Kombination von andernfalls kompatible Regeln beeinträchtigt.  
+  
+ Dieser Konstruktor entspricht dem Erstellen eine <xref:System.Security.Principal.NTAccount> -Objekts und durch übergeben `identity` auf die <xref:System.Security.Principal.NTAccount.%23ctor%28System.String%29?displayProperty=nameWithType> -Konstruktor übergeben und die neu erstellte <xref:System.Security.Principal.NTAccount> -Objekt an die <xref:System.Security.AccessControl.RegistryAccessRule.%23ctor%28System.Security.Principal.IdentityReference%2CSystem.Security.AccessControl.RegistryRights%2CSystem.Security.AccessControl.InheritanceFlags%2CSystem.Security.AccessControl.PropagationFlags%2CSystem.Security.AccessControl.AccessControlType%29> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, Zugriffsregeln mit Vererbung und Weitergabe. Das Beispiel erstellt eine <xref:System.Security.AccessControl.RegistrySecurity> -Objekt, und klicken Sie dann erstellt und fügt zwei Regeln mit den <xref:System.Security.AccessControl.InheritanceFlags.ContainerInherit> Flag. Die erste Regel verfügt über keine Weitergabeflags aus, während die zweite <xref:System.Security.AccessControl.PropagationFlags.NoPropagateInherit> und <xref:System.Security.AccessControl.PropagationFlags.InheritOnly>.  
+  
+ Das Programm zeigt die Regeln in der <xref:System.Security.AccessControl.RegistrySecurity> Objekt zugewiesen und dann verwendet der <xref:System.Security.AccessControl.RegistrySecurity> Objekt, das zum Erstellen einer ". Das Programm erstellt einen untergeordneten Unterschlüssel und einen untergeordneten Unterschlüssel, und zeigt dann die Regeln für jeden Unterschlüssel. Zum Schluss löscht das Programm die Testschlüssel.  
+  
+ [!code-csharp[System.Security.AccessControl.RegistryAccessRule.ctor2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.RegistryAccessRule.ctor2/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.RegistryAccessRule.ctor2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.RegistryAccessRule.ctor2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="registryRights" />Gibt einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="type" />Gibt einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="inheritanceFlags" />Gibt einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="propagationFlags" />Gibt einen ungültigen Wert.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="eventRights" /> ist 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identity" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="identity" /> ist eine Zeichenfolge mit der Länge 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="identity" />ist länger als 512 Zeichen lang sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegistryRights">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.RegistryRights RegistryRights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.AccessControl.RegistryRights RegistryRights" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RegistryAccessRule.RegistryRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rechte durch die Regel zugelassen oder verweigert.</summary>
+        <value>Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.RegistryRights" /> Werte, der angibt, die Rechte durch zugelassen oder verweigert die Zugriffsregel aus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.AccessControl.RegistryAccessRule>-Objekte sind unveränderlich. Sie können eine neue Zugriffsregel darstellt, ein anderer Benutzer, unterschiedliche Rechte oder ein anderes erstellen <xref:System.Security.AccessControl.AccessControlType>, aber eine vorhandene Access-Regel kann nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

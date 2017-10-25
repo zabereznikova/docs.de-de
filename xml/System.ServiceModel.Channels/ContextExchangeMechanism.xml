@@ -1,0 +1,84 @@
+<Type Name="ContextExchangeMechanism" FullName="System.ServiceModel.Channels.ContextExchangeMechanism">
+  <TypeSignature Language="C#" Value="public enum ContextExchangeMechanism" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ContextExchangeMechanism extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ContextExchangeMechanism" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.WorkflowServices, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob als Mechanismus für den Kontextaustausch in einer Unterhaltung zwischen Client und Dienst ein HTTP-Cookie oder ein SOAP-Header verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Angeben des Werts von <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> für die Unterhaltung zwischen Client und Dienst die <xref:System.ServiceModel.Channels.ContextBindingElement.%23ctor%28System.Net.Security.ProtectionLevel%2CSystem.ServiceModel.Channels.ContextExchangeMechanism%29>-Eigenschaft oder den <xref:System.ServiceModel.Channels.ContextExchangeMechanism>-Konstruktor.  
+  
+ Für Dienstendpunkte, bei denen die Unterstützung des Kontextaustauschprotokolls erforderlich ist, kann diese Anforderung in der veröffentlichten Richtlinie als explizite Anforderung festgelegt werden. Richtlinienassertionen, die die Anforderung des Clients zum Unterstützen des Kontextaustauschprotokolls auf SOAP-Ebene darstellen oder das Aktivieren der Unterstützung von HTTP-Cookies erfordern, können von einem Endpunkt veröffentlicht werden. Die Generierung dieser Assertionen in der Richtlinie auf Dienstseite wird vom Wert der <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A>-Eigenschaft folgendermaßen gesteuert:  
+  
+-   Für HttpCookie wird die folgende Assertion generiert:  
+  
+    ```  
+    <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  
+    ```  
+  
+-   Für ContextSoapHeader wird die folgende Assertion generiert:  
+  
+    ```  
+    <IncludeContext   
+    xmlns="http://schemas.microsoft.com/ws/2006/05/context"  
+    protectionLevel="Sign" />  
+    ```  
+  
+ Die Enumeration HttpCookie wird auf der Transportebene implementiert. Dies kann für die Simplex-Kommunikation verwendet werden, bei der vom Client eine ursprüngliche Anforderung gestellt und der Kontext in der entsprechenden Antwort des Diensts angegeben wird. Dieser Kontext ist dann für die Lebensdauer der Unterhaltung in allen nachfolgenden Nachrichten zwischen Dienst und Client enthalten. Für Dienstendpunkte, die einen HTTP-Transport und Clients, für die Verwendung von HTTP-Cookies zulassen, kann die HttpCookie Enumeration zum Austauschen von Kontext der Anwendung genutzt werden. Werden zum Weitergeben von Kontext HTTP-Cookies verwendet, sollten diese mithilfe der Transportsicherheit geschützt werden. Dieser Mechanismus kann bei Nicht-HTTP-Transporten nicht verwendet werden.  
+  
+ Die Enumeration ContextSoapHeader bietet es sich um eine Alternative, die in einem benutzerdefinierten Kontextkanal implementiert ist und für nicht-HTTP-Transporte sowie für andere Nachrichtenaustauschmuster wie Anforderung-Antwort oder duplexsitzungen verwendet werden können. Dieses Kontextaustauschprotokoll verfügt über eine SOAP-basierte Entsprechung der von HTTP-Cookies auf Transportebene bereitgestellten Funktion. Mit ihm wird ein neuer `wsc:Context`-SOAP-Header für die Kontextinformationen eingeführt. Das Argument dafür, den `wsc:Context`-Header während der Übertragung vor Manipulation zu schützen, ist dasselbe wie bei WS-Adressierungsheadern: Diese Header werden beim Empfang verwendet, um die Nachricht an die korrekten Workflowinstanzen zu verteilen. Deshalb muss der `wsc:Context`-Header entweder auf SOAP- oder auf Transportebene digital signiert werden, wenn für die Bindung ein Nachrichtenschutz verfügbar ist.  
+  
+ Der Kontext wird mithilfe von <xref:System.ServiceModel.Channels.ContextMessageProperty> von der Kanalebene an die Anwendungsebene (und umgekehrt) übermittelt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContextSoapHeader">
+      <MemberSignature Language="C#" Value="ContextSoapHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.ContextExchangeMechanism ContextSoapHeader = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.ContextExchangeMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein SOAP-Header wird zum Austauschen von Kontext verwendet. Dies ist der Standardaustauschmechanismus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpCookie">
+      <MemberSignature Language="C#" Value="HttpCookie" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.ContextExchangeMechanism HttpCookie = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.ContextExchangeMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein HTTP-Cookie wird zum Austauschen von Kontext verwendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

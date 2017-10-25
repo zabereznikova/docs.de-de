@@ -1,0 +1,106 @@
+<Type Name="ObjectDataSourceDisposingEventArgs" FullName="System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs">
+  <TypeSignature Language="C#" Value="public class ObjectDataSourceDisposingEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectDataSourceDisposingEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs> Klasse wird verwendet, der <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnObjectDisposing%2A> Methode, um den Zugriff auf die Business-Objektinstanz nach Datenoperationen bereitzustellen, mit dem, die <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement und Business-Objekt ausgeführt werden, aber bevor das Geschäftsobjekt-Objekt zerstört wird. Das Geschäftsobjekt erfolgt mithilfe der <xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs.ObjectInstance%2A> Eigenschaft. Durch Hinzufügen ein Delegaten behandeln die <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing> Ereignis, können Sie alle öffentlich verfügbar gemachten Member von das Geschäftsobjekt um abschließende Aufgaben oder bereinigen zuzugreifen.  
+  
+ Die <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnObjectDisposing%2A> Methode wird nicht aufgerufen, indem Sie die <xref:System.Web.UI.WebControls.ObjectDataSource> zu steuern, wenn die Methode, die Datenvorgänge führt eine `static` Methode. Keine Business Objektinstanz wird erstellt, wenn die Methode statisch ist.  
+  
+ Die <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement viele Ereignisse, die Sie behandeln können, um die Arbeit mit den zugrunde liegenden Geschäftsobjekten zu verschiedenen Zeiten im Lebenszyklus verfügbar gemacht werden. Die folgende Tabelle enthält die Ereignisse und den zugehörigen <xref:System.EventArgs> Klassen und Ereignishandlerdelegaten.  
+  
+|Ereignis|EventArgs|EventHandler|  
+|-----------|---------------|------------------|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating>.<br /><br /> Tritt auf, unmittelbar bevor die Instanz das Geschäftsobjekt erstellt wird.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreated>.<br /><br /> Tritt unmittelbar nach der Instanz das Geschäftsobjekt erstellt wird.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selecting>.<br /><br /> Tritt auf, bevor die Daten abgerufen werden.|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserting>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updating> und <xref:System.Web.UI.WebControls.ObjectDataSource.Deleting>.<br /><br /> Erfolgen Sie, bevor eine INSERT-, Update- oder Delete-Vorgang ausgeführt wird.|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selected><br /><br /> Tritt auf, nachdem die Daten abgerufen werden.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserted>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updated> und <xref:System.Web.UI.WebControls.ObjectDataSource.Deleted>.<br /><br /> Erfolgen Sie, wenn die INSERT-, Update- oder Delete-Vorgang abgeschlossen ist.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing>.<br /><br /> Tritt auf, bevor ein Geschäftsobjekt zerstört wird.|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventHandler>|  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.ObjectDataSource> -Steuerelement mit einem Geschäftsobjekt und einem <xref:System.Web.UI.WebControls.GridView> -Steuerelement zum Anzeigen von Informationen. Im zweiten Codebeispiel wird der mittleren Ebene Beispielgeschäftsobjekt bereitgestellt, das im ersten Codebeispiel wird verwendet.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.ObjectDataSource> -Steuerelement mit einem Geschäftsobjekt und einem <xref:System.Web.UI.WebControls.GridView> -Steuerelement zum Anzeigen von Informationen. Möglicherweise arbeiten Sie mit einem Geschäftsobjekt, das sehr teuer (als Zeit oder Ressourcen) für jeden Datenvorgang zu erstellen, das die Webseite ausführt. Eine Möglichkeit zum Arbeiten mit ein teures Objekt möglicherweise eine Instanz einmal erstellen und es dann für nachfolgende Operationen anstatt zu erstellen und zerstören für jeden Datenvorgang zwischengespeichert. Dieses Beispiel zeigt dieses Muster. Sie behandeln können die <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating> Ereignis prüfen Sie zunächst den Cache für ein Objekt, und erstellen Sie dann eine Instanz aus, nur dann, wenn noch keine zwischengespeichert wurde. Behandeln Sie dann die <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing> Ereignis für die zukünftige Verwendung, statt zu zerstören sie das Geschäftsobjekt zwischengespeichert. In diesem Beispiel die <xref:System.ComponentModel.CancelEventArgs.Cancel?displayProperty=nameWithType> Eigenschaft von der <xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs> -Objekts festgelegt wird, um `true`, um die direkte der <xref:System.Web.UI.WebControls.ObjectDataSource> nicht aufrufen, die <xref:System.IDisposable.Dispose%2A> Methode für die Instanz.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_16#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_16/CS/objds16cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_16#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_16/VB/objds16vb.aspx#1)]  
+  
+ Das folgende Codebeispiel enthält ein Beispiel-Geschäftsobjekt mittlerer Ebene, die im vorherigen Codebeispiel verwendet. Im Codebeispiel besteht aus einer grundlegenden Geschäftsobjekts sein, definiert durch die `EmployeeLogic` Klasse, die eine Klasse verwaltet den Zustand und Geschäftslogik zu kapseln. Ein vollständiges Arbeitsbeispiel müssen diesen Code als Bibliothek kompiliert, und verwenden Sie diese Klassen aus einer ASP-Seite.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ObjectDataSource_16#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_16/CS/northwindemployee16.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ObjectDataSource_16#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_16/VB/northwindemployee16.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDataSourceDisposingEventArgs (object objectInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object objectInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="objectInstance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objectInstance">Das Geschäftsobjekt, mit denen die <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> zum Ausführen von Datenvorgängen interagiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs" /> -Klasse mit dem angegebenen Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectInstance">
+      <MemberSignature Language="C#" Value="public object ObjectInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ObjectInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs.ObjectInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das das Geschäftsobjekt mit dem die <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> -Steuerelement Datenoperationen ausführt.</summary>
+        <value>Das Geschäftsobjekt der <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> für Datenvorgänge; verwendet, andernfalls <see langword="null" />, wenn <see langword="null" /> wird zum Übergeben der <see cref="T:System.Web.UI.WebControls.ObjectDataSourceEventArgs" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Daten in den Vorgangsmethoden (<xref:System.Web.UI.WebControls.ObjectDataSource.SelectMethod%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.UpdateMethod%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteMethod%2A>, und <xref:System.Web.UI.WebControls.ObjectDataSource.InsertMethod%2A>) sind Instanzmethoden, eine Instanz des Unternehmens-Objekt erstellt wird, bevor die Methode ausgeführt wird. Sie können verhindern, dass das Geschäftsobjekt bei jedem Aufruf erstellt wird, die durch das Speichern des Objekts in der <xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs.ObjectInstance%2A> Eigenschaft in der <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing> -Ereignishandler. In nachfolgenden <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating> Ereignisse, können Sie das Geschäftsobjekt, das vom Abrufen der <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs.ObjectInstance%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.ObjectDataSource> -Steuerelement mit einem Geschäftsobjekt und einem <xref:System.Web.UI.WebControls.GridView> -Steuerelement zum Anzeigen von Informationen. Möglicherweise arbeiten Sie mit einem Geschäftsobjekt, das sehr teuer (als Zeit oder Ressourcen) für jeden Datenvorgang zu erstellen, das die Webseite ausführt. Eine Möglichkeit zum Arbeiten mit ein teures Objekt möglicherweise eine Instanz einmal erstellen und es dann für nachfolgende Operationen anstatt zu erstellen und zerstören für jeden Datenvorgang zwischengespeichert. Dieses Beispiel zeigt dieses Muster. Sie behandeln können die <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating> Ereignis prüfen Sie zunächst den Cache für ein Objekt, und erstellen Sie dann eine Instanz aus, nur dann, wenn noch keine zwischengespeichert wurde. Behandeln Sie dann die <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing> Ereignis für die zukünftige Verwendung, statt zu zerstören sie das Geschäftsobjekt zwischengespeichert. In diesem Beispiel die <xref:System.ComponentModel.CancelEventArgs.Cancel?displayProperty=nameWithType> Eigenschaft der <xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs> -Klasse festgelegt, dass `true`, zur Weiterleitung der <xref:System.Web.UI.WebControls.ObjectDataSource> nicht aufrufen, <xref:System.IDisposable.Dispose%2A> für die Instanz.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_16#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_16/CS/objds16cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_16#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_16/VB/objds16vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

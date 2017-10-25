@@ -1,0 +1,155 @@
+<Type Name="PropertyPathConverter" FullName="System.Windows.PropertyPathConverter">
+  <TypeSignature Language="C#" Value="public sealed class PropertyPathConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PropertyPathConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.PropertyPathConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Typkonverter für <see cref="T:System.Windows.PropertyPath" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.PropertyPath> wird verwendet, um Typ- und Eigenschaftennamens Pfade zu beteiligten Objekte in einer Bindung oder für Eigenschaftenpfade angeben.  
+  
+<a name="XAMLTextUsage_PropertyPathConverter"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyPathConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyPathConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.PropertyPathConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyPathConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="sourceType">Ein <see cref="T:System.Type" />, der den Typ darstellt, aus dem konvertiert werden soll.</param>
+        <summary>Gibt zurück, ob dieser Konverter ein Objekt eines Typs zu konvertieren, kann die <see cref="T:System.Windows.PropertyPath" /> Typ.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="sourceType" /> Typ <see cref="T:System.String" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyPathConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="destinationType">Ein <see cref="T:System.Type" />, der den Typ darstellt, in den konvertiert werden soll.</param>
+        <summary>Gibt zurück, ob dieser Konverter das Objekt zu konvertieren, kann die <see cref="T:System.Windows.PropertyPath" /> Typ.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="destinationType" /> Typ <see cref="T:System.String" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, System.Globalization.CultureInfo cultureInfo, object source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Globalization.CultureInfo cultureInfo, object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyPathConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="cultureInfo">Das als aktuelle Kultur zu verwendende <see cref="T:System.Globalization.CultureInfo" />-Element.</param>
+        <param name="source">Das Objekt, das zum Konvertieren einer <see cref="T:System.Windows.PropertyPath" />. Dies muss eine Zeichenfolge sein.</param>
+        <summary>Konvertiert den angegebenen Wert in der <see cref="T:System.Windows.PropertyPath" /> Typ.</summary>
+        <returns>Der konvertierte <see cref="T:System.Windows.PropertyPath" />-Wert.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="source" /> als bereitgestellt wurde<see langword="null." /></exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="source" /> war nicht <see langword="null" />, war jedoch nicht der erwarteten <see cref="T:System.String" /> Typ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, System.Globalization.CultureInfo cultureInfo, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Globalization.CultureInfo cultureInfo, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyPathConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="cultureInfo">Das als aktuelle Kultur zu verwendende <see cref="T:System.Globalization.CultureInfo" />-Element.</param>
+        <param name="value">Die zu konvertierende <see cref="T:System.Windows.PropertyPath" />.</param>
+        <param name="destinationType">Der Zieltyp. Dies wird erwartet, werden die <see cref="T:System.String" /> Typ.</param>
+        <summary>Konvertiert das angegebene Wertobjekt, das die <see cref="T:System.Windows.PropertyPath" /> Typ.</summary>
+        <returns>Das konvertierte Ziel <see cref="T:System.String" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="value" /> bereitgestellt wurde, als <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="value" /> war nicht <see langword="null" />, war jedoch nicht der erwarteten <see cref="T:System.Windows.PropertyPath" /> Typ.  
+  
+ \- oder –  
+  
+ Die <paramref name="destinationType" /> war nicht der <see cref="T:System.String" /> Typ.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

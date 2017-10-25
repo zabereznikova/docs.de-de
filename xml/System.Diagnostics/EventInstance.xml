@@ -1,0 +1,935 @@
+<Type Name="EventInstance" FullName="System.Diagnostics.EventInstance">
+  <TypeSignature Language="C#" Value="public class EventInstance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventInstance extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventInstance" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Sprachneutrale-Informationen für einen Ereignisprotokolleintrag darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Diagnostics.EventInstance> ein Ressourcenbezeichner, sondern ein Zeichenfolgenwert mit Eintrag im Ereignisprotokoll zu schreiben. Um einen Eintrag im Ereignisprotokoll zu schreiben, Initialisieren der <xref:System.Diagnostics.EventInstance.InstanceId%2A> Eigenschaft, und übergeben Sie die Instanz, die die <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode. Die Ereignisanzeige verwendet die Instanz-ID zu suchen und anzeigen die entsprechenden Zeichenfolge aus der lokalisierten Ressourcendatei basierend auf der aktuellen spracheinstellungen. Vor dem Schreiben von Ereignissen, die Ressourcen-IDs verwenden, müssen Sie die Ereignisquelle bei der entsprechenden Ressourcendatei registrieren.  
+  
+ Beim Schreiben von Ereignissen können Sie festlegen der <xref:System.Diagnostics.EventInstance.EntryType%2A> Eigenschaft, um das Symbol anzugeben, in dem die Ereignisanzeige für den Eintrag angezeigt. Sie können auch angeben, ein <xref:System.Diagnostics.EventInstance.CategoryId%2A> Eigenschaft, um der Kategorie anzugeben, in dem die Ereignisanzeige für den Eintrag angezeigt.  
+  
+ Mithilfe der Ereignisanzeige die Kategorie zu Filtern von Ereignissen von einer Ereignisquelle geschrieben wurde. Der Ereignisanzeige können die Kategorie einen numerischen Wert anzeigen können, oder es die Kategorie als eine Ressourcen-ID um eine lokalisierte Kategoriezeichenfolge anzuzeigen.  
+  
+ Um lokalisierte Kategoriezeichenfolgen in der Ereignisanzeige anzuzeigen, müssen Sie eine Ereignisquelle mit einer Kategorieressourcendatei konfiguriert, und legen Sie verwenden die <xref:System.Diagnostics.EventInstance.CategoryId%2A> zu einem Ressourcenbezeichner in der Kategorie-Ressourcendatei. Wenn die Ereignisquelle eine Ressourcendatei konfigurierten Kategorie verwendet werden soll, oder das angegebene keinen <xref:System.Diagnostics.EventInstance.CategoryId%2A> ist kein Index eine Zeichenfolge in der Ressourcendatei für die Kategorie, und klicken Sie dann der Ereignisanzeige zeigt den Kategorie "numeric"-Wert für diesen Eintrag. Konfigurieren Sie die Kategorie-Ressourcendatei, sowie die Anzahl der Kategoriezeichenfolgen in der Ressourcendatei mit der <xref:System.Diagnostics.EventLogInstaller> oder <xref:System.Diagnostics.EventSourceCreationData> Klasse.  
+  
+ Sie müssen eine Quelle für ein Ereignisprotokoll registrieren, bevor Sie mit <xref:System.Diagnostics.EventInstance> , schreiben ein Ereignis mit der <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode. Die Quelle muss konfiguriert werden, zum Schreiben lokalisierter Einträge in das Protokoll, und die Quelle muss mindestens eine Meldungsressourcendatei definieren.  
+  
+ Erstellen Sie die neue Ereignisquelle während der Installation der Anwendung. Dadurch wird die Zeit für das Betriebssystem, um die Liste der registrierten Ereignisquellen und ihre Konfigurationen zu aktualisieren. Wenn das Betriebssystem hat seine Liste der Ereignisquellen nicht aktualisiert, und Sie versuchen, ein Ereignis mit der neuen Datenquelle zu schreiben, der Schreibvorgang fehl. Sie können konfigurieren, eine neue Datenquelle mit einer <xref:System.Diagnostics.EventLogInstaller>, oder mithilfe der <xref:System.Diagnostics.EventLog.CreateEventSource%2A> Methode. Sie benötigen Administratorrechte auf dem Computer eine neue Ereignisquelle erstellen.  
+  
+ Informationen zum Definieren von ereignismeldungen und Erstellen von Ressourcendateien für das Ereignisprotokoll, finden Sie unter dem Thema "Meldungscompiler" in der Platform SDK-Dokumentation unter [http://msdn.microsoft.com](http://msdn.microsoft.com).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird schreibt einen Eintrag Informationsereignis aus, und klicken Sie dann erneut die <xref:System.Diagnostics.EventInstance> auf einen Eintrag für ein Warnungsereignis in ein vorhandenes Ereignisprotokoll zu schreiben. Der Ereignismeldungstext ist ein Ressourcenbezeichner in einer Ressourcendatei für die Nachricht mit angegeben. Im Codebeispiel wird davon ausgegangen, dass für die Quelle der entsprechenden Meldungsressourcendatei registriert wurde.  
+  
+ [!code-cpp[EventLog_WriteEvent#9](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#9)]
+ [!code-csharp[EventLog_WriteEvent#9](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#9)]
+ [!code-vb[EventLog_WriteEvent#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#9)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventInstance (long instanceId, int categoryId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 instanceId, int32 categoryId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventInstance.#ctor(System.Int64,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Int64" />
+        <Parameter Name="categoryId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Ein Ressourcenbezeichner, der eine Zeichenfolge, die in der Meldungsressourcendatei der Ereignisquelle definiert entspricht.</param>
+        <param name="categoryId">Ein Ressourcenbezeichner, der eine Zeichenfolge, die definiert, in der Kategorie-Ressourcendatei, von der Ereignisquelle verwendet wurden, bzw. NULL, wenn keine Kategorie für das Ereignis angeben, entspricht.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.EventInstance" /> -Klasse unter Verwendung der angegebenen Ressourcen-IDs für die lokalisierte Meldung und Kategorie des Ereigniseintrags.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um einen Informationseintrag in ein Ereignisprotokoll zu schreiben, Initialisieren einer <xref:System.Diagnostics.EventInstance> und übergeben sie an die <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode. Legen Sie die `instanceId` auf die Ressourcen-ID der ereignismeldung in das entsprechende <xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A> Eigenschaft für die Quelle. Festlegen der `categoryId` auf einen Wert für die Kategorie "numeric", oder der Ressourcenbezeichner der Ereigniskategorie in der <xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A> -Eigenschaft für die Quelle; Set der `categoryId` auf 0 (null) für keine (Ereigniskategorie). Die <xref:System.Diagnostics.EventInstance.EntryType%2A> für die neue Instanz ist-Eigenschaftensatz auf <xref:System.Diagnostics.EventLogEntryType.Information> standardmäßig.  
+  
+ Die Ereignisanzeige verwendet die Ressourcenbezeichner zum Anzeigen der entsprechenden Zeichenfolgen aus den lokalisierten Ressourcendateien für die Quelle an. Sie müssen die Quelle mit den entsprechenden Ressourcendateien registrieren, bevor Sie Ereignisse mit Ressourcenbezeichner schreiben können.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird schreibt einen Eintrag Informationsereignis aus, und klicken Sie dann erneut die <xref:System.Diagnostics.EventInstance> auf einen Eintrag für ein Warnungsereignis in ein vorhandenes Ereignisprotokoll zu schreiben. Der Ereignismeldungstext ist ein Ressourcenbezeichner in einer Ressourcendatei für die Nachricht mit angegeben. Im Codebeispiel wird davon ausgegangen, dass für die Quelle der entsprechenden Meldungsressourcendatei registriert wurde.  
+  
+ [!code-cpp[EventLog_WriteEvent#9](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#9)]
+ [!code-csharp[EventLog_WriteEvent#9](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#9)]
+ [!code-vb[EventLog_WriteEvent#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#9)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="instanceId" /> Parameter ist ein negativer Wert oder einen Wert größer als <see cref="F:System.UInt32.MaxValue" />.  
+  
+ - oder -   
+  
+ Die <paramref name="categoryId" /> Parameter ist ein negativer Wert oder einen Wert größer als <see cref="F:System.UInt16.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventInstance (long instanceId, int categoryId, System.Diagnostics.EventLogEntryType entryType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 instanceId, int32 categoryId, valuetype System.Diagnostics.EventLogEntryType entryType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventInstance.#ctor(System.Int64,System.Int32,System.Diagnostics.EventLogEntryType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Int64" />
+        <Parameter Name="categoryId" Type="System.Int32" />
+        <Parameter Name="entryType" Type="System.Diagnostics.EventLogEntryType" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Ein Ressourcenbezeichner, der eine Zeichenfolge, die in der Meldungsressourcendatei der Ereignisquelle definiert entspricht.</param>
+        <param name="categoryId">Ein Ressourcenbezeichner, der eine Zeichenfolge, die definiert, in der Kategorie-Ressourcendatei, von der Ereignisquelle verwendet wurden, bzw. NULL, wenn keine Kategorie für das Ereignis angeben, entspricht.</param>
+        <param name="entryType">Ein <see cref="T:System.Diagnostics.EventLogEntryType" /> Wert, der den Ereignistyp angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.EventInstance" /> -Klasse unter Verwendung der angegebenen Ressourcen-IDs für die lokalisierte Meldung und Kategorie des Ereigniseintrags sowie den Eintragstyp angegebene Ereignisprotokoll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um einen Eintrag in ein Ereignisprotokoll zu schreiben, Initialisieren einer <xref:System.Diagnostics.EventInstance> und übergeben sie an die <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode. Legen Sie die `instanceId` auf die Ressourcen-ID der ereignismeldung in das entsprechende <xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A> Eigenschaft für die Quelle. Festlegen der `categoryId` auf einen Wert für die Kategorie "numeric", oder der Ressourcenbezeichner der Ereigniskategorie in der <xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A> -Eigenschaft für die Quelle; Set der `categoryId` auf 0 (null) für keine (Ereigniskategorie).  
+  
+ Die Ereignisanzeige verwendet die Ressourcenbezeichner zum Anzeigen der entsprechenden Zeichenfolgen aus den lokalisierten Ressourcendateien für die Quelle an. Sie müssen die Quelle mit den entsprechenden Ressourcendateien registrieren, bevor Sie Ereignisse mit Ressourcenbezeichner schreiben können.  
+  
+ Legen Sie die `entryType` auf einen der vordefinierten Eintragstypen. Die Ereignisanzeige verwendet den Ereignistyp, um zu bestimmen, welches Symbol in der Listenansicht des Ereignisprotokolls angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird schreibt zwei Überwachungseinträge Ereignis in das Ereignisprotokoll `myNewLog`. Das Codebeispiel wird eine neue Ereignisquelle und ein neues Ereignisprotokoll erstellt, wenn sie nicht auf dem lokalen Computer vorhanden sind. Der Text der Ereignis wird mit einem Ressourcenbezeichner in einer Ressourcendatei angegeben.  
+  
+ [!code-cpp[EventLog_WriteEvent#7](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#7)]
+ [!code-csharp[EventLog_WriteEvent#7](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#7)]
+ [!code-vb[EventLog_WriteEvent#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#7)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="entryType" /> ist kein gültiger <see cref="T:System.Diagnostics.EventLogEntryType" />-Wert.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="instanceId" />ist ein negativer Wert oder einen Wert größer als <see cref="F:System.UInt32.MaxValue" />.  
+  
+ - oder -   
+  
+ <paramref name="categoryId" />ist ein negativer Wert oder einen Wert größer als <see cref="F:System.UInt16.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryId">
+      <MemberSignature Language="C#" Value="public int CategoryId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CategoryId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventInstance.CategoryId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ressourcenbezeichner, der die Kategorie des Ereigniseintrags angibt.</summary>
+        <value>Eine Kategorie "numeric" Wert oder Ressourcenbezeichner, der eine Zeichenfolge, die in der Kategorieressourcendatei der Ereignisquelle definiert entspricht. Der Standardwert ist 0 (null), was bedeutet, dass keine Kategorie für den Eintrag des Ereignisses angezeigt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereignisprotokoll-Kategorien sind anwendungsdefinierte Werte, die Hilfe Ereignisse gefiltert oder bieten weitere Informationen zum Ereignis. Beispielsweise kann die Anwendung separate Kategorien für unterschiedliche Komponenten oder verschiedene Vorgänge definieren.  
+  
+ Legen Sie die <xref:System.Diagnostics.EventInstance.CategoryId%2A> Eigenschaft, um der Kategorie anzugeben, in dem die Ereignisanzeige für den Eintrag angezeigt. Der Ereignisanzeige können die Kategorie einen numerischen Wert anzeigen, oder es können die <xref:System.Diagnostics.EventInstance.CategoryId%2A> als Ressource Bezeichner, der eine lokalisierte Kategoriezeichenfolge anzeigen auf der Grundlage der aktuellen spracheinstellungen.  
+  
+ Um lokalisierte Kategoriezeichenfolgen in der Ereignisanzeige anzuzeigen, müssen Sie eine Ereignisquelle mit einer Kategorieressourcendatei konfiguriert, und legen Sie verwenden die <xref:System.Diagnostics.EventInstance.CategoryId%2A> zu einem Ressourcenbezeichner in der Kategorie-Ressourcendatei. Wenn die Ereignisquelle eine Ressourcendatei konfigurierten Kategorie verwendet werden soll, oder das angegebene keinen <xref:System.Diagnostics.EventInstance.CategoryId%2A> ist kein Index eine Zeichenfolge in der Ressourcendatei für die Kategorie, und klicken Sie dann der Ereignisanzeige zeigt den Kategorie "numeric"-Wert für diesen Eintrag.  
+  
+ Bevor Sie mithilfe der Ressourcen-IDs Ereigniskategorien schreiben, müssen Sie die Quelle mit der entsprechenden Ressourcendatei registrieren. Konfigurieren Sie die Kategorie-Ressourcendatei, sowie die Anzahl der Kategoriezeichenfolgen in der Ressourcendatei mit der <xref:System.Diagnostics.EventLogInstaller> oder <xref:System.Diagnostics.EventSourceCreationData> Klasse. Beim Definieren von Kategoriezeichenfolgen in einer Ressourcendatei Kategorie Ressourcen-IDs müssen werden fortlaufend beginnend mit 1 nummeriert, bis zu den konfigurierten <xref:System.Diagnostics.EventSourceCreationData.CategoryCount%2A> Eigenschaftswert.  
+  
+ Ereigniskategorien sind optional. Wenn Ihre Anwendung keine Kategorien verwendet werden, legen Sie keine der <xref:System.Diagnostics.EventInstance.CategoryId%2A> für den Eintrag im Ereignisprotokoll.  
+  
+ Details zum Definieren von ereignismeldungen und Erstellen von Ressourcendateien Ereignis, finden Sie unter dem Thema "Meldungscompiler" in der Platform SDK-Dokumentation unter [http://msdn.microsoft.com](http://msdn.microsoft.com/). Weitere Informationen zum Definieren von Ereigniskategorien in Ressourcendateien finden Sie im Thema "Ereigniskategorien" im Plattform-SDK  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird schreibt einen Eintrag Informationsereignis aus, und klicken Sie dann erneut die <xref:System.Diagnostics.EventInstance> auf einen Eintrag für ein Warnungsereignis in ein vorhandenes Ereignisprotokoll zu schreiben. Der Ereignismeldungstext ist ein Ressourcenbezeichner in einer Ressourcendatei für die Nachricht mit angegeben. Im Codebeispiel wird davon ausgegangen, dass für die Quelle der entsprechenden Meldungsressourcendatei registriert wurde.  
+  
+ [!code-cpp[EventLog_WriteEvent#9](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#9)]
+ [!code-csharp[EventLog_WriteEvent#9](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#9)]
+ [!code-vb[EventLog_WriteEvent#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#9)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird festgelegt auf einen negativen Wert oder einen Wert größer als <see cref="F:System.UInt16.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.EventLogEntryType EntryType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.EventLogEntryType EntryType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventInstance.EntryType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogEntryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ereignistyp der Eintrag im Ereignisprotokoll.</summary>
+        <value>Ein <see cref="T:System.Diagnostics.EventLogEntryType" /> Wert, der den Eintragstyp des Ereignisses angibt. Der Standardwert ist <see cref="F:System.Diagnostics.EventLogEntryType.Information" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Ereignis ist eines einzelnen Typs an, womit die Anwendung beim Melden des Ereignisses. Die Ereignisanzeige verwendet den Ereignistyp, um zu bestimmen, welches Symbol in der Listenansicht des Ereignisprotokolls angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird schreibt einen Eintrag Informationsereignis aus, und klicken Sie dann erneut die <xref:System.Diagnostics.EventInstance> auf einen Eintrag für ein Warnungsereignis in ein vorhandenes Ereignisprotokoll zu schreiben. Der Ereignismeldungstext ist ein Ressourcenbezeichner in einer Ressourcendatei für die Nachricht mit angegeben. Im Codebeispiel wird davon ausgegangen, dass für die Quelle der entsprechenden Meldungsressourcendatei registriert wurde.  
+  
+ [!code-cpp[EventLog_WriteEvent#9](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#9)]
+ [!code-csharp[EventLog_WriteEvent#9](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#9)]
+ [!code-vb[EventLog_WriteEvent#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#9)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Die Eigenschaft nicht festgelegt ist, auf eine gültige <see cref="T:System.Diagnostics.EventLogEntryType" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public long InstanceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventInstance.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ressourcenbezeichner, der den Meldungstext des Ereigniseintrags bezeichnet.</summary>
+        <value>Ein Ressourcenbezeichner, der eine Zeichenfolge, die in der Meldungsressourcendatei der Ereignisquelle definiert entspricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.EventInstance.InstanceId%2A> Eigenschaft identifiziert eindeutig einen Ereigniseintrag für eine konfigurierte Ereignisquelle. Für Ereignisse, die in der Nachricht Ressourcendateien, definiert der <xref:System.Diagnostics.EventInstance.InstanceId%2A> entspricht den Ressourcenbezeichner, der über die Definition Nachrichtenfelder in der Nachricht Text-Datei kompiliert. Die Anwendung kann lokalisierte Ereignisprotokolleinträge schreiben, durch Festlegen der <xref:System.Diagnostics.EventInstance.InstanceId%2A> auf ein Ressourcenbezeichner. Mithilfe der Ereignisanzeige die <xref:System.Diagnostics.EventInstance.InstanceId%2A> Ressourcenbezeichner suchen und Anzeigen der entsprechenden Zeichenfolge aus der lokalisierten Ressourcendatei anhand der aktuellen spracheinstellungen. Sie müssen die Quelle mit der entsprechenden Ressourcendatei registrieren, vor dem Schreiben von Ereignissen, die mithilfe der Ressourcen-IDs.  
+  
+ Informationen zum Definieren von ereignismeldungen und Erstellen von Ressourcendateien für das Ereignisprotokoll, finden Sie unter dem Thema "Meldungscompiler" in der Platform SDK-Dokumentation unter [http://msdn.microsoft.com](http://msdn.microsoft.com/). Weitere Informationen zu Ereignisprotokoll-IDs finden Sie im Thema "Ereignis-IDs" in der Platform SDK.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird schreibt einen Eintrag Informationsereignis aus, und klicken Sie dann erneut die <xref:System.Diagnostics.EventInstance> auf einen Eintrag für ein Warnungsereignis in ein vorhandenes Ereignisprotokoll zu schreiben. Der Ereignismeldungstext ist ein Ressourcenbezeichner in einer Ressourcendatei für die Nachricht mit angegeben. Im Codebeispiel wird davon ausgegangen, dass für die Quelle der entsprechenden Meldungsressourcendatei registriert wurde.  
+  
+ [!code-cpp[EventLog_WriteEvent#9](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#9)]
+ [!code-csharp[EventLog_WriteEvent#9](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#9)]
+ [!code-vb[EventLog_WriteEvent#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#9)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird festgelegt auf einen negativen Wert oder einen Wert größer als <see cref="F:System.UInt32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

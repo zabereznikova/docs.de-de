@@ -1,0 +1,95 @@
+<Type Name="SettingsManageabilityAttribute" FullName="System.Configuration.SettingsManageabilityAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SettingsManageabilityAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SettingsManageabilityAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsManageabilityAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt spezielle Dienste für die Eigenschaften der Anwendung an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingsManageabilityAttribute> gibt an, dass spezielle, vordefinierte Dienste für die einzelnen Anwendung Einstellungseigenschaften und Eigenschaftsgruppen bereitgestellt werden. Die meisten Dienste werden von Windows-Betriebssystems bereitgestellt werden.  
+  
+ Weitere Informationen zu Eigenschaften der Anwendung und ihrer Verwendung finden Sie unter [Anwendung Einstellungen für Windows Forms](~/docs/framework/winforms/advanced/application-settings-for-windows-forms.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsManageabilityAttribute (System.Configuration.SettingsManageability manageability);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Configuration.SettingsManageability manageability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsManageabilityAttribute.#ctor(System.Configuration.SettingsManageability)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="manageability" Type="System.Configuration.SettingsManageability" />
+      </Parameters>
+      <Docs>
+        <param name="manageability">Ein <see cref="T:System.Configuration.SettingsManageability" /> Wert, der den angeforderten Dienste auflistet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.SettingsManageabilityAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Kombinieren von definierten Werte können mehrere Dienste angefordert werden die <xref:System.Configuration.SettingsManageability> Enumeration mit dem logischen `OR` Operator.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Manageability">
+      <MemberSignature Language="C#" Value="public System.Configuration.SettingsManageability Manageability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.SettingsManageability Manageability" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsManageabilityAttribute.Manageability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsManageability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz der speziellen Dienste, die angefordert wurden.</summary>
+        <value>Ein Wert, der ergibt, die logische <see langword="OR" /> Operator, um alle Kombinieren der <see cref="T:System.Configuration.SettingsManageability" /> Enumerationswerte, der angeforderte Dienst entspricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird festgelegt, der <xref:System.Configuration.SettingsManageabilityAttribute.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

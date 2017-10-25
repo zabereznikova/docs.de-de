@@ -1,0 +1,745 @@
+<Type Name="CacheDependency" FullName="System.Web.Caching.CacheDependency">
+  <TypeSignature Language="C#" Value="public class CacheDependency : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi CacheDependency extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.CacheDependency" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Legt eine Abhängigkeitsbeziehung zwischen einem Element, das im <see cref="T:System.Web.Caching.Cache" />-Objekt einer ASP.NET-Anwendung gespeichert ist, und einer Datei, einem Cacheschlüssel, einem Datei- oder Cacheschlüsselarray oder einem anderen <see cref="T:System.Web.Caching.CacheDependency" />-Objekt fest. Die <see cref="T:System.Web.Caching.CacheDependency" />-Klasse überwacht die Abhängigkeitsbeziehungen, sodass bei Änderung beliebiger dieser Beziehungen das zwischengespeicherte Element automatisch entfernt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ein Element mit dem Cache hinzufügen, die auf einem anderen Objekt, z. B. eine Datei oder ein Array von Dateien abhängig ist wird das abhängige Element automatisch aus dem Cache entfernt, wenn das Objekt ändert. Nehmen wir beispielsweise an, die Sie erstellen eine <xref:System.Data.DataSet> -Objekt auf der Grundlage von Daten in eine XML-Datei. Können Sie hinzufügen, die <xref:System.Data.DataSet> in den Cache mit einer <xref:System.Web.Caching.CacheDependency> Objekt, mit der, die <xref:System.Data.DataSet> abhängig von der XML-Datei. Wenn die XML-Datei geändert wird, die <xref:System.Data.DataSet> aus dem Cache entfernt wird.  
+  
+ Sie können Elemente mit Abhängigkeiten Anwendungscache mit Hinzufügen der <xref:System.Web.Caching.Cache.Add%2A> und <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> Methoden. Sie können keine der <xref:System.Web.Caching.Cache.Item%2A> Eigenschaft, um den Cache mit Abhängigkeiten Elemente hinzuzufügen.  
+  
+ Um eine Abhängigkeit einzurichten, erstellen Sie eine Instanz von der <xref:System.Web.Caching.CacheDependency> Klasse angeben, die Dateien, Schlüssel oder Verzeichnisse auf dem das Element abhängig ist, und übergeben Sie dann die Abhängigkeit der <xref:System.Web.Caching.Cache.Add%2A> oder <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> Methode. Die <xref:System.Web.Caching.CacheDependency> Instanz kann eine einzelne Datei oder Verzeichnis, ein Array von Dateien oder Verzeichnisse oder ein Array von Dateien oder Verzeichnisse zusammen mit der ein Array von Cacheschlüsseln darstellen (diese anderen im gespeicherten Elementen darstellen der <xref:System.Web.Caching.Cache> Objekt).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.Caching.CacheDependency.HasChanged%2A> -Eigenschaft können Sie bestimmen, ob eine <xref:System.Web.Caching.CacheDependency> geändert, seit der vorherigen Anforderung für ein Element in der <xref:System.Web.Caching.Cache>. Die `dt` übergebene Wert den `start` Parametersatz auf <xref:System.DateTime.Now%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Web.Caching.CacheDependency_HasChanged#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching.CacheDependency_HasChanged/CS/t.cs.aspx#1)]
+ [!code-vb[System.Web.Caching.CacheDependency_HasChanged#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching.CacheDependency_HasChanged/VB/t.vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CacheDependency ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Caching.CacheDependency" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie, leiten Sie eine eigene Klasse von möchten <xref:System.Web.Caching.CacheDependency>, implementieren Sie diese Version von den <xref:System.Web.Caching.CacheDependency.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Klasse, die von dieser Version implementiert die <xref:System.Web.Caching.CacheDependency> Konstruktor wie alle Klassen, die davon Herleiten <xref:System.Web.Caching.CacheDependency> sind erforderlich, um.  
+  
+ [!code-vb[CacheDependency_Whidbey_Example1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CacheDependency_Whidbey_Example1/VB/cachedependencysample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheDependency (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Der Pfad zu einer Datei oder das Verzeichnis, das das zwischengespeicherte Objekt abhängig ist. Wenn diese Ressource ändert, wird das zwischengespeicherte Objekt ist veraltet und wird aus dem Cache entfernt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Caching.CacheDependency" /> -Klasse, die einer Datei oder eines Verzeichnisses auf Änderungen überwacht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Verzeichnis oder die Datei im angegebenen der `filename` Parameter wurde nicht gefunden im Dateisystem, wird Sie als fehlend behandelt werden. Wenn das Verzeichnis oder die Datei nicht vorhanden ist. wenn das Objekt mit der Abhängigkeit wird hinzugefügt der <xref:System.Web.Caching.Cache>, das zwischengespeicherte Objekt daraus die <xref:System.Web.Caching.Cache> Wenn das Verzeichnis oder Datei erstellt wird.  
+  
+ Nehmen wir beispielsweise an, dass Sie ein Objekt, das Hinzufügen der <xref:System.Web.Caching.Cache> mit einer Abhängigkeit von den folgenden Dateipfad: c:\stocks\xyz.dat. Wenn diese Datei nicht gefunden wurde die <xref:System.Web.Caching.CacheDependency> Objekt wird erstellt, aber später erstellt wird, wird das zwischengespeicherte Objekt bei der Erstellung der Datei xyz.dat entfernt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz von der <xref:System.Web.Caching.CacheDependency> Klasse mit einer Abhängigkeit auf eine XML-Datei. Die <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> Methode fügt dann ein Element aus, um die <xref:System.Web.Caching.Cache> , ist diese Datei abhängt.  
+  
+ [!code-csharp[Classic CacheDependency.CacheDependency Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CacheDependency.CacheDependency Example/CS/source.cs#1)]
+ [!code-vb[Classic CacheDependency.CacheDependency Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CacheDependency.CacheDependency Example/VB/source.vb#1)]  
+  
+ Sie können auch das folgende Verfahren zum Hinzufügen eines Elements auf der <xref:System.Web.Caching.Cache> mit einer Abhängigkeit auf eine Datei.  
+  
+ [!code-csharp[Single File Dependency Cache entry#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Single File Dependency Cache entry/CS/DependencySingleFilecs.aspx#1)]
+ [!code-vb[Single File Dependency Cache entry#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Single File Dependency Cache entry/VB/DependencySingleFilevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheDependency (string[] filenames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] filenames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.#ctor(System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filenames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="filenames">Ein Array der Pfade (in Dateien oder Verzeichnisse), denen das zwischengespeicherte Objekt abhängig ist. Wenn Änderungen an dieser Ressourcen geändert wird, wird das zwischengespeicherte Objekt ist veraltet und wird aus dem Cache entfernt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Caching.CacheDependency" /> -Klasse, die einen Array der Pfade (in Dateien oder Verzeichnisse) auf Änderungen überwacht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine der Dateien oder Verzeichnisse in das Array ändert oder aus dem Array entfernt das zwischengespeicherte Element ist veraltet und wird aus der Anwendungsverzeichnis entfernt <xref:System.Web.Caching.Cache> Objekt.  
+  
+ Auch wenn die Verzeichnisse oder die angegebenen Dateien in der `filenames` Parameter wurde nicht gefunden im Dateisystem, wird er als fehlend behandelt. Wenn ein Verzeichnis oder eine Datei nicht vorhanden ist. wenn das Objekt mit der Abhängigkeit wird hinzugefügt der <xref:System.Web.Caching.Cache>, das zwischengespeicherte Objekt daraus die <xref:System.Web.Caching.Cache> Wenn dieses Verzeichnis oder Datei erstellt wird.  
+  
+ Nehmen wir beispielsweise an, dass Sie ein Objekt, das Hinzufügen der <xref:System.Web.Caching.Cache> mit einer Abhängigkeit von den folgenden Dateipfad: c:\stocks\xyz.dat. Wenn diese Datei nicht gefunden wurde die <xref:System.Web.Caching.CacheDependency> Objekt wird erstellt, aber später erstellt wird, wird das zwischengespeicherte Objekt bei der Erstellung der Datei xyz.dat entfernt.  
+  
+> [!NOTE]
+>  Bei der Erstellung des Arrays, die die Abhängigkeiten enthält, müssen Sie die Anzahl der Dateien definieren, dass das Element Sie zum Hinzufügen der <xref:System.Web.Caching.Cache> abhängig ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> Methode zum Hinzufügen eines Elements auf der <xref:System.Web.Caching.Cache> mit Abhängigkeiten auf ein Array von Dateien. Sie können auch das Element ein Array von Verzeichnissen abhängig machen.  
+  
+ [!code-csharp[Multiple file based dependency#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Multiple file based dependency/CS/DependencyMultiFilecs.aspx#1)]
+ [!code-vb[Multiple file based dependency#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Multiple file based dependency/VB/DependencyMultiFilevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheDependency (string filename, DateTime start);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filename, valuetype System.DateTime start) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.#ctor(System.String,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="start" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Der Pfad zu einer Datei oder das Verzeichnis, das das zwischengespeicherte Objekt abhängig ist. Wenn diese Ressource ändert, wird das zwischengespeicherte Objekt ist veraltet und wird aus dem Cache entfernt.</param>
+        <param name="start">Die Zeit für die Datum das letzte Änderung des Verzeichnisses oder der Datei überprüft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Caching.CacheDependency" /> -Klasse, die einer Datei oder eines Verzeichnisses auf Änderungen überwacht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Verzeichnis oder die Datei im angegebenen der `filename` Parameter wurde nicht gefunden im Dateisystem, wird Sie als fehlend behandelt werden. Wenn das Verzeichnis oder die Datei nicht vorhanden ist. wenn das Objekt mit der Abhängigkeit wird hinzugefügt der <xref:System.Web.Caching.Cache>, das zwischengespeicherte Objekt daraus die <xref:System.Web.Caching.Cache> Wenn das Verzeichnis oder Datei erstellt wird.  
+  
+ Nehmen wir beispielsweise an, dass Sie ein Objekt, das Hinzufügen der <xref:System.Web.Caching.Cache> mit einer Abhängigkeit von den folgenden Dateipfad: c:\stocks\xyz.dat. Wenn diese Datei nicht gefunden wurde die <xref:System.Web.Caching.CacheDependency> Objekt wird erstellt, aber später erstellt wird, wird das zwischengespeicherte Objekt bei der Erstellung der Datei xyz.dat entfernt.  
+  
+> [!NOTE]
+>  Nachverfolgen von Änderungen beginnt sofort und basiert nicht direkt auf die `start` Parameter. Verwenden der `start` Parameter übergeben wird, ein Datum und eine Uhrzeit in der Vergangenheit für das Überprüfen der letzten Änderung des Verzeichnisses Datum oder die Datei übergeben werden sollen die `filename` Parameter. Wenn es sich bei der letzten Änderung Datum liegt nach dem Datum und Uhrzeit übergeben der `start` Parameter das zwischengespeicherte Element wird entfernt, von der <xref:System.Web.Caching.Cache>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel verwendet diesen Konstruktor zum Instanziieren einer <xref:System.Web.Caching.CacheDependency> -Objekt und fügt ein Element in der <xref:System.Web.Caching.Cache> mit dieser Abhängigkeit. Die `dt` übergebene Wert den `start` Parametersatz auf <xref:System.DateTime.Now%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Web.Caching.CacheDependency_HasChanged#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching.CacheDependency_HasChanged/CS/t.cs.aspx#1)]
+ [!code-vb[System.Web.Caching.CacheDependency_HasChanged#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching.CacheDependency_HasChanged/VB/t.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheDependency (string[] filenames, DateTime start);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] filenames, valuetype System.DateTime start) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.#ctor(System.String[],System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filenames" Type="System.String[]" />
+        <Parameter Name="start" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="filenames">Ein Array der Pfade (in Dateien oder Verzeichnisse), denen das zwischengespeicherte Objekt abhängig ist. Wenn Änderungen an dieser Ressourcen geändert wird, wird das zwischengespeicherte Objekt ist veraltet und wird aus dem Cache entfernt.</param>
+        <param name="start">Die Zeit für die Datum das letzte Änderung der Objekte im Array überprüft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Caching.CacheDependency" /> Klasse, die einen Array der Pfade (in Dateien oder Verzeichnisse) auf Änderungen überwacht und gibt eine Zeit, die bei Beginn der Überwachung ändern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Verzeichnisse oder die angegebenen Dateien in den `filenames` Parameter wurde nicht gefunden im Dateisystem, wird er als fehlend behandelt. Wenn ein Verzeichnis oder eine Datei nicht vorhanden ist. wenn das Objekt mit der Abhängigkeit wird hinzugefügt der <xref:System.Web.Caching.Cache>, das zwischengespeicherte Objekt daraus die <xref:System.Web.Caching.Cache> Wenn dieses Verzeichnis oder Datei erstellt wird.  
+  
+ Nehmen wir beispielsweise an, dass Sie ein Objekt, das Hinzufügen der <xref:System.Web.Caching.Cache> mit einer Abhängigkeit von den folgenden Dateipfad: c:\stocks\xyz.dat. Wenn diese Datei nicht gefunden wurde die <xref:System.Web.Caching.CacheDependency> Objekt wird erstellt, aber später erstellt wird, wird das zwischengespeicherte Objekt bei der Erstellung der Datei xyz.dat entfernt.  
+  
+> [!NOTE]
+>  Nachverfolgen von Änderungen beginnt sofort und basiert nicht direkt auf die `start` Parameter. Verwenden der `start` übergebene Parameter übergeben wird, ein Datum und eine Uhrzeit in der Vergangenheit für die Sie das Datum das letzte Änderung des Arrays überprüfen möchten die `filenames` Parameter. Wenn es sich bei der letzten Änderung Datum eines beliebigen Objekts im Array liegt nach dem Datum und Uhrzeit übergeben der `start` Parameter das zwischengespeicherte Element wird entfernt, von der <xref:System.Web.Caching.Cache>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Web.Caching.CacheDependency> -Objekt, das zwei XML-Dateien übergibt und ein <xref:System.DateTime.Now%2A?displayProperty=nameWithType> Wert, wenn das Objekt als im Parameterargument enthalten ist ein <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> -Methodenaufruf.  
+  
+ [!code-csharp[CacheDependency Constructor4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CacheDependency Constructor4/CS/depmultifilestimecs.aspx#1)]
+ [!code-vb[CacheDependency Constructor4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CacheDependency Constructor4/VB/depmultifilestimevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheDependency (string[] filenames, string[] cachekeys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] filenames, string[] cachekeys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.#ctor(System.String[],System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filenames" Type="System.String[]" />
+        <Parameter Name="cachekeys" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="filenames">Ein Array der Pfade (in Dateien oder Verzeichnisse), denen das zwischengespeicherte Objekt abhängig ist. Wenn Änderungen an dieser Ressourcen geändert wird, wird das zwischengespeicherte Objekt ist veraltet und wird aus dem Cache entfernt.</param>
+        <param name="cachekeys">Ein Array von Cacheschlüssel, die das neue Objekt überwacht Änderungen. Wenn Änderungen an diesen Cache Schlüssel geändert wird, wird das zwischengespeicherte Objekt, das diesem Abhängigkeitsobjekt zugeordnet ist veraltet und wird aus dem Cache entfernt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Caching.CacheDependency" /> -Klasse, die ein Array der Pfade (in Dateien oder Verzeichnisse), ein Array von Cacheschlüsseln oder sowohl auf Änderungen überwacht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auch wenn die Verzeichnisse oder die angegebenen Dateien in der `filenames` Parameter wurde nicht gefunden im Dateisystem, wird er als fehlend behandelt. Wenn ein Verzeichnis oder eine Datei nicht vorhanden ist. wenn das Objekt mit der Abhängigkeit wird hinzugefügt der <xref:System.Web.Caching.Cache>, das zwischengespeicherte Objekt daraus die <xref:System.Web.Caching.Cache> Wenn dieses Verzeichnis oder Datei erstellt wird.  
+  
+ Nehmen wir beispielsweise an, dass Sie ein Objekt, das Hinzufügen der <xref:System.Web.Caching.Cache> mit einer Abhängigkeit von den folgenden Dateipfad: c:\stocks\xyz.dat. Wenn diese Datei nicht gefunden wurde die <xref:System.Web.Caching.CacheDependency> Objekt wird erstellt, aber später erstellt wird, wird das zwischengespeicherte Objekt bei der Erstellung der Datei xyz.dat entfernt.  
+  
+   
+  
+## Examples  
+ Das folgende Codefragment zeigt, wie zum Einfügen eines Elements in der Anwendungsverzeichnis <xref:System.Web.Caching.Cache> mit einer Abhängigkeit zu einem Schlüssel für ein anderes Element im Cache gespeichert. Da diese Methode den Array-Syntax verwendet, müssen Sie definieren, die Anzahl der Schlüssel auf dem das Element hinzufügen der <xref:System.Web.Caching.Cache> richtet.  
+  
+ [!code-csharp[Key based dependency#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Key based dependency/CS/DependencyKeycs.aspx#1)]
+ [!code-vb[Key based dependency#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Key based dependency/VB/DependencyKeyvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheDependency (string[] filenames, string[] cachekeys, DateTime start);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] filenames, string[] cachekeys, valuetype System.DateTime start) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.#ctor(System.String[],System.String[],System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filenames" Type="System.String[]" />
+        <Parameter Name="cachekeys" Type="System.String[]" />
+        <Parameter Name="start" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="filenames">Ein Array der Pfade (in Dateien oder Verzeichnisse), denen das zwischengespeicherte Objekt abhängig ist. Wenn Änderungen an dieser Ressourcen geändert wird, wird das zwischengespeicherte Objekt ist veraltet und wird aus dem Cache entfernt.</param>
+        <param name="cachekeys">Ein Array von Cacheschlüssel, die das neue Objekt überwacht Änderungen. Wenn Änderungen an diesen Cache Schlüssel geändert wird, wird das zwischengespeicherte Objekt, das diesem Abhängigkeitsobjekt zugeordnet ist veraltet und wird aus dem Cache entfernt.</param>
+        <param name="start">Das Datum und die Uhrzeit für die Datum das letzte Änderung der Objekte überprüft übergeben werden, der <c>Dateinamen</c> und <c>Cachekeys</c> Arrays.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Caching.CacheDependency" /> -Klasse, die ein Array der Pfade (in Dateien oder Verzeichnisse), ein Array von Cacheschlüsseln oder sowohl auf Änderungen überwacht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auch wenn die Verzeichnisse oder die angegebenen Dateien in der `filenames` Parameter wurde nicht gefunden im Dateisystem, wird er als fehlend behandelt. Wenn ein Verzeichnis oder eine Datei nicht vorhanden ist. wenn das Objekt mit der Abhängigkeit wird hinzugefügt der <xref:System.Web.Caching.Cache>, das zwischengespeicherte Objekt daraus die <xref:System.Web.Caching.Cache> Wenn dieses Verzeichnis oder Datei erstellt wird.  
+  
+ Nehmen wir beispielsweise an, dass Sie ein Objekt, das Hinzufügen der <xref:System.Web.Caching.Cache> mit einer Abhängigkeit von den folgenden Dateipfad: c:\stocks\xyz.dat. Wenn diese Datei nicht gefunden wurde die <xref:System.Web.Caching.CacheDependency> Objekt wird erstellt, aber später erstellt wird, wird das zwischengespeicherte Objekt bei der Erstellung der Datei xyz.dat entfernt.  
+  
+> [!NOTE]
+>  Nachverfolgen von Änderungen beginnt sofort und basiert nicht direkt auf die `start` Parameter. Verwenden der `start` übergebene Parameter übergeben wird, ein Datum und eine Uhrzeit in der Vergangenheit in der Datum das letzte Änderung eines Objekts überprüft werden sollen die `filenames` oder `cachekeys` Parameter. Wenn es sich bei der letzten Änderung eines dieser Objekte liegt nach dem Datum und die festgelegte Zeit übergeben der `start` Parameter das zwischengespeicherte Element wird entfernt, von der <xref:System.Web.Caching.Cache>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine `CreateDependency` Methode. Wenn diese Methode aufgerufen wird, erstellt eine <xref:System.DateTime> Objekt und die <xref:System.Web.Caching.Cache.Item%2A?displayProperty=nameWithType> Eigenschaft dient zum Hinzufügen eines Elements in den Cache mit einer `key` Parameter des `key1` und den Wert `Value 1`. Ein Array von Zeichenfolgen, `dependencyKey`, wird dann erstellt, wobei der Wert der `key1` ebenfalls. Dies <xref:System.Web.Caching.CacheDependency> Konstruktor dann instanziiert einen <xref:System.Web.Caching.CacheDependency> -Objekt, das übergibt `dependencyKey` und <xref:System.DateTime> Objekt als Parameterargumente. Die <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> Methode wird aufgerufen als Nächstes mit der <xref:System.Web.Caching.CacheDependency> -Objekt als Parameter. Dadurch wird das Objekt hinzugefügt, den Cache mithilfe der <xref:System.Web.Caching.Cache.Insert%2A> Methode abhängig von der `key1` Schlüssel.  
+  
+ [!code-csharp[CacheDependency Constructor6#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CacheDependency Constructor6/CS/depkeytimecs.aspx#1)]
+ [!code-vb[CacheDependency Constructor6#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CacheDependency Constructor6/VB/depkeytimevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheDependency (string[] filenames, string[] cachekeys, System.Web.Caching.CacheDependency dependency);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] filenames, string[] cachekeys, class System.Web.Caching.CacheDependency dependency) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.#ctor(System.String[],System.String[],System.Web.Caching.CacheDependency)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filenames" Type="System.String[]" />
+        <Parameter Name="cachekeys" Type="System.String[]" />
+        <Parameter Name="dependency" Type="System.Web.Caching.CacheDependency" />
+      </Parameters>
+      <Docs>
+        <param name="filenames">Ein Array der Pfade (in Dateien oder Verzeichnisse), denen das zwischengespeicherte Objekt abhängig ist. Wenn Änderungen an dieser Ressourcen geändert wird, wird das zwischengespeicherte Objekt ist veraltet und wird aus dem Cache entfernt.</param>
+        <param name="cachekeys">Ein Array von Cacheschlüssel, die das neue Objekt überwacht Änderungen. Wenn Änderungen an diesen Cache Schlüssel geändert wird, wird das zwischengespeicherte Objekt, das diesem Abhängigkeitsobjekt zugeordnet ist veraltet und wird aus dem Cache entfernt.</param>
+        <param name="dependency">Eine andere Instanz von der <see cref="T:System.Web.Caching.CacheDependency" /> -Klasse, die dieser Instanz abhängig ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Caching.CacheDependency" /> -Klasse, die ein Array der Pfade (in Dateien oder Verzeichnisse), ein Array von Cacheschlüsseln oder sowohl auf Änderungen überwacht. Es stellt auch selbst abhängig von einer separaten Instanz von der <see cref="T:System.Web.Caching.CacheDependency" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auch wenn die Verzeichnisse oder die angegebenen Dateien in der `filenames` Parameter wurde nicht gefunden im Dateisystem, wird er als fehlend behandelt. Wenn ein Verzeichnis oder eine Datei nicht vorhanden ist. wenn das Objekt mit der Abhängigkeit wird hinzugefügt der <xref:System.Web.Caching.Cache>, das zwischengespeicherte Objekt daraus die <xref:System.Web.Caching.Cache> Wenn dieses Verzeichnis oder Datei erstellt wird.  
+  
+ Nehmen wir beispielsweise an, dass Sie ein Objekt, das Hinzufügen der <xref:System.Web.Caching.Cache> mit einer Abhängigkeit von den folgenden Dateipfad: c:\stocks\xyz.dat. Wenn diese Datei nicht gefunden wurde die <xref:System.Web.Caching.CacheDependency> Objekt wird erstellt, aber später erstellt wird, wird das zwischengespeicherte Objekt bei der Erstellung der Datei xyz.dat entfernt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine `CreateDependency` Methode. Wenn diese Methode aufgerufen wird, verwendet der <xref:System.Web.Caching.Cache.Item%2A?displayProperty=nameWithType> Eigenschaft zum Hinzufügen eines Elements in den Cache mit eine `key` Parameter `key1` und den Wert `Value 1`. Ein Array von Zeichenfolgen, `dependencyKey`, wird dann erstellt, wobei der Wert der `key1` ebenfalls. Die <xref:System.Web.Caching.CacheDependency.%23ctor%2A?displayProperty=nameWithType> Konstruktor dient zum Erstellen einer <xref:System.Web.Caching.CacheDependency> Objekt `dep1`, übergibt `dependencyKey` als Parameterargument. Ein zweites <xref:System.Web.Caching.CacheDependency> Objekt `dep2`, wird mit diesem Konstruktor erstellt `dep1` als drittes Parameterargument übergeben. Diese zweite Abhängigkeit ist abhängig von der ersten. Die <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> Methode mit dem zweiten als Nächstes heißt <xref:System.Web.Caching.CacheDependency> -Objekt als Parameter. Wenn die erste Abhängigkeit in keiner Weise geändert wird, wird das zwischengespeicherte Element für ungültig erklärt.  
+  
+ [!code-csharp[CacheDependency Constructor7#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CacheDependency Constructor7/CS/dependencycs.aspx#1)]
+ [!code-vb[CacheDependency Constructor7#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CacheDependency Constructor7/VB/dependencyvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheDependency (string[] filenames, string[] cachekeys, System.Web.Caching.CacheDependency dependency, DateTime start);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] filenames, string[] cachekeys, class System.Web.Caching.CacheDependency dependency, valuetype System.DateTime start) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.#ctor(System.String[],System.String[],System.Web.Caching.CacheDependency,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filenames" Type="System.String[]" />
+        <Parameter Name="cachekeys" Type="System.String[]" />
+        <Parameter Name="dependency" Type="System.Web.Caching.CacheDependency" />
+        <Parameter Name="start" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="filenames">Ein Array der Pfade (in Dateien oder Verzeichnisse), denen das zwischengespeicherte Objekt abhängig ist. Wenn Änderungen an dieser Ressourcen geändert wird, wird das zwischengespeicherte Objekt ist veraltet und wird aus dem Cache entfernt.</param>
+        <param name="cachekeys">Ein Array von Cacheschlüssel, die das neue Objekt überwacht Änderungen. Wenn Änderungen an diesen Cache Schlüssel geändert wird, wird das zwischengespeicherte Objekt, das diesem Abhängigkeitsobjekt zugeordnet ist veraltet und wird aus dem Cache entfernt.</param>
+        <param name="dependency">Eine andere Instanz von der <see cref="T:System.Web.Caching.CacheDependency" /> -Klasse, die dieser Instanz abhängig ist.</param>
+        <param name="start">Die Zeit für die Datum das letzte Änderung der Objekte in den Arrays überprüft und der <see cref="T:System.Web.Caching.CacheDependency" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Caching.CacheDependency" /> -Klasse, die ein Array der Pfade (in Dateien oder Verzeichnisse), ein Array von Cacheschlüsseln oder sowohl auf Änderungen überwacht. Es stellt auch selbst abhängig von einer anderen Instanz von der <see cref="T:System.Web.Caching.CacheDependency" /> Klasse und eine Uhrzeit, die bei der Überwachung zu ändern Beginn.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auch wenn die Verzeichnisse oder die angegebenen Dateien in der `filenames` Parameter wurde nicht gefunden im Dateisystem, wird er als fehlend behandelt. Wenn ein Verzeichnis oder eine Datei nicht vorhanden ist. wenn das Objekt mit der Abhängigkeit wird hinzugefügt der <xref:System.Web.Caching.Cache>, das zwischengespeicherte Objekt daraus die <xref:System.Web.Caching.Cache> Wenn dieses Verzeichnis oder Datei erstellt wird.  
+  
+ Nehmen wir beispielsweise an, dass Sie ein Objekt, das Hinzufügen der <xref:System.Web.Caching.Cache> mit einer Abhängigkeit von den folgenden Dateipfad: c:\stocks\xyz.dat. Wenn diese Datei nicht gefunden wurde die <xref:System.Web.Caching.CacheDependency> Objekt wird erstellt, aber später erstellt wird, wird das zwischengespeicherte Objekt bei der Erstellung der Datei xyz.dat entfernt.  
+  
+> [!NOTE]
+>  Nachverfolgen von Änderungen beginnt sofort und basiert nicht direkt auf die `start` Parameter. Verwenden der `start` übergebene Parameter übergeben wird, ein Datum und eine Uhrzeit in der Vergangenheit in der Datum das letzte Änderung der eines der Objekte überprüft werden sollen die `filenames`, `cachekeys`, oder `dependency` Parameter. Wenn es sich bei der letzten Änderung für einen Hostobjekte Datum liegt nach dem Datum und Uhrzeit übergeben der `start` Parameter das zwischengespeicherte Element wird entfernt, von der <xref:System.Web.Caching.Cache>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine `CreateDependency` Methode. Wenn diese Methode aufgerufen wird, erstellt er eine <xref:System.DateTime> Objekt und die <xref:System.Web.Caching.Cache.Item%2A?displayProperty=nameWithType> Eigenschaft wird verwendet, um ein Element in den Cache mit einem Schlüssel Parameter hinzufügen `key1` und den Wert `Value 1`. Ein Array von Zeichenfolgen, `dependencyKey`, wird mit dem Wert auf die erste (und einzige) Index, legen Sie auf den Wert des erstellt `key1` ebenfalls. Die <xref:System.Web.Caching.CacheDependency.%23ctor%2A?displayProperty=nameWithType> Konstruktor wird dann zum Erstellen einer <xref:System.Web.Caching.CacheDependency> Objekt `dep1`, übergibt `dependencyKey` als Parameterargument. Ein zweites <xref:System.Web.Caching.CacheDependency> Objekt `dep2`, wird dann mit diesem Konstruktor mit erstellt `dep1` und die <xref:System.DateTime> Objekt als Parameterargumente übergeben. Diese zweite Abhängigkeit ist abhängig von der ersten und Abhängigkeit Überwachung des Webdatenverkehrs beginnt nach 10 Sekunden die `CreateDependency` -Methode aufgerufen wird. Die <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> Methode mit dem zweiten als Nächstes heißt <xref:System.Web.Caching.CacheDependency> -Objekt als Parameter. Wenn die erste Abhängigkeit in keiner Weise geändert wird, wird das zwischengespeicherte Element für ungültig erklärt.  
+  
+ [!code-csharp[CacheDependency Constructor8#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CacheDependency Constructor8/CS/dependencytimecs.aspx#1)]
+ [!code-vb[CacheDependency Constructor8#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CacheDependency Constructor8/VB/dependencytimevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependencyDispose">
+      <MemberSignature Language="C#" Value="protected virtual void DependencyDispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DependencyDispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.DependencyDispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die verwendeten Ressourcen frei der <see cref="T:System.Web.Caching.CacheDependency" /> Klasse und alle Klassen, die davon Herleiten <see cref="T:System.Web.Caching.CacheDependency" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Klasse, die von abgeleitet ist die <xref:System.Web.Caching.CacheDependency> Klasse ist erforderlich, um implementieren Sie diese Methode zum Bereinigen von Ressourcen die abgeleitete Klasse verwendet wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, eine Klasse, die von erben die <xref:System.Web.Caching.CacheDependency> -Klasse ab und überschreibt die <xref:System.Web.Caching.CacheDependency.DependencyDispose%2A> Methode. Wenn diese Methode aufgerufen wird, wird eine benutzerdefinierte boolesche Eigenschaft, die mit dem Namen `Disposed` auf `true`.  
+  
+ [!code-vb[CacheDependency_Whidbey_Example1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CacheDependency_Whidbey_Example1/VB/cachedependencysample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die vom <see cref="T:System.Web.Caching.CacheDependency" />-Objekt verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinishInit">
+      <MemberSignature Language="C#" Value="protected void FinishInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void FinishInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.FinishInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die Initialisierung des der <see cref="T:System.Web.Caching.CacheDependency" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Caching.CacheDependency.FinishInit%2A> Methode schließt die Initialisierung der <xref:System.Web.Caching.CacheDependency> Objekt. Diese Methode wird aufgerufen, indem alle <xref:System.Web.Caching.CacheDependency> Konstruktoren.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.Caching.CacheDependency.FinishInit" /> -Methode muss aufgerufen werden, am Ende des Konstruktors für abgeleitete Klassen für die Initialisierung von der <see cref="T:System.Web.Caching.CacheDependency" /> Objekt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDependencies">
+      <MemberSignature Language="C#" Value="public virtual string[] GetFileDependencies ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetFileDependencies() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.GetFileDependencies" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Dateiabhängigkeiten ab.</summary>
+        <returns>Die Dateiabhängigkeiten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUniqueID">
+      <MemberSignature Language="C#" Value="public virtual string GetUniqueID ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetUniqueID() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.GetUniqueID" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen eindeutigen Bezeichner für eine <see cref="T:System.Web.Caching.CacheDependency" /> Objekt.</summary>
+        <returns>Der eindeutige Bezeichner für die <see cref="T:System.Web.Caching.CacheDependency" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist besonders hilfreich für das Nachverfolgen von mehreren Instanzen von der <xref:System.Web.Caching.CacheDependency> Klasse ein Element oder einer Anwendung zugeordnet.  
+  
+ Der Bezeichner ist eine Kombination aus den Dateinamen (für eine Abhängigkeit Datei) oder den Schlüsselnamen (für eine Abhängigkeit Cacheschlüssel) und eine Zeichenfolge, die diese Methode die Abhängigkeit zuweist. In abgeleitete Klassen die <xref:System.Web.Caching.CacheDependency> -Klasse, überschreiben Sie diese Methode, um anzupassen, wie den eindeutigen Bezeichner generiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Web.Caching.AggregateCacheDependency> Objekt, mit dem Namen `aggDep`, mit zwei <xref:System.Web.Caching.CacheDependency> Objekte im Array. Einmal `aggDep` instanziiert wird, ruft der Code die <xref:System.Web.Caching.CacheDependency.GetUniqueID%2A> Methode, um einen eindeutigen Bezeichner für beide Abhängigkeiten zu generieren, die `aggDep` enthält, und zeigt die IDs auf der Seite an. Ein Element wird dann hinzugefügt, um die <xref:System.Web.Caching.Cache>unter Verwendung der <xref:System.Web.Caching.Cache.Insert%2A> -Methode, mit `aggDep` als Abhängigkeit.  
+  
+ [!code-vb[CachingSamples_AggregateCacheDependency1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CachingSamples_AggregateCacheDependency1/VB/aggregatecachedependencysamplevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChanged">
+      <MemberSignature Language="C#" Value="public bool HasChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.CacheDependency.HasChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.Caching.CacheDependency" /> Objekts hat sich geändert.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.Caching.CacheDependency" /> Objekt geändert hat, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können ein Element an einer ASP.NET-Anwendung hinzufügen <xref:System.Web.Caching.Cache> mit einem <xref:System.Web.Caching.CacheDependency>. Wenn die <xref:System.Web.Caching.CacheDependency> geändert wird, handelt es sich bei das hinzugefügten Element der <xref:System.Web.Caching.Cache> für ungültig erklärt und aus dem Cache entfernt wird. Sie können diese Eigenschaft verwenden, um zu bestimmen, ob eine <xref:System.Web.Caching.CacheDependency> geändert wurde, und erstellen Sie das Element in der <xref:System.Web.Caching.Cache> Wenn, die aufgetreten ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.Caching.CacheDependency.HasChanged%2A> -Eigenschaft können Sie bestimmen, ob eine <xref:System.Web.Caching.CacheDependency> geändert, seit der vorherigen Anforderung für ein Element in der <xref:System.Web.Caching.Cache>. Die `dt` übergebene Wert den `start` Parametersatz auf <xref:System.DateTime.Now%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Web.Caching.CacheDependency_HasChanged#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching.CacheDependency_HasChanged/CS/t.cs.aspx#1)]
+ [!code-vb[System.Web.Caching.CacheDependency_HasChanged#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching.CacheDependency_HasChanged/VB/t.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemRemoved">
+      <MemberSignature Language="C#" Value="public void ItemRemoved ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ItemRemoved() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.ItemRemoved" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn ein überwachter Cacheeintrag entfernt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepDependenciesAlive">
+      <MemberSignature Language="C#" Value="public void KeepDependenciesAlive ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void KeepDependenciesAlive() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.KeepDependenciesAlive" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert den Zeitpunkt des letzten Zugriffs von jedem Cacheelement, das von diesem Element abhängig ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyDependencyChanged">
+      <MemberSignature Language="C#" Value="protected void NotifyDependencyChanged (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void NotifyDependencyChanged(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.NotifyDependencyChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Benachrichtigt die Basis <see cref="T:System.Web.Caching.CacheDependency" /> Objekt, das die Abhängigkeit von einer abgeleiteten dargestellt <see cref="T:System.Web.Caching.CacheDependency" /> Klasse hat sich geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Klasse, die von abgeleitet ist die <xref:System.Web.Caching.CacheDependency> Klasse muss diese Methode implementieren.  
+  
+ Beim Ableiten von der <xref:System.Web.Caching.CacheDependency> -Klasse, verwenden Sie die Basisfunktionalität eine beliebige Methode oder Eigenschaft, die Sie nicht außer Kraft gesetzt haben. Wenn Sie eine Instanz der abgeleiteten Klasse erstellen, stellt es die Dateien, Cacheschlüssel, Datenbanktabellen oder andere beliebige Objekte, denen ein zwischengespeichertes Elements von abhängig machen möchten. Wenn eine Abhängigkeit geändert wird, wird diese Methode die Basisfunktionalität benachrichtigt die <xref:System.Web.Caching.CacheDependency> -Klasse, die das Element geändert wurde, so, dass die Werte der der <xref:System.Web.Caching.CacheDependency.HasChanged%2A> und <xref:System.Web.Caching.CacheDependency.UtcLastModified%2A> Eigenschaften können aktualisiert werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, eine Klasse, die von erben die <xref:System.Web.Caching.CacheDependency> Klasse. Erstellt eine öffentliche Methode `ResetDependency`, verwendet der <xref:System.Web.Caching.CacheDependency.SetUtcLastModified%2A> -Methode, um die Uhrzeit zu ändern, zu dem die Abhängigkeit geändert wurde, und ruft dann die <xref:System.Web.Caching.CacheDependency.NotifyDependencyChanged%2A> Methode.  
+  
+ [!code-vb[CacheDependency_Whidbey_Example1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CacheDependency_Whidbey_Example1/VB/cachedependencysample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCacheDependencyChanged">
+      <MemberSignature Language="C#" Value="public void SetCacheDependencyChanged (Action&lt;object,EventArgs&gt; dependencyChangedAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCacheDependencyChanged(class System.Action`2&lt;object, class System.EventArgs&gt; dependencyChangedAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.SetCacheDependencyChanged(System.Action{System.Object,System.EventArgs})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyChangedAction" Type="System.Action&lt;System.Object,System.EventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyChangedAction">Die Änderungsaktion für die Abhängigkeit.</param>
+        <summary>Fügt eine Aktionsmethode zum Behandeln von Benachrichtigungen der beteiligten Partei über Änderungen an dieser Abhängigkeit hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUtcLastModified">
+      <MemberSignature Language="C#" Value="protected void SetUtcLastModified (DateTime utcLastModified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetUtcLastModified(valuetype System.DateTime utcLastModified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.SetUtcLastModified(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="utcLastModified" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="utcLastModified">Der Zeitpunkt, wann die Abhängigkeit zuletzt geändert wurde.</param>
+        <summary>Markiert die Zeit an, wann eine Abhängigkeit zuletzt geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, eine Klasse, die von erben die <xref:System.Web.Caching.CacheDependency> Klasse. Erstellt eine öffentliche Methode `ResetDependency`, verwendet der <xref:System.Web.Caching.CacheDependency.SetUtcLastModified%2A> -Methode, um die Uhrzeit zu ändern, zu dem die Abhängigkeit geändert wurde, und ruft dann die <xref:System.Web.Caching.CacheDependency.NotifyDependencyChanged%2A> Methode.  
+  
+ [!code-vb[CacheDependency_Whidbey_Example1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CacheDependency_Whidbey_Example1/VB/cachedependencysample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TakeOwnership">
+      <MemberSignature Language="C#" Value="public bool TakeOwnership ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TakeOwnership() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheDependency.TakeOwnership" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht es dem ersten Benutzer, den exklusiven Besitz dieser Abhängigkeit zu deklarieren.</summary>
+        <returns>
+          <see langword="true" />
+          <see langword="true" />Wenn das Element der ersten in Besitz zu nehmen, andernfalls wurde <see langword="false" />. <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode deklariert, dass die Abhängigkeit verwendet wird. Wenn ein anderes Element zuvor diese Methode aufgerufen wird und übernommen, `false` wird zurückgegeben. Ein <xref:System.Web.Caching.CacheDependency> kann nur verwendet werden, indem ein Cacheeintrag. Wenn ein Element in einen Cache mit Abhängigkeiten Cache angegeben hinzugefügt wird, sollte der Cache Besitz solcher Abhängigkeiten, um sicherzustellen, dass sie an einer beliebigen Stelle nicht else wiederverwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UtcLastModified">
+      <MemberSignature Language="C#" Value="public DateTime UtcLastModified { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime UtcLastModified" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.CacheDependency.UtcLastModified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeitpunkt der letzten die Abhängigkeit Änderung.</summary>
+        <value>Die Uhrzeit, wann die Abhängigkeit zuletzt geändert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird in Coordinated Universal Time (UTC) (auch bekannt als Greenwich Mean Time) gemessen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Caching.AggregateCacheDependency> Klasse zum Hinzufügen eines Elements, mit zwei <xref:System.Web.Caching.CacheDependency> -Objekt Abhängigkeiten, die <xref:System.Web.Caching.Cache>. Wenn eine Anforderung für die <xref:System.Web.Caching.Cache> Element erfolgt, der Code überprüft, ob das Element in der <xref:System.Web.Caching.Cache>. Wenn dies der Fall, die <xref:System.Web.Caching.CacheDependency.UtcLastModified%2A> Eigenschaft in eine Zeichenfolge konvertiert und auf der Seite angezeigt wird. Wenn es nicht der Fall ist, das Element und seine zwei Abhängigkeiten erstellt und hinzugefügt die <xref:System.Web.Caching.Cache>.  
+  
+ [!code-vb[CachingSamples_AggregateCacheDependency1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CachingSamples_AggregateCacheDependency1/VB/aggregatecachedependencysamplevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

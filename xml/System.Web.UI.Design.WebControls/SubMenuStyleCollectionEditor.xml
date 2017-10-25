@@ -1,0 +1,174 @@
+<Type Name="SubMenuStyleCollectionEditor" FullName="System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor">
+  <TypeSignature Language="C#" Value="public class SubMenuStyleCollectionEditor : System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SubMenuStyleCollectionEditor extends System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.CollectionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Komponenten-Editor für den <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> Objekt in der zugeordneten <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor> Klasse bietet eine Benutzeroberfläche zum Bearbeiten der <xref:System.Web.UI.WebControls.SubMenuStyle> Elemente der <xref:System.Web.UI.WebControls.SubMenuStyleCollection> Objekt in der zugeordneten <xref:System.Web.UI.WebControls.Menu> -Steuerelements zur Entwurfszeit unter der Kontrolle des der <xref:System.Web.UI.Design.WebControls.MenuDesigner> Objekt.  
+  
+ Besteht eine <xref:System.Web.UI.WebControls.SubMenuStyleCollection> zugeordnet der <xref:System.Web.UI.WebControls.Menu.LevelSubMenuStyles%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Menu> Steuerelement. Die <xref:System.Web.UI.WebControls.SubMenuStyleCollection> Objekt wird verwendet, um Formatvorlagen auf statische Untermenüelemente angewendet, die von der Ebene (Schachtelungstiefe) in der Menüstruktur abhängen.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor> aufgerufen wird, z. B. durch Auswählen der Schaltfläche mit den Auslassungspunkten (**... **) auf die **LevelSubMenuStyles** Zeile in der **Eigenschaften** Raster mit den visuellen Designer.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.CanSelectMultipleInstances%2A> immer Methodenrückgabe `false` , um anzugeben, dass nur ein Objekt zu einem Zeitpunkt im Editor ausgewählt werden kann. Die <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.CreateCollectionForm%2A> Methode erstellt ein neues Formular zum Anzeigen und Bearbeiten der <xref:System.Web.UI.WebControls.SubMenuStyleCollection>.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.CreateInstance%2A> Methode erstellt eine neue Instanz des angegebenen Elements Sammlungstyps. Die <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.CreateNewItemTypes%2A> Methode gibt ein Array von Typen, die der Editor erstellen kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.EditorAttribute> Attribut zum Zuordnen der <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor> und <xref:System.Drawing.Design.UITypeEditor> (die Auflistung Editor Basisklasse) mit einer Eigenschaft in ein benutzerdefiniertes Steuerelement, das von abgeleiteten Klassen der <xref:System.Web.UI.WebControls.WebControl> Klasse bereit, die ermittelt und definiert eine <xref:System.Web.UI.WebControls.SubMenuStyleCollection> Auflistung.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.MenuEditors#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.MenuEditors/CS/MenuEditors.cs#5)]
+ [!code-vb[System.Web.UI.Design.WebControls.MenuEditors#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.MenuEditors/VB/MenuEditors.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SubMenuStyleCollectionEditor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> der Auflistung zu bearbeiten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor> Klasse, wenn Sie z. B. die Schaltfläche auswählen, (**... **) auf die **LevelSubMenuStyles** Zeile in der **Eigenschaften** Raster mit den visuellen Designer beim Entwerfen einer <xref:System.Web.UI.WebControls.Menu> Steuerelement oder ein Steuerelement, das von der abgeleitetist<xref:System.Web.UI.WebControls.Menu>Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSelectMultipleInstances">
+      <MemberSignature Language="C#" Value="protected override bool CanSelectMultipleInstances ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanSelectMultipleInstances() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.CanSelectMultipleInstances" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob mehrere <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> Elemente können im Editor gleichzeitig ausgewählt werden.</summary>
+        <returns>Immer <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.CanSelectMultipleInstances%2A> Methode gibt immer `false`daher nur ein <xref:System.Web.UI.WebControls.SubMenuStyle> -Objekt ausgewählt werden kann, zu einem Zeitpunkt in der <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCollectionForm">
+      <MemberSignature Language="C#" Value="protected override System.ComponentModel.Design.CollectionEditor.CollectionForm CreateCollectionForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ComponentModel.Design.CollectionEditor/CollectionForm CreateCollectionForm() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.CreateCollectionForm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CollectionEditor+CollectionForm</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Formular zum Anzeigen und bearbeiten die aktuelle <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> Auflistung.</summary>
+        <returns>Eine Instanz von der <see cref="T:System.ComponentModel.Design.CollectionEditor.CollectionForm" /> verwenden als die <see cref="T:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.CreateCollectionForm%2A> Methodenaufrufe der <xref:System.ComponentModel.Design.CollectionEditor.CreateCollectionForm%2A> Methode zum Erstellen der Basis der <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor> bilden, und klicken Sie dann eine Beschriftung für das Formular formatiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected override object CreateInstance (Type itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object CreateInstance(class System.Type itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.CreateInstance(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Die <see cref="T:System.Type" /> des zu erstellenden Elements.</param>
+        <summary>Erstellt eine neue Instanz des angegebenen Elements Sammlungstyps.</summary>
+        <returns>Eine neue Instanz des angegebenen Typs, die ausgeführt werden <see cref="T:System.Web.UI.WebControls.SubMenuStyle" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.CreateInstance%2A> Methode wird verwendet, um die Erstellung neuer <xref:System.Web.UI.WebControls.SubMenuStyle> Objekte. Die <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.CreateInstance%2A> Aufrufe der <xref:System.Activator.CreateInstance%2A> Methode, um die Aktivierungsmethoden für die Unterstützung für spät gebundene zugreifen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewItemTypes">
+      <MemberSignature Language="C#" Value="protected override Type[] CreateNewItemTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type[] CreateNewItemTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor.CreateNewItemTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Datentypen, die diese auflistungs-Editor erstellen können.</summary>
+        <returns>Ein Typarray der Datentypen der <see cref="T:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor" /> erstellen können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.SubMenuStyleCollectionEditor> objekterstellung können <xref:System.Web.UI.WebControls.SubMenuStyle> Objekttypen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.Design.WebControls.WebParts">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI.Design.WebControls.WebParts" /> -Namespace enthält Klassen, die zur Entwurfszeit Unterstützung für Steuerelemente, die von abgeleitete Klassen in bieten die <see cref="N:System.Web.UI.WebControls.WebParts" /> Namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

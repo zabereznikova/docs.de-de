@@ -1,0 +1,44 @@
+<Type Name="Catch" FullName="System.Activities.Statements.Catch">
+  <TypeSignature Language="C#" Value="public abstract class Catch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Catch extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.Catch" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Aktionen, die ausgeführt werden, nachdem eine Ausnahme, in der entsprechenden ausgelöst wird <see langword="Try" /> -Block eine <see cref="T:System.Activities.Statements.TryCatchFinally" /> Aktivität.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einmal im Designer platziert <xref:System.Activities.Statements.Catch> Aktivitäten können nicht in den Designer neu angeordnet werden.  Die Auflistung der Reorganisation <xref:System.Activities.Statements.Catch> Aktivitäten, löschen und erneut in der richtigen Reihenfolge hinzufügen, oder verwenden Sie die Verwendung von XAML-(Code)-Ansicht für den Workflow.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExceptionType">
+      <MemberSignature Language="C#" Value="public abstract Type ExceptionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ExceptionType" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.Catch.ExceptionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Typ von Ausnahme, die der <see cref="T:System.Activities.Statements.Catch" />-Block behandelt.</summary>
+        <value>Der Ausnahmetyp.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

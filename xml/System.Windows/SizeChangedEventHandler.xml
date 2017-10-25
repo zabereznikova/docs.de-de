@@ -1,0 +1,32 @@
+<Type Name="SizeChangedEventHandler" FullName="System.Windows.SizeChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void SizeChangedEventHandler(object sender, SizeChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SizeChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.SizeChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.SizeChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, an das der Ereignishandler angefügt ist.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Windows.FrameworkElement.SizeChanged" /> Routingereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat muss verwendet werden, durch den Handler für das <xref:System.Windows.FrameworkElement.SizeChanged> Ereignis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

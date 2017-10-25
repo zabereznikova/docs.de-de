@@ -1,0 +1,274 @@
+<Type Name="BooleanSwitch" FullName="System.Diagnostics.BooleanSwitch">
+  <TypeSignature Language="C#" Value="public class BooleanSwitch : System.Diagnostics.Switch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BooleanSwitch extends System.Diagnostics.Switch" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.BooleanSwitch" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.Switch</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.SwitchLevel(typeof(System.Boolean))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet einen EIN/AUS-Schalter, der die Debugging- und Ablaufverfolgungsausgabe steuert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können einen booleschen Ablaufverfolgungsschalter verwenden, aktivieren oder Deaktivieren von Nachrichten basierend auf ihrer Wichtigkeit. Verwenden der <xref:System.Diagnostics.BooleanSwitch.Enabled%2A> Eigenschaft, um den aktuellen Wert des Schalters abzurufen.  
+  
+ Sie aktivieren oder Deaktivieren einer <xref:System.Diagnostics.BooleanSwitch> über die Anwendungskonfigurationsdatei und dann mit den konfigurierten <xref:System.Diagnostics.BooleanSwitch> Wert in der Anwendung. Alternativ können Sie erstellen eine <xref:System.Diagnostics.BooleanSwitch> in Ihren Code und die Menge der <xref:System.Diagnostics.BooleanSwitch.Enabled%2A> Eigenschaft direkt in einem bestimmten Abschnitt des Codes zu instrumentieren.  
+  
+ So konfigurieren Sie eine <xref:System.Diagnostics.BooleanSwitch>, bearbeiten Sie die Konfigurationsdatei, die den Namen der Anwendung entspricht. In dieser Datei können Sie hinzufügen oder Entfernen von einem Switch, legen Sie den Wert eines Schalters oder alle löschen, die zuvor von der Anwendung festgelegt werden. Die Konfigurationsdatei sollte wie im folgenden Beispiel formatiert werden.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <switches>  
+      <add name="mySwitch" value="1"/>  
+    </switches>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ Dieser Beispielkonfigurationsabschnitt definiert eine <xref:System.Diagnostics.BooleanSwitch> mit der <xref:System.Diagnostics.Switch.DisplayName%2A> -Eigenschaftensatz auf `mySwitch` und <xref:System.Diagnostics.BooleanSwitch.Enabled%2A> Wert festgelegt wird, um `true`. Innerhalb der Anwendung können Sie den konfigurierten Schalterwert durch das Erstellen einer <xref:System.Diagnostics.BooleanSwitch> mit dem gleichen Namen, wie im folgenden Codebeispiel gezeigt.  
+  
+ [!code-cpp[Classic BooleanSwitch.BooleanSwitch Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BooleanSwitch.BooleanSwitch Example/CPP/remarks.cpp#2)]
+ [!code-csharp[Classic BooleanSwitch.BooleanSwitch Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BooleanSwitch.BooleanSwitch Example/CS/remarks.cs#2)]
+ [!code-vb[Classic BooleanSwitch.BooleanSwitch Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BooleanSwitch.BooleanSwitch Example/VB/remarks.vb#2)]  
+  
+ Wird standardmäßig die <xref:System.Diagnostics.BooleanSwitch.Enabled%2A> Eigenschaft festgelegt ist, mit dem Wert in der Konfigurationsdatei angegeben. Konfigurieren Sie den Switch mit dem Wert 0 Festlegen der <xref:System.Diagnostics.BooleanSwitch.Enabled%2A> Eigenschaft, um `false`; konfigurieren Sie den Switch mit einem Wert ungleich NULL Festlegen der <xref:System.Diagnostics.BooleanSwitch.Enabled%2A> Eigenschaft `true`. Wenn die <xref:System.Diagnostics.BooleanSwitch> Konstruktor ersten Switcheinstellungen kann nicht gefunden werden, in der Konfigurationsdatei der <xref:System.Diagnostics.BooleanSwitch.Enabled%2A> dem neuen Switch-Eigenschaft auf festgelegt ist `false` standardmäßig.  
+  
+ Ablaufverfolgung oder Debuggen, um einen Schalter verwenden, müssen Sie aktivieren. Die folgende Syntax ist compilerspezifisch. Wenn Sie den Compiler als c# oder Visual Basic verwenden, finden Sie in der Dokumentation für den Compiler.  
+  
+-   Fügen Sie zum Aktivieren des Debuggens in C# geschrieben, die `/d:DEBUG` Flag an die Befehlszeile des Compilers beim Kompilieren des Codes, oder Sie fügen `#define DEBUG` an den Anfang der Datei. Fügen Sie in Visual Basic die `/d:DEBUG=True` -Kennzeichen an die Befehlszeile des Compilers.  
+  
+-   Fügen Sie zum Aktivieren der Ablaufverfolgung in c# die `/d:TRACE` Flag an die Befehlszeile des Compilers beim Kompilieren des Codes, oder fügen `#define TRACE` an den Anfang der Datei. Fügen Sie in Visual Basic die `/d:TRACE=True` -Kennzeichen an die Befehlszeile des Compilers.  
+  
+> [!NOTE]
+>  Diese debug und Trace Compilerschalter sind nicht erforderlich, wenn mit der <xref:System.Diagnostics.BooleanSwitch> Klasse isoliert. Sie müssen nur in Verbindung mit <xref:System.Diagnostics.Trace> oder <xref:System.Diagnostics.Debug> Methoden, die bedingt kompiliert werden.  
+  
+ Weitere Informationen zum Instrumentieren der Anwendung finden Sie unter <xref:System.Diagnostics.Debug> und <xref:System.Diagnostics.Trace>. Weitere Informationen zum Konfigurieren und Verwenden von Ablaufverfolgungsschaltern finden Sie unter [Ablaufverfolgungsschalter](~/docs/framework/debug-trace-profile/trace-switches.md).  
+  
+> [!NOTE]
+>  Um die Leistung zu verbessern, können Sie machen <xref:System.Diagnostics.BooleanSwitch> Elemente `static` in Ihrer Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.BooleanSwitch> und verwendet Sie den Switch, um zu ermitteln, ob eine Fehlermeldung ausgegeben. Erstellen Sie den Switch auf Klassenebene. Die `Main` Methode übergibt, um seinen Standort `MyMethod`, die folgende Fehlermeldung ausgegeben und, in dem der Fehler aufgetreten ist.  
+  
+ [!code-cpp[Classic BooleanSwitch.BooleanSwitch Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BooleanSwitch.BooleanSwitch Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BooleanSwitch.BooleanSwitch Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BooleanSwitch.BooleanSwitch Example/CS/source.cs#1)]
+ [!code-vb[Classic BooleanSwitch.BooleanSwitch Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BooleanSwitch.BooleanSwitch Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BooleanSwitch (string displayName, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.BooleanSwitch.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Der Name, der auf einer Benutzeroberfläche angezeigt werden soll.</param>
+        <param name="description">Die Beschreibung des Schalters.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.BooleanSwitch" />-Klasse mit dem angegebenen Anzeigenamen und der angegebenen Beschreibung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer <xref:System.Diagnostics.BooleanSwitch>die `displayName` Parameter wird verwendet, um die Switcheinstellungen für die anfängliche gefunden werden. Wenn der Konstruktor ursprüngliche Einstellungen nicht finden kann die <xref:System.Diagnostics.BooleanSwitch.Enabled%2A> -Eigenschaftensatz auf `false` (deaktiviert).  
+  
+ Das Maß an festlegen Ihrer <xref:System.Diagnostics.BooleanSwitch>, bearbeiten Sie die Konfigurationsdatei auf den Namen der Anwendung entspricht. In dieser Datei können Sie einen Switch hinzufügen, und legen Sie dessen Wert, einen Schalter entfernen oder deaktivieren Sie alle Switches, die zuvor von der Anwendung festgelegt. Die Konfigurationsdatei sollte wie im folgenden Beispiel formatiert werden:  
+  
+```  
+<configuration>  
+    <system.diagnostics>  
+       <switches>  
+          <add name="mySwitch" value="10" />  
+          <add name="myNewSwitch" value="20" />  
+          <remove name="mySwitch" />  
+          <clear/>  
+       </switches>  
+    </system.diagnostics>  
+ </configuration>  
+```  
+  
+> [!NOTE]
+>  Die Switches, die Sie erstellt werden sollten `static`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.BooleanSwitch> und verwendet Sie den Switch, um zu ermitteln, ob eine Fehlermeldung ausgegeben. Der Schalter wird auf Klassenebene erstellt. Die `Main` Methode übergibt, um seinen Standort `MyMethod`, die folgende Fehlermeldung ausgegeben und, in dem der Fehler aufgetreten ist.  
+  
+ [!code-cpp[Classic BooleanSwitch.BooleanSwitch Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BooleanSwitch.BooleanSwitch Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BooleanSwitch.BooleanSwitch Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BooleanSwitch.BooleanSwitch Example/CS/source.cs#1)]
+ [!code-vb[Classic BooleanSwitch.BooleanSwitch Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BooleanSwitch.BooleanSwitch Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BooleanSwitch (string displayName, string description, string defaultSwitchValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string description, string defaultSwitchValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.BooleanSwitch.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="defaultSwitchValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Der Name, der auf der Benutzeroberfläche angezeigt werden soll.</param>
+        <param name="description">Die Beschreibung des Schalters.</param>
+        <param name="defaultSwitchValue">Der Standardwert des Schalters.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.BooleanSwitch" />-Klasse mit dem angegebenen Anzeigenamen, der angegebenen Beschreibung und dem angegebenen Standardschalterwert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `displayName` -Parameter zum Festlegen des Werts der <xref:System.Diagnostics.Switch.DisplayName%2A> -Eigenschaft, und die `description` Parameter wird verwendet, um das Festlegen des Werts der <xref:System.Diagnostics.Switch.Description%2A> Eigenschaft. Die `defaultSwitchValue` Parameter als Feld gespeichert und zur Initialisierung der <xref:System.Diagnostics.Switch.Value%2A> Eigenschaft beim ersten Verweis. Weitere Informationen zur Verwendung des Konstruktors finden Sie unter der <xref:System.Diagnostics.BooleanSwitch.%23ctor%28System.String%2CSystem.String%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.BooleanSwitch.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Schalter aktiviert oder deaktiviert ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Schalter aktiviert ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist standardmäßig auf festgelegt `false` (deaktiviert). Um die Schalter zu aktivieren, weisen Sie dieses Feld den Wert des `true`. Um den Schalter deaktivieren, weisen Sie den Wert `false`.  Der Wert dieser Eigenschaft wird bestimmt durch den Wert der Eigenschaft Basisklasse <xref:System.Diagnostics.Switch.SwitchSetting%2A>.  
+  
+> [!NOTE]
+>  Diese Methode verwendet die <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> Kennzeichen, um zu verhindern, dass vor nicht vertrauenswürdigem Code aufgerufen werden, nur der unmittelbaren Aufrufer muss über, <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> Berechtigung. Wenn Code aus teilweise vertrauenswürdigem Code aufgerufen werden kann, übergeben Sie den Benutzereingaben um <xref:System.Runtime.InteropServices.Marshal> -Klassenmethoden ohne Überprüfung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Diagnostics.BooleanSwitch> und verwendet Sie den Switch, um zu ermitteln, ob eine Fehlermeldung ausgegeben. Der Schalter wird auf Klassenebene erstellt. Die `Main` Methode übergibt, um seinen Standort `MyMethod`, gedruckt wird eine Fehlermeldung und den Speicherort, in dem der Fehler aufgetreten ist.  
+  
+ [!code-cpp[Classic BooleanSwitch.Enabled Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BooleanSwitch.Enabled Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BooleanSwitch.Enabled Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BooleanSwitch.Enabled Example/CS/source.cs#1)]
+ [!code-vb[Classic BooleanSwitch.Enabled Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BooleanSwitch.Enabled Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die richtige Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. "Demand" Wert <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValueChanged">
+      <MemberSignature Language="C#" Value="protected override void OnValueChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValueChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.BooleanSwitch.OnValueChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob der neue Wert der <see cref="P:System.Diagnostics.Switch.Value" />-Eigenschaft als boolescher Wert analysiert werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.BooleanSwitch.OnValueChanged%2A> Methode bestimmt, ob der neue Wert eine gültige Zeichenfolgendarstellung eines booleschen Werts ("false" oder "true") ist. Wenn also die-Methode legt die <xref:System.Diagnostics.Switch.SwitchSetting%2A> Eigenschaft auf 0 oder 1.  Andernfalls wird die Basismethode aufgerufen, die den Zeichenfolgenwert auf einen ganzzahligen Wert an, die dann verwendet wird, festgelegt konvertiert die <xref:System.Diagnostics.Switch.SwitchSetting%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

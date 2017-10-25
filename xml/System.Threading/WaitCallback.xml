@@ -1,0 +1,77 @@
+<Type Name="WaitCallback" FullName="System.Threading.WaitCallback">
+  <TypeSignature Language="C#" Value="public delegate void WaitCallback(object state);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WaitCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.WaitCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="state" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="state">Ein Objekt, das die von der Rückrufmethode zu verwendenden Informationen enthält.</param>
+    <summary>Stellt die Rückrufmethode dar, die von einem Thread des Threadpools ausgeführt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.WaitCallback>Stellt eine Rückrufmethode, die Sie ausführen möchten eine <xref:System.Threading.ThreadPool> Thread. Erstellen Sie den Delegaten übergeben die Rückrufmethode, die die <xref:System.Threading.WaitCallback> Konstruktor. Die Methode muss die hier gezeigte Signatur verfügen.  
+  
+ Task für die Ausführung durch Übergeben der Warteschlange die <xref:System.Threading.WaitCallback> delegieren an <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>. Die Rückrufmethode wird ausgeführt, wenn ein Thread des Threadpools verfügbar wird.  
+  
+> [!NOTE]
+>  Visual Basic-Benutzer können weglassen der <xref:System.Threading.WaitCallback> Konstruktor, und verwenden Sie einfach die `AddressOf` Operator bei der Übergabe an der Rückrufmethode <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Visual Basic ruft automatisch den richtigen Delegatkonstruktor.  
+  
+ Wenn Sie die Informationen an die Rückrufmethode übergeben möchten, erstellen Sie ein Objekt, das die erforderlichen Informationen enthält, und übergeben sie an <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> Wenn Sie Task für die Ausführung der Warteschlange. Jedes Mal die Rückrufmethode wird ausgeführt, die `state` Parameter enthält dieses Objekt.  
+  
+ Weitere Informationen zur Verwendung von Rückrufen zum Synchronisieren von Threads im Threadpool finden Sie unter [der verwaltete Threadpool](~/docs/standard/threading/the-managed-thread-pool.md).  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Beispiele. Im erste Beispiel wird veranschaulicht, wie Sie eine einfache Aufgabe für die Ausführung im Threadpool in die Warteschlange können.  
+  
+ Im zweite Beispiel wird veranschaulicht, wie Sie eine Aufgabe in die Warteschlange und Informationen an ihn übergeben.  
+  
+ **Beispiel 1**  
+  
+ Dieses Beispiel zeigt, wie die <xref:System.Threading.WaitCallback> Delegat, der eine Aufgabe für die Ausführung im Threadpool in die Warteschlange. Das Codebeispiel verwendet die <xref:System.Threading.ThreadPool.QueueUserWorkItem%28System.Threading.WaitCallback%29?displayProperty=nameWithType> -methodenüberladung, um eine Aufgabe in die Warteschlange der dargestellt wird, indem Sie eine <xref:System.Threading.WaitCallback> , umschließt der `ThreadProc` Methode ausführen, wenn ein Thread verfügbar ist. Es sind keine Taskinformationen wird mit dieser Überladung bereitgestellt. Aus diesem Grund die Informationen, die zur Verfügung steht die `ThreadProc` Methode ist beschränkt auf das Objekt, das die Methode gehört.  
+  
+ [!code-cpp[System.Threading.ThreadPool QueueUserWorkItem0#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem0/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool QueueUserWorkItem0#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem0/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool QueueUserWorkItem0#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem0/VB/source.vb#1)]  
+  
+ **Beispiel 2**  
+  
+ Dieses Beispiel zeigt, wie ein Objekt zu erstellen, die Informationen zum Vorgang enthält. Es wird veranschaulicht, wie dieses Objekt an eine Aufgabe, die für die Ausführung in die Warteschlange eingereiht wird durch den Threadpool übergeben wird.  
+  
+ [!code-cpp[System.Threading.ThreadPool QueueUserWorkItem1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem1/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool QueueUserWorkItem1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem1/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool QueueUserWorkItem1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem1/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

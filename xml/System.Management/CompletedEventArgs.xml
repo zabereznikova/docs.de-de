@@ -1,0 +1,89 @@
+<Type Name="CompletedEventArgs" FullName="System.Management.CompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class CompletedEventArgs : System.Management.ManagementEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompletedEventArgs extends System.Management.ManagementEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Management.CompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.ManagementEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Ereignisdaten für die <see cref="E:System.Management.ManagementOperationObserver.Completed" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel ruft eine Methode asynchron aus. Die **Win32_Process.Create** Methode wird aufgerufen, um einen neuen Prozess für Calc.exe zu erstellen.  
+  
+ [!code-csharp[wminet_CompletedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_CompletedEventArgs/cs/CompletedEventArgs.cs#1)]
+ [!code-vb[wminet_CompletedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_CompletedEventArgs/vb/CompletedEventArgs.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementStatus Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.ManagementStatus Status" />
+      <MemberSignature Language="DocId" Value="P:System.Management.CompletedEventArgs.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abschlussstatus des Vorgangs ab.</summary>
+        <value>Gibt eine <see cref="T:System.Management.ManagementStatus" /> -Enumerationswert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Ein <xref:System.Management.ManagementStatus> Wert, der angibt, des Status des Vorgangs.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusObject">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementBaseObject StatusObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ManagementBaseObject StatusObject" />
+      <MemberSignature Language="DocId" Value="P:System.Management.CompletedEventArgs.StatusObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementBaseObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft zusätzliche Statusinformationen in einem WMI-Objekt ab. Dies kann NULL sein.</summary>
+        <value>Gibt eine <see cref="T:System.Management.ManagementBaseObject" /> , die Statusinformationen über den Abschluss eines Vorgangs enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `null`Wenn ein Fehler nicht aufgetreten ist. Andernfalls möglicherweise ungleich Null, wenn der Anbieter erweiterte Fehlerinformationen unterstützt.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

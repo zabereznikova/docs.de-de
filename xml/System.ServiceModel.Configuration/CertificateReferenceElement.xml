@@ -1,0 +1,185 @@
+<Type Name="CertificateReferenceElement" FullName="System.ServiceModel.Configuration.CertificateReferenceElement">
+  <TypeSignature Language="C#" Value="public sealed class CertificateReferenceElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CertificateReferenceElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.CertificateReferenceElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Konfigurationseinstellungen für die Überprüfung eines X.509-Zertifikats dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CertificateReferenceElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.CertificateReferenceElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.CertificateReferenceElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindValue">
+      <MemberSignature Language="C#" Value="public string FindValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FindValue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.CertificateReferenceElement.FindValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("findValue", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(InvalidCharacters=null, MaxLength=2147483647, MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab oder legt eine Zeichenfolge fest, die den Wert angibt, nach dem im X.509-Zertifikatspeicher gesucht werden soll.</summary>
+        <value>Der Wert, nach dem im X.509-Zertifikatspeicher gesucht werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der in dieser Eigenschaft enthaltene Typ muss den Anforderungen des angegebenen <xref:System.ServiceModel.Configuration.CertificateReferenceElement.X509FindType%2A>-Werts entsprechen. Der Standardwert ist eine leere Zeichenfolge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsChainIncluded">
+      <MemberSignature Language="C#" Value="public bool IsChainIncluded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsChainIncluded" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.CertificateReferenceElement.IsChainIncluded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("isChainIncluded", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab oder legt einen booleschen Wert fest, der angibt, ob die Validierung mithilfe einer Zertifikatskette durchgeführt wird.</summary>
+        <value>
+          <see langword="true" />, wenn eine Zertifikatskette bei der Validierung verwendet wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.CertificateReferenceElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreLocation">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.StoreLocation StoreLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.StoreLocation StoreLocation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.CertificateReferenceElement.StoreLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("storeLocation", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der den Speicherort des Zertifikatspeichers angibt, den der Client zum Überprüfen des Serverzertifikats verwenden kann.</summary>
+        <value><see cref="T:System.Security.Cryptography.X509Certificates.StoreLocation" />, der den Speicherort des Zertifikatspeichers angibt, den der Client zum Überprüfen des Serverzertifikats verwenden kann. Der Standardwert ist <see cref="F:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreName">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.StoreName StoreName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.StoreName StoreName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.CertificateReferenceElement.StoreName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("storeName", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des X.509-Zertifikatsspeichers ab oder legt den Namen fest, der geöffnet werden soll.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.StoreName" />, der den Namen des X.509-Zertifikatspeichers enthält, der geöffnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X509FindType">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509FindType X509FindType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.X509FindType X509FindType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.CertificateReferenceElement.X509FindType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("x509FindType", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509FindType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der X.509-Suche ab oder legt den Typ fest, der ausgeführt werden soll.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509FindType" />, der den Typ der X.509-Suche enthält, der ausgeführt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der in <xref:System.ServiceModel.Configuration.CertificateReferenceElement.FindValue%2A> enthaltene Typ muss den Anforderungen dieser Eigenschaft entsprechen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

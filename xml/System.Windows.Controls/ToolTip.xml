@@ -1,0 +1,912 @@
+<Type Name="ToolTip" FullName="System.Windows.Controls.ToolTip">
+  <TypeSignature Language="C#" Value="public class ToolTip : System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ToolTip extends System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ToolTip" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Opened")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.ToolTip)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement dar, von dem ein Popupfenster mit Informationen zu einem Element in der Oberfläche erstellt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.ToolTip> ist eine <xref:System.Windows.Controls.ContentControl>, was bedeutet, dass es ein einzelnes Objekt eines beliebigen Typs (z. B. eine Zeichenfolge, ein Bild oder ein Bereich) enthalten kann. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Controls.ContentControl>-Klasse.  
+  
+ Sie verwenden eine <xref:System.Windows.Controls.ToolTip> Steuerelement, um dem Benutzer Informationen bereitzustellen. Können z. B. eine <xref:System.Windows.Controls.ToolTip> zum Bereitstellen des Namens des eine <xref:System.Windows.Controls.Button> oder eine <xref:System.Windows.Controls.ToolBar> in einem <xref:System.Windows.Controls.ToolBarTray>. Den Inhalt einer <xref:System.Windows.Controls.ToolTip> Steuerelement kann variieren aus einer einfachen Text-Zeichenfolge auf komplexere Inhalte wie z. B. eine <xref:System.Windows.Controls.StackPanel> mit eingebettetem Text und Bildern. Der Inhalt von einem <xref:System.Windows.Controls.ToolTip> den Fokus nicht erhalten.  
+  
+ Ein <xref:System.Windows.Controls.ToolTip> Steuerelement kann nicht über ein übergeordnetes Element.  Angenommen, Sie können nicht festgelegt die <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft eine <xref:System.Windows.Controls.Button> auf eine <xref:System.Windows.Controls.ToolTip> stattdessen weisen eine <xref:System.Windows.Controls.ToolTip> auf die <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType> und <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ Können Sie eine <xref:System.Windows.Controls.ToolTip> für mehrere Elemente durch die Definition einer <xref:System.Windows.Controls.ToolTip> in einem <xref:System.Windows.ResourceDictionary>.  
+  
+ Die Eigenschaften der <xref:System.Windows.Controls.ToolTip> Klasse verwendet, um die Position und das Verhalten der QuickInfo zu definieren. Viele dieser Eigenschaften sind auch definiert, der <xref:System.Windows.Controls.ToolTipService> Klasse. Wenn der Wert eines dieser Eigenschaften, wird sowohl angegeben wird die <xref:System.Windows.Controls.ToolTip> Eigenschaft und die <xref:System.Windows.Controls.ToolTipService> angefügten Eigenschaft, der den Wert des der <xref:System.Windows.Controls.ToolTipService> Eigenschaft wird verwendet. Darüber hinaus die <xref:System.Windows.Controls.ToolTipService> Klasse enthält Eigenschaften, um Zeitsteuerungsverhalten festgelegt. Diese angefügten Eigenschaften sind nicht enthalten, der <xref:System.Windows.Controls.ToolTip> -Klasse jedoch vom Steuerelement verwendet werden können.  
+  
+## <a name="customizing-the-tooltip-control"></a>Anpassen des QuickInfo-Steuerelements  
+ Zum Anwenden der gleichen eigenschafteneinstellungen mit mehreren <xref:System.Windows.Controls.ToolTip> -Steuerelemente verwenden die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, finden Sie unter [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Um anzuzeigen, die Teile und Zustände, die spezifisch für die <xref:System.Windows.Controls.ToolTip>, finden Sie unter [QuickInfo-Stile und Vorlagen](~/docs/framework/wpf/controls/tooltip-styles-and-templates.md).  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Festlegen einer visuellen Eigenschaft haben nur Auswirkungen, wenn diese Eigenschaft sowohl in vorhanden ist <xref:System.Windows.Controls.ToolTip> Steuerelement die Standardvorlage und festgelegt ist, mit ein. Sie finden eine Liste der Eigenschaften visueller Elemente im Abschnitt "Ändern der visuellen Struktur eines Steuerelements" [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ In den folgenden Beispielen wird gezeigt, wie ein QuickInfo-Steuerelement für definieren eine <xref:System.Windows.Controls.TextBox> Element.  
+  
+ Im folgende Beispiel wird gezeigt, wie eine QuickInfo zu definieren, indem Sie die Zuweisung von Text zu den <xref:System.Windows.FrameworkElement.ToolTip%2A> Eigenschaft.  
+  
+ [!code-xaml[ToolTipSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#1)]  
+  
+ Im folgende Beispiel wird gezeigt, wie eine QuickInfo durch Zuweisen definiert eine <xref:System.Windows.Controls.ToolTip> -Objekt an die <xref:System.Windows.FrameworkElement.ToolTip%2A> Eigenschaft.  
+  
+ [!code-xaml[ToolTipSimple#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#tooltip)]  
+  
+ Im folgenden Beispiel wird Code zum Generieren einer <xref:System.Windows.Controls.ToolTip> Objekt. Das Beispiel erstellt eine <xref:System.Windows.Controls.ToolTip> (`tt`) und ordnet sie einer <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[ToolTipSimple#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml.cs#2)]
+ [!code-vb[ToolTipSimple#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipSimple/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolTip ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolTip.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.ToolTip" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Closed">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Closed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Closed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.ToolTip.Closed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein <see cref="T:System.Windows.Controls.ToolTip" /> geschlossen und wird nicht mehr angezeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Windows.FrameworkElement.ToolTipClosing?displayProperty=nameWithType> Ereignis wird auch ausgelöst, wenn der <xref:System.Windows.Controls.ToolTip> Steuerelement geschlossen wird.  
+  
+<a name="routedEventInfo_Closed"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolTip.ClosedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie einen Ereignishandler für Festlegen der <xref:System.Windows.Controls.ToolTip.Opened> und <xref:System.Windows.Controls.ToolTip.Closed> Ereignisse.  
+  
+ [!code-csharp[ToolTipService#ToolTipEventHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipeventhandlers)]
+ [!code-vb[ToolTipService#ToolTipEventHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipeventhandlers)]  
+  
+ [!code-csharp[ToolTipService#ToolTipOpenAndCloseHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipopenandclosehandler)]
+ [!code-vb[ToolTipService#ToolTipOpenAndCloseHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipopenandclosehandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClosedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ClosedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ClosedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolTip.ClosedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.ToolTip.Closed" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomPopupPlacementCallback">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.CustomPopupPlacementCallback CustomPopupPlacementCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Primitives.CustomPopupPlacementCallback CustomPopupPlacementCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolTip.CustomPopupPlacementCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.CustomPopupPlacementCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Delegathandlermethode zum Positionieren der <see cref="T:System.Windows.Controls.ToolTip" /> ab bzw. legt diese fest.</summary>
+        <value>Die <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacementCallback" />-Delegatenmethode, die Informationen zur Platzierung für die <see cref="T:System.Windows.Controls.ToolTip" /> bereitstellt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.ToolTip.Placement%2A> Eigenschaft muss festgelegt werden, um <xref:System.Windows.Controls.Primitives.PlacementMode.Custom> für den Rückrufdelegaten verwendet werden.  
+  
+ Die <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> Delegat gibt ein Array von möglichen Punkte in Bezug auf definiert werden die <xref:System.Windows.Controls.ToolTip.PlacementTarget%2A>. Wenn die <xref:System.Windows.Controls.ToolTip> ist angezeigt wird, ein Punkt ausgewählt, die die Menge des maximiert die <xref:System.Windows.Controls.ToolTip> Fenster, das sichtbar ist.  
+  
+<a name="dependencyPropertyInfo_CustomPopupPlacementCallback"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolTip.CustomPopupPlacementCallbackProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.ToolTip.CustomPopupPlacementCallback%2A> Eigenschaft und den entsprechenden Delegaten zu erstellen. Diese Methode wird verwendet, um durch die <xref:System.Windows.Controls.Primitives.Popup>, dem wird veranschaulicht, der [Popup-Platzierung-Beispiel](http://go.microsoft.com/fwlink/?LinkID=160032).  
+  
+ [!code-csharp[ToolTipCustom#CustomPopupPlacementCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipCustom/CSharp/Pane1.xaml.cs#custompopupplacementcallback)]
+ [!code-vb[ToolTipCustom#CustomPopupPlacementCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipCustom/visualbasic/pane1.xaml.vb#custompopupplacementcallback)]  
+  
+ [!code-csharp[ToolTipCustom#DelegateInstance](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipCustom/CSharp/Pane1.xaml.cs#delegateinstance)]
+ [!code-vb[ToolTipCustom#DelegateInstance](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipCustom/visualbasic/pane1.xaml.vb#delegateinstance)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomPopupPlacementCallbackProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CustomPopupPlacementCallbackProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CustomPopupPlacementCallbackProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolTip.CustomPopupPlacementCallbackProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolTip.CustomPopupPlacementCallback" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDropShadow">
+      <MemberSignature Language="C#" Value="public bool HasDropShadow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasDropShadow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolTip.HasDropShadow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Steuerelement einen Schlagschatten aufweist.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement einen Schlagschatten verfügt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Controls.ToolTip> wird geöffnet und der Wert wird festgelegt, auf den Wert des <xref:System.Windows.SystemParameters.DropShadow%2A?displayProperty=nameWithType>. Wenn diese Eigenschaft auf `true` hat keine Auswirkung, wenn die <xref:System.Windows.SystemParameters.DropShadow%2A?displayProperty=nameWithType> Eigenschaft ist `false`.  
+  
+<a name="dependencyPropertyInfo_HasDropShadow"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolTip.HasDropShadowProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.ToolTip.HasDropShadow%2A> -Eigenschaft für eine <xref:System.Windows.Controls.ToolTip> Steuerelement.  
+  
+ [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDropShadowProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HasDropShadowProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HasDropShadowProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolTip.HasDropShadowProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolTip.HasDropShadow" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffset">
+      <MemberSignature Language="C#" Value="public double HorizontalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolTip.HorizontalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeigen Sie Get oder legt den horizontalen Abstand zwischen den Zielursprung und die Popup-Ausrichtung.</summary>
+        <value>Der horizontale Abstand zwischen den Zielursprung und das Popup-Ausrichtungspunkt an. Informationen zum Ursprung und Popup finden Sie unter [das Verhalten der Platzierung Popup](~/docs/framework/wpf/controls/popup-placement-behavior.md). Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können positionieren eine <xref:System.Windows.Controls.ToolTip> durch Festlegen der <xref:System.Windows.Controls.ToolTip.PlacementTarget%2A>, <xref:System.Windows.Controls.ToolTip.PlacementRectangle%2A>, <xref:System.Windows.Controls.ToolTip.Placement%2A>, <xref:System.Windows.Controls.ToolTip.HorizontalOffset%2A>, und <xref:System.Windows.Controls.ToolTip.VerticalOffsetProperty> Eigenschaften.  Diese Eigenschaften weisen das gleiche Verhalten wie für eine <xref:System.Windows.Controls.Primitives.Popup>. Weitere Informationen finden Sie unter [Verhalten beim Platzieren von Popups](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="dependencyPropertyInfo_HorizontalOffset"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolTip.HorizontalOffsetProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen und positionieren Sie ein <xref:System.Windows.Controls.ToolTip>.  
+  
+ [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+  
+ [!code-csharp[ToolTipService#ToolTipCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipcode)]
+ [!code-vb[ToolTipService#ToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HorizontalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HorizontalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolTip.HorizontalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolTip.HorizontalOffset" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOpen">
+      <MemberSignature Language="C#" Value="public bool IsOpen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolTip.IsOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine <see cref="T:System.Windows.Controls.ToolTip" /> sichtbar ist.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Windows.Controls.ToolTip" />-Objekt sichtbar ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsOpen"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolTip.IsOpenProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadataOptions.BindsTwoWayByDefault>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOpenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsOpenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsOpenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolTip.IsOpenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolTip.IsOpen" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosed">
+      <MemberSignature Language="C#" Value="protected virtual void OnClosed (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClosed(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolTip.OnClosed(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisinformationen.</param>
+        <summary>Reagiert auf die <see cref="E:System.Windows.Controls.ToolTip.Closed" /> Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnContentChanged (object oldContent, object newContent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnContentChanged(object oldContent, object newContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolTip.OnContentChanged(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldContent" Type="System.Object" />
+        <Parameter Name="newContent" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oldContent">Der alte Wert der <see cref="P:System.Windows.Controls.ContentControl.Content" />-Eigenschaft.</param>
+        <param name="newContent">Der neue Wert der <see cref="P:System.Windows.Controls.ContentControl.Content" />-Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ContentControl.Content" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolTip.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die Implementierung von <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für die <see cref="T:System.Windows.Controls.ToolTip" /> Steuerelement.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Automation.Peers.ToolTipAutomationPeer" /> dafür <see cref="T:System.Windows.Controls.ToolTip" /> Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpened">
+      <MemberSignature Language="C#" Value="protected virtual void OnOpened (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnOpened(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolTip.OnOpened(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisinformationen.</param>
+        <summary>Reagiert auf die <see cref="E:System.Windows.Controls.ToolTip.Opened" /> Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisualParentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnVisualParentChanged (System.Windows.DependencyObject oldParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnVisualParentChanged(class System.Windows.DependencyObject oldParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolTip.OnVisualParentChanged(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldParent" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="oldParent">Das vorherige visuelle übergeordnete Element.</param>
+        <summary>Reagiert auf eine Änderung in der visuellen übergeordnet eine <see cref="T:System.Windows.Controls.ToolTip" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opened">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Opened;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Opened" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.ToolTip.Opened" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein <see cref="T:System.Windows.Controls.ToolTip" /> wird angezeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.FrameworkElement.ToolTipOpening?displayProperty=nameWithType> Ereignis wird auch ausgelöst wird, wenn die <xref:System.Windows.Controls.ToolTip> steuern wird geöffnet.  
+  
+<a name="routedEventInfo_Opened"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolTip.OpenedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie einen Ereignishandler für Festlegen der <xref:System.Windows.Controls.ToolTip.Opened> und <xref:System.Windows.Controls.ToolTip.Closed> Ereignisse.  
+  
+ [!code-csharp[ToolTipService#ToolTipEventHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipeventhandlers)]
+ [!code-vb[ToolTipService#ToolTipEventHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipeventhandlers)]  
+  
+ [!code-csharp[ToolTipService#ToolTipOpenAndCloseHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipopenandclosehandler)]
+ [!code-vb[ToolTipService#ToolTipOpenAndCloseHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipopenandclosehandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent OpenedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent OpenedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolTip.OpenedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.ToolTip.Opened" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Placement">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.PlacementMode Placement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Primitives.PlacementMode Placement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolTip.Placement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung des der <see cref="T:System.Windows.Controls.ToolTip" /> steuern, wann er öffnet, und gibt an, wie die <see cref="T:System.Windows.Controls.ToolTip" /> Steuerelement verhält, wenn es die bildschirmbegrenzungen überschreitet.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.Primitives.PlacementMode" /> -Enumerationswert, der bestimmt, der die Ausrichtung der <see cref="T:System.Windows.Controls.ToolTip" /> steuern, wann es geöffnet wird und angibt, wie das Steuerelement mit bildschirmbegrenzungen interagiert. Die Standardeinstellung ist <see cref="F:System.Windows.Controls.Primitives.PlacementMode.Mouse" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können positionieren eine <xref:System.Windows.Controls.ToolTip> durch Festlegen der <xref:System.Windows.Controls.ToolTip.PlacementTarget%2A>, <xref:System.Windows.Controls.ToolTip.PlacementRectangle%2A>, <xref:System.Windows.Controls.ToolTip.Placement%2A>, <xref:System.Windows.Controls.ToolTip.HorizontalOffset%2A>, und <xref:System.Windows.Controls.ToolTip.VerticalOffsetProperty> Eigenschaften.  Diese Eigenschaften weisen das gleiche Verhalten wie für eine <xref:System.Windows.Controls.Primitives.Popup>. Weitere Informationen finden Sie unter [Verhalten beim Platzieren von Popups](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="dependencyPropertyInfo_Placement"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolTip.PlacementProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen und positionieren Sie ein <xref:System.Windows.Controls.ToolTip>.  
+  
+ [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+  
+ [!code-csharp[ToolTipService#ToolTipCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipcode)]
+ [!code-vb[ToolTipService#ToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolTip.PlacementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolTip.Placement" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementRectangle">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect PlacementRectangle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect PlacementRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolTip.PlacementRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den rechteckigen Bereich relativ zu dem die <see cref="T:System.Windows.Controls.ToolTip" /> Steuerelement positioniert ist, wenn sie geöffnet wird.</summary>
+        <value>Die <see cref="T:System.Windows.Rect" /> -Struktur, die das Rechteck definiert, mit der Position, der <see cref="T:System.Windows.Controls.ToolTip" /> Steuerelement. Die Standardeinstellung ist <see cref="P:System.Windows.Rect.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können positionieren <xref:System.Windows.Controls.ToolTip> durch Festlegen der <xref:System.Windows.Controls.ToolTip.PlacementTarget%2A>, <xref:System.Windows.Controls.ToolTip.PlacementRectangle%2A>, <xref:System.Windows.Controls.ToolTip.Placement%2A>, <xref:System.Windows.Controls.ToolTip.HorizontalOffset%2A>, und <xref:System.Windows.Controls.ToolTip.VerticalOffsetProperty> Eigenschaften.  Diese Eigenschaften weisen das gleiche Verhalten wie für eine <xref:System.Windows.Controls.Primitives.Popup>. Weitere Informationen finden Sie unter [Verhalten beim Platzieren von Popups](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="dependencyPropertyInfo_PlacementRectangle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolTip.PlacementRectangleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen und positionieren Sie ein <xref:System.Windows.Controls.ToolTip>.  
+  
+ [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+  
+ [!code-csharp[ToolTipService#ToolTipCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipcode)]
+ [!code-vb[ToolTipService#ToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementRectangleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementRectangleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementRectangleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolTip.PlacementRectangleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolTip.PlacementRectangle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementTarget">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement PlacementTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement PlacementTarget" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolTip.PlacementTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.UIElement" /> relativ zu dem die <see cref="T:System.Windows.Controls.ToolTip" /> positioniert ist, wenn sie geöffnet wird.</summary>
+        <value>Die <see cref="T:System.Windows.UIElement" /> also das logisch übergeordnete Element der <see cref="T:System.Windows.Controls.ToolTip" /> Steuerelement. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können positionieren eine <xref:System.Windows.Controls.ToolTip> durch Festlegen der <xref:System.Windows.Controls.ToolTip.PlacementTarget%2A>, <xref:System.Windows.Controls.ToolTip.PlacementRectangle%2A>, <xref:System.Windows.Controls.ToolTip.Placement%2A>, <xref:System.Windows.Controls.ToolTip.HorizontalOffset%2A>, und <xref:System.Windows.Controls.ToolTip.VerticalOffsetProperty> Eigenschaften.  Diese Eigenschaften weisen das gleiche Verhalten wie für eine <xref:System.Windows.Controls.Primitives.Popup>. Weitere Informationen finden Sie unter [Verhalten beim Platzieren von Popups](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="dependencyPropertyInfo_PlacementTarget"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolTip.PlacementTargetProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen und positionieren Sie ein <xref:System.Windows.Controls.ToolTip>.  
+  
+ [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+  
+ [!code-csharp[ToolTipService#ToolTipCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipcode)]
+ [!code-vb[ToolTipService#ToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementTargetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementTargetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementTargetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolTip.PlacementTargetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolTip.PlacementTarget" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaysOpen">
+      <MemberSignature Language="C#" Value="public bool StaysOpen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StaysOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolTip.StaysOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein offenes <see cref="T:System.Windows.Controls.ToolTip" /> bleibt hergestellt, bis der Benutzer die Maus klickt, wenn die Maus nicht über ist die <see cref="T:System.Windows.Controls.ToolTip" />.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.ToolTip" /> geöffnet bleibt, bis er vom Benutzer durch Klicken mit der Maustaste außerhalb geschlossen wird die <see cref="T:System.Windows.Controls.ToolTip" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert `false` für die <xref:System.Windows.Controls.ToolTip.StaysOpen%2A> Eigenschaft wird nicht unterstützt, für eine <xref:System.Windows.Controls.ToolTip> Wenn es nicht geöffnet ist. Um eine QuickInfo zu erstellen, die geöffnet bleibt, bis Sie die Maustaste gedrückt wird, wenn es außerhalb der QuickInfo angezeigt wird, müssen Sie festlegen, sowohl die <xref:System.Windows.Controls.ToolTip.StaysOpen%2A> Eigenschaft und die <xref:System.Windows.Controls.ToolTip.IsOpen%2A> Eigenschaft `true`. Wenn <xref:System.Windows.Controls.ToolTip.StaysOpen%2A> auf festgelegt ist `false` die QuickInfo nicht geöffnet ist, ist eine <xref:System.NotSupportedException> auftritt.  
+  
+<a name="dependencyPropertyInfo_StaysOpen"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolTip.StaysOpenProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Tritt auf, wenn <see cref="P:System.Windows.Controls.ToolTip.StaysOpen" /> festgelegt ist, um <see langword="false" /> Wenn keine QuickInfo geöffnet ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StaysOpenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StaysOpenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StaysOpenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolTip.StaysOpenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolTip.StaysOpen" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffset">
+      <MemberSignature Language="C#" Value="public double VerticalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolTip.VerticalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeigen Sie Get oder legt den vertikalen Abstand zwischen den Zielursprung und die Popup-Ausrichtung.</summary>
+        <value>Der vertikale Abstand zwischen den Zielursprung und das Popup-Ausrichtungspunkt an. Informationen zum Ursprung und Popup finden Sie unter [das Verhalten der Platzierung Popup](~/docs/framework/wpf/controls/popup-placement-behavior.md). Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können positionieren eine <xref:System.Windows.Controls.ToolTip> durch Festlegen der <xref:System.Windows.Controls.ToolTip.PlacementTarget%2A>, <xref:System.Windows.Controls.ToolTip.PlacementRectangle%2A>, <xref:System.Windows.Controls.ToolTip.Placement%2A>, <xref:System.Windows.Controls.ToolTip.HorizontalOffset%2A>, und <xref:System.Windows.Controls.ToolTip.VerticalOffsetProperty> Eigenschaften.  Diese Eigenschaften weisen das gleiche Verhalten wie für eine <xref:System.Windows.Controls.Primitives.Popup>. Weitere Informationen finden Sie unter [Verhalten beim Platzieren von Popups](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="dependencyPropertyInfo_VerticalOffset"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolTip.VerticalOffsetProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen und positionieren Sie ein <xref:System.Windows.Controls.ToolTip>.  
+  
+ [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+  
+ [!code-csharp[ToolTipService#ToolTipCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipcode)]
+ [!code-vb[ToolTipService#ToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VerticalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VerticalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolTip.VerticalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolTip.VerticalOffset" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

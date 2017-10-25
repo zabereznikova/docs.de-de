@@ -1,0 +1,189 @@
+<Type Name="TreeNodeStates" FullName="System.Windows.Forms.TreeNodeStates">
+  <TypeSignature Language="C#" Value="public enum TreeNodeStates" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TreeNodeStates extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeNodeStates" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Konstanten, die die möglichen Statuswerte des darstellen einer <see cref="T:System.Windows.Forms.TreeNode" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, durch die <xref:System.Windows.Forms.DrawTreeNodeEventArgs.State%2A> Eigenschaft von der <xref:System.Windows.Forms.DrawTreeNodeEventArgs> Klasse. Weitere Informationen finden Sie beim <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>-Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Anpassen einer <xref:System.Windows.Forms.TreeView> -Steuerelement mit dem Ownerdrawing. Die <xref:System.Windows.Forms.TreeView> -Steuerelement im Beispiel zeigt die optionalen Knotentags neben den normalen Knoten Bezeichnungen. Mit Knotentags angegeben. die <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> Eigenschaft. Die <xref:System.Windows.Forms.TreeView> Steuerelement auch benutzerdefinierte Farben, einschließlich einer benutzerdefinierten Hervorhebungsfarbe verwendet.  
+  
+ Sie können anpassen, dass die meisten der <xref:System.Windows.Forms.TreeView> Farben durch Einstellung color-Eigenschaften, aber die Hervorhebungsfarbe für die Auswahl ist nicht als Eigenschaft verfügbar. Darüber hinaus erweitert die standardmäßige Auswahl hervorgehobene Rechteck nur um eine Bezeichnung ein. Ownerdrawing muss, zeichnen Sie die Knotentags und zum Zeichnen von einer benutzerdefinierten hervorgehobene Rechteck, die groß genug ist, mit einem Knotentag verwendet werden.  
+  
+ Im Beispiel einen Handler für das <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> Ereignis zeichnet nicht markierte Knoten durch Aufrufen von Methoden der <xref:System.Windows.Forms.DrawTreeNodeEventArgs> Klasse. Diese Methoden geben die standarddarstellung für <xref:System.Windows.Forms.TreeView> Elemente, die Anpassung nicht benötigen. Der Handler zeichnet die Knotentags und die benutzerdefinierte auswahlmarkierung manuell.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> Referenzthema.  
+  
+ [!code-cpp[TreeViewOwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#3)]
+ [!code-csharp[TreeViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#3)]
+ [!code-vb[TreeViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="Checked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Checked = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Checked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Knoten ist aktiviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Default = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Knoten ist im Standardzustand.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Focused">
+      <MemberSignature Language="C#" Value="Focused" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Focused = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Focused" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Knoten hat den Fokus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Grayed">
+      <MemberSignature Language="C#" Value="Grayed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Grayed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Grayed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Knoten ist deaktiviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hot">
+      <MemberSignature Language="C#" Value="Hot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Hot = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Hot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Knoten ist aktiv. Dieser Zustand tritt ein, wenn die <see cref="P:System.Windows.Forms.TreeView.HotTracking" /> -Eigenschaftensatz auf <see langword="true" /> und der Mauszeiger über dem Knoten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Indeterminate">
+      <MemberSignature Language="C#" Value="Indeterminate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Indeterminate = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Indeterminate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Knoten in einem unbestimmten Zustand.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Marked">
+      <MemberSignature Language="C#" Value="Marked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Marked = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Marked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Knoten ist markiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="Selected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Selected = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Selected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Knoten ist ausgewählt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowKeyboardCues">
+      <MemberSignature Language="C#" Value="ShowKeyboardCues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates ShowKeyboardCues = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.ShowKeyboardCues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Knoten sollte mit einer Tastenkombination angegeben werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

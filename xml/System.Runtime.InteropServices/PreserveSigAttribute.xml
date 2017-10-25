@@ -1,0 +1,117 @@
+<Type Name="PreserveSigAttribute" FullName="System.Runtime.InteropServices.PreserveSigAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PreserveSigAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PreserveSigAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.PreserveSigAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass das HRESULT oder <see langword="retval" /> Signaturtransformation, die während COM-Interop-Aufrufen stattfindet unterdrückt werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Methoden anwenden.  
+  
+ Wird standardmäßig die [Tlbexp.exe (Type Library Exporter-Tool)](~/docs/framework/tools/tlbexp-exe-type-library-exporter.md) wird sichergestellt, dass ein Aufruf, der ein HRESULT von S_OK transformiert wird, dass [Out, Retval]-Parameter als den Rückgabewert einer Funktion verwendet wird. Das S_OK HRESULT wird verworfen. Für HRESULTs als S_OK zurück, die Laufzeit löst eine Ausnahme aus und verwirft den [Out, Retval]-Parameter. Beim Anwenden der <xref:System.Runtime.InteropServices.PreserveSigAttribute> einer verwalteten Methode-Signatur der verwalteten und nicht verwalteten Signaturen für die attributierte Methode identisch sind.  
+  
+ Beibehalten der ursprünglichen Methodensignatur ist erforderlich, wenn das Element, mehr als einen Erfolg HRESULT-Wert zurückgibt und die verschiedenen Werte erkannt werden sollen. Da die meisten COM-Members ein HRESULT zurückgibt, durch Anwenden der <xref:System.Runtime.InteropServices.PreserveSigAttribute>, können Sie abrufen, eine ganze Zahl, die den Erfolg oder Fehler HRESULT darstellt. Tlbexp.exe behält alle [Out, retval]-Parameter als out-Parameter in der verwalteten Signatur.  
+  
+ Die [Tlbimp.exe (Type Library Importer-Tool)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) gilt auch für dieses Attribut; es das Attribut auf Dispatchschnittstellen angewendet, wenn es sich um eine Typbibliothek importiert.  
+  
+> [!NOTE]
+>  Rückgabetypen von <xref:System.Runtime.InteropServices.UnmanagedType.Currency>, <xref:System.Guid>, und <xref:System.Object> werden nicht unterstützt, indem Sie die <xref:System.Runtime.InteropServices.PreserveSigAttribute> Klasse bei der Interoperation von COM an verwalteten Code und verwaltete Code ist mit markiert die <xref:System.Runtime.InteropServices.PreserveSigAttribute> Klasse.  Wenn Sie versuchen, verwenden Sie einen der folgenden Rückgabetypen mit der <xref:System.Runtime.InteropServices.PreserveSigAttribute> Klasse während der folgenden Bedingungen eine <xref:System.TypeLoadException> ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Tlbexp.exe eine C#-Methode ohne konvertiert <xref:System.Runtime.InteropServices.PreserveSigAttribute> beim Exportieren einer Assembly in eine COM-Typbibliothek.  
+  
+ Verwaltete Signatur:  
+  
+```  
+int DoSomething (long l);  
+```  
+  
+ Nicht verwaltete Signatur:  
+  
+```  
+HRESULT DoSomething ([in] long l, [out, retval] int * i);  
+```  
+  
+ Beim Anwenden von <xref:System.Runtime.InteropServices.PreserveSigAttribute> auf dem C#-Methode und exportieren Sie die Assembly, unterscheidet sich die Methode Konvertierung aus dem vorherigen Beispiel. Beachten Sie, dass Tlbexp.exe HRESULT und [Out, Retval] entfernt Parametermodifizierer.  
+  
+ Verwaltete Signatur:  
+  
+```  
+[PreserveSig] int DoSomething (long l);  
+```  
+  
+ Nicht verwaltete Signatur:  
+  
+```  
+int DoSomething ([in] long l);  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PreserveSigAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.PreserveSigAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.InteropServices.PreserveSigAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

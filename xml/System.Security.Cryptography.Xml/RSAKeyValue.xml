@@ -1,0 +1,197 @@
+<Type Name="RSAKeyValue" FullName="System.Security.Cryptography.Xml.RSAKeyValue">
+  <TypeSignature Language="C#" Value="public class RSAKeyValue : System.Security.Cryptography.Xml.KeyInfoClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RSAKeyValue extends System.Security.Cryptography.Xml.KeyInfoClause" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.RSAKeyValue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.KeyInfoClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die &lt; <see langword="RSAKeyValue" /> &gt; Element einer XML-Signatur.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.RSAKeyValue> -Klasse stellt die `<RSAKeyValue>` Element einer XML-Signatur, die durch die XML-Signatur-Spezifikation definiert. Die `<RSAKeyValue>` Element ist das Unterelement des der `<KeyInfo>` Element (dargestellt durch die <xref:System.Security.Cryptography.Xml.KeyInfo> Klasse), beschreibt eine <xref:System.Security.Cryptography.RSA> öffentlichen Schlüssel. Die `<RSAKeyValue>` Element enthält den öffentlichen Schlüssel, der den privaten Schlüssel zum Signieren eines Dokuments entspricht. Ein Empfänger des Dokuments verwendet den öffentlichen Schlüssel, um die XML-Signatur zu überprüfen.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.RSAKeyValue> -Klasse auf, wenn Sie einen öffentlichen Schlüssel zum digitalen XML-Signatur hinzufügen möchten.  
+  
+ Wenn ein Schlüssel nicht explizit an den Konstruktor bereitgestellt wird ein neues <xref:System.Security.Cryptography.RSA> Schlüsselpaar wird nach dem Zufallsprinzip generiert.  
+  
+ Weitere Informationen zu den `<RSAKeyValue>` Element finden Sie in der W3C-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie generiert und überprüft eine eingeschlossene XML-Signatur mit der <xref:System.Security.Cryptography.Xml.RSAKeyValue> Objekt.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CPP/xmldsigenv.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CS/xmldsigenv.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/VB/xmldsigenv.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Generieren und überprüfen Sie, ob eine getrennte XML-Signatur mit der <xref:System.Security.Cryptography.Xml.RSAKeyValue> Objekt.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CPP/xmldsigdetach.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CS/xmldsigdetach.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/VB/xmldsigdetach.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RSAKeyValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.RSAKeyValue.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.RSAKeyValue" /> nach dem Zufallsprinzip generierte Klasse mit einer neuen <see cref="T:System.Security.Cryptography.RSA" /> öffentlichen Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine neue Instanz der Standardimplementierung von <xref:System.Security.Cryptography.RSA> auf den öffentlichen Schlüssel enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RSAKeyValue (System.Security.Cryptography.RSA key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.RSA key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.RSAKeyValue.#ctor(System.Security.Cryptography.RSA)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.RSA" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die Instanz einer Implementierung der <see cref="T:System.Security.Cryptography.RSA" /> , die den öffentlichen Schlüssel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.RSAKeyValue" /> Klasse mit dem angegebenen <see cref="T:System.Security.Cryptography.RSA" /> öffentlichen Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie generiert und überprüft eine eingeschlossene XML-Signatur mit der <xref:System.Security.Cryptography.Xml.RSAKeyValue> Objekt.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CPP/xmldsigenv.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CS/xmldsigenv.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/VB/xmldsigenv.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Generieren und überprüfen Sie, ob eine getrennte XML-Signatur mit der <xref:System.Security.Cryptography.Xml.RSAKeyValue> Objekt.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CPP/xmldsigdetach.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CS/xmldsigdetach.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/VB/xmldsigdetach.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.RSAKeyValue.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die XML-Darstellung der <see cref="T:System.Security.Cryptography.RSA" /> Key-Klausel.</summary>
+        <returns>Die XML-Darstellung der <see cref="T:System.Security.Cryptography.RSA" /> Key-Klausel.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.RSA Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.RSA Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.RSAKeyValue.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSA</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Instanz der <see cref="T:System.Security.Cryptography.RSA" /> , die den öffentlichen Schlüssel enthält.</summary>
+        <value>Die Instanz von <see cref="T:System.Security.Cryptography.RSA" /> , die den öffentlichen Schlüssel enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.RSAKeyValue.Key%2A> Eigenschaft darstellt, den öffentlichen Schlüssel zum Hinzufügen zu einer XML-digitale Signatur unter Verwendung der `<Modulus>` Unterelement und `<Exponent>` Unterelement des der `<RSAKeyValue>` Element.  
+  
+ Weitere Informationen zu digitalen Signaturen von XML-finden Sie in der W3C-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public override void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.RSAKeyValue.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die XML-Element, aus dem Laden der <see cref="T:System.Security.Cryptography.RSA" /> Key-Klausel.</param>
+        <summary>Lädt eine <see cref="T:System.Security.Cryptography.RSA" /> Key-Klausel aus einem XML-Element.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die <paramref name="value" /> Parameter ist kein gültiger <see cref="T:System.Security.Cryptography.RSA" /> Key-Klausel-XML-Element.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

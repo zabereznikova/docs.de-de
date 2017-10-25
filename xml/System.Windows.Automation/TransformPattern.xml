@@ -1,0 +1,334 @@
+<Type Name="TransformPattern" FullName="System.Windows.Automation.TransformPattern">
+  <TypeSignature Language="C#" Value="public class TransformPattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TransformPattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TransformPattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Steuerelement dar, das in einem zweidimensionalen Raum verschoben, verkleinert, vergrößert oder gedreht werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Unterstützung für dieses Steuerelementmuster ist nicht auf Objekte auf dem Desktop beschränkt. Dieses Steuerelementmuster muss auch von den untergeordneten Elementen eines Containerobjekts unterstützt werden, solange die untergeordneten Elemente verschoben, Größe oder innerhalb der Grenzen des Containers frei gedreht werden können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.TransformPattern.TransformPatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.TransformPattern/TransformPatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TransformPattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TransformPattern+TransformPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zwischengespeicherten [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für dieses <see cref="T:System.Windows.Automation.TransformPattern" /> ab.</summary>
+        <value>Eine Struktur, die die zwischengespeicherten [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für das Steuerelementmuster enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwischengespeicherte Eigenschaftswerte müssen zuvor angefordert wurden mit einer <xref:System.Windows.Automation.CacheRequest>. Verwendung <xref:System.Windows.Automation.TransformPattern.Current%2A> auf den aktuellen Wert einer Eigenschaft abzurufen.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.TransformPattern.TransformPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die angeforderte Eigenschaft befindet sich nicht im Cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanMoveProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty CanMoveProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty CanMoveProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TransformPattern.CanMoveProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanMove" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.TransformPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion, die eine Auflistung von zurückgibt übergeben [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elementen, die abhängigen Elemente des Stamms und einen Satz von eigenschaftsbedingungen erfüllen.  
+  
+ [!code-csharp[UIATransformPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#100)]
+ [!code-vb[UIATransformPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanResizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty CanResizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty CanResizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TransformPattern.CanResizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.TransformPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion, die eine Auflistung von zurückgibt übergeben [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elementen, die abhängigen Elemente des Stamms und einen Satz von eigenschaftsbedingungen erfüllen.  
+  
+ [!code-csharp[UIATransformPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#100)]
+ [!code-vb[UIATransformPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRotateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty CanRotateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty CanRotateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TransformPattern.CanRotateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanRotate" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.TransformPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion, die eine Auflistung von zurückgibt übergeben [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elementen, die abhängigen Elemente des Stamms und einen Satz von eigenschaftsbedingungen erfüllen.  
+  
+ [!code-csharp[UIATransformPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#100)]
+ [!code-vb[UIATransformPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.TransformPattern.TransformPatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.TransformPattern/TransformPatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TransformPattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TransformPattern+TransformPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuellen [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für dieses <see cref="T:System.Windows.Automation.TransformPattern" /> ab.</summary>
+        <value>Eine Struktur, die die aktuellen [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für das Steuerelementmuster enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Muster muss aus einer <xref:System.Windows.Automation.AutomationElement> mit einer <xref:System.Windows.Automation.AutomationElementMode.Full> Verweis, um die aktuellen Werte zu erhalten. Wenn die <xref:System.Windows.Automation.AutomationElement> abgerufen wurde, mithilfe von <xref:System.Windows.Automation.AutomationElementMode.None>, enthält es nur zwischengespeicherte Daten, und beim Versuch, den aktuellen Wert einer beliebigen Eigenschaft abzurufen, wird eine Ausnahme ausgelöst. Verwendung <xref:System.Windows.Automation.TransformPattern.Cached%2A> um den zwischengespeicherten Wert einer Eigenschaft abzurufen, die zuvor angegeben wurde mit einem <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.TransformPattern.TransformPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="public void Move (double x, double y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Move(float64 x, float64 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TransformPattern.Move(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Absolute Bildschirmkoordinaten des linken Rands des Steuerelements.</param>
+        <param name="y">Absolute Bildschirmkoordinaten des oberen Rands des Steuerelements.</param>
+        <summary>Verschiebt das Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Objekt kann nicht verschoben, geändert oder gedreht werden, dass seine resultierende Bildschirmposition vollständig außerhalb der Koordinaten des Containers und kann nicht zugegriffen werden, um Tastatur- oder Maustastenzustand wäre. Z. B. wird Wenn ein Fenster der obersten Ebene vollständig außerhalb des Bildschirms verschoben wird oder ein untergeordnetes Objekt außerhalb der Grenzen des Containers verschoben. In diesen Fällen wird das Objekt so nahe bei den angeforderten Bildschirmkoordinaten wie möglich mit den oberen oder linken Koordinaten außer Kraft gesetzt, um innerhalb der Containergrenzen werden eingefügt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.TransformPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement> und anschließend zum Verschieben der <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATransformPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#101)]
+ [!code-vb[UIATransformPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#101)]  
+[!code-csharp[UIATransformPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#103)]
+[!code-vb[UIATransformPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanMove" /> Eigenschaft auf "false" festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TransformPattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das <see cref="T:System.Windows.Automation.TransformPattern" />-Steuerelementmuster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.TransformPatternIdentifiers>.  
+  
+ Der Musterbezeichner wird an Methoden übergeben, z. B. <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> zum Abrufen der Steuerelementmuster aus dem angegebenen <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.TransformPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATransformPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#101)]
+ [!code-vb[UIATransformPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public void Resize (double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resize(float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TransformPattern.Resize(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die neue Breite des Fensters in Pixeln.</param>
+        <param name="height">Die neue Höhe des Fensters in Pixeln.</param>
+        <summary>Ändert die Größe des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem Aufruf in einem Steuerelement, das Teilen Bereiche unterstützt, diese Methode kann den Nebeneffekt, Ändern der Größe von anderen Bereichen zusammenhängenden haben.  
+  
+ Ein Objekt kann nicht verschoben, geändert oder gedreht werden, dass seine resultierende Bildschirmposition vollständig außerhalb der Koordinaten des Containers und kann nicht zugegriffen werden, um Tastatur- oder Maustastenzustand wäre. Z. B. wird Wenn ein Fenster der obersten Ebene vollständig außerhalb des Bildschirms verschoben wird oder ein untergeordnetes Objekt außerhalb der Grenzen des Containers verschoben. In diesen Fällen wird das Objekt so nahe bei den angeforderten Bildschirmkoordinaten wie möglich mit den oberen oder linken Koordinaten außer Kraft gesetzt, um innerhalb der Containergrenzen werden eingefügt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.TransformPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement> und anschließend verwendet, um die Größe der <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATransformPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#101)]
+ [!code-vb[UIATransformPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#101)]  
+[!code-csharp[UIATransformPattern_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#104)]
+[!code-vb[UIATransformPattern_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize" /> Eigenschaft auf "false" festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotate">
+      <MemberSignature Language="C#" Value="public void Rotate (double degrees);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Rotate(float64 degrees) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TransformPattern.Rotate(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="degrees" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="degrees">Die Gradzahl, um die das Element gedreht wird. Bei einer positiven Zahl wird im Uhrzeigersinn gedreht; bei einer negativen Zahl wird gegen den Uhrzeigersinn gedreht.</param>
+        <summary>Dreht das Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Objekt kann nicht verschoben, geändert oder gedreht werden, dass seine resultierende Bildschirmposition vollständig außerhalb der Koordinaten des Containers und kann nicht zugegriffen werden, um Tastatur- oder Maustastenzustand wäre. Z. B. wird Wenn ein Fenster der obersten Ebene vollständig außerhalb des Bildschirms verschoben wird oder ein untergeordnetes Objekt außerhalb der Grenzen des Containers verschoben. In diesen Fällen wird das Objekt so nahe bei den angeforderten Bildschirmkoordinaten wie möglich mit den oberen oder linken Koordinaten außer Kraft gesetzt, um innerhalb der Containergrenzen werden eingefügt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.TransformPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement> und anschließend zum Drehen verwendet die <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATransformPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#101)]
+ [!code-vb[UIATransformPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#101)]  
+[!code-csharp[UIATransformPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATransformPattern_snip/CSharp/UIATransformPattern_snippets.cs#102)]
+[!code-vb[UIATransformPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATransformPattern_snip/VisualBasic/UIATransformPattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanRotate" /> Eigenschaft auf "false" festgelegt ist.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,202 @@
+<Type Name="Adorner" FullName="System.Windows.Documents.Adorner">
+  <TypeSignature Language="C#" Value="public abstract class Adorner : System.Windows.FrameworkElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Adorner extends System.Windows.FrameworkElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Adorner" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine abstrakte Klasse, die ein <see cref="T:System.Windows.FrameworkElement" /> darstellt, das ein <see cref="T:System.Windows.UIElement" /> ergänzt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Adorner ist ein benutzerdefiniertes <xref:System.Windows.FrameworkElement> , gebunden ist, um eine <xref:System.Windows.UIElement>. Funktionsindikatoren werden in eine Adornerebene gerendert, also eine Darstellungsoberfläche, die ständig auf dem erweiterten Element oder eine Auflistung von erweiterten Elementen ist; die Darstellung von Adorner ist unabhängig von der Darstellung von der <xref:System.Windows.UIElement> , die die Adorner gebunden wird. Ein Adorner wird in der Regel relativ zum Element positioniert, an das er gebunden ist. Dazu wird ein 2D-Standardkoordinatenursprung verwendet, der sich in der oberen linken Ecke des verzierten Elements befindet.  
+  
+> [!NOTE]
+>  Das übergeordnete Element des ein <xref:System.Windows.Documents.Adorner> ist die <xref:System.Windows.Documents.AdornerLayer> , rendert die <xref:System.Windows.Documents.Adorner>, nicht das Element, das gestaltet wird.  
+  
+> [!NOTE]
+>  Sämtliche Elemente auf der Adorner-Ebene werden vor allen anderen Stilen gerendert, die Sie festgelegt haben. Anders gesagt, befinden sich Adorner visuell stets im Vordergrund und können in der Z-Reihenfolge nicht überschrieben werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Adorner (System.Windows.UIElement adornedElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Windows.UIElement adornedElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Adorner.#ctor(System.Windows.UIElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="adornedElement" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="adornedElement">Das Element, das Adorner gebunden werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Documents.Adorner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Klasse implementiert, die von erben <xref:System.Windows.Documents.Adorner>, stellen Sie sicher, dass die erbende Klasse Konstruktor den Basisklassenkonstruktor aufruft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">*AdornedElement* ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AdornedElement">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement AdornedElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement AdornedElement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Adorner.AdornedElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.UIElement" /> , die diese Adorner gebunden wird.</summary>
+        <value>Das Element, dem dieser Adorner gebunden ist. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesiredTransform">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.GeneralTransform GetDesiredTransform (System.Windows.Media.GeneralTransform transform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Media.GeneralTransform GetDesiredTransform(class System.Windows.Media.GeneralTransform transform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Adorner.GetDesiredTransform(System.Windows.Media.GeneralTransform)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GeneralTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transform" Type="System.Windows.Media.GeneralTransform" />
+      </Parameters>
+      <Docs>
+        <param name="transform">Die Transformation, die derzeit auf das gestaltete Element angewendet wird.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Media.Transform" /> für den Adorner auf Grundlage der Transformation, die derzeit auf das gestaltete Element angewendet wird.</summary>
+        <returns>Eine Transformation, die auf den Adorner angewendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Adorner müssen möglicherweise anders als das Element transformiert werden, den es ausstattet. Z. B. sollte Adorner, die zeigt, wie z. B. fungieren Handles zur Größenänderung, übersetzt und zusammen mit der erweiterten Element gedreht, aber nicht skaliert. Im Gegensatz dazu, möglicherweise ein Adorner, der für ein Element ein Auswahlbereichs zeigt die gleiche Transformation als Element der erweiterten erforderlich.  
+  
+ Diese Methode wird aufgerufen, durch den zugehörigen <xref:System.Windows.Documents.AdornerLayer> eine Möglichkeit zum Filtern unerwünschter oder nicht benötigter Transformationen angeben. Implementierungen dieser Methode sollten untersuchen Sie die eingehenden Transformation (also die Transformation für das erweiterte Element), und entfernen Sie Aspekte, die nicht nützlich oder nicht auf den Adorner selbst angewendet werden soll. Diese Methode kann auch verwendet werden, zusätzliche Transformationsdetails zu diesem Zeitpunkt hinzufügen, die durch das z. B. Hinzufügen einer Übersetzung, die den Adorner seiner Position relativ zum erweiterten Element steuern kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLayoutClip">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Geometry GetLayoutClip (System.Windows.Size layoutSlotSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Geometry GetLayoutClip(valuetype System.Windows.Size layoutSlotSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Adorner.GetLayoutClip(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="layoutSlotSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="layoutSlotSize">Die vom Element bereitgestellte verfügbare Größe.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Windows.UIElement.GetLayoutClip(System.Windows.Size)" />.</summary>
+        <returns>Die mögliche Clippinggeometrie.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung gibt immer `null`.  
+  
+ Diese Methode überschreibt <xref:System.Windows.FrameworkElement.GetLayoutClip%2A>.  
+  
+ Um sicherzustellen, dass Funktionsindikatoren werden immer oberste gerendert, Clipping-Einschränkungen werden ignoriert, es sei denn, <xref:System.Windows.Documents.Adorner.IsClipEnabled%2A> ist `true`. Dies ermöglicht einen Adorner außerhalb des erweiterten Elements des umschließenden Rechtecks gerendert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClipEnabled">
+      <MemberSignature Language="C#" Value="public bool IsClipEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClipEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Adorner.IsClipEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Clipping bei der Adorner aktiviert ist.</summary>
+        <value>Ein <see langword="Boolean" /> Wert, der angibt, ob Clipping bei der Adorner aktiviert ist.  
+  
+ Wenn diese Eigenschaft ist <see langword="false" />, Adorner wird nicht abgeschnitten.  
+  
+ Wenn diese Eigenschaft ist <see langword="true" />, Adorner mit derselben Clippinggeometrie wie das gestaltete Element abgeschnitten ist.  
+  
+ Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abschneiden Adorner fallen Kosten an, erheblich verbessern. Im Allgemeinen sollte Clipping vom Funktionsindikator deaktiviert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Adorner.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Die Größe den Adorner, eingeschränkt.</param>
+        <summary>Alle benutzerdefiniertes Messung Verhalten implementiert für den Adorner.</summary>
+        <returns>Ein <see cref="T:System.Windows.Size" /> Objekt, das den Layoutbereich, benötigt der Funktionsindikator darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird ein Adorner Größe Verzierte Element übereinstimmen.  
+  
+ Diese Methode überschreibt <xref:System.Windows.FrameworkElement.MeasureOverride%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,223 @@
+<Type Name="IQueryProvider" FullName="System.Linq.IQueryProvider">
+  <TypeSignature Language="C#" Value="public interface IQueryProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IQueryProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.IQueryProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Methoden zum Erstellen und Ausführen von Abfragen, indem Sie beschrieben werden, ein <see cref="T:System.Linq.IQueryable" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Linq.IQueryProvider> Schnittstelle für die Implementierung von Abfrageanbieter vorgesehen ist.  
+  
+ Weitere Informationen über das Erstellen eigener LINQ-Anbieters finden Sie unter [LINQ: Erstellen eines Anbieters IQueryable](http://go.microsoft.com/fwlink/?LinkID=112370) auf MSDN-Blogs.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateQuery">
+      <MemberSignature Language="C#" Value="public System.Linq.IQueryable CreateQuery (System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Linq.IQueryable CreateQuery(class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.IQueryProvider.CreateQuery(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Eine Ausdrucksbaumstruktur, die stellt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage.</param>
+        <summary>Erstellt ein <see cref="T:System.Linq.IQueryable" /> -Objekt, das die durch einen angegebenen Ausdrucksbaumstruktur dargestellten Abfrage ausgewertet werden kann.</summary>
+        <returns>Ein <see cref="T:System.Linq.IQueryable" /> können, die die Abfrage, die durch den angegebenen Ausdrucksbaumstruktur dargestellten auswerten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Linq.IQueryable.Expression%2A> -Eigenschaft des zurückgegebenen <xref:System.Linq.IQueryable> Objekt gleich `expression`.  
+  
+ Die <xref:System.Linq.IQueryProvider.CreateQuery%2A> Methode wird verwendet, um die Erstellung neuer <xref:System.Linq.IQueryable> Objekte, erhält eine Ausdrucksbaumstruktur dar. Die Abfrage, die durch das zurückgegebene Objekt dargestellt wird, die einen bestimmten LINQ-Anbieter zugeordnet ist.  
+  
+ Mehrere die Standardabfrageoperator-Methoden in definierten <xref:System.Linq.Queryable>, wie z. B. <xref:System.Linq.Queryable.OfType%2A> und <xref:System.Linq.Queryable.Cast%2A>, rufen Sie diese Methode. Sie übergeben ein <xref:System.Linq.Expressions.MethodCallExpression> darstellt, die eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateQuery&lt;TElement&gt;">
+      <MemberSignature Language="C#" Value="public System.Linq.IQueryable&lt;TElement&gt; CreateQuery&lt;TElement&gt; (System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Linq.IQueryable`1&lt;!!TElement&gt; CreateQuery&lt;TElement&gt;(class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.IQueryProvider.CreateQuery``1(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TElement" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TElement">Der Typ der Elemente des der <see cref="T:System.Linq.IQueryable`1" /> zurückgegeben wird.</typeparam>
+        <param name="expression">Eine Ausdrucksbaumstruktur, die stellt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage.</param>
+        <summary>Erstellt ein <see cref="T:System.Linq.IQueryable`1" /> -Objekt, das die durch einen angegebenen Ausdrucksbaumstruktur dargestellten Abfrage ausgewertet werden kann.</summary>
+        <returns>Ein <see cref="T:System.Linq.IQueryable`1" /> können, die die Abfrage, die durch den angegebenen Ausdrucksbaumstruktur dargestellten auswerten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Linq.IQueryable.Expression%2A> -Eigenschaft des zurückgegebenen <xref:System.Linq.IQueryable%601> Objekt gleich `expression`.  
+  
+ Die <xref:System.Linq.IQueryProvider.CreateQuery%2A> Methode wird verwendet, um die Erstellung neuer <xref:System.Linq.IQueryable%601> Objekte, erhält eine Ausdrucksbaumstruktur dar. Die Abfrage, die durch das zurückgegebene Objekt dargestellt wird, die einen bestimmten LINQ-Anbieter zugeordnet ist.  
+  
+ Die meisten der <xref:System.Linq.Queryable> Standardabfrageoperator-Methoden, die enumerable-Ergebnisse zurückgeben dieser Methode aufrufen. Sie übergeben ein <xref:System.Linq.Expressions.MethodCallExpression> darstellt, die eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public object Execute (System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Execute(class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.IQueryProvider.Execute(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Eine Ausdrucksbaumstruktur, die stellt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage.</param>
+        <summary>Führt die Abfrage, die von einer angegebenen Ausdrucksbaumstruktur dargestellt.</summary>
+        <returns>Der Wert, der sich aus der angegebenen Abfrage ergibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Linq.IQueryProvider.Execute%2A> Methode führt Abfragen, die einen einzelnen Wert (statt eine aufzählbare Sequenz von Werten) zurückgeben. Ausdrucksbaumstrukturen, die Abfragen darstellen, die enumerable-Ergebnisse zurückgeben werden ausgeführt, wenn die zugehörigen <xref:System.Linq.IQueryable> Objekt aufgezählt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public TResult Execute&lt;TResult&gt; (System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TResult Execute&lt;TResult&gt;(class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.IQueryProvider.Execute``1(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ des Werts, der aus der Ausführung der Abfrage.</typeparam>
+        <param name="expression">Eine Ausdrucksbaumstruktur, die stellt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage.</param>
+        <summary>Führt die stark typisierte Abfrage durch einen angegebenen Ausdrucksbaumstruktur dargestellt wird.</summary>
+        <returns>Der Wert, der sich aus der angegebenen Abfrage ergibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Linq.IQueryProvider.Execute%2A> Methode führt Abfragen, die einen einzelnen Wert (statt eine aufzählbare Sequenz von Werten) zurückgeben. Ausdrucksbaumstrukturen, die Abfragen darstellen, die enumerable-Ergebnisse zurückgeben werden ausgeführt, wenn die <xref:System.Linq.IQueryable%601> Objekt, das die Ausdrucksbaumstruktur enthält aufgezählt.  
+  
+ Die <xref:System.Linq.Queryable> Standardabfrageoperator-Methoden, die Singleton Ergebnisse, rufen zurückgeben <xref:System.Linq.IQueryProvider.Execute%2A>. Sie übergeben ein <xref:System.Linq.Expressions.MethodCallExpression> darstellt, die eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

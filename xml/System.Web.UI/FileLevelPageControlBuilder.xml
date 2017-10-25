@@ -1,0 +1,107 @@
+<Type Name="FileLevelPageControlBuilder" FullName="System.Web.UI.FileLevelPageControlBuilder">
+  <TypeSignature Language="C#" Value="public class FileLevelPageControlBuilder : System.Web.UI.RootBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileLevelPageControlBuilder extends System.Web.UI.RootBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.FileLevelPageControlBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.RootBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Auslagerungsdateien analysiert und ist die Standardeinstellung <see cref="T:System.Web.UI.ControlBuilder" /> Klasse für die Analyse von Auslagerungsdateien befinden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelement-Generatoren unterstützen den Parser bei der Erstellung eines Steuerelements und dem untergeordneten Steuerelemente, die das Steuerelement enthält. Die <xref:System.Web.UI.FileLevelPageControlBuilder> Klasse ist die Standardeinstellung <xref:System.Web.UI.ControlBuilder> Klasse für einzelne Auslagerungsdateien befinden. Überschreiben Sie die <xref:System.Web.UI.FileLevelPageControlBuilder> Methoden zur Bereitstellung eines benutzerdefinierten Seite zu analysieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileLevelPageControlBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.FileLevelPageControlBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.FileLevelPageControlBuilder" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.FileLevelPageControlBuilder.%23ctor%2A> Konstruktor wird von ASP.NET verwendet, wenn die Seite zu analysieren und ist nicht für die Verwendung im Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendLiteralString">
+      <MemberSignature Language="C#" Value="public override void AppendLiteralString (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AppendLiteralString(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.FileLevelPageControlBuilder.AppendLiteralString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der dem Steuerelement hinzuzufügende Inhalt.</param>
+        <summary>Fügt den angegebenen literalen Inhalt einem Steuerelement hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.FileLevelPageControlBuilder.AppendLiteralString%2A> Methode, um auf das Steuerelement literalen Inhalt hinzuzufügen. Literalen Inhalt kann beliebiger Text sein, die vom Browser an das Steuerelement übergeben wird. Beispielsweise sind alle HTML-Elemente und der Text zwischen die Start- und Endtags, literalen Inhalt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="M:System.Web.UI.FileLevelPageControlBuilder.AppendLiteralString(System.String)" /> Methode die literale Zeichenfolge auf einer Inhaltsseite kann nicht angefügt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSubBuilder">
+      <MemberSignature Language="C#" Value="public override void AppendSubBuilder (System.Web.UI.ControlBuilder subBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AppendSubBuilder(class System.Web.UI.ControlBuilder subBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.FileLevelPageControlBuilder.AppendSubBuilder(System.Web.UI.ControlBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subBuilder" Type="System.Web.UI.ControlBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="subBuilder">Die <see cref="T:System.Web.UI.ControlBuilder" /> zugewiesen werden, um das untergeordnete Steuerelement.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.ControlBuilder" /> -Objekt an die <see cref="T:System.Web.UI.FileLevelPageControlBuilder" /> Objekt für alle untergeordneten Steuerelemente, die zu dem Containersteuerelement gehören.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.FileLevelPageControlBuilder.AppendSubBuilder%2A> methodenüberschreibungen die <xref:System.Web.UI.ControlBuilder.AppendSubBuilder%2A?displayProperty=nameWithType> Methode, um benutzerdefinierte Logik bereitzustellen, wenn Masterseiten und Inhaltsseiten verwendet werden. In einer Inhaltsseite alle Elemente, die sich nicht innerhalb der <xref:System.Web.UI.WebControls.Content> (mit Ausnahme von Skriptblöcken für Servercode) löst eine <xref:System.Web.HttpParseException> Ausnahme. Hinzufügen einer <xref:System.Web.UI.ControlBuilder> Objekt für ein untergeordnetes Steuerelement, das eine <xref:System.Web.UI.WebControls.Content> -Steuerelement löst eine <xref:System.Web.HttpException> Ausnahme. Weitere Informationen zu Master- und Inhaltsseiten, finden Sie unter [ASP.NET Masterseiten](http://msdn.microsoft.com/library/4e53eedf-8304-4e7a-aed1-691a2623b28b).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="T:System.Web.UI.ControlBuilder" /> , hinzugefügt wurde, zugeordnet ist ein <see cref="T:System.Web.UI.WebControls.Content" /> steuern und darf nur auf Seiten, die enthalten <see cref="T:System.Web.UI.WebControls.Content" /> Steuerelemente.</exception>
+        <exception cref="T:System.Web.HttpParseException">Inhaltsseite enthalten ein Literal außer einem <see cref="T:System.Web.UI.WebControls.Content" /> Steuerelement.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

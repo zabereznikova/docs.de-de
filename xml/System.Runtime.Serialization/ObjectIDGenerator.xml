@@ -1,0 +1,148 @@
+<Type Name="ObjectIDGenerator" FullName="System.Runtime.Serialization.ObjectIDGenerator">
+  <TypeSignature Language="C#" Value="public class ObjectIDGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ObjectIDGenerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.ObjectIDGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>IDs für Objekte generiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Serialization.ObjectIDGenerator> der nachverfolgt vorher identifizierte Objekten. Wenn Sie die ID eines Objekts Anfordern der <xref:System.Runtime.Serialization.ObjectIDGenerator> weiß, ob die vorhandene ID zurück oder generiert und speichert eine neue ID.  
+  
+ Sind die IDs eindeutig für die Lebensdauer der <xref:System.Runtime.Serialization.ObjectIDGenerator> Instanz. Im Allgemeinen eine <xref:System.Runtime.Serialization.ObjectIDGenerator> Leben bleibt solange die <xref:System.Runtime.Serialization.Formatter> , die es erstellt wurde. Objekt-IDs Bedeutung haben, nur innerhalb eines angegebenen serialisierten Streams und dienen zum Nachverfolgen, welche Objekte Verweise auf andere innerhalb des serialisierten Objektdiagramms haben.  
+  
+ Verwenden eine Hashtabelle, die <xref:System.Runtime.Serialization.ObjectIDGenerator> beibehält, welche ID Objekt zugewiesen ist. Objektverweise, die jedes Objekt eindeutig identifiziert werden, sind die Adressen in dem Laufzeitheap Garbage collection. Werte können während der Serialisierung ändern, aber die Tabelle wird automatisch aktualisiert, damit die Informationen richtig sind.  
+  
+ Objekt-IDs sind 64-Bit-Zahlen. Zuordnung beginnt bei 1, daher 0 (null) nie eine gültige Objekt-ID Ein Formatierungsprogramm kann den Wert 0, um einen Objektverweis darzustellen, deren Wert, auswählen `null`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectIDGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectIDGenerator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.ObjectIDGenerator" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetId">
+      <MemberSignature Language="C#" Value="public virtual long GetId (object obj, out bool firstTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 GetId(object obj, [out] bool&amp; firstTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectIDGenerator.GetId(System.Object,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="firstTime" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das eine ID für verwendet werden soll.</param>
+        <param name="firstTime">
+          <see langword="true" />Wenn <c>Obj</c> war zuvor nicht bekannt der <see cref="T:System.Runtime.Serialization.ObjectIDGenerator" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Gibt die ID für das angegebene Objekt eine neue ID generieren, wenn das angegebene Objekt nicht bereits vom identifiziert wurde, hat die <see cref="T:System.Runtime.Serialization.ObjectIDGenerator" />.</summary>
+        <returns>Die ID des Objekts wird für die Serialisierung verwendet. <paramref name="firstTime" />wird festgelegt, um <see langword="true" /> Wenn dies das erste Mal ist das Objekt identifiziert wurde; andernfalls wird er auf festgelegt <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="obj" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <see cref="T:System.Runtime.Serialization.ObjectIDGenerator" /> wurden zu viele Objekte des aufgefordert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasId">
+      <MemberSignature Language="C#" Value="public virtual long HasId (object obj, out bool firstTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 HasId(object obj, [out] bool&amp; firstTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ObjectIDGenerator.HasId(System.Object,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="firstTime" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, dem Sie angefordert werden.</param>
+        <param name="firstTime">
+          <see langword="true" />Wenn <c>Obj</c> war zuvor nicht bekannt der <see cref="T:System.Runtime.Serialization.ObjectIDGenerator" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Bestimmt, ob ein Objekt bereits eine ID zugewiesen wurde</summary>
+        <returns>Die Objekt-ID des <paramref name="obj" /> Wenn zuvor bekannt der <see cref="T:System.Runtime.Serialization.ObjectIDGenerator" />ist, andernfalls 0 (null).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die ID wird zurückgegeben, wenn das Objekt bereits eine ID zugewiesen wurde, und `firstTime` festgelegt ist, um `false`ist, andernfalls 0 (null) zurückgegeben und `firstTime` auf festgelegt ist `true`. <xref:System.Runtime.Serialization.ObjectIDGenerator.HasId%2A>unterscheidet sich von <xref:System.Runtime.Serialization.ObjectIDGenerator.GetId%2A> nie eine ID für ein Objekt erstellt, die noch nicht vom verarbeitet die <xref:System.Runtime.Serialization.ObjectIDGenerator>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="obj" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

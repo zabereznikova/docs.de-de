@@ -1,0 +1,546 @@
+<Type Name="HttpCachePolicyWrapper" FullName="System.Web.HttpCachePolicyWrapper">
+  <TypeSignature Language="C#" Value="public class HttpCachePolicyWrapper : System.Web.HttpCachePolicyBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpCachePolicyWrapper extends System.Web.HttpCachePolicyBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpCachePolicyWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.HttpCachePolicyBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Abstractions, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Kapselt das systeminterne HTTP-Objekt, das Methoden zum Festlegen von cachespezifischen HTTP-Headern und zum Steuern des Ausgabecaches der ASP.NET-Seite enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpCachePolicyWrapper> Klasse leitet sich von der <xref:System.Web.HttpCachePolicyBase> Klasse und dient als Wrapper für die <xref:System.Web.HttpCachePolicy> Klasse. Diese Klasse stellt die Funktionalität von der <xref:System.Web.HttpCachePolicy> Klasse beim Verfügbarmachen auch die <xref:System.Web.HttpCachePolicyBase> Typ. Die <xref:System.Web.HttpCachePolicyBase> -Klasse können Sie die ursprüngliche Implementierung der ersetzen die <xref:System.Web.HttpCachePolicy> Klasse in der Anwendung durch eine benutzerdefinierte Implementierung, z. B. beim Ausführen von Komponententests, die außerhalb der ASP.NET-Pipeline.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCachePolicyWrapper (System.Web.HttpCachePolicy httpCachePolicy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.HttpCachePolicy httpCachePolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.#ctor(System.Web.HttpCachePolicy)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="httpCachePolicy" Type="System.Web.HttpCachePolicy" />
+      </Parameters>
+      <Docs>
+        <param name="httpCachePolicy">Das Objekt, auf das diese Wrapperklasse Zugriff bietet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.HttpCachePolicyWrapper" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="httpCachePolicy" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValidationCallback">
+      <MemberSignature Language="C#" Value="public override void AddValidationCallback (System.Web.HttpCacheValidateHandler handler, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddValidationCallback(class System.Web.HttpCacheValidateHandler handler, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.AddValidationCallback(System.Web.HttpCacheValidateHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Web.HttpCacheValidateHandler" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Das Objekt, von dem die Anforderung verarbeitet wird.</param>
+        <param name="data">Die vom Benutzer bereitgestellten Daten, die an den <see cref="M:System.Web.HttpCachePolicyWrapper.AddValidationCallback(System.Web.HttpCacheValidateHandler,System.Object)" />-Delegaten übergeben werden.</param>
+        <summary>Registriert einen Validierungsrückruf für die aktuelle Antwort.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="handler" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendCacheExtension">
+      <MemberSignature Language="C#" Value="public override void AppendCacheExtension (string extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AppendCacheExtension(string extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.AppendCacheExtension(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="extension">Der Text, der an den <see langword="Cache-Control" />-Header angefügt werden soll.</param>
+        <summary>Fügt den angegebenen Text an den HTTP-Header <see langword="Cache-Control" /> an.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="extension" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAllowResponseInBrowserHistory">
+      <MemberSignature Language="C#" Value="public override void SetAllowResponseInBrowserHistory (bool allow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetAllowResponseInBrowserHistory(bool allow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetAllowResponseInBrowserHistory(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="allow" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="allow">
+          <see langword="true" />um die Clientbrowsers, dass Antworten im Verlaufscache Browsers gespeichert werden sollen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</param>
+        <summary>Stellt die Antwort zur Verfügung im Verlaufscache Browsers unabhängig von der <see cref="T:System.Web.HttpCacheability" /> Einstellung, die auf dem Server vorgenommen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCacheability">
+      <MemberSignature Language="C#" Value="public override void SetCacheability (System.Web.HttpCacheability cacheability);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetCacheability(valuetype System.Web.HttpCacheability cacheability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetCacheability(System.Web.HttpCacheability)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cacheability" Type="System.Web.HttpCacheability" />
+      </Parameters>
+      <Docs>
+        <param name="cacheability">Die <see cref="T:System.Web.HttpCacheability" /> Enumerationswert, auf die Header festgelegt werden soll.</param>
+        <summary>Legt die <see langword="Cache-Control" /> -Header auf den angegebenen <see cref="T:System.Web.HttpCacheability" /> Wert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="cacheability" />ist keiner der Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCacheability">
+      <MemberSignature Language="C#" Value="public override void SetCacheability (System.Web.HttpCacheability cacheability, string field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetCacheability(valuetype System.Web.HttpCacheability cacheability, string field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetCacheability(System.Web.HttpCacheability,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cacheability" Type="System.Web.HttpCacheability" />
+        <Parameter Name="field" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cacheability">Die <see cref="T:System.Web.HttpCacheability" /> Enumerationswert, auf die Header festgelegt werden soll.</param>
+        <param name="field">Die Cache-Control-Erweiterung, die dem Header hinzugefügt werden soll.</param>
+        <summary>Legt die <see langword="Cache-Control" /> -Header auf den angegebenen <see cref="T:System.Web.HttpCacheability" /> -Wert und fügt eine Erweiterung an die Direktive.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="field" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="cacheability" /> ist nicht <see cref="F:System.Web.HttpCacheability.Private" /> oder <see cref="F:System.Web.HttpCacheability.NoCache" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetETag">
+      <MemberSignature Language="C#" Value="public override void SetETag (string etag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetETag(string etag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetETag(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="etag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="etag">Der Text, der für die <see langword="ETag" /> Header.</param>
+        <summary>Legt die <see langword="ETag" /> HTTP-Header auf die angegebene Zeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="etag" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see langword="ETag" /> -Header wurde bereits festgelegt.  
+  
+ \- oder –  
+  
+ Die <see cref="M:System.Web.HttpCachePolicy.SetETagFromFileDependencies" />-Methode wurde bereits aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetETagFromFileDependencies">
+      <MemberSignature Language="C#" Value="public override void SetETagFromFileDependencies ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetETagFromFileDependencies() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetETagFromFileDependencies" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die <see langword="ETag" /> HTTP-Header auf Grundlage der Zeitstempel der dateiabhängigkeiten des Handlers.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see langword="ETag" /> -Header wurde bereits festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetExpires">
+      <MemberSignature Language="C#" Value="public override void SetExpires (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetExpires(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetExpires(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">Die absolute Ablaufzeit.</param>
+        <summary>Legt die <see langword="Expires" /> HTTP-Header auf ein absolutes Datum und Uhrzeit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLastModified">
+      <MemberSignature Language="C#" Value="public override void SetLastModified (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetLastModified(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetLastModified(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">Der festzulegende Datum / Uhrzeit-Wert der <see langword="Last-Modified" /> Header an.</param>
+        <summary>Legt die <see langword="Last-Modified" /> -HTTP-Header angegebene Datum und Uhrzeit.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="date" /> liegt nach dem aktuellen <see langword="DateTime" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLastModifiedFromFileDependencies">
+      <MemberSignature Language="C#" Value="public override void SetLastModifiedFromFileDependencies ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetLastModifiedFromFileDependencies() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetLastModifiedFromFileDependencies" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die <see langword="Last-Modified" /> HTTP-Header auf Grundlage der Zeitstempel der dateiabhängigkeiten des Handlers.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMaxAge">
+      <MemberSignature Language="C#" Value="public override void SetMaxAge (TimeSpan delta);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetMaxAge(valuetype System.TimeSpan delta) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetMaxAge(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delta" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="delta">Die Zeitspanne, legen Sie die <see langword="Cache" /> - <see langword="Control: max-age" /> Header an.</param>
+        <summary>Legt die <see langword="Cache-Control: max-age" /> HTTP-Header auf die angegebene Zeitspanne.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="delta" />ist kleiner als 0 oder größer als ein Jahr.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNoServerCaching">
+      <MemberSignature Language="C#" Value="public override void SetNoServerCaching ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetNoServerCaching() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetNoServerCaching" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet jegliches Ausgangsserver-Zwischenspeichern für die aktuelle Antwort.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNoStore">
+      <MemberSignature Language="C#" Value="public override void SetNoStore ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetNoStore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetNoStore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die <see langword="Cache-Control: no-store" /> HTTP-Header.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNoTransforms">
+      <MemberSignature Language="C#" Value="public override void SetNoTransforms ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetNoTransforms() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetNoTransforms" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die <see langword="Cache-Control: no-transform" /> HTTP-Header.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOmitVaryStar">
+      <MemberSignature Language="C#" Value="public override void SetOmitVaryStar (bool omit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetOmitVaryStar(bool omit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetOmitVaryStar(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="omit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="omit">
+          <see langword="true" />Weiterleiten der <see cref="T:System.Web.HttpCachePolicy" /> Objekt, das nicht verwendet den *-Wert für seine <see cref="P:System.Web.HttpCachePolicy.VaryByHeaders" /> Eigenschaft ist, andernfalls <see langword="false" />.</param>
+        <summary>Gibt an, ob die Antwort enthält den <see langword="vary:*" /> Header bei variieren der Parameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProxyMaxAge">
+      <MemberSignature Language="C#" Value="public override void SetProxyMaxAge (TimeSpan delta);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetProxyMaxAge(valuetype System.TimeSpan delta) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetProxyMaxAge(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delta" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="delta">Die Zeitspanne, legen Sie die <see langword="Cache-Control: s-maxage" /> Header an.</param>
+        <summary>Legt die <see langword="Cache-Control: s-maxage" /> HTTP-Header auf die angegebene Zeitspanne.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="delta" /> ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRevalidation">
+      <MemberSignature Language="C#" Value="public override void SetRevalidation (System.Web.HttpCacheRevalidation revalidation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetRevalidation(valuetype System.Web.HttpCacheRevalidation revalidation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetRevalidation(System.Web.HttpCacheRevalidation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="revalidation" Type="System.Web.HttpCacheRevalidation" />
+      </Parameters>
+      <Docs>
+        <param name="revalidation">Die <see cref="T:System.Web.HttpCacheRevalidation" /> Enumerationswert festzulegende der <see langword="Cache-Control" /> Header an.</param>
+        <summary>Legt die <see langword="Cache-Control" /> -HTTP-Header entweder die <see langword="must-revalidate" /> oder <see langword="proxy-revalidate" /> Direktiven, basierend auf dem angegebenen Enumerationswert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="revalidation" />ist keiner der Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSlidingExpiration">
+      <MemberSignature Language="C#" Value="public override void SetSlidingExpiration (bool slide);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetSlidingExpiration(bool slide) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetSlidingExpiration(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="slide" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="slide">
+          <see langword="true" />eine gleitende Ablaufzeit für den Cache, und klicken Sie auf "false", legen Sie eine absolute Cacheablauf festlegen.</param>
+        <summary>Legt die Ablaufzeit für den Cache als absolut oder gleitend fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValidUntilExpires">
+      <MemberSignature Language="C#" Value="public override void SetValidUntilExpires (bool validUntilExpires);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetValidUntilExpires(bool validUntilExpires) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetValidUntilExpires(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validUntilExpires" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="validUntilExpires">
+          <see langword="true" />um anzugeben, dass ASP.NET ignorieren soll <see langword="Cache-Control" /> -ungültigkeitserklärungsheader ist, andernfalls <see langword="false" />.</param>
+        <summary>Gibt an, ob der ASP.NET-Cache HTTP ignorieren soll <see langword="Cache-Control" /> vom Client gesendeten Header, die den Cache für ungültig zu erklären.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVaryByCustom">
+      <MemberSignature Language="C#" Value="public override void SetVaryByCustom (string custom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetVaryByCustom(string custom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyWrapper.SetVaryByCustom(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="custom" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="custom">Die Textzeichenfolge, mit der die zwischengespeicherte Ausgabe variiert werden soll.</param>
+        <summary>Gibt eine Textzeichenfolge an, mit der zwischengespeicherte Ausgabeantworten variiert werden sollen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="custom" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="M:System.Web.HttpCachePolicy.SetVaryByCustom(System.String)" />-Methode wurde bereits aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByContentEncodings">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpCacheVaryByContentEncodings VaryByContentEncodings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCacheVaryByContentEncodings VaryByContentEncodings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCachePolicyWrapper.VaryByContentEncodings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheVaryByContentEncodings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der <see langword="Content-Encoding" /> Header, die zum des Ausgabecaches verwendet werden.</summary>
+        <value>Ein Objekt, das angibt, <see langword="Content-Encoding" /> Header zum Auswählen der zwischengespeicherten Antwort verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByHeaders">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpCacheVaryByHeaders VaryByHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCacheVaryByHeaders VaryByHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCachePolicyWrapper.VaryByHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheVaryByHeaders</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste aller HTTP-Header ab, mit denen die Cacheausgabe variiert wird.</summary>
+        <value>Ein Objekt, das angibt, welche HTTP-Header zum Auswählen der zwischengespeicherten Antwort verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByParams">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpCacheVaryByParams VaryByParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCacheVaryByParams VaryByParams" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCachePolicyWrapper.VaryByParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheVaryByParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Parameter, die von einem HTTP-Empfang <see langword="GET" /> oder HTTP <see langword="POST" /> , von denen caching beeinflusst.</summary>
+        <value>Ein Objekt, das angibt, welche Parameter zur Cachesteuerung verwendet werden, um die zwischengespeicherte Antwort auszuwählen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

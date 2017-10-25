@@ -1,0 +1,168 @@
+<Type Name="ConsoleTraceListener" FullName="System.Diagnostics.ConsoleTraceListener">
+  <TypeSignature Language="C#" Value="public class ConsoleTraceListener : System.Diagnostics.TextWriterTraceListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConsoleTraceListener extends System.Diagnostics.TextWriterTraceListener" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.ConsoleTraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TextWriterTraceListener</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Leitet Ablaufverfolgungs- oder debuggingausgabe an die Standardausgabe oder den Standardfehlerstream.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.ConsoleTraceListener> Klasse Trace und Debugmeldungen an die Konsole geschrieben. Können Sie initialisieren ein <xref:System.Diagnostics.ConsoleTraceListener> Ablaufverfolgungsmeldungen zu schreibende Objekt die <xref:System.Console.Out%2A?displayProperty=nameWithType> Stream oder die <xref:System.Console.Error%2A?displayProperty=nameWithType> Stream.  
+  
+> [!IMPORTANT]
+>  <xref:System.IDisposable>-Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer`try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ Wenn verfolgen und die Debugausgabe aktiviert ist, die <xref:System.Diagnostics.ConsoleTraceListener> Nachrichten geschrieben werden, auf den angegebenen <xref:System.Console?displayProperty=nameWithType> Stream, der die Art und Weise Nachrichten geschrieben werden ähnelt, mit der <xref:System.Console.Write%2A?displayProperty=nameWithType> oder <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> Methoden. In einer Konsolenanwendung die <xref:System.Console?displayProperty=nameWithType> Ausgabe und Fehlerstreams Schreiben von Nachrichten an das vorhandene Konsolenfenster oder zum Schreiben in Streams können umgeleitet werden, eine <xref:System.IO.TextWriter?displayProperty=nameWithType> Instanz.  
+  
+> [!NOTE]
+>  Wenn die Konsole nicht, wie in einer Windows-basierten Anwendung vorhanden ist, werden Nachrichten, die in die Konsole geschrieben nicht angezeigt.  
+  
+ Hinzufügen einer <xref:System.Diagnostics.ConsoleTraceListener> Objekt an die entsprechende <xref:System.Diagnostics.Trace.Listeners%2A> Auflistung, wenn Nachrichten über geschrieben werden soll <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.TraceSource>, oder <xref:System.Diagnostics.Debug> in die Konsole geschrieben werden sollen. Darüber hinaus können Sie Nachrichten schreiben, direkt an die Konsole mit der <xref:System.Diagnostics.Trace.Write%2A?displayProperty=nameWithType> oder <xref:System.Diagnostics.Trace.WriteLine%2A?displayProperty=nameWithType> Methoden.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.Debug> und <xref:System.Diagnostics.Trace> Klassen verwenden dieselbe <xref:System.Diagnostics.TraceListenerCollection> bindungsauflistung, erfolgt über ihren jeweiligen `Listeners` Eigenschaften. Wenn Sie beim Hinzufügen einer <xref:System.Diagnostics.ConsoleTraceListener> Objekt der Auflistung unter Verwendung einer dieser Klassen, die andere Klasse automatisch den gleichen Listener verwendet.  
+  
+ Die meisten Compiler aktivieren Sie die Ablaufverfolgung und debug-Ausgabe über die bedingte Kompilierung Flags. Wenn Sie nicht aktivieren Ablaufverfolgungs- oder Debugmeldungen, die geschrieben werden, über die <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xref:System.Diagnostics.Trace?displayProperty=nameWithType> Klassen effektiv ignoriert. Die Syntax zum Aktivieren der Ablaufverfolgung und debug-Ausgabe ist compilerspezifisch. Wenn Sie den Compiler als c# oder Visual Basic verwenden, finden Sie in der Dokumentation für den Compiler.  
+  
+-   Fügen Sie zum Aktivieren des Debuggens in C# geschrieben, die **/d: Debug**Flag an die Befehlszeile des Compilers beim Kompilieren des Codes, oder Sie fügen **#define DEBUG** an den Anfang der Datei. Fügen Sie in Visual Basic die **/d: Debug = "true"** -Kennzeichen an die Befehlszeile des Compilers.  
+  
+-   Fügen Sie zum Aktivieren der Ablaufverfolgung in c# die **r** Flag an die Befehlszeile des Compilers beim Kompilieren des Codes, oder fügen **#define TRACE** an den Anfang der Datei. Fügen Sie in Visual Basic die **r = "true"** -Kennzeichen an die Befehlszeile des Compilers.  
+  
+ Können Sie hinzufügen eine <xref:System.Diagnostics.ConsoleTraceListener> -Objekt an die <xref:System.Diagnostics.Trace.Listeners%2A> Auflistung in Ihrem Code verwenden, oder Sie können hinzufügen eine <xref:System.Diagnostics.ConsoleTraceListener> -Objekt an der <xref:System.Diagnostics.Trace.Listeners%2A> Auflistung über die Anwendungskonfigurationsdatei aufnehmen. Hinzufügen der <xref:System.Diagnostics.ConsoleTraceListener> Objekts in Ihrem Code zum Schreiben von Nachrichten für einen bestimmten Codepfad Abschnitt oder ausführen. Hinzufügen der <xref:System.Diagnostics.ConsoleTraceListener> Objekt in der Anwendungskonfigurationsdatei, leiten alle Ablaufverfolgungs- und Debugeinstellungen Meldungen an die Konsole, während die Anwendung ausgeführt wird.  
+  
+ Zum Schreiben der Ablaufverfolgung und Debugnachrichten an die Konsole für einen bestimmten Abschnitt des Codes, Initialisieren einer <xref:System.Diagnostics.ConsoleTraceListener> -Objekt und fügen Sie diese der <xref:System.Diagnostics.Trace.Listeners%2A> Auflistung. Instrumentieren des Codeabschnitts, der Nachrichten mit enthält die <xref:System.Diagnostics.Trace> oder <xref:System.Diagnostics.Debug> Klassen. Entfernen Sie am Ende der Codeabschnitt, der <xref:System.Diagnostics.ConsoleTraceListener> -Objekt aus der <xref:System.Diagnostics.Trace.Listeners%2A> Auflistung, und rufen die <xref:System.Diagnostics.TextWriterTraceListener.Close%2A> Methode für die <xref:System.Diagnostics.ConsoleTraceListener>.  
+  
+ Um alle Trace weiterleiten und Debugnachrichten an die Konsole, während die Anwendung ausgeführt wird, fügen einen <xref:System.Diagnostics.ConsoleTraceListener> Objekt, das die Anwendungskonfigurationsdatei aufnehmen. Bearbeiten Sie die Konfigurationsdatei, die den Namen der Anwendung entspricht, oder die Datei "App.config" in einem [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] Projekt. In dieser Datei fügen Sie ein Element für eine <xref:System.Diagnostics.ConsoleTraceListener>.  
+  
+ Im folgenden Beispiel wird eine <xref:System.Diagnostics.ConsoleTraceListener> Objekt mit dem Namen `configConsoleListener` auf die <xref:System.Diagnostics.Trace.Listeners%2A> Auflistung.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="4">  
+      <listeners>  
+        <add name="configConsoleListener"            type="System.Diagnostics.ConsoleTraceListener" />  
+      </listeners>  
+    </trace>  
+  </system.diagnostics>  
+ </configuration>  
+```  
+  
+ Informationen zum Hinzufügen der Ablaufverfolgungslistener in der Anwendungskonfigurationsdatei finden Sie unter [ &lt;Listener&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel implementiert eine Konsolenanwendung, bestehend aus einer Klasse mit zwei öffentliche Methoden.  
+  
+ Die `Main` -Methode untersucht die Befehlszeilenargumente und bestimmt, ob die Ablaufverfolgungsausgabe an den Standardfehlerstream oder den Standardausgabestream weitergeleitet werden sollen. `Main`erstellt und initialisiert ein <xref:System.Diagnostics.ConsoleTraceListener> für das angegebene Objekt <xref:System.Console> Ausgabestream und fügt der Auflistung der Ablaufverfolgungslistener dieses Objekt hinzu. Er ruft dann die `WriteEnvironmentInfoToTrace` -Methode, die Details zur ausgeführten Umgebung und die Trace-Listener-Konfiguration auf die Ablaufverfolgungsausgabe geschrieben.  
+  
+ Beim Ausführen der beispielanwendung werden in den Ausgabestream angegebene Konsole über die Umgebung und die Trace-Konfigurationsdetails geschrieben der <xref:System.Diagnostics.ConsoleTraceListener> Objekt.  
+  
+ [!code-csharp[Diagnostics_ConsoleTraceListener#1](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_ConsoleTraceListener/CS/program.cs#1)]
+ [!code-vb[Diagnostics_ConsoleTraceListener#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_ConsoleTraceListener/VB/consoletrace.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsoleTraceListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ConsoleTraceListener.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.ConsoleTraceListener" /> Klasse Trace-Ausgabe in den Standardausgabestream geschrieben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert ein <xref:System.Diagnostics.ConsoleTraceListener> Objekt zum Schreiben von Nachrichten an die <xref:System.Console.Out%2A?displayProperty=nameWithType> Stream. Die <xref:System.Diagnostics.TraceListener.Name%2A> -Eigenschaft wird initialisiert, um eine leere Zeichenfolge ("").  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird initialisiert einen <xref:System.Diagnostics.ConsoleTraceListener> für das angegebene Objekt <xref:System.Console> Ausgabestream und fügt es der Auflistung der Ablaufverfolgungslistener hinzu. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.ConsoleTraceListener> Klasse.  
+  
+ [!code-csharp[Diagnostics_ConsoleTraceListener#2](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_ConsoleTraceListener/CS/program.cs#2)]
+ [!code-vb[Diagnostics_ConsoleTraceListener#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_ConsoleTraceListener/VB/consoletrace.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsoleTraceListener (bool useErrorStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool useErrorStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ConsoleTraceListener.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="useErrorStream" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useErrorStream">
+          <see langword="true" />Schreiben Sie die Ablaufverfolgung und Debuggen die Ausgabe an den Standardfehlerstream; <see langword="false" /> Ablaufverfolgung und debugging-Ausgabe in den Standardausgabestream geschrieben.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.ConsoleTraceListener" /> Klasse mit einer Option aus, um die Ablaufverfolgungsausgabe in den Standardausgabestream oder den Standardfehlerstream zu schreiben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert ein <xref:System.Diagnostics.ConsoleTraceListener> Objekt zum Schreiben von Nachrichten an die <xref:System.Console.Out%2A?displayProperty=nameWithType> oder <xref:System.Console.Error%2A?displayProperty=nameWithType> Stream. Die <xref:System.Diagnostics.TraceListener.Name%2A> -Eigenschaft wird initialisiert, um eine leere Zeichenfolge ("").  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird initialisiert einen <xref:System.Diagnostics.ConsoleTraceListener> für das angegebene Objekt <xref:System.Console> Ausgabestream und fügt es der Auflistung der Ablaufverfolgungslistener hinzu. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.ConsoleTraceListener> Klasse.  
+  
+ [!code-csharp[Diagnostics_ConsoleTraceListener#2](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_ConsoleTraceListener/CS/program.cs#2)]
+ [!code-vb[Diagnostics_ConsoleTraceListener#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_ConsoleTraceListener/VB/consoletrace.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ConsoleTraceListener.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die Ausgabe in den Stream für diesen Trace-Listener angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für diese angegebenen Stream <xref:System.Diagnostics.ConsoleTraceListener> Instanz (entweder die <xref:System.Console.Out%2A?displayProperty=nameWithType> Stream oder die <xref:System.Console.Error%2A?displayProperty=nameWithType> Stream) ist geschlossen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

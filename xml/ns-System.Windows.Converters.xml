@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Converters">
+  <Docs>
+    <summary>Stellt Klassen zur Unterstützung von typkonvertierung während der Serialisierung in Windows Presentation Foundation (WPF).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

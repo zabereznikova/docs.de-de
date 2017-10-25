@@ -1,0 +1,98 @@
+<Type Name="DesignerEventArgs" FullName="System.ComponentModel.Design.DesignerEventArgs">
+  <TypeSignature Language="C#" Value="public class DesignerEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.ComponentModel.Design.IDesignerEventService.DesignerCreated" />-Ereignis und das <see cref="E:System.ComponentModel.Design.IDesignerEventService.DesignerDisposed" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.IDesignerEventService.DesignerCreated> und <xref:System.ComponentModel.Design.IDesignerEventService.DesignerDisposed> Ereignisse werden ausgelöst, wenn ein Dokument erstellt oder verworfen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Erstellen einer <xref:System.ComponentModel.Design.DesignerEventArgs>.  
+  
+ [!code-cpp[DesignerEventArgsExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DesignerEventArgsExample/CPP/designereventargsexample.cpp#1)]
+ [!code-csharp[DesignerEventArgsExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DesignerEventArgsExample/CS/designereventargsexample.cs#1)]
+ [!code-vb[DesignerEventArgsExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DesignerEventArgsExample/VB/designereventargsexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerEventArgs (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerEventArgs.#ctor(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> des Dokuments.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignerEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Designer">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.IDesignerHost Designer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.IDesignerHost Designer" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerEventArgs.Designer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.IDesignerHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Host des Dokuments ab.</summary>
+        <value>Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> des Dokuments.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

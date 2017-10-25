@@ -1,0 +1,419 @@
+<Type Name="EntityContainer" FullName="System.Data.Metadata.Edm.EntityContainer">
+  <TypeSignature Language="C#" Value="public sealed class EntityContainer : System.Data.Metadata.Edm.GlobalItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EntityContainer extends System.Data.Metadata.Edm.GlobalItem" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.EntityContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Metadata.Edm.GlobalItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Entitätscontainer in einem konzeptionellen Modell dar. Ein <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> ist eine logische Gruppierung von Entitätenmengen und Zuordnungssätzen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf konzeptioneller Ebene stellt die <xref:System.Data.Metadata.Edm.EntityContainer>-Klasse einen Container dar, der einem Datenbankobjekt im Speichermetadatenschema zugeordnet wird. Auf der Speicherebene stellt die <xref:System.Data.Metadata.Edm.EntityContainer>-Klasse eine Beschreibung der Tabellen und/oder der Schlüsselbeziehungen dar, in denen die Daten für auf dem Modell basierende Anwendungen dauerhaft gespeichert werden. Weitere Informationen über die Entitätencontainer in einem konzeptionellen Modell finden Sie unter [Entity Container (EDM)](http://msdn.microsoft.com/en-us/9afa762f-59b8-4a70-b76d-89d90760144c).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird dargestellt, wie von der Verbindung ein Metadaten-Arbeitsbereich abgerufen und verwendet wird, um Informationen über die Entitätencontainer im angegebenen Datenmodell abzurufen. Beachten Sie, dass es sich beim Metadaten-Arbeitsbereich um eine Laufzeitdienstkomponente handelt, die Unterstützung für das Abrufen von Metadaten bereitstellt.  
+  
+ Im Codebeispiel wird ein <xref:System.Data.Metadata.Edm.DataSpace.CSpace> und ein <xref:System.Data.Metadata.Edm.DataSpace.SSpace> verwendet, um das Modell anzugeben. <xref:System.Data.Metadata.Edm.DataSpace.CSpace> stellt den Standardnamen für das konzeptionelle Modell dar. <xref:System.Data.Metadata.Edm.DataSpace.SSpace> stellt den Standardnamen für das Speichermodell dar.  
+  
+ Die `GetEntityContainers` Methode ruft eine Auflistung von Entitätencontainer und durchläuft dann der Auflistung abzurufenden jede Entitätenmenge und einen Zuordnungssatz im angegebenen Container. Im Codebeispiel wird die AdventureWorks-Modell, das bereitgestellt wird die [Adventure Works Model (EDM)](http://msdn.microsoft.com/en-us/da87d29e-8c89-4310-bbac-5cbd062930a7)Thema. Ein Beispiel der Anwendungskonfigurationsdatei, finden Sie unter [Adventure Works-Objektmodell in Applications (EDM)](http://msdn.microsoft.com/en-us/84c01270-90ba-467b-ad24-df10c1ca8f45).  
+  
+```csharp  
+using System;  
+using System.Data;  
+using System.Data.EntityClient;  
+using System.Data.Metadata.Edm;  
+using System.Collections.ObjectModel;  
+  
+class GetEntityContainerExample  
+{  
+  static void Main()  
+  {  
+    try  
+    {  
+       // Establish a connection to the underlying data provider by   
+       // using the connection string specified in the config file.  
+       using (EntityConnection connection =  
+          new EntityConnection("Name=AdventureWorksEntities"))  
+       {  
+         // Open the connection.  
+         connection.Open();  
+  
+         // Access the metadata workspace.  
+         MetadataWorkspace workspace =   
+            connection.GetMetadataWorkspace();  
+  
+         // Get the entity containers in the conceptual model.  
+         GetEntityContainers(workspace, DataSpace.CSpace);  
+  
+         // Get the entity containers in the storage model.  
+             GetEntityContainers(workspace, DataSpace.SSpace);  
+       }  
+    }  
+    catch (MetadataException exceptionMetadata)  
+    {  
+      Console.WriteLine("MetadataException: {0}",   
+                       exceptionMetadata.Message);  
+    }  
+    catch (System.Data.MappingException exceptionMapping)  
+    {  
+      Console.WriteLine("MappingException: {0}",  
+                       exceptionMapping.Message);  
+    }  
+  }  
+  
+  public static void GetEntityContainers(  
+      MetadataWorkspace workspace, DataSpace model)  
+  {  
+    // Get a collection of the entity containers.  
+    ReadOnlyCollection<EntityContainer> containers =   
+         workspace.GetItems<EntityContainer>(model);  
+  
+    // Iterate through the collection to get each entity container.  
+    foreach (EntityContainer container in containers)  
+    {  
+       Console.WriteLine("EntityContainer Name: {0} ",   
+                        container.Name);  
+  
+       // EntitySetBase is a super type for   
+       // EntitySets and RelationshipSets.   
+       // Iterate through the collection to get each EntitySetBase.  
+       foreach (EntitySetBase baseSet in container.BaseEntitySets)  
+       {  
+          // Check if this instance is an EntitySet.  
+          if (baseSet is EntitySet)  
+          {  
+             Console.WriteLine(  
+                "  EntitySet Name: {0} , EntityType Name: {1} ",  
+                baseSet.Name, baseSet.ElementType.FullName);  
+          }  
+  
+         // RelationshipSet is a super type for AssociationSet.  
+         // Check if this instance is an AssociationSet.  
+         if (baseSet is AssociationSet)  
+         {  
+            Console.WriteLine(  
+               "  AssociationSet Name: {0} , " +  
+               "AssociationType Name: {1} ",  
+                baseSet.Name, baseSet.ElementType.FullName);  
+  
+            // Get the AssociationSet.  
+            AssociationSet associationSet =   
+                  baseSet as AssociationSet;  
+  
+            // Iterate through the collection to get   
+            // each AssociatedSetEnd.  
+            foreach (AssociationSetEnd end in   
+               associationSet.AssociationSetEnds)  
+            {  
+               Console.WriteLine(  
+                  "   EntitySet Name: {0} , Name: {1} ",  
+                  end.EntitySet, end.Name);  
+            }  
+         }  
+      }  
+    }  
+  }  
+}  
+```  
+  
+```vb  
+Imports System  
+Imports System.Collections.ObjectModel  
+Imports System.Data  
+Imports System.Data.EntityClient  
+Imports System.Data.Metadata.Edm  
+  
+Class GetEntityContainerExample  
+  Public Shared Sub Main()  
+    Try  
+      ' Establish a connection to the underlying data provider by   
+      ' using the connection string specified in the config file.  
+      Using connection As EntityConnection = _  
+        New EntityConnection("Name=AdventureWorksEntities")  
+  
+        ' Open the conection.  
+        connection.Open()  
+  
+        ' Access the metadata workspace.  
+        Dim workspace As MetadataWorkspace = _  
+           connection.GetMetadataWorkspace  
+  
+        ' Get the entity containers in the conceptual model.  
+        GetEntityContainers(workspace, DataSpace.CSpace)  
+  
+        ' Get the entity containers in the storage model.  
+        GetEntityContainers(workspace, DataSpace.SSpace)  
+      End Using  
+    Catch exceptionMetadata As MetadataException  
+       Console.WriteLine("MetadataException: {0}", _  
+          exceptionMetadata.Message)  
+    Catch exceptionMapping As MappingException  
+       Console.WriteLine("MappingException: {0}", _  
+          exceptionMapping.Message)  
+     End Try  
+  End Sub  
+  
+  Public Shared Sub GetEntityContainers( _  
+    ByVal workspace As MetadataWorkspace, ByVal model As DataSpace)  
+  
+    ' Get a collection of the entity containers.  
+    Dim containers As ReadOnlyCollection(Of EntityContainer) = _  
+       workspace.GetItems(Of EntityContainer)(model)  
+  
+    ' Iterate through the collection to get each entity container.  
+    Dim container As EntityContainer  
+    For Each container In containers  
+      Console.WriteLine("EntityContainer Name: {0} ", container.Name)  
+  
+      ' EntitySetBase is a super type for   
+      ' EntitySets and RelationshipSets.   
+      ' Iterate through the collection to get each EntitySetBase.  
+      Dim baseSet As EntitySetBase  
+      For Each baseSet In container.BaseEntitySets  
+         ' Check if this instance is an EntitySet.  
+         If TypeOf baseSet Is EntitySet Then  
+           Console.WriteLine( _  
+              "  EntitySet Name: {0} , EntityType Name: {1} ", _  
+              baseSet.Name, baseSet.ElementType.FullName)  
+          End If  
+  
+          ' RelationshipSet is a super type for AssociationSet.  
+          ' Check if this instance is an AssociationSet.  
+          If TypeOf baseSet Is AssociationSet Then  
+            Console.WriteLine( _  
+              "  AssociationSet Name: {0} , " + _  
+              "AssociationType Name: {1} ", _  
+              baseSet.Name, baseSet.ElementType.FullName)  
+  
+            ' Get the AssociationSet.  
+            Dim associationSet As AssociationSet = _  
+               TryCast(baseSet, AssociationSet)  
+  
+            ' Iterate through the collection to get   
+            '  each AssociatedSetEnd.  
+            Dim endMember As AssociationSetEnd  
+            For Each endMember In associationSet.AssociationSetEnds  
+              Console.WriteLine( _  
+                 "   EntitySet Name: {0} , Name: {1} ", _  
+                 endMember.EntitySet, endMember.Name)  
+            Next  
+          End If  
+      Next  
+    Next  
+  End Sub  
+End Class  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BaseEntitySets">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.EntitySetBase&gt; BaseEntitySets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1&lt;class System.Data.Metadata.Edm.EntitySetBase&gt; BaseEntitySets" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EntityContainer.BaseEntitySets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.EntitySetBase&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von Entitätenmengen und Zuordnungssätzen auf, die in diesem <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> enthalten sind.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1" />-Objekt, das eine Liste von Entitätenmengen und Zuordnungssätzen enthält, die in diesem <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> enthalten sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuiltInTypeKind">
+      <MemberSignature Language="C#" Value="public override System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EntityContainer.BuiltInTypeKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.BuiltInTypeKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die integrierte Typart für <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> auf.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.BuiltInTypeKind" />-Objekt, das die integrierte Typart für <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FunctionImports">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt; FunctionImports { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1&lt;class System.Data.Metadata.Edm.EdmFunction&gt; FunctionImports" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EntityContainer.FunctionImports" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Auflistung von <see cref="T:System.Data.Metadata.Edm.EdmFunction" />-Elementen an. Jede Funktion enthält die Details einer gespeicherten Prozedur, die in der Datenbank oder einer gleichwertigen vorhanden <c>CommandText</c> , die einer Entität und ihre Eigenschaften zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1" /> enthält <see cref="T:System.Data.Metadata.Edm.EdmFunction" /> Elemente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntitySetByName">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EntitySet GetEntitySetByName (string name, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.EntitySet GetEntitySetByName(string name, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.EntityContainer.GetEntitySetByName(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EntitySet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Entitätenmenge, die gesucht wird.</param>
+        <param name="ignoreCase">
+          <see langword="true" />in der Groß-/Kleinschreibung gesucht; andernfalls <see langword="false" />.</param>
+        <summary>Gibt mithilfe des angegebenen Namens für die Entitätenmenge ein <see cref="T:System.Data.Metadata.Edm.EntitySet" />-Objekt zurück.</summary>
+        <returns>Ein <see cref="T:System.Data.Metadata.Edm.EntitySet" />-Objekt, das die Entitätenmenge mit dem angegebenen Namen darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationshipSetByName">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.RelationshipSet GetRelationshipSetByName (string name, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.RelationshipSet GetRelationshipSetByName(string name, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.EntityContainer.GetRelationshipSetByName(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.RelationshipSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Beziehungssatzes, der gesucht wird.</param>
+        <param name="ignoreCase">
+          <see langword="true" />in der Groß-/Kleinschreibung gesucht; andernfalls <see langword="false" />.</param>
+        <summary>Gibt mithilfe des angegebenen Namens für den Beziehungssatz ein <see cref="T:System.Data.Metadata.Edm.RelationshipSet" />-Objekt zurück.</summary>
+        <returns>Ein <see cref="T:System.Data.Metadata.Edm.RelationshipSet" />-Objekt, das den Beziehungssatz mit dem angegebenen Namen darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EntityContainer.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen dieses <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> ab.</summary>
+        <value>Der Name dieses <see cref="T:System.Data.Metadata.Edm.EntityContainer" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.EntityContainer.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Namen dieses <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> zurück.</summary>
+        <returns>Der Name dieses <see cref="T:System.Data.Metadata.Edm.EntityContainer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetEntitySetByName">
+      <MemberSignature Language="C#" Value="public bool TryGetEntitySetByName (string name, bool ignoreCase, out System.Data.Metadata.Edm.EntitySet entitySet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetEntitySetByName(string name, bool ignoreCase, [out] class System.Data.Metadata.Edm.EntitySet&amp; entitySet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.EntityContainer.TryGetEntitySetByName(System.String,System.Boolean,System.Data.Metadata.Edm.EntitySet@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="entitySet" Type="System.Data.Metadata.Edm.EntitySet&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Entitätenmenge, die gesucht wird.</param>
+        <param name="ignoreCase">
+          <see langword="true" />in der Groß-/Kleinschreibung gesucht; andernfalls <see langword="false" />.</param>
+        <param name="entitySet">Diese Methode gibt ein <see cref="T:System.Data.Metadata.Edm.EntitySet" />-Objekt zurück. Wenn keine Entitätenmenge vorhanden ist, enthält dieser Ausgabeparamenter NULL.</param>
+        <summary>Gibt mithilfe des angegebenen Namens für die Entitätenmenge ein <see cref="T:System.Data.Metadata.Edm.EntitySet" />-Objekt zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Entitätenmenge vorhanden ist übereinstimmt, die den Suchkriterien; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetRelationshipSetByName">
+      <MemberSignature Language="C#" Value="public bool TryGetRelationshipSetByName (string name, bool ignoreCase, out System.Data.Metadata.Edm.RelationshipSet relationshipSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetRelationshipSetByName(string name, bool ignoreCase, [out] class System.Data.Metadata.Edm.RelationshipSet&amp; relationshipSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.EntityContainer.TryGetRelationshipSetByName(System.String,System.Boolean,System.Data.Metadata.Edm.RelationshipSet@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="relationshipSet" Type="System.Data.Metadata.Edm.RelationshipSet&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Beziehungssatzes, der gesucht wird.</param>
+        <param name="ignoreCase">
+          <see langword="true" />in der Groß-/Kleinschreibung gesucht; andernfalls <see langword="false" />.</param>
+        <param name="relationshipSet">Diese Methode gibt ein <see cref="T:System.Data.Metadata.Edm.RelationshipSet" />-Objekt zurück.</param>
+        <summary>Gibt mithilfe des angegebenen Namens für den Beziehungssatz ein <see cref="T:System.Data.Metadata.Edm.RelationshipSet" />-Objekt zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Beziehung festgelegt ist, die den Suchkriterien übereinstimmt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

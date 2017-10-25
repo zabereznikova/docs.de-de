@@ -1,0 +1,57 @@
+<Type Name="ShutdownMode" FullName="Microsoft.VisualBasic.ApplicationServices.ShutdownMode">
+  <TypeSignature Language="C#" Value="public enum ShutdownMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ShutdownMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.ApplicationServices.ShutdownMode" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, welche Bedingung bei Auftreten eine Windows Forms-Anwendung heruntergefahren werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können festlegen, den Modus für eine Anwendung über das Herunterfahren der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A> Eigenschaft. Standardmäßig die <xref:System.Windows.Forms.ApplicationContext.OnMainFormClosed%2A> Methode überprüft den Wert, der die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A> Eigenschaft, um zu bestimmen, ob die Anwendung beendet werden soll.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AfterAllFormsClose">
+      <MemberSignature Language="C#" Value="AfterAllFormsClose" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.ApplicationServices.ShutdownMode AfterAllFormsClose = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterAllFormsClose" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.ApplicationServices.ShutdownMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beendet nur, nachdem das letzte Formular geschlossen wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AfterMainFormCloses">
+      <MemberSignature Language="C#" Value="AfterMainFormCloses" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.ApplicationServices.ShutdownMode AfterMainFormCloses = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.ApplicationServices.ShutdownMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn das Hauptformular geschlossen wird, fahren Sie Sie herunter.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

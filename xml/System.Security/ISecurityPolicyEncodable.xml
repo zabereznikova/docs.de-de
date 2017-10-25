@@ -1,0 +1,104 @@
+<Type Name="ISecurityPolicyEncodable" FullName="System.Security.ISecurityPolicyEncodable">
+  <TypeSignature Language="C#" Value="public interface ISecurityPolicyEncodable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISecurityPolicyEncodable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.ISecurityPolicyEncodable" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Unterstützt die Methoden, die Berechtigung Objektstatus konvertieren in andere und aus einer Darstellung des XML-Element.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist ähnlich wie <xref:System.Security.ISecurityEncodable>, mit der Ausnahme, dass sie Richtlinienebene Kontext enthalten. Richtlinienebene wird zum Auflösen von Verweisen auf benannte Berechtigungssätze erforderlich.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public void FromXml (System.Security.SecurityElement e, System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FromXml(class System.Security.SecurityElement e, class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ISecurityPolicyEncodable.FromXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Security.SecurityElement" />
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die XML-Codierung zur Wiederherstellung des Sicherheitsobjekts.</param>
+        <param name="level">Richtlinienebene Kontext zum Auflösen von benannten Berechtigungssätze festlegen Verweise.</param>
+        <summary>Stellt ein Sicherheitsobjekt mit einem angegebenen Zustand aus einer XML-Codierung wieder her.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie benutzerdefinierter Code, der Sicherheit Richtlinienobjekte erstreckt muss die <xref:System.Security.ISecurityPolicyEncodable.ToXml%2A> und <xref:System.Security.ISecurityPolicyEncodable.FromXml%2A> Methoden, um die Objekte Sicherheit Sicherheitsrichtlinienverwendung vornehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityElement ToXml (System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.SecurityElement ToXml(class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ISecurityPolicyEncodable.ToXml(System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="level">Richtlinienebene Kontext zum Auflösen von benannten Berechtigungssätze festlegen Verweise.</param>
+        <summary>Erstellt eine XML-Codierung des Sicherheitsobjekts und seines aktuellen Zustands.</summary>
+        <returns>Das Stammelement der XML-Darstellung des Richtlinienobjekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Richtlinienebene Kontext ist für die Auflösung von Verweisen auf benannte Berechtigungssätze bereitgestellt. Beispielsweise verwenden Codegruppen Richtlinienebene auf um benannte Berechtigungssätze anhand des Namens zu suchen.  
+  
+ Implementieren Sie benutzerdefinierter Code, der Sicherheit Richtlinienobjekte erstreckt muss die <xref:System.Security.ISecurityPolicyEncodable.ToXml%2A> und <xref:System.Security.ISecurityPolicyEncodable.FromXml%2A> Methoden, um die Objekte Sicherheit Sicherheitsrichtlinienverwendung vornehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

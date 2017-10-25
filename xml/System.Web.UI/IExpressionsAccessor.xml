@@ -1,0 +1,63 @@
+<Type Name="IExpressionsAccessor" FullName="System.Web.UI.IExpressionsAccessor">
+  <TypeSignature Language="C#" Value="public interface IExpressionsAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExpressionsAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IExpressionsAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Eigenschaften, die eine Klasse implementieren muss zur Unterstützung von Auflistungen von Ausdrücken.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Control>-Klasse implementiert diese Schnittstelle. Ein Steuerelement-Designer kann eine Instanz einer Klasse, die abgeleitet Abfragen <xref:System.Web.UI.Control> zum Abrufen der Auflistung der Ausdrücke und Eigenschaften, die an das Steuerelement gebunden werden.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Expressions">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ExpressionBindingCollection Expressions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ExpressionBindingCollection Expressions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IExpressionsAccessor.Expressions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ExpressionBindingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Web.UI.ExpressionBinding" />-Objekten ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ExpressionBindingCollection" /> mit <see cref="T:System.Web.UI.ExpressionBinding" /> Objekte, die die Eigenschaften und Ausdrücke für ein Steuerelement darstellen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HasExpressions">
+      <MemberSignature Language="C#" Value="public bool HasExpressions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasExpressions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IExpressionsAccessor.HasExpressions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Instanz der Klasse, die diese Schnittstelle implementiert, alle Eigenschaften, die von einem Ausdruck gebunden wurde.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement Eigenschaften durch Ausdrücke festgelegt wurden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

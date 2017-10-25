@@ -1,0 +1,227 @@
+<Type Name="DecoderExceptionFallback" FullName="System.Text.DecoderExceptionFallback">
+  <TypeSignature Language="C#" Value="public sealed class DecoderExceptionFallback : System.Text.DecoderFallback" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DecoderExceptionFallback extends System.Text.DecoderFallback" />
+  <TypeSignature Language="DocId" Value="T:System.Text.DecoderExceptionFallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encoding</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.DecoderFallback</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen als Fallback bezeichneten Fehlerbehandlungsmechanismus für eine codierte Eingabebytefolge bereit, die nicht in ein Eingabezeichen konvertiert werden kann. Der Fallback löst eine Ausnahme aus, statt die Eingabebytefolge zu decodieren. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Codierung ordnet ein Unicode-Zeichen eine codierte Bytefolge, die anschließend auf einem physischen Medium, z. B. einen Datenträger oder über eine kommunikationsverbindung übertragen werden kann. Zeichen können auf verschiedene Weise zugeordnet werden, und einer bestimmten Codierung dargestellt wird, von einem Typ abgeleitet wurde. die <xref:System.Text.Encoding> Klasse. Insbesondere des Codierungstyps des `GetBytes` Methode codiert ein Zeichen in eine Bytefolge, und die `GetChars` -Methode decodiert eine Bytefolge in Zeichen.  
+  
+ Ein Decodierungsvorgang kann fehlschlagen, wenn die Eingabebytefolge nicht von der Codierung zugeordnet werden kann. Angenommen, ein <xref:System.Text.ASCIIEncoding> Objekt konnte nicht decodiert eine Bytefolge, die ein Zeichen mit einem Codepunktwert, die außerhalb des Bereichs U + 0000 bis U + 007F ist.  
+  
+ In Fällen, in denen eine codieren oder Decodieren Konvertierung nicht durchgeführt werden kann, enthält einen als Fallback bezeichneten Fehlerbehandlungsmechanismus für .NET Framework. Ihre Anwendung kann die vordefinierten .NET Framework-DecoderFallback verwenden oder Erstellung einen benutzerdefinierten Decoderfallback mithilfe der <xref:System.Text.DecoderFallback> und <xref:System.Text.DecoderFallbackBuffer> Klassen.  
+  
+ .NET Framework bietet zwei vordefinierte Klassen, die verschiedene Fallbackstrategien für die Behandlung von Fehler bei der Decodierung Konvertierung zu implementieren. Die <xref:System.Text.DecoderReplacementFallback> -Klasse ersetzt eine Zeichenfolge, die bereitgestellt werden, statt die Eingabebytefolge, die konvertiert werden kann. Nach der Ersatzzeichenfolge ausgegeben wird, wird der Decodierungsvorgang fortgesetzt, konvertieren den Rest der Eingabe. Im Gegensatz dazu die <xref:System.Text.DecoderExceptionFallback> -Klasse löst eine <xref:System.Text.DecoderFallbackException> Wenn eine ungültige Bytesequenz festgestellt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Text.DecoderExceptionFallback> und <xref:System.Text.DecoderFallbackException> Klassen.  
+  
+ [!code-cpp[sys.txt.fallbackDecExc#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.txt.fallbackDecExc/cpp/fallDecExc.cpp#1)]
+ [!code-csharp[sys.txt.fallbackDecExc#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.txt.fallbackDecExc/cs/fallDecExc.cs#1)]
+ [!code-vb[sys.txt.fallbackDecExc#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.txt.fallbackDecExc/vb/fallDecExc.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DecoderExceptionFallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderExceptionFallback.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Text.DecoderExceptionFallback" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFallbackBuffer">
+      <MemberSignature Language="C#" Value="public override System.Text.DecoderFallbackBuffer CreateFallbackBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Text.DecoderFallbackBuffer CreateFallbackBuffer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderExceptionFallback.CreateFallbackBuffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.DecoderFallbackBuffer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen DecoderFallback Puffern, löst eine Ausnahme, wenn er eine Folge von Bytes in ein Zeichen konvertieren kann.</summary>
+        <returns>Ein Fallbackpuffer für einen Decoder, der eine Ausnahme auslöst, wenn er eine Bytefolge nicht konvertieren kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Decoderfallbackpuffer ist verantwortlich für das empfangen und Behandeln von Bytefolgen, die ein Decoder Zeichen nicht konvertieren kann. Diese Methode gibt eine Instanz von der <xref:System.Text.DecoderExceptionFallbackBuffer> Klasse, die eine Unterklasse von der <xref:System.Text.DecoderFallbackBuffer> Klasse. Ein <xref:System.Text.DecoderExceptionFallbackBuffer> -Objekt löst eine <xref:System.Text.DecoderFallbackException> Ausnahme immer eine Sequenz von Bytes wird übergeben, um seine <xref:System.Text.DecoderExceptionFallbackBuffer.Fallback%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderExceptionFallback.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das von abgeleitet ist die <see cref="T:System.Text.DecoderExceptionFallback" /> Klasse.</param>
+        <summary>Gibt an, ob die aktuelle <see cref="T:System.Text.DecoderExceptionFallback" /> -Objekt und ein angegebenes Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="value" /> nicht <see langword="null" /> und ist ein <see cref="T:System.Text.DecoderExceptionFallback" /> Objekt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderExceptionFallback.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für diese Instanz ab.</summary>
+        <returns>Der Rückgabewert ist immer der gleiche beliebige Wert und keine andere besonderen Bedeutung hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Text.DecoderExceptionFallback.GetHashCode%2A> Methode gibt immer den gleichen Wert zurück, die Anwendung sollte nicht mit diesem Wert können unterscheiden <xref:System.Text.DecoderExceptionFallback> von einem anderen Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxCharCount">
+      <MemberSignature Language="C#" Value="public override int MaxCharCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxCharCount" />
+      <MemberSignature Language="DocId" Value="P:System.Text.DecoderExceptionFallback.MaxCharCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Höchstzahl von Zeichen, die diese Instanz zurückgeben kann.</summary>
+        <value>Der Rückgabewert ist immer 0 (null).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

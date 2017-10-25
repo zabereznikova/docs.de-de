@@ -1,0 +1,186 @@
+<Type Name="GenerateTrustInfo" FullName="Microsoft.Build.Tasks.GenerateTrustInfo">
+  <TypeSignature Language="C#" Value="public sealed class GenerateTrustInfo : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateTrustInfo extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.GenerateTrustInfo" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Generiert die Vertrauenswürdigkeit der Anwendung aus dem Basis-Manifest und aus der <see cref="P:Microsoft.Build.Tasks.GenerateTrustInfo.TargetZone" /> und <see cref="P:Microsoft.Build.Tasks.GenerateTrustInfo.ExcludedPermissions" /> Eigenschaften.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenerateTrustInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateTrustInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.GenerateTrustInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationDependencies">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ApplicationDependencies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ApplicationDependencies" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateTrustInfo.ApplicationDependencies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die abhängigen Assemblys ab, oder legt diese fest.</summary>
+        <value>Die abhängigen Assemblys.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="BaseManifest">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem BaseManifest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem BaseManifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateTrustInfo.BaseManifest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Basismanifest ab oder legt es fest, um darüber die Vertrauenswürdigkeit der Anwendung zu generieren.</summary>
+        <value>Das Basismanifest, über das die Vertrauenswürdigkeit der Anwendung generiert wird.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExcludedPermissions">
+      <MemberSignature Language="C#" Value="public string ExcludedPermissions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExcludedPermissions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateTrustInfo.ExcludedPermissions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen oder mehrere durch Kommas getrennte Berechtigungsidentitätswert(e) ab, die aus dem Standardberechtigungssatz der Zone ausgeschlossen werden sollen, oder legt sie fest.</summary>
+        <value>Die aus dem Standardberechtigungssatz der Zone auszuschließenden Berechtigungsidentitätswerte.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateTrustInfo.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <c>GenerateTrustInfo</c> Aufgabe.</summary>
+        <returns>
+          <see langword="true" />, wenn die Aufgabe erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameworkMoniker">
+      <MemberSignature Language="C#" Value="public string TargetFrameworkMoniker { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkMoniker" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateTrustInfo.TargetFrameworkMoniker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Zielframeworkmoniker.</summary>
+        <value>Gibt den Zielframeworkmoniker an.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetZone">
+      <MemberSignature Language="C#" Value="public string TargetZone { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetZone" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateTrustInfo.TargetZone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Standardberechtigungssatz für eine Zone ab, der von der Computerrichtlinie abgerufen wird, oder legt diesen fest.</summary>
+        <value>Der Standardberechtigungssatz für die Zone.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Zone Zielwerten sind `Internet`, `LocalIntranet`, oder `Custom`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TrustInfoFile">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem TrustInfoFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem TrustInfoFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateTrustInfo.TrustInfoFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Datei ab, die die Vertrauensinformationen für Anwendungssicherheit enthält, oder legt diese fest.</summary>
+        <value>Die Datei, die die Vertrauensinformationen für Anwendungssicherheit enthält.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

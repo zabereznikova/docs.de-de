@@ -1,0 +1,86 @@
+<Type Name="IRemoteObjectContract" FullName="System.AddIn.Contract.Automation.IRemoteObjectContract">
+  <TypeSignature Language="C#" Value="public interface IRemoteObjectContract : System.AddIn.Contract.IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemoteObjectContract implements class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Automation.IRemoteObjectContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert einen Vertrag, den Komponenten Zugriff auf ein Objekt Anwendungsdomänen- und Prozessgrenzen hinweg verwenden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Implementierung <xref:System.AddIn.Contract.Automation.IRemoteObjectContract> für einen Typ können Komponenten den Vertrag verwenden, um Typinformationen für Objekte des Typs zuzugreifen. Komponenten zugreifen Typinformationen durch Aufrufen der <xref:System.AddIn.Contract.Automation.IRemoteObjectContract.GetRemoteType%2A> Methode zum Abrufen einer <xref:System.AddIn.Contract.Automation.IRemoteTypeContract>. Die <xref:System.AddIn.Contract.Automation.IRemoteTypeContract> Schnittstelle definiert einen Vertrag, der Komponenten verwenden können, auf bestimmte Typ- und Memberinformationen zugreifen und Methoden aufzurufen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetRemoteType">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.IRemoteTypeContract GetRemoteType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.AddIn.Contract.Automation.IRemoteTypeContract GetRemoteType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemoteObjectContract.GetRemoteType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.IRemoteTypeContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.AddIn.Contract.Automation.IRemoteTypeContract" /> , die angibt, dass des Typs des aktuellen <see cref="T:System.AddIn.Contract.Automation.IRemoteObjectContract" />.</summary>
+        <returns>Ein <see cref="T:System.AddIn.Contract.Automation.IRemoteTypeContract" /> , die angibt, dass des Typs des aktuellen <see cref="T:System.AddIn.Contract.Automation.IRemoteObjectContract" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.AddIn.Contract.Automation.IRemoteObjectContract.GetRemoteType%2A> -Methode den Zugriff auf die Member der Remote-Objekt, das das aktuelle <xref:System.AddIn.Contract.Automation.IRemoteObjectContract> identifiziert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteCast">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.RemoteArgument RemoteCast (string canonicalName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.AddIn.Contract.RemoteArgument RemoteCast(string canonicalName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemoteObjectContract.RemoteCast(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="canonicalName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="canonicalName">Der kanonische Name des Typs, der das Objekt, das umgewandelt werden soll.</param>
+        <summary>Wandelt das angegebene vom aktuellen Objekt <see cref="T:System.AddIn.Contract.Automation.IRemoteObjectContract" /> in einen angegebenen Typ.</summary>
+        <returns>Ein <see cref="T:System.AddIn.Contract.RemoteArgument" /> , die das Ergebnis der Umwandlungsvorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kanonischer Name ist ein global eindeutiger Name, z. B. eine GUID. Zeichenfolgen im Format \< *Assemblyname*>, \< *voll qualifizierten Typnamen*> werden empfohlen. Ein Beispiel für das empfohlene Format eines kanonischen Namens ist "ShapeApp, Microsoft.VisualStudio.Tools.Applications.Samples.ShapeApp.Application".  
+  
+ Der kanonische Name für einen Typ kann nicht ändern, nachdem ein Typ in eine Komponente veröffentlicht wird. Ändern den kanonischen Namen eines Typs in einer zukünftigen Version von einer Komponentenkompatibilität zwischen der Komponente und des Clients, die den Typ bereits aufgehoben.  
+  
+ Es wird empfohlen, <xref:System.AddIn.Contract.Automation.IRemoteObjectContract.RemoteCast%2A> Implementierungen Auslösen einer <xref:System.InvalidCastException> Ausfall der Umwandlungsvorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

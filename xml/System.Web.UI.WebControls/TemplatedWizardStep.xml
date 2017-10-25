@@ -1,0 +1,239 @@
+<Type Name="TemplatedWizardStep" FullName="System.Web.UI.WebControls.TemplatedWizardStep">
+  <TypeSignature Language="C#" Value="public class TemplatedWizardStep : System.Web.UI.WebControls.WizardStepBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplatedWizardStep extends System.Web.UI.WebControls.WizardStepBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TemplatedWizardStep" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WizardStepBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.WizardStepControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.Themeable(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Schritt in einem Assistentensteuerelement dar, das über Vorlagen angepasst werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TemplatedWizardStep> Klasse wird bereitgestellt, um ermöglichen Entwicklern die anzuwendende Vorlage mit den Schritten in einem Steuerelement, das als Assistent fungiert. Die <xref:System.Web.UI.WebControls.TemplatedWizardStep> -Klasse hauptsächlich von Steuerelemententwicklern verwendet werden soll.  
+  
+ Sie können ein Design für anwenden <xref:System.Web.UI.WebControls.TemplatedWizardStep>.  
+  
+   
+  
+## Examples  
+ Die <xref:System.Web.UI.WebControls.TemplatedWizardStep> -Klasse können Sie die Vorlagen Inhalts und zur Navigation darin anpassen. Im folgende Beispiel wird gezeigt, wie einen Template-basierten Assistentenschritt definiert wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplate%2A> -Eigenschaft können Sie vollständige Kontrolle über den Navigationsbereich-Block, in der Regel am unteren Rand der aktuellen Ansicht angezeigt. Normalerweise füllen Sie die Navigationsblock mit einer Reihe von Schaltflächen an. Andere Steuerelemente sind jedoch akzeptabel, solange sie übergeben von Befehlen unterstützen, wie die <xref:System.Web.UI.WebControls.Button> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.TemplatedWizardStep#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.TemplatedWizardStep/CS/templatedwizardstepcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.TemplatedWizardStep#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.TemplatedWizardStep/VB/templatedwizardstepvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplatedWizardStep ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplatedWizardStep.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.TemplatedWizardStep" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate ContentTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ContentTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.Wizard))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage zum Anzeigen des Inhalts eines Schritts in einem <see cref="T:System.Web.UI.WebControls.Wizard" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" /> -Objekt, das die Vorlage zum Anzeigen des Inhalts eines Schritts in einem <see cref="T:System.Web.UI.WebControls.Wizard" /> Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplateContainer">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control ContentTemplateContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control ContentTemplateContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplateContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Container ab, die eine <see cref="T:System.Web.UI.WebControls.Wizard" /> Steuerelement verwendet, um das Erstellen einer <see cref="P:System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplate" /> Vorlage für einen Schritt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Control" /> , enthält die <see cref="P:System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplate" /> Vorlage für einen Schritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl die Syntax Einstellung schließt die <xref:System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplateContainer%2A> -Eigenschaft ist für die interne Verwendung nur, damit die Eigenschaft effektiv schreibgeschützt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomNavigationTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate CustomNavigationTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate CustomNavigationTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.Wizard))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage zum Anzeigen der Navigation-Benutzeroberfläche (UI) von einem Schritt in einem <see cref="T:System.Web.UI.WebControls.Wizard" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" /> -Objekt, das die Vorlage zum Anzeigen der Navigationsbenutzeroberfläche eines Schritts enthält in einem <see cref="T:System.Web.UI.WebControls.Wizard" /> Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomNavigationTemplateContainer">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control CustomNavigationTemplateContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control CustomNavigationTemplateContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplateContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Container ab, die eine <see cref="T:System.Web.UI.WebControls.Wizard" /> Steuerelement verwendet, um das Erstellen einer <see cref="P:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplate" /> Vorlage für einen Schritt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Control" /> , enthält die <see cref="P:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplate" /> Vorlage für einen Schritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl die Syntax Einstellung schließt die <xref:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplateContainer%2A> -Eigenschaft ist für die interne Verwendung nur, damit die Eigenschaft effektiv schreibgeschützt ist. Der Code sollte überprüfen, die die <xref:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplateContainer%2A> Eigenschaft ist nicht `null` vor verwiesen wird.  
+  
+ Diese Eigenschaft kann nicht in visuellen Designern gebunden werden, jedoch kann zur Laufzeit gebunden werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.BindableAttribute>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">Wenn <see cref="P:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplate" /> besitzt keinen Inhalt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SkinID">
+      <MemberSignature Language="C#" Value="public override string SkinID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SkinID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplatedWizardStep.SkinID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Design ab, das auf das Steuerelement angewendet werden soll.</summary>
+        <value>Der Name des Designs, das auf das Steuerelement angewendet werden soll. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

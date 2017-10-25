@@ -1,0 +1,69 @@
+<Type Name="ContextBoundObject" FullName="System.ContextBoundObject">
+  <TypeSignature Language="C#" Value="public abstract class ContextBoundObject : MarshalByRefObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit ContextBoundObject extends System.MarshalByRefObject" />
+  <TypeSignature Language="DocId" Value="T:System.ContextBoundObject" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Basisklasse für alle kontextgebundenen Klassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objekte, die in einem Kontext befinden und den Regeln Kontext gebunden sind, werden als kontextgebundene Objekte bezeichnet. Ein Kontext ist ein Satz von Eigenschaften oder Verwendungsregeln, die eine Umgebung definieren, die eine Auflistung von Objekten enthält. Die Regeln werden erzwungen, wenn die Objekte eingeben oder einen Kontext verlassen. Objekte, die keine kontextgebundenen sind, werden als agile Objekte bezeichnet.  
+  
+ Kontexte werden während der objektaktivierung erstellt. Ein neues Objekt befindet sich in einem vorhandenen Kontext oder ein neuer Kontext erstellt wird, mithilfe der Attribute, die in den Metadaten des Typs enthalten. Kontextgebundene Klassen sind mit markierten eine <xref:System.Runtime.Remoting.Contexts.ContextAttribute> , die die Verwendungsregeln bereitstellt. Die Kontexteigenschaften, die hinzugefügt werden können, gehören Richtlinien für Synchronisierung und Transaktionen.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Die aktuelle Version der common Language Runtime unterstützt keine generischen <see cref="T:System.ContextBoundObject" /> Typen oder nicht generischen <see cref="T:System.ContextBoundObject" /> Typen, die generische Methoden enthalten. Bei dem Versuch, eine Instanz eines solchen Typs Ursachen erstellen eine <see cref="T:System.TypeLoadException" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ContextBoundObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ContextBoundObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.ContextBoundObject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

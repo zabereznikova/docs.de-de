@@ -1,0 +1,154 @@
+<Type Name="SHA256" FullName="System.Security.Cryptography.SHA256">
+  <TypeSignature Language="C#" Value="public abstract class SHA256 : System.Security.Cryptography.HashAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SHA256 extends System.Security.Cryptography.HashAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.SHA256" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.HashAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Berechnet die <see cref="T:System.Security.Cryptography.SHA256" /> Hash für die Eingabedaten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hashwert dient als eindeutiger Wert mit fester Größe, die eine große Datenmenge darstellt. Hashes von zwei Sätzen von Daten übereinstimmen, wenn auch die entsprechenden Daten übereinstimmen. Kleine Änderungen an den Daten führen in umfangreichen unvorhersehbare Änderungen im HashSet.  
+  
+ Die Hashgröße für die <xref:System.Security.Cryptography.SHA256> -Algorithmus ist 256 Bits.  
+  
+ Dies ist eine abstrakte Klasse. Die einzige Implementierung dieser Klasse ist <xref:System.Security.Cryptography.SHA256Managed>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel berechnet den SHA-256-Hash für alle Dateien in einem Verzeichnis.  
+  
+ [!code-cpp[Classic SHA256 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic SHA256 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SHA256 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic SHA256 Example/CS/source.cs#1)]
+ [!code-vb[Classic SHA256 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic SHA256 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SHA256 ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA256.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Security.Cryptography.SHA256" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz einer abstrakten Klasse kann nicht erstellt werden. Anwendungscode erstellt eine neue Instanz einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.SHA256 Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.SHA256 Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA256.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SHA256</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der Standardimplementierung von <see cref="T:System.Security.Cryptography.SHA256" />.</summary>
+        <returns>Eine neue Instanz von <see cref="T:System.Security.Cryptography.SHA256" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">Der Algorithmus wurde bei aktiviertem FIPS (Federal Information Processing Standards)-Modus verwendet, ist aber nicht FIPS-kompatibel.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.SHA256 Create (string hashName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.SHA256 Create(string hashName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA256.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SHA256</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hashName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hashName">Der Name der spezifischen Implementierung des <see cref="T:System.Security.Cryptography.SHA256" /> verwendet werden.</param>
+        <summary>Erstellt eine Instanz der angegebenen Implementierung von <see cref="T:System.Security.Cryptography.SHA256" />.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.Security.Cryptography.SHA256" /> unter Verwendung der angegebenen Implementierung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">Der Algorithmus beschrieben, die von der <paramref name="hashName" /> Parameter mit aktiviertem Federal Information Processing Standards (FIPS) Modus verwendet wurde, jedoch ist nicht FIPS-kompatibel.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,235 @@
+<Type Name="IncrementalHitTester" FullName="System.Windows.Ink.IncrementalHitTester">
+  <TypeSignature Language="C#" Value="public abstract class IncrementalHitTester" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IncrementalHitTester extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Ink.IncrementalHitTester" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Führt dynamisch Treffertests auf eine <see cref="T:System.Windows.Ink.Stroke" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.IncrementalHitTester> dynamisch bestimmt, ob der Benutzer "Treffer" eine <xref:System.Windows.Ink.Stroke>. Diese Klasse ermöglicht Sie unmittelbar Feedback in Situationen, z. B. auswählen, und Löschen von Freihandeingaben an den Benutzer bereitstellen.  
+  
+ Es gibt zwei Klassen, die von erben <xref:System.Windows.Ink.IncrementalHitTester>:  
+  
+-   Die <xref:System.Windows.Ink.IncrementalLassoHitTester> Treffertests für Striche wird festgestellt, ob eine es umgeben.  
+  
+-   Die <xref:System.Windows.Ink.IncrementalStrokeHitTester> Treffertests Striche, indem Sie ermitteln, wo Sie ein Radiererpfad überlappt.  
+  
+ Die folgende Tabelle enthält, wo Sie Informationen zum Verwalten von Freihandeingaben auf ein benutzerdefiniertes Steuerelement an.  
+  
+|Zu diesem Zweck...|Finden Sie im Artikel|  
+|-----------------|----------------------|  
+|Erstellen Sie ein Steuerelement, das Freihandeingaben erfasst.|[Erstellen eines Freihandeingabesteuerelements](~/docs/framework/wpf/advanced/creating-an-ink-input-control.md)|  
+|Erstellen Sie ein Steuerelement, das dem Benutzer ermöglicht, auswählen|[Vorgehensweise: Auswählen von Freihandeingaben aus ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)|  
+|Erstellen Sie ein Steuerelement, das dem Benutzer, Freihand-Punkt löschen ermöglicht|[Vorgehensweise: Löschen von Freihandeingaben auf ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)|  
+  
+<a name="xamlTextUsage_IncrementalHitTester"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Diese Klasse wird in der Regel nicht in XAML verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Hinzufügen von verweist auf die <xref:System.Windows.Ink.IncrementalHitTester> Wenn der Benutzer Daten mit der Tablettstift eingibt. Das Beispiel schließt eine <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> Ereignishandler, der den Teil des löscht die <xref:System.Windows.Ink.Stroke> , die der Benutzer überschneidet. Um ein Steuerelement erstellen, die dem Benutzer Freihandeingaben gelöscht werden können, finden Sie unter [Vorgehensweise: Löschen Freihand-auf ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#6](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#6)]
+ [!code-vb[InkEraser#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddPoint">
+      <MemberSignature Language="C#" Value="public void AddPoint (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPoint(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.IncrementalHitTester.AddPoint(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Das <see cref="T:System.Windows.Point" />, das in <see cref="T:System.Windows.Ink.IncrementalHitTester" /> eingefügt werden soll.</param>
+        <summary>Fügt der <see cref="T:System.Windows.Point" /> einen <see cref="T:System.Windows.Ink.IncrementalHitTester" /> hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Hinzufügen von verweist auf die <xref:System.Windows.Ink.IncrementalHitTester> Wenn der Benutzer Daten mit der Maus eingibt. Das Beispiel schließt eine <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> Ereignishandler, der den Teil des löscht die <xref:System.Windows.Ink.Stroke> , die der Benutzer überschneidet. Um ein Steuerelement erstellen, die dem Benutzer Freihandeingaben gelöscht werden können, finden Sie unter [Vorgehensweise: Löschen Freihand-auf ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#11](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#11)]
+ [!code-vb[InkEraser#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#11)]  
+[!code-csharp[InkEraser#2](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#2)]
+[!code-vb[InkEraser#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPoints">
+      <MemberSignature Language="C#" Value="public void AddPoints (System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt; points);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPoints(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Point&gt; points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.IncrementalHitTester.AddPoints(System.Collections.Generic.IEnumerable{System.Windows.Point})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="points">Ein Array vom Typ <see cref="T:System.Windows.Point" /> hinzuzufügende der <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</param>
+        <summary>Fügt verweist auf die <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Hinzufügen von verweist auf die <xref:System.Windows.Ink.IncrementalHitTester> Wenn der Benutzer Daten mit der Tablettstift eingibt. Das Beispiel schließt eine <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> Ereignishandler, der den Teil des löscht die <xref:System.Windows.Ink.Stroke> , die der Benutzer überschneidet. Um ein Steuerelement erstellen, die dem Benutzer Freihandeingaben gelöscht werden können, finden Sie unter [Vorgehensweise: Löschen Freihand-auf ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#6](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#6)]
+ [!code-vb[InkEraser#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPoints">
+      <MemberSignature Language="C#" Value="public void AddPoints (System.Windows.Input.StylusPointCollection stylusPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPoints(class System.Windows.Input.StylusPointCollection stylusPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.IncrementalHitTester.AddPoints(System.Windows.Input.StylusPointCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPoints" Type="System.Windows.Input.StylusPointCollection" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPoints">Eine Auflistung von <see cref="T:System.Windows.Input.StylusPoint" /> Objekte zum Hinzufügen der <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Windows.Input.StylusPoint" /> -Objekte und die <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Hinzufügen von verweist auf die <xref:System.Windows.Ink.IncrementalStrokeHitTester> Wenn der Benutzer Daten mit der Tablettstift eingibt. Das Beispiel schließt eine <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> Ereignishandler, der den Teil des löscht die <xref:System.Windows.Ink.Stroke> , die der Benutzer überschneidet. Um ein Steuerelement erstellen, die dem Benutzer Freihandeingaben gelöscht werden können, finden Sie unter [Vorgehensweise: Löschen Freihand-auf ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#6](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#6)]
+ [!code-vb[InkEraser#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPointsCore">
+      <MemberSignature Language="C#" Value="protected abstract void AddPointsCore (System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt; points);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddPointsCore(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Point&gt; points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.IncrementalHitTester.AddPointsCore(System.Collections.Generic.IEnumerable{System.Windows.Point})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="points">Die hinzuzufügenden Punkte.</param>
+        <summary>Fügt verweist auf die <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndHitTesting">
+      <MemberSignature Language="C#" Value="public void EndHitTesting ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndHitTesting() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.IncrementalHitTester.EndHitTesting" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die vom verwendeten Ressourcen frei der <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.Windows.Ink.IncrementalHitTester.EndHitTesting%2A> Methode bei der <xref:System.Windows.Ink.IncrementalHitTester> Treffertest beendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie Aufrufen <xref:System.Windows.Ink.IncrementalHitTester.EndHitTesting%2A> nach der Verwendung einer <xref:System.Windows.Ink.IncrementalHitTester>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Ink.IncrementalHitTester> aufgerufen `eraseTester`.  
+  
+ [!code-csharp[InkEraser#10](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#10)]
+ [!code-vb[InkEraser#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Ink.IncrementalHitTester.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die <see cref="T:System.Windows.Ink.IncrementalHitTester" /> testen erreicht wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Ink.IncrementalHitTester" /> eines Haltepunktes Tests ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.IncrementalHitTester.IsValid%2A> gibt `true` bis <xref:System.Windows.Ink.IncrementalHitTester.EndHitTesting%2A> aufgerufen wird. Es gibt `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie überprüfen, ob die <xref:System.Windows.Ink.IncrementalHitTester> gültig ist, bevor die Punkte hinzugefügt. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Ink.IncrementalHitTester> aufgerufen `eraseTester`.  
+  
+ [!code-csharp[InkEraser#9](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#9)]
+ [!code-vb[InkEraser#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

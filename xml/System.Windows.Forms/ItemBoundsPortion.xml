@@ -1,0 +1,89 @@
+<Type Name="ItemBoundsPortion" FullName="System.Windows.Forms.ItemBoundsPortion">
+  <TypeSignature Language="C#" Value="public enum ItemBoundsPortion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ItemBoundsPortion extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ItemBoundsPortion" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt einen Teil des Listenelements Ansicht aus der das umschließende Rechteck abgerufen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Member dieser Enumeration, beim Aufrufen der <xref:System.Windows.Forms.ListView.GetItemRect%2A> Methode der <xref:System.Windows.Forms.ListView> Steuerelement. Diese Enumeration wird auch verwendet werden, beim Aufrufen der <xref:System.Windows.Forms.ListViewItem.GetBounds%2A> Methode der <xref:System.Windows.Forms.ListViewItem> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Entire">
+      <MemberSignature Language="C#" Value="Entire" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ItemBoundsPortion Entire = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ItemBoundsPortion.Entire" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ItemBoundsPortion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das umschließende Rechteck des gesamten Elements, das Symbol ", den Elementtext und den Text des Unterelements (sofern angezeigt), einschließlich abgerufen werden soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Icon">
+      <MemberSignature Language="C#" Value="Icon" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ItemBoundsPortion Icon = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ItemBoundsPortion.Icon" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ItemBoundsPortion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das umschließende Rechteck der Symbole oder kleine Symbole abgerufen werden soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemOnly">
+      <MemberSignature Language="C#" Value="ItemOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ItemBoundsPortion ItemOnly = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ItemBoundsPortion.ItemOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ItemBoundsPortion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Begrenzungsrechteck der Symbol- oder kleine Symbole als auch den Elementtext abgerufen werden soll. In allen Ansichten, außer die Detailansicht der <see cref="T:System.Windows.Forms.ListView" />, dieser Wert gibt das gleiche Begrenzungsrechteck als die <see langword="Entire" /> Wert. In der Detailansicht, dieser Wert gibt das umschließende Rechteck gemäß der <see langword="Entire" /> Wert ohne Unterelemente. Wenn die <see cref="P:System.Windows.Forms.ListView.CheckBoxes" /> -Eigenschaftensatz auf <see langword="true" />, diese Eigenschaft nicht den Bereich der Kontrollkästchen in das umschließende Rechteck enthalten. Verwenden Sie das gesamte Element einschließlich der Kontrollkästchen enthalten die <see langword="Entire" /> Wert, der beim Aufrufen der <see cref="M:System.Windows.Forms.ListView.GetItemRect(System.Int32)" /> Methode.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="Label" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ItemBoundsPortion Label = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ItemBoundsPortion.Label" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ItemBoundsPortion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Begrenzungsrechteck der Text des Elements abgerufen werden soll.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

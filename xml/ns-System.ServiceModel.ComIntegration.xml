@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.ComIntegration">
+  <Docs>
+    <summary>Definiert Klassen, die für die Integration mit COM-Clientanwendungen erforderlich sind.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

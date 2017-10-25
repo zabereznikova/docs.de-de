@@ -1,0 +1,91 @@
+<Type Name="ComImportAttribute" FullName="System.Runtime.InteropServices.ComImportAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ComImportAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComImportAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComImportAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass der attributierte Typ zuvor in COM definiert wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Klassen oder Schnittstellen anwenden, obwohl die [Tlbimp.exe (Type Library Importer-Tool)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) in der Regel für Sie gilt, wenn es sich um eine Typbibliothek importiert.  
+  
+ <xref:System.Runtime.InteropServices.ComImportAttribute>ist ein pseudozufälligen benutzerdefiniertes Attribut, das angibt, dass ein Typ in einer zuvor veröffentlichten Typbibliothek definiert wurde. Die common Language Runtime behandelt diese Typen unterschiedlich, wenn aktiviert, exportieren, umzuwandeln und usw. an.  
+  
+> [!NOTE]
+>  Alle COM-Basistypen, die von einem verwalteten Objekt geerbt werden, müssen der freien Thread Marshaller (FTM) aggregiert.  COM-Typen, die nicht den FTM aggregiert werden, können von verwalteten Objekten geerbt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Anwenden der <xref:System.Runtime.InteropServices.ComImportAttribute> zu einer verwalteten Schnittstelle-Deklaration. Sie dieses Attribut nur während der Generierung eine Interop-Assembly manuell im Quellcode anwenden und die Metadaten von Tlbimp.exe erzeugten simulieren möchten.  
+  
+ [!code-cpp[ImprovedInteropSnippets#2](~/samples/snippets/cpp/VS_Snippets_CLR/ImprovedInteropSnippets/CPP/codefile2.cpp#2)]
+ [!code-csharp[ImprovedInteropSnippets#2](~/samples/snippets/csharp/VS_Snippets_CLR/ImprovedInteropSnippets/CS/codefile2.cs#2)]
+ [!code-vb[ImprovedInteropSnippets#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/ImprovedInteropSnippets/VB/codefile2.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComImportAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComImportAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz des <see cref="T:System.Runtime.InteropServices.ComImportAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

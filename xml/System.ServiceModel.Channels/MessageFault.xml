@@ -1,0 +1,705 @@
+<Type Name="MessageFault" FullName="System.ServiceModel.Channels.MessageFault">
+  <TypeSignature Language="C#" Value="public abstract class MessageFault" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MessageFault extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.MessageFault" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine speicherinterne Darstellung eines SOAP-Fehlers dar, die an <see cref="Overload:System.ServiceModel.Channels.Message.CreateMessage" /> weitergegeben werden kann, um eine Nachricht zu erstellen, die einen Fehler enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Channels.MessageFault>-Klasse immer, wenn Sie einen speicherinternen SOAP-Fehler benötigen, der geändert und für die Erstellung einer SOAP-Nachricht, die die Fehlerinformationen enthält, verwendet werden kann.  
+  
+ In der Regel wird die <xref:System.ServiceModel.Channels.MessageFault>-Klasse bei der Implementierung der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle verwendet. In diesem Fall gibt [!INCLUDE[indigo1](~/includes/indigo1-md.md)] das <xref:System.ServiceModel.Channels.MessageFault>-Objekt weiter, und Sie verwenden es für Ihre spezifischen Anforderungen (beispielsweise können Sie die <xref:System.ServiceModel.Channels.MessageFault> anpassen oder Fehlerinformationen protokollieren). Die <xref:System.ServiceModel.Channels.MessageFault> kann jedoch immer dann verwendet werden, wenn eine benutzerdefinierte Handhabung von SOAP-Fehlermeldungen erforderlich ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die übliche Verwendung von <xref:System.ServiceModel.Channels.MessageFault>. Sowohl <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%2A> als auch <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> geben in ein <xref:System.ServiceModel.Channels.MessageFault>-Objekt weiter, das geändert und an das System zurückgegeben (bei <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%2A>) oder zur Durchführung von benutzerdefiniertem fehlerbezogenen Verhalten verwendet werden kann (bei <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>).  
+  
+ In diesem Beispiel konvertiert die <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%2A>-Methode jegliche <xref:System.Exception>-Objekte in ein <xref:System.ServiceModel.Channels.MessageFault>-Objekt, das ein <xref:System.ServiceModel.FaultException%601>-Objekt vom Typ `GreetingFault` enthält, und gibt diesen benutzerdefinierten <xref:System.ServiceModel.Channels.MessageFault> an [!INCLUDE[indigo2](~/includes/indigo2-md.md)] zurück.  
+  
+ [!code-csharp[IErrorHandler#6](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/ierrorhandler.cs#6)]
+ [!code-vb[IErrorHandler#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/ierrorhandler/vb/ierrorhandler.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageFault ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert beim Aufruf in einer abgeleiteten Klasse eine neue Instanz der <see cref="T:System.ServiceModel.Channels.MessageFault" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Actor">
+      <MemberSignature Language="C#" Value="public virtual string Actor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Actor" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageFault.Actor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Darstellers ab oder legt diesen fest.</summary>
+        <value>Der Wert des Darstellers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Code">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.FaultCode Code { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.FaultCode Code" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageFault.Code" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.FaultCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den SOAP-Fehlercode ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.FaultCode" /> mit dem SOAP-Fehlercode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFault">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageFault CreateFault (System.ServiceModel.Channels.Message message, int maxBufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageFault CreateFault(class System.ServiceModel.Channels.Message message, int32 maxBufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.CreateFault(System.ServiceModel.Channels.Message,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageFault</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="maxBufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die festgelegte <see cref="T:System.ServiceModel.Channels.Message" />, die verwendet wird, um das <see cref="T:System.ServiceModel.Channels.MessageFault" />-Objekt zu erstellen.</param>
+        <param name="maxBufferSize">Die festgelegte maximale Puffergröße des Nachrichtenpuffers.</param>
+        <summary>Gibt ein neues <see cref="T:System.ServiceModel.Channels.MessageFault" />-Objekt zurück, das die festgelegte <see cref="T:System.ServiceModel.Channels.Message" /> und die festgelegte maximale Puffergröße für den Nachrichtenpuffer verwendet.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.MessageFault" /> Objekt mit Anfangswerten aus den übergebenen Parametern.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFault">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageFault CreateFault (System.ServiceModel.FaultCode code, System.ServiceModel.FaultReason reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageFault CreateFault(class System.ServiceModel.FaultCode code, class System.ServiceModel.FaultReason reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.CreateFault(System.ServiceModel.FaultCode,System.ServiceModel.FaultReason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageFault</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.ServiceModel.FaultCode" />
+        <Parameter Name="reason" Type="System.ServiceModel.FaultReason" />
+      </Parameters>
+      <Docs>
+        <param name="code">Der Fehlercode für die Fehlermeldung.</param>
+        <param name="reason">Der Grund für den Fehler.</param>
+        <summary>Gibt ein neues <see cref="T:System.ServiceModel.Channels.MessageFault" />-Objekt zurück, das die festgelegten Objekte <see cref="T:System.ServiceModel.FaultCode" /> und <see cref="T:System.ServiceModel.FaultReason" /> verwendet.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.MessageFault" /> Objekt mit Anfangswerten aus den übergebenen Parametern.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFault">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageFault CreateFault (System.ServiceModel.FaultCode code, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageFault CreateFault(class System.ServiceModel.FaultCode code, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.CreateFault(System.ServiceModel.FaultCode,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageFault</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.ServiceModel.FaultCode" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="code">Der Fehlercode für die Fehlermeldung.</param>
+        <param name="reason">Der Grund für den Fehler.</param>
+        <summary>Gibt ein neues <see cref="T:System.ServiceModel.Channels.MessageFault" />-Objekt zurück, das den festgelegten <see cref="T:System.ServiceModel.FaultCode" /> und den Fehlergrund verwendet.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.MessageFault" /> Objekt mit Anfangswerten aus den übergebenen Parametern.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFault">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageFault CreateFault (System.ServiceModel.FaultCode code, System.ServiceModel.FaultReason reason, object detail);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageFault CreateFault(class System.ServiceModel.FaultCode code, class System.ServiceModel.FaultReason reason, object detail) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.CreateFault(System.ServiceModel.FaultCode,System.ServiceModel.FaultReason,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageFault</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.ServiceModel.FaultCode" />
+        <Parameter Name="reason" Type="System.ServiceModel.FaultReason" />
+        <Parameter Name="detail" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="code">Der Fehlercode für die Fehlermeldung.</param>
+        <param name="reason">Der Grund für den Fehler.</param>
+        <param name="detail">Das Fehlerdetailobjekt.</param>
+        <summary>Gibt ein neues <see cref="T:System.ServiceModel.Channels.MessageFault" />-Objekt zurück, das den festgelegten <see cref="T:System.ServiceModel.FaultCode" />, <see cref="T:System.ServiceModel.FaultReason" /> und das Detailobjekt verwendet.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.MessageFault" /> Objekt mit Anfangswerten aus den übergebenen Parametern.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFault">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageFault CreateFault (System.ServiceModel.FaultCode code, System.ServiceModel.FaultReason reason, object detail, System.Runtime.Serialization.XmlObjectSerializer formatter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageFault CreateFault(class System.ServiceModel.FaultCode code, class System.ServiceModel.FaultReason reason, object detail, class System.Runtime.Serialization.XmlObjectSerializer formatter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.CreateFault(System.ServiceModel.FaultCode,System.ServiceModel.FaultReason,System.Object,System.Runtime.Serialization.XmlObjectSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageFault</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.ServiceModel.FaultCode" />
+        <Parameter Name="reason" Type="System.ServiceModel.FaultReason" />
+        <Parameter Name="detail" Type="System.Object" />
+        <Parameter Name="serializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="code">Der Fehlercode für die Fehlermeldung.</param>
+        <param name="reason">Der Grund für den Fehler.</param>
+        <param name="detail">Das Fehlerdetailobjekt.</param>
+        <param name="formatter">To be added.</param>
+        <summary>Gibt ein neues <see cref="T:System.ServiceModel.Channels.MessageFault" />-Objekt zurück, das den festgelegten <see cref="T:System.ServiceModel.FaultCode" />, den <see cref="T:System.ServiceModel.FaultReason" />, das Detailobjekt und die <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" />-Objekte verwendet.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.MessageFault" /> Objekt mit Anfangswerten aus den übergebenen Parametern.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFault">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageFault CreateFault (System.ServiceModel.FaultCode code, System.ServiceModel.FaultReason reason, object detail, System.Runtime.Serialization.XmlObjectSerializer formatter, string actor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageFault CreateFault(class System.ServiceModel.FaultCode code, class System.ServiceModel.FaultReason reason, object detail, class System.Runtime.Serialization.XmlObjectSerializer formatter, string actor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.CreateFault(System.ServiceModel.FaultCode,System.ServiceModel.FaultReason,System.Object,System.Runtime.Serialization.XmlObjectSerializer,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageFault</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.ServiceModel.FaultCode" />
+        <Parameter Name="reason" Type="System.ServiceModel.FaultReason" />
+        <Parameter Name="detail" Type="System.Object" />
+        <Parameter Name="serializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+        <Parameter Name="actor" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="code">Der Fehlercode für die Fehlermeldung.</param>
+        <param name="reason">Der Grund für den Fehler.</param>
+        <param name="detail">Das Fehlerdetailobjekt.</param>
+        <param name="formatter">To be added.</param>
+        <param name="actor">Der Wert des Darstellers.</param>
+        <summary>Gibt ein neues <see cref="T:System.ServiceModel.Channels.MessageFault" />-Objekt zurück, das den festgelegten <see cref="T:System.ServiceModel.FaultCode" />, den <see cref="T:System.ServiceModel.FaultReason" />, das Detailobjekt, den <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> und den Darsteller verwendet.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.MessageFault" /> Objekt mit Anfangswerten aus den übergebenen Parametern.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFault">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageFault CreateFault (System.ServiceModel.FaultCode code, System.ServiceModel.FaultReason reason, object detail, System.Runtime.Serialization.XmlObjectSerializer formatter, string actor, string node);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageFault CreateFault(class System.ServiceModel.FaultCode code, class System.ServiceModel.FaultReason reason, object detail, class System.Runtime.Serialization.XmlObjectSerializer formatter, string actor, string node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.CreateFault(System.ServiceModel.FaultCode,System.ServiceModel.FaultReason,System.Object,System.Runtime.Serialization.XmlObjectSerializer,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageFault</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.ServiceModel.FaultCode" />
+        <Parameter Name="reason" Type="System.ServiceModel.FaultReason" />
+        <Parameter Name="detail" Type="System.Object" />
+        <Parameter Name="serializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+        <Parameter Name="actor" Type="System.String" />
+        <Parameter Name="node" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="code">Der Fehlercode für die Fehlermeldung.</param>
+        <param name="reason">Der Grund für den Fehler.</param>
+        <param name="detail">Das Fehlerdetailobjekt.</param>
+        <param name="formatter">To be added.</param>
+        <param name="actor">Der Wert des Darstellers.</param>
+        <param name="node">Der Wert des Knotens.</param>
+        <summary>Gibt ein neues <see cref="T:System.ServiceModel.Channels.MessageFault" />-Objekt zurück, das den festgelegten <see cref="T:System.ServiceModel.FaultCode" />, den <see cref="T:System.ServiceModel.FaultReason" />, das Detailobjekt, den <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" />, den Darsteller und die Knotenwerte verwendet.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.MessageFault" /> Objekt mit Anfangswerten aus den übergebenen Parametern.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDetail&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetDetail&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetDetail&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.GetDetail``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ des Detailobjekts.</typeparam>
+        <summary>Gibt das Detailobjekt des Nachrichtenfehlers zurück.</summary>
+        <returns>Das Detailobjekt des Nachrichtenfehlers.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDetail&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetDetail&lt;T&gt; (System.Runtime.Serialization.XmlObjectSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetDetail&lt;T&gt;(class System.Runtime.Serialization.XmlObjectSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.GetDetail``1(System.Runtime.Serialization.XmlObjectSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Detailobjekts.</typeparam>
+        <param name="serializer">Der <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" />, der für die Deserialisierung des Detailobjekts verwendet wird.</param>
+        <summary>Gibt das Detailobjekt zurück, das den festgelegten <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> verwendet.</summary>
+        <returns>Das im <see cref="T:System.ServiceModel.Channels.MessageFault" /> enthaltene Detailobjekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReaderAtDetailContents">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReader GetReaderAtDetailContents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlDictionaryReader GetReaderAtDetailContents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.GetReaderAtDetailContents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Xml.XmlDictionaryReader" />-Objekt zurück, das sich auf dem Detailobjekt des <see cref="T:System.ServiceModel.Channels.MessageFault" /> befindet.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryReader" />-Objekt, das sich auf dem Detailobjekt des <see cref="T:System.ServiceModel.Channels.MessageFault" /> befindet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDetail">
+      <MemberSignature Language="C#" Value="public abstract bool HasDetail { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasDetail" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageFault.HasDetail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob <see cref="T:System.ServiceModel.Channels.MessageFault" /> über ein Detailobjekt verfügt.</summary>
+        <value>
+          <see langword="true" />, wenn <see cref="T:System.ServiceModel.Channels.MessageFault" /> über ein Detailobjekt verfügt, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMustUnderstandFault">
+      <MemberSignature Language="C#" Value="public bool IsMustUnderstandFault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMustUnderstandFault" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageFault.IsMustUnderstandFault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dieser Fehler vom Misserfolg verursacht wurde, einen SOAP-Header zu verstehen.</summary>
+        <value>
+          <see langword="true" />, wenn dieser Fehler vom Misserfolg verursacht wurde, einen SOAP-Header zu verstehen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public virtual string Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Node" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageFault.Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die SOAP-Knoten mit Informationen über die SOAP-Knoten auf eine Nachricht Pfad Ursache des Fehlers ab.</summary>
+        <value>Der SOAP-Knoten, der Informationen darüber enthält, welcher SOAP-Knoten auf einem Nachrichtenpfad den Fehler enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetReaderAtDetailContents">
+      <MemberSignature Language="C#" Value="protected virtual System.Xml.XmlDictionaryReader OnGetReaderAtDetailContents ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xml.XmlDictionaryReader OnGetReaderAtDetailContents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.OnGetReaderAtDetailContents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt bei Aufruf in einer abgeleiteten Klasse ein <see cref="T:System.Xml.XmlDictionaryReader" />-Objekt zurück, das sich auf dem Detailobjekt des <see cref="T:System.ServiceModel.Channels.MessageFault" /> befindet.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryReader" />-Objekt, das sich auf dem Detailobjekt des <see cref="T:System.ServiceModel.Channels.MessageFault" /> befindet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWriteDetail">
+      <MemberSignature Language="C#" Value="protected virtual void OnWriteDetail (System.Xml.XmlDictionaryWriter writer, System.ServiceModel.EnvelopeVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnWriteDetail(class System.Xml.XmlDictionaryWriter writer, class System.ServiceModel.EnvelopeVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.OnWriteDetail(System.Xml.XmlDictionaryWriter,System.ServiceModel.EnvelopeVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="version" Type="System.ServiceModel.EnvelopeVersion" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlDictionaryWriter" />, der verwendet wird, um das Detailelement zu schreiben.</param>
+        <param name="version">Die Version des zu schreibenden SOAP-Umschlags.</param>
+        <summary>Wird vor dem Schreiben der Detailinhalte aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie die <xref:System.ServiceModel.Channels.MessageFault.OnWriteDetail%2A>-Methode, um am Detailschreibprozess teilzunehmen. Das Standardverhalten beruht auf dem Aufruf von <xref:System.ServiceModel.Channels.MessageFault.OnWriteStartDetail%2A>, gefolgt von <xref:System.ServiceModel.Channels.MessageFault.OnWriteDetailContents%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWriteDetailContents">
+      <MemberSignature Language="C#" Value="protected abstract void OnWriteDetailContents (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnWriteDetailContents(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.OnWriteDetailContents(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlDictionaryWriter" />, der verwendet wird, um das Detailelement zu schreiben.</param>
+        <summary>Schreibt bei Überschreibung in einer nicht abstrakten abgeleiteten Klasse die Inhalte des Detailelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Channels.MessageFault.OnWriteDetailContents%2A>-Methode wird nach <xref:System.ServiceModel.Channels.MessageFault.OnWriteStartDetail%2A> und vor dem Schreiben des Endelements aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWriteStartDetail">
+      <MemberSignature Language="C#" Value="protected virtual void OnWriteStartDetail (System.Xml.XmlDictionaryWriter writer, System.ServiceModel.EnvelopeVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnWriteStartDetail(class System.Xml.XmlDictionaryWriter writer, class System.ServiceModel.EnvelopeVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.OnWriteStartDetail(System.Xml.XmlDictionaryWriter,System.ServiceModel.EnvelopeVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="version" Type="System.ServiceModel.EnvelopeVersion" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlDictionaryWriter" />, der verwendet wird, um das Detailelement zu schreiben.</param>
+        <param name="version">Die Version des zu schreibenden SOAP-Umschlags.</param>
+        <summary>Schreibt das Startelement mithilfe des festgelegten <see cref="T:System.Xml.XmlDictionaryWriter" /> und der SOAP-Umschlagsversion.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.FaultReason Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.FaultReason Reason" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageFault.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.FaultReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Textbeschreibung eines SOAP-Fehlers ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.FaultReason" />, der eine Textbeschreibung eines SOAP-Fehlers enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WasHeaderNotUnderstood">
+      <MemberSignature Language="C#" Value="public static bool WasHeaderNotUnderstood (System.ServiceModel.Channels.MessageHeaders headers, string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool WasHeaderNotUnderstood(class System.ServiceModel.Channels.MessageHeaders headers, string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.WasHeaderNotUnderstood(System.ServiceModel.Channels.MessageHeaders,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headers" Type="System.ServiceModel.Channels.MessageHeaders" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="headers">Die SOAP-Nachrichtenheader.</param>
+        <param name="name">Der Name des Headerelements.</param>
+        <param name="ns">Der Namespace des Headerelements.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob die SOAP-Nachrichtenheader verstanden wurden.</summary>
+        <returns>
+          <see langword="true" />, wenn Nachrichtenheader verstanden wurden, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public void WriteTo (System.Xml.XmlDictionaryWriter writer, System.ServiceModel.EnvelopeVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteTo(class System.Xml.XmlDictionaryWriter writer, class System.ServiceModel.EnvelopeVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.WriteTo(System.Xml.XmlDictionaryWriter,System.ServiceModel.EnvelopeVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="version" Type="System.ServiceModel.EnvelopeVersion" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der für das Schreiben des Nachrichtenfehlers verwendete <see cref="T:System.Xml.XmlDictionaryWriter" />.</param>
+        <param name="version">Die Version des zu schreibenden SOAP-Umschlags.</param>
+        <summary>Schreibt den Meldungsfehler, der den festgelegten <see cref="T:System.Xml.XmlDictionaryWriter" /> und die SOAP-Umschlagsversion verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public void WriteTo (System.Xml.XmlWriter writer, System.ServiceModel.EnvelopeVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteTo(class System.Xml.XmlWriter writer, class System.ServiceModel.EnvelopeVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageFault.WriteTo(System.Xml.XmlWriter,System.ServiceModel.EnvelopeVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="version" Type="System.ServiceModel.EnvelopeVersion" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der für das Schreiben des Nachrichtenfehlers verwendete <see cref="T:System.Xml.XmlWriter" />.</param>
+        <param name="version">Die Version des zu schreibenden SOAP-Umschlags.</param>
+        <summary>Schreibt den Meldungsfehler, der den festgelegten <see cref="T:System.Xml.XmlWriter" /> und die SOAP-Umschlagsversion verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

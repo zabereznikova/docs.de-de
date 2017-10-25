@@ -1,0 +1,101 @@
+<Type Name="RuleConditionDialog" FullName="System.Workflow.Activities.Rules.Design.RuleConditionDialog">
+  <TypeSignature Language="C#" Value="public class RuleConditionDialog : System.Windows.Forms.Form" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RuleConditionDialog extends System.Windows.Forms.Form" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.Design.RuleConditionDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Form</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dieses Dialogfeld wird normalerweise von den Aktivitäten <see cref="T:System.Workflow.Activities.IfElseBranchActivity" />, <see cref="T:System.Workflow.Activities.WhileActivity" />, <see cref="T:System.Workflow.Activities.ConditionedActivityGroup" /> und <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> zur Bearbeitung deklarativer Bedingungen verwendet. Wenn Sie jedoch außerhalb dieser Aktivitäten Bedingungen verwenden möchten (z.&amp;#160;B., um eine Bedingung zur Verwendung außerhalb eines Workflows bearbeiten), können Sie in diesem Dialogfeld die Bearbeitung der Bedingung ausführen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleConditionDialog (System.Workflow.ComponentModel.Activity activity, System.CodeDom.CodeExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Activity activity, class System.CodeDom.CodeExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Design.RuleConditionDialog.#ctor(System.Workflow.ComponentModel.Activity,System.CodeDom.CodeExpression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+        <Parameter Name="expression" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="activity">Die <see cref="T:System.Workflow.ComponentModel.Activity" />, für die diese Bedingung ausgeführt wird. Normalerweise ist das der Workflow, es kann sich jedoch um jede gültige Aktivität handeln.</param>
+        <param name="expression">Der ursprüngliche <see cref="T:System.CodeDom.CodeExpression" />, der angezeigt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.Design.RuleConditionDialog" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleConditionDialog (Type activityType, System.Workflow.ComponentModel.Compiler.ITypeProvider typeProvider, System.CodeDom.CodeExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type activityType, class System.Workflow.ComponentModel.Compiler.ITypeProvider typeProvider, class System.CodeDom.CodeExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Design.RuleConditionDialog.#ctor(System.Type,System.Workflow.ComponentModel.Compiler.ITypeProvider,System.CodeDom.CodeExpression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityType" Type="System.Type" />
+        <Parameter Name="typeProvider" Type="System.Workflow.ComponentModel.Compiler.ITypeProvider" />
+        <Parameter Name="expression" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="activityType">Der Typ des Objekts, zu dem diese Bedingung ausgeführt wird. Normalerweise ist das der Workflow, es kann sich jedoch um jeden gültigen Typ handeln.</param>
+        <param name="typeProvider">Eine optionale <see cref="T:System.Workflow.ComponentModel.Compiler.ITypeProvider" />-Implementierung, mit der bestimmt wird, welche Typen in der Bedingung verfügbar sind. Wenn keine Protokolldatei angegeben wird, nur Typen in der Assembly gemäß <c>ActivityType</c> und alle Assemblys, die darauf verweist, die verfügbar ist.</param>
+        <param name="expression">Der ursprüngliche <see cref="T:System.CodeDom.CodeExpression" />, der angezeigt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.Design.RuleConditionDialog" />-Klasse unter Verwendung des angegebenen Aktivitätstyps, des Typanbieters und des Ausdrucks.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Design.RuleConditionDialog.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt alle vom <see cref="T:System.Workflow.Activities.Rules.Design.RuleConditionDialog" /> verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression Expression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.Design.RuleConditionDialog.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft <see cref="T:System.CodeDom.CodeExpression" /> nach einer Bestätigung durch den Dialogfeldbenutzer ab.</summary>
+        <value>Der vom Dialogfeldbenutzer geänderte <see cref="T:System.CodeDom.CodeExpression" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,273 @@
+<Type Name="HMACSHA256" FullName="System.Security.Cryptography.HMACSHA256">
+  <TypeSignature Language="C#" Value="public class HMACSHA256 : System.Security.Cryptography.HMAC" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HMACSHA256 extends System.Security.Cryptography.HMAC" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.HMACSHA256" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.HMAC</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Berechnet einen hashbasierten Message Authentication Code (HMAC) mithilfe der <see cref="T:System.Security.Cryptography.SHA256" /> hash-Funktion.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.HMACSHA256>ist ein Typ schlüsselgebundenen Hashalgorithmus, der aus dem SHA-256-Hash-Funktion erstellt und als einen hashbasierten Message Authentication Code (HMAC) verwendet. Der HMAC-Prozess kombiniert einen geheimen Schlüssel mit den Nachrichtendaten, erstellt einen Hashwert für das Ergebnis bei der Hashfunktion vermischt diesen Hashwert mit dem geheimen Schlüssel erneut aus und wendet dann die Hashfunktion ein zweites Mal. Die Ausgabehash ist 256 Bit lang.  
+  
+ Ein HMAC kann verwendet werden, um zu bestimmen, ob eine über einen unsicheren Kanal gesendete Nachricht manipuliert wurde, vorausgesetzt, dass Sender und Empfänger einen gemeinsamen geheimen Schlüssel besitzen. Der Absender berechnet den Hashwert für die ursprünglichen Daten und sendet die ursprünglichen Daten und den Hashwert als eine einzelne Nachricht. Der Empfänger berechnet den Hashwert für die empfangene Nachricht und überprüft, ob der berechnete HMAC den übertragenen HMAC übereinstimmt.  
+  
+ Alle Änderungen an den Daten oder der Hashwert führt keine Übereinstimmung gefunden, da Wissen des geheimen Schlüssels zum Ändern der Nachricht, und reproduzieren Sie den richtigen Hashwert erforderlich ist. Aus diesem Grund wird der ursprüngliche und der berechnete Hashwerte übereinstimmen, die Nachricht authentifiziert.  
+  
+ <xref:System.Security.Cryptography.HMACSHA256>akzeptiert Schlüssel jeder Größe und erzeugt eine Hashsequenz 256 Bit lang.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Signieren einer Datei mithilfe der <xref:System.Security.Cryptography.HMACSHA256> -Objekt, und klicken Sie dann überprüfen, ob die Datei.  
+  
+ [!code-cpp[HMACSHA256#1](~/samples/snippets/cpp/VS_Snippets_CLR/HMACSHA256/CPP/hmacsha256.cpp#1)]
+ [!code-csharp[HMACSHA256#1](~/samples/snippets/csharp/VS_Snippets_CLR/HMACSHA256/CS/hmacsha256.cs#1)]
+ [!code-vb[HMACSHA256#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/HMACSHA256/vb/hmacsha256.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HMACSHA256 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACSHA256.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.HMACSHA256" /> Klasse mit einem zufällig erzeugten Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.HMACSHA256>ist ein Typ schlüsselgebundenen Hashalgorithmus, der aus dem SHA-256-Hash-Funktion erstellt und als einen hashbasierten Message Authentication Code (HMAC) verwendet. Der HMAC-Prozess kombiniert einen geheimen Schlüssel mit den Nachrichtendaten, erstellt einen Hashwert für das Ergebnis bei der Hashfunktion vermischt diesen Hashwert mit dem geheimen Schlüssel erneut aus und wendet dann die Hashfunktion ein zweites Mal. Die Ausgabehash ist 256 Bit lang.  
+  
+ Dieser Konstruktor verwendet einen zufällig generierten Schlüssel 64 Byte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HMACSHA256 (byte[] key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACSHA256.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der geheime Schlüssel für die <see cref="T:System.Security.Cryptography.HMACSHA256" />-Verschlüsselung. Der Schlüssel kann eine beliebige Länge sein. Allerdings ist die empfohlene Größe von 64 Bytes. Wenn der Schlüssel mehr als 64 Bytes lang ist, es wird ein Hashwert erstellt (mithilfe von SHA-256) auf einen 64-Byte-Schlüssel abgeleitet werden soll. Wenn es weniger als 64 Bytes lang ist, wird er auf 64 Bytes aufgefüllt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.HMACSHA256" />-Klasse mit den angegebenen Schlüsseldaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.HMACSHA256>ist ein Typ schlüsselgebundenen Hashalgorithmus, der den SHA-256-Hash-Funktion ist und als Hash-Nachrichtenauthentifizierungscodes verwendet. Der HMAC-Prozess kombiniert einen geheimen Schlüssel mit den Nachrichtendaten, erstellt einen Hashwert für das Ergebnis bei der Hashfunktion vermischt diesen Hashwert mit dem geheimen Schlüssel erneut aus und wendet dann die Hashfunktion ein zweites Mal. Die Ausgabehash ist 256 Bit lang.  
+  
+   
+  
+## Examples  
+ Ein Beispiel dafür, wie dieser Konstruktor verwendet, finden Sie die <xref:System.Security.Cryptography.HMACSHA256> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="key" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACSHA256.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashCore">
+      <MemberSignature Language="C#" Value="protected override void HashCore (byte[] rgb, int ib, int cb);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HashCore(unsigned int8[] rgb, int32 ib, int32 cb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACSHA256.HashCore(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgb" Type="System.Byte[]" />
+        <Parameter Name="ib" Type="System.Int32" />
+        <Parameter Name="cb" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rgb">To be added.</param>
+        <param name="ib">To be added.</param>
+        <param name="cb">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashFinal">
+      <MemberSignature Language="C#" Value="protected override byte[] HashFinal ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance unsigned int8[] HashFinal() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACSHA256.HashFinal" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashSize">
+      <MemberSignature Language="C#" Value="public override int HashSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HashSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.HMACSHA256.HashSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACSHA256.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public override byte[] Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.HMACSHA256.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

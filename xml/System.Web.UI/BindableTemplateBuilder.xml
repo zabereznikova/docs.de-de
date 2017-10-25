@@ -1,0 +1,106 @@
+<Type Name="BindableTemplateBuilder" FullName="System.Web.UI.BindableTemplateBuilder">
+  <TypeSignature Language="C#" Value="public sealed class BindableTemplateBuilder : System.Web.UI.TemplateBuilder, System.Web.UI.IBindableTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BindableTemplateBuilder extends System.Web.UI.TemplateBuilder implements class System.Web.UI.IBindableTemplate, class System.Web.UI.ITemplate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.BindableTemplateBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.TemplateBuilder</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IBindableTemplate</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Unterstützt die Seite zu analysieren, der von datengebundenen Steuerelementen, die automatisch an eine ASP.NET Datenquellen-Steuerelements in auf Vorlagen basierende Inhaltsabschnitte binden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.BindableTemplateBuilder> Klasse dient zur Entwurfszeit und in Seiten ohne Kompilierung extrahieren die Werte der Eigenschaften von bidirektionalen gebundenen Steuerelements in einer Vorlage von datengebundenen unterstützt. Die <xref:System.Web.UI.BindableTemplateBuilder> -Objekts generiert den Code, implementiert die <xref:System.Web.UI.IBindableTemplate.ExtractValues%2A?displayProperty=nameWithType> Methode für die Vorlage.  
+  
+ Die <xref:System.Web.UI.BindableTemplateBuilder> ist eine <xref:System.Web.UI.TemplateBuilder> für datengebundene Steuerelemente, die auf Vorlagen basierenden Inhalt enthalten. Wenn das datengebundene Steuerelement, in der Entwurfszeit oder auf einer Seite kein-kompiliert verwendet wird die <xref:System.Web.UI.IBindableTemplate> -Schnittstelle für die <xref:System.Web.UI.BindableTemplateBuilder> wird verwendet, um die bidirektionale Datenbindung in das Steuerelement mit Vorlagen zu analysieren. Wenn das datengebundene Steuerelement kompiliert wird, eine Instanz von der <xref:System.Web.UI.CompiledBindableTemplateBuilder> Klasse erstellt und zugewiesen werden, auf den Wert des der <xref:System.Web.UI.IBindableTemplate> Objekt.  
+  
+ Weitere Informationen zum Binden von Daten, Ausdrücken und Syntax von ASP.NET finden Sie unter [Binden an Datenbanken](http://msdn.microsoft.com/en-us/ab7b2846-975b-4057-a948-45527497c742) und [Datenbindungsfunktionen Expressions Overview](http://msdn.microsoft.com/library/14cdd57d-0f82-4667-b503-73e1a96f136a).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindableTemplateBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BindableTemplateBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.BindableTemplateBuilder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary ExtractValues (System.Web.UI.Control container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Specialized.IOrderedDictionary ExtractValues(class System.Web.UI.Control container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BindableTemplateBuilder.ExtractValues(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="container">Die <see cref="T:System.Web.UI.Control" /> aus dem Name/Wert-Paare extrahiert werden soll, übergeben werden durch das datengebundene Steuerelement zu einem zugeordneten Datenquellen-Steuerelements in bidirektionalen Datenbindungsszenarien.</param>
+        <summary>Ruft einen Satz von Name/Wert-Paare für Werte, die bidirektionale Datenbindung ASP.NET-Syntax in auf Vorlagen basierenden Inhalt mithilfe der zur Entwurfszeit und in Seiten ohne Kompilierung gebunden sind.</summary>
+        <returns>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> von Name/Wert-Paaren, in den Namen darstellt, die Daten des Arbeitsaufgabenfelds als erster Parameter innerhalb der Vorlageninhalt binden angegeben und der Wert ist der aktuelle Wert eines Eigenschaftswerts, der mithilfe der Syntax für bidirektionale Datenbindung gebunden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.BindableTemplateBuilder.ExtractValues%2A> Methode ist die <xref:System.Web.UI.BindableTemplateBuilder> Implementierung der Klasse die <xref:System.Web.UI.IBindableTemplate.ExtractValues%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAppendToParentBuilder">
+      <MemberSignature Language="C#" Value="public override void OnAppendToParentBuilder (System.Web.UI.ControlBuilder parentBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnAppendToParentBuilder(class System.Web.UI.ControlBuilder parentBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BindableTemplateBuilder.OnAppendToParentBuilder(System.Web.UI.ControlBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentBuilder" Type="System.Web.UI.ControlBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="parentBuilder">Die <see cref="T:System.Web.UI.BindableTemplateBuilder" /> , dem den aktuellen Generator hinzugefügt.</param>
+        <summary>Benachrichtigt den <see cref="T:System.Web.UI.BindableTemplateBuilder" /> Objekt, das es einem übergeordneten Steuerelement-Generator hinzugefügt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das datengebundene Steuerelement enthält, aus einer Vorlage gebildete Inhalte, die Unterstützung der bidirektionalen Datenbindung, die <xref:System.Web.UI.BindableTemplateBuilder.OnAppendToParentBuilder%2A> -Methode, zusätzlich zum Aufrufen der <xref:System.Web.UI.ControlBuilder.OnAppendToParentBuilder%2A?displayProperty=nameWithType> Methode der Basisklasse, erstellt auch eine Instanz von der <xref:System.Web.UI.ExtractTemplateValuesMethod> delegieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

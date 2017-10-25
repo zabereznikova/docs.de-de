@@ -1,0 +1,257 @@
+<Type Name="QualifierData" FullName="System.Management.QualifierData">
+  <TypeSignature Language="C#" Value="public class QualifierData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit QualifierData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.QualifierData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über einen WMI-Qualifizierer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel listet Qualifiziererinformationen über die **Win32_Service** -Klasse unter Verwendung der <xref:System.Management.QualifierData> Klasse. Weitere Informationen zu **Win32_Service**, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_QualifierData#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_QualifierData/cs/QualifierData.cs#1)]
+ [!code-vb[wminet_QualifierData#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_QualifierData/vb/QualifierData.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsAmended">
+      <MemberSignature Language="C#" Value="public bool IsAmended { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAmended" />
+      <MemberSignature Language="DocId" Value="P:System.Management.QualifierData.IsAmended" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Qualifizierer ergänzt wird.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob der Qualifizierer ergänzt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualifizierern handelt es sich um Qualifizierer, deren Wert durch WMI lokalisiert werden kann. Lokalisierte Qualifizierer befinden sich in separaten Namespaces in WMI und in die grundlegenden Klassendefinition beim Abrufen der zusammengeführt werden können.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn dieses Qualifizierers geändert wird. andernfalls `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocal">
+      <MemberSignature Language="C#" Value="public bool IsLocal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLocal" />
+      <MemberSignature Language="DocId" Value="P:System.Management.QualifierData.IsLocal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Qualifizierer für diese Klasse lokal definiert wurde oder von einer Basisklasse weitergegeben wurde.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob der Qualifizierer für diese Klasse lokal definiert wurde oder von einer Basisklasse weitergegeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn der Qualifizierer für diese Klasse lokal definiert wurde; andernfalls `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOverridable">
+      <MemberSignature Language="C#" Value="public bool IsOverridable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOverridable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.QualifierData.IsOverridable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Wert des Qualifizierers der überschrieben werden kann, wenn weitergegeben.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob der Wert des Qualifizierers der überschrieben werden kann, wenn weitergegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn der Wert des Qualifizierers der überschrieben werden kann, wenn weitergegeben; andernfalls `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.QualifierData.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namen des Qualifizierers.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der den Namen des Qualifizierers enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Der Name des Qualifizierers.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet Qualifiziererinformationen über die **Win32_Service** -Klasse unter Verwendung der <xref:System.Management.QualifierData> Klasse. Weitere Informationen zu **Win32_Service**, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_QualifierData_Name#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_QualifierData_Name/cs/QualifierData_Name.cs#1)]
+ [!code-vb[wminet_QualifierData_Name#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_QualifierData_Name/vb/QualifierData_Name.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropagatesToInstance">
+      <MemberSignature Language="C#" Value="public bool PropagatesToInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PropagatesToInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Management.QualifierData.PropagatesToInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Qualifizierer an Instanzen der Klasse weitergegeben werden soll.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob der Qualifizierer an Instanzen der Klasse weitergegeben werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn diese Qualifizierer an Instanzen der Klasse weitergegeben werden soll; andernfalls `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropagatesToSubclass">
+      <MemberSignature Language="C#" Value="public bool PropagatesToSubclass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PropagatesToSubclass" />
+      <MemberSignature Language="DocId" Value="P:System.Management.QualifierData.PropagatesToSubclass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Qualifizierer an Unterklassen der Klasse weitergegeben werden soll.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob der Qualifizierer an Unterklassen der Klasse weitergegeben werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn Sie der Qualifizierer an Unterklassen dieser Klasse weitergegeben werden soll; andernfalls `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Management.QualifierData.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert des Qualifizierers.</summary>
+        <value>Gibt ein <see cref="T:System.Object" /> Wert, der den Wert des Qualifizierers der enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualifizierer können nur die folgenden Teilmenge von CIM-Typen sein: Zeichenfolge, uint16, uint32, sint32, uint64, sint64, real32, real64 oder Bool.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Der Wert des Qualifizierers.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet Qualifiziererinformationen über die **Win32_Service** -Klasse unter Verwendung der <xref:System.Management.QualifierData> Klasse. Weitere Informationen zu **Win32_Service**, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_QualifierData_Value#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_QualifierData_Value/cs/QualifierData_Value.cs#1)]
+ [!code-vb[wminet_QualifierData_Value#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_QualifierData_Value/vb/QualifierData_Value.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

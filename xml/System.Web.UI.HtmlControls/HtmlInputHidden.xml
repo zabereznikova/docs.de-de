@@ -1,0 +1,319 @@
+<Type Name="HtmlInputHidden" FullName="System.Web.UI.HtmlControls.HtmlInputHidden">
+  <TypeSignature Language="C#" Value="public class HtmlInputHidden : System.Web.UI.HtmlControls.HtmlInputControl, System.Web.UI.IPostBackDataHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlInputHidden extends System.Web.UI.HtmlControls.HtmlInputControl implements class System.Web.UI.IPostBackDataHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlInputHidden" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlInputControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackDataHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ServerChange")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht den programmgesteuerten Zugriff auf das HTML-Element <see langword="&lt;input type=hidden&gt;" /> auf dem Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Web.UI.HtmlControls.HtmlInputHidden> Steuerelement zum Einbetten von Formatierungsinformationen, die der Benutzer innerhalb ausgeblendet ist ein `<form>` Element. Diese Informationen werden gesendet, wenn die Webseite an den Server zurückgesendet wird. Die <xref:System.Web.UI.HtmlControls.HtmlInputHidden> gesteuert eine <xref:System.Web.UI.HtmlControls.HtmlInputHidden.ServerChange> Ereignis, das ausgelöst wird, wenn die <xref:System.Web.UI.HtmlControls.HtmlInputControl.Value%2A> Eigenschaft ändert die Werte zwischen Übertragungen zum Server. Dadurch können Sie einen Ereignishandler erstellen, der einen benutzerdefinierten Satz von Anweisungen jedes Mal ausführt, die das Ereignis ausgelöst wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.HtmlControls.HtmlInputHidden> Steuerelement bietet eine integrierte Methode zum Zurücksenden an den Server. Geben Sie ein anderes Steuerelement auf der Webseite, die Übermittlung an den Server, z. B. unterstützt ein <xref:System.Web.UI.HtmlControls.HtmlButton> -Steuerelement, um den Wert des Steuerelements an den Server zu senden.  
+  
+> [!NOTE]
+>  Das ASP.NET-Seitenframework verwendet diese HTML-Funktion zum automatischen Laden und den Ansichtszustand von Serversteuerelementen auf einer Seite beibehalten.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlInputHidden>, finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlInputHidden.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.HtmlControls.HtmlInputHidden> Steuerelement zum Speichern von Informationen auf der Webseite zwischen Übertragungen zum Server.  
+  
+ [!code-aspx-csharp[Classic HtmlInputHidden Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlInputHidden Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlInputHidden Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlInputHidden Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlInputHidden ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputHidden.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlInputHidden" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.HtmlControls.HtmlInputHidden> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlInputHidden>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlInputControl.Type%2A>|Das Zeichenfolgenliteral "hidden".|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.HtmlControls.HtmlInputHidden> steuern und platzieren Sie es auf der Webseite.  
+  
+ [!code-aspx-csharp[HtmlInputHiddenCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlInputHiddenCtor/CS/htmlinputhiddenctorcs.aspx#1)]
+ [!code-aspx-vb[HtmlInputHiddenCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlInputHiddenCtor/VB/htmlinputhiddenctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPostData">
+      <MemberSignature Language="C#" Value="protected virtual bool LoadPostData (string postDataKey, System.Collections.Specialized.NameValueCollection postCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool LoadPostData(string postDataKey, class System.Collections.Specialized.NameValueCollection postCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputHidden.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="postDataKey" Type="System.String" />
+        <Parameter Name="postCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="postDataKey">Die Schlüsselkennung für das Steuerelement.</param>
+        <param name="postCollection">Die Sammlung aller eingehenden Namenswerte.</param>
+        <summary>Verarbeitet die Postbackdaten für das <see cref="T:System.Web.UI.HtmlControls.HtmlInputHidden" />-Steuerelement.</summary>
+        <returns>
+          <see langword="true" />, wenn sich der Zustand des <see cref="T:System.Web.UI.HtmlControls.HtmlInputHidden" />-Steuerelements aufgrund des Postbacks geändert hat; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputHidden.LoadPostData%2A> Methode überprüft, ob der Postbackwert des der <xref:System.Web.UI.HtmlControls.HtmlInputHidden> Steuerelement unterscheidet sich von den vorherigen Wert, und wenn dies der Fall ist, gibt `true`.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputHidden.LoadPostData%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlInputHidden> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputHidden.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputHidden.OnPreRender%2A> Methode wird aufgerufen, unmittelbar vor dem Rendering der <xref:System.Web.UI.HtmlControls.HtmlInputHidden> Steuerelement. Die <xref:System.Web.UI.HtmlControls.HtmlInputHidden.OnPreRender%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlInputHidden> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlInputHidden.OnPreRender%2A> Methode, sodass die It Wendet HTML-Codierung für den Eingabewert in einem benutzerdefinierten <xref:System.Web.UI.HtmlControls.HtmlInputHidden> Serversteuerelement.  
+  
+ [!code-aspx-csharp[CustomHtmlInputHiddenOnPreRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlInputHiddenOnPreRender/CS/custom_htmlinputhidden_onprerendercs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlInputHiddenOnPreRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlInputHiddenOnPreRender/VB/custom_htmlinputhidden_onprerendervb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlInputHiddenOnPreRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlInputHiddenOnPreRender/CS/custom_htmlinputhidden_onprerender.cs#2)]
+ [!code-vb[CustomHtmlInputHiddenOnPreRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlInputHiddenOnPreRender/VB/custom_htmlinputhidden_onprerender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnServerChange">
+      <MemberSignature Language="C#" Value="protected virtual void OnServerChange (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnServerChange(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputHidden.OnServerChange(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" /> , das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.HtmlControls.HtmlInputHidden.ServerChange" />-Ereignis aus. Diese Methode können Sie das Ereignis direkt behandeln.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputHidden.ServerChange> Ereignis wird ausgelöst, wenn die <xref:System.Web.UI.HtmlControls.HtmlInputControl.Value%2A> -Eigenschaft auf dem Server geändert wird.  
+  
+> [!NOTE]
+>  Das Steuerelement benötigen Ansichtszustand für aktiviert die <xref:System.Web.UI.HtmlControls.HtmlInputHidden.ServerChange> Ereignis ordnungsgemäß funktioniert.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.HtmlControls.HtmlInputHidden.OnServerChange%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.HtmlControls.HtmlInputHidden.OnServerChange(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.HtmlControls.HtmlInputHidden.OnServerChange(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputHidden.RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="M:System.Web.UI.HtmlControls.HtmlInputHidden.OnServerChange(System.EventArgs)" /> Methode, um zu signalisieren die <see cref="T:System.Web.UI.HtmlControls.HtmlInputHidden" /> Steuerelement, das der Zustand des Steuerelements geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputHidden.RaisePostDataChangedEvent%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet, zum Erweitern der Funktionalität von der <xref:System.Web.UI.HtmlControls.HtmlInputHidden> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAttributes">
+      <MemberSignature Language="C#" Value="protected override void RenderAttributes (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderAttributes(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputHidden.RenderAttributes(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , der den Ausgabestream zum Rendern auf dem Client enthält.</param>
+        <summary>Rendert die Attribute des <see cref="T:System.Web.UI.HtmlControls.HtmlInputHidden" />-Steuerelements in das angegebene <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerChange">
+      <MemberSignature Language="C#" Value="public event EventHandler ServerChange;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ServerChange" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.HtmlControls.HtmlInputHidden.ServerChange" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Web.UI.HtmlControls.HtmlInputControl.Value" /> -Eigenschaft auf dem Server geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputHidden.ServerChange> Ereignis wird ausgelöst, wenn die <xref:System.Web.UI.HtmlControls.HtmlInputControl.Value%2A> -Eigenschaft zwischen Übertragungen zum Server geändert wird.  
+  
+> [!NOTE]
+>  Das Steuerelement benötigen Ansichtszustand für aktiviert die <xref:System.Web.UI.HtmlControls.HtmlInputHidden.ServerChange> Ereignis ordnungsgemäß funktioniert.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackDataHandler.LoadPostData">
+      <MemberSignature Language="C#" Value="bool IPostBackDataHandler.LoadPostData (string postDataKey, System.Collections.Specialized.NameValueCollection postCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Web.UI.IPostBackDataHandler.LoadPostData(string postDataKey, class System.Collections.Specialized.NameValueCollection postCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputHidden.System#Web#UI#IPostBackDataHandler#LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="postDataKey" Type="System.String" />
+        <Parameter Name="postCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="postDataKey">Die Schlüsselkennung für das Steuerelement.</param>
+        <param name="postCollection">Die Sammlung aller eingehenden Namenswerte.</param>
+        <summary>Implementiert die <see cref="M:System.Web.UI.IPostBackDataHandler.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" /> -Schnittstellenmethode durch Aufrufen der <see cref="M:System.Web.UI.HtmlControls.HtmlInputHidden.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" /> Methode.</summary>
+        <returns>
+          <see langword="true" />, wenn sich der Zustand des <see cref="T:System.Web.UI.HtmlControls.HtmlInputHidden" />-Steuerelements aufgrund des Postbacks geändert hat; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="void IPostBackDataHandler.RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputHidden.System#Web#UI#IPostBackDataHandler#RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Implementiert die <see cref="M:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent" /> -Schnittstellenmethode durch Aufrufen der <see cref="M:System.Web.UI.HtmlControls.HtmlInputHidden.RaisePostDataChangedEvent" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

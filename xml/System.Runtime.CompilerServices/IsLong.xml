@@ -1,0 +1,52 @@
+<Type Name="IsLong" FullName="System.Runtime.CompilerServices.IsLong">
+  <TypeSignature Language="C#" Value="public static class IsLong" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit IsLong extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.IsLong" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.CompilerServices.VisualC</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, dass eine geänderte ganze Zahl mit einem standardmäßigen C++ ist <see langword="long" /> Wert. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der C++-Standard gibt an, dass ein `long` Wert und einen ganzzahligen Wert sind unterschiedliche Typen.  Sie werden jedoch beide dargestellt mit `ELEMENT_TYPE_I4` in einer Assembly.  Zur Unterscheidung einer `long` aus einer Ganzzahl in C++, fügt Microsoft C++-Compiler die <xref:System.Runtime.CompilerServices.IsLong> Modifizierer in einer beliebigen Instanz eine `long` Wenn die Instanz ausgegeben wird.  Dieser Prozess ist ausgesprochen wichtig für die Aufrechterhaltung von Sprachebene typsicherheit.  
+  
+ Compiler geben benutzerdefinierte Modifizierer innerhalb der Metadaten zum Ändern der Darstellungsweise der Just-in-Time-Compiler (JIT)-Werte behandelt, wenn das Standardverhalten nicht zulässig ist.  Stößt der JIT-Compiler einen benutzerdefinierten Modifizierer, behandelt den Wert, der angibt, der Modifizierer wie.  Compiler können Anwenden von benutzerdefinierten Modifizierer auf Methoden, Parameter und Rückgabewerte.  Der JIT-Compiler, erforderlichen Modifizierern reagieren muss jedoch optionale Modifizierer ignorieren kann.  
+  
+ Sie können benutzerdefinierte Modifizierer in Metadaten, die mit einer der folgenden Methoden ausgeben:  
+  
+-   Mithilfe der Methoden in der <xref:System.Reflection.Emit.TypeBuilder> -Klasse wie z. B. <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineField%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineConstructor%2A>, und <xref:System.Reflection.Emit.TypeBuilder.DefineProperty%2A>.  
+  
+-   Generieren eine Anweisungsdatei Microsoft intermediate Language (MSIL), die Aufrufe enthält `modopt` und `modreq`, und Assemblieren der Datei mit den [Ilasm.exe (IL-Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md).  
+  
+-   Verwenden die nicht verwaltete Reflektions-API.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Ausgeben einer <xref:System.Runtime.CompilerServices.IsLong> Objekt in eine Assembly über Reflektion ermöglicht.  
+  
+ [!code-cpp[Runtime.CompilerServices.IsLong#1](~/samples/snippets/cpp/VS_Snippets_CLR/Runtime.CompilerServices.IsLong/cpp/sample.cpp#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

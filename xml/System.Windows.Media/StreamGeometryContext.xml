@@ -1,0 +1,439 @@
+<Type Name="StreamGeometryContext" FullName="System.Windows.Media.StreamGeometryContext">
+  <TypeSignature Language="C#" Value="public abstract class StreamGeometryContext : System.Windows.Threading.DispatcherObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit StreamGeometryContext extends System.Windows.Threading.DispatcherObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.StreamGeometryContext" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Beschreibt eine Geometrie mithilfe von Zeichnungsbefehlen. Diese Klasse wird verwendet, mit der <see cref="T:System.Windows.Media.StreamGeometry" /> Klasse, um eine einfache Geometrie zu erstellen, die keine datenbindungen, Animationen und Änderungen unterstützt.</summary>
+    <remarks>To be added.</remarks>
+    <exception cref="T:System.InvalidOperationException">Es wurde versucht, ein Segment hinzuzufügen, ohne eine Abbildung ab, durch Aufrufen der <see cref="M:System.Windows.Media.StreamGeometryContext.BeginFigure(System.Windows.Point,System.Boolean,System.Boolean)" /> Methode.</exception>
+  </Docs>
+  <Members>
+    <Member MemberName="ArcTo">
+      <MemberSignature Language="C#" Value="public abstract void ArcTo (System.Windows.Point point, System.Windows.Size size, double rotationAngle, bool isLargeArc, System.Windows.Media.SweepDirection sweepDirection, bool isStroked, bool isSmoothJoin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ArcTo(valuetype System.Windows.Point point, valuetype System.Windows.Size size, float64 rotationAngle, bool isLargeArc, valuetype System.Windows.Media.SweepDirection sweepDirection, bool isStroked, bool isSmoothJoin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.StreamGeometryContext.ArcTo(System.Windows.Point,System.Windows.Size,System.Double,System.Boolean,System.Windows.Media.SweepDirection,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="size" Type="System.Windows.Size" />
+        <Parameter Name="rotationAngle" Type="System.Double" />
+        <Parameter Name="isLargeArc" Type="System.Boolean" />
+        <Parameter Name="sweepDirection" Type="System.Windows.Media.SweepDirection" />
+        <Parameter Name="isStroked" Type="System.Boolean" />
+        <Parameter Name="isSmoothJoin" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der Zielort für das Ende des Bogens.</param>
+        <param name="size">Die Radien (halbe Breite und die Hälfte der Höhe) eine Ellipse, deren Umfang verwendet wird, um den Winkel zu zeichnen. Wenn das Oval in allen Richtungen sehr gerundet wird, der Bogen gerundet wird wird jedoch fast Flatfile, auch den Bogen. Beispielsweise würde eine sehr große Breite und Höhe ein sehr großes Oval darstellen, das eine geringfügige Krümmung für den Winkel erlangen.</param>
+        <param name="rotationAngle">Der Drehungswinkel der Ellipse, der die Kurve angibt. Mit diesem Parameter kann die Krümmung des Bogens gedreht werden.</param>
+        <param name="isLargeArc">
+          <see langword="true" />den Bogen größer als 180 Grad gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="sweepDirection">Ein Wert, der angibt, ob der Bogen, in gezeichnet wird der <see cref="F:System.Windows.Media.SweepDirection.Clockwise" /> oder <see cref="F:System.Windows.Media.SweepDirection.Counterclockwise" /> Richtung.</param>
+        <param name="isStroked">
+          <see langword="true" />um das Segment, gestrichelt, wenn eine <see cref="T:System.Windows.Media.Pen" /> zum Rendern des Segments verwendet, andernfalls <see langword="false" />.</param>
+        <param name="isSmoothJoin">
+          <see langword="true" />um den Join zwischen diesem Segment und dem vorherigen Segment als Ecke Wenn mit gezeichnet werden eine <see cref="T:System.Windows.Media.Pen" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Zeichnet einen Bogen, der den angegebenen Punkt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet den Endpunkt des vorherigen Segments als Ausgangspunkt erforderlich. Ist dies das erste Segment in eine Abbildung, die vom angegebenen Punkt verwendet die <xref:System.Windows.Media.StreamGeometryContext.BeginFigure%2A> Methode als Anfangspunkt.  
+  
+ Ein <xref:System.Windows.Media.StreamGeometry> kann nicht serialisiert werden, wenn er enthält eine <xref:System.Windows.Media.Transform> oder eine nicht gezeichnet oder nicht ausgefüllte Segmente.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie ein Bogen mit zeichnen die <xref:System.Windows.Media.StreamGeometryContext.ArcTo%2A> Methode.  
+  
+ [!code-csharp[GeometriesMiscSnippets_procedural_snip#StreamGeometryArcToExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/CSharp/StreamGeometryArcToExample.cs#streamgeometryarctoexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_procedural_snip#StreamGeometryArcToExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/streamgeometryarctoexample.vb#streamgeometryarctoexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginFigure">
+      <MemberSignature Language="C#" Value="public abstract void BeginFigure (System.Windows.Point startPoint, bool isFilled, bool isClosed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginFigure(valuetype System.Windows.Point startPoint, bool isFilled, bool isClosed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.StreamGeometryContext.BeginFigure(System.Windows.Point,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startPoint" Type="System.Windows.Point" />
+        <Parameter Name="isFilled" Type="System.Boolean" />
+        <Parameter Name="isClosed" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="startPoint">Die <see cref="T:System.Windows.Point" /> , in dem die Abbildung beginnt.</param>
+        <param name="isFilled">
+          <see langword="true" />Verwenden Sie den Bereich in dieser Abbildung für Treffertests, rendern und Ausschneiden belegt; andernfalls <see langword="false" />.</param>
+        <param name="isClosed">
+          <see langword="true" />um die Abbildung zu schließen. andernfalls <see langword="false" />. Wenn zwei Verbindungslinien gezeichnet werden, z. B. und <c>IsClosed</c> auf festgelegt ist <see langword="false" />, die Zeichnung werden nur zwei Zeilen, aber wenn <c>IsClosed</c> auf festgelegt ist <see langword="true" />, zwei Zeilen werden geschlossen, um Erstellen eines Dreiecks.</param>
+        <summary>Gibt den Ausgangspunkt für eine neue Abbildung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Aufruf dieser Methode kann mehrmals, können Sie mehrere Figuren (unabhängige geometrische Formen) in dieser erstellen <xref:System.Windows.Media.StreamGeometryContext>.  
+  
+ Ein <xref:System.Windows.Media.StreamGeometry> kann nicht serialisiert werden, wenn er enthält eine <xref:System.Windows.Media.Transform> oder eine nicht gezeichnet oder nicht ausgefüllte Segmente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BezierTo">
+      <MemberSignature Language="C#" Value="public abstract void BezierTo (System.Windows.Point point1, System.Windows.Point point2, System.Windows.Point point3, bool isStroked, bool isSmoothJoin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BezierTo(valuetype System.Windows.Point point1, valuetype System.Windows.Point point2, valuetype System.Windows.Point point3, bool isStroked, bool isSmoothJoin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.StreamGeometryContext.BezierTo(System.Windows.Point,System.Windows.Point,System.Windows.Point,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point2" Type="System.Windows.Point" />
+        <Parameter Name="point3" Type="System.Windows.Point" />
+        <Parameter Name="isStroked" Type="System.Boolean" />
+        <Parameter Name="isSmoothJoin" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Der erste Kontrollpunkt, der verwendet, um die Form der Kurve angeben.</param>
+        <param name="point2">Der zweite Kontrollpunkt, der verwendet, um die Form der Kurve angeben.</param>
+        <param name="point3">Der Zielort für das Ende der Kurve.</param>
+        <param name="isStroked">
+          <see langword="true" />um das Segment, gestrichelt, wenn eine <see cref="T:System.Windows.Media.Pen" /> zum Rendern des Segments verwendet, andernfalls <see langword="false" />.</param>
+        <param name="isSmoothJoin">
+          <see langword="true" />um den Join zwischen diesem Segment und dem vorherigen Segment als Ecke Wenn mit gezeichnet werden eine <see cref="T:System.Windows.Media.Pen" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Zeichnet eine Bézier-Kurve an der angegebenen Position.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine kubische Bézier-Kurve wird durch einen Startpunkt, Endpunkt und zwei Steuerpunkte definiert. Der erste Kontrollpunkt bestimmt die Krümmung der ersten Hälfte des Segments, und der zweite Kontrollpunkt bestimmt die Krümmung der zweiten Hälfte des Segments.  
+  
+ Diese Methode verwendet den Endpunkt des vorherigen Segments als Ausgangspunkt erforderlich. Ist dies das erste Segment in eine Abbildung, die vom angegebenen Punkt verwendet die <xref:System.Windows.Media.StreamGeometryContext.BeginFigure%2A> Methode als Anfangspunkt.  
+  
+ Ein <xref:System.Windows.Media.StreamGeometry> kann nicht serialisiert werden, wenn er enthält eine <xref:System.Windows.Media.Transform> oder eine nicht gezeichnet oder nicht ausgefüllte Segmente.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Bézier-Kurve mit zeichnen die <xref:System.Windows.Media.StreamGeometryContext.BezierTo%2A> Methode.  
+  
+ [!code-csharp[GeometriesMiscSnippets_procedural_snip#StreamGeometryBezierToExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/CSharp/StreamGeometryBezierToExample.cs#streamgeometrybeziertoexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_procedural_snip#StreamGeometryBezierToExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/streamgeometrybeziertoexample.vb#streamgeometrybeziertoexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, ein Segment hinzuzufügen, ohne eine Abbildung ab, durch Aufrufen der <see cref="M:System.Windows.Media.StreamGeometryContext.BeginFigure(System.Windows.Point,System.Boolean,System.Boolean)" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.StreamGeometryContext.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt diesen Kontext und leert seinen Inhalt, sodass gerendert werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach "geschlossen", kann der Kontext geändert werden. Der Kontext muss geschlossen werden, bevor sein Inhalt gerendert werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieser Kontext wurde bereits geschlossen oder verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LineTo">
+      <MemberSignature Language="C#" Value="public abstract void LineTo (System.Windows.Point point, bool isStroked, bool isSmoothJoin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LineTo(valuetype System.Windows.Point point, bool isStroked, bool isSmoothJoin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.StreamGeometryContext.LineTo(System.Windows.Point,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="isStroked" Type="System.Boolean" />
+        <Parameter Name="isSmoothJoin" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der Zielort für das Ende der Linie.</param>
+        <param name="isStroked">
+          <see langword="true" />um das Segment, gestrichelt, wenn eine <see cref="T:System.Windows.Media.Pen" /> zum Rendern des Segments verwendet, andernfalls <see langword="false" />.</param>
+        <param name="isSmoothJoin">
+          <see langword="true" />um den Join zwischen diesem Segment und dem vorherigen Segment als Ecke Wenn mit gezeichnet werden eine <see cref="T:System.Windows.Media.Pen" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Zeichnet eine gerade Linie mit dem angegebenen <see cref="T:System.Windows.Point" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet den Endpunkt des vorherigen Segments als Ausgangspunkt erforderlich. Ist dies das erste Segment in eine Abbildung, die vom angegebenen Punkt verwendet die <xref:System.Windows.Media.StreamGeometryContext.BeginFigure%2A> Methode als Anfangspunkt.  
+  
+ Ein <xref:System.Windows.Media.StreamGeometry> kann nicht serialisiert werden, wenn er enthält eine <xref:System.Windows.Media.Transform> oder eine nicht gezeichnet oder nicht ausgefüllte Segmente.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie ein Dreieck mit zeichnen die <xref:System.Windows.Media.StreamGeometryContext.LineTo%2A> Methode.  
+  
+ [!code-csharp[GeometriesMiscSnippets_procedural_snip#StreamGeometryTriangleExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/CSharp/StreamGeometryTriangleExample.cs#streamgeometrytriangleexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_procedural_snip#StreamGeometryTriangleExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/streamgeometrytriangleexample.vb#streamgeometrytriangleexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, ein Segment hinzuzufügen, ohne eine Abbildung ab, durch Aufrufen der <see cref="M:System.Windows.Media.StreamGeometryContext.BeginFigure(System.Windows.Point,System.Boolean,System.Boolean)" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PolyBezierTo">
+      <MemberSignature Language="C#" Value="public abstract void PolyBezierTo (System.Collections.Generic.IList&lt;System.Windows.Point&gt; points, bool isStroked, bool isSmoothJoin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PolyBezierTo(class System.Collections.Generic.IList`1&lt;valuetype System.Windows.Point&gt; points, bool isStroked, bool isSmoothJoin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.StreamGeometryContext.PolyBezierTo(System.Collections.Generic.IList{System.Windows.Point},System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Collections.Generic.IList&lt;System.Windows.Point&gt;" />
+        <Parameter Name="isStroked" Type="System.Boolean" />
+        <Parameter Name="isSmoothJoin" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="points">Die Liste von Punkten, die Steuerpunkte und Zielpunkte für mindestens eine Bézier-Kurven angeben. Die Anzahl der Punkte in dieser Liste sollte ein Vielfaches von drei sein.</param>
+        <param name="isStroked">
+          <see langword="true" />um das Segment, gestrichelt, wenn eine <see cref="T:System.Windows.Media.Pen" /> zum Rendern des Segments verwendet, andernfalls <see langword="false" />.</param>
+        <param name="isSmoothJoin">
+          <see langword="true" />um den Join zwischen diesem Segment und dem vorherigen Segment als Ecke Wenn mit gezeichnet werden eine <see cref="T:System.Windows.Media.Pen" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Zeichnet eine oder mehrere verbundene Bézier-Kurven.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der erste Punkt im `points` gibt den ersten Kontrollpunkt der nächsten gibt des zweiten Kontrollpunkts, der dritte Punkt gibt den Endpunkt, der nächste Punkt gibt den ersten Kontrollpunkt der nächsten Kurve und So weiter.  
+  
+ Diese Methode verwendet den Endpunkt des vorherigen Segments als Ausgangspunkt erforderlich. Ist dies das erste Segment in eine Abbildung, die vom angegebenen Punkt verwendet die <xref:System.Windows.Media.StreamGeometryContext.BeginFigure%2A> Methode als Anfangspunkt.  
+  
+ Ein <xref:System.Windows.Media.StreamGeometry> kann nicht serialisiert werden, wenn er enthält eine <xref:System.Windows.Media.Transform> oder eine nicht gezeichnet oder nicht ausgefüllte Segmente.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie mehrere verbundene Bézier-Kurven mit zeichnen die <xref:System.Windows.Media.StreamGeometryContext.PolyBezierTo%2A> Methode.  
+  
+ [!code-csharp[GeometriesMiscSnippets_procedural_snip#StreamGeometryPolyBezierToExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/CSharp/StreamGeometryPolyBezierToExample.cs#streamgeometrypolybeziertoexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_procedural_snip#StreamGeometryPolyBezierToExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/streamgeometrypolybeziertoexample.vb#streamgeometrypolybeziertoexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, ein Segment hinzuzufügen, ohne eine Abbildung ab, durch Aufrufen der <see cref="M:System.Windows.Media.StreamGeometryContext.BeginFigure(System.Windows.Point,System.Boolean,System.Boolean)" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PolyLineTo">
+      <MemberSignature Language="C#" Value="public abstract void PolyLineTo (System.Collections.Generic.IList&lt;System.Windows.Point&gt; points, bool isStroked, bool isSmoothJoin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PolyLineTo(class System.Collections.Generic.IList`1&lt;valuetype System.Windows.Point&gt; points, bool isStroked, bool isSmoothJoin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.StreamGeometryContext.PolyLineTo(System.Collections.Generic.IList{System.Windows.Point},System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Collections.Generic.IList&lt;System.Windows.Point&gt;" />
+        <Parameter Name="isStroked" Type="System.Boolean" />
+        <Parameter Name="isSmoothJoin" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="points">Die Auflistung von Punkten, die angeben, Zielpunkte für eine oder mehrere verbundene geraden.</param>
+        <param name="isStroked">
+          <see langword="true" />um das Segment, gestrichelt, wenn eine <see cref="T:System.Windows.Media.Pen" /> zum Rendern des Segments verwendet, andernfalls <see langword="false" />.</param>
+        <param name="isSmoothJoin">
+          <see langword="true" />um den Join zwischen diesem Segment und dem vorherigen Segment als Ecke Wenn mit gezeichnet werden eine <see cref="T:System.Windows.Media.Pen" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Zeichnet eine oder mehrere verbundene geraden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet den Endpunkt des vorherigen Segments als Ausgangspunkt erforderlich. Ist dies das erste Segment in eine Abbildung, die vom angegebenen Punkt verwendet die <xref:System.Windows.Media.StreamGeometryContext.BeginFigure%2A> Methode als Anfangspunkt.  
+  
+ Ein <xref:System.Windows.Media.StreamGeometry> kann nicht serialisiert werden, wenn er enthält eine <xref:System.Windows.Media.Transform> oder eine nicht gezeichnet oder nicht ausgefüllte Segmente.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie ein Dreieck mit zeichnen die <xref:System.Windows.Media.StreamGeometryContext.PolyLineTo%2A> Methode.  
+  
+ [!code-csharp[GeometriesMiscSnippets_procedural_snip#StreamGeometryPolyLineToExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/CSharp/StreamGeometryPolyLineToExample.cs#streamgeometrypolylinetoexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_procedural_snip#StreamGeometryPolyLineToExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/streamgeometrypolylinetoexample.vb#streamgeometrypolylinetoexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, ein Segment hinzuzufügen, ohne eine Abbildung ab, durch Aufrufen der <see cref="M:System.Windows.Media.StreamGeometryContext.BeginFigure(System.Windows.Point,System.Boolean,System.Boolean)" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PolyQuadraticBezierTo">
+      <MemberSignature Language="C#" Value="public abstract void PolyQuadraticBezierTo (System.Collections.Generic.IList&lt;System.Windows.Point&gt; points, bool isStroked, bool isSmoothJoin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PolyQuadraticBezierTo(class System.Collections.Generic.IList`1&lt;valuetype System.Windows.Point&gt; points, bool isStroked, bool isSmoothJoin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.StreamGeometryContext.PolyQuadraticBezierTo(System.Collections.Generic.IList{System.Windows.Point},System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Collections.Generic.IList&lt;System.Windows.Point&gt;" />
+        <Parameter Name="isStroked" Type="System.Boolean" />
+        <Parameter Name="isSmoothJoin" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="points">Die Auflistung von Punkten, die Steuerpunkte und Zielpunkte für eine oder mehrere quadratische Bézier-Kurve angeben. Der erste Punkt in der Liste gibt Kontrollpunkts der Kurve an, der nächste Punkt gibt den Zielort, der nächste Punkt gibt den Kontrollpunkt der nächsten Kurve und So weiter. Die Liste muss eine gerade Anzahl von Punkten enthalten.</param>
+        <param name="isStroked">
+          <see langword="true" />um das Segment, gestrichelt, wenn eine <see cref="T:System.Windows.Media.Pen" /> zum Rendern des Segments verwendet, andernfalls <see langword="false" />.</param>
+        <param name="isSmoothJoin">
+          <see langword="true" />um den Join zwischen diesem Segment und dem vorherigen Segment als Ecke Wenn mit gezeichnet werden eine <see cref="T:System.Windows.Media.Pen" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Zeichnet eine oder mehrere verbundene quadratische Bézier-Kurven.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet den Endpunkt des vorherigen Segments als Ausgangspunkt erforderlich. Ist dies das erste Segment in eine Abbildung, die vom angegebenen Punkt verwendet die <xref:System.Windows.Media.StreamGeometryContext.BeginFigure%2A> Methode als Anfangspunkt.  
+  
+ Ein <xref:System.Windows.Media.StreamGeometry> kann nicht serialisiert werden, wenn er enthält eine <xref:System.Windows.Media.Transform> oder eine nicht gezeichnet oder nicht ausgefüllte Segmente.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie mehrere verbundene quadratische Bézier-Kurven mit zeichnen die <xref:System.Windows.Media.StreamGeometryContext.PolyQuadraticBezierTo%2A> Methode.  
+  
+ [!code-csharp[GeometriesMiscSnippets_procedural_snip#StreamGeometryPolyQuadraticBezierToExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/CSharp/StreamGeometryPolyQuadraticBezierToExample.cs#streamgeometrypolyquadraticbeziertoexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_procedural_snip#StreamGeometryPolyQuadraticBezierToExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/streamgeometrypolyquadraticbeziertoexample.vb#streamgeometrypolyquadraticbeziertoexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, ein Segment hinzuzufügen, ohne eine Abbildung ab, durch Aufrufen der <see cref="M:System.Windows.Media.StreamGeometryContext.BeginFigure(System.Windows.Point,System.Boolean,System.Boolean)" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="QuadraticBezierTo">
+      <MemberSignature Language="C#" Value="public abstract void QuadraticBezierTo (System.Windows.Point point1, System.Windows.Point point2, bool isStroked, bool isSmoothJoin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void QuadraticBezierTo(valuetype System.Windows.Point point1, valuetype System.Windows.Point point2, bool isStroked, bool isSmoothJoin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.StreamGeometryContext.QuadraticBezierTo(System.Windows.Point,System.Windows.Point,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point2" Type="System.Windows.Point" />
+        <Parameter Name="isStroked" Type="System.Boolean" />
+        <Parameter Name="isSmoothJoin" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Der Kontrollpunkt verwendet, um die Form der Kurve angeben.</param>
+        <param name="point2">Der Zielort für das Ende der Kurve.</param>
+        <param name="isStroked">
+          <see langword="true" />um das Segment, gestrichelt, wenn eine <see cref="T:System.Windows.Media.Pen" /> zum Rendern des Segments verwendet, andernfalls <see langword="false" />.</param>
+        <param name="isSmoothJoin">
+          <see langword="true" />um den Join zwischen diesem Segment und dem vorherigen Segment als Ecke Wenn mit gezeichnet werden eine <see cref="T:System.Windows.Media.Pen" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Zeichnet eine quadratische Bézier-Kurve an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu eine kubische Bézier-Kurve, die beiden Steuerpunkte verwendet wird, verwendet eine quadratische kubische Bézier-Kurve einen einzigen Steuerungspunkt.  
+  
+ Diese Methode verwendet den Endpunkt des vorherigen Segments als Ausgangspunkt erforderlich. Ist dies das erste Segment in eine Abbildung, die vom angegebenen Punkt verwendet die <xref:System.Windows.Media.StreamGeometryContext.BeginFigure%2A> Methode als Anfangspunkt.  
+  
+ Ein <xref:System.Windows.Media.StreamGeometry> kann nicht serialisiert werden, wenn er enthält eine <xref:System.Windows.Media.Transform> oder eine nicht gezeichnet oder nicht ausgefüllte Segmente.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine quadratische Bézier-Kurve mit zeichnen die <xref:System.Windows.Media.StreamGeometryContext.QuadraticBezierTo%2A> Methode.  
+  
+ [!code-csharp[GeometriesMiscSnippets_procedural_snip#StreamGeometryQuadraticBezierToExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/CSharp/StreamGeometryQuadraticBezierToExample.cs#streamgeometryquadraticbeziertoexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_procedural_snip#StreamGeometryQuadraticBezierToExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/streamgeometryquadraticbeziertoexample.vb#streamgeometryquadraticbeziertoexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, ein Segment hinzuzufügen, ohne eine Abbildung ab, durch Aufrufen der <see cref="M:System.Windows.Media.StreamGeometryContext.BeginFigure(System.Windows.Point,System.Boolean,System.Boolean)" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.StreamGeometryContext.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

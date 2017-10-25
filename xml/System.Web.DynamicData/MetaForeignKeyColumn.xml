@@ -1,0 +1,351 @@
+<Type Name="MetaForeignKeyColumn" FullName="System.Web.DynamicData.MetaForeignKeyColumn">
+  <TypeSignature Language="C#" Value="public class MetaForeignKeyColumn : System.Web.DynamicData.MetaColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MetaForeignKeyColumn extends System.Web.DynamicData.MetaColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.MetaForeignKeyColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.DynamicData.MetaColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Datenbank-Fremdschlüssel-Feld, das von ASP.NET Dynamic Data verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In ASP.NET Dynamic Data-Anwendungen die <xref:System.Web.DynamicData.MetaForeignKeyColumn> -Klasse stellt eine Datenbankspalte, die eine direkte Beziehung bezeichnet.  
+  
+ Die <xref:System.Web.DynamicData.MetaForeignKeyColumn> Klasse darstellt, die Spalte in der Tabelle, foreign Key-Feld enthält. Allerdings können Sie die übergeordnete Tabellenobjekt zugreifen, mithilfe der <xref:System.Web.DynamicData.MetaForeignKeyColumn.ParentTable%2A> Eigenschaft. Sie können feststellen, ob foreign Key-Feld einen Primärschlüssel in der Tabelle, die es enthält handelt, mithilfe der <xref:System.Web.DynamicData.MetaForeignKeyColumn.IsPrimaryKeyInThisTable%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetaForeignKeyColumn (System.Web.DynamicData.MetaTable table, System.Web.DynamicData.ModelProviders.ColumnProvider entityMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.DynamicData.MetaTable table, class System.Web.DynamicData.ModelProviders.ColumnProvider entityMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaForeignKeyColumn.#ctor(System.Web.DynamicData.MetaTable,System.Web.DynamicData.ModelProviders.ColumnProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable" />
+        <Parameter Name="entityMember" Type="System.Web.DynamicData.ModelProviders.ColumnProvider" />
+      </Parameters>
+      <Docs>
+        <param name="table">Die Entität Meta-Tabelle.</param>
+        <param name="entityMember">Die Spalte entitätsanbieter.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DynamicData.MetaForeignKeyColumn" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractForeignKey">
+      <MemberSignature Language="C#" Value="public void ExtractForeignKey (System.Collections.IDictionary dictionary, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExtractForeignKey(class System.Collections.IDictionary dictionary, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaForeignKeyColumn.ExtractForeignKey(System.Collections.IDictionary,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.IDictionary" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">Ein Dictionary-Objekt, das die neuen Werte für ein Datenfeld enthält.</param>
+        <param name="value">Der Wert des Fremdschlüssels.</param>
+        <summary>Speichert den Wert eines Fremdschlüssels in das angegebene Wörterbuch.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaForeignKeyColumn.ExtractForeignKey%2A> Methode wird verwendet, um den Wert eines Fremdschlüssels im Wörterbuch zu speichern, die die neuen Werte für ein Datenfeld enthält. In der Regel die <xref:System.Web.DynamicData.MetaForeignKeyColumn.ExtractForeignKey%2A> Methode wird verwendet, wenn ein neuer Wert auswählen, wird ein <xref:System.Web.UI.WebControls.DropDownList> -Steuerelement für die foreign Key-Feld.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeignKeyNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; ForeignKeyNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; ForeignKeyNames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaForeignKeyColumn.ForeignKeyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung, die die Namen der Fremdschlüssel in der Zuordnung enthält, die eine datenbankbeziehung darstellt.</summary>
+        <value>Eine Auflistung, die die Namen der Fremdschlüssel enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFilterExpression">
+      <MemberSignature Language="C#" Value="public string GetFilterExpression (string foreignKeyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetFilterExpression(string foreignKeyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaForeignKeyColumn.GetFilterExpression(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="foreignKeyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="foreignKeyName">Der Name des Fremdschlüssels.</param>
+        <summary>Gibt die alternativen Namen, der auf einen Fremdschlüssel zugeordnet ist.</summary>
+        <returns>Der alternative Name, der für den Fremdschlüssel zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die alternativen Namen, der verwendet wird, in einem Filterausdruck anstelle der tatsächlichen foreign Key-Name. Wenn ein alternativer Name nicht vorhanden ist, gibt die Methode den tatsächlichen Namen des Fremdschlüssels zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForeignKeyDetailsPath">
+      <MemberSignature Language="C#" Value="public string GetForeignKeyDetailsPath (object row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetForeignKeyDetailsPath(object row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyDetailsPath(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="row">Die Zeile, die foreign Key-Feld enthält.</param>
+        <summary>Ruft den Pfad für die Detailseite für die Aktion der übergeordneten Tabelle angegebene foreign Key-Feld.</summary>
+        <returns>Der Pfad für die Detailseite für die Aktion der übergeordneten Tabelle angegebene foreign Key-Feld.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyDetailsPath%2A> -Methode den Pfad für die Aktion Detailseite basierend auf der für die ASP.NET Dynamic Data-Anwendung definierten Routen zurück. Diese Methode gibt eine leere Zeichenfolge zurück, wenn `row` ist `null`.  
+  
+ Mithilfe der <xref:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyDetailsPath%2A> Methode entspricht dem Aufrufen der <xref:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyPath%28System.String%2CSystem.Object%29> -Methode übergibt die <xref:System.Web.DynamicData.PageAction.Details%2A> Aktion als erster Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForeignKeyPath">
+      <MemberSignature Language="C#" Value="public string GetForeignKeyPath (string action, object row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetForeignKeyPath(string action, object row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyPath(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="row" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Zielaktion.</param>
+        <param name="row">Die Zeile, die foreign Key-Feld enthält.</param>
+        <summary>Ruft den Pfad für die angegebene Aktionsseite der übergeordneten Tabelle angegebene foreign Key-Feld.</summary>
+        <returns>Der Pfad für die angegebene Aktionsseite der übergeordneten Tabelle angegebene foreign Key-Feld.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyPath%28System.String%2CSystem.Object%29> -Methode den Pfad für die angegebene Aktionsseite basierend auf der für die ASP.NET Dynamic Data-Anwendung definierten Routen zurück. Diese Methode gibt eine leere Zeichenfolge zurück, wenn `row` ist `null`.  
+  
+ Können Sie die Werte gemäß der <xref:System.Web.DynamicData.PageAction> -Klasse für die `action` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForeignKeyPath">
+      <MemberSignature Language="C#" Value="public string GetForeignKeyPath (string action, object row, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetForeignKeyPath(string action, object row, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyPath(System.String,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="row" Type="System.Object" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Zielaktion.</param>
+        <param name="row">Die Zeile, die foreign Key-Feld enthält.</param>
+        <param name="path">Die Seite "Ziel".</param>
+        <summary>Ruft den Pfad für die angegebene Aktionsseite der übergeordneten Tabelle angegebene foreign Key-Feld.</summary>
+        <returns>Der Pfad für die angegebene Aktionsseite der übergeordneten Tabelle angegebene foreign Key-Feld.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyPath%28System.String%2CSystem.Object%29> Methode gibt den Pfad für die angegebene Aktionsseite anhand des angegebenen `path`. Diese Methode gibt eine leere Zeichenfolge zurück, wenn `row` ist `null`.  
+  
+ Können Sie die Werte gemäß der <xref:System.Web.DynamicData.PageAction> -Klasse für die `action` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForeignKeyString">
+      <MemberSignature Language="C#" Value="public string GetForeignKeyString (object row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetForeignKeyString(object row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyString(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="row">Die Zeile zum Abrufen der foreign Key-Werte für.</param>
+        <summary>Ruft eine durch Trennzeichen getrennte Liste von Werten, die den Fremdschlüssel für die angegebene Zeile darstellen.</summary>
+        <returns>Eine durch Trennzeichen getrennte Liste von Werten, die den Fremdschlüssel für die angegebene Zeile darstellen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyString%2A> Methodenrückgabe die gleichen Werte, die von zurückgegeben werden die <xref:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyValues%2A> -Methode, aber in einem anderen Format.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForeignKeyValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;object&gt; GetForeignKeyValues (object row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;object&gt; GetForeignKeyValues(object row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyValues(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="row">Die Zeile zum Abrufen der foreign Key-Werte für.</param>
+        <summary>Ruft eine Auflistung von Werten, die Fremdschlüssel für die angegebene Zeile darstellen.</summary>
+        <returns>Eine Auflistung von Werten, die Fremdschlüssel für die angegebene Zeile darstellen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyValues%2A> Methodenrückgabe die gleichen Werte, die von zurückgegeben werden die <xref:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyString%2A> -Methode, aber in einem anderen Format.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaForeignKeyColumn.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert Daten, die möglicherweise nicht verfügbar, wenn der Konstruktor aufgerufen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nicht direkt aufgerufen werden. Um die Initialisierung anzupassen, können von dieser Klasse ableiten und überschreiben die <xref:System.Web.DynamicData.MetaForeignKeyColumn.Initialize%2A> Methode. Wenn Sie diese Methode überschreiben, rufen Sie die Basissteuerelement `Initialize` Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrimaryKeyInThisTable">
+      <MemberSignature Language="C#" Value="public bool IsPrimaryKeyInThisTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrimaryKeyInThisTable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaForeignKeyColumn.IsPrimaryKeyInThisTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die foreign Key-Feld Teil des Primärschlüssels der Tabelle ist.</summary>
+        <value>
+          <see langword="true" />Wenn die foreign Key-Feld Teil des Primärschlüssels der Tabelle ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.DynamicData.MetaForeignKeyColumn.IsPrimaryKeyInThisTable%2A> Eigenschaft, um zu bestimmen, ob die foreign Key-Feld Teil des Primärschlüssels der Tabelle ist. Dies ist die Tabelle, die die foreign Key-Feld nicht in der übergeordneten Tabelle enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentTable">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaTable ParentTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaTable ParentTable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaForeignKeyColumn.ParentTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die übergeordnete Tabelle der foreign Key-Feld.</summary>
+        <value>Die übergeordnete Tabelle der foreign Key-Feld.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,406 @@
+<Type Name="OneWayBindingElement" FullName="System.ServiceModel.Channels.OneWayBindingElement">
+  <TypeSignature Language="C#" Value="public sealed class OneWayBindingElement : System.ServiceModel.Channels.BindingElement, System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OneWayBindingElement extends System.ServiceModel.Channels.BindingElement implements class System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.OneWayBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.BindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Aktiviert das Paketrouting und die Verwendung von unidirektionalen Methoden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Aktivieren von Paketrouting eine *unidirektionale Konvertierungsebene* erforderlich, die diese Klasse bietet. Diese Klasse ist eine Bindung in dem Bindungsstapel, die eine Formänderung mit der Bezeichnung `OneWayBindingElement` auf Nachrichtenebene durchführt. Diese Formänderung verwendet einen <xref:System.ServiceModel.Channels.IDuplexSessionChannel> oder einen <xref:System.ServiceModel.Channels.IRequestChannel> und macht ihn als <xref:System.ServiceModel.Channels.IInputChannel> verfügbar; im Gegensatz dazu kann sie einen <xref:System.ServiceModel.Channels.IDuplexSessionChannel> oder einen <xref:System.ServiceModel.Channels.IRequestChannel> verwenden und ihn als einen <xref:System.ServiceModel.Channels.IOutputChannel> verfügbar machen. Ein Benutzer kann eine benutzerdefinierte Bindung erstellen, die diese Bindung über einen sitzungsfähigen oder Anforderungs-/Antworttransport schichtet, damit er für das Paketrouting aktiviert ist.  
+  
+ Diese Klasse ist auch nützlich, wenn Sie unidirektionale Methoden auf systemeigenere Weise verfügbar machen möchten. Auf diese Schickt können weitere Transformationen angewendet werden, zum Beispiel Composite Duplex und Reliable Messaging.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OneWayBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.OneWayBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.OneWayBindingElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.OneWayBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Typ des Kanals, der von der Kanalfactory erstellt wird.</typeparam>
+        <param name="context"><see cref="T:System.ServiceModel.Channels.BindingContext" />, der den Kontext für das Bindungselement bereitstellt.</param>
+        <summary>Initialisiert eine Kanalfactory zum Erstellen von unidirektionalen Kanälen aus dem Bindungskontext.</summary>
+        <returns>Der <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> des Typs <see cref="T:System.ServiceModel.Channels.IChannel" />, initialisiert aus dem <paramref name="context" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Kanalfactory, die zum Erstellen eines Kanals verwendet wird, der ausgehende Nachrichten für diese Bindung verarbeitet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="TChannel" /> ist nicht vom Typ <see cref="T:System.ServiceModel.Channels.IOutputChannel" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Das innere Bindungselement unterstützt <see cref="T:System.ServiceModel.Channels.IDuplexSessionChannel" /> oder <see cref="T:System.ServiceModel.Channels.IRequestChannel" /> nicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.OneWayBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, den der Kanallistener akzeptiert.</typeparam>
+        <param name="context"><see cref="T:System.ServiceModel.Channels.BindingContext" />, der den Kontext für das Bindungselement bereitstellt.</param>
+        <summary>Initialisiert einen Kanallistener, um das Annehmen von unidirektionalen Kanälen zu ermöglichen.</summary>
+        <returns>Der <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> des Typs <see cref="T:System.ServiceModel.Channels.IChannel" />, initialisiert aus dem <paramref name="context" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt einen Kanallistener, der zum Erstellen eines Kanals verwendet wird, der eingehende Nachrichten für diese Bindung verarbeitet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="TChannel" /> ist nicht vom Typ <see cref="T:System.ServiceModel.Channels.IInputChannel" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Das innere Bindungselement unterstützt <see cref="T:System.ServiceModel.Channels.IDuplexSessionChannel" /> oder <see cref="T:System.ServiceModel.Channels.IRequestChannel" /> nicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.OneWayBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Typ der Kanalfactory, die erstellt werden soll.</typeparam>
+        <param name="context"><see cref="T:System.ServiceModel.Channels.BindingContext" />, der den Kontext für das Bindungselement bereitstellt.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob eine Kanalfactory des angegebenen Kanaltyps erstellt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Kanalfactory des angegebenen Typs erstellt werden kann, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten diese Methode aufrufen, bevor Sie versuchen, eine Kanalfactory zu erstellen.  
+  
+ Diese Methode gibt `true` zurück, wenn `TChannel` ein <xref:System.ServiceModel.Channels.IOutputChannel> ist und die Bindung unterhalb der aktuellen Bindung im Bindungsstapel ein <xref:System.ServiceModel.Channels.IDuplexSessionChannel> oder <xref:System.ServiceModel.Channels.IRequestChannel> ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.OneWayBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Typ des Kanallisteners, der erstellt werden soll.</typeparam>
+        <param name="context"><see cref="T:System.ServiceModel.Channels.BindingContext" />, der den Kontext für das Bindungselement bereitstellt.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Kanallistener des angegebenen Typs erstellt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Kanallistener des angegebenen Typs erstellt werden kann, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten diese Methode aufrufen, bevor Sie versuchen, einen Kanallistener zu erstellen.  
+  
+ Diese Methode gibt `true` zurück, wenn `TChannel` ein <xref:System.ServiceModel.Channels.IInputChannel> ist und die Bindung unterhalb der aktuellen Bindung im Bindungsstapel ein <xref:System.ServiceModel.Channels.IDuplexSessionChannel> oder <xref:System.ServiceModel.Channels.IReplyChannel> ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelPoolSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.ChannelPoolSettings ChannelPoolSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.ChannelPoolSettings ChannelPoolSettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.ChannelPoolSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kanalpool-Einstellungen ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Channels.ChannelPoolSettings" />-Objekt, das Eigenschaften des mit diesem Bindungselement verknüpften Kanalpools enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.OneWayBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Klont eine Instanz dieser Klasse.</summary>
+        <returns>Eine geklonte Kopie dieser Instanz dieser Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.OneWayBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Eigenschaft.</typeparam>
+        <param name="context"><see cref="T:System.ServiceModel.Channels.BindingContext" />, der den Kontext für das Bindungselement bereitstellt.</param>
+        <summary>Ruft Eigenschaften vom Bindungsstapel ab, falls vorhanden.</summary>
+        <returns>Ein <paramref name="T" />-Objekt des Bindungsstapels, falls vorhanden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode empfängt einen Bindungskontext als Eingabeparameter. Dieser stellt den Stapel von Bindungselementen dar.  
+  
+ Jedes Bindungselement im Stapel kann die Anfrage selbst verarbeiten oder weiterleiten oder eine Kombination von beidem durchführen. Jedes Bindungselement kann den Kontext ändern, wenn es die Anfrage delegiert. Ein Transportbindungselement verarbeitet die Anfrage jedoch selbst.  
+  
+ Diese Methode wird sowohl von Bindungselementen als auch von Laufzeitobjekten implementiert, wie z. B. <xref:System.ServiceModel.Channels.IChannelFactory>, <xref:System.ServiceModel.Channels.IChannelListener> und <xref:System.ServiceModel.Channels.IChannel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxAcceptedChannels">
+      <MemberSignature Language="C#" Value="public int MaxAcceptedChannels { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxAcceptedChannels" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.OneWayBindingElement.MaxAcceptedChannels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(10)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Kanälen ab, die akzeptiert werden können, oder legt die maximale Anzahl fest.</summary>
+        <value>Die maximale Anzahl von Kanälen, die akzeptiert werden können. Der Standardwert ist 10.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PacketRoutable">
+      <MemberSignature Language="C#" Value="public bool PacketRoutable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PacketRoutable" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.OneWayBindingElement.PacketRoutable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Paketrouting aktiviert ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn Paketrouting aktiviert ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kann optional ein Protokoll auf Nachrichtenebene, die transformiert verwenden eine `DuplexSessionChannel` / `RequestChannel` / `ReplyChannel` in einen unidirektionalen Kanal und die Nachrichten vom umgewandelten Kanal weitergeleitet werden können. Die Verwendung dieses Protokolls wird von der <xref:System.ServiceModel.Channels.OneWayBindingElement.PacketRoutable%2A>-Eigenschaft gesteuert.  
+  
+ Wenn diese Eigenschaft den Wert `true`, nach `DuplexSessionChannel` Initiierung (z. B. Buffered TCP und Named Pipes), diese Klasse fügt einen Nachrichtenheader (MustUnderstand = `false`, bei aktivierter Sicherheit signiert), die semantisch bedeutet, dass das Paket-Route Dieser Kanal". Wenn diese Eigenschaft auf der Empfängerseite `true` ist, sucht diese Klasse in der ersten Nachricht, die von diesem Kanal empfangen wird, nach diesem Header. Wenn der Header nicht vorhanden ist, [!INCLUDE[indigo2](~/includes/indigo2-md.md)], tritt ein Fehler im Kanal auf. Wenn der Header vorhanden ist, lenkt [!INCLUDE[indigo2](~/includes/indigo2-md.md)] den neuen Kanal in einen freigegebenen Eingabechannel.  
+  
+ Um einen Anforderung-Antwort-Kanal (z. B. Streaming TCP oder HTTP) zu transformieren. wenn diese Eigenschaft den Wert `true`, diesen Header wird auf jede Anforderung, die darauf hinweisen, dass die Anforderung Paket weitergeleitet werden kann hinzugefügt. [!INCLUDE[indigo2](~/includes/indigo2-md.md)]Stellt sicher, dass auch `SendRequest` gibt `null` und antwortet mit `null` auf dem Server.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeChannelPoolSettings">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeChannelPoolSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeChannelPoolSettings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.OneWayBindingElement.ShouldSerializeChannelPoolSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob die Eigenschaften des Channelpools, die diesem Bindungselement zugeordnet sind, serialisiert werden sollen.</summary>
+        <returns>
+          <see langword="true" />Wenn die kanalpool-Einstellungen serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyExportExtension.ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.OneWayBindingElement.System#ServiceModel#Description#IPolicyExportExtension#ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Der <see cref="T:System.ServiceModel.Description.MetadataExporter" />, den Sie zum Ändern des Exportvorgangs verwenden können.</param>
+        <param name="context">Der <see cref="T:System.ServiceModel.Description.PolicyConversionContext" />, den Sie zum Einfügen einer benutzerdefinierten Richtlinienassertion verwenden können.</param>
+        <summary>Exportiert eine benutzerdefinierte Richtlinienassertion, die das unidirektionale Bindungselement darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schreibt bindungsbezogene Anweisungen in die WSDL-Informationen, die von einem bestimmten Vertrag ausgegeben werden, und sie wird von [!INCLUDE[indigo2](~/includes/indigo2-md.md)] verwendet, um Clients mitzuteilen, dass dieses benutzerdefinierte Bindungselement im Bindungsstapel vorhanden ist.  
+  
+ Diese Methode verwendet zwei Parameter: Das <xref:System.ServiceModel.Description.MetadataExporter>-Objekt und das <xref:System.ServiceModel.Description.PolicyConversionContext>-Objekt. Verwenden Sie die Methoden <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A> und <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A>, um Auflistungen von Richtlinienassertionen aufzurufen, die bereits für verschiedene Bereiche exportiert wurden. Verwenden Sie anschließend diese Methode, um eigene Richtlinienassertionen zur entsprechenden Auflistung hinzuzufügen.  
+  
+ Die <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A>-Eigenschaft gibt die <xref:System.ServiceModel.Description.ContractDescription> für den Endpunkt aus, der exportiert wird. Dies ermöglicht dieser Methode, den richtigen Bereich für die exportierten Richtlinienassertionen festzulegen. Sicherheitsattribute im Code können beispielsweise der <xref:System.ServiceModel.Description.ContractDescription> Verhalten hinzufügen, die angeben, wo Richtlinienassertionen hinzugefügt werden sollen.  
+  
+ Nachdem benutzerdefinierte Richtlinienassertionen an die WSDL-Informationen angehängt werden, können Clients die benutzerdefinierten Bindungsassertionen mithilfe der <xref:System.ServiceModel.Description.IPolicyImportExtension>-Schnittstelle erkennen und importieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

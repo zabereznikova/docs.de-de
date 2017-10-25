@@ -1,0 +1,578 @@
+<Type Name="ValidationSummary" FullName="System.Web.UI.WebControls.ValidationSummary">
+  <TypeSignature Language="C#" Value="public class ValidationSummary : System.Web.UI.WebControls.WebControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidationSummary extends System.Web.UI.WebControls.WebControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ValidationSummary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.ValidationSummaryDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Zeigt eine Zusammenfassung aller bei der Validierung aufgetretenen Fehler inline auf einer Webseite und/oder in einem Meldungsfeld an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ValidationSummary> Klasse wird verwendet, um die Fehlermeldungen von allen Validierungssteuerelementen auf einer Webseite in einem zentralen Ort zusammenfassen. Sie können die Fehlermeldungen aus einer Gruppe von Validierungssteuerelementen auf einer Webseite zusammenfassen, durch Zuweisen der <xref:System.Web.UI.WebControls.ValidationSummary> Steuerelement eine Validierungsgruppe durch Festlegen der <xref:System.Web.UI.WebControls.ValidationSummary.ValidationGroup%2A> Eigenschaft.  
+  
+ Die Zusammenfassung kann angezeigt werden, als eine Liste, als Aufzählung oder als einzelner Absatz, basierend auf den <xref:System.Web.UI.WebControls.ValidationSummary.DisplayMode%2A> Eigenschaft.  
+  
+ Die Zusammenfassung kann angezeigt werden auf der Webseite und in einem Meldungsfeld durch Festlegen der <xref:System.Web.UI.WebControls.ValidationSummary.ShowSummary%2A> und <xref:System.Web.UI.WebControls.ValidationSummary.ShowMessageBox%2A> Eigenschaften bzw..  
+  
+> [!NOTE]
+>  Bei Verwendung der <xref:System.Web.UI.WebControls.ValidationSummary> -Steuerelement innerhalb einer <xref:System.Web.UI.UpdatePanel> steuern, stellen Sie sicher, dass das Validierungssteuerelement und das Steuerelement, das diesem zugeordnet ist, im gleichen Bereich sind. Weitere Informationen zum Verwenden der <xref:System.Web.UI.UpdatePanel> für Aktualisierungen von Teilseiten steuern, finden Sie unter [Teilrendering von Seiten Rendering Overview](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.ValidationSummary>, finden Sie unter der <xref:System.Web.UI.WebControls.ValidationSummary.%23ctor%2A> Konstruktor.  
+  
+## <a name="accessibility"></a>Barrierefreiheit  
+ Weitere Informationen dazu, wie das Steuerelement so konfigurieren, dass er Markup generiert, das den Accessibility Standards entspricht, finden Sie unter [Barrierefreiheit in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) und [ASP.NET-Steuerelemente und Barrierefreiheit](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.ValidationSummary> Steuerelement die Fehlermeldungen aus alle Validierungssteuerelemente auf einer Webseite zusammengefasst und in einer Liste mit Aufzählungszeichen anzuzeigen.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic ValidationSummary Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic ValidationSummary Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic ValidationSummary Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic ValidationSummary Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationSummary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ValidationSummary.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ValidationSummary" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.WebControls.ValidationSummary>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|Vordergrundfarbe|`Color.Red`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ValidationSummary.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Ausgabestream, der HTML-Inhalt für den Client rendert.</param>
+        <summary>Die HTML-Tags, die für dieses Steuerelement generierten hinzugefügt Attribute.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ValidationSummaryDisplayMode DisplayMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ValidationSummaryDisplayMode DisplayMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ValidationSummary.DisplayMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationSummaryDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert den Anzeigemodus der Überprüfung Zusammenfassung.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.ValidationSummaryDisplayMode" />-Werte. Die Standardeinstellung ist <see langword="BulletList" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft an, das Anzeigeformat einer <xref:System.Web.UI.WebControls.ValidationSummary> Steuerelement. Die Zusammenfassung kann als eine Liste, als Aufzählung oder als einzelner Absatz angezeigt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.WebControls.ValidationSummary.DisplayMode%2A> Eigenschaft, um eine Liste mit Aufzählungszeichen anzuzeigen.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic ValidationSummary.DisplayMode Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic ValidationSummary.DisplayMode Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic ValidationSummary.DisplayMode Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic ValidationSummary.DisplayMode Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Anzeigemodus ist nicht die <see cref="T:System.Web.UI.WebControls.ValidationSummaryDisplayMode" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableClientScript">
+      <MemberSignature Language="C#" Value="public bool EnableClientScript { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableClientScript" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ValidationSummary.EnableClientScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.ValidationSummary" /> -Steuerelement aktualisiert sich selbst mithilfe von clientseitigem Skript.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.ValidationSummary" /> -Steuerelement aktualisiert sich selbst mithilfe des clientseitigen Skripts; anderenfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um anzugeben, ob die <xref:System.Web.UI.WebControls.ValidationSummary> -Steuerelement aktualisiert sich selbst mithilfe von clientseitigem Skript. Wenn diese Eigenschaft festgelegt wird, um `true`, clientseitiges Skript wird gerendert, auf dem Client zum Aktualisieren der <xref:System.Web.UI.WebControls.ValidationSummary> zu steuern, wenn der Browser über diese Funktion unterstützt. Wenn diese Eigenschaft festgelegt wird, um `false`, kein clientseitiges Skript auf dem Client dargestellt wird und die <xref:System.Web.UI.WebControls.ValidationSummary> -Steuerelement aktualisiert sich nur auf die Anzahl der Roundtrips zum Server. In diesem Fall die <xref:System.Web.UI.WebControls.ValidationSummary.ShowMessageBox%2A> Eigenschaft hat keine Auswirkungen.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ValidationSummary.EnableClientScript%2A> Eigenschaft, um zu verhindern, dass die <xref:System.Web.UI.WebControls.ValidationSummary> Steuerelement aus der Verwendung von clientseitigem Skript selbst aktualisieren.  
+  
+ [!code-aspx-csharp[Classic ValidationSummary.EnableClientScript Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic ValidationSummary.EnableClientScript Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic ValidationSummary.EnableClientScript Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic ValidationSummary.EnableClientScript Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ValidationSummary.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Red")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vordergrundfarbe des Steuerelements ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , die die Vordergrundfarbe des Steuerelements darstellt. Die Standardeinstellung ist <see langword="Red" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um die Farbe anzugeben, in der Nachrichten von Validierungssteuerelemente angezeigt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ValidationSummary.ForeColor%2A> Eigenschaft, um anzugeben, dass die Zusammenfassung der Validierung mit blauem Text angezeigt wird.  
+  
+ [!code-aspx-csharp[Classic ValidationSummary.ForeColor Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic ValidationSummary.ForeColor Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic ValidationSummary.ForeColor Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic ValidationSummary.ForeColor Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderText">
+      <MemberSignature Language="C#" Value="public string HeaderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ValidationSummary.HeaderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Headertext im oberen Bereich der Zusammenfassung angezeigt.</summary>
+        <value>Den Headertext im oberen Bereich der Zusammenfassung angezeigt. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie einen Titel für die Anzeige der <xref:System.Web.UI.WebControls.ValidationSummary> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.ValidationSummary.HeaderText%2A> Eigenschaft ist nicht HTML-codiert. Aus diesem Grund können HTML-Tags eingeschlossen werden, <xref:System.Web.UI.WebControls.ValidationSummary.HeaderText%2A>.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [ASP.NET-Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ValidationSummary.HeaderText%2A> Eigenschaft anzuzeigenden einen Titel für die <xref:System.Web.UI.WebControls.ValidationSummary> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic ValidationSummary.DisplayMode Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic ValidationSummary.DisplayMode Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic ValidationSummary.DisplayMode Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic ValidationSummary.DisplayMode Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ValidationSummary.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachdem diese Methode des Basissteuerelements ruft <xref:System.Web.UI.Control.OnInit%2A> -Methode wird der <xref:System.Web.UI.WebControls.ValidationSummary.ForeColor%2A> Eigenschaft <xref:System.Drawing.Color.Red%2A> wenn Folgendes zutrifft:  
+  
+-   Die <xref:System.Web.UI.WebControls.ValidationSummary.ForeColor%2A> Eigenschaft noch nicht festgelegt.  
+  
+-   Die <xref:System.Web.UI.Control.RenderingCompatibility%2A?displayProperty=nameWithType> Eigenschaft gibt eine ASP.NET-Version vor 4 an. Standardmäßig werden in ASP.NET 4 und höhere Versionen Validierungssteuerelemente keine Fehlermeldungen in Rot angezeigt. Informationen dazu, wie die visuelle Darstellung der Validierungssteuerelemente steuern, finden Sie unter [Validieren von Benutzereingaben in ASP.NET Web Pages](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ValidationSummary.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.ValidationSummary.OnPreRender%2A> Methode, damit er zeigt Fehler immer fett in einem benutzerdefinierten Nachrichten <xref:System.Web.UI.WebControls.ValidationSummary> Serversteuerelement.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomValidationSummaryOnPreRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidationSummaryOnPreRender/CS/custom_validationsummary_addattributestorendercs.aspx#1)]
+ [!code-aspx-vb[CustomValidationSummaryOnPreRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidationSummaryOnPreRender/VB/custom_validationsummary_addattributestorendervb.aspx#1)]  
+[!code-csharp[CustomValidationSummaryOnPreRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidationSummaryOnPreRender/CS/custom_validationsummary_addattributestorender.cs#2)]
+[!code-vb[CustomValidationSummaryOnPreRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidationSummaryOnPreRender/VB/custom_validationsummary_addattributestorender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ValidationSummary.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Ausgabestream, der HTML-Inhalt für den Client rendert.</param>
+        <summary>Sendet den Inhalt des Steuerelements an ein angegebenes <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den auf dem Client zu rendernden Inhalt schreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.ValidationSummary.Render%2A> -Methode in ein benutzerdefiniertes Steuerelement, damit die <xref:System.Web.UI.WebControls.ValidationSummary> Steuerelement enthaltender eine <xref:System.Web.UI.HtmlTextWriterTag.Small> Tag.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomValidationSummaryRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidationSummaryRender/CS/custom_validationsummary_rendercs.aspx#1)]
+ [!code-aspx-vb[CustomValidationSummaryRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidationSummaryRender/VB/custom_validationsummary_rendervb.aspx#1)]  
+[!code-csharp[CustomValidationSummaryRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidationSummaryRender/CS/custom_validationsummary_render.cs#2)]
+[!code-vb[CustomValidationSummaryRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidationSummaryRender/VB/custom_validationsummary_render.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowMessageBox">
+      <MemberSignature Language="C#" Value="public bool ShowMessageBox { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowMessageBox" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ValidationSummary.ShowMessageBox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Zusammenfassung die Validierung in einem Meldungsfeld angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Zusammenfassung die Validierung in einem Meldungsfeld angezeigt werden wird. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann verwendet werden, zusätzlich zu den <xref:System.Web.UI.WebControls.ValidationSummary.ShowSummary%2A> -Eigenschaft können Sie steuern, wo der validierungszusammenfassung angezeigt wird. Wenn diese Eigenschaft und <xref:System.Web.UI.WebControls.ValidationSummary.EnableClientScript%2A> sind beide festgelegt, um `true`, Zusammenfassung die Validierung wird in einem Meldungsfeld angezeigt. Wenn <xref:System.Web.UI.WebControls.ValidationSummary.EnableClientScript%2A> festgelegt ist, um `false`, diese Eigenschaft hat keine Auswirkung.  
+  
+> [!NOTE]
+>  Wenn beide die <xref:System.Web.UI.WebControls.ValidationSummary.ShowMessageBox%2A> und <xref:System.Web.UI.WebControls.ValidationSummary.ShowSummary%2A> Eigenschaften werden festgelegt, um `true`, Zusammenfassung die Validierung wird sowohl in einem Meldungsfeld und auf der Webseite angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ValidationSummary.ShowMessageBox%2A> und <xref:System.Web.UI.WebControls.ValidationSummary.ShowSummary%2A> Eigenschaften, um anzugeben, dass die Zusammenfassung der Validierung nur in einem Meldungsfeld angezeigt wird.  
+  
+ [!code-aspx-csharp[Classic ValidationSummary.ShowMessageBox Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic ValidationSummary.ShowMessageBox Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic ValidationSummary.ShowMessageBox Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic ValidationSummary.ShowMessageBox Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowModelStateErrors">
+      <MemberSignature Language="C#" Value="public bool ShowModelStateErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowModelStateErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ValidationSummary.ShowModelStateErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das modellzustands-Fehler angezeigt werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn modellzustandsfehler angezeigt werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSummary">
+      <MemberSignature Language="C#" Value="public bool ShowSummary { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowSummary" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ValidationSummary.ShowSummary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Zusammenfassung die Validierung Inline angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Zusammenfassung der Validierung Inline angezeigt wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann verwendet werden, zusätzlich zu den <xref:System.Web.UI.WebControls.ValidationSummary.ShowMessageBox%2A> -Eigenschaft können Sie steuern, wo der validierungszusammenfassung angezeigt wird. Wenn diese Eigenschaft, um festgelegt wird `true`, Zusammenfassung die Validierung wird auf der Webseite angezeigt.  
+  
+> [!NOTE]
+>  Wenn beide die <xref:System.Web.UI.WebControls.ValidationSummary.ShowMessageBox%2A> und <xref:System.Web.UI.WebControls.ValidationSummary.ShowSummary%2A> Eigenschaften werden festgelegt, um `true`, Zusammenfassung die Validierung wird sowohl in einem Meldungsfeld und auf der Webseite angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ValidationSummary.ShowMessageBox%2A> und <xref:System.Web.UI.WebControls.ValidationSummary.ShowSummary%2A> Eigenschaften, um anzugeben, dass die Zusammenfassung der Validierung sowohl in einem Meldungsfeld und auf der Webseite angezeigt wird.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic ValidationSummary.ShowSummary Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic ValidationSummary.ShowSummary Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic ValidationSummary.ShowSummary Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic ValidationSummary.ShowSummary Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowValidationErrors">
+      <MemberSignature Language="C#" Value="public bool ShowValidationErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowValidationErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ValidationSummary.ShowValidationErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der validierungszusammenfassung aus Validierungssteuerelemente angezeigt werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn der validierungszusammenfassung aus Validierungssteuerelemente angezeigt werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDisabledAttribute">
+      <MemberSignature Language="C#" Value="public override bool SupportsDisabledAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDisabledAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ValidationSummary.SupportsDisabledAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob vom Steuerelement das <see langword="disabled" />-Attribut des gerenderten HTML-Elements auf "disabled" festgelegt werden soll, wenn die <see cref="P:System.Web.UI.WebControls.WebControl.IsEnabled" />-Eigenschaft des Steuerelements <see langword="false" /> ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> Eigenschaft gibt an, eine frühere ASP.NET-Version als <c>4.0</c>ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, wie ASP.NET HTML für ein Steuerelement rendern soll, wenn das Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `true`, rendert ASP.NET ein `disabled` Attribut, wenn ein Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `false`, rendert ASP.NET ein `class` Attribut, wenn ein Steuerelement deaktiviert ist. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public virtual string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ValidationSummary.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie die Gruppe von Steuerelementen für die die <see cref="T:System.Web.UI.WebControls.ValidationSummary" /> Objekt zeigt validierungsmeldungen an.</summary>
+        <value>Die Gruppe von Steuerelementen, für die die <see cref="T:System.Web.UI.WebControls.ValidationSummary" /> Objekt zeigt validierungsmeldungen an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überprüfung Gruppen erlauben Ihnen Validierungssteuerelemente auf einer Seite einer bestimmten Kategorie zuweisen. Jede Validierungsgruppe kann unabhängig von anderen Gruppen Überprüfung auf der Seite überprüft werden. Verwenden der <xref:System.Web.UI.WebControls.ValidationSummary.ValidationGroup%2A> Eigenschaft, um den Namen der Validierungsgruppe für das Angeben der <xref:System.Web.UI.WebControls.ValidationSummary> Steuerelement werden Fehlermeldungen zusammengefasst.  
+  
+ Wenn Sie angeben, einen Wert für die <xref:System.Web.UI.WebControls.ValidationSummary> -Eigenschaft, die Validierungssteuerelemente, die Teil der angegebenen Gruppe sind nur Fehlermeldungen werden zusammengefasst. Wenn Sie einen Wert für diese Eigenschaft nicht festgelegt, werden alle Fehlermeldungen von Validierungssteuerelemente, die nicht zu einer Überprüfung Gruppe zugewiesen sind, auf der Seite zusammengefasst.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

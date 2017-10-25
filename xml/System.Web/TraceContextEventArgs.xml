@@ -1,0 +1,87 @@
+<Type Name="TraceContextEventArgs" FullName="System.Web.TraceContextEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class TraceContextEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TraceContextEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.TraceContextEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von Ablaufverfolgungsdatensätze an jede Methode, die behandelt die <see cref="E:System.Web.TraceContext.TraceFinished" /> Ereignis. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.TraceContextEventArgs> Klasse wird verwendet, durch die <xref:System.Web.TraceContext> Klasse für den Zugriff auf Ablaufverfolgungsdatensätze nachdem alle Ablaufverfolgungsinformationen werden gesammelt, während der Verarbeitung der HTTP-Anforderung. Durch Hinzufügen von einem eventhandlerdelegaten, behandeln die <xref:System.Web.TraceContext.TraceFinished> Ereignis verarbeiten der Datensätze, zeichnen Sie diese mit Ihren eigenen Datenspeicher oder stellen sie als Eingabe für ein Profilerstellungstool bereit.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie registrieren, können ein <xref:System.Web.TraceContextEventHandler> Delegat zum Behandeln der <xref:System.Web.TraceContext.TraceFinished> Ereignis. In diesem Beispiel wird die `OnTraceFinished` Methode greift auf die Auflistung der <xref:System.Web.TraceContextRecord> Objekte über die <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> -Eigenschaft, deren durchläuft, und schreibt sie in den Antwortstream.  
+  
+ [!code-aspx-csharp[System.Web.Trace_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_3/CS/form3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_3/VB/form3vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceContextEventArgs (System.Collections.ICollection records);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection records) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.TraceContextEventArgs.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="records" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="records">Eine Auflistung von <see cref="T:System.Web.TraceContextRecord" /> Objekte, die alle für die aktuelle Anforderung protokolliert Ablaufverfolgungsdatensätze darstellen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.TraceContextEventArgs" /> -Klasse unter Verwendung der angegebenen Sammlung Ablaufverfolgungsdatensätze.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceRecords">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection TraceRecords { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection TraceRecords" />
+      <MemberSignature Language="DocId" Value="P:System.Web.TraceContextEventArgs.TraceRecords" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Web.TraceContextRecord" /> Nachrichten, die mit der aktuellen Anforderung verknüpft sind.</summary>
+        <value>Eine Auflistung von Ablaufverfolgungsdatensätze, die mit der aktuellen Anforderung verknüpft sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Aufruf der <xref:System.Web.TraceContext.Write%2A?displayProperty=nameWithType> und <xref:System.Web.TraceContext.Warn%2A?displayProperty=nameWithType> Methoden generiert eine <xref:System.Web.TraceContextRecord> -Objekt, das hinzugefügt wird die <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> Auflistung von Nachrichten. Die <xref:System.Web.TraceContext.Warn%2A> Aufruf legt die <xref:System.Web.TraceContextRecord.IsWarning%2A> Eigenschaft `true`, während die andere Methodenaufrufe festgelegt ist, dass `false`.  
+  
+ Durchlaufen der <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> Nachrichten und untersuchen Sie Datensätze mit bestimmten Kategorien oder Nachrichten, und ob diese Warnungen sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie registrieren, können ein <xref:System.Web.TraceContextEventHandler> Delegat zum Behandeln der <xref:System.Web.TraceContext.TraceFinished> Ereignis. In diesem Beispiel wird die `OnTraceFinished` Methode greift auf die Auflistung der <xref:System.Web.TraceContextRecord> Objekte über die <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> -Eigenschaft, deren durchläuft, und schreibt sie in den Antwortstream.  
+  
+ [!code-aspx-csharp[System.Web.Trace_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_3/CS/form3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_3/VB/form3vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

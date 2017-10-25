@@ -1,0 +1,194 @@
+<Type Name="EasingRotation3DKeyFrame" FullName="System.Windows.Media.Animation.EasingRotation3DKeyFrame">
+  <TypeSignature Language="C#" Value="public class EasingRotation3DKeyFrame : System.Windows.Media.Animation.Rotation3DKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EasingRotation3DKeyFrame extends System.Windows.Media.Animation.Rotation3DKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.EasingRotation3DKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Rotation3DKeyFrame</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Klasse, die es Ihnen ermöglicht, einer <see cref="T:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames" />-Keyframeanimation Beschleunigungsfunktionen zuzuordnen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient als Teil einer <xref:System.Windows.Media.Animation.Rotation3DKeyFrameCollection> in Verbindung mit einem <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> zu animierende eine <xref:System.Windows.Media.Media3D.Rotation3D> Eigenschaftswert für einen Satz von Keyframes. Dies <xref:System.Windows.Media.Animation.Rotation3DKeyFrame> interpoliert zwischen dem <xref:System.Windows.Media.Media3D.Rotation3D> Wert des vorherigen Keyframes und einen eigenen Wert Linear mit einer Beschleunigungsfunktion um Ausgabewert zu erzeugen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EasingRotation3DKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingRotation3DKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.EasingRotation3DKeyFrame" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EasingRotation3DKeyFrame (System.Windows.Media.Media3D.Rotation3D value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Media3D.Rotation3D value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingRotation3DKeyFrame.#ctor(System.Windows.Media.Media3D.Rotation3D)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Media3D.Rotation3D" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der ursprüngliche <see cref="T:System.Windows.Media.Media3D.Rotation3D" /> Wert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.EasingRotation3DKeyFrame" />-Klasse mit dem angegebenen <see cref="T:System.Windows.Media.Media3D.Rotation3D" />-Wert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EasingRotation3DKeyFrame (System.Windows.Media.Media3D.Rotation3D value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Media3D.Rotation3D value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingRotation3DKeyFrame.#ctor(System.Windows.Media.Media3D.Rotation3D,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der ursprüngliche <see cref="T:System.Windows.Media.Media3D.Rotation3D" /> Wert.</param>
+        <param name="keyTime">Die anfängliche Schlüsselzeit.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Animation.EasingRotation3DKeyFrame" /> Klasse mit dem angegebenen <see cref="T:System.Windows.Media.Media3D.Rotation3D" /> und der Schlüsselzeit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EasingRotation3DKeyFrame (System.Windows.Media.Media3D.Rotation3D value, System.Windows.Media.Animation.KeyTime keyTime, System.Windows.Media.Animation.IEasingFunction easingFunction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Media3D.Rotation3D value, valuetype System.Windows.Media.Animation.KeyTime keyTime, class System.Windows.Media.Animation.IEasingFunction easingFunction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingRotation3DKeyFrame.#ctor(System.Windows.Media.Media3D.Rotation3D,System.Windows.Media.Animation.KeyTime,System.Windows.Media.Animation.IEasingFunction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+        <Parameter Name="easingFunction" Type="System.Windows.Media.Animation.IEasingFunction" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der ursprüngliche <see cref="T:System.Windows.Media.Media3D.Rotation3D" /> Wert.</param>
+        <param name="keyTime">Die anfängliche Schlüsselzeit.</param>
+        <param name="easingFunction">Der Beschleunigungsfunktion.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Animation.EasingRotation3DKeyFrame" /> Klasse mit dem angegebenen <see cref="T:System.Windows.Media.Media3D.Rotation3D" /> Wert, Schlüsselzeit und einfachere Funktion.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingRotation3DKeyFrame.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der aus <see cref="T:System.Windows.Freezable" /> abgeleiteten Klasse. Beim Erstellen einer abgeleiteten Klasse muss diese Methode überschrieben werden.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Animation-Klassen erben indirekt von <xref:System.Windows.Freezable>. Aus diesem Grund müssen Sie überschreiben die <xref:System.Windows.Media.Animation.BackEase.CreateInstanceCore%2A> Methode zum Erstellen einer benutzerdefinierten Animation-Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine typische Implementierung der <xref:System.Windows.Freezable.CreateInstanceCore%2A>.  
+  
+ [!code-csharp[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#createinstancecoreexample)]
+ [!code-vb[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#createinstancecoreexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EasingFunction">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.IEasingFunction EasingFunction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.IEasingFunction EasingFunction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.EasingRotation3DKeyFrame.EasingFunction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.IEasingFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest, Keyframes angewendete Beschleunigungsfunktion.</summary>
+        <value>Die auf den Keyframe angewendete Beschleunigungsfunktion.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EasingFunctionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty EasingFunctionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty EasingFunctionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.EasingRotation3DKeyFrame.EasingFunctionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.EasingRotation3DKeyFrame.EasingFunction" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Media3D.Rotation3D InterpolateValueCore (System.Windows.Media.Media3D.Rotation3D baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Media3D.Rotation3D InterpolateValueCore(class System.Windows.Media.Media3D.Rotation3D baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingRotation3DKeyFrame.InterpolateValueCore(System.Windows.Media.Media3D.Rotation3D,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rotation3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">Der Wert, von dem animiert werden soll.</param>
+        <param name="keyFrameProgress">Ein Wert zwischen 0,0 und 1,0 (einschließlich), der den Prozentsatz der verstrichenen Zeit für diesen Keyframe angibt.</param>
+        <summary>Interpoliert, gemäß der Beschleunigungsfunktion verwendet werden, zwischen dem vorherigen Keyframewert und dem Wert des aktuellen Keyframes, mithilfe des angegebenen Fortschrittsinkrements.</summary>
+        <returns>Der Ausgabewert dieses Keyframes unter Verwendung des angegebenen Basiswerts und Fortschritts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

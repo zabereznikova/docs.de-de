@@ -1,0 +1,146 @@
+<Type Name="ColumnStyle" FullName="System.Windows.Forms.ColumnStyle">
+  <TypeSignature Language="C#" Value="public class ColumnStyle : System.Windows.Forms.TableLayoutStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ColumnStyle extends System.Windows.Forms.TableLayoutStyle" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ColumnStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.TableLayoutStyle</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das Aussehen und Verhalten einer Spalte in einem Tabellenlayout dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ColumnStyle> Klasse stellt die Merkmale des Benutzer-Benutzeroberfläche (UI) der Spalte in einer <xref:System.Windows.Forms.TableLayoutPanel>. Die Formate für alle Spalten in eine solche Tabelle werden gesammelt, der <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Diese einfache Klasse bietet die <xref:System.Windows.Forms.ColumnStyle.Width%2A> und <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> Eigenschaften für eine Spalte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Extrahieren einer <xref:System.Windows.Forms.ColumnStyle> aus einem <xref:System.Windows.Forms.TableLayoutColumnStyleCollection>.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.TableLayoutPanel> Klasse.  
+  
+ [!code-csharp[System.Windows.Forms.TableLayoutPanel#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel/CS/form1.cs#8)]
+ [!code-vb[System.Windows.Forms.TableLayoutPanel#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel/VB/form1.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColumnStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ColumnStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert und die Instanz von der <see cref="T:System.Windows.Forms.ColumnStyle" /> Klasse, um den Standardzustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> Eigenschaft <xref:System.Windows.Forms.SizeType.AutoSize> und die <xref:System.Windows.Forms.ColumnStyle.Width%2A> Eigenschaft auf 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColumnStyle (System.Windows.Forms.SizeType sizeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.SizeType sizeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ColumnStyle.#ctor(System.Windows.Forms.SizeType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sizeType" Type="System.Windows.Forms.SizeType" />
+      </Parameters>
+      <Docs>
+        <param name="sizeType">Ein <see cref="P:System.Windows.Forms.TableLayoutStyle.SizeType" /> , der angibt, wie die Spalte werden sollen relativ zum enthaltenden Tabelle angepasst werden soll.</param>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.Windows.Forms.ColumnStyle" /> -Klasse unter Verwendung der angegebenen <see cref="T:System.Windows.Forms.SizeType" /> Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.Windows.Forms.ColumnStyle.Width%2A> Eigenschaft auf 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColumnStyle (System.Windows.Forms.SizeType sizeType, float width);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.SizeType sizeType, float32 width) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ColumnStyle.#ctor(System.Windows.Forms.SizeType,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sizeType" Type="System.Windows.Forms.SizeType" />
+        <Parameter Name="width" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="sizeType">Ein <see cref="P:System.Windows.Forms.TableLayoutStyle.SizeType" /> , der angibt, wie die Spalte werden sollen relativ zum enthaltenden Tabelle angepasst werden soll.</param>
+        <param name="width">Die bevorzugte Breite in Pixel oder Prozent, abhängig von der <c>SizeType</c> Parameter.</param>
+        <summary>Initialisiert und die Instanz von der <see cref="T:System.Windows.Forms.ColumnStyle" /> -Klasse unter Verwendung der angegebenen <see cref="T:System.Windows.Forms.SizeType" /> und Werte für die Breite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die genaue Bedeutung von der `width` Parameter, variieren je nach den `sizeType` Parameter. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Forms.ColumnStyle.Width%2A>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="width" /> ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public float Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColumnStyle.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die Breite einer Spalte.</summary>
+        <value>Die bevorzugte Breite in Pixel oder Prozent, abhängig von der <see cref="P:System.Windows.Forms.TableLayoutStyle.SizeType" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `width` Parameter auf unterschiedliche Bedeutungen je nach dauert die <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> Eigenschaft.  
+  
+|`sizeType`-Wert|`width`Interpretation|  
+|----------------------|----------------------------|  
+|<xref:System.Windows.Forms.SizeType.Absolute>|Die bevorzugte Spaltenbreite in Pixel (Bruchteil ignoriert).|  
+|<xref:System.Windows.Forms.SizeType.AutoSize>|Nicht zutreffend – der Breite-Parameter wird ignoriert.|  
+|<xref:System.Windows.Forms.SizeType.Percent>|Die bevorzugte Spaltenbreite als Prozentsatz der enthaltenden Tabelle.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als 0, beim Festlegen dieser Eigenschaft.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

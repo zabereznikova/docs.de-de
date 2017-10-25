@@ -1,0 +1,733 @@
+<Type Name="LogStore" FullName="System.IO.Log.LogStore">
+  <TypeSignature Language="C#" Value="public sealed class LogStore : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LogStore extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.LogStore" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen protokollstrukturierten Speicher dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Log.LogRecordSequence>-Klasse stellt eine Implementierung der Datensatzsequenzschnittstelle auf einem CLFS-Protokoll (gemeinsames Protokolldateisystem) bereit. Die Funktionsweise erfolgt in Kombination mit der <xref:System.IO.Log.LogStore>-Klasse, die eine Schnittstelle für die direkte Bearbeitung und Verwaltung einer CLFS-Protokolldatei bereitstellt. Ein Protokollspeicher stellt einen nur erweiterbaren Speicher für einen Satz Datenträgerwertebereiche bereit. Die <xref:System.IO.Log.LogStore>-Klasse stellt diesen Speicher dar und bietet Methoden zum Hinzufügen und Entfernen von Containern, Festlegen von Richtlinien und Erstellen von Archiven. Sie bietet keine Methoden zum Lesen oder Schreiben im Speicher; diese Methoden werden von der <xref:System.IO.Log.LogRecordSequence>-Klasse bereitgestellt.  
+  
+ Die Beziehung zwischen der <xref:System.IO.Log.LogStore>-Klasse und der <xref:System.IO.Log.LogRecordSequence>-Klasse ähnelt der Beziehung zwischen einer Datenträgerdatei und einem <xref:System.IO.FileStream>-Objekt. Die Datenträgerdatei stellt den Speicherplatz bereit und weist Attribute wie die Länge und den letzten Zugriff auf, während das <xref:System.IO.FileStream>-Objekt eine Ansicht der Datei bereitstellt, über die in der Datei gelesen und geschrieben werden kann. Die <xref:System.IO.Log.LogStore>-Klasse weist Attribute wie eine Richtlinie und eine Auflistung von Datenträgerwertebereichen auf, und die <xref:System.IO.Log.LogRecordSequence>-Klasse bietet einen datensatzorientierten Mechanismus zum Lesen und Schreiben von Daten.  
+  
+ Anders als die Dateidatensatzsequenz, die von der <xref:System.IO.Log.FileRecordSequence>-Klasse dargestellt wird, speichert eine <xref:System.IO.Log.LogStore>-Instanz ihre Daten in einer Auflistung von Datenträgerwertebereichen, die von <xref:System.IO.Log.LogExtent>-Instanzen dargestellt werden. Die Wertebereiche in einer bestimmten <xref:System.IO.Log.LogStore>-Instanz weisen eine einheitliche Größe auf. Speicherplatz wird einer <xref:System.IO.Log.LogStore>-Instanz in Wertebereichsschritten hinzugefügt oder daraus gelöscht. Verwenden Sie zum Hinzufügen und Entfernen von Protokollwertebereichen die <xref:System.IO.Log.LogExtentCollection.Add%2A>-Methode und die <xref:System.IO.Log.LogExtentCollection.Remove%2A>-Methode des <xref:System.IO.Log.LogExtentCollection>-Objekts, die von der <xref:System.IO.Log.LogStore.Extents%2A>-Eigenschaft zurückgegeben werden können.  
+  
+ Eine <xref:System.IO.Log.LogStore>-Instanz kann zugeordnete Richtlinien aufweisen. Diese werden durch <xref:System.IO.Log.LogPolicy>-Instanzen dargestellt, die von der <xref:System.IO.Log.LogStore.Policy%2A>-Eigenschaft zurückgegeben werden. Eine Richtlinie schreibt bestimmte Regeln vor, die das Protokoll zu befolgen versucht, beispielsweise die Maximal- und die Mindestanzahl an Wertebereichen oder Anweisungen zum Erweitern oder Verkleinern der <xref:System.IO.Log.LogStore> unter bestimmten Bedingungen. Außerdem können Sie angeben, ob eine <xref:System.IO.Log.LogStore>-Instanz archiviert werden kann. Richtlinien werden pro Protokoll festgelegt und sind flüchtig, das heißt, sobald jedes Handle für das Protokoll geschlossen wurde, existiert die Richtlinie nicht mehr.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein <xref:System.IO.Log.LogStore> in einem XML-Dokument archiviert wird.  
+  
+ [!code-csharp[logarchievesnapshot#0](~/samples/snippets/csharp/VS_Snippets_CFX/logarchievesnapshot/cs/logarchievesnapshot.cs#0)]
+ [!code-vb[logarchievesnapshot#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/logarchievesnapshot/vb/logarchievesnapshot.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LogStore (Microsoft.Win32.SafeHandles.SafeFileHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Win32.SafeHandles.SafeFileHandle handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogStore.#ctor(Microsoft.Win32.SafeHandles.SafeFileHandle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handle" Type="Microsoft.Win32.SafeHandles.SafeFileHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Ein Dateihandle für die Protokolldatei, die vom aktuellen <see cref="T:System.IO.Log.LogStore" />-Objekt eingekapselt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Log.LogStore" />-Klasse für das angegebene Handle.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="handle" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">Das Protokollhandle konnte nicht an den Threadpool gebunden werden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung eines Programms fortzusetzen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LogStore (string path, System.IO.FileMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogStore.#ctor(System.String,System.IO.FileMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+      </Parameters>
+      <Docs>
+        <param name="path">Ein relativer oder absoluter Pfad für die Basisdatei des Protokollspeichers, die geöffnet werden soll.</param>
+        <param name="mode">Einer der <see cref="T:System.IO.FileMode" />-Werte, der bestimmt, wie der Speicher geöffnet oder erstellt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Log.LogStore" />-Klasse mit dem angegebenen Pfad und Modus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, um einen Protokollspeicher mit dem angegebenen Pfad und Modus zu öffnen. Der Speicher wird mit Lese-/Schreibzugriff geöffnet und für den Lesezugriff freigegeben.  
+  
+ Der `path`-Parameter sollte die folgende Syntax verwenden:  
+  
+ `log:<physical log name>[::<log client name>]`  
+  
+ wobei <log client name> ein gültiger Pfad zu einer Protokolldatei und`<physical log name>` ein eindeutiger Clientbezeichner ist. Ein Protokollspeicher kann entweder ein physischer oder ein virtueller Protokollspeicher sein, nicht jedoch beides. Sobald ein Protokollspeicher physisch oder virtuell erstellt wurde, kann dies nicht mehr geändert werden. Ein physischer Protokollspeicher wird erstellt, indem man nur den physischen Protokollnamen angibt. Ein virtueller Protokollspeicher wird erstellt, indem man sowohl den physischen Protokollnamen als auch den Namen des Protokollclients angibt.  
+  
+ Clients, die der gleichen physischen Protokollnamen verwenden, verwenden auch dieselbe Wertebereichauflistung und Richtlinie.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="path" /> enthält nur Leerraum.  
+  
+ - oder -   
+  
+ <paramref name="path" /> enthält mindestens ein ungültiges Zeichen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> enthält einen ungültigen Wert.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei kann nicht gefunden werden.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf, wenn der Protokollspeicher geöffnet wird.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.IO.Log.LogStore" /> kann nicht verwendet werden, da die erforderliche CLFS-Komponente (gemeinsames Protokolldateisystem) nicht installiert ist. Installieren Sie die CLFS-Komponente, wenn sie für Ihre Plattform verfügbar ist, oder verwenden Sie stattdessen die <see cref="T:System.IO.Log.FileRecordSequence" />-Klasse.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung eines Programms fortzusetzen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LogStore (string path, System.IO.FileMode mode, System.IO.FileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogStore.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="path">Ein relativer oder absoluter Pfad für die Basisdatei des Protokollspeichers, die geöffnet werden soll.</param>
+        <param name="mode">Einer der <see cref="T:System.IO.FileMode" />-Werte, der bestimmt, wie der Speicher geöffnet oder erstellt wird.</param>
+        <param name="access">Einer der <see cref="T:System.IO.FileAccess" />-Werte, der festlegt, wie der <see cref="T:System.IO.Log.LogStore" /> auf die Datei zugreifen kann.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Log.LogStore" />-Klasse mit dem angegebenen Pfad, Modus und Zugriff.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, um einen neuen Protokollspeicher mit dem angegebenen Pfad, Modus und Zugriff zu öffnen. Der Speicher wird geöffnet und der Lesezugriff freigegeben.  
+  
+ Der `path`-Parameter sollte die folgende Syntax verwenden:  
+  
+ `log:<physical log name>[::<log client name>]`  
+  
+ wobei <log client name> ein gültiger Pfad zu einer Protokolldatei und`<physical log name>` ein eindeutiger Clientbezeichner ist. Ein Protokollspeicher kann entweder ein physischer oder ein virtueller Protokollspeicher sein, nicht jedoch beides. Sobald ein Protokollspeicher physisch oder virtuell erstellt wurde, kann dies nicht mehr geändert werden. Ein physischer Protokollspeicher wird erstellt, indem man nur den physischen Protokollnamen angibt. Ein virtueller Protokollspeicher wird erstellt, indem man sowohl den physischen Protokollnamen als auch den Namen des Protokollclients angibt.  
+  
+ Clients, die der gleichen physischen Protokollnamen verwenden, verwenden auch dieselbe Wertebereichauflistung und Richtlinie.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="path" /> enthält nur Leerraum.  
+  
+ - oder -   
+  
+ <paramref name="path" /> enthält mindestens ein ungültiges Zeichen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> enthält einen ungültigen Wert.  
+  
+ – oder –  
+  
+ <paramref name="access" /> enthält einen ungültigen Wert.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei kann nicht gefunden werden.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf, wenn der Protokollspeicher geöffnet wird.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.IO.Log.LogStore" /> kann nicht verwendet werden, da die erforderliche CLFS-Komponente (gemeinsames Protokolldateisystem) nicht installiert ist. Installieren Sie die CLFS-Komponente, wenn sie für Ihre Plattform verfügbar ist, oder verwenden Sie stattdessen die <see cref="T:System.IO.Log.FileRecordSequence" />-Klasse.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung eines Programms fortzusetzen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LogStore (string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access, valuetype System.IO.FileShare share) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogStore.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="share" Type="System.IO.FileShare" />
+      </Parameters>
+      <Docs>
+        <param name="path">Ein relativer oder absoluter Pfad für die Basisdatei des Protokollspeichers, die geöffnet werden soll.</param>
+        <param name="mode">Einer der <see cref="T:System.IO.FileMode" />-Werte, der bestimmt, wie der Speicher geöffnet oder erstellt wird.</param>
+        <param name="access">Einer der <see cref="T:System.IO.FileAccess" />-Werte, der festlegt, wie der <see cref="T:System.IO.Log.LogStore" /> auf die Datei zugreifen kann.</param>
+        <param name="share">Einer der <see cref="T:System.IO.FileShare" />-Werte, der bestimmt, wie der Protokollspeicher für Prozesse freigegeben wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Log.LogStore" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert ein neues <xref:System.IO.Log.LogStore>-Objekt, das er mit dem angegebenen Pfad, Modus und Zugriff öffnet. Der Speicher wird geöffnet und der angegebene Zugriff freigegeben.  
+  
+ Der `path`-Parameter sollte die folgende Syntax verwenden:  
+  
+ `log:<physical log name>[::<log client name>]`  
+  
+ wobei <log client name> ein gültiger Pfad zu einer Protokolldatei und`<physical log name>` ein eindeutiger Clientbezeichner ist. Ein Protokollspeicher kann entweder ein physischer oder ein virtueller Protokollspeicher sein, nicht jedoch beides. Sobald ein Protokollspeicher physisch oder virtuell erstellt wurde, kann dies nicht mehr geändert werden. Ein physischer Protokollspeicher wird erstellt, indem man nur den physischen Protokollnamen angibt. Ein virtueller Protokollspeicher wird erstellt, indem man sowohl den physischen Protokollnamen als auch den Namen des Protokollclients angibt.  
+  
+ Clients, die der gleichen physischen Protokollnamen verwenden, verwenden auch dieselbe Wertebereichauflistung und Richtlinie.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="path" /> enthält nur Leerraum.  
+  
+ - oder -   
+  
+ <paramref name="path" /> enthält mindestens ein ungültiges Zeichen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> enthält einen ungültigen Wert.  
+  
+ – oder –  
+  
+ <paramref name="access" /> enthält einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="share" /> enthält einen ungültigen Wert.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei kann nicht gefunden werden.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf, wenn der Protokollspeicher geöffnet wird.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.IO.Log.LogStore" /> kann nicht verwendet werden, da die erforderliche CLFS-Komponente (gemeinsames Protokolldateisystem) nicht installiert ist. Installieren Sie die CLFS-Komponente, wenn sie für Ihre Plattform verfügbar ist, oder verwenden Sie stattdessen die <see cref="T:System.IO.Log.FileRecordSequence" />-Klasse.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung eines Programms fortzusetzen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LogStore (string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Security.AccessControl.FileSecurity fileSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access, valuetype System.IO.FileShare share, class System.Security.AccessControl.FileSecurity fileSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogStore.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Security.AccessControl.FileSecurity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="share" Type="System.IO.FileShare" />
+        <Parameter Name="fileSecurity" Type="System.Security.AccessControl.FileSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="path">Ein relativer oder absoluter Pfad für die Basisdatei des Protokollspeichers, die geöffnet werden soll.</param>
+        <param name="mode">Einer der <see cref="T:System.IO.FileMode" />-Werte, der bestimmt, wie der Speicher geöffnet oder erstellt wird.</param>
+        <param name="access">Einer der <see cref="T:System.IO.FileAccess" />-Werte, der festlegt, wie der <see cref="T:System.IO.Log.LogStore" /> auf die Datei zugreifen kann.</param>
+        <param name="share">Einer der <see cref="T:System.IO.FileShare" />-Werte, der bestimmt, wie der Protokollspeicher für Prozesse freigegeben wird.</param>
+        <param name="fileSecurity">Einer der <see cref="T:System.Security.AccessControl.FileSecurity" />-Werte, der die Sicherheit für den neu erstellten Speicher festlegt, sofern der Speicher erstellt werden muss.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Log.LogStore" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert ein neues <xref:System.IO.Log.LogStore>-Objekt, das er mit dem angegebenen Pfad, Modus und Zugriff öffnet. Der Speicher wird geöffnet und der angegebene Zugriff freigegeben. Der `path`-Parameter sollte die folgende Syntax verwenden:  
+  
+ `log:<physical log name>[::<log client name>]`  
+  
+ wobei <log client name> ein gültiger Pfad zu einer Protokolldatei und`<physical log name>` ein eindeutiger Clientbezeichner ist. Ein Protokollspeicher kann entweder ein physischer oder ein virtueller Protokollspeicher sein, nicht jedoch beides. Sobald ein Protokollspeicher physisch oder virtuell erstellt wurde, kann dies nicht mehr geändert werden. Ein physischer Protokollspeicher wird erstellt, indem man nur den physischen Protokollnamen angibt. Ein virtueller Protokollspeicher wird erstellt, indem man sowohl den physischen Protokollnamen als auch den Namen des Protokollclients angibt.  
+  
+ Clients, die der gleichen physischen Protokollnamen verwenden, verwenden auch dieselbe Wertebereichauflistung und Richtlinie.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Dateiname des Protokollspeichers, der von <paramref name="path" /> angegeben wird, ist ungültig.  
+  
+ - oder -   
+  
+ <paramref name="Mode" /> ist <see langword="CreateNew" />, der nicht ohne Schreibzugriff verwendet werden kann.  
+  
+ - oder -   
+  
+ <paramref name="Mode" /> ist <see langword="OpenOrCreate" />, der nicht ohne Schreibzugriff verwendet werden kann.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> enthält einen ungültigen Wert.  
+  
+ – oder –  
+  
+ <paramref name="access" /> enthält einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="share" /> enthält einen ungültigen Wert.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei kann nicht gefunden werden.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf, wenn der Protokollspeicher geöffnet wird.  
+  
+ Auf die von <paramref name="path" /> angegebene Datei kann nicht zugegriffen werden, da sie von einem anderen Prozess verwendet wird.  
+  
+ - oder -   
+  
+ Die von <paramref name="path" /> angegebene Datei kann nicht erstellt werden, da die Datei oder das Verzeichnis bereits vorhanden ist.  
+  
+ - oder -   
+  
+ Das Protokollhandle konnte nicht an den Threadpool gebunden werden.  
+  
+ - oder -   
+  
+ Das angegebene Protokolldateiformat oder die Version ist ungültig.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.IO.Log.LogStore" /> kann nicht verwendet werden, da die erforderliche CLFS-Komponente (gemeinsames Protokolldateisystem) nicht installiert ist. Installieren Sie die CLFS-Komponente, wenn sie für Ihre Plattform verfügbar ist, oder verwenden Sie stattdessen die <see cref="T:System.IO.Log.FileRecordSequence" />-Klasse.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung eines Programms fortzusetzen.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Archivable">
+      <MemberSignature Language="C#" Value="public bool Archivable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Archivable" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogStore.Archivable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob diese <see cref="T:System.IO.Log.LogStore" />-Instanz archiviert werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn diese <see cref="T:System.IO.Log.LogStore" />-Instanz archiviert werden kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn kein <xref:System.IO.Log.LogStore> verfügbar ist, führen Aufrufe der <xref:System.IO.Log.LogStore.CreateLogArchiveSnapshot%2A>-Methode und der <xref:System.IO.Log.LogStore.SetArchiveTail%2A>-Methode dazu, dass eine <xref:System.NotSupportedException> ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Auf die Eigenschaft wurde zugegriffen, nachdem die Sequenz verworfen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseSequenceNumber">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber BaseSequenceNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.SequenceNumber BaseSequenceNumber" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogStore.BaseSequenceNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die niedrigste Sequenznummer ab, die einem gültigen Datensatz in dieser <see cref="T:System.IO.Log.LogStore" />-Instanz entspricht.</summary>
+        <value>Die niedrigste Sequenznummer, die einem gültigen Datensatz in dieser <see cref="T:System.IO.Log.LogStore" />-Instanz entspricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Sequenznummern sind größer oder gleich <xref:System.IO.Log.LogStore.BaseSequenceNumber%2A> und kleiner als <xref:System.IO.Log.LogStore.LastSequenceNumber%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Auf die Eigenschaft wurde zugegriffen, nachdem die Sequenz verworfen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLogArchiveSnapshot">
+      <MemberSignature Language="C#" Value="public System.IO.Log.LogArchiveSnapshot CreateLogArchiveSnapshot ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Log.LogArchiveSnapshot CreateLogArchiveSnapshot() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogStore.CreateLogArchiveSnapshot" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.LogArchiveSnapshot</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Nimmt zum Erstellen einer Sicherung eine Momentaufnahme des Protokollspeicherzustands auf.</summary>
+        <returns>Ein <see cref="T:System.IO.Log.LogArchiveSnapshot" />-Objekt, das den zum Erstellen eines Archivs erforderlichen Zustand enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein <xref:System.IO.Log.LogStore> in einem XML-Dokument archiviert wird.  
+  
+ [!code-csharp[logarchievesnapshot#0](~/samples/snippets/csharp/VS_Snippets_CFX/logarchievesnapshot/cs/logarchievesnapshot.cs#0)]
+ [!code-vb[logarchievesnapshot#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/logarchievesnapshot/vb/logarchievesnapshot.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Der Protokollspeicher kann nicht archiviert werden.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf, wenn die Archivmomentaufnahme erstellt wird.</exception>
+        <exception cref="T:System.ArgumentException">Ein Argument ist ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Eine ungültige Operation wurde ausgeführt.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung eines Programms fortzusetzen.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLogArchiveSnapshot">
+      <MemberSignature Language="C#" Value="public System.IO.Log.LogArchiveSnapshot CreateLogArchiveSnapshot (System.IO.Log.SequenceNumber first, System.IO.Log.SequenceNumber last);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Log.LogArchiveSnapshot CreateLogArchiveSnapshot(valuetype System.IO.Log.SequenceNumber first, valuetype System.IO.Log.SequenceNumber last) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogStore.CreateLogArchiveSnapshot(System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.LogArchiveSnapshot</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="first" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="last" Type="System.IO.Log.SequenceNumber" />
+      </Parameters>
+      <Docs>
+        <param name="first">Die Startsequenznummer im zu archivierenden Bereich.</param>
+        <param name="last">Die Endsequenznummer im zu archivierenden Bereich.</param>
+        <summary>Nimmt zum Erstellen einer Sicherungskopie eine Momentaufnahme des Protokollspeicherzustands zwischen den angegebenen Sequenznummern auf.</summary>
+        <returns>Ein <see cref="T:System.IO.Log.LogArchiveSnapshot" />-Objekt, das den zum Erstellen eines Archivs erforderlichen Zustand enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von dieser Methode zurückgegebene Archivmomentaufnahme umfasst Informationen von der Basissequenznummer oder der Archivsequenznummer, je nachdem, welcher Wert niedriger ist, bis hin zur letzten Sequenznummer. Die letzte Sequenznummer ist nicht inklusive, das Archiv umfasst also nur Datensätze bis zur und nicht einschließlich der letzten Sequenznummer. Bei der Verwendung dieser Methode muss die Startsequenznummer gleich der Basissequenznummer sein, damit das Archiv konsistent ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="first" /> oder <paramref name="last" /> befindet sich nicht zwischen der Basissequenznummer und der letzten Sequenznummer dieser Sequenz.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="first" /> ist größer als <paramref name="last" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Eine ungültige Operation wurde ausgeführt.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf, wenn die Archivmomentaufnahme erstellt wird.</exception>
+        <exception cref="T:System.NotSupportedException">Der Protokollspeicher kann nicht archiviert werden.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung eines Programms fortzusetzen.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public static void Delete (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Delete(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogStore.Delete(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Ein relativer oder absoluter Pfad für die Basisdatei des Protokollspeichers, die entfernt werden soll.</param>
+        <summary>Entfernt den Protokollspeicher.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="path" /> enthält nur Leerraum.  
+  
+ - oder -   
+  
+ <paramref name="path" /> enthält mindestens ein ungültiges Zeichen.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei kann nicht gefunden werden.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf, wenn der Protokollspeicher geöffnet wird.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogStore.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.IO.Log.LogStore" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.IO.Log.LogStore.Dispose%2A> auf, wenn <xref:System.IO.Log.LogStore> nicht mehr benötigt wird. Die <xref:System.IO.Log.LogStore.Dispose%2A>-Methode bewirkt, dass <xref:System.IO.Log.LogStore> nicht mehr verwendet werden kann. Nach dem Aufruf von <xref:System.IO.Log.LogStore.Dispose%2A> müssen Sie alle Verweise auf <xref:System.IO.Log.LogStore> freigeben, sodass der vom <xref:System.IO.Log.LogStore> belegte Speicher bei der Garbage Collection wieder zugänglich gemacht werden kann.  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.IO.Log.LogStore.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.IO.Log.LogStore> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.IO.Log.LogStore>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Extents">
+      <MemberSignature Language="C#" Value="public System.IO.Log.LogExtentCollection Extents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Log.LogExtentCollection Extents" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogStore.Extents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.LogExtentCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Protokollwertebereichen ab, die die Daten für diesen Protokollspeicher enthalten.</summary>
+        <value>Eine <see cref="T:System.IO.Log.LogExtentCollection" />-Instanz, die die Auflistung von Protokollwertebereichen enthält, die Daten für diesen Protokollspeicher einkapselt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine <xref:System.IO.Log.LogStore>-Instanz speichert ihre Daten in einer Auflistung von Datenträgerwertebereichen, die durch <xref:System.IO.Log.LogExtent>-Instanzen dargestellt wird. Die Wertebereiche in einer bestimmten <xref:System.IO.Log.LogStore>-Instanz weisen eine einheitliche Größe auf. Speicherplatz wird einer <xref:System.IO.Log.LogStore>-Instanz in Wertebereichsschritten hinzugefügt oder daraus gelöscht. Verwenden Sie zum Hinzufügen und Entfernen von Protokollwertebereichen die <xref:System.IO.Log.LogExtentCollection.Add%2A>-Methode und die <xref:System.IO.Log.LogExtentCollection.Remove%2A>-Methode des <xref:System.IO.Log.LogExtentCollection>-Objekts, das von dieser Eigenschaft zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FreeBytes">
+      <MemberSignature Language="C#" Value="public long FreeBytes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 FreeBytes" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogStore.FreeBytes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Byte ab, die im Protokollspeicher verfügbar sind.</summary>
+        <value>Die Anzahl von Byte, die im Protokollspeicher verfügbar sind.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Auf die Eigenschaft wurde zugegriffen, nachdem die Sequenz verworfen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SafeHandles.SafeFileHandle Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.SafeHandles.SafeFileHandle Handle" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogStore.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafeFileHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Dateihandle des Betriebssystems für die Protokolldatei ab, die von der aktuellen <see cref="T:System.IO.Log.LogStore" />-Instanz eingekapselt wird.</summary>
+        <value>Das Dateihandle des Betriebssystems für die Protokolldatei, die von der aktuellen <see cref="T:System.IO.Log.LogStore" />-Instanz eingekapselt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastSequenceNumber">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber LastSequenceNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.SequenceNumber LastSequenceNumber" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogStore.LastSequenceNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Sequenznummer des nächsten Datensatzes ab, der dem Protokollspeicher angefügt werden soll.</summary>
+        <value>Die Sequenznummer des nächsten Datensatzes, der dem Protokollspeicher angefügt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Sequenznummern sind größer oder gleich <xref:System.IO.Log.LogStore.BaseSequenceNumber%2A> und kleiner als <xref:System.IO.Log.LogStore.LastSequenceNumber%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Auf die Eigenschaft wurde zugegriffen, nachdem die Sequenz verworfen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogStore.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Protokollspeichers in Byte ab.</summary>
+        <value>Die Größe des Protokollspeichers in Byte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Größe des Protokollspeichers ist die Summe der Größen der Protokollwertebereiche.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Auf die Eigenschaft wurde zugegriffen, nachdem die Sequenz verworfen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Policy">
+      <MemberSignature Language="C#" Value="public System.IO.Log.LogPolicy Policy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Log.LogPolicy Policy" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogStore.Policy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.LogPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die diesem Protokollspeicher zugeordnete Richtlinie ab.</summary>
+        <value>Eine <see cref="T:System.IO.Log.LogPolicy" />-Instanz, die die diesem Protokollspeicher zugeordnete Richtlinie darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.IO.Log.LogPolicy>-Instanz verwenden, die von dieser Eigenschaft zurückgegeben wird, um die diesem <xref:System.IO.Log.LogStore> zugeordnete Protokollrichtlinie zu überprüfen und zu bearbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetArchiveTail">
+      <MemberSignature Language="C#" Value="public void SetArchiveTail (System.IO.Log.SequenceNumber archiveTail);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetArchiveTail(valuetype System.IO.Log.SequenceNumber archiveTail) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogStore.SetArchiveTail(System.IO.Log.SequenceNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="archiveTail" Type="System.IO.Log.SequenceNumber" />
+      </Parameters>
+      <Docs>
+        <param name="archiveTail">Die Sequenznummer des Archivendes.</param>
+        <summary>Legt die Sequenznummer des Archivendes fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der kleinere Wert von Basissequenznummer oder Archivende bestimmt jeweils das Ende des Protokolls.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein <xref:System.IO.Log.LogStore> in einem XML-Dokument archiviert wird.  
+  
+ [!code-csharp[logarchievesnapshot#0](~/samples/snippets/csharp/VS_Snippets_CFX/logarchievesnapshot/cs/logarchievesnapshot.cs#0)]
+ [!code-vb[logarchievesnapshot#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/logarchievesnapshot/vb/logarchievesnapshot.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="archiveTail" /> befindet sich nicht zwischen der Basissequenznummer und der letzten Sequenznummer dieser Sequenz.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="archiveTail" /> ist für diese Sequenz nicht gültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Eine ungültige Operation wurde ausgeführt.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf, wenn die Archivmomentaufnahme erstellt wird.</exception>
+        <exception cref="T:System.NotSupportedException">Der Protokollspeicher kann nicht archiviert werden.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung eines Programms fortzusetzen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamCount">
+      <MemberSignature Language="C#" Value="public int StreamCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StreamCount" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogStore.StreamCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Protokoll-Streams in diesem Protokollspeicher ab.</summary>
+        <value>Die Anzahl der Protokoll-Streams in diesem Protokollspeicher.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

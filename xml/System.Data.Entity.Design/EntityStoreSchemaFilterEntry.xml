@@ -1,0 +1,182 @@
+<Type Name="EntityStoreSchemaFilterEntry" FullName="System.Data.Entity.Design.EntityStoreSchemaFilterEntry">
+  <TypeSignature Language="C#" Value="public class EntityStoreSchemaFilterEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityStoreSchemaFilterEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Entity.Design.EntityStoreSchemaFilterEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen einzelnen Filtereintrag dar. Mit dem Filter werden bestimmte Datenbankobjekte bei der Generierung zugelassen oder ausgeschlossen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityStoreSchemaFilterEntry (string catalog, string schema, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string catalog, string schema, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityStoreSchemaFilterEntry.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="catalog" Type="System.String" />
+        <Parameter Name="schema" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="catalog">Das Muster zum Auswählen des entsprechenden Katalogs.</param>
+        <param name="schema">Das Muster zum Auswählen des entsprechenden Schemas bzw. NULL, um die Auswahl nicht anhand des Schemas einzuschränken.</param>
+        <param name="name">Das Muster zum Auswählen des entsprechenden Namens bzw. NULL, um die Auswahl nicht anhand des Namens einzuschränken.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Entity.Design.EntityStoreSchemaFilterEntry" />-Klasse mit den angegebenen Parametern für den Katalog, das Schema und die Namensfilter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityStoreSchemaFilterEntry (string catalog, string schema, string name, System.Data.Entity.Design.EntityStoreSchemaFilterObjectTypes types, System.Data.Entity.Design.EntityStoreSchemaFilterEffect effect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string catalog, string schema, string name, valuetype System.Data.Entity.Design.EntityStoreSchemaFilterObjectTypes types, valuetype System.Data.Entity.Design.EntityStoreSchemaFilterEffect effect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityStoreSchemaFilterEntry.#ctor(System.String,System.String,System.String,System.Data.Entity.Design.EntityStoreSchemaFilterObjectTypes,System.Data.Entity.Design.EntityStoreSchemaFilterEffect)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="catalog" Type="System.String" />
+        <Parameter Name="schema" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="types" Type="System.Data.Entity.Design.EntityStoreSchemaFilterObjectTypes" />
+        <Parameter Name="effect" Type="System.Data.Entity.Design.EntityStoreSchemaFilterEffect" />
+      </Parameters>
+      <Docs>
+        <param name="catalog">Das Muster zum Auswählen des entsprechenden Katalogs bzw. NULL, um die Auswahl nicht anhand des Katalogs einzuschränken.</param>
+        <param name="schema">Das Muster zum Auswählen des entsprechenden Schemas bzw. NULL, um die Auswahl nicht anhand des Schemas einzuschränken.</param>
+        <param name="name">Das Muster zum Auswählen des entsprechenden Namens bzw. NULL, um die Auswahl nicht anhand des Namens einzuschränken.</param>
+        <param name="types">Der Typ der Objekte, auf die dieser Filter angewendet wird.</param>
+        <param name="effect">Ein <see cref="T:System.Data.Entity.Design.EntityStoreSchemaFilterEffect" />-Wert, der angibt, ob Einträge, die die angegebenen Filter passieren, zugelassen oder ausgeschlossen werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Entity.Design.EntityStoreSchemaFilterEntry" />-Klasse mit den angegebenen Parametern für den Katalog, das Schema, den Namen, die Typfilter und die Filtereffekteinstellungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Catalog">
+      <MemberSignature Language="C#" Value="public string Catalog { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Catalog" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Entity.Design.EntityStoreSchemaFilterEntry.Catalog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Muster zum Auswählen des entsprechenden Katalogs ab.</summary>
+        <value>Der Katalog Teil des Namens der Datenbank, wobei der Name der Datenbank Catalog.Schema.Name aufweist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Effect">
+      <MemberSignature Language="C#" Value="public System.Data.Entity.Design.EntityStoreSchemaFilterEffect Effect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Entity.Design.EntityStoreSchemaFilterEffect Effect" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Entity.Design.EntityStoreSchemaFilterEntry.Effect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Entity.Design.EntityStoreSchemaFilterEffect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Effekt ab, den dieser Filter auf die Ergebnisse hat.</summary>
+        <value>Ein <see cref="T:System.Data.Entity.Design.EntityStoreSchemaFilterEffect" /> Wert, der angibt, ob zuzulassen oder auszuschließen Einträge, die den angegebenen Filtern übereinstimmen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Entity.Design.EntityStoreSchemaFilterEntry.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Muster zum Auswählen des entsprechenden Namens ab.</summary>
+        <value>Der Teil des Namens des Datenbanknamens, in dem der Datenbankname Catalog.Schema.Name aufweist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public string Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Entity.Design.EntityStoreSchemaFilterEntry.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Muster zum Auswählen des entsprechenden Schemas ab.</summary>
+        <value>Der Schemateil des Namens der Datenbank, wobei der Name der Datenbank Catalog.Schema.Name aufweist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Types">
+      <MemberSignature Language="C#" Value="public System.Data.Entity.Design.EntityStoreSchemaFilterObjectTypes Types { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Entity.Design.EntityStoreSchemaFilterObjectTypes Types" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Entity.Design.EntityStoreSchemaFilterEntry.Types" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Entity.Design.EntityStoreSchemaFilterObjectTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Typen von Objekten ab, auf die dieser Filter angewendet wird.</summary>
+        <value>Ein <see cref="T:System.Data.Entity.Design.EntityStoreSchemaFilterObjectTypes" />-Wert, der die Typen von Objekten angibt, auf die der Filter angewendet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,226 @@
+<Type Name="IDesignerEventService" FullName="System.ComponentModel.Design.IDesignerEventService">
+  <TypeSignature Language="C#" Value="public interface IDesignerEventService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerEventService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IDesignerEventService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Ereignisbenachrichtungen bereit, wenn Stammdesigner hinzugefügt und entfernt werden und wenn eine ausgewählte Komponente oder der aktuelle Stammdesigner geändert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.IDesignerEventService>Stellt eine Benachrichtigung bereit, wenn ein neue Stamm-Designer erstellt, geändert oder gelöscht wird. Ein Stamm-Designer stellt entwurfszeitunterstützung für die Basiskomponente eines Dokuments in der Entwurfsansicht. Die <xref:System.ComponentModel.Design.IDesignerEventService.SelectionChanged> Ereignis bietet Benachrichtigung aus, wenn die aktuelle Komponentenauswahl geändert wurde.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt einen Designer, verwendet der <xref:System.ComponentModel.Design.IDesignerEventService> ereignisbenachrichtigungen auf ein Steuerelement angezeigt werden sollen. Um dieses Codebeispiel verwenden zu können, müssen kompilieren Sie den Code in einer Klassenbibliothek. Ein neues Windows Forms-Projekt einen Verweis auf die Bibliothek hinzu, und fügen Sie das Steuerelement in der Bibliothek, um die **Toolbox**.  Fügen Sie eine Instanz von der `DesignerMonitor` -Steuerelement einem Formular im Entwurfsmodus. Mit der rechten Maustaste in des Steuerelements, und klicken Sie auf die `Start monitoring` Befehl zum Anzeigen von Benachrichtigungen von Ereignissen, die ausgelöst wird, indem Sie die <xref:System.ComponentModel.Design.IDesignerEventService>.  
+  
+ [!code-cpp[IDesignerEventServiceExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IDesignerEventServiceExample/CPP/source.cpp#1)]
+ [!code-vb[IDesignerEventServiceExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IDesignerEventServiceExample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActiveDesigner">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.IDesignerHost ActiveDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.IDesignerHost ActiveDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.IDesignerEventService.ActiveDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.IDesignerHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stammdesigner für das aktuell aktive Dokument ab.</summary>
+        <value>Das gegenwärtig aktive Dokument oder <see langword="null" />, wenn kein aktives Dokument vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveDesignerChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.ActiveDesignerEventHandler ActiveDesignerChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.ActiveDesignerEventHandler ActiveDesignerChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IDesignerEventService.ActiveDesignerChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ActiveDesignerEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der aktuelle Stammdesigner ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis kann vom Benutzer beim Öffnen oder Festlegen des Fokus auf ein neues Dokument oder durch Schließen eines Dokuments führen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerCreated">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.DesignerEventHandler DesignerCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.DesignerEventHandler DesignerCreated" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IDesignerEventService.DesignerCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Erstellen eines Stammdesigners ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn ein neues Dokument geladen wurde und für Benutzereingaben bereit ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerDisposed">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.DesignerEventHandler DesignerDisposed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.DesignerEventHandler DesignerDisposed" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IDesignerEventService.DesignerDisposed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein Stammdesigner für ein Dokument freigegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn ein Dokument ist verworfen werden sollen, aber bevor das Dokument beginnt an sich selbst zu verwerfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Designers">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.DesignerCollection Designers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerCollection Designers" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.IDesignerEventService.Designers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Stammdesignern für Entwurfsdokumente ab, die in der Entwicklungsumgebung zur Zeit aktiv sind.</summary>
+        <value>Eine <see cref="T:System.ComponentModel.Design.DesignerCollection" />, die die Stammdesigner enthält, die erstellt und noch nicht freigegeben wurden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IDesignerEventService.SelectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die aktuelle Auswahl für die Entwurfsansicht geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Auswahlereignis geändert kann vom Benutzer die Auswahl im aktiven Dokument ändern, oder den Benutzer, wechseln zu einem neuen Dokument führen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,136 @@
+<Type Name="ReturnValueNameAttribute" FullName="System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ReturnValueNameAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReturnValueNameAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Delegate | System.AttributeTargets.ReturnValue, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Namen des Rückgabewerts einer Methode in einer Windows-Runtime-Komponente an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem [!INCLUDE[wrt](~/includes/wrt-md.md)] -Komponente, die alle Parameter einer Methode und der Rückgabewert müssen einen Namen aufweisen. Standardmäßig [Winmdexp.exe (Windows Runtime Exporttool für Metadaten)](~/docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) gibt dem Rückgabewert den Namen "Wert". Bei Verwendung eine Komponente in einem [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] app in JavaScript geschrieben wurden, verwenden Sie diesen Namen, um den Rückgabewert abzurufen. Nehmen wir beispielsweise an, die eine Komponente definiert eine Methode, die einen Rückgabewert und zwei `out` Parameter (`ByRef` Parameter mit dem <xref:System.Runtime.InteropServices.OutAttribute> -Attribut in Visual Basic):  
+  
+```csharp  
+public static int ComputeAverage([ReadOnlyArray()] int[] input,  
+    out int minValue, out int maxValue)  
+{  
+    …  
+}  
+```  
+  
+```vb  
+Public Shared Function ComputeAverage( _  
+        <ReadOnlyArray()> ByVal input As Integer, _  
+        <Out()> ByRef minValue As Integer, _  
+        <Out()> ByRef maxValue As Integer) As Integer  
+    …  
+End Function  
+  
+```  
+  
+ Wenn Sie die Funktion aus JavaScript aufgerufen werden, können Sie den Standardnamen den Rückgabewert zugreifen (`value`):  
+  
+```javascript  
+var data = [5, 13, 23, 37];  
+var results = SampleComponent.TestStuff.computeAverage(data);  
+var formattedResults = "Min=" + results.minValue + ", Avg=" +   
+    results.value + ", Max=" + results.maxValue;  
+  
+```  
+  
+ Sie müssen dem Rückgabewert in einen anderen Namen geben, wenn Sie bereits über einen Parameter namens "Wert" verfügen. Oder Sie können einfach einen aussagekräftigeren Namen (z. B. "Durchschnitt" in diesem Beispiel) verwenden möchten. Anwenden der <xref:System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute> -Attribut auf die Methode, und geben Sie einen neuen Namen.  
+  
+```csharp  
+[return: ReturnValueName("average")]  
+public static int ComputeAverage([ReadOnlyArray()] int[] input,  
+    out int minValue, out int maxValue)  
+{  
+    …  
+}  
+  
+```  
+  
+```vb  
+Public Shared Function ComputeAverage( _  
+        <ReadOnlyArray()> ByVal input As Integer, _  
+        <Out()> ByRef minValue As Integer, _  
+        <Out()> ByRef maxValue As Integer) _  
+            As <ReturnValueName("average")> Integer  
+    …  
+End Function  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReturnValueNameAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Rückgabewerts.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute" /> Klasse, und gibt den Namen des Rückgabewerts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen, der angegeben wurde, für den Rückgabewert einer Methode in einer [!INCLUDE[wrt](~/includes/wrt-md.md)] Komponente.</summary>
+        <value>Der Name der Rückgabewert der Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

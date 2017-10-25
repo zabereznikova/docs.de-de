@@ -1,0 +1,405 @@
+<Type Name="MenuAdapter" FullName="System.Web.UI.WebControls.Adapters.MenuAdapter">
+  <TypeSignature Language="C#" Value="public class MenuAdapter : System.Web.UI.WebControls.Adapters.WebControlAdapter, System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MenuAdapter extends System.Web.UI.WebControls.Adapters.WebControlAdapter implements class System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Adapters.MenuAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Adapters.WebControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Bietet die Möglichkeit zum Ändern des Verhaltens von der <see cref="T:System.Web.UI.WebControls.Menu" /> -Steuerelement für bestimmte Browser.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.WebControls.Adapters.MenuAdapter> ändert das Markup oder Verhalten einer <xref:System.Web.UI.WebControls.Menu> Steuerelement für einen bestimmten Browser oder eine Klasse von Browsern oder fungiert als Filter für eine Funktionalität.  
+  
+ Wird standardmäßig die <xref:System.Web.UI.WebControls.MenuItem> Objekte in der <xref:System.Web.UI.WebControls.Menu> Steuerelement werden als Links Menünavigation gerendert. Die <xref:System.Web.UI.WebControls.Menu> Klasse verwaltet den Zustand durch Implementieren der <xref:System.Web.UI.IPostBackEventHandler> Schnittstelle, damit sie reagieren und bestimmte Ereignisse während Postbacks auslösen kann. Sie erweitern die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter> Klasse weiter anpassen, rendern oder das Verhalten des der <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+ Die ursprüngliche Anforderung für einen Adapter bewirkt, dass .NET Framework, um nach einem zugeordneten Adapter für das Steuerelement suchen den Eigenschaften des anfordernden Browser. Die <xref:System.Web.HttpBrowserCapabilities> Klasse verwendet Browserdefinitionsdateien zum Identifizieren der Merkmale des Clientbrowsers und zum Zuordnen des Adapters zum Browsertyp.  
+  
+ Weitere Informationen zu den adaptiven Rendern in ASP.NET finden Sie unter [architektonische Overview of Adaptive Control Behavior](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Adapters.MenuAdapter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die ursprüngliche Anforderung für einen Adapter bewirkt, dass .NET Framework, um nach einem zugeordneten Adapter für das Steuerelement suchen den Eigenschaften des anfordernden Browser. Nachdem der Adapter gefunden wird, wird das Steuerelement enthält einen Verweis auf die zugeordnete Adapterinstanz in seiner <xref:System.Web.UI.Control.Adapter%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.Menu Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Menu Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Adapters.MenuAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Menu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen stark typisierten Verweis auf die <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement zugeordnete <see cref="T:System.Web.UI.WebControls.Adapters.MenuAdapter" /> Objekt.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.Menu" /> aktuellen zugeordneten Steuerelements <see cref="T:System.Web.UI.WebControls.Adapters.MenuAdapter" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.Control%2A> Eigenschaft bietet eine Möglichkeit, das entsprechende Steuerelement für den Adapter zu verweisen. Wenn ein Adapter mit einem bestimmten Steuerelement verknüpft ist, wird .NET Framework die Lebenszyklusmethoden des Adapters anstelle des oder zusätzlich zu den Lebenszyklus Methoden des Steuerelements aufgerufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.Control%2A> Eigenschaft zum Abrufen der <xref:System.Web.UI.WebControls.Menu> Kontrolle über die übergeordnete Klasse. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.MenuAdapter#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.MenuAdapter/CS/contosomenuadapter.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.MenuAdapter#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.MenuAdapter/VB/contosomenuadapter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAdapterControlState">
+      <MemberSignature Language="C#" Value="protected override void LoadAdapterControlState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void LoadAdapterControlState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.LoadAdapterControlState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Object" /> in Form von ein Wörterbuch, das Zustandsinformationen des Adapters enthält.</param>
+        <summary>Lädt alle Steuerelementzustandsinformationen, die gespeichert wurde, durch die <see cref="M:System.Web.UI.WebControls.Adapters.MenuAdapter.SaveAdapterControlState" /> Methode während einer vorherigen Anforderung auf der Seite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Adapter private Zustandsinformationen verwalten muss, können Sie überschreiben die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.LoadAdapterControlState%2A> und <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.SaveAdapterControlState%2A> Methoden. Im Fall von der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter> Klasse, in dem angezeigten Menühierarchie abhängig von der zuvor ausgewählten ist <xref:System.Web.UI.WebControls.MenuItem> -Objekt, `state` stellt ein Wörterbuch von Name/Wert-Paaren, die mit dem Pfad des ausgewählten Elements in der Hierarchie im Menü bereit. Die `state` Parameter ist ein <xref:System.Web.UI.Pair> gespeichertes Objekt die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.SaveAdapterControlState%2A> während einer vorherigen Anforderung auf der Seite.  
+  
+ Wenn das Steuerelement für die Einbeziehung in Steuerelementzustand nicht registriert ist, muss der Adapter für Steuerelementzustand registrieren. Adapter Steuerelementzustand wird zusätzlich zu den Zustand für das Steuerelement, im Gegensatz zu anderen Methoden Lebenszyklus beibehalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die <see cref="T:System.EventArgs" /> diesem Ereignis zugeordneten Daten.</param>
+        <summary>Registriert das zugeordnete <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement als ein Steuerelementzustand erforderlich ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.OnInit%2A> Methode registriert das zugeordnete Steuerelement als ein Steuerelementzustand erforderlich ist. Standardmäßig ruft der .NET Framework des Webserversteuerelements des eigenen <xref:System.Web.UI.Control.OnInit%2A> Methode. Allerdings nach der <xref:System.Web.UI.Control.Adapter%2A> Eigenschaft des Steuerelements festgelegt ist, wird .NET Framework wird die adapterimplementierung von Aufrufen der <xref:System.Web.UI.Control.OnInit%2A> Methode anstelle der Implementierung des Steuerelements.  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.OnInit%2A> Methode, um die Einstellungen im Steuerelement zu initialisieren. Bei einem Postback ist dies eine wichtige Phase für die Verwaltung der Interaktion mit vorhandenen Ansichtszustand. Weitere Informationen finden Sie unter [architektonische Overview of Adaptive Control Behavior](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn der Adapter überschreibt die <see cref="M:System.Web.UI.WebControls.Adapters.MenuAdapter.OnInit(System.EventArgs)" /> -Methode, müssen sie die entsprechende Methode in der Basisklasse aufrufen. Andernfalls des Steuerelements eigenen <see cref="E:System.Web.UI.Control.Init" /> -Ereignis wird nicht ausgelöst werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die <see cref="T:System.EventArgs" /> diesem Ereignis zugeordneten Daten.</param>
+        <summary>Behandelt die <see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)" /> Methode für den zugeordneten <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.OnPreRender%2A> Methode ruft eine interne `OnPreRender` Methode in der <xref:System.Web.UI.WebControls.Menu> Klasse. Alle anderen Funktionen Rendern die übergeordneten Klassen, z. B. Datenbindung, Formatvorlagen und Ereignis-Zuweisungen angewendet werden wie erwartet ausführen.  
+  
+ Standardmäßig ruft .NET Framework die <xref:System.Web.UI.WebControls.Menu> des Steuerelements <xref:System.Web.UI.WebControls.Menu.OnPreRender%2A> Methode. Allerdings nach der <xref:System.Web.UI.Control.Adapter%2A> Eigenschaft dieses Steuerelements festgelegt ist, wird .NET Framework wird die adapterimplementierung von Aufrufen der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.OnPreRender%2A> Methode anstelle der Implementierung des Steuerelements.  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.OnPreRender%2A> Methode, um alle Einstellungen im Steuerelement zu beenden. Änderungen an Eigenschaften steuern, in dieser Phase werden Ansichtszustand gespeichert werden, aber Änderungen der <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A> Methode werden nicht gespeichert. Weitere Informationen finden Sie unter [architektonische Overview of Adaptive Control Behavior](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn der Adapter überschreibt die <see cref="M:System.Web.UI.WebControls.Adapters.MenuAdapter.OnPreRender(System.EventArgs)" /> -Methode, müssen sie die entsprechende Methode in der Basisklasse aufrufen. Andernfalls des Steuerelements eigenen <see cref="M:System.Web.UI.WebControls.Menu.OnPreRender(System.EventArgs)" /> Methode wird nicht ausgelöst werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Ein <see cref="T:System.String" /> , die den Pfad des aktuellen Knotens in der Menühierarchie im darstellt.</param>
+        <summary>Verwendet, um den Pfad des Menüs verwalten, wenn ein Postbackereignis, das ausgelöst wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RaisePostBackEvent%2A> Methode wird aufgerufen, wenn die <xref:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent%2A> Ereignis wird ausgelöst, und wird verwendet, um den Navigationspfad des Menüs zu verwalten. Die `eventArgument` -Parameters enthält eine durch Trennzeichen getrennte Zeichenfolge von Menüelementen, die die aktuelle Position in der Menühierarchie zu identifizieren.  
+  
+ Die Seite übergibt den Wert der `eventArgument` auf des zugeordneten Steuerelements <xref:System.Web.UI.WebControls.Menu.RaisePostBackEvent%2A> Methode. Die zugeordnete <xref:System.Web.UI.WebControls.Menu> Steuerelement rendert auch das Markupelement, das das Postback ausgelöst wird. Wenn das Steuerelement clientseitiges Skript für Postback rendert, wird das Argument aus dem Skript übergeben, der `eventArgument` Parameter. Wenn das Postback, durch einfaches Senden verursacht wird, `eventArgument` ist `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Tiefe des aktuellen Knotens ist größer als zulässig. Dies kann durch eine ungültige Deklaration, eine Änderung seit der letzten Anforderung oder einer gefälschten Anforderung stammt (gefälschten) verursacht werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginTag">
+      <MemberSignature Language="C#" Value="protected override void RenderBeginTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderBeginTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderBeginTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> Instanz, die Methoden zum Erstellen und Rendern der gerätespezifischen Ausgabe enthält.</param>
+        <summary>Fügt Tagattribute hinzu und schreibt das Markup für das Anfangstag des Steuerelements in den Ausgabestream, der an den Browser oder das Gerät ausgegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderBeginTag%2A> Methode fügt-Tag Attribute und schreibt das Markup für das Anfangstag des Steuerelements in den Ausgabestream, der an den Antwortstream für den Clientbrowser ausgegeben. Die <xref:System.Web.UI.WebControls.MenuItem> Objekte einzeln gerendert der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents%2A> -Methode und das Steuerelement wird durch einen nachfolgenden Aufruf geschlossen <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderEndTag%2A> Methode.  
+  
+ Überschreiben Sie <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderBeginTag%2A> Wenn Sie benutzerdefiniertes Verhalten implementieren möchten. Überschreiben Sie die Methode zum Schreiben von mehreren Tags an den Antwortstream vor jedem Steuerelement, das Inhalt aus, wie z. B. `<table><tr><td>`. Verwenden der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderBeginTag%2A> Methode in Verbindung mit der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderEndTag%2A> Methode, um die öffnende und schließende Tag Konsistenz in der Ausgabe zu gewährleisten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Web.UI.HtmlTextWriter" />, der Methoden für die Erstellung und das Rendern der gerätespezifischen Ausgabe enthält.</param>
+        <summary>Schreibt die zugeordneten Menüelemente im zugeordneten <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement in den Ausgabestream als eine Reihe von links.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents%2A> -Methode schreibt den <xref:System.Web.UI.WebControls.MenuItem> Objekte des zugeordneten <xref:System.Web.UI.WebControls.Menu> Steuerelement in den Ausgabestream als Links. Die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents%2A> Methode wird aufgerufen, aus der <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A> Methode und wird verwendet, um Änderungen an den Markupcode ausführen, die auf einem Gerätebrowser gerendert wird.  
+  
+ Steuerelementeigenschaften sollte vor dieser Phase des Lebenszyklus und nur die Erstellung der eigentlichen Markup für das Steuerelement bereits hier getan, festgelegt werden. In dieser Phase des Lebenszyklus der auf das Steuerelement vorgenommene Änderungen werden nicht gespeichert, zum Anzeigen des Status. Zum Speichern von Änderungen, die an das Steuerelement vorgenommen wurden, überschreiben die <xref:System.Web.UI.Control.OnPreRender%2A> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Tiefe des aktuellen Elements ist größer als zulässig.  
+  
+ - oder -   
+  
+ Das aktuelle Element ist deaktiviert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndTag">
+      <MemberSignature Language="C#" Value="protected override void RenderEndTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderEndTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderEndTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> Instanz, die Methoden zum Erstellen und Rendern der gerätespezifischen Ausgabe enthält.</param>
+        <summary>Erstellt das endgültige Markup aus und schreibt das Markup für das Endtag des Steuerelements in den Ausgabestream, der an den Browser oder das Gerät ausgegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderEndTag%2A> -Methode schreibt das Markup für das Endtag des Steuerelements in den Ausgabestream, der an den Antwortstream für den Clientbrowser ausgegeben. Attribute, Stilattribute und Starttag werden gerendert, der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderBeginTag%2A> Methode. Die <xref:System.Web.UI.WebControls.MenuItem> Objekte einzeln gerendert werden die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents%2A> Methode.  
+  
+ Überschreiben Sie <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderEndTag%2A> Wenn Sie benutzerdefiniertes Verhalten implementieren möchten. Z. B. Überschreiben der Methode, um mehrere Endtags an den Antwortstream nach jedes Steuerelement, das Inhalt aus, wie z. B. schreiben `</td></tr></table>`. Verwenden der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderEndTag%2A> Methode in Verbindung mit der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderBeginTag%2A> Methode, um die öffnende und schließende Tag Konsistenz in der Ausgabe zu gewährleisten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderItem">
+      <MemberSignature Language="C#" Value="protected virtual void RenderItem (System.Web.UI.HtmlTextWriter writer, System.Web.UI.WebControls.MenuItem item, int position);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void RenderItem(class System.Web.UI.HtmlTextWriter writer, class System.Web.UI.WebControls.MenuItem item, int32 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderItem(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.MenuItem,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="item" Type="System.Web.UI.WebControls.MenuItem" />
+        <Parameter Name="position" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> Instanz, die Methoden zum Erstellen und Rendern der gerätespezifischen Ausgabe enthält.</param>
+        <param name="item">Die <see cref="T:System.Web.UI.WebControls.MenuItem" /> mit den Eigenschaften in der Antwortstream zu schreibende Objekt.</param>
+        <param name="position">Die Position des angegebenen <see cref="T:System.Web.UI.WebControls.MenuItem" /> Objekt in der Menühierarchie im.</param>
+        <summary>Rendert ein einzelnes Menüelement als Link.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderItem%2A> Methode wird aufgerufen, aus der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents%2A> Methode zum Abrufen der Formatvorlagen und Abstandsattribute aus der <xref:System.Web.UI.WebControls.MenuItem> Objekt, und klicken Sie auf einen neu erstellten Linkelement angewendet werden. Die Menühierarchie im wird durchlaufen, der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderContents%2A> Methode aufrufen, und die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.RenderItem%2A> Methode, um jedes Element gerendert. Jedes Element wird als Link gerendert und erbt die Eigenschaften und Stile des angegebenen <xref:System.Web.UI.WebControls.MenuItem> Steuerelement. Der Link zur Seite gerendert wird eine der folgenden:  
+  
+-   Ein Postbackereignis zu öffnen, oder wählen Sie das Element.  
+  
+-   Ein Link zu den im angegebenen Ziel Navigieren der <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.MenuItem> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAdapterControlState">
+      <MemberSignature Language="C#" Value="protected override object SaveAdapterControlState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object SaveAdapterControlState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.SaveAdapterControlState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert alle Änderungen an den Adapter privaten Steuerelementzustand, die seit die Seite an den Server zurückgesendet wurde.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , die der Adapter-Steuerelement Statusinformationen als enthält eine <see cref="T:System.Web.UI.StateBag" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.SaveAdapterControlState%2A> -Methode verwendet die <xref:System.Web.UI.WebControls.Menu> Steuerelementzustand, der den aktuellen Navigationspfad des Menüs zu verwalten. Wenn ein Adapter private Zustandsinformationen verwalten muss, können Sie überschreiben die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.LoadAdapterControlState%2A> und <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.SaveAdapterControlState%2A> Methoden. Adapter möglicherweise privaten Steuerelementzustand beibehalten, wenn komplexe Funktionen, die zur Statusverwaltung anforderungsübergreifend, unabhängig vom Zustand des zugeordneten Steuerelements müssen vorhanden sind. Der Adapter muss für Steuerelementzustand beim Registrieren der <xref:System.Web.UI.WebControls.Adapters.MenuAdapter.OnInit%2A> Methodenaufruf in jeder Anforderung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.MenuAdapter.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Ein <see cref="T:System.String" /> , ein optionales Ereignisargument für die Übergabe an den Ereignishandler enthält.</param>
+        <summary>Ermöglicht die <see cref="T:System.Web.UI.WebControls.Adapters.MenuAdapter" /> Klasse verarbeitet ein Ereignis ausgelöst, wenn eine Seite an den Server zurückgesendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent%2A> Methode ermöglicht die <xref:System.Web.UI.WebControls.Adapters.MenuAdapter> Klasse, um ein Ereignis zu verarbeiten, die ausgelöst wird, wenn eine Seite an den Server zurückgesendet wird. Die Seite übergibt `eventArgument` auf die <xref:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

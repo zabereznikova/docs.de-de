@@ -1,0 +1,48 @@
+<Type Name="EdmComplexPropertyAttribute" FullName="System.Data.Objects.DataClasses.EdmComplexPropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EdmComplexPropertyAttribute : System.Data.Objects.DataClasses.EdmPropertyAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EdmComplexPropertyAttribute extends System.Data.Objects.DataClasses.EdmPropertyAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.EdmComplexPropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Objects.DataClasses.EdmPropertyAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Attribut, das angibt, dass die Eigenschaft eine komplexe Eigenschaft darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.Data.Objects.DataClasses.EdmComplexPropertyAttribute> verknüpft die komplexe Eigenschaft einer Klasse mit der komplexen Eigenschaft eines im konzeptionellen Modell definierten Entitätstyps oder komplexen Typs.  
+  
+ Dieses Attribut wird für Eigenschaften angegeben, die komplexe Typen zurückgeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EdmComplexPropertyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EdmComplexPropertyAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Data.Objects.DataClasses.EdmComplexPropertyAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

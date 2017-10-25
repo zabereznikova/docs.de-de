@@ -1,0 +1,1337 @@
+<Type Name="WorkflowControlClient" FullName="System.ServiceModel.Activities.WorkflowControlClient">
+  <TypeSignature Language="C#" Value="public class WorkflowControlClient : System.ServiceModel.ClientBase&lt;System.ServiceModel.Activities.IWorkflowInstanceManagement&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowControlClient extends System.ServiceModel.ClientBase`1&lt;class System.ServiceModel.Activities.IWorkflowInstanceManagement&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.WorkflowControlClient" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.ClientBase&lt;System.ServiceModel.Activities.IWorkflowInstanceManagement&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.ServiceModel.Activities.IWorkflowInstanceManagement</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht es einem Client, Steuerungsvorgänge an einen mit <see cref="T:System.ServiceModel.Activities.WorkflowServiceHost" /> gehosteten Workflowdienst zu senden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Klasse, um eine Workflowinstanz zu steuern.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowControlClient ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.WorkflowControlClient" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowControlClient (System.ServiceModel.Activities.WorkflowControlEndpoint workflowEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Activities.WorkflowControlEndpoint workflowEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.#ctor(System.ServiceModel.Activities.WorkflowControlEndpoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflowEndpoint" Type="System.ServiceModel.Activities.WorkflowControlEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="workflowEndpoint">Der Workflowsteuerungsendpunkt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.WorkflowControlClient" />-Klasse mit der angegebenen <see cref="T:System.ServiceModel.Activities.WorkflowControlEndpoint" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit diesem Konstruktor eine <xref:System.ServiceModel.Activities.WorkflowControlClient>-Instanz erstellt wird.  
+  
+ [!code-csharp[ManagementEndpoint#2](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowControlClient (string endpointConfigurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string endpointConfigurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpointConfigurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="endpointConfigurationName">Die zu verwendende Konfiguration.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.WorkflowControlClient" />-Klasse mit der angegebenen Endpunktkonfiguration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[ManagementEndpoint#3](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowControlClient (System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.Binding binding, class System.ServiceModel.EndpointAddress remoteAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.#ctor(System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="remoteAddress" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die Bindung.</param>
+        <param name="remoteAddress">Der Workflowsteuerungsendpunkt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.WorkflowControlClient" />-Klasse mit der angegebenen Bindung und dem angegebenen <see cref="T:System.ServiceModel.Activities.WorkflowControlEndpoint" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[ManagementEndpoint#1](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowControlClient (string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string endpointConfigurationName, class System.ServiceModel.EndpointAddress remoteAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.#ctor(System.String,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpointConfigurationName" Type="System.String" />
+        <Parameter Name="remoteAddress" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="endpointConfigurationName">Die Endpunktkonfiguration.</param>
+        <param name="remoteAddress">Die Endpunktadresse.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.WorkflowControlClient" />-Klasse mit der angegebenen Endpunktkonfiguration und dem angegebenen <see cref="T:System.ServiceModel.EndpointAddress" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[ManagementEndpoint#4](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowControlClient (string endpointConfigurationName, string remoteAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string endpointConfigurationName, string remoteAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpointConfigurationName" Type="System.String" />
+        <Parameter Name="remoteAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="endpointConfigurationName">Die Endpunktkonfiguration.</param>
+        <param name="remoteAddress">Die Endpunktadresse.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.WorkflowControlClient" />-Klasse mit der angegebenen Endpunktkonfiguration und Endpunktadresse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[ManagementEndpoint#5](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abandon">
+      <MemberSignature Language="C#" Value="public void Abandon (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Abandon(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.Abandon(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die abzubrechende Workflowinstanz.</param>
+        <summary>Bricht die angegebene Workflowinstanz ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie mit dem <xref:System.ServiceModel.Activities.WorkflowControlClient> eine Workflowinstanz abgebrochen wird.  
+  
+ [!code-csharp[ManagementEndpoint#6](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abandon">
+      <MemberSignature Language="C#" Value="public void Abandon (Guid instanceId, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Abandon(valuetype System.Guid instanceId, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.Abandon(System.Guid,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die abzubrechende Workflowinstanz.</param>
+        <param name="reason">Der Grund für das Abbrechen der Workflowinstanz.</param>
+        <summary>Bricht die angegebene Workflowinstanz ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie mit dem <xref:System.ServiceModel.Activities.WorkflowControlClient> eine Workflowinstanz abgebrochen wird.  
+  
+ [!code-csharp[ManagementEndpoint#7](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbandonAsync">
+      <MemberSignature Language="C#" Value="public void AbandonAsync (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AbandonAsync(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.AbandonAsync(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die abzubrechende Workflowinstanz.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz abbricht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbandonAsync">
+      <MemberSignature Language="C#" Value="public void AbandonAsync (Guid instanceId, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AbandonAsync(valuetype System.Guid instanceId, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.AbandonAsync(System.Guid,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die abzubrechende Workflowinstanz.</param>
+        <param name="userState">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz mit den angegebenen benutzerdefinierten Daten abbricht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbandonAsync">
+      <MemberSignature Language="C#" Value="public void AbandonAsync (Guid instanceId, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AbandonAsync(valuetype System.Guid instanceId, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.AbandonAsync(System.Guid,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die abzubrechende Workflowinstanz.</param>
+        <param name="reason">Der Grund für das Abbrechen der Workflowinstanz.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz aus dem angegebenen Grund abbricht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbandonAsync">
+      <MemberSignature Language="C#" Value="public void AbandonAsync (Guid instanceId, string reason, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AbandonAsync(valuetype System.Guid instanceId, string reason, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.AbandonAsync(System.Guid,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die abzubrechende Workflowinstanz.</param>
+        <param name="reason">Der Grund für das Abbrechen der Workflowinstanz.</param>
+        <param name="userState">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz aus dem angegebenen Grund und mit den benutzerdefinierten Daten abbricht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbandonCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; AbandonCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; AbandonCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Activities.WorkflowControlClient.AbandonCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein asynchroner Aufgabevorgang abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAbandon">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAbandon (Guid instanceId, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAbandon(valuetype System.Guid instanceId, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.BeginAbandon(System.Guid,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die abzubrechende Workflowinstanz.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz abbricht.</summary>
+        <returns>Der asynchrone Abbruchvorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAbandon">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAbandon (Guid instanceId, string reason, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAbandon(valuetype System.Guid instanceId, string reason, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.BeginAbandon(System.Guid,System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die abzubrechende Workflowinstanz.</param>
+        <param name="reason">Der Grund für das Abbrechen der Workflowinstanz.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz abbricht.</summary>
+        <returns>Der asynchrone Abbruchvorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginCancel">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginCancel (Guid instanceId, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginCancel(valuetype System.Guid instanceId, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.BeginCancel(System.Guid,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die abzubrechende Workflowinstanz.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz abbricht.</summary>
+        <returns>Der asynchrone Abbruchvorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRun">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRun (Guid instanceId, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRun(valuetype System.Guid instanceId, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.BeginRun(System.Guid,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die auszuführende Workflowinstanz.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz ausführt.</summary>
+        <returns>Der asynchrone Ausführungsvorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSuspend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSuspend (Guid instanceId, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSuspend(valuetype System.Guid instanceId, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.BeginSuspend(System.Guid,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die anzuhaltende Workflowinstanz.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der den angegebenen Vorgang anhält.</summary>
+        <returns>Der asynchrone Anhaltevorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSuspend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSuspend (Guid instanceId, string reason, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSuspend(valuetype System.Guid instanceId, string reason, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.BeginSuspend(System.Guid,System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die anzuhaltende Workflowinstanz.</param>
+        <param name="reason">Der Grund für das Anhalten der Workflowinstanz.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der den angegebenen Vorgang anhält.</summary>
+        <returns>Der asynchrone Anhaltevorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (Guid instanceId, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(valuetype System.Guid instanceId, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.BeginTerminate(System.Guid,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die zu beendende Workflowinstanz.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der eine Workflowinstanz beendet.</summary>
+        <returns>Der asynchrone Beendigungsvorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (Guid instanceId, string reason, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(valuetype System.Guid instanceId, string reason, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.BeginTerminate(System.Guid,System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die zu beendende Workflowinstanz.</param>
+        <param name="reason">Der Grund für das Beenden der Workflowinstanz.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der eine Workflowinstanz beendet.</summary>
+        <returns>Der asynchrone Beendigungsvorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUnsuspend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUnsuspend (Guid instanceId, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUnsuspend(valuetype System.Guid instanceId, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.BeginUnsuspend(System.Guid,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die fortzusetzende Workflowinstanz.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der eine Workflowinstanz fortsetzt.</summary>
+        <returns>Der asynchrone Fortsetzungsvorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public void Cancel (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Cancel(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.Cancel(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die abzubrechende Workflowinstanz.</param>
+        <summary>Bricht die angegebene Workflowinstanz ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie mit dem <xref:System.ServiceModel.Activities.WorkflowControlClient> eine Workflowinstanz abgebrochen wird.  
+  
+ [!code-csharp[ManagementEndpoint#8](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelAsync">
+      <MemberSignature Language="C#" Value="public void CancelAsync (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelAsync(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.CancelAsync(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die abzubrechende Workflowinstanz.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz abbricht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelAsync">
+      <MemberSignature Language="C#" Value="public void CancelAsync (Guid instanceId, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelAsync(valuetype System.Guid instanceId, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.CancelAsync(System.Guid,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die abzubrechende Workflowinstanz.</param>
+        <param name="userState">Die benutzerdefinierten Daten.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz mit den angegebenen benutzerdefinierten Daten abbricht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; CancelCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; CancelCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Activities.WorkflowControlClient.CancelCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein asynchroner Abbruchvorgang abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAbandon">
+      <MemberSignature Language="C#" Value="public void EndAbandon (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndAbandon(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.EndAbandon(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das asynchrone Ergebnis, das von einem Aufruf der <see cref="Overload:System.ServiceModel.Activities.WorkflowControlClient.BeginAbandon" />-Methode zurückgegeben wird.</param>
+        <summary>Schließt einen asynchronen Abbruchvorgang ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCancel">
+      <MemberSignature Language="C#" Value="public void EndCancel (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndCancel(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.EndCancel(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das asynchrone Ergebnis, das von einem Aufruf der <see cref="M:System.ServiceModel.Activities.WorkflowControlClient.BeginCancel(System.Guid,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wird.</param>
+        <summary>Schließt einen asynchronen Abbruchvorgang ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRun">
+      <MemberSignature Language="C#" Value="public void EndRun (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndRun(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.EndRun(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das asynchrone Ergebnis, das von einem Aufruf der <see cref="M:System.ServiceModel.Activities.WorkflowControlClient.BeginRun(System.Guid,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wird.</param>
+        <summary>Schließt einen asynchronen Ausführungsvorgang ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSuspend">
+      <MemberSignature Language="C#" Value="public void EndSuspend (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndSuspend(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.EndSuspend(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das asynchrone Ergebnis, das von einem Aufruf der <see cref="Overload:System.ServiceModel.Activities.WorkflowControlClient.BeginSuspend" />-Methode zurückgegeben wird.</param>
+        <summary>Schließt einen asynchronen Anhaltevorgang ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminate">
+      <MemberSignature Language="C#" Value="public void EndTerminate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndTerminate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.EndTerminate(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das asynchrone Ergebnis, das von einem Aufruf der <see cref="Overload:System.ServiceModel.Activities.WorkflowControlClient.BeginTerminate" />-Methode zurückgegeben wird.</param>
+        <summary>Schließt einen asynchronen Beendigungsvorgang ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUnsuspend">
+      <MemberSignature Language="C#" Value="public void EndUnsuspend (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndUnsuspend(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.EndUnsuspend(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das asynchrone Ergebnis, das von einem Aufruf der <see cref="M:System.ServiceModel.Activities.WorkflowControlClient.BeginUnsuspend(System.Guid,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wird.</param>
+        <summary>Schließt einen asynchronen Fortsetzungsvorgang ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public void Run (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Run(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.Run(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die auszuführende Workflowinstanz.</param>
+        <summary>Führt die angegebene Workflowinstanz aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie mit dem <xref:System.ServiceModel.Activities.WorkflowControlClient> eine Workflowinstanz ausgeführt wird.  
+  
+ [!code-csharp[ManagementEndpoint#9](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunAsync">
+      <MemberSignature Language="C#" Value="public void RunAsync (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RunAsync(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.RunAsync(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die auszuführende Workflowinstanz.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz ausführt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunAsync">
+      <MemberSignature Language="C#" Value="public void RunAsync (Guid instanceId, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RunAsync(valuetype System.Guid instanceId, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.RunAsync(System.Guid,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die auszuführende Workflowinstanz.</param>
+        <param name="userState">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz mit den benutzerdefinierten Zustandsdaten ausführt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; RunCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; RunCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Activities.WorkflowControlClient.RunCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein asynchroner Ausführungsvorgang abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Suspend">
+      <MemberSignature Language="C#" Value="public void Suspend (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Suspend(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.Suspend(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die anzuhaltende Workflowinstanz.</param>
+        <summary>Hält die angegebene Workflowinstanz an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie mit dem <xref:System.ServiceModel.Activities.WorkflowControlClient> eine Workflowinstanz angehalten wird.  
+  
+ [!code-csharp[ManagementEndpoint#10](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Suspend">
+      <MemberSignature Language="C#" Value="public void Suspend (Guid instanceId, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Suspend(valuetype System.Guid instanceId, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.Suspend(System.Guid,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die anzuhaltende Workflowinstanz.</param>
+        <param name="reason">Der Grund für das Anhalten der Workflowinstanz.</param>
+        <summary>Hält die angegebene Workflowinstanz an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie mit dem <xref:System.ServiceModel.Activities.WorkflowControlClient> eine Workflowinstanz angehalten wird.  
+  
+ [!code-csharp[ManagementEndpoint#11](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendAsync">
+      <MemberSignature Language="C#" Value="public void SuspendAsync (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SuspendAsync(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.SuspendAsync(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die anzuhaltende Workflowinstanz.</param>
+        <summary>Startet einen asynchronen Anhaltevorgang.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendAsync">
+      <MemberSignature Language="C#" Value="public void SuspendAsync (Guid instanceId, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SuspendAsync(valuetype System.Guid instanceId, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.SuspendAsync(System.Guid,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die anzuhaltende Workflowinstanz.</param>
+        <param name="userState">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Anhaltevorgang mit der angegebenen Workflowinstanz-ID und den benutzerdefinierten Zustandsdaten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendAsync">
+      <MemberSignature Language="C#" Value="public void SuspendAsync (Guid instanceId, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SuspendAsync(valuetype System.Guid instanceId, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.SuspendAsync(System.Guid,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die anzuhaltende Workflowinstanz.</param>
+        <param name="reason">Der Grund für das Anhalten der Workflowinstanz.</param>
+        <summary>Startet einen asynchronen Anhaltevorgang mit der angegebenen Workflowinstanz-ID und aus dem angegebenen Grund.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendAsync">
+      <MemberSignature Language="C#" Value="public void SuspendAsync (Guid instanceId, string reason, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SuspendAsync(valuetype System.Guid instanceId, string reason, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.SuspendAsync(System.Guid,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die anzuhaltende Workflowinstanz.</param>
+        <param name="reason">Der Grund für das Anhalten der Workflowinstanz.</param>
+        <param name="userState">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Anhaltevorgang mit der angegebenen Workflowinstanz-ID, dem angegebenen Gund und den benutzerdefinierten Zustandsdaten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; SuspendCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; SuspendCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Activities.WorkflowControlClient.SuspendCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein asynchroner Anhaltevorgang abgeschlossen wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Terminate">
+      <MemberSignature Language="C#" Value="public void Terminate (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Terminate(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.Terminate(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die zu beendende Workflowinstanz.</param>
+        <summary>Beendet die angegebene Workflowinstanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie mit dem <xref:System.ServiceModel.Activities.WorkflowControlClient> eine Workflowinstanz beendet wird.  
+  
+ [!code-csharp[ManagementEndpoint#12](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Terminate">
+      <MemberSignature Language="C#" Value="public void Terminate (Guid instanceId, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Terminate(valuetype System.Guid instanceId, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.Terminate(System.Guid,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die zu beendende Workflowinstanz.</param>
+        <param name="reason">Der Grund für das Beenden der Workflowinstanz.</param>
+        <summary>Beendet die angegebene Workflowinstanz aus dem angegebenen Grund.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie mit dem <xref:System.ServiceModel.Activities.WorkflowControlClient> eine Workflowinstanz beendet wird.  
+  
+ [!code-csharp[ManagementEndpoint#13](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminateAsync">
+      <MemberSignature Language="C#" Value="public void TerminateAsync (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TerminateAsync(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.TerminateAsync(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die zu beendende Workflowinstanz.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz beendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminateAsync">
+      <MemberSignature Language="C#" Value="public void TerminateAsync (Guid instanceId, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TerminateAsync(valuetype System.Guid instanceId, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.TerminateAsync(System.Guid,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die zu beendende Workflowinstanz.</param>
+        <param name="userState">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz mit den angegebenen benutzerdefinierten Daten beendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminateAsync">
+      <MemberSignature Language="C#" Value="public void TerminateAsync (Guid instanceId, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TerminateAsync(valuetype System.Guid instanceId, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.TerminateAsync(System.Guid,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die zu beendende Workflowinstanz.</param>
+        <param name="reason">Der Grund für das Beenden der Workflowinstanz.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz aus dem angegebenen Grund beendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminateAsync">
+      <MemberSignature Language="C#" Value="public void TerminateAsync (Guid instanceId, string reason, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TerminateAsync(valuetype System.Guid instanceId, string reason, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.TerminateAsync(System.Guid,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die zu beendende Workflowinstanz.</param>
+        <param name="reason">Der Grund für das Beenden der Workflowinstanz.</param>
+        <param name="userState">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Vorgang, der die angegebene Workflowinstanz aus dem angegebenen Grund und mit den benutzerdefinierten Daten beendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminateCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; TerminateCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; TerminateCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Activities.WorkflowControlClient.TerminateCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein asynchroner Beendigungsvorgang abgeschlossen wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unsuspend">
+      <MemberSignature Language="C#" Value="public void Unsuspend (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Unsuspend(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.Unsuspend(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die fortzusetzende Workflowinstanz.</param>
+        <summary>Setzt die angegebene Workflowinstanz fort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie mit der <xref:System.ServiceModel.Activities.WorkflowControlClient.Unsuspend%2A>-Methode das Anhalten einer Workflowinstanz aufgehoben wird.  
+  
+ [!code-csharp[ManagementEndpoint#1](~/samples/snippets/csharp/VS_Snippets_CFX/managementendpoint/cs/client.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsuspendAsync">
+      <MemberSignature Language="C#" Value="public void UnsuspendAsync (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnsuspendAsync(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.UnsuspendAsync(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die fortzusetzende Workflowinstanz.</param>
+        <summary>Startet einen asynchronen Fortsetzungsvorgang.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsuspendAsync">
+      <MemberSignature Language="C#" Value="public void UnsuspendAsync (Guid instanceId, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnsuspendAsync(valuetype System.Guid instanceId, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowControlClient.UnsuspendAsync(System.Guid,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die fortzusetzende Workflowinstanz.</param>
+        <param name="userState">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Fortsetzungsvorgang mit den angegebenen benutzerdefinierten Statusdaten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsuspendCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; UnsuspendCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; UnsuspendCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Activities.WorkflowControlClient.UnsuspendCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein asynchroner Fortsetzungsvorgang abgeschlossen wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

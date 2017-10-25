@@ -1,0 +1,117 @@
+<Type Name="MdbDataFileEditor" FullName="System.Web.UI.Design.MdbDataFileEditor">
+  <TypeSignature Language="C#" Value="public class MdbDataFileEditor : System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MdbDataFileEditor extends System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.MdbDataFileEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.UrlEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine während der Entwurfszeit-Benutzeroberfläche für die Auswahl einer Microsoft Access-Datenbankdatei bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.Design.MdbDataFileEditor> Objekt wird auswählen und bearbeiten eine URL für eine Microsoft Access-Datenbankdatei (.mdb), und weisen Sie dann die URL an eine Steuerelementeigenschaft zur Entwurfszeit verwendet. Z. B. die <xref:System.Web.UI.WebControls.AccessDataSource> steuern verwendet der <xref:System.Web.UI.Design.MdbDataFileEditor> Klasse zur Entwurfszeit zum Festlegen des Werts, der die <xref:System.Web.UI.WebControls.AccessDataSource.DataFile%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.ComponentModel.EditorAttribute> Attribut zum Zuordnen der <xref:System.Web.UI.Design.MdbDataFileEditor> mit der Eigenschaft. Wenn die zugeordnete Eigenschaft auf der Entwurfsoberfläche bearbeitet wird, ruft der Designerhost die <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> Methode. Die <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> -Methode verwendet die <xref:System.Web.UI.Design.UrlBuilder.BuildUrl%2A> Methode, die wiederum eine Benutzeroberfläche zum Auswählen der URL angezeigt, und klicken Sie dann die URL zurückgegeben, die vom Benutzer ausgewählt wird. Die <xref:System.Web.UI.Design.UrlEditor.GetEditStyle%2A> -Methode gibt den Anzeigestil der Benutzeroberfläche an.  
+  
+ Leiten Sie eine Klasse aus der <xref:System.Web.UI.Design.MdbDataFileEditor> um einen benutzerdefinierten Editor für die URL-Eigenschaft einer Access-Datenbank zu definieren. Beispielsweise kann eine abgeleitete Klasse überschreiben die <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> -Methode, und rufen Sie dann die <xref:System.Web.UI.Design.UrlBuilder.BuildUrl%2A> Methode mit einem benutzerdefinierten <xref:System.Web.UI.Design.MdbDataFileEditor.Filter%2A> oder <xref:System.Web.UI.Design.MdbDataFileEditor.Caption%2A> Wert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie das Zuordnen eine Instanz von der <xref:System.Web.UI.Design.MdbDataFileEditor> -Klasse mit einer Eigenschaft, die in ein benutzerdefiniertes Steuerelement enthalten ist. Beim Bearbeiten der Eigenschaft des Steuerelements auf der Entwurfsoberfläche der <xref:System.Web.UI.Design.MdbDataFileEditor> -Klasse stellt die Benutzeroberfläche zum auswählen und Bearbeiten eines Namens für die Access-Datenbank für den Wert der Eigenschaft.  
+  
+ [!code-csharp[WebDesigner.MdbDataFileEditor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebDesigner.MdbDataFileEditor/CS/simplecontrolwithfilename.cs#1)]
+ [!code-vb[WebDesigner.MdbDataFileEditor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebDesigner.MdbDataFileEditor/VB/simplecontrolwithfilename.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MdbDataFileEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MdbDataFileEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.MdbDataFileEditor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="protected override string Caption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.MdbDataFileEditor.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschriftung ein, auf das Dialogfeld Auswahl angezeigt werden sollen.</summary>
+        <value>Der Beschriftungstext auf das Dialogfeld Auswahl angezeigt werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.MdbDataFileEditor.Caption%2A> diese Zeichenfolge wird verwendet, durch die <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> Methode beim Aufrufen der <xref:System.Web.UI.Design.UrlBuilder.BuildUrl%2A> Methode, die das URL-Auswahldialogfeld für den Benutzer zur Entwurfszeit anzeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="protected override string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.MdbDataFileEditor.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL-Filteroptionen für den Editor, die verwendet wird, zum Filtern der Elemente, die in der URL-Auswahldialogfeld angezeigt werden.</summary>
+        <value>Eine Zeichenfolge, die eine oder mehrere URL-Filteroptionen für das Dialogfeld darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.MdbDataFileEditor.Filter%2A> Eigenschaft wird verwendet, durch die <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> Methode beim Aufrufen der <xref:System.Web.UI.Design.UrlBuilder.BuildUrl%2A> -Methode, die das URL-Auswahldialogfeld für den Benutzer zur Entwurfszeit anzeigt.  
+  
+ Die <xref:System.Web.UI.Design.MdbDataFileEditor.Filter%2A> Standardwert gibt an, zwei URL-Filter für das Dialogfeld: eine für Microsoft Access-Datenbankdateien (*.mdb) und einen weiteren für alle Dateien (\*.\*).  
+  
+ Um eine benutzerdefinierte Filterzeichenfolge anzugeben, leiten Sie eine Klasse von der <xref:System.Web.UI.Design.MdbDataFileEditor> Klasse, und überschreiben die <xref:System.Web.UI.Design.MdbDataFileEditor.Filter%2A> Eigenschaft, um die benutzerdefinierten Filter-Zeichenfolge zurückzugeben.  
+  
+ Eine Filterzeichenfolge enthält eine oder mehrere Filteroptionen an. Jede Filteroption enthält eine Beschreibung des Filters, gefolgt von der senkrechte Strich (&#124;) und das Filtermuster. Die Zeichenfolgen für die verschiedenen Filteroptionen werden durch den senkrechten Strich getrennt.  
+  
+ Im folgenden finden ein Beispiel für eine Filterzeichenfolge an, die zwei Filteroptionen enthält:  
+  
+ "`Microsoft Access Databases (*.mdb)|*.mdb|All Files (*.*)|*.*`".  
+  
+ Sie können mehrere Filtermuster in einer Filteroption angeben, durch das Filtermuster durch Semikolons trennen. Im folgenden finden ein Beispiel für eine Filterzeichenfolge an, in der die erste Filteroption zwei Filtermuster angibt:  
+  
+ "`Custom Database Files (*.db1; *.db2)|*.db1;*.db2|All Files (*.*)|*.*`".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

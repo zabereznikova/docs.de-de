@@ -1,0 +1,74 @@
+<Type Name="LayoutSettings" FullName="System.Windows.Forms.LayoutSettings">
+  <TypeSignature Language="C#" Value="public abstract class LayoutSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LayoutSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.LayoutSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Basisklasse für das Sammeln von Layoutschemaeigenschaften bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.LayoutSettings> Klasse ist die Basisklasse für Typen, die die verschiedenen Eigenschaften wie z. B. für ein Layoutschema der Benutzeroberfläche (UI) für bestimmten Benutzer sammeln <xref:System.Windows.Forms.TableLayoutSettings> und <xref:System.Windows.Forms.FlowLayoutSettings>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Initialisieren einer <xref:System.Windows.Forms.TableLayoutSettings> -Objekt für eine <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Eine vollständige Codebeispiel finden Sie unter [Vorgehensweise: Implementieren eines benutzerdefinierten ToolStripRenderer](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LayoutSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LayoutSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.LayoutSettings" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LayoutEngine">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.Layout.LayoutEngine LayoutEngine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Layout.LayoutEngine LayoutEngine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LayoutSettings.LayoutEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Layout.LayoutEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Tabellenlayoutmodul ab.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.Layout.LayoutEngine" /> zurzeit verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutSettings.LayoutEngine%2A> Eigenschaft wird in der Regel in zwei Kontexten verwendet: der Container verwendet ein Layoutschema und das untergeordnete Steuerelement des Containers, auf die das Layoutschema angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

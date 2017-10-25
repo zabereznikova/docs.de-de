@@ -1,0 +1,6 @@
+<Namespace Name="System.Workflow.Runtime.DebugEngine">
+  <Docs>
+    <summary>Beinhaltet Klassen und Schnittstellen für die Verwendung beim Debuggen von Workflowinstanzen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

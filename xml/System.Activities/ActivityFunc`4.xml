@@ -1,0 +1,164 @@
+<Type Name="ActivityFunc&lt;T1,T2,T3,TResult&gt;" FullName="System.Activities.ActivityFunc&lt;T1,T2,T3,TResult&gt;">
+  <TypeSignature Language="C#" Value="public sealed class ActivityFunc&lt;T1,T2,T3,TResult&gt; : System.Activities.ActivityDelegate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityFunc`4&lt;T1, T2, T3, TResult&gt; extends System.Activities.ActivityDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.ActivityFunc`4" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T1" />
+    <TypeParameter Name="T2" />
+    <TypeParameter Name="T3" />
+    <TypeParameter Name="TResult" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Activities.ActivityDelegate</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T1">Der Typ des ersten in-Arguments des Aktivitätsdelegaten.</typeparam>
+    <typeparam name="T2">Der Typ des zweiten in-Arguments des Aktivitätsdelegaten.</typeparam>
+    <typeparam name="T3">Der Typ des dritten in-Arguments des Aktivitätsdelegaten.</typeparam>
+    <typeparam name="TResult">Der Typ des out-Arguments des Aktivitätsdelegaten.</typeparam>
+    <summary>Definiert einen aktivitätsdelegaten mit drei in-Argumenten des Typs <c>T</c> eine <see langword="out" /> Argument des Typs <c>TResult</c>.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Activities.ActivityDelegate> ermöglicht es Aktivitätsautoren, Rückrufe mit bestimmten Signaturen verfügbar zu machen, für die Benutzer der Aktivität aktivitätsbasierte Handler bereitstellen können. <xref:System.Activities.ActivityFunc%604> ist ein <xref:System.Activities.ActivityDelegate>, der einen Wert zurückgibt. Die Signatur von <xref:System.Activities.ActivityFunc%604> wird in Form von generischen Typargumenten angegeben.  
+  
+ Es gibt mehrere generische Versionen dieses Typs, die von 1 bis 16 Argumente annehmen und `out` Argument für die Aktivität, die aufgerufen wird. Es gibt auch **ActivityAction** -Typen für aktivitätsdelegaten, die keine Werte zurückgeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityFunc ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityFunc`4.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.ActivityFunc`4" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Argument1">
+      <MemberSignature Language="C#" Value="public System.Activities.DelegateInArgument&lt;T1&gt; Argument1 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.DelegateInArgument`1&lt;!T1&gt; Argument1" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityFunc`4.Argument1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.DelegateInArgument&lt;T1&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das erste in-Argument des Aktivitätsdelegaten ab oder legt es fest.</summary>
+        <value>Ein Argument an einen Aktivitätsdelegaten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Argument2">
+      <MemberSignature Language="C#" Value="public System.Activities.DelegateInArgument&lt;T2&gt; Argument2 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.DelegateInArgument`1&lt;!T2&gt; Argument2" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityFunc`4.Argument2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.DelegateInArgument&lt;T2&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das zweite in-Argument+++ des Aktivitätsdelegaten ab bzw. legt es fest.</summary>
+        <value>Ein Argument an einen Aktivitätsdelegaten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Argument3">
+      <MemberSignature Language="C#" Value="public System.Activities.DelegateInArgument&lt;T3&gt; Argument3 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.DelegateInArgument`1&lt;!T3&gt; Argument3" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityFunc`4.Argument3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.DelegateInArgument&lt;T3&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das dritte in-Argument+++ des Aktivitätsdelegaten ab bzw. legt es fest.</summary>
+        <value>Ein Argument an einen Aktivitätsdelegaten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResultArgument">
+      <MemberSignature Language="C#" Value="protected override System.Activities.DelegateOutArgument GetResultArgument ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Activities.DelegateOutArgument GetResultArgument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityFunc`4.GetResultArgument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DelegateOutArgument</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public System.Activities.DelegateOutArgument&lt;TResult&gt; Result { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.DelegateOutArgument`1&lt;!TResult&gt; Result" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityFunc`4.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.DelegateOutArgument&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das out-Argument des Aktivitätsdelegaten ab oder legt es fest.</summary>
+        <value>Ein Argument an einen Aktivitätsdelegaten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

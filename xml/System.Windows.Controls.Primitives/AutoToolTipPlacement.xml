@@ -1,0 +1,75 @@
+<Type Name="AutoToolTipPlacement" FullName="System.Windows.Controls.Primitives.AutoToolTipPlacement">
+  <TypeSignature Language="C#" Value="public enum AutoToolTipPlacement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AutoToolTipPlacement extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.AutoToolTipPlacement" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt die Verfahren, mit dem die automatische <see cref="T:System.Windows.Controls.ToolTip" /> befindet sich auf einem <see cref="T:System.Windows.Controls.Slider" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie festlegen der <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> Eigenschaft von einem <xref:System.Windows.Controls.Slider> mithilfe der Werte dieser Enumeration.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BottomRight">
+      <MemberSignature Language="C#" Value="BottomRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.AutoToolTipPlacement BottomRight = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.AutoToolTipPlacement.BottomRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.AutoToolTipPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei einem horizontalen <see cref="T:System.Windows.Controls.Slider" /> wird der automatische <see cref="T:System.Windows.Controls.ToolTip" /> am unteren Rand der <see cref="T:System.Windows.Controls.Primitives.Thumb" />. Bei einem vertikalen <see cref="T:System.Windows.Controls.Slider" /> wird der automatische <see cref="T:System.Windows.Controls.ToolTip" /> am rechten Rand der <see cref="T:System.Windows.Controls.Primitives.Thumb" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.AutoToolTipPlacement None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.AutoToolTipPlacement.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.AutoToolTipPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine automatische<see cref="T:System.Windows.Controls.ToolTip" /></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeft">
+      <MemberSignature Language="C#" Value="TopLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.AutoToolTipPlacement TopLeft = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.AutoToolTipPlacement.TopLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.AutoToolTipPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei einem horizontalen <see cref="T:System.Windows.Controls.Slider" /> wird der automatische <see cref="T:System.Windows.Controls.ToolTip" /> am oberen Rand der <see cref="T:System.Windows.Controls.Primitives.Thumb" />. Bei einem vertikalen <see cref="T:System.Windows.Controls.Slider" /> wird der automatische <see cref="T:System.Windows.Controls.ToolTip" /> am linken Rand der <see cref="T:System.Windows.Controls.Primitives.Thumb" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

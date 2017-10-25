@@ -1,0 +1,173 @@
+<Type Name="UIPropertyMetadata" FullName="System.Windows.UIPropertyMetadata">
+  <TypeSignature Language="C#" Value="public class UIPropertyMetadata : System.Windows.PropertyMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UIPropertyMetadata extends System.Windows.PropertyMetadata" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.UIPropertyMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.PropertyMetadata</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Metadaten für nicht-Framework-Eigenschaften, die Benutzeroberfläche auswirken Rendering/Ebene Core verfügen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FrameworkPropertyMetadata>(die von dieser Klasse abgeleitet werden) wird häufige Metadatenklasse Frameworkebene Eigenschaften, die auch zum Rendern oder-Benutzer Schnittstelle Auswirkungen haben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIPropertyMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.UIPropertyMetadata.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.UIPropertyMetadata" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIPropertyMetadata (object defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.UIPropertyMetadata.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">Der Standardwert für die Abhängigkeitseigenschaft, die in der Regel als Wert eines bestimmten Typs angegeben.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.UIPropertyMetadata" /> -Klasse, mit dem angegebenen Standardwert für die Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIPropertyMetadata (System.Windows.PropertyChangedCallback propertyChangedCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.PropertyChangedCallback propertyChangedCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.UIPropertyMetadata.#ctor(System.Windows.PropertyChangedCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+      </Parameters>
+      <Docs>
+        <param name="propertyChangedCallback">Verweis auf eine Handlerimplementierung, die vom Eigenschaftensystem aufgerufen werden soll, wenn der effektive Wert der Eigenschaft ändert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.UIPropertyMetadata" /> -Klasse, mit dem angegebenen PropertyChanged-Rückruf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIPropertyMetadata (object defaultValue, System.Windows.PropertyChangedCallback propertyChangedCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue, class System.Windows.PropertyChangedCallback propertyChangedCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.UIPropertyMetadata.#ctor(System.Object,System.Windows.PropertyChangedCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">Der Standardwert für die Abhängigkeitseigenschaft, die in der Regel als Wert eines bestimmten Typs angegeben.</param>
+        <param name="propertyChangedCallback">Verweis auf eine Handlerimplementierung, die vom Eigenschaftensystem aufgerufen werden soll, wenn der effektive Wert der Eigenschaft ändert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.UIPropertyMetadata" /> -Klasse, mit dem angegebenen PropertyChanged-Rückruf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIPropertyMetadata (object defaultValue, System.Windows.PropertyChangedCallback propertyChangedCallback, System.Windows.CoerceValueCallback coerceValueCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue, class System.Windows.PropertyChangedCallback propertyChangedCallback, class System.Windows.CoerceValueCallback coerceValueCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.UIPropertyMetadata.#ctor(System.Object,System.Windows.PropertyChangedCallback,System.Windows.CoerceValueCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+        <Parameter Name="coerceValueCallback" Type="System.Windows.CoerceValueCallback" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">Der Standardwert für die Abhängigkeitseigenschaft, die in der Regel als Wert eines bestimmten Typs angegeben.</param>
+        <param name="propertyChangedCallback">Verweis auf eine Handlerimplementierung, die vom Eigenschaftensystem aufgerufen werden soll, wenn der effektive Wert der Eigenschaft ändert.</param>
+        <param name="coerceValueCallback">Verweis auf eine Handlerimplementierung, die aufgerufen werden soll, wenn das Eigenschaftensystem ruft <see cref="M:System.Windows.DependencyObject.CoerceValue(System.Windows.DependencyProperty)" /> für diese Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.UIPropertyMetadata" /> -Klasse, mit dem angegebenen Standardwert und Rückrufe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIPropertyMetadata (object defaultValue, System.Windows.PropertyChangedCallback propertyChangedCallback, System.Windows.CoerceValueCallback coerceValueCallback, bool isAnimationProhibited);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue, class System.Windows.PropertyChangedCallback propertyChangedCallback, class System.Windows.CoerceValueCallback coerceValueCallback, bool isAnimationProhibited) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.UIPropertyMetadata.#ctor(System.Object,System.Windows.PropertyChangedCallback,System.Windows.CoerceValueCallback,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+        <Parameter Name="coerceValueCallback" Type="System.Windows.CoerceValueCallback" />
+        <Parameter Name="isAnimationProhibited" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">Der Standardwert für die Abhängigkeitseigenschaft, die in der Regel als Wert eines bestimmten Typs angegeben.</param>
+        <param name="propertyChangedCallback">Verweis auf eine Handlerimplementierung, die vom Eigenschaftensystem aufgerufen werden soll, wenn der effektive Wert der Eigenschaft ändert.</param>
+        <param name="coerceValueCallback">Verweis auf eine Handlerimplementierung, die aufgerufen werden soll, wenn das Eigenschaftensystem ruft <see cref="M:System.Windows.DependencyObject.CoerceValue(System.Windows.DependencyProperty)" /> für diese Eigenschaft.</param>
+        <param name="isAnimationProhibited">Legen Sie auf <see langword="true" /> um zu verhindern, dass das Eigenschaftensystem Animieren der Eigenschaft, die diese Metadaten angewendet werden. Diese Eigenschaften werden zur Laufzeitausnahmen ausgelöst, wenn es sich bei Animationen davon durchgeführt werden. Die Standardeinstellung ist <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.UIPropertyMetadata" /> Klasse, mit dem angegebenen Standardwert und Rückrufe und ein booleschen Wert verwendet, um Animationen in der Eigenschaft zu deaktivieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAnimationProhibited">
+      <MemberSignature Language="C#" Value="public bool IsAnimationProhibited { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAnimationProhibited" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.UIPropertyMetadata.IsAnimationProhibited" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der deklariert, ob Animationen auf die Abhängigkeitseigenschaft deaktiviert werden soll, in dem die Instanz der enthaltenden angewendet wird.</summary>
+        <value>
+          <see langword="true" />Gibt an, dass Animationen nicht zulässig sind. <see langword="false" /> gibt an, dass Animationen zulässig sind. Die Standardeinstellung ist <see langword="false" /> (Animationen sind zulässig).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Allgemeinen gilt: die Abhängigkeit-Standardeigenschaften, die zur Verfügung, in der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] frameworkimplementierung [!INCLUDE[TLA#tla_api#plural](~/includes/tlasharptla-apisharpplural-md.md)] animiert werden können. Sie können diese Eigenschaft festlegen, um `true` in den Metadaten des eigene benutzerdefinierte Abhängigkeitseigenschaft Animationen darauf deaktivieren.  
+  
+ Wenn eine Eigenschaft mit diesem Wert `true` versucht, ein Ziel für Animation, eine Laufzeitausnahme zu verwendende ausgelöst werden soll.  
+  
+ Eigenschaften für alle abgeleiteten Klassen von <xref:System.Windows.PropertyMetadata> normalerweise im Objektmodell mit Lese-/ Schreibzugriff definiert sind. Dies ist, dass sie nach der Initialisierung der Instanz angepasst werden können. Jedoch, nachdem die Metadaten im Rahmen eines Aufrufs von <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, oder <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, das Eigenschaftensystem diese Metadateninstanz, und alle Eigenschaften, die die Merkmale der Metadaten enthalten nun als unveränderlich angesehen werden. Beim Festlegen <xref:System.Windows.UIPropertyMetadata.IsAnimationProhibited%2A> nach <xref:System.Windows.PropertyMetadata.IsSealed%2A> ist `true` auf diesen Metadaten Instanz wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

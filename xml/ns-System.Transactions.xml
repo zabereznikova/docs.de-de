@@ -1,0 +1,59 @@
+<Namespace Name="System.Transactions">
+  <Docs>
+    <summary>Der <see cref="N:System.Transactions" />-Namespace enthält Klassen, mit denen eigene Transaktionsanwendungen und Ressourcen-Manager geschrieben werden können. Insbesondere können Sie eine Transaktion erstellen und an einer Transaktion (lokal oder verteilt) mit einem oder mehreren Teilnehmern teilnehmen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Sie können nur Anwendungen, die mit diesem Namespace unter Windows 2000, Windows XP oder Windows 2003-Plattformen erstellen. Erstellen einer Transaktion unter der Windows 98 und Windows ME Plattformen löst eine <xref:System.PlatformNotSupportedException> .  
+  
+ Die <xref:System.Transactions> Infrastruktur wird transaktional Programmierung einfach und effizient in der gesamten die Plattform durch die Unterstützung von Transaktionen in SQL Server, ADO.NET, MSMQ und der Microsoft Distributed Transaction Coordinator (MSDTC) initiiert. Er bietet sowohl ein explizites Programmiermodell basierend auf den <xref:System.Transactions.Transaction> Klasse als auch ein implizites Programmiermodell die <xref:System.Transactions.TransactionScope> Klasse, die in der Transaktionen automatisch von der Infrastruktur verwaltet werden. Es wird dringend empfohlen, dass Sie das einfachere implizite Modell für die Entwicklung verwenden. Um zu beginnen, finden Sie unter der [implementieren eine implizite Transaktion mithilfe von Transaktionsbereich](http://msdn.microsoft.com/en-us/1ddba95e-7587-48b2-8838-708c275e7199) Thema. Weitere Informationen über das Erstellen einer transaktionsanwendung finden Sie unter.  
+  
+ <xref:System.Transactions>Außerdem enthält Typen für Sie einen Ressourcen-Manager implementieren. Der systemeigene Transaktions-Manager die <xref:System.Transactions> -Infrastruktur ermöglicht, flüchtige Ressourcen oder eine Eintragung einer einzelnen dauerhaften Ressourcen für einen commit oder Rollback effizient. Weitere Informationen zum Implementieren eines Ressourcen-Managers finden Sie unter [ein Ressourcen-Manager implementieren](http://msdn.microsoft.com/en-us/81509719-d579-4530-831e-42e1acdef63e).  
+  
+ Der Transaktions-Manager weitet ebenfalls transparent lokale Transaktionen für verteilte Transaktionen durch die Koordination über eine datenträgerbasierte Transaktions-Manager, wie der DTC bei ein weiteren permanenten Ressourcen-Manager mit einer Transaktion eingetragen. Es gibt zwei grundlegende Methoden, mit der <xref:System.Transactions>-Infrastruktur eine verbesserte Leistung zu erreichen.  
+  
+-   Dynamische Eskalation, dies bedeutet, dass die <xref:System.Transactions> Infrastruktur zeitraubenden MSDTC nur, wenn es tatsächlich für eine Transaktion erforderlich ist. Dieser Bereich wird ausführlich in die [Management Transaktionseskalation](http://msdn.microsoft.com/en-us/5b87ae58-8ccf-4b9b-9715-41e4aade89b7) Thema.  
+  
+-   Erweiterbare Eintragungen: Ermöglichen es einer Ressource (z.B. einer Datenbank), Eigentümer der Transaktion zu werden, wenn sie die einzige Entität ist, die an der Transaktion teilnimmt. Später bei Bedarf die <xref:System.Transactions> -Infrastruktur kann die Verwaltung der MSDTC-Transaktion eskalieren. Auch dies reduziert die Zahl der Fälle, in denen MSDTC verwendet wird. Dieser Bereich wird ausführlich in die [Optimierung mithilfe von einzelnen Phase Commit und heraufstufbare Single Phase Notification](http://msdn.microsoft.com/en-us/653d51d1-b4bf-4e34-9a6f-aec073f0f5bb) Thema.  
+  
+ <xref:System.Transactions>definiert drei Ebenen von Vertrauensstellungen, die Zugriff auf die Typen von Ressourcen zu beschränken, die sie verfügbar macht. Insbesondere die <xref:System.Transactions> Assembly kann von teilweise vertrauenswürdigem Code aufgerufen werden, da er mit gekennzeichnet wurde die `AllowPartiallyTrustedCallers` -Attribut (APTCA). Dieses Attribut entfernt im Wesentlichen die implizite <xref:System.Security.Permissions.SecurityAction.LinkDemand> für den `FullTrust`-Berechtigungssatz, die andernfalls für jede öffentlich zugängliche Methode jeden Typs eingerichtet ist. Für einige Typen und Member sind allerdings weiterhin stärkere Berechtigungen erforderlich.  
+  
+ Im folgenden wird eine Liste von Typen und Member nicht durch aufgerufen werden kann teilweise vertrauenswürdigem Code, da sie mit dem folgenden deklarative Sicherheit-Attribut ergänzt werden:  
+  
+ `PermissionSetAttribute(SecurityAction.LinkDemand, Name := "FullTrust")`  
+  
+ System.Transactions.Transaction.EnlistDurable  
+  
+ System.Transactions.Transaction.EnlistPromotableSinglePhase  
+  
+ System.Transactions.TransactionInterop  
+  
+ System.Transactions.TransactionManager.DistributedTransactionStarted  
+  
+ System.Transactions.TransactionManager.HostCurrentTransactionCallback  
+  
+ System.Transactions.TransactionManager.Reenlist  
+  
+ System.Transactions.TransactionManager.RecoveryComplete  
+  
+ System.Transactions.TransactionScope.TransactionScope (System.Transactions.Transaction,System.TimeSpan,System.Transactions.EnterpriseServicesInteropOption)  
+  
+ M:System.Transactions.TransactionScope.TransactionScope(System.Transactions.TransactionScopeOption,System.Transactions.TransactionOptions,System.Transactions.EnterpriseServicesInteropOption)  
+  
+ Weitere Informationen zu den verschiedenen Vertrauensebenen finden Sie [Sicherheit Vertrauensebenen in den Zugriff auf Ressourcen](http://msdn.microsoft.com/en-us/8e45acbc-0d81-4f64-9da7-8f766aebff51).  
+  
+ Core-Entwicklung Technologies\Data Access\Transaction Processing\  
+  
+ Weitere Informationen zum Verwenden der <xref:System.Transactions> Namespace, Sie können die konzeptionelle Dokumentation [Onlinetransaktionsverarbeitung](http://msdn.microsoft.com/en-us/ac1637bf-4032-493b-a4e8-0380e54f82f9)befindet sich unter "Core Development Technologies\Data Access\Transaction Verarbeitung\\"Abschnitt in der Dokumentation. Insbesondere können Sie weitere Informationen in den folgenden Themen finden.  
+  
+ [Features von System.Transactions](http://msdn.microsoft.com/en-us/99cc5ce0-b7fd-4d78-a553-a3dd3f17ed45)  
+  
+ [Implementieren eines Ressourcen-Managers](http://msdn.microsoft.com/en-us/81509719-d579-4530-831e-42e1acdef63e)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,274 @@
+<Type Name="RangeValidator" FullName="System.Web.UI.WebControls.RangeValidator">
+  <TypeSignature Language="C#" Value="public class RangeValidator : System.Web.UI.WebControls.BaseCompareValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RangeValidator extends System.Web.UI.WebControls.BaseCompareValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RangeValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.BaseCompareValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:RangeValidator runat="server" ErrorMessage="RangeValidator"&gt;&lt;/{0}:RangeValidator&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Überprüft, ob der Wert eines Eingabesteuerelements innerhalb eines angegebenen Wertebereichs liegt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RangeValidator> Tests wird gesteuert, ob der Wert eines Eingabesteuerelements innerhalb eines bestimmten Bereichs ist.  
+  
+ Die <xref:System.Web.UI.WebControls.RangeValidator> Steuerelement verwendet vier Schlüsseleigenschaften zum Ausführen der Überprüfung. Die <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> -Eigenschaft enthält das Eingabesteuerelement, um zu überprüfen. Die <xref:System.Web.UI.WebControls.RangeValidator.MinimumValue%2A> und <xref:System.Web.UI.WebControls.RangeValidator.MaximumValue%2A> Eigenschaften geben die minimale und maximale Werte des gültigen Bereichs.  
+  
+ Die <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType> Eigenschaft wird verwendet, um den Datentyp der zu vergleichenden Werte angeben. Die zu vergleichenden Werte werden auf diesen Datentyp konvertiert, bevor die Validation-Vorgang ausgeführt wird.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.ValidationDataType.Date> und der aktuelle Kalendertyp ist nicht gregorianische, nur eine serverseitige Validierung durchgeführt. Das Validierungssteuerelement Clientskript unterstützt nur gregorianische Kalender.  
+  
+ Die folgende Tabelle enthält die verschiedenen Datentypen, die verglichen werden können.  
+  
+|Datentyp|Beschreibung|  
+|---------------|-----------------|  
+|`String`|Ein String-Datentyp.|  
+|`Integer`|Ein Datentyp für die 32-Bit-Ganzzahl mit Vorzeichen.|  
+|`Double`|Mit doppelter Genauigkeit floating Point Zahlendatentyp.|  
+|`Date`|Date-Datentyp.|  
+|`Currency`|Ein decimal-Datentyp, der Währungssymbole enthalten kann.|  
+  
+> [!NOTE]
+>  Überprüfung erfolgreich ist, wenn das Eingabesteuerelement leer ist. Verwenden einer <xref:System.Web.UI.WebControls.RequiredFieldValidator> Steuerelement, um dem Eingabesteuerelement ein Pflichtfeld zu machen.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.RangeValidator> Steuerelement löst eine Ausnahme aus, wenn der Wert der <xref:System.Web.UI.WebControls.RangeValidator.MaximumValue%2A> oder <xref:System.Web.UI.WebControls.RangeValidator.MinimumValue%2A> Eigenschaft kann nicht konvertiert werden in den angegebenen <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Bei Verwendung der <xref:System.Web.UI.WebControls.RangeValidator> -Steuerelement innerhalb einer <xref:System.Web.UI.UpdatePanel> steuern, stellen Sie sicher, dass das Validierungssteuerelement und das Steuerelement, das diesem zugeordnet ist, im gleichen Bereich sind. Weitere Informationen zum Verwenden der <xref:System.Web.UI.UpdatePanel> für Aktualisierungen von Teilseiten steuern, finden Sie unter [Teilrendering von Seiten Rendering Overview](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+ Weitere Informationen über Validierungssteuerelemente finden Sie unter <xref:System.Web.UI.WebControls.BaseValidator>.  
+  
+## <a name="accessibility"></a>Barrierefreiheit  
+ Weitere Informationen dazu, wie das Steuerelement so konfigurieren, dass er Markup generiert, das den Accessibility Standards entspricht, finden Sie unter [Barrierefreiheit in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) und [ASP.NET-Steuerelemente und Barrierefreiheit](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.RangeValidator> Steuerelement auf der Webseite zu bestimmen, ob der in ein Eingabesteuerelement eingegebenen Werts innerhalb des Vergleichsbereichs.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[RangeValidator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RangeValidator/CS/rangevalidatorcs.aspx#1)]
+ [!code-aspx-vb[RangeValidator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RangeValidator/VB/rangevalidatorvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RangeValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RangeValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.RangeValidator" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RangeValidator.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Fügt die HTML-Attribute und-Stile für das Steuerelement, das gerendert werden müssen in den angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.RangeValidator.AddAttributesToRender%2A> -Methode in ein benutzerdefiniertes Steuerelement, damit die <xref:System.Web.UI.WebControls.RangeValidator> Text immer fett formatiert angezeigt.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomRangeValidatorAddAttributesToRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRangeValidatorAddAttributesToRender/CS/custom_rangevalidator_addattributestorendercs.aspx#1)]
+ [!code-aspx-vb[CustomRangeValidatorAddAttributesToRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRangeValidatorAddAttributesToRender/VB/custom_rangevalidator_addattributestorendervb.aspx#1)]  
+[!code-csharp[CustomRangeValidatorAddAttributesToRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRangeValidatorAddAttributesToRender/CS/custom_rangevalidator_addattributestorender.cs#2)]
+[!code-vb[CustomRangeValidatorAddAttributesToRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRangeValidatorAddAttributesToRender/VB/custom_rangevalidator_addattributestorender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPropertiesValid">
+      <MemberSignature Language="C#" Value="protected override bool ControlPropertiesValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ControlPropertiesValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RangeValidator.ControlPropertiesValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dies ist eine Überprüfung der Eigenschaften, um alle Fehler, die vom Entwickler versucht zu bestimmen.</summary>
+        <returns>
+          <see langword="true" />, wenn die Steuerelementeigenschaften gültig sind, anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateIsValid">
+      <MemberSignature Language="C#" Value="protected override bool EvaluateIsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool EvaluateIsValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RangeValidator.EvaluateIsValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob der Inhalt in das Eingabesteuerelement gültig ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Steuerelement gültig ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.RangeValidator.EvaluateIsValid%2A> in einem benutzerdefinierten gesteuert wird, damit er immer überprüft, dass der Wert vorhanden ist und innerhalb der maximalen und minimalen Werte angegeben wird, für die <xref:System.Web.UI.WebControls.RangeValidator>.  
+  
+ [!code-aspx-csharp[CustomRangeValidatorEvaluateIsValid#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRangeValidatorEvaluateIsValid/CS/custom_rangevalidator_evaluateisvalidcs.aspx#1)]
+ [!code-aspx-vb[CustomRangeValidatorEvaluateIsValid#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRangeValidatorEvaluateIsValid/VB/custom_rangevalidator_evaluateisvalidvb.aspx#1)]  
+[!code-csharp[CustomRangeValidatorEvaluateIsValid#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRangeValidatorEvaluateIsValid/CS/custom_rangevalidator_evaluateisvalid.cs#2)]
+[!code-vb[CustomRangeValidatorEvaluateIsValid#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRangeValidatorEvaluateIsValid/VB/custom_rangevalidator_evaluateisvalid.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumValue">
+      <MemberSignature Language="C#" Value="public string MaximumValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MaximumValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RangeValidator.MaximumValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Höchstwert des Bereichs Überprüfung.</summary>
+        <value>Der Höchstwert des Bereichs Überprüfung. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.RangeValidator.MaximumValue%2A> Eigenschaft, um den Höchstwert des Bereichs Überprüfung angeben. Wenn von dieser Eigenschaft angegebene Wert nicht in der angegebenen Datentyp konvertiert die <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType> -Eigenschaft, eine Ausnahme ausgelöst.  
+  
+> [!NOTE]
+>  Bei Angabe von `ValidationDataType.Date` für die <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType> Eigenschaft ohne die Kultur für die Anwendung programmgesteuert festlegen, sollten Sie eine kulturneutrale-Format, z. B. JJJJ/MM/TT verwenden, für die <xref:System.Web.UI.WebControls.RangeValidator.MaximumValue%2A> und <xref:System.Web.UI.WebControls.RangeValidator.MinimumValue%2A> Eigenschaften. Andernfalls wird das Datum möglicherweise nicht ordnungsgemäß interpretiert.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.RangeValidator.MaximumValue%2A> Eigenschaft, um den Höchstwert des Bereichs Überprüfung angeben.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[RangeValidator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RangeValidator/CS/rangevalidatorcs.aspx#1)]
+ [!code-aspx-vb[RangeValidator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RangeValidator/VB/rangevalidatorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumValue">
+      <MemberSignature Language="C#" Value="public string MinimumValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MinimumValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RangeValidator.MinimumValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Mindestwert des Bereichs Überprüfung.</summary>
+        <value>Der Mindestwert des Bereichs Überprüfung. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.RangeValidator.MinimumValue%2A> Eigenschaft, um den Mindestwert des Validierungsbereichs anzugeben. Wenn von dieser Eigenschaft angegebene Wert nicht in der angegebenen Datentyp konvertiert die <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType> -Eigenschaft, eine Ausnahme ausgelöst.  
+  
+> [!NOTE]
+>  Bei Angabe von `ValidationDataType.Date` für die <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType> Eigenschaft ohne die Kultur für die Anwendung programmgesteuert festlegen, sollten Sie eine kulturneutrale-Format, z. B. JJJJ/MM/TT verwenden, für die <xref:System.Web.UI.WebControls.RangeValidator.MaximumValue%2A> und <xref:System.Web.UI.WebControls.RangeValidator.MinimumValue%2A> Eigenschaften. Andernfalls wird das Datum möglicherweise nicht ordnungsgemäß interpretiert.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.RangeValidator.MinimumValue%2A> Eigenschaft, um den Mindestwert des Validierungsbereichs anzugeben.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[RangeValidator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RangeValidator/CS/rangevalidatorcs.aspx#1)]
+ [!code-aspx-vb[RangeValidator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RangeValidator/VB/rangevalidatorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

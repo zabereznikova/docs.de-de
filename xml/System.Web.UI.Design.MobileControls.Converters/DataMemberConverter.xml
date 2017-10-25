@@ -1,0 +1,226 @@
+<Type Name="DataMemberConverter" FullName="System.Web.UI.Design.MobileControls.Converters.DataMemberConverter">
+  <TypeSignature Language="C#" Value="public class DataMemberConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataMemberConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.MobileControls.Converters.DataMemberConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Typkonverter für eine Eigenschaft, die einen Datenmember in einer Datenquelle darstellt. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Einen Typkonverter wird in der Regel nicht direkt zugreifen. Diese Implementierung der <xref:System.ComponentModel.TypeConverter> dient zur Verwendung von einem datengebundenen Steuerelement zur Entwurfszeit und instanziiert wird, mit einem <xref:System.ComponentModel.TypeConverterAttribute> für eine Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataMemberConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MobileControls.Converters.DataMemberConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Instanziiert eine neue Instanz der <see cref="T:System.Web.UI.Design.MobileControls.Converters.DataMemberConverter" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Einen Typkonverter wird in der Regel nicht direkt zugreifen. Diese Implementierung der <xref:System.ComponentModel.TypeConverter> dient zur Verwendung von einem datengebundenen Steuerelement zur Entwurfszeit und instanziiert wird, mit einem <xref:System.ComponentModel.TypeConverterAttribute> für eine Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MobileControls.Converters.DataMemberConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , darstellt, das die datengebundene Komponente oder das Steuerelement, das die Eigenschaft gehört.</param>
+        <param name="sourceType">Der Typ, aus dem konvertiert wird.</param>
+        <summary>Ruft einen Wert, der angibt, ob der angegebene Quellcodeverwaltungsanbieter Typ für den Typ der zugeordneten Steuerelementeigenschaft, die unter Verwendung des angegebenen Kontexts und der Typ konvertiert werden kann. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="sourceType" /> ist <see cref="T:System.String" />andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Einen Typkonverter wird in der Regel nicht direkt zugreifen. Diese Implementierung der <xref:System.ComponentModel.TypeConverter> zur Verwendung durch ein datengebundenes Steuerelement zur Entwurfszeit vorgesehen ist, und mit instanziiert einen <xref:System.ComponentModel.TypeConverterAttribute> für eine Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MobileControls.Converters.DataMemberConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , darstellt, das die datengebundene Komponente oder das Steuerelement, das die Eigenschaft gehört.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> -Objekt, das verwendet werden kann, um zusätzliche kulturinformationen bereitzustellen.</param>
+        <param name="value">Die zu konvertierende Wert.</param>
+        <summary>Konvertiert das angegebene Objekt in den Typ der zugeordneten Steuerelementeigenschaft, die mit dem angegebenen Kontext. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Eine Zeichenfolge mit der <paramref name="value" /> Wenn <paramref name="value" /> nicht <see langword="null" /> und enthält eine Zeichenfolge ist, andernfalls eine leere Zeichenfolge ("").</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Einen Typkonverter wird in der Regel nicht direkt zugreifen. Diese Implementierung der <xref:System.ComponentModel.TypeConverter> dient zur Verwendung von einem datengebundenen Steuerelement zur Entwurfszeit und instanziiert wird, mit einem <xref:System.ComponentModel.TypeConverterAttribute> für eine Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="M:System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)">
+          <paramref name="value" />ist kein <see langword="null" /> und keine Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MobileControls.Converters.DataMemberConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> Objekt, das darstellt, das die datengebundene Komponente oder das Steuerelement, das die Eigenschaft gehört.</param>
+        <summary>Gibt eine Liste von Werten, die eine Steuerelementeigenschaft mit dem angegebenen Kontext zugewiesen werden kann. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> Objekt, das die Namen der verfügbaren Ansichten in der Datenquelle enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Einen Typkonverter wird in der Regel nicht direkt zugreifen. Diese Implementierung der <xref:System.ComponentModel.TypeConverter> dient zur Verwendung von einem datengebundenen Steuerelement zur Entwurfszeit und instanziiert wird, mit einem <xref:System.ComponentModel.TypeConverterAttribute> für eine Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MobileControls.Converters.DataMemberConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> Objekt, das die Daten datengebundene Komponente oder das Steuerelement die Eigenschaft gehört.</param>
+        <summary>Gibt unter Verwendung des angegebenen Kontexts an, ob dieser Konverter eine Liste aller möglichen Werte zurückgibt, die der zugeordneten Steuerelementeigenschaft zugewiesen werden können. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.MobileControls.Converters.DataMemberConverter.GetStandardValuesExclusive%2A> Methode wird aufgerufen, vom Designerhost vor dem Aufruf <xref:System.Web.UI.Design.MobileControls.Converters.DataFieldConverter.GetStandardValues%2A>.  
+  
+> [!NOTE]
+>  Einen Typkonverter wird in der Regel nicht direkt zugreifen. Diese Implementierung der <xref:System.ComponentModel.TypeConverter> dient zur Verwendung von einem datengebundenen Steuerelement zur Entwurfszeit und instanziiert wird, mit einem <xref:System.ComponentModel.TypeConverterAttribute> für eine Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MobileControls.Converters.DataMemberConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> Objekt, das darstellt, das die datengebundene Komponente oder das Steuerelement, das die Eigenschaft gehört.</param>
+        <summary>Ruft einen Wert, der angibt, ob dieses Objekt einen Standardsatz von Werten, die ausgewählt werden können aus einer Liste im Entwurfshost mit dem angegebenen Kontext zurückgibt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn der Kontext nicht null ist und kann, um umgewandelt werden eine <see cref="T:System.ComponentModel.IComponent" />andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Einen Typkonverter wird in der Regel nicht direkt zugreifen. Diese Implementierung der <xref:System.ComponentModel.TypeConverter> dient zur Verwendung von einem datengebundenen Steuerelement zur Entwurfszeit und instanziiert wird, mit einem <xref:System.ComponentModel.TypeConverterAttribute> für eine Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

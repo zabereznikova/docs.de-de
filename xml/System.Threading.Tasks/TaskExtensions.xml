@@ -1,0 +1,124 @@
+<Type Name="TaskExtensions" FullName="System.Threading.Tasks.TaskExtensions">
+  <TypeSignature Language="C#" Value="public static class TaskExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TaskExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.TaskExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Satz statischer (Shared in Visual Basic) Methoden für die Arbeit mit bestimmten Arten von <see cref="T:System.Threading.Tasks.Task" /> Instanzen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Unwrap">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task Unwrap (this System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt; task);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task Unwrap(class System.Threading.Tasks.Task`1&lt;class System.Threading.Tasks.Task&gt; task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskExtensions.Unwrap(System.Threading.Tasks.Task{System.Threading.Tasks.Task})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="task">Die <see langword="Task&lt;Task&gt;" /> (c#) oder <see langword="Task (Of Task)" /> (Visual Basic) zu entpacken.</param>
+        <summary>Erstellt einen Proxy <see cref="T:System.Threading.Tasks.Task" /> , die den asynchronen Vorgang des stellt eine <see cref="M:System.Threading.Tasks.TaskScheduler.TryExecuteTaskInline(System.Threading.Tasks.Task,System.Boolean)" />.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang des bereitgestellten darstellt <see langword="System.Threading.Tasks.Task(Of Task)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist oft hilfreich, eine Aufgabe zurückgeben lassen eine <xref:System.Threading.Tasks.Task%601>, wobei die innere Aufgabe, die Arbeit, die als Teil des äußeren repräsentiert <xref:System.Threading.Tasks.Task%601>. Allerdings führt eine `Task<Task>` (c#) oder `Task (Of Task)` (Visual Basic), die, wenn Sie nicht sorgfältig behandelt wird, kann zu unerwartetem Verhalten führen. Unwrap löst dieses Problem durch Erstellen eines Proxy-Aufgabe, die den gesamten asynchronen Vorgang einer solchen Aufgabe darstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Aufgabe zu entpacken:  
+  
+ [!code-csharp[System.Threading.Tasks.TaskExtensions#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.taskextensions/cs/unwrap.cs#01)]
+ [!code-vb[System.Threading.Tasks.TaskExtensions#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.taskextensions/vb/unwrap.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Ausnahme, die ausgelöst wird, wenn die <paramref name="task" /> Argument ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unwrap&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;TResult&gt; Unwrap&lt;TResult&gt; (this System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&lt;TResult&gt;&gt; task);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;!!TResult&gt; Unwrap&lt;TResult&gt;(class System.Threading.Tasks.Task`1&lt;class System.Threading.Tasks.Task`1&lt;!!TResult&gt;&gt; task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskExtensions.Unwrap``1(System.Threading.Tasks.Task{System.Threading.Tasks.Task{``0}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&lt;TResult&gt;&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ des Ergebnisses der Aufgabe.</typeparam>
+        <param name="task">Die <see langword="Task&lt;Task&lt;T&gt;&gt;" /> (c#) oder <see langword="Task (Of Task(Of T))" /> (Visual Basic) zu entpacken.</param>
+        <summary>Erstellt einen Proxy <see cref="T:System.Threading.Tasks.Task" /> , die den asynchronen Vorgang des stellt eine <see langword="Task&lt;Task&lt;T&gt;&gt;" /> (c#) oder <see langword="Task (Of Task(Of T))" /> (Visual Basic).</summary>
+        <returns>Ein <see cref="T:System.Threading.Tasks.Task" /> , die den asynchronen Vorgang des bereitgestellten darstellt <see langword="Task&lt;Task&lt;T&gt;&gt;" /> (c#) oder <see langword="Task (Of Task(Of T))" /> (Visual Basic).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist oft hilfreich, zurückgeben können eine <xref:System.Threading.Tasks.Task> aus einer <xref:System.Threading.Tasks.Task>, wobei die innere <xref:System.Threading.Tasks.Task> darstellt, die im Rahmen des äußeren Arbeit <xref:System.Threading.Tasks.Task>. Allerdings führt eine `Task<Task<T>>` (c#) oder `Task (Of Task(Of T))` (Visual Basic), die, wenn Sie nicht sorgfältig behandelt wird, kann zu unerwartetem Verhalten führen. Unwrap löst dieses Problem durch Erstellen eines Proxys <xref:System.Threading.Tasks.Task%601> , die den gesamten asynchronen Vorgang solcher stellt eine `Task<Task<T>>` (c#) oder `Task (Of Task(Of T))` (Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Ausnahme, die ausgelöst wird, wenn die <paramref name="task" /> Argument ist null.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

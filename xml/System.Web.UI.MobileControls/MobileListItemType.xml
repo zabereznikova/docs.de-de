@@ -1,0 +1,99 @@
+<Type Name="MobileListItemType" FullName="System.Web.UI.MobileControls.MobileListItemType">
+  <TypeSignature Language="C#" Value="public enum MobileListItemType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MobileListItemType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.MobileListItemType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Weist einen Elementtyp auf ein Element in einem <see cref="T:System.Web.UI.MobileControls.List" /> oder <see cref="T:System.Web.UI.MobileControls.ObjectList" /> untergeordneten Steuerelemente des Steuerelements. Diese Klasse kann nicht vererbt werden. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Web.UI.MobileControls.List> oder <xref:System.Web.UI.MobileControls.ObjectList> Steuerelement gerendert wird, im Vorlagenmodus leere <xref:System.Web.UI.MobileControls.MobileListItem> Objekte mit dem entsprechenden Elementtyp werden erstellt, für jeden Header, Footer, oder ein, das gerendert werden muss. Diese leere Objekte werden dann in der untergeordneten Steuerelemente des Steuerelements eingefügt.  
+  
+> [!NOTE]
+>  <xref:System.Web.UI.MobileControls.MobileListItem>Objekte, die Listenelemente immer entsprechen, weisen den Typ <xref:System.Web.UI.WebControls.ListItem>.  
+  
+ Verwenden Sie diese Enumeration zum Durchlaufen der steuerelementeauflistung und suchen die <xref:System.Web.UI.MobileControls.MobileListItem> Objekte, die den Header, Footer und Trennzeichen Vorlagen entspricht.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FooterItem">
+      <MemberSignature Language="C#" Value="FooterItem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.MobileListItemType FooterItem = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobileListItemType.FooterItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobileListItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine Fußzeile für eine Liste dar. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderItem">
+      <MemberSignature Language="C#" Value="HeaderItem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.MobileListItemType HeaderItem = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobileListItemType.HeaderItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobileListItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine Spaltenüberschrift, um eine Liste dar. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ListItem">
+      <MemberSignature Language="C#" Value="ListItem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.MobileListItemType ListItem = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobileListItemType.ListItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobileListItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein Element in einer Liste. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorItem">
+      <MemberSignature Language="C#" Value="SeparatorItem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.MobileListItemType SeparatorItem = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobileListItemType.SeparatorItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobileListItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein Trennzeichen zwischen den Elementen dar. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

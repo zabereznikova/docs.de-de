@@ -1,0 +1,21 @@
+<Namespace Name="System.Windows.Forms.Design.Behavior">
+  <Docs>
+    <summary>Die <see cref="N:System.Windows.Forms.Design.Behavior" /> -Namespace enthält Klassen zum Erstellen von benutzerdefinierten Verhaltens der Benutzeroberfläche für Komponenten zur Entwurfszeit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Liste enthält die Klassen in diesem Namespace enthalten:  
+  
+-   Ein <xref:System.Windows.Forms.Design.Behavior.Glyph> Klasse zum Behandeln von Paint-Ereignisse und Treffertests.  
+  
+-   Ein <xref:System.Windows.Forms.Design.Behavior.Adorner> Klasse zum Verwalten einer Auflistung von <xref:System.Windows.Forms.Design.Behavior.Glyph> Objekte.  
+  
+-   Ein <xref:System.Windows.Forms.Design.Behavior.BehaviorService> Klasse zum Verwalten der benutzerdefinierten Benutzeroberfläche in einem Designer.  
+  
+-   Ein <xref:System.Windows.Forms.Design.Behavior.SnapLine> Klasse horizontale und vertikale Liniensegment dar, die Benutzer Ausrichten von Komponenten zur Entwurfszeit zu unterstützen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

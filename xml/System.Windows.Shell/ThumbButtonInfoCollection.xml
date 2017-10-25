@@ -1,0 +1,65 @@
+<Type Name="ThumbButtonInfoCollection" FullName="System.Windows.Shell.ThumbButtonInfoCollection">
+  <TypeSignature Language="C#" Value="public class ThumbButtonInfoCollection : System.Windows.FreezableCollection&lt;System.Windows.Shell.ThumbButtonInfo&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ThumbButtonInfoCollection extends System.Windows.FreezableCollection`1&lt;class System.Windows.Shell.ThumbButtonInfo&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shell.ThumbButtonInfoCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FreezableCollection&lt;System.Windows.Shell.ThumbButtonInfo&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Windows.Shell.ThumbButtonInfo</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Windows.Shell.ThumbButtonInfo" /> Objekte, die zugeordnet sind ein <see cref="T:System.Windows.Window" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Shell.ThumbButtonInfoCollection>ist eine stark typisierte <xref:System.Windows.FreezableCollection%601> , dient zur Unterstützung von Deklarationen in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)].  
+  
+ Die [!INCLUDE[win7](~/includes/win7-md.md)] Befehlsshell können maximal sieben Schaltflächen in der Taskleistenvorschau. Wenn mehr als sieben <xref:System.Windows.Shell.ThumbButtonInfo> Objekte werden hinzugefügt, um die <xref:System.Windows.Shell.ThumbButtonInfoCollection>, werden die zusätzlichen Objekte als Überlauf behandelt. Wenn eine Schaltfläche ist <xref:System.Windows.Visibility.Collapsed>, er verfügt nicht über alle sichtbaren Elemente und kein Speicherplatz reserviert ist. In diesem Groß-/Kleinschreibung, zusätzlichen Schaltflächen aus dem <xref:System.Windows.Shell.ThumbButtonInfoCollection> Überlauf werden angezeigt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThumbButtonInfoCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.ThumbButtonInfoCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Shell.ThumbButtonInfoCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.ThumbButtonInfoCollection.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der Auflistung.</summary>
+        <returns>Die neue Instanz der Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

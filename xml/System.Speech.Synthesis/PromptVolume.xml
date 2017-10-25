@@ -1,0 +1,153 @@
+<Type Name="PromptVolume" FullName="System.Speech.Synthesis.PromptVolume">
+  <TypeSignature Language="C#" Value="public enum PromptVolume" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PromptVolume extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.PromptVolume" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Listet Werte für Lautstärkestufen (Loudness) in eingabeaufforderungen an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mitglieder der der <xref:System.Speech.Synthesis.PromptVolume> Enumeration werden verwendet, indem Sie die <xref:System.Speech.Synthesis.PromptStyle.%23ctor%2A> Konstruktor, von der <xref:System.Speech.Synthesis.PromptBuilder.AppendText%2A> -Methode, und die <xref:System.Speech.Synthesis.PromptBuilder.StartStyle%2A> Methode, um die Lautstärke nach gesprochenen Text anzugeben. Die <xref:System.Speech.Synthesis.PromptStyle.Volume%2A> Eigenschaft ruft das Volume für einen <xref:System.Speech.Synthesis.PromptStyle> -Objekt mithilfe einer <xref:System.Speech.Synthesis.PromptVolume> Instanz.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptVolume Default = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptVolume.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Modul-spezifische Standardebene Volume an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraLoud">
+      <MemberSignature Language="C#" Value="ExtraLoud" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptVolume ExtraLoud = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptVolume.ExtraLoud" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine zusätzliche laut Volumeebene an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraSoft">
+      <MemberSignature Language="C#" Value="ExtraSoft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptVolume ExtraSoft = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptVolume.ExtraSoft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine zusätzliche soft Volumeebene an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Loud">
+      <MemberSignature Language="C#" Value="Loud" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptVolume Loud = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptVolume.Loud" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Konfidenzintervall von laut Volume an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Medium">
+      <MemberSignature Language="C#" Value="Medium" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptVolume Medium = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptVolume.Medium" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Konfidenzintervall von mittlerem an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptVolume NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptVolume.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Volumeebene nicht festgelegt ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Silent">
+      <MemberSignature Language="C#" Value="Silent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptVolume Silent = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptVolume.Silent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Konfidenzintervall von stumm Volume an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Soft">
+      <MemberSignature Language="C#" Value="Soft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptVolume Soft = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptVolume.Soft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Konfidenzintervall von soft-Volume an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

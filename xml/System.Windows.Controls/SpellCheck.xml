@@ -1,0 +1,340 @@
+<Type Name="SpellCheck" FullName="System.Windows.Controls.SpellCheck">
+  <TypeSignature Language="C#" Value="public sealed class SpellCheck" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SpellCheck extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.SpellCheck" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Funktionen für die Rechtschreibprüfung in Echtzeit für Steuerelemente Textbearbeitung bereit, z. B. <see cref="T:System.Windows.Controls.TextBox" /> und <see cref="T:System.Windows.Controls.RichTextBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie zum Aktivieren der Rechtschreibprüfung aus der <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A?displayProperty=nameWithType> Eigenschaft `true` für ein Steuerelement zum Bearbeiten von Text. Wenn diese Rechtschreibprüfung aktiviert ist, werden falsch geschriebene Wörter mit einer roten Wellenlinien unterstrichen, wie in der folgenden Abbildung dargestellt. Rechtschreibprüfung wird nur unterstützt, wenn WPF ein Standardwörterbuch enthält. In [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], WPF bietet Wörterbücher für Englisch, Französisch, Deutsch und Spanisch.  
+  
+ ![TextBox mit Rechtschreibprüfung &#45; Überprüfung](~/add/media/editing-textbox-with-spellchecking.png "Textbox mit Rechtschreibprüfung")  
+  
+ Um ein benutzerdefiniertes Wörterbuch zu hinzuzufügen, fügen Sie den Speicherort der Lexikondatei, die die <xref:System.Windows.Controls.SpellCheck.CustomDictionaries%2A> Auflistung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CustomDictionaries">
+      <MemberSignature Language="C#" Value="public System.Collections.IList CustomDictionaries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList CustomDictionaries" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.SpellCheck.CustomDictionaries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Lexikon Speicherorte, die für die benutzerdefinierte Rechtschreibprüfung verwendet werden.</summary>
+        <value>Die Auflistung der Lexikon-Dateispeicherorte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden von benutzerdefinierten Wörterbüchern Lexikondateien, Textdateien, die eine lex-Erweiterung aufweisen. Jede Zeile einer Lexikon--Datei enthält ein einzelnes Wort, das als zulässige Rechtschreibung akzeptiert wird. Die erste Zeile der Datei kann einen Gebietsschemabezeichner (LCID) angeben, dem das Wörterbuch gilt. Wenn das Gebietsschema nicht angegeben wird, gilt das Wörterbuch für alle Sprachen. Weitere Informationen finden Sie unter [Gebietsschema-IDs](http://go.microsoft.com/fwlink/?LinkId=165561). Das folgende Beispiel zeigt die ersten Zeilen einer Datei Lexikon-für Englisch.  
+  
+```  
+#LID 1033  
+TextBlock  
+TextBox  
+ListBox  
+```  
+  
+ An einen oder mehrere benutzerdefinierte Wörterbücher, die für eine <xref:System.Windows.Controls.TextBox> oder für jede Klasse, die abgeleitet <xref:System.Windows.Controls.Primitives.TextBoxBase>, geben Sie den Speicherort der Lexikondatei durch hinzufügen den URI für die Datei, die <xref:System.Windows.Controls.SpellCheck.CustomDictionaries%2A> Auflistung.  
+  
+> [!NOTE]
+>  Mit <xref:System.Collections.IList.Insert%2A> zum Hinzufügen einer Datei, die <xref:System.Windows.Controls.SpellCheck.CustomDictionaries%2A> Auflistung führt dazu, dass eine Ausnahme. Verwenden Sie stattdessen <xref:System.Collections.IList.Add%2A> und <xref:System.Collections.IList.Remove%2A> zum Aktualisieren der Auflistung.  
+  
+ Die Lexikondateien enthalten sein in der Anwendung als Inhaltsdateien auf dem lokalen Computer installiert oder Ressourcendateien, die in einem lokalen kompiliert referenzierten Assemblys. Sie können die Datei mithilfe des Paket-URIs verweisen. Weitere Informationen finden Sie unter [Paket-URI in WPF](~/docs/framework/wpf/app-development/pack-uris-in-wpf.md).  
+  
+ Legen Sie zum Aktivieren der Rechtschreibprüfung aus der <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A?displayProperty=nameWithType> Eigenschaft `true` auf eine <xref:System.Windows.Controls.TextBox> oder auf eine beliebige Klasse, abgeleitet wird <xref:System.Windows.Controls.Primitives.TextBoxBase>. Alle benutzerdefinierten Wörterbüchern für die <xref:System.Windows.Controls.TextBox> werden zusätzlich zu den Standard-Rechtschreibprüfung verwendet. Weitere Informationen über die Rechtschreibprüfung finden Sie unter <xref:System.Windows.Controls.SpellCheck>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei benutzerdefinierte Wörterbücher zum Hinzufügen einer <xref:System.Windows.Controls.RichTextBox>. Das erste Benutzerwörterbuch (customwords.lex) wird in XAML hinzugefügt. Die Datei wird in der Anwendung als Inhaltsdatei enthalten und in das Ausgabeverzeichnis kopiert. Verwenden der <xref:System.Uri> -Element, müssen Sie den System-Namespace enthalten.  
+  
+ `xmlns:sys="clr-namespace:System;assembly=System"`  
+  
+ Das zweite Benutzerwörterbuch (customwords2.lex) wird hinzugefügt, der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignishandler. Die Datei wird als eine Ressourcendatei enthalten und in der Assembly mit dem Namen WPFCustomDictionary kompiliert.  
+  
+ [!code-xaml[WpfCustomDictionary#1](~/samples/snippets/csharp/VS_Snippets_Wpf/wpfcustomdictionary/cs/window1.xaml#1)]  
+  
+ [!code-csharp[WpfCustomDictionary#2](~/samples/snippets/csharp/VS_Snippets_Wpf/wpfcustomdictionary/cs/window1.xaml.cs#2)]
+ [!code-vb[WpfCustomDictionary#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/wpfcustomdictionary/vb/mainwindow.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomDictionariesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CustomDictionariesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CustomDictionariesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.SpellCheck.CustomDictionariesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.SpellCheck.CustomDictionaries" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomDictionaries">
+      <MemberSignature Language="C#" Value="public static System.Collections.IList GetCustomDictionaries (System.Windows.Controls.Primitives.TextBoxBase textBoxBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IList GetCustomDictionaries(class System.Windows.Controls.Primitives.TextBoxBase textBoxBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.SpellCheck.GetCustomDictionaries(System.Windows.Controls.Primitives.TextBoxBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textBoxBase" Type="System.Windows.Controls.Primitives.TextBoxBase" />
+      </Parameters>
+      <Docs>
+        <param name="textBoxBase">Das Textbearbeitungssteuerelement, Element, dessen Auflistung der Lexikondateien abgerufen wird.</param>
+        <summary>Ruft die Auflistung der Lexikon-Dateispeicherorte, die für benutzerdefinierte Rechtschreibprüfungen auf einer angegebene Textbearbeitungssteuerelement verwendet werden.</summary>
+        <returns>Die Auflistung der Lexikon-Dateispeicherorte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden von benutzerdefinierten Wörterbüchern Lexikondateien, die einfache Textdateien sind, die eine lex-Erweiterung aufweisen. Jede Zeile einer Lexikon--Datei enthält ein einzelnes Wort, das als zulässige Rechtschreibung akzeptiert wird. Die erste Zeile der Datei kann einen Gebietsschemabezeichner (LCID) angeben, dem das Wörterbuch gilt. Wenn das Gebietsschema nicht angegeben wird, gilt das Wörterbuch für alle Sprachen. Weitere Informationen finden Sie unter [Gebietsschema-IDs](http://go.microsoft.com/fwlink/?LinkId=165561). Das folgende Beispiel zeigt die ersten Zeilen einer Datei Lexikon-für Englisch.  
+  
+```  
+#LID 1033  
+TextBlock  
+TextBox  
+ListBox  
+```  
+  
+ An einen oder mehrere benutzerdefinierte Wörterbücher, die für eine <xref:System.Windows.Controls.TextBox> oder eine beliebige Klasse, die abgeleitet <xref:System.Windows.Controls.Primitives.TextBoxBase>, geben Sie den Speicherort der Lexikondatei durch hinzufügen den URI für die Datei der <xref:System.Collections.IList> zurückgegebenes die <xref:System.Windows.Controls.SpellCheck.GetCustomDictionaries%2A> Methode.  
+  
+ Legen Sie zum Aktivieren der Rechtschreibprüfung aus der <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A?displayProperty=nameWithType> Eigenschaft `true` auf eine <xref:System.Windows.Controls.TextBox> oder auf eine beliebige Klasse, abgeleitet wird <xref:System.Windows.Controls.Primitives.TextBoxBase>. Alle benutzerdefinierten Wörterbüchern für die <xref:System.Windows.Controls.TextBox> werden zusätzlich zu den Standard-Rechtschreibprüfung verwendet. Weitere Informationen über die Rechtschreibprüfung finden Sie unter <xref:System.Windows.Controls.SpellCheck>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="textBoxBase" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsEnabled">
+      <MemberSignature Language="C#" Value="public static bool GetIsEnabled (System.Windows.Controls.Primitives.TextBoxBase textBoxBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsEnabled(class System.Windows.Controls.Primitives.TextBoxBase textBoxBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.SpellCheck.GetIsEnabled(System.Windows.Controls.Primitives.TextBoxBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textBoxBase" Type="System.Windows.Controls.Primitives.TextBoxBase" />
+      </Parameters>
+      <Docs>
+        <param name="textBoxBase">Das Textbearbeitungssteuerelement zu überprüfen. Beispielsteuerelemente umfassen <see cref="T:System.Windows.Controls.TextBox" /> und <see cref="T:System.Windows.Controls.RichTextBox" />.</param>
+        <summary>Gibt einen Wert, der angibt, ob die Rechtschreibprüfung für das angegebene Textbearbeitungssteuerelement aktiviert ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Rechtschreibprüfung für das Textbearbeitungssteuerelement aktiviert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="textBoxBase" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.SpellCheck.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob die Rechtschreibprüfung für diese Textbearbeitungssteuerelement, wie z. B. aktiviert ist <see cref="T:System.Windows.Controls.TextBox" /> oder <see cref="T:System.Windows.Controls.RichTextBox" />.</summary>
+        <value>
+          <see langword="true" />Wenn die Rechtschreibprüfung für das Steuerelement aktiviert ist; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Abhängigkeitseigenschaft weist auch eine Verwendung des spezielle lesegeschützte angefügten Eigenschaft. Die [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Syntax für das Festlegen der Eigenschaft `<` *TextBoxBaseClass* **SpellCheck.IsEnabled**`="`*BoolValue* `" .../>`, wobei *TextBoxBaseClass* Objektelement für eine Klasse, die abgeleitet ist <xref:System.Windows.Controls.Primitives.TextBoxBase>, und *BoolValue* handelt es sich um `true` oder `false` (Groß-/Kleinschreibung nicht beachtet). Zum Festlegen der Eigenschaft als angefügte Eigenschaft im Code finden Sie unter der <xref:System.Windows.Controls.SpellCheck.SetIsEnabled%2A> Methode. Es ist keine entsprechende `GetIsEnabled` Accessor. Um den Wert abzurufen, rufen Sie das aktuelle <xref:System.Windows.Controls.SpellCheck> -Objekt aus der <xref:System.Windows.Controls.Primitives.TextBoxBase.SpellCheck%2A?displayProperty=nameWithType> -Eigenschaft, und klicken Sie dann den Wert der Abrufen der <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A> Eigenschaft aus, die <xref:System.Windows.Controls.SpellCheck>.  
+  
+<a name="xamlTextUsage_IsEnabled"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweise.  
+  
+<a name="dependencyPropertyInfo_IsEnabled"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.SpellCheck.IsEnabledProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.SpellCheck.IsEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.SpellCheck.IsEnabled" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsEnabled">
+      <MemberSignature Language="C#" Value="public static void SetIsEnabled (System.Windows.Controls.Primitives.TextBoxBase textBoxBase, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsEnabled(class System.Windows.Controls.Primitives.TextBoxBase textBoxBase, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.SpellCheck.SetIsEnabled(System.Windows.Controls.Primitives.TextBoxBase,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textBoxBase" Type="System.Windows.Controls.Primitives.TextBoxBase" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="textBoxBase">Das Textbearbeitungssteuerelement, für das die Rechtschreibprüfung aktiviert oder deaktiviert werden soll. Beispielsteuerelemente umfassen <see cref="T:System.Windows.Controls.TextBox" /> und <see cref="T:System.Windows.Controls.RichTextBox" />.</param>
+        <param name="value">Ein boolescher Wert, der angibt, ob die Rechtschreibprüfung für das Textbearbeitungssteuerelement aktiviert ist.</param>
+        <summary>Aktiviert oder deaktiviert die Rechtschreibprüfung für das angegebene Textbearbeitungssteuerelement, z. B. <see cref="T:System.Windows.Controls.TextBox" /> oder <see cref="T:System.Windows.Controls.RichTextBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht die Verwendung einer angefügten Eigenschaft für die <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A> Eigenschaft im [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]. Das folgende Beispiel zeigt die [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Verwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSpellingReform">
+      <MemberSignature Language="C#" Value="public static void SetSpellingReform (System.Windows.Controls.Primitives.TextBoxBase textBoxBase, System.Windows.Controls.SpellingReform value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSpellingReform(class System.Windows.Controls.Primitives.TextBoxBase textBoxBase, valuetype System.Windows.Controls.SpellingReform value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.SpellCheck.SetSpellingReform(System.Windows.Controls.Primitives.TextBoxBase,System.Windows.Controls.SpellingReform)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textBoxBase" Type="System.Windows.Controls.Primitives.TextBoxBase" />
+        <Parameter Name="value" Type="System.Windows.Controls.SpellingReform" />
+      </Parameters>
+      <Docs>
+        <param name="textBoxBase">Das Textbearbeitungssteuerelement, auf dem die Rechtschreibprüfung angewendet wird. Beispielsteuerelemente umfassen <see cref="T:System.Windows.Controls.TextBox" /> und <see cref="T:System.Windows.Controls.RichTextBox" />.</param>
+        <param name="value">Die <see cref="P:System.Windows.Controls.SpellCheck.SpellingReform" /> Wert, der die Rechtschreibreformregeln bestimmt.</param>
+        <summary>Bestimmt die Rechtschreibreformregeln, die von der Rechtschreibprüfung verwendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Rechtschreibreformregeln, die von dieser Methode zugegriffen werden, finden Sie in der Französisch und Deutsch Rechtschreibreformen der 1990er Jahre. Diese Methode hat keine Auswirkungen, wenn er mit einer beliebigen anderen Sprache verwendet wird.  
+  
+ Diese Methode ermöglicht die Verwendung einer angefügten Eigenschaft für die <xref:System.Windows.Controls.SpellCheck.SpellingReform%2A> Eigenschaft im [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpellingReform">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.SpellingReform SpellingReform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.SpellingReform SpellingReform" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.SpellCheck.SpellingReform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.SpellingReform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rechtschreibreformregeln ab, die von der Rechtschreibprüfung verwendet werden, oder legt sie fest.</summary>
+        <value>Die Rechtschreibreformregeln, die von der Rechtschreibprüfung verwendet werden. Der Standardwert ist <see cref="F:System.Windows.Controls.SpellingReform.PreAndPostreform" /> für Französisch und <see cref="F:System.Windows.Controls.SpellingReform.Postreform" /> für Deutsch.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Rechtschreibreformregeln, die von dieser Eigenschaft bestimmt werden, beziehen sich auf die Französisch und Deutsch Rechtschreibreformen. Diese Eigenschaft hat keine Auswirkung, wenn er mit einer beliebigen anderen Sprache verwendet wird.  
+  
+ Diese Abhängigkeitseigenschaft weist auch eine Verwendung des spezielle lesegeschützte angefügten Eigenschaft. Die [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Syntax für das Festlegen der Eigenschaft `<` *TextBoxBaseClass* **SpellCheck.SpellingReform**`="`*EnumValue* `" .../>`, wobei *TextBoxBaseClass* Objektelement für eine Klasse, die abgeleitet ist <xref:System.Windows.Controls.Primitives.TextBoxBase>, und *EnumValue* ist ein Zeichenfolgenname für den Wert der <xref:System.Windows.Controls.SpellingReform> -Enumeration. Zum Festlegen der Eigenschaft als angefügte Eigenschaft im Code finden Sie unter der <xref:System.Windows.Controls.SpellCheck.SetSpellingReform%2A> Methode. Es ist keine entsprechende `GetSpellingReform` Accessor. Um den Wert abzurufen, rufen Sie das aktuelle <xref:System.Windows.Controls.SpellCheck> -Objekt aus der <xref:System.Windows.Controls.Primitives.TextBoxBase.SpellCheck%2A?displayProperty=nameWithType> -Eigenschaft, und klicken Sie dann den Wert der Abrufen der <xref:System.Windows.Controls.SpellCheck.SpellingReform%2A> Eigenschaft aus, die <xref:System.Windows.Controls.SpellCheck>.  
+  
+<a name="xamlTextUsage_SpellingReform"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweise.  
+  
+<a name="dependencyPropertyInfo_SpellingReform"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.SpellCheck.SpellingReformProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpellingReformProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SpellingReformProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SpellingReformProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.SpellCheck.SpellingReformProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.SpellCheck.SpellingReform" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

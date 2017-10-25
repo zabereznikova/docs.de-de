@@ -1,0 +1,249 @@
+<Type Name="ServiceKnownTypeAttribute" FullName="System.ServiceModel.ServiceKnownTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ServiceKnownTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceKnownTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ServiceKnownTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Interface, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die von einem Dienst bei der Serialisierung beziehungsweise Deserialisierung zu verwendenden bekannten Typen an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.ServiceKnownTypeAttribute> ist für die Verwendung bei der Erstellung von [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Dienstverträgen (Schnittstellen, mit denen der Dienst und seine Methoden definiert werden) bestimmt. Die *bekannten Typen* sind Typen, die bei Serialisierung Deserialisierung beziehungsweise in einem Objektdiagramm vorhanden sein können. Weitere Informationen über bekannte Typen finden Sie unter [Datenvertragstypen bezeichnet](~/docs/framework/wcf/feature-details/data-contract-known-types.md).  
+  
+ Zur Verwendung der <xref:System.ServiceModel.ServiceKnownTypeAttribute.MethodName%2A>-Eigenschaft erstellen Sie eine Klasse mit einer Methode (oder mehreren Methoden), die einen Array von Typen zurückgibt (ausschließlich bekannte Typen). Legen Sie bei der Zuweisung des Attributs für den `methodName` den Namen einer Methode fest, die eine Liste der Typen zurückgibt, und legen Sie für den `declaringType` den Typ fest, der die Methode enthält. Die Methode muss einen Typ zurückgeben, der die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementiert. Die Methode muss außerdem einen Parameter des Typs <xref:System.Reflection.ICustomAttributeProvider> beinhalten.  
+  
+ Sie können das Attribut auch mehrmals zu einer Schnittstelle, Klasse oder Methode zuweisen und dabei jedes Mal einen neuen bekannten Typ angeben.  
+  
+> [!NOTE]
+>  Sie können das Wort `ServiceKnownType` anstelle des längeren Worts `ServiceKnownTypeAttribute` im Microsoft Visual Basic- oder C#-Code verwenden.  
+  
+   
+  
+## Examples  
+ Im nachstehenden Beispiel wurde das <xref:System.ServiceModel.ServiceKnownTypeAttribute>-Attribut einer Schnittstelle zugewiesen, in der das Attribut einen Methodennamen und einen deklarierenden Typ angibt.  
+  
+ [!code-csharp[ServiceKnownTypeAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/serviceknowntypeattribute/cs/source.cs#1)]
+ [!code-vb[ServiceKnownTypeAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/serviceknowntypeattribute/vb/source.vb#1)]  
+  
+ Weisen Sie das Attribut alternativ der Schnittstelle zu, die angibt, welche bekannten Typen berücksichtigt werden sollen.  
+  
+ [!code-csharp[ServiceKnownTypeAttribute#2](~/samples/snippets/csharp/VS_Snippets_CFX/serviceknowntypeattribute/cs/source.cs#2)]
+ [!code-vb[ServiceKnownTypeAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/serviceknowntypeattribute/vb/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceKnownTypeAttribute (string methodName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string methodName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceKnownTypeAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">Der Name einer Methode, die die bekannten Typen zurückgibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.ServiceKnownTypeAttribute" />-Klasse und gibt den Namen einer Methode an, die bekannte Typen zurückgibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie den <xref:System.ServiceModel.ServiceKnownTypeAttribute> für eine Klasse übernehmen, die Methoden enthält, die bekannte Typen zurückgeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceKnownTypeAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceKnownTypeAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Gibt einen bekannten Typ an, der in einem Parameter oder in einem vom Dienst definierten Rückgabewert verwendet werden kann.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.ServiceKnownTypeAttribute" />-Klasse mit dem angegebenen bekannten Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.ServiceKnownTypeAttribute> kann mehrmals auf eine Methode angewendet werden, wobei mit jeder Anwendung ein anderer bekannter Typ benannt wird, der in dem von der Methode zurückgegebenen Diagramm enthalten sein kann.  
+  
+   
+  
+## Examples  
+ Im nachstehenden Beispiel wurde das <xref:System.ServiceModel.ServiceKnownTypeAttribute>-Attribut auf eine Schnittstelle angewendet, wobei das Attribut den aufzunehmenden Typ angibt.  
+  
+ [!code-csharp[ServiceKnownTypeAttribute#2](~/samples/snippets/csharp/VS_Snippets_CFX/serviceknowntypeattribute/cs/source.cs#2)]
+ [!code-vb[ServiceKnownTypeAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/serviceknowntypeattribute/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceKnownTypeAttribute (string methodName, Type declaringType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string methodName, class System.Type declaringType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceKnownTypeAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="declaringType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">Der Name einer Methode, die die bekannten Typen zurückgibt.</param>
+        <param name="declaringType">Der Typ, der die bekannten Typen in seinem Objektdiagramm verwenden kann.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.ServiceKnownTypeAttribute" />-Klasse mit dem Namen einer Methode, die bekannte Typen zurückgibt, und den Typ, der die Methoden beinhaltet, die die bekannten Typen zurückgeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im nachstehenden Beispiel wurde das <xref:System.ServiceModel.ServiceKnownTypeAttribute>-Attribut einer Schnittstelle zugewiesen, in der das Attribut einen Methodennamen und einen deklarierenden Typ angibt.  
+  
+ [!code-csharp[ServiceKnownTypeAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/serviceknowntypeattribute/cs/source.cs#1)]
+ [!code-vb[ServiceKnownTypeAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/serviceknowntypeattribute/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringType">
+      <MemberSignature Language="C#" Value="public Type DeclaringType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclaringType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceKnownTypeAttribute.DeclaringType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ ab, der die Methoden enthält, die die bekannten Typen zurückgeben.</summary>
+        <value>Der <see cref="T:System.Type" />¸ der die Methoden enthält, die die bekannten Typen zurückgeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceKnownTypeAttribute.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen einer Methode ab, die die Auflistung bekannter Typen zurückgibt.</summary>
+        <value>Der Name der Methode, die die bekannten Typen zurückgibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.ServiceKnownTypeAttribute.MethodName%2A> muss der Name einer Methode für den von der <xref:System.ServiceModel.ServiceKnownTypeAttribute.DeclaringType%2A>-Eigenschaft angegeben Typ sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceKnownTypeAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der bekannte Typ, der in einem Objektdiagramm enthalten sein kann.</summary>
+        <value>Der <see cref="T:System.Type" /> des bekannten Typs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

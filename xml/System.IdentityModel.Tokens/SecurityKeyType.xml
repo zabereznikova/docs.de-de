@@ -1,0 +1,86 @@
+<Type Name="SecurityKeyType" FullName="System.IdentityModel.Tokens.SecurityKeyType">
+  <TypeSignature Language="C#" Value="public enum SecurityKeyType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SecurityKeyType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SecurityKeyType" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Schlüsseltyp an, der einem Sicherheitstoken zugeordnet ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Tokens.SecurityKeyType>-Enumeration, um die <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyType%2A>-Eigenschaft festzulegen.  
+  
+ Das BearerKey-Feld wird verwendet, mit der <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.KeyType%2A> Eigenschaft.  
+  
+### <a name="bearerkey-requires-wsuid-or-transport-security-with-message-credentials"></a>BearerKey erfordert Wsu:Id oder Transportsicherheit mit Nachrichtenanmeldeinformationen.  
+ In Verbundszenarien wird ein ausgestelltes Token in der Regel als ein unterzeichnendes Token konfiguriert, um die Nachrichtensicherheit zwischen einem Client und den abhängigen Seiten zu gewährleisten. Wenn ein Sicherheitstokendienst (Security Token Service, STS) ein Token ohne Schlüssel (BearerKey) ausstellt, konfiguriert [!INCLUDE[indigo2](~/includes/indigo2-md.md)] dieses als ein <xref:System.ServiceModel.Security.SecurityTokenAttachmentMode>-unterstützendes Token. ([!INCLUDE[indigo2](~/includes/indigo2-md.md)] kann Token ohne Schlüssel nicht unterstützen.) Daher muss in der Signatur auf das ausgestellte Token verwiesen werden. [!INCLUDE[indigo2](~/includes/indigo2-md.md)] verwendet derzeit: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd:Id als Referenzmechanismus (Wsu:Id).  
+  
+ Verfügt ein ausgestelltes Token nicht über ein solches Attribut, wird an einem Client eine <xref:System.ServiceModel.Security.MessageSecurityException> mit dem Text "Zu signierendes Element erfordert ID" ausgegeben. Dies ist der Fall, wenn ein SAML 1.1-Token als ausgestelltes Token verwendet wird (das Attribut Wsu:Id ist in der SAML 1.1-Spezifikation nicht definiert).  
+  
+ Um diese Situation zu umgehen, können Sie entweder die Transportsicherheit mit Nachrichtenanmeldeinformationen (z.&#160;B. <xref:System.ServiceModel.Configuration.AuthenticationMode>) verwenden, oder Sie fügen dem ausgestellten Token mithilfe eines STS http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd:Id (Wsu:Id) hinzu.  
+  
+ Beachten Sie, dass beim Hinzufügen von Wsu:Id zu einem SAML 1.1-Token die resultierende XML-Datei nicht der SAML 1.1-Spezifikation entspricht. Eine andere Alternative besteht darin, das Attribut Wsu:Id den `EncryptedData` hinzuzufügen, die beim Verschlüsseln des ausgestellten Tokens generiert werden. Dieses Verfahren entspricht der SAML 1.1-Spezifikation, da das `EncryptedData`-Element das Wsu:Id-Attribut unterstützt.  
+  
+ Um die Kompatibilität mit der Spezifikation zu gewährleisten, muss das Bearer-Token vom STS verschlüsselt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsymmetricKey">
+      <MemberSignature Language="C#" Value="AsymmetricKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Tokens.SecurityKeyType AsymmetricKey = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass es sich um einen asymmetrischen Schlüssel handelt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BearerKey">
+      <MemberSignature Language="C#" Value="BearerKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Tokens.SecurityKeyType BearerKey = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityKeyType.BearerKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Sicherheitstoken keinen Schlüssel zum Nachweis des rechtmäßigen Besitzers enthält.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SymmetricKey">
+      <MemberSignature Language="C#" Value="SymmetricKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Tokens.SecurityKeyType SymmetricKey = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityKeyType.SymmetricKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass es sich um einen symmetrischen Schlüssel handelt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

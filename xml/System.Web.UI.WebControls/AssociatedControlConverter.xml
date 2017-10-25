@@ -1,0 +1,76 @@
+<Type Name="AssociatedControlConverter" FullName="System.Web.UI.WebControls.AssociatedControlConverter">
+  <TypeSignature Language="C#" Value="public class AssociatedControlConverter : System.Web.UI.WebControls.ControlIDConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssociatedControlConverter extends System.Web.UI.WebControls.ControlIDConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.AssociatedControlConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.ControlIDConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Typkonverter, die eine Liste der abruft <see cref="T:System.Web.UI.WebControls.WebControl" /> Steuerelemente im aktuellen Container.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.AssociatedControlConverter> Klasse leitet sich von der <xref:System.Web.UI.WebControls.ControlIDConverter> -Klasse und stellt einen Typkonverter speziell für Steuerelemente, die von abgeleitet werden die <xref:System.Web.UI.WebControls.WebControl> Klasse. Es dient der <xref:System.Web.UI.WebControls.Label.AssociatedControlID%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ Weitere Informationen zu den Einsatz von Typkonvertern, finden Sie unter [Vorgehensweise: Implementieren eines Typkonverters](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56) oder [verallgemeinerte Typkonvertierung](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssociatedControlConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.AssociatedControlConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.AssociatedControlConverter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Hinweis** Sie sollten niemals einen Typkonverter direkt zugreifen. Rufen Sie stattdessen den entsprechenden Konverter mithilfe einer <xref:System.ComponentModel.TypeDescriptor> Objekt. Weitere Informationen finden Sie in den Beispielen in <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterControl">
+      <MemberSignature Language="C#" Value="protected override bool FilterControl (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool FilterControl(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.AssociatedControlConverter.FilterControl(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Die Instanz des Steuerelements zu prüfen, ob es ist ein <see cref="T:System.Web.UI.WebControls.WebControl" />.</param>
+        <summary>Gibt an, ob das angegebene Steuerelement erbt <see cref="T:System.Web.UI.WebControls.WebControl" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="control" /> erbt von der <see cref="T:System.Web.UI.WebControls.WebControl" /> -Klasse; anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Die Implementierung der <see cref="M:System.Web.UI.WebControls.AssociatedControlConverter.FilterControl(System.Web.UI.Control)" /> -Methode zurückkehrt <see langword="true" /> Wenn das Steuerelement ist eine Instanz von der <see cref="T:System.Web.UI.WebControls.WebControl" /> Klasse. Abgeleitete Klassen die <see cref="T:System.Web.UI.WebControls.AssociatedControlConverter" /> überschreiben diese Methode, um ihren eigenen Filtermechanismus bereitzustellen.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

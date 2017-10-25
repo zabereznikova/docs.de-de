@@ -1,0 +1,92 @@
+<Type Name="ShortType" FullName="Microsoft.VisualBasic.CompilerServices.ShortType">
+  <TypeSignature Language="C#" Value="public sealed class ShortType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ShortType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.CompilerServices.ShortType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Diese Klasse ist seit Visual Basic 2005 veraltet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt Methoden zum Bearbeiten von Daten, die potenziell darstellen einer `Short` Wert.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="FromObject">
+      <MemberSignature Language="C#" Value="public static short FromObject (object Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int16 FromObject(object Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ShortType.FromObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Erforderlich. Zu konvertierende Objekt eine <see langword="Short" /> Wert.</param>
+        <summary>Gibt eine <see langword="Short" /> -Wert, der dem angegebenen Objekt entspricht.</summary>
+        <returns>Die <see langword="Short" /> entsprechende Wert <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt das Visual Basic-Compiler und nicht direkt aus Ihrem Code verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromString">
+      <MemberSignature Language="C#" Value="public static short FromString (string Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int16 FromString(string Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ShortType.FromString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Erforderlich. Zeichenfolge, die zum Konvertieren einer <see langword="Short" /> Wert.</param>
+        <summary>Gibt eine <see langword="Short" /> -Wert, der der angegebenen Zeichenfolge entspricht.</summary>
+        <returns>Die <see langword="Short" /> entsprechende Wert <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt das Visual Basic-Compiler und nicht direkt aus Ihrem Code verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

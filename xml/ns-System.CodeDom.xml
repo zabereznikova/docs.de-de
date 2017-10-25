@@ -1,0 +1,15 @@
+<Namespace Name="System.CodeDom">
+  <Docs>
+    <summary>Die <see cref="N:System.CodeDom" /> -Namespace enthält Klassen, die verwendet werden können, um die Elemente und die Struktur eines Quellcodedokuments darstellen. Die Klassen in diesem Namespace können verwendet werden, um die Struktur der Quellcodedokuments zu modellieren, die Ausgabe als Quellcode in einer unterstützten Sprache, die die Funktion verwenden, können die <see cref="N:System.CodeDom.Compiler" /> Namespace.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Verwenden von CodeDOM zum darstellen und Generieren von Quellcode, finden Sie unter [dynamische Quelle generieren und Kompilieren von](~/docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).  
+  
+ Eine Tabelle, die die CodeDOM-Elemente nach Typ und Funktion aufgelistet, finden Sie unter der [Kurzreferenz zum CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

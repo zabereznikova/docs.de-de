@@ -1,0 +1,59 @@
+<Type Name="DataGridViewCellFormattingEventHandler" FullName="System.Windows.Forms.DataGridViewCellFormattingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DataGridViewCellFormattingEventHandler(object sender, DataGridViewCellFormattingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewCellFormattingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewCellFormattingEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.DataGridViewCellFormattingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.DataGridViewCellFormattingEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Windows.Forms.DataGridView.CellFormatting" />-Ereignisses eines <see cref="T:System.Windows.Forms.DataGridView" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln der <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis, um die Konvertierung eines Zellenwerts in ein Format geeignet für die Anzeige anpassen oder um die Darstellung einer Zelle je nach ihrem Zustand oder Wert anzupassen.  
+  
+ Die <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis tritt jedes Mal, wenn jede Zelle gezeichnet wird also sollten langwierige Verarbeitung, wenn dieses Ereignis behandeln,. Dieses Ereignis tritt auch auf, wenn der Zelle <xref:System.Windows.Forms.DataGridViewCell.FormattedValue%2A> abgerufen wird oder den zugehörigen <xref:System.Windows.Forms.DataGridViewCell.GetFormattedValue%2A> Methode wird aufgerufen.  
+  
+ Bei der Behandlung der <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis, das <xref:System.Windows.Forms.ConvertEventArgs.Value%2A?displayProperty=nameWithType> Eigenschaft mit dem Zellenwert initialisiert wird. Wenn Sie benutzerdefinierte Konvertierung der Wert der Zelle in der Anzeigewert angeben, legen Sie die <xref:System.Windows.Forms.ConvertEventArgs.Value%2A?displayProperty=nameWithType> Eigenschaft dem konvertierten Wert, um sicherzustellen, dass der neue Wert der von der Zelle angegebene Typ ist <xref:System.Windows.Forms.DataGridViewCell.FormattedValueType%2A> Eigenschaft. Um anzugeben, dass keine weitere Formatierung von Werten erforderlich ist, legen die <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A?displayProperty=nameWithType> Eigenschaft `true`.  
+  
+ Wenn der Ereignishandler abgeschlossen wird, wenn die <xref:System.Windows.Forms.ConvertEventArgs.Value%2A?displayProperty=nameWithType> ist `null` oder weist nicht den richtigen Typ aufweist, oder die <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A?displayProperty=nameWithType> Eigenschaft ist `false`, <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> mit formatiert wird die <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>, und <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A> Eigenschaften der Zellenstil zurückgegebenes der <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle%2A?displayProperty=nameWithType> -Eigenschaft, die Initialisierung der Zelle mit <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> Eigenschaft.  
+  
+ Unabhängig vom Wert von der <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A?displayProperty=nameWithType> -Eigenschaft, die Anzeigeeigenschaften fest, der das zurückgegebene Objekt der <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle%2A?displayProperty=nameWithType> Eigenschaft werden verwendet, um die Zelle zu rendern.  
+  
+ Weitere Informationen zu benutzerdefinierten Formatierung mit der <xref:System.Windows.Forms.DataGridView.CellFormatting> -Ereignis finden Sie unter [wie: Anpassen der Datenformatierung im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+  
+ Um Leistungseinbußen zu vermeiden, wenn Sie dieses Ereignis behandeln, Zugriff auf die Zelle über die Parameter von der Ereignishandler, anstatt den direkten Zugriff auf die Zelle ein.  
+  
+ Um die Konvertierung eines formatierten, benutzerdefinierten Werts in einen tatsächlichen Zellwert anzupassen, behandeln die <xref:System.Windows.Forms.DataGridView.CellParsing> Ereignis.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Beim Erstellen eines <xref:System.Windows.Forms.DataGridViewCellFormattingEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie behandelt die <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis.  
+  
+ [!code-cpp[System.Windows.Forms.GridViewUnbound#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.GridViewUnbound/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.GridViewUnbound#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GridViewUnbound/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.GridViewUnbound#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GridViewUnbound/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

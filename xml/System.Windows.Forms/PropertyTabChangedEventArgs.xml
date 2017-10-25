@@ -1,0 +1,125 @@
+<Type Name="PropertyTabChangedEventArgs" FullName="System.Windows.Forms.PropertyTabChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class PropertyTabChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyTabChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.PropertyTabChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Windows.Forms.PropertyGrid.PropertyTabChanged" /> -Ereignis für ein <see cref="T:System.Windows.Forms.PropertyGrid" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged> Ereignis tritt auf, wenn der Benutzer eine neue Registerkarte für Eigenschaften auswählt der <xref:System.Windows.Forms.PropertyGrid>.  
+  
+ Ein <xref:System.Windows.Forms.PropertyTabChangedEventArgs> stellt Daten für die alte und neue gerade ausgewählten Registerkarte bereit.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.PropertyGrid> mit dem Namen `PropertyGrid1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#531](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#531)]
+ [!code-vb[System.Windows.Forms.EventExamples#531](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#531)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyTabChangedEventArgs (System.Windows.Forms.Design.PropertyTab oldTab, System.Windows.Forms.Design.PropertyTab newTab);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Design.PropertyTab oldTab, class System.Windows.Forms.Design.PropertyTab newTab) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PropertyTabChangedEventArgs.#ctor(System.Windows.Forms.Design.PropertyTab,System.Windows.Forms.Design.PropertyTab)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oldTab" Type="System.Windows.Forms.Design.PropertyTab" />
+        <Parameter Name="newTab" Type="System.Windows.Forms.Design.PropertyTab" />
+      </Parameters>
+      <Docs>
+        <param name="oldTab">Die zuvor ausgewählte Registerkarte für Eigenschaften.</param>
+        <param name="newTab">Die neu ausgewählte Registerkarte für Eigenschaften.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.PropertyTabChangedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewTab">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.PropertyTab NewTab { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Design.PropertyTab NewTab" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PropertyTabChangedEventArgs.NewTab" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.PropertyTab</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die neue <see cref="T:System.Windows.Forms.Design.PropertyTab" /> ausgewählten.</summary>
+        <value>Die neu ausgewählte <see cref="T:System.Windows.Forms.Design.PropertyTab" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.PropertyGrid> mit dem Namen `PropertyGrid1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#531](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#531)]
+ [!code-vb[System.Windows.Forms.EventExamples#531](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#531)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldTab">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.PropertyTab OldTab { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Design.PropertyTab OldTab" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PropertyTabChangedEventArgs.OldTab" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.PropertyTab</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die alten <see cref="T:System.Windows.Forms.Design.PropertyTab" /> ausgewählten.</summary>
+        <value>Die alte <see cref="T:System.Windows.Forms.Design.PropertyTab" /> , ausgewählt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.PropertyGrid> mit dem Namen `PropertyGrid1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#531](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#531)]
+ [!code-vb[System.Windows.Forms.EventExamples#531](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#531)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

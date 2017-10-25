@@ -1,0 +1,142 @@
+<Type Name="DataReference" FullName="System.Security.Cryptography.Xml.DataReference">
+  <TypeSignature Language="C#" Value="public sealed class DataReference : System.Security.Cryptography.Xml.EncryptedReference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataReference extends System.Security.Cryptography.Xml.EncryptedReference" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.DataReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.EncryptedReference</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die <see langword="&lt;DataReference&gt;" /> Element in XML-Verschlüsselung verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.DataReference> -Klasse stellt die `<DataReference>` -Element, das den Speicherort der verschlüsselten Daten mit XML-Verschlüsselung verwendet enthält.  
+  
+ `<DataReference>`Elemente sind zum Verweisen auf `<EncryptedData>` Elemente, die mit dem Schlüssel definiert, in der einschließenden verschlüsselt wurden `<EncryptedKey>` Element. Mehrere `<DataReference>` Elemente können auftreten, wenn mehrere `<EncryptedData>` Elemente vorhanden sind, werden mit dem gleichen Schlüssel verschlüsselt.  
+  
+ Weitere Informationen zu XML-Verschlüsselungsstandards finden Sie unter http://www.w3.org/TR/xmlenc-core/.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.Xml.DataReference> Klasse zum Verschlüsseln und Entschlüsseln von mehreren XML-Elementen, die mit unterschiedlichen Sitzungsschlüsseln verwendet.  
+  
+ [!code-csharp[Cryptography.XML.DataReference#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.DataReference/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.DataReference#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.DataReference/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.DataReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.DataReference" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine neue Instanz der der <xref:System.Security.Cryptography.Xml.DataReference> Klasse darstellt, die die `<DataReference>` Element. `<DataReference>`ist ein untergeordnetes Element von der `<ReferenceList>` Element.  
+  
+ Weitere Informationen zu XML-Verschlüsselungsstandards finden Sie unter http://www.w3.org/TR/xmlenc-core/.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.Xml.DataReference> Klasse zum Verschlüsseln und Entschlüsseln von mehreren XML-Elementen, die mit unterschiedlichen Sitzungsschlüsseln verwendet.  
+  
+ [!code-csharp[Cryptography.XML.DataReference#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.DataReference/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.DataReference#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.DataReference/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataReference (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.DataReference.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Ein Uniform Resource Identifier (URI), die auf die verschlüsselten Daten verweist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.DataReference" /> -Klasse unter Verwendung der angegebenen Uniform Resource Identifier (URI).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet den angegebenen Uniform Resource Identifier (URI) So erstellen eine neue Instanz der dem <xref:System.Security.Cryptography.Xml.DataReference> -Klasse steht die `<DataReference>` Element. Der URI Gibt den Speicherort der verschlüsselten Daten. Das `<DataReference>`-Element ist ein untergeordnetes Element des `<ReferenceList>`-Elements.  
+  
+ Weitere Informationen zu XML-Verschlüsselungsstandards finden Sie unter http://www.w3.org/TR/xmlenc-core/.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataReference (string uri, System.Security.Cryptography.Xml.TransformChain tc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uri, class System.Security.Cryptography.Xml.TransformChain tc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.DataReference.#ctor(System.String,System.Security.Cryptography.Xml.TransformChain)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="transformChain" Type="System.Security.Cryptography.Xml.TransformChain" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Ein Uniform Resource Identifier (URI), die auf die verschlüsselten Daten verweist.</param>
+        <param name="tc">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.DataReference" /> -Klasse unter Verwendung der angegebenen Uniform Resource Identifier (URI) und ein <see cref="T:System.Security.Cryptography.Xml.TransformChain" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet den angegebenen Uniform Resource Identifier (URI) und der Transformationskette So erstellen eine neue Instanz der dem <xref:System.Security.Cryptography.Xml.DataReference> -Klasse steht die `<DataReference>` Element. Der URI Gibt den Speicherort der verschlüsselten Daten und die Transformationskette kann XPath-Transformationen, dekomprimierung Transformationen oder Informationen zum Abrufen der verschlüsselten Daten aus einem Dokument für die Aufbewahrung enthalten. `<DataReference>`ist ein untergeordnetes Element von der `<ReferenceList>` Element.  
+  
+ Weitere Informationen zu XML-Verschlüsselungsstandards finden Sie unter http://www.w3.org/TR/xmlenc-core/.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,41 @@
+<Type Name="SqlRowUpdatingEventHandler" FullName="System.Data.SqlClient.SqlRowUpdatingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void SqlRowUpdatingEventHandler(object sender, SqlRowUpdatingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlRowUpdatingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlRowUpdatingEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Data.SqlClient.SqlRowUpdatingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Das <see cref="T:System.Data.SqlClient.SqlRowUpdatingEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Data.SqlClient.SqlDataAdapter.RowUpdating" />-Ereignisses eines <see cref="T:System.Data.SqlClient.SqlDataAdapter" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Handler ist nicht erforderlich, um beliebige Aktionen ausgeführt werden, und Code sollte keine Ausnahmen zu generieren oder zulassen der Ausnahmen an die aufrufende Methode weitergegeben werden. Alle Ausnahmen, die den Aufrufer erreichen, werden ignoriert.  
+  
+ Der Handler möglicherweise verwenden Sie die <xref:System.Data.SqlClient.SqlRowUpdatingEventArgs> , die die Verarbeitung der Updates zu beeinflussen. Beispielsweise kann der Handler wahlweise überspringen Sie das Update der aktuellen Zeile oder überspringen Sie das Update für alle übrigen Zeilen. Beachten Sie, dass die Zeilen in der Reihenfolge aktualisiert werden, dass sie aus der Datenquelle empfangen wurden.  
+  
+ Beim Erstellen eines <xref:System.Data.SqlClient.SqlRowUpdatingEventArgs>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

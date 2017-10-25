@@ -1,0 +1,265 @@
+<Type Name="RedirectionType" FullName="System.ServiceModel.Channels.RedirectionType">
+  <TypeSignature Language="C#" Value="public sealed class RedirectionType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit RedirectionType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.RedirectionType" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Typ, der den Typ der Umleitung darstellt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cache">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.RedirectionType Cache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.RedirectionType Cache" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RedirectionType.Cache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.RedirectionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.ServiceModel.Channels.RedirectionType" /> ab, der den Cacheumleitungstyp darstellt.</summary>
+        <value>Der Cacheumleitungstyp.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Cacheumleitung gibt an, dass die Antwort auf eine vorherige Anforderung verwendet werden soll. Dies entspricht HTTP-Statuscode 304 (nicht verändert).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.RedirectionType Create (string type, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.RedirectionType Create(string type, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RedirectionType.Create(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.RedirectionType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Umleitungstyp.</param>
+        <param name="ns">Der Umleitungsnamespace.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Channels.RedirectionType" />-Klasse mit dem angegebenen Umleitungstyp und dem Umleitungsnamespace.</summary>
+        <returns>Ein Umleitungstyp.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RedirectionType.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit der aktuellen <see cref="T:System.ServiceModel.Channels.RedirectionType" />-Instanz verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Objekt mit der aktuellen <see cref="T:System.ServiceModel.Channels.RedirectionType" />-Instanz übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene Objekt und die aktuelle <see cref="T:System.ServiceModel.Channels.RedirectionType" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RedirectionType.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für diese Instanz ab.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RedirectionType.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace von <see cref="T:System.ServiceModel.Channels.RedirectionType" /> ab.</summary>
+        <value>Der Namespace des Umleitungstyps.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.ServiceModel.Channels.RedirectionType left, System.ServiceModel.Channels.RedirectionType right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.ServiceModel.Channels.RedirectionType left, class System.ServiceModel.Channels.RedirectionType right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RedirectionType.op_Equality(System.ServiceModel.Channels.RedirectionType,System.ServiceModel.Channels.RedirectionType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.ServiceModel.Channels.RedirectionType" />
+        <Parameter Name="right" Type="System.ServiceModel.Channels.RedirectionType" />
+      </Parameters>
+      <Docs>
+        <param name="left">Eine <see cref="T:System.ServiceModel.Channels.RedirectionType" />-Instanz.</param>
+        <param name="right">Eine <see cref="T:System.ServiceModel.Channels.RedirectionType" />-Instanz.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei Instanzen der <see cref="T:System.ServiceModel.Channels.RedirectionType" />-Typen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die Werte von <paramref name="left" /> und <paramref name="right" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.ServiceModel.Channels.RedirectionType left, System.ServiceModel.Channels.RedirectionType right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.ServiceModel.Channels.RedirectionType left, class System.ServiceModel.Channels.RedirectionType right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RedirectionType.op_Inequality(System.ServiceModel.Channels.RedirectionType,System.ServiceModel.Channels.RedirectionType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.ServiceModel.Channels.RedirectionType" />
+        <Parameter Name="right" Type="System.ServiceModel.Channels.RedirectionType" />
+      </Parameters>
+      <Docs>
+        <param name="left">Eine <see cref="T:System.ServiceModel.Channels.RedirectionType" />-Instanz.</param>
+        <param name="right">Eine <see cref="T:System.ServiceModel.Channels.RedirectionType" />-Instanz.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei Instanzen der <see cref="T:System.ServiceModel.Channels.RedirectionType" />-Typen nicht gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die Werte von <paramref name="left" /> und <paramref name="right" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resource">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.RedirectionType Resource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.RedirectionType Resource" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RedirectionType.Resource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.RedirectionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.ServiceModel.Channels.RedirectionType" /> ab, der den Ressourcenumleitungstyp darstellt.</summary>
+        <value>Der Ressourcenumleitungstyp.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ressourcenumleitung gibt an, dass die angeforderte Ressource an den angegebenen Speicherort verlegt wurde. Wenn ein Speicherort angegeben wird, dann wird HTTP-Statuscode 301 (permanent verschoben) oder 307 (temporäre Umleitung) zugeordnet, abhängig von der ausgewählten <xref:System.ServiceModel.Channels.RedirectionDuration>. Wenn mehrere Speicherorte bereitgestellt werden, dann wird der HTTP-Statuscode 300 (ḿehrere Optionen) zugeordnet. Dies ist der Standardwert für <xref:System.ServiceModel.Channels.RedirectionType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RedirectionType.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert das aktuelle <see cref="T:System.ServiceModel.Channels.RedirectionType" />-Objekt in die entsprechende Zeichenfolgendarstellung.</summary>
+        <returns>Die Zeichenfolgendarstellung des Werts des aktuellen <see cref="T:System.ServiceModel.Channels.RedirectionType" />-Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseIntermediary">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.RedirectionType UseIntermediary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.RedirectionType UseIntermediary" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RedirectionType.UseIntermediary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.RedirectionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.ServiceModel.Channels.RedirectionType" /> ab, der den Verwendungsvermittlerumleitungstyp darstellt.</summary>
+        <value>Der Ressourcenumleitungstyp.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Verwendungsvermittlerumleitung gibt an, dass der Zugriff auf die angeforderte Ressource über einen Zwischendienst, z. B. ein HTTP-Proxyserver, erfolgen muss. Dies entspricht HTTP-Statuscode 305 (Proxy verwenden).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RedirectionType.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert von <see cref="T:System.ServiceModel.Channels.RedirectionType" /> ab.</summary>
+        <value>Der Wert des Umleitungstyps.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

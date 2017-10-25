@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime" /> -Namespace enthält erweiterte Typen, die verschiedene Namespaces, wie unterstützen die <see langword="System" />, <see langword="Runtime" />, und die <see langword="Security" /> Namespaces.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Typen in diesem Namespace dienen zur Verwendung in erweiterten Entwicklung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

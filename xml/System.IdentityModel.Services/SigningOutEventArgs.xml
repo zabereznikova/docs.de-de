@@ -1,0 +1,114 @@
+<Type Name="SigningOutEventArgs" FullName="System.IdentityModel.Services.SigningOutEventArgs">
+  <TypeSignature Language="C#" Value="public class SigningOutEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SigningOutEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.SigningOutEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lesen der <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> Eigenschaft in einem Ereignishandler, um zu bestimmen, ob die Abmeldung initiiert wurde, indem Sie die IP-Adresse (eine Bereinigung abmeldeanforderung-Nachricht wurde empfangen, durch Anwendung der vertrauenden Seite), oder gibt an, ob durch die vertrauende (RP) die Abmeldung initiiert wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SigningOutEventArgs (bool isIPInitiated);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isIPInitiated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SigningOutEventArgs.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isIPInitiated" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isIPInitiated">
+          <see langword="true" />Wenn durch die IP-Adresse; Abmeldung angefordert wurde andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Services.SigningOutEventArgs" /> Klasse, indem ein Wert, der angibt, ob die Abmeldung vom Identitätsanbieter (IP) angefordert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> auf den Wert der Eigenschaft festgelegt ist die `isIPInitiated` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IPInitiated">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Services.SigningOutEventArgs IPInitiated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.IdentityModel.Services.SigningOutEventArgs IPInitiated" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SigningOutEventArgs.IPInitiated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.SigningOutEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.IdentityModel.Services.SigningOutEventArgs" /> , der angibt, wurde vom Identitätsanbieter (IP) Abmelden initiiert.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Services.SigningOutEventArgs" /> , besitzt die <see cref="P:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated" /> Eigenschaftensatz <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIPInitiated">
+      <MemberSignature Language="C#" Value="public bool IsIPInitiated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIPInitiated" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob vom Identitätsanbieter (IP) über einen WS-Verbund-Cleanup-Abmeldenachricht ("wsignoutcleanup1.0") Abmelden initiiert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn durch die IP-Adresse Abmeldung initiiert wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem Ereignishandler können Sie die <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> -Eigenschaft können Sie bestimmen, ob die Abmeldung initiiert wurde, indem Sie die IP-Adresse (eine Bereinigung abmeldeanforderung-Nachricht wurde empfangen, durch Anwendung der vertrauenden Seite), oder gibt an, ob durch die vertrauende (RP) die Abmeldung initiiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RPInitiated">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Services.SigningOutEventArgs RPInitiated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.IdentityModel.Services.SigningOutEventArgs RPInitiated" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SigningOutEventArgs.RPInitiated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.SigningOutEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.IdentityModel.Services.SigningOutEventArgs" /> , der angibt, wurde durch die vertrauende (RP) Abmelden initiiert.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Services.SigningOutEventArgs" /> , besitzt die <see cref="P:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated" /> Eigenschaftensatz <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

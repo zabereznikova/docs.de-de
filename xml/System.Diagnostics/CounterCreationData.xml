@@ -1,0 +1,215 @@
+<Type Name="CounterCreationData" FullName="System.Diagnostics.CounterCreationData">
+  <TypeSignature Language="C#" Value="public class CounterCreationData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CounterCreationData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.CounterCreationData" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.CounterCreationDataConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert den Leistungsindikator vom Typ, den Namen und den Hilfetext für einen benutzerdefinierten Leistungsindikator an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Diagnostics.CounterCreationData> Klasse, um einen benutzerdefinierten Leistungsindikator definieren. Dieses Beispiel erstellt die Leistungsindikatoren, die anzeigen, wie viele Elemente in einem Vorgang verarbeitet werden. Im Beispiel initialisiert die Leistungsindikatoren, sammelt Informationen aus, und klicken Sie dann berechnet und die Ergebnisse in der Konsole anzeigt.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CounterCreationData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.CounterCreationData" /> Klasse, um einen Leistungsindikator vom Typ <see langword="NumberOfItems32" />, mit leerem Namen und in der Hilfe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine leere Instanz der Erstellung der <xref:System.Diagnostics.CounterCreationData> Klasse. Da im Beispiel keine Parameter übergibt die <xref:System.Diagnostics.CounterCreationData.CounterHelp%2A>, <xref:System.Diagnostics.CounterCreationData.CounterName%2A>, und <xref:System.Diagnostics.CounterCreationData.CounterType%2A> Eigenschaften wurden nicht angegeben und müssen später definiert werden.  
+  
+ [!code-cpp[Diagnostics_CounterCreationData#3](~/samples/snippets/cpp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CPP/diagnostics_countercreationdata.cpp#3)]
+ [!code-csharp[Diagnostics_CounterCreationData#3](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CS/diagnostics_countercreationdata.cs#3)]
+ [!code-vb[Diagnostics_CounterCreationData#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_CounterCreationData/VB/diagnostics_countercreationdata.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CounterCreationData (string counterName, string counterHelp, System.Diagnostics.PerformanceCounterType counterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string counterName, string counterHelp, valuetype System.Diagnostics.PerformanceCounterType counterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationData.#ctor(System.String,System.String,System.Diagnostics.PerformanceCounterType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="counterHelp" Type="System.String" />
+        <Parameter Name="counterType" Type="System.Diagnostics.PerformanceCounterType" />
+      </Parameters>
+      <Docs>
+        <param name="counterName">Der Name des Leistungsindikators, der in seiner Kategorie eindeutig sein muss.</param>
+        <param name="counterHelp">Der Text, der das Verhalten des Zählers beschreibt.</param>
+        <param name="counterType">Ein <see cref="T:System.Diagnostics.PerformanceCounterType" /> , die das Verhalten des Zählers identifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.CounterCreationData" /> Klasse, um einen Leistungsindikator des angegebenen Typs, mit dem angegebenen Indikatorname und Hilfe-Zeichenfolgen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Instanz von der <xref:System.Diagnostics.CounterCreationData> Klasse, und übergeben Sie Parameter Festlegen der <xref:System.Diagnostics.CounterCreationData.CounterHelp%2A>, <xref:System.Diagnostics.CounterCreationData.CounterName%2A> und <xref:System.Diagnostics.CounterCreationData.CounterType%2A> Eigenschaften des Objekts, wenn es initialisiert wird.  
+  
+ [!code-cpp[Diagnostics_CounterCreationData#2](~/samples/snippets/cpp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CPP/diagnostics_countercreationdata.cpp#2)]
+ [!code-csharp[Diagnostics_CounterCreationData#2](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CS/diagnostics_countercreationdata.cs#2)]
+ [!code-vb[Diagnostics_CounterCreationData#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_CounterCreationData/VB/diagnostics_countercreationdata.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Sie haben einen Wert für angegeben <paramref name="counterType" /> also kein Mitglied der <see cref="T:System.Diagnostics.PerformanceCounterType" /> Enumeration.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="counterHelp" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterHelp">
+      <MemberSignature Language="C#" Value="public string CounterHelp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CounterHelp" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterCreationData.CounterHelp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Description of this counter.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der benutzerdefinierten Leistungsindikator Beschreibung.</summary>
+        <value>Der Text, der das Verhalten des Zählers beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen und Festlegen der <xref:System.Diagnostics.CounterCreationData.CounterHelp%2A> Eigenschaft. Dieses Beispiel erstellt zwei Leistungsindikatoren und legt ihre <xref:System.Diagnostics.CounterCreationData.CounterHelp%2A> Eigenschaft mithilfe von verschiedenen Techniken. Bei der Initialisierung des ersten Indikators wird die <xref:System.Diagnostics.CounterCreationData.CounterHelp%2A> Daten werden an den Konstruktor übergeben, während die zweite Eigenschaft explizit Indikatorensätze.  
+  
+ [!code-cpp[Diagnostics_CounterCreationData#5](~/samples/snippets/cpp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CPP/diagnostics_countercreationdata.cpp#5)]
+ [!code-csharp[Diagnostics_CounterCreationData#5](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CS/diagnostics_countercreationdata.cs#5)]
+ [!code-vb[Diagnostics_CounterCreationData#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_CounterCreationData/VB/diagnostics_countercreationdata.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene Wert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterName">
+      <MemberSignature Language="C#" Value="public string CounterName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CounterName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterCreationData.CounterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Name of this counter.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des benutzerdefinierten Leistungsindikators fest.</summary>
+        <value>Ein Name für den Leistungsindikator, der in der Kategorie eindeutig ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen und Festlegen der <xref:System.Diagnostics.CounterCreationData.CounterName%2A> Eigenschaft. Dieses Beispiel erstellt zwei Leistungsindikatoren und legt ihre <xref:System.Diagnostics.CounterCreationData.CounterName%2A> Eigenschaft mithilfe von verschiedenen Techniken. Bei der Initialisierung des ersten Indikators wird die <xref:System.Diagnostics.CounterCreationData.CounterName%2A> Daten werden an den Konstruktor übergeben, während die zweite Eigenschaft explizit Indikatorensätze.  
+  
+ [!code-cpp[Diagnostics_CounterCreationData#4](~/samples/snippets/cpp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CPP/diagnostics_countercreationdata.cpp#4)]
+ [!code-csharp[Diagnostics_CounterCreationData#4](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CS/diagnostics_countercreationdata.cs#4)]
+ [!code-vb[Diagnostics_CounterCreationData#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_CounterCreationData/VB/diagnostics_countercreationdata.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert liegt nicht zwischen 1 und 80 Zeichen lang oder enthält Sie doppelte Anführungszeichen, Steuerzeichen oder führende bzw. nachstehende Leerzeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounterType CounterType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.PerformanceCounterType CounterType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterCreationData.CounterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Diagnostics.PerformanceCounterType), "NumberOfItems32")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Type of this counter.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Leistungsindikator vom Typ des benutzerdefinierten Leistungsindikators.</summary>
+        <value>Ein <see cref="T:System.Diagnostics.PerformanceCounterType" /> , definiert das Verhalten des Leistungsindikators "".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen und Festlegen der <xref:System.Diagnostics.CounterCreationData.CounterType%2A> Eigenschaft. Dieses Beispiel erstellt zwei Leistungsindikatoren und legt ihre <xref:System.Diagnostics.CounterCreationData.CounterType%2A> Eigenschaft mithilfe von verschiedenen Techniken. Bei der Initialisierung des ersten Indikators wird die <xref:System.Diagnostics.CounterCreationData.CounterType%2A> Daten werden an den Konstruktor übergeben, während die zweite Eigenschaft explizit Indikatorensätze.  
+  
+ [!code-cpp[Diagnostics_CounterCreationData#6](~/samples/snippets/cpp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CPP/diagnostics_countercreationdata.cpp#6)]
+ [!code-csharp[Diagnostics_CounterCreationData#6](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CS/diagnostics_countercreationdata.cs#6)]
+ [!code-vb[Diagnostics_CounterCreationData#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_CounterCreationData/VB/diagnostics_countercreationdata.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Sie haben angegeben, einen Typ, der kein Mitglied von ist das <see cref="T:System.Diagnostics.PerformanceCounterType" /> Enumeration.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

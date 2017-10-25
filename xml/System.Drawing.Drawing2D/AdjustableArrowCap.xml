@@ -1,0 +1,182 @@
+<Type Name="AdjustableArrowCap" FullName="System.Drawing.Drawing2D.AdjustableArrowCap">
+  <TypeSignature Language="C#" Value="public sealed class AdjustableArrowCap : System.Drawing.Drawing2D.CustomLineCap" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AdjustableArrowCap extends System.Drawing.Drawing2D.CustomLineCap" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.AdjustableArrowCap" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Drawing2D.CustomLineCap</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine veränderbare pfeilförmigen Linienende dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AdjustableArrowCap (float width, float height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 width, float32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.AdjustableArrowCap.#ctor(System.Single,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die Breite des Pfeils.</param>
+        <param name="height">Die Höhe des Pfeils.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Drawing2D.AdjustableArrowCap" />-Klasse mit der angegebenen Breite und Höhe. Der Pfeil Linienenden mit diesem Konstruktor erstellt werden immer gefüllt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einem <xref:System.Windows.Forms.Control.OnPaint%2A> Ereignisobjekt. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt ein <xref:System.Drawing.Drawing2D.AdjustableArrowCap> Objekt mit dem Namen `myArrow`.  
+  
+-   Erstellt eine <xref:System.Drawing.Pen> Objekt mit dem Namen `capPen`, und legt dessen <xref:System.Drawing.Pen.CustomStartCap%2A> und <xref:System.Drawing.Pen.CustomEndCap%2A> Eigenschaften gleich `myArrow`.  
+  
+-   Verwendet die <xref:System.Drawing.Graphics.DrawLine%2A> Methode zum Zeichnen eine Linie Obergrenze durch zwei Pfeile auf dem Bildschirm.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMisc#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMisc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMisc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AdjustableArrowCap (float width, float height, bool isFilled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 width, float32 height, bool isFilled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.AdjustableArrowCap.#ctor(System.Single,System.Single,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="isFilled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die Breite des Pfeils.</param>
+        <param name="height">Die Höhe des Pfeils.</param>
+        <param name="isFilled">
+          <see langword="true" />Füllen Sie das Pfeilende; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Drawing2D.AdjustableArrowCap" /> Klasse mit der angegebenen Breite, Höhe und Fill-Eigenschaft. Gibt an, ob ein Pfeilende ausgefüllt wird, hängt davon ab, das übergebene Argument der <paramref name="isFilled" /> Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einem <xref:System.Windows.Forms.Control.OnPaint%2A> Ereignisobjekt. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt ein <xref:System.Drawing.Drawing2D.AdjustableArrowCap> Objekt mit dem Namen `myArrow`.  
+  
+-   Erstellt eine <xref:System.Drawing.Pen> Objekt mit dem Namen `capPen`, und legt dessen <xref:System.Drawing.Pen.CustomStartCap%2A> und <xref:System.Drawing.Pen.CustomEndCap%2A> Eigenschaften gleich `myArrow`.  
+  
+-   Verwendet die <xref:System.Drawing.Graphics.DrawLine%2A> Methode zum Zeichnen eine Linie Obergrenze durch zwei Pfeile auf dem Bildschirm.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMisc#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMisc#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMisc#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filled">
+      <MemberSignature Language="C#" Value="public bool Filled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Filled" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.AdjustableArrowCap.Filled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob das Pfeilende ausgefüllt ist.</summary>
+        <value>Diese Eigenschaft ist <see langword="true" /> ist das Pfeilende gefüllte ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public float Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.AdjustableArrowCap.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Höhe der Abdeckung Pfeil.</summary>
+        <value>Die Höhe der Abdeckung oben-Taste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Höhe der Abdeckung oben-Taste wird von der Breite der skaliert die <xref:System.Drawing.Pen> Objekt verwendet, um die Obergrenze gerade Linie zu zeichnen. Beispielsweise wenn Sie eine Enden versehene Linie mit einem Stift zeichnen verfügt, die eine Breite von 5 Pixel und die <xref:System.Drawing.Drawing2D.AdjustableArrowCap> Objekt verfügt über eine Höhe von 3, dann ist das Pfeilende 15 Pixel gezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleInset">
+      <MemberSignature Language="C#" Value="public float MiddleInset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 MiddleInset" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.AdjustableArrowCap.MiddleInset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl von Einheiten zwischen den Überblick über das Pfeilende und die Füllung fest.</summary>
+        <value>Die Anzahl von Einheiten zwischen den Überblick über das Pfeilende und die Füllung für das Pfeilende.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public float Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.AdjustableArrowCap.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite der Abdeckung oben-Taste.</summary>
+        <value>Die Breite des der Pfeilende in Einheiten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Breite der Abdeckung oben-Taste wird von der Breite der skaliert die <xref:System.Drawing.Pen> Objekt verwendet, um die Obergrenze gerade Linie zu zeichnen. Beispielsweise wenn Sie eine Enden versehene Linie mit einem Stift zeichnen verfügt, die eine Breite von 5 Pixel und die <xref:System.Drawing.Drawing2D.AdjustableArrowCap> Objekt hat eine Breite von 3, dann ist das Pfeilende gezeichneten 15 Pixel breit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

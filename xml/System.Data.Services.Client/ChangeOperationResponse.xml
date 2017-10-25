@@ -1,0 +1,147 @@
+<Type Name="ChangeOperationResponse" FullName="System.Data.Services.Client.ChangeOperationResponse">
+  <TypeSignature Language="C#" Value="public sealed class ChangeOperationResponse : System.Data.Services.Client.OperationResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ChangeOperationResponse extends System.Data.Services.Client.OperationResponse" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.ChangeOperationResponse" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Services.Client.OperationResponse</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Nach einem Aufruf von <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" /> zurückgegebene Ergebnisse, wenn von der <see cref="T:System.Data.Services.Client.DataServiceResponse" />-Klasse zurückgegebene Vorgangsantworten aufgelistet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Services.Client.ChangeOperationResponse>-Objekte sollen nicht von einem Benutzer dieser Bibliothek direkt erstellt werden. Stattdessen werden beim Auflisten der über den Enumerator in der <xref:System.Data.Services.Client.DataServiceResponse>-Klasse zurückgegebenen Vorgangsantworten Verweise zurückgegeben.  
+  
+ <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> sendet an den Datendienst ausstehende Änderungen, die seit dem letzten Aufruf von <xref:System.Data.Services.Client.DataServiceContext> vom <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> gesammelt wurden. Dem Kontext werden Änderungen hinzugefügt, indem <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>, <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>, <xref:System.Data.Services.Client.DataServiceContext.Detach%2A>, <xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A> und ähnliche Methoden aufgerufen werden.  
+  
+ <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> gibt eine <xref:System.Data.Services.Client.DataServiceResponse> zurück, die die Antwort auf alle an den Datendienst gesendeten Vorgänge darstellt. Das <xref:System.Data.Services.Client.DataServiceResponse>-Objekt enthält eine Sequenz von <xref:System.Data.Services.Client.ChangeOperationResponse>-Objekten, die wiederum eine Sequenz von <xref:System.Data.Services.Client.EntityDescriptor>-Instanzen oder <xref:System.Data.Services.Client.LinkDescriptor>-Instanzen enthalten, die die beibehaltenen Änderungen oder Änderungsversuche darstellen.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie die Ergebnisse eines Aufrufs von verarbeitet <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
+  
+```  
+DataServiceContext service = new DataServiceContext(new Uri("http://myserviceroot"));  
+  
+// Do insert, update, delete, or attach operations.  
+  
+DataServiceResponse dsr;  
+  
+try  
+{  
+    dsr = service.SaveChanges(SaveChangesOptions.Batch);    
+   // Or service.SaveChanges(SaveChangesOptions.ContinueOnError);   
+   //Or service.SaveChanges();  
+   // If there are no errors during save changes, process the results:  
+  
+    if (dsr.IsBatchResponse)  
+    {  
+           /*inspect HTTP artifacts associated with the entire batch:  
+                             dsr.BatchHeaders, dsr.BatchStatusCode*/ }  
+  
+    foreach (ChangeOperationResponse cor in dsr)  
+    {  
+  
+            if (cor.Descriptor is EntityDescriptor)  
+            {  
+                EntityDescriptor ed = (EntityDescriptor)cor.Descriptor;  
+                // This should be the case if  
+                // SaveChanges did not throw an exception.    
+  
+                // After an entity is processed by SaveChanges,  
+                // it is always moved to the unchanged state.  
+                System.Diagnostics.Debug.Assert(  
+                           ed.State == EntityStates.Unchanged);    
+                // This shows that the state should be unchanged if  
+                // the result is success.  
+  
+                //process the entity in the response payload: ed.Entity  
+            }  
+            else if (cor.Descriptor is LinkDescriptor)  
+            {  
+                LinkDescriptor ld = (LinkDescriptor)cor.Descriptor;  
+               // This should be the case if SaveChanges did not throw an exception.  
+  
+               // After an entity is processed by SaveChanges it  
+               // is always moved to the unchanged state.  
+                System.Diagnostics.Debug.Assert(  
+                            ld.State == EntityStates.Unchanged);    
+                // The state should be unchanged if the result is success.  
+  
+                //process the link in the response payload: ld.Source,  
+                // ld.SourceProperty, or ld.Target.  
+            }  
+     }  
+  
+}  
+catch (DataServiceSaveException se)  
+{  
+    // Error while saving changes  
+    dsr = se.Response;  
+  
+    if (dsr.IsBatchResponse)   
+    {   
+        /*inspect HTTP artifacts associated with the entire batch:  
+             dsr.BatchHeaders, dsr.BatchStatusCode*/   
+}      
+}  
+  
+    foreach (ChangeOperationResponse cor in dsr)  
+    {  
+        if (cor.Error != null)  
+        {  
+            //process error  
+        }  
+        else  
+        {  
+            // same success case processing as in the loop over DSRs results in   
+            // the try block. You could put that processing in a method   
+            // and call it from here.      
+        }  
+    }  
+  
+}  
+  
+ catch(Exception)  
+ {  
+    // Error while saving changes, but not thrown by the client library.  
+  
+    // Process ArgumentException, InvalidOperationException, or similar.  
+}  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Descriptor">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.Descriptor Descriptor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Services.Client.Descriptor Descriptor" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.ChangeOperationResponse.Descriptor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.Descriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den durch einen Änderungsvorgang geänderten <see cref="T:System.Data.Services.Client.EntityDescriptor" /> oder <see cref="T:System.Data.Services.Client.LinkDescriptor" /> ab.</summary>
+        <value>Ein durch einen Änderungsvorgang geänderter <see cref="T:System.Data.Services.Client.EntityDescriptor" /> oder <see cref="T:System.Data.Services.Client.LinkDescriptor" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

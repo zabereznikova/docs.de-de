@@ -1,0 +1,87 @@
+<Type Name="ContentOperations" FullName="System.Windows.ContentOperations">
+  <TypeSignature Language="C#" Value="public static class ContentOperations" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ContentOperations extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ContentOperations" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt statische Hilfsmethoden zum Abrufen oder Festlegen der Position einer <see cref="T:System.Windows.ContentElement" /> in einer Struktur.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die meisten Element Szenarien, die Eigenschaft <xref:System.Windows.FrameworkContentElement.Parent%2A> sollte verwendet werden, anstelle von Elementen der <xref:System.Windows.ContentOperations>, wenn <xref:System.Windows.FrameworkContentElement.Parent%2A> verfügbar ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetParent">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyObject GetParent (System.Windows.ContentElement reference);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyObject GetParent(class System.Windows.ContentElement reference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ContentOperations.GetParent(System.Windows.ContentElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reference" Type="System.Windows.ContentElement" />
+      </Parameters>
+      <Docs>
+        <param name="reference">Die <see cref="T:System.Windows.ContentElement" /> auf das übergeordnete Element abgerufen.</param>
+        <summary>Ruft das übergeordnete Element des angegebenen <see cref="T:System.Windows.ContentElement" />.</summary>
+        <returns>Das übergeordnete Element in der aktuellen Struktur.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten praktische <xref:System.Windows.ContentElement> abgeleiteten Klassen im [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] sind auch eine <xref:System.Windows.FrameworkContentElement> abgeleitete Klasse. Für diese Klassen die <xref:System.Windows.FrameworkContentElement.Parent%2A> Eigenschaft sollte stattdessen verwendet werden.  
+  
+ <xref:System.Windows.FrameworkContentElement.Parent%2A>Gibt das übergeordnete Element in der logischen Struktur, die dasselbe Element möglicherweise nicht wie zurückgegeben <xref:System.Windows.ContentOperations.GetParent%2A>. <xref:System.Windows.ContentOperations.GetParent%2A>speziell zum Beheben bestimmter Architekturprobleme bei dem eine <xref:System.Windows.ContentElement> -Klasse, die nicht auch ist eine <xref:System.Windows.FrameworkContentElement> vorhanden ist, in einer Struktur, die nicht streng genommen der logischen Struktur oder die visuelle Struktur ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParent">
+      <MemberSignature Language="C#" Value="public static void SetParent (System.Windows.ContentElement reference, System.Windows.DependencyObject parent);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetParent(class System.Windows.ContentElement reference, class System.Windows.DependencyObject parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ContentOperations.SetParent(System.Windows.ContentElement,System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reference" Type="System.Windows.ContentElement" />
+        <Parameter Name="parent" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="reference">Die <see cref="T:System.Windows.ContentElement" /> zum Neuzuordnen des übergeordneten Elements.</param>
+        <param name="parent">Das neue übergeordnete Element.</param>
+        <summary>Legt das übergeordnete Element des bereitgestellten <see cref="T:System.Windows.ContentElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Definieren einer <xref:System.Windows.ContentElement> hosting und Inhaltsmodell für eine <xref:System.Windows.UIElement> Klasse. Die <xref:System.Windows.Controls.Primitives.DocumentViewerBase> Klasse verwendet diese Methode intern zum Einbinden der <xref:System.Windows.Controls.Primitives.DocumentViewerBase.Document%2A> content-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

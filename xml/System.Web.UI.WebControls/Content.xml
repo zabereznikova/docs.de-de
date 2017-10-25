@@ -1,0 +1,356 @@
+<Type Name="Content" FullName="System.Web.UI.WebControls.Content">
+  <TypeSignature Language="C#" Value="public class Content : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Content extends System.Web.UI.Control implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Content" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.ContentDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.ContentBuilderInternal))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Text, Markup und Serversteuerelemente, die in Form eines <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" />-Steuerelements auf einer Masterseite gerendert werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.WebControls.Content> Steuerelement ist ein Container für den Inhalt und die Steuerelemente einer Inhaltsseite. Ein <xref:System.Web.UI.WebControls.Content> Steuerelement wird nur mit einer Masterseite, die eine entsprechende definiert verwendet <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement. Ein <xref:System.Web.UI.WebControls.Content> Steuerelement wird in der Steuerelementhierarchie zur Laufzeit nicht hinzugefügt. Stattdessen der Inhalt innerhalb der <xref:System.Web.UI.WebControls.Content> Steuerelement direkt in die entsprechende zusammengeführt <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.Content> Steuerelement zugeordnet ist ein <xref:System.Web.UI.WebControls.ContentPlaceHolder> mithilfe seiner <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> Eigenschaft. Festlegen der <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> auf den Wert der Eigenschaft der <xref:System.Web.UI.Control.ID%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement auf einer Masterseite. Wenn die URL der Inhaltsseite aufgerufen wird, alle Steuerelemente für den Text, Markup und die enthaltenen der <xref:System.Web.UI.WebControls.Content> Steuerelement gerendert werden die <xref:System.Web.UI.WebControls.ContentPlaceHolder> auf der Masterseite und die Adresse des Browsers Balken wird der Name der Inhaltsseite angezeigt.  
+  
+ Weitere Informationen zu Masterseiten und Inhaltsseiten, finden Sie unter [ASP.NET Masterseiten](http://msdn.microsoft.com/library/4e53eedf-8304-4e7a-aed1-691a2623b28b).  
+  
+<a name="DeclarativeSyntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:Content  
+    ContentPlaceHolderID="string"  
+    EnableViewState="True|False"  
+    ID="string"  
+    runat="server">  
+    Visible="True|False"  
+        <!-- child controls -->  
+</asp:Content>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Content> Steuerelement, um den Inhalt einer Masterseite zu definieren. Die erste Webseite ist eine Masterseite und definiert einen Inhaltsbereich mithilfe einer <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement.  
+  
+ [!code-xml[System.Web.UI.MasterPage_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.MasterPage_1/CS/MasterPageSample_1cs.master#1)]   
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Inhaltsseite für die vorhergehenden Gestaltungsvorlage verwendet wird. Text, Markup und Serversteuerelemente, die innerhalb der <xref:System.Web.UI.WebControls.Content> Steuerelementvorlage gerendert werden die <xref:System.Web.UI.WebControls.ContentPlaceHolder> auf der Masterseite.  
+  
+```csharp  
+<%@ Page Language="C#" MasterPageFile="~/MasterPageSample_1cs.master" Title="Content Page"%>  
+  
+<asp:content   
+    runat="server"  
+    contentplaceholderid="ContentPlaceHolder1" >Hello, Master Pages!</asp:content>  
+```  
+  
+```vb  
+<%@ Page Language="VB" MasterPageFile="~/MasterPageSample_1vb.master" Title="Content Page"%>  
+  
+<asp:content   
+    runat="server"  
+    contentplaceholderid="ContentPlaceHolder1" >Hello, Master Pages!</asp:content>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Content ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Content.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.CompositeDataBoundControl" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Content> Steuerelement wird in der Regel deklarativ und nicht programmgesteuert erstellt. Ein Beispiel finden Sie unter <xref:System.Web.UI.WebControls.Content>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentPlaceHolderID">
+      <MemberSignature Language="C#" Value="public string ContentPlaceHolderID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentPlaceHolderID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Content.ContentPlaceHolderID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.IDReferenceProperty(typeof(System.Web.UI.WebControls.ContentPlaceHolder))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID des dem <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" /> Steuerelement, das dem aktuellen Inhalt zugeordnet ist.</summary>
+        <value>Eine Zeichenfolge, enthält die ID des dem <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" /> des aktuellen Inhalts zugeordnet. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Inhalte, die von gekapselt wird, die <xref:System.Web.UI.WebControls.Content> Steuerelement gerendert wird, auf das verwiesen wird <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement auf einer Masterseite. Ein <xref:System.Web.UI.WebControls.Content> Steuerelement wird in der Steuerelementhierarchie zur Laufzeit nicht hinzugefügt.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement auf einer ASP.NET-Webseite.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.Content> Klasse.  
+  
+```csharp  
+<%@ Page Language="C#" MasterPageFile="~/MasterPageSample_1cs.master" Title="Content Page"%>  
+  
+<asp:content   
+    runat="server"  
+    contentplaceholderid="ContentPlaceHolder1" >Hello, Master Pages!</asp:content>  
+```  
+  
+```vb  
+<%@ Page Language="VB" MasterPageFile="~/MasterPageSample_1vb.master" Title="Content Page"%>  
+  
+<asp:content   
+    runat="server"  
+    contentplaceholderid="ContentPlaceHolder1" >Hello, Master Pages!</asp:content>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, die Eigenschaft zur Laufzeit festgelegt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBinding">
+      <MemberSignature Language="C#" Value="public event EventHandler DataBinding;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DataBinding" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Content.DataBinding" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Steuerelement an eine Datenquelle gebunden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Content.DataBinding> Ereignis wird nie aufgerufen und nicht in visuellen Designern angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Disposed">
+      <MemberSignature Language="C#" Value="public event EventHandler Disposed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Disposed" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Content.Disposed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Steuerelement aus dem Arbeitsspeicher freigegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Content.Disposed> Ereignis wird nie aufgerufen und nicht in visuellen Designern angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public event EventHandler Init;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Init" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Content.Init" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Steuerelement initialisiert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Content.Init> Ereignis wird nie aufgerufen und nicht in visuellen Designern angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public event EventHandler Load;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Load" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Content.Load" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Serversteuerelement in geladen ist die <see cref="T:System.Web.UI.Page" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Content.Load> Ereignis wird nie aufgerufen und nicht in visuellen Designern angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreRender">
+      <MemberSignature Language="C#" Value="public event EventHandler PreRender;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PreRender" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Content.PreRender" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Webserversteuerelement auf die enthaltende Rendern <see cref="T:System.Web.UI.Page" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Content.PreRender> Ereignis wird nie aufgerufen und nicht in visuellen Designern angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unload">
+      <MemberSignature Language="C#" Value="public event EventHandler Unload;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Unload" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Content.Unload" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Serversteuerelement aus dem Arbeitsspeicher entladen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Content.Unload> Ereignis wird nie aufgerufen und nicht in visuellen Designern angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

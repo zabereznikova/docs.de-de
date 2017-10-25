@@ -1,0 +1,803 @@
+<Type Name="Cursors" FullName="System.Windows.Input.Cursors">
+  <TypeSignature Language="C#" Value="public static class Cursors" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Cursors extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Cursors" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Satz von Standardcursorn.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese statische Klasse definiert einen Satz von standardcursorn allgemeine für Anwendungen.  
+  
+ Die verschiedenen Eigenschaften für statischen Cursor definieren, sind nicht direkt verwendet werden kann, in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], jedoch indirekt durch zwei mögliche Mechanismen verwendet werden:  
+  
+-   Die <xref:System.Windows.Input.Cursor> Klasse führt die Konvertierung vom Typ für ein beliebiges [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] -Attribut, das Typ akzeptiert <xref:System.Windows.Input.Cursor>, sodass der Wert der <xref:System.Windows.Input.CursorType> Enumeration angegeben, wie der Attributwert die statische ausgewertet wird <xref:System.Windows.Input.Cursors> Eigenschaften.  
+  
+-   Ein statische Eigenschaft-Wert kann verwendet werden, über die [X: statische Markuperweiterung](~/docs/framework/xaml-services/x-static-markup-extension.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppStarting">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor AppStarting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor AppStarting" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.AppStarting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Windows.Input.Cursor" /> ab, der beim Starten einer Anwendung angezeigt wird.</summary>
+        <value>Der AppStarting-Cursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.Cursors.AppStarting%2A> in der Regel an, dass das System Informationen lädt, aber die Benutzeroberfläche Eingaben behandeln kann.  
+  
+<a name="xamlTextUsage_AppStarting"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arrow">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor Arrow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor Arrow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.Arrow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfeil <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Der Pfeilcursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Pfeil <xref:System.Windows.Input.Cursor> ist in der Regel der Standardcursor.  
+  
+<a name="xamlTextUsage_Arrow"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrowCD">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor ArrowCD { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor ArrowCD" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.ArrowCD" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfeil mit einem Compact Disk- <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Der arrowCd-Cursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ArrowCD"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cross">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor Cross { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor Cross" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.Cross" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fadenkreuz-<see cref="T:System.Windows.Input.Cursor" /> ab.</summary>
+        <value>Der Fadenkreuzcursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Cursor wird in der Regel über Regionen, in denen ein Vorgang ausgeführt werden kann.  
+  
+<a name="xamlTextUsage_Cross"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hand">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor Hand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor Hand" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.Hand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Windows.Input.Cursor" /> des Typ Hand ab.</summary>
+        <value>Der Handcursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Handsymbol <xref:System.Windows.Input.Cursor> in der Regel an der Zeiger über einen Link ist.  
+  
+<a name="xamlTextUsage_Hand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Help">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor Help { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor Help" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.Help" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Hilfe-<see cref="T:System.Windows.Input.Cursor" /> ab. Dabei handelt es sich um eine Kombination aus einem Pfeil und einem Fragezeichen.</summary>
+        <value>Der Hilfecursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird dieser Cursor angezeigt, wenn kontextbezogene Hilfe verfügbar ist.  
+  
+<a name="xamlTextUsage_Help"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IBeam">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor IBeam { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor IBeam" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.IBeam" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen i-Balken <see cref="T:System.Windows.Input.Cursor" />, der verwendet wird, anzeigen, wo der Textcursor angezeigt wird, wenn mit der Maus geklickt wird.</summary>
+        <value>Der „IBeam“-Cursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_IBeam"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor No { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor No" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.No" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Input.Cursor" /> ab, der angibt, dass eine bestimmte Region für einen angegebenen Vorgang ungültig ist.</summary>
+        <value>Der No-Cursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_No"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor None { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor None" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.None" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen speziellen Cursor ab, der nicht sichtbar ist.</summary>
+        <value>Der unsichtbare Cursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.Cursors.None%2A> Cursor bietet eine Möglichkeit, den Cursor zu verbergen.  
+  
+<a name="xamlTextUsage_None"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pen">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor Pen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor Pen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.Pen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Stift-ab <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Der Stiftcursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Pen"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollAll">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor ScrollAll { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor ScrollAll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.ScrollAll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bildlauf alle <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Das Scroll alle Cursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ScrollAll"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollE">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor ScrollE { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor ScrollE" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.ScrollE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, der einen Ost-Bildlauf <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Eine Osten Scroll-Cursors.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ScrollE"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollN">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor ScrollN { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor ScrollN" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.ScrollN" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bildlauf Nord <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Eine North Scroll-Cursors.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ScrollN"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollNE">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor ScrollNE { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor ScrollNE" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.ScrollNE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Nordost Scroll-Cursor ab.</summary>
+        <value>Ein Bildlauf Nordost <see cref="T:System.Windows.Input.Cursor" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollNS">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor ScrollNS { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor ScrollNS" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.ScrollNS" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Nord/Süd Scroll-Cursors ab.</summary>
+        <value>Ein Bildlauf Nord/Süd <see cref="T:System.Windows.Input.Cursor" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ScrollNS"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollNW">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor ScrollNW { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor ScrollNW" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.ScrollNW" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Nordwesten Scroll-Cursors ab.</summary>
+        <value>Das Scroll Nordwest <see cref="T:System.Windows.Input.Cursor" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ScrollNW"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollS">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor ScrollS { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor ScrollS" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.ScrollS" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bildlauf Süd <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Der Süd Scroll-Cursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ScrollS"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollSE">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor ScrollSE { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor ScrollSE" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.ScrollSE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Süd/Ost-Bildlauf <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Der Süd/Ost-Bildlaufcursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ScrollSE"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollSW">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor ScrollSW { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor ScrollSW" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.ScrollSW" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bildlauf Südwesten <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Die Richtung Südwesten Scroll-Cursors.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ScrollSW"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollW">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor ScrollW { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor ScrollW" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.ScrollW" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bildlauf west <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Das Scroll-West-Cursors.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ScrollW"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollWE">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor ScrollWE { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor ScrollWE" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.ScrollWE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen West/Ost-Bildlauf <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Ein West/Ost-Bildlaufcursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ScrollWE"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeAll">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor SizeAll { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor SizeAll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.SizeAll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine vier Spitzen <see cref="T:System.Windows.Input.Cursor" />, die besteht aus vier verbundenen Pfeilen, die Richtung Norden, Süden, Osten und Westen zeigen.</summary>
+        <value>Ein Cursor als Pfeil mit vier Spitzen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_SizeAll"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeNESW">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor SizeNESW { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor SizeNESW" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.SizeNESW" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen zweiköpfigen Nordost/Südwest-größenanpassung <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Ein zweiköpfiger Cursor für Nordost/Südwest-Größenanpassung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_SizeNESW"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeNS">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor SizeNS { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor SizeNS" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.SizeNS" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen zweiköpfigen Nord/Süd-größenanpassung <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Ein zweiköpfiger Cursor für die Nord/Süd-Größenanpassung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_SizeNS"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeNWSE">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor SizeNWSE { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor SizeNWSE" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.SizeNWSE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen zweiköpfigen Nordwest/Südost-größenanpassung <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Ein zweiköpfiger Cursor für Nordwest/Südwest-Größenanpassung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_SizeNWSE"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeWE">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor SizeWE { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor SizeWE" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.SizeWE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen zweiköpfigen West/OST-größenanpassung <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Ein zweiköpfiger Cursor für die West/Ost-Größenanpassung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpArrow">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor UpArrow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor UpArrow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.UpArrow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Pfeil nach oben <see cref="T:System.Windows.Input.Cursor" />, dient normalerweise zum Bezeichnen einer Einfügemarke.</summary>
+        <value>Ein Aufwärtspfeilcursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_UpArrow"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.Cursor Wait { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.Cursor Wait" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Cursors.Wait" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen warten (oder eine Sanduhr) <see cref="T:System.Windows.Input.Cursor" />.</summary>
+        <value>Ein Wartecursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.Windows.Input.Cursor> in der Regel an, dass die Anwendung einen Vorgang ausgelastet ist.  
+  
+<a name="xamlTextUsage_Wait"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Siehe Hinweis auf <xref:System.Windows.Input.Cursors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

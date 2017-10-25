@@ -1,0 +1,105 @@
+<Type Name="HeaderElement" FullName="System.Web.Caching.HeaderElement">
+  <TypeSignature Language="C#" Value="public sealed class HeaderElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit HeaderElement extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.HeaderElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen einzelnen HTTP-Header, der in einer Antwort aus dem Ausgabecache enthalten ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Caching.HeaderElement> Klasse stellt den Inhalt eines HTTP-Headers im Ausgabecache als Name/Wert-Paar dar. Der Name und der Wert müssen ungleich Null sein. Die Auflistung aller <xref:System.Web.Caching.HeaderElement> -Instanzen für ein Eintrag im Ausgabecache sich in befindet der <xref:System.Web.Caching.IOutputCacheEntry.HeaderElements%2A> Auflistung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HeaderElement (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.HeaderElement.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des HTTP-Headers.</param>
+        <param name="value">Der Wert des HTTP-Headers.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Caching.HeaderElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer Instanz von der <xref:System.Web.Caching.HeaderElement> Klasse, den Wert des `name` muss immer eine Zeichenfolge ungleich Null und nicht leer sein. Die `value` Parameter kann eine leere Zeichenfolge sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.HeaderElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen eines HTTP-Headers, der im Ausgabecache.</summary>
+        <value>Der Name des HTTP-Headers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer Instanz von der <xref:System.Web.Caching.HeaderElement> Klasse, den Wert des `name` muss immer eine Zeichenfolge ungleich Null und nicht leer sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.HeaderElement.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert eines HTTP-Headers, der im Ausgabecache.</summary>
+        <value>Der Wert des HTTP-Headers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer Instanz von der <xref:System.Web.Caching.HeaderElement> -Klasse, die `value` Parameter kann eine leere Zeichenfolge sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

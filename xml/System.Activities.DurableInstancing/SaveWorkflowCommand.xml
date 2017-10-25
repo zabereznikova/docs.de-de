@@ -1,0 +1,237 @@
+<Type Name="SaveWorkflowCommand" FullName="System.Activities.DurableInstancing.SaveWorkflowCommand">
+  <TypeSignature Language="C#" Value="public sealed class SaveWorkflowCommand : System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SaveWorkflowCommand extends System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.DurableInstancing.SaveWorkflowCommand" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.DurableInstancing.InstancePersistenceCommand</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Dauerhaftigkeitsbefehl, mit dem Sie Instanzzustandsinformationen im Persistenzspeicher speichern können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SaveWorkflowCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DurableInstancing.SaveWorkflowCommand.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Activities.DurableInstancing.SaveWorkflowCommand" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticallyAcquiringLock">
+      <MemberSignature Language="C#" Value="protected override bool AutomaticallyAcquiringLock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutomaticallyAcquiringLock" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.SaveWorkflowCommand.AutomaticallyAcquiringLock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteInstance">
+      <MemberSignature Language="C#" Value="public bool CompleteInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CompleteInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.SaveWorkflowCommand.CompleteInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt den Status der Instanz in der Persistenzdatenbank auf "Abgeschlossen" fest und löscht die Zustandsinformationen aus der Datenbank, es sei denn, die <see cref="P:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceCompletionAction" /> Eigenschaft auf "Deletenothing" festgelegt ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Status der Instanz "Completed" und die Statusinformationen gelöscht. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceData">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; InstanceData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; InstanceData" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die im Beibehaltungsspeicher zu speichernden Instanzdaten ab. Ein Wörterbuch, das Namen von Eigenschaften und ihren Werten enthält.</summary>
+        <value>Das Wörterbuch, das Namen von Eigenschaften und ihren Werten enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceKeyMetadataChanges">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;Guid,System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;&gt; InstanceKeyMetadataChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;valuetype System.Guid, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt;&gt; InstanceKeyMetadataChanges" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceKeyMetadataChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Guid,System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch mit einem Instanzschlüssel als Schlüssel sowie ein Wörterbuch von XName und <see cref="T:System.Runtime.Persistence.InstanceValue" />-Paaren als Wert ab.</summary>
+        <value>Die Wörterbücher mit Schlüssel-Wert-Paaren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceKeysToAssociate">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;Guid,System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;&gt; InstanceKeysToAssociate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;valuetype System.Guid, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt;&gt; InstanceKeysToAssociate" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceKeysToAssociate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Guid,System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält Instanzschlüssel, die einer Instanz zugeordnet werden müssen. Ein Wörterbuch, das eine GUID enthält, die einem Instanzschlüssel zugeordnet ist, und Metadaten, die dem Instanzschlüssel zugeordnet sind.</summary>
+        <value>Die Instanzschlüssel, die einer Instanz zugeordnet werden müssen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceKeysToComplete">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Guid&gt; InstanceKeysToComplete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;valuetype System.Guid&gt; InstanceKeysToComplete" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceKeysToComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Instanzschlüsseln ab, deren Zuordnung zu einer Instanz aufgehoben werden muss.</summary>
+        <value>Eine Auflistung von Instanzschlüsseln, deren Zuordnung zu einer Instanz aufgehoben werden muss.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceKeysToFree">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Guid&gt; InstanceKeysToFree { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;valuetype System.Guid&gt; InstanceKeysToFree" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceKeysToFree" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von aus dem Beibehaltungsspeicher zu löschenden Instanzschlüsseln ab.</summary>
+        <value>Eine Auflistung von aus dem Beibehaltungsspeicher zu löschenden Instanzschlüsseln.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceMetadataChanges">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; InstanceMetadataChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; InstanceMetadataChanges" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceMetadataChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch ab, das Änderungen an Instanzmetadaten enthält.</summary>
+        <value>Die Änderungen an Instanzmetadaten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTransactionEnlistmentOptional">
+      <MemberSignature Language="C#" Value="protected override bool IsTransactionEnlistmentOptional { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTransactionEnlistmentOptional" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.SaveWorkflowCommand.IsTransactionEnlistmentOptional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnlockInstance">
+      <MemberSignature Language="C#" Value="public bool UnlockInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnlockInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.SaveWorkflowCommand.UnlockInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Entfernt die Sperre für eine Instanz. Legt den Sperrenbesitzer auf <see langword="null" /> für eine Instanz.</summary>
+        <value>
+          <see langword="true" />Wenn die Sperre auf einer Instanz entfernt wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="protected override void Validate (System.Runtime.DurableInstancing.InstanceView view);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Validate(class System.Runtime.DurableInstancing.InstanceView view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DurableInstancing.SaveWorkflowCommand.Validate(System.Runtime.DurableInstancing.InstanceView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="System.Runtime.DurableInstancing.InstanceView" />
+      </Parameters>
+      <Docs>
+        <param name="view">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

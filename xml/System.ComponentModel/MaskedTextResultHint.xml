@@ -1,0 +1,412 @@
+<Type Name="MaskedTextResultHint" FullName="System.ComponentModel.MaskedTextResultHint">
+  <TypeSignature Language="C#" Value="public enum MaskedTextResultHint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MaskedTextResultHint extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.MaskedTextResultHint" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Werte an, in denen die Ergebnisse von einem maskierten Textfeld Analysemethode kurz beschrieben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.MaskedTextBox> Steuerelement delegiert die eigentliche Verantwortung für die Analyse der Eingabezeichen an das <xref:System.ComponentModel.MaskedTextProvider> Klasse. Viele der Methoden der <xref:System.ComponentModel.MaskedTextProvider>, zusätzlich zum Zurückgeben einer <xref:System.Boolean> Erfolg deutlichen, geben Sie auch einen zusätzliche Ausgabeparameter vom Typ <xref:System.ComponentModel.MaskedTextResultHint>. Diese Enumeration stellt zusätzliche Informationen über den Vorgang der Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.ComponentModel.MaskedTextProvider.GetOperationResultFromHint%2A> Methode kann verwendet werden, um das Konvertieren einer <xref:System.ComponentModel.MaskedTextResultHint> -Wert in einen <xref:System.Boolean> Erfolgswert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlphanumericCharacterExpected">
+      <MemberSignature Language="C#" Value="AlphanumericCharacterExpected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint AlphanumericCharacterExpected = int32(-2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.AlphanumericCharacterExpected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgang war nicht erfolgreich. Eine Eingabezeichen wurde gefunden, die nicht alphanumerisch war. .</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AsciiCharacterExpected">
+      <MemberSignature Language="C#" Value="AsciiCharacterExpected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint AsciiCharacterExpected = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.AsciiCharacterExpected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgang war nicht erfolgreich. Eine Eingabezeichen wurde gefunden, die nicht Mitglied der ASCII-Zeichensatz enthalten war.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CharacterEscaped">
+      <MemberSignature Language="C#" Value="CharacterEscaped" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint CharacterEscaped = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.CharacterEscaped" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfolgreich. Der Vorgang erfolgreich war, da ein Literal Aufforderungszeichen oder ein Leerzeichen Zeichen wurde ein Escapezeichen. Weitere Informationen zu Zeichen mit Escapezeichen, finden Sie unter der <see cref="M:System.ComponentModel.MaskedTextProvider.VerifyEscapeChar(System.Char,System.Int32)" /> Methode.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DigitExpected">
+      <MemberSignature Language="C#" Value="DigitExpected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint DigitExpected = int32(-3)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.DigitExpected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgang war nicht erfolgreich. Eine Eingabezeichen wurde gefunden, die keine Ziffer.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidInput">
+      <MemberSignature Language="C#" Value="InvalidInput" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint InvalidInput = int32(-51)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.InvalidInput" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgang war nicht erfolgreich. Das Programm gefunden eine Eingabezeichen, die war ungültig. Weitere Informationen zu Zeichen, die nicht gültig sind, finden Sie unter der <see cref="M:System.ComponentModel.MaskedTextProvider.IsValidInputChar(System.Char)" /> Methode.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LetterExpected">
+      <MemberSignature Language="C#" Value="LetterExpected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint LetterExpected = int32(-4)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.LetterExpected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgang war nicht erfolgreich. Eine Eingabezeichen wurde gefunden, die nicht auf einen Buchstaben war.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoEffect">
+      <MemberSignature Language="C#" Value="NoEffect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint NoEffect = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.NoEffect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfolgreich. Der primäre Vorgang wurde nicht ausgeführt werden, da es nicht erforderlich, wurde; Daher wurde kein Nebeneffekt erzeugt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NonEditPosition">
+      <MemberSignature Language="C#" Value="NonEditPosition" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint NonEditPosition = int32(-54)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.NonEditPosition" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgang war nicht erfolgreich. Die aktuelle Position in der formatierten Zeichenfolge ist ein Literalzeichen an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionOutOfRange">
+      <MemberSignature Language="C#" Value="PositionOutOfRange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint PositionOutOfRange = int32(-55)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.PositionOutOfRange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgang war nicht erfolgreich. Die angegebene Position ist nicht im Bereich der Zielzeichenfolge. in der Regel ist entweder kleiner als 0 (null) oder größer klicken Sie dann die Länge der Zielzeichenfolge.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PromptCharNotAllowed">
+      <MemberSignature Language="C#" Value="PromptCharNotAllowed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint PromptCharNotAllowed = int32(-52)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.PromptCharNotAllowed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgang war nicht erfolgreich. Eingabeaufforderungszeichen ist ungültig, da möglicherweise die <see cref="P:System.ComponentModel.MaskedTextProvider.AllowPromptAsInput" /> -Eigenschaftensatz auf <see langword="false" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SideEffect">
+      <MemberSignature Language="C#" Value="SideEffect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint SideEffect = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.SideEffect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfolgreich. Der primäre Vorgang wurde nicht durchgeführt werden, da es war nicht erforderlich, aber die Methode einen Nebeneffekt auslösen erzeugt. Z. B. die <see cref="Overload:System.ComponentModel.MaskedTextProvider.RemoveAt" /> Methode kann nachfolgende Zeichen-Verschiebung in die formatierte Zeichenfolge bewirkt, dass eine nicht zugewiesene Bearbeitungsposition löschen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedDigitExpected">
+      <MemberSignature Language="C#" Value="SignedDigitExpected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint SignedDigitExpected = int32(-5)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.SignedDigitExpected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgang war nicht erfolgreich. Eine Eingabezeichen wurde gefunden, die keine Zahl mit Vorzeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="Success" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint Success = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.Success" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfolgreich. Der primäre Vorgang erfolgreich war.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnavailableEditPosition">
+      <MemberSignature Language="C#" Value="UnavailableEditPosition" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint UnavailableEditPosition = int32(-53)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.UnavailableEditPosition" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgang war nicht erfolgreich. Es waren nicht genügend Bearbeitungspositionen, die zur Erfüllung der Anforderung zur Verfügung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.MaskedTextResultHint Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MaskedTextResultHint.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MaskedTextResultHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Unbekannt. Das Ergebnis des Vorgangs konnte nicht ermittelt werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

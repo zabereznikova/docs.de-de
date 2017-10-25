@@ -1,0 +1,679 @@
+<Type Name="StackTrace" FullName="System.Diagnostics.StackTrace">
+  <TypeSignature Language="C#" Value="public class StackTrace" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit StackTrace extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.StackTrace" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine stapelüberwachung, also eine geordnete Auflistung von mindestens einem Stapelrahmen dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.StackTrace>Informationen werden umfangreichste mit Debug-Buildkonfigurationen. Debug-Builds enthalten während Releasebuilds keine Debugsymbole. Die Debugsymbole enthalten einen Großteil der Datei, Methodenname, Zeilennummer und die Informationen in der Spalte beim Erstellen von <xref:System.Diagnostics.StackFrame> und <xref:System.Diagnostics.StackTrace> Objekte.  
+  
+ <xref:System.Diagnostics.StackTrace>meldet möglicherweise nicht so viele Methodenaufrufe erwartungsgemäß, da der Code, die während der Optimierung auftreten.  
+  
+   
+  
+## Examples  
+ Die folgende Konsolenanwendung veranschaulicht, wie eine einfache <xref:System.Diagnostics.StackTrace> und durchlaufen Sie Rahmen um Debug- und Diagnose-Informationen zu erhalten.  
+  
+ [!code-cpp[StackTraceSample1#1](~/samples/snippets/cpp/VS_Snippets_CLR/StackTraceSample1/CPP/stacktracesample1.cpp#1)]
+ [!code-csharp[StackTraceSample1#1](~/samples/snippets/csharp/VS_Snippets_CLR/StackTraceSample1/CS/stacktracesample1.cs#1)]
+ [!code-vb[StackTraceSample1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackTraceSample1/VB/stacktracesample1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für die Fähigkeit des erben den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackTrace ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.StackTrace" /> -Klasse aus dem Rahmen des Aufrufers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.StackTrace> wird mit dem aktuellen Thread des Aufrufers erstellt und enthält keine Dateiname, Zeilennummer oder Informationen in der Spalte.  
+  
+ Verwenden Sie diese Standardkonstruktor, wenn Sie eine vollständige Ablaufverfolgung mit nur zusammenfassende Informationen zur Aufrufliste möchten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die vor- und Nachnamen Funktionsaufrufe in eine stapelüberwachung an.  
+  
+ [!code-cpp[StackFrameSample1#8](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#8)]
+ [!code-csharp[StackFrameSample1#8](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#8)]
+ [!code-vb[StackFrameSample1#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackTrace (bool fNeedFileInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool fNeedFileInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fNeedFileInfo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fNeedFileInfo">
+          <see langword="true" />der Dateiname, Zeilennummer und Spaltennummer zu erfassen; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.StackTrace" /> Klasse aus der Aufrufer Rahmen und zeichnet optional Quellinformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.StackTrace> wird mit dem aktuellen Thread des Aufrufers erstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht verschiedene <xref:System.Diagnostics.StackTrace> Konstruktormethoden.  
+  
+ [!code-cpp[StackFrameSample1#4](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#4)]
+ [!code-csharp[StackFrameSample1#4](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#4)]
+ [!code-vb[StackFrameSample1#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackTrace (System.Diagnostics.StackFrame frame);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.StackFrame frame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.#ctor(System.Diagnostics.StackFrame)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="frame" Type="System.Diagnostics.StackFrame" />
+      </Parameters>
+      <Docs>
+        <param name="frame">Der Rahmen, die die <see cref="T:System.Diagnostics.StackTrace" /> Objekt enthalten soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.StackTrace" /> Klasse, die einen einzelnen Frame enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie nicht den Mehraufwand für eine vollständige stapelüberwachung möchten.  
+  
+   
+  
+## Examples  
+ Der folgende Code Beispiel schreibt Stapelüberwachungsinformationen auf einen Eintrag im Ereignisprotokoll.  
+  
+ [!code-cpp[StackTraceSample3#6](~/samples/snippets/cpp/VS_Snippets_CLR/StackTraceSample3/CPP/stacktracesample3.cpp#6)]
+ [!code-csharp[StackTraceSample3#6](~/samples/snippets/csharp/VS_Snippets_CLR/StackTraceSample3/CS/stacktracesample3.cs#6)]
+ [!code-vb[StackTraceSample3#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackTraceSample3/VB/stacktracesample3.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackTrace (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.#ctor(System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das Ausnahmeobjekt aus der die stapelüberwachung konstruiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.StackTrace" /> -Klasse unter Verwendung der angegebenen Ausnahme-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.StackTrace> wird mit dem aktuellen Thread des Aufrufers erstellt und enthält keine Dateiname, Zeilennummer oder Informationen in der Spalte.  
+  
+ Die resultierende stapelüberwachung wird den Stapel zum Zeitpunkt der Ausnahme beschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Parameter <paramref name="e" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackTrace (int skipFrames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 skipFrames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="skipFrames" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="skipFrames">Die Anzahl der Stapelrahmen aus dem die Ablaufverfolgung zu starten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.StackTrace" /> -Klasse aus dem Rahmen des Aufrufers, überspringen die angegebene Anzahl von Frames.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.StackTrace> wird mit dem aktuellen Thread des Aufrufers erstellt und enthält keine Dateiname, Zeilennummer oder Informationen in der Spalte.  
+  
+ Wenn die Anzahl der zu überspringenden Frames größer als ist oder gleich der Gesamtzahl der Rahmen in der Aufrufliste, die zum Zeitpunkt die Instanz erstellt wird, die <xref:System.Diagnostics.StackTrace> enthält keine Frames.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="skipFrames" /> Parameter ist ein negativer Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackTrace (Exception e, bool fNeedFileInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception e, bool fNeedFileInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.#ctor(System.Exception,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="needFileInfo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das Ausnahmeobjekt aus der die stapelüberwachung konstruiert.</param>
+        <param name="fNeedFileInfo">
+          <see langword="true" />der Dateiname, Zeilennummer und Spaltennummer zu erfassen; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.StackTrace" /> -Klasse, unter Verwendung des bereitgestellten Ausnahmeobjekts und zeichnet optional Quellinformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die resultierende stapelüberwachung wird den Stapel zum Zeitpunkt der Ausnahme beschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Parameter <paramref name="e" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackTrace (Exception e, int skipFrames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception e, int32 skipFrames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.#ctor(System.Exception,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+        <Parameter Name="skipFrames" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das Ausnahmeobjekt aus der die stapelüberwachung konstruiert.</param>
+        <param name="skipFrames">Die Anzahl der Stapelrahmen aus dem die Ablaufverfolgung zu starten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.StackTrace" /> -Klasse unter Verwendung des Objekts angegebenen Ausnahme und der angegebene Anzahl von Frames übersprungen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.StackTrace> enthält keine Dateiname, Zeilennummer oder Informationen in der Spalte.  
+  
+ Die resultierende stapelüberwachung wird den Stapel zum Zeitpunkt der Ausnahme beschrieben.  
+  
+ Wenn die Anzahl der zu überspringenden Frames größer als ist oder gleich der Gesamtzahl der Rahmen in der Aufrufliste, die zum Zeitpunkt die Instanz erstellt wird, die <xref:System.Diagnostics.StackTrace> enthält keine Frames.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Parameter <paramref name="e" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="skipFrames" /> Parameter ist ein negativer Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackTrace (int skipFrames, bool fNeedFileInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 skipFrames, bool fNeedFileInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.#ctor(System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="skipFrames" Type="System.Int32" />
+        <Parameter Name="fNeedFileInfo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="skipFrames">Die Anzahl der Stapelrahmen aus dem die Ablaufverfolgung zu starten.</param>
+        <param name="fNeedFileInfo">
+          <see langword="true" />der Dateiname, Zeilennummer und Spaltennummer zu erfassen; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.StackTrace" /> -Klasse aus dem Rahmen des Aufrufers, überspringen die angegebene Anzahl von Frames und zeichnet optional Quellinformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Anzahl der zu überspringenden Frames größer als ist oder gleich der Gesamtzahl der Rahmen in der Aufrufliste, die zum Zeitpunkt die Instanz erstellt wird, die <xref:System.Diagnostics.StackTrace> enthält keine Frames.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht verschiedene <xref:System.Diagnostics.StackTrace> Konstruktormethoden.  
+  
+ [!code-cpp[StackFrameSample1#4](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#4)]
+ [!code-csharp[StackFrameSample1#4](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#4)]
+ [!code-vb[StackFrameSample1#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="skipFrames" /> Parameter ist ein negativer Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackTrace (System.Threading.Thread targetThread, bool needFileInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Threading.Thread targetThread, bool needFileInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.#ctor(System.Threading.Thread,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="targetThread" Type="System.Threading.Thread" />
+        <Parameter Name="needFileInfo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="targetThread">Der Thread, dessen Stapel-Trace angefordert wird.</param>
+        <param name="needFileInfo">
+          <see langword="true" />der Dateiname, Zeilennummer und Spaltennummer zu erfassen; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.StackTrace" /> Klasse für einen bestimmten Thread und zeichnet optional Quellinformationen.  
+  
+ Verwenden Sie diese Überladung des Konstruktors.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Verwenden Sie diesen Konstruktor nicht. Es ist veraltet, und es ist keine empfohlene Alternative. Wenn Sie einen Thread anhalten, müssen Sie keine Möglichkeit, zu wissen, welcher Code es ausgeführt wird, und deadlocks sehr leicht auftreten kann. Beispielsweise, wenn Sie einen Thread anhalten, während sie Sperren während der Auswertung von Sicherheitsberechtigungen enthält, andere threads in der <xref:System.AppDomain> blockiert werden. Wenn Sie einen Thread anhalten, während der Konstruktor einer Klasse ausgeführt wird, andere threads in der <xref:System.AppDomain> , die versuchen, verwenden Sie, dass die Klasse werden blockiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Threading.ThreadStateException">Der Thread <paramref name="targetThread" /> wird nicht angehalten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackTrace (Exception e, int skipFrames, bool fNeedFileInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception e, int32 skipFrames, bool fNeedFileInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.#ctor(System.Exception,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+        <Parameter Name="skipFrames" Type="System.Int32" />
+        <Parameter Name="fNeedFileInfo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das Ausnahmeobjekt aus der die stapelüberwachung konstruiert.</param>
+        <param name="skipFrames">Die Anzahl der Stapelrahmen aus dem die Ablaufverfolgung zu starten.</param>
+        <param name="fNeedFileInfo">
+          <see langword="true" />der Dateiname, Zeilennummer und Spaltennummer zu erfassen; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.StackTrace" /> -Klasse unter Verwendung des bereitgestellten Ausnahmeobjekts, überspringen die angegebene Anzahl von Frames und zeichnet optional Quellinformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die resultierende stapelüberwachung wird den Stapel zum Zeitpunkt der Ausnahme beschrieben.  
+  
+ Wenn die Anzahl der zu überspringenden Frames größer als ist oder gleich der Gesamtzahl der Rahmen in der Aufrufliste, die zum Zeitpunkt die Instanz erstellt wird, die <xref:System.Diagnostics.StackTrace> enthält keine Frames.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Parameter <paramref name="e" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="skipFrames" /> Parameter ist ein negativer Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameCount">
+      <MemberSignature Language="C#" Value="public virtual int FrameCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FrameCount" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.StackTrace.FrameCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Frames in der stapelüberwachung.</summary>
+        <value>Die Anzahl von Frames in der Stapelüberwachung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die vor- und Nachnamen Funktionsaufrufe in eine stapelüberwachung an.  
+  
+ [!code-cpp[StackFrameSample1#8](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#8)]
+ [!code-csharp[StackFrameSample1#8](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#8)]
+ [!code-vb[StackFrameSample1#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFrame">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.StackFrame GetFrame (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.StackFrame GetFrame(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.GetFrame(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.StackFrame</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des angeforderten Stapelrahmens.</param>
+        <summary>Ruft den angegebenen Stapelrahmen ab.</summary>
+        <returns>Der angegebene Stapelrahmen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stapelrahmen werden nummeriert, beginnend mit 0 (null) und den letzten Stapelrahmen abgelegt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die vor- und Nachnamen Funktionsaufrufe in eine stapelüberwachung an.  
+  
+ [!code-cpp[StackFrameSample1#8](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#8)]
+ [!code-csharp[StackFrameSample1#8](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#8)]
+ [!code-vb[StackFrameSample1#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFrames">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.StackFrame[] GetFrames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.StackFrame[] GetFrames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.GetFrames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.StackFrame[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie aller Stapelrahmen im aktuellen Stapelrahmen zurück.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.Diagnostics.StackFrame" /> darstellt, die Funktionsaufrufe in der stapelüberwachung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie das zurückgegebene <xref:System.Diagnostics.StackFrame> Array zum Auflisten und prüfen die Funktion aufgerufen wird, der <xref:System.Diagnostics.StackTrace>. Die Länge des zurückgegebenen Arrays ist gleich der <xref:System.Diagnostics.StackTrace.FrameCount%2A> Eigenschaftswert.  
+  
+ Die <xref:System.Diagnostics.StackFrame> Arrayelemente werden in umgekehrter chronologischer Reihenfolge. Die <xref:System.Diagnostics.StackFrame> am Array Index 0 stellt den neuesten-Funktionsaufruf in die stapelüberwachung und den letzten Frame, der die Aufrufliste zu leisten. Die <xref:System.Diagnostics.StackFrame> Arrayindex <xref:System.Diagnostics.StackTrace.FrameCount%2A> minus 1 stellt die ältesten Funktionsaufruf in der stapelüberwachung und der erste Frame der Aufrufliste zu leisten.  
+  
+ Verwenden Sie die <xref:System.Diagnostics.StackTrace.GetFrames%2A> Methode, um alle Stapelrahmen in eine stapelüberwachung abzurufen verwenden die <xref:System.Diagnostics.StackTrace.GetFrame%2A> Methode, um einen bestimmten Stapelrahmen im Stapel-Trace abzurufen. Die <xref:System.Diagnostics.StackFrame> Indizes durch die beiden Methoden gleich sortiert werden. Z. B. die <xref:System.Diagnostics.StackFrame> am Index 0 in das zurückgegebene Array <xref:System.Diagnostics.StackTrace.GetFrames%2A> entspricht der <xref:System.Diagnostics.StackFrame> zurückgegebenes <xref:System.Diagnostics.StackTrace.GetFrame%2A> mit einem Eingabe-Index 0.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, Enumeration der Rahmen in einem <xref:System.Diagnostics.StackTrace>.  
+  
+ [!code-cpp[StackTraceSample2#3](~/samples/snippets/cpp/VS_Snippets_CLR/StackTraceSample2/CPP/stacktracesample2.cpp#3)]
+ [!code-csharp[StackTraceSample2#3](~/samples/snippets/csharp/VS_Snippets_CLR/StackTraceSample2/CS/stacktracesample2.cs#3)]
+ [!code-vb[StackTraceSample2#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackTraceSample2/VB/stacktracesample2.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="METHODS_TO_SKIP">
+      <MemberSignature Language="C#" Value="public const int METHODS_TO_SKIP = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 METHODS_TO_SKIP = (0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.StackTrace.METHODS_TO_SKIP" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Definiert den Standardwert für die Anzahl der Methoden, um die stapelüberwachung zu unterdrücken. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für die Anzahl der Methoden, die am Anfang der stapelüberwachung ausgelassen werden sollen. Der Wert dieser Konstanten ist 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackTrace.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine lesbare Darstellung der Stapelüberwachung.</summary>
+        <returns>Eine lesbare Darstellung der Stapelüberwachung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Code Beispiel schreibt Stapelüberwachungsinformationen auf einen Eintrag im Ereignisprotokoll.  
+  
+ [!code-cpp[StackTraceSample3#6](~/samples/snippets/cpp/VS_Snippets_CLR/StackTraceSample3/CPP/stacktracesample3.cpp#6)]
+ [!code-csharp[StackTraceSample3#6](~/samples/snippets/csharp/VS_Snippets_CLR/StackTraceSample3/CS/stacktracesample3.cs#6)]
+ [!code-vb[StackTraceSample3#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackTraceSample3/VB/stacktracesample3.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

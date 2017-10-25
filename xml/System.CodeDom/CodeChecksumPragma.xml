@@ -1,0 +1,229 @@
+<Type Name="CodeChecksumPragma" FullName="System.CodeDom.CodeChecksumPragma">
+  <TypeSignature Language="C#" Value="public class CodeChecksumPragma : System.CodeDom.CodeDirective" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeChecksumPragma extends System.CodeDom.CodeDirective" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeChecksumPragma" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeDirective</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Code Prüfsumme Pragma Codeentität dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.CodeDom.CodeChecksumPragma> Klasse erbt von <xref:System.CodeDom.CodeDirective> und enthalten sein können, einem <xref:System.CodeDom.CodeDirectiveCollection>. <xref:System.CodeDom.CodeChecksumPragma>enthält die eindeutige Kennung der Quelldateien, einschließlich Dateien, die generiert wurden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.CodeDom.CodeChecksumPragma> Klasse.  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#1)]
+ [!code-vb[System.CodeDom.CodeDirectives#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeChecksumPragma ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeChecksumPragma.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeChecksumPragma" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.CodeDom.CodeChecksumPragma.%23ctor%2A> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.CodeChecksumPragma> Klasse.  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#4)]
+ [!code-vb[System.CodeDom.CodeDirectives#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeChecksumPragma (string fileName, Guid checksumAlgorithmId, byte[] checksumData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, valuetype System.Guid checksumAlgorithmId, unsigned int8[] checksumData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeChecksumPragma.#ctor(System.String,System.Guid,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="checksumAlgorithmId" Type="System.Guid" />
+        <Parameter Name="checksumData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Pfad zur Prüfsummendatei.</param>
+        <param name="checksumAlgorithmId">Ein <see cref="T:System.Guid" /> , identifiziert der Prüfsummenalgorithmus verwendet.</param>
+        <param name="checksumData">Ein Bytearray, das die Prüfsummendaten enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeChecksumPragma" /> name-Klasse unter Verwendung einer Datei, die eine GUID, die den Prüfsummenalgorithmus und eines Bytestreams, der die Prüfsumme Daten darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den `checksumAlgorithmId` Parameter, finden Sie unter der <xref:System.CodeDom.CodeChecksumPragma.ChecksumAlgorithmId%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.CodeDom.CodeChecksumPragma.%23ctor%2A> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.CodeChecksumPragma> Klasse.  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#8)]
+ [!code-vb[System.CodeDom.CodeDirectives#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChecksumAlgorithmId">
+      <MemberSignature Language="C#" Value="public Guid ChecksumAlgorithmId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ChecksumAlgorithmId" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeChecksumPragma.ChecksumAlgorithmId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert eine GUID, die den zu verwendenden Prüfsummenalgorithmus bezeichnet.</summary>
+        <value>Ein <see cref="T:System.Guid" /> , identifiziert der Prüfsummenalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der MD5- und SHA1-Hashes sind aus Gründen der Algorithmen. Ist der GUID-Wert, der für den MD5-Hash verwendet {0x406ea660, 0x64cf, 0x4c82, 0xb6, 0xf0, 0 x 42, 0xd4, 0 x 81, 0 x 72, 0xa7, 0 x 99}. Die GUID für den SHA1-Hash verwendet ist {0xff1816ec, 0xaa5e, 0x4d10, 0x87, 0xf7, 0x6f, 0 x 49, 0 x 63, 0 x 83, 0 x 34, 0 x 60}.  
+  
+ Die Berechnung der Prüfsumme ist sprachspezifisch. D. h. können der Compilerhersteller die Hashalgorithmen bekannt, dass der Debugger zur Berechnung der Prüfsumme. Die Verwendung einer GUID für diese Eigenschaft sorgt für Erweiterbarkeit, Hash-Algorithmus.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Einstellung von der <xref:System.CodeDom.CodeChecksumPragma.ChecksumAlgorithmId%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.CodeChecksumPragma> Klasse.  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#6)]
+ [!code-vb[System.CodeDom.CodeDirectives#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChecksumData">
+      <MemberSignature Language="C#" Value="public byte[] ChecksumData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] ChecksumData" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeChecksumPragma.ChecksumData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der Daten für die Berechnung der Prüfsumme.</summary>
+        <value>Ein Bytearray mit den Daten für die Berechnung der Prüfsumme.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.CodeDom.CodeChecksumPragma.ChecksumData%2A> Eigenschaft enthält Daten aus der Zieldatei, die gemäß der <xref:System.CodeDom.CodeChecksumPragma.FileName%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Einstellung von der <xref:System.CodeDom.CodeChecksumPragma.ChecksumData%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.CodeChecksumPragma> Klasse  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#7)]
+ [!code-vb[System.CodeDom.CodeDirectives#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeChecksumPragma.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad zur Datei Checksum fest.</summary>
+        <value>Der Pfad zur Prüfsummendatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel für eine <xref:System.CodeDom.CodeChecksumPragma.FileName%2A> Eigenschaftswert ist "C:\Temp\Test\OuterLinePragma.txt".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Einstellung von der <xref:System.CodeDom.CodeChecksumPragma.FileName%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.CodeChecksumPragma> Klasse  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#5)]
+ [!code-vb[System.CodeDom.CodeDirectives#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

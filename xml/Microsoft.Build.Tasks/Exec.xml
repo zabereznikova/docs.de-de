@@ -1,0 +1,626 @@
+<Type Name="Exec" FullName="Microsoft.Build.Tasks.Exec">
+  <TypeSignature Language="C#" Value="public class Exec : Microsoft.Build.Tasks.ToolTaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Exec extends Microsoft.Build.Tasks.ToolTaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Exec" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.ToolTaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die <c>Exec</c> Aufgabe. Verwenden der <c>Exec</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [Exec-Aufgabe](http://msdn.microsoft.com/library/c9b7525a-b1c9-40fc-8bce-77a5b8f960d8).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Exec ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Exec.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.Exec" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddCommandLineCommands">
+      <MemberSignature Language="C#" Value="protected override void AddCommandLineCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void AddCommandLineCommands(class Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Exec.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">Befehlszeilen-Generator, dem Argumente hinzugefügt werden sollen.</param>
+        <summary>Generiert Befehlszeilenargumente, die vom Befehlszeilentool direkt in der Befehlszeile und nicht aus einer Antwortdatei ausgeführt werden müssen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public string Command { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Command" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den auszuführenden Befehl ab oder legt ihn fest.</summary>
+        <value>Der auszuführende Befehl.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der auszuführende Befehl kann es sich um einen Systembefehl, z. B. Attrib oder eine ausführbare Datei, z. B. program.exe sein.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConsoleOutput">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ConsoleOutput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ConsoleOutput" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.ConsoleOutput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Ausgabe als ein Element zurück. Leerzeichen ist, werden entfernt.  
+  
+ ConsoleOutput ist aktiviert, wenn ConsoleToMSBuild auf "true" festgelegt ist. Dadurch wird vermieden, halten Zeilen im Arbeitsspeicher aus, wenn sie nicht verwendet werden. ConsoleOutput ist eine Kombination aus "stdout" und "stderr".</summary>
+        <value>Gibt <see cref="T:Microsoft.Build.Framework.ITaskItem" />zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConsoleToMSBuild">
+      <MemberSignature Language="C#" Value="public bool ConsoleToMSBuild { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConsoleToMSBuild" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.ConsoleToMSBuild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktivieren Sie die Standardausgabe für ein Element über die Pipeline an. (Aus).</summary>
+        <value>Gibt <see cref="T:System.Boolean" />zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CustomErrorRegularExpression">
+      <MemberSignature Language="C#" Value="public string CustomErrorRegularExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomErrorRegularExpression" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.CustomErrorRegularExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt einen regulären Ausdruck zu Fehlerzeilen in der Ausgabe des Tools.</summary>
+        <value>Ein regulärer Ausdruck, um Fehlerzeilen in der Ausgabe des Tools.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich für Tools, die außergewöhnlich formatierte Ausgabe erzeugen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CustomWarningRegularExpression">
+      <MemberSignature Language="C#" Value="public string CustomWarningRegularExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomWarningRegularExpression" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.CustomWarningRegularExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt einen regulären Ausdruck zu Volltonfarben Warnungszeilen in der Ausgabe des Tools.</summary>
+        <value>Ein regulärer Ausdruck zum Erkennen von Warnungszeilen in der Ausgabe des Tools.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich für Tools, die außergewöhnlich formatierte Ausgabe erzeugen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteTool">
+      <MemberSignature Language="C#" Value="protected override int ExecuteTool (string pathToTool, string responseFileCommands, string commandLineCommands);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteTool(string pathToTool, string responseFileCommands, string commandLineCommands) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Exec.ExecuteTool(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathToTool" Type="System.String" />
+        <Parameter Name="responseFileCommands" Type="System.String" />
+        <Parameter Name="commandLineCommands" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pathToTool">Der Pfad zum auszuführenden Tool.</param>
+        <param name="responseFileCommands">Befehlszeilenargumente, die in einer temporären Antwortdatei gespeichert werden sollen.</param>
+        <param name="commandLineCommands">Befehlszeilenargumente, die direkt an das Tool übergeben werden sollen.</param>
+        <summary>Führt das Tool „cmd.exe“ aus, wartet auf den Abschluss der Ausführung und bereinigt anschließend die Batchdatei.</summary>
+        <returns>Der Exitcode, der vom Tool zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Fehler protokolliert wurden, und das Tool verfügt über einen Exitcode von 0 (null), klicken Sie dann festgelegt diese Methode den Exitcode auf-1.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFullPathToTool">
+      <MemberSignature Language="C#" Value="protected override string GenerateFullPathToTool ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GenerateFullPathToTool() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Exec.GenerateFullPathToTool" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den vollständigen Pfad zum Systemtool „cmd.exe“ zurück.</summary>
+        <returns>Der vollständige Pfad zum Systemtool „cmd.exe“.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkingDirectory">
+      <MemberSignature Language="C#" Value="protected override string GetWorkingDirectory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetWorkingDirectory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Exec.GetWorkingDirectory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das für den Toolprozess zu verwendende Arbeitsverzeichnis zurück.</summary>
+        <returns>Das für den Toolprozess zu verwendende Arbeitsverzeichnis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Arbeitsverzeichnis UNC ist, gibt der Pfad "System" SystemRoot%\System32 zurück.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HandleTaskExecutionErrors">
+      <MemberSignature Language="C#" Value="protected override bool HandleTaskExecutionErrors ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HandleTaskExecutionErrors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Exec.HandleTaskExecutionErrors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Protokolliert Fehlermeldungen und behandelt Exitcode.</summary>
+        <returns>
+          <see langword="true" />, wenn der Exitcode ignoriert wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nur mit einem Exitcode ungleich NULL aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreExitCode">
+      <MemberSignature Language="C#" Value="public bool IgnoreExitCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreExitCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.IgnoreExitCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob die <c>Exec</c> -Aufgabe den vom ausgeführten Befehl bereitgestellten Exitcode ignorieren (<see langword="true" />) oder zurückgeben sollte <see langword="false" /> , wenn der ausgeführte Befehl einen Exitcode ungleich 0 (null) Code gibt ( <see langword="false" />).</summary>
+        <value>
+          <see langword="true" />Wenn die <c>Exec</c> -Aufgabe den vom ausgeführten Befehl; bereitgestellten Exitcode ignorieren soll <see langword="false" /> Wenn die <c>Exec</c> Aufgabe zurückgeben sollte <see langword="false" /> , wenn der ausgeführte Befehl einen Exitcode ungleich 0 (null) zurückgibt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreStandardErrorWarningFormat">
+      <MemberSignature Language="C#" Value="public bool IgnoreStandardErrorWarningFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreStandardErrorWarningFormat" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob das standardmäßige Fehler- und Warnungsformat ignoriert und Fehler und Warnungen der Ausgabe als normale Meldungen protokolliert werden sollen, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn die <c>Exec</c> Aufgabe sollte die Standardfehler und das Format der Warnung ignorieren und sollte das Protokollieren von Fehlern und Warnungen als normale Nachrichten; <see langword="false" /> Wenn die <c>Exec</c> Task sollte protokollieren, die Fehler und Warnungen, die den Standardfehler und Warnung Format entsprechen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LogEventsFromTextOutput">
+      <MemberSignature Language="C#" Value="protected override void LogEventsFromTextOutput (string singleLine, Microsoft.Build.Framework.MessageImportance messageImportance);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LogEventsFromTextOutput(string singleLine, valuetype Microsoft.Build.Framework.MessageImportance messageImportance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Exec.LogEventsFromTextOutput(System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="singleLine" Type="System.String" />
+        <Parameter Name="messageImportance" Type="Microsoft.Build.Framework.MessageImportance" />
+      </Parameters>
+      <Docs>
+        <param name="singleLine">Einzelne Zeile aus der Ausgabe zu analysieren.</param>
+        <param name="messageImportance">Die Wichtigkeit, mit der Meldung protokolliert werden soll.</param>
+        <summary>Protokolliert den angegebene Textzeile als eine Fehlermeldung oder Warnung, wenn die Zeile benutzerdefinierte oder Standard-Fehler und Warnung Formate übereinstimmen oder als eine herkömmliche Nachricht Wenn <see cref="P:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat" /> festgelegt ist, um <see langword="true" /> und kein benutzerdefiniertes Format zugeordnet.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LogPathToTool">
+      <MemberSignature Language="C#" Value="protected override void LogPathToTool (string toolName, string pathToTool);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LogPathToTool(string toolName, string pathToTool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Exec.LogPathToTool(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolName" Type="System.String" />
+        <Parameter Name="pathToTool" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolName">Der Name des Tools.</param>
+        <param name="pathToTool">Das aktuelle Verzeichnis, in dem das Tool ausgeführt wird.</param>
+        <summary>Protokolliert den Toolnamen und den Pfad.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LogToolCommand">
+      <MemberSignature Language="C#" Value="protected override void LogToolCommand (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LogToolCommand(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Exec.LogToolCommand(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Gibt eine leere Zeichenfolge an. Dieser Parameter wird nicht verwendet.</param>
+        <summary>Protokolliert den auszuführenden Batchdateibefehl.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Outputs">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Outputs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Outputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.Outputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausgabeelemente aus der Aufgabe ab oder legt sie fest.</summary>
+        <value>Die Ausgabeelemente aus der Aufgabe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Exec` Task nicht die Ausgabeelemente fest. Stattdessen können Sie die Ausgabeelemente bereitstellen, als ob sie von der Aufgabe festgelegt wurden, damit sie später im Projekt verwendet werden können.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StandardErrorEncoding">
+      <MemberSignature Language="C#" Value="protected override System.Text.Encoding StandardErrorEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding StandardErrorEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.StandardErrorEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Codierung des standardmäßigen Fehlerdatenstroms der erfassten Aufgabe ab.</summary>
+        <value>Die Codierung des standardmäßigen Fehlerdatenstroms der erfassten Aufgabe.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StandardErrorLoggingImportance">
+      <MemberSignature Language="C#" Value="protected override Microsoft.Build.Framework.MessageImportance StandardErrorLoggingImportance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.MessageImportance StandardErrorLoggingImportance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.StandardErrorLoggingImportance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MessageImportance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Wichtigkeit ab, mit der gewöhnliche Meldungen im Standardfehlerstream protokolliert werden sollen.</summary>
+        <value>Die Wichtigkeit, mit der gewöhnliche Meldungen im Standardfehlerstream protokolliert werden sollen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StandardOutputEncoding">
+      <MemberSignature Language="C#" Value="protected override System.Text.Encoding StandardOutputEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding StandardOutputEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.StandardOutputEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Codierung des standardmäßigen Ausgabedatenstroms der erfassten Aufgabe ab.</summary>
+        <value>Die Codierung des standardmäßigen Ausgabedatenstroms der erfassten Aufgabe.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StandardOutputLoggingImportance">
+      <MemberSignature Language="C#" Value="protected override Microsoft.Build.Framework.MessageImportance StandardOutputLoggingImportance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.MessageImportance StandardOutputLoggingImportance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.StandardOutputLoggingImportance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MessageImportance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Wichtigkeit ab, mit der gewöhnliche Meldungen im Standardausgabestream protokolliert werden sollen.</summary>
+        <value>Die Wichtigkeit, mit der gewöhnliche Meldungen im Standardausgabestream protokolliert werden sollen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StdErrEncoding">
+      <MemberSignature Language="C#" Value="public string StdErrEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StdErrEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.StdErrEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der Codierung des standardmäßigen Fehlerdatenstroms der erfassten Aufgabe, der für das Projekt sichtbar ist.</summary>
+        <value>Die Codierung des standardmäßigen Fehlerdatenstroms der erfassten Aufgabe, der für das Projekt sichtbar ist.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StdOutEncoding">
+      <MemberSignature Language="C#" Value="public string StdOutEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StdOutEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.StdOutEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der Codierung des standardmäßigen Ausgabestreams der erfassten Aufgabe, der für das Projekt sichtbar ist.</summary>
+        <value>Die Codierung des standardmäßigen Ausgabestreams der erfassten Aufgabe, der für das Projekt sichtbar ist.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToolName">
+      <MemberSignature Language="C#" Value="protected override string ToolName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.ToolName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Tools („cmd.exe“) ab.</summary>
+        <value>Der Name des Tools („cmd.exe“).</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateParameters">
+      <MemberSignature Language="C#" Value="protected override bool ValidateParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ValidateParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Exec.ValidateParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft Eingabeparameter und protokolliert Fehler oder Warnungen (sofern vorhanden). Gibt einen booleschen Wert zurück, der angibt, ob die Aufgabenausführung fortgesetzt werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die aufgabenausführung fortgesetzt werden soll andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WorkingDirectory">
+      <MemberSignature Language="C#" Value="public string WorkingDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WorkingDirectory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Exec.WorkingDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Verzeichnis ab, in dem der Befehl ausgeführt wird, oder legt es fest.</summary>
+        <value>Das Verzeichnis, in dem der Befehl ausgeführt wird.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,92 @@
+<Type Name="DpiChangedEventArgs" FullName="System.Windows.Forms.DpiChangedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class DpiChangedEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DpiChangedEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DpiChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die DPIChanged-Ereignisse eines Formulars oder Steuerelements bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DeviceDpiNew">
+      <MemberSignature Language="C#" Value="public int DeviceDpiNew { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DeviceDpiNew" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DpiChangedEventArgs.DeviceDpiNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den DPI-Wert für das neue Anzeigegerät ab, auf dem das Steuerelement oder Formular aktuell angezeigt wird.</summary>
+        <value>Der DPI-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceDpiOld">
+      <MemberSignature Language="C#" Value="public int DeviceDpiOld { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DeviceDpiOld" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DpiChangedEventArgs.DeviceDpiOld" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den DPI-Wert für das Anzeigegerät ab, auf dem das Steuerelement oder Formular zuvor angezeigt wurde.</summary>
+        <value>Ein DPI-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuggestedRectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle SuggestedRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle SuggestedRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DpiChangedEventArgs.SuggestedRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.Rectangle" /> ab, das das neue umschließende Rechteck für das Steuerelement oder Formular basierend auf dem DPI-Wert des Anzeigegerät, in dem es angezeigt wird, darstellt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DpiChangedEventArgs.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Zeichenfolgendarstellung der aktuellen <see cref="T:System.Windows.Forms.DpiChangedEventArgs" /> und gibt diese zurück.</summary>
+        <returns>Eine Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

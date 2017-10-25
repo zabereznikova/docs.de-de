@@ -1,0 +1,435 @@
+<Type Name="EllipseGeometry" FullName="System.Windows.Media.EllipseGeometry">
+  <TypeSignature Language="C#" Value="public sealed class EllipseGeometry : System.Windows.Media.Geometry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EllipseGeometry extends System.Windows.Media.Geometry" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.EllipseGeometry" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Geometry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Geometrie eines Kreises oder einer Ellipse dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.EllipseGeometry> -Klasse mit einer <xref:System.Windows.Shapes.Path> Element oder ein <xref:System.Windows.Media.GeometryDrawing> zum Zeichnen einer Ellipse oder mit der <xref:System.Windows.UIElement.Clip%2A> Eigenschaft eine <xref:System.Windows.UIElement> elliptischen Clip-Bereich zu definieren. Die <xref:System.Windows.Media.EllipseGeometry> -Klasse verfügt auch über viele weitere Verwendungsmöglichkeiten. Weitere Informationen zu <xref:System.Windows.Media.EllipseGeometry>, finden Sie unter [Übersicht über die Geometrie](~/docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+  
+## <a name="ellipsegeometry-compared-to-ellipse"></a>Im Vergleich zur Ellipse EllipseGeometry  
+ Die <xref:System.Windows.Shapes.Ellipse> -Klasse verfügt über eine <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>, und andere Eigenschaften <xref:System.Windows.Media.EllipseGeometry> fehlt. Die <xref:System.Windows.Shapes.Ellipse> Klasse ist eine <xref:System.Windows.FrameworkElement> und daher das Layoutsystem; beteiligt können verwendet werden, als Inhalt eines Elements, das unterstützt <xref:System.Windows.UIElement> untergeordneten Elemente.  
+  
+ Die <xref:System.Windows.Media.EllipseGeometry> -Klasse, andererseits, einfach die Geometrie einer Ellipse definiert und kann nicht selbst gerendert. Aufgrund seiner Einfachheit weist er eine größere Anzahl an verwendet.  
+  
+## <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
+ Ein <xref:System.Windows.Media.EllipseGeometry> ist eine Art von <xref:System.Windows.Freezable> Objekt und kann daher fixiert werden, um die Leistung zu verbessern. Informationen zu <xref:System.Windows.Freezable> Funktionen, z. B. Einfrieren und Klonen, finden Sie unter [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel verwendet zwei <xref:System.Windows.Media.EllipseGeometry> Objekte, um den Inhalt der definieren eine <xref:System.Windows.Media.GeometryDrawing>. Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+ ![Eine GeometryDrawing von zwei Ellipsen](~/add/media/graphicsmm-geodraw.jpg "eine GeometryDrawing von zwei Ellipsen")  
+Zwei EllipseGeometry-Objekte  
+  
+ [!code-csharp[DrawingMiscSnippets_snip#GeometryDrawingExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/GeometryDrawingExample.cs#geometrydrawingexamplewholepage)]
+ [!code-xaml[DrawingMiscSnippets_snip#GeometryDrawingExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GeometryDrawingExample.xaml#geometrydrawingexamplewholepage)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EllipseGeometry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.EllipseGeometry.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.EllipseGeometry" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EllipseGeometry (System.Windows.Rect rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Rect rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.EllipseGeometry.#ctor(System.Windows.Rect)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das Rechteck, das die Ellipse Dimensionen beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Windows.Media.EllipseGeometry" /> -Klasse, die einen horizontale Durchmesser gleich der Breite des übergebenen <see cref="T:System.Windows.Rect" />, einem vertikalen Durchmesser gleich der Länge des übergebenen <see cref="T:System.Windows.Rect" />, und einen Mittelpunkt Speicherort gleich dem Mittelpunkt des übergebenen <see cref="T:System.Windows.Rect" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EllipseGeometry (System.Windows.Point center, double radiusX, double radiusY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point center, float64 radiusX, float64 radiusY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.EllipseGeometry.#ctor(System.Windows.Point,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="center" Type="System.Windows.Point" />
+        <Parameter Name="radiusX" Type="System.Double" />
+        <Parameter Name="radiusY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="center">Die Position des Mittelpunkts der Ellipse.</param>
+        <param name="radiusX">Der horizontale Radius der Ellipse.</param>
+        <param name="radiusY">Der vertikale Radius der Ellipse.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.EllipseGeometry" /> Klasse als eine Ellipse, die einen angegebenen Mittelpunkt-Speicherort x Radius "und" y-Radius verfügt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EllipseGeometry (System.Windows.Point center, double radiusX, double radiusY, System.Windows.Media.Transform transform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point center, float64 radiusX, float64 radiusY, class System.Windows.Media.Transform transform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.EllipseGeometry.#ctor(System.Windows.Point,System.Double,System.Double,System.Windows.Media.Transform)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="center" Type="System.Windows.Point" />
+        <Parameter Name="radiusX" Type="System.Double" />
+        <Parameter Name="radiusY" Type="System.Double" />
+        <Parameter Name="transform" Type="System.Windows.Media.Transform" />
+      </Parameters>
+      <Docs>
+        <param name="center">Die Position des Mittelpunkts der Ellipse.</param>
+        <param name="radiusX">Der horizontale Radius der Ellipse.</param>
+        <param name="radiusY">Der vertikale Radius der Ellipse.</param>
+        <param name="transform">Die Transformation, die auf die Ellipse angewendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.EllipseGeometry" /> Klasse, die der angegebenen Position, Größe und Transformation verfügt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public override System.Windows.Rect Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.EllipseGeometry.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Rect" /> , die das umgebende Feld dieses darstellt <see cref="T:System.Windows.Media.EllipseGeometry" />. Diese Methode berücksichtigt nicht die möglicherweise durch einen Strich hinzugefügte zusätzlichen Bereich.</summary>
+        <value>Das umgebende Feld der <see cref="T:System.Windows.Media.EllipseGeometry" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Center { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Center" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.EllipseGeometry.Center" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Mittelpunkt der <see cref="T:System.Windows.Media.EllipseGeometry" /> ab oder legt ihn fest.</summary>
+        <value>Der Mittelpunkt der <see cref="T:System.Windows.Media.EllipseGeometry" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Center"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.EllipseGeometry.CenterProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CenterProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CenterProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.EllipseGeometry.CenterProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.EllipseGeometry.Center" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.EllipseGeometry Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.EllipseGeometry Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.EllipseGeometry.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.EllipseGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.EllipseGeometry" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.EllipseGeometry CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.EllipseGeometry CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.EllipseGeometry.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.EllipseGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.EllipseGeometry" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.EllipseGeometry.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArea">
+      <MemberSignature Language="C#" Value="public override double GetArea (double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float64 GetArea(float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.EllipseGeometry.GetArea(System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="tolerance">Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt. Wenn <c>Toleranz</c> ist kleiner als.000001,.000001 wird stattdessen verwendet.</param>
+        <param name="type">Einer der Enumerationswerte, <see cref="F:System.Windows.Media.ToleranceType.Absolute" /> oder <see cref="F:System.Windows.Media.ToleranceType.Relative" />, der angibt, ob der Fehlertoleranz ein absoluter Wert oder relativ zum Bereich dieser Geometry-Instanz.</param>
+        <summary>Ruft den Bereich dieses <see cref="T:System.Windows.Media.EllipseGeometry" />.</summary>
+        <returns>Der Bereich der ausgefüllte Bereich der Ellipse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.EllipseGeometry.GetArea%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte generiert eine bessere Näherungswerte, sondern sie erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public override bool IsEmpty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsEmpty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.EllipseGeometry.IsEmpty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dies <see cref="T:System.Windows.Media.EllipseGeometry" /> Objekt leer ist.</summary>
+        <returns>
+          <see langword="true" />Wenn diese <see cref="T:System.Windows.Media.EllipseGeometry" /> leer ist; andernfalls, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MayHaveCurves">
+      <MemberSignature Language="C#" Value="public override bool MayHaveCurves ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MayHaveCurves() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.EllipseGeometry.MayHaveCurves" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dies <see cref="T:System.Windows.Media.EllipseGeometry" /> Objekt kann gekrümmte Segmente aufweisen.</summary>
+        <returns>
+          <see langword="true" />Wenn diese <see cref="T:System.Windows.Media.EllipseGeometry" /> Objekt kann gekrümmte Segmente aufweisen, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadiusX">
+      <MemberSignature Language="C#" Value="public double RadiusX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 RadiusX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.EllipseGeometry.RadiusX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den X-Radius-Wert, der die <see cref="T:System.Windows.Media.EllipseGeometry" />.</summary>
+        <value>Die X-Radiuswert der der <see cref="T:System.Windows.Media.EllipseGeometry" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_RadiusX"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.EllipseGeometry.RadiusXProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadiusXProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RadiusXProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RadiusXProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.EllipseGeometry.RadiusXProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.EllipseGeometry.RadiusX" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadiusY">
+      <MemberSignature Language="C#" Value="public double RadiusY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 RadiusY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.EllipseGeometry.RadiusY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert y-Radius des der <see cref="T:System.Windows.Media.EllipseGeometry" />.</summary>
+        <value>Die y-Radiuswert der der <see cref="T:System.Windows.Media.EllipseGeometry" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_RadiusY"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.EllipseGeometry.RadiusYProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadiusYProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RadiusYProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RadiusYProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.EllipseGeometry.RadiusYProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.EllipseGeometry.RadiusY" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

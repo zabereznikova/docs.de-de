@@ -1,0 +1,275 @@
+<Type Name="ToolStripOverflowButton" FullName="System.Windows.Forms.ToolStripOverflowButton">
+  <TypeSignature Language="C#" Value="public class ToolStripOverflowButton : System.Windows.Forms.ToolStripDropDownButton" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripOverflowButton extends System.Windows.Forms.ToolStripDropDownButton" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripOverflowButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripDropDownButton</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Forms.Design.ToolStripItemDesignerAvailability(System.Windows.Forms.Design.ToolStripItemDesignerAvailability.None)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Hosts eine <see cref="T:System.Windows.Forms.ToolStripDropDown" /> , die Elemente angezeigt, die "Überlauf", die <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es weitere Überlaufelementen als auf dem Formular angezeigt werden können, verwenden die [ToolStrip-Elementauflistungs-Editor](http://msdn.microsoft.com/en-us/e681f3ab-94ba-4b2b-ac64-1dfad46caa25) diese Situation verwalten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripOverflowButton.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt für die Barrierefreiheit für das Steuerelement.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Forms.AccessibleObject" /> für das Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die <xref:System.Windows.Forms.ToolStripOverflowButton.CreateAccessibilityInstance%2A>-Methode nicht explizit aufrufen, wird sie beim Verweis auf die <xref:System.Windows.Forms.Control.AccessibilityObject%2A>-Eigenschaft aufgerufen.  
+  
+> [!NOTE]
+>  Zum Abrufen oder Festlegen der <xref:System.Windows.Forms.Control.AccessibilityObject%2A> -Eigenschaft, müssen Sie einen Verweis zum Hinzufügen der `Accessibility` mit installierte Assembly die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Erstellung eines Diagramms Eingabehilfen-fähig zu steuern, mit der <xref:System.Windows.Forms.AccessibleObject> und <xref:System.Windows.Forms.Control.ControlAccessibleObject> Klassen zum Offenlegen von Informationen zugegriffen werden kann. Das Steuerelement zeichnet zwei Kurven geteilt zusammen mit einer Legende an. Die `ChartControlAccessibleObject` -Klasse, abgeleitet von `ControlAccessibleObject`, werden in der <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> Methode, um benutzerdefinierte barrierefreie Informationen für das Diagrammsteuerelement bereitzustellen. Da die Diagrammlegende nicht tatsächlich <xref:System.Windows.Forms.Control> -basierte Steuerelement, sondern gezeichnet wird vom Diagrammsteuerelement, ist es aber keine integrierten barrierefreien Informationen. Aus diesem Grund die `ChartControlAccessibleObject` -Klasse überschreibt die <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> -Methode zur Rückgabe der `CurveLegendAccessibleObject` , zugegriffen werden Informationen für jeden Teil der Legende darstellt. Wenn eine zugänglich-fähige Anwendung dieses Steuerelement verwendet wird, bieten das Steuerelement die erforderlichen Informationen zugegriffen werden kann.  
+  
+ Dieser Codeauszug veranschaulicht das Überschreiben der <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> Methode. Finden Sie unter der <xref:System.Windows.Forms.AccessibleObject> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.AccessibleObject#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CPP/chartcontrol.cpp#2)]
+ [!code-csharp[System.Windows.Forms.AccessibleObject#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CS/chartcontrol.cs#2)]
+ [!code-vb[System.Windows.Forms.AccessibleObject#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/VB/chartcontrol.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultDropDown">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ToolStripDropDown CreateDefaultDropDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.ToolStripDropDown CreateDefaultDropDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripOverflowButton.CreateDefaultDropDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripDropDown</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein leeres <see cref="T:System.Windows.Forms.ToolStripDropDown" /> nach unten und welche Ereignisse angefügt werden, können gelöscht werden können.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.ToolStripDropDown" />-Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMargin">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Padding DefaultMargin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding DefaultMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripOverflowButton.DefaultMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den als Standardwert angegebenen Leerraum zwischen Steuerelementen in Pixel ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Padding" /> Wert, der den Zwischenraum zwischen Steuerelementen darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripOverflowButton.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um verwaltete und nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Wird von der <see cref="M:System.ComponentModel.Component.Dispose(System.Boolean)" />-Methode und der <see cref="M:System.ComponentModel.Component.Finalize" />-Methode aufgerufen, um die verwalteten und nicht verwalteten von der aktuellen Instanz der <see cref="T:System.Windows.Forms.ToolStripOverflowButton" />-Klasse verwendeten Ressourcen freizugeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, nur von den öffentlichen <xref:System.ComponentModel.Component.Dispose%2A> und <xref:System.ComponentModel.Component.Finalize%2A> -Methoden für diese Methode nicht direkt aufrufen. Beim Implementieren des Dispose-Musters die <xref:System.Boolean> Parameter von der <xref:System.Windows.Forms.ToolStripOverflowButton.Dispose%2A> Methode sollte wie folgt verwendet werden:  
+  
+-   Die <xref:System.ComponentModel.Component.Dispose> -Methode des aktuellen Objekts aufrufen sollte <xref:System.Windows.Forms.ToolStripOverflowButton.Dispose%2A> mit der <xref:System.Boolean> Parameter festgelegt wird, um `true` um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben.  
+  
+-   Die <xref:System.ComponentModel.Component.Finalize%2A> -Methode des aktuellen Objekts aufrufen sollte <xref:System.Windows.Forms.ToolStripOverflowButton.Dispose%2A> mit der <xref:System.Boolean> Parameter festgelegt wird, um `false` um ausschließlich nicht verwaltete Ressourcen freizugeben.  
+  
+ Weitere Informationen finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size GetPreferredSize (System.Drawing.Size constrainingSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Size GetPreferredSize(valuetype System.Drawing.Size constrainingSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripOverflowButton.GetPreferredSize(System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constrainingSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constrainingSize">Der Bereich mit benutzerdefinierter Größe eines Steuerelements.</param>
+        <summary>Ruft die Größe eines rechteckigen Bereichs ab, in den ein Steuerelement eingefügt werden kann.</summary>
+        <returns>Ein geordnetes Paar vom Typ <see cref="T:System.Drawing.Size" />, das die Breite und Höhe eines Rechtecks darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDropDownItems">
+      <MemberSignature Language="C#" Value="public override bool HasDropDownItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasDropDownItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripOverflowButton.HasDropDownItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.ToolStripOverflowButton" /> enthält Elemente, die "Überlauf", die <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.ToolStripOverflowButton" /> Überlaufelemente enthält, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripOverflowButton.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.Paint" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripOverflowButton.OnPaint%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripOverflowButton.OnPaint(System.Windows.Forms.PaintEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripOverflowButton.OnPaint(System.Windows.Forms.PaintEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftAutoMirrorImage">
+      <MemberSignature Language="C#" Value="public bool RightToLeftAutoMirrorImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RightToLeftAutoMirrorImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripOverflowButton.RightToLeftAutoMirrorImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>
+          <see langword="true" />So aktivieren Sie die automatische Spiegelung; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBounds">
+      <MemberSignature Language="C#" Value="protected override void SetBounds (System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void SetBounds(valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripOverflowButton.SetBounds(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> darstellt, die Größe und Position von der <see cref="T:System.Windows.Forms.ToolStripOverflowButton" />.</param>
+        <summary>Legt die Größe und die Position der <see cref="T:System.Windows.Forms.ToolStripOverflowButton" /> fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

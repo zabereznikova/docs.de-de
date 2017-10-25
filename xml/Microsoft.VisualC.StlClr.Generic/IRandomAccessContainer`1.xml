@@ -1,0 +1,65 @@
+<Type Name="IRandomAccessContainer&lt;TValue&gt;" FullName="Microsoft.VisualC.StlClr.Generic.IRandomAccessContainer&lt;TValue&gt;">
+  <TypeSignature Language="C#" Value="public interface IRandomAccessContainer&lt;TValue&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IRandomAccessContainer`1&lt;TValue&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualC.StlClr.Generic.IRandomAccessContainer`1" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TValue">[!INCLUDE[cpp_iter_arg](~/includes/cpp-iter-arg-md.md)]</typeparam>
+    <summary>Eine Schnittstelle für einen Container, der random-Access-Iteration unterstützt. Container, random-Access-Iteration unterstützen die folgenden Vorgänge: verschieben eine Position vorrücken durch Aufrufen <c>Operator++</c>, rückwärts eine Position verschieben, durch den Aufruf <c>Operator--</c>, Zugreifen auf ein Element mithilfe von <c>[]-Operator</c>, und den Zugriff auf ein Element mit Zeigerarithmetik.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="at_bias">
+      <MemberSignature Language="C#" Value="public TValue at_bias (int A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TValue at_bias(int32 A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.Generic.IRandomAccessContainer`1.at_bias(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue@</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">To be added.</param>
+        <summary>Ruft das Element an der aktuellen Verschiebung des Containers ab. Die Verschiebung ist der Offset vom aktuellen Element 0 (null).</summary>
+        <returns>Das Element an der angegebenen Verschiebung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="valid_bias">
+      <MemberSignature Language="C#" Value="public bool valid_bias (int A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool valid_bias(int32 A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.Generic.IRandomAccessContainer`1.valid_bias(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">Die aktuelle Verschiebung.</param>
+        <summary>Bestimmt, ob eine angegebene Verschiebung für den Container gültig ist. Die Verschiebung ist der Offset vom aktuellen Element 0 (null).</summary>
+        <returns>
+          <see langword="true" />Wenn die angegebene Verschiebung für den Container gültig ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

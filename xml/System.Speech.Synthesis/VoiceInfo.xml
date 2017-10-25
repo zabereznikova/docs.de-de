@@ -1,0 +1,323 @@
+<Type Name="VoiceInfo" FullName="System.Speech.Synthesis.VoiceInfo">
+  <TypeSignature Language="C#" Value="public class VoiceInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit VoiceInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.VoiceInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{(_name != null ? "'" + _name + "' " : "") +  (_culture != null ? " '" + _culture.ToString () + "' " : "") + (_gender != VoiceGender.NotSet ? " '" + _gender.ToString () + "' " : "") + (_age != VoiceAge.NotSet ? " '" + _age.ToString () + "' " : "") + (_variant &gt; 0 ? " " + _variant.ToString () : "")}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine installierte Sprache sprachsynthesemodul dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Stimme ist ein sprachsynthesemodul installierte Sprache, die auch als eine-Sprach-Modul oder ein Sprachausgabemodul bezeichnet wird. Die <xref:System.Speech.Synthesis.SpeechSynthesizer> Objekt verwendet eine Stimme zum Generieren von Sprache aus dem Text. Die Eigenschaften der <xref:System.Speech.Synthesis.VoiceInfo> Objekt eine Stimme zu identifizieren und Merkmalen beschreiben. Die meisten definierende Merkmal einer Stimme ist seine <xref:System.Speech.Synthesis.VoiceInfo.Culture%2A>, definiert, die einzelne Sprache, die eine Stimme äußern kann.  
+  
+ Die <xref:System.Speech.Synthesis.SpeechSynthesizer.Voice%2A> Eigenschaft gibt eine <xref:System.Speech.Synthesis.VoiceInfo> -Objekt, das Informationen über die aktuelle Stimme im Verwenden von enthält die <xref:System.Speech.Synthesis.SpeechSynthesizer>. Sie können auch eine <xref:System.Speech.Synthesis.VoiceInfo> Objekt, das Abrufen von Informationen bezüglich der stimmen, die auf dem System installiert sind, wie zurückgegeben der <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices> Methode. Weitere Informationen finden Sie unter <xref:System.Speech.Synthesis.InstalledVoice>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ist Teil einer Konsolenanwendung, die initialisiert einen <xref:System.Speech.Synthesis.SpeechSynthesizer> Objekt und eine Liste der installierten stimmen (Module für die Sprachsynthese) an die Konsole ausgegeben und zeigt die Informationen, die für jede Sprache verfügbar ist.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+using System.Speech.AudioFormat;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Output information about all of the installed voices.   
+        Console.WriteLine("Installed voices -");  
+        foreach (InstalledVoice voice in synth.GetInstalledVoices())  
+        {  
+          VoiceInfo info = voice.VoiceInfo;  
+          string AudioFormats = "";  
+          foreach (SpeechAudioFormatInfo fmt in info.SupportedAudioFormats)  
+          {  
+            AudioFormats += String.Format("{0}\n",  
+            fmt.EncodingFormat.ToString());  
+          }  
+  
+          Console.WriteLine(" Name:          " + info.Name);  
+          Console.WriteLine(" Culture:       " + info.Culture);  
+          Console.WriteLine(" Age:           " + info.Age);  
+          Console.WriteLine(" Gender:        " + info.Gender);  
+          Console.WriteLine(" Description:   " + info.Description);  
+          Console.WriteLine(" ID:            " + info.Id);  
+          Console.WriteLine(" Enabled:       " + voice.Enabled);  
+          if (info.SupportedAudioFormats.Count != 0)  
+          {  
+            Console.WriteLine( " Audio formats: " + AudioFormats);  
+          }  
+          else  
+          {  
+            Console.WriteLine(" No supported audio formats found");  
+          }  
+  
+          string AdditionalInfo = "";  
+          foreach (string key in info.AdditionalInfo.Keys)  
+          {  
+            AdditionalInfo += String.Format("  {0}: {1}\n", key, info.AdditionalInfo[key]);  
+          }  
+  
+          Console.WriteLine(" Additional Info - " + AdditionalInfo);  
+          Console.WriteLine();  
+        }  
+      }  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdditionalInfo">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; AdditionalInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; AdditionalInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.VoiceInfo.AdditionalInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft zusätzliche Informationen über die Stimme.</summary>
+        <value>Gibt eine Auflistung von Name/Wert-Paaren, die beschreiben, und identifizieren die Stimme.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Age">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.VoiceAge Age { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Synthesis.VoiceAge Age" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.VoiceInfo.Age" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.VoiceAge</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Alter der Stimme an.</summary>
+        <value>Gibt das Alter der Stimme an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Synthesis.VoiceInfo.Age%2A> Eigenschaft ruft ein Mitglied der <xref:System.Speech.Synthesis.VoiceAge> Enumeration, der das Alter der Stimme angibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo Culture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Culture" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.VoiceInfo.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kultur der Stimme an.</summary>
+        <value>Gibt eine <see cref="T:System.Globalization.CultureInfo" /> -Objekt, das Informationen über eine bestimmte Kultur, z. B. die Namen der Kultur, das Schriftsystem, den verwendeten Kalender bereitstellt und wie Datumsangaben formatiert und Zeichenfolgen sortiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureInfo> -Klasse gibt einen eindeutigen Namen für jede Kultur an. Der Name ist eine Kombination aus einer ISO 639 zweibuchstabige Kleinbuchstaben Kulturcode einer anderen Sprache zugeordnet und ein ISO 3166 zweibuchstabige Großbuchstaben Teilkulturcode ein Land oder Region zugeordnet. Beispiele für Kulturnamen sind "es-US" für Spanisch, wie in den USA oder "fr-CA" für Französisch gesprochen in Kanada gesprochen. Sie können eine neutrale Kultur angeben, mit nur zwei Kleinbuchstaben Sprachcode Code. Z. B. "fr" gibt die neutrale Kultur für Französisch und "de" gibt die neutrale Kultur für Deutsch.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.VoiceInfo.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung der Stimme ab.</summary>
+        <value>Gibt die Beschreibung der Stimme zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.VoiceInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das angegebene <see cref="T:System.Speech.Synthesis.VoiceInfo" /> Objekt.</param>
+        <summary>Vergleicht die Felder der Stimme mit dem angegebenen <see cref="T:System.Speech.Synthesis.VoiceInfo" /> bestimmt, ob sie die gleichen Werte enthalten.</summary>
+        <returns>Gibt <see langword="True" /> Wenn die Felder der beiden <see cref="T:System.Speech.Synthesis.VoiceInfo" /> Objekte gleich sind; andernfalls gibt <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Synthesis.VoiceInfo.Equals%2A> -Methode übernimmt ein <xref:System.Object> Typ als Parameter. Wenn dieses Objekt nicht vom der <xref:System.Speech.Synthesis.VoiceInfo> eingeben, der Methodenrückgabe `False`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gender">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.VoiceGender Gender { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Synthesis.VoiceGender Gender" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.VoiceInfo.Gender" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.VoiceGender</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Geschlecht der Stimme an.</summary>
+        <value>Gibt das Geschlecht der Stimme an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Synthesis.VoiceInfo.Gender%2A> Eigenschaft ruft ein Mitglied der <xref:System.Speech.Synthesis.VoiceGender> Enumeration, der das Geschlecht der Stimme angibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.VoiceInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt einen Hashcode für eine <c>VoiceInfo</c> Objekt.</summary>
+        <returns>Ein Hashcode für das aktuelle <see cref="T:System.Speech.Synthesis.VoiceInfo" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.VoiceInfo.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID der Stimme.</summary>
+        <value>Gibt den Bezeichner für die Stimme.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.VoiceInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Stimme.</summary>
+        <value>Der Name der Stimme zurückgegeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedAudioFormats">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Speech.AudioFormat.SpeechAudioFormatInfo&gt; SupportedAudioFormats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Speech.AudioFormat.SpeechAudioFormatInfo&gt; SupportedAudioFormats" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.VoiceInfo.SupportedAudioFormats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Speech.AudioFormat.SpeechAudioFormatInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von audio-Formate, die die Sprache unterstützt.</summary>
+        <value>Gibt eine Auflistung der audio Formate, die die Sprache unterstützt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

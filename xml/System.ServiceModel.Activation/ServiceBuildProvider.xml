@@ -1,0 +1,175 @@
+<Type Name="ServiceBuildProvider" FullName="System.ServiceModel.Activation.ServiceBuildProvider">
+  <TypeSignature Language="C#" Value="public sealed class ServiceBuildProvider : System.Web.Compilation.BuildProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceBuildProvider extends System.Web.Compilation.BuildProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activation.ServiceBuildProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Compilation.BuildProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical(System.Security.SecurityCriticalScope.Everything)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ServiceModel.Activation.ServiceActivationBuildProvider</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.Compilation.BuildProviderAppliesTo(System.Web.Compilation.BuildProviderAppliesTo.Web)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Eigenschaften und Methoden zum Generieren von Quellcode in der ASP.NET-Buildumgebung. Diese Klasse stellt die Windows Communication Foundation (WCF)-Implementierung der <see cref="T:System.Web.Compilation.BuildProvider" />.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceBuildProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.ServiceBuildProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activation.ServiceBuildProvider" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CodeCompilerType">
+      <MemberSignature Language="C#" Value="public override System.Web.Compilation.CompilerType CodeCompilerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Compilation.CompilerType CodeCompilerType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activation.ServiceBuildProvider.CodeCompilerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.CompilerType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Compilertyp dar, der vom Buildanbieter zum Generieren von Quellcode für einen benutzerdefinierten Dateityp verwendet wird.</summary>
+        <value>Ein schreibgeschützter Compilertyp, der den Codegenerator, den Codecompiler sowie Compilereinstellungen darstellt, die zum Erstellen von Quellcode für den virtuellen Pfad verwendet werden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public override void GenerateCode (System.Web.Compilation.AssemblyBuilder assemblyBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateCode(class System.Web.Compilation.AssemblyBuilder assemblyBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.ServiceBuildProvider.GenerateCode(System.Web.Compilation.AssemblyBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyBuilder" Type="System.Web.Compilation.AssemblyBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyBuilder">Der Assembly-Generator, der auf den vom Buildanbieter generierten Quellcode verweist.</param>
+        <summary>Generiert Quellcode für den virtuellen Pfad des Buildanbieters und fügt den Quellcode einem bestimmten Assembly-Generator hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetCodeCompileUnit">
+      <MemberSignature Language="C#" Value="protected override System.CodeDom.CodeCompileUnit GetCodeCompileUnit (out System.Collections.IDictionary linePragmasTable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.CodeDom.CodeCompileUnit GetCodeCompileUnit([out] class System.Collections.IDictionary&amp; linePragmasTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.ServiceBuildProvider.GetCodeCompileUnit(System.Collections.IDictionary@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCompileUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="linePragmasTable" Type="System.Collections.IDictionary&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="linePragmasTable">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomString">
+      <MemberSignature Language="C#" Value="public override string GetCustomString (System.CodeDom.Compiler.CompilerResults results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetCustomString(class System.CodeDom.Compiler.CompilerResults results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.ServiceBuildProvider.GetCustomString(System.CodeDom.Compiler.CompilerResults)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.CodeDom.Compiler.CompilerResults" />
+      </Parameters>
+      <Docs>
+        <param name="results">Die Kompilierung erfolgt für den virtuellen Pfad des Buildanbieters.</param>
+        <summary>Generiert eine Zeichenfolge, die in der kompilierten Assembly beibehalten werden muss.</summary>
+        <returns>Eine Zeichenfolge, die in der Erstellungsumgebung beibehalten werden soll.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetResultFlags">
+      <MemberSignature Language="C#" Value="public override System.Web.Compilation.BuildProviderResultFlags GetResultFlags (System.CodeDom.Compiler.CompilerResults results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Web.Compilation.BuildProviderResultFlags GetResultFlags(class System.CodeDom.Compiler.CompilerResults results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.ServiceBuildProvider.GetResultFlags(System.CodeDom.Compiler.CompilerResults)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.BuildProviderResultFlags</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.CodeDom.Compiler.CompilerResults" />
+      </Parameters>
+      <Docs>
+        <param name="results">Die Kompilierung erfolgt für den virtuellen Pfad des Buildanbieters.</param>
+        <summary>Gibt einen Wert zurück, der Aktionen angibt, die erforderlich sind, wenn ein virtueller Pfad erstellt wird.</summary>
+        <returns>Die Aktionen, die erforderlich sind, nachdem der virtuelle Pfad innerhalb der ASP.NET-Erstellungsumgebung erstellt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualPathDependencies">
+      <MemberSignature Language="C#" Value="public override System.Collections.ICollection VirtualPathDependencies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection VirtualPathDependencies" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activation.ServiceBuildProvider.VirtualPathDependencies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine Auflistung von virtuellen Pfaden dar, die erstellt werden muss, bevor der Buildanbieter Code generiert.</summary>
+        <value>Die virtuellen Pfade, auf denen diese Instanz des Buildanbieters abhängig ist.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

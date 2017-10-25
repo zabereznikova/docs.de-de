@@ -1,0 +1,88 @@
+<Type Name="DrawMode" FullName="System.Windows.Forms.DrawMode">
+  <TypeSignature Language="C#" Value="public enum DrawMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DrawMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DrawMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie die Elemente eines Steuerelements gezeichnet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird von Elementen verwendet, z. B. <xref:System.Windows.Forms.ListBox.DrawMode%2A> in der <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.CheckedListBox>, und <xref:System.Windows.Forms.ComboBox> Klassen.  
+  
+ Sie können das Zeichnen von einigen Steuerelementen oder bestimmte Elemente überschreiben. Diese Enumeration wird verwendet, um anzugeben, wenn ein Steuerelement, vom Betriebssystem gezeichnet wird oder Ihren eigenen Code das Zeichnen des Steuerelements behandelt wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.CheckedListBox> Klasse unterstützt nur normale; Ownerdrawn-Modi werden nicht berücksichtigt.  
+  
+ Weitere Informationen zum Verwenden der <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType> -Enumeration, finden Sie unter der `MeasureItem` und `DrawItem` Ereignisse, und die `ItemHeight` Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Erstellen von Ownerdrawn- <xref:System.Windows.Forms.ListBox> Elemente. Der Code verwendet die <xref:System.Windows.Forms.ListBox.DrawMode%2A> Eigenschaft, um anzugeben, dass die gezeichneten Elemente eine feste Größe und die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis zeichnet jedes Elements in der <xref:System.Windows.Forms.ListBox.DrawItem>. Der Beispielcode verwendet, die Eigenschaften und Methoden von der <xref:System.Windows.Forms.DrawItemEventArgs> Klasse als Parameter übergeben werden, an den Ereignishandler, um die Elemente zu zeichnen. In diesem Beispiel wird vorausgesetzt, dass ein <xref:System.Windows.Forms.ListBox> -Steuerelement namens `listBox1` hinzugefügt wurde, ein Formular und die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis erfolgt durch die im Beispielcode definierten Ereignishandler. Im Beispiel wird außerdem vorausgesetzt, dass Elemente hinzugefügt wurden die <xref:System.Windows.Forms.ListBox.DrawItem> mit dem Text "Apple", "Orange" und "Plum" in dieser Reihenfolge.  
+  
+ [!code-csharp[ListBox.DrawMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListBox.DrawMode/CS/form1.cs#1)]
+ [!code-vb[ListBox.DrawMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListBox.DrawMode/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DrawMode Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DrawMode.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DrawMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Elemente in einem Steuerelement werden vom Betriebssystem gezeichnet und mit derselben Größe zu werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDrawFixed">
+      <MemberSignature Language="C#" Value="OwnerDrawFixed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DrawMode OwnerDrawFixed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DrawMode.OwnerDrawFixed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DrawMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Elemente im Steuerelement manuell gezeichnet werden und werden mit derselben Größe zu.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDrawVariable">
+      <MemberSignature Language="C#" Value="OwnerDrawVariable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DrawMode OwnerDrawVariable = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DrawMode.OwnerDrawVariable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DrawMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Elemente im Steuerelement manuell gezeichnet werden und können in der Größe unterscheiden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

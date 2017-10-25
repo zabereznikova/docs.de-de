@@ -1,0 +1,129 @@
+<Type Name="StructuralComparisons" FullName="System.Collections.StructuralComparisons">
+  <TypeSignature Language="C#" Value="public static class StructuralComparisons" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit StructuralComparisons extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.StructuralComparisons" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Objekte zum Ausführen eines Strukturvergleichs zweier Auflistungsobjekte bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.StructuralComparisons> Klasse gibt die folgenden beiden vordefinierten Vergleichsobjekte:  
+  
+-   Ein <xref:System.Collections.IComparer> Implementierung, z. B. an eine Methode übergeben werden kann <xref:System.Array.System%23Collections%23IStructuralComparable%23CompareTo%28System.Object%2CSystem.Collections.IComparer%29?displayProperty=nameWithType> oder <xref:System.Tuple%603.System%23Collections%23IStructuralComparable%23CompareTo%28System.Object%2CSystem.Collections.IComparer%29?displayProperty=nameWithType> zum Ausführen eines Strukturvergleichs zweier Objekte. Es wurde entwickelt, um anzugeben, ob das erste Objekt vorausgeht, späteren oder derselben Position wie das zweite Objekt in der Sortierreihenfolge auftritt.  
+  
+-   Ein <xref:System.Collections.IEqualityComparer> Implementierung, z. B. an eine Methode übergeben werden kann <xref:System.Array.System%23Collections%23IStructuralEquatable%23Equals%28System.Object%2CSystem.Collections.IEqualityComparer%29?displayProperty=nameWithType> oder <xref:System.Tuple%603.System%23Collections%23IStructuralEquatable%23Equals%28System.Object%2CSystem.Collections.IEqualityComparer%29?displayProperty=nameWithType> einen Vergleich strukturellen gleichheitsüberprüfung durchführen.  
+  
+ Die Objekte können zum Ausführen eines Strukturvergleichs oder einen Strukturgleichheit Vergleich zweier Auflistungsobjekte, wie z. B. Array oder Tupel Objekte verwendet werden. In strukturvergleichsfunktion erfolgt werden zwei Objekte basierend auf ihren Werten verglichen. Objekte können sortiert werden basierend auf bestimmte Kriterien und zwei Objekte als gleich betrachtet, wenn sie identische Werte haben nicht verwendet werden, da sie dasselbe physische Objekt verweisen  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="StructuralComparer">
+      <MemberSignature Language="C#" Value="public static System.Collections.IComparer StructuralComparer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.IComparer StructuralComparer" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.StructuralComparisons.StructuralComparer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IComparer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein vordefiniertes Objekt, das einen Strukturvergleich von zwei Objekten ausführt.</summary>
+        <value>Ein vordefiniertes Objekt, das zum Ausführen eines Strukturvergleichs zweier Auflistungsobjekte verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Collections.IComparer> von dieser Eigenschaft zurückgegebene Objekt wird an der Vergleichsmethode des ein Auflistungsobjekt übergeben, z. B. <xref:System.Array.System%23Collections%23IStructuralComparable%23CompareTo%28System.Object%2CSystem.Collections.IComparer%29?displayProperty=nameWithType> oder <xref:System.Tuple%603.System%23Collections%23IStructuralComparable%23CompareTo%28System.Object%2CSystem.Collections.IComparer%29?displayProperty=nameWithType>, dessen <xref:System.Collections.IComparer.Compare%2A> Methode wird aufgerufen, für jedes Element eines Arrays oder jede Komponente des Tupels. Diese Implementierung der <xref:System.Collections.IComparer.Compare%2A> Methode verhält sich wie folgt, wenn jedes Element eines Auflistungsobjekts mit dem entsprechenden Element des anderen Auflistungsobjekts verglichen:  
+  
+-   Es werden zwei Elemente, die betrachtet `null` gleich, und es werden ein null-Element kleiner als ein Element sein, die nicht null ist.  
+  
+-   Wenn das erste Element im Vergleich zu umgewandelt werden kann ein <xref:System.Collections.IStructuralComparable> Objekt (also, wenn es ein Auflistungsobjekt ist, implementiert die <xref:System.Collections.IStructuralComparable> Schnittstelle), ruft er die <xref:System.Collections.IStructuralComparable.CompareTo%2A> Methode.  
+  
+-   Wenn das erste Element im Vergleich zu umgewandelt werden kann ein <xref:System.Collections.IStructuralComparable> Objekt (also, wenn sie nicht über ein Auflistungsobjekt ist, implementiert der <xref:System.Collections.IStructuralComparable> Schnittstelle), ruft er die `Comparer.Default.Compare` Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StructuralEqualityComparer">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEqualityComparer StructuralEqualityComparer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.IEqualityComparer StructuralEqualityComparer" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.StructuralComparisons.StructuralEqualityComparer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEqualityComparer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein vordefiniertes Objekt, das strukturellen gleichheitsüberprüfung zwei Objekte vergleicht.</summary>
+        <value>Ein vordefiniertes Objekt, das zum Vergleichen zweier Auflistungsobjekte strukturellen gleichheitsüberprüfung verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Collections.IComparer> von dieser Eigenschaft zurückgegebene Objekt wird an Methode für den Gleichheitsvergleich von ein Auflistungsobjekt übergeben, z. B. <xref:System.Array.System%23Collections%23IStructuralEquatable%23Equals%28System.Object%2CSystem.Collections.IEqualityComparer%29?displayProperty=nameWithType> oder <xref:System.Tuple%603.System%23Collections%23IStructuralEquatable%23Equals%28System.Object%2CSystem.Collections.IEqualityComparer%29?displayProperty=nameWithType>, dessen <xref:System.Collections.IEqualityComparer.Equals%2A?displayProperty=nameWithType> Methode wird aufgerufen, für jedes Element eines Arrays oder jede Komponente des Tupels. Diese Implementierung der <xref:System.Collections.IEqualityComparer.Equals%2A> Methode verhält sich wie folgt, wenn jedes Element eines Auflistungsobjekts mit dem entsprechenden Element des anderen Auflistungsobjekts verglichen:  
+  
+-   Wenn beide Elemente `null`, betrachtet die zwei Elemente gleich sind.  
+  
+-   Wenn ein Element null ist, aber das andere Element kein ist, betrachtet er die beiden Elemente berücksichtigt werden.  
+  
+-   Wenn das erste Element im Vergleich zu umgewandelt werden kann ein <xref:System.Collections.IStructuralEquatable> Objekt (also, wenn es ein Auflistungsobjekt ist, implementiert die <xref:System.Collections.IStructuralEquatable> Schnittstelle), ruft er die <xref:System.Collections.IStructuralEquatable.Equals%2A?displayProperty=nameWithType> Methode.  
+  
+-   Wenn das erste Element im Vergleich zu umgewandelt werden kann ein <xref:System.Collections.IStructuralEquatable> Objekt (mit anderen Worten, wenn er nicht über ein Auflistungsobjekt ist, implementiert die <xref:System.Collections.IStructuralEquatable> Schnittstelle), ruft des Elements `Equals` Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

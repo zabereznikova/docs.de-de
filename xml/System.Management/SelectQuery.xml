@@ -1,0 +1,454 @@
+<Type Name="SelectQuery" FullName="System.Management.SelectQuery">
+  <TypeSignature Language="C#" Value="public class SelectQuery : System.Management.WqlObjectQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SelectQuery extends System.Management.WqlObjectQuery" />
+  <TypeSignature Language="DocId" Value="T:System.Management.SelectQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.WqlObjectQuery</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine WQL-SELECT-Datenabfrage dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SelectQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.SelectQuery.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Management.SelectQuery" />-Klasse. Dies ist der Standardkonstruktor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SelectQuery (string queryOrClassName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string queryOrClassName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.SelectQuery.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="queryOrClassName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="queryOrClassName">Die gesamte Abfrage oder den Namen der Klasse, die in der Abfrage verwendet. Der Parser in dieser Klasse versucht, die Zeichenfolge als eine gültige WQL-SELECT-Abfrage zu analysieren. Wenn der Parser nicht erfolgreich ist, nimmt er an, dass die Zeichenfolge ein Klassenname ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.SelectQuery" /> Klasse für die angegebene Abfrage oder der Name der angegebenen Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine <xref:System.Management.SelectQuery> durch Angeben einer Abfrage.  
+  
+ [!code-csharp[wminet_SelectQuery-S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_SelectQuery-S/cs/SelectQuery-S.cs#1)]
+ [!code-vb[wminet_SelectQuery-S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_SelectQuery-S/vb/SelectQuery-S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SelectQuery (bool isSchemaQuery, string condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isSchemaQuery, string condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.SelectQuery.#ctor(System.Boolean,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isSchemaQuery" Type="System.Boolean" />
+        <Parameter Name="condition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="isSchemaQuery">
+          <see langword="true" />um anzugeben, dass dies eine Schemaabfragen; andernfalls <see langword="false" />. Ein <see langword="false" /> Wert ist ungültig. in diesem Konstruktor.</param>
+        <param name="condition">Die Bedingung, die angewendet werden, um das Resultset von Klassen bilden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.SelectQuery" /> Klasse für eine Schemaabfrage, die optional eine Bedingung angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine <xref:System.Management.SelectQuery> durch Angabe einer Bedingung.  
+  
+ [!code-csharp[wminet_SelectQuery-B_S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_SelectQuery-B_S/cs/SelectQuery-B_S.cs#1)]
+ [!code-vb[wminet_SelectQuery-B_S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_SelectQuery-B_S/vb/SelectQuery-B_S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SelectQuery (string className, string condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string className, string condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.SelectQuery.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="className" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="className">Der Name der Klasse, die in der Abfrage auswählen.</param>
+        <param name="condition">Die Bedingung, die in der Abfrage angewendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.SelectQuery" /> Klasse mit dem angegebenen Klassennamen und Bedingung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine <xref:System.Management.SelectQuery> durch einen WMI-Klassennamen und eine Bedingung angeben.  
+  
+ [!code-csharp[wminet_SelectQuery-S_S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_SelectQuery-S_S/cs/SelectQuery-S_S.cs#1)]
+ [!code-vb[wminet_SelectQuery-S_S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_SelectQuery-S_S/vb/SelectQuery-S_S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SelectQuery (string className, string condition, string[] selectedProperties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string className, string condition, string[] selectedProperties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.SelectQuery.#ctor(System.String,System.String,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="className" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+        <Parameter Name="selectedProperties" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="className">Der Name der Klasse, aus denen Sie auswählen.</param>
+        <param name="condition">Die Bedingung auf Instanzen der ausgewählten Klasse angewendet werden soll.</param>
+        <param name="selectedProperties">Ein Array von Eigenschaftsnamen in den Abfrageergebnissen zurückgegeben werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.SelectQuery" /> Klasse mit dem angegebenen Klassennamen und die Bedingung, die nur die angegebenen Eigenschaften auswählen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine <xref:System.Management.SelectQuery> durch Angabe eines WMI-Klassennamen, eine Bedingung und ein Array von Eigenschaften.  
+  
+ [!code-csharp[wminet_SelectQuery-S_S_S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_SelectQuery-S_S_S/cs/SelectQuery-S_S_S.cs#1)]
+ [!code-vb[wminet_SelectQuery-S_S_S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_SelectQuery-S_S_S/vb/SelectQuery-S_S_S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildQuery">
+      <MemberSignature Language="C#" Value="protected void BuildQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void BuildQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.SelectQuery.BuildQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die Abfragezeichenfolge gemäß der aktuellen Eigenschaftswerte an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassName">
+      <MemberSignature Language="C#" Value="public string ClassName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.SelectQuery.ClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Klassennamen aus, die in der Abfrage ausgewählt werden.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der den Namen der Klasse in der Abfrage enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieses Eigenschaftswerts überschreibt alle vorherigen Werte, die im Objekt gespeichert wird. Die Abfragezeichenfolge wird neu erstellt, um den Klassennamen der neuen widerzuspiegeln.  
+  
+ Einen Wert für die **ClassName** Eigenschaft ersetzen die \<Klassenname > Element in einer SELECT-Abfrage des Formulars "wählen * FROM \<Klassenname >, in dem \<Bedingung >".  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge, die den Namen der Klasse in der Abfrage.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine <xref:System.Management.SelectQuery> durch Angeben einer Abfrage, und klicken Sie dann Änderungen der <xref:System.Management.SelectQuery.ClassName%2A> Eigenschaft.  
+  
+ [!code-csharp[wminet_SelectQuery_ClassName#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_SelectQuery_ClassName/cs/SelectQuery_ClassName.cs#1)]
+ [!code-vb[wminet_SelectQuery_ClassName#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_SelectQuery_ClassName/vb/SelectQuery_ClassName.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.SelectQuery.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des Objekts.</summary>
+        <returns>Das kopierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public string Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.SelectQuery.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Bedingung, die in der SELECT-Abfrage angewendet werden.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, enthält die Bedingung auf die SELECT-Abfrage angewendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieses Eigenschaftswerts überschreibt alle vorherigen Werte, die im Objekt gespeichert wird. Die Abfragezeichenfolge wird neu erstellt, um die neue Bedingung zu berücksichtigen.  
+  
+ Einen Wert für die **Bedingung** Eigenschaft ersetzen der \<Bedingung > Element in einer SELECT-Abfrage im Format "Wählen Sie * FROM \<Klassenname >, in dem \<Bedingung >".  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge mit der Bedingung, die in der SELECT-Abfrage angewendet werden.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSchemaQuery">
+      <MemberSignature Language="C#" Value="public bool IsSchemaQuery { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSchemaQuery" />
+      <MemberSignature Language="DocId" Value="P:System.Management.SelectQuery.IsSchemaQuery" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dieser Abfrage ein Schema oder eine Instanzenabfrage ist.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die Abfrage eine Schemaabfrage ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieses Eigenschaftswerts überschreibt alle vorherigen Werte, die im Objekt gespeichert wird. Die Abfragezeichenfolge wird neu erstellt, entsprechend den neuen Abfragetyp.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn diese Abfrage über das Schema ausgewertet werden soll; `false` , wenn die Abfrage über Instanzen ausgewertet werden soll.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseQuery">
+      <MemberSignature Language="C#" Value="protected override void ParseQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void ParseQuery(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.SelectQuery.ParseQuery(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Die zu analysierende Abfragezeichenfolge.</param>
+        <summary>Analysiert die Abfragezeichenfolge, und legt die Eigenschaftswerte entsprechend fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryString">
+      <MemberSignature Language="C#" Value="public override string QueryString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string QueryString" />
+      <MemberSignature Language="DocId" Value="P:System.Management.SelectQuery.QueryString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Abfrage der <see cref="T:System.Management.SelectQuery" /> -Objekts in Form einer Zeichenfolge.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der die Abfrage enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieses Eigenschaftswerts überschreibt alle vorherigen Werte, die im Objekt gespeichert wird. Darüber hinaus bewirkt, dass durch Festlegen dieser Eigenschaft die anderen Member des Objekts aktualisiert werden, wenn die Zeichenfolge analysiert wird.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge, die die Abfrage darstellt.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine <xref:System.Management.SelectQuery> mit dem Standardkonstruktor und klicken Sie dann die Änderungen der <xref:System.Management.SelectQuery.QueryString%2A> Eigenschaft.  
+  
+ [!code-csharp[wminet_SelectQuery_QueryString#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_SelectQuery_QueryString/cs/SelectQuery_QueryString.cs#1)]
+ [!code-vb[wminet_SelectQuery_QueryString#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_SelectQuery_QueryString/vb/SelectQuery_QueryString.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection SelectedProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection SelectedProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Management.SelectQuery.SelectedProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Auszuwählendes ab oder legt ein Array der Eigenschaft benennt, in der Abfrage ausgewählt werden.</summary>
+        <value>Gibt eine <see cref="T:System.Collections.Specialized.StringCollection" /> mit den Namen der Eigenschaften in der Abfrage ausgewählt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieses Eigenschaftswerts überschreibt alle vorherigen Werte, die im Objekt gespeichert wird. Die Abfragezeichenfolge wird neu erstellt, um die neuen Eigenschaften zu berücksichtigen.  
+  
+ Einen Wert für die **SelectedProperties** Eigenschaft ersetzen der \<Eigenschaft > Element in einer SELECT-Abfrage im Format "Wählen Sie \<Eigenschaft > FROM \<Klassenname >, in dem \< Bedingung > ".  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Ein <xref:System.Collections.Specialized.StringCollection> mit den Namen der Eigenschaften in der Abfrage ausgewählt werden.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

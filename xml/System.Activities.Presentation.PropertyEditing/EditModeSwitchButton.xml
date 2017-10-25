@@ -1,0 +1,149 @@
+<Type Name="EditModeSwitchButton" FullName="System.Activities.Presentation.PropertyEditing.EditModeSwitchButton">
+  <TypeSignature Language="C#" Value="public class EditModeSwitchButton : System.Windows.Controls.Button" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EditModeSwitchButton extends System.Windows.Controls.Button" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Button</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schaltfläche dar, mit der der Benutzer zwischen den unterschiedlichen <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyContainer" />-Modi im Eigenschaftenraster wechseln kann.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditModeSwitchButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+          <see cref="T:System.Windows.MouseButtonEventArgs" />-Ereignisargumente</param>
+        <summary>Bestimmt den Typ von <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode" />, der nach dem Empfang eines <see cref="T:System.Windows.MouseButtonEventArgs" />-Ereignisses angezeigt werden soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+          <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />-Ereignisargumente</param>
+        <summary>Überprüft, ob die <see cref="F:System.Activities.Presentation.PropertyEditing.PropertyContainer.OwningPropertyContainerProperty" /> den <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyContainer" />, zu dem sie gehört, geändert (oder erhalten oder verloren) hat. Bei <see cref="T:System.Boolean.True" /> wird als der <see cref="P:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton.TargetEditMode" /> der Modus eingerichtet, in den gewechselt werden soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncModeToOwningContainer">
+      <MemberSignature Language="C#" Value="public bool SyncModeToOwningContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SyncModeToOwningContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton.SyncModeToOwningContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der im Fall von <see cref="T:System.Boolean.True" /> bedeutet, dass der <see cref="P:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton.TargetEditMode" /> automatisch berechnet wird, um den <see cref="P:System.Activities.Presentation.PropertyEditing.PropertyContainer.ActiveEditMode" /> mit dem <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyContainer" /> abzugleichen, zu dem er gehört. Andernfalls basiert der Modus, in den gewechselt wird, auf der <see cref="P:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton.TargetEditMode" />-Eigenschaft.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton" /> wird automatisch auf den Bearbeitungsmodus wechseln die <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyContainer" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncModeToOwningContainerProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SyncModeToOwningContainerProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SyncModeToOwningContainerProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton.SyncModeToOwningContainerProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Registriert die Abhängigkeitseigenschaft, was im Fall von <see cref="T:System.Boolean.True" /> bedeutet, dass der <see cref="P:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton.TargetEditMode" /> automatisch berechnet wird, um den <see cref="P:System.Activities.Presentation.PropertyEditing.PropertyContainer.ActiveEditMode" /> mit dem <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyContainer" /> abzugleichen, zu dem er gehört. Andernfalls basiert der Modus, in den gewechselt wird, auf der <see cref="P:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton.TargetEditMode" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetEditMode">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode TargetEditMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode TargetEditMode" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton.TargetEditMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Bearbeitungsmodus, in den gewechselt werden soll, wenn auf <see cref="T:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton" /> geklickt wird.</summary>
+        <value>Ein <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyContainer" />-Bearbeitungsmodus.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetEditModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TargetEditModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TargetEditModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton.TargetEditModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Registriert die Abhängigkeitseigenschaft, die den Zielmodus abruft oder festlegt, wenn auf die <see cref="T:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton" /> geklickt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

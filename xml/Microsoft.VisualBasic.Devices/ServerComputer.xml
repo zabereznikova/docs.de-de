@@ -1,0 +1,318 @@
+<Type Name="ServerComputer" FullName="Microsoft.VisualBasic.Devices.ServerComputer">
+  <TypeSignature Language="C#" Value="public class ServerComputer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ServerComputer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Devices.ServerComputer" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften für die Bearbeitung von Computerkomponenten bereit, z.B. Audio, die Uhr, die Tastatur, das Dateisystem und so weiter.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften verfügbar gemacht werden, indem die `My.Computer` Objekts zur Laufzeit bestimmt, Informationen über den Computer, auf dem die Anwendung bereitgestellt wird, zurück. In der Regel unterscheidet sich diese Daten auf dem Entwicklungscomputer verfügbar war.  
+  
+ Einige Member, wie z. B. die `My.Computer.Audio` Objekt, das nur für nicht-Server-Anwendungen verfügbar sind.  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `My.Computer` Objekt.  
+  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Überprüfen des Verbindungsstatus|[Gewusst wie: Überprüfen des Verbindungsstatus](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)|  
+|Eine Datei herunterladen|[Gewusst wie: Herunterladen einer Datei](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)|  
+|Hochladen einer Datei|[Gewusst wie: Hochladen einer Datei](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)|  
+|Erstellen von Registrierungsschlüsseln|[Gewusst wie: Erstellen von Registrierungsschlüsseln und Festlegen ihrer Werte](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)|  
+|Zugriff auf die Zwischenablage|[Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage](~/docs/visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Name` Eigenschaft der Name des Computers angezeigt, auf dem der Code ausgeführt wird.  
+  
+ [!code-vb[VbVbalrMyComputer#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServerComputer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.ServerComputer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Devices.ServerComputer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clock">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Devices.Clock Clock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Devices.Clock Clock" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ServerComputer.Clock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Devices.Clock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das Eigenschaften enthält, für den Zugriff auf die aktuelle lokale Zeit und die koordinierte Weltzeit (das Äquivalent zu Greenwich Mean Time) aus der Systemuhr ab.</summary>
+        <value>Die <see langword="My.Computer.Clock" /> Objekt für den Computer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet einfachen Zugriff auf die `My.Computer.Clock` Objekt. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Devices.Clock>.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|**Ja**|  
+|Windows-Dienst|**Ja**|  
+|Website|**Ja**|  
+  
+   
+  
+## Examples  
+ Die `My.Computer.Audio.Play` Methode gibt den angegebenen Sound im Hintergrund beim `AudioPlayMode.Background` angegeben ist.  
+  
+ [!code-vb[VbVbalrMyComputer#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#15)]  
+  
+ Dieser Code kann nur in einer Windows Forms-Anwendung ausgeführt.  
+  
+ Der Dateiname sollte eine WAV-Datei auf Ihrem System verweisen.  
+  
+ Zur Vereinfachung der Verwaltung von Ihrem Audiodateien sollten Sie die Dateien als Anwendungsressourcen. Die Dateien dann durch zugegriffen werden können die [My.Resources-Objekt](~/docs/visual-basic/language-reference/objects/my-resources-object.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileSystem">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.MyServices.FileSystemProxy FileSystem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.MyServices.FileSystemProxy FileSystem" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ServerComputer.FileSystem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MyServices.FileSystemProxy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das Eigenschaften und Methoden zum Arbeiten mit Laufwerke, Dateien und Verzeichnisse bereitstellt.</summary>
+        <value>Die <see langword="My.Computer.FileSystem" /> Objekt für den Computer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet einfachen Zugriff auf die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> Objekt.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|**Ja**|  
+|Windows-Dienst|**Ja**|  
+|Website|**Ja**|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird überprüft, um zu bestimmen, ob der Ordner `C:\backup\logs` vorhanden ist und seine Eigenschaften werden überprüft.  
+  
+ [!code-vb[VbVbcnMyFileSystem#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Info">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Devices.ComputerInfo Info { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Devices.ComputerInfo Info" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ServerComputer.Info" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Devices.ComputerInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das Eigenschaften enthält, für das Abrufen von Informationen zu Arbeitsspeicher, geladene Assemblys, Name und Betriebssystem des Computers ab.</summary>
+        <value>Die <see langword="My.Computer.Info" /> Objekt für den Computer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet einfachen Zugriff auf die `My.Computer.Info` Objekt. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|**Ja**|  
+|Windows-Dienst|**Ja**|  
+|Website|**Ja**|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Info.AvailablePhysicalMemory` Eigenschaft, um die Menge des verfügbaren physischen Arbeitsspeichers für den Computer anzuzeigen, auf dem der Code ausgeführt wird.  
+  
+ [!code-vb[VbVbalrMyComputer#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ServerComputer.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Computernamen ab.</summary>
+        <value>Ein <see langword="String" /> mit dem Namen des Computers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Name` Eigenschaft bietet ähnliche Funktionen der <xref:System.Environment.MachineName%2A> Eigenschaft.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|**Ja**|  
+|Windows-Dienst|**Ja**|  
+|Website|**Ja**|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Name` Eigenschaft der Name des Computers angezeigt, auf dem der Code ausgeführt wird.  
+  
+ [!code-vb[VbVbalrMyComputer#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Network">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Devices.Network Network { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Devices.Network Network" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ServerComputer.Network" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Devices.Network</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das eine Eigenschaft und Methoden für die Interaktion mit dem Netzwerk bereitstellt, der der Computer verbunden ist.</summary>
+        <value>Die <see langword="My.Computer.Network" /> Objekt für den Computer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet einfachen Zugriff auf die <xref:Microsoft.VisualBasic.Devices.Network> Objekt.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|**Ja**|  
+|Windows-Dienst|**Ja**|  
+|Website|**Ja**|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird die Datei hochgeladen `Order.txt` auf http://www.cohowinery.com/uploads.  
+  
+ [!code-vb[VbVbalrMyNetwork#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyNetwork/VB/Class1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Registry">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.MyServices.RegistryProxy Registry { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.MyServices.RegistryProxy Registry" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ServerComputer.Registry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MyServices.RegistryProxy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das Eigenschaften und Methoden zum Bearbeiten der Registrierungs bereitstellt.</summary>
+        <value>Die <see langword="My.Computer.Registry" /> Objekt für den Computer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet einfachen Zugriff auf die <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> Objekt.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel liest den Wert `Name` aus `HKEY_CURRENT_USER\Software\MyApp` und in einem Meldungsfeld angezeigt.  
+  
+ [!code-vb[VbVbalrMyRegistry#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyRegistry/VB/Class1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

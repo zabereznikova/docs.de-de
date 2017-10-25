@@ -1,0 +1,420 @@
+<Type Name="XmlSchemaDatatype" FullName="System.Xml.Schema.XmlSchemaDatatype">
+  <TypeSignature Language="C#" Value="public abstract class XmlSchemaDatatype" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlSchemaDatatype extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaDatatype" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Xml.Schema.XmlSchemaDatatype" /> Klasse ist eine abstrakte Klasse für die Zuordnung von Typen von XML Schema Definition Language (XSD) in Common Language Runtime (CLR)-Typen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Xml.Schema.XmlSchemaDatatype> Klasse.  
+  
+ [!code-cpp[Classic Webdata XmlSchemaDatatype Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic Webdata XmlSchemaDatatype Example/CPP/datatype.cpp#1)]
+ [!code-csharp[Classic Webdata XmlSchemaDatatype Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic Webdata XmlSchemaDatatype Example/CS/datatype.cs#1)]
+ [!code-vb[Classic Webdata XmlSchemaDatatype Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic Webdata XmlSchemaDatatype Example/VB/datatype.vb#1)]  
+  
+ Die folgende XML-Datei wird für das vorhergehende Codebeispiel verwendet.  
+  
+ [!code-xml[Classic Webdata XmlSchemaDatatype Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic Webdata XmlSchemaDatatype Example/XML/example.xsd#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlSchemaDatatype ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaDatatype.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Schema.XmlSchemaDatatype" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird von abgeleiteten Klassenkonstruktoren Zustand bei dieser Art initialisiert aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeType">
+      <MemberSignature Language="C#" Value="public virtual object ChangeType (object value, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ChangeType(object value, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaDatatype.ChangeType(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Eingabewert in den angegebenen Typ zu konvertieren.</param>
+        <param name="targetType">Der Zieltyp den Eingabewert in konvertiert.</param>
+        <summary>Konvertiert der Wert angegeben, dessen Typ ist einer der gültigen Darstellungen der Common Language Runtime (CLR) von den XML-Schematyp dargestellte der <see cref="T:System.Xml.Schema.XmlSchemaDatatype" />, in den angegebenen CLR-Typ.</summary>
+        <returns>Der konvertierte Eingabewert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Typ unterstützen, der <xref:System.Xml?displayProperty=nameWithType> Klassen sowie die Konvertierung von XML-Datentypen finden Sie unter der [Typ in den System.Xml-Klassen unterstützen](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md) Thema.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <see cref="T:System.Object" />-Parameter oder der <see cref="T:System.Type" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">Der Typ von dargestellt die <see cref="T:System.Xml.Schema.XmlSchemaDatatype" /> eine Konvertierung vom Typ des Werts in den angegebenen Typ nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeType">
+      <MemberSignature Language="C#" Value="public virtual object ChangeType (object value, Type targetType, System.Xml.IXmlNamespaceResolver namespaceResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ChangeType(object value, class System.Type targetType, class System.Xml.IXmlNamespaceResolver namespaceResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaDatatype.ChangeType(System.Object,System.Type,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="namespaceResolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Eingabewert in den angegebenen Typ zu konvertieren.</param>
+        <param name="targetType">Der Zieltyp den Eingabewert in konvertiert.</param>
+        <param name="namespaceResolver">Ein <see cref="T:System.Xml.IXmlNamespaceResolver" /> zum Auflösen von Namespacepräfixen verwendet. Dies ist nur wenn die <see cref="T:System.Xml.Schema.XmlSchemaDatatype" /> xs: QName-Typ oder eine daraus abgeleitete darstellt.</param>
+        <summary>Konvertiert der Wert angegeben, dessen Typ ist einer der gültigen Darstellungen der Common Language Runtime (CLR) von den XML-Schematyp dargestellte der <see cref="T:System.Xml.Schema.XmlSchemaDatatype" />, in der CLR-Typ angegeben, mit der <see cref="T:System.Xml.IXmlNamespaceResolver" /> Wenn die <see cref="T:System.Xml.Schema.XmlSchemaDatatype" /> der xs: QName darstellt Typ "oder" abgeleitet.</summary>
+        <returns>Der konvertierte Eingabewert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Typ unterstützen, der <xref:System.Xml?displayProperty=nameWithType> Klassen sowie die Konvertierung von XML-Datentypen finden Sie unter der [Typ in den System.Xml-Klassen unterstützen](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md) Thema.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <see cref="T:System.Object" />-Parameter oder der <see cref="T:System.Type" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">Der Typ von dargestellt die <see cref="T:System.Xml.Schema.XmlSchemaDatatype" /> eine Konvertierung vom Typ des Werts in den angegebenen Typ nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDerivedFrom">
+      <MemberSignature Language="C#" Value="public virtual bool IsDerivedFrom (System.Xml.Schema.XmlSchemaDatatype datatype);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDerivedFrom(class System.Xml.Schema.XmlSchemaDatatype datatype) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaDatatype.IsDerivedFrom(System.Xml.Schema.XmlSchemaDatatype)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="datatype" Type="System.Xml.Schema.XmlSchemaDatatype" />
+      </Parameters>
+      <Docs>
+        <param name="datatype">Die <see cref="T:System.Xml.Schema.XmlSchemaDatatype" />.</param>
+        <summary>Die <see cref="M:System.Xml.Schema.XmlSchemaDatatype.IsDerivedFrom(System.Xml.Schema.XmlSchemaDatatype)" /> immer Methodenrückgabe <see langword="false" />.</summary>
+        <returns>Gibt immer <see langword="false" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseValue">
+      <MemberSignature Language="C#" Value="public abstract object ParseValue (string s, System.Xml.XmlNameTable nameTable, System.Xml.IXmlNamespaceResolver nsmgr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ParseValue(string s, class System.Xml.XmlNameTable nameTable, class System.Xml.IXmlNamespaceResolver nsmgr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaDatatype.ParseValue(System.String,System.Xml.XmlNameTable,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="nameTable" Type="System.Xml.XmlNameTable" />
+        <Parameter Name="nsmgr" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see langword="string" /> des einfachen Typs überprüft.</param>
+        <param name="nameTable">Die <see cref="T:System.Xml.XmlNameTable" /> für die Atomisierung, bei der Analyse verwenden die <see langword="string" /> Wenn diese <see cref="T:System.Xml.Schema.XmlSchemaDatatype" /> Objekt den xs: NCName-Typ darstellt.</param>
+        <param name="nsmgr">Der <see cref="T:System.Xml.IXmlNamespaceResolver" /> Objekts, das beim Analysieren der <see langword="string" /> Wenn diese <see cref="T:System.Xml.Schema.XmlSchemaDatatype" /> Objekt den xs: QName-Typ darstellt.</param>
+        <summary>Validiert beim Überschreiben in einer abgeleiteten Klasse die <see langword="string" /> anhand eines integrierten oder benutzerdefinierten einfachen Typs angegeben.</summary>
+        <returns>Ein <see cref="T:System.Object" /> umgewandelt werden kann problemlos in den Typ, der zurückgegeben wird, indem Sie die <see cref="P:System.Xml.Schema.XmlSchemaDatatype.ValueType" /> Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Schema.XmlSchemaDatatype.ParseValue%2A> Methode überprüft die `string` anhand eines integrierten oder benutzerdefinierten einfachen Typs angegeben. Angenommen, wenn diese <xref:System.Xml.Schema.XmlSchemaDatatype> stellt den Typ xs: Date, und klicken Sie dann auf einer Instanz von <xref:System.DateTime> zurückgegeben wird.  
+  
+ Im folgenden sind die Schritte ausgeführt werden, während die <xref:System.Xml.Schema.XmlSchemaDatatype.ParseValue%2A> Methode des Überprüfungsprozesses.  
+  
+1.  Konvertiert die angegebene Wert eine `string` Geben Sie an der entsprechenden Common Language Runtime (CLR).  
+  
+2.  Stellen Sie sicher, dass der Wert keine Facets für den einfachen Typ definiert verletzt.  
+  
+ Der konvertierte Wert wird zurückgegeben, als ein <xref:System.Object> und können problemlos in dem vom zurückgegebenen Typ umgewandelt werden die <xref:System.Xml.Schema.XmlSchemaDatatype.ValueType%2A> Eigenschaft.  
+  
+ Wenn die <xref:System.Xml.Schema.XmlSchemaDatatype> -Objekt einen Listentyp, die Eingabe darstellt `string` Wert wird auf eine Liste von ein oder mehrere Objekte konvertiert. Wenn die <xref:System.Xml.Schema.XmlSchemaDatatype> -Objekt einen Listentyp darstellt, es wird versucht, den Eingabewert als einen Membertyp der Union zu interpretieren. Wenn der Versuch fehlschlägt, klicken Sie dann die Konvertierung versucht mit dem nächsten Member der Union, bis die Analyse erfolgreich ist, oder es sind keine Membertypen zu analysieren. Wenn die Analyse nicht erfolgreich ist, wird eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ruft die `LotteryNumber` einfachen Typ aus der Datei example.xsd als ein <xref:System.Xml.Schema.XmlSchemaSimpleType> und anschließendes Überprüfen der `string` Wert `5` mithilfe der <xref:System.Xml.Schema.XmlSchemaDatatype.ParseValue%2A> Methode.  
+  
+ [!code-cpp[Classic Webdata XmlSchemaDatatype Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic Webdata XmlSchemaDatatype Example/CPP/datatype.cpp#1)]
+ [!code-csharp[Classic Webdata XmlSchemaDatatype Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic Webdata XmlSchemaDatatype Example/CS/datatype.cs#1)]
+ [!code-vb[Classic Webdata XmlSchemaDatatype Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic Webdata XmlSchemaDatatype Example/VB/datatype.vb#1)]  
+  
+ Die folgende XML-Datei wird für das vorhergehende Codebeispiel verwendet.  
+  
+ [!code-xml[Classic Webdata XmlSchemaDatatype Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic Webdata XmlSchemaDatatype Example/XML/example.xsd#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaValidationException">Der Eingabewert ist nicht gültige Instanz dieses Typs W3C XML-Schema.</exception>
+        <exception cref="T:System.ArgumentNullException">Nicht mit der zu analysierenden Wert <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenizedType">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XmlTokenizedType TokenizedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlTokenizedType TokenizedType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaDatatype.TokenizedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlTokenizedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Typ für die <see langword="string" /> im World Wide Web Consortium (W3C) XML 1.0-Spezifikation angegeben.</summary>
+        <value>Ein <see cref="T:System.Xml.XmlTokenizedType" /> Wert für die <see langword="string" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ermöglicht die `string` als einen bestimmten XML-Typ, z. B. einen CDATA-Abschnittstyp gelesen werden.  
+  
+ Die folgende Tabelle zeigt die Tokentypen.  
+  
+|XmlTokenizedType|Beschreibung|  
+|----------------------|-----------------|  
+|`CDATA`|CDATA-Typ|  
+|`ID`|ID-Typ|  
+|`IDREF`|IDREF-Typ|  
+|`IDREFS`|IDREFS-Typ|  
+|`ENTITY`|Entitätstyp|  
+|`ENTITIES`|Geben Sie die ENTITÄTEN|  
+|`NMTOKEN`|NMTOKEN-Typ|  
+|`NMTOKENS`|NMTOKENS-Typ|  
+|`NOTATION`|NOTATION-Datentyp|  
+|`ENUMERATION`|Enumerationstyp|  
+|`QName`|QName-Typ|  
+|`NCName`|NCName-Typ|  
+|`None`|Kein Typ|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeCode">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.Schema.XmlTypeCode TypeCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlTypeCode TypeCode" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaDatatype.TypeCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlTypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.Schema.XmlTypeCode" /> Wert für den einfachen Typ.</summary>
+        <value>Die <see cref="T:System.Xml.Schema.XmlTypeCode" /> Wert für den einfachen Typ.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ W3C XML-Schema-Listentypen wie z. B. xs: Entities, xs: NMTOKENS und xs: IDREFS nicht dargestellt werden die <xref:System.Xml.Schema.XmlTypeCode> Enumeration. Stattdessen werden sie durch dargestellt die <xref:System.Xml.Schema.XmlTypeCode> Werte für die Typen xs: Entity, xs: NMTOKEN und xs: IDREF mit der <xref:System.Xml.Schema.XmlSchemaDatatype.Variety%2A> Eigenschaft von der <xref:System.Xml.Schema.XmlSchemaDatatype> -Objekts festgelegt, um <xref:System.Xml.Schema.XmlSchemaDatatypeVariety.List>.  
+  
+> [!NOTE]
+>  Sowohl die anySimpleType und xs: anyType-Typen nicht als dargestellt <xref:System.Xml.Schema.XmlTypeCode> Enumeration. Diese werden dargestellt ein <xref:System.Xml.Schema.XmlSchemaDatatype> -Objekt mit einer <xref:System.Xml.Schema.XmlTypeCode> , dessen Wert <xref:System.Xml.Schema.XmlTypeCode.UntypedAtomic> für xs: anySimpleType oder <xref:System.Xml.Schema.XmlTypeCode.Item> für xs: anyType.  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die <xref:System.Xml.Schema.XmlSchemaDatatype.TypeCode%2A> Eigenschaft finden Sie unter <xref:System.Xml.Schema.XmlSchemaDatatype>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueType">
+      <MemberSignature Language="C#" Value="public abstract Type ValueType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaDatatype.ValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft der Common Language Runtime (CLR)-Typ des Elements ab.</summary>
+        <value>Der Typ der Common Language Runtime (CLR) des Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Schema.XmlSchemaDatatype.ValueType%2A> -Eigenschaft ruft den CLR-Typ des Elements ab. Angenommen, ein Element des Typs `xs:int` müsste eine <xref:System.Xml.Schema.XmlSchemaDatatype.ValueType%2A> von <xref:System.Int32> standardmäßig. Allerdings die <xref:System.Xml.Schema.XmlSchemaDatatype.ValueType%2A> ist möglicherweise eine der gültigen Datentypen, die zugeordnet werden können `xs:int`, wie z. B. <xref:System.Int16> oder <xref:System.Double>.  
+  
+ Weitere Informationen zum Typ unterstützen, der <xref:System.Xml?displayProperty=nameWithType> Namespace finden Sie unter [Typ in den System.Xml-Klassen unterstützen](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die <xref:System.Xml.Schema.XmlSchemaDatatype.ValueType%2A> Eigenschaft finden Sie unter <xref:System.Xml.Schema.XmlSchemaDatatype>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variety">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.Schema.XmlSchemaDatatypeVariety Variety { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaDatatypeVariety Variety" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaDatatype.Variety" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaDatatypeVariety</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.Schema.XmlSchemaDatatypeVariety" /> Wert für den einfachen Typ.</summary>
+        <value>Die <see cref="T:System.Xml.Schema.XmlSchemaDatatypeVariety" /> Wert für den einfachen Typ.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

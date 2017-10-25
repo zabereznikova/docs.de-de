@@ -1,0 +1,215 @@
+<Type Name="MethodData" FullName="System.Management.MethodData">
+  <TypeSignature Language="C#" Value="public class MethodData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MethodData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.MethodData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über eine WMI-Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel listet Informationen über die **Win32_Process.Create** Methode mithilfe der <xref:System.Management.MethodData> Klasse. Weitere Informationen zu den **Win32_Process** Klasse, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_MethodData#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_MethodData/cs/MethodData.cs#1)]
+ [!code-vb[wminet_MethodData#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_MethodData/vb/MethodData.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InParameters">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementBaseObject InParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ManagementBaseObject InParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.MethodData.InParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementBaseObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Eingabeparameter für die Methode ab. Jeder Parameter ist als eine Eigenschaft im Objekt beschrieben. Wenn ein Parameter sowohl ein-und ist, wird er in der <see cref="P:System.Management.MethodData.InParameters" /> und <see cref="P:System.Management.MethodData.OutParameters" /> Eigenschaften.</summary>
+        <value>Gibt eine <see cref="T:System.Management.ManagementBaseObject" /> , die die Eingabeparameter für die Methode enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Parameter im Objekt müssen einen ID-Qualifizierer, der die Reihenfolge der Parameter im Aufruf Methode angibt.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Ein <xref:System.Management.ManagementBaseObject> , alle Eingabeparameter der Methode enthält.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet Informationen über die **Win32_Process.Create** Methode mithilfe der <xref:System.Management.MethodData> Klasse. Weitere Informationen zu den **Win32_Process** Klasse, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_MethodData_InParameters#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_MethodData_InParameters/cs/MethodData_InParameters.cs#1)]
+ [!code-vb[wminet_MethodData_InParameters#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_MethodData_InParameters/vb/MethodData_InParameters.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.MethodData.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Methode ab.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der den Namen der Methode enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Der Name der Methode.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet Informationen über die **Win32_Process.Create** Methode mithilfe der <xref:System.Management.MethodData> Klasse. Weitere Informationen zu den **Win32_Process** Klasse, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_MethodData_Name#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_MethodData_Name/cs/MethodData_Name.cs#1)]
+ [!code-vb[wminet_MethodData_Name#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_MethodData_Name/vb/MethodData_Name.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Origin">
+      <MemberSignature Language="C#" Value="public string Origin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Origin" />
+      <MemberSignature Language="DocId" Value="P:System.Management.MethodData.Origin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Management-Klasse, in der die Methode in der Klassenvererbungshierarchie eingeführt wurde.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der den Namen der Klasse, in dem die Methode in der Vererbungshierarchie der Klasse erstmals wurde, enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge, die den Namen der ursprünglichen Management-Klasse.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutParameters">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementBaseObject OutParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ManagementBaseObject OutParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.MethodData.OutParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementBaseObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Output-Parameter der Methode ab. Jeder Parameter ist als eine Eigenschaft im Objekt beschrieben. Wenn ein Parameter sowohl ein-und ist, erscheint in beiden die <see cref="P:System.Management.MethodData.InParameters" /> und <see cref="P:System.Management.MethodData.OutParameters" /> Eigenschaften.</summary>
+        <value>Gibt eine <see cref="T:System.Management.ManagementBaseObject" /> , die die Output-Parameter für die Methode enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Parameter in diesem Objekt müssen einen ID-Qualifizierer, um die Reihenfolge der Parameter im Aufruf Methode zu identifizieren.  
+  
+ Die **ReturnValue** Eigenschaft ist eine spezielle Eigenschaft der <xref:System.Management.ManagementBaseObject> zurückgegebenes der <xref:System.Management.MethodData.OutParameters%2A> Eigenschaft und der Rückgabewert der Methode enthält.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Ein <xref:System.Management.ManagementBaseObject> , die die Output-Parameter der Methode enthält.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet Informationen über die **Win32_Process.Create** Methode mithilfe der <xref:System.Management.MethodData> Klasse. Weitere Informationen zu den **Win32_Process** Klasse, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_MethodData_OutParameters#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_MethodData_OutParameters/cs/MethodData_OutParameters.cs#1)]
+ [!code-vb[wminet_MethodData_OutParameters#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_MethodData_OutParameters/vb/MethodData_OutParameters.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Qualifiers">
+      <MemberSignature Language="C#" Value="public System.Management.QualifierDataCollection Qualifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.QualifierDataCollection Qualifiers" />
+      <MemberSignature Language="DocId" Value="P:System.Management.MethodData.Qualifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.QualifierDataCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Qualifizierer, die in der Methode definiert. Jedes Element ist vom Typ <see cref="T:System.Management.QualifierData" /> und enthält Informationen wie z. B. die *Qualifizierer* Namen, Wert und *Flavor*.</summary>
+        <value>Gibt eine <see cref="T:System.Management.QualifierDataCollection" /> mit den Qualifizierern für die Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Ein <xref:System.Management.QualifierDataCollection> mit den Qualifizierern für diese Methode.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet Informationen über die **Win32_Process.Create** Methode mithilfe der <xref:System.Management.MethodData> Klasse. Weitere Informationen zu den **Win32_Process** Klasse, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_MethodData_Qualifiers#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_MethodData_Qualifiers/cs/MethodData_Qualifiers.cs#1)]
+ [!code-vb[wminet_MethodData_Qualifiers#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_MethodData_Qualifiers/vb/MethodData_Qualifiers.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

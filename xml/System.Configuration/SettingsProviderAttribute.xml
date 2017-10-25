@@ -1,0 +1,125 @@
+<Type Name="SettingsProviderAttribute" FullName="System.Configuration.SettingsProviderAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SettingsProviderAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SettingsProviderAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsProviderAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Einstellungsanbieter verwendet, um Speicher für die aktuelle Anwendung Settings-Klasse oder eine Eigenschaft bereitzustellen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Anwendung Settings-Klasse definiert eine Gruppe von Einstellungen Anwendungseigenschaften, die Informationen darstellen, die zwischen den Ausführungen der Anwendung weiterhin besteht. Es ist jedoch ein Einstellungsanbieter – eine abgeleitete Klasse <xref:System.Configuration.SettingsProvider>–, tatsächlich Speichermechanismus bereitstellt.  
+  
+ Die <xref:System.Configuration.SettingsProviderAttribute> gibt den Anbieter der Einstellungen verwendet, um Speicher für die Eigenschaften der Anwendung bereitzustellen. Dieses Attribut kann auf die gesamte Anwendung Settings-Klasse oder einzelne Anwendungseinstellungseigenschaften angewendet werden. Ein <xref:System.Configuration.SettingsProviderAttribute> Menge auf der Eigenschaftenebene überschreibt das Attribut auf Klassenebene. Wenn ein Einstellungsanbieter nicht explizit angegeben ist, wird der Standardanbieter verwendet. Bei Clientanwendungen, die der Standardanbieter ist <xref:System.Configuration.LocalFileSettingsProvider>.  
+  
+ Festlegen der Anbieter kann nicht zur Laufzeit ermittelt werden. Alle zur Laufzeit Bestimmung der Speichermethoden muss in den Einstellungsanbieterklasse selbst codiert werden.  
+  
+> [!CAUTION]
+>  Mit benutzerdefinierten Einstellungsanbietern von beliebigen dritten ist grundsätzlich unsicher, da diese Anbieter vollständigen Lese-/Schreibzugriff auf die Anwendung Konfigurationsinformationen verfügen. Ein Einstellungsanbieter sollte gründlich überprüft werden, bevor er zur allgemeinen Verwendung übernommen wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsProviderAttribute (string providerTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string providerTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProviderAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerTypeName">Ein <see cref="T:System.String" /> mit dem Namen des Einstellungsanbieters.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Configuration.SettingsProviderAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typname ist der Name der Klasse abgeleitet <xref:System.Configuration.SettingsProvider>, d. h. als Einstellungsanbieter angegeben wird.  
+  
+> [!CAUTION]
+>  Mit benutzerdefinierten Einstellungsanbietern von beliebigen dritten ist grundsätzlich unsicher, da diese Anbieter vollständigen Lese-/Schreibzugriff auf die Anwendung Konfigurationsinformationen verfügen. Ein Einstellungsanbieter sollte gründlich überprüft werden, bevor er zur allgemeinen Verwendung übernommen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsProviderAttribute (Type providerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type providerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProviderAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="providerType">Ein <see cref="T:System.Type" />, der den Einstellungenanbietertyp enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.SettingsProviderAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderTypeName">
+      <MemberSignature Language="C#" Value="public string ProviderTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProviderAttribute.ProviderTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typnamen des Einstellungsanbieters ab.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Namen des Einstellungsanbieters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingsProviderAttribute.ProviderTypeName%2A> Eigenschaft wird festgelegt, der <xref:System.Configuration.SettingsProviderAttribute.%23ctor%2A> für die Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

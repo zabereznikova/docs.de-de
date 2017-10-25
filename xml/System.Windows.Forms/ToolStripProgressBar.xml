@@ -1,0 +1,924 @@
+<Type Name="ToolStripProgressBar" FullName="System.Windows.Forms.ToolStripProgressBar">
+  <TypeSignature Language="C#" Value="public class ToolStripProgressBar : System.Windows.Forms.ToolStripControlHost" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripProgressBar extends System.Windows.Forms.ToolStripControlHost" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripProgressBar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripControlHost</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Value")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein enthaltenes Windows-Statusanzeige-Steuerelement eine <see cref="T:System.Windows.Forms.StatusStrip" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripProgressBar>ist die <xref:System.Windows.Forms.ProgressBar> optimiert für das hosting in einer <xref:System.Windows.Forms.ToolStrip>. Eine Teilmenge der Eigenschaften und Ereignisse des gehosteten Steuerelements werden verfügbar gemacht, an die <xref:System.Windows.Forms.ToolStripProgressBar> Ebene, aber die zugrunde liegende <xref:System.Windows.Forms.ProgressBar> Steuerelement vollständig Zugriff erfolgt über die <xref:System.Windows.Forms.ToolStripProgressBar.ProgressBar%2A> Eigenschaft.  
+  
+ Ein <xref:System.Windows.Forms.ToolStripProgressBar> Steuerelement zeigt den Fortschritt einer längeren Operation visuell an. Die <xref:System.Windows.Forms.ToolStripProgressBar> -Steuerelement zeigt einen Balken an, die von links nach rechts mit dem System Fortschreiten eines Vorgangs Hervorhebungsfarbe gefüllt wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.ToolStripProgressBar> Steuerelement kann nur horizontal ausgerichtet werden.  
+  
+ Die <xref:System.Windows.Forms.ToolStripProgressBar> Steuerelement wird normalerweise verwendet, wenn eine Anwendung Aufgaben wie das Kopieren von Dateien oder Drucken von Dokumenten durchführt. Benutzer einer Anwendung ggf. eine Anwendung nicht mehr reagiert, wenn es keinen visuellen Hinweis gibt. Verwenden der <xref:System.Windows.Forms.ToolStripProgressBar> um Benutzer zu benachrichtigen, dass die Anwendung einer längeren ausführt und die Anwendung noch reagiert.  
+  
+ Die <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> und <xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A> Eigenschaften definieren den Bereich von Werten, die den Fortschritt einer Aufgabe darstellen. Die <xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A> Eigenschaftensatz wird in der Regel auf einen Wert von 0 (null), und die <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> Eigenschaft auf einen Wert, der angibt, der des Abschluss einer Aufgabe in der Regel festgelegt ist. Beispielsweise, um den Fortschritt ordnungsgemäß angezeigt wird, eine Gruppe von Dateien, zum Kopieren der <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> Eigenschaft konnte auf die Gesamtanzahl der Dateien festgelegt werden, kopiert werden soll. Die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft darstellt, den Status, die die Anwendung bis zum Abschließen des Vorgangs vorgenommen wurde. Weil die Hürde im Steuerelement angezeigte eine Auflistung der Blöcke, dessen Wert angezeigt, durch die <xref:System.Windows.Forms.ToolStripProgressBar> nur entspricht in etwa der <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> den aktuellen Wert der Eigenschaft. Basierend auf der Größe von der <xref:System.Windows.Forms.ToolStripProgressBar>die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft bestimmt, wann der nächste Block angezeigt.  
+  
+ Es gibt zahlreiche Möglichkeiten zum Ändern des Werts angezeigt, indem die <xref:System.Windows.Forms.ToolStripProgressBar> außer ändern die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft direkt. Können Sie die <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> -Eigenschaft an einen bestimmten Wert erhöhen die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft durch und rufen Sie dann die <xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A> Methode, um den Wert zu erhöhen. Um den Inkrementwert ändern möchten, können Sie die <xref:System.Windows.Forms.ToolStripProgressBar.Increment%2A> Methode, und geben Sie einen Wert, um schrittweise erhöht die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft.  
+  
+ <xref:System.Windows.Forms.ToolStripProgressBar>ersetzt das ältere <xref:System.Windows.Forms.ProgressBar> -Steuerelement, das trotzdem für Abwärtskompatibilität beibehalten wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht eine <xref:System.Windows.Forms.ToolStripProgressBar> , die eine Sequenz von Fibonacci-Zahlen berechnet.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripProgressBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripProgressBar/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripProgressBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripProgressBar/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripProgressBar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripProgressBar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripProgressBar" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A> Eigenschaft auf 0 (null) festgelegt ist die <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> Eigenschaftensatz auf 100 erhöht, und die <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> Eigenschaft ist auf 10 festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripProgressBar (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripProgressBar.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des <see cref="T:System.Windows.Forms.ToolStripProgressBar" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ToolStripProgressBar" /> Klasse mit dem angegebenen Namen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Das im Steuerelement angezeigte Hintergrundbild.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ImageLayout" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMargin">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Padding DefaultMargin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding DefaultMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.DefaultMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand zwischen den <see cref="T:System.Windows.Forms.ToolStripProgressBar" /> und angrenzenden Elementen.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Padding" /> Wert, der den Abstand darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe und Breite der <see cref="T:System.Windows.Forms.ToolStripProgressBar" /> in Pixel.</summary>
+        <value>Ein <see cref="M:System.Drawing.Point.#ctor(System.Drawing.Size)" /> Wert, der die Höhe und Breite darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Increment">
+      <MemberSignature Language="C#" Value="public void Increment (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Increment(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripProgressBar.Increment(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Betrag, um den die aktuelle Position der Statusanzeige erhöht wird.</param>
+        <summary>Erhöht die aktuelle Position der Statusanzeige um den angegebenen Betrag.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolStripProgressBar.Increment%2A> Methode können Sie den Wert der Statusanzeige von einem bestimmten Zeitraum erhöhen. Diese Methode von der Statusanzeige erhöht ist vergleichbar mit dem mithilfe der <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> Eigenschaft mit der <xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A> Methode. Die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft gibt die aktuelle Position der <xref:System.Windows.Forms.ToolStripProgressBar>. IF, nach dem Aufruf der <xref:System.Windows.Forms.ToolStripProgressBar.Increment%2A> -Methode, die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> -Eigenschaft ist größer als der Wert des der <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> -Eigenschaft, die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> bleibt die Eigenschaft den Wert der <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> Eigenschaft. IF, nach dem Aufruf der <xref:System.Windows.Forms.ToolStripProgressBar.Increment%2A> Methode mit einem negativen Wert, der im angegebenen der `value` Parameter, die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> -Eigenschaft muss kleiner als der Wert von der <xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A> -Eigenschaft, die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> bleibt die Eigenschaft den Wert der <xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A>Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripProgressBar.KeyDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPress">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyPressEventHandler KeyPress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyPressEventHandler KeyPress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripProgressBar.KeyPress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyPressEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripProgressBar.KeyUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler LocationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LocationChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripProgressBar.LocationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarqueeAnimationSpeed">
+      <MemberSignature Language="C#" Value="public int MarqueeAnimationSpeed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MarqueeAnimationSpeed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die Verzögerung zwischen den einzelnen darstellt <see cref="F:System.Windows.Forms.ProgressBarStyle.Marquee" /> Update in Millisekunden angezeigt.</summary>
+        <value>Ein Ganzzahlwert, der die Verzögerung in Millisekunden darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A> Eigenschaft ruft ab oder legt die Verzögerung der Aktualisierung der Anzeige. Aus diesem Grund, wie Sie den Wert verringern die <xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A> -Eigenschaft, die Geschwindigkeit der erhöht der Animation.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public int Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die obere Grenze des Bereichs, der für diesen definiert ist <see cref="T:System.Windows.Forms.ToolStripProgressBar" />.</summary>
+        <value>Ein Ganzzahlwert, der die Obergrenze des Bereichs darstellt. Der Standard ist 100.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die obere Grenze der an die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft. Wenn der Wert des der <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> Eigenschaft geändert wird, die <xref:System.Windows.Forms.ToolStripProgressBar> -Steuerelement neu gezeichnet wird, entsprechend den neuen Bereich des Steuerelements. Bei den Wert des der <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> -Eigenschaft ist gleich dem Wert von der <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> -Eigenschaft, die Statusanzeige ist vollständig gefüllt.  
+  
+ Können Sie diese Eigenschaft einen Wert angeben, die die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft muss festgelegt werden, um (durch Festlegen der <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft oder mithilfe der <xref:System.Windows.Forms.ToolStripProgressBar.Increment%2A> oder <xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A> Methoden), um anzugeben, dass ein Vorgang abgeschlossen ist. Sie können beispielsweise den Wert der Festlegen der <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> Eigenschaft, um die Gesamtanzahl der Dateien in einem Vorgang zum Kopieren von Datei. Jedes Mal eine Datei kopiert wird, die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft kann um eins erhöht werden, bis die Gesamtanzahl der Dateien kopiert wird. An diesem Punkt würde die Statusanzeige vollständig gefüllt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> Eigenschaft in einer <xref:System.Windows.Forms.ToolStripProgressBar> , die eine Sequenz von Fibonacci-Zahlen berechnet. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Windows.Forms.ToolStripProgressBar> Klasse.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripProgressBar#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripProgressBar/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStripProgressBar#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripProgressBar/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public int Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die untere Grenze des Bereichs, der für diesen definiert ist <see cref="T:System.Windows.Forms.ToolStripProgressBar" />.</summary>
+        <value>Eine Ganzzahlwert, der die Untergrenze des Bereichs darstellt. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die Untergrenze der <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft. Wenn der Wert des der <xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A> Eigenschaft geändert wird, die <xref:System.Windows.Forms.ToolStripProgressBar> -Steuerelement neu gezeichnet wird, entsprechend den neuen Bereich des Steuerelements. Wenn der Wert des der <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft ist gleich dem Wert des der <xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A> -Eigenschaft, die die Statusanzeige ist leer. Verwenden, um den Wert der Statusanzeige zu ändern, die <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> Eigenschaft mit der <xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A> -Methode ist, die <xref:System.Windows.Forms.ToolStripProgressBar.Increment%2A> -Methode, oder legen Sie den Wert von der <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> -Eigenschaft direkt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A> Eigenschaft in einer <xref:System.Windows.Forms.ToolStripProgressBar> , die eine Sequenz von Fibonacci-Zahlen berechnet. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Windows.Forms.ToolStripProgressBar> Klasse.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripProgressBar#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripProgressBar/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStripProgressBar#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripProgressBar/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRightToLeftLayoutChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnRightToLeftLayoutChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRightToLeftLayoutChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripProgressBar.OnRightToLeftLayoutChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ProgressBar.RightToLeftLayoutChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripProgressBar.OnRightToLeftLayoutChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripProgressBar.OnRightToLeftLayoutChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripProgressBar.OnRightToLeftLayoutChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubscribeControlEvents">
+      <MemberSignature Language="C#" Value="protected override void OnSubscribeControlEvents (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSubscribeControlEvents(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripProgressBar.OnSubscribeControlEvents(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, von dem Ereignisse abonniert werden sollen.</param>
+        <summary>Abonniert Ereignisse vom gehosteten Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnsubscribeControlEvents">
+      <MemberSignature Language="C#" Value="protected override void OnUnsubscribeControlEvents (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnUnsubscribeControlEvents(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripProgressBar.OnUnsubscribeControlEvents(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, für das das Abonnement von Ereignissen aufgehoben werden soll.</param>
+        <summary>Hebt das Abonnement von Ereignissen vom gehosteten Steuerelement auf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler OwnerChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler OwnerChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripProgressBar.OwnerChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformStep">
+      <MemberSignature Language="C#" Value="public void PerformStep ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PerformStep() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripProgressBar.PerformStep" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erhöht die aktuelle Position der Statusanzeige um den Betrag der der <see cref="P:System.Windows.Forms.ToolStripProgressBar.Step" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A> Methode erhöht den Wert der Statusanzeige um den angegebenen Betrag der <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> Eigenschaft. Sie können die <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> Eigenschaft, um die Menge anzugeben, dass jeder abgeschlossenen Aufgabe in einem Vorgang den Wert der Statusanzeige ändert. Z. B. Wenn Sie eine Gruppe von Dateien kopieren, möglicherweise möchten Sie festlegen des Werts der <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> auf 1 und der Wert der Eigenschaft der <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> Eigenschaft, um die Gesamtzahl der zu kopierenden Dateien. Wenn jede Datei kopiert wird, können Sie rufen die <xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A> Methode, um die Statusanzeige zu erhöhen, indem der Wert des der <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> Eigenschaft. Wenn Sie haben den Wert der Statusanzeige flexibleren steuern möchten, können Sie mithilfe der <xref:System.Windows.Forms.ToolStripProgressBar.Increment%2A> Methode oder legen Sie den Wert von der <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> -Eigenschaft direkt.  
+  
+ Die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft gibt die aktuelle Position der <xref:System.Windows.Forms.ToolStripProgressBar>. IF, nach dem Aufruf der <xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A> -Methode, die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> -Eigenschaft ist größer als der Wert des der <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> -Eigenschaft, die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> bleibt die Eigenschaft den Wert der <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> Eigenschaft. IF, nach dem Aufruf der <xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A> Methode mit einem negativen Wert, der im angegebenen der `value` Parameter, die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> -Eigenschaft muss kleiner als der Wert von der <xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A> -Eigenschaft, die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> bleibt die Eigenschaft den Wert der <xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A>Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgressBar">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ProgressBar ProgressBar { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ProgressBar ProgressBar" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.ProgressBar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ProgressBar</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Windows.Forms.ProgressBar" /> ab.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.ProgressBar" /> Objekt, mit dem Steuerelement zugewiesen ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine stark typisierte Accessor für diese <xref:System.Windows.Forms.ToolStripProgressBar>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayout">
+      <MemberSignature Language="C#" Value="public virtual bool RightToLeftLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RightToLeftLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.RightToLeftLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.ToolStripProgressBar" /> Layout ist rechts-nach-links- oder links-nach-rechts-Wenn die <see cref="T:System.Windows.Forms.RightToLeft" /> -Eigenschaftensatz auf <see cref="F:System.Windows.Forms.RightToLeft.Yes" />.</summary>
+        <value>
+          <see langword="true" />Schalten Sie die Spiegelung und Layout des Steuerelements von rechts nach links bei der <see cref="T:System.Windows.Forms.RightToLeft" /> -Eigenschaftensatz auf <see cref="F:System.Windows.Forms.RightToLeft.Yes" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.ToolStripProgressBar.RightToLeftLayout%2A> Eigenschaft, um das Layout der internationale Anwendungen zu steuern, in der die Sprache von rechts nach links geschrieben wird. Wenn die <xref:System.Windows.Forms.ToolStripProgressBar.RightToLeftLayout%2A> Eigenschaft ist `true`, und die <xref:System.Windows.Forms.RightToLeft> -Eigenschaftensatz auf <xref:System.Windows.Forms.RightToLeft.Yes>, Spiegelung auf der Windows-Formular und jedes Steuerelement Platzierung aktiviert und Text werden von rechts nach links.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripProgressBar.RightToLeftLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.ToolStripProgressBar.RightToLeftLayout" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolStripProgressBar.RightToLeftLayoutChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolStripProgressBar> mit dem Namen `ToolStripProgressBar1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolStripProgressBar.RightToLeftLayoutChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#608](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#608)]
+ [!code-vb[System.Windows.Forms.EventExamples#608](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#608)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Step">
+      <MemberSignature Language="C#" Value="public int Step { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Step" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.Step" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(10)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, um den aktuellen Wert der schrittweise erhöht, wie die <see cref="T:System.Windows.Forms.ToolStripProgressBar" /> bei der <see cref="M:System.Windows.Forms.ToolStripProgressBar.PerformStep" /> -Methode aufgerufen wird.</summary>
+        <value>Ein Ganzzahlwert, der den Wert darstellt, um den erhöht werden soll. Der Standardwert ist 10.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ProgressBarStyle Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ProgressBarStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ProgressBarStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Stil der <see cref="T:System.Windows.Forms.ToolStripProgressBar" />.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ProgressBarStyle" />-Werte. Der Standardwert ist <see cref="F:System.Windows.Forms.ProgressBarStyle.Blocks" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text der <see cref="T:System.Windows.Forms.ToolStripProgressBar" />.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den anzuzeigenden Text darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl die <xref:System.Windows.Forms.ToolStripProgressBar> verfügt über eine <xref:System.Windows.Forms.ToolStripProgressBar.Text%2A> -Eigenschaft, auf das Steuerelement wird kein Text angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripProgressBar.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validated">
+      <MemberSignature Language="C#" Value="public event EventHandler Validated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Validated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripProgressBar.Validated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validating">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CancelEventHandler Validating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CancelEventHandler Validating" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripProgressBar.Validating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public int Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripProgressBar.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den aktuellen Wert für die <see cref="T:System.Windows.Forms.ToolStripProgressBar" />.</summary>
+        <value>Ein Ganzzahlwert, der den aktuellen Wert darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft muss im Bereich gemäß der <xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A> und <xref:System.Windows.Forms.ToolStripProgressBar.Maximum%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Forms.ToolStripProgressBar.Value%2A> Eigenschaft in einer <xref:System.Windows.Forms.ToolStripProgressBar> , die eine Sequenz von Fibonacci-Zahlen berechnet. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Windows.Forms.ToolStripProgressBar> Klasse.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripProgressBar#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripProgressBar/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStripProgressBar#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripProgressBar/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

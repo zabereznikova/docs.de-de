@@ -1,0 +1,105 @@
+<Type Name="DeadLetterQueue" FullName="System.ServiceModel.DeadLetterQueue">
+  <TypeSignature Language="C#" Value="public enum DeadLetterQueue" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DeadLetterQueue extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.DeadLetterQueue" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ der Warteschlange für unzustellbare Nachrichten an, der verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Warteschlange für unzustellbare Nachrichten ist eine Warteschlange für abgelaufene Nachrichten, die nicht zugestellt werden konnten. Diese Warteschlange befindet sich im Warteschlangen-Manager der sendenen Anwendung. Die <xref:System.ServiceModel.DeadLetterQueue>-Enumeration gibt den zu verwendenden Typ der Warteschlange für unzustellbare Nachrichten an. Folgende Werte sind möglich:  
+  
+-   Keine: Keine Warteschlange für unzustellbare Nachrichten erforderlich. Wenn die Nachrichtenzustellung fehlschlägt, werden in der Warteschlange für unzustellbare Nachrichten keine Angaben hierzu gespeichert. Dies ist der Standardwert, wenn <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> auf `false` festgelegt wird.  
+  
+-   System: Die systemweite Warteschlange für unzustellbare Meldungen wird verwendet, um Meldungen aufzuzeichnen, die nicht zugestellt werden können. MSMQ verfügt über eine transaktionale Systemwarteschlange für unzustellbare Nachrichten und eine nicht transaktionale Systemwarteschlange für unzustellbare Nachrichten, die abgelaufene unzustellbare Nachrichten aus der transaktionalen bzw. der nicht transaktionalen Warteschlange aufbewahren. Dies ist der Standardwert, wenn <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> auf `true` festgelegt wird.  
+  
+-   Benutzerdefiniert: Die in <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> angegebene Warteschlange wird verwendet, um Nachrichten aufzuzeichnen, die nicht zugestellt werden können.  
+  
+ Eine Nachricht kann die empfangende Anwendung aus den folgenden Gründen nicht erreichen:  
+  
+-   Eine Transaktionsmeldung wird an eine nicht transaktionale Warteschlange gesendet.  
+  
+-   Eine nicht transaktionale Meldung wird an eine transaktionale Warteschlange gesendet.  
+  
+-   Eine nicht authentifizierte Meldung wird an eine Warteschlange gesendet, die nur authentifizierte Meldungen akzeptiert.  
+  
+-   Eine unverschlüsselte Nachricht wird an eine Warteschlange gesendet, die nur verschlüsselte Nachrichten akzeptiert.  
+  
+-   Die Gültigkeitsdauer der Nachricht läuft ab, bevor die Nachricht an einen Empfänger zugestellt wird.  
+  
+-   Das Nachrichtenspeicherkontingent des Zielcomputers oder das Speicherkontingent der Zielwarteschlange wurde überschritten, oder auf dem Zielcomputer ist kein Speicherplatz vorhanden, wenn die Nachricht eintrifft.  
+  
+-   Der Absender verfügt nicht über die [Zugriffsrechte](http://go.microsoft.com/fwlink/?LinkID=96167) erforderlich, um die Nachricht in die Zielwarteschlange zu platzieren.  
+  
+-   Die an die Meldung angefügte digitale Signatur ist nicht gültig.  
+  
+-   Eine verschlüsselte Nachricht kann nicht vom Zielwarteschlangenmanager entschlüsselt werden.  
+  
+-   Die Zielwarteschlange wird entfernt oder gelöscht, bevor die Nachricht abgerufen wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.DeadLetterQueue Custom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.DeadLetterQueue.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.DeadLetterQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Benutzerdefinierte Warteschlange für unzustellbare Nachrichten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.DeadLetterQueue None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.DeadLetterQueue.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.DeadLetterQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es soll keine Warteschlange für unzustellbare Nachrichten verwendet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="System" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.DeadLetterQueue System = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.DeadLetterQueue.System" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.DeadLetterQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die systemweite Warteschlange für unzustellbare Nachrichten.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

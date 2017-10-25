@@ -1,0 +1,726 @@
+<Type Name="WinHttpHandler" FullName="System.Net.Http.WinHttpHandler">
+  <TypeSignature Language="C#" Value="public class WinHttpHandler : System.Net.Http.HttpMessageHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WinHttpHandler extends System.Net.Http.HttpMessageHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.WinHttpHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.Http.HttpMessageHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+      <see cref="T:System.Net.Http.WinHttpHandler" />ist eine Spezialisierung Message-Handler, die auf der Grundlage der WinHTTP-Schnittstelle von Windows und dient zur Verwendung in Server-Umgebungen. Diese Klasse ist auch für die Verwendung in Desktop-apps verfügbar, indem Sie sie als ein NuGet-Paket installieren. Weitere Informationen zum Installieren von dieser Klasse zur Verwendung in Desktop-apps finden Sie unter [System.Net.Http.WinHttpHandler](http://go.microsoft.com/fwlink/?LinkId=620067).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.Http.WinHttpHandler>ähnlich wie andere vorhandenen Klassen ist z. B. <xref:System.Net.Http.HttpClientHandler>. <xref:System.Net.Http.WinHttpHandler>Stellt einen Handler unterhalb einer <xref:System.Net.Http.HttpClient> -Instanz und zum HTTP-Anforderungen an einen Server senden und Empfangen von Serverantworten verwendet.  
+  
+ <xref:System.Net.Http.WinHttpHandler>Dient in erster Linie in Server-Umgebungen von ASP.NET Core und anderen, die Kommunikation mit HTTP-Servern verwendet werden. <xref:System.Net.Http.WinHttpHandler>bietet Entwicklern außerdem mehr Kontrolle über die Anwendung HTTP-Kommunikation als die <xref:System.Net.Http.HttpClientHandler> Klasse. Dadurch können Entwickler Systemstandardwerte (z. B. Proxyeinstellungen, Timeouts und Server SSL-zertifikatüberprüfung) zu implementieren erweiterte HTTP-Szenarien.  
+  
+ <xref:System.Net.Http.WinHttpHandler>sollte kein Ersatz für <xref:System.Net.Http.HttpClientHandler>, es ist eine erweiterte Version bot für Szenarien, in denen <xref:System.Net.Http.HttpClientHandler> für Entwickler nicht ausreicht. <xref:System.Net.Http.WinHttpHandler>wird als Wrapper für die WinHTTP-Schnittstelle von Windows thin implementiert und wird nur auf Windows-Systemen unterstützt.  
+  
+ Bei Verwendung einer Kette von mehreren Handlern <xref:System.Net.Http.WinHttpHandler> muss am Ende der Kette.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WinHttpHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.WinHttpHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.WinHttpHandler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticDecompression">
+      <MemberSignature Language="C#" Value="public System.Net.DecompressionMethods AutomaticDecompression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.DecompressionMethods AutomaticDecompression" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.AutomaticDecompression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.DecompressionMethods</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Dekomprimierungsmethode ab, die vom Handler für die automatische Dekomprimierung von Antworten mit HTTP-Inhalt verwendet wird, oder legt den Typ fest.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist GZip &#124; Deflate ausführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticRedirection">
+      <MemberSignature Language="C#" Value="public bool AutomaticRedirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutomaticRedirection" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.AutomaticRedirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Handler HTTP Umleitungsantworten folgen soll.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist "true". In dieser Konfiguration werden alle HTTP-Umleitung Antworten vom Server automatisch außer einzuhalten, falls sie über einen HTTPS-Endpunkt zu einer HTTP-Endpunkt weiterleiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckCertificateRevocationList">
+      <MemberSignature Language="C#" Value="public bool CheckCertificateRevocationList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CheckCertificateRevocationList" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.CheckCertificateRevocationList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob während der Überprüfung des SSL-Zertifikat der Sperrliste der Zertifikate überprüft.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist "false".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCertificateOption">
+      <MemberSignature Language="C#" Value="public System.Net.Http.ClientCertificateOption ClientCertificateOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Http.ClientCertificateOption ClientCertificateOption" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.ClientCertificateOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.ClientCertificateOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob das Zertifikat automatisch aus dem Zertifikatspeicher ausgewählt wird oder ob der Aufrufer ein bestimmtes Clientzertifikat übergeben darf.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist <xref:System.Net.Http.ClientCertificateOption.Manual?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCertificates">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2Collection ClientCertificates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2Collection ClientCertificates" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.ClientCertificates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Auflistung von Client-Authentifizierung SSL-Zertifikate, die für die Clientauthentifizierung durch den Handler Wenn verwendet werden die <see cref="P:System.Net.Http.WinHttpHandler.ClientCertificateOption" /> Eigenschaft auf manuell festgelegt ist.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist eine leere Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieContainer">
+      <MemberSignature Language="C#" Value="public System.Net.CookieContainer CookieContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.CookieContainer CookieContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.CookieContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.CookieContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest verwalteten Cookie-Container-Objekt. Diese Eigenschaft wird nur verwendet, wenn die <see cref="P:System.Net.Http.WinHttpHandler.CookieUsePolicy" /> Eigenschaft auf UseSpecifiedCookieContainer festgelegt ist. Andernfalls die <see cref="M:System.Net.Http.WinHttpHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" /> Methode löst eine Ausnahme aus.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieUsePolicy">
+      <MemberSignature Language="C#" Value="public System.Net.Http.CookieUsePolicy CookieUsePolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Http.CookieUsePolicy CookieUsePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.CookieUsePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.CookieUsePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie Cookies verwaltet und verwendet werden soll. Entwickler haben die Wahl zum Ignorieren von Cookies zulassen, dass die Handler automatisch zu verwalten oder manuell zu behandeln mithilfe einer <see cref="T:System.Net.CookieContainer" /> Objekt.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist <xref:System.Net.Http.CookieUsePolicy.UseInternalCookieStoreOnly?displayProperty=nameWithType>. Wenn dieser Wert, um festgelegt wird <xref:System.Net.Http.CookieUsePolicy.UseSpecifiedCookieContainer?displayProperty=nameWithType>, dann muss ein Container-Objekt initialisiert und zugewiesen werden die <xref:System.Net.Http.WinHttpHandler.CookieContainer%2A> Eigenschaft. Andernfalls wird eine Ausnahme ausgelöst werden, beim Versuch, eine Anforderung zu senden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultProxyCredentials">
+      <MemberSignature Language="C#" Value="public System.Net.ICredentials DefaultProxyCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials DefaultProxyCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.DefaultProxyCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anmeldeinformationen zur Authentifizierung des Benutzers auf einen Authentifizierungsproxy verwendet.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist <xref:System.Net.CredentialCache.DefaultCredentials?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Dispose">
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Versionen, die nicht verwalteten Ressourcen und optional auch die verwalteten Ressourcen verwendet durch die aufrufende Instanz.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.WinHttpHandler.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxAutomaticRedirections">
+      <MemberSignature Language="C#" Value="public int MaxAutomaticRedirections { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxAutomaticRedirections" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.MaxAutomaticRedirections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl der zulässigen HTTP-umleitungen.</summary>
+        <value>Die maximale Anzahl der zulässigen HTTP-leitet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist 50. Dieser Wert gilt nur, wenn <xref:System.Net.Http.WinHttpHandler.AutomaticRedirection%2A> festgelegt ist, um `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConnectionsPerServer">
+      <MemberSignature Language="C#" Value="public int MaxConnectionsPerServer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConnectionsPerServer" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.MaxConnectionsPerServer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl von TCP-Verbindungen, die auf einem einzelnen Server zulässig.</summary>
+        <value>Die maximale Anzahl von TCP-Verbindungen, die auf einem einzelnen Server zulässig.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist "int". "MaxValue".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxResponseDrainSize">
+      <MemberSignature Language="C#" Value="public int MaxResponseDrainSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxResponseDrainSize" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.MaxResponseDrainSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Datenmenge, die in Antworten in Byte abgezogen werden kann.</summary>
+        <value>Die maximale Datenmenge, die in Antworten in Byte abgezogen werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist 65536.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxResponseHeadersLength">
+      <MemberSignature Language="C#" Value="public int MaxResponseHeadersLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxResponseHeadersLength" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.MaxResponseHeadersLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Größe des Anteils Header aus der Antwort des Servers in Bytes.</summary>
+        <value>Die maximale Größe des Anteils Header aus der Antwort des Servers in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft schützt den Client von einem nicht autorisierten Server versucht, den Client zu installieren, durch das Senden einer Antwort mit Headerdaten einen unbegrenzten Zeitraum an. Der Standardwert für diese Eigenschaft ist 65536.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreAuthenticate">
+      <MemberSignature Language="C#" Value="public bool PreAuthenticate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PreAuthenticate" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.PreAuthenticate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob vom Handler mit der Anforderung ein Autorisierungsheader gesendet wird, oder legt diesen fest.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist "false".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Proxy">
+      <MemberSignature Language="C#" Value="public System.Net.IWebProxy Proxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IWebProxy Proxy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.Proxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IWebProxy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest benutzerdefinierten Proxyserver bei der <see cref="P:System.Net.Http.WinHttpHandler.WindowsProxyUsePolicy" /> Eigenschaft wird festgelegt, um einen benutzerdefinierten Proxy zu verwenden.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist null.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveDataTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ReceiveDataTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ReceiveDataTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.ReceiveDataTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Timeout für den Datenteil einer Antwort vom Server empfangen.</summary>
+        <value>Das Timeout für den Datenteil einer Antwort vom Server empfangen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft beträgt 30 Sekunden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveHeadersTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ReceiveHeadersTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ReceiveHeadersTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.ReceiveHeadersTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Timeout für die Header der Antwort vom Server empfangen.</summary>
+        <value>Das Timeout für die Header der Antwort vom Server empfangen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft beträgt 30 Sekunden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; SendAsync(class System.Net.Http.HttpRequestMessage request, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.WinHttpHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die zu sendende HTTP-Anforderungsnachricht</param>
+        <param name="cancellationToken">Das Abbruchtoken.</param>
+        <summary>Sendet eine HTTP-Anforderung als asynchronen Vorgang an.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan SendTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SendTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.SendTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Timeout für das Senden einer Anforderung.</summary>
+        <value>Das Timeout für eine Anforderung gesendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft beträgt 30 Sekunden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerCertificateValidationCallback">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,bool&gt; ServerCertificateValidationCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`5&lt;class System.Net.Http.HttpRequestMessage, class System.Security.Cryptography.X509Certificates.X509Certificate2, class System.Security.Cryptography.X509Certificates.X509Chain, valuetype System.Net.Security.SslPolicyErrors, bool&gt; ServerCertificateValidationCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.ServerCertificateValidationCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Rückrufmethode zur Überprüfung des Serverzertifikats ab oder legt diese fest. Dieser Rückruf wird Teil des SSL-Handshakes.</summary>
+        <value>Der Rückruf muss "true" zurückgeben, wenn das Serverzertifikat wird als gültig betrachtet, und die Anforderung gesendet werden soll. Andernfalls wird "false" zurückgeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist NULL. Wenn diese Eigenschaft null ist, wird das Serverzertifikat mit standardmäßigen bekannten Zertifizierungsstellen überprüft werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerCredentials">
+      <MemberSignature Language="C#" Value="public System.Net.ICredentials ServerCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials ServerCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.ServerCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anmeldeinformationen vom Client verwendet werden, um mit dem Server zu authentifizieren.</summary>
+        <value>Die Anmeldeinformationen für die vom Client verwendet werden, um mit dem Server zu authentifizieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist null.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SslProtocols">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.SslProtocols SslProtocols { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Authentication.SslProtocols SslProtocols" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.SslProtocols" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.SslProtocols</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der vom Client unterstützt TLS/SSL-Protokolle.</summary>
+        <value>Die Auflistung der vom Client unterstützt TLS/SSL-Protokolle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist SslProtocols.Tls &#124; SslProtocols.Tls11 &#124; SslProtocols.Tls12.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsProxyUsePolicy">
+      <MemberSignature Language="C#" Value="public System.Net.Http.WindowsProxyUsePolicy WindowsProxyUsePolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Http.WindowsProxyUsePolicy WindowsProxyUsePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WinHttpHandler.WindowsProxyUsePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WinHttpHandler</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.WindowsProxyUsePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Proxyeinstellung. Diese Eigenschaft kann festgelegt werden, deaktivieren Sie den Proxy, einen benutzerdefinierten Proxy zu verwenden oder die Proxyeinstellungen des WinHTTP oder WinInet auf dem Computer verwenden.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft ist die WinHTTP-Proxyeinstellungen Stapel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

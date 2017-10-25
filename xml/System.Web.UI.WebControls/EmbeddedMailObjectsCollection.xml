@@ -1,0 +1,334 @@
+<Type Name="EmbeddedMailObjectsCollection" FullName="System.Web.UI.WebControls.EmbeddedMailObjectsCollection">
+  <TypeSignature Language="C#" Value="public sealed class EmbeddedMailObjectsCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EmbeddedMailObjectsCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.EmbeddedMailObjectCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen geordneten Satz von <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection> speichert Verweise auf Elemente, die in einer e-Mail-Nachricht eingebettet werden. Die eingebetteten Elemente können Bilddateien z. B. Firmenlogos sein. Die <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection> dient der <xref:System.Web.UI.WebControls.MailDefinition.EmbeddedObjects%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.MailDefinition> Objekt.  
+  
+ E-Mail-Nachrichten, die eingebettete Objekte ermöglichen kann in den folgenden Websteuerelementen konfiguriert werden, indem ihre <xref:System.Web.UI.WebControls.MailDefinition> Eigenschaften deklarativ:  
+  
+-   <xref:System.Web.UI.WebControls.CreateUserWizard>  
+  
+-   <xref:System.Web.UI.WebControls.ChangePassword>  
+  
+-   <xref:System.Web.UI.WebControls.PasswordRecovery>  
+  
+> [!NOTE]
+>  Die Werte in der <xref:System.Web.UI.WebControls.EmbeddedMailObject> und <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection> Objekte werden nicht im Ansichtszustand gespeichert. Dies schützt vor böswilligen Benutzern Pfadinformationen für Ihren Server.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, ASP.NET-Seite verwendet ein <xref:System.Web.UI.WebControls.ChangePassword> Webserver-Steuerelement, und enthält einen Ereignishandler für das <xref:System.Web.UI.WebControls.ChangePassword.SendingMail> Ereignis namens `SendingMail`. Im Codebeispiel wird davon ausgegangen, dass die ASP.NET-Website konfiguriert wurde, zum Verwenden von ASP.NET-Mitgliedschaft und Formularauthentifizierung und dass ein Benutzer erstellt wurde, dessen Name und Kennwort Sie bekannt sind. Weitere Informationen finden Sie unter [Vorgehensweise: einfache Formularauthentifizierung implementieren](http://msdn.microsoft.com/library/9522bc8d-1a41-480a-aa11-c389a4ac2d2e).  
+  
+ Wenn die kennwortänderung erfolgreich ist, den Code in der `SendingMail` Ereignishandler versucht zum Senden einer e-Mail-Nachricht an den Benutzer, die Änderung zu bestätigen. SMTP muss bereits auf dem Server in der Reihenfolge für dieses Codebeispiel funktioniert konfiguriert sein. Informationen zum Konfigurieren eines SMTP-Servers finden Sie unter [NIB: Vorgehensweise: Installieren und Konfigurieren von virtuellen SMTP-Server in IIS 6.0](http://msdn.microsoft.com/en-us/ed204b58-24af-47d0-9687-60e5df5f17f8). Für den Rahmen dieses Beispiels ist es nicht notwendig, so konfigurieren Sie einen SMTP-Server; Im Beispiel wird erstellt, um einen Fehler beim Senden einer e-Mail-Nachricht zu testen.  
+  
+ Wenn ein e-Mail-Server ist nicht richtig konfiguriert oder ein anderer Fehler tritt auf, und die e-Mail-Nachricht nicht gesendet werden, die `SendMailError` Funktion aufgerufen wird. Dem Benutzer wird eine Meldung angezeigt. Darüber hinaus wird ein Ereignis in das Ereignisprotokoll der Windows-Anwendung unter der Annahme protokolliert, eine Ereignisquelle, die mit dem Namen MySamplesSite ist bereits vorhanden ist. Finden Sie im Codebeispiel unten, um die angegebene Ereignisquelle erstellen. Weitere Informationen zum Erstellen einer Ereignisquelle finden Sie unter [Server Event Handling in ASP.NET Web Forms-Seiten](http://msdn.microsoft.com/library/765bfc89-33ee-4d0d-bbe6-3b172c06def9). Die <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.SendMailErrorEventArgs> -Objekts festgelegt wird, um `true` um anzugeben, dass der Fehler behandelt wurde.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/CS/changepassword_cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/VB/changepassword_vb.aspx#1)]  
+  
+ Verwenden Sie das folgende Codebeispiel, wenn Sie die Ereignisquelle, die mit der Bezeichnung MySamplesSite auf Ihre Anwendung programmgesteuert hinzufügen müssen. Diese Ereignisquelle verwendet wurden, muss in der Reihenfolge für das erste Codebeispiel ordnungsgemäß funktioniert vorhanden sein. Im folgenden Codebeispiel sind Administratorrechte erforderlich.  
+  
+ [!code-csharp[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/CS/createeventsource.cs#1)]
+ [!code-vb[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/VB/createeventsource.vb#1)]  
+  
+ Der folgende Beispielcode kann als die Datei ChangePasswordMail.htm für den vorhergehenden Beispielcode verwendet werden.  
+  
+> [!IMPORTANT]
+>  Senden von Namen oder Kennwörter-e-Mail ist ein potenzielles Sicherheitsrisiko darstellen. E-Mail-Nachrichten werden in der Regel in Klartext gesendet und spezielle Netzwerk "sniffing" Anwendungen gelesen werden können.  Verwenden Sie zur Erhöhung der Sicherheit, die Maßnahmen, die in beschriebenen [Anmeldesteuerelementen Sichern](http://msdn.microsoft.com/library/d85075bc-9c1a-4453-8a0c-539b10853c9c).  
+  
+```  
+<html>  
+<head><title></title></head>  
+<body>  
+<form>  
+  
+  <h1>Your password for the account named &quot;<%Username%>&quot; has changed.</h1>  
+  
+  <p>  
+  If you did not initiate this change, please call 1-206-555-0100.  
+  </p>  
+  
+  <p>  
+  <a href="http://www.contoso.com/login.aspx">  
+    <img src="cid:LoginGif" alt="Log In" />  
+  </a>   
+  </p>  
+  
+  <p>  
+  Please read our attached Privacy Notice.  
+  </p>  
+  
+</form>  
+</body>  
+</html>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EmbeddedMailObjectsCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EmbeddedMailObjectsCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.UI.WebControls.EmbeddedMailObject value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.UI.WebControls.EmbeddedMailObject value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EmbeddedMailObjectsCollection.Add(System.Web.UI.WebControls.EmbeddedMailObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.EmbeddedMailObject" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" />, das in <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" /> eingefügt werden soll.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> bis zum Ende der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" /> Auflistung.</summary>
+        <returns>Gibt den Index des der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> in der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="value" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.EmbeddedMailObject value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.EmbeddedMailObject value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EmbeddedMailObjectsCollection.Contains(System.Web.UI.WebControls.EmbeddedMailObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.EmbeddedMailObject" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> , suchen Sie in der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" /> Objekt.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" /> enthält eine bestimmte <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" /> enthält <paramref name="obj" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection.IndexOf%2A> Methode, um die Position des identifiziert die <xref:System.Web.UI.WebControls.EmbeddedMailObject> in der <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.EmbeddedMailObject[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.EmbeddedMailObject[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EmbeddedMailObjectsCollection.CopyTo(System.Web.UI.WebControls.EmbeddedMailObject[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.EmbeddedMailObject[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> ist das Ziel der Elemente aus dem aktuellen kopiert <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" />. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Auflistungsobjekte in ein eindimensionales <see cref="T:System.Array" /> Instanz, beginnend am angegebenen Index im Array.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="array" /> ist gleich <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene <paramref name="index" /> liegt außerhalb des Bereichs der Sammlung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.EmbeddedMailObject value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.EmbeddedMailObject value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EmbeddedMailObjectsCollection.IndexOf(System.Web.UI.WebControls.EmbeddedMailObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.EmbeddedMailObject" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> , suchen Sie in der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" />.</param>
+        <summary>Bestimmt den Index eines bestimmten <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> in der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" />.</summary>
+        <returns>Der Index des der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> ggf. in der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" />ist, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.EmbeddedMailObject value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.EmbeddedMailObject value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EmbeddedMailObjectsCollection.Insert(System.Int32,System.Web.UI.WebControls.EmbeddedMailObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Web.UI.WebControls.EmbeddedMailObject" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein Ganzzahlwert, der die Indexposition, an dem eingefügt angibt der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> in der Auflistung.</param>
+        <param name="value">Ein <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> Objekt zum Einfügen in die <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" />.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> in die <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" /> Objekt an der angegebenen Indexposition befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `index` ist 0, `value` hinzugefügt wird, auf den Anfang der <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection>. Wenn `index` entspricht der Anzahl der Elemente in der <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection>, `value` am Ende angefügt ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene <paramref name="index" /> liegt außerhalb des Bereichs der Sammlung.</exception>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="value" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.EmbeddedMailObject this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.EmbeddedMailObject Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EmbeddedMailObjectsCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.EmbeddedMailObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des abzurufenden Elements.</param>
+        <summary>Gibt ein bestimmtes Element von einem <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" />, das durch seine Position identifiziert.</summary>
+        <value>Gibt die <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> an der Position, die gemäß der <paramref name="index" /> Parameter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `index` entspricht keinen vorhandenen Member der Auflistung, ein Fehler auftritt.  
+  
+ Die <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection.Item%2A> Eigenschaft ist die Standardeigenschaft für eine Auflistung. Aus diesem Grund sind die folgenden Codezeilen äquivalent:  
+  
+```vb  
+myObject = myCollection(index)  
+myObject = myCollection.Item(index)  
+```  
+  
+```csharp  
+myObject = myCollection[index];  
+myObject = myCollection.Item[index];  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" />ist gleich oder größer als die Anzahl der Elemente in der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EmbeddedMailObjectsCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.EmbeddedMailObject value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.EmbeddedMailObject value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EmbeddedMailObjectsCollection.Remove(System.Web.UI.WebControls.EmbeddedMailObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.EmbeddedMailObject" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" />, der aus der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" /> entfernt werden soll.</param>
+        <summary>Entfernt das erste Vorkommen des angegebenen <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> aus der <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection.Remove%2A> Methode verwendet die Informationen in den <xref:System.Web.UI.WebControls.EmbeddedMailObject> zum Identifizieren des Elements aus der Auflistung zu entfernen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

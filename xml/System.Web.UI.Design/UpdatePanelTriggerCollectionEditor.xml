@@ -1,0 +1,150 @@
+<Type Name="UpdatePanelTriggerCollectionEditor" FullName="System.Web.UI.Design.UpdatePanelTriggerCollectionEditor">
+  <TypeSignature Language="C#" Value="public class UpdatePanelTriggerCollectionEditor : System.Web.UI.Design.CollectionEditorBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UpdatePanelTriggerCollectionEditor extends System.Web.UI.Design.CollectionEditorBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.CollectionEditorBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Komponenten-Editor für den <see cref="P:System.Web.UI.UpdatePanel.Triggers" /> Auflistung von <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor> -Klasse stellt eine Benutzeroberfläche zum Bearbeiten von Triggern, der die <xref:System.Web.UI.UpdatePanel> Steuerelement. Ein Trigger kann ein <xref:System.Web.UI.AsyncPostBackTrigger> oder ein <xref:System.Web.UI.PostBackTrigger> Objekt.  
+  
+ Eine Instanz von der <xref:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor> Klasse aufgerufen werden kann, durch Auswählen der Schaltfläche mit den Auslassungspunkten (**... **) auf die <xref:System.Web.UI.UpdatePanel.Triggers%2A> Eigenschaft im Eigenschaftenraster-Steuerelement den visuellen Designer.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdatePanelTriggerCollectionEditor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Triggers, zu bearbeiten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] intern erstellt eine neue Instanz der der <xref:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor> -Klasse, wenn die Schaltfläche mit den Auslassungspunkten (...) geklickt wird, auf die <xref:System.Web.UI.UpdatePanel.Triggers%2A> Eigenschaft in der visuellen Designer Eigenschaftenraster-Steuerelement zur Entwurfszeit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSelectMultipleInstances">
+      <MemberSignature Language="C#" Value="protected override bool CanSelectMultipleInstances ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanSelectMultipleInstances() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor.CanSelectMultipleInstances" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob mehrere Trigger gleichzeitig ausgewählt werden können.</summary>
+        <returns>Immer <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor.CanSelectMultipleInstances%2A> immer Methodenrückgabe `false`. Deshalb nur ein Trigger kann ausgewählt werden jedes Mal, die die <xref:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor> Objekt verwendet wird. Ein Trigger kann ein <xref:System.Web.UI.AsyncPostBackTrigger> oder ein <xref:System.Web.UI.PostBackTrigger> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCollectionItemType">
+      <MemberSignature Language="C#" Value="protected override Type CreateCollectionItemType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type CreateCollectionItemType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor.CreateCollectionItemType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Datentyp, den dieser Sammlung bearbeitet ab.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.UpdatePanelTrigger" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewItemTypes">
+      <MemberSignature Language="C#" Value="protected override Type[] CreateNewItemTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type[] CreateNewItemTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor.CreateNewItemTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ab, die mehrere Datentypen, die der auflistungs-Editor erstellen können.</summary>
+        <returns>Ein Array der Daten eingibt, die die <see cref="T:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor" /> erstellen können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Typen, die die <xref:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor> Instanz erstellen kann sind <xref:System.Web.UI.AsyncPostBackTrigger>, <xref:System.Web.UI.PostBackTrigger>, und andere Typen, die Ableitung der <xref:System.Web.UI.UpdatePanelControlTrigger> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditValue">
+      <MemberSignature Language="C#" Value="public override object EditValue (System.ComponentModel.ITypeDescriptorContext context, IServiceProvider provider, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EditValue(class System.ComponentModel.ITypeDescriptorContext context, class System.IServiceProvider provider, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> Objekt, das zusätzliche Kontextinformationen bereitstellt.</param>
+        <param name="provider">Ein Objekt der Service-Anbieter, Bearbeitungsdienste bereitstellt.</param>
+        <param name="value">Das Objekt, dessen Wert bearbeitet wird.</param>
+        <summary>Bearbeitet den Wert des angegebenen Objekts mit dem angegebenen Dienstanbieter und Kontext.</summary>
+        <returns>Der neue Wert des Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,245 @@
+<Type Name="Publisher" FullName="System.Security.Policy.Publisher">
+  <TypeSignature Language="C#" Value="public sealed class Publisher : System.Security.Policy.EvidenceBase, System.Security.Policy.IIdentityPermissionFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit Publisher extends System.Security.Policy.EvidenceBase implements class System.Security.Policy.IIdentityPermissionFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.Publisher" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Policy.EvidenceBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Policy.IIdentityPermissionFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Authenticode x. 509v3 digitale Signatur einer Code-Assembly als Beweis für die richtlinienauswertung bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Vorhandensein von <xref:System.Security.Policy.Publisher> erzeugt eine <xref:System.Security.Permissions.PublisherIdentityPermission> in der Grant festgelegt. Liegt eine <xref:System.Security.CodeAccessPermission.Demand%2A> für <xref:System.Security.Permissions.PublisherIdentityPermission>, die <xref:System.Security.Permissions.PublisherIdentityPermission> , entspricht die <xref:System.Security.Policy.Publisher> Beweise mit der angeforderten Berechtigung verglichen wird.  
+  
+ Verleger Beweis basiert auf Authenticode x. 509v3-Signaturen.  
+  
+ Standardmäßig Codezugriffssicherheit (CAS) wird nicht überprüft <xref:System.Security.Policy.Publisher> Beweis. Wenn Ihr Computer eine Gruppe auf Grundlage benutzerdefinierter Code verfügt die <xref:System.Security.Policy.PublisherMembershipCondition> -Klasse, können Sie die Leistung verbessern, durch die Überprüfung der Authenticode-Signatur umgehen. Dies erfolgt durch Konfigurieren der Laufzeit nicht bereitstellen <xref:System.Security.Policy.Publisher> Beweis für Zertifizierungsstellen. Weitere Informationen zum Konfigurieren dieser Option und welche Anwendungen sie verwenden kann, finden Sie unter der [ \<"generatePublisherEvidence" >](~/docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md) Element.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Publisher (System.Security.Cryptography.X509Certificates.X509Certificate cert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate cert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Publisher.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cert" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+      </Parameters>
+      <Docs>
+        <param name="cert">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate" /> , das den Softwareherausgeber öffentlichen Schlüssel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Policy.Publisher" /> Klasse mit dem öffentlichen Schlüssel des Herausgebers mit Authenticode x. 509v3-Zertifikat.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="cert" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Certificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate Certificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate Certificate" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.Publisher.Certificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Authenticode x. 509v3-Zertifikat des Herausgebers an.</summary>
+        <value>Der Verleger <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.EvidenceBase Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.EvidenceBase Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Publisher.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.EvidenceBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen Instanz darstellt.</summary>
+        <returns>Ein neues Objekt, das eine Kopie dieser Instanz ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public object Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Publisher.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine äquivalente Kopie der <see cref="T:System.Security.Policy.Publisher" />.</summary>
+        <returns>Eine neue, identische Kopie der <see cref="T:System.Security.Policy.Publisher" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateIdentityPermission">
+      <MemberSignature Language="C#" Value="public System.Security.IPermission CreateIdentityPermission (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission CreateIdentityPermission(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Publisher.CreateIdentityPermission(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">Die <see cref="T:System.Security.Policy.Evidence" /> aus der die Identitätsberechtigung konstruiert.</param>
+        <summary>Erstellt eine Identitätsberechtigung, die von der aktuellen Instanz entspricht der <see cref="T:System.Security.Policy.Publisher" /> Klasse.</summary>
+        <returns>Ein <see cref="T:System.Security.Permissions.PublisherIdentityPermission" /> für den angegebenen <see cref="T:System.Security.Policy.Publisher" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Publisher.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Die <see cref="T:System.Security.Policy.Publisher" /> auf Äquivalenz mit dem aktuellen Objekt zu testen.</param>
+        <summary>Vergleicht den aktuellen <see cref="T:System.Security.Policy.Publisher" /> in das angegebene Objekt auf Äquivalenz.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Instanzen von der <see cref="T:System.Security.Policy.Publisher" /> -Klasse gleich sind; andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Policy.Publisher>Objekte sind gleich, wenn sie die gleichen Softwareherausgeberzertifikat festlegen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="o" /> -Parameter ist ein <see cref="T:System.Security.Policy.Publisher" /> Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Publisher.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode des aktuellen <see cref="P:System.Security.Policy.Publisher.Certificate" />.</summary>
+        <returns>Der Hashcode des aktuellen <see cref="P:System.Security.Policy.Publisher.Certificate" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Publisher.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung des aktuellen <see cref="T:System.Security.Policy.Publisher" />.</summary>
+        <returns>Eine Darstellung des aktuellen <see cref="T:System.Security.Policy.Publisher" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

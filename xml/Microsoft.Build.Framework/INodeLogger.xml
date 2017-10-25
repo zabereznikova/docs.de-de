@@ -1,0 +1,55 @@
+<Type Name="INodeLogger" FullName="Microsoft.Build.Framework.INodeLogger">
+  <TypeSignature Language="C#" Value="public interface INodeLogger : Microsoft.Build.Framework.ILogger" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INodeLogger implements class Microsoft.Build.Framework.ILogger" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.INodeLogger" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ILogger</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert eine "Parallele Protokollierung" in das Buildsystem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine parallele Protokollierung akzeptiert eine CPU-Anzahl. Eine CPU-Anzahl größer als 1 bedeutet, dass dieser Build, der Ereignisse von der CPU-Protokollierung empfangen werden, wie die Ereignisse protokolliert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource, int32 nodeCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.INodeLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+        <Parameter Name="nodeCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">Ein <see cref="T:Microsoft.Build.Framework.IEventSource" /> Objekt, das die Build-Ereignisquelle darstellt.</param>
+        <param name="nodeCount">Die Anzahl der CPUs.</param>
+        <summary>Initialisiert die Protokollierung an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

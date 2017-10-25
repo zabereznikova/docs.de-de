@@ -1,0 +1,367 @@
+<Type Name="LocalClientSecuritySettingsElement" FullName="System.ServiceModel.Configuration.LocalClientSecuritySettingsElement">
+  <TypeSignature Language="C#" Value="public sealed class LocalClientSecuritySettingsElement : System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LocalClientSecuritySettingsElement extends System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konfiguriert die Sicherheitseinstellungen eines lokalen Clients. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LocalClientSecuritySettingsElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheCookies">
+      <MemberSignature Language="C#" Value="public bool CacheCookies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CacheCookies" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.CacheCookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cacheCookies", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob die Cookiezwischenspeicherung aktiviert ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Cookiezwischenspeicherung aktiviert ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieRenewalThresholdPercentage">
+      <MemberSignature Language="C#" Value="public int CookieRenewalThresholdPercentage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CookieRenewalThresholdPercentage" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.CookieRenewalThresholdPercentage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieRenewalThresholdPercentage", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=100, MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den maximalen Prozentwert von Cookies ab, die erneuert werden können, oder legt diesen fest.</summary>
+        <value>Ein Wert zwischen 0 (null) und 100 einschließlich. Der Standard ist 90.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetectReplays">
+      <MemberSignature Language="C#" Value="public bool DetectReplays { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DetectReplays" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.DetectReplays" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("detectReplays", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob wiederholte Angriffe gegen den Kanal erkannt und automatisch behandelt werden, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn wiederholte Angriffe gegen den Kanal erkannt und automatisch verarbeitet werden, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxClockSkew">
+      <MemberSignature Language="C#" Value="public TimeSpan MaxClockSkew { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxClockSkew" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.MaxClockSkew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxClockSkew", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.TimeSpan" /> ab oder legt es fest, das den maximal zulässigen Zeitunterschied zwischen den Systemuhren der beiden Kommunikationspartner angibt.</summary>
+        <value>Eine <see cref="T:System.TimeSpan" />, die den maximal zulässigen Zeitunterschied zwischen den Systemuhren der beiden Kommunikationspartner angibt. Der Standardwert ist "00:05:00".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft auf den Standardwert festgelegt wird, akzeptiert der Empfänger Meldungen mit Timestamps bis zu 5 Minuten früher oder später als die Zeit, zu der die Meldung empfangen wurde. Nachrichten, die den Sendezeittest nicht bestehen, werden verworfen. Diese Einstellung wird in Verbindung mit der <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.ReplayWindow%2A>-Eigenschaft verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxCookieCachingTime">
+      <MemberSignature Language="C#" Value="public TimeSpan MaxCookieCachingTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxCookieCachingTime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.MaxCookieCachingTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxCookieCachingTime", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.TimeSpan" /> ab, der die maximale Lebensdauer von Cookies angibt, oder legt diesen fest.</summary>
+        <value>Eine <see cref="T:System.TimeSpan" />, die die maximale Lebensdauer von Cookies angibt. Der Standardwert ist "10675199.02:48:05.4775807".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReconnectTransportOnFailure">
+      <MemberSignature Language="C#" Value="public bool ReconnectTransportOnFailure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReconnectTransportOnFailure" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.ReconnectTransportOnFailure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("reconnectTransportOnFailure", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob Verbindungen mit WS-fähigen Meldungen versuchen, die Verbindung nach einem Transportfehler wiederherzustellen, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn Verbindungen mit WS-Reliable-Messaging versuchen, nach Transportmisserfolgen erneut eine Verbindung herzustellen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft `true` ist, werden unendliche Versuche zur Verbindungswiederherstellung unternommen. Dieser Kreislauf wird nur vom Inaktiv-Timeout unterbrochen, was dazu führt, dass der Kanal eine Ausnahme ausgibt, wenn die Verbindung nicht wiederhergestellt werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplayCacheSize">
+      <MemberSignature Language="C#" Value="public int ReplayCacheSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReplayCacheSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.ReplayCacheSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("replayCacheSize", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab einen Wert ab oder legt einen Wert fest, der die Anzahl der für die Wiederholungserkennung verwendeten zwischengespeicherten Nonces angibt.</summary>
+        <value>Die Anzahl zwischengespeicherter Nonces, die für die Wiedergabeerkennung verwendet werden. Der Standardwert ist 500000.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieses Limit überschritten wird, wird die älteste Nonce entfernt, und eine neue Nonce für die neue Nachricht wird erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplayWindow">
+      <MemberSignature Language="C#" Value="public TimeSpan ReplayWindow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ReplayWindow" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.ReplayWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("replayWindow", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.TimeSpan" /> ab oder legt eines fest, das die Dauer angibt, in der einzelne Meldungsnonces gültig sind.</summary>
+        <value>Eine <see cref="T:System.TimeSpan" />, die die Dauer angibt, in der einzelne Nachrichtennonces gültig sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach der von dieser Eigenschaft angegebenen Zeit wird eine Meldung mit derselben Nonce wie die zuvor gesendete nicht akzeptiert. Diese Eigenschaft wird in Verbindung mit der <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.MaxClockSkew%2A>-Eigenschaft verwendet, um Wiederholungsangriffe zu verhindern. Ein Angreifer kann eine Meldung wiederholen, nachdem sein Wiederholungsfenster abgelaufen ist. Der 'maxClockSkew'-Test, der Meldungen mit Timestamps bis zu einer angegebenen Zeit vor oder nach der Zeit, zu der die Meldung empfangen wurde, zurückweist, schlägt für diese Meldung allerdings fehl.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionKeyRenewalInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan SessionKeyRenewalInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SessionKeyRenewalInterval" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.SessionKeyRenewalInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("sessionKeyRenewalInterval", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.TimeSpan" />ab oder legt es fest, das die Dauer angibt, nach der der Initiator den Schlüssel für die Sicherheitssitzung erneuert.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" />, das die Dauer angibt, nach der der Initiator den Schlüssel für die Sicherheitssitzung erneuert. Der Standardwert ist "10:00:00".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionKeyRolloverInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan SessionKeyRolloverInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SessionKeyRolloverInterval" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.SessionKeyRolloverInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("sessionKeyRolloverInterval", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.TimeSpan" /> ab, in dem der frühere Sitzungsschlüssel während einer Schlüsselerneuerung noch für eingehende Nachrichten gilt, oder legt dieses fest. Der Standardwert ist "00:05:00".</summary>
+        <value>Ein <see cref="T:System.TimeSpan" />, in dem der frühere Sitzungsschlüssel während einer Schlüsselerneuerung noch für eingehende Nachrichten gilt. Der Standardwert ist "00:05:00".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der Erneuerung des Schlüssels müssen Nachrichten vom Client und vom Server mit dem aktuellsten Schlüssel gesendet werden. Eingehende Nachrichten, die mit dem früheren Sitzungsschlüssel gesichert sind, werden von beiden Seiten bis zum Ablauf der durch diese Eigenschaft angegebenen Übergangszeit akzeptiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimestampValidityDuration">
+      <MemberSignature Language="C#" Value="public TimeSpan TimestampValidityDuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimestampValidityDuration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement.TimestampValidityDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("timestampValidityDuration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.TimeSpan" /> ab, das die Dauer angibt, in der ein Zeitstempel gültig ist, oder legt eines fest.</summary>
+        <value>Eine positive <see cref="T:System.TimeSpan" />, die die Dauer angibt, in der ein Zeitstempel gültig ist. Der Standardwert ist "00:15:00".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

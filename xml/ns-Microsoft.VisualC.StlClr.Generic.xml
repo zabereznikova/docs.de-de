@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.VisualC.StlClr.Generic">
+  <Docs>
+    <summary>Enthält Klassen, Schnittstellen und Iteratoren, mit denen die generische Schnittstelle implementieren, um die. Mithilfe dieser generische Schnittstelle können anderen Sprachen wie c# und Visual Basic .NET Code aufrufen, die mit STL/CLR geschrieben wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

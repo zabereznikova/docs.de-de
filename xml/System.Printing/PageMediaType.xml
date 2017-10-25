@@ -1,0 +1,524 @@
+<Type Name="PageMediaType" FullName="System.Printing.PageMediaType">
+  <TypeSignature Language="C#" Value="public enum PageMediaType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PageMediaType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PageMediaType" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Typen von Drucken Papier oder ein anderes Medium.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte dieses Typs sind hauptsächlich für folgende Zwecke verwendet:  
+  
+-   Als Mitglied der <xref:System.Printing.PrintCapabilities.PageMediaTypeCapability%2A> -Auflistung, die eine Eigenschaft des <xref:System.Printing.PrintCapabilities>, sie zeigen die Medien, die der Drucker unterstützt.  
+  
+-   Als Wert für die <xref:System.Printing.PrintTicket.PageMediaType%2A> Eigenschaft eine <xref:System.Printing.PrintTicket>, weisen Sie den Drucker an einen bestimmten Typ von Medien verwenden.  
+  
+ Die Unknownvalue werden nie in Eigenschaften des <xref:System.Printing.PrintCapabilities> Objekte.  
+  
+ Sie sollten niemals Festlegen einer <xref:System.Printing.PrintTicket> Eigenschaft UNKNOWN. Wenn eine andere <xref:System.Printing.PrintTicket> , erzeugt die Anwendung eine PrintTicket-Dokument erstellt hat, die die Seite Media-Type-Funktion auf eine unbekannte Option festgelegt (d. h. eine Option, die nicht in definiert ist die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)), wird eine <xref:System.Printing.PrintTicket> Objekt in der Anwendung, die mit diesem Dokument erstellt wird als Wert des unbekannt müssen die <xref:System.Printing.PrintTicket.PageMediaType%2A> Eigenschaft.  
+  
+ Obwohl die <xref:System.Printing.PrintTicket> und <xref:System.Printing.PrintCapabilities> Klassen können nicht vererbt werden, können Sie erweitern die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Druckgerät Funktionen zu erkennen, die nicht in berücksichtigt werden die <xref:System.Printing.PrintTicket.PageMediaType%2A> oder <xref:System.Printing.PrintCapabilities> Klassen. Weitere Informationen finden Sie unter [nicht im Build: Vorgehensweise: Erweitern der Druckschema und Erstellen von neuen Druckserver Systemklassen](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die Drucker Fähigkeiten bestimmen, und konfigurieren den Druckauftrag aus, um sie nutzen.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Archival">
+      <MemberSignature Language="C#" Value="Archival" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType Archival = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.Archival" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Archiv hochwertige Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSelect">
+      <MemberSignature Language="C#" Value="AutoSelect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType AutoSelect = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.AutoSelect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Druckgerät wählt das Medium aus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BackPrintFilm">
+      <MemberSignature Language="C#" Value="BackPrintFilm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType BackPrintFilm = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.BackPrintFilm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Specialty Back druckbaren Filme.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bond">
+      <MemberSignature Language="C#" Value="Bond" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType Bond = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.Bond" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Standard Wertpapiere-Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CardStock">
+      <MemberSignature Language="C#" Value="CardStock" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType CardStock = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.CardStock" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Standard-Karton.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Continuous">
+      <MemberSignature Language="C#" Value="Continuous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType Continuous = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.Continuous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Continuous-Feed-Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnvelopePlain">
+      <MemberSignature Language="C#" Value="EnvelopePlain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType EnvelopePlain = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.EnvelopePlain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Standard-Umschlag.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnvelopeWindow">
+      <MemberSignature Language="C#" Value="EnvelopeWindow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType EnvelopeWindow = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.EnvelopeWindow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fenster Umschlag.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fabric">
+      <MemberSignature Language="C#" Value="Fabric" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType Fabric = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.Fabric" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fabric-Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HighResolution">
+      <MemberSignature Language="C#" Value="HighResolution" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType HighResolution = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.HighResolution" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Spezielle hochauflösende Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="Label" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType Label = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.Label" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Label-Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiLayerForm">
+      <MemberSignature Language="C#" Value="MultiLayerForm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType MultiLayerForm = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.MultiLayerForm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verbundene mehrteilige Formulare.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiPartForm">
+      <MemberSignature Language="C#" Value="MultiPartForm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType MultiPartForm = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.MultiPartForm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Einzelne mehrteilige Formulare.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType None = int32(29)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Unbekannte oder nicht aufgeführte Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Photographic">
+      <MemberSignature Language="C#" Value="Photographic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType Photographic = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.Photographic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Standard-photographic Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PhotographicFilm">
+      <MemberSignature Language="C#" Value="PhotographicFilm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType PhotographicFilm = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.PhotographicFilm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Filme photographic Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PhotographicGlossy">
+      <MemberSignature Language="C#" Value="PhotographicGlossy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType PhotographicGlossy = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.PhotographicGlossy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Glänzend photographic Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PhotographicHighGloss">
+      <MemberSignature Language="C#" Value="PhotographicHighGloss" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType PhotographicHighGloss = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.PhotographicHighGloss" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Hohe glänzend photographic Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PhotographicMatte">
+      <MemberSignature Language="C#" Value="PhotographicMatte" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType PhotographicMatte = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.PhotographicMatte" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Matt photographic Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PhotographicSatin">
+      <MemberSignature Language="C#" Value="PhotographicSatin" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType PhotographicSatin = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.PhotographicSatin" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Satin photographic Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PhotographicSemiGloss">
+      <MemberSignature Language="C#" Value="PhotographicSemiGloss" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType PhotographicSemiGloss = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.PhotographicSemiGloss" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Teilweise ignorieren photographic Medien.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Plain">
+      <MemberSignature Language="C#" Value="Plain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType Plain = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.Plain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Papier.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Screen">
+      <MemberSignature Language="C#" Value="Screen" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType Screen = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.Screen" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ausgabe an eine Anzeige im fortlaufenden Formular.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenPaged">
+      <MemberSignature Language="C#" Value="ScreenPaged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType ScreenPaged = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.ScreenPaged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ausgabe an eine Anzeige seitenweise.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stationery">
+      <MemberSignature Language="C#" Value="Stationery" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType Stationery = int32(24)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.Stationery" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Spezialisierung eines stationären Zustands.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStockFull">
+      <MemberSignature Language="C#" Value="TabStockFull" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType TabStockFull = int32(25)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.TabStockFull" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Registerkarte Stock, nicht vorgeschnitten (einzelne Blätter).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStockPreCut">
+      <MemberSignature Language="C#" Value="TabStockPreCut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType TabStockPreCut = int32(26)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.TabStockPreCut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Registerkarte Stock, vorgeschnitten (mehrere Blätter).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Transparency">
+      <MemberSignature Language="C#" Value="Transparency" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType Transparency = int32(27)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.Transparency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Transparente Blatt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TShirtTransfer">
+      <MemberSignature Language="C#" Value="TShirtTransfer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType TShirtTransfer = int32(28)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.TShirtTransfer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Medien, die verwendet wird, um ein Bild an ein T-shirt übertragen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageMediaType Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageMediaType.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageMediaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Funktion (deren Optionen durch diese Enumeration dargestellt werden) ist eine Option festgelegt, nicht definiert, der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

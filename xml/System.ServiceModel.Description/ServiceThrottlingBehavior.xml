@@ -1,0 +1,277 @@
+<Type Name="ServiceThrottlingBehavior" FullName="System.ServiceModel.Description.ServiceThrottlingBehavior">
+  <TypeSignature Language="C#" Value="public class ServiceThrottlingBehavior : System.ServiceModel.Description.IServiceBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceThrottlingBehavior extends System.Object implements class System.ServiceModel.Description.IServiceBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.ServiceThrottlingBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IServiceBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Konfiguriert Laufzeitdurchsatzeinstellungen, die es Ihnen ermöglichen, die Dienstleistung zu optimieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuern Sie mithilfe der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>-Klasse verschiedene Durchsatzeinstellungen, die verhindern, dass der Anwendung nicht genügend Speicherplatz zur Verfügung steht.  
+  
+ Die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>-Eigenschaft begrenzt die Anzahl der Nachrichten, die derzeit von einem <xref:System.ServiceModel.ServiceHost> verarbeitet werden.  
+  
+ Die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>-Eigenschaft begrenzt die Anzahl der <xref:System.ServiceModel.InstanceContext>-Objekte, die gleichzeitig auf einem <xref:System.ServiceModel.ServiceHost> ausgeführt werden.  
+  
+ Die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>-Eigenschaft begrenzt die Anzahl der Sitzungen, die ein <xref:System.ServiceModel.ServiceHost>-Objekt akzeptieren kann.  
+  
+ Da der Lastenausgleich zur Laufzeit Erfahrung in der Ausführung der Anwendung erfordert, wird meist ein <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> über eine Anwendungskonfigurationsdatei verwendet, um die Leistung des Diensts durch Änderung der Ausführung zu maximieren.  
+  
+> [!NOTE]
+>  Eine Ablaufverfolgung wird jedes Mal geschrieben, wenn der Wert dieser Eigenschaften erreicht wird. Die erste Ablaufverfolgung wird als Warnung geschrieben.  
+  
+ Sie können auch die Werte dieses Attributs festlegen, mit der [ &lt;ServiceThrottling&gt; ](~/docs/framework/configure-apps/file-schema/wcf/servicethrottling.md) Element in einer Anwendungskonfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung des <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> aus einer Anwendungskonfigurationsdatei gezeigt, wobei die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>-Eigenschaft und die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>-Eigenschaft als Beispiel auf 1 festgelegt werden. Die optimalen Einstellungen für eine bestimmte Anwendung finden Sie durch praktische Erfahrung heraus.  
+  
+ [!code-xml[ServiceThrottlingBehavior#3](~/samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceThrottlingBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceThrottlingBehavior.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.ServiceThrottlingBehavior" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den Konstruktor, um programmgesteuert ein konfiguriertes <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConcurrentCalls">
+      <MemberSignature Language="C#" Value="public int MaxConcurrentCalls { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConcurrentCalls" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Hiermit wird der Wert abgerufen oder festgelegt, der die maximale Anzahl der Nachrichten angibt, die auf einem <see cref="T:System.ServiceModel.ServiceHost" /> aktiv verarbeitet werden.</summary>
+        <value>Die Obergrenze aktiver Nachrichten im Dienst. Der Standardwert ist 16 Mal die Anzahl der Prozessoren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>-Eigenschaft gibt die maximale Anzahl der Nachrichten an, die aktiv in einem <xref:System.ServiceModel.ServiceHost>-Objekt verarbeitet werden. Jeder Kanal kann eine ausstehende Nachricht haben, die nicht gegen den Wert von <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A> aufgerechnet wird, bis [!INCLUDE[indigo1](~/includes/indigo1-md.md)] mit der Verarbeitung beginnt.  
+  
+ Sie können auch die Werte dieses Attributs festlegen, mit der [ &lt;ServiceThrottling&gt; ](~/docs/framework/configure-apps/file-schema/wcf/servicethrottling.md) Element in einer Anwendungskonfigurationsdatei.  
+  
+> [!WARNING]
+>  <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>sollte kleiner als die SQL-verbindungspoolgröße in Szenarien in der Warteschlange festgelegt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung des <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> aus einer Anwendungskonfigurationsdatei gezeigt, wobei die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>-Eigenschaft und die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>-Eigenschaft als Beispiel auf 1 festgelegt werden. Die optimalen Einstellungen für eine bestimmte Anwendung finden Sie durch praktische Erfahrung heraus.  
+  
+ [!code-xml[ServiceThrottlingBehavior#3](~/samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConcurrentInstances">
+      <MemberSignature Language="C#" Value="public int MaxConcurrentInstances { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConcurrentInstances" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Hiermit wird ein Wert abgerufen oder festgelegt, der die maximale Anzahl an <see cref="T:System.ServiceModel.InstanceContext" />-Objekten innerhalb des Diensts angibt, die gleichzeitig ausgeführt werden können.</summary>
+        <value>Die maximale Anzahl von gleichzeitigen <see cref="T:System.ServiceModel.InstanceContext" />-Objekten im Dienst. Die Standardeinstellung ist die Summe des Werts der <see cref="P:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions" /> und der Wert des <see cref="P:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls" />...</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>-Eigenschaft gibt die maximale Anzahl der <xref:System.ServiceModel.InstanceContext>-Objekte im Dienst an. Es ist wichtig, die Beziehung zwischen der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>-Eigenschaft und der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft zu beachten. Wenn <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> <xref:System.ServiceModel.InstanceContextMode.PerSession> ist, ist der resultierende Wert die Gesamtzahl der Sitzungen. Wenn <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> <xref:System.ServiceModel.InstanceContextMode.PerCall> ist, ist der resultierende Wert die Anzahl gleichzeitiger Aufrufe. Wenn eine Nachricht eintrifft, während die maximale Anzahl an <xref:System.ServiceModel.InstanceContext>-Objekten bereits vorhanden ist, wird die Nachricht zurückgehalten, bis ein <xref:System.ServiceModel.InstanceContext>-Objekt geschlossen wird.  
+  
+ Sie können auch die Werte dieses Attributs festlegen, mit der [ &lt;ServiceThrottling&gt; ](~/docs/framework/configure-apps/file-schema/wcf/servicethrottling.md) Element in einer Anwendungskonfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung des <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> aus einer Anwendungskonfigurationsdatei gezeigt, wobei die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>-, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>- und <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>-Eigenschaften als Beispiel auf 1 festgelegt werden. Die optimalen Einstellungen für eine bestimmte Anwendung finden Sie durch praktische Erfahrung heraus.  
+  
+ [!code-xml[ServiceThrottlingBehavior#3](~/samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConcurrentSessions">
+      <MemberSignature Language="C#" Value="public int MaxConcurrentSessions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConcurrentSessions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die maximale Anzahl an Sitzungen angibt, die ein <see cref="T:System.ServiceModel.ServiceHost" />-Objekt gleichzeitig akzeptiert.</summary>
+        <value>Die maximale Anzahl an Sitzungen, die ein Diensthost akzeptiert. Der Standardwert ist 100 Mal die Anzahl der Prozessoren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>-Eigenschaft gibt die maximale Anzahl der Sitzungen an, die ein <xref:System.ServiceModel.ServiceHost>-Objekt akzeptieren kann. Beachten Sie, dass mit Sitzungen in diesem Fall nicht nur Kanäle gemeint sind, die zuverlässige Sitzungen unterstützen (so unterstützt z.&#160;B. <xref:System.ServiceModel.NetNamedPipeBinding?displayProperty=nameWithType> Sitzungen, enthält jedoch keine zuverlässigen Sitzungen).  
+  
+ Jedes Listener-Objekt kann eine ausstehende Kanalsitzung haben, die nicht gegen den Wert von <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> aufgerechnet wird, bis [!INCLUDE[indigo2](~/includes/indigo2-md.md)] die Kanalsitzung akzeptiert und mit der Verarbeitung der darin enthaltenen Nachrichten beginnt. Diese Eigenschaft ist höchst nützlich in Szenarien, die Sitzungen nutzen.  
+  
+ Wenn diese Eigenschaft auf einen Wert festgelegt wird, der unter der Anzahl der Clientthreads liegt, werden die Anforderungen von mehreren Clients möglicherweise in derselben Socketverbindung in eine Warteschlange gestellt. Die Anforderungen von dem Client, der keine Sitzung mit dem Dienst erstellt hat, wird so lange blockiert, bis der Dienst seine Sitzung mit den anderen Clients geschlossen hat, wenn die Anzahl der geöffneten Sitzungen in dem Dienst `MaxConcurrentSessions` erreicht hat. Bei Clientanforderungen, die nicht behandelt werden, tritt eine Zeitüberschreitung auf, und der Dienst schließt sofort die Sitzung.  
+  
+ Um diese Situation zu vermeiden, sollten Sie die Clientthreads über verschiedene Anwendungsdomänen ausführen, sodass die Anforderungsnachrichten zu verschiedenen Socketverbindungen geleitet werden.  
+  
+ Sie können auch die Werte dieses Attributs festlegen, mit der [ &lt;ServiceThrottling&gt; ](~/docs/framework/configure-apps/file-schema/wcf/servicethrottling.md) Element in einer Anwendungskonfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung des <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> aus einer Anwendungskonfigurationsdatei gezeigt, wobei die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>-Eigenschaft und die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>-Eigenschaft als Beispiel auf 1 festgelegt werden. Die optimalen Einstellungen für eine bestimmte Anwendung finden Sie durch praktische Erfahrung heraus.  
+  
+ [!code-xml[ServiceThrottlingBehavior#3](~/samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IServiceBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IServiceBehavior.AddBindingParameters (System.ServiceModel.Description.ServiceDescription description, System.ServiceModel.ServiceHostBase serviceHostBase, System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IServiceBehavior.AddBindingParameters(class System.ServiceModel.Description.ServiceDescription description, class System.ServiceModel.ServiceHostBase serviceHostBase, class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceThrottlingBehavior.System#ServiceModel#Description#IServiceBehavior#AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+        <Parameter Name="endpoints" Type="System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt;" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="description">Die Dienstbeschreibung.</param>
+        <param name="serviceHostBase">Der Host für den Dienst.</param>
+        <param name="endpoints">Die durch den Dienst verfügbar gemachten Endpunkte.</param>
+        <param name="parameters">Die Bindungsparameter, die zur Unterstützung des Dienstverhaltens konfiguriert werden sollen.</param>
+        <summary>Konfiguriert die Bindungen zur Unterstützung des Dienstverhaltens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert die <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IServiceBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.ServiceDescription description, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceDescription description, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceThrottlingBehavior.System#ServiceModel#Description#IServiceBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="description">Die zu konfigurierende Dienstbeschreibung.</param>
+        <param name="serviceHostBase">Der Host für den Dienst.</param>
+        <summary>Konfiguriert den Dienst zur Unterstützung des Dienstverhaltens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert die <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IServiceBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IServiceBehavior.Validate (System.ServiceModel.Description.ServiceDescription description, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IServiceBehavior.Validate(class System.ServiceModel.Description.ServiceDescription description, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceThrottlingBehavior.System#ServiceModel#Description#IServiceBehavior#Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="description">Die durch das Dienstverhalten zu überprüfende Dienstbeschreibung.</param>
+        <param name="serviceHostBase">Der durch das Dienstverhalten zu überprüfende Diensthost.</param>
+        <summary>Überprüft, dass der Dienst und der Host das Dienstverhalten unterstützen können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert die <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

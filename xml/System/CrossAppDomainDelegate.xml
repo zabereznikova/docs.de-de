@@ -1,0 +1,33 @@
+<Type Name="CrossAppDomainDelegate" FullName="System.CrossAppDomainDelegate">
+  <TypeSignature Language="C#" Value="public delegate void CrossAppDomainDelegate();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CrossAppDomainDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.CrossAppDomainDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Verwendet von <see cref="M:System.AppDomain.DoCallBack(System.CrossAppDomainDelegate)" /> für Aufrufe über Anwendungsdomänen hinweg.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle abgeleiteten Klassen von <xref:System.Delegate> und <xref:System.MulticastDelegate> verfügt über einen Konstruktor und eine `Invoke` Methode. Finden Sie im C++-Codebeispiel in die Beschreibung für den angegebenen <xref:System.Delegate>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

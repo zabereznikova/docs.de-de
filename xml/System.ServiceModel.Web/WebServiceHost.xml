@@ -1,0 +1,166 @@
+<Type Name="WebServiceHost" FullName="System.ServiceModel.Web.WebServiceHost">
+  <TypeSignature Language="C#" Value="public class WebServiceHost : System.ServiceModel.ServiceHost" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebServiceHost extends System.ServiceModel.ServiceHost" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Web.WebServiceHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.ServiceHost</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein <see cref="T:System.ServiceModel.ServiceHost" /> abgeleitete Klasse, die die Windows Communication Foundation (WCF)-REST-Programmiermodell ergänzt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.ServiceModel.Web.WebServiceHost> in der Dienstbeschreibung keine Endpunkte findet, wird automatisch ein Standardendpunkt an der Basisadresse des Diensts für HTTP- und HTTPS-Basisadressen erstellt. Es wird nicht automatisch ein Endpunkt erstellt, wenn der Benutzer unter der Basisadresse explizit einen Endpunkt konfiguriert hat. <xref:System.ServiceModel.Web.WebServiceHost> konfiguriert automatisch die Bindung des Endpunkts für die Kooperation mit den entsprechenden Sicherheitseinstellungen für Internetinformationsdienste (Internet Information Services, IIS), wenn sie in einem sicheren virtuellen Verzeichnis verwendet wird.  
+  
+ Beim Erstellen eines standardmäßigen HTTP-Endpunkts deaktiviert <xref:System.ServiceModel.Web.WebServiceHost> auch die HTTP-Hilfeseite und die GET-Funktion der Web Services Description Language (WSDL), damit der Metadatenendpunkt nicht in Konflikt mit dem standardmäßigen HTTP-Endpunkt gerät.  
+  
+ Darüber hinaus fügt die <xref:System.ServiceModel.Web.WebServiceHost>-Klasse allen Endpunkten <xref:System.ServiceModel.Description.WebHttpBehavior> hinzu, die nicht bereits über dieses Verhalten verfügen und ein <xref:System.ServiceModel.Configuration.WebMessageEncodingElement> haben. Wenn alle Dienstvorgänge entweder HTTP-Anforderungen ohne Text aufweisen oder den HTTP-Anforderungstext als Stream behandeln, konfiguriert <xref:System.ServiceModel.Web.WebServiceHost> automatisch die richtige Inhaltstypzuordnung für die Bindung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.ServiceModel.Web.WebServiceHost>-Klasse zum Hosten eines Diensts veranschaulicht, der das [!INCLUDE[indigo2](~/includes/indigo2-md.md)] REST-Programmiermodell nutzt.  
+  
+ [!code-csharp[WebServiceHost#0](~/samples/snippets/csharp/VS_Snippets_CFX/webservicehost/cs/program.cs#0)]
+ [!code-vb[WebServiceHost#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/webservicehost/vb/program.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebServiceHost ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.WebServiceHost.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Web.WebServiceHost" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebServiceHost (object singletonInstance, params Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object singletonInstance, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.WebServiceHost.#ctor(System.Object,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="singletonInstance" Type="System.Object" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="singletonInstance">Eine Dienstinstanz, die als Singleton-Instanz verwendet werden soll.</param>
+        <param name="baseAddresses">Die Basisadresse des Diensts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Web.WebServiceHost" />-Klasse mit der angegebenen Singleton-Serverinstanz und der Basisadresse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `baseAddresses`-Parameter kann eine oder mehrere Basisadressen umfassen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Aufruf dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[WebServiceHost#1](~/samples/snippets/csharp/VS_Snippets_CFX/webservicehost/cs/snippets.cs#1)]
+ [!code-vb[WebServiceHost#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/webservicehost/vb/snippets.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebServiceHost (Type serviceType, params Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type serviceType, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.WebServiceHost.#ctor(System.Type,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Diensttyp.</param>
+        <param name="baseAddresses">Die Basisadresse des Diensts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Web.WebServiceHost" />-Klasse mit dem angegebenen Diensttyp und der Basisadresse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `baseAddresses`-Parameter kann eine oder mehrere Basisadressen umfassen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Aufruf dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[WebServiceHost#2](~/samples/snippets/csharp/VS_Snippets_CFX/webservicehost/cs/snippets.cs#2)]
+ [!code-vb[WebServiceHost#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/webservicehost/vb/snippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpening">
+      <MemberSignature Language="C#" Value="protected override void OnOpening ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnOpening() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.WebServiceHost.OnOpening" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird beim Öffnen der <see cref="T:System.ServiceModel.Web.WebServiceHost" />-Instanz aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Aufruf dieser Methode geschieht Folgendes:  
+  
+1.  Werden von <xref:System.ServiceModel.Web.WebServiceHost> in der Dienstbeschreibung keine Endpunkte gefunden, wird ein Standardendpunkt an der Basisadresse des Diensts erstellt. <xref:System.ServiceModel.Web.WebServiceHost> deaktiviert automatisch die HTTP-Hilfeseite und die WSDL-GET-Funktion, damit der Metadatenendpunkt nicht in Konflikt mit dem standardmäßigen HTTP-Endpunkt gerät.  
+  
+2.  <xref:System.ServiceModel.Web.WebServiceHost> überprüft alle Endpunkte, die <xref:System.ServiceModel.WebHttpBinding> verwenden, um zu ermitteln, ob sie über das erforderliche <xref:System.ServiceModel.Description.WebHttpBehavior> verfügen. Wenn dies nicht der Fall ist, fügt <xref:System.ServiceModel.Web.WebServiceHost> das <xref:System.ServiceModel.Description.WebHttpBehavior> für den Endpunkt hinzu.  
+  
+3.  <xref:System.ServiceModel.Web.WebServiceHost> konfiguriert die Bindung des Endpunkts mit den entsprechenden ISS-Sicherheitseinstellungen, wenn sie in einem sicheren virtuellen Verzeichnis verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

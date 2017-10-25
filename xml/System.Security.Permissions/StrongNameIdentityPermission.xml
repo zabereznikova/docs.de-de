@@ -1,0 +1,514 @@
+<Type Name="StrongNameIdentityPermission" FullName="System.Security.Permissions.StrongNameIdentityPermission">
+  <TypeSignature Language="C#" Value="public sealed class StrongNameIdentityPermission : System.Security.CodeAccessPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit StrongNameIdentityPermission extends System.Security.CodeAccessPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.StrongNameIdentityPermission" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Identitätsberechtigung für starke Namen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Beginnend mit der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], Identitätsberechtigungen nicht verwendet werden.  
+>   
+>  In der .NET Framework-Versionen 1.0 und 1.1 Identitätsberechtigungen kein <xref:System.Security.Permissions.PermissionState.Unrestricted> Berechtigung-Status-Wert. In .NET Framework, Version 2.0 oder höher können Identitätsberechtigungen ausnahmslos Zustand Berechtigung haben.  Dies bedeutet, dass in Version 2.0 und höheren Versionen Identitätsberechtigungen das gleiche Verhalten wie Berechtigungen verfügen, implementieren die <xref:System.Security.Permissions.IUnrestrictedPermission> Schnittstelle. D. h. erfolgreich ist immer eine Anforderung für eine Identität, unabhängig von der Identität der Assembly, wenn die Assembly volle Vertrauenswürdigkeit gewährt wurde.  
+  
+ Verwendung <xref:System.Security.Permissions.StrongNameIdentityPermission> zu bestätigen, dass der aufrufende Code in einer bestimmten Codeassembly mit einem starken Namen. Vollständige Forderungen nach <xref:System.Security.Permissions.StrongNameIdentityPermission> nur erfolgreich, wenn alle Assemblys im Stapel die richtige Beweise, um die Anforderung zu erfüllen haben. Linkaufrufe, bei denen die <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> Attribut nur erfolgreich, wenn der unmittelbare Aufrufer die richtige Beweise hat.  
+  
+ Eine Identität mit starkem Namen basiert auf einem kryptografischen öffentlichen Schlüssel wird aufgerufen, ein binary large Object (BLOB), optional mit dem Namen und die Version einer bestimmten Assembly kombiniert wird. Der Schlüssel einen eindeutigen Namespace definiert und bietet sicheren Überprüfung mit der Namen Original, da die Definition des Namens in einer Assembly sein muss, die von den entsprechenden privaten Schlüssel signiert ist.  
+  
+ Beachten Sie, dass die Gültigkeit des Schlüssels mit starkem Namen nicht von einem Zertifikat, das für den Schlüssel ausgestellt werden oder eine Vertrauensstellung abhängig ist.  
+  
+ In der .NET Framework-Versionen 1.0 und 1.1 treten Nachfrage nach der Identitätsberechtigungen selbst, wenn die aufrufende Assembly vollständig vertrauenswürdig ist. Also auch, wenn die aufrufende Assembly volle Vertrauenswürdigkeit verfügt, schlägt eine Anforderung für eine Identitätsberechtigung die Assembly die angeforderten Kriterien nicht erfüllen. In .NET Framework-Version sind 2.0 und höhere, Forderungen nach Identitätsberechtigungen wirkungslos, wenn die aufrufende Assembly volle Vertrauenswürdigkeit verfügt. Dies gewährleistet die Konsistenz für alle Berechtigungen und die Behandlung von Identitätsberechtigungen als Sonderfall entfällt.  
+  
+ Eine vollständige Beschreibung von starken Namen, finden Sie unter der <xref:System.Security.Policy.StrongName> Referenzseite. Weitere Informationen über Assemblys mit starkem Namen finden Sie unter [Assemblys mit starkem Namen](~/docs/framework/app-domains/strong-named-assemblies.md).  
+  
+ Die <xref:System.Security.Permissions.StrongNameIdentityPermission> Klasse dient zum Definieren von Anforderungen von starken Namen für den Zugriff auf die öffentlichen Member eines Typs. Die <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> Attribut kann zum Definieren von Anforderungen von starken Namen auf Assemblyebene verwendet werden. In .NET Framework, Version 2.0 oder höher, können Sie auch die <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Attribut, um anzugeben, dass alle nicht öffentliche Typen in dieser Assembly auf eine andere Assembly sichtbar sind. Weitere Informationen finden Sie unter [Friend-Assemblys](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StrongNameIdentityPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.StrongNameIdentityPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der <see cref="T:System.Security.Permissions.PermissionState" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Permissions.StrongNameIdentityPermission" />-Klasse mit der angegebenen <see cref="T:System.Security.Permissions.PermissionState" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt entweder einen vollständig eingeschränkten (`None`) oder `Unrestricted` Berechtigung.  
+  
+> [!NOTE]
+>  In der .NET Framework-Versionen 1.0 und 1.1 Identitätsberechtigungen kein <xref:System.Security.Permissions.PermissionState.Unrestricted> Berechtigung-Status-Wert. In .NET Framework, Version 2.0 oder höher können Identitätsberechtigungen ausnahmslos Zustand Berechtigung haben.  Dies bedeutet, dass in Version 2.0 und höheren Versionen Identitätsberechtigungen das gleiche Verhalten wie Berechtigungen verfügen, implementieren die <xref:System.Security.Permissions.IUnrestrictedPermission> Schnittstelle. D. h. erfolgreich ist immer eine Anforderung für eine Identität, unabhängig von der Identität der Assembly, wenn die Assembly volle Vertrauenswürdigkeit gewährt wurde.  
+  
+ In der .NET Framework-Versionen 1.0 und 1.1 treten Nachfrage nach der Identitätsberechtigungen, selbst wenn die aufrufende Assembly vollständig vertrauenswürdig ist. Obwohl die aufrufende Assembly volle Vertrauenswürdigkeit verfügt, fehlschlägt eine Anforderung für eine Identitätsberechtigung, also, wenn die Assembly die angeforderten Kriterien nicht erfüllen. In .NET Framework-Version sind 2.0 und höhere, Forderungen nach Identitätsberechtigungen wirkungslos, wenn die aufrufende Assembly volle Vertrauenswürdigkeit verfügt. Dies gewährleistet die Konsistenz für alle Berechtigungen, die die Behandlung von Identitätsberechtigungen als Sonderfall eliminieren.  
+  
+ Verwenden Sie diesen Konstruktor mit den Statuswert Berechtigung <xref:System.Security.Permissions.PermissionState.None> eine Identitätsberechtigung erstellen, die keinen starken Namen entspricht. Wenn Sie anschließend Festlegen der <xref:System.Security.Permissions.StrongNameIdentityPermission.Name%2A> und <xref:System.Security.Permissions.StrongNameIdentityPermission.Version%2A> Eigenschaften, die Identität eines bestimmten starken Namens der Berechtigungen dargestellt werden können.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.StrongNameIdentityPermission.%23ctor%2A> Konstruktor.  
+  
+ [!code-cpp[System.Security.Permissions.StrongNameIdentityPermission#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CPP/strongnameidentity.cpp#7)]
+ [!code-csharp[System.Security.Permissions.StrongNameIdentityPermission#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CS/strongnameidentity.cs#7)]
+ [!code-vb[System.Security.Permissions.StrongNameIdentityPermission#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/VB/strongnameidentity.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="state" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.PermissionState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StrongNameIdentityPermission (System.Security.Permissions.StrongNamePublicKeyBlob blob, string name, Version version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Permissions.StrongNamePublicKeyBlob blob, string name, class System.Version version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.StrongNameIdentityPermission.#ctor(System.Security.Permissions.StrongNamePublicKeyBlob,System.String,System.Version)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="blob" Type="System.Security.Permissions.StrongNamePublicKeyBlob" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="version" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="blob">Der öffentliche Schlüssel, der den Namespace der Identität mit starkem Namen definiert.</param>
+        <param name="name">Der einfache Namensteil der Identität mit starkem Namen. Dies entspricht dem Namen der Assembly.</param>
+        <param name="version">Die Versionsnummer der Identität.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.StrongNameIdentityPermission" /> Klasse für die Identität der angegebenen starken Namen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `name` und `version` Parameter möglich `null` nur wenn der öffentliche Schlüssel verwendet wird um die Assembly zu identifizieren. Eine leere Zeichenfolge ("") sollte nicht verwendet werden, anstelle von `null`. Wenn `name` ist eine leere Zeichenfolge ein <xref:System.ArgumentException> ausgelöst wird.  
+  
+ Weitere Informationen zu Namen und Versionsnummern von Assemblys finden Sie unter [Assemblys mit starkem Namen](~/docs/framework/app-domains/strong-named-assemblies.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.StrongNameIdentityPermission.%23ctor%2A> Konstruktor.  
+  
+ [!code-cpp[System.Security.Permissions.StrongNameIdentityPermission#8](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CPP/strongnameidentity.cpp#8)]
+ [!code-csharp[System.Security.Permissions.StrongNameIdentityPermission#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CS/strongnameidentity.cs#8)]
+ [!code-vb[System.Security.Permissions.StrongNameIdentityPermission#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/VB/strongnameidentity.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="blob" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der <paramref name="name" />-Parameter ist eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.StrongNameIdentityPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine identische Kopie der aktuellen Berechtigung und gibt sie zurück.</summary>
+        <returns>Eine Kopie der aktuellen Berechtigung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Kopie einer Berechtigung stellt den gleichen Zugriff auf Ressourcen wie die ursprüngliche Berechtigung dar.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Verhalten der <xref:System.Security.Permissions.StrongNameIdentityPermission.Copy%2A> Methode. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.StrongNameIdentityPermission> Klasse. Die beste Verwendung in diesem Beispiel wird zum Erstellen und führen Sie das gesamte Beispiel und die Ausgabe anzeigen.  
+  
+> [!NOTE]
+>  Im Codebeispiel wird das Verhalten der Methode, die nicht zur Veranschaulichung der Verwendung vorgesehen. Im Allgemeinen werden die Methoden der Klassen von Codezugriffsberechtigungen von der Sicherheitsinfrastruktur verwendet; Sie werden in der Regel nicht in Anwendungen verwendet.  
+  
+ [!code-cpp[System.Security.Permissions.StrongNameIdentityPermission#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CPP/strongnameidentity.cpp#5)]
+ [!code-csharp[System.Security.Permissions.StrongNameIdentityPermission#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CS/strongnameidentity.cs#5)]
+ [!code-vb[System.Security.Permissions.StrongNameIdentityPermission#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/VB/strongnameidentity.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.StrongNameIdentityPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die XML-Codierung zur Wiederherstellung der Berechtigung.</param>
+        <summary>Stellt eine Berechtigung mit einem angegebenen Zustand aus einer XML-Codierung wieder her.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht vom Anwendungscode verwendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Verhalten der <xref:System.Security.Permissions.StrongNameIdentityPermission.FromXml%2A> Methode. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.StrongNameIdentityPermission> Klasse. Die beste Verwendung in diesem Beispiel wird zum Erstellen und führen Sie das gesamte Beispiel und die Ausgabe anzeigen.  
+  
+> [!NOTE]
+>  Im Codebeispiel wird das Verhalten der Methode, die nicht zur Veranschaulichung der Verwendung vorgesehen. Im Allgemeinen werden die Methoden der Klassen von Codezugriffsberechtigungen von der Sicherheitsinfrastruktur verwendet; Sie werden in der Regel nicht in Anwendungen verwendet.  
+  
+ [!code-cpp[System.Security.Permissions.StrongNameIdentityPermission#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CPP/strongnameidentity.cpp#6)]
+ [!code-csharp[System.Security.Permissions.StrongNameIdentityPermission#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CS/strongnameidentity.cs#6)]
+ [!code-vb[System.Security.Permissions.StrongNameIdentityPermission#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/VB/strongnameidentity.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="e" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="e" /> -Parameter ist kein gültiges Berechtigungselement.  
+  
+ - oder -   
+  
+ Die <paramref name="e" /> Versionsnummer des Parameters ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.StrongNameIdentityPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung für die Überschneidung mit der aktuellen Berechtigung. Sie muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Erstellt eine Berechtigung als Schnittmenge der aktuellen und der angegebenen Berechtigung und gibt diese zurück.</summary>
+        <returns>Eine neue Berechtigung, die die Schnittmenge der aktuellen und der angegebenen Berechtigung darstellt oder <see langword="null" /> , wenn die Schnittmenge leer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Schnittmenge zweier Berechtigungen ist eine Berechtigung, die den Satz von Vorgänge zu beschreiben, den beide gemeinsam beschreiben. Nur eine Anforderung, die beide ursprünglichen Berechtigungen erfolgreich durchläuft, wird die Schnittmenge übergeben.  
+  
+ Die Schnittmenge von zwei identische starken Namen Identitätsberechtigungen ist dieselbe Berechtigung. Die Schnittmenge von zwei verschiedenen (keine Platzhalter) Ausdrücken ist eine leere Berechtigung. Die Schnittmenge der ein Platzhalterausdruck und einem übereinstimmenden starken Namen wird der starke Name. Die Schnittmenge zweier Ausdrücke mit Platzhalterzeichen, die mit übereinstimmen, ist der längere der beiden Ausdrücke spezifischere.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Ergebnisse der Nutzung der <xref:System.Security.Permissions.StrongNameIdentityPermission.Intersect%2A> -Methode nicht, wie Sie die Methode verwenden. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.StrongNameIdentityPermission> Klasse. Die beste Verwendung in diesem Beispiel wird zum Erstellen und führen Sie das gesamte Beispiel und die Ausgabe anzeigen.  
+  
+> [!NOTE]
+>  Im Codebeispiel wird das Verhalten der Methode, die nicht zur Veranschaulichung der Verwendung vorgesehen. Im Allgemeinen werden die Methoden der Klassen von Codezugriffsberechtigungen von der Sicherheitsinfrastruktur verwendet; Sie werden in der Regel nicht in Anwendungen verwendet.  
+  
+ [!code-cpp[System.Security.Permissions.StrongNameIdentityPermission#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CPP/strongnameidentity.cpp#4)]
+ [!code-csharp[System.Security.Permissions.StrongNameIdentityPermission#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CS/strongnameidentity.cs#4)]
+ [!code-vb[System.Security.Permissions.StrongNameIdentityPermission#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/VB/strongnameidentity.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.StrongNameIdentityPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung, die auf die Teilmengenbeziehung geprüft werden soll. Diese Berechtigung muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Bestimmt, ob die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Berechtigung ist eine Teilmenge der angegebenen Berechtigung, wenn die aktuelle Berechtigung eine Reihe von Vorgängen angibt, die vollständig in die angegebene Berechtigung enthalten ist. Z. B. die anderen Eigenschaften gleich sind, eine Identität mit der <xref:System.Security.Permissions.StrongNameIdentityPermission.Name%2A> Eigenschaft enthält den Platzhalterausdruck Unternehmen.Abteilung. * enthält, wird als eine Teilmenge einer Identität mit identifiziert die <xref:System.Security.Permissions.StrongNameIdentityPermission.Name%2A> -Eigenschaft Unternehmen.Abteilung.Datei .  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Ergebnisse der Nutzung der <xref:System.Security.Permissions.StrongNameIdentityPermission.IsSubsetOf%2A> -Methode nicht, wie Sie die Methode verwenden. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.StrongNameIdentityPermission> Klasse. Die beste Verwendung in diesem Beispiel wird zum Erstellen und führen Sie das gesamte Beispiel und die Ausgabe anzeigen.  
+  
+> [!NOTE]
+>  Im Codebeispiel wird das Verhalten der Methode, die nicht zur Veranschaulichung der Verwendung vorgesehen. Im Allgemeinen werden die Methoden der Klassen von Codezugriffsberechtigungen von der Sicherheitsinfrastruktur verwendet; Sie werden in der Regel nicht in Anwendungen verwendet.  
+  
+ [!code-cpp[System.Security.Permissions.StrongNameIdentityPermission#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CPP/strongnameidentity.cpp#2)]
+ [!code-csharp[System.Security.Permissions.StrongNameIdentityPermission#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CS/strongnameidentity.cs#2)]
+ [!code-vb[System.Security.Permissions.StrongNameIdentityPermission#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/VB/strongnameidentity.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.StrongNameIdentityPermission.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den einfachen Namensteil der Identität mit starkem Namen ab oder legt diesen fest.</summary>
+        <value>Der einfache Name der Identität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Permissions.StrongNameIdentityPermission.Name%2A> Eigenschaft kann einen exakten Namen oder durch ein Platzhalterzeichen in der letzten Position geändert werden kann, sind z. B. Unternehmen.Abteilung.Datei und Unternehmen.Abteilung. * enthält gültige Namen. Wenn Sie versuchen, den <xref:System.Security.Permissions.StrongNameIdentityPermission.Name%2A> Eigenschaft auf eine leere Zeichenfolge (""), wird eine <xref:System.ArgumentException> ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Wert ist eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.NotSupportedException">Der Eigenschaftswert kann nicht abgerufen werden, da er eine mehrdeutige Identität aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicKey">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.StrongNamePublicKeyBlob PublicKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Permissions.StrongNamePublicKeyBlob PublicKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.StrongNameIdentityPermission.PublicKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StrongNamePublicKeyBlob</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das öffentliche Schlüssel-BLOB ab, das den Namespace für die Identität mit starkem Namen definiert, oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Security.Permissions.StrongNamePublicKeyBlob" /> , enthält den öffentlichen Schlüssel der Identität oder <see langword="null" /> , wenn kein Schlüssel vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Eigenschaftswert ist festgelegt, um <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Der Eigenschaftswert kann nicht abgerufen werden, da er eine mehrdeutige Identität aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.StrongNameIdentityPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine XML-Codierung der Berechtigung und ihres aktuellen Zustands.</summary>
+        <returns>Eine XML-Codierung der Berechtigung, einschließlich aller Zustandsinformationen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in der Regel nicht vom Anwendungscode verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Verhalten der <xref:System.Security.Permissions.StrongNameIdentityPermission.ToXml%2A> Methode.  
+  
+> [!NOTE]
+>  Im Codebeispiel wird das Verhalten der Methode, die nicht zur Veranschaulichung der Verwendung vorgesehen. Im Allgemeinen werden die Methoden der Klassen von Codezugriffsberechtigungen von der Sicherheitsinfrastruktur verwendet; Sie werden in der Regel nicht in Anwendungen verwendet.  
+  
+ [!code-cpp[System.Security.Permissions.StrongNameIdentityPermission#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CPP/strongnameidentity.cpp#6)]
+ [!code-csharp[System.Security.Permissions.StrongNameIdentityPermission#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CS/strongnameidentity.cs#6)]
+ [!code-vb[System.Security.Permissions.StrongNameIdentityPermission#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/VB/strongnameidentity.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.StrongNameIdentityPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung, die mit der aktuellen Berechtigung kombiniert werden soll. Sie muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Erstellt eine Berechtigung als Kombination der aktuellen und der angegebenen Berechtigung.</summary>
+        <returns>Eine neue Berechtigung, die die Kombination der aktuellen und der angegebenen Berechtigung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ergebnis eines Aufrufs von <xref:System.Security.Permissions.StrongNameIdentityPermission.Union%2A> eine Berechtigung, alle Vorgänge, die dargestellt darstellt, wird von der aktuellen Berechtigung und der angegebenen Berechtigung ist. Jede Anforderung, entweder Berechtigung durchläuft, übergibt die Union.  
+  
+ Die Union einer Berechtigung und `null` ist die Berechtigung, die nicht `null`. Die Union einer Berechtigung und eine Teilmenge der über diese Berechtigung ist die Berechtigung, die andere enthält. Eine beliebige andere Kombination führt zu einer <xref:System.ArgumentException> ausgelöste Ausnahme.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Ergebnisse der Nutzung der <xref:System.Security.Permissions.StrongNameIdentityPermission.Union%2A> -Methode nicht, wie Sie die Methode verwenden. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.StrongNameIdentityPermission> Klasse. Die beste Verwendung in diesem Beispiel wird zum Erstellen und führen Sie das gesamte Beispiel und die Ausgabe anzeigen.  
+  
+> [!NOTE]
+>  Im Codebeispiel wird das Verhalten der Methode, die nicht zur Veranschaulichung der Verwendung vorgesehen. Im Allgemeinen werden die Methoden der Klassen von Codezugriffsberechtigungen von der Sicherheitsinfrastruktur verwendet; Sie werden in der Regel nicht in Anwendungen verwendet.  
+  
+ [!code-cpp[System.Security.Permissions.StrongNameIdentityPermission#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CPP/strongnameidentity.cpp#3)]
+ [!code-csharp[System.Security.Permissions.StrongNameIdentityPermission#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/CS/strongnameidentity.cs#3)]
+ [!code-vb[System.Security.Permissions.StrongNameIdentityPermission#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.StrongNameIdentityPermission/VB/strongnameidentity.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.  
+  
+ - oder -   
+  
+ Die beiden Berechtigungen sind nicht gleich, und eine Berechtigung ist eine Teilmenge der jeweils anderen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.StrongNameIdentityPermission.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionsnummer der Identität ab oder legt sie fest.</summary>
+        <value>Die Version der Identität.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Der Eigenschaftswert kann nicht abgerufen werden, da er eine mehrdeutige Identität aufweist.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,555 @@
+<Type Name="MethodReturnMessageWrapper" FullName="System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper">
+  <TypeSignature Language="C#" Value="public class MethodReturnMessageWrapper : System.Runtime.Remoting.Messaging.InternalMessageWrapper, System.Runtime.Remoting.Messaging.IMethodReturnMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MethodReturnMessageWrapper extends System.Runtime.Remoting.Messaging.InternalMessageWrapper implements class System.Runtime.Remoting.Messaging.IMessage, class System.Runtime.Remoting.Messaging.IMethodMessage, class System.Runtime.Remoting.Messaging.IMethodReturnMessage" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.Messaging.InternalMessageWrapper</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Messaging.IMethodReturnMessage</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die <see cref="T:System.Runtime.Remoting.Messaging.IMethodReturnMessage" /> Schnittstelle zum Erstellen einer Nachricht, die als Antwort auf einen Methodenaufruf für ein Remoteobjekt fungiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper> Klasse wird von .NET Framework-Remotinginfrastruktur verwendet. Sie müssen nicht zum Erstellen einer Instanz von der <xref:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper> -Klasse direkt; verwenden Sie stattdessen die <xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage> Schnittstelle.  
+  
+ Die <xref:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper> Klasse dient als Wrapper Remotingdaten für die Übergabe zwischen Nachrichten senken. Ein Remoting-Server sendet eine <xref:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper> Nachricht an einen Client als Antwort auf eine Clientanforderung.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MethodReturnMessageWrapper (System.Runtime.Remoting.Messaging.IMethodReturnMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Remoting.Messaging.IMethodReturnMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.#ctor(System.Runtime.Remoting.Messaging.IMethodReturnMessage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMethodReturnMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Eine Meldung, die als einen ausgehenden Methodenaufruf auf einem remote-Objekt fungiert.</param>
+        <summary>Umschließt ein <see cref="T:System.Runtime.Remoting.Messaging.IMethodReturnMessage" /> zum Erstellen einer <see cref="T:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper> Klasse wird von .NET Framework-Remotinginfrastruktur verwendet. Sie müssen nicht zum Erstellen einer Instanz von der <xref:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper> -Klasse direkt; verwenden Sie stattdessen die <xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ArgCount">
+      <MemberSignature Language="C#" Value="public virtual int ArgCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ArgCount" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.ArgCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Argumenten, die an die Methode übergeben.</summary>
+        <value>Ein <see cref="T:System.Int32" /> stellt die Anzahl von Argumenten an eine Methode übergeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Args">
+      <MemberSignature Language="C#" Value="public virtual object[] Args { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] Args" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.Args" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Argumenten, die an die Methode übergeben.</summary>
+        <value>Ein Array vom Typ <see cref="T:System.Object" /> , die an eine Methode übergebenen Argumente darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public virtual Exception Exception { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme, die beim Aufruf Methode oder <see langword="null" /> , wenn die Methode keine Ausnahme ausgelöst hat.</summary>
+        <value>Die <see cref="T:System.Exception" /> während der Aufruf der Methode ausgelöst oder <see langword="null" /> , wenn die Methode keine Ausnahme ausgelöst hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetArg">
+      <MemberSignature Language="C#" Value="public virtual object GetArg (int argNum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetArg(int32 argNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.GetArg(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argNum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="argNum">Der Index des angeforderten Arguments.</param>
+        <summary>Ruft ein Methodenargument als ein Objekt am angegebenen Index ab.</summary>
+        <returns>Das Methodenargument als ein Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetArgName">
+      <MemberSignature Language="C#" Value="public virtual string GetArgName (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetArgName(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.GetArgName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des angeforderten Arguments.</param>
+        <summary>Ruft den Namen des Methodenargument an einem angegebenen Index ab.</summary>
+        <returns>Der Name des Methodenarguments.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutArg">
+      <MemberSignature Language="C#" Value="public virtual object GetOutArg (int argNum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetOutArg(int32 argNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.GetOutArg(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argNum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="argNum">Der Index des angeforderten Arguments.</param>
+        <summary>Gibt das angegebene Argument als ein <see langword="ref" /> Parameter oder eine <see langword="out" /> Parameter.</summary>
+        <returns>Das angegebene Argument gekennzeichnet, als eine <see langword="ref" /> Parameter oder eine <see langword="out" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutArgName">
+      <MemberSignature Language="C#" Value="public virtual string GetOutArgName (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetOutArgName(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.GetOutArgName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des angeforderten Arguments.</param>
+        <summary>Gibt den Namen des angegebenen Arguments als markiert ein <see langword="ref" /> Parameter oder eine <see langword="out" /> Parameter.</summary>
+        <returns>Der Name des Arguments oder <see langword="null" /> , wenn die aktuelle Methode nicht implementiert ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HasVarArgs">
+      <MemberSignature Language="C#" Value="public virtual bool HasVarArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasVarArgs" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.HasVarArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Flag, das angibt, ob die Methode eine Variable Anzahl von Argumenten akzeptieren kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Methode eine Variable Anzahl von Argumenten akzeptieren kann; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalCallContext">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Remoting.Messaging.LogicalCallContext LogicalCallContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Messaging.LogicalCallContext LogicalCallContext" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.LogicalCallContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.LogicalCallContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Runtime.Remoting.Messaging.LogicalCallContext" /> für den aktuellen Methodenaufruf.</summary>
+        <value>Die <see cref="T:System.Runtime.Remoting.Messaging.LogicalCallContext" /> für den aktuellen Methodenaufruf.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MethodBase">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodBase MethodBase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodBase MethodBase" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.MethodBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Reflection.MethodBase" /> der aufgerufenen Methode.</summary>
+        <value>Die <see cref="T:System.Reflection.MethodBase" /> der aufgerufenen Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public virtual string MethodName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der aufgerufenen Methode ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , der den Namen der aufgerufenen Methode enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MethodSignature">
+      <MemberSignature Language="C#" Value="public virtual object MethodSignature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object MethodSignature" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.MethodSignature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das die Methodensignatur enthält.</summary>
+        <value>Ein <see cref="T:System.Object" /> , die die Signatur der Methode enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OutArgCount">
+      <MemberSignature Language="C#" Value="public virtual int OutArgCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OutArgCount" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.OutArgCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Argumente im Aufruf Methode, die als markiert sind <see langword="ref" /> Parameter oder <see langword="out" /> Parameter.</summary>
+        <value>Ein <see cref="T:System.Int32" /> stellt die Anzahl der Argumente im Aufruf Methode, die als markiert sind <see langword="ref" /> Parameter oder <see langword="out" /> Parameter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OutArgs">
+      <MemberSignature Language="C#" Value="public virtual object[] OutArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] OutArgs" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.OutArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Argumenten im Aufruf Methode, die als markiert sind <see langword="ref" /> Parameter oder <see langword="out" /> Parameter.</summary>
+        <value>Ein Array vom Typ <see cref="T:System.Object" /> , die die Argumente im Aufruf Methode, die als markiert sind darstellt <see langword="ref" /> Parameter oder <see langword="out" /> Parameter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Collections.IDictionary" /> Schnittstelle, die eine Auflistung von Eigenschaften der Remotemeldung darstellt.</summary>
+        <value>Ein <see cref="T:System.Collections.IDictionary" /> Schnittstelle, die eine Auflistung von Eigenschaften der Remotemeldung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Meldung fungiert als Antwort auf einen Methodenaufruf für ein Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnValue">
+      <MemberSignature Language="C#" Value="public virtual object ReturnValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ReturnValue" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.ReturnValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Rückgabewert des Methodenaufrufs ab.</summary>
+        <value>Ein <see cref="T:System.Object" /> , das den Rückgabewert des Methodenaufrufs darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gehört zu einem Remoteobjekt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public virtual string TypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Typnamen des Remoteobjekts auf dem Aufruf der Methode erfolgt.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält den vollständigen Typnamen des Remoteobjekts auf dem Aufruf der Methode erfolgt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Uniform Resource Identifier (URI) des Remoteobjekts auf dem Aufruf der Methode erfolgt.</summary>
+        <value>Der URI von einem Remoteobjekt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,624 @@
+<Type Name="Overlapped" FullName="System.Threading.Overlapped">
+  <TypeSignature Language="C#" Value="public class Overlapped" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Overlapped extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Overlapped" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Overlapped</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine verwaltete Darstellung einer Win32- <c>OVERLAPPED</c> Struktur, einschließlich der Methoden zum Übertragen von Informationen aus einer <see cref="T:System.Threading.Overlapped" /> -Instanz, auf eine <see cref="T:System.Threading.NativeOverlapped" /> Struktur.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.Overlapped.Pack%2A> und <xref:System.Threading.Overlapped.UnsafePack%2A> Methoden übertragen Informationen aus einer <xref:System.Threading.Overlapped> -Objekt an eine <xref:System.Threading.NativeOverlapped> -Struktur, die Win32-API-Funktionen für asynchrone übergeben werden kann Datei-e/a. Die <xref:System.Threading.Overlapped.Unpack%2A> -Methode überträgt Informationen von einer <xref:System.Threading.NativeOverlapped> Struktur mit einer Instanz von der <xref:System.Threading.Overlapped> Klasse.  
+  
+ Änderungen an den Eigenschaften des ein <xref:System.Threading.Overlapped> -Objekt Auswirkungen auf die zugehörigen <xref:System.Threading.NativeOverlapped> -Struktur, und umgekehrt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Overlapped ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Overlapped.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der dem <see cref="T:System.Threading.Overlapped" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Overlapped (int offsetLo, int offsetHi, int hEvent, IAsyncResult ar);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 offsetLo, int32 offsetHi, int32 hEvent, class System.IAsyncResult ar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Overlapped.#ctor(System.Int32,System.Int32,System.Int32,System.IAsyncResult)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Not 64bit compatible.  Please use the constructor that takes IntPtr for the event handle")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="offsetLo" Type="System.Int32" />
+        <Parameter Name="offsetHi" Type="System.Int32" />
+        <Parameter Name="hEvent" Type="System.Int32" />
+        <Parameter Name="ar" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="offsetLo">Das niedrige Word der Dateiposition, an dem die Übertragung gestartet.</param>
+        <param name="offsetHi">Hohe Wort von der Dateiposition an dem die Übertragung gestartet.</param>
+        <param name="hEvent">Das Handle für ein Ereignis, das signalisiert wird, wenn der e/a-Vorgang abgeschlossen ist.</param>
+        <param name="ar">Ein Objekt, implementiert die <see cref="T:System.IAsyncResult" /> Schnittstelle, und liefert Statusinformationen für den e/a-Vorgang.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.Overlapped" /> Klasse mit der angegebenen Datei zu positionieren, die 32-Bit-Ganzzahl-Handle für ein Ereignis, das signalisiert wird, wenn der e/a-Vorgang abgeschlossen ist, und einer Schnittstelle, durch die die Ergebnisse des Vorgangs zurückgegeben werden sollen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Threading.WaitHandle.Handle%2A?displayProperty=nameWithType> Eigenschaft, um das Handle eines beliebigen verwalteten Synchronisierungsereignisses, das von abgeleitet ist die <xref:System.Threading.WaitHandle> Klasse.  
+  
+ Ihre Implementierung von <xref:System.IAsyncResult> liefert Statusinformationen für den e/a-Vorgang. Übergibt ihn dann an den Konstruktor in der `ar` Parameter, und rufen Sie sie später mit der <xref:System.Threading.Overlapped.AsyncResult%2A> Eigenschaft. Wenn für eine Rückrufmethode angegeben ist die <xref:System.Threading.Overlapped.Pack%2A> oder <xref:System.Threading.Overlapped.UnsafePack%2A> -Methode der Rückruf kann Abrufen Ihrer <xref:System.IAsyncResult> durch Entpacken der <xref:System.Threading.NativeOverlapped> Struktur, die es empfängt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Overlapped (int offsetLo, int offsetHi, IntPtr hEvent, IAsyncResult ar);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 offsetLo, int32 offsetHi, native int hEvent, class System.IAsyncResult ar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Overlapped.#ctor(System.Int32,System.Int32,System.IntPtr,System.IAsyncResult)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="offsetLo" Type="System.Int32" />
+        <Parameter Name="offsetHi" Type="System.Int32" />
+        <Parameter Name="hEvent" Type="System.IntPtr" />
+        <Parameter Name="ar" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="offsetLo">Das niedrige Word der Dateiposition, an dem die Übertragung gestartet.</param>
+        <param name="offsetHi">Hohe Wort von der Dateiposition an dem die Übertragung gestartet.</param>
+        <param name="hEvent">Das Handle für ein Ereignis, das signalisiert wird, wenn der e/a-Vorgang abgeschlossen ist.</param>
+        <param name="ar">Ein Objekt, implementiert die <see cref="T:System.IAsyncResult" /> Schnittstelle, und liefert Statusinformationen für den e/a-Vorgang.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.Overlapped" /> Klasse mit der angegebenen Datei zu positionieren, das Handle für ein Ereignis, das signalisiert wird, wenn der e/a-Vorgang abgeschlossen ist, und einer Schnittstelle, durch die die Ergebnisse des Vorgangs zurückgegeben werden sollen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um das Handle für ein verwaltetes Synchronisierungsobjekt abzurufen, die von abgeleitet ist die <xref:System.Threading.WaitHandle> Klasse, verwenden Sie die <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=nameWithType> Eigenschaft, um eine <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> Objekt, und rufen Sie dann die <xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A> Methode.  
+  
+ Ihre Implementierung von <xref:System.IAsyncResult> liefert Statusinformationen für den e/a-Vorgang. Übergibt ihn dann an den Konstruktor in der `ar` Parameter, und rufen Sie sie später mit der <xref:System.Threading.Overlapped.AsyncResult%2A> Eigenschaft. Wenn für eine Rückrufmethode angegeben ist die <xref:System.Threading.Overlapped.Pack%2A> oder <xref:System.Threading.Overlapped.UnsafePack%2A> -Methode der Rückruf kann Abrufen Ihrer <xref:System.IAsyncResult> durch Entpacken der <xref:System.Threading.NativeOverlapped> Struktur, die es empfängt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncResult">
+      <MemberSignature Language="C#" Value="public IAsyncResult AsyncResult { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IAsyncResult AsyncResult" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Overlapped.AsyncResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Objekt, das Statusinformationen für den e/a-Vorgang bereitstellt.</summary>
+        <value>Ein Objekt, das die <see cref="T:System.IAsyncResult" />-Schnittstelle implementiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventHandle">
+      <MemberSignature Language="C#" Value="public int EventHandle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Overlapped.EventHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Not 64bit compatible.  Use EventHandleIntPtr instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das 32-Bit-Ganzzahl-Handle einer Synchronisierung-Ereignis, das signalisiert wird, wenn der e/a-Vorgang abgeschlossen ist.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der das Handle des Synchronisierungsereignisses darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nicht auf 64-Bit-Plattformen verwendet werden. Verwenden Sie stattdessen die <xref:System.Threading.Overlapped.EventHandleIntPtr%2A>-Eigenschaft.  
+  
+ Verwenden der <xref:System.Threading.WaitHandle.Handle%2A?displayProperty=nameWithType> Eigenschaft, um das Handle eines beliebigen verwalteten Synchronisierungsereignisses, das von abgeleitet ist die <xref:System.Threading.WaitHandle> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventHandleIntPtr">
+      <MemberSignature Language="C#" Value="public IntPtr EventHandleIntPtr { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int EventHandleIntPtr" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Overlapped.EventHandleIntPtr" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Handle der Synchronisierung-Ereignis, das signalisiert wird, wenn der e/a-Vorgang abgeschlossen ist.</summary>
+        <value>Ein <see cref="T:System.IntPtr" /> , der das Handle des Ereignisses darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um das Handle für ein verwaltetes Synchronisierungsobjekt abzurufen, die von abgeleitet ist die <xref:System.Threading.WaitHandle> Klasse, verwenden Sie die <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=nameWithType> Eigenschaft, um eine <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> Objekt, und rufen Sie dann die <xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Free">
+      <MemberSignature Language="C#" Value="public static void Free (System.Threading.NativeOverlapped* nativeOverlappedPtr);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Free(valuetype System.Threading.NativeOverlapped* nativeOverlappedPtr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Overlapped.Free(System.Threading.NativeOverlapped*)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nativeOverlappedPtr" Type="System.Threading.NativeOverlapped*" />
+      </Parameters>
+      <Docs>
+        <param name="nativeOverlappedPtr">Ein Zeiger auf die <see cref="T:System.Threading.NativeOverlapped" /> Struktur freigegeben wird.</param>
+        <summary>Gibt den nicht verwalteten Arbeitsspeicher frei zugeordneten einer systemeigenen überlappenden Struktur der von der <see cref="Overload:System.Threading.Overlapped.Pack" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.Threading.Overlapped.Free%2A> -Methode genau einmal für jede <xref:System.Threading.NativeOverlapped> Zeiger Sie von erhalten der <xref:System.Threading.Overlapped.Pack%2A> Methode. Wenn Sie nicht Aufrufen der <xref:System.Threading.Overlapped.Free%2A> -Methode wird Speicherverlust. Beim Aufrufen der <xref:System.Threading.Overlapped.Free%2A> Methode mehr als einmal Arbeitsspeicher beschädigt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="nativeOverlappedPtr" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetHigh">
+      <MemberSignature Language="C#" Value="public int OffsetHigh { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OffsetHigh" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Overlapped.OffsetHigh" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das höherwertige Wort von der Dateiposition an dem die Übertragung gestartet. Die Dateiposition ist ein Byteoffset vom Beginn der Datei.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der das hohe Word der Dateiposition darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetLow">
+      <MemberSignature Language="C#" Value="public int OffsetLow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OffsetLow" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Overlapped.OffsetLow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das niederwertige Wort von der Dateiposition an dem die Übertragung gestartet. Die Dateiposition ist ein Byteoffset vom Beginn der Datei.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der das niedrige Word der Dateiposition darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pack">
+      <MemberSignature Language="C#" Value="public System.Threading.NativeOverlapped* Pack (System.Threading.IOCompletionCallback iocb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.NativeOverlapped* Pack(class System.Threading.IOCompletionCallback iocb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Overlapped.Pack(System.Threading.IOCompletionCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use Pack(iocb, userData) instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.NativeOverlapped*</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iocb" Type="System.Threading.IOCompletionCallback" />
+      </Parameters>
+      <Docs>
+        <param name="iocb">Ein <see cref="T:System.Threading.IOCompletionCallback" /> Delegat, der die Rückrufmethode aufgerufen, wenn der asynchrone e/a-Vorgang beendet darstellt.</param>
+        <summary>Packt die aktuelle Instanz in eine <see cref="T:System.Threading.NativeOverlapped" /> Struktur, die Angabe der Delegat, der aufgerufen werden, wenn der asynchrone e/a-Vorgang abgeschlossen ist.</summary>
+        <returns>Ein nicht verwalteter Zeiger auf eine <see cref="T:System.Threading.NativeOverlapped" />-Struktur.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der nicht verwaltete Zeiger, die von dieser Methode zurückgegebene kann für das Betriebssystem im überlappenden e/a-Vorgänge übergeben werden. Die <xref:System.Threading.NativeOverlapped> ist eine feste Struktur im physischen Speicher bis <xref:System.Threading.Overlapped.Unpack%2A> aufgerufen wird.  
+  
+> [!IMPORTANT]
+>  Der Aufrufer ist verantwortlich für den Puffer festzuhalten. Wenn die Anwendungsdomäne entladen wird, jedoch das Handle für die fixierten Puffer zerstört wird, und der Puffer wird freigegeben, sodass des e/a-Vorgangs zum Schreiben in die freigegebenen Adresse. Aus diesem Grund ist es besser, verwenden die <xref:System.Threading.Overlapped.Pack%28System.Threading.IOCompletionCallback%2CSystem.Object%29> methodenüberladung, in dem die Common Language Runtime den Puffer fixiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle <see cref="T:System.Threading.Overlapped" /> wurde bereits gepackt.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Pack">
+      <MemberSignature Language="C#" Value="public System.Threading.NativeOverlapped* Pack (System.Threading.IOCompletionCallback iocb, object userData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.NativeOverlapped* Pack(class System.Threading.IOCompletionCallback iocb, object userData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Overlapped.Pack(System.Threading.IOCompletionCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.NativeOverlapped*</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iocb" Type="System.Threading.IOCompletionCallback" />
+        <Parameter Name="userData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="iocb">Ein <see cref="T:System.Threading.IOCompletionCallback" /> Delegat, der die Rückrufmethode aufgerufen, wenn der asynchrone e/a-Vorgang beendet darstellt.</param>
+        <param name="userData">Ein Objekt oder ein Array von Objekten, das der Eingabe- oder Ausgabepuffer für den Vorgang darstellt. Jedes Objekt stellt einen Puffer, z. B. ein Array von Bytes dar.</param>
+        <summary>Packt die aktuelle Instanz in eine <see cref="T:System.Threading.NativeOverlapped" /> Struktur, die angibt, ein Delegat, der aufgerufen wird, wenn der asynchrone e/a-Vorgang abgeschlossen ist und ein verwaltetes Objekt, das als Puffer dient.</summary>
+        <returns>Ein nicht verwalteter Zeiger auf eine <see cref="T:System.Threading.NativeOverlapped" />-Struktur.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der nicht verwaltete Zeiger, die von dieser Methode zurückgegebene kann für das Betriebssystem im überlappenden e/a-Vorgänge übergeben werden. Die <xref:System.Threading.NativeOverlapped> ist eine feste Struktur im physischen Speicher bis <xref:System.Threading.Overlapped.Unpack%2A> aufgerufen wird.  
+  
+ Der bzw. die im angegebenen Puffer `userData` muss identisch mit denen übergeben, die nicht verwaltete Betriebssystem-Funktion, die asynchrone e/a ausführt.  
+  
+> [!NOTE]
+>  Die Common Language Runtime fixiert, das bzw. die im angegebenen Puffer `userData` für die Dauer des e/a-Vorgangs. Wenn die Anwendungsdomäne entladen wird, behält die Laufzeit den Arbeitsspeicher, fixiert, bis die e/a-Vorgang abgeschlossen ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle <see cref="T:System.Threading.Overlapped" /> wurde bereits gepackt.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Unpack">
+      <MemberSignature Language="C#" Value="public static System.Threading.Overlapped Unpack (System.Threading.NativeOverlapped* nativeOverlappedPtr);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Overlapped Unpack(valuetype System.Threading.NativeOverlapped* nativeOverlappedPtr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Overlapped.Unpack(System.Threading.NativeOverlapped*)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Overlapped</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nativeOverlappedPtr" Type="System.Threading.NativeOverlapped*" />
+      </Parameters>
+      <Docs>
+        <param name="nativeOverlappedPtr">Ein nicht verwalteter Zeiger auf eine <see cref="T:System.Threading.NativeOverlapped" />-Struktur.</param>
+        <summary>Entpackt die angegebene nicht verwaltete <see cref="T:System.Threading.NativeOverlapped" /> Struktur in einer verwalteten <see cref="T:System.Threading.Overlapped" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Threading.Overlapped" /> -Objekt mit Informationen über das von der systemeigenen Struktur entpackt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.NativeOverlapped> Struktur ist nicht vom physischen Speicher reserviert, bis zum Aufruf der <xref:System.Threading.Overlapped.Free%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="nativeOverlappedPtr" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafePack">
+      <MemberSignature Language="C#" Value="public System.Threading.NativeOverlapped* UnsafePack (System.Threading.IOCompletionCallback iocb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.NativeOverlapped* UnsafePack(class System.Threading.IOCompletionCallback iocb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Overlapped.UnsafePack(System.Threading.IOCompletionCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use UnsafePack(iocb, userData) instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.NativeOverlapped*</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iocb" Type="System.Threading.IOCompletionCallback" />
+      </Parameters>
+      <Docs>
+        <param name="iocb">Ein <see cref="T:System.Threading.IOCompletionCallback" /> Delegat, der die Rückrufmethode aufgerufen, wenn der asynchrone e/a-Vorgang beendet darstellt.</param>
+        <summary>Packt die aktuelle Instanz in eine <see cref="T:System.Threading.NativeOverlapped" /> Struktur, die der Delegat, der aufgerufen wird, wenn der asynchrone e/a-Vorgang abgeschlossen ist angibt. Die Aufrufliste wird nicht weitergegeben werden.</summary>
+        <returns>Ein nicht verwalteter Zeiger auf eine <see cref="T:System.Threading.NativeOverlapped" />-Struktur.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der nicht verwaltete Zeiger, die von dieser Methode zurückgegebene kann für das Betriebssystem im überlappenden e/a-Vorgänge übergeben werden. Die <xref:System.Threading.NativeOverlapped> ist eine feste Struktur im physischen Speicher bis <xref:System.Threading.Overlapped.Unpack%2A> aufgerufen wird.  
+  
+ Der Aufrufer ist verantwortlich für den Puffer festzuhalten. Wenn die Anwendungsdomäne entladen wird, jedoch das Handle für die fixierten Puffer zerstört wird, und der Puffer wird freigegeben, sodass des e/a-Vorgangs zum Schreiben in die freigegebenen Adresse. Aus diesem Grund ist es besser, verwenden die <xref:System.Threading.Overlapped.UnsafePack%28System.Threading.IOCompletionCallback%2CSystem.Object%29> methodenüberladung, in dem die Common Language Runtime den Puffer fixiert.  
+  
+> [!CAUTION]
+>  Mithilfe der <xref:System.Threading.Overlapped.UnsafePack%2A> Methode kann eine Sicherheitslücke unbeabsichtigt. Codezugriffssicherheit Basen seine berechtigungsüberprüfungen für die Berechtigungen aller Aufrufer auf dem Stapel an. Die <xref:System.Threading.Overlapped.UnsafePack%2A> Methode leitet den aufrufenden Stapel nicht weiter. Bösartiger Code kann dies zur Vermeidung von berechtigungsüberprüfungen ausgenutzt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle <see cref="T:System.Threading.Overlapped" /> wurde bereits gepackt.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafePack">
+      <MemberSignature Language="C#" Value="public System.Threading.NativeOverlapped* UnsafePack (System.Threading.IOCompletionCallback iocb, object userData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.NativeOverlapped* UnsafePack(class System.Threading.IOCompletionCallback iocb, object userData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Overlapped.UnsafePack(System.Threading.IOCompletionCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.NativeOverlapped*</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iocb" Type="System.Threading.IOCompletionCallback" />
+        <Parameter Name="userData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="iocb">Ein <see cref="T:System.Threading.IOCompletionCallback" /> Delegat, der die Rückrufmethode aufgerufen, wenn der asynchrone e/a-Vorgang beendet darstellt.</param>
+        <param name="userData">Ein Objekt oder ein Array von Objekten, das der Eingabe- oder Ausgabepuffer für den Vorgang darstellt. Jedes Objekt stellt einen Puffer, z. B. ein Array von Bytes dar.</param>
+        <summary>Packt die aktuelle Instanz in eine <see cref="T:System.Threading.NativeOverlapped" /> Struktur, die angibt, der Delegat, der aufgerufen wird, wenn der asynchrone e/a-Vorgang abgeschlossen ist und das verwaltete, das Objekt als Puffer dient. Die Aufrufliste wird nicht weitergegeben werden.</summary>
+        <returns>Ein nicht verwalteter Zeiger auf eine <see cref="T:System.Threading.NativeOverlapped" />-Struktur.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der nicht verwaltete Zeiger, die von dieser Methode zurückgegebene kann für das Betriebssystem im überlappenden e/a-Vorgänge übergeben werden. Die <xref:System.Threading.NativeOverlapped> ist eine feste Struktur im physischen Speicher bis <xref:System.Threading.Overlapped.Unpack%2A> aufgerufen wird.  
+  
+ Der bzw. die im angegebenen Puffer `userData` muss identisch mit denen übergeben, die nicht verwaltete Betriebssystem-Funktion, die asynchrone e/a ausführt.  
+  
+ Die Common Language Runtime fixiert, das bzw. die im angegebenen Puffer`userData` für die Dauer des e/a-Vorgangs. Wenn die Anwendungsdomäne entladen wird, behält die Laufzeit den Arbeitsspeicher, fixiert, bis die e/a-Vorgang abgeschlossen ist.  
+  
+> [!CAUTION]
+>  Mithilfe der <xref:System.Threading.Overlapped.UnsafePack%2A> Methode kann eine Sicherheitslücke unbeabsichtigt. Codezugriffssicherheit Basen seine berechtigungsüberprüfungen für die Berechtigungen aller Aufrufer auf dem Stapel an. Die <xref:System.Threading.Overlapped.UnsafePack%2A> Methode leitet den aufrufenden Stapel nicht weiter. Bösartiger Code kann dies zur Vermeidung von berechtigungsüberprüfungen ausgenutzt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle <see cref="T:System.Threading.Overlapped" /> ist bereits gepackt.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

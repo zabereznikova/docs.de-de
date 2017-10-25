@@ -1,0 +1,115 @@
+<Type Name="XmlUrlEditor" FullName="System.Web.UI.Design.XmlUrlEditor">
+  <TypeSignature Language="C#" Value="public class XmlUrlEditor : System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlUrlEditor extends System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.XmlUrlEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.UrlEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Benutzeroberfläche zum Auswählen einer URL, der den Speicherort einer XML-Datei angibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.XmlUrlEditor>ist eine <xref:System.Drawing.Design.UITypeEditor> , die stellt ein Dialogfeld zum Auswählen einer URL, der den Speicherort einer XML-Datei angibt.  
+  
+   
+  
+## Examples  
+ [!code-cpp[WebUITypeEditorsExample#3](~/samples/snippets/cpp/VS_Snippets_WebNet/WebUITypeEditorsExample/CPP/webcustomcontrol1.cpp#3)]
+ [!code-csharp[WebUITypeEditorsExample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebUITypeEditorsExample/CS/webcustomcontrol1.cs#3)]
+ [!code-vb[WebUITypeEditorsExample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebUITypeEditorsExample/VB/webcustomcontrol1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlUrlEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.XmlUrlEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Web.UI.Design.XmlUrlEditor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="protected override string Caption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.XmlUrlEditor.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschriftung ein, auf das Auswahldialogfeld angezeigt werden sollen.</summary>
+        <value>Die Beschriftung ein, auf das Auswahldialogfeld angezeigt werden sollen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="protected override string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.XmlUrlEditor.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Filterzeichenfolge für Dateinamen für den Editor ab. Dient zum Bestimmen der Elemente, die in der Liste der Dateien im Dialogfeld angezeigt werden.</summary>
+        <value>Eine Zeichenfolge, die Informationen im Dialogfeld verfügbaren Optionen zum Filtern von Dateien enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.XmlUrlEditor.Filter%2A> Eigenschaft gibt eine Filterzeichenfolge mit zwei Filteroptionen: eines für XML-Dateien (*.XML) und einer für alle Dateien (\*.\*).  
+  
+ Eine Filterzeichenfolge enthält eine oder mehrere Filteroptionen an. Jede Filteroption enthält eine Beschreibung des Filters, gefolgt von der senkrechte Strich (&#124;) und das Filtermuster. Die Zeichenfolgen für die verschiedenen Filteroptionen werden durch den senkrechten Strich getrennt.  
+  
+ Im folgenden ist ein Beispiel für eine Filterzeichenfolge an, die zwei Filteroptionen enthält: "`XML Files (*.xml)|*.xml|All Files (*.*)|*.*`".  
+  
+ Sie können mehrere Filtermuster in einer Filteroption angeben, durch das Filtermuster durch Semikolons trennen. Im folgenden ist ein Beispiel für eine Filterzeichenfolge an, in dem die erste Filteroption zwei Filtermuster angibt: "`Custom XML Files (*.xml;*.xlst)|*.xml;*.xlst|All Files (*.*)|*.*`".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.Design.UrlBuilderOptions Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.Design.UrlBuilderOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.XmlUrlEditor.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.UrlBuilderOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Optionen für die URL-Generator verwenden.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.UrlBuilderOptions" /> , die angibt, dass der Optionen für die URL-Generator verwenden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

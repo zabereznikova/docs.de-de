@@ -1,0 +1,136 @@
+<Type Name="GeneratedCodeAttribute" FullName="System.CodeDom.Compiler.GeneratedCodeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class GeneratedCodeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GeneratedCodeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.GeneratedCodeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Tools</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erkennt von einem Tool generierten Code. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> Klasse kann von Codeanalysetools verwendet werden, um Computer generierten Code zu identifizieren, und geben Sie eine Analyse, die basierend auf dem das Tool und die Version des Tools, die den Code generiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> -Klasse können Sie Computer generierten Code zu identifizieren.  
+  
+ [!code-cpp[System.CodeDom.Compiler.GeneratedCodeAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.codedom.compiler.generatedcodeattribute/cpp/source.cpp#1)]
+ [!code-csharp[System.CodeDom.Compiler.GeneratedCodeAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.codedom.compiler.generatedcodeattribute/cs/source.cs#1)]
+ [!code-vb[System.CodeDom.Compiler.GeneratedCodeAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.codedom.compiler.generatedcodeattribute/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeneratedCodeAttribute (string tool, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tool, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.GeneratedCodeAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tools</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tool" Type="System.String" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tool">Der Name des Tools, die den Code generiert werden soll.</param>
+        <param name="version">Die Version des Tools, die den Code generiert werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.Compiler.GeneratedCodeAttribute" /> -Klasse gibt den Namen und die Version des Tools, die den Code generiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tool">
+      <MemberSignature Language="C#" Value="public string Tool { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Tool" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.GeneratedCodeAttribute.Tool" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tools</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Tools, die den Code generiert.</summary>
+        <value>Der Name des Tools, die zum Code generiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.GeneratedCodeAttribute.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tools</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version des Tools, die den Code generiert.</summary>
+        <value>Die Version des Tools, die den Code generiert werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

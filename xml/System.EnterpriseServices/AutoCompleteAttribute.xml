@@ -1,0 +1,141 @@
+<Type Name="AutoCompleteAttribute" FullName="System.EnterpriseServices.AutoCompleteAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AutoCompleteAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AutoCompleteAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.AutoCompleteAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Kennzeichnet die attributierte Methode als eine <see langword="AutoComplete" /> Objekt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `AutoComplete` wird angegeben, muss in der COM+-Katalog nicht deaktiviert werden; Wenn in der COM+-Katalog aktiviert ist, muss er auf die Komponente angegeben werden.  
+  
+ Ruft die Transaktion automatisch <xref:System.EnterpriseServices.ContextUtil.SetComplete%2A> normalerweise dem Aufruf der Methode zurück. Wenn der Methodenaufruf eine Ausnahme auslöst, wird die Transaktion abgebrochen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.EnterpriseServices.AutoCompleteAttribute> Typ.  
+  
+ [!code-csharp[EnterpriseServicesAutoCompleteAttribute#0](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesAutoCompleteAttribute/CS/class1.cs#0)]
+ [!code-vb[EnterpriseServicesAutoCompleteAttribute#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesAutoCompleteAttribute/VB/class1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Legt die Anwendung auf <see langword="AutoComplete" />.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AutoCompleteAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.AutoCompleteAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.EnterpriseServices.AutoCompleteAttribute" /> Klasse, die angibt, dass die Anwendung automatisch aufrufen sollte <see cref="M:System.EnterpriseServices.ContextUtil.SetComplete" /> , wenn die Transaktion erfolgreich abgeschlossen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein neues <xref:System.EnterpriseServices.AutoCompleteAttribute>.  
+  
+ [!code-csharp[EnterpriseServicesAutoCompleteAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesAutoCompleteAttribute/CS/class1.cs#1)]
+ [!code-vb[EnterpriseServicesAutoCompleteAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesAutoCompleteAttribute/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AutoCompleteAttribute (bool val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.AutoCompleteAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="val" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="val">
+          <see langword="true" />So aktivieren Sie <see langword="AutoComplete" /> im COM+-Objekt; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.EnterpriseServices.AutoCompleteAttribute" /> Klasse angeben, ob COM+- <see langword="AutoComplete" /> aktiviert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angeben des Parameterwerts `false` bewirkt, dass die `AutoComplete` Attribut ignoriert werden soll.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein neues <xref:System.EnterpriseServices.AutoCompleteAttribute>.  
+  
+ [!code-csharp[EnterpriseServicesAutoCompleteAttribute#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesAutoCompleteAttribute/CS/class1.cs#2)]
+ [!code-vb[EnterpriseServicesAutoCompleteAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesAutoCompleteAttribute/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public bool Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Value" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.AutoCompleteAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, der Einstellung von der <see langword="AutoComplete" /> in COM+-Option.</summary>
+        <value>
+          <see langword="true" />Wenn <see langword="AutoComplete" /> im COM+-aktiviert ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel ruft den Wert des einem `AutoComplete` des Attributs <xref:System.EnterpriseServices.AutoCompleteAttribute.Value%2A> Eigenschaft.  
+  
+ [!code-csharp[EnterpriseServicesAutoCompleteAttribute#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesAutoCompleteAttribute/CS/class1.cs#3)]
+ [!code-vb[EnterpriseServicesAutoCompleteAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesAutoCompleteAttribute/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

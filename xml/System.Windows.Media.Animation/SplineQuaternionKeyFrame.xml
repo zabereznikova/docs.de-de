@@ -1,0 +1,247 @@
+<Type Name="SplineQuaternionKeyFrame" FullName="System.Windows.Media.Animation.SplineQuaternionKeyFrame">
+  <TypeSignature Language="C#" Value="public class SplineQuaternionKeyFrame : System.Windows.Media.Animation.QuaternionKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SplineQuaternionKeyFrame extends System.Windows.Media.Animation.QuaternionKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.SplineQuaternionKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.QuaternionKeyFrame</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine Animation über die <see cref="T:System.Windows.Media.Media3D.Quaternion" /> -Wert des vorherigen Keyframes in seine eigene <see cref="P:System.Windows.Media.Animation.QuaternionKeyFrame.Value" /> mithilfe einer Spline-Interpolation.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient als Teil einer <xref:System.Windows.Media.Animation.QuaternionKeyFrameCollection> in Verbindung mit einem <xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames> zu animierende eine <xref:System.Windows.Media.Media3D.Quaternion> Eigenschaftswert für einen Satz von Keyframes.  
+  
+ Ein Keyframe definiert einen Zeitabschnitt der <xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames> zu der er gehört. Jedem Keyframe hat ein Ziel <xref:System.Windows.Media.Animation.QuaternionKeyFrame.Value%2A> und ein <xref:System.Windows.Media.Animation.QuaternionKeyFrame.KeyTime%2A>. Die <xref:System.Windows.Media.Animation.QuaternionKeyFrame.KeyTime%2A> gibt an, der Zeitpunkt des Keyframes <xref:System.Windows.Media.Animation.QuaternionKeyFrame.Value%2A> erreicht werden soll. Ein Keyframe erstellt eine Animation über den Zielwert des vorherigen Keyframes auf einem eigenen Zielwert aus. Es beginnt, wenn die vorherige Keyframes beendet und beendet, wenn eine eigene Schlüsselzeit erreicht ist.  
+  
+ Spline-Keyframes wie <xref:System.Windows.Media.Animation.SplineQuaternionKeyFrame> erstellen Sie einen variablen Übergang zwischen Werten, die vom bestimmt die <xref:System.Windows.Media.Animation.SplineQuaternionKeyFrame.KeySpline%2A> Eigenschaft. Spline-Interpolation kann verwendet werden, um realistischere Auswirkungen "real-World" z. B. Beschleunigung und Verzögerung zu erzielen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SplineQuaternionKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SplineQuaternionKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SplineQuaternionKeyFrame" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SplineQuaternionKeyFrame (System.Windows.Media.Media3D.Quaternion value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Media3D.Quaternion value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SplineQuaternionKeyFrame.#ctor(System.Windows.Media.Media3D.Quaternion)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Media3D.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Endwert (auch als "Zielwert" bezeichnet) für den Keyframe.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SplineQuaternionKeyFrame" />-Klasse mit dem angegebenen Endwert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SplineQuaternionKeyFrame (System.Windows.Media.Media3D.Quaternion value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Media3D.Quaternion value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SplineQuaternionKeyFrame.#ctor(System.Windows.Media.Media3D.Quaternion,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Media3D.Quaternion" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Endwert (auch als "Zielwert" bezeichnet) für den Keyframe.</param>
+        <param name="keyTime">Die Schlüsselzeit für den Keyframe. Die Schlüsselzeit bestimmt, wann der Zielwert erreicht wird, was auch dem Ende des Keyframes entspricht.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SplineQuaternionKeyFrame" />-Klasse mit dem angegebenen Endwert und der Schlüsselzeit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SplineQuaternionKeyFrame (System.Windows.Media.Media3D.Quaternion value, System.Windows.Media.Animation.KeyTime keyTime, System.Windows.Media.Animation.KeySpline keySpline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Media3D.Quaternion value, valuetype System.Windows.Media.Animation.KeyTime keyTime, class System.Windows.Media.Animation.KeySpline keySpline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SplineQuaternionKeyFrame.#ctor(System.Windows.Media.Media3D.Quaternion,System.Windows.Media.Animation.KeyTime,System.Windows.Media.Animation.KeySpline)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Media3D.Quaternion" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+        <Parameter Name="keySpline" Type="System.Windows.Media.Animation.KeySpline" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Endwert (auch als „Zielwert“ bezeichnet) für den Keyframe.</param>
+        <param name="keyTime">Die Schlüsselzeit für den Keyframe. Die Schlüsselzeit bestimmt, wann der Zielwert erreicht wird, was auch dem Ende des Keyframes entspricht.</param>
+        <param name="keySpline">Ein <see cref="T:System.Windows.Media.Animation.KeySpline" /> für den Keyframe. Die <see cref="T:System.Windows.Media.Animation.KeySpline" /> stellt eine Bézierkurve, die Animationsfortschritt des Keyframes definiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Animation.SplineQuaternionKeyFrame" /> -Klasse mit dem angegebenen Endwert, Schlüsselzeit und <see cref="T:System.Windows.Media.Animation.KeySpline" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SplineQuaternionKeyFrame.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz von <see cref="T:System.Windows.Media.Animation.SplineQuaternionKeyFrame" />.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Media3D.Quaternion InterpolateValueCore (System.Windows.Media.Media3D.Quaternion baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Media.Media3D.Quaternion InterpolateValueCore(valuetype System.Windows.Media.Media3D.Quaternion baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SplineQuaternionKeyFrame.InterpolateValueCore(System.Windows.Media.Media3D.Quaternion,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Windows.Media.Media3D.Quaternion" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">Der Wert, von dem animiert werden soll.</param>
+        <param name="keyFrameProgress">Ein Wert von 0,0 bis 1,0, der den Prozentsatz der verstrichenen Zeit für diesen Keyframe angibt.</param>
+        <summary>Interpoliert, in einer Spline-Interpolation zwischen dem vorherigen Keyframewert und dem Wert des aktuellen Keyframes, mithilfe des angegebenen Fortschrittsinkrements.</summary>
+        <returns>Der Ausgabewert dieses Keyframes unter Verwendung des angegebenen Basiswerts und Fortschritts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySpline">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.KeySpline KeySpline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.KeySpline KeySpline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.SplineQuaternionKeyFrame.KeySpline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeySpline</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die beiden Steuerpunkte ab, die den Animationsfortschritt für diesen Keyframe definieren, oder legt diese fest.</summary>
+        <value>Die beiden Steuerpunkte, die die kubische Bezier-Kurve angeben, die den Fortschritt des Keyframes definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu verstehen, wie eine <xref:System.Windows.Media.Animation.SplineQuaternionKeyFrame.KeySpline%2A> funktioniert, ist es hilfreich zu verstehen, kubische Bézier-Kurven. Eine kubische Bézierkurve wird durch einen Anfangspunkt, einen Endpunkt und zwei Kontrollpunkte definiert. Die beiden Koordinaten der <xref:System.Windows.Media.Animation.SplineQuaternionKeyFrame.KeySpline%2A> die beiden Steuerpunkte definieren. Beim Beschreiben von Key Splines ist immer der Ausgangspunkt der Bézier-Kurve 0 und der Endpunkt ist immer 1, weshalb Sie nur die beiden Steuerpunkte definieren. Die resultierende Kurve gibt an, wie eine Animation interpoliert ist, während ein Zeitsegment; die Kurve darstellt, also die Änderungsrate in die Animation Target-Attribut über Zeitsegments an. Wenn Sie die Beziehung zwischen Animationsfortschritt und eine Bézier-Kurve besser sehen zu können, finden Sie unter [Key Spline Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160011).  
+  
+<a name="dependencyPropertyInfo_KeySpline"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.SplineQuaternionKeyFrame.KeySplineProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySplineProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty KeySplineProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty KeySplineProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SplineQuaternionKeyFrame.KeySplineProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.SplineQuaternionKeyFrame.KeySpline" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseShortestPath">
+      <MemberSignature Language="C#" Value="public bool UseShortestPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseShortestPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.SplineQuaternionKeyFrame.UseShortestPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Animation sphärischen, linearen Interpolation verwendet, um den kürzesten Bogen zwischen Positionen zu berechnen.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die Animation die sphärische, lineare Interpolation verwendet, um den kürzesten Bogen zwischen Positionen zu berechnen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_UseShortestPath"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.SplineQuaternionKeyFrame.UseShortestPathProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseShortestPathProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty UseShortestPathProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty UseShortestPathProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SplineQuaternionKeyFrame.UseShortestPathProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.SplineQuaternionKeyFrame.UseShortestPath" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

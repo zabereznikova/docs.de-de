@@ -1,0 +1,279 @@
+<Type Name="AtomicComposition" FullName="System.ComponentModel.Composition.Hosting.AtomicComposition">
+  <TypeSignature Language="C#" Value="public class AtomicComposition : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AtomicComposition extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Hosting.AtomicComposition" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen einzelnen Kompositionsvorgang für transaktionale Komposition dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AtomicComposition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AtomicComposition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Composition.Hosting.AtomicComposition" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AtomicComposition (System.ComponentModel.Composition.Hosting.AtomicComposition outerAtomicComposition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Composition.Hosting.AtomicComposition outerAtomicComposition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AtomicComposition.#ctor(System.ComponentModel.Composition.Hosting.AtomicComposition)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="outerAtomicComposition" Type="System.ComponentModel.Composition.Hosting.AtomicComposition" />
+      </Parameters>
+      <Docs>
+        <param name="outerAtomicComposition">Das übergeordnete Element dieses Kompositionsvorgangs.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.AtomicComposition" /> Klasse mit dem angegebenen übergeordneten <see cref="T:System.ComponentModel.Composition.Hosting.AtomicComposition" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCompleteAction">
+      <MemberSignature Language="C#" Value="public void AddCompleteAction (Action completeAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCompleteAction(class System.Action completeAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AtomicComposition.AddCompleteAction(System.Action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="completeAction" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="completeAction">Die auszuführende Aktion.</param>
+        <summary>Fügt eine Aktion, die ausgeführt werden, wenn der gesamte Kompositionsvorgang erfolgreich abgeschlossen wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRevertAction">
+      <MemberSignature Language="C#" Value="public void AddRevertAction (Action revertAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRevertAction(class System.Action revertAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AtomicComposition.AddRevertAction(System.Action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="revertAction" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="revertAction">Die auszuführende Aktion.</param>
+        <summary>Fügt eine Aktion, die ausgeführt werden, wenn der gesamten Kompositionsvorgang fehlschlägt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public void Complete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Complete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AtomicComposition.Complete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert diesen Kompositionsvorgang als abgeschlossen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese <xref:System.ComponentModel.Composition.Hosting.AtomicComposition> ist geschachtelt, Abschlussaktionen werden nicht ausgeführt werden, bis der übergeordnete Kompositionsvorgang auch abgeschlossen wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AtomicComposition.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle Ressourcen, die von der aktuellen Instanz von verwendet die <see cref="T:System.ComponentModel.Composition.Hosting.AtomicComposition" /> Klasse, und diese Kompositionsvorgang als fehlerhaft markieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie `Dispose` auf, wenn Sie <xref:System.ComponentModel.Composition.Hosting.AtomicComposition> nicht mehr benötigen. Die `Dispose`-Methode bewirkt, dass <xref:System.ComponentModel.Composition.Hosting.AtomicComposition> nicht mehr verwendet werden kann. Nach dem Aufruf `Dispose`, müssen Sie alle Verweise auf Freigeben der <xref:System.ComponentModel.Composition.Hosting.AtomicComposition> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.ComponentModel.Composition.Hosting.AtomicComposition> belegt wurde.  
+  
+ Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer `Dispose` auf, bevor Sie den letzten Verweis auf das <xref:System.ComponentModel.Composition.Hosting.AtomicComposition> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.ComponentModel.Composition.Hosting.AtomicComposition>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AtomicComposition.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.ComponentModel.Composition.Hosting.AtomicComposition" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValue(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AtomicComposition.SetValue(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel zu speichern.</param>
+        <param name="value">Der Wert zu speichern.</param>
+        <summary>Speichert ein Schlüssel-Wert-Paar in der Transaktion um vorläufige Status nachzuverfolgen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetValue&lt;T&gt; (object key, out T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetValue&lt;T&gt;(object key, [out] !!T&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AtomicComposition.TryGetValue``1(System.Object,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Werts abgerufen werden sollen.</typeparam>
+        <param name="key">Der Schlüssel zum Abrufen von aus.</param>
+        <param name="value">Der abgerufene Wert.</param>
+        <summary>Ruft einen Wert gespeichert werden, indem Sie die <see cref="M:System.ComponentModel.Composition.Hosting.AtomicComposition.SetValue(System.Object,System.Object)" /> Methode.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert erfolgreich abgerufen wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetValue&lt;T&gt; (object key, bool localAtomicCompositionOnly, out T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetValue&lt;T&gt;(object key, bool localAtomicCompositionOnly, [out] !!T&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AtomicComposition.TryGetValue``1(System.Object,System.Boolean,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="localAtomicCompositionOnly" Type="System.Boolean" />
+        <Parameter Name="value" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Werts abgerufen werden sollen.</typeparam>
+        <param name="key">Der Schlüssel zum Abrufen von aus.</param>
+        <param name="localAtomicCompositionOnly">
+          <see langword="true" />um übergeordnete Transaktionen auszuschließen; andernfalls <see langword="false" />.</param>
+        <param name="value">Der abgerufene Wert.</param>
+        <summary>Ruft einen Wert gespeichert werden, indem Sie die <see cref="M:System.ComponentModel.Composition.Hosting.AtomicComposition.SetValue(System.Object,System.Object)" /> Methode, mit der Option nicht nach übergeordneten Transaktionen zu suchen.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert erfolgreich abgerufen wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

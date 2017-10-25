@@ -1,0 +1,155 @@
+<Type Name="WebPartAuthorizationEventArgs" FullName="System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs">
+  <TypeSignature Language="C#" Value="public class WebPartAuthorizationEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartAuthorizationEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.AuthorizeWebPart" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.AuthorizeWebPart> Ereignis tritt auf, bevor Sie eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement zu einer Seite hinzugefügt wird. Es gibt eine Reihe von allgemeine Szenarien, in denen ein Steuerelement zu einer Seite hinzugefügt werden kann. Eine vollständige Beschreibung dieser finden Sie im Abschnitt "Hinweise" der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.IsAuthorized%2A?displayProperty=nameWithType> Methode.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs> Klasse bietet Zugriff auf die Eigenschaften des Webparts-Steuerelements auf der Seite hinzugefügt wird. Wenn ein Steuerelement hinzugefügt wird, muss überprüft werden, finden, ob die <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> Eigenschaft festgelegt wurde, und wenn dies der Fall ist, gibt an, ob das Steuerelement ist autorisiert, auf der Seite hinzugefügt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartAuthorizationEventArgs (Type type, string path, string authorizationFilter, bool isShared);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string path, string authorizationFilter, bool isShared) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.#ctor(System.Type,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="authorizationFilter" Type="System.String" />
+        <Parameter Name="isShared" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> des Steuerelements für die Autorisierung überprüft wird.</param>
+        <param name="path">Der relative Anwendungspfad zur Quelldatei für das Steuerelement autorisiert wird, wenn das Steuerelement ein benutzerdefiniertes Steuerelement ist.</param>
+        <param name="authorizationFilter">Ein beliebiger Zeichenfolgenwert zugewiesen der <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement, für die Autorisierung, ob ein Steuerelement zu einer Seite hinzugefügt werden kann.</param>
+        <param name="isShared">Gibt an, ob das Steuerelement, das überprüft wird, für die Autorisierung ein freigegebenes Steuerelement ist, was bedeutet, dass es für viele oder alle Benutzer der Anwendung angezeigt wird und die zugehörige <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.IsShared" /> Eigenschaftswert festgelegt ist, um <see langword="true" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizationFilter">
+      <MemberSignature Language="C#" Value="public string AuthorizationFilter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthorizationFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.AuthorizationFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeichenfolgenwert zugewiesen ab der <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter" /> Eigenschaft ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement, für die Autorisierung, ob ein Steuerelement zu einer Seite hinzugefügt werden kann.</summary>
+        <value>Ein <see cref="T:System.String" /> zum bestimmen, ob ein Steuerelement autorisiert ist, eine Seite hinzugefügt werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuthorized">
+      <MemberSignature Language="C#" Value="public bool IsAuthorized { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthorized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.IsAuthorized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert, der angibt, ob ein Steuerelement-Webparts zu einer Seite hinzugefügt werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement-Webparts auf der Seite hinzugefügt werden kann; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsShared">
+      <MemberSignature Language="C#" Value="public bool IsShared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsShared" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.IsShared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Webparts-Steuerelement für alle Benutzer einer Webparts-Seite angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Webparts-Steuerelement für alle Benutzer der Seite sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein freigegebenes Webparts-Steuerelement ist für alle Benutzer einer Webseite sichtbar. Das Gegenteil eines freigegebenen Steuerelements ist ein Steuerelement pro Benutzer, die spezifisch und wird nur für den Benutzer, der hinzugefügt, die Steuern auf der Seite angezeigt.  
+  
+ Wenn ein dynamisches Steuerelement hinzugefügt wird, während ein Benutzer die Seite im freigegebenen Personalisierungsbereich anzeigt, wird das Steuerelement freigegeben werden. Wenn das Steuerelement hinzugefügt wird, während der Benutzer Benutzer Personalisierungsbereich, wird die <xref:System.Web.UI.WebControls.WebParts.WebPart.IsShared%2A> Eigenschaft-Wert für dieses Steuerelement `false`.  
+  
+ Weitere Informationen zu freigegebenen und Benutzersteuerelemente, finden Sie unter [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den relativen Anwendungspfad zur Quelldatei für das Steuerelement autorisiert wird, ab, wenn das Steuerelement ein benutzerdefiniertes Steuerelement ist.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den relativen Pfad enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> des Webparts-Steuerelements für die Autorisierung überprüft wird.</summary>
+        <value>Die <see cref="T:System.Type" /> des Steuerelements für die Autorisierung überprüft wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

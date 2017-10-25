@@ -1,0 +1,471 @@
+<Type Name="RelativeSource" FullName="System.Windows.Data.RelativeSource">
+  <TypeSignature Language="C#" Value="public class RelativeSource : System.Windows.Markup.MarkupExtension, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RelativeSource extends System.Windows.Markup.MarkupExtension implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.RelativeSource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Windows.Data.RelativeSource))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert eine Markuperweiterung, die den Speicherort der Bindungsquelle relativ zur Position des Bindungsziels beschreibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer der Methoden an die Bindungsquelle ist die Verwendung der <xref:System.Windows.Data.Binding.RelativeSource%2A?displayProperty=nameWithType> Eigenschaft. Dies ist der Eigenschaftentyp dieser Eigenschaft. <xref:System.Windows.Data.RelativeSource>ist gleichzeitig eine Implementierung der Markuperweiterung und ein Datenobjekt. Wenn die Erweiterung zurückgibt, selbst (siehe <xref:System.Windows.Data.RelativeSource.ProvideValue%2A>), die relevante Informationen in den Daten enthalten ist. Der Hauptzweck der Markuperweiterung ist, können Sie eine Variable Argument Konstruktorsyntax in Attributform, zulassen, damit die <xref:System.Windows.Data.RelativeSourceMode.FindAncestor> Modus kann in die zwei zusätzlichen Argumente für den übergeordneten Typ und die Ebene, die die anderen Modi nicht erfordern Inline definiert werden.  
+  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [RelativeSource MarkupExtension](~/docs/framework/wpf/advanced/relativesource-markupextension.md).  
+  
+<a name="xamlTextUsage_RelativeSource"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Auslösen einer Formatvorlage, die erstellt eine <xref:System.Windows.Controls.ToolTip> besagt, dass eine Validierungsfehlermeldung angezeigt. Mithilfe der <xref:System.Windows.Data.Binding.RelativeSource%2A> -Eigenschaft den Wert der Setter-Methode bindet, auf den Fehler-Inhalt des aktuellen <xref:System.Windows.Controls.TextBox> (die <xref:System.Windows.Controls.TextBox> mit dem Stil). Weitere Informationen zu diesem Beispiel finden Sie unter [Vorgehensweise: Implementieren Binding Validation](~/docs/framework/wpf/data/how-to-implement-binding-validation.md).  
+  
+ [!code-xaml[BindValidation#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
+  
+ Das folgende Beispiel zeigt die <xref:System.Windows.Style> -Definition eines benutzerdefinierten Steuerelements bezeichnet `NumericUpDown`. Die <xref:System.Windows.Controls.TextBlock.Text%2A> Eigenschaft von der <xref:System.Windows.Controls.TextBlock> gebunden ist die `Value` des Objekts, das die `TemplatedParent`, also die `NumericUpDown` steuern, die von diesem <xref:System.Windows.Style> in diesem Fall auf angewendet wird.  
+  
+ [!code-xaml[CustomControlNumericUpDown#RelativeSource](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/themes/generic.xaml#relativesource)]  
+  
+ Das vollständige Beispiel finden Sie unter [benutzerdefiniertes NumericUpDown-Steuerelement mit Unterstützung von Design und Automatisierung](http://go.microsoft.com/fwlink/?LinkID=160025).  
+  
+ Die folgenden gibt die Sekunde zurück <xref:System.Windows.Controls.ItemsControl> gefunden, die auf den nach oben zeigende Target-Element der Bindung ab.  
+  
+ [!code-csharp[BindConversion#RelativeSource](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#relativesource)]
+ [!code-vb[BindConversion#RelativeSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#relativesource)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RelativeSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.RelativeSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Data.RelativeSource" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RelativeSource (System.Windows.Data.RelativeSourceMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Data.RelativeSourceMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.RelativeSource.#ctor(System.Windows.Data.RelativeSourceMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Windows.Data.RelativeSourceMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Einer der <see cref="T:System.Windows.Data.RelativeSourceMode" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Data.RelativeSource" /> Klasse mit einem anfänglichen Modus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RelativeSource (System.Windows.Data.RelativeSourceMode mode, Type ancestorType, int ancestorLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Data.RelativeSourceMode mode, class System.Type ancestorType, int32 ancestorLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.RelativeSource.#ctor(System.Windows.Data.RelativeSourceMode,System.Type,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Windows.Data.RelativeSourceMode" />
+        <Parameter Name="ancestorType" Type="System.Type" />
+        <Parameter Name="ancestorLevel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Einer der <see cref="T:System.Windows.Data.RelativeSourceMode" />-Werte. Für diese Signatur relevant, Dies dürfte <see cref="F:System.Windows.Data.RelativeSourceMode.FindAncestor" />.</param>
+        <param name="ancestorType">Die <see cref="T:System.Type" /> des übergeordneten Elements gesucht.</param>
+        <param name="ancestorLevel">Die Ordnungsposition der gewünschten übergeordneten zwischen aller Vorgänger eines angegebenen Typs.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Data.RelativeSource" /> Klasse mit einem anfänglichen Modus und zusätzliche Qualifizierer, die für die Suche nach der gewünschten relativen Quelle die Struktur durchlaufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `ancestorType`und `ancestorLevel` sind Sie nicht relevant, wenn Sie als Parameter für eine `mode` außer <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>. Verwenden Sie diese Signatur nicht für die anderen <xref:System.Windows.Data.RelativeSourceMode> Werte.  
+  
+   
+  
+## Examples  
+ Die folgenden gibt die Sekunde zurück <xref:System.Windows.Controls.ItemsControl> gefunden, die auf den nach oben zeigende Target-Element der Bindung ab.  
+  
+ [!code-csharp[BindConversion#RelativeSource](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#relativesource)]
+ [!code-vb[BindConversion#RelativeSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#relativesource)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AncestorLevel">
+      <MemberSignature Language="C#" Value="public int AncestorLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AncestorLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.RelativeSource.AncestorLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ebene des übergeordneten Elements, im <see cref="F:System.Windows.Data.RelativeSourceMode.FindAncestor" /> Modus. Verwenden Sie 1, um die Ebene anzugeben, die dem Bindungszielelement am nächsten ist.</summary>
+        <value>Die Vorgängerebene. Verwenden Sie 1, um die Ebene anzugeben, die dem Bindungszielelement am nächsten ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Data.RelativeSource.Mode%2A> Eigenschaft nicht explizit festgelegt, Festlegen der <xref:System.Windows.Data.RelativeSource.AncestorType%2A> oder die <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> Eigenschaft wird implizit die <xref:System.Windows.Data.RelativeSource.Mode%2A> Eigenschaftswert an <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>.  
+  
+<a name="xamlTextUsage_AncestorLevel"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [RelativeSource MarkupExtension](~/docs/framework/wpf/advanced/relativesource-markupextension.md).  
+  
+   
+  
+## Examples  
+ Die folgenden gibt die Sekunde zurück <xref:System.Windows.Controls.ItemsControl> gefunden, die auf den nach oben zeigende Target-Element der Bindung ab.  
+  
+ [!code-csharp[BindConversion#RelativeSource](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#relativesource)]
+ [!code-vb[BindConversion#RelativeSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#relativesource)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AncestorType">
+      <MemberSignature Language="C#" Value="public Type AncestorType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AncestorType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.RelativeSource.AncestorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des übergeordneten Elements zu suchende fest.</summary>
+        <value>Der Typ des übergeordneten Elements. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Data.RelativeSource.Mode%2A> Eigenschaft nicht explizit festgelegt, Festlegen der <xref:System.Windows.Data.RelativeSource.AncestorType%2A> oder die <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> Eigenschaft wird implizit die <xref:System.Windows.Data.RelativeSource.Mode%2A> Eigenschaftswert an <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>.  
+  
+<a name="xamlTextUsage_AncestorType"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [RelativeSource MarkupExtension](~/docs/framework/wpf/advanced/relativesource-markupextension.md).  
+  
+   
+  
+## Examples  
+ Die folgenden gibt die Sekunde zurück <xref:System.Windows.Controls.ItemsControl> gefunden, die auf den nach oben zeigende Target-Element der Bindung ab.  
+  
+ [!code-csharp[BindConversion#RelativeSource](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#relativesource)]
+ [!code-vb[BindConversion#RelativeSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#relativesource)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Windows.Data.RelativeSource" /> befindet sich nicht in der <see cref="F:System.Windows.Data.RelativeSourceMode.FindAncestor" /> Modus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.RelativeSourceMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Data.RelativeSourceMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.RelativeSource.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.ConstructorArgument("mode")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.RelativeSourceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Data.RelativeSourceMode" /> -Wert, der den Speicherort der Bindungsquelle relativ zur Position des Bindungsziels beschreibt.</summary>
+        <value>Einer der <see cref="T:System.Windows.Data.RelativeSourceMode" />-Werte. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist schreibgeschützt und nach der Initialisierung. Wenn diese Eigenschaft nicht explizit festgelegt ist, wird durch Festlegen der <xref:System.Windows.Data.RelativeSource.AncestorType%2A> oder <xref:System.Windows.Data.RelativeSource.AncestorType%2A> und <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> Eigenschaften implizit den Wert dieser Eigenschaft auf <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>.  
+  
+<a name="xamlTextUsage_Mode"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [RelativeSource MarkupExtension](~/docs/framework/wpf/advanced/relativesource-markupextension.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Diese Eigenschaft ist nach der Initialisierung unveränderlich. Anstatt zu ändern, die <see cref="P:System.Windows.Data.RelativeSource.Mode" /> für diese Instanz, erstellen Sie ein neues <see cref="T:System.Windows.Data.RelativeSource" /> oder eine andere statische Instanz verwenden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousData">
+      <MemberSignature Language="C#" Value="public static System.Windows.Data.RelativeSource PreviousData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Data.RelativeSource PreviousData" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.RelativeSource.PreviousData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.RelativeSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen statischen Wert ab, das Zurückgeben einer <see cref="T:System.Windows.Data.RelativeSource" /> dafür erstellt die <see cref="F:System.Windows.Data.RelativeSourceMode.PreviousData" /> Modus.</summary>
+        <value>Eine statische <see cref="T:System.Windows.Data.RelativeSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Drei der vier <xref:System.Windows.Data.RelativeSourceMode> Werte <xref:System.Windows.Data.RelativeSourceMode.PreviousData>, <xref:System.Windows.Data.RelativeSourceMode.Self>, oder <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>, erzeugen kann eine <xref:System.Windows.Data.RelativeSource> vollständig statische, die keine eindeutigen privaten Werte enthält. Alle Vorkommen der statischen Eigenschaft können es sich um dasselbe Objekt Dadurch entfällt die Notwendigkeit, separate Objekte für jede Verwendung zu reservieren freigeben. Mithilfe der statischen Eigenschaft aus diesem Grund wird die arbeitsspeicherauslastung reduziert.  
+  
+<a name="xamlTextUsage_PreviousData"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [RelativeSource MarkupExtension](~/docs/framework/wpf/advanced/relativesource-markupextension.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.RelativeSource.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein Objekt, das Dienste für die Markuperweiterung bereitstellen kann. Dieser Parameter kann in dieser Implementierung sein <see langword="null" />.</param>
+        <summary>Gibt ein Objekt, das als Wert auf das Zielobjekt-Eigenschaft für diese Markuperweiterung festgelegt werden soll. Für <see cref="T:System.Windows.Data.RelativeSource" />, dies ist eine andere <see cref="T:System.Windows.Data.RelativeSource" />, verwenden die entsprechende Quelle für den angegebenen Modus.</summary>
+        <returns>Eine andere <see cref="T:System.Windows.Data.RelativeSource" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Data.RelativeSource>ist gleichzeitig eine Implementierung der Markuperweiterung und ein Datenobjekt. Wenn die Erweiterung selbst zurückgegeben wird, ist die relevante Informationen in den Daten enthalten. Der Hauptzweck der Markuperweiterung ist, um eine Variable Argument Konstruktorsyntax in Attributform zuzulassen, damit die <xref:System.Windows.Data.RelativeSourceMode.FindAncestor> Modus kann in Inline definiert, die zwei zusätzlichen Argumente für den übergeordneten Typ und die Ebene, die die anderen Modi nicht erfordern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Self">
+      <MemberSignature Language="C#" Value="public static System.Windows.Data.RelativeSource Self { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Data.RelativeSource Self" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.RelativeSource.Self" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.RelativeSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen statischen Wert ab, das Zurückgeben einer <see cref="T:System.Windows.Data.RelativeSource" /> dafür erstellt die <see cref="F:System.Windows.Data.RelativeSourceMode.Self" /> Modus.</summary>
+        <value>Eine statische <see cref="T:System.Windows.Data.RelativeSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Drei der vier <xref:System.Windows.Data.RelativeSourceMode> Werte <xref:System.Windows.Data.RelativeSourceMode.PreviousData>, <xref:System.Windows.Data.RelativeSourceMode.Self>, oder <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>, erzeugen kann eine <xref:System.Windows.Data.RelativeSource> vollständig statische, die keine eindeutigen privaten Werte enthält. Alle Vorkommen der statischen Eigenschaft können es sich um dasselbe Objekt Dadurch entfällt die Notwendigkeit, separate Objekte für jede Verwendung zu reservieren freigeben. Mithilfe der statischen Eigenschaft aus diesem Grund wird die arbeitsspeicherauslastung reduziert.  
+  
+<a name="xamlTextUsage_Self"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [RelativeSource MarkupExtension](~/docs/framework/wpf/advanced/relativesource-markupextension.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Auslösen einer Formatvorlage, die erstellt eine <xref:System.Windows.Controls.ToolTip> besagt, dass eine Validierungsfehlermeldung angezeigt. Der Wert der Setter-Methode bindet, auf den Fehler-Inhalt des aktuellen <xref:System.Windows.Controls.TextBox> (der <xref:System.Windows.Controls.TextBox> mit dem Stil) mit der <xref:System.Windows.Data.Binding.RelativeSource%2A> Eigenschaft. Finden Sie unter [How to: Implement Binding Validation](~/docs/framework/wpf/data/how-to-implement-binding-validation.md) für Weitere Informationen zu diesem Beispiel.  
+  
+ [!code-xaml[BindValidation#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeAncestorLevel">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeAncestorLevel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeAncestorLevel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.RelativeSource.ShouldSerializeAncestorLevel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:System.Windows.Data.RelativeSource.AncestorLevel" />-Eigenschaft beibehalten werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der Eigenschaftswert geändert wurde und nicht mehr dem Standardwert entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `ShouldSerialize` Methode wird bereitgestellt, da die <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> Eigenschaft verfügt nicht über einen einfachen Standardwert. Diese Methode gibt an, ob die-Eigenschaft ihren Standardwert geändert hat. Diese Methode wird in der Regel aufgerufen, wenn Sie entweder einen Designer für das Entwickeln der <xref:System.Windows.Data.RelativeSource> oder entwickeln eine eigene Steuerelement einbinden der <xref:System.Windows.Data.RelativeSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeAncestorType">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeAncestorType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeAncestorType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.RelativeSource.ShouldSerializeAncestorType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:System.Windows.Data.RelativeSource.AncestorType" />-Eigenschaft beibehalten werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der Eigenschaftswert geändert wurde und nicht mehr dem Standardwert entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `ShouldSerialize` Methode wird bereitgestellt, da die <xref:System.Windows.Data.RelativeSource.AncestorType%2A> Eigenschaft verfügt nicht über einen einfachen Standardwert. Diese Methode gibt an, ob die-Eigenschaft ihren Standardwert geändert hat. Diese Methode wird in der Regel aufgerufen, wenn Sie entweder einen Designer für das Entwickeln der <xref:System.Windows.Data.RelativeSource> oder entwickeln eine eigene Steuerelement einbinden der <xref:System.Windows.Data.RelativeSource>.  
+  
+ Weitere Informationen finden Sie unter [Definieren von Standardwerten mit der ShouldSerialize-Methode und die Methoden zurücksetzen](~/docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.BeginInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.RelativeSource.System#ComponentModel#ISupportInitialize#BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.EndInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.RelativeSource.System#ComponentModel#ISupportInitialize#EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplatedParent">
+      <MemberSignature Language="C#" Value="public static System.Windows.Data.RelativeSource TemplatedParent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Data.RelativeSource TemplatedParent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.RelativeSource.TemplatedParent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.RelativeSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen statischen Wert ab, das Zurückgeben einer <see cref="T:System.Windows.Data.RelativeSource" /> dafür erstellt die <see cref="F:System.Windows.Data.RelativeSourceMode.TemplatedParent" /> Modus.</summary>
+        <value>Eine statische <see cref="T:System.Windows.Data.RelativeSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Drei der vier <xref:System.Windows.Data.RelativeSourceMode> Werte <xref:System.Windows.Data.RelativeSourceMode.PreviousData>, <xref:System.Windows.Data.RelativeSourceMode.Self>, oder <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>, erzeugen kann eine <xref:System.Windows.Data.RelativeSource> vollständig statische, die keine eindeutigen privaten Werte enthält. Alle Vorkommen der statischen Eigenschaft können es sich um dasselbe Objekt Dadurch entfällt die Notwendigkeit, separate Objekte für jede Verwendung zu reservieren freigeben. Mithilfe der statischen Eigenschaft aus diesem Grund wird die arbeitsspeicherauslastung reduziert.  
+  
+<a name="xamlTextUsage_TemplatedParent"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [RelativeSource MarkupExtension](~/docs/framework/wpf/advanced/relativesource-markupextension.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die <xref:System.Windows.Style> -Definition eines benutzerdefinierten Steuerelements bezeichnet `NumericUpDown`. Die <xref:System.Windows.Controls.TextBlock.Text%2A> Eigenschaft von der <xref:System.Windows.Controls.TextBlock> gebunden ist die `Value` des Objekts, das die `TemplatedParent`, also die `NumericUpDown` steuern, die von diesem <xref:System.Windows.Style> in diesem Fall auf angewendet wird.  
+  
+ [!code-xaml[CustomControlNumericUpDown#RelativeSource](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/themes/generic.xaml#relativesource)]  
+  
+ Das vollständige Beispiel finden Sie unter [benutzerdefiniertes NumericUpDown-Steuerelement mit Unterstützung von Design und Automatisierung](http://go.microsoft.com/fwlink/?LinkID=160025).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

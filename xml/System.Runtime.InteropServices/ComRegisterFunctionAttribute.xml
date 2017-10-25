@@ -1,0 +1,90 @@
+<Type Name="ComRegisterFunctionAttribute" FullName="System.Runtime.InteropServices.ComRegisterFunctionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ComRegisterFunctionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComRegisterFunctionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComRegisterFunctionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Methode, die aufgerufen wird, wenn Sie eine Assembly für die Verwendung von COM zu registrieren. Dies ermöglicht die Ausführung von vom Benutzer erstellter Code bei der Registrierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Methoden anwenden.  
+  
+ <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>ermöglicht Ihnen das Hinzufügen von beliebigen Registrierungscode aus, um die Anforderungen der COM-Clients Rechnung zu tragen. Sie können z. B. aktualisieren die Registrierung mithilfe der Registrierungsfunktionen aus der <xref:Microsoft.Win32> Namespace. Wenn Sie eine Registrierungsmethode bereitstellen, müssen Sie auch anwenden <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=nameWithType> an eine Methode zum Aufheben der Registrierung, die die kehrt die Vorgänge, die in der Registrierungsmethode ausgeführt.  
+  
+ Die common Language Runtime Ruft die Methode mit diesem Attribut aus, wenn die enthaltende Assembly (direkt oder indirekt) mit registriert ist die [Regasm.exe (Assembly Registration-Tool)](~/docs/framework/tools/regasm-exe-assembly-registration-tool.md)oder über die <xref:System.Runtime.InteropServices.RegistrationServices.RegisterAssembly%2A?displayProperty=nameWithType> Methode.  
+  
+ Dieses Attribut kann nur auf Methoden angewendet werden, die die folgenden Merkmale aufweisen:  
+  
+-   Bereich: Alle (öffentlichen, privaten, usw.).  
+  
+-   Typ: `static`.  
+  
+-   Parameter: Akzeptiert einen einzelnen <xref:System.Type> Parameter oder eine <xref:System.String> Parametertyp.  
+  
+-   Rückgabetyp: `void`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie anzuwendende <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> und <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> an Methoden mit einer geeigneten Signatur.  
+  
+ [!code-cpp[Classic ComRegisterFunctionAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ComRegisterFunctionAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ComRegisterFunctionAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ComRegisterFunctionAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic ComRegisterFunctionAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ComRegisterFunctionAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComRegisterFunctionAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComRegisterFunctionAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.InteropServices.ComRegisterFunctionAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

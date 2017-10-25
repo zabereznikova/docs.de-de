@@ -1,0 +1,127 @@
+<Type Name="PageEventArgs" FullName="System.Web.UI.WebControls.PageEventArgs">
+  <TypeSignature Language="C#" Value="public class PageEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PageEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.PageEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.WebControls.IPageableItemContainer.TotalRowCountAvailable" /> -Ereignis für eine Klasse, implementiert die <see cref="T:System.Web.UI.WebControls.IPageableItemContainer" /> Schnittstelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListView> -Objekt löst die <xref:System.Web.UI.WebControls.IPageableItemContainer.TotalRowCountAvailable> Ereignis aus, wenn das Steuerelement die Gesamtzahl der Datensätze von der zugrunde liegende Datenquellenobjekt abgerufen hat. Die <xref:System.Web.UI.WebControls.DataPager> Steuerelement stellt einen Ereignishandler für dieses Ereignis mit dem Namen <xref:System.Web.UI.WebControls.DataPager.OnTotalRowCountAvailable%2A>. Dieser Ereignishandler initialisiert seitenbezogene Eigenschaften und erstellt die <xref:System.Web.UI.WebControls.DataPagerField> in definierten Objekte der <xref:System.Web.UI.WebControls.DataPager.Fields%2A?displayProperty=nameWithType> Auflistung.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.IPageableItemContainer.TotalRowCountAvailable> Ereignis wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.PageEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.PageEventArgs.%23ctor%2A>-Konstruktor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageEventArgs (int startRowIndex, int maximumRows, int totalRowCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 startRowIndex, int32 maximumRows, int32 totalRowCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PageEventArgs.#ctor(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="startRowIndex" Type="System.Int32" />
+        <Parameter Name="maximumRows" Type="System.Int32" />
+        <Parameter Name="totalRowCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="startRowIndex">Der Index des ersten Datensatzes auf eine Seite mit Daten.</param>
+        <param name="maximumRows">Die maximale Anzahl von Elementen, die auf jeder Seite der Daten anzeigen.</param>
+        <param name="totalRowCount">Die Gesamtanzahl von Datensätzen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.PageEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.PageEventArgs> Klasse.  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.PageEventArgs>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.PageEventArgs.StartRowIndex%2A>|Der Wert des `startRowIndex`-Parameters.|  
+|<xref:System.Web.UI.WebControls.PageEventArgs.MaximumRows%2A>|Der Wert des `maximumRows`-Parameters.|  
+|<xref:System.Web.UI.WebControls.PageEventArgs.TotalRowCount%2A>|Der Wert des `totalRowCount`-Parameters.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumRows">
+      <MemberSignature Language="C#" Value="public int MaximumRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PageEventArgs.MaximumRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Datensätzen, die auf jeder Seite angezeigt werden sollen.</summary>
+        <value>Die maximale Anzahl von Datensätzen, die auf jeder Seite angezeigt werden sollen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartRowIndex">
+      <MemberSignature Language="C#" Value="public int StartRowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartRowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PageEventArgs.StartRowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des ersten Datensatzes auf einer Seite ab.</summary>
+        <value>Der Index des ersten Datensatzes auf einer Seite.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalRowCount">
+      <MemberSignature Language="C#" Value="public int TotalRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PageEventArgs.TotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtzahl der Datensätze in der zugrunde liegenden Datenquelle ab.</summary>
+        <value>Die Gesamtanzahl von Datensätzen der zugrunde liegenden Datenquelle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,91 @@
+<Type Name="SnapLinePriority" FullName="System.Windows.Forms.Design.Behavior.SnapLinePriority">
+  <TypeSignature Language="C#" Value="public enum SnapLinePriority" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SnapLinePriority extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.Behavior.SnapLinePriority" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die relative Wichtigkeit einer Ausrichtungslinie an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Priorität einer Ausrichtungslinie fungiert als einen Vorschlag für visuelle Designer zum Behandeln einer Ausrichtungslinie in Bezug auf den Peers. Das Layoutmodul verwendet eine einfache Methode, um zu bestimmen, ob die Ausrichtungslinien für ein Steuerelement angezeigt: die höchste Priorität Ausrichtungslinien, einschließlich derjenigen mit dem Wert immer, werden für jede Ausrichtung angezeigt – vertikal oder horizontal.  
+  
+ Um die Priorität einer Ausrichtungslinie setzen eine <xref:System.Windows.Forms.Design.Behavior.SnapLinePriority.Always> -Enumeration angegeben wird, beim Erstellen einer Instanz von der <xref:System.Windows.Forms.Design.Behavior.SnapLinePriority> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Always">
+      <MemberSignature Language="C#" Value="Always" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.Behavior.SnapLinePriority Always = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.Behavior.SnapLinePriority.Always" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.SnapLinePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Kategorie "Priorität", die die höchste Priorität aller aktuellen Ausrichtungslinien entspricht. Gibt an, dass diese Kategorie von Ausrichtungslinien immer aktiv sein soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.Behavior.SnapLinePriority High = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.Behavior.SnapLinePriority.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.SnapLinePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die höchste Prioritätskategorie.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Low">
+      <MemberSignature Language="C#" Value="Low" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.Behavior.SnapLinePriority Low = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.Behavior.SnapLinePriority.Low" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.SnapLinePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die niedrigste Prioritätskategorie.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Medium">
+      <MemberSignature Language="C#" Value="Medium" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.Behavior.SnapLinePriority Medium = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.Behavior.SnapLinePriority.Medium" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.SnapLinePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die mittlere Priorität-Kategorie.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

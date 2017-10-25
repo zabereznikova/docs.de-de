@@ -1,0 +1,109 @@
+<Type Name="EnterpriseServicesInteropOption" FullName="System.Transactions.EnterpriseServicesInteropOption">
+  <TypeSignature Language="C#" Value="public enum EnterpriseServicesInteropOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EnterpriseServicesInteropOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.EnterpriseServicesInteropOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie verteilte Transaktionen mit COM+-Transaktionen interagieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework können verwaltete zur Teilnahme an COM+-Transaktionen mithilfe der Klassen in der <xref:System.EnterpriseServices> Namespace. Da die Interoperation nicht standardmäßig bereitgestellt wird, müssen Sie jedoch diese Enumeration verwenden, um anzugeben, wie in der COM+-Kontext einbezogen werden sollen. Insbesondere beim Erstellen eines neuen <xref:System.Transactions.TransactionScope>, verwenden Sie diese Enumeration, um anzugeben, wie Sie Ihre Transaktion im COM+-Transaktionen teilnehmen soll. Weitere Informationen finden Sie unter [Interoperabilität mit Enterprise Services und COM+-Transaktionen](http://msdn.microsoft.com/en-us/2e93b3c6-4d48-4b9b-82b2-7d5908a2c970).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Automatic">
+      <MemberSignature Language="C#" Value="Automatic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.EnterpriseServicesInteropOption Automatic = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.EnterpriseServicesInteropOption.Automatic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.EnterpriseServicesInteropOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Suchen Sie nach einem vorhandenen COM+-Kontext und mit ihm zu synchronisieren Sie, sofern vorhanden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="Full" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.EnterpriseServicesInteropOption Full = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.EnterpriseServicesInteropOption.Full" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.EnterpriseServicesInteropOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="N:System.EnterpriseServices" /> Kontext (die durch Aufrufen der statischen Methode abgerufen werden <see cref="P:System.EnterpriseServices.ContextUtil.Transaction" /> von der <see cref="T:System.EnterpriseServices.ContextUtil" /> Klasse) und die <see cref="N:System.Transactions" /> ambient-Transaktion (die durch Aufrufen der statischen Methode abgerufen werden <see cref="P:System.Transactions.Transaction.Current" /> von der <see cref="T:System.Transactions.Transaction" /> -Klasse) sind immer synchronisiert. Dadurch entstehen zu Leistungseinbußen, da neue <see cref="N:System.EnterpriseServices" /> Kontexten können erstellt werden müssen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.EnterpriseServicesInteropOption None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.EnterpriseServicesInteropOption.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.EnterpriseServicesInteropOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es gibt keine Synchronisierung zwischen <see cref="P:System.EnterpriseServices.ContextUtil.Transaction" /> und <see cref="P:System.Transactions.Transaction.Current" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

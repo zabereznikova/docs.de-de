@@ -1,0 +1,272 @@
+<Type Name="Int32Aggregator" FullName="System.Xml.Xsl.Runtime.Int32Aggregator">
+  <TypeSignature Language="C#" Value="public struct Int32Aggregator" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Int32Aggregator extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.Runtime.Int32Aggregator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlXml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Berechnet Aggregate über eine Sequenz von Int32-Werten.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Average">
+      <MemberSignature Language="C#" Value="public void Average (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Average(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.Int32Aggregator.Average(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Wert vom Typ <see langword="Int32" /> , identifiziert eine Gruppe von Elementen, die durchschnittliche, z. B. eine Spalte in einer Tabelle.</param>
+        <summary>Sucht nach den Durchschnitt einer Sequenz von Int32-Werten.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AverageResult">
+      <MemberSignature Language="C#" Value="public int AverageResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AverageResult" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.Int32Aggregator.AverageResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die durchschnittliche Ergebnis aus einer Folge von Int32-Werten zurück.</summary>
+        <value>Ein <see langword="Int32" /> -Wert, der das Ergebnis Durchschnitt einer Sequenz von enthält <see langword="Int32" /> Werte.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public void Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.Int32Aggregator.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Sequenz von <see langword="Int32" /> Werte.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.Int32Aggregator.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen booleschen Wert, der angibt, ob die Sequenz leer ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Sequenz leer ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public void Maximum (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Maximum(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.Int32Aggregator.Maximum(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Wert vom Typ <see langword="Int32" />.</param>
+        <summary>Weist die <paramref name="value" /> Parameter zur vorhandenen entstehen, wenn die <paramref name="value" /> -Parameters ist größer als das vorhandene Ergebnis.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumResult">
+      <MemberSignature Language="C#" Value="public int MaximumResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumResult" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.Int32Aggregator.MaximumResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den größten Wert in einer Sequenz von <see langword="Int32" /> Werte.</summary>
+        <value>Ein <see langword="Int32" /> -Wert, der Höchstwert in einer Sequenz von enthält <see langword="Int32" /> Werte.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public void Minimum (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Minimum(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.Int32Aggregator.Minimum(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Wert vom Typ<see langword="Int32" /></param>
+        <summary>Weist die <paramref name="value" /> Parameter zur vorhandenen entstehen, wenn die <paramref name="value" /> -Parameter kleiner ist als das vorhandene Ergebnis.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumResult">
+      <MemberSignature Language="C#" Value="public int MinimumResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinimumResult" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.Int32Aggregator.MinimumResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den kleinsten Wert in einer Sequenz von Int32-Werten zurück.</summary>
+        <value>Ein <see langword="Int32" /> -Wert, der Mindestwert in einer Sequenz von enthält <see langword="Int32" /> Werte.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Sum">
+      <MemberSignature Language="C#" Value="public void Sum (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Sum(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.Int32Aggregator.Sum(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Wert vom Typ <see langword="Int32" />.</param>
+        <summary>Fügt ein <see langword="Int32" /> Wert dem vorhandenen Ergebnis.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SumResult">
+      <MemberSignature Language="C#" Value="public int SumResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SumResult" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.Int32Aggregator.SumResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Summe einer Sequenz von Int32-Werten zurück.</summary>
+        <value>Ein <see langword="Int32" /> Wert, der die Summe einer Sequenz von enthält <see langword="Int32" /> Werte.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,478 @@
+<Type Name="BaseChannelObjectWithProperties" FullName="System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties">
+  <TypeSignature Language="C#" Value="public abstract class BaseChannelObjectWithProperties : System.Collections.IDictionary" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BaseChannelObjectWithProperties extends System.Object implements class System.Collections.ICollection, class System.Collections.IDictionary, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine basisimplementierung eines Kanals-Objekts, die eine Wörterbuch-Schnittstelle, um seine Eigenschaften verfügbar macht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties>ist die Basisklasse für <xref:System.Runtime.Remoting.Channels.BaseChannelWithProperties> und <xref:System.Runtime.Remoting.Channels.BaseChannelSinkWithProperties>.  
+  
+ <xref:System.Runtime.Remoting.Channels.BaseChannelWithProperties>und <xref:System.Runtime.Remoting.Channels.BaseChannelSinkWithProperties> kann verwendet werden, wie die Basisklassen für Kanäle und die Kanal-senken, die bereitstellen Eigenschaften benannt.  
+  
+ <xref:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties>behandelt die komplexe Aufgabe, ein Kanal-Objekt für die zugehörigen Eigenschaften.  
+  
+ Diese Klasse stellt einen Linkaufruf und einer vererbungsanforderung auf Klassenebene. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder die abgeleitete Klasse Berechtigung für die Infrastruktur verfügt. Weitere Informationen zu sicherheitsforderungen, finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) und [Vererbungsanforderungen](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ [!code-cpp[CommonTransportKeys#1](~/samples/snippets/cpp/VS_Snippets_Remoting/CommonTransportKeys/CPP/commontransportkeys.cpp#1)]
+ [!code-csharp[CommonTransportKeys#1](~/samples/snippets/csharp/VS_Snippets_Remoting/CommonTransportKeys/CS/commontransportkeys.cs#1)]
+ [!code-vb[CommonTransportKeys#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CommonTransportKeys/VB/commontransportkeys.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von <see cref="T:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties" />, müssen Sie überschreiben die <see cref="P:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.Keys" /> Eigenschaft und die <see cref="P:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.Item(System.Object)" /> Eigenschaft.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BaseChannelObjectWithProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CommonTransportKeys#1](~/samples/snippets/cpp/VS_Snippets_Remoting/CommonTransportKeys/CPP/commontransportkeys.cpp#1)]
+ [!code-csharp[CommonTransportKeys#1](~/samples/snippets/csharp/VS_Snippets_Remoting/CommonTransportKeys/CS/commontransportkeys.cs#1)]
+ [!code-vb[CommonTransportKeys#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CommonTransportKeys/VB/commontransportkeys.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel für das Objekt in der <c>Wert</c> Parameter.</param>
+        <param name="value">Der hinzuzufügende Wert.</param>
+        <summary>Löst eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode muss nicht implementiert werden, da sie nicht die Art und Weise gilt <xref:System.Collections.IDictionary> in diesem Fall verwendet wird und weil <xref:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.IsFixedSize%2A> gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Methode wird aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode muss nicht implementiert werden, da sie nicht die Art und Weise gilt <xref:System.Collections.IDictionary> in diesem Fall verwendet wird und weil <xref:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.IsFixedSize%2A> gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Methode wird aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public virtual bool Contains (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel der Eigenschaft, der gesucht werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob die Kanal-Objekt eine Eigenschaft enthält, die dem angegebenen Schlüssel zugeordnet ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Kanal-Objekt eine Eigenschaft mit dem angegebenen Schlüssel verknüpfte enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array, das die Eigenschaften zu kopieren.</param>
+        <param name="index">Der Index, an dem der Kopiervorgang beginnen soll.</param>
+        <summary>Löst eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Die Methode wird aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der dem Kanal-Objekt zugeordneten Eigenschaften ab.</summary>
+        <value>Die Anzahl der Eigenschaften, die dem Kanal-Objekt zugeordnet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionaryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Collections.IDictionaryEnumerator" /> , die Listet alle Eigenschaften, die dem Kanal-Objekt zugeordnet.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionaryEnumerator" /> , die Listet alle Eigenschaften, die dem Kanal-Objekt zugeordnet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public virtual bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Anzahl der Eigenschaften, die in kanalobjekts eingegeben werden können, behoben wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Anzahl der Eigenschaften, die in kanalobjekts eingegeben werden können, behoben wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Implementierung von <xref:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.IsFixedSize%2A> gibt immer `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistung von Eigenschaften im Kanal Objekt schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Auflistung von Eigenschaften im Kanal Objekt schreibgeschützt ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Implementierung von <xref:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.IsReadOnly%2A> gibt immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public virtual bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Wörterbuch der Kanal Objekteigenschaften synchronisiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Wörterbuch von Objekteigenschaften Kanal synchronisiert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Implementierung von <xref:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.IsSynchronized%2A> gibt immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel der Eigenschaft zum Abrufen oder festlegen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ab oder legt die Eigenschaft, die dem angegebenen Schlüssel zugeordnet ist.</summary>
+        <value>Die Eigenschaft, die dem angegebenen Schlüssel zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Die Eigenschaft erfolgt.</exception>
+        <block subset="none" type="overrides">
+          <para>Es ist notwendig, diese Eigenschaft für eine abgeleiteten Kanalsenke Funktion implementiert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.Collections.ICollection" /> von Schlüsseln, die die Objekteigenschaften Kanal zugeordnet sind.</summary>
+        <value>Ein <see cref="T:System.Collections.ICollection" /> von Schlüsseln, die die Objekteigenschaften Kanal zugeordnet sind.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Es ist notwendig, diese Eigenschaft für eine abgeleiteten Kanalsenke Funktion implementiert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Collections.IDictionary" /> der Kanaleigenschaften, die dem Kanal-Objekt zugeordnet.</summary>
+        <value>Ein <see cref="T:System.Collections.IDictionary" /> der Kanaleigenschaften, die dem Kanal-Objekt zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kanäle Eigenschaften werden verwendet, um den Kanal zur Laufzeit zu konfigurieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des zu entfernenden Objekts.</param>
+        <summary>Löst eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode muss nicht implementiert werden, da sie nicht die Art und Weise gilt <xref:System.Collections.IDictionary> in diesem Fall verwendet wird und weil <xref:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.IsFixedSize%2A> gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Methode wird aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public virtual object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das verwendet wird, zum Synchronisieren des Zugriffs auf die <see cref="T:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties" />.</summary>
+        <value>Ein Objekt, das verwendet wird, zum Synchronisieren des Zugriffs auf die <see cref="T:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Implementierung von <xref:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.SyncRoot%2A> gibt einen Verweis auf die aktuelle Instanz von <xref:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Collections.IEnumerator" /> , die Listet alle Eigenschaften, die dem Kanal-Objekt zugeordnet sind.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> , die Listet alle Eigenschaften, die dem Kanal-Objekt zugeordnet sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Collections.ICollection" /> der Werte der Eigenschaften, die dem Kanal-Objekt zugeordnet.</summary>
+        <value>Ein <see cref="T:System.Collections.ICollection" /> der Werte der Eigenschaften, die dem Kanal-Objekt zugeordnet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,125 @@
+<Type Name="DependencyPropertyKey" FullName="System.Windows.DependencyPropertyKey">
+  <TypeSignature Language="C#" Value="public sealed class DependencyPropertyKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DependencyPropertyKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DependencyPropertyKey" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Bezeichner für eine Abhängigkeitseigenschaft für begrenzte Schreibzugriff auf eine schreibgeschützte Abhängigkeitseigenschaft bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.DependencyPropertyKey>-Instanzen werden als Rückgabewert einer Abhängigkeit Eigenschaft Registrierung Aufrufs mit den Methoden abgerufen <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> oder <xref:System.Windows.DependencyProperty.RegisterAttachedReadOnly%2A>.  
+  
+ Die Typen, die eine Abhängigkeitseigenschaft registrieren können die <xref:System.Windows.DependencyPropertyKey> Aufrufe <xref:System.Windows.DependencyObject.SetValue%2A> und <xref:System.Windows.DependencyObject.ClearValue%2A> passen Sie den Wert der Eigenschaft, die als Teil der Klassenlogik. Wenn die Zugriffsebene des Schlüssels erlaubt, können verwandte Klassen den Schlüssel und die Abhängigkeitseigenschaft auch. Beispielsweise können Sie den Schlüssel als interne deklarieren, und andere Typen innerhalb derselben Assembly können auch festlegen, der Abhängigkeitseigenschaft.  
+  
+ Die <xref:System.Windows.DependencyPropertyKey> zurückgegeben von schreibgeschützten Abhängigkeitseigenschaft eigenschaftsregistrierung sollten nicht öffentlich gemacht werden, da durch den Schlüssel die Eigenschaft festgelegt werden, also dem Zeitpunkt der Registrierung als eine schreibgeschützte Abhängigkeitseigenschaft angeben kann. Darüber hinaus den Schlüssel bewirkt, dass ein Konflikt zwischen den verfügbaren Abhängigkeit Eigenschaft Verhalten und die zugehörige [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] Eigenschaft Wrapperimplementierungen, die fehlerhafte-Klassenentwurf ist.  
+  
+ Anstatt den Schlüssel selbst verfügbar gemacht werden, Sie sollten stattdessen verfügbar machen die <xref:System.Windows.DependencyPropertyKey.DependencyProperty%2A> Wert, der die <xref:System.Windows.DependencyPropertyKey> als eine `public static readonly` <xref:System.Windows.DependencyProperty> für Ihre Klasse. Dadurch wird die Eigenschaft Bezeichner für eine gültige Abhängigkeitseigenschaft für bestimmte Eigenschaft Systemvorgänge z. B. das Durchzählen lokal festgelegten Werte zurückgeben. Der Bezeichner, die erhaltenen müssen jedoch nicht alle Funktionen von einer <xref:System.Windows.DependencyProperty> für viele Eigenschaft Systemvorgänge.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel registriert eine schreibgeschützte Abhängigkeitseigenschaft und verwendet auch den Schlüssel für zwei Zwecke in anderen Klassenmembern: Implementieren des Get "Wrappers" und als Bezeichner für einen geschützten Bestimmung-Vorgang, der den Wert fest, anhand von Berechnungen der anderen Eigenschaftswerte.  
+  
+ [!code-csharp[WPFAquariumSln#RODP](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#rodp)]
+ [!code-vb[WPFAquariumSln#RODP](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#rodp)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DependencyProperty">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyProperty DependencyProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyProperty DependencyProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyPropertyKey.DependencyProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Bezeichner für dieses spezielle schreibgeschützte Abhängigkeitseigenschaft zugeordneten Bezeichner der Abhängigkeitseigenschaft ab.</summary>
+        <value>Bezeichner für die relevanten Abhängigkeitseigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DependencyPropertyKey.DependencyProperty%2A> -Wert ermöglicht eine schreibgeschützte Eigenschaft Bezeichner gemeinsame Eigenschaft Systemvorgänge unter Verwendung der gleichen Schnittstellen auch verwendet für Lese-/ Schreibzugriff Abhängigkeitseigenschaften teilnehmen.  
+  
+ Um den Get-Accessor für eine schreibgeschützte Abhängigkeitseigenschaft zu implementieren, sollten Sie erstellen und verfügbar machen eine <xref:System.Windows.DependencyProperty> Bezeichner für Ihre Klasse. Bei diesem Verfahren werden zwei Ziele verfolgt:  
+  
+-   Die eigene Klasse erfordert die <xref:System.Windows.DependencyProperty> Bezeichner, um die Get-Zugriffsmethode für den Eigenschaftenwrapper zu implementieren. Verwenden Sie die <xref:System.Windows.DependencyProperty> als Parameter für die <xref:System.Windows.DependencyObject.GetValue%2A> -Aufruf, der "Get"-Zugriffsmethode implementiert.  
+  
+-   <xref:System.Windows.DependencyProperty>Bezeichner die Abhängigkeitseigenschaft im Eigenschaftensystem verfügbar machen, sodass andere Methoden, die abhängig von Metadaten in ein Standardformat darauf zugreifen können. Für die Instanz, wenn Sie aufgerufen <xref:System.Windows.DependencyObject.GetLocalValueEnumerator%2A> auf einigen <xref:System.Windows.DependencyObject> und erhalten Sie einer Enumeration der lokal festgelegten Eigenschaften (Werte und Bezeichner) den Bezeichner für eine schreibgeschützte Abhängigkeitseigenschaft wäre zurückgegebene Ihrer <xref:System.Windows.DependencyProperty> anstelle der Schlüssel-Wert. Nicht verfügbar machen eine <xref:System.Windows.DependencyProperty> Bezeichner nicht erhöht die Sicherheit der schreibgeschützten Abhängigkeitseigenschaft, vereinfacht nur Vorgänge, die die Eigenschaft umständlicher für nachfolgende abgeleitete Klassen und Klasseninstanzen betreffen.  
+  
+ Verfügbarmachen der <xref:System.Windows.DependencyProperty> -Bezeichner für die Klasse, rufen Sie <xref:System.Windows.DependencyPropertyKey.DependencyProperty%2A> direkt für den Schlüssel. Verwenden Sie diesen Wert zum Erstellen einer `public static readonly` <xref:System.Windows.DependencyProperty> Bezeichner auf die Klasse, die entspricht der <xref:System.Windows.DependencyPropertyKey>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Windows.DependencyPropertyKey.DependencyProperty%2A> verfügbar machen die <xref:System.Windows.DependencyProperty> Bezeichner (`AquariumGraphicProperty`) für die `AquariumGraphic` schreibgeschützte Abhängigkeitseigenschaft für eine Klasse. Das Beispiel zeigt auch die <xref:System.Windows.DependencyPropertyKey> (als interner Member) und die Get-Zugriffsmethode für `AquariumGraphic`.  
+  
+ [!code-csharp[WPFAquariumSln#RODP](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#rodp)]
+ [!code-vb[WPFAquariumSln#RODP](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#rodp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverrideMetadata">
+      <MemberSignature Language="C#" Value="public void OverrideMetadata (Type forType, System.Windows.PropertyMetadata typeMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OverrideMetadata(class System.Type forType, class System.Windows.PropertyMetadata typeMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyPropertyKey.OverrideMetadata(System.Type,System.Windows.PropertyMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forType" Type="System.Type" />
+        <Parameter Name="typeMetadata" Type="System.Windows.PropertyMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="forType">Der Typ, auf dem diese Abhängigkeitseigenschaft vorhanden ist und Metadaten überschrieben werden soll.</param>
+        <param name="typeMetadata">Für diesen Typ bereitgestellten Metadaten.</param>
+        <summary>Überschreibt die Metadaten einer schreibgeschützten Abhängigkeitseigenschaft, die durch ein Bezeichner für diese Abhängigkeitseigenschaft dargestellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben die Metadaten für eine schreibgeschützte Abhängigkeitseigenschaft erfolgt aus ähnlichen Gründen wie beim Überschreiben von Metadaten für eine Abhängigkeitseigenschaft mit Lese-/ Schreibzugriff und sind für den Zugriff auf die wichtigsten Ebene eingeschränkt, da in den Metadaten angegebene Verhaltensweisen das Set-Verhalten (die ändern können DEFAULT-Wert, z. B.).  
+  
+ Wie mit Lese-/ Schreibzugriff Abhängigkeitseigenschaften, überschreiben die Metadaten für eine schreibgeschützte Abhängigkeitseigenschaft nur vor der Eigenschaft verwendet platziert wird, von dem Eigenschaftensystem erfolgen soll (Dies entspricht dem Zeitpunkt, bestimmte Instanzen von Objekten, das Registrieren der Eigenschaft instanziiert werden). Aufrufe von <xref:System.Windows.DependencyPropertyKey.OverrideMetadata%2A> sollte nur ausgeführt werden, in den statischen Konstruktoren des Typs, der sich selbst als der `forType` Parameter dieser Methode oder eine gleichwertige Initialisierung für diese Klasse.  
+  
+ Diese Methode leitet effektiv an die <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> -Methode auf und übergibt die <xref:System.Windows.DependencyPropertyKey> Instanz entsprechend den Key-Parameter.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel werden die Metadaten für eine vorhandene schreibgeschützte Abhängigkeitseigenschaft, die eine Klasse erbt überschrieben. In diesem Fall wurde das Szenario-Ziel einen Rückruf zum Wert hinzufügen, den die Basiseigenschaft Metadaten nicht vorhanden wäre. Sie können auch Metadaten überschreiben, für keines der anderen Gründe, aus denen das Überschreiben von Metadaten in der Regel ist die entsprechende (Standardwert ändern hinzufügen <xref:System.Windows.FrameworkPropertyMetadataOptions> Werte usw..)  
+  
+ [!code-csharp[WPFAquariumSln#RODPOverride](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#rodpoverride)]
+ [!code-vb[WPFAquariumSln#RODPOverride](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#rodpoverride)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Versuchte Überschreibung von Metadaten für eine Abhängigkeitseigenschaft mit Lese-/ Schreibzugriff (kann nicht durchgeführt werden diese Signatur).</exception>
+        <exception cref="T:System.ArgumentException">Metadaten wurden bereits für die Eigenschaft festgelegt werden, da sie für den bereitgestellten Typ vorhanden ist.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

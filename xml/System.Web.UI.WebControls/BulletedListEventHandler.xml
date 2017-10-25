@@ -1,0 +1,40 @@
+<Type Name="BulletedListEventHandler" FullName="System.Web.UI.WebControls.BulletedListEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void BulletedListEventHandler(object sender, BulletedListEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BulletedListEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.BulletedListEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.BulletedListEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Das Argument vom Typ <see cref="T:System.Web.UI.WebControls.BulletedListEventArgs" /> , das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Web.UI.WebControls.BulletedList.Click" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.BulletedList" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer <xref:System.Web.UI.WebControls.BulletedListEventHandler> -Delegaten bestimmen Sie die Methode für die Behandlung der <xref:System.Web.UI.WebControls.BulletedList.Click> -Ereignis für ein <xref:System.Web.UI.WebControls.BulletedList> Steuerelement. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.WebControls.BulletedList.Click> -Ereignis für ein <xref:System.Web.UI.WebControls.BulletedList> Steuerelement. Wenn ein Listenelement geklickt wird, wird eine Meldung angezeigt, einem <xref:System.Web.UI.WebControls.Label> Steuerelement auf der Seite.  
+  
+ [!code-aspx-csharp[BulletedListClickEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListClickEvent/CS/bulletedlistclickeventcs.aspx#1)]
+ [!code-aspx-vb[BulletedListClickEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListClickEvent/VB/bulletedlistclickeventvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

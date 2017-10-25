@@ -1,0 +1,270 @@
+<Type Name="CompilerResults" FullName="System.CodeDom.Compiler.CompilerResults">
+  <TypeSignature Language="C#" Value="public class CompilerResults" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CompilerResults extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.CompilerResults" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Ergebnisse der Kompilierung, die von einem Compiler zurückgegeben werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse enthält die folgende Informationen zu den Ergebnissen einer Kompilierung durch eine <xref:System.CodeDom.Compiler.ICodeCompiler> schnittstellenimplementierung:  
+  
+-   Die <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A> -Eigenschaft gibt die kompilierte Assembly an.  
+  
+-   Die <xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A> -Eigenschaft gibt den Sicherheitsbeweis für die Assembly an.  
+  
+-   Die <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A> Eigenschaft gibt den Pfad auf die kompilierte Assembly an, wenn er nicht nur im Arbeitsspeicher generiert wurde.  
+  
+-   Die <xref:System.CodeDom.Compiler.CompilerResults.Errors%2A> Eigenschaft gibt an, Compilerfehler und Warnungen.  
+  
+-   Die <xref:System.CodeDom.Compiler.CompilerResults.Output%2A> Eigenschaft enthält die Ausgabenachrichten Compiler.  
+  
+-   Die <xref:System.CodeDom.Compiler.CompilerResults.NativeCompilerReturnValue%2A> Eigenschaft gibt an, Code Ergebniswert vom Compiler zurückgegeben.  
+  
+-   Die <xref:System.CodeDom.Compiler.CompilerResults.TempFiles%2A> Eigenschaft gibt an, die temporären Dateien, die während der Kompilierung und Verknüpfung generiert.  
+  
+> [!NOTE]
+>  Diese Klasse enthält eine vererbungsanforderung auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn die abgeleitete Klasse keinen volle Vertrauenswürdigkeit. Informationen über vererbungsanforderungen finden Sie unter [Vererbungsanforderungen](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ [!code-cpp[CompilerResultsExample#1](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerResultsExample/CPP/class1.cpp#1)]
+ [!code-csharp[CompilerResultsExample#1](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerResultsExample/CS/class1.cs#1)]
+ [!code-vb[CompilerResultsExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerResultsExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilerResults (System.CodeDom.Compiler.TempFileCollection tempFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.Compiler.TempFileCollection tempFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerResults.#ctor(System.CodeDom.Compiler.TempFileCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tempFiles" Type="System.CodeDom.Compiler.TempFileCollection" />
+      </Parameters>
+      <Docs>
+        <param name="tempFiles">Eine <see cref="T:System.CodeDom.Compiler.TempFileCollection" />, mit der Verweise auf temporäre Dateien verwaltet und gespeichert werden, die während der Kompilierung generiert werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.Compiler.CompilerResults" /> Klasse, die die angegebenen temporären Dateien verwendet.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CompiledAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly CompiledAssembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly CompiledAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerResults.CompiledAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die kompilierte Assembly.</summary>
+        <value>Ein <see cref="T:System.Reflection.Assembly" /> , der die kompilierte Assembly angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die `get` -Accessor für die <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A> -Eigenschaft ruft die <xref:System.AppDomain.Load%2A> Methode, um die kompilierte Assembly in der aktuellen Anwendungsdomäne zu laden.  Nach dem Aufruf der `get` Accessor, die kompilierte Assembly kann nicht gelöscht werden, bis das aktuelle <xref:System.AppDomain> wird entladen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CompilerErrorCollection Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.Compiler.CompilerErrorCollection Errors" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerResults.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerErrorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Compilerfehlern und -Warnungen.</summary>
+        <value>Ein <see cref="T:System.CodeDom.Compiler.CompilerErrorCollection" /> , die Fehler und Warnungen, die von der Kompilierung, was angibt, falls vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datei und Zeilennummern bezieht sich auf jede <xref:System.CodeDom.Compiler.CompilerError>, sodass Benutzercode zu finden und anzuzeigen, die einen Fehler oder eine Warnung, wenn möglich, generiert Code implementiert werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evidence">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.Evidence Evidence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.Evidence Evidence" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerResults.Evidence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.Evidence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die Beweisobjekt, das die Sicherheitsberechtigungen für die Richtlinie der kompilierten Assembly darstellt.</summary>
+        <value>Ein <see cref="T:System.Security.Policy.Evidence" /> Objekt, das die Sicherheitsberechtigungen für die Richtlinie der kompilierten Assembly darstellt.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Steuern von Beweisen. Berechtigungswert: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="NativeCompilerReturnValue">
+      <MemberSignature Language="C#" Value="public int NativeCompilerReturnValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NativeCompilerReturnValue" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerResults.NativeCompilerReturnValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Compiler zurückgegebener Wert.</summary>
+        <value>Der Compiler-Rückgabewert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält den numerischen Exitcode zurückgegeben, die von einem Compiler über die Befehlszeile aus, wenn implementiert. Der Wert 0 gibt Erfolg an, während ein Wert ungleich Null Fehler weist darauf hin.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection Output { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection Output" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerResults.Output" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft der Compiler Ausgabenachrichten ab.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.StringCollection" /> , die die Ausgabenachrichten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Compiler keine Nachrichten zurückgegeben wird, wird der Wert dieser Eigenschaft eine leere Auflistung sein.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PathToAssembly">
+      <MemberSignature Language="C#" Value="public string PathToAssembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PathToAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerResults.PathToAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad der kompilierten Assembly fest.</summary>
+        <value>Der Pfad der Assembly oder <see langword="null" /> , wenn die Assembly im Speicher generiert wurde.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TempFiles">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.TempFileCollection TempFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.Compiler.TempFileCollection TempFiles" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerResults.TempFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.TempFileCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die temporäre dateiauflistung verwenden.</summary>
+        <value>Eine <see cref="T:System.CodeDom.Compiler.TempFileCollection" />, mit der Verweise auf temporäre Dateien verwaltet und gespeichert werden, die während der Kompilierung generiert werden.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

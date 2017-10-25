@@ -1,0 +1,95 @@
+<Type Name="IProjectItem" FullName="System.Web.UI.Design.IProjectItem">
+  <TypeSignature Language="C#" Value="public interface IProjectItem" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IProjectItem" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IProjectItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle für ein Element, das zur Entwurfszeit in einem Entwurfshost, z. B. Visual Studio 2005 abgerufen wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppRelativeUrl">
+      <MemberSignature Language="C#" Value="public string AppRelativeUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AppRelativeUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IProjectItem.AppRelativeUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL für das Element relativ zum Entwurfshost ab.</summary>
+        <value>Die relative URL.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IProjectItem.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Elements ab.</summary>
+        <value>Name des Elements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IProjectItem Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IProjectItem Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IProjectItem.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IProjectItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf das enthaltende Element ab, sofern vorhanden.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.IProjectItem" />, wenn das aktuelle Element innerhalb einer anderen, andernfalls enthalten ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhysicalPath">
+      <MemberSignature Language="C#" Value="public string PhysicalPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhysicalPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IProjectItem.PhysicalPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad für ein Projektelement.</summary>
+        <value>Der Pfad für das Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.IProjectItem.PhysicalPath%2A> Eigenschaft gibt den physischen Pfad für ein bestimmtes Projektelement zurück, wenn der Entwurfshost dieses Feature unterstützt und es sinnvoll, einen physischen Pfad für das Element abzurufen. Wenn das Element eines Elements nicht auf einem Datenträger wie eine Website oder einer FTP-Site, die <xref:System.Web.UI.Design.IProjectItem.PhysicalPath%2A> Eigenschaft zurückgeben sollte `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

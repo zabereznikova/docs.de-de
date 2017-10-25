@@ -1,0 +1,166 @@
+<Type Name="FacetDescription" FullName="System.Data.Metadata.Edm.FacetDescription">
+  <TypeSignature Language="C#" Value="public sealed class FacetDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FacetDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.FacetDescription" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine Beschreibung des Facets.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public object DefaultValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.FacetDescription.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardwert eines Facets mit dieser Facetbeschreibung ab.</summary>
+        <value>Der Standardwert eines Facets mit dieser Facetbeschreibung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FacetName">
+      <MemberSignature Language="C#" Value="public string FacetName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FacetName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.FacetDescription.FacetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen dieses Facets ab.</summary>
+        <value>Der Name dieses Facets.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FacetType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EdmType FacetType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.EdmType FacetType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.FacetDescription.FacetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EdmType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ dieses Facets ab.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.EdmType" />-Objekt, das den Typ dieses Facets darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConstant">
+      <MemberSignature Language="C#" Value="public bool IsConstant { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConstant" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.FacetDescription.IsConstant" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Wert dieses Facets eine Konstante ist.</summary>
+        <value>
+          <see langword="true" />Wenn dieses Facets eine Konstante ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequired">
+      <MemberSignature Language="C#" Value="public bool IsRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.FacetDescription.IsRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dieses Facet erforderlich ist.</summary>
+        <value>
+          <see langword="true" />Wenn dieses Facet erforderlich ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxValue">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; MaxValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MaxValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.FacetDescription.MaxValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Maximalwert für dieses Facet ab.</summary>
+        <value>Der Maximalwert für dieses Facet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinValue">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; MinValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MinValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.FacetDescription.MinValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Minimalwert für dieses Facet ab.</summary>
+        <value>Der Minimalwert für dieses Facet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.FacetDescription.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Namen dieses Facets zurück.</summary>
+        <returns>Der Name dieses Facets.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

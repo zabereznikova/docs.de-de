@@ -1,0 +1,167 @@
+<Type Name="UrlEditor" FullName="System.Web.UI.Design.UrlEditor">
+  <TypeSignature Language="C#" Value="public class UrlEditor : System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UrlEditor extends System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.UrlEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.UITypeEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Benutzeroberfläche zum Auswählen einer URL bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.UrlEditor>ist eine <xref:System.Drawing.Design.UITypeEditor> , ein Dialogfeld zum Auswählen einer URL bereitstellt.  
+  
+   
+  
+## Examples  
+ [!code-cpp[WebUITypeEditorsExample#1](~/samples/snippets/cpp/VS_Snippets_WebNet/WebUITypeEditorsExample/CPP/webcustomcontrol1.cpp#1)]
+ [!code-csharp[WebUITypeEditorsExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebUITypeEditorsExample/CS/webcustomcontrol1.cs#1)]
+ [!code-vb[WebUITypeEditorsExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebUITypeEditorsExample/VB/webcustomcontrol1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UrlEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.UrlEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.UrlEditor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="protected virtual string Caption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.UrlEditor.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschriftung ein, auf das Dialogfeld Auswahl angezeigt werden sollen.</summary>
+        <value>Die Beschriftung, die auf das Dialogfeld Auswahl angezeigt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditValue">
+      <MemberSignature Language="C#" Value="public override object EditValue (System.ComponentModel.ITypeDescriptorContext context, IServiceProvider provider, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EditValue(class System.ComponentModel.ITypeDescriptorContext context, class System.IServiceProvider provider, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.UrlEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Objekt, das verwendet werden kann, um die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <param name="provider">Ein Dienstobjekt, das über die Bearbeitung von Diensten abgerufen werden kann.</param>
+        <param name="value">Eine Instanz des Werts, die bearbeitet wird.</param>
+        <summary>Bearbeitet den Wert des angegebenen Objekts, wobei die Editor-Stil gebotenen die <see cref="M:System.Web.UI.Design.UrlEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" /> Methode.</summary>
+        <returns>Der neue Wert des Objekts. Wenn der Wert des Objekts nicht geändert hat, sollte diese Methode dasselbe Objekt zurück, das zuvor übergeben wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="protected virtual string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.UrlEditor.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Filterzeichenfolge für Dateinamen für den Editor ab. Dient zum Bestimmen der Elemente, die in der Liste der Dateien im Dialogfeld angezeigt werden.</summary>
+        <value>Eine Zeichenfolge, die Informationen im Dialogfeld verfügbaren Optionen zum Filtern von Dateien enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.UrlEditor.Filter%2A> Eigenschaft gibt eine Filterzeichenfolge für alle Dateien (*.\*).  
+  
+ Eine Filterzeichenfolge enthält eine oder mehrere Filteroptionen an. Jede Filteroption enthält eine Beschreibung des Filters, gefolgt von der senkrechte Strich (&#124;) und das Filtermuster. Die Zeichenfolgen für die verschiedenen Filteroptionen werden durch den senkrechten Strich getrennt.  
+  
+ Im folgenden finden ein Beispiel für eine Filterzeichenfolge an, die zwei Filteroptionen enthält:  
+  
+ "`Text Files (*.txt)|*.txt|All Files (*.*)|*.*`".  
+  
+ Sie können mehrere Filtermuster in einer Filteroption angeben, durch das Filtermuster durch Semikolons trennen. Im folgenden finden ein Beispiel für eine Filterzeichenfolge an, in der die erste Filteroption drei Filtermuster angibt:  
+  
+ "`Text Files(*.txt;*.text;*.lst)|*.txt;*.text;*.lst|All Files (*.*)|*.*`".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditStyle">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Design.UITypeEditorEditStyle GetEditStyle (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Design.UITypeEditorEditStyle GetEditStyle(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.UrlEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Objekt, das verwendet werden kann, um die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <summary>Ruft den Bearbeitungsstil ab der <see cref="M:System.Web.UI.Design.UrlEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" /> Methode.</summary>
+        <returns>Eines der <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> Werte, der angibt, die bereitgestellten Bearbeitung zu formatieren. Diese Methode gibt zurück, wenn die Methode nicht unterstützt wird, <see cref="F:System.Drawing.Design.UITypeEditorEditStyle.None" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.Design.UrlBuilderOptions Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.Design.UrlBuilderOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.UrlEditor.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.UrlBuilderOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Optionen für die URL-Generator verwenden.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.UrlBuilderOptions" /> , die angibt, dass der Optionen für die URL-Generator verwenden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

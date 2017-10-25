@@ -1,0 +1,181 @@
+<Type Name="IRawElementProviderSimple" FullName="System.Windows.Automation.Provider.IRawElementProviderSimple">
+  <TypeSignature Language="C#" Value="public interface IRawElementProviderSimple" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRawElementProviderSimple" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IRawElementProviderSimple" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("d6dd68d1-86fd-4332-8666-9abedea2d24c")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Methoden und Eigenschaften bereit, die grundlegende Informationen zu einem Benutzeroberflächenelement verfügbar machen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle kann für Benutzeroberflächenautomatisierungs-Anbieter für einfache Elemente wie z. B. Schaltflächen implementiert werden. Sie können auch auf Anbieter implementiert werden, die zusätzliche Eigenschaften oder Steuerelementmuster beitragen oder vorhandene Eigenschaften oder Steuerelementmuster für ein Element aus, die bereits einen Standardanbieter überschrieben wird.  
+  
+ Anbieter für komplexe Elemente müssen implementieren <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> oder <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetPatternProvider">
+      <MemberSignature Language="C#" Value="public object GetPatternProvider (int patternId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetPatternProvider(int32 patternId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="patternId">Der Bezeichner des Musters.</param>
+        <summary>Ruft ein Objekt, das Unterstützung für ein Steuerelementmuster auf bietet eine [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Element.</summary>
+        <returns>Objekt, das die Musterschnittstelle implementiert bzw. <see langword="null" /> , wenn das Muster nicht unterstützt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> für einen Anbieter, die unterstützt nur <xref:System.Windows.Automation.InvokePattern>.  
+  
+ [!code-csharp[UIAProvider_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#101)]
+ [!code-vb[UIAProvider_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAProvider_snip/VisualBasic/FragmentRoot.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValue">
+      <MemberSignature Language="C#" Value="public object GetPropertyValue (int propertyId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetPropertyValue(int32 propertyId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="propertyId">Der Eigenschaftenbezeichner.</param>
+        <summary>Ruft den Wert einer Eigenschaft ab, die vom Benutzeroberflächen-Automatisierungsanbieter unterstützt wird.</summary>
+        <returns>Der Wert der Eigenschaft oder ein <see langword="null" /> , wenn die Eigenschaft von diesem Anbieter nicht unterstützt wird oder <see cref="F:System.Windows.Automation.AutomationElementIdentifiers.NotSupported" /> wenn überhaupt nicht unterstützt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Anbieter sollte zurückgeben <xref:System.Windows.Automation.AutomationElementIdentifiers.NotSupported> nur, wenn den Eigenschaftswert explizit ausgeblendet ist und die Anforderung sollte nicht über andere Anbieter übergeben werden soll.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine Implementierung von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> für einen benutzerdefinierten Schaltflächen-Steuerelements.  
+  
+ [!code-csharp[UIAProvider_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#102)]
+ [!code-vb[UIAProvider_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAProvider_snip/VisualBasic/FragmentRoot.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostRawElementProvider">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple HostRawElementProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Provider.IRawElementProviderSimple HostRawElementProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Basisanbieter für dieses Element ab.</summary>
+        <value>Der Basisanbieter oder <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist der Benutzeroberflächenautomatisierungs-Anbieter für das Fenster eines benutzerdefinierten Steuerelements. [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]verwendet diesen Anbieter in Kombination mit der Implementierung eines Anbieters für ein in einem Fenster gehostetes Steuerelement. Beispielsweise wird den Laufzeitbezeichner des Elements vom Hostanbieter abgerufen.  
+  
+ Ein Hostanbieter muss in einem der folgenden Fälle zurückgegeben werden:  
+  
+-   Dieses Element ist der Stamm eines Fragments.  
+  
+-   Das Element ist ein einfaches Element z. B. eine Schaltfläche.  
+  
+-   Der Anbieter ist ein Platzhalter für Position neu festlegt.  
+  
+ In anderen Fällen sollte die Eigenschaft zurückgeben `null`.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode zeigt eine Implementierung von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> für ein Fragmentstamm, die in einem Windows Form gehostet wird.  
+  
+ [!code-csharp[UIAProvider_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#103)]
+ [!code-vb[UIAProvider_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAProvider_snip/VisualBasic/FragmentRoot.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderOptions">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ProviderOptions ProviderOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.Provider.ProviderOptions ProviderOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRawElementProviderSimple.ProviderOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ProviderOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der Merkmale des Benutzeroberflächenautomatisierungs-Anbieters angibt, z. B., ob es sich um einen client- oder serverseitigen Anbieter handelt.</summary>
+        <value>Entweder <see cref="F:System.Windows.Automation.Provider.ProviderOptions.ClientSideProvider" /> oder <see cref="F:System.Windows.Automation.Provider.ProviderOptions.ServerSideProvider" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]verschiedene Typen von Anbietern behandelt anders. Z. B. auf alle Lauschen Benutzeroberflächenautomatisierungs-Client-Prozesse werden Ereignisse von serverseitige Anbieter übertragen Ereignisse von clientseitigen Anbietern verbleiben jedoch in diesem Clientprozess.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode zeigt eine Implementierung von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.ProviderOptions%2A> für einen serverseitigen Benutzeroberflächenautomatisierungs-Anbieter.  
+  
+ [!code-csharp[UIAProvider_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#104)]
+ [!code-vb[UIAProvider_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAProvider_snip/VisualBasic/FragmentRoot.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

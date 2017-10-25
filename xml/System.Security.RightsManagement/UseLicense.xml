@@ -1,0 +1,254 @@
+<Type Name="UseLicense" FullName="System.Security.RightsManagement.UseLicense">
+  <TypeSignature Language="C#" Value="public class UseLicense" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UseLicense extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.RightsManagement.UseLicense" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical(System.Security.SecurityCriticalScope.Everything)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Lizenz dar, die Zugriff auf durch die Rechteverwaltung geschützte Inhalte gewährt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie bei anderen <xref:System.Security.RightsManagement> Typen <xref:System.Security.RightsManagement.UseLicense> kann nur in Anwendungen mit voller Vertrauenswürdigkeit verwendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie mithilfe dieser Klasse Initialisieren einer <xref:System.Security.RightsManagement.PublishLicense>.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubencrypt)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubencrypt)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UseLicense (string useLicense);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string useLicense) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.UseLicense.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="useLicense" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="useLicense">Serialisiert eine Nutzungslizenz in [!INCLUDE[TLA#tla_xrml](~/includes/tlasharptla-xrml-md.md)] Form.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.RightsManagement.UseLicense" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="useLicense" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.RightsManagement.RightsManagementException">
+          <paramref name="useLicense" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationData">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; ApplicationData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; ApplicationData" />
+      <MemberSignature Language="DocId" Value="P:System.Security.RightsManagement.UseLicense.ApplicationData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Wörterbuch, das Schlüssel/Wert-Paare aus die publishing Anwendung an die verarbeitende Anwendung übergeben enthält Daten ab.</summary>
+        <value>Das Wörterbuch, das Schlüssel/Wert-Paare enthält Daten, die von die publishing Anwendung an die verarbeitende Anwendung übergeben werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Schlüssel-/Wertepaar, das von einem Rights Management Services (RMS)-Server verarbeitet wird, ist das Zeichenfolgenpaar "Allow_Server_Editing" / "True".  Bei die Ausstellung Lizenz "Allow_Server_Editing" / "True" festgelegt ist, den Dienst oder einem vertrauenswürdigen Dienst kann des Inhaltsschlüssels wiederzuverwenden.  
+  
+ Das Schlüssel/Wert-Paar "NOLICCACHE" / "1" steuert die Richtlinie des verarbeitenden Anwendungen einbetten Lizenz.  Wenn "NOLICCACHE" / "1" festgelegt ist, und Anwendungen erwartungsgemäß keine Lizenz in das Dokument mit rechteverwaltung einbetten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bind">
+      <MemberSignature Language="C#" Value="public System.Security.RightsManagement.CryptoProvider Bind (System.Security.RightsManagement.SecureEnvironment secureEnvironment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.RightsManagement.CryptoProvider Bind(class System.Security.RightsManagement.SecureEnvironment secureEnvironment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.UseLicense.Bind(System.Security.RightsManagement.SecureEnvironment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.CryptoProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="secureEnvironment" Type="System.Security.RightsManagement.SecureEnvironment" />
+      </Parameters>
+      <Docs>
+        <param name="secureEnvironment">Die Umgebung, an die die Lizenz gebunden wird.</param>
+        <summary>Bindet die Lizenz für einen bestimmten <see cref="T:System.Security.RightsManagement.SecureEnvironment" />.</summary>
+        <returns>Ein <see cref="T:System.Security.RightsManagement.CryptoProvider" /> Instanz, wenn die lizenzbindung erfolgreich ausgeführt wurde; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachdem die Lizenz an eine sichere Umgebung gebunden ist, kann die Anwendung untersuchen und die durch die Lizenzbedingungen gewährten Verwendungsrechten Übung.  
+  
+ Das zurückgegebene <xref:System.Security.RightsManagement.CryptoProvider> Instanz bietet, Entschlüsselung und Zugriff auf die rechteverwaltung geschützte Inhalte.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Methode verwendet zum Initialisieren einer <xref:System.Security.RightsManagement.CryptoProvider>.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubencrypt)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubencrypt)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="secureEnvironment" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentId">
+      <MemberSignature Language="C#" Value="public Guid ContentId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ContentId" />
+      <MemberSignature Language="DocId" Value="P:System.Security.RightsManagement.UseLicense.ContentId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vom Herausgeber erstellten Inhaltsbezeichner ab.</summary>
+        <value>Der Inhaltsbezeichner vom Verleger erstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.RightsManagement.UseLicense.ContentId%2A>wird vom Verleger erstellt und kann verwendet werden, um Inhalt an entsprechen einem <xref:System.Security.RightsManagement.UseLicense> und <xref:System.Security.RightsManagement.PublishLicense>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object x);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.UseLicense.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die Lizenz, verglichen werden soll.</param>
+        <summary>Gibt an, ob diese Lizenz, mit einem anderen entspricht Lizenz.</summary>
+        <returns>
+          <see langword="true" />Wenn beide Lizenzen äquivalent sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.RightsManagement.UseLicense.Equals%2A>Tests für Äquivalenz der serialisierten [!INCLUDE[TLA#tla_xrml](~/includes/tlasharptla-xrml-md.md)] Zeichenfolgen angegeben, um die <xref:System.Security.RightsManagement.UseLicense.%23ctor%2A> Konstruktoren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.UseLicense.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den dieser Lizenz zugeordneten Hashcode zurück.</summary>
+        <returns>Ein Hashcode für diese Lizenz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Hashcode basiert auf dem serialisierten [!INCLUDE[TLA#tla_xrml](~/includes/tlasharptla-xrml-md.md)] Zeichenfolge übergeben, um die <xref:System.Security.RightsManagement.UseLicense.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.Security.RightsManagement.ContentUser Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.RightsManagement.ContentUser Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Security.RightsManagement.UseLicense.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.ContentUser</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Besitzer der Lizenz ab.</summary>
+        <value>Der Besitzer der Lizenz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Lizenz Besitzer abgerufen wird aus der serialisierten [!INCLUDE[TLA#tla_xrml](~/includes/tlasharptla-xrml-md.md)] Zeichenfolge übergeben, um die <xref:System.Security.RightsManagement.UseLicense.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.UseLicense.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die serialisierte [!INCLUDE[TLA2#tla_xrml](~/includes/tla2sharptla-xrml-md.md)] Zeichenfolge, mit der diese Lizenz erstellt.</summary>
+        <returns>Das serialisierte [!INCLUDE[TLA#tla_xrml](~/includes/tlasharptla-xrml-md.md)] Zeichenfolge ursprünglich übergeben, um die <see cref="M:System.Security.RightsManagement.UseLicense.#ctor(System.String)" /> Konstruktor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

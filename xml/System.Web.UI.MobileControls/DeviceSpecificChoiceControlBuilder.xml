@@ -1,0 +1,153 @@
+<Type Name="DeviceSpecificChoiceControlBuilder" FullName="System.Web.UI.MobileControls.DeviceSpecificChoiceControlBuilder">
+  <TypeSignature Language="C#" Value="public class DeviceSpecificChoiceControlBuilder : System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DeviceSpecificChoiceControlBuilder extends System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.DeviceSpecificChoiceControlBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert einen benutzerdefinierten Persistenzformat für die <see cref="T:System.Web.UI.MobileControls.DeviceSpecificChoice" /> Klasse. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET-Serversteuerelemente können angepasste Persistenzformate mithilfe ihrer eigenen Steuerelementgenerator implementieren. Dies erfolgt durch eine Steuerelement-Generatorklasse erstellen und die Klasse ein Attribut-Generators hinzugefügt. Steuerelement-Generator-Objekte werden verwendet, wenn die Seite analysiert und kompiliert wird. Weitere Informationen finden Sie unter [Implementieren von benutzerdefinierter Persistenz](http://msdn.microsoft.com/en-us/ac8e85a9-422e-49b8-98c0-5ade5853ea7c).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeviceSpecificChoiceControlBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceSpecificChoiceControlBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.DeviceSpecificChoiceControlBuilder" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendLiteralString">
+      <MemberSignature Language="C#" Value="public override void AppendLiteralString (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AppendLiteralString(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceSpecificChoiceControlBuilder.AppendLiteralString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Die literalen Inhalt einem Steuerelement hinzu.</param>
+        <summary>Fügt den angegebenen literalen Inhalt einem Steuerelement hinzu. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSubBuilder">
+      <MemberSignature Language="C#" Value="public override void AppendSubBuilder (System.Web.UI.ControlBuilder subBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AppendSubBuilder(class System.Web.UI.ControlBuilder subBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceSpecificChoiceControlBuilder.AppendSubBuilder(System.Web.UI.ControlBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subBuilder" Type="System.Web.UI.ControlBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="subBuilder">Ein <see cref="T:System.Web.UI.ControlBuilder" />-Objekt.</param>
+        <summary>Fügt dem <see cref="T:System.Web.UI.ControlBuilder" />-Objekt Generatoren für alle untergeordneten Steuerelemente hinzu, die zu dem Containersteuerelement gehören. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildControlType">
+      <MemberSignature Language="C#" Value="public override Type GetChildControlType (string tagName, System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetChildControlType(string tagName, class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceSpecificChoiceControlBuilder.GetChildControlType(System.String,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="tagName">Eine Zeichenfolge, die den Namen des Tags darstellt.</param>
+        <param name="attributes">Ein <see cref="T:System.Collections.IDictionary" />-Objekt.</param>
+        <summary>Ruft den Typ für das Steuerelement untergeordnete Steuerelemente ab. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Keine</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public override void Init (System.Web.UI.TemplateParser parser, System.Web.UI.ControlBuilder parentBuilder, Type type, string tagName, string id, System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Init(class System.Web.UI.TemplateParser parser, class System.Web.UI.ControlBuilder parentBuilder, class System.Type type, string tagName, string id, class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceSpecificChoiceControlBuilder.Init(System.Web.UI.TemplateParser,System.Web.UI.ControlBuilder,System.Type,System.String,System.String,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parser" Type="System.Web.UI.TemplateParser" />
+        <Parameter Name="parentBuilder" Type="System.Web.UI.ControlBuilder" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="parser">Der Parser Vorlagenobjekt verantwortlich für die Analyse des Steuerelements.</param>
+        <param name="parentBuilder">Der Generator Steuerelementobjekt verantwortlich für das übergeordnete Steuerelement erstellen. Wenn die <see cref="T:System.Web.UI.ControlBuilder" /> ist ein <see cref="T:System.Web.UI.MobileControls.DeviceSpecificControlBuilder" /> -Objekt, eine Ausnahme ausgelöst.</param>
+        <param name="type">Der Typ, der dem Steuerelement zugewiesen ist, die vom Generator erstellt wird.</param>
+        <param name="tagName">Der Name des zu erstellenden Tags. Dadurch wird den Generator, der mehrere Transpondertypen unterstützen.</param>
+        <param name="id">Die <see cref="P:System.Web.UI.ControlBuilder.ID" /> -Attribut, das dem Steuerelement zugewiesen ist.</param>
+        <param name="attributes">Die <see cref="T:System.Collections.IDictionary" /> -Objekt, das die angegebenen Tagattribute enthält.</param>
+        <summary>Tritt auf, wenn das Serversteuerelement initialisiert wird, also der erste Schritt im Lebenszyklus. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird während der Analyse durch das ASP.NET-Seitenframework aufgerufen und sollte nicht direkt im Code aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="parentBuilder" /> ist kein <see cref="T:System.Web.UI.MobileControls.DeviceSpecificControlBuilder" />-Objekt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

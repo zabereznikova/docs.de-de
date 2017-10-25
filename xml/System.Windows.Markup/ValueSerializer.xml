@@ -1,0 +1,464 @@
+<Type Name="ValueSerializer" FullName="System.Windows.Markup.ValueSerializer">
+  <TypeSignature Language="C#" Value="public abstract class ValueSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract ValueSerializer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.ValueSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Abstrakte Klasse, die das Konvertierungsverhalten für die Serialisierung aus einer Objektdarstellung definiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolge, die ein Konverter für die Serialisierung gibt verlustfrei sein muss, und der Konverter muss immer die gleiche Zeichenfolge für einen bestimmten Wert zurückgeben.  Wenn einen Typkonverter (abgeleitet <xref:System.ComponentModel.TypeConverter>) nicht erfüllt diese Anforderungen in seiner `ConvertTo` Implementierungen für die Zeichenfolgenausgabe, die eine benutzerdefinierte <xref:System.Windows.Markup.ValueSerializer> muss deklariert werden. Entweder die <xref:System.Windows.Markup.ValueSerializer> sollte zu erfüllen der Anforderungen, oder ein NULL-Wert <xref:System.Windows.Markup.ValueSerializer> mit dem Typ verknüpft werden sollen. Ein <xref:System.Windows.Markup.ValueSerializer> bezieht sich auf einen Typ durch Anwenden der <xref:System.Windows.Markup.ValueSerializerAttribute> Attribut.  
+  
+ Ein NULL-Wert <xref:System.Windows.Markup.ValueSerializer> gibt an, der Typkonverter für die Convert-zeichenfolgenkonvertierungen aus dem Objektdiagramm ignoriert werden sollen.  
+  
+> [!IMPORTANT]
+>  Implementierung von <xref:System.Windows.Markup.ValueSerializer> sollte das Auslösen von Ausnahmen zu vermeiden. Ausgelöste Ausnahmen können die Serialisierung beendet.  
+  
+ <xref:System.Windows.Markup.IValueSerializerContext>für eine <xref:System.Windows.Markup.ValueSerializer> und seine APIs ist analog zu <xref:System.ComponentModel.ITypeDescriptorContext> für eine <xref:System.ComponentModel.TypeConverter>. In der Tat <xref:System.Windows.Markup.IValueSerializerContext> erbt <xref:System.ComponentModel.ITypeDescriptorContext>. Wenn eine <xref:System.Windows.Markup.ValueSerializer> abgeleiteten Klasse API aufgerufen wird, der Aufrufer (normalerweise ein Serialisierungsprozess) übergibt einen Kontext, der bestimmte Dienste bereitstellen kann. Aufgrund der allgemeinen Leitfaden, der eine <xref:System.Windows.Markup.ValueSerializer> dürfen keine Ausnahmen ausgelöst. Fehler beim Zurückgeben eines bestimmten Diensts aus dem Kontext muss auch keine Ausnahmen auslöst.  
+  
+ In früheren Versionen von .NET Framework war diese Klasse in der WPF-spezifischen Assembly WindowsBase. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.ValueSerializer> befindet sich in der System.Xaml-Assembly. Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ValueSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.ValueSerializer" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text dieses Konstruktors ist leer. die <xref:System.Windows.Markup.ValueSerializer> Klasse enthält keine Werte, die Initialisierung erfordern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFromString">
+      <MemberSignature Language="C#" Value="public virtual bool CanConvertFromString (string value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanConvertFromString(string value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializer.CanConvertFromString(System.String,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die Zeichenfolge, die für die Konvertierung ausgewertet werden soll.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Bestimmt beim Überschreiben in einer abgeleiteten Klasse, ob die angegebene <see cref="T:System.String" /> in eine Instanz des Typs konvertiert werden kann, den die Implementierung von <see cref="T:System.Windows.Markup.ValueSerializer" /> unterstützt.</summary>
+        <returns>
+          <see langword="true" />, wenn der Wert konvertiert werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die basisimplementierung immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertToString">
+      <MemberSignature Language="C#" Value="public virtual bool CanConvertToString (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanConvertToString(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializer.CanConvertToString(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das für die Konvertierung ausgewertet werden soll.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Bestimmt beim Überschreiben in einer abgeleiteten Klasse, ob das angegebene Objekt in eine <see cref="T:System.String" /> konvertiert werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der <paramref name="value" /> in eine <see cref="T:System.String" /> konvertiert werden kann, andernfalls <see langword="false." />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die basisimplementierung immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFromString">
+      <MemberSignature Language="C#" Value="public virtual object ConvertFromString (string value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertFromString(string value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializer.ConvertFromString(System.String,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende Zeichenfolge.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Konvertiert beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.String" /> in eine Instanz des Typs, den die Implementierung von <see cref="T:System.Windows.Markup.ValueSerializer" /> unterstützt.</summary>
+        <returns>Eine neue Instanz des Typs, der von der Implementierung von <see cref="T:System.Windows.Markup.ValueSerializer" /> auf Basis des bereitgestellten <paramref name="value" />s unterstützt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die basisimplementierung immer löst eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" /> kann nicht konvertiert werden.</exception>
+        <block subset="none" type="overrides">
+          <para>Vermeiden Sie das Auslösen von Ausnahmen von Implementierungen. Siehe <see cref="T:System.Windows.Markup.ValueSerializer" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToString">
+      <MemberSignature Language="C#" Value="public virtual string ConvertToString (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ConvertToString(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializer.ConvertToString(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das in eine Zeichenfolge zu konvertierende Objekt.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Konvertiert das angegebene Objekt beim Überschreiben in einer abgeleiteten Klasse in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des angegebenen Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die basisimplementierung immer löst eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" /> kann nicht konvertiert werden.</exception>
+        <block subset="none" type="overrides">
+          <para>Vermeiden Sie das Auslösen von Ausnahmen von Implementierungen. Siehe <see cref="T:System.Windows.Markup.ValueSerializer" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConvertFromException">
+      <MemberSignature Language="C#" Value="protected Exception GetConvertFromException (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception GetConvertFromException(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializer.GetConvertFromException(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das nicht konvertiert werden konnte.</param>
+        <summary>Gibt eine Ausnahme zurück, wenn eine Konvertierung nicht erfolgen kann.</summary>
+        <returns>Ein <see cref="T:System.Exception" /> Objekt für die auszulösende Ausnahme, wenn eine <see langword="ConvertFrom" /> Konvertierung kann nicht ausgeführt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die tatsächlichen `throw` Schlüsselwort wird nicht von dieser Methode aufgerufen, daher die typische Nutzung darin `throw GetConvertFromException` (mit Parametern, die bereitgestellt werden).  
+  
+ Die spezifische Ausnahme zurückgegeben wird <xref:System.InvalidOperationException>, mit `value` in der Ausnahmemeldung übergeben. Das Muster für die Verwendung entspricht derjenigen Ausnahme Hilfsprogrammen <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConvertToException">
+      <MemberSignature Language="C#" Value="protected Exception GetConvertToException (object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception GetConvertToException(object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializer.GetConvertToException(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das nicht konvertiert werden konnte.</param>
+        <param name="destinationType">Ein Typ, der die Art der angestrebten Konvertierung darstellt.</param>
+        <summary>Gibt eine Ausnahme zurück, wenn eine Konvertierung nicht erfolgen kann.</summary>
+        <returns>Ein <see cref="T:System.Exception" /> Objekt für die auszulösende Ausnahme, wenn eine <see langword="ConvertTo" /> Konvertierung kann nicht ausgeführt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die tatsächlichen `throw` Schlüsselwort wird nicht von dieser Methode aufgerufen, daher die typische Nutzung darin `throw GetConvertToException` (mit `value` Parameter bereitgestellt).  
+  
+ Die spezifische Ausnahme zurückgegeben wird <xref:System.InvalidOperationException>, mit `value` in der Ausnahmemeldung übergeben. Das Muster für die Verwendung entspricht derjenigen Ausnahme Hilfsprogrammen <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSerializerFor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Markup.ValueSerializer GetSerializerFor (System.ComponentModel.PropertyDescriptor descriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Markup.ValueSerializer GetSerializerFor(class System.ComponentModel.PropertyDescriptor descriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializer.GetSerializerFor(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.ValueSerializer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="descriptor" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="descriptor">Der CLR-Eigenschaftendeskriptor für die Eigenschaft, die serialisiert werden soll.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Markup.ValueSerializer" /> für eine Eigenschaft durch übergeben einen CLR-Eigenschaftendeskriptor für die Eigenschaft deklariert.</summary>
+        <returns>Das Serialisierungsprogramm, das der angegebenen Eigenschaft zugeordnet ist. Gelegten <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Markup.ValueSerializer> für eine Eigenschaft oder für einen Typ, der als Wert für eine Eigenschaft verwendet wird, wird angegeben, durch Anwenden der <xref:System.Windows.Markup.ValueSerializerAttribute> Attribut in der Deklaration der Eigenschaft oder einen Typ. Die <xref:System.Windows.Markup.ValueSerializer.GetSerializerFor%2A> Methode ist eine Hilfsprogrammmethode, die die CLR-Typinformationen System liest und gibt eine neue <xref:System.Windows.Markup.ValueSerializer> Klasse basiert auf dem Attribut, wenn für die Eigenschaft gefunden, oder dann, wenn auf den Typ der Eigenschaft gefunden. `null`kann zurückgegeben werden, wenn kein solches Serialisierungsprogramm vorhanden ist. `null`kann auch zurückgegeben, wenn ein Typ oder eine Eigenschaft mit einem Null-Wert absichtlich attributiert ist <xref:System.Windows.Markup.ValueSerializerAttribute>.  
+  
+ Einen anderen Modus, <xref:System.Windows.Markup.ValueSerializer.GetSerializerFor%2A> unterstützt wird die Rückgabe der internen `TypeConverterValueSerializer` Klasse, die eine <xref:System.Windows.Markup.ValueSerializer> Implementierung, die dient als Wrapper für eine <xref:System.ComponentModel.TypeConverter> und übersetzt die `Convert` Methoden, um `Convert*String` Methoden (z. B. <xref:System.ComponentModel.TypeConverter.ConvertTo%2A?displayProperty=nameWithType>wird aufgerufen, mit der Eingabe der <xref:System.String> geben, und führt zur Verwendung <xref:System.Windows.Markup.ValueSerializer.ConvertToString%2A>. Dies erfolgt nur in Fällen, in dem alle der folgenden erfüllt sind:  
+  
+-   Ein <xref:System.ComponentModel.TypeConverterAttribute> auf die relevante Eigenschaft oder die relevante Eigenschaft Typ gefunden wird.  
+  
+-   Das angezeigte <xref:System.ComponentModel.TypeConverter> erfolgreich erstellt werden können.  
+  
+-   Die <xref:System.ComponentModel.TypeConverter> gibt `true` für <xref:System.ComponentModel.TypeConverter.ConvertTo%2A?displayProperty=nameWithType>Namens verweisen auf die <xref:System.String> Typ.  
+  
+-   Die <xref:System.ComponentModel.TypeConverter> gibt `true` für <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A?displayProperty=nameWithType>Namens verweisen auf die <xref:System.String> Typ.  
+  
+-   Die <xref:System.ComponentModel.TypeConverter> gibt `true` für <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A?displayProperty=nameWithType>Namens verweisen auf die <xref:System.String> Typ.  
+  
+> [!NOTE]
+>  Im folgenden sind Sonderfälle: <xref:System.DateTime> Typen geben einen <xref:System.Windows.Markup.DateTimeValueSerializer>; <xref:System.String> Rückgabetypen ein internes, aber funktionale Serialisierungsprogramm (`StringValueSerializer`).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="descriptor" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSerializerFor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Markup.ValueSerializer GetSerializerFor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Markup.ValueSerializer GetSerializerFor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializer.GetSerializerFor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.ValueSerializer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ zum Abrufen der <see cref="T:System.Windows.Markup.ValueSerializer" /> für.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Markup.ValueSerializer" /> für den angegebenen Typ deklariert.</summary>
+        <returns>Das Serialisierungsprogramm, das dem angegebenen Typ zugeordnet ist. Gelegten <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Markup.ValueSerializer> für ein Typ, durch Anwenden angegeben ist der <xref:System.Windows.Markup.ValueSerializerAttribute> Attribut für die Deklaration des Typs. Die <xref:System.Windows.Markup.ValueSerializer.GetSerializerFor%2A> Methode ist eine Hilfsprogrammmethode, die die CLR-Typinformationen System liest und gibt eine neue <xref:System.Windows.Markup.ValueSerializer> Klasse basiert auf dem Attribut, wenn gefunden, auf dem angegebenen `type`. `null`kann zurückgegeben werden, wenn kein solches Serialisierungsprogramm vorhanden ist. `null`kann auch zurückgegeben, wenn ein Typ mit einem Null-Wert absichtlich attributiert ist <xref:System.Windows.Markup.ValueSerializerAttribute>.  
+  
+ Einen anderen Modus, <xref:System.Windows.Markup.ValueSerializer.GetSerializerFor%2A> unterstützt wird die Rückgabe der internen `TypeConverterValueSerializer` Klasse, die eine <xref:System.Windows.Markup.ValueSerializer> Implementierung, die dient als Wrapper für eine <xref:System.ComponentModel.TypeConverter> und übersetzt die `Convert` Methoden, um `Convert*String` Methoden (z. B. <xref:System.ComponentModel.TypeConverter.ConvertTo%2A?displayProperty=nameWithType>wird aufgerufen, mit der Eingabe der <xref:System.String> geben, und führt zur Verwendung <xref:System.Windows.Markup.ValueSerializer.ConvertToString%2A>. Dies erfolgt nur in Fällen, in dem alle der folgenden erfüllt sind:  
+  
+-   Ein <xref:System.ComponentModel.TypeConverterAttribute> befindet sich auf `type`.  
+  
+-   Das angezeigte <xref:System.ComponentModel.TypeConverter> erfolgreich erstellt werden können.  
+  
+-   Die <xref:System.ComponentModel.TypeConverter> gibt `true` für <xref:System.ComponentModel.TypeConverter.ConvertTo%2A?displayProperty=nameWithType>Namens verweisen auf die <xref:System.String> Typ.  
+  
+-   Die <xref:System.ComponentModel.TypeConverter> gibt `true` für <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A?displayProperty=nameWithType>Namens verweisen auf die <xref:System.String> Typ.  
+  
+-   Die <xref:System.ComponentModel.TypeConverter> gibt `true` für <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A?displayProperty=nameWithType>Namens verweisen auf die <xref:System.String> Typ.  
+  
+> [!NOTE]
+>  Im folgenden sind Sonderfälle: <xref:System.DateTime> Typen geben einen <xref:System.Windows.Markup.DateTimeValueSerializer>; <xref:System.String> Rückgabetypen ein internes, aber funktionale Serialisierungsprogramm (`StringValueSerializer`).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSerializerFor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Markup.ValueSerializer GetSerializerFor (System.ComponentModel.PropertyDescriptor descriptor, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Markup.ValueSerializer GetSerializerFor(class System.ComponentModel.PropertyDescriptor descriptor, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializer.GetSerializerFor(System.ComponentModel.PropertyDescriptor,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.ValueSerializer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="descriptor" Type="System.ComponentModel.PropertyDescriptor" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="descriptor">Der Deskriptor für die Eigenschaft, die serialisiert werden soll.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Markup.ValueSerializer" /> für die angegebene Eigenschaft unter Verwendung des angegebenen Kontexts deklariert.</summary>
+        <returns>Das Serialisierungsprogramm, das der angegebenen Eigenschaft zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Statt der vertrauenden Seite ausschließlich auf Attribute derjenigen, die in dem CLR-Typsystem, diese Überladung verwendet die `context` als Dienst und ruft die dienstimplementierung des <xref:System.Windows.Markup.IValueSerializerContext.GetValueSerializerFor%2A?displayProperty=nameWithType>. Die <xref:System.Windows.Markup.IValueSerializerContext.GetValueSerializerFor%2A?displayProperty=nameWithType> Implementierung würde auch in der Regel beruhen auf den `descriptor`, aber möglicherweise besonderes Verhalten für bestimmte Kontexte implementieren.  
+  
+ Diese Methode sollte aufgerufen werden, wenn der Aufrufer einen verfügbaren aufweist <xref:System.Windows.Markup.IValueSerializerContext> von einem Dienst.  Dadurch wird sichergestellt, dass die richtige <xref:System.Windows.Markup.ValueSerializer> wird für den spezifischen Kontext zurückgegeben.  
+  
+ Wenn der Kontext gibt `null` aus seiner <xref:System.Windows.Markup.IValueSerializerContext.GetValueSerializerFor%2A?displayProperty=nameWithType> für den angegebenen `descriptor`, oder wenn der Kontext, die Sie angeben, ist `null`, wird das Verhalten identisch mit einem Aufruf der <xref:System.Windows.Markup.ValueSerializer.GetSerializerFor%28System.ComponentModel.PropertyDescriptor%29> überladen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="descriptor" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSerializerFor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Markup.ValueSerializer GetSerializerFor (Type type, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Markup.ValueSerializer GetSerializerFor(class System.Type type, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializer.GetSerializerFor(System.Type,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.ValueSerializer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ zum Abrufen der <see cref="T:System.Windows.Markup.ValueSerializer" /> für.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Markup.ValueSerializer" /> für den angegebenen Typ unter Verwendung des angegebenen Kontexts deklariert.</summary>
+        <returns>Das Serialisierungsprogramm, das dem angegebenen Typ zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Statt der vertrauenden Seite ausschließlich auf Attribute derjenigen, die in dem CLR-Typsystem, diese Überladung verwendet die `context` als Dienst und ruft die dienstimplementierung des <xref:System.Windows.Markup.IValueSerializerContext.GetValueSerializerFor%2A?displayProperty=nameWithType>. Die <xref:System.Windows.Markup.IValueSerializerContext.GetValueSerializerFor%2A?displayProperty=nameWithType> Implementierung würde auch in der Regel beruhen auf den `type`, aber möglicherweise besonderes Verhalten für bestimmte Kontexte implementieren.  
+  
+ Diese Methode sollte aufgerufen werden, wenn der Aufrufer einen verfügbaren aufweist <xref:System.Windows.Markup.IValueSerializerContext> von einem Dienst. Dadurch wird sichergestellt, dass die richtige <xref:System.Windows.Markup.ValueSerializer> wird für den spezifischen Kontext zurückgegeben.  
+  
+ Wenn der Kontext gibt `null` aus seiner <xref:System.Windows.Markup.IValueSerializerContext.GetValueSerializerFor%2A?displayProperty=nameWithType> für den angegebenen `type`, oder wenn der Kontext, die Sie angeben, ist `null`, wird das Verhalten identisch mit einem Aufruf der <xref:System.Windows.Markup.ValueSerializer.GetSerializerFor%28System.Type%29> überladen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeReferences">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;Type&gt; TypeReferences (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; TypeReferences(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializer.TypeReferences(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu serialisierende Wert.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Ruft eine Enumeration der Typen verweist die <see cref="T:System.Windows.Markup.ValueSerializer" />.</summary>
+        <returns>Die von diesem Serialisierungsprogramm konvertierten Typen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Typen eine <xref:System.Windows.Markup.ValueSerializer> konvertiert, die in der zurückgegebenen Enumeration eingeschlossen werden soll.  Dadurch wird ein Serialisierungsprogramm sicherstellen, dass ein Deserialisierungsprogramm verfügt, genügend Informationen zu den Objekttypen an, dass dieses Serialisierungsprogramm konvertiert.  
+  
+ Überschreiben diese Methode ist eines erweiterten Szenarios. Überschreiben darf nur sein erforderlich, wenn Sie ein System implementieren, in denen CLR System Besitzertyp-Eigenschaft typbeziehungen für einen XAML-Schemakontext verfügbar nicht genügend Informationen melden.  
+  
+## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
+ Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem implementiert ein internes Wertserialisierungsprogramm, die überschreibt <xref:System.Windows.Markup.ValueSerializer.TypeReferences%2A> , da eine Abhängigkeitseigenschaft ein Konzept hat, dass er Besitzer hinzugefügt haben, kann. [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]-Ausdrücke weisen auch eine besondere interne Behandlung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

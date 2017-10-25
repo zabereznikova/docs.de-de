@@ -1,0 +1,100 @@
+<Type Name="IDataSourceViewSchema" FullName="System.Web.UI.Design.IDataSourceViewSchema">
+  <TypeSignature Language="C#" Value="public interface IDataSourceViewSchema" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataSourceViewSchema" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IDataSourceViewSchema" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Satz von Methoden und Eigenschaften verwendet, um eine Datenquelle zu überprüfen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, in denen die <xref:System.Web.UI.Design.IDataSourceSchema> Klasse von benutzerdefiniertes Steuerelement-Designer-Komponenten zum Bereitstellen von Listen von Ansichten in einer Datenquelle für datengebundene Steuerelemente zur Entwurfszeit verwendet werden. In einer Klasse, die abgeleitet ist die <xref:System.Web.UI.Design.IDataSourceSchema>, verwenden Sie die <xref:System.Web.UI.Design.IDataSourceSchema.GetViews%2A> ein Array der abzurufenden Methode <xref:System.Web.UI.Design.IDataSourceViewSchema> Objekte.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceViewSchema[] GetChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IDataSourceViewSchema[] GetChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IDataSourceViewSchema.GetChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array ab, das die in der aktuellen Ansicht enthaltenen untergeordneten Ansichten darstellt.</summary>
+        <returns>Ein Array von <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" /> -Objekten, die in der aktuellen Ansicht enthaltenen untergeordneten Ansichten darstellen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.XmlDocumentSchema>-Klasse implementiert die <xref:System.Web.UI.Design.IDataSourceViewSchema>-Schnittstelle. Er verwendet die Implementierung von der <xref:System.Web.UI.Design.IDataSourceViewSchema.GetChildren%2A> Methode zum Erstellen eines Arrays von <xref:System.Web.UI.Design.IDataSourceViewSchema> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFields">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceFieldSchema[] GetFields ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IDataSourceFieldSchema[] GetFields() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IDataSourceViewSchema.GetFields" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceFieldSchema[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array mit Informationen zu den einzelnen Feldern in der Datenquelle ab.</summary>
+        <returns>Ein Array von <see cref="T:System.Web.UI.Design.IDataSourceFieldSchema" /> Objekten, die jedes der Felder in der Datenquelle darstellen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.DataSetSchema> -Klasse implementiert die <xref:System.Web.UI.Design.IDataSourceViewSchema> Schnittstelle; seiner Implementierung von der <xref:System.Web.UI.Design.DataSetViewSchema.GetFields%2A> Methode gibt ein Array von <xref:System.Web.UI.Design.DataSetFieldSchema> Objekte, von denen jede leitet sich von der <xref:System.Web.UI.Design.IDataSourceFieldSchema> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataSourceViewSchema.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Sicht ab.</summary>
+        <value>Der Name der Sicht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine <xref:System.Data.DataTable> -Objekt, diese Eigenschaft entspricht der <xref:System.Data.DataTable.TableName%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

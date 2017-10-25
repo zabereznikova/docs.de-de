@@ -1,0 +1,417 @@
+<Type Name="Thickness" FullName="System.Windows.Thickness">
+  <TypeSignature Language="C#" Value="public struct Thickness : IEquatable&lt;System.Windows.Thickness&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Thickness extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Windows.Thickness&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Thickness" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Windows.Thickness&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.ThicknessConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt die Stärke eines Rahmens um ein Rechteck.  Vier <see cref="T:System.Double" /> -Werte beschreiben die <see cref="P:System.Windows.Thickness.Left" />, <see cref="P:System.Windows.Thickness.Top" />, <see cref="P:System.Windows.Thickness.Right" />, und <see cref="P:System.Windows.Thickness.Bottom" /> Seiten des Rechtecks bzw..</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können angeben, <xref:System.Windows.Thickness> Werte auf zwei Arten. Wenn Sie vier übergeben <xref:System.Double> Werte auf die Struktur, sie stehen die <xref:System.Windows.Thickness.Left%2A>, <xref:System.Windows.Thickness.Top%2A>, <xref:System.Windows.Thickness.Right%2A> und <xref:System.Windows.Thickness.Bottom%2A> Seiten des umschließenden Rechtecks. Sie können auch einen einzelnen Wert angeben, der einen einheitlichen Wert für alle vier Seiten des umschließenden Rechtecks verwendet wird.  
+  
+<a name="xamlAttributeUsage_Thickness"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="left"/>  
+- or -  
+<object property="left,top"/>  
+- or -  
+<object property=" left,top,right,bottom" ... />  
+```  
+  
+<a name="xamlValues_Thickness"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *left*  
+ Dem linken Rand des Rahmens, entweder als beschrieben eine <xref:System.Double> Wert, der angibt, eine [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)] Measure oder als eine *QualifiedDouble* (siehe unten). Wenn nur ein einzelnes Measure angegeben ist und, dass Measure, um alle Links, oben, rechts angewendet wird, unten Werte von einem <xref:System.Windows.Thickness>. Wenn nur ein Paar von linken, oberen Measures angegeben ist, werden diese Measures symmetrisch zu angewendet eine <xref:System.Windows.Thickness>: der linke Wert für Recht verwendet; des obersten Wertes für unteren verwendet wird.  
+  
+ *top*  
+ Dem oberen Rand des Rahmens, entweder als beschrieben eine <xref:System.Double> Wert, der angibt, eine [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)] Measure oder als eine *QualifiedDouble* (siehe unten). Wenn nur ein Paar von linken, oberen Measures angegeben ist, werden diese Measures symmetrisch zu angewendet eine <xref:System.Windows.Thickness>: der linke Wert für Recht verwendet; des obersten Wertes für unteren verwendet wird.  
+  
+ *right*  
+ Dem rechten Rand des Rahmens, entweder als beschrieben eine <xref:System.Double> Wert, der angibt, eine [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)] Measure oder als eine *QualifiedDouble* (siehe unten). Wenn nicht angegeben, wird der linken Wert verwendet.  
+  
+ *unten*  
+ Dem unteren Rand des Rahmens, entweder als beschrieben eine <xref:System.Double> Wert, der angibt, eine [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)] Measure oder als eine *QualifiedDouble* (siehe unten). Wenn nicht angegeben, wird der linken Wert verwendet.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert, wie oben für die Maßnahmen beschrieben, gefolgt von einem der folgenden Deklaration Einheitenzeichenfolgen: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+> [!NOTE]
+>  Werte müssen nicht dem Dezimaltrennzeichen explizit, wenn als Zeichenfolge angegeben sind. Die Zeichenfolge "1" im bereitgestellten [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] ergibt einen Wert von 1,0, wenn im Code verwiesen wird.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer Instanz von einem <xref:System.Windows.Thickness> -Struktur, und legen Sie die Eigenschaften mit [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und Code.  
+  
+ [!code-csharp[ThicknessStruct#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessStruct/CSharp/ThicknessSamp.cs#2)]
+ [!code-vb[ThicknessStruct#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessStruct/VisualBasic/ThicknessSampVB.vb#2)]
+ [!code-xaml[ThicknessStruct#2](~/samples/snippets/xaml/VS_Snippets_Wpf/ThicknessStruct/XAML/default.xaml#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Thickness (double uniformLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 uniformLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Thickness.#ctor(System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uniformLength" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="uniformLength">Die einheitliche Länge, die auf allen vier Seiten des umschließenden Rechtecks angewendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Thickness" /> -Struktur, die die angegebene einheitliche Länge auf jeder Seite aufweist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Thickness (double left, double top, double right, double bottom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 left, float64 top, float64 right, float64 bottom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Thickness.#ctor(System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="left" Type="System.Double" />
+        <Parameter Name="top" Type="System.Double" />
+        <Parameter Name="right" Type="System.Double" />
+        <Parameter Name="bottom" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die Stärke für die linke Seite des Rechtecks.</param>
+        <param name="top">Die Stärke für die obere Seite des Rechtecks.</param>
+        <param name="right">Die Stärke für die rechte Seite des Rechtecks.</param>
+        <param name="bottom">Die Stärke für die untere Seite des Rechtecks.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Windows.Thickness" /> -Struktur, die bestimmte Längen (angegeben als eine <see cref="T:System.Double" />) auf beiden Seiten des Rechtecks angewendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer Instanz von einem <xref:System.Windows.Thickness> Struktur mithilfe von Code.  
+  
+ [!code-csharp[ThicknessStruct#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessStruct/CSharp/ThicknessSamp.cs#1)]
+ [!code-vb[ThicknessStruct#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessStruct/VisualBasic/ThicknessSampVB.vb#1)]
+ [!code-xaml[ThicknessStruct#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ThicknessStruct/XAML/default.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="public double Bottom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Bottom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Thickness.Bottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des unteren Rands des umschließenden Rechtecks in Pixel.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der die Breite in Pixel der unteren Ecke des umschließenden Rechtecks für diese Instanz von darstellt <see cref="T:System.Windows.Thickness" />. Eine Pixel entspricht 1/96 eines Zolls. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen des Werts, der die <xref:System.Windows.Thickness.Bottom%2A> Eigenschaft mithilfe von [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und Code.  
+  
+ [!code-csharp[ThicknessStruct#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessStruct/CSharp/ThicknessSamp.cs#2)]
+ [!code-vb[ThicknessStruct#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessStruct/VisualBasic/ThicknessSampVB.vb#2)]
+ [!code-xaml[ThicknessStruct#2](~/samples/snippets/xaml/VS_Snippets_Wpf/ThicknessStruct/XAML/default.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Thickness.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende Objekt.</param>
+        <summary>Vergleicht dieses <see cref="T:System.Windows.Thickness" /> Struktur in eine andere <see cref="T:System.Object" /> auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Objekte gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Testen auf Gleichheit auf zwei Gleitkommawerten, die logisch äquivalent sind aufgrund von Fehlern mit einfacher Genauigkeit möglicherweise nicht, die die Werte akkumulieren können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Thickness thickness);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Windows.Thickness thickness) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Thickness.Equals(System.Windows.Thickness)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thickness" Type="System.Windows.Thickness" />
+      </Parameters>
+      <Docs>
+        <param name="thickness">Eine Instanz von <see cref="T:System.Windows.Thickness" /> auf Gleichheit verglichen werden soll.</param>
+        <summary>Vergleicht dieses <see cref="T:System.Windows.Thickness" /> Struktur in eine andere <see cref="T:System.Windows.Thickness" /> -Struktur auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Instanzen von <see cref="T:System.Windows.Thickness" /> gleich sind; andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Testen auf Gleichheit oder Ungleichheit auf zwei Gleitkommawerten, die logisch äquivalent sind aufgrund von Fehlern mit einfacher Genauigkeit möglicherweise nicht, die die Werte akkumulieren können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Thickness.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode der Struktur zurück.</summary>
+        <returns>Ein Hashcode für diese Instanz von <see cref="T:System.Windows.Thickness" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public double Left { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Left" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Thickness.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite der linken Seite des umschließenden Rechtecks in Pixel ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der die Breite in Pixel der linken Seite des umschließenden Rechtecks für diese Instanz von darstellt <see cref="T:System.Windows.Thickness" />. Ein Pixel entspricht 1/96 Zoll. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen des Werts, der die <xref:System.Windows.Thickness.Left%2A> Eigenschaft mithilfe von [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und Code.  
+  
+ [!code-csharp[ThicknessStruct#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessStruct/CSharp/ThicknessSamp.cs#2)]
+ [!code-vb[ThicknessStruct#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessStruct/VisualBasic/ThicknessSampVB.vb#2)]
+ [!code-xaml[ThicknessStruct#2](~/samples/snippets/xaml/VS_Snippets_Wpf/ThicknessStruct/XAML/default.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Thickness t1, System.Windows.Thickness t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Thickness t1, valuetype System.Windows.Thickness t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Thickness.op_Equality(System.Windows.Thickness,System.Windows.Thickness)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.Windows.Thickness" />
+        <Parameter Name="t2" Type="System.Windows.Thickness" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Die erste zu vergleichende Struktur.</param>
+        <param name="t2">Die andere zu vergleichende Struktur.</param>
+        <summary>Vergleicht den Wert von zwei <see cref="T:System.Windows.Thickness" /> -Strukturen auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Instanzen von <see cref="T:System.Windows.Thickness" /> gleich sind; andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Testen auf Gleichheit auf zwei Gleitkommawerten, die logisch äquivalent sind aufgrund von Fehlern mit einfacher Genauigkeit möglicherweise nicht, die die Werte akkumulieren können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Thickness t1, System.Windows.Thickness t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Thickness t1, valuetype System.Windows.Thickness t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Thickness.op_Inequality(System.Windows.Thickness,System.Windows.Thickness)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.Windows.Thickness" />
+        <Parameter Name="t2" Type="System.Windows.Thickness" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Die erste zu vergleichende Struktur.</param>
+        <param name="t2">Die andere zu vergleichende Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Windows.Thickness" /> Strukturen auf Ungleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Instanzen von <see cref="T:System.Windows.Thickness" /> sind nicht gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Testen auf Gleichheit oder Ungleichheit auf zwei Gleitkommawerten, die logisch äquivalent sind aufgrund von Fehlern mit einfacher Genauigkeit möglicherweise nicht, die die Werte akkumulieren können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public double Right { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Right" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Thickness.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des der rechten Seite des umschließenden Rechtecks in Pixel.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der die Breite in Pixel der rechten Seite des umschließenden Rechtecks für diese Instanz von darstellt <see cref="T:System.Windows.Thickness" />. Eine Pixel entspricht 1/96 eines Zolls. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen des Werts, der die <xref:System.Windows.Thickness.Right%2A> Eigenschaft mithilfe von [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und Code.  
+  
+ [!code-csharp[ThicknessStruct#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessStruct/CSharp/ThicknessSamp.cs#2)]
+ [!code-vb[ThicknessStruct#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessStruct/VisualBasic/ThicknessSampVB.vb#2)]
+ [!code-xaml[ThicknessStruct#2](~/samples/snippets/xaml/VS_Snippets_Wpf/ThicknessStruct/XAML/default.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="public double Top { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Top" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Thickness.Top" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des oberen Rands des umschließenden Rechtecks in Pixel.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der die Breite in Pixel, der die obere Seite des umschließenden Rechtecks für diese Instanz von darstellt <see cref="T:System.Windows.Thickness" />. Eine Pixel entspricht 1/96 eines Zolls. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen des Werts, der die <xref:System.Windows.Thickness.Top%2A> Eigenschaft mithilfe von [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und Code.  
+  
+ [!code-csharp[ThicknessStruct#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessStruct/CSharp/ThicknessSamp.cs#2)]
+ [!code-vb[ThicknessStruct#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessStruct/VisualBasic/ThicknessSampVB.vb#2)]
+ [!code-xaml[ThicknessStruct#2](~/samples/snippets/xaml/VS_Snippets_Wpf/ThicknessStruct/XAML/default.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Thickness.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolgendarstellung der <see cref="T:System.Windows.Thickness" /> Struktur.</summary>
+        <returns>Ein <see cref="T:System.String" /> darstellt, die die <see cref="T:System.Windows.Thickness" /> Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

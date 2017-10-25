@@ -1,0 +1,224 @@
+<Type Name="JpegBitmapEncoder" FullName="System.Windows.Media.Imaging.JpegBitmapEncoder">
+  <TypeSignature Language="C#" Value="public sealed class JpegBitmapEncoder : System.Windows.Media.Imaging.BitmapEncoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit JpegBitmapEncoder extends System.Windows.Media.Imaging.BitmapEncoder" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.JpegBitmapEncoder" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Imaging.BitmapEncoder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Encoder, mit dem Bilder im Format Joint Photographics Experts Group (JPEG) codiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[TLA#tla_jpegorg](~/includes/tlasharptla-jpegorg-md.md)]Format Bitmaps unterstützen Miniaturansichten und Metadaten. Sie unterstützen keine Vorschau, globale Miniaturansichten, globalen Metadaten oder mehrere Frames.  
+  
+ Codierung funktioniert nicht unter teilweiser Vertrauenswürdigkeit. Finden Sie unter [teilweise Vertrauenswürdigkeit in WPF](~/docs/framework/wpf/wpf-partial-trust-security.md) Informationen zu teilweiser Vertrauenswürdigkeit.  
+  
+<a name="xamlTextUsage_No"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JpegBitmapEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.JpegBitmapEncoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Imaging.JpegBitmapEncoder" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Initialisieren einer <xref:System.Windows.Media.Imaging.JpegBitmapEncoder> um eine neue Bitmap-Bild zu codieren.  
+  
+ [!code-cpp[jpegbitmapdecoderencoder#2](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#2)]
+ [!code-csharp[jpegbitmapdecoderencoder#2](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#2)]
+ [!code-vb[jpegbitmapdecoderencoder#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#2)]  
+[!code-cpp[jpegbitmapdecoderencoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#3)]
+[!code-csharp[jpegbitmapdecoderencoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#3)]
+[!code-vb[jpegbitmapdecoderencoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlipHorizontal">
+      <MemberSignature Language="C#" Value="public bool FlipHorizontal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FlipHorizontal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.JpegBitmapEncoder.FlipHorizontal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein [!INCLUDE[TLA#tla_jpegorg](~/includes/tlasharptla-jpegorg-md.md)] Image während der Codierung horizontal gekippt werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Bild horizontal gekippt wird während der Codierung; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="XAMLTextUsage_FlipHorizontal"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Das horizontale Kippen stellt einen verlustfreien Transformation des Quellbilds und ersetzt alle vorherige verlustfreie Transformation.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Festlegen des Werts der <xref:System.Windows.Media.Imaging.JpegBitmapEncoder.FlipHorizontal%2A> Eigenschaft.  
+  
+ [!code-cpp[jpegbitmapdecoderencoder#2](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#2)]
+ [!code-csharp[jpegbitmapdecoderencoder#2](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#2)]
+ [!code-vb[jpegbitmapdecoderencoder#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#2)]  
+[!code-cpp[jpegbitmapdecoderencoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#3)]
+[!code-csharp[jpegbitmapdecoderencoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#3)]
+[!code-vb[jpegbitmapdecoderencoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlipVertical">
+      <MemberSignature Language="C#" Value="public bool FlipVertical { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FlipVertical" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.JpegBitmapEncoder.FlipVertical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein [!INCLUDE[TLA#tla_jpegorg](~/includes/tlasharptla-jpegorg-md.md)] Image während der Codierung vertikal gekippt werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Bild vertikal gekippt wird während der Codierung; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das vertikale Kippen stellt einen verlustfreien Transformation des Quellbilds und ersetzt alle vorherige verlustfreie Transformation.  
+  
+<a name="XAMLTextUsage_FlipVertical"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Festlegen des Werts der <xref:System.Windows.Media.Imaging.JpegBitmapEncoder.FlipVertical%2A> Eigenschaft.  
+  
+ [!code-cpp[jpegbitmapdecoderencoder#2](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#2)]
+ [!code-csharp[jpegbitmapdecoderencoder#2](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#2)]
+ [!code-vb[jpegbitmapdecoderencoder#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#2)]  
+[!code-cpp[jpegbitmapdecoderencoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#3)]
+[!code-csharp[jpegbitmapdecoderencoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#3)]
+[!code-vb[jpegbitmapdecoderencoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QualityLevel">
+      <MemberSignature Language="C#" Value="public int QualityLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 QualityLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.JpegBitmapEncoder.QualityLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert an die Qualität des resultierenden [!INCLUDE[TLA#tla_jpegorg](~/includes/tlasharptla-jpegorg-md.md)] Bild.</summary>
+        <value>Das Maß an Qualität der [!INCLUDE[TLA2#tla_jpegorg](~/includes/tla2sharptla-jpegorg-md.md)] Bild. Der Wert liegt zwischen 1 (niedrigste Qualität) bis 100 (höchste Qualität) ein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="XAMLTextUsage_QualityLevel"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Festlegen des Werts der <xref:System.Windows.Media.Imaging.JpegBitmapEncoder.QualityLevel%2A> Eigenschaft.  
+  
+ [!code-cpp[jpegbitmapdecoderencoder#2](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#2)]
+ [!code-csharp[jpegbitmapdecoderencoder#2](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#2)]
+ [!code-vb[jpegbitmapdecoderencoder#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#2)]  
+[!code-cpp[jpegbitmapdecoderencoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#3)]
+[!code-csharp[jpegbitmapdecoderencoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#3)]
+[!code-vb[jpegbitmapdecoderencoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotation">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.Rotation Rotation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Imaging.Rotation Rotation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.JpegBitmapEncoder.Rotation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.Rotation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der den Grad darstellt ein [!INCLUDE[TLA#tla_jpegorg](~/includes/tlasharptla-jpegorg-md.md)] Bild gedreht wird.</summary>
+        <value>Gibt den Grad, zu dem das Bild gedreht wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rotation wird nur in 90-Grad-Schritten unterstützt.  
+  
+ Die Drehung stellt einen verlustfreien Transformation des Quellbilds und ersetzt alle vorherige verlustfreie Transformation.  
+  
+<a name="XAMLTextUsage_Rotation"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Festlegen des Werts der <xref:System.Windows.Media.Imaging.JpegBitmapEncoder.Rotation%2A> Eigenschaft.  
+  
+ [!code-cpp[jpegbitmapdecoderencoder#2](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#2)]
+ [!code-csharp[jpegbitmapdecoderencoder#2](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#2)]
+ [!code-vb[jpegbitmapdecoderencoder#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#2)]  
+[!code-cpp[jpegbitmapdecoderencoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#3)]
+[!code-csharp[jpegbitmapdecoderencoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#3)]
+[!code-vb[jpegbitmapdecoderencoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,187 @@
+<Type Name="CodeTryCatchFinallyStatement" FullName="System.CodeDom.CodeTryCatchFinallyStatement">
+  <TypeSignature Language="C#" Value="public class CodeTryCatchFinallyStatement : System.CodeDom.CodeStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeTryCatchFinallyStatement extends System.CodeDom.CodeStatement" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeTryCatchFinallyStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine <see langword="try" /> Block mit einer beliebigen Anzahl von <see langword="catch" /> Klauseln und optional eine <see langword="finally" /> Block.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeTryCatchFinallyStatement>Dient zur Darstellung einer `try` / `catch` Codeblock.  
+  
+ Die <xref:System.CodeDom.CodeTryCatchFinallyStatement.TryStatements%2A> Eigenschaft enthält die Anweisungen zum Ausführen innerhalb einer `try` Block. Die <xref:System.CodeDom.CodeTryCatchFinallyStatement.CatchClauses%2A> Eigenschaft enthält die `catch` -Klauseln, um die abgefangene Ausnahmen zu behandeln. Die <xref:System.CodeDom.CodeTryCatchFinallyStatement.FinallyStatements%2A> Eigenschaft enthält die Anweisungen zum Ausführen innerhalb einer `finally` Block.  
+  
+> [!NOTE]
+>  Nicht alle Sprachen unterstützen `try` / `catch` blockiert. Rufen Sie die <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> Methode mit der <xref:System.CodeDom.Compiler.GeneratorSupport?displayProperty=nameWithType> Flag, um zu bestimmen, ob ein Code-Generator unterstützt `try` / `catch` blockiert.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht die Verwendung von einem <xref:System.CodeDom.CodeTryCatchFinallyStatement> zum Definieren einer try...catch...finally-Anweisung für die Ausnahmebehandlung.  
+  
+ [!code-cpp[CodeTryCatchFinallyExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CPP/codetrycatchfinallyexample.cpp#2)]
+ [!code-csharp[CodeTryCatchFinallyExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CS/codetrycatchfinallyexample.cs#2)]
+ [!code-vb[CodeTryCatchFinallyExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTryCatchFinallyExample/VB/codetrycatchfinallyexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTryCatchFinallyStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTryCatchFinallyStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeTryCatchFinallyStatement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTryCatchFinallyStatement (System.CodeDom.CodeStatement[] tryStatements, System.CodeDom.CodeCatchClause[] catchClauses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeStatement[] tryStatements, class System.CodeDom.CodeCatchClause[] catchClauses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTryCatchFinallyStatement.#ctor(System.CodeDom.CodeStatement[],System.CodeDom.CodeCatchClause[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tryStatements" Type="System.CodeDom.CodeStatement[]" />
+        <Parameter Name="catchClauses" Type="System.CodeDom.CodeCatchClause[]" />
+      </Parameters>
+      <Docs>
+        <param name="tryStatements">Ein Array von <see cref="T:System.CodeDom.CodeStatement" /> Objekte, die angeben, die Anweisungen, um zu versuchen.</param>
+        <param name="catchClauses">Ein Array von <see cref="T:System.CodeDom.CodeCatchClause" /> -Objekten, die zu catch-Klauseln angeben.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeTryCatchFinallyStatement" /> -Klasse unter Verwendung der angegebenen Anweisungen für Try und catch-Klauseln.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTryCatchFinallyStatement (System.CodeDom.CodeStatement[] tryStatements, System.CodeDom.CodeCatchClause[] catchClauses, System.CodeDom.CodeStatement[] finallyStatements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeStatement[] tryStatements, class System.CodeDom.CodeCatchClause[] catchClauses, class System.CodeDom.CodeStatement[] finallyStatements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTryCatchFinallyStatement.#ctor(System.CodeDom.CodeStatement[],System.CodeDom.CodeCatchClause[],System.CodeDom.CodeStatement[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tryStatements" Type="System.CodeDom.CodeStatement[]" />
+        <Parameter Name="catchClauses" Type="System.CodeDom.CodeCatchClause[]" />
+        <Parameter Name="finallyStatements" Type="System.CodeDom.CodeStatement[]" />
+      </Parameters>
+      <Docs>
+        <param name="tryStatements">Ein Array von <see cref="T:System.CodeDom.CodeStatement" /> Objekte, die angeben, die Anweisungen, um zu versuchen.</param>
+        <param name="catchClauses">Ein Array von <see cref="T:System.CodeDom.CodeCatchClause" /> -Objekten, die zu catch-Klauseln angeben.</param>
+        <param name="finallyStatements">Ein Array von <see cref="T:System.CodeDom.CodeStatement" /> Objekte, die angeben, die schließlich-Anweisungen zu verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeTryCatchFinallyStatement" /> -Klasse unter Verwendung der angegebenen Anweisungen für Try, catch-Klauseln und finally-Anweisungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CatchClauses">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeCatchClauseCollection CatchClauses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeCatchClauseCollection CatchClauses" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTryCatchFinallyStatement.CatchClauses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCatchClauseCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zu verwendenden Catch-Klauseln ab.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeCatchClauseCollection" /> , der die zu verwendenden Catch-Klauseln angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinallyStatements">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatementCollection FinallyStatements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatementCollection FinallyStatements" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTryCatchFinallyStatement.FinallyStatements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den finally-Anweisungen verwenden.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeStatementCollection" /> gibt, die an der finally-Anweisungen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryStatements">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatementCollection TryStatements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatementCollection TryStatements" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTryCatchFinallyStatement.TryStatements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anweisungen, um zu versuchen.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeStatementCollection" /> , der die Anweisungen, um zu versuchen angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

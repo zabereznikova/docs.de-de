@@ -1,0 +1,1128 @@
+<Type Name="PrintSystemJobInfo" FullName="System.Printing.PrintSystemJobInfo">
+  <TypeSignature Language="C#" Value="public class PrintSystemJobInfo : System.Printing.PrintSystemObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi PrintSystemJobInfo extends System.Printing.PrintSystemObject" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintSystemJobInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Printing.PrintSystemObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Druckauftrag im Detail.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse verfügt über keinen öffentlichen Konstruktor. Zum Abrufen eines Verweises auf eine <xref:System.Printing.PrintSystemJobInfo> Objekt, verwenden Sie die statische <xref:System.Printing.PrintSystemJobInfo.Get%2A?displayProperty=nameWithType> Methode oder eines der folgenden <xref:System.Printing.PrintQueue> Instanzmethoden: <xref:System.Printing.PrintQueue.GetJob%2A>, <xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A>, oder <xref:System.Printing.PrintQueue.AddJob%2A>.  
+  
+ Viele Eigenschaften eines Druckauftrags, z. B. ob ein Auftrag abgeschlossen ist, müssen übergeben werden, aus dem Drucker zu den <xref:System.Printing.PrintSystemJobInfo> -Objekt, bevor die Anwendung die entsprechende Eigenschaft liest (<xref:System.Printing.PrintSystemJobInfo.IsCompleted%2A>). Die <xref:System.Printing.PrintSystemJobInfo.Refresh%2A> -Methode stellt diese Funktionalität bereit.  
+  
+ Auf ähnliche Weise, wenn die Anwendung ändert den Wert von der <xref:System.Printing.PrintSystemJobInfo.JobName%2A> -Eigenschaft, die Änderung in der Druckerwarteschlange-Dienstprogramm muss geschrieben werden, auf dem Computer. Die <xref:System.Printing.PrintSystemJobInfo.Commit%2A> -Methode stellt diese Funktionalität bereit.  
+  
+ Wenn Sie beim Ableiten einer Klasse von <xref:System.Printing.PrintSystemJobInfo> Weitere beschreibbare Eigenschaften aufweist, dann müssen Sie eine Überschreibung der implementieren die <xref:System.Printing.PrintSystemJobInfo.Refresh%2A> und <xref:System.Printing.PrintSystemJobInfo.Commit%2A> Methoden.  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ Wenn Sie aus einer Windows Forms-Anwendung drucken möchten, finden Sie unter der <xref:System.Drawing.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemJobInfo.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht den Druckauftrag ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Methode verwenden, um den Druckauftrag abbrechen.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
+ [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]
+ [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public override void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemJobInfo.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Alle Änderungen an den Eigenschaften des schreibt die <see cref="T:System.Printing.PrintSystemJobInfo" /> Objekt, das den tatsächlichen Druckauftrag, die das Objekt darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur die <xref:System.Printing.PrintSystemJobInfo.JobName%2A> Eigenschaft beschreibbar ist. Wenn Sie beim Ableiten einer Klasse von <xref:System.Printing.PrintSystemJobInfo> Weitere beschreibbare Eigenschaften aufweist, müssen Sie überschreiben die <xref:System.Printing.PrintSystemJobInfo.Commit%2A> und <xref:System.Printing.PrintSystemJobInfo.Refresh%2A> Methoden mit Ihren eigenen Implementierungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public static System.Printing.PrintSystemJobInfo Get (System.Printing.PrintQueue printQueue, int jobIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Printing.PrintSystemJobInfo Get(class System.Printing.PrintQueue printQueue, int32 jobIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemJobInfo.Get(System.Printing.PrintQueue,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printQueue" Type="System.Printing.PrintQueue" />
+        <Parameter Name="jobIdentifier" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="printQueue">Der Druckwarteschlange für den Druckauftrag.</param>
+        <param name="jobIdentifier">Eine numerische ID für den Auftrag.</param>
+        <summary>Ruft die <see cref="T:System.Printing.PrintSystemJobInfo" /> für den angegebenen Auftrag in der angegebenen <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <returns>Die <see cref="T:System.Printing.PrintSystemJobInfo" /> , entspricht der <paramref name="jobIdentifier" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch die <xref:System.Printing.PrintQueue.GetJob%2A?displayProperty=nameWithType> Methode für den gleichen Zweck.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostingPrintQueue">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueue HostingPrintQueue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintQueue HostingPrintQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.HostingPrintQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Druckwarteschlange ab, die den Druckauftrag hostet.</summary>
+        <value>Ein <see cref="T:System.Printing.PrintQueue" /> Wert, der die Druckwarteschlange darstellt, der den Druckauftrag besitzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostingPrintServer">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintServer HostingPrintServer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintServer HostingPrintServer" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.HostingPrintServer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintServer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Druckserver, auf der die Druckerwarteschlange für den Druckauftrag gehostet wird.</summary>
+        <value>Ein <see cref="T:System.Printing.PrintServer" /> Wert, der den hosting Druckerserver (normalerweise ein Computer) für darstellt der <see cref="T:System.Printing.PrintQueue" /> , den Druckauftrag besitzt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalDispose">
+      <MemberSignature Language="C#" Value="protected override sealed void InternalDispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InternalDispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemJobInfo.InternalDispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt den nicht verwalteten Ressourcen, mit denen, die <see cref="T:System.Printing.PrintSystemJobInfo" /> und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBlocked">
+      <MemberSignature Language="C#" Value="public bool IsBlocked { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBlocked" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsBlocked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Druckauftrag blockiert wird und daher nicht gedruckt.</summary>
+        <value>
+          <see langword="true" />Wenn der Druckauftrag blockiert wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompleted">
+      <MemberSignature Language="C#" Value="public bool IsCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Auftrag abgeschlossen ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Druckvorgang abgeschlossen ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDeleted">
+      <MemberSignature Language="C#" Value="public bool IsDeleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDeleted" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsDeleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dem Druckauftrag, der dargestellt wird, indem Sie die <see cref="T:System.Printing.PrintSystemJobInfo" /> Objekt, aus der Druckwarteschlange gelöscht wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der Druckauftrag gelöscht wurde. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es mag widersprüchlich Beachten Sie zunächst, dass ein Objekt seinen eigenen Status gemeldet, als gelöscht werden kann, aber Bedenken Sie, dass die <xref:System.Printing.PrintSystemJobInfo> nur Objekt *stellt* real Druckauftrag. Löschen aus der Druckwarteschlange letztere wird nicht automatisch löschen Sie die <xref:System.Printing.PrintSystemJobInfo> Objekten in der Anwendung. Auf ähnliche Weise wird das Objekt nicht von einem beliebigen entfernt <xref:System.Printing.PrintJobInfoCollection> erstellt wurde, vor dem Löschen des Druckauftrags, die es darstellt. Z. B. wenn die <xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A> -Methode ausgeführt wird, bevor der Druckauftrag gelöscht wurde, wird der zurückgegebenen Auflistung enthalten eine <xref:System.Printing.PrintSystemJobInfo> Objekt, das den Druckauftrag darstellt. Dieses Objekt wird nicht aus der Auflistung entfernt, wenn der Druckauftrag gelöscht wird. Jedoch wenn <xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A> klicken Sie dann erneut ausgeführt, der zurückgegebenen Auflistung hat keine Mitglieder, die die gelöschte Druckaufträge darstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDeleting">
+      <MemberSignature Language="C#" Value="public bool IsDeleting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDeleting" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsDeleting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Druckauftrag aus der Druckwarteschlange gelöscht wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Druckauftrag gelöscht wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInError">
+      <MemberSignature Language="C#" Value="public bool IsInError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInError" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsInError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Fehlerzustand den Druckauftrag zugeordnet ist.</summary>
+        <value>
+          <see langword="true" />Wenn ein Fehlerzustand den Druckauftrag zugeordnet ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOffline">
+      <MemberSignature Language="C#" Value="public bool IsOffline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOffline" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsOffline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker offline ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker offline ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird übernommen, alle der <xref:System.Printing.PrintSystemJobInfo> Objekte aus der <xref:System.Printing.PrintQueue.IsOffline%2A> Eigenschaft das hosting <xref:System.Printing.PrintQueue>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPaperOut">
+      <MemberSignature Language="C#" Value="public bool IsPaperOut { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPaperOut" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsPaperOut" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker ausgeführt wurde, aus dem Papierformat und der Typ, der der Druckauftrag erfordert.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker kein erforderliches Papier ausgeführt wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPaused">
+      <MemberSignature Language="C#" Value="public bool IsPaused { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPaused" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsPaused" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Druckauftrag angehalten wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der Druckauftrag angehalten wurde. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die gesamte Druckerwarteschlange kann auch angehalten werden. Beispielsweise den Wert der <xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType> kann `false` auch dann, wenn der Wert des der <xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType> Eigenschaft ist `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrinted">
+      <MemberSignature Language="C#" Value="public bool IsPrinted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrinted" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsPrinted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Druckauftrag gedruckt.</summary>
+        <value>
+          <see langword="true" />Wenn der Druckauftrag gedruckt wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrinting">
+      <MemberSignature Language="C#" Value="public bool IsPrinting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrinting" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsPrinting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Druckauftrag gedruckt wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker druckt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRestarted">
+      <MemberSignature Language="C#" Value="public bool IsRestarted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRestarted" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsRestarted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Druckauftrag neu gestartet wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker druckt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Auftrag neu gestartet wird, wird es in seiner Gesamtheit gedruckt. Kontrast neu zu starten, mit der Verwendung der <xref:System.Printing.PrintSystemJobInfo.Resume%2A> -Methode, die einen Auftrag an dem Punkt angehalten wurde fortgesetzt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRetained">
+      <MemberSignature Language="C#" Value="public bool IsRetained { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRetained" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsRetained" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Druckauftrag in der Warteschlange gespeichert wurde, nachdem es gedruckt.</summary>
+        <value>
+          <see langword="true" />Wenn der Druckauftrag gespeichert wurde. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Druckerwarteschlange behält gedruckten Aufträge aus, wenn die <xref:System.Printing.PrintQueue.KeepPrintedJobs%2A> Eigenschaft von der <xref:System.Printing.PrintQueue> -Objekts festgelegt wird, um `true` und wenn die Eigenschaften der Warteschlange mit Commit ausgeführt wurde der <xref:System.Printing.PrintQueue.Commit%2A> Methode der <xref:System.Printing.PrintQueue>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSpooling">
+      <MemberSignature Language="C#" Value="public bool IsSpooling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSpooling" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsSpooling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Druckauftrag gesendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Druckauftrag gesendet wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserInterventionRequired">
+      <MemberSignature Language="C#" Value="public bool IsUserInterventionRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUserInterventionRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.IsUserInterventionRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker Eingreifen des Benutzers erforderlich.</summary>
+        <value>
+          <see langword="true" />Wenn ein Eingreifen des Benutzers erforderlich ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird an alle <xref:System.Printing.PrintSystemJobInfo> Objekte aus der <xref:System.Printing.PrintQueue.NeedUserIntervention%2A> Eigenschaft das hosting <xref:System.Printing.PrintQueue>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobIdentifier">
+      <MemberSignature Language="C#" Value="public int JobIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 JobIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.JobIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID für den Druckauftrag ab.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , den Druckauftrag identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Welche Nummerierungssystem verwendet wird, wird vom Betriebssystem des Druckservers und gibt an, ob der Druckserver einen Computer oder einem Druckserver Einheit ist bestimmt. Beispielsweise das Betriebssystem für [!INCLUDE[TLA#tla_whistler](~/includes/tlasharptla-whistler-md.md)] die Nummerierung auf diese Weise bestimmt: bei ein Druckserver, aktiviert ist wenn alle Druckwarteschlangen leer sind, wird der erste Auftrag auf dem Server gesendet wird, von jedem Benutzer und an Warteschlangen, die ID-Nummer 2 zugewiesen. Alle nachfolgenden Aufträge auf dem Server hat eine Zahl, die eine ist größer als der vorherige Auftrag auf dem Server.  
+  
+ Die Druckerwarteschlange für den Auftrag hat keine Auswirkung auf seine Nummer: Wenn Aufträge werden in dieser Reihenfolge QueueA WarteschlangeB und wieder gesendet und dann QueueA Aufträge, 2 und 4 enthält und WarteschlangeB den Auftrag 3.  
+  
+ Nachdem ein Auftrag eine Zahl zugewiesen ist, ändert die Anzahl, auch wenn andere Aufträge abgeschlossen oder abgebrochen wurde oder wenn der Server neu gestartet wird. Wenn es bereits Aufträge in eine oder mehrere Warteschlangen beim Neustart des Servers, der erste neue Auftrag wird zugewiesen eine Zahl, die eine ist größer als der höchsten nummerierten Auftrag, der in der Warteschlange beim Start des Servers. Allerdings werden, bis er neu gestartet wird, in ein Druckserver keine Zahl wiederverwenden. Auch wenn der höchsten nummerierte Auftrag abgebrochen wird, bevor es gedruckt wird, ruft der nächste Auftrag eine Zahl, die eine höhere.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
+ [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
+ [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobName">
+      <MemberSignature Language="C#" Value="public string JobName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string JobName" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.JobName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Namen für den Auftrag.</summary>
+        <value>Ein <see cref="T:System.String" /> Name für den Auftrag.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
+ [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
+ [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobSize">
+      <MemberSignature Language="C#" Value="public int JobSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 JobSize" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.JobSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erhalten Sie die Größe in Bytes, des Druckauftrags.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die besagt, dass der Größe in Bytes, des Druckauftrags.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobStatus">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintJobStatus JobStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Printing.PrintJobStatus JobStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.JobStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintJobStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Status des Druckauftrags ab.</summary>
+        <value>Ein <see cref="T:System.Printing.PrintJobStatus" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet Ihnen eine Möglichkeit, um zu vermeiden, wie z. B. einzeln überprüfen aller Eigenschaften von Standortsystemstatus <xref:System.Printing.PrintSystemJobInfo.IsPrinting%2A> und <xref:System.Printing.PrintSystemJobInfo.IsPaused%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobattributes)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobattributes)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobattributes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream JobStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream JobStream" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.JobStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf das <see cref="T:System.IO.Stream" />-Objekt des Druckauftrags ab.</summary>
+        <value>Ein <see cref="T:System.IO.Stream" />-Objekt, das den Druckauftrag enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beginnend mit .NET Framework 4.5 unter Windows 8 und höheren Versionen des Betriebssystems, müssen in diesen Datenstrom geschriebene Daten als Paketdatenstrom im XPS-Format sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfPages">
+      <MemberSignature Language="C#" Value="public int NumberOfPages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfPages" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.NumberOfPages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Seiten in den Druckauftrag ab.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , in der die Anzahl der Seiten in dem Druckauftrag angegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Seite ist eine Seite einem Blatt Papier oder ein anderes Medium drucken.  
+  
+ Die folgende Tabelle zeigt, wie der Wert dieser Eigenschaft und die Anzahl der Blätter verwendet, von zweiseitigen drucken (Duplex) gibt an, ob der Druckauftrag aufruft, gibt an, ob es für mehrere Seiten pro Blatt aufruft oder gibt an, ob sie für beide ruft betroffen ist.  
+  
+### <a name="how-duplexing-and-multipage-printing-affect-printing"></a>Wie wirken sich auf Duplexdruck und Drucken von mehrseitigen drucken  
+  
+|Duplexdruck|Seiten pro Blatt|Wert von "NumberOfPages"|Anzahl der physischen Blätter|  
+|---------------|---------------------|----------------------------|----------------------------------------|  
+|Nein|1|Identisch mit der Anzahl der Seiten im Dokument.|Identisch mit der Anzahl der Seiten im Dokument.|  
+|Ja|1|Identisch mit der Anzahl der Seiten im Dokument.|Dokumentieren Sie Seiten ÷ 2 (aufgerundet).|  
+|Nein|Mehrere|Dokumentieren Sie Seiten ÷ Seiten pro Blatt (aufgerundet).|Dokumentieren Sie Seiten ÷ Seiten pro Blatt (aufgerundet).|  
+|Ja|Mehrere|Dokumentieren Sie Seiten ÷ Seiten pro Blatt (aufgerundet).|[Dokument Seiten ÷ Seiten pro Blatt] ÷ 2 (aufgerundet).|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfPagesPrinted">
+      <MemberSignature Language="C#" Value="public int NumberOfPagesPrinted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfPagesPrinted" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.NumberOfPagesPrinted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der bereits gedruckten Seiten ab.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die besagt, dass der Anzahl der Seiten, die bereits gedruckt wurden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pause">
+      <MemberSignature Language="C#" Value="public void Pause ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Pause() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemJobInfo.Pause" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hält den Druck des Auftrags bis <see cref="M:System.Printing.PrintSystemJobInfo.Resume" /> ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein anderer Auftrag in der Warteschlange befindet, startet drucken, wenn der aktuelle Auftrag angehalten wird.  
+  
+ Der Hostprozess <xref:System.Printing.PrintQueue> verfügt auch über <xref:System.Printing.PrintQueue.Pause%2A> und <xref:System.Printing.PrintQueue.Resume%2A> Methoden. Wenn die Druckerwarteschlange angehalten wird, verursacht einen einzelnen Auftrag fortsetzen diesen Auftrag zur Wiederaufnahme des Druckvorgangs keine.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionInPrintQueue">
+      <MemberSignature Language="C#" Value="public int PositionInPrintQueue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PositionInPrintQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.PositionInPrintQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Druckauftrag direkt in der Warteschlange ab.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die besagt, dass der Druckauftrag direkt in der Warteschlange.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintJobPriority Priority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Printing.PrintJobPriority Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintJobPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen nicht numerischen Ausdruck, der die Priorität des Druckauftrags relativ zu anderen Aufträgen in der Druckwarteschlange darstellt.</summary>
+        <value>Ein <see cref="T:System.Printing.PrintJobPriority" /> steht, die für die Priorität des Druckauftrags als <see cref="F:System.Printing.PrintJobPriority.Maximum" />, <see cref="F:System.Printing.PrintJobPriority.Minimum" />, <see cref="F:System.Printing.PrintJobPriority.Default" />, oder <see cref="F:System.Printing.PrintJobPriority.None" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public override void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemJobInfo.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert die Eigenschaften der <see cref="T:System.Printing.PrintSystemJobInfo" /> Objekt, sodass ihre Werte den Werten des eigentlichen Druckauftrags übereinstimmen, die das Objekt darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Änderungen, die Sie auf die Eigenschaften eines eine <xref:System.Printing.PrintSystemJobInfo> Objekt muss in den tatsächlichen Druckauftrag geschrieben werden, mithilfe der <xref:System.Printing.PrintSystemJobInfo.Commit%2A> Methode. Alle Änderungen, die kein Commit ausgeführt werden abgebrochen, wenn die <xref:System.Printing.PrintSystemJobInfo.Refresh%2A> Methode ausgeführt wird.  
+  
+ Wenn Sie beim Ableiten einer Klasse von <xref:System.Printing.PrintSystemJobInfo> zusätzliche Eigenschaften aufweist, dann müssen Sie überschreiben die <xref:System.Printing.PrintSystemJobInfo.Refresh%2A> Methode mit einer Implementierung Ihrer Wahl.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Restart">
+      <MemberSignature Language="C#" Value="public void Restart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Restart() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemJobInfo.Restart" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet einen Druckauftrag vom Anfang neu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Optional können Sie die <xref:System.Printing.PrintSystemJobInfo.Resume%2A> -Methode, die ein angehaltener Druckauftrag, beginnend ab dem Punkt angehalten wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resume">
+      <MemberSignature Language="C#" Value="public void Resume ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resume() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemJobInfo.Resume" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt das Drucken eines angehaltenen Druckauftrags fort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hostprozess <xref:System.Printing.PrintQueue> verfügt auch über <xref:System.Printing.PrintQueue.Pause%2A> und <xref:System.Printing.PrintQueue.Resume%2A> Methoden. Wenn die Druckerwarteschlange angehalten wird, wird einen einzelnen Auftrag fortsetzen nicht den Druck des Druckauftrags fortgesetzt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Methode verwendet, um einen angehaltenen Auftrag fortzusetzen.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
+ [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]
+ [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartTimeOfDay">
+      <MemberSignature Language="C#" Value="public int StartTimeOfDay { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartTimeOfDay" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.StartTimeOfDay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die früheste Uhrzeit, ausgedrückt als die Anzahl von Minuten seit Mitternacht Coordinated Universal Time (UTC) (auch als Greenwich Mean Time [GMT]), der Druckauftrag drucken beginnen kann.</summary>
+        <value>Ein <see cref="T:System.Int32" /> das frühestmögliche angeben die Startzeit für den Druckauftrag, als die Anzahl von Minuten seit Mitternacht (UTC) ausgedrückt. Der Maximalwert ist 1439.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird an jede weitergegeben <xref:System.Printing.PrintSystemJobInfo> -Objekt aus der <xref:System.Printing.PrintQueue.StartTimeOfDay%2A?displayProperty=nameWithType> Eigenschaft das hosting <xref:System.Printing.PrintQueue> zum Zeitpunkt des Auftrags in der Warteschlange angeordnet. Wenn <xref:System.Printing.PrintQueue.StartTimeOfDay%2A?displayProperty=nameWithType> ändert, werden alle <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A?displayProperty=nameWithType> -Wert, der älter ist als <xref:System.Printing.PrintQueue.StartTimeOfDay%2A?displayProperty=nameWithType> geändert wird, auf den Wert des <xref:System.Printing.PrintQueue.StartTimeOfDay%2A?displayProperty=nameWithType>.  
+  
+ Nachdem der Auftrag zur Warteschlange hinzugefügt wurde, kann es ein neues erhalten <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> Wert über die [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)], vorausgesetzt, dass es nicht älter als <xref:System.Printing.PrintQueue.StartTimeOfDay%2A?displayProperty=nameWithType>.  
+  
+ Wenn Sie nicht in der UTC-Zeitzone sind, müssen Sie addieren oder subtrahieren Vielfachen von 60, um die richtige Zeit für Ihre Zeitzone abzurufen. Z. B. Wenn Sie sich auf die Pacific Time Zone Nordamerika und Sommer-/ Winterzeit ist nicht aktiv, und dann Ihrer lokalen Uhrzeit auf 8 Stunden vor UTC ist. Wenn <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> 960, das bedeutet, dass 16:00 (16:00 Uhr) in UTC zurückgegeben (weil 960/60 = 16). Um dies in Pacific Time zu konvertieren, müssen Sie subtrahieren 480 (= 8 * 60) Minuten.  
+  
+ Außerdem müssen Sie beachten, die Zeit auf 0 (null), nach 24 Stunden Rollover (d. h.; nach 1439th Minute). Wenn <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> 120, das bedeutet, dass 2:00 Uhr (UTC) zurückgegeben. Um dies in Pacific Time zu konvertieren, müssen Sie 480 Minuten subtrahieren-360 ansprechen. Um einen positiven Wert abzurufen, der eine Bedeutung hat, fügen Sie die negative Zahl zur Gesamtzahl der Minuten an einem Tag, 1440, woraus sich der endgültige Wert der 1080 (18:00 Uhr) Pacific Time.  
+  
+ Finden Sie unter <xref:System.TimeZone>, <xref:System.TimeSpan>, und <xref:System.DateTime> für Methoden, mit deren Hilfe die Zeitzone Anpassungen vorzunehmen.  
+  
+ Wenn der Drucker immer verfügbar ist, gibt diese Eigenschaft 0 in allen Zeitzonen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft als Teil des Prozesses für die Diagnose von eines Druckauftrags verwendet wird.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#UsingJobStartAndUntilTimes](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#usingjobstartanduntiltimes)]
+ [!code-csharp[DiagnoseProblematicPrintJob#UsingJobStartAndUntilTimes](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#usingjobstartanduntiltimes)]
+ [!code-vb[DiagnoseProblematicPrintJob#UsingJobStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#usingjobstartanduntiltimes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Submitter">
+      <MemberSignature Language="C#" Value="public string Submitter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Submitter" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.Submitter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Benutzers, der den Druckauftrag übermittelt.</summary>
+        <value>Ein <see cref="T:System.String" /> , identifiziert den Benutzer, der den Druckauftrag übermittelt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet wird, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
+ [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
+ [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeJobSubmitted">
+      <MemberSignature Language="C#" Value="public DateTime TimeJobSubmitted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime TimeJobSubmitted" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.TimeJobSubmitted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum und Uhrzeit, die der Druckauftrag gesendet wird.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> Objekt mit dem Datum und Uhrzeit, die der Druckauftrag gesendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeSinceStartedPrinting">
+      <MemberSignature Language="C#" Value="public int TimeSinceStartedPrinting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TimeSinceStartedPrinting" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.TimeSinceStartedPrinting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeit in Millisekunden, seit dem Start der Druckauftrag drucken.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die die Zeit in Millisekunden seit dem Start des Druckauftrags darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UntilTimeOfDay">
+      <MemberSignature Language="C#" Value="public int UntilTimeOfDay { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 UntilTimeOfDay" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemJobInfo.UntilTimeOfDay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die letzte Uhrzeit, ausgedrückt als die Anzahl von Minuten seit Mitternacht Coordinated Universal Time (UTC) (auch als Greenwich Mean Time [GMT]), der Druckauftrag drucken beginnen kann.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , der zuletzt den Druckauftrag kann als die Anzahl von Minuten seit Mitternacht (UTC) ausgedrückt, angibt. Der Maximalwert ist 1439.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird an jede weitergegeben <xref:System.Printing.PrintSystemJobInfo> -Objekt aus der <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A?displayProperty=nameWithType> Eigenschaft das hosting <xref:System.Printing.PrintQueue> zum Zeitpunkt des Auftrags in der Warteschlange angeordnet. Wenn <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A?displayProperty=nameWithType> ändert, werden alle <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A?displayProperty=nameWithType> -Wert, der älter ist als <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A?displayProperty=nameWithType> geändert wird, auf den Wert des <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A?displayProperty=nameWithType>.  
+  
+ Nachdem der Auftrag zur Warteschlange hinzugefügt wurde, kann es ein neues erhalten <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> Wert über die [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)], vorausgesetzt, dass es nicht später als <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A?displayProperty=nameWithType>.  
+  
+ Wenn Sie nicht in der UTC-Zeitzone sind, müssen Sie addieren oder subtrahieren Vielfachen von 60, um die richtige Zeit für Ihre Zeitzone abzurufen. Z. B. Wenn Sie sich auf die Pacific Time Zone Nordamerika und Sommer-/ Winterzeit ist nicht aktiv, und dann Ihrer lokalen Uhrzeit auf 8 Stunden vor UTC ist. Wenn <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> 960, das bedeutet, dass 16:00 (16:00 Uhr) in UTC zurückgegeben (weil 960/60 = 16). Um dies in Pacific Time zu konvertieren, müssen Sie subtrahieren 480 (= 8 * 60) Minuten.  
+  
+ Außerdem müssen Sie beachten, die Zeit auf 0 (null), nach 24 Stunden Rollover (d. h.; nach 1439th Minute). Wenn <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> 120, das bedeutet, dass 2:00 Uhr (UTC) zurückgegeben. Um dies in Pacific Time zu konvertieren, müssen Sie 480 Minuten subtrahieren-360 ansprechen. Um einen positiven Wert abzurufen, der eine Bedeutung hat, fügen Sie die negative Zahl zur Gesamtzahl der Minuten an einem Tag, 1440, woraus sich der endgültige Wert der 1080 (18:00 Uhr) Pacific Time.  
+  
+ Finden Sie unter <xref:System.TimeZone>, <xref:System.TimeSpan>, und <xref:System.DateTime> für Methoden, mit deren Hilfe die Zeitzone Anpassungen vorzunehmen.  
+  
+ Wenn der Drucker immer verfügbar ist, gibt diese Eigenschaft 0 in allen Zeitzonen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft als Teil des Prozesses für die Diagnose von eines Druckauftrags verwendet wird.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#UsingJobStartAndUntilTimes](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#usingjobstartanduntiltimes)]
+ [!code-csharp[DiagnoseProblematicPrintJob#UsingJobStartAndUntilTimes](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#usingjobstartanduntiltimes)]
+ [!code-vb[DiagnoseProblematicPrintJob#UsingJobStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#usingjobstartanduntiltimes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

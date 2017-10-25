@@ -1,0 +1,85 @@
+<Type Name="WindowClosedEventArgs" FullName="System.Windows.Automation.WindowClosedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class WindowClosedEventArgs : System.Windows.Automation.AutomationEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WindowClosedEventArgs extends System.Windows.Automation.AutomationEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.WindowClosedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.AutomationEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen zum Ereignis, das ausgelöst wird, wenn ein Fenster geschlossen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie zum Schließen eines Fensters Ereignisse abonnieren, <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>unter Angabe <xref:System.Windows.Automation.WindowPattern.WindowClosedEvent> in der `eventId` Parameter und liefert eine [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] -Ereignishandler, die akzeptiert eine <xref:System.Windows.Automation.WindowClosedEventArgs> Parameter.  
+  
+ Wenn Ihre Anwendung ein Ereignis Schließen eines Fensters empfängt die `sender` Parameter des ereignishandlers kann nicht verwendet werden, zum Abrufen von Informationen über das Fenster, die geschlossen, da das entsprechende [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Element ist nicht mehr gültig.  
+  
+   
+  
+## Examples  
+ Beispielcode finden Sie unter <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowClosedEventArgs (int[] runtimeId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32[] runtimeId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.WindowClosedEventArgs.#ctor(System.Int32[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="runtimeId" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="runtimeId">Den Laufzeitbezeichner des Fensters, das geschlossen wurde.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Automation.WindowClosedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeId">
+      <MemberSignature Language="C#" Value="public int[] GetRuntimeId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32[] GetRuntimeId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Runtime [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] mit diesem Ereignis verknüpft sind.</summary>
+        <returns>Die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Runtime [!INCLUDE[TLA2#tla_id](~/includes/tla2sharptla-id-md.md)] des Fensters auf dem das Ereignis ausgelöst wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Ihre Anwendung ein Ereignis Schließen eines Fensters empfängt die `sender` Parameter des ereignishandlers kann nicht verwendet werden, zum Abrufen von Informationen über das Fenster, die geschlossen, da das entsprechende [!INCLUDE[TLA#tla_uiautomation](~/includes/tlasharptla-uiautomation-md.md)] Element ist nicht mehr gültig. Verwendung <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A> entsprechend das Fenster mit einem Bezeichner.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel prüft der Handler für das Schließen eines Fensters Ereignis an, ob die Common Language Runtime-ID des Fensters geschlossen in einer Liste der IDs von geöffneten Fenster ist. Wenn die Laufzeit-ID vorhanden ist, wird er aus der Liste entfernt.  
+  
+ [!code-csharp[UIAFocusTracker_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFocusTracker_snip/CSharp/FocusTracker.cs#101)]
+ [!code-vb[UIAFocusTracker_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFocusTracker_snip/VisualBasic/FocusTracker.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,658 @@
+<Type Name="AggregateException" FullName="System.AggregateException">
+  <TypeSignature Language="C#" Value="public class AggregateException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit AggregateException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.AggregateException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {InnerExceptionCount}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Fehler dar, die beim Ausführen einer Anwendung auftreten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.AggregateException>wird verwendet, um mehrere Fehler in einem einzelnen, auslösbares Ausnahmeobjekt zu konsolidieren. Wird häufig in verwendet das [Task Parallel Library (TPL)](~/docs/standard/parallel-programming/task-parallel-library-tpl.md) und [Parallel LINQ (PLINQ)](~/docs/standard/parallel-programming/parallel-linq-plinq.md). Weitere Informationen finden Sie unter der [aggregieren Ausnahmen](http://go.microsoft.com/fwlink/p/?LinkId=259617) Eintrag im Blog .NET von Bedeutung. Ein Beispiel finden Sie unter [NIB: Vorgehensweise: Behandeln Ausnahmen, die von Aufgaben ausgelöste](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d) und [wie: Behandeln von Ausnahmen in einer PLINQ-Abfrage](~/docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel fängt die <xref:System.AggregateException> Ausnahme und ruft die <xref:System.AggregateException.Handle%2A> Methode, jede Ausnahme zu behandeln, er enthält. Kompilieren und Ausführen des Beispiels mit dem ersten `task1` Variable sollten dazu führen, ein <xref:System.AggregateException> -Objekt, enthält eine <xref:System.UnauthorizedAccessException> Ausnahme. Auskommentieren eines dieser Zeile, die auskommentierung der zweiten `task1` Variable, und kompilieren und Ausführen von erzeugt die Beispiel ein <xref:System.AggregateException> -Objekt, enthält eine <xref:System.IndexOutOfRangeException> Ausnahme.  
+  
+ [!code-csharp[System.AggregateException.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.aggregateexception.class/cs/exception1.cs#1)]
+ [!code-vb[System.AggregateException.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.aggregateexception.class/vb/exception1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Alle öffentlichen und geschützten Member der <see cref="T:System.AggregateException" /> sind threadsicher und können von mehreren Threads gleichzeitig verwendet werden.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AggregateException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.AggregateException" />-Klasse mit einer vom System generierten Meldung, die den Fehler beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A> -Eigenschaft der neuen Instanz mit einer vom System gelieferten Meldung, die den Fehler beschreibt, z. b: "DefaultMessageDisplayedByParameterlessCtorWriterMustSupply" Diese Meldung berücksichtigt die aktuelle System Kultur.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.InsufficientMemoryException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|Die lokalisierte Zeichenfolge mit der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AggregateException (System.Collections.Generic.IEnumerable&lt;Exception&gt; innerExceptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Exception&gt; innerExceptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.#ctor(System.Collections.Generic.IEnumerable{System.Exception})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="innerExceptions" Type="System.Collections.Generic.IEnumerable&lt;System.Exception&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="innerExceptions">Die Ausnahmen, die die Ursache der aktuellen Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.AggregateException" /> Klasse durch Verweise auf die inneren Ausnahmen, die die Ursache dieser Ausnahme sind.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="innerExceptions" />-Argument ist null.</exception>
+        <exception cref="T:System.ArgumentException">Ein Element von <paramref name="innerExceptions" /> ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AggregateException (params Exception[] innerExceptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception[] innerExceptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.#ctor(System.Exception[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="innerExceptions" Type="System.Exception[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="innerExceptions">Die Ausnahmen, die die Ursache der aktuellen Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.AggregateException" /> Klasse durch Verweise auf die inneren Ausnahmen, die die Ursache dieser Ausnahme sind.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="innerExceptions" />-Argument ist null.</exception>
+        <exception cref="T:System.ArgumentException">Ein Element von <paramref name="innerExceptions" /> ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AggregateException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der die Ausnahme beschrieben wird Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.AggregateException" />-Klasse mit einer angegebenen Meldung, die den Fehler beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.AggregateException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|Die in `message` angegebene Fehlermeldungszeichenfolge.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AggregateException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.AggregateException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen. Weitere Informationen finden Sie unter [XML- und SOAP-Serialisierung](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="info" />-Argument ist null.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die Ausnahme konnte nicht ordnungsgemäß deserialisiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AggregateException (string message, System.Collections.Generic.IEnumerable&lt;Exception&gt; innerExceptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Collections.Generic.IEnumerable`1&lt;class System.Exception&gt; innerExceptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Exception})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerExceptions" Type="System.Collections.Generic.IEnumerable&lt;System.Exception&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerExceptions">Die Ausnahmen, die die Ursache der aktuellen Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.AggregateException" /> Klasse mit einer angegebenen Fehlermeldung und Verweise auf die inneren Ausnahmen, die die Ursache dieser Ausnahme sind.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="innerExceptions" />-Argument ist null.</exception>
+        <exception cref="T:System.ArgumentException">Ein Element von <paramref name="innerExceptions" /> ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AggregateException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der die Ausnahme beschrieben wird Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>"InnerException"</c> -Parameter ist kein <see langword="null" />, die aktuelle Ausnahme wird ausgelöst, eine <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.AggregateException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt den gleichen Wert zurück, der an den Konstruktor übergeben wird, oder `null`, wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft den Wert der inneren Ausnahme nicht an den Konstruktor übergibt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.AggregateException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|Die in `message` angegebene Fehlermeldungszeichenfolge.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="innerException" />-Argument ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AggregateException (string message, params Exception[] innerExceptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception[] innerExceptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.#ctor(System.String,System.Exception[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerExceptions" Type="System.Exception[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerExceptions">Die Ausnahmen, die die Ursache der aktuellen Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.AggregateException" /> Klasse mit einer angegebenen Fehlermeldung und Verweise auf die inneren Ausnahmen, die die Ursache dieser Ausnahme sind.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="innerExceptions" />-Argument ist null.</exception>
+        <exception cref="T:System.ArgumentException">Ein Element von <paramref name="innerExceptions" /> ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flatten">
+      <MemberSignature Language="C#" Value="public AggregateException Flatten ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.AggregateException Flatten() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.Flatten" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AggregateException</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fasst eine <see cref="T:System.AggregateException" /> Instanzen in eine neue Instanz.</summary>
+        <returns>Eine neue zusammengefasste <see cref="T:System.AggregateException" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Aufgabe über eine angefügte untergeordnete Aufgabe, die eine Ausnahme auslöst verfügt, wird diese Ausnahme umschlossen, eine <xref:System.AggregateException> Ausnahme aus, bevor sie an die übergeordnete Aufgabe weitergegeben wird, die diese Ausnahme in eine eigene umschließt <xref:System.AggregateException> Ausnahme aus, und sie zurückgibt, zurück an die aufrufenden Thread. In solchen Fällen die <xref:System.AggregateException.InnerExceptions%2A> Eigenschaft von der <xref:System.AggregateException> Ausnahme, die durch abgefangen wird die <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task.Wait*>, <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> Methode enthält eine oder mehrere <xref:System.AggregateException> -Instanzen und nicht die ursprünglichen Ausnahmen, der Fehler verursacht wurde. Geschachtelt zu vermeiden, dass zum Durchlaufen <xref:System.AggregateException> Ausnahmen, die Sie verwenden die <xref:System.AggregateException.Flatten%2A> Methode, um alle Entfernen der geschachtelten <xref:System.AggregateException> Ausnahmen, damit die <xref:System.AggregateException.InnerExceptions%2A> -Eigenschaft des zurückgegebenen <xref:System.AggregateException> Objekt enthält die ursprüngliche Ausnahmen.  
+  
+ Diese Methode rekursiv fasst alle Instanzen von <xref:System.AggregateException> Ausnahmen, die inneren Ausnahmen des aktuellen <xref:System.AggregateException> Instanz. Die inneren Ausnahmen zurückgegeben, in der neuen <xref:System.AggregateException> sind, die die Kombination aller inneren Ausnahmen von der aktuellen Stamm <xref:System.AggregateException> Instanz.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden geschachtelte <xref:System.AggregateException> -Instanzen vereinfacht und in nur einen Schleife behandelt.  
+  
+ [!code-csharp[TPL_Exceptions#22](~/samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/flatten2.cs#22)]
+ [!code-vb[TPL_Exceptions#22](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/flatten2.vb#22)]  
+  
+ Können Sie auch die <xref:System.AggregateException.Flatten%2A?displayProperty=nameWithType> Methode, um die inneren Ausnahmen von mehreren rethrow <xref:System.AggregateException> Instanzen, die von mehreren Aufgaben in einem einzelnen ausgelöst <xref:System.AggregateException> Instanz, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[TPL_Exceptions#13](~/samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/taskexceptions2.cs#13)]
+ [!code-vb[TPL_Exceptions#13](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/taskexceptions2.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBaseException">
+      <MemberSignature Language="C#" Value="public override Exception GetBaseException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Exception GetBaseException() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.GetBaseException" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.AggregateException" /> , die Ursache dieser Ausnahme.</summary>
+        <returns>Gibt die <see cref="T:System.AggregateException" /> , die Ursache dieser Ausnahme.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.AggregateException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen. Weitere Informationen finden Sie unter [XML- und SOAP-Serialisierung](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="info" />-Argument ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public void Handle (Func&lt;Exception,bool&gt; predicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Handle(class System.Func`2&lt;class System.Exception, bool&gt; predicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.Handle(System.Func{System.Exception,System.Boolean})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="predicate" Type="System.Func&lt;System.Exception,System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="predicate">Das Prädikat, das für jede Ausnahme ausgeführt werden muss. Das Prädikat wird als Argument akzeptiert die <see cref="T:System.Exception" /> verarbeitet werden und gibt einen booleschen Wert ab, der angibt, ob die Ausnahme behandelt wurde.</param>
+        <summary>Ruft einen Handler für jede <see cref="T:System.Exception" /> enthaltenen <see cref="T:System.AggregateException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedem Aufruf der `predicate` gibt "true" oder "false", um anzugeben, ob die <xref:System.Exception> behandelt wurde. Nach der alle Aufrufe, wenn Ausnahmen nicht behandelt wurden alle nicht behandelte Ausnahmen werden versetzt werden in eine neue <xref:System.AggregateException> dem ausgelöst. Andernfalls die <xref:System.AggregateException.Handle%2A> einfach Methodenrückgabe. Wenn alle Aufrufe der `predicate` eine Ausnahme auslöst, wird und hält die Verarbeitung weiterer Ausnahmen sofort weitergegeben werden die ausgelöste Ausnahme als-ist.  
+  
+   
+  
+## Examples  
+ Normalerweise einen Ausnahmehandler, der abfängt ein <xref:System.AggregateException> Ausnahme verwendet eine `foreach` -Schleife (in c#) oder `For Each` -Schleife (in Visual Basic), jede Ausnahme behandeln seine <xref:System.AggregateException.InnerExceptions%2A> Auflistung. Im folgenden Beispiel wird stattdessen verwendet die <xref:System.AggregateException.Handle%2A> Methode zum Behandeln jede Ausnahme und die einzige löst erneut aus, Ausnahmen, die nicht `CustomException` Instanzen.  
+  
+ [!code-csharp[TPL_Exceptions#16](~/samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handlemethod2.cs#16)]
+ [!code-vb[TPL_Exceptions#16](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handlemethod2.vb#16)]  
+  
+ Folgender Ausdruck ist ein vollständiges Beispiel, verwendet der <xref:System.AggregateException.Handle%2A> -Methode zum Bereitstellen von spezielle Behandlung für eine <xref:System.UnauthorizedAccessException> beim Auflisten von Dateien.  
+  
+ [!code-csharp[TPL_Exceptions#12](~/samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/taskexceptions.cs#12)]
+ [!code-vb[TPL_Exceptions#12](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/taskexceptions.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="predicate" />-Argument ist null.</exception>
+        <exception cref="T:System.AggregateException">Eine Ausnahme, die in dieser <see cref="T:System.AggregateException" /> wurde nicht behandelt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerExceptions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Exception&gt; InnerExceptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Exception&gt; InnerExceptions" />
+      <MemberSignature Language="DocId" Value="P:System.AggregateException.InnerExceptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Exception&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine schreibgeschützte Auflistung von der <see cref="T:System.Exception" /> Instanzen, die die aktuelle Ausnahme verursacht hat.</summary>
+        <value>Gibt eine schreibgeschützte Auflistung von der <see cref="T:System.Exception" /> Instanzen, die die aktuelle Ausnahme verursacht hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.AggregateException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AggregateException.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Zeichenfolgendarstellung der aktuellen <see cref="T:System.AggregateException" /> und gibt diese zurück.</summary>
+        <returns>Eine Zeichenfolgendarstellung der aktuellen Ausnahme.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,209 @@
+<Type Name="SystemGesture" FullName="System.Windows.Input.SystemGesture">
+  <TypeSignature Language="C#" Value="public enum SystemGesture" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SystemGesture extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.SystemGesture" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert die verfügbaren System Gesten an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Betriebssystem System Gesten, erkennt der <xref:System.Windows.UIElement.StylusSystemGesture> Ereignis auftritt. Viele der Gesten ordnen Sie herkömmliche Mausereignisse. Die Tap-System-Geste imitiert z. B. einen einfachen Mausklick auf Maus.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird bestimmt, welche Art von System-Geste, die ausgelöst der <xref:System.Windows.Input.SystemGesture.Tap> Ereignis. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.InkCanvas> aufgerufen `inkcanvas1` und <xref:System.Windows.Input.SystemGesture> mit den folgenden Ereignishandler verbunden ist.  
+  
+ [!code-csharp[PacketSpy#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#15)]
+ [!code-vb[PacketSpy#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#15)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Drag">
+      <MemberSignature Language="C#" Value="Drag" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.SystemGesture Drag = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.SystemGesture.Drag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.SystemGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Entspricht dem Left Ziehen der Maus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Flick">
+      <MemberSignature Language="C#" Value="Flick" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.SystemGesture Flick = int32(31)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.SystemGesture.Flick" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.SystemGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, mit einer kurzen, schnellen Strich, der in einem bestimmten Befehl übersetzt. Die von einer Bewegung ausgeführte Aktion ist eine systemweite festgelegt. Eine Anwendung überwachen kann eine <see cref="F:System.Windows.Input.SystemGesture.Flick" /> und verhindern, dass Sie zu der standardmäßigen <see cref="T:System.Windows.Input.ApplicationCommands" /> durch Festlegen der <see cref="P:System.Windows.RoutedEventArgs.Handled" /> Eigenschaft auf "true" in der <see cref="E:System.Windows.UIElement.StylusSystemGesture" /> Ereignis. Nur Windows Vista unterstützt streichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HoldEnter">
+      <MemberSignature Language="C#" Value="HoldEnter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.SystemGesture HoldEnter = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.SystemGesture.HoldEnter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.SystemGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Taste und halten aufgetreten ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HoldLeave">
+      <MemberSignature Language="C#" Value="HoldLeave" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.SystemGesture HoldLeave = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.SystemGesture.HoldLeave" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.SystemGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nicht implementiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HoverEnter">
+      <MemberSignature Language="C#" Value="HoverEnter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.SystemGesture HoverEnter = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.SystemGesture.HoverEnter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.SystemGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ordnet eine mauszeigerbewegung zu. Dies kann verwendet werden, zum Anzeigen von QuickInfo-Rollover-Effekten oder andere Verhalten der Maus gezeigt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HoverLeave">
+      <MemberSignature Language="C#" Value="HoverLeave" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.SystemGesture HoverLeave = int32(24)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.SystemGesture.HoverLeave" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.SystemGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ordnet dem Verlassen einer gezeigt wird. Dies kann zum Beenden der QuickInfo-Rollover-Effekten oder anderen Verhalten der Maus gezeigt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.SystemGesture None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.SystemGesture.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.SystemGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Geste System.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightDrag">
+      <MemberSignature Language="C#" Value="RightDrag" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.SystemGesture RightDrag = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.SystemGesture.RightDrag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.SystemGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Entspricht dem Recht Ziehen einer Maus. Dies kann verwendet werden, um ein Objekt oder eine Auswahl in einem anderen Bereich ziehen und durch die Darstellung der im Kontextmenü die Optionen für das Verschieben von des Objekts bereitstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightTap">
+      <MemberSignature Language="C#" Value="RightTap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.SystemGesture RightTap = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.SystemGesture.RightTap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.SystemGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ordnet einen Rechtsklick auf eine Maus. Dies kann verwendet werden, um ein Kontextmenü anzuzeigen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tap">
+      <MemberSignature Language="C#" Value="Tap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.SystemGesture Tap = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.SystemGesture.Tap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.SystemGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ordnet eine mit der linken Maustaste auf eine Maus. Dies kann verwendet werden, wählen Sie ein Befehl aus dem Menü oder die Symbolleiste, die Aktion ausgeführt, wenn ein Befehl ausgewählt ist, eine Einfügemarke setzen oder Auswahl Feedback anzuzeigen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoFingerTap">
+      <MemberSignature Language="C#" Value="TwoFingerTap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.SystemGesture TwoFingerTap = int32(4352)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.SystemGesture.TwoFingerTap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.SystemGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ordnet einem Doppelklick mit der Maus.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

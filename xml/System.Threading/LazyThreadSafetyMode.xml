@@ -1,0 +1,137 @@
+<Type Name="LazyThreadSafetyMode" FullName="System.Threading.LazyThreadSafetyMode">
+  <TypeSignature Language="C#" Value="public enum LazyThreadSafetyMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LazyThreadSafetyMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.LazyThreadSafetyMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie eine <see cref="T:System.Lazy`1" />-Instanz den Zugriff bei mehreren Threads synchronisiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe dieser Enumeration an die `mode` Parameter <xref:System.Lazy%601> Konstruktoren. Die Effekte von allen Konstruktoren für die Threadsynchronisierung können im Hinblick auf diese Enumeration beschrieben werden, unabhängig davon, ob sie verfügen über `mode` Parameter.  
+  
+ Ein <xref:System.Lazy%601> -Instanz wird initialisiert, indem Sie ein benutzerdefiniertes Initialisierungsmethode oder der Standardkonstruktor für `T`. Die Initialisierungsmethode wird angegeben, indem die `valueFactory` Parameter von einem <xref:System.Lazy%601> Konstruktor. Die Methode gibt eine Instanz des `T`, d. h. den Typ, der von der Instanz der verzögert instanziiert wird <xref:System.Lazy%601>. Wenn ein Konstruktor keine `valueFactory` Parameter, der Standardkonstruktor für `T` zur Initialisierung der <xref:System.Lazy%601> Instanz. In beiden Fällen Initialisierung erfolgt beim ersten Aufruf der <xref:System.Lazy%601.Value%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Zusätzlich zum Angeben der Threadsicherheit von einem <xref:System.Lazy%601> Instanz, die diese Enumeration wirkt sich auf das Zwischenspeichern von Ausnahmen. Wenn Ausnahmen für zwischengespeichert sind eine <xref:System.Lazy%601> Instanz, erhalten Sie nur eine Möglichkeit zum Initialisieren der Instanz. Wenn eine Ausnahme, beim ersten ausgelöst wird Aufrufen der <xref:System.Lazy%601.Value%2A?displayProperty=nameWithType> Eigenschaft, dass die Ausnahme zwischengespeichert und erneut ausgelöst, auf alle nachfolgenden Aufrufe an die <xref:System.Lazy%601.Value%2A?displayProperty=nameWithType> Eigenschaft. Der Vorteil der caching-Ausnahmen ist, dass keine zwei Threads immer das gleiche Ergebnis erhalten, selbst wenn Fehler auftreten.  
+  
+ Wenn Sie den PublicationOnly-Modus angeben, werden Ausnahmen nie zwischengespeichert. Wenn Sie keine angeben oder ExecutionAndPublication, Zwischenspeichern abhängig, ob eine Initialisierungsmethode angeben oder zulassen den Standardkonstruktor für `T` verwendet werden. Durch die Angabe einer Initialisierungsmethode wird das Zwischenspeichern von Ausnahmen für diese beiden Modi aktiviert. Die Initialisierungsmethode kann sehr einfach sein. Sie kann z.B. den Standardkonstruktor für `T` aufrufen: `new Lazy<Contents>(() => new Contents(), mode)` in C# bzw. `New Lazy(Of Contents)(Function() New Contents())` in Visual Basic. Wenn Sie einen Konstruktor verwenden, die keine Initialisierungsmethode, Ausnahmen angeben, die vom Standardkonstruktor für ausgelöst werden `T` werden nicht zwischengespeichert. In der folgenden Tabelle sind die Ausnahme, die Verhalten beim Zwischenspeichern zusammengefasst.  
+  
+|Modus|Verwenden die Initialisierungsmethode|Mithilfe der Standardkonstruktor für`T`|  
+|----------|---------------------------------|---------------------------------------|  
+|Keine|Zwischengespeichert|Nicht zwischengespeichert|  
+|PublicationOnly|Nicht zwischengespeichert|Nicht zwischengespeichert|  
+|ExecutionAndPublication|Zwischengespeichert|Nicht zwischengespeichert|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExecutionAndPublication">
+      <MemberSignature Language="C#" Value="ExecutionAndPublication" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.LazyThreadSafetyMode ExecutionAndPublication = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.LazyThreadSafetyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sperren werden dazu verwendet, um sicherzustellen, dass eine <see cref="T:System.Lazy`1" />-Instanz nur von einem einzelner Thread auf threadsichere Weise initialisiert werden kann. Wenn die Initialisierungsmethode (oder der Standardkonstruktor, wenn keine Initialisierungsmethode vorhanden ist) die Sperren intern verwendet, können Deadlocks auftreten. Wenn Sie einen <see cref="T:System.Lazy`1" />-Konstruktor verwenden, der eine Initialisierungsmethode angibt (<paramref name="valueFactory" />-Parameter), und wenn diese Initialisierungsmethode zudem eine Ausnahme auslöst (oder bei der Behandlung einer Ausnahme ein Fehler auftritt), wenn die <see cref="P:System.Lazy`1.Value" />-Eigenschaft das erste Mal aufgerufen wird, dann wird die Ausnahme zwischengespeichert und bei nachfolgenden Aufrufen der <see cref="P:System.Lazy`1.Value" />-Eigenschaft erneut ausgelöst. Wenn Sie einen <see cref="T:System.Lazy`1" />-Konstruktor verwenden, der keine Initialisierungsmethode angibt, werden Ausnahmen nicht zwischengespeichert, die vom Standardkonstruktor für <paramref name="T" /> ausgelöst werden. In diesem Fall kann ein nachfolgender Aufruf der <see cref="P:System.Lazy`1.Value" />-Eigenschaft die <see cref="T:System.Lazy`1" />-Instanz möglicherweise erfolgreich initialisieren. Wenn die Initialisierungsmethode rekursiv auf die <see cref="P:System.Lazy`1.Value" />-Eigenschaft der <see cref="T:System.Lazy`1" />-Instanz zugreift, wird eine <see cref="T:System.InvalidOperationException" /> ausgelöst.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.LazyThreadSafetyMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.LazyThreadSafetyMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.LazyThreadSafetyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Lazy`1" />-Instanz ist nicht threadsicher. Wenn mehrere Threads auf die Instanz zugreifen, ist das Verhalten nicht definiert. Verwenden Sie diesen Modus nur, wenn hohe Leistungsfähigkeit entscheidend ist und die <see cref="T:System.Lazy`1" />-Instanz garantiert nie von mehr als einem Thread initialisiert wird. Wenn Sie einen <see cref="T:System.Lazy`1" />-Konstruktor verwenden, der eine Initialisierungsmethode angibt (<paramref name="valueFactory" />-Parameter), und wenn diese Initialisierungsmethode zudem eine Ausnahme auslöst (oder bei der Behandlung einer Ausnahme ein Fehler auftritt), wenn die <see cref="P:System.Lazy`1.Value" />-Eigenschaft das erste Mal aufgerufen wird, dann wird die Ausnahme zwischengespeichert und bei nachfolgenden Aufrufen der <see cref="P:System.Lazy`1.Value" />-Eigenschaft erneut ausgelöst. Wenn Sie einen <see cref="T:System.Lazy`1" />-Konstruktor verwenden, der keine Initialisierungsmethode angibt, werden Ausnahmen nicht zwischengespeichert, die vom Standardkonstruktor für <paramref name="T" /> ausgelöst werden. In diesem Fall kann ein nachfolgender Aufruf der <see cref="P:System.Lazy`1.Value" />-Eigenschaft die <see cref="T:System.Lazy`1" />-Instanz möglicherweise erfolgreich initialisieren. Wenn die Initialisierungsmethode rekursiv auf die <see cref="P:System.Lazy`1.Value" />-Eigenschaft der <see cref="T:System.Lazy`1" />-Instanz zugreift, wird eine <see cref="T:System.InvalidOperationException" /> ausgelöst.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicationOnly">
+      <MemberSignature Language="C#" Value="PublicationOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.LazyThreadSafetyMode PublicationOnly = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.LazyThreadSafetyMode.PublicationOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.LazyThreadSafetyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn mehrere Threads gleichzeitig versuchen, eine <see cref="T:System.Lazy`1" />-Instanz zu initialisieren, dürfen alle Threads die Initialisierungsmethode (oder den Standardkonstruktor, wenn keine Initialisierungsmethode vorhanden ist) ausführen. Der erste Thread, der die Initialisierung abgeschlossen hat, legt den Wert der <see cref="T:System.Lazy`1" />-Instanz fest. Dieser Wert wird an alle anderen Threads zurückgegeben, die die Initialisierungsmethode gleichzeitig ausgeführt haben, sofern die Initialisierungsmethode für diese Threads keine Ausnahmen ausgelöst hat. Alle Instanzen von <paramref name="T" />, die von den konkurrierenden Threads erstellt wurden, werden verworfen. Wenn die Initialisierungsmethode für einen Thread eine Ausnahme auslöst, wird die Ausnahme aus der <see cref="P:System.Lazy`1.Value" />-Eigenschaft für diesen Thread weitergegeben. Die Ausnahme wird nicht zwischengespeichert. Der Wert der <see cref="P:System.Lazy`1.IsValueCreated" />-Eigenschaft bleibt <see langword="false" /> und nachfolgende Aufrufe der <see cref="P:System.Lazy`1.Value" />-Eigenschaft führen zur erneuten Ausführung der Initialisierungsmethode, entweder durch den Thread, bei dem die Ausnahme ausgelöst wurde oder durch andere Threads. Wenn die Initialisierungsmethode rekursiv auf die <see cref="P:System.Lazy`1.Value" />-Eigenschaft der <see cref="T:System.Lazy`1" />-Instanz zugreift, wird keine Ausnahme ausgelöst.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

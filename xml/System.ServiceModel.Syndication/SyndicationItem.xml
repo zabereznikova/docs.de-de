@@ -1,0 +1,1564 @@
+<Type Name="SyndicationItem" FullName="System.ServiceModel.Syndication.SyndicationItem">
+  <TypeSignature Language="C#" Value="public class SyndicationItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SyndicationItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Syndication.SyndicationItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Feed-Element dar, z.&amp;#160;B. ein RSS-<see langword="&lt;item&gt;" /> oder einen Atom-<see langword="&lt;entry&gt;" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom&#160;1.0 wird eine <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz in ein `<entry>`-Element geschrieben. Die folgende Tabelle zeigt, wie jede für <xref:System.ServiceModel.Syndication.SyndicationItem> definierte Eigenschaft für Atom&#160;1.0 serialisiert wird:  
+  
+|SyndicationItem-Eigenschaft|Serialisierte Form|  
+|------------------------------|---------------------|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.AttributeExtensions%2A>|Attribut im `<entry>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Authors%2A>|Ein `<author>`-Element für jeden Autor in der Sammlung.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Categories%2A>|Ein`<category>` Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Content%2A>|Ein`<content>` Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Contributors%2A>|Ein`<contributor>` -Element für alle Mitwirkenden an der Auflistung.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Copyright%2A>|Ein`<rights>` Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.ElementExtensions%2A>|Element im `<entry>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Id%2A>|Ein `<id>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.LastUpdatedTime%2A>|Ein `<updated>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Links%2A>|Ein `<link>`-Element für jeden Link in der Auflistung.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.PublishDate%2A>|Ein `<published>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.SourceFeed%2A>|Ein `<source>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Summary%2A>|Ein `<summary>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Title%2A>|Ein `<title>`-Element.|  
+  
+ Bei der Serialisierung zu RSS&#160;2.0 wird eine <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz in ein `<item>`-Element geschrieben. Die folgende Tabelle zeigt, wie jede für <xref:System.ServiceModel.Syndication.SyndicationItem> definierte Eigenschaft für RSS&#160;2.0 serialisiert wird.  
+  
+|SyndicationItem-Eigenschaft|Serialisierte Form|  
+|------------------------------|---------------------|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.AttributeExtensions%2A>|Attribut im `<item>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Authors%2A>|Ein `<managingEditor>`, wenn nur eine <xref:System.ServiceModel.Syndication.SyndicationPerson> der <xref:System.ServiceModel.Syndication.SyndicationItem.Authors%2A>-Auflistung angehört. Andernfalls das `<a10:author>`-Element für jeden Autor in der Sammlung.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Categories%2A>|Ein `<category>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Content%2A>|Ein `<a10:content>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Contributors%2A>|Ein `<a10:contributor>`-Element für jede <xref:System.ServiceModel.Syndication.SyndicationPerson> in der <xref:System.ServiceModel.Syndication.SyndicationItem.Contributors%2A>-Sammlung.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Copyright%2A>|Ein `<copyright>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.ElementExtensions%2A>|Element im `<item>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Id%2A>|Ein `<a10:id>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.LastUpdatedTime%2A>|Ein `<a10:updated>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Links%2A>|Ein `<link>`-Element für jeden <xref:System.ServiceModel.Syndication.SyndicationLink> in der <xref:System.ServiceModel.Syndication.SyndicationItem.Links%2A>-Auflistung.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.PublishDate%2A>|Ein `<pubDate>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.SourceFeed%2A>|Ein `<source>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Summary%2A>|Ein `<description>`-Element.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem.Title%2A>|Ein `<title>`-Element.|  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird die Verwendung der <xref:System.ServiceModel.Syndication.SyndicationItem>-Klasse veranschaulicht.  
+  
+ [!code-csharp[SyndicationItem#0](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#0)]
+ [!code-vb[SyndicationItem#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SyndicationItem (System.ServiceModel.Syndication.SyndicationItem source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Syndication.SyndicationItem source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.#ctor(System.ServiceModel.Syndication.SyndicationItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.ServiceModel.Syndication.SyndicationItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">Eine <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz für die Initialisierung der neuen <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Klasse mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationItem (string title, string content, Uri feedAlternateLink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string title, string content, class System.Uri feedAlternateLink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.#ctor(System.String,System.String,System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="itemAlternateLink" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="title">Der Elementtitel.</param>
+        <param name="content">Der Elementinhalt.</param>
+        <param name="feedAlternateLink">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Klasse mit dem angegebenen Titel, Inhalt und Link.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird der Aufruf dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[SyndicationItem#1](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#1)]
+ [!code-vb[SyndicationItem#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationItem (string title, System.ServiceModel.Syndication.SyndicationContent content, Uri feedAlternateLink, string id, DateTimeOffset lastUpdatedTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string title, class System.ServiceModel.Syndication.SyndicationContent content, class System.Uri feedAlternateLink, string id, valuetype System.DateTimeOffset lastUpdatedTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.#ctor(System.String,System.ServiceModel.Syndication.SyndicationContent,System.Uri,System.String,System.DateTimeOffset)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="content" Type="System.ServiceModel.Syndication.SyndicationContent" />
+        <Parameter Name="itemAlternateLink" Type="System.Uri" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="lastUpdatedTime" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="title">Der Titel des Syndication-Elements.</param>
+        <param name="content">Eine <see cref="T:System.ServiceModel.Syndication.SyndicationContent" />-Instanz mit dem Inhalt des Syndication-Elements.</param>
+        <param name="feedAlternateLink">To be added.</param>
+        <param name="id">Die ID des Syndication-Elements.</param>
+        <param name="lastUpdatedTime">Der <see cref="T:System.DateTimeOffset" />, der den Zeitpunkt der letzten Aktualisierung des Syndication-Elements enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie dieser Konstruktor aufgerufen wird.  
+  
+ [!code-csharp[SyndicationItem#35](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#35)]
+ [!code-vb[SyndicationItem#35](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#35)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationItem (string title, string content, Uri feedAlternateLink, string id, DateTimeOffset lastUpdatedTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string title, string content, class System.Uri feedAlternateLink, string id, valuetype System.DateTimeOffset lastUpdatedTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.#ctor(System.String,System.String,System.Uri,System.String,System.DateTimeOffset)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="itemAlternateLink" Type="System.Uri" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="lastUpdatedTime" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="title">Der Titel des Syndication-Elements.</param>
+        <param name="content">Der Inhalt des Syndication-Elements.</param>
+        <param name="feedAlternateLink">To be added.</param>
+        <param name="id">Die ID des Syndication-Elements.</param>
+        <param name="lastUpdatedTime">Der <see cref="T:System.DateTimeOffset" />, der den Zeitpunkt der letzten Aktualisierung des Syndication-Elements enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie dieser Konstruktor aufgerufen wird.  
+  
+ [!code-csharp[SyndicationItem#34](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#34)]
+ [!code-vb[SyndicationItem#34](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPermalink">
+      <MemberSignature Language="C#" Value="public void AddPermalink (Uri link);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPermalink(class System.Uri link) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.AddPermalink(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="permalink" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="link">To be added.</param>
+        <summary>Fügt eine *Permalink* auf die <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Permalink ist eine statische URI, die auf einen Web-Inhalt verweist.  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird gezeigt, wie einem Syndication-Element ein Permalink hinzugefügt wird.  
+  
+ [!code-csharp[SyndicationItem#36](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#36)]
+ [!code-vb[SyndicationItem#36](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#36)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeExtensions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;System.Xml.XmlQualifiedName,string&gt; AttributeExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;class System.Xml.XmlQualifiedName, string&gt; AttributeExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.AttributeExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Xml.XmlQualifiedName,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Attributerweiterungen für dieses Syndication-Element ab.</summary>
+        <value>Ein Wörterbuch, das eine Auflistung von Attributerweiterungen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Syndication-Objektmodell ermöglicht Ihnen, benutzerdefinierte Attribute einer <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz hinzuzufügen. Bei der Serialisierung für Atom&#160;1.0 wird das benutzerdefinierte Attribut in ein `<entry>`-Element geschrieben. Bei der Serialisierung für RSS&#160;2.0 wird das benutzerdefinierte Attribut in ein `<item>`-Element geschrieben. Ein vollständiges Beispiel, das zum Hinzufügen einer attributerweiterung veranschaulicht, finden Sie unter der [Loosely-Typed Erweiterungen](~/docs/framework/wcf/samples/loosely-typed-extensions-sample.md) Beispiel.  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird gezeigt, wie eine Attributerweiterung einem Syndication-Feed hinzugefügt wird.  
+  
+ [!code-csharp[LooselyTypedExtensions#3](~/samples/snippets/csharp/VS_Snippets_CFX/looselytypedextensions/cs/snippets.cs#3)]
+ [!code-vb[LooselyTypedExtensions#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/looselytypedextensions/vb/snippets.vb#3)]  
+  
+ Der folgende XML-Code zeigt die Atom&#160;1.0-Serialisierung einer <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz mit einem benutzerdefinierten Attribut namens `itemAttrib`.  
+  
+ [!code-xml[SyndicationItem#4](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/atom.xml#4)]  
+  
+ Im folgenden Code wird die gleiche als RSS&#160;2.0 serialisierte <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz dargestellt.  
+  
+ [!code-xml[SyndicationItem#5](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/rss.xml#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Syndication.SyndicationPerson&gt; Authors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Syndication.SyndicationPerson&gt; Authors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.Authors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Syndication.SyndicationPerson&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Autoren des Syndication-Elements ab.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Objekten, die die Autoren des Syndication-Elements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom&#160;1.0 wird ein `<author>`-Element für jede <xref:System.ServiceModel.Syndication.SyndicationPerson> in der  <xref:System.ServiceModel.Syndication.SyndicationItem.Authors%2A>-Auflistung geschrieben.  
+  
+ Bei der Serialisierung in RSS 2.0 eine `<managingEditor>` Element geschrieben wird, wenn die <xref:System.ServiceModel.Syndication.SyndicationItem.Authors%2A> Auflistung verfügt über nur einen <xref:System.ServiceModel.Syndication.SyndicationPerson>, andernfalls ein `<a10:author>` Element wird für jede geschrieben <xref:System.ServiceModel.Syndication.SyndicationPerson> in der <xref:System.ServiceModel.Syndication.SyndicationItem.Authors%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird gezeigt, wie der <xref:System.ServiceModel.Syndication.SyndicationItem.Authors%2A>-Auflistung eines <xref:System.ServiceModel.Syndication.SyndicationItem> ein Autor hinzugefügt wird.  
+  
+ [!code-csharp[SyndicationItem#22](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#22)]
+ [!code-vb[SyndicationItem#22](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#22)]  
+  
+ Der folgende XML-Code zeigt, wie das vorherige <xref:System.ServiceModel.Syndication.SyndicationItem> zu Atom&#160;1.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#6](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/atom.xml#6)]  
+  
+ Der folgende XML-Code zeigt, wie das vorherige <xref:System.ServiceModel.Syndication.SyndicationItem> zu RSS&#160;2.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#7](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/rss.xml#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="public Uri BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert den Uniform Resource Identifier (URI) für die <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</summary>
+        <value>Der Basis-URI des <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />s.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie der Basis-URI eines Syndication-Elements festgelegt wird.  
+  
+ [!code-csharp[SyndicationItem#33](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#33)]
+ [!code-vb[SyndicationItem#33](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Categories">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Syndication.SyndicationCategory&gt; Categories { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Syndication.SyndicationCategory&gt; Categories" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.Categories" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Syndication.SyndicationCategory&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Syndication-Kategorien für dieses Syndication-Element ab.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Objekten, die für die Kategorien des Syndication-Elements stehen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom&#160;1.0 oder RSS&#160;2.0 wird ein `<category>`-Element für jede Kategorie in der <xref:System.ServiceModel.Syndication.SyndicationItem.Categories%2A>-Auflistung erstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einer <xref:System.ServiceModel.Syndication.SyndicationItem.Categories%2A>-Auflistung eines <xref:System.ServiceModel.Syndication.SyndicationItem> eine Kategorie hinzugefügt wird.  
+  
+ [!code-csharp[SyndicationItem#23](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#23)]
+ [!code-vb[SyndicationItem#23](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#23)]  
+  
+ Der folgende XML-Code zeigt, wie eine <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz mit einer Kategorie zu Atom&#160;1.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#8](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/atom.xml#8)]  
+  
+ Der folgende XML-Code zeigt, wie eine <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz mit einer Kategorie zu RSS&#160;2.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#9](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/rss.xml#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Syndication.SyndicationItem Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Syndication.SyndicationItem Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationItem</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie der <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Code zeigt, wie eine Instanz der <xref:System.ServiceModel.Syndication.SyndicationItem>-Klasse geklont wird.  
+  
+ [!code-csharp[SyndicationItem#41](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#41)]
+ [!code-vb[SyndicationItem#41](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#41)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.SyndicationContent Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Syndication.SyndicationContent Content" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationContent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert den Inhalt des Syndication-Elements.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Syndication.SyndicationContent" />-Instanz, die den Inhalt des Syndication-Elements enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Syndication.SyndicationContent> ist eine Basisklasse für alle Arten von Syndication-Inhalten. [!INCLUDE[netfx35_short](~/includes/netfx35-short-md.md)] definiert die folgenden Typen von Syndication-Inhalten:  
+  
+-   <xref:System.ServiceModel.Syndication.TextSyndicationContent>  
+  
+-   <xref:System.ServiceModel.Syndication.UrlSyndicationContent>  
+  
+-   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
+  
+ Sie können diese Eigenschaften allen Content-Arten (oder ggf. auch einer benutzerdefinierten Art, die von <xref:System.ServiceModel.Syndication.SyndicationContent> abgeleitet wurde) zuweisen.  
+  
+ Für Atom&#160;1.0 wird die Eigenschaft <xref:System.ServiceModel.Syndication.SyndicationItem.Content%2A> zu einem `<content>`-Element serialisiert.  
+  
+ Für RSS&#160;2.0 wird die Eigenschaft <xref:System.ServiceModel.Syndication.SyndicationItem.Content%2A> zu einem `<description>`-Element für <xref:System.ServiceModel.Syndication.TextSyndicationContent>, einem `<a10:content>`-Element für <xref:System.ServiceModel.Syndication.UrlSyndicationContent> und <xref:System.ServiceModel.Syndication.XmlSyndicationContent> serialisiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einem <xref:System.ServiceModel.Syndication.SyndicationItem> Inhalt hinzugefügt wird.  
+  
+ [!code-csharp[SyndicationItem#24](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#24)]
+ [!code-vb[SyndicationItem#24](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#24)]  
+  
+ Der folgende XML-Code zeigt, wie die Eigenschaft <xref:System.ServiceModel.Syndication.SyndicationItem.Content%2A> für Atom&#160;1.0 serialisiert wird.  
+  
+ <xref:System.ServiceModel.Syndication.TextSyndicationContent> wird serialisiert, wie im folgenden Beispiel gezeigt.  
+  
+```  
+<content type="text">This is some content</content>  
+```  
+  
+ <xref:System.ServiceModel.Syndication.UrlSyndicationContent> wird serialisiert, wie im folgenden Beispiel gezeigt.  
+  
+```  
+<content type="text/html" src="http://myurl/" />  
+```  
+  
+ <xref:System.ServiceModel.Syndication.XmlSyndicationContent> wird serialisiert, wie im folgenden Beispiel gezeigt.  
+  
+```  
+<content type="MyXMLType">  
+    <mg:MyElement xmlns:mg="http://migree/elements">This is some text</mg:MyElement>  
+</content>  
+```  
+  
+ Der folgende XML-Code zeigt, wie die Eigenschaft <xref:System.ServiceModel.Syndication.SyndicationItem.Content%2A> für RSS&#160;2.0 serialisiert wird.  
+  
+ <xref:System.ServiceModel.Syndication.TextSyndicationContent> wird serialisiert, wie im folgenden Beispiel gezeigt.  
+  
+```  
+<description>This is some content</description>  
+```  
+  
+ <xref:System.ServiceModel.Syndication.UrlSyndicationContent> wird serialisiert, wie im folgenden Beispiel gezeigt.  
+  
+```  
+<a10:content type="text/html" src="http://myurl/" />  
+```  
+  
+ <xref:System.ServiceModel.Syndication.XmlSyndicationContent> wird serialisiert, wie im folgenden Beispiel gezeigt.  
+  
+```  
+<a10:content type="MyXMLType">  
+    <mg:MyElement xmlns:mg="http://migree/elements">This is some text</mg:MyElement>  
+</a10:content>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contributors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Syndication.SyndicationPerson&gt; Contributors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Syndication.SyndicationPerson&gt; Contributors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.Contributors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Syndication.SyndicationPerson&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die beteiligten Personen eines Syndication-Elements ab.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Objekten, die die beteiligten Personen des Syndication-Elements darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom&#160;1.0 wird ein `<contributor>`-Element für jede <xref:System.ServiceModel.Syndication.SyndicationPerson> in der <xref:System.ServiceModel.Syndication.SyndicationItem.Contributors%2A>-Auflistung erstellt.  
+  
+ Bei der Serialisierung zu RSS&#160;2.0 wird ein `<a10:contributor>`-Element für jede <xref:System.ServiceModel.Syndication.SyndicationPerson> in der <xref:System.ServiceModel.Syndication.SyndicationItem.Contributors%2A>-Auflistung erstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einem <xref:System.ServiceModel.Syndication.SyndicationItem> ein Mitwirkender hinzugefügt wird.  
+  
+ [!code-csharp[SyndicationItem#25](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#25)]
+ [!code-vb[SyndicationItem#25](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#25)]  
+  
+ Das folgende XML-Beispiel zeigt, wie diese Eigenschaft zu Atom&#160;1.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#10](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/atom.xml#10)]  
+  
+ Das folgende XML-Beispiel zeigt, wie diese Eigenschaft zu RSS&#160;2.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#11](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/rss.xml#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copyright">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.TextSyndicationContent Copyright { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Syndication.TextSyndicationContent Copyright" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.Copyright" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.TextSyndicationContent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Copyright-Informationen für das Syndication-Element.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Syndication.TextSyndicationContent" />-Instanz, die für Copyright-Informationen steht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom&#160;1.0 wird diese Eigenschaft in ein `<rights>`-Element geschrieben. Bei der Serialisierung zu RSS&#160;2.0 wird diese Eigenschaft in ein `<a10:rights>`-Element geschrieben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einem <xref:System.ServiceModel.Syndication.SyndicationItem> Copyrightinformationen hinzugefügt werden.  
+  
+ [!code-csharp[SyndicationItem#26](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#26)]
+ [!code-vb[SyndicationItem#26](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#26)]  
+  
+ Das folgende XML-Beispiel zeigt, wie diese Eigenschaft zu Atom&#160;1.0 serialisiert wird.  
+  
+```  
+<rights type="text">Copyright 2007</rights>  
+```  
+  
+ Das folgende XML-Beispiel zeigt, wie diese Eigenschaft zu RSS&#160;2.0 serialisiert wird.  
+  
+```  
+<a10:rights type="text">Copyright 2007</a10:rights>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCategory">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Syndication.SyndicationCategory CreateCategory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ServiceModel.Syndication.SyndicationCategory CreateCategory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.CreateCategory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationCategory</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Kategorie.</summary>
+        <returns>Ein neues <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hiermit wird das neue <xref:System.ServiceModel.Syndication.SyndicationCategory>-Objekt nicht in die <xref:System.ServiceModel.Syndication.SyndicationItem.Categories%2A>-Auflistung eingefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLink">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Syndication.SyndicationLink CreateLink ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ServiceModel.Syndication.SyndicationLink CreateLink() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.CreateLink" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationLink</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />-Instanz.</summary>
+        <returns>Eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neu erstellte <xref:System.ServiceModel.Syndication.SyndicationLink>-Instanz wird nicht automatisch der <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz hinzugefügt, die zum Aufrufen der Methode <xref:System.ServiceModel.Syndication.SyndicationItem.CreateLink> verwendet wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePerson">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Syndication.SyndicationPerson CreatePerson ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ServiceModel.Syndication.SyndicationPerson CreatePerson() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.CreatePerson" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationPerson</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Person.</summary>
+        <returns>Ein neues <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hiermit wird das neue <xref:System.ServiceModel.Syndication.SyndicationPerson>-Objekt nicht in die <xref:System.ServiceModel.Syndication.SyndicationItem.Authors%2A>-Auflistung oder <xref:System.ServiceModel.Syndication.SyndicationItem.Contributors%2A>-Auflistung eingefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementExtensions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.SyndicationElementExtensionCollection ElementExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Syndication.SyndicationElementExtensionCollection ElementExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.ElementExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationElementExtensionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die im Syndication-Element enthaltenen Elementerweiterungen ab.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtensionCollection" />, die die Elementerweiterungen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementerweiterungen sind gültige XML-Elemente, die nicht in der Spezifikation Atom 1.0 oder RSS 2.0 definiert werden. Ein gültiges XML-Element kann als Erweiterung hinzugefügt werden, sofern sich sein Namespace vom übergeordneten Namespace unterscheidet. Bei der Serialisierung werden Erweiterungen wie normale XML-Elemente geschrieben.  
+  
+```  
+<mg:MyElement xmlns:mg="http://myserver/elements" />  
+```  
+  
+ Ein vollständiges Beispiel, das Hinzufügen von elementerweiterungen veranschaulicht, finden Sie unter der [Loosely-Typed Erweiterungen](~/docs/framework/wcf/samples/loosely-typed-extensions-sample.md) Beispiel.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einer <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz Elementerweiterungen hinzugefügt werden.  
+  
+ [!code-csharp[LooselyTypedExtensions#2](~/samples/snippets/csharp/VS_Snippets_CFX/looselytypedextensions/cs/snippets.cs#2)]
+ [!code-vb[LooselyTypedExtensions#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/looselytypedextensions/vb/snippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAtom10Formatter">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.Atom10ItemFormatter GetAtom10Formatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Syndication.Atom10ItemFormatter GetAtom10Formatter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.GetAtom10Formatter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.Atom10ItemFormatter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ServiceModel.Syndication.Atom10FeedFormatter" />-Instanz ab.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Syndication.Atom10FeedFormatter" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Code zeigt, wie ein Syndication-Element im Atom 1.0-Format in eine XML-Datei geschrieben wird.  
+  
+ [!code-csharp[SyndicationItem#42](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#42)]
+ [!code-vb[SyndicationItem#42](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#42)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRss20Formatter">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.Rss20ItemFormatter GetRss20Formatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Syndication.Rss20ItemFormatter GetRss20Formatter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.GetRss20Formatter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.Rss20ItemFormatter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ServiceModel.Syndication.Rss20FeedFormatter" />-Instanz ab.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Syndication.Rss20FeedFormatter" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Code zeigt, wie ein Syndication-Element im RSS 2.0-Format in eine XML-Datei geschrieben wird.  
+  
+ [!code-csharp[SyndicationItem#43](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#43)]
+ [!code-vb[SyndicationItem#43](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#43)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRss20Formatter">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.Rss20ItemFormatter GetRss20Formatter (bool serializeExtensionsAsAtom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Syndication.Rss20ItemFormatter GetRss20Formatter(bool serializeExtensionsAsAtom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.GetRss20Formatter(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.Rss20ItemFormatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializeExtensionsAsAtom" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="serializeExtensionsAsAtom">Ein Wert, der angibt, ob Element- und Attributerweiterungen mit einem Atom&amp;#160;1.0-Namespace serialisiert werden sollen.</param>
+        <summary>Ruft eine <see cref="T:System.ServiceModel.Syndication.Rss20FeedFormatter" />-Instanz ab.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Syndication.Rss20FeedFormatter" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ RSS&#160;2.0 lässt Elemente und Attribute, die nicht in der Spezifikation enthalten sind, nur dann zu, wenn sich diese in einem Namespace befinden. Wenn der `serializedExtensionsAsAtom`-Parameter `true` lautet, fügt das Formatierungsprogramm automatisch allen Erweiterungen den Namespace "a10" hinzu. Andernfalls werden die Erweiterungen nicht serialisiert.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie ein Syndication-Element im RSS 2.0-Format in eine XML-Datei geschrieben wird, indem Attribut- und Elementerweiterungen serialisiert werden.  
+  
+ [!code-csharp[SyndicationItem#44](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#44)]
+ [!code-vb[SyndicationItem#44](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#44)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die ID des Syndication-Elements.</summary>
+        <value>Die ID des Syndication-Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom&#160;1.0 wird diese Eigenschaft in das `<id>`-Element geschrieben. Bei der Serialisierung zu RSS&#160;2.0 wird diese Eigenschaft in das `<guid>`-Element geschrieben.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie die <xref:System.ServiceModel.Syndication.SyndicationItem.Id%2A>-Eigenschaft auf einer <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz festgelegt wird.  
+  
+ [!code-csharp[SyndicationItem#27](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#27)]
+ [!code-vb[SyndicationItem#27](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#27)]  
+  
+ Das folgende XML-Beispiel zeigt, wie diese Eigenschaft zu Atom&#160;1.0 serialisiert wird.  
+  
+```  
+<id>Item ID</id>  
+```  
+  
+ Das folgende XML-Beispiel zeigt, wie diese Eigenschaft zu RSS&#160;2.0 serialisiert wird.  
+  
+```  
+<guid isPermaLink="false">Item ID</guid>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastUpdatedTime">
+      <MemberSignature Language="C#" Value="public DateTimeOffset LastUpdatedTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset LastUpdatedTime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.LastUpdatedTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Zeit der letzten Aktualisierung für das Syndication-Element.</summary>
+        <value>Eine <see cref="T:System.DateTimeOffset" />-Instanz, die für den Zeitpunkt der Aktualisierung des Syndication-Elements steht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom&#160;1.0 wird diese Eigenschaft in ein `<updated>`-Element geschrieben. Bei der Serialisierung zu RSS&#160;2.0 wird diese Eigenschaft in ein `<a10:updated>`-Element geschrieben.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie die <xref:System.ServiceModel.Syndication.SyndicationItem.LastUpdatedTime%2A>-Eigenschaft auf einer <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz festgelegt wird.  
+  
+ [!code-csharp[SyndicationItem#28](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#28)]
+ [!code-vb[SyndicationItem#28](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#28)]  
+  
+ Das folgende XML-Beispiel zeigt, wie diese Eigenschaft zu Atom&#160;1.0 serialisiert wird.  
+  
+```  
+<updated>2007-03-19T20:34:23Z</updated>  
+```  
+  
+ Das folgende XML-Beispiel zeigt, wie diese Eigenschaft zu RSS&#160;2.0 serialisiert wird.  
+  
+```  
+<a10:updated>2007-03-19T20:34:23Z</a10:updated>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Links">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Syndication.SyndicationLink&gt; Links { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Syndication.SyndicationLink&gt; Links" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.Links" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Syndication.SyndicationLink&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die im Syndication-Element enthaltenen Links ab.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ServiceModel.Syndication.SyndicationLink" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom&#160;1.0 wird ein `<link>`-Element für jeden <xref:System.ServiceModel.Syndication.SyndicationLink> in der Auflistung geschrieben. Bei der Serialisierung zu RSS&#160;2.0 wird ein `<a10:link>`-Element für jeden <xref:System.ServiceModel.Syndication.SyndicationLink> in der Auflistung geschrieben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einer <xref:System.ServiceModel.Syndication.SyndicationItem.Links%2A>-Auflistung einer <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz ein Link hinzugefügt wird.  
+  
+ [!code-csharp[SyndicationItem#29](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#29)]
+ [!code-vb[SyndicationItem#29](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#29)]  
+  
+ Das folgende XML-Beispiel zeigt, wie diese Eigenschaft zu Atom&#160;1.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#12](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/atom.xml#12)]  
+  
+ Das folgende XML-Beispiel zeigt, wie diese Eigenschaft zu RSS&#160;2.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#13](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/rss.xml#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Syndication.SyndicationItem Load (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Syndication.SyndicationItem Load(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.Load(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <summary>Lädt eine <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz vom angegebenen <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie ein Syndication-Element in eine <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz geladen wird.  
+  
+ [!code-csharp[SyndicationItem#21](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#21)]
+ [!code-vb[SyndicationItem#21](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">Ungültige XML-Daten während des Lesens erkannt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Load&lt;TSyndicationItem&gt;">
+      <MemberSignature Language="C#" Value="public static TSyndicationItem Load&lt;TSyndicationItem&gt; (System.Xml.XmlReader reader) where TSyndicationItem : System.ServiceModel.Syndication.SyndicationItemnew();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TSyndicationItem Load&lt;.ctor (class System.ServiceModel.Syndication.SyndicationItem) TSyndicationItem&gt;(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.Load``1(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TSyndicationItem</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSyndicationItem">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <BaseTypeName>System.ServiceModel.Syndication.SyndicationItem</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSyndicationItem">Die zu ladende von <see cref="T:System.ServiceModel.Syndication.SyndicationItem" /> abgeleitete Klasse.</typeparam>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <summary>Lädt ein von <see cref="T:System.ServiceModel.Syndication.SyndicationItem" /> abgeleitetes Objekt aus dem angegebenen <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>Ein von <see cref="T:System.ServiceModel.Syndication.SyndicationItem" /> abgeleitetes Objekt mit dem Syndication-Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn Sie ein Syndication-Element in eine von <xref:System.ServiceModel.Syndication.SyndicationItem> abgeleitete Klasse laden.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt das Laden eines Syndication-Elements des angegebenen Typs aus einem XML-Reader.  
+  
+ [!code-csharp[SyndicationItem#37](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#37)]
+ [!code-vb[SyndicationItem#37](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#37)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublishDate">
+      <MemberSignature Language="C#" Value="public DateTimeOffset PublishDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset PublishDate" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.PublishDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert das Veröffentlichungsdatum für das Syndication-Element.</summary>
+        <value>Ein <see cref="T:System.DateTimeOffset" />-Objekt, das für das Veröffentlichungsdatum des Syndication-Elements steht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom&#160;1.0 wird diese Eigenschaft in ein `<published>`-Element geschrieben. Bei der Serialisierung zu RSS&#160;2.0 wird diese Eigenschaft in ein `<pubDate>`-Element geschrieben.  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird gezeigt, wie das <xref:System.ServiceModel.Syndication.SyndicationItem.PublishDate%2A> auf einer <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz festgelegt wird.  
+  
+ [!code-csharp[SyndicationItem#30](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#30)]
+ [!code-vb[SyndicationItem#30](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#30)]  
+  
+ Das folgende XML-Beispiel zeigt, wie diese Eigenschaft zu Atom&#160;1.0 serialisiert wird.  
+  
+```  
+<published>1968-02-23T08:00:00Z</published>  
+```  
+  
+ Das folgende XML-Beispiel zeigt, wie diese Eigenschaft zu RSS&#160;2.0 serialisiert wird.  
+  
+```  
+<pubDate>Fri, 23 Feb 1968 08:00:00 Z</pubDate>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAsAtom10">
+      <MemberSignature Language="C#" Value="public void SaveAsAtom10 (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveAsAtom10(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.SaveAsAtom10(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den geschrieben werden soll.</param>
+        <summary>Schreiben Sie das Syndication-Element im Atom&amp;#160;1.0-Format in den angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Code zeigt das Speichern eines Syndication-Elements im Atom 1.0-Format im angegebenen XML-Writer.  
+  
+ [!code-csharp[SyndicationItem#38](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#38)]
+ [!code-vb[SyndicationItem#38](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#38)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAsRss20">
+      <MemberSignature Language="C#" Value="public void SaveAsRss20 (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveAsRss20(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.SaveAsRss20(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den geschrieben werden soll.</param>
+        <summary>Schreiben Sie das Syndication-Element im RSS&amp;#160;2.0-Format in den angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Code zeigt das Speichern eines Syndication-Elements im RSS 2.0-Format im angegebenen XML-Writer.  
+  
+ [!code-csharp[SyndicationItem#39](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#39)]
+ [!code-vb[SyndicationItem#39](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#39)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceFeed">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.SyndicationFeed SourceFeed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Syndication.SyndicationFeed SourceFeed" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.SourceFeed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationFeed</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert den Quell-Feed des Syndication-Elements.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Syndication.SyndicationFeed" />-Instanz, in der sich das Syndication-Element befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird nicht automatisch definiert, wenn Sie ein <xref:System.ServiceModel.Syndication.SyndicationItem> einem <xref:System.ServiceModel.Syndication.SyndicationFeed> hinzufügen. Sie müssen sie explizit festlegen. Bei der Serialisierung zu Atom&#160;1.0 oder RSS&#160;2.0 wird diese Eigenschaft in ein `<source>`-Element geschrieben. Der Inhalt dieses Elements ändert sich abhängig vom Format, in das Sie serialisieren.  
+  
+   
+  
+## Examples  
+ Das folgende XML-Beispiel zeigt, wie die Eigenschaft <xref:System.ServiceModel.Syndication.SyndicationItem.SourceFeed%2A> zu Atom 1.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#14](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/atom.xml#14)]  
+  
+ Das folgende XML-Beispiel zeigt, wie die <xref:System.ServiceModel.Syndication.SyndicationItem.SourceFeed%2A>-Eigenschaft zu RSS 2.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#15](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/rss.xml#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Summary">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.TextSyndicationContent Summary { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Syndication.TextSyndicationContent Summary" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.Summary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.TextSyndicationContent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Übersicht des Syndication-Elements.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Syndication.TextSyndicationContent" /> mit der Elementübersicht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom&#160;1.0 wird diese Eigenschaft in ein `<summary>`-Element geschrieben. Bei der Serialisierung zu RSS&#160;2.0 wird diese Eigenschaft in ein `<description>`-Element geschrieben.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie die <xref:System.ServiceModel.Syndication.SyndicationItem.Summary%2A>-Eigenschaft auf einer <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz festgelegt wird.  
+  
+ [!code-csharp[SyndicationItem#31](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#31)]
+ [!code-vb[SyndicationItem#31](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#31)]  
+  
+ Das folgende XML-Beispiel zeigt, wie die Eigenschaft <xref:System.ServiceModel.Syndication.SyndicationItem.Summary%2A> zu Atom 1.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#16](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/atom.xml#16)]  
+  
+ Das folgende XML-Beispiel zeigt, wie die <xref:System.ServiceModel.Syndication.SyndicationItem.Summary%2A>-Eigenschaft zu RSS 2.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#17](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/rss.xml#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.TextSyndicationContent Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Syndication.TextSyndicationContent Title" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationItem.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.TextSyndicationContent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert den Titel des Syndication-Elements.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Syndication.TextSyndicationContent" />-Objekt mit dem Titel des Syndication-Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom&#160;1.0 oder RSS&#160;2.0 wird diese Eigenschaft in ein `<title>`-Element geschrieben.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie die <xref:System.ServiceModel.Syndication.SyndicationItem.Title%2A>-Eigenschaft auf einer <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz festgelegt wird.  
+  
+ [!code-csharp[SyndicationItem#32](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationitem/cs/program.cs#32)]
+ [!code-vb[SyndicationItem#32](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationitem/vb/snippets.vb#32)]  
+  
+ Das folgende XML-Beispiel zeigt, wie die Eigenschaft <xref:System.ServiceModel.Syndication.SyndicationItem.Title%2A> zu Atom 1.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#18](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/atom.xml#18)]  
+  
+ Der folgende XML-Code zeigt, wie die <xref:System.ServiceModel.Syndication.SyndicationItem.Title%2A>-Eigenschaft zu RSS 2.0 serialisiert wird.  
+  
+ [!code-xml[SyndicationItem#19](~/samples/snippets/common/VS_Snippets_CFX/syndicationitem/common/rss.xml#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseAttribute">
+      <MemberSignature Language="C#" Value="protected virtual bool TryParseAttribute (string name, string ns, string value, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryParseAttribute(string name, string ns, string value, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.TryParseAttribute(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements.</param>
+        <param name="ns">Der Namespace des Elements.</param>
+        <param name="value">Das zu analysierende Attribut.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, eine Attributerweiterung zu analysieren.</summary>
+        <returns>Ein Wert, der angibt, ob die Attributerweiterung erfolgreich analysiert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Attributerweiterungen sind benutzerdefinierte Attribute, die nicht von den Spezifikationen Atom&#160;1.0 oder RSS&#160;2.0 definiert werden. Sie werden als Attribut des Elements `<entry>` (Atom&#160;1.0) oder `<item>` (RSS 1.0) serialisiert, je nach verwendeter Syndication-Version. Diese Methode ist ein Erweiterungspunkt, der Ihnen ermöglicht, die Deserialisierung von benutzerdefinierten Attributerweiterungen zu behandeln. Leiten Sie hierzu eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationItem> ab, und setzen Sie diese Methode außer Kraft. Diese Methode wird zu allen nicht erkannten Attributerweiterungen aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">Ungültige XML-Daten während des Lesens erkannt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseContent">
+      <MemberSignature Language="C#" Value="protected virtual bool TryParseContent (System.Xml.XmlReader reader, string contentType, string version, out System.ServiceModel.Syndication.SyndicationContent content);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryParseContent(class System.Xml.XmlReader reader, string contentType, string version, [out] class System.ServiceModel.Syndication.SyndicationContent&amp; content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.TryParseContent(System.Xml.XmlReader,System.String,System.String,System.ServiceModel.Syndication.SyndicationContent@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="contentType" Type="System.String" />
+        <Parameter Name="version" Type="System.String" />
+        <Parameter Name="content" Type="System.ServiceModel.Syndication.SyndicationContent&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="contentType">Der Inhaltstyp des Inhalts.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <param name="content">Die <see cref="T:System.ServiceModel.Syndication.SyndicationContent" />-Instanz,. in die der analysierte Inhalt geladen wird.</param>
+        <summary>Versucht, den Inhalt zu analysieren.</summary>
+        <returns>Ein Wert, der angibt, ob der Inhalt erfolgreich analysiert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein Erweiterungspunkt, der Ihnen ermöglicht, die Deserialisierung von benutzerdefinierten Inhalten zu behandeln. Leiten Sie hierzu eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationItem> ab, und setzen Sie diese Methode außer Kraft. Diese Methode wird zu allen nicht erkannten Inhalten aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseElement">
+      <MemberSignature Language="C#" Value="protected virtual bool TryParseElement (System.Xml.XmlReader reader, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryParseElement(class System.Xml.XmlReader reader, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.TryParseElement(System.Xml.XmlReader,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, eine Elementerweiterung zu analysieren.</summary>
+        <returns>Ein Wert, der angibt, ob die Elementerweiterung erfolgreich analysiert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementerweiterungen sind gültige XML-Elemente, die nicht in der Spezifikation Atom 1.0 oder RSS 2.0 definiert werden. Sie können jedes gültige XML-Element als Erweiterung hinzufügen, sofern sich dessen Namespace vom übergeordneten Namespace unterscheidet. Diese Methode ist ein Erweiterungspunkt, der Ihnen ermöglicht, die Deserialisierung von benutzerdefinierten Elementerweiterungen zu behandeln. Leiten Sie hierzu eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationItem> ab, und setzen Sie diese Methode außer Kraft. Diese Methode wird für alle nicht erkannten Elementerweiterungen aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">Ungültige XML-Daten während des Lesens erkannt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAttributeExtensions">
+      <MemberSignature Language="C#" Value="protected virtual void WriteAttributeExtensions (System.Xml.XmlWriter writer, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void WriteAttributeExtensions(class System.Xml.XmlWriter writer, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.WriteAttributeExtensions(System.Xml.XmlWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlReader" />, in den geschrieben werden soll.</param>
+        <param name="version">Die für das Schreiben zu verwendende Syndication-Version.</param>
+        <summary>Schreibt die Attributerweiterungen in den angegebenen <see cref="T:System.Xml.XmlWriter" /> und verwendet hierbei die angegebene Syndication-Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Attributerweiterungen sind benutzerdefinierte Attribute, die nicht von den Spezifikationen Atom&#160;1.0 oder RSS&#160;2.0 definiert werden. Sie werden als Attribut des Elements `<entry>` (Atom&#160;1.0) oder `<item>` (RSS 1.0) serialisiert, je nach verwendeter Syndication-Version. Diese Methode ist ein Erweiterungspunkt, der Ihnen ermöglicht, die Serialisierung von benutzerdefinierten Attributerweiterungen zu behandeln. Leiten Sie hierzu eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationItem> ab, und setzen Sie diese Methode außer Kraft. Diese Methode wird zu allen nicht erkannten Attributerweiterungen aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteElementExtensions">
+      <MemberSignature Language="C#" Value="protected virtual void WriteElementExtensions (System.Xml.XmlWriter writer, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void WriteElementExtensions(class System.Xml.XmlWriter writer, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions(System.Xml.XmlWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlReader" />, in den geschrieben werden soll.</param>
+        <param name="version">Die für das Schreiben zu verwendende Syndication-Version.</param>
+        <summary>Schreibt die Elementerweiterungen in den angegebenen <see cref="T:System.Xml.XmlWriter" /> und verwendet hierzu die definierte Syndication-Version.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementerweiterungen sind gültige XML-Elemente, die nicht in der Spezifikation Atom 1.0 oder RSS 2.0 definiert werden. Sie können jedes gültige XML-Element als Erweiterung hinzufügen, sofern sich dessen Namespace vom übergeordneten Namespace unterscheidet. Diese Methode ist ein Erweiterungspunkt, der Ihnen ermöglicht, die Serialisierung von benutzerdefinierten Elementerweiterungen zu behandeln. Leiten Sie hierzu eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationItem> ab, und setzen Sie diese Methode außer Kraft. Diese Methode wird für alle nicht erkannten Elementerweiterungen aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

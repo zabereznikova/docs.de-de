@@ -1,0 +1,143 @@
+<Type Name="SoapMessageStage" FullName="System.Web.Services.Protocols.SoapMessageStage">
+  <TypeSignature Language="C#" Value="public enum SoapMessageStage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SoapMessageStage extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapMessageStage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Verarbeitungsstufe einer SOAP-Nachricht an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET bietet Erweiterungsmechanismus für das Aufrufen von Webdiensten mit SOAP. Der Erweiterungsmechanismus Funktionstüchtigkeit eine <xref:System.Web.Services.Protocols.SoapExtension> , die zu überprüfen oder eine Nachricht in bestimmten Phasen der Nachrichtenverarbeitung, die auf dem Client oder dem Server geändert werden kann. Diese Enumeration gibt an, die Verarbeitungsstufe der <xref:System.Web.Services.Protocols.SoapMessage>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein Fragment einer SOAP-Erweiterung, die implementiert die <xref:System.Web.Services.Protocols.SoapExtension.ProcessMessage%2A> Methode. Innerhalb der <xref:System.Web.Services.Protocols.SoapExtension.ProcessMessage%2A> -Methode, die Verarbeitung von einer <xref:System.Web.Services.Protocols.SoapMessage> erfolgt spezifisch für die <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+ [!code-cpp[SoapMessageState#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapMessageState/CPP/SoapMessageState.cpp#1)]
+ [!code-csharp[SoapMessageState#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapMessageState/CS/soapmessagestate.cs#1)]
+ [!code-vb[SoapMessageState#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapMessageState/VB/soapmessagestate.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AfterDeserialize">
+      <MemberSignature Language="C#" Value="AfterDeserialize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Protocols.SoapMessageStage AfterDeserialize = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapMessageStage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Phase direkt nach einem <see cref="T:System.Web.Services.Protocols.SoapMessage" /> aus einer SOAP-Nachricht in ein Objekt deserialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der <xref:System.Web.Services.Protocols.SoapClientMessage> verarbeiten, die AfterDeserialize-Phase tritt auf, nachdem die SOAP-Nachricht mit der Antwort aus dem Aufruf einer XML-Webdienstmethode in ein Objekt, aber bevor der Client empfängt die Ergebnisse der Deserialisierung deserialisiert wurde.  
+  
+ Während der <xref:System.Web.Services.Protocols.SoapServerMessage> verarbeiten, die AfterDeserialize-Phase tritt auf, nachdem eine netzwerkanforderung, die mit einer SOAP-Nachricht darstellt Aufruf einer XML-Webdienstmethode deserialisiert wird, in ein Objekt, aber bevor die Methode für das Objekt, das die XML-Webdienstmethode darstellt Dienstmethode wird aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AfterSerialize">
+      <MemberSignature Language="C#" Value="AfterSerialize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Protocols.SoapMessageStage AfterSerialize = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapMessageStage.AfterSerialize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapMessageStage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Phase direkt nach einem <see cref="T:System.Web.Services.Protocols.SoapMessage" /> serialisiert, aber vor der SOAP-Nachricht über die Verbindung gesendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der <xref:System.Web.Services.Protocols.SoapClientMessage> verarbeiten, die AfterSerialize-Phase tritt auf, nachdem ein Client eine XML-Webdienstmethode ruft und die Parameter in XML serialisiert werden, jedoch vor der SOAP-Nachricht, die diese XML-Daten enthält über das Netzwerk gesendet wird.  
+  
+ Während der <xref:System.Web.Services.Protocols.SoapServerMessage> verarbeiten, die AfterSerialize-Phase tritt auf, nachdem eine XML-Webdienstmethode gibt und alle Rückgabewerte in XML serialisiert werden, jedoch vor der SOAP-Nachricht, die diese XML-Daten enthält über das Netzwerk gesendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeDeserialize">
+      <MemberSignature Language="C#" Value="BeforeDeserialize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Protocols.SoapMessageStage BeforeDeserialize = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapMessageStage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Phase kurz vor dem Ausführen einer <see cref="T:System.Web.Services.Protocols.SoapMessage" /> aus der SOAP-Nachricht über das Netzwerk gesendet werden, in ein Objekt deserialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der <xref:System.Web.Services.Protocols.SoapClientMessage> verarbeiten, die BeforeDeserialize-Phase tritt auf, nachdem die Netzwerkantwort aus dem Aufruf einer XML-Webdiensts wurde empfangen, aber kurz vor der Antwort mit der SOAP-Nachricht in ein Objekt deserialisiert wird.  
+  
+ Während der <xref:System.Web.Services.Protocols.SoapServerMessage> verarbeiten, die BeforeDeserialize-Phase tritt auf, nachdem eine netzwerkanforderung, die mit der SOAP-Nachricht für den Aufruf einer XML-Webdienstmethode empfangen wird, vom Webserver, jedoch bevor die SOAP-Nachricht in ein Objekt deserialisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeSerialize">
+      <MemberSignature Language="C#" Value="BeforeSerialize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Protocols.SoapMessageStage BeforeSerialize = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapMessageStage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Phase vor dem eine <see cref="T:System.Web.Services.Protocols.SoapMessage" /> serialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der <xref:System.Web.Services.Protocols.SoapClientMessage> Verarbeitung die BeforeSerialize-Phase tritt auf, nachdem ein Client eine XML-Webdienstmethode aufruft, jedoch vor dem Aufruf serialisiert wird.  
+  
+ Während der <xref:System.Web.Services.Protocols.SoapServerMessage> Verarbeitung die BeforeSerialize-Phase tritt auf, nach dem Aufruf der XML-Webdienstmethode service-Methode zurückkehrt, aber bevor die Rückgabewerte serialisiert und unverschlüsselt gesendet, die an den Client zurückzusenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

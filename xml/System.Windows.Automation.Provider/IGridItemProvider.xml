@@ -1,0 +1,176 @@
+<Type Name="IGridItemProvider" FullName="System.Windows.Automation.Provider.IGridItemProvider">
+  <TypeSignature Language="C#" Value="public interface IGridItemProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IGridItemProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IGridItemProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("d02541f1-fb81-4d64-ae32-f520f8a6dbd1")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Methoden und Eigenschaften, um Benutzeroberflächenautomatisierungs-Clientzugriff auf einzelne untergeordnete Steuerelemente von Containern zu unterstützen, implementieren <see cref="T:System.Windows.Automation.Provider.IGridProvider" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelemente implementieren <xref:System.Windows.Automation.Provider.IGridItemProvider> in der Regel durchlaufen werden kann (d. h. ein Benutzeroberflächenautomatisierungs-Client kann zu benachbarten Steuerelementen wechseln) mithilfe der Tastatur.  
+  
+ Implementiert ein Benutzeroberflächenautomatisierungs-Anbieter, die unterstützen, muss die <xref:System.Windows.Automation.GridItemPattern> -Steuerelementmuster.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public int Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Column" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridItemProvider.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ordinalzahl der Spalte, die die Zelle oder des Elements enthält.</summary>
+        <value>Eine nullbasierte Ordinalzahl die Spalte mit der Zelle oder des Elements angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel gibt die Eigenschaft, die in einer internen Variablen gespeichert ist.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGridItem.cs#104)]
+ [!code-vb[UIAMiscPatternProviders_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgriditem.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnSpan">
+      <MemberSignature Language="C#" Value="public int ColumnSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Spalten, die über einer Zelle oder einem Element erstreckt.</summary>
+        <value>Die Anzahl der Spalten erstreckt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel gibt die Eigenschaft für ein Element in einem Raster, dessen Elemente sich immer eine einzelne Spalte erstrecken.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#107](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGridItem.cs#107)]
+ [!code-vb[UIAMiscPatternProviders_snip#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgriditem.vb#107)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainingGrid">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple ContainingGrid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Provider.IRawElementProviderSimple ContainingGrid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Benutzeroberflächenautomatisierungs-Anbieter ab, der <see cref="T:System.Windows.Automation.Provider.IGridProvider" /> implementiert und den Container der Zelle oder des Elements darstellt.</summary>
+        <value>Ein Benutzeroberflächenautomatisierungs-Anbieter, der <see cref="T:System.Windows.Automation.GridPattern" /> implementiert und den Zell- oder Elementcontainer darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Beispielcode gibt ein Objekt, gespeichert als eine interne Variable, die den Rastercontainer darstellt, zurück. Dieses Objekt implementiert <xref:System.Windows.Automation.Provider.IGridProvider> und <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#108](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGridItem.cs#108)]
+ [!code-vb[UIAMiscPatternProviders_snip#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgriditem.vb#108)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Row">
+      <MemberSignature Language="C#" Value="public int Row { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Row" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridItemProvider.Row" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ordinalzahl der Zeile, die die Zelle oder des Elements enthält.</summary>
+        <value>Eine nullbasierte Ordinalzahl, die die Zeile mit der Zelle oder des Elements identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel gibt die Eigenschaft, die in einer internen Variablen gespeichert ist.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGridItem.cs#105)]
+ [!code-vb[UIAMiscPatternProviders_snip#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgriditem.vb#105)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowSpan">
+      <MemberSignature Language="C#" Value="public int RowSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridItemProvider.RowSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Zeilen, die über einer Zelle oder einem Element erstreckt.</summary>
+        <value>Die Anzahl der Zeilen erstreckt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel gibt die Eigenschaft für ein Element in einem Raster, dessen Elemente sich immer eine einzelne Zeile erstrecken.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#106](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGridItem.cs#106)]
+ [!code-vb[UIAMiscPatternProviders_snip#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgriditem.vb#106)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

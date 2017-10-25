@@ -1,0 +1,377 @@
+<Type Name="QueryExtender" FullName="System.Web.UI.WebControls.QueryExtender">
+  <TypeSignature Language="C#" Value="public class QueryExtender : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit QueryExtender extends System.Web.UI.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.QueryExtender" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("TargetControlID")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.QueryExtenderDesigner, System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Web.UI.WebControls.QueryExtender), "QueryExtender.bmp")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.NonVisualControl</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "Expressions")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.TargetControlType(typeof(System.Web.UI.WebControls.IQueryableDataSource))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht die Daten aus einer Datenquelle, die gefiltert werden, ohne eine explizite <see langword="Where" /> -Klausel in der Datenquelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#Introduction)  
+  
+-   [Im Hintergrund](#background)  
+  
+-   [Filteroptionen](#filter_options)  
+  
+-   [Tasks](#Tasks) (MSBuild-Aufgaben)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="Introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement wird verwendet, um Filter für Daten zu erstellen, die aus einer Datenquelle abgerufen werden, ohne mit einem expliziten `Where` -Klausel in der Datenquelle. Die <xref:System.Web.UI.WebControls.QueryExtender> -Steuerelement kann verwendet werden, um anzugeben, verwenden deklarativen Syntax filtern.  
+  
+<a name="background"></a>   
+## <a name="background"></a>Hintergrund  
+ Filtern von Daten aus einer Datenquelle durch Anzeigen der Datensätze, die bestimmte Kriterien erfüllen ausgeschlossen. Filtern ermöglicht es Ihnen, unterschiedliche Sichten der Daten darstellen, die in ein Dataset ohne Auswirkungen auf die Daten im DataSet.  
+  
+ Filtern in der Regel müssen Sie erstellen eine `Where` -Klausel, um auf den Befehl anzuwenden, die die Datenquelle Abfragen. Allerdings die `Where` Eigenschaft des Datenquellen-Steuerelements ist nicht zur Verfügung stellt der vollständigen Funktionalität, die verfügbar ist. Das Steuerelement QueryExtender ermöglicht z. B. das Abfragen einer Tabelle durch Suchen nach Zeichenfolgen am Anfang, Ende oder an einer beliebigen Stelle im Feld ".data".  
+  
+ Um die vollständige Funktionalität verfügbar zu machen, die in LINQ verfügbar ist, und um das Filtern von Daten vereinfachen, [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] bietet die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement. Die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement hat die folgenden Vorteile:  
+  
+-   Es bietet eine umfangreichere Erfahrung für das Filtern als das Schreiben einer `Where` Klausel. Sie können z. B. eine Produkttabelle für boolesche Werte suchen, mit der <xref:System.Web.UI.WebControls.Expressions.PropertyExpression> Filter ohne eine Abfrage zu schreiben.  
+  
+-   Sie können Filter angeben, mit der gleichen Syntax für die <xref:System.Web.UI.WebControls.LinqDataSource> und <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelemente und für eine beliebige andere Datenquelle, die Steuerelemente Sie verwenden.  
+  
+-   Kann verwendet werden, mit <xref:System.Web.UI.WebControls.LinqDataSource> -Steuerelement, mit einem <xref:System.Web.UI.WebControls.EntityDataSource> -Steuerelement, oder mit Datenquellen von Drittanbietern.  
+  
+<a name="filter_options"></a>   
+## <a name="filter-options"></a>Filteroptionen  
+ Die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement unterstützt eine Vielzahl von Optionen, die Sie verwenden können, um Daten zu filtern. Das Steuerelement können Sie das Suchen von Zeichenfolgen, numerische Werte in einem angegebenen Bereich zu suchen und einen Eigenschaftswert in einer Tabelle mit einem angegebenen Wert vergleichen. Das Steuerelement können Sie die Daten zu sortieren und benutzerdefinierte Abfragen bereitstellen.  
+  
+ Diese Optionen dienen als LINQ-Ausdrücke in der <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement. Die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement unterstützt auch Ausdrücke, die speziell für [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Dynamic Data-Anwendungen.  
+  
+ Die folgende Tabelle enthält die Optionen, die Sie, zum Filtern von Daten in verwenden können die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement.  
+  
+|Ausdruck|Beschreibung|  
+|----------------|-----------------|  
+|<xref:System.Web.DynamicData.ControlFilterExpression>|(Nur für dynamische Daten) Erstellt eine Datenbankabfrage mithilfe des Datenschlüssels, der in einem Quelle datengebundenen Steuerelement ausgewählt ist.<br /><br /> Informationen zur Verwendung dieser Filteroption finden Sie unter [wie: Filtern Tabelle Zeilen mit Werten von einer übergeordneten Tabelle in der Dynamic Data](http://msdn.microsoft.com/en-us/a5566986-7c30-4e71-b4a4-81cd16095749).|  
+|<xref:System.Web.UI.WebControls.Expressions.CustomExpression>|Gibt einen benutzerdefinierten Ausdruck für eine Datenquelle. Der benutzerdefinierte LINQ-Ausdruck kann in einem Ereignishandler aufgerufen werden.|  
+|<xref:System.Web.DynamicData.DynamicFilterExpression>|(Nur für dynamische Daten) Erstellt eine Datenbankabfrage mithilfe des angegebenen <xref:System.Web.DynamicData.DynamicFilter> Steuerelement.<br /><br /> Informationen zur Verwendung dieser Filteroption finden Sie unter [wie: Filtern Tabelle Zeilen mithilfe von Foreign Key in Dynamic Data](http://msdn.microsoft.com/en-us/b774e56a-a5b9-41b7-b114-699313ef2056).|  
+|<xref:System.Web.UI.WebControls.Expressions.MethodExpression>|Gibt eine benutzerdefinierte LINQ-Ausdruck für eine Datenquelle an. Der Ausdruck wird in einer Methode aufgerufen.|  
+|<xref:System.Web.UI.WebControls.Expressions.OrderByExpression>|Wendet einen Sortierungsausdruck an eine <xref:System.Linq.IQueryable> -Datenquellenobjekt. Nach dem Anwenden der <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> Wert können Sie zusätzliche Sortiervorgänge anwenden, durch Angeben einer <xref:System.Web.UI.WebControls.Expressions.OrderByExpression.ThenByExpressions%2A> Wert.|  
+|<xref:System.Web.UI.WebControls.Expressions.PropertyExpression>|Die Eigenschaften der Daten und die Eigenschaftswerte, die im angegebenen vergleicht die <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> Auflistung.|  
+|<xref:System.Web.UI.WebControls.Expressions.RangeExpression>|Bestimmt, ob ein Wert größer oder kleiner als ein angegebener Wert ist oder ob ein Wert zwischen zwei Werten liegt.|  
+|<xref:System.Web.UI.WebControls.Expressions.SearchExpression>|Vergleicht Werte in ein Feld oder Felder für einen angegebenen Zeichenfolgenwert.|  
+  
+ Sie können diese <xref:System.Web.UI.WebControls.QueryExtender> Optionen einzeln oder kombinieren, um komplexe Filterung in einer Webseite bereitzustellen. Weitere Informationen finden Sie unter [Übersicht über das QueryExtender-Steuerelement](http://msdn.microsoft.com/library/b93e32b9-af41-4539-a009-6cbbe809c702). [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite verwenden deklarativen Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f)  
+  
+<a name="Tasks"></a>   
+## <a name="tasks"></a>Aufgaben  
+ Die folgende Tabelle enthält die Aufgaben, die Funktionsweisen der <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement zum Filtern von Daten.  
+  
+|Dokument|Aufgabe|  
+|--------------|----------|  
+|[Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite verwenden deklarativen Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f)|Zeigt, wie Sie mithilfe des Filters Optionen, die die <xref:System.Web.UI.WebControls.QueryExtender> gesteuert.|  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:QueryExtender   
+    EnableViewState="True|False"  
+    ID="string"  
+    OnDataBinding="DataBiding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="UnLoad event hadler"  
+    Runat="server"  
+    TargetControlID="string"  
+    Visible="True|False"  
+>  
+        <asp:ControlFilterExpression   
+            ControlD="string"  
+            Column="string">   
+        </asp:ControlFilterExpression>  
+        <asp:DynamicFilterExpression  
+            ControlD="string"  
+        </asp:DynamicFilterExpression>  
+        <asp:CustomExpression="string"  
+            OnQuerying="OnQerying event handler">  
+        </asp:CustomExpression>  
+        <asp:OrderByExpression="string"  
+            DataField="string"  
+            Direction="string">  
+            <asp:ThenByExpression  
+                 DataField="string"  
+                 Direction="string"  
+            </asp:ThenBy>  
+        </asp:OrderByExpression>  
+        <asp:PropertyExpression="string">  
+                <!-- child controls -->  
+        </asp:PropertyExpression  
+        >  
+        <asp:RangeExpression="integer"  
+            Datafield="string"  
+            MaxType="Exclusive|Inclusive|None"  
+            MinType="Exclusive|Inclusive|None">  
+                <!--child controls-->  
+        </asp:RangeExpression>  
+        <asp:SearchExpression="string"  
+            ComparisonType="CurrentCulture|CurrentCultureIgnoreCase|  
+                InavariantCulture|InvariantCultureIgnoreCase|  
+                Ordinal|OrdinalIgnoreCase"  
+            DataField="string"  
+            SearchType="Contains|EndsWith|StartsWith">  
+                <!--child controls-->  
+        </asp:SearchExpression>  
+</asp:QueryExtender>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement auf einer Webseite eine Suchfunktion bereitstellen. Die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement verwendet, den Text, der im eingegeben wird die `TextBoxSearch` Steuerelement in den Inhalt in den Spalten ProductName und den Supplier.CompanyName einer Produkttabelle, in den Daten suchen, die von zurückgegeben wird das <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement. Die <xref:System.Web.UI.WebControls.Expressions.SearchExpression> Objekt wird verwendet, um die Suche auszuführen. Die <xref:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields%2A> Eigenschaft gibt an, die Datenfelder, gesucht werden soll. Die <xref:System.Web.UI.WebControls.Expressions.SearchExpression.SearchType%2A> Eigenschaft gibt den Typ der Suche ausführen. Die <xref:System.Web.UI.WebControls.ControlParameter> Element gibt das Steuerelement mit dem Text, der für die Suche verwendet. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, die in bereitgestellten [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite mithilfe von deklarativer Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:LinqDataSource ID="dataSource" runat="server"   
+    TableName="Products">  
+</asp:LinqDataSource>  
+<asp:QueryExtender TargetControlID="dataSource" runat="server">  
+  <asp:SearchExpression DataFields="ProductName, Supplier.CompanyName"   
+        SearchType="StartsWith">  
+    <asp:ControlParameter ControlID="TextBoxSearch" />  
+  </asp:SearchExpression>  
+</asp:QueryExtender>  
+```  
+  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement eine Webseite für Werte in einem angegebenen Bereich gesucht werden soll. Die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement verwendet die Werte, die Eingabe in die `TextBoxFrom` und `TextBoxTo` Steuerelementen für Werte in den Spalten ProductName und den Supplier.CompanyName einer Produkttabelle, in den Daten suchen, die von zurückgegeben wird die <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement . Die <xref:System.Web.UI.WebControls.ControlParameter> Element gibt die Textfeld-Steuerelemente, die die minimale und maximale Werte, verwenden Sie zum Suchen des Bereichs enthalten. Die <xref:System.Web.UI.WebControls.Expressions.RangeExpression.MinType%2A> und <xref:System.Web.UI.WebControls.Expressions.RangeExpression.MaxType%2A> Eigenschaften angeben, dass die minimalen und maximalen Werte in den Daten enthalten sein müssen, die zurückgegeben wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite mithilfe von deklarativer Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:LinqDataSource ID="dataSource" runat="server"   
+    TableName="Products">  
+</asp:LinqDataSource>  
+<asp:QueryExtender TargetControlID="dataSource" runat="server">  
+  <asp:RangeExpression DataField="UnitPrice" MinType="Inclusive"   
+        MaxType="Inclusive">  
+    <asp:ControlParameter ControlID="TextBoxFrom" />  
+    <asp:ControlParameter ControlID="TexBoxTo" />  
+  </asp:RangeExpression>  
+</asp:QueryExtender>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryExtender ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryExtender.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.QueryExtender" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.IQueryableDataSource DataSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.IQueryableDataSource DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryExtender.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.IQueryableDataSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Datenquellen-Steuerelements (<see cref="T:System.Web.UI.IDataSource" /> Objekt) für die Abfrage verwendet.</summary>
+        <value>Die Datenquellen-Steuerelements für die Abfrage verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.QueryExtender> -Steuerelement unterstützt die <xref:System.Web.UI.WebControls.LinqDataSource> und <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.WebControls.QueryExtender.DataSource" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Expressions">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection Expressions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection Expressions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryExtender.Expressions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Expressions.DataSourceExpressionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Ausdrücke, die angewendet werden, die <see cref="T:System.Web.UI.IDataSource" /> Steuerelement.</summary>
+        <value>Die Auflistung von Ausdrücken, die auf die Datenquellen-Steuerelement angewendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryExtender.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein Objekt, das den Status des darstellt der <see cref="T:System.Web.UI.WebControls.QueryExtender" /> Steuerelement.</param>
+        <summary>Lädt den Zustand der Werte in der <see cref="T:System.Web.UI.WebControls.QueryExtender" /> Steuerelement, die beibehalten werden muss.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryExtender.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Tritt auf, wenn eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.QueryExtender" /> Klasse initialisiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryExtender.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den aktuellen Ansichtszustand des der <see cref="T:System.Web.UI.WebControls.QueryExtender" /> Steuerelement.</summary>
+        <returns>Ein Objekt, das den gespeicherten Zustand enthält die <see cref="T:System.Web.UI.WebControls.QueryExtender" /> Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetControlID">
+      <MemberSignature Language="C#" Value="public virtual string TargetControlID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetControlID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryExtender.TargetControlID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.IDReferenceProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID des dem <see cref="T:System.Web.UI.IDataSource" /> Steuerelements für die Abfrage angeben.</summary>
+        <value>Die ID des Datenquellen-Steuerelements für die Abfrage verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryExtender.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verfolgt nach, Änderungen am Ansichtszustand des der <see cref="T:System.Web.UI.WebControls.QueryExtender" /> steuern, sodass die Änderungen können, in gespeichert werden der <see cref="T:System.Web.UI.StateBag" /> Objekt für das Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

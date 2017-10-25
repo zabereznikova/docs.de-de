@@ -1,0 +1,110 @@
+<Type Name="EntitySetBase" FullName="System.Data.Metadata.Edm.EntitySetBase">
+  <TypeSignature Language="C#" Value="public abstract class EntitySetBase : System.Data.Metadata.Edm.MetadataItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EntitySetBase extends System.Data.Metadata.Edm.MetadataItem" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.EntitySetBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Metadata.Edm.MetadataItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Basisklasse für eine <see cref="T:System.Data.Metadata.Edm.EntitySet" /> und ein <see cref="T:System.Data.Metadata.Edm.RelationshipSet" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuiltInTypeKind">
+      <MemberSignature Language="C#" Value="public override System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EntitySetBase.BuiltInTypeKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.BuiltInTypeKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die integrierte Typart für <see cref="T:System.Data.Metadata.Edm.EntitySetBase" /> auf.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.BuiltInTypeKind" />-Objekt, das die integrierte Typart für <see cref="T:System.Data.Metadata.Edm.EntitySetBase" /> darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EntityTypeBase ElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.EntityTypeBase ElementType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EntitySetBase.ElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EntityTypeBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Entitätstyp von <see cref="T:System.Data.Metadata.Edm.EntityTypeBase" /> ab.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.EntityTypeBase" />-Objekt, das den Entitätstyp dieser <see cref="T:System.Data.Metadata.Edm.EntityTypeBase" /> darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityContainer">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EntityContainer EntityContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.EntityContainer EntityContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EntitySetBase.EntityContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EntityContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Entitätencontainer der aktuellen Entitätenmenge oder des aktuellen Beziehungssatzes ab.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.EntityContainer" />-Objekt, das den Entitätencontainer der aktuellen Entitätenmenge oder des aktuellen Beziehungssatzes darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EntitySetBase.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der aktuellen Entitätenmenge oder des aktuellen Beziehungssatzes ab.</summary>
+        <value>Der Name der aktuellen Entitätenmenge oder des aktuellen Beziehungssatzes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.EntitySetBase.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Namen der aktuellen Entitätenmenge oder des aktuellen Beziehungssatzes zurück.</summary>
+        <returns>Der Name der aktuellen Entitätenmenge oder des aktuellen Beziehungssatzes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

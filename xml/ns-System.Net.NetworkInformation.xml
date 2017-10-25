@@ -1,0 +1,6 @@
+<Namespace Name="System.Net.NetworkInformation">
+  <Docs>
+    <summary>Die <see cref="N:System.Net.NetworkInformation" /> Namespace bietet Zugriff auf die Netzwerkverkehrsdaten und Netzwerkadresseninformationen sowie in der Benachrichtigung über adressenänderungen für den lokalen Computer. Der Namespace enthält auch Klassen, die das Dienstprogramm Ping zu implementieren. Sie können <see cref="T:System.Net.NetworkInformation.Ping" /> und verwandten Klassen zu überprüfen, ob ein Computer über das Netzwerk erreichbar ist.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,700 @@
+<Type Name="PersonalizationDictionary" FullName="System.Web.UI.WebControls.WebParts.PersonalizationDictionary">
+  <TypeSignature Language="C#" Value="public class PersonalizationDictionary : System.Collections.IDictionary" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PersonalizationDictionary extends System.Object implements class System.Collections.ICollection, class System.Collections.IDictionary, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Kapselt grundlegende Validierungsregeln, die angeben, ob ein Teil benutzerdefinierter Daten personalisierbar als wird <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.User" /> oder <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared" /> Bereich.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> Instanz ist eine Sammlung von <xref:System.Web.UI.WebControls.WebParts.PersonalizationEntry> Objekte, die einen Personalisierungsbereich und einen Objektwert umfassen. Diese Einträge werden zugewiesen ein Schlüssels in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> Objekt.  
+  
+ Eine bewährte Methode besteht Hinzufügen aller Eigenschaften zum Wörterbuch mithilfe der <xref:System.Web.UI.WebControls.WebParts.IPersonalizable.Save%2A> Methode unabhängig von den Bereich der Seite. .NET Framework speichert die Informationen in einer passenden Art; z. B. freigegebene Daten gespeichert wird, wenn die Seite in <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich. Allerdings freigegebene Eigenschaften werden nicht gespeichert werden, wenn ein Webparts-Wert gespeichert wird, wird die Seite <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Bereich, und die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement hinzugefügt wurde, mit der Seite in <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersonalizationDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert ein leeres Wörterbuch. Das Wörterbuch behandelt Schlüsselwerte als Groß-/Kleinschreibung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersonalizationDictionary (int initialSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="initialSize">Die geschätzte Anzahl von Einträgen im Wörterbuch gespeichert werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> -Klasse unter Verwendung des angegebenen Parameters.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert ein leeres Wörterbuch basierend auf der geschätzten Anzahl von Einträgen im Wörterbuch gespeichert werden. Das Wörterbuch behandelt Schlüsselwerte als Groß-/Kleinschreibung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (string key, System.Web.UI.WebControls.WebParts.PersonalizationEntry value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(string key, class System.Web.UI.WebControls.WebParts.PersonalizationEntry value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Add(System.String,System.Web.UI.WebControls.WebParts.PersonalizationEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.PersonalizationEntry" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der eindeutige Bezeichner für eine Information Zustand.</param>
+        <param name="value">Ein Codesegment Zustandsinformationen, die die Personalisierungswörterbuch hinzugefügt werden. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Das Personalisierungswörterbuch hinzugefügt Personalisierung Einträge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode können, verschiedenen Komponenten von benutzerdefinierten Zustandsinformationen in das Zustandsobjekt platzieren und den Statuswert zugeordneten Bereich angeben. Wenn eine <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Steuerelement befindet sich im <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich, Sie können Informationen hinzufügen, Namen und Zustandsinformationen, die entweder zugeordnet ist <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich oder <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Bereich. In <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Bereich, können Sie Namen und Zustandsinformationen nur zugeordnete Informationen hinzufügen <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Bereich.  
+  
+ Es wird empfohlen, jedoch alle Eigenschaften mit dem Wörterbuch hinzuzufügende <xref:System.Web.UI.WebControls.WebParts.IPersonalizable.Save%2A> einschließlich der Eigenschaften mit <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> oder <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich, unabhängig von den Bereich der Seite.  
+  
+ .NET Framework speichert nur die Eigenschaften mit <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Gültigkeitsbereich, wenn dies angebracht. Dies bedeutet, dass freigegebene Eigenschaften werden nicht gespeichert eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das anfänglich im hinzugefügt wurde <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich später gespeichert wird, während die Seite wird <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Bereich. In einem Szenario mit entgegengesetzten Wenn eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement auf der Seite hinzugefügt wurde <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Bereich und das Steuerelement später gespeichert wird, während die Seite wird <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich bereitstellen, werden benutzerdefinierte freigegebene Eigenschaftswerte (zusammen mit benutzerdefinierten Eigenschaften, die Gültigkeitsbereich des Benutzers) gespeichert. Durch die Personalisierungsbereich der Seite Details auf Personalisierungsdaten und wie freigegebene und benutzerspezifische Eigenschaften betroffen sind, finden Sie unter der [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320) Thema.  
+  
+ Wie bei jeder Auflistung, diese Methode inkrementiert die sammlungsanzahl von einer und für die Auflistung aktuell aktive Enumeratoren ungültig gemacht werden sollte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" />ist ein Duplikat eines Schlüssels bereits im Wörterbuch.  
+  
+ \- oder –  
+  
+ <paramref name="key" />ist entweder eine leere Zeichenfolge ("") oder das Trimming <paramref name="key" /> führt eine leere Zeichenfolge.  
+  
+ \- oder –  
+  
+ <paramref name="value" /> ist keine <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationEntry" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle benutzerdefinierten Zustandsinformationen aus dem aktuellen <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löscht alle benutzerdefinierten Zustandsinformationen aus dem aktuellen <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> Objekt. Für die Auflistung aktuell aktive Enumeratoren sollten für ungültig erklärt werden. Verwenden Sie zum Entfernen von nur eines bestimmten Personalisierung Eintrags in einem Personalisierungswörterbuch der <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Remove%2A> Methode.  
+  
+ Beachten Sie, dass beim Aufrufen dieser Methode auf eine leere Personalisierungswörterbuch keinen Fehler auslöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public virtual bool Contains (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein Schlüssel-Wert.</param>
+        <summary>Gibt einen Wert, der angibt, ob eine benutzerdefinierte Status Information mit dem gleichen Schlüssel im Personalisierungswörterbuch enthalten ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der bereitgestellte Schlüssel einem Schlüssel im Personalisierungswörterbuch entspricht; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um zu bestimmen, ob ein Teil der benutzerdefinierten Zustandsinformationen in einem Personalisierungswörterbuch enthalten ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" />ist entweder eine leere Zeichenfolge (""), oder kürzen <paramref name="key" /> führt eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (System.Collections.DictionaryEntry[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(valuetype System.Collections.DictionaryEntry[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.CopyTo(System.Collections.DictionaryEntry[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.DictionaryEntry[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array der <see cref="T:System.Collections.DictionaryEntry" /> Instanzen in kopiert werden.</param>
+        <param name="index">Die Indexposition, an der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Personalisierung Zustand Wörterbucheinträge als <see cref="T:System.Collections.DictionaryEntry" /> Instanzen in das angegebene Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Erstellen eines Arrays von <xref:System.Collections.DictionaryEntry> Instanzen aus der Statuseinträge im Personalisierungswörterbuch.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ \- oder –  
+  
+ <paramref name="array" />ist die falsche Größe basierend auf der <paramref name="index" /> Parameter.  
+  
+ \- oder –  
+  
+ <paramref name="array" />hat nicht genügend Kapazität zum Speichern der Werte im Personalisierungswörterbuch enthalten.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Einträgen im Wörterbuch ab.</summary>
+        <value>Die Anzahl der Einträge im Wörterbuch.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um die Anzahl von Einträgen im Personalisierungswörterbuch abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionaryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, der zum iterieren durch die Einträge in der Personalisierungswörterbuch verwendet werden kann.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionaryEnumerator" /> für die Personalisierungswörterbuch.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enumeratoren können verwendet werden, um die Daten in einer Auflistung gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden. Weitere Informationen über Enumeratoren finden Sie unter der <xref:System.Collections.IEnumerator> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public virtual bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die Personalisierungswörterbuch eine feste Größe aufweist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer `false` weil Personalisierung Wörterbüchern nicht über eine feste Größe verfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die Personalisierungswörterbuch schreibgeschützt ist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer `false` da Personalisierung Wörterbüchern nicht schreibgeschützt sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public virtual bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob das Personalisierungswörterbuch synchronisiert ist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer `false` weil Personalisierung Wörterbüchern nicht synchron sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.PersonalizationEntry this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.PersonalizationEntry Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des Eintrags, der abgerufen oder geändert werden.</param>
+        <summary>Ruft ab oder legt einen Eintrag im Personalisierungswörterbuch.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationEntry" /> identifizierte benutzerdefinierte Personalisierungsinformationen darstellt der <paramref name="key" /> Parameter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft arbeitet mit einem <xref:System.Web.UI.WebControls.WebParts.PersonalizationEntry> Objekt, das benutzerdefinierte Personalisierungsinformationen, die identifizierte darstellt der `key` Parameter. Wenn kein für Wert `key`, `null` wird zurückgegeben.  
+  
+ Wenn `key` noch nicht vorhanden, dann `key` (und der zugehörige Wert), die dem Wörterbuch hinzugefügt werden.  
+  
+ Beachten Sie, dass Sie können einen null-Wert zum Wörterbuch hinzufügen, und der Indexer kann auch zum Aktualisieren des Personalisierungswerts verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" />ist entweder eine leere Zeichenfolge (""), oder kürzen <paramref name="key" /> führt eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf ein <see cref="T:System.Collections.ICollection" /> Objekt, das die Schlüssel für die Personalisierungswörterbuch enthält.</summary>
+        <value>Eine <see cref="T:System.Collections.ICollection" /> , die die Schlüssel für die Personalisierungswörterbuch enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um die Schlüssel für ein Personalisierungswörterbuch abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des Eintrags, der entfernt werden soll.</param>
+        <summary>Entfernt einen benutzerdefinierten Zustand-Eintrag anhand des angegebenen Schlüssels.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen benutzerdefinierten Zustandseintrag entfernen, ist die Anzahl der Personalisierungswörterbuch intern, um eins verringert. Für das Wörterbuch derzeit aktive Enumeratoren sollten für ungültig erklärt werden.  
+  
+ Es tritt kein Fehler auf, wenn Sie versuchen, einen nicht vorhandenen Schlüssel zu entfernen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" />ist entweder eine leere Zeichenfolge (""), oder kürzen <paramref name="key" /> führt eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public virtual object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das zum Synchronisieren des Zugriffs auf das Personalisierungswörterbuch verwendet werden kann.</summary>
+        <value>Ein Objekt, das zum Synchronisieren des Zugriffs auf das Personalisierungswörterbuch verwendet werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Auflistungen, die einen nicht öffentlich verfügbaren Speicher verwenden, besteht die erwartete Implementierung in der Rückgabe der aktuellen Instanz. Beachten Sie, dass der Zeiger auf die aktuelle Instanz möglicherweise nicht ausreichend für Auflistungen, die andere Auflistungen. sollte der zugrunde liegenden Auflistung zurückgegeben <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.SyncRoot%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein <see cref="T:System.Array" /> von <see cref="T:System.Collections.DictionaryEntry" /> Elemente zum Kopieren in eine <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" />.</param>
+        <param name="index">Der Anfangspunkt einer <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> an der eingefügt <c>Array</c>.</param>
+        <summary>Implementiert die <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)" /> Methode für die <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.CopyTo%2A> Methode überprüft, um zu bestimmen, ob `array` ist ein Array von <xref:System.Collections.DictionaryEntry> Elemente, und ruft dann die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> der Klasse <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.CopyTo%2A> -Methode auf und übergibt ihm `array` und `index`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" />ist kein Array von <see cref="T:System.Collections.DictionaryEntry" /> Elemente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Add">
+      <MemberSignature Language="C#" Value="void IDictionary.Add (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Add(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.System#Collections#IDictionary#Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die <see cref="T:System.String" /> als Schlüssel für ein Element im Personalisierungswörterbuch verwenden.</param>
+        <param name="value">Die <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationEntry" /> Personalisierungswörterbuch hinzu.</param>
+        <summary>Implementiert die <see cref="M:System.Collections.IDictionary.Add(System.Object,System.Object)" /> Methode für die <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Add%2A> Methode überprüft verschiedene Details, um sicherzustellen, dass die Gültigkeit des `value` und `key` vor dem Versuch, diese Personalisierungswörterbuch hinzufügen. Wenn die Überprüfungen erfolgreich sind, ruft die Methode die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> der Klasse <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Add%2A> -Methode auf und übergibt ihm die `key` und `value` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" /> ist kein <see cref="T:System.String" />-Objekt.  
+  
+ \- oder –  
+  
+ <paramref name="value" /> ist kein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationEntry" />-Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Contains">
+      <MemberSignature Language="C#" Value="bool IDictionary.Contains (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IDictionary.Contains(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.System#Collections#IDictionary#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein <see cref="T:System.String" /> Objekt, das eine bestimmten identifiziert <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationEntry" /> im Personalisierungswörterbuch Vorhandensein überprüft.</param>
+        <summary>Implementiert die <see cref="M:System.Collections.IDictionary.Contains(System.Object)" /> Methode für die <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> Klasse.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="key" /> vorhanden ist, im Personalisierungswörterbuch; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Contains%2A> -Methode überprüft `key` sicherstellen, dass es ist ein gültiges Objekt für die Überprüfung der und wenn dies der Fall ist, übergibt er das <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> der Klasse <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Contains%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" /> ist keine <see cref="T:System.String" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IDictionary.Item[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IDictionary.Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.System#Collections#IDictionary#Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein <see cref="T:System.String" /> , die eine bestimmten identifiziert <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationEntry" /> Objekt aus dem Personalisierungswörterbuch.</param>
+        <summary>Ruft ab oder legt die <see cref="P:System.Collections.IDictionary.Item(System.Object)" /> Eigenschaftswert für die <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> Klasse.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationEntry" /> -Objekt, dessen Wert entspricht <paramref name="key" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Item%2A> zuerst wird sichergestellt, dass `key` ist ein <xref:System.String> -Objekt, und wenn dies der Fall ist, es Ruft die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> Klasse <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Item%2A> -Eigenschaft zum Zurückgeben von der <xref:System.Web.UI.WebControls.WebParts.PersonalizationEntry> entspricht, dessen Schlüssel `key` im aktuellen Wörterbuch.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" /> ist kein <see cref="T:System.String" />-Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Remove">
+      <MemberSignature Language="C#" Value="void IDictionary.Remove (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Remove(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.System#Collections#IDictionary#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein <see cref="T:System.String" /> , die eine bestimmten identifiziert <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationEntry" /> aus dem Personalisierungswörterbuch zu entfernende Objekt.</param>
+        <summary>Implementiert die <see cref="M:System.Collections.IDictionary.Remove(System.Object)" /> Methode für die <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Remove%2A> -Methode überprüft, ob `key` ist ein <xref:System.String> -Objekt, und wenn dies der Fall ist, es Ruft die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> der Klasse <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Remove%2A> -Methode auf und übergibt `key` darauf.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" /> ist keine <see cref="T:System.String" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Implementiert die <see cref="M:System.Collections.IEnumerable.GetEnumerator" /> Methode für die <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> Klasse.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Collections.IEnumerator" /> zum Durchlaufen der Elemente in einem Personalisierungswörterbuch.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.GetEnumerator%2A> Methode ruft direkt die <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> der Klasse <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.GetEnumerator%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationDictionary.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf ein <see cref="T:System.Collections.ICollection" /> Objekt, das die Werte im Personalisierungswörterbuch enthält.</summary>
+        <value>Eine <see cref="T:System.Collections.ICollection" /> , die die Werte für die Personalisierungswörterbuch enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um die Werte aus einem Personalisierungswörterbuch zu erhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

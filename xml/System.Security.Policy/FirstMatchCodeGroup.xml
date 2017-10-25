@@ -1,0 +1,268 @@
+<Type Name="FirstMatchCodeGroup" FullName="System.Security.Policy.FirstMatchCodeGroup">
+  <TypeSignature Language="C#" Value="public sealed class FirstMatchCodeGroup : System.Security.Policy.CodeGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit FirstMatchCodeGroup extends System.Security.Policy.CodeGroup" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.FirstMatchCodeGroup" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Policy.CodeGroup</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht die Sicherheitsrichtlinie definiert werden, durch die Kombination der Policy-Anweisung eine Codegruppe und dass der erste untergeordnete Codegruppe, die mit übereinstimmt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Codegruppen sind die Bausteine von Codezugriff-Sicherheitsrichtlinie. Jede Richtlinienebene besteht aus einer Stammcodegruppe, die untergeordnete Codegruppen aufweisen können. Jede untergeordnete Codegruppe kann eigene untergeordnete Codegruppen verfügen; Dieses Verhalten Erweitert auf eine beliebige Anzahl von Ebenen, die eine Struktur bilden. Jede Codegruppe verfügt über eine mitgliedschaftsbedingung, die bestimmt, ob eine bestimmte Assembly, basierend auf den Beweis für diese Assembly gehört. Nur Codegruppen, deren mitgliedschaftsbedingungen eine bestimmte Assembly übereinstimmen, und deren untergeordnete Codegruppen anwenden Richtlinie.  
+  
+ Wie jede Codegruppe <xref:System.Security.Policy.FirstMatchCodeGroup> gilt nur, wenn die mitgliedschaftsbedingung Indizien für eine Assembly übereinstimmt. Wenn eine Übereinstimmung vorhanden ist, wird die mitgliedschaftsbedingung für jedes untergeordnete Element in der Reihenfolge und hört, erfolgt die erste Übereinstimmung überprüft. Das Ergebnis des <xref:System.Security.Policy.FirstMatchCodeGroup> ist die Vereinigung der Policy-Anweisung die Stammcodegruppe und der Policy-Anweisung der ersten Gruppe untergeordnete Gruppe dieser Code, der mit übereinstimmt.  
+  
+ <xref:System.Security.Policy.FirstMatchCodeGroup>für die programmgesteuerte Verwendung von Anwendungsdomänenhosts soll Domänenrichtlinie festgelegt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung von Membern der <xref:System.Security.Policy.FirstMatchCodeGroup> Klasse.  
+  
+ [!code-cpp[System.Security.Policy.FirstMatchCodeGroup_Evt#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CPP/members.cpp#1)]
+ [!code-csharp[System.Security.Policy.FirstMatchCodeGroup_Evt#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CS/members.cs#1)]
+ [!code-vb[System.Security.Policy.FirstMatchCodeGroup_Evt#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FirstMatchCodeGroup (System.Security.Policy.IMembershipCondition membershipCondition, System.Security.Policy.PolicyStatement policy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Policy.IMembershipCondition membershipCondition, class System.Security.Policy.PolicyStatement policy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.FirstMatchCodeGroup.#ctor(System.Security.Policy.IMembershipCondition,System.Security.Policy.PolicyStatement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="membershipCondition" Type="System.Security.Policy.IMembershipCondition" />
+        <Parameter Name="policy" Type="System.Security.Policy.PolicyStatement" />
+      </Parameters>
+      <Docs>
+        <param name="membershipCondition">Eine mitgliedschaftsbedingung, die testet Beweise, um zu bestimmen, ob dieser Codegruppe Richtlinie gilt.</param>
+        <param name="policy">Der Policy-Anweisung für die Codegruppe in Form von einem Satz von Datenbankberechtigungen und Attribute an Code gewährt werden, die die mitgliedschaftsbedingung erfüllt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Policy.FirstMatchCodeGroup" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine Gruppe von grundlegenden Code und sollte von den Konstruktoren für benutzerdefinierte Codegruppen aufgerufen werden. Untergeordnete Codegruppen können hinzugefügt werden, mithilfe der <xref:System.Security.Policy.CodeGroup.AddChild%2A> Methode.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt die Verwendung der <xref:System.Security.Policy.FirstMatchCodeGroup.%23ctor%2A> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für <xref:System.Security.Policy.FirstMatchCodeGroup> Klasse.  
+  
+ [!code-cpp[System.Security.Policy.FirstMatchCodeGroup_Evt#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CPP/members.cpp#2)]
+ [!code-csharp[System.Security.Policy.FirstMatchCodeGroup_Evt#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CS/members.cs#2)]
+ [!code-vb[System.Security.Policy.FirstMatchCodeGroup_Evt#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Typ des der <paramref name="membershipCondition" /> -Parameter ist ungültig.  
+  
+ - oder -   
+  
+ Der Typ des der <paramref name="policy" /> -Parameter ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.CodeGroup Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.CodeGroup Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.FirstMatchCodeGroup.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.CodeGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine tiefe Kopie der Codegruppe.</summary>
+        <returns>Eine entsprechende Kopie der Codegruppe, einschließlich der zugehörigen mitgliedschaftsbedingungen und untergeordnete Codegruppen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine tiefe Kopie der Codegruppe, was bedeutet, dass Kopien aller darin enthaltenen Objekte vorgenommen wurden, sowie an.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt die Verwendung von <xref:System.Security.Policy.FirstMatchCodeGroup.Copy%2A> Methode, um eine tiefe Kopie der Codegruppe erstellen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für <xref:System.Security.Policy.FirstMatchCodeGroup> Klasse.  
+  
+ [!code-cpp[System.Security.Policy.FirstMatchCodeGroup_Evt#18](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CPP/members.cpp#18)]
+ [!code-csharp[System.Security.Policy.FirstMatchCodeGroup_Evt#18](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CS/members.cs#18)]
+ [!code-vb[System.Security.Policy.FirstMatchCodeGroup_Evt#18](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/VB/Form1.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeLogic">
+      <MemberSignature Language="C#" Value="public override string MergeLogic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MergeLogic" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.FirstMatchCodeGroup.MergeLogic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Merge-Logik ab.</summary>
+        <value>Die Zeichenfolge "Erste Übereinstimmung".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Code zeigt die Verwendung der <xref:System.Security.Policy.FirstMatchCodeGroup.MergeLogic%2A> Eigenschaft, um die Merge-Logik für diese Codegruppe abzurufen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Policy.FirstMatchCodeGroup> Klasse.  
+  
+ [!code-cpp[System.Security.Policy.FirstMatchCodeGroup_Evt#15](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CPP/members.cpp#15)]
+ [!code-csharp[System.Security.Policy.FirstMatchCodeGroup_Evt#15](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CS/members.cs#15)]
+ [!code-vb[System.Security.Policy.FirstMatchCodeGroup_Evt#15](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/VB/Form1.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.PolicyStatement Resolve (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.PolicyStatement Resolve(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.FirstMatchCodeGroup.Resolve(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyStatement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">Der Beweis für die Assembly.</param>
+        <summary>Löst die Richtlinien für die Codegruppe und seine Nachfolger für einen Satz von Beweisen.</summary>
+        <returns>Eine Policy-Anweisung, bestehend aus der von der Codegruppe mit optionalen Attribute erteilten Berechtigungen oder <see langword="null" /> Wenn Codegruppe nicht anwendbar ist (die mitgliedschaftsbedingung stimmt nicht mit die angegebene Beweise überein).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wertet angegebene Beweis für eine Assembly geladen werden, den Codegruppe durch zunächst geprüft wird, der die mitgliedschaftsbedingung mit den angegebenen Beweisen. Wenn eine Übereinstimmung vorhanden ist, gibt diese Methode eine Policy-Anweisung für die Codegruppe, einschließlich der Evaluierung von untergeordnete Codegruppen an.  
+  
+ Für den ersten übereinstimmenden Codegruppen wird jede untergeordnete Codegruppe die mitgliedschaftsbedingung für den Beweis in der Reihenfolge getestet in der sie hinzugefügt wurden; nur die erste Übereinstimmung wird mit dem Beweissatz aufgelöst. Wenn keine Übereinstimmungen vorhanden sind, gilt der Policy-Anweisung der ersten übereinstimmenden Code übergeordneten Gruppe. Die übereinstimmende untergeordnete Code Gruppentyp wird bestimmt, wie alle untergeordneten Gruppen, je nachdem, wie der angewendet werden <xref:System.Security.Policy.CodeGroup.Resolve%2A> Methoden dieser untergeordneten Gruppen funktionieren.  
+  
+ Verwendet das .NET Framework-Sicherheitssystem <xref:System.Security.Policy.CodeGroup.Resolve%2A> auf die Richtlinienebenen, um zu bestimmen, welche Berechtigungen zum Erteilen der geladenen Code aus der resultierenden richtlinienanweisungen und den Code für die Assembly anfordern.  
+  
+ Dieser Vorgang von dieser Methode lautet wie folgt:  
+  
+ Wenn die mitgliedschaftsbedingung die angegebene Beweise nicht übereinstimmt, zurück `null`ist, andernfalls Satz der Berechtigungssatz (P) zurückgegeben werden gleich der Codegruppe Policy-Anweisung und den Vorgang fortzusetzen. Für jede untergeordnete Codegruppe die Codegruppe mit denselben Beweisen; aufgelöst Wenn das Ergebnis nicht `null`, diese Policy-Anweisung zurückzugeben. Wenn keine untergeordnete Codegruppe abgeglichen wird, zurückgeben Sie P (des übergeordneten Elements Policy-Anweisung).  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt die Verwendung der <xref:System.Security.Policy.FirstMatchCodeGroup.Resolve%2A> Methode zum Auflösen der Richtlinien für die Codegruppe an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Policy.FirstMatchCodeGroup> Klasse.  
+  
+ [!code-cpp[System.Security.Policy.FirstMatchCodeGroup_Evt#19](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CPP/members.cpp#19)]
+ [!code-csharp[System.Security.Policy.FirstMatchCodeGroup_Evt#19](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CS/members.cs#19)]
+ [!code-vb[System.Security.Policy.FirstMatchCodeGroup_Evt#19](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/VB/Form1.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="evidence" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Policy.PolicyException">Mehr als eine Codegruppe (einschließlich der Codegruppe für die übergeordnete und untergeordnete Codegruppen) RuntimeCompatibility <see cref="F:System.Security.Policy.PolicyStatementAttribute.Exclusive" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveMatchingCodeGroups">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.CodeGroup ResolveMatchingCodeGroups (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.CodeGroup ResolveMatchingCodeGroups(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.FirstMatchCodeGroup.ResolveMatchingCodeGroups(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.CodeGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">Der Beweis für die Assembly.</param>
+        <summary>Löst übereinstimmenden Codegruppen.</summary>
+        <returns>Ein <see cref="T:System.Security.Policy.CodeGroup" /> also den Stamm der Struktur der übereinstimmenden Codegruppen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wertet angegebene Beweis für eine Assembly geladen werden, den Codegruppe durch zunächst geprüft wird, der die mitgliedschaftsbedingung mit den angegebenen Beweisen. Wenn eine Übereinstimmung vorhanden ist, gibt diese Methode eine Stammcodegruppe zurück. Codegruppe, die zurückgegeben wird, enthält untergeordnete Codegruppen, die untergeordnete Codegruppen nach Bedarf, um den vollständigen Satz von Codegruppen widerzuspiegeln, die von den bereitgestellten Beweisen abgeglichen wurden wiederum enthalten.  
+  
+ Für den ersten übereinstimmenden Codegruppen wird jede untergeordnete Codegruppe die mitgliedschaftsbedingung für den Beweis in der Reihenfolge getestet in der sie hinzugefügt wurden; nur die erste Übereinstimmung wird mit dem Beweissatz aufgelöst. Wenn keine Übereinstimmungen vorhanden sind, gilt der Policy-Anweisung der ersten übereinstimmenden Code übergeordneten Gruppe. Die übereinstimmende untergeordnete Code Gruppentyp wird bestimmt, wie alle untergeordneten Gruppen, je nachdem, wie der angewendet werden <xref:System.Security.Policy.CodeGroup.ResolveMatchingCodeGroups%2A> Methoden dieser untergeordneten Gruppen funktionieren.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt die Verwendung der <xref:System.Security.Policy.FirstMatchCodeGroup.ResolveMatchingCodeGroups%2A> Methode, um die übereinstimmenden Codegruppen zu beheben. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Policy.FirstMatchCodeGroup> Klasse.  
+  
+ [!code-cpp[System.Security.Policy.FirstMatchCodeGroup_Evt#9](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CPP/members.cpp#9)]
+ [!code-csharp[System.Security.Policy.FirstMatchCodeGroup_Evt#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CS/members.cs#9)]
+ [!code-vb[System.Security.Policy.FirstMatchCodeGroup_Evt#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/VB/Form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="evidence" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

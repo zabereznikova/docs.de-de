@@ -1,0 +1,17 @@
+<Namespace Name="System.Web.ClientServices.Providers">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.ClientServices.Providers" /> -Namespace enthält Clientdienstanbieter und anderen Klassen, die in Windows-basierten Anwendungen mit der Microsoft Ajax-Authentifizierung, Rollen, den Supportzugriff und Dienste ein Profil erstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in der <xref:System.Web.ClientServices.Providers> Namespace enthalten Clientanwendungsdienst-Anbieter, mit denen Windows-basierten Anwendungen verwenden die [!INCLUDE[ajax_current_short](~/includes/ajax-current-short-md.md)] Authentifizierung, Rollen und Profildienste. Sie können diese Dienste aktivieren und Clientdienstanbieter in der Anwendungskonfigurationsdatei angeben und dann Zugriff auf die Dienste, die über vorhandene [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] Mitgliedschaft, Identitäts- und Application Settings-Infrastrukturen. Die Client-Anbieter unterstützt auch gelegentliche Konnektivität durch das Speichern und Abrufen von Benutzerinformationen in einen lokalen Datencache, wenn die Anwendung offline ist. Weitere Informationen finden Sie unter [Clientanwendungsdienste](~/docs/framework/common-client-technologies/client-application-services.md).  
+  
+ Der Anmeldedienst zugreifen zu können, können Sie Windows-oder Formularauthentifizierung durch Angabe der <xref:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider> oder <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider> in der Anwendungskonfiguration. Windows-Authentifizierung verwendet die Identität bereitgestellt, wenn ein Benutzer für das Betriebssystem anmeldet. Formular-Authentifizierung erfordert, dass Sie zum Abrufen von Anmeldeinformationen vom Benutzer sowie deren Übergabe an den Dienst. Hierzu können Sie durch Angabe einer <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> Implementierung mit Ihrem <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider> Konfiguration. Die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A?displayProperty=nameWithType> Methode gibt ein <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> -Objekt, das Benutzeranmeldeinformationen enthält. Sie können dieses Objekt z. B. durch Anzeigen der ein Anmeldedialogfeld in Auffüllen der <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> Methode.  
+  
+ Wenn Sie die Rollen und Profildienste zugreifen zu können, geben die <xref:System.Web.ClientServices.Providers.ClientRoleProvider> und <xref:System.Web.ClientServices.Providers.ClientSettingsProvider> in der Anwendungskonfiguration.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

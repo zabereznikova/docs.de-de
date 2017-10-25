@@ -1,0 +1,93 @@
+<Type Name="IAssemblyPostProcessor" FullName="System.Web.Compilation.IAssemblyPostProcessor">
+  <TypeSignature Language="C#" Value="public interface IAssemblyPostProcessor : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAssemblyPostProcessor implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.IAssemblyPostProcessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert die Methode, die von die eine Klasse implementiert, um eine Assembly zu verarbeiten, nachdem die Assembly erstellt wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Klasse implementieren diese Schnittstelle kann eine Assembly zugreifen, nachdem es kompiliert wurde. Die <xref:System.Web.Compilation.AssemblyBuilder> Klasse Assemblys kompiliert und anschließend überprüft, ob ein <xref:System.Web.Compilation.IAssemblyPostProcessor> Schnittstelle wurde in der Webkonfigurationsdatei registriert. Wenn dies der Fall ist, die <xref:System.Web.Compilation.AssemblyBuilder> -Instanz Aufrufe der <xref:System.Web.Compilation.IAssemblyPostProcessor.PostProcessAssembly%2A> Methode für die <xref:System.Web.Compilation.IAssemblyPostProcessor> Schnittstelle zum Ausführen aller Aktionen nach der Kompilierung und vor dem Laden der Assemblys. Beispielsweise konnte ein Profiler-Tools diese Schnittstelle zum Einrichten von Tests in der Assembly implementieren.  
+  
+ Wenn ein <xref:System.Web.Compilation.IAssemblyPostProcessor> Schnittstelle registriert ist, werden die ASP.NET-Anwendung und ihre Assemblys immer im Debugmodus kompiliert werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Implementierung der Erstellung der <xref:System.Web.Compilation.IAssemblyPostProcessor> Schnittstelle, und registrieren Sie ihn in der Datei "Web.config" einer Webanwendung.  
+  
+ Der erste Teil des Codebeispiels erstellt eine Klasse namens `Samples.Process.postProcessTest` , implementiert die <xref:System.Web.Compilation.IAssemblyPostProcessor> Schnittstelle. Diese Klasse führt die einfache Aktion Schreiben einer Datei bei der <xref:System.Web.Compilation.IAssemblyPostProcessor.PostProcessAssembly%2A> -Methode aufgerufen wird.  
+  
+ [!code-csharp[System.Web.Compilation.IAssemblyPostProcessor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.IAssemblyPostProcessor/CS/postProcessTest.cs#1)]
+ [!code-vb[System.Web.Compilation.IAssemblyPostProcessor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.IAssemblyPostProcessor/VB/postProcessTest.vb#1)]  
+  
+ Kompilieren Sie die Klasse in eine DLL-Datei mit dem Befehl `csc /target:library postProcessTest.cs`. Der Ordner "Bin" der ASP.NET-Anwendung die resultierende DLL-Datei hinzu, und registrieren Sie die DLL-Datei in der Datei "Web.config", wie im folgenden Code gezeigt.  
+  
+```  
+<compilation debug="true" assemblyPostProcessorType="Samples.Process.postProcessTest" />  
+```  
+  
+ Wenn ein Benutzer die Website besucht, wird die Web-Anwendung dynamisch kompiliert wird, und die Datei wird MyTest.txt in C:\compile geschrieben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PostProcessAssembly">
+      <MemberSignature Language="C#" Value="public void PostProcessAssembly (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PostProcessAssembly(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.IAssemblyPostProcessor.PostProcessAssembly(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad der Assembly.</param>
+        <summary>Wird aufgerufen, bevor die Assembly zum Zulassen der implementierenden Klasse so ändern Sie die Assembly geladen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.AssemblyBuilder> Klasse ruft diese Methode auf, nachdem die Assembly kompiliert wurde. Bei dieser Methode sollte alle Aktionen, die ausgeführt werden, vor dem Laden der Assemblys enthalten sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Implementierung der Erstellung der <xref:System.Web.Compilation.IAssemblyPostProcessor> Schnittstelle, und registrieren Sie ihn in der Datei "Web.config" einer Webanwendung.  
+  
+ Der erste Teil des Codebeispiels erstellt eine Klasse namens `Samples.Process.postProcessTest` , implementiert die <xref:System.Web.Compilation.IAssemblyPostProcessor> Schnittstelle. Diese Klasse führt die einfache Aktion Schreiben einer Datei bei der <xref:System.Web.Compilation.IAssemblyPostProcessor.PostProcessAssembly%2A> -Methode aufgerufen wird.  
+  
+ [!code-csharp[System.Web.Compilation.IAssemblyPostProcessor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.IAssemblyPostProcessor/CS/postProcessTest.cs#1)]
+ [!code-vb[System.Web.Compilation.IAssemblyPostProcessor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.IAssemblyPostProcessor/VB/postProcessTest.vb#1)]  
+  
+ Kompilieren Sie die Klasse in eine DLL-Datei mit dem Befehl `csc /target:library postProcessTest.cs`. Der Ordner "Bin" der ASP.NET-Anwendung die resultierende DLL-Datei hinzu, und registrieren Sie die DLL-Datei in der Datei "Web.config", wie im folgenden Code gezeigt.  
+  
+```  
+<compilation debug="true" assemblyPostProcessorType="Samples.Process.postProcessTest" />  
+```  
+  
+ Wenn ein Benutzer die Website besucht, wird die Web-Anwendung dynamisch kompiliert wird, und die Datei wird MyTest.txt in C:\compile geschrieben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

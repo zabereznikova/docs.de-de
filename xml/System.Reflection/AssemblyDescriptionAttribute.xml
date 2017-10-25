@@ -1,0 +1,119 @@
+<Type Name="AssemblyDescriptionAttribute" FullName="System.Reflection.AssemblyDescriptionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyDescriptionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyDescriptionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.AssemblyDescriptionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Textbeschreibung für eine Assembly bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines Projekts in [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)], dieses Attribut wird automatisch mit einem leeren Zeichenfolgenwert angewendet. Legen Sie den Wert [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] durch Auswahl der **Eigenschaften** für das Projekt aus der **Datei** Menü, und klicken Sie dann durch Klicken auf **Assemblyinformationen**. Das Attribut in der AssemblyInfo-Datei in Ihrem Projekt gespeichert ist, und müssen entfernt werden, bevor Sie es im Code angeben können; Andernfalls erhalten Sie einen Fehler, dass das Attribut mehrmals angewendet werden kann.  
+  
+ Wenn Sie die Assemblydatei im Datei-Explorer mit der rechten Maustaste, erscheint das Attribut als die **Kommentare** Wert auf die **Version** Registerkarte im Dialogfeld Eigenschaften der Datei.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Reflection.AssemblyDescriptionAttribute> für eine einfache Assembly und gibt an, und zwar unabhängig davon, ob es definiert wurde.  
+  
+ [!code-csharp[System.Reflection.AssemblyDescriptionAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.assemblydescriptionattribute/CS/DescrAttr.cs#1)]
+ [!code-vb[System.Reflection.AssemblyDescriptionAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflection.assemblydescriptionattribute/VB/DescrAttr.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyDescriptionAttribute (string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyDescriptionAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="description">Die Beschreibung der Assembly.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.AssemblyDescriptionAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyDescriptionAttribute.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Informationen über die Assemblybeschreibung.</summary>
+        <value>Eine Zeichenfolge, die die Beschreibung der Assembly enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

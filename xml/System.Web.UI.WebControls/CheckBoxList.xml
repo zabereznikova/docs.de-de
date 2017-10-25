@@ -1,0 +1,1208 @@
+<Type Name="CheckBoxList" FullName="System.Web.UI.WebControls.CheckBoxList">
+  <TypeSignature Language="C#" Value="public class CheckBoxList : System.Web.UI.WebControls.ListControl, System.Web.UI.INamingContainer, System.Web.UI.IPostBackDataHandler, System.Web.UI.WebControls.IRepeatInfoUser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CheckBoxList extends System.Web.UI.WebControls.ListControl implements class System.Web.UI.INamingContainer, class System.Web.UI.IPostBackDataHandler, class System.Web.UI.WebControls.IRepeatInfoUser" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CheckBoxList" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.ListControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.INamingContainer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackDataHandler</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.IRepeatInfoUser</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Erstellt eine Gruppe von Kontrollkästchen für Mehrfachauswahlen. Diese kann dynamisch erstellt werden, indem das Steuerelement an eine Datenquelle gebunden wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#Introduction)  
+  
+-   [Angeben von Listenlayout](#SpecifyingListLayout)  
+  
+-   [Angeben von Listenelementen](#SpecifyingListItems)  
+  
+-   [Barrierefreiheit](#Accessibility)  
+  
+-   [Deklarationssyntax](#DeclarativeSyntax)  
+  
+<a name="Introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement verfügt über eine Gruppe von Mehrfachauswahlen Kontrollkästchen, die mit dem Datenbindung dynamisch generiert werden können. Er enthält eine <xref:System.Web.UI.WebControls.ListControl.Items%2A> Sammlung mit Elementen, die auf einzelne Elemente in der Liste entspricht. Um zu bestimmen, welche Elemente überprüft werden, Durchlaufen der Auflistung, und Testen der <xref:System.Web.UI.WebControls.ListItem.Selected%2A> Eigenschaft jedes Elements in der Liste.  
+  
+> [!NOTE]
+>  Sie können auch mehrere <xref:System.Web.UI.WebControls.CheckBox> Steuerelemente. Die <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement ist einfacher, die zum Erstellen einer Gruppe von Kontrollkästchen mithilfe der Datenbindung, während die einzelnen <xref:System.Web.UI.WebControls.CheckBox> steuern kann, bessere Kontrolle über das Layout.  
+  
+<a name="SpecifyingListLayout"></a>   
+## <a name="specifying-list-layout"></a>Angeben von Listenlayout  
+ Sie können angeben, wie die Liste wird angezeigt, indem die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> und <xref:System.Web.UI.WebControls.CheckBoxList.RepeatDirection%2A> Eigenschaften. Informationen zum Layoutoptionen finden Sie unter der <xref:System.Web.UI.WebControls.RepeatLayout> Enumeration.  
+  
+ <xref:System.Web.UI.WebControls.CheckBoxList.RepeatDirection%2A> ist standardmäßig auf `RepeatDirection.Vertical` festgelegt. Wenn diese Eigenschaft auf `RepeatDirection.Horizontal` wird die Liste horizontal dargestellt. Einige <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> Einstellungen horizontales Layout nicht zulassen. Weitere Informationen finden Sie unter der <xref:System.Web.UI.WebControls.RepeatLayout>-Enumeration.  
+  
+<a name="SpecifyingListItems"></a>   
+## <a name="specifying-list-items"></a>Angeben von Listenelementen  
+ Elemente an, die in angezeigt werden sollen die <xref:System.Web.UI.WebControls.CheckBoxList> steuern, platzieren Sie eine `ListItem` für jeden Eintrag zwischen dem Start- und Endtags des Elements der <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement unterstützt auch die Datenbindung. Um das Steuerelement an eine Datenquelle zu binden, erstellen Sie zunächst eine Datenquelle, z. B. einen der der <xref:System.Web.UI.DataSourceControl> Objekte, mit den Elementen im Steuerelement angezeigt. Verwenden Sie als Nächstes die <xref:System.Web.UI.Control.DataBind%2A> Methode, um die Datenquelle zu binden die <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement. Verwenden der <xref:System.Web.UI.WebControls.ListControl.DataTextField%2A> und <xref:System.Web.UI.WebControls.ListControl.DataValueField%2A> Eigenschaft, um anzugeben, welches Feld der Datenquelle zum Binden an die `Text` und `Value` Eigenschaften jedes Element im Steuerelement. Die <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement zeigt jetzt die Informationen aus der Datenquelle.  
+  
+ Um zu bestimmen, die ausgewählten Elemente in der <xref:System.Web.UI.WebControls.CheckBoxList> steuern, durchlaufen die <xref:System.Web.UI.WebControls.ListControl.Items%2A> Auflistung, und Testen der <xref:System.Web.UI.WebControls.ListItem.Selected%2A> Eigenschaft jedes Elements in der Auflistung.  
+  
+> [!CAUTION]
+>  Dieses Steuerelement kann verwendet werden, Benutzereingaben angezeigt werden, die möglicherweise böswillige Clientskripts umfassen. Überprüfen Sie alle Informationen, die für ausführbare Skripts, SQL-Anweisungen oder anderen Code von einem Client gesendet wird, vor der Anzeige in der Anwendung. Sie können die Validierungssteuerelemente verwenden, Benutzereingaben zu überprüfen, bevor der Eingabetext in einem Steuerelement angezeigt. ASP.NET bietet eine Funktion für den Überprüfung eingabeanforderung zum Blockieren von Skript und HTML in Benutzereingaben. Weitere Informationen finden Sie unter [Standardsteuerelemente schützen](http://msdn.microsoft.com/library/f3e7718f-63d0-44a3-bd5f-48cc2059c2a8), [wie: schützen gegen Script Exploits in einer Web-Anwendung durch Anwenden von HTML-Codierung in Zeichenfolgen](http://msdn.microsoft.com/library/6f67973f-dda0-45a1-ba9d-e88532d7dc5b), und [Validieren von Benutzereingaben in ASP.NET Web Pages](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+  
+<a name="Accessibility"></a>   
+## <a name="accessibility"></a>Barrierefreiheit  
+ Weitere Informationen dazu, wie das Steuerelement so konfigurieren, dass er Markup generiert, das den Accessibility Standards entspricht, finden Sie unter [Barrierefreiheit in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) und [ASP.NET-Steuerelemente und Barrierefreiheit](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+<a name="DeclarativeSyntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:CheckBoxList  
+    AccessKey="string"  
+    AppendDataBoundItems="True|False"  
+    AutoPostBack="True|False"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    CausesValidation="True|False"  
+    CellPadding="integer"  
+    CellSpacing="integer"  
+    CssClass="string"  
+    DataMember="string"  
+    DataSource="string"  
+    DataSourceID="string"  
+    DataTextField="string"  
+    DataTextFormatString="string"  
+    DataValueField="string"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|Medium|  
+        Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    Height="size"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDataBound="DataBound event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnSelectedIndexChanged="SelectedIndexChanged event handler"  
+    OnTextChanged="TextChanged event handler"  
+    OnUnload="Unload event handler"  
+    RepeatColumns="integer"  
+    RepeatDirection="Horizontal|Vertical"  
+    RepeatLayout="Table|Flow|OrderedList|UnorderedList"  
+    runat="server"  
+    SelectedIndex="integer"  
+    SelectedValue="string"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    TextAlign="Left|Right"  
+    ToolTip="string"  
+    ValidationGroup="string"  
+    Visible="True|False"  
+    Width="size"  
+>  
+            <asp:ListItem  
+                Enabled="True|False"  
+                Selected="True|False"  
+                Text="string"  
+                Value="string"  
+            />  
+</asp:CheckBoxList>  
+```  
+  
+   
+  
+## Examples  
+ Ist ein Visual Studio Web Site-Projekt mit Quellcode zu diesem Thema steht verfügbar: [herunterladen](http://go.microsoft.com/fwlink/?LinkId=191890).  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement auf einer Webseite.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[CheckBoxList#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CheckBoxList/CS/checkboxlistcs.aspx#1)]
+ [!code-aspx-vb[CheckBoxList#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CheckBoxList/VB/checkboxlistvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CheckBoxList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.CheckBoxList> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen und initialisieren eine neue Instanz der dem <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[CheckBoxListCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CheckBoxListCtor/CS/checkboxlistctorcs.aspx#1)]
+ [!code-aspx-vb[CheckBoxListCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CheckBoxListCtor/VB/checkboxlistctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellPadding">
+      <MemberSignature Language="C#" Value="public virtual int CellPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CellPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.CellPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand (in Pixel) zwischen Rahmen und Inhalt der Zelle ab oder legt diesen fest.</summary>
+        <value>Der Abstand (in Pixel) zwischen Rahmen und Inhalt der Zelle. Der Standardwert ist -1 und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Abstand zwischen dem Inhalt einer Zelle und dem Zellenrahmen in steuern die <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement.  
+  
+ Der angegebene Leerraum wird hinzugefügt, auf allen vier Seiten einer Zelle mit der Höhe der höchsten Zelle und Breite des breitesten Zelle in der <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement. Die resultierende Größe der Zelle gleichmäßig auf alle Zellen in angewendet wird die <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CheckBoxList.CellPadding%2A> Eigenschaft angeben, dass auf den Textabstand für die <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement beträgt 5 Pixel.  
+  
+> [!NOTE]
+>  Die folgenden Codebeispiele verwenden die einfach-Codemodell und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. Jedes Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic CheckBoxList.CellPadding Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CheckBoxList.CellPadding Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CheckBoxList.CellPadding Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CheckBoxList.CellPadding Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CheckBoxListCellPadding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CheckBoxListCellPadding/CS/checkboxlistcellpaddingcs.aspx#1)]
+ [!code-aspx-vb[CheckBoxListCellPadding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CheckBoxListCellPadding/VB/checkboxlistcellpaddingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellSpacing">
+      <MemberSignature Language="C#" Value="public virtual int CellSpacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CellSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.CellSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand (in Pixel) zwischen Zellen ab oder legt diesen fest.</summary>
+        <value>Der Abstand (in Pixel) zwischen Zellen. Der Standardwert ist <see langword="-1" /> und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie steuern, den Abstand zwischen den einzelnen Zellen in der <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement. Diese Eigenschaft wird vertikal und horizontal angewendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CheckBoxList.CellSpacing%2A> Eigenschaft angeben, dass der Zellenabstand für die <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement beträgt 5 Pixel.  
+  
+> [!NOTE]
+>  Die folgenden Codebeispiele verwenden die einfach-Codemodell und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. Jedes Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic CheckBoxList.CellPadding Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CheckBoxList.CellPadding Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CheckBoxList.CellPadding Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CheckBoxList.CellPadding Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CheckBoxListCellPadding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CheckBoxListCellPadding/CS/checkboxlistcellpaddingcs.aspx#1)]
+ [!code-aspx-vb[CheckBoxListCellPadding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CheckBoxListCellPadding/VB/checkboxlistcellpaddingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlStyle">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.Style CreateControlStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.Style CreateControlStyle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.CreateControlStyle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Formatvorlagenobjekt, das vom <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement intern zum Implementieren aller auf Formatvorlagen bezogenen Eigenschaften verwendet wird.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.Style" />, der die Stileigenschaften des Steuerelements enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.CreateControlStyle%2A> Methode wird hauptsächlich von Steuerelemententwicklern in benutzerdefinierten Steuerelementen, die abgeleitet verwendet die <xref:System.Web.UI.WebControls.CheckBoxList> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.CheckBoxList.CreateControlStyle%2A> Methode in einem benutzerdefinierten steuern, sodass sie immer eine neue Instanz der zurückgibt der <xref:System.Web.UI.WebControls.TableStyle> -Klasse für die <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement.  
+  
+ [!code-aspx-csharp[CustomCheckBoxListCreateControlStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCheckBoxListCreateControlStyle/CS/custom_checkboxlist_createcontrolstylecs.aspx#1)]
+ [!code-aspx-vb[CustomCheckBoxListCreateControlStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCheckBoxListCreateControlStyle/VB/custom_checkboxlist_createcontrolstylevb.aspx#1)]  
+[!code-csharp[CustomCheckBoxListCreateControlStyle#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCheckBoxListCreateControlStyle/CS/custom_checkboxlist_createcontrolstyle.cs#2)]
+[!code-vb[CustomCheckBoxListCreateControlStyle#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCheckBoxListCreateControlStyle/VB/custom_checkboxlist_createcontrolstyle.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindControl">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.Control FindControl (string id, int pathOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.Control FindControl(string id, int32 pathOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.FindControl(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="pathOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="id">Der Bezeichner für das zu suchende Steuerelement.</param>
+        <param name="pathOffset">Die Anzahl von Steuerelementen bis zu einem Benennungscontainer (aufsteigend in der Seitensteuerelementhierarchie).</param>
+        <summary>Durchsucht den aktuellen Benennungscontainer nach einem Serversteuerelement mit der angegebenen ID und dem angegebenen Pfadoffset. Die <see cref="M:System.Web.UI.WebControls.CheckBoxList.FindControl(System.String,System.Int32)" />-Methode gibt immer das <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Objekt zurück.</summary>
+        <returns>Der aktuelle <see cref="T:System.Web.UI.WebControls.CheckBoxList" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.FindControl%2A> Methode wird hauptsächlich von Steuerelemententwicklern in benutzerdefinierten Steuerelementen, die abgeleitet verwendet die <xref:System.Web.UI.WebControls.CheckBoxList> Klasse.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.FindControl%2A> methodenüberschreibungen der <xref:System.Web.UI.Control.FindControl%2A> -Methode der Basisklasse <xref:System.Web.UI.Control> Klasse. Sie sollten diese Version von nicht überschreiben die <xref:System.Web.UI.Control.FindControl%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemStyle">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.Style GetItemStyle (System.Web.UI.WebControls.ListItemType itemType, int repeatIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.Style GetItemStyle(valuetype System.Web.UI.WebControls.ListItemType itemType, int32 repeatIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.GetItemStyle(System.Web.UI.WebControls.ListItemType,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+        <Parameter Name="repeatIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Einer der <see cref="T:System.Web.UI.WebControls.ListItemType" />-Enumerationswerte.</param>
+        <param name="repeatIndex">Ein Ordinalindex, der die Position des Elements im Listensteuerelement angibt.</param>
+        <summary>Ruft den Stil des angegebenen Elementtyps am angegebenen Index im Listensteuerelement ab.</summary>
+        <returns>
+          <see langword="null" /> zeigt an, dass in einem <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement für einzelne Listenelemente keine Formatvorlagenattribute festgelegt sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.GetItemStyle%2A> Methode wird hauptsächlich von Steuerelemententwicklern in benutzerdefinierten Steuerelementen, die abgeleitet verwendet die <xref:System.Web.UI.WebControls.CheckBoxList> Klasse.  
+  
+ Das Formatattribut für das <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement betrifft alle Listenelemente, die vom Steuerelement enthalten sind. Verwenden der <xref:System.Web.UI.WebControls.Style> Eigenschaft von der <xref:System.Web.UI.WebControls.CheckBoxList> zum Überprüfen oder Festlegen des Formatattributs für das Steuerelement und seine Listenelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFooter">
+      <MemberSignature Language="C#" Value="protected virtual bool HasFooter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasFooter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.HasFooter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement einen Fußzeilenbereich enthält.</summary>
+        <value>
+          <see langword="false" /> zeigt an, dass ein <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement keinen Fußzeilenbereich enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.HasFooter%2A> Eigenschaft wird hauptsächlich von Steuerelemententwicklern in benutzerdefinierten Steuerelementen, die davon Herleiten verwendet die <xref:System.Web.UI.WebControls.CheckBoxList> Klasse. Fußzeilen werden nicht unterstützt, wenn die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.RepeatLayout.UnorderedList> oder <xref:System.Web.UI.WebControls.RepeatLayout.OrderedList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasHeader">
+      <MemberSignature Language="C#" Value="protected virtual bool HasHeader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.HasHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement einen Kopfzeilenbereich enthält.</summary>
+        <value>
+          <see langword="false" /> zeigt an, dass ein <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement keinen Kopfzeilenbereich enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.HasHeader%2A> Eigenschaft wird hauptsächlich von Steuerelemententwicklern in benutzerdefinierten Steuerelementen, die davon Herleiten verwendet die <xref:System.Web.UI.WebControls.CheckBoxList> Klasse. Header werden nicht unterstützt, wenn die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.RepeatLayout.UnorderedList> oder <xref:System.Web.UI.WebControls.RepeatLayout.OrderedList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasSeparators">
+      <MemberSignature Language="C#" Value="protected virtual bool HasSeparators { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasSeparators" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.HasSeparators" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement zwischen Elementen der Liste ein Trennzeichen enthält.</summary>
+        <value>
+          <see langword="false" /> zeigt an, dass eine <see cref="T:System.Web.UI.WebControls.CheckBoxList" /> keine Trennzeichen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.HasSeparators%2A> Methode wird hauptsächlich von Steuerelemententwicklern in benutzerdefinierten Steuerelementen, die abgeleitet verwendet die <xref:System.Web.UI.WebControls.CheckBoxList> Klasse. Trennzeichen werden nicht unterstützt, wenn die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.RepeatLayout.UnorderedList> oder <xref:System.Web.UI.WebControls.RepeatLayout.OrderedList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPostData">
+      <MemberSignature Language="C#" Value="protected virtual bool LoadPostData (string postDataKey, System.Collections.Specialized.NameValueCollection postCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool LoadPostData(string postDataKey, class System.Collections.Specialized.NameValueCollection postCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="postDataKey" Type="System.String" />
+        <Parameter Name="postCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="postDataKey">Der Schlüsselbezeichner für das Steuerelement, auf den Index der <see cref="T:System.Collections.Specialized.NameValueCollection" /> im angegebenen der <c>PostCollection</c> Parameter.</param>
+        <param name="postCollection">Eine <see cref="T:System.Collections.Specialized.NameValueCollection" />, die von Steuerelementbezeichnern indizierte Wertinformationen enthält.</param>
+        <summary>Verarbeitet die bereitgestellten Daten für das <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement.</summary>
+        <returns>
+          <see langword="true" />, wenn der Zustand der <see cref="T:System.Web.UI.WebControls.CheckBoxList" /> von der letzten Bereitstellung abweicht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.LoadPostData%2A> Methode wird hauptsächlich von Steuerelemententwicklern in benutzerdefinierten Steuerelementen, die abgeleitet verwendet die <xref:System.Web.UI.WebControls.CheckBoxList> Klasse.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.LoadPostData%2A> Methode gibt an, ob der Status des der <xref:System.Web.UI.WebControls.CheckBoxList> -Steuerelements geändert hat. Das heißt, sie bestimmt, ob es sich bei jedes Listenelement im Steuerelement hat dasselbe <xref:System.Web.UI.WebControls.ListItem.Selected%2A> Wert der zuletzt bereitgestellten Wert. Ein Benutzer aktivieren bzw. deaktivieren ein Element im Steuerelement ändert die <xref:System.Web.UI.WebControls.ListItem.Selected%2A> Eigenschaftswert für den entsprechenden <xref:System.Web.UI.WebControls.ListItem> Objekt in der <xref:System.Web.UI.WebControls.ListControl.Items%2A> Auflistung von der <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement. Wenn die gleichen Listenelemente im Steuerelement ausgewählt werden, oder wenn die <xref:System.Web.UI.WebControls.CheckBoxList> deaktiviert ist, <xref:System.Web.UI.WebControls.CheckBoxList.LoadPostData%2A> gibt `false`.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.CheckBoxList.LoadPostData%2A> -Methode zurückkehrt `true` für ein Steuerelement der Seite "-Framework Ruft die <xref:System.Web.UI.WebControls.CheckBoxList.RaisePostDataChangedEvent%2A> Methode für das Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt, das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Konfiguriert das <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement vor dem Rendern auf dem Client.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.OnPreRender%2A> Methode wird hauptsächlich von Steuerelemententwicklern in benutzerdefinierten Steuerelementen, die abgeleitet verwendet die <xref:System.Web.UI.WebControls.CheckBoxList> Klasse. Die <xref:System.Web.UI.WebControls.CheckBoxList.OnPreRender%2A> -Methode ermöglicht es abgeleitete Klassen, behandeln die <xref:System.Web.UI.Control.PreRender> Ereignis ohne Anfügen eines Delegaten. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.OnPreRender%2A> Methode führt alle erforderlichen Vorbereitungsschritte vor dem Speichern der Ansichtszustand und Rendern von Inhalt für die <xref:System.Web.UI.WebControls.CheckBoxList>. In enthaltenen einzelnen Listenelemente der <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement werden initialisiert, für das Rendering, die mit dem aktuellen <xref:System.Web.UI.WebControls.ListControl.AutoPostBack%2A>, <xref:System.Web.UI.WebControls.ListControl.CausesValidation%2A>, und <xref:System.Web.UI.WebControls.ListControl.ValidationGroup%2A> Werte.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.CheckBoxList.CreateControlStyle%2A> Methode in einem benutzerdefinierten steuern, sodass sie immer eine neue Instanz der zurückgibt der <xref:System.Web.UI.WebControls.TableStyle> -Klasse für die <xref:System.Web.UI.WebControls.CheckBoxList>.  
+  
+ [!code-aspx-csharp[CustomCheckBoxListOnPreRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCheckBoxListOnPreRender/CS/custom_checkboxlist_onprerendercs.aspx#1)]
+ [!code-aspx-vb[CustomCheckBoxListOnPreRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCheckBoxListOnPreRender/VB/custom_checkboxlist_onprerendervb.aspx#1)]  
+[!code-csharp[CustomCheckBoxListOnPreRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCheckBoxListOnPreRender/CS/custom_checkboxlist_onprerender.cs#2)]
+[!code-vb[CustomCheckBoxListOnPreRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCheckBoxListOnPreRender/VB/custom_checkboxlist_onprerender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.CheckBoxList.OnPreRender(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.WebControls.CheckBoxList.OnPreRender(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt die ASP.NET-Anwendung, dass sich der Zustand des <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelements geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.RaisePostDataChangedEvent%2A> Methode wird hauptsächlich von Steuerelemententwicklern in benutzerdefinierten Steuerelementen, die abgeleitet verwendet die <xref:System.Web.UI.WebControls.CheckBoxList> Klasse.  
+  
+ Das Framework Seitenaufrufe der <xref:System.Web.UI.WebControls.CheckBoxList.RaisePostDataChangedEvent%2A> Methode auf eine <xref:System.Web.UI.WebControls.CheckBoxList> steuern, wann die <xref:System.Web.UI.WebControls.CheckBoxList.LoadPostData%2A> Methode gibt an, dass der Status der Listenelemente geändert wurden in der <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement. Die <xref:System.Web.UI.WebControls.CheckBoxList.RaisePostDataChangedEvent%2A> Methodenaufrufe der <xref:System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged%2A> Methode zum Auslösen der <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> Ereignis. Entwickler von Steuerelementen können außer Kraft setzen die <xref:System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged%2A> Methode zum Ausführen benutzerdefinierter Verarbeitung, wenn der Benutzer wählt aus oder löscht im Steuerelement Listenelemente.  
+  
+ Die <xref:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent%2A> Methode kann optional die Durchführung von Überprüfung vor dem Auslösen der <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> -Ereignis für das Steuerelement. So überprüfen Sie eine Gruppe von Steuerelementen auf der Seite, wenn ein Element in der <xref:System.Web.UI.WebControls.CheckBoxList> ausgewählt ist, Festlegen der <xref:System.Web.UI.WebControls.ListControl.AutoPostBack%2A> und <xref:System.Web.UI.WebControls.ListControl.CausesValidation%2A> Eigenschaften `true`, und geben Sie die Gruppe von Steuerelementen so überprüfen Sie in der <xref:System.Web.UI.WebControls.ListControl.ValidationGroup%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering auf dem Client enthält.</param>
+        <summary>Zeigt <see cref="T:System.Web.UI.WebControls.CheckBoxList" /> auf dem Client an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.Render%2A> Methode wird hauptsächlich von Steuerelemententwicklern in benutzerdefinierten Steuerelementen, die abgeleitet verwendet die <xref:System.Web.UI.WebControls.CheckBoxList> Klasse.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.Render%2A> Implementierung für einen <xref:System.Web.UI.WebControls.CheckBoxList> -Steuerelement initialisiert ein <xref:System.Web.UI.WebControls.RepeatInfo> Objekt für die Liste, und ruft die <xref:System.Web.UI.WebControls.RepeatInfo.RenderRepeater%2A> Methode, die wiederum verwendet die <xref:System.Web.UI.WebControls.CheckBoxList.RenderItem%2A> Methode, um die einzelnen Kontrollkästchen Listenelemente rendern.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.CheckBoxList.Render%2A> -Methode in ein benutzerdefiniertes Steuerelement, damit die <xref:System.Web.UI.WebControls.CheckBoxList> immer ein Bild anzeigt.  
+  
+ [!code-aspx-csharp[CustomCheckBoxListRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCheckBoxListRender/CS/custom_checkboxlist_rendercs.aspx#1)]
+ [!code-aspx-vb[CustomCheckBoxListRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCheckBoxListRender/VB/custom_checkboxlist_rendervb.aspx#1)]  
+[!code-csharp[CustomCheckBoxListRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCheckBoxListRender/CS/custom_checkboxlist_render.cs#2)]
+[!code-vb[CustomCheckBoxListRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCheckBoxListRender/VB/custom_checkboxlist_render.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderItem">
+      <MemberSignature Language="C#" Value="protected virtual void RenderItem (System.Web.UI.WebControls.ListItemType itemType, int repeatIndex, System.Web.UI.WebControls.RepeatInfo repeatInfo, System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderItem(valuetype System.Web.UI.WebControls.ListItemType itemType, int32 repeatIndex, class System.Web.UI.WebControls.RepeatInfo repeatInfo, class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.RenderItem(System.Web.UI.WebControls.ListItemType,System.Int32,System.Web.UI.WebControls.RepeatInfo,System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+        <Parameter Name="repeatIndex" Type="System.Int32" />
+        <Parameter Name="repeatInfo" Type="System.Web.UI.WebControls.RepeatInfo" />
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Einer der <see cref="T:System.Web.UI.WebControls.ListItemType" />-Enumerationswerte.</param>
+        <param name="repeatIndex">Ein Ordinalindex, der die Position des Elements im Listensteuerelement angibt.</param>
+        <param name="repeatInfo">Ein <see cref="T:System.Web.UI.WebControls.RepeatInfo" />-Objekt, das die Informationen darstellt, die zum Rendern des Elements in der Liste verwendet werden.</param>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Gibt ein Listenelement im <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement wieder.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Steuerelemententwicklern in benutzerdefinierten Steuerelementen, die davon Herleiten verwendet die <xref:System.Web.UI.WebControls.CheckBoxList> Klasse.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.Render%2A> Implementierung für einen <xref:System.Web.UI.WebControls.CheckBoxList> Aufrufe steuern die <xref:System.Web.UI.WebControls.RepeatInfo.RenderRepeater%2A> Methode, die wiederum verwendet die <xref:System.Web.UI.WebControls.CheckBoxList.RenderItem%2A> Methode, um einzelne Listenelemente rendert.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.RenderItem%2A> Methode für eine <xref:System.Web.UI.WebControls.CheckBoxList> -Steuerelement ignoriert die `itemType` und `repeatInfo` Parameter. Die `repeatIndex` Wert dient zum Auswählen des Elements in der Liste der <xref:System.Web.UI.WebControls.ListControl.Items%2A> Auflistung und dem ausgewählten Element in den Ausgabestream gerendert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderWhenDataEmpty">
+      <MemberSignature Language="C#" Value="public virtual bool RenderWhenDataEmpty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RenderWhenDataEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.RenderWhenDataEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob das Steuerelement gerendert wird, wenn die Datenquelle keine Daten enthält, oder wenn das Steuerelement nicht datengebunden ist.</summary>
+        <value>
+          <see langword="true" />, wenn das Steuerelement gerendert wird, wenn die Datenquelle keine Daten enthält, oder wenn das Steuerelement nicht datengebunden ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatColumns">
+      <MemberSignature Language="C#" Value="public virtual int RepeatColumns { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RepeatColumns" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.RepeatColumns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Spalten ab, die im <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement angezeigt werden, oder legt diese fest.</summary>
+        <value>Die Anzahl der Spalten, die im <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement angezeigt werden. Der Standardwert ist <see langword="0" /> und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.RepeatLayout.Table>, Sie können diese Eigenschaft verwenden, um die Anzahl der Spalten angeben, die in angezeigt der <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement. Wenn diese Eigenschaft nicht festgelegt ist, die <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement alle Elemente in einer einzelnen Spalte angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatColumns%2A> Eigenschaft, um anzugeben, dass zwei Spalten, in angezeigt werden der <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement.  
+  
+> [!NOTE]
+>  Die folgenden Codebeispiele verwenden die einfach-Codemodell und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. Jedes Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic CheckBoxList.CellPadding Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CheckBoxList.CellPadding Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CheckBoxList.CellPadding Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CheckBoxList.CellPadding Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CheckBoxListRepeatColumns#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CheckBoxListRepeatColumns/CS/checkboxlistrepeatcolumnscs.aspx#1)]
+ [!code-aspx-vb[CheckBoxListRepeatColumns#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CheckBoxListRepeatColumns/VB/checkboxlistrepeatcolumnsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Anzahl der Spalten, die auf einen negativen Wert festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatDirection">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.RepeatDirection RepeatDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.RepeatDirection RepeatDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.RepeatDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeatDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Steuerelement vertikal oder horizontal angezeigt wird, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.RepeatDirection" />-Werte. Die Standardeinstellung ist <see langword="Vertical" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie die Richtung der Anzeige des mithilfe dieser Eigenschaft die <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement.  
+  
+> [!NOTE]
+>  Die Anzahl der Spalten, die angezeigt werden immer gemäß der <xref:System.Web.UI.WebControls.CheckBoxList.RepeatColumns%2A> Eigenschaft.  
+  
+ Wenn diese Eigenschaft, um festgelegt wird `RepeatDirection.Vertical` und, wenn die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.RepeatLayout.Table>, wird die erste Spalte von oben nach unten, klicken Sie dann auf die nächste Spalte, und so weiter, bis alle Elemente gerendert werden gefüllt. Z. B. wenn die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatColumns%2A> -Eigenschaftensatz auf `3`, die Elemente in der <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement werden in drei Spalten, wie in der folgenden Tabelle angezeigt.  
+  
+||||  
+|-|-|-|  
+|1|4|7|  
+|2|5|8|  
+|3|6|9|  
+  
+ Wenn diese Eigenschaft, um festgelegt wird `RepeatDirection.Horizontal` und, wenn die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.RepeatLayout.Table>, wird die erste Spalte von oben nach unten, klicken Sie dann auf die nächste Spalte, und so weiter, bis alle Elemente gerendert werden gefüllt. Z. B. wenn die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatColumns%2A> -Eigenschaftensatz auf `3`, die Elemente der <xref:System.Web.UI.WebControls.CheckBoxList> -Steuerelement in den Zeilen der drei Elemente angezeigt werden, wie in der folgenden Tabelle.  
+  
+||||  
+|-|-|-|  
+|1|2|3|  
+|4|5|6|  
+|7|8|9|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.WebControls.CheckBoxList.RepeatDirection%2A> Eigenschaft, um anzugeben, dass die Anzeige Richtung vertikal ist.  
+  
+> [!NOTE]
+>  Die folgenden Codebeispiele verwenden die einfach-Codemodell und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. Jedes Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic CheckBoxList.CellPadding Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CheckBoxList.CellPadding Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CheckBoxList.CellPadding Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CheckBoxList.CellPadding Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CheckBoxListRepeatDirection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CheckBoxListRepeatDirection/CS/checkboxlistrepeatdirectioncs.aspx#1)]
+ [!code-aspx-vb[CheckBoxListRepeatDirection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CheckBoxListRepeatDirection/VB/checkboxlistrepeatdirectionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die angegebene Richtung der Liste ist nicht die <see cref="T:System.Web.UI.WebControls.RepeatDirection" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatedItemCount">
+      <MemberSignature Language="C#" Value="protected virtual int RepeatedItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RepeatedItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.RepeatedItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Listenelemente im <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement ab.</summary>
+        <value>Die Anzahl der Elemente in der <see cref="T:System.Web.UI.WebControls.CheckBoxList" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatedItemCount%2A> Eigenschaft wird hauptsächlich von Steuerelemententwicklern in benutzerdefinierten Steuerelementen, die davon Herleiten verwendet die <xref:System.Web.UI.WebControls.CheckBoxList> Klasse.  
+  
+ Wenn es sind keine Elemente festgelegt, der <xref:System.Web.UI.WebControls.CheckBoxList>die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatedItemCount%2A> 0 (null). Treten Elemente festgelegt, der <xref:System.Web.UI.WebControls.CheckBoxList>, <xref:System.Web.UI.WebControls.CheckBoxList.RepeatedItemCount%2A> ist identisch mit der <xref:System.Web.UI.WebControls.ListItemCollection.Count%2A> Eigenschaft auf die <xref:System.Web.UI.WebControls.ListControl.Items%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatLayout">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.RepeatLayout RepeatLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.RepeatLayout RepeatLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.RepeatLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeatLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Liste mit einem <see langword="table" />-Element, einem <see langword="ul" />-Element, einem <see langword="ol" />-Element oder einem <see langword="span" />-Element in Markup gerendert wird, oder legt ihn fest.</summary>
+        <value>Ein Wert, der angibt, ob die Liste mit einem <see langword="table" />-Element, einem <see langword="ul" />-Element, einem <see langword="ol" />-Element oder einem <see langword="span" />-Element gerendert wird. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.RepeatLayout.Table" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zu den verfügbaren Optionen finden Sie unter der <xref:System.Web.UI.WebControls.RepeatLayout> Enumeration.  
+  
+> [!NOTE]
+>  Es stehen zwei Optionen zum Zeitpunkt der ASP.NET 4 neue: <xref:System.Web.UI.WebControls.RepeatLayout.OrderedList> und <xref:System.Web.UI.WebControls.RepeatLayout.UnorderedList>.  
+  
+ Einige <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> Einstellungen horizontales Layout nicht zulassen. Weitere Informationen finden Sie unter der <xref:System.Web.UI.WebControls.RepeatLayout>-Enumeration.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> Eigenschaft, um den HTML-Code ändern, die die <xref:System.Web.UI.WebControls.CheckBoxList> -Steuerelement rendert.  
+  
+> [!NOTE]
+>  Die folgenden Codebeispiele verwenden die einfach-Codemodell und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. Jedes Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[CheckBoxListRepeatLayout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CheckBoxListRepeatLayout/CS/checkboxlistrepeatlayoutcs.aspx#1)]
+ [!code-aspx-vb[CheckBoxListRepeatLayout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CheckBoxListRepeatLayout/VB/checkboxlistrepeatlayoutvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Das angegebene Layout ist nicht die <see cref="T:System.Web.UI.WebControls.RepeatLayout" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackDataHandler.LoadPostData">
+      <MemberSignature Language="C#" Value="bool IPostBackDataHandler.LoadPostData (string postDataKey, System.Collections.Specialized.NameValueCollection postCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Web.UI.IPostBackDataHandler.LoadPostData(string postDataKey, class System.Collections.Specialized.NameValueCollection postCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.System#Web#UI#IPostBackDataHandler#LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="postDataKey" Type="System.String" />
+        <Parameter Name="postCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="postDataKey">Der Schlüsselbezeichner für das Steuerelement, um den Index der <c>PostCollection</c>.</param>
+        <param name="postCollection">Ein <see cref="T:System.Collections.Specialized.NameValueCollection" />-Objekt, das von Steuerelementbezeichnern indizierte Wertinformationen enthält.</param>
+        <summary>Verarbeitet bereitgestellte Daten für das <see cref="T:System.Web.UI.WebControls.CheckBoxList" />-Steuerelement.</summary>
+        <returns>
+          <see langword="true" />, wenn der Zustand des Serversteuerelements aufgrund des Postbacks geändert wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.CheckBoxList.LoadPostData%2A> Methode zum Verarbeiten gebucht von Daten für eine <xref:System.Web.UI.WebControls.CheckBoxList> Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.System%23Web%23UI%23IPostBackDataHandler%23LoadPostData%2A> Methode ist eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.CheckBoxList>-Instanz in eine <xref:System.Web.UI.IPostBackDataHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Definieren Sie eine benutzerdefinierte Implementierung für die bereitgestellte Daten für die Verarbeitung einer <see cref="T:System.Web.UI.WebControls.CheckBoxList" /> Objekt außer Kraft, indem die <see cref="M:System.Web.UI.WebControls.CheckBoxList.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" /> Member. Die explizite Implementierung ruft die <see cref="M:System.Web.UI.WebControls.CheckBoxList.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" /> Methode, um die bereitgestellten Daten für das Steuerelement zu verarbeiten.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="void IPostBackDataHandler.RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.System#Web#UI#IPostBackDataHandler#RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird ausgelöst, wenn sich für ein Steuerelement bereitgestellte Daten geändert haben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.CheckBoxList.RaisePostDataChangedEvent%2A?displayProperty=nameWithType> Methode, um ein Ereignis auszulösen, wenn die bereitgestellten Daten für eine <xref:System.Web.UI.WebControls.CheckBoxList> Objekts ändert.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.System%23Web%23UI%23IPostBackDataHandler%23RaisePostDataChangedEvent%2A> Methode ist eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.CheckBoxList>-Instanz in eine <xref:System.Web.UI.IPostBackDataHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Definieren Sie eine benutzerdefinierte Implementierung zum Auslösen des Ereignisses für eine <see cref="T:System.Web.UI.WebControls.CheckBoxList" /> Objekt außer Kraft, indem die <see cref="M:System.Web.UI.WebControls.CheckBoxList.RaisePostDataChangedEvent" /> Member. Die explizite Implementierung ruft die <see cref="M:System.Web.UI.WebControls.CheckBoxList.RaisePostDataChangedEvent" /> Methode zum Auslösen des Ereignisses, wenn für das Steuerelement bereitgestellte Daten geändert haben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.IRepeatInfoUser.GetItemStyle">
+      <MemberSignature Language="C#" Value="System.Web.UI.WebControls.Style IRepeatInfoUser.GetItemStyle (System.Web.UI.WebControls.ListItemType itemType, int repeatIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Web.UI.WebControls.Style System.Web.UI.WebControls.IRepeatInfoUser.GetItemStyle(valuetype System.Web.UI.WebControls.ListItemType itemType, int32 repeatIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.System#Web#UI#WebControls#IRepeatInfoUser#GetItemStyle(System.Web.UI.WebControls.ListItemType,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+        <Parameter Name="repeatIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Einer der <see cref="T:System.Web.UI.WebControls.ListItemType" />-Enumerationswerte.</param>
+        <param name="repeatIndex">Ein Ordinalindex, der die Position des Elements im Listensteuerelement angibt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.WebControls.IRepeatInfoUser.GetItemStyle(System.Web.UI.WebControls.ListItemType,System.Int32)" />.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.Style" />-Objekt, das den Stil des angegebenen Elementtyps am angegebenen Index im Listensteuerelement darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.CheckBoxList.GetItemStyle%2A?displayProperty=nameWithType> Methode zum Abrufen des Stils eines Elements in einem <xref:System.Web.UI.WebControls.CheckBoxList> Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.System%23Web%23UI%23WebControls%23IRepeatInfoUser%23GetItemStyle%2A> Methode ist eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.CheckBoxList>-Instanz in eine <xref:System.Web.UI.WebControls.IRepeatInfoUser>-Schnittstelle umgewandelt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.IRepeatInfoUser> Schnittstellenmember in einer benutzerdefinierten <xref:System.Web.UI.WebControls.CheckBoxList> Objekt.  
+  
+ [!code-aspx-csharp[CustomCheckBoxListIRepeatInfoUser#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCheckBoxListIRepeatInfoUser/CS/custom_checkboxlist_irepeatinfousercs.aspx#1)]
+ [!code-aspx-vb[CustomCheckBoxListIRepeatInfoUser#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCheckBoxListIRepeatInfoUser/VB/custom_checkboxlist_irepeatinfouservb.aspx#1)]  
+[!code-csharp[CustomCheckBoxListIRepeatInfoUser#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCheckBoxListIRepeatInfoUser/CS/custom_checkboxlist_irepeatinfouser.cs#2)]
+[!code-vb[CustomCheckBoxListIRepeatInfoUser#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCheckBoxListIRepeatInfoUser/VB/custom_checkboxlist_irepeatinfouser.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Definieren Sie eine benutzerdefinierte Implementierung zum Abrufen des Formats eines Elements in einem <see cref="T:System.Web.UI.WebControls.CheckBoxList" /> Objekt außer Kraft, indem die <see cref="M:System.Web.UI.WebControls.CheckBoxList.GetItemStyle(System.Web.UI.WebControls.ListItemType,System.Int32)" /> Member. Die explizite Implementierung ruft die <see cref="M:System.Web.UI.WebControls.CheckBoxList.GetItemStyle(System.Web.UI.WebControls.ListItemType,System.Int32)" /> Methode, um das Format eines Elements abzurufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.IRepeatInfoUser.HasFooter">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.WebControls.IRepeatInfoUser.HasFooter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.WebControls.IRepeatInfoUser.HasFooter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.System#Web#UI#WebControls#IRepeatInfoUser#HasFooter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Listensteuerelement einen Fußzeilenbereich enthält.</summary>
+        <value>
+          <see langword="true" />, wenn das Listensteuerelement einen Fußzeilenbereich enthält, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.CheckBoxList.HasFooter%2A?displayProperty=nameWithType> Eigenschaft zum bestimmen, ob ein <xref:System.Web.UI.WebControls.CheckBoxList> Objekt einen Fußzeilenbereich enthält.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.System%23Web%23UI%23WebControls%23IRepeatInfoUser%23HasFooter%2A?displayProperty=nameWithType> Member ist eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.CheckBoxList>-Instanz in eine <xref:System.Web.UI.WebControls.IRepeatInfoUser>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Definieren Sie eine benutzerdefinierte Implementierung für die <see cref="P:System.Web.UI.WebControls.CheckBoxList.System#Web#UI#WebControls#IRepeatInfoUser#HasFooter" /> Element in einer <see cref="T:System.Web.UI.WebControls.CheckBoxList" /> Objekt außer Kraft, indem die <see cref="P:System.Web.UI.WebControls.CheckBoxList.HasFooter" /> Member. Die explizite Implementierung verwendet die <see cref="P:System.Web.UI.WebControls.CheckBoxList.HasFooter" /> Eigenschaft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.IRepeatInfoUser.HasHeader">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.WebControls.IRepeatInfoUser.HasHeader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.WebControls.IRepeatInfoUser.HasHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.System#Web#UI#WebControls#IRepeatInfoUser#HasHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Listensteuerelement einen Kopfzeilenbereich enthält.</summary>
+        <value>
+          <see langword="true" />, wenn das Listensteuerelement einen Kopfzeilenbereich enthält, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.CheckBoxList.HasHeader%2A?displayProperty=nameWithType> -Eigenschaft zum Bestimmen einer <xref:System.Web.UI.WebControls.CheckBoxList> Objekt einen Kopfzeilenbereich enthält.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.System%23Web%23UI%23WebControls%23IRepeatInfoUser%23HasHeader%2A?displayProperty=nameWithType> Member ist eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.CheckBoxList>-Instanz in eine <xref:System.Web.UI.WebControls.IRepeatInfoUser>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Definieren Sie eine benutzerdefinierte Implementierung für die <see cref="P:System.Web.UI.WebControls.CheckBoxList.System#Web#UI#WebControls#IRepeatInfoUser#HasHeader" /> Element in einer <see cref="T:System.Web.UI.WebControls.CheckBoxList" /> Objekt außer Kraft, indem die <see cref="P:System.Web.UI.WebControls.CheckBoxList.HasHeader" /> Member. Die explizite Implementierung verwendet die <see cref="P:System.Web.UI.WebControls.CheckBoxList.HasHeader" /> Eigenschaft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.IRepeatInfoUser.HasSeparators">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.WebControls.IRepeatInfoUser.HasSeparators { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.WebControls.IRepeatInfoUser.HasSeparators" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.System#Web#UI#WebControls#IRepeatInfoUser#HasSeparators" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Listensteuerelement zwischen Elementen der Liste ein Trennzeichen enthält.</summary>
+        <value>
+          <see langword="true" />, wenn das Listensteuerelement ein Trennzeichen enthält, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.CheckBoxList.HasSeparators%2A?displayProperty=nameWithType> -Eigenschaft können Sie bestimmen, ob ein <xref:System.Web.UI.WebControls.CheckBoxList> Objekt ein Trennzeichen enthält.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.System%23Web%23UI%23WebControls%23IRepeatInfoUser%23HasSeparators%2A?displayProperty=nameWithType> Member ist eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.CheckBoxList>-Instanz in eine <xref:System.Web.UI.WebControls.IRepeatInfoUser>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Definieren Sie eine benutzerdefinierte Implementierung für die <see cref="P:System.Web.UI.WebControls.CheckBoxList.System#Web#UI#WebControls#IRepeatInfoUser#HasSeparators" /> Element in einer <see cref="T:System.Web.UI.WebControls.CheckBoxList" /> Objekt außer Kraft, indem die <see cref="P:System.Web.UI.WebControls.CheckBoxList.HasSeparators" /> Member. Die explizite Implementierung verwendet die <see cref="P:System.Web.UI.WebControls.CheckBoxList.HasSeparators" /> Eigenschaft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.IRepeatInfoUser.RenderItem">
+      <MemberSignature Language="C#" Value="void IRepeatInfoUser.RenderItem (System.Web.UI.WebControls.ListItemType itemType, int repeatIndex, System.Web.UI.WebControls.RepeatInfo repeatInfo, System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.IRepeatInfoUser.RenderItem(valuetype System.Web.UI.WebControls.ListItemType itemType, int32 repeatIndex, class System.Web.UI.WebControls.RepeatInfo repeatInfo, class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxList.System#Web#UI#WebControls#IRepeatInfoUser#RenderItem(System.Web.UI.WebControls.ListItemType,System.Int32,System.Web.UI.WebControls.RepeatInfo,System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+        <Parameter Name="repeatIndex" Type="System.Int32" />
+        <Parameter Name="repeatInfo" Type="System.Web.UI.WebControls.RepeatInfo" />
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Einer der <see cref="T:System.Web.UI.WebControls.ListItemType" />-Enumerationswerte.</param>
+        <param name="repeatIndex">Ein Ordinalindex, der die Position des Elements im Listensteuerelement angibt.</param>
+        <param name="repeatInfo">Ein <see cref="T:System.Web.UI.WebControls.RepeatInfo" />-Objekt, das die Informationen darstellt, die zum Rendern des Elements in der Liste verwendet werden.</param>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.WebControls.IRepeatInfoUser.RenderItem(System.Web.UI.WebControls.ListItemType,System.Int32,System.Web.UI.WebControls.RepeatInfo,System.Web.UI.HtmlTextWriter)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.CheckBoxList.RenderItem%2A?displayProperty=nameWithType> Methode zum Rendern von Elementen in einem <xref:System.Web.UI.WebControls.CheckBoxList> Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.System%23Web%23UI%23WebControls%23IRepeatInfoUser%23RenderItem%2A> Methode ist eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.CheckBoxList>-Instanz in eine <xref:System.Web.UI.WebControls.IRepeatInfoUser>-Schnittstelle umgewandelt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.IRepeatInfoUser> Schnittstellenmember in einer benutzerdefinierten <xref:System.Web.UI.WebControls.CheckBoxList> Objekt.  
+  
+ [!code-aspx-csharp[CustomCheckBoxListIRepeatInfoUser#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCheckBoxListIRepeatInfoUser/CS/custom_checkboxlist_irepeatinfousercs.aspx#1)]
+ [!code-aspx-vb[CustomCheckBoxListIRepeatInfoUser#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCheckBoxListIRepeatInfoUser/VB/custom_checkboxlist_irepeatinfouservb.aspx#1)]  
+[!code-csharp[CustomCheckBoxListIRepeatInfoUser#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCheckBoxListIRepeatInfoUser/CS/custom_checkboxlist_irepeatinfouser.cs#2)]
+[!code-vb[CustomCheckBoxListIRepeatInfoUser#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCheckBoxListIRepeatInfoUser/VB/custom_checkboxlist_irepeatinfouser.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Definieren Sie eine benutzerdefinierte Implementierung zum Rendern von Elementen in einem <see cref="T:System.Web.UI.WebControls.CheckBoxList" /> Objekt außer Kraft, indem die <see cref="M:System.Web.UI.WebControls.CheckBoxList.RenderItem(System.Web.UI.WebControls.ListItemType,System.Int32,System.Web.UI.WebControls.RepeatInfo,System.Web.UI.HtmlTextWriter)" /> Member. Die explizite Implementierung ruft die <see cref="M:System.Web.UI.WebControls.CheckBoxList.RenderItem(System.Web.UI.WebControls.ListItemType,System.Int32,System.Web.UI.WebControls.RepeatInfo,System.Web.UI.HtmlTextWriter)" /> Methode, um ein Element im Steuerelement zu rendern.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.IRepeatInfoUser.RepeatedItemCount">
+      <MemberSignature Language="C#" Value="int System.Web.UI.WebControls.IRepeatInfoUser.RepeatedItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Web.UI.WebControls.IRepeatInfoUser.RepeatedItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.System#Web#UI#WebControls#IRepeatInfoUser#RepeatedItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente im Listensteuerelement ab.</summary>
+        <value>Die Anzahl der Elemente in der Liste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.CheckBoxList.RepeatedItemCount%2A?displayProperty=nameWithType> -Eigenschaft zum Bestimmen der Anzahl der Elemente in einem <xref:System.Web.UI.WebControls.CheckBoxList> Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.CheckBoxList.System%23Web%23UI%23WebControls%23IRepeatInfoUser%23RepeatedItemCount%2A?displayProperty=nameWithType> Member ist eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.CheckBoxList>-Instanz in eine <xref:System.Web.UI.WebControls.IRepeatInfoUser>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Definieren Sie eine benutzerdefinierte Implementierung für die <see cref="P:System.Web.UI.WebControls.CheckBoxList.System#Web#UI#WebControls#IRepeatInfoUser#RepeatedItemCount" /> Element in einer <see cref="T:System.Web.UI.WebControls.CheckBoxList" /> Objekt außer Kraft, indem die <see cref="P:System.Web.UI.WebControls.CheckBoxList.RepeatedItemCount" /> Member. Die explizite Implementierung verwendet die <see cref="P:System.Web.UI.WebControls.CheckBoxList.RepeatedItemCount" /> Eigenschaft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.TextAlign TextAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.TextAlign TextAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxList.TextAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TextAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausrichtung des Texts für die Kontrollkästchen in der Gruppe ab oder legt diese fest.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.TextAlign" />-Werte. Der Standardwert ist <see langword="Right" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um anzugeben, ob die Kontrollkästchen zugeordnete Text auf der linken oder rechten Seite des Kontrollkästchens angezeigt. Wenn diese Eigenschaft, um festgelegt wird `TextAlign.Right`, wird der Text rechts neben dem Kontrollkästchen angezeigt. Wenn diese Eigenschaft, um festgelegt wird `TextAlign.Left`, wird der Text auf der linken Seite des Kontrollkästchens angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CheckBoxList.TextAlign%2A> Eigenschaft, um anzugeben, dass die Kontrollkästchen zugeordnete Text auf der rechten Seite des angezeigt wird der <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement.  
+  
+> [!NOTE]
+>  Die folgenden Codebeispiele verwenden die einfach-Codemodell und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. Jedes Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic CheckBoxList.CellPadding Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CheckBoxList.CellPadding Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CheckBoxList.CellPadding Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CheckBoxList.CellPadding Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CheckBoxListTextAlign#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CheckBoxListTextAlign/CS/checkboxlisttextaligncs.aspx#1)]
+ [!code-aspx-vb[CheckBoxListTextAlign#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CheckBoxListTextAlign/VB/checkboxlisttextalignvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Ausrichtung des Texts angegebenen Bezeichnung ist nicht die <see cref="T:System.Web.UI.WebControls.TextAlign" /> Werte.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

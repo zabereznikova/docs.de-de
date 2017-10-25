@@ -1,0 +1,158 @@
+<Type Name="WorkflowCompilerError" FullName="System.Workflow.ComponentModel.Compiler.WorkflowCompilerError">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowCompilerError : System.CodeDom.Compiler.CompilerError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit WorkflowCompilerError extends System.CodeDom.Compiler.CompilerError" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.WorkflowCompilerError" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.Compiler.CompilerError</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen <see cref="T:System.CodeDom.Compiler.CompilerError" /> dar, der während des Workflowkompilierungsprozesses auftritt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowCompilerError ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.WorkflowCompilerError.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.WorkflowCompilerError" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowCompilerError (string fileName, System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.WorkflowCompilerError.#ctor(System.String,System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="exception" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Eine Zeichenfolge, die den Namen der Quelldatei enthält, die den Fehler aufweist.</param>
+        <param name="exception">Die <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" />, die dieser Instanz zugeordnet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.WorkflowCompilerError" />-Klasse.  Initialisiert die Instanz, um den Quelldateinamen und <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" /> zu definieren.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="exception" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowCompilerError (string fileName, int line, int column, string errorNumber, string errorText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, int32 line, int32 column, string errorNumber, string errorText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.WorkflowCompilerError.#ctor(System.String,System.Int32,System.Int32,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="line" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Int32" />
+        <Parameter Name="errorNumber" Type="System.String" />
+        <Parameter Name="errorText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Eine Zeichenfolge, die den Namen der Quelldatei enthält, die den Fehler aufweist.</param>
+        <param name="line">Eine ganze Zahl, die die Zeilennummer des Fehlers angibt.</param>
+        <param name="column">Eine ganze Zahl, die die Spaltenposition des Starts des Fehlers angibt.</param>
+        <param name="errorNumber">Eine Zeichenfolge, die die Fehlernummer enthält.</param>
+        <param name="errorText">Eine Zeichenfolge, die Text enthält, der den Fehler beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.WorkflowCompilerError" />-Klasse.  Schließt die Initialisierung für mehrere Eigenschaften ein, die den Fehler definieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.WorkflowCompilerError.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die dem Compilerfehler zugeordnete Eigenschaft zurück.</summary>
+        <value>Die Eigenschaft, die dem Compilerfehler zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der von dieser Eigenschaft zurückgegeben wird, wird verwendet, um zu der Eigenschaft zu navigieren, die den Kompilierungsfehler verursacht hat, und diese zuzuordnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.WorkflowCompilerError.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine Zeichenfolge bereit, die für diese Instanz steht.</summary>
+        <returns>Eine Zeichenfolge, die für diese Instanz steht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserData">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary UserData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary UserData" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.WorkflowCompilerError.UserData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Collections.IDictionary" /> ab, auf das zugegriffen werden kann, um benutzerdefinierte Daten, die dieser Instanz zugeordnet sind, zu lesen und zu schreiben.</summary>
+        <value>Ein <see cref="T:System.Collections.IDictionary" />, auf das zugegriffen werden kann, um benutzerdefinierte Daten, die dieser Instanz zugeordnet sind, zu lesen und zu schreiben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

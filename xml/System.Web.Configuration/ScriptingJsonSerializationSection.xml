@@ -1,0 +1,167 @@
+<Type Name="ScriptingJsonSerializationSection" FullName="System.Web.Configuration.ScriptingJsonSerializationSection">
+  <TypeSignature Language="C#" Value="public sealed class ScriptingJsonSerializationSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ScriptingJsonSerializationSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ScriptingJsonSerializationSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see langword="jsonSerialization" /> Konfigurationsabschnitt in die <see langword="scripting" /> Element der Konfigurationsdatei. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ScriptingJsonSerializationSection> Klasse ermöglicht den programmgesteuerten Zugriff auf und Ändern der `jsonSerialization` Element des Konfigurationsabschnitts für die Verwendung von AJAX-Funktionen in ASP.NET.  
+  
+ Verwenden Sie diesen Typ zum Festlegen von Serialisierung und Deserialisierung von Konfigurationswerten für AJAX-aktivierte Anwendungen an.  
+  
+   
+  
+## Examples  
+ Der folgende Auszug aus der Datei wird gezeigt, wie Werte für Eigenschaften des deklarativ angeben, die <xref:System.Web.Configuration.ScriptingJsonSerializationSection> Klasse.  
+  
+```  
+<system.web.extensions>  
+  <scripting>  
+    <webServices>  
+      <jsonSerialization maxJsonLength="1000" />  
+    </webServices>  
+  </scripting>  
+</system.web.extensions>  
+```  
+  
+ Das folgende Beispiel veranschaulicht den Zugriff auf <xref:System.Web.Configuration.ScriptingJsonSerializationSection> programmgesteuert.  
+  
+ [!code-csharp[System.Web.Configuration#3](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.Configuration/CS/App_Code/ConfigSectionSample.cs#3)]
+ [!code-vb[System.Web.Configuration#3](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.Configuration/VB/App_Code/ConfigSectionSample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptingJsonSerializationSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ScriptingJsonSerializationSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.ScriptingJsonSerializationSection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Converters">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ConvertersCollection Converters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ConvertersCollection Converters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingJsonSerializationSection.Converters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("converters", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsKey=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ConvertersCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.Configuration.ConvertersCollection" /> -Objekt, das eine Auflistung von enthält <see cref="T:System.Web.Configuration.Converter" /> Objekte.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.ConvertersCollection" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxJsonLength">
+      <MemberSignature Language="C#" Value="public int MaxJsonLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxJsonLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingJsonSerializationSection.MaxJsonLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxJsonLength", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Länge, die vom akzeptiert wird die <see cref="T:System.Web.Script.Serialization.JavaScriptSerializer" /> Objekt für JavaScript Object Notation (JSON)-Zeichenfolgen.</summary>
+        <value>Eine ganze Zahl, die die maximale Länge für JSON-Zeichenfolgen darstellt. Der Standardwert ist 102400 Zeichen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Web.Configuration.ScriptingJsonSerializationSection.MaxJsonLength%2A> Eigenschaft gilt nur für die interne <xref:System.Web.Script.Serialization.JavaScriptSerializer> -Instanz, die von der Schicht für die asynchrone Kommunikation, zum Aufrufen verwendet wird von Webdienstmethoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingJsonSerializationSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecursionLimit">
+      <MemberSignature Language="C#" Value="public int RecursionLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RecursionLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingJsonSerializationSection.RecursionLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("recursionLimit", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Grenzwert für die Anzahl von Objektebenen für die Verarbeitung ab oder legt diesen fest.</summary>
+        <value>Die Anzahl der Objektebenen. Der Standard ist 100.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ScriptingJsonSerializationSection.RecursionLimit%2A> Eigenschaft bezieht sich auf die höchste Ebene einer Objekthierarchie, <xref:System.Web.Script.Serialization.JavaScriptSerializer> verarbeitet, wenn eine Zeichenfolge JavaScript Object Notation (JSON) zu deserialisieren oder beim Serialisieren eines Objekts.  
+  
+ Der Wert der <xref:System.Web.Configuration.ScriptingJsonSerializationSection.RecursionLimit%2A> gilt nur für die interne <xref:System.Web.Script.Serialization.JavaScriptSerializer> -Instanz, die von der Schicht für die asynchrone Kommunikation, zum Aufrufen von Web verwendet wird services-Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf einen Wert festgelegt, der kleiner als 1 ist.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

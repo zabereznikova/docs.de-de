@@ -1,0 +1,80 @@
+<Type Name="Manipulation2DStartedEventArgs" FullName="System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs">
+  <TypeSignature Language="C#" Value="public class Manipulation2DStartedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Manipulation2DStartedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Daten, die mit gesendet werden, stellt eine <see cref="E:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird ein Ereignishandler für das <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> Ereignis geprüft, wenn die trägheitsverarbeitung ausgeführt wird und wenn dies der Fall ist, hält er.  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_OnManipulationStarted](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_onmanipulationstarted)]  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_Timestamp](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_timestamp)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OriginX">
+      <MemberSignature Language="C#" Value="public float OriginX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 OriginX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs.OriginX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die X-Koordinate des Ursprungs ab.</summary>
+        <value>Die X-Koordinate des Ursprungs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Ursprungspunkt dargestellt, indem Sie die <xref:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs.OriginX%2A> und <xref:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs.OriginY%2A> Eigenschaften ist die mittlere Position aller Manipulatoren, die mit einem Element verknüpft sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginY">
+      <MemberSignature Language="C#" Value="public float OriginY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 OriginY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs.OriginY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die y-Koordinate des Ursprungs ab.</summary>
+        <value>Die y-Koordinate des Ursprungs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Ursprungspunkt dargestellt, indem Sie die <xref:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs.OriginX%2A> und <xref:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs.OriginY%2A> Eigenschaften ist die mittlere Position aller Manipulatoren, die mit einem Element verknüpft sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

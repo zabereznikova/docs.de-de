@@ -1,0 +1,233 @@
+<Type Name="IButtonControl" FullName="System.Web.UI.WebControls.IButtonControl">
+  <TypeSignature Language="C#" Value="public interface IButtonControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IButtonControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.IButtonControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Eigenschaften und Ereignisse, die implementiert werden müssen, damit ein Steuerelement, eine Schaltfläche auf einer Webseite zu fungieren kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.IButtonControl> Schnittstelle definiert die Eigenschaften und Ereignisse, die implementiert werden müssen, um ein Steuerelement, das Verhalten zu ermöglichen, wie z. B. eine Schaltfläche auf einer Webseite.  
+  
+ Die Elemente dieser Schnittstelle bieten grundlegende Schaltflächenfunktionalität, z. B. die Möglichkeit zum Auslösen einer <xref:System.Web.UI.WebControls.IButtonControl.Click> Ereignis und eine <xref:System.Web.UI.WebControls.IButtonControl.Command> Ereignis. Die <xref:System.Web.UI.WebControls.IButtonControl.PostBackUrl%2A> -Eigenschaft bietet Funktionalität senden.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Implementieren Sie diese Schnittstelle in Klassen, die als Schaltflächensteuerelemente auf Webseiten agieren.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IButtonControl.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Sie auf die Schaltfläche führt dazu, dass Seite Validierung auf.</summary>
+        <value>
+          <see langword="true" />Wenn Sie auf die Schaltfläche Seite Validierung auftreten; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Steuerelement, implementiert die <xref:System.Web.UI.WebControls.IButtonControl> Schnittstelle implementieren muss die <xref:System.Web.UI.WebControls.IButtonControl.CausesValidation%2A> Eigenschaft, um anzugeben, ob Sie auf die Schaltfläche führt dazu, dass Seite Validierung auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.IButtonControl.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Schaltflächen-Steuerelement geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.IButtonControl.Click> Ereignis wird ausgelöst, wenn das Schaltflächen-Steuerelement geklickt wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.CommandEventHandler Command;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.CommandEventHandler Command" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.IButtonControl.Command" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CommandEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Schaltflächen-Steuerelement geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.IButtonControl.Command> Ereignis wird ausgelöst, wenn das Schaltflächen-Steuerelement geklickt wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandArgument">
+      <MemberSignature Language="C#" Value="public string CommandArgument { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandArgument" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IButtonControl.CommandArgument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein optionales Argument, das weitergegeben wird, um die <see cref="E:System.Web.UI.WebControls.IButtonControl.Command" /> Ereignis.</summary>
+        <value>Das Argument, das weitergegeben wird, um die <see cref="E:System.Web.UI.WebControls.IButtonControl.Command" /> Ereignis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Steuerelement, implementiert die <xref:System.Web.UI.WebControls.IButtonControl> Schnittstelle implementieren muss die <xref:System.Web.UI.WebControls.IButtonControl.CommandArgument%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.IButtonControl.CommandName%2A> Eigenschaft, um das Argument und der Befehl anzugeben, die an weitergegeben werden die <xref:System.Web.UI.WebControls.IButtonControl.Command> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandName">
+      <MemberSignature Language="C#" Value="public string CommandName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IButtonControl.CommandName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Befehls, um weitergegeben wird die <see cref="E:System.Web.UI.WebControls.IButtonControl.Command" /> Ereignis.</summary>
+        <value>Der Name des Befehls, der weitergegeben wird, um die <see cref="E:System.Web.UI.WebControls.IButtonControl.Command" /> Ereignis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Steuerelement, implementiert die <xref:System.Web.UI.WebControls.IButtonControl> Schnittstelle implementieren muss die <xref:System.Web.UI.WebControls.IButtonControl.CommandArgument%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.IButtonControl.CommandName%2A> Eigenschaft, um das Argument und der Befehl anzugeben, die an weitergegeben werden die <xref:System.Web.UI.WebControls.IButtonControl.Command> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostBackUrl">
+      <MemberSignature Language="C#" Value="public string PostBackUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PostBackUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IButtonControl.PostBackUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL der Webseite, an die Daten aus der aktuellen Seite gesendet werden sollen, wenn das Schaltflächen-Steuerelement geklickt wird.</summary>
+        <value>Die URL der Webseite, an die Daten aus der aktuellen Seite gesendet werden sollen, wenn das Schaltflächen-Steuerelement geklickt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Web.UI.WebControls.IButtonControl.PostBackUrl%2A> Eigenschaft eine seitenübergreifend ausführen. Wenn die <xref:System.Web.UI.WebControls.IButtonControl.PostBackUrl%2A> Eigenschaft auf der Seite, die Schaltfläche mit der aktuell auf ein normalen Postbackereignis Zyklus tritt auf, festgelegt ist.  
+  
+ Ein Steuerelement, implementiert die <xref:System.Web.UI.WebControls.IButtonControl> Schnittstelle implementieren muss die <xref:System.Web.UI.WebControls.IButtonControl.PostBackUrl%2A> Eigenschaft an, dass die URL der Webseite, an die Daten aus der aktuellen Seite gesendet werden sollen, wenn das Schaltflächen-Steuerelement geklickt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IButtonControl.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Beschriftungstext für die Schaltfläche angezeigt.</summary>
+        <value>Die textbeschriftung, die für die Schaltfläche angezeigt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Steuerelement, implementiert die <xref:System.Web.UI.WebControls.IButtonControl> Schnittstelle implementieren muss die <xref:System.Web.UI.WebControls.IButtonControl.Text%2A> Eigenschaft an, dass die textbeschriftung, die für die Schaltfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IButtonControl.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen für die Gruppe von Steuerelementen, die für die das Schaltflächen-Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet.</summary>
+        <value>Der Name für die Gruppe von Steuerelementen, die für die das Schaltflächen-Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Steuerelement, implementiert die <xref:System.Web.UI.WebControls.IButtonControl> Schnittstelle implementieren muss die <xref:System.Web.UI.WebControls.IButtonControl.ValidationGroup%2A> Eigenschaft, um den Namen für die Gruppe von Steuerelementen anzugeben, für die das Schaltflächen-Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,213 @@
+<Type Name="RequestCachePolicy" FullName="System.Net.Cache.RequestCachePolicy">
+  <TypeSignature Language="C#" Value="public class RequestCachePolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequestCachePolicy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Cache.RequestCachePolicy" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Anwendung cacheanforderungen für Ressourcen, die mithilfe der abgerufen <see cref="T:System.Net.WebRequest" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Standardcacherichtlinie für Ihre Anwendung angeben, mit der <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> Eigenschaft oder der Anwendung oder des Computers Konfigurationsdateien. Weitere Informationen finden Sie unter [ &lt;RequestCaching&gt; -Element (Netzwerkeinstellungen)](~/docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+  
+ Sie können die Cacherichtlinie für eine einzelne Anforderung angeben, mit der <xref:System.Net.WebRequest.CachePolicy%2A> Eigenschaft.  
+  
+ Zwischenspeichern von Web Services wird nicht unterstützt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Richtlinie mit <xref:System.Net.Cache.RequestCachePolicy.Level%2A> festgelegt <xref:System.Net.Cache.RequestCacheLevel.CacheOnly>, und verwendet, um die Cacherichtlinie festlegen einer <xref:System.Net.WebRequest>.  
+  
+ [!code-cpp[NclSimpleCache#13](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#13)]
+ [!code-csharp[NclSimpleCache#13](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#13)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestCachePolicy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Cache.RequestCachePolicy.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Cache.RequestCachePolicy" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Net.Cache.RequestCachePolicy.Level%2A>-Eigenschaft mit <xref:System.Net.Cache.RequestCacheLevel.Default>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Aufrufen dieses Konstruktors.  
+  
+ [!code-cpp[NclSimpleCache#11](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#11)]
+ [!code-csharp[NclSimpleCache#11](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestCachePolicy (System.Net.Cache.RequestCacheLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.Cache.RequestCacheLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Cache.RequestCachePolicy.#ctor(System.Net.Cache.RequestCacheLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="level" Type="System.Net.Cache.RequestCacheLevel" />
+      </Parameters>
+      <Docs>
+        <param name="level">Ein <see cref="T:System.Net.Cache.RequestCacheLevel" /> , angibt, dass das Cacheverhalten für Ressourcen, die mittels abgerufen <see cref="T:System.Net.WebRequest" /> Objekte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Cache.RequestCachePolicy" />-Klasse. unter Verwendung der angegebenen Cacherichtlinie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Net.Cache.RequestCachePolicy.Level%2A>-Eigenschaft mit `level`.  
+  
+ Die <xref:System.Net.Cache.RequestCacheLevel> Wert steuert, ob das Zwischenspeichern aktiviert ist und wenn der Cache verwendet werden kann. Weitere Informationen finden Sie unter der <xref:System.Net.Cache.RequestCacheLevel> Dokumentation.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Richtlinie mit <xref:System.Net.Cache.RequestCachePolicy.Level%2A> festgelegt <xref:System.Net.Cache.RequestCacheLevel.CacheOnly>und verwendet, um die Cacherichtlinie festlegen einer <xref:System.Net.WebRequest>.  
+  
+ [!code-cpp[NclSimpleCache#13](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#13)]
+ [!code-csharp[NclSimpleCache#13](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Ebene ist kein gültiger <see cref="T:System.Net.Cache.RequestCacheLevel" />.value.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public System.Net.Cache.RequestCacheLevel Level { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Cache.RequestCacheLevel Level" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Cache.RequestCachePolicy.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.RequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Net.Cache.RequestCacheLevel" /> Wert angegeben, wenn diese Instanz erstellt wurde.</summary>
+        <value>Ein <see cref="T:System.Net.Cache.RequestCacheLevel" /> Wert, der angibt, das Cacheverhalten für Ressourcen, die mittels abgerufen <see cref="T:System.Net.WebRequest" /> Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Anwendungen in der Regel <xref:System.Net.Cache.RequestCacheLevel.Default> als ihren Cacherichtlinienebene. Mithilfe der <xref:System.Net.Cache.RequestCacheLevel.Default> Ebene, die gültige Cacherichtlinie richtet sich nach der aktuellen Cacherichtlinie und das Alter des Inhalts im Cache. Die <xref:System.Net.WebRequest.CachePolicy%2A?displayProperty=nameWithType> Eigenschaft, wenn nicht `null`, bestimmt die Cacherichtlinie für eine Anforderung.  
+  
+ Die Standardrichtlinie für die Anwendungsdomäne kann festgelegt werden, mithilfe der <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> oder der Anwendung oder Computerkonfigurationsdatei. Weitere Informationen finden Sie unter [ &lt;RequestCaching&gt; -Element (Netzwerkeinstellungen)](~/docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Net.Cache.RequestCacheLevel.CacheOnly> Richtlinie und sendet eine Anforderung.  
+  
+ [!code-cpp[NclSimpleCache#13](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#13)]
+ [!code-csharp[NclSimpleCache#13](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Cache.RequestCachePolicy.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung dieser Instanz zurück.</summary>
+        <returns>Ein <see cref="T:System.String" /> , enthält die <see cref="P:System.Net.Cache.RequestCachePolicy.Level" /> für diese Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Net.Cache.RequestCacheLevel.NoCacheNoStore> Richtlinie und sendet eine Anforderung.  
+  
+ [!code-cpp[NclSimpleCache#14](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#14)]
+ [!code-csharp[NclSimpleCache#14](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

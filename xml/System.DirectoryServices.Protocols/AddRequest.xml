@@ -1,0 +1,166 @@
+<Type Name="AddRequest" FullName="System.DirectoryServices.Protocols.AddRequest">
+  <TypeSignature Language="C#" Value="public class AddRequest : System.DirectoryServices.Protocols.DirectoryRequest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AddRequest extends System.DirectoryServices.Protocols.DirectoryRequest" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.AddRequest" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryRequest</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.AddRequest" /> Klasse wird ein Eintrag in das Verzeichnis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anforderung zur hinzugefügt werden, die <xref:System.DirectoryServices.Protocols.DsmlRequestDocument> oder als Parameter für verwendet werden können <xref:System.DirectoryServices.Protocols.DirectoryConnection.SendRequest%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AddRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.AddRequest.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.AddRequest.#ctor" />-Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.AddRequest" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AddRequest (string distinguishedName, params System.DirectoryServices.Protocols.DirectoryAttribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string distinguishedName, class System.DirectoryServices.Protocols.DirectoryAttribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.AddRequest.#ctor(System.String,System.DirectoryServices.Protocols.DirectoryAttribute[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="distinguishedName" Type="System.String" />
+        <Parameter Name="attributes" Type="System.DirectoryServices.Protocols.DirectoryAttribute[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="distinguishedName">Die <c>"distinguishedName"</c> des neuen Objekts im Verzeichnis.</param>
+        <param name="attributes">Ein Array von <see cref="T:System.DirectoryServices.Protocols.DirectoryAttribute" /> Objekten an, die die Attribute für dieses Objekt enthält. Dieser Parameter kann <see langword="null" /> sein.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.AddRequest.#ctor(System.String,System.DirectoryServices.Protocols.DirectoryAttribute[])" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.AddRequest" /> -Klasse mithilfe des angegebenen distinguished Name und Attribute.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AddRequest (string distinguishedName, string objectClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string distinguishedName, string objectClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.AddRequest.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="distinguishedName" Type="System.String" />
+        <Parameter Name="objectClass" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="distinguishedName">Die <c>"distinguishedName"</c> des neuen Objekts im Verzeichnis.</param>
+        <param name="objectClass">Die Objektklasse für dieses Objekt. Wenn dieser Parameter ist <see langword="null" />, wird eine Ausnahme ausgelöst.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.AddRequest.#ctor(System.String,System.String)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.AddRequest" /> -Klasse mit dem angegebenen <paramref name="distinguishedName" /> und der Object-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert im angegebenen der `objectClass` Parameter hinzugefügt wird die <xref:System.DirectoryServices.Protocols.AddRequest.Attributes%2A> Eigenschaft. Dieser Wert kann geändert werden, nachdem dieser Konstruktor aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="objectClass" /> Parameter enthält einen null-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.DirectoryAttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.Protocols.DirectoryAttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.AddRequest.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectoryAttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.AddRequest.Attributes" /> Eigenschaft enthält eine <see cref="T:System.DirectoryServices.Protocols.DirectoryAttributeCollection" /> von Attribut / Wert-Paaren für das Objekt.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.Protocols.DirectoryAttributeCollection" /> von Attribut / Wert-Paaren für das Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nicht festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistinguishedName">
+      <MemberSignature Language="C#" Value="public string DistinguishedName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DistinguishedName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.AddRequest.DistinguishedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.AddRequest.DistinguishedName" /> Eigenschaft enthält den distinguished Name des Objekts.</summary>
+        <value>Der distinguished Name des Objekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlNode">
+      <MemberSignature Language="C#" Value="protected override System.Xml.XmlElement ToXmlNode (System.Xml.XmlDocument doc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xml.XmlElement ToXmlNode(class System.Xml.XmlDocument doc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.AddRequest.ToXmlNode(System.Xml.XmlDocument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doc" Type="System.Xml.XmlDocument" />
+      </Parameters>
+      <Docs>
+        <param name="doc">Ein <see cref="T:System.Xml.XmlDocument" />-Objekt.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.AddRequest.ToXmlNode(System.Xml.XmlDocument)" />-Methode erstellt einen XML-Knoten aus dem angegebenen <see cref="T:System.Xml.XmlDocument" />-Objekt.</summary>
+        <returns>Das resultierende <see cref="T:System.Xml.XmlElement" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

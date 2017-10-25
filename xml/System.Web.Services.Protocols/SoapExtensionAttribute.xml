@@ -1,0 +1,115 @@
+<Type Name="SoapExtensionAttribute" FullName="System.Web.Services.Protocols.SoapExtensionAttribute">
+  <TypeSignature Language="C#" Value="public abstract class SoapExtensionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SoapExtensionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapExtensionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt an, dass eine SOAP-Erweiterung mit einer XML-Webdienstmethode ausgeführt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit ASP.NET erstellte XML-Webdienstmethoden können mit einer SOAP-Erweiterung ausgeführt wird, durch Anwenden eines Attributs auf die XML-Webdienstmethode konfiguriert werden. Wenn eine benutzerdefinierte Erweiterung-Attribut auf eine XML-Webdienstmethode oder eine Methode auf eine Client-Proxyklasse hinzugefügt wird, ruft ASP.NET die zugeordnete Erweiterung zum entsprechenden Zeitpunkt. Ein Erweiterungsattribut ist eine benutzerdefinierte Attributklasse abgeleitet <xref:System.Web.Services.Protocols.SoapExtensionAttribute>. Abgeleitete Attribute müssen überschreiben die <xref:System.Web.Services.Protocols.SoapExtensionAttribute.ExtensionType%2A> Eigenschaft, um den Typ der Erweiterung zurückzugeben, die dem Attribut zugeordnet ist.  
+  
+   
+  
+## Examples  
+ Die folgenden `TraceExtensionAttribute` Klasse leitet sich von <xref:System.Web.Services.Protocols.SoapExtensionAttribute> zur Unterstützung der Anwendung des Attributs auf eine XML-Webdienstmethode oder eine Methode in eine XML-Webdienst-Client-Proxyklasse. Bei Anwendung auf, die entweder die `TraceExtension` SOAP-Erweiterung mit der Methode ausgeführt wird.  
+  
+ [!code-cpp[Classic SoapExtensionAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapExtensionAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapExtensionAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapExtensionAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapExtensionAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapExtensionAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SoapExtensionAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapExtensionAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.SoapExtensionAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensionType">
+      <MemberSignature Language="C#" Value="public abstract Type ExtensionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ExtensionType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapExtensionAttribute.ExtensionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die <see cref="T:System.Type" /> der SOAP-Erweiterung.</summary>
+        <value>Die <see cref="T:System.Type" /> der SOAP-Erweiterung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen überschreiben, müssen die <xref:System.Web.Services.Protocols.SoapExtensionAttribute.ExtensionType%2A> Eigenschaft, um den Typ der SOAP-Erweiterung zurückzugeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine typische Implementierung der der <xref:System.Web.Services.Protocols.SoapExtensionAttribute.ExtensionType%2A> Eigenschaft.  
+  
+ [!code-cpp[SoapExtensionAttribute#2](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapExtensionAttribute/CPP/SoapExtensionAttribute.cpp#2)]
+ [!code-csharp[SoapExtensionAttribute#2](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapExtensionAttribute/CS/soapextensionattribute.cs#2)]
+ [!code-vb[SoapExtensionAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapExtensionAttribute/VB/soapextensionattribute.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public abstract int Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapExtensionAttribute.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in eine abgeleitete Klasse ruft ab oder legt die Priorität der SOAP-Erweiterung fest.</summary>
+        <value>Die Priorität der SOAP-Erweiterung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine typische Implementierung der der <xref:System.Web.Services.Protocols.SoapExtensionAttribute.Priority%2A> Eigenschaft.  
+  
+ SoapExtensionAttribute Nr. 3  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

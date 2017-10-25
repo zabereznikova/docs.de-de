@@ -1,0 +1,464 @@
+<Type Name="ContextBindingElement" FullName="System.ServiceModel.Channels.ContextBindingElement">
+  <TypeSignature Language="C#" Value="public class ContextBindingElement : System.ServiceModel.Channels.BindingElement, System.ServiceModel.Channels.IContextBindingElement, System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContextBindingElement extends System.ServiceModel.Channels.BindingElement implements class System.ServiceModel.Channels.IContextBindingElement, class System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ContextBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.BindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IContextBindingElement</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.WorkflowServices, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet einen Schutzgrad und einen Austauschmechanismus als Teil des Kontextes eines Bindungselements und die Funktionen zum Erstellen der Kanallistener und -factorys.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.ServiceModel.Channels.ContextBindingElement> ermöglicht dem Benutzer das Hinzufügen eines Elements zur Bindung eines Dienstes zur Verwaltung seines Kontextaustauschprotokolls. Das <xref:System.ServiceModel.Channels.ContextBindingElement> wird in der Regel oberhalb von Zuverlässigkeits-, Sicherheits- und Transportbindungselementen angeordnet. Ein <xref:System.ServiceModel.Channels.ContextBindingElement> erfordert keine Konfigurationsoptionen und kann Kanalfactorys für <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel> und <xref:System.ServiceModel.Channels.IDuplexSessionChannel> erstellen. Es kann auch Kanallistener für <xref:System.ServiceModel.Channels.IReplyChannel>, <xref:System.ServiceModel.Channels.IReplySessionChannel> und <xref:System.ServiceModel.Channels.IDuplexSessionChannel> erstellen. Durch einen Kontextkanal wird die Kanalschnittstelle nicht geändert, der zugrunde liegende Kanalstapel muss die angeforderte Kanalform und Sitzungsfähigkeit unterstützen.  
+  
+ Mithilfe der Kanallistener und -factorys wird der Teil der Kanalstapel für die Verarbeitung eingehender und ausgehender Nachrichten erstellt.  
+  
+> [!NOTE]
+>  Erstellt eine sitzungsbasierte Bindung mit einer <xref:System.ServiceModel.Channels.ContextBindingElement> und mit einem Vertrag, der angibt, verwendet <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>  =  <xref:System.ServiceModel.SessionMode.NotAllowed>, wird eine <xref:System.InvalidOperationException> wird ausgelöst, wenn der Kanal mit dem folgenden Text erstellt wird: "Channel kontextverwaltung nicht aktiviert oder deaktiviert, nachdem der Kanal geöffnet wird." Sie müssen <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> auf <xref:System.ServiceModel.SessionMode.Allowed> oder <xref:System.ServiceModel.SessionMode.Required> festlegen oder dürfen keinen sitzungsbasierten Kanal verwenden.  
+  
+ Beim Erstellen einer benutzerdefinierten Bindung wird empfohlen, das <xref:System.ServiceModel.Channels.ContextBindingElement> der <xref:System.ServiceModel.Channels.BindingElementCollection> der benutzerdefinierten Bindung hinzufügen, bevor Zuverlässigkeits- und Sicherheitsbindungselemente hinzugefügt werden, falls vorhanden. Andernfalls löst der Dienst möglicherweise eine <xref:System.ServiceModel.ProtocolException> mit der folgenden Meldung aus:  
+  
+ "Der Kontextkanal hat eine Nachricht mit einem Kontext empfangen, der nicht dem aktuellen, im Kanal zwischengespeicherten Kontext entspricht. Stellen Sie sicher, dass der Dienst den Kontext nicht ändert, nachdem er ursprünglich festgelegt wurde, oder deaktivieren Sie die Kontextverwaltung, indem Sie die Kanaleigenschaft 'IContextManager.Enabled' auf 'false' festlegen."  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ContextBindingElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legt den Standardwert von <xref:System.Net.Security.ProtectionLevel.Sign> für <xref:System.Net.Security.ProtectionLevel> und <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader> für <xref:System.ServiceModel.Channels.ContextExchangeMechanism> fest.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextBindingElement (System.Net.Security.ProtectionLevel protectionLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.Security.ProtectionLevel protectionLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextBindingElement.#ctor(System.Net.Security.ProtectionLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Net.Security.ProtectionLevel" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Der <see cref="T:System.Net.Security.ProtectionLevel" /> für das Bindungselement.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ContextBindingElement" />-Klasse mit einem angegebenen Schutzgrad.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legt den Standardwert von <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader> für <xref:System.ServiceModel.Channels.ContextExchangeMechanism> fest.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="protectionLevel" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextBindingElement (System.Net.Security.ProtectionLevel protectionLevel, System.ServiceModel.Channels.ContextExchangeMechanism contextExchangeMechanism);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.Security.ProtectionLevel protectionLevel, valuetype System.ServiceModel.Channels.ContextExchangeMechanism contextExchangeMechanism) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextBindingElement.#ctor(System.Net.Security.ProtectionLevel,System.ServiceModel.Channels.ContextExchangeMechanism)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Net.Security.ProtectionLevel" />
+        <Parameter Name="contextExchangeMechanism" Type="System.ServiceModel.Channels.ContextExchangeMechanism" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Der <see cref="T:System.Net.Security.ProtectionLevel" /> für das Bindungselement.</param>
+        <param name="contextExchangeMechanism">Der <see cref="T:System.ServiceModel.Channels.ContextExchangeMechanism" />, der den Kontextaustauschmechanismus für das Bindungselement angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ContextBindingElement" />-Klasse mit einem angegebenen Schutzgrad und Austauschmechanismus.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="protectionLevel" /> oder <paramref name="contextExchangeMechanism" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextBindingElement (System.Net.Security.ProtectionLevel protectionLevel, System.ServiceModel.Channels.ContextExchangeMechanism contextExchangeMechanism, Uri clientCallbackAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.Security.ProtectionLevel protectionLevel, valuetype System.ServiceModel.Channels.ContextExchangeMechanism contextExchangeMechanism, class System.Uri clientCallbackAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextBindingElement.#ctor(System.Net.Security.ProtectionLevel,System.ServiceModel.Channels.ContextExchangeMechanism,System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Net.Security.ProtectionLevel" />
+        <Parameter Name="contextExchangeMechanism" Type="System.ServiceModel.Channels.ContextExchangeMechanism" />
+        <Parameter Name="clientCallbackAddress" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Die Schutzebene des Bindungselements.</param>
+        <param name="contextExchangeMechanism">Der Mechanismus, der zum Austauschen des Kontexts für das Bindungselement verwendet wird.</param>
+        <param name="clientCallbackAddress">Die Rückrufadresse des Clients.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ContextBindingElement" />-Klasse mit einer angegebenen Schutzebene, einem Kontextaustauschmechanismus und einer Clientrückrufadresse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextBindingElement (System.Net.Security.ProtectionLevel protectionLevel, System.ServiceModel.Channels.ContextExchangeMechanism contextExchangeMechanism, Uri clientCallbackAddress, bool contextManagementEnabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.Security.ProtectionLevel protectionLevel, valuetype System.ServiceModel.Channels.ContextExchangeMechanism contextExchangeMechanism, class System.Uri clientCallbackAddress, bool contextManagementEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextBindingElement.#ctor(System.Net.Security.ProtectionLevel,System.ServiceModel.Channels.ContextExchangeMechanism,System.Uri,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Net.Security.ProtectionLevel" />
+        <Parameter Name="contextExchangeMechanism" Type="System.ServiceModel.Channels.ContextExchangeMechanism" />
+        <Parameter Name="clientCallbackAddress" Type="System.Uri" />
+        <Parameter Name="contextManagementEnabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Die Schutzebene für das Bindungselement.</param>
+        <param name="contextExchangeMechanism">Der Mechanismus, der zum Austauschen des Kontexts für das Bindungselement verwendet wird.</param>
+        <param name="clientCallbackAddress">Die Rückrufadresse des Clients.</param>
+        <param name="contextManagementEnabled">
+          <see langword="true" />Wenn die kontextverwaltung aktiviert ist; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ContextBindingElement" />-Klasse mit der angegebenen Schutzebene, dem Kontextaustauschmechanismus, der Clientrückrufadresse und einem Wert, der angibt, ob die Kontextverwaltung aktiviert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der von der Kanalfactory erzeugt wird.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Kanal.</param>
+        <summary>Erstellt den Kanalfactorystapel auf dem Client, der einen angegebenen Kanaltyp für einen angegebenen Kontext erstellt.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> vom Typ <paramref name="TChannel" /> für den angegebenen Kontext.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der festgelegte <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, den der Kanallistener akzeptiert.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Listener.</param>
+        <summary>Erstellt den Kanallistenerstapel auf dem Client, der einen angegebenen Kanaltyp für einen angegebenen Kontext akzeptiert.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> vom Typ <paramref name="TChannel" /> für den angegebenen Kontext.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der festgelegte <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der von der Kanalfactory erzeugt wird. Nur <see cref="T:System.ServiceModel.Channels.IRequestChannel" />, <see cref="T:System.ServiceModel.Channels.IRequestSessionChannel" /> und <see cref="T:System.ServiceModel.Channels.IDuplexSessionChannel" /> sind standardmäßig zulässig.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für die Factory.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das aktuelle Bindungselement eine Factory für einen angegebenen Typ von Kanal und Kontext erstellen kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Kanalfactorystapel auf dem Client erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, den der Kanallistener akzeptiert. Nur <see cref="T:System.ServiceModel.Channels.IReplyChannel" />, <see cref="T:System.ServiceModel.Channels.IReplySessionChannel" /> und <see cref="T:System.ServiceModel.Channels.IDuplexSessionChannel" /> sind standardmäßig zulässig.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Listener.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle Bindung einen Listener für einen angegebenen Typ von Kanal und Kontext erstellen kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Kanallistenerstapel auf dem Dienst erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCallbackAddress">
+      <MemberSignature Language="C#" Value="public Uri ClientCallbackAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ClientCallbackAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ContextBindingElement.ClientCallbackAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Clientrückrufadresse für das Bindungselement ab oder legt diese fest.</summary>
+        <value>Die Rückrufadresse des Clients.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues, aus dem aktuellen Objekt initialisiertes <see cref="T:System.ServiceModel.Channels.ContextBindingElement" />-Objekt.</summary>
+        <returns>Ein aus dem aktuellen Objekt initialisiertes <see cref="T:System.ServiceModel.Channels.ContextBindingElement" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das geklonte <xref:System.ServiceModel.Channels.ContextBindingElement>-Objekt verfügt über den gleichen <xref:System.ServiceModel.Channels.ContextBindingElement.ProtectionLevel%2A>-Wert und <xref:System.ServiceModel.Channels.ContextExchangeMechanism>-Wert des aktuellen <xref:System.ServiceModel.Channels.ContextBindingElement>-Objekts.  
+  
+ Dadurch wird eine vollständige Kopie der aktuellen Bindungselementobjektstruktur erstellt, die auch als tiefer Klon bezeichnet wird. Mit einem tiefen Klon eines Objekts wird neben der Kopie des Objekts eine Kopie aller Elemente erstellt, auf die das betreffende Objekt direkt oder indirekt verweist. Dieser Vorgang wird als Kopieren des gesamten Objektdiagramms bezeichnet. Durch das Zurückgeben eines tiefen Klons kann zur Laufzeit der Fall unterstützt werden, in dem mehrere benutzerdefinierte Bindungen ein benutzerdefiniertes Bindungselement gemeinsam nutzen. Wenn ein tiefer Klon nicht zurückgegeben wird, ist das Laufzeitverhalten nicht definiert. Ein flacher Klon eines Objekts stellt nur eine Kopie des Objekts dar. Wenn das Objekt Verweise auf andere Objekte enthält, werden von der flachen Kopie keine Kopien der Objekte erstellt, auf die verwiesen wird. Stattdessen werden nur die Verweise auf die ursprünglichen Objekte kopiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextExchangeMechanism">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.ContextExchangeMechanism ContextExchangeMechanism { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Channels.ContextExchangeMechanism ContextExchangeMechanism" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.ContextExchangeMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Austauschmechanismus für das Übermitteln von Kontext für das Bindungselement ab oder legt diesen fest.</summary>
+        <value>Der <see cref="T:System.ServiceModel.Channels.ContextExchangeMechanism" />, der den Kontextaustauschmechanismus für das Bindungselement angibt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der festgelegte Wert ist nicht gültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextManagementEnabled">
+      <MemberSignature Language="C#" Value="public bool ContextManagementEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContextManagementEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ContextBindingElement.ContextManagementEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Kontextverwaltung aktiviert wurde, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn kontextverwaltung aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportPolicy">
+      <MemberSignature Language="C#" Value="public virtual void ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextBindingElement.ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Das <see cref="T:System.ServiceModel.Description.MetadataExporter" />-Objekt, das die Metadateninformationen exportiert.</param>
+        <param name="context">Ein <see cref="T:System.ServiceModel.Description.WsdlContractConversionContext" />-Objekt, das Zuordnungen aus exportierten WSDL-Elementen zur Vertragsbeschreibung bereitstellt.</param>
+        <summary>Schreibt benutzerdefinierte Richtlinienassertionen in den Kontext des Bindungselements.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der <paramref name="context" /> ist <see langword="null" />, oder die Richtlinienassertion in der Bindung ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <param name="context">Die <see cref="T:System.ServiceModel.Channels.BindingContext" /> angegebenen.</param>
+        <summary>Gibt das typisierte Objekt mit dem angegebenen Kontext von der entsprechenden Ebene im Kanalstapel zurück.</summary>
+        <returns>Das von <paramref name="T" /> angeforderte typisierte Objekt, falls vorhanden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel ProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ContextBindingElement.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schutzgrad für das Bindungselement aus dem Kontext ab oder legt diesen fest.</summary>
+        <value>Der <see cref="T:System.Net.Security.ProtectionLevel" /> für das Bindungselement.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der festgelegte Wert ist nicht gültig.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

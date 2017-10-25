@@ -1,0 +1,50 @@
+<Type Name="IModalService" FullName="System.Activities.Presentation.IModalService">
+  <TypeSignature Language="C#" Value="public interface IModalService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IModalService" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.IModalService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Aktiviert die Benachrichtigung an eine Hostanwendung, dass ein modales Dialogfeld angezeigt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Anwendungen, die Designer hosten, müssen benachrichtigt werden, wenn ein modales Dialogfeld aufgerufen wurde. Visual Studio ist ein Beispiel für einen solchen Host. Die <xref:System.Activities.Presentation.IModalService>-Schnittstelle stellt eine Schnittstelle zum Übermitteln des aktuellen modalen Status bereit.  
+  
+ Der Windows-Workflow-Designer ruft die <xref:System.Activities.Presentation.IModalService.SetModalState%2A>-Methode auf. Wenn die `isModal` Parametersatz auf `true`, der Host benachrichtigt, dass ein modales Dialogfeld angezeigt wird.  
+  
+ Dies ist ein optionaler Dienst. Wenn der modale Status für eine Anwendung keine Rolle spielt, muss der Dienst nicht verwendet werden.  
+  
+ In der aktuellen Implementierung, wenn ein Windows Presentation Foundation (WPF)-Meldungsfeld (also ein modales Dialogfeld) aufgerufen wird, die <xref:System.Activities.Presentation.IModalService.SetModalState%2A> wird nicht aufgerufen. Wenn die Hostanwendung diese Informationen erfordert, muss eine andere Problemumgehung implementiert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SetModalState">
+      <MemberSignature Language="C#" Value="public void SetModalState (bool isModal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetModalState(bool isModal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.IModalService.SetModalState(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isModal" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isModal">Wenn auf festgelegt <see langword="true" />, ein modales Dialogfeld angezeigt wird.</param>
+        <summary>Benachrichtigt die Hostanwendung, dass ein modales Dialogfeld angezeigt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

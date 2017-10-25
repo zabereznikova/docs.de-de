@@ -1,0 +1,128 @@
+<Type Name="DefaultCharSetAttribute" FullName="System.Runtime.InteropServices.DefaultCharSetAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DefaultCharSetAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DefaultCharSetAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.DefaultCharSetAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Module, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Wert der <see cref="T:System.Runtime.InteropServices.CharSet" /> Enumeration. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Runtime.InteropServices.DefaultCharSetAttribute> Attribut auf Assemblyebene oder Modulebene festzulegende der <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> Wert für einen Aufruf von <xref:System.Runtime.InteropServices.DllImportAttribute> nicht enthalten eine <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> benannte Argument wurde vom Benutzer angegeben.  
+  
+ Ein <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> vom Benutzer angegebenes benanntes Argument überschreibt die Einstellung der <xref:System.Runtime.InteropServices.DefaultCharSetAttribute>.  
+  
+> [!NOTE]
+>  Nur die C#- und Visual Basic-Compiler erkennen dieses Attribut. Es wird nicht vom C++-Compiler verwendet.  
+  
+   
+  
+## Examples  
+ Der folgende Code ändert den Standard <xref:System.Runtime.InteropServices.CharSet> Wert aus der <xref:System.Runtime.InteropServices.CharSet.Ansi> auf <xref:System.Runtime.InteropServices.CharSet.Auto>.  
+  
+ `using System.Runtime.InteropServices;`  
+  
+ `[module: DefaultCharSet(CharSet.Auto)]`  
+  
+ `// …`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultCharSetAttribute (System.Runtime.InteropServices.CharSet charSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.InteropServices.CharSet charSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.DefaultCharSetAttribute.#ctor(System.Runtime.InteropServices.CharSet)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="charSet" Type="System.Runtime.InteropServices.CharSet" />
+      </Parameters>
+      <Docs>
+        <param name="charSet">Einer der <see cref="T:System.Runtime.InteropServices.CharSet" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.InteropServices.DefaultCharSetAttribute" />-Klasse mit dem angegebenen <see cref="T:System.Runtime.InteropServices.CharSet" />-Wert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharSet">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.CharSet CharSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.CharSet CharSet" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.DefaultCharSetAttribute.CharSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CharSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardwert <see cref="T:System.Runtime.InteropServices.CharSet" /> für einen Aufruf von <see cref="T:System.Runtime.InteropServices.DllImportAttribute" />.</summary>
+        <value>Der Standardwert von <see cref="T:System.Runtime.InteropServices.CharSet" /> für einen Aufruf von <see cref="T:System.Runtime.InteropServices.DllImportAttribute" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

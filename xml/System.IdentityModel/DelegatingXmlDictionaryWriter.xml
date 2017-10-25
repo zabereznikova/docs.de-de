@@ -1,0 +1,747 @@
+<Type Name="DelegatingXmlDictionaryWriter" FullName="System.IdentityModel.DelegatingXmlDictionaryWriter">
+  <TypeSignature Language="C#" Value="public class DelegatingXmlDictionaryWriter : System.Xml.XmlDictionaryWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DelegatingXmlDictionaryWriter extends System.Xml.XmlDictionaryWriter" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.DelegatingXmlDictionaryWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlDictionaryWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Klasse dient als Wrapper für einen angegebenen Writer, und alle delegiert <see cref="T:System.Xml.XmlDictionaryWriter" /> Aufrufe in den umschlossenen Writer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Writer, der umschlossen ist möglich, die über die <xref:System.IdentityModel.DelegatingXmlDictionaryWriter.InnerWriter%2A> Eigenschaft. Rufen Sie die <xref:System.IdentityModel.DelegatingXmlDictionaryWriter.InitializeInnerWriter%2A> Methode, um den umschlossenen Writer festgelegt und die Eigenschaft zu initialisieren. Sie erreichen die <xref:System.IdentityModel.DelegatingXmlDictionaryWriter.InitializeTracingWriter%2A> -Methode zum Festlegen einer <xref:System.Xml.XmlWriter> , der nicht-kanonischen XML wird wiederholt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DelegatingXmlDictionaryWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.DelegatingXmlDictionaryWriter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCanonicalize">
+      <MemberSignature Language="C#" Value="public override bool CanCanonicalize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanCanonicalize" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.DelegatingXmlDictionaryWriter.CanCanonicalize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob der Reader Kanonisierung kann.</summary>
+        <value>"true", wenn der Reader kann Kanonisierung ist; andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den zugrunde liegenden Stream.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCanonicalization">
+      <MemberSignature Language="C#" Value="public override void EndCanonicalization ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndCanonicalization() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.EndCanonicalization" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Kanonisierung, die vom entsprechenden <see cref="M:System.Xml.XmlDictionaryWriter.StartCanonicalization(System.IO.Stream,System.Boolean,System.String[])" />-Aufruf gestartet wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entleert den zugrunde liegenden Stream.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeInnerWriter">
+      <MemberSignature Language="C#" Value="protected void InitializeInnerWriter (System.Xml.XmlDictionaryWriter innerWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeInnerWriter(class System.Xml.XmlDictionaryWriter innerWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.InitializeInnerWriter(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="innerWriter" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="innerWriter">Der Writer, der von dieser Instanz eingeschlossen werden.</param>
+        <summary>Initialisiert diese Instanz mit der angegebenen inneren Writer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legt die <xref:System.IdentityModel.DelegatingXmlDictionaryWriter.InnerWriter%2A> Eigenschaft im angegebenen vom Writer der `innerWriter` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeTracingWriter">
+      <MemberSignature Language="C#" Value="protected void InitializeTracingWriter (System.Xml.XmlWriter tracingWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeTracingWriter(class System.Xml.XmlWriter tracingWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.InitializeTracingWriter(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tracingWriter" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="tracingWriter">Ein Writer, den alle Aufrufe wiederholt werden. Wenn <see langword="null" />, Aufrufe werden nicht wiederholt.</param>
+        <summary>Initialisiert wird diese Instanz mit einem Writer, der alle Aufrufe werden wiederholt werden und nicht-kanonischen XML geschrieben werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerWriter">
+      <MemberSignature Language="C#" Value="protected System.Xml.XmlDictionaryWriter InnerWriter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDictionaryWriter InnerWriter" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.DelegatingXmlDictionaryWriter.InnerWriter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rufen Sie die umschlossenen Writer.</summary>
+        <value>Gibt einen Wert vom Typ <see cref="T:System.Xml.XmlDictionaryWriter" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupPrefix">
+      <MemberSignature Language="C#" Value="public override string LookupPrefix (string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string LookupPrefix(string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.LookupPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">Der Namespace-URI, dessen Präfix gesucht werden soll.</param>
+        <summary>Gibt das nächstliegende Präfix zurück, das im aktuellen Namespacebereich für den Namespace-URI definiert ist.</summary>
+        <returns>Das passende Präfix oder Null, wenn keine übereinstimmenden Namespace-URI ist im aktuellen Bereich gefunden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartCanonicalization">
+      <MemberSignature Language="C#" Value="public override void StartCanonicalization (System.IO.Stream stream, bool includeComments, string[] inclusivePrefixes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StartCanonicalization(class System.IO.Stream stream, bool includeComments, string[] inclusivePrefixes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.StartCanonicalization(System.IO.Stream,System.Boolean,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="includeComments" Type="System.Boolean" />
+        <Parameter Name="inclusivePrefixes" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Stream, in den der kanonische Stream geschrieben werden soll.</param>
+        <param name="includeComments">Der Wert gibt an, ob geschriebene Kommentare ebenfalls kanonisiert werden sollen.</param>
+        <param name="inclusivePrefixes">Eine Gruppe von Präfixen, die in den kanonischen Stream aufgenommen werden sollen. Die Präfixe werden beim ersten Element definiert, das in den kanonischen Stream geschrieben wird.</param>
+        <summary>Zeigt den Start der Kanonisierung an. Alle hierauf folgenden Schreibvorgänge dies kanonisieren die Daten und schreibt es in den angegebenen Stream.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBase64">
+      <MemberSignature Language="C#" Value="public override void WriteBase64 (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteBase64(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteBase64(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Zu codierendes Bytearray.</param>
+        <param name="index">Die Position innerhalb des Puffers, die den Anfang der zu schreibenden Bytes kennzeichnet.</param>
+        <param name="count">Die Anzahl der zu schreibenden Bytes.</param>
+        <summary>Codiert die angegebenen binären Bytes als Base64 und schreibt den resultierenden Text.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteCData">
+      <MemberSignature Language="C#" Value="public override void WriteCData (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteCData(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteCData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text, der in den CDATA-Block eingefügt werden soll.</param>
+        <summary>Schreibt einen CDATA-Block mit dem angegebenen Text.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteCharEntity">
+      <MemberSignature Language="C#" Value="public override void WriteCharEntity (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteCharEntity(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteCharEntity(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">Das Unicode-Zeichen, für das eine Zeichenentität generiert werden soll.</param>
+        <summary>Erzwingt das Generieren einer Zeichenentität für den angegebenen Unicode-Zeichenwert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteChars">
+      <MemberSignature Language="C#" Value="public override void WriteChars (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteChars(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteChars(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Zeichenarray, das den zu schreibenden Text enthält.</param>
+        <param name="index">Die Position innerhalb des Puffers, die den Anfang des zu schreibenden Texts kennzeichnet.</param>
+        <param name="count">Die Anzahl der zu schreibenden Zeichen.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse Text in jeweils einen Puffer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteComment">
+      <MemberSignature Language="C#" Value="public override void WriteComment (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteComment(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteComment(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Text, der in den Kommentar eingefügt werden soll.</param>
+        <summary>Schreibt einen Kommentar mit dem angegebenen Text.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDocType">
+      <MemberSignature Language="C#" Value="public override void WriteDocType (string name, string pubid, string sysid, string subset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteDocType(string name, string pubid, string sysid, string subset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteDocType(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="pubid" Type="System.String" />
+        <Parameter Name="sysid" Type="System.String" />
+        <Parameter Name="subset" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des DOCTYPE. Dieser darf nicht leer sein.</param>
+        <param name="pubid">Wenn ungleich Null schreibt er auch PUBLIC "Pubid" "Sysid", wobei Pubid und Sysid durch den Wert der angegebenen Argumente ersetzt werden.</param>
+        <param name="sysid">Wenn Pubid null ist und Sysid ungleich Null ist ist, wird SYSTEM "sysid" geschrieben, wobei Sysid mit dem Wert dieses Arguments ersetzt wird.</param>
+        <param name="subset">Wenn nicht NULL, wird [subset] geschrieben, wobei subset durch den Wert dieses Arguments ersetzt wird.</param>
+        <summary>Schreibt die DOCTYPE-Deklaration mit dem angegebenen Namen und optionalen Attributen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndAttribute">
+      <MemberSignature Language="C#" Value="public override void WriteEndAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEndAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteEndAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den vorherigen System.Xml.XmlWriter.WriteStartAttribute(System.String,System.String)-Aufruf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndDocument">
+      <MemberSignature Language="C#" Value="public override void WriteEndDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEndDocument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteEndDocument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt alle geöffneten Elemente oder Attribute und setzt den Writer in den Startzustand zurück.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndElement">
+      <MemberSignature Language="C#" Value="public override void WriteEndElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEndElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteEndElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt ein Element und löst den entsprechenden Namespacebereich auf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEntityRef">
+      <MemberSignature Language="C#" Value="public override void WriteEntityRef (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEntityRef(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteEntityRef(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Entitätsverweises.</param>
+        <summary>Schreibt einen Entitätsverweis als Namen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteFullEndElement">
+      <MemberSignature Language="C#" Value="public override void WriteFullEndElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteFullEndElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteFullEndElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt ein Element und löst den entsprechenden Namespacebereich auf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteProcessingInstruction">
+      <MemberSignature Language="C#" Value="public override void WriteProcessingInstruction (string name, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteProcessingInstruction(string name, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteProcessingInstruction(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Verarbeitungsanweisung.</param>
+        <param name="text">Der in die Verarbeitungsanweisung einzufügende Text.</param>
+        <summary>Schreibt eine Anweisung zur Verarbeitung durch ein Leerzeichen zwischen dem Namen und den Text wie folgt: &amp;Lt;? Name-Text? &amp;Gt;.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRaw">
+      <MemberSignature Language="C#" Value="public override void WriteRaw (string data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteRaw(string data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteRaw(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="data">Zeichenfolge, die den zu schreibenden Text enthält.</param>
+        <summary>Schreibt unformatiertes Markup manuell aus einer Zeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRaw">
+      <MemberSignature Language="C#" Value="public override void WriteRaw (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteRaw(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteRaw(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Zeichenarray, das den zu schreibenden Text enthält.</param>
+        <param name="index">Die Position innerhalb des Puffers, die den Anfang des zu schreibenden Texts kennzeichnet.</param>
+        <param name="count">Die Anzahl der zu schreibenden Zeichen.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse Rohdatenmarkup manuell aus einem Zeichenpuffer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartAttribute">
+      <MemberSignature Language="C#" Value="public override void WriteStartAttribute (string prefix, string localName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartAttribute(string prefix, string localName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteStartAttribute(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Namespacepräfix des Attributs.</param>
+        <param name="localName">Der lokale Name des Attributs.</param>
+        <param name="ns">Der Namespace-URI für das Attribut.</param>
+        <summary>Schreibt den Anfang eines Attributs mit dem angegebenen lokalen Namen und dem angegebenen Namespace-URI.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartDocument">
+      <MemberSignature Language="C#" Value="public override void WriteStartDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartDocument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteStartDocument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse die XML-Deklaration mit der Version "1.0".</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartDocument">
+      <MemberSignature Language="C#" Value="public override void WriteStartDocument (bool standalone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartDocument(bool standalone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteStartDocument(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="standalone" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="standalone">Wenn "true", schreibt "Standalone = Yes"; Wenn "false", schreibt "Standalone = Nein".</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse die XML-Deklaration mit der Version "1.0" und dem eigenständigen Attribut.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartElement">
+      <MemberSignature Language="C#" Value="public override void WriteStartElement (string prefix, string localName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartElement(string prefix, string localName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteStartElement(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Namespacepräfix des Elements.</param>
+        <param name="localName">Der lokale Name des Elements.</param>
+        <param name="ns">Der Namespace-URI, der dem Element zugeordnet werden soll.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse das angegebene Starttag und ordnet dieses dem angegebenen Namespace und Präfix zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteState">
+      <MemberSignature Language="C#" Value="public override System.Xml.WriteState WriteState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.WriteState WriteState" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.WriteState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse den Zustand des Writers ab.</summary>
+        <value>Gibt einen <see cref="T:System.Xml.WriteState" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteString">
+      <MemberSignature Language="C#" Value="public override void WriteString (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteString(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der zu schreibende Text.</param>
+        <summary>Schreibt den angegebenen Textinhalt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteSurrogateCharEntity">
+      <MemberSignature Language="C#" Value="public override void WriteSurrogateCharEntity (char lowChar, char highChar);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteSurrogateCharEntity(char lowChar, char highChar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteSurrogateCharEntity(System.Char,System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lowChar" Type="System.Char" />
+        <Parameter Name="highChar" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="lowChar">Das niedrige Ersatzzeichen. Dieses muss ein Wert zwischen 0xDC00 und 0xDFFF sein.</param>
+        <param name="highChar">Das hohe Ersatzzeichen. Dieses muss ein Wert zwischen 0xD800 und 0xDBFF sein.</param>
+        <summary>Generiert und schreibt die Ersatzzeichenentität für das Ersatzzeichenpaar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteWhitespace">
+      <MemberSignature Language="C#" Value="public override void WriteWhitespace (string ws);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteWhitespace(string ws) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteWhitespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ws" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ws">Die Zeichenfolge von Leerraumzeichen.</param>
+        <summary>Schreibt den angegebenen Leerraum.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXmlAttribute">
+      <MemberSignature Language="C#" Value="public override void WriteXmlAttribute (string localName, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteXmlAttribute(string localName, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteXmlAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">Der LocalName des Attributs.</param>
+        <param name="value">Attributwert.</param>
+        <summary>Schreibt ein Attribut als XML-Attribut mit dem Präfix "Xml:".</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXmlnsAttribute">
+      <MemberSignature Language="C#" Value="public override void WriteXmlnsAttribute (string prefix, string namespaceUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteXmlnsAttribute(string prefix, string namespaceUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.DelegatingXmlDictionaryWriter.WriteXmlnsAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="namespaceUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Präfix der Namespacedeklaration.</param>
+        <param name="namespaceUri">Der Namespace-Uri selbst.</param>
+        <summary>Schreibt ein Xmlns-Namespacedeklaration.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,113 @@
+<Type Name="IArrayContract&lt;C&gt;" FullName="System.AddIn.Contract.Collections.IArrayContract&lt;C&gt;">
+  <TypeSignature Language="C#" Value="public interface IArrayContract&lt;C&gt; : System.AddIn.Contract.Collections.IEnumerableContract&lt;C&gt; where C : IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IArrayContract`1&lt;(class System.AddIn.Contract.IContract) C&gt; implements class System.AddIn.Contract.Collections.IEnumerableContract`1&lt;!C&gt;, class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Collections.IArrayContract`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="C">
+      <Constraints>
+        <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.Collections.IEnumerableContract&lt;C&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="C">Der Typ der Elemente im Array. <c>C</c> implementieren müssen die <see cref="T:System.AddIn.Contract.IContract" /> Schnittstelle.</typeparam>
+    <summary>Stellt ein generischen Array von <see cref="T:System.AddIn.Contract.IContract" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.AddIn.Contract.Collections.IArrayContract%601> , übergeben ein Array von <xref:System.AddIn.Contract.IContract> Objekte als Verweis zwischen Verträgen.  
+  
+ Ein <xref:System.AddIn.Contract.Collections.IArrayContract%601> ist die Größe nicht dynamisch.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetCount">
+      <MemberSignature Language="C#" Value="public int GetCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IArrayContract`1.GetCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Anzahl der Elemente in der <see cref="T:System.AddIn.Contract.Collections.IArrayContract`1" />.</summary>
+        <returns>Die Anzahl der Elemente, die in <see cref="T:System.AddIn.Contract.Collections.IArrayContract`1" /> enthalten sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="public C GetItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !C GetItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IArrayContract`1.GetItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>C</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zurückzugebenden Elements.</param>
+        <summary>Gibt das Element am angegebenen Index zurück.</summary>
+        <returns>Das Element am angegebenen Index.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" />ist gleich oder größer als der Rückgabewert der <see cref="M:System.AddIn.Contract.Collections.IArrayContract`1.GetCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="public void SetItem (int index, C value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetItem(int32 index, !C value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IArrayContract`1.SetItem(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="C" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu ersetzenden Elements.</param>
+        <param name="value">Der neue Wert für das Element am angegebenen Index.</param>
+        <summary>Ersetzt das Element am angegebenen Index mit dem angegebenen <see cref="T:System.AddIn.Contract.IContract" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" />ist gleich oder größer als der Rückgabewert der <see cref="M:System.AddIn.Contract.Collections.IArrayContract`1.GetCount" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,86 @@
+<Type Name="ThemeType" FullName="System.Workflow.ComponentModel.Design.ThemeType">
+  <TypeSignature Language="C#" Value="public enum ThemeType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ThemeType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ThemeType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Typ des Designs angezeigt, der **Optionen** (Dialogfeld).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Die Benutzer kann UserDefined-Designs im Workflow-Designer ändern, aber standardmäßig oder System-Themen in diesem Kontext kann nicht geändert werden.  
+  
+ Die **Optionen** Dialogfeld wird angezeigt, wenn ein Benutzer mit der rechten Maustaste in die Entwurfsoberfläche des Workflows und wählt **benutzerdefiniertes Design auswählen... **. Die Standard- und System-Kategorien sind aufgeführt, unter der **Standarddesigns** Header im Auswahlfenster, während die UserDefined-Kategorie, die alle vom Benutzer erstellten Designs enthält, werden aufgeführt, unter der **User Defined Designs** Header.  
+  
+ Designs definieren Hintergrund, Vordergrund, Text- und Symbolformate sowie andere Stile zum Rendern eines Workflows auf der Workflowentwurfsoberfläche.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.ThemeType Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.ThemeType.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ThemeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Designeinstellungen werden vom Standardworkflowdesign bereitgestellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="System" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.ThemeType System = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.ThemeType.System" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ThemeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Designeinstellungen werden vom Betriebssystem bereitgestellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserDefined">
+      <MemberSignature Language="C#" Value="UserDefined" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.ThemeType UserDefined = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.ThemeType.UserDefined" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ThemeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Designeinstellungen werden von benutzerdefinierten Designs bereitgestellt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

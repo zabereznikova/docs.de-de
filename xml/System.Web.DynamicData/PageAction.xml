@@ -1,0 +1,91 @@
+<Type Name="PageAction" FullName="System.Web.DynamicData.PageAction">
+  <TypeSignature Language="C#" Value="public static class PageAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit PageAction extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.PageAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an Standardeinstellung Action-Werte, die von der routing-Mechanismus in ASP.NET Dynamic Data-Anwendungen verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Details">
+      <MemberSignature Language="C#" Value="public static string Details { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Details" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.PageAction.Details" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Aktionsnamen für eine Seite, die Details eines Datenelements angezeigt.</summary>
+        <value>Der Literalwert "Details".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="public static string Edit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Edit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.PageAction.Edit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Aktionsnamen für eine Seite, die ein Datenelement bearbeitet.</summary>
+        <value>Der Literalwert "Bearbeiten".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public static string Insert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Insert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.PageAction.Insert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Aktionsnamen für eine Seite, mit der ein Datenelement eingefügt.</summary>
+        <value>Der Literalwert "Insert".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="public static string List { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string List" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.PageAction.List" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Aktionsnamen für eine Seite, die Daten aus einer Tabelle anzeigt.</summary>
+        <value>Der Literalwert "Liste".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

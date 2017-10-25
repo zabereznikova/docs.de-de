@@ -1,0 +1,44 @@
+<Type Name="TabItemWrapperAutomationPeer" FullName="System.Windows.Automation.Peers.TabItemWrapperAutomationPeer">
+  <TypeSignature Language="C#" Value="public class TabItemWrapperAutomationPeer : System.Windows.Automation.Peers.FrameworkElementAutomationPeer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TabItemWrapperAutomationPeer extends System.Windows.Automation.Peers.FrameworkElementAutomationPeer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.TabItemWrapperAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.FrameworkElementAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Macht die <see cref="T:System.Windows.UIElement" /> Teilstruktur für die Datenelemente in eine <see cref="T:System.Windows.Controls.TabControl" /> für die UI-Automatisierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Datenelemente in angezeigt werden die [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)], erstellt das System eine <xref:System.Windows.UIElement> Teilstruktur für die Datenelemente. Das System erstellt außerdem eine <xref:System.Windows.Automation.Peers.ItemAutomationPeer> für jedes Datenelement. Wenn die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] für das Datenelement wird erstellt, diese <xref:System.Windows.Automation.Peers.TabItemWrapperAutomationPeer> wird auch dann erstellt. Zwei Peers Zusammenführen dann um einen einzigen Peer zu bilden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TabItemWrapperAutomationPeer (System.Windows.Controls.TabItem owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.TabItem owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.TabItemWrapperAutomationPeer.#ctor(System.Windows.Controls.TabItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Controls.TabItem" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der <see cref="T:System.Windows.Controls.TabItem" />, der diesem <see cref="T:System.Windows.Automation.Peers.TabItemWrapperAutomationPeer" /> zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Automation.Peers.TabItemWrapperAutomationPeer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

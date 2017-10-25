@@ -1,0 +1,2030 @@
+<Type Name="ControlDesigner" FullName="System.Web.UI.Design.ControlDesigner">
+  <TypeSignature Language="C#" Value="public class ControlDesigner : System.Web.UI.Design.HtmlControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlDesigner extends System.Web.UI.Design.HtmlControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.HtmlControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Basisklasse für Steuerelement-Designer zum Erweitern des Verhaltens eines Webserversteuerelements im Entwurfsmodus bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner> -Klasse stellt eine Basisklasse für Steuerelement-Designer, die von geerbt und zur Entwurfszeit Unterstützung für ein Webserversteuerelement in einem Entwurfshost bereitstellen, z. B. erweitert werden können [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].  
+  
+ Das Objektmodell für das Arbeiten mit während der Entwurfszeit-Rendering ist gegenüber früheren Versionen, mit den folgenden neuen Basisklassen für den Zugriff auf das vereinfachte Objektmodell verbessert:  
+  
+-   <xref:System.Web.UI.Design.ControlDesigner>, wodurch ist nicht neu, jedoch wurde erheblich verbessert.  
+  
+-   <xref:System.Web.UI.Design.ContainerControlDesigner>.  
+  
+-   <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner>.  
+  
+## <a name="automatic-formatting"></a>Automatische Formatierung  
+ Sie können eine Vielzahl von Formaten automatische und vordefinierte erstellen, die die Seitenentwickler vereinfachen können, die komplexe Formatänderungen auf benutzerdefinierte Webserversteuerelement anwenden. Z. B. die <xref:System.Web.UI.Design.WebControls.TableDesigner> -Steuerelement, abgeleitet von der <xref:System.Web.UI.Design.ControlDesigner> Klasse, bietet viele automatische Formate. Verwenden Sie zum Implementieren, und geben Sie die automatische Formatierung in der benutzerdefinierten Steuerelemente, die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A>-Eigenschaft  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.OnAutoFormatApplied%2A>-Methode.  
+  
+-   Der <xref:System.Web.UI.Design.DesignerAutoFormat>-Klasse.  
+  
+-   Der <xref:System.Web.UI.Design.DesignerAutoFormatStyle>-Klasse.  
+  
+## <a name="action-lists-smart-tags"></a>Aktion aufgelistet (Smarttags)  
+ Aktionslisten sind Menüs wichtige oder weit verbreiteten Aufgaben, die eine Seitenentwickler, die ein Steuerelement verwendet, die in einer während der Entwurfszeit-Benutzeroberfläche (UI), ausführen können, wie z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)]. Beispielsweise könnte der Entwurfszeitansicht des Steuerelements ein Menü der verfügbaren Aufgaben bereitstellen. Dies schließt einen Task, um das Steuerelement automatisch formatieren. Starten Sie weitere Informationen zu Aktionslisten mit den folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.ActionLists%2A>-Eigenschaft  
+  
+-   Der <xref:System.ComponentModel.Design.DesignerActionList>-Klasse.  
+  
+-   Die <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A>-Methode.  
+  
+-   Der <xref:System.ComponentModel.Design.DesignerActionListCollection>-Klasse.  
+  
+-   Der <xref:System.ComponentModel.Design.DesignerActionMethodItem>-Klasse.  
+  
+-   Der <xref:System.ComponentModel.Design.DesignerActionPropertyItem>-Klasse.  
+  
+## <a name="control-designer-regions"></a>Steuerelement-Designer-Bereichen  
+ Bereiche sind bearbeitbare Bereiche in der Entwurfszeitansicht des eines Webserver-Steuerelements. Dieses Feature bietet WYSIWYG-ähnliche Bearbeitung der Vorlageninhalt, innere Steuerelemente und Eigenschaften zur Entwurfszeit. Sie können die Steuerelement-Designer Steuerelemente in Regionen erstellen oder verwenden Sie die Toolbox ziehen und Ablegen von Steuerelementen in Bereiche. Bereiche werden mit den folgenden Funktionen verwaltet:  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A>-Methode.  
+  
+-   Der <xref:System.Web.UI.Design.DesignerRegion>-Klasse.  
+  
+-   Der <xref:System.Web.UI.Design.EditableDesignerRegion>-Klasse.  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.GetEditableDesignerRegionContent%2A>-Methode.  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.SetEditableDesignerRegionContent%2A>-Methode.  
+  
+## <a name="templates"></a>Vorlagen  
+ Das Modell zum Erstellen einer Benutzeroberfläche zum Bearbeiten von zur Entwurfszeit auf Vorlagen basierende Steuerelemente wie z. B. die <xref:System.Web.UI.WebControls.GridView> steuern, wurde deutlich von früheren Versionen verbessert. Sie können komplexe benutzerdefinierte Steuerelemente, die Vorlagen für verschiedene Teile des Steuerelements enthalten erstellen und Ihr benutzerdefiniertes Steuerelement-Designer können Seitenentwickler von Vorlagen mit den folgenden Funktionen ändern:  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A>-Eigenschaft  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.InTemplateMode%2A>-Eigenschaft  
+  
+-   Der <xref:System.Web.UI.Design.TemplateGroup>-Klasse.  
+  
+## <a name="design-time-rendering"></a>Während der Entwurfszeit-Rendering  
+ Die <xref:System.Web.UI.Design.ControlDesigner> -Klasse verfügt über die folgenden Methoden zur Unterstützung zur Entwurfszeit die Darstellung von Webserver-Steuerelement. Die meisten dieser Methoden sind dieselben wie in früheren Versionen:  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A>-Methode.  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml%2A>-Methode.  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml%2A>-Methode.  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A>-Methode.  
+  
+-   Die <xref:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml%2A>-Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einen einfachen Designer-Klasse erstellen, die von abgeleitet ist die <xref:System.Web.UI.Design.ControlDesigner> Klasse. Diese Steuerelement-Designer unterstützt eine benutzerdefinierte `TextControl` -Klasse und stellt einen Befehl für die Textgröße eines Steuerelements zur Entwurfszeit zu ändern. Der Steuerelement-Designer dem Steuerelement zugeordnet ist, indem Sie die Steuerelement-Designer in einer <xref:System.ComponentModel.DesignerAttribute> -Objektdeklaration auf die `TextControl` Klasse. Der Schlüssel zum Beibehalten von eigenschaftenänderungen aus der Steuerelement-Designer auf das HTML-Markup gefunden wird, der `ToggleTextSize` Methode des benutzerdefinierten `ActionList` Klasse.  
+  
+ Wiederholen das Beispiel, fügen Sie einen Verweis auf die Assembly "System.Design.dll", und kompilieren Sie den Code.  
+  
+ [!code-csharp[ControlDesignerSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlDesignerSample/cs/TextControlDesigner.cs#1)]
+ [!code-vb[ControlDesignerSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlDesignerSample/vb/TextControlDesigner.vb#1)]  
+[!code-aspx-csharp[ControlDesignerSample#8](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlDesignerSample/cs/TextControlDesigner.aspx#8)]
+[!code-aspx-vb[ControlDesignerSample#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlDesignerSample/vb/TextControlDesigner.aspx#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.ControlDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aktionslistenauflistung für den Steuerelement-Designer ab.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" />-Objekt, das die <see cref="T:System.ComponentModel.Design.DesignerActionList" />-Elemente für den Steuerelement-Designer enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen eines einfachen zusammengesetzten Steuerelements mit einem <xref:System.Web.UI.WebControls.Label> und ein <xref:System.Web.UI.WebControls.TextBox> -Steuerelement, zusammen mit den Eigenschaften, die Text-Eigenschaften für beide internen Steuerelemente festlegen sowie die <xref:System.Web.UI.WebControls.WebControl.Width%2A> und <xref:System.Web.UI.WebControls.WebControl.BackColor%2A> Eigenschaften der <xref:System.Web.UI.WebControls.TextBox> Steuerelement. Eine zugeordnete Steuerelement-Designer-Klasse erstellt drei <xref:System.ComponentModel.Design.DesignerActionMethodItem> Befehle, von denen jede zwei Eigenschaften für das Steuerelement festlegen, und kann mit der Funktion zum Rückgängigmachen der Entwurfshost zurückgesetzt werden.  
+  
+ [!code-csharp[DesignerInvokeTransactedChange#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerInvokeTransactedChange/CS/InvokeTransactedChangeSample.cs#1)]
+ [!code-vb[DesignerInvokeTransactedChange#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerInvokeTransactedChange/VB/InvokeTransactedChangeSample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Um ein benutzerdefiniertes Steuerelement in der Entwurfsansicht ein Aktionsmenü der Liste hinzugefügt haben, muss Ihre benutzerdefinierten Steuerelement-Designer überschreiben die <see cref="P:System.Web.UI.Design.ControlDesigner.ActionLists" /> Eigenschaft, um ein benutzerdefiniertes Steuerelementklasse zurückzugeben, die abgeleitet ist die <see cref="T:System.ComponentModel.Design.DesignerActionList" /> Klasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowResize">
+      <MemberSignature Language="C#" Value="public virtual bool AllowResize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowResize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.AllowResize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Steuerelement in der Entwurfszeit Umgebung angepasst werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn das Steuerelement angepasst werden kann. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.ControlDesigner.AllowResize%2A> Eigenschaft in ein benutzerdefiniertes Steuerelement-Designer-Klasse.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Eigenschaft.  
+  
+ [!code-csharp[DesignerTemplateGroupSample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerTemplateGroupSample/CS/TemplateGroupsSample.cs#3)]
+ [!code-vb[DesignerTemplateGroupSample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Verwenden der <see cref="P:System.Web.UI.Design.ControlDesigner.AllowResize" /> Eigenschaft in abgeleiteten Klassen zu aktivieren oder deaktivieren die Seitenentwickler nicht die Größe ändert das Steuerelement im Entwurfshost.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFormats">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerAutoFormatCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der vordefinierten automatischen Formatierungsschemas angezeigt in der **AutoFormat** Dialogfeld für das zugeordnete Steuerelement zur Entwurfszeit.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" />-Objekt, das die vordefinierten Schemas für das Steuerelement enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein vollständiges Webserversteuerelement umfasst nicht nur das Steuerelement aber auch, ggf. ein entsprechendes Steuerelement-Designer-Klasse, die abgeleitet ist die <xref:System.Web.UI.Design.ControlDesigner> Klasse sowie eine abgeleitet ist die <xref:System.Web.UI.Design.DesignerAutoFormat> Klasse. Die <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A> -Eigenschaft ist eine Auflistung von Instanzen der <xref:System.Web.UI.Design.DesignerAutoFormat> Klasse. Ein funktionsfähiges Beispiel für automatische Formatierung in [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], finden Sie unter <xref:System.Web.UI.WebControls.Calendar>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A> Eigenschaft in ein benutzerdefiniertes Steuerelement-Designer. Der abgeleitete Steuerelement-Designer implementiert die <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A> Eigenschaft durch Hinzufügen von drei Instanzen eines benutzerdefinierten automatischen Formats, das von abgeleitet sind die <xref:System.Web.UI.Design.DesignerAutoFormat> Klasse.  
+  
+ [!code-csharp[DesignerAutoFormat#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerAutoFormat/CS/DesignerAutoFormat.cs#1)]
+ [!code-vb[DesignerAutoFormat#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerAutoFormat/VB/DesignerAutoFormat.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Steuerelemente, die automatisch AutoFormate verfügbar machen erhalten eine Aufgabe und Kontextbefehle für ihre Formate. Wenn Sie automatische Formate verwenden, verwenden Sie die <see cref="P:System.Web.UI.Design.ControlDesigner.ViewControl" /> Eigenschaft zum Festlegen der Eigenschaften in der Rückruffunktion.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateErrorDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected string CreateErrorDesignTimeHtml (string errorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string CreateErrorDesignTimeHtml(string errorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="errorMessage">Die Fehlermeldung in die generierten HTML-Markup eingeschlossen werden sollen.</param>
+        <summary>HTML-Markup zum Anzeigen einer angegebenen Fehlermeldung zur Entwurfszeit wird erstellt.</summary>
+        <returns>Ein HTML-Markup-Zeichenfolge, die die angegebene Fehlermeldung enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml%2A> Methode, um HTML-Markup zum Anzeigen einer Fehlermeldung für ein Steuerelement zur Entwurfszeit erstellen. Der Wert für `errorMessage` gibt eine lokalisierte Zeichenfolge, die für den Benutzer des Steuerelements zur Entwurfszeit angezeigt wird.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner> Implementierung der Klasse die <xref:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml%2A> Methode gibt eine Tabelle mit zwei Zeilen wie folgt:  
+  
+-   Die erste Zeile enthält den Typnamen und einen Standortnamen für den <xref:System.ComponentModel.Design.ComponentDesigner.Component%2A> Eigenschaft von der <xref:System.Web.UI.Design.ControlDesigner> Objekt.  
+  
+-   Die zweite Zeile enthält die Zeichenfolge der Fehlermeldung Eingabe.  
+  
+ Verwenden Sie zum Generieren von HTML-Markup für eine Fehlermeldung mit einer zugeordneten Ausnahme die <xref:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml%28System.String%2CSystem.Exception%29> überladen. Verwenden Sie zum Generieren von HTML-Markup für eine Ausnahme ohne Angabe einer lokalisierten Fehlermeldung der <xref:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml(System.String)" /> Überladung ist funktionell gleichwertig mit einem Aufruf der <see cref="M:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml(System.String,System.Exception)" /> Methode mit e festgelegt <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateErrorDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected string CreateErrorDesignTimeHtml (string errorMessage, Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string CreateErrorDesignTimeHtml(string errorMessage, class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml(System.String,System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorMessage" Type="System.String" />
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="errorMessage">Die Fehlermeldung in die generierten HTML-Zeichenfolge eingeschlossen werden sollen.</param>
+        <param name="e">Die Ausnahme, die in der generierten HTML-Zeichenfolge enthalten.</param>
+        <summary>Erstellt die HTML-Markup zum Anzeigen einer Fehlermeldung für die angegebene Ausnahme zur Entwurfszeit an.</summary>
+        <returns>HTML-Markup, das das angegebene enthält <paramref name="errorMessage" /> und <paramref name="e" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml%2A> Methode, um einfache HTML-Markup bereitzustellen, die zum Anzeigen von Informationen über Fehler und Ausnahmen für ein Steuerelement zur Entwurfszeit verwendet werden kann. Der Wert für `errorMessage` gibt eine lokalisierte Zeichenfolge, die für den Benutzer des Steuerelements zur Entwurfszeit angezeigt wird.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner> Implementierung der Klasse die <xref:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml%2A> Methode gibt eine Tabelle mit zwei Zeilen wie folgt:  
+  
+-   Die erste Zeile enthält den Typnamen und einen Standortnamen für den <xref:System.ComponentModel.Design.ComponentDesigner.Component%2A> Eigenschaft von der <xref:System.Web.UI.Design.ControlDesigner> Objekt.  
+  
+-   Die zweite Zeile enthält die Fehlermeldung für die Eingabe und die <xref:System.Exception.Message%2A> Zeichenfolge der Ausnahme.  
+  
+ Verwenden Sie zum Generieren von HTML-Markup für eine Fehlermeldung ohne Angabe einer Ausnahme der <xref:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml%28System.String%29> überladen. Verwenden Sie zum Generieren von HTML-Markup für eine Ausnahme ohne Angabe einer lokalisierten Fehlermeldung der <xref:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml(System.String,System.Exception)" /> Methode sollte aufgerufen werden, aus der <see cref="Overload:System.Web.UI.Design.ControlDesigner.GetViewRendering" /> oder <see cref="M:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml(System.Exception)" /> Methode, wenn Ausnahmen auftreten.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePlaceHolderDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected string CreatePlaceHolderDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string CreatePlaceHolderDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bietet eine einfaches rechteckigem Platzhalter-Darstellung, die den Typ und die ID des Steuerelements anzeigt.</summary>
+        <returns>Eine Zeichenfolge, die während der Entwurfszeit-HTML-Markup bietet grundlegende Informationen über das Steuerelement enthält.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Die typische Entwurfsmuster wird versucht, HTML-Markup über das zugeordnete Steuerelement, und rufen Sie dann, wenn ein Fehler aufgetreten ist, die <see cref="M:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml(System.Exception)" /> Methode. Wenn kein Markup vom Steuerelement zurückgegeben wird, rufen Sie die <see cref="M:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml" /> Methode, der aufgerufen wird, wenn sie nicht überschrieben wird, um bestimmte Markup bereit die <see cref="M:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml" /> -Methode, die Informationen über den Typ und die ID des Steuerelements enthalten soll.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePlaceHolderDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected string CreatePlaceHolderDesignTimeHtml (string instruction);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string CreatePlaceHolderDesignTimeHtml(string instruction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instruction" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instruction">Eine Zeichenfolge, die Text und Markup hinzufügen zu der HTML-Ausgabe enthält.</param>
+        <summary>Bietet eine einfaches rechteckigem Platzhalter-Darstellung, die den Typ und die ID des Steuerelements, und auch zusätzliche angegebenen Anweisungen oder Informationen anzeigt.</summary>
+        <returns>Eine Zeichenfolge, die während der Entwurfszeit-HTML-Markup Bereitstellen von Informationen über das Steuerelement enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methode in einem Steuerelement mit Vorlagen-Designer. Eine Zeichenfolge wird dann als übergeben der `instruction` Parameter in einem Aufruf der <xref:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml%2A> Methode, die das HTML-Markup zur Entwurfszeit bereitstellt.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Eigenschaft.  
+  
+ [!code-csharp[DesignerTemplateGroupSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerTemplateGroupSample/CS/TemplateGroupsSample.cs#4)]
+ [!code-vb[DesignerTemplateGroupSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die typische Entwurfsmuster wird versucht, HTML-Markup über das zugeordnete Steuerelement, und rufen Sie dann, wenn ein Fehler aufgetreten ist, die <see cref="M:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml(System.Exception)" /> Methode. Wenn kein Markup vom Steuerelement zurückgegeben wird, rufen Sie die <see cref="M:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml" /> Methode, der aufgerufen wird, wenn sie nicht überschrieben wird, um bestimmte Markup bereit die <see cref="M:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml" /> -Methode, die Informationen über den Typ und die ID des Steuerelements enthalten soll.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewControl">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.Control CreateViewControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.Control CreateViewControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.CreateViewControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie des zum Anzeigen oder auf der Entwurfsoberfläche Rendern des zugeordneten Steuerelements zurück.</summary>
+        <returns>Ein Webserver-Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindingsEnabled">
+      <MemberSignature Language="C#" Value="protected virtual bool DataBindingsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DataBindingsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.DataBindingsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Datenbindung durch den enthaltenden Bereich für das zugeordnete Steuerelement unterstützt wird.</summary>
+        <value>
+          <see langword="true" />, wenn der Container für das Steuerelement die Datenbindung unterstützt andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerState">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Design.ControlDesignerState DesignerState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.ControlDesignerState DesignerState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.DesignerState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ControlDesignerState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das zum Beibehalten von Daten für das zugeordnete Steuerelement zur Entwurfszeit verwendet wird.</summary>
+        <value>Ein <see cref="P:System.Web.UI.Design.ControlDesigner.DesignerState" /> -Eigenschaft, die implementiert <see cref="T:System.Collections.IDictionary" /> und verwendet die <see cref="T:System.ComponentModel.Design.IComponentDesignerStateService" /> Zustandsdaten für das zugeordnete Steuerelement zur Entwurfszeit beibehalten werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte für die <xref:System.Web.UI.Design.ControlDesigner.DesignerState%2A> -Eigenschaft beibehalten werden, auch wenn der Benutzer wechselt vom Entwurf zur Datenquellensicht an, oder lädt das Dokument oder schließt und Entwurfshost wird daraufhin wieder geöffnet.  
+  
+ Sie können Werte abzurufen und festzulegen im zurückgegebenen Objekt wie in ein IDictionary Objekt, wobei die Werte automatisch beibehalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignTimeElementView">
+      <MemberSignature Language="C#" Value="protected object DesignTimeElementView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DesignTimeElementView" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.DesignTimeElementView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Error: This property can no longer be referenced, and is included to support existing compiled applications. The design-time element view architecture is no longer used. http://go.microsoft.com/fwlink/?linkid=14202", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Ansichtssteuerelement-Objekt für den Steuerelementdesigner ab.</summary>
+        <value>
+          <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A> Eigenschaft ist veraltet, und es gibt keinen Ersatz für die Funktionalität.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignTimeHtmlRequiresLoadComplete">
+      <MemberSignature Language="C#" Value="public virtual bool DesignTimeHtmlRequiresLoadComplete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DesignTimeHtmlRequiresLoadComplete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is SetViewFlags(ViewFlags.DesignTimeHtmlRequiresLoadComplete, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, ob Entwurfshost geladen wurde, bevor beendet werden muss, die <see cref="Overload:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml" /> Methode kann aufgerufen werden.</summary>
+        <value>
+          <see langword="true" />, wenn das Laden abgeschlossen ist, bevor sein muss die <see cref="Overload:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml" /> Methode kann aufgerufen werden, andernfalls, <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung des der <xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A> -Eigenschaft gibt `false`.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A>-Eigenschaft ist veraltet. Verwenden der <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A> Methode für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle GetBounds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Rectangle GetBounds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetBounds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Koordinaten des Rechtecks, das die Grenzen für das Steuerelement auf der Entwurfsoberfläche angezeigte darstellt.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Rectangle" /> Objekt, das die Grenzen für das Steuerelement auf der Entwurfsoberfläche in Bezug auf das Steuerelement nicht das Dokument darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public virtual string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das HTML-Markup ab, das für die Darstellung des Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Das HTML-Markup, das für die Darstellung des Steuerelements zur Entwurfszeit verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> -Methode in einem benutzerdefinierten Steuerelement-Designer. Wenn der Text-Eigenschaft für das zugeordnete Steuerelement leer ist, ist die <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methodenaufrufe der <xref:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml%2A> Methode. Andernfalls die <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methode erstellt und ein Linksteuerelement rendert.  
+  
+ [!code-csharp[System.Web.UI.Design.ControlDesigner_Example#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.ControlDesigner_Example/CS/SimpleControlDesigner.cs#5)]
+ [!code-vb[System.Web.UI.Design.ControlDesigner_Example#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.ControlDesigner_Example/VB/simplecontroldesigner.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie ein benutzerdefiniertes Containersteuerelement erstellen, stellen Sie sicher, dass Sie zur Entwurfszeit, unabhängig davon, ob das Steuerelement und alle untergeordneten Steuerelemente Rendern der <see cref="P:System.Web.UI.Control.Visible" /> -Eigenschaftensatz auf <see langword="true" /> oder <see langword="false" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public virtual string GetDesignTimeHtml (System.Web.UI.Design.DesignerRegionCollection regions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetDesignTimeHtml(class System.Web.UI.Design.DesignerRegionCollection regions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="regions" Type="System.Web.UI.Design.DesignerRegionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="regions">Eine Auflistung von Steuerelement-Designer-Bereichen für das zugeordnete Steuerelement.</param>
+        <summary>Ruft das HTML-Markup zum Anzeigen des Steuerelements ab und füllt die Auflistung mit den aktuellen Steuerelement-Designer-Bereichen auf.</summary>
+        <returns>Das HTML-Entwurfszeitmarkup für das zugeordnete Steuerelement, einschließlich aller Steuerelement-Designer-Bereiche.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Entwurfshost ruft die <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methode, um das Entwurfszeit HTML-Markup und die aktuelle Liste der Steuerelement-Designer-Bereichen abzurufen. Mithilfe der DesignerRegionCollection kann Entwurfshost dann das Markup für jede editierbaren Steuerelement Designerbereich anfordern.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methode wird für eine abgeleitete Steuerelement-Designer bereitgestellt, wie z. B. die <xref:System.Web.UI.Design.WebControls.GridViewDesigner> Klasse bereit, die den Inhalt des Bereichs vor dem Aufruf zu verarbeiten, muss der <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen von HTML-Markup mithilfe der <xref:System.Web.UI.Design.DesignerRegionCollection> Auflistung.  
+  
+ [!code-csharp[SimpleMultiRegionControlDesigner#5](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/CS/SimpleMultiRegionControlDesigner.cs#5)]
+ [!code-vb[SimpleMultiRegionControlDesigner#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/VB/SimpleMultiRegionControlDesigner.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeResourceProviderFactory">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Design.DesignTimeResourceProviderFactory GetDesignTimeResourceProviderFactory (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Design.DesignTimeResourceProviderFactory GetDesignTimeResourceProviderFactory(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetDesignTimeResourceProviderFactory(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignTimeResourceProviderFactory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein <see cref="T:System.IServiceProvider" /> -Objekt, das globale und lokale Dienste abgerufen werden kann.</param>
+        <summary>Gibt eine entsprechende Ressourcenanbieterfactory, abhängig von den globalisierungseinstellungen in der Konfigurationsdatei für den Standort zurück.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.Design.DesignTimeResourceProviderFactory" /> Objekt, wenn alle in der Konfigurationsdatei definiert; andernfalls sind <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ressourcenanbieterfactory erstellt Ressourcenanbieter und Ressource Schreiber, abhängig von den aktuellen Einstellungen im system.web/globalization-Abschnitt der Konfigurationsdatei ("Machine.config" oder "Web.config"-Dateien für globale und lokale Ressourcen ). Wenn keine globalisierungseinstellungen gefunden werden, die `serviceProvider` Parameter dient zum Erstellen einer <xref:System.Web.UI.Design.DesignTimeResourceProviderFactory> -Objekt unter Verwendung der Standardimplementierung für Entwurfshost.  
+  
+ Entwickler von Steuerelementen werden in der Regel nicht überschreiben die <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeResourceProviderFactory%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public virtual string GetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+      </Parameters>
+      <Docs>
+        <param name="region">Die <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> Inhalt für die abzurufenden Objekts.</param>
+        <summary>Gibt den Inhalt für einen bearbeitbaren Bereich der Entwurfszeitansicht des zugeordneten Steuerelements zurück.</summary>
+        <returns>Der beibehaltene Inhalt für den Bereich, wenn der Steuerelement-Designer bearbeitbare Bereiche unterstützt; andernfalls eine leere Zeichenfolge ("").</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung des der <xref:System.Web.UI.Design.ControlDesigner.GetEditableDesignerRegionContent%2A> Methode gibt eine leere Zeichenfolge ("").  
+  
+ Klassen, die von der <xref:System.Web.UI.Design.ControlDesigner> Klasse unterstützt, bereichsbasierte Bearbeitung auf der Entwurfsoberfläche angezeigt wird, und überschreiben die <xref:System.Web.UI.Design.ControlDesigner.GetEditableDesignerRegionContent%2A> Methode, um den Inhalt eines angegebenen Bereichs zurückzugeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einen Verweis auf den Entwurfshost abrufen und verwenden dann den Verweis zum Erstellen einer <xref:System.Web.UI.Design.ControlParser> Objekt, das das HTML-Markup für erstellt `region` und dessen Inhalt.  
+  
+ [!code-csharp[SimpleMultiRegionControlDesigner#6](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/CS/SimpleMultiRegionControlDesigner.cs#6)]
+ [!code-vb[SimpleMultiRegionControlDesigner#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/VB/SimpleMultiRegionControlDesigner.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected virtual string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das HTML-Markup zum Darstellen eines Webserver-Steuerelements zur Entwurfszeit ab, das zur Laufzeit keine visuelle Darstellung hat.</summary>
+        <returns>Das HTML-Markup, das zum Darstellen eines Steuerelements zur Entwurfszeit verwendet wird, das andernfalls keine visuelle Darstellung hätte. Der Standard ist ein Rechteck, das den Typ und die ID der Komponente enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardverhalten der <xref:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml%2A> Methode besteht darin, eine Zeichenfolge zurück, die den Namen der Komponente enthält. Die <xref:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml%2A> Methode sollte aufgerufen werden, in der Implementierung der <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methode, wenn es keine HTML-Markup zur Entwurfszeit.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> -Methode in einem benutzerdefinierten Steuerelement-Designer. Wenn die `Text` Eigenschaft für das zugeordnete Steuerelement leer ist, ist die <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methodenaufrufe <xref:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml%2A> Methode. Andernfalls die <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methode erstellt und rendert eine `Hyperlink` Steuerelement.  
+  
+ [!code-csharp[System.Web.UI.Design.ControlDesigner_Example#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.ControlDesigner_Example/CS/SimpleControlDesigner.cs#5)]
+ [!code-vb[System.Web.UI.Design.ControlDesigner_Example#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.ControlDesigner_Example/VB/simplecontroldesigner.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected virtual string GetErrorDesignTimeHtml (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetErrorDesignTimeHtml(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die aufgetretene Ausnahme.</param>
+        <summary>Ruft das HTML-Markup ab, das Informationen über die angegebene Ausnahme bereitstellt.</summary>
+        <returns>Das Entwurfszeit-HTML-Markup für die angegebene Ausnahme.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml%2A> Methode wird in der Regel aufgerufen, wenn eine Ausnahme, in ausgelöst wird der <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Generieren von HTML-Markup zur Entwurfszeit für das Steuerelement, wenn ein Fehler auftritt, und rufen die <xref:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml%2A> Methode.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.LoginDesigner#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginDesigner/CS/LoginDesigner.cs#2)]
+ [!code-vb[System.Web.UI.Design.WebControls.LoginDesigner#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginDesigner/VB/LoginDesigner.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die typische Entwurfsmuster wird versucht, HTML-Markup über das zugeordnete Steuerelement, und rufen Sie dann, wenn ein Fehler aufgetreten ist, die <see cref="M:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml(System.Exception)" /> Methode. Wenn kein Markup vom Steuerelement zurückgegeben wird, rufen Sie die <see cref="M:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml" /> Methode, der aufgerufen wird, wenn sie nicht überschrieben wird, um bestimmte Markup bereit die <see cref="M:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml" /> -Methode, die Informationen über den Typ und die ID des Steuerelements enthalten soll.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPersistenceContent">
+      <MemberSignature Language="C#" Value="public virtual string GetPersistenceContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetPersistenceContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetPersistenceContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das dauerhafte innere HTML-Markup des Steuerelements zur Entwurfszeit ab.</summary>
+        <returns>Eine Zeichenfolge, die das dauerhafte innere HTML-Markup für das zugeordnete Steuerelement darstellt. Die Standardeinstellung ist <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Web.UI.Design.ControlDesigner.GetPersistenceContent" /> Methode, um benutzerdefinierte Behandlung der innere Inhalt Persistenz für Entwurfshost bereitzustellen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPersistInnerHtml">
+      <MemberSignature Language="C#" Value="public virtual string GetPersistInnerHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetPersistInnerHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetPersistInnerHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is GetPersistenceContent(). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das dauerhafte innere HTML-Markup des Steuerelements ab.</summary>
+        <returns>Das dauerhafte innere HTML-Markup des Steuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ControlDesigner.GetPersistInnerHtml%2A> Methode ist veraltet. Verwenden der <xref:System.Web.UI.Design.ControlDesigner.GetPersistenceContent%2A> Methode für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewRendering">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.ViewRendering GetViewRendering ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.Design.ViewRendering GetViewRendering() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetViewRendering" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ViewRendering</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Objekt, das während der Entwurfszeit-Markup für den Inhalt und die Bereiche des zugeordneten Steuerelements enthält.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.Design.ViewRendering" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewRendering">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Design.ViewRendering GetViewRendering (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Design.ViewRendering GetViewRendering(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetViewRendering(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ViewRendering</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein <see cref="T:System.Web.UI.Control" />-Objekt.</param>
+        <summary>Ruft ein Objekt, das während der Entwurfszeit-Markup für den Inhalt und die Bereiche des angegebenen Steuerelements enthält.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.Design.ViewRendering" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewRendering">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Design.ViewRendering GetViewRendering (System.Web.UI.Design.ControlDesigner designer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Design.ViewRendering GetViewRendering(class System.Web.UI.Design.ControlDesigner designer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetViewRendering(System.Web.UI.Design.ControlDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ViewRendering</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Web.UI.Design.ControlDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="designer">Eine Steuerelement-Designer, die abgeleitet <see cref="T:System.Web.UI.Design.ControlDesigner" />.</param>
+        <summary>Ruft ein Objekt, das Markup für den Inhalt und die Bereiche des zugeordneten Steuerelements zur Entwurfszeit für das angegebene Steuerelement-Designer enthält.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.Design.ViewRendering" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HidePropertiesInTemplateMode">
+      <MemberSignature Language="C#" Value="protected virtual bool HidePropertiesInTemplateMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HidePropertiesInTemplateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.HidePropertiesInTemplateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Eigenschaften des zugeordneten Steuerelements ausgeblendet werden, wenn das Steuerelement im Vorlagenmodus befindet.</summary>
+        <value>
+          <see langword="true" />, wenn die Eigenschaften des zugeordneten Steuerelements ausgeblendet werden, wenn das Steuerelement im Vorlagenmodus; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die ID-Eigenschaft wird nie ausgeblendet. Die <xref:System.Web.UI.Design.ControlDesigner.PreFilterProperties%2A> -Methode verwendet die <xref:System.Web.UI.Design.ControlDesigner.HidePropertiesInTemplateMode%2A> Eigenschaft, um zu bestimmen, ob die Eigenschaft außer der ID-Eigenschaft aus dem Eigenschaftenraster ausgeblendet werden soll, während das Steuerelement im Vorlagenbearbeitungsmodus befindet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public virtual string ID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID-Zeichenfolge für das Steuerelement.</summary>
+        <value>Die ID-Zeichenfolge für das Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner.ID%2A> Eigenschaft wird intern verwendet, in der Steuerelement-Designer und für die Interaktion mit dem Eigenschaftenfenster. Die <xref:System.Web.UI.Design.ControlDesigner.ID%2A> Eigenschaft führt Shadowing für die Laufzeit <xref:System.Web.UI.Control.ID%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das Steuerelement, das entworfen wird.</param>
+        <summary>Initialisiert den Steuerelementdesigner und lädt die angegebene Komponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner.Initialize%2A> Methode wird aufgerufen, vom Entwurfshost auf folgende Aktionen ausführen:  
+  
+-   Laden Sie die Steuerelement-Designer mit der Komponente zu entwerfen.  
+  
+-   Richten Sie die Ansicht auf das Steuerelement mithilfe der <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A> Methode.  
+  
+-   Stellen Sie sicher, dass der Typ des zugeordneten Steuerelements ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe einer Steuerelementklasse und eine Steuerelement-Designer-Klasse, die das Überschreiben der <xref:System.Web.UI.Design.ControlDesigner.Initialize%2A> Methode, um die internen Variablen initialisieren.  
+  
+ [!code-csharp[System.Web.UI.Design.ControlDesigner_Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.ControlDesigner_Example/CS/SimpleControlDesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.ControlDesigner_Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.ControlDesigner_Example/VB/simplecontroldesigner.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InTemplateMode">
+      <MemberSignature Language="C#" Value="protected bool InTemplateMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InTemplateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.InTemplateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Steuerelement in einer Vorlage anzeigen und Bearbeiten von Modus im Entwurfshost ist. Die <see cref="P:System.Web.UI.Design.ControlDesigner.InTemplateMode" /> Eigenschaft ist schreibgeschützt.</summary>
+        <value>
+          <see langword="true" />, wenn das Steuerelement in einer Vorlage anzeigen und Bearbeiten von Modus; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Webserversteuerelement befindet sich in Vorlagenmodus, wenn eine schreibgeschützte Vorlage gegenwärtig angezeigt wird oder eine bearbeitbare Vorlage in einem Entwurfshost wie z. B. bearbeitet wird [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner> -Klasse stellt den Standardwert <xref:System.Web.UI.Design.ViewEventHandler> zu aktualisierenden Objekts der <xref:System.Web.UI.Design.ControlDesigner.InTemplateMode%2A> Wert, wenn der Vorlagenmodus für das zugeordnete Steuerelement geändert wird. Benutzerdefinierte Designer zur Verfügung, die abgeleitet sind die <xref:System.Web.UI.Design.TemplatedControlDesigner> -Klasse überschreiben die <xref:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged%2A> Methode, um zusätzliche Verarbeitung aus, wenn die Vorlage bearbeiten modusänderung für ein Steuerelement im Entwurfshost auszuführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Invalidate">
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Das Steuerelement erklärt, wie auf der Entwurfsoberfläche angezeigt und führt dazu, dass den Entwurfshost Aufrufen der <see cref="M:System.Web.UI.Design.ControlDesigner.OnPaint(System.Windows.Forms.PaintEventArgs)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A> auch Methodenaufrufe <xref:System.Web.UI.Design.ControlDesigner.Invalidate%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public void Invalidate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invalidate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.Invalidate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erklärt den gesamten Bereich des Steuerelements, das auf der Entwurfsoberfläche angezeigt wird, und signalisiert den Steuerelement-Designer auf das Steuerelement neu gezeichnet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Aktivieren des Steuerelement-Designers, Paint-Ereignisse behandeln die <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A> Methode in der <xref:System.Web.UI.Design.ControlDesigner.Initialize%2A> Methode.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner.Invalidate%2A> Methode bietet Entwurfshost eine Möglichkeit, weisen Sie den Steuerelement-Designer auf das Steuerelement neu gezeichnet werden. Im Wesentlichen ist dies der gleiche wie das Aufrufen <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A> -Methode, da er bewirkt, dass das gesamte Steuerelement neu gezeichnet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public void Invalidate (System.Drawing.Rectangle rectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invalidate(valuetype System.Drawing.Rectangle rectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.Invalidate(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rectangle">Ein <see cref="T:System.Drawing.Rectangle" /> Objekt, das den Bereich für ungültig zu erklärende relativ zur linken oberen Ecke des Steuerelements darstellt.</param>
+        <summary>Erklärt den angegebenen Bereich des Steuerelements, das auf der Entwurfsoberfläche angezeigt wird, und signalisiert den Steuerelement-Designer auf das Steuerelement neu gezeichnet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Aktivieren des Steuerelement-Designers, Paint-Ereignisse behandeln die <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A> Methode in der <xref:System.Web.UI.Design.ControlDesigner.Initialize%2A> Methode.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner.Invalidate%2A> Methode bietet Entwurfshost eine Möglichkeit, weisen Sie den Steuerelement-Designer zu einen bestimmten Teil der das Steuerelement neu gezeichnet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeTransactedChange">
+      <MemberSignature Language="C#" Value="public static void InvokeTransactedChange (System.ComponentModel.IComponent component, System.Web.UI.Design.TransactedChangeCallback callback, object context, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InvokeTransactedChange(class System.ComponentModel.IComponent component, class System.Web.UI.Design.TransactedChangeCallback callback, object context, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange(System.ComponentModel.IComponent,System.Web.UI.Design.TransactedChangeCallback,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="callback" Type="System.Web.UI.Design.TransactedChangeCallback" />
+        <Parameter Name="context" Type="System.Object" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das Steuerelement der Steuerelement-Designer zugeordnet ist.</param>
+        <param name="callback">Ein <see cref="T:System.Web.UI.Design.TransactedChangeCallback" /> Objekt, das eine Funktion aufrufen, in der Steuerelement-Designer als Teil der Transaktion darstellt.</param>
+        <param name="context">Ein Objekt, das Argument für den Rückruf enthält.</param>
+        <param name="description">Eine Beschreibung der Auswirkungen die Transaktion abgeschlossen ist, sodass die vom Entwurfshost verwendet wird, um dem Benutzer eine Möglichkeit zum Abbrechen der Transaktions.</param>
+        <summary>Dient als Wrapper für eine Reihe von Änderungen in einer Transaktion, die mit den angegebenen Parametern, die als Einheit mit der Funktion zum Rückgängigmachen der Entwurfshost Rollback ausgeführt werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung von der <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> -Methode benachrichtigt Entwurfshost, die vom bestimmt wird die <xref:System.Web.UI.Control.Site%2A> Eigenschaft `component`, die eine Änderung in das zugeordnete Steuerelement auftritt, und wenn die Änderung nicht vom Entwurfshost, abgebrochen wird, ruft der angegebene `callback` unter Verwendung des angegebenen `context`, und klicken Sie dann benachrichtigt Entwurfshost, dass die Änderung abgeschlossen wurde.  
+  
+ Wenn der Entwurfshost oder das zugeordnete Steuerelement einen statischen löst `Canceled` Ausnahme Feld eine <xref:System.ComponentModel.Design.CheckoutException> Ausnahme, die Transaktion abgebrochen, ohne dass Aufrufen `callback`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen eines einfachen zusammengesetzten Steuerelements mit einer <xref:System.Web.UI.WebControls.Label> und ein <xref:System.Web.UI.WebControls.TextBox> -Steuerelement, zusammen mit den Eigenschaften der Bezeichnungstext festlegen sowie die <xref:System.Web.UI.WebControls.TextBox.Text%2A>, <xref:System.Web.UI.WebControls.WebControl.Width%2A>, und <xref:System.Web.UI.WebControls.WebControl.BackColor%2A> Eigenschaften des die <xref:System.Web.UI.WebControls.TextBox> Steuerelement. Eine zugeordnete Steuerelement-Designer-Klasse erstellt drei <xref:System.ComponentModel.Design.DesignerActionMethodItem> Befehle, von denen jede zwei Eigenschaften für das Steuerelement festlegen. Mithilfe der <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> -Methode, können Sie die Funktion zum Rückgängigmachen der Entwurfshost, z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], um jede abgeschlossene Transaktion als Einheit ein Rollback auszuführen.  
+  
+ [!code-csharp[DesignerInvokeTransactedChange#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerInvokeTransactedChange/CS/InvokeTransactedChangeSample.cs#1)]
+ [!code-vb[DesignerInvokeTransactedChange#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerInvokeTransactedChange/VB/InvokeTransactedChangeSample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="component" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="callback" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeTransactedChange">
+      <MemberSignature Language="C#" Value="public static void InvokeTransactedChange (System.ComponentModel.IComponent component, System.Web.UI.Design.TransactedChangeCallback callback, object context, string description, System.ComponentModel.MemberDescriptor member);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InvokeTransactedChange(class System.ComponentModel.IComponent component, class System.Web.UI.Design.TransactedChangeCallback callback, object context, string description, class System.ComponentModel.MemberDescriptor member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange(System.ComponentModel.IComponent,System.Web.UI.Design.TransactedChangeCallback,System.Object,System.String,System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="callback" Type="System.Web.UI.Design.TransactedChangeCallback" />
+        <Parameter Name="context" Type="System.Object" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das Steuerelement der Steuerelement-Designer zugeordnet ist.</param>
+        <param name="callback">Ein <see cref="T:System.Web.UI.Design.TransactedChangeCallback" /> Objekt, das eine Funktion aufrufen, in der Steuerelement-Designer als Teil der Transaktion darstellt.</param>
+        <param name="context">Ein Objekt, das Argument für den Rückruf enthält.</param>
+        <param name="description">Eine Beschreibung der Auswirkungen die Transaktion abgeschlossen ist, sodass die vom Entwurfshost verwendet wird, um dem Benutzer eine Möglichkeit zum Abbrechen der Transaktions.</param>
+        <param name="member">Ein <see cref="T:System.ComponentModel.MemberDescriptor" /> Objekt (i. d. r. eine <see cref="T:System.ComponentModel.EventDescriptor" /> oder ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> Objekt), die beschreibt, des Mitglied des zugeordneten Steuerelements an, die als Teil der Transaktion aufgerufen wird.</param>
+        <summary>Dient als Wrapper für eine Reihe von Änderungen in einer Transaktion, die mit den angegebenen Parametern, die als Einheit mit der Funktion zum Rückgängigmachen der Entwurfshost Rollback ausgeführt werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung von der <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> -Methode benachrichtigt Entwurfshost, die vom bestimmt wird die <xref:System.Web.UI.Control.Site%2A> Eigenschaft `component`, die eine Änderung auftritt, mit dem angegebenen `member` (Eigenschaft oder Methode) des zugeordneten Steuerelements und, wenn die Änderung nicht vom Entwurfshost abgebrochen wird, ruft die angegebene `callback` unter Verwendung des angegebenen `context` als Argument aus, und klicken Sie dann benachrichtigt Entwurfshost, dass die Änderung abgeschlossen wurde.  
+  
+ Wenn der Entwurfshost oder das zugeordnete Steuerelement einen statischen löst `Canceled` Ausnahme Feld eine <xref:System.ComponentModel.Design.CheckoutException> Ausnahme, die Transaktion abgebrochen, ohne dass Aufrufen `callback`.  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%28System.ComponentModel.IComponent%2CSystem.Web.UI.Design.TransactedChangeCallback%2CSystem.Object%2CSystem.String%29>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="component" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="callback" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeTransactedChange">
+      <MemberSignature Language="C#" Value="public static void InvokeTransactedChange (IServiceProvider serviceProvider, System.ComponentModel.IComponent component, System.Web.UI.Design.TransactedChangeCallback callback, object context, string description, System.ComponentModel.MemberDescriptor member);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InvokeTransactedChange(class System.IServiceProvider serviceProvider, class System.ComponentModel.IComponent component, class System.Web.UI.Design.TransactedChangeCallback callback, object context, string description, class System.ComponentModel.MemberDescriptor member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange(System.IServiceProvider,System.ComponentModel.IComponent,System.Web.UI.Design.TransactedChangeCallback,System.Object,System.String,System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="callback" Type="System.Web.UI.Design.TransactedChangeCallback" />
+        <Parameter Name="context" Type="System.Object" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein <see cref="T:System.IServiceProvider" /> Objekt, das darstellt, das Steuerelement-Designer für das zugeordnete Steuerelement bereitstellt Entwurfshost.</param>
+        <param name="component">Das Steuerelement der Steuerelement-Designer zugeordnet ist.</param>
+        <param name="callback">Ein <see cref="T:System.Web.UI.Design.TransactedChangeCallback" /> Objekt, das eine Funktion aufrufen, in der Steuerelement-Designer als Teil der Transaktion darstellt.</param>
+        <param name="context">Ein Objekt, das Argument für den Rückruf enthält.</param>
+        <param name="description">Eine Beschreibung der Auswirkungen die Transaktion abgeschlossen ist, sodass die vom Entwurfshost verwendet wird, um dem Benutzer eine Möglichkeit zum Abbrechen der Transaktions.</param>
+        <param name="member">Ein <see cref="T:System.ComponentModel.MemberDescriptor" /> Objekt (in der Regel entweder ein <see cref="T:System.ComponentModel.EventDescriptor" /> oder ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> Objekt), die beschreibt, des Mitglied des zugeordneten Steuerelements an, die als Teil der Transaktion aufgerufen wird.</param>
+        <summary>Dient als Wrapper für eine Reihe von Änderungen in einer Transaktion, die mit den angegebenen Parametern, die als Einheit mit der Funktion zum Rückgängigmachen der Entwurfshost Rollback ausgeführt werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung von der <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> -Methode benachrichtigt Entwurfshost, die durch dargestellt wird `serviceProvider`, die eine Änderung auftritt, mit dem angegebenen `member` (Eigenschaft oder Methode) des zugeordneten Steuerelements und, wenn die Änderung von nicht abgebrochen wird die Host entwerfen, ruft die angegebene `callback` unter Verwendung des angegebenen `context` als Argument aus, und klicken Sie dann benachrichtigt Entwurfshost, dass die Änderung abgeschlossen wurde.  
+  
+ Wenn der Entwurfshost oder das zugeordnete Steuerelement einen statischen löst `Canceled` Ausnahme Feld eine <xref:System.ComponentModel.Design.CheckoutException> Ausnahme, die Transaktion abgebrochen, ohne dass Aufrufen `callback`.  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="component" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="callback" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="serviceProvider" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public bool IsDirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is to use Tag.SetDirty() and Tag.IsDirty. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Webserver-Steuerelement als geändert markiert wurde.</summary>
+        <value>
+          <see langword="true" />, wenn sich der Webserver-Steuerelement geändert hat, seit dem letzten persistent gespeichert oder geladen. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ControlDesigner.IsDirty%2A>-Eigenschaft ist veraltet. Verwenden der <xref:System.Web.UI.Design.IControlDesignerTag.IsDirty%2A> Eigenschaft und die <xref:System.Web.UI.Design.IControlDesignerTag.SetDirty%2A> Methode für die <xref:System.Web.UI.Design.ControlDesigner.Tag%2A> -Eigenschaft für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPropertyBound">
+      <MemberSignature Language="C#" Value="public bool IsPropertyBound (string propName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsPropertyBound(string propName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.IsPropertyBound(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is DataBindings.Contains(string). The DataBindings collection allows more control of the databindings associated with the control. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propName">Die Eigenschaft, für die Datenbindung zu testen.</param>
+        <summary>Ruft einen Wert, der angibt, ob die angegebene Eigenschaft des zugeordneten Steuerelements datengebunden ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die Eigenschaft des datengebundenen; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ControlDesigner.IsPropertyBound%2A> Methode ist veraltet. Verwenden der <xref:System.Web.UI.DataBindingCollection.Contains%2A> Methode für die <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A> -Eigenschaft für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Localize">
+      <MemberSignature Language="C#" Value="public void Localize (System.Web.UI.Design.IDesignTimeResourceWriter resourceWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Localize(class System.Web.UI.Design.IDesignTimeResourceWriter resourceWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.Localize(System.Web.UI.Design.IDesignTimeResourceWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceWriter" Type="System.Web.UI.Design.IDesignTimeResourceWriter" />
+      </Parameters>
+      <Docs>
+        <param name="resourceWriter">Ein abgeleitetes Objekt aus der <see cref="T:System.Web.UI.Design.IDesignTimeResourceWriter" /> -Objekt, das zum Schreiben von Ressourcen in den Antwortstream zur Entwurfszeit verwendet wird.</param>
+        <summary>Die bereitgestellten Ressourcenwriters verwendet zum Beibehalten von lokalisierbaren Eigenschaften des zugeordneten Steuerelements auf eine Ressource im Entwurfshost.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner.Localize%2A> Methode wird aufgerufen, vom Entwurfshost Ressourceneinträge für jede Eigenschaft erstellen, die mit einem <xref:System.ComponentModel.LocalizableAttribute> Objekt und alle Eigenschaften, die einen explizite Ressourcenausdruck als Wert verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAutoFormatApplied">
+      <MemberSignature Language="C#" Value="public virtual void OnAutoFormatApplied (System.Web.UI.Design.DesignerAutoFormat appliedAutoFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnAutoFormatApplied(class System.Web.UI.Design.DesignerAutoFormat appliedAutoFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnAutoFormatApplied(System.Web.UI.Design.DesignerAutoFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appliedAutoFormat" Type="System.Web.UI.Design.DesignerAutoFormat" />
+      </Parameters>
+      <Docs>
+        <param name="appliedAutoFormat">Ein <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> -Objekt, das ein Format definiert.</param>
+        <summary>Wird aufgerufen, wenn eine vordefinierte, automatische Schema für die Formatierung auf das zugeordnete Steuerelement angewendet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner.OnAutoFormatApplied%2A> Methode wird aufgerufen, nachdem ein <xref:System.Web.UI.Design.DesignerAutoFormat> Objekt ein vordefiniertes Format auf das zugeordnete Steuerelement angewendet hat. Ein <xref:System.Web.UI.Design.DesignerAutoFormat> Objekt definiert die automatische Formatierung Schema namens und des Stils Einstellungen, die an das Steuerelement angewendet werden.  
+  
+ Klassen, die von der <xref:System.Web.UI.Design.ControlDesigner> -Klasse überschreiben die <xref:System.Web.UI.Design.ControlDesigner.OnAutoFormatApplied%2A> Methode, um zusätzliche Verarbeitungsschritte gleichzeitig ausführen, wenn ein Schema für die automatische Formatierung auf das zugeordnete Steuerelement angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBindingsCollectionChanged">
+      <MemberSignature Language="C#" Value="protected override void OnBindingsCollectionChanged (string propName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBindingsCollectionChanged(string propName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnBindingsCollectionChanged(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is to handle the Changed event on the DataBindings collection. The DataBindings collection allows more control of the databindings associated with the control. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propName">Die Eigenschaft, die auf Änderungen in die Auflistung der parameterbindungen zu testen.</param>
+        <summary>Wird aufgerufen, wenn die Datenbindung Auflistung ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner.OnBindingsCollectionChanged%2A> Methode wird aufgerufen, wenn die Datenbindung Auflistung von einem externen Aufrufer geändert wurde.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ControlDesigner.OnBindingsCollectionChanged%2A> Methode ist veraltet. Verwenden der <xref:System.Web.UI.DataBindingCollection.Changed> Ereignis auf der <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A> Auflistung für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnClick (System.Web.UI.Design.DesignerRegionMouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClick(class System.Web.UI.Design.DesignerRegionMouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnClick(System.Web.UI.Design.DesignerRegionMouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.Design.DesignerRegionMouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Web.UI.Design.DesignerRegionMouseEventArgs" /> Objekt, das angibt, den Speicherort und möglicherweise das Steuerelement Designerbereich, die der Benutzer geklickt hat.</param>
+        <summary>Wird vom Entwurfshost aufgerufen, klickt der Benutzer des zugeordneten Steuerelements zur Entwurfszeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> Ereignis wird vom Entwurfshost für bestimmte Aktionen für ein Steuerelement in der Entwurfsoberfläche angezeigt. Beispielsweise wird ein Ereignis für den folgenden Umständen ausgelöst:  
+  
+-   Der Benutzer auf das Steuerelement klickt.  
+  
+-   Die Steuerelement-Designer zeichnet auf der Entwurfsoberfläche angezeigt.  
+  
+-   Der Benutzer eingibt oder Vorlagenbearbeitungsmodus für das Steuerelement verlässt.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner> -Klasse stellt ein Delegat standardmäßig behandelt der <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent?displayProperty=nameWithType> Ereignis. Ableiten von Klassen <xref:System.Web.UI.Design.ControlDesigner> überschreiben die <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> Methode zum Verarbeiten von Ereignissen, die ausgelöst werden, wenn der Benutzer ein Steuerelement klickt.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> Methode kann abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ Die standardmäßige Implementierung des der <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> Methodenrückgabe ohne Verarbeitungen ausführen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie einen Handler für das <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> Ereignis in einen klickbaren Bereich des Steuerelements und verwenden Sie eine <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs> Objekt, mit die Region angegeben, auf den geklickt wird.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.EditableDesignerRegion> Klasse.  
+  
+ [!code-csharp[SimpleMultiRegionControlDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/CS/SimpleMultiRegionControlDesigner.cs#4)]
+ [!code-vb[SimpleMultiRegionControlDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/VB/SimpleMultiRegionControlDesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben der <see cref="M:System.Web.UI.Design.ControlDesigner.OnClick(System.Web.UI.Design.DesignerRegionMouseEventArgs)" /> Methode in einer Klasse, ableiten von der <see cref="T:System.Web.UI.Design.ControlDesigner" /> -Klasse zur Verarbeitung zur Entwurfszeit click-Ereignisse für das Steuerelement. Wenn <paramref name="e" /> nicht, Bereich, auf die geklickt wurde, null ist, wenn vorhanden, wird angegeben, der <see cref="P:System.Web.UI.Design.DesignerRegionMouseEventArgs.Region" /> Eigenschaft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanged">
+      <MemberSignature Language="C#" Value="public virtual void OnComponentChanged (object sender, System.ComponentModel.Design.ComponentChangedEventArgs ce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnComponentChanged(object sender, class System.ComponentModel.Design.ComponentChangedEventArgs ce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="ce" Type="System.ComponentModel.Design.ComponentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="ce">Ein <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn das zugeordnete Steuerelement geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> Methode wird aufgerufen, wenn eine Eigenschaft für das zugeordnete Steuerelement geändert wird. Dadurch kann die Implementierung Verarbeitungen ausführen können, die nach der Änderung einer Eigenschaft erforderlich sein könnte. Aufrufen der <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> Methode bewirkt, dass den Entwurfshost zum Aufrufen der <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methode. Die basisimplementierung für die <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> Methode speichert auch das Steuerelement im Markup Seite.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Web.UI.Design.ControlDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" /> Methode, um vor dem Beibehalten der Kontrolle und bevor Sie das HTML-Markup zur Entwurfszeit aktualisieren zusätzliche Verarbeitungsschritte bereitzustellen.  
+  
+ Zum Überschreiben der <see cref="M:System.Web.UI.Design.ControlDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" /> Methode in einer abgeleiteten Klasse stellen Sie sicher, dass Sie rufen die <see cref="M:System.Web.UI.Design.ControlDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" /> Methode für die Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanging">
+      <MemberSignature Language="C#" Value="public virtual void OnComponentChanging (object sender, System.ComponentModel.Design.ComponentChangingEventArgs ce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnComponentChanging(object sender, class System.ComponentModel.Design.ComponentChangingEventArgs ce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnComponentChanging(System.Object,System.ComponentModel.Design.ComponentChangingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="ce" Type="System.ComponentModel.Design.ComponentChangingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das die Quelle des Ereignisses ist.</param>
+        <param name="ce">Ein <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Stellt die Methode für die Behandlung der <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanging" /> Ereignis für das zugeordnete Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn entweder die <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> oder <xref:System.Web.UI.Design.ControlDesigner.Localize%2A> -Methode aufgerufen wird, die <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanging> Ereignis tritt auf, bevor das zugeordnete Steuerelement geändert werden. Nachdem die Änderungen abgeschlossen sind die <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> Methode auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnControlResize">
+      <MemberSignature Language="C#" Value="protected virtual void OnControlResize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnControlResize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnControlResize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is OnComponentChanged(). OnComponentChanged is called when any property of the control is changed. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn die zugeordneten Webserver-Steuerelement zur Entwurfszeit im Entwurfshost geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ControlDesigner.OnControlResize%2A> Methode ist veraltet. Verwenden der <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> Methode für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner.OnControlResize%2A> Methode wird in der Regel nur von der Umgebung zur Entwurfszeit aufgerufen, wenn eine Benutzeraktion bewirkt, dass die zugeordneten Webserver-Steuerelement, deren Größe geändert werden. Die <xref:System.Web.UI.Design.ControlDesigner.OnControlResize%2A> Methode kann mehrmals aufgerufen werden, während einer Größe auf die aktualisierte Größe des Steuerelements anzuzeigen, bevor der Größenänderung abgeschlossen ist. Die Eigenschaften für Höhe und Breite des Steuerelements werden aktualisiert, bevor die <xref:System.Web.UI.Design.ControlDesigner.OnControlResize%2A> -Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected virtual void OnPaint (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" /> Objekt, das die Grafiken und Rechteck Grenzen, die zum Zeichnen des Steuerelements angibt.</param>
+        <summary>Wird aufgerufen, wenn der Steuerelement-Designer das zugeordnete Steuerelement auf der Entwurfsoberfläche zeichnet die <see cref="F:System.Web.UI.Design.ViewFlags.CustomPaint" /> Wert <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> Ereignis wird vom Entwurfshost für bestimmte Aktionen für ein Steuerelement in der Entwurfsoberfläche angezeigt. Beispielsweise wird ein Ereignis für den folgenden Umständen ausgelöst:  
+  
+-   Der Benutzer auf das Steuerelement klickt.  
+  
+-   Das Design Host Anforderungen HTML-Markup zum Rendern des zugeordneten Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+-   Der Benutzer eingibt oder Vorlagenbearbeitungsmodus für das Steuerelement verlässt.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner> -Klasse stellt ein Delegat standardmäßig behandelt der <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent?displayProperty=nameWithType> Ereignis. Ableiten von Klassen <xref:System.Web.UI.Design.ControlDesigner> sollte festgelegt die <xref:System.Web.UI.Design.ViewFlags?displayProperty=nameWithType> Wert und überschreiben die <xref:System.Web.UI.Design.ControlDesigner.OnPaint%2A> Methode zum Verarbeiten von Ereignissen, die ausgelöst werden, wenn der Entwurfshost das Steuerelement auf der Entwurfsoberfläche zeichnet.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner.OnPaint%2A> Methode kann abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ Die standardmäßige Implementierung des der <xref:System.Web.UI.Design.ControlDesigner.OnPaint%2A> Methodenrückgabe ohne Verarbeitungen ausführen.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben der <see cref="M:System.Web.UI.Design.ControlDesigner.OnPaint(System.Windows.Forms.PaintEventArgs)" /> Methode in einer Klasse, ableiten von der <see cref="T:System.Web.UI.Design.ControlDesigner" /> -Klasse zur Verarbeitung von Paint-Ereignisse für ein Steuerelement in der Entwurfsoberfläche angezeigt. Das Ereignis tritt jedoch nur, wenn die <see cref="F:System.Web.UI.Design.ViewFlags.CustomPaint" /> Wert festgelegt wurde, mit der <see cref="M:System.Web.UI.Design.ControlDesigner.SetViewFlags(System.Web.UI.Design.ViewFlags,System.Boolean)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die Eigenschaften für die Klasse der Komponente.</param>
+        <summary>Eigenschaften hinzugefügt oder entfernt Eigenschaften aus dem Raster "Eigenschaften" in einem Entwurfshost zur Entwurfszeit stellt neue während der Entwurfszeit-Eigenschaften, die die Eigenschaften des zugeordneten Steuerelements entsprechen möglicherweise.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Web.UI.Design.ControlDesigner.PreFilterProperties%2A> -Methode, können Sie Elemente hinzufügen, auf das Wörterbuch von Eigenschaften, die über ein Steuerelement-Designer stellt eine <xref:System.ComponentModel.TypeDescriptor> Objekt.  
+  
+ Der Schlüssel im Wörterbuch Eigenschaften sind die Namen der Eigenschaften. Die Objekte sind vom Typ <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können direkt ändern, das Wörterbuch, das über den Eigenschaftenparameter möglich ist, oder Sie können diese unverändert belassen. Wenn Sie überschreiben die <see cref="M:System.Web.UI.Design.ControlDesigner.PreFilterProperties(System.Collections.IDictionary)" /> -Methode, die basisimplementierung aufrufen, bevor Sie eine eigene Filtern ausführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseResizeEvent">
+      <MemberSignature Language="C#" Value="public void RaiseResizeEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseResizeEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.RaiseResizeEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because resizing is handled by the OnComponentChanged() method. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das <see cref="M:System.Web.UI.Design.ControlDesigner.OnControlResize" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner.RaiseResizeEvent%2A> Methode ist veraltet, und es gibt keinen Ersatz für diese Funktion.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is to inherit from ContainerControlDesigner instead and to use an EditableDesignerRegion. Regions allow for better control of the content in the designer. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Eigenschaften des Steuerelements zur Entwurfszeit schreibgeschützt sind.</summary>
+        <value>
+          <see langword="true" />, wenn die Eigenschaften des Steuerelements zur Entwurfszeit; schreibgeschützt sind andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner> Klasse ist naturgemäß schreibgeschützt. Lese-/Schreibzugriff Funktionen werden bereitgestellt, durch Hinzufügen einer <xref:System.Web.UI.Design.DesignerRegion> Objekt oder die Verwendung von Basisklassen wie z. B. die <xref:System.Web.UI.Design.ContainerControlDesigner> Klasse.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ControlDesigner.ReadOnly%2A>-Eigenschaft ist veraltet. Ableiten von der <xref:System.Web.UI.Design.ContainerControlDesigner> Klasse, die Sie bearbeitbare Designerbereiche hinzufügen können, oder aus der <xref:System.Web.UI.Design.TemplatedControlDesigner> Objekt, bei dem Sie bearbeitbare Designerbereiche in Vorlagen erstellen können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterClone">
+      <MemberSignature Language="C#" Value="public void RegisterClone (object original, object clone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterClone(object original, object clone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.RegisterClone(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="original" Type="System.Object" />
+        <Parameter Name="clone" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="original">Das Steuerelement der Steuerelement-Designer zugeordnet ist.</param>
+        <param name="clone">Die geklonte Kopie des zugeordneten Steuerelements.</param>
+        <summary>Interne Daten registriert in einem geklonten Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Klonen eines Elements ist es möglicherweise einige interne Datenstrukturen, z. B. `meta:` Attribute, die von der Steuerelement-Designer im geklonten Steuerelement eingeschlossen werden soll. Ein Entwickler möglichweise `meta:` -Attribute verwenden, um das Markup für ein Steuerelement, und es gibt keine Möglichkeit, noch kann ein Grund für das Steuerelement zu unterscheiden, was diese Tags sein könnte. Aus diesem Grund, wenn der Steuerelement-Designer eine Möglichkeit, komplexe Eigenschaften oder Formate zu bearbeiten, vor dem Anwenden von Änderungen auf einer Seite bereitstellt, Sie erstellen Sie einen Klon des Steuerelements, übergeben Sie das ursprüngliche Steuerelement und den Klon dieser <xref:System.Web.UI.Design.ControlDesigner.RegisterClone%2A> -Methode, und klicken Sie dann, wenn die Änderungen um den RFID-Transponder beibehalten werden alle `meta:` Attribute werden auch beibehalten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="original" /> ist NULL.  
+  
+ - oder -   
+  
+ <paramref name="clone" /> ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RootDesigner">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Design.WebFormsRootDesigner RootDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.WebFormsRootDesigner RootDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.RootDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.WebFormsRootDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Steuerelement-Designer für die Web Forms-Seite, die das zugeordnete Steuerelement enthält.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.WebFormsRootDesigner" /> -Objekt, das zur Entwurfszeit auf Komponenten auf die Web Forms-Seite verwendet werden kann, die das Steuerelement enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> Eigenschaft darstellt, den Steuerelement-Designer für die Web Forms-Seite, die das Steuerelement enthält. Verwenden der <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> Eigenschaft zugreifen, und bearbeiten die enthaltende Web Forms-Seite zur Entwurfszeit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public virtual void SetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.SetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="region">Eine bearbeitbare Entwurf Region im Steuerelement enthaltene.</param>
+        <param name="content">Der Inhalt für bearbeitbaren Entwurfsbereichs zuweisen.</param>
+        <summary>Gibt den Inhalt für einen bearbeitbaren Bereich des Steuerelements zur Entwurfszeit an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die von der <xref:System.Web.UI.Design.ControlDesigner> Klasse unterstützt, bereichsbasierte Bearbeitung auf der Entwurfsoberfläche angezeigt wird, und überschreiben die <xref:System.Web.UI.Design.ControlDesigner.SetEditableDesignerRegionContent%2A> Methode, um den Inhalt für einen angegebenen Bereich festgelegt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einen Verweis auf den Entwurfshost abrufen und verwenden dann den Verweis zum Erstellen einer <xref:System.Web.UI.Design.ControlParser> -Objekt, das aktiviert `content` in eine Instanz von der <xref:System.Web.UI.ITemplate> Schnittstelle und weist die <xref:System.Web.UI.ITemplate> -Instanz, auf die entsprechende Ansicht.  
+  
+ [!code-csharp[SimpleMultiRegionControlDesigner#7](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/CS/SimpleMultiRegionControlDesigner.cs#7)]
+ [!code-vb[SimpleMultiRegionControlDesigner#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/VB/SimpleMultiRegionControlDesigner.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRegionContent">
+      <MemberSignature Language="C#" Value="protected void SetRegionContent (System.Web.UI.Design.EditableDesignerRegion region, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetRegionContent(class System.Web.UI.Design.EditableDesignerRegion region, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.SetRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="region">Eine bearbeitbare Entwurf-Region, in der Entwurfszeitansicht des Steuerelements enthalten sind.</param>
+        <param name="content">Der Inhalt für bearbeitbaren Entwurfsbereichs zuweisen.</param>
+        <summary>Gibt an die Inhalt für einen bearbeitbaren Bereich der Entwurfszeitansicht des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird die <xref:System.Web.UI.Design.ControlDesigner.SetRegionContent%2A> Methode ist nicht in abgeleiteten Designern überschrieben. Die Basisklasse bewirkt, dass den Entwurfshost Aufrufen der <xref:System.Web.UI.Design.ControlDesigner.SetEditableDesignerRegionContent%2A> Methode für die Region. Überschreiben der <xref:System.Web.UI.Design.ControlDesigner.SetRegionContent%2A> Methode, wenn benutzerdefinierte Daten für das Steuerelement vor dem Aufruf erneuter <xref:System.Web.UI.Design.ControlDesigner.SetEditableDesignerRegionContent%2A> Methode.  
+  
+ Verwenden der <xref:System.Web.UI.Design.ControlDesigner.SetRegionContent%2A> Methode zum Einfügen von HTML-Markup in einem Bereich des Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetViewFlags">
+      <MemberSignature Language="C#" Value="protected void SetViewFlags (System.Web.UI.Design.ViewFlags viewFlags, bool setFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetViewFlags(valuetype System.Web.UI.Design.ViewFlags viewFlags, bool setFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.SetViewFlags(System.Web.UI.Design.ViewFlags,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewFlags" Type="System.Web.UI.Design.ViewFlags" />
+        <Parameter Name="setFlag" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="viewFlags">Ein <see cref="T:System.Web.UI.Design.ViewFlags" />-Wert.</param>
+        <param name="setFlag">
+          <see langword="true" />um das Flag festzulegen <see langword="false" /> So entfernen Sie das Flag.</param>
+        <summary>Weist dem angegebenen bitweiser <see cref="T:System.Web.UI.Design.ViewFlags" /> den Wert der angegebenen Flags-Enumeration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt mehrere Flags, die festgelegt werden können. Verwenden Sie z. B. die <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A> -Methode zum Festlegen der <xref:System.Web.UI.Design.ViewFlags.DesignTimeHtmlRequiresLoadComplete> Wert des aktuellen <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> -Eigenschaft für das Steuerelement-Designer, anstelle der veralteten <xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A> Methode, um anzugeben, dass die Vorlage im Bearbeitungsmodus befindet.  
+  
+ [!code-csharp[DesignerTemplateGroupSample#5](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerTemplateGroupSample/CS/TemplateGroupsSample.cs#5)]
+ [!code-vb[DesignerTemplateGroupSample#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Design.IControlDesignerTag Tag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IControlDesignerTag Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IControlDesignerTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das das HTML-Markup-Element für das zugeordnete Steuerelement darstellt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.IControlDesignerTag" /> -Objekt, das HTML-Markup-Element für das zugeordnete Steuerelement darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel die <xref:System.Web.UI.Design.ControlDesigner.Tag%2A> -Eigenschaft wird nur für die Kommunikation zwischen dem Entwurfshost und der Steuerelement-Designer verwendet und wird nicht von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateGroups">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.Design.TemplateGroupCollection TemplateGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroupCollection TemplateGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.TemplateGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung vom Vorlagengruppen ab, die jeweils eine oder mehrere Definitionen enthalten.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Web.UI.Design.TemplateGroup" />-Objekten. Standard ist eine leere <see cref="T:System.Web.UI.Design.TemplateGroupCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Steuerelement-Designer-Klasse erstellen, die von abgeleitet ist die <xref:System.Web.UI.Design.ControlDesigner> Klasse. Diese Steuerelement-Designer unterstützt ein Steuerelement mit vier möglichen Vorlagen.  
+  
+ Um dies zu versuchen, Kompilieren des Codes, und klicken Sie dann in einen Entwurf hosten, wie z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], zeigen Sie die Seite in der Entwurfsansicht. Wählen Sie das Steuerelement, klicken Sie auf die Liste der Aktionen zum Auswählen einer Vorlage zu ändern und dann verwenden Sie die Drag-and-Drop-Funktion, um die Steuerelemente in die Vorlage verschoben.  
+  
+ [!code-csharp[DesignerTemplateGroupSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerTemplateGroupSample/CS/TemplateGroupsSample.cs#1)]
+ [!code-vb[DesignerTemplateGroupSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.vb#1)]  
+[!code-aspx-vb[DesignerTemplateGroupSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können die <see cref="P:System.Web.UI.Design.ControlDesigner.TemplateGroups" /> Auflistung direkt, oder Sie können diese unverändert belassen. Wenn Sie außer Kraft gesetzt werden die <see cref="P:System.Web.UI.Design.ControlDesigner.TemplateGroups" /> -Eigenschaft, die basisimplementierung aufrufen, bevor die Auflistung der Vorlagengruppen hinzugefügt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public virtual void UpdateDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert das Entwurfszeit HTML-Markup für den zugeordneten Webserver-Steuerelement durch Aufrufen der <see cref="Overload:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A> Methode wird aufgerufen, vom Entwurfshost aktualisiert die Anzeige des zugehörigen Webserver-Steuerelement zur Entwurfszeit, z. B. wenn das Steuerelement geändert wurde. Ein Steuerelement-Designer kann auch aufrufen, die <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A> Methode nach dem Ändern von Werten des Steuerelements, um die Anzeige des Steuerelements zu aktualisieren.  
+  
+> [!NOTE]
+>  Beim Aufrufen der <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> Ereignis oder über die <xref:System.ComponentModel.PropertyDescriptor> Objekt zum Festlegen von Eigenschaften, die <xref:System.ComponentModel.Design.IComponentChangeService> -Schnittstelle Aufrufen der <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A> Methode für Sie.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie So reagieren Sie auf eine `Click` Ereignis in einem Steuerelement-Designer den Fokus zwischen Datenbereichen in einem Steuerelement mit mehreren ändern und verwenden die <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A> Methode, um die Darstellung des Steuerelements im Entwurfshost zu aktualisieren.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.EditableDesignerRegion> Klasse.  
+  
+ [!code-csharp[SimpleMultiRegionControlDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/CS/SimpleMultiRegionControlDesigner.cs#4)]
+ [!code-vb[SimpleMultiRegionControlDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/VB/SimpleMultiRegionControlDesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected virtual bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Steuerelement-Designer ein temporäres Vorschausteuerelement verwendet, um das HTML-Markup zur Entwurfszeit zu generieren.</summary>
+        <value>
+          <see langword="true" />, wenn der Steuerelement-Designer eine temporäre Kopie des Steuerelements für die Vorschau zur Entwurfszeit verwendet. Andernfalls <see langword="false" />, wenn der Steuerelement-Designer die <see cref="P:System.ComponentModel.Design.ComponentDesigner.Component" />-Eigenschaft für das Steuerelement im Steuerelement-Designer verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> Eigenschaft `true`, die <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Eigenschaft gibt eine temporäre Kopie des Steuerelements zurück. Änderungen an den temporären Steuerelement werden in das Dokument nicht beibehalten.  
+  
+ Wenn die <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> Eigenschaft ist `false`, die <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Eigenschaft gibt eine Instanz von der <xref:System.ComponentModel.Design.ComponentDesigner.Component%2A> -Eigenschaft für das Steuerelement. Änderungen an der Instanz des Steuerelements werden beibehalten.  
+  
+ Die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> festlegen in der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> Objekt wird zum Festlegen des Werts der <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> Eigenschaft. Aus diesem Grund die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Einstellung bestimmt den Typ des Steuerelements, die von zurückgegeben wird das <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Eigenschaft in der Basisklasse <xref:System.Web.UI.Design.ControlDesigner> Klasse. Wenn die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> in einer Deklaration der Steuerelement-Designer nicht angegeben ist die <xref:System.Web.UI.Design.ControlDesigner> Objektverhalten ist gleichbedeutend mit der Angabe der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Eigenschaft als `false`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Benutzerdefinierte Designer zur Verfügung, die abgeleitet sind die <see cref="T:System.Web.UI.Design.ControlDesigner" /> -Klasse überschreiben die <see cref="P:System.Web.UI.Design.ControlDesigner.UsePreviewControl" /> Eigenschaft und ignorieren die <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> Objekt. Im Allgemeinen gibt an, dass die <see cref="P:System.Web.UI.Design.ControlDesigner.ViewControl" /> -Eigenschaft gibt immer eine temporäre Kopie des Steuerelements, überschreiben die <see cref="P:System.Web.UI.Design.ControlDesigner.UsePreviewControl" /> -Eigenschaft zum Zurückgeben von immer <see langword="true" />. Gibt an, dass die <see cref="P:System.Web.UI.Design.ControlDesigner.ViewControl" /> -Eigenschaft gibt immer eine Instanz des Steuerelements, überschreiben die <see cref="P:System.Web.UI.Design.ControlDesigner.UsePreviewControl" /> -Eigenschaft zum Zurückgeben von immer <see langword="false" />. Z. B. die <see cref="T:System.Web.UI.Design.WebControls.PreviewControlDesigner" /> Klasse leitet sich von der <see cref="T:System.Web.UI.Design.ControlDesigner" /> und gibt immer <see langword="true" /> für die <see cref="P:System.Web.UI.Design.ControlDesigner.UsePreviewControl" /> Eigenschaft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewControl">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control ViewControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control ViewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.ViewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen ein Webserver-Steuerelements, das für die Vorschau zur Entwurfszeit-HTML-Markup verwendet werden kann.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Control" /> Objekt, das von der Basisklasse verwendet wird, um HTML-Markup zur Entwurfszeit zu generieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Eigenschaft verwendet die <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> -Eigenschaft können Sie dessen Rückgabewert zu bestimmen.  
+  
+ Wenn die <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> Eigenschaft `true`, die <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Eigenschaft gibt eine temporäre Kopie des Steuerelements zurück. Änderungen an den temporären Steuerelement werden nicht beibehalten.  
+  
+ Wenn die <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> Eigenschaft ist `false`, die <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Eigenschaft gibt eine Instanz von der <xref:System.ComponentModel.Design.ComponentDesigner.Component%2A> -Eigenschaft für das Steuerelement. Änderungen an der Instanz des Steuerelements werden beibehalten.  
+  
+ Die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> festlegen in der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> Objekt wird zum Festlegen des Werts der <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> Eigenschaft. Aus diesem Grund die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Einstellung bestimmt den Typ des Steuerelements, die von zurückgegeben wird das <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Eigenschaft in der Basisklasse <xref:System.Web.UI.Design.ControlDesigner> Klasse. Wenn die <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> in einer Deklaration der Steuerelement-Designer nicht angegeben ist die <xref:System.Web.UI.Design.ControlDesigner> Objektverhalten ist gleichbedeutend mit der Angabe der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> Eigenschaft als `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einen Steuerelement-Designer mit Markieren der <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> Attribut. Im Codebeispiel wird abgeleitet wird, ein Webserversteuerelement aus der <xref:System.Web.UI.WebControls.Label> -Klasse und ordnet das Steuerelement ein benutzerdefiniertes Steuerelement-Designer-Implementierung. Die Deklaration der Steuerelement-Designer-Klasse mit RuntimeCompatibility der `SupportsPreviewControl` -Attributsatz zur `true`. Überschreibt die Steuerelementdesigner die <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> -Methode und dann die <xref:System.Web.UI.WebControls.Label.Text%2A> Eigenschaft des Steuerelements zur Entwurfszeit kursiv.  
+  
+ [!code-csharp[System.Web.UI.Design.SupportsPreviewControlAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.SupportsPreviewControlAttribute/CS/supportspreviewdesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.SupportsPreviewControlAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.SupportsPreviewControlAttribute/VB/supportspreviewdesigner.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewControlCreated">
+      <MemberSignature Language="C#" Value="public virtual bool ViewControlCreated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ViewControlCreated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.ViewControlCreated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein <see langword="View" /> Steuerelement für die Anzeige auf der Entwurfsoberfläche erstellt wurde.</summary>
+        <value>
+          <see langword="true" />, wenn ein Steuerelement für die Anzeige auf der Entwurfsoberfläche erstellt wurde andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="protected virtual bool Visible { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Steuerelement zur Entwurfszeit sichtbar ist.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

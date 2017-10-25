@@ -1,0 +1,2221 @@
+<Type Name="SplitContainer" FullName="System.Windows.Forms.SplitContainer">
+  <TypeSignature Language="C#" Value="public class SplitContainer : System.Windows.Forms.ContainerControl, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SplitContainer extends System.Windows.Forms.ContainerControl implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.SplitContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ContainerControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("SplitterMoved")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.SplitContainerDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Forms.Docking(System.Windows.Forms.DockingBehavior.AutoDock)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement, besteht eine verschiebbare Leiste, die einen Container Anzeigebereich in zwei Bereichen mit veränderbarer Größe unterteilt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hinzufügen von Steuerelementen zu den beiden Bereichen mit veränderbarer Größe, und Sie können andere hinzufügen <xref:System.Windows.Forms.SplitContainer> vorhandenen steuert <xref:System.Windows.Forms.SplitContainer> Anzeigebereiche für Bereiche zu viele veränderbarer Größe zu erstellen.  
+  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer> Steuerelement, um den Anzeigebereich eines Containers zu unterteilen (z. B. eine <xref:System.Windows.Forms.Form>) und ermöglicht dem Benutzer, um die Größe von Steuerelementen, die hinzugefügt werden, die <xref:System.Windows.Forms.SplitContainer> Bereiche. Wenn der Benutzer übergibt dem Mauszeiger über den Splitter, ändert sich der Cursor an, dass die Steuerelemente in einer der <xref:System.Windows.Forms.SplitContainer> Steuerelement geändert werden kann.  
+  
+> [!NOTE]
+>  Frühere Versionen von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] unterstützen nur die <xref:System.Windows.Forms.Splitter> Steuerelement.  
+  
+ <xref:System.Windows.Forms.SplitContainer>Außerdem erleichtert die Positionierung von Steuerelementen zur Entwurfszeit. Zum Erstellen eines Fensters Windows Explorer ähnelt, z. B. Hinzufügen einer <xref:System.Windows.Forms.SplitContainer> die Steuerung an eine <xref:System.Windows.Forms.Form> und legen Sie seine <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft `DockStyle.Fill`. Hinzufügen einer <xref:System.Windows.Forms.TreeView> die Steuerung an die <xref:System.Windows.Forms.Form> und legen Sie seine <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft `DockStyle.Fill`. Um das Layout abzuschließen, fügen Sie eine <xref:System.Windows.Forms.ListView> steuern und festlegen, seine <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft `DockStyle.Fill` haben die <xref:System.Windows.Forms.ListView> belegen den verbleibenden Speicherplatz auf der <xref:System.Windows.Forms.Form>. Der Benutzer kann dann die Breite der beiden Steuerelemente mithilfe des Splitters ändern, zur Laufzeit. Verwenden der <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> Eigenschaft, um anzugeben, dass ein Steuerelement nicht geändert werden soll, können Sie zusammen mit der <xref:System.Windows.Forms.Form> oder andere Container.  
+  
+ Verwendung <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> angeben, wo der Splitter auf dem Formular beginnt. Verwendung <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> an, wie viele Pixel des Splitters zu einem Zeitpunkt. Die Standardeinstellung für <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> beträgt ein Pixel.  
+  
+ Verwendung <xref:System.Windows.Forms.SplitContainer.Panel1MinSize%2A> und <xref:System.Windows.Forms.SplitContainer.Panel2MinSize%2A> angeben, wie nahe die Teilerleiste an den äußeren Rand verschoben werden kann ein <xref:System.Windows.Forms.SplitContainer> Bereich. Die minimale Standardgröße eines Bereichs beträgt 25 Pixel.  
+  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft, um horizontale Ausrichtung anzugeben. Die standardmäßige Ausrichtung der der <xref:System.Windows.Forms.SplitContainer> ist vertikal.  
+  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.BorderStyle%2A> Eigenschaft an, dass die Rahmenart des der <xref:System.Windows.Forms.SplitContainer> und koordinieren die Rahmenart, mit die Rahmenart der Steuerelemente, die Sie Hinzufügen der <xref:System.Windows.Forms.SplitContainer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, sowohl eine vertikale und horizontale <xref:System.Windows.Forms.SplitContainer>. Die vertikalen Splitters in Schritten von 10 Pixel. Der linke Bereich des vertikalen <xref:System.Windows.Forms.SplitContainer> enthält eine <xref:System.Windows.Forms.TreeView> -Steuerelement und seine Rechte Bereich enthält ein horizontales <xref:System.Windows.Forms.SplitContainer>. Beide Bereiche des horizontalen <xref:System.Windows.Forms.SplitContainer> mit gefüllt <xref:System.Windows.Forms.ListView> Steuerelemente und der obere Bereich ist definiert als eine <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> , damit er beim Ändern der Größe des Containers nicht Größe. Verschieben den vertikalen Splitter löst die <xref:System.Windows.Forms.SplitContainer.SplitterMoving> Ereignis, wie in diesem Beispiel durch eine Änderung an den Cursor-Stil. Die <xref:System.Windows.Forms.SplitContainer.SplitterMoved> Ereignis wird ausgelöst, wenn Sie beim Verschieben des Splitters beenden. Dies wird in diesem Beispiel wird die Formatvorlage für die Cursor auf den Standardwert zurücksetzen gekennzeichnet.  
+  
+ [!code-cpp[BasicSplitContainer#1](~/samples/snippets/cpp/VS_Snippets_Winforms/BasicSplitContainer/CPP/basicsplitcontainer.cpp#1)]
+ [!code-csharp[BasicSplitContainer#1](~/samples/snippets/csharp/VS_Snippets_Winforms/BasicSplitContainer/CS/basicsplitcontainer.cs#1)]
+ [!code-vb[BasicSplitContainer#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BasicSplitContainer/VB/basicsplitcontainer.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SplitContainer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.SplitContainer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScroll">
+      <MemberSignature Language="C#" Value="public override bool AutoScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.AutoScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ab oder legt einen Wert, der angibt, ob Bildlaufleisten automatisch angezeigt werden, wenn die Steuerelemente platziert werden, außerhalb der <see cref="T:System.Windows.Forms.SplitContainer" /> Clientbereichs. Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>
+          <see langword="true" />Wenn Bildlaufleisten werden automatisch bei Steuerelemente außerhalb platziert die <see cref="T:System.Windows.Forms.SplitContainer" /> Clientbereich ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollMargin">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size AutoScrollMargin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size AutoScrollMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.AutoScrollMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des AutoBildlaufrandes ab oder legt diese fest. Diese Eigenschaft ist für diese Klasse nicht relevant. Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> Wert, der die Höhe und Breite des der AutoBildlaufrandes in Pixel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die AutoBildlaufrandes entspricht dem Abstand zwischen untergeordneten Steuerelementen und den Rändern des bildlauffähigen übergeordneten Steuerelements. Die <xref:System.Windows.Forms.SplitContainer.AutoScrollMargin%2A> Größe wird auf die Größe von untergeordneten Steuerelementen im bildlauffähigen Steuerelement zu bestimmen, ob Bildlaufleisten enthaltenen hinzugefügt. Die <xref:System.Windows.Forms.SplitContainer.AutoScrollMargin%2A> -Eigenschaft wird ausgewertet, wenn die Größe bildlauffähigen übergeordneten Steuerelements geändert wird oder die einzelnen untergeordneten Steuerelemente in der Ansicht, und wird verwendet, um zu bestimmen, ob Bildlaufleisten angezeigt werden müssen. Angedockten Steuerelemente werden von den Berechnungen ausgeschlossen, die bestimmen, ob Bildlaufleisten angezeigt werden müssen.  
+  
+ Wenn der Abstand zwischen dem Rand eines untergeordneten Steuerelements und bildlauffähigen übergeordneten Steuerelements kleiner als der zugewiesene Wert ist die <xref:System.Windows.Forms.SplitContainer.AutoScrollMargin%2A> Eigenschaft und die <xref:System.Windows.Forms.SplitContainer.AutoScroll%2A> -Eigenschaftensatz auf `true`, wird die entsprechende Bildlaufleiste angezeigt.  
+  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollMinSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size AutoScrollMinSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size AutoScrollMinSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.AutoScrollMinSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die minimale Größe der Schiebeleiste ab oder legt diese fest. Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> , die die minimale Höhe und Breite der Schiebeleiste in Pixel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.AutoScrollMinSize%2A> Eigenschaft, um die Größe des Bildschirms, die die automatische Bildlaufleiste zugeordnet zu verwalten.  
+  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollOffset">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Point AutoScrollOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point AutoScrollOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.AutoScrollOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Point), "0, 0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Ein <see cref="T:System.Drawing.Point" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollPosition">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point AutoScrollPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point AutoScrollPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.AutoScrollPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Ein <see cref="T:System.Drawing.Point" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.SplitContainer" /> wird automatisch angepasst, um den gesamten Inhalt anzuzeigen. Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.SplitContainer" /> automatisch dessen Größe geändert wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt eines Steuerelements können viele Gründe ändern; einschließlich Anzeige datenänderungen; Hinzufügen von untergeordneten Steuerelementen; Layout und Auffüllung Änderungen; oder systemänderungen Schriftart, Sprache oder Auflösung. Wenn die <xref:System.Windows.Forms.SplitContainer.AutoSize%2A> -Eigenschaftensatz auf `true`, <xref:System.Windows.Forms.SplitContainer> geändert werden, automatisch seinen Inhalt, obwohl sie nie angepasst kleiner sein als das ursprüngliche <xref:System.Drawing.Size>. Dieser Vorgang wird des Steuerelements verwalten <xref:System.Windows.Forms.SplitContainer.Padding%2A>. Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.SplitContainer.AutoSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.SplitContainer.AutoSize" />-Eigenschaft ändert. Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das im Steuerelement angezeigte Hintergrundbild ab oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Image" />, das das im Hintergrund des Steuerelements anzuzeigende Bild darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Verwenden der <xref:System.Windows.Forms.SplitContainer.BackgroundImage%2A> Eigenschaft, um ein Bild auf einem Steuerelement zu platzieren.  
+  
+> [!NOTE]
+>  Bilder mit durchsichtigen oder transparenten Farben werden von Windows Forms-Steuerelementen als Hintergrundbilder nicht unterstützt.  
+>   
+>  Diese Eigenschaft wird nicht unterstützt, auf untergeordnete Steuerelemente, deren <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> Eigenschaft ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.SplitContainer.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.SplitContainer.BackgroundImage" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.SplitContainer.BackgroundImage%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.SplitContainer.BackgroundImageChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.SplitContainer> mit dem Namen `SplitContainer1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.SplitContainer.BackgroundImageChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#546](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#546)]
+ [!code-vb[System.Windows.Forms.EventExamples#546](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#546)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ImageLayout" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.SplitContainer.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.SplitContainer.BackgroundImageLayout" />-Eigenschaft ändert. Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert dem Objekt den Start der Initialisierung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingContext">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.BindingContext BindingContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.BindingContext BindingContext" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.BindingContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.BindingContext" /> für den <see cref="T:System.Windows.Forms.SplitContainer" /> ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.BindingContext" /> für das Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-504)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Art des Rahmens für den <see cref="T:System.Windows.Forms.SplitContainer" />.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.BorderStyle" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.BorderStyle.Fixed3D" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.BorderStyle%2A> Eigenschaft, um den Rahmen des Splitters und den äußeren Rändern eines koordiniert die <xref:System.Windows.Forms.SplitContainer> Bilder mit dem Rahmen des Steuerelements oder Steuerelemente, die die <xref:System.Windows.Forms.SplitContainer> enthält.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Wert der Eigenschaft ist nicht die <see cref="T:System.Windows.Forms.BorderStyle" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlAdded">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ControlEventHandler ControlAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ControlEventHandler ControlAdded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.SplitContainer.ControlAdded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlRemoved">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ControlEventHandler ControlRemoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ControlEventHandler ControlRemoved" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.SplitContainer.ControlRemoved" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control/ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control+ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der untergeordneten Steuerelemente ab. Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Ein Objekt des Typs <see cref="T:System.Windows.Forms.Control.ControlCollection" /> , die die untergeordneten Steuerelemente enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlsInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Control.ControlCollection CreateControlsInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.Control/ControlCollection CreateControlsInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.CreateControlsInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control+ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der Steuerelementauflistung für das Steuerelement.</summary>
+        <returns>Eine neue Instanz der dem Steuerelement zugewiesenen <see cref="T:System.Windows.Forms.Control.ControlCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardgröße des <see cref="T:System.Windows.Forms.SplitContainer" />-Objekts ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> , die die Größe des stellt die <see cref="T:System.Windows.Forms.SplitContainer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie die <xref:System.Windows.Forms.SplitContainer.DefaultSize%2A> Eigenschaft in einer abgeleiteten Klasse an eine Standardgröße für <xref:System.Windows.Forms.SplitContainer>. Dies ist effizienter als das Festlegen der Größe der <xref:System.Windows.Forms.SplitContainer> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dock">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DockStyle Dock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DockStyle Dock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.Dock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, welche <see cref="T:System.Windows.Forms.SplitContainer" /> Ränder die Ränder des Containers zugeordnet sind.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.DockStyle" />-Werte. Der Standardwert ist <see langword="None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können Andocken eine <xref:System.Windows.Forms.SplitContainer> an keinem Rand des Containers, oder Sie können Andocken eine <xref:System.Windows.Forms.SplitContainer> an alle Ränder des Containers, damit der <xref:System.Windows.Forms.SplitContainer> vollständig füllt den Container. Legen Sie diese Eigenschaft beispielsweise auf <xref:System.Windows.Forms.DockStyle?displayProperty=nameWithType> , fügen Sie den linken Rand der <xref:System.Windows.Forms.SplitContainer> an den linken Rand des Containers. Steuerelemente werden in Z-Reihenfolge angedockt.  
+  
+> [!NOTE]
+>  Die Z-Reihenfolge entspricht der Tiefendimension des Bildschirms, und die X-Reihenfolge und die y-Reihenfolge entspricht die horizontalen und vertikalen Dimensionen bzw.. Z-Reihenfolge definiert, welche Objekt vor, die in Fällen angezeigt wird, in dem Steuerelemente oder Windows können sich überschneiden und dürfen nicht den gleichen Platz auf dem Bildschirm. Ein Steuerelement oder Fenster am Anfang der Z-Reihenfolge zusätzlich zu anderen Steuerelementen oder Windows wird angezeigt, und verweist auf einen Index 0 in der <xref:System.Windows.Forms.SplitContainer.Controls%2A> Eigenschaft. Ein Steuerelement oder Fenster am unteren Rand der Z-Reihenfolge wird unterhalb alle anderen Steuerelemente oder und verweist auf einen Index der `(Controls.Count-1)` in der <xref:System.Windows.Forms.SplitContainer.Controls%2A> Eigenschaft.  
+  
+ Weitere Informationen zu verankern und Andocken von Steuerelementen, finden Sie unter [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](~/docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt einen vertikalen Splitter, deren <xref:System.Windows.Forms.SplitContainer.Dock%2A> -Eigenschaftensatz auf `Fill`. Andere grundlegenden Eigenschaften eines vertikalen Splitters werden ebenfalls angezeigt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.SplitContainer> Klasse.  
+  
+ [!code-cpp[BasicSplitContainer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/BasicSplitContainer/CPP/basicsplitcontainer.cpp#2)]
+ [!code-csharp[BasicSplitContainer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/BasicSplitContainer/CS/basicsplitcontainer.cs#2)]
+ [!code-vb[BasicSplitContainer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BasicSplitContainer/VB/basicsplitcontainer.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert dem Objekt den Abschluss der Initialisierung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedPanel">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FixedPanel FixedPanel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.FixedPanel FixedPanel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.FixedPanel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FixedPanel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, welche <see cref="T:System.Windows.Forms.SplitContainer" /> Bereich bleibt die gleiche Größe beim Ändern der Größe des Containers.</summary>
+        <value>Einer der Werte von <see cref="T:System.Windows.Forms.FixedPanel" />. Der Standardwert ist <see langword="None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft angeben, welche <xref:System.Windows.Forms.SplitContainer> Bereich bleibt die gleiche Größe, wenn ein Benutzer die Größe des Containers verändert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine horizontale Aufteilung, dessen oberer Bereich als definiert ist, eine <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> , damit nicht zusammen mit dem Container Größe angepasst wird. Andere grundlegenden Eigenschaften eines horizontalen Splitters werden ebenfalls angezeigt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.SplitContainer> Klasse.  
+  
+ [!code-cpp[BasicSplitContainer#3](~/samples/snippets/cpp/VS_Snippets_Winforms/BasicSplitContainer/CPP/basicsplitcontainer.cpp#3)]
+ [!code-csharp[BasicSplitContainer#3](~/samples/snippets/csharp/VS_Snippets_Winforms/BasicSplitContainer/CS/basicsplitcontainer.cs#3)]
+ [!code-vb[BasicSplitContainer#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BasicSplitContainer/VB/basicsplitcontainer.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Windows.Forms.FixedPanel" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSplitterFixed">
+      <MemberSignature Language="C#" Value="public bool IsSplitterFixed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSplitterFixed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.IsSplitterFixed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Splitter fixiert oder verschiebbar ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn der Splitter fixiert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> Eigenschaft aktivieren oder Deaktivieren der splitterbewegung. Beispielsweise können Sie programmgesteuert festlegen <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> auf `true` bei der Aktualisierung der Anzeige, wenn Elemente anderer Steuerelemente den Fokus besitzt, oder wenn ein Ereignis ist auftritt, für die die Anzeigebereiche durch geteilt, die <xref:System.Windows.Forms.SplitContainer> müssen konstant bleiben festgelegt <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> auf `false` bei dieser Umstände werden nicht angewendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGotFocus">
+      <MemberSignature Language="C#" Value="protected override void OnGotFocus (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGotFocus(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnGotFocus(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.GotFocus" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.SplitContainer.OnGotFocus%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.SplitContainer.OnGotFocus(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.SplitContainer.OnGotFocus(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Forms.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Forms.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnKeyDown(System.Windows.Forms.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.KeyEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.KeyDown" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig der <xref:System.Windows.Forms.SplitContainer.OnKeyDown%2A> -Ereignishandler kann der Benutzer Verschieben des Splitters nach unten, wenn die nach-oben-Taste gedrückt wird. Die <xref:System.Windows.Forms.SplitContainer.OnKeyDown%2A> Ereignishandler zeichnet auch die <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> zum Anzeigen der aktuellen Position des Splitters, während sie verschoben werden.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.SplitContainer.OnKeyDown%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.SplitContainer.OnKeyDown(System.Windows.Forms.KeyEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.SplitContainer.OnKeyDown(System.Windows.Forms.KeyEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyUp">
+      <MemberSignature Language="C#" Value="protected override void OnKeyUp (System.Windows.Forms.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyUp(class System.Windows.Forms.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnKeyUp(System.Windows.Forms.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.KeyEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.KeyUp" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig der <xref:System.Windows.Forms.SplitContainer.OnKeyUp%2A> -Ereignishandler kann der Benutzer Verschieben des Splitters einrichten, wenn die nach-oben-Taste gedrückt wird. Die <xref:System.Windows.Forms.SplitContainer.OnKeyUp%2A> Ereignishandler zeichnet auch die <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> zum Anzeigen der aktuellen Position des Splitters, während sie verschoben werden.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.SplitContainer.OnKeyUp%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.SplitContainer.OnKeyUp(System.Windows.Forms.KeyEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.SplitContainer.OnKeyUp(System.Windows.Forms.KeyEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayout">
+      <MemberSignature Language="C#" Value="protected override void OnLayout (System.Windows.Forms.LayoutEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLayout(class System.Windows.Forms.LayoutEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnLayout(System.Windows.Forms.LayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.LayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.LayoutEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.Layout" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.SplitContainer.OnLayout%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.SplitContainer.OnLayout(System.Windows.Forms.LayoutEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.SplitContainer.OnLayout(System.Windows.Forms.LayoutEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLostFocus">
+      <MemberSignature Language="C#" Value="protected override void OnLostFocus (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLostFocus(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnLostFocus(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.LostFocus" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.SplitContainer.OnLostFocus%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.SplitContainer.OnLostFocus(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.SplitContainer.OnLostFocus(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseCaptureChanged">
+      <MemberSignature Language="C#" Value="protected override void OnMouseCaptureChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseCaptureChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnMouseCaptureChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseCaptureChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseDown" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Forms.SplitContainer.OnMouseDown%2A> Ereignishandler ermöglicht dem Benutzer, die Position des Splitters nachzuverfolgen, während sie mit der Maus nach unten verschoben wird. <xref:System.Windows.Forms.SplitContainer.OnMouseDown%2A>zeichnet auch die <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> zum Anzeigen der aktuellen Position des Splitters, während sie verschoben werden. Die <xref:System.Windows.Forms.SplitContainer> behält den Überblick über des ersten <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> für den Fall, dass der Benutzer den Verschiebevorgang abbricht.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.SplitContainer.OnMouseDown%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.SplitContainer.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.SplitContainer.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnMouseLeave(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseLeave" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.SplitContainer.OnMouseLeave%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.SplitContainer.OnMouseLeave(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.SplitContainer.OnMouseLeave(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnMouseMove(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseMove" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Forms.SplitContainer.OnMouseMove%2A> Ereignishandler ermöglicht dem Benutzer, die Position des Splitters nachzuverfolgen, während sie mit der Maus verschoben wird. <xref:System.Windows.Forms.SplitContainer.OnMouseMove%2A>zeichnet auch die <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> zum Anzeigen der aktuellen Position des Splitters, während sie verschoben werden. Die <xref:System.Windows.Forms.SplitContainer> behält den Überblick über des ersten <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> für den Fall, dass der Benutzer den Verschiebevorgang abbricht.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.SplitContainer.OnMouseMove%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.SplitContainer.OnMouseMove(System.Windows.Forms.MouseEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.SplitContainer.OnMouseMove(System.Windows.Forms.MouseEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseUp" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Forms.SplitContainer.OnMouseUp%2A> Ereignishandler ermöglicht dem Benutzer, die Position des Splitters nachzuverfolgen, während sie mit der Maus verschoben wird. <xref:System.Windows.Forms.SplitContainer.OnMouseUp%2A>zeichnet auch die <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> zum Anzeigen der aktuellen Position des Splitters, während sie verschoben werden. Die <xref:System.Windows.Forms.SplitContainer> behält den Überblick über des ersten <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> für den Fall, dass der Benutzer den Verschiebevorgang abbricht.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.SplitContainer.OnMouseUp%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.SplitContainer.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.SplitContainer.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMove">
+      <MemberSignature Language="C#" Value="protected override void OnMove (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMove(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnMove(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.Move" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.SplitContainer.OnMove%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.SplitContainer.OnMove(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.SplitContainer.OnMove(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.Paint" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.SplitContainer.OnPaint%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.SplitContainer.OnPaint(System.Windows.Forms.PaintEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.SplitContainer.OnPaint(System.Windows.Forms.PaintEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRightToLeftChanged">
+      <MemberSignature Language="C#" Value="protected override void OnRightToLeftChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRightToLeftChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnRightToLeftChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.RightToLeftChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSplitterMoved">
+      <MemberSignature Language="C#" Value="public void OnSplitterMoved (System.Windows.Forms.SplitterEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OnSplitterMoved(class System.Windows.Forms.SplitterEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnSplitterMoved(System.Windows.Forms.SplitterEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.SplitterEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.SplitterEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.SplitContainer.SplitterMoved" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.SplitContainer.SplitterMoved> Ereignis wird ausgelöst, nachdem der Splitter verschoben wurde. Wenn die <xref:System.Windows.Forms.SplitContainer> wird gerade verschoben wird, verwenden die <xref:System.Windows.Forms.SplitContainer.SplitterMoving> Ereignis und die <xref:System.Windows.Forms.SplitContainer.OnSplitterMoving%2A> -Ereignishandler.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel löst die <xref:System.Windows.Forms.SplitContainer.SplitterMoving> Ereignis, das beim Verschieben des Splitters in diesem Beispiel wird durch eine Änderung der gekennzeichnet. Die <xref:System.Windows.Forms.SplitContainer.SplitterMoved> Ereignis wird ausgelöst, wenn Sie beim Verschieben des Splitters beenden. Dies wird in diesem Beispiel wird die Formatvorlage für die Cursor auf den Standardwert zurücksetzen gekennzeichnet.  
+  
+ [!code-cpp[SplitContainerEvents#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SplitContainerEvents/CPP/splitcontainerevents.cpp#1)]
+ [!code-csharp[SplitContainerEvents#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SplitContainerEvents/CS/splitcontainerevents.cs#1)]
+ [!code-vb[SplitContainerEvents#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SplitContainerEvents/VB/splitcontainerevents.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSplitterMoving">
+      <MemberSignature Language="C#" Value="public void OnSplitterMoving (System.Windows.Forms.SplitterCancelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OnSplitterMoving(class System.Windows.Forms.SplitterCancelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.OnSplitterMoving(System.Windows.Forms.SplitterCancelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.SplitterCancelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.SplitterEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.SplitContainer.SplitterMoving" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.SplitContainer.SplitterMoving> Ereignis wird ausgelöst, während der Splitter wechselt gerade ist. Nach der <xref:System.Windows.Forms.SplitContainer> wurde verschoben, verwenden Sie die <xref:System.Windows.Forms.SplitContainer.SplitterMoved> Ereignis und die <xref:System.Windows.Forms.SplitContainer.OnSplitterMoved%2A> -Ereignishandler.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel löst die <xref:System.Windows.Forms.SplitContainer.SplitterMoving> Ereignis, das beim Verschieben des Splitters in diesem Beispiel wird durch eine Änderung der gekennzeichnet. Die <xref:System.Windows.Forms.SplitContainer.SplitterMoved> Ereignis wird ausgelöst, wenn Sie beim Verschieben des Splitters beenden. Dies wird in diesem Beispiel wird die Formatvorlage für die Cursor auf den Standardwert zurücksetzen gekennzeichnet.  
+  
+ [!code-cpp[SplitContainerEvents#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SplitContainerEvents/CPP/splitcontainerevents.cpp#1)]
+ [!code-csharp[SplitContainerEvents#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SplitContainerEvents/CS/splitcontainerevents.cs#1)]
+ [!code-vb[SplitContainerEvents#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SplitContainerEvents/VB/splitcontainerevents.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Orientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Orientation Orientation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Orientation Orientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.Orientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der horizontale oder vertikalen Ausrichtung von der <see cref="T:System.Windows.Forms.SplitContainer" /> Bereiche.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.Orientation" />-Werte. Die Standardeinstellung ist <see langword="Vertical" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft so ändern Sie die <xref:System.Windows.Forms.SplitContainer> aus zu horizontal vertikale oder horizontale, vertikale.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt einer horizontalen Aufteilung, dessen obere und untere Bereiche enthalten <xref:System.Windows.Forms.ListView> Steuerelemente. Andere grundlegenden Eigenschaften eines horizontalen Splitters werden ebenfalls angezeigt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.SplitContainer> Klasse.  
+  
+ [!code-cpp[BasicSplitContainer#3](~/samples/snippets/cpp/VS_Snippets_Winforms/BasicSplitContainer/CPP/basicsplitcontainer.cpp#3)]
+ [!code-csharp[BasicSplitContainer#3](~/samples/snippets/csharp/VS_Snippets_Winforms/BasicSplitContainer/CS/basicsplitcontainer.cs#3)]
+ [!code-vb[BasicSplitContainer#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BasicSplitContainer/VB/basicsplitcontainer.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Windows.Forms.Orientation" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den inneren Abstand in Pixel, zwischen den Rändern eines eine <see cref="T:System.Windows.Forms.SplitterPanel" /> und dessen Inhalt. Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Ein Objekt des Typs <see cref="T:System.Windows.Forms.Padding" /> , das den inneren Abstand darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.SplitContainer.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Panel1">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.SplitterPanel Panel1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.SplitterPanel Panel1" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.Panel1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SplitterPanel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den linken oder oberen Bereich der ab dem <see cref="T:System.Windows.Forms.SplitContainer" />, je nachdem, <see cref="P:System.Windows.Forms.SplitContainer.Orientation" />.</summary>
+        <value>Wenn <see cref="P:System.Windows.Forms.SplitContainer.Orientation" /> ist <see langword="Vertical" />, den linken Bereich der <see cref="T:System.Windows.Forms.SplitContainer" />. Wenn <see cref="P:System.Windows.Forms.SplitContainer.Orientation" /> ist <see langword="Horizontal" />, den oberen Bereich der <see cref="T:System.Windows.Forms.SplitContainer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.Panel1%2A> Eigenschaft so konfigurieren Sie den linken Bereich, der einem vertikalen <xref:System.Windows.Forms.SplitContainer> oder den oberen Bereich eines horizontalen <xref:System.Windows.Forms.SplitContainer>. Beispielsweise können Sie die minimale Größe des Bereichs angeben, durch Ändern des Werts von der <xref:System.Windows.Forms.SplitContainer.Panel1MinSize%2A> Eigenschaftensatz, der <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> Eigenschaft `Panel1` so, dass im Bereich die gleiche Größe des Containers bleibt können Sie abrufen oder Festlegen des Bereichs <xref:System.Windows.Forms.SplitContainer.BackgroundImage%2A> und <xref:System.Windows.Forms.SplitContainer.BackgroundImageLayout%2A> Eigenschaften.  
+  
+ Sie können nicht entfernt werden <xref:System.Windows.Forms.SplitContainer.Panel1%2A> aus der <xref:System.Windows.Forms.SplitContainer>.  
+  
+> [!NOTE]
+>  Wenn <xref:System.Windows.Forms.SplitContainer.Panel1%2A> oder <xref:System.Windows.Forms.SplitContainer.Panel2%2A> enthält kein Steuerelement an, die kann den Fokus erhalten kann, bleibt der Fokus auf den Splitter, wenn darauf geklickt wird. So ändern Sie den Fokus an <xref:System.Windows.Forms.SplitContainer.Panel1%2A> oder <xref:System.Windows.Forms.SplitContainer.Panel2%2A>legen die <xref:System.Windows.Forms.SplitterPanel.TabIndex%2A> Eigenschaft <xref:System.Windows.Forms.SplitContainer.Panel2%2A> auf 0 und die <xref:System.Windows.Forms.SplitterPanel.TabIndex%2A> Eigenschaft <xref:System.Windows.Forms.SplitContainer.Panel1%2A> auf 1.  
+  
+ Wenn <xref:System.Windows.Forms.SplitContainer.Panel1%2A> oder <xref:System.Windows.Forms.SplitContainer.Panel2%2A> enthält kein Steuerelement an, die kann den Fokus erhalten kann, bleibt der Fokus auf den Splitter, wenn darauf geklickt wird. So ändern Sie den Fokus an <xref:System.Windows.Forms.SplitContainer.Panel1%2A> oder <xref:System.Windows.Forms.SplitContainer.Panel2%2A>legen die <xref:System.Windows.Forms.SplitterPanel.TabIndex%2A> Eigenschaft <xref:System.Windows.Forms.SplitContainer.Panel2%2A> auf 0 und die <xref:System.Windows.Forms.SplitterPanel.TabIndex%2A> Eigenschaft <xref:System.Windows.Forms.SplitContainer.Panel1%2A> auf 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Panel1Collapsed">
+      <MemberSignature Language="C#" Value="public bool Panel1Collapsed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Panel1Collapsed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.Panel1Collapsed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert bestimmen, ob <see cref="P:System.Windows.Forms.SplitContainer.Panel1" /> erweitert oder reduziert ist.</summary>
+        <value>
+          <see langword="true" />Wenn <see cref="P:System.Windows.Forms.SplitContainer.Panel1" /> reduziert ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Panel1MinSize">
+      <MemberSignature Language="C#" Value="public int Panel1MinSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Panel1MinSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.Panel1MinSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(25)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den minimalen Abstand in Pixel des Splitters vom linken oder oberen Rand des <see cref="P:System.Windows.Forms.SplitContainer.Panel1" />.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , den minimalen Abstand in Pixel des Splitters vom linken oder oberen Rand des <see cref="P:System.Windows.Forms.SplitContainer.Panel1" />. Der Standardwert ist 25 Pixel unabhängig von <see cref="P:System.Windows.Forms.SplitContainer.Orientation" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.Panel1MinSize%2A> Eigenschaft, um zu verhindern, dass den Splitter zu nah an den linken oder oberen Rand des Containers verschieben. Angenommen, Sie möchten möglicherweise zu verhindern, dass einige der den Anzeigebereich des eine <xref:System.Windows.Forms.TreeView> verdeckt werden.  
+  
+ Wenn die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft `Vertical` (Standard), <xref:System.Windows.Forms.SplitContainer.Panel1MinSize%2A> gibt den minimalen Abstand des Splitters in Pixel vom linken Rand des <xref:System.Windows.Forms.SplitContainer.Panel1%2A>. Wenn die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft `Horizontal`, <xref:System.Windows.Forms.SplitContainer.Panel1MinSize%2A> gibt den minimalen Abstand des Splitters in Pixel vom oberen Rand des <xref:System.Windows.Forms.SplitContainer.Panel1%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt einen vertikalen Splitter, in dem die minimale Größe des <xref:System.Windows.Forms.SplitContainer.Panel1%2A> (linke Fensterbereich) festgelegt, wird er auf 30 Pixel skaliert, die jetzt Mindestabstand des Splitters vom linken Rand des Containers werden kann. Andere grundlegenden Eigenschaften eines vertikalen Splitters werden ebenfalls angezeigt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.SplitContainer> Klasse.  
+  
+ [!code-cpp[BasicSplitContainer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/BasicSplitContainer/CPP/basicsplitcontainer.cpp#2)]
+ [!code-csharp[BasicSplitContainer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/BasicSplitContainer/CS/basicsplitcontainer.cs#2)]
+ [!code-vb[BasicSplitContainer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BasicSplitContainer/VB/basicsplitcontainer.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist nicht kompatibel mit der Ausrichtung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Panel2">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.SplitterPanel Panel2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.SplitterPanel Panel2" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.Panel2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SplitterPanel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den rechten oder unteren Bereich der ab dem <see cref="T:System.Windows.Forms.SplitContainer" />, je nachdem, <see cref="P:System.Windows.Forms.SplitContainer.Orientation" />.</summary>
+        <value>Wenn <see cref="P:System.Windows.Forms.SplitContainer.Orientation" /> ist <see langword="Vertical" />, im rechten Bereich, der die <see cref="T:System.Windows.Forms.SplitContainer" />. Wenn <see cref="P:System.Windows.Forms.SplitContainer.Orientation" /> ist <see langword="Horizontal" />, im unteren Bereich, der die <see cref="T:System.Windows.Forms.SplitContainer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.Panel2%2A> Eigenschaft so konfigurieren Sie im rechten Bereich eine vertikale <xref:System.Windows.Forms.SplitContainer> oder im unteren Bereich von einer horizontalen <xref:System.Windows.Forms.SplitContainer>. Beispielsweise können Sie die minimale Größe des Bereichs angeben, durch Ändern des Werts von der <xref:System.Windows.Forms.SplitContainer.Panel2MinSize%2A> Eigenschaftensatz, der <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> Eigenschaft `Panel2` so, dass im Bereich die gleiche Größe des Containers bleibt können Sie abrufen oder Festlegen des Bereichs <xref:System.Windows.Forms.SplitContainer.BackgroundImage%2A> und <xref:System.Windows.Forms.SplitContainer.BackgroundImageLayout%2A> Eigenschaften.  
+  
+ Sie können nicht entfernt werden <xref:System.Windows.Forms.SplitContainer.Panel2%2A> aus der <xref:System.Windows.Forms.SplitContainer>.  
+  
+> [!NOTE]
+>  Wenn <xref:System.Windows.Forms.SplitContainer.Panel1%2A> oder <xref:System.Windows.Forms.SplitContainer.Panel2%2A> enthält kein Steuerelement an, die kann den Fokus erhalten kann, bleibt der Fokus auf den Splitter, wenn darauf geklickt wird. So ändern Sie den Fokus an <xref:System.Windows.Forms.SplitContainer.Panel1%2A> oder <xref:System.Windows.Forms.SplitContainer.Panel2%2A>legen die <xref:System.Windows.Forms.SplitterPanel.TabIndex%2A> Eigenschaft <xref:System.Windows.Forms.SplitContainer.Panel2%2A> auf 0 und die <xref:System.Windows.Forms.SplitterPanel.TabIndex%2A> Eigenschaft <xref:System.Windows.Forms.SplitContainer.Panel1%2A> auf 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Panel2Collapsed">
+      <MemberSignature Language="C#" Value="public bool Panel2Collapsed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Panel2Collapsed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.Panel2Collapsed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert bestimmen, ob <see cref="P:System.Windows.Forms.SplitContainer.Panel2" /> erweitert oder reduziert ist.</summary>
+        <value>
+          <see langword="true" />Wenn <see cref="P:System.Windows.Forms.SplitContainer.Panel2" /> reduziert ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Panel2MinSize">
+      <MemberSignature Language="C#" Value="public int Panel2MinSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Panel2MinSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.Panel2MinSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(25)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den minimalen Abstand in Pixel des Splitters vom rechten oder unteren Rand des <see cref="P:System.Windows.Forms.SplitContainer.Panel2" />.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , den minimalen Abstand in Pixel des Splitters vom rechten oder unteren Rand des <see cref="P:System.Windows.Forms.SplitContainer.Panel2" />. Der Standardwert ist 25 Pixel unabhängig von <see cref="P:System.Windows.Forms.SplitContainer.Orientation" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.Panel2MinSize%2A> Eigenschaft, um zu verhindern, dass den Splitter zu nah an den rechten oder unteren Rand des Containers verschieben. Angenommen, Sie möchten möglicherweise zu verhindern, dass einige der den Anzeigebereich des eine <xref:System.Windows.Forms.TreeView> verdeckt werden.  
+  
+ Wenn die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft `Vertical` (Standard), <xref:System.Windows.Forms.SplitContainer.Panel2MinSize%2A> gibt den minimalen Abstand in Pixel, die aus dem rechten Rand des Splitters sein können <xref:System.Windows.Forms.SplitContainer.Panel2%2A>. Wenn die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft `Horizontal`, <xref:System.Windows.Forms.SplitContainer.Panel2MinSize%2A> gibt den minimalen Abstand in Pixel, die aus dem unteren Rand des Splitters sein können <xref:System.Windows.Forms.SplitContainer.Panel2%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt einen vertikalen Splitter, in dem die minimale Größe des <xref:System.Windows.Forms.SplitContainer.Panel2%2A> (im rechte Bereich) festgelegt, wird er auf 20 Pixel, die jetzt Mindestabstand des Splitters aus dem rechten Rand des Containers werden kann. Andere grundlegenden Eigenschaften eines vertikalen Splitters werden ebenfalls angezeigt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.SplitContainer> Klasse.  
+  
+ [!code-cpp[BasicSplitContainer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/BasicSplitContainer/CPP/basicsplitcontainer.cpp#2)]
+ [!code-csharp[BasicSplitContainer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/BasicSplitContainer/CS/basicsplitcontainer.cs#2)]
+ [!code-vb[BasicSplitContainer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BasicSplitContainer/VB/basicsplitcontainer.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist nicht kompatibel mit der Ausrichtung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessDialogKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessDialogKey (System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessDialogKey(valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.ProcessDialogKey(System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Einer der <see cref="T:System.Windows.Forms.Keys" />-Werte, die die zu verarbeitende Taste darstellen.</param>
+        <summary>Verarbeitet eine Tastatureingabe im Dialogfeld.</summary>
+        <returns>
+          <see langword="true" />, wenn die Taste vom Steuerelement verarbeitet wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, während der Nachricht vorverarbeitung um Dialogfeld Feld Key Zeichen, z. B. Registerkarte, nach-links-nach-rechts-, nach-oben und Pfeil nach unten zu behandeln. Schlüssel, die die ALT-Taste oder die CONTROL-Modifizierer enthalten, werden nicht behandelt. Diese Methode wird aufgerufen, wenn nur die <xref:System.Windows.Forms.Control.IsInputKey%2A?displayProperty=nameWithType> Methode gibt an, dass das Steuerelement den Schlüssel nicht verarbeitet wird. Die <xref:System.Windows.Forms.Control.ProcessDialogKey%2A?displayProperty=nameWithType> sendet einfach das Zeichen an der übergeordneten <xref:System.Windows.Forms.Control.ProcessDialogKey%2A?displayProperty=nameWithType> -Methode, oder gibt `false` das Steuerelement kein übergeordnetes Element besitzt. Die <xref:System.Windows.Forms.Form?displayProperty=nameWithType> Klasse überschreibt diese Methode, um die tatsächliche Verarbeitung der Tastatureingaben im Dialogfeld Ausführen. Zur Laufzeit ruft diese Methode nur, wenn das Steuerelement in Windows Forms-Anwendung oder als ein ActiveX-Steuerelement gehostet wird.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für alle Fenster für erbende Klassen zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Windows.Forms.Control.ProcessDialogKey(System.Windows.Forms.Keys)" /> Methode in einer abgeleiteten Klasse ein Steuerelement sollte zurückgeben <see langword="true" /> um anzugeben, dass sie die Taste verarbeitet wurde. Für Schlüssel, die vom Steuerelement, das Ergebnis des Aufrufs der Basisklasse nicht verarbeitet werden <see cref="M:System.Windows.Forms.Control.ProcessDialogChar(System.Char)" /> Methode zurückgegeben werden soll. Steuerelemente nur in seltenen Fällen, müssen wenn überhaupt, diese Methode überschreiben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessTabKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessTabKey (bool forward);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessTabKey(bool forward) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.ProcessTabKey(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forward" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="forward">
+          <see langword="true" />um die Steuerelemente im vorwärts zu durchlaufen die <see cref="T:System.Windows.Forms.ContainerControl" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Wählt das nächste verfügbare Steuerelement aus, das zum aktiven Steuerelement wird.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Steuerelement ausgewählt ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.SplitContainer.ProcessTabKey%2A>Steuert die Aktivierreihenfolge auf folgende Weise:  
+  
+-   Beim ersten Steuerelement außerhalb der <xref:System.Windows.Forms.SplitContainer> auf das erste Steuerelement <xref:System.Windows.Forms.SplitContainer.Panel1%2A>.  
+  
+-   Alle Steuerelemente <xref:System.Windows.Forms.SplitContainer.Panel1%2A>.  
+  
+-   Der Splitter (sodass der Benutzer die Pfeiltasten, zum Verschieben des Splitters verwenden kann).  
+  
+-   Alle Steuerelemente <xref:System.Windows.Forms.SplitContainer.Panel2%2A>.  
+  
+-   Das zweite Steuerelement außerhalb der <xref:System.Windows.Forms.SplitContainer> , ist in der Aktivierreihenfolge weiter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleControl">
+      <MemberSignature Language="C#" Value="protected override void ScaleControl (System.Drawing.SizeF factor, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ScaleControl(valuetype System.Drawing.SizeF factor, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.ScaleControl(System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="factor" Type="System.Drawing.SizeF" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="factor">Der Faktor, um den die Höhe und die Breite des Steuerelements skaliert werden.</param>
+        <param name="specified">Ein <see cref="T:System.Windows.Forms.BoundsSpecified" />-Wert, der die Begrenzungen des Steuerelements angibt und bei der Definition von Größe und Position verwendet wird.</param>
+        <summary>Skaliert Speicherort, Größe, Abstand und Rand.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="protected override void Select (bool directed, bool forward);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Select(bool directed, bool forward) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.Select(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="directed" Type="System.Boolean" />
+        <Parameter Name="forward" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="directed">
+          <see langword="true" />, um die Richtung für die Auswahl des Steuerelements anzugeben, andernfalls <see langword="false" />.</param>
+        <param name="forward">
+          <see langword="true" />, um sich in der Aktivierreihenfolge vorwärts zu bewegen, <see langword="false" />, um sich rückwärts zu bewegen.</param>
+        <summary>Aktiviert ein untergeordnetes Steuerelement. Gibt optional die Richtung in der Aktivierreihenfolge für die Auswahl des Steuerelements an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoundsCore">
+      <MemberSignature Language="C#" Value="protected override void SetBoundsCore (int x, int y, int width, int height, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetBoundsCore(int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der neue <see cref="P:System.Windows.Forms.Control.Left" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="y">Der neue <see cref="P:System.Windows.Forms.Control.Top" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="width">Der neue <see cref="P:System.Windows.Forms.Control.Width" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="height">Der neue <see cref="P:System.Windows.Forms.Control.Height" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="specified">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.BoundsSpecified" />-Werte.</param>
+        <summary>Legt die angegebenen Begrenzungen dieses Steuerelements fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitterDistance">
+      <MemberSignature Language="C#" Value="public int SplitterDistance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SplitterDistance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.SplitterDistance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(50)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Speicherort des Splitters in Pixel vom linken oder oberen Rand der <see cref="T:System.Windows.Forms.SplitContainer" />.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , den Speicherort des Splitters in Pixel darstellt, aus dem linken oder oberen Rand der <see cref="T:System.Windows.Forms.SplitContainer" />. Der Standardwert ist 50 Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> Eigenschaft, um zu bestimmen, oder geben Sie die Entfernung des Splitters vom linken oder oberen Rand des Containers in Pixel. Sie können sowohl Geben Sie eine anfängliche Entfernung und ändern die Entfernung zur Entwurfszeit oder zur Laufzeit. Wenn <xref:System.Windows.Forms.SplitContainer.Orientation%2A> ist `Horizontal`, <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> wird berechnet, in Pixel vom oberen Rand der <xref:System.Windows.Forms.SplitContainer>. Wenn <xref:System.Windows.Forms.SplitContainer.Orientation%2A> ist `Vertical`, <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> wird berechnet, in Pixel vom linken Rand der <xref:System.Windows.Forms.SplitContainer>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel gibt an, dass die anfängliche Entfernung des vertikalen Splitters vom linken Rand des Containers 79 Pixel ist. Andere grundlegenden Eigenschaften eines vertikalen Splitters werden ebenfalls angezeigt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.SplitContainer> Klasse.  
+  
+ [!code-cpp[BasicSplitContainer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/BasicSplitContainer/CPP/basicsplitcontainer.cpp#2)]
+ [!code-csharp[BasicSplitContainer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/BasicSplitContainer/CS/basicsplitcontainer.cs#2)]
+ [!code-vb[BasicSplitContainer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BasicSplitContainer/VB/basicsplitcontainer.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.InvalidOperationException">Der Wert ist nicht kompatibel mit der Ausrichtung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitterIncrement">
+      <MemberSignature Language="C#" Value="public int SplitterIncrement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SplitterIncrement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.SplitterIncrement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Schrittweite der Splitterbewegung in Pixel darstellt, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , das die Schrittweite der splitterbewegung in Pixel darstellt. Der Standardwert beträgt ein Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Eigenschaft so erstellen einen ausrichtungsintervall Splitter, mit dem verschoben in größeren Schritten als ein Pixel.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel gibt an, dass es sich bei der vertikalen Splitters in Schritten von 10 Pixel. Andere grundlegenden Eigenschaften eines vertikalen Splitters werden ebenfalls angezeigt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.SplitContainer> Klasse.  
+  
+ [!code-cpp[BasicSplitContainer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/BasicSplitContainer/CPP/basicsplitcontainer.cpp#2)]
+ [!code-csharp[BasicSplitContainer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/BasicSplitContainer/CS/basicsplitcontainer.cs#2)]
+ [!code-vb[BasicSplitContainer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BasicSplitContainer/VB/basicsplitcontainer.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitterMoved">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.SplitterEventHandler SplitterMoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.SplitterEventHandler SplitterMoved" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.SplitContainer.SplitterMoved" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SplitterEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Verschieben des Aufteilungssteuerelements ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel löst die <xref:System.Windows.Forms.SplitContainer.SplitterMoving> Ereignis, das beim Verschieben des Splitters in diesem Beispiel wird durch eine Änderung der gekennzeichnet. Die <xref:System.Windows.Forms.SplitContainer.SplitterMoved> Ereignis wird ausgelöst, wenn Sie beim Verschieben des Splitters beenden. Dies wird in diesem Beispiel wird die Formatvorlage für die Cursor auf den Standardwert zurücksetzen gekennzeichnet.  
+  
+ [!code-cpp[SplitContainerEvents#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SplitContainerEvents/CPP/splitcontainerevents.cpp#1)]
+ [!code-csharp[SplitContainerEvents#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SplitContainerEvents/CS/splitcontainerevents.cs#1)]
+ [!code-vb[SplitContainerEvents#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SplitContainerEvents/VB/splitcontainerevents.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitterMoving">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.SplitterCancelEventHandler SplitterMoving;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.SplitterCancelEventHandler SplitterMoving" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.SplitContainer.SplitterMoving" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SplitterCancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt während des Verschiebens des Aufteilungssteuerelements ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt nur auf, wenn der Benutzer über das Splitter-Steuerelement bewegt. Wird nicht ausgeführt, wenn Sie ändern die <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> Eigenschaftswert programmgesteuert.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel löst die <xref:System.Windows.Forms.SplitContainer.SplitterMoving> Ereignis, das beim Verschieben des Splitters in diesem Beispiel wird durch eine Änderung der gekennzeichnet. Die <xref:System.Windows.Forms.SplitContainer.SplitterMoved> Ereignis wird ausgelöst, wenn Sie beim Verschieben des Splitters beenden. Dies wird in diesem Beispiel wird die Formatvorlage für die Cursor auf den Standardwert zurücksetzen gekennzeichnet.  
+  
+ [!code-cpp[SplitContainerEvents#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SplitContainerEvents/CPP/splitcontainerevents.cpp#1)]
+ [!code-csharp[SplitContainerEvents#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SplitContainerEvents/CS/splitcontainerevents.cs#1)]
+ [!code-vb[SplitContainerEvents#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SplitContainerEvents/VB/splitcontainerevents.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitterRectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle SplitterRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle SplitterRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.SplitterRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe und Position des Splitters relativ zu den <see cref="T:System.Windows.Forms.SplitContainer" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" /> , die angibt, die Größe und Position des Splitters relativ zu den <see cref="T:System.Windows.Forms.SplitContainer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> die Breite und Höhe des Splitters relativ zum Abrufen der <xref:System.Windows.Forms.SplitContainer>. Die <xref:System.Windows.Forms.SplitContainer.OnKeyDown%2A>, <xref:System.Windows.Forms.SplitContainer.OnKeyUp%2A>, <xref:System.Windows.Forms.SplitContainer.OnMouseDown%2A>, <xref:System.Windows.Forms.SplitContainer.OnMouseUp%2A>, und <xref:System.Windows.Forms.SplitContainer.OnMouseMove%2A> Ereignishandler zeichnen die <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> zum Anzeigen der aktuellen Position des Splitters, während sie verschoben werden.  
+  
+ Die Bedeutung der <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> Werte variieren je nach den <xref:System.Windows.Forms.SplitContainer.Orientation%2A>. Die Ausgabe des <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> hat das Format `{X, Y, Width, Height}`. Die folgende Tabelle zeigt die Bedeutung der <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> Werte für die vertikale und horizontale Splitter angezeigt.  
+  
+|Dimension|Vertikaler Splitter|Horizontale Aufteilung|  
+|---------------|-----------------------|-------------------------|  
+|X|Der Abstand in Pixel des Splitters vom linken Rand der <xref:System.Windows.Forms.SplitContainer>.|Dieser Wert ist immer 0 für eine horizontale Aufteilung, anzugeben, dass der Splitter schließt bündig mit dem linken Rand der <xref:System.Windows.Forms.SplitContainer>.|  
+|J|Dieser Wert ist immer 0 für eine vertikale Splitter, anzugeben, dass der Splitter schließt bündig mit dem oberen Rand der <xref:System.Windows.Forms.SplitContainer>.|Der Abstand in Pixel des Splitters vom oberen Rand der <xref:System.Windows.Forms.SplitContainer>.|  
+|Breite|Die Breite des Splitters.|Die Höhe des Splitters, die die Höhe des entspricht der <xref:System.Windows.Forms.SplitContainer> Steuerelement.|  
+|Höhe|Die Höhe des Splitters, die die Höhe des entspricht der <xref:System.Windows.Forms.SplitContainer> Steuerelement.|Die Breite des Splitters.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitterWidth">
+      <MemberSignature Language="C#" Value="public int SplitterWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SplitterWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.SplitterWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(4)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite des Splitters in Pixel ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , das die Breite des Splitters in Pixel darstellt. Der Standardwert ist vier Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> Eigenschaft so ändern Sie die Breite des Splitters, nicht die <xref:System.Windows.Forms.SplitContainer>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel gibt an, dass die anfängliche Breite des vertikalen Splitters 6 Pixel (Standard). Andere grundlegenden Eigenschaften eines vertikalen Splitters werden ebenfalls angezeigt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.SplitContainer> Klasse.  
+  
+ [!code-cpp[BasicSplitContainer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/BasicSplitContainer/CPP/basicsplitcontainer.cpp#2)]
+ [!code-csharp[BasicSplitContainer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/BasicSplitContainer/CS/basicsplitcontainer.cs#2)]
+ [!code-vb[BasicSplitContainer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BasicSplitContainer/VB/basicsplitcontainer.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als eins oder ist nicht kompatibel mit der Ausrichtung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="public bool TabStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TabStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.TabStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-516)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Benutzer mit der TAB-TASTE diesem Splitter den Fokus zuweisen kann, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn der Benutzer mit der TAB-TASTE diesem Splitter den Fokus zuweisen kann; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer die TAB-Taste drückt, wird der Eingabefokus auf das nächste Steuerelement in der Aktivierreihenfolge des Formulars festgelegt. Legen Sie <xref:System.Windows.Forms.SplitContainer.TabStop%2A> auf `true` eines Splitters Eingabefokus zugewiesen werden, damit es mit den Pfeiltasten sowie mit der Maus verschoben werden kann. Ab der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)]wird durch das Festlegen <xref:System.Windows.Forms.SplitContainer.TabStop%2A> auf `false` schließt der Splitter und eines der Steuerelemente, die in enthaltenen der <xref:System.Windows.Forms.SplitContainer> aus der Auflistung der Steuerelemente in der Aktivierreihenfolge. Um Steuerelemente den Fokus erhalten, indem Sie mit der TAB-Taste zu aktivieren, erstellen Sie ein Steuerelement, das von erbt <xref:System.Windows.Forms.SplitContainer>. Erstellen Sie eine neue Eigenschaft mit dem Namen `TabStop` und überschreiben die <xref:System.Windows.Forms.SplitContainer.ProcessTabKey%2A> Methode. Im folgenden Beispiel wird veranschaulicht, dies zu erreichen.  
+  
+ [!code-csharp[SplitContainerTabStop#1](~/samples/snippets/csharp/VS_Snippets_Winforms/splitcontainertabstop/cs/program.cs#1)]
+ [!code-vb[SplitContainerTabStop#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/splitcontainertabstop/vb/module1.vb#1)]  
+  
+ Sie können die Reihenfolge der Registerkarten bearbeiten, durch Festlegen des Steuerelements <xref:System.Windows.Forms.Control.TabIndex%2A> Eigenschaftswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitContainer.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Eine Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.SplitContainer.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message msg);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitContainer.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die zu verarbeitende Windows-<see cref="T:System.Windows.Forms.Message" />.</param>
+        <summary>Verarbeitet Windows-Meldungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Nachrichten gesendet, um die <xref:System.Windows.Forms.Control.WndProc%2A> Methode auf, nachdem die erste gefiltert, über die <xref:System.Windows.Forms.Control.PreProcessMessage%2A> Methode.  
+  
+ Die <xref:System.Windows.Forms.Control.WndProc%2A>-Methode entspricht genau der `WindowProc`-Funktion von Windows. Weitere Informationen zu Windows-Meldungen verarbeitet, finden Sie unter der `WindowProc` -Funktion in der Platform SDK-Dokumentation unter http://msdn.microsoft.com.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für erbende Klassen zum Aufrufen von nicht verwalteten Codes oder für den unmittelbaren Aufrufer zum Aufrufen von nicht verwalteten Codes. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <block subset="none" type="overrides">
+          <para>Erbende Steuerelemente müssen der Basisklasse <see cref="M:System.Windows.Forms.Control.WndProc(System.Windows.Forms.Message@)" /> Methode, um alle Nachrichten zu verarbeiten, die sie nicht behandeln.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,211 @@
+<Type Name="FindInList" FullName="Microsoft.Build.Tasks.FindInList">
+  <TypeSignature Language="C#" Value="public class FindInList : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FindInList extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.FindInList" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>In einer angegebenen Liste sucht ein Element, das die entsprechende Elementspezifikation verfügt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FindInList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.FindInList.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.FindInList" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CaseSensitive">
+      <MemberSignature Language="C#" Value="public bool CaseSensitive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CaseSensitive" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.FindInList.CaseSensitive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob die Groß-/ Kleinschreibung beachtet.</summary>
+        <value>
+          <see langword="true" />
+          <c>FindInList</c> Aufgabe sollte die Groß-/Kleinschreibung beachten die Kleinschreibung ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird Groß-/Kleinschreibung nicht beachtet.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.FindInList.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <c>FindInList</c> Aufgabe.</summary>
+        <returns>
+          <see langword="true" />, wenn die Aufgabe erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FindLastMatch">
+      <MemberSignature Language="C#" Value="public bool FindLastMatch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FindLastMatch" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.FindInList.FindLastMatch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob die letzte Übereinstimmung zurückgegeben (<see langword="true" />) oder die erste Übereinstimmung zurückgegeben (<see langword="false" />).</summary>
+        <value>
+          <see langword="true" />Wenn die <c>FindInList</c> Task sollte die letzte Übereinstimmung zurückgegeben; <see langword="false" /> Wenn die <c>FindInList</c> Task sollte die erste Übereinstimmung zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`sein.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ItemFound">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem ItemFound { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem ItemFound" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.FindInList.ItemFound" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die erste übereinstimmende Element in der Liste aus, falls vorhanden.</summary>
+        <value>Das erste übereinstimmende Element in der Liste gefunden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ItemSpecToFind">
+      <MemberSignature Language="C#" Value="public string ItemSpecToFind { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemSpecToFind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.FindInList.ItemSpecToFind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Elementspezifikation zu suchende.</summary>
+        <value>Die Elementspezifikation gesucht werden soll.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] List { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] List" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.FindInList.List" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Liste, in dem für die Elementspezifikation gesucht werden soll.</summary>
+        <value>Die Liste, in dem für die Elementspezifikation gesucht werden soll.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MatchFileNameOnly">
+      <MemberSignature Language="C#" Value="public bool MatchFileNameOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MatchFileNameOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.FindInList.MatchFileNameOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob für die Überprüfung nur die Datei Teil des Namens für die Elementspezifikation Übereinstimmungen oder die gesamte Elementspezifikation verglichen.</summary>
+        <value>
+          <see langword="true" />Wenn die <c>FindInList</c> Aufgabe übereinstimmen, für die nur die Datei Teil des Namens der Elementspezifikation; <see langword="false" /> Wenn die <c>FindInList</c> Task sollte für die gesamte Elementspezifikation übereinstimmen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `true`sein.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

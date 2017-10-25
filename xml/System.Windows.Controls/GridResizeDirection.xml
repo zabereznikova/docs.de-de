@@ -1,0 +1,100 @@
+<Type Name="GridResizeDirection" FullName="System.Windows.Controls.GridResizeDirection">
+  <TypeSignature Language="C#" Value="public enum GridResizeDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GridResizeDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.GridResizeDirection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob ein <see cref="T:System.Windows.Controls.GridSplitter" /> Steuerelement Leeraum zwischen Zeilen oder Spalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Enumeration zum Festlegen der <xref:System.Windows.Controls.GridSplitter.ResizeDirection%2A> Eigenschaft von der <xref:System.Windows.Controls.GridSplitter> Steuerelement.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeDirection Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeDirection.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Leerraum wird anhand der Werte von der <see cref="P:System.Windows.FrameworkElement.HorizontalAlignment" />, <see cref="P:System.Windows.FrameworkElement.VerticalAlignment" />, <see cref="P:System.Windows.FrameworkElement.ActualWidth" />, und <see cref="P:System.Windows.FrameworkElement.ActualHeight" /> Eigenschaften der <see cref="T:System.Windows.Controls.GridSplitter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Wenn die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> nicht festgelegt ist, um <xref:System.Windows.HorizontalAlignment.Stretch>, Leerraum zwischen Spalten.  
+  
+-   Wenn die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> auf festgelegt ist <xref:System.Windows.HorizontalAlignment.Stretch> und die <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> nicht festgelegt ist, um <xref:System.Windows.VerticalAlignment.Stretch>, wird der Leerraum zwischen Zeilen.  
+  
+-   Wenn die folgenden Bedingungen erfüllt sind, wird der Leerraum zwischen Spalten neu verteilt:  
+  
+    -   <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> wird auf <xref:System.Windows.HorizontalAlignment.Stretch> festgelegt.  
+  
+    -   <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> wird auf <xref:System.Windows.VerticalAlignment.Stretch> festgelegt.  
+  
+    -   Die <xref:System.Windows.FrameworkElement.ActualWidth%2A> ist kleiner als oder gleich der <xref:System.Windows.FrameworkElement.ActualHeight%2A>.  
+  
+-   Wenn die folgenden Bedingungen erfüllt sind, wird der Leerraum zwischen Zeilen neu verteilt:  
+  
+    -   Für <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> ist <xref:System.Windows.HorizontalAlignment.Stretch> festgelegt.  
+  
+    -   Für <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> ist <xref:System.Windows.VerticalAlignment.Stretch> festgelegt.  
+  
+    -   <xref:System.Windows.FrameworkElement.ActualWidth%2A>ist größer als die <xref:System.Windows.FrameworkElement.ActualHeight%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Columns">
+      <MemberSignature Language="C#" Value="Columns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeDirection Columns = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeDirection.Columns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Leerraum zwischen Spalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Rows">
+      <MemberSignature Language="C#" Value="Rows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeDirection Rows = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeDirection.Rows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Leerraum zwischen Zeilen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

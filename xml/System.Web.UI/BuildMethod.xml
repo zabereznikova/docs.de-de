@@ -1,0 +1,29 @@
+<Type Name="BuildMethod" FullName="System.Web.UI.BuildMethod">
+  <TypeSignature Language="C#" Value="public delegate System.Web.UI.Control BuildMethod();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BuildMethod extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.BuildMethod" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Web.UI.Control</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Stellt die Methode, die verwendet wird, um ein Steuerelement zu erstellen.</summary>
+    <returns>Das erstellte Steuerelement.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.BuildMethod> Delegaten übergibt die Informationen, die zum Erstellen von ASP.NET-Serversteuerelementen erforderlich ist. Die Informationen wird definiert, indem die <xref:System.Web.UI.TemplateControl> Klasse oder eine Klasse, die abgeleitet ist die <xref:System.Web.UI.TemplateControl> Klasse.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+</Type>

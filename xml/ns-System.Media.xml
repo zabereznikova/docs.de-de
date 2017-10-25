@@ -1,0 +1,19 @@
+<Namespace Name="System.Media">
+  <Docs>
+    <summary>Die <see cref="N:System.Media" /> -Namespace enthält Klassen zum Wiedergeben von Audiodateien und Zugreifen auf Signale, die vom System bereitgestellt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Klassen sind in diesem Namespace enthalten:  
+  
+-   Ein <xref:System.Media.SoundPlayer> Klasse zum Laden und Wiedergeben von Sounds in verschiedenen Dateiformaten.  
+  
+-   Ein <xref:System.Media.SystemSound> Klasse zum darstellen und Wiedergeben eines Systemsounds.  
+  
+-   Ein <xref:System.Media.SystemSounds> Klasse, die eine Reihe von Windows-Betriebssystem Sound-Ereignistypen zugeordnet Sounds abruft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

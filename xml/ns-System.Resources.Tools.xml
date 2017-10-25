@@ -1,0 +1,13 @@
+<Namespace Name="System.Resources.Tools">
+  <Docs>
+    <summary>Die <see cref="N:System.Resources.Tools" /> -Namespace enthält die <see cref="T:System.Resources.Tools.StronglyTypedResourceBuilder" /> -Klasse, die stark typisierte Ressourcen unterstützt. Beginnend mit .NET Framework, Version 2.0, dieses Feature während der Kompilierung kapselt den Zugriff auf Ressourcen durch Erstellen von Klassen, die einen Satz von statischen schreibgeschützten enthalten (<see langword="get" />) Eigenschaften, wodurch es einfacher, um Ressourcen zu verwenden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu stark typisierten Ressourcen finden Sie unter <xref:System.Resources.Tools.StronglyTypedResourceBuilder>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

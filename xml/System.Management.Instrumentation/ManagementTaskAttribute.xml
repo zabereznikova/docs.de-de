@@ -1,0 +1,93 @@
+<Type Name="ManagementTaskAttribute" FullName="System.Management.Instrumentation.ManagementTaskAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ManagementTaskAttribute : System.Management.Instrumentation.ManagementMemberAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagementTaskAttribute extends System.Management.Instrumentation.ManagementMemberAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementTaskAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Instrumentation.ManagementMemberAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Das ManagementTask-Attribut gibt an, dass die Zielmethode eine WMI-Methode implementiert.  
+  
+ Hinweis: Die WMI .NET-Bibliotheken werden jetzt als abgeschlossen betrachtet, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Aspekte verfügbar sein, die diese Bibliotheken betreffen. Die [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) für alle neuen Entwicklungen verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden die Namen der WMI-Methode der Name der Zielmethode. Die übergeordnete Klasse dieses Attributs <xref:System.Management.Instrumentation.ManagementMemberAttribute>, einen Name-Parameter enthält. Sie können diesen Parameter verwenden, zum Ändern des Namens der Methode, die über WMI verfügbar gemacht wird, ohne Ihre interne Methodennamen zu ändern.  
+  
+ Die Methode muss öffentlich sein und darf statisch sein. Er kann enthalten eine beliebige Kombination von [in], [out], [in/Out], Array oder Objekt Verweisparameter. Arrayparameter darf nicht mehrdimensional oder verzweigtes aufgrund von Einschränkungen auferlegt werden von WMI sein.  
+  
+ Der Rückgabetyp der Methode sind möglich: "void" Scalar "," Zeichenfolge "DateTime" oder ein Objekt. Es kann nicht auf ein Array sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Vorgehensweise beim Markieren einer Methode mit dem ManagementTask-Attribut, um die Methode für WMI verfügbar zu machen. Die Methode wird in der WMI als ResetCounters angezeigt.  
+  
+```csharp  
+// Use the ManagementTask attribute to specify that a method  
+// is exposed to WMI through this provider. Consumers will be  
+// able to execute this method through WMI.  
+[ManagementTask]  
+public void ResetCounters()  
+{  
+    counter.Reset();  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementTaskAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.ManagementTaskAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Management.ManagementTaskAttribute" />-Klasse. Dies ist der Standardkonstruktor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public Type Schema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.ManagementTaskAttribute.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der den Typ der Ausgabe definiert, die die Methode, die mit dem ManagementTask-Attribut markiert ist, ausgegeben wird.</summary>
+        <value>Ein <see cref="T:System.Type" /> Wert, der den Typ der Ausgabe angibt, die die Methode, die mit dem ManagementTask-Attribut markiert ist, ausgegeben wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der zurückgegebene Typ wird <xref:System.Object?displayProperty=nameWithType>, und klicken Sie dann die Ausgabe als ein Wert vom Typ behandelt werden sollen <xref:System.Object?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

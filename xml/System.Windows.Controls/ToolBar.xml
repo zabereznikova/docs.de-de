@@ -1,0 +1,906 @@
+<Type Name="ToolBar" FullName="System.Windows.Controls.ToolBar">
+  <TypeSignature Language="C#" Value="public class ToolBar : System.Windows.Controls.HeaderedItemsControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ToolBar extends System.Windows.Controls.HeaderedItemsControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ToolBar" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.HeaderedItemsControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_ToolBarPanel", Type=typeof(System.Windows.Controls.Primitives.ToolBarPanel))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_ToolBarOverflowPanel", Type=typeof(System.Windows.Controls.Primitives.ToolBarOverflowPanel))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Container für eine Gruppe von Befehlen oder Steuerelementen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.ToolBar>-Steuerelemente bieten einen Überlaufmechanismus, die Elemente gespeichert werden, die nicht auf passen die <xref:System.Windows.Controls.ToolBar> in einem Bereich "Überlauf". Nur Symbolleistenelemente innerhalb eines übergeordneten <xref:System.Windows.Controls.ToolBarTray> verschoben oder vom Benutzer angepasst werden kann.  
+  
+ <xref:System.Windows.Controls.ToolBar>ist eine <xref:System.Windows.Controls.HeaderedItemsControl>, womit die Header und eine Auflistung von Objekten eines beliebigen Typs (z. B. die Zeichenfolge "," Image "oder" Bereich ") werden kann. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Controls.HeaderedItemsControl>-Klasse.  
+  
+## <a name="customizing-the-toolbar-control"></a>Anpassen von Symbolleisten-Steuerelement  
+ Zum Anwenden der gleichen eigenschafteneinstellungen mit mehreren <xref:System.Windows.Controls.ToolBar> -Steuerelemente verwenden die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, finden Sie unter [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Um anzuzeigen, die Teile und Zustände, die spezifisch für die <xref:System.Windows.Controls.ToolBar>, finden Sie unter [Symbolleiste Stile und Vorlagen](~/docs/framework/wpf/controls/toolbar-styles-and-templates.md).  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Festlegen einer visuellen Eigenschaft haben nur Auswirkungen, wenn diese Eigenschaft sowohl in vorhanden ist <xref:System.Windows.Controls.ToolBar> Steuerelement die Standardvorlage und festgelegt ist, mit ein. Sie finden eine Liste der Eigenschaften visueller Elemente im Abschnitt "Ändern der visuellen Struktur eines Steuerelements" [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Controls.ToolBar> innerhalb einer <xref:System.Windows.Controls.ToolBarTray>.  
+  
+ [!code-xaml[ToolBarExample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolBar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolBar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.ToolBar" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Band">
+      <MemberSignature Language="C#" Value="public int Band { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Band" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.Band" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, in die Symbolleiste befinden soll die <see cref="T:System.Windows.Controls.ToolBarTray" />.</summary>
+        <value>Das Band aus, der die <see cref="T:System.Windows.Controls.ToolBarTray" /> in dem die Symbolleiste positioniert ist. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Position des der <xref:System.Windows.Controls.ToolBar> in einem <xref:System.Windows.Controls.ToolBarTray> hängt von den Werten von der <xref:System.Windows.Controls.ToolBarTray.Orientation%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.ToolBar.Band%2A>, und <xref:System.Windows.Controls.ToolBar.BandIndex%2A> Eigenschaften. Wenn <xref:System.Windows.Controls.ToolBarTray.Orientation%2A> festgelegt ist, um <xref:System.Windows.Controls.Orientation.Horizontal>, ein Band stellt eine Zeile in der <xref:System.Windows.Controls.ToolBarTray>. Wenn <xref:System.Windows.Controls.ToolBarTray.Orientation%2A> ist <xref:System.Windows.Controls.Orientation.Vertical>, ein Band stellt eine Spalte mit dem <xref:System.Windows.Controls.ToolBarTray>. Die folgende Tabelle beschreibt die Beziehung zwischen <xref:System.Windows.Controls.ToolBarTray.Orientation%2A>, <xref:System.Windows.Controls.ToolBar.Band%2A>, und <xref:System.Windows.Controls.ToolBar.BandIndex%2A>.  
+  
+|Ausrichtung|Band|BandIndex|  
+|-----------------|----------|---------------|  
+|Horizontal|Gibt die Zeile, in dem die <xref:System.Windows.Controls.ToolBar> positioniert ist. Symbolleisten, deren <xref:System.Windows.Controls.ToolBar.Band%2A> auf einen niedrigeren Wert festgelegt werden, über denen mit einem größeren Wert.|Gibt die Position von der <xref:System.Windows.Controls.ToolBar> auf die <xref:System.Windows.Controls.ToolBar.Band%2A>. Symbolleisten, deren <xref:System.Windows.Controls.ToolBar.BandIndex%2A> auf einen niedrigeren Wert festgelegt werden, auf der linken Seite, von denen mit einem höheren Wert.|  
+|Vertikal|Gibt die Spalte in der die <xref:System.Windows.Controls.ToolBar> positioniert ist. Symbolleisten, deren <xref:System.Windows.Controls.ToolBar.Band%2A> auf einen niedrigeren Wert festgelegt werden, auf der linken Seite, von denen mit einem höheren Wert.|Gibt die Position von der <xref:System.Windows.Controls.ToolBar> auf die <xref:System.Windows.Controls.ToolBar.Band%2A>. Symbolleisten, deren <xref:System.Windows.Controls.ToolBar.BandIndex%2A> auf einen niedrigeren Wert festgelegt werden, über denen mit einem größeren Wert.|  
+  
+<a name="dependencyPropertyInfo_Band"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolBar.BandProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt wie diese Eigenschaft verwenden, platzieren <xref:System.Windows.Controls.ToolBar> Steuerelemente innerhalb einer <xref:System.Windows.Controls.ToolBarTray>.  
+  
+ [!code-xaml[ToolBarExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BandIndex">
+      <MemberSignature Language="C#" Value="public int BandIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BandIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.BandIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Indexnummer des Bands, der die Position der Symbolleiste auf das Band angibt.</summary>
+        <value>Die Position einer Symbolleiste auf das Band von einem <see cref="T:System.Windows.Controls.ToolBarTray" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Eigenschaft nicht explizit festgelegt, richtet sich der Wert nach der Reihenfolge, in der die <xref:System.Windows.Controls.ToolBar> festgelegt ist, der <xref:System.Windows.Controls.ToolBarTray>. Angenommen, zwei Symbolleisten gelagerte eine <xref:System.Windows.Controls.ToolBarTray> festlegen, ohne die <xref:System.Windows.Controls.ToolBar.Band%2A> und <xref:System.Windows.Controls.ToolBar.BandIndex%2A> Eigenschaften, die den Wert der <xref:System.Windows.Controls.ToolBar.Band%2A> 0 für beide Symbolleisten. Der Wert des <xref:System.Windows.Controls.ToolBar.BandIndex%2A> werden für die erste Symbolleiste 0 und 1 für die zweite Symbolleiste.  
+  
+ Die Position des der <xref:System.Windows.Controls.ToolBar> in einem <xref:System.Windows.Controls.ToolBarTray> hängt von den Werten von der <xref:System.Windows.Controls.ToolBarTray.Orientation%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.ToolBar.Band%2A>, und <xref:System.Windows.Controls.ToolBar.BandIndex%2A> Eigenschaften. Wenn <xref:System.Windows.Controls.ToolBarTray.Orientation%2A> festgelegt ist, um <xref:System.Windows.Controls.Orientation.Horizontal>, ein Band stellt eine Zeile in der <xref:System.Windows.Controls.ToolBarTray>. Wenn <xref:System.Windows.Controls.ToolBarTray.Orientation%2A> ist <xref:System.Windows.Controls.Orientation.Vertical>, ein Band stellt eine Spalte mit dem <xref:System.Windows.Controls.ToolBarTray>. Die folgende Tabelle beschreibt die Beziehung zwischen <xref:System.Windows.Controls.ToolBarTray.Orientation%2A>, <xref:System.Windows.Controls.ToolBar.Band%2A>, und <xref:System.Windows.Controls.ToolBar.BandIndex%2A>.  
+  
+|Ausrichtung|Band|BandIndex|  
+|-----------------|----------|---------------|  
+|Horizontal|Gibt die Zeile, in dem die <xref:System.Windows.Controls.ToolBar> positioniert ist. Symbolleisten, deren <xref:System.Windows.Controls.ToolBar.Band%2A> auf einen niedrigeren Wert festgelegt werden, über denen mit einem größeren Wert.|Gibt die Position von der <xref:System.Windows.Controls.ToolBar> auf die <xref:System.Windows.Controls.ToolBar.Band%2A>. Symbolleisten, deren <xref:System.Windows.Controls.ToolBar.BandIndex%2A> auf einen niedrigeren Wert festgelegt werden, auf der linken Seite, von denen mit einem höheren Wert.|  
+|Vertikal|Gibt die Spalte in der die <xref:System.Windows.Controls.ToolBar> positioniert ist. Symbolleisten, deren <xref:System.Windows.Controls.ToolBar.Band%2A> auf einen niedrigeren Wert festgelegt werden, auf der linken Seite, von denen mit einem höheren Wert.|Gibt die Position von der <xref:System.Windows.Controls.ToolBar> auf die <xref:System.Windows.Controls.ToolBar.Band%2A>. Symbolleisten, deren <xref:System.Windows.Controls.ToolBar.BandIndex%2A> auf einen niedrigeren Wert festgelegt werden, über denen mit einem größeren Wert.|  
+  
+<a name="dependencyPropertyInfo_BandIndex"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolBar.BandIndexProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt wie diese Eigenschaft verwenden, platzieren <xref:System.Windows.Controls.ToolBar> Steuerelemente innerhalb einer <xref:System.Windows.Controls.ToolBarTray>.  
+  
+ [!code-xaml[ToolBarExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BandIndexProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BandIndexProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BandIndexProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolBar.BandIndexProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolBar.BandIndex" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BandProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BandProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BandProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolBar.BandProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolBar.Band" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonStyleKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey ButtonStyleKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey ButtonStyleKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.ButtonStyleKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Style" /> auf Schaltflächen einer Symbolleiste angewendet.</summary>
+        <value>Ein Ressourcenschlüssel, der den Standardstil für Schaltflächen auf der Symbolleiste darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft so ändern Sie den Standardstil der <xref:System.Windows.Controls.Button> auf steuert die <xref:System.Windows.Controls.ToolBar>.  
+  
+<a name="xamlAttributeUsage_ButtonStyleKey"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ <*Objekt* *Eigenschaft*= "`{` **ToolBar.ButtonStyleKey**`}"/>`  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft verwendet wird, Anwenden einer <xref:System.Windows.Style> auf <xref:System.Windows.Controls.Button> Steuerelemente eine <xref:System.Windows.Controls.ToolBar>.  
+  
+ [!code-xaml[ToolBar_snip#ToolBarButtonStyleKey](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarbuttonstylekey)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckBoxStyleKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey CheckBoxStyleKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey CheckBoxStyleKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.CheckBoxStyleKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Style" /> angewendeten Kontrollkästchen auf eine <see cref="T:System.Windows.Controls.ToolBar" />.</summary>
+        <value>Ein Ressourcenschlüssel, die das Standardformat für Kontrollkästchen stellt dar, auf die <see cref="T:System.Windows.Controls.ToolBar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft so ändern Sie den Standardstil der <xref:System.Windows.Controls.CheckBox> auf steuert die <xref:System.Windows.Controls.ToolBar>.  
+  
+<a name="xamlAttributeUsage_CheckBoxStyleKey"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ <*Objekt* *Eigenschaft*= "`{` **ToolBar.CheckBoxStyleKey**`}"/>`  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Eigenschaft anwenden einer <xref:System.Windows.Style> auf <xref:System.Windows.Controls.CheckBox> Steuerelemente eine <xref:System.Windows.Controls.ToolBar>.  
+  
+ [!code-xaml[ToolBar_snip#ToolBarCheckBoxStyleKey](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarcheckboxstylekey)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComboBoxStyleKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey ComboBoxStyleKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey ComboBoxStyleKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.ComboBoxStyleKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Style" /> auf Kombinationsfelder angewendet werden, auf eine <see cref="T:System.Windows.Controls.ToolBar" />.</summary>
+        <value>Ein Ressourcenschlüssel, der den Standardstil für Kombinationsfelder auf der Symbolleiste darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft so ändern Sie den Standardstil der <xref:System.Windows.Controls.ComboBox> auf steuert die <xref:System.Windows.Controls.ToolBar>.  
+  
+<a name="xamlAttributeUsage_ComboBoxStyleKey"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ <*Objekt* *Eigenschaft*= "`{` **ToolBar.ComboBoxStyleKey**`}"/>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsOverflowItem">
+      <MemberSignature Language="C#" Value="public static bool GetIsOverflowItem (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsOverflowItem(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolBar.GetIsOverflowItem(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem die Eigenschaft gelesen werden soll.</param>
+        <summary>Liest den Wert der <see cref="P:System.Windows.Controls.ToolBar.IsOverflowItem" /> Eigenschaft aus dem angegebenen Element.</summary>
+        <returns>Der Wert der Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOverflowMode">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.OverflowMode GetOverflowMode (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Controls.OverflowMode GetOverflowMode(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolBar.GetOverflowMode(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren(IncludeDescendants=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.OverflowMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem die Eigenschaft gelesen werden soll.</param>
+        <summary>Liest den Wert der <see cref="P:System.Windows.Controls.ToolBar.OverflowMode" /> Eigenschaft aus dem angegebenen Element.</summary>
+        <returns>Der Wert der Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die möglichen Werte finden Sie unter <xref:System.Windows.Controls.OverflowMode>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasOverflowItems">
+      <MemberSignature Language="C#" Value="public bool HasOverflowItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasOverflowItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.HasOverflowItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Symbolleiste Elemente verfügt, die nicht sichtbar sind.</summary>
+        <value>
+          <see langword="true" />Wenn sich Elemente auf der Symbolleiste, die nicht sichtbar sind; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein <xref:System.Windows.Controls.ToolBar> enthält mehr Elemente als sie den Speicherplatz angezeigt hat, legt er die verbleibenden Elementen in seiner Überlaufbereich. Der Benutzer kann den Pfeil klicken, auf die <xref:System.Windows.Controls.ToolBar> den Zugriff auf die Überlaufelemente.  
+  
+<a name="dependencyPropertyInfo_HasOverflowItems"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolBar.HasOverflowItemsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasOverflowItemsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HasOverflowItemsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HasOverflowItemsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolBar.HasOverflowItemsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolBar.HasOverflowItems" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOverflowItemProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsOverflowItemProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsOverflowItemProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolBar.IsOverflowItemProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.ToolBar.IsOverflowItem" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOverflowOpen">
+      <MemberSignature Language="C#" Value="public bool IsOverflowOpen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOverflowOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.IsOverflowOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.ToolBar" /> Überlaufbereich derzeit sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn Sie der Überlaufbereich sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsOverflowOpen"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolBar.IsOverflowOpenProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOverflowOpenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsOverflowOpenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsOverflowOpenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolBar.IsOverflowOpenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ToolBar.IsOverflowOpen" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolBar.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Die Messung-Einschränkungen. Ein <see cref="T:System.Windows.Controls.ToolBar" /> keine liefern eine Größe größer als die Einschränkung.</param>
+        <summary>Misst einen <see cref="T:System.Windows.Controls.ToolBar" />.</summary>
+        <returns>Die Größe des <see cref="T:System.Windows.Controls.ToolBar" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuStyleKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey MenuStyleKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey MenuStyleKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.MenuStyleKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Style" /> zu Menüs angewendet werden, auf eine <see cref="T:System.Windows.Controls.ToolBar" />.</summary>
+        <value>Ein Ressourcenschlüssel, der den Standardstil für Menüs auf der Symbolleiste darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft so ändern Sie den Standardstil der <xref:System.Windows.Controls.Menu> auf steuert die <xref:System.Windows.Controls.ToolBar>.  
+  
+<a name="xamlAttributeUsage_MenuStyleKey"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ <*Objekt* *Eigenschaft*= "`{` **ToolBar.MenuStyleKey**`}"/>`  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Eigenschaft anwenden einer <xref:System.Windows.Style> auf <xref:System.Windows.Controls.Menu> Steuerelemente eine <xref:System.Windows.Controls.ToolBar>.  
+  
+ [!code-xaml[ToolBar_snip#ToolBarMenuStyleKey](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarmenustylekey)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolBar.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine geeignete <see cref="T:System.Windows.Automation.Peers.ToolBarAutomationPeer" /> Implementierung für dieses Steuerelement als Teil der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Infrastruktur.</summary>
+        <returns>Die typspezifische <see cref="T:System.Windows.Automation.Peers.AutomationPeer" />-Implementierung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsChanged">
+      <MemberSignature Language="C#" Value="protected override void OnItemsChanged (System.Collections.Specialized.NotifyCollectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnItemsChanged(class System.Collections.Specialized.NotifyCollectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolBar.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Argumente für die <see cref="E:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged" /> Ereignis.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.Items" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolBar.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Argumente für die <see cref="E:System.Windows.UIElement.KeyDown" /> Ereignis.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.KeyDown" /> Routingereignis, das auftritt, wenn eine Taste, auf ein Element in gedrückt wird der <see cref="T:System.Windows.Controls.ToolBar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer drückt HOME, das erste Element in der <xref:System.Windows.Controls.ToolBar> über den Tastaturfokus erhält. Wenn der Benutzer drückt END, das letzte Element in der <xref:System.Windows.Controls.ToolBar> über den Tastaturfokus erhält. In diesem Fall diese Implementierung kennzeichnet die <xref:System.Windows.UIElement.KeyDown> Ereignis als behandelt, indem die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft der Ereignisdaten zu `true`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see cref="M:System.Windows.Controls.ToolBar.OnKeyDown(System.Windows.Input.KeyEventArgs)" />, rufen Sie immer die grundlegende Implementierung Ihrer <see cref="M:System.Windows.Controls.ToolBar.OnKeyDown(System.Windows.Input.KeyEventArgs)" /> Implementierung. Die basisimplementierung aufgerufen wird verhindert, dass Basisklassen Behandlung des Ereignisses mit einem Klassenhandler, der das Laufzeitverhalten der endgültigen Klasse ändern kann. Sie können die grundlegende Implementierung entweder vor oder nach Ihrem besondere Behandlung, je nach Ihren Anforderungen aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLostMouseCapture">
+      <MemberSignature Language="C#" Value="protected override void OnLostMouseCapture (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLostMouseCapture(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolBar.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Argumente für die <see cref="E:System.Windows.UIElement.LostMouseCapture" /> Ereignis.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.LostMouseCapture" /> Routingereignis, das auftritt, wenn die <see cref="T:System.Windows.Controls.ToolBar" /> keine Mauseingaben mehr erfasst.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung ändert nicht zum behandelten Zustand (die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft) von der <xref:System.Windows.UIElement.LostMouseCapture> Ereignisdaten.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see cref="M:System.Windows.Controls.ToolBar.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)" />, rufen Sie immer die grundlegende Implementierung Ihrer <see cref="M:System.Windows.Controls.ToolBar.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)" /> Implementierung. Die basisimplementierung aufgerufen wird verhindert, dass Basisklassen Behandlung des Ereignisses mit einem Klassenhandler, der das Laufzeitverhalten der endgültigen Klasse ändern kann. Sie können die grundlegende Implementierung entweder vor oder nach Ihrem besondere Behandlung, je nach Ihren Anforderungen aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Orientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Orientation Orientation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Orientation Orientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.Orientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausrichtung des <see cref="T:System.Windows.Controls.ToolBar" />-Objekts ab.</summary>
+        <value>Die Ausrichtung der Symbolleiste. Die Standardeinstellung ist <see cref="F:System.Windows.Controls.Orientation.Horizontal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft den Wert ab, aus dem übergeordneten <xref:System.Windows.Controls.ToolBarTray>.  
+  
+<a name="dependencyPropertyInfo_Orientation"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ToolBar.OrientationProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie feststellen, ob eine <xref:System.Windows.Controls.ToolBar> ist vertikal.  
+  
+ [!code-csharp[ToolBarOrient_snip#ToolBarOrientation](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarOrient_snip/CSharp/Pane1.xaml.cs#toolbarorientation)]
+ [!code-vb[ToolBarOrient_snip#ToolBarOrientation](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolBarOrient_snip/visualbasic/pane1.xaml.vb#toolbarorientation)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrientationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OrientationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OrientationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolBar.OrientationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="T:System.Windows.Controls.Orientation" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverflowModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OverflowModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OverflowModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ToolBar.OverflowModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.ToolBar.OverflowMode" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override void PrepareContainerForItemOverride (System.Windows.DependencyObject element, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PrepareContainerForItemOverride(class System.Windows.DependencyObject element, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolBar.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, das das Element angezeigt wird.</param>
+        <param name="item">Das anzuzeigende Element.</param>
+        <summary>Bereitet das angegebene Element auf die Anzeige des angegebenen Eintrags vor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadioButtonStyleKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey RadioButtonStyleKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey RadioButtonStyleKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.RadioButtonStyleKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Style" /> auf Optionsfelder auf einer Symbolleiste angewendet.</summary>
+        <value>Ein Ressourcenschlüssel, der den Standardstil für Optionsfelder auf der Symbolleiste darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft so ändern Sie den Standardstil der <xref:System.Windows.Controls.RadioButton> auf steuert die <xref:System.Windows.Controls.ToolBar>.  
+  
+<a name="xamlAttributeUsage_RadioButtonStyleKey"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ <*Objekt* *Eigenschaft*= "`{` **ToolBar.RadioButtonStyleKey**`}"/>`  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Eigenschaft anwenden einer <xref:System.Windows.Style> auf <xref:System.Windows.Controls.RadioButton> Steuerelemente eine <xref:System.Windows.Controls.ToolBar>.  
+  
+ [!code-xaml[ToolBar_snip#ToolBarRadioButtonStyleKey](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarradiobuttonstylekey)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorStyleKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey SeparatorStyleKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey SeparatorStyleKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.SeparatorStyleKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Style" /> auf Trennzeichen angewendet wird, auf eine <see cref="T:System.Windows.Controls.ToolBar" />.</summary>
+        <value>Ein Ressourcenschlüssel, der den Standardstil für Trennzeichen auf der Symbolleiste darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft so ändern Sie den Standardstil der <xref:System.Windows.Controls.Separator> auf steuert die <xref:System.Windows.Controls.ToolBar>.  
+  
+<a name="xamlAttributeUsage_SeparatorStyleKey"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ <*Objekt* *Eigenschaft*= "`{` **ToolBar.SeparatorStyleKey**`}"/>`  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Eigenschaft anwenden einer <xref:System.Windows.Style> auf <xref:System.Windows.Controls.Separator> Steuerelemente eine <xref:System.Windows.Controls.ToolBar>.  
+  
+ [!code-xaml[ToolBar_snip#ToolBarSeparatorStyleKey](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarseparatorstylekey)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOverflowMode">
+      <MemberSignature Language="C#" Value="public static void SetOverflowMode (System.Windows.DependencyObject element, System.Windows.Controls.OverflowMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetOverflowMode(class System.Windows.DependencyObject element, valuetype System.Windows.Controls.OverflowMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolBar.SetOverflowMode(System.Windows.DependencyObject,System.Windows.Controls.OverflowMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="mode" Type="System.Windows.Controls.OverflowMode" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, das die Eigenschaft geschrieben werden soll.</param>
+        <param name="mode">Der festzulegende Eigenschaftswert.</param>
+        <summary>Schreibt den Wert der die <see cref="P:System.Windows.Controls.ToolBar.OverflowMode" /> Eigenschaft für das angegebene Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die möglichen Werte finden Sie unter <xref:System.Windows.Controls.OverflowMode>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextBoxStyleKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey TextBoxStyleKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey TextBoxStyleKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.TextBoxStyleKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Style" /> angewendet Textfelder auf einer <see cref="T:System.Windows.Controls.ToolBar" />.</summary>
+        <value>Ein Ressourcenschlüssel, der den Standardstil für Textfelder auf der Symbolleiste darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft so ändern Sie den Standardstil der <xref:System.Windows.Controls.TextBox> auf steuert die <xref:System.Windows.Controls.ToolBar>.  
+  
+<a name="xamlAttributeUsage_TextBoxStyleKey"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ <*Objekt* *Eigenschaft*= "`{` **ToolBar.TextBoxStyleKey**`}"/>`  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Eigenschaft zum Erstellen einer <xref:System.Windows.Style> für <xref:System.Windows.Controls.TextBox> Steuerelemente eine <xref:System.Windows.Controls.ToolBar>.  
+  
+ [!code-xaml[ToolBar_snip#ToolBarTextBoxStyleKey](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbartextboxstylekey)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleButtonStyleKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey ToggleButtonStyleKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey ToggleButtonStyleKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ToolBar.ToggleButtonStyleKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Windows.Style" /> ab, der auf <see cref="T:System.Windows.Controls.Primitives.ToggleButton" />-Steuerelemente auf einer <see cref="T:System.Windows.Controls.ToolBar" /> angewendet wird.</summary>
+        <value>Ein Ressourcenschlüssel, der den Standardstil für Umschaltflächen auf der Symbolleiste darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft so ändern Sie den Standardstil der <xref:System.Windows.Controls.Primitives.ToggleButton> auf steuert die <xref:System.Windows.Controls.ToolBar>.  
+  
+<a name="xamlAttributeUsage_ToggleButtonStyleKey"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ <*Objekt* *Eigenschaft*= "`{` **ToolBar.ToggleButtonStyleKey**`}"/>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

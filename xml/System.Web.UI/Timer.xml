@@ -1,0 +1,528 @@
+<Type Name="Timer" FullName="System.Web.UI.Timer">
+  <TypeSignature Language="C#" Value="public class Timer : System.Web.UI.Control, System.Web.UI.IPostBackEventHandler, System.Web.UI.IScriptControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Timer extends System.Web.UI.Control implements class System.Web.UI.IPostBackEventHandler, class System.Web.UI.IScriptControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Timer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IScriptControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Tick")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Interval")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.TimerDesigner, System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(EmbeddedResourceFinder), "System.Web.Resources.Timer.bmp")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.NonVisualControl</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Führt in einem definierten Intervall asynchrone oder synchrone Postbacks von Webseiten aus.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Die <xref:System.Web.UI.Timer> Steuerelement können Sie in einem angegebenen Intervall Postbacks ausführen. Bei Verwendung der <xref:System.Web.UI.Timer> Steuerelement als Trigger für eine <xref:System.Web.UI.UpdatePanel> -Steuerelement, das <xref:System.Web.UI.UpdatePanel> Steuerelement wird mithilfe eines asynchronen, Teilrendering von Seiten Updates aktualisiert. Müssen Sie auch eine <xref:System.Web.UI.ScriptManager> Objekt auf einer Webseite verwendet die <xref:System.Web.UI.Timer> Steuerelement.  
+  
+ Verwenden Sie die <xref:System.Web.UI.Timer> Steuerelement aktualisiert eine <xref:System.Web.UI.UpdatePanel> Steuerelement, indem Sie den Zeitgeber einschließen der <xref:System.Web.UI.UpdatePanel> Steuerelement. Alternativ können Sie den Zeitgeber außerhalb Platzieren der <xref:System.Web.UI.UpdatePanel> steuern und den Timer als Auslöser festlegen.  
+  
+ Sie können auch vollständiges Postback einer vollständigen Webseite initiieren, indem z. B. die <xref:System.Web.UI.Timer> auf der Webseite zu steuern und wenn es nicht festgelegt, als Trigger für eine <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ Sie können Server-Code ausführen, sobald das Zeitgeberintervall abgelaufen ist, erstellen Sie einen Ereignishandler für das <xref:System.Web.UI.Timer.Tick> Ereignis. In der ereignismeldung Handler auf, Sie können Code einfügen, die das Verhalten des dynamisch anpasst, die <xref:System.Web.UI.Timer> Steuerelement.  
+  
+ Legen Sie die <xref:System.Web.UI.Timer.Interval%2A> -Eigenschaft angeben, wie häufig postbacks auftreten. Legen Sie die <xref:System.Web.UI.Timer.Enabled%2A> Eigenschaft zum Aktivieren der <xref:System.Web.UI.Timer> ein- oder ausschalten.  
+  
+> [!NOTE]
+>  Wenn die Genauigkeit der <xref:System.Web.UI.Timer> Steuerelement Beiträge zurück an den Webserver hängt von der Genauigkeit von ECMAScript (JavaScript) `window.setTimeout` -Funktion, die im Browser ausgeführt wird.  
+  
+ Die <xref:System.Web.UI.Timer.Interval%2A> -Eigenschaft ist in Millisekunden definiert. Sie müssen festlegen, die <xref:System.Web.UI.Timer.Interval%2A> Eigenschaft ein Wert, der mindestens ein asynchroner Postback abschließen, bevor das nächste Postback initiiert wird. Bei der <xref:System.Web.UI.Timer> Steuerelement liegt außerhalb einer <xref:System.Web.UI.UpdatePanel> -Steuerelement, wird der Zeitgeber während der Inhalt ausgeführt. die <xref:System.Web.UI.UpdatePanel> Steuerelement aktualisiert wird. Wenn ein neues Postback initiiert wird, während ein früheres Postbacks verarbeitet wird, wird das erste Postback abgebrochen werden. Der Standardwert ist 60.000 Millisekunden (60 Sekunden).  
+  
+> [!NOTE]
+>  Hinzufügen einer <xref:System.Web.UI.Timer> Steuerelement mit einem kleinen Wert in der <xref:System.Web.UI.Timer.Interval%2A> -Eigenschaft kann erhebliche Datenverkehr zum und vom Webserver zu generieren. Verwenden der <xref:System.Web.UI.Timer> Steuerelement, um den Inhalt nur so oft wie nötig zu aktualisieren.  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:Timer  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    Interval="integer"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnTick="Tick event handler"  
+    OnUnload="Unload handler"  
+    runat="server"  
+    SkinID="string"  
+    Visible="True|False"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine <xref:System.Web.UI.UpdatePanel> Steuerelement, das anzeigt, einen zufällig generierten Aktienkurs sowie die Zeit, die der Aktienkurs generiert wurde. Die <xref:System.Web.UI.Timer> -Steuerelement aktualisiert den Inhalt in die <xref:System.Web.UI.UpdatePanel> steuern alle 10 Sekunden.  
+  
+> [!NOTE]
+>  In diesem Beispiel wird das Zeitgeberintervall auf 10 Sekunden festgelegt, sodass, wenn Sie das Beispiel ausführen, Sie nicht warten, viel Zeit in die Ergebnisse anzuzeigen müssen. Jedes Zeitgeberintervall einen Postback verursacht, der Netzwerkverkehr verursacht werden, sollten in einer produktionsanwendung Sie das Intervall mit der längsten Zeit festgelegt, die für Ihre Anwendung immer noch möglich ist.  
+  
+ [!code-aspx-csharp[System.Web.UI.Controls.Timer#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.Controls.Timer/cs/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.Controls.Timer#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.Controls.Timer/vb/Default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Timer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Timer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Timer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Timer.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.Timer" /> Steuerelement ein Postback an den Server nach der Anzahl von Millisekunden, die im angegebenen initiiert die <see cref="P:System.Web.UI.Timer.Interval" /> Eigenschaft wurde überschritten.</summary>
+        <value>
+          <see langword="true" />Wenn <see cref="T:System.Web.UI.Timer" /> ein Postback initiiert, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.Timer.Enabled%2A> Eigenschaft zum Aktivieren der <xref:System.Web.UI.Timer> Steuerelement ein- und ausschalten. Bei Festlegung <xref:System.Web.UI.Timer.Enabled%2A> auf `true`die <xref:System.Web.UI.Timer> Steuerelement startet einen Zeitgeber-Countdown, wenn die Webseite gerendert wird.  
+  
+ Beim Postback, können Sie Eigenschaftswerte im Ändern der <xref:System.Web.UI.Timer.Enabled%2A> -Eigenschaft und die Änderungen werden wiedergegeben werden, wenn der Inhalt der Webseite im Browser gerendert wird. Wenn Sie ändern die <xref:System.Web.UI.Timer.Enabled%2A> -Eigenschaft, und ändern Sie dann, die während des gleichen Postbacks auf den ursprünglichen Wert wieder die <xref:System.Web.UI.Timer> steuern ausgeführt wird, als ob keine Änderungen vorgenommen worden war.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine <xref:System.Web.UI.UpdatePanel> Steuerelement, das anzeigt, einen zufällig generierten Aktienkurs sowie die Zeit, die der Aktienkurs generiert wurde. Wird standardmäßig die <xref:System.Web.UI.Timer> -Steuerelement aktualisiert den Inhalt in die <xref:System.Web.UI.UpdatePanel> steuern alle 10 Sekunden. Der Benutzer entscheiden kann der Aktienkurs alle 10 Sekunden, alle 60 Sekunden aktualisiert oder gar nicht. Wenn der Benutzer nicht zum Aktualisieren des Aktienkurs entscheidet der <xref:System.Web.UI.Timer.Enabled%2A> -Eigenschaftensatz auf `false`.  
+  
+ [!code-aspx-csharp[System.Web.UI.Controls.Timer.Interval#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.Controls.Timer.Interval/cs/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.Controls.Timer.Interval#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.Controls.Timer.Interval/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptDescriptors">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt; GetScriptDescriptors ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptDescriptor&gt; GetScriptDescriptors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Timer.GetScriptDescriptors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Web.UI.Timer/&lt;GetScriptDescriptors&gt;d__22))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft Eigenschaften aus einem <see cref="T:System.Web.UI.Timer" /> -Objekt, das an die Client-Komponente übergeben werden, die im Browser Timer Logik implementiert.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.Web.UI.ScriptDescriptor" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Timer.GetScriptDescriptors%2A> Methode fügt die <xref:System.Web.UI.Timer.Interval%2A> und <xref:System.Web.UI.Timer.Enabled%2A> Eigenschaften aus einer Instanz von der <xref:System.Web.UI.Timer> Klasse, um eine <xref:System.Web.UI.ScriptDescriptor> Objekt. Die Clientkomponente greift auf die Werte und legt die entsprechenden Werte im Skript fest.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptReferences">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt; GetScriptReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptReference&gt; GetScriptReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Timer.GetScriptReferences" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Web.UI.Timer/&lt;GetScriptReferences&gt;d__23))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Clientskript für die <see cref="T:System.Web.UI.Timer" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.ScriptReference" /> Objekt, das Clientskript für enthält die <see cref="T:System.Web.UI.Timer" /> Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interval">
+      <MemberSignature Language="C#" Value="public int Interval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Interval" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Timer.Interval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(60000)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Millisekunden, die vor dem Initiieren eines Postbacks gewartet.</summary>
+        <value>Die Anzahl der Millisekunden, die vor dem Initiieren eines Postbacks gewartet werden soll. Der Standardwert ist 60.000 (60 Sekunden).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.Timer.Interval%2A> Eigenschaft, um festzulegen, wie oft die <xref:System.Web.UI.Timer> Steuerelement ein Postback an den Server initiiert. Können Sie den Wert der Ändern der <xref:System.Web.UI.Timer.Interval%2A> Eigenschaft im Servercode nach einem Postback, z. B. in einem Ereignishandler für das <xref:System.Web.UI.Timer.Tick> Ereignis. Wenn die Genauigkeit der <xref:System.Web.UI.Timer> Steuerelement Beiträge zurück an den Webserver hängt von der Genauigkeit von ECMAScript (JavaScript) `window.setTimeout` -Funktion, die im Browser ausgeführt wird.  
+  
+> [!NOTE]
+>  Festlegen der <xref:System.Web.UI.Timer.Interval%2A> -Eigenschaft auf einen kleinen Wert kann erhebliche Datenverkehr zum und vom Webserver zu generieren. Verwenden der <xref:System.Web.UI.Timer> Steuerelement, um den Inhalt nur so oft wie nötig zu aktualisieren.  
+  
+ Wenn Sie den Wert der Ändern der <xref:System.Web.UI.Timer.Interval%2A> -Eigenschaft, die ECMAScript Zeiterfassungscode im Browser ausgeführte zurückgesetzt werden, wenn die Updates gerendert werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine <xref:System.Web.UI.UpdatePanel> Steuerelement, das anzeigt, einen zufällig generierten Aktienkurs sowie die Zeit, die der Aktienkurs generiert wurde. Wird standardmäßig die <xref:System.Web.UI.Timer> -Steuerelement aktualisiert den Inhalt in die <xref:System.Web.UI.UpdatePanel> steuern alle 10 Sekunden. Der Benutzer entscheiden kann der Aktienkurs alle 10 Sekunden, alle 60 Sekunden aktualisiert oder gar nicht. Die <xref:System.Web.UI.Timer.Interval%2A> Eigenschaft auf die Auswahl des Benutzers festgelegt ist.  
+  
+ [!code-aspx-csharp[System.Web.UI.Controls.Timer.Interval#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.Controls.Timer.Interval/cs/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.Controls.Timer.Interval#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.Controls.Timer.Interval/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist kleiner als oder gleich 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Timer.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" /> -Ereignis für die <see cref="T:System.Web.UI.Timer" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTick">
+      <MemberSignature Language="C#" Value="protected virtual void OnTick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Timer.OnTick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Timer.Tick" /> -Ereignis für die <see cref="T:System.Web.UI.Timer" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Timer.Tick> Ereignis wird ausgelöst, wenn die Anzahl der Millisekunden in angegeben die <xref:System.Web.UI.Timer.Interval%2A> Eigenschaft verstrichen seit dem Rendern der Webseite oder seit dem letzten <xref:System.Web.UI.Timer.Tick> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine <xref:System.Web.UI.UpdatePanel> Steuerelement, das anzeigt, einen zufällig generierten Aktienkurs sowie die Zeit, die der Aktienkurs generiert wurde. Die <xref:System.Web.UI.Timer> -Steuerelement aktualisiert den Inhalt in die <xref:System.Web.UI.UpdatePanel> steuern alle 10 Sekunden. Der Aktienkurs und die Zeit festgelegt sind, in einem Ereignishandler für das <xref:System.Web.UI.Timer.Tick> Ereignis.  
+  
+ [!code-aspx-csharp[System.Web.UI.Controls.Timer#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.Controls.Timer/cs/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.Controls.Timer#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.Controls.Timer/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Timer.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Eine Zeichenfolge mit einem optionalen Argument an den Ereignishandler übergeben werden.</param>
+        <summary>Ermöglicht eine <see cref="T:System.Web.UI.Timer" /> Steuerelement zum Auslösen der <see cref="E:System.Web.UI.Timer.Tick" /> Ereignis aus, wenn eine Seite an den Server zurückgesendet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Timer.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> -Objekt, das verwendet wird, zum Rendern der <see cref="T:System.Web.UI.Timer" /> Steuern des Inhalts an den Browser.</param>
+        <summary>Rendert die <see cref="T:System.Web.UI.Timer" /> Steuern des Inhalts an den Browser mit dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Timer.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Eine Zeichenfolge mit einem optionalen Argument an den Ereignishandler übergeben werden.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Timer.Tick" /> Ereignis aus, wenn eine Seite an den Server zurückgesendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Timer>-Instanz in eine <xref:System.Web.UI.IPostBackEventHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IScriptControl.GetScriptDescriptors">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt; IScriptControl.GetScriptDescriptors ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptDescriptor&gt; System.Web.UI.IScriptControl.GetScriptDescriptors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Timer.System#Web#UI#IScriptControl#GetScriptDescriptors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft Eigenschaften aus einem <see cref="T:System.Web.UI.Timer" /> -Objekt, das an die Client-Komponente übergeben werden.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.Web.UI.ScriptDescriptor" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Timer>-Instanz in eine <xref:System.Web.UI.IScriptControl>-Schnittstelle umgewandelt wird.  
+  
+ Die <xref:System.Web.UI.Timer.GetScriptDescriptors%2A> Methode fügt die <xref:System.Web.UI.Timer.Interval%2A> und <xref:System.Web.UI.Timer.Enabled%2A> Eigenschaften aus einer Instanz von der <xref:System.Web.UI.Timer> Klasse, um eine <xref:System.Web.UI.ScriptDescriptor> Objekt. Die Client-Komponente ruft die Werte ab und legt die entsprechenden Werte im Skript fest.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IScriptControl.GetScriptReferences">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt; IScriptControl.GetScriptReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptReference&gt; System.Web.UI.IScriptControl.GetScriptReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Timer.System#Web#UI#IScriptControl#GetScriptReferences" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Clientskript für die <see cref="T:System.Web.UI.Timer" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.ScriptReference" /> Objekt, das Clientskript für enthält die <see cref="T:System.Web.UI.Timer" /> Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Timer>-Instanz in eine <xref:System.Web.UI.IScriptControl>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tick">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt; Tick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; Tick" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.Timer.Tick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Anzahl der Millisekunden in angegeben die <see cref="P:System.Web.UI.Timer.Interval" /> Eigenschaft ist abgelaufen, und die Seite an den Server gesendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Timer.Tick> Ereignis wird ausgelöst, wenn die Anzahl der Millisekunden in angegeben die <xref:System.Web.UI.Timer.Interval%2A> Eigenschaft verstrichen seit dem letzten der Webseite rendern oder seit dem letzten <xref:System.Web.UI.Timer.Tick> Ereignis. Behandeln der <xref:System.Web.UI.Timer.Tick> Ereignis, wenn Aktionen während der einzelnen Postbacks ausführen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine <xref:System.Web.UI.UpdatePanel> Steuerelement, das anzeigt, einen zufällig generierten Aktienkurs sowie die Zeit, die der Aktienkurs generiert wurde. Die <xref:System.Web.UI.Timer> -Steuerelement aktualisiert den Inhalt in die <xref:System.Web.UI.UpdatePanel> steuern alle 10 Sekunden. Der Aktienkurs und die Zeit festgelegt sind, in einem Ereignishandler für das <xref:System.Web.UI.Timer.Tick> Ereignis.  
+  
+ [!code-aspx-csharp[System.Web.UI.Controls.Timer#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.Controls.Timer/cs/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.Controls.Timer#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.Controls.Timer/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public override bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Timer.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überschreibt die <see cref="P:System.Web.UI.Control.Visible" /> Eigenschaft von der <see cref="T:System.Web.UI.Control" /> Klasse, um zu verhindern, dass dieser Wert festgelegt wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement auf der Seite gerendert wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Visible` Eigenschaft überschrieben wird, der <xref:System.Web.UI.Timer> Klasse, um zu verhindern, dass durch Festlegen dieser Eigenschaft. Die `Visible` -Eigenschaft gibt `true` Wenn die Client-Komponente von der <xref:System.Web.UI.Timer> Klasse ist in der Webseite enthalten auch wenn <xref:System.Web.UI.Timer.Enabled%2A> auf festgelegt ist `false`. Die `Visible` -Eigenschaft gibt `false` wird er innerhalb eines Containers, z. B. ein <xref:System.Web.UI.UpdatePanel> Steuerelement, dessen `Visible` -Eigenschaftensatz auf `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Ein Wert zugewiesen wird, um die <c>Visible</c> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

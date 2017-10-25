@@ -1,0 +1,146 @@
+<Type Name="GridViewSortEventArgs" FullName="System.Web.UI.WebControls.GridViewSortEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewSortEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewSortEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewSortEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.GridView.Sorting" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.GridView> -Steuerelement löst die <xref:System.Web.UI.WebControls.GridView.Sorting> Ereignis aus, wenn eine Sortierschaltfläche (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Sort" festgelegt) geklickt wird, jedoch bevor die <xref:System.Web.UI.WebControls.GridView> Steuerelement behandelt den Sortiervorgang. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, z. B. den Sortiervorgang abbrechen, wenn dieses Ereignis tritt auf.  
+  
+> [!NOTE]
+>  Obwohl jede innerhalb Schaltfläche einer <xref:System.Web.UI.WebControls.GridView> steuern mit seine `CommandName` -Eigenschaft auf "Sort" löst die <xref:System.Web.UI.WebControls.GridView.Sorting> -Ereignis in der Regel Sortierschaltflächen in der Kopfzeile der ein <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ Ein <xref:System.Web.UI.WebControls.GridViewSortEventArgs> Objekt übergeben wird, an die Methode für die Ereignisbehandlung, erlaubt Ihnen angeben oder die Sortierung bestimmen Ausdruck und die Sortierreihenfolge Richtung, in der zum Sortieren der <xref:System.Web.UI.WebControls.GridView> Steuerelement. Verwenden Sie zum Bestimmen des Sortierungsausdruck die <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortExpression%2A> Eigenschaft. Verwenden Sie zum Bestimmen der Sortierreihenfolge der <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortDirection%2A> Eigenschaft. Sie können auch einen Sortiervorgang abbrechen, indem die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.GridViewSortEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.GridViewSelectEventArgs.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewSortEventArgs> -Objekt übergeben, auf die Ereignisbehandlung-Methode, die den Sortiervorgang "Abbrechen", wenn der Benutzer versucht, Sortieren Sie die Spalte für die Adresse in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[GridViewSorting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewSorting/CS/gridviewsortingcs.aspx#1)]
+ [!code-aspx-vb[GridViewSorting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewSorting/VB/gridviewsortingvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewSortEventArgs (string sortExpression, System.Web.UI.WebControls.SortDirection sortDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sortExpression, valuetype System.Web.UI.WebControls.SortDirection sortDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewSortEventArgs.#ctor(System.String,System.Web.UI.WebControls.SortDirection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sortExpression" Type="System.String" />
+        <Parameter Name="sortDirection" Type="System.Web.UI.WebControls.SortDirection" />
+      </Parameters>
+      <Docs>
+        <param name="sortExpression">Der Sortierausdruck, der zum Sortieren der Elemente im Steuerelement verwendet wird.</param>
+        <param name="sortDirection">Ein <see cref="T:System.Web.UI.WebControls.SortDirection" /> , der die Richtung, in der zum Sortieren der Elemente im Steuerelement angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.GridViewSortEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.GridViewSortEventArgs> Klasse.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Web.UI.WebControls.GridViewSortEventArgs>-Instanz aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortDirection%2A>|Der Wert des `sortDirection`-Parameters.|  
+|<xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortExpression%2A>|Der Wert des `sortExpression`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortDirection">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.SortDirection SortDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.SortDirection SortDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewSortEventArgs.SortDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SortDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Richtung, in die Sortierung der <see cref="T:System.Web.UI.WebControls.GridView" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.SortDirection" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.GridView.Sorting> Ereignis ausgelöst wird, können Sie die <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortDirection%2A> Eigenschaft, um zu bestimmen, in welcher Reihenfolge die <xref:System.Web.UI.WebControls.GridView> -Steuerelements sortiert die Elemente (basierend auf den Sortierungsausdruck) der Sortiervorgang wird ausgeführt, wenn. Da die <xref:System.Web.UI.WebControls.GridView.Sorting> -Ereignis tritt vor dem Sortiervorgang ausgeführt, können Sie auch die <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortDirection%2A> Eigenschaft, um die Sortierreihenfolge programmgesteuert festzulegen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortDirection%2A> Eigenschaft, um zu bestimmen, die Richtung, in die Sortierung einer <xref:System.Web.UI.WebControls.GridView> Steuerelement. Wenn der Benutzer versucht, in absteigender Reihenfolge zu sortieren, wird der Sortiervorgang abgebrochen.  
+  
+ [!code-aspx-csharp[GridViewSortEventArgsSortDirection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewSortEventArgsSortDirection/CS/gridviewsorteventargssortdirectioncs.aspx#1)]
+ [!code-aspx-vb[GridViewSortEventArgsSortDirection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewSortEventArgsSortDirection/VB/gridviewsorteventargssortdirectionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortExpression">
+      <MemberSignature Language="C#" Value="public string SortExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SortExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewSortEventArgs.SortExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausdruck zum Sortieren der Elemente in der <see cref="T:System.Web.UI.WebControls.GridView" /> Steuerelement.</summary>
+        <value>Der Ausdruck zum Sortieren der Elemente in der <see cref="T:System.Web.UI.WebControls.GridView" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.GridView.Sorting> Ereignis ausgelöst wird, können Sie die <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortExpression%2A> -Eigenschaft können Sie den Sortierungsausdruck zu bestimmen, die zum Sortieren verwendet werden die <xref:System.Web.UI.WebControls.GridView> steuern, wenn ein Sortiervorgang ausgeführt wird. Wird standardmäßig die <xref:System.Web.UI.WebControls.GridView> Steuerelement eine einzelne Spalte zu einem Zeitpunkt sortiert. Der Sortierausdruck enthält einfach den Namen des Felds zu sortieren. Sie können auch mehrere Spalten gleichzeitig sortieren, programmgesteuert durch Festlegen dieser Eigenschaft auf eine durch Trennzeichen getrennte Liste von Feldnamen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewSortEventArgs.SortExpression%2A> Eigenschaft, um zu bestimmen, welche Spalte in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement sortiert wird. Wenn der Benutzer versucht, die Adressspalte zu sortieren, wird der Sortiervorgang abgebrochen.  
+  
+ [!code-aspx-csharp[GridViewSorting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewSorting/CS/gridviewsortingcs.aspx#1)]
+ [!code-aspx-vb[GridViewSorting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewSorting/VB/gridviewsortingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

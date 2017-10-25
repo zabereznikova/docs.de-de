@@ -1,0 +1,219 @@
+<Type Name="SystemIcons" FullName="System.Drawing.SystemIcons">
+  <TypeSignature Language="C#" Value="public sealed class SystemIcons" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SystemIcons extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.SystemIcons" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Jede Eigenschaft von der <see cref="T:System.Drawing.SystemIcons" /> Klasse ist ein <see cref="T:System.Drawing.Icon" /> Objekt für Windows systemweite Symbole. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Bitmap aus geladen ein <xref:System.Drawing.Icon> behandeln Sie mithilfe der <xref:System.Drawing.GraphicsUnit> Enumeration und die Verwendung von der <xref:System.Drawing.Rectangle.Round%2A> Methode Rechtecks einer Bitmap gezeichnet werden soll.  
+  
+ In diesem Beispiel dient, die mit Windows Forms verwendet werden. Erstellen Sie ein Formular, das eine Schaltfläche Button2 enthält. Fügen Sie den Code in das Formular, und ordnen Sie diese Methode mit der Schaltfläche `Click` Ereignis.  
+  
+ [!code-cpp[System.Drawing.BitmapMembers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.BitmapMembers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.BitmapMembers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BitmapMembers/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Icon Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Icon Application" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemIcons.Application" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.Icon" /> -Objekt, das Standardsymbol für die Anwendung enthält (WIN32: IDI_APPLICATION).</summary>
+        <value>Ein <see cref="T:System.Drawing.Icon" /> -Objekt, das Standardsymbol für die Anwendung enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Asterisk">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Icon Asterisk { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Icon Asterisk" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemIcons.Asterisk" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.Icon" /> -Objekt, das Symbol "Sternchen System" enthält (WIN32: IDI_ASTERISK).</summary>
+        <value>Ein <see cref="T:System.Drawing.Icon" /> -Objekt, das Symbol "Sternchen System" enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Icon Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Icon Error" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemIcons.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.Icon" /> -Objekt, das das Fehlersymbol enthält (WIN32: IDI_ERROR).</summary>
+        <value>Ein <see cref="T:System.Drawing.Icon" /> -Objekt, das das Fehlersymbol enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclamation">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Icon Exclamation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Icon Exclamation" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemIcons.Exclamation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.Icon" /> -Objekt, das das Ausrufezeichensymbol enthält (WIN32: IDI_EXCLAMATION).</summary>
+        <value>Ein <see cref="T:System.Drawing.Icon" /> -Objekt, das das Ausrufezeichensymbol enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hand">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Icon Hand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Icon Hand" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemIcons.Hand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.Icon" /> -Objekt, das das Handsymbol enthält (WIN32: IDI_HAND).</summary>
+        <value>Ein <see cref="T:System.Drawing.Icon" /> -Objekt, das das Handsymbol enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Information">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Icon Information { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Icon Information" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemIcons.Information" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.Icon" /> -Objekt, das das Informationssymbol enthält (WIN32: IDI_INFORMATION).</summary>
+        <value>Ein <see cref="T:System.Drawing.Icon" /> -Objekt, das das Informationssymbol enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Question">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Icon Question { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Icon Question" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemIcons.Question" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.Icon" /> -Objekt, das System fragesymbol enthält (WIN32: IDI_QUESTION).</summary>
+        <value>Ein <see cref="T:System.Drawing.Icon" /> -Objekt, das System fragesymbol enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shield">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Icon Shield { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Icon Shield" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemIcons.Shield" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.Icon" /> -Objekt, das Symbol "sicherheitsschild:" enthält.</summary>
+        <value>Ein <see cref="T:System.Drawing.Icon" /> -Objekt, das Symbol "sicherheitsschild:" enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Benutzerkontensteuerung (UAC)-Richtlinien wird empfohlen, das Symbol "sicherheitsschild:", neben oder für jedes Steuerelement, dessen Standardaktion besteht darin, eine Erhöhung der Rechte auf Administratorberechtigungen erforderlich. Weitere Informationen finden Sie im Abschnitt "User Account Control", der die "Windows Vista User Experience Guidelines" auf MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Warning">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Icon Warning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Icon Warning" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemIcons.Warning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.Icon" /> -Objekt, das Warnsymbol System enthält (WIN32: IDI_WARNING).</summary>
+        <value>Ein <see cref="T:System.Drawing.Icon" /> -Objekt, das Warnsymbol System enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WinLogo">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Icon WinLogo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Icon WinLogo" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemIcons.WinLogo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.Icon" /> Objekt mit dem Windows Logo-Symbol enthält (WIN32: IDI_WINLOGO).</summary>
+        <value>Ein <see cref="T:System.Drawing.Icon" /> Objekt mit dem Windows Logo-Symbol enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

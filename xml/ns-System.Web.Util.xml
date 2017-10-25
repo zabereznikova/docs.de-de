@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Util">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Util" /> Namespace ist eine Auflistung von Klassen, die Rückrufmethoden für die Ausführung unter dem Geltungsbereich einer Transaktion ermöglichen und die Arbeit in separaten Threads ermöglichen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

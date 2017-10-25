@@ -1,0 +1,775 @@
+<Type Name="Rule" FullName="Microsoft.Build.Framework.XamlTypes.Rule">
+  <TypeSignature Language="C#" Value="public sealed class Rule : Microsoft.Build.Framework.XamlTypes.RuleSchema, Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Rule extends Microsoft.Build.Framework.XamlTypes.RuleSchema implements class Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode, class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.XamlTypes.Rule" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.XamlTypes.RuleSchema</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Rule: {Name}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Properties")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Wird verwendet, um die Schemainformationen für ein Tool, eine benutzerdefinierte Buildregel, eine PropertyPage usw. darzustellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel auf dem Datenträger als XAML dargestellt, wird nur eine Instanz dieser Klasse pro Verwendung von XAML-Datei pro Projekt Engine (Lösung) beibehalten.  
+  
+ Wenn Sie diese Klasse manuell instanziieren, rufen Sie <xref:Microsoft.Build.Framework.XamlTypes.Rule.BeginInit%2A> , bevor Sie die erste Eigenschaft des Objekts festlegen und <xref:Microsoft.Build.Framework.XamlTypes.Rule.EndInit%2A> nach dem Festlegen der Eigenschaft "letzten".  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Rule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Standardkonstruktor Für die Deserialisierung aus einem persistenten Format erforderlich.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalInputs">
+      <MemberSignature Language="C#" Value="public string AdditionalInputs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AdditionalInputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.AdditionalInputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn dies <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> eine Buildanpassung darstellt, das dieses Feld definiert die durch Semikolons getrennte Liste zusätzlicher Eingaben für das Ziel für die Buildanpassung ausgewertet werden muss.</summary>
+        <value>Gibt eine durch Semikolons getrennte Liste zusätzlicher Eingaben zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Rule.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Siehe <see cref="M:System.ComponentModel.ISupportInitialize.BeginInit" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Categories">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Microsoft.Build.Framework.XamlTypes.Category&gt; Categories { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.Build.Framework.XamlTypes.Category&gt; Categories" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.Categories" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.Build.Framework.XamlTypes.Category&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Liste der <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" /> Kategorien, die die Eigenschaften in dieser <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> angehören.</summary>
+        <value>Gibt die Liste der Eigenschaften zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional. Das Feld gibt nur die Kategorien, die explizit definiert wurden und keine automatisch generierten Kategorien enthalten. Wenn eine <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> , die in diesem enthalten ist <xref:Microsoft.Build.Framework.XamlTypes.Rule> deklariert seine Kategorie auf etwas anderes sein, die in dieser Liste nicht vorhanden ist und dann eine <xref:Microsoft.Build.Framework.XamlTypes.Category> , dass dieses Namens wird automatisch generiert und die interne Liste der Kategorien hinzugefügt. Dieser automatisch generierte Kategorie wird nach diesem Feld nicht zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandLine">
+      <MemberSignature Language="C#" Value="public string CommandLine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandLine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.CommandLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn dies <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> eine Buildanpassung darstellt, das dieses Feld gibt der Befehlszeilen-Vorlage, die von einem Task Buildanpassung verwendet werden, um das Tool aufrufen.</summary>
+        <value>Gibt die Befehlszeile Vorlage zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.XamlTypes.DataSource DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.XamlTypes.DataSource DataSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.XamlTypes.DataSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:Microsoft.Build.Framework.XamlTypes.Rule.DataSource" /> für die Eigenschaften in dieser <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />. Dies wird von einer beliebigen Datenquelle überschrieben, die lokal für eine Eigenschaft definiert ist.</summary>
+        <value>Gibt die Datenquelle zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen keinen dieses Feld angeben, wenn alle einzelne Eigenschaften lokal definierte Datenquellen verfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Beschreibung dieses <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> für die Verwendung durch einen potenziellen Benutzeroberflächenautomatisierungs-Client.</summary>
+        <value>Gibt die Beschreibung zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional, und es ist kulturabhängig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Namen, die von einem potenziellen Benutzeroberflächenautomatisierungs-Client verwendet werden kann, um diese anzuzeigen <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</summary>
+        <value>Gibt den Namen zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional, und es ist kulturabhängig.  
+  
+ Wenn diese Eigenschaft nicht festgelegt ist, hat er denselben Wert wie die <xref:Microsoft.Build.Framework.XamlTypes.Rule.Name%2A> -Eigenschaft (und würde deshalb nicht lokalisiert werden).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Rule.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Siehe <see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluatedCategories">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Microsoft.Build.Framework.XamlTypes.Category&gt; EvaluatedCategories { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.Build.Framework.XamlTypes.Category&gt; EvaluatedCategories" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.EvaluatedCategories" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.Build.Framework.XamlTypes.Category&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Vereinigung der XAML angegebenen <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" /> Kategorien und automatisch generierte <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" /> Kategorien. Letztere erstellt aus fehlenden Kategorien, die durch die Eigenschaften in dieser Regel auf die verwiesen werden. Automatisch generierte <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" /> Kategorien nur ihre Namen besitzen.</summary>
+        <value>Gibt die Vereinigung der Kategorien zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionDescription">
+      <MemberSignature Language="C#" Value="public string ExecutionDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExecutionDescription" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.ExecutionDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn dies <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> eine Buildanpassung darstellt, das dieses Feld gibt der Meldung angezeigt werden, bevor eine Buildanpassung während des Buildvorgangs ausgeführt wird.</summary>
+        <value>Die Nachricht zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileExtension">
+      <MemberSignature Language="C#" Value="public string FileExtension { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileExtension" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.FileExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn dies <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> eine Buildanpassung darstellt, dieses Feld gibt die Dateinamenerweiterung zuordnen.</summary>
+        <value>Gibt die Dateinamenerweiterung an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertiesByCategory">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.OrderedDictionary GetPropertiesByCategory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Specialized.OrderedDictionary GetPropertiesByCategory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Rule.GetPropertiesByCategory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.OrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Wörterbuch aller Eigenschaften, die in Kategorien unterteilt.</summary>
+        <returns>Gibt ein Wörterbuch, deren Schlüssel, dem <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" /> Namen und deren Werte die Liste der Eigenschaften in dieser Kategorie sind. Der zurückgegebene Wert ist nie <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Liste möglicherweise automatisch generierte Kategorien enthalten. Wenn eine <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> (oder davon abgeleiteten Klassen) finden Sie eine Eigenschaft, die nicht angegeben ist, und klicken Sie dann eine neue Kategorie für sie generiert wird. Wenn keine Kategorie für die Eigenschaft angegeben ist, wird die Eigenschaft in der Kategorie "Allgemein" versetzt.  
+  
+ Die Liste der Kategorien ist genau wie in der XAML-Datei angegeben. Die automatisch generierten Kategorien kommen nach den angegebenen Kategorien, jedoch ohne strenge Reihenfolge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertiesInCategory">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Framework.XamlTypes.BaseProperty&gt; GetPropertiesInCategory (string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Framework.XamlTypes.BaseProperty&gt; GetPropertiesInCategory(string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Rule.GetPropertiesInCategory(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Framework.XamlTypes.BaseProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name der Kategorie, deren Eigenschaften zurückgegeben werden.</param>
+        <summary>Gibt die Liste der Eigenschaften in einem <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />.</summary>
+        <returns>Gibt die Liste der Eigenschaften in einem <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />. Gibt <see langword="null" /> Wenn diese <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> enthält keine dieser Kategorie.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.XamlTypes.BaseProperty GetProperty (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Framework.XamlTypes.BaseProperty GetProperty(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Rule.GetProperty(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.XamlTypes.BaseProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Den Namen der Eigenschaft.</param>
+        <summary>Ruft die Eigenschaft mit dem angegebenen Namen ab.</summary>
+        <returns>Gibt die Eigenschaft mit dem angegebenen Namen oder Null zurück, wenn keine Eigenschaft mit einem übereinstimmenden Namen gefunden wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemaObjects">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;object&gt; GetSchemaObjects (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;object&gt; GetSchemaObjects(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjects(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule/&lt;GetSchemaObjects&gt;d__101))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ der statischen Daten abgerufen werden sollen.</param>
+        <summary>Gibt einen Enumerator für alle Instanzen von statischen Daten, die vom angegebenen Typ zurück.</summary>
+        <returns>Gibt einen Enumerator für alle Instanzen von statischen Daten, die vom angegebenen Typ zurück. Gibt <see langword="Null" /> oder eine leere Liste, wenn keine Objekte des angegebenen Typs von diesem Knoten bereitgestellt werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemaObjectTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Type&gt; GetSchemaObjectTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; GetSchemaObjectTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjectTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.Build.Framework.XamlTypes.Rule/&lt;GetSchemaObjectTypes&gt;d__100))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, über alle Typen von statischen Daten für die datengesteuerten Funktionen, die dieser Knoten enthält.</summary>
+        <returns>Gibt einen Enumerator zurück, über alle Typen von statischen Daten für die datengesteuerten Funktionen, die dieser Knoten enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpString">
+      <MemberSignature Language="C#" Value="public string HelpString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.HelpString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest Hilfeinformationen für diesen <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />.</summary>
+        <value>Die Hilfe-Informationen zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kann verwendet werden, um eine Hilfe-URL anzugeben. Dieses Feld ist optional, und es ist kulturabhängig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,object&gt; Metadata { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, object&gt; Metadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen beliebigen Metadaten, der für eine Regel festgelegt werden kann.</summary>
+        <value>Gibt <see cref="T:System.Collections.Generic.Dictionary`2" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name dieses <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />.</summary>
+        <value>Gibt den Namen zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist obligatorisch und Kultur. Der Wert dieses Felds kann nicht auf die leere Zeichenfolge festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Order">
+      <MemberSignature Language="C#" Value="public int Order { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Order" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.Order" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Vorschlag an einen potenziellen Benutzeroberflächenautomatisierungs-Client für den relativen Speicherort dieses <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> im Vergleich zu allen anderen Regeln im System.</summary>
+        <value>Gibt den Vorschlag zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Outputs">
+      <MemberSignature Language="C#" Value="public string Outputs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Outputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.Outputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn dies <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> eine Buildanpassung darstellt, das dieses Feld definiert der durch Semikolons getrennte Liste der Ausgaben, die für die Buildanpassung Ziel ausgewertet werden sollen.</summary>
+        <value>Gibt die Ausgaben zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverrideMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.XamlTypes.RuleOverrideMode OverrideMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.XamlTypes.RuleOverrideMode OverrideMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.OverrideMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.XamlTypes.RuleOverrideMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Methode zu verwenden, wenn mehrere Regeln mit demselben Namen in das Projekt abstimmen, die Regeln in einer Instanz angezeigt.</summary>
+        <value>Gibt <see cref="T:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageTemplate">
+      <MemberSignature Language="C#" Value="public string PageTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PageTemplate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.PageTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die UI-Rendering-Vorlage, die verwendet wird, um diese Regel angezeigt.</summary>
+        <value>Gibt die UI-Vorlage zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, legen Sie dieses Feld kann solange es von der beabsichtigten Renderingvorlage erkannt wird sein.  
+  
+ Dieses Feld ist erforderlich, nur dann, wenn diese Regel dafür vorgesehen ist, als eine Eigenschaftenseite angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Microsoft.Build.Framework.XamlTypes.BaseProperty&gt; Properties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.Build.Framework.XamlTypes.BaseProperty&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.Build.Framework.XamlTypes.BaseProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Liste der Eigenschaften in dieser <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />.</summary>
+        <value>Gibt die Liste der Eigenschaften zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mindestens eine Eigenschaft muss angegeben werden. Die Liste, die von dieser Eigenschaft zurückgegebene sollte nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyPagesHidden">
+      <MemberSignature Language="C#" Value="public bool PropertyPagesHidden { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PropertyPagesHidden" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.PropertyPagesHidden" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob die Eigenschaftenseiten für diese Regel ausgeblendet sind.</summary>
+        <value>Gibt ein flag Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Separator">
+      <MemberSignature Language="C#" Value="public string Separator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Separator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.Separator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Token, das zur Trennung von eines Switches Eigenschaft vom Wert verwendet wird.</summary>
+        <value>Gibt das token-Trennzeichen an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der hier angegebene Wert wird überschrieben, durch den Wert von der <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty.Separator%2A> des untergeordneten Elements <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>.  
+  
+ Dieses Feld ist optional und Kultur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowOnlyRuleProperties">
+      <MemberSignature Language="C#" Value="public bool ShowOnlyRuleProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowOnlyRuleProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.ShowOnlyRuleProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das bestimmt, ob die Befehlszeile Kategorie ausgeblendet.</summary>
+        <value>Gibt <see langword="true" /> Befehlszeile Kategorien sind ausgeblendet ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional.  
+  
+ Der Standardwert ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsFileBatching">
+      <MemberSignature Language="C#" Value="public bool SupportsFileBatching { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsFileBatching" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.SupportsFileBatching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das bestimmt, ob mehrere Dateien auf einen einzelnen Befehlszeilen Aufruf in einem Batch verarbeitet werden können.</summary>
+        <value>Gibt <see langword="true" /> Wenn mehrere Dateien im Batch ist, andernfalls werden können <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchPrefix">
+      <MemberSignature Language="C#" Value="public string SwitchPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SwitchPrefix" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.SwitchPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Präfix, das für alle Eigenschaft Switches in dieser verwenden <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> für die Groß-/Kleinschreibung bei der diese Eigenschaft <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> ein Tool darstellt.</summary>
+        <value>Gibt das Präfix zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der angegebene Wert kann überschrieben werden, durch den Wert von der <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty.SwitchPrefix%2A> einer untergeordneten <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>.  
+  
+ Dieses Feld ist optional und Kultur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolName">
+      <MemberSignature Language="C#" Value="public string ToolName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Rule.ToolName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Tools fest, wenn diese Regel ein Tool darstellt.</summary>
+        <value>Gibt den Namen des Tools zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

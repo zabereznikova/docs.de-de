@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Configuration">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Configuration" /> -Namespace enthält Klassen, die zum Einrichten der ASP.NET-Konfiguration verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

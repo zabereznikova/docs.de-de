@@ -1,0 +1,552 @@
+<Type Name="EncoderParameter" FullName="System.Drawing.Imaging.EncoderParameter">
+  <TypeSignature Language="C#" Value="public sealed class EncoderParameter : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit EncoderParameter extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.EncoderParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Verwendet, um einen Wert oder ein Array von Werten, um einem Bildencoder übergeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch eine <xref:System.Drawing.Imaging.EncoderParameter> -Objekts auf, um eine Liste der möglichen Werte, die von einem bestimmten Parameter von einem bestimmten Bildencoder unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Drawing.Imaging.EncoderParameter> mithilfe der <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%2A> Konstruktor. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen die `VaryQualityLevel` Methode aus den Konstruktor des Formulars. Dieses Beispiel benötigen Sie eine Bilddatei, die mit dem Namen `TestPhoto.jpg` am **"c:"\\**.  
+  
+ [!code-csharp[UsingImageEncodersDecoders#8](~/samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#8)]
+ [!code-vb[UsingImageEncodersDecoders#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#8)]  
+[!code-csharp[UsingImageEncodersDecoders#6](~/samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#6)]
+[!code-vb[UsingImageEncodersDecoders#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Byte)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="value">Eine 8-Bit-Ganzzahl ohne Vorzeichen, der angibt, die in gespeicherten Wert der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> -Objekt und einen 8-Bit-Ganzzahl ohne Vorzeichen. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" />-Eigenschaft auf <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeByte" /> und die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" />-Eigenschaft auf 1 fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="value">Ein Array von 8-Bit-Ganzzahlen ohne Vorzeichen, der angibt, die in gespeicherten Werte der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> -Objekt und ein Array von 8-Bit-Ganzzahlen ohne Vorzeichen. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> Eigenschaft <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeByte" />, und legt sie fest die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> Eigenschaft, um die Anzahl der Elemente im Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int16)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="value">Eine 16-Bit-Ganzzahl, die angibt, die in gespeicherten Wert der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt. Darf nicht negativ sein.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> -Objekt und einer 16-Bit-Ganzzahl. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" />-Eigenschaft auf <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeShort" /> und die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" />-Eigenschaft auf 1 fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, short[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, int16[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int16[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="value" Type="System.Int16[]" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="value">Ein Array von 16-Bit-Ganzzahlen, die in gespeicherten Werte gibt die <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt. Die ganze Zahlen im Array darf nicht negativ sein.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> -Objekt und ein Array von 16-Bit-Ganzzahlen. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> Eigenschaft <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeShort" />, und legt sie fest die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> Eigenschaft, um die Anzahl der Elemente im Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="value">Eine 64-Bit-Ganzzahl, die angibt, die in gespeicherten Wert der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt. Darf nicht negativ sein. Dieser Parameter wird in eine 32-Bit-Ganzzahl konvertiert, vor dem Speichern in der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt und eine 64-Bit-Ganzzahl. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> Eigenschaft, um <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeLong" /> (32 Bit), und legt sie fest die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> -Eigenschaft auf 1 fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Drawing.Imaging.EncoderParameter> mithilfe der <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%2A> Konstruktor. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen die `VaryQualityLevel` Methode aus den Konstruktor des Formulars. Dieses Beispiel benötigen Sie eine Bilddatei, die mit dem Namen `TestPhoto.jpg` am **"c:"\\**.  
+  
+ [!code-csharp[UsingImageEncodersDecoders#8](~/samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#8)]
+ [!code-vb[UsingImageEncodersDecoders#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#8)]  
+[!code-csharp[UsingImageEncodersDecoders#6](~/samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#6)]
+[!code-vb[UsingImageEncodersDecoders#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, long[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, int64[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int64[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="value" Type="System.Int64[]" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="value">Ein Array von 64-Bit-Ganzzahlen, die in gespeicherten Werte gibt die <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt. Die ganze Zahlen im Array darf nicht negativ sein. Die 64-Bit-Ganzzahlen werden auf 32-Bit-Ganzzahlen konvertiert, vor der Speicherung in der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> -Objekt und ein Array von 64-Bit-Ganzzahlen. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> Eigenschaft <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeLong" /> (32-Bit), und legt sie fest die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> Eigenschaft, um die Anzahl der Elemente im Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="value">Ein <see cref="T:System.String" /> , die in gespeicherten Wert gibt die <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt und eine Zeichenfolge. Die Zeichenfolge in eine Null-terminierte ASCII-Zeichenfolge konvertiert wird, vor dem Speichern in der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> Eigenschaft <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeAscii" />, und legt sie fest die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> Eigenschaft, um die Länge der ASCII-Zeichenfolge einschließlich des NULL-Terminators.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, byte value, bool undefined);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, unsigned int8 value, bool undefined) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Byte,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="value" Type="System.Byte" />
+        <Parameter Name="undefined" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="value">Ein Byte, das die in gespeicherten Wert gibt an, die <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</param>
+        <param name="undefined">Wenn <see langword="true" />, <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> -Eigenschaftensatz auf <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeUndefined" />ist, andernfalls der <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> -Eigenschaftensatz auf <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeByte" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> -Objekt und einem 8-Bit-Wert. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> Eigenschaft, um <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeUndefined" /> oder <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeByte" />, und legt sie fest die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> -Eigenschaft auf 1 fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, byte[] value, bool undefined);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, unsigned int8[] value, bool undefined) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Byte[],System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="undefined" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="value">Ein Array von Bytes, die in gespeicherten Werte gibt die <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</param>
+        <param name="undefined">Wenn <see langword="true" />, <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> -Eigenschaftensatz auf <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeUndefined" />ist, andernfalls der <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> -Eigenschaftensatz auf <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeByte" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> -Objekt und ein Array von Bytes. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> Eigenschaft <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeUndefined" /> oder <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeByte" />, und legt sie fest die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> Eigenschaft, um die Anzahl der Elemente im Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, int numerator, int denominator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, int32 numerator, int32 denominator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="numerator" Type="System.Int32" />
+        <Parameter Name="denominator" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="numerator">Eine 32-Bit-Ganzzahl, die den Zähler eines Bruchs darstellt. Darf nicht negativ sein.</param>
+        <param name="denominator">Eine 32-Bit-Ganzzahl, die den Nenner eines Bruchs darstellt. Darf nicht negativ sein.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Imaging.EncoderParameter" />-Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt und einem Paar von 32-Bit-Ganzzahlen. Die beiden Ganzzahlen stellen einen Bruch dar, wobei die erste ganze Zahl der Zähler und die zweite ganze Zahl der Nenner ist. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" />-Eigenschaft auf <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeRational" /> und die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" />-Eigenschaft auf 1 fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, int[] numerator, int[] denominator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, int32[] numerator, int32[] denominator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int32[],System.Int32[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="numerator" Type="System.Int32[]" />
+        <Parameter Name="denominator" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="numerator">Ein Array von 32-Bit-Ganzzahlen, das die Zähler der Bruchzahlen angibt. Die ganze Zahlen im Array darf nicht negativ sein.</param>
+        <param name="denominator">Ein Array von 32-Bit-Ganzzahlen, das dem Nenner der Bruchzahlen angibt. Die ganze Zahlen im Array darf nicht negativ sein. Der Zähler des gleichen Index ist als Nenner eines bestimmten Indexes zugeordnet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt und zwei Arrays mit 32-Bit-Ganzzahlen. Die beiden Arrays stellen ein Array von Brüchen dar. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> Eigenschaft, um <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeRational" />, und legt sie fest der <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> Eigenschaft, um die Anzahl der Elemente in der <paramref name="numerator" /> -Array, das die Anzahl von Elementen identisch sein muss in der <paramref name="denominator" /> Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, long rangebegin, long rangeend);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, int64 rangebegin, int64 rangeend) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int64,System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="rangebegin" Type="System.Int64" />
+        <Parameter Name="rangeend" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="rangebegin">Eine 64-Bit-Ganzzahl, die die kleinste Zahl in einem Bereich von ganzen Zahlen darstellt. Darf nicht negativ sein. Dieser Parameter wird in eine 32-Bit-Ganzzahl konvertiert, vor dem Speichern in der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</param>
+        <param name="rangeend">Eine 64-Bit-Ganzzahl, die die größte Zahl in einem Bereich von ganzen Zahlen darstellt. Darf nicht negativ sein. Dieser Parameter wird in eine 32-Bit-Ganzzahl konvertiert, vor dem Speichern in der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> -Objekt und einem Paar von 64-Bit-Ganzzahlen. Das Paar von ganzen Zahlen stellt einen Bereich von ganzen Zahlen, die erste ganze Zahl, wird die kleinste Zahl im Bereich und die zweite ganze Zahl die größte Zahl im Bereich. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" />-Eigenschaft auf <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeLongRange" /> und die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" />-Eigenschaft auf 1 fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, long[] rangebegin, long[] rangeend);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, int64[] rangebegin, int64[] rangeend) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int64[],System.Int64[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="rangebegin" Type="System.Int64[]" />
+        <Parameter Name="rangeend" Type="System.Int64[]" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="rangebegin">Ein Array von 64-Bit-Ganzzahlen, die minimalen Werte für die Bereiche, die ganze Zahl angibt. Die ganze Zahlen im Array darf nicht negativ sein. Die 64-Bit-Ganzzahlen werden auf 32-Bit-Ganzzahlen konvertiert, vor der Speicherung in der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</param>
+        <param name="rangeend">Ein Array von 64-Bit-Ganzzahlen, die die maximalen Werte für die Bereiche, die ganze Zahl angibt. Die ganze Zahlen im Array darf nicht negativ sein. Die 64-Bit-Ganzzahlen werden auf 32-Bit-Ganzzahlen konvertiert, vor der Speicherung in der <see cref="T:System.Drawing.Imaging.EncoderParameters" /> Objekt. Ein maximalen Wert von einem bestimmten Index ist der minimale Wert des gleichen Index zugeordnet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt und zwei Arrays von 64-Bit-Ganzzahlen. Die beiden Arrays stellen ein Array ganzzahlige Bereiche dar. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> Eigenschaft, um <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeLongRange" />, und legt sie fest der <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> Eigenschaft, um die Anzahl der Elemente in der <paramref name="rangebegin" /> -Array, das die Anzahl von Elementen identisch sein muss in der <paramref name="rangeend" /> Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, int numberValues, System.Drawing.Imaging.EncoderParameterValueType type, IntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, int32 numberValues, valuetype System.Drawing.Imaging.EncoderParameterValueType type, native int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int32,System.Drawing.Imaging.EncoderParameterValueType,System.IntPtr)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="numberValues" Type="System.Int32" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EncoderParameterValueType" />
+        <Parameter Name="value" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="numberValues">Eine ganze Zahl, die angibt, die Anzahl der in gespeicherten Werte der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt. Die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> Eigenschaft auf diesen Wert festgelegt ist.</param>
+        <param name="type">Ein Mitglied der <see cref="T:System.Drawing.Imaging.EncoderParameterValueType" /> -Enumeration, der den Datentyp der gespeicherten Werte gibt die <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt. Die <see cref="T:System.Type" /> und <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> Eigenschaften werden auf diesen Wert festgelegt.</param>
+        <param name="value">Ein Zeiger auf ein Array von Werten des Typs gemäß den <c>Typ</c> Parameter.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> -Objekt, Anzahl von Werten, den Datentyp der Werte und einen Zeiger auf die in gespeicherten Werte der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, int NumberOfValues, int Type, int Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, int32 NumberOfValues, int32 Type, int32 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This constructor has been deprecated. Use EncoderParameter(Encoder encoder, int numberValues, EncoderParameterValueType type, IntPtr value) instead.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="NumberOfValues" Type="System.Int32" />
+        <Parameter Name="Type" Type="System.Int32" />
+        <Parameter Name="Value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="NumberOfValues">Eine ganze Zahl, die angibt, die Anzahl der in gespeicherten Werte der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt. Die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> Eigenschaft auf diesen Wert festgelegt ist.</param>
+        <param name="Type">Ein Mitglied der <see cref="T:System.Drawing.Imaging.EncoderParameterValueType" /> -Enumeration, der den Datentyp der gespeicherten Werte gibt die <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt. Die <see cref="T:System.Type" /> und <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> Eigenschaften werden auf diesen Wert festgelegt.</param>
+        <param name="Value">Ein Zeiger auf ein Array von Werten des Typs gemäß den <c>Typ</c> Parameter.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt und drei ganzen Zahlen, die die Anzahl der Werte, der Datentyp der Werte und einen Zeiger auf die in gespeicherten Werte geben die <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Typ ist kein gültiger <see cref="T:System.Drawing.Imaging.EncoderParameterValueType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, int numerator1, int demoninator1, int numerator2, int demoninator2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, int32 numerator1, int32 demoninator1, int32 numerator2, int32 demoninator2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="numerator1" Type="System.Int32" />
+        <Parameter Name="demoninator1" Type="System.Int32" />
+        <Parameter Name="numerator2" Type="System.Int32" />
+        <Parameter Name="demoninator2" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="numerator1">Eine 32-Bit-Ganzzahl, die den Zähler der kleinsten Bruchzahl im Bereich darstellt. Darf nicht negativ sein.</param>
+        <param name="demoninator1">Eine 32-Bit-Ganzzahl, die den Nenner der kleinsten Bruchzahl im Bereich darstellt. Darf nicht negativ sein.</param>
+        <param name="numerator2">Eine 32-Bit-Ganzzahl, die den Nenner der kleinsten Bruchzahl im Bereich darstellt. Darf nicht negativ sein.</param>
+        <param name="demoninator2">Eine 32-Bit-Ganzzahl, die den Zähler der größten Bruchzahl im Bereich darstellt. Darf nicht negativ sein.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> -Objekt und vier 32-Bit-Ganzzahlen. Die vier ganzen Zahlen stellen einen Bereich von Bruchzahlen dar. Die ersten beiden Ganzzahlen stellen die kleinste Bruchzahl im Bereich, und die verbleibenden zwei ganzen Zahlen darstellen, den größten Anteil des Bereichs. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" />-Eigenschaft auf <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeRationalRange" /> und die <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" />-Eigenschaft auf 1 fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncoderParameter (System.Drawing.Imaging.Encoder encoder, int[] numerator1, int[] denominator1, int[] numerator2, int[] denominator2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Imaging.Encoder encoder, int32[] numerator1, int32[] denominator1, int32[] numerator2, int32[] denominator2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int32[],System.Int32[],System.Int32[],System.Int32[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Drawing.Imaging.Encoder" />
+        <Parameter Name="numerator1" Type="System.Int32[]" />
+        <Parameter Name="denominator1" Type="System.Int32[]" />
+        <Parameter Name="numerator2" Type="System.Int32[]" />
+        <Parameter Name="denominator2" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Ein <see cref="T:System.Drawing.Imaging.Encoder" />-Objekt, das den global eindeutigen Bezeichner der Parameterkategorie kapselt.</param>
+        <param name="numerator1">Ein Array von 32-Bit-Ganzzahlen, das die Zähler der minimalen Werte für die Bereiche angibt. Die ganze Zahlen im Array darf nicht negativ sein.</param>
+        <param name="denominator1">Ein Array von 32-Bit-Ganzzahlen, die den Nenner der minimalen Werte für die Bereiche angibt. Die ganze Zahlen im Array darf nicht negativ sein.</param>
+        <param name="numerator2">Ein Array von 32-Bit-Ganzzahlen, die den Zähler, der die maximalen Werte für die Bereiche angibt. Die ganze Zahlen im Array darf nicht negativ sein.</param>
+        <param name="denominator2">Ein Array von 32-Bit-Ganzzahlen, die den Nenner, der die maximalen Werte für die Bereiche angibt. Die ganze Zahlen im Array darf nicht negativ sein.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt und vier Arrays mit 32-Bit-Ganzzahlen. Die vier Arrays stellen eine rationelle Array-Bereiche dar. Ein vernünftige Bereich ist der Satz aller Bruchzahlen von ein minimale Dezimalstellenwert über einen maximalen Wert für die Sekundenbruchteile. Legt die <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> Eigenschaft, um <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeRationalRange" />, und legt sie fest der <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> Eigenschaft, um die Anzahl der Elemente in der <paramref name="numerator1" /> -Array, das die Anzahl der Elemente in den anderen drei Arrays identisch sein muss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Bereich zuverlässigeren besteht aus allen Bruchzahlen von numerator1 [i] / Nenner1 [i] bis Zähler2 [i] / Nenner2 [i].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von diesem <see cref="T:System.Drawing.Imaging.EncoderParameter" />-Objekt verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Drawing.Imaging.EncoderParameter.Dispose%2A> können die von diesem verwendeten Ressourcen <xref:System.Drawing.Imaging.EncoderParameter> Objekt für andere Zwecke neu reserviert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoder">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.Encoder Encoder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Imaging.Encoder Encoder" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.EncoderParameter.Encoder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt zugeordnete <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt. Die <see cref="T:System.Drawing.Imaging.Encoder" /> -Objekt kapselt den globally unique Identifier (GUID), der die Kategorie angibt (z. B. <see cref="F:System.Drawing.Imaging.Encoder.Quality" />, <see cref="F:System.Drawing.Imaging.Encoder.ColorDepth" />, oder <see cref="F:System.Drawing.Imaging.Encoder.Compression" />) des Parameters in diesem gespeichert <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt, das die GUID kapselt, der angibt, die Kategorie des Parameters in diesem gespeichert <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~EncoderParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.EncoderParameter.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht eine <see cref="T:System.Drawing.Imaging.EncoderParameter" /> -Objekt den Versuch, Ressourcen freizugeben und andere Bereinigungsvorgänge durch vor dem Ausführen der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt von der Garbagecollection wieder zugänglich gemacht wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfValues">
+      <MemberSignature Language="C#" Value="public int NumberOfValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfValues" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente im Array von Werten, die in diesem gespeichert <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</summary>
+        <value>Eine ganze Zahl, die die Anzahl der Elemente im Array von Werten, die in diesem gespeichert <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.EncoderParameterValueType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Imaging.EncoderParameterValueType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.EncoderParameter.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Datentyp der in diesem gespeicherten Werte <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Drawing.Imaging.EncoderParameterValueType" /> -Enumeration, der den Datentyp der Werte in dieser gespeicherten <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueType">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.EncoderParameterValueType ValueType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Imaging.EncoderParameterValueType ValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.EncoderParameter.ValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Datentyp der in diesem gespeicherten Werte <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Drawing.Imaging.EncoderParameterValueType" /> -Enumeration, der den Datentyp der Werte in dieser gespeicherten <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

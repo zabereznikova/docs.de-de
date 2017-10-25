@@ -1,0 +1,329 @@
+<Type Name="TextMetricsCharacterSet" FullName="System.Windows.Forms.VisualStyles.TextMetricsCharacterSet">
+  <TypeSignature Language="C#" Value="public enum TextMetricsCharacterSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextMetricsCharacterSet extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Zeichensatz, der durch einen visuellen Stil für ein bestimmtes Element angegebenen Schriftart an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet> Enumeration gibt an, die möglichen Werte für die <xref:System.Windows.Forms.VisualStyles.TextMetrics.CharSet%2A> Eigenschaft von der <xref:System.Windows.Forms.VisualStyles.TextMetrics> Struktur.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ansi">
+      <MemberSignature Language="C#" Value="Ansi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Ansi = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Ansi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der ANSI-Zeichensatz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Arabic">
+      <MemberSignature Language="C#" Value="Arabic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Arabic = int32(178)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Arabic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Arabische Zeichensatz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Baltic">
+      <MemberSignature Language="C#" Value="Baltic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Baltic = int32(186)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Baltic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zeichensatz Baltisch.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ChineseBig5">
+      <MemberSignature Language="C#" Value="ChineseBig5" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet ChineseBig5 = int32(136)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.ChineseBig5" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Traditionelles Chinesisch-Zeichensatz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Default = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Standardzeichensatz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EastEurope">
+      <MemberSignature Language="C#" Value="EastEurope" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet EastEurope = int32(238)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.EastEurope" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Osteuropa-Zeichensatz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Gb2312">
+      <MemberSignature Language="C#" Value="Gb2312" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Gb2312 = int32(134)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Gb2312" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Gb2312 vereinfachtes Chinesisch Zeichensatz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Greek">
+      <MemberSignature Language="C#" Value="Greek" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Greek = int32(161)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Greek" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legen Sie die griechische Zeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hangul">
+      <MemberSignature Language="C#" Value="Hangul" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Hangul = int32(129)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Hangul" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zeichensatz Hangul (Koreanisch).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hebrew">
+      <MemberSignature Language="C#" Value="Hebrew" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Hebrew = int32(177)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Hebrew" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zeichensatz Hebräisch.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Johab">
+      <MemberSignature Language="C#" Value="Johab" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Johab = int32(130)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Johab" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zeichensatz Johab (Koreanisch).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Mac">
+      <MemberSignature Language="C#" Value="Mac" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Mac = int32(77)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Mac" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Macintosh-Zeichensatz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Oem">
+      <MemberSignature Language="C#" Value="Oem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Oem = int32(255)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Oem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der OEM-Zeichensatz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Russian">
+      <MemberSignature Language="C#" Value="Russian" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Russian = int32(204)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Russian" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zeichensatz Russisch.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftJis">
+      <MemberSignature Language="C#" Value="ShiftJis" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet ShiftJis = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.ShiftJis" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zeichensatz ShiftJis (Japanisch).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Symbol">
+      <MemberSignature Language="C#" Value="Symbol" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Symbol = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Symbol" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zeichensatz des Symbols.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Thai">
+      <MemberSignature Language="C#" Value="Thai" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Thai = int32(222)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Thai" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zeichensatz Thai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Turkish">
+      <MemberSignature Language="C#" Value="Turkish" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Turkish = int32(162)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Turkish" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das türkische Zeichen festgelegt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Vietnamese">
+      <MemberSignature Language="C#" Value="Vietnamese" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.TextMetricsCharacterSet Vietnamese = int32(163)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsCharacterSet.Vietnamese" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetricsCharacterSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zeichensatz Vietnamesisch.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

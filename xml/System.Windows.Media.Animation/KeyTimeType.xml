@@ -1,0 +1,89 @@
+<Type Name="KeyTimeType" FullName="System.Windows.Media.Animation.KeyTimeType">
+  <TypeSignature Language="C#" Value="public enum KeyTimeType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed KeyTimeType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.KeyTimeType" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Stellt die verschiedenen Typen, die darstellen, können eine <see cref="T:System.Windows.Media.Animation.KeyTime" /> Instanz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedem Keyframe <xref:System.Windows.Media.Animation.KeyTime> gibt an, wann diese Keyframes endet. Es wird nicht angegeben, wie lange die Schlüsselzeit spielt. Die Wiedergabedauer eines Keyframes hängt von der Animationsdauer, dem Zeitpunkt, an dem der Keyframe endet, und vom Zeitpunkt, an dem der vorherige Keyframe geendet hat, ab. Finden Sie unter [Keyframe-Animationen Übersicht](~/docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) für Weitere Informationen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Paced">
+      <MemberSignature Language="C#" Value="Paced" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.KeyTimeType Paced = unsigned int8(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.KeyTimeType.Paced" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTimeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass angrenzenden Keyframes jeweils ein Zeitsegment zugewiesen ist, das sich proportional zu ihrer Länge verhält.  Das Ziel besteht darin, einen Längenwert zu erzeugen, der die Geschwindigkeit der Animationssequenz konstant hält.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Percent">
+      <MemberSignature Language="C#" Value="Percent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.KeyTimeType Percent = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.KeyTimeType.Percent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTimeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass jedes <see cref="T:System.Windows.Media.Animation.KeyTime" /> Wert wird als Prozentsatz der Gesamtzeit für einen bestimmten Animationssequenz angegeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeSpan">
+      <MemberSignature Language="C#" Value="TimeSpan" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.KeyTimeType TimeSpan = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.KeyTimeType.TimeSpan" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTimeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass jedes <see cref="P:System.Windows.Media.Animation.ByteKeyFrame.KeyTime" /> wird als eine <see cref="P:System.Windows.Media.Animation.KeyTime.TimeSpan" /> relativ zum Wert der <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> einer Animationssequenz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="Uniform" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.KeyTimeType Uniform = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.KeyTimeType.Uniform" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTimeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die zugewiesene Gesamtzeit für eine Animationssequenz gleichmäßig auf die einzelnen Keyframes aufgeteilt wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

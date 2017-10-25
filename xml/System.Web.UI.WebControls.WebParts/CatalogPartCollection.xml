@@ -1,0 +1,377 @@
+<Type Name="CatalogPartCollection" FullName="System.Web.UI.WebControls.WebParts.CatalogPartCollection">
+  <TypeSignature Language="C#" Value="public sealed class CatalogPartCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CatalogPartCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" />Steuerelementen, mit der Kataloge von Webserversteuerelementen bereitgestellt werden, die Endbenutzer zu einer Webseite hinzufügen können. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Klasse ist eine schreibgeschützte Auflistung von <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente, die in der Regel verwendet, indem eine <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zone aus, um den Satz von nachverfolgen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> der Zone enthaltenen Steuerelemente.  
+  
+ Wenn eine Webparts-Seite Katalogmodus wechselt, erstellt die Zone ein neues <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt bestehend aus dem <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Jede <xref:System.Web.UI.WebControls.WebParts.CatalogPart> -Steuerelement in der Auflistung enthalten kann Verweise auf NULL oder mehr Webserversteuerelemente, die in Form von einem Katalog von Serversteuerelementen verfügbar angezeigt werden.  
+  
+ Sie erstellen eine <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Auflistung von Steuerelementen für die programmgesteuerte Verwendung, wenn Sie z. B. einen Batchvorgang für einen Satz von auszuführenden müssen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Obwohl die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt schreibgeschützt ist, können Sie die programmgesteuerte Änderungen vornehmen, um die zugrunde liegenden Steuerelemente in der Auflistung verwiesen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, verwendet die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Klasse. Es gibt vier Teile dieses Codebeispiel:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Klasse für ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement namens `TextDisplayWebPart`, die auf der Webseite verwiesen wird, und wird in einem der enthalten die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente.  
+  
+-   Eine Webseite, verweist der `TextDisplayWebPart` steuern, enthält eine <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement mit zwei der <xref:System.Web.UI.WebControls.WebParts.CatalogPart> -Steuerelemente aus der Webparts-Steuerelementsatz deklarierte in der Zone, und enthält Code zum Erstellen und Bearbeiten von ereignisgesteuerten ein <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt.  
+  
+-   Eine Erläuterung, wie im Codebeispiel wird funktioniert, wenn Sie in einem Browser zu laden.  
+  
+ Der erste Teil des Codebeispiels wird das Benutzersteuerelement. Der Quellcode für das Benutzersteuerelement stammen aus einem anderen Thema. Für dieses Codebeispiel funktioniert, müssen Sie die ASCX-Datei für das Benutzersteuerelement aus der [Exemplarische Vorgehensweise: Ändern von Anzeigemodi auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0) Thema, und platzieren Sie die Datei im gleichen Ordner wie die ASPX-Seite in diesem Codebeispiel wird.  
+  
+ Der zweite Teil des Codebeispiels wird die `TextDisplayWebPart` Steuerelement. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08). Beachten Sie, dass das Steuerelement eine Eigenschaft mit dem Namen besitzt `ContentText`; diese Eigenschaft enthält den Wert, der der Benutzer in das Textfeld eingibt.  
+  
+ [!code-csharp[WebParts_CatalogPartCollection_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/CS/textdisplaywebpart.cs#3)]
+ [!code-vb[WebParts_CatalogPartCollection_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/VB/textdisplaywebpart.vb#3)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite. Beachten Sie, dass die `<asp:catalogzone>` Element für die Seite enthält Deklarationen für zwei <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Diese Steuerelemente sind Teil einer benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Objekt, das erstellt wird die `Button1_Click` Methode ausgeführt wird. Die <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelement enthält Webserversteuerelemente, die zuvor von einem Benutzer zur Laufzeit geschlossen wurden. Steuert das in der <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelement auf einer Seite hinzugefügt werden kann. Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement enthält eine Deklaration des benutzerdefinierten `TextDisplayWebPart` Steuerelement. Wenn die Seite im Katalogmodus befindet, kann ein Benutzer hinzufügen die `TextDisplayWebPart` die Steuerung an die Seite, damit er im normalen Durchsuchen-Modus verwendet werden kann.  
+  
+ [!code-aspx-csharp[WebParts_CatalogPartCollection_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/CS/catalogpartcollectioncs.aspx#1)]
+ [!code-aspx-vb[WebParts_CatalogPartCollection_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/VB/catalogpartcollectionvb.aspx#1)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die Seite in den Katalogmodus wechseln, indem auswählen **Katalog** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Sie können die benutzerdefinierte hinzufügen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement auf der Seite, indem Sie das Kontrollkästchen daneben auswählen und auf **hinzufügen**. Klicken Sie auf **schließen** in den Durchsuchen-Modus zurück. Für das Steuerelement Sie eben hinzugefügt, wenn Sie auf die Verbmenü (den Pfeil nach unten, der in der Titelleiste angezeigt wird), und klicken Sie dann auf **schließen**, das Steuerelement hinzugefügt und daraus die Seite die <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelement. Die Seite zum Katalogmodus zurück, und klicken Sie auf die **Seite Katalog** Link zum Anzeigen des Inhalts der <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelement. Beachten Sie, dass das Steuerelement, das Sie geschlossen es angezeigt wird. Klicken auf die **CatalogPart Anzeigeeigenschaften** Schaltfläche greift auf die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Objekt und zeigt Sie bestimmte Eigenschaften der enthaltenen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zone, enthält <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente wird in der Regel das Steuerelement, das erstellt eine <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Objekt mit den <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogParts%2A> Methode. Aber Sie können auch eigene erstellen <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt für andere Zwecke programmgesteuerte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CatalogPartCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPartCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.%23ctor%2A> Konstruktor initialisiert eine leere Instanz der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Klasse. Diese Überladung des Konstruktors wird intern von verwendet die <xref:System.Web.UI.WebControls.WebParts.CatalogZone> -Klasse in seiner <xref:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts%2A> Methode, um ein leeres Auflistungsobjekt zu erstellen. Die Zone erstellt dann alle Instanzen der <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente, die in der Vorlage der untergeordneten Zone deklariert und verwendet eine interne Methode der Auflistung, um sie hinzuzufügen.  
+  
+ Können keine Überladung der der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.%23ctor%2A> Konstruktor zum Erstellen einer neuen Instanz von einem <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> und hinzufügen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente darauf. Sie müssen mithilfe einer der anderen Überladungen für die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.%23ctor%2A> Konstruktor stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CatalogPartCollection (System.Collections.ICollection catalogParts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection catalogParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPartCollection.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="catalogParts" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="catalogParts">Ein <see cref="T:System.Collections.ICollection" /> von <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" /> Klasse durch die Übergabe einer <see cref="T:System.Collections.ICollection" /> Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.%23ctor%2A> Konstruktor initialisiert eine Instanz von der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Klasse auf und übergibt eine Auflistung von <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Dies ist eine Überladung von der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.%23ctor%2A> Konstruktor, die Sie, zum Erstellen eines neuen verwenden können <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Objekt und fügen Sie <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente darauf.  
+  
+ Obwohl die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> vom Konstruktor erstellte Instanz schreibgeschützt ist, können Sie weiterhin die einzelnen zugreifen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> -Steuerelemente in der Auflistung programmgesteuert und ihre Eigenschaften und Methoden aufrufen.  
+  
+ Ein häufiges Szenario für die Verwendung dieses Konstruktors wäre, wenn Sie einige Batchvorgang für einen ganzen Satz von auszuführenden <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente, z. B. das Ändern der Inhalte, die Darstellung oder die Position des eine zusammengehörige Gruppe von Elementen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine benutzerdefinierte erstellen können <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection>, und führen Sie einen Batchvorgang zum Ändern der einzelnen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> steuert in der Auflistung, obwohl er schreibgeschützt ist. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Übersichtsthema.  
+  
+ Der Code in der `Button1_Click` Methode erstellt ein <xref:System.Collections.ArrayList> Objekt, fügt die beiden <xref:System.Web.UI.WebControls.WebParts.CatalogPart> auf der Seite auf das Objekt steuert und erstellt dann ein neues <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Objekt unter Verwendung der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.%23ctor%2A> Konstruktor. Außerdem zeigt es wie Sie auf die zugrunde liegende Batchänderungen vornehmen können <xref:System.Web.UI.WebControls.WebParts.CatalogPart> steuert, auch wenn die Auflistung an sich schreibgeschützt ist. Der Code durchläuft die Auflistung aktualisiert die <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A> -Eigenschaft jedes Steuerelements.  
+  
+ [!code-csharp[WebParts_CatalogPartCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/CS/catalogpartcollectioncs.aspx#2)]
+ [!code-vb[WebParts_CatalogPartCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/VB/catalogpartcollectionvb.aspx#2)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die Seite in den Katalogmodus wechseln, indem auswählen **Katalog** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Klicken auf die **CatalogPart Anzeigeeigenschaften** Schaltfläche greift auf die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Objekt und zeigt Sie bestimmte Eigenschaften der enthaltenen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Auch wenn Sie den Mauszeiger über den Titeltext in den Rahmen des Positionieren der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement, sehen Sie die neue beschreibender Text, der an das Steuerelement hinzugefügt wurde, wenn Sie klicken auf die Schaltfläche (die Beschreibung, die in einer QuickInfo angezeigt wird). Wenn Sie auf der **Seite Katalog** Link zum Anzeigen der <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> -Steuerelement, werden Sie feststellen, dass sie auch eine aktualisierte Beschreibung hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CatalogPartCollection (System.Web.UI.WebControls.WebParts.CatalogPartCollection existingCatalogParts, System.Collections.ICollection catalogParts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.CatalogPartCollection existingCatalogParts, class System.Collections.ICollection catalogParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPartCollection.#ctor(System.Web.UI.WebControls.WebParts.CatalogPartCollection,System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="existingCatalogParts" Type="System.Web.UI.WebControls.WebParts.CatalogPartCollection" />
+        <Parameter Name="catalogParts" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="existingCatalogParts">Ein <see cref="T:System.Collections.ICollection" /> vorhandenen <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente in einer Zone.</param>
+        <param name="catalogParts">Ein <see cref="T:System.Collections.ICollection" /> zusätzlicher <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" /> Klasse durch die Übergabe einer <see cref="T:System.Collections.ICollection" /> Auflistung des vorhandenen <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente in einer Zone und einer weiteren spaltenauflistung Steuerelemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WebParts.CatalogPart catalogPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WebParts.CatalogPart catalogPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Contains(System.Web.UI.WebControls.WebParts.CatalogPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="catalogPart" Type="System.Web.UI.WebControls.WebParts.CatalogPart" />
+      </Parameters>
+      <Docs>
+        <param name="catalogPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> , wird überprüft, um zu bestimmen, ob es in der Auflistung vorhanden ist.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein bestimmtes Steuerelement in der Auflistung vorhanden ist.</summary>
+        <returns>Ein boolescher Wert, der angibt, ob ein bestimmtes Steuerelement in der Auflistung befindet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Contains%2A> Methode können Sie bestimmen, ob ein bestimmtes <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Objekt ist Teil einer <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie ermitteln, ob ein bestimmtes <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement ist ein Mitglied einer <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Übersichtsthema.  
+  
+ Der Code in der `Button1_Click` Methode erstellt ein neues <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt mit dem Namen `myParts`. Die Methode verwendet die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Contains%2A> Methode, um zu bestimmen, ob die `PageCatalogPart1` Steuerelement vorhanden ist und wenn dies der Fall ist, ruft das Steuerelement ab, und einen Eigenschaftswert ändert.  
+  
+ [!code-csharp[WebParts_CatalogPartCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/CS/catalogpartcollectioncs.aspx#2)]
+ [!code-vb[WebParts_CatalogPartCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/VB/catalogpartcollectionvb.aspx#2)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die Seite in den Katalogmodus wechseln, indem auswählen **Katalog** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Hinzufügen von benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement auf der Seite, indem Sie das Kontrollkästchen daneben auswählen und auf **hinzufügen**. Klicken Sie auf **schließen** in den Durchsuchen-Modus zurück. Für das Steuerelement Sie eben hinzugefügt, wenn Sie auf die Verbmenü (den Pfeil nach unten, der in der Titelleiste angezeigt wird), und klicken Sie dann auf **schließen**, das Steuerelement hinzugefügt und daraus die Seite die <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelement. Die Seite zum Katalogmodus zurück, und klicken Sie auf die **Seite Katalog** Link zum Anzeigen des Inhalts der <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelement. Beachten Sie, dass das Steuerelement, das Sie schließen sie hinzugefügt wurde. Klicken auf die **CatalogPart Anzeigeeigenschaften** Schaltfläche greift auf die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Objekt und zeigt Sie bestimmte Eigenschaften der enthaltenen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Wählen Sie das Kontrollkästchen neben der Serversteuerelemente, die in der <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> steuern, und klicken Sie auf **hinzufügen** wieder die Seite hinzufügen, und klicken Sie auf **schließen** in den Durchsuchen-Modus zurück. Klicken Sie auf die Verbmenü erneut auf das Steuerelement, und beachten Sie, dass jetzt das Verb schließen nicht mehr vorhanden ist. Er wurde entfernt, durch den Code in der `Button1_Click` Methode, bei der Verwendung der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Contains%2A> Methode zu suchende `PageCatalogPart1`, und legen Sie dann die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowClose%2A> Eigenschaft `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.CatalogPart[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.CatalogPart[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPartCollection.CopyTo(System.Web.UI.WebControls.WebParts.CatalogPart[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.CatalogPart[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array von <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> -Objekten, die kopierte Auflistung enthalten.</param>
+        <param name="index">Der Startpunkt im Array, an das der Inhalt der Auflistung eingefügt werden soll.</param>
+        <summary>Kopiert die Auflistung in ein Array von <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.CopyTo%2A> Methode ist nützlich, wenn Sie möchten ein benutzerdefiniertes Array erstellen, die enthalten, können die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> steuert in der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt oder eine Teilmenge dieser Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.CatalogPartCollection Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.CatalogPartCollection Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.CatalogPartCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verweist auf eine statische, schreibgeschützte, leere Instanz der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine statische, schreibgeschützte, leere Instanz der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> verringert die speicherauslastung in Fällen, in denen Sie möchten eine leere Auflistungsinstanz zurückzugebenden den richtigen Objekttyp von einer Methode oder die Instanz mit einem anderen Objekt verglichen werden soll, Sie müssen jedoch nicht zum Hinzufügen von Mitgliedern zu, den -Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WebParts.CatalogPart catalogPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WebParts.CatalogPart catalogPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPartCollection.IndexOf(System.Web.UI.WebControls.WebParts.CatalogPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="catalogPart" Type="System.Web.UI.WebControls.WebParts.CatalogPart" />
+      </Parameters>
+      <Docs>
+        <param name="catalogPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> , das ein Mitglied der Sammlung.</param>
+        <summary>Gibt die Position eines bestimmten Elements der Auflistung zurück.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> ein Mitglied der <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.IndexOf%2A> Methode ist nützlich, wenn mehrere <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente auf einer Webparts-Seite, und Sie müssen ein bestimmtes Steuerelement in der Auflistung gesucht werden soll.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie die Position eines Elements ermitteln einer <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Auflistung unter Verwendung seiner <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.IndexOf%2A> Eigenschaft. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Übersichtsthema.  
+  
+ Der Code in der `Button1_Click` Methode erstellt ein neues <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt mit dem Namen `myParts`. Die Methode verwendet die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.IndexOf%2A> die Position der abzurufenden Eigenschaft der <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelement, und klicken Sie dann einen Eigenschaftswert des Steuerelements ändert.  
+  
+ [!code-csharp[WebParts_CatalogPartCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/CS/catalogpartcollectioncs.aspx#2)]
+ [!code-vb[WebParts_CatalogPartCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/VB/catalogpartcollectionvb.aspx#2)]  
+  
+ Nachdem Sie die Seite in einem Browser zu laden, können Sie die Seite in den Katalogmodus wechseln, indem auswählen **Katalog** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Klicken auf die **CatalogPart Anzeigeeigenschaften** Schaltfläche greift auf die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Objekt und zeigt Sie bestimmte Eigenschaften der enthaltenen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Klicken Sie auf die **Seite Katalog** Link zur Anzeige der Inhalte von den <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelement. Beachten Sie, dass es nur einen Titel hat, und kein Rahmen, da seine <xref:System.Web.UI.WebControls.WebParts.WebPart.ChromeType%2A> wurde Eigenschaftswert in <xref:System.Web.UI.WebControls.WebParts.PartChromeType.TitleOnly> in den Code, mit der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.IndexOf%2A> Eigenschaft zum Abrufen des Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.CatalogPart this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.CatalogPart Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.CatalogPart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index eines bestimmten <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> in der Auflistung.</param>
+        <summary>Ruft ab oder legt ein Element der Auflistung anhand seiner Position in der Auflistung.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Item%2A> Indexer können Sie die zu Grunde liegenden <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente in einem <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Objekt nach Index, und ihre Eigenschaftswerte ändern oder Methoden aufrufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein Mitglied zugreifen können eine <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> des zugehörigen Indexes-Objekt. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Übersichtsthema.  
+  
+ Der Code in der `Button1_Click` Methode erstellt ein neues <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt mit dem Namen `myParts`. Beachten Sie, die die Methode verwendet die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Item%2A> Indexer zum Abrufen von Informationen über das erste Element der Auflistung.  
+  
+ [!code-csharp[WebParts_CatalogPartCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/CS/catalogpartcollectioncs.aspx#2)]
+ [!code-vb[WebParts_CatalogPartCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/VB/catalogpartcollectionvb.aspx#2)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die Seite in den Katalogmodus wechseln, indem auswählen **Katalog** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Klicken auf die **CatalogPart Anzeigeeigenschaften** Schaltfläche greift auf die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Objekt und zeigt Sie bestimmte Eigenschaften der enthaltenen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Die Anzahl der verfügbaren Steuerelemente innerhalb der <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelement abgerufen wird, mithilfe der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Item%2A> Indexer in die `Button1_Click` Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.CatalogPart this[string id] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.CatalogPart Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.CatalogPart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Der eindeutige Bezeichner für einen bestimmten <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> in einer Auflistung.</param>
+        <summary>Gibt einen Member der Auflistung basierend auf ein eindeutiger Zeichenfolgenbezeichner.</summary>
+        <value>Die erste <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> in der Auflistung, deren ID entspricht dem Wert von <paramref name="id" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Item%2A> Indexer können Sie die zu Grunde liegenden <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente in eine <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt mit der ein Zeichenfolgenbezeichner. Obwohl die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt schreibgeschützt ist, können Sie die Eigenschaftswerte ändern oder Methoden aufrufen, auf die zugrunde liegenden Steuerelemente, die durch den Indexer zugegriffen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein Mitglied zugreifen können eine <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Objekt mithilfe seiner ID Zeichenfolgenwert. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Übersichtsthema.  
+  
+ Der Code in der `Button1_Click` Methode erstellt ein neues <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> Objekt mit dem Namen `myParts`. Die Methode verwendet die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Item%2A> Indexer zum Abrufen von Informationen über die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement, das das zweite Element der Auflistung ist.  
+  
+ [!code-csharp[WebParts_CatalogPartCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/CS/catalogpartcollectioncs.aspx#2)]
+ [!code-vb[WebParts_CatalogPartCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPartCollection_Overview/VB/catalogpartcollectionvb.aspx#2)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die Seite in den Katalogmodus wechseln, indem auswählen **Katalog** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Klicken auf die **CatalogPart Anzeigeeigenschaften** Schaltfläche greift auf die <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection> -Objekt und zeigt Sie bestimmte Eigenschaften der enthaltenen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Die Anzahl der verfügbaren Steuerelemente innerhalb der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement abgerufen wird, mithilfe der <xref:System.Web.UI.WebControls.WebParts.CatalogPartCollection.Item%2A> Indexer in die `Button1_Click` Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

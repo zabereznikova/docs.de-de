@@ -1,0 +1,216 @@
+<Type Name="IControlDesignerView" FullName="System.Web.UI.Design.IControlDesignerView">
+  <TypeSignature Language="C#" Value="public interface IControlDesignerView" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IControlDesignerView" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IControlDesignerView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle für den Zugriff auf die visuelle Darstellung und den Inhalt eines Steuerelements zur Entwurfszeit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist für die Verwendung von Entwurf Host Entwicklern vorgesehen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContainingRegion">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.DesignerRegion ContainingRegion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerRegion ContainingRegion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IControlDesignerView.ContainingRegion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerRegion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab den Bereich des Designers, der das zugeordnete Steuerelement enthält, sofern vorhanden.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.DesignerRegion" /> -Objekt, wenn das zugeordnete Steuerelement in einem Designerbereich enthalten ist; andernfalls wird <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle GetBounds (System.Web.UI.Design.DesignerRegion region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Drawing.Rectangle GetBounds(class System.Web.UI.Design.DesignerRegion region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IControlDesignerView.GetBounds(System.Web.UI.Design.DesignerRegion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.DesignerRegion" />
+      </Parameters>
+      <Docs>
+        <param name="region">Die <see cref="T:System.Web.UI.Design.DesignerRegion" /> für den Sie die Grenzen abrufen möchten.</param>
+        <summary>Ruft die äußeren Begrenzungen der Designeransicht ab.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Rectangle" /> mit Informationen über den Speicherort und die Maße der Ansicht zur Entwurfszeit.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public void Invalidate (System.Drawing.Rectangle rectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Invalidate(valuetype System.Drawing.Rectangle rectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IControlDesignerView.Invalidate(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rectangle">Ein <see cref="T:System.Drawing.Rectangle" /> , die den Speicherort und den äußeren Maße der Ansicht auf der Entwurfsoberfläche darstellt. Koordinatensystem Ursprung für dieses Rechteck ist der oberen linken Ecke des Elements, das Verhalten angehängt ist.</param>
+        <summary>Benachrichtigt Entwurfshost, dass der Bereich, der durch das angegebene Rechteck dargestellt auf der Entwurfsoberfläche neu gezeichnet werden muss.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamingContainerDesigner">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.IDesigner NamingContainerDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.IDesigner NamingContainerDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IControlDesignerView.NamingContainerDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.IDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ggf. die Designer-Komponente für den Benennungscontainer des zugeordneten Steuerelements ab.</summary>
+        <value>Ein IDesigner-Objekt, das Designer-Komponente für den Namenscontainer für das zugeordnete Steuerelement darstellt. andernfalls <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFlags">
+      <MemberSignature Language="C#" Value="public void SetFlags (System.Web.UI.Design.ViewFlags viewFlags, bool setFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetFlags(valuetype System.Web.UI.Design.ViewFlags viewFlags, bool setFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IControlDesignerView.SetFlags(System.Web.UI.Design.ViewFlags,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewFlags" Type="System.Web.UI.Design.ViewFlags" />
+        <Parameter Name="setFlag" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="viewFlags">Ein Member aus der <see cref="T:System.Web.UI.Design.ViewFlags" />-Enumeration.</param>
+        <param name="setFlag">
+          <see langword="true" />um das Flag festzulegen <see langword="false" /> auf das Flag "Abbrechen".</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.Design.IControlDesignerView.SetFlags(System.Web.UI.Design.ViewFlags,System.Boolean)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRegionContent">
+      <MemberSignature Language="C#" Value="public void SetRegionContent (System.Web.UI.Design.EditableDesignerRegion region, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetRegionContent(class System.Web.UI.Design.EditableDesignerRegion region, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IControlDesignerView.SetRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="region">Ein <see cref="T:System.Web.UI.Design.DesignerRegion" /> in dem der Inhalt zu versetzen ist.</param>
+        <param name="content">Das HTML-Markup in den Bereich des Designers zu versetzen.</param>
+        <summary>Fügt den bereitgestellten Inhalt in den angegebenen Bereich des Designers.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsRegions">
+      <MemberSignature Language="C#" Value="public bool SupportsRegions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsRegions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IControlDesignerView.SupportsRegions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Designerbereiche unterstützt werden.</summary>
+        <value>
+          <see langword="true" />Wenn Designerbereiche unterstützt werden. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public void Update ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Update() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IControlDesignerView.Update" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass das zugeordnete Steuerelement für ungültig erklärten Bereiche im Clientbereich neu zeichnet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewEvent">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.Design.ViewEventHandler ViewEvent;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.Design.ViewEventHandler ViewEvent" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.Design.IControlDesignerView.ViewEvent" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ViewEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein vom Entwurfshost für die Ansicht und die Designer-Komponente ausgelöstes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> wird vom Entwurfshost ausgelöst, wenn keines der folgenden auftreten:  
+  
+-   Der Benutzer klickt auf die Ansicht im Entwurfshost,  
+  
+-   Entwurfshost zeichnet Client-Bereichs auf der Entwurfsoberfläche neu,  
+  
+-   Der Benutzer hat sich entschieden, so ändern Sie den Bearbeitungsmodus für einen bearbeitbaren Bereich, einer Vorlage entspricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

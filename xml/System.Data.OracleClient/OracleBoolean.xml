@@ -1,0 +1,899 @@
+<Type Name="OracleBoolean" FullName="System.Data.OracleClient.OracleBoolean">
+  <TypeSignature Language="C#" Value="public struct OracleBoolean : IComparable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit OracleBoolean extends System.ValueType implements class System.IComparable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleBoolean" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt den Wert von einem Datenbankvorgang für den Vergleich zwischen Oracle-Datentypen zurückgegeben, und macht Methoden, die zum Ausführen von datentypkonvertierungen verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der wesentliche Unterschied zwischen einer <xref:System.Data.OracleClient.OracleBoolean> -Struktur und einem **booleschen** Wert ist, dass bei einer normalen `Boolean` besitzt zwei mögliche Werte `true` und `false`, wird eine <xref:System.Data.OracleClient.OracleBoolean> Struktur verfügt drei möglichen Werten <xref:System.Data.OracleClient.OracleBoolean.True>, <xref:System.Data.OracleClient.OracleBoolean.False>, oder <xref:System.Data.OracleClient.OracleBoolean.Null>.  
+  
+ Ein <xref:System.Data.OracleClient.OracleBoolean> Struktur entspricht kein Oracle `Boolean` Datentyp; er wird verfügbar gemacht als eine Vereinfachung Unterstützungsklasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleBoolean (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see langword="Boolean" /> als der Anfangswert von verwendet werden soll die <see cref="T:System.Data.OracleClient.OracleBoolean" /> Struktur.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleBoolean" /> -Struktur unter Verwendung der angegebenen <see langword="Boolean" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleBoolean (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see langword="integer" /> als der Anfangswert von verwendet werden soll die <see cref="T:System.Data.OracleClient.OracleBoolean" /> Struktur.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleBoolean" /> unter Verwendung des angegebenen Integer Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `value` 0 (null) ist die <xref:System.Data.OracleClient.OracleBoolean> ist `false`; andernfalls handelt es sich `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="And">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean And (System.Data.OracleClient.OracleBoolean x, System.Data.OracleClient.OracleBoolean y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean And(valuetype System.Data.OracleClient.OracleBoolean x, valuetype System.Data.OracleClient.OracleBoolean y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.And(System.Data.OracleClient.OracleBoolean,System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <summary>Berechnet die bitweise AND von zwei angegebenen <see cref="T:System.Data.OracleClient.OracleBoolean" /> Strukturen.</summary>
+        <returns>Das Ergebnis des logischen AND-Vorgangs, wie in der folgenden Tabelle dargestellt.  
+  
+ <list type="table"><listheader><term>Wert des <paramref name="x" /> </term> <description> Wert <paramref name="y" /> </description> <description> Ergebnis  
+  
+ </description></listheader><item><term><see langword="true" /></term><description><see langword="true" /></description><description><see langword="true" /></description></item><item><term><see langword="true" /></term><description><see langword="false" /></description><description><see langword="false" /></description></item><item><term><see langword="false" /></term><description><see langword="false" /></description><description><see langword="false" /></description></item><item><term><see langword="true" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item><item><term><see langword="false" /></term><description><see langword="unknown" /></description><description><see langword="false" /></description></item><item><term><see langword="unknown" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein zu vergleichendes Objekt oder ein null-Verweis (<see langword="Nothing" /> in Visual Basic).</param>
+        <summary>Vergleicht dieses <see cref="T:System.Data.OracleClient.OracleBoolean" /> Struktur mit einem angegebenen Objekt und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.</summary>
+        <returns>Eine Zahl mit Vorzeichen, der angibt, die relativen Werte von der Instanz und Value.  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>Eine negative ganze Zahl  
+  
+ </term><description>Diese Instanz ist kleiner als <paramref name="value" />.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description>Diese Instanz ist gleich <paramref name="value" />.  
+  
+ </description></item><item><term>Eine positive ganze Zahl  
+  
+ </term><description>Diese Instanz ist größer als <paramref name="value" />.  
+  
+ - oder -   
+  
+ <paramref name="value" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Instanz von <xref:System.Data.OracleClient.OracleBoolean>, unabhängig vom Wert wird als größer als ein null-Verweis (`Nothing` in Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu vergleichende Objekt.</param>
+        <summary>Vergleicht den-Parameter angegebene Objekt mit dem <see cref="T:System.Data.OracleClient.OracleBoolean" />.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt eine Instanz des ist <see cref="T:System.Data.OracleClient.OracleBoolean" /> und die beiden gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean Equals (System.Data.OracleClient.OracleBoolean x, System.Data.OracleClient.OracleBoolean y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean Equals(valuetype System.Data.OracleClient.OracleBoolean x, valuetype System.Data.OracleClient.OracleBoolean y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.Equals(System.Data.OracleClient.OracleBoolean,System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBoolean" /> auszugeben, um zu bestimmen, ob sie gleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen gleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen ungleich sind. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleBoolean" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="False">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleBoolean False;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleBoolean False" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleBoolean.False" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen false-Wert, der zugewiesen werden kann die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> -Eigenschaft einer Instanz von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OracleClient.OracleBoolean.False> Feld ist eine <xref:System.Data.OracleClient.OracleBoolean> Konstante-Struktur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFalse">
+      <MemberSignature Language="C#" Value="public bool IsFalse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFalse" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleBoolean.IsFalse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die aktuelle <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> ist <see cref="F:System.Data.OracleClient.OracleBoolean.False" />.</summary>
+        <value>
+          <see langword="true" />Wenn <see langword="Value" /> ist <see langword="False" />, da andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Data.OracleClient.OracleBoolean.Value%2A> ist <xref:System.Data.OracleClient.OracleBoolean.Null>, trotzdem ist diese Eigenschaft `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleBoolean.IsNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, und zwar unabhängig davon, ob der Wert von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> Struktur ist null.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist der Wert der Struktur **Null**, da andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrue">
+      <MemberSignature Language="C#" Value="public bool IsTrue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTrue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleBoolean.IsTrue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die aktuelle <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> ist <see cref="F:System.Data.OracleClient.OracleBoolean.True" />.</summary>
+        <value>
+          <see langword="true" />Wenn <see langword="Value" /> ist <see langword="True" />, da andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Data.OracleClient.OracleBoolean.Value%2A> ist <xref:System.Data.OracleClient.OracleBoolean.Null>, trotzdem ist diese Eigenschaft `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotEquals">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean NotEquals (System.Data.OracleClient.OracleBoolean x, System.Data.OracleClient.OracleBoolean y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean NotEquals(valuetype System.Data.OracleClient.OracleBoolean x, valuetype System.Data.OracleClient.OracleBoolean y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.NotEquals(System.Data.OracleClient.OracleBoolean,System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.OracleClient.OracleBoolean" /> zu bestimmen, ob diese ungleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen ungleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen gleich sind. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleBoolean" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleBoolean Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleBoolean Null" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleBoolean.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen null-Wert, der zugewiesen werden kann die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> -Eigenschaft einer Instanz von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OracleClient.OracleBoolean.Null> Feld ist eine <xref:System.Data.OracleClient.OracleBoolean> Konstante-Struktur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="One">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleBoolean One;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleBoolean One" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleBoolean.One" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen Wert eines zugewiesen werden kann die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> -Eigenschaft einer Instanz von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OracleClient.OracleBoolean.One> Feld ist eine <xref:System.Data.OracleClient.OracleBoolean> Konstante-Struktur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnesComplement">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean OnesComplement (System.Data.OracleClient.OracleBoolean x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean OnesComplement(valuetype System.Data.OracleClient.OracleBoolean x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.OnesComplement(System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <summary>Führt eine solche-Komplementoperation für den angegebenen <see cref="T:System.Data.OracleClient.OracleBoolean" /> Strukturen.</summary>
+        <returns>Das Einerkomplement des angegebenen <see cref="T:System.Data.OracleClient.OracleBoolean" />. Wenn die <see langword="Boolean" /> enthält einen null-Wert das Ergebnis ist ebenfalls einen null-Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_BitwiseAnd">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &amp; (System.Data.OracleClient.OracleBoolean x, System.Data.OracleClient.OracleBoolean y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_BitwiseAnd(valuetype System.Data.OracleClient.OracleBoolean x, valuetype System.Data.OracleClient.OracleBoolean y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_BitwiseAnd(System.Data.OracleClient.OracleBoolean,System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <summary>Berechnet die bitweise AND von zwei angegebenen <see cref="T:System.Data.OracleClient.OracleBoolean" /> Strukturen.</summary>
+        <returns>Das Ergebnis des logischen AND-Vorgangs, wie in der folgenden Tabelle dargestellt.  
+  
+ <list type="table"><listheader><term>Wert des <paramref name="x" /> </term> <description> Wert <paramref name="y" /> </description> <description> Ergebnis  
+  
+ </description></listheader><item><term><see langword="true" /></term><description><see langword="true" /></description><description><see langword="true" /></description></item><item><term><see langword="true" /></term><description><see langword="false" /></description><description><see langword="false" /></description></item><item><term><see langword="false" /></term><description><see langword="false" /></description><description><see langword="false" /></description></item><item><term><see langword="true" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item><item><term><see langword="false" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item><item><term><see langword="unknown" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBoolean.And%28System.Data.OracleClient.OracleBoolean%2CSystem.Data.OracleClient.OracleBoolean%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_BitwiseOr">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator | (System.Data.OracleClient.OracleBoolean x, System.Data.OracleClient.OracleBoolean y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_BitwiseOr(valuetype System.Data.OracleClient.OracleBoolean x, valuetype System.Data.OracleClient.OracleBoolean y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_BitwiseOr(System.Data.OracleClient.OracleBoolean,System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <summary>Berechnet die bitweise OR-Operator des ihrer beiden <see cref="T:System.Data.OracleClient.OracleBoolean" /> Operanden.</summary>
+        <returns>Das Ergebnis des bitweisen OR-Vorgangs, wie in der folgenden Tabelle dargestellt.  
+  
+ <list type="table"><listheader><term>Wert des <paramref name="x" /> </term> <description> Wert <paramref name="y" /> </description> <description> Ergebnis  
+  
+ </description></listheader><item><term><see langword="true" /></term><description><see langword="true" /></description><description><see langword="true" /></description></item><item><term><see langword="true" /></term><description><see langword="false" /></description><description><see langword="true" /></description></item><item><term><see langword="false" /></term><description><see langword="false" /></description><description><see langword="false" /></description></item><item><term><see langword="true" /></term><description><see langword="unknown" /></description><description><see langword="true" /></description></item><item><term><see langword="false" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item><item><term><see langword="unknown" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBoolean.Or%28System.Data.OracleClient.OracleBoolean%2CSystem.Data.OracleClient.OracleBoolean%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator == (System.Data.OracleClient.OracleBoolean x, System.Data.OracleClient.OracleBoolean y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Equality(valuetype System.Data.OracleClient.OracleBoolean x, valuetype System.Data.OracleClient.OracleBoolean y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_Equality(System.Data.OracleClient.OracleBoolean,System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />.</param>
+        <summary>Vergleicht zwei Instanzen von einem <see cref="T:System.Data.OracleClient.OracleBoolean" /> auf Gleichheit.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen gleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen ungleich sind. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleBoolean" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBoolean.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_ExclusiveOr">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator ^ (System.Data.OracleClient.OracleBoolean x, System.Data.OracleClient.OracleBoolean y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_ExclusiveOr(valuetype System.Data.OracleClient.OracleBoolean x, valuetype System.Data.OracleClient.OracleBoolean y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_ExclusiveOr(System.Data.OracleClient.OracleBoolean,System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <summary>Führt eine bitweise exklusive OR-Operation für die angegebene <see cref="T:System.Data.OracleClient.OracleBoolean" /> Parameter.</summary>
+        <returns>Die Ergebnisse der bitweisen XOR-Vorgangs, wie in der folgenden Tabelle dargestellt.  
+  
+ <list type="table"><listheader><term>Wert des <paramref name="x" /> </term> <description> Wert <paramref name="y" /> </description> <description> Ergebnis  
+  
+ </description></listheader><item><term><see langword="true" /></term><description><see langword="true" /></description><description><see langword="false" /></description></item><item><term><see langword="true" /></term><description><see langword="false" /></description><description><see langword="true" /></description></item><item><term><see langword="false" /></term><description><see langword="false" /></description><description><see langword="false" /></description></item><item><term><see langword="true" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item><item><term><see langword="false" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item><item><term><see langword="unknown" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBoolean.Xor%28System.Data.OracleClient.OracleBoolean%2CSystem.Data.OracleClient.OracleBoolean%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator bool (System.Data.OracleClient.OracleBoolean x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Explicit(valuetype System.Data.OracleClient.OracleBoolean x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_Explicit(System.Data.OracleClient.OracleBoolean)~System.Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Data.OracleClient.OracleBoolean (System.Data.OracleClient.OracleNumber x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Explicit(valuetype System.Data.OracleClient.OracleNumber x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_Explicit(System.Data.OracleClient.OracleNumber)~System.Data.OracleClient.OracleBoolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleNumber" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Data.OracleClient.OracleBoolean (string x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Explicit(string x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_Explicit(System.String)~System.Data.OracleClient.OracleBoolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_False">
+      <MemberSignature Language="C#" Value="public static bool operator false (System.Data.OracleClient.OracleBoolean x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_False(valuetype System.Data.OracleClient.OracleBoolean x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_False(System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die <see cref="T:System.Data.OracleClient.OracleBoolean" /> Struktur getestet werden.</param>
+        <summary>Zum Testen der <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> zu bestimmen, ob es "false" ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Parameter <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist, andernfalls "false" <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBoolean.IsFalse?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.OracleClient.OracleBoolean (bool x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Implicit(bool x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_Implicit(System.Boolean)~System.Data.OracleClient.OracleBoolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator != (System.Data.OracleClient.OracleBoolean x, System.Data.OracleClient.OracleBoolean y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Inequality(valuetype System.Data.OracleClient.OracleBoolean x, valuetype System.Data.OracleClient.OracleBoolean y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_Inequality(System.Data.OracleClient.OracleBoolean,System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.OracleClient.OracleBoolean" /> auf Ungleichheit.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen ungleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen gleich sind. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleBoolean" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBoolean.NotEquals%28System.Data.OracleClient.OracleBoolean%2CSystem.Data.OracleClient.OracleBoolean%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LogicalNot">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator ! (System.Data.OracleClient.OracleBoolean x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_LogicalNot(valuetype System.Data.OracleClient.OracleBoolean x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_LogicalNot(System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die <see cref="T:System.Data.OracleClient.OracleBoolean" /> für den die NOT-Operation ausgeführt wird.</param>
+        <summary>Führt eine NOT-Operation für eine <see cref="T:System.Data.OracleClient.OracleBoolean" />.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> mit der <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> Wenn das Argument "true" war <see cref="F:System.Data.OracleClient.OracleBoolean.Null" /> Wenn das Argument null ist, war und <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> andernfalls.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_OnesComplement">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator ~ (System.Data.OracleClient.OracleBoolean x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_OnesComplement(valuetype System.Data.OracleClient.OracleBoolean x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_OnesComplement(System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <summary>Führt eine 1-Komplementoperation für den angegebenen <see cref="T:System.Data.OracleClient.OracleBoolean" />.</summary>
+        <returns>Das Einerkomplement des angegebenen <see cref="T:System.Data.OracleClient.OracleBoolean" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBoolean.OnesComplement%28System.Data.OracleClient.OracleBoolean%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_True">
+      <MemberSignature Language="C#" Value="public static bool operator true (System.Data.OracleClient.OracleBoolean x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_True(valuetype System.Data.OracleClient.OracleBoolean x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.op_True(System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die <see cref="T:System.Data.OracleClient.OracleBoolean" /> Struktur getestet werden.</param>
+        <summary>Zum Testen der <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> um zu bestimmen, ob er "true" ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Parameter <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist, andernfalls "true" <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBoolean.IsTrue?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Or">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean Or (System.Data.OracleClient.OracleBoolean x, System.Data.OracleClient.OracleBoolean y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean Or(valuetype System.Data.OracleClient.OracleBoolean x, valuetype System.Data.OracleClient.OracleBoolean y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.Or(System.Data.OracleClient.OracleBoolean,System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <summary>Führt eine bitweise OR-Operation für zwei angegebene <see cref="T:System.Data.OracleClient.OracleBoolean" /> Strukturen.</summary>
+        <returns>Das Ergebnis des bitweisen OR-Vorgangs, wie in der folgenden Tabelle dargestellt.  
+  
+ <list type="table"><listheader><term>Wert des <paramref name="x" /> </term> <description> Wert <paramref name="y" /> </description> <description> Ergebnis  
+  
+ </description></listheader><item><term><see langword="true" /></term><description><see langword="true" /></description><description><see langword="true" /></description></item><item><term><see langword="true" /></term><description><see langword="false" /></description><description><see langword="true" /></description></item><item><term><see langword="false" /></term><description><see langword="false" /></description><description><see langword="false" /></description></item><item><term><see langword="true" /></term><description><see langword="unknown" /></description><description><see langword="true" /></description></item><item><term><see langword="false" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item><item><term><see langword="unknown" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean Parse (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean Parse(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Der zu konvertierende <see cref="T:System.String" />.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.String" /> Zeichenfolgendarstellung eines logischen Werts in seine <see cref="T:System.Data.OracleClient.OracleBoolean" /> entspricht.</summary>
+        <returns>Eine <see cref="T:System.Data.OracleClient.OracleBoolean" /> Struktur, die den analysierten Wert enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert das aktuelle <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> in eine Zeichenfolge.</summary>
+        <returns>Eine Zeichenfolge, die mit dem Wert von der <see cref="T:System.Data.OracleClient.OracleBoolean" />. Wenn der Wert null ist, enthält die Zeichenfolge einen null-Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="True">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleBoolean True;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleBoolean True" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleBoolean.True" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen true-Wert, der zugewiesen werden kann die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> -Eigenschaft einer Instanz von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OracleClient.OracleBoolean.True> Feld ist eine <xref:System.Data.OracleClient.OracleBoolean> Konstante-Struktur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public bool Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleBoolean.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.OracleClient.OracleBoolean" /> -Struktur-Wert. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist <see cref="F:System.Data.OracleClient.OracleBoolean.True" />andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xor">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean Xor (System.Data.OracleClient.OracleBoolean x, System.Data.OracleClient.OracleBoolean y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean Xor(valuetype System.Data.OracleClient.OracleBoolean x, valuetype System.Data.OracleClient.OracleBoolean y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBoolean.Xor(System.Data.OracleClient.OracleBoolean,System.Data.OracleClient.OracleBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBoolean" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleBoolean" />-Struktur.</param>
+        <summary>Führt eine bitweise exklusive OR-Operation für den angegebenen Parametern.</summary>
+        <returns>Die Ergebnisse der logischen XOR-Operation, wie in der folgenden Tabelle dargestellt.  
+  
+ <list type="table"><listheader><term>Wert des <paramref name="x" /> </term> <description> Wert <paramref name="y" /> </description> <description> Ergebnis  
+  
+ </description></listheader><item><term><see langword="true" /></term><description><see langword="true" /></description><description><see langword="false" /></description></item><item><term><see langword="true" /></term><description><see langword="false" /></description><description><see langword="true" /></description></item><item><term><see langword="false" /></term><description><see langword="false" /></description><description><see langword="false" /></description></item><item><term><see langword="true" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item><item><term><see langword="false" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item><item><term><see langword="unknown" /></term><description><see langword="unknown" /></description><description><see langword="unknown" /></description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zero">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleBoolean Zero;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleBoolean Zero" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleBoolean.Zero" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen Wert von 0 (null), die zugewiesen werden, können, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> -Eigenschaft einer Instanz von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OracleClient.OracleBoolean.Zero> Feld ist eine <xref:System.Data.OracleClient.OracleBoolean> Konstante-Struktur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

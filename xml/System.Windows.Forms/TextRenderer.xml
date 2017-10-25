@@ -1,0 +1,755 @@
+<Type Name="TextRenderer" FullName="System.Windows.Forms.TextRenderer">
+  <TypeSignature Language="C#" Value="public sealed class TextRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TextRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TextRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Messen und Rendern von Text verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextRenderer> Klasse bietet eine Reihe von `static` Methoden, die zum Messen und Zeichnen von Text in einem Windows Form-Steuerelement verwendet werden können.  
+  
+ Sie können ändern, wie der Text gezeichnet wird, indem Sie eine der der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Überladungen, die eine <xref:System.Windows.Forms.TextFormatFlags> Parameter. Beispielsweise ist das Standardverhalten des der <xref:System.Windows.Forms.TextRenderer> wird das umschließende Rechteck des gezeichneten Texts um überhängende Symbole aufzunehmen Auffüllung hinzugefügt. Wenn Sie eine Textzeile ohne diesen zusätzlichen Leerraum zeichnen müssen verwenden Sie die Versionen der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> und <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> nehmen eine <xref:System.Drawing.Size> und <xref:System.Windows.Forms.TextFormatFlags> Parameter. Ein Beispiel finden Sie unter <xref:System.Windows.Forms.TextRenderer.MeasureText%28System.Drawing.IDeviceContext%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Drawing.Size%2CSystem.Windows.Forms.TextFormatFlags%29>.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>t-Methoden von <xref:System.Windows.Forms.TextRenderer> werden zum Drucken nicht unterstützt. Sie sollten immer verwenden die <xref:System.Drawing.Graphics.DrawString%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `RenderText1` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="DrawText">
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Zeichnet den angegebenen Text an der angegebenen Position, die mit den angegebenen Gerätekontext, Farbe und Schriftart an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Textrendering angeboten, von der <xref:System.Windows.Forms.TextRenderer> Klasse basiert auf GDI-Text-Rendering und wird nicht für das Drucken in Windows Forms unterstützt. Verwenden Sie stattdessen die <xref:System.Drawing.Graphics.DrawString%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public static void DrawText (System.Drawing.IDeviceContext dc, string text, System.Drawing.Font font, System.Drawing.Point pt, System.Drawing.Color foreColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawText(class System.Drawing.IDeviceContext dc, string text, class System.Drawing.Font font, valuetype System.Drawing.Point pt, valuetype System.Drawing.Color foreColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.DrawText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Point,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Der Gerätekontext in der den Text gezeichnet werden soll.</param>
+        <param name="text">Der zu zeichnende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gezeichneten Text angewendet.</param>
+        <param name="pt">Die <see cref="T:System.Drawing.Point" /> , die die oberen linken Ecke des gezeichneten Texts darstellt.</param>
+        <param name="foreColor">Die <see cref="T:System.Drawing.Color" /> auf den gezeichneten Text angewendet.</param>
+        <summary>Zeichnet den angegebenen Text an der angegebenen Position mit dem angegebenen Gerätekontext, Schriftart und Farbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können ändern, wie der Text gezeichnet wird, indem Sie eine der der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Überladungen, die eine <xref:System.Windows.Forms.TextFormatFlags> Parameter.  
+  
+ Wenn `font` ist `null` oder `forecolor` ist <xref:System.Drawing.Color.Empty?displayProperty=nameWithType>, <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methode wird den Text in der Schriftart oder in den Gerätekontext gemäß zurzeit ausgewählte Farbe gezeichnet `dc`. Wenn `forecolor` ist <xref:System.Drawing.Color.Transparent%2A>, nicht der Text gezeichnet wird.  
+  
+ Das Textrendering angeboten, von der <xref:System.Windows.Forms.TextRenderer> Klasse basiert auf GDI-Text-Rendering und wird nicht für das Drucken in Windows Forms unterstützt. Verwenden Sie stattdessen die <xref:System.Drawing.Graphics.DrawString%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden, die angeben, ein <xref:System.Drawing.Point> als der oberen linken Ecke des gezeichneten Texts werden nicht gerendert, ordnungsgemäß unter Windows 2000. Wenn Ihre Anwendung für die Verwendung auf Computern unter Windows 2000 vorgesehen ist, sollten Sie eine der verwenden die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden, die angeben, ein <xref:System.Drawing.Rectangle> für die Grenzen des gezeichneten Texts.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `RenderText1` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public static void DrawText (System.Drawing.IDeviceContext dc, string text, System.Drawing.Font font, System.Drawing.Rectangle bounds, System.Drawing.Color foreColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawText(class System.Drawing.IDeviceContext dc, string text, class System.Drawing.Font font, valuetype System.Drawing.Rectangle bounds, valuetype System.Drawing.Color foreColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.DrawText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Rectangle,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Der Gerätekontext in der den Text gezeichnet werden soll.</param>
+        <param name="text">Der zu zeichnende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gezeichneten Text angewendet.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des Texts darstellt.</param>
+        <param name="foreColor">Die <see cref="T:System.Drawing.Color" /> auf den gezeichneten Text angewendet.</param>
+        <summary>Zeichnet den angegebenen Text innerhalb der angegebenen Grenzen, die mit den angegebenen Gerätekontext, Schriftart und Farbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `font` oder `forecolor` ist `null` oder <xref:System.Drawing.Color?displayProperty=nameWithType>bzw.; die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methode wird den Text in der Schriftart oder in den Gerätekontext gemäß zurzeit ausgewählte Farbe gezeichnet `dc`. Wenn `forecolor` ist <xref:System.Drawing.Color.Transparent%2A>, nicht der Text gezeichnet wird.  
+  
+ Diese Methode führt zu Text, der horizontal und vertikal, in das Rechteck zentriert wird, angegeben durch die `bounds` Parameter. Verwenden Sie zum Ändern, wie der Text gezeichnet wird, eine Version von <xref:System.Windows.Forms.TextRenderer.DrawText%2A> , akzeptiert eine <xref:System.Windows.Forms.TextFormatFlags> Parametertyp.  
+  
+ Das Textrendering angeboten, von der <xref:System.Windows.Forms.TextRenderer> Klasse basiert auf GDI-Text-Rendering und wird nicht für das Drucken in Windows Forms unterstützt. Verwenden Sie stattdessen die <xref:System.Drawing.Graphics.DrawString%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `RenderText2` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#3)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public static void DrawText (System.Drawing.IDeviceContext dc, string text, System.Drawing.Font font, System.Drawing.Point pt, System.Drawing.Color foreColor, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawText(class System.Drawing.IDeviceContext dc, string text, class System.Drawing.Font font, valuetype System.Drawing.Point pt, valuetype System.Drawing.Color foreColor, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.DrawText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Point,System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Der Gerätekontext in der den Text gezeichnet werden soll.</param>
+        <param name="text">Der zu zeichnende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gezeichneten Text angewendet.</param>
+        <param name="pt">Die <see cref="T:System.Drawing.Point" /> , die die oberen linken Ecke des gezeichneten Texts darstellt.</param>
+        <param name="foreColor">Die <see cref="T:System.Drawing.Color" /> auf den gezeichneten Text angewendet.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> auf den Hintergrundbereich des gezeichneten Texts angewendet.</param>
+        <summary>Zeichnet den angegebenen Text an der angegebenen Position, die mit den angegebenen Gerätekontext, Schriftart, Farbe und Hintergrundfarbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `backColor` Parameter auf den rechteckigen Bereich mit den gezeichneten Text angewendet wird. Wenn `font`, `backcolor` oder `forecolor` ist `null` oder <xref:System.Drawing.Color?displayProperty=nameWithType>bzw.; die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methode wird den Text in der Schriftart oder in den Gerätekontext gemäß zurzeit ausgewählte Farbe gezeichnet `dc`. Wenn `forecolor` ist <xref:System.Drawing.Color.Transparent%2A>, nicht der Text gezeichnet wird.  
+  
+ Sie können ändern, wie der Text gezeichnet wird, indem Sie eine der der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Überladungen, die eine <xref:System.Windows.Forms.TextFormatFlags> Parameter.  
+  
+ Das Textrendering angeboten, von der <xref:System.Windows.Forms.TextRenderer> Klasse basiert auf GDI-Text-Rendering und wird nicht für das Drucken in Windows Forms unterstützt. Verwenden Sie stattdessen die <xref:System.Drawing.Graphics.DrawString%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden, die angeben, ein <xref:System.Drawing.Point> als der oberen linken Ecke des gezeichneten Texts werden nicht gerendert, ordnungsgemäß unter Windows 2000. Wenn Ihre Anwendung für die Verwendung auf Computern unter Windows 2000 vorgesehen ist, sollten Sie eine der verwenden die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden, die angeben, ein <xref:System.Drawing.Rectangle> für die Grenzen des gezeichneten Texts.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `RenderText3` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#4)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public static void DrawText (System.Drawing.IDeviceContext dc, string text, System.Drawing.Font font, System.Drawing.Point pt, System.Drawing.Color foreColor, System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawText(class System.Drawing.IDeviceContext dc, string text, class System.Drawing.Font font, valuetype System.Drawing.Point pt, valuetype System.Drawing.Color foreColor, valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.DrawText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Point,System.Drawing.Color,System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Der Gerätekontext in der den Text gezeichnet werden soll.</param>
+        <param name="text">Der zu zeichnende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gezeichneten Text angewendet.</param>
+        <param name="pt">Die <see cref="T:System.Drawing.Point" /> , die die oberen linken Ecke des gezeichneten Texts darstellt.</param>
+        <param name="foreColor">Die <see cref="T:System.Drawing.Color" /> auf den gezeichneten Text angewendet.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <summary>Zeichnet den angegebenen Text an der angegebenen Position unter Verwendung der angegebenen Gerätekontext, Schriftart, Farbe und Formatierung von Anweisungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können ändern, wie der Text gezeichnet wird, indem Sie eine der der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Überladungen, die eine <xref:System.Windows.Forms.TextFormatFlags> Parameter. Beispielsweise ist das Standardverhalten des der <xref:System.Windows.Forms.TextRenderer> wird das umschließende Rechteck des gezeichneten Texts um überhängende Symbole aufzunehmen Auffüllung hinzugefügt. Wenn Sie eine Textzeile ohne diesen zusätzlichen Leerraum zeichnen müssen verwenden Sie die Versionen der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> und <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> nehmen eine <xref:System.Drawing.Size> und <xref:System.Windows.Forms.TextFormatFlags> Parameter. Ein Beispiel finden Sie unter <xref:System.Windows.Forms.TextRenderer.MeasureText%28System.Drawing.IDeviceContext%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Drawing.Size%2CSystem.Windows.Forms.TextFormatFlags%29>.  
+  
+ Die `backColor` Parameter angewendet wird, auf den Bereich innerhalb der `bounds` Parameter. Wenn `font` oder `forecolor` ist `null` oder <xref:System.Drawing.Color.Empty?displayProperty=nameWithType>bzw.; die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methode wird den Text in der Schriftart oder in den Gerätekontext gemäß zurzeit ausgewählte Farbe gezeichnet `dc`. Wenn `forecolor` ist <xref:System.Drawing.Color.Transparent%2A>, nicht der Text gezeichnet wird.  
+  
+ Das Textrendering angeboten, von der <xref:System.Windows.Forms.TextRenderer> Klasse basiert auf GDI-Text-Rendering und wird nicht für das Drucken in Windows Forms unterstützt. Verwenden Sie stattdessen die <xref:System.Drawing.Graphics.DrawString%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
+  
+ Die <xref:System.Windows.Forms.TextRenderer> verfügt, die nicht unterstützen das Hinzufügen von Tabstopps in gezeichnetem Text, obwohl Sie vorhandene Registerkarte erweitern können nicht verwendet mehr die <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs> Flag.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden, die angeben, ein <xref:System.Drawing.Point> als der oberen linken Ecke des gezeichneten Texts werden nicht gerendert, ordnungsgemäß unter Windows 2000. Wenn Ihre Anwendung für die Verwendung auf Computern unter Windows 2000 vorgesehen ist, sollten Sie eine der verwenden die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden, die angeben, ein <xref:System.Drawing.Rectangle> für die Grenzen des gezeichneten Texts.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `RenderText5` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#6)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public static void DrawText (System.Drawing.IDeviceContext dc, string text, System.Drawing.Font font, System.Drawing.Rectangle bounds, System.Drawing.Color foreColor, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawText(class System.Drawing.IDeviceContext dc, string text, class System.Drawing.Font font, valuetype System.Drawing.Rectangle bounds, valuetype System.Drawing.Color foreColor, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.DrawText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Der Gerätekontext in der den Text gezeichnet werden soll.</param>
+        <param name="text">Der zu zeichnende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gezeichneten Text angewendet.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des Texts darstellt.</param>
+        <param name="foreColor">Die <see cref="T:System.Drawing.Color" /> auf den gezeichneten Text angewendet.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> anzuwendende in den Bereich dargestellte <c>Grenzen</c>.</param>
+        <summary>Zeichnet den angegebenen Text innerhalb der angegebenen Grenzen, die mit den angegebenen Gerätekontext, Schriftart, Farbe und Hintergrundfarbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `backColor` Parameter angewendet wird, auf den Bereich innerhalb der `bounds` Parameter. Wenn `font`, `backcolor` oder `forecolor` ist `null` oder <xref:System.Drawing.Color.Empty>bzw.; die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methode wird den Text in der Schriftart oder in den Gerätekontext gemäß zurzeit ausgewählte Farbe gezeichnet `dc`. Wenn `forecolor` ist <xref:System.Drawing.Color.Transparent%2A>, nicht der Text gezeichnet wird.  
+  
+ Diese Methode führt zu Text, der horizontal und vertikal, in das Rechteck zentriert wird, angegeben durch die `bounds` Parameter. Verwenden Sie zum Ändern, wie der Text gezeichnet wird, eine Version von <xref:System.Windows.Forms.TextRenderer.DrawText%2A> , akzeptiert eine <xref:System.Windows.Forms.TextFormatFlags> Parametertyp.  
+  
+ Das Textrendering angeboten, von der <xref:System.Windows.Forms.TextRenderer> Klasse basiert auf GDI-Text-Rendering und wird nicht für das Drucken in Windows Forms unterstützt. Verwenden Sie stattdessen die <xref:System.Drawing.Graphics.DrawString%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `RenderText4` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#5)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public static void DrawText (System.Drawing.IDeviceContext dc, string text, System.Drawing.Font font, System.Drawing.Rectangle bounds, System.Drawing.Color foreColor, System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawText(class System.Drawing.IDeviceContext dc, string text, class System.Drawing.Font font, valuetype System.Drawing.Rectangle bounds, valuetype System.Drawing.Color foreColor, valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.DrawText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Rectangle,System.Drawing.Color,System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Der Gerätekontext in der den Text gezeichnet werden soll.</param>
+        <param name="text">Der zu zeichnende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gezeichneten Text angewendet.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des Texts darstellt.</param>
+        <param name="foreColor">Die <see cref="T:System.Drawing.Color" /> auf den gezeichneten Text angewendet.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <summary>Zeichnet den angegebenen Text innerhalb der angegebenen Grenzen unter Verwendung der angegebenen Gerätekontext, Schriftart, Farbe und Formatierung von Anweisungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `font` oder `color` ist `null` oder <xref:System.Drawing.Color.Empty>bzw.; die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methode wird den Text in der Schriftart oder in den Gerätekontext gemäß zurzeit ausgewählte Farbe gezeichnet `dc`. Wenn `forecolor` ist <xref:System.Drawing.Color.Transparent%2A>, nicht der Text gezeichnet wird.  
+  
+ Sie können ändern, wie der Text gezeichnet wird, indem Sie eine der der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Überladungen, die eine <xref:System.Windows.Forms.TextFormatFlags> Parameter. Beispielsweise ist das Standardverhalten des der <xref:System.Windows.Forms.TextRenderer> wird das umschließende Rechteck des gezeichneten Texts um überhängende Symbole aufzunehmen Auffüllung hinzugefügt. Wenn Sie eine Textzeile ohne diesen zusätzlichen Leerraum zeichnen müssen verwenden Sie die Versionen der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> und <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> nehmen eine <xref:System.Drawing.Size> und <xref:System.Windows.Forms.TextFormatFlags> Parameter. Ein Beispiel finden Sie unter <xref:System.Windows.Forms.TextRenderer.MeasureText%28System.Drawing.IDeviceContext%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Drawing.Size%2CSystem.Windows.Forms.TextFormatFlags%29>.  
+  
+ Das Textrendering angeboten, von der <xref:System.Windows.Forms.TextRenderer> Klasse basiert auf GDI-Text-Rendering und wird nicht für das Drucken in Windows Forms unterstützt. Verwenden Sie stattdessen die <xref:System.Drawing.Graphics.DrawString%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
+  
+ Die <xref:System.Windows.Forms.TextRenderer> verfügt, die nicht unterstützen das Hinzufügen von Tabstopps in gezeichnetem Text, obwohl Sie vorhandene Registerkarte erweitern können nicht verwendet mehr die <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs> Flag.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `RenderText6` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#7)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public static void DrawText (System.Drawing.IDeviceContext dc, string text, System.Drawing.Font font, System.Drawing.Point pt, System.Drawing.Color foreColor, System.Drawing.Color backColor, System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawText(class System.Drawing.IDeviceContext dc, string text, class System.Drawing.Font font, valuetype System.Drawing.Point pt, valuetype System.Drawing.Color foreColor, valuetype System.Drawing.Color backColor, valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.DrawText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Point,System.Drawing.Color,System.Drawing.Color,System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Der Gerätekontext in der den Text gezeichnet werden soll.</param>
+        <param name="text">Der zu zeichnende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gezeichneten Text angewendet.</param>
+        <param name="pt">Die <see cref="T:System.Drawing.Point" /> , die die oberen linken Ecke des gezeichneten Texts darstellt.</param>
+        <param name="foreColor">Die <see cref="T:System.Drawing.Color" /> auf den Text angewendet.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> auf den Hintergrundbereich des gezeichneten Texts angewendet.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <summary>Zeichnet den angegebenen Text an der angegebenen Position mit angegebenen Gerätekontext, Schriftart, Farbe, Hintergrundfarbe, Kommentieren und Formatieren von Anweisungen</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `backcolor` Parameter übernommen ist der rechteckige Bereich, der den gezeichneten Text enthält. Wenn `font` oder `forecolor` ist `null` oder <xref:System.Drawing.Color.Empty>bzw.; die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methode wird den Text in der Schriftart oder in den Gerätekontext gemäß zurzeit ausgewählte Farbe gezeichnet `dc`. Wenn `forecolor` ist <xref:System.Drawing.Color.Transparent%2A>, nicht der Text gezeichnet wird.  
+  
+ Sie können ändern, wie der Text gezeichnet wird, indem Sie eine der der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Überladungen, die eine <xref:System.Windows.Forms.TextFormatFlags> Parameter. Beispielsweise ist das Standardverhalten des der <xref:System.Windows.Forms.TextRenderer> wird das umschließende Rechteck des gezeichneten Texts um überhängende Symbole aufzunehmen Auffüllung hinzugefügt. Wenn Sie eine Textzeile ohne diesen zusätzlichen Leerraum zeichnen müssen verwenden Sie die Versionen der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> und <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> nehmen eine <xref:System.Drawing.Size> und <xref:System.Windows.Forms.TextFormatFlags> Parameter. Ein Beispiel finden Sie unter <xref:System.Windows.Forms.TextRenderer.MeasureText%28System.Drawing.IDeviceContext%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Drawing.Size%2CSystem.Windows.Forms.TextFormatFlags%29>.  
+  
+ Das Textrendering angeboten, von der <xref:System.Windows.Forms.TextRenderer> Klasse basiert auf GDI-Text-Rendering und wird nicht für das Drucken in Windows Forms unterstützt. Verwenden Sie stattdessen die <xref:System.Drawing.Graphics.DrawString%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
+  
+ Die <xref:System.Windows.Forms.TextRenderer> verfügt, die nicht unterstützen das Hinzufügen von Tabstopps in gezeichnetem Text, obwohl Sie vorhandene Registerkarte erweitern können nicht verwendet mehr die <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs> Flag.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden, die angeben, ein <xref:System.Drawing.Point> als der oberen linken Ecke des gezeichneten Texts werden nicht gerendert, ordnungsgemäß unter Windows 2000. Wenn Ihre Anwendung für die Verwendung auf Computern unter Windows 2000 vorgesehen ist, sollten Sie eine der verwenden die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden, die angeben, ein <xref:System.Drawing.Rectangle> für die Grenzen des gezeichneten Texts.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `RenderText7` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#8)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public static void DrawText (System.Drawing.IDeviceContext dc, string text, System.Drawing.Font font, System.Drawing.Rectangle bounds, System.Drawing.Color foreColor, System.Drawing.Color backColor, System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawText(class System.Drawing.IDeviceContext dc, string text, class System.Drawing.Font font, valuetype System.Drawing.Rectangle bounds, valuetype System.Drawing.Color foreColor, valuetype System.Drawing.Color backColor, valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.DrawText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Color,System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Der Gerätekontext in der den Text gezeichnet werden soll.</param>
+        <param name="text">Der zu zeichnende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gezeichneten Text angewendet.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des Texts darstellt.</param>
+        <param name="foreColor">Die <see cref="T:System.Drawing.Color" /> auf den Text angewendet.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> anzuwendende in den Bereich dargestellte <c>Grenzen</c>.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <summary>Zeichnet den angegebenen Text innerhalb der angegebenen Grenzen mit angegebenen Gerätekontext, Schriftart, Farbe, Hintergrundfarbe, Kommentieren und formatieren Sie die Anweisungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `backcolor` Parameter angewendet wird, auf den Bereich innerhalb der `bounds` Parameter`.` Wenn `font`, `forecolor` oder `backcolor` ist `null` oder <xref:System.Drawing.Color.Empty>bzw.; die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methode wird Zeichnen Sie den Text in der Schriftart oder in den Gerätekontext gemäß zurzeit ausgewählte Farbe `dc`. Wenn `forecolor` ist <xref:System.Drawing.Color.Transparent%2A>, nicht der Text gezeichnet wird.  
+  
+ Sie können ändern, wie der Text gezeichnet wird, indem Sie eine der der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Überladungen, die eine <xref:System.Windows.Forms.TextFormatFlags> Parameter. Beispielsweise ist das Standardverhalten des der <xref:System.Windows.Forms.TextRenderer> wird das umschließende Rechteck des gezeichneten Texts um überhängende Symbole aufzunehmen Auffüllung hinzugefügt. Wenn Sie eine Textzeile ohne diesen zusätzlichen Leerraum zeichnen müssen verwenden Sie die Versionen der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> und <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> nehmen eine <xref:System.Drawing.Size> und <xref:System.Windows.Forms.TextFormatFlags> Parameter. Ein Beispiel finden Sie unter <xref:System.Windows.Forms.TextRenderer.MeasureText%28System.Drawing.IDeviceContext%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Drawing.Size%2CSystem.Windows.Forms.TextFormatFlags%29>.  
+  
+ Das Textrendering angeboten, von der <xref:System.Windows.Forms.TextRenderer> Klasse basiert auf GDI-Text-Rendering und wird nicht für das Drucken in Windows Forms unterstützt. Verwenden Sie stattdessen die <xref:System.Drawing.Graphics.DrawString%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
+  
+ Die <xref:System.Windows.Forms.TextRenderer> verfügt, die nicht unterstützen das Hinzufügen von Tabstopps in gezeichnetem Text, obwohl Sie vorhandene Registerkarte erweitern können nicht verwendet mehr die <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs> Flag.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `RenderText8` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#9)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size MeasureText (string text, System.Drawing.Font font);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size MeasureText(string text, class System.Drawing.Font font) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.MeasureText(System.String,System.Drawing.Font)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der zu bemessende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gemessenen Text angewendet.</param>
+        <summary>Stellt die Größe in Pixel, der dem angegebenen Text, wenn Sie mit der angegebenen Schriftart gezeichnet.</summary>
+        <returns>Die <see cref="T:System.Drawing.Size" />, in Pixel der <paramref name="text" /> gezeichnet, die in einer einzelnen Zeile mit dem angegebenen <paramref name="font" />. Sie können ändern, wie der Text gezeichnet wird, indem Sie eine der der <see cref="M:System.Windows.Forms.TextRenderer.DrawText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Rectangle,System.Drawing.Color,System.Windows.Forms.TextFormatFlags)" /> Überladungen, die eine <see cref="T:System.Windows.Forms.TextFormatFlags" /> Parameter. Beispielsweise ist das Standardverhalten des der <see cref="T:System.Windows.Forms.TextRenderer" /> wird das umschließende Rechteck des gezeichneten Texts um überhängende Symbole aufzunehmen Auffüllung hinzugefügt. Wenn Sie eine Textzeile ohne diesen zusätzlichen Leerraum zeichnen müssen verwenden Sie die Versionen der <see cref="M:System.Windows.Forms.TextRenderer.DrawText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Point,System.Drawing.Color)" /> und <see cref="M:System.Windows.Forms.TextRenderer.MeasureText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font)" /> nehmen eine <see cref="T:System.Drawing.Size" /> und <see cref="T:System.Windows.Forms.TextFormatFlags" /> Parameter. Ein Beispiel finden Sie unter <see cref="M:System.Windows.Forms.TextRenderer.MeasureText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Size,System.Windows.Forms.TextFormatFlags)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> Methode erfordert, dass der Text in einer einzelnen Zeile gezeichnet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.TextRenderer.MeasureText%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `MeasureText1` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size MeasureText (System.Drawing.IDeviceContext dc, string text, System.Drawing.Font font);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size MeasureText(class System.Drawing.IDeviceContext dc, string text, class System.Drawing.Font font) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.MeasureText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Der Gerätekontext, den Text zu messen.</param>
+        <param name="text">Der zu bemessende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gemessenen Text angewendet.</param>
+        <summary>Stellt die Größe in Pixel, der dem angegebenen Text, der mit der angegebenen Schriftart in den angegebenen Gerätekontext gezeichnet.</summary>
+        <returns>Die <see cref="T:System.Drawing.Size" />, in Pixel der <paramref name="text" /> gezeichnet, die in einer einzelnen Zeile mit dem angegebenen <paramref name="font" /> in den angegebenen Gerätekontext.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> Methode erfordert, dass der Text in einer einzelnen Zeile gezeichnet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Verwenden der <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> Methoden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `DrawALineOfText` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#11)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size MeasureText (string text, System.Drawing.Font font, System.Drawing.Size proposedSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size MeasureText(string text, class System.Drawing.Font font, valuetype System.Drawing.Size proposedSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.MeasureText(System.String,System.Drawing.Font,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="proposedSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der zu bemessende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gemessenen Text angewendet.</param>
+        <param name="proposedSize">Die <see cref="T:System.Drawing.Size" /> des anfänglichen umschließenden Rechtecks.</param>
+        <summary>Stellt die Größe in Pixel, der dem angegebenen Text, wenn mit der angegebenen Schriftart, die mithilfe der angegebenen Größe zum Erstellen eines ersten umschließenden Rechtecks gezeichnet.</summary>
+        <returns>Die <see cref="T:System.Drawing.Size" />, in Pixel der <paramref name="text" /> gezeichnet, die mit dem angegebenen <paramref name="font" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> -Methode verwendet die `proposedSize` Parameter, um das Verhältnis von Höhe zu Breite anzugeben, wenn die Textgröße zu bestimmen. Wenn Messen von Text in einer einzelnen Zeile, wenn die `proposedSize` Parameter darstellt eine <xref:System.Drawing.Size> mit einer Höhendimension größer als <xref:System.Int32.MaxValue?displayProperty=nameWithType>, das zurückgegebene <xref:System.Drawing.Size> angepasst werden, um die aktuelle Höhe des Texts zu berücksichtigen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Verwenden der <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> Methoden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `DrawALineOfText` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#11)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size MeasureText (System.Drawing.IDeviceContext dc, string text, System.Drawing.Font font, System.Drawing.Size proposedSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size MeasureText(class System.Drawing.IDeviceContext dc, string text, class System.Drawing.Font font, valuetype System.Drawing.Size proposedSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.MeasureText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="proposedSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Der Gerätekontext, den Text zu messen.</param>
+        <param name="text">Der zu bemessende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gemessenen Text angewendet.</param>
+        <param name="proposedSize">Die <see cref="T:System.Drawing.Size" /> des anfänglichen umschließenden Rechtecks.</param>
+        <summary>Stellt die Größe in Pixel, der dem angegebenen Text, wenn die angegebene Schriftart in den angegebenen Gerätekontext, erstellen Sie ein anfängliche umschließendes Rechteck für den Text mithilfe der angegebenen Größe gezeichnet.</summary>
+        <returns>Die <see cref="T:System.Drawing.Size" />, in Pixel der <paramref name="text" /> gezeichnet, die mit dem angegebenen <paramref name="font" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> -Methode verwendet die `proposedSize` Parameter, um das Verhältnis von Höhe zu Breite anzugeben, wenn die Textgröße zu bestimmen. Wenn Messen von Text in einer einzelnen Zeile, wenn die `proposedSize` Parameter darstellt eine <xref:System.Drawing.Size> mit einer Höhendimension größer als <xref:System.Int32.MaxValue?displayProperty=nameWithType>, das zurückgegebene <xref:System.Drawing.Size> angepasst werden, um die aktuelle Höhe des Texts zu berücksichtigen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Verwenden der <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> Methoden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `DrawALineOfText` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#11)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size MeasureText (string text, System.Drawing.Font font, System.Drawing.Size proposedSize, System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size MeasureText(string text, class System.Drawing.Font font, valuetype System.Drawing.Size proposedSize, valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.MeasureText(System.String,System.Drawing.Font,System.Drawing.Size,System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="proposedSize" Type="System.Drawing.Size" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der zu bemessende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gemessenen Text angewendet.</param>
+        <param name="proposedSize">Die <see cref="T:System.Drawing.Size" /> des anfänglichen umschließenden Rechtecks.</param>
+        <param name="flags">Die Formatierung Anweisungen, um auf den gemessenen Text angewendet werden soll.</param>
+        <summary>Stellt die Größe in Pixel, der dem angegebenen Text, wenn mit dem angegebenen Schriftart und Formatierung von Anweisungen, erstellen Sie das ursprüngliche umschließende Rechteck für den Text mithilfe der angegebenen Größe gezeichnet.</summary>
+        <returns>Die <see cref="T:System.Drawing.Size" />, in Pixel der <paramref name="text" /> gezeichnet, die mit dem angegebenen <paramref name="font" /> und Format.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.TextRenderer.MeasureText%2A>verwendet die `proposedSize` und `flags` Parameter, um das Verhältnis von Höhe zu Breite anzugeben, wenn Sie die Textgröße zu bestimmen. Wenn Messen von Text in einer einzelnen Zeile, wenn die `proposedSize` Parameter darstellt eine <xref:System.Drawing.Size> mit einer Höhendimension größer als <xref:System.Int32.MaxValue?displayProperty=nameWithType>, das zurückgegebene <xref:System.Drawing.Size> angepasst werden, um die aktuelle Höhe des Texts zu berücksichtigen.  
+  
+ Sie können ändern, wie der Text gezeichnet wird, indem Sie eine der der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Überladungen, die eine <xref:System.Windows.Forms.TextFormatFlags> Parameter. Beispielsweise ist das Standardverhalten des der <xref:System.Windows.Forms.TextRenderer> wird das umschließende Rechteck des gezeichneten Texts um überhängende Symbole aufzunehmen Auffüllung hinzugefügt. Wenn Sie eine Textzeile ohne diesen zusätzlichen Leerraum zeichnen müssen verwenden Sie die Versionen der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> und <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> nehmen eine <xref:System.Drawing.Size> und <xref:System.Windows.Forms.TextFormatFlags> Parameter. Ein Beispiel finden Sie unter <xref:System.Windows.Forms.TextRenderer.MeasureText%28System.Drawing.IDeviceContext%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Drawing.Size%2CSystem.Windows.Forms.TextFormatFlags%29>.  
+  
+> [!NOTE]
+>  Diese Überladung der <xref:System.Windows.Forms.TextRenderer.MeasureText%28System.String%2CSystem.Drawing.Font%2CSystem.Drawing.Size%2CSystem.Windows.Forms.TextFormatFlags%29> ignoriert eine <xref:System.Windows.Forms.TextFormatFlags> Wert <xref:System.Windows.Forms.TextFormatFlags.NoPadding> oder <xref:System.Windows.Forms.TextFormatFlags.LeftAndRightPadding>. Wenn Sie einen auffüllungswert als den Standardwert angeben, verwenden Sie die Überladung der <xref:System.Windows.Forms.TextRenderer.MeasureText%28System.Drawing.IDeviceContext%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Drawing.Size%2CSystem.Windows.Forms.TextFormatFlags%29> , akzeptiert eine <xref:System.Drawing.IDeviceContext> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Verwenden der <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> Methoden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `DrawALineOfText` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#11)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size MeasureText (System.Drawing.IDeviceContext dc, string text, System.Drawing.Font font, System.Drawing.Size proposedSize, System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size MeasureText(class System.Drawing.IDeviceContext dc, string text, class System.Drawing.Font font, valuetype System.Drawing.Size proposedSize, valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextRenderer.MeasureText(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Size,System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="proposedSize" Type="System.Drawing.Size" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Der Gerätekontext, den Text zu messen.</param>
+        <param name="text">Der zu bemessende Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> auf den gemessenen Text angewendet.</param>
+        <param name="proposedSize">Die <see cref="T:System.Drawing.Size" /> des anfänglichen umschließenden Rechtecks.</param>
+        <param name="flags">Die Formatierung Anweisungen, um auf den gemessenen Text angewendet werden soll.</param>
+        <summary>Stellt die Größe in Pixel, der dem angegebenen Text, wenn mit den angegebenen Gerätekontext, Schriftart und Formatierung von Anweisungen, erstellen Sie das ursprüngliche umschließende Rechteck für den Text mithilfe der angegebenen Größe gezeichnet.</summary>
+        <returns>Die <see cref="T:System.Drawing.Size" />, in Pixel der <paramref name="text" /> gezeichnet, die mit dem angegebenen <paramref name="font" /> und Format.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> -Methode verwendet die `proposedSize` und `flags` Parameter, um das Verhältnis von Höhe zu Breite anzugeben, wenn Sie die Textgröße zu bestimmen. Wenn Messen von Text in einer einzelnen Zeile, wenn die `proposedSize` Parameter darstellt eine <xref:System.Drawing.Size> mit einer Höhendimension größer als <xref:System.Int32.MaxValue?displayProperty=nameWithType>, das zurückgegebene <xref:System.Drawing.Size> angepasst werden, um die aktuelle Höhe des Texts zu berücksichtigen.  
+  
+ Sie können ändern, wie der Text gezeichnet wird, indem Sie eine der der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Überladungen, die eine <xref:System.Windows.Forms.TextFormatFlags> Parameter. Beispielsweise ist das Standardverhalten des der <xref:System.Windows.Forms.TextRenderer> wird das umschließende Rechteck des gezeichneten Texts um überhängende Symbole aufzunehmen Auffüllung hinzugefügt. Wenn Sie eine Textzeile ohne diesen zusätzlichen Leerraum zu zeichnen, verwenden Sie die Versionen der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> und <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> nehmen eine <xref:System.Drawing.Size> und <xref:System.Windows.Forms.TextFormatFlags> Parameter, wie im Beispiel gezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> und <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden, um eine einzelne Textzeile in andere Schriftschnitte zu zeichnen. Zum Ausführen dieses Beispiels fügen Sie folgenden code in ein Windows Form, und rufen `DrawALineOfText` aus des Formulars <xref:System.Windows.Forms.Control.Paint> -Ereignishandler übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#11)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

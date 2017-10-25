@@ -1,0 +1,531 @@
+<Type Name="SpinLock" FullName="System.Threading.SpinLock">
+  <TypeSignature Language="C#" Value="public struct SpinLock" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit SpinLock extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.SpinLock" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("IsHeld = {IsHeld}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Threading.SpinLock/SystemThreading_SpinLockDebugView))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Mutex-Sperrprimitiven bereit, wobei ein Thread, der versucht, die Sperre abzurufen, in einer Schleife wartet, die laufend prüft, ob die Sperre verfügbar wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel zum Verwenden eines Spinlocks, finden Sie unter [wie: Verwenden von SpinLock für die Synchronisierung auf niedriger Ebene](~/docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
+  
+ Spinlocks genutzt werden Sperren auf Blattebene impliziert, in dem die Zuordnung mit einem <xref:System.Threading.Monitor>, Größe oder aufgrund von ungenügendem für Garbage Collection, ist zu teuer. Ein SpinLock kann bei vermeiden der Blockierung hilfreich sein; Wenn Sie eine beträchtliche Menge an Blockierung erwarten, sollten Sie Spinlocks aufgrund übermäßiger Spinvorgänge wahrscheinlich nicht verwenden. Spins können nützlich sein, wenn Sperren differenzierte und große Anzahl (z. B. eine Sperre pro Knoten in einer verknüpften Liste) sind und wenn Sperre Hold-Laufzeiten immer sehr kurz sind. Im Allgemeinen sollten während eines Spinlocks, eine dieser Aktionen vermeiden:  
+  
+-   blockieren,  
+  
+-   Alles aufrufen kann, die selbst blockieren,  
+  
+-   Halten gleichzeitig mehrere Spinlocks,  
+  
+-   Ausführen von dynamisch weitergeleiteten Aufrufen (Schnittstelle und von Virtuals)  
+  
+-   Ausführen von statisch weitergeleiteten Aufrufen in Code, der eine nicht besitzen, oder  
+  
+-   Reservieren von Speicher.  
+  
+ <xref:System.Threading.SpinLock>sollte nur verwendet werden, wenn sich herausgestellt hat, dass dadurch die Leistung einer Anwendung verbessert wird. Es ist auch wichtig zu beachten, dass die <xref:System.Threading.SpinLock> ist ein Werttyp ist, zur Verbesserung der Leistung. Aus diesem Grund müssen Sie sehr darauf achten, keine versehentlich kopieren werden eine <xref:System.Threading.SpinLock> -Instanz ab, wie die beiden Instanzen (die ursprüngliche und die Kopie) dann vollkommen unabhängig voneinander, wären, was wahrscheinlich zu falschem Verhalten der Anwendung führen würde. Wenn eine <xref:System.Threading.SpinLock> Instanz übergeben werden muss, sollten durch Verweis und nicht als Wert übergeben werden.  
+  
+ Speichern Sie keinesfalls <xref:System.Threading.SpinLock> Instanzen in schreibgeschützten Feldern.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Threading.SpinLock>:  
+  
+ [!code-csharp[System.Threading.SpinLock#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.spinlock/cs/spinlock.cs#01)]
+ [!code-vb[System.Threading.SpinLock#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.spinlock/vb/spinlock.vb#01)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Alle Mitglieder der <see cref="T:System.Threading.SpinLock" /> sind threadsicher und können von mehreren Threads gleichzeitig verwendet werden.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpinLock (bool enableThreadOwnerTracking);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enableThreadOwnerTracking) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SpinLock.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enableThreadOwnerTracking" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enableThreadOwnerTracking">Angibt, ob und thread-IDs zu Debugzwecken.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.SpinLock" /> Struktur mit der Option zum Nachverfolgen von Thread-IDs, um Debuggen zu verbessern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor für <xref:System.Threading.SpinLock> verfolgt thread Besitz.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie ein SpinLock verwendet werden kann.  
+  
+```  
+// C#  
+public class MyType  
+{  
+    private SpinLock _spinLock = new SpinLock();  
+  
+    public void DoWork()  
+    {  
+        bool lockTaken = false;   
+        try  
+        {  
+           _spinLock.Enter(ref lockTaken);  
+           // do work here protected by the lock  
+        }  
+        finally  
+        {  
+            if (lockTaken) _spinLock.Exit();  
+        }  
+    }  
+}  
+```  
+  
+```  
+' Visual Basic  
+  
+Class MyType  
+   Private _spinLock As New SpinLock()  
+  
+   Public Sub DoWork()  
+      Dim lockTaken As Boolean = False  
+      Try  
+         _spinLock.Enter(lockTaken)  
+         ' do work here protected by the lock  
+      Finally  
+         If lockTaken Then _spinLock.Exit()  
+      End Try  
+   End Sub  
+End Class  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enter">
+      <MemberSignature Language="C#" Value="public void Enter (ref bool lockTaken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Enter(bool&amp; lockTaken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SpinLock.Enter(System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lockTaken" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="lockTaken">True, wenn die Sperre abgerufen wurde. andernfalls "false". <c>LockTaken</c> muss auf "false" vor dem Aufruf dieser Methode initialisiert werden.</param>
+        <summary>Ruft die Sperre zuverlässig so, dass selbst wenn in der Methodenaufruf eine Ausnahme auftritt <paramref name="lockTaken" /> zuverlässig untersucht werden können, um zu bestimmen, ob die Sperre eingerichtet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.SpinLock>ist eine Sperre nicht wieder eintretender, dies bedeutet, dass, wenn ein Thread die Sperre, es ist nicht zulässig, die Sperre erneut einzugeben. Wenn der Thread den Besitz Überwachung aktiviert ist (erhältlich ist, ob es aktiviert ist <xref:System.Threading.SpinLock.IsThreadOwnerTrackingEnabled%2A>), wird eine Ausnahme ausgelöst, wenn ein Thread versucht, eine Sperre erneut eingeben, er bereits besitzt. Jedoch wenn Thread den Besitz tracking deaktiviert ist, führt bei dem Versuch, eine Sperre bereits geben Deadlock.  
+  
+ Beim Aufrufen <xref:System.Threading.SpinLock.Exit%2A> ohne dass zuerst aufgerufen <xref:System.Threading.SpinLock.Enter%2A> der interne Zustand der <xref:System.Threading.SpinLock> können beschädigt ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="lockTaken" /> Argument muss auf "false" vor dem Aufruf von EINGABETASTE initialisiert werden.</exception>
+        <exception cref="T:System.Threading.LockRecursionException">Thread-Besitz nachverfolgen aktiviert ist, und der aktuelle Thread hat diese Sperre bereits abgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exit">
+      <MemberSignature Language="C#" Value="public void Exit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Exit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SpinLock.Exit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hebt die Sperre.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Überladung von <xref:System.Threading.SpinLock.Exit%2A> bietet das gleiche Verhalten, als wäre <xref:System.Threading.SpinLock.Exit%2A> "true" als Argument verwenden.  
+  
+ Beim Aufrufen <xref:System.Threading.SpinLock.Exit%2A> ohne dass zuerst aufgerufen <xref:System.Threading.SpinLock.Enter%2A> der interne Zustand der <xref:System.Threading.SpinLock> können beschädigt ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Threading.SynchronizationLockException">Thread den Besitz Überwachung aktiviert ist, und der aktuelle Thread ist nicht der Besitzer der Sperre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exit">
+      <MemberSignature Language="C#" Value="public void Exit (bool useMemoryBarrier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Exit(bool useMemoryBarrier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SpinLock.Exit(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useMemoryBarrier" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useMemoryBarrier">Ein boolescher Wert, der angibt, ob eine Arbeitsspeicher-Fence ausgegeben werden soll, um den Vorgang beenden sofort für andere Threads zu veröffentlichen.</param>
+        <summary>Hebt die Sperre.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Threading.SpinLock.Exit%2A> mit der `useMemoryBarrier` Argument auf "true" festgelegt ist, wird die Fairness der Sperre auf Kosten der Leistung verbessert. Die Standardeinstellung <xref:System.Threading.SpinLock.Exit%2A> Überladung verhält sich wie "true" für die Angabe `useMemoryBarrier`.  
+  
+ Beim Aufrufen <xref:System.Threading.SpinLock.Exit%2A> ohne dass zuerst aufgerufen <xref:System.Threading.SpinLock.Enter%2A> der interne Zustand der <xref:System.Threading.SpinLock> können beschädigt ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Threading.SynchronizationLockException">Thread den Besitz Überwachung aktiviert ist, und der aktuelle Thread ist nicht der Besitzer der Sperre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHeld">
+      <MemberSignature Language="C#" Value="public bool IsHeld { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHeld" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.SpinLock.IsHeld" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die derzeit von keinem Thread gesperrt ist.</summary>
+        <value>"true", wenn die Sperre zurzeit von jedem Thread verwendet wird; andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHeldByCurrentThread">
+      <MemberSignature Language="C#" Value="public bool IsHeldByCurrentThread { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHeldByCurrentThread" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.SpinLock.IsHeldByCurrentThread" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die vom aktuellen Thread die Sperre aufrechterhalten wird.</summary>
+        <value>"true", wenn der aktuelle Thread die Sperre aufrechterhalten wird; andernfalls "false".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Sperre zum Nachverfolgen von Besitzerthreads initialisiert wurde, wird zurückgegeben, ob der aktuelle Thread die Sperre abgerufen wurde. Ist diese Eigenschaft verwendet wird, wenn die Sperre initialisiert wurde, nicht Nachverfolgen der Thread den Besitz ungültig.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thread-Besitz tracking ist deaktiviert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsThreadOwnerTrackingEnabled">
+      <MemberSignature Language="C#" Value="public bool IsThreadOwnerTrackingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsThreadOwnerTrackingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.SpinLock.IsThreadOwnerTrackingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob der Thread den Besitz nachverfolgen, die für diese Instanz aktiviert ist.</summary>
+        <value>"true", wenn der Thread den Besitz nachverfolgen, die für diese Instanz aktiviert ist; andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryEnter">
+      <MemberSignature Language="C#" Value="public void TryEnter (ref bool lockTaken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TryEnter(bool&amp; lockTaken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SpinLock.TryEnter(System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lockTaken" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="lockTaken">True, wenn die Sperre abgerufen wurde. andernfalls "false". <c>LockTaken</c> muss auf "false" vor dem Aufruf dieser Methode initialisiert werden.</param>
+        <summary>Versucht, der eine Sperre auf zuverlässige Weise, sodass selbst wenn in der Methodenaufruf eine Ausnahme auftritt <paramref name="lockTaken" /> zuverlässig untersucht werden können, um zu bestimmen, ob die Sperre eingerichtet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu <xref:System.Threading.SpinLock.Enter%2A>, TryEnter wird nicht verhindert, wartet auf die Sperre verfügbar sein. Wenn die Sperre nicht verfügbar ist, wenn TryEnter aufgerufen wird, wird sofort zurückgegeben ohne weitere dreht.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="lockTaken" /> Argument muss auf "false" vor dem Aufrufen von TryEnter initialisiert werden.</exception>
+        <exception cref="T:System.Threading.LockRecursionException">Thread-Besitz nachverfolgen aktiviert ist, und der aktuelle Thread hat diese Sperre bereits abgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryEnter">
+      <MemberSignature Language="C#" Value="public void TryEnter (int millisecondsTimeout, ref bool lockTaken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TryEnter(int32 millisecondsTimeout, bool&amp; lockTaken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SpinLock.TryEnter(System.Int32,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+        <Parameter Name="lockTaken" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">Die Anzahl von Millisekunden, die gewartet wird, oder <see cref="F:System.Threading.Timeout.Infinite" /> (-1) für Warten ohne Timeout.</param>
+        <param name="lockTaken">True, wenn die Sperre abgerufen wurde. andernfalls "false". <c>LockTaken</c> muss auf "false" vor dem Aufruf dieser Methode initialisiert werden.</param>
+        <summary>Versucht, der eine Sperre auf zuverlässige Weise, sodass selbst wenn in der Methodenaufruf eine Ausnahme auftritt <paramref name="lockTaken" /> zuverlässig untersucht werden können, um zu bestimmen, ob die Sperre eingerichtet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu <xref:System.Threading.SpinLock.Enter%2A>, TryEnter blockiert nicht unbegrenzt warten auf die Sperre verfügbar sein. Er wird blockiert, bis die Sperre verfügbar wird oder bis die `millisecondsTimeout` ist abgelaufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> ist eine negative Zahl, jedoch nicht -1, was einen unbeschränkten Timeout darstellt.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="lockTaken" /> Argument muss auf "false" vor dem Aufrufen von TryEnter initialisiert werden.</exception>
+        <exception cref="T:System.Threading.LockRecursionException">Thread-Besitz nachverfolgen aktiviert ist, und der aktuelle Thread hat diese Sperre bereits abgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryEnter">
+      <MemberSignature Language="C#" Value="public void TryEnter (TimeSpan timeout, ref bool lockTaken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TryEnter(valuetype System.TimeSpan timeout, bool&amp; lockTaken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SpinLock.TryEnter(System.TimeSpan,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="lockTaken" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Eine <see cref="T:System.TimeSpan" />-Struktur, die die Anzahl der zu wartenden Millisekunden angibt, oder eine <see cref="T:System.TimeSpan" />-Struktur, die -1 Millisekunden zum unendlichen Warten angibt.</param>
+        <param name="lockTaken">True, wenn die Sperre abgerufen wurde. andernfalls "false". <c>LockTaken</c> muss auf "false" vor dem Aufruf dieser Methode initialisiert werden.</param>
+        <summary>Versucht, der eine Sperre auf zuverlässige Weise, sodass selbst wenn in der Methodenaufruf eine Ausnahme auftritt <paramref name="lockTaken" /> zuverlässig untersucht werden können, um zu bestimmen, ob die Sperre eingerichtet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu <xref:System.Threading.SpinLock.Enter%2A>, TryEnter blockiert nicht unbegrenzt warten auf die Sperre verfügbar sein. Er wird blockiert, bis die Sperre verfügbar wird oder bis die `timeout` ist abgelaufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" />ist eine negative Zahl ungleich-1 Millisekunden, die darstellt, die ein unendliches Timeout - oder - Timeout ist größer als <see cref="F:System.Int32.MaxValue" /> Millisekunden.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="lockTaken" /> Argument muss auf "false" vor dem Aufrufen von TryEnter initialisiert werden.</exception>
+        <exception cref="T:System.Threading.LockRecursionException">Thread-Besitz nachverfolgen aktiviert ist, und der aktuelle Thread hat diese Sperre bereits abgerufen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

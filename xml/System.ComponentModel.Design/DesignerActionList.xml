@@ -1,0 +1,217 @@
+<Type Name="DesignerActionList" FullName="System.ComponentModel.Design.DesignerActionList">
+  <TypeSignature Language="C#" Value="public class DesignerActionList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerActionList extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionList" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisklasse für Typen, die eine Liste von Elementen verwendet, um einen Smarttagbereich erstellen zu definieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `DesignerAction` Feature ermöglicht, Komponenten und Steuerelementen zum Anzeigen von kontextbezogenen Informationen und Befehle. Die `DesignerAction` Feature kann betrachtet werden als Ersatz für Designerverben, da eine <xref:System.ComponentModel.Design.DesignerActionItem> kann in den Smarttagbereich und auch in der eine Komponente oder ein Steuerelement zugeordnete Kontextmenü angezeigt werden. Die <xref:System.ComponentModel.Design.DesignerActionList> Klasse entspricht der zentrale Ort der Interaktion, für Entwickler Smarttag hinzugefügt werden soll, ihre benutzerdefinierten Komponenten und Steuerelementen unterstützen.  
+  
+ <xref:System.ComponentModel.Design.DesignerActionList>ist die Basisklasse, um einen Smarttagbereich Auffüllen durch Komponentenentwickler abgeleitet. Ein Smarttagbereich stellt den Menü-ähnliche-Benutzeroberfläche (UI) für Smarttags dar.  
+  
+ Mit dieser abgeleiteten Klasse implementiert möglicherweise die `virtual` <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> Methode zum Zurückgeben einer Auflistung von Objekten, die von abgeleiteten <xref:System.ComponentModel.Design.DesignerActionItem>. Diese Objekte stellen die Smarttag-Systemsteuerungselemente dar. Jedes Element wird in der Systemsteuerung nach Typ angezeigt. Z. B. eine <xref:System.ComponentModel.Design.DesignerActionTextItem> als eine statische textbezeichnung angezeigt wird. Aktive Systemsteuerungselemente, dargestellt durch die <xref:System.ComponentModel.Design.DesignerActionPropertyItem> und <xref:System.ComponentModel.Design.DesignerActionMethodItem> Typen, verfügen über eine entsprechende öffentlich zugängliche Eigenschaft oder Methode, die die Funktionalität für das Element implementiert.  
+  
+ Weitere Informationen zum Hinzufügen von Elementen zu den Smarttagbereich, finden Sie unter der <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> Methode.  
+  
+> [!NOTE]
+>  Formularen und Dialogfeldern können von einem Mitglied der abgeleiteten Klasse angezeigt werden <xref:System.ComponentModel.Design.DesignerActionList>. Standardmäßig wird das übergeordnete Element dieser Fenster Containerfenster für den Smarttagbereich sein. Diese untergeordnete Fenster in einem anderen Dienst oder das Fenster explizit übergeordnet möglicherweise Smarttags nicht ordnungsgemäß angezeigt.  
+>   
+>  Smarttag-Bereiche nicht durchführen eines Bildlaufs oder auslagern, seien Sie daher darauf achten, keine Ihrer Bereiche mit vielen Smarttag-Elementen auffüllen. Zu viele Elemente können dazu führen, dass die Smarttagbereich erstrecken sich über die Begrenzung des Bildschirms hinaus.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Sammlung von <xref:System.ComponentModel.Design.DesignerActionItem> Objekte.  
+  
+ Eine vollständige Erläuterung dieses Codebeispiels finden Sie unter [wie: Anfügen von Smarttags auf eine Komponente in Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#2)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionList (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionList.#ctor(System.ComponentModel.IComponent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Eine Komponente im Zusammenhang mit der <see cref="T:System.ComponentModel.Design.DesignerActionList" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignerActionList" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerActionList> Konstruktor legt die <xref:System.ComponentModel.Design.DesignerActionList.AutoShow%2A> Eigenschaft `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Sammlung von <xref:System.ComponentModel.Design.DesignerActionItem> Objekte.  
+  
+ Eine vollständige Erläuterung dieses Codebeispiels finden Sie unter [wie: Anfügen von Smarttags auf eine Komponente in Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#4)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoShow">
+      <MemberSignature Language="C#" Value="public virtual bool AutoShow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoShow" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionList.AutoShow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob im Smarttagbereich automatisch angezeigt werden soll, während der Erstellung.</summary>
+        <value>
+          <see langword="true" />Wenn im Bereich angezeigt werden soll, wenn die besitzende Komponente erstellt wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Eigenschaftswert, um festgelegt ist `true`, die Komponente mit dem diese <xref:System.ComponentModel.Design.DesignerActionList> wird zugeordneten automatisch erweitern und den Smarttagbereich anzuzeigen, wenn die Komponente erstellt wird.  
+  
+ Sie können dieses Verhalten abwählen, durch Festlegen der <xref:System.Windows.Forms.Design.DesignerOptions.ObjectBoundSmartTagAutoShow%2A?displayProperty=nameWithType> Eigenschaft `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Sammlung von <xref:System.ComponentModel.Design.DesignerActionItem> Objekte.  
+  
+ Eine vollständige Erläuterung dieses Codebeispiels finden Sie unter [wie: Anfügen von Smarttags auf eine Komponente in Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#7)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Component">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent Component { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent Component" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionList.Component" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Komponente, die im Zusammenhang mit <see cref="T:System.ComponentModel.Design.DesignerActionList" />.</summary>
+        <value>Eine Komponente im Zusammenhang mit <see cref="T:System.ComponentModel.Design.DesignerActionList" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionList.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Ein Dienst bereitgestellt werden, indem Sie die <see cref="T:System.ComponentModel.Component" />.</param>
+        <summary>Gibt ein Objekt, das einen von der Komponente zugeordneten bereitgestellten Dienst stellt die <see cref="T:System.ComponentModel.Design.DesignerActionList" />.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , die einen bereitgestellten Dienst darstellt, die <see cref="T:System.ComponentModel.Component" />. Dieser Wert ist <see langword="null" /> Wenn die <see cref="T:System.ComponentModel.Component" /> bietet sich nicht auf den angegebenen Dienst.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSortedActionItems">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.Design.DesignerActionItemCollection GetSortedActionItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.Design.DesignerActionItemCollection GetSortedActionItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Auflistung der <see cref="T:System.ComponentModel.Design.DesignerActionItem" /> in der Liste enthaltenen Objekte.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.Design.DesignerActionItem" /> Array, das die Elemente in diese Liste enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `virtual` <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> Methode zurückgegeben, in der erwarteten Anzeigereihenfolge implementiert wird, eine Auflistung von Objekten, die von abgeleiteten der <xref:System.ComponentModel.Design.DesignerActionItem> Klasse. Diese Elemente können die folgenden spezifischen Typen sein.  
+  
+|Typ|Beschreibung|  
+|----------|-----------------|  
+|<xref:System.ComponentModel.Design.DesignerActionHeaderItem>|Die gruppenbezeichnung in Fettdruck angezeigt.|  
+|<xref:System.ComponentModel.Design.DesignerActionTextItem>|Eine Bezeichnung in einer einfachen Schrift angezeigt.|  
+|<xref:System.ComponentModel.Design.DesignerActionPropertyItem>|Ein Bereich Element eine Eigenschaft zugeordnet ist. Ein Häkchen oder Eigenschaften-Editor mit der zugrunde liegenden Eigenschaft verknüpften möglicherweise auch angezeigt werden.|  
+|<xref:System.ComponentModel.Design.DesignerActionMethodItem>|Ein Systemsteuerungselement als Hyperlink angezeigt, und eine Methode zugeordnet.|  
+  
+ Für jede <xref:System.ComponentModel.Design.DesignerActionMethodItem> und <xref:System.ComponentModel.Design.DesignerActionPropertyItem>, eine entsprechende Methode oder Eigenschaft muss der Programmierer bereitgestellten Klasse abgeleitet hinzugefügt werden die <xref:System.ComponentModel.Design.DesignerActionList> Klasse. Jedes Element Methoden- und wird als aktive Eintrag angezeigt. über die Benutzeroberfläche interagieren aufruft (UI) die entsprechende Methode oder Eigenschaft bzw..  
+  
+ Eigenschaftenelemente verfügen über eine spezielle, die Anzeige und Bearbeitung von ihren entsprechenden Eigenschaftswerte ermöglicht. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.ComponentModel.Design.DesignerActionPropertyItem>-Klasse.  
+  
+ Die Reihenfolge der Elemente im zurückgegebenen Array gibt die Reihenfolge, die sie in der Systemsteuerung angezeigt werden. Gruppieren der Elemente sind gemäß der <xref:System.ComponentModel.Design.DesignerActionItem.Category%2A> Eigenschaft unter Verwendung der folgenden Regeln:  
+  
+-   Die Kategorie des ersten Elements gefunden gibt den Anfang der ersten Gruppe. Diese Gruppe wird fortgesetzt, solange jedes nachfolgende Element der gleichen Kategorie ist. Wenn ein Element einer anderen, neuen Kategorie erkannt wird, wird eine neue Gruppe erstellt und das Element in diese eingefügt.  
+  
+-   Wenn ein Element hat einen Typ, der andere als die aktuelle Gruppe, aber dieser Kategorie wird bereits verwendet wurde, wird das Element in die passende Kategorie eingefügt.  
+  
+-   Wenn ein Element eine Kategorie nicht verfügt, wird es in eine beliebige Gruppe am Ende des Bereichs eingefügt. Diese Gruppe enthält auch Elemente, deren <xref:System.ComponentModel.Design.DesignerActionItem.AllowAssociate%2A> -Eigenschaftensatz auf `false`.  
+  
+ Die <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> Methode wird aufgerufen, wenn der Bereich zum ersten Mal erstellt wird. Rufen Sie die <xref:System.ComponentModel.Design.DesignerActionUIService.Refresh%2A> Methode zum Aktualisieren der Liste der Elemente in der Systemsteuerung angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Sammlung von <xref:System.ComponentModel.Design.DesignerActionItem> Objekte.  
+  
+ Eine vollständige Erläuterung dieses Codebeispiels finden Sie unter [wie: Anfügen von Smarttags auf eine Komponente in Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#7)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

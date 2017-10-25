@@ -1,0 +1,487 @@
+<Type Name="IRelatedEnd" FullName="System.Data.Objects.DataClasses.IRelatedEnd">
+  <TypeSignature Language="C#" Value="public interface IRelatedEnd" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRelatedEnd" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.IRelatedEnd" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert das Ende einer Beziehung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.IRelatedEnd> definiert die Anforderungen für ein Objekt, das ein Ende einer Zuordnung darstellt. Diese Schnittstelle wird implementiert, indem die <xref:System.Data.Objects.DataClasses.RelatedEnd> Klasse. <xref:System.Data.Objects.DataClasses.RelatedEnd>ist die Basisklasse für die <xref:System.Data.Objects.DataClasses.EntityCollection%601> und <xref:System.Data.Objects.DataClasses.EntityReference%601> Klassen.  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf der [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832), die generiert wurde, durch die [Entity Data Model-Assistenten](http://msdn.microsoft.com/en-us/423ec9a7-5464-43b7-a7ef-9f5f000848b5).  
+  
+ Das folgende Beispiel fügt die neuen `SalesOrderHeader` Entitäten aus, um die `Contact` Entität. Anschließend werden alle verknüpfte Enden vom abgerufen der `Contact` Entität und zeigt den Beziehungsnamen Quelle Rollenname und Zielrollennamen für jedes verknüpfte Ende.  
+  
+ [!code-csharp[DP ObjectServices Concepts#IRelatedEnd](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#irelatedend)]
+ [!code-vb[DP ObjectServices Concepts#IRelatedEnd](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#irelatedend)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Data.Objects.DataClasses.IEntityWithRelationships entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Data.Objects.DataClasses.IEntityWithRelationships entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IRelatedEnd.Add(System.Data.Objects.DataClasses.IEntityWithRelationships)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Data.Objects.DataClasses.IEntityWithRelationships" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Ein der Auflistung hinzuzufügendes Objekt. <c>Entität</c> implementieren müssen <see cref="T:System.Data.Objects.DataClasses.IEntityWithRelationships" />.</param>
+        <summary>Fügt dem verknüpften Ende ein Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.IRelatedEnd.Add%2A>-Methode fügt dem verknüpften Ende ein Objekt hinzu. Beim verknüpften Ende muss es sich um eine <xref:System.Data.Objects.DataClasses.EntityCollection%601> handeln.  
+  
+ Wenn das Quellobjekt implementiert <xref:System.Data.Objects.DataClasses.IEntityWithRelationships> und nachverfolgt wird die <xref:System.Data.Objects.ObjectStateManager>, das hinzugefügte Objekt wird auch nachverfolgt.  
+  
+ Die <xref:System.Data.Objects.DataClasses.RelatedEnd>-Methode wird von der <xref:System.Data.Objects.DataClasses.IRelatedEnd.Add%2A>-Klasse explizit implementiert. Diese Implementierung wird von der <xref:System.Data.Objects.DataClasses.EntityCollection%601>-Klasse verwendet. Weitere Informationen finden Sie unter <xref:System.Data.Objects.DataClasses.EntityCollection%601.Add%2A>.  
+  
+ Wenn das verknüpfte Ende eine <xref:System.Data.Objects.DataClasses.EntityReference%601> und <xref:System.Data.Objects.DataClasses.EntityReference%601.Value%2A> Eigenschaft des Verweises ist nicht `null`, diese Methode löst eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IRelatedEnd.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Ein der Auflistung hinzuzufügendes Objekt.</param>
+        <summary>Fügt dem verknüpften Ende ein Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese methodenüberladung für Entitätsklassen, die keine implementieren <xref:System.Data.Objects.DataClasses.IEntityWithRelationships>. Verwenden der <xref:System.Data.Objects.DataClasses.IRelatedEnd.Add%2A> Methode für die Entitätsklassen, die implementieren <xref:System.Data.Objects.DataClasses.IEntityWithRelationships>.  
+  
+ Die <xref:System.Data.Objects.DataClasses.IRelatedEnd.Add%2A>-Methode fügt dem verknüpften Ende ein Objekt hinzu. Beim verknüpften Ende muss es sich um eine <xref:System.Data.Objects.DataClasses.EntityCollection%601> handeln.  
+  
+ Die <xref:System.Data.Objects.DataClasses.RelatedEnd>-Methode wird von der <xref:System.Data.Objects.DataClasses.IRelatedEnd.Add%2A>-Klasse explizit implementiert. Diese Implementierung wird von der <xref:System.Data.Objects.DataClasses.EntityCollection%601>-Klasse verwendet. Weitere Informationen finden Sie unter <xref:System.Data.Objects.DataClasses.EntityCollection%601.Add%2A>.  
+  
+ Wenn das verknüpfte Ende eine <xref:System.Data.Objects.DataClasses.EntityReference%601> und <xref:System.Data.Objects.DataClasses.EntityReference%601.Value%2A> Eigenschaft des Verweises ist nicht `null`, diese Methode löst eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (System.Data.Objects.DataClasses.IEntityWithRelationships entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Attach(class System.Data.Objects.DataClasses.IEntityWithRelationships entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IRelatedEnd.Attach(System.Data.Objects.DataClasses.IEntityWithRelationships)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Data.Objects.DataClasses.IEntityWithRelationships" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Das anzufügende Objekt. <c>Entität</c> implementieren müssen <see cref="T:System.Data.Objects.DataClasses.IEntityWithRelationships" />.</param>
+        <summary>Definiert eine Beziehung zwischen zwei angefügten Objekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Data.Objects.DataClasses.IRelatedEnd.Attach%2A>-Methode wird eine Beziehung zwischen zwei Objekten definiert, die beide an dieselbe <xref:System.Data.Objects.ObjectContext>-Instanz angefügt sind.  
+  
+ Die <xref:System.Data.Objects.DataClasses.RelatedEnd>-Methode wird von der <xref:System.Data.Objects.DataClasses.IRelatedEnd.Attach%2A>-Klasse explizit implementiert. Mit dieser Implementierung werden von der <xref:System.Data.Objects.DataClasses.EntityCollection%601>-Klasse Beziehungen zwischen dem angefügten Quellobjekt und dem der Auflistung angefügten Objekt definiert. Weitere Informationen finden Sie unter [Anfügen und Trennen von Objekten](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Attach(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IRelatedEnd.Attach(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Das anzufügende Objekt.</param>
+        <summary>Definiert eine Beziehung zwischen zwei angefügten Objekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese methodenüberladung für Entitätsklassen, die keine implementieren <xref:System.Data.Objects.DataClasses.IEntityWithRelationships>. Verwenden der <xref:System.Data.Objects.DataClasses.IRelatedEnd.Attach%2A> Methode für die Entitätsklassen, die implementieren <xref:System.Data.Objects.DataClasses.IEntityWithRelationships>.  
+  
+ Mit der <xref:System.Data.Objects.DataClasses.IRelatedEnd.Attach%2A>-Methode wird eine Beziehung zwischen zwei Objekten definiert, die beide an dieselbe <xref:System.Data.Objects.ObjectContext>-Instanz angefügt sind.  
+  
+ Die <xref:System.Data.Objects.DataClasses.RelatedEnd>-Methode wird von der <xref:System.Data.Objects.DataClasses.IRelatedEnd.Attach%2A>-Klasse explizit implementiert. Mit dieser Implementierung werden von der <xref:System.Data.Objects.DataClasses.EntityCollection%601>-Klasse Beziehungen zwischen dem angefügten Quellobjekt und dem der Auflistung angefügten Objekt definiert. Weitere Informationen finden Sie unter [Anfügen und Trennen von Objekten](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSourceQuery">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable CreateSourceQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerable CreateSourceQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IRelatedEnd.CreateSourceQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Collections.IEnumerable" /> zurück, die die zum verknüpften Ende gehörenden Objekte darstellt.</summary>
+        <returns>Eine <see cref="T:System.Collections.IEnumerable" />, die die zum verknüpften Ende gehörenden Objekte darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.IRelatedEnd.CreateSourceQuery%2A>-Methode wird von der <xref:System.Data.Objects.DataClasses.RelatedEnd>-Klasse explizit implementiert.  Sowohl die <xref:System.Data.Objects.DataClasses.EntityCollection%601>-Klasse als auch die <xref:System.Data.Objects.DataClasses.EntityReference%601>-Klasse überschreiben die <xref:System.Data.Objects.DataClasses.RelatedEnd.System%23Data%23Objects%23DataClasses%23IRelatedEnd%23CreateSourceQuery%2A>-Methode, um eine <xref:System.Data.Objects.ObjectQuery%601> zurückzugeben, die bei ihrer Ausführung denselben Satz an Objekten zurückgibt, die zum verknüpften Ende gehören.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IRelatedEnd.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen <see cref="T:System.Collections.IEnumerator" /> zurück, der die Auflistung verbundener Objekte durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> , der die Auflistung verbundener Objekte durchläuft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoaded">
+      <MemberSignature Language="C#" Value="public bool IsLoaded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLoaded" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.IRelatedEnd.IsLoaded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob alle verbundenen Objekte geladen wurden.</summary>
+        <value>
+          <see langword="true" />Wenn das verknüpfte Ende alle verknüpften Entitäten aus der Datenbank enthält. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.RelatedEnd>-Klasse implementiert die <xref:System.Data.Objects.DataClasses.IRelatedEnd.IsLoaded%2A>-Methode von <xref:System.Data.Objects.DataClasses.IRelatedEnd>. Weitere Informationen finden Sie unter <xref:System.Data.Objects.DataClasses.RelatedEnd.IsLoaded%2A>.  
+  
+ Die <xref:System.Data.Objects.DataClasses.EntityCollection%601>-Klasse und die <xref:System.Data.Objects.DataClasses.EntityReference%601>-Klasse erben von <xref:System.Data.Objects.DataClasses.RelatedEnd>.  
+  
+   
+  
+## Examples  
+ [Definieren und Verwalten von Beziehungen](http://msdn.microsoft.com/en-us/2c92c097-56bd-4145-989e-16d92475ecda)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Load">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Lädt das verbundene Objekt bzw. die verbundenen Objekte in dieses verknüpfte Ende.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Load`wird aufgerufen, um verbundene Objekte explizit aus einem verknüpften Ende zu laden, die von einer Navigationseigenschaft verfügbar gemacht wird. Weitere Informationen finden Sie unter [Laden von verknüpften Objekten](http://msdn.microsoft.com/en-us/452347d2-7b3b-44cd-9001-231299a28cb1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Load() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IRelatedEnd.Load" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lädt das verbundene Objekt bzw. die verbundenen Objekte mit der Standardmergeoption in dieses verknüpfte Ende.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.RelatedEnd>-Klasse implementiert die <xref:System.Data.Objects.DataClasses.IRelatedEnd.Load%2A>-Methode von <xref:System.Data.Objects.DataClasses.IRelatedEnd>. Weitere Informationen finden Sie unter <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A>.  
+  
+ <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A>wird aufgerufen, um verbundene Objekte aus einer verknüpften Ende verfügbar gemacht werden, von einer Navigationseigenschaft explizit zu laden. Weitere Informationen finden Sie unter [Laden von verknüpften Objekten](http://msdn.microsoft.com/en-us/452347d2-7b3b-44cd-9001-231299a28cb1).  
+  
+ Die <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A> Methode lädt verbundene Objekte aus der Datenquelle, und zwar unabhängig davon, ob <xref:System.Data.Objects.DataClasses.RelatedEnd.IsLoaded%2A> ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (System.Data.Objects.MergeOption mergeOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Load(valuetype System.Data.Objects.MergeOption mergeOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IRelatedEnd.Load(System.Data.Objects.MergeOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mergeOption" Type="System.Data.Objects.MergeOption" />
+      </Parameters>
+      <Docs>
+        <param name="mergeOption">Die beim Zusammenführen von Objekten in eine vorhandene <see cref="T:System.Data.Objects.MergeOption" /> zu verwendende <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" />.</param>
+        <summary>Lädt das verbundene Objekt bzw. die verbundenen Objekte mit der angegebenen Mergeoption in das verknüpfte Ende.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.RelatedEnd>-Klasse implementiert die <xref:System.Data.Objects.DataClasses.IRelatedEnd.Load%2A>-Methode. Diese Implementierung wird sowohl von der <xref:System.Data.Objects.DataClasses.EntityCollection%601>-Klasse als auch von der <xref:System.Data.Objects.DataClasses.EntityReference%601>-Klasse überschrieben.  
+  
+ `Load`wird aufgerufen, um verbundene Objekte explizit aus einem verknüpften Ende zu laden, die von einer Navigationseigenschaft verfügbar gemacht wird. Weitere Informationen finden Sie unter [Laden von verknüpften Objekten](http://msdn.microsoft.com/en-us/452347d2-7b3b-44cd-9001-231299a28cb1).  
+  
+ Die <xref:System.Data.Objects.DataClasses.IRelatedEnd.Load%2A> Methode lädt verbundene Objekte aus der Datenquelle, und zwar unabhängig davon, ob <xref:System.Data.Objects.DataClasses.RelatedEnd.IsLoaded%2A> ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelationshipName">
+      <MemberSignature Language="C#" Value="public string RelationshipName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelationshipName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.IRelatedEnd.RelationshipName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Beziehung ab, der dieses verknüpfte Ende angehört.</summary>
+        <value>Der Name der Beziehung, der dieses <see cref="T:System.Data.Objects.DataClasses.IRelatedEnd" /> angehört. Der Beziehungsname ist kein namespacequalifizierter Name.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf der [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832), die generiert wurde, durch die [Entity Data Model-Assistenten](http://msdn.microsoft.com/en-us/423ec9a7-5464-43b7-a7ef-9f5f000848b5).  
+  
+ Das folgende Beispiel fügt die neuen `SalesOrderHeader` Entitäten aus, um die `Contact` Entität. Anschließend werden alle verknüpfte Enden vom abgerufen der `Contact` Entität und der Name der Beziehung, Quelle Rollenname und Zielrolle ein name für jede End verknüpften zeigt.  
+  
+ [!code-csharp[DP ObjectServices Concepts#IRelatedEnd](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#irelatedend)]
+ [!code-vb[DP ObjectServices Concepts#IRelatedEnd](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#irelatedend)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelationshipSet">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.RelationshipSet RelationshipSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.RelationshipSet RelationshipSet" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.IRelatedEnd.RelationshipSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.RelationshipSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Verweis auf die Metadaten für das verknüpfte Ende.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.RelationshipSet" /> Objekt, das Metadaten für das Ende einer Beziehung enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.Data.Objects.DataClasses.IEntityWithRelationships entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.Data.Objects.DataClasses.IEntityWithRelationships entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IRelatedEnd.Remove(System.Data.Objects.DataClasses.IEntityWithRelationships)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Data.Objects.DataClasses.IEntityWithRelationships" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Das aus der Auflistung zu entfernende Objekt. <c>Entität</c> implementieren müssen <see cref="T:System.Data.Objects.DataClasses.IEntityWithRelationships" />.</param>
+        <summary>Entfernt ein Objekt aus der Auflistung der Objekte am verknüpften Ende.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="entity" /> erfolgreich entfernt wurde, <see langword="false" /> Wenn <paramref name="entity" /> wurde nicht Teil der <see cref="T:System.Data.Objects.DataClasses.IRelatedEnd" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.IRelatedEnd.Remove%2A>-Methode entfernt ein Objekt aus dem verknüpften Ende. Beim verknüpften Ende muss es sich um eine <xref:System.Data.Objects.DataClasses.EntityCollection%601> handeln.  
+  
+ Die <xref:System.Data.Objects.DataClasses.RelatedEnd>-Methode wird von der <xref:System.Data.Objects.DataClasses.IRelatedEnd.Remove%2A>-Klasse explizit implementiert. Diese Implementierung wird von der <xref:System.Data.Objects.DataClasses.EntityCollection%601>-Klasse verwendet. Weitere Informationen finden Sie unter <xref:System.Data.Objects.DataClasses.EntityCollection%601.Remove%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IRelatedEnd.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Ein Objekt, das aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt ein Objekt aus der Auflistung der Objekte am verknüpften Ende.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="entity" /> erfolgreich entfernt wurde. <see langword="false" /> Wenn <paramref name="entity" /> wurde nicht Teil der <see cref="T:System.Data.Objects.DataClasses.IRelatedEnd" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese methodenüberladung für Entitätsklassen, die keine implementieren <xref:System.Data.Objects.DataClasses.IEntityWithRelationships>. Verwenden der <xref:System.Data.Objects.DataClasses.IRelatedEnd.Remove%2A> Methode für die Entitätsklassen, die implementieren <xref:System.Data.Objects.DataClasses.IEntityWithRelationships>.  
+  
+ Die <xref:System.Data.Objects.DataClasses.IRelatedEnd.Remove%2A>-Methode entfernt ein Objekt aus dem verknüpften Ende. Beim verknüpften Ende muss es sich um eine <xref:System.Data.Objects.DataClasses.EntityCollection%601> handeln.  
+  
+ Die <xref:System.Data.Objects.DataClasses.RelatedEnd>-Methode wird von der <xref:System.Data.Objects.DataClasses.IRelatedEnd.Remove%2A>-Klasse explizit implementiert. Diese Implementierung wird von der <xref:System.Data.Objects.DataClasses.EntityCollection%601>-Klasse verwendet. Weitere Informationen finden Sie unter <xref:System.Data.Objects.DataClasses.EntityCollection%601.Remove%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceRoleName">
+      <MemberSignature Language="C#" Value="public string SourceRoleName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceRoleName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.IRelatedEnd.SourceRoleName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Rollennamen am Quellenende der Beziehung ab.</summary>
+        <value>Den Rollennamen am Quellenende der Beziehung werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.RelatedEnd> -Klasse implementiert die <xref:System.Data.Objects.DataClasses.IRelatedEnd.SourceRoleName%2A> Eigenschaft. Weitere Informationen finden Sie unter <xref:System.Data.Objects.DataClasses.RelatedEnd.SourceRoleName%2A>.  
+  
+ Der Rollenname wird angegeben, indem die `Role` Attribut von der `End` Element in der Zuordnung, die diese Beziehung im konzeptionellen Modell definiert. Weitere Informationen finden Sie unter [Association-Element (CSDL)](http://msdn.microsoft.com/en-us/c305169a-8af7-432f-9ba7-800a163aed41).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetRoleName">
+      <MemberSignature Language="C#" Value="public string TargetRoleName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetRoleName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.IRelatedEnd.TargetRoleName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Rollennamen am Zielende der Beziehung ab.</summary>
+        <value>Der Rollenname am Zielende der Beziehung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.RelatedEnd>-Klasse implementiert die <xref:System.Data.Objects.DataClasses.IRelatedEnd.TargetRoleName%2A>-Eigenschaft. Weitere Informationen finden Sie unter <xref:System.Data.Objects.DataClasses.RelatedEnd.TargetRoleName%2A>.  
+  
+ Der Rollenname wird angegeben, indem die `Role` Attribut von der `End` Element in der Zuordnung, die diese Beziehung im konzeptionellen Modell definiert. Weitere Informationen finden Sie unter [Association-Element (CSDL)](http://msdn.microsoft.com/en-us/c305169a-8af7-432f-9ba7-800a163aed41).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

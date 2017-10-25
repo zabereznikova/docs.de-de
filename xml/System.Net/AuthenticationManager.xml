@@ -1,0 +1,444 @@
+<Type Name="AuthenticationManager" FullName="System.Net.AuthenticationManager">
+  <TypeSignature Language="C#" Value="public class AuthenticationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthenticationManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.AuthenticationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Requests</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet die Authentifizierungsmodule, die während des clientauthentifizierungsvorgangs aufgerufen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.AuthenticationManager>ist eine statische Klasse, die die Authentifizierungsmodule verwaltet, die eine Anwendung verwendet. Wenn eine Anforderung an den geschützten Ressourcen, die <xref:System.Net.AuthenticationManager> Aufrufe der <xref:System.Net.AuthenticationManager.Authenticate%2A> Methode zum Abrufen einer <xref:System.Net.Authorization> Instanz, die in nachfolgenden Anforderungen verwendet.  
+  
+ Die <xref:System.Net.AuthenticationManager> fragt jeden registrierten Authentifizierungsmodul durch Aufrufen der <xref:System.Net.IAuthenticationModule.Authenticate%2A?displayProperty=nameWithType> -Methode für jedes Modul. Das erste Authentifizierungsmodul zurückzugebenden ein <xref:System.Net.Authorization> Instanz wird verwendet, um die Anforderung zu authentifizieren.  
+  
+ Module, die die Standard-, Digest-, bieten ausgehandelt, NTLM und Typen der Kerberos-Authentifizierung registriert werden, die <xref:System.Net.AuthenticationManager> standardmäßig. Zusätzliche Authentifizierungsmodule, die implementieren die <xref:System.Net.IAuthenticationModule> Schnittstelle kann hinzugefügt werden, mithilfe der <xref:System.Net.AuthenticationManager.Register%2A> Methode. Authentifizierungsmodule werden in der Reihenfolge aufgerufen, in denen sie der Liste hinzugefügt wurden.  
+  
+> [!NOTE]
+>  Kerberos und aushandeln Authentifizierungstyp wird auf Windows 95-und Windows 98 oder Windows NT 4.0 nicht unterstützt.  
+  
+   
+  
+## Examples  
+ [!code-cpp[System.Net.Authentication#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Authentication/CPP/custombasicauthentication.cpp#1)]
+ [!code-csharp[System.Net.Authentication#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Authentication/CS/custombasicauthentication.cs#1)]
+ [!code-vb[System.Net.Authentication#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Authentication/VB/custombasicauthentication.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Authenticate">
+      <MemberSignature Language="C#" Value="public static System.Net.Authorization Authenticate (string challenge, System.Net.WebRequest request, System.Net.ICredentials credentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Authorization Authenticate(string challenge, class System.Net.WebRequest request, class System.Net.ICredentials credentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.AuthenticationManager.Authenticate(System.String,System.Net.WebRequest,System.Net.ICredentials)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Authorization</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="challenge" Type="System.String" />
+        <Parameter Name="request" Type="System.Net.WebRequest" />
+        <Parameter Name="credentials" Type="System.Net.ICredentials" />
+      </Parameters>
+      <Docs>
+        <param name="challenge">Die Herausforderung, die von der Internetressource zurückgegeben.</param>
+        <param name="request">Die <see cref="T:System.Net.WebRequest" /> , die die authentifizierungsaufforderung initiiert.</param>
+        <param name="credentials">Die <see cref="T:System.Net.ICredentials" /> dieser Anforderung zugeordnet ist.</param>
+        <summary>Ruft jeden registrierten Authentifizierungsmodul zum erste Modul zu suchen, das auf die Authentifizierungsanforderung reagieren kann.</summary>
+        <returns>Eine Instanz von der <see cref="T:System.Net.Authorization" /> Klasse, die das Ergebnis des Authentifizierungsversuchs enthält. Wenn es keine Authentifizierungsmodul auf die Aufforderung reagieren ist, gibt diese Methode <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.AuthenticationManager.Authenticate%2A> Methodenaufrufe der <xref:System.Net.IAuthenticationModule.Authenticate%2A?displayProperty=nameWithType> -Methode für jedes registrierte Authentifizierungsmodul wiederholt, bis eines der Module mit antwortet ein <xref:System.Net.Authorization> Instanz.  
+  
+ Die erste <xref:System.Net.Authorization> zurückgegebene Instanz wird verwendet, um die Anforderung zu authentifizieren. Wenn keine Authentifizierungsmodul die Anforderung authentifiziert werden kann die <xref:System.Net.AuthenticationManager.Authenticate%2A> -Methode zurückkehrt `null`.  
+  
+ Authentifizierungsmodule werden aufgerufen, in der Reihenfolge, in dem sie registriert sind mit, den <xref:System.Net.AuthenticationManager>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="challenge" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="request" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="credentials" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CredentialPolicy">
+      <MemberSignature Language="C#" Value="public static System.Net.ICredentialPolicy CredentialPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.ICredentialPolicy CredentialPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.AuthenticationManager.CredentialPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentialPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anmeldeinformationsrichtlinie für die Ressource Anforderungen mit verwendet werden soll die <see cref="T:System.Net.HttpWebRequest" /> Klasse.</summary>
+        <value>Ein Objekt, implementiert die <see cref="T:System.Net.ICredentialPolicy" /> -Schnittstelle, die bestimmt, ob die Anmeldeinformationen mit den Anforderungen gesendet werden. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anmeldeinformationsrichtlinie bestimmt, ob Anmeldeinformationen beim Senden einer Anforderung für eine Netzwerkressource, z. B. der Inhalt einer Webseite zu senden. Wenn Anmeldeinformationen gesendet werden, können Server, die Clientauthentifizierung erforderlich ist versuchen, um den Client zu authentifizieren, wenn die Anforderung empfangen wird, anstatt das Senden einer Antwort gibt an, dass die Anmeldeinformationen des Clients erforderlich sind. Während dies einen Roundtrip zum Server eingespart, muss dies gegen das Senden von Anmeldeinformationen über das Netzwerk Sicherheitsrisiko abgewogen werden. Wenn der Zielserver keine Clientauthentifizierung erforderlich ist empfiehlt es sich, dass keine Anmeldeinformationen gesendet.  
+  
+ Die Anmeldeinformationsrichtlinie wird nur für Anforderungen, die Anmeldeinformationen angeben, oder verwenden Sie aufgerufen werden ein <xref:System.Net.WebProxy> Objekt, das Anmeldeinformationen angibt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der Anmeldeinformationsrichtlinie.  
+  
+ [!code-cpp[NclCredPolicy#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLCredPolicy/CPP/NCLCredPolicy.cpp#2)]
+ [!code-csharp[NclCredPolicy#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLCredPolicy/CS/websample.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomTargetNameDictionary">
+      <MemberSignature Language="C#" Value="public static System.Collections.Specialized.StringDictionary CustomTargetNameDictionary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Specialized.StringDictionary CustomTargetNameDictionary" />
+      <MemberSignature Language="DocId" Value="P:System.Net.AuthenticationManager.CustomTargetNameDictionary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Wörterbuch, Service Principal Names (SPNs), die verwendet werden enthält, um die Hosts während der Kerberos-Authentifizierung für Anforderungen mit identifizieren <see cref="T:System.Net.WebRequest" /> und abgeleitete Klassen.</summary>
+        <value>Eine nicht schreibgeschützte <see cref="T:System.Collections.Specialized.StringDictionary" /> , enthält die SPN-Werte für Schlüssel Hostinformationen zusammensetzen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein SPN ist ein Name, mit dem ein Client eine Instanz eines Diensts oder einer Anwendung auf einem Server für die gegenseitige Authentifizierung eindeutig identifiziert. Gegenseitige Authentifizierung wird standardmäßig angefordert, und Sie können es erforderlich, durch Festlegen von <xref:System.Net.WebRequest.AuthenticationLevel%2A?displayProperty=nameWithType> auf <xref:System.Net.Security.AuthenticationLevel.MutualAuthRequired> in Ihrer Anforderung.  
+  
+ Wenn ein <xref:System.Net.WebRequest> erfordert die gegenseitige Authentifizierung, den SPN für das Ziel vom Client angegeben werden muss. Wenn Sie den SPN kennen, können Sie ihn zum Hinzufügen der <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> vor dem Senden der Anforderungs. Wenn Sie dieses Wörterbuch nicht SPN-Informationen hinzugefügt haben die <xref:System.Net.AuthenticationManager> verwendet die <xref:System.Net.WebRequest.RequestUri%2A> Methode, um die wahrscheinlichsten SPN zu erstellen; Dies ist jedoch ein berechneter Wert und sind möglicherweise nicht korrekt. Wenn die gegenseitiger Authentifizierung wird ausgeführt und ein Fehler auftritt, können Sie das Wörterbuch, um zu bestimmen, den berechnete SPN überprüfen. Wenn das Authentifizierungsprotokoll keine gegenseitigen Authentifizierung unterstützt, wird kein SPN in das Wörterbuch eingegeben.  
+  
+ Um dieses Wörterbuch aufweist und einen SPN-Wert hinzuzufügen, verwenden die <xref:System.Uri.AbsoluteUri%2A> von der <xref:System.Net.WebRequest.RequestUri%2A> als Schlüssel. Intern wird der Schlüssel abgeschnitten, Einbeziehung der <xref:System.Uri.Scheme%2A>, <xref:System.Uri.Host%2A>, und die <xref:System.Uri.Port%2A> ist dies nicht der Standardport.  
+  
+> [!NOTE]
+>  Zugreifen auf die Methoden und Eigenschaften der <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> erfordert uneingeschränkten <xref:System.Net.WebPermission>.  
+  
+> [!NOTE]
+>  Wenn Kerberos-Authentifizierung über einen Proxy ausgeführt wird, müssen den Proxy und die endgültige Hostname für einen SPN aufgelöst werden. Die Proxy-namensauflösung wird durch ein Timeout geschützt. Auflösung des Hostnamens für einen SPN ultimate erfordert einen DNS-Lookup, und es wurde kein Timeout, die direkt mit diesem Vorgang verknüpften. Synchrone Vorgänge können daher Timeout länger dauern. Um dieses Problem zu umgehen, die SPN-Cache vor der Durchführung von Anforderungen, Hinzufügen der ultimate Host-URI-Präfix.  
+  
+ Version 3.5 SP1 gibt jetzt standardmäßig den Hostnamen in der Anforderungs-URL in der SPN im NTLM-Authentifizierungsaustausch (NT LAN Manager) an, wenn die <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A>-Eigenschaft nicht festgelegt ist. Der Hostname in der Anforderungs-URL kann vom in <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType> in der Clientanforderung angegebenen Hostheader abweichen. Der Hostname in der Anforderungs-URL kann vom tatsächlichen Hostnamen des Servers, dem Computernamen des Servers, der IP-Adresse des Computers oder der Loopbackadresse abweichen. In diesen Fällen schlägt die Authentifizierungsanforderung in Windows fehl. Um das Problem zu beheben, müssen Sie möglicherweise Windows benachrichtigt wird, die der Hostname verwendet in der Anforderungs-URL in der Client-Anforderung (z. B. "Contoso") ist tatsächlich ein alternativer Name für den lokalen Computer.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, Anzeigen des Inhalts von den <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A>.  
+  
+ [!code-cpp[NclCredPolicy#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLCredPolicy/CPP/NCLCredPolicy.cpp#5)]
+ [!code-csharp[NclCredPolicy#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLCredPolicy/CS/websample.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreAuthenticate">
+      <MemberSignature Language="C#" Value="public static System.Net.Authorization PreAuthenticate (System.Net.WebRequest request, System.Net.ICredentials credentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Authorization PreAuthenticate(class System.Net.WebRequest request, class System.Net.ICredentials credentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.AuthenticationManager.PreAuthenticate(System.Net.WebRequest,System.Net.ICredentials)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Authorization</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.WebRequest" />
+        <Parameter Name="credentials" Type="System.Net.ICredentials" />
+      </Parameters>
+      <Docs>
+        <param name="request">Ein <see cref="T:System.Net.WebRequest" /> an eine Internetressource.</param>
+        <param name="credentials">Die <see cref="T:System.Net.ICredentials" /> der Anforderung zugeordnet ist.</param>
+        <summary>Präauthentifiziert, eine Anforderung gewährt.</summary>
+        <returns>Eine Instanz von der <see cref="T:System.Net.Authorization" /> Klasse, wenn die Anforderung, eine Präauthentifizierung; andernfalls werden kann <see langword="null" />. Wenn <paramref name="credentials" /> gleich <see langword="null" /> ist, gibt die Methode <see langword="null" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Authentifizierungsmodul die Anforderung, präauthentifizieren kann die <xref:System.Net.AuthenticationManager.PreAuthenticate%2A> Methode gibt eine Authentifizierung-Instanz zurück und sendet die Autorisierungsinformationen an den Server präemptiv, anstatt die Ressource zu warten. Dieses Verhalten wird in Abschnitt 3.3 der RFC 2617 erläutert (HTTP-Authentifizierung: Standard- und Digestauthentifizierung-Zugriff). Authentifizierungsmodule, die Vorauthentifizierung unterstützen ermöglichen, Clients, Server Effizienz zu verbessern, durch das Vermeiden von zusätzlichen Roundtrips durch authentifizierungsaufforderungen verursacht wird.  
+  
+ Autorisierungsmodule, die präauthentifizieren können fordert Satz der <xref:System.Net.IAuthenticationModule.CanPreAuthenticate%2A?displayProperty=nameWithType> Eigenschaft `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="request" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public static void Register (System.Net.IAuthenticationModule authenticationModule);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Register(class System.Net.IAuthenticationModule authenticationModule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.AuthenticationManager.Register(System.Net.IAuthenticationModule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationModule" Type="System.Net.IAuthenticationModule" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationModule">Die <see cref="T:System.Net.IAuthenticationModule" /> mit Authentifizierungs-Manager zu registrieren.</param>
+        <summary>Registriert ein Authentifizierungsmodul Authentifizierungs-Manager.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.AuthenticationManager.Register%2A> Methode fügt Authentifizierungsmodule an das Ende der Liste der Module, die aufgerufen werden, indem Sie die <xref:System.Net.AuthenticationManager.Authenticate%2A> Methode. Authentifizierungsmodule werden in der Reihenfolge aufgerufen, in denen sie der Liste hinzugefügt wurden. Wenn ein Modul mit dem gleichen <xref:System.Net.IAuthenticationModule.AuthenticationType%2A> ist bereits registriert ist, diese Methode entfernt die registrierte Modul und fügt `authenticationModule` bis zum Ende der Liste.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel registriert ein Authentifizierungsmodul mit Authentifizierungs-Manager. Ein vollständiges Beispiel finden Sie in der <xref:System.Net.AuthenticationManager> Klasse.  
+  
+ [!code-cpp[System.Net.Sockets.Authentication#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.Authentication/CPP/custombasicauthentication.cpp#2)]
+ [!code-csharp[System.Net.Sockets.Authentication#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.Authentication/CS/custombasicauthentication.cs#2)]
+ [!code-vb[System.Net.Sockets.Authentication#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.Authentication/VB/custombasicauthentication.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="authenticationModule" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Ausführen von nicht verwalteten Codes. Zugeordnete Enumeration: <see cref="T:System.Security.Permissions.SecurityPermissionFlag" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisteredModules">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerator RegisteredModules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.IEnumerator RegisteredModules" />
+      <MemberSignature Language="DocId" Value="P:System.Net.AuthenticationManager.RegisteredModules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Authentifizierungsmodule, die mit der Authentifizierungs-Manager registriert sind.</summary>
+        <value>Ein <see cref="T:System.Collections.IEnumerator" /> mit der die registrierten Authentifizierungsmodule gelesen werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.AuthenticationManager.RegisteredModules%2A> Eigenschaft ermöglicht eine <xref:System.Collections.IEnumerator> Instanz, die es die Liste der ermöglicht registrierten Authentifizierungsmodule gelesen werden. Die <xref:System.Net.AuthenticationManager.Register%2A> Methode fügt Module der Liste hinzu, und die <xref:System.Net.AuthenticationManager.Unregister%2A> Methode entfernt Module aus.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.AuthenticationManager.RegisteredModules%2A> Eigenschaft, um eine Liste der Authentifizierungsmodule abzurufen, die mit der Authentifizierungs-Manager registriert sind. Ein vollständiges Beispiel finden Sie in der <xref:System.Net.AuthenticationManager> Klasse.  
+  
+ [!code-cpp[System.Net.Authentication#8](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Authentication/CPP/custombasicauthentication.cpp#8)]
+ [!code-csharp[System.Net.Authentication#8](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Authentication/CS/custombasicauthentication.cs#8)]
+ [!code-vb[System.Net.Authentication#8](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Authentication/VB/custombasicauthentication.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unregister">
+      <MemberSignature Language="C#" Value="public static void Unregister (System.Net.IAuthenticationModule authenticationModule);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Unregister(class System.Net.IAuthenticationModule authenticationModule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.AuthenticationManager.Unregister(System.Net.IAuthenticationModule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationModule" Type="System.Net.IAuthenticationModule" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationModule">Die <see cref="T:System.Net.IAuthenticationModule" /> aus der Liste der registrierten Module zu entfernen.</param>
+        <summary>Entfernt das angegebene Authentifizierungsmodul aus der Liste der registrierten Module an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.AuthenticationManager.Unregister%2A> -Methode entfernt das angegebene Authentifizierungsmodul aus der Liste der Authentifizierungsmodule wird aufgerufen, indem Sie die <xref:System.Net.AuthenticationManager.Authenticate%2A> Methode. Das Modul muss wurden hinzugefügt, um die Liste mit den <xref:System.Net.AuthenticationManager.Register%2A> -Methode auf, bevor es aus der Liste entfernt werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.AuthenticationManager.Unregister%2A> Methode, um die angegebene Authentifizierungsmodul aus der Liste der registrierten Module zu entfernen. Ein vollständiges Beispiel finden Sie in der <xref:System.Net.AuthenticationManager> Klasse.  
+  
+ [!code-cpp[System.Net.Sockets.Authentication#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.Authentication/CPP/custombasicauthentication.cpp#2)]
+ [!code-csharp[System.Net.Sockets.Authentication#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Sockets.Authentication/CS/custombasicauthentication.cs#2)]
+ [!code-vb[System.Net.Sockets.Authentication#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.Authentication/VB/custombasicauthentication.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="authenticationModule" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Das angegebene <see cref="T:System.Net.IAuthenticationModule" /> ist nicht registriert.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Ausführen von nicht verwalteten Codes. Zugeordnete Enumeration: <see cref="T:System.Security.Permissions.SecurityPermissionFlag" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Unregister">
+      <MemberSignature Language="C#" Value="public static void Unregister (string authenticationScheme);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Unregister(string authenticationScheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.AuthenticationManager.Unregister(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationScheme" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationScheme">Das Authentifizierungsschema des Moduls zu entfernen.</param>
+        <summary>Entfernt die Authentifizierungsmodule mit dem angegebenen Authentifizierungsschema aus der Liste der registrierten Module.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.AuthenticationManager.Unregister%2A> -Methode entfernt das Authentifizierungsmodul mit dem angegebenen Authentifizierungsschema aus der Liste der Authentifizierungsmodule wird aufgerufen, indem Sie die <xref:System.Net.AuthenticationManager.Authenticate%2A> Methode. Das Modul muss wurden hinzugefügt, um die Liste mit den <xref:System.Net.AuthenticationManager.Register%2A> -Methode auf, bevor es aus der Liste entfernt werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.AuthenticationManager.Unregister%2A> Methode, um ein Authentifizierungsmodul mit dem angegebenen Authentifizierungsschema aus der Liste der registrierten Module zu entfernen.  
+  
+ [!code-cpp[AuthenticationManager_UnRegister2#2](~/samples/snippets/cpp/VS_Snippets_Remoting/AuthenticationManager_UnRegister2/CPP/authenticationmanager_unregister2.cpp#2)]
+ [!code-csharp[AuthenticationManager_UnRegister2#2](~/samples/snippets/csharp/VS_Snippets_Remoting/AuthenticationManager_UnRegister2/CS/authenticationmanager_unregister2.cs#2)]
+ [!code-vb[AuthenticationManager_UnRegister2#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/AuthenticationManager_UnRegister2/VB/authenticationmanager_unregister2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="authenticationScheme" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein Modul für dieses Authentifizierungsschema ist nicht registriert.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Ausführen von nicht verwalteten Codes. Zugeordnete Enumeration: <see cref="T:System.Security.Permissions.SecurityPermissionFlag" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

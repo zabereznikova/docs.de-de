@@ -1,0 +1,94 @@
+<Type Name="NumericUpDownAcceleration" FullName="System.Windows.Forms.NumericUpDownAcceleration">
+  <TypeSignature Language="C#" Value="public class NumericUpDownAcceleration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NumericUpDownAcceleration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.NumericUpDownAcceleration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen, die angeben, wie Beschleunigung für ein Drehfeld (auch bekannt als auf-ab-Steuerelement) ausgeführt werden sollten bei der nach-oben oder ab-Schaltfläche für den angegebenen Zeitraum gedrückt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.NumericUpDownAcceleration> Objekt wird verwendet, durch die <xref:System.Windows.Forms.NumericUpDown> Steuerelement optional Acceleration beim Inkrementieren oder Dekrementieren für das Steuerelement über eine große Menge von Zahlen bereitstellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.NumericUpDownAcceleration> Klasse. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, und rufen die `InitializeAcceleratedUpDown` Methode aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> -Ereignishandler. Während der Code ausgeführt wird, drücken Sie und halten Sie die nach-oben oder nach-unten Sie-Taste, um die Beschleunigung auftreten, finden Sie unter.  
+  
+ [!code-csharp[System.Windows.Forms.MiscBugDriven#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MiscBugDriven/CS/Form1.cs#6)]
+ [!code-vb[System.Windows.Forms.MiscBugDriven#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MiscBugDriven/VB/form1.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NumericUpDownAcceleration (int seconds, decimal increment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 seconds, valuetype System.Decimal increment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDownAcceleration.#ctor(System.Int32,System.Decimal)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="seconds" Type="System.Int32" />
+        <Parameter Name="increment" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="seconds">Die Anzahl der Sekunden der nach-oben oder unten Schaltfläche gedrückt wird, bevor die Beschleunigung startet.</param>
+        <param name="increment">Die Menge der Wert muss im Steuerelement angezeigte inkrementiert oder dekrementiert während der Beschleunigung enthalten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.NumericUpDownAcceleration" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="seconds" /> oder <paramref name="increment" /> ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Increment">
+      <MemberSignature Language="C#" Value="public decimal Increment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Decimal Increment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NumericUpDownAcceleration.Increment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest zu inkrementieren oder dekrementieren den angezeigten Wert während der Beschleunigung der Menge.</summary>
+        <value>Die Menge zu erhöhen oder zu verringern den angezeigten Wert während der Beschleunigung.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der festgelegte Wert ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Seconds">
+      <MemberSignature Language="C#" Value="public int Seconds { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Seconds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NumericUpDownAcceleration.Seconds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Anzahl der Sekunden, die nach-oben oder gedrückt gedrückt gehalten werden muss, bevor die Beschleunigung startet.</summary>
+        <value>Ruft ab oder legt der Anzahl der Sekunden, die nach-oben oder gedrückt gedrückt gehalten werden muss, bevor die Beschleunigung startet.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der festgelegte Wert ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

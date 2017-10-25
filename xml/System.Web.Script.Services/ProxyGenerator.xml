@@ -1,0 +1,100 @@
+<Type Name="ProxyGenerator" FullName="System.Web.Script.Services.ProxyGenerator">
+  <TypeSignature Language="C#" Value="public static class ProxyGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ProxyGenerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Script.Services.ProxyGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Codegenerator für den Proxy an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.Script.Services.ProxyGenerator.GetClientProxyScript%2A> Methode, um den Code von ECMAScript (JavaScript) abzurufen, die verwendet wird, zum Generieren der Proxyklasse für einen Webdienst für eine [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] -Dienst oder für statische Seitenmethoden, denen die <xref:System.Web.Services.WebMethodAttribute> Attribut angewendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetClientProxyScript">
+      <MemberSignature Language="C#" Value="public static string GetClientProxyScript (Type type, string path, bool debug);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetClientProxyScript(class System.Type type, string path, bool debug) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Services.ProxyGenerator.GetClientProxyScript(System.Type,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="debug" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Objekts, das das Skript abgerufen werden soll.</param>
+        <param name="path">Der Speicherort des Endpunkts.</param>
+        <param name="debug">
+          <see langword="true" />XML-Codekommentare eingeschlossen werden sollen; andernfalls <see langword="false" />.</param>
+        <summary>Ruft den Generierungscode der Proxy für den angegebenen Typ ab.</summary>
+        <returns>Der Code für den Proxy-Generierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Script.Services.ProxyGenerator.GetClientProxyScript%2A> Methodenrückgabe Proxygenerierung ECMAScript (JavaScript) für einen Webdienst für eine [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] -Dienst oder für statische Seitenmethoden, denen die <xref:System.Web.Services.WebMethodAttribute> Attribut angewendet. Die `type` Parameter enthält den Typ der Webdienstklasse, WCF-Dienstklasse oder ASP.NET Page-Klasse. Wenn der Typ ist ein WCF-Dienstklasse oder Schnittstelle, Klasse oder Schnittstelle benötigen die <xref:System.ServiceModel.ServiceContractAttribute> Attribut angewendet. Wenn die `debug` Parameter ist `true`, der resultierende Code enthält XML-Unterstützung in Codekommentare, die für IntelliSense verwendet werden können [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] oder anderen entwicklungsumgebungen. Daher ist die Größe des generierten Skripts größer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="type" />-Parameter oder der <paramref name="path" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der angegebene Typ ist für Proxygenerierung nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClientProxyScript">
+      <MemberSignature Language="C#" Value="public static string GetClientProxyScript (Type type, string path, bool debug, System.ServiceModel.Description.ServiceEndpoint serviceEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetClientProxyScript(class System.Type type, string path, bool debug, class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Services.ProxyGenerator.GetClientProxyScript(System.Type,System.String,System.Boolean,System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="debug" Type="System.Boolean" />
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Objekts, das das Skript abgerufen werden soll.</param>
+        <param name="path">Der Speicherort des Endpunkts.</param>
+        <param name="debug">
+          <see langword="true" />XML-Codekommentare eingeschlossen werden sollen; andernfalls <see langword="false" />.</param>
+        <param name="serviceEndpoint">Der Dienstendpunkt.</param>
+        <summary>Ruft die vom Proxygenerierungscode für den angegebenen Typ mit den Pfad und den Dienst-Endpunkt ab.</summary>
+        <returns>Der Code für den Proxy-Generierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Script.Services.ProxyGenerator.GetClientProxyScript%2A> Methodenrückgabe Proxygenerierung ECMAScript (JavaScript) für einen Webdienst für eine [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] -Dienst oder für statische Seitenmethoden, denen die <xref:System.Web.Services.WebMethodAttribute> Attribut angewendet. Die `type` Parameter enthält den Typ der Webdienstklasse, WCF-Dienstklasse oder ASP.NET Page-Klasse. Wenn der Typ ist ein WCF-Dienstklasse oder Schnittstelle, Klasse oder Schnittstelle benötigen die <xref:System.ServiceModel.ServiceContractAttribute> Attribut angewendet. Wenn die `debug` Parameter ist `true`, der resultierende Code enthält XML-Unterstützung in Codekommentare, die für IntelliSense verwendet werden können [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] oder anderen entwicklungsumgebungen. Daher ist die Größe des generierten Skripts größer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="type" />-Parameter oder der <paramref name="path" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der angegebene Typ ist für Proxygenerierung nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

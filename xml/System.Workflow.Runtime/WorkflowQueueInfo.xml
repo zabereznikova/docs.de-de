@@ -1,0 +1,89 @@
+<Type Name="WorkflowQueueInfo" FullName="System.Workflow.Runtime.WorkflowQueueInfo">
+  <TypeSignature Language="C#" Value="public class WorkflowQueueInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowQueueInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.WorkflowQueueInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Informationen zu einer <see cref="T:System.Workflow.Runtime.WorkflowQueue" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.WorkflowQueueInfo> enthält Informationen zum Zustand einer <xref:System.Workflow.Runtime.WorkflowQueue>. Sie können <xref:System.Workflow.Runtime.WorkflowInstance.GetWorkflowQueueData%2A?displayProperty=nameWithType> aufrufen, um eine Auflistung von <xref:System.Workflow.Runtime.WorkflowQueueInfo>-Objekten abzurufen, die den Zustand der Workflowwarteschlangen darstellt, die einer Workflowinstanz zugeordnet sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowQueueInfo.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der nicht verwendeten Elemente der Workflowwarteschlange ab.</summary>
+        <value>Eine <see cref="T:System.Collections.ICollection" />, die die nicht verwendeten Elemente der <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueName">
+      <MemberSignature Language="C#" Value="public IComparable QueueName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IComparable QueueName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowQueueInfo.QueueName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IComparable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> ab, die dieser <see cref="T:System.Workflow.Runtime.WorkflowQueueInfo" /> zugeordnet ist.</summary>
+        <value>Der Name des <see cref="T:System.Workflow.Runtime.WorkflowQueue" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscribedActivityNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; SubscribedActivityNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; SubscribedActivityNames" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowQueueInfo.SubscribedActivityNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung ab, die den qualifizierten Namen der einzelnen Aktivitäten enthält, die die <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> abonniert hat.</summary>
+        <value>Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />, die den qualifizierten Namen der einzelnen Aktivitäten enthält, die die <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> abonniert hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

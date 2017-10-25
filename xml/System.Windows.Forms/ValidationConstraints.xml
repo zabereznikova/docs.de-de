@@ -1,0 +1,138 @@
+<Type Name="ValidationConstraints" FullName="System.Windows.Forms.ValidationConstraints">
+  <TypeSignature Language="C#" Value="public enum ValidationConstraints" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ValidationConstraints extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ValidationConstraints" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Konstanten, die zu informieren <see cref="M:System.Windows.Forms.ContainerControl.ValidateChildren(System.Windows.Forms.ValidationConstraints)" /> zu wie die untergeordneten Steuerelemente des Containers überprüft werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> überprüft alle aktivierten Steuerelemente in einem Container, z. B. ein Formular. Diese Enumeration verwenden, um die Typen von Steuerelementen zu beschränken, deren <xref:System.Windows.Forms.Control.Validating> Ereignis wird ausgelöst.  
+  
+ Sie können diese aufgelisteten Werte zusammen mit einer bitweisen OR-Operation kombinieren. Kombinieren Parameter mit einem bitweisen OR-Operator führt eine logische AND-Operation. Beispielsweise Aufrufen `ValidateChildren(ValidationConstraints.ImmediateChildren | ValidationConstraints.Enabled)` löst nur die <xref:System.Windows.Forms.Control.Validating> Ereignis auf Steuerelemente, die sowohl das unmittelbar untergeordnete Element des Containers und aktiviert sind.  
+  
+ Wenn Sie beim Aufrufen keine ImmediateChildren angeben <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A>, die Methode erfordert, dass Sie alle untergeordneten Steuerelemente in der Steuerelementhierarchie überprüfen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bewirkt, dass nur die <xref:System.Windows.Forms.Control.Validating> Ereignis für direkt untergeordnete Elemente des Formulars ausgelöst, deren <xref:System.Windows.Forms.Control.Enabled%2A> Eigenschaft ist `true`.  
+  
+ [!code-csharp[ValidateChildrenWithConstraints#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ValidateChildrenWithConstraints/CS/Form1.cs#1)]
+ [!code-vb[ValidateChildrenWithConstraints#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ValidateChildrenWithConstraints/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="Enabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ValidationConstraints Enabled = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ValidationConstraints.Enabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ValidationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Validiert untergeordnete Steuerelemente, deren <see cref="P:System.Windows.Forms.Control.Enabled" /> -Eigenschaftensatz auf <see langword="true" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImmediateChildren">
+      <MemberSignature Language="C#" Value="ImmediateChildren" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ValidationConstraints ImmediateChildren = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ValidationConstraints.ImmediateChildren" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ValidationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überprüft die untergeordneten Steuerelemente, die direkt innerhalb des Containers gehostet werden. Wird keine untergeordneten Elemente von diesen untergeordneten Elementen überprüft werden. Angenommen, Sie haben eine <see cref="T:System.Windows.Forms.Form" /> , enthält eine benutzerdefinierte <see cref="T:System.Windows.Forms.UserControl" />, und die <see cref="T:System.Windows.Forms.UserControl" /> enthält eine <see cref="T:System.Windows.Forms.Button" />mit <see cref="F:System.Windows.Forms.ValidationConstraints.ImmediateChildren" /> führt dazu, dass die <see cref="E:System.Windows.Forms.Control.Validating" /> -Ereignis der <see cref="T:System.Windows.Forms.UserControl" /> auftreten, aber nicht die <see cref="E:System.Windows.Forms.Control.Validating" /> Ereignis für die <see cref="T:System.Windows.Forms.Button" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ValidationConstraints None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ValidationConstraints.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ValidationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle untergeordneten Steuerelemente und alle untergeordneten Elemente dieser untergeordneten Steuerelemente, unabhängig von den eigenschafteneinstellungen überprüft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Selectable">
+      <MemberSignature Language="C#" Value="Selectable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ValidationConstraints Selectable = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ValidationConstraints.Selectable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ValidationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überprüft die untergeordneten Steuerelemente, die ausgewählt werden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="TabStop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ValidationConstraints TabStop = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ValidationConstraints.TabStop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ValidationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überprüft die untergeordneten Steuerelemente, die eine <see cref="P:System.Windows.Forms.Control.TabStop" /> Wert festgelegt, was bedeutet, dass der Benutzer mit der TAB-Taste auf dieses Steuerelement navigieren kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="Visible" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ValidationConstraints Visible = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ValidationConstraints.Visible" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ValidationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Validiert untergeordnete Steuerelemente, deren <see cref="P:System.Windows.Forms.Control.Visible" /> -Eigenschaftensatz auf <see langword="true" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

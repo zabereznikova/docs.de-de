@@ -1,0 +1,85 @@
+<Type Name="TypedDataSetGenerator+GenerateOption" FullName="System.Data.Design.TypedDataSetGenerator+GenerateOption">
+  <TypeSignature Language="C#" Value="public enum TypedDataSetGenerator.GenerateOption" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed TypedDataSetGenerator/GenerateOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Design.TypedDataSetGenerator.GenerateOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die <see cref="T:System.Data.Design.TypedDataSetGenerator" /> mit Informationen zum Erstellen typisierter Datasets, die LINQ to DataSet- und hierarchische Aktualisierungen unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Design.TypedDataSetGenerator.GenerateOption> Enumeration stellt die <xref:System.Data.Design.TypedDataSetGenerator> mit Informationen über den Typ des typisierten Datasets beim Erstellen der `TypedDataSetGenerator.Generate` -Methode aufgerufen wird.  
+  
+ Die <xref:System.Data.Design.TypedDataSetGenerator.GenerateOption> Enumeration können Sie neue Funktionen in typisierten Datasets zu implementieren, ohne zusätzliche Überladungen zum Erstellen der `TypedDataSetGenerator.Generate` Methode.  
+  
+> [!NOTE]
+>  LINQ to DataSet- und hierarchische Aktualisierung werden in hinzugefügten Features [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)].  
+>   
+>  Siehe auch [Übersicht über die hierarchische Aktualisierung](http://msdn.microsoft.com/library/c4f8e8b9-e4a5-4a02-8462-d03d1e8222d6).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HierarchicalUpdate">
+      <MemberSignature Language="C#" Value="HierarchicalUpdate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Design.TypedDataSetGenerator/GenerateOption HierarchicalUpdate = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Design.TypedDataSetGenerator.GenerateOption.HierarchicalUpdate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Design.TypedDataSetGenerator+GenerateOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Generiert typisierte DataSets, die über einen TableAdapterManager und zugeordnete Methoden zum Aktivieren hierarchischer Aktualisierungen verfügen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LinqOverTypedDatasets">
+      <MemberSignature Language="C#" Value="LinqOverTypedDatasets" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Design.TypedDataSetGenerator/GenerateOption LinqOverTypedDatasets = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Design.TypedDataSetGenerator.GenerateOption.LinqOverTypedDatasets" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Design.TypedDataSetGenerator+GenerateOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Generiert typisierte DataSets, die über Datentabellen verfügen, die von <see cref="T:System.Data.TypedTableBase`1" /> erben, um das Ausführen von LINQ-Abfragen für Datentabellen zu ermöglichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Design.TypedDataSetGenerator/GenerateOption None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Design.TypedDataSetGenerator.GenerateOption.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Design.TypedDataSetGenerator+GenerateOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Generiert typisierte DataSets, die mit typisierten DataSets kompatibel sind, die in früheren Versionen von Visual Studio als [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)] generiert wurden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

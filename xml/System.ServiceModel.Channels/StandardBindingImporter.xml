@@ -1,0 +1,125 @@
+<Type Name="StandardBindingImporter" FullName="System.ServiceModel.Channels.StandardBindingImporter">
+  <TypeSignature Language="C#" Value="public class StandardBindingImporter : System.ServiceModel.Description.IWsdlImportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StandardBindingImporter extends System.Object implements class System.ServiceModel.Description.IWsdlImportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.StandardBindingImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IWsdlImportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Erweiterungspunkt für die Zuordnung von WSDL-Verträgen und Richtlinienassertionen in Windows Communication Foundation (WCF)-standardbindungen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie diese Klasse zum Erweitern der Standardzuordnung zwischen WSDL und einer Standardbindung. Fügen Sie das benutzerdefinierte Objekt dann entweder programmgesteuert oder durch Verwendung einer Anwendungskonfigurationsdatei an einen <xref:System.ServiceModel.Description.WsdlImporter> an. Sie können auch das benutzerdefinierte Objekt anfügen, mit dem internen <xref:System.ServiceModel.Description.WsdlImporter> verwendet werden, indem Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) mithilfe einer Anwendungskonfigurationsdatei.  
+  
+ Verwenden Sie die <xref:System.ServiceModel.Channels.StandardBindingImporter.System%23ServiceModel%23Description%23IWsdlImportExtension%23BeforeImport%2A>-Methode, um die Metadaten direkt zu ändern, die dann in Standardbindungsobjekte importiert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StandardBindingImporter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StandardBindingImporter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.StandardBindingImporter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlImportExtension.BeforeImport">
+      <MemberSignature Language="C#" Value="void IWsdlImportExtension.BeforeImport (System.Web.Services.Description.ServiceDescriptionCollection wsdlDocuments, System.Xml.Schema.XmlSchemaSet xmlSchemas, System.Collections.Generic.ICollection&lt;System.Xml.XmlElement&gt; policy);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlImportExtension.BeforeImport(class System.Web.Services.Description.ServiceDescriptionCollection wsdlDocuments, class System.Xml.Schema.XmlSchemaSet xmlSchemas, class System.Collections.Generic.ICollection`1&lt;class System.Xml.XmlElement&gt; policy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StandardBindingImporter.System#ServiceModel#Description#IWsdlImportExtension#BeforeImport(System.Web.Services.Description.ServiceDescriptionCollection,System.Xml.Schema.XmlSchemaSet,System.Collections.Generic.ICollection{System.Xml.XmlElement})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wsdlDocuments" Type="System.Web.Services.Description.ServiceDescriptionCollection" />
+        <Parameter Name="xmlSchemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="policy" Type="System.Collections.Generic.ICollection&lt;System.Xml.XmlElement&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="wsdlDocuments">Die <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> , die die Dienste beschreibt.</param>
+        <param name="xmlSchemas">Die <see cref="T:System.Xml.Schema.XmlSchemaSet" /> , beschreibt die <c>WsdlDocuments</c>.</param>
+        <param name="policy"><see cref="T:System.Collections.Generic.ICollection`1" /> vom Typ <see cref="T:System.Xml.XmlElement" /> mit den Richtlinienelementen.</param>
+        <summary>Wird vor dem Importieren der Metadatendokumente aufgerufen, die mit der Standardbindung verknüpft sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%2A>-Methoden aller registrierten <xref:System.ServiceModel.Description.IWsdlImportExtension>-Objekte werden aufgerufen, bevor ein Import aus den zur Verfügung gestellten Metadaten vorgenommen wird. An diesem Punkt können Sie die Metadaten direkt ändern, die dann in Standardbindungsobjekte importiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlImportExtension.ImportContract">
+      <MemberSignature Language="C#" Value="void IWsdlImportExtension.ImportContract (System.ServiceModel.Description.WsdlImporter importer, System.ServiceModel.Description.WsdlContractConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlImportExtension.ImportContract(class System.ServiceModel.Description.WsdlImporter importer, class System.ServiceModel.Description.WsdlContractConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StandardBindingImporter.System#ServiceModel#Description#IWsdlImportExtension#ImportContract(System.ServiceModel.Description.WsdlImporter,System.ServiceModel.Description.WsdlContractConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importer" Type="System.ServiceModel.Description.WsdlImporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.WsdlContractConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="importer">Der <see cref="T:System.ServiceModel.Description.WsdlImporter" /> zum Importieren und Auflösen von WSDL-Metadaten.</param>
+        <param name="context">Der <see cref="T:System.ServiceModel.Description.WsdlContractConversionContext" />, der den Kontext zur Konvertierung von WSDL zur Dienstbeschreibung bereitstellt.</param>
+        <summary>Stellt einen Erweiterbarkeitspunkt zum Importieren von WSDL-Vertragsinformationen für Standardbindungen bereit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint">
+      <MemberSignature Language="C#" Value="void IWsdlImportExtension.ImportEndpoint (System.ServiceModel.Description.WsdlImporter importer, System.ServiceModel.Description.WsdlEndpointConversionContext endpointContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint(class System.ServiceModel.Description.WsdlImporter importer, class System.ServiceModel.Description.WsdlEndpointConversionContext endpointContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StandardBindingImporter.System#ServiceModel#Description#IWsdlImportExtension#ImportEndpoint(System.ServiceModel.Description.WsdlImporter,System.ServiceModel.Description.WsdlEndpointConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importer" Type="System.ServiceModel.Description.WsdlImporter" />
+        <Parameter Name="endpointContext" Type="System.ServiceModel.Description.WsdlEndpointConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="importer">Der <see cref="T:System.ServiceModel.Description.WsdlImporter" /> zum Importieren und Auflösen von WSDL-Metadaten.</param>
+        <param name="endpointContext">Der <see cref="T:System.ServiceModel.Description.WsdlEndpointConversionContext" /> für die Konvertierung.</param>
+        <summary>Stellt einen Erweiterbarkeitspunkt zum Zuordnen von in WSDL definierten Endpunkten in der Dienstbeschreibung bereit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

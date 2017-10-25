@@ -1,0 +1,121 @@
+<Type Name="DnsPermissionAttribute" FullName="System.Net.DnsPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DnsPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DnsPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Net.DnsPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, über die Berechtigung zum Anfordern von Informationen von DNS-Servern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Sicherheitsinformationen vom deklariert <xref:System.Net.DnsPermissionAttribute> befindet sich in den Metadaten des Attributziels, die die Klasse, ist die <xref:System.Net.DnsPermissionAttribute> angewendet wird. Das System greift dann auf diese Informationen zur Laufzeit. Die <xref:System.Security.Permissions.SecurityAction> , wird zum Übergeben des Konstruktors bestimmt die zulässigen DNS-Ziele.  
+  
+ Diese Sicherheitsattribute dienen nur zur [Deklarationssicherheit](http://msdn.microsoft.com/en-us/97e21efd-6e89-4115-90d5-ad239513dad8). Für [Imperative Sicherheit](http://msdn.microsoft.com/en-us/15aab1e1-6b7d-41ad-b102-c1ed7bedea27), verwenden Sie das entsprechende <xref:System.Net.DnsPermission> Klasse.  
+  
+ Sicherheitszugriff ist entweder vollständig eingeschränkt oder nicht vollständig eingeschränkt. Festlegen der <xref:System.Security.Permissions.PermissionState.Unrestricted> Eigenschaft `true` Zugriff zu gewähren oder `false` für keinen Zugriff. Legen Sie diese Eigenschaft als benannten Parameter.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Net.DnsPermissionAttribute> deklarativen Sicherheit auf eine benutzerdefinierte Klasse anwenden.  
+  
+ [!code-cpp[Classic DnsPermissionAttributeExample#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic DnsPermissionAttributeExample/CPP/source.cpp#1)]
+ [!code-csharp[Classic DnsPermissionAttributeExample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic DnsPermissionAttributeExample/CS/source.cs#1)]
+ [!code-vb[Classic DnsPermissionAttributeExample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic DnsPermissionAttributeExample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DnsPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Einer der <see cref="T:System.Security.Permissions.SecurityAction" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.DnsPermissionAttribute" />-Klasse mit dem angegebenen <see cref="T:System.Security.Permissions.SecurityAction" />-Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.SecurityAction> -Wert, der an diesen Konstruktor übergeben wird, gibt die zulässigen <xref:System.Net.DnsPermissionAttribute> Ziele.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Net.DnsPermissionAttribute> deklarativen Sicherheit auf eine benutzerdefinierte Klasse anwenden.  
+  
+ [!code-cpp[Classic DnsPermissionAttributeExample#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic DnsPermissionAttributeExample/CPP/source.cpp#1)]
+ [!code-csharp[Classic DnsPermissionAttributeExample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic DnsPermissionAttributeExample/CS/source.cs#1)]
+ [!code-vb[Classic DnsPermissionAttributeExample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic DnsPermissionAttributeExample/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="action" /> Parameter ist kein gültiger <see cref="T:System.Security.Permissions.SecurityAction" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine neue Instanz der <see cref="T:System.Net.DnsPermission" />-Klasse zurück.</summary>
+        <returns>Ein <see cref="T:System.Net.DnsPermission" /> , die der Sicherheitsdeklaration entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `CreatePermission` Methode wird durch das Sicherheitssystem von Anwendungscode nicht aufgerufen.  
+  
+ Die Sicherheitsinformationen vom beschrieben <xref:System.Net.DnsPermissionAttribute> befindet sich in den Metadaten des Attributziels, also der Klasse, auf die <xref:System.Net.DnsPermissionAttribute> angewendet wird. Das System greift dann auf die Informationen zur Laufzeit und Aufrufe <xref:System.Net.DnsPermissionAttribute.CreatePermission%2A>. Das System verwendet den zurückgegebenen <xref:System.Security.IPermission> , die angegebenen sicherheitsanforderungen zu erzwingen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

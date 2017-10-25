@@ -1,0 +1,6 @@
+<Namespace Name="System.Diagnostics.SymbolStore">
+  <Docs>
+    <summary>Die <see cref="N:System.Diagnostics.SymbolStore" /> Namespace enthält Klassen, mit denen Sie Berichtelemente lesen und Schreiben von Debugsymbolinformationen, z. B. Quellcodezeile an Microsoft intermediate Language (MSIL)-Karten. Compiler für.NET Framework können die Debugsymbolinformationen in programmer's Programmdatenbankdatei (PDB)-Dateien speichern. Debugger und Codeprofiler können die Debugsymbolinformationen zur Laufzeit lesen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

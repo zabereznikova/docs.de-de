@@ -1,0 +1,183 @@
+<Type Name="Globals" FullName="Microsoft.VisualBasic.Globals">
+  <TypeSignature Language="C#" Value="public sealed class Globals" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Globals extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Globals" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.VisualBasic.CompilerServices.StandardModule</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see langword="Globals" /> -Modul enthält Skript-Funktionen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Modul unterstützt die Visual Basic-Schlüsselwörter und Member der Laufzeitbibliothek, die Informationen über die Runtime aktuell in Verwendung bereitstellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `ScriptEngineMajorVersion` -Eigenschaft und die zugehörigen Eigenschaften zum Zurückgeben einer Zeichenfolge, die die aktuellen Laufzeitinformationen beschreibt:  
+  
+```  
+Function getRuntimeInfo() As String  
+    Dim runtime As String = ScriptEngine & " Version "  
+    runtime &= CStr(ScriptEngineMajorVersion) & "."  
+    runtime &= CStr(ScriptEngineMinorVersion) & "."  
+    runtime &= CStr(ScriptEngineBuildVersion)  
+    ' Return the current runtime information.  
+    Return runtime  
+End Function  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ScriptEngine">
+      <MemberSignature Language="C#" Value="public static string ScriptEngine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ScriptEngine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Globals.ScriptEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine <see langword="String" /> , die die Laufzeit derzeit darstellt.</summary>
+        <value>Gibt eine <see langword="String" /> , die die Laufzeit derzeit darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `ScriptEngine` Eigenschaft gibt die Zeichenfolge "VB" zurück.  
+  
+ Sie können `ScriptEngine` Wenn Ihre Anwendung als ein eigenständiges Programm, das in einem Skript oder in einer hostanwendung ausgeführt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `ScriptEngine` -Eigenschaft und die zugehörigen Eigenschaften zum Zurückgeben einer Zeichenfolge, die die aktuellen Laufzeitinformationen beschreibt:  
+  
+ [!code-vb[VbVbalrScriptEngineProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrScriptEngineProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptEngineBuildVersion">
+      <MemberSignature Language="C#" Value="public static int ScriptEngineBuildVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 ScriptEngineBuildVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine <see langword="Integer" /> , enthält die Buildversionsnummer der Laufzeit aktuell in Verwendung.</summary>
+        <value>Gibt eine <see langword="Integer" /> , enthält die Buildversionsnummer der Laufzeit aktuell in Verwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert entspricht direkt den Versionsinformationen in der DLL für die aktuelle Laufzeit.  
+  
+ Sie können `ScriptEngineBuildVersion` Wenn Ihre Anwendung als ein eigenständiges Programm, das in einem Skript oder in einer hostanwendung ausgeführt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `ScriptEngineBuildVersion` -Eigenschaft und die zugehörigen Eigenschaften zum Zurückgeben einer Zeichenfolge, die die aktuellen Laufzeitinformationen beschreibt:  
+  
+ [!code-vb[VbVbalrScriptEngineProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrScriptEngineProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptEngineMajorVersion">
+      <MemberSignature Language="C#" Value="public static int ScriptEngineMajorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 ScriptEngineMajorVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine <see langword="Integer" /> , enthält die Hauptversionsnummer der Laufzeit aktuell in Verwendung.</summary>
+        <value>Gibt eine <see langword="Integer" /> , enthält die Hauptversionsnummer der Laufzeit aktuell in Verwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert entspricht direkt den Versionsinformationen in der DLL für die aktuelle Laufzeit.  
+  
+ Sie können `ScriptEngineMajorVersion` Wenn Ihre Anwendung als ein eigenständiges Programm, das in einem Skript oder in einer hostanwendung ausgeführt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `ScriptEngineMajorVersion` -Eigenschaft und die zugehörigen Eigenschaften zum Zurückgeben einer Zeichenfolge, die die aktuellen Laufzeitinformationen beschreibt:  
+  
+ [!code-vb[VbVbalrScriptEngineProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrScriptEngineProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptEngineMinorVersion">
+      <MemberSignature Language="C#" Value="public static int ScriptEngineMinorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 ScriptEngineMinorVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine <see langword="Integer" /> , die die Nebenversionsnummer der Laufzeit derzeit enthält.</summary>
+        <value>Gibt eine <see langword="Integer" /> , die die Nebenversionsnummer der Laufzeit derzeit enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert entspricht direkt den Versionsinformationen in der DLL für die aktuelle Laufzeit.  
+  
+ Sie können `ScriptEngineMinorVersion` Wenn Ihre Anwendung als ein eigenständiges Programm, das in einem Skript oder in einer hostanwendung ausgeführt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `ScriptEngineMinorVersion` -Eigenschaft und die zugehörigen Eigenschaften zum Zurückgeben einer Zeichenfolge, die die aktuellen Laufzeitinformationen beschreibt:  
+  
+ [!code-vb[VbVbalrScriptEngineProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrScriptEngineProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,269 @@
+<Type Name="DesignerDataSourceView" FullName="System.Web.UI.Design.DesignerDataSourceView">
+  <TypeSignature Language="C#" Value="public abstract class DesignerDataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DesignerDataSourceView extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DesignerDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dient als Basisklasse für Klassen der Datenquellenansicht Entwurfszeitdaten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine benutzerdefinierte <xref:System.Web.UI.Design.DesignerDataSourceView> -Objekt zusammen mit einem benutzerdefinierten <xref:System.Web.UI.Design.IDataSourceViewSchema> Klasse und zwei benutzerdefinierte <xref:System.Web.UI.Design.IDataSourceFieldSchema> Klassen.  
+  
+ In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.DataSourceDesigner> Klasse.  
+  
+ [!code-csharp[DataSourceDesignerSample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/DataSourceDesignerSample/CS/DataSourceDesignerSample.cs#2)]
+ [!code-vb[DataSourceDesignerSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataSourceDesignerSample/VB/DataSourceDesignerSample.vb#2)]  
+[!code-csharp[DataSourceDesignerSample#5](~/samples/snippets/csharp/VS_Snippets_WebNet/DataSourceDesignerSample/CS/DataSourceDesignerSample.cs#5)]
+[!code-vb[DataSourceDesignerSample#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataSourceDesignerSample/VB/DataSourceDesignerSample.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Web.UI.Design.DesignerDataSourceView" /> -Klasse, die Sie überschreiben müssen die <see cref="M:System.Web.UI.Design.DesignerDataSourceView.GetDesignTimeData(System.Int32,System.Boolean@)" /> Methode entweder um Beispieldaten zu erstellen, das entspricht, der <see cref="P:System.Web.UI.Design.DesignerDataSourceView.Schema" /> -Eigenschaft, oder um echte Daten aus der Datenquelle zurückzugeben.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DesignerDataSourceView (System.Web.UI.Design.IDataSourceDesigner owner, string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.IDataSourceDesigner owner, string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerDataSourceView.#ctor(System.Web.UI.Design.IDataSourceDesigner,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Design.IDataSourceDesigner" />
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der übergeordnete Datenquellen-Designer.</param>
+        <param name="viewName">Der Name der Sicht in der Datenquelle.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.DesignerDataSourceView" /> -Klasse unter Verwendung des angegebenen Data Source-Designer und Sicht.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="owner" /> ist gleich <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="viewName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDelete">
+      <MemberSignature Language="C#" Value="public virtual bool CanDelete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerDataSourceView.CanDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.DataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.DataSourceControl" />-Objekt zugeordnet ist, die <see cref="M:System.Web.UI.DataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" />-Methode unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="M:System.Web.UI.DataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" />-Methode unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanInsert">
+      <MemberSignature Language="C#" Value="public virtual bool CanInsert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerDataSourceView.CanInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.DataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.DataSourceControl" />-Objekt zugeordnet ist, die <see cref="M:System.Web.UI.DataSourceView.ExecuteInsert(System.Collections.IDictionary)" />-Methode unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="M:System.Web.UI.DataSourceView.ExecuteInsert(System.Collections.IDictionary)" />-Methode unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanPage">
+      <MemberSignature Language="C#" Value="public virtual bool CanPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerDataSourceView.CanPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der anzeigt, ob das <see cref="T:System.Web.UI.DataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.DataSourceControl" />-Objekt zugeordnet ist, das Paging über die Daten unterstützt, die von der <see cref="M:System.Web.UI.DataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" />-Methode abgerufen wurden.</summary>
+        <value>
+          <see langword="true" />, wenn das Paging durch die Daten unterstützt wird, die von der <see cref="M:System.Web.UI.DataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" />-Methode abgerufen werden, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRetrieveTotalRowCount">
+      <MemberSignature Language="C#" Value="public virtual bool CanRetrieveTotalRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRetrieveTotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerDataSourceView.CanRetrieveTotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.DataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.DataSourceControl" />-Objekt zugeordnet ist, das Abrufen der Gesamtanzahl der Datenzeilen anstelle der eigentlichen Daten unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn das Abrufen der Gesamtanzahl der Datenzeilen unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSort">
+      <MemberSignature Language="C#" Value="public virtual bool CanSort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSort" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerDataSourceView.CanSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.DataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.DataSourceControl" />-Objekt zugeordnet ist, eine sortierte Ansicht der zugrunde liegenden Datenquelle unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn eine sortierte Ansicht der zugrunde liegenden Datenquelle unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUpdate">
+      <MemberSignature Language="C#" Value="public virtual bool CanUpdate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerDataSourceView.CanUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.DataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.DataSourceControl" />-Objekt zugeordnet ist, die <see cref="M:System.Web.UI.DataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />-Methode unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="M:System.Web.UI.DataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />-Methode unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceDesigner">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceDesigner DataSourceDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IDataSourceDesigner DataSourceDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerDataSourceView.DataSourceDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf den Designer, der diese erstellt <see cref="T:System.Web.UI.Design.DesignerDataSourceView" /> Steuerelement.</summary>
+        <value>Die <see cref="T:System.Web.UI.Design.IDataSourceDesigner" /> Objekt bereitgestellt, wenn die aktuelle <see cref="T:System.Web.UI.Design.DesignerDataSourceView" /> Instanz erstellt wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeData">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerable GetDesignTimeData (int minimumRows, out bool isSampleData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerable GetDesignTimeData(int32 minimumRows, [out] bool&amp; isSampleData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerDataSourceView.GetDesignTimeData(System.Int32,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minimumRows" Type="System.Int32" />
+        <Parameter Name="isSampleData" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="minimumRows">Die minimale Anzahl der zurückzugebenden Zeilen.</param>
+        <param name="isSampleData">
+          <see langword="true" />um anzugeben, dass die zurückgegebenen Daten Beispieldaten sind. <see langword="false" /> um anzugeben, dass die zurückgegebenen Daten um Livedaten handelt.</param>
+        <summary>Generiert Entwurfszeitdaten, die dem Schema des zugeordneten Datenquellen-Steuerelements, mit der angegebenen Anzahl von Zeilen, die angibt, ob es Beispieldaten oder echte Daten zurückgibt entsprechen.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.DataSourceView" /> Objekt, das zur Entwurfszeit anzuzeigenden Daten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein vollständiges Beispiel der Verwendung der <xref:System.Web.UI.Design.DesignerDataSourceView.GetDesignTimeData%2A> Methode mit Ansichten, Schemas und eine Datenquellen-Designer finden Sie unter <xref:System.Web.UI.Design.DataSourceDesigner>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerDataSourceView.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Sicht, wenn gemäß dieser Instanz von der <see cref="T:System.Web.UI.Design.DesignerDataSourceView" /> Klasse erstellt wurde.</summary>
+        <value>Name der Ansicht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.Design.IDataSourceViewSchema Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IDataSourceViewSchema Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerDataSourceView.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Schema ab, das die Datenquellensicht beschreibt, die von diesem Ansichtsobjekt dargestellt wird.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein vollständiges Beispiel der Verwendung der <xref:System.Web.UI.Design.DesignerDataSourceView.Schema%2A> Methode mit Ansichten, Schemas und eine Datenquellen-Designer finden Sie unter <xref:System.Web.UI.Design.DataSourceDesigner>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

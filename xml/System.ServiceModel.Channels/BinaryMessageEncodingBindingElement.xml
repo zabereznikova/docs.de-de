@@ -1,0 +1,680 @@
+<Type Name="BinaryMessageEncodingBindingElement" FullName="System.ServiceModel.Channels.BinaryMessageEncodingBindingElement">
+  <TypeSignature Language="C#" Value="public sealed class BinaryMessageEncodingBindingElement : System.ServiceModel.Channels.MessageEncodingBindingElement, System.ServiceModel.Description.IPolicyExportExtension, System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BinaryMessageEncodingBindingElement extends System.ServiceModel.Channels.MessageEncodingBindingElement implements class System.ServiceModel.Description.IPolicyExportExtension, class System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.MessageEncodingBindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyExportExtension</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IWsdlExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Das Bindungselement, das das .NET Binary XML-Format angibt, das verwendet wird, um Nachrichten zu codieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Codieren wird eine Nachricht in eine Bytefolge transformiert. Beim Decodieren wird dieser Prozess umgekehrt. [!INCLUDE[indigo1](~/includes/indigo1-md.md)] enthält drei Typen für die Codierung von SOAP-Nachrichten: Text, binär und Message Transmission Optimization Mechanism (MTOM).  
+  
+ <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> ist das Bindungselement, das das .NET Binary XML-Format angibt, das verwendet werden soll, um Nachrichten zu codieren. Es bietet Optionen zum Festlegen der Zeichencodierung und der SOAP- und WS-Adressierungsversion. Binäre Codierung ist bezüglich der Codierungsoptionen am effizientesten, aber am wenigsten interoperabel.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)] zum Bindungselement, das angibt, dass Nachrichten mit einer Textdarstellung des XML-Inhalts verschlüsselt werden, finden Sie unter <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)] zum Bindungselement, das angibt, dass Nachrichten mit der MTOM-Nachrichtencodierung verschlüsselt wurden, finden Sie unter <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>.  
+  
+ Verwenden Sie die <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>-Klasse, um einen benutzerdefinierten Nachrichtenencoder zu implementieren.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#0)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BinaryMessageEncodingBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#1)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der von der Kanalfactory erzeugt wird.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Kanal.</param>
+        <summary>Erstellt den Kanalfactorystapel auf dem Client, der einen angegebenen Kanaltyp für einen angegebenen Kontext erstellt.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> vom Typ <paramref name="TChannel" /> für den angegebenen Kontext.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#7)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, den der Kanallistener akzeptiert.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Listener.</param>
+        <summary>Erstellt den Kanallistener auf dem Dienst, der einen festgelegten Kanaltyp für einen bestimmten Kontext akzeptiert.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> vom Typ <paramref name="TChannel" /> für den angegebenen Kontext.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#8)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, den der Kanallistener akzeptiert.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Listener.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle Bindung einen Listener für einen angegebenen Typ von Kanal und Kontext erstellen kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Kanallistenerstapel auf dem Dienst erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#9)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues, aus dem aktuellen Objekt initialisiertes <see cref="T:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement" />-Objekt.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement" />-Objekt mit Eigenschaftswerten, die denen des aktuellen Elements entsprechen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dadurch wird eine vollständige Kopie der aktuellen Bindungselementobjektstruktur erstellt, die auch als tiefer Klon bezeichnet wird. Mit einem tiefen Klon eines Objekts wird neben der Kopie des Objekts eine Kopie aller Elemente erstellt, auf die das betreffende Objekt direkt oder indirekt verweist. (Dies kann auch als Kopieren des gesamten Objektdiagramms bezeichnet werden.) Durch das Zurückgeben eines tiefen Klons kann zur Laufzeit der Fall unterstützt werden, in dem mehrere benutzerdefinierte Bindungen ein benutzerdefiniertes Bindungselement gemeinsam nutzen. Wenn ein tiefer Klon nicht zurückgegeben wird, ist das Laufzeitverhalten nicht definiert.  
+  
+ Ein flacher Klon eines Objekts stellt im Gegensatz dazu nur eine Kopie des Objekts dar. Wenn das Objekt Verweise auf andere Objekte enthält, werden von der flachen Kopie keine Kopien der Objekte erstellt, auf die verwiesen wird. Stattdessen werden nur die Verweise auf die ursprünglichen Objekte kopiert.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#10)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionFormat">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.CompressionFormat CompressionFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Channels.CompressionFormat CompressionFormat" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.CompressionFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Komprimierungsformat für das Bindungselement.</summary>
+        <value>Das Komprimierungsformat für das Bindungselement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageEncoderFactory">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.MessageEncoderFactory CreateMessageEncoderFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.MessageEncoderFactory CreateMessageEncoderFactory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CreateMessageEncoderFactory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageEncoderFactory</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Factory für binäre Nachrichtenencoder, die die SOAP- und WS-Adressierungsversionen und die Zeichencodierung verwenden, die vom aktuellen Codierungsbindungselement festgelegt wurden.</summary>
+        <returns>Die von diesem Bindungselement erstellte <see cref="T:System.ServiceModel.Channels.MessageEncoderFactory" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Channels.MessageEncoder>-Objekte, die die Factory erzeugt, können mit der binären Nachrichtencodierung Nachrichten lesen und schreiben.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#11)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für das Bindungselement.</param>
+        <summary>Gibt ggf. ein angefordertes typisiertes Objekt aus der entsprechenden Ebene im Bindungselementstapel zurück.</summary>
+        <returns>Das von <paramref name="T" /> angeforderte typisierte Objekt, oder <see langword="null" />, falls das Objekt nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Anforderung können Sie typisierte Objekte für das Festlegen von Eigenschaften oder für das Abrufen des Status aus der entsprechenden Ebene im Bindungselementstapel abfragen. Wenn eine Ebene das Zurückgeben des angeforderten Objekts unterstützt, wird der Vorgang ausgeführt. Andernfalls wird der Aufruf an die nächst tiefere Ebene im Stapel delegiert. Wenn die letzte Ebene erreicht ist und das angeforderte Objekt von keiner Bindungselementebene unterstützt wird, gibt die Methode `null` zurück.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#12](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#12)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxReadPoolSize">
+      <MemberSignature Language="C#" Value="public int MaxReadPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxReadPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxReadPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl an XML-Readern ab, die einem Pool zugeordnet sind und zum Verarbeiten eingehender Nachrichten verfügbar sind, oder legt diese Anzahl fest.</summary>
+        <value>Die maximale Anzahl an Readern, die in diesem Pool gespeichert sind. Der Standardwert ist 64 Reader.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Erhöhen dieser Zahl wird der Speicherverbrauch gesteigert, jedoch wird der Encoder auf einen plötzlichen Anstieg eingehender Nachrichten vorbereitet, da er Reader aus dem Pool verwenden kann, die bereits erstellt wurden, sodass keine neuen Reader erstellt werden müssen.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#2)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der festgelegte Wert ist kleiner oder gleich 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSessionSize">
+      <MemberSignature Language="C#" Value="public int MaxSessionSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxSessionSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höchstmenge an Arbeitsspeicher innerhalb einer Sitzung ab oder legt sie fest, die verfügbar ist, um Übertragungsprozeduren zu optimieren.</summary>
+        <value>Die maximale Größe einer Sitzung in Byte. Der Standardwert beträgt 2048 Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das .NET Binary XML-Format kann die Übertragung von Zeichenfolgen optimieren, wenn sie in mehreren Nachrichten innerhalb einer Sitzung verwendet werden. Nachdem eine Zeichenfolge in einer Nachricht gesendet wurde, können zusätzliche Nachrichten, die diese Zeichenfolge enthalten, anhand der Zeichenfolge-ID darauf verweisen. Dies erfordert, dass die Zeichenfolgen und ihre IDs im Arbeitsspeicher gespeichert werden. Dadurch wird ermöglicht, dass in nachfolgenden Nachrichten statt der ganzen Zeichenfolge die ID erneut gesendet wird. Diese Suche erhöht die Effizienz der Nachrichtenübertragung bei Verwendung des Binärformats. <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A> ruft die Höchstmenge an Arbeitsspeicher ab und legt sie fest, die zum Speichern dieser Zeichenfolgen zugeordnet wird.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#3)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als oder gleich 0&amp;#160;(null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxWritePoolSize">
+      <MemberSignature Language="C#" Value="public int MaxWritePoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxWritePoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxWritePoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl an XML-Writern ab, die einem Pool zugeordnet sind und zum Verarbeiten ausgehender Nachrichten verfügbar sind, oder legt diese Anzahl fest.</summary>
+        <value>Die maximale Anzahl an Writern, die in diesem Pool gespeichert sind. Der Standardwert ist 16 Writer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Erhöhen dieser Zahl wird der Speicherverbrauch gesteigert, jedoch wird der Encoder auf einen plötzlichen Anstieg ausgehender Nachrichten vorbereitet, da er Writer aus dem Pool verwenden kann, die bereits erstellt wurden, sodass keine neuen Writer erstellt werden müssen.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#4)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als oder gleich 0&amp;#160;(null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageVersion">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.MessageVersion MessageVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageVersion MessageVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MessageVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionen der SOAP-Nachricht und WS-Addressing ab, die verwendet oder erwartet werden, bzw. legt diese fest.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Channels.MessageVersion" />, die verwendet oder erwartet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die SOAP-Version und die Version von WS-Adressierung an, die einer Nachricht und ihrem Austausch zugeordnet sind.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#5)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der festgelegte Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist eine nicht unterstützte Umschlagversion.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReaderQuotas">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReaderQuotas ReaderQuotas { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDictionaryReaderQuotas ReaderQuotas" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.ReaderQuotas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReaderQuotas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Beschränkungen der Komplexität von XML-Meldungen ab oder legt Beschränkungen fest, die von Endpunkten verarbeitet werden können, die mit diesem Bindungselement konfiguriert werden.</summary>
+        <value>Das <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />, das die Komplexitätseinschränkungen für ausgetauschte SOAP-Nachrichten angibt. Die Standardwerte für diese Einschränkungen werden in den folgenden Hinweisabschnitten angegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Komplexitätseinschränkungen schützen vor einer Klasse von DOS-Angriffen (Denial Of Service), die versuchen, die Nachrichtenkomplexität zum Binden von Endpunkt-Verarbeitungsressourcen zu verwenden. Die Eigenschaften, die diese Einschränkungen ausdrücken, und ihre Standardwerte (in Bytes) lauten wie folgt:  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> = 32  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A> = 8192  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A> = 16384  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> = 4096  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A> = 16384  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BinaryMessageEncodingBindingElement#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/cs/program.cs#6)]
+ [!code-vb[S_UE_BinaryMessageEncodingBindingElement#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_binarymessageencodingbindingelement/vb/module1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMessageVersion">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMessageVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMessageVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.ShouldSerializeMessageVersion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob die SOAP-Meldungsstrukturversion serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die SOAP-meldungsstrukturversion serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Version der SOAP-Meldung bestimmt die Struktur der Meldung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeReaderQuotas">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeReaderQuotas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeReaderQuotas() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.ShouldSerializeReaderQuotas" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob die Werte von Einschränkungen, die auf der Komplexität der SOAP-Meldungsstruktur platziert wurden, serialisiert werden sollen.</summary>
+        <returns>
+          <see langword="true" />ob readerkontingente serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyExportExtension.ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext policyContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext policyContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.System#ServiceModel#Description#IPolicyExportExtension#ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="policyContext" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Das <see cref="T:System.ServiceModel.Description.MetadataExporter" />-Objekt, das die Metadateninformationen exportiert.</param>
+        <param name="policyContext">Ein <see cref="T:System.ServiceModel.Description.WsdlContractConversionContext" />-Objekt, das Zuordnungen aus exportierten WSDL-Elementen zur Vertragsbeschreibung bereitstellt.</param>
+        <summary>Schreibt eine Meldung eines benutzerdefiniertes binäre Codierung Elemente in die generierten Metadaten für einen Endpunkt an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlExportExtension.ExportContract">
+      <MemberSignature Language="C#" Value="void IWsdlExportExtension.ExportContract (System.ServiceModel.Description.WsdlExporter exporter, System.ServiceModel.Description.WsdlContractConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlExportExtension.ExportContract(class System.ServiceModel.Description.WsdlExporter exporter, class System.ServiceModel.Description.WsdlContractConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.System#ServiceModel#Description#IWsdlExportExtension#ExportContract(System.ServiceModel.Description.WsdlExporter,System.ServiceModel.Description.WsdlContractConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.WsdlExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.WsdlContractConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Der <see cref="T:System.ServiceModel.Description.WsdlExporter" />, der die Vertragsinformationen exportiert.</param>
+        <param name="context">Ein <see cref="T:System.ServiceModel.Description.WsdlContractConversionContext" />-Objekt, das Zuordnungen aus exportierten WSDL-Elementen zur Vertragsbeschreibung bereitstellt.</param>
+        <summary>Schreibt eine Meldung eines benutzerdefiniertes binäre Codierung Elemente in die generierte WSDL für einen Vertrag.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint">
+      <MemberSignature Language="C#" Value="void IWsdlExportExtension.ExportEndpoint (System.ServiceModel.Description.WsdlExporter exporter, System.ServiceModel.Description.WsdlEndpointConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint(class System.ServiceModel.Description.WsdlExporter exporter, class System.ServiceModel.Description.WsdlEndpointConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.System#ServiceModel#Description#IWsdlExportExtension#ExportEndpoint(System.ServiceModel.Description.WsdlExporter,System.ServiceModel.Description.WsdlEndpointConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.WsdlExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.WsdlEndpointConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Der <see cref="T:System.ServiceModel.Description.WsdlExporter" />, der die Vertragsinformationen exportiert.</param>
+        <param name="context">Ein <see cref="T:System.ServiceModel.Description.WsdlEndpointConversionContext" />-Objekt, das Zuordnungen aus exportierten WSDL-Elementen zur Endpunktbeschreibung bereitstellt.</param>
+        <summary>Schreibt eine Meldung eines benutzerdefiniertes binäre Codierung Elemente in die generierte WSDL für einen Endpunkt an.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1154 @@
+<Type Name="Formatter" FullName="System.Runtime.Serialization.Formatter">
+  <TypeSignature Language="C#" Value="public abstract class Formatter : System.Runtime.Serialization.IFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit Formatter extends System.Object implements class System.Runtime.Serialization.IFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Formatter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IFormatter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Basisfunktionalität für die common Language Runtime Formatierungsprogramme für die Serialisierung bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.Serialization.Formatter>ist die `abstract` Basisklasse für alle Formatierungsprogramm für die Serialisierung von Common Language Runtime und stellt einige Hilfsmethoden für die Implementierung der <xref:System.Runtime.Serialization.IFormatter> Schnittstelle. Die <xref:System.Runtime.Serialization.Formatter> auch verwaltet Queuing-Objekte für die Serialisierung und Generieren von IDs regelmäßig pro-Objekt.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von <see cref="T:System.Runtime.Serialization.Formatter" />, müssen Sie die folgenden Member überschreiben:  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.Serialize(System.IO.Stream,System.Object)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.Deserialize(System.IO.Stream)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteArray(System.Object,System.String,System.Type)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteBoolean(System.Boolean,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteByte(System.Byte,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteChar(System.Char,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteDateTime(System.DateTime,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteDecimal(System.Decimal,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteDouble(System.Double,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteInt16(System.Int16,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteInt32(System.Int32,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteInt64(System.Int64,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteObjectRef(System.Object,System.String,System.Type)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteSByte(System.SByte,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteSingle(System.Single,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteTimeSpan(System.TimeSpan,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteUInt16(System.UInt16,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteUInt32(System.UInt32,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteUInt64(System.UInt64,System.String)" />  
+  
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteValueType(System.Object,System.String,System.Type)" />  
+  
+-   <see cref="P:System.Runtime.Serialization.Formatter.SurrogateSelector" />  
+  
+-   <see cref="P:System.Runtime.Serialization.Formatter.Binder" />  
+  
+-   <see cref="P:System.Runtime.Serialization.Formatter.Context" /></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Formatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.Formatter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt eine <xref:System.Collections.Queue> für den zu serialisierenden Objekten und eine <xref:System.Runtime.Serialization.ObjectIDGenerator> zum Generieren von IDs für sie.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binder">
+      <MemberSignature Language="C#" Value="public abstract System.Runtime.Serialization.SerializationBinder Binder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.SerializationBinder Binder" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatter.Binder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.SerializationBinder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ab oder legt die <see cref="T:System.Runtime.Serialization.SerializationBinder" /> mit dem aktuellen Formatierungsprogramm verwendet.</summary>
+        <value><see cref="T:System.Runtime.Serialization.SerializationBinder" />, der bei dem aktuellen Formatierungsprogramm verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Serialization.SerializationBinder> führt Suchvorgänge aus, für die Typen aus den Typnamen, die während der Deserialisierung übergeben. Wenn kein <xref:System.Runtime.Serialization.SerializationBinder> festgelegt ist, wird ein Standardwert verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Eigenschaft in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public abstract System.Runtime.Serialization.StreamingContext Context { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.StreamingContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatter.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ab oder legt die <see cref="T:System.Runtime.Serialization.StreamingContext" /> für die aktuelle Serialisierung verwendet.</summary>
+        <value>Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> für die aktuelle Serialisierung verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Serialization.StreamingContext> ist ein Hinweis auf entweder die Quelle der zu deserialisierenden Bits oder das Ziel der Bits, das serialisiert wird. Es hat keine Auswirkungen auf Standardserialisierung, jedoch wird als Argument übergeben <xref:System.Runtime.Serialization.ISerializable> und <xref:System.Runtime.Serialization.ISerializationSurrogate>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Eigenschaft in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public abstract object Deserialize (System.IO.Stream serializationStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Deserialize(class System.IO.Stream serializationStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.Deserialize(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Der Datenstrom deserialisiert.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse deserialisiert den Stream an das Formatierungsprogramm angefügt werden, wenn es erstellt wurde, erstellen ein Diagramm der Objekte identisch zu dem Diagramm, die ursprünglich in diesem Datenstrom serialisiert.</summary>
+        <returns>Das oberste Objekt des deserialisierten Objektdiagramms Objekte.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNext">
+      <MemberSignature Language="C#" Value="protected virtual object GetNext (out long objID);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetNext([out] int64&amp; objID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.GetNext(System.Int64@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objID" Type="System.Int64&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="objID">Die ID, die mit dem aktuellen Objekt zugewiesen werden, während der Serialisierung.</param>
+        <summary>Gibt das nächste Objekt zu serialisieren, aus dem Formatierungsprogramm interne Warteschlange zurück.</summary>
+        <returns>Das nächste zu serialisierende Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objekte werden in eine First in First-out Reihenfolge auf Grundlage, wie sie an übergeben wurden zurückgegeben <xref:System.Runtime.Serialization.Formatter.Schedule%2A>. Die ID des Objekts abgelegt der `objID` Parameter und das Objekt wird von der Funktion zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Das nächste Objekt aus der Warteschlange abgerufen keine zugewiesene ID.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="m_idGenerator">
+      <MemberSignature Language="C#" Value="protected System.Runtime.Serialization.ObjectIDGenerator m_idGenerator;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Runtime.Serialization.ObjectIDGenerator m_idGenerator" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.Formatter.m_idGenerator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ObjectIDGenerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält die <see cref="T:System.Runtime.Serialization.ObjectIDGenerator" /> mit dem aktuellen Formatierungsprogramm verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Serialization.ObjectIDGenerator> verwaltet eine Liste der Objekte, die identifiziert wurden und die IDs, die ihm zugewiesen wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="m_objectQueue">
+      <MemberSignature Language="C#" Value="protected System.Collections.Queue m_objectQueue;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Queue m_objectQueue" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.Formatter.m_objectQueue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Queue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält eine <see cref="T:System.Collections.Queue" /> Objekte Links zu serialisieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geplant für die Serialisierung mit Objekten der <xref:System.Runtime.Serialization.Formatter.Schedule%2A> Methode in der Warteschlange abgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schedule">
+      <MemberSignature Language="C#" Value="protected virtual long Schedule (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int64 Schedule(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.Schedule(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, für die Serialisierung zu planen.</param>
+        <summary>Plant ein Objekt für die spätere Serialisierung an.</summary>
+        <returns>Die Objekt-ID mit dem Objekt zugewiesen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.Serialization.Formatter.Schedule%2A>Ruft eine ID für das Objekt ab und fügt sie in der Warteschlange für die spätere Serialisierung, ist dies ein neues Objekt-ID. Der Zeitplan ist eine Warteschlange von zu serialisierenden, Objekten und innerhalb der Formatierer aufrechterhalten wird. Wenn das Objekt bereits in der Arbeitswarteschlange, es wird kein zweites Mal hinzugefügt, aber eine Ausnahme wird nicht ausgelöst werden, entweder.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public abstract void Serialize (System.IO.Stream serializationStream, object graph);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Serialize(class System.IO.Stream serializationStream, object graph) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.Serialize(System.IO.Stream,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="graph" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Der Stream, in dem die Objekte serialisiert werden.</param>
+        <param name="graph">Das Objekt im Stammverzeichnis des Diagramms zu serialisieren.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse serialisiert das Diagramm von Objekten mit dem angegebenen Stamm in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SurrogateSelector">
+      <MemberSignature Language="C#" Value="public abstract System.Runtime.Serialization.ISurrogateSelector SurrogateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.ISurrogateSelector SurrogateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatter.SurrogateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ISurrogateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ab oder legt die <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> mit dem aktuellen Formatierungsprogramm verwendet.</summary>
+        <value><see cref="T:System.Runtime.Serialization.ISurrogateSelector" />, der bei dem aktuellen Formatierungsprogramm verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Runtime.Serialization.SurrogateSelector> zum Nachschlagen von Implementierungen der <xref:System.Runtime.Serialization.ISerializationSurrogate> steuern die Serialisierung eines bestimmten Typs.  
+  
+ Wenn ein Objekttyp verfügt einen entsprechenden Ersatz, Serialisierung und Deserialisierung das Ersatzzeichen ermittelt werden, selbst wenn der Typ implementiert die <xref:System.Runtime.Serialization.ISerializable> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Eigenschaft in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteArray">
+      <MemberSignature Language="C#" Value="protected abstract void WriteArray (object obj, string name, Type memberType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteArray(object obj, string name, class System.Type memberType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteArray(System.Object,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="memberType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Array zu schreiben.</param>
+        <param name="name">Der Name des Arrays.</param>
+        <param name="memberType">Der Typ der Elemente, die das Array enthält.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt ein Zeichenarray in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBoolean">
+      <MemberSignature Language="C#" Value="protected abstract void WriteBoolean (bool val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteBoolean(bool val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteBoolean(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Boolean" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt einen booleschen Wert in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="protected abstract void WriteByte (byte val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteByte(unsigned int8 val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteByte(System.Byte,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Byte" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt eine 8-Bit-Ganzzahl ohne Vorzeichen in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteChar">
+      <MemberSignature Language="C#" Value="protected abstract void WriteChar (char val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteChar(char val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteChar(System.Char,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Char" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt ein Unicode-Zeichen in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDateTime">
+      <MemberSignature Language="C#" Value="protected abstract void WriteDateTime (DateTime val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteDateTime(valuetype System.DateTime val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteDateTime(System.DateTime,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.DateTime" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.DateTime" /> Wert in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDecimal">
+      <MemberSignature Language="C#" Value="protected abstract void WriteDecimal (decimal val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteDecimal(valuetype System.Decimal val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteDecimal(System.Decimal,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Decimal" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.Decimal" /> Wert in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDouble">
+      <MemberSignature Language="C#" Value="protected abstract void WriteDouble (double val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteDouble(float64 val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteDouble(System.Double,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Double" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt eine Gleitkommazahl mit doppelter Genauigkeit in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteInt16">
+      <MemberSignature Language="C#" Value="protected abstract void WriteInt16 (short val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteInt16(int16 val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteInt16(System.Int16,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Int16" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt eine 16-Bit-Ganzzahl mit Vorzeichen in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteInt32">
+      <MemberSignature Language="C#" Value="protected abstract void WriteInt32 (int val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteInt32(int32 val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteInt32(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Int32" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt eine 32-Bit-Ganzzahl mit Vorzeichen in den Stream.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteInt64">
+      <MemberSignature Language="C#" Value="protected abstract void WriteInt64 (long val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteInt64(int64 val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteInt64(System.Int64,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Int64" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt eine 64-Bit-Ganzzahl mit Vorzeichen in den Stream.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteMember">
+      <MemberSignature Language="C#" Value="protected virtual void WriteMember (string memberName, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteMember(string memberName, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteMember(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memberName" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="memberName">Der Name des der zu serialisierende Member.</param>
+        <param name="data">Das Objekt zum Schreiben in den Stream an das Formatierungsprogramm angefügt.</param>
+        <summary>Überprüft den Typ der empfangenen Daten und ruft die entsprechende <see langword="Write" /> Methode, um das Schreiben in den Stream, der bereits angefügt an das Formatierungsprogramm auszuführen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ordnungsgemäße Verwendung dieser Methode alle der `Write` Methoden (<xref:System.Runtime.Serialization.Formatter.WriteArray%2A> -Methode, <xref:System.Runtime.Serialization.Formatter.WriteBoolean%2A> Methode <xref:System.Runtime.Serialization.Formatter.WriteByte%2A> Methode usw.) müssen die entsprechende Funktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteObjectRef">
+      <MemberSignature Language="C#" Value="protected abstract void WriteObjectRef (object obj, string name, Type memberType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteObjectRef(object obj, string name, class System.Type memberType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteObjectRef(System.Object,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="memberType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der Objektverweis schreiben.</param>
+        <param name="name">Der Name des Members.</param>
+        <param name="memberType">Der Typ des Objekts der Verweis zeigt auf.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt einen Objektverweis in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Plant das Objekt mit dem Diagrammwalker zum Verarbeiten der Aufgaben.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteSByte">
+      <MemberSignature Language="C#" Value="protected abstract void WriteSByte (sbyte val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteSByte(int8 val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteSByte(System.SByte,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.SByte" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt eine 8-Bit-Ganzzahl mit Vorzeichen in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteSingle">
+      <MemberSignature Language="C#" Value="protected abstract void WriteSingle (float val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteSingle(float32 val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteSingle(System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt eine Gleitkommazahl mit einfacher Genauigkeit in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTimeSpan">
+      <MemberSignature Language="C#" Value="protected abstract void WriteTimeSpan (TimeSpan val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteTimeSpan(valuetype System.TimeSpan val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteTimeSpan(System.TimeSpan,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.TimeSpan" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.TimeSpan" /> Wert in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteUInt16">
+      <MemberSignature Language="C#" Value="protected abstract void WriteUInt16 (ushort val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteUInt16(unsigned int16 val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteUInt16(System.UInt16,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.UInt16" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt eine 16-Bit-Ganzzahl ohne Vorzeichen in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteUInt32">
+      <MemberSignature Language="C#" Value="protected abstract void WriteUInt32 (uint val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteUInt32(unsigned int32 val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteUInt32(System.UInt32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.UInt32" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt eine 32-Bit-Ganzzahl ohne Vorzeichen in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteUInt64">
+      <MemberSignature Language="C#" Value="protected abstract void WriteUInt64 (ulong val, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteUInt64(unsigned int64 val, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteUInt64(System.UInt64,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.UInt64" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der zu schreibende Wert.</param>
+        <param name="name">Der Name des Members.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt eine 64-Bit-Ganzzahl ohne Vorzeichen in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteValueType">
+      <MemberSignature Language="C#" Value="protected abstract void WriteValueType (object obj, string name, Type memberType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteValueType(object obj, string name, class System.Type memberType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteValueType(System.Object,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="memberType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das den Werttyp darstellt.</param>
+        <param name="name">Der Name des Members.</param>
+        <param name="memberType">Die <see cref="T:System.Type" /> des Werttyps.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt einen Wert des angegebenen Typs in den Stream, der bereits an das Formatierungsprogramm angefügt.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen diese Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

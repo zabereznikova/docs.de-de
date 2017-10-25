@@ -1,0 +1,86 @@
+<Type Name="CallConvCdecl" FullName="System.Runtime.CompilerServices.CallConvCdecl">
+  <TypeSignature Language="C#" Value="public class CallConvCdecl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallConvCdecl extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.CallConvCdecl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.CompilerServices.VisualC</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Methode verwenden, sollten die <see langword="Cdecl" /> Aufrufkonvention.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer bereinigt den Stapel. Aufrufende von Funktionen mit dadurch `varargs`.  
+  
+ Diese Klasse dient nur als einen benutzerdefinierten Modifizierer der Metadatensignatur einer Methode.  
+  
+ Die Klassen in <xref:System.Runtime.CompilerServices> für nur Compilerautoren verwendet werden.  
+  
+ Compiler geben benutzerdefinierte Modifizierer innerhalb der Metadaten zum Ändern der Darstellungsweise der Just-in-Time-Compiler (JIT)-Werte behandelt, wenn das Standardverhalten nicht zulässig ist.  Stößt der JIT-Compiler einen benutzerdefinierten Modifizierer, behandelt den Wert, der angibt, der Modifizierer wie.  Compiler können Anwenden von benutzerdefinierten Modifizierer auf Methoden, Parameter und Rückgabewerte.  Der JIT-Compiler, erforderlichen Modifizierern reagieren muss jedoch optionale Modifizierer ignorieren kann.  Ein C++-Compiler konnte einen benutzerdefinierten Modifizierer beschrieben, wie ein Byte behandelt werden sollen in Fällen, in denen der JIT-Compiler Bytes in einer Weise behandelt, die nicht kompatibel mit C++ sind, standardmäßig ausgeben.  
+  
+ Sie können benutzerdefinierte Modifizierer in Metadaten, die mit einer der folgenden Methoden ausgeben:  
+  
+-   Mithilfe der Methoden in der <xref:System.Reflection.Emit.TypeBuilder> -Klasse wie z. B. <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineField%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineConstructor%2A>, und <xref:System.Reflection.Emit.TypeBuilder.DefineProperty%2A>.  
+  
+-   Generieren eine Anweisungsdatei Microsoft intermediate Language (MSIL), die Aufrufe enthält `modopt` und `modreq`, und Assemblieren der Datei mit den [Ilasm.exe (IL-Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md).  
+  
+-   Verwenden die nicht verwaltete Reflektions-API.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallConvCdecl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.CallConvCdecl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.CompilerServices.VisualC</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.CompilerServices.CallConvCdecl" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in <xref:System.Runtime.CompilerServices> für nur Compilerautoren verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

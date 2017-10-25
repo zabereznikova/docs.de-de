@@ -1,0 +1,34 @@
+<Namespace Name="System.Collections.Immutable">
+  <Docs>
+    <summary>Der <see cref="N:System.Collections.Immutable" />-Namespace enthält Schnittstellen und Klassen, die unveränderliche Auflistungen definieren. Diese Klassen werden ab [!INCLUDE[net_v45](~/includes/net-v45-md.md)] unterstützt. Verwenden Sie sie zum Erstellen von Desktop-, [!INCLUDE[win8_appstore_long](~/includes/win8-appstore-long-md.md)]-, [!INCLUDE[net_portable](~/includes/net-portable-md.md)]- und Windows Phone 8-Apps.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[
+## Remarks  
+Mit unveränderlichen Auflistungen haben Sie folgende Möglichkeiten:
+
+- Freigeben einer Auflistung in einer Weise, die den Consumer sichergestellt werden kann, dass die Auflistung nie geändert wird.
+
+- Bereitstellen impliziter Threadsicherheit in Multithreaded-Anwendungen (keine Sperren für den Zugriff auf Auflistungen erforderlich)
+
+- Einhalten funktionaler Programmierstile
+
+- Ändern einer Auflistung während der Enumeration, wobei sichergestellt wird, dass sich die ursprüngliche Auflistung nicht ändert
+
+Die unveränderlichen Auflistungsklassen werden mit .NET Core, verfügbar, jedoch nicht Teil der Kernklassenbibliothek, die mit .NET Framework sind. Ab .NET Framework 4.5 über NuGet verfügbar sind.
+
+So installieren Sie die unveränderlichen Auflistungen über NuGet
+
+1. Öffnen Sie das Projekt in Visual Studio, und wählen Sie **NuGet-Pakete verwalten** aus der **Projekt** Menü.
+
+2. Wählen Sie optional die **Vorabversion einschließen** Kontrollkästchen. Diese Option ermöglicht Ihnen den Zugriff auf neue Vorabversionen der unveränderlichen Klassen, sobald sie verfügbar sind.
+
+3. Verwenden der **Suche** nach Suchen der **System.Collections.Immutable** Paket.
+
+4. Wählen Sie im linken Bereich der **System.Collections.Immutable** Paket. Klicken Sie im rechten Bereich Wählen Sie die gewünschte Version aus, und wählen Sie dann auf installieren.
+
+Die oben beschriebenen Installationsschritte sind für Visual Studio 2015. Für andere Versionen von Visual Studio möglicherweise aufgrund der Unterschiede in der Benutzeroberfläche (UI) die Schritte etwas anders sein.
+  
+ ]]></format>      
+    </remarks>
+  </Docs>
+</Namespace>

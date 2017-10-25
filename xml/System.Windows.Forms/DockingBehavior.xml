@@ -1,0 +1,75 @@
+<Type Name="DockingBehavior" FullName="System.Windows.Forms.DockingBehavior">
+  <TypeSignature Language="C#" Value="public enum DockingBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DockingBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DockingBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie ein Steuerelement Standard, wenn Sie über einen Designer hinzugefügtes angedockt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DockingBehavior> Enumeration wird verwendet, durch die <xref:System.Windows.Forms.DockingAttribute?displayProperty=nameWithType> Klasse.  
+  
+ Die <xref:System.Windows.Forms.SplitContainer> und <xref:System.Windows.Forms.WebBrowser> Steuerelemente auf AutoDock festgelegt sind. Die <xref:System.Windows.Forms.DataGridView> Steuerelement auf bitten festgelegt ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ask">
+      <MemberSignature Language="C#" Value="Ask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockingBehavior Ask = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockingBehavior.Ask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockingBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Benutzer für das gewünschte Andockverhalten aufgefordert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoDock">
+      <MemberSignature Language="C#" Value="AutoDock" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockingBehavior AutoDock = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockingBehavior.AutoDock" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockingBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legen Sie das Steuerelement <see cref="P:System.Windows.Forms.Control.Dock" /> Eigenschaft <see cref="F:System.Windows.Forms.DockStyle.Fill" /> bei in einem Container und keine weiteren untergeordneten Steuerelemente gelöscht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockingBehavior Never = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockingBehavior.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockingBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Aufforderung des Benutzers für das gewünschte Andockverhalten.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

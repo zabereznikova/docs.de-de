@@ -1,0 +1,164 @@
+<Type Name="ContainerUIElement3D" FullName="System.Windows.Media.Media3D.ContainerUIElement3D">
+  <TypeSignature Language="C#" Value="public sealed class ContainerUIElement3D : System.Windows.UIElement3D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContainerUIElement3D extends System.Windows.UIElement3D" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.ContainerUIElement3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.UIElement3D</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Children")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Container für <see cref="T:System.Windows.Media.Media3D.Visual3D" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.Media3D.ContainerUIElement3D.Children%2A> Auflistung von einem <xref:System.Windows.Media.Media3D.ContainerUIElement3D> Element kann nur bestehen <xref:System.Windows.UIElement3D> Objekte. Hinzufügen einer <xref:System.Windows.UIElement3D> untergeordnetes Element einer <xref:System.Windows.Media.Media3D.ContainerUIElement3D> implizit hinzugefügt der <xref:System.Windows.Media.Media3D.Visual3DCollection> für die <xref:System.Windows.Media.Media3D.ContainerUIElement3D> Element.  
+  
+ <xref:System.Windows.Media.Media3D.ContainerUIElement3D>eine visuelle Darstellung verfügt nicht über; Es dient als Container für andere visual 3D-Objekten. <xref:System.Windows.Media.Media3D.ContainerUIElement3D>ist eine <xref:System.Windows.UIElement3D> -Objekt, das Eingabe, Fokus und Ereignisse in 3D unterstützt.  
+  
+ Diese Klasse ist nicht festgelegt. die <xref:System.Windows.Media.Media3D.Visual3D.Visual3DModel%2A> Eigenschaft.  
+  
+ <xref:System.Windows.Media.Media3D.ContainerUIElement3D>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die <xref:System.Windows.Media.Media3D.ContainerUIElement3D> Objekt enthält zwei Cubes als untergeordnete Elemente:  
+  
+ [!code-xaml[ContainerModelSample#Viewport3D](~/samples/snippets/csharp/VS_Snippets_Wpf/ContainerModelSample/CSharp/Window1.xaml#viewport3d)]  
+  
+ Das folgende Beispiel zeigt die Ereignishandler des Containers:  
+  
+ [!code-csharp[ContainerModelSample#ContainerMouseDown](~/samples/snippets/csharp/VS_Snippets_Wpf/ContainerModelSample/CSharp/Window1.xaml.cs#containermousedown)]
+ [!code-vb[ContainerModelSample#ContainerMouseDown](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContainerModelSample/visualbasic/window1.xaml.vb#containermousedown)]  
+  
+ Das vollständige Beispiel finden Sie unter [Behandlung von Ereignissen in 3D Beispiel](http://go.microsoft.com/fwlink/?LinkID=159992) .  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContainerUIElement3D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.ContainerUIElement3D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Media3D.ContainerUIElement3D" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.ContainerUIElement3D.%23ctor%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Visual3DCollection Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Visual3DCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.ContainerUIElement3D.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Visual3DCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.Media3D.Visual3DCollection" /> von untergeordneten Elementen dieses <see cref="T:System.Windows.Media.Media3D.ContainerUIElement3D" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.Media3D.Visual3DCollection" /> von untergeordneten Elementen. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.Media3D.ContainerUIElement3D.Children%2A> Auflistung von einem <xref:System.Windows.Media.Media3D.ContainerUIElement3D> Element kann nur bestehen <xref:System.Windows.UIElement3D> Objekte. Hinzufügen einer <xref:System.Windows.UIElement3D> untergeordnetes Element einer <xref:System.Windows.Media.Media3D.ContainerUIElement3D> implizit hinzugefügt der <xref:System.Windows.Media.Media3D.Visual3DCollection> für die <xref:System.Windows.Media.Media3D.ContainerUIElement3D> Element.  
+  
+ <xref:System.Windows.Media.Media3D.ContainerUIElement3D.Children%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisual3DChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Media3D.Visual3D GetVisual3DChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Media3D.Visual3D GetVisual3DChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.ContainerUIElement3D.GetVisual3DChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Visual3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.ContainerUIElement3D.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visual3DChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int Visual3DChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Visual3DChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.ContainerUIElement3D.Visual3DChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

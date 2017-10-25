@@ -1,0 +1,212 @@
+<Type Name="WebRequestModuleElement" FullName="System.Net.Configuration.WebRequestModuleElement">
+  <TypeSignature Language="C#" Value="public sealed class WebRequestModuleElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebRequestModuleElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.WebRequestModuleElement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein URI-Präfix und die zugeordnete Klasse, die verarbeitet wird, Erstellen von Web-Anforderungen für das Präfix darstellt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe der <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> Klassen Anwendungen können anfordern, Ressourcen für eine beliebige gültige <xref:System.Uri>. Verwenden Sie dieses Konfigurationselements ein Modul angeben, die registriert wird, um die Bearbeitung der <xref:System.Net.WebRequest.Create%2A> Überladungen auf, um neue Anforderungen zu erstellen.  
+  
+ Diese Klasse entspricht dem [ &lt;hinzufügen&gt; -Element für WebRequestModules (Network Settings)](~/docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md) Konfigurationselement.  
+  
+ Diese Klasse wird verwendet, um anzugeben, Module, die zum Authentifizieren von Anforderungen durch registriert die <xref:System.Net.WebRequest> und <xref:System.Net.WebClient> Klassen.  
+  
+ Diese Klasse bietet programmgesteuerten Zugriff auf Informationen, die in Konfigurationsdateien gespeichert werden kann.  
+  
+ .NET Framework, Version 2.0 bietet Anforderung Webmodule, die Anforderungen von Ressourcen mit den folgenden Präfixen erstellen:  
+  
+-   HTTP  
+  
+-   HTTPS  
+  
+-   FTP  
+  
+-   DATEI  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebRequestModuleElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.WebRequestModuleElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Configuration.WebRequestModuleElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebRequestModuleElement (string prefix, string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string prefix, string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.WebRequestModuleElement.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Eine Zeichenfolge mit einem URI-Präfix.</param>
+        <param name="type">Eine Zeichenfolge mit Informationen über das Typ- und Assemblynamen für die Klasse, die behandelt erstellen für Ressourcen anfordert, mit denen die <c>Präfix</c> URI-Präfix.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Configuration.WebRequestModuleElement" /> -Klasse unter Verwendung der angegebenen URI-Präfix und Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `type` Parameter enthält den vollqualifizierten Typnamen, gefolgt von einem Komma (,) und die Assemblyinformationen. Die Elemente der Assemblyinformationen werden Kommas als Trennzeichen getrennt, z. B. "`System.Net.DigestClient, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`.  
+  
+ Die <xref:System.Net.Configuration.WebRequestModuleElement.Prefix%2A> -Eigenschaftensatz auf `prefix` und <xref:System.Net.Configuration.WebRequestModuleElement.Type%2A> -Eigenschaftensatz auf `type`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebRequestModuleElement (string prefix, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string prefix, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.WebRequestModuleElement.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Eine Zeichenfolge mit einem URI-Präfix.</param>
+        <param name="type">Ein <see cref="T:System.Type" /> , identifiziert der Klasse, die beim Erstellen von Anforderungen für Ressourcen behandelt, bei denen die <c>Präfix</c> URI-Präfix.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Configuration.WebRequestModuleElement" /> -Klasse unter Verwendung das angegebene URI-Präfix, und geben Sie die Bezeichner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Configuration.WebRequestModuleElement.Prefix%2A> -Eigenschaftensatz auf `prefix` und <xref:System.Net.Configuration.WebRequestModuleElement.Type%2A> -Eigenschaftensatz auf `type`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public string Prefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.WebRequestModuleElement.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("prefix", Options=System.Configuration.ConfigurationPropertyOptions.IsRequired | System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das URI-Präfix für die aktuelle Anforderung Webmodul.</summary>
+        <value>Eine Zeichenfolge, die eine URI-Präfix enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework, Version 2.0 bietet Anforderung Webmodule, die Anforderungen von Ressourcen mit den folgenden Präfixen erstellen:  
+  
+-   HTTP  
+  
+-   HTTPS  
+  
+-   FTP  
+  
+-   DATEI  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.WebRequestModuleElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.WebRequestModuleElement.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.TypeConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Klasse, die webanforderungen erstellt.</summary>
+        <value>Ein <see cref="T:System.Type" /> -Instanz, die eine Web-Request-Modul identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe der <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> Klassen Anwendungen können anfordern, Ressourcen für eine beliebige gültige <xref:System.Uri>. Verwenden Sie diese Eigenschaft zum Angeben eines Typs, der registriert wird, um die Bearbeitung der <xref:System.Net.WebRequest.Create%2A> Methode, um neue Anforderungen zu erstellen.  
+  
+ .NET Framework, Version 2.0 bietet Anforderung Webmodule, die Anforderungen von Ressourcen mit den folgenden Präfixen erstellen:  
+  
+-   HTTP  
+  
+-   HTTPS  
+  
+-   FTP  
+  
+-   DATEI  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

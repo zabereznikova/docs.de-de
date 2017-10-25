@@ -1,0 +1,779 @@
+<Type Name="Encoder" FullName="System.Drawing.Imaging.Encoder">
+  <TypeSignature Language="C#" Value="public sealed class Encoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Encoder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.Encoder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein <see cref="T:System.Drawing.Imaging.Encoder" /> -Objekt kapselt eine GUID (globally unique Identifier), der die Kategorie eines Parameters Encoder Image identifiziert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Parameter an einem Bildencoder übergeben, wird der Parameter gekapselt, ein <xref:System.Drawing.Imaging.EncoderParameter> Objekt. Eines der Felder von der <xref:System.Drawing.Imaging.EncoderParameter> Objekt ist eine GUID, der die Kategorie des Parameters angibt. Verwenden Sie die statischen Felder der der <xref:System.Drawing.Imaging.Encoder> Klasse zum Abrufen einer <xref:System.Drawing.Imaging.Encoder> , Parameter, der die gewünschte Kategorie enthält.  
+  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Encoder (Guid guid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid guid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Encoder.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="guid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="guid">Ein global eindeutiger Bezeichner, der eine Bild Encoder Parameterkategorie identifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.Encoder" /> -Klasse aus den angegebenen globally unique Identifier (GUID). Die GUID gibt ein Bild Encoder Parameterkategorie an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChrominanceTable">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder ChrominanceTable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder ChrominanceTable" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.ChrominanceTable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt, mit dem global eindeutigen Bezeichner für die Farbanteiltabellen-Parameterkategorie initialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Parameter an einem Bildencoder übergeben, wird der Parameter gekapselt, ein <xref:System.Drawing.Imaging.EncoderParameter> Objekt. Eines der Felder von der <xref:System.Drawing.Imaging.EncoderParameter> Objekt ist eine GUID, der die Kategorie des Parameters angibt. Verwenden Sie die statischen Felder der der <xref:System.Drawing.Imaging.Encoder> Klasse zum Abrufen einer <xref:System.Drawing.Imaging.Encoder> , Parameter, der die gewünschte Kategorie enthält.  
+  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorDepth">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder ColorDepth;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder ColorDepth" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.ColorDepth" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt, mit dem global eindeutigen Bezeichner für die Farbtiefe-Parameterkategorie initialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Parameter an einem Bildencoder übergeben, wird der Parameter gekapselt, ein <xref:System.Drawing.Imaging.EncoderParameter> Objekt. Eines der Felder von der <xref:System.Drawing.Imaging.EncoderParameter> Objekt ist eine GUID, der die Kategorie des Parameters angibt. Verwenden Sie die statischen Felder der der <xref:System.Drawing.Imaging.Encoder> Klasse zum Abrufen einer <xref:System.Drawing.Imaging.Encoder> , Parameter, der die gewünschte Kategorie enthält.  
+  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Drawing.Bitmap> Objekt aus einer BMP-Datei. Der Code speichert das Bild als TIFF-Datei, die Farbtiefe des 24 Bits pro Pixel verfügt.  
+  
+ [!code-cpp[System.Drawing.Imaging.ClassicEncoderExample1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Imaging.ClassicEncoderExample1/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Imaging.ClassicEncoderExample1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Imaging.ClassicEncoderExample1/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Imaging.ClassicEncoderExample1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Imaging.ClassicEncoderExample1/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compression">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder Compression;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder Compression" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.Compression" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt, mit dem global eindeutigen Bezeichner für die Komprimierung Parameterkategorie initialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Parameter an einem Bildencoder übergeben, wird der Parameter gekapselt, ein <xref:System.Drawing.Imaging.EncoderParameter> Objekt. Eines der Felder von der <xref:System.Drawing.Imaging.EncoderParameter> Objekt ist eine GUID, der die Kategorie des Parameters angibt. Verwenden Sie die statischen Felder der der <xref:System.Drawing.Imaging.Encoder> Klasse zum Abrufen einer <xref:System.Drawing.Imaging.Encoder> , Parameter, der die gewünschte Kategorie enthält.  
+  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Drawing.Bitmap> Objekt aus einer BMP-Datei. Das Bild wird als TIFF-Datei, die LZW-Komprimierung gespeichert.  
+  
+ [!code-cpp[System.Drawing.ClassicImagingEncoder2#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEncoder2/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicImagingEncoder2#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEncoder2/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicImagingEncoder2#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImagingEncoder2/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Guid">
+      <MemberSignature Language="C#" Value="public Guid Guid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Guid" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.Encoder.Guid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine GUID (globally unique Identifier), die einen Bildencoder identifiziert Parameterkategorie ab.</summary>
+        <value>Die GUID, die eine Bild Encoder Parameterkategorie identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Parameter an einem Bildencoder übergeben, wird der Parameter gekapselt, ein <xref:System.Drawing.Imaging.EncoderParameter> Objekt. Eines der Felder von der <xref:System.Drawing.Imaging.EncoderParameter> Objekt ist eine GUID, der die Kategorie des Parameters angibt. Verwenden Sie die statischen Felder der der <xref:System.Drawing.Imaging.Encoder> Klasse zum Abrufen einer <xref:System.Drawing.Imaging.Encoder> , Parameter, der die gewünschte Kategorie enthält.  
+  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LuminanceTable">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder LuminanceTable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder LuminanceTable" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.LuminanceTable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt, mit dem global eindeutigen Bezeichner für die Intensität Parameterkategorie initialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Parameter an einem Bildencoder übergeben, wird der Parameter gekapselt, ein <xref:System.Drawing.Imaging.EncoderParameter> Objekt. Eines der Felder von der <xref:System.Drawing.Imaging.EncoderParameter> Objekt ist eine GUID, der die Kategorie des Parameters angibt. Verwenden Sie die statischen Felder der der <xref:System.Drawing.Imaging.Encoder> Klasse zum Abrufen einer <xref:System.Drawing.Imaging.Encoder> , Parameter, der die gewünschte Kategorie enthält.  
+  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Quality">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder Quality;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder Quality" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.Quality" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt, mit dem global eindeutigen Bezeichner für die Qualität Parameterkategorie initialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Imaging.Encoder.Quality> Kategorie gibt die Ebene der Komprimierung für ein Bild. Bei Verwendung zum Erstellen einer <xref:System.Drawing.Imaging.EncoderParameter>, nützliche Wertebereich für die Qualitätskategorie liegt zwischen 0 und 100. Je niedriger die Zahl angegeben wird, je höher die Komprimierung und desto niedriger ist deshalb die Qualität des Bilds. 0 (null) erhalten Sie die niedrigste Bildqualität und 100 die höchste.  
+  
+ Wenn Sie einen Parameter an einem Bildencoder übergeben, wird der Parameter gekapselt, ein <xref:System.Drawing.Imaging.EncoderParameter> Objekt. Eines der Felder von der <xref:System.Drawing.Imaging.EncoderParameter> Objekt ist eine GUID, der die Kategorie des Parameters angibt. Verwenden Sie die statischen Felder der der <xref:System.Drawing.Imaging.Encoder> Klasse zum Abrufen einer <xref:System.Drawing.Imaging.Encoder> , Parameter, der die gewünschte Kategorie enthält.  
+  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Drawing.Bitmap> Objekt aus einer BMP-Datei. Der Code speichert die Bitmap in drei JPEG-Dateien mit einer anderen Qualitätsstufe.  
+  
+ [!code-cpp[System.Drawing.ClassicImagingEndcoder3#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEndcoder3/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicImagingEndcoder3#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEndcoder3/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicImagingEndcoder3#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImagingEndcoder3/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderMethod">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder RenderMethod;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder RenderMethod" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.RenderMethod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt, mit dem global eindeutigen Bezeichner für die Parameterkategorie-Methode initialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Parameter an einem Bildencoder übergeben, wird der Parameter gekapselt, ein <xref:System.Drawing.Imaging.EncoderParameter> Objekt. Eines der Felder von der <xref:System.Drawing.Imaging.EncoderParameter> Objekt ist eine GUID, der die Kategorie des Parameters angibt. Verwenden Sie die statischen Felder der der <xref:System.Drawing.Imaging.Encoder> Klasse zum Abrufen einer <xref:System.Drawing.Imaging.Encoder> , Parameter, der die gewünschte Kategorie enthält.  
+  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveFlag">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder SaveFlag;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder SaveFlag" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.SaveFlag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt, mit dem global eindeutigen Bezeichner für die Speicherfunktion initialisiert wird, Parameterkategorie Flag.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Parameter an einem Bildencoder übergeben, wird der Parameter gekapselt, ein <xref:System.Drawing.Imaging.EncoderParameter> Objekt. Eines der Felder von der <xref:System.Drawing.Imaging.EncoderParameter> Objekt ist eine GUID, der die Kategorie des Parameters angibt. Verwenden Sie die statischen Felder der der <xref:System.Drawing.Imaging.Encoder> Klasse zum Abrufen einer <xref:System.Drawing.Imaging.Encoder> , Parameter, der die gewünschte Kategorie enthält.  
+  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt drei <xref:System.Drawing.Bitmap> Objekte: eine von BMP-Datei, aus einer JPEG-Datei und eine aus einer PNG-Datei. Der Code speichert alle drei Bilder in einer einzelnen TIFF-Datei mit mehreren Rahmen.  
+  
+ [!code-cpp[System.Drawing.ClassingImagingEncoder4#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassingImagingEncoder4/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.ClassingImagingEncoder4#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassingImagingEncoder4/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.ClassingImagingEncoder4#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassingImagingEncoder4/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScanMethod">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder ScanMethod;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder ScanMethod" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.ScanMethod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt, mit dem global eindeutigen Bezeichner für die Methode Parameterkategorie initialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Parameter an einem Bildencoder übergeben, wird der Parameter gekapselt, ein <xref:System.Drawing.Imaging.EncoderParameter> Objekt. Eines der Felder von der <xref:System.Drawing.Imaging.EncoderParameter> Objekt ist eine GUID, der die Kategorie des Parameters angibt. Verwenden Sie die statischen Felder der der <xref:System.Drawing.Imaging.Encoder> Klasse zum Abrufen einer <xref:System.Drawing.Imaging.Encoder> , Parameter, der die gewünschte Kategorie enthält.  
+  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transformation">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder Transformation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder Transformation" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.Transformation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt, mit dem global eindeutigen Bezeichner für die Transformation Parameterkategorie initialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Parameter an einem Bildencoder übergeben, wird der Parameter gekapselt, ein <xref:System.Drawing.Imaging.EncoderParameter> Objekt. Eines der Felder von der <xref:System.Drawing.Imaging.EncoderParameter> Objekt ist eine GUID, der die Kategorie des Parameters angibt. Verwenden Sie die statischen Felder der der <xref:System.Drawing.Imaging.Encoder> Klasse zum Abrufen einer <xref:System.Drawing.Imaging.Encoder> , Parameter, der die gewünschte Kategorie enthält.  
+  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Drawing.Bitmap> Objekt aus einer JPEG-Datei. Der Code das Bild um 90 Grad gedreht und speichert es in einer separaten JPEG-Datei.  
+  
+ [!code-cpp[System.Drawing.ClassicImagingEncoderExample5#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEncoderExample5/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.ClassicImagingEncoderExample5#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImagingEncoderExample5/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.ClassicImagingEncoderExample5#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImagingEncoderExample5/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Imaging.Encoder Version;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.Imaging.Encoder Version" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.Encoder.Version" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.Encoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein <see cref="T:System.Drawing.Imaging.Encoder" /> Objekt, mit dem global eindeutigen Bezeichner für die Kategorie des Version-Parameter initialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Imaging.Encoder.Quality> Kategorie gibt die Ebene der Komprimierung für ein Bild. Bei Verwendung zum Erstellen einer <xref:System.Drawing.Imaging.EncoderParameter>, nützliche Wertebereich für die Qualitätskategorie liegt zwischen 0 und 100. Je niedriger die Zahl angegeben wird, je höher die Komprimierung und desto niedriger ist deshalb die Qualität des Bilds. 0 (null) erhalten Sie die niedrigste Bildqualität und 100 die höchste.  
+  
+ Wenn Sie einen Parameter an einem Bildencoder übergeben, wird der Parameter gekapselt, ein <xref:System.Drawing.Imaging.EncoderParameter> Objekt. Eines der Felder von der <xref:System.Drawing.Imaging.EncoderParameter> Objekt ist eine GUID, der die Kategorie des Parameters angibt. Verwenden Sie die statischen Felder der der <xref:System.Drawing.Imaging.Encoder> Klasse zum Abrufen einer <xref:System.Drawing.Imaging.Encoder> , Parameter, der die gewünschte Kategorie enthält.  
+  
+ Die Bildencodern die in integrierten [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] empfangen Parameter, die mehreren Kategorien angehören. Die folgende Tabelle enthält alle Kategorien, und jede Kategorie zugeordnete GUID.  
+  
+ <xref:System.Drawing.Imaging.Encoder.ChrominanceTable>  
+ f2e455dc-09b3-4316-8260-676ada32481c  
+  
+ <xref:System.Drawing.Imaging.Encoder.ColorDepth>  
+ 66087055-ad66-4c7c-9a18-38a2310b8337  
+  
+ <xref:System.Drawing.Imaging.Encoder.Compression>  
+ e09d739d-ccd4-44ee-8eba-3fbf8be4fc58  
+  
+ <xref:System.Drawing.Imaging.Encoder.LuminanceTable>  
+ edb33bce-0266-4a77-b904-27216099e717  
+  
+ <xref:System.Drawing.Imaging.Encoder.Quality>  
+ 1d5be4b5-fa4a-452d-9cdd-5db35105e7eb  
+  
+ <xref:System.Drawing.Imaging.Encoder.RenderMethod>  
+ 6d42c53a-229a-4825-8bb7-5c99e2b9a8b8  
+  
+ <xref:System.Drawing.Imaging.Encoder.SaveFlag>  
+ 292266fc-ac40-47bf-8cfc-a85b89a655de  
+  
+ <xref:System.Drawing.Imaging.Encoder.ScanMethod>  
+ 3a4e2661-3109-4e56-8536-42c156e7dcfa  
+  
+ <xref:System.Drawing.Imaging.Encoder.Transformation>  
+ 8d0eb2d1-a58e-4ea8-aa14-108074b7b6f9  
+  
+ <xref:System.Drawing.Imaging.Encoder.Version>  
+ 24d18c76-814a-41a4-bf53-1c219cccf797  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Management.Instrumentation">
+  <Docs>
+    <summary>Bietet die notwendigen Klassen für die Instrumentierung von Anwendungen für die Verwaltung und Verfügbarmachen von Verwaltungsinformationen und-Ereignisse über WMI für potenzielle Kunden. Consumer, z. B. Microsoft Application Center oder Microsoft Operations Manager können dann verwalten, die Anwendung einfach, und überwachen und Konfigurieren der Anwendung für die administratorskripts oder andere Anwendungen verfügbar ist, sowohl verwaltete als auch als nicht verwaltet. Instrumentation von Ihrer Anwendung ist einfach zu erreichen, verwenden das benutzerdefinierte InstrumentationClass-Attribut für Klassen, die Sie verfügbar machen möchten, oder unter Verwendung der angegebenen <see cref="T:System.Management.Instrumentation.BaseEvent" /> und <see cref="T:System.Management.Instrumentation.Instance" /> Basisklassen und die <see cref="T:System.Management.Instrumentation.Instrumentation" /> Hilfsklasse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

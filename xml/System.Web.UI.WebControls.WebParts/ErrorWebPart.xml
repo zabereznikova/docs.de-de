@@ -1,0 +1,293 @@
+<Type Name="ErrorWebPart" FullName="System.Web.UI.WebControls.WebParts.ErrorWebPart">
+  <TypeSignature Language="C#" Value="public class ErrorWebPart : System.Web.UI.WebControls.WebParts.ProxyWebPart, System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ErrorWebPart extends System.Web.UI.WebControls.WebParts.ProxyWebPart implements class System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.ProxyWebPart</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.WebParts.ITrackingPersonalizable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Wird als Platzhalter in eine Webseite eingefügt, wenn bei dem Versuch, eine neue Instanz eines dynamischen <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />-Steuerelements zu laden oder zu erstellen, ein Fehler aufgetreten ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> Klasse dient der Webparts-Steuerelementsatz als Platzhalter für ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das auf der Seite "nicht hinzugefügt werden konnte. Wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelements laden oder erstellen eine neue Instanz eines dynamischen versucht <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement in einer Zone und der Verbindungsversuch fehl aus irgendeinem Grund die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> ruft dann die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateErrorWebPart%2A> -Methode, und fügt eine <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> steuern anstelle von das Steuerelement, das Fehler.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> Steuerelement wird eingefügt, um bereits vorhandene Zustand Personalisierungsinformationen, die möglicherweise vorhanden waren auf ein Steuerelement für Benutzer beizubehalten. Nehmen wir beispielsweise an, es ist ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das eine personalisierbar-Eigenschaft, sodass Benutzer können ihre eigenen ZIP-Code speichern, und klicken Sie dann das Steuerelement kann Wetterdaten für diese Postleitzahl jedes Mal automatisch angezeigt hat der Benutzer besucht die Seite. Das nächste Mal Falle irgendwann ein Problems mit dem Wettersteuerelement, damit es nicht werden, während eine bestimmte Anforderung geladen kann, und noch den Rest der Seite geladen, die benutzerdefinierten Personalisierungsdaten, denen für ein Benutzer gespeichert wurde, dass das Steuerelement verloren gehen würden die perso Nalization Daten für die Seite werden gespeichert. Durch Einfügen die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> Steuerelement anstelle der fehlerhaften Steuerelement können Sie benachrichtigen den Benutzer, der ein Problem aufgetreten ist, und auch bieten einen Mechanismus für die Webparts-Steuerelementsatz, bis das Problem Personalisierung-Daten des Benutzers auf dem fehlerhaften Steuerelement beizubehalten können korrigiert werden.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> Klasse leitet sich von der <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> der Klasse, einer von mehreren Typen, die so konzipiert, dass temporäre Platzhalter für andere Typen. Zum Erstellen einer Instanz der Klasse, die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement verwendet seinen öffentlichen <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.%23ctor%2A> Konstruktor. Der Konstruktor erfordert mehrere Details des Steuerelements an, z. B. die ID, den ursprünglichen Typ des Steuerelements übergeben werden (wenn das fehlerhafte Steuerelement ein Server ist oder Benutzersteuerelement in eingebunden eine <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Objekt), den ursprünglichen Pfad zur Quelldatei für das Steuerelement ( Wenn das fehlerhafte Steuerelement ein benutzerdefiniertes Steuerelement ist), und die ID des ein <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Objekt, falls vorhanden.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> -Klasse verfügt über eine einzelne öffentliche Eigenschaft mit dem Namen <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage%2A>. Entwickler können diese Eigenschaft einen Wert zuweisen, die auf einer Webseite angezeigt wird, wenn das Steuerelement eingefügt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> -Klasse verfügt über drei geschützte Methoden. Die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.AddAttributesToRender%2A> Methode nimmt Formateigenschaften aus der <xref:System.Web.UI.WebControls.WebParts.WebZone.ErrorStyle%2A> -Objekt für die <xref:System.Web.UI.WebControls.WebParts.WebZone> Zone, die das Steuerelement enthält, die nicht geladen werden konnten. Wenn alle formateinstellungen in dieses Objekt vorhanden, die Methode angewendet, damit die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> Steuerelement. Die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.EndLoadPersonalization%2A> -Methode legt mehrere wichtige geerbte Eigenschaften für die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> -Steuerelement, um zu verhindern, dass Benutzer personalisieren des Steuerelements durch ausblenden, minimieren, bearbeiten oder ihn zu exportieren oder ändern dessen <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> Wert. Schließlich die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.RenderContents%2A> Methode codiert den Wert der Zeichenfolge in der <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage%2A> -Eigenschaft, um Renderingprobleme oder scripting-Angriffe zu verhindern.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Die Bedingungen in der ein <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> Steuerelement tatsächlich eingefügt wird eine Seite sind relativ selten, und obwohl die Klasse von geerbt und erweitert werden kann, einige Entwickler findet diese Option, um von großer Bedeutung sein. Ein Grund, möglicherweise möchten diese Klasse erweitert ist, wenn Sie das Aussehen und Verhalten anpassen möchten die <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> Steuerelement. Sie könnten z. B. überschreiben die <see cref="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.EndLoadPersonalization" /> -Methode, und zusätzliche Format festlegen oder andere Eigenschaften auf der <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> Steuerelement hinausgehen, die bereits festgelegt sind.  
+  
+ Anfordern der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement zum Verwenden einer benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> -Steuerelement, müssen Sie auch von erben die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Klasse, und überschreiben seine <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.CreateErrorWebPart(System.String,System.String,System.String,System.String,System.String)" /> Methode. In dieser Methode sollten Sie den Wert, der der Methode zuweisen <paramref name="errorMessage" /> Parameter an die <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> Eigenschaft des benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> zu steuern, da die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement ruft diese Methode aus zahlreichen anderen Stellen und häufig übergibt eine ein anderer Fehler Nachrichtenwert.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorWebPart (string originalID, string originalTypeName, string originalPath, string genericWebPartID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string originalID, string originalTypeName, string originalPath, string genericWebPartID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="originalID" Type="System.String" />
+        <Parameter Name="originalTypeName" Type="System.String" />
+        <Parameter Name="originalPath" Type="System.String" />
+        <Parameter Name="genericWebPartID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="originalID">Eine Zeichenfolge, die Steuerelement-ID (nicht die eindeutige ID) des Steuerelements ein. Wenn ein <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement Fehler beteiligt ist, die ID ist die ID des untergeordneten Steuerelements Server.</param>
+        <param name="originalTypeName">Eine Zeichenfolge, die den Namen der <see cref="T:System.Type" /> des Steuerelements. Wenn ein <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement Fehler beteiligt ist, der Typname ist der Typ des untergeordneten Steuerelements Server.</param>
+        <param name="originalPath">Eine Zeichenfolge, die den Pfad zu einem Benutzersteuerelement enthält, wenn ein <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement, das ein untergeordnetes Steuerelement enthält den Fehler beteiligt ist.</param>
+        <param name="genericWebPartID">Eine Zeichenfolge, die die ID des gibt eine <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> zu steuern, wenn diese Art von Steuerelement in den Fehler beim Laden oder Erstellen eines Steuerelements beteiligt war. Dies ist erforderlich für Steuerelemente, die nicht von erben die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Basisklasse.</param>
+        <summary>Initialisiert eine neue Instanz des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Steuerelements erstellt eine neue Instanz der dem <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> steuern, wenn es ein Fehler beim Laden oder erstellen Sie eine Instanz eines dynamischen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Dynamische Steuerelemente werden Steuerelemente, die programmgesteuert auf eine Seite hinzugefügt werden, oder von einem Benutzer, der das Steuerelement aus einem Katalog von Steuerelementen hinzugefügt, im Gegensatz zu statische Steuerelemente, die im Markup einer Webseite.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.%23ctor%2A> Methode erstellt einfach eine Instanz der Basisklasse, übergibt Sie an die vier Parameter, die Informationen zum fehlerhaften Steuerelement enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" /> , enthält die HTML-Ausgabe gerendert werden.</param>
+        <summary>Spezieller Fehlerstilattribute, gilt ein <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> -Objekt, das auf einer Seite anstelle eines anderen Steuerelements eingefügt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.AddAttributesToRender%2A> -Methode übernimmt die Stileigenschaften (sofern vorhanden), die in definiert werden die <xref:System.Web.UI.WebControls.WebParts.WebZone.ErrorStyle%2A> -Objekt für die <xref:System.Web.UI.WebControls.WebParts.WebZone> Zone, enthält ein <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> Steuerelement. Die Stile werden angewendet, um die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> -Steuerelement vor dem Rendern.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Methode kann überschrieben werden in einer abgeleiteten <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> Klasse, wenn die Formateigenschaften anpassen, die angewendet werden, sollen ein <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> Steuerelement.  
+  
+ Anfordern der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement zum Verwenden einer benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> -Steuerelement, müssen Sie auch von erben die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Klasse, und überschreiben seine <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.CreateErrorWebPart(System.String,System.String,System.String,System.String,System.String)" /> Methode. In dieser Methode sollten Sie den Wert, der der Methode zuweisen <paramref name="errorMessage" /> Parameter an die <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> Eigenschaft des benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> zu steuern, da die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement ruft diese Methode aus zahlreichen anderen Stellen und in der Regel übergibt eine spezifische Fehlermeldung.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndLoadPersonalization">
+      <MemberSignature Language="C#" Value="protected virtual void EndLoadPersonalization ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EndLoadPersonalization() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.EndLoadPersonalization" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt mehrere wichtige Eigenschaften für die <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> -Steuerelement vor dem Rendern, um zu verhindern, dass Benutzer können das Steuerelement zu personalisieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.EndLoadPersonalization%2A> -Methode legt Eigenschaften für ein <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> zu steuern, bevor er gerendert wird. Diese Eigenschaften verhindern, dass Benutzer ausblenden, minimieren, bearbeiten, oder exportieren das Steuerelement oder ändern dessen <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> Wert. Benutzer können jedoch schließen oder Löschen einer <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> Instanz des Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Methode kann überschrieben werden in einem geerbten <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> Steuerelement. Entwickler sollten die Methode, um zusätzliche Eigenschaften festlegen, auf das Steuerelement, z. B. den Standardwert überschreiben <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> Eigenschaftswert.  
+  
+ Anfordern der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement zum Verwenden einer benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> -Steuerelement, müssen Sie auch von erben die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Klasse, und überschreiben seine <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.CreateErrorWebPart(System.String,System.String,System.String,System.String,System.String)" /> Methode. In dieser Methode sollten Sie den Wert, der der Methode zuweisen <paramref name="errorMessage" /> Parameter an die <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> Eigenschaft des benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> zu steuern, da die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement ruft diese Methode aus zahlreichen anderen Stellen und in der Regel übergibt eine spezifische Fehlermeldung.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorMessage">
+      <MemberSignature Language="C#" Value="public string ErrorMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Fehlermeldung, die auf einer Webseite anstelle eines Steuerelements angezeigt wird, die nicht erfolgreich auf der Seite hinzugefügt werden konnte.</summary>
+        <value>Eine Zeichenfolge, die den Text der Fehlermeldung enthält. Der Standardwert ist eine kulturspezifische Fehlermeldung angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage%2A> Eigenschaft kann kein Wert zugewiesen werden von Entwicklern, sodass eine benutzerdefinierte Fehlermeldung, an dem Punkt angezeigt wird, in denen die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> Steuerelement wird in einer Seite eingefügt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Entwickler können einen Standardwert zuweisen der <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> Eigenschaft durch das Erweitern der <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> Klasse und die <see cref="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.#ctor(System.String,System.String,System.String,System.String)" /> Konstruktor oder in einer überschriebenen <see cref="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.EndLoadPersonalization" /> -Methode, die Eigenschaft einen Standardwert zuweisen.  
+  
+ Anfordern der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement zum Verwenden einer benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> -Steuerelement, müssen Sie auch von erben die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Klasse, und überschreiben seine <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.CreateErrorWebPart(System.String,System.String,System.String,System.String,System.String)" /> Methode. In dieser Methode sollten Sie den Wert, der der Methode zuweisen <paramref name="errorMessage" /> Parameter an die <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> Eigenschaft des benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> zu steuern, da die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement ruft diese Methode aus zahlreichen anderen Stellen und in der Regel übergibt eine spezifische Fehlermeldung.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" /> , der die Fehlermeldung codiert.</param>
+        <summary>Codiert den Zeichenfolgenwert der <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.RenderContents%2A> Methode codiert zugewiesene Zeichenfolge die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage%2A> Eigenschaft, um sicherzustellen, dass er ordnungsgemäß gerendert wird, und klicken Sie zum Schutz vor Script-Injection-Angriffe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginLoad">
+      <MemberSignature Language="C#" Value="void ITrackingPersonalizable.BeginLoad ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginLoad() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.System#Web#UI#WebControls#WebParts#ITrackingPersonalizable#BeginLoad" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese Methode wird nur hinzugefügt, um implementieren die <see cref="T:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" /> Schnittstelle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginSave">
+      <MemberSignature Language="C#" Value="void ITrackingPersonalizable.BeginSave ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginSave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.System#Web#UI#WebControls#WebParts#ITrackingPersonalizable#BeginSave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese Methode wird nur hinzugefügt, um implementieren die <see cref="T:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" /> Schnittstelle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndLoad">
+      <MemberSignature Language="C#" Value="void ITrackingPersonalizable.EndLoad ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndLoad() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.System#Web#UI#WebControls#WebParts#ITrackingPersonalizable#EndLoad" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Implementiert die <see cref="T:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" /> -Schnittstelle und ruft die <see cref="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.EndLoadPersonalization" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndSave">
+      <MemberSignature Language="C#" Value="void ITrackingPersonalizable.EndSave ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndSave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.System#Web#UI#WebControls#WebParts#ITrackingPersonalizable#EndSave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese Methode wird nur hinzugefügt, um implementieren die <see cref="T:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" /> Schnittstelle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.System#Web#UI#WebControls#WebParts#ITrackingPersonalizable#TracksChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Steuerelement den Status seiner Änderungen verfolgt.</summary>
+        <value>
+          <see langword="true" />Wenn dem Webparts-Steuerelementsatz zuständig ist für das ermitteln, wenn das Steuerelement betrachtet wird geändert. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

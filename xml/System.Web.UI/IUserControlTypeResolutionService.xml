@@ -1,0 +1,54 @@
+<Type Name="IUserControlTypeResolutionService" FullName="System.Web.UI.IUserControlTypeResolutionService">
+  <TypeSignature Language="C#" Value="public interface IUserControlTypeResolutionService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IUserControlTypeResolutionService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IUserControlTypeResolutionService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Methode, die eine Klasse implementieren muss, um den Typ eines Steuerelements für einen angegebenen Tagpräfix und Tagnamen zurückzugeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Seite und Steuerelemententwickler verwenden Sie nicht die <xref:System.Web.UI.IUserControlTypeResolutionService> Schnittstelle. Die <xref:System.Web.UI.IUserControlTypeResolutionService> -Schnittstelle wird von Entwicklern zurückzugebenden implementiert die <xref:System.Type> eines Steuerelements durch ein Tagpräfix und Tagname gekennzeichnet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType (string tagPrefix, string tagName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType(string tagPrefix, string tagName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IUserControlTypeResolutionService.GetType(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagPrefix" Type="System.String" />
+        <Parameter Name="tagName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tagPrefix">Das analysierte Präfix eines ASP.NET-Tags.</param>
+        <param name="tagName">Der Name des analysierten ASP.NET-Tags.</param>
+        <summary>Ruft einen Typ basierend auf einer analysierte ASP.NET-Tagpräfix und den Namen des Tags ab.</summary>
+        <returns>Ein <see cref="T:System.Type" /> , der den Typ des Steuerelements, das Präfix Tag und, darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Designer-Umgebung implementieren diese Methode, um damit ASP.NET-Parser und Designern Benutzertypen-Steuerelements zur Entwurfszeit auflösen können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

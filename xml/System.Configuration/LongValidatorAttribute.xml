@@ -1,0 +1,214 @@
+<Type Name="LongValidatorAttribute" FullName="System.Configuration.LongValidatorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class LongValidatorAttribute : System.Configuration.ConfigurationValidatorAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LongValidatorAttribute extends System.Configuration.ConfigurationValidatorAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.LongValidatorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationValidatorAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Weist die .NET Framework zur langen ganzzahligen Validierung eine Konfigurationseigenschaft deklarativ an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie verwenden die <xref:System.Configuration.LongValidatorAttribute> Attribut, um eine Konfigurationseigenschaft zu ergänzen. Damit wird die .NET Framework so überprüfen Sie die Eigenschaft mit einem <xref:System.Configuration.LongValidator> Objekts und übergeben Sie ihm den Wert der ergänzenden Parameter.  
+  
+ Sie anwenden, können die <xref:System.Configuration.LongValidatorAttribute> -Attribut auf nur die Eigenschaftentypen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie die Eigenschaften eines benutzerdefinierten ergänzt <xref:System.Configuration.ConfigurationSection> -Objekt unter Verwendung der <xref:System.Configuration.LongValidatorAttribute> Attribut.  
+  
+ [!code-csharp[System.Configuration.ConfigurationValidatorAttributes#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationValidatorAttributes/CS/ConfigurationValidatorAttributes.cs#7)]
+ [!code-vb[System.Configuration.ConfigurationValidatorAttributes#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationValidatorAttributes/VB/ConfigurationValidatorAttributes.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LongValidatorAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.LongValidatorAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.LongValidatorAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Modell attributierten verwenden Sie diesen Konstruktor, um sicherzustellen, dass der verwandten Eigenschaft zugewiesene Wert eine lange ganze Zahl ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExcludeRange">
+      <MemberSignature Language="C#" Value="public bool ExcludeRange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExcludeRange" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.LongValidatorAttribute.ExcludeRange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob zum ein- bzw. Ausschließen von ganzen Zahlen im Bereich von definiert die <see cref="P:System.Configuration.LongValidatorAttribute.MinValue" /> und <see cref="P:System.Configuration.LongValidatorAttribute.MaxValue" /> Eigenschaftswerte.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert ausgeschlossen werden muss. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Bereich ist, schließt die <xref:System.Configuration.LongValidatorAttribute.MinValue%2A> und <xref:System.Configuration.LongValidatorAttribute.MaxValue%2A> Eigenschaftswerte. Wenn die <xref:System.Configuration.LongValidatorAttribute.ExcludeRange%2A> Eigenschaftswert ist `false`, die zulässigen Werte liegen außerhalb des Bereichs.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Configuration.IntegerValidatorAttribute.ExcludeRange%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Configuration.ConfigurationValidatorAttributes#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationValidatorAttributes/CS/ConfigurationValidatorAttributes.cs#7)]
+ [!code-vb[System.Configuration.ConfigurationValidatorAttributes#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationValidatorAttributes/VB/ConfigurationValidatorAttributes.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxValue">
+      <MemberSignature Language="C#" Value="public long MaxValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxValue" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.LongValidatorAttribute.MaxValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale zulässigen Wert für die Eigenschaft.</summary>
+        <value>Eine lange ganze Zahl, die den zulässigen Höchstwert angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.LongValidatorAttribute.MaxValue%2A> Eigenschaftswert im zulässigen Bereich enthalten ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Configuration.LongValidatorAttribute.MaxValue%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Configuration.ConfigurationValidatorAttributes#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationValidatorAttributes/CS/ConfigurationValidatorAttributes.cs#7)]
+ [!code-vb[System.Configuration.ConfigurationValidatorAttributes#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationValidatorAttributes/VB/ConfigurationValidatorAttributes.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist kleiner als <see cref="P:System.Configuration.LongValidatorAttribute.MinValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MinValue">
+      <MemberSignature Language="C#" Value="public long MinValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MinValue" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.LongValidatorAttribute.MinValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die minimalen zulässigen Wert für die Eigenschaft.</summary>
+        <value>Eine ganze Zahl, die den zulässigen Mindestwert angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.LongValidatorAttribute.MinValue%2A> Eigenschaftswert im zulässigen Bereich enthalten ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Configuration.LongValidatorAttribute.MinValue%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Configuration.ConfigurationValidatorAttributes#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationValidatorAttributes/CS/ConfigurationValidatorAttributes.cs#7)]
+ [!code-vb[System.Configuration.ConfigurationValidatorAttributes#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationValidatorAttributes/VB/ConfigurationValidatorAttributes.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist größer als <see cref="P:System.Configuration.LongValidatorAttribute.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatorInstance">
+      <MemberSignature Language="C#" Value="public override System.Configuration.ConfigurationValidatorBase ValidatorInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationValidatorBase ValidatorInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.LongValidatorAttribute.ValidatorInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationValidatorBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Instanz von der <see cref="T:System.Configuration.LongValidator" /> Klasse.</summary>
+        <value>Die <see cref="T:System.Configuration.ConfigurationValidatorBase" /> Validierungssteuerelementinstanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Configuration.LongValidatorAttribute.ValidatorInstance%2A> Eigenschaftswert Zeichenfolge validiert durch Aufrufen seiner <xref:System.Configuration.LongValidator.Validate%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

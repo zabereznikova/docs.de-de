@@ -1,0 +1,89 @@
+<Type Name="MessageQueueTransactionStatus" FullName="System.Messaging.MessageQueueTransactionStatus">
+  <TypeSignature Language="C#" Value="public enum MessageQueueTransactionStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MessageQueueTransactionStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueTransactionStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Status einer internen Message Queuing-Transaktion.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Instanz von der <xref:System.Messaging.MessageQueueTransaction> Klasse erstellt wurde, dessen <xref:System.Messaging.MessageQueueTransaction.Status%2A> Eigenschaft wird festgelegt, durch den Konstruktor auf `Initialized`. Nachdem eine Transaktion begonnen hat, aber bevor er ein Commit oder Rollback ausgeführt, die <xref:System.Messaging.MessageQueueTransaction.Status%2A> ist `Pending`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Aborted">
+      <MemberSignature Language="C#" Value="Aborted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueTransactionStatus Aborted = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueTransactionStatus.Aborted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueTransactionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Transaktion wurde abgebrochen, und alle Teilnehmer wurden benachrichtigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Committed">
+      <MemberSignature Language="C#" Value="Committed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueTransactionStatus Committed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueTransactionStatus.Committed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueTransactionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Transaktion ein Commit ausgeführt wurde, und alle Teilnehmer wurden benachrichtigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialized">
+      <MemberSignature Language="C#" Value="Initialized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueTransactionStatus Initialized = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueTransactionStatus.Initialized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueTransactionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Transaktion wurde initialisiert. Es wurde noch nicht gestartet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pending">
+      <MemberSignature Language="C#" Value="Pending" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueTransactionStatus Pending = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueTransactionStatus.Pending" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueTransactionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Transaktion wurde gestartet. Es wurde noch nicht wurde entweder ein Commit oder Rollback.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

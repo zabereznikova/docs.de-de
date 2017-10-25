@@ -1,0 +1,159 @@
+<Type Name="SignOutCleanupRequestMessage" FullName="System.IdentityModel.Services.SignOutCleanupRequestMessage">
+  <TypeSignature Language="C#" Value="public class SignOutCleanupRequestMessage : System.IdentityModel.Services.WSFederationMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SignOutCleanupRequestMessage extends System.IdentityModel.Services.WSFederationMessage" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.SignOutCleanupRequestMessage" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Services.WSFederationMessage</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine WS-Verbund-Abmeldung Cleanup-Nachricht dar. Die Nachricht wird erstellt, wenn die empfangene Nachricht der Action-Parameter (wa) auf "wsignoutcleanup1.0" festgelegt wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[wif_wsfed_ref](~/includes/wif-wsfed-ref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignOutCleanupRequestMessage (Uri baseUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri baseUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SignOutCleanupRequestMessage.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseUrl" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="baseUrl">Die Basis-URL für die diese Nachricht gilt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Services.SignOutCleanupRequestMessage" /> -Klasse mit der angegebenen Basis-URL.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wa Message-Parameter (die <xref:System.IdentityModel.Services.WSFederationMessage.Action%2A> Eigenschaft) wird mit "wsignoutcleanup1.0" initialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignOutCleanupRequestMessage (Uri baseUrl, string reply);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri baseUrl, string reply) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SignOutCleanupRequestMessage.#ctor(System.Uri,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseUrl" Type="System.Uri" />
+        <Parameter Name="reply" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseUrl">Die Basis-URL für die diese Nachricht gilt.</param>
+        <param name="reply">Der Wert des Parameters Wreply. Die URL, an den die Antwort gesendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Services.SignOutCleanupRequestMessage" /> Klasse mit dem angegebenen Basis-URL und Wreply-Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wa Message-Parameter (die <xref:System.IdentityModel.Services.WSFederationMessage.Action%2A> Eigenschaft) wird mit "wsignoutcleanup1.0" initialisiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="reply" />ist entweder leer oder <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="reply" /> ist kein gültiger URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reply">
+      <MemberSignature Language="C#" Value="public string Reply { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Reply" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignOutCleanupRequestMessage.Reply" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wreply-Parameter der Nachricht.</summary>
+        <value>Der Wert des Parameters Wreply. Dies ist die URL, an den die Antwort gesendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie auf `null` oder eine leere Zeichenfolge das Wreply-Parameter aus der Nachricht zu entfernen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Tritt auf beim Versuch, einen Wert festzulegen, der keinem gültigen, absoluten URI ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="protected override void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SignOutCleanupRequestMessage.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft die aktuelle Instanz.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der wa-Parameter (die <see cref="P:System.IdentityModel.Services.WSFederationMessage.Action" /> Eigenschaft) nicht auf "wsignoutcleanup1.0" festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SignOutCleanupRequestMessage.Write(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Writer, der zum Schreiben der Nachricht.</param>
+        <summary>Schreibt die Nachricht in der Abfrage in Form einer Zeichenfolge in dem angegebenen TextWriter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die <xref:System.IdentityModel.Services.SignOutCleanupRequestMessage.Validate%2A> -Methode vor dem Schreiben der Nachricht.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,630 @@
+<Type Name="Tuple" FullName="System.Tuple">
+  <TypeSignature Language="C#" Value="public static class Tuple" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Tuple extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Tuple" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt statische Methoden zum Erstellen von Tupelobjekten bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die .NET Framework-Quellcodes für diesen Typ finden Sie unter der [Verweisquelle](http://referencesource.microsoft.com/#mscorlib/system/tuple.cs#9124c4bea9ab0199). Sie können den Quellcode online Durchsuchen, Referenz für die Offlineanzeige herunterladen und schrittweise durchlaufen (inklusive Patches und Updates) während des Debuggens; finden Sie unter [Anweisungen](http://referencesource.microsoft.com/).  
+  
+ Ein Tupel ist eine Datenstruktur, die eine bestimmte Anzahl und die Sequenz von Elementen verfügt. Ein Beispiel eines Tupels ist eine Datenstruktur mit drei Elementen (bekannt als ein 3-Tupel bzw. Tripel), die verwendet wird, um einen Bezeichner, z. B. den Namen einer Person in das erste Element, ein Jahr in das zweite Element, und die Person Einkommen für dieses Jahr in das dritte Element zu speichern. .NET Framework unterstützt direkt Tupeln mit 1 bis sieben Elemente. Sie können darüber hinaus Tupeln von acht oder mehr Elementen erstellen, durch das Schachteln von Tupelobjekten in der <xref:System.Tuple%608.Rest%2A> Eigenschaft ein <xref:System.Tuple%608> Objekt.  
+  
+ Tupel werden häufig auf vier Arten verwendet:  
+  
+-   Um einen einzelnen Satz von Daten darzustellen. Beispielsweise ein Tupel kann ein Datenbankeintrag darstellen, und seine Komponenten können einzelne Felder des Datensatzes darstellen.  
+  
+-   Einfacher Zugriff auf und Bearbeitung von einem DataSet bereitzustellen.  
+  
+-   Um mehrere Werte aus einer Methode zurückgegeben werden, ohne `out` Parameter (in c#) oder `ByRef` Parameter (in Visual Basic).  
+  
+-   Mehrere Werte an eine Methode über einen einzelnen Parameter übergeben. Z. B. die <xref:System.Threading.Thread.Start%28System.Object%29?displayProperty=nameWithType> Methode verfügt über einen einzelnen Parameter, mit dem Sie einen Wert für die Methode angeben, die zum Startzeitpunkt der Thread ausgeführt wird. Wenn Sie angeben, ein <xref:System.Tuple%603> -Objekt als Methodenargument können Sie die Startroutine mit drei Elementen von Daten angeben.  
+  
+ Die <xref:System.Tuple> Klasse stellt keinen selbst dar. ein Tupel. Stattdessen ist es eine Klasse, die eine statische Methoden zum Erstellen von Instanzen der Tupeltypen, die von .NET Framework unterstützt werden. Es enthält Hilfsmethoden, die Sie aufrufen können, um Tupelobjekte zu instanziieren, ohne den Typ der einzelnen Tupel Komponenten explizit angeben zu müssen.  
+  
+ Obwohl Sie eine Instanz einer Klasse Tupel erstellen können, durch den Klassenkonstruktor aufrufen, kann der Code dazu aufwendig sein. Im folgenden Beispiel wird einen Klassenkonstruktor zum Erstellen einer 7-Tupel oder Septupel, die eine Auffüllung von Daten für New York City für jede Volkszählung von 1950 bis 2000 enthält.  
+  
+ [!code-csharp[System.Tuple.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.class/cs/example1.cs#1)]
+ [!code-vb[System.Tuple.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.class/vb/example1.vb#1)]  
+  
+ Erstellen das gleiche Tupelobjekt mit einer Hilfsmethode ist einfacher, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[System.Tuple.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.class/cs/example1.cs#2)]
+ [!code-vb[System.Tuple.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.class/vb/example1.vb#2)]  
+  
+ Die <xref:System.Tuple.Create%2A> Hilfsmethoden direkte Unterstützung für die Erstellung von Tupelobjekten, die ein bis acht Komponenten (d. h. Singletons bis Oktupel) sind. Es gibt zwar keine praktische Begrenzung für die Anzahl der Komponenten möglicherweise ein Tupel, Hilfsmethoden sind nicht verfügbar, um ein Tupel mit neun oder mehr Komponenten zu erstellen. Um solche ein Tupel zu erstellen, rufen Sie die <xref:System.Tuple%608.%23ctor%2A?displayProperty=nameWithType> Konstruktor.  
+  
+> [!NOTE]
+>  Weitere Informationen und Beispiele, in denen Tupel finden Sie unter der Dokumentation für die einzelnen Tupeltypen in .NET Framework. Diese werden in den Abschnitt "Siehe auch" am Ende dieses Themas aufgeführt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein 8-Tupel (Oktupel), die Primzahlen enthält, die kleiner als 20 sind.  
+  
+ [!code-csharp[System.Tuple.Create#17](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/createntuple.cs#17)]
+ [!code-vb[System.Tuple.Create#17](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/createntuple.vb#17)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create&lt;T1&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1&gt; Create&lt;T1&gt; (T1 item1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`1&lt;!!T1&gt; Create&lt;T1&gt;(!!T1 item1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der einzigen Komponente des Tupels.</typeparam>
+        <param name="item1">Der Wert der einzigen Komponente des Tupels.</param>
+        <summary>Erstellt ein neues 1-Tupel bzw. Singleton.</summary>
+        <returns>Ein Tupel, dessen Wert (<paramref name="item1" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 1-Tupel-Objekt zu instanziieren, ohne den Typ der Komponente explizit angeben zu müssen. Im folgenden Beispiel wird die <xref:System.Tuple.Create%2A> Methode, um ein 1-Tupel, dessen Komponente vom Typ ist <xref:System.Int32>.  
+  
+ [!code-csharp[System.Tuple.Create#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#1)]
+ [!code-vb[System.Tuple.Create#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#1)]  
+  
+ Dieser Code entspricht dem folgenden Aufruf der <xref:System.Tuple%601.%23ctor%2A> Klassenkonstruktor.  
+  
+ [!code-csharp[System.Tuple.Create#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#2)]
+ [!code-vb[System.Tuple.Create#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2&gt; Create&lt;T1,T2&gt; (T1 item1, T2 item2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`2&lt;!!T1, !!T2&gt; Create&lt;T1, T2&gt;(!!T1 item1, !!T2 item2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``2(``0,``1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Tupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Tupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Tupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Tupels.</param>
+        <summary>Erstellt ein neues 2-Tupel bzw. Paar.</summary>
+        <returns>Ein 2-Tupel, dessen Wert (<paramref name="item1" />, <paramref name="item2" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 2-Tupel-Objekt zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen. Im folgenden Beispiel wird die <xref:System.Tuple.Create%2A> Methode, um ein 2-Tupel.  
+  
+ [!code-csharp[System.Tuple.Create#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#3)]
+ [!code-vb[System.Tuple.Create#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#3)]  
+  
+ Dieser Code entspricht dem folgenden Aufruf der <xref:System.Tuple%602.%23ctor%2A> Klassenkonstruktor.  
+  
+ [!code-csharp[System.Tuple.Create#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#4)]
+ [!code-vb[System.Tuple.Create#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2,T3&gt; Create&lt;T1,T2,T3&gt; (T1 item1, T2 item2, T3 item3);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`3&lt;!!T1, !!T2, !!T3&gt; Create&lt;T1, T2, T3&gt;(!!T1 item1, !!T2 item2, !!T3 item3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``3(``0,``1,``2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2,T3&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Tupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Tupels.</typeparam>
+        <typeparam name="T3">Der Typ der dritten Komponente des Tupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Tupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Tupels.</param>
+        <param name="item3">Der Wert der dritten Komponente des Tupels.</param>
+        <summary>Erstellt ein neues 3-Tupel bzw. Tripel.</summary>
+        <returns>Ein 3-Tupel, dessen Wert (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 3-Tupel-Objekt zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen. Im folgenden Beispiel wird die <xref:System.Tuple.Create%2A> Methode, um ein 3-Tupel.  
+  
+ [!code-csharp[System.Tuple.Create#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#5)]
+ [!code-vb[System.Tuple.Create#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#5)]  
+  
+ Dieser Code entspricht dem folgenden Aufruf der <xref:System.Tuple%603.%23ctor%2A?displayProperty=nameWithType> Klassenkonstruktor.  
+  
+ [!code-csharp[System.Tuple.Create#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#6)]
+ [!code-vb[System.Tuple.Create#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2,T3,T4&gt; Create&lt;T1,T2,T3,T4&gt; (T1 item1, T2 item2, T3 item3, T4 item4);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`4&lt;!!T1, !!T2, !!T3, !!T4&gt; Create&lt;T1, T2, T3, T4&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``4(``0,``1,``2,``3)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2,T3,T4&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Tupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Tupels.</typeparam>
+        <typeparam name="T3">Der Typ der dritten Komponente des Tupels.</typeparam>
+        <typeparam name="T4">Der Typ der vierten Komponente des Tupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Tupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Tupels.</param>
+        <param name="item3">Der Wert der dritten Komponente des Tupels.</param>
+        <param name="item4">Der Wert der vierten Komponente des Tupels.</param>
+        <summary>Erstellt ein neues 4-Tupel bzw. Quadrupel.</summary>
+        <returns>Ein 4-Tupel, dessen Wert (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 4-Tupel-Objekt zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen. Im folgenden Beispiel wird die <xref:System.Tuple.Create%2A> Methode, um ein 4-Tupel.  
+  
+ [!code-csharp[System.Tuple.Create#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#7)]
+ [!code-vb[System.Tuple.Create#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#7)]  
+  
+ Dieser Code entspricht dem folgenden Aufruf der <xref:System.Tuple%604.%23ctor%2A?displayProperty=nameWithType> Klassenkonstruktor.  
+  
+ [!code-csharp[System.Tuple.Create#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#8)]
+ [!code-vb[System.Tuple.Create#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4,T5&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2,T3,T4,T5&gt; Create&lt;T1,T2,T3,T4,T5&gt; (T1 item1, T2 item2, T3 item3, T4 item4, T5 item5);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`5&lt;!!T1, !!T2, !!T3, !!T4, !!T5&gt; Create&lt;T1, T2, T3, T4, T5&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4, !!T5 item5) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``5(``0,``1,``2,``3,``4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2,T3,T4,T5&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+        <TypeParameter Name="T5" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+        <Parameter Name="item5" Type="T5" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Tupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Tupels.</typeparam>
+        <typeparam name="T3">Der Typ der dritten Komponente des Tupels.</typeparam>
+        <typeparam name="T4">Der Typ der vierten Komponente des Tupels.</typeparam>
+        <typeparam name="T5">Der Typ der fünften Komponente des Tupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Tupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Tupels.</param>
+        <param name="item3">Der Wert der dritten Komponente des Tupels.</param>
+        <param name="item4">Der Wert der vierten Komponente des Tupels.</param>
+        <param name="item5">Der Wert der fünften Komponente des Tupels.</param>
+        <summary>Erstellt ein neues 5-Tupel bzw. Quintupel.</summary>
+        <returns>Ein 5-Tupel, dessen Wert (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" />, <paramref name="item5" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 5-Tupel-Objekt zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen. Im folgenden Beispiel wird die <xref:System.Tuple.Create%2A> Methode, um ein 5-Tupel.  
+  
+ [!code-csharp[System.Tuple.Create#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#9)]
+ [!code-vb[System.Tuple.Create#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#9)]  
+  
+ Dieser Code entspricht dem folgenden Aufruf der <xref:System.Tuple%605.%23ctor%2A> Klassenkonstruktor.  
+  
+ [!code-csharp[System.Tuple.Create#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#10)]
+ [!code-vb[System.Tuple.Create#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4,T5,T6&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2,T3,T4,T5,T6&gt; Create&lt;T1,T2,T3,T4,T5,T6&gt; (T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`6&lt;!!T1, !!T2, !!T3, !!T4, !!T5, !!T6&gt; Create&lt;T1, T2, T3, T4, T5, T6&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4, !!T5 item5, !!T6 item6) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``6(``0,``1,``2,``3,``4,``5)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2,T3,T4,T5,T6&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+        <TypeParameter Name="T5" />
+        <TypeParameter Name="T6" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+        <Parameter Name="item5" Type="T5" />
+        <Parameter Name="item6" Type="T6" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Tupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Tupels.</typeparam>
+        <typeparam name="T3">Der Typ der dritten Komponente des Tupels.</typeparam>
+        <typeparam name="T4">Der Typ der vierten Komponente des Tupels.</typeparam>
+        <typeparam name="T5">Der Typ der fünften Komponente des Tupels.</typeparam>
+        <typeparam name="T6">Der Typ der sechsten Komponente des Tupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Tupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Tupels.</param>
+        <param name="item3">Der Wert der dritten Komponente des Tupels.</param>
+        <param name="item4">Der Wert der vierten Komponente des Tupels.</param>
+        <param name="item5">Der Wert der fünften Komponente des Tupels.</param>
+        <param name="item6">Der Wert der sechsten Komponente des Tupels.</param>
+        <summary>Erstellt ein neues 6-Tupel bzw. Sextupel.</summary>
+        <returns>Ein 6-Tupel, dessen Wert (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" />, <paramref name="item5" />, <paramref name="item6" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 6-Tupel-Objekt zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen. Im folgenden Beispiel wird die <xref:System.Tuple.Create%2A> Methode, um ein 6-Tupel.  
+  
+ [!code-csharp[System.Tuple.Create#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#11)]
+ [!code-vb[System.Tuple.Create#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#11)]  
+  
+ Dieser Code entspricht dem folgenden Aufruf der <xref:System.Tuple%606.%23ctor%2A> Klassenkonstruktor.  
+  
+ [!code-csharp[System.Tuple.Create#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#12)]
+ [!code-vb[System.Tuple.Create#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4,T5,T6,T7&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2,T3,T4,T5,T6,T7&gt; Create&lt;T1,T2,T3,T4,T5,T6,T7&gt; (T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`7&lt;!!T1, !!T2, !!T3, !!T4, !!T5, !!T6, !!T7&gt; Create&lt;T1, T2, T3, T4, T5, T6, T7&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4, !!T5 item5, !!T6 item6, !!T7 item7) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``7(``0,``1,``2,``3,``4,``5,``6)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2,T3,T4,T5,T6,T7&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+        <TypeParameter Name="T5" />
+        <TypeParameter Name="T6" />
+        <TypeParameter Name="T7" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+        <Parameter Name="item5" Type="T5" />
+        <Parameter Name="item6" Type="T6" />
+        <Parameter Name="item7" Type="T7" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Tupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Tupels.</typeparam>
+        <typeparam name="T3">Der Typ der dritten Komponente des Tupels.</typeparam>
+        <typeparam name="T4">Der Typ der vierten Komponente des Tupels.</typeparam>
+        <typeparam name="T5">Der Typ der fünften Komponente des Tupels.</typeparam>
+        <typeparam name="T6">Der Typ der sechsten Komponente des Tupels.</typeparam>
+        <typeparam name="T7">Der Typ der siebten Komponente des Tupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Tupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Tupels.</param>
+        <param name="item3">Der Wert der dritten Komponente des Tupels.</param>
+        <param name="item4">Der Wert der vierten Komponente des Tupels.</param>
+        <param name="item5">Der Wert der fünften Komponente des Tupels.</param>
+        <param name="item6">Der Wert der sechsten Komponente des Tupels.</param>
+        <param name="item7">Der Wert der siebten Komponente des Tupels.</param>
+        <summary>Erstellt ein neues 7-Tupel bzw. Septupel.</summary>
+        <returns>Ein 7-Tupel, dessen Wert (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" />, <paramref name="item5" />, <paramref name="item6" />, <paramref name="item7" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 7-Tupel-Objekt zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen. Im folgenden Beispiel wird die <xref:System.Tuple.Create%2A> Methode, um ein 7-Tupel zu instanziieren.  
+  
+ [!code-csharp[System.Tuple.Create#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#13)]
+ [!code-vb[System.Tuple.Create#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#13)]  
+  
+ Dieser Code entspricht dem folgenden Aufruf der <xref:System.Tuple%607.%23ctor%2A> Klassenkonstruktor.  
+  
+ [!code-csharp[System.Tuple.Create#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#14)]
+ [!code-vb[System.Tuple.Create#14](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4,T5,T6,T7,T8&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2,T3,T4,T5,T6,T7,Tuple&lt;T8&gt;&gt; Create&lt;T1,T2,T3,T4,T5,T6,T7,T8&gt; (T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`8&lt;!!T1, !!T2, !!T3, !!T4, !!T5, !!T6, !!T7, class System.Tuple`1&lt;!!T8&gt;&gt; Create&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4, !!T5 item5, !!T6 item6, !!T7 item7, !!T8 item8) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``8(``0,``1,``2,``3,``4,``5,``6,``7)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2,T3,T4,T5,T6,T7,System.Tuple&lt;T8&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+        <TypeParameter Name="T5" />
+        <TypeParameter Name="T6" />
+        <TypeParameter Name="T7" />
+        <TypeParameter Name="T8" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+        <Parameter Name="item5" Type="T5" />
+        <Parameter Name="item6" Type="T6" />
+        <Parameter Name="item7" Type="T7" />
+        <Parameter Name="item8" Type="T8" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Tupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Tupels.</typeparam>
+        <typeparam name="T3">Der Typ der dritten Komponente des Tupels.</typeparam>
+        <typeparam name="T4">Der Typ der vierten Komponente des Tupels.</typeparam>
+        <typeparam name="T5">Der Typ der fünften Komponente des Tupels.</typeparam>
+        <typeparam name="T6">Der Typ der sechsten Komponente des Tupels.</typeparam>
+        <typeparam name="T7">Der Typ der siebten Komponente des Tupels.</typeparam>
+        <typeparam name="T8">Der Typ der achten Komponente des Tupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Tupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Tupels.</param>
+        <param name="item3">Der Wert der dritten Komponente des Tupels.</param>
+        <param name="item4">Der Wert der vierten Komponente des Tupels.</param>
+        <param name="item5">Der Wert der fünften Komponente des Tupels.</param>
+        <param name="item6">Der Wert der sechsten Komponente des Tupels.</param>
+        <param name="item7">Der Wert der siebten Komponente des Tupels.</param>
+        <param name="item8">Der Wert der achten Komponente des Tupels.</param>
+        <summary>Erstellt ein neues 8-Tupel bzw. Oktupel.</summary>
+        <returns>Ein 8-Tupel (Oktupel), dessen Wert (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" />, <paramref name="item5" />, <paramref name="item6" />, <paramref name="item7" />, <paramref name="item8" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 8-Tupel zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen.  
+  
+> [!NOTE]
+>  Rufen Sie die <xref:System.Tuple%608.%23ctor%2A?displayProperty=nameWithType> Konstruktor zum Erstellen eines Tupels mit neun oder mehrere Komponenten, es sei denn, die Sprache für diesen Zweck eine spezielle Syntax bereitstellt. Die statische (`Shared` in Visual Basic) Methoden der <xref:System.Tuple> Klasse kann nicht zum Erstellen eines Tupels mit neun oder mehr Komponenten verwendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein 8-Tupel, dessen Komponenten Primzahlen sind, die kleiner als 20 sind.  
+  
+ [!code-csharp[System.Tuple.Create#17](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/createntuple.cs#17)]
+ [!code-vb[System.Tuple.Create#17](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/createntuple.vb#17)]  
+  
+ Dies entspricht dem folgenden Beispiel verwendet die <xref:System.Tuple%608> Klassenkonstruktor anstelle von der <xref:System.Tuple.Create%2A> Factory Erstellungsmethode. Beachten Sie, Instanziieren einer <xref:System.Tuple%608> Objekt auf diese Weise umfasst deutlich mehr Code, da Sie eine geschachtelte deklarieren, müssen <xref:System.Tuple%601> -Objekts entsprechend der <xref:System.Tuple%608> achten Komponente des Objekts, um ein Oktupel zu erzeugen.  
+  
+ [!code-csharp[System.Tuple.Create#20](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/ctor8.cs#20)]
+ [!code-vb[System.Tuple.Create#20](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/ctor8.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

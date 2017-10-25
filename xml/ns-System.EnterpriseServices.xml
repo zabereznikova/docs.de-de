@@ -1,0 +1,6 @@
+<Namespace Name="System.EnterpriseServices">
+  <Docs>
+    <summary>Die <see cref="N:System.EnterpriseServices" /> -Namespace stellt eine wichtige Infrastruktur für unternehmensanwendungen bereit. COM+-bereit Komponente Programmiermodelle bereitgestellt, die in einer unternehmensumgebung Services-Architektur. Dieser Namespace stellt Zugriff auf COM+-Dienste, aus der .NET Framework-Objekte praktikabler für unternehmensanwendungen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

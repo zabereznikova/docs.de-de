@@ -1,0 +1,718 @@
+<Type Name="SqlProfileProvider" FullName="System.Web.Profile.SqlProfileProvider">
+  <TypeSignature Language="C#" Value="public class SqlProfileProvider : System.Web.Profile.ProfileProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlProfileProvider extends System.Web.Profile.ProfileProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.SqlProfileProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Profile.ProfileProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet den Speicher der Profilinformationen für eine ASP.NET-Anwendung in einer SQL Server-Datenbank.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das ASP.NET-Profil wird zum Speichern und Abrufen von benutzereinstellungen in einer Datenquelle, z. B. eine Datenbank verwendet. Das Benutzerprofil erfolgt mithilfe der <xref:System.Web.HttpContext.Profile%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext>. Profil und die Eigenschaftswerte werden mit einem Profilanbieter verwaltet.  
+  
+ Die <xref:System.Web.Profile.SqlProfileProvider> Klasse wird von ASP.NET verwendet, zum Speichern und Abrufen von Einstellungen für Profil für eine ASP.NET-Anwendung, die SQL Server-Datenbank verwendet wird. Verwenden einer <xref:System.Web.Profile.SqlProfileProvider>, Sie müssen zuerst SQL Server-Datenbank verwendet werden, indem Sie erstellen die <xref:System.Web.Profile.SqlProfileProvider>. Zum Erstellen der Datenbank verwendet werden, indem Sie die <xref:System.Web.Profile.SqlProfileProvider>, führen Sie das Tool aspnet_regsql.exe, die im ist die [*Laufwerk*:] \WINDOWS\Microsoft.NET\Framework\\ `2.0versionNumber` Ordner, und geben Sie die **-p ** Option. Der folgende Befehl wird veranschaulicht, wie Sie die ausführbare Datei aspnet_regsql.exe verwenden können:  
+  
+```  
+aspnet_regsql.exe -A p  
+```  
+  
+ Im obigen Beispiel gibt keinen Namen für die Datenbank, die erstellt wird, damit der Standardname verwendet wird. Der Standarddatenbankname ist Aspnetdb.  
+  
+ Die Konfiguration des Computers enthält eine standardmäßige <xref:System.Web.Profile.SqlProfileProvider> -Instanz AspNetSqlProvider, die mit dem SQL Server auf dem lokalen Computer verbindet. Sie können dieser Instanz des Anbieters verwenden oder geben Sie eine eigene in der Datei "Web.config" für Ihre ASP.NET-Anwendung.  
+  
+> [!NOTE]
+>  Wenn der Anbieter mit einer Verbindungszeichenfolge, die die integrierte Sicherheit verwendet konfiguriert ist, muss das Prozesskonto der ASP.NET-Anwendung Rechte zum Verbinden mit SQL Server-Datenbank besitzen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Datei "Web.config" für eine ASP.NET-Anwendung für die Verwendung konfiguriert eine <xref:System.Web.Profile.SqlProfileProvider>.  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="SqlServices" connectionString=  
+      "Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
+  </connectionStrings>  
+  
+  <system.web>  
+    <authentication mode="Forms" >  
+      <forms loginUrl="login.aspx" name=".ASPXFORMSAUTH" />  
+    </authentication>  
+    <authorization>  
+      <deny users="?" />  
+    </authorization>  
+    <membership defaultProvider="SqlProvider"   
+      userIsOnlineTimeWindow="15">  
+      <providers>  
+        <clear/>  
+        <add name="SqlProvider"   
+          type="System.Web.Security.SqlMembershipProvider"   
+          connectionStringName="SqlServices"  
+          applicationName="SampleApplication"  
+          enablePasswordRetrieval="true"  
+          enablePasswordReset="true"  
+          passwordFormat="Encrypted"  
+          requiresQuestionAndAnswer="true" />  
+      </providers>  
+    </membership>  
+  
+    <profile defaultProvider="SqlProvider">  
+      <providers>  
+        <clear />  
+        <add name="SqlProvider"  
+          type="System.Web.Profile.SqlProfileProvider"  
+          connectionStringName="SqlServices"  
+          applicationName="SampleApplication"  
+          description="SqlProfileProvider for SampleApplication" />  
+      </providers>  
+  
+      <properties>  
+        <add name="ZipCode" />  
+        <add name="CityAndState" />  
+      </properties>  
+    </profile>  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlProfileProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SqlProfileProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.Profile.SqlProfileProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET ruft die <xref:System.Web.Profile.SqlProfileProvider.%23ctor%2A> Konstruktor zum Erstellen einer Instanz von der <xref:System.Web.Profile.SqlProfileProvider> -Klasse unter Verwendung der Werte in der Konfigurationsdatei für die Anwendung angegeben. Dieser Konstruktor ist nicht für die Verwendung aus dem Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public override string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.SqlProfileProvider.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Anwendung, für die zum Speichern und Abrufen von Profilinformationen.</summary>
+        <value>Der Name der Anwendung, für die zum Speichern und Abrufen von Profilinformationen. Die Standardeinstellung ist die <see cref="P:System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath" /> Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.SqlProfileProvider.ApplicationName%2A> Eigenschaft wird verwendet, durch die <xref:System.Web.Profile.SqlProfileProvider> , verschiedene Anwendungen Profilinformationen zugeordnet werden soll. Hierdurch können mehrere Anwendungen auf die gleiche Datenbank verwendet, um Benutzerinformationen zu speichern, ohne dass Konflikte zwischen doppelten Benutzer. Mehrere ASP.NET-Anwendungen können dieselbe Benutzerdatenbank durch Angabe des gleichen Werts in der <xref:System.Web.Profile.SqlProfileProvider.ApplicationName%2A> Eigenschaft. Die <xref:System.Web.Profile.SqlProfileProvider.ApplicationName%2A> Eigenschaft programmgesteuert festgelegt werden kann oder deklarativ in der Konfigurationsdatei für die Web-Anwendung mit festgelegt werden die `applicationName` Attribut.  
+  
+ Wenn kein Wert für angegeben wird die `applicationName` Attribut in der Konfigurationsdatei für die Webanwendung die <xref:System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath%2A> Wert für ASP.NET-Anwendungen verwendet wird. Für nicht-ASP.NET-Anwendungen, der Standardwert ist die <xref:System.Diagnostics.ProcessModule.ModuleName%2A> Wert ohne Dateierweiterung.  
+  
+> [!CAUTION]
+>  Da eine einzelne Standardinstanz Profil Anbieter für alle vom übermittelten Anforderungen verwendet wird ein <xref:System.Web.HttpApplication> -Objekt können mehrere Anforderungen gleichzeitig ausgeführt und versucht, legen Sie die <xref:System.Web.Profile.SqlProfileProvider.ApplicationName%2A> Eigenschaftswert. Die <xref:System.Web.Profile.SqlProfileProvider.ApplicationName%2A> Eigenschaft ist nicht für mehrere Schreibvorgänge threadsicher sind, und ändern die <xref:System.Web.Profile.SqlProfileProvider.ApplicationName%2A> Eigenschaftswert kann zu unerwartetem Verhalten für mehrere Benutzer einer Anwendung führen. Es wird empfohlen, dass Sie keinen Code schreiben, der Benutzern ermöglicht, legen Sie die <xref:System.Web.Profile.SqlProfileProvider.ApplicationName%2A> Eigenschaft es sei denn, Sie müssen. Ein Beispiel für eine Anwendung in dem das Festlegen der <xref:System.Web.Profile.SqlProfileProvider.ApplicationName%2A> Eigenschaft kann erforderlich sein, sollte eine verwaltende Anwendung, die Profildaten für mehrere Anwendungen verwaltet wird. Eine solche Anwendung sollte einen Einzelbenutzer-Anwendung und nicht um eine Webanwendung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Element in der `system.web` Abschnitt der Datei "Web.config" für eine ASP.NET-Anwendung. Es gibt an, der Anwendungsverzeichnis <xref:System.Web.Profile.SqlProfileProvider> Instanz und legt die <xref:System.Web.Profile.SqlProfileProvider.ApplicationName%2A> Eigenschaftswert an `MyApplication`.  
+  
+```  
+<profile defaultProvider="SqlProvider">  
+  <providers>  
+    <add name="SqlProvider"  
+      type="System.Web.Profile.SqlProfileProvider"  
+      connectionStringName="SqlServices"  
+      applicationName="MyApplication" />  
+   </providers>  
+</profile>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Es wurde versucht, Festlegen der <see cref="P:System.Web.Profile.SqlProfileProvider.ApplicationName" /> Eigenschaft von einem Aufrufer, die über keinen <see cref="F:System.Web.AspNetHostingPermissionLevel.High" /> Berechtigung Hosten von ASP.NET.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Es wurde versucht, Festlegen der <see cref="P:System.Web.Profile.SqlProfileProvider.ApplicationName" /> Eigenschaft, um eine Zeichenfolge, die länger als 256 Zeichen ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteInactiveProfiles">
+      <MemberSignature Language="C#" Value="public override int DeleteInactiveProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 DeleteInactiveProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SqlProfileProvider.DeleteInactiveProfiles(System.Web.Profile.ProfileAuthenticationOption,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Eines der <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> Werte, der angibt, ob anonyme, authentifizierte oder beide Typen von Profilen werden gelöscht.</param>
+        <param name="userInactiveSinceDate">Ein <see cref="T:System.DateTime" /> , identifiziert, welche Benutzerprofile als inaktiv betrachtet werden. Wenn die <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> eines Benutzers Profil tritt an oder vor diesem Datum und Uhrzeit, das Profil wird als inaktiv betrachtet.</param>
+        <summary>Löscht Benutzerprofildaten für Profile, die in der das Datum der letzten Aktivität vor dem angegebenen Datum und Uhrzeit aufgetreten ist.</summary>
+        <returns>Die Anzahl der Profile, die aus der Datenquelle gelöscht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.SqlProfileProvider.DeleteInactiveProfiles%2A> Methode wird verwendet, um nicht verwendete Profildaten aus der Datenquelle für die Anwendung durch Entfernen der `applicationName` Attribut in der Konfigurationsdatei. Verwenden der `authenticationOption` Parameter, um anzugeben, ob nur anonyme Profile soll nur authentifizierte Profile oder alle Profile gesucht werden soll. Von den durchsuchten Profilen wird jedes Profil mit einem <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> Dies tritt am oder vor dem angegebenen `userInactiveSinceDate` Parameterwert wird gelöscht.  
+  
+ Die Datenbankupdates, die während des Aufrufs ausgeführt werden die <xref:System.Web.Profile.SqlProfileProvider.DeleteInactiveProfiles%2A> Methode innerhalb einer Transaktion erfolgen. Wenn ein Fehler aufgetreten ist, wird ein Rollback für die Transaktion, und keine Updates ausgeführt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine ASP.NET-Seite auf, die inaktiven Profile verwaltet. Eine Schaltfläche wird bereitgestellt, um alle Profile löschen, die seit dem angegebenen Datum für ein Profil als inaktiv betrachtet nicht zugegriffen wurde.  
+  
+ [!code-aspx-csharp[System.Web.Profile.SqlProfileProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/CS/DeleteInactiveProfilescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Profile.SqlProfileProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/VB/DeleteInactiveProfilesvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteProfiles">
+      <MemberSignature Language="C#" Value="public override int DeleteProfiles (string[] usernames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 DeleteProfiles(string[] usernames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SqlProfileProvider.DeleteProfiles(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Ein Zeichenfolgenarray mit Benutzernamen für Profile gelöscht werden soll.</param>
+        <summary>Löscht Profileigenschaften und Informationen aus der Datenquelle für die bereitgestellte Liste der Benutzernamen an.</summary>
+        <returns>Die Anzahl der Profile, die aus der Datenquelle gelöscht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.SqlProfileProvider.DeleteProfiles%2A> -Methode löscht alle Profilinformationen und Eigenschaften für die angegebenen Profile aus der Datenquelle für die Anwendung gemäß der `applicationName` Attribut in der Konfigurationsdatei. Die Liste der zu löschenden Profile wird als ein Zeichenfolgenarray mit Benutzernamen angegeben. Wenn Profileigenschaften und Informationen, in der Datenquelle für einen Benutzernamen in vorhanden der `usernames` -Parameter werden gelöscht.  
+  
+ Der zurückgegebene Wert unterscheidet sich von der Länge des angegebenen Arrays von `usernames`. Dies bedeutet, dass einige der Profile im angegebenen Array von `usernames` wurden bereits aus dem Datenspeicher gelöscht.  
+  
+ Die Datenbankupdates, die während des Aufrufs ausgeführt werden die <xref:System.Web.Profile.SqlProfileProvider.DeleteProfiles%2A> Methode innerhalb einer Transaktion erfolgen. Wenn ein Fehler aufgetreten ist, wird ein Rollback für die Transaktion, und keine Updates ausgeführt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine ASP.NET-Seite auf, die inaktiven Profile verwaltet. Ein <xref:System.Web.UI.WebControls.GridView> -Steuerelement zeigt die inaktiven Profile zurückgegeben. Jede Zeile der <xref:System.Web.UI.WebControls.GridView> Steuerelement enthält eine Schaltfläche, die das Profil für diese Zeile aus der Datenquelle mit einem Aufruf von löscht die <xref:System.Web.Profile.SqlProfileProvider.DeleteProfiles%2A> Methode.  
+  
+ [!code-aspx-csharp[System.Web.Profile.SqlProfileProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/CS/DeleteInactiveProfilescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Profile.SqlProfileProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/VB/DeleteInactiveProfilesvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Länge von <paramref name="usernames" /> ist 0 (null).  
+  
+ \- oder –  
+  
+ Eines der Elemente im <paramref name="usernames" /> ist eine leere Zeichenfolge (""), eine Länge von 256 Zeichen überschreitet oder ein Komma enthält.  
+  
+ \- oder –  
+  
+ Zwei oder mehr Elemente im <paramref name="usernames" /> denselben Wert haben.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="usernames" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ Eines der Elemente im <paramref name="usernames" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteProfiles">
+      <MemberSignature Language="C#" Value="public override int DeleteProfiles (System.Web.Profile.ProfileInfoCollection profiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 DeleteProfiles(class System.Web.Profile.ProfileInfoCollection profiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SqlProfileProvider.DeleteProfiles(System.Web.Profile.ProfileInfoCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="profiles" Type="System.Web.Profile.ProfileInfoCollection" />
+      </Parameters>
+      <Docs>
+        <param name="profiles">Ein <see cref="T:System.Web.Profile.ProfileInfoCollection" /> , enthält die Profilinformationen für Profile gelöscht werden soll.</param>
+        <summary>Löscht Profileigenschaften und Informationen für die angegebene Liste von Profilen aus der Datenquelle an.</summary>
+        <returns>Die Anzahl der Profile, die aus der Datenquelle gelöscht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.SqlProfileProvider.DeleteProfiles%2A> -Methode löscht alle Profilinformationen und Eigenschaften für die angegebenen Profile aus der Datenquelle für die Anwendung gemäß der `applicationName` Attribut in der Konfigurationsdatei. Die Liste der zu löschenden Profile wird angegeben, mit einer <xref:System.Web.Profile.ProfileInfoCollection> als übergeben der `profiles` Parameter. Ein <xref:System.Web.Profile.ProfileInfoCollection> zurückgegeben werden kann, aus der <xref:System.Web.Profile.SqlProfileProvider.GetAllProfiles%2A>, <xref:System.Web.Profile.SqlProfileProvider.GetAllInactiveProfiles%2A>, <xref:System.Web.Profile.SqlProfileProvider.FindProfilesByUserName%2A>, und <xref:System.Web.Profile.SqlProfileProvider.FindInactiveProfilesByUserName%2A> Methoden.  
+  
+ Der Rückgabewert kann unterscheiden sich von der <xref:System.Web.Profile.ProfileInfoCollection.Count%2A> Wert für die angegebene <xref:System.Web.Profile.ProfileInfoCollection>. Dies bedeutet, dass einige der Profile im angegebenen <xref:System.Web.Profile.ProfileInfoCollection> nicht mehr im Datenspeicher gefunden wurden.  
+  
+ Die Datenbankupdates, die während des Aufrufs ausgeführt werden die <xref:System.Web.Profile.SqlProfileProvider.DeleteProfiles%2A> Methode innerhalb einer Transaktion erfolgen. Wenn ein Fehler aufgetreten ist, wird ein Rollback für die Transaktion, und keine Updates ausgeführt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermöglicht einem Benutzer zu suchende Profile mithilfe der <xref:System.Web.Profile.SqlProfileProvider.FindProfilesByUserName%2A> und <xref:System.Web.Profile.SqlProfileProvider.FindInactiveProfilesByUserName%2A> Methoden. Der Benutzer kann dann die zurückgegebenen Profile mit einem Aufruf von Löschen der <xref:System.Web.Profile.SqlProfileProvider.DeleteProfiles%2A> Methode.  
+  
+ [!code-aspx-csharp[System.Web.Profile.SqlProfileProvider#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/CS/FindProfilesByUserNamecs.aspx#5)]
+ [!code-aspx-vb[System.Web.Profile.SqlProfileProvider#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/VB/FindProfilesByUserNamevb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="profiles" />verfügt über eine <see cref="P:System.Web.Profile.ProfileInfoCollection.Count" /> Wert von 0 (null).  
+  
+ \- oder –  
+  
+ Eines der <see cref="T:System.Web.Profile.ProfileInfo" /> Objekte im <paramref name="profiles" /> verfügt über eine <see cref="P:System.Web.Profile.ProfileInfo.UserName" /> also eine leere Zeichenfolge (""), eine Länge von 256 Zeichen überschreitet oder ein Komma enthält.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="profiles" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ Eines der <see cref="T:System.Web.Profile.ProfileInfo" /> Objekte im <paramref name="profiles" /> verfügt über eine <see cref="P:System.Web.Profile.ProfileInfo.UserName" /> also <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindInactiveProfilesByUserName">
+      <MemberSignature Language="C#" Value="public override System.Web.Profile.ProfileInfoCollection FindInactiveProfilesByUserName (System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.Profile.ProfileInfoCollection FindInactiveProfilesByUserName(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, valuetype System.DateTime userInactiveSinceDate, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SqlProfileProvider.FindInactiveProfilesByUserName(System.Web.Profile.ProfileAuthenticationOption,System.String,System.DateTime,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Eines der <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> Werte, der angibt, ob anonyme, authentifizierte oder beide Typen von Profilen zurückgegeben werden.</param>
+        <param name="usernameToMatch">Der zu suchende Benutzername.</param>
+        <param name="userInactiveSinceDate">Ein <see cref="T:System.DateTime" /> , identifiziert, welche Benutzerprofile als inaktiv betrachtet werden. Wenn die <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> eines Benutzers Profil tritt an oder vor diesem Datum und Uhrzeit, das Profil wird als inaktiv betrachtet.</param>
+        <param name="pageIndex">Der Index der zurückzugebenden Ergebnisseite. <c>PageIndex</c> ist nullbasiert.</param>
+        <param name="pageSize">Die Größe der zurückzugebenden Ergebnisseite.</param>
+        <param name="totalRecords">Bei der Rückgabe dieser Methode enthält eine ganze Zahl, die die Gesamtanzahl der Profile identifiziert. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft Profilinformationen für Profile, bei denen das Datum der letzten Aktivität am oder vor dem angegebenen Datum und Uhrzeit und den Benutzernamen für das Profil, mit dem angegebenen Namen übereinstimmt.</summary>
+        <returns>Ein <see cref="T:System.Web.Profile.ProfileInfoCollection" /> Benutzerprofilinformationen für inaktive Profile, die dem Benutzernamen, in dem die angegebene übereinstimmt enthält <paramref name="usernameToMatch" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.SqlProfileProvider.FindInactiveProfilesByUserName%2A> Methode dient zum Abrufen von Profilinformationen für nicht verwendete Benutzerprofile für die angegebene Anwendung der `applicationName` Attribut in der Konfigurationsdatei. Diese Methode werden nur abgerufen, der Benutzername für das Profil für die angegebenen entspricht, Profile `usernameToMatch` Parameterwert. Verwenden der `authenticationOption` Parameter, um anzugeben, ob nur anonyme Profile soll nur authentifizierte Profile oder alle Profile gesucht werden soll. Von den durchsuchten Profilen wird jedes Profil mit einem <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> in diesem Fall vor dem angegebenen `userInactiveSinceDate` Parameterwert wird zurückgegeben.  
+  
+ Die <xref:System.Web.Profile.SqlProfileProvider> sucht eine Übereinstimmung mit der `usernameToMatch` Parameter den Wert unter Verwendung der `LIKE` -Schlüsselwort und die Unterstützung von Platzhalterzeichen, wie z. B. das Prozentzeichen (%). Beispielsweise, wenn die `usernameToMatch` Parameter auf "Benutzer1" festgelegt ist, und klicken Sie dann Profilinformationen für das Profil mit dem Benutzernamen "Benutzer1" zurückgegeben, falls vorhanden. Wenn die `usernameToMatch` Parameter auf "Benutzer%" festgelegt ist, dann werden Informationen zum Eigenschaftsprofil für Profile mit dem Benutzernamen "Benutzer1", "Benutzer2", "benutzer_admin" usw. zurückgegeben. Benutzer werden in der Reihenfolge zurückgegeben, deren Profile mit dem Datenspeicher hinzugefügt wurden.  
+  
+ Von der zurückgegebenen Ergebnisse <xref:System.Web.Profile.SqlProfileProvider.FindInactiveProfilesByUserName%2A> werden eingeschränkt, indem Sie die `pageIndex` und `pageSize` Parameter. Die `pageSize` Parameter gibt die maximale Anzahl von <xref:System.Web.Profile.ProfileInfo> Objekte zurückzugebenden in der <xref:System.Web.Profile.ProfileInfoCollection>. Die `pageIndex` Parameter identifiziert, welche Seite der zurückzugebenden Ergebnisseite; 0 die erste Seite identifiziert. Die `totalRecords` Parameter ist ein `out` Parameter, der die Gesamtzahl der inaktiven Profile für die konfigurierte festgelegt ist `applicationName`auf der Grundlage der `authenticationOption` und `userInactiveSinceDate` Parameter. Z. B. 13 Benutzer für die konfigurierte vorhanden sind `applicationName`, und die `pageIndex` ist der Wert 1 mit einem `pageSize` 5. Dies ist die <xref:System.Web.Profile.ProfileInfoCollection> zurückgegeben wird das sechste bis die zehnte inaktiven Profile enthalten. Die `totalRecords` -Parameter wird auf 13 festgelegt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel kann Benutzer zur bereitstellen, eine `usernameToMatch` Wert und eine <xref:System.Web.Profile.ProfileAuthenticationOption> und Ruft Profilinformationen für alle übereinstimmenden Profile. Im Beispiel kann auch der Benutzer anzugeben, ob ausschließlich inaktive Profile zurückgegeben. Wenn der Benutzer nur inaktive Profile angibt der <xref:System.Web.Profile.SqlProfileProvider.FindInactiveProfilesByUserName%2A> Methode wird aufgerufen, und andernfalls die <xref:System.Web.Profile.SqlProfileProvider.FindProfilesByUserName%2A> -Methode aufgerufen wird.  
+  
+ [!code-aspx-csharp[System.Web.Profile.SqlProfileProvider#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/CS/FindProfilesByUserNamecs.aspx#5)]
+ [!code-aspx-vb[System.Web.Profile.SqlProfileProvider#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/VB/FindProfilesByUserNamevb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="usernameToMatch" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="usernameToMatch" />ist eine leere Zeichenfolge ("") oder länger als 256 Zeichen.  
+  
+ \- oder –  
+  
+ <paramref name="pageIndex" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="pageSize" />ist kleiner als 1.  
+  
+ \- oder –  
+  
+ <paramref name="pageIndex" />multipliziert <paramref name="pageSize" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindProfilesByUserName">
+      <MemberSignature Language="C#" Value="public override System.Web.Profile.ProfileInfoCollection FindProfilesByUserName (System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.Profile.ProfileInfoCollection FindProfilesByUserName(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SqlProfileProvider.FindProfilesByUserName(System.Web.Profile.ProfileAuthenticationOption,System.String,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Eines der <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> Werte, der angibt, ob anonyme, authentifizierte oder beide Typen von Profilen zurückgegeben werden.</param>
+        <param name="usernameToMatch">Der zu suchende Benutzername.</param>
+        <param name="pageIndex">Der Index der zurückzugebenden Ergebnisseite. <c>PageIndex</c> ist nullbasiert.</param>
+        <param name="pageSize">Die Größe der zurückzugebenden Ergebnisseite.</param>
+        <param name="totalRecords">Bei der Rückgabe dieser Methode enthält eine ganze Zahl, die die Gesamtanzahl der Profile identifiziert. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft Profilinformationen für Profile, die in denen der Benutzername mit dem angegebenen Namen übereinstimmt.</summary>
+        <returns>Ein <see cref="T:System.Web.Profile.ProfileInfoCollection" /> Benutzerprofilinformationen für Profile, die dem Benutzernamen, in dem die angegebene übereinstimmt enthält <paramref name="usernameToMatch" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.SqlProfileProvider.FindInactiveProfilesByUserName%2A> Methode gibt eine Liste von Profilinformationen für die der Benutzername für das Profil dem angegebenen entspricht `usernameToMatch` Parameterwert für die konfigurierte <xref:System.Web.Profile.SqlProfileProvider.ApplicationName%2A>. Verwenden der `authenticationOption` Parameter, um anzugeben, ob nur anonyme Profile soll nur authentifizierte Profile oder alle Profile gesucht werden soll.  
+  
+ Die <xref:System.Web.Profile.SqlProfileProvider> sucht eine Übereinstimmung mit der `usernameToMatch` Parameter den Wert unter Verwendung der `LIKE` -Schlüsselwort und die Unterstützung von Platzhalterzeichen, wie z. B. das Prozentzeichen (%). Beispielsweise, wenn die `usernameToMatch` Parameter auf "Benutzer1" festgelegt ist, und klicken Sie dann Profilinformationen für das Profil mit dem Benutzernamen "Benutzer1" zurückgegeben, falls vorhanden. Wenn die `usernameToMatch` Parameter auf "Benutzer%" festgelegt ist, dann werden Informationen zum Eigenschaftsprofil für Profile mit dem Benutzernamen "Benutzer1", "Benutzer2", "benutzer_admin" usw. zurückgegeben. Benutzer werden in der Reihenfolge zurückgegeben, deren Profile mit dem Datenspeicher hinzugefügt wurden.  
+  
+ Von der zurückgegebenen Ergebnisse <xref:System.Web.Profile.SqlProfileProvider.FindProfilesByUserName%2A> werden eingeschränkt, indem Sie die `pageIndex` und `pageSize` Parameter. Die `pageSize` Parameter gibt die maximale Anzahl von <xref:System.Web.Profile.ProfileInfo> Objekte zurückzugebenden in der <xref:System.Web.Profile.ProfileInfoCollection>. Die `pageIndex` Parameter identifiziert, welche Seite der zurückzugebenden Ergebnisseite; 0 die erste Seite identifiziert. Die `totalRecords` Parameter ist ein `out` Parameter, der die Gesamtzahl der inaktiven Profile für die angegebene Anwendung festgelegt ist die `applicationName` Attribut in der Konfigurationsdatei auf Grundlage der `authenticationOption` und `userInactiveSinceDate` Parameter. Z. B. 13 Benutzer für die konfigurierte vorhanden sind `applicationName`, und die `pageIndex` ist der Wert 1 mit einem `pageSize` 5. Dies ist die <xref:System.Web.Profile.ProfileInfoCollection> zurückgegeben wird das sechste bis zehnte Profile enthalten. Die `totalRecords` -Parameter wird auf 13 festgelegt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel kann Benutzer zur bereitstellen, eine `usernameToMatch` Wert und eine <xref:System.Web.Profile.ProfileAuthenticationOption> und Ruft Profilinformationen für alle übereinstimmenden Profile. Im Beispiel kann auch der Benutzer anzugeben, ob ausschließlich inaktive Profile zurückgegeben. Wenn der Benutzer nur inaktive Profile angibt der <xref:System.Web.Profile.SqlProfileProvider.FindInactiveProfilesByUserName%2A> Methode wird aufgerufen, und andernfalls die <xref:System.Web.Profile.SqlProfileProvider.FindProfilesByUserName%2A> -Methode aufgerufen wird.  
+  
+ [!code-aspx-csharp[System.Web.Profile.SqlProfileProvider#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/CS/FindProfilesByUserNamecs.aspx#5)]
+ [!code-aspx-vb[System.Web.Profile.SqlProfileProvider#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/VB/FindProfilesByUserNamevb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="usernameToMatch" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="usernameToMatch" />ist eine leere Zeichenfolge ("") oder länger als 256 Zeichen.  
+  
+ \- oder –  
+  
+ <paramref name="pageIndex" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="pageSize" />ist kleiner als 1.  
+  
+ \- oder –  
+  
+ <paramref name="pageIndex" />multipliziert <paramref name="pageSize" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllInactiveProfiles">
+      <MemberSignature Language="C#" Value="public override System.Web.Profile.ProfileInfoCollection GetAllInactiveProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.Profile.ProfileInfoCollection GetAllInactiveProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, valuetype System.DateTime userInactiveSinceDate, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SqlProfileProvider.GetAllInactiveProfiles(System.Web.Profile.ProfileAuthenticationOption,System.DateTime,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Eines der <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> Werte, der angibt, ob anonyme, authentifizierte oder beide Typen von Profilen zurückgegeben werden.</param>
+        <param name="userInactiveSinceDate">Ein <see cref="T:System.DateTime" /> , identifiziert, welche Benutzerprofile als inaktiv betrachtet werden. Wenn die <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> eines Benutzers Profil tritt an oder vor diesem Datum und Uhrzeit, das Profil wird als inaktiv betrachtet.</param>
+        <param name="pageIndex">Der Index der zurückzugebenden Ergebnisseite. <c>PageIndex</c> ist nullbasiert.</param>
+        <param name="pageSize">Die Größe der zurückzugebenden Ergebnisseite.</param>
+        <param name="totalRecords">Bei der Rückgabe dieser Methode enthält eine ganze Zahl, die die Gesamtanzahl der Profile identifiziert. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft Benutzerprofildaten für Profile, die in der das Datum der letzten Aktivität am oder vor dem angegebenen Datum und Uhrzeit aufgetreten ist.</summary>
+        <returns>Ein <see cref="T:System.Web.Profile.ProfileInfoCollection" /> Benutzerprofilinformationen zu den inaktiven Profilen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.SqlProfileProvider.GetAllInactiveProfiles%2A> Methode dient zum Abrufen von Profilinformationen aus der Datenquelle für nicht verwendete Benutzerprofile für die angegebene Anwendung der `applicationName` Attribut in der Konfigurationsdatei. Verwenden der `authenticationOption` Parameter, um anzugeben, ob nur anonyme Profile soll nur authentifizierte Profile oder alle Profile gesucht werden soll. Von den durchsuchten Profilen wird jedes Profil mit einem <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> in diesem Fall vor dem angegebenen `userInactiveSinceDate` Parameterwert wird zurückgegeben.  
+  
+ Von der zurückgegebenen Ergebnisse <xref:System.Web.Profile.SqlProfileProvider.GetAllInactiveProfiles%2A> werden eingeschränkt, indem Sie die `pageIndex` und `pageSize` Parameter. Die `pageSize` Parameter gibt die maximale Anzahl von <xref:System.Web.Profile.ProfileInfo> Objekte zurückzugebenden in der <xref:System.Web.Profile.ProfileInfoCollection>. Die `pageIndex` Parameter identifiziert, welche Seite der zurückzugebenden Ergebnisseite; 0 die erste Seite identifiziert. Die `totalRecords` Parameter ist ein `out` Parameter, der die Gesamtzahl der inaktiven Profile für die konfigurierte festgelegt ist `applicationName`auf der Grundlage der `authenticationOption` und `userInactiveSinceDate` Parameter. Z. B. 13 Benutzer für die konfigurierte vorhanden sind `applicationName`, und die `pageIndex` ist der Wert 1 mit einem `pageSize` 5. Dies ist die <xref:System.Web.Profile.ProfileInfoCollection> zurückgegeben wird das sechste bis die zehnte inaktiven Profile enthalten. Die `totalRecords` -Parameter wird auf 13 festgelegt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine ASP.NET-Seite auf, die inaktiven Profile verwaltet. So löschen Sie alle inaktiven Profile wird eine Schaltfläche bereitgestellt. Gibt an, ob ein Profil als inaktiv betrachtet wird basiert auf dem Datum für die `userInactiveSinceDate` Parameter.  
+  
+ [!code-aspx-csharp[System.Web.Profile.SqlProfileProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/CS/DeleteInactiveProfilescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Profile.SqlProfileProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/VB/DeleteInactiveProfilesvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pageIndex" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="pageSize" />ist kleiner als 1.  
+  
+ \- oder –  
+  
+ <paramref name="pageIndex" />multipliziert <paramref name="pageSize" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllProfiles">
+      <MemberSignature Language="C#" Value="public override System.Web.Profile.ProfileInfoCollection GetAllProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.Profile.ProfileInfoCollection GetAllProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SqlProfileProvider.GetAllProfiles(System.Web.Profile.ProfileAuthenticationOption,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Eines der <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> Werte, der angibt, ob anonyme, authentifizierte oder beide Typen von Profilen zurückgegeben werden.</param>
+        <param name="pageIndex">Der Index der zurückzugebenden Ergebnisseite. <c>PageIndex</c> ist nullbasiert.</param>
+        <param name="pageSize">Die Größe der zurückzugebenden Ergebnisseite.</param>
+        <param name="totalRecords">Bei der Rückgabe dieser Methode enthält eine ganze Zahl, die die Gesamtanzahl der Profile identifiziert. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft Benutzerprofildaten für Profile in der Datenquelle ab.</summary>
+        <returns>Ein <see cref="T:System.Web.Profile.ProfileInfoCollection" /> Benutzerprofilinformationen für alle Profile in der Datenquelle enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.SqlProfileProvider.GetAllProfiles%2A> Methode dient zum Abrufen von Profilinformationen für Profile aus der Datenquelle für die angegebene Anwendung der `applicationName` Attribut in der Konfigurationsdatei. Verwenden der `authenticationOption` Parameter, um anzugeben, ob nur anonyme Profile soll nur authentifizierte Profile oder alle Profile gesucht werden soll.  
+  
+ Von der zurückgegebenen Ergebnisse <xref:System.Web.Profile.SqlProfileProvider.GetAllInactiveProfiles%2A> werden eingeschränkt, indem Sie die `pageIndex` und `pageSize` Parameter. Die `pageSize` Parameter gibt die maximale Anzahl von <xref:System.Web.Profile.ProfileInfo> Objekte zurückzugebenden in der <xref:System.Web.Profile.ProfileInfoCollection>. Die `pageIndex` Parameter identifiziert, welche Seite der zurückzugebenden Ergebnisseite; 0 die erste Seite identifiziert. Die `totalRecords` Parameter ist ein `out` Parameter, der die Gesamtzahl der inaktiven Profile für die konfigurierte festgelegt ist `applicationName`auf der Grundlage der `authenticationOption` und `userInactiveSinceDate` Parameter. Z. B. 13 Benutzer für die konfigurierte vorhanden sind `applicationName`, und die `pageIndex` ist der Wert 1 mit einem `pageSize` 5. Dies ist die <xref:System.Web.Profile.ProfileInfoCollection> zurückgegeben wird das sechste bis zehnte Profile enthalten. Die `totalRecords` -Parameter wird auf 13 festgelegt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Profilinformationen für alle Profile für die konfigurierte `applicationName` in Datenseiten.  
+  
+ [!code-aspx-csharp[System.Web.Profile.SqlProfileProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/CS/ShowProfilescs.aspx#3)]
+ [!code-aspx-vb[System.Web.Profile.SqlProfileProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/VB/ShowProfilesvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pageIndex" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="pageSize" />ist kleiner als 1.  
+  
+ \- oder –  
+  
+ <paramref name="pageIndex" />multipliziert <paramref name="pageSize" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNumberOfInactiveProfiles">
+      <MemberSignature Language="C#" Value="public override int GetNumberOfInactiveProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetNumberOfInactiveProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SqlProfileProvider.GetNumberOfInactiveProfiles(System.Web.Profile.ProfileAuthenticationOption,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Eines der <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> Werte, der angibt, ob anonyme, authentifizierte oder beide Typen von Profilen zurückgegeben werden.</param>
+        <param name="userInactiveSinceDate">Ein <see cref="T:System.DateTime" /> , identifiziert, welche Benutzerprofile als inaktiv betrachtet werden. Wenn die <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> eines Benutzers Profil tritt an oder vor diesem Datum und Uhrzeit, das Profil wird als inaktiv betrachtet.</param>
+        <summary>Ruft die Anzahl der Profile in der Datenquelle, in das Datum der letzten Aktivität aufgetreten ist, am oder vor dem angegebenen <paramref name="userInactiveSinceDate" />.</summary>
+        <returns>Die Anzahl der Profile in der Datenquelle, für die das Datum der letzten Aktivität vor dem angegebenen Datum und Uhrzeit aufgetreten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.SqlProfileProvider.GetNumberOfInactiveProfiles%2A> Methode wird verwendet, um alle nicht verwendeten Benutzerprofile aus der Datenquelle für die angegebene Anwendung Abrufen der `applicationName` Attribut in der Konfigurationsdatei. Verwenden der `authenticationOption` Parameter, um anzugeben, ob nur anonyme Profile soll nur authentifizierte Profile oder alle Profile gesucht werden soll. Gesuchte Profil, alle Profile mit einem <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> Dies tritt am oder vor dem angegebenen `userInactiveSinceDate` Parameterwert gezählt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel kann Benutzer anzeigen und aktive und inaktive Profilinformationen basierend auf Suchkriterien gelöscht. Anzahl der inaktiven Profile wird angezeigt, mit den Ergebnissen der <xref:System.Web.Profile.SqlProfileProvider.GetNumberOfInactiveProfiles%2A> Methode.  
+  
+ [!code-aspx-csharp[System.Web.Profile.SqlProfileProvider#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/CS/FindProfilesByUserNamecs.aspx#5)]
+ [!code-aspx-vb[System.Web.Profile.SqlProfileProvider#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/VB/FindProfilesByUserNamevb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValues">
+      <MemberSignature Language="C#" Value="public override System.Configuration.SettingsPropertyValueCollection GetPropertyValues (System.Configuration.SettingsContext sc, System.Configuration.SettingsPropertyCollection properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Configuration.SettingsPropertyValueCollection GetPropertyValues(class System.Configuration.SettingsContext sc, class System.Configuration.SettingsPropertyCollection properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SqlProfileProvider.GetPropertyValues(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sc" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="properties" Type="System.Configuration.SettingsPropertyCollection" />
+      </Parameters>
+      <Docs>
+        <param name="sc">Die <see cref="T:System.Configuration.SettingsContext" /> , die Benutzerprofilinformationen enthält.</param>
+        <param name="properties">Ein <see cref="T:System.Configuration.SettingsPropertyCollection" /> mit Profilinformationen für die Eigenschaften abgerufen werden sollen.</param>
+        <summary>Ruft Profilinformationen für die Eigenschaft und die Werte aus einer Datenbank der SQL Server-Profil ab.</summary>
+        <returns>Ein <see cref="T:System.Configuration.SettingsPropertyValueCollection" /> Profil Eigenschaftsinformationen und Werten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.SqlProfileProvider.GetPropertyValues%2A> Methode wird verwendet, durch die <xref:System.Web.Profile.ProfileBase> Klasse zum Abrufen von Eigenschaften des Profils für die aktuelle Anforderung, die von verwaltet werden die <xref:System.Web.Profile.SqlProfileProvider>. Eigenschaftswerte werden zurückgegeben, aus der Datenquelle für die Anwendung gemäß der `applicationName` Attribut in der Konfigurationsdatei. Eigenschaftswerte und zusätzliche Informationen werden zurückgegeben, als eine Auflistung von <xref:System.Configuration.SettingsPropertyValue> Objekte.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel listet die Profileigenschaften und Werte, die in das aktuelle Profil identifiziert.  
+  
+ [!code-csharp[System.Web.Profile.SqlProfileProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/CS/getpropertyvaluescs.aspx#1)]
+ [!code-vb[System.Web.Profile.SqlProfileProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/VB/getpropertyvaluesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SqlProfileProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.Web.Profile.SqlProfileProvider" /> Instanz initialisiert werden.</param>
+        <param name="config">Ein <see cref="T:System.Collections.Specialized.NameValueCollection" /> , enthält die Namen und Werte der Konfigurationsoptionen für den Anbieter.</param>
+        <summary>Initialisiert den Anbieter der SQL Server-Profil mit den Eigenschaftswerten, die in der ASP.NET-Anwendung Konfigurationsdatei angegeben. Diese Methode ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verwendet diese Methode zum Initialisieren der <xref:System.Web.Profile.SqlProfileProvider> mit den Eigenschaftswerten, die in der Anwendungskonfigurationsdatei (Web.config) für das ASP.NET angegeben. Diese Methode ist nicht für die direkte Verwendung im Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Die <see langword="connectionStringName" /> Attribut ist eine leere Zeichenfolge ("") oder nicht in der Konfigurationsdatei der Anwendung angegeben ist, dafür <see cref="T:System.Web.Profile.SqlProfileProvider" /> Instanz.  
+  
+ \- oder –  
+  
+ Der Wert der Verbindungszeichenfolge angegeben wird, der <see langword="connectionStringName" /> Attributwert leer ist oder das angegebene <see langword="connectionStringName" /> Wert existiert nicht in der Anwendungskonfigurationsdatei für diesen <see cref="T:System.Web.Profile.SqlProfileProvider" /> Instanz.  
+  
+ \- oder –  
+  
+ Die <see langword="applicationName" /> Attributwert ist länger als 256 Zeichen.  
+  
+ \- oder –  
+  
+ Die Konfigurationsdatei der Anwendung für diese <see cref="T:System.Web.Profile.SqlProfileProvider" /> Instanz enthält ein nicht erkanntes Attribut.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="config" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">Die aktuellen Vertrauensebene ist kleiner als <see cref="F:System.Web.AspNetHostingPermissionLevel.Low" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyValues">
+      <MemberSignature Language="C#" Value="public override void SetPropertyValues (System.Configuration.SettingsContext sc, System.Configuration.SettingsPropertyValueCollection properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetPropertyValues(class System.Configuration.SettingsContext sc, class System.Configuration.SettingsPropertyValueCollection properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SqlProfileProvider.SetPropertyValues(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sc" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="properties" Type="System.Configuration.SettingsPropertyValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="sc">Die <see cref="T:System.Configuration.SettingsContext" /> , die Benutzerprofilinformationen enthält.</param>
+        <param name="properties">Ein <see cref="T:System.Configuration.SettingsPropertyValueCollection" /> , Profilinformationen und Werte für die Eigenschaften aktualisiert werden.</param>
+        <summary>Aktualisiert die SQL Server-Profildatenbank mit den angegebenen Eigenschaftswerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.SqlProfileProvider.SetPropertyValues%2A> Methode wird von ASP.NET Profildienste verwendet, die SQL Server-Profil-Datenbank zu aktualisieren, wenn Eigenschaftswerte für die aktuelle Anforderung festgelegt werden. Eigenschaftswerte werden in der Datenquelle für die angegebene Anwendung Festlegen der `applicationName` Attribut in der Konfigurationsdatei. Profil Eigenschaftsinformationen und Werten aktualisiert werden die <xref:System.Web.Profile.SqlProfileProvider> angegeben sind, als eine Auflistung von <xref:System.Configuration.SettingsPropertyValue> Objekte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Profile.SqlProfileProvider.SetPropertyValues%2A> Methode, um Profileigenschaftswerte zu ändern.  
+  
+ [!code-csharp[System.Web.Profile.SqlProfileProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/CS/setpropertyvaluescs.aspx#2)]
+ [!code-vb[System.Web.Profile.SqlProfileProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.SqlProfileProvider/VB/setpropertyvaluesvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

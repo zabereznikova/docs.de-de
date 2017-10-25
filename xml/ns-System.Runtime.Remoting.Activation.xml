@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.Remoting.Activation">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Remoting.Activation" /> -Namespace stellt Klassen und Objekte, die Server- und Aktivierung von remote-Objekte zu unterstützen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,97 @@
+<Type Name="Pair" FullName="System.Web.UI.Pair">
+  <TypeSignature Language="C#" Value="public sealed class Pair" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit Pair extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Pair" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine grundlegende Hilfsprogrammklasse, die zum Speichern von beiden verknüpften Objekte verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Pair> Klasse dient als eine grundlegende Struktur zum Speichern von beiden verknüpften Objekte. Es ist eine Hilfsprogrammklasse, die auf verschiedene Weise in der gesamten ASP.NET, z. B. während der Seite Status Verwaltungsaufgaben oder in Konfigurationsabschnittshandler verwendet wird. Sie können die <xref:System.Web.UI.Pair> -Klasse in Ihrem eigenen Code an einer beliebigen Stelle, die Sie benötigen eine Struktur mit beiden verknüpften Objekte und, in dem Ausblenden von Daten nicht unbedingt erforderlich ist. Die <xref:System.Web.UI.Pair> -Klasse nicht seine Objektverweise Klassenfelder <xref:System.Web.UI.Pair.First> und <xref:System.Web.UI.Pair.Second>, in den Eigenschaften; macht sie direkt an alle aufrufenden Code als öffentliche Klassenfelder.  
+  
+ Die <xref:System.Web.UI.Pair> -Klasse kann auf verschiedene Weise in die Seite Status Persistenz Implementierungen verwendet werden. Die häufigste Verwendung wird als Container für sowohl die <xref:System.Web.UI.Control.ViewState%2A> und <xref:System.Web.UI.PageStatePersister.ControlState%2A> Sammlungen. In diesem Fall die <xref:System.Web.UI.Pair.First> Eigenschaft wird zum <xref:System.Web.UI.Control.ViewState%2A>, und die <xref:System.Web.UI.Pair.Second> für <xref:System.Web.UI.PageStatePersister.ControlState%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pair ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Pair.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Web.UI.Pair" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pair (object x, object y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object x, object y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Pair.#ctor(System.Object,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Object" />
+        <Parameter Name="y" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="x">Ein Objekt.</param>
+        <param name="y">Ein Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Pair" /> -Klasse unter Verwendung der angegebenen Objekt-Paar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="First">
+      <MemberSignature Language="C#" Value="public object First;" />
+      <MemberSignature Language="ILAsm" Value=".field public object First" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.Pair.First" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das erste Objekt der Objekt-Paar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Second">
+      <MemberSignature Language="C#" Value="public object Second;" />
+      <MemberSignature Language="ILAsm" Value=".field public object Second" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.Pair.Second" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das zweite Objekt des Objektpaars.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

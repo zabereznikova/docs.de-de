@@ -1,0 +1,73 @@
+<Type Name="ParameterGenerationOption" FullName="System.Data.Design.ParameterGenerationOption">
+  <TypeSignature Language="C#" Value="public enum ParameterGenerationOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ParameterGenerationOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Design.ParameterGenerationOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Legt den Typ der Parameter, die generiert werden in einem typisierten <see cref="T:System.Data.DataSet" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Design.ParameterGenerationOption> Enumeration wird zum Teilen der <xref:System.Data.Design.MethodSignatureGenerator> den Typ der Parameter in einem typisierten Dataset zu generieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClrTypes">
+      <MemberSignature Language="C#" Value="ClrTypes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Design.ParameterGenerationOption ClrTypes = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Design.ParameterGenerationOption.ClrTypes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Design.ParameterGenerationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Parameter in das typisierte Dataset sind CLR-Typen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Objects">
+      <MemberSignature Language="C#" Value="Objects" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Design.ParameterGenerationOption Objects = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Design.ParameterGenerationOption.Objects" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Design.ParameterGenerationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Parameter in typisierten Datasets sind alle <see cref="T:System.Object" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlTypes">
+      <MemberSignature Language="C#" Value="SqlTypes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Design.ParameterGenerationOption SqlTypes = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Design.ParameterGenerationOption.SqlTypes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Design.ParameterGenerationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Parameter im typisierten Dataset sind Sql-Typen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

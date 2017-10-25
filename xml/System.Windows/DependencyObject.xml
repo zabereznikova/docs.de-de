@@ -1,0 +1,625 @@
+<Type Name="DependencyObject" FullName="System.Windows.DependencyObject">
+  <TypeSignature Language="C#" Value="public class DependencyObject : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DependencyObject extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DependencyObject" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeDescriptionProvider(typeof(MS.Internal.ComponentModel.DependencyObjectProvider))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.NameScopeProperty("NameScope", typeof(System.Windows.NameScope))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Objekt dar, das im Abhängigkeitseigenschaftensystem teilnimmt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DependencyObject> -Klasse ermöglicht es [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Eigenschaftensystemdienste für viele abgeleiteten Klassen.  
+  
+ Primäre Funktion im Eigenschaftensystem wird zum Berechnen der Werte der Eigenschaften und systembenachrichtigung zu Werten bereitzustellen, die geändert wurden. Eine andere schlüsselklasse, die in dem Eigenschaftensystem einbezogen ist <xref:System.Windows.DependencyProperty>. <xref:System.Windows.DependencyProperty>ermöglicht die Registrierung von Abhängigkeitseigenschaften im Eigenschaftensystem und Identifikation und Informationen für jede Abhängigkeitseigenschaft während <xref:System.Windows.DependencyObject> eine Basisklasse ermöglicht die Objekte, die die Abhängigkeitseigenschaften verwendet.  
+  
+ <xref:System.Windows.DependencyObject>Dienste und Merkmale umfassen Folgendes:  
+  
+-   Unterstützung für das hosting Abhängigkeitseigenschaft. Registrieren Sie eine Abhängigkeitseigenschaft, durch Aufrufen der <xref:System.Windows.DependencyProperty.Register%2A> -Methode, und Speichern der Rückgabewert der Methode als öffentliche statische Feld in Ihrer Klasse.  
+  
+-   Angefügte Eigenschaft, die Unterstützung für das hosting. Sie registrieren eine angefügte Eigenschaft durch Aufrufen der <xref:System.Windows.DependencyProperty.RegisterAttached%2A> -Methode, und Speichern der Rückgabewert der Methode als öffentliche statische schreibgeschützte Feld in Ihrer Klasse. (Es gibt auch zusätzliche Memberanforderungen; Beachten Sie, dass dies stellt eine [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] spezifischen Implementierung für angefügte Eigenschaften. Weitere Informationen finden Sie unter [Eigenschaftenübersicht angefügt](~/docs/framework/wpf/advanced/attached-properties-overview.md).) Die angefügte Eigenschaft kann dann festgelegt werden, auf jede Klasse, die abgeleitet <xref:System.Windows.DependencyObject>.  
+  
+-   Abrufen, festlegen und Löschen von Hilfsmethoden für die Werte aller Abhängigkeitseigenschaften, die auf die <xref:System.Windows.DependencyObject>.  
+  
+-   Metadaten, coerce-Wert-Unterstützung, geänderten Eigenschaft Benachrichtigung und Außerkraftsetzung Rückrufe für Abhängigkeitseigenschaften oder angefügte Eigenschaften. Darüber hinaus die <xref:System.Windows.DependencyObject> Klasse vereinfacht die Eigenschaftenmetadaten für eine Abhängigkeitseigenschaft.  
+  
+-   Eine allgemeine Basisklasse für Klassen abgeleitet <xref:System.Windows.ContentElement>, <xref:System.Windows.Freezable>, oder <xref:System.Windows.Media.Visual>. (<xref:System.Windows.UIElement>, Basiselementklasse, verfügt über eine Hierarchie von Klassen, die enthält <xref:System.Windows.Media.Visual>.)  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel leitet sich von <xref:System.Windows.DependencyObject> zum Erstellen einer neuen abstrakte Klasse. Die Klasse registriert eine angefügte Eigenschaft dann und schließt Elemente der Unterstützung für diese angefügten Eigenschaft.  
+  
+ [!code-csharp[WPFAquariumSln#DOMain](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#domain)]
+ [!code-vb[WPFAquariumSln#DOMain](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#domain)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DependencyObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.DependencyObject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearValue">
+      <MemberSignature Language="C#" Value="public void ClearValue (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearValue(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.ClearValue(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Die Abhängigkeitseigenschaft, deren Wert gelöscht werden soll, wird durch einen <see cref="T:System.Windows.DependencyProperty" />-Objektverweis identifiziert.</param>
+        <summary>Löscht den lokalen Wert einer Eigenschaft. Die Eigenschaft, deren Wert gelöscht werden soll, wird durch einen <see cref="T:System.Windows.DependencyProperty" />-Bezeichner angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löschen den Wert der Eigenschaft durch den Aufruf <xref:System.Windows.DependencyObject.ClearValue%2A> ist nicht zwingend auf einer Abhängigkeitseigenschaft den Standardwert, der in den Metadaten der Abhängigkeitseigenschaft angegeben ist. Löschen die Eigenschaft nur speziell löscht der lokaler Wert möglicherweise angewendet wurden. Weitere Informationen finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel durchläuft alle Eigenschaften, die lokalen Werte, die auf ein Objekt festgelegt wurden ruft dann <xref:System.Windows.DependencyObject.ClearValue%2A> So löschen Sie die Werte dieser Eigenschaften.  
+  
+ [!code-csharp[DPClearValue#IterateLocalValuesAndClear](~/samples/snippets/csharp/VS_Snippets_Wpf/DPClearValue/CSharp/default.xaml.cs#iteratelocalvaluesandclear)]
+ [!code-vb[DPClearValue#IterateLocalValuesAndClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPClearValue/VisualBasic/default.xaml.vb#iteratelocalvaluesandclear)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, <see cref="M:System.Windows.DependencyObject.ClearValue(System.Windows.DependencyProperty)" /> für ein versiegeltes <see cref="T:System.Windows.DependencyObject" /> aufzurufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearValue">
+      <MemberSignature Language="C#" Value="public void ClearValue (System.Windows.DependencyPropertyKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearValue(class System.Windows.DependencyPropertyKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.ClearValue(System.Windows.DependencyPropertyKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.DependencyPropertyKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel für die Abhängigkeitseigenschaft, deren Wert gelöscht werden soll.</param>
+        <summary>Löscht den lokalen Wert einer schreibgeschützten Eigenschaft. Die Eigenschaft, deren Wert gelöscht werden soll, wird durch einen <see cref="T:System.Windows.DependencyPropertyKey" /> angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.DependencyPropertyKey> eine schreibgeschützte Abhängigkeitseigenschaft für Systemvorgänge Eigenschaft identifiziert. Klassen, die nur-Lese Abhängigkeitseigenschaften definieren sollten öffentlichen Zugriff auf diesen Schlüssel nicht verfügbar. Ein öffentlich verfügbarer Schlüssel würde eine öffentliche Code Weg, die schreibgeschützt sind und die Eigenschaft unterlaufen bereitstellen, wenn Methoden, z. B. <xref:System.Windows.DependencyObject.ClearValue%2A> oder <xref:System.Windows.DependencyObject.SetValue%2A> außerhalb der Klasse oder Assembly verweisen auf den Schlüssel aufgerufen werden.  
+  
+ Löschen den Wert der Eigenschaft durch den Aufruf <xref:System.Windows.DependencyObject.ClearValue%2A> ist nicht zwingend auf einer Abhängigkeitseigenschaft den Standardwert, der in den Metadaten der Abhängigkeitseigenschaft angegeben ist. Löschen den Wert nur speziell löscht der lokaler Wert möglicherweise angewendet wurden. Weitere Informationen finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, <see cref="M:System.Windows.DependencyObject.ClearValue(System.Windows.DependencyProperty)" /> für ein versiegeltes <see cref="T:System.Windows.DependencyObject" /> aufzurufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CoerceValue">
+      <MemberSignature Language="C#" Value="public void CoerceValue (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CoerceValue(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.CoerceValue(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Der Bezeichner für die zu erzwingende Abhängigkeitseigenschaft.</param>
+        <summary>Erzwingt den Wert der angegebenen Abhängigkeitseigenschaft. Dies erfolgt durch den Aufruf einer beliebigen <see cref="T:System.Windows.CoerceValueCallback" />-Funktion, die in den Metadaten für die Abhängigkeitseigenschaft angegeben ist, während sie beim aufrufenden <see cref="T:System.Windows.DependencyObject" /> beendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusätzlich zu den aufgerufenen explizit durch Aufrufen von <xref:System.Windows.DependencyObject.CoerceValue%2A>, <xref:System.Windows.CoerceValueCallback> für eine Abhängigkeit Eigenschaft ist auch dann aufgerufen, intern Wenn Werts der Abhängigkeitseigenschaft vom erneut ausgewertet wird die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem.  
+  
+ Beim Aufruf der <xref:System.Windows.DependencyObject.CoerceValue%2A> -Methode, rufen Sie letztendlich den Rückruf zum Wert für die Eigenschaft, die Sie angeben. In der Regel rufen Sie <xref:System.Windows.DependencyObject.CoerceValue%2A> nur, wenn Sie wissen, dass ein Rückruf zum Wert vorhanden ist und Sie wissen, dass die Rückruf-Kriterien für die Umwandlung.  
+  
+ Das häufigste Szenario für den Aufruf von <xref:System.Windows.DependencyObject.CoerceValue%2A> liegt innerhalb der Rückrufe Klasse behandeln oder die Eigenschaft der Änderung von verwandten Eigenschaften, die jeweils anderen Werte in einer abhängigen Weise beeinflussen. Weitere Informationen finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Windows.DependencyObject.CoerceValue%2A> innerhalb einer <xref:System.Windows.PropertyChangedCallback> Implementierung, die verwendet wird, als die <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> für einen anderen Abhängigkeitseigenschaften für die gleiche Klasse. Dies ist ein allgemeines Muster für die Einführung der Wert "true" Abhängigkeiten zwischen Abhängigkeitseigenschaften.  
+  
+ [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
+ [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der angegebene <paramref name="dp" /> oder sein Wert waren ungültig oder sind nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DependencyObjectType">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObjectType DependencyObjectType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyObjectType DependencyObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyObject.DependencyObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObjectType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.DependencyObjectType" /> , umschließt der [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] dieses Instanzentyps.</summary>
+        <value>Ein <see cref="T:System.Windows.DependencyObjectType" /> , umschließt der [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] dieses Instanzentyps.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich, wenn ein Objekt, das von einer Methode zurückgegeben wird einen Typ des Rückgabewerts enthält <xref:System.Windows.DependencyObject> und Eigenschaft System Ausführen bestimmter Vorgänge davon abhängig vom Anwendungstyp werden sollen. Beispielsweise ist es effizienter, rufen Sie <xref:System.Windows.DependencyProperty.GetMetadata%28System.Windows.DependencyObjectType%29> mithilfe der <xref:System.Windows.DependencyObjectType> statt über das [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] Typ. <xref:System.Windows.DependencyObjectType>ermöglicht eine schnellere Suche.  
+  
+   
+  
+## Examples  
+ Im folgenden Pseudocodebeispiel `MySubClass` geht davon aus, dass abgeleitete Klassen den Standardwert ändern, können die `MyCustom` Abhängigkeitseigenschaft. Die Klasse implementiert einen Standardkonstruktor, die die tatsächliche abgeleitete Klasse bestimmen kann, durch die Nutzung von Polymorphie auf die <xref:System.Windows.DependencyObjectType> Wert als eine abgeleitete Klasse zurückgreift, Konstruktor verwendet wird.  
+  
+ `public DOClass() : base()`  
+  
+ `{`  
+  
+ `__customPropertyCache = (CustomDP)`  
+  
+ `CustomDPProperty.GetMetadata(DependencyObjectType).DefaultValue;`  
+  
+ `}`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override sealed bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der <see cref="T:System.Windows.DependencyObject" />, der mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Bestimmt, ob ein bereitgestelltes <see cref="T:System.Windows.DependencyObject" /> ist gleichbedeutend mit dem aktuellen <see cref="T:System.Windows.DependencyObject" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Instanzen gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung wird nur auf Verweisgleichheit und versucht nicht, Wertgleichheit der enthaltenen Eigenschaften auswerten.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="T:System.Windows.DependencyObject" />außer Kraft gesetzt, und klicken Sie dann zwei Basic versiegelt <see cref="T:System.Object" /> Methoden: <see cref="M:System.Windows.DependencyObject.Equals(System.Object)" /> und <see cref="M:System.Windows.DependencyObject.GetHashCode" />. Der Aufruf überschreibt die <see cref="T:System.Object" /> Implementierungen, die ein Objekt auf Gleichheit Verhalten führen. Der Zweck dieser absichtlichen Außerkraftsetzungen wird verhindert, dass abgeleitete Klassen eine Wertgleichheit für definieren möchten eine <see cref="T:System.Windows.DependencyObject" />. Wert Gleichheitsprädikate für <see cref="T:System.Windows.DependencyObject" /> werden nie genau aufgrund Wert ändern-Funktionen des Standard-Eigenschaft einer <see cref="T:System.Windows.DependencyObject" /> und seine Abhängigkeitseigenschaften. Dazu gehören grundlegende [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Funktionen, z. B. Datenbindung und die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override sealed int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Hashcode für diese <see cref="T:System.Windows.DependencyObject" /> ab.</summary>
+        <returns>Ein 32-Bit-Ganzzahl-Hashcode mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="T:System.Windows.DependencyObject" />überschreibt und versiegelt anschließend zwei <see cref="T:System.Object" /> Methoden: <see cref="M:System.Windows.DependencyObject.Equals(System.Object)" /> und <see cref="M:System.Windows.DependencyObject.GetHashCode" />. Der Aufruf überschreibt die <see cref="T:System.Object" /> Implementierungen, die ein Objekt auf Gleichheit Verhalten führen. Der Zweck dieser absichtlichen Außerkraftsetzungen wird verhindert, dass abgeleitete Klassen eine Wertgleichheit für definieren möchten eine <see cref="T:System.Windows.DependencyObject" />. Wert Gleichheitsprädikate für <see cref="T:System.Windows.DependencyObject" /> werden nie genau aufgrund Wert ändern-Funktionen des Standard-Eigenschaft einer <see cref="T:System.Windows.DependencyObject" /> und seine Abhängigkeitseigenschaften. Dazu gehören grundlegende [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Funktionen, z. B. Datenbindung und die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalValueEnumerator">
+      <MemberSignature Language="C#" Value="public System.Windows.LocalValueEnumerator GetLocalValueEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.LocalValueEnumerator GetLocalValueEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.GetLocalValueEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalValueEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen spezialisierten Enumerator, um zu bestimmen, welche Abhängigkeitseigenschaften lokal Werte für dieses festgelegt haben <see cref="T:System.Windows.DependencyObject" />.</summary>
+        <returns>Ein Wertenumerator, spezielle lokale.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein *lokaler Wert* ist jeder Wert einer Abhängigkeitseigenschaft, die festgelegt wurde, indem Sie <xref:System.Windows.DependencyObject.SetValue%2A>, im Gegensatz zu anderen Aspekte des Eigenschaftensystems.  
+  
+ Die <xref:System.Windows.LocalValueEnumerator> durch den Aufruf von <xref:System.Windows.DependencyObject.GetLocalValueEnumerator%2A> können verwendet werden, um die Eigenschaften aufgelistet, die ein lokal festgelegter haben Wert auf eine <xref:System.Windows.DependencyObject> Instanz. Jede dieser Eigenschaften wird dargestellt, in der Enumerator durch einen <xref:System.Windows.LocalValueEntry> -Objekt, das Eigenschaften verfügt, die die spezifische verweisen <xref:System.Windows.DependencyProperty> und die zugehörigen Werte. Diese Technik Aufzählen über die lokal festgelegte Werte dienen zur Optimierung oder für andere Behandlung von lokalen Werte wie z. B. um zu bestimmen, welche Eigenschaftswerte des eine <xref:System.Windows.DependencyObject> ändern würde, wenn sie deaktiviert wurden.  
+  
+> [!IMPORTANT]
+>  Das zurückgegebene <xref:System.Windows.LocalValueEnumerator> enthalten möglicherweise <xref:System.Windows.LocalValueEntry> Datensätze für Abhängigkeitseigenschaften, die schreibgeschützt sind oder Abhängigkeitseigenschaften, deren Werte vom Eigenschaftensystem berechnet werden. Ein visuelles Element, das eine eingerichtete Breite durch Layout verfügt z. B. einen lokalen Wert für meldet <xref:System.Windows.FrameworkElement.ActualWidth%2A>. Wenn Sie lokale Werte abrufen, um diese zurückzusetzen, überprüfen Sie die <xref:System.Windows.DependencyProperty.ReadOnly%2A> Wert der Eigenschaft-ID der einzelnen <xref:System.Windows.LocalValueEntry> zu überprüfen, ob die <xref:System.Windows.DependencyProperty> zweifelhaft ist nicht schreibgeschützt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel durchläuft alle Eigenschaften, die lokalen Werte, die auf ein Objekt festgelegt wurden ruft dann <xref:System.Windows.DependencyObject.ClearValue%2A> So löschen Sie die Werte dieser Eigenschaften.  
+  
+ [!code-csharp[DPClearValue#IterateLocalValuesAndClear](~/samples/snippets/csharp/VS_Snippets_Wpf/DPClearValue/CSharp/default.xaml.cs#iteratelocalvaluesandclear)]
+ [!code-vb[DPClearValue#IterateLocalValuesAndClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPClearValue/VisualBasic/default.xaml.vb#iteratelocalvaluesandclear)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.GetValue(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Die <see cref="T:System.Windows.DependencyProperty" /> Bezeichner für die Eigenschaft zum Abrufen des Werts für.</param>
+        <summary>Gibt den aktuellen effektiven Wert einer Abhängigkeitseigenschaft für diese Instanz ein <see cref="T:System.Windows.DependencyObject" />.</summary>
+        <returns>Gibt den aktuellen effektiven Wert zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die *effektiven Wert* ist der Wert der Eigenschaft, die von dem Eigenschaftensystem für jeden Aufrufer zurückgegeben wird, die den Wert anfordert. Der effektive Wert ist das Ergebnis des Eigenschaftensystems müssen alle möglichen Eingaben, die in der Eigenschaft System Wert Rangfolge einbezogen ausgewertet. Dies schließt die Umwandlung und Animation. Weitere Informationen finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+ Diese Methode gibt nie zurück <xref:System.Windows.DependencyProperty.UnsetValue>. Die <xref:System.Windows.DependencyProperty.UnsetValue> ist ein Sentinelwert für die Eigenschaftensystem, in verschiedene Kapazitäten verfügbar gemachten intern und gelegentlich auch mithilfe von Rückrufen in Umwandlung verwendet wird.  
+  
+ Wenn Sie nicht sicher sind, wie der Typ der Eigenschaft sein soll, können Sie den Bezeichner der angeforderten Abhängigkeitseigenschaft zu bestimmen, ob es eine spezifischere Abfragen <xref:System.Windows.DependencyProperty.PropertyType%2A> , die der Rückgabewert in konvertiert werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das angegebene <paramref name="dp" /> oder sein Wert ist ungültig, oder das angegebene <paramref name="dp" /> ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidateProperty">
+      <MemberSignature Language="C#" Value="public void InvalidateProperty (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvalidateProperty(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.InvalidateProperty(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Die <see cref="T:System.Windows.DependencyProperty" /> Bezeichner der Eigenschaft, die für ungültig zu erklären.</param>
+        <summary>Den effektiven Wert für die angegebene Abhängigkeitseigenschaft erneut bewertet werden soll</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufruf <xref:System.Windows.DependencyObject.InvalidateProperty%2A>, alle zugeordneten und anwendbaren <xref:System.Windows.CoerceValueCallback> oder <xref:System.Windows.PropertyChangedCallback> Funktionen registriert werden, für die Abhängigkeitseigenschaft aufgerufen werden kann.  
+  
+ Aufrufen von <xref:System.Windows.DependencyObject.InvalidateProperty%2A> auf eine Eigenschaft, die einen lokalen Wert festgelegt hat keine Auswirkungen, da der lokale Wert Vorrang vor anderen Eigenschaft System Eingaben, mit Ausnahme von Animationen enthält. Sie können jedoch aufrufen <xref:System.Windows.DependencyObject.ClearValue%2A>, rufen Sie anschließend <xref:System.Windows.DependencyObject.InvalidateProperty%2A>. Weitere Informationen finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+ Aufrufen von <xref:System.Windows.DependencyObject.InvalidateProperty%2A> ist nicht notwendigerweise auch für viele Szenarien der Abhängigkeit-Eigenschaft. Wenn aufgrund von wertänderungen in einer der Bestandteile eine Abhängigkeitseigenschaft ungültig wird, wird das Eigenschaftensystem führt und neuauswertung automatisch die Abhängigkeitseigenschaft. Es gibt jedoch immer noch einige Szenarios, in denen <xref:System.Windows.DependencyObject.InvalidateProperty%2A> eignet. Insbesondere können Sie <xref:System.Windows.DependencyObject.InvalidateProperty%2A> innerhalb des zum Umwandeln von Werten oder die Eigenschaft geändert Rückruf für einen anderen Abhängigkeitseigenschaft. Sie können auch <xref:System.Windows.DependencyObject.InvalidateProperty%2A> um eine erneute Auswertung von einer Bindung für eine Datenquelle zu erzwingen, die nicht die empfohlene implementieren kann <xref:System.ComponentModel.INotifyPropertyChanged> Benachrichtigungsmechanismus (vielleicht Datenklassen in Anspruch, kann nicht abgeleitet werden, oder die Daten, in dem eine statische enthalten, Element).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Windows.DependencyObject.InvalidateProperty%2A> ändern für die benutzerdefinierte Eigenschaft bei jedem-Eigenschaften, die in die für ungültig erklärten Eigenschaft Berechnungen beteiligt sind. Dies ist eine alternative Verfahren mit einem Aufruf der <xref:System.Windows.DependencyObject.CoerceValue%2A> -Methode, da ungültig macht die Eigenschaft auch jeden Aufruf wird registriert <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>.  
+  
+ [!code-csharp[PropertySystemEsoterics#InvalidateProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#invalidateproperty)]
+ [!code-vb[PropertySystemEsoterics#InvalidateProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#invalidateproperty)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSealed">
+      <MemberSignature Language="C#" Value="public bool IsSealed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSealed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyObject.IsSealed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob diese Instanz (schreibgeschützt) derzeit versiegelt ist.</summary>
+        <value>
+          <see langword="true" />Wenn diese Instanz versiegelt ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird intern festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ereignisdaten, die den betreffenden Bezeichner für eine Abhängigkeitseigenschaft, die Eigenschaftsmetadaten für den Typ sowie die alten und neuen Werte enthalten.</param>
+        <summary>Wird aufgerufen, wenn der effektive Wert einer Abhängigkeitseigenschaft für dieses <see cref="T:System.Windows.DependencyObject" /> aktualisiert wurde. Welche spezifische Abhängigkeitseigenschaft geändert wird, wird in den Ereignisdaten gemeldet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient nicht zum einzelne eigenschaftenänderungen in der Regel zu erkennen oder Ausführen von Außerkraftsetzungen aufgewendet von Eigenschaften pro Fall zu entscheiden. <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>wird stattdessen für Änderungen des Musters allgemeine invalidierung vorgesehen, wenn bestimmte Informationen über wide Klassifizierungen Eigenschaften bekannt ist. Ändert z. B. einem <xref:System.Windows.Freezable> möglicherweise Änderungen in die Werttypen der der <xref:System.Windows.Freezable>, oder möglicherweise Untereigenschaften, in dem die Änderungen in anderen sind <xref:System.Windows.Freezable> Verweise. Die <xref:System.Windows.Freezable> -überschreibungsimplementierung von <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> verwendet interne Informationen, um zu bestimmen, ob die Eigenschaften sind untergeordnete sowie die entsprechenden Basisklasse Logik für jedem Fall.  
+  
+ <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>oft wird möglicherweise während der Lebensdauer eines Objekts aufgerufen werden. Aus diesem Grund können Sie eine bessere Leistung für die gesamte Eigenschaftensystem erzielen, wenn Sie die Metadaten bestimmter Eigenschaften überschreiben und Sie dann fügen <xref:System.Windows.CoerceValueCallback> oder <xref:System.Windows.PropertyChangedCallback> Funktionen für die einzelnen Eigenschaften. Allerdings würden Sie diese Methode verwenden, wenn eine <xref:System.Windows.DependencyObject> enthält eine signifikante Anzahl Wert verknüpft Abhängigkeitseigenschaften, oder wenn es die Logik enthält, wie z. B. Renderingverhalten, die erneut ausgeführt werden, muss mehrere Fälle der Ungültigkeitserklärungen beziehen.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Rufen Sie immer die grundlegende Implementierung. Dies versäumt wird die gesamte erheblich deaktiviert [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem, bewirkt, dass falsche Werte gemeldet werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadLocalValue">
+      <MemberSignature Language="C#" Value="public object ReadLocalValue (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ReadLocalValue(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.ReadLocalValue(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Die <see cref="T:System.Windows.DependencyProperty" /> Bezeichner für die Eigenschaft zum Abrufen des Werts für.</param>
+        <summary>Gibt den lokalen Wert einer Abhängigkeitseigenschaft zurück, wenn dieser vorhanden ist.</summary>
+        <returns>Gibt den lokalen Wert zurück oder den Sentinelwert <see cref="F:System.Windows.DependencyProperty.UnsetValue" /> Wenn kein lokaler Wert festgelegt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Windows.DependencyObject.GetValue%2A> für die meisten typischen "get"-Vorgänge für eine Abhängigkeitseigenschaft. <xref:System.Windows.DependencyObject.ReadLocalValue%2A>Gibt nicht zurück den gültigen Wert für eine Vielzahl von Situationen, in denen der Wert nicht lokal festgelegt wurde.  
+  
+ Werte, die durch die Stile, Designs und Vorlagen festgelegt werden, der Standardwert von Metadaten oder Vererbung von Eigenschaftenwerten gelten nicht als lokale Werte sein. Jedoch werden Bindungen und andere Ausdrücke interpretiert, um die lokalen Werte werden, nachdem sie ausgewertet wurden.  
+  
+ Wenn kein lokaler Wert festgelegt ist, gibt diese Methode <xref:System.Windows.DependencyProperty.UnsetValue>.  
+  
+ Wenn der zurückgegebene Wert, außer ist <xref:System.Windows.DependencyProperty.UnsetValue>, Sie können Abfragen, die Metadaten der angeforderten Abhängigkeitseigenschaft zu bestimmen, ob es ein spezifischeren Typ, der der Rückgabewert konvertiert werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCurrentValue">
+      <MemberSignature Language="C#" Value="public void SetCurrentValue (System.Windows.DependencyProperty dp, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCurrentValue(class System.Windows.DependencyProperty dp, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.SetCurrentValue(System.Windows.DependencyProperty,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Der Bezeichner der festzulegenden Abhängigkeitseigenschaft.</param>
+        <param name="value">Der neue lokale Wert.</param>
+        <summary>Legt den Wert einer Abhängigkeitseigenschaft fest, ohne deren Wertquelle zu ändern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von einer Komponente verwendet, die den Wert eines der seine eigenen Eigenschaften programmgesteuert festgelegt, ohne eine Anwendung deklarierte Verwendung der Eigenschaft deaktivieren. Die <xref:System.Windows.DependencyObject.SetCurrentValue%2A> Methode ändert sich den effektiven Wert der Eigenschaft, aber vorhandene Trigger, datenbindungen und Stile sind weiterhin funktionsfähig.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, eine schreibgeschützte Abhängigkeitseigenschaft oder eine Eigenschaft für ein versiegeltes ändern <see cref="T:System.Windows.DependencyObject" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />entsprach nicht der richtige Typ für registriert die <paramref name="dp" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (System.Windows.DependencyProperty dp, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValue(class System.Windows.DependencyProperty dp, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.SetValue(System.Windows.DependencyProperty,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Der Bezeichner der festzulegenden Abhängigkeitseigenschaft.</param>
+        <param name="value">Der neue lokale Wert.</param>
+        <summary>Legt den lokalen Wert einer Abhängigkeitseigenschaft fest, die durch ihren Bezeichner angegeben ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der angegebene Typ nicht mit dem Typ übereinstimmt, der für die Abhängigkeitseigenschaft deklariert wird, wie es ursprünglich registriert wurde, wird eine Ausnahme ausgelöst. Die `value` Parameter sollte immer in den entsprechenden Typ angegeben werden.  
+  
+ Die Ausnahmebedingungen werden möglicherweise von diesem beeinflusst die <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> Rückruf, der auf den Bezeichner der festzulegenden Abhängigkeitseigenschaft Abhängigkeit vorhanden ist. Andernfalls möglicherweise angegebene Wert fehlerhaft allgemeine Typprüfung Bedingungen (z. B. eine Zeichenfolge übergeben, wenn der systemeigene Typ Double).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, eine schreibgeschützte Abhängigkeitseigenschaft oder eine Eigenschaft für ein versiegeltes ändern <see cref="T:System.Windows.DependencyObject" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />entsprach nicht der richtige Typ für registriert die <paramref name="dp" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (System.Windows.DependencyPropertyKey key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValue(class System.Windows.DependencyPropertyKey key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.SetValue(System.Windows.DependencyPropertyKey,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.DependencyPropertyKey" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die <see cref="T:System.Windows.DependencyPropertyKey" /> Bezeichner der festzulegenden Eigenschaft.</param>
+        <param name="value">Der neue lokale Wert.</param>
+        <summary>Legt den lokalen Wert einer schreibgeschützten Abhängigkeitseigenschaft, angegeben durch die <see cref="T:System.Windows.DependencyPropertyKey" /> Bezeichner der Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Signatur wird normalerweise verwendet, wenn Sie Werte für schreibgeschützte Abhängigkeitseigenschaften festgelegt, die durch die benutzerdefinierten Klassen definiert werden. Im allgemeinen <xref:System.Windows.DependencyObject.SetValue%2A> aufgerufen wird, nur anhand des Typs, der die Abhängigkeitseigenschaft registriert die interne Logik implementiert, die der festgelegten Wert für die Abhängigkeitseigenschaft bereitstellt. Weitere Informationen finden Sie unter [Schreibgeschützte Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/read-only-dependency-properties.md).  
+  
+ Wenn der angegebene Typ nicht mit dem Typ übereinstimmt, der für die Abhängigkeitseigenschaft deklariert wird, wie es ursprünglich registriert wurde, wird eine Ausnahme ausgelöst. Die `value` Parameter sollte immer in den entsprechenden Typ angegeben werden. Die Ausnahmebedingungen werden möglicherweise von diesem beeinflusst die <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> Rückruf, der auf den Bezeichner der festzulegenden Abhängigkeitseigenschaft Abhängigkeit vorhanden ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine schreibgeschützte Abhängigkeitseigenschaft zusammen mit einem `public static readonly` <xref:System.Windows.DependencyProperty> bereitstellt erforderlichen nur-Lese Anfälligkeit für Consumer der Eigenschaft und die Get-Zugriffsmethode für die [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] Wrapper.  
+  
+ [!code-csharp[WPFAquariumSln#RODP](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#rodp)]
+ [!code-vb[WPFAquariumSln#RODP](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#rodp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeProperty">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeProperty (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ShouldSerializeProperty(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.ShouldSerializeProperty(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Der Bezeichner für die Abhängigkeitseigenschaft, die serialisiert werden soll.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob Serialisierungsprozesse den Wert der bereitgestellten Abhängigkeitseigenschaft serialisieren sollen.</summary>
+        <returns>
+          <see langword="true" />Wenn die Abhängigkeitseigenschaft, die bereitgestellt wird, serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die standardmäßige Implementierung `true` für alle Fälle, bei dem eine Abhängigkeitseigenschaft einen lokalen Wert festgelegt werden hatte, auf, die <xref:System.Windows.DependencyObject>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Außerkraftsetzungen für diese Methode möglicherweise für bestimmte Abhängigkeitseigenschaften unterschiedlich behandelt werden.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

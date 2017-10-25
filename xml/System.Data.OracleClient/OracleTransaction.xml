@@ -1,0 +1,198 @@
+<Type Name="OracleTransaction" FullName="System.Data.OracleClient.OracleTransaction">
+  <TypeSignature Language="C#" Value="public sealed class OracleTransaction : System.Data.Common.DbTransaction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OracleTransaction extends System.Data.Common.DbTransaction" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleTransaction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbTransaction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Transaktion dar, die in der Datenbank erfolgen soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt die Anwendung eine <xref:System.Data.OracleClient.OracleTransaction> Objekt durch Aufrufen von <xref:System.Data.OracleClient.OracleConnection.BeginTransaction%2A> auf die <xref:System.Data.OracleClient.OracleConnection> Objekt. Alle nachfolgenden Vorgänge, die der Transaktion (z. B. Commit oder Abbruch der Transaktion) zugeordnet werden ausgeführt, auf die <xref:System.Data.OracleClient.OracleTransaction> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleConnection> und ein <xref:System.Data.OracleClient.OracleTransaction>. Außerdem wird veranschaulicht, wie die <xref:System.Data.OracleClient.OracleConnection.BeginTransaction%2A>, <xref:System.Data.OracleClient.OracleTransaction.Commit%2A>, und <xref:System.Data.OracleClient.OracleTransaction.Rollback%2A> Methoden.  
+  
+ [!code-csharp[Classic WebData OracleConnection.BeginTransaction#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OracleConnection.BeginTransaction/CS/source.cs#1)]
+ [!code-vb[Classic WebData OracleConnection.BeginTransaction#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OracleConnection.BeginTransaction/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public override void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleTransaction.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Commit die Datenbanktransaktion SQL.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleConnection> und ein <xref:System.Data.OracleClient.OracleTransaction>. Außerdem wird veranschaulicht, wie die <xref:System.Data.OracleClient.OracleConnection.BeginTransaction%2A>, <xref:System.Data.OracleClient.OracleTransaction.Commit%2A>, und <xref:System.Data.OracleClient.OracleTransaction.Rollback%2A> Methoden.  
+  
+ [!code-csharp[Classic WebData OracleConnection.BeginTransaction1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OracleConnection.BeginTransaction1/CS/source.cs#1)]
+ [!code-vb[Classic WebData OracleConnection.BeginTransaction1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OracleConnection.BeginTransaction1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Fehler beim Ausführen eines Commits der Transaktion.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde bereits ein Commit bzw. ein Rollback für die Transaktion ausgeführt.  
+  
+ - oder -   
+  
+ Die Verbindung ist unterbrochen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OracleClient.OracleConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleTransaction.Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die <see cref="T:System.Data.OracleClient.OracleConnection" /> mit der Transaktion verknüpften Objekt.</summary>
+        <value>Ein <see cref="T:System.Data.OracleClient.OracleConnection" />-Objekt, das der Transaktion zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine einzelne Anwendung möglicherweise mehrere datenquellenverbindungen mit NULL oder mehr Transaktionen. Diese Eigenschaft können Sie das Verbindungsobjekt, das einer bestimmten Transaktion zugewiesenen zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbConnection">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbConnection DbConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbConnection DbConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleTransaction.DbConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleTransaction.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsolationLevel">
+      <MemberSignature Language="C#" Value="public override System.Data.IsolationLevel IsolationLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.IsolationLevel IsolationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleTransaction.IsolationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den <see cref="T:System.Data.IsolationLevel" /> für diese Transaktion an.</summary>
+        <value>Der <see cref="T:System.Data.IsolationLevel" /> für diese Transaktion. Die Standardeinstellung ist <see langword="ReadCommitted" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die .NET Framework-Datenanbieter für Oracle unterstützt nur `ReadCommitted` und `Serializable` Isolationsstufen. Das Verhalten der folgenden Isolationsstufen entspricht nicht der Art und Weise Verhalten, das bei Verwendung mit.NET-Datenanbieter für SQL Server. Weitere Informationen zur Verwendung von Oracle Isolationsstufen finden Sie in der Oracle-Dokumentation.  
+  
+ Parallele Transaktionen werden nicht unterstützt. Aus diesem Grund die <xref:System.Data.IsolationLevel> gilt für die gesamte Transaktion.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public override void Rollback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Rollback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleTransaction.Rollback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Rollback für eine Transaktion aus einem ausstehenden Zustand durch.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rollback der Transaktion kann werden nur vom Zustand "Ausstehend" (nach <xref:System.Data.OracleClient.OracleConnection.BeginTransaction%2A> aufgerufen wurde, jedoch bevor <xref:System.Data.OracleClient.OracleTransaction.Commit%2A> aufgerufen wird).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleConnection> und ein <xref:System.Data.OracleClient.OracleTransaction>. Außerdem wird veranschaulicht, wie die <xref:System.Data.OracleClient.OracleConnection.BeginTransaction%2A>, <xref:System.Data.OracleClient.OracleTransaction.Commit%2A>, und <xref:System.Data.OracleClient.OracleTransaction.Rollback%2A> Methoden.  
+  
+ [!code-csharp[Classic WebData OracleConnection.BeginTransaction1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OracleConnection.BeginTransaction1/CS/source.cs#1)]
+ [!code-vb[Classic WebData OracleConnection.BeginTransaction1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OracleConnection.BeginTransaction1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Fehler beim Ausführen eines Commits der Transaktion.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde bereits ein Commit bzw. ein Rollback für die Transaktion ausgeführt.  
+  
+ - oder -   
+  
+ Die Verbindung ist unterbrochen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

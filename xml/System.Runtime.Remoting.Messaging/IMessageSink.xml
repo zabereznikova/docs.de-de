@@ -1,0 +1,134 @@
+<Type Name="IMessageSink" FullName="System.Runtime.Remoting.Messaging.IMessageSink">
+  <TypeSignature Language="C#" Value="public interface IMessageSink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMessageSink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.IMessageSink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Schnittstelle für eine Nachricht Senke.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufruf einer Methode auf dem Proxy vorgenommen wird, die Remotinginfrastruktur enthält die erforderliche Unterstützung und das Argument übergeben wird, um das eigentliche Objekt Remotegrenzen hinweg, Aufrufen der tatsächliche Objektmethode mit den Argumenten und Zurückgeben der Ergebnisse zurück an der Client von der Proxy-Objekt.  
+  
+ Ein remote-Methodenaufruf wird eine Meldung, die vom Client an den Server wechselt und möglicherweise wieder zurück. Wie sie die Möglichkeit überschreitet, durchläuft der remote-Methodenaufruf eine Kette von `IMessageSink` Objekte. Jede Senke in der Kette empfängt das Nachrichtenobjekt, führt eine bestimmte Operation und delegiert an den nächsten Empfänger in der Kette. Das Proxyobjekt enthält einen Verweis auf das erste `IMessageSink` zum Starten der Kette verwenden muss.  
+  
+ Bei asynchronen Aufrufen werden zum Zeitpunkt der Delegierung Antwortempfänger jede Senke enthält (einen anderen `IMessageSink`), wird von der nächsten Senke aufgerufen werden, wenn die Antwort auf dem Rückweg ist.  
+  
+ Verschiedene Typen von senken führen verschiedene Vorgänge, je nach Typ des empfangenen Message-Objekt. Z. B. eine Senke kann bewirken, dass eine Sperre, die ausgeführt werden, konnte einen anderen Aufruf Sicherheit erzwingen konnte einen anderen Datenfluss Aufruf Kontrolle und Zuverlässigkeit Services ausgeführt werden und noch einen anderen Aufruf auf einen anderen transport konnte <xref:System.AppDomain>, Prozess- oder Computerinformationen. Zwei oder mehr Nachrichten senken in der Kette können hinsichtlich jeder bestimmten Aktion miteinander interagieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Implementierung von der <xref:System.Runtime.Remoting.Messaging.IMessageSink> Schnittstelle. Beachten Sie, dass im Beispiel wird davon ausgegangen, Typdefinitionen und Assemblyverweise, die für das Beispiel kompiliert bereitgestellt werden müssen.  
+  
+ [!code-cpp[IMessageSink_Client#3](~/samples/snippets/cpp/VS_Snippets_Remoting/IMessageSink_Client/CPP/imessagesink_client.cpp#3)]
+ [!code-csharp[IMessageSink_Client#3](~/samples/snippets/csharp/VS_Snippets_Remoting/IMessageSink_Client/CS/imessagesink_client.cs#3)]
+ [!code-vb[IMessageSink_Client#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IMessageSink_Client/VB/imessagesink_client.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Es ist wichtig zu beachten, dass der Code die aktuelle Schnittstelle implementieren für beide Implementierungen bereitstellen muss <see cref="M:System.Runtime.Remoting.Messaging.IMessageSink.SyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage)" /> und <see cref="M:System.Runtime.Remoting.Messaging.IMessageSink.AsyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Messaging.IMessageSink)" />, da die synchrone Aufrufe in asynchrone Aufrufe und umgekehrt konvertiert werden können. Beide Methoden müssen implementiert werden, auch wenn die Senke keine asynchronen Verarbeitung unterstützt.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="AsyncProcessMessage">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageCtrl AsyncProcessMessage (System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Messaging.IMessageSink replySink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageCtrl AsyncProcessMessage(class System.Runtime.Remoting.Messaging.IMessage msg, class System.Runtime.Remoting.Messaging.IMessageSink replySink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.IMessageSink.AsyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageCtrl</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="replySink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die zu verarbeitende Meldung.</param>
+        <param name="replySink">Die Antwortsenke für die Antwortnachricht.</param>
+        <summary>Die angegebene Nachricht verarbeitet asynchron.</summary>
+        <returns>Gibt eine <see cref="T:System.Runtime.Remoting.Messaging.IMessageCtrl" /> -Schnittstelle, die bietet eine Möglichkeit zum asynchronen Nachrichten zu steuern, nachdem sie verteilt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von der Remotinginfrastruktur oder von einer vorherigen Senke für asynchrone Nachrichten für den Empfänger der Nachricht aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="NextSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink NextSink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Messaging.IMessageSink NextSink" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMessageSink.NextSink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die nächste Nachricht Senke in der Senkenkette ab.</summary>
+        <value>Die nächste Nachricht Senke in der Senkenkette.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncProcessMessage">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessage SyncProcessMessage (System.Runtime.Remoting.Messaging.IMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessage SyncProcessMessage(class System.Runtime.Remoting.Messaging.IMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.IMessageSink.SyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die zu verarbeitende Meldung.</param>
+        <summary>Die angegebene Nachricht verarbeitet synchron.</summary>
+        <returns>Eine Antwortnachricht als Antwort auf die Anforderung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Messaging.IMessageSink.SyncProcessMessage%2A> Methode für die Senke Nachricht aufgerufen wird, von der Remotinginfrastruktur oder von einer vorherigen Senke für synchrone Nachrichten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

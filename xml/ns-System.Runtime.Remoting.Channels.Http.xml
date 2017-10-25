@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Remoting.Channels.Http">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Remoting.Channels.Http" /> -Namespace enthält die Kanäle, die das HTTP-Protokoll-transportmeldungen und Objekte in und von Remotestandorten aus zu verwenden. Wird standardmäßig der HTTP-Kanäle codieren Objekte und Methodenaufrufe im SOAP-Format für die Übertragung, aber andere Formatierungssenken Codierung und Decodierung können in den Konfigurationseigenschaften eines Kanals angegeben werden. Eine der wichtigsten Klassen von der <see cref="N:System.Runtime.Remoting.Channels.Http" /> Namespace ist die <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Channels.Http.HttpChannel> -Klasse kombiniert die <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel> Klasse und die <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> Klasse, und zum Empfangen und Senden von Nachrichten über das HTTP-Protokoll verwendet werden können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

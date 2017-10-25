@@ -1,0 +1,53 @@
+<Type Name="PeerTransportSecuritySettings" FullName="System.ServiceModel.PeerTransportSecuritySettings">
+  <TypeSignature Language="C#" Value="public sealed class PeerTransportSecuritySettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PeerTransportSecuritySettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerTransportSecuritySettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Sicherheitseinstellungen für einen Peerkanaltransport.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerTransportSecuritySettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerTransportSecuritySettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz des <see cref="T:System.ServiceModel.PeerTransportSecuritySettings" />-Typs.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CredentialType">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerTransportCredentialType CredentialType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.PeerTransportCredentialType CredentialType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerTransportSecuritySettings.CredentialType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerTransportCredentialType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab und legt den Anmeldeinformationstyp für die Authentifzierung des Peerkanaltransports fest.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.PeerTransportCredentialType" />-Enumerationswert, mit dem der Anmeldeinformationstyp für die Authentifizierung festgelegt wird.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Anmeldeinformationstyp ist ein ungültiger <see cref="T:System.ServiceModel.PeerTransportCredentialType" />-Enumerationswert.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,74 @@
+<Type Name="ConfigurationLocationCollection" FullName="System.Configuration.ConfigurationLocationCollection">
+  <TypeSignature Language="C#" Value="public class ConfigurationLocationCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConfigurationLocationCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationLocationCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine Auflistung von <see cref="T:System.Configuration.ConfigurationLocationCollection" />-Objekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Configuration.ConfigurationLocationCollection> Klasse zum Durchlaufen einer Auflistung von <xref:System.Configuration.ConfigurationLocation> Objekte, die die Ressourcen darstellen, für das standortspezifische Konfigurationseinstellungen definiert sind. <xref:System.Configuration.ConfigurationLocationCollection>ist der zurückgegebene Typ der <xref:System.Configuration.Configuration.Locations%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Die <xref:System.Configuration.ConfigurationLocationCollection> Klasse kann nicht auf die Auflistung von verweisen <xref:System.Configuration.ConfigurationLocation> Objekte in der Reihenfolge, in der sie in der Konfigurationsdatei angegeben sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Web-Konfiguration für die Anwendung `MySampleApp` wird geladen, und die Speicherorte, die definiert, die in dieser Konfiguration werden angezeigt, durch das Durchlaufen der <xref:System.Configuration.ConfigurationLocationCollection> zurückgegebenes Objekt die <xref:System.Configuration.Configuration.Locations%2A> Eigenschaft.  
+  
+ [!code-csharp[ConfigurationLocationCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ConfigurationLocationCollection/CS/sample.cs#1)]
+ [!code-vb[ConfigurationLocationCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ConfigurationLocationCollection/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationLocation this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationLocation Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationLocationCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationLocation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition des der <see cref="T:System.Configuration.ConfigurationLocationCollection" /> zurückgegeben.</param>
+        <summary>Ruft die <see cref="T:System.Configuration.ConfigurationLocationCollection" /> Objekt am angegebenen Index.</summary>
+        <value>Der <see cref="T:System.Configuration.ConfigurationLocationCollection" /> am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Configuration.ConfigurationLocationCollection.Item%2A> Accessor für die <xref:System.Configuration.ConfigurationLocationCollection> zum Abrufen eines bestimmtes Klasse <xref:System.Configuration.ConfigurationLocation> Objekt aus der Auflistung, indem Sie deren Index in der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

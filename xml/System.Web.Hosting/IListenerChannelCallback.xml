@@ -1,0 +1,200 @@
+<Type Name="IListenerChannelCallback" FullName="System.Web.Hosting.IListenerChannelCallback">
+  <TypeSignature Language="C#" Value="public interface IListenerChannelCallback" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IListenerChannelCallback" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.IListenerChannelCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("dc3b0a85-9da7-47e4-ba1b-e27da9db8a1e")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Listenerkanal Benachrichtigungen von Protokollhandler Worker Process Framework bereitgestellt. Können außerdem Protokollhandler auf zusätzliche Parameter, z. B. die ID des Kanals Listener zugreifen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IListenerChannelCallback>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetBlob">
+      <MemberSignature Language="C#" Value="public void GetBlob (byte[] buffer, ref int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetBlob([out] unsigned int8[] buffer, int32&amp; bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IListenerChannelCallback.GetBlob(System.Byte[],System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="bufferSize" Type="System.Int32&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Die Daten, die an den Listenerkanal übergeben werden.</param>
+        <param name="bufferSize">Die Menge der Daten in Bytes ist, die im Puffer.</param>
+        <summary>Ruft die Daten, die der Protokollmanager an einen Listenerkanal, beim Start des Protokoll-Managers von diesem Listenerkanal übergeben wird ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IListenerChannelCallback.GetBlob%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetBlobLength">
+      <MemberSignature Language="C#" Value="public int GetBlobLength ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetBlobLength() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IListenerChannelCallback.GetBlobLength" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Größe der gepufferten Daten in den Listenerkanal ab.</summary>
+        <returns>Die Größe in Bytes, der Daten, die im Listener Kanal Puffer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IListenerChannelCallback.GetBlobLength%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetId">
+      <MemberSignature Language="C#" Value="public int GetId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IListenerChannelCallback.GetId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die ID für einen Listenerkanal, die gestartet werden.</summary>
+        <returns>Die ID des Kanals Listener.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IListenerChannelCallback.GetId%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReportMessageReceived">
+      <MemberSignature Language="C#" Value="public void ReportMessageReceived ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportMessageReceived() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IListenerChannelCallback.ReportMessageReceived" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt den Worker-Prozess-Framework, dass eine neue Nachricht empfangen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode unterstützt die [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.  
+  
+ <xref:System.Web.Hosting.IListenerChannelCallback.ReportMessageReceived%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReportStarted">
+      <MemberSignature Language="C#" Value="public void ReportStarted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportStarted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IListenerChannelCallback.ReportStarted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt das Framework der Worker-Prozess, das ein Listenerkanal gestartet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IListenerChannelCallback.ReportStarted%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReportStopped">
+      <MemberSignature Language="C#" Value="public void ReportStopped (int hr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportStopped(int32 hr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IListenerChannelCallback.ReportStopped(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hr" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="hr">Der HRESULT-Wert, der den Status des einen Listenerkanal angibt.</param>
+        <summary>Benachrichtigt das Framework der Worker-Prozess, das ein Listenerkanal beendet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IListenerChannelCallback.ReportStopped%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

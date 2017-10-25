@@ -1,0 +1,96 @@
+<Type Name="AccessDataSourceView" FullName="System.Web.UI.WebControls.AccessDataSourceView">
+  <TypeSignature Language="C#" Value="public class AccessDataSourceView : System.Web.UI.WebControls.SqlDataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AccessDataSourceView extends System.Web.UI.WebControls.SqlDataSourceView" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.AccessDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.SqlDataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Unterstützt die <see cref="T:System.Web.UI.WebControls.AccessDataSource" /> -Steuerelement und stellt eine Schnittstelle für datengebundene Steuerelemente zum Abrufen von Daten mit Structured Query Language (SQL) für eine Microsoft Access-Datenbank ausführen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.AccessDataSourceView> Klasse dient in erster Linie, die von datengebundenen Steuerelementen und nicht als programmierbares Objekt im Seitencode verwendet werden soll.  
+  
+ Die <xref:System.Web.UI.WebControls.AccessDataSourceView> Klasse wird bereitgestellt, da Microsoft Access eine dateibasierte Datenbank-Managementsystem ist und verfügt über mehrere eindeutige Merkmale, die sie abgesehen von anderen SQL-basierte relationale Datenbankprodukte, die festgelegt die <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement und <xref:System.Web.UI.WebControls.SqlDataSourceView> Klassen werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AccessDataSourceView (System.Web.UI.WebControls.AccessDataSource owner, string name, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.AccessDataSource owner, string name, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.AccessDataSourceView.#ctor(System.Web.UI.WebControls.AccessDataSource,System.String,System.Web.HttpContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.AccessDataSource" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Datenquellen-Steuerelements mit dem die <see cref="T:System.Web.UI.WebControls.AccessDataSourceView" /> zugeordnet ist.</param>
+        <param name="name">Ein eindeutiger Name für die Datenquellensicht innerhalb des Bereichs des Datenquellen-Steuerelements, die er besitzt.</param>
+        <param name="context">Der aktuelle <see cref="T:System.Web.HttpContext" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.AccessDataSourceView" /> Festlegen der angegebenen Klasse <see cref="T:System.Web.UI.WebControls.AccessDataSource" /> Steuerelement als Besitzer der aktuellen Sicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpContext> Objekt dient der <xref:System.Web.UI.WebControls.AccessDataSource> Steuerelement die Parameter in den Zugriff auf die <xref:System.Web.UI.WebControls.SqlDataSourceView.FilterParameters%2A> und <xref:System.Web.UI.WebControls.SqlDataSourceView.SelectParameters%2A> Sammlungen, die beim Abrufen von Daten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteSelect">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerable ExecuteSelect (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Collections.IEnumerable ExecuteSelect(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.AccessDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Ein <see cref="T:System.Web.UI.DataSourceSelectArguments" /> , wird verwendet, um Vorgänge für die Daten jenseits der grundlegenden Datenabruf anzufordern.</param>
+        <summary>Ruft Daten aus der zugrunde liegenden Datenspeicher mithilfe der SQL-Zeichenfolge in der <see cref="P:System.Web.UI.WebControls.SqlDataSourceView.SelectCommand" /> Eigenschaft und weiteren Parametern in der <see cref="P:System.Web.UI.WebControls.SqlDataSourceView.SelectParameters" /> Auflistung.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerable" /> von Datenzeilen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.AccessDataSourceView> -Objekt überschreibt die <xref:System.Web.UI.WebControls.SqlDataSourceView.ExecuteSelect%2A> Methode, um sicherzustellen, dass die <xref:System.Web.UI.WebControls.AccessDataSource.DataFile%2A> Eigenschaft des zugeordneten <xref:System.Web.UI.WebControls.AccessDataSource> Steuerelement vor dem Abrufen von Daten festgelegt wird.  
+  
+ Vor der <xref:System.Web.UI.WebControls.AccessDataSourceView.ExecuteSelect%2A> Methode erfolgt, die <xref:System.Web.UI.WebControls.SqlDataSourceView.OnSelecting%2A> Methode wird aufgerufen, um das Auslösen der <xref:System.Web.UI.WebControls.SqlDataSourceView.Selecting> Ereignis. Sie können behandeln die <xref:System.Web.UI.WebControls.SqlDataSourceView.Selecting> Ereignis, um die Werte der Parameter zu untersuchen und eine Verarbeitung vor einem Vorgang zum Abrufen von Daten ausführen.  
+  
+ Zum Abrufen von Daten Ausführen der <xref:System.Web.UI.WebControls.AccessDataSourceView> -Objekt Builds ein <xref:System.Data.IDbCommand> -Objekt unter Verwendung der <xref:System.Web.UI.WebControls.SqlDataSource.SelectCommand%2A> Text und alle zugeordneten <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> Eigenschaften. Anschließend wird die <xref:System.Web.UI.WebControls.AccessDataSourceView> Objekt führt die <xref:System.Data.IDbCommand> Objekt, mit dem zugrunde liegenden Datenspeicher. Nach Abschluss des Vorgangs die <xref:System.Web.UI.WebControls.SqlDataSourceView.OnSelected%2A> Methode wird aufgerufen, um das Auslösen der <xref:System.Web.UI.WebControls.SqlDataSource.Selected> Ereignis. Sie können behandeln die <xref:System.Web.UI.WebControls.SqlDataSource.Selected> Ereignis Rückgabewerte und Fehlercodes überprüfen und nach der Verarbeitung auszuführen.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.SqlDataSource.DataSourceMode%2A> -Eigenschaftensatz auf die <xref:System.Web.UI.WebControls.SqlDataSourceMode.DataSet> Wert und das Zwischenspeichern aktiviert ist, die <xref:System.Web.UI.WebControls.AccessDataSourceView> Daten abruft und speichert Daten im Cache während der Vorgang zum Abrufen von Daten. Der Cache wird erstellt, verworfen, oder aktualisiert, basierend auf das Verhalten beim Zwischenspeichern, die durch die Kombination von angegeben wird die <xref:System.Web.UI.WebControls.SqlDataSource.CacheDuration%2A> und <xref:System.Web.UI.WebControls.SqlDataSource.CacheExpirationPolicy%2A> Eigenschaften.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.SqlDataSource.DataSourceMode%2A> -Eigenschaftensatz auf die <xref:System.Web.UI.WebControls.SqlDataSourceMode.DataSet> Wert und eine <xref:System.Web.UI.WebControls.SqlDataSourceView.FilterExpression%2A> -Eigenschaft angegeben wurde, die <xref:System.Web.UI.WebControls.SqlDataSource.DataSourceMode%2A> Eigenschaft wird ausgewertet, zusammen mit allen bereitgestellten <xref:System.Web.UI.WebControls.SqlDataSourceView.FilterParameters%2A> Eigenschaften und der resultierende Filter wird angewendet, um die Liste der Daten während der <xref:System.Web.UI.WebControls.SqlDataSource.Select%2A> Vorgang.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.WebControls.AccessDataSource.DataFile" /> Eigenschaft <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.NotSupportedException">Die <paramref name="arguments" /> übergeben, um die <see cref="M:System.Web.UI.WebControls.AccessDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" /> Methode angeben, dass die Datenquelle sollten zusätzliche Arbeit leisten, beim Abrufen von Daten zum Aktivieren von paging und Sortieren der abgerufenen Daten ausführen, aber das Datenquellensteuerelement unterstützt nicht die angeforderte -Funktion.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

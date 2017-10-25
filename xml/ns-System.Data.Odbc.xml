@@ -1,0 +1,15 @@
+<Namespace Name="System.Data.Odbc">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.Odbc" /> -Namespace ist der .NET Framework-Datenanbieter für ODBC.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die .NET Framework-Datenanbieter für ODBC beschreibt eine Auflistung von Klassen, mit denen Zugriff auf eine ODBC-Datenquelle im verwalteten Bereich an. Mithilfe der <xref:System.Data.Odbc.OdbcDataAdapter> -Klasse, Sie können ggf. eine speicherresidente <xref:System.Data.DataSet> , dass Sie zum Abfragen und Aktualisieren der Datenquelle verwenden können.  
+  
+ Weitere Informationen zum Verwenden dieses Namespace finden Sie unter der <xref:System.Data.Odbc.OdbcDataReader>, <xref:System.Data.Odbc.OdbcCommand>, und <xref:System.Data.Odbc.OdbcConnection> Klassen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,144 @@
+<Type Name="RequestedSecurityToken" FullName="System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken">
+  <TypeSignature Language="C#" Value="public class RequestedSecurityToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequestedSecurityToken extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Das angeforderte (ausgegebene) Sicherheitstoken darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Token ist in der Regel für das token Requestor nicht transparent.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestedSecurityToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.#ctor(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Ein <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> , das die angeforderte Sicherheitstoken darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> -Klasse unter Verwendung des ausgestellten Tokens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird normalerweise von dem Aussteller des Tokens.  
+  
+ Die folgende Tabelle zeigt die Eigenschaften der neuen Instanz.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityToken%2A>|Der Wert des `token`-Parameters.|  
+|<xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityTokenXml%2A>|`null`.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestedSecurityToken (System.Xml.XmlElement tokenAsXml);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlElement tokenAsXml) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.#ctor(System.Xml.XmlElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tokenAsXml" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="tokenAsXml">Ein <see cref="T:System.Xml.XmlElement" /> , enthält die XML-Darstellung des angeforderten Sicherheitstokens.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> -Klasse unter Verwendung der token-XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird normalerweise vom Empfänger verwendet.  
+  
+ Die folgende Tabelle zeigt die Eigenschaften der neuen Instanz.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityToken%2A>|`null`.|  
+|<xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityTokenXml%2A>|Der Wert des `tokenAsXml`-Parameters.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="tokenAsXml" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken SecurityToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityToken SecurityToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Empfängt die ausgestellten Sicherheitstoken bei der <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> Instanz mit dem Token selbst erstellt wurde.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> , die das ausgestellte Sicherheitstoken darstellt. <see langword="null" />Wenn die <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> Instanz mit dem token XML erstellt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Empfängt die ausgestellten Sicherheitstoken bei der <xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken> Objekt mit dem Token selbst erstellt wurde (dargestellt durch eine <xref:System.IdentityModel.Tokens.SecurityToken> Objekt). Der Wert der Eigenschaft ist `null` , wenn die Instanz mit dem token XML erstellt wurde. In diesem Fall kann das token XML zugegriffen werden, aus der <xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityTokenXml%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement SecurityTokenXml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement SecurityTokenXml" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityTokenXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, die XML-Darstellung der ausgegebene Sicherheitstoken token bei der <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> Instanz mit dem token XML erstellt wurde.</summary>
+        <value>Ein <see cref="T:System.Xml.XmlElement" /> , enthält die XML-Darstellung des Sicherheitstokens. <see langword="null" />Wenn die <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> Instanz erstellt wurde, mit einem <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Empfängt die ausgestellten Sicherheitstoken bei der <xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken> XML-token. Der Wert der Eigenschaft ist `null` , wenn die Instanz mit dem Token selbst erstellt wurde (dargestellt durch eine <xref:System.IdentityModel.Tokens.SecurityToken> Objekt). In diesem Fall kann das Token zugegriffen werden, aus der <xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityToken%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,156 @@
+<Type Name="FileLevelControlBuilderAttribute" FullName="System.Web.UI.FileLevelControlBuilderAttribute">
+  <TypeSignature Language="C#" Value="public sealed class FileLevelControlBuilderAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FileLevelControlBuilderAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.FileLevelControlBuilderAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht eine <see cref="T:System.Web.UI.TemplateControl" />-abgeleitete Klasse zum Angeben der Steuerelementgenerator auf der obersten Ebene der Struktur Builder verwendet werden, wenn die Datei zu analysieren. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Page> und <xref:System.Web.UI.UserControl> Klassen abgeleitet werden, aus der <xref:System.Web.UI.TemplateControl> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileLevelControlBuilderAttribute (Type builderType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type builderType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.FileLevelControlBuilderAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="builderType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="builderType">Die <see cref="T:System.Type" /> von der Steuerelementgenerator beim Analysieren der Datei verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.FileLevelControlBuilderAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.FileLevelControlBuilderAttribute> Klasse.  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird von ASP.NET verwendet, bei der Analyse der Seite und der Hierarchie zu erstellen. Es ist nicht für die Verwendung im Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuilderType">
+      <MemberSignature Language="C#" Value="public Type BuilderType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BuilderType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.FileLevelControlBuilderAttribute.BuilderType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> von der Steuerelementgenerator beim Analysieren der Datei verwendet. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Die <see cref="T:System.Type" /> von der Steuerelementgenerator beim Analysieren der Datei verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.FileLevelControlBuilderAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.FileLevelControlBuilderAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.FileLevelControlBuilderAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.FileLevelControlBuilderAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das neue <see cref="T:System.Web.UI.FileLevelControlBuilderAttribute" /> Objekt. Standardmäßig wird das neue Objekt festgelegt, zu <see langword="null" />. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.FileLevelControlBuilderAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein <see cref="T:System.Object" />, das mit dieser Instanz verglichen werden soll.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> dem Typ und dem Wert dieser Instanz entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.FileLevelControlBuilderAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.FileLevelControlBuilderAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die aktuelle <see cref="T:System.Web.UI.FileLevelControlBuilderAttribute" /> Object ist der Standardwert.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle <see cref="T:System.Web.UI.FileLevelControlBuilderAttribute" /> ist die Standardeinstellung ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

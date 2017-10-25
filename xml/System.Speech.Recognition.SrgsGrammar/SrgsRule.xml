@@ -1,0 +1,561 @@
+<Type Name="SrgsRule" FullName="System.Speech.Recognition.SrgsGrammar.SrgsRule">
+  <TypeSignature Language="C#" Value="public class SrgsRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SrgsRule extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Rule={_id.ToString()} Scope={_scope.ToString()}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Speech.Recognition.SrgsGrammar.SrgsRule/SrgsRuleDebugDisplay))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Grammatikregel dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Klasse zum Erstellen einer neuen Regel zur Laufzeit oder eine Regel in einer vorhandenen Grammatik-Stream oder eine Datei zur Laufzeit ändern.  
+  
+ Die Wörter und Ausdrücke, die vom angegebenen <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekte in Grammatiken durch definierten <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> Objektinstanzen einzuschränken, die gesprochene Eingabe, die die Erkennung zu erkennen sein müssen.  
+  
+ Ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt gibt an, die Reihenfolge, in der Wörter und Ausdrücke durch die Sortierung der Objekte, die sie enthalten gesprochen werden müssen. Wörter und Ausdrücke innerhalb einer Regel werden von Objekten dargestellt wie z. B. <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef>, und <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken> Elemente. Verwenden der <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Elements%2A> Eigenschaft zum Zugriff auf die Auflistung von untergeordneten Objekten, die ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt enthält.  
+  
+ Können Sie bestimmen, ob ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> kann in einen Verweis auf eine Regel aus einer Regel in einer externen Grammatik angegeben werden, durch Festlegen seiner <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Scope%2A> Eigenschaft.  
+  
+ Es ist nicht zulässig, definieren Sie eine <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> also leer oder enthält nur Leerzeichen.  
+  
+ Diese Klasse stellt die `rule` im World Wide Web Consortium (W3C) definierte [Speech Recognition Grammatik Specification (SRGS) Version 1.0](http://go.microsoft.com/fwlink/?LinkId=201761). Informationen zu den SRGS `rule` Element und Details über die Unterstützung von System.Speech, finden Sie unter [Regel "Element"](http://msdn.microsoft.com/en-us/da67b4aa-0545-426a-a02f-1417b968021e).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsRule (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsRule.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Der Bezeichner der Regel.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRule" /> -Klasse und gibt den Bezeichner für die Regel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.%23ctor%2A> Konstruktor initialisiert die <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Id%2A> Eigenschaft. Der Bezeichner muss innerhalb einer angegebenen Grammatik eindeutig sein.  
+  
+ Die <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.%23ctor%2A> löst der Konstruktor eine <xref:System.FormatException> in folgenden Situationen:  
+  
+-   `id`ist kein gültiger XML-Namen gemäß [Extensible Markup Language (XML) 1.0 (fünfte Edition)](http://www.w3.org/TR/REC-xml/). Diese Definition etwa Folgendes muss ein gültiger XML-Namen mit einem Buchstaben, einem Unterstrich ("_") oder einem Doppelpunkt beginnen (":") und kann NULL oder mehr NameChar Zeichen (auch in der XML-Spezifikation definiert) folgen.  
+  
+-   `id`ist "NULL" oder "VOID" oder "GARBAGE".  
+  
+-   `id`enthält mindestens eine ungültige Regel-ID-Zeichen. Diese Zeichen befinden sich: "?", "*", "+", "&#124;", "(',')," ^ ","$", '/', ';',". ", '=', '\<", ">", "[", "]", "{", "}","\\\\','", "\t", "\r" und "\n".  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Grammatik, die den Ausdruck erkennt "ein, die die WM gewonnen hat Nation ist" gefolgt vom Namen des ein Land, die die WM gewonnen hat. Das Beispiel erstellt eine <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt mit dem Namen `winnerRule` und übergibt den Bezeichner `WorldCupWinner` als eine <xref:System.String>. Die <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Objekt besteht aus einem Array von neuen <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> Objekte, die mit der alternativen, in der Regel erkannt werden.  
+  
+```csharp  
+public void WorldSoccerWinners ()  
+{  
+  
+  // Create an SrgsDocument, create a new rule  
+  // and set its scope to public.  
+  SrgsDocument document = new SrgsDocument();  
+  SrgsRule winnerRule = new SrgsRule("WorldCupWinner");  
+  winnerRule.Scope = SrgsRuleScope.Public;  
+  
+  // Add the introduction.  
+  winnerRule.Elements.Add(new SrgsItem("A nation that has won the world cup is: "));  
+  
+  // Create the rule for the European nations.  
+  SrgsOneOf oneOfEurope = new SrgsOneOf(new SrgsItem[] {new SrgsItem("England"),   
+    new SrgsItem("France"), new SrgsItem("Germany"), new SrgsItem("Italy")});  
+  SrgsRule ruleEurope = (new SrgsRule("EuropeanNations", new SrgsElement[] {oneOfEurope}));  
+  
+  // Create the rule for the South American nations.  
+  SrgsOneOf oneOfSAmerica = new SrgsOneOf(new SrgsItem[] {new SrgsItem("Argentina"),   
+    new SrgsItem("Brazil"), new SrgsItem("Uruguay")});  
+  SrgsRule ruleSAmerica = (new SrgsRule("SouthAmericanNations", new SrgsElement[] {oneOfSAmerica}));  
+  
+  // Add references to winnerRule for ruleEurope and ruleSAmerica.  
+  winnerRule.Elements.Add(new SrgsOneOf(new SrgsItem[] {(new SrgsItem   
+    (new SrgsRuleRef(ruleEurope))), new SrgsItem(new SrgsRuleRef(ruleSAmerica))}));  
+  
+  // Add all the rules to the document and make winnerRule   
+  // the root rule of the document.  
+  document.Rules.Add(new SrgsRule[] {winnerRule, ruleEurope, ruleSAmerica});  
+  document.Root = winnerRule;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="id" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="id" /> ist leer.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="id" />ist nicht ordnungsgemäße Regelbezeichner.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsRule (string id, params System.Speech.Recognition.SrgsGrammar.SrgsElement[] elements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, class System.Speech.Recognition.SrgsGrammar.SrgsElement[] elements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsRule.#ctor(System.String,System.Speech.Recognition.SrgsGrammar.SrgsElement[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="elements" Type="System.Speech.Recognition.SrgsGrammar.SrgsElement[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="id">Der Bezeichner der Regel.</param>
+        <param name="elements">Ein Array von <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsElement" /> Elemente.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRule" />-Klasse aus einem Array von <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsElement" />-Objekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.%23ctor%2A> Konstruktor initialisiert die <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Id%2A> Eigenschaft. Der Bezeichner muss innerhalb einer angegebenen Grammatik eindeutig sein.  
+  
+ Die <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.%23ctor%2A> löst der Konstruktor eine <xref:System.FormatException> in folgenden Situationen:  
+  
+-   `id`ist kein gültiger XML-Namen gemäß [Extensible Markup Language (XML) 1.0 (fünfte Edition)](http://www.w3.org/TR/REC-xml/). Diese Definition etwa Folgendes muss ein gültiger XML-Namen mit einem Buchstaben, einem Unterstrich ("_") oder einem Doppelpunkt beginnen (":") und kann NULL oder mehr NameChar Zeichen (auch in der XML-Spezifikation definiert) folgen.  
+  
+-   `id`ist "NULL" oder "VOID" oder "GARBAGE".  
+  
+-   `id`enthält mindestens eine ungültige Regel-ID-Zeichen. Diese Zeichen befinden sich: "?", "*", "+", "&#124;", "(',')," ^ ","$", '/', ';',". ", '=', '\<", ">", "[", "]", "{", "}","\\\\','", "\t", "\r" und "\n".  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Grammatik, die den Ausdruck erkennt "ein, die die WM gewonnen hat Nation ist" gefolgt vom Namen des ein Land, die die WM gewonnen hat. Das Beispiel erstellt eine öffentliche Regel mit dem Namen `WorldCupWinner`. Im Beispiel wird dann erstellt zwei <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekte `ruleEurope` und `ruleSAmerica`, und übergeben Sie eine <xref:System.String> für die Regel-ID und ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsElement> Array mit einer <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Objekt. Im Beispiel fügt anschließend Regel Verweise auf `ruleEurope` und `ruleSAmerica` aus der Regel `WorldCupWinner`.  
+  
+```csharp  
+public void WorldSoccerWinners ()  
+{  
+  // Create a grammar from an SRGSDocument, create a new rule  
+  // and set its scope to public.  
+  SrgsDocument srgsGrammar = new SrgsDocument ();  
+  SrgsRule winnerRule = new SrgsRule ("WorldCupWinner");  
+  winnerRule.Scope = SrgsRuleScope.Public;  
+  
+  // Add the introduction.  
+  winnerRule.Elements.Add (new SrgsItem ("A nation that has won the world cup is"));  
+  
+  // Create the rule for the European nations.  
+  SrgsOneOf oneOfEurope = new SrgsOneOf(new SrgsItem[] {new SrgsItem("England"), new SrgsItem("France"), new SrgsItem("Germany"), new SrgsItem("Italy")});  
+  SrgsRule ruleEurope = (new SrgsRule("EuropeanNations", new SrgsElement[] {oneOfEurope}));  
+  
+  // Create the rule for the South American nations.  
+  SrgsOneOf oneOfSAmerica = new SrgsOneOf(new SrgsItem[] {new SrgsItem("Argentina"), new SrgsItem("Brazil"), new SrgsItem("Uruguay")});  
+  SrgsRule ruleSAmerica = (new SrgsRule("SouthAmericanNations", new SrgsElement[] {oneOfSAmerica}));  
+  
+  // Add references to winnerRule for ruleEurope and ruleSAmerica.  
+  winnerRule.Elements.Add(new SrgsOneOf(new SrgsItem[] {(new SrgsItem (new SrgsRuleRef(ruleEurope))), new SrgsItem(new SrgsRuleRef(ruleSAmerica))}));  
+  
+  // Add all the rules to the grammar and make winnerRule  
+  // the root rule of the grammar.  
+  document.Rules.Add(new SrgsRule[] {winnerRule, ruleEurope, ruleSAmerica});  
+  srgsGrammar.Root = winnerRule;  
+}  
+```  
+  
+ Die erstellte Grammatik weist folgende Form.  
+  
+```xml  
+<grammar version="1.0" xml:lang="en-US" xmlns="http://www.w3.org/2001/06/grammar" root="WorldCupWinner">  
+    <rule id="WorldCupWinner" scope="public">  
+        <item> A nation that has won the world cup is </item>  
+        <one-of>  
+            <item>  
+                <ruleref uri="#EuropeanNations" />  
+            </item>  
+            <item>  
+                <ruleref uri="#SouthAmericanNations" />  
+            </item>  
+        </one-of>  
+    </rule>  
+    <rule id="EuropeanNations">  
+        <one-of>  
+            <item> England </item>  
+            <item> France </item>  
+            <item> Germany </item>  
+            <item> Italy </item>  
+        </one-of>  
+    </rule>  
+    <rule id="SouthAmericanNations">  
+        <one-of>  
+            <item> Argentina </item>  
+            <item> Brazil </item>  
+            <item> Uruguay </item>  
+        </one-of>  
+    </rule>  
+</grammar>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="id" /> ist <see langword="null" />.  
+  
+ <paramref name="elements" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="id" /> ist leer.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="id" />ist nicht ordnungsgemäße Regelbezeichner.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Speech.Recognition.SrgsGrammar.SrgsElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Speech.Recognition.SrgsGrammar.SrgsElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsRule.Add(System.Speech.Recognition.SrgsGrammar.SrgsElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein Objekt, das von erbt <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsElement" /> und gibt an, was erkannt werden kann.</param>
+        <summary>Fügt eine <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsElement" /> auf ein <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRule" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Typische Ergänzungen für eine <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt einfügen <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef>, und <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken> Objekten, die angeben, was Lautsprecher reden können. Ein gültiger Rule-Element muss mindestens ein Stück erkennbaren Text oder ein Verweis auf eine Regel enthalten. Finden Sie unter [erstellen Grammatiken mithilfe SrgsGrammar](http://msdn.microsoft.com/en-us/e4d9f96e-2241-4c39-b9e0-ac9ef4e9a906) für Weitere Informationen.  
+  
+ Ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt enthält auch <xref:System.Speech.Recognition.SrgsGrammar.SrgsNameValueTag> und <xref:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag> Objekte, die die Regel semantische Werte und semantischen Schlüssel hinzu. Die Spracherkennungsmoduls gibt die semantischen Informationen als auch dem erkannten Ausdruck zurück, wenn er erkennt, dass den Ausdruck. Finden Sie unter [semantische Interpretation Markup](http://msdn.microsoft.com/en-us/2e115391-73b3-4666-8fd1-540c529de3b0) für Weitere Informationen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Grammatik, die den Ausdruck erkennt "ein, die die WM gewonnen hat Nation ist" gefolgt vom Namen des ein Land, die die WM gewonnen hat. Nach dem Erstellen der <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt `winnerRule` und Übergabe der Zeichenfolgenbezeichner `WorldCupWinner`, im Beispiel wird die <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Add%2A> -Methode, um die Zeichenfolge ein, die die WM gewonnen hat Nation "is", für die Regel. Das Beispiel erstellt dann zwei zusätzliche Regeln, `ruleEurope` und `ruleSAmerica`. Erneut mit der <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Add%2A> -Methode, die im Beispiel fügt eine <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> -Objekt an die `WorldCupWinner` Regel, mit der Regel Verweise auf enthält `ruleEurope` und `ruleSAmerica`.  
+  
+```csharp  
+// Create an SrgsDocument, create a new rule  
+// and set its scope to public.  
+SrgsDocument document = new SrgsDocument();  
+SrgsRule winnerRule = new SrgsRule("WorldCupWinner");  
+winnerRule.Scope = SrgsRuleScope.Public;  
+  
+// Add the introduction.  
+winnerRule.Elements.Add(new SrgsItem("A nation that has won the world cup is: "));  
+  
+// Create the rule for the European nations.  
+SrgsOneOf oneOfEurope = new SrgsOneOf(new SrgsItem[] {new SrgsItem("England"), new SrgsItem("France"), new SrgsItem("Germany"), new SrgsItem("Italy")});  
+SrgsRule ruleEurope = (new SrgsRule("EuropeanNations", new SrgsElement[] {oneOfEurope}));  
+  
+// Create the rule for the South American nations.  
+SrgsOneOf oneOfSAmerica = new SrgsOneOf(new SrgsItem[] {new SrgsItem("Argentina"), new SrgsItem("Brazil"), new SrgsItem("Uruguay")});  
+SrgsRule ruleSAmerica = (new SrgsRule("SouthAmericanNations", new SrgsElement[] {oneOfSAmerica}));  
+  
+// Add references to winnerRule for ruleEurope and ruleSAmerica.  
+winnerRule.Elements.Add(new SrgsOneOf(new SrgsItem[] {(new SrgsItem (new SrgsRuleRef(ruleEurope))), new SrgsItem(new SrgsRuleRef(ruleSAmerica))}));  
+  
+// Add all the rules to the document and make winnerRule   
+// the root rule of the document.  
+document.Rules.Add(new SrgsRule[] {winnerRule, ruleEurope, ruleSAmerica});  
+document.Root = winnerRule;  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseClass">
+      <MemberSignature Language="C#" Value="public string BaseClass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseClass" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.BaseClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft wird derzeit nicht unterstützt.</summary>
+        <value>Wird nicht unterstützt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Elements">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Speech.Recognition.SrgsGrammar.SrgsElement&gt; Elements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Speech.Recognition.SrgsGrammar.SrgsElement&gt; Elements" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.Elements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Speech.Recognition.SrgsGrammar.SrgsElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsElement" /> Objekte in der <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRule" /> Instanz.</summary>
+        <value>Die Auflistung von Elementen in der Regel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente in einer <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt bestehen <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsNameValueTag>, und <xref:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner für die Regel ab oder legt ihn fest.</summary>
+        <value>Der Bezeichner für die Regel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Bezeichner für eine Regel ist eine Zeichenfolge, die den Namen der Regel enthält.  
+  
+ Ein Wert festgelegt, <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Id%2A> müssen die folgenden Regeln einhalten:  
+  
+-   Der Wert muss ein gültiger XML-Name sein, wie definiert in [Extensible Markup Language (XML) 1.0 (fünfte Edition)](http://www.w3.org/TR/REC-xml/). Diese Definition etwa Folgendes muss ein gültiger XML-Namen mit einem Buchstaben, einem Unterstrich ("_") oder einem Doppelpunkt beginnen (":") und kann NULL oder mehr NameChar Zeichen (auch in der XML-Spezifikation definiert) folgen.  
+  
+-   Der Wert kann "NULL" oder "VOID" oder "GARBAGE" sein.  
+  
+-   Der Wert kann keines Ungültige Regel-ID-Zeichen enthalten. Diese Zeichen befinden sich: "?", "*", "+", "&#124;", "(',')," ^ ","$", '/', ';',". ", '=', '\<", ">", "[", "]", "{", "}","\\\\','", "\t", "\r" und "\n".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Es wird versucht, <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.Id" /> auf einen ungültigen Wert festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnError">
+      <MemberSignature Language="C#" Value="public string OnError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OnError" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.OnError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft wird derzeit nicht unterstützt.</summary>
+        <value>Wird nicht unterstützt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="public string OnInit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OnInit" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.OnInit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft wird derzeit nicht unterstützt.</summary>
+        <value>Wird nicht unterstützt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParse">
+      <MemberSignature Language="C#" Value="public string OnParse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OnParse" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.OnParse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft wird derzeit nicht unterstützt.</summary>
+        <value>Wird nicht unterstützt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRecognition">
+      <MemberSignature Language="C#" Value="public string OnRecognition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OnRecognition" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.OnRecognition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft wird derzeit nicht unterstützt.</summary>
+        <value>Wird nicht unterstützt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public System.Speech.Recognition.SrgsGrammar.SrgsRuleScope Scope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Recognition.SrgsGrammar.SrgsRuleScope Scope" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob eine Regel aktiviert werden kann, für die Erkennung und wenn die Regel mit anderen Regeln verwiesen werden kann.</summary>
+        <value>Ein Wert der legt den Bereich für die Regel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für Bereich ist `Private`. Eine private Regel kann nur aktiviert werden für die Erkennung durch einen Verweis auf eine Regel aus der Stammregel in der enthaltenden Grammatik oder aus einer anderen Regel, die von der Stammregel zum verwiesen wird. Eine private Regel kann nicht von einer externen Grammatik verwiesen werden, es sei denn, die private Regel als "Anspruchsregel" der Stamm der enthaltenden Grammatik deklariert wird.  
+  
+ Wenn der Bereich, um festgelegt ist `Public`, wird ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt für die Erkennung aktiviert werden kann, durch einen Verweis aus einer <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef> Objekt in der enthaltenden Grammatik oder von einer Regel in einer externen Grammatik.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Grammatik, die den Ausdruck erkennt "ein, die die WM gewonnen hat Nation ist" gefolgt vom Namen des ein Land, die die WM gewonnen hat. Erstellt eine öffentliche Regel namens `WorldCupWinner` und legt den Bereich dieser Regel auf Public fest.  
+  
+```csharp  
+// Create an SrgsDocument, create a new rule and set its scope to public.  
+SrgsDocument document = new SrgsDocument();  
+SrgsRule winnerRule = new SrgsRule("WorldCupWinner");  
+winnerRule.Scope = SrgsRuleScope.Public;  
+  
+// Add the introduction.  
+winnerRule.Elements.Add(new SrgsItem("A nation that has won the world cup is: "));  
+  
+// Create the rule for the European nations.  
+SrgsOneOf oneOfEurope = new SrgsOneOf(new SrgsItem[] {new SrgsItem("England"), new SrgsItem("France"), new SrgsItem("Germany"), new SrgsItem("Italy")});  
+SrgsRule ruleEurope = (new SrgsRule("EuropeanNations", new SrgsElement[] {oneOfEurope}));  
+  
+// Create the rule for the South American nations.  
+SrgsOneOf oneOfSAmerica = new SrgsOneOf(new SrgsItem[] {new SrgsItem("Argentina"), new SrgsItem("Brazil"), new SrgsItem("Uruguay")});  
+SrgsRule ruleSAmerica = (new SrgsRule("SouthAmericanNations", new SrgsElement[] {oneOfSAmerica}));  
+  
+// Add references to winnerRule for ruleEurope and ruleSAmerica.  
+winnerRule.Elements.Add(new SrgsOneOf(new SrgsItem[] {(new SrgsItem (new SrgsRuleRef(ruleEurope)), new SrgsItem(new SrgsRuleRef(ruleSAmerica)})));  
+  
+// Add all the rules to the document and make winnerRule   
+// the root rule of the document.  
+document.Rules.Add(new SrgsRule[] {winnerRule, ruleEurope, ruleSAmerica});  
+document.Root = winnerRule;  
+```  
+  
+ Die erstellte Grammatik weist folgende Form.  
+  
+```xml  
+<grammar version="1.0" xml:lang="en-US" xmlns="http://www.w3.org/2001/06/grammar" root="WorldCupWinner">  
+    <rule id="WorldCupWinner" scope="public">  
+        <item> A nation that has won the world cup is </item>  
+        <one-of>  
+            <item>  
+                <ruleref uri="#EuropeanNations" />  
+            </item>  
+            <item>  
+                <ruleref uri="#SouthAmericanNations" />  
+            </item>  
+        </one-of>  
+    </rule>  
+    <rule id="EuropeanNations">  
+        <one-of>  
+            <item> England< /item>  
+            <item> France </item>  
+            <item> Germany </item>  
+            <item> Italy </item>  
+        </one-of>  
+    </rule>  
+    <rule id="SouthAmericanNations">  
+        <one-of>  
+            <item> Argentina </item>  
+            <item> Brazil </item>  
+            <item> Uruguay </item>  
+        </one-of>  
+    </rule>  
+</grammar>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Script">
+      <MemberSignature Language="C#" Value="public string Script { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Script" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.Script" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft wird derzeit nicht unterstützt.</summary>
+        <value>Wird nicht unterstützt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

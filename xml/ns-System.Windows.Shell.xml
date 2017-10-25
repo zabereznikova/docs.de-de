@@ -1,0 +1,13 @@
+<Namespace Name="System.Windows.Shell">
+  <Docs>
+    <summary>Enthält Typen, die verwaltetem Codezugriff auf die erweiterten Funktionen von Windows 7-Taskleiste bereitstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[win7](~/includes/win7-md.md)] Taskleiste bietet erweiterte Funktionen, mit dem Sie die Schaltfläche auf der Taskleiste mit der Status für einen Benutzer zu kommunizieren und allgemeine Aufgaben verfügbar zu machen, wenn das Fenster minimiert oder ausgeblendet wird. Die Funktionalität verfügbar gemacht werden, indem Sie die Typen in der <xref:System.Windows.Shell> ist nicht verfügbar in Versionen von Windows vor [!INCLUDE[win7](~/includes/win7-md.md)]. In [!INCLUDE[win7](~/includes/win7-md.md)], einige Funktionen möglicherweise nicht verfügbar, abhängig von den Einstellungen des Benutzers.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

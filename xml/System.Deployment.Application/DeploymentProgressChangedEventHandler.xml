@@ -1,0 +1,32 @@
+<Type Name="DeploymentProgressChangedEventHandler" FullName="System.Deployment.Application.DeploymentProgressChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DeploymentProgressChangedEventHandler(object sender, DeploymentProgressChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DeploymentProgressChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Deployment.Application.DeploymentProgressChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Deployment</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Deployment.Application.DeploymentProgressChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Deployment.Application.DeploymentProgressChangedEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateProgressChanged" /> Ereignis <see cref="E:System.Deployment.Application.ApplicationDeployment.UpdateProgressChanged" /> -Ereignis oder <see cref="E:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupProgressChanged" /> -Ereignis für ein <see cref="T:System.Deployment.Application.ApplicationDeployment" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Deployment.Application.DeploymentProgressChangedEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

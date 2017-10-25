@@ -1,0 +1,411 @@
+<Type Name="ProxyWebPartConnectionCollection" FullName="System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection">
+  <TypeSignature Language="C#" Value="public sealed class ProxyWebPartConnectionCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProxyWebPartConnectionCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.CollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält eine Auflistung von statischen <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekte, die verwendet wird, wenn die Verbindungen auf Inhaltsseiten deklariert werden und die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement auf einer Masterseite deklariert wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection> Klasse wird in einem bestimmten Entwicklungsszenario verwendet. Wenn in eine Webparts-Anwendung mit Masterseiten, verwendet der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement auf einer Masterseite deklariert, und einzelne <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekte in Inhaltsseiten als statische Verbindungen die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection> Klasse dient. In der Inhaltsseiten mehrere <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager> Steuerelemente können deklariert werden, die unterscheidet sich von der üblichen Regel, dass nur eine <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement kann auf einer Seite deklariert werden. Jede <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager> Steuerelement auf einer Inhaltsseite darf eine `<StaticConnections>` -Element, und dieses Element kann eines oder mehrere deklarierte enthalten `<asp:webpartconnection>` Elemente. Die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection> Klasse wird verwendet, indem Sie die Webparts-Steuerelementsatz zum Erstellen einer Sammlung alle statischen Verbindungen, die in jeder Inhaltsseite deklariert, und diese Sammlungen werden letztlich hinzugefügt der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.StaticConnections%2A> Sammlung in der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection> Klasse dient zum Erstellen der Sammlung von statischen <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekte, die verweist die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager> des Steuerelements <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager.StaticConnections%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProxyWebPartConnectionCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.UI.WebControls.WebParts.WebPartConnection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.UI.WebControls.WebParts.WebPartConnection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.Add(System.Web.UI.WebControls.WebParts.WebPartConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartConnection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> in der Auflistung hinzu.</param>
+        <summary>Fügt der Auflistung ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />-Objekt hinzu.</summary>
+        <returns>Ein Integer-Wert, der angibt, an die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> in die Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.Add%2A> Methode, um das Hinzufügen neuer <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekte zu einer vorhandenen <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WebParts.WebPartConnection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WebParts.WebPartConnection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.Contains(System.Web.UI.WebControls.WebParts.WebPartConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartConnection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Vorhandensein in einer Auflistung überprüft wird.</param>
+        <summary>Gibt ein Wert, der angibt, ob ein bestimmtes <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt in der Auflistung vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="value" /> in der Auflistung vorhanden ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.Contains%2A> Methode können Sie überprüfen, ob ein bestimmter <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt, und bestimmen, ob es in eine <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.WebPartConnection[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.WebPartConnection[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.CopyTo(System.Web.UI.WebControls.WebParts.WebPartConnection[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.WebPartConnection[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array von <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> -Objekten, die kopierte Auflistung enthalten.</param>
+        <param name="index">Eine ganze Zahl, die den Anfangspunkt im Array, an dem der Inhalt der Auflistung platziert angibt.</param>
+        <summary>Kopiert die Auflistung in ein Array von <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.CopyTo%2A> Methode ist nützlich, wenn Sie ein benutzerdefiniertes Array um einen Satz von programmgesteuert zu bearbeiten erstellen möchten <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WebParts.WebPartConnection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WebParts.WebPartConnection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.IndexOf(System.Web.UI.WebControls.WebParts.WebPartConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartConnection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> , das ein Mitglied der Sammlung.</param>
+        <summary>Gibt die Position eines bestimmten Elements der Auflistung zurück.</summary>
+        <returns>Eine ganze Zahl, die die Position eines bestimmten Objekts in der Auflistung angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.IndexOf%2A> Methode ist nützlich, wenn Sie die Ordnungsposition (Index) eines Objekts relativ zu den anderen in einer Auflistung wissen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.WebParts.WebPartConnection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.WebParts.WebPartConnection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.Insert(System.Int32,System.Web.UI.WebControls.WebParts.WebPartConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartConnection" />
+      </Parameters>
+      <Docs>
+        <param name="index">Eine ganze Zahl, der angibt, der der Ordnungsposition in der Auflistung, an dem eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> eingefügt werden soll.</param>
+        <param name="value">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> zum Einfügen in die Auflistung.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt am angegebenen Index in die Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `index` entspricht der Anzahl der Elemente in der Auflistung `value` am Ende der Auflistung angefügt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> -Objekte der Auflistung hinzugefügt werden können.</summary>
+        <value>
+          <see langword="true" />Wenn die Auflistung Verbindungsobjekte hinzugefügt werden können; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartConnection this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartConnection Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartConnection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Eine ganze Zahl, die den Index eines Elements der Auflistung angibt.</param>
+        <summary>Ermittelt oder definiert einen Verbindungs-Element innerhalb der Auflistung anhand der Indexnummer, der angibt, der den Speicherort des Elements in der Auflistung.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.Item%2A> Eigenschaft ermöglicht den Zugriff auf eine <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> -Objekts innerhalb einer <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection> -Auflistung unter Verwendung der Indexnummer, die das Element Ordnungsposition in der Auflistung darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartConnection this[string id] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartConnection Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartConnection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Eine Zeichenfolge, die die ID einer bestimmten Verbindung in der Auflistung enthält.</param>
+        <summary>Gibt einen bestimmten Member der Auflistung entsprechend einen eindeutigen Bezeichner zurück.</summary>
+        <value>Die erste <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> , deren ID entspricht dem Wert der <paramref name="id" /> Parameter. Gibt <see langword="null" /> , wenn keine Übereinstimmung gefunden wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt eine <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt mit der angegebenen ID durch Ausführen von Groß-und Kleinschreibung unterschieden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClear">
+      <MemberSignature Language="C#" Value="protected override void OnClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.OnClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected override void OnInsert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemove">
+      <MemberSignature Language="C#" Value="protected override void OnRemove (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemove(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.OnRemove(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSet">
+      <MemberSignature Language="C#" Value="protected override void OnSet (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSet(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.OnSet(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="oldValue">To be added.</param>
+        <param name="newValue">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.WebParts.WebPartConnection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.WebParts.WebPartConnection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection.Remove(System.Web.UI.WebControls.WebParts.WebPartConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartConnection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu entfernende <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />-Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Entfernen des angegebenen <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt aus der Auflistung. Alle Elemente, die das angegebene Element folgen werden dann in der Auflistung nach oben verschoben, die leere Position auszufüllen. Auch werden die Indizes der verschobenen Elemente aktualisiert. Weitere Informationen finden Sie unter <xref:System.Collections.IList.Remove%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

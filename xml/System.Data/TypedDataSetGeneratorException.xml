@@ -1,0 +1,217 @@
+<Type Name="TypedDataSetGeneratorException" FullName="System.Data.TypedDataSetGeneratorException">
+  <TypeSignature Language="C#" Value="public class TypedDataSetGeneratorException : System.Data.DataException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TypedDataSetGeneratorException extends System.Data.DataException" />
+  <TypeSignature Language="DocId" Value="T:System.Data.TypedDataSetGeneratorException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.DataException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn beim Generieren einer stark typisierten <see cref="T:System.Data.DataSet" />-Klasse ein Namenskonflikt auftritt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.TypedDataSetGeneratorException> Klasse dient nicht zur Verwendung als eigenständige Komponente, sondern als eine Klasse, die von der andere Klassen Standardfunktionen ableiten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypedDataSetGeneratorException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedDataSetGeneratorException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.TypedDataSetGeneratorException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.TypedDataSetGeneratorException> Klasse dient nicht zur Verwendung als eigenständige Komponente, sondern als eine Klasse, die von der andere Klassen Standardfunktionen ableiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypedDataSetGeneratorException (System.Collections.ArrayList list);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ArrayList list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedDataSetGeneratorException.#ctor(System.Collections.ArrayList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="list" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="list">
+          <see cref="T:System.Collections.ArrayList" />Objekt, das eine dynamische Liste von Ausnahmen enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.TypedDataSetGeneratorException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.TypedDataSetGeneratorException> Klasse dient nicht zur Verwendung als eigenständige Komponente, sondern als eine Klasse, die von der andere Klassen Standardfunktionen ableiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypedDataSetGeneratorException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedDataSetGeneratorException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Zeichenfolge, die angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.TypedDataSetGeneratorException" /> Klasse mit der angegebenen Zeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.TypedDataSetGeneratorException> Klasse dient nicht zur Verwendung als eigenständige Komponente, sondern als eine Klasse, die von der andere Klassen Standardfunktionen ableiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TypedDataSetGeneratorException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedDataSetGeneratorException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt.</param>
+        <param name="context">Eine <see cref="T:System.Runtime.Serialization.StreamingContext" />-Struktur.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.TypedDataSetGeneratorException" /> -Klasse unter Verwendung des angegebenen Serialisierungsinformationen und Streamingkontext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.TypedDataSetGeneratorException> Klasse dient nicht zur Verwendung als eigenständige Komponente, sondern als eine Klasse, die von der andere Klassen Standardfunktionen ableiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypedDataSetGeneratorException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedDataSetGeneratorException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Zeichenfolge, die angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <param name="innerException">Ein Verweis auf eine Beschreibung der eingeschlossenen Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.TypedDataSetGeneratorException" /> Klasse mit der angegebenen Zeichenfolge und eine Beschreibung der eingeschlossenen Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.TypedDataSetGeneratorException> Klasse dient nicht zur Verwendung als eigenständige Komponente, sondern als eine Klasse, die von der andere Klassen Standardfunktionen ableiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorList">
+      <MemberSignature Language="C#" Value="public System.Collections.ArrayList ErrorList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList ErrorList" />
+      <MemberSignature Language="DocId" Value="P:System.Data.TypedDataSetGeneratorException.ErrorList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine dynamische Liste der aufgetretenen Fehler ab.</summary>
+        <value>
+          <see cref="T:System.Collections.ArrayList" />-Objekt</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.TypedDataSetGeneratorException> Klasse dient nicht zur Verwendung als eigenständige Komponente, sondern als eine Klasse, die von der andere Klassen Standardfunktionen ableiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedDataSetGeneratorException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt.</param>
+        <param name="context">Eine <see cref="T:System.Runtime.Serialization.StreamingContext" />-Struktur.</param>
+        <summary>Implementiert die <see langword="ISerializable" /> -Schnittstelle und gibt die zum Serialisieren von Daten die <see cref="T:System.Data.TypedDataSetGeneratorException" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.TypedDataSetGeneratorException> Klasse dient nicht zur Verwendung als eigenständige Komponente, sondern als eine Klasse, die von der andere Klassen Standardfunktionen ableiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

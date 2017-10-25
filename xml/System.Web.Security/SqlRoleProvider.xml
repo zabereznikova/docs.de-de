@@ -1,0 +1,798 @@
+<Type Name="SqlRoleProvider" FullName="System.Web.Security.SqlRoleProvider">
+  <TypeSignature Language="C#" Value="public class SqlRoleProvider : System.Web.Security.RoleProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlRoleProvider extends System.Web.Security.RoleProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.SqlRoleProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Security.RoleProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet die Speicherung der Informationen zur Rollenmitgliedschaft für eine ASP.NET-Anwendung in einer SQL Server-Datenbank.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird verwendet, durch die <xref:System.Web.Security.Roles> und <xref:System.Web.Security.RolePrincipal> Klassen um Rollenverwaltungsdienste für eine ASP.NET-Anwendung mit SQL Server-Datenbank bereitzustellen. Rollenverwaltung können Sie verschiedene Ebenen der Autorisierung für Ihre Anwendung angeben.  
+  
+ Verwenden der <xref:System.Web.Security.SqlRoleProvider> -Klasse, müssen Sie zuerst SQL Server-Datenbank verwendet werden, indem Sie erstellen die <xref:System.Web.Security.SqlRoleProvider>. Zum Erstellen der Datenbank verwendet werden, indem Sie die <xref:System.Web.Security.SqlRoleProvider> -Klasse, führen Sie die `aspnet_regsql.exe` ausführbare Datei gefunden wird, in der C:\WINDOWS\Microsoft.NET\Framework\ `versionNumber` Ordner, und geben Sie die `-Ar` Option (z. B. `aspnet_regsql.exe -Ar`). Die erstellte Datenbank lautet Aspnetdb. Alternativ können führen Sie aspnet_regsql.exe aus, um die GUI-Konfigurationsmodus, und wählen Sie, um alle Features von ASP.NET konfigurieren.  
+  
+ Wenn der Rollenanbieter mit einer Verbindungszeichenfolge, die die integrierte Sicherheit verwendet konfiguriert ist, muss das Prozesskonto der ASP.NET-Anwendung Rechte zum Verbinden mit SQL Server-Datenbank besitzen.  
+  
+ Die Datei "Machine.config" konfiguriert ist, mit einem <xref:System.Web.Security.SqlRoleProvider> -Instanz AspNetSqlProvider, die mit dem SQL Server auf dem lokalen Computer verbindet. Sie können dieser Instanz des Anbieters verwenden oder geben Sie eine eigene in der Datei "Web.config" für Ihre ASP.NET-Anwendung. Um die AspNetSqlProvider-Instanz verwenden möchten, geben Sie als AspNetSqlProvider der `defaultProvider` in Ihrer Konfiguration.  
+  
+ Sie können konfigurieren, die <xref:System.Web.Security.SqlRoleProvider> verwenden dieselbe Datenbank und Informationen wie die <xref:System.Web.Security.SqlMembershipProvider> um eine einzelne Datenbank Informationen zur Authentifizierung und Autorisierung verwenden. Um die gleiche Datenbank Mitgliedschaft und Rolleninformationen zu verwenden, führen Sie die ausführbare Datei aspnet_regsql.exe, und installieren Sie die Mitgliedschaftsfunktion. Geben Sie dann die gleiche Verbindungszeichenfolge in der Konfiguration für Ihre <xref:System.Web.Security.SqlRoleProvider> und <xref:System.Web.Security.SqlMembershipProvider> Instanzen. Stellen Sie außerdem sicher, dass beide Anbieterinstanzen, mit dem gleichen konfiguriert sind <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Datei "Web.config" für eine ASP.NET-Anwendung für die Verwendung konfiguriert eine <xref:System.Web.Security.SqlRoleProvider> Objekt und die <xref:System.Web.Security.SqlMembershipProvider>. Das Element wird konfiguriert, damit nur Zugriff auf authentifizierte Benutzer in der "Administratoren".  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="SqlServices" connectionString="Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
+  </connectionStrings>  
+  <system.web>  
+    <authentication mode="Forms" >  
+      <forms loginUrl="logincs.aspx"  
+      name=".ASPXFORMSAUTH" />  
+    </authentication>  
+    <authorization>  
+      <deny users="?" />  
+         <allow roles="Administrators" />  
+         <deny users="*" />  
+    </authorization>  
+    <membership defaultProvider="SqlProvider" userIsOnlineTimeWindow="15">  
+      <providers>  
+        <add   
+          name="SqlProvider"   
+          type="System.Web.Security.SqlMembershipProvider"   
+          connectionStringName="SqlServices"  
+          enablePasswordRetrieval="false"  
+          enablePasswordReset="false"  
+          requiresQuestionAndAnswer="false"   
+          passwordFormat="Hashed"   
+          applicationName="SampleApplication" />  
+      </providers>  
+    </membership>  
+    <roleManager defaultProvider="SqlProvider"   
+      enabled="true"  
+      cacheRolesInCookie="true"  
+      cookieName=".ASPROLES"  
+      cookieTimeout="30"  
+      cookiePath="/"  
+      cookieRequireSSL="true"  
+      cookieSlidingExpiration="true"  
+      cookieProtection="All" >  
+      <providers>  
+        <add  
+          name="SqlProvider"  
+          type="System.Web.Security.SqlRoleProvider"  
+          connectionStringName="SqlServices"   
+          applicationName="SampleApplication" />  
+      </providers>  
+    </roleManager>  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlRoleProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.Security.SqlRoleProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.SqlRoleProvider.%23ctor%2A> Konstruktor wird aufgerufen, von ASP.NET zum Erstellen einer Instanz von der <xref:System.Web.Security.SqlRoleProvider> -Klasse entsprechend den Angaben in der Konfiguration für die Anwendung. Dieser Konstruktor ist nicht für die Verwendung aus dem Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddUsersToRoles">
+      <MemberSignature Language="C#" Value="public override void AddUsersToRoles (string[] usernames, string[] roleNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddUsersToRoles(string[] usernames, string[] roleNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.AddUsersToRoles(System.String[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+        <Parameter Name="roleNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Ein Zeichenfolgenarray mit Benutzernamen, die den angegebenen Rollen hinzugefügt werden sollen.</param>
+        <param name="roleNames">Ein Zeichenfolgenarray mit Rollennamen, denen die angegebenen Benutzernamen hinzugefügt werden sollen.</param>
+        <summary>Fügt die angegebenen Benutzernamen an jeden der angegebenen Rollen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.SqlRoleProvider.AddUsersToRoles%2A> Methode wird aufgerufen, indem die <xref:System.Web.Security.Roles> Klasse um einen oder mehrere Benutzer eine oder mehrere Rollen in der SQL Server-Datenbank, die in der ASP.NET-Anwendung-Konfigurationsdatei (Web.config) angegebenen zuzuordnen. Diese Methode wird aufgerufen, indem Sie die <xref:System.Web.Security.Roles.AddUserToRole%2A>, <xref:System.Web.Security.Roles.AddUserToRoles%2A>, <xref:System.Web.Security.Roles.AddUsersToRole%2A>, und <xref:System.Web.Security.Roles.AddUsersToRoles%2A> Methoden die <xref:System.Web.Security.Roles> Klasse.  
+  
+ Die Datenbankupdates, die während des Aufrufs ausgeführt werden die <xref:System.Web.Security.SqlRoleProvider.AddUsersToRoles%2A> Methode innerhalb einer Transaktion erfolgen. Wenn ein Fehler aufgetreten ist, z. B. einen Benutzernamen ein, der bereits in einer bestimmten Rolle ist, die Transaktion ein Rollback aus, und keine Updates ausgeführt werden.  
+  
+ Wenn die <xref:System.Web.Security.SqlRoleProvider> mit verwendet wird die <xref:System.Web.Security.SqlMembershipProvider>, und eine der angegebenen Benutzer ist nicht in der Datenbank vorhanden, der Benutzername wird automatisch mit der Datenbank hinzugefügt werden.  
+  
+ Benutzernamen und Rollennamen dürfen keine Kommas enthalten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine oder mehrere Benutzer zu einer Rolle hinzugefügt oder entfernt einen Benutzer aus einer Rolle. Ein Beispiel der Datei "Web.config", die mit der Rollenverwaltung kann, finden Sie unter <xref:System.Web.Security.SqlRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/adduserstorolecs.aspx#3)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/adduserstorolevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Einer der Rollen in <paramref name="roleNames" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Ein Benutzer in <paramref name="usernames" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Einer der Rollen in <paramref name="roleNames" /> ist eine leere Zeichenfolge oder ein Komma enthält.  
+  
+ - oder -   
+  
+ Ein Benutzer im <paramref name="usernames" /> ist eine leere Zeichenfolge oder ein Komma enthält.  
+  
+ - oder -   
+  
+ Einer der Rollen in <paramref name="roleNames" /> ist länger als 256 Zeichen.  
+  
+ - oder -   
+  
+ Ein Benutzer in <paramref name="usernames" /> ist länger als 256 Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="roleNames" />enthält ein doppeltes Element.  
+  
+ - oder -   
+  
+ <paramref name="usernames" />enthält ein doppeltes Element.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Eine oder mehrere der angegebenen Rollennamen wurde nicht gefunden.  
+  
+ - oder -   
+  
+ Eine oder mehrere der angegebenen Benutzernamen wurde nicht gefunden.  
+  
+ - oder -   
+  
+ Eine oder mehrere der angegebenen Benutzernamen ist bereits eine oder mehrere der angegebenen Rollennamen zugeordnet.  
+  
+ - oder -   
+  
+ Unbekannter Fehler bei der Kommunikation mit der Datenbank.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public override string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.SqlRoleProvider.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Anwendung für das Speichern und Abrufen von Rolleninformationen fest.</summary>
+        <value>Der Name der Anwendung, für die zum Speichern und Abrufen von Rolleninformationen. Die Standardeinstellung ist die <see cref="P:System.Web.HttpRequest.ApplicationPath" /> Eigenschaftswert für die aktuelle <see cref="P:System.Web.HttpContext.Request" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> dient der <xref:System.Web.Security.SqlRoleProvider> Zuordnen von Benutzern und Rollen mit verschiedenen Anwendungen. Dadurch wird die gleiche Datenbank verwendet, um Benutzer- und Rolleninformationen zu speichern, ohne dass Konflikte zwischen doppelten Benutzernamen oder Rollennamen, aus denen mehrere Anwendungen. Mehrere ASP.NET-Anwendungen können die gleiche Datenbank durch Angabe des gleichen Werts in der <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> Eigenschaft. Die <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> Eigenschaft programmgesteuert festgelegt werden kann oder deklarativ in der Konfigurationsdatei für die Web-Anwendung mit festgelegt werden die `applicationName` Attribut.  
+  
+ Wenn kein Wert für angegeben wird die `applicationName` Attribut in der Konfigurationsdatei für die Webanwendung die <xref:System.Web.HttpRequest.ApplicationPath%2A?displayProperty=nameWithType> Eigenschaftswert für die aktuelle <xref:System.Web.HttpContext.Request%2A?displayProperty=nameWithType> Objekt verwendet wird.  
+  
+> [!CAUTION]
+>  Da eine einzelne Rolle Anbieter Standardinstanz, für alle Anforderungen vom verwendet wird ein <xref:System.Web.HttpApplication> -Objekt können mehrere Anforderungen gleichzeitig ausgeführt und versucht, legen Sie die <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> Eigenschaftswert. Die <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> Eigenschaft ist nicht für mehrere Schreibvorgänge threadsicher sind, und ändern die <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> Eigenschaftswert kann zu unerwartetem Verhalten für mehrere Benutzer einer Anwendung führen. Es wird empfohlen, dass Sie keinen Code schreiben, der Benutzern ermöglicht, legen Sie die <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> Eigenschaft es sei denn, Sie müssen. Ein Beispiel für eine Anwendung in dem das Festlegen der <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> Eigenschaft kann erforderlich sein, sollte eine verwaltende Anwendung, die Daten der Rolle für mehrere Anwendungen verwaltet wird. Eine solche Anwendung sollte einen Einzelbenutzer-Anwendung und nicht um eine Webanwendung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Element in der `system.web` Abschnitt der Datei "Web.config" für eine ASP.NET-Anwendung. Es gibt an, der Anwendungsverzeichnis <xref:System.Web.Security.SqlRoleProvider> Instanz und legt die <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> Eigenschaft `MyApplication`.  
+  
+```  
+<roleManager defaultProvider="SqlProvider"   
+  enabled="true"  
+  cacheRolesInCookie="true"  
+  cookieName=".ASPROLES"  
+  cookieTimeout="30"  
+  cookiePath="/"  
+  cookieRequireSSL="false"  
+  cookieSlidingExpiration="true"  
+  cookieProtection="All" >  
+  <providers>  
+    <add  
+      name="SqlProvider"  
+      type="System.Web.Security.SqlRoleProvider"  
+      connectionStringName="SqlServices"  
+      applicationName="MyApplication" />  
+  </providers>  
+</roleManager>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Es wurde versucht, Festlegen der <see cref="P:System.Web.Security.SqlRoleProvider.ApplicationName" /> Eigenschaft von einem Aufrufer, die über keinen <see cref="F:System.Web.AspNetHostingPermissionLevel.High" /> Berechtigung Hosten von ASP.NET.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Es wurde versucht, Festlegen der <see cref="P:System.Web.Security.SqlRoleProvider.ApplicationName" /> in eine Zeichenfolge, die länger als 256 Zeichen ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRole">
+      <MemberSignature Language="C#" Value="public override void CreateRole (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CreateRole(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.CreateRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">Der Name der zu erstellenden Rolle.</param>
+        <summary>Fügt eine neue Rolle mit der Rolle ""-Datenbank.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.SqlRoleProvider.CreateRole%2A> Methode wird aufgerufen, indem die <xref:System.Web.Security.Roles> Klasse zum Erstellen einer Rolle in der SQL Server-Datenbank, die in der ASP.NET-Anwendung-Konfigurationsdatei (Web.config) angegeben.  
+  
+ Die maximale Länge für den Rollennamen beträgt 256 Zeichen. Rollennamen wird die Groß-/Kleinschreibung nicht berücksichtigt. Kommas sind in Rollennamen nicht zulässig.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine neue Rolle in der Datenbank. Ein Beispiel der Datei "Web.config", die mit der Rollenverwaltung kann, finden Sie unter <xref:System.Web.Security.SqlRoleProvider>.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/createrolecs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/createrolevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" />ist eine leere Zeichenfolge oder ein Komma enthält.  
+  
+ - oder -   
+  
+ <paramref name="roleName" />ist länger als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">
+          <paramref name="roleName" />in der Datenbank vorhanden bereits.  
+  
+ - oder -   
+  
+ Unbekannter Fehler bei der Kommunikation mit der Datenbank.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteRole">
+      <MemberSignature Language="C#" Value="public override bool DeleteRole (string roleName, bool throwOnPopulatedRole);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool DeleteRole(string roleName, bool throwOnPopulatedRole) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.DeleteRole(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+        <Parameter Name="throwOnPopulatedRole" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">Der Name der zu löschenden Rolle.</param>
+        <param name="throwOnPopulatedRole">Wenn <see langword="true" />, löst eine Ausnahme aus, wenn <c>RoleName</c> verfügt über eine oder mehrere Member.</param>
+        <summary>Entfernt eine Rolle aus der Rollendatenbank an.</summary>
+        <returns>
+          <see langword="true" />, wenn die Rolle erfolgreich gelöscht wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.SqlRoleProvider.DeleteRole%2A> Methode wird aufgerufen, indem die <xref:System.Web.Security.Roles> Klasse so löschen Sie eine Rolle aus der SQL Server-Datenbank, die in der ASP.NET-Anwendung-Konfigurationsdatei (Web.config) angegeben. Wenn eine Rolle gelöscht wird, wird die Liste der Benutzer, die dieser Rolle zugeordneten auch aus der Datenbank gelöscht. Die Benutzerinformationen in der Datenbank ist nicht betroffen.  
+  
+ Wenn `throwOnPopulatedRole` ist `true`, wird eine Ausnahme ausgelöst und die Rolle wird nicht gelöscht werden, wenn die Rolle von identifiziert die `roleName` Parameter hat ein oder mehrere Elemente. Wenn `throwOnPopulatedRole` ist `false`, und klicken Sie dann die Rolle, ob sie leer oder nicht ist gelöscht werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel löscht eine Rolle aus der Datenbank. Ein Beispiel der Datei "Web.config", die mit der Rollenverwaltung kann, finden Sie unter <xref:System.Web.Security.SqlRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/deleterolecs.aspx#2)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/deleterolevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" />ist <see langword="null" /> (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" />ist eine leere Zeichenfolge oder ein Komma enthält.  
+  
+ - oder -   
+  
+ <paramref name="roleName" />ist länger als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">
+          <paramref name="roleName" />verfügt über eine oder mehrere Member und <paramref name="throwOnPopulatedRole" /> ist <see langword="true" />.  
+  
+ - oder -   
+  
+ Unbekannter Fehler bei der Kommunikation mit der Datenbank.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindUsersInRole">
+      <MemberSignature Language="C#" Value="public override string[] FindUsersInRole (string roleName, string usernameToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] FindUsersInRole(string roleName, string usernameToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.FindUsersInRole(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">Die Rolle, in der gesucht werden soll.</param>
+        <param name="usernameToMatch">Der zu suchende Benutzername.</param>
+        <summary>Ruft ein Array von Benutzernamen in einer Rolle ab, die mit den angegebenen Benutzernamen übereinstimmen.</summary>
+        <returns>Ein Zeichenfolgenarray mit den Namen aller Benutzer, in dem der Benutzername entspricht <paramref name="usernameToMatch" /> und der Benutzer ist Mitglied der angegebenen Rolle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.SqlRoleProvider.FindUsersInRole%2A> Methode wird aufgerufen, indem Sie die <xref:System.Web.Security.Roles> -Klasse und gibt eine Liste von Benutzern in einer Rolle, in dem eine Übereinstimmung des angegebenen enthält den Benutzernamen `usernameToMatch` für die konfigurierte `applicationName`. Die <xref:System.Web.Security.SqlRoleProvider> sucht einen Benutzernamen ein, die entspricht der `usernameToMatch` Parameterwert mit dem LIKE-Schlüsselwort und die Unterstützung von SQL Server-Platzhalterzeichen. Beispielsweise, wenn die `usernameToMatch` Parameter auf "Benutzer1" festgelegt ist, und klicken Sie dann Mitgliedschaftsinformationen für den Benutzer mit dem Benutzernamen "Benutzer1" zurückgegeben, falls vorhanden. Wenn die `usernameToMatch` Parameter auf "Benutzer%" festgelegt ist, dann werden Mitgliedschaftsinformationen für Benutzer mit dem Benutzernamen "Benutzer1", "Benutzer2", "benutzer_admin" usw. zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Security.Roles.FindUsersInRole%2A> -Methode zum Anzeigen der Rollenmitgliedschaft basierend auf Benutzereingaben. Ein Beispiel der Datei "Web.config", die mit der Rollenverwaltung kann, finden Sie unter <xref:System.Web.Security.Roles>.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.Roles#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Roles/CS/FindUsersInRolecs.aspx#11)]
+ [!code-aspx-vb[System.Web.Security.Roles#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Roles/VB/FindUsersInRolevb.aspx#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" />ist <see langword="null" /> (<see langword="Nothing" /> in Visual Basic).  
+  
+ - oder -   
+  
+ <paramref name="usernameToMatch" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" />ist eine leere Zeichenfolge oder ein Komma enthält.  
+  
+ - oder -   
+  
+ <paramref name="usernameToMatch" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="roleName" />ist länger als 256 Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="usernameToMatch" />ist länger als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">
+          <paramref name="roleName" />in der Datenbank wurde nicht gefunden werden.  
+  
+ - oder -   
+  
+ Unbekannter Fehler bei der Kommunikation mit der Datenbank.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllRoles">
+      <MemberSignature Language="C#" Value="public override string[] GetAllRoles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetAllRoles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.GetAllRoles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Liste aller Rollen für die Anwendung ab.</summary>
+        <returns>Ein Zeichenfolgenarray mit den Namen aller Rollen, die in der Datenbank für eine bestimmte Anwendung gespeichert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.SqlRoleProvider.GetAllRoles%2A> Methode wird aufgerufen, indem die <xref:System.Web.Security.Roles> Klasse zum Abrufen einer Liste aller Rollen in der SqlServer-Datenbank, die in der ASP.NET-Anwendung-Konfigurationsdatei (Web.config) angegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Security.Roles.GetAllRoles%2A> Methode zum Abrufen der Liste der Rollen für eine Anwendung, und binden die Ergebnisse in einem <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> Steuerelement. Ein Beispiel der Datei "Web.config", die mit der Rollenverwaltung kann, finden Sie unter <xref:System.Web.Security.SqlRoleProvider>.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/createrolecs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/createrolevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Unbekannter Fehler bei der Kommunikation mit der Datenbank.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRolesForUser">
+      <MemberSignature Language="C#" Value="public override string[] GetRolesForUser (string username);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetRolesForUser(string username) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.GetRolesForUser(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Benutzer, für den eine Liste der Rollen zurückgegeben werden soll.</param>
+        <summary>Ruft eine Liste der Rollen ab, die ein Benutzer innehat.</summary>
+        <returns>Ein Zeichenfolgenarray, das die Namen aller Rollen des angegebenen Benutzers enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.SqlRoleProvider.GetRolesForUser%2A> Methode wird aufgerufen, indem die <xref:System.Web.Security.Roles> Klasse, um eine Liste der Rollen des angegebenen Benutzers aus der SQL Server-Datenbank, die in der ASP.NET-Anwendung-Konfigurationsdatei (Web.config) angegebenen abzurufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Security.Roles.GetRolesForUser%2A> Methode zum Abrufen einer Liste der Rollen für einen angegebenen Benutzer und bindet sie an einer <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> Steuerelement. Ein Beispiel der Datei "Web.config", die mit der Rollenverwaltung kann, finden Sie unter <xref:System.Web.Security.SqlRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/ViewRolescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/ViewRolesvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="username" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="username" />ein Komma enthält.  
+  
+ - oder -   
+  
+ <paramref name="username" />ist länger als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Unbekannter Fehler bei der Kommunikation mit der Datenbank.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUsersInRole">
+      <MemberSignature Language="C#" Value="public override string[] GetUsersInRole (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetUsersInRole(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.GetUsersInRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">Der Name der Rolle, für die die Liste der Benutzer abgerufen werden soll.</param>
+        <summary>Ruft eine Liste der Benutzer mit der angegebenen Rolle ab.</summary>
+        <returns>Ein Zeichenfolgenarray mit den Namen aller Benutzer, die Mitglieder der angegebenen Rolle sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.SqlRoleProvider.GetUsersInRole%2A> Methode wird aufgerufen, indem die <xref:System.Web.Security.Roles> Klasse beim Abrufen der Liste der Benutzer die angegebene Rolle in der SQL Server-Datenbank, die in der ASP.NET-Anwendung-Konfigurationsdatei (Web.config) angegebenen zugeordnet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Security.Roles.GetUsersInRole%2A> Methode zum Abrufen einer Liste der Benutzer in einer bestimmten Rolle, und binden die Ergebnisse in einem <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> Steuerelement. Ein Beispiel der Datei "Web.config", die mit der Rollenverwaltung kann, finden Sie unter <xref:System.Web.Security.SqlRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/adduserstorolecs.aspx#3)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/adduserstorolevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" />ist eine leere Zeichenfolge oder ein Komma enthält.  
+  
+ - oder -   
+  
+ <paramref name="roleName" />ist länger als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">
+          <paramref name="rolename" />in der Datenbank wurde nicht gefunden werden.  
+  
+ - oder -   
+  
+ Unbekannter Fehler bei der Kommunikation mit der Datenbank.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.Web.Security.SqlRoleProvider" /> Instanz initialisiert werden.</param>
+        <param name="config">Ein <see cref="T:System.Collections.Specialized.NameValueCollection" /> , die die Namen und Werte der Konfigurationsoptionen für den Rollenanbieter enthält.</param>
+        <summary>Initialisiert den SQL Server-Rollenanbieter mit den Eigenschaftswerten, die in der ASP.NET-Anwendung Konfigurationsdatei angegeben. Diese Methode ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode initialisiert die <xref:System.Web.Security.SqlRoleProvider> mit der Eigenschaft Werte, die in der Anwendungskonfigurationsdatei (Web.config) für das ASP.NET angegeben sind, und nicht direkt aus Ihrem Code verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die ASP.NET-Anwendung wird nicht ausgeführt, bei <see cref="F:System.Web.AspNetHostingPermissionLevel.Medium" /> Vertrauensstellung oder höher.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="config" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Die <see langword="connectionStringName" /> Attribut ist leer oder ist nicht in der Anwendungskonfigurationsdatei für diesen <see cref="T:System.Web.Security.SqlRoleProvider" /> Instanz.  
+  
+ - oder -   
+  
+ Die <see langword="applicationName" /> -Attribut überschreitet 256 Zeichen.  
+  
+ - oder -   
+  
+ Die Konfigurationsdatei der Anwendung für diese <see cref="T:System.Web.Security.SqlRoleProvider" /> Instanz enthält ein nicht erkanntes Attribut.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserInRole">
+      <MemberSignature Language="C#" Value="public override bool IsUserInRole (string username, string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsUserInRole(string username, string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.IsUserInRole(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der zu suchende Benutzername.</param>
+        <param name="roleName">Die Rolle, in der gesucht werden soll.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob der angegebene Benutzer die angegebene Rolle innehat.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Benutzername in der angegebenen Rolle ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.SqlRoleProvider.IsUserInRole%2A> Methode wird aufgerufen, indem Sie die <xref:System.Web.Security.Roles> Klasse und die <xref:System.Security.Principal.IPrincipal.IsInRole%2A> Methode der <xref:System.Web.UI.Page.User%2A?displayProperty=nameWithType> Eigenschaft, um zu bestimmen, ob ein Benutzer einer Rolle in der SQL Server-Datenbank, die in der ASP.NET-Anwendung Konfigurationsdatei angegebenen zugeordnet ist ("Web.config").  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird überprüft, um festzustellen, ob der angemeldete Benutzer in der "Administratoren" ist, bevor der Benutzer zum Anzeigen von Benutzerrollen programmgesteuert. Ein Beispiel der Datei "Web.config", die mit der Rollenverwaltung kann, finden Sie unter <xref:System.Web.Security.SqlRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/ViewRolescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/ViewRolesvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="username" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" />ist eine leere Zeichenfolge oder ein Komma enthält.  
+  
+ - oder -   
+  
+ <paramref name="username" />ist ein Komma enthält.  
+  
+ - oder -   
+  
+ <paramref name="roleName" />ist länger als 256 Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="username" />ist länger als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Unbekannter Fehler bei der Kommunikation mit der Datenbank.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveUsersFromRoles">
+      <MemberSignature Language="C#" Value="public override void RemoveUsersFromRoles (string[] usernames, string[] roleNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveUsersFromRoles(string[] usernames, string[] roleNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.RemoveUsersFromRoles(System.String[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+        <Parameter Name="roleNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Ein Zeichenfolgenarray mit Benutzernamen, die aus den angegebenen Rollen entfernt werden sollen.</param>
+        <param name="roleNames">Ein Zeichenfolgenarray mit Rollennamen, aus denen Benutzernamen entfernt werden sollen.</param>
+        <summary>Entfernt die angegebenen Benutzernamen aus den angegebenen Rollen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.SqlRoleProvider.RemoveUsersFromRoles%2A> Methode wird aufgerufen, indem die <xref:System.Web.Security.Roles> Klasse so entfernen Sie einen oder mehrere Benutzer aus einer oder mehrerer Rollen in der SQL Server-Datenbank, die in der ASP.NET-Anwendung-Konfigurationsdatei (Web.config) angegeben. Diese Methode wird aufgerufen, indem Sie die <xref:System.Web.Security.Roles.RemoveUserFromRole%2A>, <xref:System.Web.Security.Roles.RemoveUserFromRoles%2A>, <xref:System.Web.Security.Roles.RemoveUsersFromRole%2A>, und <xref:System.Web.Security.Roles.RemoveUsersFromRoles%2A> Methoden die <xref:System.Web.Security.Roles> Klasse.  
+  
+ Die Datenbankupdates, die während des Aufrufs ausgeführt werden <xref:System.Web.Security.SqlRoleProvider.RemoveUsersFromRoles%2A> innerhalb einer Transaktion erfolgen. Wenn ein Fehler aufgetreten ist, z. B. einen Benutzernamen ein, der nicht vorhanden ist oder einen Benutzernamen ein, der bereits in einer bestimmten Rolle ist, die Transaktion ein Rollback aus, und keine Updates ausgeführt werden.  
+  
+ Benutzernamen und Rollennamen dürfen keine Kommas enthalten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine oder mehrere Benutzer zu einer Rolle hinzugefügt oder entfernt einen Benutzer aus einer Rolle. Ein Beispiel der Datei "Web.config", die mit der Rollenverwaltung kann, finden Sie unter <xref:System.Web.Security.SqlRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/adduserstorolecs.aspx#3)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/adduserstorolevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Einer der Rollen in <paramref name="roleNames" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Ein Benutzer in <paramref name="usernames" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Einer der Rollen in <paramref name="roleNames" /> ist eine leere Zeichenfolge oder ein Komma enthält.  
+  
+ - oder -   
+  
+ Ein Benutzer im <paramref name="usernames" /> ist eine leere Zeichenfolge oder ein Komma enthält.  
+  
+ - oder -   
+  
+ Einer der Rollen in <paramref name="roleNames" /> ist länger als 256 Zeichen.  
+  
+ - oder -   
+  
+ Ein Benutzer in <paramref name="usernames" /> ist länger als 256 Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="roleNames" />enthält ein doppeltes Element.  
+  
+ - oder -   
+  
+ <paramref name="usernames" />enthält ein doppeltes Element.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Eine oder mehrere der angegebenen Benutzernamen wurde nicht gefunden.  
+  
+ - oder -   
+  
+ Eine oder mehrere der angegebenen Rollennamen wurde nicht gefunden.  
+  
+ - oder -   
+  
+ Eine oder mehrere der angegebenen Benutzernamen ist nicht mit einem oder mehreren der angegebenen Rollennamen zugeordnet.  
+  
+ - oder -   
+  
+ Unbekannter Fehler bei der Kommunikation mit der Datenbank.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RoleExists">
+      <MemberSignature Language="C#" Value="public override bool RoleExists (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool RoleExists(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.RoleExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">Der Name der Rolle, die in der Datenbank gesucht werden soll.</param>
+        <summary>Ruft einen Wert, der angibt, ob der angegebene Rollenname bereits in der Rollendatenbank vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Rollenname bereits in der Datenbank vorhanden ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.SqlRoleProvider.RoleExists%2A> Methode wird aufgerufen, indem die <xref:System.Web.Security.Roles> Klasse, um zu bestimmen, ob ein Rollenname vorhanden, in der SQL Server-Datenbank, die in der ASP.NET-Anwendung-Konfigurationsdatei (Web.config) angegeben ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Security.Roles.RoleExists%2A> Methode, um zu bestimmen, ob ein Rollenname bereits vor dem Erstellen der Rolle. Ein Beispiel der Datei "Web.config", die mit der Rollenverwaltung kann, finden Sie unter <xref:System.Web.Security.SqlRoleProvider>.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/createrolecs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/createrolevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" />ist eine leere Zeichenfolge oder ein Komma enthält.  
+  
+ - oder -   
+  
+ <paramref name="roleName" />ist länger als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Unbekannter Fehler bei der Kommunikation mit der Datenbank.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

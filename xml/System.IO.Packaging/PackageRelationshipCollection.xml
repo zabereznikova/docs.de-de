@@ -1,0 +1,106 @@
+<Type Name="PackageRelationshipCollection" FullName="System.IO.Packaging.PackageRelationshipCollection">
+  <TypeSignature Language="C#" Value="public class PackageRelationshipCollection : System.Collections.Generic.IEnumerable&lt;System.IO.Packaging.PackageRelationship&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PackageRelationshipCollection extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;class System.IO.Packaging.PackageRelationship&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.PackageRelationshipCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Packaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.IO.Packaging.PackageRelationship&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.IO.Packaging.PackageRelationship" /> Elemente, die im Besitz von einem bestimmten <see cref="T:System.IO.Packaging.PackagePart" /> oder <see cref="T:System.IO.Packaging.Package" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Packaging.PackageRelationshipCollection> -Klasse verfügt über keinen öffentlichen Konstruktor.  Diese Klasse wird erstellt und mithilfe der folgenden Methoden zurückgegeben.  
+  
+-   **Paket**.<xref:System.IO.Packaging.Package.GetRelationships%2A>  
+  
+-   **Paket**.<xref:System.IO.Packaging.Package.GetRelationshipsByType%2A>  
+  
+-   **PackagePart**.<xref:System.IO.Packaging.PackagePart.GetRelationships%2A>  
+  
+-   **PackagePart**.<xref:System.IO.Packaging.PackagePart.GetRelationshipsByType%2A>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.IO.Packaging.PackageRelationship&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.IO.Packaging.PackageRelationship&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageRelationshipCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.IO.Packaging.PackageRelationship&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zum Durchlaufen der Beziehungen in der Auflistung zurück.</summary>
+        <returns>Ein Enumerator zum Durchlaufen der <see cref="T:System.IO.Packaging.PackageRelationship" /> Elemente in der Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach jeder Änderung der zugrunde liegenden Auflistung auftreten, wird die Auflistung zugegriffen werden, indem der Enumerator ungültig.  Die zugrunde liegende Auflistung kann ändern, wenn eine der folgenden Methoden aufgerufen werden.  
+  
+-   **Paket**.<xref:System.IO.Packaging.Package.CreateRelationship%2A>  
+  
+-   **Paket**.<xref:System.IO.Packaging.Package.DeleteRelationship%2A>  
+  
+-   **PackagePart**.<xref:System.IO.Packaging.PackagePart.CreateRelationship%2A>  
+  
+-   **PackagePart**.<xref:System.IO.Packaging.PackagePart.DeleteRelationship%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageRelationshipCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <returns>Verwenden Sie keine – verwenden Sie <see cref="M:System.IO.Packaging.PackageRelationshipCollection.GetEnumerator" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

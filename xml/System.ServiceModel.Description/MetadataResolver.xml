@@ -1,0 +1,628 @@
+<Type Name="MetadataResolver" FullName="System.ServiceModel.Description.MetadataResolver">
+  <TypeSignature Language="C#" Value="public static class MetadataResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit MetadataResolver extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.MetadataResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ruft Metadaten ab und importiert diese als <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Description.MetadataResolver>-Klasse, um Endpunkte für einen Dienst aus Metadaten schnell zu importieren. Diese Klasse lädt Metadaten herunter und konvertiert diese in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte. Weitere Informationen zum Herunterladen von Metadaten und Verarbeiten der Metadaten als <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> finden Sie unter <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.ServiceModel.Description.MetadataResolver>-Klasse, um Metadaten als eine Auflistung von <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekten zurückzugeben, die dann zum Herstellen einer Verbindung mit einer Dienstinstanz verwendet werden.  
+  
+ [!code-csharp[MetadataResolver#1](~/samples/snippets/csharp/VS_Snippets_CFX/metadataresolver/cs/client.cs#1)]  
+  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von <xref:System.ServiceModel.Description.MetadataResolver>, um Metadaten als eine Auflistung von <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekten mithilfe einer HTTP GET-Anforderung anstelle von WS-Transfer herunterzuladen und zurückzugeben.  
+  
+ [!code-csharp[MetadataResolver#2](~/samples/snippets/csharp/VS_Snippets_CFX/metadataresolver/cs/client.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="BeginResolve">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Startet einen asynchronen Aufruf, durch den eine Metadatenadresse in eine Auflistung von <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekten für diesen Dienst aufgelöst wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methoden starten asynchrone Versionen der <xref:System.ServiceModel.Description.MetadataResolver.Resolve%2A>-Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="BeginResolve">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginResolve (System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt; contracts, System.ServiceModel.EndpointAddress address, AsyncCallback callback, object asyncState);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginResolve(class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.Description.ContractDescription&gt; contracts, class System.ServiceModel.EndpointAddress address, class System.AsyncCallback callback, object asyncState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.BeginResolve(System.Collections.Generic.IEnumerable{System.ServiceModel.Description.ContractDescription},System.ServiceModel.EndpointAddress,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contracts" Type="System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt;" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="asyncState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contracts">Die Verträge, für die Metadaten heruntergeladen und aufgelöst werden sollen.</param>
+        <param name="address">Die Adresse der Metadaten.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der nach Abschluss des Aufrufs aufgerufen wird.</param>
+        <param name="asyncState">Der Zustand, der dem asynchronen Aufruf zugeordnet ist.</param>
+        <summary>Startet einen asynchronen Aufruf, der eine Metadatenadresse in die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte für die angegebenen Verträge unter Verwendung der angegebenen Adresse, des asynchronen Zustands und des Delegats auflöst.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />-Wert, der auf den asynchronen Auflösungsvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellungen auf dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> werden verwendet, um die Metadaten abzurufen. Die Standardeinstellung für <xref:System.ServiceModel.Description.MetadataExchangeClientMode?displayProperty=nameWithType> ist <xref:System.ServiceModel.Description.MetadataExchangeClientMode?displayProperty=nameWithType>.  
+  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+> [!NOTE]
+>  Es wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Adresse, der Vertrag oder der Rückruf ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contracts" /> ist leer, mindestens ein Member von <paramref name="contracts" /> ist <see langword="null" />, oder <paramref name="contracts" /> enthält mehr als einen Vertrag mit dem gleichen Namen und Namespace.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginResolve">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginResolve (Type contract, System.ServiceModel.EndpointAddress address, AsyncCallback callback, object asyncState);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginResolve(class System.Type contract, class System.ServiceModel.EndpointAddress address, class System.AsyncCallback callback, object asyncState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.BeginResolve(System.Type,System.ServiceModel.EndpointAddress,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.Type" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="asyncState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contract">Der Vertrag, für den Metadaten heruntergeladen und aufgelöst werden sollen.</param>
+        <param name="address">Die Adresse der Metadaten.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der nach Abschluss des Aufrufs aufgerufen wird.</param>
+        <param name="asyncState">Der Zustand, der dem asynchronen Aufruf zugeordnet ist.</param>
+        <summary>Startet einen asynchronen Aufruf, der eine Metadatenadresse in die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte für den angegebenen Vertrag unter Verwendung der angegebenen Adresse, des asynchronen Zustands und des Delegats auflöst.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />-Wert, der auf den asynchronen Auflösungsvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellungen auf dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> werden verwendet, um die Metadaten abzurufen. Die Standardeinstellung für <xref:System.ServiceModel.Description.MetadataExchangeClientMode?displayProperty=nameWithType> ist <xref:System.ServiceModel.Description.MetadataExchangeClientMode?displayProperty=nameWithType>.  
+  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+> [!NOTE]
+>  Es wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+ Diese Methode erfordert, dass Sie einen Vertragstyp angeben. Sie geben den Vertrag an, indem Sie die Dienstschnittstelle im Clientcode deklarieren oder indem Sie einen durch Svcutil.exe generierten [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Client verwenden. Wenn sich die Schnittstelle ändert, z.&#160;B. weil ein neuer Vorgang hinzugefügt wurde, müssen Sie die Schnittstelle im Clientcode aktualisieren oder einen neuen [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Client generieren. Andernfalls wird eine Ausnahme ausgelöst. Beispiel: Sie verfügen über einen Dienst, der den Dienstvertrag ICalculator implementiert, in dem Add(), Sub(), Mult() und Div() definiert sind. Sie erstellen eine Clientanwendung und generieren den [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Client. Anschließend fügen Sie eine Methode mit der Bezeichnung Echo() zu ICalculator hinzu. Wenn Sie dann eine Anwendung schreiben, die <xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29> aufruft, ohne einen neuen [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Client zu generieren, wird die folgende Ausnahme ausgegeben.  
+  
+ `Unhandled Exception: System.ServiceModel.Description.WsdlImporter+WsdlImportException: Cannot locate operation Echo in Contract ICalculator`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Adresse, der Vertrag oder der Rückruf ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginResolve">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginResolve (System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt; contracts, System.ServiceModel.EndpointAddress address, System.ServiceModel.Description.MetadataExchangeClient client, AsyncCallback callback, object asyncState);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginResolve(class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.Description.ContractDescription&gt; contracts, class System.ServiceModel.EndpointAddress address, class System.ServiceModel.Description.MetadataExchangeClient client, class System.AsyncCallback callback, object asyncState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.BeginResolve(System.Collections.Generic.IEnumerable{System.ServiceModel.Description.ContractDescription},System.ServiceModel.EndpointAddress,System.ServiceModel.Description.MetadataExchangeClient,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contracts" Type="System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt;" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="client" Type="System.ServiceModel.Description.MetadataExchangeClient" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="asyncState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contracts">Die Verträge, für die Metadaten heruntergeladen und aufgelöst werden sollen.</param>
+        <param name="address">Die Adresse der Metadaten.</param>
+        <param name="client"><see cref="T:System.ServiceModel.Description.MetadataExchangeClient" />, der zum Abrufen der Metadaten verwendet wird.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der nach Abschluss des Aufrufs aufgerufen wird.</param>
+        <param name="asyncState">Der Zustand, der dem asynchronen Aufruf zugeordnet ist.</param>
+        <summary>Startet einen asynchronen Aufruf, der eine Metadatenadresse in die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte für die angegebenen Verträge unter Verwendung der angegebenen Adresse, <see cref="T:System.ServiceModel.Description.MetadataExchangeClient" />, des asynchronen Zustands und des Delegats auflöst.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />-Wert, der auf den asynchronen Auflösungsvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung für <xref:System.ServiceModel.Description.MetadataExchangeClientMode?displayProperty=nameWithType> ist <xref:System.ServiceModel.Description.MetadataExchangeClientMode?displayProperty=nameWithType>.  
+  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+> [!NOTE]
+>  Es wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Adresse, der Vertrag, der Client oder der Rückruf ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contracts" /> ist leer, mindestens ein Member von <paramref name="contracts" /> ist null, oder <paramref name="contracts" /> enthält mehr als einen Vertrag mit dem gleichen Namen und Namespace.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginResolve">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginResolve (System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt; contracts, Uri address, System.ServiceModel.Description.MetadataExchangeClientMode mode, AsyncCallback callback, object asyncState);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginResolve(class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.Description.ContractDescription&gt; contracts, class System.Uri address, valuetype System.ServiceModel.Description.MetadataExchangeClientMode mode, class System.AsyncCallback callback, object asyncState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.BeginResolve(System.Collections.Generic.IEnumerable{System.ServiceModel.Description.ContractDescription},System.Uri,System.ServiceModel.Description.MetadataExchangeClientMode,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contracts" Type="System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt;" />
+        <Parameter Name="address" Type="System.Uri" />
+        <Parameter Name="mode" Type="System.ServiceModel.Description.MetadataExchangeClientMode" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="asyncState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contracts">Die Verträge, für die Metadaten heruntergeladen und aufgelöst werden sollen.</param>
+        <param name="address">Die Adresse der Metadaten.</param>
+        <param name="mode">Der Abrufmodus.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der nach Abschluss des Aufrufs aufgerufen wird.</param>
+        <param name="asyncState">Der Zustand, der dem asynchronen Aufruf zugeordnet ist.</param>
+        <summary>Startet einen asynchronen Aufruf, der eine Metadatenadresse in die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte für die angegebenen Verträge unter Verwendung der angegebenen Adresse, des <see cref="T:System.ServiceModel.Description.MetadataExchangeClientMode" />-Werts, des asynchronen Zustands und des Delegats auflöst.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />-Wert, der auf den asynchronen Auflösungsvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellungen auf dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> werden verwendet, um die Metadaten abzurufen.  
+  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+> [!NOTE]
+>  Es wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Adresse, der Vertrag oder der Rückruf ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contracts" /> ist leer, mindestens ein Member von <paramref name="contracts" /> ist null, oder <paramref name="contracts" /> enthält mehr als einen Vertrag mit dem gleichen Namen und Namespace.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginResolve">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginResolve (Type contract, Uri address, System.ServiceModel.Description.MetadataExchangeClientMode mode, AsyncCallback callback, object asyncState);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginResolve(class System.Type contract, class System.Uri address, valuetype System.ServiceModel.Description.MetadataExchangeClientMode mode, class System.AsyncCallback callback, object asyncState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.BeginResolve(System.Type,System.Uri,System.ServiceModel.Description.MetadataExchangeClientMode,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.Type" />
+        <Parameter Name="address" Type="System.Uri" />
+        <Parameter Name="mode" Type="System.ServiceModel.Description.MetadataExchangeClientMode" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="asyncState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contract">Der Vertrag, für den Metadaten heruntergeladen und aufgelöst werden sollen.</param>
+        <param name="address">Die Adresse der Metadaten.</param>
+        <param name="mode">Der Abrufmodus.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der nach Abschluss des Aufrufs aufgerufen wird.</param>
+        <param name="asyncState">Der Zustand, der dem asynchronen Aufruf zugeordnet ist.</param>
+        <summary>Startet einen asynchronen Aufruf, der eine Metadatenadresse in die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte für den angegebenen Vertrag unter Verwendung der angegebenen Adresse, <see cref="T:System.ServiceModel.Description.MetadataExchangeClientMode" />, des asynchronen Zustands und des Delegats auflöst.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />-Wert, der auf den asynchronen Auflösungsvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellungen auf dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> werden verwendet, um die Metadaten abzurufen.  
+  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+> [!NOTE]
+>  Es wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Adresse, der Vertrag oder der Rückruf ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginResolve">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginResolve (System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt; contracts, Uri address, System.ServiceModel.Description.MetadataExchangeClientMode mode, System.ServiceModel.Description.MetadataExchangeClient client, AsyncCallback callback, object asyncState);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginResolve(class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.Description.ContractDescription&gt; contracts, class System.Uri address, valuetype System.ServiceModel.Description.MetadataExchangeClientMode mode, class System.ServiceModel.Description.MetadataExchangeClient client, class System.AsyncCallback callback, object asyncState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.BeginResolve(System.Collections.Generic.IEnumerable{System.ServiceModel.Description.ContractDescription},System.Uri,System.ServiceModel.Description.MetadataExchangeClientMode,System.ServiceModel.Description.MetadataExchangeClient,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contracts" Type="System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt;" />
+        <Parameter Name="address" Type="System.Uri" />
+        <Parameter Name="mode" Type="System.ServiceModel.Description.MetadataExchangeClientMode" />
+        <Parameter Name="client" Type="System.ServiceModel.Description.MetadataExchangeClient" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="asyncState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contracts">Die Verträge, für die Metadaten heruntergeladen und aufgelöst werden sollen.</param>
+        <param name="address">Die Adresse der Metadaten.</param>
+        <param name="mode">Der Abrufmodus.</param>
+        <param name="client"><see cref="T:System.ServiceModel.Description.MetadataExchangeClient" />, der zum Abrufen der Metadaten verwendet wird.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der nach Abschluss des Aufrufs aufgerufen wird.</param>
+        <param name="asyncState">Der Zustand, der dem asynchronen Aufruf zugeordnet ist.</param>
+        <summary>Startet einen asynchronen Aufruf, der eine Metadatenadresse in die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte für die angegebenen Verträge unter Verwendung der angegebenen Adresse, <see cref="T:System.ServiceModel.Description.MetadataExchangeClient" />, <see cref="T:System.ServiceModel.Description.MetadataExchangeClientMode" />, des asynchronen Zustands und des Delegats auflöst.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />-Wert, der auf den asynchronen Auflösungsvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+> [!NOTE]
+>  Es wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Adresse, der Vertrag oder der Rückruf ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contracts" /> ist leer, mindestens ein Member von <paramref name="contracts" /> ist null, oder <paramref name="contracts" /> enthält mehr als einen Vertrag mit dem gleichen Namen und Namespace.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndResolve">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.ServiceEndpointCollection EndResolve (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.ServiceEndpointCollection EndResolve(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.EndResolve(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />-Objekt, das von einem Aufruf der <see cref="Overload:System.ServiceModel.Description.MetadataResolver.BeginResolve" />-Methode empfangen wurde.</param>
+        <summary>Vervollständigt einen asynchronen Aufruf, um Metadaten in eine Auflistung von Endpunkten aufzulösen.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekten für die Endpunkte, die in den Metadaten enthalten sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beendet einen asynchronen Aufruf einer der <xref:System.ServiceModel.Description.MetadataResolver.BeginResolve%2A>-Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Resolve">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Lädt eine Metadatenadresse herunter und löst diese in <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte für diesen Dienst auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+ Für alle synchronen und asynchronen `Resolve`-Methoden wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.ServiceEndpointCollection Resolve (System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt; contracts, System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.ServiceEndpointCollection Resolve(class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.Description.ContractDescription&gt; contracts, class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.Resolve(System.Collections.Generic.IEnumerable{System.ServiceModel.Description.ContractDescription},System.ServiceModel.EndpointAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contracts" Type="System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt;" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="contracts">Die Verträge, für die Metadaten heruntergeladen und aufgelöst werden sollen.</param>
+        <param name="address">Die Adresse der Metadaten.</param>
+        <summary>Löst eine Metadatenadresse in die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte für den angegebenen Vertrag unter Verwendung der angegebenen Metadatenadresse auf.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekten für den angegebenen Vertrag.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellungen auf dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> werden verwendet, um die Metadaten abzurufen. Die Standardeinstellung für <xref:System.ServiceModel.Description.MetadataExchangeClientMode?displayProperty=nameWithType> ist <xref:System.ServiceModel.Description.MetadataExchangeClientMode?displayProperty=nameWithType>.  
+  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+> [!NOTE]
+>  Es wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Adresse oder die Vertragsauflistung ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contracts" /> ist leer, mindestens ein Member von <paramref name="contracts" /> ist null, oder <paramref name="contracts" /> enthält mehr als einen Vertrag mit dem gleichen Namen und Namespace.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.ServiceEndpointCollection Resolve (Type contract, System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.ServiceEndpointCollection Resolve(class System.Type contract, class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.Resolve(System.Type,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.Type" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="contract">Die Verträge, für die Metadaten heruntergeladen und aufgelöst werden sollen.</param>
+        <param name="address">Die Adresse der Metadaten.</param>
+        <summary>Lädt eine Metadatenadresse herunter und löst diese in eine Auflistung von <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekten für einen angegebenen Vertrag an einer spezifischen Adresse auf.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekten für den angegebenen Vertrag.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Description.MetadataResolver.Resolve%2A>-Methode, um den Vertrag und die Metadatenadresse anzugeben, die beim Herunterladen und Auflösen von Metadaten verwendet werden sollen.  
+  
+ Die Standardeinstellungen auf dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> werden verwendet, um die Metadaten abzurufen. Die Standardeinstellung für <xref:System.ServiceModel.Description.MetadataExchangeClientMode?displayProperty=nameWithType> ist <xref:System.ServiceModel.Description.MetadataExchangeClientMode?displayProperty=nameWithType>.  
+  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+> [!NOTE]
+>  Es wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+ Diese Methode erfordert, dass Sie einen Vertragstyp angeben. Sie geben den Vertrag an, indem Sie die Dienstschnittstelle im Clientcode deklarieren oder indem Sie einen durch Svcutil.exe generierten [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Client verwenden. Wenn sich die Schnittstelle ändert, z.&#160;B. weil ein neuer Vorgang hinzugefügt wurde, müssen Sie die Schnittstelle im Clientcode aktualisieren oder einen neuen [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Client generieren. Andernfalls wird eine Ausnahme ausgelöst. Beispiel: Sie verfügen über einen Dienst, der den Dienstvertrag ICalculator implementiert, in dem Add(), Sub(), Mult() und Div() definiert sind. Sie erstellen eine Clientanwendung und generieren den [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Client. Anschließend fügen Sie eine Methode mit der Bezeichnung Echo() zu ICalculator hinzu. Wenn Sie dann eine Anwendung schreiben, die <xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29> aufruft, ohne einen neuen [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Client zu generieren, wird die folgende Ausnahme ausgegeben.  
+  
+ `Unhandled Exception: System.ServiceModel.Description.WsdlImporter+WsdlImportException: Cannot locate operation Echo in Contract ICalculator`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.ServiceModel.Description.MetadataResolver>-Klasse, um Metadaten als eine Auflistung von <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekten zurückzugeben, die dann zum Herstellen einer Verbindung mit einer Dienstinstanz verwendet werden.  
+  
+ [!code-csharp[MetadataResolver#1](~/samples/snippets/csharp/VS_Snippets_CFX/metadataresolver/cs/client.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Adresse oder der Vertrag ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.ServiceEndpointCollection Resolve (System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt; contracts, System.ServiceModel.EndpointAddress address, System.ServiceModel.Description.MetadataExchangeClient client);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.ServiceEndpointCollection Resolve(class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.Description.ContractDescription&gt; contracts, class System.ServiceModel.EndpointAddress address, class System.ServiceModel.Description.MetadataExchangeClient client) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.Resolve(System.Collections.Generic.IEnumerable{System.ServiceModel.Description.ContractDescription},System.ServiceModel.EndpointAddress,System.ServiceModel.Description.MetadataExchangeClient)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contracts" Type="System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt;" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="client" Type="System.ServiceModel.Description.MetadataExchangeClient" />
+      </Parameters>
+      <Docs>
+        <param name="contracts">Die Verträge, für die Metadaten heruntergeladen und aufgelöst werden sollen.</param>
+        <param name="address">Die Adresse der Metadaten.</param>
+        <param name="client"><see cref="T:System.ServiceModel.Description.MetadataExchangeClient" />, der zum Abrufen der Metadaten verwendet wird.</param>
+        <summary>Löst eine Metadatenadresse in die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte für die angegebenen Verträge unter Verwendung der angegebenen Metadatenadresse und <see cref="T:System.ServiceModel.Description.MetadataExchangeClient" /> auf.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekten für den angegebenen Vertrag.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung für <xref:System.ServiceModel.Description.MetadataExchangeClientMode?displayProperty=nameWithType> ist <xref:System.ServiceModel.Description.MetadataExchangeClientMode?displayProperty=nameWithType>.  
+  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+> [!NOTE]
+>  Es wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Adresse, die Vertragsauflistung oder der Client ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contracts" /> ist leer, mindestens ein Member von <paramref name="contracts" /> ist null, oder <paramref name="contracts" /> enthält mehr als einen Vertrag mit dem gleichen Namen und Namespace.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.ServiceEndpointCollection Resolve (System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt; contracts, Uri address, System.ServiceModel.Description.MetadataExchangeClientMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.ServiceEndpointCollection Resolve(class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.Description.ContractDescription&gt; contracts, class System.Uri address, valuetype System.ServiceModel.Description.MetadataExchangeClientMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.Resolve(System.Collections.Generic.IEnumerable{System.ServiceModel.Description.ContractDescription},System.Uri,System.ServiceModel.Description.MetadataExchangeClientMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contracts" Type="System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt;" />
+        <Parameter Name="address" Type="System.Uri" />
+        <Parameter Name="mode" Type="System.ServiceModel.Description.MetadataExchangeClientMode" />
+      </Parameters>
+      <Docs>
+        <param name="contracts">Die Verträge, für die Metadaten heruntergeladen und aufgelöst werden sollen.</param>
+        <param name="address">Die Adresse der Metadaten.</param>
+        <param name="mode">Der Abrufmodus.</param>
+        <summary>Löst eine Metadatenadresse in die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte für die angegebenen Verträge unter Verwendung der angegebenen Adresse und des Übertragungsmodus auf.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekten für den angegebenen Vertrag.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellungen auf dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> werden verwendet, um die Metadaten abzurufen.  
+  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+> [!NOTE]
+>  Es wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Adresse oder die Vertragsauflistung ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contracts" /> ist leer, mindestens ein Member von <paramref name="contracts" /> ist null, oder <paramref name="contracts" /> enthält mehr als einen Vertrag mit dem gleichen Namen und Namespace.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.ServiceEndpointCollection Resolve (Type contract, Uri address, System.ServiceModel.Description.MetadataExchangeClientMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.ServiceEndpointCollection Resolve(class System.Type contract, class System.Uri address, valuetype System.ServiceModel.Description.MetadataExchangeClientMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.Resolve(System.Type,System.Uri,System.ServiceModel.Description.MetadataExchangeClientMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.Type" />
+        <Parameter Name="address" Type="System.Uri" />
+        <Parameter Name="mode" Type="System.ServiceModel.Description.MetadataExchangeClientMode" />
+      </Parameters>
+      <Docs>
+        <param name="contract">Der Vertrag, für den Metadaten heruntergeladen und aufgelöst werden sollen.</param>
+        <param name="address">Die Adresse der Metadaten.</param>
+        <param name="mode">Der Abrufmodus.</param>
+        <summary>Löst eine Metadatenadresse in die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte für den angegebenen Vertrag unter Verwendung der angegebenen Adresse und des Übertragungsmodus auf.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekten für den angegebenen Vertrag.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Description.MetadataResolver.Resolve%2A>-Methode, um einen Vertrag und eine Adresse sowie den gewünschten Downloadmechanismus anzugeben.  
+  
+ Die Standardeinstellungen auf dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> werden verwendet, um die Metadaten abzurufen.  
+  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+> [!NOTE]
+>  Es wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von <xref:System.ServiceModel.Description.MetadataResolver>, um Metadaten als eine Auflistung von <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekten mithilfe einer HTTP GET-Anforderung anstelle von WS-Transfer herunterzuladen und zurückzugeben.  
+  
+ [!code-csharp[MetadataResolver#2](~/samples/snippets/csharp/VS_Snippets_CFX/metadataresolver/cs/client.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Adresse oder der Vertrag ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.ServiceEndpointCollection Resolve (System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt; contracts, Uri address, System.ServiceModel.Description.MetadataExchangeClientMode mode, System.ServiceModel.Description.MetadataExchangeClient client);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.ServiceEndpointCollection Resolve(class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.Description.ContractDescription&gt; contracts, class System.Uri address, valuetype System.ServiceModel.Description.MetadataExchangeClientMode mode, class System.ServiceModel.Description.MetadataExchangeClient client) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataResolver.Resolve(System.Collections.Generic.IEnumerable{System.ServiceModel.Description.ContractDescription},System.Uri,System.ServiceModel.Description.MetadataExchangeClientMode,System.ServiceModel.Description.MetadataExchangeClient)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contracts" Type="System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Description.ContractDescription&gt;" />
+        <Parameter Name="address" Type="System.Uri" />
+        <Parameter Name="mode" Type="System.ServiceModel.Description.MetadataExchangeClientMode" />
+        <Parameter Name="client" Type="System.ServiceModel.Description.MetadataExchangeClient" />
+      </Parameters>
+      <Docs>
+        <param name="contracts">Die Verträge, für die Metadaten heruntergeladen und aufgelöst werden sollen.</param>
+        <param name="address">Die Adresse der Metadaten.</param>
+        <param name="mode">Der Abrufmodus.</param>
+        <param name="client"><see cref="T:System.ServiceModel.Description.MetadataExchangeClient" />, der zum Abrufen der Metadaten verwendet wird.</param>
+        <summary>Löst eine Metadatenadresse in die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekte für die angegebenen Verträge unter Verwendung der angegebenen Adresse, des Übertragungsmodus und des Übertragungsclients auf.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Objekten für den angegebenen Vertrag.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um Metadaten herunterladen, ohne die Informationen in <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte aufzulösen, verwenden Sie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> direkt.  
+  
+> [!NOTE]
+>  Es wird eine leere Auflistung zurückgegeben, wenn keine Endpunkte importiert wurden oder wenn keine Endpunkte mit dem Vertrag übereinstimmen. Wenn eine leere Auflistung zurückgegeben wird, wird eine Warnablaufverfolgung geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Adresse, die Vertragsauflistung oder der Client ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contracts" /> ist leer, mindestens ein Member von <paramref name="contracts" /> ist null, oder <paramref name="contracts" /> enthält mehr als einen Vertrag mit dem gleichen Namen und Namespace.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

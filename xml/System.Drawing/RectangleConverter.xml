@@ -1,0 +1,293 @@
+<Type Name="RectangleConverter" FullName="System.Drawing.RectangleConverter">
+  <TypeSignature Language="C#" Value="public class RectangleConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RectangleConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.RectangleConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert Rechtecke von einem Datentyp in einen anderen. Zugriff auf diese Klasse über die <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RectangleConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.RectangleConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Formatierungsprogramm-Kontext. Dieses Objekt kann verwendet werden, um zusätzliche Informationen über die Umgebung zu erhalten, die von dieser Konverter aufgerufen wird. Dies ist möglicherweise <see langword="null" />, daher immer überprüft werden soll. Auch Eigenschaften des Kontextobjekts können zurückgeben <see langword="null" />.</param>
+        <param name="sourceType">Der Typ, die, dem Sie konvertieren möchten.</param>
+        <summary>Bestimmt, ob dieser Konverter ein Objekt vom angegebenen Quelltyp in den systemeigenen Typ des Konverters konvertieren kann.</summary>
+        <returns>Diese Methode gibt <see langword="true" /> Wenn dieses Objekt die Konvertierung durchführen kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Objekt, das einen Formatierungskontext bereitstellt. Dies ist möglich <see langword="null" />, daher immer überprüft werden soll. Eigenschaften des Kontextobjekts können darüber hinaus auch zurückgeben <see langword="null" />.</param>
+        <param name="destinationType">Ein <see cref="T:System.Type" /> -Objekt, das den Typ darstellt, konvertiert werden sollen.</param>
+        <summary>Ruft einen Wert, der angibt, ob dieser Konverter ein Objekt in den angegebenen Zieltyp unter Verwendung des Kontexts konvertieren kann.</summary>
+        <returns>Diese Methode gibt <see langword="true" /> Wenn dieser Konverter die Konvertierung durchführen kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `context` Parameter kann verwendet werden, um weitere Informationen über die Umgebung erhalten, aus der dieser Konverter aufgerufen wurde wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , die verwendet werden kann, um weitere Informationen über die Umgebung erhalten, aus der dieser Konverter aufgerufen wurde wird. Dies ist möglicherweise <see langword="null" />, daher immer überprüft werden soll. Auch Eigenschaften des Kontextobjekts können zurückgeben <see langword="null" />.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> enthält kulturabhängige Informationen, z. B. Sprache, Kalender und kulturellen Konventionen einer bestimmten Kultur zugeordnet. Es basiert auf dem standard RFC 1766.</param>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert das angegebene Objekt in ein <see cref="T:System.Drawing.Rectangle" /> Objekt.</summary>
+        <returns>Das konvertierte Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , die verwendet werden kann, um weitere Informationen über die Umgebung erhalten, aus der dieser Konverter aufgerufen wurde wird. Dies ist möglicherweise <see langword="null" />, daher immer überprüft werden soll. Auch Eigenschaften des Kontextobjekts können zurückgeben <see langword="null" />.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> enthält kulturabhängige Informationen, z. B. Sprache, Kalender und kulturellen Konventionen einer bestimmten Kultur zugeordnet. Es basiert auf dem standard RFC 1766.</param>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <param name="destinationType">Der Typ, in den das Objekt konvertiert werden soll.</param>
+        <summary>Konvertiert das angegebene Objekt in den angegebenen Typ.</summary>
+        <returns>Das konvertierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die geläufigsten Typen konvertiert werden und aus einem String-Objekt. Die Standardimplementierung ruft des Objekts <xref:System.Object.ToString%2A> Methode, wenn das Objekt gültig ist und der Zieltyp Zeichenfolge ist. Wenn diese Methode in den Zieltyp konvertieren kann, löst sie eine <xref:System.NotSupportedException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public override object CreateInstance (System.ComponentModel.ITypeDescriptorContext context, System.Collections.IDictionary propertyValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object CreateInstance(class System.ComponentModel.ITypeDescriptorContext context, class System.Collections.IDictionary propertyValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="propertyValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> mit dem zusätzlicher Kontext bereitgestellt werden kann.</param>
+        <param name="propertyValues">Ein Wörterbuch mit neuen Eigenschaftswerten. Das Wörterbuch enthält eine Reihe von Name-Wert-Paare, einer für jede Eigenschaft zurückgegeben, von einem Aufruf der <see cref="M:System.Drawing.RectangleConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])" /> Methode.</param>
+        <summary>Erstellt eine Instanz dieses Typs, die bei einem gegebenen Satz von Eigenschaftswerten für das Objekt. Dies ist hilfreich bei Objekten, die unveränderlich sind jedoch weiterhin veränderliche Eigenschaften bereitstellen möchten.</summary>
+        <returns>Das neu erstellte Objekt oder <see langword="null" /> , wenn das Objekt konnte nicht erstellt werden. Die Standardimplementierung gibt <see langword="null" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCreateInstanceSupported">
+      <MemberSignature Language="C#" Value="public override bool GetCreateInstanceSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetCreateInstanceSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleConverter.GetCreateInstanceSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Typdeskriptor über dem zusätzlicher Kontext bereitgestellt werden kann.</param>
+        <summary>Bestimmt, ob das Ändern eines Werts für dieses Objekt einen Aufruf von erfordern <see cref="M:System.Drawing.RectangleConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary)" /> um einen neuen Wert zu erstellen.</summary>
+        <returns>Diese Methode gibt <see langword="true" /> Wenn <see cref="M:System.Drawing.RectangleConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary)" /> sollte aufgerufen werden, wenn die Änderung vorgenommen, um eine oder mehrere Eigenschaften dieses Objekts ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.PropertyDescriptorCollection GetProperties (System.ComponentModel.ITypeDescriptorContext context, object value, Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(class System.ComponentModel.ITypeDescriptorContext context, object value, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> mit dem zusätzlicher Kontext bereitgestellt werden kann.</param>
+        <param name="value">Der Wert des Objekts, das Eigenschaften abgerufen werden soll.</param>
+        <param name="attributes">Ein Array von <see cref="T:System.Attribute" /> -Objekten, die die Eigenschaften beschreiben.</param>
+        <summary>Ruft den Satz von Eigenschaften für diesen Typ ab. Standardmäßig gibt ein Typ keine Eigenschaften zurück.</summary>
+        <returns>Der Satz von Eigenschaften, die für diesen Datentyp verfügbar gemacht werden sollen. Wenn keine Eigenschaften verfügbar gemacht werden soll, kann dies zurückgeben <see langword="null" />. Gibt die standardmäßige Implementierung immer <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine einfache Implementierung dieser Methode kann einfach Aufrufen der <xref:System.ComponentModel.TypeDescriptor.GetProperties%2A> Methode für den richtigen Datentyp hin.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertiesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetPropertiesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetPropertiesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> mit dem zusätzlicher Kontext bereitgestellt werden kann.</param>
+        <summary>Bestimmt, ob dieses Objekt Eigenschaften unterstützt. Standardmäßig ist dies <see langword="false" />.</summary>
+        <returns>Diese Methode gibt <see langword="true" /> Wenn <see cref="M:System.Drawing.RectangleConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])" /> sollte aufgerufen werden, die Eigenschaften dieses Objekts zu ermitteln, andernfalls, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

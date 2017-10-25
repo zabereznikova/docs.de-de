@@ -1,0 +1,714 @@
+<Type Name="Duration" FullName="System.Windows.Duration">
+  <TypeSignature Language="C#" Value="public struct Duration" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Duration extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Duration" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.DurationConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Dauer dar, die eine <see cref="T:System.Windows.Media.Animation.Timeline" /> aktiv ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Duration"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ \<*Objekt* *Eigenschaft*= "[*Tage*.] *Stunden*:*Minuten*:*Sekunden*[.* FractionalSeconds*] "/ >  
+  
+ \- oder –  
+  
+ \<*Objekt* *Eigenschaft*= "[*Tage*.] *Stunden*:*Minuten*"/ >  
+  
+ \- oder –  
+  
+ \<*Objekt* *Eigenschaft*= "<xref:System.Windows.Duration.Automatic%2A>" / >  
+  
+ \- oder –  
+  
+ \<*Objekt* *Eigenschaft*= "<xref:System.Windows.Duration.Forever%2A>" / >  
+  
+<a name="xamlValues_MinWidth"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *Tage*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ Ein Wert größer als oder gleich 0, der die Anzahl der Tage, die diese Dauer beschreibt.  
+  
+ *Stunden*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ Ein Wert zwischen 0 und 23, der die Anzahl der Stunden, die diese Dauer darstellt.  
+  
+ *Minuten*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ Ein Wert zwischen 0 und 59, der die Anzahl der Minuten, die diese Dauer darstellt.  
+  
+ *Sekunden*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ Ein Wert zwischen 0 und 59, der die Anzahl der Sekunden, die diese Dauer darstellt  
+  
+ *fractionalSeconds*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ Ein Wert, der mit 1 bis 7 Ziffern, der Bruchteile von Sekunden darstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Duration (TimeSpan timeSpan);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.TimeSpan timeSpan) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.#ctor(System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="timeSpan" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeSpan">Das erste Zeitintervall dieser Dauer darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Duration" /> Struktur mit dem angegebenen <see cref="T:System.TimeSpan" /> Wert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Tritt auf, wenn <paramref name="timeSpan" /> auf einen negativen Wert initialisiert wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Duration Add (System.Windows.Duration duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Duration Add(valuetype System.Windows.Duration duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.Add(System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="duration">Eine Instanz von <see cref="T:System.Windows.Duration" /> , das der Wert der aktuellen Instanz plus darstellt <c>Dauer</c>.</param>
+        <summary>Fügt den Wert der angegebenen Instanz von <see cref="T:System.Windows.Duration" /> auf den Wert der aktuellen Instanz.</summary>
+        <returns>Wenn beide Instanzen von <see cref="T:System.Windows.Duration" /> Werte aufweisen, eine Instanz von <see cref="T:System.Windows.Duration" /> , die die kombinierten Werte darstellt. Andernfalls gibt diese Methode zurück <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Automatic">
+      <MemberSignature Language="C#" Value="public static System.Windows.Duration Automatic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Duration Automatic" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Duration.Automatic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Windows.Duration" />-Wert ab, der automatisch bestimmt wird.</summary>
+        <value>Eine <see cref="T:System.Windows.Duration" />, die mit einem automatisch festgelegten Wert initialisiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Automatic"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Automatic" />  
+```  
+  
+<a name="xamlValues_Automatic"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *Eigenschaft*  
+ Eine Eigenschaft, die akzeptiert eine <xref:System.Windows.Duration> Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public static int Compare (System.Windows.Duration t1, System.Windows.Duration t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Compare(valuetype System.Windows.Duration t1, valuetype System.Windows.Duration t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.Compare(System.Windows.Duration,System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.Windows.Duration" />
+        <Parameter Name="t2" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <param name="t2">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <summary>Vergleicht einen <see cref="T:System.Windows.Duration" /> auf einen anderen Wert.</summary>
+        <returns>Wenn <paramref name="t1" /> ist kleiner als <paramref name="t2" />, ein negativer Wert, der die Differenz darstellt. Wenn <paramref name="t1" /> gleich <paramref name="t2" />, 0 (null). Wenn <paramref name="t1" /> ist größer als <paramref name="t2" />, einen positiven Wert, der die Differenz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Duration>Instanzen mit einem Eigenschaftswert des <xref:System.Windows.Duration.Automatic%2A> sind ein besonderer Fall mit der folgenden Rückgabewerte.  
+  
+-   Wenn `t1` ist automatisch und `t2` ist nicht der Fall, wird-1 zurückgegeben.  
+  
+-   Wenn `t1` ist automatisch und `t2` erfolgt ebenfalls automatisch ist, wird 0 zurückgegeben.  
+  
+-   Wenn `t1` wird nicht automatisch wiederhergestellt und `t2` ist automatisch, wird 1 zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt auf Gleichheit überprüft.</param>
+        <summary>Bestimmt, ob ein angegebenes Objekt mit einer Instanz von entspricht <see cref="T:System.Windows.Duration" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert gleich der aktuellen Instanz der Dauer ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Duration duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.Duration duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.Equals(System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="duration">Instanz des <see cref="T:System.Windows.Duration" /> auf Gleichheit überprüft.</param>
+        <summary>Bestimmt, ob ein angegebener <see cref="T:System.Windows.Duration" /> gleich dieser Instanz von <see cref="T:System.Windows.Duration" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="duration" /> ist gleich der aktuellen Instanz der <see cref="T:System.Windows.Duration" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (System.Windows.Duration t1, System.Windows.Duration t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(valuetype System.Windows.Duration t1, valuetype System.Windows.Duration t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.Equals(System.Windows.Duration,System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.Windows.Duration" />
+        <Parameter Name="t2" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Erste Instanz des <see cref="T:System.Windows.Duration" /> , verglichen werden soll.</param>
+        <param name="t2">Zweite Instanz von <see cref="T:System.Windows.Duration" /> , verglichen werden soll.</param>
+        <summary>Bestimmt, ob zwei Instanzen von <see cref="T:System.Windows.Duration" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="t1" /> und <paramref name="t2" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Forever">
+      <MemberSignature Language="C#" Value="public static System.Windows.Duration Forever { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Duration Forever" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Duration.Forever" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Duration" /> -Wert, der ein unendliches Intervall darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Duration" /> mit einem nicht ablaufenden Wert initialisiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Forever"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Forever" />  
+```  
+  
+<a name="xamlValues_Forever"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *Eigenschaft*  
+ Eine Eigenschaft, die akzeptiert eine <xref:System.Windows.Duration> Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Hashcode für diese Instanz ab.</summary>
+        <returns>Ein 32-Bit-Ganzzahl-Hashcode mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasTimeSpan">
+      <MemberSignature Language="C#" Value="public bool HasTimeSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasTimeSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Duration.HasTimeSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt Wenn diese <see cref="T:System.Windows.Duration" /> stellt eine <see cref="T:System.TimeSpan" /> Wert.</summary>
+        <value>True, wenn während dieser Zeit ist ein <see cref="T:System.TimeSpan" /> Wert; andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Windows.Duration operator + (System.Windows.Duration t1, System.Windows.Duration t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Duration op_Addition(valuetype System.Windows.Duration t1, valuetype System.Windows.Duration t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.op_Addition(System.Windows.Duration,System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.Windows.Duration" />
+        <Parameter Name="t2" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Die erste Instanz des <see cref="T:System.Windows.Duration" /> hinzufügen.</param>
+        <param name="t2">Die zweite Instanz von <see cref="T:System.Windows.Duration" /> hinzufügen.</param>
+        <summary>Addiert zwei Instanzen der <see cref="T:System.Windows.Duration" /> zusammen.</summary>
+        <returns>Wenn beide Instanzen von <see cref="T:System.Windows.Duration" /> haben <see cref="T:System.TimeSpan" /> Werte, gibt diese Methode die Summe dieser beiden Werte zurück. Wenn entweder der Wert, um festgelegt ist <see cref="P:System.Windows.Duration.Automatic" />, gibt die Methode <see cref="P:System.Windows.Duration.Automatic" />. Wenn entweder der Wert, um festgelegt ist <see cref="P:System.Windows.Duration.Forever" />, gibt die Methode <see cref="P:System.Windows.Duration.Forever" />.  
+  
+ Wenn entweder <paramref name="t1" /> oder <paramref name="t2" /> kein Wert vorliegt, gibt diese Methode <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Duration.Add%28System.Windows.Duration%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Duration t1, System.Windows.Duration t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Duration t1, valuetype System.Windows.Duration t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.op_Equality(System.Windows.Duration,System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.Windows.Duration" />
+        <Parameter Name="t2" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <param name="t2">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <summary>Bestimmt, ob zwei Instanzen von <see cref="T:System.Windows.Duration" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn beide Instanzen von <see cref="T:System.Windows.Duration" /> Werte aufweisen und gleich sind, oder wenn beide Instanzen von <see cref="T:System.Windows.Duration" /> sind <see langword="null" />. Diese Methode hingegen gibt <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Duration.Equals%28System.Windows.Duration%2CSystem.Windows.Duration%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static bool operator &gt; (System.Windows.Duration t1, System.Windows.Duration t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_GreaterThan(valuetype System.Windows.Duration t1, valuetype System.Windows.Duration t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.op_GreaterThan(System.Windows.Duration,System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.Windows.Duration" />
+        <Parameter Name="t2" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <param name="t2">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <summary>Bestimmt, ob eine Instanz der <see cref="T:System.Windows.Duration" /> größer als ein anderes ist.</summary>
+        <returns>
+          <see langword="true" />Wenn beide <paramref name="t1" /> und <paramref name="t2" /> Werte aufweisen und <paramref name="t1" /> ist größer als <paramref name="t2" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Duration.Forever%2A>ist größer als ein endlicher Wert berücksichtigt. Jeder Vergleich mit einem <xref:System.Windows.Duration.Automatic%2A> Wert gibt `false`.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Duration.Compare%28System.Windows.Duration%2CSystem.Windows.Duration%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static bool operator &gt;= (System.Windows.Duration t1, System.Windows.Duration t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_GreaterThanOrEqual(valuetype System.Windows.Duration t1, valuetype System.Windows.Duration t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.op_GreaterThanOrEqual(System.Windows.Duration,System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.Windows.Duration" />
+        <Parameter Name="t2" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <param name="t2">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <summary>Bestimmt, ob eine Instanz von <see cref="T:System.Windows.Duration" /> ist größer als oder gleich einer anderen Instanz.</summary>
+        <returns>
+          <see langword="true" />Wenn beide <paramref name="t1" /> und <paramref name="t2" /> Werte aufweisen und <paramref name="t1" /> ist größer als oder gleich <paramref name="t2" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Duration.Forever%2A>ist größer als ein endlicher Wert berücksichtigt. Jeder Vergleich mit einem <xref:System.Windows.Duration.Automatic%2A> Wert gibt `false`.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Duration.Compare%28System.Windows.Duration%2CSystem.Windows.Duration%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Windows.Duration (TimeSpan timeSpan);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Duration op_Implicit(valuetype System.TimeSpan timeSpan) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.op_Implicit(System.TimeSpan)~System.Windows.Duration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeSpan" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeSpan">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Duration t1, System.Windows.Duration t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Duration t1, valuetype System.Windows.Duration t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.op_Inequality(System.Windows.Duration,System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.Windows.Duration" />
+        <Parameter Name="t2" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <param name="t2">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <summary>Bestimmt, ob zwei Instanzen der <see cref="T:System.Windows.Duration" /> ungleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn Sie genau eine der <paramref name="t1" /> oder <paramref name="t2" /> einen Wert darstellen oder wenn beide Werte darstellen, die nicht gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Duration.Compare%28System.Windows.Duration%2CSystem.Windows.Duration%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static bool operator &lt; (System.Windows.Duration t1, System.Windows.Duration t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_LessThan(valuetype System.Windows.Duration t1, valuetype System.Windows.Duration t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.op_LessThan(System.Windows.Duration,System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.Windows.Duration" />
+        <Parameter Name="t2" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <param name="t2">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <summary>Bestimmt, ob der Wert einer Instanz von <see cref="T:System.Windows.Duration" /> ist kleiner als der Wert von einer anderen Instanz.</summary>
+        <returns>
+          <see langword="true" />Wenn beide <paramref name="t1" /> und <paramref name="t2" /> Werte aufweisen und <paramref name="t1" /> ist kleiner als <paramref name="t2" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Duration.Forever%2A>ist größer als ein endlicher Wert berücksichtigt. Jeder Vergleich mit einem <xref:System.Windows.Duration.Automatic%2A> Wert gibt `false`.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Duration.Compare%28System.Windows.Duration%2CSystem.Windows.Duration%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static bool operator &lt;= (System.Windows.Duration t1, System.Windows.Duration t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_LessThanOrEqual(valuetype System.Windows.Duration t1, valuetype System.Windows.Duration t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.op_LessThanOrEqual(System.Windows.Duration,System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.Windows.Duration" />
+        <Parameter Name="t2" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <param name="t2">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Duration" />.</param>
+        <summary>Bestimmt, ob der Wert einer Instanz von <see cref="T:System.Windows.Duration" /> ist kleiner oder gleich dem Wert einer anderen Instanz.</summary>
+        <returns>
+          <see langword="true" />Wenn beide <paramref name="t1" /> und <paramref name="t2" /> Werte aufweisen und <paramref name="t1" /> ist kleiner als oder gleich <paramref name="t2" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Duration.Forever%2A>ist größer als ein endlicher Wert berücksichtigt. Jeder Vergleich mit einem <xref:System.Windows.Duration.Automatic%2A> Wert gibt `false`.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Duration.Compare%28System.Windows.Duration%2CSystem.Windows.Duration%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Windows.Duration operator - (System.Windows.Duration t1, System.Windows.Duration t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Duration op_Subtraction(valuetype System.Windows.Duration t1, valuetype System.Windows.Duration t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.op_Subtraction(System.Windows.Duration,System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.Windows.Duration" />
+        <Parameter Name="t2" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Die erste Instanz des <see cref="T:System.Windows.Duration" />.</param>
+        <param name="t2">Die Instanz von <see cref="T:System.Windows.Duration" /> subtrahiert werden soll.</param>
+        <summary>Subtrahiert den Wert einer Instanz von <see cref="T:System.Windows.Duration" /> voneinander.</summary>
+        <returns>Wenn beide Instanzen von <see cref="T:System.Windows.Duration" /> Werte aufweisen, eine Instanz von <see cref="T:System.Windows.Duration" /> , die den Wert des darstellt <paramref name="t1" /> minus <paramref name="t2" />. Wenn <paramref name="t1" /> Wert <see cref="P:System.Windows.Duration.Forever" /> und <paramref name="t2" /> Wert <see cref="P:System.Windows.Duration.TimeSpan" />, gibt diese Methode <see cref="P:System.Windows.Duration.Forever" />. Andernfalls gibt diese Methode zurück <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Berechnungen, die alle Rückgabewert <xref:System.Windows.Duration.Automatic%2A>.  
+  
+-   <xref:System.Windows.Duration.Forever%2A>minus <xref:System.Windows.Duration.Forever%2A>.  
+  
+-   <xref:System.Windows.Duration.TimeSpan%2A>minus <xref:System.Windows.Duration.Forever%2A>.  
+  
+-   <xref:System.Windows.Duration.TimeSpan%2A>minus <xref:System.Windows.Duration.Automatic%2A>.  
+  
+-   <xref:System.Windows.Duration.Forever%2A>minus <xref:System.Windows.Duration.Automatic%2A>.  
+  
+-   <xref:System.Windows.Duration.Automatic%2A>minus <xref:System.Windows.Duration.Automatic%2A>.  
+  
+-   <xref:System.Windows.Duration.Automatic%2A>minus <xref:System.Windows.Duration.Forever%2A>.  
+  
+-   <xref:System.Windows.Duration.Automatic%2A>minus <xref:System.Windows.Duration.TimeSpan%2A>.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Duration.Subtract%28System.Windows.Duration%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_UnaryPlus">
+      <MemberSignature Language="C#" Value="public static System.Windows.Duration operator + (System.Windows.Duration duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Duration op_UnaryPlus(valuetype System.Windows.Duration duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.op_UnaryPlus(System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="duration">Die Instanz von <see cref="T:System.Windows.Duration" /> abgerufen.</param>
+        <summary>Gibt die angegebene Instanz von <see cref="T:System.Windows.Duration" /> zurück.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Windows.Duration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Duration.Plus%28System.Windows.Duration%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Plus">
+      <MemberSignature Language="C#" Value="public static System.Windows.Duration Plus (System.Windows.Duration duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Duration Plus(valuetype System.Windows.Duration duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.Plus(System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="duration">Die Instanz von <see cref="T:System.Windows.Duration" /> abgerufen.</param>
+        <summary>Gibt die angegebene Instanz von <see cref="T:System.Windows.Duration" /> zurück.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Windows.Duration" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public System.Windows.Duration Subtract (System.Windows.Duration duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Duration Subtract(valuetype System.Windows.Duration duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.Subtract(System.Windows.Duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="duration">Die Instanz von <see cref="T:System.Windows.Duration" /> , aus der aktuellen Instanz subtrahiert werden soll.</param>
+        <summary>Subtrahiert den Wert der angegebenen Instanz von <see cref="T:System.Windows.Duration" /> aus dieser Instanz.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.Windows.Duration" /> , dessen Wert ist das Ergebnis dieser Instanz minus dem Wert von <paramref name="duration" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeSpan">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Duration.TimeSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.TimeSpan" /> Wert, den diese <see cref="T:System.Windows.Duration" /> darstellt.</summary>
+        <value>Die <see cref="T:System.TimeSpan" /> Wert, den diese <see cref="T:System.Windows.Duration" /> darstellt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Tritt auf, wenn <see cref="T:System.Windows.Duration" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Duration.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert eine Instanz von <see cref="T:System.Windows.Duration" /> auf eine <see cref="T:System.String" /> Darstellung.</summary>
+        <returns>Ein <see cref="T:System.String" /> Darstellung dieser Instanz von <see cref="T:System.Windows.Duration" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,78 @@
+<Type Name="ITargetBlock&lt;TInput&gt;" FullName="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;">
+  <TypeSignature Language="C#" Value="public interface ITargetBlock&lt;in TInput&gt; : System.Threading.Tasks.Dataflow.IDataflowBlock" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITargetBlock`1&lt;- TInput&gt; implements class System.Threading.Tasks.Dataflow.IDataflowBlock" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.1.0</AssemblyVersion>
+    <AssemblyVersion>4.6.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TInput">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Threading.Tasks.Dataflow.IDataflowBlock</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TInput">Gibt den Typ der Daten, die vom akzeptiert die <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" />.</typeparam>
+    <summary>Stellt einen Datenflussblock dar, der ein Ziel für Daten ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die TPL-Datenflussbibliothek (<xref:System.Threading.Tasks.Dataflow>-Namespace) ist nicht in [!INCLUDE[net_v45](~/includes/net-v45-md.md)] enthalten. So installieren Sie die <xref:System.Threading.Tasks.Dataflow> -Namespace öffnen Sie das Projekt in [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)], wählen Sie **NuGet-Pakete verwalten** aus der Menüs "Projekt", und suchen Sie online nach der `Microsoft.Tpl.Dataflow` Paket.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OfferMessage">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Dataflow.DataflowMessageStatus OfferMessage (System.Threading.Tasks.Dataflow.DataflowMessageHeader messageHeader, TInput messageValue, System.Threading.Tasks.Dataflow.ISourceBlock&lt;in TInput&gt; source, bool consumeToAccept);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Threading.Tasks.Dataflow.DataflowMessageStatus OfferMessage(valuetype System.Threading.Tasks.Dataflow.DataflowMessageHeader messageHeader, !TInput messageValue, class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!TInput&gt; source, bool consumeToAccept) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ITargetBlock`1.OfferMessage(System.Threading.Tasks.Dataflow.DataflowMessageHeader,`0,System.Threading.Tasks.Dataflow.ISourceBlock{`0},System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Dataflow.DataflowMessageStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageHeader" Type="System.Threading.Tasks.Dataflow.DataflowMessageHeader" />
+        <Parameter Name="messageValue" Type="TInput" />
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TInput&gt;" />
+        <Parameter Name="consumeToAccept" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="messageHeader">Ein <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> Instanz, die den Header der Nachricht angeboten darstellt.</param>
+        <param name="messageValue">Der Wert der Nachricht, die angeboten wird.</param>
+        <param name="source">Die <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" /> die Nachricht anbietet. Dies kann NULL sein.</param>
+        <param name="consumeToAccept">Legen Sie auf <see langword="true" /> weisen Sie das Ziel Aufrufen an <see cref="M:System.Threading.Tasks.Dataflow.ISourceBlock`1.ConsumeMessage(System.Threading.Tasks.Dataflow.DataflowMessageHeader,System.Threading.Tasks.Dataflow.ITargetBlock{`0},System.Boolean@)" /> synchron während des Aufrufs <see cref="M:System.Threading.Tasks.Dataflow.ITargetBlock`1.OfferMessage(System.Threading.Tasks.Dataflow.DataflowMessageHeader,`0,System.Threading.Tasks.Dataflow.ISourceBlock{`0},System.Boolean)" />, vor dem Zurückgeben von <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted" />, um die Nachricht zu nutzen.</param>
+        <summary>Bietet eine Nachricht an die <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" />, wodurch dem Ziel die nutzen oder zurückstellen.</summary>
+        <returns>Der Status der angebotene Nachricht. Wenn die Nachricht vom Ziel akzeptiert wurde <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted" /> zurückgegeben wird, und die Quelle sollte die angebotene Nachricht nicht mehr verwenden, da nun das Ziel der Besitzer ist. Wenn die Nachricht vom Ziel verschoben wurde <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed" /> wird als eine Benachrichtigung, die das Ziel später versuchen, zu nutzen, oder die Nachricht zu reservieren, sondern in den Meantime zurückgegeben werden, die Quelle noch die Nachricht besitzt und es möglicherweise an andere Blöcke anbieten.  
+  
+ Wenn das Ziel andernfalls Nachricht verschoben haben würde, aber Quelle war <see langword="null" />, <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined" /> wird stattdessen zurückgegeben.  
+  
+ Wenn das Ziel hat versucht, akzeptieren Sie die Nachricht fehlt er aber aufgrund der Quelle an ein anderes Ziel zu übermitteln oder verwerfen, einfach <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.NotAvailable" /> zurückgegeben wird.  
+  
+ Wenn das Ziel hat nicht die Meldung akzeptiert <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined" /> zurückgegeben wird. Wenn das Ziel ausgewählt haben, nicht auf die Nachricht akzeptieren und nie akzeptiert eine andere Meldung von dieser Quelle <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently" /> zurückgegeben wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="messageHeader" /> ist ungültig.  
+  
+ -"oder" - <paramref name="consumeToAccept" /> kann nur "true", wenn mit einem Wert ungleich Null angegeben sein <paramref name="source" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

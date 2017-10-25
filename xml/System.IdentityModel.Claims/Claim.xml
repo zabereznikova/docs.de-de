@@ -1,0 +1,751 @@
+<Type Name="Claim" FullName="System.IdentityModel.Claims.Claim">
+  <TypeSignature Language="C#" Value="public class Claim" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Claim extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Claims.Claim" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract(Namespace="http://schemas.xmlsoap.org/ws/2005/05/identity")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Anspruch dar, der einer Entität zugeordnet ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Identitätsmodell ist ein anspruchbasiertes Autorisierungssystem. Ansprüche beschreiben die Funktionen, die mit einer Entität im System, häufig einem Benutzer des entsprechenden Systems, verbunden sind. Den mit einer bestimmten Entität verbundenen Satz von Ansprüchen kann man sich als Schlüssel vorstellen. Die jeweiligen Ansprüche definieren die Form des Schlüssels, ähnlich wie bei einem richtigen Schlüssel, der zum Öffnen einer Tür verwendet wird. Auf die gleiche Weise dienen Ansprüche dazu, Zugriff auf Ressourcen zu erhalten. Der Zugriff auf eine bestimmte geschützte Ressource wird bestimmt, indem die für den Zugriff auf diese Ressource erforderlichen Ansprüche mit den Ansprüchen verglichen werden, die mit der Entität verbunden sind, die zuzugreifen versucht.  
+  
+ Ein Anspruch ist der Ausdruck eines Rechts in Bezug auf einen bestimmten Wert. Ein Recht kann beispielsweise Lesen, Schreiben oder Besitzen sein. Ein Wert kann eine Datenbank, eine Datei, ein Postfach oder eine Eigenschaft sein. Ansprüche besitzen außerdem einen Anspruchtyp. Die Kombination aus Anspruchtyp und Recht stellt den Mechanismus zur Angabe der Funktionen in Bezug auf den Wert dar. Ein Anspruch des `file`-Typs mit dem `read`-Recht für den `biography.doc`-Wert gibt beispielsweise an, dass die Entität mit diesem Anspruch Lesezugriff auf die Datei biography.doc hat. Ein Anspruch des Typs Name mit dem <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>-Recht für den `Martin`-Wert gibt an, dass die Entität mit diesem Anspruch eine `Name`-Eigenschaft mit dem `Martin`-Wert besitzt.  
+  
+ Verschiedene Anspruchtypen und Rechte sind bereits als Teil des Identitätsmodells definiert, das System ist jedoch erweiterbar. Die verschiedenen, auf der Identitätsmodellinfrastruktur aufbauenden Systeme können alle erforderlichen Anspruchtypen und Rechte definieren.  
+  
+   
+  
+## Examples  
+ [!code-csharp[c_Claim#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_claim/cs/source.cs#1)]
+ [!code-vb[c_Claim#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_claim/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Claim (string claimType, object resource, string right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string claimType, object resource, string right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.#ctor(System.String,System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+        <Parameter Name="resource" Type="System.Object" />
+        <Parameter Name="right" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">Ein URI (Uniform Resource Identifier), der einen Anspruchtyp darstellt.</param>
+        <param name="resource">Objekt, das dem neuen Anspruch zugeordnet ist.</param>
+        <param name="right">Der URI des Rechts, das dem Anspruch zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Claims.Claim" />-Klasse mit dem angegebenen Typ, der angegebenen Ressource und dem angegebenen Recht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] bietet einen Satz vordefinierter Anspruchtypen und Rechte, die als Member der <xref:System.IdentityModel.Claims.ClaimTypes>-Klasse und der <xref:System.IdentityModel.Claims.Rights>-Klasse dargestellt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="claimType" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="right" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="claimType" /> hat die Länge 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="right" /> hat die Länge 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimType">
+      <MemberSignature Language="C#" Value="public string ClaimType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClaimType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Claim.ClaimType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Anspruchs ab.</summary>
+        <value>Ein URI, der den Typ des Anspruchs darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>-Eigenschaft kann einem der vordefinierten Anspruchstypen entsprechen, die durch die statischen Eigenschaften der <xref:System.IdentityModel.Claims.ClaimTypes>-Klasse dargestellt werden.  
+  
+ Anspruchtypen geben den Typ des gewährten Anspruchs an, z.&#160;B. eine E-Mail-Adresse.  
+  
+   
+  
+## Examples  
+ [!code-csharp[c_Claim#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_claim/cs/source.cs#2)]
+ [!code-vb[c_Claim#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_claim/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDenyOnlyWindowsSidClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateDenyOnlyWindowsSidClaim (System.Security.Principal.SecurityIdentifier identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateDenyOnlyWindowsSidClaim(class System.Security.Principal.SecurityIdentifier identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateDenyOnlyWindowsSidClaim(System.Security.Principal.SecurityIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">To be added.</param>
+        <summary>Erstellt ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das eine angegebene Sicherheits-ID (SID) darstellt, die nur zum Ablehnen dient.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das die im <paramref name="identifier" />-Parameter angegebene SID darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die SID nur zum Ablehnen ist eine SID_AND_ATTRIBUTES-Struktur, für die das SE_GROUP_USE_FOR_SENY_ONLY-Flag festgelegt ist.  
+  
+ Das von dieser Methode erstellte <xref:System.IdentityModel.Claims.Claim>-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.DenyOnlySid%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|Der Wert des `sid`-Parameters.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identifier" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDnsClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateDnsClaim (string dns);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateDnsClaim(string dns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateDnsClaim(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dns">Der DNS-Name der Entität, die dem Anspruch zugeordnet ist. Dieser Parameter darf nicht <see langword="null" /> sein. Wenn der Parameter <see langword="null" /> ist, löst diese Methode eine <see cref="T:System.ArgumentNullException" />-Ausnahme aus.</param>
+        <summary>Erstellt ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das den angegebenen Domain Name System (DNS)-Namen darstellt.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das von dieser Methode erstellte <xref:System.IdentityModel.Claims.Claim>-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Dns%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|Der Wert des `dns`-Parameters.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="dns" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHashClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateHashClaim (byte[] hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateHashClaim(unsigned int8[] hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateHashClaim(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="hash">Ein Array von Bytewerten, das einen Hashwert angibt. Dieser Parameter darf nicht <see langword="null" /> sein. Wenn der Parameter <see langword="null" /> ist, löst diese Methode eine <see cref="T:System.ArgumentNullException" />-Ausnahme aus.</param>
+        <summary>Erstellt ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt ab, das den angegebenen Hashwert darstellt.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das von dieser Methode erstellte <xref:System.IdentityModel.Claims.Claim>-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Hash%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|Der Wert des `hash`-Parameters.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="hash" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMailAddressClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateMailAddressClaim (System.Net.Mail.MailAddress mailAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateMailAddressClaim(class System.Net.Mail.MailAddress mailAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateMailAddressClaim(System.Net.Mail.MailAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mailAddress" Type="System.Net.Mail.MailAddress" />
+      </Parameters>
+      <Docs>
+        <param name="mailAddress">Ein <see cref="T:System.Net.Mail.MailAddress" />-Objekt, das die von diesem Anspruch dargestellte E-Mail-Adresse angibt. Dieser Parameter darf nicht <see langword="null" /> sein. Wenn der Parameter <see langword="null" /> ist, löst diese Methode eine <see cref="T:System.ArgumentNullException" />-Ausnahme aus.</param>
+        <summary>Erstellt ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das die angegebenen E-Mail-Adresse darstellt.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das von dieser Methode erstellte <xref:System.IdentityModel.Claims.Claim>-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Email%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|Der Wert des `mailAddress`-Parameters.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="mailAddress" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNameClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateNameClaim (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateNameClaim(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateNameClaim(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Entität, die dem Anspruch zugeordnet ist. Dieser Parameter darf nicht <see langword="null" /> sein. Wenn der Parameter <see langword="null" /> ist, löst diese Methode eine <see cref="T:System.ArgumentNullException" />-Ausnahme aus.</param>
+        <summary>Erstellt ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt ab, das den angegebenen Namen darstellt.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das von dieser Methode erstellte <xref:System.IdentityModel.Claims.Claim>-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|Der Wert des `name`-Parameters.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRsaClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateRsaClaim (System.Security.Cryptography.RSA rsa);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateRsaClaim(class System.Security.Cryptography.RSA rsa) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateRsaClaim(System.Security.Cryptography.RSA)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rsa" Type="System.Security.Cryptography.RSA" />
+      </Parameters>
+      <Docs>
+        <param name="rsa">Ein <see cref="T:System.Security.Cryptography.RSA" />-Objekt, das einen kryptografischen RSA-Schlüssel darstellt. Dieser Parameter darf nicht <see langword="null" /> sein. Wenn der Parameter <see langword="null" /> ist, löst diese Methode eine <see cref="T:System.ArgumentNullException" />-Ausnahme aus.</param>
+        <summary>Erstellt ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das den angegebenen RSA-Schlüssel darstellt.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das von dieser Methode erstellte <xref:System.IdentityModel.Claims.Claim>-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|Der Wert des `rsa`-Parameters.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="rsa" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSpnClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateSpnClaim (string spn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateSpnClaim(string spn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateSpnClaim(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="spn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="spn">Der SPN der Entität, der diesem Anspruch zugeordnet ist. Dieser Parameter darf nicht <see langword="null" /> sein. Wenn der Parameter <see langword="null" /> ist, löst diese Methode eine <see cref="T:System.ArgumentNullException" />-Ausnahme aus.</param>
+        <summary>Erstellt ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das den angegebenen Dienstprinzipalnamen (Service Principal Name, SPN) darstellt.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das von dieser Methode erstellte <xref:System.IdentityModel.Claims.Claim>-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Spn%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|Der Wert des `spn`-Parameters.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="spn" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateThumbprintClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateThumbprintClaim (byte[] thumbprint);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateThumbprintClaim(unsigned int8[] thumbprint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateThumbprintClaim(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thumbprint" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="thumbprint">Ein Array von Bytewerten, das den Fingerabdruck der dem Anspruch zugeordneten Entität angibt. Dieser Parameter darf nicht <see langword="null" /> sein. Wenn der Parameter <see langword="null" /> ist, löst diese Methode eine <see cref="T:System.ArgumentNullException" />-Ausnahme aus.</param>
+        <summary>Erstellt ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das den angegebenen Fingerabdruck darstellt.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das von dieser Methode erstellte <xref:System.IdentityModel.Claims.Claim>-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|Der Wert des `thumbprint`-Parameters.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="thumbprint" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUpnClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateUpnClaim (string upn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateUpnClaim(string upn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateUpnClaim(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="upn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="upn">Der UPN der Entität, der diesem Anspruch zugeordnet ist. Dieser Parameter darf nicht <see langword="null" /> sein. Wenn der Parameter <see langword="null" /> ist, löst diese Methode eine <see cref="T:System.ArgumentNullException" />-Ausnahme aus.</param>
+        <summary>Erstellt ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das den angegebenen Universal Principal Name (UPN) darstellt.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das von dieser Methode erstellte <xref:System.IdentityModel.Claims.Claim>-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Upn%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|Der Wert des `upn`-Parameters.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="upn" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUriClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateUriClaim (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateUriClaim(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateUriClaim(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Ein <see cref="T:System.Uri" />-Objekt, das die URL der diesem Anspruch zugeordneten Entität darstellt. Dieser Parameter darf nicht <see langword="null" /> sein. Wenn der Parameter <see langword="null" /> ist, löst diese Methode eine <see cref="T:System.ArgumentNullException" />-Ausnahme aus.</param>
+        <summary>Erstellt ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das die angegebene Uniform Resource Locator (URL) darstellt.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das von dieser Methode erstellte <xref:System.IdentityModel.Claims.Claim>-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Uri%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|Der Wert des `uri`-Parameters.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="uri" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWindowsSidClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateWindowsSidClaim (System.Security.Principal.SecurityIdentifier sid);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateWindowsSidClaim(class System.Security.Principal.SecurityIdentifier sid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateWindowsSidClaim(System.Security.Principal.SecurityIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="sid">Ein <see cref="T:System.Security.Principal.SecurityIdentifier" /> , die die SID darstellt.</param>
+        <summary>Erstellt ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das die angegebene Sicherheits-ID (SID) darstellt.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das die im <paramref name="sid" />-Parameter angegebene SID darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das von dieser Methode erstellte <xref:System.IdentityModel.Claims.Claim>-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Sid%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|Der Wert des `sid`-Parameters.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sid" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateX500DistinguishedNameClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateX500DistinguishedNameClaim (System.Security.Cryptography.X509Certificates.X500DistinguishedName x500DistinguishedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateX500DistinguishedNameClaim(class System.Security.Cryptography.X509Certificates.X500DistinguishedName x500DistinguishedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateX500DistinguishedNameClaim(System.Security.Cryptography.X509Certificates.X500DistinguishedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x500DistinguishedName" Type="System.Security.Cryptography.X509Certificates.X500DistinguishedName" />
+      </Parameters>
+      <Docs>
+        <param name="x500DistinguishedName">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X500DistinguishedName" />-Objekt, das den X.500-Distinguished Name der dem Anspruch zugeordneten Entität angibt. Dieser Parameter darf nicht <see langword="null" /> sein. Wenn der Parameter <see langword="null" /> ist, löst diese Methode eine <see cref="T:System.ArgumentNullException" />-Ausnahme aus.</param>
+        <summary>Erstellt ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das den angegebenen X.500-Distinguished Name darstellt.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das von dieser Methode erstellte <xref:System.IdentityModel.Claims.Claim>-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+ <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>  
+ <xref:System.IdentityModel.Claims.ClaimTypes.X500DistinguishedName%2A>  
+  
+ <xref:System.IdentityModel.Claims.Claim.Resource%2A>  
+ Der Wert des `x500DistinguishedName`-Parameters.  
+  
+ <xref:System.IdentityModel.Claims.Claim.Right%2A>  
+ <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="x500DistinguishedName" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultComparer">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEqualityComparer&lt;System.IdentityModel.Claims.Claim&gt; DefaultComparer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IEqualityComparer`1&lt;class System.IdentityModel.Claims.Claim&gt; DefaultComparer" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Claim.DefaultComparer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEqualityComparer&lt;System.IdentityModel.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, das zwei <see cref="T:System.IdentityModel.Claims.Claim" />-Objekte auf Übereinstimmung überprüfen kann.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.IEqualityComparer`1" />-Schnittstellenimplementierung, die zwei <see cref="T:System.IdentityModel.Claims.Claim" />-Objekte vergleicht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den Wert der <xref:System.IdentityModel.Claims.Claim.DefaultComparer%2A>-Eigenschaft, um einen der vordefinierten Anspruchtypen abzugleichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit der aktuellen <see cref="T:System.IdentityModel.Claims.Claim" /> verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Objekt den gleichen Anspruch wie das aktuelle <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt darstellt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> den gleichen Anspruch darstellt wie das aktuelle <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die <xref:System.Object.Equals%2A>-Methode, um Übereinstimmungsvergleiche für <xref:System.IdentityModel.Claims.Claim>-Objekte bereitzustellen. Die Werte der Eigenschaften <xref:System.IdentityModel.Claims.Claim.Right%2A>, <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> und <xref:System.IdentityModel.Claims.Claim.Resource%2A> werden hierzu dreimal verglichen. Der für die <xref:System.IdentityModel.Claims.Claim.Resource%2A>-Eigenschaft verwendete Vergleichsalgorithmus hängt von dem Wert der <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>-Eigenschaft ab. In der folgenden Tabelle wird der Vergleichsalgorithmus angezeigt, der für den angegebenen Anspruchtyp verwendet wird.  
+  
+|Anspruchstyp|Vergleich|  
+|----------------|----------------|  
+|<xref:System.IdentityModel.Claims.ClaimTypes.Dns%2A>|Zeichenfolgenvergleich für die Ressource ohne Berücksichtigung der Groß- und Kleinschreibung.|  
+|<xref:System.IdentityModel.Claims.ClaimTypes.Hash%2A>|Byte-pro-Byte-Vergleich.|  
+|<xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>|Byte-pro-Byte-Vergleich für die Modulo- und Exponententeile des Algorithmus.|  
+|<xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>|Byte-pro-Byte-Vergleich.|  
+|<xref:System.IdentityModel.Claims.ClaimTypes.Upn%2A>|SID-Vergleich.|  
+|<xref:System.IdentityModel.Claims.ClaimTypes.X500DistinguishedName%2A>|Normalisierter X.500-Vergleich unformatierter Daten.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Hashcode für den aktuellen Anspruch zurück.</summary>
+        <returns>Der Hashcode für den Anspruch.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode generiert für zwei Objekte, die gemäß der <xref:System.IdentityModel.Claims.Claim.Equals%2A>-Methode gleich sind, denselben Hashcode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resource">
+      <MemberSignature Language="C#" Value="public object Resource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Resource" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Claim.Resource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ressource ab, der dieses <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt zugeordnet ist.</summary>
+        <value>Die Ressource, der dieses <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[c_Claim#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_claim/cs/source.cs#2)]
+ [!code-vb[c_Claim#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_claim/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public string Right { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Right" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Claim.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolgendarstellung eines URI, die das Recht angibt, das diesem <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt zugeordnet ist. Vordefinierte Rechte sind als statische Eigenschaften der <see cref="T:System.IdentityModel.Claims.Rights" />-Klasse verfügbar.</summary>
+        <value>Ein URI, der das diesem <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt zugeordnete Recht angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vordefinierten Werten gehören <xref:System.IdentityModel.Claims.Rights.Identity%2A> und <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[c_Claim#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_claim/cs/source.cs#2)]
+ [!code-vb[c_Claim#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_claim/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim System { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.IdentityModel.Claims.Claim System" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Claim.System" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein vordefinierter Anspruch, der die Systementität darstellt.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt, das die Systementität darstellt. Dieses <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt verfügt über die in der folgenden Tabelle enthaltenen Eigenschaftswerte.  
+  
+ <list type="table"><listheader><term>Eigenschaft  
+  
+ </term><description>Wert  
+  
+ </description></listheader><item><term><see cref="P:System.IdentityModel.Claims.Claim.ClaimType" /></term><description><see cref="P:System.IdentityModel.Claims.ClaimTypes.System" /></description></item><item><term><see cref="P:System.IdentityModel.Claims.Claim.Resource" /></term><description><see langword="System" /></description></item><item><term><see cref="P:System.IdentityModel.Claims.Claim.Right" /></term><description><see cref="P:System.IdentityModel.Claims.Rights.Identity" /></description></item></list></value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgenentsprechung dieses <see cref="T:System.IdentityModel.Claims.Claim" />-Objekts zurück.</summary>
+        <returns>Dieses <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Zeichenfolge enthält die Werte der <xref:System.IdentityModel.Claims.Claim.Right%2A>-Eigenschaft und der <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,331 @@
+<Type Name="DesignerOptionService" FullName="System.ComponentModel.Design.DesignerOptionService">
+  <TypeSignature Language="C#" Value="public abstract class DesignerOptionService : System.ComponentModel.Design.IDesignerOptionService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DesignerOptionService extends System.Object implements class System.ComponentModel.Design.IDesignerOptionService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerOptionService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IDesignerOptionService</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Basisklasse zum Abrufen und Festlegen von Optionswerten für einen Designer bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerOptionService> -Klasse stellt eine Auflistung von Optionen bereit. Jede dieser Auflistungen für die Option verfügt über einen Indexer, der es weiter gefiltert werden kann. Jede Option Sammlung enthält einen eigenen Satz von Optionen sowie ein Rollup aller zugehörigen untergeordneten Optionen. Im Falle eines Namenskonflikts zwischen Eigenschaften Vorrang die äußerste Optionsobjekt. Die folgenden **Tools &#124; Optionen** Benutzer Benutzeroberfläche (UI) zeigt an, wie das äußerste Optionsobjekt größere Bedeutung annimmt:  
+  
+ **WindowsFormsDesigner &#124; Allgemein**  
+  
+-   **SnapToGrid**  
+  
+-   **ShowGrid**  
+  
+-   **GridSize**  
+  
+ Erhält eine <xref:System.ComponentModel.Design.IDesignerOptionService> mit dem Namen `service`, auf den Wert des abzurufenden der <xref:System.Windows.Forms.Design.ParentControlDesigner.GridSize%2A> -Eigenschaft, würde den folgenden Aufruf machen:  
+  
+ [!code-cpp[IDesignerOptionServiceExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/IDesignerOptionServiceExample/CPP/idesigneroptionservicecontrol.cpp#2)]
+ [!code-csharp[IDesignerOptionServiceExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/IDesignerOptionServiceExample/CS/idesigneroptionservicecontrol.cs#2)]
+ [!code-vb[IDesignerOptionServiceExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IDesignerOptionServiceExample/VB/idesigneroptionservicecontrol.vb#2)]  
+  
+ Dies funktioniert, bis Sie verschieben möchten <xref:System.Windows.Forms.Design.ParentControlDesigner.GridSize%2A> zu einer anderen Seite. Darüber hinaus <xref:System.ComponentModel.Design.IDesignerOptionService> bietet keinen Ermittlungsmechanismus. Wenn Sie nicht wissen, was Zeichenfolge übergeben wird, wurde der Dienst nicht den Wert der Eigenschaft gefunden.  
+  
+ Die <xref:System.ComponentModel.Design.DesignerOptionService> Klasse unter behebt diese Probleme. Sie können Abfragen, Sammlungen, und es gibt einen Typkonverter für definiert die <xref:System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection> -Objekt, das die Auflistung als erweiterbar markiert. Mit diesem Typkonverter können Sie den gesamten-Designer-Option-Dienst an einem Eigenschaftenfenster übergeben und visuell untersuchen des Diensts.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht den Zugriff auf die <xref:System.ComponentModel.Design.DesignerOptionService> zum Anzeigen der aktuellen Werte von den Standardoptionen.  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerOptionService#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerOptionService/CS/designeroptionservicecontrol.cs#1)]
+ [!code-vb[System.ComponentModel.Design.DesignerOptionService#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerOptionService/VB/designeroptionservicecontrol.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DesignerOptionService ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerOptionService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignerOptionService" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOptionCollection">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection CreateOptionCollection (System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection parent, string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.ComponentModel.Design.DesignerOptionService/DesignerOptionCollection CreateOptionCollection(class System.ComponentModel.Design.DesignerOptionService/DesignerOptionCollection parent, string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerOptionService.CreateOptionCollection(System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerOptionService+DesignerOptionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.ComponentModel.Design.DesignerOptionService+DesignerOptionCollection" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Der übergeordnete Designer-Option-Auflistung. Alle Sammlungen haben ein übergeordnetes Element, mit Ausnahme der Stamm-Objektsammlung.</param>
+        <param name="name">Der Name dieser Auflistung.</param>
+        <param name="value">Das Objekt, das Bereitstellen von Eigenschaften für diese Sammlung. Kann <see langword="null" /> , wenn die Auflistung keine Eigenschaften bereitstellt.</param>
+        <summary>Erstellt ein neues <see cref="T:System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection" /> mit dem angegebenen Namen und fügt es dem gegebenen übergeordneten Element hinzu.</summary>
+        <returns>Ein neues <see cref="T:System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection" /> mit dem angegebenen Namen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `value` Parameter gibt ein Objekt, dessen öffentliche Eigenschaften, in verwendet werden, der <xref:System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection.Properties%2A> Auflistung von der Option-Auflistung. Die `value` Parameter möglich `null` , wenn diese Optionen Auflistung kein Eigenschaften bereitstellt. Eigenschaften sind umschlossen so, dass durch übergeben nichts in der Komponentenparameter vom der <xref:System.ComponentModel.PropertyDescriptor> wird ignoriert, und die `value` -Objekt ersetzt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="parent" /> oder <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerOptionService/DesignerOptionCollection Options" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerOptionService.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerOptionService+DesignerOptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Optionen für diesen Dienst ab.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection" /> mit verfügbaren Designeroptionen aufgefüllt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist immer eine globale Optionen-Auflistung, die untergeordnete Sammlungen enthält.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie die Sammlungen von benannten Indexer navigieren können, sodass Sie den Wert der abrufen können die `GridSize` Option. Alle drei Varianten zurück den gleichen Wert.  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerOptionService#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerOptionService/CS/designeroptionservicecontrol.cs#3)]
+ [!code-vb[System.ComponentModel.Design.DesignerOptionService#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerOptionService/VB/designeroptionservicecontrol.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopulateOptionCollection">
+      <MemberSignature Language="C#" Value="protected virtual void PopulateOptionCollection (System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PopulateOptionCollection(class System.ComponentModel.Design.DesignerOptionService/DesignerOptionCollection options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerOptionService.PopulateOptionCollection(System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ComponentModel.Design.DesignerOptionService+DesignerOptionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="options">Die Auflistung zum Auffüllen.</param>
+        <summary>Füllt eine <see cref="T:System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerOptionService.PopulateOptionCollection%2A> bei Bedarf das erste Mal ein Benutzer nach untergeordneten Optionen oder Eigenschaften eine Auflistung von Optionen fragt Methode aufgerufen wird.  
+  
+ Sie können Auffüllen der `options` -Auflistung durch Aufrufen der <xref:System.ComponentModel.Design.DesignerOptionService.CreateOptionCollection%2A> -Methode und übergeben als das übergeordnete Element dieser Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDialog">
+      <MemberSignature Language="C#" Value="protected virtual bool ShowDialog (System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection options, object optionObject);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShowDialog(class System.ComponentModel.Design.DesignerOptionService/DesignerOptionCollection options, object optionObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerOptionService.ShowDialog(System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ComponentModel.Design.DesignerOptionService+DesignerOptionCollection" />
+        <Parameter Name="optionObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="options">Die Optionen-Auflistung mit dem Objekt, aufgerufen werden soll.</param>
+        <param name="optionObject">Die tatsächliche Options-Objekt.</param>
+        <summary>Zeigt das Dialogfeld "Optionen" für das angegebene Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn das Dialogfeld angezeigt wird. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerOptionService.ShowDialog%2A> Methode muss implementiert werden, für die `optionObject` des Parameters Optionen (Dialogfeld), angezeigt werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Bei der Standardimplementierung wird keine Aktion ausgeführt, und gibt <see langword="false" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerOptionService.GetOptionValue">
+      <MemberSignature Language="C#" Value="object IDesignerOptionService.GetOptionValue (string pageName, string valueName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.Design.IDesignerOptionService.GetOptionValue(string pageName, string valueName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerOptionService.System#ComponentModel#Design#IDesignerOptionService#GetOptionValue(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageName" Type="System.String" />
+        <Parameter Name="valueName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pageName">Die Seite an die die Option gebunden ist.</param>
+        <param name="valueName">Der Name der Optionswert.</param>
+        <summary>Ruft den Wert einer Option in diesem Paket definiert.</summary>
+        <returns>Der Wert der Option "mit dem Namen" <paramref name="valueName" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pageName" /> oder <paramref name="valueName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerOptionService.SetOptionValue">
+      <MemberSignature Language="C#" Value="void IDesignerOptionService.SetOptionValue (string pageName, string valueName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerOptionService.SetOptionValue(string pageName, string valueName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerOptionService.System#ComponentModel#Design#IDesignerOptionService#SetOptionValue(System.String,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageName" Type="System.String" />
+        <Parameter Name="valueName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="pageName">Die Seite an die die Option gebunden ist</param>
+        <param name="valueName">Der Name der Optionswert.</param>
+        <param name="value">Der Wert der Option.</param>
+        <summary>Legt den Wert einer Option in diesem Paket definiert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pageName" /> oder <paramref name="valueName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

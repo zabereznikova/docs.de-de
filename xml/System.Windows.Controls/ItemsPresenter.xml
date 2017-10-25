@@ -1,0 +1,133 @@
+<Type Name="ItemsPresenter" FullName="System.Windows.Controls.ItemsPresenter">
+  <TypeSignature Language="C#" Value="public class ItemsPresenter : System.Windows.FrameworkElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ItemsPresenter extends System.Windows.FrameworkElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ItemsPresenter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>In der Vorlage eines Elementsteuerelements verwendet wird, um anzugeben, die Stelle im Steuerelement's visual Where Struktur der <see cref="P:System.Windows.Controls.ItemsControl.ItemsPanel" /> definiert, indem die <see cref="T:System.Windows.Controls.ItemsControl" /> hinzugefügt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein <xref:System.Windows.Controls.ItemsPresenter> in einer Steuerelementvorlage für eine <xref:System.Windows.Controls.HeaderedItemsControl>.  
+  
+ [!code-xaml[HeaderedItemsControl#HeaderedItemsControl_Style](~/samples/snippets/csharp/VS_Snippets_Wpf/HeaderedItemsControl/CSharp/Page1.xaml#headereditemscontrol_style)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ItemsPresenter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsPresenter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.ItemsPresenter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsPresenter.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">Die berechnete Größe, die zum Anordnen des Inhalts verwendet.</param>
+        <summary>Wird aufgerufen, um anzuordnen und dessen Größe des Inhalts einer <see cref="T:System.Windows.Controls.ItemsPresenter" /> Objekt.</summary>
+        <returns>Die Größe des Inhalts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsPresenter.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Größe der Einschränkung wird eine "obere Grenze". Der Rückgabewert sollte diese Größe nicht überschreiten.</param>
+        <summary>Überschreibt die basisklassenimplementierung der <see cref="M:System.Windows.FrameworkElement.MeasureOverride(System.Windows.Size)" /> messen Sie die Größe des der <see cref="T:System.Windows.Controls.ItemsPresenter" /> Objekt und das Layoutmodul richtigen Größen wieder.</summary>
+        <returns>Die gewünschte Größe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsPresenter.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn ein interner Prozess oder eine Anwendung ruft <see cref="M:System.Windows.FrameworkElement.ApplyTemplate" />, der verwendet wird, die visuelle Struktur der aktuellen Vorlage zu erstellen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTemplateChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnTemplateChanged (System.Windows.Controls.ItemsPanelTemplate oldTemplate, System.Windows.Controls.ItemsPanelTemplate newTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTemplateChanged(class System.Windows.Controls.ItemsPanelTemplate oldTemplate, class System.Windows.Controls.ItemsPanelTemplate newTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsPresenter.OnTemplateChanged(System.Windows.Controls.ItemsPanelTemplate,System.Windows.Controls.ItemsPanelTemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldTemplate" Type="System.Windows.Controls.ItemsPanelTemplate" />
+        <Parameter Name="newTemplate" Type="System.Windows.Controls.ItemsPanelTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="oldTemplate">Der Wert der alten Vorlage.</param>
+        <param name="newTemplate">Der Wert der neuen Vorlage.</param>
+        <summary>Wird aufgerufen, wenn die Vorlage des Steuerelements geändert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

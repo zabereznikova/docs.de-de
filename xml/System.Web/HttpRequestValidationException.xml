@@ -1,0 +1,123 @@
+<Type Name="HttpRequestValidationException" FullName="System.Web.HttpRequestValidationException">
+  <TypeSignature Language="C#" Value="public sealed class HttpRequestValidationException : System.Web.HttpException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit HttpRequestValidationException extends System.Web.HttpException" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpRequestValidationException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.HttpException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn eine potenziell schädliche Eingabezeichenfolge als Teil der Anforderungsdaten vom Client empfangen wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einschränken und Validieren von Benutzereingaben unbedingt in einer Webanwendung Hackerangriffe verhindert werden, die von böswilligen Eingabezeichenfolgen abhängen. Cross-Site scripting-Angriffe sind ein Beispiel hierfür. Andere Arten von Schadsoftware oder unerwünschte Daten können in einer Anforderung über verschiedene Formen der Eingabe übergeben werden. Durch die Begrenzung der Arten von Daten, die auf einer unteren Ebene in einer Anwendung übergeben wird, können Sie unerwünschte Ereignisse, selbst wenn der Programmierer, die Ihren Code verwenden, nicht die Überprüfung Techniken festliegen versetzen, verhindern.  
+  
+ Anforderungsüberprüfung Eingabe potenziell schädlichen Client erkennt und löst diese Ausnahme aus, um die Verarbeitung der Anforderung abzubrechen. Eine Anforderung abbrechen kann einen Versuch gefährdet die Sicherheit Ihrer Anwendung, z. B. einen Cross-Site scripting-Angriff hindeuten. Es wird dringend empfohlen, dass die Anwendung explizit alle Eingaben zur Anforderungsabbrüche überprüfen. Sie können jedoch Anforderungsvalidierung deaktivieren, indem die `validateRequest` -Attribut in der Direktive versehen, `false`, wie im folgenden Beispiel gezeigt:  
+  
+ `<%@ Page validateRequest="false" %>`  
+  
+ Um die Anforderungsvalidierung für Ihre Anwendung zu deaktivieren, müssen Sie ändern oder erstellen Sie eine Datei "Web.config" für Ihre Anwendung, und legen die `validateRequest` Attribut von der `pages` -Abschnitt hinzu `false`, wie im folgenden Beispiel gezeigt:  
+  
+```  
+<configuration>   
+  <system.web>   
+    <pages validateRequest="false" />   
+  </system.web>   
+</configuration>   
+```  
+  
+ Um die Anforderungsvalidierung für alle Anwendungen auf dem Server zu deaktivieren, können Sie diese Änderung der Datei "Machine.config" vornehmen.  
+  
+> [!NOTE]
+>  Es wird dringend empfohlen, dass die Anwendung explizit überprüfen aller Eingaben, die zusätzlich zur der Anforderungsvalidierung von ASP.NET verwendet. Die Anforderung Überprüfungsfunktion kann nicht abfangen Angriffe, insbesondere solche, die speziell für die Anwendungslogik gestalteten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zu suchende böswillige Benutzereingaben mithilfe einer <xref:System.Web.HttpRequestValidationException>.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[HttpRequestValidationException#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpRequestValidationException/CS/httprequestvalidationexception_cs.aspx#1)]
+ [!code-aspx-vb[HttpRequestValidationException#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpRequestValidationException/VB/HttpRequestValidationException_VB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRequestValidationException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestValidationException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.HttpRequestValidationException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRequestValidationException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestValidationException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Zeichenfolge, die den Fehler beschreibt.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Web.HttpRequestValidationException" /> Ausnahme mit der angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt der `message` -Parameters sollte für Menschen lesbar. Der Aufrufer der <xref:System.Web.HttpRequestValidationException.%23ctor%28System.String%29> Konstruktor ist erforderlich, um sicherzustellen, dass die `message` Zeichenfolge lokalisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRequestValidationException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestValidationException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn dieser Parameter nicht <see langword="null" />, die aktuelle Ausnahme wird ausgelöst, einem <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.HttpRequestValidationException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die interne Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A> -Eigenschaft gibt denselben Wert, der übergeben wird die <xref:System.Web.HttpRequestValidationException.%23ctor%28System.String%2CSystem.Exception%29> -Konstruktor oder `null` Wenn die <xref:System.Exception.InnerException%2A> -Eigenschaft den inneren Ausnahmewert nicht bereitstellt der <xref:System.Web.HttpRequestValidationException.%23ctor%28System.String%2CSystem.Exception%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,89 @@
+<Type Name="IHasXmlNode" FullName="System.Xml.IHasXmlNode">
+  <TypeSignature Language="C#" Value="public interface IHasXmlNode" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHasXmlNode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.IHasXmlNode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht es eine Klasse die Rückgabe einer <see cref="T:System.Xml.XmlNode" /> aus dem aktuellen Kontext oder die Position.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `IHasXmlNode` Schnittstelle bietet eine Schnittstelle eine Klasse die Rückgabe einer <xref:System.Xml.XmlNode> aus dem aktuellen Kontext oder die Position. Durch die Implementierung erfolgt <xref:System.Xml.XPath.XPathNavigator> Objekte, die über die Klassen zu arbeiten, der über <xref:System.Xml.XmlNode> Knoten. Z. B. wenn die `XPathNavigator` Objekt wird erstellt, indem ein <xref:System.Xml.XmlDocument>, können Sie die <xref:System.Xml.IHasXmlNode.GetNode%2A> -Methode zur Rückgabe der `XmlNode` , die die aktuelle Position des Navigators darstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `GetNode` Methode zum Abrufen und ändern Sie den ausgewählten Knoten.  
+  
+ [!code-cpp[IHasXmlNode.GetNode#1](~/samples/snippets/cpp/VS_Snippets_Data/IHasXmlNode.GetNode/CPP/hasxmlnode.cpp#1)]
+ [!code-csharp[IHasXmlNode.GetNode#1](~/samples/snippets/csharp/VS_Snippets_Data/IHasXmlNode.GetNode/CS/hasxmlnode.cs#1)]
+ [!code-vb[IHasXmlNode.GetNode#1](~/samples/snippets/visualbasic/VS_Snippets_Data/IHasXmlNode.GetNode/VB/hasxmlnode.vb#1)]  
+  
+ Im Beispiel wird die Datei `books.xml` als Eingabe.  
+  
+ [!code-xml[IHasXmlNode.GetNode#2](~/samples/snippets/xml/VS_Snippets_Data/IHasXmlNode.GetNode/XML/books.xml#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetNode">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNode GetNode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode GetNode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IHasXmlNode.GetNode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Xml.XmlNode" /> für die aktuelle Position.</summary>
+        <returns>Die <see langword="XmlNode" /> für die aktuelle Position.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der folgende C#-Code verwendet `GetNode` Zugriff auf einen Knoten der <xref:System.Xml.XPath.XPathNavigator> gerade positioniert ist.  
+  
+```  
+XmlDocument doc = new XmlDocument();  
+doc.Load("books.xml");  
+XPathNavigator nav =  doc.CreateNavigator();  
+XmlNode node = ((IHasXmlNode)nav).GetNode();  
+Console.WriteLine(node.LocalName);   
+//You can edit the returned XmlNode.  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

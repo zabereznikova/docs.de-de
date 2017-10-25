@@ -1,0 +1,662 @@
+<Type Name="OracleBinary" FullName="System.Data.OracleClient.OracleBinary">
+  <TypeSignature Language="C#" Value="public struct OracleBinary : IComparable, System.Data.SqlTypes.INullable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit OracleBinary extends System.ValueType implements class System.Data.SqlTypes.INullable, class System.IComparable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleBinary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.SqlTypes.INullable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Datenstrom variabler Länge, die aus Binärdaten, gespeichert oder aus einer Datenbank abgerufen werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Abrufen einer <xref:System.Data.OracleClient.OracleBinary> -Objekt, rufen Sie die <xref:System.Data.OracleClient.OracleDataReader.GetOracleBinary%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleBinary (byte[] b);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="b" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="b">Das Bytearray in gespeichert werden die <see cref="P:System.Data.OracleClient.OracleBinary.Value" /> Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see langword="OracleBinary" /> -Struktur, die <see cref="P:System.Data.OracleClient.OracleBinary.Value" /> Eigenschaft, um den Inhalt des angegebenen Bytearrays.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um dies zu vergleichende Objekt <see langword="OracleBinary" /> Struktur.</param>
+        <summary>Vergleicht dieses <see cref="T:System.Data.OracleClient.OracleBinary" /> Objekt mit dem angegebenen Objekt und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.</summary>
+        <returns>Eine Zahl mit Vorzeichen, der angibt, die relativen Werte dieser <see langword="OracleBinary" /> Struktur und das Objekt.  
+  
+ <list type="table"><listheader><term>Rückgabewert  
+  
+ </term><description>Bedingung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description>Der Wert dieses <see langword="OracleBinary" /> -Objekts kleiner ist als das Objekt.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description>Dies <see langword="OracleBinary" /> Objekt ist mit dem Objekt identisch.  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description>Dies <see langword="OracleBinary" /> -Quellobjekt ist größer als das Objekt.  
+  
+ - oder -   
+  
+ Das Objekt ist ein null-Verweis.  
+  
+ </description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Concat">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBinary Concat (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBinary Concat(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.Concat(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBinary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <param name="y">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <summary>Verkettet zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> Strukturen zum Erstellen eines neuen <see langword="OracleBinary" /> Struktur.</summary>
+        <returns>Ein <see langword="OracleBinary" /> Struktur mit die verketteten Werte des der <paramref name="x" /> und <paramref name="y" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu vergleichende Objekt.</param>
+        <summary>Vergleicht den-Parameter angegebene Objekt mit dem <see cref="P:System.Data.OracleClient.OracleBinary.Value" /> Eigenschaft von der <see cref="T:System.Data.OracleClient.OracleBinary" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt eine Instanz des ist <see cref="T:System.Data.OracleClient.OracleBinary" /> und die beiden gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean Equals (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean Equals(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.Equals(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <param name="y">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> auszugeben, um zu bestimmen, ob sie gleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen gleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen ungleich sind. Wenn eine der Instanzen von <see langword="OracleBinary" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see langword="OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese <see cref="T:System.Data.OracleClient.OracleBinary" />-Struktur zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean GreaterThan (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean GreaterThan(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.GreaterThan(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <param name="y">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> auszugeben, um zu bestimmen, ob die erste größer als das zweite ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> ist die erste Instanz größer als die zweite Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see langword="OracleBinary" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see langword="OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean GreaterThanOrEqual (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean GreaterThanOrEqual(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.GreaterThanOrEqual(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <param name="y">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> auszugeben, um zu bestimmen, ob die erste größer als oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die erste Instanz größer oder gleich der zweiten Instanz ist <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see langword="OracleBinary" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see langword="OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleBinary.IsNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="P:System.Data.OracleClient.OracleBinary.Value" /> Eigenschaft der <see cref="T:System.Data.OracleClient.OracleBinary" /> Struktur ist null.</summary>
+        <value>
+          <see langword="true" />Wenn <see langword="Value" /> null ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public byte this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleBinary.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position des Bytes abgerufen werden sollen.</param>
+        <summary>Ruft das einzelne Byte aus dem <see langword="Value" /> Eigenschaft befindet sich an der Position, die durch den Integer-Parameter angegebenen <paramref name="index" />. Wenn <paramref name="index" /> gibt eine Position hinter dem Ende des Bytearrays, wird eine Ausnahme ausgelöst.</summary>
+        <value>Das Byte, die an der durch den Integer-Parameter angegebenen Position befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Vermeidung durch das Auslösen einer `OracleNullValueException`, überprüfen Sie immer die <xref:System.Data.OracleClient.OracleBinary.IsNull%2A> Eigenschaft und die `Length` Eigenschaft vor dem Lesen `this`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleBinary.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge in Bytes ab dem <see cref="P:System.Data.OracleClient.OracleBinary.Value" /> Eigenschaft. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Die Länge der binären Daten in der <see langword="Value" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Vermeidung durch das Auslösen einer `OracleNullValueException`, überprüfen Sie immer die <xref:System.Data.OracleClient.OracleBinary.IsNull%2A> Eigenschaft vor dem Lesen der `Length` Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean LessThan (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean LessThan(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.LessThan(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <param name="y">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> auszugeben, um zu bestimmen, ob der erste kleiner ist als der zweite.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn der erste kleiner als die zweite Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see langword="OracleBinary" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see langword="OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean LessThanOrEqual (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean LessThanOrEqual(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.LessThanOrEqual(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <param name="y">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> auszugeben, um zu bestimmen, ob der erste kleiner oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> ist die erste Instanz kleiner oder gleich der zweiten Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see langword="OracleBinary" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see langword="OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotEquals">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean NotEquals (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean NotEquals(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.NotEquals(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <param name="y">Eine <see langword="OracleBinary" />-Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> auszugeben, um zu bestimmen, ob diese ungleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen ungleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen gleich sind. Wenn eine der Instanzen von <see langword="OracleBinary" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see langword="OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleBinary Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleBinary Null" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleBinary.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBinary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen null-Wert, der zugewiesen werden kann die <see cref="P:System.Data.OracleClient.OracleBinary.Value" /> Eigenschaft eine <see cref="T:System.Data.OracleClient.OracleBinary" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Null`fungiert als eine Konstante für die `OracleBinary` Struktur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBinary operator + (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBinary op_Addition(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.op_Addition(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBinary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <param name="y">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <summary>Verkettet die beiden <see cref="T:System.Data.OracleClient.OracleBinary" /> Parameter zum Erstellen eines neuen <see langword="OracleBinary" /> Struktur.</summary>
+        <returns>Die verketteten Werte des der <paramref name="x" /> und <paramref name="y" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `x`in dem sich ergebenden erscheint `OracleBinary`, gefolgt von `y`.  
+  
+ [Visual Basic]  
+  
+ In Visual Basic können Sie die Operatoren, die durch eine Klasse definiert, aber Sie können nicht überschrieben werden, oder eigene erstellen.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBinary.Concat%28System.Data.OracleClient.OracleBinary%2CSystem.Data.OracleClient.OracleBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator == (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Equality(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.op_Equality(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <param name="y">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> auszugeben, um zu bestimmen, ob sie gleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen gleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen ungleich sind. Wenn eine der Instanzen von <see langword="OracleBinary" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see langword="OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBinary.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator byte[] (System.Data.OracleClient.OracleBinary x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname unsigned int8[] op_Explicit(valuetype System.Data.OracleClient.OracleBinary x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.op_Explicit(System.Data.OracleClient.OracleBinary)~System.Byte[]" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &gt; (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_GreaterThan(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.op_GreaterThan(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <param name="y">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> auszugeben, um zu bestimmen, ob die erste größer als das zweite ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> ist die erste Instanz größer als die zweite Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see langword="OracleBinary" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see langword="OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBinary.GreaterThan%28System.Data.OracleClient.OracleBinary%2CSystem.Data.OracleClient.OracleBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &gt;= (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_GreaterThanOrEqual(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.op_GreaterThanOrEqual(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <param name="y">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> auszugeben, um zu bestimmen, ob die erste größer als oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die erste Instanz größer oder gleich der zweiten Instanz ist <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see langword="OracleBinary" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see langword="OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBinary.GreaterThanOrEqual%28System.Data.OracleClient.OracleBinary%2CSystem.Data.OracleClient.OracleBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.OracleClient.OracleBinary (byte[] b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBinary op_Implicit(unsigned int8[] b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.op_Implicit(System.Byte[])~System.Data.OracleClient.OracleBinary" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBinary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="b" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="b">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator != (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Inequality(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.op_Inequality(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <param name="y">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> auszugeben, um zu bestimmen, ob sie gleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen ungleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen gleich sind. Wenn eine der Instanzen von <see langword="OracleBinary" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see langword="OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBinary.NotEquals%28System.Data.OracleClient.OracleBinary%2CSystem.Data.OracleClient.OracleBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &lt; (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_LessThan(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.op_LessThan(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <param name="y">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> auszugeben, um zu bestimmen, ob der erste kleiner ist als der zweite.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn der erste kleiner als die zweite Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see langword="OracleBinary" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see langword="OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBinary.LessThan%28System.Data.OracleClient.OracleBinary%2CSystem.Data.OracleClient.OracleBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &lt;= (System.Data.OracleClient.OracleBinary x, System.Data.OracleClient.OracleBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_LessThanOrEqual(valuetype System.Data.OracleClient.OracleBinary x, valuetype System.Data.OracleClient.OracleBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleBinary.op_LessThanOrEqual(System.Data.OracleClient.OracleBinary,System.Data.OracleClient.OracleBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleBinary" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <param name="y">Ein <see langword="OracleBinary" />-Objekt.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.OracleClient.OracleBinary" /> auszugeben, um zu bestimmen, ob der erste kleiner oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> ist die erste Instanz kleiner oder gleich der zweiten Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see langword="OracleBinary" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see langword="OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleBinary.LessThanOrEqual%28System.Data.OracleClient.OracleBinary%2CSystem.Data.OracleClient.OracleBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public byte[] Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleBinary.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="T:System.Data.OracleClient.OracleBinary" /> Struktur. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Der Wert, der die <see langword="OracleBinary" /> Struktur.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Vermeidung durch das Auslösen einer `OracleNullValueException`, überprüfen Sie immer die <xref:System.Data.OracleClient.OracleBinary.IsNull%2A> Eigenschaft vor dem Lesen der `Value` Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

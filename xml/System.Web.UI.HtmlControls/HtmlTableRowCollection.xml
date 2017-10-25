@@ -1,0 +1,465 @@
+<Type Name="HtmlTableRowCollection" FullName="System.Web.UI.HtmlControls.HtmlTableRowCollection">
+  <TypeSignature Language="C#" Value="public sealed class HtmlTableRowCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HtmlTableRowCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Eine Auflistung von <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> Objekte, die die Zeilen der darstellen einer <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Klasse, um eine Auflistung von programmgesteuert verwalten <xref:System.Web.UI.HtmlControls.HtmlTableRow> Objekte, die die Zeilen in einer <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement. Diese Klasse wird häufig verwendet, um hinzufügen, entfernen oder ändern Sie den Inhalt einer Zeile in einem <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+> [!NOTE]
+>  Ein <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement enthält eine <xref:System.Web.UI.HtmlControls.HtmlTable.Rows%2A> -Eigenschaft, die eine Auflistung von darstellt <xref:System.Web.UI.HtmlControls.HtmlTableRow> Objekte. Jede <xref:System.Web.UI.HtmlControls.HtmlTableRow> stellt eine einzelne Zeile in der Tabelle dar. Ein <xref:System.Web.UI.HtmlControls.HtmlTableRow> enthält eine <xref:System.Web.UI.HtmlControls.HtmlTableRow.Cells%2A> -Eigenschaft, die eine Auflistung von darstellt <xref:System.Web.UI.HtmlControls.HtmlTableCell> Objekte. Diese Objekte stellen wiederum die einzelnen Zellen der Tabelle dar. Um eine einzelne Zelle abzurufen, rufen Sie zunächst die <xref:System.Web.UI.HtmlControls.HtmlTableRow> Objekt, das die Zeile mit der Zelle aus darstellt der <xref:System.Web.UI.HtmlControls.HtmlTable.Rows%2A> Auflistung von der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement. Sie erhalten dann die <xref:System.Web.UI.HtmlControls.HtmlTableCell> Objekt, das die Zelle in der Zeile darstellt, aus der <xref:System.Web.UI.HtmlControls.HtmlTableRow.Cells%2A> Auflistung von der <xref:System.Web.UI.HtmlControls.HtmlTableRow>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der Inhalt dynamisch generiert eine <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement durch Hinzufügen von Zeilen, die eine <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung. Beachten Sie, dass die <xref:System.Web.UI.HtmlControls.HtmlTable.Rows%2A> -Eigenschaft einer Tabelle ist die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Objekt.  
+  
+ [!code-aspx-csharp[HtmlTableRowCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableRowCollection/CS/htmltablerowcollectioncs.aspx#1)]
+ [!code-aspx-vb[HtmlTableRowCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableRowCollection/VB/htmltablerowcollectionvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.HtmlControls.HtmlTableRow row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.HtmlControls.HtmlTableRow row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableRowCollection.Add(System.Web.UI.HtmlControls.HtmlTableRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Web.UI.HtmlControls.HtmlTableRow" />
+      </Parameters>
+      <Docs>
+        <param name="row">Der der Auflistung hinzuzufügende <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> Objekt an das Ende der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode das angegebene hinzuzufügende <xref:System.Web.UI.HtmlControls.HtmlTableRow> Objekt am Ende einer <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung. Zum Einfügen einer <xref:System.Web.UI.HtmlControls.HtmlTableRow> mitten in der Auflistung, verwenden die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.Insert%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.Add%2A> -Methode, um eine Zeile einer Tabelle, dargestellt durch eine <xref:System.Web.UI.HtmlControls.HtmlTableRow> -Objekt, an das Ende einer <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung. Beachten Sie, dass die <xref:System.Web.UI.HtmlControls.HtmlTable.Rows%2A> -Eigenschaft einer Tabelle ist die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Objekt.  
+  
+ [!code-aspx-csharp[HtmlTableRowCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableRowCollection/CS/htmltablerowcollectioncs.aspx#1)]
+ [!code-aspx-vb[HtmlTableRowCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableRowCollection/VB/htmltablerowcollectionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableRowCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> Objekte aus der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können alle entfernen <xref:System.Web.UI.HtmlControls.HtmlTableRow> Objekte aus der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung und Zurücksetzen der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.Count%2A> Eigenschaft `0`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.Clear%2A> -Methode entfernt alle Elemente aus der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung. Neue Einträge werden dann der Auflistung hinzugefügt und im angezeigten der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlTableRowCollectionClear#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableRowCollectionClear/CS/htmltablerowcollectionclearcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableRowCollectionClear#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableRowCollectionClear/VB/htmltablerowcollectionclearvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableRowCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein nullbasiertes <see cref="T:System.Array" />, das die kopierten Elemente aus der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> empfängt.</param>
+        <param name="index">Der erste Index in das angegebene Array, die Elemente zu erhalten.</param>
+        <summary>Kopiert die Elemente aus der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> Auflistung mit dem angegebenen <see cref="T:System.Array" /> -Objekt, beginnend am angegebenen Index im Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Kopieren der Inhalte der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung in die angegebene <xref:System.Array?displayProperty=nameWithType> -Objekt, beginnend am angegebenen Index im Array.  
+  
+> [!NOTE]
+>  Die `array` Parameter muss eine nullbasierte <xref:System.Array?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.CopyTo%2A> Methode, um ein Array zu erstellen, die den gleichen Inhalt wie enthält die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung. Klicken Sie dann wird das Array durchlaufen, um den Inhalt der Auflistung anzuzeigen.  
+  
+ [!code-aspx-csharp[HtmlTableRowCollectionCopyTo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableRowCollectionCopyTo/CS/htmltablerowcollectioncopytocs.aspx#1)]
+ [!code-aspx-vb[HtmlTableRowCollectionCopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableRowCollectionCopyTo/VB/htmltablerowcollectioncopytovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTableRowCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" />-Objekte in der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" />-Auflistung ab.</summary>
+        <value>Die Anzahl der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> Objekte in der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" />. Der Standardwert ist <see langword="0" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.Count%2A> -Eigenschaft können Sie bestimmen die Anzahl der Zeilen in der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung. Die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.Count%2A> Eigenschaft wird häufig verwendet, beim Durchlaufen des Auflistung zum Bestimmen der oberen Grenze.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.Count%2A> -Eigenschaft zum Bestimmen der Anzahl der Zeilen in der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement. Dieser Wert wird dann als die obere Grenze einer Schleife zum Durchlaufen der Zeilen einer Tabelle verwendet.  
+  
+ [!code-aspx-csharp[HtmlTableRowCollectionCount#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableRowCollectionCount/CS/htmltablerowcollectioncountcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableRowCollectionCount#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableRowCollectionCount/VB/htmltablerowcollectioncountvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableRowCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Collections.IEnumerator" />-Objekt, das alle enthält implementiert <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> Objekte in der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> Auflistung.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das alle enthält implementiert <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> Objekte in der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType>-implementiert-Objekt, das durchlaufen werden kann, um jedes Element abzurufen, der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft, um das aktuelle Element in der Auflistung abzurufen.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> -Methode zum nächsten Element in der Auflistung zu verschieben.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf die erste Position zu verschieben.  
+  
+> [!NOTE]
+>  Rufen Sie die <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> Methode nach dem Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType>-Objekt implementiert oder nach der Verwendung der <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf das erste Element in der Auflistung zu bewegen. Andernfalls das Element dargestellt, durch die <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft ist nicht definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.GetEnumerator%2A> Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType> Objekt. Die <xref:System.Collections.IEnumerator?displayProperty=nameWithType> Objekt wird dann zur Anzeige der Inhalte des durchlaufen die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung.  
+  
+ [!code-aspx-csharp[HtmlTableRowCollectionGetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableRowCollectionGetEnumerator/CS/htmltablerowcollectionienumeratorcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableRowCollectionGetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableRowCollectionGetEnumerator/VB/htmltablerowcollectionienumeratorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.HtmlControls.HtmlTableRow row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.HtmlControls.HtmlTableRow row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableRowCollection.Insert(System.Int32,System.Web.UI.HtmlControls.HtmlTableRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="row" Type="System.Web.UI.HtmlControls.HtmlTableRow" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position in der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> an dem Hinzufügen der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" />.</param>
+        <param name="row">Das <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" />, das in <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> eingefügt werden soll.</param>
+        <summary>Fügt ein <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> Objekt, das der angegebenen Position in der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.Insert%2A> Methode das angegebene hinzuzufügende <xref:System.Web.UI.HtmlControls.HtmlTableRow> -Objekt an eine <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung am angegebenen Index. Wenn Sie einfach anfügen möchten eine <xref:System.Web.UI.HtmlControls.HtmlTableRow> an das Ende der Auflistung, verwenden die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.Add%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.Insert%2A> Methode zum Einfügen einer Zeile einer Tabelle, dargestellt durch eine <xref:System.Web.UI.HtmlControls.HtmlTableRow> -Objekt, in eine <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung.  
+  
+ [!code-aspx-csharp[HtmlTableRowCollectionInsert#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableRowCollectionInsert/CS/htmltablerowcollectioninsertcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableRowCollectionInsert#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableRowCollectionInsert/VB/htmltablerowcollectioninsertvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTableRowCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" />-Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer `false` gibt an, dass die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung in allen Fällen geschrieben werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTableRowCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zugriff auf die <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> -Auflistung synchronisiert (threadsicher).</summary>
+        <value>
+          <see langword="false" />in allen Fällen gibt die an, dass der Zugriff auf die <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> (nicht threadsicher) ist nicht synchronisiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird von abgeleiteten <xref:System.Collections.ICollection?displayProperty=nameWithType> und wird überschrieben, um stets `false` an, dass der Zugriff auf die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung wird nicht synchronisiert (nicht threadsicher).  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.IsSynchronized%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.HtmlControls.HtmlTableRow this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.HtmlControls.HtmlTableRow Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTableRowCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlControls.HtmlTableRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein Ordinalindex-Wert, der angibt, die <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> zurückgegeben.</param>
+        <summary>Ruft die <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> Objekt am angegebenen Index aus der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> Auflistung.</summary>
+        <value>Ein <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> , darstellt, dass eine Zeile in der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Indexer zum Abrufen einer Einzelperson <xref:System.Web.UI.HtmlControls.HtmlTableRow> -Objekt aus der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung am angegebenen Index mithilfe von einfachen Array-Notation.  
+  
+> [!NOTE]
+>  Die Auflistung ist nullbasiert. aus diesem Grund enthält das erste Element in der Auflistung Indexwert `0`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit dem Indexer zum Abrufen einer Tabellenzeile, dargestellt durch eine <xref:System.Web.UI.HtmlControls.HtmlTableRow> -Objekt, aus der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung. Die Zellen in der Zeile werden dann mit neuem Inhalt aktualisiert. Beachten Sie, dass die <xref:System.Web.UI.HtmlControls.HtmlTable.Rows%2A> Eigenschaft der Tabelle ist die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Objekt.  
+  
+ [!code-aspx-csharp[HtmlTableRowCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableRowCollection/CS/htmltablerowcollectioncs.aspx#1)]
+ [!code-aspx-vb[HtmlTableRowCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableRowCollection/VB/htmltablerowcollectionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.HtmlControls.HtmlTableRow row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.HtmlControls.HtmlTableRow row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableRowCollection.Remove(System.Web.UI.HtmlControls.HtmlTableRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Web.UI.HtmlControls.HtmlTableRow" />
+      </Parameters>
+      <Docs>
+        <param name="row">Der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" />, der aus der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> entfernt werden soll.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> -Objekt aus der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Entfernen des angegebenen <xref:System.Web.UI.HtmlControls.HtmlTableRow> -Objekt aus der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung.  
+  
+> [!NOTE]
+>  Bei Angabe einer <xref:System.Web.UI.HtmlControls.HtmlTableRow> , nicht vorhanden der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection>, kein Element aus der Auflistung entfernt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.Remove%2A> Methode, um die angegebenen Tabellenzeile, dargestellt durch Entfernen einer <xref:System.Web.UI.HtmlControls.HtmlTableRow> -Objekt, aus der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung. In diesem Beispiel werden die Zellen aus der ersten Zeile des entfernt die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlTableRowCollectionRemove#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableRowCollectionRemove/CS/htmltablerowcollectionremovecs.aspx#1)]
+ [!code-aspx-vb[HtmlTableRowCollectionRemove#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableRowCollectionRemove/VB/htmltablerowcollectionremovevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableRowCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> Aufheben der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" />.</param>
+        <summary>Entfernt die <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> Objekt am angegebenen Index aus der <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Entfernen der <xref:System.Web.UI.HtmlControls.HtmlTableRow> Objekt am angegebenen Index aus der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung. Die Anzahl der Index ist nullbasiert. Aus diesem Grund besitzt das erste Element in der Auflistung den Indexwert des `0`.  
+  
+> [!NOTE]
+>  Wenn Sie einen Index, der außerhalb des Bereichs der Indexwerte ist angeben, wird eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection.RemoveAt%2A> Methode entfernt das Element am angegebenen Index aus der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Auflistung. In diesem Beispiel entfernt die erste Datenzeile der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlTableRowCollectionRemoveAt#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableRowCollectionRemoveAt/CS/htmltablerowcollectionremoveatcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableRowCollectionRemoveAt#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableRowCollectionRemoveAt/VB/htmltablerowcollectionremoveatvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Index ist außerhalb des Bereichs der Indexwerte in der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTableRowCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das verwendet werden kann, zum Synchronisieren des Zugriffs auf die <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> Auflistung.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das in dieser Implementierung zurückgegebene Objekt stellt die aktuelle Instanz von der <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Klasse.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.SyncRoot%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

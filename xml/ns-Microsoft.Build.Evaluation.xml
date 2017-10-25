@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Evaluation">
+  <Docs>
+    <summary>Enthält Typen, die das MSBuild-Objektmodell verwendet wird, um Projekte zu bewerten. Jedes Projekt ist mindestens ein Projektstämme zugeordnet. Informationen finden Sie unter <see href="https://docs.microsoft.com/visualstudio/msbuild/">MSBuild</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

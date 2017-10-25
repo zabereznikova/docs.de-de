@@ -1,0 +1,339 @@
+<Type Name="KeyContainerPermissionFlags" FullName="System.Security.Permissions.KeyContainerPermissionFlags">
+  <TypeSignature Language="C#" Value="public enum KeyContainerPermissionFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed KeyContainerPermissionFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.KeyContainerPermissionFlags" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Typ des Schlüsselcontainers Zugriff zulässig.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, von einem Mitglied der <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry> Klasse.  
+  
+> [!CAUTION]
+>  Viele dieser Flags können leistungsstarke Auswirkungen und sollte nur für hoch vertrauenswürdigen Code erteilt werden.  
+  
+ Die leistungsstärksten der Flags sind erstellen, löschen, importieren, exportieren, Anmeldung, entschlüsseln und AllFlags. Bestimmter Bedrohungen, die die Verwendung dieser Flags darstellen kann, finden Sie in die Memberbeschreibungen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.KeyContainerPermissionFlags.Create> Enumeration.  
+  
+ [!code-cpp[System.Security.Permissions.KeyContainerPermission#20](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/CPP/keycontainerpermission.cpp#20)]
+ [!code-csharp[System.Security.Permissions.KeyContainerPermission#20](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/CS/keycontainerpermission.cs#20)]
+ [!code-vb[System.Security.Permissions.KeyContainerPermission#20](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/VB/Form1.vb#20)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllFlags">
+      <MemberSignature Language="C#" Value="AllFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.KeyContainerPermissionFlags AllFlags = int32(13111)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.KeyContainerPermissionFlags.AllFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellen Sie, zu entschlüsseln Sie, löschen Sie, und öffnen Sie einen Schlüsselcontainer; Exportieren und Importieren eines Schlüssels; Signieren von Dateien mithilfe eines Schlüssels; Anzeigen und Ändern der Zugriffssteuerungsliste für einen Schlüsselcontainer.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeAcl">
+      <MemberSignature Language="C#" Value="ChangeAcl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.KeyContainerPermissionFlags ChangeAcl = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.KeyContainerPermissionFlags.ChangeAcl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ändern Sie die Zugriffssteuerungsliste (ACL) für einen Schlüsselcontainer.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="Create" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.KeyContainerPermissionFlags Create = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.KeyContainerPermissionFlags.Create" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellen Sie einen Schlüsselcontainer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellen einen Schlüsselcontainer wird auch eine Datei auf dem Datenträger erstellt. Es ist sehr wichtig, dass alle Schlüsselcontainer, der erstellt wird entfernt wird, wenn sie nicht mehr verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decrypt">
+      <MemberSignature Language="C#" Value="Decrypt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.KeyContainerPermissionFlags Decrypt = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.KeyContainerPermissionFlags.Decrypt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Entschlüsseln eines Schlüsselcontainers an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entschlüsselung ist keinen privilegierten Vorgang, da es sich um den privaten Schlüssel verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.KeyContainerPermissionFlags Delete = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.KeyContainerPermissionFlags.Delete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Löschen Sie einen Schlüsselcontainer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löschen eines Schlüsselcontainers kann einen DoS-Angriff darstellen, da sie verhindert, dass die Verwendung von Dateien verschlüsselt oder signiert werden, mit dem Schlüssel. Daher ist die Löschung keinen privilegierten Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="Export" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.KeyContainerPermissionFlags Export = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.KeyContainerPermissionFlags.Export" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exportieren eines Schlüssels aus einem Schlüsselcontainer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Möglichkeit, einen Schlüssel nicht exportieren ist potenziell schädlichen, da die Exklusivität des Schlüssels wird entfernt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="Import" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.KeyContainerPermissionFlags Import = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.KeyContainerPermissionFlags.Import" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Importieren eines Schlüssels in einem Schlüsselcontainer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Fähigkeit zum Importieren eines Schlüssels kann ebenso schädlich sein wie die Möglichkeit zum Löschen eines Containers, den vorhandenen Schlüssel Importieren eines Schlüssels in einen benannten Schlüsselcontainer ersetzt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoFlags">
+      <MemberSignature Language="C#" Value="NoFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.KeyContainerPermissionFlags NoFlags = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.KeyContainerPermissionFlags.NoFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kein Zugriff auf einen Schlüsselcontainer.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="Open" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.KeyContainerPermissionFlags Open = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.KeyContainerPermissionFlags.Open" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Öffnen Sie einen Schlüsselcontainer und verwenden Sie den öffentlichen Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Open`gewährt nicht die Berechtigung zum Signieren oder Entschlüsseln von Dateien mithilfe des privaten Schlüssels, aber ermöglicht es einen Benutzer, um Signaturen zu überprüfen und zum Verschlüsseln von Dateien. Nur der Besitzer des Schlüssels ist diese Dateien, die mit dem privaten Schlüssel zu entschlüsseln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="Sign" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.KeyContainerPermissionFlags Sign = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.KeyContainerPermissionFlags.Sign" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Signieren einer Datei mithilfe eines Schlüssels an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Möglichkeit zum Signieren einer Datei ist potenziell schädlich, da es einem Benutzer zum Signieren einer Datei mit einem anderen Benutzer-Schlüssel ermöglichen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewAcl">
+      <MemberSignature Language="C#" Value="ViewAcl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.KeyContainerPermissionFlags ViewAcl = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.KeyContainerPermissionFlags.ViewAcl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeigen Sie die Zugriffssteuerungsliste (ACL) für einen Schlüsselcontainer an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

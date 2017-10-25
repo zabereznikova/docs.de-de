@@ -1,0 +1,69 @@
+<Type Name="DataPointComparer" FullName="System.Web.UI.DataVisualization.Charting.DataPointComparer">
+  <TypeSignature Language="C#" Value="public class DataPointComparer : System.Collections.Generic.IComparer&lt;System.Web.UI.DataVisualization.Charting.DataPoint&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataPointComparer extends System.Object implements class System.Collections.Generic.IComparer`1&lt;class System.Web.UI.DataVisualization.Charting.DataPoint&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.DataPointComparer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IComparer&lt;System.Web.UI.DataVisualization.Charting.DataPoint&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Vergleicht die Datenpunkte an.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataPointComparer (System.Web.UI.DataVisualization.Charting.Series series, System.Web.UI.DataVisualization.Charting.PointSortOrder sortOrder, string sortBy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.DataVisualization.Charting.Series series, valuetype System.Web.UI.DataVisualization.Charting.PointSortOrder sortOrder, string sortBy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointComparer.#ctor(System.Web.UI.DataVisualization.Charting.Series,System.Web.UI.DataVisualization.Charting.PointSortOrder,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="series" Type="System.Web.UI.DataVisualization.Charting.Series" />
+        <Parameter Name="sortOrder" Type="System.Web.UI.DataVisualization.Charting.PointSortOrder" />
+        <Parameter Name="sortBy" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="series">Datenreihe.</param>
+        <param name="sortOrder">Die Sortierreihenfolge.</param>
+        <param name="sortBy">Wert für die Sortierung verwendet, z. B., "X", "Y oder Y1", "Y2" und So weiter.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.DataVisualization.Charting.DataPointComparer" /> -Klasse mit dem angegebenen Datenreihe, die Sortierreihenfolge und den Sortierwert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public int Compare (System.Web.UI.DataVisualization.Charting.DataPoint x, System.Web.UI.DataVisualization.Charting.DataPoint y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Compare(class System.Web.UI.DataVisualization.Charting.DataPoint x, class System.Web.UI.DataVisualization.Charting.DataPoint y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataPointComparer.Compare(System.Web.UI.DataVisualization.Charting.DataPoint,System.Web.UI.DataVisualization.Charting.DataPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Web.UI.DataVisualization.Charting.DataPoint" />
+        <Parameter Name="y" Type="System.Web.UI.DataVisualization.Charting.DataPoint" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der erste Datenpunkt.</param>
+        <param name="y">Zweiten Datenpunkt.</param>
+        <summary>Vergleicht zwei Datenpunkte.</summary>
+        <returns>Ein <see langword="integer" />-Wert. Gibt NULL (0), wenn die beiden Werte gleich sind. Gibt eine positive ganze Zahl zurück, wenn der Wert der <paramref name="x" /> ist größer als der Wert des <paramref name="y" />ist, andernfalls eine negative ganze Zahl zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

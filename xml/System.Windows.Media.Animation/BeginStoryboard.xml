@@ -1,0 +1,183 @@
+<Type Name="BeginStoryboard" FullName="System.Windows.Media.Animation.BeginStoryboard">
+  <TypeSignature Language="C#" Value="public sealed class BeginStoryboard : System.Windows.TriggerAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BeginStoryboard extends System.Windows.TriggerAction" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.BeginStoryboard" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.TriggerAction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Storyboard")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.RuntimeNameProperty("Name")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Triggeraktion, die ein <see cref="T:System.Windows.Media.Animation.Storyboard" /> startet und dessen Animationen auf ihre Zielobjekte und -eigenschaften verteilt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.Windows.Media.Animation.BeginStoryboard> Aktion mit einer <xref:System.Windows.EventTrigger> oder ein <xref:System.Windows.Trigger> Animationen auf ihre Zieleigenschaften angewendet, und starten sie. <xref:System.Windows.Media.Animation.BeginStoryboard>beginnt eine <xref:System.Windows.Media.Animation.Storyboard> durch Aufrufen von <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> auf seine <xref:System.Windows.Media.Animation.Storyboard> verwiesen werden, wenn ausgelöst.  
+  
+ Wenn Sie beginnen ein <xref:System.Windows.Media.Animation.Storyboard> auf eine Eigenschaft, die bereits von einem anderen Animiervorgangs <xref:System.Windows.Media.Animation.Storyboard>, die <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> Eigenschaft <xref:System.Windows.Media.Animation.BeginStoryboard> bestimmt, wie die Animation fortgesetzt wird.  
+  
+## <a name="pause-resume-stop-or-otherwise-control-a-storyboard-interactively"></a>Anhalten, fortsetzen, beenden oder ein Storyboard interaktiv steuern  
+ Zum Anhalten der Lage, fortsetzen oder steuern eine <xref:System.Windows.Media.Animation.BeginStoryboard.Storyboard%2A> deklariertes im Markup interaktiv verwenden, müssen Sie festlegen der <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> Eigenschaft seiner <xref:System.Windows.Media.Animation.BeginStoryboard>. Dann können Sie steuern die <xref:System.Windows.Media.Animation.Storyboard> mithilfe einer <xref:System.Windows.Media.Animation.ControllableStoryboardAction> Objekt (z. B. <xref:System.Windows.Media.Animation.PauseStoryboard>, <xref:System.Windows.Media.Animation.ResumeStoryboard>, oder <xref:System.Windows.Media.Animation.StopStoryboard>) zur Steuerung durch Verweisen auf die <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>. Wenn die <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> von <xref:System.Windows.Media.Animation.BeginStoryboard> ist nicht vorgegeben, die <xref:System.Windows.Media.Animation.BeginStoryboard.Storyboard%2A> nicht interaktiv gesteuert werden, nachdem es gestartet wurde. Finden Sie unter [wie: Verwenden von Ereignistriggern zur Steuerung einer Storyboard nach Beginn](~/docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md) für Weitere Informationen.  
+  
+> [!NOTE]
+>  Im Code können Sie die interaktiven Methoden der verwenden die <xref:System.Windows.Media.Animation.Storyboard> Klasse steuern eine <xref:System.Windows.Media.Animation.Storyboard> mit angewendet wurde eine <xref:System.Windows.Media.Animation.BeginStoryboard>. Wie die Groß-/Kleinschreibung bei <xref:System.Windows.Media.Animation.ControllableStoryboardAction> Objekte aufweist, geben Sie die <xref:System.Windows.Media.Animation.BeginStoryboard> einen Namen für die <xref:System.Windows.Media.Animation.Storyboard> interaktiv steuerbar sein.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BeginStoryboard ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.BeginStoryboard.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Windows.Media.Animation.BeginStoryboard" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandoffBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.HandoffBehavior HandoffBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Animation.HandoffBehavior HandoffBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.HandoffBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das richtige Übergabeverhalten zum Starten einer Animationsuhr in diesem Storyboard ab oder legt es fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Media.Animation.HandoffBehavior" />-Enumerationswerte. Der Standardwert ist <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="using-the-compose-handoffbehavior"></a>Mit dem Verfassen HandoffBehavior  
+ Beim Anwenden einer <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, oder <xref:System.Windows.Media.Animation.AnimationClock> auf eine Eigenschaft mit <xref:System.Windows.Media.Animation.HandoffBehavior?displayProperty=nameWithType>, stellen alle <xref:System.Windows.Media.Animation.Clock> zuvor mit dieser Eigenschaft zugewiesenen Objekte weiter an Systemressourcen beanspruchen, die Zeitsteuerungssystems diese Uhren nicht entfernt automatisch.  
+  
+ Um Leistungsprobleme zu vermeiden, wenn Sie eine große Anzahl von Uhren mit anwenden <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, Sie sollten zusammengesetzte Uhren aus der animierten Eigenschaft nach dem Abschluss entfernen. Es gibt mehrere Möglichkeiten, eine Uhr zu entfernen:  
+  
+-   Verwenden Sie zum Entfernen aller Uhren aus einer Eigenschaft der <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> oder <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> -Methode des animierten Objekts. Geben Sie die Eigenschaft als erster Parameter animierten und `null` als das zweite. Dies entfernt alle Animationsuhren aus der Eigenschaft.  
+  
+-   Zum Entfernen einer bestimmten <xref:System.Windows.Media.Animation.AnimationClock> , aus einer Liste von Uhren verwenden die <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft der <xref:System.Windows.Media.Animation.AnimationClock> abgerufen eine <xref:System.Windows.Media.Animation.ClockController>, rufen Sie anschließend die <xref:System.Windows.Media.Animation.ClockController.Remove%2A> Methode der <xref:System.Windows.Media.Animation.ClockController>. Dies erfolgt in der Regel in der <xref:System.Windows.Media.Animation.Clock.Completed> -Ereignishandler für eine Uhr. Beachten Sie, dass nur Stammuhren von gesteuert werden, können eine <xref:System.Windows.Media.Animation.ClockController>; das <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft einer untergeordneten Uhr gibt `null`. Beachten Sie auch, dass die <xref:System.Windows.Media.Animation.Clock.Completed> Ereignis wird nicht aufgerufen, wenn die effektive Dauer der Uhr endlos ist.  In diesem Fall muss der Benutzer bestimmen beim Aufrufen <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+  
+ Dies betrifft hauptsächlich Animationen für Objekte, die eine lange Lebensdauer haben.  Wenn ein Objekt Garbage Collection durchgeführt wird, wird die Uhren werden auch getrennt, und Sammlung veralteter Objekte aufgenommen.  
+  
+ Weitere Informationen zu Uhr Objekten finden Sie unter [Animationen und zeitlichen Steuerung Systemübersicht](~/docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.BeginStoryboard.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des <see cref="T:System.Windows.Media.Animation.BeginStoryboard" />-Objekts ab oder legt ihn fest. Durch Benennen der <see cref="T:System.Windows.Media.Animation.BeginStoryboard" /> -Objekt, das <see cref="T:System.Windows.Media.Animation.Storyboard" /> gesteuert werden, nachdem dieser gestartet wird.</summary>
+        <value>Der Name des <see cref="T:System.Windows.Media.Animation.BeginStoryboard" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Anhalten der Lage, fortsetzen oder interaktiv steuern eine <xref:System.Windows.Media.Animation.Storyboard>, legen die <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> Eigenschaft seiner <xref:System.Windows.Media.Animation.BeginStoryboard> und verwenden eine <xref:System.Windows.Media.Animation.ControllableStoryboardAction> Objekt, z. B. <xref:System.Windows.Media.Animation.PauseStoryboard>, <xref:System.Windows.Media.Animation.ResumeStoryboard>, oder <xref:System.Windows.Media.Animation.StopStoryboard> auf diesen Namen zu verweisen. Wenn die <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> von <xref:System.Windows.Media.Animation.BeginStoryboard> ist nicht vorgegeben, die <xref:System.Windows.Media.Animation.Storyboard> können nicht interaktiv beeinflusst werden, nachdem es gestartet wird; außerdem, wenn die <xref:System.Windows.Media.Animation.Storyboard> endet oder wechselt in den Füllzeitraum, die die Animation Uhren verworfen werden. Finden Sie unter [wie: Verwenden von Ereignistriggern zur Steuerung einer Storyboard nach Beginn](~/docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md) für Weitere Informationen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Storyboard">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Storyboard Storyboard { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.Storyboard Storyboard" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.BeginStoryboard.Storyboard" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Storyboard</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Animation.Storyboard" /> , die von diesem <see cref="T:System.Windows.Media.Animation.BeginStoryboard" /> gestartet wird.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Animation.Storyboard" /> , die die <see cref="T:System.Windows.Media.Animation.BeginStoryboard" /> beginnt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Storyboard"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.BeginStoryboard.StoryboardProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoryboardProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StoryboardProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StoryboardProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.BeginStoryboard.StoryboardProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.BeginStoryboard.Storyboard" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

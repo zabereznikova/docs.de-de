@@ -1,0 +1,124 @@
+<Type Name="IBuildResults" FullName="Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults">
+  <TypeSignature Language="C#" Value="public interface IBuildResults" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBuildResults" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("586B842C-D9C7-43b8-84E4-9CFC3AF9F13B")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Ergebnisse der <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder" /> Buildvorgangs.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="ComponentFiles">
+      <MemberSignature Language="C#" Value="public string[] ComponentFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ComponentFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.ComponentFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Dateipfade für die kopierten Dateien des Komponenteninstallationsprogramms ab.</summary>
+        <value>Gibt ein Array von Zeichenfolgen zurück, die die Dateipfade der kopierten Dateien des Komponenteninstallationsprogramms enthalten.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KeyFile">
+      <MemberSignature Language="C#" Value="public string KeyFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.KeyFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Dateipfad zur generierten primären Bootstrapperdatei ab.</summary>
+        <value>Gibt eine Zeichenfolge zurück, die den Dateipfad zur generierten primären Bootstrapperdatei darstellt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Messages">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessage[] Messages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessage[] Messages" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.Messages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(4)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessage[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die von einem Bootstrapperbuild generierten Buildmeldungen ab.</summary>
+        <value>Gibt ein Array von <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessage" /> -Objekten zurück, die von einem Bootstrapperbuild generierten Buildmeldungen darstellen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Succeeded">
+      <MemberSignature Language="C#" Value="public bool Succeeded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Succeeded" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.Succeeded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Bootstrapperbuild erfolgreich war.</summary>
+        <value>Gibt einen boolescher Wert zurück, der angibt, ob der Bootstrapperbuild erfolgreich war. Gibt <see langword="true" /> , wenn der Bootstrapperbuild erfolgreich war, <see langword="false" /> Wenn nicht erfolgreich war.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

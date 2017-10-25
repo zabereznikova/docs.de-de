@@ -1,0 +1,84 @@
+<Type Name="LocalDataStoreSlot" FullName="System.LocalDataStoreSlot">
+  <TypeSignature Language="C#" Value="public sealed class LocalDataStoreSlot" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LocalDataStoreSlot extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.LocalDataStoreSlot" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Thread</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Kapselt einen Speicherslot zum Speichern lokaler Daten. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework stellt zwei Mechanismen für die Verwendung von lokalen Threadspeicher (TLS): threadbezogene statische Felder und Datenslots.  
+  
+-   Threadbezogene statische Felder sind `static` Felder (`Shared` Felder in Visual Basic) mit markiert sind, die <xref:System.ThreadStaticAttribute> Attribut. Sie bieten eine bessere Leistung als Datenslots, und aktivieren die typüberprüfung zur Kompilierzeit.  
+  
+-   Datenslots sind langsamer und umständlicher als threadbezogene statische Felder verwenden. Außerdem die Daten gespeichert wird, als Typ <xref:System.Object>, sodass Sie sie in den richtigen Typ umwandeln müssen, bevor Sie ihn verwenden. Allerdings können Sie Datenslots verwenden, wenn Sie nicht genügend Informationen zum Zeitpunkt der Kompilierung, statische Felder zuordnen verfügen.  
+  
+ Weitere Informationen zur Verwendung von TLS finden Sie unter [lokaler Threadspeicher: threadbezogene statische Felder und Datenslots](~/docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md).  
+  
+ Auf ähnliche Weise .NET Framework stellt zwei Mechanismen für die Verwendung von lokalen Speicher Kontext: Kontextbezogene statische Felder und Datenslots. Kontextbezogene statische Felder sind statische Felder, die mit markiert sind die <xref:System.ContextStaticAttribute> Attribut. Die vor-und Nachteile mit diesen beiden Mechanismen ähneln die vor-und Nachteile zwischen der Verwendung von threadbezogene statische Felder und Datenslots.  
+  
+ Die <xref:System.LocalDataStoreSlot> Struktur fungiert als lokaler Speichermechanismus, mit dem threads und Kontexte, threadspezifische und kontextspezifisch Daten bzw. zu speichern. Die common Language Runtime belegt eine Multi-Slot Datenarray-Speicher für die einzelnen Prozesse während der Erstellung. Der Thread oder Kontext ruft verschiedene Funktionen für einen Datenslot im Datenspeicher zuweisen, speichern und Abrufen von einem Daten-Wert im Slot und einen Datenslot für freien wiederverwenden, nachdem der Thread oder Kontext Objekt läuft ab.  
+  
+ Die Datenslots sind pro Thread oder Kontext eindeutig. Ihre Werte werden zwischen den Objekten Thread oder Kontext nicht freigegeben. Datenslots können über einen Namen oder Indexnummer zugeordnet werden.  
+  
+ Weitere Informationen zum Speichern von lokalen Daten finden Sie unter <xref:System.Threading.Thread> oder <xref:System.Runtime.Remoting.Contexts.Context>. Die <xref:System.LocalDataStoreSlot> Klasse wird mit den Methoden verwendet, z. B. <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType>, <xref:System.Runtime.Remoting.Contexts.Context.AllocateNamedDataSlot%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType>, und <xref:System.Runtime.Remoting.Contexts.Context.GetData%2A?displayProperty=nameWithType>; er verfügt über keine eigenen Methoden Sie verwenden müssen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~LocalDataStoreSlot ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.LocalDataStoreSlot.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt das Freigeben von Ressourcen und das Ausführen anderer Garbage Collector-Vorgänge sicher, wenn der Garbage Collector das <see cref="T:System.LocalDataStoreSlot" />-Objekt verarbeitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Garbage Collector ruft <xref:System.LocalDataStoreSlot.Finalize%2A> Wenn das aktuelle Objekt wird finalisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

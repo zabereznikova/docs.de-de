@@ -1,0 +1,181 @@
+<Type Name="GridViewDeleteEventArgs" FullName="System.Web.UI.WebControls.GridViewDeleteEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewDeleteEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewDeleteEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewDeleteEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.GridView.RowDeleting" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.GridView> -Steuerelement löst die <xref:System.Web.UI.WebControls.GridView.RowDeleting> Ereignis aus, wenn eine Schaltfläche "löschen", jedoch bevor geklickt wird die <xref:System.Web.UI.WebControls.GridView> Steuerelement werden die Datensätze gelöscht. (Eine Schaltfläche zum Löschen ist ein Schaltflächensteuerelement, dessen `CommandName`-Eigenschaft auf "Löschen" (Delete) festgelegt ist.) Sie können eine benutzerdefinierte Routine ausführen, wenn dieses Ereignis tritt auf, z. B. die Delete-Vorgang abgebrochen wird.  
+  
+ Ein <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs> Objekt an den Ereignishandler übergeben wird. Dadurch können Sie den Index der gelöschten Zeile ermitteln und um den Löschvorgang abzubrechen. Um den Löschvorgang abzubrechen, legen die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs> -Objekt `true`. Sie können auch Bearbeiten der <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> und <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values%2A> Sammlungen, bevor die Werte an die Datenquelle übergeben werden.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs> -Objekt, das an den Ereignishandler übergeben wird. Der Code bricht den Löschvorgang ab, wenn der Benutzer versucht, entfernen Sie den letzten Datensatz aus einem <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[GridViewRowDeleting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowDeleting/CS/gridviewrowdeleting.aspx#1)]
+ [!code-aspx-vb[GridViewRowDeleting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowDeleting/VB/gridviewrowdeleting.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewDeleteEventArgs (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewDeleteEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der Zeile, die die Schaltfläche "löschen" enthält, die das Ereignis ausgelöst hat.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.GridViewDeleteEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.RowIndex%2A>|Der Wert des `rowIndex`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch von Name/Wert-Paaren, die den Primärschlüssel der zu löschenden Zeile darstellen.</summary>
+        <value>Ein Wörterbuch, das Feld Name/Wert-Paare, die den Primärschlüssel der enthält zu löschenden Zeile darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Web.UI.WebControls.GridView.DataKeyNames%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.GridView> Steuerelement festgelegt ist, verwenden Sie die <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> Eigenschaft (Wörterbuch), um den Wert des Primärschlüssels oder der Schlüssel des zu löschenden Zeile abzurufen.  
+  
+> [!NOTE]
+>  Verwenden Sie zum Abrufen der Werte der Felder nicht schlüsselbezogene der <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> Wörterbuch automatisch durch die Name/Wert-Paare des Felds oder der in der angegebenen Felder ersetzt die <xref:System.Web.UI.WebControls.GridView.DataKeyNames%2A> Eigenschaft. Wenn mehrere Felder den primären Schlüssel bilden, wird ein separater Eintrag hinzugefügt, auf die <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> Wörterbuch für jede Schlüsselfeld.  
+  
+ Verwenden Sie den Namen eines Schlüsselfelds zu ermitteln, die <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> Eigenschaft eine <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> Objekt in der <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> Wörterbuch. Um den Wert eines Schlüsselfelds zu bestimmen, verwenden die <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values%2A> Eigenschaft, um die Werte der Schlüsselfelder für den zu löschenden Zeile abzurufen. Die Werte werden dann in eine Protokolldatei der gelöschten Datensätze geschrieben werden.  
+  
+ [!code-aspx-csharp[GridViewDeleteEventArgsValues#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewDeleteEventArgsValues/CS/gridviewdeleteeventargsvaluescs.aspx#1)]
+ [!code-aspx-vb[GridViewDeleteEventArgsValues#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewDeleteEventArgsValues/VB/gridviewdeleteeventargsvaluesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewDeleteEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index der gelöschten Zeile.</summary>
+        <value>Der nullbasierte Index des zu löschenden Zeile.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zeilenindex wird häufig verwendet, zum Abrufen der angegebenen Zeile aus der <xref:System.Web.UI.WebControls.GridView.Rows%2A> Auflistung von der <xref:System.Web.UI.WebControls.GridView> Steuerelement. Sie können dann die Eigenschaften der Zeile zugreifen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.RowIndex%2A> -Eigenschaft bestimmt den Index des zu löschenden Zeile.  
+  
+ [!code-aspx-csharp[GridViewDeleteEventArgsRowIndex#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewDeleteEventArgsRowIndex/CS/gridviewdeleteeventargsrowindexcs.aspx#1)]
+ [!code-aspx-vb[GridViewDeleteEventArgsRowIndex#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewDeleteEventArgsRowIndex/VB/gridviewdeleteeventargsrowindexvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch von Schlüsselfelder Name/Wert-Paare für die Zeile zu löschen.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> Objekt, das die Schlüsselfelder Name/Wert-Paare der zu löschenden Zeile enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values%2A> Eigenschaft wird automatisch mit dem Name/Wert-Paare von nichtschlüsselfelder für die Zeile aufgefüllt. Verwenden Sie zum Bestimmen der Feldname eines Eintrags der <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> Eigenschaft eine <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> Objekt in der <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values%2A> Wörterbuch. Um den Wert eines Eintrags zu ermitteln, verwenden die <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+> [!NOTE]
+>  Der primäre oder Primärschlüsselfelder sind in diesem Wörterbuch nicht enthalten. Verwenden Sie die Werte der Felder Primärschlüsselfelds für den Zugriff auf die <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values%2A> Eigenschaft, um die Werte der Felder keine Schlüsselspalte auf der zu löschenden Zeile abzurufen. Die Werte werden dann in eine Protokolldatei der gelöschten Datensätze geschrieben werden.  
+  
+ [!code-aspx-csharp[GridViewDeleteEventArgsValues#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewDeleteEventArgsValues/CS/gridviewdeleteeventargsvaluescs.aspx#1)]
+ [!code-aspx-vb[GridViewDeleteEventArgsValues#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewDeleteEventArgsValues/VB/gridviewdeleteeventargsvaluesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

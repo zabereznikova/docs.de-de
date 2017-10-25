@@ -1,0 +1,25 @@
+<Type Name="ProgressEventHandler" FullName="System.Management.ProgressEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ProgressEventHandler(object sender, ProgressEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProgressEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Management.ProgressEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Management.ProgressEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Instanz des Objekts, für das diese Methode aufgerufen werden soll.</param>
+    <param name="e">Die <see cref="T:System.Management.ProgressEventArgs" /> , der angibt, der die Ursache des Ereignisses aufgerufen wurde.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Management.ManagementOperationObserver.Progress" />-Ereignisses dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,48 @@
+<Type Name="IPartialSessionState" FullName="System.Web.SessionState.IPartialSessionState">
+  <TypeSignature Language="C#" Value="public interface IPartialSessionState" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPartialSessionState" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.IPartialSessionState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Bei Implementierung in einem Typ gibt eine Liste von NULL oder mehr Sitzungsschlüsseln, die angeben, um einen Sitzungsstatusanbieter die Sitzungszustand Elemente abgerufen werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Typ, der diese Schnittstelle implementiert, gibt eine ungleich Null für die generische Liste von Zeichenfolgen in die <xref:System.Web.SessionState.IPartialSessionState.PartialSessionStateKeys%2A> -Eigenschaft, die Liste zeigt einen Sitzungsstatusanbieter, dass der Anbieter nur die Sitzungszustandswerte abgerufen werden sollen, die in der Liste angegeben sind. Wenn Sie den Typ zurückgibt. eine `null` Wert für die <xref:System.Web.SessionState.IPartialSessionState.PartialSessionStateKeys%2A> -Eigenschaft, einen Sitzungsstatusanbieter sollten alle Sitzungszustandswerte abrufen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PartialSessionStateKeys">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; PartialSessionStateKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; PartialSessionStateKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.IPartialSessionState.PartialSessionStateKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Schlüssel, die sitzungsstatuswerte zugeordnet sind.</summary>
+        <value>Eine generische Liste von Zeichenfolgen, die als Schlüssel für Sitzungszustandswerte dienen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `null` Rückgabewert gibt an, einen Sitzungsstatusanbieter, dass der Anbieter alle Sitzungszustandswerte zurückgeben soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

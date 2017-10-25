@@ -1,0 +1,178 @@
+<Type Name="SendMessageContent" FullName="System.ServiceModel.Activities.SendMessageContent">
+  <TypeSignature Language="C#" Value="public sealed class SendMessageContent : System.ServiceModel.Activities.SendContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SendMessageContent extends System.ServiceModel.Activities.SendContent" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.SendMessageContent" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activities.SendContent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Message")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Klasse, die verwendet wird, um ein einzelnes Element (Meldung) an oder von einem Workflowdienst zu senden. Das Element kann ein integrierter Datentyp z. B. primitive Typen, <see cref="T:System.ServiceModel.Channels.Message" /> oder <see cref="T:System.Xml.Linq.XElement" /> sein; oder ein anwendungsdefinierter Datenvertrag, Nachrichtenvertrag oder XML serialisierbarer Typ.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Klasse verwenden, werden während des Transports serialisierte Meldungen entpackt, es sei denn, bei den Daten handelt es sich um einen Nachrichtenvertragstyp oder den Typ <xref:System.ServiceModel.Channels.Message>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie eine <xref:System.ServiceModel.Activities.SendMessageContent>-Instanz mit einer <xref:System.ServiceModel.Activities.Send>-Aktivität verwendet wird.  
+  
+ [!code-csharp[ContentBasedCorrelation#0](~/samples/snippets/csharp/VS_Snippets_CFX/contentbasedcorrelation/cs/client.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendMessageContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendMessageContent.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.SendMessageContent" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendMessageContent (System.Activities.InArgument message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.InArgument message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendMessageContent.#ctor(System.Activities.InArgument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.Activities.InArgument" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Daten, die gesendet werden sollen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.SendMessageContent" />-Klasse mit den angegebenen Daten, die gesendet werden sollen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[ContentBasedCorrelation#0](~/samples/snippets/csharp/VS_Snippets_CFX/contentbasedcorrelation/cs/client.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendMessageContent (System.Activities.InArgument message, Type declaredMessageType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.InArgument message, class System.Type declaredMessageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendMessageContent.#ctor(System.Activities.InArgument,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.Activities.InArgument" />
+        <Parameter Name="declaredMessageType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Daten, die gesendet werden sollen.</param>
+        <param name="declaredMessageType">Der Datentyp, der in der Dienstbeschreibung angezeigt wird. Es muss den gleichen Typ wie <c>Nachricht</c> oder einem Basistyp von <c>Nachricht</c>.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.SendMessageContent" />-Klasse mit der angegebenen Meldung und dem angegebenen Meldungstyp.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaredMessageType">
+      <MemberSignature Language="C#" Value="public Type DeclaredMessageType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclaredMessageType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendMessageContent.DeclaredMessageType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den deklarierten Nachrichtentyp ab bzw. legt ihn fest.</summary>
+        <value>Der deklarierte Nachrichtentyp.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Activities.SendMessageContent.DeclaredMessageType%2A>ist der Datentyp, der in der dienstbeschreibung und im WSDL angezeigt wird. Es ist sinnvoll, dass die Dienstbeschreibung den Basisklassentyp enthält, sodass verschiedene abgeleitete Klassen zur Laufzeit vom Dienst gesendet und empfangen werden können. <xref:System.ServiceModel.Activities.SendMessageContent.DeclaredMessageType%2A> muss entweder mit dem Argumenttyp der Meldungseigenschaft oder mit dem entsprechenden Basistyp übereinstimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public System.Activities.InArgument Message { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.InArgument Message" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendMessageContent.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zu sendenden Daten ab oder legt diese fest.</summary>
+        <value>Die Daten, die gesendet werden sollen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeDeclaredMessageType">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeDeclaredMessageType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeDeclaredMessageType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendMessageContent.ShouldSerializeDeclaredMessageType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="P:System.ServiceModel.Activities.SendMessageContent.DeclaredMessageType" />-Eigenschaft XAML-serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die Eigenschaft serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

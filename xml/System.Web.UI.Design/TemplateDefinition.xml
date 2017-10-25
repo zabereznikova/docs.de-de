@@ -1,0 +1,315 @@
+<Type Name="TemplateDefinition" FullName="System.Web.UI.Design.TemplateDefinition">
+  <TypeSignature Language="C#" Value="public class TemplateDefinition : System.Web.UI.Design.DesignerObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateDefinition extends System.Web.UI.Design.DesignerObject" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TemplateDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.DesignerObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften und Methoden, die einen Template-Element im eines Webserver-Steuerelements zur Entwurfszeit zu definieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.TemplateDefinition> -Klasse stellt eine Adapterklasse, die von geerbt werden kann und die für eine Steuerelement-Designer zu verwenden wie z. B. Bereitstellen von Unterstützung für Vorlagenbasierte Steuerelemente in einem Entwurfshost erweitert werden kann [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)]. Einem Entwurfshost verwendet, die Eigenschaften und Methoden von der <xref:System.Web.UI.Design.TemplateDefinition> Klasse, um zu ermöglichen, erstellen und bearbeiten eine Vorlage zur Entwurfszeit.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine benutzerdefinierte Klasse von abgeleitet der <xref:System.Web.UI.Design.ControlDesigner> Klasse. Diese Steuerelement-Designer unterstützt ein Steuerelement mit vier möglichen Vorlagen.  
+  
+ Um dies testen möchten, fügen Sie einen Verweis auf die Assembly "System.Design.dll", Kompilieren des Codes, und klicken Sie dann in einen Entwurf hosten, wie z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], betrachten Sie die Seite in der Entwurfsansicht. Wählen Sie das Steuerelement, klicken Sie auf die Liste der Aktionen zum Auswählen einer Vorlage zu ändern und dann verwenden Sie die Drag-and-Drop-Funktion, um die Steuerelemente in die Vorlage verschoben.  
+  
+ [!code-csharp[DesignerTemplateGroupSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerTemplateGroupSample/CS/TemplateGroupsSample.cs#1)]
+ [!code-vb[DesignerTemplateGroupSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.vb#1)]  
+[!code-aspx-vb[DesignerTemplateGroupSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateDefinition (System.Web.UI.Design.ControlDesigner designer, string name, object templatedObject, string templatePropertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.ControlDesigner designer, string name, object templatedObject, string templatePropertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateDefinition.#ctor(System.Web.UI.Design.ControlDesigner,System.String,System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Web.UI.Design.ControlDesigner" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="templatedObject" Type="System.Object" />
+        <Parameter Name="templatePropertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="designer">Das übergeordnete Element <see cref="T:System.Web.UI.Design.ControlDesigner" /> Objekt.</param>
+        <param name="name">Der Name der Vorlage.</param>
+        <param name="templatedObject">Das Objekt, das die Vorlage enthält.</param>
+        <param name="templatePropertyName">Der Eigenschaftenname, der dieser Vorlage in der **Eigenschaften** Liste im Entwurfshost.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.TemplateDefinition" /> -Klasse unter Verwendung der bereitgestellten Designer Vorlagennamen, Vorlage und Eigenschaftsnamen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="designer" />ist <see langword="null" />,  
+  
+ - oder -   
+  
+ <paramref name="templatedObject" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateDefinition (System.Web.UI.Design.ControlDesigner designer, string name, object templatedObject, string templatePropertyName, bool serverControlsOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.ControlDesigner designer, string name, object templatedObject, string templatePropertyName, bool serverControlsOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateDefinition.#ctor(System.Web.UI.Design.ControlDesigner,System.String,System.Object,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Web.UI.Design.ControlDesigner" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="templatedObject" Type="System.Object" />
+        <Parameter Name="templatePropertyName" Type="System.String" />
+        <Parameter Name="serverControlsOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="designer">Das übergeordnete Element <see cref="T:System.Web.UI.Design.ControlDesigner" /> Objekt.</param>
+        <param name="name">Der Name der Vorlage.</param>
+        <param name="templatedObject">Das Objekt, das die Vorlage enthält.</param>
+        <param name="templatePropertyName">Der Eigenschaftenname, der dieser Vorlage in der **Eigenschaften** Liste im Entwurfshost.</param>
+        <param name="serverControlsOnly">Ein boolescher Wert, der angibt, ob der Inhalt der Vorlage nur Webserversteuerelemente zulassen sollte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.TemplateDefinition" /> -Klasse unter Verwendung der bereitgestellten Designer, Vorlagennamen, Vorlage, Eigenschaftenname und, ob die Vorlage Inhalte Webserversteuerelemente beschränkt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="designer" />ist <see langword="null" />,  
+  
+ - oder -   
+  
+ <paramref name="templatedObject" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateDefinition (System.Web.UI.Design.ControlDesigner designer, string name, object templatedObject, string templatePropertyName, System.Web.UI.WebControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.ControlDesigner designer, string name, object templatedObject, string templatePropertyName, class System.Web.UI.WebControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateDefinition.#ctor(System.Web.UI.Design.ControlDesigner,System.String,System.Object,System.String,System.Web.UI.WebControls.Style)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Web.UI.Design.ControlDesigner" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="templatedObject" Type="System.Object" />
+        <Parameter Name="templatePropertyName" Type="System.String" />
+        <Parameter Name="style" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="designer">Das übergeordnete Element <see cref="T:System.Web.UI.Design.ControlDesigner" /> Objekt.</param>
+        <param name="name">Der Name der Vorlage.</param>
+        <param name="templatedObject">Das Objekt, das die Vorlage enthält.</param>
+        <param name="templatePropertyName">Der Eigenschaftenname, der dieser Vorlage in der **Eigenschaften** Liste im Entwurfshost.</param>
+        <param name="style">Ein <see cref="T:System.Web.UI.WebControls.Style" /> -Objekt, um jede Vorlage angewendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.TemplateDefinition" /> -Klasse unter Verwendung der bereitgestellten Designer, den Vorlagennamen, die Vorlage, die Eigenschaftsnamen und <see cref="T:System.Web.UI.WebControls.Style" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="designer" />ist <see langword="null" />,  
+  
+ - oder -   
+  
+ <paramref name="templatedObject" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateDefinition (System.Web.UI.Design.ControlDesigner designer, string name, object templatedObject, string templatePropertyName, System.Web.UI.WebControls.Style style, bool serverControlsOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.ControlDesigner designer, string name, object templatedObject, string templatePropertyName, class System.Web.UI.WebControls.Style style, bool serverControlsOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateDefinition.#ctor(System.Web.UI.Design.ControlDesigner,System.String,System.Object,System.String,System.Web.UI.WebControls.Style,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Web.UI.Design.ControlDesigner" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="templatedObject" Type="System.Object" />
+        <Parameter Name="templatePropertyName" Type="System.String" />
+        <Parameter Name="style" Type="System.Web.UI.WebControls.Style" />
+        <Parameter Name="serverControlsOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="designer">Das übergeordnete Element <see cref="T:System.Web.UI.Design.ControlDesigner" /> Objekt.</param>
+        <param name="name">Der Name der Vorlage.</param>
+        <param name="templatedObject">Das Objekt, das die Vorlage enthält.</param>
+        <param name="templatePropertyName">Der Eigenschaftenname, der dieser Vorlage in der **Eigenschaften** Liste im Entwurfshost.</param>
+        <param name="style">Ein <see cref="T:System.Web.UI.WebControls.Style" /> -Objekt, um jede Vorlage angewendet.</param>
+        <param name="serverControlsOnly">Ein boolescher Wert, der angibt, ob die Vorlage Inhalte Webserversteuerelemente beschränken soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.TemplateDefinition" /> -Klasse unter Verwendung der bereitgestellten Designer, den Vorlagennamen, die Vorlage, die Name-Eigenschaft, <see cref="T:System.Web.UI.WebControls.Style" /> Objekt und, ob Inhalt Webserversteuerelemente beschränkt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="designer" />ist <see langword="null" />,  
+  
+ - oder -   
+  
+ <paramref name="templatedObject" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowEditing">
+      <MemberSignature Language="C#" Value="public virtual bool AllowEditing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowEditing" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateDefinition.AllowEditing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Vorlage bearbeiten ihrer Inhalte aktiviert werden sollte.</summary>
+        <value>
+          <see langword="true" />Wenn die Bearbeitung zulässig ist andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um den Standardeintrag zu ändern, müssen abgeleitete Klassen überschreiben die <xref:System.Web.UI.Design.TemplateDefinition.AllowEditing%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public virtual string Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateDefinition.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das HTML-Markup, das den Inhalt der Vorlage darstellt.</summary>
+        <value>HTML-Markup für den Inhalt der Vorlage.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerControlsOnly">
+      <MemberSignature Language="C#" Value="public bool ServerControlsOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ServerControlsOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateDefinition.ServerControlsOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Vorlage Inhalt auf Webserversteuerelemente, wie er im festgelegt beschränken soll die <see cref="Overload:System.Web.UI.Design.TemplateDefinition.#ctor" /> Konstruktor. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>
+          <see langword="true" />Wenn Inhalte auf Webserversteuerelemente beschränkt sind. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style Style { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style Style" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateDefinition.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stil, die als Gruppe in der Vorlage angewendet werden sollte die <see cref="Overload:System.Web.UI.Design.TemplateDefinition.#ctor" /> Konstruktor. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.Style" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl die <xref:System.Web.UI.WebControls.Style> Eigenschaft ist schreibgeschützt, die Eigenschaften der <xref:System.Web.UI.WebControls.Style> kann festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDataBinding">
+      <MemberSignature Language="C#" Value="public bool SupportsDataBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDataBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateDefinition.SupportsDataBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Vorlage für die Datenbindung unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Vorlage die Datenbindung unterstützt. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplatedObject">
+      <MemberSignature Language="C#" Value="public object TemplatedObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TemplatedObject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateDefinition.TemplatedObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Komponente, in der die Vorlage befindet. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Die Komponente wird festgelegt, wenn dies <see cref="T:System.Web.UI.Design.TemplateDefinition" /> erstellt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl dies <xref:System.Web.UI.Design.TemplateDefinition.TemplatedObject%2A> Eigenschaft schreibgeschützt ist, können seine Eigenschaften festgelegt werden, und wenn <xref:System.Web.UI.Design.TemplateDefinition.AllowEditing%2A> ist "true", der Inhalt weder bearbeitet werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplatePropertyName">
+      <MemberSignature Language="C#" Value="public string TemplatePropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TemplatePropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateDefinition.TemplatePropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Eigenschaftennamen für die Vorlage, die der Entwurfshost im Eigenschaftenraster angezeigt werden soll.</summary>
+        <value>Der Name der Vorlage sollte angezeigt werden, der **Eigenschaften** Liste der Entwurfshost.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

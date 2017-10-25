@@ -1,0 +1,40 @@
+<Type Name="DataGridViewRowPostPaintEventHandler" FullName="System.Windows.Forms.DataGridViewRowPostPaintEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DataGridViewRowPostPaintEventHandler(object sender, DataGridViewRowPostPaintEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewRowPostPaintEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewRowPostPaintEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.DataGridViewRowPostPaintEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.DataGridViewRowPostPaintEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Windows.Forms.DataGridView.RowPostPaint" />-Ereignisses eines <see cref="T:System.Windows.Forms.DataGridView" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Windows.Forms.DataGridViewRowPostPaintEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine <xref:System.Windows.Forms.DataGridViewRowPostPaintEventHandler> Delegat, der Textinhalt zeichnet, die die gesamte Zeile unter den normalen Zellwerten umfasst. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [wie: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#30)]
+ [!code-vb[System.Windows.Forms.DataGridViewRowPainting#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#30)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

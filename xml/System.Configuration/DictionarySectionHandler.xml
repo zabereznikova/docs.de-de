@@ -1,0 +1,134 @@
+<Type Name="DictionarySectionHandler" FullName="System.Configuration.DictionarySectionHandler">
+  <TypeSignature Language="C#" Value="public class DictionarySectionHandler : System.Configuration.IConfigurationSectionHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DictionarySectionHandler extends System.Object implements class System.Configuration.IConfigurationSectionHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.DictionarySectionHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Configuration.IConfigurationSectionHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Konfigurationsangaben Schlüssel/Wert-Paar aus einem Konfigurationsabschnitt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse implementiert die `IConfigSectionHandler`-Schnittstelle. Die <xref:System.Configuration.DictionarySectionHandler> definiert Regeln für die Bearbeitung von XML-Konfigurationsabschnitte.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DictionarySectionHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.DictionarySectionHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.DictionarySectionHandler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public virtual object Create (object parent, object context, System.Xml.XmlNode section);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Create(object parent, object context, class System.Xml.XmlNode section) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.DictionarySectionHandler.Create(System.Object,System.Object,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Object" />
+        <Parameter Name="context" Type="System.Object" />
+        <Parameter Name="section" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Übergeordnetes Objekt.</param>
+        <param name="context">Konfigurationskontextobjekt.</param>
+        <param name="section">Abschnitts-XML-Knoten.</param>
+        <summary>Erstellt einen neuen Konfigurationshandler und fügt es der Abschnitt Handlerauflistung basierend auf den angegebenen Parametern.</summary>
+        <returns>Ein Konfigurationsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `parent` -Objektparameter fungiert als die Konfigurationseinstellungen in den entsprechenden übergeordneten-Konfigurationsabschnitt. Die `context` -Objektparameter ist der virtuelle Pfad für die die Konfigurationsabschnittshandler Konfigurationswerte berechnet. Normalerweise dieser Parameter ist reserviert und ist `null`.  Die `section` Parameter ist der <xref:System.Xml.XmlNode> , enthält die Konfigurationsinformationen behandelt werden. Die `section` Parameter bietet direkten Zugriff auf den XML-Inhalt des Konfigurationsabschnitts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyAttributeName">
+      <MemberSignature Language="C#" Value="protected virtual string KeyAttributeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyAttributeName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.DictionarySectionHandler.KeyAttributeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des XML-Attribut als Schlüssel im Schlüssel/Wert-Paar verwenden.</summary>
+        <value>Ein Zeichenfolgenwert, der den Namen des Schlüsselattributs enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAttributeName">
+      <MemberSignature Language="C#" Value="protected virtual string ValueAttributeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValueAttributeName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.DictionarySectionHandler.ValueAttributeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des XML-Attribut als der Wert im Schlüssel/Wert-Paar verwendet.</summary>
+        <value>Ein Zeichenfolgenwert, der den Namen des Attributs enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

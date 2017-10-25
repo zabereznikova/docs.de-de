@@ -1,0 +1,161 @@
+<Type Name="TrustVersion" FullName="System.ServiceModel.Security.TrustVersion">
+  <TypeSignature Language="C#" Value="public abstract class TrustVersion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract TrustVersion extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.TrustVersion" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Security</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält den Satz unterstützter WS-Trust-Versionen. Dies ist eine abstrakte Klasse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TrustVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.TrustVersion.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.TrustVersion Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.TrustVersion Default" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.TrustVersion.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.TrustVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardversion an.</summary>
+        <value>Die Standardversion.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryString Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDictionaryString Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.TrustVersion.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace für diese Vertrauensstellung-Version ab.</summary>
+        <value>Der Namespace für diese Trust-Version.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryString Prefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDictionaryString Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.TrustVersion.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Präfix ab.</summary>
+        <value>Das Präfix.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSTrust13">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.TrustVersion WSTrust13 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.TrustVersion WSTrust13" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.TrustVersion.WSTrust13" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.TrustVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version 1.3 der WS-Trust ab.</summary>
+        <value>Die Version 1.3 der WS-Trust.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSTrustFeb2005">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.TrustVersion WSTrustFeb2005 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.TrustVersion WSTrustFeb2005" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.TrustVersion.WSTrustFeb2005" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.TrustVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Februar-2005-Version von WS-Trust ab.</summary>
+        <value>Die Version vom Februar 2005 des WS-Trust.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1376 @@
+<Type Name="PerformanceCounterCategory" FullName="System.Diagnostics.PerformanceCounterCategory">
+  <TypeSignature Language="C#" Value="public sealed class PerformanceCounterCategory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PerformanceCounterCategory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceCounterCategory" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Leistungsobjekt, die eine Kategorie der Leistungsindikatoren definiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Erstellen oder Löschen eines Leistungsindikators erfordert Synchronisierung des zugrunde liegenden Codes über einen benannten Mutex. Wenn eine Anwendung mit weit reichenden Berechtigungen den benannten Mutex gesperrt wurde, versucht, erstellen oder Löschen einen Leistungsindikator bewirkt, dass die Anwendung nicht mehr reagiert, bis die Sperre aufgehoben wird. Um dieses Problem zu vermeiden, gewähren Sie niemals <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> Berechtigung an nicht vertrauenswürdigen Code. Darüber hinaus <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> Berechtigung potenziell ermöglicht anderen Berechtigungen zu umgehen und sollte nur für hoch vertrauenswürdigen Code erteilt werden.  
+  
+ Die <xref:System.Diagnostics.PerformanceCounterCategory> Instanz <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> Eigenschaft wird im Feld Leistungsobjekt "" der Anwendung Leistungsanzeige Indikator hinzufügen (Dialogfeld) angezeigt.  
+  
+ Die <xref:System.Diagnostics.PerformanceCounterCategory> -Klasse stellt mehrere Methoden für die Interaktion mit Indikatoren und Kategorien auf dem Computer. Die <xref:System.Diagnostics.PerformanceCounterCategory.Create%2A> Methoden ermöglichen es Ihnen, benutzerdefinierte Kategorien definieren. Die <xref:System.Diagnostics.PerformanceCounterCategory.Delete%2A> Methode bietet eine Möglichkeit, Kategorien vom Computer entfernt werden. Die <xref:System.Diagnostics.PerformanceCounterCategory.GetCategories%2A> Methode können Sie zum Anzeigen der Liste der Kategorien, während <xref:System.Diagnostics.PerformanceCounterCategory.ReadCategory%2A> Ruft alle-Indikator und-Instanz Daten, die einer Kategorie zugeordnet.  
+  
+ Ein Leistungsindikator veröffentlicht Leistungsdaten zu einer Anwendung. Kategorien umfassen die physischen Komponenten (z. B. Prozessoren, Datenträger und Speicher) und Systemobjekte (z. B. Prozesse und Threads). Systemleistungsindikatoren, die auf das gleiche Leistungsobjekt beziehen werden in einer Kategorie gruppiert, die ihre allgemeine Fokus angibt. Beim Erstellen einer Instanz von der <xref:System.Diagnostics.PerformanceCounter> -Klasse, geben Sie zuerst die Kategorie mit dem die Komponente interagiert, und wählen Sie dann einen Leistungsindikator aus dieser Kategorie.  
+  
+ Beispielsweise ist ein Windows-Leistungsindikator-Kategorienamen die Arbeitsspeicher-Kategorie. Systemleistungsindikatoren in dieser Kategorie verfolgen Speicherdaten, z. B. die Anzahl der Bytes, die verfügbar sind und die Anzahl der Bytes, die zwischengespeichert. Wenn Sie mit der Bytes, die in der Anwendung zwischengespeichert arbeiten möchten, erstellen Sie eine Instanz von der <xref:System.Diagnostics.PerformanceCounter> Komponente, verbinden Sie ihn mit der Kategorie Speicher, und wählen Sie dann den entsprechenden Zähler (in diesem Fall Cachebytes) aus dieser Kategorie.  
+  
+ Obwohl Ihr System eine Vielzahl weiterer Indikatorkategorien verfügbar ist, sind die Kategorien, denen Sie wahrscheinlich am häufigsten arbeiten, Cache, Speicher, Objekte, Physikalischer Datenträger, Prozessor, Server, System und Thread-Kategorien.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.PerformanceCounter.RemoveInstance%2A> Methode in der <xref:System.Diagnostics.PerformanceCounter> Klasse gibt den Zähler frei, und wenn die Wiederverwendung-Option für diese Kategorie ausgewählt ist, wird die Instanz des Leistungsindikators wiederverwendet werden. Dies kann eine Racebedingung verursachen, wenn ein anderer Prozess oder sogar für einen anderen Teil des Codes versucht, auf die Leistungsindikatoreninstanz zu schreiben.  
+  
+> [!NOTE]
+>  Es wird dringend empfohlen, dass neue Leistungsindikatorkategorien erstellt werden, während der Installation der Anwendung, nicht während der Ausführung der Anwendung. Dadurch wird die Zeit für das Betriebssystem, um die Liste der registrierten Leistungsindikatorkategorien zu aktualisieren. Wenn die Liste nicht aktualisiert worden sind, schlägt der Versuch, verwenden Sie die Kategorie fehl.  
+  
+> [!NOTE]
+>  Leistungsindikatorkategorien installiert, mit der [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] separaten freigegebenen Arbeitsspeicher mit jeder eine eigene Speicherkapazität Leistungsindikatorkategorie verwenden. Sie können die Größe des separater freigegebener Arbeitsspeicher angeben, indem Sie einen DWORD-Wert mit dem Namen FileMappingSize im Registrierungsschlüssel HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<Kategorienamen >*\ Die Leistung. Der FileMappingSize-Wert wird auf die freigegebene Speichergröße der Kategorie festgelegt. Die Standardgröße beträgt, Dezimal 131072. Wenn der FileMappingSize-Wert nicht vorhanden ist, ist die `fileMappingSize` -Attributwert für das `performanceCounters` in der Datei "Machine.config" angegebene Element verwendet wird, was zu zusätzlichem Aufwand für die Verarbeitung der Konfigurationsdatei. Sie können für den Start der Anwendung verbessert die Leistung durch Festlegen der Größe der Zuordnung in der Registrierung mit sich bringen. Weitere Informationen zur Größe Zuordnung finden Sie unter [ &lt;PerformanceCounters&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob eine <xref:System.Diagnostics.PerformanceCounter> und seine <xref:System.Diagnostics.PerformanceCounterCategory> vorhanden, auf dem lokalen Computer oder auf einem anderen Computer. Wenn diese Objekte nicht auf dem lokalen Computer vorhanden sind, erstellt das Beispiel optional. Er verwendet die <xref:System.Diagnostics.PerformanceCounterCategory.Exists%2A> Methode, um zu bestimmen, ob die <xref:System.Diagnostics.PerformanceCounterCategory> vorhanden ist.  Wenn die <xref:System.Diagnostics.PerformanceCounterCategory> ist nicht vorhanden und keine Indikatorname angegeben ist oder wenn der Computer auf einem Remotecomputer befindet, beendet das Beispiel.  
+  
+ Wenn eine <xref:System.Diagnostics.PerformanceCounter> Name angegeben ist, im Beispiel wird die <xref:System.Diagnostics.PerformanceCounterCategory.CounterExists%2A> Methode und das Ergebnis für den Benutzer angezeigt. Wenn die <xref:System.Diagnostics.PerformanceCounter> ist nicht vorhanden, der Benutzer kann löschen und Neuerstellen der <xref:System.Diagnostics.PerformanceCounterCategory> mit dem neuen <xref:System.Diagnostics.PerformanceCounter>. Wenn der Benutzer der Fall ist, die Kategorie ist mit gelöscht die <xref:System.Diagnostics.PerformanceCounterCategory.Delete%2A> Methode.  
+  
+ Wenn angefordert, im Beispiel wird nun erstellt das neue <xref:System.Diagnostics.PerformanceCounterCategory> und <xref:System.Diagnostics.PerformanceCounter> mithilfe der <xref:System.Diagnostics.PerformanceCounterCategory.Create%2A> Methode. Wenn ein Instanzname angegeben wird, wird im Beispiel wird die <xref:System.Diagnostics.PerformanceCounterCategory.InstanceExists%2A> Methode und das Ergebnis wird angezeigt.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.Class#27](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.Class/CS/perfcountercatcreateexist.cs#27)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.Class#27](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.Class/VB/perfcountercatcreateexist.vb#27)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounterCategory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> -Klasse bewirkt, dass die <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> Eigenschaft leer, und legt die <see cref="P:System.Diagnostics.PerformanceCounterCategory.MachineName" /> Eigenschaft auf dem lokalen Computer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> Eigenschaft muss festgelegt werden, bevor dies zuordnen <xref:System.Diagnostics.PerformanceCounterCategory> -Instanz mit dem Leistungsobjekt aus, das auf dem Server. Andernfalls wird eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird akzeptiert eine <xref:System.Diagnostics.PerformanceCounterCategory> Namen und einen Computernamen über die Befehlszeile.  Erstellt eine <xref:System.Diagnostics.PerformanceCounterCategory> verwenden die Konstruktorüberladung, die für die Anzahl von Parametern angegeben, dann werden die Eigenschaften angezeigt.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfcountercatctor.cs#4)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatctor.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounterCategory (string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name der Leistungsindikatorkategorie oder Leistungsobjekt mit dem Verknüpfen <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> Instanz.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> Klasse, legt die <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> -Eigenschaft auf den angegebenen Wert und legt die <see cref="P:System.Diagnostics.PerformanceCounterCategory.MachineName" /> Eigenschaft auf dem lokalen Computer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird akzeptiert eine <xref:System.Diagnostics.PerformanceCounterCategory> Namen und einen Computernamen über die Befehlszeile. Erstellt eine <xref:System.Diagnostics.PerformanceCounterCategory> verwenden die Konstruktorüberladung, die für die Anzahl von Parametern, die bereitgestellt wird, geeignet ist dann zeigt ihre Eigenschaften.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfcountercatctor.cs#4)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatctor.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="categoryName" /> ist eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="categoryName" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Lesen von Informationen zu Auftragskategorien, z. B. den Namen der Kategorie. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounterCategory (string categoryName, string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string categoryName, string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name der Leistungsindikatorkategorie oder Leistungsobjekt mit dem Verknüpfen <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> Instanz.</param>
+        <param name="machineName">Der Computer, auf dem die Leistungsindikatorkategorie und die zugeordneten Zähler vorhanden sind.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> -Klasse und legt die <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> und <see cref="P:System.Diagnostics.PerformanceCounterCategory.MachineName" /> Eigenschaften auf die angegebenen Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird akzeptiert eine <xref:System.Diagnostics.PerformanceCounterCategory> Namen und einen Computernamen über die Befehlszeile. Erstellt eine <xref:System.Diagnostics.PerformanceCounterCategory> verwenden die Konstruktorüberladung, die für die Anzahl von Parametern, die bereitgestellt wird, geeignet ist dann zeigt ihre Eigenschaften.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfcountercatctor.cs#4)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatctor.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="categoryName" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Die <paramref name="machineName" /> Syntax ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="categoryName" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Lesen von Informationen zu Auftragskategorien, z. B. den Namen für Computer und Kategorie. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryHelp">
+      <MemberSignature Language="C#" Value="public string CategoryHelp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryHelp" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterCategory.CategoryHelp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kategorie Hilfetext ab.</summary>
+        <value>Eine Beschreibung des Leistungsobjekts, mit denen dieser Kategorie gemessen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Diagnostics.PerformanceCounterCategory> mit der <xref:System.Diagnostics.PerformanceCounterCategory.%23ctor>. Er fordert vom Benutzer die <xref:System.Diagnostics.PerformanceCounterCategory> und Computernamen legt dann die <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> und <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A> Eigenschaften aus den eingegebenen Werten. Es zeigt dann die Werte der <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A>, und <xref:System.Diagnostics.PerformanceCounterCategory.CategoryHelp%2A> Eigenschaften, oder es wird eine Fehlermeldung angezeigt, wenn die <xref:System.Diagnostics.PerformanceCounterCategory> kann nicht zugegriffen werden.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfCounterCatProps.cs#8)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatprops.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" />-Eigenschaft ist <see langword="null" />. Der Kategoriename muss vor dem Abrufen von Hilfe für die Kategorie festgelegt werden.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryName">
+      <MemberSignature Language="C#" Value="public string CategoryName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Leistungsobjekts, die dieser Kategorie definiert.</summary>
+        <value>Der Name der Leistungsindikatorkategorie oder Leistungsobjekt mit dem Verknüpfen <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Diagnostics.PerformanceCounterCategory> mit der <xref:System.Diagnostics.PerformanceCounterCategory.%23ctor>. Er fordert vom Benutzer die <xref:System.Diagnostics.PerformanceCounterCategory> und Computernamen legt dann die <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> und <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A> Eigenschaften aus den eingegebenen Werten. Es zeigt dann die Werte der <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A>, und <xref:System.Diagnostics.PerformanceCounterCategory.CategoryHelp%2A> Eigenschaften, oder es wird eine Fehlermeldung angezeigt, wenn die <xref:System.Diagnostics.PerformanceCounterCategory> kann nicht zugegriffen werden.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfCounterCatProps.cs#8)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatprops.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> ist eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.ArgumentNullException"><see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounterCategoryType CategoryType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.PerformanceCounterCategoryType CategoryType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterCategory.CategoryType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Leistungsindikatorkategorie ab.</summary>
+        <value>Einer der <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.PerformanceCounterCategory.CategoryType%2A> Eigenschaft gibt an, ob die <xref:System.Diagnostics.PerformanceCounterCategory> Objekt kann mehrere Instanzen aufweisen. Die möglichen Werte sind <xref:System.Diagnostics.PerformanceCounterCategoryType.MultiInstance>, <xref:System.Diagnostics.PerformanceCounterCategoryType.SingleInstance>, oder <xref:System.Diagnostics.PerformanceCounterCategoryType.Unknown>.  
+  
+ Es gibt zwei Arten von Leistungsindikatorkategorien: Einzelinstanz- und mit mehreren Instanzen. Standardmäßig ist eine Kategorie Einzelinstanz-auf, wenn es erstellt wird und mit mehreren Instanzen wird, wenn eine andere Instanz hinzugefügt wird. Kategorien werden erstellt, wenn eine Anwendung wird eingerichtet, und Instanzen zur Laufzeit hinzugefügt werden. In der .NET Framework-Versionen 1.0 und 1.1 ist es nicht notwendig, wissen, ob eine Leistungsindikatorkategorie mit mehreren Instanzen handelt oder Einzelinstanz. In der [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]die <xref:System.Diagnostics.PerformanceCounterCategoryType> Enumeration wird verwendet, um anzugeben, ob ein Leistungsindikator mehrere Instanzen haben kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterExists">
+      <MemberSignature Language="C#" Value="public bool CounterExists (string counterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CounterExists(string counterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.CounterExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="counterName">Der Name des Leistungsindikators, der gesucht werden soll.</param>
+        <summary>Bestimmt, ob der angegebene Leistungsindikator für diese Kategorie registriert wurde dem ersichtlich wird die <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> und <see cref="P:System.Diagnostics.PerformanceCounterCategory.MachineName" /> Eigenschaften.</summary>
+        <returns>
+          <see langword="true" />Wenn der Zähler in der Kategorie registriert ist, die von angegeben wird die <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> und <see cref="P:System.Diagnostics.PerformanceCounterCategory.MachineName" /> Eigenschaften ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen festlegen, die <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> Eigenschaft vor dem Aufrufen dieser Methode. Andernfalls wird eine Ausnahme ausgelöst.  
+  
+ Wenn Sie nicht festgelegt haben die <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A> -Eigenschaft, diese Methode verwendet den lokalen Computer (".").  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob ein <xref:System.Diagnostics.PerformanceCounter> vorhanden ist. Er ruft ein Kategoriename, Indikatorname und Computernamen über die Befehlszeile, wenn sie angegeben sind. Erstellt eine <xref:System.Diagnostics.PerformanceCounterCategory> Objekt mit dem entsprechenden <xref:System.Diagnostics.PerformanceCounterCategory.%23ctor%2A>. Es verwendet dann die <xref:System.Diagnostics.PerformanceCounterCategory.CounterExists%28System.String%29> Methode, um zu bestimmen, ob das angegebene <xref:System.Diagnostics.PerformanceCounter> vorhanden ist, und informiert den Benutzer.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.ExistMembers#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/CS/perfcountercatobjexists.cs#4)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.ExistMembers#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/VB/perfcountercatobjcountexists.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="counterName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> Eigenschaft nicht festgelegt wurde.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterExists">
+      <MemberSignature Language="C#" Value="public static bool CounterExists (string counterName, string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CounterExists(string counterName, string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.CounterExists(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="counterName">Der Name des Leistungsindikators, der gesucht werden soll.</param>
+        <param name="categoryName">Der Name der Leistungsindikatorkategorie oder Leistungsobjekt "", der der angegebenen Leistungsindikator zugeordnet ist.</param>
+        <summary>Bestimmt, ob der angegebene Leistungsindikator in der angegebenen Kategorie auf dem lokalen Computer registriert ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der Zähler in der angegebenen Kategorie auf dem lokalen Computer registriert ist andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob ein <xref:System.Diagnostics.PerformanceCounter> vorhanden ist. Er ruft ein Kategoriename, Indikatorname und Computernamen über die Befehlszeile, wenn sie angegeben sind. Überladungen der statischen verwendet die <xref:System.Diagnostics.PerformanceCounterCategory.CounterExists%2A> Methode, um zu bestimmen, ob das angegebene <xref:System.Diagnostics.PerformanceCounter> Name vorhanden ist, der <xref:System.Diagnostics.PerformanceCounterCategory>. Die Überladung ausgewählt ist, basierend auf, ob ein Computername bereitgestellt wird.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.ExistMembers#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/CS/perfcountercatstatcounterexists.cs#8)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.ExistMembers#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/VB/perfcountercatstatcountexists.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="categoryName" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="counterName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="categoryName" /> ist eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.InvalidOperationException">Der Kategoriename ist nicht vorhanden.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterExists">
+      <MemberSignature Language="C#" Value="public static bool CounterExists (string counterName, string categoryName, string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CounterExists(string counterName, string categoryName, string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.CounterExists(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="counterName">Der Name des Leistungsindikators, der gesucht werden soll.</param>
+        <param name="categoryName">Der Name der Leistungsindikatorkategorie oder Leistungsobjekt "", der der angegebenen Leistungsindikator zugeordnet ist.</param>
+        <param name="machineName">Der Name des Computers, auf dem die Leistungsindikatorkategorie und die zugeordneten Zähler vorhanden sind.</param>
+        <summary>Bestimmt, ob der angegebene Leistungsindikator in der angegebenen Kategorie auf einem Remotecomputer registriert ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der Zähler in der angegebenen Kategorie auf dem angegebenen Computer registriert ist andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob ein <xref:System.Diagnostics.PerformanceCounter> vorhanden ist. Er ruft ein Kategoriename, Indikatorname und Computernamen über die Befehlszeile, wenn sie angegeben sind. Überladungen der statischen verwendet die <xref:System.Diagnostics.PerformanceCounterCategory.CounterExists%2A> Methode, um zu bestimmen, ob das angegebene <xref:System.Diagnostics.PerformanceCounter> Name vorhanden ist, der <xref:System.Diagnostics.PerformanceCounterCategory>. Die Überladung ausgewählt ist, basierend auf, ob ein Computername bereitgestellt wird.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.ExistMembers#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/CS/perfcountercatstatcounterexists.cs#8)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.ExistMembers#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/VB/perfcountercatstatcountexists.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="categoryName" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="counterName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="categoryName" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="machineName" /> ist ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Kategoriename ist nicht vorhanden.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.PerformanceCounterCategory Create (string categoryName, string categoryHelp, System.Diagnostics.CounterCreationDataCollection counterData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.PerformanceCounterCategory Create(string categoryName, string categoryHelp, class System.Diagnostics.CounterCreationDataCollection counterData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Create(System.String,System.String,System.Diagnostics.CounterCreationDataCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use another overload that uses PerformanceCounterCategoryType instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="categoryHelp" Type="System.String" />
+        <Parameter Name="counterData" Type="System.Diagnostics.CounterCreationDataCollection" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name des benutzerdefinierten Leistungsindikator-Kategorienamen zu erstellen und registrieren Sie mit dem System.</param>
+        <param name="categoryHelp">Eine Beschreibung der benutzerdefinierten Kategorie.</param>
+        <param name="counterData">Ein <see cref="T:System.Diagnostics.CounterCreationDataCollection" /> , die angibt, der Leistungsindikatoren aus, die als Teil der neuen Kategorie zu erstellen.</param>
+        <summary>Registriert die benutzerdefinierte Leistungsindikatorkategorie, die die angegebenen Leistungsindikatoren auf dem lokalen Computer enthält.</summary>
+        <returns>Ein <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> , der neue benutzerdefinierte Kategorie oder dem Leistungsobjekt "" zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob ein <xref:System.Diagnostics.PerformanceCounterCategory> Objekt mit dem Namen "Orders" vorhanden ist. Nicht der Fall, erstellt der <xref:System.Diagnostics.PerformanceCounterCategory> -Objekt mithilfe einer <xref:System.Diagnostics.CounterCreationDataCollection> -Objekt, das zwei Leistungsindikatoren enthält.  
+  
+ [!code-cpp[PerfCounter_ccd#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerfCounter_ccd/CPP/ccd.cpp#1)]
+ [!code-csharp[PerfCounter_ccd#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerfCounter_ccd/CS/ccd.cs#1)]
+ [!code-vb[PerfCounter_ccd#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerfCounter_ccd/VB/ccd.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Name des Leistungsindikators, der innerhalb angegeben wird, die <paramref name="counterData" /> Auflistung <see langword="null" /> oder eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Ein Leistungsindikator, der innerhalb angegeben wird, die <paramref name="counterData" /> Sammlung ist bereits vorhanden.  
+  
+ - oder -   
+  
+ Die <paramref name="counterName" /> Parameter hat eine ungültige Syntax. Er enthält möglicherweise umgekehrte Schrägstriche ("\\") oder weisen eine Länge größer als 80 Zeichen enthalten.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="categoryName" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Kategorie ist bereits auf dem lokalen Computer vorhanden.  
+  
+ - oder -   
+  
+ Das Layout der <paramref name="counterData" /> Auflistung ist nicht richtig für die Basis-Leistungsindikatoren. Einen Leistungsindikator vom Typ <see langword="AverageCount64" />, <see langword="AverageTimer32" />, <see langword="CounterMultiTimer" />, <see langword="CounterMultiTimerInverse" />, <see langword="CounterMultiTimer100Ns" />, <see langword="CounterMultiTimer100NsInverse" />, <see langword="RawFraction" />, <see langword="SampleFraction" /> oder <see langword="SampleCounter" /> muss sofort Basisindikator Typ folgen (<see langword="AverageBase" />, <see langword="MultiBase" />, <see langword="RawBase" />, oder <see langword="SampleBase" />).</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Durchführen von Verwaltungsaufgaben für Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Administer" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.PerformanceCounterCategory Create (string categoryName, string categoryHelp, System.Diagnostics.PerformanceCounterCategoryType categoryType, System.Diagnostics.CounterCreationDataCollection counterData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.PerformanceCounterCategory Create(string categoryName, string categoryHelp, valuetype System.Diagnostics.PerformanceCounterCategoryType categoryType, class System.Diagnostics.CounterCreationDataCollection counterData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Create(System.String,System.String,System.Diagnostics.PerformanceCounterCategoryType,System.Diagnostics.CounterCreationDataCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="categoryHelp" Type="System.String" />
+        <Parameter Name="categoryType" Type="System.Diagnostics.PerformanceCounterCategoryType" />
+        <Parameter Name="counterData" Type="System.Diagnostics.CounterCreationDataCollection" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name des benutzerdefinierten Leistungsindikator-Kategorienamen zu erstellen und registrieren Sie mit dem System.</param>
+        <param name="categoryHelp">Eine Beschreibung der benutzerdefinierten Kategorie.</param>
+        <param name="categoryType">Einer der <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" />-Werte.</param>
+        <param name="counterData">Ein <see cref="T:System.Diagnostics.CounterCreationDataCollection" /> , die angibt, der Leistungsindikatoren aus, die als Teil der neuen Kategorie zu erstellen.</param>
+        <summary>Registriert die benutzerdefinierte Leistungsindikatorkategorie, die die angegebenen Leistungsindikatoren auf dem lokalen Computer enthält.</summary>
+        <returns>Ein <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> , der neue benutzerdefinierte Kategorie oder dem Leistungsobjekt "" zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `categoryType` Parameter gibt an, ob die Leistungsindikatorkategorie Einzelinstanz- oder mit mehreren Instanzen. Standardmäßig ist eine Kategorie Einzelinstanz-auf, wenn es erstellt wird und mit mehreren Instanzen wird, wenn eine andere Instanz hinzugefügt wird. Kategorien werden erstellt, wenn eine Anwendung wird eingerichtet, und Instanzen zur Laufzeit hinzugefügt werden. In der .NET Framework-Versionen 1.0 und 1.1 ist es nicht notwendig, wissen, ob eine Leistungsindikatorkategorie mit mehreren Instanzen handelt oder Einzelinstanz. In der [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]die <xref:System.Diagnostics.PerformanceCounterCategoryType> Enumeration wird verwendet, um anzugeben, ob ein Leistungsindikator mehrere Instanzen haben kann.  
+  
+ Leistungsindikatorkategorien installiert, mit der [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] separaten freigegebenen Arbeitsspeicher mit jeder eine eigene Speicherkapazität Leistungsindikatorkategorie verwenden.  Sie können die Größe des separater freigegebener Arbeitsspeicher angeben, indem Sie einen DWORD-Wert mit dem Namen FileMappingSize im Registrierungsschlüssel HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<Kategorienamen >*\ Die Leistung. Der FileMappingSize-Wert wird auf die freigegebene Speichergröße der Kategorie festgelegt. Die Standardgröße beträgt, Dezimal 131072. Wenn der FileMappingSize-Wert nicht vorhanden ist, ist die `fileMappingSize` -Attributwert für das `performanceCounters` in der Datei "Machine.config" angegebene Element verwendet wird, was zu zusätzlichem Aufwand für die Verarbeitung der Konfigurationsdatei. Sie können für den Start der Anwendung verbessert die Leistung durch Festlegen der Größe der Zuordnung in der Registrierung mit sich bringen.  
+  
+> [!NOTE]
+>  Es wird dringend empfohlen, dass neue Leistungsindikatorkategorien erstellt werden, während der Installation der Anwendung, nicht während der Ausführung der Anwendung. Dadurch wird die Zeit für das Betriebssystem, um die Liste der registrierten Leistungsindikatorkategorien zu aktualisieren. Wenn die Liste nicht aktualisiert worden sind, schlägt der Versuch, verwenden Sie die Kategorie fehl.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.PerformanceCounterCategory.Create%2A> Methode. Im Beispiel wird gezeigt, wie eine benutzerdefinierte Leistungsindikatorkategorie mit mehreren Instanzen, für die Anzahl der Aufträge pro Sekunde erstellt werden.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategoryType#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategoryType/CS/program.cs#2)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategoryType#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategoryType/VB/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Name des Leistungsindikators, der innerhalb angegeben wird, die <paramref name="counterData" /> Auflistung <see langword="null" /> oder eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Ein Leistungsindikator, der innerhalb angegeben wird, die <paramref name="counterData" /> Sammlung ist bereits vorhanden.  
+  
+ - oder -   
+  
+ <paramref name="counterName" />Die Syntax ist ungültig. Er enthält möglicherweise umgekehrte Schrägstriche ("\\") oder weisen eine Länge größer als 80 Zeichen enthalten.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="categoryName" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="counterData" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="categoryType" />Wert liegt außerhalb des Bereichs der folgenden Werte: <see langword="MultiInstance" />, <see langword="SingleInstance" />, oder <see langword="Unknown" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Kategorie ist bereits auf dem lokalen Computer vorhanden.  
+  
+ - oder -   
+  
+ Das Layout der <paramref name="counterData" /> Auflistung ist nicht richtig für die Basis-Leistungsindikatoren. Einen Leistungsindikator vom Typ <see langword="AverageCount64" />, <see langword="AverageTimer32" />, <see langword="CounterMultiTimer" />, <see langword="CounterMultiTimerInverse" />, <see langword="CounterMultiTimer100Ns" />, <see langword="CounterMultiTimer100NsInverse" />, <see langword="RawFraction" />, <see langword="SampleFraction" />, oder <see langword="SampleCounter" /> müssen werden unmittelbar gefolgt von einem der Typen Basiszähler (<see langword="AverageBase" />, <see langword="MultiBase" />, <see langword="RawBase" />, oder <see langword="SampleBase" />).</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Durchführen von Verwaltungsaufgaben für Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Administer" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.PerformanceCounterCategory Create (string categoryName, string categoryHelp, string counterName, string counterHelp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.PerformanceCounterCategory Create(string categoryName, string categoryHelp, string counterName, string counterHelp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Create(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use another overload that uses PerformanceCounterCategoryType instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="categoryHelp" Type="System.String" />
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="counterHelp" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name des benutzerdefinierten Leistungsindikator-Kategorienamen zu erstellen und registrieren Sie mit dem System.</param>
+        <param name="categoryHelp">Eine Beschreibung der benutzerdefinierten Kategorie.</param>
+        <param name="counterName">Der Name des neuen Leistungsindikator vom Typ <see langword="NumberOfItems32" />, um im Rahmen der neuen Kategorie zu erstellen.</param>
+        <param name="counterHelp">Eine Beschreibung des Leistungsindikators, der die neue benutzerdefinierte Kategorie zugeordnet ist.</param>
+        <summary>Registriert eine benutzerdefinierte Leistungsindikatorkategorie, enthält einen einzelnen Leistungsindikator vom Typ <see langword="NumberOfItems32" /> auf dem lokalen Computer.</summary>
+        <returns>Ein <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> , das neue Systemkategorie oder Leistungsobjekt zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Diagnostics.PerformanceCounterCategory> und einzelne <xref:System.Diagnostics.PerformanceCounter> mit Hilfetext für jeden, der mit der <xref:System.Diagnostics.PerformanceCounterCategory.Create%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%29> Methode.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfcountercatcreate.cs#2)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatcreate.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="counterName" />ist <see langword="null" /> oder ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Der Zähler, der angegebenen <paramref name="counterName" /> ist bereits vorhanden.  
+  
+ - oder -   
+  
+ <paramref name="counterName" />Die Syntax ist ungültig. Er enthält möglicherweise umgekehrte Schrägstriche ("\\") oder weisen eine Länge größer als 80 Zeichen enthalten.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Kategorie ist bereits auf dem lokalen Computer vorhanden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="categoryName" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="counterHelp" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Durchführen von Verwaltungsaufgaben für Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Administer" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.PerformanceCounterCategory Create (string categoryName, string categoryHelp, System.Diagnostics.PerformanceCounterCategoryType categoryType, string counterName, string counterHelp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.PerformanceCounterCategory Create(string categoryName, string categoryHelp, valuetype System.Diagnostics.PerformanceCounterCategoryType categoryType, string counterName, string counterHelp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Create(System.String,System.String,System.Diagnostics.PerformanceCounterCategoryType,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="categoryHelp" Type="System.String" />
+        <Parameter Name="categoryType" Type="System.Diagnostics.PerformanceCounterCategoryType" />
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="counterHelp" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name des benutzerdefinierten Leistungsindikator-Kategorienamen zu erstellen und registrieren Sie mit dem System.</param>
+        <param name="categoryHelp">Eine Beschreibung der benutzerdefinierten Kategorie.</param>
+        <param name="categoryType">Eines der <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" /> Werte, die angeben, ob die Kategorie <see cref="F:System.Diagnostics.PerformanceCounterCategoryType.MultiInstance" />, <see cref="F:System.Diagnostics.PerformanceCounterCategoryType.SingleInstance" />, oder <see cref="F:System.Diagnostics.PerformanceCounterCategoryType.Unknown" />.</param>
+        <param name="counterName">Der Name des neuen Leistungsindikator zu, als Teil der neue Kategorie erstellen.</param>
+        <param name="counterHelp">Eine Beschreibung des Leistungsindikators, der die neue benutzerdefinierte Kategorie zugeordnet ist.</param>
+        <summary>Registriert die benutzerdefinierte Leistungsindikatorkategorie, enthält einen einzelnen Leistungsindikator vom Typ <see cref="F:System.Diagnostics.PerformanceCounterType.NumberOfItems32" /> auf dem lokalen Computer.</summary>
+        <returns>Ein <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> , das neue Systemkategorie oder Leistungsobjekt zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `categoryType` Parameter gibt an, ob die Leistungsindikatorkategorie Einzelinstanz- oder mit mehreren Instanzen. Standardmäßig ist eine Kategorie Einzelinstanz-auf, wenn es erstellt wird und mit mehreren Instanzen wird, wenn eine andere Instanz hinzugefügt wird. Kategorien werden erstellt, wenn eine Anwendung wird eingerichtet, und Instanzen zur Laufzeit hinzugefügt werden. In der .NET Framework-Versionen 1.0 und 1.1 ist es nicht notwendig, wissen, ob eine Leistungsindikatorkategorie mit mehreren Instanzen handelt oder Einzelinstanz. In der [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]die <xref:System.Diagnostics.PerformanceCounterCategoryType> Enumeration wird verwendet, um anzugeben, ob ein Leistungsindikator mehrere Instanzen haben kann.  
+  
+ Leistungsindikatorkategorien installiert, mit der [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] separaten freigegebenen Arbeitsspeicher mit jeder eine eigene Speicherkapazität Leistungsindikatorkategorie verwenden. Sie können die Größe des separater freigegebener Arbeitsspeicher angeben, indem Sie einen DWORD-Wert mit dem Namen FileMappingSize im Registrierungsschlüssel HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<Kategorienamen >*\ Die Leistung. Der FileMappingSize-Wert wird auf die freigegebene Speichergröße der Kategorie festgelegt. Die Standardgröße beträgt, Dezimal 131072. Wenn der FileMappingSize-Wert nicht vorhanden ist, ist die `fileMappingSize` -Attributwert für das `performanceCounters` in der Datei "Machine.config" angegebene Element verwendet wird, was zu zusätzlichem Aufwand für die Verarbeitung der Konfigurationsdatei. Sie können für den Start der Anwendung verbessert die Leistung durch Festlegen der Größe der Zuordnung in der Registrierung mit sich bringen.  
+  
+> [!NOTE]
+>  Es wird dringend empfohlen, dass neue Leistungsindikatorkategorien erstellt werden, während der Installation der Anwendung, nicht während der Ausführung der Anwendung. Dadurch wird die Zeit für das Betriebssystem, um die Liste der registrierten Leistungsindikatorkategorien zu aktualisieren. Wenn die Liste nicht aktualisiert worden sind, schlägt der Versuch, verwenden Sie die Kategorie fehl.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.PerformanceCounterCategory.Create%2A> Methode. Das Beispiel zeigt, wie eine benutzerdefinierte, einzelne Instanz Leistungsindikatorkategorie erstellt wird.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategoryType#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategoryType/CS/program.cs#3)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategoryType#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategoryType/VB/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="counterName" />ist <see langword="null" /> oder ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Der Zähler, der angegebenen <paramref name="counterName" /> ist bereits vorhanden.  
+  
+ - oder -   
+  
+ <paramref name="counterName" />Die Syntax ist ungültig. Er enthält möglicherweise umgekehrte Schrägstriche ("\\") oder weisen eine Länge größer als 80 Zeichen enthalten.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Kategorie ist bereits auf dem lokalen Computer vorhanden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="categoryName" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="counterHelp" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Durchführen von Verwaltungsaufgaben für Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Administer" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public static void Delete (string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Delete(string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Delete(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name des benutzerdefinierten Leistungsindikator-Kategorienamen zu löschen.</param>
+        <summary>Entfernt die Kategorie und den zugehörigen Leistungsindikatoren aus dem lokalen Computer an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nur benutzerdefinierte Leistungsindikatorkategorien aus dem System gelöscht. Einen Leistungsindikator kann nicht aus einer Kategorie gelöscht werden. Zu diesem Zweck löschen Sie die Kategorie und neu erstellen Sie die Kategorie mit den Leistungsindikatoren, die Sie beibehalten möchten. Um eine Ausnahme zu vermeiden, vergewissern Sie sich, dass die Kategorie vorhanden ist, bevor Sie versuchen, diesen zu löschen.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Diagnostics.PerformanceCounterCategory.Delete%2A> Methode zum Löschen einer <xref:System.Diagnostics.PerformanceCounterCategory> und <xref:System.Diagnostics.PerformanceCounter> darin enthaltenen Objekte.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfCounterCatDelete.cs#6)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatdelete.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="categoryName" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="categoryName" /> Parameter hat eine ungültige Syntax. Er enthält möglicherweise umgekehrte Schrägstriche ("\\") oder weisen eine Länge größer als 80 Zeichen enthalten.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Kategorie kann nicht gelöscht werden, da es sich nicht um eine benutzerdefinierte Kategorie ist.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Administer" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public static bool Exists (string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Exists(string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Exists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name des Leistungsindikator-Kategorienamen, der gesucht werden soll.</param>
+        <summary>Bestimmt, ob die Kategorie auf dem lokalen Computer registriert ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Kategorie registriert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.PerformanceCounterCategory.Exists%2A> Methode kann zu beträchtlichen Leistungseinbußen führen, während die Verfügbarkeit alle Leistungsindikatoren auf dem Computer aktiviert sind. Wenn Sie nur einen Leistungsindikator schreiben, können Sie die globale Suche nach Leistungsindikatoren vermeiden, indem Sie den Leistungsindikator erstellen, wenn die Anwendung installiert ist und vorausgesetzt, der Kategorie vorhanden ist, wenn der Zugriff auf den Indikator. Es gibt keine Möglichkeit, die Performance Counter-Suche zu vermeiden, beim Lesen von Leistungsindikatoren.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob ein <xref:System.Diagnostics.PerformanceCounterCategory> Objekt mit dem Namen "Orders" vorhanden ist. Nicht der Fall, erstellt der <xref:System.Diagnostics.PerformanceCounterCategory> -Objekt mithilfe einer <xref:System.Diagnostics.CounterCreationDataCollection> -Objekt, das zwei Leistungsindikatoren enthält.  
+  
+ [!code-cpp[PerfCounter_ccd#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerfCounter_ccd/CPP/ccd.cpp#1)]
+ [!code-csharp[PerfCounter_ccd#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerfCounter_ccd/CS/ccd.cs#1)]
+ [!code-vb[PerfCounter_ccd#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerfCounter_ccd/VB/ccd.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="categoryName" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der <paramref name="categoryName" />-Parameter ist eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public static bool Exists (string categoryName, string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Exists(string categoryName, string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Exists(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name des Leistungsindikator-Kategorienamen, der gesucht werden soll.</param>
+        <param name="machineName">Der Name des Computers für die Kategorie zu untersuchen.</param>
+        <summary>Bestimmt, ob die Kategorie auf dem angegebenen Computer registriert ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Kategorie registriert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.PerformanceCounterCategory.Exists%2A> Methode kann zu beträchtlichen Leistungseinbußen führen, während die Verfügbarkeit alle Leistungsindikatoren auf dem Computer aktiviert sind. Wenn Sie nur einen Leistungsindikator schreiben, können Sie die globale Suche nach Leistungsindikatoren vermeiden, indem Sie den Leistungsindikator erstellen, wenn die Anwendung installiert ist und vorausgesetzt, der Kategorie vorhanden ist, wenn der Zugriff auf den Indikator. Es gibt keine Möglichkeit, die Performance Counter-Suche zu vermeiden, beim Lesen von Leistungsindikatoren.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ermittelt, ob eine <xref:System.Diagnostics.PerformanceCounterCategory> Objekt mit dem Namen `Orders` vorhanden ist. Im Beispiel wird erstellt, wenn sie nicht vorhanden ist, die <xref:System.Diagnostics.PerformanceCounterCategory> -Objekt mithilfe einer <xref:System.Diagnostics.CounterCreationDataCollection> -Objekt, das zwei Leistungsindikatoren enthält.  
+  
+ [!code-cpp[PerfCounter_ccd#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerfCounter_ccd/CPP/ccd.cpp#1)]
+ [!code-csharp[PerfCounter_ccd#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerfCounter_ccd/CS/ccd.cs#1)]
+ [!code-vb[PerfCounter_ccd#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerfCounter_ccd/VB/ccd.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="categoryName" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der <paramref name="categoryName" />-Parameter ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Die <paramref name="machineName" /> Parameter ist ungültig.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.IO.IOException">Der Netzwerkpfad kann nicht gefunden werden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.  
+  
+ - oder -   
+  
+ Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCategories">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.PerformanceCounterCategory[] GetCategories ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.PerformanceCounterCategory[] GetCategories() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.GetCategories" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategory[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Liste von Leistungsindikatorkategorien, die auf dem lokalen Computer registriert sind.</summary>
+        <returns>Ein Array von <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> Objekte, der angibt, der Kategorien, die auf dem lokalen Computer registriert sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Diagnostics.PerformanceCounterCategory.GetCategories%2A> Methode, um ein Array von zurückzugeben <xref:System.Diagnostics.PerformanceCounterCategory> Objekte auf dem lokalen Computer oder einem angegebenen Computer. Konvertiert die <xref:System.Diagnostics.PerformanceCounterCategory> Array in ein Array von Kategorienamen, die sortiert und für den Benutzer angezeigt. Die <xref:System.Diagnostics.PerformanceCounterCategory.GetCategories%2A> Überladung ausgewählt ist, basierend auf, ob ein Computername angegeben wurde.  
+  
+ [!code-cpp[System.Diagnostics.PerformanceCounterCategory.GetMembers#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/cpp/perfcountergetcat.cpp#2)]
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.GetMembers#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/CS/perfcountergetcat.cs#2)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.GetMembers#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/VB/perfcountercatgetcat.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCategories">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.PerformanceCounterCategory[] GetCategories (string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.PerformanceCounterCategory[] GetCategories(string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.GetCategories(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategory[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="machineName">Das zu durchsuchende Computer.</param>
+        <summary>Ruft eine Liste von Leistungsindikatorkategorien, die auf dem angegebenen Computer registriert sind.</summary>
+        <returns>Ein Array von <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> Objekte, der angibt, der Kategorien, die auf dem angegebenen Computer registriert sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Abrufen der Kategorien auf dem lokalen Computer mit einer anderen Überladung, oder übergeben Sie "." als die `machineName` Parameter.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Diagnostics.PerformanceCounterCategory.GetCategories%2A> Methode, um ein Array von zurückzugeben <xref:System.Diagnostics.PerformanceCounterCategory> Objekte auf dem lokalen Computer oder einem angegebenen Computer. Konvertiert die <xref:System.Diagnostics.PerformanceCounterCategory> Array in ein Array von Kategorienamen, die sortiert und für den Benutzer angezeigt. Die <xref:System.Diagnostics.PerformanceCounterCategory.GetCategories%2A> Überladung ausgewählt ist, basierend auf, ob ein Computername angegeben wurde.  
+  
+ [!code-cpp[System.Diagnostics.PerformanceCounterCategory.GetMembers#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/cpp/perfcountergetcat.cpp#2)]
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.GetMembers#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/CS/perfcountergetcat.cs#2)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.GetMembers#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/VB/perfcountercatgetcat.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="machineName" /> Parameter ist ungültig.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCounters">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounter[] GetCounters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Diagnostics.PerformanceCounter[] GetCounters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.GetCounters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounter[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Liste der Leistungsindikatoren in einer Leistungsindikatorkategorie, die genau eine Instanz enthält.</summary>
+        <returns>Ein Array von <see cref="T:System.Diagnostics.PerformanceCounter" /> Objekte, der angibt, der Leistungsindikatoren, die diese Einzelinstanz-Leistungsindikatorkategorie zugeordnet sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu Leistungsobjektinstanzen, finden Sie unter der <xref:System.Diagnostics.PerformanceCounter> -Klassenübersicht.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft eine Liste mit den <xref:System.Diagnostics.PerformanceCounter> Objekte in einer <xref:System.Diagnostics.PerformanceCounterCategory>. Erstellt zunächst eine <xref:System.Diagnostics.PerformanceCounterCategory> mit dem entsprechenden Konstruktor basieren, gibt an, ob ein Computername angegeben wurde. Es verwendet dann die <xref:System.Diagnostics.PerformanceCounterCategory.GetCounters%2A> Methode, um ein Array von zurückzugeben <xref:System.Diagnostics.PerformanceCounter> Objekte, die Auswahl der <xref:System.Diagnostics.PerformanceCounterCategory.GetCounters%2A> basieren, dass die Überladung gibt an, ob ein Instanzname angegeben wurde.  
+  
+ Dies <xref:System.Diagnostics.PerformanceCounterCategory.GetCounters> -Überladung schlägt fehl, es sei denn, es mit einer Einzelinstanz-Kategorie verwendet wird.  
+  
+ [!code-cpp[System.Diagnostics.PerformanceCounterCategory.GetMembers#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/cpp/perfcountercatgetcount.cpp#4)]
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.GetMembers#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/CS/perfcountercatgetcount.cs#4)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.GetMembers#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/VB/perfcountercatgetcount.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Kategorie ist keine einzelne Instanz.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Kategorie muss sich nicht auf eine zugewiesene Instanz aus.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCounters">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounter[] GetCounters (string instanceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Diagnostics.PerformanceCounter[] GetCounters(string instanceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.GetCounters(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounter[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceName">Die Leistung-Objektinstanz, für die die Liste der zugeordneten Leistungsindikatoren abzurufen.</param>
+        <summary>Ruft eine Liste der Leistungsindikatoren in einer Leistungsindikatorkategorie, die eine oder mehrere Instanzen enthält.</summary>
+        <returns>Ein Array von <see cref="T:System.Diagnostics.PerformanceCounter" /> Objekte, der angibt, der Leistungsindikatoren, die die angegebene Objektinstanz dieser Leistungsindikatorkategorie zugeordnet sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um eine Einzelinstanz-Kategorie darzustellen, übergeben Sie eine leere Zeichenfolge ("") für die `instanceName` Parameter.  
+  
+ Weitere Informationen zu Leistungsobjektinstanzen, finden Sie unter der <xref:System.Diagnostics.PerformanceCounter> -Klassenübersicht.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft eine Liste mit den <xref:System.Diagnostics.PerformanceCounter> Objekte in einer <xref:System.Diagnostics.PerformanceCounterCategory>. Erstellt zunächst eine <xref:System.Diagnostics.PerformanceCounterCategory> mit dem entsprechenden Konstruktor basieren, gibt an, ob ein Computername angegeben wurde. Es verwendet dann die <xref:System.Diagnostics.PerformanceCounterCategory.GetCounters%2A> Methode, um ein Array von zurückzugeben <xref:System.Diagnostics.PerformanceCounter> Objekte, die Auswahl der <xref:System.Diagnostics.PerformanceCounterCategory.GetCounters%2A> basieren, dass die Überladung gibt an, ob ein Instanzname angegeben wurde.  
+  
+ Dies <xref:System.Diagnostics.PerformanceCounterCategory.GetCounters%28System.String%29> -Überladung schlägt fehl, es sei denn, es mit einer Kategorie verwendet wird, die Instanzen enthält.  
+  
+ [!code-cpp[System.Diagnostics.PerformanceCounterCategory.GetMembers#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/cpp/perfcountercatgetcount.cpp#4)]
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.GetMembers#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/CS/perfcountercatgetcount.cs#4)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.GetMembers#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/VB/perfcountercatgetcount.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="instanceName" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> für diese Eigenschaft <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> Instanz wurde nicht festgelegt.  
+  
+ - oder -   
+  
+ Die Kategorie enthält nicht die Instanz, die von angegeben wird die <paramref name="instanceName" /> Parameter.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInstanceNames">
+      <MemberSignature Language="C#" Value="public string[] GetInstanceNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetInstanceNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.GetInstanceNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Liste der Leistung von Objektinstanzen, die dieser Kategorie zugeordnet sind.</summary>
+        <returns>Ein Array von Zeichenfolgen, die die Leistung zu verwendenden Instanz Objektnamen, die dieser Kategorie zugeordnet sind oder wenn die Kategorie nur eine Instanz des Datenobjekts enthält, ein Eintrag Arrays, enthält eine leere Zeichenfolge ("").</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft eine Liste mit den <xref:System.Diagnostics.PerformanceCounter> Objekte in einer <xref:System.Diagnostics.PerformanceCounterCategory>. Erstellt zunächst eine <xref:System.Diagnostics.PerformanceCounterCategory> -Objekt, mit dem entsprechenden Konstruktor abhängig, ob ein Computername angegeben wurde. Es verwendet dann <xref:System.Diagnostics.PerformanceCounterCategory.GetInstanceNames%2A> zurückzugebenden die Instanznamen als Array von <xref:System.String>, die sortiert und angezeigt.  
+  
+ [!code-cpp[System.Diagnostics.PerformanceCounterCategory.GetMembers#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/cpp/perfcountercatgetinst.cpp#6)]
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.GetMembers#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/CS/perfcountercatgetinst.cs#6)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.GetMembers#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/VB/perfcountercatgetinst.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" />-Eigenschaft ist <see langword="null" />. Möglicherweise wurde die Eigenschaft nicht festgelegt.  
+  
+ - oder -   
+  
+ Die Kategorie muss sich nicht auf eine zugewiesene Instanz aus.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceExists">
+      <MemberSignature Language="C#" Value="public bool InstanceExists (string instanceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool InstanceExists(string instanceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.InstanceExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceName">Die Leistungsobjektinstanz in dieser Leistungsindikatorkategorie gesucht.</param>
+        <summary>Bestimmt, ob das angegebene Objekt Leistungsinstanz in der Kategorie vorhanden ist, die von diesem identifiziert wird <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> des Objekts <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> Eigenschaft.</summary>
+        <returns>
+          <see langword="true" />Wenn die Kategorie Instanz der angegebenen Objekt enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung der <xref:System.Diagnostics.PerformanceCounterCategory.InstanceExists%2A> nicht `static`. Es erfordert, dass Sie zum Erstellen einer <xref:System.Diagnostics.PerformanceCounterCategory> Objekt und Festlegen der <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob eine <xref:System.Diagnostics.PerformanceCounter> Instanz vorhanden ist, innerhalb einer <xref:System.Diagnostics.PerformanceCounterCategory>. Erstellt zunächst eine <xref:System.Diagnostics.PerformanceCounterCategory> -Objekt, mit dem entsprechenden Konstruktor abhängig, ob ein Computername angegeben wurde. Es verwendet dann <xref:System.Diagnostics.PerformanceCounterCategory.InstanceExists%28System.String%29> zu bestimmen, ob die angegebene Instanz vorhanden ist, wird der Benutzer darüber informiert. Wenn kein Instanzname angegeben wird, wird im Beispiel wird der Standardname für die Einzelinstanz-verwendet.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.ExistMembers#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/CS/perfcounterobjinstexists.cs#2)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.ExistMembers#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/VB/perfcountercatobjinstexists.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" />-Eigenschaft ist <see langword="null" />. Möglicherweise wurde die Eigenschaft nicht festgelegt.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="instanceName" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceExists">
+      <MemberSignature Language="C#" Value="public static bool InstanceExists (string instanceName, string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool InstanceExists(string instanceName, string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.InstanceExists(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceName" Type="System.String" />
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceName">Die zu suchende Leistung-Objektinstanz.</param>
+        <param name="categoryName">Die Leistungsindikatorkategorie, gesucht werden soll.</param>
+        <summary>Bestimmt, ob eine angegebene Kategorie auf dem lokalen Computer die Leistung der angegebenen Objektinstanz enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn die Kategorie Instanz der angegebenen Objekt enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht möglich, um festzustellen, ob eine Leistungsobjektinstanz auf einem Computer vorhanden ist, ohne Angabe einer bestimmten Kategorie gesucht werden soll.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel verwendet die statische Überladungen der <xref:System.Diagnostics.PerformanceCounterCategory.InstanceExists%2A> um zu bestimmen, ob die angegebenen <xref:System.Diagnostics.PerformanceCounter> Instanz vorhanden ist, der <xref:System.Diagnostics.PerformanceCounterCategory>. Die Überladung ausgewählt ist, basierend auf, ob ein Computername angegeben wurde. Wenn kein Instanzname angegeben wird, wird im Beispiel wird der Standardname für die Einzelinstanz-verwendet.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.ExistMembers#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/CS/perfcountercatstatinstexists.cs#10)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.ExistMembers#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/VB/perfcountercatstatinstexists.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="instanceName" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der <paramref name="categoryName" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der <paramref name="categoryName" />-Parameter ist eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceExists">
+      <MemberSignature Language="C#" Value="public static bool InstanceExists (string instanceName, string categoryName, string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool InstanceExists(string instanceName, string categoryName, string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.InstanceExists(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceName" Type="System.String" />
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceName">Die zu suchende Leistung-Objektinstanz.</param>
+        <param name="categoryName">Die Leistungsindikatorkategorie, gesucht werden soll.</param>
+        <param name="machineName">Der Name des Computers, auf denen das Paar von Kategorieinstanzen gesucht werden soll.</param>
+        <summary>Bestimmt, ob eine angegebene Kategorie auf einem angegebenen Computer Instanz der angegebenen Objekt enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn die Kategorie Instanz der angegebenen Objekt enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht möglich, um festzustellen, ob eine Leistungsobjektinstanz auf einem Computer vorhanden ist, ohne Angabe einer bestimmten Kategorie gesucht werden soll.  
+  
+ Sie können "." auf den lokalen Computer anzugeben.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel verwendet die statische Überladungen der <xref:System.Diagnostics.PerformanceCounterCategory.InstanceExists%2A> um zu bestimmen, ob die angegebenen <xref:System.Diagnostics.PerformanceCounter> Instanz vorhanden ist, der <xref:System.Diagnostics.PerformanceCounterCategory>. Die Überladung ausgewählt ist, basierend auf, ob ein Computername angegeben wurde. Wenn kein Instanzname angegeben wird, wird im Beispiel wird der Standardname für die Einzelinstanz-verwendet.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.ExistMembers#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/CS/perfcountercatstatinstexists.cs#10)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.ExistMembers#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/VB/perfcountercatstatinstexists.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="instanceName" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der <paramref name="categoryName" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der <paramref name="categoryName" />-Parameter ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Die <paramref name="machineName" /> Parameter ist ungültig.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public string MachineName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterCategory.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Computers, auf dem diese Kategorie befindet.</summary>
+        <value>Der Name des Computers, auf dem die Leistungsindikatorkategorie und die zugeordneten Zähler vorhanden sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Diagnostics.PerformanceCounterCategory> mit der <xref:System.Diagnostics.PerformanceCounterCategory.%23ctor> Konstruktor. Er fordert vom Benutzer die <xref:System.Diagnostics.PerformanceCounterCategory> und die Computernamen legt dann die <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> und <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A> Eigenschaften aus den eingegebenen Werten. Es zeigt dann die Werte der <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A>, und <xref:System.Diagnostics.PerformanceCounterCategory.CategoryHelp%2A> Eigenschaften, oder es wird eine Fehlermeldung angezeigt, wenn die <xref:System.Diagnostics.PerformanceCounterCategory> kann nicht zugegriffen werden.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfCounterCatProps.cs#8)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatprops.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Diagnostics.PerformanceCounterCategory.MachineName" /> Syntax ist ungültig.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">für das Lesen von Leistungsindikatorkategorien. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadCategory">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.InstanceDataCollectionCollection ReadCategory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Diagnostics.InstanceDataCollectionCollection ReadCategory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.ReadCategory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.InstanceDataCollectionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest alle Daten für Leistungsindikator und die Leistung, die dieser Leistungsindikatorkategorie zugeordnet ist.</summary>
+        <returns>Ein <see cref="T:System.Diagnostics.InstanceDataCollectionCollection" /> , der der Leistungsindikator und die Leistung Objektinstanzdaten für die Kategorie enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen festlegen, die <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> Eigenschaft vor dem Aufruf <xref:System.Diagnostics.PerformanceCounterCategory.ReadCategory%2A>.  
+  
+ Lesen die gesamte Kategorie auf einmal werden so effizient wie einen einzelnen Leistungsindikator lesen, aufgrund der Art und Weise, dass das System die Daten bereitstellt.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista und höher, Windows XP Professional X64 Edition oder Windows Server 2003, müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder verfügen über Administratorrechte.  
+>   
+>  Um zu vermeiden, müssen Ihre Berechtigungen für den Zugriff auf die Leistungsindikatoren in Windows Vista und höher erhöhen, fügen Sie selbst der Gruppe Systemmonitorbenutzer hinzu.  
+>   
+>  Unter Windows Vista (und höher) werden die Berechtigungen eines Benutzers von der Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Diagnostics.PerformanceCounterCategory> für ein angegebenes <xref:System.Diagnostics.PerformanceCounterCategory> Name. Es verwendet dann <xref:System.Diagnostics.PerformanceCounterCategory.ReadCategory%2A> zurückzugebenden ein <xref:System.Diagnostics.InstanceDataCollectionCollection> , die für alle Instanzen von Instanzdaten enthält die <xref:System.Diagnostics.PerformanceCounter> Objekte innerhalb der <xref:System.Diagnostics.PerformanceCounterCategory>.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.CopyTo#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/CS/instdatacopyto.cs#6)]
+ [!code-vb[System.Diagnostics.InstanceData.CopyTo#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/VB/instdatacopyto.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" />-Eigenschaft ist <see langword="null" />. Möglicherweise wurde die Eigenschaft nicht festgelegt.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Fehler beim Aufruf einer zugrunde liegenden System-API.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

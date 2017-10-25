@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Controls.Primitives">
+  <Docs>
+    <summary>Enthält Basisklassen und Steuerelemente, die als Teil anderer komplexer Steuerelemente verwendet werden sollen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

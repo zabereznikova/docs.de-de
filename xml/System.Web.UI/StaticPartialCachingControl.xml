@@ -1,0 +1,272 @@
+<Type Name="StaticPartialCachingControl" FullName="System.Web.UI.StaticPartialCachingControl">
+  <TypeSignature Language="C#" Value="public class StaticPartialCachingControl : System.Web.UI.BasePartialCachingControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StaticPartialCachingControl extends System.Web.UI.BasePartialCachingControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.StaticPartialCachingControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.BasePartialCachingControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Instanz der dem <see cref="T:System.Web.UI.UserControl" /> -Klasse, die zum Zwischenspeichern der Ausgabe angegeben und deklarativ in einer Seite oder einem anderen Benutzersteuerelement enthalten ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz dieser Klasse wird erstellt, wenn ein benutzerdefiniertes Steuerelement zum Zwischenspeichern der Ausgabe angegeben wird, verwenden entweder eine Richtlinie in der deklarativen ASCX-Datei oder der <xref:System.Web.UI.PartialCachingAttribute> -Klasse im Code-Behind-Datei des Benutzersteuerelements. Wenn das Benutzersteuerelement deklarativ in die enthaltende Seite enthalten ist (im Gegensatz zum dynamischen Laden mithilfe der <xref:System.Web.UI.TemplateControl.LoadControl%2A> Methode in der <xref:System.Web.UI.TemplateControl> -Klasse), wird die <xref:System.Web.UI.StaticPartialCachingControl> Instanz befindet sich in der Steuerelementhierarchie der Seite als ein übergeordnete Element auf das zwischengespeicherte Benutzersteuerelement.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StaticPartialCachingControl (string ctrlID, string guid, int duration, string varyByParams, string varyByControls, string varyByCustom, System.Web.UI.BuildMethod buildMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ctrlID, string guid, int32 duration, string varyByParams, string varyByControls, string varyByCustom, class System.Web.UI.BuildMethod buildMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StaticPartialCachingControl.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.String,System.Web.UI.BuildMethod)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ctrlID" Type="System.String" />
+        <Parameter Name="guid" Type="System.String" />
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="buildMethod" Type="System.Web.UI.BuildMethod" />
+      </Parameters>
+      <Docs>
+        <param name="ctrlID">Der Bezeichner, der dem Serversteuerelement durch ASP.NET zugewiesen wird.</param>
+        <param name="guid">Der global eindeutige Bezeichner, der vom Serversteuerelement übergeben wird.</param>
+        <param name="duration">Die Zeitspanne, die das Serversteuerelement im Cache verbleiben soll.</param>
+        <param name="varyByParams">Eine Zeichenfolge der Abfragezeichenfolge- oder Formular-POST-Parameter, anhand derer das Benutzersteuerelement im Cache variiert werden soll.</param>
+        <param name="varyByControls">Eine Zeichenfolge der Eigenschaften des Serversteuerelements, anhand derer das Benutzersteuerelement im Cache variiert werden soll.</param>
+        <param name="varyByCustom">Eine benutzerdefinierte Zeichenfolge, die benutzerdefinierte output-cache-Parameterwerte enthält.</param>
+        <param name="buildMethod">Ein Delegat, der die Methode zum Erstellen des <see cref="T:System.Web.UI.StaticPartialCachingControl" /> aufruft.</param>
+        <summary>Erstellt das <see cref="T:System.Web.UI.StaticPartialCachingControl" />-Objekt, das den zwischengespeicherten Inhalt des Serversteuerelements enthalten soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.StaticPartialCachingControl.%23ctor%2A> Konstruktor ist für die Verwendung durch das ASP.NET-Seitenframework vorgesehen und sollte nicht direkt von Entwicklern aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StaticPartialCachingControl (string ctrlID, string guid, int duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, System.Web.UI.BuildMethod buildMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ctrlID, string guid, int32 duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, class System.Web.UI.BuildMethod buildMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StaticPartialCachingControl.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Web.UI.BuildMethod)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ctrlID" Type="System.String" />
+        <Parameter Name="guid" Type="System.String" />
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="sqlDependency" Type="System.String" />
+        <Parameter Name="buildMethod" Type="System.Web.UI.BuildMethod" />
+      </Parameters>
+      <Docs>
+        <param name="ctrlID">Der Bezeichner, der dem Serversteuerelement durch ASP.NET zugewiesen wird.</param>
+        <param name="guid">Der global eindeutige Bezeichner, der vom Serversteuerelement übergeben wird.</param>
+        <param name="duration">Die Zeitspanne, die das Serversteuerelement im Cache verbleiben soll.</param>
+        <param name="varyByParams">Eine Zeichenfolge der Abfragezeichenfolge- oder Formular-POST-Parameter, anhand derer das Benutzersteuerelement im Cache variiert werden soll.</param>
+        <param name="varyByControls">Eine Zeichenfolge der Eigenschaften des Serversteuerelements, anhand derer das Benutzersteuerelement im Cache variiert werden soll.</param>
+        <param name="varyByCustom">Eine benutzerdefinierte Zeichenfolge, die benutzerdefinierte output-cache-Parameterwerte enthält.</param>
+        <param name="sqlDependency">Eine durch Semikolons getrennte Zeichenfolge, die angibt, welche Datenbanken und Tabellen für die Microsoft SQL Server-Cacheabhängigkeit verwendet werden sollen.</param>
+        <param name="buildMethod">Ein Delegat, der die Methode zum Erstellen des <see cref="T:System.Web.UI.StaticPartialCachingControl" /> aufruft.</param>
+        <summary>Erstellt das <see cref="T:System.Web.UI.StaticPartialCachingControl" />-Objekt, das den zwischengespeicherten Inhalt des Serversteuerelements enthalten soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.StaticPartialCachingControl.%23ctor%2A> Konstruktor ist für die Verwendung durch das ASP.NET-Seitenframework vorgesehen und sollte nicht direkt von Entwicklern aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StaticPartialCachingControl (string ctrlID, string guid, int duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, System.Web.UI.BuildMethod buildMethod, string providerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ctrlID, string guid, int32 duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, class System.Web.UI.BuildMethod buildMethod, string providerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StaticPartialCachingControl.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Web.UI.BuildMethod,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ctrlID" Type="System.String" />
+        <Parameter Name="guid" Type="System.String" />
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="sqlDependency" Type="System.String" />
+        <Parameter Name="buildMethod" Type="System.Web.UI.BuildMethod" />
+        <Parameter Name="providerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ctrlID">Die ID, die von ASP.NET für das Steuerelement zugewiesen ist.</param>
+        <param name="guid">Der global eindeutige Bezeichner (GUID) für das zwischengespeicherte Steuerelement.</param>
+        <param name="duration">Die Zeitdauer, die die Ausgabe des Steuerelements wird zwischengespeichert.</param>
+        <param name="varyByParams">Eine Zeichenfolge der Abfragezeichenfolge- oder Formular-POST-Parameter, anhand derer das Benutzersteuerelement im Cache variiert werden soll.</param>
+        <param name="varyByControls">Eine Zeichenfolge, die die Steuerelement Eigenschaften, um das Benutzersteuerelement im Cache variieren angezeigt werden.</param>
+        <param name="varyByCustom">Eine benutzerdefinierte Zeichenfolge, die benutzerdefinierte output-cache-Parameterwerte enthält.</param>
+        <param name="sqlDependency">Eine durch Semikolons getrennte Zeichenfolge, die angibt, welche Datenbanken und Tabellen für die Microsoft SQL Server-Cacheabhängigkeit verwendet werden sollen.</param>
+        <param name="buildMethod">Ein Delegat, der die Methode aufruft, erstellt das Steuerelement.</param>
+        <param name="providerName">Der Name des Anbieters, der zum Speichern der Ausgabe zwischengespeichert-Steuerelement verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.StaticPartialCachingControl" /> Klasse für ein Steuerelement, das in einer ASCX-Datei definiert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können einen Ausgabecacheanbieter für ein Steuerelement angeben, entweder deklarativ oder mithilfe der <xref:System.Web.UI.PartialCachingAttribute> im Code.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildCachedControl">
+      <MemberSignature Language="C#" Value="public static void BuildCachedControl (System.Web.UI.Control parent, string ctrlID, string guid, int duration, string varyByParams, string varyByControls, string varyByCustom, System.Web.UI.BuildMethod buildMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BuildCachedControl(class System.Web.UI.Control parent, string ctrlID, string guid, int32 duration, string varyByParams, string varyByControls, string varyByCustom, class System.Web.UI.BuildMethod buildMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StaticPartialCachingControl.BuildCachedControl(System.Web.UI.Control,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Web.UI.BuildMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Web.UI.Control" />
+        <Parameter Name="ctrlID" Type="System.String" />
+        <Parameter Name="guid" Type="System.String" />
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="buildMethod" Type="System.Web.UI.BuildMethod" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Das Serversteuerelement, enthalten die <see cref="T:System.Web.UI.StaticPartialCachingControl" /> Instanz.</param>
+        <param name="ctrlID">Der Bezeichner für das Steuerelement von ASP.NET zugewiesen.</param>
+        <param name="guid">Der global eindeutige Bezeichner für das zwischengespeicherte Steuerelement.</param>
+        <param name="duration">Die Zeitdauer, die die Ausgabe des Steuerelements wird zwischengespeichert.</param>
+        <param name="varyByParams">Eine Zeichenfolge mit der Abfrage-Abfragezeichenfolge und Formularbereitstellungsparameter-POST-Parameter, um das Webserversteuerelement im Cache zu variieren.</param>
+        <param name="varyByControls">Eine Zeichenfolge, die die Steuerelement Eigenschaften, um das Benutzersteuerelement im Cache variieren angezeigt werden.</param>
+        <param name="varyByCustom">Eine benutzerdefinierte Zeichenfolge, die benutzerdefinierte output-cache-Parameterwerte enthält.</param>
+        <param name="buildMethod">Ein Delegat, der die Methode zum Erstellen des Steuerelements aufruft.</param>
+        <summary>Erstellt eine <see cref="T:System.Web.UI.StaticPartialCachingControl" /> -Objekt mit den Parametern im Benutzersteuerelement (ASCX-Datei) angegeben, und fügt es als analysierten Unterobjekt enthaltenden Serversteuerelements hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.StaticPartialCachingControl.BuildCachedControl%2A> Methode erstellt ein zwischengespeichertes Steuerelement ohne Beziehung zu einer Microsoft SQL Server-Datenbanktabelle.  
+  
+ Die <xref:System.Web.UI.StaticPartialCachingControl.BuildCachedControl%2A> Methode ist für die Verwendung durch das ASP.NET-Seitenframework vorgesehen und sollte nicht direkt von Entwicklern aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildCachedControl">
+      <MemberSignature Language="C#" Value="public static void BuildCachedControl (System.Web.UI.Control parent, string ctrlID, string guid, int duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, System.Web.UI.BuildMethod buildMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BuildCachedControl(class System.Web.UI.Control parent, string ctrlID, string guid, int32 duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, class System.Web.UI.BuildMethod buildMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StaticPartialCachingControl.BuildCachedControl(System.Web.UI.Control,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Web.UI.BuildMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Web.UI.Control" />
+        <Parameter Name="ctrlID" Type="System.String" />
+        <Parameter Name="guid" Type="System.String" />
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="sqlDependency" Type="System.String" />
+        <Parameter Name="buildMethod" Type="System.Web.UI.BuildMethod" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Das Serversteuerelement, enthalten die <see cref="T:System.Web.UI.StaticPartialCachingControl" /> Instanz.</param>
+        <param name="ctrlID">Der Bezeichner für das Steuerelement von ASP.NET zugewiesen.</param>
+        <param name="guid">Der global eindeutige Bezeichner für das zwischengespeicherte Steuerelement.</param>
+        <param name="duration">Die Zeitdauer, die die Ausgabe des Steuerelements wird zwischengespeichert.</param>
+        <param name="varyByParams">Eine Zeichenfolge mit der Abfrage-Abfragezeichenfolge und Formularbereitstellungsparameter-POST-Parameter, um das Webserversteuerelement im Cache zu variieren.</param>
+        <param name="varyByControls">Eine Zeichenfolge, die die Steuerelement Eigenschaften, um das Benutzersteuerelement im Cache variieren angezeigt werden.</param>
+        <param name="varyByCustom">Eine benutzerdefinierte Zeichenfolge, die benutzerdefinierte output-cache-Parameterwerte enthält.</param>
+        <param name="sqlDependency">Eine durch Semikolons getrennte Zeichenfolge, die angibt, welche Datenbanken und Tabellen für die Microsoft SQL Server-Cacheabhängigkeit verwendet werden sollen.</param>
+        <param name="buildMethod">Ein Delegat, der die Methode zum Erstellen des Steuerelements aufruft.</param>
+        <summary>Erstellt eine <see cref="T:System.Web.UI.StaticPartialCachingControl" /> -Objekt mit den Parametern im Benutzersteuerelement (ASCX-Datei) angegeben, und fügt es als analysierten Unterobjekt enthaltenden Serversteuerelements hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.StaticPartialCachingControl.BuildCachedControl%2A> Methode erstellt ein zwischengespeichertes Steuerelement mit einer Beziehung zu einer SQL Server-Datenbanktabelle gemäß der `sqlDependency` Parameter.  
+  
+ Die <xref:System.Web.UI.StaticPartialCachingControl.%23ctor%2A> Methode ist für die Verwendung durch das ASP.NET-Seitenframework vorgesehen und sollte nicht direkt von Entwicklern aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildCachedControl">
+      <MemberSignature Language="C#" Value="public static void BuildCachedControl (System.Web.UI.Control parent, string ctrlID, string guid, int duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, System.Web.UI.BuildMethod buildMethod, string providerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BuildCachedControl(class System.Web.UI.Control parent, string ctrlID, string guid, int32 duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, class System.Web.UI.BuildMethod buildMethod, string providerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StaticPartialCachingControl.BuildCachedControl(System.Web.UI.Control,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Web.UI.BuildMethod,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Web.UI.Control" />
+        <Parameter Name="ctrlID" Type="System.String" />
+        <Parameter Name="guid" Type="System.String" />
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="sqlDependency" Type="System.String" />
+        <Parameter Name="buildMethod" Type="System.Web.UI.BuildMethod" />
+        <Parameter Name="providerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Das Serversteuerelement, das verwendet wird, als Container für die <see cref="T:System.Web.UI.StaticPartialCachingControl" /> Instanz.</param>
+        <param name="ctrlID">Die ID, die von ASP.NET für das Steuerelement zugewiesen ist.</param>
+        <param name="guid">Der global eindeutige Bezeichner (GUID) für das zwischengespeicherte Steuerelement.</param>
+        <param name="duration">Die Zeitdauer, die die Ausgabe des Steuerelements wird zwischengespeichert.</param>
+        <param name="varyByParams">Eine Zeichenfolge der Abfragezeichenfolge- oder Formular-POST-Parameter, anhand derer das Benutzersteuerelement im Cache variiert werden soll.</param>
+        <param name="varyByControls">Eine Zeichenfolge, die die Steuerelement Eigenschaften, um das Benutzersteuerelement im Cache variieren angezeigt werden.</param>
+        <param name="varyByCustom">Eine benutzerdefinierte Zeichenfolge, die benutzerdefinierte output-cache-Parameterwerte enthält.</param>
+        <param name="sqlDependency">Eine durch Semikolons getrennte Zeichenfolge, die angibt, welche Datenbanken und Tabellen für die Microsoft SQL Server-Cacheabhängigkeit verwendet werden sollen.</param>
+        <param name="buildMethod">Ein Delegat, der die Methode aufruft, erstellt das Steuerelement.</param>
+        <param name="providerName">Der Name des Anbieters, der zum Speichern der Ausgabe zwischengespeichert-Steuerelement verwendet wird.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Web.UI.StaticPartialCachingControl" /> Klasse, für ein Steuerelement, das in einer ASCX-Datei definiert ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

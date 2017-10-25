@@ -1,0 +1,195 @@
+<Type Name="PrintSystemException" FullName="System.Printing.PrintSystemException">
+  <TypeSignature Language="C#" Value="public class PrintSystemException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable PrintSystemException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintSystemException" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die tritt auf, wenn ein Fehlerzustand das Erstellen oder den Zugriff auf verhindert eine <see cref="T:System.Printing.PrintSystemObject" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ Wenn Sie aus einer Windows Forms-Anwendung drucken möchten, finden Sie unter der <xref:System.Drawing.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintSystemException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintSystemException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintSystemException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Zeichenfolge, die den Fehlerzustand beschrieben wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintSystemException" /> Klasse, die eine entsprechende Fehlermeldung bereitstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintSystemException (int errorCode, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 errorCode, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemException.#ctor(System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Ein <see cref="T:System.Int32" /> , wird interpretiert, als ein HRESULT, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist.</param>
+        <param name="message">Eine Zeichenfolge, die den Fehlerzustand beschrieben wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintSystemException" /> -Klasse, die einen bestimmten Fehlercode und die Fehlermeldung enthält.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PrintSystemException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Daten, die zum Serialisieren oder Deserialisieren eines Objekts erforderlich ist.</param>
+        <param name="context">Der Kontext, einschließlich der Quelle und das Ziel des serialisierten Streams.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintSystemException" /> Klasse, die bestimmte Serialisierungsinformationen und Streamingkontext bereitstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintSystemException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Zeichenfolge, die den Fehlerzustand beschrieben wird.</param>
+        <param name="innerException">Der zugrunde liegende Fehlerzustand, der die Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintSystemException" /> Adapterklasse, die eine bestimmten Fehlermeldung angezeigt, einschließlich der zugrunde liegende Ursache für die Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintSystemException (int errorCode, string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 errorCode, string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemException.#ctor(System.Int32,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Ein <see cref="T:System.Int32" /> , wird interpretiert, als ein HRESULT, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist.</param>
+        <param name="message">Eine Zeichenfolge, die den Fehlerzustand beschrieben wird.</param>
+        <param name="innerException">Der zugrunde liegende Fehlerzustand, der die Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintSystemException" /> Klasse, die einen bestimmten Fehlercode und die Fehlermeldung sowie den zugrunde liegenden eine Ursache für die Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintSystemException (int errorCode, string message, string printerMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 errorCode, string message, string printerMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemException.#ctor(System.Int32,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="printerMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Ein <see cref="T:System.Int32" /> , wird interpretiert, als ein HRESULT, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist.</param>
+        <param name="message">Eine Zeichenfolge, die den Fehlerzustand beschrieben wird.</param>
+        <param name="printerMessage">Die Ausnahmemeldung gesendet, von der Druckertreiber oder einer nicht verwalteten Drucksystem-Komponente, die die Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintSystemException" /> -Klasse, die einen bestimmten Fehlercode, Fehlermeldung und Drucker Nachricht bietet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Daten, die zum Serialisieren oder Deserialisieren eines Objekts erforderlich ist.</param>
+        <param name="context">Der Kontext, einschließlich der Quelle und das Ziel des serialisierten Streams.</param>
+        <summary>Ruft die Daten, die zum Serialisieren des Objekts verwendet werden, und ruft den Kontext des serialisierten Streams ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

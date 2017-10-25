@@ -1,0 +1,53 @@
+<Namespace Name="System.Messaging">
+  <Docs>
+    <summary>Die <see cref="N:System.Messaging" /> Namespace enthält Klassen, mit denen Sie eine Verbindung herstellen, überwachen und Verwalten von Meldungswarteschlangen im Netzwerk und senden, empfangen und Einsehen von Nachrichten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mitglieder der <xref:System.Messaging.MessageQueue> -Klasse enthalten die folgenden Methoden zum Lesen und Schreiben von Nachrichten in der Warteschlange:  
+  
+-   Die <xref:System.Messaging.MessageQueue.Send%2A> Methode ermöglicht das Schreiben von Nachrichten in der Warteschlange. Überladungen der Methode ermöglichen es Ihnen, anzugeben, ob zum Senden der Nachricht mit einem <xref:System.Messaging.Message> (bietet eine detaillierte Kontrolle über die Informationen, die Sie senden) oder ein anderes verwaltetes Objekt, einschließlich der anwendungsspezifische Klassen. Die Methode unterstützt auch sendende von Nachrichten im Rahmen einer Transaktion.  
+  
+-   Die <xref:System.Messaging.MessageQueue.Receive%2A>, <xref:System.Messaging.MessageQueue.ReceiveById%2A>, und <xref:System.Messaging.MessageQueue.ReceiveByCorrelationId%2A> Methoden bieten Funktionen für das Lesen von Nachrichten aus einer Warteschlange. Wie die <xref:System.Messaging.MessageQueue.Send%2A> -Methode bereitstellen, diese Methoden Überladungen, die transaktionale Verarbeitung zu unterstützen. Diese Methoden bieten auch Überladungen mit Timeouts.  
+  
+     Out-Parameter, mit denen die Verarbeitung fortgesetzt werden kann, wenn die Warteschlange leer ist. Da diese Methoden Beispiele für synchrone Verarbeitung sind, unterbrechen sie den aktuellen Thread, bis eine Nachricht verfügbar ist, es sei denn, Sie einen Timeoutwert angeben.  
+  
+-   Die <xref:System.Messaging.MessageQueue.Peek%2A> Methode ist vergleichbar mit <xref:System.Messaging.MessageQueue.Receive%2A>, aber es bewirkt nicht, eine Nachricht aus der Warteschlange entfernt werden soll, wenn sie gelesen werden kann. Da <xref:System.Messaging.MessageQueue.Peek%2A> ändert sich nicht auf den Inhalt der Warteschlange stehen keine Überladungen auf, um die Verarbeitung von Transaktionen zu unterstützen. Aber da <xref:System.Messaging.MessageQueue.Peek%2A>, z. B. <xref:System.Messaging.MessageQueue.Receive%2A>, Nachrichten synchron aus der Warteschlange liest, unterstützen Überladungen der Methode zum Angeben eines Timeouts, um zu verhindern, dass den Thread unbegrenzt wartet.  
+  
+-   Die <xref:System.Messaging.MessageQueue.BeginPeek%2A>, <xref:System.Messaging.MessageQueue.EndPeek%28System.IAsyncResult%29>, <xref:System.Messaging.MessageQueue.BeginReceive%2A>, und <xref:System.Messaging.MessageQueue.EndReceive%28System.IAsyncResult%29> Methoden bieten Möglichkeiten zum asynchronen Lesen von Nachrichten aus der Warteschlange. Unterbrechen sie den aktuellen Thread nicht während des Wartens auf einer Nachricht in der Warteschlange eintrifft.  
+  
+ Die folgenden Methoden der <xref:System.Messaging.MessageQueue> Klasse bieten Funktionen zum Abrufen von Listen mit Warteschlangen nach angegebenen Kriterien und bestimmen, ob bestimmte Warteschlangen vorhanden sind:  
+  
+-   <xref:System.Messaging.MessageQueue.GetPrivateQueuesByMachine%28System.String%29>ermöglicht das Abrufen der privaten Warteschlangen auf einem Computer.  
+  
+-   <xref:System.Messaging.MessageQueue.GetPublicQueuesByCategory%28System.Guid%29>, <xref:System.Messaging.MessageQueue.GetPublicQueuesByLabel%28System.String%29>, und <xref:System.Messaging.MessageQueue.GetPublicQueuesByMachine%28System.String%29> bieten Möglichkeiten zum Abrufen von öffentlichen Warteschlangen durch common Criteria. Eine Überladung der <xref:System.Messaging.MessageQueue.GetPublicQueues%2A> bietet auch genauere Details zum Auswählen von Warteschlangen basierend auf einer Reihe von Suchkriterien.  
+  
+ Andere Methoden der <xref:System.Messaging.MessageQueue> Klasse bieten die folgenden Funktionen:  
+  
+-   Erstellen und Löschen von Message Queuing-Warteschlangen.  
+  
+-   Verwenden einen Enumerator für die Nachricht um zu durchlaufen, die Nachrichten in einer Warteschlange.  
+  
+-   Verwenden einen Warteschlange-Enumerator zum Durchlaufen der Warteschlangen auf dem System.  
+  
+-   Festlegen von ACL-basierte Zugriffsrechte.  
+  
+-   Arbeiten mit den Verbindungscache.  
+  
+ Die <xref:System.Messaging.Message> Klasse bietet detaillierte Kontrolle über die Informationen, die Sie an eine Warteschlange senden, und das Objekt wird verwendet werden, wenn aus einer Warteschlange empfangen oder Einsehen von Nachrichten. Neben dem Nachrichtentext und die Eigenschaften der <xref:System.Messaging.Message> Klasse zählen Einstellungen für die Bestätigung, Formatierer Auswahl, Kennung, Authentifizierung und Verschlüsselung, Zeitstempel, sowie Angaben zum Verwenden der Ablaufverfolgung, Server-Journaling und unzustellbare Warteschlangen und Transaktionsdaten.  
+  
+ Die <xref:System.Messaging.MessageQueue> Komponente bezieht sich auf die folgenden drei Formatierer, der ermöglichen es Ihnen, Serialisierung und Deserialisierung von Nachrichten gesendet und Empfangen von Warteschlangen:  
+  
+-   Die <xref:System.Messaging.XmlMessageFormatter> bietet lose messaging, unabhängige versionsverwaltung serialisierten Typen auf dem Client und Server zu aktivieren.  
+  
+-   Die <xref:System.Messaging.ActiveXMessageFormatter> ist kompatibel mit dem MSMQ-COM-Steuerelement. Sie können zum Senden von Typen, die vom Steuerelement empfangen werden können und das Empfangen von Typen, die vom Steuerelement gesendet wurden.  
+  
+-   Die <xref:System.Messaging.BinaryMessageFormatter> bietet eine schnellere Alternative zu den <xref:System.Messaging.XmlMessageFormatter>, jedoch ohne den Vorteil lose messaging.  
+  
+ Andere Klassen in der `Messaging` Namespaces unterstützt Codezugriff und ACL-basierte Sicherheit filtern <xref:System.Messaging.Message> Eigenschaften, die beim Lesen von Nachrichten aus einer Warteschlange, und Verwenden von Transaktionen, die beim Senden und Empfangen von Nachrichten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

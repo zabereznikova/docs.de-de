@@ -1,0 +1,100 @@
+<Type Name="GeoPositionStatus" FullName="System.Device.Location.GeoPositionStatus">
+  <TypeSignature Language="C#" Value="public enum GeoPositionStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GeoPositionStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Location.GeoPositionStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, die Fähigkeit des Anbieters Speicherort, Speicherort Updates bereitzustellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie behandelt <xref:System.Device.Location.GeoCoordinateWatcher.StatusChanged> Ereignisse und drucken Sie den aktuellen <xref:System.Device.Location.GeoPositionStatus>.  
+  
+ [!code-csharp[System.Device.Location.ShowStatusUpdates#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.showstatusupdates/cs/showstatusupdates.cs#1)]
+ [!code-vb[System.Device.Location.ShowStatusUpdates#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.showstatusupdates/vb/ShowStatusUpdates.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="Disabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Location.GeoPositionStatus Disabled = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Device.Location.GeoPositionStatus.Disabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoPositionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherortanbieter ist deaktiviert. Unter Windows 7 ist dies der Fall, wenn die Sensoren und Plattform durch eine Gruppenrichtlinie deaktiviert wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Initializing">
+      <MemberSignature Language="C#" Value="Initializing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Location.GeoPositionStatus Initializing = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Device.Location.GeoPositionStatus.Initializing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoPositionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherortanbieter wird initialisiert.  Beispielsweise weist ein GPS, die immer noch eine Korrektur erhalten, wird dieser Status.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoData">
+      <MemberSignature Language="C#" Value="NoData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Location.GeoPositionStatus NoData = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Device.Location.GeoPositionStatus.NoData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoPositionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Standortdaten ist von einem Speicherortanbieter verfügbar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Bedingungen für deaktiviert nicht gelten, <xref:System.Device.Location.GeoCoordinateWatcher> weist diesen Status, bevor er gestartet wurde, und nachdem er beendet wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ready">
+      <MemberSignature Language="C#" Value="Ready" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Location.GeoPositionStatus Ready = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Device.Location.GeoPositionStatus.Ready" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoPositionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Standortanbieter ist bereit, um neue Daten anzugeben.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

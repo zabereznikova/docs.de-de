@@ -1,0 +1,208 @@
+<Type Name="AddInController" FullName="System.AddIn.Hosting.AddInController">
+  <TypeSignature Language="C#" Value="public sealed class AddInController" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AddInController extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.AddInController" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Zugriff auf ein Add-In für eine Vielzahl von Aufgaben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Klasse, um die folgenden Aufgaben ausführen:  
+  
+-   Verwenden der <xref:System.AddIn.Hosting.AddInController.AddInEnvironment%2A> -Eigenschaft zum Abrufen einer <xref:System.AddIn.Hosting.AddInEnvironment> Objekt für ein Add-in. Klicken Sie dann verwenden Sie dieses Objekt, um andere Add-Ins in derselben Anwendungsdomäne und Prozess wie das ursprüngliche add-in zu aktivieren.  
+  
+-   Verwenden der <xref:System.AddIn.Hosting.AddInController.AppDomain%2A> -Eigenschaft zum Abrufen einer <xref:System.AppDomain> Objekt für ein Add-in. Klicken Sie dann verwenden Sie dieses Objekt, um andere Add-Ins in derselben Anwendungsdomäne wie der ursprüngliche Add-in zu aktivieren. Beachten Sie, dass aufgrund von Einschränkungen bezüglich prozessübergreifend Remoting, dieses Szenario nicht mit add-ins möglich ist, die in einem separaten Prozess aktiviert werden.  
+  
+-   Verwenden der <xref:System.AddIn.Hosting.AddInController.Token%2A> -Eigenschaft zum Abrufen einer <xref:System.AddIn.Hosting.AddInToken> Objekt, das ein Add-In darstellt.  
+  
+-   Fahren Sie ein Add-in mit dem <xref:System.AddIn.Hosting.AddInController.Shutdown%2A> Methode.  
+  
+ Um den Controller für ein Add-in zu erhalten, rufen Sie die <xref:System.AddIn.Hosting.AddInController.GetAddInController%2A> Methode und übergeben Sie eine Instanz des Add-Ins als Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Add-in in derselben Umgebung wie ein zuvor aktivierten Add-in mithilfe einer <xref:System.AddIn.Hosting.AddInController> Objekt.  
+  
+ [!code-csharp[AddInP3Host#8](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#8)]
+ [!code-vb[AddInP3Host#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddInEnvironment">
+      <MemberSignature Language="C#" Value="public System.AddIn.Hosting.AddInEnvironment AddInEnvironment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.AddIn.Hosting.AddInEnvironment AddInEnvironment" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInController.AddInEnvironment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.AddIn.Hosting.AddInEnvironment" /> Objekt.</summary>
+        <value>Ein Objekt, das verwendet werden kann, um andere Add-Ins in derselben Umgebung wie das ursprüngliche add-in zu aktivieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Abrufen der <xref:System.AddIn.Hosting.AddInEnvironment> -Objekt für ein Add-in. Klicken Sie dann verwenden Sie dieses Objekt, um andere Add-Ins in derselben Anwendungsdomäne und Prozess wie das ursprüngliche add-in zu aktivieren.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine zweite-add-in in derselben Umgebung wie das erste Add-In aktiviert.  
+  
+ [!code-csharp[AddInP3Host#8](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#8)]
+ [!code-vb[AddInP3Host#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppDomain">
+      <MemberSignature Language="C#" Value="public AppDomain AppDomain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.AppDomain AppDomain" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInController.AppDomain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AppDomain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anwendungsdomäne, die ein Add-In enthält.</summary>
+        <value>Die Anwendungsdomäne des Add-Ins.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie ein Add-in abrufen <xref:System.AppDomain> Objekt und andere Add-ins in der gleichen Anwendungsdomäne zu aktivieren.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein zweites Add-in in derselben Anwendungsdomäne wie der erste Add-In aktiviert.  
+  
+ [!code-csharp[AddInP3Host#9](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#9)]
+ [!code-vb[AddInP3Host#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAddInController">
+      <MemberSignature Language="C#" Value="public static System.AddIn.Hosting.AddInController GetAddInController (object addIn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.AddIn.Hosting.AddInController GetAddInController(object addIn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInController.GetAddInController(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInController</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addIn" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="addIn">Der Hostansicht des Add-Ins.</param>
+        <summary>Ruft den Controller für ein Add-in ab.</summary>
+        <returns>Der Controller für das Add-in.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.AddIn.Hosting.AddInToken.Activate%2A> Methoden ein Objekt zurückgeben, der die Hostansicht des Add-Ins darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInController.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ein Add-in deaktiviert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird der Kommunikationspipeline zwischen einem Add-in und dessen Host unterbrochen. Wenn das Add-in in einer automatisch generierten Anwendungsdomäne mit aktiviert wurde die <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.AddIn.Hosting.AddInSecurityLevel%29> oder <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.Security.PermissionSet%29> Methoden, die <xref:System.AddIn.Hosting.AddInController.Shutdown%2A> Methode wird auch die Anwendungsdomäne entladen.  
+  
+ Wenn das Add-in in einer eigenen Anwendungsdomäne geladen wurde die <xref:System.AddIn.Hosting.AddInController.Shutdown%2A> Methode wird auch die Anwendungsdomäne entladen.  
+  
+ Wenn das Add-in in eine vorhandene Anwendungsdomäne geladen wurde, müssen die Hosts und Pipeline-Segmente nicht mehr alle Verweise auf dieses Add-in. In diesem Fall wird das Add-in von der Garbagecollection wieder zugänglich gemacht werden kann.  
+  
+ Diese Klasse können auch ein Add-in Herunterfahren, die in einem externen Prozess aktiviert ist.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel erhält die <xref:System.AddIn.Hosting.AddInController> Objekt für einen Hostansicht mit dem Namen `manager` und fährt dann das Add-in.  
+  
+ [!code-csharp[AddInCollectionPipelineHost#6](~/samples/snippets/csharp/VS_Snippets_CLR/AddInCollectionPipelineHost/cs/Program.cs#6)]
+ [!code-vb[AddInCollectionPipelineHost#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/AddInCollectionPipelineHost/vb/Program.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Token">
+      <MemberSignature Language="C#" Value="public System.AddIn.Hosting.AddInToken Token { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.AddIn.Hosting.AddInToken Token" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInController.Token" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Token ab, das das Add-in darstellt.</summary>
+        <value>Ein Objekt, das Add-In darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise verwenden Sie diese Eigenschaft zum Abrufen eines Token um ein Add-in zu einem späteren Zeitpunkt zu aktivieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,199 @@
+<Type Name="PublisherIdentityPermissionAttribute" FullName="System.Security.Permissions.PublisherIdentityPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PublisherIdentityPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit PublisherIdentityPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.PublisherIdentityPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht, dass Sicherheitsaktionen für <see cref="T:System.Security.Permissions.PublisherIdentityPermission" /> unter Verwendung deklarativer Sicherheit auf Code angewendet werden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Gültigkeitsbereich der Deklaration, die zulässig ist, hängt die <xref:System.Security.Permissions.SecurityAction> , der verwendet wird.  
+  
+ Die Eigenschaften <xref:System.Security.Permissions.PublisherIdentityPermissionAttribute.CertFile%2A>, <xref:System.Security.Permissions.PublisherIdentityPermissionAttribute.SignedFile%2A>, und <xref:System.Security.Permissions.PublisherIdentityPermissionAttribute.X509Certificate%2A> gegenseitig aus.  
+  
+ Die Sicherheitsinformationen, die von einem Sicherheitsattribut deklariert wird in den Metadaten des Attributziels gespeichert und vom System zur Laufzeit erfolgt. Sicherheitsattribute werden nur für die deklarative Sicherheit verwendet. Verwenden Sie für imperative Sicherheit die entsprechende Berechtigungsklasse.  
+  
+> [!IMPORTANT]
+>  Beginnend mit der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], Identitätsberechtigungen nicht verwendet werden.  
+>   
+>  In der .NET Framework-Versionen 1.0 und 1.1 Identitätsberechtigungen kein <xref:System.Security.Permissions.PermissionState.Unrestricted> Berechtigung-Status-Wert. Beginnend mit .NET Framework, Version 2.0 können Identitätsberechtigungen ausnahmslos Zustand Berechtigung verfügen. Dies bedeutet, dass in den Versionen 2.0 und höher, Identitätsberechtigungen das gleiche Verhalten wie Berechtigungen verfügen, implementieren die <xref:System.Security.Permissions.IUnrestrictedPermission> Schnittstelle.  
+  
+> [!NOTE]
+>  Standardmäßig Codezugriffssicherheit sucht nicht nach <xref:System.Security.Policy.Publisher> Beweis. Wenn Ihr Computer eine Gruppe auf Grundlage benutzerdefinierter Code verfügt die <xref:System.Security.Policy.PublisherMembershipCondition> -Klasse, können Sie die Leistung verbessern, durch die Überprüfung der Authenticode-Signatur umgehen. Dies erfolgt durch Konfigurieren der Laufzeit nicht bereitstellen <xref:System.Security.Policy.Publisher> Beweis für die Codezugriffssicherheit. Weitere Informationen zum Konfigurieren dieser Option und dem können Anwendungen verwenden, finden Sie unter dem Element.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PublisherIdentityPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.PublisherIdentityPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Einer der <see cref="T:System.Security.Permissions.SecurityAction" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Permissions.PublisherIdentityPermissionAttribute" />-Klasse mit der angegebenen <see cref="T:System.Security.Permissions.SecurityAction" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertFile">
+      <MemberSignature Language="C#" Value="public string CertFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CertFile" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.PublisherIdentityPermissionAttribute.CertFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert eine Zertifizierungsstellen-Datei mit einer Authenticode x. 509v3-Zertifikat.</summary>
+        <value>Der Dateipfad einer x. 509-Zertifikat-Datei (normalerweise einer hat).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Security.Permissions.PublisherIdentityPermissionAttribute.X509Certificate%2A> festgelegt ist, wird diese Eigenschaft wird ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.PublisherIdentityPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine neue Instanz der <see cref="T:System.Security.Permissions.PublisherIdentityPermission" />.</summary>
+        <returns>Eine <see cref="T:System.Security.Permissions.PublisherIdentityPermission" />, die diesem Attribut entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte nur durch das Sicherheitssystem nie vom Anwendungscode aufgerufen werden.  
+  
+ Zum Zeitpunkt der Kompilierung konvertieren Attribute Sicherheitsdeklarationen in serialisierter Form in Metadaten an. Deklarative Sicherheit von Daten in den Metadaten werden über die Berechtigung, die Rückgabe dieser Methode erstellt, die dieses Attribut entspricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedFile">
+      <MemberSignature Language="C#" Value="public string SignedFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignedFile" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.PublisherIdentityPermissionAttribute.SignedFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert eine signierte Datei, aus dem ein Authenticode x. 509v3-Zertifikat extrahiert werden sollen.</summary>
+        <value>Der Dateipfad einer Datei mit der Authenticode-Signatur signiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn entweder <xref:System.Security.Permissions.PublisherIdentityPermissionAttribute.X509Certificate%2A> oder <xref:System.Security.Permissions.PublisherIdentityPermissionAttribute.CertFile%2A> festgelegt ist, wird diese Eigenschaft wird ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X509Certificate">
+      <MemberSignature Language="C#" Value="public string X509Certificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string X509Certificate" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.PublisherIdentityPermissionAttribute.X509Certificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Authenticode x. 509v3-Zertifikat, das den Herausgeber des aufrufenden Codes identifiziert.</summary>
+        <value>Eine hexadezimale Darstellung des x. 509-Zertifikats.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft festgelegt ist, <xref:System.Security.Permissions.PublisherIdentityPermissionAttribute.CertFile%2A> und <xref:System.Security.Permissions.PublisherIdentityPermissionAttribute.SignedFile%2A> werden ignoriert.  
+  
+ Sie erhalten die hexadezimale Darstellung durch Ausführen der Strong Name-Tool (Sn.exe) mit den Optionen für token und öffentlichen Schlüssel (**"sn"** **- Tp** *Keyfile* `)` für eine Datei mit einer Authenticode-Signatur. Weitere Informationen finden Sie unter [Sn.exe (Strong Name-Tool)](~/docs/framework/tools/sn-exe-strong-name-tool.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

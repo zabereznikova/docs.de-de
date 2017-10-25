@@ -1,0 +1,73 @@
+<Type Name="WebApplicationLevel" FullName="System.Web.Configuration.WebApplicationLevel">
+  <TypeSignature Language="C#" Value="public enum WebApplicationLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebApplicationLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.WebApplicationLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Pfadebene einer Konfigurationsdatei für die Web-Anwendung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.WebApplicationLevel> Klasse bietet drei Ebenen, die verwendet werden, um zu unterscheiden, in denen eine Konfigurationsdatei in Bezug auf der Stammebene einer ASP.NET Web-Anwendung ist. Die drei Typen sind AboveApplication, AtApplication und BelowApplication.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AboveApplication">
+      <MemberSignature Language="C#" Value="AboveApplication" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.WebApplicationLevel AboveApplication = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.WebApplicationLevel.AboveApplication" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.WebApplicationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Konfigurationsdatei in einem globalen Verzeichnis in Bezug auf die aktuelle ASP.NET-Webanwendung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AtApplication">
+      <MemberSignature Language="C#" Value="AtApplication" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.WebApplicationLevel AtApplication = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.WebApplicationLevel.AtApplication" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.WebApplicationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Konfigurationsdatei im Stammverzeichnis der aktuellen ASP.NET Web-Anwendung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BelowApplication">
+      <MemberSignature Language="C#" Value="BelowApplication" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.WebApplicationLevel BelowApplication = int32(30)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.WebApplicationLevel.BelowApplication" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.WebApplicationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Konfigurationsdatei in einem Unterverzeichnis der aktuellen ASP.NET Web-Anwendung.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

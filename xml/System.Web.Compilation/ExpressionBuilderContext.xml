@@ -1,0 +1,107 @@
+<Type Name="ExpressionBuilderContext" FullName="System.Web.Compilation.ExpressionBuilderContext">
+  <TypeSignature Language="C#" Value="public sealed class ExpressionBuilderContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExpressionBuilderContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ExpressionBuilderContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Kontext für eine <see cref="T:System.Web.Compilation.ExpressionBuilder" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.Compilation.ExpressionBuilderContext> Objekt in der Regel verwendet, um einen virtuellen Pfad abzurufen oder einen <xref:System.Web.UI.Control.TemplateControl%2A> Eigenschaft für die Verwendung mit einer Ausdrucks-Generator. Weitere Informationen finden Sie unter <xref:System.Web.Configuration.ExpressionBuilder>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionBuilderContext (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionBuilderContext.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad der Datei mit dem angegebenen verknüpften <see cref="T:System.Web.Compilation.ExpressionBuilder" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Compilation.ExpressionBuilderContext" /> -Klasse unter Verwendung des angegebenen virtuellen Pfads.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionBuilderContext (System.Web.UI.TemplateControl templateControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.TemplateControl templateControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionBuilderContext.#ctor(System.Web.UI.TemplateControl)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="templateControl" Type="System.Web.UI.TemplateControl" />
+      </Parameters>
+      <Docs>
+        <param name="templateControl">Die <see cref="T:System.Web.UI.TemplateControl" /> für die Verwendung mit dem angegebenen <see cref="T:System.Web.Compilation.ExpressionBuilder" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Compilation.ExpressionBuilderContext" /> -Klasse unter Verwendung der angegebenen Vorlage-Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateControl">
+      <MemberSignature Language="C#" Value="public System.Web.UI.TemplateControl TemplateControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.TemplateControl TemplateControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ExpressionBuilderContext.TemplateControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.TemplateControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine <see cref="T:System.Web.Compilation.ExpressionBuilder" /> Objekt mit einem Verweis auf eine <see cref="T:System.Web.UI.TemplateControl" /> Objekt.</summary>
+        <value>Die <see cref="T:System.Web.UI.TemplateControl" /> , die diesen Ausdruck enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Ausdrucks-Generator möglicherweise zusätzliche Informationen über die entsprechende Seite auszuwerten, oder den Wert des Ausdrucks zu analysieren.  
+  
+ Dies bietet außerdem die <xref:System.Web.Compilation.ExpressionBuilder> -Objekt mit Informationen über die Seite, die erforderlich sind. Wenn eine Instanz eines Steuerelements Teil einer Steuerelementvorlage ist die <xref:System.Web.Compilation.ExpressionBuilderContext.TemplateControl%2A> Eigenschaft enthält einen Verweis auf das Steuerelement enthält. Weitere Informationen finden Sie unter <xref:System.Web.UI.TemplateControl>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualPath">
+      <MemberSignature Language="C#" Value="public string VirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ExpressionBuilderContext.VirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen virtuellen Pfad der Datei zugeordneten der <see cref="T:System.Web.Compilation.ExpressionBuilderContext" /> Objekt.</summary>
+        <value>Der virtuelle Pfad der Datei zugeordneten der <see cref="T:System.Web.Compilation.ExpressionBuilderContext" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

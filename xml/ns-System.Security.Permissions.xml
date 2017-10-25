@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Permissions">
+  <Docs>
+    <summary>Die <see cref="N:System.Security.Permissions" /> Namespace definiert Klassen, die Steuerung des Zugriffs auf Vorgänge und Ressourcen basierend auf Richtlinien.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

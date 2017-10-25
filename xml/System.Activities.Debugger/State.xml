@@ -1,0 +1,23 @@
+<Type Name="State" FullName="System.Activities.Debugger.State">
+  <TypeSignature Language="C#" Value="public class State" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit State extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Debugger.State" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerNonUserCode</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwaltet Eigenschafteninformationen, die Quellcodespeicherorte angeben, die als Haltepunkte dienen können oder in die +++Einzelschritte durch den Interpreter ausgeführt werden können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members />
+</Type>

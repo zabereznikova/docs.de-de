@@ -1,0 +1,214 @@
+<Type Name="DecoderExceptionFallbackBuffer" FullName="System.Text.DecoderExceptionFallbackBuffer">
+  <TypeSignature Language="C#" Value="public sealed class DecoderExceptionFallbackBuffer : System.Text.DecoderFallbackBuffer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DecoderExceptionFallbackBuffer extends System.Text.DecoderFallbackBuffer" />
+  <TypeSignature Language="DocId" Value="T:System.Text.DecoderExceptionFallbackBuffer" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.DecoderFallbackBuffer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Löst <see cref="T:System.Text.DecoderFallbackException" /> Wenn eine codierte Eingabebytefolge nicht in ein decodiertes Ausgabezeichen konvertiert werden kann. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine häufige Ursache für ein Codierungs- oder Decodierungsvorgang fehlschlägt ist, wenn der zugrunde liegenden Codierungsklasse nicht über eine Zuordnung zwischen einem Zeichen und eine entsprechende Bytesequenz erbringt. Wenn die Eingabebytefolge in ein Ausgabezeichen konvertiert werden kann, ruft der Decodierungsvorgang der <xref:System.Text.DecoderExceptionFallbackBuffer.Fallback%2A> -Methode, die löst <xref:System.Text.DecoderFallbackException>.  
+  
+ Die <xref:System.Text.DecoderFallbackBuffer?displayProperty=nameWithType> Klasse, die in einen Decodierungsvorgang verwendeten Datenpuffer darstellt, ist die Basisklasse für die <xref:System.Text.DecoderExceptionFallbackBuffer> Klasse. Anstatt jedoch zu einem Datenpuffer der <xref:System.Text.DecoderExceptionFallbackBuffer> Klasse stellt ein Standardverhalten aus, in dem eine Ausnahme ausgelöst werden, wenn ein Decodierungsvorgang fehlschlägt. Keine tatsächlichen Datenpuffer vorhanden ist, und die Elemente, die zum Bearbeiten eines solchen Puffers entworfen haben keine wesentliche Aufgabe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DecoderExceptionFallbackBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderExceptionFallbackBuffer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Text.DecoderExceptionFallbackBuffer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fallback">
+      <MemberSignature Language="C#" Value="public override bool Fallback (byte[] bytesUnknown, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Fallback(unsigned int8[] bytesUnknown, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderExceptionFallbackBuffer.Fallback(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytesUnknown" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytesUnknown">Ein Eingabearray von Bytes.</param>
+        <param name="index">Die Indexposition eines Bytes in der Eingabe.</param>
+        <summary>Löst <see cref="T:System.Text.DecoderFallbackException" /> Wenn die Eingabebytefolge nicht decodiert werden kann. Der nominelle Rückgabewert wird nicht verwendet.</summary>
+        <returns>Keine Es wird kein Wert zurückgegeben, da die <see cref="M:System.Text.DecoderExceptionFallbackBuffer.Fallback(System.Byte[],System.Int32)" /> Methode löst immer eine Ausnahme aus.  
+  
+ Der nominelle Rückgabewert ist <see langword="true" />. Ein Rückgabewert wird definiert, obwohl es unveränderlich ist, da diese Methode eine abstrakte Methode implementiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Text.Encoding.GetBytes%2A> und <xref:System.Text.Decoder.Convert%2A> -Methode <xref:System.Text.DecoderExceptionFallbackBuffer.Fallback%2A> treten ein unbekanntes Byte in der Eingabe. In der Antwort die <xref:System.Text.DecoderExceptionFallbackBuffer.Fallback%2A> Methode löst immer <xref:System.Text.DecoderFallbackException> und zeigt die Eingabedaten. Die <xref:System.Text.DecoderExceptionFallbackBuffer.Fallback%2A> nominell angibt, ob eine Ausnahme ausgelöst wird, wenn eine Eingabebytefolge nicht decodiert werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Text.DecoderFallbackException">Diese Methode löst immer eine Ausnahme, die die Position Wert und den Index des input Bytes meldet, das nicht decodiert werden kann.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextChar">
+      <MemberSignature Language="C#" Value="public override char GetNextChar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance char GetNextChar() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderExceptionFallbackBuffer.GetNextChar" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das nächste Zeichen im Ausnahmedatenpuffer ab.</summary>
+        <returns>Der Rückgabewert ist immer das Unicode-Zeichen NULL (U + 0000).  
+  
+ Ein Rückgabewert wird definiert, obwohl es unveränderlich ist, da diese Methode eine abstrakte Methode implementiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da <xref:System.Text.DecoderExceptionFallbackBuffer> verfügt über keine tatsächliche Ausnahme Datenpuffers der <xref:System.Text.DecoderExceptionFallbackBuffer.GetNextChar%2A> -Methode immer die Unicode-Zeichen NULL zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MovePrevious">
+      <MemberSignature Language="C#" Value="public override bool MovePrevious ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MovePrevious() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderExceptionFallbackBuffer.MovePrevious" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass beim nächsten Aufruf von <see cref="M:System.Text.DecoderExceptionFallbackBuffer.GetNextChar" /> auf die Zeichenposition im, die vor der aktuellen Position zugreifen.</summary>
+        <returns>Der Rückgabewert ist immer <see langword="false" />.  
+  
+ Ein Rückgabewert wird definiert, obwohl es unveränderlich ist, da diese Methode eine abstrakte Methode implementiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da <xref:System.Text.DecoderExceptionFallbackBuffer> verfügt über keine tatsächliche Ausnahme Datenpuffers der <xref:System.Text.DecoderExceptionFallbackBuffer.MovePrevious%2A> immer Methodenrückgabe `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remaining">
+      <MemberSignature Language="C#" Value="public override int Remaining { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Remaining" />
+      <MemberSignature Language="DocId" Value="P:System.Text.DecoderExceptionFallbackBuffer.Remaining" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Zeichen in der aktuellen <see cref="T:System.Text.DecoderExceptionFallbackBuffer" /> -Objekt, das noch verarbeitet werden soll.</summary>
+        <value>Der Rückgabewert ist immer 0 (null).  
+  
+ Ein Rückgabewert wird definiert, obwohl es unveränderlich ist, da diese Methode eine abstrakte Methode implementiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da <xref:System.Text.DecoderExceptionFallbackBuffer> verfügt über keine tatsächliche Ausnahme Datenpuffers die <xref:System.Text.DecoderExceptionFallbackBuffer.Remaining%2A> Eigenschaft gibt immer 0 (null) zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

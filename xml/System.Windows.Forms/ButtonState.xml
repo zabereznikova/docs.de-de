@@ -1,0 +1,135 @@
+<Type Name="ButtonState" FullName="System.Windows.Forms.ButtonState">
+  <TypeSignature Language="C#" Value="public enum ButtonState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ButtonState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ButtonState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Darstellung einer Schaltfläche.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration stellt die verschiedenen Zustände einer Schaltfläche dar. Der Standardstatus lautet `Normal`.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel verwenden Sie die `ButtonState` -Enumeration als Parameter an die Methode <xref:System.Windows.Forms.ControlPaint.DrawButton%2A> , geben Sie den Status des `button1`. Das Beispiel ausführen, erstellen Sie zwei Schaltflächen `button1` und `button2`. Ersetzen Sie dann die `button2_Click` Methode durch den Beispielcode. Klicken Sie auf `button2` zum Neuzeichnen `button1` und ändert seinen Status zu `Flat`.  
+  
+ [!code-cpp[ButtonState#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ButtonState/CPP/buttonstate1.cpp#1)]
+ [!code-csharp[ButtonState#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ButtonState/CS/buttonstate1.cs#1)]
+ [!code-vb[ButtonState#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ButtonState/VB/buttonstate1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ButtonState All = int32(18176)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ButtonState.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Flags außer <see langword="Normal" /> festgelegt sind.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="Checked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ButtonState Checked = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ButtonState.Checked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schaltfläche "" hat eine aktiviert oder eingerastet dargestellt. Verwenden Sie diese Darstellung, um anzuzeigen, dass eine Umschaltfläche gedrückt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Flat">
+      <MemberSignature Language="C#" Value="Flat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ButtonState Flat = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ButtonState.Flat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schaltfläche "" weist eine flache, zweidimensionale Darstellung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inactive">
+      <MemberSignature Language="C#" Value="Inactive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ButtonState Inactive = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ButtonState.Inactive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schaltfläche ist deaktiviert (abgeblendet).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ButtonState Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ButtonState.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schaltfläche "" hat die normale Darstellung (dreidimensionalen).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pushed">
+      <MemberSignature Language="C#" Value="Pushed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ButtonState Pushed = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ButtonState.Pushed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schaltfläche wird gedrückt angezeigt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

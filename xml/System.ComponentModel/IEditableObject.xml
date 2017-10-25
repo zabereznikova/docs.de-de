@@ -1,0 +1,159 @@
+<Type Name="IEditableObject" FullName="System.ComponentModel.IEditableObject">
+  <TypeSignature Language="C#" Value="public interface IEditableObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEditableObject" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.IEditableObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Funktionalität für einen commit oder Rollback der Änderungen auf ein Objekt, das als Datenquelle verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist in der Regel zur Erfassung der <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, und <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> Semantik einer <xref:System.Data.DataRowView>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel stellt eine einfache Implementierung der <xref:System.ComponentModel.IEditableObject> Schnittstelle. Die `Customer` -Klasse speichert Kundeninformationen und kann als eine Auflistung für eine Kundendatenbank verwendet werden. In diesem Beispiel wird davon ausgegangen, dass Sie verwendet haben, die `CustomerList` -Klasse, die im Beispiel in befinden, kann die <xref:System.ComponentModel.IBindingList> Klasse.  
+  
+ [!code-cpp[Binding_Editable#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Binding_Editable/CPP/binding_editable.cpp#1)]
+ [!code-csharp[Binding_Editable#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Binding_Editable/CS/binding_editable.cs#1)]
+ [!code-vb[Binding_Editable#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Binding_Editable/VB/binding_editable.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginEdit">
+      <MemberSignature Language="C#" Value="public void BeginEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IEditableObject.BeginEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beginnt eine Bearbeitung für ein Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in der Regel zur Erfassung der <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> Semantik einer <xref:System.Data.DataRowView>.  
+  
+ Wenn <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> wird aufgerufen, auf ein Objekt, das bereits bearbeitet wird, der zweite und nachfolgende Aufrufe werden ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ein Objekt implementieren diese Schnittstelle muss zum Speichern von Updates nach <see cref="M:System.ComponentModel.IEditableObject.BeginEdit" /> so, dass sie nicht verworfen werden können Wenn <see cref="M:System.ComponentModel.IEditableObject.CancelEdit" /> aufgerufen wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelEdit">
+      <MemberSignature Language="C#" Value="public void CancelEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IEditableObject.CancelEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verwirft Änderungen seit dem letzten <see cref="M:System.ComponentModel.IEditableObject.BeginEdit" /> aufrufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in der Regel zur Erfassung der <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> Semantik einer <xref:System.Data.DataRowView>.  
+  
+ Diese Methode wird ignoriert, wenn für ein Objekt aufgerufen wird, die nicht bearbeitet wird.  
+  
+> [!NOTE]
+>  Wenn die besitzende Liste implementiert <xref:System.ComponentModel.IBindingList>Aufrufen <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> für ein Objekt mit erstellt <xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=nameWithType> verwirft das Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEdit">
+      <MemberSignature Language="C#" Value="public void EndEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IEditableObject.EndEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schiebt Änderungen seit dem letzten <see cref="M:System.ComponentModel.IEditableObject.BeginEdit" /> oder <see cref="M:System.ComponentModel.IBindingList.AddNew" /> einen Aufruf an das zugrunde liegende Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in der Regel zur Erfassung der <xref:System.ComponentModel.IEditableObject.EndEdit%2A> Semantik einer <xref:System.Data.DataRowView>.  
+  
+ Diese Methode wird ignoriert, wenn für ein Objekt aufgerufen wird, die nicht bearbeitet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

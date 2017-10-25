@@ -1,0 +1,193 @@
+<Type Name="ExponentialEase" FullName="System.Windows.Media.Animation.ExponentialEase">
+  <TypeSignature Language="C#" Value="public class ExponentialEase : System.Windows.Media.Animation.EasingFunctionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExponentialEase extends System.Windows.Media.Animation.EasingFunctionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.ExponentialEase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.EasingFunctionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Beschleunigungsfunktion, die eine Animation erstellt, die beschleunigt und/oder verlangsamt wird mit einer Formel für exponentiellen dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können steuern, ob die Animation beschleunigt verlangsamt oder beidem durch Angabe der <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>. Das folgende Diagramm veranschaulicht die unterschiedlichen Werte von <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> , in denen *f*(*t*) den Animationsstatus und *t* Uhrzeit darstellt.  
+  
+ ![ExponentialEase-Diagramme von anderen Easingmodes. ] (~/add/media/exponentialease-graph.png "ExponentialEase-Diagramme von anderen Easingmodes.")  
+  
+ Die Formel für diese Funktion verwendet, lautet wie folgt.  
+  
+ ![Mathematische Formel für ExponentialEase](~/add/media/exponentialease-formula.png "mathematische Formel für ExponentialEase")  
+  
+ Verwenden die oben stehende Formel an, das folgende Diagramm veranschaulicht den Effekt von mehreren unterschiedlichen Werten für die <xref:System.Windows.Media.Animation.ExponentialEase.Exponent%2A> Eigenschaft:  
+  
+ ![ExponentialEase für drei Exponentenwerte](~/add/media/expo-easeproperty.png "ExponentialEase für drei Exponentenwerte")  
+  
+ Es gibt mehrere andere Beschleunigungsfunktionen neben <xref:System.Windows.Media.Animation.ExponentialEase> die Sie mit dem folgenden Silverlight-Beispiel untersuchen können.  
+  
+ [Dieses Beispiel ausführen](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
+  
+ Zusätzlich zur Verwendung der in der Laufzeit enthaltenen Beschleunigungsfunktionen, können Sie eigene benutzerdefinierten Beschleunigungsfunktionen erstellen, durch Vererben von <xref:System.Windows.Media.Animation.EasingFunctionBase>.  
+  
+<a name="xamlObjectElementUsage_ExponentialEase"></a>   
+## <a name="xaml-object-element-usage"></a>Verwendung von XAML-Objektelementen  
+  
+```  
+<ExponentialEase .../>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet eine <xref:System.Windows.Media.Animation.ExponentialEase> Beschleunigungsfunktionen-Funktion, um eine <xref:System.Windows.Media.Animation.DoubleAnimation> zum Erstellen einer Animation verlangsamt wird.  
+  
+ [!code-xaml[ExponentialEase#ExponentialEase](~/samples/snippets/csharp/VS_Snippets_Wpf/exponentialease/CS/window1.xaml#exponentialease)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExponentialEase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ExponentialEase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.ExponentialEase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ExponentialEase.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der aus <see cref="T:System.Windows.Freezable" /> abgeleiteten Klasse. Beim Erstellen einer abgeleiteten Klasse muss diese Methode überschrieben werden.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Animation-Klassen erben indirekt von <xref:System.Windows.Freezable>. Aus diesem Grund müssen Sie überschreiben die <xref:System.Windows.Media.Animation.BackEase.CreateInstanceCore%2A> Methode zum Erstellen einer benutzerdefinierten Animation-Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine typische Implementierung der <xref:System.Windows.Freezable.CreateInstanceCore%2A>.  
+  
+ [!code-csharp[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#createinstancecoreexample)]
+ [!code-vb[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#createinstancecoreexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInCore">
+      <MemberSignature Language="C#" Value="protected override double EaseInCore (double normalizedTime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance float64 EaseInCore(float64 normalizedTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ExponentialEase.EaseInCore(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="normalizedTime" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="normalizedTime">Die normalisierte Zeit (Fortschritt) der Animation.</param>
+        <summary>Stellt die Logik der Beschleunigungsfunktion bereit, die überschrieben werden kann, um den <see cref="F:System.Windows.Media.Animation.EasingMode.EaseIn" />-Modus der benutzerdefinierten Beschleunigungsfunktion zu erzeugen.</summary>
+        <returns>Ein Double-Wert, der den transformierten Fortschritt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode transformiert die normalisierte Zeit zu steuern, der die Geschwindigkeit der Animation für die <xref:System.Windows.Media.Animation.EasingMode.EaseIn> der Groß-/Kleinschreibung <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>.  
+  
+ Müssen nur die Beschleunigungsfunktion für angeben der <xref:System.Windows.Media.Animation.EasingMode.EaseIn> Fall, da die Implementierung der <xref:System.Windows.Media.Animation.EasingFunctionBase.Ease%2A> Methode Transformationen `normalizedTime` für die <xref:System.Windows.Media.Animation.EasingMode.EaseOut> und <xref:System.Windows.Media.Animation.EasingMode.EaseInOut> Fällen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exponent">
+      <MemberSignature Language="C#" Value="public double Exponent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Exponent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ExponentialEase.Exponent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Exponent die Interpolation der Animation bestimmt.</summary>
+        <value>Der Exponent, der zum Bestimmen der Interpolation der Animation verwendet wird. Der Standard ist 2.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DP_ID_field_label](~/includes/dp-id-field-label-md.md)] <xref:System.Windows.Media.Animation.ExponentialEase.ExponentProperty>  
+  
+ Die Formel verwendeten <xref:System.Windows.Media.Animation.ExponentialEase> lautet wie folgt.  
+  
+ ![Mathematische Formel für ExponentialEase](~/add/media/exponentialease-formula.png "mathematische Formel für ExponentialEase")  
+  
+ Mithilfe der vorherigen Formel an, das folgende Diagramm veranschaulicht den Effekt von mehreren unterschiedlichen Werten für die <xref:System.Windows.Media.Animation.ExponentialEase.Exponent%2A> Eigenschaft:  
+  
+ ![ExponentialEase für drei Exponentenwerte](~/add/media/expo-easeproperty.png "ExponentialEase für drei Exponentenwerte")  
+  
+<a name="xamlAttributeUsage_Exponent"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Exponent="double" .../>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExponentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ExponentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ExponentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.ExponentialEase.ExponentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.ExponentialEase.Exponent" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

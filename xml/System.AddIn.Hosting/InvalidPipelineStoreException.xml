@@ -1,0 +1,122 @@
+<Type Name="InvalidPipelineStoreException" FullName="System.AddIn.Hosting.InvalidPipelineStoreException">
+  <TypeSignature Language="C#" Value="public class InvalidPipelineStoreException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit InvalidPipelineStoreException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.InvalidPipelineStoreException" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn ein Verzeichnis nicht gefunden wird und der Benutzer besitzt keine Berechtigung den Zugriff auf den Stammpfad der Pipeline oder einen Add-in Pfad.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zur <xref:System.IO.DirectoryNotFoundException> stellt diese Ausnahme keine Pfadinformationen bereit. Hierdurch wird verhindert, dass ein böswilliger Benutzer absichtlich falsche Pfade angibt und die von der Ausnahme zurückgegebenen Informationen zur Ermittlung der tatsächlichen Pfade verwendet.  
+  
+ Diese Ausnahme wird ausgelöst, durch den folgenden Ermittlungsmethoden, die die Speicher-add-in und Pipelineinformationen erstellen und aktualisieren: <xref:System.AddIn.Hosting.AddInStore.FindAddIns%2A>,<xref:System.AddIn.Hosting.AddInStore.Rebuild%2A>, <xref:System.AddIn.Hosting.AddInStore.RebuildAddIns%2A>, <xref:System.AddIn.Hosting.AddInStore.Update%2A>, und <xref:System.AddIn.Hosting.AddInStore.UpdateAddIns%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidPipelineStoreException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.InvalidPipelineStoreException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.AddIn.Hosting.InvalidPipelineStoreException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidPipelineStoreException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.InvalidPipelineStoreException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Beschreibung des Fehlers.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.AddIn.Hosting.InvalidPipelineStoreException" />-Klasse mit der angegebenen Meldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InvalidPipelineStoreException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.InvalidPipelineStoreException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die serialisierten Objektdaten.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel-Objektdaten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.AddIn.Hosting.InvalidPipelineStoreException" /> Klasse mit Serialisierungs- und Kontextinformationen zu streamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird aufgerufen, bei der Deserialisierung in eine, die über einen Stream übertragene Ausnahmeobjekt. Weitere Informationen finden Sie unter [XML- und SOAP-Serialisierung](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidPipelineStoreException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.InvalidPipelineStoreException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Beschreibung des Fehlers.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>"InnerException"</c> -Parameter kein null-Verweis, die aktuelle Ausnahme wird ausgelöst, in einem Catch-Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.AddIn.Hosting.InvalidPipelineStoreException" /> Klasse mit der angegebenen Meldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A> -Eigenschaft gibt denselben Wert, der an den Konstruktor oder ein null-Verweis übergeben wird, wenn die <xref:System.Exception.InnerException%2A> -Eigenschaft nicht den Wert der inneren Ausnahme an den Konstruktor bereitstellt.  
+  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.AddIn.Hosting.AddInSegmentDirectoryNotFoundException>-Klasse.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.Exception.Message%2A>|Die lokalisierte Zeichenfolge mit der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

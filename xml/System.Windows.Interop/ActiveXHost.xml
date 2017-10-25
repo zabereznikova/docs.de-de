@@ -1,0 +1,214 @@
+<Type Name="ActiveXHost" FullName="System.Windows.Interop.ActiveXHost">
+  <TypeSignature Language="C#" Value="public class ActiveXHost : System.Windows.Interop.HwndHost" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ActiveXHost extends System.Windows.Interop.HwndHost" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.ActiveXHost" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Interop.HwndHost</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Hostet ein ActiveX-Steuerelement als Element in WPF-Inhalt (Windows Presentation Foundation).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Interop.ActiveXHost> -Klasse zum Hosten von ActiveX-Steuerelement und ein <xref:System.Windows.FrameworkElement>. Derzeit ist die Unterstützung auf Steuerelemente im Fenstermodus beschränkt.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="BuildWindowCore">
+      <MemberSignature Language="C#" Value="protected override System.Runtime.InteropServices.HandleRef BuildWindowCore (System.Runtime.InteropServices.HandleRef hwndParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Runtime.InteropServices.HandleRef BuildWindowCore(valuetype System.Runtime.InteropServices.HandleRef hwndParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.ActiveXHost.BuildWindowCore(System.Runtime.InteropServices.HandleRef)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.HandleRef</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwndParent" Type="System.Runtime.InteropServices.HandleRef" />
+      </Parameters>
+      <Docs>
+        <param name="hwndParent">Das übergeordnete Fenster.</param>
+        <summary>Erstellt die <see cref="T:System.Windows.Interop.ActiveXHost" /> Fenster und weist sie zu einem übergeordneten Element.</summary>
+        <returns>Ein <see cref="T:System.Runtime.InteropServices.HandleRef" /> auf die <see cref="T:System.Windows.Interop.ActiveXHost" /> Fenster.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DestroyWindowCore">
+      <MemberSignature Language="C#" Value="protected override void DestroyWindowCore (System.Runtime.InteropServices.HandleRef hwnd);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DestroyWindowCore(valuetype System.Runtime.InteropServices.HandleRef hwnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.ActiveXHost.DestroyWindowCore(System.Runtime.InteropServices.HandleRef)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwnd" Type="System.Runtime.InteropServices.HandleRef" />
+      </Parameters>
+      <Docs>
+        <param name="hwnd">Eine Struktur, die das Handle des Fensters enthält.</param>
+        <summary>Zerstört das gehostete Fenster an.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.ActiveXHost.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Interop.ActiveXHost" /> verwendeten nicht verwalteten Ressourcen und optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsDisposed">
+      <MemberSignature Language="C#" Value="protected bool IsDisposed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDisposed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.ActiveXHost.IsDisposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="M:System.Windows.Interop.ActiveXHost.Dispose(System.Boolean)" /> -Methode aufgerufen wurde, auf die <see cref="T:System.Windows.Interop.ActiveXHost" /> Instanz.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Interop.ActiveXHost" /> Instanz wurde verworfen wurde, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size swConstraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size swConstraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.ActiveXHost.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="swConstraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="swConstraint">Die Größe der <see cref="T:System.Windows.Interop.HwndHost" /> Objekt.</param>
+        <summary>Gibt die Größe des Fensters, dargestellt durch die <see cref="T:System.Windows.Interop.HwndHost" /> -Objekts, wie von layoutmodulvorgängen angefordert.</summary>
+        <returns>Die Größe der <see cref="T:System.Windows.Interop.HwndHost" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnAccessKey">
+      <MemberSignature Language="C#" Value="protected override void OnAccessKey (System.Windows.Input.AccessKeyEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAccessKey(class System.Windows.Input.AccessKeyEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.ActiveXHost.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Windows.Input.AccessKeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">Die Ereignisdaten an das Access-Key-Ereignis. Die Daten Ereignisberichte, welcher Schlüssel wurde aufgerufen, und angeben, ob die <see cref="T:System.Windows.Input.AccessKeyManager" /> Objekt, das Senden dieser Ereignisse steuert, diesen Access Key Aufruf auch auf andere Elemente gesendet.</param>
+        <summary>Stellt eine Klassenbehandlung für eine Tastenkombination, die Bedeutung für dieses Element sind aufgerufen wird.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.ActiveXHost.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten, die die geänderte Eigenschaft beschreibt, sowie die alten und neuen Werte.</param>
+        <summary>Wird aufgerufen, wenn der effektive Wert einer Abhängigkeitseigenschaft für dieses <see cref="T:System.Windows.FrameworkElement" /> aktualisiert wurde. Welche spezifische Abhängigkeitseigenschaft geändert wird, wird im Argumentparameter gemeldet. Überschreibt <see cref="M:System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnWindowPositionChanged">
+      <MemberSignature Language="C#" Value="protected override void OnWindowPositionChanged (System.Windows.Rect bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnWindowPositionChanged(valuetype System.Windows.Rect bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.ActiveXHost.OnWindowPositionChanged(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bounds" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="bounds">Die Position des Fensters.</param>
+        <summary>Wird aufgerufen, wenn die Position des gehosteten Fensters ändert.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

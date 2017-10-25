@@ -1,0 +1,171 @@
+<Type Name="SoapServerFormatterSinkProvider" FullName="System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider">
+  <TypeSignature Language="C#" Value="public class SoapServerFormatterSinkProvider : System.Runtime.Remoting.Channels.IServerFormatterSinkProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapServerFormatterSinkProvider extends System.Object implements class System.Runtime.Remoting.Channels.IServerChannelSinkProvider, class System.Runtime.Remoting.Channels.IServerFormatterSinkProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IServerFormatterSinkProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Implementierung für einen Server Formatierer verwendete Kanal Senkenanbieter die <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kanal senken Serverchannel durch Implementierungen von verbunden sind die <xref:System.Runtime.Remoting.Channels.IServerChannelSinkProvider> Schnittstelle. Geben Sie alle Server-Remotingkanäle Konstruktoren, die eine <xref:System.Runtime.Remoting.Channels.IServerChannelSinkProvider> als Parameter.  
+  
+ Sink-Channelanbieter werden in einer Kette gespeichert, und der Benutzer ist verantwortlich für das Verketten von allen Channelanbieter Senke vor der äußeren an den Kanal-Konstruktor übergeben. <xref:System.Runtime.Remoting.Channels.IServerChannelSinkProvider>Stellt eine Eigenschaft mit dem Namen <xref:System.Runtime.Remoting.Channels.IServerChannelSinkProvider.Next%2A> für diesen Zweck.  
+  
+ Wenn mehrere Channelanbieter Senke in einer Konfigurationsdatei angegeben sind, wird diese von Remoting-Infrastruktur in der Reihenfolge verkettet, die sie in der Konfigurationsdatei gefunden werden. Die Senke Channelanbieter und die Kanäle werden erstellt, während die <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%2A?displayProperty=nameWithType> aufrufen.  
+  
+ Formatierer senken verwenden Senkenkonfigurationseigenschaften auf den Kanal zur Laufzeit zu konfigurieren. Sink-Eigenschaften können angegeben werden, in einer Konfigurationsdatei oder programmgesteuert innerhalb von einer <xref:System.Collections.IDictionary>. In einer Konfigurationsdatei alle Werte dargestellt von Zeichenfolgen, sondern beim Erstellen einer Eigenschaft <xref:System.Collections.IDictionary> programmgesteuert Werttypen können angegeben werden mit ihren systemeigenen Werte oder Zeichenfolgen.  
+  
+ Die folgende Tabelle zeigt die Senke Konfigurationseigenschaften, die für die aktuelle Senke angegeben werden können.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|`includeVersions`|Gibt an, ob der Formatierer Versionsinformationen enthält. Werte sind `true` oder `false`.|  
+  
+> [!IMPORTANT]
+>  Verwenden eine Instanz dieses Objekts mit nicht vertrauenswürdigen Daten oder über einen unsicheren Kanal stellt ein Sicherheitsrisiko dar. Verwenden Sie dieses Objekt nur mit vertrauenswürdigen Daten und über einen sicheren Kanal. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapServerFormatterSinkProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider" />-Klasse mit Standardwerten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapServerFormatterSinkProvider (System.Collections.IDictionary properties, System.Collections.ICollection providerData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.IDictionary properties, class System.Collections.ICollection providerData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.#ctor(System.Collections.IDictionary,System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+        <Parameter Name="providerData" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Ein <see cref="T:System.Collections.IDictionary" /> von Konfigurationseigenschaften für die Verwendung mit der neuen Instanz von <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" />.</param>
+        <param name="providerData">Ein <see cref="T:System.Collections.ICollection" /> von Anbieterdaten für die Verwendung mit der neuen Instanz von <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider" /> -Klasse mit den bereitgestellten Eigenschaften und der Anbieterdaten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.IServerChannelSink CreateSink (System.Runtime.Remoting.Channels.IChannelReceiver channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Channels.IServerChannelSink CreateSink(class System.Runtime.Remoting.Channels.IChannelReceiver channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelReceiver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IServerChannelSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.Runtime.Remoting.Channels.IChannelReceiver" />
+      </Parameters>
+      <Docs>
+        <param name="channel">Der Kanal für die die Channelsenkenkette erstellt.</param>
+        <summary>Erstellt eine Senkenkette.</summary>
+        <returns>Die erste Senke der neu gebildeten Channelsenkenkette.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChannelData">
+      <MemberSignature Language="C#" Value="public void GetChannelData (System.Runtime.Remoting.Channels.IChannelDataStore channelData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetChannelData(class System.Runtime.Remoting.Channels.IChannelDataStore channelData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.GetChannelData(System.Runtime.Remoting.Channels.IChannelDataStore)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelData" Type="System.Runtime.Remoting.Channels.IChannelDataStore" />
+      </Parameters>
+      <Docs>
+        <param name="channelData">Ein <see cref="T:System.Runtime.Remoting.Channels.IChannelDataStore" /> Objekt, in dem die Kanaldaten zurückgegeben werden.</param>
+        <summary>Gibt die Kanaldaten für den Kanal, dem die aktuelle Senke zugeordnet ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.IServerChannelSinkProvider Next { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Channels.IServerChannelSinkProvider Next" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.Next" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IServerChannelSinkProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den nächsten <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> in der Kette.</summary>
+        <value>Das nächste <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> in der Kette.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeFilterLevel">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Formatters.TypeFilterLevel TypeFilterLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.Formatters.TypeFilterLevel TypeFilterLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.TypeFilterLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.TypeFilterLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see langword="TypeFilterLevel" /> Wert der automatischen Deserialisierung der <see langword="SoapServerFormatterSink" /> führt.</summary>
+        <value>Die <see langword="TypeFilterLevel" /> , die die aktuelle Ebene der automatischen Deserialisierung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterstützte Werte sind `Low` (Standard) und `Full`. Einzelheiten zur Deserialisierungsebenen finden Sie unter [automatische Deserialisierung in .NET Remoting](http://msdn.microsoft.com/en-us/313a0e88-5b2b-4a17-8391-0ddf9f7a787b).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

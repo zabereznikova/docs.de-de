@@ -1,0 +1,73 @@
+<Type Name="TabSizeMode" FullName="System.Windows.Forms.TabSizeMode">
+  <TypeSignature Language="C#" Value="public enum TabSizeMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TabSizeMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TabSizeMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie die Größe von Registerkarten im Registerkarten-Steuerelement festgelegt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird von Elementen verwendet, z. B. <xref:System.Windows.Forms.TabControl.SizeMode%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FillToRight">
+      <MemberSignature Language="C#" Value="FillToRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TabSizeMode FillToRight = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TabSizeMode.FillToRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Breite der einzelnen Registerkarten wird angepasst, damit jede Reihe der Registerkarten auf die gesamte Breite des Containersteuerelements einnimmt. Dies gilt nur für Registerkarten-Steuerelemente mit mehr als eine Zeile.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fixed">
+      <MemberSignature Language="C#" Value="Fixed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TabSizeMode Fixed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TabSizeMode.Fixed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Registerkarten in einem Steuerelement haben die gleiche Breite.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TabSizeMode Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TabSizeMode.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Breite der einzelnen Registerkarten wird angepasst, um aufzunehmen, was auf der Registerkarte angezeigt wird, und die Größe der Registerkarten in einer Zeile nicht zum Ausfüllen der gesamte Breite des Containersteuerelements angepasst werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

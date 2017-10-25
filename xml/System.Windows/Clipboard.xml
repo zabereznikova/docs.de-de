@@ -1,0 +1,832 @@
+<Type Name="Clipboard" FullName="System.Windows.Clipboard">
+  <TypeSignature Language="C#" Value="public static class Clipboard" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Clipboard extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Clipboard" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt statische Methoden bereit, die die Übertragung von Daten in die und aus der Zwischenablage des Systems erleichtern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Anwendungen für [!INCLUDE[TLA#tla_mswin](~/includes/tlasharptla-mswin-md.md)] die Systemzwischenablage freigeben, damit der Inhalt beim Wechsel zu einer anderen Anwendung geändert werden.  
+  
+ Eine Liste der vordefinierten Formate verfügbar sind, für die Verwendung mit der <xref:System.Windows.Clipboard> Klasse, finden Sie unter der <xref:System.Windows.DataFormats> Klasse.  
+  
+ **Sicherheitshinweis:** aus Sicherheitsgründen sollten die folgenden Punkte bedenken beibehalten werden.  
+  
+-   Einfügevorgänge müssen Benutzer initiiert werden (STRG + V, Menü Einfügen).  
+  
+-   Kopie kann nur auf die ausgewählten Benutzer ein Inhaltselement sein.  
+  
+-   Beim Kopieren oder Ausschneiden von teilweise vertrauenswürdigem Code setzt nur-Text und [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] an die Zwischenablage. Nur-Text enthält Text, Unicode-Text, OEM (Object Exchange Model) Text und CSV (Comma-separated Values).  
+  
+-   Beim Einfügen [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] wird, fügen Sie in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] , wenn die Quelle der, dass der Inhalt an einem Standort gleich vertrauenswürdigen oder mehr vertraut sind. Dies gilt insbesondere in folgenden Fällen:  
+  
+    -   Eine teilweise vertrauenswürdige Anwendung einfügen kann [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] aus einer Anwendung volle Vertrauenswürdigkeit.  
+  
+    -   Eine teilweise vertrauenswürdige Anwendung einfügen kann [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] von einer partiell vertrauenswürdigen Anwendung.  
+  
+    -   Eine voll vertrauenswürdige Anwendung kann XAML nur über eine voll vertrauenswürdige Anwendung einfügen.  
+  
+    -   Nicht[!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] voll vertrauenswürdige Anwendung ApplicationTrust-Format in die Zwischenablage überprüfen und den XAML-Code ggf. bereinigen kann.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie zum Hinzufügen von Daten in die Zwischenablage des Systems.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_SetData](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_setdata)]
+ [!code-vb[DragDrop_DragDropMiscCode#_SetData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_setdata)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public static void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Daten aus der Zwischenablage des Systems.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode entspricht dem Aufruf **von OleSetClipboard**(**null**).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsAudio">
+      <MemberSignature Language="C#" Value="public static bool ContainsAudio ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsAudio() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.ContainsAudio" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fragt die Zwischenablage, um das Vorhandensein von Daten in die <see cref="F:System.Windows.DataFormats.WaveAudio" /> Datenformat.</summary>
+        <returns>
+          <see langword="true" />Wenn Daten in die Zwischenablage enthält, die <see cref="F:System.Windows.DataFormats.WaveAudio" /> Datenformat ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `true` , wenn das angegebene Datenformat systemintern in die Zwischenablage; vorhanden ist diese Methode überprüft nicht auf das Vorhandensein des Auto-Datenformate.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsData">
+      <MemberSignature Language="C#" Value="public static bool ContainsData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.ContainsData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das Format der Daten, die gesucht werden soll. Finden Sie unter <see cref="T:System.Windows.DataFormats" /> für vordefinierte Formate.</param>
+        <summary>Fragt die Zwischenablage, um das Vorhandensein von Daten in einem Format angegebenen Daten.</summary>
+        <returns>
+          <see langword="true" />Wenn Daten im angegebenen Format in der Zwischenablage verfügbar sind. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Abfrage für das Datenformat <xref:System.Windows.DataFormats.Bitmap> oder <xref:System.Windows.DataFormats.FileDrop> zurück `true` , wenn die Daten automatisch in das angegebene Datenformat konvertiert werden können.  Für andere Datenformate Methodenrückgabe `true` nur, wenn das angegebene Format systemintern in die Zwischenablage verfügbar ist.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung dieser Methode veranschaulicht.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_ContainsDataGetData](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_containsdatagetdata)]
+ [!code-vb[DragDrop_DragDropMiscCode#_ContainsDataGetData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_containsdatagetdata)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsFileDropList">
+      <MemberSignature Language="C#" Value="public static bool ContainsFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.ContainsFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fragt die Zwischenablage, um das Vorhandensein von Daten in die <see cref="F:System.Windows.DataFormats.FileDrop" /> Datenformat.</summary>
+        <returns>
+          <see langword="true" />Wenn Daten in die Zwischenablage enthält, die <see cref="F:System.Windows.DataFormats.FileDrop" /> Datenformat ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `true` nur, wenn das angegebene Datenformat systemintern vorhanden, oder als ein automatisch konvertierbare-Format in die Zwischenablage kopiert werden steht; diese Methode überprüft nicht auf das Vorhandensein des Auto-Datenformate.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsImage">
+      <MemberSignature Language="C#" Value="public static bool ContainsImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.ContainsImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fragt die Zwischenablage, um das Vorhandensein von Daten in die <see cref="F:System.Windows.DataFormats.Bitmap" /> Datenformat.</summary>
+        <returns>
+          <see langword="true" />Wenn Daten in die Zwischenablage enthält, die <see cref="F:System.Windows.DataFormats.Bitmap" /> Datenformat ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `true` nur, wenn das angegebene Datenformat systemintern vorhanden, oder als ein automatisch konvertierbare-Format in die Zwischenablage kopiert werden steht; diese Methode überprüft nicht auf das Vorhandensein des Auto-Datenformate.  
+  
+ Eine Bitmap eine Computergrafik als ein Array von Bits im Arbeitsspeicher darstellt, und diese Bits die Attribute der einzelnen Pixel Bestandteil eines Abbilds dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public static bool ContainsText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.ContainsText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fragt die Zwischenablage, um das Vorhandensein von Daten in die <see cref="F:System.Windows.DataFormats.UnicodeText" /> Format.</summary>
+        <returns>
+          <see langword="true" />Wenn Daten in die Zwischenablage enthält, die <see cref="F:System.Windows.DataFormats.UnicodeText" /> Datenformat ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `true` , wenn das angegebene Datenformat systemintern in die Zwischenablage; vorhanden ist diese Methode überprüft nicht auf das Vorhandensein des Auto-Datenformate.  
+  
+ Die <xref:System.Windows.DataFormats.UnicodeText> Datenformat kennzeichnet 16-Bit-Zeichen codiert Unicode, auch als UTF-16 und USC-2 bezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public static bool ContainsText (System.Windows.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsText(valuetype System.Windows.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.ContainsText(System.Windows.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein Mitglied der <see cref="T:System.Windows.TextDataFormat" /> Enumeration, die das Textformat der Daten zur Abfrage angibt.</param>
+        <summary>Fragt die Zwischenablage, um das Vorhandensein von Daten in einem Text-Datenformat.</summary>
+        <returns>
+          <see langword="true" />Wenn die Zwischenablage Daten im Datenformat angegebenen Text enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `true` nur, wenn das angegebene Datenformat systemintern in das Datenobjekt; vorhanden ist diese Methode überprüft nicht auf das Vorhandensein des Auto-Datenformate.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" />Gibt keinen gültigen Mitglied <see cref="T:System.Windows.TextDataFormat" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public static void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dauerhaft fügt die Daten, die auf die <see cref="T:System.Windows.Clipboard" /> , damit sie nach der ursprünglichen Anwendung-schließt die Daten verfügbar ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAudioStream">
+      <MemberSignature Language="C#" Value="public static System.IO.Stream GetAudioStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Stream GetAudioStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetAudioStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Datenstrom, der Zwischenablage in die <see cref="F:System.Windows.DataFormats.WaveAudio" /> Datenformat.</summary>
+        <returns>Ein Datenstrom, die Daten in enthält, der <see cref="F:System.Windows.DataFormats.WaveAudio" /> Format, oder <see langword="null" /> , wenn die Zwischenablage keine Daten in diesem Format enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt nur ein Datenstrom, wenn das angegebene Format ist in das Datenobjekt; systemintern vorhanden. Diese Methode gibt keinen automatisch konvertierbare zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public static object GetData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge, die das Format der abzurufenden Daten angibt. Für einen Satz vordefinierter Datenformate, finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse.</param>
+        <summary>Ruft Daten in einem angegebenen Format aus der Zwischenablage ab.</summary>
+        <returns>Ein Objekt, das die Daten im angegebenen Format enthält oder <see langword="null" /> , wenn die Daten im angegebenen Format nicht verfügbar ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung dieser Methode veranschaulicht.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_ContainsDataGetData](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_containsdatagetdata)]
+ [!code-vb[DragDrop_DragDropMiscCode#_ContainsDataGetData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_containsdatagetdata)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataObject">
+      <MemberSignature Language="C#" Value="public static System.Windows.IDataObject GetDataObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.IDataObject GetDataObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetDataObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.IDataObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Objekt, das den gesamten Inhalt der Zwischenablage darstellt.</summary>
+        <returns>Ein Objekt, das Zugriff auf den gesamten Inhalt der Systemzwischenablage ermöglicht oder <see langword="null" /> Wenn es keine Daten in die Zwischenablage.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zugriff auf Daten in die Zwischenablage des Systems aktiviert ist, über eine *Datenobjekt*, d. h. ein Objekt, implementiert die <xref:System.Windows.IDataObject> Schnittstelle. Eine Liste der vordefinierten Formate wird definiert, indem die <xref:System.Windows.DataFormats> Klasse.  Verwenden Sie die Methoden, die vom angegebenen <xref:System.Windows.IDataObject> Felder "und" <xref:System.Windows.DataFormats> untersuchen und extrahieren die Daten aus dem Datenobjekt.  
+  
+ Rufen Sie zum Überprüfen der Formate der Daten in die Zwischenablage des Systems <xref:System.Windows.IDataObject.GetFormats%2A> auf das Datenobjekt, das von dieser Methode zurückgegeben.  Rufen Sie zum Abrufen von Daten aus der Zwischenablage des Systems <xref:System.Windows.IDataObject.GetData%2A> und das Format der gewünschten Daten anzugeben.  
+  
+ Das Betriebssystem an, das Zwischenablage von allen Anwendungen gemeinsam verwendet wird, unterliegt daher Daten in die Zwischenablage von einer anderen Anwendung.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für die Berechtigung Zugriff auf Daten in die Zwischenablage des Systems.  Zugeordnete Enumeration: **AllClipboard**.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDropList">
+      <MemberSignature Language="C#" Value="public static System.Collections.Specialized.StringCollection GetFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Specialized.StringCollection GetFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung von Zeichenfolgen, die eine Liste der gelöschten Dateien in der Zwischenablage enthält.</summary>
+        <returns>Eine Auflistung von Zeichenfolgen, wobei jede Zeichenfolge den Namen einer Datei in der Liste der gelöschten Dateien in der Zwischenablage angibt, oder <see langword="null" /> , wenn die Daten in diesem Format nicht verfügbar ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Imaging.BitmapSource GetImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Imaging.BitmapSource GetImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> Objekt aus der Zwischenablage, die Daten in enthält die <see cref="F:System.Windows.DataFormats.Bitmap" /> Format.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> Objekt mit Daten in der <see cref="F:System.Windows.DataFormats.Bitmap" /> Format, oder <see langword="null" /> , wenn die Daten in diesem Format nicht verfügbar ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt ein <xref:System.Windows.Media.Imaging.BitmapSource> -Objekt, wenn Daten systemintern verfügbar ist oder wenn Daten automatisch in konvertiert werden können die <xref:System.Windows.DataFormats.Bitmap> Datenformat.  
+  
+ Eine Bitmap eine Computergrafik als ein Array von Bits im Arbeitsspeicher darstellt, und diese Bits die Attribute der einzelnen Pixel Bestandteil eines Abbilds dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public static string GetText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge mit der <see cref="F:System.Windows.DataFormats.UnicodeText" /> Daten in die Zwischenablage.</summary>
+        <returns>Eine Zeichenfolge mit der <see cref="F:System.Windows.DataFormats.UnicodeText" /> Daten oder eine leere Zeichenfolge, wenn kein <see cref="F:System.Windows.DataFormats.UnicodeText" /> Daten in der Zwischenablage verfügbar sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DataFormats.UnicodeText> Datenformat kennzeichnet 16-Bit-Zeichen codiert Unicode, auch als UTF-16 und UCS-2 bezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public static string GetText (System.Windows.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetText(valuetype System.Windows.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetText(System.Windows.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein Mitglied <see cref="T:System.Windows.TextDataFormat" /> , das Text-Datenformat abzurufenden angibt.</param>
+        <summary>Gibt eine Zeichenfolge, enthält die Textdaten in der Zwischenablage.</summary>
+        <returns>Eine Zeichenfolge, enthält die Textdaten in dem angegebenen Datenformat oder eine leere Zeichenfolge, wenn keine entsprechenden Textdaten verfügbar ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrent">
+      <MemberSignature Language="C#" Value="public static bool IsCurrent (System.Windows.IDataObject data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsCurrent(class System.Windows.IDataObject data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.IsCurrent(System.Windows.IDataObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Windows.IDataObject" />
+      </Parameters>
+      <Docs>
+        <param name="data">Ein Datenobjekt, das den Inhalt der Zwischenablage des Systems verglichen werden soll.</param>
+        <summary>Vergleicht einen angegebenen-Objekts auf den Inhalt der Zwischenablage an.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt für die angegebenen Daten übereinstimmt, in die Zwischenablage des Systems ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um festzustellen, ob ein Objekt, das zuvor in der Zwischenablage platziert wurde noch vorhanden und nicht geändert wurde.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung dieser Methode veranschaulicht.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_SetDataObjectIsCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_setdataobjectiscurrent)]
+ [!code-vb[DragDrop_DragDropMiscCode#_SetDataObjectIsCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_setdataobjectiscurrent)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Wenn auf die Zwischenablage ist ein Fehler aufgetreten. Die Ausnahmedetails enthält ein <see langword="HResult" /> , identifiziert des spezifischen Fehlers; Siehe <see cref="P:System.Runtime.InteropServices.ErrorWrapper.ErrorCode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public static void SetAudio (byte[] audioBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAudio(unsigned int8[] audioBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetAudio(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioBytes" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="audioBytes">Ein Bytearray, Audiodaten, die in der Zwischenablage speichern enthält.</param>
+        <summary>Speichert Audiodaten (<see cref="F:System.Windows.DataFormats.WaveAudio" /> Datenformat) in die Zwischenablage.  Das audio Daten als Bytearray angegeben ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Daten mit automatische Konvertierung deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="audioBytes" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public static void SetAudio (System.IO.Stream audioStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAudio(class System.IO.Stream audioStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetAudio(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="audioStream">Ein Datenstrom, der Audiodaten, die in der Zwischenablage speichern enthält.</param>
+        <summary>Speichert Audiodaten (<see cref="F:System.Windows.DataFormats.WaveAudio" /> Datenformat) in die Zwischenablage.  Das audio Daten als Stream angegeben ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Daten mit automatische Konvertierung deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="audioStream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public static void SetData (string format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetData(string format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetData(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge, die das Format zum Speichern der Daten angibt. Finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse für einen Satz vordefinierter Datenformate.</param>
+        <param name="data">Ein Objekt, das die Daten in der Zwischenablage speichern darstellt.</param>
+        <summary>Speichert die angegebenen Daten in der Zwischenablage im angegebenen Format.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Daten mit automatische Konvertierung aktiviert, wenn das entsprechende Datenformat ist <xref:System.Windows.DataFormats.FileDrop> oder <xref:System.Windows.DataFormats.Bitmap>.  Andernfalls ist die automatische Konvertierung deaktiviert.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung dieser Methode veranschaulicht.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_SetData](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_setdata)]
+ [!code-vb[DragDrop_DragDropMiscCode#_SetData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_setdata)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataObject">
+      <MemberSignature Language="C#" Value="public static void SetDataObject (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetDataObject(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetDataObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Ein Datenobjekt (ein Objekt, das implementiert <see cref="T:System.Windows.IDataObject" />), auf die Zwischenablage des Systems zu platzieren.</param>
+        <summary>Platziert ein angegebenes nicht persistent gespeicherte Datenobjekt in die Zwischenablage des Systems an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden Daten in die Zwischenablage des Systems platziert mit <xref:System.Windows.Clipboard.SetDataObject%2A> wird automatisch aus der Zwischenablage deaktiviert, wenn die Anwendung beendet wird.  
+  
+> [!NOTE]
+>  Zu anderen Implementierungen unterscheiden sich das standardmäßige Verhalten die Zwischenablage beim Beenden der Anwendung löschen, die Daten in die Zwischenablage kopiert, auf die Anwendung beenden, anstatt es standardmäßig deaktiviert lassen können.  Verwenden der <xref:System.Windows.Clipboard.SetDataObject%2A> überladen, und geben Sie die `copy` Parameter als `true` , wenn Sie nicht, dass Daten aus der Zwischenablage beim Beenden der Anwendung gelöscht möchten.  
+>   
+>  <xref:System.Windows.DataObject>bietet eine grundlegende Implementierung der <xref:System.Windows.IDataObject> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Wenn auf die Zwischenablage ist ein Fehler aufgetreten. Die Ausnahmedetails enthält ein <see langword="HResult" /> , identifiziert des spezifischen Fehlers; Siehe <see cref="P:System.Runtime.InteropServices.ErrorWrapper.ErrorCode" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für die Berechtigung Zugriff auf Daten in die Zwischenablage des Systems.  Zugeordnete Enumeration: **AllClipboard**.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataObject">
+      <MemberSignature Language="C#" Value="public static void SetDataObject (object data, bool copy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetDataObject(object data, bool copy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetDataObject(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+        <Parameter Name="copy" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="data">Ein Datenobjekt (ein Objekt, das implementiert <see cref="T:System.Windows.IDataObject" />), auf die Zwischenablage des Systems zu platzieren.</param>
+        <param name="copy">
+          <see langword="true" />Lassen Sie die Daten in die Zwischenablage des Systems, beim Beenden der Anwendung; <see langword="false" /> auf die Daten aus der Zwischenablage des Systems zu löschen, wenn die Anwendung beendet wird.</param>
+        <summary>Fügt ein Objekt des angegebenen Daten in die Zwischenablage des Systems und akzeptiert einen booleschen Parameter, der angibt, ob das Datenobjekt in der Zwischenablage verbleiben soll, wenn die Anwendung beendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.DataObject>bietet eine grundlegende Implementierung der <xref:System.Windows.IDataObject> Schnittstelle. <xref:System.Windows.Clipboard.IsCurrent%2A>Bestimmt das Datenobjekt, das zuvor in der Zwischenablage platziert, von der letzten <xref:System.Windows.Clipboard.SetDataObject%2A> aufrufen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung dieser Methode veranschaulicht.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_SetDataObjectIsCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_setdataobjectiscurrent)]
+ [!code-vb[DragDrop_DragDropMiscCode#_SetDataObjectIsCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_setdataobjectiscurrent)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Wenn auf die Zwischenablage ist ein Fehler aufgetreten.  Die Ausnahmedetails enthält ein <see langword="HResult" /> , identifiziert des spezifischen Fehlers; Siehe <see cref="P:System.Runtime.InteropServices.ErrorWrapper.ErrorCode" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für die Berechtigung Zugriff auf Daten in die Zwischenablage des Systems.  Zugeordnete Enumeration: **AllClipboard**.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFileDropList">
+      <MemberSignature Language="C#" Value="public static void SetFileDropList (System.Collections.Specialized.StringCollection fileDropList);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFileDropList(class System.Collections.Specialized.StringCollection fileDropList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetFileDropList(System.Collections.Specialized.StringCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileDropList" Type="System.Collections.Specialized.StringCollection" />
+      </Parameters>
+      <Docs>
+        <param name="fileDropList">Eine Auflistung von Zeichenfolgen, die Liste der gelöschten Dateien zum Speichern in das Datenobjekt enthält.</param>
+        <summary>Speichert <see cref="F:System.Windows.DataFormats.FileDrop" /> Daten in die Zwischenablage.  Die Liste der gelöschten Datei wird als eine Auflistung von Zeichenfolgen angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Daten mit automatische Konvertierung aktiviert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileDropList" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="fileDropList" />enthält 0 (null) Zeichenfolgen oder den vollständige Pfad zur Datei, die in der Liste angegebenen kann nicht aufgelöst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImage">
+      <MemberSignature Language="C#" Value="public static void SetImage (System.Windows.Media.Imaging.BitmapSource image);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetImage(class System.Windows.Media.Imaging.BitmapSource image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetImage(System.Windows.Media.Imaging.BitmapSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="image" Type="System.Windows.Media.Imaging.BitmapSource" />
+      </Parameters>
+      <Docs>
+        <param name="image">Ein <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> Objekt, das die Bilddaten in der Zwischenablage speichern enthält.</param>
+        <summary>Speichert <see cref="F:System.Windows.DataFormats.Bitmap" /> Daten in die Zwischenablage.  Die Bilddaten werden angegeben, wie eine <see cref="T:System.Windows.Media.Imaging.BitmapSource" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Bitmap eine Computergrafik als ein Array von Bits im Arbeitsspeicher darstellt, und diese Bits die Attribute der einzelnen Pixel Bestandteil eines Abbilds dar.  
+  
+ Diese Methode fügt Daten mit automatische Konvertierung aktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public static void SetText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, enthält die <see cref="F:System.Windows.DataFormats.UnicodeText" /> Daten, auf die Zwischenablage zu speichern.</param>
+        <summary>Speichert <see cref="F:System.Windows.DataFormats.UnicodeText" /> Daten in die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Format Gibt an, dass 16-Bit-Zeichen codierten Unicode, auch bezeichnet als UTF-16 und UCS-2.  
+  
+ Diese Methode fügt Daten mit automatische Konvertierung deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public static void SetText (string text, System.Windows.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetText(string text, valuetype System.Windows.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetText(System.String,System.Windows.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="format" Type="System.Windows.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die die Textdaten in der Zwischenablage speichern enthält.</param>
+        <param name="format">Ein Mitglied <see cref="T:System.Windows.TextDataFormat" /> , Textdatenformat zum Speichern von angibt.</param>
+        <summary>Speichert Textdaten in der Zwischenablage ein Datenformat für den angegebenen Text.  Die <see cref="F:System.Windows.DataFormats.UnicodeText" /> zum Speichern von Daten als Zeichenfolge angegeben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Daten mit automatische Konvertierung deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

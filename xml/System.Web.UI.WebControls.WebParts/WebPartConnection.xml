@@ -1,0 +1,1051 @@
+<Type Name="WebPartConnection" FullName="System.Web.UI.WebControls.WebParts.WebPartConnection">
+  <TypeSignature Language="C#" Value="public sealed class WebPartConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebPartConnection extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "Transformers")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Objekt, das zwei ermöglicht <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente, um eine Verbindung zu bilden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Webparts-Steuerelementsatz, eine Verbindung ist, einen Link oder eine Zuordnung zwischen zwei <xref:System.Web.UI.WebControls.WebParts.WebPart> (oder andere Server bzw. Benutzer) Steuerelemente, die ihnen das Freigeben von Daten ermöglicht. Diese Fähigkeit, Daten gemeinsam nutzen kann verbundenen Steuerelemente auf Arten verwendet werden, die die Funktionalität von isolierten Steuerelemente überschreiten. Enthält beispielsweise wenn ein Steuerelement Postleitzahlendaten stellt und ein anderes Steuerelement, Daten gelesen und lokalen Wetterinformationen basierend auf der Postleitzahl bereitstellen kann, klicken Sie dann die Möglichkeit, die beiden Steuerelemente verbundenen größeren Mehrwert für Benutzer. Um dieses Beispiel zu erweitern, konnte auf andere Steuerelemente, die auch basierend auf einer postal Code, z. B. ein Steuerelement mit Links, um lokale Nachrichten Anzeigeinformationen erstellt werden, und alle diese Steuerelemente, die mit Postleitzahlendaten arbeiten können konnte Freigeben von Daten mit den einzelnen-Steuerelement, ermöglichen eine die Postleitzahl. Endbenutzer der Webparts-Anwendungen erstellen und Verwalten von Verbindungen zwischen solche kompatibel Steuerelemente direkt über einen Webbrowser, über die standardverbindungen-Benutzeroberfläche (UI) von bereitgestellten der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement oder mithilfe einer benutzerdefinierten Benutzeroberflächenautomatisierungs bereitgestellt, indem Sie eine Developer.  
+  
+ Dies <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Übersicht über die Klasse ist eine allgemeine Erklärung der die grundlegenden Details zum Erstellen einer Verbindung. Weitere Informationen über bestimmte Komponenten und Anforderungen zum Erstellen von Verbindungen finden Sie unter [Web Parts Verbindungen Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b), oder finden Sie in der Referenz-Klassen und Codebeispiele, die in der folgenden Erläuterung erwähnt. Es gibt einige grundlegende Aspekte einer Webparts-Verbindung aus:  
+  
+-   Zwei <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Jede Webparts-Verbindung besteht aus zwei Steuerelementen. Es ist möglich, dass ein Steuerelement an mehrere Verbindungen gleichzeitig teilnehmen, aber jede einzelne Verbindung besteht aus genau zwei Steuerelemente. Die Steuerelemente können direkt aus ableiten, dass die <xref:System.Web.UI.WebControls.WebParts.WebPart> Basisklasse, oder andere Serversteuerelemente, einschließlich ASP.NET, benutzerdefinierte Serversteuerelemente und Benutzersteuerelemente sein. Steuerelemente, die nicht von abgeleitet sind, die <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse, wenn in einer <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zone, werden automatisch mit eingeschlossen sind ein <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Objekt zur Laufzeit, wodurch sie zu Vererben der <xref:System.Web.UI.WebControls.WebParts.WebPart> Klassen und Funktionen als zur Laufzeit <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+-   Steuerelemente, die in den <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zonen. Beide <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente und andere Typen von Webserversteuerelement müssen, befinden sich in einem <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone Webparts-Verbindungen (und die meisten anderen Webparts-Funktionen) teilnehmen können.  
+  
+-   Consumer und-Anbieter. In jeder Webparts-Verbindung gibt es zwei Steuerelemente: ein Datenanbieter und einem Consumer der Daten. Der Anbieter stellt Daten an den Consumer bereit, über eine angegebene Rückrufmethode, die Daten in Form einer Schnittstelle zurückgibt. (Ein Beispiel zum Erstellen, und geben Sie die Rückrufmethode, finden Sie im Abschnitt "Beispiel" dieses Themas.) Diese Rückrufmethode wird als Anbieter bezeichnet. Die Details zu diesem Verbindungspunkt (sein "Anzeigename", ID und den Typ der zurückgegebenen Schnittstelle) sind in enthalten eine <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt, mit dem Anbietersteuerelement zugewiesen ist. Der Consumer erhält die Daten über eine angegebene Methode, die eine Instanz der Schnittstelle akzeptieren kann. Diese Methode wird als Consumerverbindungspunkt bezeichnet, und die Details des Verbindungspunkts (Name, ID und Typ der Schnittstelle) sind in enthalten eine <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekt, mit dem Consumersteuerelement zugewiesen ist.  
+  
+-   Kompatible Steuerelemente oder eine gültige Transformer. Für eine Verbindung zu arbeiten, werden der Consumer und der Anbieter müssen entweder sein kompatibel (d. h., dass ihre angegebenen Punkt Verbindungsmethoden, in dem Typ der Schnittstelle arbeiten können), oder es muss werden ein <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Objekt, das den Typ von Angeboten übersetzen kann die der Anbieter in einen Typ, der vom Consumer interpretiert.  
+  
+-   Ein <xref:System.Web.UI.WebControls.WebParts.WebPartConnection>-Objekt. Für eine Verbindung vorhanden sein kann, muss eine Instanz von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> -Klasse, die Verweise auf die Anbieter- und Steuerelemente, zusammen mit den Details ihrer Verbindungspunkte enthält. Wenn der Anbieter und der Consumer nicht kompatibel sind, und verwenden Sie stattdessen ein <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Objekt, das eine Verbindung herstellen, die Verbindung verweist auf die Transformer.  
+  
+-   Eine Methode zum Herstellen der Verbindung. Nachdem kompatibel Consumer- und ordnungsgemäß mit Punkt Verbindungsmethoden entworfen und in einer Zone eingefügt wurden und ein <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt verfügbar ist, der letzten Schritt grundlegende erforderlichen zum Initiieren der Verbindung. Eine Möglichkeit, dies kann passieren, ist für Benutzer die Verbindung über die Benutzeroberfläche zu erstellen. Setzen Sie ein `<asp:connectionszone>` Element auf der Seite ", und die andere erforderliche Komponenten für eine Verbindung werden eingerichtet ist, zur Laufzeit, die ein Benutzer kann die Seite wechseln Sie in der Verbindungsanzeigemodus, klicken Sie auf Verbinden-Verb für die Verbmenü des Anbieters oder Consumer , und eine Benutzeroberfläche für Verbindungen (basierend auf den <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement) wird angezeigt. Über diese Benutzeroberfläche kann der Benutzer die Verbindung initiiert. Eine weitere Möglichkeit zum Initiieren der Verbindung ist jedoch auch programmgesteuert. In beiden Fällen, ob die über die Benutzeroberfläche oder programmgesteuert auf die zugrunde liegende Methode die Verbindung initiiert wird, ist identisch. Ruft die Anwendung die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> Methode (oder die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> Methode, wenn einen Transformer verwenden) auf die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> zu steuern, übergibt Sie an den Anbieter, der Consumer und ihre jeweiligen Punkt Verbindungsobjekte, und die Methode gibt ein <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> -Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Klasse definiert ein Objekt, das die grundlegenden Details einer Verbindung zwischen zwei kapselt <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Die Klasse wird nahezu vollständig Eigenschaften in Bezug auf die Details einer bestimmten Verbindung besteht. Mehrere Eigenschaften betreffen das Consumer-Steuerelement in einer Verbindung. Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer%2A> -Eigenschaft verweist auf das Consumersteuerelement selbst, und die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID%2A> Eigenschaft verweist auf die ID des Consumers. Die <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> -Objekt, das die Details des Verbindungspunkts des Consumers enthält, wird von der Consumers verwiesen <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> -Eigenschaft verweist auf die ID des dem <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekt. All diese Consumer-bezogene Verbindungseigenschaften benötigen einen Wert zugewiesen werden, um eine Verbindung zu erstellen.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> -Klasse verfügt auch über mehrere Eigenschaften, die sich auf das Anbietersteuerelement in einer Verbindung beziehen, und diese entsprechen den Eigenschaften für einen Consumer. Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Provider%2A> Eigenschaft verweist auf den Anbieter selbst, während die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID%2A> Eigenschaft verweist, dessen ID Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint%2A> Eigenschaftenverweise der <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> -Objekt, und die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> Eigenschaft verweist auf die ID der dem Anbieterverbindungspunkt an.  
+  
+ Mehrere Eigenschaften betreffen den Zustand der Verbindung. Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsActive%2A> Eigenschaft gibt an, ob die Verbindung aktiv (momentan Datenaustausch) oder inaktiv (Verbindung jedoch nicht aktiv Daten gemeinsam genutzt) verwendet. Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> Eigenschaft gibt an, ob die Verbindung eine freigegebene (für alle Benutzer einer Seite verfügbar) oder eine Verbindung mit benutzerspezifischen und die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> Eigenschaft gibt an, ob das Steuerelement statisch ist (deklariert in Markup der Seite und somit permanente) oder Dynamische (programmgesteuert erstellt, d. h. kann die It gelöscht werden).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer einfachen Verbindung zwischen zwei <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Im Beispiel wird die drei Methoden zum Herstellen einer Verbindung veranschaulicht: deklarativ durch Platzieren von Tags für die Verbindung im Markup der Webseite; programmgesteuert, durch das Herstellen der Verbindung im Code; über die Benutzeroberfläche, indem Sie Platzieren einer <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement auf der Seite, die Benutzern das Herstellen eine Verbindung ermöglicht.  
+  
+ Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Webparts-Anzeigemodus auf einer Seite.  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite auf alle Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Speichern Sie den folgenden Quellcode in einer ASCX-Datei Übergabe der Dateiname, der zugewiesen ist die `Src` Attribut des der `Register` Richtlinie für dieses Benutzersteuerelement, also im oberen Bereich der Website hosten. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Overview/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Overview/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die Schnittstelle und Steuerelemente. Die Quelldatei enthält eine einfache Oberfläche, die mit dem Namen `IZipCode`. Es gibt auch eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse mit dem Namen `ZipCodeWebPart` , die die Schnittstelle implementiert und fungiert als das Anbietersteuerelement. Die `ProvideIZipCode` Methode ist die Rückrufmethode, die nur Schnittstellenmember implementiert. Die Methode gibt einfach eine Instanz der Schnittstelle. Beachten Sie, die die Methode mit einem `ConnectionProvider` Attribut in seinen Metadaten. Dies ist der Mechanismus zum Identifizieren der Methodennamens als die Rückrufmethode für den Anbieterverbindungspunkt an. Die andere <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse heißt `WeatherWebPart`, und sie verhält sich der Consumer für die Verbindung. Diese Klasse verfügt über eine Methode namens `GetZipCode` , die eine Instanz des ab der `IZipCode` Schnittstelle aus dem Anbietersteuerelement. Beachten Sie, dass diese Methode markiert ist, als der Consumer Connection Point-Methode mit einem `ConnectionConsumer` Attribut in seinen Metadaten.  
+  
+ Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Overview/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Overview/VB/ZipCodeComponent.vb#2)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite. Im oberen Bereich werden die `Register` -Anweisungen für das Benutzersteuerelement, und die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Da dynamische Kompilierung der Steuerelemente im Beispiel wird davon ausgegangen wird, muss der Quellcode für die Steuerelemente im Unterordner App_Code; die `Register` Tag auf der Seite verweist nur auf ein beliebiges Tagpräfix und den Namespace der Steuerelemente. Die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente (der Anbieter und der Consumer) werden in der Webseite deklariert `<asp:webpartzone>` -Element, das innerhalb einer `<zonetemplate>` Element.  
+  
+ Die Seite bietet drei Möglichkeiten, um eine Verbindung zwischen der benutzerdefinierten Steuerelemente zu bilden. Die erste Methode ist deklarativ. In das Markup für die Seite ein <`StaticConnections>` Element deklariert wird und innerhalb des, die ein `<asp:WebPartConnections>` Element, mit den verschiedenen Consumer- und die Details der Verbindung, die als Attribute angegeben. Dies ist eine Möglichkeit, eine Verbindung zu erstellen, deklarieren Sie es direkt in der Webseite, insbesondere in den `<asp:WebPartManager>` Element. Aufgrund dieser statischen Verbindung wird eine Verbindung zwischen den beiden benutzerdefinierten Steuerelementen sofort erstmalig erstellt, die dem Laden der Seite.  
+  
+ Eine zweite Methode zum Herstellen einer Verbindung zwischen den Steuerelementen wird bereitgestellt, indem die `<asp:connectionszone>` Element auf der Seite. Wenn ein Benutzer eine Seite in der Connect-Anzeigemodus, zur Laufzeit umschaltet, und klickt auf ein Verb Connect auf einem der benutzerdefinierten Steuerelemente, die `<asp:connectionszone>` Element rendert automatisch die Benutzeroberfläche zum Erstellen einer Verbindung.  
+  
+ Die Seite wird auch eine dritte Möglichkeit zum Erstellen einer Verbindungs ist jedoch auch programmgesteuert veranschaulicht. In der `Button1_Click` -Methode, die der Code erstellt ein <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt für die Provider-Steuerelement und seine Verbindungspunkt erläutert, durch den Aufruf ruft die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetProviderConnectionPoints%2A> Methode. Es führt eine ähnliche Aufgabe für das Consumersteuerelement Aufrufen der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetConsumerConnectionPoints%2A> Methode. Schließlich erstellt die neue <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt durch Aufrufen der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> Methode für die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Overview/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Overview/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Laden Sie die Webseite in einem Browser, von die erste Verbindung bereits vorhanden ist, weil deren Deklaration innerhalb der `<StaticConnections>` Element. Geben Sie Text in die **ZIP Codeanbieter** Steuerelement, und es in das Consumer-Steuerelement angezeigt werden. Trennen Sie die beiden Steuerelemente an. Mithilfe der **Anzeigemodus** Dropdown-Listensteuerelement, ändern Sie die Seite, um den Anzeigemodus zu verbinden. Klicken Sie auf die Verbmenü (dargestellt durch einen Pfeil nach unten in der Titelleiste) für jede der <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, und beachten Sie, dass jede verfügt über eine **verbinden** Option. Dies ist eine Connect-Verb, das im Verbmenü angezeigt wird. nur wenn die Seite im Verbinden-Modus befindet. Klicken Sie auf der Connect-Verb auf eines der Steuerelemente und die Verbindung vom bereitgestellten Benutzeroberfläche der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement angezeigt wird. Klicken Sie auf die **trennen** Schaltfläche, um die statische Verbindung zwischen den Steuerelementen zu beenden. Verwenden der **Anzeigemodus** Steuerelement in den Durchsuchen-Modus zurück. Versuchen Sie, geben neuen Text in den Anbieter erneut, und beachten, dass, da die Steuerelemente getrennt sind, nicht der Text im Consumersteuerelement aktualisieren.  
+  
+ Verwenden Sie als Nächstes die gleiche Methode wie oben, um die Seite erneut in Anzeigemodus verbinden zu wechseln. Klicken Sie auf Verbinden-Verb für eines der Steuerelemente. Klicken Sie auf die **erstellen Sie eine Verbindung** verknüpfen, und verwenden Sie die Benutzeroberfläche zur Verfügung gestellt, von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement zum Erstellen einer Verbindung zwischen den Steuerelementen. Dies ist die zweite Methode zum Erstellen einer Verbindung. Beachten Sie, dass die, sobald die Verbindung gebildet wird, die letzte Zeichenfolge im Anbietersteuerelement eingegebene (die angezeigt werden, da die Steuerelemente getrennt wurden nicht erfüllt) plötzlich in der Nutzer, angezeigt werden, da die Verbindung wiederhergestellt wurde. Klicken Sie auf die **trennen** Schaltfläche, um die aktuelle Verbindung zu beenden, die Sie gerade erstellt haben. Geben Sie die Seite, um den Durchsuchen-Modus zurück. Geben Sie neuen Text in den Anbieter, um zu veranschaulichen, dass der Text nicht aktualisiert wird und die Steuerelemente erneut getrennt sind.  
+  
+ Geben Sie die Seite, um die Anzeige der Verbindungsmodus zurück. Anstatt auf eine Connect-Verb an, klicken Sie auf die **Connect WebPart Controls** Schaltfläche, die die dritte Methode zum Erstellen einer Verbindungs veranschaulicht. Dieser Ansatz stellt eine Verbindung her Steuerelemente programmgesteuert in einem einfachen Schritt ohne Verwenden der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Beachten Sie, dass die Verbindung erstellt wird, der letzte eingegebene Zeichenfolge im Anbieter plötzlich im Consumersteuerelement angezeigt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartConnection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.%23ctor%2A> Konstruktor ist öffentlich, sodass ASP.NET-Parser eine Instanz erstellen kann, wenn eine Verbindung im Markup einer Webseite deklariert wird, ist dieser Konstruktor ist nicht vorgesehen, in Entwicklercode verwendet werden.  
+  
+ Wenn Sie erstellen möchten eine <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> -Objekt programmgesteuert, verwenden Sie die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A?displayProperty=nameWithType> oder <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A?displayProperty=nameWithType> Methode bereitgestellt wird, der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement. Diese Methoden verarbeiten die vielen Details beim Herstellen einer Verbindung und Zurückgeben einer <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.%23ctor%2A> Konstruktor für die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> -Klasse legt die Werte der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> und <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> Eigenschaften `true`. Daher der Standardstatus einer neuen Verbindung statisch (d. h., dass es in das Markup der enthaltenden Webseite deklariert wird) und freigegebene (für alle Benutzer der Seite sichtbar). Dies ist der Fall sein, wenn Sie eine Verbindung in typischen Szenarien hinzufügen, indem Sie deklarieren die Verbindung im Markup der Seite mit einem `<asp:webpartconnection>` Element. In anderen Fällen wird eine Verbindung jedoch unterschiedliche Werte für diese Eigenschaften verfügen. Beispielsweise wird beim Hinzufügen einer Verbindungs programmgesteuert durch das Verbindungsobjekt im Code erstellen, und der Benutzer wird die Seite in den Standardbereich für Benutzer Personalisierung anzeigen, die Verbindung als ein pro-User(visible only to the specific user) dynamisch und erstellt Verbindung.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> und <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> Eigenschaften sind schreibgeschützt und das Festlegen dieser Eigenschaften, die bestimmen, die Art der Verbindung werden intern von der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement je nachdem, wie eine Verbindung erstellt wird (deklarativ im Markup Seite, oder programmgesteuert über Code oder der Benutzeroberfläche).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Consumer">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPart Consumer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPart Consumer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Objekt, das als Consumer-Steuerelement in einer Verbindung dient.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , das die Webparts-Steuerelement, das als Consumer in einer Verbindung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Webparts-Verbindung besteht aus zwei Steuerelemente, die Daten gemeinsam nutzen. Ein Steuerelement fungiert als Datenanbieter und das andere Steuerelement fungiert als Consumer, empfangen und verarbeiten die Daten des Anbieters. Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer%2A> -Eigenschaft ruft einen Verweis auf die <xref:System.Web.UI.WebControls.WebParts.WebPart> und fungiert als Consumer in einer Beziehung für die Verbindung zu steuern.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die programmgesteuerte Verwendung der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer%2A> Eigenschaft.  
+  
+ Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Webparts-Anzeigemodus auf einer Seite.  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite auf alle Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Speichern Sie den folgenden Quellcode in einer ASCX-Datei Übergabe der Dateiname, der zugewiesen ist die `Src` Attribut des der `Register` Richtlinie für dieses Benutzersteuerelement, also im oberen Bereich der Website hosten. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_Consumer#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Consumer/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_Consumer#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Consumer/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die als Consumer und der Anbieter für die Verbindung und eine Schnittstelle dar, für die Verbindungspunkte dienen. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_Consumer#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Consumer/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_Consumer#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Consumer/VB/ZipCodeComponent.vb#2)]  
+  
+ Der dritte Teil des Codebeispiels wird der Code für die Webseite, die die Steuerelemente hostet, und veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer%2A> Eigenschaft. Im oberen Bereich der Seite werden die `Register` Richtlinien für das Benutzersteuerelement und die benutzerdefinierten Steuerelemente. Da in diesem Beispiel wird die dynamische Kompilierung verwendet die `Register` Richtlinie für die Quelldatei muss nicht auf den Namen einer Assembly verweisen; es enthält nur ein beliebiges Tagpräfix und den Namespace der Steuerelemente. In der `Button2_Click` -Methode, die Code greift auf das Verbindungsobjekt, über die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern und ruft einen Verweis auf das Consumersteuerelement ab.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_Consumer#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Consumer/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_Consumer#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Consumer/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Nachdem Sie die Seite in einem Browser zu laden, verwenden die **Anzeigemodus** Dropdownlisten-Steuerelement auf die Seite zum Verbinden-Modus zu wechseln. Klicken Sie auf die Verbmenü (dargestellt durch den Pfeil nach unten in der Titelleiste) eines der <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, und klicken Sie auf der Connect-Verb. Verwenden der **Connect WebPart Controls** Schaltfläche oder die angegebene Verbindung-Benutzeroberfläche (UI), eine Verbindung zwischen den zwei Steuerelementen erstellen. Klicken Sie auf die **Consumer Anzeigeinformationen** Schaltfläche, um den Code auszuführen, das veranschaulicht, die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Länge der <see cref="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID" /> Eigenschaft ist 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsumerConnectionPoint">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint ConsumerConnectionPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint ConsumerConnectionPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das als Verbindungspunkt für ein Steuerelement fungiert, die als Consumer in einer Verbindung dient.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> dem Consumersteuerelement in einer Verbindung zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer der erforderlichen Schritte zum Erstellen einer Verbindung zwischen zwei <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente ist, um Verbindungspunkte für jedes Steuerelement zu erstellen. Der Consumerverbindungspunkt ist ein Objekt, das die Informationen zum Herstellen einer Verbindung mit dem Steuerelement, das als Consumer fungiert enthält. Im Quellcode des Consumers, muss eine der Methoden mit identifiziert werden die `ConnectionConsumer` Attribut. Die <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> -Objekt, das ein Consumer-Steuerelement zugeordnet ist enthält Details über die Methode und das Attribut, einschließlich einer ID für die Methode, einen Anzeigenamen für die Verwendung in der Benutzeroberfläche (UI), und welche Art von Schnittstelle die Methode abrufen können. Dieser Satz von Informationen zu der Consumer, die Methode zum Herstellen von Verbindungen und den Typ der Schnittstelle, die er versteht, bildet zusammen eine Consumerverbindungspunkt an.  
+  
+ Wird standardmäßig ein <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekt kann Verbindung mit nur einem <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt zu einem Zeitpunkt. Ein Consumer kann mehrere Methoden, die als mögliche Consumerverbindungspunkte identifiziert haben, aber ein Consumer nur teilnehmen kann eine Verbindung als Consumer (also nur eine der Consumer die Verbindungspunkte aktiv sein kann) zu einem Zeitpunkt. Im Gegensatz dazu eine <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> können eine Verbindung herstellen, um eine beliebige Anzahl von <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekte. Dieses Standardverhalten kann geändert werden, durch Überschreiben der <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.AllowsMultipleConnections%2A> Eigenschaft auf die <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die programmgesteuerte Verwendung der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint%2A> Eigenschaft.  
+  
+ Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Webparts-Anzeigemodus auf einer Seite.  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite auf alle Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Speichern Sie den folgenden Quellcode in einer ASCX-Datei Übergabe der Dateiname, der zugewiesen ist die `Src` Attribut des der `Register` Richtlinie für dieses Benutzersteuerelement, also im oberen Bereich der Website hosten. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ConsumerConnectionPoint#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPoint/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ConsumerConnectionPoint#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPoint/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die als Consumer und der Anbieter für die Verbindung und eine Schnittstelle dar, für die Verbindungspunkte dienen. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ConsumerConnectionPoint#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPoint/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ConsumerConnectionPoint#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPoint/VB/ZipCodeComponent.vb#2)]  
+  
+ Der dritte Teil des Codebeispiels wird der Code für die Webseite, die die Steuerelemente hostet, und veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint%2A> Eigenschaft. In der `Button1_Click` -Methode, alle Objekte, die erforderlich sind, um eine Verbindung zu bilden werden erstellt, einschließlich einer <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekt. Diese Objekte werden zum Übergeben der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> Methode, um die Verbindung zu erstellen. In der `Button2_Click` Methode, die der Code greift auf die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint%2A> -Eigenschaft und zeigt einige Details der Verbindung zeigen.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ConsumerConnectionPoint#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPoint/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ConsumerConnectionPoint#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPoint/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Nachdem Sie die Seite in einem Browser zu laden, verwenden die **Anzeigemodus** Dropdownlisten-Steuerelement auf die Seite zum Verbinden-Modus zu wechseln. Klicken Sie auf die Verbmenü (dargestellt durch den Pfeil nach unten in der Titelleiste) eines der <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, und klicken Sie auf der Connect-Verb. Verwenden der **Connect WebPart Controls** Schaltfläche oder die angegebene Verbindung UI, um eine Verbindung zwischen die beiden Steuerelemente zu erstellen. Klicken Sie auf die **ConnectionPoint Details** Schaltfläche, um den Code auszuführen, das veranschaulicht, die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsumerConnectionPointID">
+      <MemberSignature Language="C#" Value="public string ConsumerConnectionPointID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConsumerConnectionPointID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("default")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der Eigenschaft für eine Verbindung, die die ID des Objekts, die als dem Consumerverbindungspunkt für diese Verbindung verweist.</summary>
+        <value>Zeigen Sie eine Zeichenfolge, die die ID für den Consumerverbindungspunkt enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine statische Verbindung, die im Markup einer Webseite deklariert wird, können Entwickler angeben, welcher Consumerverbindungspunkt für die Verbindung verwendet wird durch Zuweisen eines Werts, der `ConsumerConnectionPointID` -Attribut auf die `<asp:webpartconnection>` Element. Wenn ein Wert nicht dem Attribut zugewiesen wird die <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.DefaultID> Eigenschaftswert verwendet wird.  
+  
+ Bei der Erstellung von dynamischen (programmgesteuerter) Verbindungen normalerweise Sie sollte nicht legen Sie den Wert von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> Eigenschaft. Rufen Sie einfach die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> Methode für die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern, die an sie übergibt der Consumer und Consumerverbindungspunkt Objekte (zusammen mit weiteren erforderlichen Parametern), und diese Methode bestimmt die richtige ID für den Consumer-Verbindung verwenden Zeigen Sie. Auf ähnliche Weise, wenn Sie getrennt werden, Sie erreichen die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisconnectWebParts%2A> Methode ohne Angeben der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> Eigenschaftswert.  
+  
+> [!NOTE]
+>  Die ID des Verbindungspunkts des Consumers kann bestimmt werden, wenn Sie festlegen, eine <xref:System.Web.UI.WebControls.WebParts.WebPart> oder einem anderen Serversteuerelement als Consumer. Sie müssen eine Methode in der Consumer identifizieren, die eine Instanz einer Schnittstelle, die durch ein Anbietersteuerelement oder ein Transformer erbracht abruft. Um die Methode zu kennzeichnen, kennzeichnen Sie ihn mit der `ConnectionConsumer` Code-Attribut. Wenn Sie dieses Attribut hinzufügen, können Sie einen optionalen Zeichenfolgenwert-Parameter als ID für des Consumers hinzufügen <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekt. Wenn Sie einen Wert für den optionalen ID-Parameter angeben, wird dieser Wert wird der Wert der die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> -Eigenschaft für die Verbindung. Wenn Sie keine ID-Wert, Angeben der <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.DefaultID> Eigenschaftswert wird verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> Eigenschaft.  
+  
+ Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Webparts-Anzeigemodus auf einer Seite.  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite auf alle Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Speichern Sie den folgenden Quellcode in einer ASCX-Datei Übergabe der Dateiname, der zugewiesen ist die `Src` Attribut des der `Register` Richtlinie für dieses Benutzersteuerelement, also im oberen Bereich der Website hosten. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ConsumerConnectionPointID#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPointID/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ConsumerConnectionPointID#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPointID/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die Schnittstelle und die Consumer- und -Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ConsumerConnectionPointID#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPointID/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ConsumerConnectionPointID#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPointID/VB/ZipCodeComponent.vb#2)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite. Beachten Sie, dass eine Verbindung im Markup Seite deklariert wird mithilfe der `<StaticConnections>` und `<asp:WebPartsConnection>` Elemente. Die Verbindungsdeklaration enthält die erforderlichen `ConsumerConnectionPointID` Attribut. Eine zweite Methode zum Erstellen der Verbindung angezeigt wird, der `Button1_Click` -Methode, in dem der Code erstellt eine neue Verbindung mit dem Verbindungspunkt, der im Consumersteuerelement definiert. Klicken Sie auf die `Button2_Click` Methode, die der Code greift auf die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ConsumerConnectionPointID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPointID/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ConsumerConnectionPointID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPointID/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Nachdem Sie die Seite in einem Browser geladen haben, ist bereits eine Verbindung aufgrund der statischen Verbindung deklariert, die auf der Seite vorhanden. Geben Sie Text in das Anbietersteuerelement, und beachten Sie, dass der Consumer aufgrund der Verbindung angezeigt wird. Trennen Sie die Steuerelemente an. Mithilfe der **Anzeigemodus** Dropdown-Steuerelement, indem Sie die Seite, um den Modus eine Verbindung herstellen. Klicken Sie auf die Verbmenü (dargestellt durch den Pfeil nach unten in der Titelleiste) eines der <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **trennen** Schaltfläche. Verwenden der **Connect WebPart Controls** Schaltfläche, um eine Verbindung zwischen den zwei Steuerelementen neu zu erstellen. Klicken Sie auf die **ConnectionPoint Details** Schaltfläche, um den Code auszuführen, die greift auf die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> Eigenschaftswert. Der Wert wird in eine Bezeichnung unterhalb der Steuerelemente ausgeschrieben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsumerID">
+      <MemberSignature Language="C#" Value="public string ConsumerID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConsumerID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der Eigenschaft für eine Verbindung, die die ID des verweist auf die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> steuern und fungiert als Consumer für diese Verbindung.</summary>
+        <value>Eine Zeichenfolge, die das Steuerelement fungiert als Consumer in einem Verbindungs-ID enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID%2A> Eigenschaftswert ist erforderlich, wenn Sie eine Verbindung zwischen erstellen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Wenn ein Wert nicht der Eigenschaft zugewiesen wird, eine Ausnahme wird ausgelöst, wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Steuerelement versucht, die Verbindung zu aktivieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID%2A> Eigenschaft.  
+  
+ Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Webparts-Anzeigemodus auf einer Seite.  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite auf alle Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Speichern Sie den folgenden Quellcode in einer ASCX-Datei Übergabe der Dateiname, der zugewiesen ist die `Src` Attribut des der `Register` Richtlinie für dieses Benutzersteuerelement, also im oberen Bereich der Website hosten. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ConsumerID#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerID/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ConsumerID#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerID/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die Schnittstelle und die Consumer- und -Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ConsumerID#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerID/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ConsumerID#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerID/VB/ZipCodeComponent.vb#2)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite. Beachten Sie, dass eine Verbindung im Markup Seite deklariert wird mithilfe der `<StaticConnections>` und `<asp:WebPartsConnection>` Elemente. Die Verbindungsdeklaration enthält die erforderlichen `ConsumerID` Attribut. Eine zweite Methode zum Erstellen der Verbindung angezeigt wird, der `Button1_Click` -Methode, in dem der Code erstellt eine neue Verbindung mit dem Verbindungspunkt, der im Consumersteuerelement definiert. Klicken Sie auf die `Button2_Click` -Methode, der Code greift auf den Wert, der die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID%2A> Eigenschaft und zeigt ihn in eine Bezeichnung.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ConsumerID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerID/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ConsumerID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerID/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Nachdem Sie die Seite in einem Browser geladen haben, ist bereits eine Verbindung aufgrund der statischen Verbindung deklariert, die auf der Seite vorhanden. Geben Sie Text in das Anbietersteuerelement, und beachten Sie, dass der Consumer aufgrund der Verbindung angezeigt wird. Trennen Sie die Steuerelemente an. Mithilfe der **Anzeigemodus** Dropdown-Steuerelement, indem Sie die Seite, um den Modus eine Verbindung herstellen. Klicken Sie auf die Verbmenü (dargestellt durch den Pfeil nach unten in der Titelleiste) eines der <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **trennen** Schaltfläche. Verwenden der **Connect WebPart Controls** Schaltfläche, um eine Verbindung zwischen den zwei Steuerelementen neu zu erstellen. Klicken Sie auf die **Consumer Details** Schaltfläche, um den Code auszuführen, die greift auf die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID%2A> Eigenschaftswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public string ID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID des ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt.</summary>
+        <value>Eine Zeichenfolge, die die ID des enthält eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> -Objekt verfügt über einen eindeutigen Wert zugewiesen seine <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ID%2A> Eigenschaft. Dadurch wird sichergestellt, dass es eine Möglichkeit, mehrere Verbindungen zu unterscheiden.  
+  
+ Bei der Erstellung einer statischen Verbindungs durch Deklarieren einer `<asp:webpartconnection>` Element in einer Webseite, und Sie weisen keinen Wert, der die `ID` Attribut für die Verbindung, die eine Ausnahme wird ausgelöst, wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Steuerelement versucht, die Verbindung zu aktivieren.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement eine neue dynamische Verbindung erstellt, ruft es die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateDynamicConnectionID%2A> Methode, um eine eindeutige ID für die Verbindung zu generieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ID%2A> Eigenschaft.  
+  
+ Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Webparts-Anzeigemodus auf einer Seite.  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite auf alle Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Speichern Sie den folgenden Quellcode in einer ASCX-Datei Übergabe der Dateiname, der zugewiesen ist die `Src` Attribut des der `Register` Richtlinie für dieses Benutzersteuerelement, also im oberen Bereich der Website hosten. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ID#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ID/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ID#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ID/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die Schnittstelle und die Consumer- und -Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ID#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ID/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ID#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ID/VB/ZipCodeComponent.vb#2)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite. Beachten Sie, dass eine Verbindung im Markup Seite deklariert wird mithilfe der `<StaticConnections>` und `<asp:WebPartsConnection>` Elemente. Die Verbindungsdeklaration enthält die erforderlichen `ID` Attribut. Eine zweite Methode zum Erstellen der Verbindung angezeigt wird, der `Button1_Click` -Methode, in dem der Code erstellt eine neue Verbindung mit dem Verbindungspunkt, der im Consumersteuerelement definiert. Hier wird die ID-Eigenschaft ist nicht erforderlich, da die Verbindung dynamisch und ist und die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement die Verbindung eine ID zuweist. In der `Button2_Click` -Methode, der Code greift auf den Wert, der die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ID%2A> Eigenschaft und zeigt ihn in eine Bezeichnung.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ID/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ID/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Nachdem Sie die Seite in einem Browser geladen haben, ist bereits eine Verbindung aufgrund der statischen Verbindung deklariert, die auf der Seite vorhanden. Geben Sie Text in das Anbietersteuerelement, und beachten Sie, dass der Consumer aufgrund der Verbindung angezeigt wird. Trennen Sie die Steuerelemente an. Mithilfe der **Anzeigemodus** Dropdown-Steuerelement, indem Sie die Seite, um den Modus eine Verbindung herstellen. Klicken Sie auf die Verbmenü (dargestellt durch den Pfeil nach unten in der Titelleiste) eines der <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **trennen** Schaltfläche. Verwenden der **Connect WebPart Controls** Schaltfläche, um eine Verbindung zwischen den zwei Steuerelementen neu zu erstellen. Klicken Sie auf die **Verbindungsdetails** Schaltfläche, um den Code auszuführen, die greift auf die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ID%2A> Eigenschaftswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsActive">
+      <MemberSignature Language="C#" Value="public bool IsActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsActive" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.IsActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt befindet sich derzeit hergestellt und die Exchange-Daten zwischen Anbieter- und Steuerelemente.</summary>
+        <value>
+          <see langword="true" />Wenn die Verbindung aktiv ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsActive%2A> Eigenschaft gibt den Status einer <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt. Wenn die Verbindung in diesem Zustand ist, werden die Anbieter- und Steuerelemente in der Verbindung kommuniziert und Daten über eine gemeinsame Schnittstelle auszutauschen oder ein <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Objekt.  
+  
+ Wenn ein Benutzer eine gerenderte Seite, die eine bereits hergestellte Verbindung im normalen Durchsuchen-Modus enthält anzeigt, ist die Verbindung in der Regel aktiv, (es sei denn, er konnte aufgrund eines Konflikts oder anderen Fehlern aktiviert werden, wenn die Seite geladen). In den frühen Phasen des Lebenszyklus der Seiten- und der Eigenschaftswert ist `false`. Die Verbindung aktiviert ist, direkt nach der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectionsActivated> Ereignis auf der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement ausgelöst wird. Insbesondere wird die Verbindung aktiviert, nachdem der Consumer eine Instanz der angegebenen Schnittstelle vom Anbieter abgerufen hat oder ein <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Objekt.  
+  
+ Es ist hilfreich zu wissen, ob eine Verbindung unter Umständen aktiv ist, wobei es möglicherweise Konflikte oder Synchronisierungsproblemen aufgrund mehrerer Verbindungen auf einer Seite. Angenommen, es ist eine Art von Konflikt zwischen zwei Verbindungen die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement verfügt über die Option nicht durch das Aktivieren der Verbindungen aus, um den Konflikt zu vermeiden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsActive%2A> Eigenschaft.  
+  
+ Das Beispiel besteht aus drei Teilen:  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite auf alle Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil des Codebeispiels wird der Quellcode für die Schnittstelle und die Consumer- und -Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_IsActive#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsActive/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_IsActive#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsActive/VB/ZipCodeComponent.vb#2)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Im oberen Bereich ist eine `Register` Richtlinie, die auf den Quellcode für die beiden dynamisch kompilierten verweist <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Die statische Verbindung wird deklariert, innerhalb der `<StaticConnections>` Element auf der Seite. Innerhalb der `<script>` Element sind vier Ereignishandler. Jeder Ereignishandler prüft den Wert der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsActive%2A> Eigenschaft für die statische Verbindung und schreibt eine Meldung an die <xref:System.Web.UI.WebControls.Label> Steuerelement, der angibt, ob die Verbindung in diesem Zustand des Lebenszyklus der Seite und des Steuerelements aktiv oder inaktiv ist. Dadurch wird bewiesen, zu welchem Zeitpunkt die Verbindung aktiv wird, und, dass es nach der Seite aktiv bleibt, wird gerendert.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_IsActive#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsActive/CS/wpConnectIsActiveCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_IsActive#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsActive/VB/wpConnectIsActiveVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Die statische Verbindung bereits erstellt wurde, und Nachrichten in die Bezeichnungen, die anzeigt, ob die Verbindung, die im Lebenszyklus Seiten- und an verschiedenen Punkten aktiv war bereits geschrieben wurden. Klicken Sie auf die **Verbindungsdetails** aus, und beachten Sie, dass die Verbindung zu diesem Zeitpunkt nicht aktiv ist, aber die Verbindung nach jedem reaktiviert ist die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectionsActivated> Ereignis und dass es immer noch aktiv ist (und bleibt) nach der <xref:System.Web.UI.Control.PreRender> -Ereignis für die Seite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsShared">
+      <MemberSignature Language="C#" Value="public bool IsShared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsShared" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt für alle Benutzer oder nur für den aktuellen Benutzer sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Verbindung gemeinsam verwendet wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie bei einzelnen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente eine <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt kann eine freigegebene oder eine Instanz pro Benutzer sein. Eine freigegebene Instanz bedeutet, dass die Verbindung für alle Benutzer einer Webseite sichtbar ist, und eine Instanz pro Benutzer bedeutet, dass die Verbindung nur für einen bestimmten Benutzer sichtbar ist.  
+  
+ Im Allgemeinen bestimmt die Möglichkeit, die eine Verbindung zu einer Seite hinzugefügt wird, ob die Verbindung freigegeben ist. Wenn die Verbindung im Markup einer Webseite deklariert ist, und klicken Sie dann die Verbindung freigegeben und der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> Eigenschaftswert ist `true`. Darüber hinaus ist die Webseite im freigegebenen Personalisierungsbereich eine Verbindung hinzugefügt wird, wird die Verbindung auch gemeinsam genutzt. In der Regel, wenn ein Benutzer verwendet die `<asp:connectionszone>` -Benutzeroberfläche (UI) zum Hinzufügen einer Verbindung, die Seite ist im Gültigkeitsbereich des Benutzers Personalisierung, damit die Verbindung nicht gemeinsam genutzt wird und die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> Eigenschaftswert ist `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> Eigenschaft.  
+  
+ Das Codebeispiel besteht aus fünf Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Webparts-Anzeigemodus auf einer Seite.  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite auf alle Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Ein Eintrag in der Datei "Web.config", die zum Ausführen des Beispiels erforderlich sind.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Speichern Sie den folgenden Quellcode in einer ASCX-Datei Übergabe der Dateiname, der zugewiesen ist die `Src` Attribut des der `Register` Richtlinie für dieses Benutzersteuerelement, also im oberen Bereich der Website hosten. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_IsShared#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsShared/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_IsShared#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsShared/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die Schnittstelle und die Consumer- und -Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_IsShared#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsShared/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_IsShared#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsShared/VB/ZipCodeComponent.vb#2)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite. In der `Button2_Click` -Methode, überprüft er die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> Eigenschaft der vorhandenen Verbindung und das Ergebnis auf der Seite angezeigt.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_IsShared#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsShared/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_IsShared#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsShared/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Der vierte Teil des Codebeispiels wird ein Eintrag in der Datei "Web.config", die für das Benutzerkonto erforderlich ist, die die Seite im freigegebenen Personalisierungsbereich bearbeitet werden anhand des Beispiels ausgeführt werden. Um dies zu aktivieren, benötigen Sie einen Eintrag in der Datei "Web.config" innerhalb der `<system.web>` Abschnitt, der im folgenden Beispiel ähnelt.  
+  
+```  
+<webParts>  
+  <personalization>  
+    <authorization>  
+      <allow users="UserAccount"  
+             roles="admin"  
+             verbs="enterSharedScope"/>  
+    </authorization>            
+  </personalization>  
+</webParts>  
+```  
+  
+ Nachdem Sie die Seite in einem Browser zu laden, verwenden die **Anzeigemodus** Dropdown-Listensteuerelement Anzeigemodus verbinden zu wechseln. Klicken Sie auf die **Connect WebPart Controls** Schaltfläche, um eine Verbindung zu bilden. Klicken Sie anschließend auf die **Verbindungsdetails** Schaltfläche zeigt an, ob die Verbindung gemeinsam verwendet wird. Wenn Sie die Verbindung mit der Seite in den Benutzerbereich Personalisierung standardmäßig erstellt die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> -Eigenschaftswert werden `false` für die Verbindung.  
+  
+ Auf der Verbmenü eines der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelemente (angezeigt durch den Pfeil nach unten in der Titelleiste), klicken Sie auf der Connect-Verb. Wenn die Verbindung Benutzeroberfläche angezeigt wird, klicken Sie auf die **trennen** Schaltfläche, um die Verbindung zu beenden. Verwenden der **Anzeigemodus** Steuerelement in den Durchsuchen-Modus zurück.  
+  
+ In der **Anzeigemodus** -Steuerelement, wählen Sie die **Shared** Option aus, um die Seite in wechseln freigegebener Personalisierungsbereich. Führen Sie die gleichen Schritte wie oben, erstellen Sie eine Verbindung, und klicken Sie erneut auf die **Verbindungsdetails** Schaltfläche zeigt an, ob die Verbindung gemeinsam verwendet wird. In diesem Fall werden die Werte von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> Eigenschaft sollte `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStatic">
+      <MemberSignature Language="C#" Value="public bool IsStatic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStatic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt in das Markup einer Webseite deklariert ist, oder programmgesteuert erstellt.</summary>
+        <value>
+          <see langword="true" />Wenn die Verbindung statisch ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verbindungen zwischen Webparts-Steuerelemente können statisch oder dynamisch sein. Eine statische Verbindung im Markup einer Webseite deklariert wird mithilfe einer `<asp:WebPartConnection>` Element. Dynamische Verbindungen programmgesteuert erstellt werden, oder wenn ein Benutzer eine Verbindung über die Benutzeroberfläche (UI) von definierten erstellt die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement.  
+  
+ Statische Verbindungen sind freigegebene Objekte, was bedeutet, dass sie für alle Benutzer der Webseite verfügbar sind. Darüber hinaus sind sie im Wesentlichen dauerhaft daran, wie ein statisches <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement nicht dauerhaft gelöscht werden.  
+  
+> [!NOTE]
+>  Während ein statisches Verbindungsobjekt dauerhaft gelöscht werden kann, kann es dauerhaft getrennt werden. In diesem Fall würde das getrennte Objekt auf dem Server vorhanden, aber ein Endbenutzer wäre nie Beachten Sie das Objekt vorhanden ist, auf einer Seite.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die programmgesteuerte Verwendung der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> Eigenschaft.  
+  
+ Das Codebeispiel besteht aus drei Teilen:  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite, die Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil des Codebeispiels wird der Quellcode für die Schnittstelle und die Consumer- und -Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_IsStatic#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsStatic/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_IsStatic#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsStatic/VB/ZipCodeComponent.vb#2)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Im oberen Bereich ist eine `Register` Richtlinie, die auf den Quellcode für die beiden dynamisch kompilierten verweist <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Die statische Verbindung wird deklariert, innerhalb der `<StaticConnections>` Element auf der Seite. Die `Button1_Click` Methode greift auf die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> Eigenschaft zu überprüfen, ob die Verbindung statisch ist.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_IsStatic#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsStatic/CS/wpConnectIsStaticCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_IsStatic#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsStatic/VB/wpConnectIsStaticVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Die statische Verbindung ist bereits erstellt. Geben Sie Text in das Anbietersteuerelement, und beachten Sie, dass der Text im Consumersteuerelement angezeigt wird. Klicken Sie auf die **Verbindungsdetails** Schaltfläche zum Anzeigen des Werts der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPart Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPart Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement, das in einer Webparts-Verbindung als Anbieter fungiert.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , fungiert als Datenanbieter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Webparts-Verbindung besteht aus zwei <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente – ein Consumer und dem Anbieter und die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Provider%2A> Eigenschaft gibt einen Verweis auf das Anbietersteuerelement in einer Verbindung.  
+  
+ Wie sein Gegenstück in einer Verbindung (das Consumersteuerelement) ist das Anbietersteuerelement zum Herstellen einer Verbindung erforderlich. Ob Sie die Verbindung programmgesteuert oder durch Deklarieren es im Format die Persistenz von Seite erstellen, müssen Sie ein Steuerelement fungieren als Anbieter für eine Verbindung angeben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Provider%2A> Eigenschaft.  
+  
+ Das Codebeispiel besteht aus drei Teilen:  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite, die Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil des Codebeispiels wird der Quellcode für die Schnittstelle und die Consumer- und -Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_Provider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Provider/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_Provider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Provider/VB/ZipCodeComponent.vb#2)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Im oberen Bereich ist eine `Register` Richtlinie, die auf den Quellcode für die beiden dynamisch kompilierten verweist <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Die statische Verbindung wird deklariert, innerhalb der `<StaticConnections>` Element auf der Seite. Beachten Sie, dass in der `<asp:webpartconnection>` Element, das `ProviderID` Attribut hat die ID des Anbietersteuerelements zugewiesen. Dies ist erforderlich, um den Anbieter für die statische Verbindung zu identifizieren. Die `Button1_Click` Methode greift auf die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Provider%2A> Eigenschaft und schreibt Sie einige Details zu einer Bezeichnung.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_Provider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Provider/CS/wpConnectProviderCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_Provider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Provider/VB/wpConnectProviderVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Die statische Verbindung ist bereits erstellt. Geben Sie Text in das Anbietersteuerelement, und beachten Sie, dass der Text im Consumersteuerelement angezeigt wird. Klicken Sie auf die **Anbieterdetails** Schaltfläche anzuzeigenden einige Eigenschaftswerte erfolgt über die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Provider%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Länge der <see cref="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID" /> Eigenschaftswert ist 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderConnectionPoint">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ProviderConnectionPoint ProviderConnectionPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ProviderConnectionPoint ProviderConnectionPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ProviderConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, die als Verbindungspunkt für dient eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> und fungiert als Anbieter für eine Verbindung zu steuern.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> mit der Anbietersteuerelement in einer Verbindung verknüpft ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer der erforderlichen Schritte zum Erstellen einer Verbindung zwischen zwei <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente ist, um Verbindungspunkte für jedes Steuerelement zu erstellen. Der Anbieterverbindungspunkt ist ein Objekt, das die Informationen zum Herstellen einer Verbindung mit dem Steuerelement als Anbieter fungiert enthält. Im Quellcode des Anbieters muss eine der Methoden mit identifiziert werden die `ConnectionProvider` Attribut. Die <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> also verknüpft sind mit einem Anbieter enthält Details über die Methode und das Attribut, einschließlich einer ID für die Methode, einen Anzeigenamen für die Verwendung in der Benutzeroberfläche (UI), und welche Art von Schnittstelleninstanz die Methode können für einen Consumer, zurückgeben -Steuerelement. Dieser Satz von Informationen zum Anbieter, die Methode zum Herstellen von Verbindungen und den Typ der Schnittstelle, die es bereitstellt, bildet zusammen eine Anbieterverbindungspunkt an.  
+  
+ Wird standardmäßig ein <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> können Verbindung mit nur einem <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt zu einem Zeitpunkt. Ein Consumer kann mehrere Methoden, die als mögliche Consumerverbindungspunkte identifiziert haben, aber ein Consumer nur teilnehmen kann eine Verbindung als Consumer (also nur eine der Consumer die Verbindungspunkte aktiv sein kann) zu einem Zeitpunkt. Im Gegensatz dazu eine <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> können eine Verbindung herstellen, um eine beliebige Anzahl von <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekte in der Standardeinstellung. Beispielsweise konnte ein Anbietersteuerelement, das eine Postleitzahl bietet an mehrere Consumersteuerelemente verbunden sein, die eine Postleitzahl verwenden, um verschiedene Arten von Daten basierend auf einer postal Code, z. B. Wetterdaten, News und So weiter zu erstellen. Dieses Standardverhalten kann geändert werden, durch Überschreiben der <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.AllowsMultipleConnections%2A> Eigenschaft auf die <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die programmgesteuerte Verwendung der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint%2A> Eigenschaft.  
+  
+ Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Webparts-Anzeigemodus auf einer Seite.  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite auf alle Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Speichern Sie den folgenden Quellcode in einer ASCX-Datei Übergabe der Dateiname, der zugewiesen ist die `Src` Attribut des der `Register` Richtlinie für dieses Benutzersteuerelement, also im oberen Bereich der Website hosten. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ProviderConnectionPoint#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPoint/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ProviderConnectionPoint#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPoint/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die als Consumer und der Anbieter für die Verbindung und eine Schnittstelle dar, für die Verbindungspunkte dienen. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ProviderConnectionPoint#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPoint/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ProviderConnectionPoint#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPoint/VB/ZipCodeComponent.vb#2)]  
+  
+ Der dritte Teil des Codebeispiels wird der Code für die Webseite, die die Steuerelemente hostet, und veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint%2A> Eigenschaft. In der `Button1_Click` -Methode, alle Objekte, die erforderlich sind, um eine Verbindung zu bilden werden erstellt, einschließlich einer <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt. Beachten Sie den Aufruf der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetProviderConnectionPoints%2A> Methode für die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement. Die verschiedenen erstellten Objekte werden zum Übergeben der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> Methode, um die Verbindung zu erstellen. In der `Button2_Click` Methode, die der Code greift auf die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint%2A> -Eigenschaft und zeigt einige Details der Verbindung zeigen.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ProviderConnectionPoint#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPoint/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ProviderConnectionPoint#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPoint/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Nachdem Sie die Seite in einem Browser zu laden, verwenden die **Anzeigemodus** Dropdownlisten-Steuerelement auf die Seite zum Verbinden-Modus zu wechseln. Klicken Sie auf die Verbmenü (dargestellt durch den Pfeil nach unten in der Titelleiste) eines der <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, und klicken Sie auf der Connect-Verb. Verwenden der **Connect WebPart Controls** Schaltfläche oder die angegebene Verbindung UI, um eine Verbindung zwischen die beiden Steuerelemente zu erstellen. Klicken Sie auf die **ConnectionPoint Details** Schaltfläche, um den Code auszuführen, das veranschaulicht, die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderConnectionPointID">
+      <MemberSignature Language="C#" Value="public string ProviderConnectionPointID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderConnectionPointID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("default")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der Eigenschaft für eine Verbindung, die die ID des Objekts, die als dem Anbieterverbindungspunkt für diese Verbindung verweist.</summary>
+        <value>Eine Zeichenfolge, die die ID für ein Anbieterverbindungspunkt-Objekt enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine statische Verbindung, die im Markup einer Webseite deklariert wird, können Entwickler angeben, welcher Anbieterverbindungspunkt für die Verbindung verwendet wird durch Zuweisen eines Werts, der `ProviderConnectionPointID` -Attribut auf die `<asp:webpartconnection>` Element. Wenn ein Wert nicht dem Attribut zugewiesen wird die <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.DefaultID> Eigenschaftswert verwendet wird.  
+  
+ Bei der Erstellung von dynamischen (programmgesteuerter) Verbindungen normalerweise Sie sollte nicht legen Sie den Wert von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> Eigenschaft. Rufen Sie einfach die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> Methode für die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern, die an sie übergibt die Anbieter- und Anbieter zeigen Sie Objekte (zusammen mit weiteren erforderlichen Parametern), und diese Methode bestimmt die richtige ID für den Anbieter Verbindung Zeigen Sie. Auf ähnliche Weise, wenn Sie getrennt werden, Sie erreichen die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisconnectWebParts%2A> Methode ohne Angeben der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> Eigenschaftswert.  
+  
+> [!NOTE]
+>  Die ID des Verbindungspunkts des Anbieters kann bestimmt werden, wenn Sie festlegen, eine <xref:System.Web.UI.WebControls.WebParts.WebPart> oder einem anderen Serversteuerelement als Anbieter. Sie müssen eine Rückrufmethode im Anbieter identifizieren, die eine Instanz einer Schnittstelle, die Daten für einen Consumer fungiert. Um die Methode zu kennzeichnen, kennzeichnen Sie ihn mit der `ConnectionProvider` Code-Attribut. Wenn Sie dieses Attribut hinzufügen, können Sie einen optionalen Zeichenfolgenwert-Parameter als ID für des Anbieters hinzufügen <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt. Wenn Sie einen Wert für den optionalen ID-Parameter angeben, wird dieser Wert wird der Wert der die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> -Eigenschaft für die Verbindung. Wenn Sie keine ID-Wert, Angeben der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement weist eine Standard-ID an, wenn das Objekt erstellt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> Eigenschaft.  
+  
+ Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Webparts-Anzeigemodus auf einer Seite.  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite auf alle Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Speichern Sie den folgenden Quellcode in einer ASCX-Datei Übergabe der Dateiname, der zugewiesen ist die `Src` Attribut des der `Register` Richtlinie für dieses Benutzersteuerelement, also im oberen Bereich der Website hosten. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ProviderConnectionPointID#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPointID/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ProviderConnectionPointID#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPointID/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die Schnittstelle und die Consumer- und -Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ProviderConnectionPointID#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPointID/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ProviderConnectionPointID#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPointID/VB/ZipCodeComponent.vb#2)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite. Beachten Sie, dass eine Verbindung im Markup Seite deklariert wird mithilfe der `<StaticConnections>` und `<asp:WebPartsConnection>` Elemente. Die Verbindungsdeklaration enthält die erforderlichen `ProviderConnectionPointID` Attribut. Eine zweite Methode zum Erstellen der Verbindung angezeigt wird, der `Button1_Click` -Methode, wobei der Code eine neue Verbindung erstellt unter Verwendung des Verbindungspunkts (und der ID) in das Anbietersteuerelement definiert. Klicken Sie auf die `Button2_Click` Methode, die der Code greift auf die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ProviderConnectionPointID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPointID/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ProviderConnectionPointID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPointID/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Nachdem Sie die Seite in einem Browser geladen haben, ist bereits eine Verbindung aufgrund der statischen Verbindung deklariert, die auf der Seite vorhanden. Geben Sie Text in das Anbietersteuerelement, und beachten Sie, dass der Consumer aufgrund der Verbindung angezeigt wird. Trennen Sie die Steuerelemente an. Mithilfe der **Anzeigemodus** Dropdown-Steuerelement, indem Sie die Seite, um den Modus eine Verbindung herstellen. Klicken Sie auf die Verbmenü (dargestellt durch den Pfeil nach unten in der Titelleiste) eines der <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **trennen** Schaltfläche. Verwenden der **Connect WebPart Controls** Schaltfläche, um eine Verbindung zwischen den zwei Steuerelementen neu zu erstellen. Klicken Sie auf die **ConnectionPoint Details** Schaltfläche, um den Code auszuführen, die greift auf die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> Eigenschaftswert. Der Wert wird in eine Bezeichnung unterhalb der Steuerelemente ausgeschrieben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderID">
+      <MemberSignature Language="C#" Value="public string ProviderID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der Eigenschaft für eine Verbindung, die die ID des verweist auf die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> steuern und fungiert als Anbieter für diese Verbindung.</summary>
+        <value>Eine Zeichenfolge, die das Anbietersteuerelement-ID enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID%2A> Eigenschaftswert ist erforderlich, wenn Sie eine Verbindung zwischen zwei erstellen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Wenn ein Wert nicht der Eigenschaft zugewiesen wird, eine Ausnahme wird ausgelöst, wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Steuerelement versucht, die Verbindung zu aktivieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID%2A> Eigenschaft.  
+  
+ Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Webparts-Anzeigemodus auf einer Seite.  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite auf alle Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Speichern Sie den folgenden Quellcode in einer ASCX-Datei Übergabe der Dateiname, der zugewiesen ist die `Src` Attribut des der `Register` Richtlinie für dieses Benutzersteuerelement, also im oberen Bereich der Website hosten. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ProviderID#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderID/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ProviderID#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderID/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die Schnittstelle und die Consumer- und -Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ProviderID#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderID/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ProviderID#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderID/VB/ZipCodeComponent.vb#2)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite. Beachten Sie, dass eine Verbindung im Markup Seite deklariert wird mithilfe der `<StaticConnections>` und `<asp:WebPartsConnection>` Elemente. Die Verbindungsdeklaration enthält die erforderlichen `ProviderID` Attribut. Eine zweite Methode zum Erstellen der Verbindung angezeigt wird, der `Button1_Click` -Methode, in dem der Code erstellt eine neue Verbindung mit dem Verbindungspunkt, der im Consumersteuerelement definiert. Klicken Sie auf die `Button2_Click` -Methode, der Code greift auf den Wert, der die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID%2A> Eigenschaft und zeigt ihn in eine Bezeichnung.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ProviderID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderID/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ProviderID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderID/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Nachdem Sie die Seite in einem Browser geladen haben, ist bereits eine Verbindung aufgrund der statischen Verbindung deklariert, die auf der Seite vorhanden. Geben Sie Text in das Anbietersteuerelement, und beachten Sie, dass der Consumer aufgrund der Verbindung angezeigt wird. Trennen Sie die Steuerelemente an. Verwenden Sie hierzu die **Anzeigemodus** Dropdownlisten-Steuerelement auf die Seite zum Verbinden-Modus zu wechseln. Klicken Sie auf die Verbmenü (dargestellt durch den Pfeil nach unten in der Titelleiste) eines der <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **trennen** Schaltfläche und die Steuerelemente werden getrennt. Verwenden Sie als Nächstes die **Connect WebPart Controls** Schaltfläche, um eine Verbindung zwischen den zwei Steuerelementen neu zu erstellen. Klicken Sie auf die **Consumer Details** Schaltfläche, um den Code auszuführen, die greift auf die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID%2A> Eigenschaftswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartConnection.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt die geerbte <see cref="M:System.Object.ToString" /> -Methode aus und gibt einen kurzen Typnamen für das Verbindungsobjekt zurück.</summary>
+        <returns>Eine Zeichenfolge, die den kurzen (nicht qualifizierten) Typnamen der enthält einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich zur Vereinfachung von Steuerelemententwicklern verwendet. Dadurch verbessert werden kann wie Verbindungsobjekte in der Entwurfsansicht angezeigt werden, mithilfe der kürzeren Typname, im Gegensatz zu den voll qualifizierten Typnamen. Allerdings kann die Methode aufgerufen werden an einem beliebigen Punkt im Code, wo Sie den Typnamen eines Verbindungsobjekts wissen möchten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Aufrufen der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ToString%2A> -Methode zur Rückgabe der kurze Typname, der eine <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt.  
+  
+ Das Codebeispiel besteht aus drei Teilen:  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite, die Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil des Codebeispiels wird der Quellcode für die Schnittstelle und die Consumer- und -Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ToString#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ToString/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ToString#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ToString/VB/ZipCodeComponent.vb#2)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Im oberen Bereich ist eine `Register` Richtlinie, die auf den Quellcode für die beiden dynamisch kompilierten verweist <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Die statische Verbindung wird deklariert, innerhalb der `<StaticConnections>` Element auf der Seite. Die `Button1_Click` Methodenaufrufe der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ToString%2A> Methode, um den Typnamen der Verbindung zu einer Bezeichnung zu schreiben.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ToString#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ToString/CS/wpConnectToStringCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ToString#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ToString/VB/wpConnectToStringVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Die statische Verbindung ist bereits erstellt. Geben Sie Text in das Anbietersteuerelement, und beachten Sie, dass der Text im Consumersteuerelement angezeigt wird. Klicken Sie auf die **Verbindungsdetails** Schaltfläche zum Ausführen der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ToString%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transformer">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartTransformer Transformer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartTransformer Transformer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.Transformer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartTransformer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> -Objekt, das zum Transformieren von Daten zwischen zwei andernfalls nicht kompatiblen Verbindungspunkten in einer Webparts-Verbindung verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" />. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt zwei Möglichkeiten, die in denen die Anbieter- und Steuerelemente in der Verbindung eine Verbindung herstellen können, in einer Webparts-Verbindung. Direkt über die jeweiligen verbinden können <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint> Objekte und einen Schnittstellentyp aufweisen, das beide Steuerelemente verständlich ist. Oder, wenn sie nicht kompatibel sind, sie können eine Verbindung indirekt über eine <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> -Objekt, das eine Schnittstelleninstanz von einem Anbieter in einen Typ, der von einem Consumer verstanden transformiert.  
+  
+ Wenn ein Transformer als Teil einer Verbindung benötigt wird die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Transformer%2A> Eigenschaft stellt einen Verweis auf die <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Objekt. Sie können durch Hinzufügen eines Tags für eine benutzerdefinierte Transformer (oder mit dem Webparts-Steuerelementsatz bereitgestellten Transformatoren) einen Transformer für eine Verbindung deklarativ im Markup einer Webseite hinzufügen, innerhalb der `<asp:WebPartConnection>` Element. Sie können auch einen Transformer programmgesteuert hinzufügen, erstellen eine Instanz im Code und Aufrufen der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%28System.Web.UI.WebControls.WebParts.WebPart%2CSystem.Web.UI.WebControls.WebParts.ProviderConnectionPoint%2CSystem.Web.UI.WebControls.WebParts.WebPart%2CSystem.Web.UI.WebControls.WebParts.ConsumerConnectionPoint%2CSystem.Web.UI.WebControls.WebParts.WebPartTransformer%29> Methode für die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement zum Erstellen der Verbindung, und das Transformatorobjekt zusammen mit den anderen erforderlichen Parametern übergeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transformers">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartTransformerCollection Transformers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartTransformerCollection Transformers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.Transformers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartTransformerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> Objekte, die von der Webparts-Steuerelementsatz intern verwendet.</summary>
+        <value>Eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformerCollection" />-Methode, die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" />-Objekte enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Transformers%2A> Eigenschaft wird nie zur Verwendung durch Entwickler vorgesehen. Für den Zugriff auf die Transformer-Verbindung zugeordnet, sollte immer Entwicklerseite mit der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Transformer%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Transformers%2A> Eigenschaft wird intern verwendet, durch die Webparts-Steuerelementsatz ermöglichen Entwicklern deklarieren Transformatorelemente innerhalb der `<asp:webpartconnection>` Element im Markup einer Webseite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

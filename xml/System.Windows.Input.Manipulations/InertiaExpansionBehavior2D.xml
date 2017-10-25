@@ -1,0 +1,220 @@
+<Type Name="InertiaExpansionBehavior2D" FullName="System.Windows.Input.Manipulations.InertiaExpansionBehavior2D">
+  <TypeSignature Language="C#" Value="public sealed class InertiaExpansionBehavior2D : System.Windows.Input.Manipulations.InertiaParameters2D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InertiaExpansionBehavior2D extends System.Windows.Input.Manipulations.InertiaParameters2D" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.Manipulations.InertiaParameters2D</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt die gewünschte Erweiterungsverhalten ein Trägheitsprozessor.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InertiaExpansionBehavior2D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredDeceleration">
+      <MemberSignature Language="C#" Value="public float DesiredDeceleration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 DesiredDeceleration" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredDeceleration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die gewünschte Erweiterung Verlangsamung in-Koordinate Einheiten pro Millisekunde Quadrat.</summary>
+        <value>Die gewünschte Erweiterung Verlangsamung-Koordinate Einheiten pro Millisekunde Quadrat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Eigenschaftswert wird sich gegenseitig ausschließende mit der <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionX%2A> und <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionY%2A> Eigenschaften; die Einstellung dieser Eigenschaft wird festgelegt <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionX%2A> und <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionY%2A> auf `NaN`.  
+  
+ Der Standardwert für diese Eigenschaft ist `NaN`.  
+  
+ Diese Eigenschaft kann nicht festgelegt werden, während der Trägheitsprozessor ausgeführt wird. Andernfalls wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredExpansionX">
+      <MemberSignature Language="C#" Value="public float DesiredExpansionX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 DesiredExpansionX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die gewünschte Erweiterung entlang der x-Achse in-Koordinate Einheiten.</summary>
+        <value>Die gewünschte Erweiterung entlang der x-Achse, in-Koordinate Einheiten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erweiterung muss proportional sein. Der Wert dieser Eigenschaft muss der Wert gleich dem <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionY%2A> Eigenschaft beim der Trägheitsprozessor gestartet wird; andernfalls eine Ausnahme ausgelöst.  
+  
+ Dieser Eigenschaftswert wird sich gegenseitig ausschließende mit der <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredDeceleration%2A> Eigenschaft; die Einstellung dieser Eigenschaft wird festgelegt <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredDeceleration%2A> auf `NaN`.  
+  
+ Der Standardwert für diese Eigenschaft ist `NaN`.  
+  
+ <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionX%2A>eine endliche, nicht Negative Zahl muss sein. Die Rate der Erweiterung richtet sich nach der <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX%2A> Eigenschaft.  
+  
+ Diese Eigenschaft kann nicht festgelegt werden, während der Trägheitsprozessor ausgeführt wird. Andernfalls wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredExpansionY">
+      <MemberSignature Language="C#" Value="public float DesiredExpansionY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 DesiredExpansionY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die gewünschte Erweiterung entlang der y-Achse in-Koordinate Einheiten.</summary>
+        <value>Die gewünschte Erweiterung entlang der y-Achse, in-Koordinate Einheiten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erweiterung muss proportional sein. Der Wert dieser Eigenschaft muss der Wert gleich dem <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionX%2A> Eigenschaft beim der Trägheitsprozessor gestartet wird; andernfalls eine Ausnahme ausgelöst.  
+  
+ Dieser Eigenschaftswert wird sich gegenseitig ausschließende mit der <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredDeceleration%2A> Eigenschaft; die Einstellung dieser Eigenschaft wird festgelegt <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredDeceleration%2A> auf `NaN`.  
+  
+ Der Standardwert für diese Eigenschaft ist `NaN`.  
+  
+ <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionY%2A>eine endliche, nicht Negative Zahl muss sein. Die Rate der Erweiterung richtet sich nach der <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY%2A> Eigenschaft.  
+  
+ Diese Eigenschaft kann nicht festgelegt werden, während der Trägheitsprozessor ausgeführt wird. Andernfalls wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialRadius">
+      <MemberSignature Language="C#" Value="public float InitialRadius { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 InitialRadius" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialRadius" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den ursprünglichen durchschnittlichen Radius in-Koordinate Einheiten.</summary>
+        <value>Der ursprüngliche durchschnittliche Radius in-Koordinate Einheiten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird von der Trägheitsprozessor verwendet, um den Skalierungsfaktor für ein Element zu berechnen, der erweitert wird.  
+  
+ Für die Instanz, wenn die <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX%2A> und <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY%2A> Eigenschaften 3,75 festgelegt werden, damit dem Trägheitsprozessor wird mitgeteilt, die beginnend Erweiterung Geschwindigkeit 3,75-Koordinate Einheiten pro Millisekunde an beiden Achsen ist (Erweiterung muss proportional sein).  
+  
+ Der Skalierungsfaktor diese Rate der Erweiterung zugeordnet richtet sich nach der Größe des Elements, das erweitert wird. Small-Element stellt diese Erweiterung Geschwindigkeit einen größere Skalierungsfaktor als für eine große Element dar. Sie informieren den Trägheitsprozessor von der Elementgröße durch Festlegen der <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialRadius%2A> Eigenschaft.  
+  
+ Der Standardwert für die <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialRadius%2A> Eigenschaft ist 1.0.  
+  
+ Gültige Werte sind eine endliche Anzahl größer als oder gleich 1.0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialVelocityX">
+      <MemberSignature Language="C#" Value="public float InitialVelocityX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 InitialVelocityX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die erste Erweiterung Geschwindigkeit entlang der x-Achse in-Koordinate Einheiten pro Millisekunde.</summary>
+        <value>Die Geschwindigkeit des ursprünglichen Erweiterung entlang der x-Achse, in-Koordinate Einheiten pro Millisekunde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erweiterung muss proportional sein. Der Wert dieser Eigenschaft muss der Wert gleich dem <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY%2A> Eigenschaft beim der Trägheitsprozessor gestartet wird; andernfalls eine Ausnahme ausgelöst.  
+  
+ Der Standardwert für diese Eigenschaft ist `NaN`. Verlassen diese Eigenschaft und <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY%2A> gegenüber der Standard- oder durch Festlegen dieser Eigenschaft und <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY%2A> auf Null (0) Erweiterung Trägheit deaktivieren.  
+  
+ Diese Eigenschaft kann nicht festgelegt werden, während der Trägheitsprozessor ausgeführt wird. Andernfalls wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialVelocityY">
+      <MemberSignature Language="C#" Value="public float InitialVelocityY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 InitialVelocityY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die erste Erweiterung Geschwindigkeit entlang der y-Achse in-Koordinate Einheiten pro Millisekunde.</summary>
+        <value>Die Geschwindigkeit des ursprünglichen Erweiterung entlang der y-Achse, in-Koordinate Einheiten pro Millisekunde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erweiterung muss proportional sein. Der Wert dieser Eigenschaft muss der Wert gleich dem <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX%2A> Eigenschaft beim der Trägheitsprozessor gestartet wird; andernfalls eine Ausnahme ausgelöst.  
+  
+ Der Standardwert für diese Eigenschaft ist `NaN`. Verlassen diese Eigenschaft und <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX%2A> gegenüber der Standard- oder durch Festlegen dieser Eigenschaft und <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX%2A> auf Null (0) Erweiterung Trägheit deaktivieren.  
+  
+ Diese Eigenschaft kann nicht festgelegt werden, während der Trägheitsprozessor ausgeführt wird. Andernfalls wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,79 @@
+<Type Name="PenLineJoin" FullName="System.Windows.Media.PenLineJoin">
+  <TypeSignature Language="C#" Value="public enum PenLineJoin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PenLineJoin extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.PenLineJoin" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt das Shape, das zwei Linien oder Segmente verbindet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt mehrere unterschiedliche Knoten, die an den Scheitelpunkten einer Form verwendet.  
+  
+ [!code-xaml[drawingwithshapeelements#PolylineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
+  
+ Die folgende Abbildung zeigt die verschiedenen Zeile verknüpft.  
+  
+ ![Beispiel für Zeile verknüpft. ] (~/add/media/graphicslinejoins.png "Beispiel Zeile Joins.")  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bevel">
+      <MemberSignature Language="C#" Value="Bevel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.PenLineJoin Bevel = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PenLineJoin.Bevel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PenLineJoin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abgeschrägte Scheitelpunkte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Miter">
+      <MemberSignature Language="C#" Value="Miter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.PenLineJoin Miter = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PenLineJoin.Miter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PenLineJoin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Reguläre angular Scheitelpunkte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Round">
+      <MemberSignature Language="C#" Value="Round" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.PenLineJoin Round = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PenLineJoin.Round" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PenLineJoin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gerundete Scheitelpunkte.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

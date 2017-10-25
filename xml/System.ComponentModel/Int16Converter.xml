@@ -1,0 +1,79 @@
+<Type Name="Int16Converter" FullName="System.ComponentModel.Int16Converter">
+  <TypeSignature Language="C#" Value="public class Int16Converter : System.ComponentModel.BaseNumberConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Int16Converter extends System.ComponentModel.BaseNumberConverter" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Int16Converter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.BaseNumberConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Typkonverter für das Konvertieren von 16-Bit-Objekten, die ganze Zahlen mit Vorzeichen sind, in andere und aus anderen Darstellungen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konverter kann nur ein 16-Bit-Ganzzahlobjekt mit Vorzeichen in und aus einer Zeichenfolge konvertieren. Die <xref:System.Int16> Werttyp stellt Ganzzahlen mit Vorzeichen mit Werten, die im Bereich von-32768 bis + 32767 liegen.  
+  
+ Die <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> -Methode verwendet die <xref:System.Int16.Parse%2A> Methode <xref:System.Int16> und der Ganzzahlwert <xref:System.Globalization.NumberStyles>.  
+  
+ Die <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> Methode verwendet das Standardformat ("G") für die zurückgegebene Zeichenfolge.  
+  
+ Weitere Informationen zu den Einsatz von Typkonvertern, finden Sie unter der <xref:System.ComponentModel.TypeConverter> Basisklasse und [Vorgehensweise: Implementieren eines Typkonverters](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56).  
+  
+> [!NOTE]
+>  Erstellen Sie nie eine Instanz von einem <xref:System.ComponentModel.Int16Converter>. Rufen Sie stattdessen die <xref:System.ComponentModel.TypeDescriptor.GetConverter%2A> Methode <xref:System.ComponentModel.TypeDescriptor>. Weitere Informationen finden Sie in den Beispielen in der <xref:System.ComponentModel.TypeConverter> Basisklasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird konvertiert, eine Variable vom Typ <xref:System.Int16> in eine Zeichenfolge (und umgekehrt).  
+  
+ [!code-cpp[Converters#14](~/samples/snippets/cpp/VS_Snippets_Winforms/Converters/CPP/converters.cpp#14)]
+ [!code-csharp[Converters#14](~/samples/snippets/csharp/VS_Snippets_Winforms/Converters/CS/converters.cs#14)]
+ [!code-vb[Converters#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Converters/VB/converters.vb#14)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Int16Converter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Int16Converter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Int16Converter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

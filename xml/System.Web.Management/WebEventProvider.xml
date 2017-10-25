@@ -1,0 +1,197 @@
+<Type Name="WebEventProvider" FullName="System.Web.Management.WebEventProvider">
+  <TypeSignature Language="C#" Value="public abstract class WebEventProvider : System.Configuration.Provider.ProviderBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WebEventProvider extends System.Configuration.Provider.ProviderBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebEventProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Provider.ProviderBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisklasse für nicht gepufferte Ereignisanbieter bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET-Systemüberwachung kann Produktions- und Vorgänge Mitarbeiter bereitgestellte Webanwendungen verwalten. Die <xref:System.Web.Management> -Namespace enthält die Integrität-Ereignistypen, die verantwortlich für das Verpacken Integritätsstatus Anwendungsdaten und die Anbietertypen, die für die Verarbeitung dieser Daten verantwortlich. Darüber hinaus wird die unterstützende Typen, mit denen bei der Verwaltung von integritätsereignisse enthält.  
+  
+ Wenn Sie die Verarbeitung von Systemereignissen anpassen möchten, können Sie leiten Sie von der <xref:System.Web.Management.WebEventProvider> Klasse, um einen eigenen benutzerdefinierten Anbieter erstellen.  
+  
+> [!NOTE]
+>  In den meisten Fällen werden Sie die ASP.NET Systemüberwachung Typen verwenden, wie implementiert, und Sie werden das System Systemüberwachung steuern, durch Angeben von Werten in der `healthMonitoring` Konfigurationsabschnitt. Sie können auch aus den Typen Systemüberwachung, erstellen Sie eine eigene benutzerdefinierte Ereignisse und Anbieter ableiten. Ein Beispiel für das Ableiten von der <xref:System.Web.Management.WebEventProvider> Klasse, finden Sie im Beispiel in diesem Thema.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Ableitung der <xref:System.Web.Management.WebEventProvider> Klasse, um einen benutzerdefinierten Anbieter erstellen, die die konfigurierten Ereignisse in eine lokale Datei schreibt, für die richtigen Zugriffsrechte gewährt werden müssen. In diesem Beispiel benutzerdefinierte Anbieter ist einfach, und seine wichtigsten Absicht besteht darin, Sie als Entwickler volle Kontrolle über die grundlegenden Mechanismen. In einem realen Szenario können Sie diesen Anbieter und insbesondere den gepuffert Beispielanbieter unter <xref:System.Web.Management.BufferedWebEventProvider>, in der Verhalten einer Anwendung vorab untersuchen. Dadurch können Sie in der Entwurfsphase erhalten Sie einen Überblick über die Informationen verfügbar sind; Später können dann Sie diese Informationen, um einen komplexeren Anbieter weiterleiten.  
+  
+ Die folgende Konfigurationsdatei Auszug zeigt einen `healthMonitoring` Konfigurationsabschnitt, der zum Verwenden des benutzerdefinierten Anbieters für die Verarbeitung aller Systemüberwachung Ereignisse oben definierten ASP.NET ermöglicht.  
+  
+```  
+<healthMonitoring   
+  heartBeatInterval="0"   
+  enabled="true">  
+  
+    <providers>  
+  
+      <add name="SampleWebEventProvider"   
+        type="SamplesAspNet.SampleEventProvider,webeventprovider, Version=1.0.1773.33989, Culture=neutral, PublicKeyToken=cf85aa6c978d9dea, processorArchitecture=MSIL" />  
+  
+    </providers>  
+  
+    <rules>  
+  
+      <rule   
+        name="Custom Event Provider"  
+        eventName="All Events"  
+        provider="SampleWebEventProvider"  
+        profile="Default" />  
+    </rules>  
+  
+</healthMonitoring>  
+```  
+  
+ [!code-csharp[System.Web.Management.WebEventProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebEventProvider/CS/webeventprovider.cs#1)]
+ [!code-vb[System.Web.Management.WebEventProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebEventProvider/VB/webeventprovider.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebEventProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebEventProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Management.WebEventProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventProvider.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Er wird von ASP.NET aufgerufen. Sie erreichen die <xref:System.Web.Management.WebEventProvider.%23ctor%2A> Konstruktor beim Ableiten von der <xref:System.Web.Management.WebEventProvider> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors in einer benutzerdefinierten Ereignisanbieters veranschaulicht.  
+  
+ [!code-csharp[System.Web.Management.WebEventProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebEventProvider/CS/webeventprovider.cs#2)]
+ [!code-vb[System.Web.Management.WebEventProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebEventProvider/VB/webeventprovider.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public abstract void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebEventProvider.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verschiebt die Ereignisse aus dem Puffer des Anbieters in das Ereignisprotokoll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Methode aufgerufen wird, lediglich die Ereignisse im Puffer sofort aus dem Puffer verschoben werden, in das Ereignisprotokoll, unabhängig davon, wie viel Zeit verstrichen ist seit dem letzten Schreibvorgang oder der Anzahl der Ereignisse im Puffer werden. Die Zeit des letzten Schreibzugriffs wird mit der Zeit der Leerung zurückgesetzt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Management.WebEventProvider.Flush%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[System.Web.Management.WebEventProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebEventProvider/CS/webeventprovider.cs#3)]
+ [!code-vb[System.Web.Management.WebEventProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebEventProvider/VB/webeventprovider.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessEvent">
+      <MemberSignature Language="C#" Value="public abstract void ProcessEvent (System.Web.Management.WebBaseEvent raisedEvent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessEvent(class System.Web.Management.WebBaseEvent raisedEvent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebEventProvider.ProcessEvent(System.Web.Management.WebBaseEvent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="raisedEvent" Type="System.Web.Management.WebBaseEvent" />
+      </Parameters>
+      <Docs>
+        <param name="raisedEvent">Die <see cref="T:System.Web.Management.WebBaseEvent" /> Objekt zu verarbeiten.</param>
+        <summary>Verarbeitet das Ereignis an den Anbieter übergeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist die Methode, die ASP.NET-Systemüberwachung Aufrufe von beginnt mit der Verarbeitung des Ereignisses.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Implementierung der <xref:System.Web.Management.WebEventProvider.ProcessEvent%2A>-Methode veranschaulicht. Diese Methode fügt benutzerdefinierte Zeichenfolgendarstellung des Ereignisses an eine bestimmte Protokolldatei.  
+  
+ [!code-csharp[System.Web.Management.WebEventProvider#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebEventProvider/CS/webeventprovider.cs#5)]
+ [!code-vb[System.Web.Management.WebEventProvider#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebEventProvider/VB/webeventprovider.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public abstract void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebEventProvider.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt Aufgaben im Zusammenhang mit dem Anbieter heruntergefahren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET ruft die <xref:System.Web.Management.EventLogWebEventProvider.Shutdown%2A> Methode, wenn die Anwendungsdomäne, der die Webanwendung hostet beendet wird. Die Methode wird aufgerufen, um Aufgaben auszuführen, die die Anwendung kontrolliert, wie z. B. schließende Ressourcen beendet werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Management.WebEventProvider.Shutdown%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[System.Web.Management.WebEventProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebEventProvider/CS/webeventprovider.cs#4)]
+ [!code-vb[System.Web.Management.WebEventProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebEventProvider/VB/webeventprovider.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

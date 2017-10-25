@@ -1,0 +1,73 @@
+<Type Name="IRelDecryptor" FullName="System.Security.Cryptography.Xml.IRelDecryptor">
+  <TypeSignature Language="C#" Value="public interface IRelDecryptor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRelDecryptor" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.IRelDecryptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Methoden, die eine XrML entschlüsseln <see langword="&lt;encryptedGrant&gt;" /> Element.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Cryptography.Xml.IRelDecryptor> eine Verbindung mit der <xref:System.Security.Cryptography.Xml.XmlLicenseTransform> Klasse zum Entschlüsseln einer XrML `<encryptedGrant>` Element.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Validieren eines XML-Signatur mithilfe der <xref:System.Security.Cryptography.Xml.IRelDecryptor> Schnittstelle und die <xref:System.Security.Cryptography.Xml.XmlLicenseTransform> Klasse.  
+  
+ [!code-cpp[Cryptography.XML.XmlLicenseTransform#2](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XmlLicenseTransform/cpp/sample.cpp#2)]
+ [!code-csharp[Cryptography.XML.XmlLicenseTransform#2](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XmlLicenseTransform/CS/sample.cs#2)]
+ [!code-vb[Cryptography.XML.XmlLicenseTransform#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XmlLicenseTransform/VB/sample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Decrypt">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Decrypt (System.Security.Cryptography.Xml.EncryptionMethod encryptionMethod, System.Security.Cryptography.Xml.KeyInfo keyInfo, System.IO.Stream toDecrypt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream Decrypt(class System.Security.Cryptography.Xml.EncryptionMethod encryptionMethod, class System.Security.Cryptography.Xml.KeyInfo keyInfo, class System.IO.Stream toDecrypt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.IRelDecryptor.Decrypt(System.Security.Cryptography.Xml.EncryptionMethod,System.Security.Cryptography.Xml.KeyInfo,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptionMethod" Type="System.Security.Cryptography.Xml.EncryptionMethod" />
+        <Parameter Name="keyInfo" Type="System.Security.Cryptography.Xml.KeyInfo" />
+        <Parameter Name="toDecrypt" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="encryptionMethod">Ein <see cref="T:System.Security.Cryptography.Xml.EncryptionMethod" /> Objekt, das den Algorithmus für die XML-Verschlüsselung verwendete kapselt.</param>
+        <param name="keyInfo">Ein <see cref="T:System.Security.Cryptography.Xml.KeyInfo" /> Objekt, das einen asymmetrischen Schlüssel für die Entschlüsselung enthält.</param>
+        <param name="toDecrypt">Ein Streamobjekt, enthält ein <see langword="&lt;encryptedGrant&gt;" /> Element zu entschlüsseln.</param>
+        <summary>Entschlüsselt ein XrML <see langword="&lt;encryptedGrant&gt;" /> Element, das in enthalten ist ein <see cref="T:System.IO.Stream" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.IO.Stream" /> Objekt, das eine entschlüsselte enthält <see langword="&lt;encryptedGrant&gt;" /> Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.IRelDecryptor.Decrypt%2A> -Methode entschlüsselt ein XrML `<encryptedGrant>` Element und gibt einen nur-Text-Stream zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.MobileControls">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI.MobileControls" /> -Namespace enthält einen Satz von ASP.NET-Serversteuerelementen angezeigt, die Ihre Anwendung auf verschiedenen mobilen Geräten gerendert werden können. Die APIs in diesem Namespace sind veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der <see href="http://go.microsoft.com/fwlink/?LinkID=182900">www.asp.net/mobile</see> Website.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

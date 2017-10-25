@@ -1,0 +1,168 @@
+<Type Name="CodeLabeledStatement" FullName="System.CodeDom.CodeLabeledStatement">
+  <TypeSignature Language="C#" Value="public class CodeLabeledStatement : System.CodeDom.CodeStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeLabeledStatement extends System.CodeDom.CodeStatement" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeLabeledStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Anweisung mit Bezeichnung oder eine eigenständige Bezeichnung dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeLabeledStatement>Stellt eine Bezeichnung und optional eine zugeordnete Anweisung dar. Eine Bezeichnung kann verwendet werden, um anzugeben, das Ziel einer <xref:System.CodeDom.CodeGotoStatement>.  
+  
+ Die <xref:System.CodeDom.CodeLabeledStatement.Statement%2A> Eigenschaft ist optional. Um nur eine Bezeichnung zu erstellen, lassen Sie die <xref:System.CodeDom.CodeLabeledStatement.Statement%2A> Eigenschaft nicht initialisiert.  
+  
+> [!NOTE]
+>  Nicht alle Sprachen unterstützen `goto` -Anweisungen und Marken, damit Sie Fehlerdaten prüfen soll, wenn ein Codegenerator unterstützt `goto` -Anweisungen und Marken durch Aufrufen der <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> Methode mit der <xref:System.CodeDom.Compiler.GeneratorSupport.GotoStatements> Flag.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht die Verwendung von einem <xref:System.CodeDom.CodeGotoStatement> und ein <xref:System.CodeDom.CodeLabeledStatement> Programmablauf umgeleitet.  
+  
+ [!code-cpp[CodeGotoStatementExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeGotoStatementExample/CPP/codegotostatementexample.cpp#2)]
+ [!code-csharp[CodeGotoStatementExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeGotoStatementExample/CS/codegotostatementexample.cs#2)]
+ [!code-vb[CodeGotoStatementExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeGotoStatementExample/VB/codegotostatementexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeLabeledStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeLabeledStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeLabeledStatement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeLabeledStatement (string label);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string label) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeLabeledStatement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="label" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="label">Der Name der Sprungmarke.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeLabeledStatement" /> -Klasse unter Verwendung des angegebenen Bezeichnung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeLabeledStatement (string label, System.CodeDom.CodeStatement statement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string label, class System.CodeDom.CodeStatement statement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeLabeledStatement.#ctor(System.String,System.CodeDom.CodeStatement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="label" Type="System.String" />
+        <Parameter Name="statement" Type="System.CodeDom.CodeStatement" />
+      </Parameters>
+      <Docs>
+        <param name="label">Der Name der Sprungmarke.</param>
+        <param name="statement">Die <see cref="T:System.CodeDom.CodeStatement" /> die Bezeichnung zugeordnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeLabeledStatement" /> -Klasse unter Verwendung der angegebenen Bezeichnung und -Anweisung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeLabeledStatement.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Bezeichnung.</summary>
+        <value>Der Name der Sprungmarke.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Statement">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatement Statement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatement Statement" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeLabeledStatement.Statement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die optionale zugeordnete Anweisung.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeStatement" /> , die die Bezeichnung zugeordnete Anweisung angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft nicht festgelegt ist, die <xref:System.CodeDom.CodeLabeledStatement> nur eine Bezeichnung, anstatt eine Anweisung mit Bezeichnung darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

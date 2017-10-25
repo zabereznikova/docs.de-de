@@ -1,0 +1,160 @@
+<Type Name="ListViewCommandEventArgs" FullName="System.Web.UI.WebControls.ListViewCommandEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewCommandEventArgs : System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewCommandEventArgs extends System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CommandEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.ListView.ItemCommand" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListView.ItemCommand> Ereignis wird ausgelöst, wenn auf eine Schaltfläche in der <xref:System.Web.UI.WebControls.ListView> Steuerelement geklickt wird. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, wenn dieses Ereignis tritt auf.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.ListView> Steuerelement löst auch andere Ereignisse, die bestimmte Schaltflächen geklickt werden (z. B. Schaltflächen, mit der `CommandName` -Eigenschaft auf "Löschen", "Update" oder "Seite" festgelegt). Wenn Sie eine der folgenden Schaltflächen verwenden, können Sie eine der speziellen Ereignisse, die durch das Steuerelement, z. B. bereitgestellt werden Behandeln der <xref:System.Web.UI.WebControls.ListView.ItemDeleted> oder <xref:System.Web.UI.WebControls.ListView.ItemDeleting> Ereignisse.  
+  
+ Ein <xref:System.Web.UI.WebControls.ListViewCommandEventArgs> Ereignisbehandlungsmethode, können Sie bestimmen die Befehlsnamen und Befehlsargument der Schaltfläche, die per Mausklick-Objekt übergeben wird. Um zu bestimmen, mit können Sie den Namen der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> -Eigenschaft, und das Befehlsargument ermitteln Sie mithilfe der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> Eigenschaft. Sie können auch zugreifen, das Schaltflächen-Steuerelement, das das Ereignis ausgelöst, mithilfe hat der <xref:System.Web.UI.WebControls.ListViewCommandEventArgs.CommandSource%2A> Eigenschaft.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.ListViewCommandEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.ListViewCommandEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewCommandEventArgs> -Objekt, das an den Ereignishandler übergeben wird.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewItemCommand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewItemCommand/CS/ListViewItemCommandCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewItemCommand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewItemCommand/VB/ListViewItemCommandVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewCommandEventArgs (System.Web.UI.WebControls.ListViewItem item, object commandSource, System.Web.UI.WebControls.CommandEventArgs originalArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.ListViewItem item, object commandSource, class System.Web.UI.WebControls.CommandEventArgs originalArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewCommandEventArgs.#ctor(System.Web.UI.WebControls.ListViewItem,System.Object,System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.ListViewItem" />
+        <Parameter Name="commandSource" Type="System.Object" />
+        <Parameter Name="originalArgs" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element aus der <see cref="T:System.Web.UI.WebControls.ListView" /> Steuern für das der Befehl ausgegeben wurde.</param>
+        <param name="commandSource">Die Quelle des Befehls.</param>
+        <param name="originalArgs">Die Ereignisdaten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.ListViewCommandEventArgs" /> Klasse, indem die angegebene Quelle des Befehls und der Ereignisargumente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.ListViewCommandEventArgs> Klasse.  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.ListViewCommandEventArgs>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A>|Der Wert des der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.CommandEventArgs> -Objekt, das in enthalten ist die `originalArgs` Parameter.|  
+|<xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A>|Der Wert des der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.CommandEventArgs> -Objekt, das in enthalten ist die `originalArgs` Parameter.|  
+|<xref:System.Web.UI.WebControls.GridViewCommandEventArgs.CommandSource%2A>|Das Objekt, das in enthalten ist das `commandSource` Parameter.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandSource">
+      <MemberSignature Language="C#" Value="public object CommandSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewCommandEventArgs.CommandSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Quelle des Befehls ab.</summary>
+        <value>Die Quelle des Befehls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListViewCommandEventArgs.CommandSource%2A> Eigenschaft, um die Eigenschaften des Objekts zuzugreifen, die die Quelle des Befehls darstellt. Für die <xref:System.Web.UI.WebControls.ListViewCommandEventArgs> -Objekt die Quelle des Befehls ist der <xref:System.Web.UI.WebControls.ListView> Steuerelement mit der Schaltfläche der Benutzer geklickt hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewCommandEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Steuerelement das Ereignis behandelt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn von datengebundenen Ereigniscode übersprungen wurde oder wurde beendet. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf `true` im Ereignishandler an, dass die <xref:System.Web.UI.WebControls.ListView> Steuerelement sollte das Ereignis nicht behandeln, da Sie es im Code behandeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ListViewItem Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ListViewItem Item" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewCommandEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datenelement für das der Befehl ausgegeben wurde.</summary>
+        <value>Das Datenelement aus den <see cref="T:System.Web.UI.WebControls.ListView" /> Steuern für das der Befehl ausgegeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewCommandEventArgs> -Objekt, das an den Ereignishandler übergeben wird.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewItemCommand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewItemCommand/CS/ListViewItemCommandCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewItemCommand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewItemCommand/VB/ListViewItemCommandVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

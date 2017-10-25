@@ -1,0 +1,177 @@
+<Type Name="RecipientServiceModelSecurityTokenRequirement" FullName="System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement">
+  <TypeSignature Language="C#" Value="public sealed class RecipientServiceModelSecurityTokenRequirement : System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RecipientServiceModelSecurityTokenRequirement extends System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt die Sicherheit spezifische Anforderungen für den Listenerdienst in Windows Communication Foundation (WCF).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tokenanforderungsklassen werden von einem Sicherheitstoken-Manager verwendet, um die Anforderungen für ein Sicherheitstoken anzugeben, z.&#160;B. Schlüsselgröße, Schlüsseltyp und Verwendungsart des Schlüssels. Wenn ein Sicherheitstoken identifiziert werden kann, das die angegebenen Kriterien erfüllt, können ein Sicherheitstokenanbieter und ein Sicherheitstokenauthentifizierer erstellt werden.  
+  
+ Diese Tokenanforderungsklasse gibt Empfänger-bezogene Anforderungen an.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RecipientServiceModelSecurityTokenRequirement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SupportSecurityContextCancellationProperty%2A>-Eigenschaft und die <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.IsInitiatorProperty%2A>-Eigenschaft sind auf `false` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditLogLocation">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.AuditLogLocation AuditLogLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.AuditLogLocation AuditLogLocation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.AuditLogLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AuditLogLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auswahl des Überwachungsprotokolls.</summary>
+        <value>Der Speicherort des Audit-Protokoll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.AuditLogLocation> ist eine Enumeration mit den folgenden Membern:  
+  
+-   <xref:System.ServiceModel.AuditLogLocation.Application>: Das Anwendungsprotokoll im Betriebssystem-Ereignisprotokoll.  
+  
+-   <xref:System.ServiceModel.AuditLogLocation.Default>: Der Standardspeicherort, der vom Betriebssystem festgelegt wird.  
+  
+-   <xref:System.ServiceModel.AuditLogLocation.Security>: Das Sicherheitsprotokoll im Ereignisprotokoll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenUri">
+      <MemberSignature Language="C#" Value="public Uri ListenUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ListenUri" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.ListenUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Listener-URI.</summary>
+        <value>Der URI des Listeners.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageAuthenticationAuditLevel">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.AuditLevel MessageAuthenticationAuditLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.AuditLevel MessageAuthenticationAuditLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.MessageAuthenticationAuditLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AuditLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der meldungsauthentifizierungsebene für die Überwachung.</summary>
+        <value>Die Überwachungsebene für die Nachrichtenauthentifizierung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.AuditLevel> ist eine Enumeration mit den folgenden Membern:  
+  
+-   <xref:System.ServiceModel.AuditLevel.Failure>: Nur fehlgeschlagene Sicherheitsereignisse werden aufgezeichnet.  
+  
+-   <xref:System.ServiceModel.AuditLevel.None>: Es werden keine Ereignisse aufgezeichnet.  
+  
+-   <xref:System.ServiceModel.AuditLevel.Success>: Nur erfolgreiche Sicherheitsereignisse werden aufgezeichnet.  
+  
+-   <xref:System.ServiceModel.AuditLevel.SuccessOrFailure>: Fehlgeschlagene und erfolgreiche Sicherheitsereignisse werden aufgezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressAuditFailure">
+      <MemberSignature Language="C#" Value="public bool SuppressAuditFailure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressAuditFailure" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.SuppressAuditFailure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Überwachungsfehler unterdrückt werden.</summary>
+        <value>
+          <see langword="true" />Wenn die Überwachungsfehler unterdrückt werden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt eine Textdarstellung dieser Instanz der Klasse an.</summary>
+        <returns>Eine Textdarstellung dieser Instanz der Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode zeigt den Namen des Eigenschaftstyps und den Namen und den Wert für jede Eigenschaft an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

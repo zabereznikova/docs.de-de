@@ -1,0 +1,84 @@
+<Type Name="ServiceNameElement" FullName="System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement">
+  <TypeSignature Language="C#" Value="public sealed class ServiceNameElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ServiceNameElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement" /> Klasse stellt ein Konfigurationselement dar, für ein Dienstnamen in verwendet eine <see cref="T:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceNameElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser Konstruktor initialisiert eine neue Instanz der verwendet wird die <xref:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement> -Klasse, die <xref:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement.Name%2A> -Eigenschaftensatz auf `null`.  
+  
+ Die <xref:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement.Name%2A> Eigenschaft sollte festgelegt werden, auf einen geeigneten Wert für die Anwendung vor dem Aufruf der <xref:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Add%2A> -Methode zum Hinzufügen der <xref:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement> -Instanz, auf die <xref:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest (Service Provider Name, SPN) für diesen <see cref="T:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement" /> Instanz.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält die Darstellung des SPN für diesen <see cref="T:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement" /> Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

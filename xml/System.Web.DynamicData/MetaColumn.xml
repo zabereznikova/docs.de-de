@@ -1,0 +1,982 @@
+<Type Name="MetaColumn" FullName="System.Web.DynamicData.MetaColumn">
+  <TypeSignature Language="C#" Value="public class MetaColumn : System.Web.DynamicData.IFieldFormattingOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MetaColumn extends System.Object implements class System.Web.DynamicData.IFieldFormattingOptions" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.MetaColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.DynamicData.IFieldFormattingOptions</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Datenbankspalte, die durch dynamische Daten verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In ASP.NET Dynamic Data-Anwendungen die <xref:System.Web.DynamicData.MetaColumn> Klasse stellt ein Datenbankfeld dar. Die <xref:System.Web.DynamicData.MetaColumn> -Klasse können Sie die Informationen über das Feld "Daten", z. B. Informationen zu Datentyp und die Metadaten abzurufen.  
+  
+ Sie können die Tabelle, die das Feld "Daten" mit gehört Abrufen der <xref:System.Web.DynamicData.MetaColumn.Table%2A> Eigenschaft. Sie können auch das Datenmodell abrufen, mithilfe der <xref:System.Web.DynamicData.MetaColumn.Model%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetaColumn (System.Web.DynamicData.MetaTable table, System.Web.DynamicData.ModelProviders.ColumnProvider columnProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.DynamicData.MetaTable table, class System.Web.DynamicData.ModelProviders.ColumnProvider columnProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaColumn.#ctor(System.Web.DynamicData.MetaTable,System.Web.DynamicData.ModelProviders.ColumnProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable" />
+        <Parameter Name="columnProvider" Type="System.Web.DynamicData.ModelProviders.ColumnProvider" />
+      </Parameters>
+      <Docs>
+        <param name="table">Das Meta-Tabelle, die die Spalte enthält.</param>
+        <param name="columnProvider">Der Spaltenanbieter.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DynamicData.MetaColumn" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowInitialValue">
+      <MemberSignature Language="C#" Value="public bool AllowInitialValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowInitialValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.AllowInitialValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Spalte einen Wert eingefügt werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Spalte einen Wert eingefügt werden kann. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false` Wenn die Spalte ist schreibgeschützt und `true` Wenn die Spalte ist nicht schreibgeschützt. Der Standardwert kann überschrieben werden, mithilfe der <xref:System.ComponentModel.DataAnnotations.EditableAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyFormatInEditMode">
+      <MemberSignature Language="C#" Value="public bool ApplyFormatInEditMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplyFormatInEditMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.ApplyFormatInEditMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Formatierungszeichenfolge vom angegeben die <see cref="P:System.Web.DynamicData.MetaColumn.DataFormatString" /> Eigenschaft auf Feldwerte angewendet wird, wenn das datengebundene Steuerelement, die das Datenfeld die enthält von dargestellte der <see cref="T:System.Web.DynamicData.MetaColumn" /> Objekt befindet sich im Bearbeitungsmodus befindet.</summary>
+        <value>
+          <see langword="true" />Wenn die Formatierungszeichenfolge, wird angegeben die <see cref="P:System.Web.DynamicData.MetaColumn.DataFormatString" /> Eigenschaft auf Feldwerte angewendet wird, wenn das datengebundene Steuerelement, die das Datenfeld die enthält von dargestellte der <see cref="T:System.Web.DynamicData.MetaColumn" /> Objekt befindet sich im Bearbeitungsmodus hingegen <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.ApplyFormatInEditMode%2A> Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute> Attribut auf das Feld "Daten" angewendet wird, und ruft den Wert des der <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ApplyFormatInEditMode%2A?displayProperty=nameWithType> Eigenschaft. Wenn eine <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute> Attribut nicht gefunden wird, diese Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute> -Attribut zum Abrufen von Informationen über die Formatierung angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.AttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.AttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Metadatenattributen, die für das Feld "Daten" dargestellte gelten ab dem <see cref="T:System.Web.DynamicData.MetaColumn" /> Objekt.</summary>
+        <value>Die Auflistung von Metadatenattributen, die für das Feld "Daten" dargestellte gelten die <see cref="T:System.Web.DynamicData.MetaColumn" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildAttributeCollection">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.AttributeCollection BuildAttributeCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ComponentModel.AttributeCollection BuildAttributeCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaColumn.BuildAttributeCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die attributauflistung.</summary>
+        <returns>Die Attributauflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.Web.DynamicData.MetaColumn.BuildAttributeCollection%2A> -Methode auf, bevor Sie Zugriff auf die <xref:System.Web.DynamicData.MetaColumn.Attributes%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnType">
+      <MemberSignature Language="C#" Value="public Type ColumnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ColumnType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.ColumnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Datenfelds ab.</summary>
+        <value>Der Typ des Datenfelds.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.ColumnType%2A> Eigenschaft gibt die common Language Runtime (CLR)-Typ auf, das Feld "Daten" zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertEmptyStringToNull">
+      <MemberSignature Language="C#" Value="public bool ConvertEmptyStringToNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConvertEmptyStringToNull" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.ConvertEmptyStringToNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob leere Zeichenfolgenwerte ("") werden automatisch in konvertiert <see langword="null" /> Werten, wenn das Feld "Daten" in der Datenquelle aktualisiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn leere Zeichenfolgenwerte automatisch in konvertiert werden <see langword="null" /> Werten, wenn das Feld "Daten" in der Datenquelle aktualisiert wurde, andernfalls ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.ConvertEmptyStringToNull%2A> Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute> Attribut auf das Feld "Daten" angewendet wird, und ruft den Wert des der <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ConvertEmptyStringToNull%2A?displayProperty=nameWithType> Eigenschaft. Wenn eine <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute> Attribut nicht gefunden wird, diese Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute> -Attribut zum Abrufen von Informationen über die Formatierung angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataFormatString">
+      <MemberSignature Language="C#" Value="public string DataFormatString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.DataFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichenfolge, die das Anzeigeformat für den Wert des Felds angibt.</summary>
+        <value>Die Zeichenfolge, die das Anzeigeformat für den Wert des Felds angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.DataFormatString%2A> Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute> Attribut auf das Feld "Daten" angewendet wird, und ruft den Wert des der <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.DataFormatString%2A?displayProperty=nameWithType> Eigenschaft. Wenn eine <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute> Attribut nicht gefunden wird, diese Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute> -Attribut zum Abrufen von Informationen über die Formatierung angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTypeAttribute">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.DataAnnotations.DataTypeAttribute DataTypeAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.DataAnnotations.DataTypeAttribute DataTypeAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.DataTypeAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataTypeAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.ComponentModel.DataAnnotations.DataTypeAttribute" /> -Attribut, das auf das Feld "Daten" angewendet wird.</summary>
+        <value>Die <see cref="T:System.ComponentModel.DataAnnotations.DataTypeAttribute" /> -Attribut, das auf das Feld "Daten" angewendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public object DefaultValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardwert für das Feld "Daten" ab.</summary>
+        <value>Der Standardwert für das Feld "Daten".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.DefaultValue%2A> Eigenschaft wird normalerweise verwendet, um den Feldwert vorab aufgefüllt, wenn ein neuer Eintrag erstellt wird. Diese Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DefaultValueAttribute> Attribut auf das Feld "Daten" angewendet wird, und ruft den Wert des der <xref:System.ComponentModel.DefaultValueAttribute.Value%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public virtual string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung für das Feld "Daten" ab.</summary>
+        <value>Die Beschreibung für das Feld "Daten".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.Description%2A> Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DescriptionAttribute> Attribut auf das Feld "Daten" angewendet wird, und ruft den Wert des der <xref:System.ComponentModel.DescriptionAttribute.Description%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public virtual string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen für das Feld "Daten" ab.</summary>
+        <value>Der Anzeigename für das Feld "Daten".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.DisplayName%2A> Eigenschaft gibt den benutzerfreundlichen Anzeigenamen für das Feld "Daten", wenn eine festgelegt wurde, oder der Name des Felds zurück, wenn kein Name angegeben wurde. Die <xref:System.Web.DynamicData.MetaColumn.DisplayName%2A> Eigenschaft überprüft, ob ein Anzeigename festgelegt wurde, indem Sie überprüfen, ob eine <xref:System.ComponentModel.DisplayNameAttribute> -Attribut auf das Feld "Daten" angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityTypeProperty">
+      <MemberSignature Language="C#" Value="public System.Reflection.PropertyInfo EntityTypeProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.PropertyInfo EntityTypeProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.EntityTypeProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das Attribute der Eigenschaft enthält, die das Feld "Daten" in den Entitätstyp darstellt.</summary>
+        <value>Ein Objekt, das Attribute der Eigenschaft enthält, die das Feld "Daten" in den Entitätstyp darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterUIHint">
+      <MemberSignature Language="C#" Value="public string FilterUIHint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilterUIHint" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.FilterUIHint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.ComponentModel.DataAnnotations.FilterUIHintAttribute.FilterUIHint" /> -Wert, der für die Spalte verwendet wird.</summary>
+        <value>Die <see cref="P:System.ComponentModel.DataAnnotations.FilterUIHintAttribute.FilterUIHint" /> -Wert, der für die Spalte verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public bool HtmlEncode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HtmlEncode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.HtmlEncode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Feldwerte HTML-codiert werden, bevor sie in einem datengebundenen Steuerelement angezeigt werden.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected virtual void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaColumn.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert Daten, die möglicherweise nicht verfügbar, wenn der Konstruktor aufgerufen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nicht direkt aufgerufen werden. Um die Initialisierung anzupassen, können von dieser Klasse ableiten und überschreiben die `Initialize` Methode. Wenn Sie diese Methode überschreiben, rufen Sie die Basissteuerelement `Initialize` Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBinaryData">
+      <MemberSignature Language="C#" Value="public bool IsBinaryData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBinaryData" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.IsBinaryData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Feld "Daten" binäre Daten enthält.</summary>
+        <value>
+          <see langword="true" />Wenn das Feld "Daten" binäre Daten enthält. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCustomProperty">
+      <MemberSignature Language="C#" Value="public bool IsCustomProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCustomProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.IsCustomProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Feld "Daten" in der Datenbank vorhanden ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Feld "Daten" in der Datenbank nicht vorhanden ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.DynamicData.MetaColumn.IsCustomProperty%2A> -Eigenschaft können Sie bestimmen, ob ein Datenfeld in der Datenbank ist oder wenn es eine zusätzliche Eigenschaft handelt, die die Kontext-Datenobjekt hinzugefügt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFloatingPoint">
+      <MemberSignature Language="C#" Value="public bool IsFloatingPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFloatingPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.IsFloatingPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Datenfeld ein Gleitkommatyp ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Datenfeld ein Gleitkommatyp ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Typen `float`, `double`, und `decimal` Gleitkommatypen sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsForeignKeyComponent">
+      <MemberSignature Language="C#" Value="public bool IsForeignKeyComponent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsForeignKeyComponent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.IsForeignKeyComponent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Feld "Daten" Teil ein Fremdschlüssel ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Feld "Daten" einen foreign Key gehört; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGenerated">
+      <MemberSignature Language="C#" Value="public bool IsGenerated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGenerated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.IsGenerated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Wert des Felds in der Datenbank automatisch generiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert im Datenfeld ist in der Datenbank automatisch generiert. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInteger">
+      <MemberSignature Language="C#" Value="public bool IsInteger { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInteger" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.IsInteger" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Typ des Felds ein Ganzzahltyp ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Typ des Felds ein Ganzzahltyp ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Typen `byte`, `short`, `int`, und `long` sind ganzzahlige Typen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLongString">
+      <MemberSignature Language="C#" Value="public bool IsLongString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLongString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.IsLongString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Typ des Felds lange Zeichenfolgen enthalten kann.</summary>
+        <value>
+          <see langword="true" />Wenn der Typ des Felds lange Zeichenfolgen, und enthalten kann andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die SQL-Typen `text`, `ntext`, `varchar`, und `nvarchar` lange Zeichenfolgen enthalten kann. Der Wert, der die <xref:System.Web.DynamicData.MetaColumn.IsLongString%2A> Eigenschaft wird verwendet, um zu bestimmen, ob die Feldvorlage Textfeld oder TextArea angezeigt wird, um Benutzern das Ändern des Wert des Felds zu aktivieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrimaryKey">
+      <MemberSignature Language="C#" Value="public bool IsPrimaryKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrimaryKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.IsPrimaryKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Feld "Daten" Teil des Primärschlüssels der Tabelle ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Feld "Daten" Teil des Primärschlüssels der Tabelle ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Datenfeld schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Feld "Daten" schreibgeschützt ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequired">
+      <MemberSignature Language="C#" Value="public bool IsRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.IsRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Feld "Daten" ein Wert erforderlich ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Feld "Daten" ein Wert erforderlich ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.Description%2A> Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DataAnnotations.RequiredAttribute> -Attribut auf das Feld "Daten" angewendet wird oder wenn die Informationen zu den Daten im Datenbankschema Feld wird in der Datenbank erforderlich, um zu bestimmen, ob das Feld "Daten" ein Wert erforderlich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsString">
+      <MemberSignature Language="C#" Value="public bool IsString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.IsString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Typ des Felds einen Zeichenfolgentyp handelt.</summary>
+        <value>
+          <see langword="true" />Wenn der Typ des Felds ein Zeichenfolgen-Datentyp ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLength">
+      <MemberSignature Language="C#" Value="public int MaxLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.MaxLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die maximale Länge der Daten angibt, die in das Feld "Daten" gespeichert werden können.</summary>
+        <value>Die maximale Länge der Daten, die in das Feld "Daten" gespeichert werden können.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.MaxLength%2A> Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DataAnnotations.StringLengthAttribute> Attribut auf das Feld "Daten" angewendet wird, und ruft den Wert des der <xref:System.ComponentModel.DataAnnotations.StringLengthAttribute.MaximumLength%2A> Eigenschaft. Wenn eine <xref:System.ComponentModel.DataAnnotations.StringLengthAttribute> Attribut wird nicht angewendet, um das Feld "Daten" der <xref:System.Web.DynamicData.MetaColumn.MaxLength%2A> Eigenschaft verwendet den Datenbanktyp, um die maximal zulässige Länge abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Model">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaModel Model { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaModel Model" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.Model" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.DynamicData.MetaModel" /> Objekt, das das Datenmodell darstellt, zu dem dieses Datenfeld gehört.</summary>
+        <value>Ein Objekt, das Datenmodell darstellt, zu dem dieses Datenfeld gehört.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Datenfelds ab.</summary>
+        <value>Der Name des Datenfelds.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullDisplayText">
+      <MemberSignature Language="C#" Value="public string NullDisplayText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NullDisplayText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.NullDisplayText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschriftung, die angezeigt wird für ein Feld, wenn der Wert des Felds ist <see langword="null" />.</summary>
+        <value>Die Beschriftung, die für ein Feld angezeigt wird, wenn der Wert des Felds ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.NullDisplayText%2A> Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute> Attribut auf das Feld "Daten" angewendet wird, und ruft den Wert des der <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.NullDisplayText%2A?displayProperty=nameWithType> Eigenschaft. Wenn eine <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute> Attribut nicht gefunden wird, diese Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute> -Attribut zum Abrufen von Informationen über die Formatierung angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prompt">
+      <MemberSignature Language="C#" Value="public virtual string Prompt { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prompt" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.Prompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der als Wasserzeichen in der Benutzeroberfläche verwendet werden kann, die an Daten in der Spalte gebunden ist.</summary>
+        <value>Ein Wert, der als Wasserzeichen in der Benutzeroberfläche verwendet werden kann, die an Daten in der Spalte gebunden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `null` oder leere Zeichenfolge zurückgegeben werden kann.  
+  
+   
+  
+## Examples  
+ Diese Eigenschaft wird festgelegt, indem die <xref:System.ComponentModel.DataAnnotations.DisplayAttribute> -Attribut in der Definition der Spalte in der Klasse Metadaten für die Datenentität.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.ModelProviders.ColumnProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.ModelProviders.ColumnProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.ModelProviders.ColumnProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Anbieterobjekt für Abstraktion, mit dem generieren, der <see cref="T:System.Web.DynamicData.MetaColumn" /> Objekt.</summary>
+        <value>Das Anbieterobjekt für Abstraktion, mit dem generieren, der <see cref="T:System.Web.DynamicData.MetaColumn" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredErrorMessage">
+      <MemberSignature Language="C#" Value="public string RequiredErrorMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequiredErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.RequiredErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Fehlermeldung ab, die angezeigt wird, wenn das Feld "Daten" ist ein Wert erforderlich, aber der Wert leer ist.</summary>
+        <value>Die Fehlermeldung, die angezeigt wird, wenn das Feld "Daten" ist ein Wert erforderlich, aber der Wert leer ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetMetadata">
+      <MemberSignature Language="C#" Value="public void ResetMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetMetadata() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaColumn.ResetMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht zwischengespeicherte Spaltenmetadaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Spaltenmetadaten sind Informationen, die aus Attributen abgeleitet wird und, die für Leistung zwischengespeichert wird. Beim Aufrufen dieser Methode löscht den Metadatencache für diese Spalte. Der Metadatencache wird das nächste Mal neu erstellt, wenn alle Informationen, die von Metadaten abgeleitet wird angefordert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scaffold">
+      <MemberSignature Language="C#" Value="public virtual bool Scaffold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Scaffold" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.Scaffold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Feld "Daten" angezeigt werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Feld "Daten" angezeigt werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.Scaffold%2A> Eigenschaft gibt an, ob ein Datenfeld angezeigt werden soll, wenn es automatisch von ASP.NET Dynamic Data generiert wird. Diese Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute> Attribut auf das Feld "Daten" angewendet wird, und gibt den Wert der <xref:System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute.Scaffold%2A?displayProperty=nameWithType> Eigenschaft. Wenn ein <xref:System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute> Attribut nicht auf das Feld "Daten" angewendet wird, Dynamic Data verwendet die folgenden Regeln bestimmt, ob die Spalte angezeigt:  
+  
+-   Wenn ein <xref:System.ComponentModel.DataAnnotations.UIHintAttribute> Attribut auf das Feld "Daten" angewendet wird, wird das Feld "Daten" angezeigt. Diese Regel überschreibt alle anderen Regeln.  
+  
+-   Wenn der Wert von der <xref:System.Web.DynamicData.MetaColumn.IsForeignKeyComponent%2A> Eigenschaft ist `true`, das Feld "Daten" wird nicht angezeigt. Dies tritt auf, da Dynamic Data foreign Key Felder auf andere Weise verarbeitet und die foreign Key-Feld-Wert in der Regel nicht angezeigt wird.  
+  
+-   Wenn der Wert von der <xref:System.Web.DynamicData.MetaColumn.IsGenerated%2A> Eigenschaft ist `true`, das Feld "Daten" wird nicht angezeigt. Felder, die in der Datenbank automatisch generiert werden, enthalten i. d. r. keine relevanten Informationen. Stellen Sie sicher, dass Sie übernehmen die <xref:System.ComponentModel.DataAnnotations.UIHintAttribute> -Attribut auf das Feld "Daten", wenn das Feld "Daten" angezeigt werden muss.  
+  
+-   Wenn der Wert von der <xref:System.Web.DynamicData.MetaColumn.IsCustomProperty%2A> Eigenschaft ist `true`, das Feld "Daten" wird nicht angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShortDisplayName">
+      <MemberSignature Language="C#" Value="public virtual string ShortDisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ShortDisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.ShortDisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Kurznamen für die Spalte ab.</summary>
+        <value>Der Kurzname für die Spalte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft dient zur <xref:System.Web.UI.WebControls.GridView> Steuerelement und andere Steuerelemente, in denen ein Kurzname aufgrund der erforderlich ist, begrenzt Spaltenüberschrift Speicherplatz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortExpression">
+      <MemberSignature Language="C#" Value="public string SortExpression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SortExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.SortExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ausdruck, der verwendet wird, um zu bestimmen, die Sortierreihenfolge für das Feld "Daten" ab.</summary>
+        <value>Der Ausdruck, der verwendet wird, um die Sortierreihenfolge für das Datenfeld zu bestimmen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaTable Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.DynamicData.MetaTable" /> -Objekt, das die Tabelle darstellt, zu der das Feld "Daten" gehört.</summary>
+        <value>Ein Objekt, das die Tabelle darstellt, zu der das Feld "Daten" gehört.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaColumn.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Namen des Felds ab.</summary>
+        <returns>Der Feldname Daten, die eine Zeichenfolgendarstellung der Spalte ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeCode">
+      <MemberSignature Language="C#" Value="public TypeCode TypeCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TypeCode TypeCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.TypeCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Datenfelds ab.</summary>
+        <value>Der Typ des Datenfelds.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.TypeCode%2A> Eigenschaftswert stammt aus dem Wert der <xref:System.Web.DynamicData.MetaColumn.ColumnType%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UIHint">
+      <MemberSignature Language="C#" Value="public virtual string UIHint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UIHint" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaColumn.UIHint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Feldvorlage, die für das Feld "Daten" angegeben.</summary>
+        <value>Der Name der Feldvorlage, die für das Feld "Daten" angegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaColumn.UIHint%2A> Eigenschaft überprüft, ob eine <xref:System.ComponentModel.DataAnnotations.UIHintAttribute> Attribut auf das Feld "Daten" angewendet wird, und ruft den Wert des der <xref:System.ComponentModel.DataAnnotations.UIHintAttribute.UIHint%2A?displayProperty=nameWithType> Eigenschaft. Wenn eine <xref:System.ComponentModel.DataAnnotations.UIHintAttribute> Attribut wird nicht angewendet, um das Feld "Daten" der <xref:System.Web.DynamicData.MetaColumn.UIHint%2A> Eigenschaft eine leere Zeichenfolge zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

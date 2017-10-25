@@ -1,0 +1,845 @@
+<Type Name="DynamicMetaObject" FullName="System.Dynamic.DynamicMetaObject">
+  <TypeSignature Language="C#" Value="public class DynamicMetaObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicMetaObject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Dynamic.DynamicMetaObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die dynamische Bindung und eine Bindungslogik eines an der dynamischen Bindung beteiligten Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation für die [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) -Website und im MSDN-Artikel [Implementieren von dynamischen Schnittstellen](http://go.microsoft.com/fwlink/?LinkID=198161).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicMetaObject (System.Linq.Expressions.Expression expression, System.Dynamic.BindingRestrictions restrictions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Linq.Expressions.Expression expression, class System.Dynamic.BindingRestrictions restrictions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.#ctor(System.Linq.Expressions.Expression,System.Dynamic.BindingRestrictions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+        <Parameter Name="restrictions" Type="System.Dynamic.BindingRestrictions" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der Ausdruck, der dies darstellt <see cref="T:System.Dynamic.DynamicMetaObject" /> während des dynamischen Bindungsvorgangs.</param>
+        <param name="restrictions">Die Reihe von bindungseinschränkungen unter dem die Bindung gültig ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Dynamic.DynamicMetaObject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicMetaObject (System.Linq.Expressions.Expression expression, System.Dynamic.BindingRestrictions restrictions, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Linq.Expressions.Expression expression, class System.Dynamic.BindingRestrictions restrictions, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.#ctor(System.Linq.Expressions.Expression,System.Dynamic.BindingRestrictions,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+        <Parameter Name="restrictions" Type="System.Dynamic.BindingRestrictions" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der Ausdruck, der dies darstellt <see cref="T:System.Dynamic.DynamicMetaObject" /> während des dynamischen Bindungsvorgangs.</param>
+        <param name="restrictions">Die Reihe von bindungseinschränkungen unter dem die Bindung gültig ist.</param>
+        <param name="value">Der Common Language Runtime-Wert, dargestellt durch die <see cref="T:System.Dynamic.DynamicMetaObject" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Dynamic.DynamicMetaObject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindBinaryOperation">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject BindBinaryOperation (System.Dynamic.BinaryOperationBinder binder, System.Dynamic.DynamicMetaObject arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject BindBinaryOperation(class System.Dynamic.BinaryOperationBinder binder, class System.Dynamic.DynamicMetaObject arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.BindBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Dynamic.DynamicMetaObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.BinaryOperationBinder" />
+        <Parameter Name="arg" Type="System.Dynamic.DynamicMetaObject" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Eine Instanz von der <see cref="T:System.Dynamic.BinaryOperationBinder" /> , die die Details des dynamischen Vorgangs darstellt.</param>
+        <param name="arg">Eine Instanz von der <see cref="T:System.Dynamic.DynamicMetaObject" /> , die rechte Seite der binären Operation darstellt.</param>
+        <summary>Führt die Bindung des dynamischen binären Vorgangs an.</summary>
+        <returns>Die neue <see cref="T:System.Dynamic.DynamicMetaObject" /> , die das Ergebnis der Bindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindConvert">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject BindConvert (System.Dynamic.ConvertBinder binder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject BindConvert(class System.Dynamic.ConvertBinder binder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.BindConvert(System.Dynamic.ConvertBinder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.ConvertBinder" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Eine Instanz von der <see cref="T:System.Dynamic.ConvertBinder" /> , die die Details des dynamischen Vorgangs darstellt.</param>
+        <summary>Führt die Bindung von der dynamischen Konvertierungsvorgang an.</summary>
+        <returns>Die neue <see cref="T:System.Dynamic.DynamicMetaObject" /> , die das Ergebnis der Bindung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic wird nur die explizite Konvertierung unterstützt. Wenn Sie diese Methode überschreiben, heißt es mithilfe der <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> oder <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> Funktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindCreateInstance">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject BindCreateInstance (System.Dynamic.CreateInstanceBinder binder, System.Dynamic.DynamicMetaObject[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject BindCreateInstance(class System.Dynamic.CreateInstanceBinder binder, class System.Dynamic.DynamicMetaObject[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.BindCreateInstance(System.Dynamic.CreateInstanceBinder,System.Dynamic.DynamicMetaObject[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.CreateInstanceBinder" />
+        <Parameter Name="args" Type="System.Dynamic.DynamicMetaObject[]" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Eine Instanz von der <see cref="T:System.Dynamic.CreateInstanceBinder" /> , die die Details des dynamischen Vorgangs darstellt.</param>
+        <param name="args">Ein Array von <see cref="T:System.Dynamic.DynamicMetaObject" /> -Instanzen - Argumente für den Vorgang zum Erstellen von Instanzen.</param>
+        <summary>Führt die Bindung für den dynamischen Erstellungsvorgang für die Instanz.</summary>
+        <returns>Die neue <see cref="T:System.Dynamic.DynamicMetaObject" /> , die das Ergebnis der Bindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindDeleteIndex">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject BindDeleteIndex (System.Dynamic.DeleteIndexBinder binder, System.Dynamic.DynamicMetaObject[] indexes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject BindDeleteIndex(class System.Dynamic.DeleteIndexBinder binder, class System.Dynamic.DynamicMetaObject[] indexes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.BindDeleteIndex(System.Dynamic.DeleteIndexBinder,System.Dynamic.DynamicMetaObject[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.DeleteIndexBinder" />
+        <Parameter Name="indexes" Type="System.Dynamic.DynamicMetaObject[]" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Eine Instanz von der <see cref="T:System.Dynamic.DeleteIndexBinder" /> , die die Details des dynamischen Vorgangs darstellt.</param>
+        <param name="indexes">Ein Array von <see cref="T:System.Dynamic.DynamicMetaObject" /> -Instanzen - Indizes für den indexlöschvorgang.</param>
+        <summary>Führt die Bindung des dynamischen indexlöschvorgang an.</summary>
+        <returns>Die neue <see cref="T:System.Dynamic.DynamicMetaObject" /> , die das Ergebnis der Bindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindDeleteMember">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject BindDeleteMember (System.Dynamic.DeleteMemberBinder binder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject BindDeleteMember(class System.Dynamic.DeleteMemberBinder binder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.BindDeleteMember(System.Dynamic.DeleteMemberBinder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.DeleteMemberBinder" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Eine Instanz von der <see cref="T:System.Dynamic.DeleteMemberBinder" /> , die die Details des dynamischen Vorgangs darstellt.</param>
+        <summary>Führt die Bindung des dynamischen memberlöschvorgang an.</summary>
+        <returns>Die neue <see cref="T:System.Dynamic.DynamicMetaObject" /> , die das Ergebnis der Bindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindGetIndex">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject BindGetIndex (System.Dynamic.GetIndexBinder binder, System.Dynamic.DynamicMetaObject[] indexes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject BindGetIndex(class System.Dynamic.GetIndexBinder binder, class System.Dynamic.DynamicMetaObject[] indexes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.BindGetIndex(System.Dynamic.GetIndexBinder,System.Dynamic.DynamicMetaObject[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.GetIndexBinder" />
+        <Parameter Name="indexes" Type="System.Dynamic.DynamicMetaObject[]" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Eine Instanz von der <see cref="T:System.Dynamic.GetIndexBinder" /> , die die Details des dynamischen Vorgangs darstellt.</param>
+        <param name="indexes">Ein Array von <see cref="T:System.Dynamic.DynamicMetaObject" /> -Instanzen - Indizes für den indexabrufvorgang.</param>
+        <summary>Führt die Bindung des dynamischen indexabrufvorgang an.</summary>
+        <returns>Die neue <see cref="T:System.Dynamic.DynamicMetaObject" /> , die das Ergebnis der Bindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindGetMember">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject BindGetMember (System.Dynamic.GetMemberBinder binder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject BindGetMember(class System.Dynamic.GetMemberBinder binder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.BindGetMember(System.Dynamic.GetMemberBinder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.GetMemberBinder" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Eine Instanz von der <see cref="T:System.Dynamic.GetMemberBinder" /> , die die Details des dynamischen Vorgangs darstellt.</param>
+        <summary>Führt die Bindung des dynamischen memberabrufvorgang an.</summary>
+        <returns>Die neue <see cref="T:System.Dynamic.DynamicMetaObject" /> , die das Ergebnis der Bindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindInvoke">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject BindInvoke (System.Dynamic.InvokeBinder binder, System.Dynamic.DynamicMetaObject[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject BindInvoke(class System.Dynamic.InvokeBinder binder, class System.Dynamic.DynamicMetaObject[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.BindInvoke(System.Dynamic.InvokeBinder,System.Dynamic.DynamicMetaObject[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.InvokeBinder" />
+        <Parameter Name="args" Type="System.Dynamic.DynamicMetaObject[]" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Eine Instanz von der <see cref="T:System.Dynamic.InvokeBinder" /> , die die Details des dynamischen Vorgangs darstellt.</param>
+        <param name="args">Ein Array von <see cref="T:System.Dynamic.DynamicMetaObject" /> -Instanzen - Argumente für den Aufrufvorgang.</param>
+        <summary>Führt die Bindung des dynamischen Aufrufvorgangs aus.</summary>
+        <returns>Die neue <see cref="T:System.Dynamic.DynamicMetaObject" /> , die das Ergebnis der Bindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindInvokeMember">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject BindInvokeMember (System.Dynamic.InvokeMemberBinder binder, System.Dynamic.DynamicMetaObject[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject BindInvokeMember(class System.Dynamic.InvokeMemberBinder binder, class System.Dynamic.DynamicMetaObject[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.BindInvokeMember(System.Dynamic.InvokeMemberBinder,System.Dynamic.DynamicMetaObject[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.InvokeMemberBinder" />
+        <Parameter Name="args" Type="System.Dynamic.DynamicMetaObject[]" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Eine Instanz von der <see cref="T:System.Dynamic.InvokeMemberBinder" /> , die die Details des dynamischen Vorgangs darstellt.</param>
+        <param name="args">Ein Array von <see cref="T:System.Dynamic.DynamicMetaObject" /> -Instanzen - Argumente für den memberaufrufvorgang.</param>
+        <summary>Führt die Bindung des dynamischen Aufrufvorgangs Member.</summary>
+        <returns>Die neue <see cref="T:System.Dynamic.DynamicMetaObject" /> , die das Ergebnis der Bindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindSetIndex">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject BindSetIndex (System.Dynamic.SetIndexBinder binder, System.Dynamic.DynamicMetaObject[] indexes, System.Dynamic.DynamicMetaObject value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject BindSetIndex(class System.Dynamic.SetIndexBinder binder, class System.Dynamic.DynamicMetaObject[] indexes, class System.Dynamic.DynamicMetaObject value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.BindSetIndex(System.Dynamic.SetIndexBinder,System.Dynamic.DynamicMetaObject[],System.Dynamic.DynamicMetaObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.SetIndexBinder" />
+        <Parameter Name="indexes" Type="System.Dynamic.DynamicMetaObject[]" />
+        <Parameter Name="value" Type="System.Dynamic.DynamicMetaObject" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Eine Instanz von der <see cref="T:System.Dynamic.SetIndexBinder" /> , die die Details des dynamischen Vorgangs darstellt.</param>
+        <param name="indexes">Ein Array von <see cref="T:System.Dynamic.DynamicMetaObject" /> -Instanzen - Indizes für den Indexvorgang festlegen.</param>
+        <param name="value">Die <see cref="T:System.Dynamic.DynamicMetaObject" /> , den Wert für den indexfestlegungsvorgang darstellt.</param>
+        <summary>Führt die Bindung des dynamischen indexfestlegungsvorgang an.</summary>
+        <returns>Die neue <see cref="T:System.Dynamic.DynamicMetaObject" /> , die das Ergebnis der Bindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindSetMember">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject BindSetMember (System.Dynamic.SetMemberBinder binder, System.Dynamic.DynamicMetaObject value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject BindSetMember(class System.Dynamic.SetMemberBinder binder, class System.Dynamic.DynamicMetaObject value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.BindSetMember(System.Dynamic.SetMemberBinder,System.Dynamic.DynamicMetaObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.SetMemberBinder" />
+        <Parameter Name="value" Type="System.Dynamic.DynamicMetaObject" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Eine Instanz von der <see cref="T:System.Dynamic.SetMemberBinder" /> , die die Details des dynamischen Vorgangs darstellt.</param>
+        <param name="value">Die <see cref="T:System.Dynamic.DynamicMetaObject" /> , den Wert für den memberfestlegungsvorgang darstellt.</param>
+        <summary>Führt die Bindung des dynamischen memberfestlegungsvorgang an.</summary>
+        <returns>Die neue <see cref="T:System.Dynamic.DynamicMetaObject" /> , die das Ergebnis der Bindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindUnaryOperation">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject BindUnaryOperation (System.Dynamic.UnaryOperationBinder binder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject BindUnaryOperation(class System.Dynamic.UnaryOperationBinder binder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.BindUnaryOperation(System.Dynamic.UnaryOperationBinder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.UnaryOperationBinder" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Eine Instanz von der <see cref="T:System.Dynamic.UnaryOperationBinder" /> , die die Details des dynamischen Vorgangs darstellt.</param>
+        <summary>Führt die Bindung für den dynamischen unärvorgang an.</summary>
+        <returns>Die neue <see cref="T:System.Dynamic.DynamicMetaObject" /> , die das Ergebnis der Bindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Dynamic.DynamicMetaObject Create (object value, System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Dynamic.DynamicMetaObject Create(object value, class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.Create(System.Object,System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt um ein Meta-Objekt für abzurufen.</param>
+        <param name="expression">Der Ausdruck, der dies darstellt <see cref="T:System.Dynamic.DynamicMetaObject" /> während des dynamischen Bindungsvorgangs.</param>
+        <summary>Erstellt ein Meta-Objekt für das angegebene Objekt.</summary>
+        <returns>Wenn das angegebene Objekt implementiert <see cref="T:System.Dynamic.IDynamicMetaObjectProvider" /> und keinem Remoteobjekt von außerhalb der aktuellen AppDomain ist, gibt die spezifische Meta-Objekts zurückgegebenes <see cref="M:System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)" />. Andernfalls wird ein einfaches neue Meta-Objekt ohne Einschränkungen erstellt und zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmptyMetaObjects">
+      <MemberSignature Language="C#" Value="public static readonly System.Dynamic.DynamicMetaObject[] EmptyMetaObjects;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Dynamic.DynamicMetaObject[] EmptyMetaObjects" />
+      <MemberSignature Language="DocId" Value="F:System.Dynamic.DynamicMetaObject.EmptyMetaObjects" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein leeres Array vom <see cref="T:System.Dynamic.DynamicMetaObject" />-Typ dar. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression Expression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Dynamic.DynamicMetaObject.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dem, Ausdruck darstellt, die <see cref="T:System.Dynamic.DynamicMetaObject" /> während des dynamischen Bindungsvorgangs.</summary>
+        <value>Dem, Ausdruck darstellt, die <see cref="T:System.Dynamic.DynamicMetaObject" /> während des dynamischen Bindungsvorgangs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDynamicMemberNames">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;string&gt; GetDynamicMemberNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; GetDynamicMemberNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObject.GetDynamicMemberNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Enumeration aller dynamischen Elements Namen zurück.</summary>
+        <returns>Die Liste der Namen der dynamischen Elements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasValue">
+      <MemberSignature Language="C#" Value="public bool HasValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasValue" />
+      <MemberSignature Language="DocId" Value="P:System.Dynamic.DynamicMetaObject.HasValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Dynamic.DynamicMetaObject" /> hat den Wert für die Common Language Runtime.</summary>
+        <value>True, wenn die <see cref="T:System.Dynamic.DynamicMetaObject" /> ist vom Laufzeitwert, andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LimitType">
+      <MemberSignature Language="C#" Value="public Type LimitType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type LimitType" />
+      <MemberSignature Language="DocId" Value="P:System.Dynamic.DynamicMetaObject.LimitType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ für die Grenze von der <see cref="T:System.Dynamic.DynamicMetaObject" />.</summary>
+        <value>
+          <see cref="P:System.Dynamic.DynamicMetaObject.RuntimeType" />Wenn der Wert zur Laufzeit verfügbar ist, wird ein Typ, der die <see cref="P:System.Dynamic.DynamicMetaObject.Expression" /> andernfalls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt einen möglichst spezifischen Typ über das Objekt dargestellte bezeichnet den <xref:System.Dynamic.DynamicMetaObject>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Restrictions">
+      <MemberSignature Language="C#" Value="public System.Dynamic.BindingRestrictions Restrictions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Dynamic.BindingRestrictions Restrictions" />
+      <MemberSignature Language="DocId" Value="P:System.Dynamic.DynamicMetaObject.Restrictions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.BindingRestrictions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Reihe von bindungseinschränkungen unter dem die Bindung gültig ist.</summary>
+        <value>Der Satz von Einschränkungen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuntimeType">
+      <MemberSignature Language="C#" Value="public Type RuntimeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type RuntimeType" />
+      <MemberSignature Language="DocId" Value="P:System.Dynamic.DynamicMetaObject.RuntimeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> der Common Language Runtime-Wert oder null, wenn die <see cref="T:System.Dynamic.DynamicMetaObject" /> hat keinen Wert zugeordnet.</summary>
+        <value>Die <see cref="T:System.Type" /> der Common Language Runtime-Wert oder Null.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Dynamic.DynamicMetaObject.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Common Language Runtime-Wert, der von diesem dargestellt <see cref="T:System.Dynamic.DynamicMetaObject" />.</summary>
+        <value>Der Common Language Runtime-Wert, der von diesem dargestellt <see cref="T:System.Dynamic.DynamicMetaObject" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

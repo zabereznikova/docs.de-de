@@ -1,0 +1,192 @@
+<Type Name="CollectionAdapters" FullName="System.AddIn.Pipeline.CollectionAdapters">
+  <TypeSignature Language="C#" Value="public static class CollectionAdapters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CollectionAdapters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Pipeline.CollectionAdapters" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht es Auflistungen, die zwischen einem Add-in und dessen hostanwendung übergeben werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse enthält Methoden, mit denen ein <xref:System.Collections.Generic.IList%601> zu konvertierenden Auflistung eine <xref:System.AddIn.Contract.IListContract%601> Auflistung. Die <xref:System.AddIn.Contract.IListContract%601> Auflistung wird über die Isolationsgrenze überwinden übergeben und zurück in ein <xref:System.Collections.Generic.IList%601> -Auflistung, die das Add-in oder die Host-Anwendung verwendet werden kann.  
+  
+ Objekte in Auflistungen müssen möglich sein. Weitere Informationen zu den Objekttypen, die übergeben werden können, finden Sie unter [Verträge, Ansichten und Adapter](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ToIList&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;T&gt; ToIList&lt;T&gt; (System.AddIn.Contract.IListContract&lt;T&gt; collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;!!T&gt; ToIList&lt;T&gt;(class System.AddIn.Contract.IListContract`1&lt;!!T&gt; collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.CollectionAdapters.ToIList``1(System.AddIn.Contract.IListContract{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="collection" Type="System.AddIn.Contract.IListContract&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Objekte, die in der Liste enthalten sind. <c>T</c> muss serialisierbar sein.</typeparam>
+        <param name="collection">Die Auflistung von der anderen Seite der Pipeline.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.AddIn.Contract.IListContract`1" /> -Auflistung, um eine <see cref="T:System.Collections.Generic.IList`1" /> Auflistung.</summary>
+        <returns>Die konvertierte Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Host-Anwendung oder ein add-in kann verwenden Sie das zurückgegebene <xref:System.Collections.Generic.IList%601> Auflistung. Die <xref:System.Collections.Generic.IList%601> Auflistung haben eine Lebensdauertoken für den Remoteserver <xref:System.AddIn.Contract.IListContract%601> Auflistung.  
+  
+ Sollten Sie diese methodenüberladung verwenden nur, wenn der Inhalt des der <xref:System.AddIn.Contract.IListContract%601> sind serialisierbare Typen, die direkt auf die Add-Ins und -Host (statt Typen, die in den Ansichten angepasst werden müssen) übergeben werden können.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel implementiert ein hostseitige Adapter Pipeline-Segment an, wie beschrieben [Exemplarische Vorgehensweise: Übergeben von Sammlungen zwischen Hosts und -Add-Ins](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5). Im Beispiel wird die benutzerdefinierte `ProcessBooks` Methode ergreifen Sie hierzu die <xref:System.AddIn.Contract.IListContract%601> Auflistung aus dem Add-in übergeben und die Konvertierung in eine <xref:System.Collections.Generic.IList%601> -Auflistung, die die hostanwendung dann verwenden kann.  
+  
+ [!code-csharp[AddInCollectionPipelineAddInSideAdapter#3](~/samples/snippets/csharp/VS_Snippets_CLR/AddInCollectionPipelineAddInSideAdapter/cs/LibraryManagerViewToContractAddInAdapter.cs#3)]
+ [!code-vb[AddInCollectionPipelineAddInSideAdapter#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/AddInCollectionPipelineAddInSideAdapter/vb/LibraryManagerViewToContractAddInAdapter.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToIList&lt;TContract,TView&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;TView&gt; ToIList&lt;TContract,TView&gt; (System.AddIn.Contract.IListContract&lt;TContract&gt; collection, Converter&lt;TContract,TView&gt; contractViewAdapter, Converter&lt;TView,TContract&gt; viewContractAdapter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;!!TView&gt; ToIList&lt;TContract, TView&gt;(class System.AddIn.Contract.IListContract`1&lt;!!TContract&gt; collection, class System.Converter`2&lt;!!TContract, !!TView&gt; contractViewAdapter, class System.Converter`2&lt;!!TView, !!TContract&gt; viewContractAdapter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.CollectionAdapters.ToIList``2(System.AddIn.Contract.IListContract{``0},System.Converter{``0,``1},System.Converter{``1,``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;TView&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TContract" />
+        <TypeParameter Name="TView" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="collection" Type="System.AddIn.Contract.IListContract&lt;TContract&gt;" />
+        <Parameter Name="contractViewAdapter" Type="System.Converter&lt;TContract,TView&gt;" />
+        <Parameter Name="viewContractAdapter" Type="System.Converter&lt;TView,TContract&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TContract">Der Typ, den Vertrag definiert für die Übergabe von Objekte vom Typ <c>TView</c> über die Isolationsgrenze überwinden.</typeparam>
+        <typeparam name="TView">Der Typ, der die Sicht der Objekte in der Liste definiert.</typeparam>
+        <param name="collection">Die Auflistung, an das andere Ende der Pipeline übergeben werden sollen.</param>
+        <param name="contractViewAdapter">Ein Konverter, der die Daten aus dem Typ, der im Vertrag, der erwartete Typ in der Ansicht definiert wird.</param>
+        <param name="viewContractAdapter">Ein Konverter, der die Daten aus definierten Datentyps in der Ansicht, um den Typ, der vom Vertrag erwartet wird.</param>
+        <summary>Konvertiert ein angegebenes <see cref="T:System.AddIn.Contract.IListContract`1" /> -Auflistung, um eine <see cref="T:System.Collections.Generic.IList`1" /> -Auflistung unter Verwendung der Konverter Adapter.</summary>
+        <returns>Die konvertierte Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese methodenüberladung für <xref:System.AddIn.Contract.IListContract%601> Sammlungen, die Typen, die angepasst werden muss enthalten, bevor sie können, mit der Add-Ins oder Host (statt einfache serialisierbaren Typen übergeben werden, die direkt übergeben werden können). Der Host-Anwendung oder ein add-in kann verwenden Sie das zurückgegebene <xref:System.Collections.Generic.IList%601> Auflistung. Er weist ein Lebensdauertoken für den Remoteserver <xref:System.AddIn.Contract.IListContract%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToIListContract&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.AddIn.Contract.IListContract&lt;T&gt; ToIListContract&lt;T&gt; (System.Collections.Generic.IList&lt;T&gt; collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.AddIn.Contract.IListContract`1&lt;!!T&gt; ToIListContract&lt;T&gt;(class System.Collections.Generic.IList`1&lt;!!T&gt; collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.CollectionAdapters.ToIListContract``1(System.Collections.Generic.IList{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.IListContract&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IList&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Objekte, die in der Liste enthalten sind. <c>T</c> muss serialisierbar sein.</typeparam>
+        <param name="collection">Die zu konvertierende Auflistung.</param>
+        <summary>Konvertiert ein angegebenes <see cref="T:System.Collections.Generic.IList`1" /> -Auflistung, um eine <see cref="T:System.AddIn.Contract.IListContract`1" /> Auflistung.</summary>
+        <returns>Die konvertierte Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.AddIn.Contract.IListContract%601> Auflistung kann über die Isolationsgrenze zwischen Add-Ins und der hostanwendung gemarshallt werden.  
+  
+ Sollten Sie diese methodenüberladung verwenden nur, wenn der Inhalt des der <xref:System.Collections.Generic.IList%601> Auflistung sind die serialisierbaren Typen, die direkt an den Vertrag (anstelle von Typen, die in den Verträgen angepasst werden müssen) übergeben werden können.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel implementiert die Klasse, die ein Add-in-Seite Adapter Pipeline-Segment definiert. Passt die benutzerdefinierte `ProcessBooks` Methode ergreifen Sie hierzu die <xref:System.Collections.Generic.IList%601> Auflistung aus dem Add-In-Ansichtssegment übergeben und die Konvertierung in eine <xref:System.AddIn.Contract.IListContract%601> -Auflistung, die über die Isolationsgrenze überwinden an den Host gemarshallt werden kann.  
+  
+ [!code-csharp[AddInCollectionPipelineHostSideAdapter#4](~/samples/snippets/csharp/VS_Snippets_CLR/AddInCollectionPipelineHostSideAdapter/cs/LibraryManagerContractToViewHostAdapter.cs#4)]
+ [!code-vb[AddInCollectionPipelineHostSideAdapter#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/AddInCollectionPipelineHostSideAdapter/vb/LibraryManagerContractToViewHostAdapter.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToIListContract&lt;TView,TContract&gt;">
+      <MemberSignature Language="C#" Value="public static System.AddIn.Contract.IListContract&lt;TContract&gt; ToIListContract&lt;TView,TContract&gt; (System.Collections.Generic.IList&lt;TView&gt; collection, Converter&lt;TView,TContract&gt; viewContractAdapter, Converter&lt;TContract,TView&gt; contractViewAdapter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.AddIn.Contract.IListContract`1&lt;!!TContract&gt; ToIListContract&lt;TView, TContract&gt;(class System.Collections.Generic.IList`1&lt;!!TView&gt; collection, class System.Converter`2&lt;!!TView, !!TContract&gt; viewContractAdapter, class System.Converter`2&lt;!!TContract, !!TView&gt; contractViewAdapter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.CollectionAdapters.ToIListContract``2(System.Collections.Generic.IList{``0},System.Converter{``0,``1},System.Converter{``1,``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.IListContract&lt;TContract&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TView" />
+        <TypeParameter Name="TContract" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IList&lt;TView&gt;" />
+        <Parameter Name="viewContractAdapter" Type="System.Converter&lt;TView,TContract&gt;" />
+        <Parameter Name="contractViewAdapter" Type="System.Converter&lt;TContract,TView&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TView">Der Typ, der die Sicht der Objekte in der Liste definiert.</typeparam>
+        <typeparam name="TContract">Der Typ, den Vertrag definiert für die Übergabe von Objekte vom Typ <c>TView</c> über die Isolationsgrenze überwinden.</typeparam>
+        <param name="collection">Die zu konvertierende Auflistung.</param>
+        <param name="viewContractAdapter">Ein Konverter, der die Daten aus definierten Datentyps in der Ansicht, um den Typ, der vom Vertrag erwartet wird.</param>
+        <param name="contractViewAdapter">Ein Konverter, der die Daten aus dem Typ, der im Vertrag, der erwartete Typ in der Ansicht definiert wird.</param>
+        <summary>Konvertiert ein angegebenes <see cref="T:System.Collections.Generic.IList`1" /> -Auflistung, um eine <see cref="T:System.AddIn.Contract.IListContract`1" /> -Auflistung unter Verwendung der Konverter Adapter.</summary>
+        <returns>Die konvertierte Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese methodenüberladung für <xref:System.Collections.Generic.IList%601> Sammlungen, die Typen, die in Verträgen angepasst werden muss enthalten, bevor sie können, um den Vertrag (anstelle von einfachen serialisierbaren Typen übergeben werden, die direkt übergeben werden können). Die <xref:System.AddIn.Contract.IListContract%601> Auflistung kann über die Isolationsgrenze zwischen einem Add-in und dessen hostanwendung gemarshallt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

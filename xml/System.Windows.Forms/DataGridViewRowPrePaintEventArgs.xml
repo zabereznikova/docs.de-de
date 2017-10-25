@@ -1,0 +1,586 @@
+<Type Name="DataGridViewRowPrePaintEventArgs" FullName="System.Windows.Forms.DataGridViewRowPrePaintEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewRowPrePaintEventArgs : System.ComponentModel.HandledEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewRowPrePaintEventArgs extends System.ComponentModel.HandledEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewRowPrePaintEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.HandledEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.DataGridView.RowPrePaint" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView.RowPrePaint> Ereignis tritt auf, bevor eine Zeile auf gezeichnet wird ein <xref:System.Windows.Forms.DataGridView> Steuerelement. <xref:System.Windows.Forms.DataGridView.RowPrePaint>ermöglicht die Darstellung der Zeile manuell anzupassen, bevor eine der Zellen in der Zeile gezeichnet werden. Dies ist hilfreich, wenn Sie die Zeile, z. B. anpassen, um eine Zeile zu erzeugen, an denen der Inhalt einer Spalte mehrere Spalten umfasst, möchten. Verwenden Sie die Eigenschaften im <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs> um die Einstellungen der Zeile abzurufen, ohne direkten Zugriff auf die Zeile in der <xref:System.Windows.Forms.DataGridView>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie behandelt die <xref:System.Windows.Forms.DataGridView.RowPrePaint> Ereignis, um einen benutzerdefinierten Hintergrund für die ausgewählten Zellen gezeichnet werden soll. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [wie: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewRowPainting#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#20)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewRowPrePaintEventArgs (System.Windows.Forms.DataGridView dataGridView, System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle rowBounds, int rowIndex, System.Windows.Forms.DataGridViewElementStates rowState, string errorText, System.Windows.Forms.DataGridViewCellStyle inheritedRowStyle, bool isFirstDisplayedRow, bool isLastVisibleRow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataGridView dataGridView, class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle clipBounds, valuetype System.Drawing.Rectangle rowBounds, int32 rowIndex, valuetype System.Windows.Forms.DataGridViewElementStates rowState, string errorText, class System.Windows.Forms.DataGridViewCellStyle inheritedRowStyle, bool isFirstDisplayedRow, bool isLastVisibleRow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.#ctor(System.Windows.Forms.DataGridView,System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.DataGridViewElementStates,System.String,System.Windows.Forms.DataGridViewCellStyle,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataGridView" Type="System.Windows.Forms.DataGridView" />
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="clipBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="rowState" Type="System.Windows.Forms.DataGridViewElementStates" />
+        <Parameter Name="errorText" Type="System.String" />
+        <Parameter Name="inheritedRowStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="isFirstDisplayedRow" Type="System.Boolean" />
+        <Parameter Name="isLastVisibleRow" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridView">Die <see cref="T:System.Windows.Forms.DataGridView" /> , besitzt die Zeile, die gezeichnet wird.</param>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen verwendet die <see cref="T:System.Windows.Forms.DataGridViewRow" />.</param>
+        <param name="clipBounds">Ein <see cref="T:System.Drawing.Rectangle" />, das die Fläche der zu zeichnenden <see cref="T:System.Windows.Forms.DataGridView" /> darstellt.</param>
+        <param name="rowBounds">Ein <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des enthält die <see cref="T:System.Windows.Forms.DataGridViewRow" /> , die gezeichnet wird.</param>
+        <param name="rowIndex">Der Zeilenindex der gezeichneten Zelle.</param>
+        <param name="rowState">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> Werte, die den Status der Zeile angibt.</param>
+        <param name="errorText">Eine Fehlermeldung, die mit der Zeile verknüpft ist.</param>
+        <param name="inheritedRowStyle">Ein <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> , formatierungs- und Formatinformationen Informationen über die Zeile enthält.</param>
+        <param name="isFirstDisplayedRow">
+          <see langword="true" />um anzugeben, ob die aktuelle Zeile der ersten Zeile, die momentan in der angezeigt wird der <see cref="T:System.Windows.Forms.DataGridView" />ist, andernfalls <see langword="false" />.</param>
+        <param name="isLastVisibleRow">
+          <see langword="true" />um anzugeben, ob die aktuelle Zeile die letzte Zeile in der <see cref="T:System.Windows.Forms.DataGridView" /> , besitzt die <see cref="P:System.Windows.Forms.DataGridViewRow.Visible" /> -Eigenschaftensatz auf <see langword="true" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridViewRowPrePaintEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dataGridView" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="graphics" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="inheritedRowStyle" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClipBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle ClipBounds { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle ClipBounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.ClipBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Clientbereich der <see cref="T:System.Windows.Forms.DataGridView" /> , die neu gezeichnet werden muss.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" /> , das den Clientbereich darstellt der <see cref="T:System.Windows.Forms.DataGridView" /> , die neu gezeichnet werden muss.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.ClipBounds%2A> Eigenschaft darstellt, den Clientbereich der <xref:System.Windows.Forms.DataGridView> , die neu gezeichnet werden muss. Wenn ein Benutzer die gesamte deckt z. B. <xref:System.Windows.Forms.DataGridView> mit einem anderen Fenster überdeckt, dann klicken Sie dann <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.ClipBounds%2A> stellt die gesamte <xref:System.Windows.Forms.DataGridView>. Wenn ein Benutzer einen kleinen Bereich umfasst die <xref:System.Windows.Forms.DataGridView> überdeckt, dann klicken Sie dann <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.ClipBounds%2A> stellt den kleinen Bereich an, die ausgeführt wurden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.DataGridView> mit dem Namen `DataGridView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#356](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#356)]
+ [!code-vb[System.Windows.Forms.EventExamples#356](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#356)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawFocus">
+      <MemberSignature Language="C#" Value="public void DrawFocus (System.Drawing.Rectangle bounds, bool cellsPaintSelectionBackground);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawFocus(valuetype System.Drawing.Rectangle bounds, bool cellsPaintSelectionBackground) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.DrawFocus(System.Drawing.Rectangle,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="cellsPaintSelectionBackground" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> , die die Schwerpunktbereich angibt.</param>
+        <param name="cellsPaintSelectionBackground">
+          <see langword="true" />Verwenden der <see cref="P:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor" /> Eigenschaft von der <see cref="P:System.Windows.Forms.DataGridViewRow.InheritedStyle" /> -Eigenschaft bestimmt die Farbe des Fokusrechtecks; <see langword="false" /> verwenden die <see cref="P:System.Windows.Forms.DataGridViewCellStyle.BackColor" /> Eigenschaft von der <see cref="P:System.Windows.Forms.DataGridViewRow.InheritedStyle" />.</param>
+        <summary>Zeichnet das Fokusrechteck um die angegebenen Begrenzungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.DrawFocus%2A> Methode beim Zeichnen der <xref:System.Windows.Forms.DataGridViewRow> und den Inhalt ihrer Zellen selbst. Wenn Sie die gesamte Zeile und den Inhalt ihrer Zellen manuell zeichnen, legen Sie die <xref:System.ComponentModel.HandledEventArgs.Handled%2A?displayProperty=nameWithType> Eigenschaft `true`. Wenn <xref:System.ComponentModel.HandledEventArgs.Handled%2A?displayProperty=nameWithType> ist `true`, <xref:System.Windows.Forms.DataGridView.CellPainting> und <xref:System.Windows.Forms.DataGridView.RowPostPaint> Ereignisse werden nicht ausgeführt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.DrawFocus%2A> Methode, um ein Fokusrechteck um die sichtbaren Zellen der Zeile gezeichnet. Der Code tatsächlich verwendet die <xref:System.Windows.Forms.DataGridViewRowPostPaintEventArgs.DrawFocus%2A?displayProperty=nameWithType> Methode, die nahezu identisch mit ist der <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.DrawFocus%2A> Methode <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs>. In diesem Beispiel ist Teil eines umfangreicheren Beispiels in [wie: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#30)]
+ [!code-vb[System.Windows.Forms.DataGridViewRowPainting#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.RowIndex" />ist kleiner als 0 (null) oder größer als die Anzahl der Zeilen in der <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement minus eins.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorText">
+      <MemberSignature Language="C#" Value="public string ErrorText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.ErrorText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die eine Fehlermeldung für den aktuellen stellt <see cref="T:System.Windows.Forms.DataGridViewRow" />.</summary>
+        <value>Eine Zeichenfolge, die eine Fehlermeldung für den aktuellen stellt <see cref="T:System.Windows.Forms.DataGridViewRow" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.ErrorText%2A> Eigenschaft ist identisch mit der aktuellen Zeile <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.DataGridView> mit dem Namen `DataGridView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#356](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#356)]
+ [!code-vb[System.Windows.Forms.EventExamples#356](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#356)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Drawing.Graphics" /> verwendet, um die aktuelle zeichnen <see cref="T:System.Windows.Forms.DataGridViewRow" />.</summary>
+        <value>Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die aktuelle zeichnen <see cref="T:System.Windows.Forms.DataGridViewRow" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Graphics> Klasse enthält Eigenschaften und Methoden, die für eine benutzerdefinierte Zeichnung nützlich sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.Graphics%2A> Eigenschaft, um den benutzerdefinierten Hintergrund zeichnen. Die Variable `e`, ist vom Typ <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [wie: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#25)]
+ [!code-vb[System.Windows.Forms.DataGridViewRowPainting#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritedRowStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewCellStyle InheritedRowStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCellStyle InheritedRowStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.InheritedRowStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zellstil ab auf die Zeile angewendet.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> , enthält der Zellenstil derzeit auf die Zeile angewendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.InheritedRowStyle%2A> Eigenschaft enthält die gleichen Werte wie der Zeile <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> Eigenschaft. Direkten Zugriff auf eine <xref:System.Windows.Forms.DataGridViewRow> in die <xref:System.Windows.Forms.DataGridView> Leistungseinbußen führen kann. Verwendung <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.InheritedRowStyle%2A> in die <xref:System.Windows.Forms.DataGridView.RowPrePaint> Ereignis vermeiden Sie die Freigabe der Zeile aufzuheben und eine optimale Leistung aufrechtzuerhalten.  
+  
+ Die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.InheritedRowStyle%2A> Eigenschaft ist schreibgeschützt. Obwohl Sie die Eigenschaften festlegen können die <xref:System.Windows.Forms.DataGridViewCellStyle> abgerufen, die über die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.InheritedRowStyle%2A> -Eigenschaft, die neuen Einstellungen hat keine Auswirkungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.InheritedRowStyle%2A> Eigenschaft, um einen benutzerdefinierten Hintergrund für die ausgewählte Zeile zeichnen. Die Variable `e`, ist vom Typ <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [wie: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#25)]
+ [!code-vb[System.Windows.Forms.DataGridViewRowPainting#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFirstDisplayedRow">
+      <MemberSignature Language="C#" Value="public bool IsFirstDisplayedRow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFirstDisplayedRow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.IsFirstDisplayedRow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, ob die aktuelle Zeile der ersten Zeile, die momentan in der angezeigt wird der <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <value>
+          <see langword="true" />Wenn die gezeichnete Zeile derzeit die erste Zeile, die in angezeigt wird der <see cref="T:System.Windows.Forms.DataGridView" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.DataGridView> mit dem Namen `DataGridView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#356](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#356)]
+ [!code-vb[System.Windows.Forms.EventExamples#356](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#356)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLastVisibleRow">
+      <MemberSignature Language="C#" Value="public bool IsLastVisibleRow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLastVisibleRow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.IsLastVisibleRow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, ob die aktuelle Zeile die letzte sichtbare Zeile in der <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <value>
+          <see langword="true" />ist die gezeichnete Zeile derzeit die letzte Zeile in der <see cref="T:System.Windows.Forms.DataGridView" /> , besitzt die <see cref="P:System.Windows.Forms.DataGridViewRow.Visible" /> -Eigenschaftensatz auf <see langword="true" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.DataGridView> mit dem Namen `DataGridView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#356](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#356)]
+ [!code-vb[System.Windows.Forms.EventExamples#356](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#356)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaintCells">
+      <MemberSignature Language="C#" Value="public void PaintCells (System.Drawing.Rectangle clipBounds, System.Windows.Forms.DataGridViewPaintParts paintParts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PaintCells(valuetype System.Drawing.Rectangle clipBounds, valuetype System.Windows.Forms.DataGridViewPaintParts paintParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.PaintCells(System.Drawing.Rectangle,System.Windows.Forms.DataGridViewPaintParts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clipBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="paintParts" Type="System.Windows.Forms.DataGridViewPaintParts" />
+      </Parameters>
+      <Docs>
+        <param name="clipBounds">Ein <see cref="T:System.Drawing.Rectangle" /> , den Bereich der angibt, die <see cref="T:System.Windows.Forms.DataGridView" /> gezeichnet werden.</param>
+        <param name="paintParts">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewPaintParts" /> Werte, die die zu zeichnenden Teile angeben.</param>
+        <summary>Zeichnet die angegebene zellenteile für den Bereich in die angegebenen Begrenzungen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Forms.DataGridViewRowPostPaintEventArgs.RowIndex" />ist kleiner als 0 (null) oder größer als die Anzahl der Zeilen in der <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement minus eins.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaintCellsBackground">
+      <MemberSignature Language="C#" Value="public void PaintCellsBackground (System.Drawing.Rectangle clipBounds, bool cellsPaintSelectionBackground);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PaintCellsBackground(valuetype System.Drawing.Rectangle clipBounds, bool cellsPaintSelectionBackground) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.PaintCellsBackground(System.Drawing.Rectangle,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clipBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="cellsPaintSelectionBackground" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="clipBounds">Ein <see cref="T:System.Drawing.Rectangle" /> , den Bereich der angibt, die <see cref="T:System.Windows.Forms.DataGridView" /> gezeichnet werden.</param>
+        <param name="cellsPaintSelectionBackground">
+          <see langword="true" />zum Zeichnen des Hintergrunds der angegebenen Grenzen mit der Farbe der <see cref="P:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor" /> Eigenschaft von der <see cref="P:System.Windows.Forms.DataGridViewRow.InheritedStyle" />; <see langword="false" /> zum Zeichnen des Hintergrunds der angegebenen Grenzen mit der Farbe der <see cref="P:System.Windows.Forms.DataGridViewCellStyle.BackColor" /> Eigenschaft von der <see cref="P:System.Windows.Forms.DataGridViewRow.InheritedStyle" />.</param>
+        <summary>Zeichnet die Zellenhintergründe für den Bereich in die angegebenen Begrenzungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.PaintCellsBackground%2A> Methode beim Zeichnen der <xref:System.Windows.Forms.DataGridViewRow> und den Inhalt ihrer Zellen selbst. Wenn Sie die gesamte Zeile und den Inhalt ihrer Zellen manuell zeichnen, legen Sie die <xref:System.ComponentModel.HandledEventArgs.Handled%2A?displayProperty=nameWithType> Eigenschaft `true`. Wenn <xref:System.ComponentModel.HandledEventArgs.Handled%2A?displayProperty=nameWithType> ist `true`, <xref:System.Windows.Forms.DataGridView.CellPainting> und <xref:System.Windows.Forms.DataGridView.RowPostPaint> Ereignisse werden nicht ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Forms.DataGridViewRowPostPaintEventArgs.RowIndex" />ist kleiner als 0 (null) oder größer als die Anzahl der Zeilen in der <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement minus eins.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaintCellsContent">
+      <MemberSignature Language="C#" Value="public void PaintCellsContent (System.Drawing.Rectangle clipBounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PaintCellsContent(valuetype System.Drawing.Rectangle clipBounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.PaintCellsContent(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clipBounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="clipBounds">Ein <see cref="T:System.Drawing.Rectangle" /> , den Bereich der angibt, die <see cref="T:System.Windows.Forms.DataGridView" /> gezeichnet werden.</param>
+        <summary>Zeichnet den Zelleninhalt für den Bereich in die angegebenen Begrenzungen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Forms.DataGridViewRowPostPaintEventArgs.RowIndex" />ist kleiner als 0 (null) oder größer als die Anzahl der Zeilen in der <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement minus eins.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaintHeader">
+      <MemberSignature Language="C#" Value="public void PaintHeader (bool paintSelectionBackground);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PaintHeader(bool paintSelectionBackground) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.PaintHeader(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="paintSelectionBackground" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="paintSelectionBackground">
+          <see langword="true" />zum Zeichnen des Zeilenheaders mit der Farbe des der <see cref="P:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor" /> Eigenschaft von der <see cref="P:System.Windows.Forms.DataGridViewRow.InheritedStyle" />; <see langword="false" /> zum Zeichnen des Zeilenheaders mit dem <see cref="P:System.Windows.Forms.DataGridViewCellStyle.BackColor" /> von der <see cref="P:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle" /> Eigenschaft.</param>
+        <summary>Zeichnet die gesamte Zeilenüberschrift des aktuellen <see cref="T:System.Windows.Forms.DataGridViewRow" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.PaintHeader%2A> Methode beim Zeichnen der <xref:System.Windows.Forms.DataGridViewRow> und den Inhalt ihrer Zellen selbst. Wenn Sie die gesamte Zeile und den Inhalt ihrer Zellen manuell zeichnen, legen Sie die <xref:System.ComponentModel.HandledEventArgs.Handled%2A> Eigenschaft `true`. Wenn <xref:System.ComponentModel.HandledEventArgs.Handled%2A> ist `true`, <xref:System.Windows.Forms.DataGridView.CellPainting> und <xref:System.Windows.Forms.DataGridView.RowPostPaint> Ereignisse werden nicht ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Forms.DataGridViewRowPostPaintEventArgs.RowIndex" />ist kleiner als 0 (null) oder größer als die Anzahl der Zeilen in der <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement minus eins.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaintHeader">
+      <MemberSignature Language="C#" Value="public void PaintHeader (System.Windows.Forms.DataGridViewPaintParts paintParts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PaintHeader(valuetype System.Windows.Forms.DataGridViewPaintParts paintParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.PaintHeader(System.Windows.Forms.DataGridViewPaintParts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="paintParts" Type="System.Windows.Forms.DataGridViewPaintParts" />
+      </Parameters>
+      <Docs>
+        <param name="paintParts">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewPaintParts" /> Werte, die die zu zeichnenden Teile angeben.</param>
+        <summary>Zeichnet die angegebenen Teile des Zeilenheaders der aktuellen Zeile.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Forms.DataGridViewRowPostPaintEventArgs.RowIndex" />ist kleiner als 0 (null) oder größer als die Anzahl der Zeilen in der <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement minus eins.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaintParts">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewPaintParts PaintParts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewPaintParts PaintParts" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.PaintParts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewPaintParts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die zellenteile, die gezeichnet werden sollen.</summary>
+        <value>Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewPaintParts" /> Werte, die die Teile zu zeichnenden angeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft. In diesem Beispiel ist Teil eines umfangreicheren Beispiels in [wie: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewRowPainting#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert beim Festlegen dieser Eigenschaft keine gültige bitweise Kombination von ist <see cref="T:System.Windows.Forms.DataGridViewPaintParts" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RowBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle RowBounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle RowBounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.RowBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Grenzen des aktuellen <see cref="T:System.Windows.Forms.DataGridViewRow" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des aktuellen darstellt <see cref="T:System.Windows.Forms.DataGridViewRow" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Breite der <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.RowBounds%2A> Eigenschaft ist identisch mit der Breite des der <xref:System.Windows.Forms.DataGridView>. Die Breite der Spalten in der abzurufenden der <xref:System.Windows.Forms.DataGridView>, verwenden Sie die <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnsWidth%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.RowBounds%2A> Eigenschaft, um die Grenzen der Zeile um einen benutzerdefinierten Hintergrund zeichnen zu berechnen. Die Variable `e`, ist vom Typ <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [wie: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#25)]
+ [!code-vb[System.Windows.Forms.DataGridViewRowPainting#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des aktuellen <see cref="T:System.Windows.Forms.DataGridViewRow" />.</summary>
+        <value>Der Index der aktuellen <see cref="T:System.Windows.Forms.DataGridViewRow" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Index der Zeile kann verwendet werden, auf die aktuelle Zeile innerhalb einer <xref:System.Windows.Forms.DataGridViewRowCollection>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.RowIndex%2A> Eigenschaft, um die aktuelle Zeile zuzugreifen. Obwohl der Code tatsächlich verwendet die <xref:System.Windows.Forms.DataGridViewRowPostPaintEventArgs.RowIndex%2A?displayProperty=nameWithType> -Eigenschaft, die diese Eigenschaft ist nahezu identisch mit der <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.RowIndex%2A> Eigenschaft <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs>. Die Variable `e`, ist vom Typ <xref:System.Windows.Forms.DataGridViewRowPostPaintEventArgs>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [wie: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#35](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#35)]
+ [!code-vb[System.Windows.Forms.DataGridViewRowPainting#35](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#35)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewElementStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewElementStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewElementStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Status des aktuellen <see cref="T:System.Windows.Forms.DataGridViewRow" />.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> Werte, die den Status der Zeile angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann verwendet werden, um zu bestimmen, ob die Zeile fixiert, schreibgeschützt oder andere Zustände ausgewählt ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs.State%2A> Eigenschaft, um zu bestimmen, ob eine Zeile ausgewählt ist. Wenn die Zeile ausgewählt ist, zeichnet der Code einen benutzerdefinierten Hintergrund an. Die Variable `e`, ist vom Typ <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [wie: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#25)]
+ [!code-vb[System.Windows.Forms.DataGridViewRowPainting#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

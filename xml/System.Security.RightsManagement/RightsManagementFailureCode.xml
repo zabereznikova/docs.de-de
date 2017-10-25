@@ -1,0 +1,1532 @@
+<Type Name="RightsManagementFailureCode" FullName="System.Security.RightsManagement.RightsManagementFailureCode">
+  <TypeSignature Language="C#" Value="public enum RightsManagementFailureCode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RightsManagementFailureCode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.RightsManagement.RightsManagementFailureCode" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Fehlerzustände an, die auftreten können, wenn ein Rechteverwaltungsvorgang ausgeführt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Security.RightsManagement.RightsManagementException.FailureCode%2A> und <xref:System.Exception.Message%2A> Eigenschaften, um eine Fehlermeldung für den Benutzer zu erstellen.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgBldSecEnv](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgbldsecenv)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgBldSecEnv](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgbldsecenv)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Aborted">
+      <MemberSignature Language="C#" Value="Aborted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode Aborted = int32(-2147168447)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.Aborted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Asynchroner Vorgang wurde abgebrochen, oder ein nicht behebbarer Fehler ist aufgetreten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivationFailed">
+      <MemberSignature Language="C#" Value="ActivationFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode ActivationFailed = int32(-2147168448)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.ActivationFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fehler bei Lizenzaktivierung; Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AdEntryNotFound">
+      <MemberSignature Language="C#" Value="AdEntryNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode AdEntryNotFound = int32(-2147168419)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.AdEntryNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aktuelle Benutzer wurde im Active Directory (AD) für die Zertifizierung im Rahmen der Windows-Authentifizierung nicht gefunden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AlreadyInProgress">
+      <MemberSignature Language="C#" Value="AlreadyInProgress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode AlreadyInProgress = int32(-2147168456)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.AlreadyInProgress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der angeforderte Vorgang wird bereits ausgeführt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationFailed">
+      <MemberSignature Language="C#" Value="AuthenticationFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode AuthenticationFailed = int32(-2147168445)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.AuthenticationFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Möglicher Authentifizierungsfehler (HTTP-Fehler 401) wurde durch eine Internetanforderung zurückgegeben. Es ist auch möglich, dass der aktuelle Benutzer in einem automatischen Benutzeraktivierungsversuch nicht über gültige Domänenanmeldeinformationen verfügt. Außerdem besteht die Möglichkeit, dass der Zertifizierungsserver sich bei der automatischen Benutzeraktivierung nicht in der lokalen Intranetzone oder der Zone der vertrauenswürdigen Sites befindet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadGetInfoQuery">
+      <MemberSignature Language="C#" Value="BadGetInfoQuery" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BadGetInfoQuery = int32(-2147168494)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BadGetInfoQuery" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine ungültige Konstante wurde übergeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindAccessPrincipalNotEnabling">
+      <MemberSignature Language="C#" Value="BindAccessPrincipalNotEnabling" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindAccessPrincipalNotEnabling = int32(-2147168478)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindAccessPrincipalNotEnabling" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zugriffsbedingung stimmt nicht mit dem aktivierenden Prinzipal überein, der der Bindung übergeben wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindAccessUnsatisfied">
+      <MemberSignature Language="C#" Value="BindAccessUnsatisfied" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindAccessUnsatisfied = int32(-2147168477)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindAccessUnsatisfied" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aktuelle Benutzer erfüllt nicht die in der Endbenutzerlizenz (End Use License, EUL) definierten Bedingungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindContentNotInEndUseLicense">
+      <MemberSignature Language="C#" Value="BindContentNotInEndUseLicense" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindContentNotInEndUseLicense = int32(-2147168479)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindContentNotInEndUseLicense" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die angegebene Ressource ist in keinem WORK-Knoten der Lizenz enthalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindIndicatedPrincipalMissing">
+      <MemberSignature Language="C#" Value="BindIndicatedPrincipalMissing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindIndicatedPrincipalMissing = int32(-2147168476)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindIndicatedPrincipalMissing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aktivierende Prinzipal entspricht nicht der Endbenutzerlizenz (EUL).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindIntervalTimeViolated">
+      <MemberSignature Language="C#" Value="BindIntervalTimeViolated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindIntervalTimeViolated = int32(-2147168465)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindIntervalTimeViolated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der definierte Zeitraum für den geschützten Inhalt ist abgelaufen. Zugriff ist nicht mehr zulässig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindMachineNotFoundInGroupIdentity">
+      <MemberSignature Language="C#" Value="BindMachineNotFoundInGroupIdentity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindMachineNotFoundInGroupIdentity = int32(-2147168475)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindMachineNotFoundInGroupIdentity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aktuelle Computer ist nicht in der Gruppenidentität definiert, deren Rechte verwaltet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindNoApplicableRevocationList">
+      <MemberSignature Language="C#" Value="BindNoApplicableRevocationList" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindNoApplicableRevocationList = int32(-2147168472)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindNoApplicableRevocationList" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aktuelle Benutzer verfügt nicht über die Berechtigungen zum Zugriff auf den geschützten Inhalt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindNoSatisfiedRightsGroup">
+      <MemberSignature Language="C#" Value="BindNoSatisfiedRightsGroup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindNoSatisfiedRightsGroup = int32(-2147168464)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindNoSatisfiedRightsGroup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die angegebene Berechtigungsgruppe ist nicht in der Endbenutzerlizenz (EUL) enthalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindPolicyViolation">
+      <MemberSignature Language="C#" Value="BindPolicyViolation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindPolicyViolation = int32(-2147168485)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindPolicyViolation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aktuelle Benutzer verfügt nicht über die Berechtigungen zum Zugriff auf den geschützten Inhalt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindRevocationListStale">
+      <MemberSignature Language="C#" Value="BindRevocationListStale" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindRevocationListStale = int32(-2147168473)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevocationListStale" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Lizenz erfordert, dass eine neue Sperrliste erworben werden muss.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindRevokedIssuer">
+      <MemberSignature Language="C#" Value="BindRevokedIssuer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindRevokedIssuer = int32(-2147168483)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedIssuer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aktuelle Benutzer verfügt nicht über die Berechtigungen zum Zugriff auf den geschützten Inhalt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindRevokedLicense">
+      <MemberSignature Language="C#" Value="BindRevokedLicense" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindRevokedLicense = int32(-2147168484)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedLicense" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aktuelle Benutzer verfügt nicht über die Berechtigungen zum Zugriff auf den geschützten Inhalt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindRevokedModule">
+      <MemberSignature Language="C#" Value="BindRevokedModule" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindRevokedModule = int32(-2147168480)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedModule" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindRevokedPrincipal">
+      <MemberSignature Language="C#" Value="BindRevokedPrincipal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindRevokedPrincipal = int32(-2147168482)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedPrincipal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aktuelle Benutzer verfügt nicht über die Berechtigungen zum Zugriff auf den geschützten Inhalt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindRevokedResource">
+      <MemberSignature Language="C#" Value="BindRevokedResource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindRevokedResource = int32(-2147168481)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedResource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aktuelle Benutzer verfügt nicht über die Berechtigungen zum Zugriff auf den geschützten Inhalt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindSpecifiedWorkMissing">
+      <MemberSignature Language="C#" Value="BindSpecifiedWorkMissing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindSpecifiedWorkMissing = int32(-2147168463)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindSpecifiedWorkMissing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Endbenutzerlizenz (EUL) enthält keinen WORK-Knoten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindValidityTimeViolated">
+      <MemberSignature Language="C#" Value="BindValidityTimeViolated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BindValidityTimeViolated = int32(-2147168488)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BindValidityTimeViolated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der definierte Zeitraum für den geschützten Inhalt ist abgelaufen. Zugriff ist nicht mehr zulässig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BrokenCertChain">
+      <MemberSignature Language="C#" Value="BrokenCertChain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode BrokenCertChain = int32(-2147168487)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.BrokenCertChain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Rechteverwaltungs-Zertifikatskette ist unterbrochen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ClockRollbackDetected">
+      <MemberSignature Language="C#" Value="ClockRollbackDetected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode ClockRollbackDetected = int32(-2147168491)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.ClockRollbackDetected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zurücksetzen der Uhr wurde erkannt. Zugriff auf geschützten Inhalte ist nicht möglich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CryptoOperationUnsupported">
+      <MemberSignature Language="C#" Value="CryptoOperationUnsupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode CryptoOperationUnsupported = int32(-2147168492)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.CryptoOperationUnsupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein kryptografischer Vorgang, der angefordert wurde, wird nicht unterstützt. Beispiel: Übergeben eines RMS-Verschlüsselungsobjekts für die Entschlüsselung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DebuggerDetected">
+      <MemberSignature Language="C#" Value="DebuggerDetected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode DebuggerDetected = int32(-2147168416)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.DebuggerDetected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inhalt mit eingeschränkten Berechtigungen kann nicht geöffnet oder veröffentlicht werden, da ein Debugger erkannt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EmailNotVerified">
+      <MemberSignature Language="C#" Value="EmailNotVerified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode EmailNotVerified = int32(-2147168422)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.EmailNotVerified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die E-Mail-Adresse des Benutzers kann nicht überprüft werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnablingPrincipalFailure">
+      <MemberSignature Language="C#" Value="EnablingPrincipalFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode EnablingPrincipalFailure = int32(-2147168496)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.EnablingPrincipalFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der angegebene Prinzipal kann nicht aktiviert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionNotPermitted">
+      <MemberSignature Language="C#" Value="EncryptionNotPermitted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode EncryptionNotPermitted = int32(-2147168508)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.EncryptionNotPermitted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verschlüsselung ist nicht zulässig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnvironmentCannotLoad">
+      <MemberSignature Language="C#" Value="EnvironmentCannotLoad" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode EnvironmentCannotLoad = int32(-2147168501)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.EnvironmentCannotLoad" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Security.RightsManagement.SecureEnvironment" /> kann nicht geladen werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnvironmentNotLoaded">
+      <MemberSignature Language="C#" Value="EnvironmentNotLoaded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode EnvironmentNotLoaded = int32(-2147168502)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.EnvironmentNotLoaded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Security.RightsManagement.SecureEnvironment" /> kann nicht geladen werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpiredOfficialIssuanceLicenseTemplate">
+      <MemberSignature Language="C#" Value="ExpiredOfficialIssuanceLicenseTemplate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode ExpiredOfficialIssuanceLicenseTemplate = int32(-2147168425)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.ExpiredOfficialIssuanceLicenseTemplate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der in der Veröffentlichungslizenzvorlage definierte autorisierte Zeitraum ist abgelaufen. Zugriff ist nicht mehr zulässig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalOptionAlreadySet">
+      <MemberSignature Language="C#" Value="GlobalOptionAlreadySet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode GlobalOptionAlreadySet = int32(-2147168396)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.GlobalOptionAlreadySet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die angegebene Option wurde bereits festgelegt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupIdentityNotSet">
+      <MemberSignature Language="C#" Value="GroupIdentityNotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode GroupIdentityNotSet = int32(-2147168455)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.GroupIdentityNotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für die Clientsitzung wurde kein Benutzername angegeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HidCorrupted">
+      <MemberSignature Language="C#" Value="HidCorrupted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode HidCorrupted = int32(-2147168442)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.HidCorrupted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die in einem Computeraktivierungsversuch verwendete Hardware-ID (HID) ist falsch formatiert. Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HidInvalid">
+      <MemberSignature Language="C#" Value="HidInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode HidInvalid = int32(-2147168423)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.HidInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die in einem Computeraktivierungsversuch verwendete Hardware-ID (HID) ist ungültig. Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IdMismatch">
+      <MemberSignature Language="C#" Value="IdMismatch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode IdMismatch = int32(-2147168459)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.IdMismatch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Inhalts-ID aus der Lizenz entspricht nicht der Inhalts-ID der Lizenzspeichersitzung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IncompatibleObjects">
+      <MemberSignature Language="C#" Value="IncompatibleObjects" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode IncompatibleObjects = int32(-2147168498)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.IncompatibleObjects" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein übergebener Objekttyp ist mit diesem Vorgang nicht kompatibel.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InfoNotInLicense">
+      <MemberSignature Language="C#" Value="InfoNotInLicense" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InfoNotInLicense = int32(-2147168511)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InfoNotInLicense" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Erstellen einer gebundenen Lizenz wurde eine Veröffentlichungslizenz angegeben, keine Endbenutzerlizenz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InfoNotPresent">
+      <MemberSignature Language="C#" Value="InfoNotPresent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InfoNotPresent = int32(-2147168495)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InfoNotPresent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Einige Informationen fehlen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallationFailed">
+      <MemberSignature Language="C#" Value="InstallationFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InstallationFailed = int32(-2147168443)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InstallationFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei einem Installationsvorgang ist ein Fehler aufgetreten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidAlgorithmType">
+      <MemberSignature Language="C#" Value="InvalidAlgorithmType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidAlgorithmType = int32(-2147168503)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidAlgorithmType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der angegebene Algorithmustyp ist ungültig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidClientLicensorCertificate">
+      <MemberSignature Language="C#" Value="InvalidClientLicensorCertificate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidClientLicensorCertificate = int32(-2147168424)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidClientLicensorCertificate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidEmail">
+      <MemberSignature Language="C#" Value="InvalidEmail" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidEmail = int32(-2147168437)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidEmail" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fehler bei der Überprüfung der E-Mail-Adresse des RMS-Servers.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidEncodingType">
+      <MemberSignature Language="C#" Value="InvalidEncodingType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidEncodingType = int32(-2147168505)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidEncodingType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der angegebene Codierungstyp ist ungültig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidHandle">
+      <MemberSignature Language="C#" Value="InvalidHandle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidHandle = int32(-2147168468)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidHandle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Entweder ist die Umgebung oder das aktivierende Prinzipalhandle ungültig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidIssuanceLicenseTemplate">
+      <MemberSignature Language="C#" Value="InvalidIssuanceLicenseTemplate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidIssuanceLicenseTemplate = int32(-2147168428)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidIssuanceLicenseTemplate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Rechteverwaltungsserver-Vorlage enthält mindestens einen Fehler.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidKeyLength">
+      <MemberSignature Language="C#" Value="InvalidKeyLength" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidKeyLength = int32(-2147168427)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidKeyLength" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die in einem Schlüssel-Wert-Paar angegebene Schlüssellänge ist ungültig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidLicense">
+      <MemberSignature Language="C#" Value="InvalidLicense" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidLicense = int32(-2147168512)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidLicense" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Lizenzstruktur in einem der Zertifikate ist ungültig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidLicenseSignature">
+      <MemberSignature Language="C#" Value="InvalidLicenseSignature" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidLicenseSignature = int32(-2147168510)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidLicenseSignature" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Signiertes digitales Rechteverwaltungszertifikat kann nicht überprüft werden. (Das signierte Zertifikat wurde möglicherweise manipuliert.)</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidLockboxPath">
+      <MemberSignature Language="C#" Value="InvalidLockboxPath" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidLockboxPath = int32(-2147168399)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidLockboxPath" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidLockboxType">
+      <MemberSignature Language="C#" Value="InvalidLockboxType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidLockboxType = int32(-2147168400)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidLockboxType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidNumericalValue">
+      <MemberSignature Language="C#" Value="InvalidNumericalValue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidNumericalValue = int32(-2147168504)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidNumericalValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der angegebene numerische Wert ist ungültig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidRegistryPath">
+      <MemberSignature Language="C#" Value="InvalidRegistryPath" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidRegistryPath = int32(-2147168398)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidRegistryPath" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der angegebene Registrierungspfad ist ungültig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidServerResponse">
+      <MemberSignature Language="C#" Value="InvalidServerResponse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidServerResponse = int32(-2147168441)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidServerResponse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidTimeInfo">
+      <MemberSignature Language="C#" Value="InvalidTimeInfo" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidTimeInfo = int32(-2147168431)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidTimeInfo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die angegebenen Zeitinformationen sind ungültig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidVersion">
+      <MemberSignature Language="C#" Value="InvalidVersion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode InvalidVersion = int32(-2147168506)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidVersion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Rechteverwaltungsversion ist falsch.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTypeUnsupported">
+      <MemberSignature Language="C#" Value="KeyTypeUnsupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode KeyTypeUnsupported = int32(-2147168493)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.KeyTypeUnsupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>In einem Schlüssel-Wert-Paar wird der angegebene Schlüsseltyp nicht unterstützt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LibraryFail">
+      <MemberSignature Language="C#" Value="LibraryFail" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode LibraryFail = int32(-2147168497)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.LibraryFail" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei diesem Bibliotheksvorgang ist ein Fehler aufgetreten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LibraryUnsupportedPlugIn">
+      <MemberSignature Language="C#" Value="LibraryUnsupportedPlugIn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode LibraryUnsupportedPlugIn = int32(-2147168474)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.LibraryUnsupportedPlugIn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das angegebene Bibliothek-Plug-In wird nicht unterstützt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LicenseAcquisitionFailed">
+      <MemberSignature Language="C#" Value="LicenseAcquisitionFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode LicenseAcquisitionFailed = int32(-2147168460)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.LicenseAcquisitionFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vom Rechteverwaltungsserver konnte keine Endbenutzerlizenz (EUL) abgerufen werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LicenseBindingToWindowsIdentityFailed">
+      <MemberSignature Language="C#" Value="LicenseBindingToWindowsIdentityFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode LicenseBindingToWindowsIdentityFailed = int32(-2147168429)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.LicenseBindingToWindowsIdentityFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anmeldeinformationen des aktuellen Benutzers gelten nicht für den Erwerb einer Lizenz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ManifestPolicyViolation">
+      <MemberSignature Language="C#" Value="ManifestPolicyViolation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode ManifestPolicyViolation = int32(-2147183860)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.ManifestPolicyViolation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Vorgang verstößt gegen die Rechteverwaltungsmanifest-Richtlinie.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataNotSet">
+      <MemberSignature Language="C#" Value="MetadataNotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode MetadataNotSet = int32(-2147168433)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.MetadataNotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die angegebenen Metadaten konnten nicht festgelegt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NeedsGroupIdentityActivation">
+      <MemberSignature Language="C#" Value="NeedsGroupIdentityActivation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode NeedsGroupIdentityActivation = int32(-2147168450)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.NeedsGroupIdentityActivation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Benutzer ist nicht aktiviert, oder es wurde kein Rechtekontozertifikat (Rights Account Certificate, RAC) übermittelt, und im Lizenzspeicher wurde keines gefunden, dass der Lizenz entspricht, die dieser Sitzung zugeordnet ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NeedsMachineActivation">
+      <MemberSignature Language="C#" Value="NeedsMachineActivation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode NeedsMachineActivation = int32(-2147168451)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.NeedsMachineActivation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Computer muss aktiviert werden, bevor der Benutzer aktiviert werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoAesCryptoProvider">
+      <MemberSignature Language="C#" Value="NoAesCryptoProvider" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode NoAesCryptoProvider = int32(-2147168397)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.NoAesCryptoProvider" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoConnect">
+      <MemberSignature Language="C#" Value="NoConnect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode NoConnect = int32(-2147168453)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.NoConnect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Rechteverwaltung kann keine Verbindung mit dem für den Lizenzserver angegebenen URI herstellen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoDistributionPointUrlFound">
+      <MemberSignature Language="C#" Value="NoDistributionPointUrlFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode NoDistributionPointUrlFound = int32(-2147168457)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.NoDistributionPointUrlFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der geschützte Inhalt ist beschädigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoLicense">
+      <MemberSignature Language="C#" Value="NoLicense" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode NoLicense = int32(-2147168452)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.NoLicense" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine erforderliche Lizenz ist nicht verfügbar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoMoreData">
+      <MemberSignature Language="C#" Value="NoMoreData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode NoMoreData = int32(-2147168461)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.NoMoreData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Am angegebenen Index ist keine Lizenz bzw. kein Zertifikat vorhanden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAChain">
+      <MemberSignature Language="C#" Value="NotAChain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode NotAChain = int32(-2147168418)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.NotAChain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Inhalt der Rechteverwaltung ist beschädigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode NotSet = int32(-2147168434)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element, dessen Löschung angefordert wurde, ist nicht vorhanden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OutdatedModule">
+      <MemberSignature Language="C#" Value="OutdatedModule" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode OutdatedModule = int32(-2147168435)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.OutdatedModule" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OutOfQuota">
+      <MemberSignature Language="C#" Value="OutOfQuota" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode OutOfQuota = int32(-2147168446)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.OutOfQuota" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das maximale Kontingent von Endbenutzerlizenzen (EULs) des Lizenzservers wurde erreicht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerLicenseNotFound">
+      <MemberSignature Language="C#" Value="OwnerLicenseNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode OwnerLicenseNotFound = int32(-2147168395)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.OwnerLicenseNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Dokument enthält keine Besitzerlizenz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryReportsNoResults">
+      <MemberSignature Language="C#" Value="QueryReportsNoResults" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode QueryReportsNoResults = int32(-2147168490)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.QueryReportsNoResults" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es sind keine Instanzen des angeforderten Attributs vorhanden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordNotFound">
+      <MemberSignature Language="C#" Value="RecordNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode RecordNotFound = int32(-2147168454)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.RecordNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die angegebene Lizenz wurde nicht gefunden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestDenied">
+      <MemberSignature Language="C#" Value="RequestDenied" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode RequestDenied = int32(-2147168417)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.RequestDenied" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Rechteverwaltungsserver lässt keine temporäre Zertifizierung des aktuellen Benutzers zu.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RevocationInfoNotSet">
+      <MemberSignature Language="C#" Value="RevocationInfoNotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode RevocationInfoNotSet = int32(-2147168432)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.RevocationInfoNotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zertifikat- oder Lizenzsperrinformationen wurden nicht festgelegt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightNotGranted">
+      <MemberSignature Language="C#" Value="RightNotGranted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode RightNotGranted = int32(-2147168507)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.RightNotGranted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aktuelle Benutzer verfügt nicht über die Berechtigungen zum Zugriff auf den geschützten Inhalt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightNotSet">
+      <MemberSignature Language="C#" Value="RightNotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode RightNotSet = int32(-2147168430)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.RightNotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das angeforderte Recht wurde beim Veröffentlichen des Inhalts mit der Rechteverwaltung nicht angegeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerError">
+      <MemberSignature Language="C#" Value="ServerError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode ServerError = int32(-2147168444)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.ServerError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerNotFound">
+      <MemberSignature Language="C#" Value="ServerNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode ServerNotFound = int32(-2147168438)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.ServerNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceGone">
+      <MemberSignature Language="C#" Value="ServiceGone" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode ServiceGone = int32(-2147168420)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.ServiceGone" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceMoved">
+      <MemberSignature Language="C#" Value="ServiceMoved" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode ServiceMoved = int32(-2147168421)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.ServiceMoved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceNotFound">
+      <MemberSignature Language="C#" Value="ServiceNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode ServiceNotFound = int32(-2147168440)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.ServiceNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechteverwaltungsdienste sind nicht ordnungsgemäß konfiguriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="Success" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode Success = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.Success" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgang wurde erfolgreich abgeschlossen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TooManyCertificates">
+      <MemberSignature Language="C#" Value="TooManyCertificates" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode TooManyCertificates = int32(-2147168458)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.TooManyCertificates" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anzahl der Zertifikate hat die maximale zulässige Anzahl überschritten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TooManyLoadedEnvironments">
+      <MemberSignature Language="C#" Value="TooManyLoadedEnvironments" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode TooManyLoadedEnvironments = int32(-2147168500)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.TooManyLoadedEnvironments" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zu viele <see cref="T:System.Security.RightsManagement.SecureEnvironment" />-Instanzen wurden erstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnexpectedException">
+      <MemberSignature Language="C#" Value="UnexpectedException" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode UnexpectedException = int32(-2147168489)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.UnexpectedException" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es ist ein unbekannter Fehler aufgetreten.  Wird auch ausgelöst, wenn eine Anwendung im Debugmodus ausgeführt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefault">
+      <MemberSignature Language="C#" Value="UseDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode UseDefault = int32(-2147168439)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.UseDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn eine Anforderung für die Computeraktivierung oder ein Rechtekontozertifikat erfolgt, gibt der empfangende <see cref="F:System.Security.RightsManagement.RightsManagementFailureCode.UseDefault" /> an, dass die Anwendung <see langword="null" /> an den ActServInfo-Parameter übergeben soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidityTimeViolation">
+      <MemberSignature Language="C#" Value="ValidityTimeViolation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.RightsManagement.RightsManagementFailureCode ValidityTimeViolation = int32(-2147168436)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.RightsManagement.RightsManagementFailureCode.ValidityTimeViolation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.RightsManagementFailureCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der definierte Zeitraum für den geschützten Inhalt ist abgelaufen. Zugriff ist nicht mehr zulässig.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

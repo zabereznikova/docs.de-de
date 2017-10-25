@@ -1,0 +1,597 @@
+<Type Name="ContentDisposition" FullName="System.Net.Mime.ContentDisposition">
+  <TypeSignature Language="C#" Value="public class ContentDisposition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ContentDisposition extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mime.ContentDisposition" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Mail</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen MIME-Protokoll-Content-Disposition-Header.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Informationen in den <xref:System.Net.Mime.ContentDisposition> Klasse begleitet, eine e-Mail-Nachricht, die Anlagen enthält, wenn die e-Mail-Nachricht an ihr Ziel gesendet wird. Die Informationen in <xref:System.Net.Mime.ContentDisposition> von Software, die E-mail, um e-Mail-Anlagen in der vom Absender beabsichtigten Weise präsentieren zeigt verwendet werden kann.  
+  
+ E-Mail-Nachrichten werden mithilfe von Instanzen von erstellt die <xref:System.Net.Mail.MailMessage> Klasse. Instanzen der <xref:System.Net.Mail.Attachment> Klasse werden verwendet, um e-Mail-Anlagen hinzufügen. So ändern Sie die <xref:System.Net.Mime.ContentDisposition> für eine Anlage erhalten Sie die Instanz aus der <xref:System.Net.Mail.Attachment.ContentDisposition%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Inhalt, der angezeigt wird, werden als Teil der Nachricht Text enthält den dispositionstyp des <xref:System.Net.Mime.ContentDisposition.Inline%2A>. Inhalte, die in einer separaten Datei angefügt ist, wird nicht angezeigt hat, den dispositionstyp des <xref:System.Net.Mime.DispositionTypeNames.Attachment>. Verwenden der <xref:System.Net.Mime.ContentDisposition.Inline%2A> -Eigenschaft zur Steuerung des Disposition-Typs für die Anlage, die mit einer Instanz des verknüpften <xref:System.Net.Mime.ContentDisposition>.  
+  
+ Für Dateianlagen, können Sie die Eigenschaften der <xref:System.Net.Mime.ContentDisposition> zum Festlegen der Dateigröße sowie das Erstellungsdatum die Datei zuletzt gelesen und zuletzt geändert hat. Für alle Anlagen können Sie einen empfohlenen Dateinamen festlegen, wenn die Anlage auf den empfangenden Computer gespeichert sind.  
+  
+ Die <xref:System.Net.Mime.ContentDisposition.ToString%2A> Methodenrückgabe Content-Disposition-Headers. Der Content-Disposition-Header wird beschrieben, in RFC 2183 unter [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine e-Mail-Nachricht mit einem Anhang Inline angezeigt werden soll.  
+  
+ [!code-cpp[NclMailSync#12](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#12)]
+ [!code-csharp[NclMailSync#12](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentDisposition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mime.ContentDisposition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Mime.ContentDisposition" /> -Klasse mit einem <see cref="P:System.Net.Mime.ContentDisposition.DispositionType" /> von <see cref="F:System.Net.Mime.DispositionTypeNames.Attachment" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Instanz, die von diesem Konstruktor zurückgegeben hat die <xref:System.Net.Mime.ContentDisposition.DispositionType%2A> -Eigenschaftensatz auf <xref:System.Net.Mime.DispositionTypeNames.Attachment>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie dieser Konstruktor aufgerufen wird.  
+  
+ [!code-cpp[NclMailSync#33](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#33)]
+ [!code-csharp[NclMailSync#33](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentDisposition (string disposition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string disposition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mime.ContentDisposition.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="disposition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="disposition">Ein <see cref="T:System.Net.Mime.DispositionTypeNames" /> Wert, der die Disposition enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Mime.ContentDisposition" /> Klasse mit den angegebenen Disposition-Informationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie dieser Konstruktor aufgerufen wird.  
+  
+ [!code-cpp[NclMailSync#34](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#34)]
+ [!code-csharp[NclMailSync#34](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#34)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">
+          <paramref name="disposition" />ist <see langword="null" /> gleich <see cref="F:System.String.Empty" /> ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreationDate">
+      <MemberSignature Language="C#" Value="public DateTime CreationDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime CreationDate" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mime.ContentDisposition.CreationDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Erstellungsdatum für eine Dateianlage.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> Wert, der das Erstellungsdatum der Datei; gibt andernfalls <see cref="F:System.DateTime.MinValue" /> Wenn kein Datum angegeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Mime.ContentDisposition.CreationDate> Eigenschaft wird verwendet, um das Senden von Zeitstempel-Informationen mit einer Datei in eine e-Mail-Nachricht gesendet werden. Dieser Wert legt den Erstellungsdatum Parameter, in der Content-Disposition-Header mit der e-Mail-Adresse gesendet.  
+  
+ Die <xref:System.Net.Mail.MailMessage> Klasse wird verwendet, um eine e-Mail-Nachricht zu erstellen. Die <xref:System.Net.Mail.Attachment> Klasse wird verwendet, um eine Datei an eine e-Mail-Nachricht anfügen. Festzulegende <xref:System.Net.Mime.ContentDisposition.CreationDate>, erhalten die <xref:System.Net.Mime.ContentDisposition> für die Anlage aus der <xref:System.Net.Mail.Attachment.ContentDisposition%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Der Content-Disposition-Header wird beschrieben, in RFC 2183 unter [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie diese Eigenschaft festgelegt wird.  
+  
+ [!code-cpp[NclMailSync#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#6)]
+ [!code-csharp[NclMailSync#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DispositionType">
+      <MemberSignature Language="C#" Value="public string DispositionType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DispositionType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mime.ContentDisposition.DispositionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den dispositionstyp für e-Mail-Anlage.</summary>
+        <value>Ein <see cref="T:System.String" /> , der die dispositionstyp enthält. Der Wert ist nicht eingeschränkt, aber ist in der Regel von der <see cref="P:System.Net.Mime.ContentDisposition.DispositionType" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Mime.ContentDisposition.DispositionType%2A> Eigenschaftswert von Software, die zeigt-e-Mail, um zu bestimmen, die richtige Vorgehensweise, um e-Mail-Anlagen verwendet werden kann. <xref:System.Net.Mime.DispositionTypeNames.Inline>Anlagen werden in der Regel angezeigt, wenn der Benutzer die e-Mail-Nachricht öffnet. <xref:System.Net.Mime.DispositionTypeNames.Attachment>Anlagen sind in der Regel nicht geöffnet werden, bis der Benutzer eine Aktion ausführt, z. B. das Klicken auf ein Symbol, das die Anlage darstellt.  
+  
+ Der Content-Disposition-Header wird beschrieben, in RFC 2183 unter [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert dieser Eigenschaft festgelegt wird.  
+  
+ [!code-cpp[NclMailSync#24](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#24)]
+ [!code-csharp[NclMailSync#24](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#24)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der für einen SET-Vorgang festgelegte Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert für ein Set-Vorgang entspricht <see cref="F:System.String.Empty" /> ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object rparam);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object rparam) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mime.ContentDisposition.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rparam" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="rparam">Die <see cref="T:System.Net.Mime.ContentDisposition" /> mit diesem Objekt zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob der Content-Disposition-Headers des angegebenen <see cref="T:System.Net.Mime.ContentDisposition" /> -Objekt mit der Content-Disposition-Headers, der dieses Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Content-Disposition-Header identisch sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mime.ContentDisposition.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den vorgeschlagenen Dateinamen für die e-Mail-Anlage.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den Dateinamen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Mime.ContentDisposition.FileName%2A> Eigenschaft der Absender bezüglich der Name, der zum Speichern von e-Mail-Anlage auf dem Computer des Empfängers verwendet werden kann. Dieser Name wird nur eine Empfehlung; im empfangende System können sie ignorieren. Der Name darf keine Pfadinformationen enthalten; Alle diese Informationen wird von den empfangenden Computer ignoriert.  
+  
+ Um Informationen zu entfernen, können Sie diese Eigenschaft festlegen, um `null` oder eine leere Zeichenfolge ("").  
+  
+ Der Content-Disposition-Header wird beschrieben, in RFC 2183 unter [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert dieser Eigenschaft festgelegt wird.  
+  
+ [!code-cpp[NclMailSync#11](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#11)]
+ [!code-csharp[NclMailSync#11](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mime.ContentDisposition.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode des angegebenen <see cref="T:System.Net.Mime.ContentDisposition" /> Objekt</summary>
+        <returns>Ein ganzzahliger Hashwert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inline">
+      <MemberSignature Language="C#" Value="public bool Inline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Inline" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mime.ContentDisposition.Inline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Boolean" /> Wert, der den dispositionstyp (Inline oder Anlage) für e-Mail-Anlage bestimmt.</summary>
+        <value>
+          <see langword="true" />Wenn der Inhalt der Anlage wird Inline als Teil der e-Mail-Text angezeigt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Mime.ContentDisposition.Inline%2A> Eigenschaftensätze den dispositionstyp in der Content-Disposition-Header mit der e-Mail-Nachricht gesendet. Der dispositionstyp kann von Software verwendet werden, in der E-mail, um zu bestimmen, die richtige Vorgehensweise, um e-Mail-Anlagen angezeigt. Geben Sie die Anlagen mit einem Disposition der <xref:System.Net.Mime.DispositionTypeNames.Inline?displayProperty=nameWithType> werden in der Regel angezeigt, wenn der Benutzer die e-Mail-Nachricht öffnet. Geben Sie die Anlagen mit einem Disposition der <xref:System.Net.Mime.DispositionTypeNames.Attachment?displayProperty=nameWithType> sind in der Regel nicht geöffnet, bis der Benutzer eine zusätzliche Aktion ausführt, z. B. das Klicken auf ein Symbol, das die Anlage darstellt.  
+  
+ Der Content-Disposition-Header wird beschrieben, in RFC 2183 unter [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert dieser Eigenschaft festgelegt wird.  
+  
+ [!code-cpp[NclMailSync#12](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#12)]
+ [!code-csharp[NclMailSync#12](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModificationDate">
+      <MemberSignature Language="C#" Value="public DateTime ModificationDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ModificationDate" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mime.ContentDisposition.ModificationDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Datum der Änderung für eine Dateianlage.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> Wert an das Änderungsdatum der Datei; andernfalls <see cref="F:System.DateTime.MinValue" /> Wenn kein Datum angegeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Mime.ContentDisposition.ModificationDate%2A> Eigenschaft wird verwendet, um das Senden von Zeitstempel-Informationen mit einer Datei in eine e-Mail-Nachricht gesendet werden. Dieser Wert legt den Änderungsdatum Parameter, in der Content-Disposition-Header mit der e-Mail-Nachricht gesendet.  
+  
+ Die <xref:System.Net.Mail.MailMessage> Klasse wird verwendet, um eine e-Mail-Nachricht zu erstellen. Die <xref:System.Net.Mail.Attachment> Klasse wird verwendet, um eine Datei an eine e-Mail-Nachricht anfügen. Festlegen der <xref:System.Net.Mime.ContentDisposition.ModificationDate%2A> -Eigenschaft, erhalten die <xref:System.Net.Mime.ContentDisposition> für die Anlage mithilfe der <xref:System.Net.Mail.Attachment.ContentDisposition%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Der Content-Disposition-Header wird beschrieben, in RFC 2183 unter [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie diese Eigenschaft festgelegt wird.  
+  
+ [!code-cpp[NclMailSync#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#6)]
+ [!code-csharp[NclMailSync#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringDictionary Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringDictionary Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mime.ContentDisposition.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Parameter in der von dieser Instanz dargestellten Content-Disposition-Header ab.</summary>
+        <value>Eine nicht schreibgeschützte <see cref="T:System.Collections.Specialized.StringDictionary" /> Parameter Name/Wert-Paare enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel werden die Parameter durch die Eigenschaftswerte bestimmt, sodass Sie nicht darauf zugreifen müssen. Nehmen Sie bei Bedarf hinzufügen oder ändern die Parameterinformationen zurückgegebene Wörterbuch, der <xref:System.Net.Mime.ContentDisposition.Parameters%2A> Eigenschaft.  
+  
+ Der Content-Disposition-Header wird beschrieben, in RFC 2183, verfügbar unter [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Parameter, die auf den Content-Disposition-Header gesendet werden.  
+  
+ [!code-cpp[NclMailSync#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#6)]
+ [!code-csharp[NclMailSync#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadDate">
+      <MemberSignature Language="C#" Value="public DateTime ReadDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ReadDate" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mime.ContentDisposition.ReadDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der schreibgeschützte Datum für eine Dateianlage.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> Wert an der Datei lesen Datum ist, andernfalls <see cref="F:System.DateTime.MinValue" /> Wenn kein Datum angegeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Mime.ContentDisposition.ReadDate%2A> Eigenschaft wird verwendet, um das Senden von Zeitstempel-Informationen mit einer Datei in eine e-Mail-Nachricht gesendet werden. Dieser Wert legt den Read-Date-Parameter in der Content-Disposition-Header mit der e-Mail-Nachricht gesendet.  
+  
+ Die <xref:System.Net.Mail.MailMessage> Klasse wird verwendet, um eine e-Mail-Nachricht zu erstellen. Die <xref:System.Net.Mail.Attachment> Klasse wird verwendet, um eine Datei an eine e-Mail-Nachricht anfügen. Festzulegende <xref:System.Net.Mime.ContentDisposition.ReadDate%2A>, erhalten die <xref:System.Net.Mime.ContentDisposition> für die Anlage mithilfe der <xref:System.Net.Mail.Attachment.ContentDisposition%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Der Content-Disposition-Header wird beschrieben, in RFC 2183 unter [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie diese Eigenschaft festgelegt wird.  
+  
+ [!code-cpp[NclMailSync#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#6)]
+ [!code-csharp[NclMailSync#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public long Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mime.ContentDisposition.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe des Dateianlage.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , die die Anzahl der Bytes in der Dateianlage angibt. Der Standardwert ist-1 und bedeutet, dass die Dateigröße unbekannt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Mime.ContentDisposition.Size%2A> Eigenschaft wird verwendet, um das Senden von Zeitstempel-Informationen mit einer Datei in eine e-Mail-Nachricht gesendet werden. Die <xref:System.Net.Mail.MailMessage> Klasse wird verwendet, um die Nachricht verfassen. Die <xref:System.Net.Mail.Attachment> Klasse wird verwendet, um eine Datei an eine e-Mail-Nachricht anfügen.  
+  
+ Der Content-Disposition-Header wird beschrieben, in RFC 2183 unter [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie diese Eigenschaft abgerufen wird.  
+  
+ [!code-cpp[NclMailSync#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#6)]
+ [!code-csharp[NclMailSync#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mime.ContentDisposition.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.String" /> Darstellung dieser Instanz.</summary>
+        <returns>Ein <see cref="T:System.String" /> , der die Eigenschaftswerte für diese Instanz enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Zeichenfolge den <xref:System.Net.Mime.ContentDisposition.ToString%2A> Methode ist der Content-Disposition-Header.  
+  
+ Der Content-Disposition-Header wird beschrieben, in RFC 2183 unter [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Aufrufen dieser Methode.  
+  
+ [!code-cpp[NclMailSync#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#6)]
+ [!code-csharp[NclMailSync#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

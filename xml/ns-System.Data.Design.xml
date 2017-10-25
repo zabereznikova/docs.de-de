@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Design">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.Design" /> -Namespace enthält Klassen, die verwendet werden können, um ein benutzerdefiniertes typisiertes Dataset zu generieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

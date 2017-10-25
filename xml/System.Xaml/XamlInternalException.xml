@@ -1,0 +1,101 @@
+<Type Name="XamlInternalException" FullName="System.Xaml.XamlInternalException">
+  <TypeSignature Language="C#" Value="public class XamlInternalException : System.Xaml.XamlException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit XamlInternalException extends System.Xaml.XamlException" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlInternalException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xaml.XamlException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die für interne Inkonsistenzen ausgelöst wird, die während der Verwendung von XAML-Lesen und Schreiben von XAML-auftreten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Ausnahme tritt in der Regel nur, wenn einige Aspekte der Verwendung von XAML-Reader oder XAML-Writer-System von Ihrem Code erweitert wurde und Inkonsistenzen oder Implementierungsprobleme aufgetreten sind, die auf .NET Framework XAML Services-Systemcode übergeben wurden. Ausnahmen, die von Drittanbietern, z. B. XAML-Analyse und Auftreten von Fehlern im XAML, stammen möglicherweise sollte keine auslösen <xref:System.Xaml.XamlInternalException>, und sollte stattdessen Ausnahmen auslösen, andere wie z. B. <xref:System.Xaml.XamlParseException> oder <xref:System.Xaml.XamlObjectWriterException>.  
+  
+ Wenn Sie Code, die .NET Framework XAML Services erweitert schreiben, insbesondere wenn Sie Code für eine XAML-Reader oder XAML-Writer Implementierung schreiben Sie sollten beibehalten, diese Unterscheidung zwischen <xref:System.Xaml.XamlInternalException> und der XAML-bezogenen Ausnahmen. Der Code sollte nur auslösen <xref:System.Xaml.XamlInternalException> in Fällen, in dem weitere Erweiterung der Klasse verletzt einige Entwurfsmuster Prinzip oder Implementierung, die aufgerufen werden kann Code definiert. Code sollte anderen XAML-spezifische Ausnahmen für Ausnahmefälle auslösen, bei dem die XAML-Reader oder XAML-Writer Implementierung ohne Erweiterung und wird verwendet, um die Verwendung von XAML-eines Drittanbieters, Drittanbieter-XAML-Schemakontext usw. zu laden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlInternalException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlInternalException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xaml.XamlInternalException" />-Klasse mit einer vom System generierten Meldung, die den Fehler beschreibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlInternalException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlInternalException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der die Ausnahme beschrieben wird</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xaml.XamlInternalException" />-Klasse mit einer angegebenen Meldung, die den Fehler beschreibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XamlInternalException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlInternalException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xaml.XamlInternalException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlInternalException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlInternalException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der die Ausnahme beschrieben wird</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>"InnerException"</c> -Parameter ist kein <see langword="null" />, die aktuelle Ausnahme wird ausgelöst, eine <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xaml.XamlInternalException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,25 @@
+<Namespace Name="System.Net.PeerToPeer">
+  <Docs>
+    <summary>Die <see cref="N:System.Net.PeerToPeer" /> Namespace bietet Zugriff auf peer-Netzwerkfunktionen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie Peers einander erkennen und Auflösen von Bezeichnern ist von vorübergehenden Verbindungen und das Fehlen des Zugriffs auf-Adresseinträge, z. B. Domain Name System (DNS) komplizierter.  Die Windows-Peer-zu-Peer-Infrastruktur löst dieses Problem mit einem Namen auflösen und dem Peer Ermittlung Schema PNRP aufgerufen.  
+  
+ Peer Name Resolution Protocol (PNRP) bietet einen Name Resolution-Mechanismus für Peer-zu-Peer-Netzwerke.  PNRP dient zum Auflösen eines Namens mit einem Netzwerk <xref:System.Net.IPEndPoint> in einer Weise vollständig Peer-zu-Peer.  
+  
+ Grundlegende PNRP-Funktionen finden Sie unter der <xref:System.Net.PeerToPeer> Namespaceklassen.  Sie bieten die Möglichkeit, einen Peer erstellen und registrieren Sie ihn in eine <xref:System.Net.PeerToPeer.Cloud> des Peers. Sie bieten auch die Möglichkeit zum Auflösen einer <xref:System.Net.PeerToPeer.PeerName> seine Netzwerkendpunkt, TCP-Port, Cloud oder andere Adressbezeichner.  
+  
+ Erweiterte Funktionen für Peer-zu-Peer-Netzwerke finden Sie unter der <xref:System.Net.PeerToPeer.Collaboration> Namespace.  
+  
+ Windows Vista ausgeliefert wird PNRP als ein Dienst, der von Anwendungen bei Bedarf gestartet wird. Darüber hinaus ist eine Registrierungsdienst PNRP Computer, die manuell kann von Anwendungen oder Benutzern aktiviert werden, wenn sie Computernamen für Remoteverbindungen und Kommunikation veröffentlichen möchten.  
+  
+ PNRP, Version 1 wurde in Windows XP Service Pack 2 (SP2), Windows XP Professional X64 Edition und Windows XP mit Service Pack 1 (SP1) und das Advanced Networking Pack für Windows XP enthalten.  
+  
+ Darüber hinaus ist eine PNRP Computer geräteregistrierungsdienst der Anwendungen/Benutzer manuell aktiviert werden kann, wenn Sie Interesse an die publishing Computernamen für die Remoteverbindung und Verbindungen ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

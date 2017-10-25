@@ -1,0 +1,354 @@
+<Type Name="ITemplateEditingFrame" FullName="System.Web.UI.Design.ITemplateEditingFrame">
+  <TypeSignature Language="C#" Value="public interface ITemplateEditingFrame : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITemplateEditingFrame implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ITemplateEditingFrame" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use of this type is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Schnittstelle zum Verwalten von einer Vorlagenbearbeitungsmodus Bereich bearbeiten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingFrame> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Vorlagengruppen und Vorlagendefinitionen in den Vorlagengruppen für ein Steuerelement-Designer aufzurufende Eigenschaft.  
+  
+ Ein Vorlagenbearbeitungsrahmen stellt die Benutzeroberfläche für einen Vorlageneditor von einem Steuerelement mit Vorlagen-Designer dar.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close (bool saveChanges);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close(bool saveChanges) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingFrame.Close(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="saveChanges" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="saveChanges">
+          <see langword="true" />Wenn Änderungen an das Dokument gespeichert werden soll; andernfalls <see langword="false" />.</param>
+        <summary>Schließt das Steuerelement, und speichert optional alle Änderungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingFrame> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.Design.TemplateGroup.GroupStyle%2A> -Eigenschaft für jede Vorlage Group-Element in der <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Auflistung von einem Steuerelement-Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style ControlStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style ControlStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.ControlStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stil für den Bearbeitungsrahmen.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.Style" /> , die die Web Server Steuerelement Stilattribute für den Bearbeitungsrahmen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingFrame> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.Design.TemplateGroup.GroupStyle%2A> -Eigenschaft für jede Vorlage Group-Element in der <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Auflistung von einem Steuerelement-Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialHeight">
+      <MemberSignature Language="C#" Value="public int InitialHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InitialHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.InitialHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die anfängliche Höhe des Steuerelements fest.</summary>
+        <value>Die anfängliche Höhe des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingFrame> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.WebControls.Style.Height%2A> Eigenschaft in der <xref:System.Web.UI.Design.TemplateGroup.GroupStyle%2A> -Eigenschaft für jede Vorlage Group-Element in der <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Auflistung von einem Steuerelement-Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialWidth">
+      <MemberSignature Language="C#" Value="public int InitialWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InitialWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.InitialWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die anfängliche Breite des Steuerelements fest.</summary>
+        <value>Die anfängliche Breite des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingFrame> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.WebControls.Style.Width%2A> Eigenschaft in der <xref:System.Web.UI.Design.TemplateGroup.GroupStyle%2A> -Eigenschaft für jede Vorlage Group-Element in der <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Auflistung von einem Steuerelement-Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Bearbeitungsrahmens ab.</summary>
+        <value>Der Name des Bearbeitungsrahmens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingFrame> Schnittstelle ist veraltet. Name der Vorlage finden Sie im die <xref:System.Web.UI.Design.TemplateGroup.GroupName%2A> Eigenschaft jeder Vorlage Group-Element in der <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Auflistung von einem Steuerelement-Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingFrame.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird geöffnet und zeigt das Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public void Resize (int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Resize(int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingFrame.Resize(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die neue Breite für das Steuerelement.</param>
+        <param name="height">Die neue Höhe des Steuerelements.</param>
+        <summary>Ändert das Steuerelement an die angegebene Breite und Höhe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingFrame> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.Design.TemplateGroup.GroupStyle%2A> -Eigenschaft für jede Vorlage Group-Element in der <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Auflistung von einem Steuerelement-Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingFrame.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert alle Änderungen im Dokument.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateNames">
+      <MemberSignature Language="C#" Value="public string[] TemplateNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] TemplateNames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.TemplateNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Reihe von Namen von Vorlagen verwenden.</summary>
+        <value>Ein Array von Namen der Zertifikatvorlagen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingFrame> Schnittstelle ist veraltet. Ein Vorlagennamen erfolgt über die <xref:System.Web.UI.Design.DesignerObject.Name%2A> Eigenschaft von einem <xref:System.Web.UI.Design.TemplateDefinition> Objekt. Durchlaufen der Auflistung Vorlagendefinitionen mithilfe der <xref:System.Web.UI.Design.TemplateGroup.Templates%2A> -Eigenschaft jedes <xref:System.Web.UI.Design.TemplateGroup> Element in der <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Auflistung von einem Steuerelement-Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateStyles">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style[] TemplateStyles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style[] TemplateStyles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.TemplateStyles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, das die Vorlagenformate für das Steuerelement.</summary>
+        <value>Ein Array von <see cref="T:System.Web.UI.WebControls.Style" /> -Objekten, das die Vorlagenformate für das Steuerelement darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingFrame> Schnittstelle ist veraltet. Ein Vorlagenstil erfolgt über die <xref:System.Web.UI.Design.TemplateDefinition.Style%2A> Eigenschaft von einem <xref:System.Web.UI.Design.TemplateDefinition> Objekt. Durchlaufen der Auflistung Vorlagendefinitionen mithilfe der <xref:System.Web.UI.Design.TemplateGroup.Templates%2A> -Eigenschaft jedes <xref:System.Web.UI.Design.TemplateGroup> Element in der <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Auflistung von einem Steuerelement-Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateControlName">
+      <MemberSignature Language="C#" Value="public void UpdateControlName (string newName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateControlName(string newName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingFrame.UpdateControlName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="newName">Der neue Name für das Steuerelement.</param>
+        <summary>Ändert den Namen des Steuerelements in den angegebenen Namen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingFrame> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.Design.TemplateGroup.GroupStyle%2A> -Eigenschaft für jede Vorlage Group-Element in der <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Auflistung von einem Steuerelement-Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verb">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.TemplateEditingVerb Verb { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateEditingVerb Verb" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.Verb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateEditingVerb</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Verb, das die Vorlage aufruft.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.TemplateEditingVerb" /> , die die Vorlage aufruft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ITemplateEditingFrame> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.Design.TemplateGroup.GroupName%2A> Eigenschaft jeder Vorlage Gruppe in der <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Auflistung für eine Steuerelement-Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

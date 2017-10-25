@@ -1,0 +1,153 @@
+<Type Name="CommunicationException" FullName="System.ServiceModel.CommunicationException">
+  <TypeSignature Language="C#" Value="public class CommunicationException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CommunicationException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.CommunicationException" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netcore-1.0">System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Kommunikationsfehler in der Dienst- oder der Clientanwendung dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Robuste Client- und Dienst-[!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Anwendungen verarbeiten <xref:System.ServiceModel.CommunicationException>-Objekte, die möglicherweise während der Kommunikation ausgelöst werden. Es gibt auch zwei von <xref:System.ServiceModel.CommunicationException> abgeleitete Ausnahmetypen (<xref:System.ServiceModel.FaultException%601> und <xref:System.ServiceModel.FaultException>), die häufig von Clients erwartet werden. Um daher zu verhindern, dass der generische <xref:System.ServiceModel.CommunicationException>-Handler diese spezifischeren Ausnahmetypen abfängt, müssen die Ausnahmen vor der Verarbeitung von <xref:System.ServiceModel.CommunicationException> abgefangen werden.  
+  
+-   <xref:System.ServiceModel.FaultException%601>-Objekte werden am Client ausgelöst, wenn ein im Vorgangsvertrag angegebener SOAP-Fehler als Antwort auf einen bidirektionalen Vorgang empfangen wird (d. h. eine Methode mit einem <xref:System.ServiceModel.OperationContractAttribute>-Attribut, bei dem <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> auf `false` festgelegt ist).  
+  
+ <xref:System.ServiceModel.FaultException>-Objekte werden ausgelöst, wenn ein Listener einen SOAP-Fehler empfängt, der nicht im Vorgangsvertrag erwartet oder angegeben wird. Dies tritt in der Regel auf, wenn für die Anwendung ein Debugvorgang durchgeführt wird und die <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>-Eigenschaft des Diensts auf `true` festgelegt wurde.  
+  
+> [!NOTE]
+>  Beim Implementieren benutzerdefinierter Kanäle und Bindungselemente wird dringend empfohlen, dass Ihre Komponenten nur von <xref:System.TimeoutException?displayProperty=nameWithType> oder <xref:System.ServiceModel.CommunicationException> abgeleitete Objekte auslösen. Wenn Ihre Komponenten eine behebbare Ausnahme ausgeben, die spezifisch für die Komponente ist, betten Sie diese Ausnahme in ein <xref:System.ServiceModel.CommunicationException>-Objekt ein.  
+  
+ Weitere Informationen zum Entwerfen und Verwenden der [!INCLUDE[indigo2](~/includes/indigo2-md.md)] -fehlersystems, finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](~/docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+  
+> [!IMPORTANT]
+>  Die WCF-Laufzeit keine Ausnahme auslöst, eine <xref:System.ServiceModel.CommunicationException> , die ist unsicher, an dem Punkt, wo es bewirkt, dass die WCF-Laufzeit und geht in Benutzercode, zu behandeln.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein Client gezeigt, der <xref:System.ServiceModel.CommunicationException>-Typen verarbeitet. Dieser Client verarbeitet auch <xref:System.ServiceModel.FaultException>-Objekte, da beim Dienst <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> auf `true` festgelegt ist.  
+  
+ [!code-csharp[IErrorHandler#3](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/client.cs#3)]
+ [!code-vb[IErrorHandler#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/ierrorhandler/vb/client.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommunicationException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.CommunicationException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.CommunicationException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommunicationException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.CommunicationException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Beschreibung des Fehlerzustands.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.CommunicationException" />-Klasse unter Verwendung der angegebenen Nachricht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CommunicationException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.CommunicationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Informationen für den Deserialisierungsprozess.</param>
+        <param name="context">Der Kontext des Deserialisierungsprozesses.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.CommunicationException" />-Klasse mit den angegebenen Serialisierungsinformationen und Kontextobjekten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommunicationException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.CommunicationException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Beschreibung des Fehlerzustands.</param>
+        <param name="innerException">Die zu verwendende interne Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.CommunicationException" />-Klasse unter Verwendung der angegebenen Nachricht und der internen Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

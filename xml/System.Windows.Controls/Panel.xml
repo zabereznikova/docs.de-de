@@ -1,0 +1,676 @@
+<Type Name="Panel" FullName="System.Windows.Controls.Panel">
+  <TypeSignature Language="C#" Value="public abstract class Panel : System.Windows.FrameworkElement, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Panel extends System.Windows.FrameworkElement implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Panel" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Ignore)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Children")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Basisklasse für alle <see cref="T:System.Windows.Controls.Panel" /> Elemente. Verwendung <see cref="T:System.Windows.Controls.Panel" /> Elemente zu positionieren und Anordnen von untergeordneten Objekten in Windows Presentation Foundation (WPF)-Anwendungen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.Panel> enthält eine Auflistung von <xref:System.Windows.UIElement> Objekte, die in der <xref:System.Windows.Controls.Panel.Children%2A> Eigenschaft. Hinzufügen einer <xref:System.Windows.UIElement> untergeordnetes Element einer <xref:System.Windows.Controls.Panel> implizit hinzugefügt der <xref:System.Windows.Controls.UIElementCollection> für die <xref:System.Windows.Controls.Panel> Element.  
+  
+ [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]bietet eine umfassende Sammlung von abgeleiteten <xref:System.Windows.Controls.Panel> Implementierungen, die viele komplexe Layouts aktivieren. Wenn Sie neue Layoutcontainer implementieren möchten, verwenden Sie die <xref:System.Windows.FrameworkElement.MeasureOverride%2A> und <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> Methoden. Zeigt, wie diese Methoden verwenden, finden Sie unter [Create a Custom Content-Wrapping Panel Sample](http://go.microsoft.com/fwlink/?LinkID=159979).  
+  
+ <xref:System.Windows.Controls.Panel>Elemente erhalten keine Maus oder Tablettstift Ereignisse aus, wenn eine <xref:System.Windows.Controls.Panel.Background%2A> ist nicht definiert. Wenn Sie Handle-Maus oder Tablettstift Ereignisse aber nicht, einen Hintergrund für möchten Ihre <xref:System.Windows.Controls.Panel>, verwenden Sie <xref:System.Windows.Media.Brushes.Transparent%2A>.  
+  
+ Panel-Elementen erhalten standardmäßig nicht den Fokus. Um benutzerbestätigung durch ein Bereichselement den Fokus erhalten, legen Sie die <xref:System.Windows.UIElement.Focusable%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Panel.Children%2A> hinzuzufügenden zwei Eigenschaft <xref:System.Windows.Controls.Button> Datenbankobjekte in einer <xref:System.Windows.Controls.StackPanel>.  
+  
+ [!code-xaml[StackPanel_snip#StackPanelExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/StackPanel_snip/CS/StackPanelExample.xaml#stackpanelexamplewholepage)] 
+ [!code-csharp[Stackpanel_Procedural_snip#StackPanelExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Stackpanel_Procedural_snip/CSharp/StackpanelExample.cs#stackpanelexamplewholepage)] 
+ [!code-vb[Stackpanel_Procedural_snip#StackPanelExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Stackpanel_Procedural_snip/visualbasic/stackpanelexample.vb#stackpanelexamplewholepage)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Panel ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Panel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Panel" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Background { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Background" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Panel.Background" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see cref="T:System.Windows.Media.Brush" /> , wird verwendet, um den Bereich zwischen den Rahmenlinien Füllen einer <see cref="T:System.Windows.Controls.Panel" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.Brush" />. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Panel>Elemente erhalten keine Maus oder Tablettstift Ereignisse aus, wenn eine <xref:System.Windows.Controls.Panel.Background%2A> ist nicht definiert. Wenn Sie Handle-Maus oder Tablettstift Ereignisse aber nicht, einen Hintergrund für möchten Ihre <xref:System.Windows.Controls.Panel>, verwenden Sie <xref:System.Windows.Media.Brushes.Transparent%2A>.  
+  
+<a name="dependencyPropertyInfo_Background"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Panel.BackgroundProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Controls.Panel.Background%2A> von einer <xref:System.Windows.Controls.Grid> auf eine <xref:System.Windows.Media.RadialGradientBrush>.  
+  
+ [!code-xaml[PanelBackground#1](~/samples/snippets/csharp/VS_Snippets_Wpf/panelbackground/CS/mainwindow.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Panel.BackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Panel.Background" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.UIElementCollection Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.UIElementCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Panel.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.UIElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Controls.UIElementCollection" /> von untergeordneten Elementen dieses <see cref="T:System.Windows.Controls.Panel" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.UIElementCollection" />. Standard ist eine leere <see cref="T:System.Windows.Controls.UIElementCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Panel.Children%2A> Auflistung von einem <xref:System.Windows.Controls.Panel> Element kann nur bestehen <xref:System.Windows.UIElement> Objekte. Hinzufügen einer <xref:System.Windows.UIElement> untergeordnetes Element einer <xref:System.Windows.Controls.Panel> implizit hinzugefügt der <xref:System.Windows.Controls.UIElementCollection> für die <xref:System.Windows.Controls.Panel> Element.  
+  
+ Verwenden Sie diese Sammlung nicht abgeleitet, wobei <xref:System.Windows.Controls.Panel> Klassen; verwenden Sie die <xref:System.Windows.Controls.Panel.InternalChildren%2A> Auflistung stattdessen.  
+  
+ Diese Eigenschaft gibt `null` Wenn die <xref:System.Windows.Controls.Panel> datengebunden ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Panel.Children%2A> hinzuzufügenden Eigenschaft eine <xref:System.Windows.UIElement> untergeordnetes Element einer <xref:System.Windows.Controls.Panel> Element.  
+  
+ [!code-csharp[framesnips#FrameNavigateSetup](~/samples/snippets/csharp/VS_Snippets_Wpf/FrameSnips/CSharp/Window1.xaml.cs#framenavigatesetup)]
+ [!code-vb[framesnips#FrameNavigateSetup](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FrameSnips/visualbasic/window1.xaml.vb#framenavigatesetup)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUIElementCollection">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Controls.UIElementCollection CreateUIElementCollection (System.Windows.FrameworkElement logicalParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Controls.UIElementCollection CreateUIElementCollection(class System.Windows.FrameworkElement logicalParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Panel.CreateUIElementCollection(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.UIElementCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="logicalParent" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="logicalParent">Das logische übergeordnete Element der Auflistung erstellt werden soll.</param>
+        <summary>Erstellt einen neuen <see cref="T:System.Windows.Controls.UIElementCollection" />.</summary>
+        <returns>Eine geordnete Auflistung von Elementen, die das angegebene logische übergeordnete Element haben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die generierte <xref:System.Windows.Controls.UIElementCollection> auf Cacheinformationen zu untergeordneten Elementen oder zum Durchführen von Aktualisierungen inkrementelles Layout.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisualChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Visual GetVisualChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Visual GetVisualChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Panel.GetVisualChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition des der <see cref="T:System.Windows.Media.Visual" /> untergeordneten.</param>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.Visual" /> untergeordnetes Element dieses <see cref="T:System.Windows.Controls.Panel" /> an der angegebenen Indexposition befindet.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.Visual" /> untergeordnetes Element eines übergeordneten Elements <see cref="T:System.Windows.Controls.Panel" /> Element.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetZIndex">
+      <MemberSignature Language="C#" Value="public static int GetZIndex (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetZIndex(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Panel.GetZIndex(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element für das Abrufen der <see cref="P:System.Windows.Controls.Panel.ZIndex" /> Wert.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.Panel.ZIndex" /> Eigenschaft für ein angegebenes Element.</summary>
+        <returns>Die <see cref="P:System.Windows.Controls.Panel.ZIndex" /> Position des Elements.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Das Element ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasLogicalOrientation">
+      <MemberSignature Language="C#" Value="protected virtual bool HasLogicalOrientation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasLogicalOrientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Panel.HasLogicalOrientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Windows.Controls.Panel" /> ordnet seine Nachfolger in einer einzelnen Dimension.</summary>
+        <value>
+          <see langword="true" />Wenn die Ausrichtung des der <see cref="T:System.Windows.Controls.Panel" /> ist in einer Dimension; anderenfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Von den vordefinierten Bereichselementen nur <xref:System.Windows.Controls.StackPanel> gibt `true`, da die Ausrichtung in einer einzelnen Dimension ist.  Unterklassen des <xref:System.Windows.Controls.Panel> können diese Eigenschaft überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasLogicalOrientationPublic">
+      <MemberSignature Language="C#" Value="public bool HasLogicalOrientationPublic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasLogicalOrientationPublic" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Panel.HasLogicalOrientationPublic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Windows.Controls.Panel" /> ordnet seine Nachfolger in einer einzelnen Dimension.</summary>
+        <value>
+          <see langword="true" />Wenn die Ausrichtung des der <see cref="T:System.Windows.Controls.Panel" /> ist in einer Dimension; anderenfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Von den vordefinierten Bereichselementen nur <xref:System.Windows.Controls.StackPanel> gibt `true`, da die Ausrichtung in einer einzelnen Dimension ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalChildren">
+      <MemberSignature Language="C#" Value="protected System.Windows.Controls.UIElementCollection InternalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.UIElementCollection InternalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Panel.InternalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.UIElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Controls.UIElementCollection" /> von untergeordneten Elementen.</summary>
+        <value>Eine geordnete Auflistung von <see cref="T:System.Windows.UIElement" /> Objekte. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Auflistung enthält die Elemente, die direkt im Code hinzugefügt werden, sowie die Elemente, von dem Datenbindung generiert werden.  
+  
+ Die von der abgeleiteten Klassen <xref:System.Windows.Controls.Panel> verwenden Sie diese Eigenschaft sollte anstelle von der <xref:System.Windows.Controls.Panel.Children%2A> Eigenschaft für die interne überschreibt z. B. <xref:System.Windows.UIElement.MeasureCore%2A> und <xref:System.Windows.UIElement.ArrangeCore%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemsHost">
+      <MemberSignature Language="C#" Value="public bool IsItemsHost { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsItemsHost" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Panel.IsItemsHost" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einem Wert, der angibt, die dies <see cref="T:System.Windows.Controls.Panel" /> ist ein Container für [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente, die generiert werden, indem ein <see cref="T:System.Windows.Controls.ItemsControl" />.</summary>
+        <value>
+          <see langword="true" />Wenn diese Instanz von <see cref="T:System.Windows.Controls.Panel" /> ElementHost ist, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können keine Daten an diese Eigenschaft binden.  
+  
+<a name="dependencyPropertyInfo_IsItemsHost"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Panel.IsItemsHostProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Controls.ControlTemplate> zum Erstellen einer horizontalen <xref:System.Windows.Controls.ListBox>. Die horizontale <xref:System.Windows.Controls.StackPanel> wird angegeben, in der <xref:System.Windows.Controls.ControlTemplate>. Die <xref:System.Windows.Controls.Panel.IsItemsHost%2A> -Eigenschaftensatz auf `true` auf die <xref:System.Windows.Controls.StackPanel>, was bedeutet, dass die generierten Elemente in den Bereich eingefügt werden soll. Wenn Sie auf diese Weise angeben der <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> kann nicht vom Benutzer des Steuerelements ersetzt werden, ohne eine <xref:System.Windows.Controls.ControlTemplate>. Aus diesem Grund dazu nur, wenn Sie wissen, dass Sie nicht im Bereich ohne Verwendung einer Vorlage ersetzt werden soll.  
+  
+ [!code-xaml[StylingIntroSnippet#ListBoxCT](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#listboxct)]   
+  
+ Sie können alternativ Festlegen der <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A?displayProperty=nameWithType> Eigenschaft. Im folgenden Beispiel wird die <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> in einer <xref:System.Windows.Style> von einem <xref:System.Windows.Controls.ListBox>.  
+  
+ [!code-xaml[listboxhorizontal#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxHorizontal/CS/window1.xaml#1)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemsHostProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsItemsHostProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsItemsHostProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Panel.IsItemsHostProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Panel.IsItemsHost" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Panel.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die logischen untergeordneten Elemente dieses durchlaufen kann <see cref="T:System.Windows.Controls.Panel" /> Element.</summary>
+        <value>Eine <see cref="T:System.Collections.IEnumerator" />. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalOrientation">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Controls.Orientation LogicalOrientation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Orientation LogicalOrientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Panel.LogicalOrientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Controls.Orientation" /> des Bereichs, wenn der Bereich Layout in nur einer einzigen Dimension unterstützt.</summary>
+        <value>Die <see cref="T:System.Windows.Controls.Orientation" /> des Bereichs. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterklassen des <xref:System.Windows.Controls.Panel> können diese Eigenschaft überschreiben. Wenn <xref:System.Windows.Controls.Panel.HasLogicalOrientation%2A> ist `false`, Wert dieser Eigenschaft ignoriert werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalOrientationPublic">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Orientation LogicalOrientationPublic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Orientation LogicalOrientationPublic" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Panel.LogicalOrientationPublic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Controls.Orientation" /> des Bereichs, wenn der Bereich Layout in nur einer einzigen Dimension unterstützt.</summary>
+        <value>Die <see cref="T:System.Windows.Controls.Orientation" /> des Bereichs. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Controls.Panel.HasLogicalOrientation%2A> ist `false`, Wert dieser Eigenschaft ignoriert werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsItemsHostChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnIsItemsHostChanged (bool oldIsItemsHost, bool newIsItemsHost);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnIsItemsHostChanged(bool oldIsItemsHost, bool newIsItemsHost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Panel.OnIsItemsHostChanged(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldIsItemsHost" Type="System.Boolean" />
+        <Parameter Name="newIsItemsHost" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="oldIsItemsHost">Der alte Eigenschaftswert.</param>
+        <param name="newIsItemsHost">Der neue Eigenschaftswert.</param>
+        <summary>Gibt an, dass die <see cref="P:System.Windows.Controls.Panel.IsItemsHost" /> -Eigenschaftswert geändert wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override void OnRender (System.Windows.Media.DrawingContext dc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Windows.Media.DrawingContext dc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Panel.OnRender(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Windows.Media.DrawingContext" /> Objekt gezeichnet werden soll.</param>
+        <summary>Zeichnet den Inhalt einer <see cref="T:System.Windows.Media.DrawingContext" /> Objekt während des Renderings ein <see cref="T:System.Windows.Controls.Panel" /> Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisualChildrenChanged">
+      <MemberSignature Language="C#" Value="protected override void OnVisualChildrenChanged (System.Windows.DependencyObject visualAdded, System.Windows.DependencyObject visualRemoved);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnVisualChildrenChanged(class System.Windows.DependencyObject visualAdded, class System.Windows.DependencyObject visualRemoved) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Panel.OnVisualChildrenChanged(System.Windows.DependencyObject,System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visualAdded" Type="System.Windows.DependencyObject" />
+        <Parameter Name="visualRemoved" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="visualAdded">Die <see cref="T:System.Windows.Media.Visual" /> , die der Auflistung hinzugefügt wurde.</param>
+        <param name="visualRemoved">Die <see cref="T:System.Windows.Media.Visual" /> , die aus der Auflistung entfernt wurde.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="T:System.Windows.Media.VisualCollection" /> eines visuellen Objekts geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Panel.ZIndex%2A>Werte werden automatisch neu berechnet, wenn untergeordnete Elemente hinzugefügt oder aus der Auflistung entfernt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetZIndex">
+      <MemberSignature Language="C#" Value="public static void SetZIndex (System.Windows.UIElement element, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetZIndex(class System.Windows.UIElement element, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Panel.SetZIndex(System.Windows.UIElement,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, auf das der Wert der Eigenschaft angewendet werden soll.</param>
+        <param name="value">Die Reihenfolge in der Z-Ebene, in der dieses Element angezeigt wird.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.Panel.ZIndex" /> angefügte Eigenschaft für ein angegebenes Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Größer der `value` von einer bestimmten `element`, desto wahrscheinlicher der `element` im Vordergrund angezeigt werden soll. Ebenso, wenn ein `element` verfügt über eine relativ geringe `value`, die `element` wahrscheinlich im Hintergrund angezeigt. Z. B. ein `element` mit dem eine `value` 5 oben angezeigt wird ein `element` , besitzt eine `value` 4, die wiederum über angezeigt werden ein `element` mit dem Wert von 3 und So weiter. Negative Werte sind zulässig, und dieses Vorrangsmuster Vorrang weiter.  
+  
+ Mitglieder einer <xref:System.Windows.Controls.Panel.Children%2A> Sammlung, die gleich besitzen <xref:System.Windows.Controls.Panel.ZIndex%2A> Werte werden in der Reihenfolge, in der sie in der visuellen Struktur erscheinen, gerendert. Sie können die Indexposition eines untergeordneten Elements bestimmen, indem Sie durchlaufen die Member des der <xref:System.Windows.Controls.Panel.Children%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird im Code veranschaulicht, wie zum Festlegen des Werts von der <xref:System.Windows.Controls.Panel.ZIndex%2A> Eigenschaft (mithilfe der <xref:System.Windows.Controls.Panel.SetZIndex%2A> Methode).  
+  
+ [!code-cpp[canvasz-order#2](~/samples/snippets/cpp/VS_Snippets_Wpf/CanvasZ-Order/CPP/CanvasZ-Order.cpp#2)]
+ [!code-csharp[canvasz-order#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CanvasZ-Order/Csharp/CanvasZ-Order.cs#2)]
+ [!code-vb[canvasz-order#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasZ-Order/VisualBasic/CanvasZ-Order.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das Element ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeChildren">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Panel.ShouldSerializeChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die <see cref="P:System.Windows.Controls.Panel.Children" /> -Auflistung eines Bereichs serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="P:System.Windows.Controls.Panel.Children" /> -Auflistung serialisiert, andernfalls werden <see langword="false" />. Die <see cref="P:System.Windows.Controls.Panel.Children" /> -Auflistung wird nur serialisiert, wenn er nicht leer ist und nicht <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Panel.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das als untergeordnetes Element hinzufügen.</param>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Panel.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die das Objekt hinzugefügt werden soll.</param>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int VisualChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisualChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Panel.VisualChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der untergeordneten <see cref="T:System.Windows.Media.Visual" /> Objekte in dieser Instanz von <see cref="T:System.Windows.Controls.Panel" />.</summary>
+        <value>Die Anzahl der untergeordneten <see cref="T:System.Windows.Media.Visual" /> Objekte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZIndexProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ZIndexProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ZIndexProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Panel.ZIndexProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.Panel.ZIndex" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

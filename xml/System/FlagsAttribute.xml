@@ -1,0 +1,134 @@
+<Type Name="FlagsAttribute" FullName="System.FlagsAttribute">
+  <TypeSignature Language="C#" Value="public class FlagsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit FlagsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.FlagsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Enum, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Enumeration als Bitfeld, d. h. als Gruppe von Flags, behandelt werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bitfelder werden im Allgemeinen für Listen mit Elementen, die zusammen auftreten verwendet, wohingegen Enumerationskonstanten im Allgemeinen für Listen mit sich gegenseitig ausschließende Elementen verwendet werden. Deshalb dienen Bitfelder mit einer bitweisen OR-Operation zum Generieren der unbenannten Werte kombiniert werden, wohingegen Enumerationskonstanten nicht sind. Ihre Verwendung von Bitfeldern, die im Vergleich zu Enumerationskonstanten Sprachen sind unterschiedlich.  
+  
+## <a name="attributes-of-the-flagsattribute"></a>Attribute von FlagsAttribute  
+ <xref:System.AttributeUsageAttribute>Diese Klasse angewendet wird und die zugehörige <xref:System.AttributeUsageAttribute.Inherited%2A> Eigenschaft gibt an, `false`. Dieses Attribut kann nur auf Enumerationen angewendet werden.  
+  
+## <a name="guidelines-for-flagsattribute-and-enum"></a>Richtlinien für FlagsAttribute und Enum  
+  
+-   Verwenden der <xref:System.FlagsAttribute> benutzerdefiniertes Attribut für eine Enumeration, die nur, wenn eine bitweise Operation (AND, OR, exklusive oder) für einen numerischen Wert ausgeführt werden soll.  
+  
+-   Definieren Sie Enumerationskonstanten in Potenzen von 2, d. h. 1, 2, 4, 8 und So weiter. Dies bedeutet, dass die einzelnen Flags in kombinierten Enumerationskonstanten nicht überschneiden.  
+  
+-   Estellen Sie eine Enumerationskonstante für häufig verwendete Flagkombinationen aus. Beispielsweise ist eine Enumeration für-e/a-Dateivorgänge verwendet, enthält der Enumerationskonstanten `Read = 1` und `Write = 2`, sollten Sie die Enumerationskonstante erstellen `ReadWrite = Read OR Write`, kombiniert die `Read` und `Write` Flags. Darüber hinaus kann die bitweise OR-Operation zum Kombinieren der Flags einen erweiterten Ansatz in einigen Fällen als angesehen werden, die nicht bei einfachen Aufgaben erforderlich sein sollte.  
+  
+-   Verwenden Sie vorsichtig vor, wenn Sie eine negative Zahl als eine Flagenumerationskonstante definieren, da viele Flagpositionen auf 1 festgelegt werden möglicherweise die Lesbarkeit Ihres Codes erschweren verwirrend und empfehlen Codierungsfehler.  
+  
+-   Eine einfache Möglichkeit zum Überprüfen, ob ein Flag, in einen numerischen Wert festgelegt ist ist eine bitweise AND-Operation zwischen dem numerischen Wert und die Kennzeichen Enumerationskonstante, die legt alle Bits in den numerischen Wert 0 (null), die nicht mit dem Flag übereinstimmen ausführen , testen Sie, ob das Ergebnis dieses Vorgangs die Flagenumerationskonstante gleich ist.  
+  
+-   Verwendung `None` wie der Namen des Flags Konstante aufgelistet, deren Wert 0 (null wird). Sie können keine der `None` Enumerationskonstante in eine bitweise AND-Operation für ein Flag zu testen, da das Ergebnis immer 0 (null) ist. Allerdings können Sie ein logisches ausführen keinen bitweisen Vergleich zwischen den numerischen Wert und die `None` Enumerationskonstante, um zu bestimmen, ob alle Bits in den numerischen Wert festgelegt werden.  
+  
+     Wenn Sie eine Value-Aufzählung, anstatt eine Flags-Enumeration erstellen, lohnt es weiterhin zum Erstellen einer `None` Enumerationskonstante. Der Grund hierfür ist, dass standardmäßig der für die Enumeration verwendete Speicher mit 0 (null) initialisiert wird von der common Language Runtime. Daher, wenn Sie keine Konstante definieren, deren Wert 0 (null) ist, die Enumeration einen unzulässigen Wert enthält während der Erstellung.  
+  
+     Es ist ein offensichtliche Standardfall muss Ihre Anwendung darstellen, sollten eine Enumerationskonstante, deren Wert 0 (null), um die Standardeinstellung darzustellen. Ist keine Standardfall, erwägen Sie verwenden eine Enumerationskonstante, deren Wert 0 (null), ist, die Groß-/Kleinschreibung bedeutet, die nicht von einer anderen Enumerationskonstanten dargestellt wird.  
+  
+-   Definieren Sie einen Enumerationswert ausschließlich, um den Status der Enumeration selbst spiegeln nicht. Definieren Sie z. B. keine Enumerationskonstante, die lediglich das Ende der Enumeration markiert. Wenn Sie den letzten Wert der Enumeration bestimmen müssen, suchen Sie nach diesem Wert explizit. Darüber hinaus können Sie eine bereichsüberprüfung für die erste und letzte Enumerationskonstante ausführen, wenn alle Werte innerhalb des Bereichs gültig sind.  
+  
+-   Geben Sie keine Enumerationskonstanten, die für die zukünftige Verwendung reserviert sind.  
+  
+-   Wenn Sie definieren eine Methode oder Eigenschaft, die eine Enumerationskonstante als Wert akzeptiert, sollten Sie überprüfen des Werts. Der Grund ist, dass Sie einen numerischen Wert in den Enumerationstyp umwandeln können, selbst wenn diese numerische Wert in der Enumeration nicht definiert ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der `FlagsAttribute` Attribut, und zeigt die Auswirkung auf die <xref:System.Enum.ToString%2A> Methode der Verwendung von `FlagsAttribute` auf eine <xref:System.Enum> Deklaration.  
+  
+ [!code-cpp[System.FlagsAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.FlagsAttribute/CPP/flags.cpp#1)]
+ [!code-csharp[System.FlagsAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.FlagsAttribute/CS/flags.cs#1)]
+ [!code-vb[System.FlagsAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.FlagsAttribute/VB/flags.vb#1)]  
+  
+ Das folgende Beispiel definiert zwei Enumerationen farbbezogene `SingleHue` und `MultiHue`. Der zweite Wert ist die `FlagsAttribute` -Attribut; erstere hingegen nicht. Das Beispiel zeigt den Unterschied im Verhalten, wenn ein Bereich von ganzen Zahlen, z. B. ganze Zahlen, die keine zugrunde liegende Enumerationstyp, Werte darstellen der Enumerationstyp und deren zeichenfolgendarstellungen angezeigt umgewandelt werden.   Beispielsweise Beachten Sie, dass 3 als dargestellt werden kann ein `SingleHue` bewertet werden, da 3 nicht den zugrunde liegenden Wert eines beliebigen ist `SingleHue` Member auf, während die `FlagsAttribute` Attribut macht das 3 als darstellen einer `MultiHue` Wert `Black, Red`.  
+  
+ [!code-cpp[System.FlagsAttribute#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.FlagsAttribute/CPP/flags1.cpp#2)]
+ [!code-csharp[System.FlagsAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.FlagsAttribute/CS/flags1.cs#2)]
+ [!code-vb[System.FlagsAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.FlagsAttribute/VB/flags1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlagsAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FlagsAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.FlagsAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel definiert eine `PhoneService` Enumeration, die Formen der Kommunikation, die von einem Telefonunternehmen bereitgestellten darstellt. Er initialisiert drei Variablen darstellen des Diensts bereitgestellt, um drei verschiedene Haushalte und gibt an, welche Haushalte besitzen keine, welche Haushalte nur Mobiltelefon-Dienst, und welche Haushalte Mobiltelefon und Land Line-Dienst. Ruft schließlich implizit die <xref:System.Enum.ToString%28System.String%29?displayProperty=nameWithType> Methode, um die Typen des Diensts bereitgestellt, um jede Haushalt anzuzeigen.  
+  
+ [!code-cpp[System.FlagsAttribute#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.FlagsAttribute/CPP/flags1.cpp#2)]
+ [!code-csharp[System.FlagsAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.FlagsAttribute/CS/flags1.cs#2)]
+ [!code-vb[System.FlagsAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.FlagsAttribute/VB/flags1.vb#2)]  
+  
+ Das folgende Beispiel veranschaulicht die Verwendung von der `FlagsAttribute` Attribut, und zeigt die Auswirkung auf die <xref:System.Enum.ToString%2A> Methode der Verwendung von `FlagsAttribute` auf eine <xref:System.Enum> Deklaration.  
+  
+ [!code-cpp[System.FlagsAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.FlagsAttribute/CPP/flags.cpp#1)]
+ [!code-csharp[System.FlagsAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.FlagsAttribute/CS/flags.cs#1)]
+ [!code-vb[System.FlagsAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.FlagsAttribute/VB/flags.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

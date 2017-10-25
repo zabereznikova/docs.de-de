@@ -1,0 +1,179 @@
+<Type Name="DistributedFileLogger" FullName="Microsoft.Build.BuildEngine.DistributedFileLogger">
+  <TypeSignature Language="C#" Value="public class DistributedFileLogger : Microsoft.Build.Framework.IForwardingLogger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DistributedFileLogger extends System.Object implements class Microsoft.Build.Framework.IForwardingLogger, class Microsoft.Build.Framework.ILogger, class Microsoft.Build.Framework.INodeLogger" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.DistributedFileLogger" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.IForwardingLogger</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Textdatei, die das Buildprotokoll für einen Buildknoten enthält.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DistributedFileLogger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.DistributedFileLogger.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.DistributedFileLogger" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEventRedirector">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IEventRedirector BuildEventRedirector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IEventRedirector BuildEventRedirector" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.DistributedFileLogger.BuildEventRedirector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IEventRedirector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Buildmodul zu einem Knoten Protokollierungen zum Weiterleiten von Nachrichten an die zentrale Protokollierung zulassen festgelegt.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.Framework.IEventRedirector" /> Objekt, um Ereignisse weiterzuleiten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Build.Framework.IEventSource eventSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.DistributedFileLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">Die <see cref="T:Microsoft.Build.Framework.IEventSource" /> Objekt, das die Buildereignisse bereitstellt.</param>
+        <summary>Trägt die konsolenprotokollierung, für alle Ereignisse zu erstellen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource, int32 nodeCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.DistributedFileLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+        <Parameter Name="nodeCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">Die <see cref="T:Microsoft.Build.Framework.IEventSource" /> Objekt, das die Buildereignisse bereitstellt.</param>
+        <param name="nodeCount">Der Knoten-ID der Ereignisquelle.</param>
+        <summary>Trägt die konsolenprotokollierung, für alle Ereignisse zu erstellen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeId">
+      <MemberSignature Language="C#" Value="public int NodeId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NodeId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.DistributedFileLogger.NodeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den eindeutigen Bezeichner (Knoten-ID) des Knotens, an den die weiterleitungsprotokollierung angefügt ist.</summary>
+        <value>Der eindeutige Bezeichner für den Knoten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public string Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.DistributedFileLogger.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Parameter für den DistributedFileLogger fest.</summary>
+        <value>Eine Zeichenfolge, die die Protokollierungsparameter darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.DistributedFileLogger.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die dateiprotokollierung Knoten an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbosity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.LoggerVerbosity Verbosity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.DistributedFileLogger.Verbosity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Detailebene (eine <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> Wert) in das Ereignisprotokoll für den Build angezeigt.</summary>
+        <value>eine <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> -Enumerationswert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die konsolenprotokollierung nimmt einen Parameter unterdrückt die Ausgabe der Fehler und Warnungen, die Zusammenfassung am Ende eines Builds.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

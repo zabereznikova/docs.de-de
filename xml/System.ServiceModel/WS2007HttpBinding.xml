@@ -1,0 +1,144 @@
+<Type Name="WS2007HttpBinding" FullName="System.ServiceModel.WS2007HttpBinding">
+  <TypeSignature Language="C#" Value="public class WS2007HttpBinding : System.ServiceModel.WSHttpBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WS2007HttpBinding extends System.ServiceModel.WSHttpBinding" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.WS2007HttpBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.WSHttpBinding</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine interoperable Bindung dar, die von <see cref="T:System.ServiceModel.WSHttpBinding" /> abgeleitet wird und Unterstützung für die aktualisierten Versionen der Bindungselemente <see cref="P:System.ServiceModel.WSHttpBinding.Security" />, <see cref="T:System.ServiceModel.ReliableSession" /> und <see cref="P:System.ServiceModel.WSHttpBindingBase.TransactionFlow" /> bereitstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.WS2007HttpBinding>-Klasse fügt ähnlich wie <xref:System.ServiceModel.WSHttpBinding> eine von einem System bereitgestellte Bindung hinzu, verwendet aber die OASIS-Standardversionen (Organization for the Advancement of Structured Information Standards) des <xref:System.ServiceModel.ReliableSession>, <xref:System.ServiceModel.WSHttpBinding.Security%2A>-Protokolls und <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A>-Protokolls. Beim Verwenden dieser Bindung sind keine Änderungen am Objektmodell oder Standardeinstellungen erforderlich.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WS2007HttpBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WS2007HttpBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.WS2007HttpBinding" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert eine Instanz der <xref:System.ServiceModel.WS2007HttpBinding>-Klasse und legt die <xref:System.ServiceModel.MessageSecurityVersion>, <xref:System.ServiceModel.ReliableMessagingVersion>-Eigenschaft und die <xref:System.ServiceModel.TransactionProtocol>-Eigenschaft fest, die die Sicherheitsprotokolle WS-Security 1.1, WS-Trust 1.3, WS-SecureConversation 1.3, WS-SecurityPolicy 1.2 und WS-I Basic Security Profile 1.0 angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird das Initialisieren einer neuen Instanz der <xref:System.ServiceModel.WS2007HttpBinding>-Klasse veranschaulicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WS2007HttpBinding (System.ServiceModel.SecurityMode securityMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.SecurityMode securityMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WS2007HttpBinding.#ctor(System.ServiceModel.SecurityMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.SecurityMode" />
+      </Parameters>
+      <Docs>
+        <param name="securityMode">Der Wert von <see cref="T:System.ServiceModel.SecurityMode" />, der den Sicherheitstyp angibt, der für die SOAP-Nachricht und den Client verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.WS2007HttpBinding" />-Klasse mit einem von der Bindung verwendeten Sicherheitstyp.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine neue Instanz der <xref:System.ServiceModel.WS2007HttpBinding>-Klasse mit einem `securityMode`-Parameter initialisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WS2007HttpBinding (string configName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string configName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WS2007HttpBinding.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configName">Der Bindungskonfigurationsname für das <see cref="T:System.ServiceModel.Configuration.WS2007HttpBindingElement" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.WS2007HttpBinding" />-Klasse mit einer durch ihren Konfigurationsnamen angegebenen Bindung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Das Bindungselement mit dem Namen <paramref name="configName" /> wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WS2007HttpBinding (System.ServiceModel.SecurityMode securityMode, bool reliableSessionEnabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.SecurityMode securityMode, bool reliableSessionEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WS2007HttpBinding.#ctor(System.ServiceModel.SecurityMode,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.SecurityMode" />
+        <Parameter Name="reliableSessionEnabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="securityMode">Der Wert von <see cref="T:System.ServiceModel.SecurityMode" />, der den Sicherheitstyp angibt, der für die SOAP-Nachricht und den Client verwendet wird.</param>
+        <param name="reliableSessionEnabled">
+          <see langword="true" />, wenn eine zuverlässige Sitzung aktiviert ist, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.WS2007HttpBinding" />-Klasse mit einem von der Bindung verwendeten Sicherheitstyp und einem Wert, der angibt, ob eine zuverlässige Sitzung aktiviert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert eine Instanz der <xref:System.ServiceModel.WS2007HttpBinding>-Klasse und legt die <xref:System.ServiceModel.MessageSecurityVersion>, <xref:System.ServiceModel.ReliableMessagingVersion>-Eigenschaft und die <xref:System.ServiceModel.TransactionProtocol>-Eigenschaft fest, die die Sicherheitsprotokolle WS-Security 1.1, WS-Trust 1.3, WS-SecureConversation 1.3, WS-SecurityPolicy 1.2 und WS-I Basic Security Profile 1.0 angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageSecurity">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Channels.SecurityBindingElement CreateMessageSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Channels.SecurityBindingElement CreateMessageSecurity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WS2007HttpBinding.CreateMessageSecurity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Sicherheitsbindungselement von der aktuellen Bindung zurück.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> der aktuellen Bindung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

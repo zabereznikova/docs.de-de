@@ -1,0 +1,121 @@
+<Type Name="TraversalRequest" FullName="System.Windows.Input.TraversalRequest">
+  <TypeSignature Language="C#" Value="public class TraversalRequest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TraversalRequest extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.TraversalRequest" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Anforderung dar, den Fokus zu einem anderen Steuerelement zu verschieben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient als Eingabeparameter für die <xref:System.Windows.UIElement.MoveFocus%2A?displayProperty=nameWithType> Methode. Die <xref:System.Windows.UIElement.MoveFocus%2A> Methode verfügt über eine WPF-Frameworkebene überschreiben, die eine praktikabler Implementierung bereitstellt (<xref:System.Windows.FrameworkElement.MoveFocus%2A?displayProperty=nameWithType>), sowie eine parallele Implementierung auf <xref:System.Windows.ContentElement> und <xref:System.Windows.FrameworkContentElement>. Sie in der Regel legen Sie Eigenschaften für <xref:System.Windows.Input.TraversalRequest> vorzunehmen, um das Fokussierungsverhalten anzupassen, wenn Sie anfordern, dass der Fokus auf ein anderes Element verschoben werden.  
+  
+ Diese Klasse dient auch als Eingabeparameter für die folgenden Methoden:  
+  
+-   <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A>, und Implementierungen der Methode, die für die Interoperation verwendet werden (<xref:System.Windows.Forms.Integration.WindowsFormsHost.TabInto%2A>).  
+  
+-   <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Input.TraversalRequest> -Instanz als Eingabe für eine <xref:System.Windows.FrameworkElement.MoveFocus%2A?displayProperty=nameWithType> aufrufen.  
+  
+ [!code-csharp[FocusSample#FocusSampleMoveFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
+ [!code-vb[FocusSample#FocusSampleMoveFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraversalRequest (System.Windows.Input.FocusNavigationDirection focusNavigationDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Input.FocusNavigationDirection focusNavigationDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TraversalRequest.#ctor(System.Windows.Input.FocusNavigationDirection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="focusNavigationDirection" Type="System.Windows.Input.FocusNavigationDirection" />
+      </Parameters>
+      <Docs>
+        <param name="focusNavigationDirection">Die beabsichtigte Richtung des Fokusdurchlaufs als Wert der Enumeration.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.TraversalRequest" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Input.TraversalRequest> -Instanz als Eingabe für eine <xref:System.Windows.FrameworkElement.MoveFocus%2A?displayProperty=nameWithType> aufrufen.  
+  
+ [!code-csharp[FocusSample#FocusSampleMoveFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
+ [!code-vb[FocusSample#FocusSampleMoveFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusNavigationDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.FocusNavigationDirection FocusNavigationDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.FocusNavigationDirection FocusNavigationDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TraversalRequest.FocusNavigationDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.FocusNavigationDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Richtung der Durchlauf ab.</summary>
+        <value>Einer der Enumerationswerte Durchlauf Richtung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist schreibgeschützt und da die <xref:System.Windows.Input.FocusNavigationDirection> ist ein erforderlicher Eingabeparameter für die <xref:System.Windows.Input.TraversalRequest> Klassenkonstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrapped">
+      <MemberSignature Language="C#" Value="public bool Wrapped { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Wrapped" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TraversalRequest.Wrapped" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Fokus Durchlauf das Ende der untergeordneten Elemente erreicht hat, die Fokus besitzen kann.</summary>
+        <value>
+          <see langword="true" />Wenn dieser Durchlauf das Ende der untergeordneten Elemente erreicht hat, die Fokus besitzen kann; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Den Fokus erhalten kann Elemente sind Elemente, in denen die <xref:System.Windows.UIElement.Focusable%2A> Eigenschaft ist `true`.  
+  
+ Dieser Parameter ist hauptsächlich für die Kommunkation, ob Durchlauf mit Tabstopps werden, beim Aufrufen der Methoden umbrochen soll <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A>, <xref:System.Windows.Forms.Integration.WindowsFormsHost.TabInto%2A>, oder.<xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A>. Wenn Sie den Fokus auf ein Objekt übergeben, die implementiert <xref:System.Windows.Interop.IKeyboardInputSink>, Angeben von "true" für <xref:System.Windows.Input.TraversalRequest.Wrapped%2A> führt dazu, die `true` Wert übergeben wird, um die <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A> Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

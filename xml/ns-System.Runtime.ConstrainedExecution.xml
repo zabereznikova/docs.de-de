@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.ConstrainedExecution">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.ConstrainedExecution" /> Namespace definiert einen Satz von Typen, die aufgelistet werden und die Definition eines Zuverlässigkeitsvertrags zwischen dem Autor von Code und den Entwicklern, die eine Abhängigkeit auf diesen Code. Die Typen in den <see cref="N:System.Runtime.ConstrainedExecution" /> Namespace für die Verwendung in eingeschränkte Ausführungsbereiche (CERs) vorgesehen sind.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

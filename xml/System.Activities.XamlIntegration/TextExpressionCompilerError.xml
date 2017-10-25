@@ -1,0 +1,92 @@
+<Type Name="TextExpressionCompilerError" FullName="System.Activities.XamlIntegration.TextExpressionCompilerError">
+  <TypeSignature Language="C#" Value="public class TextExpressionCompilerError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TextExpressionCompilerError extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.XamlIntegration.TextExpressionCompilerError" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Compilerfehler des Text-Ausdruck dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsWarning">
+      <MemberSignature Language="C#" Value="public bool IsWarning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWarning" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.XamlIntegration.TextExpressionCompilerError.IsWarning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Compilerfehler eine Warnung handelt.</summary>
+        <value>
+          <see langword="true" />Wenn der Compilerfehler eine Warnung ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.XamlIntegration.TextExpressionCompilerError.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Nachricht, die Informationen zum Fehler enthält.</summary>
+        <value>Die Meldung, die Informationen zum Fehler enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Number">
+      <MemberSignature Language="C#" Value="public string Number { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Number" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.XamlIntegration.TextExpressionCompilerError.Number" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Nummer des Fehlers.</summary>
+        <value>Die Nummer des Fehlers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceLineNumber">
+      <MemberSignature Language="C#" Value="public int SourceLineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SourceLineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.XamlIntegration.TextExpressionCompilerError.SourceLineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeilennummer des Fehlers.</summary>
+        <value>Die Zeilennummer des Fehlers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

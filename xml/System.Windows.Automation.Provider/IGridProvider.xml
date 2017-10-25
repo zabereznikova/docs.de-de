@@ -1,0 +1,149 @@
+<Type Name="IGridProvider" FullName="System.Windows.Automation.Provider.IGridProvider">
+  <TypeSignature Language="C#" Value="public interface IGridProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IGridProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IGridProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("b17d6187-0907-464b-a168-0ef17a1572b1")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Methoden und Eigenschaften verfügbar, die den Benutzeroberflächenautomatisierungs-Client beim Zugriff auf Steuerelemente unterstützen, die als Container für eine Auflistung von untergeordneten Elementen dienen. Die untergeordneten Elemente dieses Elements müssen implementieren <see cref="T:System.Windows.Automation.Provider.IGridItemProvider" /> und organisiert werden, in einem zweidimensionalen logischen Koordinatensystem, die durchlaufen werden kann (d. h. ein Benutzeroberflächenautomatisierungs-Client kann zu benachbarten Steuerelementen wechseln) mithilfe der Tastatur.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert ein Benutzeroberflächenautomatisierungs-Anbieter, die unterstützen, muss die <xref:System.Windows.Automation.GridPattern> -Steuerelementmuster.  
+  
+ <xref:System.Windows.Automation.Provider.IGridProvider> ermöglicht keine aktive Bearbeitung eines Rasters. <xref:System.Windows.Automation.Provider.ITransformProvider> muss implementiert werden, um diese Funktionalität zu aktivieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnCount">
+      <MemberSignature Language="C#" Value="public int ColumnCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridProvider.ColumnCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtzahl der Spalten in einem Raster an.</summary>
+        <value>Die Gesamtanzahl der Spalten in einem Raster.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausgeblendete Zeilen und Spalten können je nach der anbieterimplementierung geladen werden die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] -Struktur angezeigt werden und werden daher berücksichtigt werden, der <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> und <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> Eigenschaften. Wenn die ausgeblendeten Zeilen und Spalten noch nicht geladen wurde, werden sie nicht gezählt.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode gibt den Wert der Eigenschaft zurück.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGrid.cs#102)]
+ [!code-vb[UIAMiscPatternProviders_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgrid.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple GetItem (int row, int column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple GetItem(int32 row, int32 column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IGridProvider.GetItem(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="row">Die Ordinalzahl der betreffenden Zeile.</param>
+        <param name="column">Die Ordinalzahl der betreffenden Spalte.</param>
+        <summary>Ruft den Benutzeroberflächenautomatisierungs-Anbieter für die angegebene Zelle ab.</summary>
+        <returns>Der Benutzeroberflächenautomatisierungs-Anbieter für die angegebene Zelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Grid-Koordinaten sind nullbasiert, wobei der linken oberen (oder die obere rechte Zelle je nach Gebietsschema) Koordinaten (0,0).  
+  
+-   Wenn eine Zelle leer ist ein Benutzeroberflächenautomatisierungs-Anbieter muss zurückgegeben werden, um die Unterstützung der <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> -Eigenschaft dieser Zelle. Dies ist möglich, wenn das Layout der untergeordneten Elemente im Raster dem eines unregelmäßigen Arrays entspricht.  
+  
+ ![Windows Explorer-Ansicht mit Flatterlayout. ] (~/add/media/uia-gridpattern-ragged-array.PNG "Windows-Explorer-Ansicht mit Flatterlayout.")  
+Beispiel für ein Grid-Steuerelement mit leeren Koordinaten  
+  
+-   Ausgeblendete Zeilen und Spalten können je nach der anbieterimplementierung geladen werden die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] -Struktur angezeigt werden und werden daher berücksichtigt werden, der <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> und <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A> Eigenschaften. Wenn die ausgeblendeten Zeilen und Spalten noch nicht geladen wurde, sollten sie nicht gezählt.  
+  
+   
+  
+## Examples  
+ Der folgende Code ist eine beispielimplementierung dieser Methode, die ein Objekt, das das Element am angegebenen Speicherort darstellt zurückgibt.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGrid.cs#101)]
+ [!code-vb[UIAMiscPatternProviders_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgrid.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowCount">
+      <MemberSignature Language="C#" Value="public int RowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridProvider.RowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtanzahl der Zeilen in einem Raster ab.</summary>
+        <value>Die Gesamtanzahl der Zeilen in einem Raster.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausgeblendete Zeilen und Spalten können je nach der anbieterimplementierung in der logischen Struktur geladen werden und werden daher berücksichtigt werden, der <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> und <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> Eigenschaften. Wenn die ausgeblendeten Zeilen und Spalten noch nicht geladen wurde, werden sie nicht gezählt.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode gibt den Wert der Eigenschaft zurück.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGrid.cs#103)]
+ [!code-vb[UIAMiscPatternProviders_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgrid.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

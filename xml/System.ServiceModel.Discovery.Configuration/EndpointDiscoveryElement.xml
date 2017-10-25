@@ -1,0 +1,233 @@
+<Type Name="EndpointDiscoveryElement" FullName="System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement">
+  <TypeSignature Language="C#" Value="public sealed class EndpointDiscoveryElement : System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EndpointDiscoveryElement extends System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.BehaviorExtensionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Konfigurationselement, das die Ermittlungsfunktionalität eines Endpunkts steuert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Hinzufügen zur Verhaltenskonfiguration eines Endpunkts ermöglicht es das <xref:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement>-Element, dass die Ermittlungsfunktion des Endpunkts aktiviert bzw. deaktiviert werden kann. Darüber hinaus lässt es das Angeben benutzerdefinierter Bereichs-URIs zu, die verwendet werden können, um während der Suchvorgänge Dienstendpunkte zu filtern. Es lässt auch das Angeben benutzerdefinierter XML-Metadaten zu, die zusammen mit den standardmäßigen sichtbaren Metadaten veröffentlicht werden.  
+  
+> [!NOTE]
+>  Das <xref:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement> ist abhängig vom <xref:System.ServiceModel.Discovery.Configuration.ServiceDiscoveryElement>, das die Steuerbarkeit der Ermittlung auf Dienstebene bereitstellt. Dies bedeutet, dass das <xref:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement> und seine Einstellungen ignoriert werden, wenn ein <xref:System.ServiceModel.Discovery.Configuration.ServiceDiscoveryElement>-Element nicht vorhanden ist.  
+  
+ Das folgende Beispiel zeigt die Verwendung des <xref:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement>-Elements und das Hinzufügen von zwei Bereichselementen.  
+  
+```  
+<configuration>  
+    <system.serviceModel>  
+      <services>  
+        <service name="Microsoft.Samples.Discovery.CalculatorService"  
+                 behaviorConfiguration="calculatorServiceBehavior">  
+          <endpoint address=""  
+                    binding="wsHttpBinding"               contract="Microsoft.Samples.Discovery.ICalculatorService"  
+                    behaviorConfiguration="ep1Behavior" />  
+        </service>  
+      </services>  
+      <behaviors>  
+        <serviceBehaviors>  
+          <behavior name="calculatorServiceBehavior">  
+            <serviceDiscovery />  
+          </behavior>  
+        </serviceBehaviors>  
+        <endpointBehaviors>  
+          <behavior name="ep1Behavior">  
+            <endpointDiscovery enabled="true">  
+              <scopes>  
+                <add scope="http://www.example.org/engineering/calculator"/>  
+                <add scope="ldap:///ou=engineering,o=exampleorg,c=us"/>  
+              </scopes>  
+            </endpointDiscovery>  
+          </behavior>            
+        </endpointBehaviors>  
+      </behaviors>  
+          </system.serviceModel>  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointDiscoveryElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BehaviorType">
+      <MemberSignature Language="C#" Value="public override Type BehaviorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BehaviorType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.BehaviorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den dem <see cref="T:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement" /> zugeordneten Verhaltenstyp ab.</summary>
+        <value>Der Verhaltenstyp.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractTypeNames">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection ContractTypeNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection ContractTypeNames" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.ContractTypeNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("types")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vertragstypnamen ab, die dem Endpunkt zugeordnet sind.</summary>
+        <value>Die Vertragstypnamen, die dem Endpunkt zugeordnet sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBehavior">
+      <MemberSignature Language="C#" Value="protected override object CreateBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object CreateBehavior() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.CreateBehavior" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der die Ermittelbarkeit dieses Endpunkts angibt, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die ermittelbarkeit dieses Endpunkts, andernfalls aktiviert ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.XmlElementElementCollection Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.XmlElementElementCollection Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("extensions")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.XmlElementElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem <see cref="T:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement" /> zugeordneten Erweiterungen ab.</summary>
+        <value>Die Erweiterungen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scopes">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.Configuration.ScopeElementCollection Scopes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Discovery.Configuration.ScopeElementCollection Scopes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.Scopes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("scopes")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.Configuration.ScopeElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Bereichen für diesen Endpunkt ab.</summary>
+        <value>Eine Auflistung von diesem Endpunkt zugeordneten Bereichen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Bereich ist jeder URI, der verwendet werden kann, um Dienste in logische Gruppen zu gruppieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

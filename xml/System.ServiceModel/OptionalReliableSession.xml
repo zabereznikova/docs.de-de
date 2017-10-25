@@ -1,0 +1,114 @@
+<Type Name="OptionalReliableSession" FullName="System.ServiceModel.OptionalReliableSession">
+  <TypeSignature Language="C#" Value="public class OptionalReliableSession : System.ServiceModel.ReliableSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OptionalReliableSession extends System.ServiceModel.ReliableSession" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.OptionalReliableSession" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.ReliableSession</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet komfortablen Zugriff auf die Information, ob bei Verwendung einer der vordefinierten Bindungen in einer optionalen Situation eine zuverlässige Sitzung aktiviert wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine zuverlässige Sitzung kann mit drei vom System bereitgestellten Bindungen aktiviert werden. Eine zuverlässige Sitzung ist:  
+  
+-   Optional (und standardmäßig deaktiviert) mit <xref:System.ServiceModel.NetTcpBinding> und <xref:System.ServiceModel.WSHttpBinding> und  
+  
+-   Erforderlich (und folglich immer aktiviert) mit <xref:System.ServiceModel.WSDualHttpBinding>.  
+  
+   
+  
+## Examples  
+ Im nachstehenden Beispiel ist dargestellt, wie eine neue zuverlässige Sitzung erstellt werden kann und wie die Standardwerte dieser Sitzung aufgerufen und geändert werden können.  
+  
+ [!code-csharp[S_UEOptionalReliableSession#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueoptionalreliablesession/cs/program.cs#0)]
+ [!code-vb[S_UEOptionalReliableSession#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueoptionalreliablesession/vb/source.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OptionalReliableSession ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OptionalReliableSession.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.OptionalReliableSession" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OptionalReliableSession (System.ServiceModel.Channels.ReliableSessionBindingElement binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.ReliableSessionBindingElement binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OptionalReliableSession.#ctor(System.ServiceModel.Channels.ReliableSessionBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reliableSessionBindingElement" Type="System.ServiceModel.Channels.ReliableSessionBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="binding">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.OptionalReliableSession" />-Klasse von einem Bindungselement einer zuverlässigen Sitzung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="binding" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OptionalReliableSession.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eine zuverlässige Sitzung aktiviert ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die zuverlässige Sitzung aktiviert ist, andernfalls <see langword="false" />. Der Standardwert hängt von der verwendeten Bindung ab.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine zuverlässige Sitzung kann mit drei vom System bereitgestellten Bindungen aktiviert werden. Eine zuverlässige Sitzung ist:  
+  
+-   Optional (und standardmäßig deaktiviert) mit <xref:System.ServiceModel.NetTcpBinding> und <xref:System.ServiceModel.WSHttpBinding>.  
+  
+-   Erforderlich (und folglich immer aktiviert) mit <xref:System.ServiceModel.WSDualHttpBinding>.  
+  
+   
+  
+## Examples  
+ Im nachstehenden Beispiel ist dargestellt, wie eine neue zuverlässige Sitzung erstellt werden kann und wie die Standardwerte dieser Sitzung aufgerufen und geändert werden können.  
+  
+ [!code-csharp[S_UEOptionalReliableSession#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueoptionalreliablesession/cs/program.cs#0)]
+ [!code-vb[S_UEOptionalReliableSession#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueoptionalreliablesession/vb/source.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

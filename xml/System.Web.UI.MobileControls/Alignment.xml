@@ -1,0 +1,96 @@
+<Type Name="Alignment" FullName="System.Web.UI.MobileControls.Alignment">
+  <TypeSignature Language="C#" Value="public enum Alignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Alignment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Alignment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Ausrichtung eines ein fehlendes gerendertes Objekt. Diese Klasse kann nicht vererbt werden. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Alignment> Enumeration stellt die horizontale Positionierung eines Elements im übergeordneten Container, z. B. ein Bereich oder das Formular. Wenn Sie ein Bild zu einem Formular hinzufügen, können Sie z. B. die horizontale Position zum Ausrichten von mit der rechten Seite des Formulars festlegen.  
+  
+ Obwohl Sie die Bitwerte im Skriptsprachen verwenden können, können nicht Sie sie mit ASP.NET verwenden. Beispielsweise `Alignment = "2"` innerhalb eines Bereichs-Tag ist keine gültige Anweisung. In Visual c#, Sie können jedoch `this.myPanel.Alignment = 2`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="Center" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.Alignment Center = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Alignment.Center" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Alignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Richtet die Mitte des Bildschirms. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.Alignment Left = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Alignment.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Alignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Richtet mit der linken Seite des Bildschirms. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.Alignment NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Alignment.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Alignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Standardwert. Wenn der Wert <see cref="F:System.Web.UI.MobileControls.Alignment.NotSet" />, und klicken Sie dann die Ausrichtung von Format des Steuerelements geerbt wird, oder, wenn das Format nicht definiert ist, vom übergeordneten Steuerelements. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.Alignment Right = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Alignment.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Alignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Richtet mit der rechten Seite des Bildschirms. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

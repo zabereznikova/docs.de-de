@@ -1,0 +1,96 @@
+<Type Name="InvertAxes" FullName="System.Windows.Media.TextFormatting.InvertAxes">
+  <TypeSignature Language="C#" Value="public enum InvertAxes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed InvertAxes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.InvertAxes" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Geben Sie an die Umkehrung der horizontalen und vertikalen Achsen der Zeichenoberfläche.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Text Formatierer Clients umkehren normalerweise die horizontale Achse bzw. X-Achse der Zeichenoberfläche nachrichtenbasierter rechts-nach-links-Layout von Text-Inhalt.  
+  
+ In weniger häufig vorkommt kann ein Text-Formatierer-Client die vertikale Achse bzw. Y-Achse der Zeichenoberfläche erzielen den Effekt des Ausführens des-Koordinate Ursprungs an der Position der linken unteren Rand des Bildschirms umkehren. Dies ist eine nützliche Technik beim bestimmte Typen von Diagrammen zu zeichnen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Both">
+      <MemberSignature Language="C#" Value="Both" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.TextFormatting.InvertAxes Both = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TextFormatting.InvertAxes.Both" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.InvertAxes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeichenoberfläche wird an beiden Achsen umgekehrt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Horizontal">
+      <MemberSignature Language="C#" Value="Horizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.TextFormatting.InvertAxes Horizontal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TextFormatting.InvertAxes.Horizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.InvertAxes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeichenoberfläche wird in der horizontalen Achse umgekehrt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.TextFormatting.InvertAxes None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TextFormatting.InvertAxes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.InvertAxes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeichenoberfläche wird nicht in beiden Achsen umgekehrt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Vertical">
+      <MemberSignature Language="C#" Value="Vertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.TextFormatting.InvertAxes Vertical = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TextFormatting.InvertAxes.Vertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.InvertAxes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>In der vertikalen Achse wird die Zeichenoberfläche umgekehrt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

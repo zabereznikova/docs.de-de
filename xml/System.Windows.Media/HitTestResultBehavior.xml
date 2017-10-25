@@ -1,0 +1,67 @@
+<Type Name="HitTestResultBehavior" FullName="System.Windows.Media.HitTestResultBehavior">
+  <TypeSignature Language="C#" Value="public enum HitTestResultBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HitTestResultBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.HitTestResultBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bestimmt, ob die Aufzählung verbleibender visueller Objekte während eines Treffertests fortgesetzt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Rückrufmethode, die Aktionen definiert, die Sie ausführen, wenn ein Treffertest Treffertest-Ergebnisse wird auf ein bestimmtes visuelles Objekt in der visuellen Struktur identifiziert. Nach dem Durchführen der Aktionen, die Sie zurückgeben einer <xref:System.Windows.Media.HitTestResultBehavior> Wert, der bestimmt, ob die Enumeration beliebiger anderer visuellen Objekte fortfahren.  
+  
+ Sie können alle visuellen Objekte in einer visuellen Struktur auflisten, deren Geometrie einen angegebenen Koordinatenwert enthält. Durch fortfahren in Ihre Rückrufmethode Treffertest zurückgeben, können Sie alle visuellen Objekte, die erreicht werden, auch für diejenigen identifizieren, die teilweise oder vollständig von anderen visuellen Objekten verdeckt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Zurückgeben einer <xref:System.Windows.Media.HitTestResultBehavior.Continue> Wert aus einem Treffertest ergibt Rückrufmethode.  
+  
+ [!code-csharp[HitTestingOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#102)]
+ [!code-vb[HitTestingOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#102)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Continue">
+      <MemberSignature Language="C#" Value="Continue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.HitTestResultBehavior Continue = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.HitTestResultBehavior.Continue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.HitTestResultBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Mit Treffertests für das nächste visuelle Objekt in der Baumhierarchie der visuellen Objekte fortfahren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="Stop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.HitTestResultBehavior Stop = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.HitTestResultBehavior.Stop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.HitTestResultBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle weiteren Treffertests beenden und Rückgabe vom Rückruf.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,94 @@
+<Type Name="TypeFilterLevel" FullName="System.Runtime.Serialization.Formatters.TypeFilterLevel">
+  <TypeSignature Language="C#" Value="public enum TypeFilterLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TypeFilterLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Ebene der automatischen Deserialisierung für .NET Framework Remoting.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework bietet zwei Ebenen der automatischen Deserialisierung "Niedrig" und "vollständiger. Die niedrige Deserialisierungsebene schützt vor Angriffen durch Deserialisierung durch Deserialisieren nur die Typen, die meisten grundlegenden Remotingfunktionen zugeordnet. Die vollständige Deserialisierung Ebene unterstützt automatische Deserialisierung aller Typen werden in allen Situationen das-Remoting unterstützt. Eine Liste der .NET Framework Remoting-Typen, Niedrig und vollständige Unterstützung, finden Sie unter [&#91;\< Topic://cpconAutomaticDeserializationInNETRemoting > &#93; ](http://msdn.microsoft.com/en-us/313a0e88-5b2b-4a17-8391-0ddf9f7a787b).  
+  
+ Sie können die Member dieser Enumeration programmgesteuert oder mithilfe einer Anwendungskonfigurationsdatei festlegen. Beispiele finden Sie unter [&#91;\< Topic://cpconAutomaticDeserializationInNETRemoting > &#93; ](http://msdn.microsoft.com/en-us/313a0e88-5b2b-4a17-8391-0ddf9f7a787b).  
+  
+> [!CAUTION]
+>  Die Kontrolle der Deserialisierung stellt nicht die einzige Sicherheitsanforderung für Ihre Anwendung dar. In verteilten Anwendungen möglicherweise auch ein hoher Grad an Kontrolle über die Serialisierung verhindert nicht, dass böswillige Clients die Kommunikation abfangen, und verwenden ihn in irgendeiner Form selbst wenn, die lediglich Daten an andere Benutzer angezeigt werden. Aus diesem Grund wird zwar die niedrige Deserialisierungsebene einige Schutz gegen bestimmte Arten von Angriffen basierend auf automatische Deserialisierung bereitgestellt, müssen Sie weiterhin auswerten, ob die Authentifizierung und-Verschlüsselung verwenden, um die Vertraulichkeit zu schützen Ihre Daten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="Full" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.Formatters.TypeFilterLevel Full = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.Formatters.TypeFilterLevel.Full" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.TypeFilterLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die vollständige Deserialisierungsebene für .NET Framework Remoting. Unterstützt alle Typen in allen Situationen das-Remoting unterstützt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Low">
+      <MemberSignature Language="C#" Value="Low" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Serialization.Formatters.TypeFilterLevel Low = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Serialization.Formatters.TypeFilterLevel.Low" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.TypeFilterLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die niedrige Deserialisierungsebene für .NET Framework Remoting. Er unterstützt grundlegende Remotingfunktionen zugeordnet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

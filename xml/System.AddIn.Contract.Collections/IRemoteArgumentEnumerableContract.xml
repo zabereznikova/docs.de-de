@@ -1,0 +1,46 @@
+<Type Name="IRemoteArgumentEnumerableContract" FullName="System.AddIn.Contract.Collections.IRemoteArgumentEnumerableContract">
+  <TypeSignature Language="C#" Value="public interface IRemoteArgumentEnumerableContract : System.AddIn.Contract.IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemoteArgumentEnumerableContract implements class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Collections.IRemoteArgumentEnumerableContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Einen Enumerator, der eine einfache Iteration durch eine Auflistung von unterstützt macht <see cref="T:System.AddIn.Contract.RemoteArgument" /> Objekte.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetEnumeratorContract">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract GetEnumeratorContract ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract GetEnumeratorContract() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentEnumerableContract.GetEnumeratorContract" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der zum Durchlaufen der Auflistung verwendet werden kann.</summary>
+        <returns>Ein <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract" />, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Enumeratoren können die Daten in der Auflistung zwar gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

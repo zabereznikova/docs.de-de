@@ -1,0 +1,91 @@
+<Type Name="MessageProtectionOrder" FullName="System.ServiceModel.Security.MessageProtectionOrder">
+  <TypeSignature Language="C#" Value="public enum MessageProtectionOrder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MessageProtectionOrder extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.MessageProtectionOrder" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Reihenfolge der Vorgänge an, mit denen eine Nachricht geschützt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird in Verbindung mit der <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType>-Eigenschaft vom <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> und der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType>-Eigenschaft der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>-Klassen verwendet.  
+  
+ Wenn eine Nachricht ist anfällig für einen digestangriff (z. B., wenn die Nachricht ist kurz, oder die Entropie niedrig ist), sollten Sie die Option SignBeforeEncryptAndEncryptSignature oder EncryptBeforeSign verwenden. (*Entropie* wird von einem Server oder einem Client bereitgestellte zufällige Daten und zum Erstellen eines freigegebenen Schlüssels zum Verschlüsseln und Entschlüsseln von Daten verwendet wird.)  
+  
+## <a name="what-is-ordered"></a>Was passiert?  
+ [!INCLUDE[indigo2](~/includes/indigo2-md.md)] bietet drei verschiedene Schutzebenen, die bestimmen, wie Nachrichten mithilfe der SOAP-Nachrichtensicherheit gesichert werden. Der Standardwert ist SignBeforeEncryptAndEncryptSignature. Mit dieser Einstellung wird zuerst die Nachricht signiert, der Nachrichtentext verschlüsselt und dann die XML-Signatur verschlüsselt. Dies reduziert die Wahrscheinlichkeit für einen Angriff auf die Signatur durch Erraten der Verschlüsselung.  
+  
+ Bei Verwendung der Standardeinstellung ist aber mit Auswirkungen auf die Leistung zu rechnen. Eine erhöhte Sicherheit führt in der Regel zu geringerer Leistung. Durch die Verschlüsselung der Signatur kann die Leistung um 10 bis 40 Prozent sinken. Wenn der Dateninhalt der Nachricht mit niedriger Wert weist Leistungsdurchsatz wichtiger ist, können Sie SignBeforeEncrypt. Bei dieser Einstellung wird der Signaturhashwert in Klartext gesendet, weswegen die Nachricht bei geringer Entropie anfälliger gegenüber Guess-and-Verify-Angriffen (Raten und Überprüfen) ist.  
+  
+## <a name="custom-bindings-only"></a>Nur benutzerdefinierte Bindungen  
+ Um die `MessageProtectionOrder`-Eigenschaft zu ändern, ist die Erstellung einer benutzerdefinierten Sicherheitsbindung erforderlich. Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Erstellen benutzerdefinierter Bindungen](~/docs/framework/wcf/extending/creating-user-defined-bindings.md). Weitere Informationen zum Erstellen einer benutzerdefinierten Bindung für einen bestimmten Authentifizierungsmodus finden Sie unter [Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](~/docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> Element und legt dessen <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> Eigenschaft SignBeforeEncrypt.  
+  
+ [!code-csharp[c_CustomBinding#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#3)]
+ [!code-vb[c_CustomBinding#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EncryptBeforeSign">
+      <MemberSignature Language="C#" Value="EncryptBeforeSign" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Security.MessageProtectionOrder EncryptBeforeSign = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.MessageProtectionOrder.EncryptBeforeSign" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.MessageProtectionOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die SOAP-Nachricht verschlüsselt wird, bevor eine digitale Signatur für die SOAP-Nachricht generiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SignBeforeEncrypt">
+      <MemberSignature Language="C#" Value="SignBeforeEncrypt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Security.MessageProtectionOrder SignBeforeEncrypt = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.MessageProtectionOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine digitale Signatur für die SOAP-Nachricht generiert wird, bevor ein Teil der SOAP-Nachricht verschlüsselt wird; die digitale Signatur wird jedoch nicht verschlüsselt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SignBeforeEncryptAndEncryptSignature">
+      <MemberSignature Language="C#" Value="SignBeforeEncryptAndEncryptSignature" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Security.MessageProtectionOrder SignBeforeEncryptAndEncryptSignature = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.MessageProtectionOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine digitale Signatur für die SOAP-Nachricht generiert wird, bevor ein Teil der SOAP-Nachricht verschlüsselt wird; die digitale Signatur wird verschlüsselt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

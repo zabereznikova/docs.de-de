@@ -1,0 +1,265 @@
+<Type Name="DataService&lt;T&gt;" FullName="System.Data.Services.DataService&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class DataService&lt;T&gt; : System.Data.Services.IRequestHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataService`1&lt;T&gt; extends System.Object implements class System.Data.Services.IRequestHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.DataService`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.Services.IRequestHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.Activation.AspNetCompatibilityRequirements(RequirementsMode=System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ServiceModel.ServiceBehavior(InstanceContextMode=System.ServiceModel.InstanceContextMode.PerCall)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">Typ, der den Datendienst definiert.</typeparam>
+    <summary>Der Haupteinstiegspunkt für die Entwicklung von einem Datendienst ADO.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.DataService%601>-Klasse führt die grundlegende Integration aller Komponenten des Serversystems aus. Ein neuer Datendienst, der Systemstandards für Autorisierung und Zwischenspeichern verwendet, wird erstellt, indem eine Klasse, die von der <xref:System.Data.Services.DataService%601>-Klasse abgeleitet wird, definiert wird und auf ein kompatibles Datenmodell verwiesen wird.  
+  
+ Der Typ des <xref:System.Data.Services.DataService%601> muss mindestens eine Eigenschaft verfügbar machen, die eine Entitätenmenge zurückgibt, bei der es sich um eine <xref:System.Linq.IQueryable%601>-Auflistung von Entitätstypen handelt. Diese Klasse muss außerdem die <xref:System.Data.Services.IUpdatable>-Schnittstelle implementieren, um das Aktualisieren von Entitätsressourcen zu ermöglichen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataService`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen neuen Datendienst, der Daten von dem Typ bereitstellt, der von der Vorlagenklasse angegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein neuer Datendienst, der Systemstandards für Autorisierung und Zwischenspeichern verwendet, wird erstellt, indem eine Klasse, die von der <xref:System.Data.Services.DataService%601>-Klasse abgeleitet wird, definiert wird und auf ein kompatibles Datenmodell verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachHost">
+      <MemberSignature Language="C#" Value="public void AttachHost (System.Data.Services.IDataServiceHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachHost(class System.Data.Services.IDataServiceHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataService`1.AttachHost(System.Data.Services.IDataServiceHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.Data.Services.IDataServiceHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">Eine Instanz von <see cref="T:System.Data.Services.IDataServiceHost" />.</param>
+        <summary>Fügt den Datendiensthost an den Datendienst an, der vom Parameter <paramref name="host" /> identifiziert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der angefügte <xref:System.Data.Services.IDataServiceHost>-Host wird vom Datendienst zum Verarbeiten von Anforderungen verwendet. Es ist nicht erforderlich, einen Host einzurichten, wenn der Datendienst in Windows Communication Foundation (WCF) gehostet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDataSource">
+      <MemberSignature Language="C#" Value="protected virtual T CreateDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance !T CreateDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataService`1.CreateDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Datenquelle von der Vorlagenklasse, die vom Datendienst verwendet wird.</summary>
+        <returns>Eine Instanz der Datenquelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird ggf. ein Konstruktor ohne Parameter für den Typ verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentDataSource">
+      <MemberSignature Language="C#" Value="protected T CurrentDataSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T CurrentDataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataService`1.CurrentDataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Datenquelleninstanz ab, die gerade verwendet wird, um die Anforderung zu verarbeiten.</summary>
+        <value>Die Datenquelleninstanz für den Dienst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz der Vorlagenklasse, die beim Erstellen der Klasse verwendet wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleException">
+      <MemberSignature Language="C#" Value="protected virtual void HandleException (System.Data.Services.HandleExceptionArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void HandleException(class System.Data.Services.HandleExceptionArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataService`1.HandleException(System.Data.Services.HandleExceptionArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Data.Services.HandleExceptionArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">Ausnahmeargumente.</param>
+        <summary>Wird aufgerufen, wenn beim Verarbeiten einer Anforderung eine Ausnahme ausgelöst wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Datendienst ändert möglicherweise die `args`-Instanz, um das Senden der Ausnahme in der Antwort anzupassen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStartProcessingRequest">
+      <MemberSignature Language="C#" Value="protected virtual void OnStartProcessingRequest (System.Data.Services.ProcessRequestArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStartProcessingRequest(class System.Data.Services.ProcessRequestArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataService`1.OnStartProcessingRequest(System.Data.Services.ProcessRequestArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Data.Services.ProcessRequestArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">
+          <see cref="T:System.Data.Services.ProcessRequestArgs" />, die Informationen zur Anforderung enthalten.</param>
+        <summary>Wird vor dem Verarbeiten jeder Anforderung aufgerufen. Für Batchanforderungen erfolgt der Aufruf einmal für die oberste Batchanforderung und einmal für jeden Vorgang im Batch.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessingPipeline">
+      <MemberSignature Language="C#" Value="public System.Data.Services.DataServiceProcessingPipeline ProcessingPipeline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Services.DataServiceProcessingPipeline ProcessingPipeline" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataService`1.ProcessingPipeline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.DataServiceProcessingPipeline</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, das die Ereignisse für die Datendienstverarbeitungspipeline definiert.</summary>
+        <value>Ein <see cref="T:System.Data.Services.DataServiceProcessingPipeline" />-Objekt, das verwendet wird, um Ereignisse für die Datendienstverarbeitungspipeline zu definieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRequest">
+      <MemberSignature Language="C#" Value="public void ProcessRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ProcessRequest() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataService`1.ProcessRequest" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verarbeitet eine HTTP-Anforderung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.DataService%601.AttachHost%2A>-Methode sollte aufgerufen werden, bevor Sie <xref:System.Data.Services.DataService%601.ProcessRequest%2A> aufrufen, um Anforderungsinformationen abzurufen und die Antwort zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRequestForMessage">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Message ProcessRequestForMessage (System.IO.Stream messageBody);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.Message ProcessRequestForMessage(class System.IO.Stream messageBody) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataService`1.ProcessRequestForMessage(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBody" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="messageBody">Der Text der HTTP-Anforderung.</param>
+        <summary>Verarbeitet eine HTTP-Anforderung.</summary>
+        <returns>Antwortnachricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,221 @@
+<Type Name="VsaItems" FullName="Microsoft.JScript.VsaItems">
+  <TypeSignature Language="C#" Value="public sealed class VsaItems : Microsoft.JScript.Vsa.IJSVsaItems, System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit VsaItems extends System.Object implements class Microsoft.JScript.Vsa.IJSVsaItems, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.VsaItems" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.JScript.Vsa.IJSVsaItems</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:Microsoft.Vsa.IVsaItem" /> Objekte, die nach Name oder Index behoben werden können.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VsaItems (Microsoft.JScript.Vsa.VsaEngine engine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.JScript.Vsa.VsaEngine engine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.VsaItems.#ctor(Microsoft.JScript.Vsa.VsaEngine)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.VsaEngine" />
+      </Parameters>
+      <Docs>
+        <param name="engine">Ein Verweis auf das Skriptmodul.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.JScript.VsaItems" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.VsaItems.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Trennt das Skriptmodul jedes Element in der Auflistung hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.VsaItems.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Auflistung ab.</summary>
+        <value>Die Anzahl der Elemente in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItem">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItem CreateItem (string name, Microsoft.JScript.Vsa.JSVsaItemType itemType, Microsoft.JScript.Vsa.JSVsaItemFlag itemFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.JScript.Vsa.IJSVsaItem CreateItem(string name, valuetype Microsoft.JScript.Vsa.JSVsaItemType itemType, valuetype Microsoft.JScript.Vsa.JSVsaItemFlag itemFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.VsaItems.CreateItem(System.String,Microsoft.JScript.Vsa.JSVsaItemType,Microsoft.JScript.Vsa.JSVsaItemFlag)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="itemType" Type="Microsoft.JScript.Vsa.JSVsaItemType" />
+        <Parameter Name="itemFlag" Type="Microsoft.JScript.Vsa.JSVsaItemFlag" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des neuen Elements.</param>
+        <param name="itemType">Einer der Enumerationswerte. Der Wert gibt den Typ des neuen Elements als <see cref="F:Microsoft.JScript.Vsa.JSVsaItemType.Code" />, <see cref="F:Microsoft.JScript.Vsa.JSVsaItemType.Reference" />, oder <see cref="F:Microsoft.JScript.Vsa.JSVsaItemType.AppGlobal" />.</param>
+        <param name="itemFlag">Einer der Enumerationswerte. Der Wert gibt den ursprünglichen Inhalt von einem <see cref="F:Microsoft.JScript.Vsa.JSVsaItemType.Code" /> Element als <see cref="F:Microsoft.JScript.Vsa.JSVsaItemFlag.Class" />, <see cref="F:Microsoft.JScript.Vsa.JSVsaItemFlag.Module" />, oder <see cref="F:Microsoft.JScript.Vsa.JSVsaItemFlag.None" />.</param>
+        <summary>Erstellt ein neues Element und fügt es der Auflistung hinzu.</summary>
+        <returns>Das neu erstellte Element.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.VsaItems.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der Durchlaufen der Auflistung.</summary>
+        <returns>Ein Enumerator, der die Auflistung durchläuft.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItem this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.JScript.Vsa.IJSVsaItem Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.VsaItems.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des abzurufenden Elements.</param>
+        <summary>Ruft das Element aus der Auflistung, die durch den angegebenen Indexwert festgelegt ist.</summary>
+        <value>Das Element am <paramref name="index" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItem this[string itemName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.JScript.Vsa.IJSVsaItem Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.VsaItems.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Der Name des abzurufenden Elements.</param>
+        <summary>Ruft das Element aus der Auflistung, die nach dem angegebenen Namen gekennzeichnet ist.</summary>
+        <value>Das Element mit dem Namen <paramref name="itemName" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.VsaItems.Remove(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">Der Index des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element, das durch den angegebenen Indexwert aus der Auflistung festgelegt ist.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string itemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string itemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.VsaItems.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Der Name des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element, das nach dem angegebenen Namen aus der Auflistung festgelegt ist.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,75 @@
+<Type Name="SByteConverter" FullName="System.ComponentModel.SByteConverter">
+  <TypeSignature Language="C#" Value="public class SByteConverter : System.ComponentModel.BaseNumberConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SByteConverter extends System.ComponentModel.BaseNumberConverter" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.SByteConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.BaseNumberConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Typkonverter für das Konvertieren von 8-Bit-Objekten, die ganze Zahlen ohne Vorzeichen sind, in eine und aus einer Zeichenfolge bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konverter kann nur eine 8-Bit-Ganzzahl ohne Vorzeichen-Objekt auf und aus einer Zeichenfolge konvertiert werden.  
+  
+ Die <xref:System.SByte> -Werttyp stellt Ganzzahlen dar, mit Werten, die im Bereich von negativen 128 bis + 127 liegen. Dieser Datentyp wird in Visual Basic nicht unterstützt.  
+  
+> [!NOTE]
+>  Erstellen Sie nie eine Instanz von <xref:System.ComponentModel.SByteConverter>. Rufen Sie stattdessen die <xref:System.ComponentModel.TypeDescriptor.GetConverter%2A> Methode <xref:System.ComponentModel.TypeDescriptor>. Weitere Informationen finden Sie in den Beispielen in der <xref:System.ComponentModel.TypeConverter> Basisklasse und [Vorgehensweise: Implementieren eines Typkonverters](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Variable vom Typ <xref:System.SByte> in eine Zeichenfolge (und umgekehrt).  
+  
+ [!code-cpp[Converters#18](~/samples/snippets/cpp/VS_Snippets_Winforms/Converters/CPP/converters.cpp#18)]
+ [!code-csharp[Converters#18](~/samples/snippets/csharp/VS_Snippets_Winforms/Converters/CS/converters.cs#18)]
+ [!code-vb[Converters#18](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Converters/VB/converters.vb#18)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SByteConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.SByteConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.SByteConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

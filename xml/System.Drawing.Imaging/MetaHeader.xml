@@ -1,0 +1,181 @@
+<Type Name="MetaHeader" FullName="System.Drawing.Imaging.MetaHeader">
+  <TypeSignature Language="C#" Value="public sealed class MetaHeader" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit MetaHeader extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.MetaHeader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über eine Windows-Format (WMF) Metadatei.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetaHeader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.MetaHeader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see langword="MetaHeader" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert alle Eigenschaften mit ihren Standardwerten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderSize">
+      <MemberSignature Language="C#" Value="public short HeaderSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 HeaderSize" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetaHeader.HeaderSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe in Bytes, der die Header-Datei.</summary>
+        <value>Die Größe in Bytes, der die Header-Datei.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRecord">
+      <MemberSignature Language="C#" Value="public int MaxRecord { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxRecord" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetaHeader.MaxRecord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe in Bytes des größten Datensatzes in der zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" /> Objekt.</summary>
+        <value>Die Größe in Bytes, des größten Datensatzes in der zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoObjects">
+      <MemberSignature Language="C#" Value="public short NoObjects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 NoObjects" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetaHeader.NoObjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl von Objekten, die in der <see cref="T:System.Drawing.Imaging.Metafile" /> Objekt zur gleichen Zeit.</summary>
+        <value>Die maximale Anzahl von Objekten, die in der <see cref="T:System.Drawing.Imaging.Metafile" /> Objekt zur gleichen Zeit.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoParameters">
+      <MemberSignature Language="C#" Value="public short NoParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 NoParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetaHeader.NoParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nicht verwendet. Gibt immer 0 zurück.</summary>
+        <value>Immer 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public int Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetaHeader.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe in Bytes des zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" /> Objekt.</summary>
+        <value>Die Größe in Bytes, der zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public short Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 Type" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetaHeader.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" /> Objekt.</summary>
+        <value>Der Typ der zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt an, ob die Metadatei befindet sich im Speicher oder in einer Datenträgerdatei aufgezeichnet. Diese Eigenschaft kann einen der folgenden Werte sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public short Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetaHeader.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Versionsnummer des Header-Format.</summary>
+        <value>Die Versionsnummer des Headerformats.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die Versionsnummer des Systems an. Die Versionsnummer für Metadateien, die geräteunabhängige Bitmaps (DIB) zu unterstützen, ist 0 x 0300. Andernfalls ist die Versionsnummer 0 x 0100.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

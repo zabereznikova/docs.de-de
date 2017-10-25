@@ -1,0 +1,6 @@
+<Namespace Name="System.Reflection.Emit">
+  <Docs>
+    <summary>Die <see cref="N:System.Reflection.Emit" /> -Namespace enthält Klassen, mit denen von einem Compiler oder Tool Metadaten und Microsoft intermediate Language (MSIL) auszugeben sowie optional eine PE-Datei auf dem Datenträger zu generieren. Die wichtigsten Clients dieser Klassen sind Skriptmodule und Compiler.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

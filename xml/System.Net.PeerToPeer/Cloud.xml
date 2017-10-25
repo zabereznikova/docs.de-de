@@ -1,0 +1,435 @@
+<Type Name="Cloud" FullName="System.Net.PeerToPeer.Cloud">
+  <TypeSignature Language="C#" Value="public class Cloud : IEquatable&lt;System.Net.PeerToPeer.Cloud&gt;, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable Cloud extends System.Object implements class System.IEquatable`1&lt;class System.Net.PeerToPeer.Cloud&gt;, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Cloud" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Net.PeerToPeer.Cloud&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Gibt die Werte, die einen Peer definieren <see cref="T:System.Net.PeerToPeer.Cloud" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Net.PeerToPeer.Cloud> ist ein Satz von Knoten, die über das Netzwerk miteinander kommunizieren können. Clouds, Peermesh und Peer-zu-Peer-Diagramm sind Synonym. Ein einzelner Peer oder Knoten kann mit mehr als einer Cloud verbunden sein.  
+  
+ Die Kommunikation zwischen den Knoten sollte die Grenze einer Cloud nie überschreiten. Eine <xref:System.Net.PeerToPeer.Cloud>-Instanz wird durch ihren Namen eindeutig bestimmt. Dabei muss Groß- und Kleinschreibung beachtet werden.  
+  
+ Clouds sind sehr eng an Netzwerkschnittstellen gebunden.  Auf einem mehrfach vernetzten Computer mit zwei Netzwerkkarten, die mit unterschiedlichen Subnetzen verbunden sind, werden drei Clouds zurückgegeben: eine für jede lokale Linkadresse pro Schnittstelle und eine einzelne Cloud mit globalem Gültigkeitsbereich.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Cloud (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Cloud.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Verweis auf das Objekt, das die zum Deserialisieren dieser Instanz benötigten Daten enthält.</param>
+        <param name="context">Kontext, der das Deserialisieren der Daten ermöglicht. Auch als Quelle der serialisierten Daten bezeichnet.</param>
+        <summary>Initialisiert eine neue Instanz des PNRP-<see cref="T:System.Net.PeerToPeer.Cloud" />-Typs. Dieser füllt ein Serialisierungsinformationsobjekt mit den Daten, die zum Serialisieren des Cloud-Objekts erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.PeerToPeer.Cloud.Name%2A> -Eigenschaft enthält den Namen des Cloud-Objekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllLinkLocal">
+      <MemberSignature Language="C#" Value="public static readonly System.Net.PeerToPeer.Cloud AllLinkLocal;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Net.PeerToPeer.Cloud AllLinkLocal" />
+      <MemberSignature Language="DocId" Value="F:System.Net.PeerToPeer.Cloud.AllLinkLocal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Cloud</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Verweis auf eine <see cref="T:System.Net.PeerToPeer.Cloud" /> alle verbindungslokale Wolken in dem der Client oder Peer ist derzeit darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung dieser Eigenschaft führt dazu, dass eine <xref:System.Net.PeerToPeer.PeerNameRegistration> oder <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> in allen möglichen Link lokalen Wolken auftreten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Available">
+      <MemberSignature Language="C#" Value="public static readonly System.Net.PeerToPeer.Cloud Available;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Net.PeerToPeer.Cloud Available" />
+      <MemberSignature Language="DocId" Value="F:System.Net.PeerToPeer.Cloud.Available" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Cloud</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen statischen Verweis auf eine <see cref="T:System.Net.PeerToPeer.Cloud" /> der alle verfügbaren Clouds, die in dem der Client nimmt Teil darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Dieses Feld wird automatisch aufgerufen <xref:System.Net.PeerToPeer.PeerNameRegistration> oder <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> , auf alle möglichen Clouds.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Net.PeerToPeer.Cloud other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Net.PeerToPeer.Cloud other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Cloud.Equals(System.Net.PeerToPeer.Cloud)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Net.PeerToPeer.Cloud" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Cloud für den Vergleich mit dieser <see cref="T:System.Net.PeerToPeer.Cloud" />.</param>
+        <summary>Führt einen Vergleich Groß-/Kleinschreibung beachtet, zwischen zwei cloudobjekten.</summary>
+        <returns>
+          <see langword="True" />Wenn die <see cref="T:System.Net.PeerToPeer.Cloud" /> angegebenen identifiziert Sie andernfalls die gleiche Ressource als aktueller Planer <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Keine Normalizations werden die Zeichenfolgen vor dem Vergleich ausgeführt.  Jegliche Normalisierung sollte abgeschlossen wurde zum Zeitpunkt der <xref:System.Net.PeerToPeer.Cloud> Objekte erstellt wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Cloud.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Object" /> für den Vergleich mit dieser <see cref="T:System.Net.PeerToPeer.Cloud" />.</param>
+        <summary>Bestimmt, ob der Inhalt dieser Peer <see cref="T:System.Net.PeerToPeer.Cloud" /> entspricht dem Inhalt einer <see cref="N:System" /> Objekt.</summary>
+        <returns>
+          <see langword="True" />Wenn die <see cref="T:System.Net.PeerToPeer.PeerName" /> und das Vergleichsobjekt die gleichen Informationen enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erbt, die standardmäßig Signatur und das Verhalten von <xref:System.Object>.  
+  
+ Andere Objekte, die mit verglichen werden können <xref:System.Net.PeerToPeer> Clouds enthalten beispielsweise PeopleNearMe Clouds und Peermeshs, die über die Windows SDK-Netzwerkdienste verfügbar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAvailableClouds">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.CloudCollection GetAvailableClouds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.PeerToPeer.CloudCollection GetAvailableClouds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Cloud.GetAvailableClouds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.CloudCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von Peer-Clouds bekannt, dass der aufrufende Peer ab.</summary>
+        <returns>Ein <see cref="T:System.Net.PeerToPeer.CloudCollection" /> -Objekt, das eine Auflistung von Peer gibt an, an den aufrufenden Peer bekannte clouds.  Wenn keine Clouds verfügbar sind <see langword="null" /> zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode und die <xref:System.Net.PeerToPeer.Cloud.GetCloudByName%2A> Methoden sind der einzige neue Instanzen der abzurufenden der <xref:System.Net.PeerToPeer.Cloud> Klasse.  
+  
+ Clouds sind sehr eng an Netzwerkschnittstellen gebunden.  Auf einem mehrfach vernetzten Computer mit zwei Netzwerkkarten, die mit verschiedenen Subnetzen verbunden, drei Clouds zurückgegeben werden: eine für jeden Link-local-Adresse pro Schnittstelle und eine einzelne <xref:System.Net.PeerToPeer.Cloud.Global%2A> Bereich <xref:System.Net.PeerToPeer.Cloud>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCloudByName">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.Cloud GetCloudByName (string cloudName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.PeerToPeer.Cloud GetCloudByName(string cloudName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Cloud.GetCloudByName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Cloud</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cloudName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cloudName">Enthält den Namen der das PNRP <see cref="T:System.Net.PeerToPeer.Cloud" />.</param>
+        <summary>Gibt die <see cref="T:System.Net.PeerToPeer.Cloud" /> Objekt mit dem angegebenen Namen.</summary>
+        <returns>Die <see cref="T:System.Net.PeerToPeer.Cloud" /> Objekt mit dem angegebenen Namen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximale Größe des Namens beträgt 256 Zeichen.  
+  
+ Wenn die `cloudName` Parameter ist `null` oder leer ist, klicken Sie dann `null` zurückgegeben wird.  
+  
+ Des Bereichs der Cloud <xref:System.Net.PeerToPeer.Cloud.Global%2A>verbindungslokale oder hingegen ist im angegebenen <xref:System.Net.PeerToPeer.Cloud.Scope%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Net.PeerToPeer.Cloud" /> Name ist nicht bekannt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Cloud.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt <see cref="M:System.Object.GetHashCode" />.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Object" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei Objekte als gleich betrachtet, wenn diese Methode den gleichen Hashcode für beide Identitäten zurückgibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Cloud.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Enthält die serialisierten Daten, die dem <see cref="T:System.Net.PeerToPeer.Cloud" />-Objekt zugeordnet sind.</param>
+        <param name="context">Enthält das Ziel für den serialisierten Datenstrom, der dem <see cref="T:System.Net.PeerToPeer.Cloud" />-Objekt zugeordnet ist.</param>
+        <summary>Füllt ein <see cref="N:System.Runtime.Serialization" />-Informationsobjekt mit den Daten, die zum Serialisieren des <see cref="T:System.Net.PeerToPeer.Cloud" /> erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Global">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.Cloud Global { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.PeerToPeer.Cloud Global" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Cloud.Global" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Cloud</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Net.PeerToPeer.Cloud" /> Instanz, die Global enthält Bereich Peers (Internet).</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Cloud" />die den Peers enthält, die über den globalen Netzwerkbereich kommunizieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Cloud.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Peers ab <see cref="T:System.Net.PeerToPeer.Cloud" />.</summary>
+        <value>Der Name des Peers <see cref="T:System.Net.PeerToPeer.Cloud" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Namen werden die Groß-/Kleinschreibung beachtet und Unicode codiert sind. Sie sind weniger als 128 Zeichen lang sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.PnrpScope Scope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.PeerToPeer.PnrpScope Scope" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Cloud.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PnrpScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Netzwerkbereich des Peers ab <see cref="T:System.Net.PeerToPeer.Cloud" />.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.PnrpScope" />-Enumerationswert, der den PNRP-Bereich der aktuellen Peer-Cloud-Instanz angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Clouds sind sehr eng an Netzwerkschnittstellen gebunden.  Auf einem mehrfach vernetzten Computer mit zwei Netzwerkkarten, die mit verschiedenen Subnetzen verbunden, sind drei Netzwerkbereiche möglich: eine für jeden Link-local-Adresse pro Schnittstelle und eine einzelne <xref:System.Net.PeerToPeer.Cloud.Global%2A> Bereich <xref:System.Net.PeerToPeer.Cloud>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeId">
+      <MemberSignature Language="C#" Value="public int ScopeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScopeId" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Cloud.ScopeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner einer bestimmten IP-Adresse für diesen Peer <see cref="T:System.Net.PeerToPeer.Cloud" />.</summary>
+        <value>Ein Ganzzahlwert, der die bereichsspezifische ID für diese Cloud Peer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf einem mehrfach vernetzten Computer mit zwei Netzwerkkarten, die mit verschiedenen Subnetzen verbunden, sind zwei Netzwerkbereiche möglich: einer ist ein Link-local <xref:System.Net.PeerToPeer.Cloud.Scope%2A>, und der andere <xref:System.Net.PeerToPeer.Cloud.Global%2A> Bereich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Cloud.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Enthält die serialisierten Daten, die dem <see cref="T:System.Net.PeerToPeer.Cloud" />-Objekt zugeordnet sind.</param>
+        <param name="context">Enthält das Ziel für den serialisierten Datenstrom, der dem <see cref="T:System.Net.PeerToPeer.Cloud" />-Objekt zugeordnet ist.</param>
+        <summary>Implementiert die <see cref="T:System.Runtime.Serialization.ISerializable" />-Schnittstelle und gibt die zum Serialisieren der <see cref="T:System.Net.PeerToPeer.Cloud" />-Instanz erforderlichen Daten zurück.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Cloud.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung des aktuellen <see cref="T:System.Net.PeerToPeer.Cloud" />.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle <see cref="T:System.Net.PeerToPeer.Cloud" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erbt, die standardmäßig Signatur und das Verhalten von <xref:System.Object>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

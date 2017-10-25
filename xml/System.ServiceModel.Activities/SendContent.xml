@@ -1,0 +1,112 @@
+<Type Name="SendContent" FullName="System.ServiceModel.Activities.SendContent">
+  <TypeSignature Language="C#" Value="public abstract class SendContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SendContent extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.SendContent" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine abstrakte Basisklasse für Klassen, die die an einen Workflowdienst gesendeten Daten darstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.ServiceModel.Activities.SendContent>-Klasse verwendet wird, um den <xref:System.ServiceModel.Activities.SendMessageContent> für eine <xref:System.ServiceModel.Activities.Send>-Aktivität anzugeben.  
+  
+ [!code-csharp[ContentBasedCorrelation#1](~/samples/snippets/csharp/VS_Snippets_CFX/contentbasedcorrelation/cs/client.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Activities.SendMessageContent Create (System.Activities.InArgument message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Activities.SendMessageContent Create(class System.Activities.InArgument message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendContent.Create(System.Activities.InArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.SendMessageContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Activities.InArgument" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Daten, die gesendet werden sollen.</param>
+        <summary>Erstellt eine neue <see cref="T:System.ServiceModel.Activities.SendMessageContent" />-Instanz mit der angegebenen Meldung.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Activities.SendMessageContent" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.ServiceModel.Activities.SendContent>-Klasse verwendet wird, um den <xref:System.ServiceModel.Activities.SendMessageContent> für eine <xref:System.ServiceModel.Activities.SendReply>-Aktivität anzugeben. Dieses Beispiel gibt das <xref:System.Activities.InArgument> mithilfe eines Lambda-Ausdrucks an. [!INCLUDE[crabout](~/includes/crabout-md.md)]Lambda-Ausdrücken finden Sie unter [Lambda-Ausdrücke](http://go.microsoft.com/fwlink/?LinkId=182082)  
+  
+ [!code-csharp[ContentBasedCorrelation#2](~/samples/snippets/csharp/VS_Snippets_CFX/contentbasedcorrelation/cs/service.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Activities.SendParametersContent Create (System.Collections.Generic.IDictionary&lt;string,System.Activities.InArgument&gt; parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Activities.SendParametersContent Create(class System.Collections.Generic.IDictionary`2&lt;string, class System.Activities.InArgument&gt; parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendContent.Create(System.Collections.Generic.IDictionary{System.String,System.Activities.InArgument})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.SendParametersContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Activities.InArgument&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Eine Auflistung von Name-Wert-Paaren mit den Schlüsseln, die die Parameternamen und die Werte mit den Argumenten enthalten.</param>
+        <summary>Erstellt eine neue <see cref="T:System.ServiceModel.Activities.SendParametersContent" />-Instanz mit den angegebenen Parametern.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Activities.SendParametersContent" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Activities.SendMessageContent Create (System.Activities.InArgument message, Type declaredMessageType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Activities.SendMessageContent Create(class System.Activities.InArgument message, class System.Type declaredMessageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendContent.Create(System.Activities.InArgument,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.SendMessageContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Activities.InArgument" />
+        <Parameter Name="declaredMessageType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Daten, die gesendet werden sollen.</param>
+        <param name="declaredMessageType">Der Datentyp, der in der Dienstbeschreibung und im WSDL angezeigt wird. Er muss entweder mit dem Argumenttyp der Meldung oder mit dem entsprechenden Basistyps übereinstimmen.</param>
+        <summary>Erstellt eine neue <see cref="T:System.ServiceModel.Activities.SendMessageContent" />-Instanz mit der angegebenen Meldung und dem angegebenen Meldungstyp.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Activities.SendMessageContent" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)] zu dem deklarierten Meldungstyp finden Sie unter <xref:System.ServiceModel.Activities.SendMessageContent.DeclaredMessageType%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

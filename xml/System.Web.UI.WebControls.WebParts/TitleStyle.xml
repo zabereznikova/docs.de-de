@@ -1,0 +1,99 @@
+<Type Name="TitleStyle" FullName="System.Web.UI.WebControls.WebParts.TitleStyle">
+  <TypeSignature Language="C#" Value="public sealed class TitleStyle : System.Web.UI.WebControls.TableItemStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TitleStyle extends System.Web.UI.WebControls.TableItemStyle" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.TitleStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.TableItemStyle</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt die Formateigenschaften für die Titelleisten von Webparts-Steuerelementen in einer Zone an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.TitleStyle> Klasse wird für Zonen verwendet, um allgemeine Formateigenschaften anzugeben, die für die Titelleisten von Webparts-Steuerelemente in Zonen gelten. Die <xref:System.Web.UI.WebControls.WebParts.WebZone.PartTitleStyle%2A> Eigenschaft enthält einen Verweis auf ein <xref:System.Web.UI.WebControls.WebParts.TitleStyle> Objekt für jede Zone.  
+  
+ Die Titelleiste für ein Steuerelement wird zur Laufzeit als HTML-Tabellenzelle gerendert. Da die <xref:System.Web.UI.WebControls.WebParts.TitleStyle> Klasse erbt von der <xref:System.Web.UI.WebControls.TableItemStyle> -Klasse, können Sie Ihr Stilattribute für eine Titelleiste ähnlich wie die Attribute für eine beliebige Tabellenzelle festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative Verwendung des der <xref:System.Web.UI.WebControls.WebParts.TitleStyle> Klasse. Im Code für die folgende Seite ein `<asp:calendar>` Element und ein `<asp:label>` Element angezeigt, in einer Zone mit den entsprechenden Steuerelemente Original-Webparts-Funktion zur Laufzeit. Beachten Sie, dass die `<parttitlestyle>` -Element, das mehrere Formatattribute enthält, gilt die Titelleisten von beide Webparts-Steuerelemente, die in der Zone enthaltenen.  
+  
+ [!code-aspx-csharp[WebParts_PartTitleStyle_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PartTitleStyle_Overview/CS/parttitlestylecs.aspx#1)]
+ [!code-aspx-vb[WebParts_PartTitleStyle_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PartTitleStyle_Overview/VB/parttitlestylevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TitleStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.TitleStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.TitleStyle" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.WebParts.TitleStyle> Klasse. Der Konstruktor legt den Wert für die <xref:System.Web.UI.WebControls.WebParts.TitleStyle.Wrap%2A> Eigenschaft, um `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="public override bool Wrap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Wrap" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.TitleStyle.Wrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Inhalt der Titelleiste für ein Teilsteuerelement in der Titelleiste umbrochen.</summary>
+        <value>
+          <see langword="true" />Wenn der Inhalt einer Titelleiste in der Titelleiste umbrochen. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.TitleStyle> -Klasse überschreibt die <xref:System.Web.UI.WebControls.TableItemStyle.Wrap%2A> Eigenschaft, sodass die It den Wert, um festlegen kann `false`. Die <xref:System.Web.UI.WebControls.WebParts.TitleStyle.%23ctor%2A> legt die <xref:System.Web.UI.WebControls.WebParts.TitleStyle.Wrap%2A> Eigenschaft `false`, sodass eine Titelleiste für ein Teilsteuerelement wird standardmäßig seinen Inhalt zu umschließen nicht zulässt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative Verwendung des der <xref:System.Web.UI.WebControls.WebParts.TitleStyle.Wrap%2A> Eigenschaft. Im Code für die folgende Seite ein `<asp:calendar>` Element und ein `<asp:label>` Element angezeigt wird, in einer Zone, die die entsprechenden Steuerelemente Original Webparts-Funktionen zur Laufzeit gewährt.  
+  
+ Beachten Sie, dass die `<parttitlestyle>` -Element, das mehrere Formatattribute enthält, gilt die Titelleisten von beide Webparts-Steuerelemente, die in der Zone enthaltenen. Beachten Sie auch, dass die `<parttitlestyle>` Element verfügt über `wrap` und `width` Attribute. Da die <xref:System.Web.UI.WebControls.WebParts.TitleStyle.Wrap%2A> Eigenschaftswert festgelegt ist, um `true`, und der Text in den Titelleisten der beiden Steuerelemente breiter als der zugewiesene Wert ist die `width` -Attribut, den Text der Titelleiste jedes Steuerelement umschließt, wenn die Seite in einem Browser geladen wird.  
+  
+ [!code-aspx-csharp[WebParts_PartTitleStyle_Wrap#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PartTitleStyle_Wrap/CS/parttitlestylewrapcs.aspx#1)]
+ [!code-aspx-vb[WebParts_PartTitleStyle_Wrap#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PartTitleStyle_Wrap/VB/parttitlestylewrapvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,63 @@
+<Type Name="EntityReference" FullName="System.Data.Objects.DataClasses.EntityReference">
+  <TypeSignature Language="C#" Value="public abstract class EntityReference : System.Data.Objects.DataClasses.RelatedEnd" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit EntityReference extends System.Data.Objects.DataClasses.RelatedEnd" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.EntityReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Objects.DataClasses.RelatedEnd</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Basisklasse, die die nicht generische Funktionalität für einen <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" /> implementiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.EntityReference>-Klasse stellt den <xref:System.Data.EntityKey> des verbundenen Objekts bereit und dient als Basisklasse für die <xref:System.Data.Objects.DataClasses.EntityReference%601>-Klasse. Eine Navigationseigenschaft gibt ein <xref:System.Data.Objects.DataClasses.EntityReference%601>-Objekt zurück, wenn das verknüpfte Ende eine Multiplizität von null oder eins hat. Weitere Informationen finden Sie unter [NavigationProperty-Element (CSDL)](http://msdn.microsoft.com/en-us/5829a238-a50e-4c81-901d-7b54fc00f27e).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EntityKey">
+      <MemberSignature Language="C#" Value="public System.Data.EntityKey EntityKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.EntityKey EntityKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EntityReference.EntityKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Schlüssel für das verbundene Objekt zurück.</summary>
+        <value>Der <see cref="T:System.Data.EntityKey" /> des verbundenen Objekts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit den Entitätsschlüssel des verbundenen Objekts verfügbar, auf die <xref:System.Data.Objects.DataClasses.EntityReference> Objekt erleichtert es, Informationen über das verbundene Objekt zurückzugeben, ohne dass es aus der Datenquelle geladen werden müssen.  
+  
+ Außerdem kann Object Service durch die Verfügbarkeit des <xref:System.Data.EntityKey> des verbundenen Objekts im <xref:System.Data.Objects.DataClasses.EntityReference>-Objekt dynamisch eine Zuordnung zwischen zwei angefügten Objekten erstellen und ein Objekt löschen, ohne die verknüpften Enden zu laden. Weitere Informationen finden Sie unter [erstellen, hinzufügen, ändern und Löschen von Objekten](http://msdn.microsoft.com/en-us/f76f1fad-c553-4b59-820b-89b3dec2fad1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,95 @@
+<Type Name="PreProcessInputEventArgs" FullName="System.Windows.Input.PreProcessInputEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class PreProcessInputEventArgs : System.Windows.Input.ProcessInputEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PreProcessInputEventArgs extends System.Windows.Input.ProcessInputEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.PreProcessInputEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.ProcessInputEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für Eingabeereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abbrechen einer Eingabe vor der Verarbeitung wird die Eingabe weiter verarbeitet.  Merken Sie sich die <xref:System.Windows.Input.InputManager.PreNotifyInput> zu bestimmen, ob Sie einen anderen Handler eine Eingabe vor der Verarbeitung abgebrochen.  
+  
+ Die Eingabe im Stagingbereich verarbeitet Eingaben in [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Ereignisse.  
+  
+ Alle <xref:System.Windows.Input.InputManager.PreProcessInput> -Ereignishandler werden aufgerufen, auch wenn eine der Handler die Eingabe abbricht.  Um sicherzustellen, dass ein Handler weiter oben in der Struktur die Eingabe abgebrochen hat, merken Sie sich die <xref:System.Windows.Input.InputManager.PreNotifyInput> Ereignis.  
+  
+ <xref:System.Windows.Input.PreProcessInputEventArgs>wird verwendet, mit der <xref:System.Windows.Input.InputManager.PreProcessInput> Ereignis.  
+  
+ Verarbeitung von Eingaben in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] in den folgenden Phasen:  
+  
+1.  Phase vor der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreProcessInput> Ereignis.  
+  
+2.  Phase vor der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreNotifyInput> Ereignis.  
+  
+3.  Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eingabeereignis oder Ereignisse ausgelöst werden.  
+  
+4.  Phase nach der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostNotifyInput> Ereignis.  
+  
+5.  Phase nach der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostProcessInput> Ereignis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.PreProcessInputEventArgs.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht die Verarbeitung des Eingabeereignisses ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abbrechen einer Eingabe vor der Verarbeitung wird die Eingabe weiter verarbeitet.  Merken Sie sich die <xref:System.Windows.Input.InputManager.PreNotifyInput> zu bestimmen, ob Sie einen anderen Handler eine Eingabe vor der Verarbeitung abgebrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Canceled">
+      <MemberSignature Language="C#" Value="public bool Canceled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Canceled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.PreProcessInputEventArgs.Canceled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob die Verarbeitung des Eingabeereignisses abgebrochen wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Verarbeitung abgebrochen wurde. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abbrechen einer Eingabe vor der Verarbeitung wird die Eingabe weiter verarbeitet.  Merken Sie sich die <xref:System.Windows.Input.InputManager.PreNotifyInput> zu bestimmen, ob Sie einen anderen Handler eine Eingabe vor der Verarbeitung abgebrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

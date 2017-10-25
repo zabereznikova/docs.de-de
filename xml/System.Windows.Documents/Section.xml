@@ -1,0 +1,180 @@
+<Type Name="Section" FullName="System.Windows.Documents.Section">
+  <TypeSignature Language="C#" Value="public class Section : System.Windows.Documents.Block" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Section extends System.Windows.Documents.Block" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Section" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Block</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Blocks")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein auf Blockebene fortlaufendes Inhaltselement, der zum Gruppieren anderer <see cref="T:System.Windows.Documents.Block" /> Elemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Inhaltsmodell:** <xref:System.Windows.Documents.Section> erzwingt ein starkes Inhaltsmodell für den untergeordneten Inhalt. Untergeordnete Elemente in einem <xref:System.Windows.Documents.Section> Element muss abgeleitet sein <xref:System.Windows.Documents.Block>.  Gültige untergeordnete Elemente enthalten:  
+  
+-   <xref:System.Windows.Documents.BlockUIContainer>  
+  
+-   <xref:System.Windows.Documents.List>  
+  
+-   <xref:System.Windows.Documents.Paragraph>  
+  
+-   <xref:System.Windows.Documents.Section>  
+  
+-   <xref:System.Windows.Documents.Table>  
+  
+ Finden Sie unter [TextElement Content Model Overview](~/docs/framework/wpf/advanced/textelement-content-model-overview.md) Weitere Informationen zu den <xref:System.Windows.Documents.Section> -Objektmodell.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Section ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Section.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der dem <see cref="T:System.Windows.Documents.Section" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Section (System.Windows.Documents.Block block);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Block block) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Section.#ctor(System.Windows.Documents.Block)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="block" Type="System.Windows.Documents.Block" />
+      </Parameters>
+      <Docs>
+        <param name="block">Ein <see cref="T:System.Windows.Documents.Block" /> angeben die anfänglichen Inhalte des neuen Objekts <see cref="T:System.Windows.Documents.Section" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.Section" /> -Klasse, wobei eine angegebene <see cref="T:System.Windows.Documents.Block" /> Objekt als die anfänglichen Inhalte des neuen <see cref="T:System.Windows.Documents.Section" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung dieses Konstruktors.  
+  
+ [!code-csharp[SpanSnippets#_Section_Const1](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_section_const1)]
+ [!code-vb[SpanSnippets#_Section_Const1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_section_const1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Blocks">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.BlockCollection Blocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.BlockCollection Blocks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Section.Blocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.BlockCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.BlockCollection" /> ab, die <see cref="T:System.Windows.Documents.Block" />-Elemente der obersten Ebene enthält, die den Inhalt von <see cref="T:System.Windows.Documents.Section" /> umfassen.</summary>
+        <value>Eine <see cref="T:System.Windows.Documents.BlockCollection" /> mit den <see cref="T:System.Windows.Documents.Block" />-Elementen, die den Inhalt von <see cref="T:System.Windows.Documents.Section" /> umfassen.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Documents.BlockCollection> zurückgegeben, die von dieser Eigenschaft aufzuzählen oder zu bearbeiten des Inhalts des ein <xref:System.Windows.Documents.Section> Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasTrailingParagraphBreakOnPaste">
+      <MemberSignature Language="C#" Value="public bool HasTrailingParagraphBreakOnPaste { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasTrailingParagraphBreakOnPaste" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Section.HasTrailingParagraphBreakOnPaste" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Absatzumbruch nach dem letzten Absatz eingefügt werden soll, wenn der Inhalt eines Stamms platziert <see cref="T:System.Windows.Documents.Section" /> Element in die Zwischenablage.</summary>
+        <value>**"true"** um anzugeben, dass ein Absatzumbruch enthalten ist, andernfalls sollte **"false"**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt nur für den Stamm <xref:System.Windows.Documents.Section> Element innerhalb des fortlaufenden Inhalts.  Diese Eigenschaft wirkt sich nicht auf nicht-Stamm <xref:System.Windows.Documents.Section> Elemente innerhalb des fortlaufenden Inhalts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeBlocks">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeBlocks (System.Windows.Markup.XamlDesignerSerializationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeBlocks(class System.Windows.Markup.XamlDesignerSerializationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Section.ShouldSerializeBlocks(System.Windows.Markup.XamlDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Windows.Markup.XamlDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Eine Serialisierung Service Manager-Objekt für dieses Objekt.</param>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="P:System.Windows.Documents.Section.Blocks" /> Eigenschaft sollte serialisiert werden, andernfalls, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NullReferenceException">Wird ausgelöst, wenn <paramref name="manager" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

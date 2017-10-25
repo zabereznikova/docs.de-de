@@ -1,0 +1,21 @@
+<Namespace Name="System.AddIn.Contract.Collections">
+  <Docs>
+    <summary>Die <see cref="N:System.AddIn.Contract.Collections" /> -Namespace enthält Schnittstellen, die Auflistungen von definieren <see cref="T:System.AddIn.Contract.IContract" /> und <see cref="T:System.AddIn.Contract.RemoteArgument" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Schnittstellen in den <xref:System.AddIn.Contract.Collections?displayProperty=nameWithType> Auflistung implementieren-Namespace Klassen für <xref:System.AddIn.Contract.IContract> und <xref:System.AddIn.Contract.RemoteArgument> Objekte.  
+  
+ Die Schnittstellen der <xref:System.AddIn.Contract.Collections?displayProperty=nameWithType> Namespace werden auch als Datenverträge bezeichnet. Alle Verträge Ableiten der <xref:System.AddIn.Contract.IContract> Schnittstelle.  
+  
+ Die <xref:System.AddIn.Contract.Collections?displayProperty=nameWithType> -Namespace enthält zwei Sätze von Schnittstellen:  
+  
+-   Schnittstellen, die generische und aufzählbare Auflistungen von Typen zu definieren, implementieren die <xref:System.AddIn.Contract.IContract> Schnittstelle.  
+  
+-   Schnittstellen, mit denen aufzählbare Auflistungen von definieren <xref:System.AddIn.Contract.RemoteArgument> Objekte.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,233 @@
+<Type Name="WebPartConnectionsEventArgs" FullName="System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs">
+  <TypeSignature Language="C#" Value="public class WebPartConnectionsEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartConnectionsEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Ereignisdaten für die <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsConnected" /> und <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsDisconnected" /> Ereignisse der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden die Funktionen des Webparts-Steuerelementsatzes, es ist möglich, erstellen Sie eine Verbindung zwischen zwei <xref:System.Web.UI.WebControls.WebParts.WebPart> oder andere Serversteuerelemente, mit einem Steuerelement, als der Anbieter, und die andere fungiert als Consumer der Daten. Um eine Verbindung zu bilden, müssen die beiden Steuerelemente in einer Zone, die von erben befinden sich die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Klasse (z. B. die <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement), und sie müssen zum Freigeben von Daten über eine gemeinsame Schnittstelle ordnungsgemäß entworfen werden. Einzelheiten zu Webparts-Verbindungen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> und [Web Parts Verbindungen Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b).  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs> Klasse übergibt Ereignisdaten an Methoden, mit denen die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventHandler> Delegaten, Ereignisse zu behandeln. Es gibt zwei solche verbindungsrelevante Methoden verfügbar, die Ereignisse auslösen und die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs> Klasse, um Ereignisdaten bereitzustellen. Beide sind Mitglieder der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement. Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.OnWebPartsConnected%2A> -Methode löst die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsConnected> Ereignis nach zwei Serversteuerelemente erfolgreich verbunden haben, und die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.OnWebPartsDisconnected%2A> -Methode löst das <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsDisconnected> Ereignis nach zwei Serversteuerelemente getrennt wurden.  
+  
+ Entwickler können benutzerdefiniertes Ereignis Handlermethoden zum Erstellen der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsConnected> und <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsDisconnected> Ereignisse, und in diesen Methoden können sie die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs> Klasse Zugriffsdetails einer Verbindung. Beispielsweise kann ein Entwickler deklarieren die `OnWebPartsConnected` Attribut für die `<asp:webpartmanager>` -Element, und weisen Sie ihm den Namen einer benutzerdefinierten Methode, die das Ereignis behandelt. In der benutzerdefinierten Handlermethode können Entwickler die Details einer Verbindung zugreifen, indem Sie mit der <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs> -Objekt, das an die Methode als Parameter übergeben wird.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs> -Klasse verfügt über zwei Überladungen des Konstruktors. Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.%23ctor%28System.Web.UI.WebControls.WebParts.WebPart%2CSystem.Web.UI.WebControls.WebParts.ProviderConnectionPoint%2CSystem.Web.UI.WebControls.WebParts.WebPart%2CSystem.Web.UI.WebControls.WebParts.ConsumerConnectionPoint%29?displayProperty=nameWithType> Konstruktor ist die Standardeinstellung; er initialisiert die Eigenschaftswerte für die Klasse. Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.%23ctor%28System.Web.UI.WebControls.WebParts.WebPart%2CSystem.Web.UI.WebControls.WebParts.ProviderConnectionPoint%2CSystem.Web.UI.WebControls.WebParts.WebPart%2CSystem.Web.UI.WebControls.WebParts.ConsumerConnectionPoint%2CSystem.Web.UI.WebControls.WebParts.WebPartConnection%29?displayProperty=nameWithType> Konstruktor ruft den Standardkonstruktor und initialisiert dann auch die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.Connection%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs> -Klasse verfügt über mehrere Eigenschaften, die alle auf die wesentlichen Aspekte einer Webparts-Verbindung verweisen. Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.Connection%2A> Eigenschaft bezieht sich auf die zugeordnete <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> -Objekt, das die gesamte Verbindung darstellt. Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.Provider%2A> Eigenschaftenverweise eine <xref:System.Web.UI.WebControls.WebParts.WebPart> oder einem anderen Serversteuerelement in die Verbindung als Anbieter fungiert und die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.Consumer%2A> Eigenschaftenverweise eine <xref:System.Web.UI.WebControls.WebParts.WebPart> oder Serversteuerelement, das als Consumer fungiert. Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.ProviderConnectionPoint%2A> -Eigenschaft verweist auf der Verbindungs <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> -Objekt, während die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.ConsumerConnectionPoint%2A> Eigenschaftenverweise der <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartConnectionsEventArgs (System.Web.UI.WebControls.WebParts.WebPart provider, System.Web.UI.WebControls.WebParts.ProviderConnectionPoint providerConnectionPoint, System.Web.UI.WebControls.WebParts.WebPart consumer, System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint consumerConnectionPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPart provider, class System.Web.UI.WebControls.WebParts.ProviderConnectionPoint providerConnectionPoint, class System.Web.UI.WebControls.WebParts.WebPart consumer, class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint consumerConnectionPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.#ctor(System.Web.UI.WebControls.WebParts.WebPart,System.Web.UI.WebControls.WebParts.ProviderConnectionPoint,System.Web.UI.WebControls.WebParts.WebPart,System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="providerConnectionPoint" Type="System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" />
+        <Parameter Name="consumer" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="consumerConnectionPoint" Type="System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Das Steuerelement als Anbieter fungiert.</param>
+        <param name="providerConnectionPoint">Den Anbieterverbindungspunkt an.</param>
+        <param name="consumer">Das Steuerelement, das als Consumer fungiert.</param>
+        <param name="consumerConnectionPoint">Den Consumerverbindungspunkt an.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs" /> Klasse ohne eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist der Standardkonstruktor. Sie erfordert kein <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt. Der Konstruktor initialisiert die Werte der Eigenschaften aller seiner verbindungsrelevante Parameterobjekte der entsprechenden Eigenschaft zuweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartConnectionsEventArgs (System.Web.UI.WebControls.WebParts.WebPart provider, System.Web.UI.WebControls.WebParts.ProviderConnectionPoint providerConnectionPoint, System.Web.UI.WebControls.WebParts.WebPart consumer, System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint consumerConnectionPoint, System.Web.UI.WebControls.WebParts.WebPartConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPart provider, class System.Web.UI.WebControls.WebParts.ProviderConnectionPoint providerConnectionPoint, class System.Web.UI.WebControls.WebParts.WebPart consumer, class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint consumerConnectionPoint, class System.Web.UI.WebControls.WebParts.WebPartConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.#ctor(System.Web.UI.WebControls.WebParts.WebPart,System.Web.UI.WebControls.WebParts.ProviderConnectionPoint,System.Web.UI.WebControls.WebParts.WebPart,System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint,System.Web.UI.WebControls.WebParts.WebPartConnection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="providerConnectionPoint" Type="System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" />
+        <Parameter Name="consumer" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="consumerConnectionPoint" Type="System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" />
+        <Parameter Name="connection" Type="System.Web.UI.WebControls.WebParts.WebPartConnection" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder Serversteuerelement, die als Anbieter fungiert.</param>
+        <param name="providerConnectionPoint">Die <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> für die Verbindung.</param>
+        <param name="consumer">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder Serversteuerelement, das als Consumer fungiert.</param>
+        <param name="consumerConnectionPoint">Die <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> für die Verbindung.</param>
+        <param name="connection">Das <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />-Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der Klasse unter Verwendung des angegebenen <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Version von der <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.%23ctor%2A> Constructor verwendet wird, wenn ein <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt verfügbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt der aktuellen Verbindung.</summary>
+        <value>Der aktuelle <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt enthält alle Details einer Webparts-Verbindung, einschließlich von Verweisen auf das Anbietersteuerelement, den Anbieterverbindungspunkt an den Consumer-Steuerelement und dem Consumerverbindungspunkt an.  
+  
+ Einzelheiten zu Webparts-Verbindungen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPartConnection>, <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint>, und [Web Parts Verbindungen Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Consumer">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPart Consumer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPart Consumer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.Consumer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> steuern, in die Verbindung als Consumer fungiert.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> als Consumer fungiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Verbindung zwischen Steuerelementen in einer Webparts-Zone muss ein Steuerelement fungiert als der Anbieter und ein anderes, das als Consumer fungiert. Jedes Steuerelement benötigen auch einen Verbindungspunkt definiert; im Fall der Consumer des Verbindungspunkts muss ein <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekt.  
+  
+ Einzelheiten zu Webparts-Verbindungen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPartConnection>, <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint>, und [Web Parts Verbindungen Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsumerConnectionPoint">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint ConsumerConnectionPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint ConsumerConnectionPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.ConsumerConnectionPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> Objekt der aktuellen Verbindung.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> der aktuellen Verbindung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Verbindung zwischen Steuerelementen in einer Webparts-Zone muss ein Steuerelement fungiert als der Anbieter und ein anderes, das als Consumer fungiert. Jedes Steuerelement benötigen auch einen Verbindungspunkt definiert; im Fall der Consumer des Verbindungspunkts muss ein <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekt.  
+  
+ Einzelheiten zu Webparts-Verbindungen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPartConnection>, <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint>, und [Web Parts Verbindungen Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPart Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPart Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> steuern, d. h. in die Verbindung als Anbieter fungiert.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> als Anbieter fungiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Verbindung zwischen Steuerelementen in einer Webparts-Zone muss ein Steuerelement fungiert als der Anbieter und ein anderes, das als Consumer fungiert. Jedes Steuerelement benötigen auch einen Verbindungspunkt definiert; im Fall des Anbieters des Verbindungspunkts muss ein <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt.  
+  
+ Einzelheiten zu Webparts-Verbindungen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPartConnection>, <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint>, und [Web Parts Verbindungen Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderConnectionPoint">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ProviderConnectionPoint ProviderConnectionPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ProviderConnectionPoint ProviderConnectionPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs.ProviderConnectionPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ProviderConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> Objekt der aktuellen Verbindung.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> der aktuellen Verbindung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Verbindung zwischen Steuerelementen in einer Webparts-Zone muss ein Steuerelement fungiert als der Anbieter und ein anderes, das als Consumer fungiert. Jedes Steuerelement benötigen auch einen Verbindungspunkt definiert; im Fall des Anbieters des Verbindungspunkts muss ein <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt.  
+  
+ Einzelheiten zu Webparts-Verbindungen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPartConnection>, <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint>, und [Web Parts Verbindungen Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

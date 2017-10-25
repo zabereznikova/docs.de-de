@@ -1,0 +1,2833 @@
+<Type Name="Support" FullName="Microsoft.VisualBasic.Compatibility.VB6.Support">
+  <TypeSignature Language="C#" Value="public sealed class Support" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Support extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.Support" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.VisualBasic.CompilerServices.StandardModule</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält verschiedene Hilfsfunktionen für die Abwärtskompatibilität mit Visual Basic 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Funktionen in dieser Klasse werden verwendet, während der Aktualisierung von Visual Basic 6.0-Projekten zu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Einige Funktionen ersetzen Visual Basic 6.0-Funktionen, die in nicht mehr unterstützte Features [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]; andere kompensieren Unterschiede in den Objektmodellen.  
+  
+ Verwenden von Funktionen in dieser Klasse in einer [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Projekt, fügen einen Verweis auf die `Microsoft.VisualBasic.Compatibility.VB6` Namespace.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CopyArray">
+      <MemberSignature Language="C#" Value="public static Array CopyArray (Array SourceArray);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Array CopyArray(class System.Array SourceArray) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.CopyArray(System.Array)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Array</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="SourceArray" Type="System.Array" />
+      </Parameters>
+      <Docs>
+        <param name="SourceArray">Ein <see cref="T:System.Array" />.</param>
+        <summary>Visual Basic 6.0-Funktionalität zuweisen, um Duplikate ein <see langword="Array" /> zu einem <see langword="Variant" />.</summary>
+        <returns>Das Array zu kopieren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 `Variant` -Datentyp wird nicht mehr unterstützt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Die `CopyArray` Funktion wird von den Upgradetools verwendet, kopiert eine `Array` in oder aus einer `Variant` Array.  
+  
+ So kopieren Sie ein Array, in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], verwenden Sie die <xref:System.Array.Clone%2A>, <xref:System.Array.Copy%2A> oder <xref:System.Array.CopyTo%2A> Methoden die <xref:System.Array> Klasse.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorToIPicture">
+      <MemberSignature Language="C#" Value="public static object CursorToIPicture (System.Windows.Forms.Cursor curs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object CursorToIPicture(class System.Windows.Forms.Cursor curs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.CursorToIPicture(System.Windows.Forms.Cursor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="curs" Type="System.Windows.Forms.Cursor" />
+      </Parameters>
+      <Docs>
+        <param name="curs">Die zu konvertierende <see cref="T:System.Windows.Forms.Cursor" />.</param>
+        <summary>Gibt eine OLE <see langword="IPicture" /> Objekt, das das angegebene entspricht <see cref="T:System.Windows.Forms.Cursor" />.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , darstellt, die OLE <see langword="IPicture" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 die `MouseIcon` , laden Sie eine benutzerdefinierte Eigenschaft eines Formulars oder Steuerelements missbraucht werden `MousePointer` (Cursor). In einigen Fällen wird das Bild für die `MouseIcon` gespeichert wurde, als ein `stdOle.IPicture`; diese Funktion wird durch das Upgrade-Tool konvertiert eine <xref:System.Windows.Forms.Cursor> auf eine `stdOle.IPicture`.  
+  
+ Konvertieren einer <xref:System.Windows.Forms.Cursor> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], verwenden die <xref:System.Windows.Forms.AxHost.GetIPictureFromCursor%2A> Methode der <xref:System.Windows.Forms.AxHost> Klasse.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eqv">
+      <MemberSignature Language="C#" Value="public static bool Eqv (bool a, bool b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool Eqv(bool a, bool b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Eqv(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Boolean" />
+        <Parameter Name="b" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein zu vergleichender <see cref="T:System.Boolean" />.</param>
+        <param name="b">Ein zu vergleichender <see cref="T:System.Boolean" />.</param>
+        <summary>Führt eine logische Äquivalenz für zwei <see cref="T:System.Boolean" /> Ausdrücke.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Ausdrücke gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn einer der Ausdrücke ist `Null`, Ergebnis ist ebenfalls `Null`. Wenn kein Ausdruck ist `Null`, Ergebnis wird entsprechend der folgenden Tabelle bestimmt:  
+  
+|Expression1|Und expression2 ist|Das Ergebnis ist|  
+|-----------------------|------------------------|-------------------|  
+|`true`|`true`|`true`|  
+|`true`|`false`|`false`|  
+|`false`|`true`|`false`|  
+|`false`|`false`|`true`|  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], `Eqv` Operator ist nicht mehr Teil der Sprache Visual Basic; verwenden Sie den Vergleichsoperator gleich (=) anstelle von `Eqv` für logische Bewertungen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eqv">
+      <MemberSignature Language="C#" Value="public static byte Eqv (byte a, byte b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static unsigned int8 Eqv(unsigned int8 a, unsigned int8 b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Eqv(System.Byte,System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Byte" />
+        <Parameter Name="b" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein zu vergleichender <see cref="T:System.Byte" />.</param>
+        <param name="b">Ein zu vergleichender <see cref="T:System.Byte" />.</param>
+        <summary>Führt eine logische Äquivalenz für zwei <see cref="T:System.Byte" /> Ausdrücke.</summary>
+        <returns>Ein <see cref="T:System.Byte" /> , enthält das Ergebnis der bitweisen Vergleich.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Eqv` Operator führt einen bitweisen Vergleich von identisch positionierten Bits in zwei numerischen Ausdrücken und legt das entsprechende Bit gemäß der folgenden Tabelle fest:  
+  
+|Wenn das Bit in expression1|Und das Bit in expression2|Das Ergebnis ist|  
+|------------------------------|-------------------------------|-------------------|  
+|0|0|1|  
+|0|1|0|  
+|1|0|0|  
+|1|1|1|  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], `Eqv` Operator ist nicht mehr als ein Teil der Sprache Visual Basic; für die Verwendung von bitweisen auswertungen der `Not` und `XOr` Operatoren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eqv">
+      <MemberSignature Language="C#" Value="public static short Eqv (short a, short b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int16 Eqv(int16 a, int16 b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Eqv(System.Int16,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Int16" />
+        <Parameter Name="b" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein zu vergleichender <see cref="T:System.Int16" />.</param>
+        <param name="b">Ein zu vergleichender <see cref="T:System.Int16" />.</param>
+        <summary>Führt eine logische Äquivalenz für zwei <see cref="T:System.Int16" /> Ausdrücke.</summary>
+        <returns>Ein <see cref="T:System.Int16" /> , enthält das Ergebnis des Vergleichs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], `Eqv` Operator ist nicht mehr als ein Teil der Sprache Visual Basic; für die Verwendung von bitweisen auswertungen der `Not` und `XOr` Operatoren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eqv">
+      <MemberSignature Language="C#" Value="public static int Eqv (int a, int b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Eqv(int32 a, int32 b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Eqv(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Int32" />
+        <Parameter Name="b" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein zu vergleichender <see cref="T:System.Int32" />.</param>
+        <param name="b">Ein zu vergleichender <see cref="T:System.Int32" />.</param>
+        <summary>Führt eine logische Äquivalenz für zwei <see cref="T:System.Int32" /> Ausdrücke.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> , enthält das Ergebnis des Vergleichs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die `Eqv` Operator ist nicht mehr Teil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Language; für die Verwendung von bitweiser auswertungen der `Not` und `XOr` Operatoren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eqv">
+      <MemberSignature Language="C#" Value="public static long Eqv (long a, long b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int64 Eqv(int64 a, int64 b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Eqv(System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Int64" />
+        <Parameter Name="b" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein zu vergleichender <see cref="T:System.Int64" />.</param>
+        <param name="b">Ein zu vergleichender <see cref="T:System.Int64" />.</param>
+        <summary>Führt eine logische Äquivalenz für zwei <see cref="T:System.Int64" /> Ausdrücke.</summary>
+        <returns>Ein <see cref="T:System.Int64" /> , enthält das Ergebnis des Vergleichs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die `Eqv` Operator ist nicht mehr Teil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Language; für die Verwendung von bitweiser auswertungen der `Not` und `XOr` Operatoren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eqv">
+      <MemberSignature Language="C#" Value="public static object Eqv (object a, object b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object Eqv(object a, object b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Eqv(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Object" />
+        <Parameter Name="b" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein zu vergleichender <see cref="T:System.Object" />.</param>
+        <param name="b">Ein zu vergleichender <see cref="T:System.Object" />.</param>
+        <summary>Führt eine logische Äquivalenz für zwei <see cref="T:System.Object" /> Ausdrücke.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , enthält das Ergebnis des Vergleichs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die `Eqv` Operator ist nicht mehr Teil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Language; für die Verwendung von bitweiser auswertungen der `Not` und `XOr` Operatoren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChangeBold">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font FontChangeBold (System.Drawing.Font CurrentFont, bool Bold);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Drawing.Font FontChangeBold(class System.Drawing.Font CurrentFont, bool Bold) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FontChangeBold(System.Drawing.Font,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="CurrentFont" Type="System.Drawing.Font" />
+        <Parameter Name="Bold" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="CurrentFont">Ein <see cref="T:System.Drawing.Font" />.</param>
+        <param name="Bold">
+          <see langword="true" />Festlegen der <see cref="F:System.Drawing.FontStyle.Bold" /> formatieren, andernfalls Bit <see langword="false" />.</param>
+        <summary>Ändert die <see cref="F:System.Drawing.FontStyle.Bold" /> Formatbit für eine Schriftart.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Font" /> mit neuen Formatvorlage.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurden Schriftschnitte angewendet, indem Sie Eigenschaften festlegen; in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Schriftschnitte angewendet werden, mithilfe einer <xref:System.Drawing.FontStyle> Enumeration. Diese Funktion wird von den Upgradetools verwendet, um die Visual Basic 6.0-Eigenschaften in die neuen Enumerationen zu übersetzen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChangeGdiCharSet">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font FontChangeGdiCharSet (System.Drawing.Font CurrentFont, byte GdiCharSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Drawing.Font FontChangeGdiCharSet(class System.Drawing.Font CurrentFont, unsigned int8 GdiCharSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FontChangeGdiCharSet(System.Drawing.Font,System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="CurrentFont" Type="System.Drawing.Font" />
+        <Parameter Name="GdiCharSet" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="CurrentFont">Ein <see cref="T:System.Drawing.Font" />.</param>
+        <param name="GdiCharSet">Ein Bytewert, der angibt, die GDI-Zeichensatz Verwendung festgelegt.</param>
+        <summary>Gibt eine Schriftart für einen angegebenen GDI-Zeichensatz zurück.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Font" /> für den angegebenen GDI-Zeichensatz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 die `stdFont` Objekt hat eine `CharSet` -Eigenschaft, die die GDI angegebenen Zeichensatz für eine Schriftart. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], der Zeichensatz wird angegeben, optional eine <xref:System.Drawing.Font> Konstruktor. Diese Funktion wird von den Upgradetools konvertiert eine `stdFont` zu einem <xref:System.Drawing.Font>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChangeItalic">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font FontChangeItalic (System.Drawing.Font CurrentFont, bool Italic);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Drawing.Font FontChangeItalic(class System.Drawing.Font CurrentFont, bool Italic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FontChangeItalic(System.Drawing.Font,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="CurrentFont" Type="System.Drawing.Font" />
+        <Parameter Name="Italic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="CurrentFont">Ein <see cref="T:System.Drawing.Font" />.</param>
+        <param name="Italic">
+          <see langword="true" />Festlegen der <see cref="F:System.Drawing.FontStyle.Italic" /> formatieren, andernfalls Bit <see langword="false" />.</param>
+        <summary>Ändert die <see cref="F:System.Drawing.FontStyle.Italic" /> Formatbit für eine Schriftart.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Font" /> mit neuen Formatvorlage.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurden Schriftschnitte angewendet, indem Sie Eigenschaften festlegen; in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Schriftschnitte angewendet werden, mithilfe einer <xref:System.Drawing.FontStyle> Enumeration. Diese Funktion wird von den Upgradetools verwendet, um die Visual Basic 6.0-Eigenschaften in die neuen Enumerationen zu übersetzen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChangeName">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font FontChangeName (System.Drawing.Font CurrentFont, string Name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Drawing.Font FontChangeName(class System.Drawing.Font CurrentFont, string Name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FontChangeName(System.Drawing.Font,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="CurrentFont" Type="System.Drawing.Font" />
+        <Parameter Name="Name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="CurrentFont">Ein <see cref="T:System.Drawing.Font" />.</param>
+        <param name="Name">Ein <see langword="String" /> , Visual Basic 6.0 darstellt <see langword="Font" /> Eigenschaft.</param>
+        <summary>Gibt eine neue <see cref="T:System.Drawing.Font" /> für eine bestimmte Visual Basic 6.0 <see langword="Font" />.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Font" /> , Visual Basic 6.0 entspricht <see langword="Font" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0, der Namen einer Schriftart angegeben wurde, durch die `Font` Eigenschaft, in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], <xref:System.Drawing.Font.Name%2A> ist eine Eigenschaft der <xref:System.Drawing.Font> Objekt. Diese Funktion wird von den Upgradetools eine Visual Basic 6.0 konvertiert `Font` zu einem <xref:System.Drawing.Font>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChangeSize">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font FontChangeSize (System.Drawing.Font CurrentFont, float Size);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Drawing.Font FontChangeSize(class System.Drawing.Font CurrentFont, float32 Size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FontChangeSize(System.Drawing.Font,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="CurrentFont" Type="System.Drawing.Font" />
+        <Parameter Name="Size" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="CurrentFont">Ein <see cref="T:System.Drawing.Font" />.</param>
+        <param name="Size">Ein <see langword="Single" /> , Visual Basic 6.0 darstellt <see langword="FontSize" /> Eigenschaft.</param>
+        <summary>Ändert die <see cref="P:System.Drawing.Font.Size" /> -Eigenschaft für eine Schriftart.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Font" /> , Visual Basic 6.0 entspricht <see langword="FontSize" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0, wurde die Größe einer Schriftart festgelegt, indem die `FontSize` Eigenschaft; in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], <xref:System.Drawing.Font.Size%2A> ist eine Eigenschaft der <xref:System.Drawing.Font> Objekt. Diese Funktion wird von den Upgradetools eine Visual Basic 6.0 konvertiert `Font` zu einem <xref:System.Drawing.Font>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChangeStrikeout">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font FontChangeStrikeout (System.Drawing.Font CurrentFont, bool Strikeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Drawing.Font FontChangeStrikeout(class System.Drawing.Font CurrentFont, bool Strikeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FontChangeStrikeout(System.Drawing.Font,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="CurrentFont" Type="System.Drawing.Font" />
+        <Parameter Name="Strikeout" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="CurrentFont">Ein <see cref="T:System.Drawing.Font" />.</param>
+        <param name="Strikeout">
+          <see langword="true" />Festlegen der <see cref="F:System.Drawing.FontStyle.Strikeout" /> formatieren, andernfalls Bit <see langword="false" />.</param>
+        <summary>Ändert die <see cref="F:System.Drawing.FontStyle.Strikeout" /> Formatbit für eine Schriftart.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Font" /> mit neuen Formatvorlage.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurden Schriftschnitte angewendet, indem Sie Eigenschaften festlegen; in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Schriftschnitte angewendet werden, mithilfe einer <xref:System.Drawing.FontStyle> Enumeration. Diese Funktion wird von den Upgradetools verwendet, um die Visual Basic 6.0-Eigenschaften in die neuen Enumerationen zu übersetzen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChangeUnderline">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font FontChangeUnderline (System.Drawing.Font CurrentFont, bool Underline);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Drawing.Font FontChangeUnderline(class System.Drawing.Font CurrentFont, bool Underline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FontChangeUnderline(System.Drawing.Font,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="CurrentFont" Type="System.Drawing.Font" />
+        <Parameter Name="Underline" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="CurrentFont">Ein <see cref="T:System.Drawing.Font" />.</param>
+        <param name="Underline">
+          <see langword="true" />Festlegen der <see cref="F:System.Drawing.FontStyle.Underline" /> formatieren, andernfalls Bit <see langword="false" />.</param>
+        <summary>Ändert die <see cref="F:System.Drawing.FontStyle.Underline" /> Formatbit für eine Schriftart.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Font" /> mit neuen Formatvorlage.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurden Schriftschnitte angewendet, indem Sie Eigenschaften festlegen; in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Schriftschnitte angewendet werden, mithilfe einer <xref:System.Drawing.FontStyle> Enumeration. Diese Funktion wird von den Upgradetools verwendet, um die Visual Basic 6.0-Eigenschaften in die neuen Enumerationen zu übersetzen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontToIFont">
+      <MemberSignature Language="C#" Value="public static object FontToIFont (System.Drawing.Font fnt);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object FontToIFont(class System.Drawing.Font fnt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FontToIFont(System.Drawing.Font)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fnt" Type="System.Drawing.Font" />
+      </Parameters>
+      <Docs>
+        <param name="fnt">Die zu konvertierende <see cref="T:System.Drawing.Font" />.</param>
+        <summary>Konvertiert eine <see cref="T:System.Drawing.Font" /> zu einem Visual Basic 6.0 <see langword="stdFont" /> Objekt.</summary>
+        <returns>Ein <see langword="stdFont" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 `stdFont` Objekt wurde der COM-basierten und hat keine Entsprechung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen verwendet eine <xref:System.Drawing.Font> und ein `stdFont` beim Projektupgrade.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public static string Format (object Expression, string Style = &quot;&quot;, Microsoft.VisualBasic.FirstDayOfWeek DayOfWeek = Microsoft.VisualBasic.FirstDayOfWeek.Sunday, Microsoft.VisualBasic.FirstWeekOfYear WeekOfYear = Microsoft.VisualBasic.FirstWeekOfYear.Jan1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Format(object Expression, string Style, valuetype Microsoft.VisualBasic.FirstDayOfWeek DayOfWeek, valuetype Microsoft.VisualBasic.FirstWeekOfYear WeekOfYear) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Format(System.Object,System.String,Microsoft.VisualBasic.FirstDayOfWeek,Microsoft.VisualBasic.FirstWeekOfYear)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Object" />
+        <Parameter Name="Style" Type="System.String" />
+        <Parameter Name="DayOfWeek" Type="Microsoft.VisualBasic.FirstDayOfWeek" />
+        <Parameter Name="WeekOfYear" Type="Microsoft.VisualBasic.FirstWeekOfYear" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">Die <see cref="T:System.Object" /> zu konvertierende Ausdruck.</param>
+        <param name="Style">Dies ist optional. Ein <see cref="T:System.String" /> , ein Datumsformat darstellt.</param>
+        <param name="DayOfWeek">Dies ist optional. Eine <see cref="T:Microsoft.VisualBasic.FirstDayOfWeek" />-Enumeration.</param>
+        <param name="WeekOfYear">Dies ist optional. Eine <see cref="T:Microsoft.VisualBasic.FirstWeekOfYear" />-Enumeration.</param>
+        <summary>Konvertiert die Visual Basic 6.0 <see langword="Format" /> Funktion für die Kompatibilität mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</summary>
+        <returns>Ein <see cref="T:System.String" /> , die die formatierten Daten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 `Format` konnte die LN-Funktion auf einem `Variant` -Datentyp, in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] der `Variant` -Datentyp nicht mehr vorhanden ist. Diese Funktion wird von den Upgradetools konvertiert eine `Variant` formatierte mithilfe der `Format` Funktion in einer common Language Runtime-kompatiblen Typ.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromPixelsUserHeight">
+      <MemberSignature Language="C#" Value="public static double FromPixelsUserHeight (double Height, double ScaleHeight, int OriginalHeightInPixels);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 FromPixelsUserHeight(float64 Height, float64 ScaleHeight, int32 OriginalHeightInPixels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FromPixelsUserHeight(System.Double,System.Double,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Height" Type="System.Double" />
+        <Parameter Name="ScaleHeight" Type="System.Double" />
+        <Parameter Name="OriginalHeightInPixels" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Height">Ein <see cref="T:System.Double" /> , der die Höhe darstellt.</param>
+        <param name="ScaleHeight">Ein <see cref="T:System.Double" /> , Visual Basic 6.0 darstellt <see langword="ScaleHeight" /> für den aktuellen <see langword="ScaleMode" />.</param>
+        <param name="OriginalHeightInPixels">Ein <see langword="Integer" /> , der die Höhe in Pixel darstellt.</param>
+        <summary>Konvertiert ein Pixelmaß in einem Visual Basic 6.0 <see langword="ScaleHeight" /> Messung.</summary>
+        <returns>Ein <see cref="T:System.Double" /> , enthält das konvertierte Visual Basic 6.0 <see langword="ScaleHeight" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 unterstützt mehrere Koordinatensysteme durch definiert eine `ScaleMode` Eigenschaft. Diese enthalten einen benutzerdefinierten Wert. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unterstützt nur ein Koordinatensystem, die auf Pixel basieren. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen Pixel und einen benutzerdefinierten Skalierungswert verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromPixelsUserWidth">
+      <MemberSignature Language="C#" Value="public static double FromPixelsUserWidth (double Width, double ScaleWidth, int OriginalWidthInPixels);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 FromPixelsUserWidth(float64 Width, float64 ScaleWidth, int32 OriginalWidthInPixels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FromPixelsUserWidth(System.Double,System.Double,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Width" Type="System.Double" />
+        <Parameter Name="ScaleWidth" Type="System.Double" />
+        <Parameter Name="OriginalWidthInPixels" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Width">Ein <see cref="T:System.Double" /> , das die Breite darstellt.</param>
+        <param name="ScaleWidth">Ein <see cref="T:System.Double" /> , Visual Basic 6.0 darstellt <see langword="ScaleWidth" /> für den aktuellen <see langword="ScaleMode" />.</param>
+        <param name="OriginalWidthInPixels">Ein <see langword="Integer" /> , der die Breite in Pixel darstellt.</param>
+        <summary>Konvertiert ein Pixelmaß in einem Visual Basic 6.0 <see langword="ScaleWidth" /> Messung.</summary>
+        <returns>Ein <see cref="T:System.Double" /> , enthält das konvertierte Visual Basic 6.0 <see langword="ScaleWidth" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 unterstützt mehrere Koordinatensysteme durch definiert eine `ScaleMode` Eigenschaft. Diese enthalten einen benutzerdefinierten Wert. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unterstützt nur ein Koordinatensystem, die auf Pixel basieren. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen Pixel und einen benutzerdefinierten Skalierungswert verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromPixelsUserX">
+      <MemberSignature Language="C#" Value="public static double FromPixelsUserX (double X, double ScaleLeft, double ScaleWidth, int OriginalWidthInPixels);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 FromPixelsUserX(float64 X, float64 ScaleLeft, float64 ScaleWidth, int32 OriginalWidthInPixels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FromPixelsUserX(System.Double,System.Double,System.Double,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="X" Type="System.Double" />
+        <Parameter Name="ScaleLeft" Type="System.Double" />
+        <Parameter Name="ScaleWidth" Type="System.Double" />
+        <Parameter Name="OriginalWidthInPixels" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="X">Ein <see cref="T:System.Double" />-Wert, der die X-Koordinate darstellt.</param>
+        <param name="ScaleLeft">Ein <see cref="T:System.Double" /> , Visual Basic 6.0 darstellt <see langword="ScaleLeft" /> für den aktuellen <see langword="ScaleMode" />.</param>
+        <param name="ScaleWidth">Ein <see cref="T:System.Double" /> , Visual Basic 6.0 darstellt <see langword="ScaleWidth" /> für den aktuellen <see langword="ScaleMode" />.</param>
+        <param name="OriginalWidthInPixels">Ein <see langword="Integer" /> , der die Breite in Pixel darstellt.</param>
+        <summary>Konvertiert ein Pixelmaß in einem Visual Basic 6.0 <see langword="ScaleLeft" /> Messung.</summary>
+        <returns>Ein <see cref="T:System.Double" /> , enthält das konvertierte Visual Basic 6.0 <see langword="ScaleLeft" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 unterstützt mehrere Koordinatensysteme durch definiert eine `ScaleMode` Eigenschaft. Diese enthalten einen benutzerdefinierten Wert. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unterstützt nur ein Koordinatensystem, die auf Pixel basieren. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen Pixel und einen benutzerdefinierten Skalierungswert verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromPixelsUserY">
+      <MemberSignature Language="C#" Value="public static double FromPixelsUserY (double Y, double ScaleTop, double ScaleHeight, int OriginalHeightInPixels);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 FromPixelsUserY(float64 Y, float64 ScaleTop, float64 ScaleHeight, int32 OriginalHeightInPixels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FromPixelsUserY(System.Double,System.Double,System.Double,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Y" Type="System.Double" />
+        <Parameter Name="ScaleTop" Type="System.Double" />
+        <Parameter Name="ScaleHeight" Type="System.Double" />
+        <Parameter Name="OriginalHeightInPixels" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Y">Ein <see cref="T:System.Double" />-Wert, der die X-Koordinate darstellt.</param>
+        <param name="ScaleTop">Ein <see cref="T:System.Double" /> , Visual Basic 6.0 darstellt <see langword="ScaleTop" /> für den aktuellen <see langword="ScaleMode" />.</param>
+        <param name="ScaleHeight">Ein <see cref="T:System.Double" /> , Visual Basic 6.0 darstellt <see langword="ScaleHeight" /> für den aktuellen <see langword="ScaleMode" />.</param>
+        <param name="OriginalHeightInPixels">Ein <see langword="Integer" /> , der die Höhe in Pixel darstellt.</param>
+        <summary>Konvertiert ein Pixelmaß in einem Visual Basic 6.0 <see langword="ScaleTop" /> Messung.</summary>
+        <returns>Ein <see cref="T:System.Double" /> , enthält das konvertierte Visual Basic 6.0 <see langword="ScaleTop" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 unterstützt mehrere Koordinatensysteme durch definiert eine `ScaleMode` Eigenschaft. Diese enthalten einen benutzerdefinierten Wert. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unterstützt nur ein Koordinatensystem, die auf Pixel basieren. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen Pixel und einen benutzerdefinierten Skalierungswert verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromPixelsX">
+      <MemberSignature Language="C#" Value="public static double FromPixelsX (double X, Microsoft.VisualBasic.Compatibility.VB6.ScaleMode ToScale);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 FromPixelsX(float64 X, valuetype Microsoft.VisualBasic.Compatibility.VB6.ScaleMode ToScale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FromPixelsX(System.Double,Microsoft.VisualBasic.Compatibility.VB6.ScaleMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="X" Type="System.Double" />
+        <Parameter Name="ToScale" Type="Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" />
+      </Parameters>
+      <Docs>
+        <param name="X">Ein <see cref="T:System.Double" /> , die die X-Koordinate in Pixel darstellt.</param>
+        <param name="ToScale">Ein <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" /> -Enumeration, die Visual Basic 6.0 darstellt <see langword="ScaleMode" /> zu konvertieren.</param>
+        <summary>Konvertiert eine Maßeinheit Pixel in eine Visual Basic 6.0-Maßeinheit zur Ermittlung einer bestimmten <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" />.</summary>
+        <returns>Ein <see cref="T:System.Double" /> , enthält das Visual Basic 6.0-Wert für die angegebene <see langword="ScaleMode" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 unterstützt mehrere Koordinatensysteme durch definiert eine `ScaleMode` Eigenschaft. Diese enthalten einen benutzerdefinierten Wert. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unterstützt nur ein Koordinatensystem, die auf Pixel basieren. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen Pixel und einen benutzerdefinierten Skalierungswert verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromPixelsY">
+      <MemberSignature Language="C#" Value="public static double FromPixelsY (double Y, Microsoft.VisualBasic.Compatibility.VB6.ScaleMode ToScale);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 FromPixelsY(float64 Y, valuetype Microsoft.VisualBasic.Compatibility.VB6.ScaleMode ToScale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.FromPixelsY(System.Double,Microsoft.VisualBasic.Compatibility.VB6.ScaleMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Y" Type="System.Double" />
+        <Parameter Name="ToScale" Type="Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" />
+      </Parameters>
+      <Docs>
+        <param name="Y">Ein <see cref="T:System.Double" /> , der die Y-Koordinate in Pixel darstellt.</param>
+        <param name="ToScale">Ein <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" /> -Enumeration, die Visual Basic 6.0 darstellt <see langword="ScaleMode" /> zu konvertieren.</param>
+        <summary>Konvertiert eine Maßeinheit Pixel in eine Visual Basic 6.0-Maßeinheit zur Ermittlung einer bestimmten <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" />.</summary>
+        <returns>Ein <see cref="T:System.Double" /> , enthält das Visual Basic 6.0-Wert für die angegebene <see langword="ScaleMode" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 unterstützt mehrere Koordinatensysteme durch definiert eine `ScaleMode` Eigenschaft. Diese enthalten einen benutzerdefinierten Wert. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unterstützt nur ein Koordinatensystem, die auf Pixel basieren. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen Pixel und einen benutzerdefinierten Skalierungswert verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetActiveControl">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.Control GetActiveControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Windows.Forms.Control GetActiveControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.GetActiveControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Steuerelement, das gerade den Fokus besitzt.</summary>
+        <returns>Das Steuerelement, das gerade den Fokus besitzt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion wird von den Upgrade-Tools verwendet, ersetzen Sie die Visual Basic 6.0 `Screen.ActiveControl` Eigenschaft. Dies entspricht dem Aufrufen von <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCancel">
+      <MemberSignature Language="C#" Value="public static bool GetCancel (System.Windows.Forms.Button btn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool GetCancel(class System.Windows.Forms.Button btn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.GetCancel(System.Windows.Forms.Button)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="btn" Type="System.Windows.Forms.Button" />
+      </Parameters>
+      <Docs>
+        <param name="btn">Ein <see cref="T:System.Windows.Forms.Button" />-Steuerelement.</param>
+        <summary>Ruft einen Wert, der angibt, ob eine <see cref="T:System.Windows.Forms.Button" /> ist die Schaltfläche "Abbrechen", in einem Formular.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="btn" /> ist die Schaltfläche "Abbrechen", andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion ist die Entsprechung der Überprüfung der <xref:System.Windows.Forms.Form.CancelButton%2A> Eigenschaft von einem <xref:System.Windows.Forms.Form>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefault">
+      <MemberSignature Language="C#" Value="public static bool GetDefault (System.Windows.Forms.Button btn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool GetDefault(class System.Windows.Forms.Button btn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.GetDefault(System.Windows.Forms.Button)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="btn" Type="System.Windows.Forms.Button" />
+      </Parameters>
+      <Docs>
+        <param name="btn">Ein <see cref="T:System.Windows.Forms.Button" />-Steuerelement.</param>
+        <summary>Ruft Festlegen eines Werts, der bestimmt, ob ein <see cref="T:System.Windows.Forms.Button" /> Steuerelement ist die Standardschaltfläche in einem Formular.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="btn" /> ist die Standardschaltfläche ist andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion ist die Entsprechung der Überprüfung der <xref:System.Windows.Forms.Form.AcceptButton%2A> Eigenschaft von einem <xref:System.Windows.Forms.Form>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEXEName">
+      <MemberSignature Language="C#" Value="public static string GetEXEName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static string GetEXEName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.GetEXEName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Namen der ausführbaren Datei (.exe) für die aktuelle Anwendung ab.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die den Namen ohne eine Dateinamenerweiterung enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHInstance">
+      <MemberSignature Language="C#" Value="public static IntPtr GetHInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static native int GetHInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.GetHInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Instanzhandle (HINSTANCE) für die aktuelle Anwendung ab.</summary>
+        <returns>Ein <see cref="T:System.IntPtr" /> für die aktuelle Anwendungsinstanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion ist das Äquivalent eines Aufrufs <xref:System.Runtime.InteropServices.Marshal.GetHINSTANCE%2A>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemData">
+      <MemberSignature Language="C#" Value="public static int GetItemData (System.Windows.Forms.Control Control, int Index);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 GetItemData(class System.Windows.Forms.Control Control, int32 Index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.GetItemData(System.Windows.Forms.Control,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="Index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Control">Ein <see cref="T:System.Windows.Forms.ListBox" /> oder <see cref="T:System.Windows.Forms.ComboBox" /> Steuerelement.</param>
+        <param name="Index">Ein <see langword="Integer" /> , die den Index des steht die <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ListBoxItem" />.</param>
+        <summary>Ruft eine <see langword="Integer" /> zugeordneten eine <see cref="T:System.Windows.Forms.ListBox" /> oder <see cref="T:System.Windows.Forms.ComboBox" /> Element.</summary>
+        <returns>Die <see langword="Integer" />, die dem angegebenen <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ListBoxItem" /> zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 die `ItemData` -Eigenschaft für eine `ListBox` oder `ComboBox` Steuerelement zur Entwurfszeit festgelegt werden die **Eigenschaften** Fenster zuordnen ein `Integer` mit einer `ListBox` oder `ComboBox` Element. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], `ItemData` Eigenschaft nicht mehr vorhanden ist; die `GetItemData` und <xref:Microsoft.VisualBasic.Compatibility.VB6.Support.SetItemData%2A> Methoden können verwendet werden, zum Emulieren des Verhaltens von `ItemData`.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemString">
+      <MemberSignature Language="C#" Value="public static string GetItemString (System.Windows.Forms.Control Control, int Index);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string GetItemString(class System.Windows.Forms.Control Control, int32 Index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.GetItemString(System.Windows.Forms.Control,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="Index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Control">Ein <see cref="T:System.Windows.Forms.ListBox" /> oder <see cref="T:System.Windows.Forms.ComboBox" /> Steuerelement.</param>
+        <param name="Index">Ein <see langword="Integer" /> , die den Index des steht die <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ListBoxItem" />.</param>
+        <summary>Ruft eine <see cref="T:System.String" /> zugeordneten eine <see cref="T:System.Windows.Forms.ListBox" /> oder <see cref="T:System.Windows.Forms.ComboBox" /> Element.</summary>
+        <returns>Die <see cref="T:System.String" />, die dem angegebenen <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ListBoxItem" /> zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion wird von den Upgrade-Tools zum Emulieren der Visual Basic 6.0 verwendet `List` Eigenschaft. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], verwenden Sie die <xref:System.Windows.Forms.ComboBox.Items%2A> oder <xref:System.Windows.Forms.ListBox.Items%2A> Eigenschaft stattdessen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPath">
+      <MemberSignature Language="C#" Value="public static string GetPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static string GetPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.GetPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den aktuellen Pfad für die Anwendung ab.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die den Pfad der aktuell ausgeführten Assembly enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IconToIPicture">
+      <MemberSignature Language="C#" Value="public static object IconToIPicture (System.Drawing.Icon ico);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object IconToIPicture(class System.Drawing.Icon ico) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.IconToIPicture(System.Drawing.Icon)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ico" Type="System.Drawing.Icon" />
+      </Parameters>
+      <Docs>
+        <param name="ico">Ein <see cref="T:System.Drawing.Icon" />.</param>
+        <summary>Ruft eine OLE <see langword="IPicture" /> -Objekt für einen bestimmten <see cref="T:System.Drawing.Icon" />.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das das <see langword="IPicture" />-OLE-Objekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0, eine OLE `IPicture` Objekt kann verwendet werden, um ein Symbol; Geben Sie im [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die OLE `IPicture` Format wird nicht mehr unterstützt. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen verwendet ein `IPicture` und ein <xref:System.Drawing.Icon>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IFontToFont">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Font IFontToFont (object objFnt);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Drawing.Font IFontToFont(object objFnt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.IFontToFont(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objFnt" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objFnt">Ein <see cref="T:System.Object" /> , enthält eine Visual Basic 6.0 <see langword="stdFont" />.</param>
+        <summary>Konvertiert eine Visual Basic 6.0 <see langword="stdFont" /> -Objekt an eine <see cref="T:System.Drawing.Font" />.</summary>
+        <returns>Ein angegebenes Objekt zu konvertieren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 `stdFont` Objekt wurde der COM-basierten und hat keine Entsprechung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen verwendet eine <xref:System.Drawing.Font> und ein `stdFont` beim Projektupgrade.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageToIPicture">
+      <MemberSignature Language="C#" Value="public static object ImageToIPicture (System.Drawing.Image img);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object ImageToIPicture(class System.Drawing.Image img) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.ImageToIPicture(System.Drawing.Image)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="img" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="img">Ein <see cref="T:System.Drawing.Image" />.</param>
+        <summary>Ruft eine OLE <see langword="IPicture" /> -Objekt für einen bestimmten <see cref="T:System.Drawing.Image" />.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das das <see langword="IPicture" />-OLE-Objekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0, eine OLE `IPicture` Objekt kann verwendet werden, um ein Bild; angeben in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die OLE `IPicture` Format wird nicht mehr unterstützt. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen verwendet ein `IPicture` und ein <xref:System.Drawing.Image>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageToIPictureDisp">
+      <MemberSignature Language="C#" Value="public static object ImageToIPictureDisp (System.Drawing.Image img);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object ImageToIPictureDisp(class System.Drawing.Image img) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.ImageToIPictureDisp(System.Drawing.Image)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="img" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="img">Ein <see cref="T:System.Drawing.Image" />.</param>
+        <summary>Ruft eine OLE <see langword="IPictureDisp" /> -Objekt für einen bestimmten <see cref="T:System.Drawing.Image" />.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das das <see langword="IPictureDisp" />-OLE-Objekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0, eine OLE `IPictureDisp` Objekt kann verwendet werden, um ein Bild; angeben in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die OLE `IPicture` Format wird nicht mehr unterstützt. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen verwendet ein `IPicture` und ein <xref:System.Drawing.Image>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Imp">
+      <MemberSignature Language="C#" Value="public static bool Imp (bool a, bool b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool Imp(bool a, bool b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Imp(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Boolean" />
+        <Parameter Name="b" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein <see cref="T:System.Boolean" /> Ausdruck.</param>
+        <param name="b">Ein <see cref="T:System.Boolean" /> Ausdruck.</param>
+        <summary>Führt eine logische Implikation für zwei <see cref="T:System.Boolean" /> Ausdrücke.</summary>
+        <returns>Ein <see cref="T:System.Boolean" /> , der das Ergebnis enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 `Imp` Operator wird nicht mehr unterstützt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Diese Funktion wird von den Upgradetools verwendet, ersetzen die `Imp` Operator beim Projektupgrade.  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], verwenden Sie `Not` und `XOr` anstelle von `Imp`.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Imp">
+      <MemberSignature Language="C#" Value="public static byte Imp (byte a, byte b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static unsigned int8 Imp(unsigned int8 a, unsigned int8 b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Imp(System.Byte,System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Byte" />
+        <Parameter Name="b" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein <see cref="T:System.Byte" /> Ausdruck.</param>
+        <param name="b">Ein <see cref="T:System.Byte" /> Ausdruck.</param>
+        <summary>Führt eine logische Implikation für zwei <see cref="T:System.Byte" /> Ausdrücke.</summary>
+        <returns>Ein <see cref="T:System.Byte" /> , der das Ergebnis enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 `Imp` Operator wird nicht mehr unterstützt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Diese Funktion wird von den Upgradetools verwendet, ersetzen die `Imp` Operator beim Projektupgrade.  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], verwenden Sie `Not` und `XOr` ersetzen `Imp`.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Imp">
+      <MemberSignature Language="C#" Value="public static short Imp (short a, short b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int16 Imp(int16 a, int16 b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Imp(System.Int16,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Int16" />
+        <Parameter Name="b" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein <see langword="Short" /> Ausdruck.</param>
+        <param name="b">Ein <see langword="Short" /> Ausdruck.</param>
+        <summary>Führt eine logische Implikation für zwei <see cref="T:System.Int16" /> Ausdrücke.</summary>
+        <returns>Ein <see langword="Short" /> , der das Ergebnis enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 `Imp` Operator wird nicht mehr unterstützt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Diese Funktion wird von den Upgradetools verwendet, ersetzen die `Imp` Operator beim Projektupgrade.  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], verwenden Sie `Not` und `XOr` ersetzen `Imp`.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Imp">
+      <MemberSignature Language="C#" Value="public static int Imp (int a, int b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Imp(int32 a, int32 b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Imp(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Int32" />
+        <Parameter Name="b" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein <see langword="Integer" /> Ausdruck.</param>
+        <param name="b">Ein <see langword="Integer" /> Ausdruck.</param>
+        <summary>Führt eine logische Implikation für zwei <see cref="T:System.Int32" /> Ausdrücke.</summary>
+        <returns>Ein <see langword="Integer" /> , der das Ergebnis enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 `Imp` Operator wird nicht mehr unterstützt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Diese Funktion wird von den Upgradetools verwendet, ersetzen die `Imp` Operator beim Projektupgrade.  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], verwenden Sie `Not` und `XOr` ersetzen `Imp`.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Imp">
+      <MemberSignature Language="C#" Value="public static long Imp (long a, long b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int64 Imp(int64 a, int64 b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Imp(System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Int64" />
+        <Parameter Name="b" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein <see langword="Long" /> Ausdruck.</param>
+        <param name="b">Ein <see langword="Long" /> Ausdruck.</param>
+        <summary>Führt eine logische Implikation für zwei <see cref="T:System.Int64" /> Ausdrücke.</summary>
+        <returns>Ein <see langword="Long" /> , der das Ergebnis enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 `Imp` Operator wird nicht mehr unterstützt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Diese Funktion wird von den Upgradetools verwendet, ersetzen die `Imp` Operator beim Projektupgrade.  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], verwenden Sie `Not` und `XOr` ersetzen `Imp`.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Imp">
+      <MemberSignature Language="C#" Value="public static object Imp (object a, object b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object Imp(object a, object b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.Imp(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Object" />
+        <Parameter Name="b" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein <see cref="T:System.Object" /> Ausdruck.</param>
+        <param name="b">Ein <see cref="T:System.Object" /> Ausdruck.</param>
+        <summary>Führt eine logische Implikation für zwei <see cref="T:System.Object" /> Ausdrücke.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , der das Ergebnis enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 `Imp` Operator wird nicht mehr unterstützt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Diese Funktion wird von den Upgradetools verwendet, ersetzen die `Imp` Operator beim Projektupgrade. Während des Upgrades ist der Variant-Datentyp auf aktualisiert <xref:System.Object>.  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], verwenden Sie `Not` und `XOr` ersetzen `Imp`.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IPictureDispToImage">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Image IPictureDispToImage (object pict);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Drawing.Image IPictureDispToImage(object pict) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.IPictureDispToImage(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pict" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="pict">Ein OLE <see langword="IPictureDisp" /> Objekt.</param>
+        <summary>Ruft eine <see cref="T:System.Drawing.Image" /> für einen bestimmten OLE <see langword="IPictureDisp" /> Objekt.</summary>
+        <returns>Ein Image-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0, eine OLE `IPictureDisp` Objekt kann verwendet werden, um ein Bild; angeben in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die OLE `IPicture` Format wird nicht mehr unterstützt. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen verwendet ein `IPictureDisp` und ein <xref:System.Drawing.Image>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IPictureToImage">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Image IPictureToImage (object pict);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Drawing.Image IPictureToImage(object pict) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.IPictureToImage(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pict" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="pict">Ein OLE <see langword="IPicture" /> Objekt.</param>
+        <summary>Ruft eine <see cref="T:System.Drawing.Image" /> für einen bestimmten OLE <see langword="IPicture" /> Objekt.</summary>
+        <returns>Ein Image konvertierte-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0, eine OLE `IPicture` Objekt kann verwendet werden, um ein Bild; angeben in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die OLE `IPicture` Format wird nicht mehr unterstützt. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen verwendet ein `IPicture` und ein <xref:System.Drawing.Image>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadResData">
+      <MemberSignature Language="C#" Value="public static object LoadResData (object ID, object restype);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LoadResData(object ID, object restype) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.LoadResData(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ID" Type="System.Object" />
+        <Parameter Name="restype" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ID">Eine <see cref="T:System.Object" /> , die Daten in die Ressourcendatei angibt.</param>
+        <param name="restype">Eine <see cref="T:System.Object" /> , die den Ressourcentyp angibt.</param>
+        <summary>Lädt Daten von mehreren möglichen Typen aus einer Ressourcendatei (res) an.</summary>
+        <returns>Eine <see cref="T:System.Object" /> , die die Ressource enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurde internationale Versionen einer Anwendung erstellt, indem alle lokalisierbaren Informationen, z. B. Zeichenfolgen, in eine separate Ressourcendatei (res) für jede Sprache. Zur Laufzeit, gebietsschemaspezifische Ressourcen aus der Ressourcendatei durch Aufruf geladen wurden die `LoadResString`, `LoadResPicture`, und `LoadResData` Funktionen.  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], internationale Versionen einer Anwendung werden erstellt, durch Ändern der `Language` -Eigenschaft eines Formulars zur Entwurfszeit. Eine separate Ressourcendatei (.resx) wird für jedes ausgewählte Gebietsschema automatisch erstellt. Sie müssen nicht mehr Ressourcen explizit aus dem Code zu laden; Ressourcen werden automatisch basierend auf dem Gebietsschema des Benutzers geladen. Weitere Informationen finden Sie unter [Globalisieren von Windows Forms](~/docs/framework/winforms/advanced/globalizing-windows-forms.md).  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadResData">
+      <MemberSignature Language="C#" Value="public static object LoadResData (object ID, object restype, System.Globalization.CultureInfo Culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LoadResData(object ID, object restype, class System.Globalization.CultureInfo Culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.LoadResData(System.Object,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ID" Type="System.Object" />
+        <Parameter Name="restype" Type="System.Object" />
+        <Parameter Name="Culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="ID">Eine <see cref="T:System.Object" /> , die Daten in die Ressourcendatei angibt.</param>
+        <param name="restype">Eine <see cref="T:System.Object" /> , die den Ressourcentyp angibt.</param>
+        <param name="Culture">Ein <see cref="T:System.Globalization.CultureInfo" /> -Objekt, das das Gebietsschema angibt.</param>
+        <summary>Lädt Daten von mehreren möglichen Typen aus einer Ressourcendatei (res), einem Gebietsschema angeben.</summary>
+        <returns>Eine <see cref="T:System.Object" /> , die die Ressource enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurde internationale Versionen einer Anwendung erstellt, indem alle lokalisierbaren Informationen, z. B. Zeichenfolgen, in eine separate Ressourcendatei (res) für jede Sprache. Zur Laufzeit, gebietsschemaspezifische Ressourcen aus der Ressourcendatei durch Aufruf geladen wurden die `LoadResString`, `LoadResPicture`, und `LoadResData` Funktionen.  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], internationale Versionen einer Anwendung werden erstellt, durch Ändern der `Language` -Eigenschaft eines Formulars zur Entwurfszeit. Eine separate Ressourcendatei (.resx) wird für jedes ausgewählte Gebietsschema automatisch erstellt. Sie müssen nicht mehr Ressourcen explizit aus dem Code zu laden; Ressourcen werden automatisch basierend auf dem Gebietsschema des Benutzers geladen. Weitere Informationen finden Sie unter [Globalisieren von Windows Forms](~/docs/framework/winforms/advanced/globalizing-windows-forms.md).  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadResPicture">
+      <MemberSignature Language="C#" Value="public static object LoadResPicture (object ID, Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants restype);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LoadResPicture(object ID, valuetype Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants restype) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.LoadResPicture(System.Object,Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ID" Type="System.Object" />
+        <Parameter Name="restype" Type="Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants" />
+      </Parameters>
+      <Docs>
+        <param name="ID">Eine <see cref="T:System.Object" /> , die Daten in die Ressourcendatei angibt.</param>
+        <param name="restype">Ein <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants" /> -Enumeration, der den Ressourcentyp angibt.</param>
+        <summary>Lädt eine Bitmap, Symbol oder Cursor aus einer Ressourcendatei (res) an.</summary>
+        <returns>Eine <see cref="T:System.Object" /> , die die Ressource enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurde internationale Versionen einer Anwendung erstellt, indem alle lokalisierbaren Informationen, z. B. Zeichenfolgen, in eine separate Ressourcendatei (res) für jede Sprache. Zur Laufzeit, gebietsschemaspezifische Ressourcen aus der Ressourcendatei durch Aufruf geladen wurden die `LoadResString`, `LoadResPicture`, und `LoadResData` Funktionen.  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], internationale Versionen einer Anwendung werden erstellt, durch Ändern der `Language` -Eigenschaft eines Formulars zur Entwurfszeit. Eine separate Ressourcendatei (.resx) wird für jedes ausgewählte Gebietsschema automatisch erstellt. Sie müssen nicht mehr Ressourcen explizit aus dem Code zu laden; Ressourcen werden automatisch basierend auf dem Gebietsschema des Benutzers geladen. Weitere Informationen finden Sie unter [Globalisieren von Windows Forms](~/docs/framework/winforms/advanced/globalizing-windows-forms.md).  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadResPicture">
+      <MemberSignature Language="C#" Value="public static object LoadResPicture (object ID, Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants restype, System.Globalization.CultureInfo Culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LoadResPicture(object ID, valuetype Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants restype, class System.Globalization.CultureInfo Culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.LoadResPicture(System.Object,Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ID" Type="System.Object" />
+        <Parameter Name="restype" Type="Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants" />
+        <Parameter Name="Culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="ID">Eine <see cref="T:System.Object" /> , die Daten in die Ressourcendatei angibt.</param>
+        <param name="restype">Ein <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants" /> -Enumeration, der den Ressourcentyp angibt.</param>
+        <param name="Culture">Ein <see cref="T:System.Globalization.CultureInfo" /> -Objekt, das das Gebietsschema angibt.</param>
+        <summary>Lädt eine Bitmap, Symbol oder Cursor aus einer Ressourcendatei (res), einem Gebietsschema angeben.</summary>
+        <returns>Eine <see cref="T:System.Object" /> , die die Ressource enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurde internationale Versionen einer Anwendung erstellt, indem alle lokalisierbaren Informationen, z. B. Zeichenfolgen, in eine separate Ressourcendatei (res) für jede Sprache. Zur Laufzeit, gebietsschemaspezifische Ressourcen aus der Ressourcendatei durch Aufruf geladen wurden die `LoadResString`, `LoadResPicture`, und `LoadResData` Funktionen.  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], internationale Versionen einer Anwendung werden erstellt, durch Ändern der `Language` -Eigenschaft eines Formulars zur Entwurfszeit. Eine separate Ressourcendatei (.resx) wird für jedes ausgewählte Gebietsschema automatisch erstellt. Sie müssen nicht mehr Ressourcen explizit aus dem Code zu laden; Ressourcen werden automatisch basierend auf dem Gebietsschema des Benutzers geladen. Weitere Informationen finden Sie unter [Globalisieren von Windows Forms](~/docs/framework/winforms/advanced/globalizing-windows-forms.md).  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadResString">
+      <MemberSignature Language="C#" Value="public static string LoadResString (int ID);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string LoadResString(int32 ID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.LoadResString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ID" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ID">Eine <see cref="T:System.Object" /> , die Daten in die Ressourcendatei angibt.</param>
+        <summary>Lädt eine Zeichenfolge aus einer Ressourcendatei (res) an.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die die Ressource enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurde internationale Versionen einer Anwendung erstellt, indem alle lokalisierbaren Informationen, z. B. Zeichenfolgen, in eine separate Ressourcendatei (res) für jede Sprache. Zur Laufzeit, gebietsschemaspezifische Ressourcen aus der Ressourcendatei durch Aufruf geladen wurden die `LoadResString`, `LoadResPicture`, und `LoadResData` Funktionen.  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], internationale Versionen einer Anwendung werden erstellt, durch Ändern der `Language` -Eigenschaft eines Formulars zur Entwurfszeit. Eine separate Ressourcendatei (.resx) wird für jedes ausgewählte Gebietsschema automatisch erstellt. Sie müssen nicht mehr Ressourcen explizit aus dem Code zu laden; Ressourcen werden automatisch basierend auf dem Gebietsschema des Benutzers geladen. Weitere Informationen finden Sie unter [Globalisieren von Windows Forms](~/docs/framework/winforms/advanced/globalizing-windows-forms.md).  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadResString">
+      <MemberSignature Language="C#" Value="public static string LoadResString (int ID, System.Globalization.CultureInfo Culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string LoadResString(int32 ID, class System.Globalization.CultureInfo Culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.LoadResString(System.Int32,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ID" Type="System.Int32" />
+        <Parameter Name="Culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="ID">Eine <see cref="T:System.Object" /> , die Daten in die Ressourcendatei angibt.</param>
+        <param name="Culture">Ein <see cref="T:System.Globalization.CultureInfo" /> -Objekt, das das Gebietsschema angibt.</param>
+        <summary>Lädt eine Zeichenfolge aus einer Ressourcendatei (res), einem Gebietsschema angeben.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die die Ressource enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurde internationale Versionen einer Anwendung erstellt, indem alle lokalisierbaren Informationen, z. B. Zeichenfolgen, in eine separate Ressourcendatei (res) für jede Sprache. Zur Laufzeit, gebietsschemaspezifische Ressourcen aus der Ressourcendatei durch Aufruf geladen wurden die `LoadResString`, `LoadResPicture`, und `LoadResData` Funktionen.  
+  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], internationale Versionen einer Anwendung werden erstellt, durch Ändern der `Language` -Eigenschaft eines Formulars zur Entwurfszeit. Eine separate Ressourcendatei (.resx) wird für jedes ausgewählte Gebietsschema automatisch erstellt. Sie müssen nicht mehr Ressourcen explizit aus dem Code zu laden; Ressourcen werden automatisch basierend auf dem Gebietsschema des Benutzers geladen. Weitere Informationen finden Sie unter [Globalisieren von Windows Forms](~/docs/framework/winforms/advanced/globalizing-windows-forms.md).  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelsToTwipsX">
+      <MemberSignature Language="C#" Value="public static double PixelsToTwipsX (double X);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 PixelsToTwipsX(float64 X) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.PixelsToTwipsX(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="X" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="X">Ein <see langword="Double" /> , enthält die X-Koordinate konvertieren.</param>
+        <summary>Konvertiert eine X-Koordinate aus Pixel in Twips.</summary>
+        <returns>Ein <see langword="Double" /> , die die X-Koordinate in Twips enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurden Koordinaten in Twips ausgedrückt; in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] diese in Pixeln ausgedrückt werden. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen zwei Koordinatensysteme verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelsToTwipsY">
+      <MemberSignature Language="C#" Value="public static double PixelsToTwipsY (double Y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 PixelsToTwipsY(float64 Y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.PixelsToTwipsY(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="Y">Ein <see langword="Double" /> , enthält die Y-Koordinate konvertieren.</param>
+        <summary>Konvertiert eine Y-Koordinate aus Pixel in Twips.</summary>
+        <returns>Ein <see langword="Double" /> , der der Y-Koordinate in Twips enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurden Koordinaten in Twips ausgedrückt; in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] diese in Pixeln ausgedrückt werden. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen zwei Koordinatensysteme verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendKeys">
+      <MemberSignature Language="C#" Value="public static void SendKeys (string Keys, bool Wait = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void SendKeys(string Keys, bool Wait) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.SendKeys(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Keys" Type="System.String" />
+        <Parameter Name="Wait" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Keys">Ein <see cref="T:System.String" /> , enthält die Schlüsselwerte.</param>
+        <param name="Wait">
+          <see langword="true" />zum Verarbeiten von Tastatureingaben, bevor die Steuerung an die Prozedur zurückgegeben wird. andernfalls <see langword="false" />.</param>
+        <summary>Sendet eine oder mehrere Tastatureingaben an das aktive Fenster, als ob Sie über die Tastatur eingegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion wird von den Upgrade-Tools zum Emulieren der Visual Basic 6.0 verwendet `SendKeys` Methode. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], verwenden Sie die `My.Computer.Keyboard.SendKeys` Methode stattdessen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCancel">
+      <MemberSignature Language="C#" Value="public static void SetCancel (System.Windows.Forms.Button btn, bool Cancel);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void SetCancel(class System.Windows.Forms.Button btn, bool Cancel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.SetCancel(System.Windows.Forms.Button,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="btn" Type="System.Windows.Forms.Button" />
+        <Parameter Name="Cancel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="btn">Ein <see cref="T:System.Windows.Forms.Button" />.</param>
+        <param name="Cancel">
+          <see langword="true" />Wenn das Visual Basic 6.0 <see langword="CommandButton" /> des Steuerelements <see langword="Cancel" /> Eigenschaft <see langword="true" />andernfalls <see langword="false" />.</param>
+        <summary>Legt die <see cref="P:System.Windows.Forms.Form.CancelButton" /> Eigenschaft von einem <see cref="T:System.Windows.Forms.Form" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0, der boolesche Wert `Default` und `Cancel` Eigenschaften einer `CommandButton` Steuerelement bestimmen, ob das Steuerelement auf die EINGABETASTE oder ESC Schlüssel bzw. reagiert. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], <xref:System.Windows.Forms.Button> nicht mehr-Steuerelement `Default` oder `Cancel` Eigenschaften. Die <xref:System.Windows.Forms.Form> Objekt hat <xref:System.Windows.Forms.Form.AcceptButton%2A> und <xref:System.Windows.Forms.Form.CancelButton%2A> Eigenschaften, die die gleiche Funktionalität bereitstellen; diese Eigenschaften den Namen eines annehmen einer <xref:System.Windows.Forms.Button> Steuerelement als Argument.  
+  
+ Diese Funktion wird von den Upgradetools festzulegende verwendet die <xref:System.Windows.Forms.Form.CancelButton%2A> Eigenschaft eine <xref:System.Windows.Forms.Form>festzulegen, auf die `Cancel` Eigenschaft von einer aktualisierten Visual Basic 6.0 `CommandButton` Steuerelement.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefault">
+      <MemberSignature Language="C#" Value="public static void SetDefault (System.Windows.Forms.Button btn, bool Default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void SetDefault(class System.Windows.Forms.Button btn, bool Default) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.SetDefault(System.Windows.Forms.Button,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="btn" Type="System.Windows.Forms.Button" />
+        <Parameter Name="Default" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="btn">Ein <see cref="T:System.Windows.Forms.Button" />.</param>
+        <param name="Default">
+          <see langword="true" />Wenn das Visual Basic 6.0 <see langword="CommandButton" /> des Steuerelements <see langword="Default" /> Eigenschaft <see langword="true" />andernfalls <see langword="false" />.</param>
+        <summary>Legt die <see cref="P:System.Windows.Forms.Form.AcceptButton" /> Eigenschaft von einem <see cref="T:System.Windows.Forms.Form" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0, der boolesche Wert `Default` und `Cancel` Eigenschaften einer `CommandButton` Steuerelement bestimmen, ob das Steuerelement auf die EINGABETASTE oder ESC Schlüssel bzw. reagiert. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], <xref:System.Windows.Forms.Button> nicht mehr-Steuerelement `Default` oder `Cancel` Eigenschaften. Die <xref:System.Windows.Forms.Form> Objekt hat <xref:System.Windows.Forms.Form.AcceptButton%2A> und <xref:System.Windows.Forms.Form.CancelButton%2A> Eigenschaften, die die gleiche Funktionalität bereitstellen; diese Eigenschaften den Namen eines annehmen einer <xref:System.Windows.Forms.Button> Steuerelement als Argument.  
+  
+ Diese Funktion wird von den Upgradetools festzulegende verwendet die <xref:System.Windows.Forms.Form.AcceptButton%2A> Eigenschaft eine <xref:System.Windows.Forms.Form>festzulegen, auf die `Default` Eigenschaft von einer aktualisierten Visual Basic 6.0 `CommandButton` Steuerelement.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItemData">
+      <MemberSignature Language="C#" Value="public static void SetItemData (System.Windows.Forms.Control Control, int Index, int ItemData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void SetItemData(class System.Windows.Forms.Control Control, int32 Index, int32 ItemData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.SetItemData(System.Windows.Forms.Control,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="Index" Type="System.Int32" />
+        <Parameter Name="ItemData" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Control">Ein <see cref="T:System.Windows.Forms.ListBox" /> oder <see cref="T:System.Windows.Forms.ComboBox" /> Steuerelement.</param>
+        <param name="Index">Die <see langword="Index" /> des <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ListBoxItem" />.</param>
+        <param name="ItemData">Ein <see langword="Integer" /> Zuweisen der <see cref="F:Microsoft.VisualBasic.Compatibility.VB6.ListBoxItem.ItemData" /> Eigenschaft.</param>
+        <summary>Legt die <see cref="F:Microsoft.VisualBasic.Compatibility.VB6.ListBoxItem.ItemData" /> -Eigenschaft für eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ListBoxItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 die `ItemData` -Eigenschaft für eine `ListBox` oder `ComboBox` Steuerelement zur Entwurfszeit festgelegt werden die **Eigenschaften** Fenster zuordnen ein `Integer` mit einer `ListBox` oder `ComboBox` Element. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], `ItemData` Eigenschaft nicht mehr vorhanden ist; die <xref:Microsoft.VisualBasic.Compatibility.VB6.Support.GetItemData%2A> und `SetItemData` Methoden können verwendet werden, zum Emulieren des Verhaltens von `ItemData`.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItemString">
+      <MemberSignature Language="C#" Value="public static void SetItemString (System.Windows.Forms.Control Control, int Index, string ItemString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void SetItemString(class System.Windows.Forms.Control Control, int32 Index, string ItemString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.SetItemString(System.Windows.Forms.Control,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="Index" Type="System.Int32" />
+        <Parameter Name="ItemString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Control">Ein <see cref="T:System.Windows.Forms.ListBox" /> <see cref="T:System.Windows.Forms.ListBox" /> oder <see cref="T:System.Windows.Forms.ComboBox" /> Steuerelement.</param>
+        <param name="Index">Die <see langword="Index" /> des <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ListBoxItem" />.</param>
+        <param name="ItemString">Ein <see cref="T:System.String" /> Zuweisen der <see cref="F:Microsoft.VisualBasic.Compatibility.VB6.ListBoxItem.ItemString" /> Eigenschaft.</param>
+        <summary>Legt die <see cref="F:Microsoft.VisualBasic.Compatibility.VB6.ListBoxItem.ItemString" /> -Eigenschaft für eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ListBoxItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion wird von den Upgrade-Tools zum Emulieren der Visual Basic 6.0 verwendet `List` Eigenschaft. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], verwenden Sie die <xref:System.Windows.Forms.ComboBox.Items%2A> oder <xref:System.Windows.Forms.ListBox.Items%2A> Eigenschaft stattdessen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetResourceBaseName">
+      <MemberSignature Language="C#" Value="public static void SetResourceBaseName (string BaseFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void SetResourceBaseName(string BaseFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.SetResourceBaseName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="BaseFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="BaseFileName">Eine Ressourcendatei (res).</param>
+        <summary>Weist den Namen einer Visual Basic 6.0-Ressourcendatei mit dem aktuellen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Projektnamespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ressourcenbehandlung unterscheidet sich für Visual Basic 6.0 und [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Diese Funktion wird von den Upgradetools verwendet, um eine Visual Basic 6.0-Ressourcendatei zu einem Projekt hinzuzufügen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetResourceBaseName">
+      <MemberSignature Language="C#" Value="public static void SetResourceBaseName (string ProjectNamespace, string BaseFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void SetResourceBaseName(string ProjectNamespace, string BaseFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.SetResourceBaseName(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ProjectNamespace" Type="System.String" />
+        <Parameter Name="BaseFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ProjectNamespace">Ein <see cref="T:System.String" /> , enthält die <see langword="Namespace" /> für die Ressourcendatei.</param>
+        <param name="BaseFileName">Eine Ressourcendatei (res).</param>
+        <summary>Weist den Namen des zu einer Visual Basic 6.0-Ressourcendatei ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Projektnamespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ressourcenbehandlung unterscheidet sich für Visual Basic 6.0 und [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Diese Funktion wird von den Upgradetools verwendet, um eine Visual Basic 6.0-Ressourcendatei zu einem Projekt hinzuzufügen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowForm">
+      <MemberSignature Language="C#" Value="public static void ShowForm (System.Windows.Forms.Form Form, int Modal = 0, System.Windows.Forms.Form OwnerForm = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void ShowForm(class System.Windows.Forms.Form Form, int32 Modal, class System.Windows.Forms.Form OwnerForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.ShowForm(System.Windows.Forms.Form,System.Int32,System.Windows.Forms.Form)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Form" Type="System.Windows.Forms.Form" />
+        <Parameter Name="Modal" Type="System.Int32" />
+        <Parameter Name="OwnerForm" Type="System.Windows.Forms.Form" />
+      </Parameters>
+      <Docs>
+        <param name="Form">Die <see cref="T:System.Windows.Forms.Form" /> angezeigt.</param>
+        <param name="Modal">Dies ist optional. Ein <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FormShowConstants" /> -Enumeration, die Modalität angibt.</param>
+        <param name="OwnerForm">Dies ist optional. Die <c>Besitzer</c> Parameter von der <see cref="M:System.Windows.Forms.Form.ShowDialog" /> Methode.</param>
+        <summary>Zeigt ein Formular durch Aufrufen der <see cref="M:System.Windows.Forms.Control.Show" /> oder <see cref="M:System.Windows.Forms.Form.ShowDialog" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 die `Show` Methode angegeben, ob ein Formular modal angezeigt wird, in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] durch ersetzt die <xref:System.Windows.Forms.Control.Show%2A> und <xref:System.Windows.Forms.Form.ShowDialog%2A> Methoden. Diese Funktion wird von den Upgradetools abzubildenden Visual Basic 6.0 verwendet `Show` Methode, um entweder die <xref:System.Windows.Forms.Control.Show%2A> oder <xref:System.Windows.Forms.Form.ShowDialog%2A> Methode.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabLayout">
+      <MemberSignature Language="C#" Value="public static string TabLayout (params object[] Args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string TabLayout(object[] Args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.TabLayout(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="Args">Ein Ausdruck oder eine Liste von Ausdrücken zu drucken.</param>
+        <summary>Zeichenfolgen in Visual Basic 6.0 simulieren formatiert <see langword="Debug.Print" /> Funktionalität.</summary>
+        <returns>Eine formatierte <see cref="T:System.String" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 die `Debug.Print` Fehlerarray ein `outputlist` Parameter, der angegeben wird, wie die Ausgabe im formatiert wurde die **Direktfenster** Fenster. Diese Funktion dient die Upgrade-Tools beim Übersetzen der `outputlist` Parameter in eine Zeichenfolge für die Anzeige in der **Direktfenster** Fenster.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToPixelsUserHeight">
+      <MemberSignature Language="C#" Value="public static double ToPixelsUserHeight (double Height, double ScaleHeight, int OriginalHeightInPixels);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 ToPixelsUserHeight(float64 Height, float64 ScaleHeight, int32 OriginalHeightInPixels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.ToPixelsUserHeight(System.Double,System.Double,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Height" Type="System.Double" />
+        <Parameter Name="ScaleHeight" Type="System.Double" />
+        <Parameter Name="OriginalHeightInPixels" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Height">Ein <see cref="T:System.Double" /> , der die Höhe darstellt.</param>
+        <param name="ScaleHeight">Ein <see cref="T:System.Double" /> , Visual Basic 6.0 darstellt <see langword="ScaleHeight" /> für den aktuellen <see langword="ScaleMode" />.</param>
+        <param name="OriginalHeightInPixels">Ein <see langword="Integer" /> , der die Höhe in Pixel darstellt.</param>
+        <summary>Konvertiert eine Visual Basic 6.0 <see langword="ScaleHeight" /> Messungen, um eine Maßeinheit Pixel.</summary>
+        <returns>Ein <see cref="T:System.Double" /> , enthält das konvertierte Visual Basic 6.0 <see langword="ScaleHeight" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 unterstützt mehrere Koordinatensysteme durch definiert eine `ScaleMode` Eigenschaft. Diese enthalten einen benutzerdefinierten Wert. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unterstützt nur ein Koordinatensystem, die auf Pixel basieren. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen Pixel und einen benutzerdefinierten Skalierungswert verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToPixelsUserWidth">
+      <MemberSignature Language="C#" Value="public static double ToPixelsUserWidth (double Width, double ScaleWidth, int OriginalWidthInPixels);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 ToPixelsUserWidth(float64 Width, float64 ScaleWidth, int32 OriginalWidthInPixels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.ToPixelsUserWidth(System.Double,System.Double,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Width" Type="System.Double" />
+        <Parameter Name="ScaleWidth" Type="System.Double" />
+        <Parameter Name="OriginalWidthInPixels" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Width">Ein <see cref="T:System.Double" /> , das die Breite darstellt.</param>
+        <param name="ScaleWidth">Ein <see cref="T:System.Double" /> , Visual Basic 6.0 darstellt <see langword="ScaleWidth" /> für den aktuellen <see langword="ScaleMode" />.</param>
+        <param name="OriginalWidthInPixels">Ein <see langword="Integer" /> , der die Breite in Pixel darstellt.</param>
+        <summary>Konvertiert eine Visual Basic 6.0 <see langword="ScaleWidth" /> Messungen, um eine Maßeinheit Pixel.</summary>
+        <returns>Ein <see cref="T:System.Double" /> , enthält das konvertierte Visual Basic 6.0 <see langword="ScaleWidth" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 unterstützt mehrere Koordinatensysteme durch definiert eine `ScaleMode` Eigenschaft. Diese enthalten einen benutzerdefinierten Wert. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unterstützt nur ein Koordinatensystem, die auf Pixel basieren. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen Pixel und einen benutzerdefinierten Skalierungswert verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToPixelsUserX">
+      <MemberSignature Language="C#" Value="public static double ToPixelsUserX (double X, double ScaleLeft, double ScaleWidth, int OriginalWidthInPixels);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 ToPixelsUserX(float64 X, float64 ScaleLeft, float64 ScaleWidth, int32 OriginalWidthInPixels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.ToPixelsUserX(System.Double,System.Double,System.Double,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="X" Type="System.Double" />
+        <Parameter Name="ScaleLeft" Type="System.Double" />
+        <Parameter Name="ScaleWidth" Type="System.Double" />
+        <Parameter Name="OriginalWidthInPixels" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="X">Ein <see cref="T:System.Double" />-Wert, der die X-Koordinate darstellt.</param>
+        <param name="ScaleLeft">Ein <see cref="T:System.Double" /> , Visual Basic 6.0 darstellt <see langword="ScaleLeft" /> für den aktuellen <see langword="ScaleMode" />.</param>
+        <param name="ScaleWidth">Ein <see cref="T:System.Double" /> , Visual Basic 6.0 darstellt <see langword="ScaleWidth" /> für den aktuellen <see langword="ScaleMode" />.</param>
+        <param name="OriginalWidthInPixels">Ein <see langword="Integer" /> , der die Breite in Pixel darstellt.</param>
+        <summary>Konvertiert eine Visual Basic 6.0 <see langword="ScaleLeft" /> Messungen, um eine Maßeinheit Pixel.</summary>
+        <returns>Ein <see cref="T:System.Double" /> , enthält das konvertierte Visual Basic 6.0 <see langword="ScaleLeft" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 unterstützt mehrere Koordinatensysteme durch definiert eine `ScaleMode` Eigenschaft. Diese enthalten einen benutzerdefinierten Wert. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unterstützt nur ein Koordinatensystem, die auf Pixel basieren. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen Pixel und einen benutzerdefinierten Skalierungswert verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToPixelsUserY">
+      <MemberSignature Language="C#" Value="public static double ToPixelsUserY (double Y, double ScaleTop, double ScaleHeight, int OriginalHeightInPixels);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 ToPixelsUserY(float64 Y, float64 ScaleTop, float64 ScaleHeight, int32 OriginalHeightInPixels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.ToPixelsUserY(System.Double,System.Double,System.Double,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Y" Type="System.Double" />
+        <Parameter Name="ScaleTop" Type="System.Double" />
+        <Parameter Name="ScaleHeight" Type="System.Double" />
+        <Parameter Name="OriginalHeightInPixels" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Y">Ein <see cref="T:System.Double" /> , der die Y-Koordinate darstellt.</param>
+        <param name="ScaleTop">Ein <see cref="T:System.Double" /> , Visual Basic 6.0 darstellt <see langword="ScaleTop" /> für den aktuellen <see langword="ScaleMode" />.</param>
+        <param name="ScaleHeight">Ein <see cref="T:System.Double" /> , Visual Basic 6.0 darstellt <see langword="ScaleHeight" /> für den aktuellen <see langword="ScaleMode" />.</param>
+        <param name="OriginalHeightInPixels">Ein <see langword="Integer" /> , der die Höhe in Pixel darstellt.</param>
+        <summary>Konvertiert eine Visual Basic 6.0 <see langword="ScaleTop" /> Messungen, um eine Maßeinheit Pixel.</summary>
+        <returns>Ein <see cref="T:System.Double" /> , enthält das konvertierte Visual Basic 6.0 <see langword="ScaleLeft" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 unterstützt mehrere Koordinatensysteme durch definiert eine `ScaleMode` Eigenschaft. Diese enthalten einen benutzerdefinierten Wert. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unterstützt nur ein Koordinatensystem, die auf Pixel basieren. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen Pixel und einen benutzerdefinierten Skalierungswert verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToPixelsX">
+      <MemberSignature Language="C#" Value="public static double ToPixelsX (double X, Microsoft.VisualBasic.Compatibility.VB6.ScaleMode FromScale);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 ToPixelsX(float64 X, valuetype Microsoft.VisualBasic.Compatibility.VB6.ScaleMode FromScale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.ToPixelsX(System.Double,Microsoft.VisualBasic.Compatibility.VB6.ScaleMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="X" Type="System.Double" />
+        <Parameter Name="FromScale" Type="Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" />
+      </Parameters>
+      <Docs>
+        <param name="X">Ein <see cref="T:System.Double" />-Wert, der die X-Koordinate darstellt.</param>
+        <param name="FromScale">Eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" />-Enumeration, die den zu konvertierenden Visual Basic 6.0-<see langword="ScaleMode" /> darstellt.</param>
+        <summary>Konvertiert ein Visual Basic 6.0-Maß für einen angegebenen <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" /> in ein Pixelmaß.</summary>
+        <returns>Ein <see cref="T:System.Double" />-Wert, der den Pixelwert für den angegebenen <see langword="ScaleMode" /> enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 unterstützt mehrere Koordinatensysteme durch definiert eine `ScaleMode` Eigenschaft. Diese enthalten einen benutzerdefinierten Wert. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unterstützt nur ein Koordinatensystem, die auf Pixel basieren. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen Pixel und einen benutzerdefinierten Skalierungswert verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToPixelsY">
+      <MemberSignature Language="C#" Value="public static double ToPixelsY (double Y, Microsoft.VisualBasic.Compatibility.VB6.ScaleMode FromScale);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 ToPixelsY(float64 Y, valuetype Microsoft.VisualBasic.Compatibility.VB6.ScaleMode FromScale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.ToPixelsY(System.Double,Microsoft.VisualBasic.Compatibility.VB6.ScaleMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Y" Type="System.Double" />
+        <Parameter Name="FromScale" Type="Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" />
+      </Parameters>
+      <Docs>
+        <param name="Y">Ein <see cref="T:System.Double" /> , der die Y-Koordinate darstellt.</param>
+        <param name="FromScale">Eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" />-Enumeration, die den zu konvertierenden Visual Basic 6.0-<see langword="ScaleMode" /> darstellt.</param>
+        <summary>Konvertiert ein Visual Basic 6.0-Maß für einen angegebenen <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" /> in ein Pixelmaß.</summary>
+        <returns>Ein <see cref="T:System.Double" />-Wert, der den Pixelwert für den angegebenen <see langword="ScaleMode" /> enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Basic 6.0 unterstützt mehrere Koordinatensysteme durch definiert eine `ScaleMode` Eigenschaft. Diese enthalten einen benutzerdefinierten Wert. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unterstützt nur ein Koordinatensystem, die auf Pixel basieren. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen Pixel und einen benutzerdefinierten Skalierungswert verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TwipsPerPixelX">
+      <MemberSignature Language="C#" Value="public static float TwipsPerPixelX ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static float32 TwipsPerPixelX() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.TwipsPerPixelX" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert ab, das Twips in Pixel, die basierend auf Einstellungen zu konvertieren.</summary>
+        <returns>Ein <see langword="Double" /> Faktor enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurden Koordinaten in Twips ausgedrückt; in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] diese in Pixeln ausgedrückt werden. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen zwei Koordinatensysteme verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TwipsPerPixelY">
+      <MemberSignature Language="C#" Value="public static float TwipsPerPixelY ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static float32 TwipsPerPixelY() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.TwipsPerPixelY" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert ab, das Twips in Pixel, die basierend auf Einstellungen zu konvertieren.</summary>
+        <returns>Ein <see langword="Double" /> Faktor enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurden Koordinaten in Twips ausgedrückt; in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] diese in Pixeln ausgedrückt werden. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen zwei Koordinatensysteme verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TwipsToPixelsX">
+      <MemberSignature Language="C#" Value="public static double TwipsToPixelsX (double X);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 TwipsToPixelsX(float64 X) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.TwipsToPixelsX(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="X" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="X">Ein <see langword="Double" /> , enthält die X-Koordinate konvertieren.</param>
+        <summary>Konvertiert eine X-Koordinate aus Twips in Pixel.</summary>
+        <returns>Ein <see langword="Double" /> , die die X-Koordinate in Pixel enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurden Koordinaten in Twips ausgedrückt; in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] diese in Pixeln ausgedrückt werden. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen zwei Koordinatensysteme verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TwipsToPixelsY">
+      <MemberSignature Language="C#" Value="public static double TwipsToPixelsY (double Y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 TwipsToPixelsY(float64 Y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.TwipsToPixelsY(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="Y">Ein <see langword="Double" /> , enthält die X-Koordinate konvertieren.</param>
+        <summary>Konvertiert eine Y-Koordinate aus Twips in Pixel.</summary>
+        <returns>Ein <see langword="Double" /> , der die Y-Koordinate in Pixel enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 wurden Koordinaten in Twips ausgedrückt; in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] diese in Pixeln ausgedrückt werden. Diese Funktion wird von den Upgrade-Tools zum Konvertieren zwischen zwei Koordinatensysteme verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateControls">
+      <MemberSignature Language="C#" Value="public static void ValidateControls (System.Windows.Forms.ContainerControl Form);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void ValidateControls(class System.Windows.Forms.ContainerControl Form) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.ValidateControls(System.Windows.Forms.ContainerControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Form" Type="System.Windows.Forms.ContainerControl" />
+      </Parameters>
+      <Docs>
+        <param name="Form">Die <see cref="T:System.Windows.Forms.ContainerControl" /> , in dem das Steuerelement untergeordnet ist.</param>
+        <summary>Emuliert das Verhalten von Visual Basic 6.0 <see langword="ValidateControls" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 die `ValidateControls` Methode wurde verwendet, um zu erzwingen der `Validate` -Ereignis für das Steuerelement, das Fokus besitzt, wenn ein Formular geschlossen wird, wenn die `Validate` Bewegungsereignis ein Fehler auftritt, wurde ein Fehler ausgelöst. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], `ValidateControls` Methode wird durch ersetzt die <xref:System.Windows.Forms.ContainerControl.Validate%2A> Methode, die zurückgibt `true` oder `false`.  
+  
+ Diese Funktion wird von den Upgrade-Tools zum Emulieren des Verhaltens von Visual Basic 6.0 verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WhatsThisMode">
+      <MemberSignature Language="C#" Value="public static void WhatsThisMode (System.Windows.Forms.Form Form);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void WhatsThisMode(class System.Windows.Forms.Form Form) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.WhatsThisMode(System.Windows.Forms.Form)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Form" Type="System.Windows.Forms.Form" />
+      </Parameters>
+      <Docs>
+        <param name="Form">Ein <see cref="T:System.Windows.Forms.Form" />.</param>
+        <summary>Zeigt die kontextbezogene Hilfe für ein Formular, das von Visual Basic 6.0 aktualisiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kontextbezogene Hilfe in Visual Basic 6.0 wurde implementiert, mit der `WhatsThisButton` und `WhatsThisHelp` Eigenschaften eines Formulars; kontextbezogene Hilfe in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wird mit implementiert die <xref:System.Windows.Forms.Form.HelpButton%2A> -Eigenschaft eines Formulars. Diese Funktion wird von den Upgradetools so ändern Sie die Methode zum Anzeigen von kontextbezogene Hilfe in einer aktualisierten Anwendung verwendet.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZOrder">
+      <MemberSignature Language="C#" Value="public static void ZOrder (System.Windows.Forms.Control Control, int Position);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void ZOrder(class System.Windows.Forms.Control Control, int32 Position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.Support.ZOrder(System.Windows.Forms.Control,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="Position" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Control">Ein <see cref="T:System.Windows.Forms.Control" />.</param>
+        <param name="Position">Eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ZOrderConstants" />-Enumeration.</param>
+        <summary>Konvertiert die Visual Basic <see langword="ZOrder" /> Methode für die Verwendung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 die `ZOrder` -Methode wurde verwendet, um die Anordnung von Steuerelementen; in anzugeben [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zeichenbasierten wird ersetzt durch die <xref:System.Windows.Forms.Control.BringToFront%2A> und <xref:System.Windows.Forms.Control.SendToBack%2A> Methoden. Diese Funktion wird von den Upgrade-Tools verwendet, um die Zuordnung zwischen den Methoden.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

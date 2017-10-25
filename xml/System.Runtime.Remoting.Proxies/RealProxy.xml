@@ -1,0 +1,629 @@
+<Type Name="RealProxy" FullName="System.Runtime.Remoting.Proxies.RealProxy">
+  <TypeSignature Language="C#" Value="public abstract class RealProxy" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi abstract beforefieldinit RealProxy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Proxies.RealProxy" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisfunktionalität für Proxys bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Proxies.RealProxy> Klasse ist die `abstract` Basisklasse, die von der Proxys abgeleitet werden müssen.  
+  
+ Ein Client, der ein Objekt über jede Art von Remotegrenze verwendet, wird tatsächlich einen transparenten Proxy für das Objekt verwendet. Transparente Proxy bietet den Eindruck, dass das eigentliche Objekt auf dem Client befindet. Sie erreicht dies durch die Weiterleitung der Aufrufe, die an das eigentliche Objekt mit der Infrastruktur für den Remotezugriff auf.  
+  
+ Transparente Proxy wird selbst durch eine Instanz einer verwalteten Klasse vom Typ untergebracht <xref:System.Runtime.Remoting.Proxies.RealProxy>. Die <xref:System.Runtime.Remoting.Proxies.RealProxy> implementiert einen Teil der Funktionalität, die zum Weiterleiten der Vorgänge vom transparenten Proxy erforderlich ist. Beachten Sie, dass ein Proxyobjekt die zugeordnete Semantik verwalteter Objekte wie z. B. Garbagecollection, Unterstützung für Felder und Methoden erbt, und auf neue Geräteklassen Formular erweitert werden kann. Der Proxy ist dual aufgebaut;: fungiert als ein Objekt der Klasse des Remoteobjekts (transparenter Proxy), und es ist ein verwaltetes Objekt selbst.  
+  
+ Ein Proxy-Objekt kann verwendet werden, unabhängig von der Remote-Untereinheiten innerhalb einer <xref:System.AppDomain>.  
+  
+> [!NOTE]
+>  Diese Klasse stellt einen Linkaufruf und einer vererbungsanforderung auf Klassenebene. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder die abgeleitete Klasse Berechtigung für die Infrastruktur verfügt. Weitere Informationen zu sicherheitsforderungen, finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) und [Vererbungsanforderungen](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ [!code-cpp[ChannelServices_SyncDispatchMessage#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ChannelServices_SyncDispatchMessage/CPP/channelservices_syncdispatchmessage_client.cpp#1)]
+ [!code-csharp[ChannelServices_SyncDispatchMessage#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ChannelServices_SyncDispatchMessage/CS/channelservices_syncdispatchmessage_client.cs#1)]
+ [!code-vb[ChannelServices_SyncDispatchMessage#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ChannelServices_SyncDispatchMessage/VB/channelservices_syncdispatchmessage_client.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von <see cref="T:System.Runtime.Remoting.Proxies.RealProxy" />, müssen Sie überschreiben die <see cref="M:System.Runtime.Remoting.Proxies.RealProxy.Invoke(System.Runtime.Remoting.Messaging.IMessage)" /> Methode.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealProxy ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Proxies.RealProxy" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#12](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#12)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#12](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#12)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#12](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealProxy (Type classToProxy);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Type classToProxy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="classToProxy" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="classToProxy">Die <see cref="T:System.Type" /> des Remoteobjekts für die einen Proxy erstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Proxies.RealProxy" /> Klasse, die einem Remoteobjekt des angegebenen darstellt <see cref="T:System.Type" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Methode erstellt einen transparenten Proxy, die über zugegriffen werden kann die <xref:System.Runtime.Remoting.Proxies.RealProxy.GetTransparentProxy%2A> Methode.  
+  
+ Ein Client, der ein Objekt über jede Art von Remotegrenze verwendet, wird tatsächlich einen transparenten Proxy für das Objekt verwendet. Der transparente Proxy vermittelt den Eindruck, dass das eigentliche Objekt auf dem Client befindet. Sie erreicht dies durch die Weiterleitung der Aufrufe, die an das eigentliche Objekt mit der Infrastruktur für den Remotezugriff auf.  
+  
+ Transparente Proxy wird von einer Instanz von einem verwalteten Laufzeitklasse untergebracht <xref:System.Runtime.Remoting.Proxies.RealProxy>. Die <xref:System.Runtime.Remoting.Proxies.RealProxy> implementiert einen Teil der Funktionalität, die zum Weiterleiten der Vorgänge vom transparenten Proxy erforderlich ist. Beachten Sie, dass ein Proxyobjekt die zugeordnete Semantik verwalteter Objekte wie z. B. Garbagecollection und Unterstützung für Felder und Methoden erbt, und auf neue Geräteklassen Formular erweitert werden kann. Der Proxy ist dual aufgebaut;: Es fungiert als ein Objekt der Klasse des Remoteobjekts (transparenter Proxy), und ein verwaltetes Objekt selbst.  
+  
+   
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#10](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#10)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#10](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#10)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#10](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="classToProxy" />ist keine Schnittstelle und nicht von abgeleitet <see cref="T:System.MarshalByRefObject" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealProxy (Type classToProxy, IntPtr stub, object stubData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Type classToProxy, native int stub, object stubData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.#ctor(System.Type,System.IntPtr,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="classToProxy" Type="System.Type" />
+        <Parameter Name="stub" Type="System.IntPtr" />
+        <Parameter Name="stubData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="classToProxy">Die <see cref="T:System.Type" /> des Remoteobjekts für die einen Proxy erstellt.</param>
+        <param name="stub">Einen Stub, der neue Proxyinstanz zugeordnet werden soll.</param>
+        <param name="stubData">Der Stubdaten, die für den angegebenen Stub und die neue Proxyinstanz festgelegt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Proxies.RealProxy" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Stubdaten wird von benutzerdefinierten Proxybenutzer entscheiden, was mit einer eingehenden Methodenaufruf zu tun. Die Stubdaten möglicherweise z. B. Informationen zum Kontext des Servers sein, verwenden, um zu ermitteln, ob der Aufruf lokal ausgeführt oder über die Remotinginfrastruktur zu senden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="classToProxy" />ist keine Schnittstelle und nicht von abgeleitet <see cref="T:System.MarshalByRefObject" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von nicht verwalteten Codes. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachServer">
+      <MemberSignature Language="C#" Value="protected void AttachServer (MarshalByRefObject s);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AttachServer(class System.MarshalByRefObject s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.AttachServer(System.MarshalByRefObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.MarshalByRefObject" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see cref="T:System.MarshalByRefObject" /> , die die aktuellen Proxyinstanz darstellt.</param>
+        <summary>Fügt die aktuellen Proxyinstanz an der angegebenen Remoteinstanz <see cref="T:System.MarshalByRefObject" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer besitzt keine UnmanagedCode-Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit, nicht verwalteten Code aufrufen. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateObjRef">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Remoting.ObjRef CreateObjRef (Type requestedType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.ObjRef CreateObjRef(class System.Type requestedType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.CreateObjRef(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.ObjRef</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestedType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="requestedType">Geben Sie das Objekt, das eine <see cref="T:System.Runtime.Remoting.ObjRef" /> wird erstellt.</param>
+        <summary>Erstellt eine <see cref="T:System.Runtime.Remoting.ObjRef" /> für den angegebenen Objekttyp und registriert ihn beim Remoting-Infrastruktur als Client aktivierten-Objekt.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.Runtime.Remoting.ObjRef" /> , die für den angegebenen Typ erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#6](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#6)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#6](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#6)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetachServer">
+      <MemberSignature Language="C#" Value="protected MarshalByRefObject DetachServer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.MarshalByRefObject DetachServer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.DetachServer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.MarshalByRefObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Trennt die aktuelle Proxyinstanz aus den Remoteserver-Objekt, das es darstellt.</summary>
+        <returns>Das getrennte Serverobjekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer besitzt keine UnmanagedCode-Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit, nicht verwalteten Code aufrufen. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCOMIUnknown">
+      <MemberSignature Language="C#" Value="public virtual IntPtr GetCOMIUnknown (bool fIsMarshalled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance native int GetCOMIUnknown(bool fIsMarshalled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.GetCOMIUnknown(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fIsMarshalled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fIsMarshalled">
+          <see langword="true" />, wenn der Objektverweis zum Marshalling zu einem Remotespeicherort angefordert wird; <see langword="false" />, wenn der Objektverweis zum Kommunizieren mit nicht verwalteten Objekten im aktuellen Prozess über COM angefordert wird.</param>
+        <summary>Fordert einen nicht verwalteten Verweis auf das Objekt an, das durch die aktuelle Proxyinstanz dargestellt wird.</summary>
+        <returns>Ein Zeiger auf eine [COM Callable Wrapper](~/docs/framework/interop/com-callable-wrapper.md) Wenn der Objektverweis für die Kommunikation mit nicht verwalteten Objekten im aktuellen Prozess über COM angefordert wird, oder ein Zeiger auf eine zwischengespeicherte oder neu generierte <see langword="IUnknown" /> COM Schnittstelle, wenn die Objektverweis wird für das Marshalling von an einem Remotespeicherort angefordert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Proxy für das Marshalling von, angefordert wird ein `IUnknown` -Schnittstelle für das Objekt dargestellt, die von der aktuellen Proxyinstanz zurückgegeben wird. Wenn ein `IUnknown` wurde zuvor zwischengespeicherte die <xref:System.Runtime.Remoting.Proxies.RealProxy.SetCOMIUnknown%2A> Methode, klicken Sie dann diese Instanz zurückgegeben, andernfalls wird eine neue Instanz zurückgegeben.  
+  
+ Wenn der Proxy nicht für das Marshalling von jedoch für die Kommunikation mit nicht verwalteten Objekten im aktuellen Prozess angefordert wird und dann eine [COM Callable Wrapper](~/docs/framework/interop/com-callable-wrapper.md) (CCW), die im aktuellen Prozess für die Kommunikation über COM verwendet werden kann, wird zurückgegeben.  
+  
+   
+  
+## Examples  
+ [!code-cpp[RealProxy_Sample#2](~/samples/snippets/cpp/VS_Snippets_Remoting/RealProxy_Sample/CPP/realproxy_sample.cpp#2)]
+ [!code-csharp[RealProxy_Sample#2](~/samples/snippets/csharp/VS_Snippets_Remoting/RealProxy_Sample/CS/realproxy_sample.cs#2)]
+ [!code-vb[RealProxy_Sample#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RealProxy_Sample/VB/realproxy_sample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> in den transparente Proxy serialisiert wird.</param>
+        <param name="context">Die Quelle und das Ziel der Serialisierung.</param>
+        <summary>Fügt der transparenten Proxy des Objekts dargestellt, die von der aktuellen Instanz der <see cref="T:System.Runtime.Remoting.Proxies.RealProxy" /> in den angegebenen <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#7](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#7)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#7](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#7)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="info" />-Parameter oder der <paramref name="context" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">SerializationFormatter Berechtigung keine für der unmittelbaren Aufrufer.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für das Bereitstellen von Serialisierungsdiensten. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProxiedType">
+      <MemberSignature Language="C#" Value="public Type GetProxiedType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetProxiedType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.GetProxiedType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Type" /> des Objekts, das der aktuellen Instanz der <see cref="T:System.Runtime.Remoting.Proxies.RealProxy" /> darstellt.</summary>
+        <returns>Die <see cref="T:System.Type" /> des Objekts, das der aktuellen Instanz der <see cref="T:System.Runtime.Remoting.Proxies.RealProxy" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#10](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#10)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#10](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#10)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#10](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStubData">
+      <MemberSignature Language="C#" Value="public static object GetStubData (System.Runtime.Remoting.Proxies.RealProxy rp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetStubData(class System.Runtime.Remoting.Proxies.RealProxy rp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.GetStubData(System.Runtime.Remoting.Proxies.RealProxy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rp" Type="System.Runtime.Remoting.Proxies.RealProxy" />
+      </Parameters>
+      <Docs>
+        <param name="rp">Der Proxy für die, das Stub Daten angefordert werden.</param>
+        <summary>Ruft die Stubdaten, die für den angegebenen Proxy gespeichert ist.</summary>
+        <returns>Daten für den angegebenen Proxy-Stub.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Stubdaten wird von benutzerdefinierten Proxybenutzer entscheiden, was mit einer eingehenden Methodenaufruf zu tun. Die Stubdaten möglicherweise z. B. Informationen zum Kontext des Servers sein, verwenden, um zu ermitteln, ob der Aufruf lokal ausgeführt oder über die Remotinginfrastruktur zu senden.  
+  
+   
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#9](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#9)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#9](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#9)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#9](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer besitzt keine UnmanagedCode-Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit, nicht verwalteten Code aufrufen. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTransparentProxy">
+      <MemberSignature Language="C#" Value="public virtual object GetTransparentProxy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetTransparentProxy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.GetTransparentProxy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die transparente Proxy für die aktuelle Instanz des <see cref="T:System.Runtime.Remoting.Proxies.RealProxy" />.</summary>
+        <returns>Die transparente Proxy für die aktuelle Proxyinstanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#8](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#8)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#8](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#8)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#8](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnwrappedServer">
+      <MemberSignature Language="C#" Value="protected MarshalByRefObject GetUnwrappedServer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.MarshalByRefObject GetUnwrappedServer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.GetUnwrappedServer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.MarshalByRefObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Serverobjekt, das von der aktuellen Proxyinstanz dargestellt wird.</summary>
+        <returns>Das Serverobjekt, das von der aktuellen Proxyinstanz dargestellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Proxies.RealProxy.GetUnwrappedServer%2A> -Methode werden in Szenarien mit einem externen <xref:System.Runtime.Remoting.Contexts.Context> in der gleichen <xref:System.AppDomain>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer besitzt keine UnmanagedCode-Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit, nicht verwalteten Code aufrufen. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeServerObject">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Activation.IConstructionReturnMessage InitializeServerObject (System.Runtime.Remoting.Activation.IConstructionCallMessage ctorMsg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Runtime.Remoting.Activation.IConstructionReturnMessage InitializeServerObject(class System.Runtime.Remoting.Activation.IConstructionCallMessage ctorMsg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.InitializeServerObject(System.Runtime.Remoting.Activation.IConstructionCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Activation.IConstructionReturnMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctorMsg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="ctorMsg">Eine Meldung, die die Konstruktorparametern für die neue Instanz des Remoteobjekts enthält, die vom aktuellen dargestellt wird <see cref="T:System.Runtime.Remoting.Proxies.RealProxy" />. Kann <see langword="null" />.</param>
+        <summary>Initialisiert eine neue Instanz des Objekts <see cref="T:System.Type" /> der die Remote-Objekt, mit der aktuellen Instanz der <see cref="T:System.Runtime.Remoting.Proxies.RealProxy" /> darstellt, mit dem angegebenen <see cref="T:System.Runtime.Remoting.Activation.IConstructionCallMessage" />.</summary>
+        <returns>Das Ergebnis der Anforderung zur Erstellung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `ctorMsg` Parameter ist `null`, und klicken Sie dann die <xref:System.Runtime.Remoting.Proxies.RealProxy.InitializeServerObject%2A> Methodenaufrufe den Standardkonstruktor für die neue Instanz des Remoteobjekts, das vom aktuellen dargestellt wird <xref:System.Runtime.Remoting.Proxies.RealProxy>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#5](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#5)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#5](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#5)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer besitzt keine UnmanagedCode-Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit, nicht verwalteten Code aufrufen. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public abstract System.Runtime.Remoting.Messaging.IMessage Invoke (System.Runtime.Remoting.Messaging.IMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessage Invoke(class System.Runtime.Remoting.Messaging.IMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.Invoke(System.Runtime.Remoting.Messaging.IMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Ein <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> , enthält eine <see cref="T:System.Collections.IDictionary" /> von Informationen über den Aufruf der Methode.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die angegebene Methode im bereitgestellten <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> für das remote-Objekt, das von der aktuellen Instanz dargestellt wird.</summary>
+        <returns>Die Meldung zurückgegeben, die von der aufgerufenen Methode, mit dem Rückgabewert und allen <see langword="out" /> oder <see langword="ref" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die transparenter Proxy, der verarbeitet die <xref:System.Runtime.Remoting.Proxies.RealProxy> ist delegiert aufgerufen wird, die Aufrufe an die <xref:System.Runtime.Remoting.Proxies.RealProxy.Invoke%2A> Methode. Die <xref:System.Runtime.Remoting.Proxies.RealProxy.Invoke%2A> Methode transformiert die Nachricht in die `msg` Parameter in einem <xref:System.Runtime.Remoting.Messaging.IMethodCallMessage>, und sendet diese an die remote-Objekt, das von der aktuellen Instanz der dargestellt wird <xref:System.Runtime.Remoting.Proxies.RealProxy>.  
+  
+ Die <xref:System.Runtime.Remoting.Messaging.IMessage> Parameter stellt ein Wörterbuch, über die <xref:System.Runtime.Remoting.Messaging.IMessage.Properties%2A?displayProperty=nameWithType> Eigenschaft. Das Wörterbuch enthält Name/Wert-Paare von Informationen über den Aufruf der Methode an, z. B. den Namen der Methode wird aufgerufen, und seine Parameter.  
+  
+   
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#4](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#4)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#4](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#4)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCOMIUnknown">
+      <MemberSignature Language="C#" Value="public virtual void SetCOMIUnknown (IntPtr i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetCOMIUnknown(native int i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.SetCOMIUnknown(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="i">Ein Zeiger auf die <see langword="IUnknown" /> Schnittstelle für das Objekt, das von der aktuellen Proxyinstanz dargestellt wird.</param>
+        <summary>Speichert einen nicht verwalteten Proxy des Objekts, das von der aktuellen Instanz dargestellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein nicht verwalteter Proxy versucht, mit der common Language Runtime über COM zu kommunizieren, löst die Laufzeit das remote-Objekt, das vom nicht verwalteten Proxy dargestellt wird. Wenn das Remoteobjekt verwaltet und befindet sich auch in einer Umgebung der common Language, wird das Objekt anstelle der Kommunikation mit ihm über verteilte COM für den aktuellen Prozess gesendet.  
+  
+ Wenn das Remoteobjekt nicht abgeleitet ist <xref:System.MarshalByRefObject>, und klicken Sie dann serialisiert und an den aktuellen Speicherort kopiert. Wenn es von abgeleitet ist <xref:System.MarshalByRefObject>, gibt es einen transparenten Proxy zurück und Infrastruktur für den Remotezugriff nicht verwalteten Proxy zwischengespeichert (das `IUnknown` Schnittstelle) im transparenter Proxy für die zukünftige Verwendung.  
+  
+   
+  
+## Examples  
+ [!code-cpp[RealProxy_Sample#3](~/samples/snippets/cpp/VS_Snippets_Remoting/RealProxy_Sample/CPP/realproxy_sample.cpp#3)]
+ [!code-csharp[RealProxy_Sample#3](~/samples/snippets/csharp/VS_Snippets_Remoting/RealProxy_Sample/CS/realproxy_sample.cs#3)]
+ [!code-vb[RealProxy_Sample#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RealProxy_Sample/VB/realproxy_sample.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetStubData">
+      <MemberSignature Language="C#" Value="public static void SetStubData (System.Runtime.Remoting.Proxies.RealProxy rp, object stubData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetStubData(class System.Runtime.Remoting.Proxies.RealProxy rp, object stubData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.SetStubData(System.Runtime.Remoting.Proxies.RealProxy,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rp" Type="System.Runtime.Remoting.Proxies.RealProxy" />
+        <Parameter Name="stubData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="rp">Der Proxy für die Stubdaten festgelegt werden soll.</param>
+        <param name="stubData">Die neue Stubdaten.</param>
+        <summary>Legt die Stubdaten für den angegebenen Proxy.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Stubdaten wird von benutzerdefinierten Proxybenutzer entscheiden, was mit einer eingehenden Methodenaufruf zu tun. Die Stubdaten möglicherweise z. B. Informationen zum Kontext des Servers sein, verwenden, um zu ermitteln, ob der Aufruf lokal ausgeführt oder über die Remotinginfrastruktur zu senden.  
+  
+   
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#3](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#3)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#3](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#3)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer besitzt keine UnmanagedCode-Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit, nicht verwalteten Code aufrufen. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsInterface">
+      <MemberSignature Language="C#" Value="public virtual IntPtr SupportsInterface (ref Guid iid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance native int SupportsInterface(valuetype System.Guid&amp; iid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.RealProxy.SupportsInterface(System.Guid@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iid" Type="System.Guid&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="iid">Ein Verweis auf die angeforderte Schnittstelle.</param>
+        <summary>Fordert eine COM-Schnittstelle mit der angegebenen ID.</summary>
+        <returns>Ein Zeiger auf die angeforderte Schnittstelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Proxies.RealProxy.SupportsInterface%2A> -Methode ermöglicht es die aktuellen Proxyinstanz zusätzliche COM-Schnittstellen für das Serverobjekt zu implementieren, die die aktuelle Instanz darstellt. Die aktuelle Methode generiert die angeforderte Schnittstelle und gibt einen Zeiger darauf zurück. Die Typen von COM-Schnittstellen, die von dieser Methode generiert werden können, hängen von den Proxytyp, der wiederum den Typ des Serverobjekts möglicherweise abhängig ist, die die aktuellen Proxyinstanz darstellt.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Runtime.Remoting.Proxies.ProxyAttribute>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[RealProxy_Sample#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RealProxy_Sample/CPP/realproxy_sample.cpp#1)]
+ [!code-csharp[RealProxy_Sample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RealProxy_Sample/CS/realproxy_sample.cs#1)]
+ [!code-vb[RealProxy_Sample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RealProxy_Sample/VB/realproxy_sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

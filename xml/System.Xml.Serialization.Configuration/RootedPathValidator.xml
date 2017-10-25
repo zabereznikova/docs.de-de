@@ -1,0 +1,111 @@
+<Type Name="RootedPathValidator" FullName="System.Xml.Serialization.Configuration.RootedPathValidator">
+  <TypeSignature Language="C#" Value="public class RootedPathValidator : System.Configuration.ConfigurationValidatorBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RootedPathValidator extends System.Configuration.ConfigurationValidatorBase" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.Configuration.RootedPathValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationValidatorBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Überprüft die Regeln für die Verwendung der <c>TempFilesLocation</c> Konfigurationsschalter.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Hinzufügen einer `WebReference` Objekt an einen Webdienst in der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], Dateien werden durch den Webdienst-Erkennungsprozess erstellt.  
+  
+ Webdienstclients erfahren Sie, wo Sie finden die Web-Dienstbeschreibungsdokument (WSDL) durch Hinzufügen einer `WebReference` Objekt. Die Webdienstclients speichern Sie dann die ermittelten Dokumente auf den Datenträger mithilfe der `WriteAll` Methode. Z. B. möglicherweise die ermittelten Dokumente XSD-Schemadateien oder dienstbeschreibungen. Der Client wird am Ende des Prozesses die Dateien gelöscht. Sie können den Standardspeicherort der Dateien im temporären Ordner ändern, indem Sie mit der `tempFilesLocation` wechseln Sie der `<xmlSerializer>` Element, in der Konfigurationsdatei "Machine.config" wie im folgenden Beispiel angegeben.  
+  
+```  
+<configuration>  
+  <system.web>  
+  <system.xml.serialization>  
+    <xmlSerializer tempFilesLocation=".."/>  
+  </system.xml.serialization>  
+</configuration>  
+```  
+  
+ Der Wert des `tempFilesLocation` muss ein absoluter Pfad sein. Wenn der angegebene Pfad nicht absolut ist, wird die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] generiert eine <xref:System.Configuration.ConfigurationErrorsException> -Ausnahme aus, wenn Sie der Konfigurationsabschnitt verwiesen wird.  
+  
+ Der Wert der Eigenschaft wird abgeschnitten, um führende und nachfolgende Leerzeichen zu entfernen.  
+  
+ Wenn der Wert der `tempFilesLocation` Eigenschaft besteht aus Leerzeichen, ist der Standardspeicherort TMP für die Kompilierung verwendet. Die Standardverhalten tritt auf, wenn keine `tempFilesLocation` -Schalter angegeben ist.  
+  
+ Die <xref:System.Xml.Serialization.XmlSerializer> überprüft nicht, ob der Pfad vorhanden ist. Wenn sie nicht der Fall ist ein <xref:System.IO.DirectoryNotFoundException> generiert wird. Dies ist identisch mit dem Standardverhalten der `XmlSerializer` ist der Pfad für %TMP% nicht vorhanden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RootedPathValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Configuration.RootedPathValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.Configuration.RootedPathValidator" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidate">
+      <MemberSignature Language="C#" Value="public override bool CanValidate (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanValidate(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Configuration.RootedPathValidator.CanValidate(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Objekts.</param>
+        <summary>Bestimmt, ob der Typ des Objekts überprüft werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="type" /> Parameter entspricht einem gültigen <see langword="XMLSerializer" /> Objekt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override void Validate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Validate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Configuration.RootedPathValidator.Validate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert eines Objekts.</param>
+        <summary>Bestimmt, ob der Wert eines Objekts gültig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `XmlSerializer` zu validierenden Objekts als Parameter übergeben wird die `Validate` Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

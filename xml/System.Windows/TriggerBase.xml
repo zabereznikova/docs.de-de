@@ -1,0 +1,146 @@
+<Type Name="TriggerBase" FullName="System.Windows.TriggerBase">
+  <TypeSignature Language="C#" Value="public abstract class TriggerBase : System.Windows.DependencyObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TriggerBase extends System.Windows.DependencyObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TriggerBase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.DependencyObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse zum Angeben eines bedingten Werts in einem <see cref="T:System.Windows.Style" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Erstellen von Formaten und Vorlagen-Modell ermöglicht Ihnen die Angabe von Triggern innerhalb Ihrer <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, und <xref:System.Windows.DataTemplate>. Im Wesentlichen <xref:System.Windows.TriggerBase> ist die Basisklasse für Objekte, die Ihnen ermöglichen, Anwenden von Änderungen aus, wenn bestimmte Bedingungen (z. B. wenn ein bestimmter Eigenschaftswert wird `true`, oder wenn ein Ereignis auftritt) erfüllt.  
+  
+   
+  
+## Examples  
+ Es gibt verschiedene Typen von Triggern: <xref:System.Windows.Trigger>, <xref:System.Windows.MultiTrigger>, <xref:System.Windows.EventTrigger>, <xref:System.Windows.DataTrigger>, und <xref:System.Windows.MultiDataTrigger>.  
+  
+ Die <xref:System.Windows.Trigger> Klasse ist die einfachste Art von Triggern. Ein <xref:System.Windows.Trigger> Objekts können Sie die Änderungen anhand des Werts einer Eigenschaft zu übernehmen. Das folgende Beispiel zeigt beispielsweise eine benannte <xref:System.Windows.Style> zur <xref:System.Windows.Controls.Button> Steuerelemente. Die <xref:System.Windows.Style> definiert eine <xref:System.Windows.Trigger> Element, das ändert die <xref:System.Windows.Controls.Control.Foreground%2A> Eigenschaft einer Schaltfläche bei der <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> Eigenschaft ist `true`.  
+  
+ [!code-xaml[BtnStyles#2](~/samples/snippets/csharp/VS_Snippets_Wpf/BtnStyles/CS/app.xaml#2)]  
+  
+ Wenn Sie Änderungen, die basierend auf den Status der mehrere Eigenschaften anwenden müssen, können Sie mithilfe der <xref:System.Windows.MultiTrigger>. Ein Beispiel finden Sie unter der <xref:System.Windows.MultiTrigger> Seite.  
+  
+ Die <xref:System.Windows.EventTrigger> -Klasse ermöglicht es Ihnen, Änderungen zu übernehmen, wenn ein Ereignis auftritt. Das folgende Beispiel enthält zwei <xref:System.Windows.EventTrigger> Objekte, von denen tritt auf, wenn die Maus bewegt, das Element wird und das andere tritt auf, wenn der Mauszeiger über dem Element verlässt.  
+  
+ [!code-xaml[StyleEventTriggerAnimation#EventTriggerSnippet](~/samples/snippets/csharp/VS_Snippets_Wpf/StyleEventTriggerAnimation/CS/Default.xaml#eventtriggersnippet)]
+  
+ Diese Operatoren werden zudem die <xref:System.Windows.DataTrigger> und <xref:System.Windows.MultiDataTrigger> Klassen. Diese ähneln <xref:System.Windows.Trigger> und <xref:System.Windows.MultiTrigger> mit dem Unterschied, dass sie für datengebundene Eigenschaften sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnterActions">
+      <MemberSignature Language="C#" Value="public System.Windows.TriggerActionCollection EnterActions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.TriggerActionCollection EnterActions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TriggerBase.EnterActions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.TriggerActionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Windows.TriggerAction" />-Objekten ab, die angewendet werden sollen, wenn das Triggerobjekt aktiviert wird. Diese Eigenschaft gilt nicht für die <see cref="T:System.Windows.EventTrigger" />-Klasse.</summary>
+        <value>Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt nicht für die <xref:System.Windows.EventTrigger> Klasse, da ein Ereignis einen bestimmten Zeitpunkt während darstellt <xref:System.Windows.TriggerBase.EnterActions%2A> und <xref:System.Windows.TriggerBase.ExitActions%2A> objektzustände entsprechen. Für <xref:System.Windows.EventTrigger> Objekte, verwenden die <xref:System.Windows.EventTrigger.Actions%2A> Eigenschaft stattdessen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft kann nur festgelegt werden, [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] gezeigt Auflistungssyntax oder durch den Zugriff auf das Objekt und dessen verschiedene Methoden wie z. B. hinzufügen. Die Eigenschaft auf das Auflistungsobjekt selbst ist schreibgeschützt, die Auflistung an sich ist Lese-/ Schreibzugriff.  
+  
+<a name="xamlPropertyElementUsage_EnterActions"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.EnterActions>  
+    OneOrMoreTriggerActions  
+  </object.EnterActions >  
+</object>  
+```  
+  
+<a name="xamlValues_EnterActions"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *OneOrMoreTriggerActions*  
+ Eine oder mehrere <xref:System.Windows.TriggerAction> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitActions">
+      <MemberSignature Language="C#" Value="public System.Windows.TriggerActionCollection ExitActions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.TriggerActionCollection ExitActions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TriggerBase.ExitActions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.TriggerActionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Windows.TriggerAction" />-Objekten ab, die angewendet werden sollen, wenn das Triggerobjekt deaktiviert wird. Diese Eigenschaft gilt nicht für die <see cref="T:System.Windows.EventTrigger" />-Klasse.</summary>
+        <value>Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt nicht für die <xref:System.Windows.EventTrigger> Klasse, da ein Ereignis einen bestimmten Zeitpunkt während darstellt <xref:System.Windows.TriggerBase.EnterActions%2A> und <xref:System.Windows.TriggerBase.ExitActions%2A> objektzustände entsprechen. Für <xref:System.Windows.EventTrigger> Objekte, verwenden die <xref:System.Windows.EventTrigger.Actions%2A> Eigenschaft stattdessen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft kann nur festgelegt werden, [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] gezeigt Auflistungssyntax oder durch den Zugriff auf das Objekt und dessen verschiedene Methoden wie z. B. hinzufügen. Die Eigenschaft auf das Auflistungsobjekt selbst ist schreibgeschützt, die Auflistung an sich ist Lese-/ Schreibzugriff.  
+  
+<a name="xamlPropertyElementUsage_ExitActions"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.ExitActions>  
+    OneOrMoreTriggerActions  
+  </object.ExitActions >  
+</object>  
+```  
+  
+<a name="xamlValues_ExitActions"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *OneOrMoreTriggerActions*  
+ Eine oder mehrere <xref:System.Windows.TriggerAction> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

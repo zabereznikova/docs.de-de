@@ -1,0 +1,581 @@
+<Type Name="FileSystemRights" FullName="System.Security.AccessControl.FileSystemRights">
+  <TypeSignature Language="C#" Value="public enum FileSystemRights" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FileSystemRights extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.FileSystemRights" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Zugriffsrechte beim Erstellen der Zugriffs-und Überwachungsregeln verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.AccessControl.FileSystemRights> Enumeration gibt an, welche Aktionen des Dateisystems für ein bestimmtes Benutzerkonto zulässig sind und welche Aktionen des Dateisystems für ein bestimmtes Benutzerkonto überwacht werden.  
+  
+ Verwenden der <xref:System.Security.AccessControl.FileSystemRights> Enumeration für die Erstellung einer Zugriffsregel mit der <xref:System.Security.AccessControl.FileSystemAccessRule> Klasse oder wenn Regel erstellen eine Überwachung, bei der <xref:System.Security.AccessControl.FileSystemAuditRule> Klasse.  
+  
+ Diese Enumeration enthält mehrere präzise Rechte Systemwerte sowie mehrere Werte, die eine Kombination dieser Werte präzise sind.  Es ist einfacher, kombinierte Werte wie z. B. Vollzugriff, lesen, und schreiben, anstatt Wert jeder einzelnen Komponente getrennt angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.AccessControl.FileSystemRights.FullControl> Enumeration zum Angeben einer Zugriffsregel und entfernen Sie dann die Zugriffsregel aus einer Datei.  Sie müssen ein gültiges Benutzer- oder Gruppenkonto angeben, um dieses Beispiel auszuführen.  
+  
+ [!code-cpp[IO.File.GetAccessControl-SetAccessControl#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/cpp/sample.cpp#1)]
+ [!code-csharp[IO.File.GetAccessControl-SetAccessControl#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
+ [!code-vb[IO.File.GetAccessControl-SetAccessControl#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppendData">
+      <MemberSignature Language="C#" Value="AppendData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights AppendData = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.AppendData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht, Daten an das Ende der Datei angefügt werden soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangePermissions">
+      <MemberSignature Language="C#" Value="ChangePermissions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights ChangePermissions = int32(262144)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.ChangePermissions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht zum Ändern der Sicherheits und eine Datei oder einen Ordner zugeordneten Überwachungsregeln.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDirectories">
+      <MemberSignature Language="C#" Value="CreateDirectories" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights CreateDirectories = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.CreateDirectories" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Recht zum Erstellen eines Ordners an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Recht ist der Synchronize-Wert erforderlich.  Beachten Sie, dass der Synchronize-Wert, wenn Sie den Wert synchronisieren nicht explizit beim Erstellen einer Datei oder Ordner festgelegt, automatisch für Sie festgelegt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFiles">
+      <MemberSignature Language="C#" Value="CreateFiles" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights CreateFiles = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.CreateFiles" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Berechtigung zum Erstellen einer Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Recht ist der Synchronize-Wert erforderlich.  Beachten Sie, dass der Synchronize-Wert, wenn Sie den Wert synchronisieren nicht explizit beim Erstellen einer Datei oder Ordner festgelegt, automatisch für Sie festgelegt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights Delete = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.Delete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Recht zum Löschen der Datei oder eines Ordners an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteSubdirectoriesAndFiles">
+      <MemberSignature Language="C#" Value="DeleteSubdirectoriesAndFiles" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights DeleteSubdirectoriesAndFiles = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.DeleteSubdirectoriesAndFiles" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht, einen Ordner und alle in diesem Ordner enthaltenen Dateien zu löschen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteFile">
+      <MemberSignature Language="C#" Value="ExecuteFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights ExecuteFile = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.ExecuteFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht, eine Datei der Anwendung führen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FullControl">
+      <MemberSignature Language="C#" Value="FullControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights FullControl = int32(2032127)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.FullControl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht, können volle Kontrolle über einen Ordner oder eine Datei, und zu ändern, Zugriffssteuerung und Überwachungsregeln.  Dieser Wert entspricht dem Recht zum nichts mit einer Datei und ist die Kombination aller Rechte in dieser Enumeration.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ListDirectory">
+      <MemberSignature Language="C#" Value="ListDirectory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights ListDirectory = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.ListDirectory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht zum Lesen des Inhalts eines Verzeichnisses.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Modify">
+      <MemberSignature Language="C#" Value="Modify" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights Modify = int32(197055)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.Modify" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht zum Lesen, schreiben, Ordnerinhalt auflisten, Ordner und Dateien löschen und Anwendungsdateien ausgeführt.  Dieses Recht enthält die <see cref="F:System.Security.AccessControl.FileSystemRights.ReadAndExecute" /> rechts und die <see cref="F:System.Security.AccessControl.FileSystemRights.Write" /> rechten, und die <see cref="F:System.Security.AccessControl.FileSystemRights.Delete" /> rechts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="Read" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights Read = int32(131209)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.Read" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht zum Öffnen und Kopieren von Ordnern oder Dateien als schreibgeschützt.  Dieses Recht enthält die <see cref="F:System.Security.AccessControl.FileSystemRights.ReadData" /> rechts und <see cref="F:System.Security.AccessControl.FileSystemRights.ReadExtendedAttributes" /> rechts und <see cref="F:System.Security.AccessControl.FileSystemRights.ReadAttributes" /> rechten und <see cref="F:System.Security.AccessControl.FileSystemRights.ReadPermissions" /> rechts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAndExecute">
+      <MemberSignature Language="C#" Value="ReadAndExecute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights ReadAndExecute = int32(131241)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.ReadAndExecute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht zu öffnen, und Kopieren von Ordnern oder Dateien als nur-Lese und Anwendungsdateien ausgeführt.  Dieses Recht enthält die <see cref="F:System.Security.AccessControl.FileSystemRights.Read" /> Rechte und das <see cref="F:System.Security.AccessControl.FileSystemRights.ExecuteFile" /> rechts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAttributes">
+      <MemberSignature Language="C#" Value="ReadAttributes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights ReadAttributes = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.ReadAttributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht zum Öffnen und die Attribute des Dateisystems aus Datei oder eines Ordners kopieren.  Beispielsweise wird dieser Wert gibt an, zur Erstellung der Datei berechtigt ist, oder Änderungsdatum.  Dies schließt nicht das Recht zum Lesen Daten, erweiterten Dateiattributen-System oder den Zugriff und Überwachungsregeln.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadData">
+      <MemberSignature Language="C#" Value="ReadData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights ReadData = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.ReadData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht zum Öffnen und eine Datei oder einen Ordner kopieren.  Dies schließt nicht das Recht, die Attribute des Dateisystems, erweiterte Attribute des Dateisystems oder Zugriffs-und Überwachungsregeln zu lesen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadExtendedAttributes">
+      <MemberSignature Language="C#" Value="ReadExtendedAttributes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights ReadExtendedAttributes = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.ReadExtendedAttributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht zum Öffnen und erweiterte Dateisystemattributen aus Datei oder eines Ordners kopieren.  Dieser Wert gibt z. B. das Recht, Autor und Informationen zum Inhalt anzuzeigen.  Dies schließt nicht das Recht zum Lesen, Daten, die Attribute des Dateisystems oder Zugriff und Überwachungsregeln.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadPermissions">
+      <MemberSignature Language="C#" Value="ReadPermissions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights ReadPermissions = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.ReadPermissions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht zu öffnen und kopieren Sie den Zugriff und Überwachungsregeln aus einem Ordner oder Datei.  Dies schließt nicht das Recht zum Lesen von Daten, System Dateiattribute und erweiterte Attribute des Dateisystems.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronize">
+      <MemberSignature Language="C#" Value="Synchronize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights Synchronize = int32(1048576)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.Synchronize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die Anwendung für ein Dateihandle zum Synchronisieren mit dem Abschluss eines e/a-Vorgangs warten kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert synchronisieren automatisch festgelegt, wenn der Zugriff gewährt, und automatisch ausgeschlossen werden, wenn der Zugriff verweigert.  
+  
+ Das Recht zum Erstellen einer Datei oder eines Ordners ist dieser Wert erforderlich.  Beachten Sie, dass wenn Sie diesen Wert nicht explizit beim Erstellen einer Datei festgelegt, der Wert automatisch für Sie festgelegt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TakeOwnership">
+      <MemberSignature Language="C#" Value="TakeOwnership" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights TakeOwnership = int32(524288)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.TakeOwnership" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Berechtigung zum Ändern des Besitzers der Datei oder eines Ordners.  Beachten Sie, dass Besitzer einer Ressource über vollen Zugriff auf diese Ressource verfügen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Traverse">
+      <MemberSignature Language="C#" Value="Traverse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights Traverse = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.Traverse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht, den Inhalt eines Ordners auflisten und zum Ausführen von Anwendungen, die in diesem Ordner enthalten sind.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="Write" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights Write = int32(278)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.Write" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Berechtigung zum Erstellen von Ordnern und Dateien, und zum Hinzufügen oder Entfernen von Daten aus Dateien.  Dieses Recht enthält die <see cref="F:System.Security.AccessControl.FileSystemRights.WriteData" /> rechts und <see cref="F:System.Security.AccessControl.FileSystemRights.AppendData" /> rechts und <see cref="F:System.Security.AccessControl.FileSystemRights.WriteExtendedAttributes" /> rechten und <see cref="F:System.Security.AccessControl.FileSystemRights.WriteAttributes" /> rechts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAttributes">
+      <MemberSignature Language="C#" Value="WriteAttributes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights WriteAttributes = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.WriteAttributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht zum Öffnen und die Attribute des Dateisystems auf einen Ordner oder eine Datei schreiben. Dies schließt nicht die Möglichkeit, schreiben, Daten, erweiterten Attribute oder Zugriffs- und Überwachungsregeln.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteData">
+      <MemberSignature Language="C#" Value="WriteData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights WriteData = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.WriteData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Berechtigung zum Öffnen und Schreiben in eine Datei oder einen Ordner.  Dies schließt nicht das Recht zum Öffnen und die Attribute des Dateisystems, erweiterte Attribute des Dateisystems oder Zugriffs-und Überwachungsregeln zu schreiben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteExtendedAttributes">
+      <MemberSignature Language="C#" Value="WriteExtendedAttributes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.FileSystemRights WriteExtendedAttributes = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.FileSystemRights.WriteExtendedAttributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Recht zum Öffnen und erweiterten Dateiattributen-System in einen Ordner oder eine Datei schreiben.  Dies schließt nicht die Möglichkeit, schreiben, Daten, Attribute oder Zugriffs- und Überwachungsregeln.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

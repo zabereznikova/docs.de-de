@@ -1,0 +1,243 @@
+<Type Name="MessageEncodingBindingElement" FullName="System.ServiceModel.Channels.MessageEncodingBindingElement">
+  <TypeSignature Language="C#" Value="public abstract class MessageEncodingBindingElement : System.ServiceModel.Channels.BindingElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MessageEncodingBindingElement extends System.ServiceModel.Channels.BindingElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.MessageEncodingBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.BindingElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Das Bindungselement, das die Nachrichtenversion angibt, die verwendet wird, um Nachrichten zu codieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Codieren wird eine Nachricht in eine Bytefolge transformiert. Beim Decodieren wird dieser Prozess umgekehrt. [!INCLUDE[indigo1](~/includes/indigo1-md.md)] enthält drei Typen für die Codierung von SOAP-Nachrichten: Text, binär und Message Transmission Optimization Mechanism (MTOM).  
+  
+ Mit dieser Klasse können Sie einen benutzerdefinierten Nachrichtenencoder implementieren. Um einen eigenen Nachrichtenencoder zu implementieren, müssen Sie benutzerdefinierte Implementierungen der folgenden drei abstrakten Basisklassen bereitstellen:  
+  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+  
+-   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+  
+-   <xref:System.ServiceModel.Channels.MessageEncoder>  
+  
+ Überschreiben Sie den <xref:System.ServiceModel.Channels.MessageEncoderFactory.Encoder%2A>, um eine Instanz des benutzerdefinierten <xref:System.ServiceModel.Channels.MessageEncoder> zurückzugeben. Überschreiben Sie die <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>-Methode, um eine Instanz von dieser Factory zurückzugeben.  
+  
+ Jeder Typ, der aus <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> abgeleitet wird, ist für die Aktualisierung der Version der SOAP-Bindung im für den Dienst generierten WSDL-Dokument verantwortlich. Dies wird gemacht, indem man die <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29>-Methode implementiert, um die generierte WSDL zu ändern.  
+  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)] bietet drei Typen von Bindungselementen, die aus der <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>-Klasse abgeleitet wurden, die Text-, binäre und Message Transmission Optimization Mechanism (MTOM)-Codierung ermöglichen.  
+  
+-   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Der am wenigsten effiziente Encoder für XML-Nachrichten, der jedoch das höchste Maß an Interoperabilität bietet. Text-XML kann in der Regel von Webdiensten oder Webdienstclients interpretiert werden. Das Übermitteln umfangreicher Blöcke binärer Daten in Textform ist jedoch wenig effizient.  
+  
+-   Die <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>-Klasse stellt das Bindungselement dar, von dem die Zeichencodierung und die für binäre XML-Nachrichten verwendete Nachrichtenversion angegeben werden. Dies ist bezüglich der Codierungsoptionen am effizientesten, aber am wenigsten interoperabel.  
+  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Stellt das Bindungselement dar, von dem die Zeichencodierung und die für eine Meldung mit MTOM-Verschlüsselung (Message Transmission Optimization Mechanism) verwendete Nachrichtenversion angegeben werden. MTOM ist eine effiziente Technologie zum Senden von Binärdaten in [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Meldungen. Mit dem MTOM-Encoder wird versucht, eine Balance zwischen Effizienz und Interoperabilität zu schaffen. Die MTOM-Verschlüsselung überträgt die meisten XML-Daten in Textform, optimiert aber große Binärdatenblöcke durch Übertragung ohne Textkonvertierung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht, wie eine von <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> abgeleitete Klasse implementiert wird.  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencodingbindingelement.cs#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageEncodingBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncodingBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.MessageEncodingBindingElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageEncodingBindingElement (System.ServiceModel.Channels.MessageEncodingBindingElement elementToBeCloned);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.MessageEncodingBindingElement elementToBeCloned) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncodingBindingElement.#ctor(System.ServiceModel.Channels.MessageEncodingBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementToBeCloned" Type="System.ServiceModel.Channels.MessageEncodingBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="elementToBeCloned">Der <see cref="T:System.ServiceModel.Channels.MessageEncodingBindingElement" />, der geklont werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.MessageEncodingBindingElement" />-Klasse, die aus einem vorhandenen Element initialisiert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Code wird veranschaulicht, wie dieser Konstruktor implementiert wird:  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#12](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencodingbindingelement.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageEncoderFactory">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.MessageEncoderFactory CreateMessageEncoderFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.MessageEncoderFactory CreateMessageEncoderFactory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageEncoderFactory</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beim Überschreiben in einer abgeleiteten Klasse wird eine Factory zum Erzeugen von Nachrichtenencodern erstellt.</summary>
+        <returns>Die zum Erzeugen von Nachrichtenencodern verwendete <see cref="T:System.ServiceModel.Channels.MessageEncoderFactory" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Code wird veranschaulicht, wie die <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> implementiert wird:  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#13](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencodingbindingelement.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageEncodingBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für das aktuelle Bindungselement.</param>
+        <summary>Gibt ggf. das angeforderte typisierte Objekt von der entsprechenden Ebene im Kanalstapel zurück.</summary>
+        <returns>Das von <paramref name="T" /> angeforderte typisierte Objekt, oder <see langword="null" />, falls das Objekt nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Anforderung können Sie typisierte Objekte wie eine Schnittstelle für das Abrufen der Eigenschaften oder des Status aus der entsprechenden Ebene im Kanalstapel abfragen. Wenn eine Ebene das Zurückgeben des angeforderten Objekts unterstützt, wird der Vorgang ausgeführt. Andernfalls wird der Aufruf an die nächst tiefere Ebene im Stapel delegiert. Wenn die letzte Ebene erreicht ist und das angeforderte Objekt von keiner Kanalebene unterstützt wird, gibt die Methode `null` zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird veranschaulicht, wie die <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.GetProperty%60%601%28System.ServiceModel.Channels.BindingContext%29>-Methode implementiert wird:  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#15](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencodingbindingelement.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageVersion">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.MessageVersion MessageVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageVersion MessageVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Überschreiben in einer abgeleiteten Klasse wird die Nachrichtenversion abgerufen, die durch die von der Factory erzeugten Nachrichtenencoder verarbeitet werden kann.</summary>
+        <value>Die von den von der Nachrichtenencoderfactory erzeugten Encodern verwendete <see cref="T:System.ServiceModel.Channels.MessageVersion" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Bindungselemente eine Nachricht verarbeiten sollen, die eine <xref:System.ServiceModel.Channels.MessageVersion> aufweist, die nicht durch diese Eigenschaft zurückgegeben wird, wird ein Ausnahmefehler ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>-Eigenschaft implementiert wird:  
+  
+ [!code-csharp[S_UE_CustomTextMessageEncoder#14](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_customtextmessageencoder/cs/customtextmessageencodingbindingelement.cs#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

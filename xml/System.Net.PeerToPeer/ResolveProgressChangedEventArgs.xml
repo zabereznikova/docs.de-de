@@ -1,0 +1,86 @@
+<Type Name="ResolveProgressChangedEventArgs" FullName="System.Net.PeerToPeer.ResolveProgressChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class ResolveProgressChangedEventArgs : System.ComponentModel.ProgressChangedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveProgressChangedEventArgs extends System.ComponentModel.ProgressChangedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.ResolveProgressChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.ProgressChangedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Wird in Verbindung mit dem signalisieren die <see cref="E:System.Net.PeerToPeer.PeerNameResolver.ResolveProgressChanged" /> Ereignis.  Es signalisiert wird immer eine <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekt gefunden wird, als Antwort auf eine <see cref="Overload:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync" /> -Vorgang für einen bestimmten <see cref="T:System.Net.PeerToPeer.PeerName" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn mehrere Namen Datensatz Objekte auf derselben Ebene in der abgefragten vorhanden sind, wird dieses Ereignis einmal für jedes gefundene Datensatzobjekt signalisiert. Die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> Ereignis wird nur einmal ausgelöst, wenn alle Endpunkte gefunden wurden.  
+  
+ Normalen Abschluss des Prozesses bedeutet, dass die Resolver-Objekt das Ende der Wolken zum Abfragen von Peernamen erreicht hat oder erreicht wurde die maximale Anzahl von zeichnet Einträge für die Peer-Auflistung von ihm erstellt wird.  
+  
+ Alle Verweise auf diese Instanz des Konfliktlösers werden mit dem token UserState koordiniert <xref:System.Object>, dies ist ein eindeutiger Bezeichner für diese asynchrone Anforderung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveProgressChangedEventArgs (System.Net.PeerToPeer.PeerNameRecord peerNameRecord, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.PeerToPeer.PeerNameRecord peerNameRecord, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.ResolveProgressChangedEventArgs.#ctor(System.Net.PeerToPeer.PeerNameRecord,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="peerNameRecord" Type="System.Net.PeerToPeer.PeerNameRecord" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="peerNameRecord">Das zu suchende <see cref="T:System.Net.PeerToPeer.PeerNameRecord" />-Objekt.</param>
+        <param name="userToken">Das beim Starten eines <see cref="Overload:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync" />-Vorgangs bereitgestellte eindeutige Benutzerstatusobjekt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.PeerToPeer.ResolveProgressChangedEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aufgelösten Peernamen erfolgt über die <xref:System.Net.PeerToPeer.PeerNameRecord.PeerName%2A> Eigenschaft.  
+  
+ Der Benutzerzustand wird vom geerbt <xref:System.ComponentModel.AsyncCompletedEventArgs>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerNameRecord">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.PeerNameRecord PeerNameRecord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.PeerNameRecord PeerNameRecord" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.ResolveProgressChangedEventArgs.PeerNameRecord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerNameRecord</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekt zur konfliktlösung.</summary>
+        <value>Die Peer-Objekt gefunden, als Antwort auf eine <see cref="Overload:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync" /> -Vorgang für einen bestimmten <see cref="P:System.Net.PeerToPeer.PeerNameRecord.PeerName" />.  
+  
+ Sofern nicht explizit angegeben wird, ist der Standardwert für alle Eigenschaften <see langword="null" /> für Referenztypen und 0 (null) für Eigenschaften vom Typ <see langword="int" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unsichere Peernamen können gleichzeitig von verschiedenen Benutzern in der gleichen registriert werden <xref:System.Net.PeerToPeer.Cloud>, und die zugehörigen mit verschiedenen Endpunkten. Folglich die <xref:System.Net.PeerToPeer.PeerNameResolver> Klasse dient zum Auflösen von Peernamen in Clouds oder peer-Namen, die Datensätze des Peer Name. Das Ereignis, um den Fortschritt wird jedes Mal ausgelöst ein Peername gefunden wird, während der Konfliktlöser Clouds für Abfragen wird die <xref:System.Net.PeerToPeer.PeerName>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

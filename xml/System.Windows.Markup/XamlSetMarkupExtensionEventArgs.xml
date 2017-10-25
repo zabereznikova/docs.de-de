@@ -1,0 +1,116 @@
+<Type Name="XamlSetMarkupExtensionEventArgs" FullName="System.Windows.Markup.XamlSetMarkupExtensionEventArgs">
+  <TypeSignature Language="C#" Value="public class XamlSetMarkupExtensionEventArgs : System.Windows.Markup.XamlSetValueEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlSetMarkupExtensionEventArgs extends System.Windows.Markup.XamlSetValueEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.XamlSetMarkupExtensionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.XamlSetValueEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für Rückrufe, die aufgerufen werden, wenn ein XAML-Objektwriter einen Wert mithilfe einer Markuperweiterungs festlegt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl eine Klasse mit Hinweisen <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> , dass alle Versuche zum Festlegen eines Werts durch eine Markuperweiterung, die sie möglicherweise mehr als eine Markuperweiterung auch dazu verwenden. Daher löst jeder Set-Vorgang letztlich in eine separate Markuperweiterungsimplementierung im unterstützenden Code auf. Die <xref:System.Windows.Markup.XamlSetMarkupExtensionEventArgs> -Klasse meldet die Einzelheiten der jeder versuchten Markuperweiterungs-Set-Vorgangs, damit der Rückruf entsprechend verzweigen kann für verschiedene <xref:System.Windows.Markup.MarkupExtension> Fällen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlSetMarkupExtensionEventArgs (System.Xaml.XamlMember member, System.Windows.Markup.MarkupExtension value, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlMember member, class System.Windows.Markup.MarkupExtension value, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlSetMarkupExtensionEventArgs.#ctor(System.Xaml.XamlMember,System.Windows.Markup.MarkupExtension,System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="member" Type="System.Xaml.XamlMember" />
+        <Parameter Name="value" Type="System.Windows.Markup.MarkupExtension" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="member">XAML-Typsystem / Schemainformationen für das Element festgelegt werden.</param>
+        <param name="value">Das Markuperweiterungsverweis für die Elementgruppe angeben.</param>
+        <param name="serviceProvider">Dienstanbieterinformationen, die an die Markuperweiterung übergeben werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.XamlSetMarkupExtensionEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallBase">
+      <MemberSignature Language="C#" Value="public override void CallBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CallBase() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlSetMarkupExtensionEventArgs.CallBase" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bietet eine Möglichkeit, einen Rückruf aufzurufen, wie auf eine Basisklasse des aktuellen handelnden Typs definiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkupExtension">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.MarkupExtension MarkupExtension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Markup.MarkupExtension MarkupExtension" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XamlSetMarkupExtensionEventArgs.MarkupExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.MarkupExtension</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Markup.MarkupExtension" /> -Referenz, die relevant für dieses <see cref="T:System.Windows.Markup.XamlSetMarkupExtensionEventArgs" />.</summary>
+        <value>Der Verweis der Markup-Erweiterung, die relevant für dieses <see cref="T:System.Windows.Markup.XamlSetMarkupExtensionEventArgs" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft ist der Konstruktion `value` umgewandelt <xref:System.Windows.Markup.MarkupExtension>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceProvider">
+      <MemberSignature Language="C#" Value="public IServiceProvider ServiceProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IServiceProvider ServiceProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XamlSetMarkupExtensionEventArgs.ServiceProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IServiceProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Dienstanbieterinformationen, die an die Markuperweiterung übergeben wurde.</summary>
+        <value>Dienstanbieterinformationen, die an die Markuperweiterung übergeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft ist die `serviceProvider` Konstruktorargument.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

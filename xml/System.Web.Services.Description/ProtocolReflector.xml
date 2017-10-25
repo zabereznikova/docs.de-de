@@ -1,0 +1,588 @@
+<Type Name="ProtocolReflector" FullName="System.Web.Services.Description.ProtocolReflector">
+  <TypeSignature Language="C#" Value="public abstract class ProtocolReflector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProtocolReflector extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.ProtocolReflector" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt allgemeine Funktionen Kommunikationsprotokolle zum Erstellen von <see cref="T:System.Web.Services.Description.ServiceDescription" /> Objekte von Klassen, die als Webdienste identifiziert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die abstrakte <xref:System.Web.Services.Description.ProtocolReflector> Klasse und ihre konkreten abgeleitete Klassen erstellen <xref:System.Web.Services.Description.ServiceDescription> Objekte von Klassen, die als Webdienste mit identifiziert werden die <xref:System.Web.Services.WebServiceAttribute> Attribut. Jede konkrete <xref:System.Web.Services.Description.ProtocolReflector>-abgeleitete Klasse generiert <xref:System.Web.Services.Description.ServiceDescription> Objekte entsprechend eines angegebenen Kommunikationsprotokolls. <xref:System.Web.Services.Description.ProtocolReflector> stellt allgemeine Funktionen unabhängig von dem Protokoll bereit.  
+  
+ Eine Ausgabe <xref:System.Web.Services.Description.ServiceDescription> Instanz kann verwendet werden, generieren Sie ein Dokument Web Services Description Language (WSDL), mit der <xref:System.Web.Services.Description.ServiceDescription.Write%2A> -Methode oder eine der Überladungen verfügbar. Die <xref:System.Web.Services.Description.ServiceDescription> Instanz kann auch verwendet werden, indem die <xref:System.Web.Services.Description.ServiceDescriptionImporter> -Klasse und verwandte Klassen Clientproxy generieren oder abstrakten Servercode.  
+  
+ Die <xref:System.Web.Services.Description.ProtocolReflector> -Klasse verwendet die <xref:System.Web.Services.WebServiceBindingAttribute> zum Erstellen einer <xref:System.Web.Services.Description.ServiceDescription> für jede Bindung in der Webdienstklasse identifiziert. Wenn dieses Attribut nicht vorhanden, ist die <xref:System.Web.Services.Description.ProtocolReflector> -Klasse erstellt eine einfache Bindung für die gesamte Klasse. Für jede Web-service-Methode (eine Methode in der Webdienstklasse, mit denen die <xref:System.Web.Services.WebMethodAttribute>), gehört zu einer Bindung, eine abgeleitete Klasse <xref:System.Web.Services.Description.ProtocolReflector> generiert eines Vorgangs und den zugehörigen Nachrichten, die hinzugefügt werden, die <xref:System.Web.Services.Description.ServiceDescription> Objekt.  
+  
+ In der Regel verwendet ein Entwickler diese Klassen, die indirekt über die <xref:System.Web.Services.Description.ServiceDescriptionReflector> -Klasse anstelle von abgeleitete Klassen direkt aufrufen <xref:System.Web.Services.Description.ProtocolReflector>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProtocolReflector ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolReflector.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Description.ProtocolReflector" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginClass">
+      <MemberSignature Language="C#" Value="protected virtual void BeginClass ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void BeginClass() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolReflector.BeginClass" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse führt die Verarbeitung vor <see cref="T:System.Web.Services.Description.ProtocolReflector" /> Aufrufe der <see cref="M:System.Web.Services.Description.ProtocolReflector.ReflectMethod" /> Methode für jede der Methoden für eine Bindung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Binding Binding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Binding Binding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Binding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die WSDL Web Services Description Language () Bindung derzeit generiert und an die zugeordnete hinzugefügt <see cref="T:System.Web.Services.Description.ServiceDescription" />.</summary>
+        <value>Die WSDL Web Services Description Language () Bindung derzeit generiert und an die zugeordnete hinzugefügt <see cref="T:System.Web.Services.Description.ServiceDescription" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultNamespace">
+      <MemberSignature Language="C#" Value="public string DefaultNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.DefaultNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardnamespace, das durch die zugeordnete <see cref="T:System.Web.Services.Description.ServiceDescription" /> des Objekts <see cref="F:System.Web.Services.Description.ServiceDescription.Namespace" /> Eigenschaft.</summary>
+        <value>Der Standardnamespace, das durch die zugeordnete <see cref="T:System.Web.Services.Description.ServiceDescription" /> des Objekts <see cref="F:System.Web.Services.Description.ServiceDescription.Namespace" /> Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndClass">
+      <MemberSignature Language="C#" Value="protected virtual void EndClass ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EndClass() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolReflector.EndClass" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse führt die Verarbeitung nach <see cref="ProtocolReflector" /> nennt man die <see cref="M:System.Web.Services.Description.ProtocolReflector.ReflectMethod" /> Methode für jede der Methoden für eine Bindung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetServiceDescription">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescription GetServiceDescription (string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.ServiceDescription GetServiceDescription(string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolReflector.GetServiceDescription(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">Die <see cref="T:System.Web.Services.Description.ServiceDescription" /> Instanz abgerufen, anschließend wird mit Objekten, die Web Services Description Language (WSDL) Entitäten entsprechen, die aus der Eingabe Webdienstklasse wiedergegeben werden aufgefüllt.</param>
+        <summary>Ruft eine <see cref="T:System.Web.Services.Description.ServiceDescription" /> Objekt für einen angegebenen XML-Namespace und das entsprechende Kommunikationsprotokoll.</summary>
+        <returns>Ein <see cref="T:System.Web.Services.Description.ServiceDescription" /> Objekt für einen angegebenen XML-Namespace und das entsprechende Kommunikationsprotokoll.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Description.ServiceDescription> Instanz abgerufen, anschließend wird mit Objekten, die WSDL-Entitäten entsprechen, die aus der Eingabe Webdienstklasse wiedergegeben werden aufgefüllt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderMessages">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.MessageCollection HeaderMessages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.MessageCollection HeaderMessages" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.HeaderMessages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.MessageCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die SOAP-Headerdefinitionen Nachricht hinzugefügt werden an die zugeordnete <see cref="T:System.Web.Services.Description.ServiceDescription" /> Objekt.</summary>
+        <value>SOAP-Nachricht Headerdefinitionen hinzugefügt werden an die zugeordnete <see cref="T:System.Web.Services.Description.ServiceDescription" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputMessage">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Message InputMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Message InputMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.InputMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Message</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Eingabenachricht Web Services Description Language (WSDL) für den abstrakten Vorgang, den das Protokoll Reflector derzeit von einer Webdienstmethode generiert wird.</summary>
+        <value>Die Eingabenachricht Web Services Description Language (WSDL), für die abstrakten Vorgang, den das Protokoll Reflector derzeit von einer Webdienstmethode generiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.LogicalMethodInfo Method { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.LogicalMethodInfo Method" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.LogicalMethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Webdienstmethode, die der Protokoll-Reflector gerade verarbeitet wird, um einen Vorgang Web Services Description Language (WSDL) platziert werden generieren in der generierten <see cref="T:System.Web.Services.Description.ServiceDescription" />.</summary>
+        <value>Die Webdienstmethode, die der Protokoll-Reflector gerade verarbeitet wird, um einen Vorgang Web Services Description Language (WSDL) platziert werden generieren in der generierten <see cref="T:System.Web.Services.Description.ServiceDescription" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodAttribute">
+      <MemberSignature Language="C#" Value="public System.Web.Services.WebMethodAttribute MethodAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.WebMethodAttribute MethodAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.MethodAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.WebMethodAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Services.WebMethodAttribute" /> für die Methode, die der Protokoll-Reflector gerade verarbeitet wird, um einen Vorgang Web Services Description Language (WSDL) platziert werden generieren in der generierten <see cref="T:System.Web.Services.Description.ServiceDescription" />.</summary>
+        <value>Die <see cref="T:System.Web.Services.WebMethodAttribute" /> für die Methode, die der Protokoll-Reflector gerade verarbeitet wird, um einen Vorgang Web Services Description Language (WSDL) platziert werden generieren in der generierten<see cref="T:System.Web.Services.Description.ServiceDescription" /></value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Methods">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.LogicalMethodInfo[] Methods { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.LogicalMethodInfo[] Methods" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.Methods" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.LogicalMethodInfo[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Webdienstmethoden, die zu der Webdienstklasse gehören, das durch die zugeordnete <see cref="T:System.Web.Services.Description.ProtocolReflector" /> des Objekts <see cref="P:System.Web.Services.Description.ProtocolReflector.Methods" /> Eigenschaft.</summary>
+        <value>Die Webdienstmethoden, die auf die Web-Dienstklasse gehören, das durch die zugeordnete <see cref="T:System.Web.Services.Description.ProtocolReflector" /> des Objekts <see cref="P:System.Web.Services.Description.ProtocolReflector.Methods" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webdienstmethoden werden identifiziert, indem die <xref:System.Web.Services.WebMethodAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operation">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Operation Operation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Operation Operation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.Operation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Operation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die abstrakte Web Services Description Language (WSDL)-Vorgang, den das Protokoll Reflector derzeit von einer Webdienstmethode generiert ab.</summary>
+        <value>Der abstrakte Web Services Description Language (WSDL)-Vorgang, den das Protokoll Reflector derzeit von einer Webdienstmethode generiert</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Vorgang wird als ein untergeordnetes Element eines der `portType` Element in einem WSDL-Dokument. Webdienstmethoden werden identifiziert, indem die <xref:System.Web.Services.WebMethodAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationBinding">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.OperationBinding OperationBinding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.OperationBinding OperationBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.OperationBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OperationBinding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vorgangsbindung für Web Services Description Language (WSDL), die das Importprogramm Protokoll derzeit von einer Webdienstmethode generiert wird.</summary>
+        <value>Der Web Services Description Language (WSDL)-Vorgang, der Bindung dar, das Importprogramm Protokoll derzeit von einer Webdienstmethode generiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webdienstmethoden werden identifiziert, indem die <xref:System.Web.Services.WebMethodAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputMessage">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Message OutputMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Message OutputMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.OutputMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Message</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausgabenachricht Web Services Description Language (WSDL) für den abstrakten Vorgang, den das Protokoll Reflector derzeit von einer Webdienstmethode generiert wird.</summary>
+        <value>Die Web Services Description Language (WSDL) Ausgabenachricht für den abstrakten Vorgang, den das Protokoll Reflector derzeit von einer Webdienstmethode generiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Port Port { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Port Port" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Port</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Web Services Description Language (WSDL)-Port, den der Protokoll-Reflector derzeit generiert wird, um einen Verweis auf die Bindung erstellenden enthalten.</summary>
+        <value>Der Web Services Description Language (WSDL)-Port, den der Protokoll-Reflector derzeit generiert wird, um einen Verweis auf die Bindung erstellenden enthalten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PortType">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.PortType PortType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.PortType PortType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.PortType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.PortType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Web Services Description Language (WSDL) <see langword="portType" /> , die das Protokoll Reflector wird derzeit von der generierten Bindung implementiert werden generiert.</summary>
+        <value>Die Web Services Description Language (WSDL) <see langword="portType" /> , die das Protokoll Reflector wird derzeit von der generierten Bindung implementiert werden generiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolName">
+      <MemberSignature Language="C#" Value="public abstract string ProtocolName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProtocolName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.ProtocolName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Namen des verwendeten Protokolls ab.</summary>
+        <value>Der Name des Protokolls verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectDescription">
+      <MemberSignature Language="C#" Value="protected virtual void ReflectDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ReflectDescription() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolReflector.ReflectDescription" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse generiert dienstspezifische Beschreibungsinformationen, die in platziert eine <see cref="T:System.Web.Services.Description.ServiceDescription" /> -Objekt, einer Bindung entspricht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectionImporter">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlReflectionImporter ReflectionImporter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlReflectionImporter ReflectionImporter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.ReflectionImporter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlReflectionImporter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.Serialization.XmlReflectionImporter" /> Instanz verwendet wird durch den zugehörigen <see cref="T:System.Web.Services.Description.ServiceDescriptionReflector" /> Instanz.</summary>
+        <value>Die <see cref="T:System.Xml.Serialization.XmlReflectionImporter" /> Instanz verwendet wird durch den zugehörigen <see cref="T:System.Web.Services.Description.ServiceDescriptionReflector" /> Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectMethod">
+      <MemberSignature Language="C#" Value="protected abstract bool ReflectMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ReflectMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolReflector.ReflectMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse generiert Informationen, die in platziert eine <see cref="T:System.Web.Services.Description.ServiceDescription" /> -Objekt, einer Bindung entspricht.</summary>
+        <returns>Informationen, die in platziert eine <see cref="T:System.Web.Services.Description.ServiceDescription" /> -Objekt, einer Bindung entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Implementierung der <xref:System.Web.Services.Description.ProtocolReflector.ReflectMethod%2A> Methode Informationen wie z. B. vorgangsbindung abstrakten Vorgang und Nachrichten generieren soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectMethodBinding">
+      <MemberSignature Language="C#" Value="protected virtual string ReflectMethodBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string ReflectMethodBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolReflector.ReflectMethodBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt den Namen der Bindung, der eine Methode gehört.</summary>
+        <returns>Der Name der Bindung, der eine Methode gehört.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaExporter">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSchemaExporter SchemaExporter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSchemaExporter SchemaExporter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.SchemaExporter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSchemaExporter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.Serialization.XmlSchemaExporter" /> Instanz verwendet wird durch den zugehörigen <see cref="T:System.Web.Services.Description.ServiceDescriptionReflector" /> Instanz.</summary>
+        <value>Die <see cref="T:System.Xml.Serialization.XmlSchemaExporter" /> Instanz verwendet wird durch den zugehörigen <see cref="T:System.Web.Services.Description.ServiceDescriptionReflector" /> Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schemas">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSchemas Schemas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSchemas Schemas" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.Schemas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSchemas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die XML-Schemas generiert wird durch den zugehörigen <see cref="T:System.Web.Services.Description.ServiceDescriptionReflector" /> Instanz.</summary>
+        <value>Die XML-Schemas generiert wird durch den zugehörigen <see cref="T:System.Web.Services.Description.ServiceDescriptionReflector" /> Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Service">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Service Service { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Service Service" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.Service" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Service</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Web Services Description Language (WSDL)-Dienst, den der Protokoll-Reflector derzeit generiert wird, um einen Verweis auf die Bindung erstellenden enthalten.</summary>
+        <value>Die Web Services Description Language (WSDL)-Dienst, den der Protokoll-Reflector derzeit generiert wird, um einen Verweis auf die Bindung erstellenden enthalten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceDescription">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescription ServiceDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescription ServiceDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.ServiceDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Services.Description.ServiceDescription" /> -Objekt gerade erstellt wird, um enthält die Bindung, die generiert wird.</summary>
+        <value>Die <see cref="T:System.Web.Services.Description.ServiceDescription" /> -Objekt gerade erstellt wird, um enthält die Bindung, die generiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceDescriptions">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescriptionCollection ServiceDescriptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescriptionCollection ServiceDescriptions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.ServiceDescriptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Services.Description.ServiceDescription" /> Objekte, die bisher erstellt und der entsprechenden hinzugefügt wurden die <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> abgerufen, die über die <see cref="P:System.Web.Services.Description.ServiceDescriptionReflector.ServiceDescriptions" /> Eigenschaft der zugeordneten <see cref="T:System.Web.Services.Description.ServiceDescriptionReflector" /> Instanz.</summary>
+        <value>Die <see cref="T:System.Web.Services.Description.ServiceDescription" /> Objekte, die bisher erstellt und der entsprechenden hinzugefügt wurden die <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> abgerufen, die über die <see cref="P:System.Web.Services.Description.ServiceDescriptionReflector.ServiceDescriptions" /> Eigenschaft der zugeordneten <see cref="T:System.Web.Services.Description.ServiceDescriptionReflector" /> Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Description.ProtocolReflector> -Klasse erstellt eine <xref:System.Web.Services.Description.ServiceDescription> -Objekt für jede Bindung mit einem unterschiedlichen Namespace, dass er in einer Web-Dienstklasse findet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceType">
+      <MemberSignature Language="C#" Value="public Type ServiceType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ServiceType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.ServiceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Webdienstklasse berücksichtigt werden, um zu erzeugen <see cref="T:System.Web.Services.Description.ServiceDescription" /> Objekte.</summary>
+        <value>Der Typ der Webdienstklasse berücksichtigt werden, um zu erzeugen <see cref="T:System.Web.Services.Description.ServiceDescription" /> Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Webdienstklasse identifizierte der <xref:System.Web.Services.WebServiceAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceUrl">
+      <MemberSignature Language="C#" Value="public string ServiceUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServiceUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolReflector.ServiceUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Endpunkt des zugeordneten Webdiensts als ein Uniform Resource Locator (URL), erhalten vom zugeordneten <see cref="T:System.Web.Services.Description.ServiceDescriptionReflector" /> Objekt.</summary>
+        <value>Der Endpunkt des zugeordneten Webdiensts als Uniform Resource Locator (URL) abgerufen werden, aus dem zugeordneten <see cref="T:System.Web.Services.Description.ServiceDescriptionReflector" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

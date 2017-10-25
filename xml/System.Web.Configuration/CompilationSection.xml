@@ -1,0 +1,969 @@
+<Type Name="CompilationSection" FullName="System.Web.Configuration.CompilationSection">
+  <TypeSignature Language="C#" Value="public sealed class CompilationSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CompilationSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.CompilationSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Konfigurationseinstellungen, die verwendet werden, um die Kompilierung-Infrastruktur von Webanwendungen unterstützen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.CompilationSection> -Klasse bietet eine Möglichkeit zum programmgesteuerten Zugriff auf und ändern Sie den Inhalt der `compilation` Abschnitt der Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie Werte für verschiedene Attribute der deklarativ angeben, die `compilation` Abschnitt, die auch als Member zugegriffen werden kann die <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ Im folgenden Konfigurationsbeispiel-Datei zeigt, wie Sie Werte für deklarativ angeben, die `compilation` Abschnitt.  
+  
+```  
+<system.web>  
+  <compilation   
+    tempDirectory=""   
+    debug="False"   
+    strict="False"   
+    explicit="True"   
+    batch="True"   
+    batchTimeout="900"   
+    maxBatchSize="1000"   
+    maxBatchGeneratedFileSize="1000"   
+    numRecompilesBeforeAppRestart="15"   
+    defaultLanguage="vb"   
+    targetFramework="4.0"   
+    urlLinePragmas="False"   
+    assemblyPostProcessorType="">  
+    <assemblies>  
+      <clear />  
+    </assemblies>  
+    <buildProviders>  
+      <clear />  
+    </buildProviders>  
+    <expressionBuilders>  
+      <clear />  
+    </expressionBuilders>  
+  </compilation>   
+</system.web>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie Mitglieder der der <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CompilationSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/CS/CompilationSection.cs#1)]
+ [!code-vb[System.Web.Configuration.CompilationSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/VB/CompilationSection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilationSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CompilationSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.CompilationSection" />-Klasse mit Standardeinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.CompilationSection.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie erhalten eine Instanz von der <xref:System.Web.Configuration.CompilationSection> Klasse, indem die <xref:System.Configuration.Configuration.GetSection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assemblies">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.AssemblyCollection Assemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.AssemblyCollection Assemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.Assemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("assemblies")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.AssemblyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Web.Configuration.AssemblyCollection" /> von <see cref="T:System.Web.Configuration.CompilationSection" /> ab.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.AssemblyCollection" /> , enthält die Assembly-Objekte, die während der Kompilierung einer ASP.NET Ressource verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält die Verweise der Assembly während der Kompilierung einer dynamischen ASP.NET Ressource verwenden. ASP.NET verknüpft diese Assemblys automatisch auf die Ressource, beim jedes Codemodul zu kompilieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyPostProcessorType">
+      <MemberSignature Language="C#" Value="public string AssemblyPostProcessorType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyPostProcessorType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.AssemblyPostProcessorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("assemblyPostProcessorType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der einen Kompilierungsschritt nach dem Prozess für eine Assembly angeben.</summary>
+        <value>Ein Zeichenfolgenwert, der nach dem Prozess Kompilierungsschritt für eine Assembly angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Batch">
+      <MemberSignature Language="C#" Value="public bool Batch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Batch" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.Batch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("batch", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob, Batch-Kompilierung versucht wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Batch-Kompilierung ausgeführt wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie dieses Attribut auf `true` so ändern Sie die Verzögerung durch die Kompilierung erforderlich, wenn Sie Zugriff auf eine nicht kompilierten Datei. Wenn dieses Attribut auf `true` weist ASP.NET für alle nicht kompilierten Dateien im Batchmodus vorzukompilieren. Eine Verzögerung tritt auf, wenn die Dateien zuerst kompiliert werden; Sobald die Dateien kompiliert werden, wird die Verzögerung jedoch gelöscht.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CompilationSection.Batch%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CompilationSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/CS/CompilationSection.cs#4)]
+ [!code-vb[System.Web.Configuration.CompilationSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/VB/CompilationSection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BatchTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan BatchTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan BatchTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.BatchTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanSecondsOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("batchTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Timeoutzeitraum in Sekunden für die Batch-Kompilierung.</summary>
+        <value>Ein Wert, der angibt, der der Zeitdauer in Sekunden für die Batch-Kompilierung auftreten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt das Timeout an, für die Batchkompilierung in Sekunden. Wenn die Kompilierung nicht innerhalb des Timeouts abgeschlossen werden kann, wird der Compiler auf einzelnen Kompilierungsmodus für die aktuelle Seite zurückgesetzt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CompilationSection.BatchTimeout%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CompilationSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/CS/CompilationSection.cs#5)]
+ [!code-vb[System.Web.Configuration.CompilationSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/VB/CompilationSection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProviders">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.BuildProviderCollection BuildProviders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.BuildProviderCollection BuildProviders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.BuildProviders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("buildProviders")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.BuildProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Configuration.BuildProviderCollection" /> Auflistung von der <see cref="T:System.Web.Configuration.CompilationSection" /> Klasse.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.BuildProviderCollection" /> , die während der Kompilierung verwendeten Buildanbieter enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.Compilation.BuildProvider> Objekt stellt die Funktionalität zum Analysieren eines bestimmten Dateityps und zum Generieren von Code aus dieser Datei.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeSubDirectories">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.CodeSubDirectoriesCollection CodeSubDirectories { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.CodeSubDirectoriesCollection CodeSubDirectories" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.CodeSubDirectories" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("codeSubDirectories")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.CodeSubDirectoriesCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Web.Configuration.CodeSubDirectoriesCollection" /> von <see cref="T:System.Web.Configuration.CompilationSection" /> ab.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.CodeSubDirectoriesCollection" /> Auflistung, die eine geordnete Auflistung von Unterverzeichnisse mit Dateien, die zur Laufzeit kompiliert enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft definiert eine geordnete Auflistung von Unterverzeichnisse mit Dateien, die zur Laufzeit kompiliert. Es kann eine beliebige Anzahl von Unterverzeichnissen vorhanden sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compilers">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.CompilerCollection Compilers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.CompilerCollection Compilers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.Compilers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("compilers")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.CompilerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Configuration.CompilerCollection" /> Auflistung von der <see cref="T:System.Web.Configuration.CompilationSection" /> Klasse.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.CompilerCollection" /> -Auflistung, die eine Auflistung von enthält <see cref="T:System.Web.Configuration.Compiler" /> Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.CompilationSection.Compilers%2A> Eigenschaft verweist nicht auf ein vorhandenes Element in der zugrunde liegenden Konfigurationsdatei. Es ist ein Konstrukt, ermöglicht den einfachen Zugriff auf, die <xref:System.Web.Configuration.Compiler> enthaltenen Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlBuilderInterceptorType">
+      <MemberSignature Language="C#" Value="public string ControlBuilderInterceptorType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ControlBuilderInterceptorType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.ControlBuilderInterceptorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("controlBuilderInterceptorType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge, die den Objekttyp, der zum Abfangen einer <see cref="T:System.Web.UI.ControlBuilder" /> Objekt, und konfigurieren Sie einen Container.</summary>
+        <value>Eine Zeichenfolge, die den Objekttyp, der zum Abfangen einer <see cref="T:System.Web.UI.ControlBuilder" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Debug">
+      <MemberSignature Language="C#" Value="public bool Debug { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Debug" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.Debug" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("debug", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob beim Kompilieren von Version Binärdateien oder Debugbinärdateien fest.</summary>
+        <value>
+          <see langword="true" />Wenn für die Kompilierung Debugbinärdateien verwendet werden; andernfalls <see langword="false" />. <see langword="false" />Gibt an, dass Version Binärdateien für die Kompilierung verwendet werden. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CompilationSection.Debug%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CompilationSection#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/CS/CompilationSection.cs#9)]
+ [!code-vb[System.Web.Configuration.CompilationSection#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/VB/CompilationSection.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultLanguage">
+      <MemberSignature Language="C#" Value="public string DefaultLanguage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.DefaultLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultLanguage", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Standardprogrammiersprache in dynamischen Kompilierungsdateien verwendet.</summary>
+        <value>Ein Wert, der die Standardprogrammiersprache in dynamischen Kompilierungsdateien verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die Standardprogrammiersprache, z. B. c# oder VB.NET)., um die in dynamischen Kompilierungsdateien verwendet. Sprachnamen werden definiert über die `system.codedom` Abschnitt. Die Standardprogrammiersprache ist `vb`, gibt VB.NET als die Standardprogrammiersprache an.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CompilationSection.DefaultLanguage%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CompilationSection#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/CS/CompilationSection.cs#10)]
+ [!code-vb[System.Web.Configuration.CompilationSection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/VB/CompilationSection.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableObsoleteWarnings">
+      <MemberSignature Language="C#" Value="public bool DisableObsoleteWarnings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableObsoleteWarnings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.DisableObsoleteWarnings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("disableObsoleteWarnings", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob der Konfigurationswert "DisableObsoleteWarnings" im Abschnitt Kompilierung festgelegt ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Konfigurationswert "DisableObsoleteWarnings" im Abschnitt Kompilierung festgelegt ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnablePrefetchOptimization">
+      <MemberSignature Language="C#" Value="public bool EnablePrefetchOptimization { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnablePrefetchOptimization" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.EnablePrefetchOptimization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enablePrefetchOptimization", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eine ASP.NET-Anwendung die Vorabruffunktionalität von [!INCLUDE[win8](~/includes/win8-md.md)] nutzen kann.</summary>
+        <value>
+          <see langword="true" />, wenn eine ASP.NET-Anwendung die Vorabruffunktionalität von [!INCLUDE[win8](~/includes/win8-md.md)] nutzen kann, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vorabrufen ist ein Hilfsprogramm, die vorgesehen ist, zur Verbesserung der Leistung der Anwendung beim Start von Anwendungsdaten in den Arbeitsspeicher geladen, bevor er gefordert wird.  
+  
+> [!NOTE]
+>  Die [!INCLUDE[win8](~/includes/win8-md.md)] Prefetch-Dienst muss konfiguriert und wird ausgeführt, damit diese Einstellung wirksam werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Explicit">
+      <MemberSignature Language="C#" Value="public bool Explicit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Explicit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.Explicit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("explicit", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Microsoft Visual Basic verwenden <see langword="explicit" /> Option kompiliert.</summary>
+        <value>
+          <see langword="true" />Wenn das Visual Basic <see langword="explicit" /> -Kompilierungsoption "" aktiviert ist, andernfalls <see langword="false" />. <see langword="false" />Gibt an, dass die Visual Basic <see langword="explicit" /> -Kompilierungsoption "" ist deaktiviert. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die Einstellung für den Microsoft Visual Basic `explicit` Option kompiliert. Bei Festlegung auf `true`, Visual Basic `explicit` -Kompilierungsoption "" aktiviert ist. Wenn die Option aktiviert ist, alle Variablen explizit deklariert werden mithilfe einer `Dim`, `Private`, `Public`, oder `ReDim` Anweisung. Die Standardeinstellung ist `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CompilationSection.Explicit%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CompilationSection#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/CS/CompilationSection.cs#11)]
+ [!code-vb[System.Web.Configuration.CompilationSection#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/VB/CompilationSection.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpressionBuilders">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ExpressionBuilderCollection ExpressionBuilders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ExpressionBuilderCollection ExpressionBuilders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.ExpressionBuilders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("expressionBuilders")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ExpressionBuilderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Web.Configuration.ExpressionBuilderCollection" /> von <see cref="T:System.Web.Configuration.CompilationSection" /> ab.</summary>
+        <value>Eine <see cref="T:System.Web.Configuration.ExpressionBuilderCollection" />, die <see cref="T:System.Web.Configuration.ExpressionBuilder" />-Objekte enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FolderLevelBuildProviders">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.FolderLevelBuildProviderCollection FolderLevelBuildProviders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.FolderLevelBuildProviderCollection FolderLevelBuildProviders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.FolderLevelBuildProviders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("folderLevelBuildProviders")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FolderLevelBuildProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Configuration.FolderLevelBuildProviderCollection" /> Auflistung von der <see cref="T:System.Web.Configuration.CompilationSection" /> Klasse, die die Buildanbieter darstellt, die während der Kompilierung verwendet werden.</summary>
+        <value>Die Buildanbieter, die während der Kompilierung verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.Configuration.FolderLevelBuildProvider> Objekt stellt die Funktionalität zum Analysieren eines bestimmten Dateityps und zum Generieren von Code aus dieser Datei.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeObject">
+      <MemberSignature Language="C#" Value="protected override object GetRuntimeObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetRuntimeObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CompilationSection.GetRuntimeObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBatchGeneratedFileSize">
+      <MemberSignature Language="C#" Value="public int MaxBatchGeneratedFileSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxBatchGeneratedFileSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.MaxBatchGeneratedFileSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxBatchGeneratedFileSize", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale kombinierte Größe der generierten Quelldateien pro Batchkompilierung.</summary>
+        <value>Ein Ganzzahlwert, der angibt, der maximale kombinierten Größe der generierten Quelldateien pro Batchkompilierung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die maximale Größe (in KB) der generierten Quelldateien pro Batchkompilierung an. Der Standardwert ist 1000 KB.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CompilationSection.MaxBatchGeneratedFileSize%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CompilationSection#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/CS/CompilationSection.cs#13)]
+ [!code-vb[System.Web.Configuration.CompilationSection#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/VB/CompilationSection.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBatchSize">
+      <MemberSignature Language="C#" Value="public int MaxBatchSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxBatchSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.MaxBatchSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxBatchSize", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl von Seiten pro Batchkompilierung.</summary>
+        <value>Ein Ganzzahlwert, der angibt, der maximalen Anzahl der Seiten, die in einem einzelnen Batch kompiliert wird. Die Standardanzahl von Seiten ist 1000.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CompilationSection.MaxBatchSize%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CompilationSection#14](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/CS/CompilationSection.cs#14)]
+ [!code-vb[System.Web.Configuration.CompilationSection#14](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/VB/CompilationSection.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConcurrentCompilations">
+      <MemberSignature Language="C#" Value="public int MaxConcurrentCompilations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConcurrentCompilations" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.MaxConcurrentCompilations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxConcurrentCompilations", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob der Konfigurationswert "MaxConcurrentCompilations" im Abschnitt Kompilierung festgelegt ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Konfigurationswert "MaxConcurrentCompilations" im Abschnitt Kompilierung festgelegt ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumRecompilesBeforeAppRestart">
+      <MemberSignature Language="C#" Value="public int NumRecompilesBeforeAppRestart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumRecompilesBeforeAppRestart" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.NumRecompilesBeforeAppRestart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("numRecompilesBeforeAppRestart", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Ressourcen, die vor dem Neustart der Anwendung auftreten können dynamisch erneut kompiliert.</summary>
+        <value>Ein Wert, der angibt, der Anzahl der Ressourcen, die vor dem Neustart der Anwendung auftreten können dynamisch erneut kompiliert. Der Standardwert ist 15 neukompilierungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die Anzahl der Ressourcen, die vor dem Neustart der Anwendung auftreten können dynamisch erneut kompiliert. Dieses Attribut wird auf den Konfigurationsebenen der globalen und, aber nicht auf der Ebene der Directory-Konfiguration unterstützt.  
+  
+> [!NOTE]
+>  ASP.NET erhöht die <xref:System.Web.Configuration.CompilationSection.NumRecompilesBeforeAppRestart%2A> Eigenschaftswert jedes Mal, wenn eine Assembly ist ungültig und kann nicht gelöscht werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CompilationSection.NumRecompilesBeforeAppRestart%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CompilationSection#15](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/CS/CompilationSection.cs#15)]
+ [!code-vb[System.Web.Configuration.CompilationSection#15](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/VB/CompilationSection.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptimizeCompilations">
+      <MemberSignature Language="C#" Value="public bool OptimizeCompilations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OptimizeCompilations" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.OptimizeCompilations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("optimizeCompilations", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Kompilierung optimiert werden muss.</summary>
+        <value>
+          <see langword="true" />Wenn die Kompilierung optimiert werden muss. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostDeserialize">
+      <MemberSignature Language="C#" Value="protected override void PostDeserialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostDeserialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CompilationSection.PostDeserialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProfileGuidedOptimizations">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProfileGuidedOptimizationsFlags ProfileGuidedOptimizations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.ProfileGuidedOptimizationsFlags ProfileGuidedOptimizations" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.ProfileGuidedOptimizations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("profileGuidedOptimizations", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProfileGuidedOptimizationsFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Anwendung für die bereitgestellte Umgebung optimiert ist, oder legt ihn fest.</summary>
+        <value>Ein Wert, der angibt, ob die Anwendung für die bereitgestellte Umgebung optimiert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft festgelegt wird, um <xref:System.Web.Configuration.ProfileGuidedOptimizationsFlags.All>, das ASP.NET Kompilierung ermöglicht Optimierungen, die zum Beschleunigen der ASP.NET startleistung auf Kosten der erhöhte CPU-Auslastung bestimmt sind. Die Standardeinstellung für diese Eigenschaft ist <xref:System.Web.Configuration.ProfileGuidedOptimizationsFlags.All>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnly">
+      <MemberSignature Language="C#" Value="protected override void SetReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CompilationSection.SetReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Strict">
+      <MemberSignature Language="C#" Value="public bool Strict { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Strict" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.Strict" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("strict", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Visual Basic <see langword="strict" /> Option kompiliert.</summary>
+        <value>
+          <see langword="true" />Wenn das Visual Basic <see langword="strict" /> -Kompilierungsoption "" verwendet wird; andernfalls, <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `true`, Kompilierung lässt explizit keine Datentyp Konvertierungen in die Daten verloren gehen würden, und jede Konvertierung zwischen numerischen Typen und Zeichenfolgen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CompilationSection.Strict%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CompilationSection#16](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/CS/CompilationSection.cs#16)]
+ [!code-vb[System.Web.Configuration.CompilationSection#16](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/VB/CompilationSection.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFramework">
+      <MemberSignature Language="C#" Value="public string TargetFramework { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFramework" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.TargetFramework" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("targetFramework", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Version von .NET Framework, die die Website abzielt.</summary>
+        <value>Die Version von .NET Framework, die die Website abzielt. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen dazu, wie Sie eine bestimmte Version von .NET Framework abzielen, finden Sie unter [.NET Framework-Zielversionen für ASP.NET-Webprojekte](http://msdn.microsoft.com/library/8b8145a9-62f6-4fc4-8a83-47b0487cbe76).  
+  
+   
+  
+## Examples  
+ [Compilation-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/7c319582-074a-4d2a-a787-03b9d4541c12)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TempDirectory">
+      <MemberSignature Language="C#" Value="public string TempDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TempDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.TempDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("tempDirectory", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, das Verzeichnis zum Speichern temporärer Dateien während der Kompilierung verwendet.</summary>
+        <value>Ein Wert, der das Verzeichnis zum Speichern temporärer Dateien während der Kompilierung verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CompilationSection.TempDirectory%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CompilationSection#17](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/CS/CompilationSection.cs#17)]
+ [!code-vb[System.Web.Configuration.CompilationSection#17](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/VB/CompilationSection.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlLinePragmas">
+      <MemberSignature Language="C#" Value="public bool UrlLinePragmas { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UrlLinePragmas" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CompilationSection.UrlLinePragmas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("urlLinePragmas", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Compiler Anweisungen physischen Pfaden oder URLs verwenden.</summary>
+        <value>
+          <see langword="true" />Wenn der Compiler Anweisungen anstelle von physischen Pfaden URLs verwenden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft, als angegeben ist `true` URLs werden in der Konfiguration für den Compiler-Anweisungen anstelle von physischen Pfaden verwendet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CompilationSection.UrlLinePragmas%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.CompilationSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CompilationSection#18](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/CS/CompilationSection.cs#18)]
+ [!code-vb[System.Web.Configuration.CompilationSection#18](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CompilationSection/VB/CompilationSection.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

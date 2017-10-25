@@ -1,0 +1,6 @@
+<Namespace Name="System.IdentityModel.Services.Tokens">
+  <Docs>
+    <summary>Die <see cref="N:System.IdentityModel.Services.Tokens" /> enthält die <see cref="T:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler" /> Klasse und die <see cref="T:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler" /> Klasse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

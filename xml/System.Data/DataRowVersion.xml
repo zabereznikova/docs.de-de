@@ -1,0 +1,158 @@
+<Type Name="DataRowVersion" FullName="System.Data.DataRowVersion">
+  <TypeSignature Language="C#" Value="public enum DataRowVersion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataRowVersion extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataRowVersion" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt die Version einer <see cref="T:System.Data.DataRow" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataRowVersion> Werte werden verwendet, wenn das Abrufen des Werts im gefunden eine <xref:System.Data.DataRow> mit <xref:System.Data.DataRow.Item%2A> oder <xref:System.Data.DataRow.GetChildRows%2A> von der <xref:System.Data.DataRow> Objekt.  
+  
+ Die <xref:System.Data.DataRowVersion> informiert Sie, welche Version von einem <xref:System.Data.DataRow> vorhanden ist. Versionen ändern den folgenden Situationen:  
+  
+-   Nach dem Aufruf der <xref:System.Data.DataRow> des Objekts <xref:System.Data.DataRow.BeginEdit%2A> -Methode, wenn Sie den Wert ändern die `Current` und `Proposed` Werte verfügbar.  
+  
+-   Nach dem Aufruf der <xref:System.Data.DataRow> des Objekts <xref:System.Data.DataRow.CancelEdit%2A> -Methode, die `Proposed` Wert gelöscht.  
+  
+-   Nach dem Aufruf der <xref:System.Data.DataRow> des Objekts <xref:System.Data.DataRow.EndEdit%2A> -Methode, die vorgeschlagen-Wert wird der `Current` Wert.  
+  
+-   Nach dem Aufruf der <xref:System.Data.DataRow> des Objekts <xref:System.Data.DataRow.AcceptChanges%2A> -Methode, die `Original` Wert ist identisch mit der `Current` Wert.  
+  
+-   Nach dem Aufruf der <xref:System.Data.DataTable> des Objekts <xref:System.Data.DataTable.AcceptChanges%2A> -Methode, die `Original` Wert ist identisch mit der `Current` Wert.  
+  
+-   Nach dem Aufruf der <xref:System.Data.DataRow> des Objekts <xref:System.Data.DataRow.RejectChanges%2A> -Methode, die `Proposed` Wert verworfen und die Version wird `Current`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft die <xref:System.Data.DataRowVersion> von einem <xref:System.Data.DataRow> vor dem Aufrufen der <xref:System.Data.DataRow.AcceptChanges%2A> Methode.  
+  
+ [!code-csharp[Classic WebData DataRowVersion Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowVersion Example/cs/source.cs#1)]
+ [!code-vb[Classic WebData DataRowVersion Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowVersion Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="Current" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataRowVersion Current = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataRowVersion.Current" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeile enthält aktuelle Werte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataRowVersion Default = int32(1536)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataRowVersion.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Standardversion von <see cref="T:System.Data.DataRowState" />. Für einen <see langword="DataRowState" />-Wert von <see langword="Added" />, <see langword="Modified" /> oder <see langword="Deleted" /> ist die Standardversion <see langword="Current" />. Für einen <see cref="T:System.Data.DataRowState" />-Wert von <see langword="Detached" /> ist die Version <see langword="Proposed" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Original">
+      <MemberSignature Language="C#" Value="Original" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataRowVersion Original = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataRowVersion.Original" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeile enthält die ursprünglichen Werte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Proposed">
+      <MemberSignature Language="C#" Value="Proposed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataRowVersion Proposed = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataRowVersion.Proposed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeile enthält einen vorgeschlagenen Wert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

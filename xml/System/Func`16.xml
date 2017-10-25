@@ -1,0 +1,177 @@
+<Type Name="Func&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15,TResult&gt;" FullName="System.Func&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15,TResult&gt;">
+  <TypeSignature Language="C#" Value="public delegate TResult Func&lt;in T1,in T2,in T3,in T4,in T5,in T6,in T7,in T8,in T9,in T10,in T11,in T12,in T13,in T14,in T15,out TResult&gt;(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Func`16&lt;- T1, - T2, - T3, - T4, - T5, - T6, - T7, - T8, - T9, - T10, - T11, - T12, - T13, - T14, - T15, + TResult&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Func`16" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T1">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T2">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T3">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T4">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T5">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T6">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T7">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T8">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T9">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T10">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T11">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T12">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T13">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T14">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T15">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TResult">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="arg1" Type="T1" />
+    <Parameter Name="arg2" Type="T2" />
+    <Parameter Name="arg3" Type="T3" />
+    <Parameter Name="arg4" Type="T4" />
+    <Parameter Name="arg5" Type="T5" />
+    <Parameter Name="arg6" Type="T6" />
+    <Parameter Name="arg7" Type="T7" />
+    <Parameter Name="arg8" Type="T8" />
+    <Parameter Name="arg9" Type="T9" />
+    <Parameter Name="arg10" Type="T10" />
+    <Parameter Name="arg11" Type="T11" />
+    <Parameter Name="arg12" Type="T12" />
+    <Parameter Name="arg13" Type="T13" />
+    <Parameter Name="arg14" Type="T14" />
+    <Parameter Name="arg15" Type="T15" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>TResult</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="T1">Der Typ des ersten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T2">Der Typ des zweiten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T3">Der Typ des dritten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T4">Der Typ des vierten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T5">Der Typ des fünften Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T6">Der Typ des sechsten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T7">Der Typ des siebten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T8">Der Typ des achten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T9">Der Typ des neunten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T10">Der Typ des zehnten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T11">Der Typ des elften Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T12">Der Typ des zwölften Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T13">Der Typ des dreizehnten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T14">Der Typ des vierzehnten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T15">Der Typ des fünfzehnten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="TResult">Der Typ des Rückgabewerts der Methode, die dieser Delegat kapselt.</typeparam>
+    <param name="arg1">Der erste Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg2">Der zweite Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg3">Der dritte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg4">Der vierte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg5">Der fünfte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg6">Sechsten Parameters der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg7">Siebten Parameters der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg8">Der achte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg9">Der neunte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg10">Der zehnte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg11">Der elfte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg12">Der zwölfte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg13">Das dreizehnte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg14">Das vierzehnte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg15">Das fünfzehnte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <summary>Kapselt eine Methode, die über 15 Parameter verfügt und gibt einen Wert, der den vom angegebenen Typ der <paramref name="TResult" /> Parameter.</summary>
+    <returns>Der Rückgabewert der Methode, die dieser Delegat kapselt.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat können Sie eine Methode darstellen, die als Parameter übergeben werden kann, ohne explizit einen benutzerdefinierten Delegaten zu deklarieren. Die gekapselte Methode muss der Methodensignatur entsprechen, die von diesem Delegaten definiert ist. Dies bedeutet, dass die gekapselte Methode über 15 Parameter verfügen muss, die von die jeder Wert übergeben wird, und sie einen Wert zurückgeben muss.  
+  
+> [!NOTE]
+>  Auf eine Methode zu verweisen, die über 15 Parameter verfügt und gibt `void` (oder in Visual Basic deklariert wird als eine `Sub` sondern als eine `Function`), die generische <xref:System.Action%6015> stattdessen delegieren.  
+  
+ Sie können auch die <xref:System.Func%6016> mit anonymen Methoden und Lambda-Ausdrücke zu delegieren.  
+  
+ Der zugrunde liegende Typ eines Lambda-Ausdrucks ist eine der generischen `Func` Delegaten. Dadurch möglich, einen Lambda-Ausdruck als Parameter zu übergeben, ohne explizit einem Delegaten zuzuweisen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

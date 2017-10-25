@@ -1,0 +1,122 @@
+<Type Name="SayAs" FullName="System.Speech.Synthesis.TtsEngine.SayAs">
+  <TypeSignature Language="C#" Value="public class SayAs" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi beforefieldinit SayAs extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.SayAs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen zu den Inhaltstyp (z. B. währungs-, Datums- oder Adresse) oder das Sprachkonstrukt, die bestimmen, wie Text gesprochen werden soll.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SayAs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.SayAs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der dem <c>SayAs</c> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften eines der <xref:System.Speech.Synthesis.TtsEngine.SayAs> Klasse dienen zum Abrufen oder Festlegen der Werte für die Attribute der `say-as` Element im Markup SSML. Der <xref:System.Speech.Synthesis.TtsEngine.FragmentState.SayAs%2A> Eigenschaft verwendet ein <xref:System.Speech.Synthesis.TtsEngine.SayAs> Instanz zu informieren der <xref:System.Speech.Synthesis.SpeechSynthesizer> wie den Text in sprechen die <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextToSpeak%2A> Eigenschaft eine <xref:System.Speech.Synthesis.TtsEngine.TextFragment>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Detail">
+      <MemberSignature Language="C#" Value="public string Detail { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Detail" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.SayAs.Detail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <c>Detail</c> -Attribut für ein <c>sagen-als</c> Element in der SSML-Markupsprache von einer Eingabeaufforderung.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Synthesis.TtsEngine.FragmentState.SayAs%2A?displayProperty=nameWithType> Eigenschaft ruft ab oder legt den Wert für die <xref:System.Speech.Synthesis.TtsEngine.SayAs.Detail%2A> Eigenschaft in einer <xref:System.Speech.Synthesis.TtsEngine.SayAs> Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public string Format { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Format" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.SayAs.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <c>Format</c> -Attribut für ein <c>sagen-als</c> Element in der SSML-Markupsprache von einer Eingabeaufforderung.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Synthesis.TtsEngine.FragmentState.SayAs%2A?displayProperty=nameWithType> Eigenschaft ruft ab oder legt den Wert für die <xref:System.Speech.Synthesis.TtsEngine.SayAs.Format%2A> Eigenschaft in einer <xref:System.Speech.Synthesis.TtsEngine.SayAs> Instanz.  
+  
+ Beispielsweise kann eine Aufforderung den Ausdruck enthalten "die Zeit ist `<say-as interpret-as="time"> 05:00 </say-as>`".  In diesem Beispiel `05:00` gesprochen werden konnte, als "fünf Uhr" oder "fünf AM" oder "oh Fünfhundert". Die <xref:System.Speech.Synthesis.TtsEngine.SayAs.Format%2A> als Wert der Eigenschaft kann die `interpret-as` Attribut erweitert werden, um anzugeben, welche Uhrzeitformat, sprechen. Wenn der Wert für die `interpret-as` -Attribut ist "Time: 24 Stunden", die <xref:System.Speech.Synthesis.SpeechSynthesizer> spricht "oh Fünfhundert". Wenn der Wert für die `interpret-as` -Attribut ist "Time: 12 Stunden", die <xref:System.Speech.Synthesis.SpeechSynthesizer> spricht "fünf A M".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpretAs">
+      <MemberSignature Language="C#" Value="public string InterpretAs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InterpretAs" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.SayAs.InterpretAs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <c>interpretieren-als</c> -Attribut für ein <c>sagen-als</c> Element in der SSML-Markupsprache von einer Eingabeaufforderung.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Synthesis.TtsEngine.FragmentState.SayAs%2A?displayProperty=nameWithType> Eigenschaft ruft ab oder legt den Wert für die <xref:System.Speech.Synthesis.TtsEngine.SayAs.InterpretAs%2A> Eigenschaft in einer <xref:System.Speech.Synthesis.TtsEngine.SayAs> Instanz.  
+  
+ Die <xref:System.Speech.Synthesis.SpeechSynthesizer> verwendet den Inhaltstyp, angegeben durch die <xref:System.Speech.Synthesis.TtsEngine.SayAs.InterpretAs%2A> Eigenschaft, um zu bestimmen, wie mit dem angegebenen Text gerendert.  
+  
+ Z. B. den Namen Edgar konnte, als Name gesprochen werden: "Mein Name ist Edgar". Oder es könnte wie folgt buchstabiert werden mit einem Buchstaben, wie angegeben mit der `interpret-as` -Attribut in diesem Satz: "Mein Name ist `<say-as interpret-as="spell-out"> Edgar </say-as>`." In diesem Fall die <xref:System.Speech.Synthesis.SpeechSynthesizer> spricht Edgar als "E D G A R".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,124 @@
+<Type Name="EventClassAttribute" FullName="System.EnterpriseServices.EventClassAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EventClassAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventClassAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.EventClassAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Markiert die attributierte Klasse als eine Ereignisklasse. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `EventClass` wird angegeben, muss in der COM+-Katalog nicht deaktiviert werden; Wenn in der COM+-Katalog aktiviert ist, muss er auf die Komponente angegeben werden.  
+  
+ Methodenaufrufe einer Ereignisklasse abhängt, werden nie an die Implementierung übermittelt; Sie werden stattdessen an Ereignisabonnenten übermittelt.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.EnterpriseServices.EventClassAttribute>, finden Sie unter der <xref:System.EnterpriseServices.EventClassAttribute.%23ctor%2A> Konstruktor.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventClassAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.EventClassAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.EnterpriseServices.EventClassAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist keine nicht konfigurierten Standardwert für dieses Attribut ein. In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine konfigurierte Instanz der <xref:System.EnterpriseServices.EventClassAttribute>.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|`FireInParallel`|`false`|  
+|`AllowInProcSubscribers`|`true`|  
+|`PublisherFilter`|`null`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowInprocSubscribers">
+      <MemberSignature Language="C#" Value="public bool AllowInprocSubscribers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowInprocSubscribers" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.EventClassAttribute.AllowInprocSubscribers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Abonnenten im Prozess mit dem Verleger aktiviert werden können.</summary>
+        <value>
+          <see langword="true" />Wenn Abonnenten im Prozess mit dem Verleger aktiviert werden können; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FireInParallel">
+      <MemberSignature Language="C#" Value="public bool FireInParallel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FireInParallel" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.EventClassAttribute.FireInParallel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Ereignisse sind parallel an Abonnenten übermittelt werden.</summary>
+        <value>
+          <see langword="true" />Wenn die Ereignisse werden parallel an Abonnenten übermittelt werden. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublisherFilter">
+      <MemberSignature Language="C#" Value="public string PublisherFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PublisherFilter" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.EventClassAttribute.PublisherFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen Verleger Filter für eine Ereignismethode.</summary>
+        <value>Der Verleger-Filter.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

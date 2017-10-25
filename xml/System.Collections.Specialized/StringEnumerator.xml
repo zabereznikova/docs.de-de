@@ -1,0 +1,207 @@
+<Type Name="StringEnumerator" FullName="System.Collections.Specialized.StringEnumerator">
+  <TypeSignature Language="C#" Value="public class StringEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StringEnumerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Specialized.StringEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Specialized</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Unterstützt eine einfache Iteration durch eine <see cref="T:System.Collections.Specialized.StringCollection" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `foreach`-Anweisung der Programmiersprache C# (`for each` in Visual Basic) verbirgt die Komplexität der Enumeratoren.  Daher empfiehlt es sich, `foreach` zu verwenden und den Enumerator nicht direkt zu ändern.  
+  
+ Mit Enumeratoren können die Daten in der Auflistung zwar gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ Zu Beginn wird der Enumerator vor das erste Element in der Auflistung positioniert. <xref:System.Collections.Specialized.StringEnumerator.Reset%2A> setzt den Enumerator ebenfalls auf diese Position zurück. An dieser position Aufrufen <xref:System.Collections.Specialized.StringEnumerator.Current%2A> löst eine Ausnahme aus. Daher muss der Enumerator durch einen Aufruf von <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> auf das erste Element der Auflistung gesetzt werden, bevor der Wert von <xref:System.Collections.Specialized.StringEnumerator.Current%2A> gelesen werden kann.  
+  
+ <xref:System.Collections.Specialized.StringEnumerator.Current%2A> gibt solange dasselbe Objekt zurück, bis <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> oder <xref:System.Collections.Specialized.StringEnumerator.Reset%2A> aufgerufen wird. <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> legt <xref:System.Collections.Specialized.StringEnumerator.Current%2A> auf das nächste Element fest.  
+  
+ Wenn <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> übergibt am Ende der Auflistung der Enumerator hinter dem letzten Element in der Auflistung positioniert ist und <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> gibt `false`. Wenn der Enumerator ist an dieser Position ist nachfolgende Aufrufe <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> auch zurückgeben `false`. Wenn der letzte Aufruf <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> zurückgegebene `false`Aufrufen <xref:System.Collections.Specialized.StringEnumerator.Current%2A> löst eine Ausnahme aus. Um <xref:System.Collections.Specialized.StringEnumerator.Current%2A> wieder auf das erste Element der Auflistung festzulegen, können Sie <xref:System.Collections.Specialized.StringEnumerator.Reset%2A> gefolgt von <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> aufrufen.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn die Änderungen werden auf die Auflistung, z. B. das Hinzufügen, ändern oder Löschen von Elementen aus, das der Enumerator unwiederbringlich seine ist ungültig, und der nächste Aufruf von <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> oder <xref:System.Collections.Specialized.StringEnumerator.Reset%2A> löst eine <xref:System.InvalidOperationException>. Wenn die Auflistung, zwischen geändert wird <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> und <xref:System.Collections.Specialized.StringEnumerator.Current%2A>, <xref:System.Collections.Specialized.StringEnumerator.Current%2A> gibt das Element, das auf festgelegt, wird, auch wenn der Enumerator bereits ungültig ist.  
+  
+ Der Enumerator hat keinen exklusiven Zugriff auf die Auflistung; daher ist die Enumeration einer Auflistung systembedingt kein threadsicheres Verfahren. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, einige der Eigenschaften und Methoden des <xref:System.Collections.Specialized.StringEnumerator>.  
+  
+ [!code-cpp[System.Collections.Specialized.StringEnumerator2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.StringEnumerator2/CPP/stringenumerator.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.StringEnumerator2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.StringEnumerator2/CS/stringenumerator.cs#1)]
+ [!code-vb[System.Collections.Specialized.StringEnumerator2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.StringEnumerator2/VB/stringenumerator.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Öffentliche statische (<see langword="Shared" /> in Visual Basic) Member dieses Typs sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.  
+  
+ Die Enumeration einer Auflistung ist systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public string Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Current" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.StringEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Element in der Auflistung ab.</summary>
+        <value>Das aktuelle Element in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Erstellen eines Enumerators oder nach einem <xref:System.Collections.Specialized.StringEnumerator.Reset%2A> aufgerufen wird, <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> aufgerufen werden, um den Enumerator auf das erste Element der Auflistung vor dem Lesen des Werts von <xref:System.Collections.Specialized.StringEnumerator.Current%2A>ist, andernfalls <xref:System.Collections.Specialized.StringEnumerator.Current%2A> ist nicht definiert.  
+  
+ <xref:System.Collections.Specialized.StringEnumerator.Current%2A>Außerdem löst eine Ausnahme aus, wenn der letzte Aufruf <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> zurückgegebene `false`, gibt das Ende der Auflistung an.  
+  
+ <xref:System.Collections.Specialized.StringEnumerator.Current%2A>Verschiebt die Position des Enumerators und aufeinander folgende Aufrufe von nicht <xref:System.Collections.Specialized.StringEnumerator.Current%2A> dasselbe Objekt zurück, bis entweder <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> oder <xref:System.Collections.Specialized.StringEnumerator.Reset%2A> aufgerufen wird.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn die Änderungen werden auf die Auflistung, z. B. das Hinzufügen, ändern oder Löschen von Elementen aus, das der Enumerator unwiederbringlich seine ist ungültig, und der nächste Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> löst eine <xref:System.InvalidOperationException>. Wenn die Auflistung, zwischen geändert wird <xref:System.Collections.IEnumerator.MoveNext%2A> und <xref:System.Collections.IEnumerator.Current%2A>, <xref:System.Collections.IEnumerator.Current%2A> gibt das Element, das auf festgelegt, wird, auch wenn der Enumerator bereits ungültig ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, einige der Eigenschaften und Methoden des <xref:System.Collections.Specialized.StringEnumerator>.  
+  
+ [!code-cpp[System.Collections.Specialized.StringEnumerator2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.StringEnumerator2/CPP/stringenumerator.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.StringEnumerator2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.StringEnumerator2/CS/stringenumerator.cs#1)]
+ [!code-vb[System.Collections.Specialized.StringEnumerator2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.StringEnumerator2/VB/stringenumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Enumerator befindet sich vor dem ersten Element der Sammlung oder hinter dem letzten Element.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.StringEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf das nächste Element der Auflistung.</summary>
+        <returns>
+          <see langword="true" />, wenn der Enumerator erfolgreich auf das nächste Element gesetzt wurde, <see langword="false" />, wenn der Enumerator das Ende der Auflistung überschritten hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Erstellen eines Enumerators oder nach einem <xref:System.Collections.Specialized.StringEnumerator.Reset%2A> wird aufgerufen, wird ein Enumerator vor das erste Element der Auflistung und der erste Aufruf von positioniert <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> setzt den Enumerator auf das erste Element der Auflistung.  
+  
+ Wenn <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> übergibt am Ende der Auflistung der Enumerator hinter dem letzten Element in der Auflistung positioniert ist und <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> gibt `false`. Wenn der Enumerator ist an dieser Position ist nachfolgende Aufrufe <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> auch zurückgeben `false` bis <xref:System.Collections.Specialized.StringEnumerator.Reset%2A> aufgerufen wird.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn die Änderungen werden auf die Auflistung, z. B. das Hinzufügen, ändern oder Löschen von Elementen aus, das der Enumerator unwiederbringlich seine ist ungültig, und der nächste Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> löst eine <xref:System.InvalidOperationException>. Wenn die Auflistung, zwischen geändert wird <xref:System.Collections.IEnumerator.MoveNext%2A> und <xref:System.Collections.IEnumerator.Current%2A>, <xref:System.Collections.IEnumerator.Current%2A> gibt das Element, das auf festgelegt, wird, auch wenn der Enumerator bereits ungültig ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, einige der Eigenschaften und Methoden des <xref:System.Collections.Specialized.StringEnumerator>.  
+  
+ [!code-cpp[System.Collections.Specialized.StringEnumerator2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.StringEnumerator2/CPP/stringenumerator.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.StringEnumerator2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.StringEnumerator2/CS/stringenumerator.cs#1)]
+ [!code-vb[System.Collections.Specialized.StringEnumerator2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.StringEnumerator2/VB/stringenumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Sammlung wurde nach der Erstellung des Enumerators geändert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.StringEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf seine anfängliche Position vor dem ersten Element in der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Specialized.StringEnumerator.Reset%2A>Setzt den Enumerator auf den Anfang der Auflistung vor das erste Element. Nach dem <xref:System.Collections.Specialized.StringEnumerator.Reset%2A>, <xref:System.Collections.Specialized.StringEnumerator.MoveNext%2A> aufgerufen werden, um den Enumerator auf das erste Element der Auflistung vor dem Lesen des Werts von <xref:System.Collections.Specialized.StringEnumerator.Current%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, einige der Eigenschaften und Methoden des <xref:System.Collections.Specialized.StringEnumerator>.  
+  
+ [!code-cpp[System.Collections.Specialized.StringEnumerator2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.StringEnumerator2/CPP/stringenumerator.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.StringEnumerator2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.StringEnumerator2/CS/stringenumerator.cs#1)]
+ [!code-vb[System.Collections.Specialized.StringEnumerator2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.StringEnumerator2/VB/stringenumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Sammlung wurde nach der Erstellung des Enumerators geändert.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

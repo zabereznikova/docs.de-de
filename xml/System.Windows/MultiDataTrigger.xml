@@ -1,0 +1,235 @@
+<Type Name="MultiDataTrigger" FullName="System.Windows.MultiDataTrigger">
+  <TypeSignature Language="C#" Value="public sealed class MultiDataTrigger : System.Windows.TriggerBase, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MultiDataTrigger extends System.Windows.TriggerBase implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.MultiDataTrigger" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.TriggerBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Setters")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Trigger, der Eigenschaftswerte anwendet oder Aktionen ausführt, wenn die gebundenen Daten eine Reihe von Bedingungen erfüllen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.MultiDataTrigger> Objekt ähnelt eine <xref:System.Windows.MultiTrigger>, außer dass die Bedingungen für eine <xref:System.Windows.MultiDataTrigger> basieren auf Eigenschaftswerte von gebundenen Daten, statt die von einer <xref:System.Windows.UIElement>. In einem <xref:System.Windows.MultiDataTrigger>, eine Bedingung erfüllt ist, wenn der Wert der Eigenschaft für das Datenelement der angegebenen Plattform entspricht <xref:System.Windows.Condition.Value%2A>. Anschließend können Sie Setter oder <xref:System.Windows.TriggerBase.EnterActions%2A> und <xref:System.Windows.TriggerBase.ExitActions%2A> Eigenschaften Änderungen können übernommen werden, oder starten Aktionen aus, wenn alle Bedingungen erfüllt sind.  
+  
+ Die <xref:System.Windows.MultiDataTrigger.Setters%2A> Eigenschaft von einem <xref:System.Windows.MultiDataTrigger> Objekt kann nur bestehen <xref:System.Windows.Setter> Objekte. Hinzufügen einer <xref:System.Windows.Setter> untergeordnetes Element einer <xref:System.Windows.MultiDataTrigger> Objekt implizit hinzugefügt der <xref:System.Windows.SetterBaseCollection> für die <xref:System.Windows.MultiDataTrigger> Objekt. <xref:System.Windows.EventSetter>Objekte werden nicht unterstützt. nur <xref:System.Windows.Style.Setters%2A?displayProperty=nameWithType> unterstützt <xref:System.Windows.EventSetter> Objekte.  
+  
+ Informationen, wann der Trigger verwenden und andere Techniken verwenden, finden Sie unter [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft von der <xref:System.Windows.Controls.ListBox> gebunden ist `Places`, wird ein <xref:System.Collections.ObjectModel.ObservableCollection%601> von `Place` Objekte. `Place`Objekte verfügen über Eigenschaften `Name` und `State`. Die Definition der `Place` und `Places` werden nicht angezeigt.  
+  
+ Jede <xref:System.Windows.Controls.ListBoxItem> von der <xref:System.Windows.Controls.ListBox> zeigt eine `Place` Objekt. Die <xref:System.Windows.Style> im Beispiel wird angewendet auf die einzelnen <xref:System.Windows.Controls.ListBoxItem>. Die <xref:System.Windows.Condition> Elemente der <xref:System.Windows.MultiDataTrigger> angeben, auch wenn die `Name` und `State` von der `Place` lauten `Portland` und `OR` , klicken Sie dann den Hintergrund des entsprechenden <xref:System.Windows.Controls.ListBoxItem> festgelegt ist um `Cyan`.  
+  
+ [!code-xaml[DataTrigger#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTrigger/CSharp/Window1.xaml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MultiDataTrigger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MultiDataTrigger.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.MultiDataTrigger" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Conditions">
+      <MemberSignature Language="C#" Value="public System.Windows.ConditionCollection Conditions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.ConditionCollection Conditions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.MultiDataTrigger.Conditions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.ConditionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Windows.Condition" />-Objekten ab. Änderungen von Eigenschaftswerten werden angewendet, wenn alle Bedingungen in der Auflistung erfüllt sind.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Windows.Condition" />-Objekten. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.MultiDataTrigger> Objekt ähnelt eine <xref:System.Windows.MultiTrigger>, außer dass die Bedingungen für eine <xref:System.Windows.MultiDataTrigger> basieren auf Eigenschaftswerte von gebundenen Daten, statt die von einer <xref:System.Windows.UIElement>. In einem <xref:System.Windows.MultiDataTrigger>, eine Bedingung erfüllt ist, wenn der Wert der Eigenschaft für das Datenelement der angegebenen Plattform entspricht <xref:System.Windows.Condition.Value%2A>. Dass der erste Wert konvertiert in den Typ des Werts der Bindung, wenn möglich, und klicken Sie dann die beiden Werte sind einem Vergleich unter Verwendung der `Object.Equals` Methode. Die <xref:System.Windows.MultiTrigger> gilt die zugeordneten Setter oder Aktionen, wenn alle Bedingungen erfüllt sind (binary `AND` Vorgang).  
+  
+ Für eine <xref:System.Windows.MultiDataTrigger>, muss jede Bedingung in der Auflistung festlegen, sowohl die <xref:System.Windows.Condition.Binding%2A> und <xref:System.Windows.Condition.Value%2A> Eigenschaften. Weitere Informationen finden Sie unter <xref:System.Windows.Condition.Binding%2A>.  
+  
+<a name="xamlPropertyElementUsage_Conditions"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.Conditions>  
+    zeroOrMoreConditions  
+  </object.Conditions>  
+</object>  
+```  
+  
+<a name="xamlValues_Conditions"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *zeroOrMoreConditions*  
+ NULL oder mehr <xref:System.Windows.Condition> Objekte.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft von der <xref:System.Windows.Controls.ListBox> gebunden ist `Places`, wird ein <xref:System.Collections.ObjectModel.ObservableCollection%601> von `Place` Objekte. `Place`Objekte verfügen über Eigenschaften `Name` und `State`. Die Definition der `Place` und `Places` werden nicht angezeigt.  
+  
+ Jede <xref:System.Windows.Controls.ListBoxItem> von der <xref:System.Windows.Controls.ListBox> zeigt eine `Place` Objekt. Die <xref:System.Windows.Style> im Beispiel wird angewendet auf die einzelnen <xref:System.Windows.Controls.ListBoxItem>. Die <xref:System.Windows.Condition> Elemente der <xref:System.Windows.MultiDataTrigger> angeben, auch wenn die `Name` und `State` von der `Place` lauten `Portland` und `OR` , klicken Sie dann den Hintergrund des entsprechenden <xref:System.Windows.Controls.ListBoxItem> festgelegt ist um `Cyan`.  
+  
+ [!code-xaml[DataTrigger#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTrigger/CSharp/Window1.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Setters">
+      <MemberSignature Language="C#" Value="public System.Windows.SetterBaseCollection Setters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.SetterBaseCollection Setters" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.MultiDataTrigger.Setters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.SetterBaseCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Windows.Setter" /> Objekte, die beschreiben, die Eigenschaftswerte, um beim Anwenden die Bedingungen für die <see cref="T:System.Windows.MultiDataTrigger" /> erfüllt sind.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Windows.Setter" />-Objekten. Der Standardwert ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.MultiDataTrigger>ermöglicht das Starten von Aktionen mit den <xref:System.Windows.TriggerBase.EnterActions%2A> oder <xref:System.Windows.TriggerBase.ExitActions%2A> Eigenschaften oder Eigenschaftswerten festlegen, indem <xref:System.Windows.Setter> Objekte, wenn die gebundenen Daten eine Reihe von Bedingungen erfüllen.  
+  
+ Wenn es zwei existieren <xref:System.Windows.Setter> Objekte in der gleichen oder unterschiedliche Setter-Auflistungen, die dieselbe Eigenschaft festlegen der <xref:System.Windows.Setter> also deklarierte zuletzt verwendete ist.  
+  
+ Hinzufügen einer <xref:System.Windows.Setter> untergeordnetes Element einer <xref:System.Windows.MultiDataTrigger> Objekt implizit hinzugefügt der <xref:System.Windows.SetterBaseCollection> für die <xref:System.Windows.MultiDataTrigger> Objekt. <xref:System.Windows.EventSetter>Objekte werden nicht unterstützt. nur <xref:System.Windows.Style.Setters%2A?displayProperty=nameWithType> unterstützt <xref:System.Windows.EventSetter> Objekte.  
+  
+<a name="xamlPropertyElementUsage_Setters"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+    zeroOrMoreSetters  
+</object>  
+```  
+  
+<a name="xamlValues_Setters"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *zeroOrMoreSetters*  
+ NULL oder mehr <xref:System.Windows.Setter> Objekte.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft von der <xref:System.Windows.Controls.ListBox> gebunden ist `Places`, wird ein <xref:System.Collections.ObjectModel.ObservableCollection%601> von `Place` Objekte. `Place`Objekte verfügen über Eigenschaften `Name` und `State`. Die Definition der `Place` und `Places` werden nicht angezeigt.  
+  
+ Jede <xref:System.Windows.Controls.ListBoxItem> von der <xref:System.Windows.Controls.ListBox> zeigt eine `Place` Objekt. Die <xref:System.Windows.Style> im Beispiel wird angewendet auf die einzelnen <xref:System.Windows.Controls.ListBoxItem>. Die <xref:System.Windows.Condition> Elemente der <xref:System.Windows.MultiDataTrigger> angeben, auch wenn die `Name` und `State` von der `Place` lauten `Portland` und `OR` , klicken Sie dann den Hintergrund des entsprechenden <xref:System.Windows.Controls.ListBoxItem> festgelegt ist um `Cyan`.  
+  
+ Beachten Sie, dass `<MultiDataTrigger.Setters>` ist implizit.  
+  
+ [!code-xaml[DataTrigger#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTrigger/CSharp/Window1.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MultiDataTrigger.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende untergeordnete Objekt.</param>
+        <summary>Fügt ein untergeordnetes Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.MultiDataTrigger>-Instanz in eine <xref:System.Windows.Markup.IAddChild>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MultiDataTrigger.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der dem Objekt hinzuzufügende Text.</param>
+        <summary>Fügt dem Objekt den Textinhalt eines Knotens hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.MultiDataTrigger>-Instanz in eine <xref:System.Windows.Markup.IAddChild>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

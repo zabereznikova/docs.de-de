@@ -1,0 +1,1182 @@
+<Type Name="OleDbSchemaGuid" FullName="System.Data.OleDb.OleDbSchemaGuid">
+  <TypeSignature Language="C#" Value="public sealed class OleDbSchemaGuid" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OleDbSchemaGuid extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbSchemaGuid" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt den Typ der Schematabelle gemäß der <see cref="M:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable(System.Guid,System.Object[])" /> Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Feld in der <xref:System.Data.OleDb.OleDbSchemaGuid> -Klasse Maps zu einer OLE DB-Schemarowsets.  
+  
+> [!NOTE]
+>  Einige Mitglieder des der <xref:System.Data.OleDb.OleDbSchemaGuid> -Klasse (z. B. <xref:System.Data.OleDb.OleDbSchemaGuid.Procedure_Columns> Schema) kann nicht vom OLE DB-Anbieter unterstützt werden. Finden Sie in der Datenbankdokumentation zu bestimmen, ob Sie diese Schemainformationen abrufen können, indem die Systemtabellen der Datenbank Abfragen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbSchemaGuid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbSchemaGuid.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OleDb.OleDbSchemaGuid" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assertions">
+      <MemberSignature Language="C#" Value="public static readonly Guid Assertions;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Assertions" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Assertions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Assertionen, die definiert, die im Katalog, der von einem angegebenen Benutzer gehört.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Assertions>Ordnet der OLE DB-ASSERTIONEN-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|CONSTRAINT_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|CONSTRAINT_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|CONSTRAINT_NAME|`string`|Name der Einschränkung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Catalogs">
+      <MemberSignature Language="C#" Value="public static readonly Guid Catalogs;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Catalogs" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Catalogs" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die physischen Attribute, die Katalogen zugegriffen werden kann, aus der Datenquelle zugeordnet sind. Gibt die Assertionen, die definiert, die im Katalog, der von einem angegebenen Benutzer gehört.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Catalogs>Ordnet der OLE DB-CATALOGS-Schemarowset, und gibt die folgende Einschränkungsspalte.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|CATALOG_NAME|`string`|Name des Katalogs. Null darf nicht sein.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Character_Sets">
+      <MemberSignature Language="C#" Value="public static readonly Guid Character_Sets;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Character_Sets" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Character_Sets" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Zeichensätze definiert, die im Katalog, der für einen bestimmten Benutzer zugänglich ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Character_Sets>Ordnet der OLE DB-CHARACTER_SETS-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|CHARACTER_SET_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|CHARACTER_SET_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|CHARACTER_SET_NAME|`string`|Name des Zeichensatzes.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Check_Constraints">
+      <MemberSignature Language="C#" Value="public static readonly Guid Check_Constraints;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Check_Constraints" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Check_Constraints" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Check-Einschränkungen definiert, die im Katalog, der von einem angegebenen Benutzer gehört.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Check_Constraints>Sie ordnet der OLE DB-CHECK_CONSTRAINTS-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|CONSTRAINT_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|CONSTRAINT_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|CONSTRAINT_NAME|`string`|Name der Einschränkung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Check_Constraints_By_Table">
+      <MemberSignature Language="C#" Value="public static readonly Guid Check_Constraints_By_Table;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Check_Constraints_By_Table" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Check_Constraints_By_Table" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Check-Einschränkungen definiert, die im Katalog, der von einem angegebenen Benutzer gehört.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Check_Constraints>Sie ordnet der OLE DB-CHECK_CONSTRAINTS-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|CONSTRAINT_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|CONSTRAINT_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|CONSTRAINT_NAME|`string`|Name der Einschränkung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collations">
+      <MemberSignature Language="C#" Value="public static readonly Guid Collations;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Collations" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Collations" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Zeichen Sortierungen, die definiert, die im Katalog, der für einen bestimmten Benutzer zugänglich ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Collations>Ordnet der OLE DB-SORTIERUNGEN-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|COLLATION_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|COLLATION_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|COLLATION_NAME|`string`|Sortierungsname.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Column_Domain_Usage">
+      <MemberSignature Language="C#" Value="public static readonly Guid Column_Domain_Usage;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Column_Domain_Usage" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Column_Domain_Usage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt zurück, die im Katalog definierten Spalten, die einer Domäne im Katalog definierten und Eigentümer ein angegebener Benutzer abhängig sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Column_Domain_Usage>Sie ordnet der OLE DB-COLUMN_DOMAIN_USAGE-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|DOMAIN_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|DOMAIN_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|DOMAIN_NAME|`string`|Ansichtsname.|  
+|COLUMN_NAME|`string`|Spaltenname. Diese Spalte zusammen mit den Spalten COLUMN_GUID und COLUMN_PROPID bildet die Spalten-ID Eine oder mehrere dieser Spalten wird ein null-Wert werden abhängig von den Elementen der DBID-Struktur der Anbieter verwendet. (DBID ist eine formale Struktur, die in der COLUMN_NAME-Spalte des Rowsets COLUMN_DOMAIN_USAGE serialisiert wird.)|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Column_Privileges">
+      <MemberSignature Language="C#" Value="public static readonly Guid Column_Privileges;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Column_Privileges" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Column_Privileges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Berechtigungen für die Spalten im Katalog definierten Tabellen, die verfügbar sind oder von einem angegebenen Benutzer gewährt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Column_Privileges>Sie ordnet der OLE DB-COLUMN_PRIVILEGES-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TABLE_CATALOG|`string`|Name des Katalogs, in dem die Tabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname, in dem die Tabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Tabellenname.|  
+|COLUMN_NAME|`string`|Spaltenname. Diese Spalte zusammen mit den Spalten COLUMN_GUID und COLUMN_PROPID bildet die Spalten-ID Eine oder mehrere dieser Spalten wird ein null-Wert werden abhängig von den Elementen der DBID-Struktur der Anbieter verwendet.|  
+|GRANTOR|`string`|Benutzer, der die Berechtigungen für die Tabelle in TABLE_NAME erteilt.|  
+|GRANTEE|`string`|Name des Benutzers (oder "Öffentlich"), die die Berechtigung erteilt wurde.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Columns">
+      <MemberSignature Language="C#" Value="public static readonly Guid Columns;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Columns" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Columns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Spalten der Tabellen (einschließlich Sichten) definiert, die im Katalog, der für einen bestimmten Benutzer zugänglich ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Columns>Sie ordnet der OLE DB-COLUMNS-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TABLE_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Tabellenname. Zurückgegebenen Spalte darf keine null-Wert enthalten.|  
+|COLUMN_NAME|`string`|Der Name der Spalte; dies möglicherweise nicht eindeutig sein. Wenn dies nicht bestimmt werden kann, wird ein null-Wert zurückgegeben. Diese Spalte zusammen mit den Spalten COLUMN_GUID und COLUMN_PROPID bildet die Spalten-ID Eine oder mehrere dieser Spalten wird ein null-Wert werden abhängig von den Elementen der DBID-Struktur der Anbieter verwendet. (DBID ist eine formale Struktur, die in der COLUMN_NAME-Spalte des Rowsets COLUMN_DOMAIN_USAGE serialisiert wird.) Die resultierende Spalten-ID sollte nach Möglichkeit persistent sein. Einige Anbieter unterstützen jedoch keine persistenten Bezeichner für Spalten. Die Spalten-ID von einer Basistabelle sollte unter Ansichten invarianten.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constraint_Column_Usage">
+      <MemberSignature Language="C#" Value="public static readonly Guid Constraint_Column_Usage;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Constraint_Column_Usage" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Constraint_Column_Usage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Spalten, die von referenziellen Einschränkungen, unique-Einschränkungen, Check-Einschränkungen und Assertionen verwendet, die im Katalog definierten und Eigentümer ein angegebener Benutzer zurückgegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Constraint_Column_Usage>Sie ordnet der OLE DB-CONSTRAINT_COLUMN_USAGE-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TABLE_CATALOG|`string`|Name des Katalogs, in dem die Tabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname, in dem die Tabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Tabellenname.|  
+|COLUMN_NAME|`string`|Spaltenname. Diese Spalte zusammen mit den Spalten COLUMN_GUID und COLUMN_PROPID bildet die Spalten-ID Eine oder mehrere dieser Spalten wird ein null-Wert werden abhängig von den Elementen der DBID-Struktur der Anbieter verwendet.|  
+|CONSTRAINT_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|CONSTRAINT_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|CONSTRAINT_NAME|`string`|Name der Einschränkung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constraint_Table_Usage">
+      <MemberSignature Language="C#" Value="public static readonly Guid Constraint_Table_Usage;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Constraint_Table_Usage" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Constraint_Table_Usage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Tabellen zurück, die von referenziellen Einschränkungen, unique-Einschränkungen, Check-Einschränkungen und Assertionen im Katalog definierten und Eigentümer ein angegebener Benutzer verwendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Constraint_Table_Usage>Sie ordnet der OLE DB-CONSTRAINT_TABLE_USAGE-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TABLE_CATALOG|`string`|Name des Katalogs, in dem die Tabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname, in dem die Tabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Tabellenname.|  
+|CONSTRAINT_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|CONSTRAINT_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|CONSTRAINT_NAME|`string`|Name der Einschränkung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbInfoKeywords">
+      <MemberSignature Language="C#" Value="public static readonly Guid DbInfoKeywords;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid DbInfoKeywords" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.DbInfoKeywords" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Liste der Anbieter-spezifischen Schlüsselwörter zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe von <xref:System.Data.OleDb.OleDbSchemaGuid.DbInfoKeywords> entspricht dem Aufruf der OLE DB IDBInfo:: GetKeywords-Schnittstelle. Die Liste mit Schlüsselwörtern wird als einer "DataTable" mit einer einzelnen Spalte mit dem Namen "Schlüsselwort" zurückgegeben. Jedes vom Anbieter zurückgegebene Schlüsselwort wird in einer eigenen Zeile in der "DataTable" sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbInfoLiterals">
+      <MemberSignature Language="C#" Value="public static readonly Guid DbInfoLiterals;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid DbInfoLiterals" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.DbInfoLiterals" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Liste von anbieterspezifischen Literalen in Textbefehle verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit <xref:System.Data.OleDb.OleDbSchemaGuid.DbInfoLiterals> entspricht der OLE DB-Aufruf **:: GetLiteralInfo** Schnittstelle oder die ADO `Connection.OpenSchema` Methode mit der `adSchemaDBInfoLiterals` konstant.  
+  
+ Bei Verwendung der <xref:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable%2A> -Methode, wenn die `schema` Parameter enthält einen Wert von <xref:System.Data.OleDb.OleDbSchemaGuid.DbInfoLiterals> und die `restrictions` Parameter enthält einen oder mehrere Einschränkungen ein <xref:System.ArgumentException> generiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Foreign_Keys">
+      <MemberSignature Language="C#" Value="public static readonly Guid Foreign_Keys;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Foreign_Keys" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Foreign_Keys" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die im Katalog von einem angegebenen Benutzer definierten Fremdschlüsselspalten an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Foreign_Keys>Sie ordnet der OLE DB-FOREIGN_KEYS-Rowsets. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|PK_TABLE_CATALOG|`string`|Name des Katalogs, in dem die Primärschlüsseltabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|PK_TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname, in dem die Primärschlüsseltabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|PK_TABLE_NAME|`string`|Name der Primärschlüsseltabelle.|  
+|FK_TABLE_CATALOG|`string`|Name des Katalogs, in dem die Fremdschlüsseltabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|FK_TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname, in dem die Fremdschlüsseltabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|FK_TABLE_NAME|`string`|Name der Fremdschlüsseltabelle.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Indexes">
+      <MemberSignature Language="C#" Value="public static readonly Guid Indexes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Indexes" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Indexes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die im Katalog, der von einem angegebenen Benutzer gehört definierten Indizes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Indexes>Sie ordnet der OLE DB-INDEXES-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TABLE_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|INDEX_NAME|`string`|Name des Indexes.|  
+|TYPE|`UInt16 (Int32)`|Der Typ des Indexes. Eine der folgenden:<br /><br /> DBPROPVAL_IT_BTREE – der Index ist eine B +-Struktur.<br /><br /> DBPROPVAL_IT_HASH-der Index ist eine Hashdatei, die z. B. lineare oder erweiterbares hashing verwendet.<br /><br /> DBPROPVAL_IT_CONTENT-der Index ist ein Inhaltsindex.<br /><br /> DBPROPVAL_IT_OTHER-der Index ist ein anderer Typ eines Index.|  
+|TABLE_NAME|`string`|Tabellenname.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key_Column_Usage">
+      <MemberSignature Language="C#" Value="public static readonly Guid Key_Column_Usage;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Key_Column_Usage" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Key_Column_Usage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Im Katalog, der als Schlüssel, von einem angegebenen Benutzer eingeschränkt wird definierten Spalten zurückgegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Key_Column_Usage>Sie ordnet der OLE DB-KEY_COLUMN_USAGE-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|CONSTRAINT_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|CONSTRAINT_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|CONSTRAINT_NAME|`string`|Name der Einschränkung.|  
+|TABLE_CATALOG|`string`|Name des Katalogs, in dem die Tabelle mit der Schlüsselspalte definiert ist. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname, in dem die Tabelle mit der Schlüsselspalte definiert ist. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Name der Tabelle, die die Schlüsselspalte enthält.|  
+|COLUMN_NAME|`string`|Der Name der Spalte im Schlüssel eindeutig, Primär- oder Fremdschlüssel beteiligt. Diese Spalte zusammen mit den Spalten COLUMN_GUID und COLUMN_PROPID bildet die Spalten-ID Eine oder mehrere dieser Spalten wird ein null-Wert werden abhängig von den Elementen der DBID-Struktur der Anbieter verwendet. (DBID ist eine formale Struktur, die in der COLUMN_NAME-Spalte des Rowsets COLUMN_DOMAIN_USAGE serialisiert wird.)|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Primary_Keys">
+      <MemberSignature Language="C#" Value="public static readonly Guid Primary_Keys;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Primary_Keys" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Primary_Keys" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die im Katalog von einem angegebenen Benutzer definierten Primärschlüsselspalten zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Primary_Keys>Sie ordnet der OLE DB-PRIMARY_KEYS-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TABLE_CATALOG|`string`|Name des Katalogs, in dem die Tabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname, in dem die Tabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Tabellenname.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Procedure_Columns">
+      <MemberSignature Language="C#" Value="public static readonly Guid Procedure_Columns;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Procedure_Columns" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Procedure_Columns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt Informationen zu den Spalten von Rowsets, die von Prozeduren zurückgegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Procedure_Columns>Sie ordnet der OLE DB PROCEDURE_COLUMNS-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|PROCEDURE_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|PROCEDURE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|PROCEDURE_NAME|`string`|Name der Prozedur.|  
+|COLUMN_NAME|`string`|Der Name der Spalte; dies möglicherweise nicht eindeutig sein. Wenn dies nicht bestimmt werden kann, wird ein null-Wert zurückgegeben. Diese Spalte zusammen mit den Spalten COLUMN_GUID und COLUMN_PROPID bildet die Spalten-ID Eine oder mehrere dieser Spalten wird ein null-Wert werden abhängig von den Elementen der DBID-Struktur der Anbieter verwendet.|  
+  
+> [!NOTE]
+>  Die <xref:System.Data.OleDb.OleDbSchemaGuid.Procedure_Columns> Schema wird nicht unterstützt, von OLE DB-Anbietern, die MDAC-Version 2.7 geliefert. Finden Sie in der Datenbankdokumentation zu bestimmen, ob Sie diese Schemainformationen abrufen können, indem die Systemtabellen der Datenbank Abfragen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Procedure_Parameters">
+      <MemberSignature Language="C#" Value="public static readonly Guid Procedure_Parameters;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Procedure_Parameters" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Procedure_Parameters" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt Informationen zu den Parametern und Rückgabecodes von Prozeduren zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Procedure_Parameters>Sie ordnet der OLE DB-PROCEDURE_PARAMETERS-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|PROCEDURE_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|PROCEDURE_SCHEMA|`string`|Name des Schemas. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|PROCEDURE_NAME|`string`|Name der Prozedur.|  
+|PARAMETER_NAME|`string`|Parametername. Ein null-Wert, wenn der Parameter nicht benannt ist.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Procedures">
+      <MemberSignature Language="C#" Value="public static readonly Guid Procedures;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Procedures" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Procedures" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Prozeduren, die definiert, die im Katalog, der von einem angegebenen Benutzer gehört.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Procedures>Ordnet der OLE DB-PROZEDUREN-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|PROCEDURE_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|PROCEDURE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|PROCEDURE_NAME|`string`|Name der Prozedur.|  
+|PROCEDURE_TYPE|`UInt16`|DB_PT_UNKNOWN – es ist nicht bekannt, ob ein zurückgegebener Wert vorhanden ist.<br /><br /> DB_PT_PROCEDURE – Prozedur. Es ist keine zurückgegebene Wert.<br /><br /> DB_PT_FUNCTION-Funktion. Es ist ein zurückgegebener Wert.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider_Types">
+      <MemberSignature Language="C#" Value="public static readonly Guid Provider_Types;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Provider_Types" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Provider_Types" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die von der .NET Framework-Datenanbieter für OLE DB unterstützt Basisdatentypen zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Provider_Types>Sie ordnet der OLE DB-PROVIDER_TYPES-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|DATA_TYPE|`UInt16 (Int32)`|Der Indikator des Datentyps.|  
+|BEST_MATCH|`Int16`|VARIANT_TRUE – der Datentyp ist die beste Übereinstimmung zwischen allen Datentypen im Datenspeicher und dem OLE DB-Datentyp, der durch den Wert in der DATA_TYPE-Spalte angegeben.<br /><br /> VARIANT_FALSE – der Datentyp ist nicht die beste Übereinstimmung. Für jede Gruppe von Zeilen, die in denen der Wert der DATA_TYPE-Spalte identisch ist, wird die BEST_MATCH-Spalte in nur einer Zeile auf VARIANT_TRUE festgelegt.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Referential_Constraints">
+      <MemberSignature Language="C#" Value="public static readonly Guid Referential_Constraints;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Referential_Constraints" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Referential_Constraints" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die referenziellen Einschränkungen definiert, die im Katalog, der von einem angegebenen Benutzer gehört.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Referential_Constraints>Sie ordnet der OLE DB-REFERENTIAL_CONSTRAINTS-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|CONSTRAINT_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|CONSTRAINT_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|CONSTRAINT_NAME|`string`|Name der Einschränkung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaGuids">
+      <MemberSignature Language="C#" Value="public static readonly Guid SchemaGuids;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid SchemaGuids" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.SchemaGuids" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Liste der Schemarowsets, die durch ihren GUIDs und ein Zeiger auf die Beschreibungen der Einschränkungsspalte identifiziert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit <xref:System.Data.OleDb.OleDbSchemaGuid.SchemaGuids> entspricht der OLE DB-Aufruf **IDBSchemaRowset:: GetSchemas** Schnittstelle. Die Liste der Schemas und Einschränkungen werden als einer "DataTable" mit zwei Spalten, die mit dem Namen "Schema" und "RestrictionSupport" zurückgegeben. Jede Kombination von vom Anbieter zurückgegebene Bitmaske für Schema GUID und die Einschränkung wird in einer eigenen Zeile in der "DataTable" sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schemata">
+      <MemberSignature Language="C#" Value="public static readonly Guid Schemata;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Schemata" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Schemata" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Schemaobjekte, die von einem angegebenen Benutzer gehören.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Schemata>Ordnet der OLE DB-SCHEMATAS-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|CATALOG_NAME|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|SCHEMA_NAME|`string`|Nicht gekennzeichnete Schemaname|  
+|SCHEMA_OWNER|`string`|Benutzer, der die Schemas gehören.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sql_Languages">
+      <MemberSignature Language="C#" Value="public static readonly Guid Sql_Languages;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Sql_Languages" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Sql_Languages" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Übereinstimmungsebenen, Optionen und Dialekte von der SQL-Implementierung Verarbeitung von Daten im Katalog definierten unterstützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Sql_Languages>Ordnet der OLE DB-SQL_LANGUAGES-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|SQL_LANGUAGE_SOURCE|`string`|"ISO 9075" Standard "SQL".|  
+|SQL_LANGUAGE_YEAR|`string`|"1992" für ANSI SQL-92-kompatible SQL.|  
+|SQL_LANGUAGE_CONFORMANCE|`string`|Eines der folgenden: "ENTRY", "INTERMEDIATE" oder "FULL".|  
+|SQL_LANGUAGE_INTEGRITY|`string`|"YES" Optional = Integritätsfeature wird unterstützt.<br /><br /> "NO" Optional = Integritätsfeature wird nicht unterstützt.|  
+|SQL_LANGUAGE_IMPLEMENTATION|`string`|NULL für "ISO 9075" Implementierung.|  
+|SQL_LANGUAGE_BINDING_STYLE|`string`|Für C/C++-callable "direkt" direkte Ausführung von SQL.|  
+|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|`string`|NULL.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Statistics">
+      <MemberSignature Language="C#" Value="public static readonly Guid Statistics;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Statistics" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Statistics" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Statistiken, die definiert, die im Katalog, der von einem angegebenen Benutzer gehört.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Statistics>Ordnet der OLE DB-Statistik-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TABLE_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Tabellenname.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table_Constraints">
+      <MemberSignature Language="C#" Value="public static readonly Guid Table_Constraints;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Table_Constraints" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Table_Constraints" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die tabelleneinschränkungen definiert, die im Katalog, der von einem angegebenen Benutzer gehört.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Table_Constraints>Sie ordnet der OLE DB-TABLE_CONSTRAINTS-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|CONSTRAINT_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|CONSTRAINT_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|CONSTRAINT_NAME|`string`|Name der Einschränkung.|  
+|TABLE_CATALOG|`string`|Name des Katalogs, in dem die Tabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname, in dem die Tabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Tabellenname.|  
+|CONSTRAINT_TYPE|`string`|Einschränkungstyp. Eines der folgenden: UNIQUE, PRIMARY KEY-, FOREIGN KEY- oder CHECK.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table_Privileges">
+      <MemberSignature Language="C#" Value="public static readonly Guid Table_Privileges;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Table_Privileges" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Table_Privileges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Berechtigungen für Tabellen, die im Katalog definierten und zur Verfügung, oder von einem angegebenen Benutzer erteilt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Table_Privileges>Sie ordnet der OLE DB-TABLE_PRIVILEGES-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TABLE_CATALOG|`string`|Name des Katalogs, in dem die Tabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname, in dem die Tabelle definiert ist. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Tabellenname.|  
+|GRANTOR|`string`|Benutzer, der die Berechtigungen für die Tabelle in TABLE_NAME erteilt.|  
+|GRANTEE|`string`|Name des Benutzers (oder "Öffentlich"), die die Berechtigung erteilt wurde.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table_Statistics">
+      <MemberSignature Language="C#" Value="public static readonly Guid Table_Statistics;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Table_Statistics" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Table_Statistics" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beschreibt die verfügbaren Satz von Statistiken für Tabellen im Anbieter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Table_Statistics>Sie ordnet der OLE DB-TABLE_STATISTICS-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TABLE_CATALOG|`string`|Der Katalogname der Tabelle der Statistik. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Der Schemaname der Tabelle. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Tabellenname.|  
+|STATISTICS_CATALOG|`string`|Name des Katalogs der Statistik. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|STATISTICS_SCHEMA|`string`|Name des Schemas der Statistik. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|STATISTICS_NAME|`string`|Der Name der Statistik.|  
+|STATISTICS_TYPE|`UInt16 (Int32)`|Bitmaske, die angeben, welche Arten von Statistiken, die durch diese Statistik unterstützt:<br /><br /> DBSTAT_HISTOGRAM – histogrammunterstützung angibt.<br /><br /> DBSTAT_COLUMN_CARDINALITY – Gibt die Spalte Kardinalität Unterstützung an.<br /><br /> DBSTAT_TUPLE_CARDINALITY – gibt die Tupel Kardinalität Unterstützung an.<br /><br /> `Note:`Histogramme, nur die erste Spalte für eine Statistik mit mehreren Spalten entsprechen.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tables">
+      <MemberSignature Language="C#" Value="public static readonly Guid Tables;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Tables" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Tables" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Tabellen (einschließlich Sichten) im Katalog definierten, die mit einem gegebenen Benutzer zugegriffen werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Tables>Sie ordnet der OLE DB-TABLES-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TABLE_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Tabellenname. Zurückgegebenen Spalte darf keine null-Wert enthalten.|  
+|TABLE_TYPE|`string`|Tabellentyp. Einer der folgenden oder einen anbieterspezifischen Wert: "ALIAS", "TABLE", "Synonyms", "SYSTEMTABELLE", "VIEW", "Globale temporäre", "LOCAL TEMPORARY" oder "SYSTEMSICHT". Zurückgegebenen Spalte darf keine null-Wert enthalten.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tables_Info">
+      <MemberSignature Language="C#" Value="public static readonly Guid Tables_Info;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Tables_Info" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Tables_Info" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Tabellen (einschließlich Sichten), die mit einem gegebenen Benutzer zugegriffen werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Tables_Info>Sie ordnet der OLE DB-TABLES_INFO-Schemarowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TABLE_TYPE|`string`|Tabellentyp. Einer der folgenden oder einen anbieterspezifischen Wert: ALIAS, Tabelle, SYNONYM, SYSTEMTABELLE, Sicht, globale temporäre, lokalen TEMPORÄREN, EXTERNAL TABLE oder -SYSTEMSICHT.|  
+|TABLE_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Tabellenname.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translations">
+      <MemberSignature Language="C#" Value="public static readonly Guid Translations;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Translations" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Translations" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die im Katalog, der für einen bestimmten Benutzer zugänglich ist definierten Zeichenübersetzungen zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Translations>Ordnet der OLE DB-ÜBERSETZUNGEN-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TRANSLATION_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TRANSLATION_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TRANSLATION_NAME|`string`|Name der Übersetzung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trustee">
+      <MemberSignature Language="C#" Value="public static readonly Guid Trustee;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Trustee" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Trustee" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Vertrauensnehmer an, die in der Datenquelle definiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Trustee>Ordnet der OLE DB-VERTRAUENSNEHMER-Schema. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TRUSTEE_NAME|`string`|Name des Vertrauensnehmers.|  
+|TRUSTEE_GUID|`guid`|GUID, die den Vertrauensnehmer eindeutig identifiziert. Anbieter, die keine GUIDs verwenden Vertrauensnehmer identifizieren, sollte in dieser Spalte einen null-Wert zurückgeben.|  
+|TRUSTEE_PROPID|`UInt32 (Int64)`|PropID, das den Vertrauensnehmer eindeutig identifiziert. Anbieter, die nicht PropIDs zur Identifizierung von Vertrauensnehmer verwenden, sollte in dieser Spalte einen null-Wert zurückgeben.|  
+|TRUSTEE_TYPE|`UInt32 (Int64)`|Vertrauensnehmertyp. Eine der folgenden:<br /><br /> TRUSTEE_IS_UNKNOWN – der Vertrauensnehmer ist, einen unbekannten Typ, aber nicht notwendigerweise auf einen ungültigen Typ.<br /><br /> TRUSTEE_IS_USER - Konto des Vertrauensnehmers ist ein Benutzerkonto.<br /><br /> TRUSTEE_IS_GROUP – der Vertrauensnehmer ist ein Gruppenkonto.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Usage_Privileges">
+      <MemberSignature Language="C#" Value="public static readonly Guid Usage_Privileges;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Usage_Privileges" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Usage_Privileges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Verwendung Berechtigungen für Objekte, die im Katalog definierten und verfügbar sind oder von einem angegebenen Benutzer gewährt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Usage_Privileges>Ordnet der OLE DB-USAGE_PRIVILEGES-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|OBJECT_CATALOG|`string`|Name des Katalogs, in dem das Objekt definiert ist. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|OBJECT_SCHEMA|`string`|Nicht gekennzeichnete Schemaname, in dem das Objekt definiert ist. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|OBJECT_NAME|`string`|Objektname.|  
+|OBJECT_TYPE|`string`|Objekttyp. Eines der folgenden: Domäne, CHARACTER SET, SORTIERUNG oder Übersetzung.|  
+|GRANTOR|`string`|Benutzer, die Berechtigungen für das Objekt in OBJECT_NAME erteilt.|  
+|GRANTEE|`string`|Name des Benutzers (oder "Öffentlich"), die die Berechtigung erteilt wurde.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="View_Column_Usage">
+      <MemberSignature Language="C#" Value="public static readonly Guid View_Column_Usage;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid View_Column_Usage" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.View_Column_Usage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Spalten für die Tabellen angezeigt abhängen, wie im Katalog definiert und Eigentümer ein angegebener Benutzer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.View_Column_Usage>Sie ordnet der OLE DB-VIEW_COLUMN_USAGE-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|VIEW_CATALOG|string|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|VIEW_SCHEMA|string|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|VIEW_NAME|string|Ansichtsname.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="View_Table_Usage">
+      <MemberSignature Language="C#" Value="public static readonly Guid View_Table_Usage;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid View_Table_Usage" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.View_Table_Usage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Tabellen auf dem angezeigten Tabellen im Katalog definierten und Eigentümer ein angegebener Benutzer hängen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.View_Table_Usage>Sie ordnet der OLE DB-VIEW_TABLE_USAGE-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|VIEW_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|VIEW_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|VIEW_NAME|`string`|Ansichtsname.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Views">
+      <MemberSignature Language="C#" Value="public static readonly Guid Views;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Views" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbSchemaGuid.Views" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die im Katalog, auf die zugegriffen werden kann, auf die ein angegebener Benutzer ist definierten Sichten zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbSchemaGuid.Views>Ordnet der OLE DB-Ansichten-Rowset. Sofern nicht anders angegeben, werden Einschränkungsspalten in der folgenden Reihenfolge zurückgegeben.  
+  
+|Einschränkungsspalte|CLR-Datentyp|Beschreibung|  
+|------------------------|-------------------|-----------------|  
+|TABLE_CATALOG|`string`|Name des Katalogs. Ein null-Wert, wenn der Anbieter keine Kataloge unterstützt.|  
+|TABLE_SCHEMA|`string`|Nicht gekennzeichnete Schemaname. Ein null-Wert, wenn der Anbieter keine Schemas unterstützt.|  
+|TABLE_NAME|`string`|Ansichtsname.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

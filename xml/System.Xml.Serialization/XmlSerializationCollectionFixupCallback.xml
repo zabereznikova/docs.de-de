@@ -1,0 +1,46 @@
+<Type Name="XmlSerializationCollectionFixupCallback" FullName="System.Xml.Serialization.XmlSerializationCollectionFixupCallback">
+  <TypeSignature Language="C#" Value="public delegate void XmlSerializationCollectionFixupCallback(object collection, object collectionItems);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlSerializationCollectionFixupCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlSerializationCollectionFixupCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="collection" Type="System.Object" />
+    <Parameter Name="collectionItems" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="collection">Die Auflistung, die in der Elementarrays Auflistung kopiert wird.</param>
+    <param name="collectionItems">Ein Array von Elementen kopiert werden soll die <c>-objektauflistung</c>.</param>
+    <summary>Von der verwendeten Delegaten der <see cref="T:System.Xml.Serialization.XmlSerializer" /> Klasse für die Deserialisierung der SOAP-codierte XML-Daten Typen, die Auflistungen oder Enumerationen zugeordnet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der Initialisierung die .NET Framework-XML-Serialisierungsinfrastruktur dynamisch generiert und kompiliert eine temporäre Klasse für die Deserialisierung von abgeleitet der <xref:System.Xml.Serialization.XmlSerializationReader> Klasse. Während dieses Vorgangs generiert .NET Framework Fixup Methoden, mit denen die <xref:System.Xml.Serialization.XmlSerializationCollectionFixupCallback> delegieren. Dieser Fehler tritt für SOAP-codierte Arrays oder SOAP-codierte, Multi-Verweis-Elemente, deren Datentypen in jedem Fall Auflistungen von .NET Framework oder Enumerationen zuordnen. Die Auflistung Fixup-Methode wird nach Bedarf während der Deserialisierung aufgerufen.  
+  
+ Sie sollte nicht direkt instanziiert <xref:System.Xml.Serialization.XmlSerializationCollectionFixupCallback>.  
+  
+ SOAP-Codierung wird in Abschnitt 5 der SOAP 1.1-Spezifikation beschrieben.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+</Type>

@@ -1,0 +1,313 @@
+<Type Name="SendKeys" FullName="System.Windows.Forms.SendKeys">
+  <TypeSignature Language="C#" Value="public class SendKeys" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi SendKeys extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.SendKeys" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden für das Senden von Tastatureingaben an eine Anwendung bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Windows.Forms.SendKeys> zum Senden von Tastatureingaben und Tastenkombinationen an die aktive Anwendung. Diese Klasse kann nicht instanziiert werden. Verwenden Sie zum Senden einer Tastatureingabe an eine Klasse, und sofort mit der ablaufsteuerung des Programms fortsetzen, <xref:System.Windows.Forms.SendKeys.Send%2A>. Verwenden Sie für alle Prozesse, die gestartet, indem die Tastatureingabe zu warten, <xref:System.Windows.Forms.SendKeys.SendWait%2A>.  
+  
+ Jeder Schlüssel wird durch ein oder mehrere Zeichen dargestellt. Um ein einzelnes Zeichen der Tastatur anzugeben, verwenden Sie das Zeichen selbst. Z. B. um die Buchstaben A darzustellen, übergeben Sie die Zeichenfolge "A" an die Methode. Um mehr als ein Zeichen darzustellen, fügen Sie jedes zusätzliches Zeichen in den vorhergehenden. Um die Buchstaben A, B und C darstellen zu können, geben Sie den Parameter als "ABC".  
+  
+ Das Pluszeichen (+), Caretzeichen (^), Prozentzeichen (%), Tilde (~) und Klammern () eine besondere Bedeutung, <xref:System.Windows.Forms.SendKeys>. Zum Angeben einer der folgenden Zeichen enthalten, müssen Sie ihn in der geschweiften Klammern ({}). Verwenden Sie z. B. zum Angeben der Pluszeichens (+) "{+}". Um die geschweiften Klammern, verwenden Sie "{{}" und "{}}" angeben. Klammern ([]) haben keine besondere Bedeutung, <xref:System.Windows.Forms.SendKeys>, sondern müssen in geschweifte Klammern eingeschlossen werden. In anderen Anwendungen müssen Klammern eine besondere Bedeutung, die erheblichen beim dynamischen Datenaustausch (DDE) auftritt.  
+  
+> [!CAUTION]
+>  Wenn Ihre Anwendung für internationale Verwendung mit unterschiedlichen Tastaturen vorgesehen ist, kann ein Verwenden von <xref:System.Windows.Forms.SendKeys.Send%2A> zu unvorhersehbaren Ergebnissen führen und sollte vermieden werden.  
+  
+ Verwenden Sie die Codes in der folgenden Tabelle, um Zeichen anzugeben, die angezeigt werden, wenn Sie eine, z. B. EINGABETASTE oder Registerkarte und Schlüssel, die Taste anstelle von Zeichen, d. h. Aktionen darstellen.  
+  
+|Key|Code|  
+|---------|----------|  
+|RÜCKTASTE|{RÜCKTASTENZEICHEN} {BS,} oder {BKSP}|  
+|UNTERBRECHEN|{UNTERBRECHEN}|  
+|FESTSTELLTASTE|{CAPSLOCK}|  
+|ENTF oder ENTF|{Löschen} oder {DEL}|  
+|NACH-UNTEN-TASTE|{NACH UNTEN}|  
+|ENDE|{END}|  
+|EINGABETASTE|{ENTER} oder ~|  
+|ESC|{ESC}|  
+|HILFE|{HELP}|  
+|START|{HOME}|  
+|INS oder einfügen|{Einfügen} oder {INS}|  
+|NACH-LINKS|{LEFT}|  
+|NUM-TASTE|{NUM-TASTE}|  
+|BILD-AB|{BILD}|  
+|BILD-AUF|{BILD-AUF}|  
+|DRUCK|{WIRD} (reserviert für zukünftige Verwendung)|  
+|NACH-RECHTS|{RIGHT}|  
+|ROLLEN|{SCROLLLOCK}|  
+|TAB|REGISTERKARTE "{"}|  
+|NACH-OBEN-TASTE|{NACH}|  
+|F1|{F1}|  
+|F2|{F2}|  
+|F3|{F3}|  
+|F4|{F4}|  
+|F5|{F5}|  
+|F6|{F6}|  
+|F7|{F7}|  
+|F8|{F8}|  
+|F9|{F9}|  
+|F10|{F10}|  
+|F11|{F11}|  
+|F12|{F12}|  
+|F13|{F13}|  
+|F14|{F14}|  
+|F15|{F15}|  
+|F16|{F16}|  
+|Hinzufügen der Zehnertastatur|{} HINZUFÜGEN|  
+|Zehnertastatur subtrahiert werden soll.|{SUBTRAHIEREN}|  
+|Multiplizieren Sie Zehnertastatur|{MULTIPLIZIEREN}|  
+|Division der Zehnertastatur|{AUFGRUND EINER DIVISION}|  
+  
+ Um kombiniert mit einer beliebigen Kombination der UMSCHALTTASTE, STRG und ALT-Tasten anzugeben, stellen Sie den Tastencode mit einem oder mehreren der folgenden Codes voran.  
+  
+|Key|Code|  
+|---------|----------|  
+|UMSCHALTTASTE GEDRÜCKT|+|  
+|STRG|^|  
+|ALT-TASTE|%|  
+  
+ Um anzugeben, dass eine beliebige Kombination von UMSCHALTTASTE, STRG und ALT gedrückt gehalten werden soll, während einige andere Tasten gleichzeitig gedrückt, schließen Sie den Code für diese Schlüssel in Klammern ein. Verwenden Sie zum angeben, dass Sie die UMSCHALTTASTE GEDRÜCKT halten, während E und C gedrückt werden, z. B. "+ (EG)". Verwenden Sie zum angeben, dass Sie die UMSCHALTTASTE GEDRÜCKT halten, während der E gedrückt wird, gefolgt von C ohne UMSCHALTTASTE, "+ EC".  
+  
+ Um wiederholte anzugeben, verwenden Sie das Formular {Schlüsselnummer}. Sie müssen ein Leerzeichen zwischen Schlüssel und Anzahl ablegen. {LEFT 42} bedeutet beispielsweise, die nach-links-Taste 42 Mal drücken; {h 10} bedeutet, das H 10 Mal drücken.  
+  
+> [!NOTE]
+>  Da keine verwaltete Methode zum Aktivieren einer anderen Anwendung vorhanden ist, können Sie entweder verwenden Sie diese Klasse innerhalb der aktuellen Anwendung oder systemeigene Windows-Methoden, wie z. B. `FindWindow` und `SetForegroundWindow`, um den Fokus auf andere Anwendungen zu erzwingen.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.SendKeys>-Klasse wurde für .NET Framework 3.0 aktualisiert, damit sie in Anwendungen verwendet werden kann, die unter Windows Vista ausgeführt werden. Die verbesserte Sicherheit von Windows Vista (Stichwort Benutzerkontensteuerung) verhindert, dass die vorherige Implementierung ordnungsgemäß funktioniert.  
+>   
+>  Die <xref:System.Windows.Forms.SendKeys> -Klasse ist anfällig für Probleme hinsichtlich der zeitlichen Steuerung, sodass einige Entwickler gezwungen waren, Umgehungslösungen zu finden. Die aktualisierte Implementierung ist immer noch anfällig für Probleme hinsichtlich der zeitlichen Steuerung, ist jedoch etwas schneller und erfordert möglicherweise Änderungen an den Umgehungslösungen. Die <xref:System.Windows.Forms.SendKeys> -Klasse versucht zunächst, die vorherige Implementierung zu verwenden. Schlägt dies fehl, wird die neue Implementierung verwendet. Infolgedessen verhält sich die <xref:System.Windows.Forms.SendKeys> -Klasse unter verschiedenen Betriebssystemen möglicherweise unterschiedlich. Verwendet die <xref:System.Windows.Forms.SendKeys> -Klasse die neue Implementierung, wartet die <xref:System.Windows.Forms.SendKeys.SendWait%2A> -Methode nicht auf zu verarbeitende Nachrichten, wenn diese an einen anderen Prozess gesendet werden.  
+>   
+>  Ist für Ihre Anwendung ein einheitliches, vom Betriebssystem unabhängiges Verhalten erforderlich, können Sie für die <xref:System.Windows.Forms.SendKeys> -Klasse das Verwenden der neuen Implementierung erzwingen, indem Sie die folgende Anwendungseinstellung in Ihre "app.config"-Datei einfügen.  
+>   
+>  `<appSettings>`  
+>   
+>  `<add key="SendKeys" value="SendInput"/>`  
+>   
+>  `</appSettings>`  
+>   
+>  Soll die <xref:System.Windows.Forms.SendKeys> -Klasse gezwungen werden, die vorherige Implementierung zu verwenden, geben Sie stattdessen den Wert `"JournalHook"` an.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.SendKeys.Send%2A>-Methode verwenden. Um das Beispiel auszuführen, fügen Sie den folgenden Code in das Formular Form1 Button1 aufgerufen, die eine Schaltfläche enthält. Stellen Sie sicher, dass der Click-Ereignisse in diesem Beispiel ihren Ereignisbehandlungsmethoden zugeordnet sind. Des Schaltflächen-Steuerelements <xref:System.Windows.Forms.Control.TabIndex%2A> Eigenschaft muss auf 0 festgelegt werden. Wenn das Beispiel ausgeführt wird, doppelklicken Sie auf das Formular, um die Schaltflächen-Klickereignis auslösen Ereignis.  
+  
+ [!code-cpp[System.Windows.Forms.SendKeys#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SendKeys/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.SendKeys#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SendKeys/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.SendKeys#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SendKeys/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public static void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SendKeys.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verarbeitet alle Windows-Meldungen, die sich derzeit in der Meldungswarteschlange befinden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Windows.Forms.SendKeys.Flush%2A> warten, dass die Anwendung verarbeiten Tastatureingaben und anderen Betriebssystem-Nachrichten, die in der Meldungswarteschlange befinden. Dies entspricht dem Aufruf <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> bis keine weitere Schlüssel zu verarbeiten sind.  
+  
+> [!NOTE]
+>  Da keine verwaltete Methode zum Aktivieren einer anderen Anwendung vorhanden ist, können Sie entweder verwenden Sie diese Klasse innerhalb der aktuellen Anwendung oder systemeigene Windows-Methoden, wie z. B. `FindWindow` und `SetForegroundWindow`, um den Fokus auf andere Anwendungen zu erzwingen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public static void Send (string keys);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Send(string keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SendKeys.Send(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Die zu sendende Zeichenfolge der Tastatureingaben.</param>
+        <summary>Sendet Tastatureingaben an die aktive Anwendung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Schlüssel wird durch ein oder mehrere Zeichen dargestellt. Um ein einzelnes Zeichen der Tastatur anzugeben, verwenden Sie das Zeichen selbst. Z. B. um die Buchstaben A darzustellen, übergeben Sie die Zeichenfolge "A" an die Methode. Um mehr als ein Zeichen darzustellen, fügen Sie jedes zusätzliches Zeichen in den vorhergehenden. Um die Buchstaben A, B und C darstellen zu können, geben Sie den Parameter als "ABC".  
+  
+ Das Pluszeichen (+), Caretzeichen (^), Prozentzeichen (%), Tilde (~) und Klammern () eine besondere Bedeutung, <xref:System.Windows.Forms.SendKeys>. Zum Angeben einer der folgenden Zeichen enthalten, müssen Sie ihn in der geschweiften Klammern ({}). Verwenden Sie z. B. zum Angeben der Pluszeichens (+) "{+}". Um die geschweiften Klammern, verwenden Sie "{{}" und "{}}" angeben. Klammern ([]) haben keine besondere Bedeutung, <xref:System.Windows.Forms.SendKeys>, sondern müssen in geschweifte Klammern eingeschlossen werden. In anderen Anwendungen müssen Klammern eine besondere Bedeutung, die erheblichen beim dynamischen Datenaustausch (DDE) auftritt.  
+  
+> [!CAUTION]
+>  Wenn Ihre Anwendung für internationale Verwendung mit unterschiedlichen Tastaturen vorgesehen ist, kann ein Verwenden von <xref:System.Windows.Forms.SendKeys.Send%2A> zu unvorhersehbaren Ergebnissen führen und sollte vermieden werden.  
+  
+ Verwenden Sie die Codes in der folgenden Tabelle, um Zeichen anzugeben, die angezeigt werden, wenn Sie eine, z. B. EINGABETASTE oder Registerkarte und Schlüssel, die Taste anstelle von Zeichen, d. h. Aktionen darstellen.  
+  
+|Key|Code|  
+|---------|----------|  
+|RÜCKTASTE|{RÜCKTASTENZEICHEN} {BS,} oder {BKSP}|  
+|UNTERBRECHEN|{UNTERBRECHEN}|  
+|FESTSTELLTASTE|{CAPSLOCK}|  
+|ENTF oder ENTF|{Löschen} oder {DEL}|  
+|NACH-UNTEN-TASTE|{NACH UNTEN}|  
+|ENDE|{END}|  
+|EINGABETASTE|{ENTER} oder ~|  
+|ESC|{ESC}|  
+|HILFE|{HELP}|  
+|START|{HOME}|  
+|INS oder einfügen|{Einfügen} oder {INS}|  
+|NACH-LINKS|{LEFT}|  
+|NUM-TASTE|{NUM-TASTE}|  
+|BILD-AB|{BILD}|  
+|BILD-AUF|{BILD-AUF}|  
+|DRUCK|{WIRD} (reserviert für zukünftige Verwendung)|  
+|NACH-RECHTS|{RIGHT}|  
+|ROLLEN|{SCROLLLOCK}|  
+|TAB|REGISTERKARTE "{"}|  
+|NACH-OBEN-TASTE|{NACH}|  
+|F1|{F1}|  
+|F2|{F2}|  
+|F3|{F3}|  
+|F4|{F4}|  
+|F5|{F5}|  
+|F6|{F6}|  
+|F7|{F7}|  
+|F8|{F8}|  
+|F9|{F9}|  
+|F10|{F10}|  
+|F11|{F11}|  
+|F12|{F12}|  
+|F13|{F13}|  
+|F14|{F14}|  
+|F15|{F15}|  
+|F16|{F16}|  
+|Hinzufügen der Zehnertastatur|{} HINZUFÜGEN|  
+|Zehnertastatur subtrahiert werden soll.|{SUBTRAHIEREN}|  
+|Multiplizieren Sie Zehnertastatur|{MULTIPLIZIEREN}|  
+|Division der Zehnertastatur|{AUFGRUND EINER DIVISION}|  
+  
+ Um kombiniert mit einer beliebigen Kombination der UMSCHALTTASTE, STRG und ALT-Tasten anzugeben, stellen Sie den Tastencode mit einem oder mehreren der folgenden Codes voran.  
+  
+|Key|Code|  
+|---------|----------|  
+|UMSCHALTTASTE GEDRÜCKT|+|  
+|STRG|^|  
+|ALT-TASTE|%|  
+  
+ Um anzugeben, dass eine beliebige Kombination von UMSCHALTTASTE, STRG und ALT gedrückt gehalten werden soll, während einige andere Tasten gleichzeitig gedrückt, schließen Sie den Code für diese Schlüssel in Klammern ein. Verwenden Sie zum angeben, dass Sie die UMSCHALTTASTE GEDRÜCKT halten, während E und C gedrückt werden, z. B. "+ (EG)". Verwenden Sie zum angeben, dass Sie die UMSCHALTTASTE GEDRÜCKT halten, während der E gedrückt wird, gefolgt von C ohne UMSCHALTTASTE, "+ EC".  
+  
+ Um wiederholte anzugeben, verwenden Sie das Formular {Schlüsselnummer}. Sie müssen ein Leerzeichen zwischen Schlüssel und Anzahl ablegen. {LEFT 42} bedeutet beispielsweise, die nach-links-Taste 42 Mal drücken; {h 10} bedeutet, das H 10 Mal drücken.  
+  
+> [!NOTE]
+>  Da keine verwaltete Methode zum Aktivieren einer anderen Anwendung vorhanden ist, können Sie entweder verwenden Sie diese Klasse innerhalb der aktuellen Anwendung oder systemeigene Windows-Methoden, wie z. B. `FindWindow` und `SetForegroundWindow`, um den Fokus auf andere Anwendungen zu erzwingen.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.SendKeys>-Klasse wurde für .NET Framework 3.0 aktualisiert, damit sie in Anwendungen verwendet werden kann, die unter Windows Vista ausgeführt werden. Die verbesserte Sicherheit von Windows Vista (Stichwort Benutzerkontensteuerung) verhindert, dass die vorherige Implementierung ordnungsgemäß funktioniert.  
+>   
+>  Die <xref:System.Windows.Forms.SendKeys> -Klasse ist anfällig für Probleme hinsichtlich der zeitlichen Steuerung, sodass einige Entwickler gezwungen waren, Umgehungslösungen zu finden. Die aktualisierte Implementierung ist immer noch anfällig für Probleme hinsichtlich der zeitlichen Steuerung, ist jedoch etwas schneller und erfordert möglicherweise Änderungen an den Umgehungslösungen. Die <xref:System.Windows.Forms.SendKeys> -Klasse versucht zunächst, die vorherige Implementierung zu verwenden. Schlägt dies fehl, wird die neue Implementierung verwendet. Infolgedessen verhält sich die <xref:System.Windows.Forms.SendKeys> -Klasse unter verschiedenen Betriebssystemen möglicherweise unterschiedlich. Verwendet die <xref:System.Windows.Forms.SendKeys> -Klasse die neue Implementierung, wartet die <xref:System.Windows.Forms.SendKeys.SendWait%2A> -Methode nicht auf zu verarbeitende Nachrichten, wenn diese an einen anderen Prozess gesendet werden.  
+>   
+>  Ist für Ihre Anwendung ein einheitliches, vom Betriebssystem unabhängiges Verhalten erforderlich, können Sie für die <xref:System.Windows.Forms.SendKeys> -Klasse das Verwenden der neuen Implementierung erzwingen, indem Sie die folgende Anwendungseinstellung in Ihre "app.config"-Datei einfügen.  
+>   
+>  `<appSettings>`  
+>   
+>  `<add key="SendKeys" value="SendInput"/>`  
+>   
+>  `</appSettings>`  
+>   
+>  Soll die <xref:System.Windows.Forms.SendKeys> -Klasse gezwungen werden, die vorherige Implementierung zu verwenden, geben Sie stattdessen den Wert `"JournalHook"` an.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.SendKeys.Send%2A> Methode. Um das Beispiel auszuführen, fügen Sie den folgenden Code in das Formular Form1 Button1 aufgerufen, die eine Schaltfläche enthält. Stellen Sie sicher, dass der Click-Ereignisse in diesem Beispiel ihren Ereignisbehandlungsmethoden zugeordnet sind. Des Schaltflächen-Steuerelements <xref:System.Windows.Forms.Control.TabIndex%2A> Eigenschaft muss auf 0 festgelegt werden. Wenn das Beispiel ausgeführt wird, doppelklicken Sie auf das Formular, um die Schaltflächen-Klickereignis auslösen Ereignis.  
+  
+ [!code-cpp[System.Windows.Forms.SendKeys#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SendKeys/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.SendKeys#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SendKeys/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.SendKeys#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SendKeys/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es ist nicht zum Senden von Tastatureingaben an eine aktive Anwendung.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="keys" />stellt keinen gültigen Tastaturanschläge dar.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für nicht verwalteten Code zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SendWait">
+      <MemberSignature Language="C#" Value="public static void SendWait (string keys);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SendWait(string keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SendKeys.SendWait(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Die zu sendende Zeichenfolge der Tastatureingaben.</param>
+        <summary>Sendet die angegebenen Tasten an die aktive Anwendung und wartet anschließend die Verarbeitung der Meldungen ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Windows.Forms.SendKeys.SendWait%2A> zum Senden von Tastatureingaben oder Kombinationen von Tastatureingaben an die aktive Anwendung und warten Sie, bis die Tastatureingabe Nachrichten verarbeitet werden. Verwenden Sie diese Methode zum Senden von Tastatureingaben zu einer Anwendung, und warten Sie, bis alle Prozesse, die durch die Tastatureingaben abgeschlossen werden gestartet werden. Dies kann wichtig sein, wenn die andere Anwendung beendet werden muss, bevor Ihre Anwendung fortgesetzt werden kann.  
+  
+> [!NOTE]
+>  Da keine verwaltete Methode zum Aktivieren einer anderen Anwendung vorhanden ist, können Sie entweder verwenden Sie diese Klasse innerhalb der aktuellen Anwendung oder systemeigene Windows-Methoden, wie z. B. `FindWindow` und `SetForegroundWindow`, um den Fokus auf andere Anwendungen zu erzwingen.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.SendKeys>-Klasse wurde für .NET Framework 3.0 aktualisiert, damit sie in Anwendungen verwendet werden kann, die unter Windows Vista ausgeführt werden. Die verbesserte Sicherheit von Windows Vista (Stichwort Benutzerkontensteuerung) verhindert, dass die vorherige Implementierung ordnungsgemäß funktioniert.  
+>   
+>  Die <xref:System.Windows.Forms.SendKeys> -Klasse ist anfällig für Probleme hinsichtlich der zeitlichen Steuerung, sodass einige Entwickler gezwungen waren, Umgehungslösungen zu finden. Die aktualisierte Implementierung ist immer noch anfällig für Probleme hinsichtlich der zeitlichen Steuerung, ist jedoch etwas schneller und erfordert möglicherweise Änderungen an den Umgehungslösungen. Die <xref:System.Windows.Forms.SendKeys> -Klasse versucht zunächst, die vorherige Implementierung zu verwenden. Schlägt dies fehl, wird die neue Implementierung verwendet. Infolgedessen verhält sich die <xref:System.Windows.Forms.SendKeys> -Klasse unter verschiedenen Betriebssystemen möglicherweise unterschiedlich. Verwendet die <xref:System.Windows.Forms.SendKeys> -Klasse die neue Implementierung, wartet die <xref:System.Windows.Forms.SendKeys.SendWait%2A> -Methode nicht auf zu verarbeitende Nachrichten, wenn diese an einen anderen Prozess gesendet werden.  
+>   
+>  Ist für Ihre Anwendung ein einheitliches, vom Betriebssystem unabhängiges Verhalten erforderlich, können Sie für die <xref:System.Windows.Forms.SendKeys> -Klasse das Verwenden der neuen Implementierung erzwingen, indem Sie die folgende Anwendungseinstellung in Ihre "app.config"-Datei einfügen.  
+>   
+>  `<appSettings>`  
+>   
+>  `<add key="SendKeys" value="SendInput"/>`  
+>   
+>  `</appSettings>`  
+>   
+>  Soll die <xref:System.Windows.Forms.SendKeys> -Klasse gezwungen werden, die vorherige Implementierung zu verwenden, geben Sie stattdessen den Wert `"JournalHook"` an.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für nicht verwalteten Code zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

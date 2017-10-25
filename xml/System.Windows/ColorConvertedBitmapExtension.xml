@@ -1,0 +1,97 @@
+<Type Name="ColorConvertedBitmapExtension" FullName="System.Windows.ColorConvertedBitmapExtension">
+  <TypeSignature Language="C#" Value="public class ColorConvertedBitmapExtension : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ColorConvertedBitmapExtension extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ColorConvertedBitmapExtension" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Windows.Media.Imaging.ColorConvertedBitmap))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert eine Markuperweiterung, die es ermöglicht <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" /> erstellen. Ein <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" /> verfügt nicht über eine eingebettete Profil stattdessen abhängig ist, die auf Quell- und Ziel-Werte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist eine Implementierung der Markuperweiterung. Markuperweiterungsklassen vorhanden sind, hauptsächlich, dass die Infrastruktur für einige Aspekte der unterstützen die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung und die durch eine Markuperweiterung offengelegten Mitglieder sind nicht in der Regel von Benutzercode aufgerufen. Diese Erweiterung unterstützt die [ColorConvertedBitmap Markuperweiterung](~/docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md) Verwendung von [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+<a name="xamlTextUsage_ColorConvertedBitmapExtension"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [ColorConvertedBitmap Markuperweiterung](~/docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColorConvertedBitmapExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ColorConvertedBitmapExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.ColorConvertedBitmapExtension" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird nicht verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColorConvertedBitmapExtension (object image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ColorConvertedBitmapExtension.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="image" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="image">Eine Zeichenfolge, die analysiert wird, um zu bestimmen, drei [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)]: Bildquelle, Farbkontexts Quelle und Ziel Farbkontexts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.ColorConvertedBitmapExtension" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ColorConvertedBitmapExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein Objekt, das Dienste für die Markuperweiterung bereitstellen kann. Dieser Dienst wird erwartet, um Ergebnisse für bereitzustellen <see cref="T:System.Windows.Markup.IUriContext" />.</param>
+        <summary>Gibt ein Objekt zurück, das auf die Eigenschaft festgelegt werden soll, auf die diese Erweiterung angewendet wird. Für <see cref="T:System.Windows.ColorConvertedBitmapExtension" />, dies ist die abgeschlossene <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" /> basierend auf den Werten, die an den Konstruktor übergeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

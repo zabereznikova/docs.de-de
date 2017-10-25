@@ -1,0 +1,682 @@
+<Type Name="Cache" FullName="System.Web.Caching.Cache">
+  <TypeSignature Language="C#" Value="public sealed class Cache : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Cache extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.Cache" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Implementiert den Cache für eine Webanwendung. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz dieser Klasse wird pro Anwendungsdomäne erstellt und bleibt gültig, solange die Anwendungsdomäne aktiv bleibt. Informationen zu einer Instanz dieser Klasse kann über die `Cache` Eigenschaft von der <xref:System.Web.HttpContext> Objekt oder die `Cache` Eigenschaft von der <xref:System.Web.UI.Page> Objekt.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Caching.Cache> Klasse dient nicht zur Verwendung außerhalb von ASP.NET-Anwendungen. Es wurde entworfen und getestet, die für die Verwendung in ASP.NET für Webanwendungen Zwischenspeichern zu ermöglichen. Bei anderen Arten von Anwendungen, z. B. konsolenanwendungen oder Windows Forms-Anwendungen verwenden die <xref:System.Runtime.Caching.ObjectCache> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Seite, die Benutzer ein Element im Cache zugewiesenen Wert zeigt und benachrichtigt sie dann, wenn das Element aus dem Cache entfernt wird. Erstellt eine `RemovedCallback` -Methode, die Signatur des von der `CacheItemRemovedCallback` Delegaten ein, um die Benutzer benachrichtigen, wenn das Element im Cache entfernt, und er verwendet die <xref:System.Web.Caching.CacheItemRemovedReason> Enumeration angewiesen, weshalb es entfernt wurde. Darüber hinaus wird mithilfe der <xref:System.Web.Caching.Cache.Item%2A?displayProperty=nameWithType> Eigenschaft, um Objekte in den Cache hinzufügen und Abrufen des Werts eines dieser Objekte. In der `AddItemToCache` -Methode, verwendet die <xref:System.Web.Caching.Cache.Add%2A?displayProperty=nameWithType> Methode, um dem Cache ein Element hinzuzufügen. Verwenden der `CacheItemRemovedCallback` zu delegieren, müssen Sie ein Element in den Cache mit dieser Methode hinzufügen oder die <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> Methode so, dass ASP.NET automatisch die richtige Methode machen können aufgerufen werden, wenn das Element entfernt wird. Die benutzerdefinierte `RemoveItemFromCache` -Methode verwendet die <xref:System.Web.Caching.Cache.Remove%2A?displayProperty=nameWithType> Methode, um das Element explizit aus dem Cache löschen verursacht die `RemovedCallback` aufzurufende Methode.  
+  
+> [!NOTE]
+>  Die Instanz des Caches, der von der Codeausschnitt unten zugegriffen wird, ist ein Mitglied der <xref:System.Web.UI.Page> -Objekt, das in diesem Beispiel erbt.  
+  
+ [!code-aspx-csharp[System.Web.Caching Examples#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching Examples/CS/cachecs.aspx#1)]
+ [!code-aspx-vb[System.Web.Caching Examples#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching Examples/VB/cachevb.aspx#1)]
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Cache ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Caching.Cache" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public object Add (string key, object value, System.Web.Caching.CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, System.Web.Caching.CacheItemPriority priority, System.Web.Caching.CacheItemRemovedCallback onRemoveCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Add(string key, object value, class System.Web.Caching.CacheDependency dependencies, valuetype System.DateTime absoluteExpiration, valuetype System.TimeSpan slidingExpiration, valuetype System.Web.Caching.CacheItemPriority priority, class System.Web.Caching.CacheItemRemovedCallback onRemoveCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Add(System.String,System.Object,System.Web.Caching.CacheDependency,System.DateTime,System.TimeSpan,System.Web.Caching.CacheItemPriority,System.Web.Caching.CacheItemRemovedCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="dependencies" Type="System.Web.Caching.CacheDependency" />
+        <Parameter Name="absoluteExpiration" Type="System.DateTime" />
+        <Parameter Name="slidingExpiration" Type="System.TimeSpan" />
+        <Parameter Name="priority" Type="System.Web.Caching.CacheItemPriority" />
+        <Parameter Name="onRemoveCallback" Type="System.Web.Caching.CacheItemRemovedCallback" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Cacheschlüssel verwendet, um das Element zu verweisen.</param>
+        <param name="value">Das Element, das dem Cache hinzugefügt werden soll.</param>
+        <param name="dependencies">Die Datei oder der Cache wichtigsten Abhängigkeiten für das Element. Wenn eine Abhängigkeit ändert, wird das Objekt wird ungültig und wird aus dem Cache entfernt. Wenn keine Abhängigkeiten vorhanden sind, wird dieser Parameter enthält <see langword="null" />.</param>
+        <param name="absoluteExpiration">Der Zeitpunkt, an dem das hinzugefügte Objekt abläuft und aus dem Cache entfernt wird. Bei Verwendung von Gleitender Ablauf der <c>Cache</c> Parameter muss <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />.</param>
+        <param name="slidingExpiration">Das Intervall zwischen dem Zeitpunkt des letzten Zugriffs auf das hinzugefügte Objekt und die Uhrzeit, an dem das Objekt läuft ab. Wenn dieser Wert 20 Minuten entspricht, wird das Objekt läuft ab und 20 Minuten nach dem letzten Zugriff aus dem Cache entfernt. Bei Verwendung von absoluter Ablauf der <c>SlidingExpiration</c> Parameter muss <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</param>
+        <param name="priority">Die relativen Kosten des Objekts, wie angegeben durch die <see cref="T:System.Web.Caching.CacheItemPriority" /> Enumeration. Der Cache verwendet diesen Wert, wenn Objekten; Objekte mit niedrigerer Priorität werden vor Objekte mit einer höheren Kosten aus dem Cache entfernt.</param>
+        <param name="onRemoveCallback">Ein Delegat, der, falls vorhanden, aufgerufen wird, wenn ein Objekt aus dem Cache entfernt wird. Sie können diese verwenden, um Anwendungen zu benachrichtigen, wenn ihre Objekte aus dem Cache gelöscht werden.</param>
+        <summary>Fügt das angegebene Element auf der <see cref="T:System.Web.Caching.Cache" /> Objekt mit Abhängigkeiten, Ablauf-und Priorität und einen Delegaten, können Sie Ihre Anwendung zu benachrichtigen, wenn das eingefügte Element entfernt wird, aus, der <see langword="Cache" />.</summary>
+        <returns>Ein Objekt, das das Element darstellt, das hinzugefügt wurde, wenn das Element zuvor im Cache gespeichert wurde. andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufe dieser Methode schlägt fehl, wenn ein Element mit dem gleichen `key` Parameter befindet sich bereits in der `Cache`. Überschreiben einer vorhandenen `Cache` Element unter Verwendung des gleichen `key` verwenden die <xref:System.Web.Caching.Cache.Insert%2A> Methode.  
+  
+ Kann nicht festgelegt werden, sowohl die `absoluteExpiration` und `slidingExpiration` Parameter. Wenn Sie beabsichtigen die das Element im Cache ablaufen zu einem bestimmten Zeitpunkt, legen Sie die `absoluteExpiration` Parameter an der angegebenen bestimmten Zeit und die `slidingExpiration` Parameter <xref:System.Web.Caching.Cache.NoSlidingExpiration>.  
+  
+ Wenn Sie beabsichtigen, dass das Element im Cache nach einer bestimmten Zeitspanne abgelaufen ist abgelaufen, seit des letzten Zugriffs auf das Element, legen Sie die `slidingExpiration` Parameter für das Ablaufintervall und `absoluteExpiration` Parameter <xref:System.Web.Caching.Cache.NoAbsoluteExpiration>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine `AddItemToCache` Methode. Wenn diese Methode aufgerufen wird, wird ein `itemRemoved` Eigenschaft `false` und registriert eine `onRemove` Methode durch eine neue Instanz der der <xref:System.Web.Caching.CacheItemRemovedCallback> delegieren. Die Signatur des Delegaten werden in der `RemovedCallback` Methode. Die `AddItemToCache` Methode überprüft dann den zugeordneten Wert durch die `Key1` Schlüssel im Cache. Wenn der Wert `null`, die `Add` Methode fügt ein Element in den Cache mit dem Schlüssel `Key1`, Wert `Value 1`, ein absoluter Ablauf von 60 Sekunden und einer hohen Cachepriorität. Darüber hinaus verwendet die `onRemove` Methode als Argument. Dies ermöglicht die `RemovedCallback` Methode, die aufgerufen werden, wenn dieses Element aus dem Cache entfernt wird.  
+  
+> [!NOTE]
+>  Beispiele zum Verwenden der <xref:System.Web.Caching.CacheDependency> Klasse und die <xref:System.Web.Caching.CacheItemRemovedCallback> delegieren, finden Sie unter [Anwendungsdaten Caching](http://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d).  
+  
+ [!code-csharp[System.Web.Caching Examples#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching Examples/CS/cachecs.aspx#3)]
+ [!code-vb[System.Web.Caching Examples#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching Examples/VB/cachevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="key" /> oder <paramref name="value" /> Parametersatz auf <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="slidingExpiration" /> Parameter auf festgelegt ist kleiner als <see langword="TimeSpan.Zero" /> oder mehr als ein Jahr.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="absoluteExpiration" /> und <paramref name="slidingExpiration" /> Parameter sind sowohl für das Element, das Sie hinzufügen möchten Festlegen der <see langword="Cache" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.Cache.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente im Cache ab.</summary>
+        <value>Die Anzahl der im Cache gespeicherten Elemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann bei der Überwachung der Leistung Ihrer Anwendung, oder bei der Verwendung von ASP.NET Ablaufverfolgungsfunktionen hilfreich sein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ruft den Wert ab der `Count` -Eigenschaft in eine Zeichenfolge konvertiert, und weist die Zeichenfolge, die die <xref:System.Web.UI.WebControls.Label.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.Label> -Webserversteuerelement, `Label1`.  
+  
+ [!code-csharp[System.Web.Caching.Cache.Count#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching.Cache.Count/CS/cachecountcs.aspx#1)]
+ [!code-vb[System.Web.Caching.Cache.Count#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching.Cache.Count/VB/cachecountvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EffectivePercentagePhysicalMemoryLimit">
+      <MemberSignature Language="C#" Value="public long EffectivePercentagePhysicalMemoryLimit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 EffectivePercentagePhysicalMemoryLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Prozentsatz des physischen Arbeitsspeichers, die von einer Anwendung genutzt werden kann, bevor ASP.NET gestartet wird, Entfernen von Elementen aus dem Cache ab.</summary>
+        <value>Der Prozentsatz des physischen Arbeitsspeichers für die Anwendung verfügbar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit%2A> Eigenschaft gibt den Prozentsatz des physischen Speichers, der für die Anwendung verfügbar ist. Wenn der verfügbare Prozentsatz niedrigen Wert fällt, beginnt der Cachealgorithmus Elemente aus dem Cache entfernt.  
+  
+ Die <xref:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit%2A> Eigenschaft kann festgelegt werden, mit der `percentagePhysicalMemoryUsedLimit` Attribut von der [cache-Element für das caching ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/68fa0040-5abf-4c73-93fc-17e3c6af3299) Element in der Konfigurationsdatei der Anwendung. Wenn die `percentagePhysicalMemoryUsedLimit` Attribut nicht festgelegt ist, der Cachealgorithmus bestimmt die maximale Größe des Caches, und die <xref:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit%2A> -Eigenschaft berechnet wird.  
+  
+ <xref:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EffectivePrivateBytesLimit">
+      <MemberSignature Language="C#" Value="public long EffectivePrivateBytesLimit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 EffectivePrivateBytesLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.Cache.EffectivePrivateBytesLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der verfügbaren Bytes für den Cache.</summary>
+        <value>Die Anzahl der Bytes, die für den Cache zur Verfügung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Caching.Cache.EffectivePrivateBytesLimit%2A> -Eigenschaft gibt die Anzahl der Bytes, die von der Anwendungsprozess verwendet werden kann. Sobald dieser Grenzwert erreicht wird, beginnt der Cachealgorithmus aggressiv Aufräumvorgang Cache.  
+  
+ Die <xref:System.Web.Caching.Cache.EffectivePrivateBytesLimit%2A> Eigenschaft kann festgelegt werden, mit der `privateBytesLimit` Attribut von der [cache-Element für das caching ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/68fa0040-5abf-4c73-93fc-17e3c6af3299) Element in der Konfigurationsdatei der Anwendung. Wenn die `privateBytesLimit` Attribut nicht festgelegt ist, der Cachealgorithmus bestimmt die maximale Größe des Caches, und die <xref:System.Web.Caching.Cache.EffectivePrivateBytesLimit%2A> Eigenschaft enthält die Größe, die vom Algorithmus ausgewählt.  
+  
+   
+  
+## Examples  
+ <xref:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public object Get (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Get(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Bezeichner für das abzurufende Cacheelement.</param>
+        <summary>Ruft das angegebene Element aus der <see cref="T:System.Web.Caching.Cache" /> Objekt.</summary>
+        <returns>Dem abgerufenen Cacheelement oder <see langword="null" /> , wenn der Schlüssel nicht gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Abrufen des Werts für eine ASP.NET Textfeldsteuerelement Server zwischengespeichert wird.  
+  
+ [!code-csharp[Classic Cache.Get Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Cache.Get Example/CS/source.cs#1)]
+ [!code-vb[Classic Cache.Get Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Cache.Get Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionaryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IDictionaryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wörterbuchenumerator ab, der für das Durchlaufen der Schlüsseleinstellungen und ihrer Werte im Cache verwendet wird.</summary>
+        <returns>Ein Enumerator zum Durchlaufen der <see cref="T:System.Web.Caching.Cache" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elemente können hinzugefügt oder aus dem Cache entfernt werden, solange die Elemente auf diese Methode durchläuft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Collections.IDictionaryEnumerator> Objekt `CacheEnum`unter Verwendung der `GetEnumerator` Methode. Der Enumerator durchläuft den Cache konvertiert den Wert von jedem zwischengespeicherten Element in eine Zeichenfolge und schreibt dann die Werte in einer Web Forms-Seite.  
+  
+ [!code-csharp[Cache.GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Cache.GetEnumerator/CS/getenumcs.aspx#1)]
+ [!code-vb[Cache.GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Cache.GetEnumerator/VB/getenumvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (string key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(string key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Insert(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Cacheschlüssel verwendet, um das Element zu verweisen.</param>
+        <param name="value">Das Objekt in den Cache eingefügt werden soll.</param>
+        <summary>Fügt ein Element in der <see cref="T:System.Web.Caching.Cache" /> Objekt mit einem Cacheschlüssel auf den Speicherort, mit Standardwerten, die bereitgestellt werden, indem die <see cref="T:System.Web.Caching.CacheItemPriority" /> Enumeration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt ein vorhandenes Cacheelement, dessen Schlüssel entspricht, dem `key` Parameter. Das Objekt, das die Verwendung dieser Überladung der Cache hinzugefügt. die `Insert` Methode wird ohne Abhängigkeiten Datei oder der Cache die Priorität eingefügt <xref:System.Web.Caching.CacheItemPriority.Default>, eine gleitende Ablaufzeit-Wert, der <xref:System.Web.Caching.Cache.NoSlidingExpiration>, und eines absoluten Ablaufwerts von <xref:System.Web.Caching.Cache.NoAbsoluteExpiration>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Element in einer Anwendung Cache eingefügt.  
+  
+ [!code-csharp[Classic Cache.Insert Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Cache.Insert Example/CS/source.cs#1)]
+ [!code-vb[Classic Cache.Insert Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Cache.Insert Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="key" />-Parameter oder der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (string key, object value, System.Web.Caching.CacheDependency dependencies);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(string key, object value, class System.Web.Caching.CacheDependency dependencies) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Insert(System.String,System.Object,System.Web.Caching.CacheDependency)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="dependencies" Type="System.Web.Caching.CacheDependency" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Cacheschlüssel zum Identifizieren des Elements verwendet.</param>
+        <param name="value">Das Objekt in den Cache eingefügt werden sollen.</param>
+        <param name="dependencies">Die Datei oder der Cache wichtigsten Abhängigkeiten für das eingefügte Objekt. Wenn eine Abhängigkeit ändert, wird das Objekt wird ungültig und wird aus dem Cache entfernt. Wenn keine Abhängigkeiten vorhanden sind, wird dieser Parameter enthält <see langword="null" />.</param>
+        <summary>Fügt ein Objekt in der <see cref="T:System.Web.Caching.Cache" /> , die Datei oder den Schlüssel Abhängigkeiten verfügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt ein vorhandenes Cacheelement, dessen Schlüssel entspricht, dem `key` Parameter. Das Objekt, das die Verwendung dieser Überladung der Cache hinzugefügt. die `Insert` Methode wird ohne Abhängigkeiten Datei oder der Cache die Priorität eingefügt <xref:System.Web.Caching.CacheItemPriority.Default>, eine gleitende Ablaufzeit-Wert, der <xref:System.Web.Caching.Cache.NoSlidingExpiration>, und eines absoluten Ablaufwerts von <xref:System.Web.Caching.Cache.NoAbsoluteExpiration>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Element in einer Anwendung Cache mit einer Cacheabhängigkeit für eine XML-Konfigurationsdatei einfügen.  
+  
+ [!code-csharp[Classic Cache.Insert1 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Cache.Insert1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Cache.Insert1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Cache.Insert1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="key" />-Parameter oder der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (string key, object value, System.Web.Caching.CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(string key, object value, class System.Web.Caching.CacheDependency dependencies, valuetype System.DateTime absoluteExpiration, valuetype System.TimeSpan slidingExpiration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Insert(System.String,System.Object,System.Web.Caching.CacheDependency,System.DateTime,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="dependencies" Type="System.Web.Caching.CacheDependency" />
+        <Parameter Name="absoluteExpiration" Type="System.DateTime" />
+        <Parameter Name="slidingExpiration" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Cacheschlüssel verwendet, um das Objekt zu verweisen.</param>
+        <param name="value">Das Objekt in den Cache eingefügt werden sollen.</param>
+        <param name="dependencies">Die Datei oder der Cache wichtigsten Abhängigkeiten für das eingefügte Objekt. Wenn eine Abhängigkeit ändert, wird das Objekt wird ungültig und wird aus dem Cache entfernt. Wenn keine Abhängigkeiten vorhanden sind, wird dieser Parameter enthält <see langword="null" />.</param>
+        <param name="absoluteExpiration">Der Zeitpunkt, an dem das eingefügte Objekt abläuft und aus dem Cache entfernt wird. Um mögliche Probleme mit der Ortszeit z. B. Änderungen von der Normalzeit zur Sommerzeit zu vermeiden, verwenden Sie <see cref="P:System.DateTime.UtcNow" /> statt <see cref="P:System.DateTime.Now" /> für diesen Parameterwert. Bei Verwendung von absoluter Ablauf der <c>SlidingExpiration</c> Parameter muss <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</param>
+        <param name="slidingExpiration">Der Zeitraum zwischen dem Zeitpunkt des letzten Zugriffs auf das eingefügte Objekt und dem Zeitpunkt des Ablaufs dieses Objekts. Wenn dieser Wert 20 Minuten entspricht, läuft das Objekt 20 Minuten nach dem letzten Zugriff ab und wird aus dem Cache entfernt. Bei Verwendung von Gleitender Ablauf der <c>Cache</c> Parameter muss <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />.</param>
+        <summary>Fügt ein Objekt in der <see cref="T:System.Web.Caching.Cache" /> mit Abhängigkeiten und Ablaufrichtlinien.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt eine vorhandene `Cache` Element mit dem gleichen `key` Parameter.  
+  
+ Wenn die `slidingExpiration` Parametersatz auf <xref:System.Web.Caching.Cache.NoSlidingExpiration>, Gleitender Ablauf ist deaktiviert. Wenn Sie festlegen, die `slidingExpiration` Parameter größer als <xref:System.TimeSpan.Zero>, die `absoluteExpiration` Parameter auf festgelegt ist <xref:System.DateTime.Now%2A> plus dem Wert in der `slidingExpiration` Parameter. Wenn das Element aus dem Cache, bevor Sie die Zeitspanne, die gemäß angefordert wird der `absoluteExpiration` Parameter, das Element erneut im Cache platziert und `absoluteExpiration` wird erneut festgelegt werden, mit `DateTime.Now` plus dem Wert in der `slidingExpiration` Parameter. Wenn das Element nicht aus dem Cache, vor dem Datum in angefordert wird der `absoluteExpiration` Parameter, der das Element aus dem Cache entfernt wird. . Das Element dem Cache, die Verwendung dieser Überladung der Insert-Methode hinzugefügt wird eingefügt, mit der Priorität <xref:System.Web.Caching.CacheItemPriority.Default>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Einfügen eines Elements in einer Anwendung Cache mit einer absolute Ablaufzeit.  
+  
+> [!NOTE]
+>  Seit dieser Form der `Insert` Methode unterstützt das Cache von Abhängigkeiten, wenn das Element keine Abhängigkeiten vorhanden sind, müssen Sie deklarieren die `dependency` Parameter als `null` (`Nothing` in Visual Basic) in der durch Trennzeichen getrennte Liste von Parametern.  
+  
+ [!code-csharp[Classic Cache.Insert2 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Cache.Insert2 Example/CS/source.cs#1)]
+ [!code-vb[Classic Cache.Insert2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Cache.Insert2 Example/VB/source.vb#1)]  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Element mit einer Ablaufzeit in den Cache eingefügt.  
+  
+ [!code-csharp[Classic Cache.Insert2 Example#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Cache.Insert2 Example/CS/source.cs#2)]
+ [!code-vb[Classic Cache.Insert2 Example#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Cache.Insert2 Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="key" />-Parameter oder der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Festlegen der <paramref name="slidingExpiration" /> Parameter kleiner als <see langword="TimeSpan.Zero" /> oder einer entsprechenden mehr als ein Jahr.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="absoluteExpiration" /> und <paramref name="slidingExpiration" /> Parameter sind sowohl für das Element, das Sie hinzufügen möchten Festlegen der <see langword="Cache" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (string key, object value, System.Web.Caching.CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, System.Web.Caching.CacheItemUpdateCallback onUpdateCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(string key, object value, class System.Web.Caching.CacheDependency dependencies, valuetype System.DateTime absoluteExpiration, valuetype System.TimeSpan slidingExpiration, class System.Web.Caching.CacheItemUpdateCallback onUpdateCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Insert(System.String,System.Object,System.Web.Caching.CacheDependency,System.DateTime,System.TimeSpan,System.Web.Caching.CacheItemUpdateCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="dependencies" Type="System.Web.Caching.CacheDependency" />
+        <Parameter Name="absoluteExpiration" Type="System.DateTime" />
+        <Parameter Name="slidingExpiration" Type="System.TimeSpan" />
+        <Parameter Name="onUpdateCallback" Type="System.Web.Caching.CacheItemUpdateCallback" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die Cacheschlüssel, der verwendet wird, um das Objekt zu verweisen.</param>
+        <param name="value">Das Objekt, das in den Cache eingefügt werden soll.</param>
+        <param name="dependencies">Die Datei oder der Cache wichtigsten Abhängigkeiten für das Element. Wenn eine Abhängigkeit ändert, wird das Objekt wird ungültig und wird aus dem Cache entfernt. Wenn keine Abhängigkeiten vorhanden sind, wird dieser Parameter enthält <see langword="null" />.</param>
+        <param name="absoluteExpiration">Der Zeitpunkt, an dem das eingefügte Objekt abläuft und aus dem Cache entfernt wird. Um mögliche Probleme mit der Ortszeit z. B. Änderungen von der Normalzeit zur Sommerzeit zu vermeiden, verwenden Sie <see cref="P:System.DateTime.UtcNow" /> anstelle von <see cref="P:System.DateTime.Now" /> für diesen Parameterwert. Bei Verwendung von absoluter Ablauf der <c>SlidingExpiration</c> -Parameter muss festgelegt werden, um <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</param>
+        <param name="slidingExpiration">Das Intervall zwischen dem Zeitpunkt des letzten Zugriffs auf das zwischengespeicherte Objekt und die Uhrzeit, an dem das Objekt läuft ab. Wenn dieser Wert 20 Minuten entspricht, läuft das Objekt 20 Minuten nach dem letzten Zugriff ab und wird aus dem Cache entfernt. Bei Verwendung von Gleitender Ablauf der <c>Cache</c> -Parameter muss festgelegt werden, um <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />.</param>
+        <param name="onUpdateCallback">Ein Delegat, der aufgerufen wird, bevor das Objekt aus dem Cache entfernt wird. Sie können dies verwenden, aktualisieren das zwischengespeicherte Element, und stellen Sie sicher, dass er nicht aus dem Cache entfernt wird.</param>
+        <summary>Fügt ein Objekt in der <see cref="T:System.Web.Caching.Cache" /> -Objekts zusammen mit Abhängigkeiten, Ablaufrichtlinien und einen Delegaten, die Sie verwenden können, um die Anwendung zu benachrichtigen, bevor das Element aus dem Cache entfernt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Caching.Cache.Insert%2A> Methode ermöglicht es Ihnen so fügen Sie ein neues Element im Cache und geben Sie einen Delegaten, die aufgerufen wird, bevor das Element aus dem Cache entfernt wird. Im Delegaten können Sie das zwischengespeicherte Element aktualisiert und dadurch verhindert, dass aus dem Cache entfernt wird.  
+  
+ Diese Methode überschreibt eine vorhandene `Cache` Element mit dem gleichen `key` Parameter.  
+  
+ Kann nicht festgelegt werden, sowohl die `absoluteExpiration` und `slidingExpiration` Parameter. Wenn Sie beabsichtigen die das Element im Cache ablaufen zu einem bestimmten Zeitpunkt, legen Sie die `absoluteExpiration` Parameter an der angegebenen bestimmten Zeit und die `slidingExpiration` Parameter <xref:System.Web.Caching.Cache.NoSlidingExpiration>.  
+  
+ Wenn Sie beabsichtigen, dass das Element im Cache nach einem festgelegten Zeitraum seit das Element abläuft zuletzt zugegriffen wurde, legen Sie die `slidingExpiration` Parametersatz Ablaufintervall und die `absoluteExpiration` Parameter <xref:System.Web.Caching.Cache.NoAbsoluteExpiration>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="key" />, <paramref name="value" />, oder <paramref name="onUpdateCallback" /> Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Festlegen der <paramref name="slidingExpiration" /> Parameter kleiner als <see langword="TimeSpan.Zero" /> oder einer entsprechenden mehr als ein Jahr.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="absoluteExpiration" /> und <paramref name="slidingExpiration" /> Parameter sind sowohl für das Element, das Sie hinzufügen möchten Festlegen der <see langword="Cache" />.  
+  
+ - oder -   
+  
+ Die <paramref name="dependencies" /> Parameter ist <see langword="null" />, und die <paramref name="absoluteExpiration" /> Parameter auf festgelegt ist <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />, und die <paramref name="slidingExpiration" /> Parameter auf festgelegt ist <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (string key, object value, System.Web.Caching.CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, System.Web.Caching.CacheItemPriority priority, System.Web.Caching.CacheItemRemovedCallback onRemoveCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(string key, object value, class System.Web.Caching.CacheDependency dependencies, valuetype System.DateTime absoluteExpiration, valuetype System.TimeSpan slidingExpiration, valuetype System.Web.Caching.CacheItemPriority priority, class System.Web.Caching.CacheItemRemovedCallback onRemoveCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Insert(System.String,System.Object,System.Web.Caching.CacheDependency,System.DateTime,System.TimeSpan,System.Web.Caching.CacheItemPriority,System.Web.Caching.CacheItemRemovedCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="dependencies" Type="System.Web.Caching.CacheDependency" />
+        <Parameter Name="absoluteExpiration" Type="System.DateTime" />
+        <Parameter Name="slidingExpiration" Type="System.TimeSpan" />
+        <Parameter Name="priority" Type="System.Web.Caching.CacheItemPriority" />
+        <Parameter Name="onRemoveCallback" Type="System.Web.Caching.CacheItemRemovedCallback" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Cacheschlüssel verwendet, um das Objekt zu verweisen.</param>
+        <param name="value">Das Objekt in den Cache eingefügt werden sollen.</param>
+        <param name="dependencies">Die Datei oder der Cache wichtigsten Abhängigkeiten für das Element. Wenn eine Abhängigkeit ändert, wird das Objekt wird ungültig und wird aus dem Cache entfernt. Wenn keine Abhängigkeiten vorhanden sind, wird dieser Parameter enthält <see langword="null" />.</param>
+        <param name="absoluteExpiration">Der Zeitpunkt, an dem das eingefügte Objekt abläuft und aus dem Cache entfernt wird. Um mögliche Probleme mit der Ortszeit z. B. Änderungen von der Normalzeit zur Sommerzeit zu vermeiden, verwenden Sie <see cref="P:System.DateTime.UtcNow" /> statt <see cref="P:System.DateTime.Now" /> für diesen Parameterwert. Bei Verwendung von absoluter Ablauf der <c>SlidingExpiration</c> Parameter muss <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</param>
+        <param name="slidingExpiration">Das Intervall zwischen dem Zeitpunkt des letzten Zugriffs auf das eingefügte Objekt und die Uhrzeit, an dem das Objekt läuft ab. Wenn dieser Wert 20 Minuten entspricht, läuft das Objekt 20 Minuten nach dem letzten Zugriff ab und wird aus dem Cache entfernt. Bei Verwendung von Gleitender Ablauf der <c>Cache</c> Parameter muss <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />.</param>
+        <param name="priority">Die Kosten für das Objekt relativ zu anderen Elementen im Cache gespeichert werden, wie angegeben durch die <see cref="T:System.Web.Caching.CacheItemPriority" /> Enumeration. Dieser Wert wird vom Cache verwendet, wenn Objekten; Objekte mit niedrigerer Priorität werden vor Objekte mit einer höheren Kosten aus dem Cache entfernt.</param>
+        <param name="onRemoveCallback">Ein Delegat, der, falls vorhanden, aufgerufen wird, wenn ein Objekt aus dem Cache entfernt wird. Sie können diese verwenden, um Anwendungen zu benachrichtigen, wenn ihre Objekte aus dem Cache gelöscht werden.</param>
+        <summary>Fügt ein Objekt in der <see cref="T:System.Web.Caching.Cache" /> Objekt mit Abhängigkeiten, Ablauf-und Priorität und einen Delegaten, können Sie Ihre Anwendung zu benachrichtigen, wenn das eingefügte Element entfernt wird, aus, der <see langword="Cache" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt eine vorhandene `Cache` Element mit dem gleichen `key` Parameter.  
+  
+ Kann nicht festgelegt werden, sowohl die `absoluteExpiration` und `slidingExpiration` Parameter. Wenn Sie beabsichtigen die das Element im Cache ablaufen zu einem bestimmten Zeitpunkt, legen Sie die `absoluteExpiration` Parameter an der angegebenen bestimmten Zeit und die `slidingExpiration` Parameter <xref:System.Web.Caching.Cache.NoSlidingExpiration>.  
+  
+ Wenn Sie beabsichtigen, dass das Element im Cache nach einer bestimmten Zeitspanne ablaufen verstrichen seit dem letzten Zugriff auf das Element, legen Sie die `slidingExpiration` Parameter für das Ablaufintervall und `absoluteExpiration` Parameter <xref:System.Web.Caching.Cache.NoAbsoluteExpiration>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Element mit hoher Priorität zuweisen, wenn Sie es in Ihrer Anwendungsverzeichnis einfügen `Cache` Objekt.  
+  
+> [!NOTE]
+>  Weitere Informationen zur Verwendung dieser Methode mit der <xref:System.Web.Caching.CacheItemRemovedCallback> delegieren, finden Sie unter [Vorgehensweise: benachrichtigen einer Anwendung bei der ein Element wird entfernt aus dem Cache](http://msdn.microsoft.com/library/38c33aa0-afe9-40ba-a1a4-1ebab95286ef).  
+  
+ [!code-csharp[Classic Cache.Insert3 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Cache.Insert3 Example/CS/source.cs#1)]
+ [!code-vb[Classic Cache.Insert3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Cache.Insert3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="key" />-Parameter oder der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Festlegen der <paramref name="slidingExpiration" /> Parameter kleiner als <see langword="TimeSpan.Zero" /> oder einer entsprechenden mehr als ein Jahr.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="absoluteExpiration" /> und <paramref name="slidingExpiration" /> Parameter sind sowohl für das Element, das Sie hinzufügen möchten Festlegen der <see langword="Cache" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.Cache.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein <see cref="T:System.String" /> -Objekt, das den Schlüssel für das Cacheelement darstellt.</param>
+        <summary>Ruft ab oder legt das Element im Cache am angegebenen Schlüssel.</summary>
+        <value>Das angegebene Element im Cache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft zum Abrufen des Werts des angegebenen Elements im Cache oder dafür in den Cache ein Element und einen Schlüssel hinzufügen. Hinzufügen eines Caches mit den <xref:System.Web.Caching.Cache.Item%2A> Eigenschaft entspricht dem Aufrufen der <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Item` Eigenschaft zum Abrufen des Werts eines zwischengespeicherten Objekts, das zugeordnete Objekt der `Key1` Schlüssel. Es verwendet dann die <xref:System.Web.HttpResponse.Write%2A?displayProperty=nameWithType> Methode, um den Wert und Einführungstext sowie das B-HTML-Element in einer Web Forms-Seite zu schreiben.  
+  
+ [!code-csharp[System.Web.Caching Examples#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching Examples/CS/cachecs.aspx#5)]
+ [!code-vb[System.Web.Caching Examples#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching Examples/VB/cachevb.aspx#5)]  
+  
+ Im folgende Beispiel wird veranschaulicht, verwenden diese Eigenschaft den Wert eines Textfelds in den Cache eingefügt.  
+  
+ [!code-csharp[Classic Cache.this Example#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Cache.this Example/CS/source.cs#2)]
+ [!code-vb[Classic Cache.this Example#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Cache.this Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoAbsoluteExpiration">
+      <MemberSignature Language="C#" Value="public static readonly DateTime NoAbsoluteExpiration;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.DateTime NoAbsoluteExpiration" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwendet die <paramref name="absoluteExpiration" /> Parameter in einer <see cref="M:System.Web.Caching.Cache.Insert(System.String,System.Object)" /> Methodenaufruf an, dass das Element sollte nie ablaufen. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld legt fest, wenn verwendet, die `absoluteExpiration` Parameter gleich <xref:System.DateTime.MaxValue>, was ist eine Konstante, die größtmögliche `DateTime` Wert 12/31/9999 11:59:59 PM.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die `NoAbsoluteExpiration` Feld absolute Ablaufzeiten deaktiviert, beim Einfügen eines Elements in der `Cache`.  
+  
+ [!code-csharp[Classic Cache.NoAbsoluteExpiration Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Cache.NoAbsoluteExpiration Example/CS/source.cs#1)]
+ [!code-vb[Classic Cache.NoAbsoluteExpiration Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Cache.NoAbsoluteExpiration Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoSlidingExpiration">
+      <MemberSignature Language="C#" Value="public static readonly TimeSpan NoSlidingExpiration;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.TimeSpan NoSlidingExpiration" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Caching.Cache.NoSlidingExpiration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwendet als die <paramref name="slidingExpiration" /> Parameter in einer <see cref="M:System.Web.Caching.Cache.Insert(System.String,System.Object)" /> oder <see cref="M:System.Web.Caching.Cache.Add(System.String,System.Object,System.Web.Caching.CacheDependency,System.DateTime,System.TimeSpan,System.Web.Caching.CacheItemPriority,System.Web.Caching.CacheItemRemovedCallback)" /> Methodenaufrufs gleitende Ablaufzeit zu deaktivieren. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung dieses Feld legt die `slidingExpiration` Parameter an die <xref:System.TimeSpan?displayProperty=nameWithType> Feld, das ein konstanter Wert von 0 (null) ist. Das zwischengespeicherte Element läuft ab in Abhängigkeit von der `absoluteExpiration` zugeordneten Parameter den `Insert` oder `Add` -Methodenaufruf.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Insert-Methode zum Hinzufügen eines Elements auf der <xref:System.Web.Caching.Cache> -Objekt unter Verwendung der `NoSlidingExpiration` Feld.  
+  
+ [!code-csharp[Classic Cache.NoSlidingExpiration Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Cache.NoSlidingExpiration Example/CS/source.cs#1)]
+ [!code-vb[Classic Cache.NoSlidingExpiration Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Cache.NoSlidingExpiration Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public object Remove (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Remove(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein <see cref="T:System.String" /> Bezeichner für die zu entfernende Cacheelement.</param>
+        <summary>Entfernt das angegebene Element aus der Anwendungsverzeichnis <see cref="T:System.Web.Caching.Cache" /> Objekt.</summary>
+        <returns>Das Element entfernt wurde, aus der <see langword="Cache" />. Wenn der Wert in den Schlüsselparameter nicht gefunden wird, gibt <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine `RemoveItemFromCache` Methode. Wenn diese Methode aufgerufen wird, verwendet der <xref:System.Web.Caching.Cache.Item%2A> Eigenschaft zu überprüfen, ob der Cache ein Objekt, die enthält mit zugeordnetem eine `Key1` -Schlüsselwert. Wenn dies der Fall ist, die `Remove` Methode wird aufgerufen, um das Objekt zu entfernen.  
+  
+ [!code-csharp[System.Web.Caching Examples#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching Examples/CS/cachecs.aspx#4)]
+ [!code-vb[System.Web.Caching Examples#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching Examples/VB/cachevb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, der durchlaufen kann die <see cref="T:System.Web.Caching.Cache" /> Objektsammlung.</summary>
+        <returns>Ein Enumerator, der durchlaufen kann die <see cref="T:System.Web.Caching.Cache" /> Objektsammlung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

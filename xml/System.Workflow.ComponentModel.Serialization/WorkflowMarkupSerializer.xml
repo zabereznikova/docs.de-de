@@ -1,0 +1,866 @@
+<Type Name="WorkflowMarkupSerializer" FullName="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer">
+  <TypeSignature Language="C#" Value="public class WorkflowMarkupSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowMarkupSerializer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DefaultSerializationProvider(typeof(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationProvider))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die XAML-Serialisierungsdienste (Extensible Application Markup Language) zur Entwurfszeit für Workflows bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> stellt Methoden bereit, die Workflow- und <xref:System.Workflow.ComponentModel.Activity>-Klassen in das XAML-Format serialisieren und XAML-Inhalt in Workflow- und Aktivitätsklassenobjekte deserialisieren. Diese Dienste werden hauptsächlich von Workflowdesignern verwendet, um die Klassen auf der Workflowentwurfsoberfläche beizubehalten.  
+  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> ist die Basisklasse für alle Markupserialisierungsprogramme, die im <xref:System.Workflow.ComponentModel.Serialization>-Namespace enthalten sind.  
+  
+ Weitere Informationen finden Sie unter [Serialization (Serialisierung)](http://msdn.microsoft.com/library/4d1111c0-9447-4231-a997-96a2b74b3453).  
+  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> unterstützt keine Serialisierung von geschachtelten Typen.  
+  
+ Die Funktionalität von <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> ist von der Funktionalität anderer Typen außerhalb der Windows Workflow Foundation abhängig. Je nach den Einschränkungen dieser anderen Typen können nicht alle Datentypen mithilfe von <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> serialisiert werden. Die folgende Liste ist ein Beispiel für einige nicht unterstützte Typen.  
+  
+> [!NOTE]
+>  Dies ist keine erschöpfende und vollständige Liste nicht unterstützter Typen.  
+  
+ Arrays (werden nur unterstützt, wenn die Eigenschaft nicht mit dem `DesignerSerializationVisibility.Content`-Attributwert ergänzt wird)  
+  
+ Typen ohne parameterlose Konstruktoren  
+  
+ Mehrdimensionale Arrays  
+  
+ Generische Typen (generische `List`- und `Dictionary`-Typen werden nur unterstützt, wenn die Eigenschaft mit dem `DesignerSerializationVisibility.Content`-Attributwert ergänzt wird)  
+  
+ `Hashtable`  
+  
+ `Queue`  
+  
+ `Stack`  
+  
+ `XmlDocument`  
+  
+ `MailMessage`  
+  
+ `Bitmap`  
+  
+ Enumerationsarrays  
+  
+ Mit dem FlagsAttribute ergänzte Enumerationen  
+  
+ Zusätzlich zu den Einträgen dieser Liste können alle Eigenschaften, die sowohl mit dem `ContentPropertyAttibute` als auch dem `DesignerSerializationVisibilityAttribute` ergänzt werden, nicht mithilfe von `WorkflowMarkupSerializer` serialisiert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowMarkupSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie eine neue Instanz der <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer>-Klasse erstellt wird.  Dieses Codebeispiel ist ein Teil des OutlookWorkflowWizard SDK-Beispiels aus der Datei Loader.cs. Weitere Informationen finden Sie unter [Outlook-Workflow-Assistenten](http://msdn.microsoft.com/en-us/7b2ba92b-8456-43f3-87fc-184ffdec4408).  
+  
+ [!code-csharp[WF_Samples#97](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#97)]
+ [!code-vb[WF_Samples#97](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#97)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChild">
+      <MemberSignature Language="C#" Value="protected virtual void AddChild (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object parentObject, object childObj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void AddChild(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object parentObject, object childObj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.AddChild(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="parentObject" Type="System.Object" />
+        <Parameter Name="childObj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, der für diesen Vorgang verwendet wird.</param>
+        <param name="parentObject">Das <see cref="T:System.Object" />, dem das untergeordnete Objekt hinzugefügt werden soll.</param>
+        <param name="childObj">Das hinzuzufügende <see cref="T:System.Object" />.</param>
+        <summary>Fügt dem angegebenen Objekt ein untergeordnetes Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Ausnahme des Ausnahmeverhaltens verfügt <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.AddChild%2A> nicht über ein Standardverhalten. Sie müssen <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> überschreiben, um Logik für diese Methode in einem erbenden Serialisierungsprogramm bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="parentObject" /> oder <paramref name="childObj" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSerializeToString">
+      <MemberSignature Language="C#" Value="protected virtual bool CanSerializeToString (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool CanSerializeToString(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.CanSerializeToString(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, der verwendet wird, um dieses Objekt zu serialisieren.</param>
+        <param name="value">Das angegebene <see cref="T:System.Object" />.</param>
+        <summary>Gibt einen booleschen Wert zurück, der angibt, ob das angegebene Objekt in eine Zeichenfolge serialisiert werden kann.</summary>
+        <returns>
+          <see langword="true" />, falls das angegebene Objekt in eine Zeichenfolge serialisiert werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist ein NULL-Verweis (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearChildren">
+      <MemberSignature Language="C#" Value="protected virtual void ClearChildren (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void ClearChildren(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.ClearChildren(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, der diesen Vorgang unterstützt.</param>
+        <param name="obj">Das <see cref="T:System.Object" />, aus dem alle untergeordneten Objekte entfernt werden.</param>
+        <summary>Entfernt alle untergeordneten Objekte aus dem angegebenen Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Ausnahme des Ausnahmeverhaltens verfügt <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.ClearChildren%2A> nicht über ein Standardverhalten. Sie müssen <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> überschreiben, um Logik für diese Methode in einem erbenden Serialisierungsprogramm bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="obj" /> ist ein NULL-Verweis (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClrNamespacesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty ClrNamespacesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty ClrNamespacesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.ClrNamespacesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine angefügte <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> dar, die verwendet wird, um zu definieren, auf welche Assemblys für benutzerdefinierte Aktivitäten verwiesen werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu dieser abhängigkeitseigenschafte finden Sie unter [Workflowmarkup mithilfe](http://msdn.microsoft.com/en-us/e2693a12-640b-4ccb-8fb0-db3075e94aa4).  
+  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected virtual object CreateInstance (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object CreateInstance(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.CreateInstance(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, der diesen Vorgang unterstützt.</param>
+        <param name="type">Der angegebene <see cref="T:System.Type" />.</param>
+        <summary>Erstellt mit dem angegebenen <see cref="T:System.Type" /> eine Instanz des angegebenen <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />.</summary>
+        <returns>Eine Instanz des angegebenen <see cref="T:System.Type" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.CreateInstance%2A> verwendet den Typkonstruktor, der die größte Übereinstimmung mit dem angegebenen Parameter aufweist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist ein NULL-Verweis (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Deserialize(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.Deserialize(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader"><see cref="T:System.Xml.XmlReader" />, der die Workflowdefinition enthält.</param>
+        <summary>Deserialisiert Workflowmarkup in ein <see cref="T:System.Object" />.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das die Definition des Workflows enthält, der in der Workflowmarkupdatei oder im Stream definiert ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu workflowmarkups finden Sie unter [Workflowmarkup mithilfe](http://msdn.microsoft.com/en-us/e2693a12-640b-4ccb-8fb0-db3075e94aa4).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager, System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Deserialize(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager, class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.Deserialize(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Ein Objekt, das die <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />-Schnittstelle implementiert, z.&amp;#160;B. <see cref="T:System.ComponentModel.Design.Serialization.DesignerSerializationManager" />.</param>
+        <param name="reader"><see cref="T:System.Xml.XmlReader" />, der die Workflowdefinition enthält.</param>
+        <summary>Deserialisiert Workflowmarkup mit dem angegebenen Serialisierungs-Manager in ein <see cref="T:System.Object" />.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das die Definition des Workflows enthält, der in der Workflowmarkupdatei oder im Stream definiert ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu workflowmarkups finden Sie unter [Workflowmarkup mithilfe](http://msdn.microsoft.com/en-us/e2693a12-640b-4ccb-8fb0-db3075e94aa4).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist ein NULL-Verweis (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeFromString">
+      <MemberSignature Language="C#" Value="protected virtual object DeserializeFromString (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, Type propertyType, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance object DeserializeFromString(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, class System.Type propertyType, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.DeserializeFromString(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, der den Deserialisierungsprozess verwaltet.</param>
+        <param name="propertyType">Der <see cref="T:System.Type" />, der der zu deserialisierenden Eigenschaft zugeordnet ist.</param>
+        <param name="value">Eine Zeichenfolge, die den zu deserialisierenden XAML-Inhalt enthält.</param>
+        <summary>Deserialisiert XAML-Inhalt (Extensible Application Markup Language) aus der angegebenen Zeichenfolge gemäß dem jeweiligen Typ der zu deserialisierenden Eigenschaft.</summary>
+        <returns>Das deserialisierte <see cref="T:System.Object" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `value` muss eines der folgenden Kriterien erfüllen:  
+  
+-   Der Wert ist ein primitiver Typ, eine Zeichenfolge, eine Enumeration oder ein <xref:System.TimeSpan>.  
+  
+-   Der Wert kann über die <xref:System.IConvertible>-Schnittstelle oder über die Klasse <xref:System.Delegate> oder <xref:System.Type> zugewiesen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializationManager" />, <paramref name="propertyType" /> oder <paramref name="value" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EventsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty EventsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty EventsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.EventsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine angefügte <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> dar, die die Namen für Ereignishandlereigenschaften definiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird nur zur Entwurfszeit verwendet, während sie programmgesteuert mit dem Objektmodell eine Workflowinstanz ausgibt. Sie stellt XAML dar, die auf den Ereignishandler verweist, der noch nicht kompiliert wurde. Diese Eigenschaft enthält eine `Hashtable` mit Ereignisnamen- und Ereignishandler-Name-Wert-Paaren. Nach der Kompilierung wird die Ereigniseigenschaft direkt dem Handler zugeordnet.  
+  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie den Wert der Abhängigkeitseigenschaft <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.EventsProperty> festlegen können.  
+  
+```csharp  
+CodeActivity code1 = new CodeActivity();  
+Hashtable eventsHashtable = new Hashtable();  
+eventsHashtable.Add("ExecuteCode", "methodName1");  
+code1.SetValue(WorkflowMarkupSerializer.EventsProperty, eventsHashtable);  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.IList GetChildren (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Collections.IList GetChildren(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.GetChildren(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, der diesen Vorgang unterstützt.</param>
+        <param name="obj">Das <see cref="T:System.Object" />, aus dem untergeordnete Objekte abgerufen werden.</param>
+        <summary>Ruft für das angegebene Objekt eine Liste von untergeordneten Objekten ab.</summary>
+        <returns>Eine <see cref="T:System.Collections.IList" />, die die untergeordneten Objekte von <paramref name="obj" /> enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt immer <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.GetChildren%2A> (`null`) zurück, es sei denn, der Wert wird in einer Klasse überschrieben, die von `Nothing` erbt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="obj" /> oder <paramref name="serializationManager" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvents">
+      <MemberSignature Language="C#" Value="protected virtual System.Reflection.EventInfo[] GetEvents (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Reflection.EventInfo[] GetEvents(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.GetEvents(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.EventInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, der den Deserialisierungsprozess verwaltet.</param>
+        <param name="obj">Das <see cref="T:System.Object" />, das nach Ereignisobjekten durchsucht werden soll.</param>
+        <summary>Ruft Informationen zu allen Ereignissen ab, die dem angegebenen <see cref="T:System.Object" /> zugeordnet sind.</summary>
+        <returns>Ein <see cref="T:System.Reflection.EventInfo" />-Array, das Informationen zu den zugeordneten Ereignissen von <paramref name="obj" /> enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializationManager" /> oder <paramref name="obj" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="protected virtual System.Reflection.PropertyInfo[] GetProperties (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Reflection.PropertyInfo[] GetProperties(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.GetProperties(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, von dem der Serialisierungsprozess verwaltet wird.</param>
+        <param name="obj">Das nach Eigenschaften zu durchsuchende <see cref="T:System.Object" />.</param>
+        <summary>Ruft Informationen zu allen dem angegebenen Objekt zugeordneten Eigenschaften ab.</summary>
+        <returns>Ein <see cref="T:System.Reflection.PropertyInfo" />-Array, das Informationen zu den zugeordneten Eigenschaften von <paramref name="obj" /> enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializationManager" /> oder <paramref name="obj" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAfterDeserialize">
+      <MemberSignature Language="C#" Value="protected virtual void OnAfterDeserialize (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAfterDeserialize(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnAfterDeserialize(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, von dem der Serialisierungsprozess verwaltet wird.</param>
+        <param name="obj">Das <see cref="T:System.Object" />, das deserialisiert wurde.</param>
+        <summary>Überschrieben. Benachrichtigt den <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer" />, dass gerade ein Objekt deserialisiert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnAfterDeserialize%2A> wird sofort aufgerufen, nachdem die <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.Deserialize%2A>-Methode ausgeführt wurde. Sie können <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnAfterDeserialize%2A> in einer Klasse überschreiben, die <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> erbt, um alle erforderlichen Verarbeitungen für `obj` nach der Serialisierung in XAML (extensible Application Markup Language) durchzuführen.  
+  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnAfterSerialize%2A> verfügt nicht über ein Standardverhalten. Sie müssen es in einer abgeleiteten Klasse überschreiben, um Verarbeitungslogik hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAfterSerialize">
+      <MemberSignature Language="C#" Value="protected virtual void OnAfterSerialize (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAfterSerialize(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnAfterSerialize(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, von dem der Serialisierungsprozess verwaltet wird.</param>
+        <param name="obj">Das <see cref="T:System.Object" />, das serialisiert wurde.</param>
+        <summary>Benachrichtigt den <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer" />, dass gerade ein Objekt serialisiert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnAfterSerialize%2A> wird sofort aufgerufen, nachdem die <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.Serialize%2A>-Methode ausgeführt wurde. Sie können <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnAfterSerialize%2A> in einer Klasse überschreiben, die <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> erbt, um alle erforderlichen Verarbeitungen für `obj` nach der Serialisierung in XAML (extensible Application Markup Language) durchzuführen.  
+  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnAfterSerialize%2A> verfügt nicht über ein Standardverhalten. Sie müssen es in einer abgeleiteten Klasse überschreiben, um Verarbeitungslogik hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeforeDeserialize">
+      <MemberSignature Language="C#" Value="protected virtual void OnBeforeDeserialize (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBeforeDeserialize(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnBeforeDeserialize(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, der den Deserialisierungsprozess verwaltet hat.</param>
+        <param name="obj">Das <see cref="T:System.Object" />, das deserialisiert wurde.</param>
+        <summary>Überschrieben. Benachrichtigt den <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer" />, dass ein Objekt zur Deserialisierung ansteht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnBeforeDeserialize%2A> wird direkt vor der Ausführung der <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.Deserialize%2A>-Methode aufgerufen. Sie können <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnBeforeSerialize%2A> in einer Klasse überschreiben, die <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> erbt, um alle erforderlichen Verarbeitungen für `obj` vor der Serialisierung in XAML (extensible Application Markup Language) durchzuführen.  
+  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnBeforeDeserialize%2A> verfügt nicht über ein Standardverhalten. Sie müssen es in einer abgeleiteten Klasse überschreiben, um Verarbeitungslogik hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeforeSerialize">
+      <MemberSignature Language="C#" Value="protected virtual void OnBeforeSerialize (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBeforeSerialize(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnBeforeSerialize(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, von dem der Serialisierungsprozess verwaltet wird.</param>
+        <param name="obj">Das zu serialisierende <see cref="T:System.Object" />.</param>
+        <summary>Benachrichtigt <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer" />, dass die Ausführung von <see cref="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.Serialize(System.Xml.XmlWriter,System.Object)" /> ansteht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnBeforeSerialize%2A> wird direkt vor der Ausführung der <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.Serialize%2A>-Methode aufgerufen. Sie können <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnBeforeSerialize%2A> in einer Klasse überschreiben, die <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> erbt, um die erforderlichen Verarbeitungen für `obj` durchzuführen, bevor der <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.Serialize%2A>-Schritt des Serialisierungsprozesses beginnt.  
+  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.OnBeforeSerialize%2A> verfügt nicht über ein Standardverhalten. Sie müssen es in einer abgeleiteten Klasse überschreiben, um Verarbeitungslogik hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Serialize">
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Serialisiert ein <see cref="T:System.Object" /> in das XAML-Format (extensible Application Markup Language).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Funktionalität von <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> ist von der Funktionalität anderer Typen außerhalb der Windows Workflow Foundation abhängig. Je nach den Einschränkungen dieser anderen Typen können nicht alle Datentypen mithilfe von <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> serialisiert werden. Die folgende Liste enthält einige nicht unterstützte Typen.  
+  
+> [!NOTE]
+>  Dies ist keine erschöpfende und vollständige Liste nicht unterstützter Typen.  
+  
+ Arrays (werden nur unterstützt, wenn die Eigenschaft mit dem `DesignerSerializationVisibility.Content`-Attributwert ergänzt wird)  
+  
+ Parameterlose Konstruktoren  
+  
+ Mehrdimensionale Arrays  
+  
+ Generische Typen (generische `List`- und `Dictionary`-Typen werden nur unterstützt, wenn die Eigenschaft mit dem `DesignerSerializationVisibility.Content`-Attributwert ergänzt wird)  
+  
+ `Hashtable`  
+  
+ `Queue`  
+  
+ `Stack`  
+  
+ `XmlDocument`  
+  
+ `MailMessage`  
+  
+ `Bitmap`  
+  
+ Enumerationsarrays  
+  
+ Zusätzlich zu den Einträgen dieser Liste können alle Eigenschaften, die sowohl mit dem `ContentPropertyAttibute` als auch dem `DesignerSerializationVisibilityAttribute` ergänzt werden, nicht mithilfe von `WorkflowMarkupSerializer` serialisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.Xml.XmlWriter writer, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(class System.Xml.XmlWriter writer, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.Serialize(System.Xml.XmlWriter,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Xml.XmlWriter" />, der den Stream oder die Datei enthält, der bzw. die beim Serialisieren verwendet wird.</param>
+        <param name="obj">Das zu serialisierende Objekt.</param>
+        <summary>Serialisiert das angegebene <see cref="T:System.Object" /> in eine Workflowmarkupdatei oder einen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen entweder eine neue Instanz eines Workflowtyps oder die Stammaktivität in einem programmgesteuert erstellten Workflow serialisieren, um Workflowmarkup zu erstellen, das in <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> zum Erstellen einer <xref:System.Workflow.Runtime.WorkflowInstance> verwendet werden kann.  
+  
+ Weitere Informationen zu workflowmarkups finden Sie unter [Workflowmarkup mithilfe](http://msdn.microsoft.com/en-us/e2693a12-640b-4ccb-8fb0-db3075e94aa4).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="obj" /> ist ein NULL-Verweis (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager, System.Xml.XmlWriter writer, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager, class System.Xml.XmlWriter writer, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.Serialize(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Xml.XmlWriter,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Ein Objekt, das die <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />-Schnittstelle implementiert, z.&amp;#160;B. <see cref="T:System.ComponentModel.Design.Serialization.DesignerSerializationManager" />.</param>
+        <param name="writer">Ein <see cref="T:System.Xml.XmlWriter" />, der den Stream oder die Datei enthält, der bzw. die beim Serialisieren verwendet wird.</param>
+        <param name="obj">Das zu serialisierende Objekt.</param>
+        <summary>Serialisiert das angegebene <see cref="T:System.Object" /> mit dem angegebenen Serialisierungs-Manager in eine Workflowmarkupdatei oder einen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen entweder eine neue Instanz eines Workflowtyps oder die Stammaktivität in einem programmgesteuert erstellten Workflow serialisieren, um Workflowmarkup zu erstellen, das in <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> zum Erstellen einer <xref:System.Workflow.Runtime.WorkflowInstance> verwendet werden kann.  
+  
+ Weitere Informationen zu workflowmarkups finden Sie unter [Workflowmarkup mithilfe](http://msdn.microsoft.com/en-us/e2693a12-640b-4ccb-8fb0-db3075e94aa4).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="obj" /> ist ein NULL-Verweis (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeToString">
+      <MemberSignature Language="C#" Value="protected virtual string SerializeToString (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string SerializeToString(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.SerializeToString(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, von dem der Serialisierungsprozess verwaltet wird.</param>
+        <param name="value">Das <see cref="T:System.Object" />, das in eine Zeichenfolge serialisiert werden soll.</param>
+        <summary>Serialisiert das angegebene <see cref="T:System.Object" /> in eine Zeichenfolge.</summary>
+        <returns>Eine Zeichenfolge, die das serialisierte <see cref="T:System.Object" /> enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Delegate>-Instanz über `value` zugewiesen werden kann, schreibt <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.SerializeToString%2A> den Methodennamen, der `value` zugeordnet ist, in eine Zeichenfolge. Wenn eine <xref:System.Type>-Instanz über `value` zugewiesen werden kann, schreibt <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.SerializeToString%2A> den vollqualifizierten Namen des Typs, der `value` zugeordnet ist, in eine Zeichenfolge. Wenn keine dieser Bedingungen herrscht, konvertiert <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.SerializeToString%2A> `value` in eine Zeichenfolge und schreibt das Ergebnis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializationManager" /> oder <paramref name="value" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeValue">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeValue (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ShouldSerializeValue(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.ShouldSerializeValue(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />, von dem der Serialisierungsprozess verwaltet wird.</param>
+        <param name="value">Der zu überprüfende <see cref="T:System.Object" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer" /> das angegebene <see cref="T:System.Object" /> serialisieren soll.</summary>
+        <returns>
+          <see langword="true" />, um anzugeben, dass <paramref name="value" /> serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.ShouldSerializeValue%2A> wird von <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> aufgerufen, bevor das angegebene Objekt serialisiert wird. Die Methode gibt `false` zurück, wenn `value` einen NULL-Verweis enthält (`Nothing`) oder wenn `value` und das <xref:System.ComponentModel.DefaultValueAttribute> des aktuellen Serialisierungskontexts gleich sind.  
+  
+ Sie können <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.ShouldSerializeValue%2A> in einer Klasse überschreiben, die von <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer> erbt, um anzupassen, wie bestimmt wird, ob das angegebene Objekt serialisiert werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializationManager" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="XClassProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty XClassProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty XClassProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.XClassProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine angefügte <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> dar, die den Typnamen definiert, der während der Kompilierung erstellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert entspricht dem `x:Class`-Attribut in XAML. Weitere Informationen finden Sie unter [Workflowmarkup mithilfe](http://msdn.microsoft.com/en-us/e2693a12-640b-4ccb-8fb0-db3075e94aa4).  
+  
+ Diese Eigenschaft wird nur zur Entwurfszeit verwendet. Nach der Kompilierung wird sie zum Namen des kompilierten Typs.  
+  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XCodeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty XCodeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty XCodeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.XCodeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein Codebeispiel dar, das in das XAML-<see langword="x:Code" />-Element eingebettet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird nur zur Entwurfszeit verwendet, während sie programmgesteuert mit dem Objektmodell einen Workflow ausgibt. Diese Eigenschaft enthält eine `CodeTypeMemberCollection`-Auflistung, die mit `CodeSnippetTypeMember`-Elementen gefüllt ist. Nach der Kompilierung wird der Code als Teil des generierten Typs kompiliert.  
+  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+   
+  
+## Examples  
+ Beim folgenden Beispiel handelt es sich um XAML-Code, der ein Codebeispiel enthält, das während der Workflowkompilierung kompiliert wird.  
+  
+```  
+<CodeActivity x:Name="codeActivity1" ExecuteCode="methodName1">  
+  <x:Code><![CDATA[  
+      void methodName1(object sender, EventArgs e)   
+      {  
+      }  
+  ]]]><![CDATA[]></x:Code>  
+</CodeActivity>  
+```  
+  
+ Das folgende Beispiel zeigt, wie Sie programmgesteuert denselben Wert für die <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.XCodeProperty>-Abhängigkeitseigenschaft festlegen.  
+  
+```csharp  
+CodeActivity code1 = new CodeActivity();  
+  
+code1.SetValue(WorkflowMarkupSerializer.XCodeProperty,   
+                    new CodeTypeMemberCollection(  
+                        new CodeTypeMember[] {  
+                            new CodeSnippetTypeMember("void methodName1(object sender, EventArgs e) { }")  
+                        }));  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

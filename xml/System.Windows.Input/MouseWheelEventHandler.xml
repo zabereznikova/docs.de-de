@@ -1,0 +1,58 @@
+<Type Name="MouseWheelEventHandler" FullName="System.Windows.Input.MouseWheelEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void MouseWheelEventHandler(object sender, MouseWheelEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MouseWheelEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.MouseWheelEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.MouseWheelEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, an das der Ereignishandler angefügt ist.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode für die Behandlung der Routingereignisse <see cref="E:System.Windows.UIElement.MouseWheel" /> und <see cref="E:System.Windows.ContentElement.MouseWheel" /> sowie verwandter angefügter Ereignisse und Vorschauereignisse dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat wird mit den folgenden angefügten Ereignissen verwendet.  
+  
+-   <xref:System.Windows.Input.Mouse.MouseWheel?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Mouse.PreviewMouseWheel?displayProperty=nameWithType>  
+  
+ Dieser Delegat wird mit den folgenden Routingereignissen verwendet. Diese weitergeleitete Ereignisse weiterleiten, die zuvor aufgelisteten angefügte Ereignisse damit diese mehr zugegriffen werden kann, das Modell der allgemeinen Element im [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  
+  
+-   <xref:System.Windows.UIElement.MouseWheel?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.MouseWheel?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewMouseWheel?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewMouseWheel?displayProperty=nameWithType>  
+  
+ Angefügte Ereignisse und die Ereignisse weitergeleitet Basiselement nutzen ihre Ereignisdaten und die bubbling und tunneling-Versionen Routingereignisse Ereignisdaten auch freigeben. Dies kann die behandelten Eigenschaften des Ereignisses beeinträchtigen, während der Übertragung der Ereignisroute. Weitere Informationen finden Sie unter [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ Die <xref:System.Windows.Input.MouseWheelEventArgs.Delta%2A> Eigenschaft ist positiv, wenn das Mausrad vorwärts (Weg von der Benutzer) verschoben wird oder negativ ist, wenn das Mausrad nach unten (bis der Benutzer) verschoben wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Controls.TextBox>, mit der eine <xref:System.Windows.Controls.Canvas>nach oben, wenn das Mausrad <xref:System.Windows.Input.MouseWheelEventArgs.Delta%2A> positiv ist, und verschiebt die <xref:System.Windows.Controls.TextBox> nach unten weisenden If das Mausrad <xref:System.Windows.Input.MouseWheelEventArgs.Delta%2A> ist ein negativer Wert.  
+  
+ [!code-csharp[mousesnippetsample#MouseWheelDelta](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mousewheeldelta)]
+ [!code-vb[mousesnippetsample#MouseWheelDelta](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mousewheeldelta)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

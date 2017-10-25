@@ -1,0 +1,414 @@
+<Type Name="EnumerationOptions" FullName="System.Management.EnumerationOptions">
+  <TypeSignature Language="C#" Value="public class EnumerationOptions : System.Management.ManagementOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EnumerationOptions extends System.Management.ManagementOptions" />
+  <TypeSignature Language="DocId" Value="T:System.Management.EnumerationOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.ManagementOptions</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Basisklasse für Abfrage- und Objekte Enumeration mit Optionen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel initialisiert ein <xref:System.Management.EnumerationOptions> Variable mit einem <xref:System.Management.EnumerationOptions> Konstruktor, und klicken Sie dann Ruft alle Instanzen einer WMI-Klasse und seiner Unterklassen.  
+  
+ [!code-csharp[wminet_EnumerationOptions#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EnumerationOptions/cs/EnumerationOptions.cs#1)]
+ [!code-vb[wminet_EnumerationOptions#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EnumerationOptions/vb/EnumerationOptions.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnumerationOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EnumerationOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.EnumerationOptions" /> -Klasse mit Standardwerten (siehe die einzelnen eigenschaftsbeschreibungen für welche die Standardwerte sind). Dies ist der Standardkonstruktor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert ein <xref:System.Management.EnumerationOptions> Variable mit einem <xref:System.Management.EnumerationOptions> Konstruktor, und klicken Sie dann Ruft alle Instanzen einer WMI-Klasse und seiner Unterklassen.  
+  
+ [!code-csharp[wminet_EnumerationOptions#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EnumerationOptions/cs/EnumerationOptions.cs#1)]
+ [!code-vb[wminet_EnumerationOptions#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EnumerationOptions/vb/EnumerationOptions.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnumerationOptions (System.Management.ManagementNamedValueCollection context, TimeSpan timeout, int blockSize, bool rewindable, bool returnImmediatley, bool useAmendedQualifiers, bool ensureLocatable, bool prototypeOnly, bool directRead, bool enumerateDeep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.ManagementNamedValueCollection context, valuetype System.TimeSpan timeout, int32 blockSize, bool rewindable, bool returnImmediatley, bool useAmendedQualifiers, bool ensureLocatable, bool prototypeOnly, bool directRead, bool enumerateDeep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EnumerationOptions.#ctor(System.Management.ManagementNamedValueCollection,System.TimeSpan,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Management.ManagementNamedValueCollection" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="blockSize" Type="System.Int32" />
+        <Parameter Name="rewindable" Type="System.Boolean" />
+        <Parameter Name="returnImmediatley" Type="System.Boolean" />
+        <Parameter Name="useAmendedQualifiers" Type="System.Boolean" />
+        <Parameter Name="ensureLocatable" Type="System.Boolean" />
+        <Parameter Name="prototypeOnly" Type="System.Boolean" />
+        <Parameter Name="directRead" Type="System.Boolean" />
+        <Parameter Name="enumerateDeep" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="context">Das Kontextobjekt für die Optionen, die anbieterspezifische Informationen, die an den Anbieter übergeben werden können.</param>
+        <param name="timeout">Der Timeoutwert für die Ergebnisse durch aufzählen.</param>
+        <param name="blockSize">Die Anzahl von Elementen, die gleichzeitig aus WMI abrufen.</param>
+        <param name="rewindable">
+          <see langword="true" />um anzuzeigen, dass das Resultset zurückspulbar ist ermöglicht (mehrere Durchläufe); andernfalls <see langword="false" />.</param>
+        <param name="returnImmediatley">
+          <see langword="true" />um anzuzeigen, dass die Operation sofort zurückgeben soll (durch Semikolons Sync) oder blockieren, bis alle Ergebnisse verfügbar. andernfalls <see langword="false" />.</param>
+        <param name="useAmendedQualifiers">
+          <see langword="true" />um anzuzeigen, dass die zurückgegebenen Objekte ergänzte (gebietsschemabezogene) Qualifizierer enthalten sollen; andernfalls <see langword="false" />.</param>
+        <param name="ensureLocatable">
+          <see langword="true" />um sicherzustellen, dass alle zurückgegebenen Objekte über gültige Pfade verfügen; andernfalls <see langword="false" />.</param>
+        <param name="prototypeOnly">
+          <see langword="true" />Um einen Prototyp des Resultsets anstelle der tatsächlichen Ergebnisse zurückgegeben. andernfalls <see langword="false" />.</param>
+        <param name="directRead">
+          <see langword="true" />zum Abrufen von Objekten, die der angegebenen Klasse oder über abgeleitete Klassen sowie; andernfalls <see langword="false" />.</param>
+        <param name="enumerateDeep">
+          <see langword="true" />Rekursive Enumeration in Unterklassen verwenden; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.EnumerationOptions" /> -Klasse, die für Abfragen oder Enumerationen, sodass der Benutzer Werte für die verschiedenen Optionen angeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert ein <xref:System.Management.EnumerationOptions> Variable mit einem <xref:System.Management.EnumerationOptions> Konstruktor, und klicken Sie dann Ruft alle Instanzen einer WMI-Klasse und seiner Unterklassen.  
+  
+ [!code-csharp[wminet_EnumerationOptions-10#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EnumerationOptions-10/cs/EnumerationOptions-10.cs#1)]
+ [!code-vb[wminet_EnumerationOptions-10#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EnumerationOptions-10/vb/EnumerationOptions-10.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockSize">
+      <MemberSignature Language="C#" Value="public int BlockSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BlockSize" />
+      <MemberSignature Language="DocId" Value="P:System.Management.EnumerationOptions.BlockSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Blockgröße für Block-Vorgänge. Wenn die Enumeration einer Auflistung gibt WMI Ergebnisse in Gruppen der angegebenen Größe zurück.</summary>
+        <value>Gibt ein <see cref="T:System.Int32" /> Wert, der für die Blockgröße in Block-Vorgängen verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Der Standardwert ist 1.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert ein <xref:System.Management.EnumerationOptions> Variable mit einem <xref:System.Management.EnumerationOptions> Konstruktor, und klicken Sie dann Ruft alle Instanzen einer WMI-Klasse und seiner Unterklassen.  
+  
+ [!code-csharp[wminet_EnumerationOptions_BlockSize#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EnumerationOptions_BlockSize/cs/EnumerationOptions_BlockSize.cs#1)]
+ [!code-vb[wminet_EnumerationOptions_BlockSize#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EnumerationOptions_BlockSize/vb/EnumerationOptions_BlockSize.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EnumerationOptions.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie des Objekts zurück.</summary>
+        <returns>Das geklonte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectRead">
+      <MemberSignature Language="C#" Value="public bool DirectRead { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DirectRead" />
+      <MemberSignature Language="DocId" Value="P:System.Management.EnumerationOptions.DirectRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob *direkten Zugriff auf die* auf den WMI-Anbieter für die angegebene Klasse, ohne dabei deren übergeordnete Klasse oder abgeleiteten Klassen angefordert wird.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob *direkten Zugriff auf die* auf den WMI-Anbieter für die angegebene Klasse angefordert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn nur Objekte der angegebenen Klasse, unabhängig von der Ableitung oder Vererbung empfangen werden sollen; andernfalls `false`. Der Standardwert ist `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert ein <xref:System.Management.EnumerationOptions> Variable mit einem <xref:System.Management.EnumerationOptions> Konstruktor, und klicken Sie dann Ruft alle Instanzen einer WMI-Klasse und seiner Unterklassen.  
+  
+ [!code-csharp[wminet_EnumerationOptions_DirectRead#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EnumerationOptions_DirectRead/cs/EnumerationOptions_DirectRead.cs#1)]
+ [!code-vb[wminet_EnumerationOptions_DirectRead#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EnumerationOptions_DirectRead/vb/EnumerationOptions_DirectRead.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureLocatable">
+      <MemberSignature Language="C#" Value="public bool EnsureLocatable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnsureLocatable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.EnumerationOptions.EnsureLocatable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die zurückgegebenen Objekte gebietsschemabezogene Informationen enthalten soll. Dadurch wird sichergestellt, dass die Systemeigenschaften wie z. B. **__PATH**, **__RELPATH**, und **__SERVER**, ungleich NULL sind. Dieses Flag kann nur in Abfragen verwendet werden und wird in Enumerationen ignoriert.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die zurückgegebenen Objekte müssen gebietsschemabezogene Informationen enthalten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn WMI sicherzustellen, sollten alle zurückgegebenen Objekte gültige Pfade; andernfalls `false`. Der Standardwert ist `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateDeep">
+      <MemberSignature Language="C#" Value="public bool EnumerateDeep { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnumerateDeep" />
+      <MemberSignature Language="DocId" Value="P:System.Management.EnumerationOptions.EnumerateDeep" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob alle Klassen, die von der angegebenen übergeordneten Klasse abgeleitete rekursive Enumeration angefordert wird. Wenn <see langword="false" />nur direkt abgeleitete Elemente zurückgegeben werden.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob alle Klassen, die von der angegebenen übergeordneten Klasse abgeleitete rekursive Enumeration angefordert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn alle Klassen, die von der angegebenen übergeordneten Klasse; abgeleitete rekursive Enumeration angefordert wird andernfalls `false`. Der Standardwert ist `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert ein <xref:System.Management.EnumerationOptions> Variable mit einem <xref:System.Management.EnumerationOptions> Konstruktor, und klicken Sie dann Ruft alle Instanzen einer WMI-Klasse und seiner Unterklassen.  
+  
+ [!code-csharp[wminet_EnumerationOptions_EnumerateDeep#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EnumerationOptions_EnumerateDeep/cs/EnumerationOptions_EnumerateDeep.cs#1)]
+ [!code-vb[wminet_EnumerationOptions_EnumerateDeep#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EnumerationOptions_EnumerateDeep/vb/EnumerationOptions_EnumerateDeep.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrototypeOnly">
+      <MemberSignature Language="C#" Value="public bool PrototypeOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrototypeOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Management.EnumerationOptions.PrototypeOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Abfrage einen Prototyp des Resultsets anstelle der tatsächlichen Ergebnisse zurückgeben soll. Dieses Flag wird für die Erstellung von Prototypen verwendet.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die Abfrage einen Prototyp des Resultsets anstelle der tatsächlichen Ergebnisse zurückgeben soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn der Abfrage einen Prototyp des Resultsets anstelle der tatsächlichen Ergebnisse zurückgegeben werden soll. andernfalls `false`. Der Standardwert ist `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnImmediately">
+      <MemberSignature Language="C#" Value="public bool ReturnImmediately { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReturnImmediately" />
+      <MemberSignature Language="DocId" Value="P:System.Management.EnumerationOptions.ReturnImmediately" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der aufgerufene Vorgang synchron oder halbsynchron durchgeführt werden soll. Wenn diese Eigenschaft, um festgelegt wird <see langword="true" />, wird die Enumeration aufgerufen und der Aufruf sofort zurückgegeben. Das eigentliche Abrufen der Ergebnisse treten auf, wenn die resultierende Auflistung durchlaufen wird.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob der aufgerufene Vorgang synchron oder halbsynchron durchgeführt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn die aufgerufene Operation in einer Weise synchron oder halbsynchron ausgeführt werden soll; andernfalls `false`. Der Standardwert ist `true`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rewindable">
+      <MemberSignature Language="C#" Value="public bool Rewindable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Rewindable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.EnumerationOptions.Rewindable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Auflistung angenommen wird, dass zurückspulbar werden. Wenn <see langword="true" />, die Objekte in der Auflistung werden für mehrere Enumerationen verfügbar gehalten werden. Wenn <see langword="false" />, die Auflistung kann nur aufgezählten einmal werden.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die Auflistung als zurückspulbar angesehen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn die Auflistung angenommen wird, dass zurückspulbar werden; andernfalls `false`. Der Standardwert ist `true`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAmendedQualifiers">
+      <MemberSignature Language="C#" Value="public bool UseAmendedQualifiers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAmendedQualifiers" />
+      <MemberSignature Language="DocId" Value="P:System.Management.EnumerationOptions.UseAmendedQualifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die von WMI zurückgegebenen Objekte ergänzte Informationen enthalten sollen. Üblicherweise handelt es sich bei ergänzende Informationen um lokalisierbare Informationen, die an das WMI-Objekt, z. B. Objekt- und eigenschaftenbeschreibungen angefügt.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die von WMI Objekte zurückgegebenen ergänzte Informationen enthalten soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Beschreibung und andere ergänzte Informationen nicht von Interesse sind, durch Festlegen dieses Eigenschaftswerts auf `false` ist jedoch effizienter.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn die Objekte vom zurückgegeben sollte WMI ergänzte Informationen enthalten. andernfalls `false`. Der Standardwert ist `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

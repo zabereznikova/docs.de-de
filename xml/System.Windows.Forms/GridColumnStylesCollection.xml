@@ -1,0 +1,919 @@
+<Type Name="GridColumnStylesCollection" FullName="System.Windows.Forms.GridColumnStylesCollection">
+  <TypeSignature Language="C#" Value="public class GridColumnStylesCollection : System.Windows.Forms.BaseCollection, System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridColumnStylesCollection extends System.Windows.Forms.BaseCollection implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.GridColumnStylesCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.BaseCollection</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataGridColumnCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> Objekte in der <see cref="T:System.Windows.Forms.DataGrid" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf der <xref:System.Windows.Forms.DataGridTableStyle>, Sie Zugriff auf die <xref:System.Windows.Forms.GridColumnStylesCollection> über die <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> Eigenschaft.  
+  
+ Die <xref:System.Windows.Forms.GridColumnStylesCollection> verwendet Standard <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> und <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> Methoden zum Bearbeiten der Auflistung.  
+  
+ Verwenden der <xref:System.Windows.Forms.GridColumnStylesCollection.Contains%2A> Methode, um zu bestimmen, ob eine bestimmte Eigenschaft in der Auflistung vorhanden ist. Verwenden Sie darüber hinaus die <xref:System.Windows.Forms.GridColumnStylesCollection.IndexOf%2A> Methode, um zu bestimmen, den Index eines beliebigen <xref:System.Windows.Forms.DataGridColumnStyle> Objekt innerhalb der Auflistung.  
+  
+> [!CAUTION]
+>  Erstellen Sie immer <xref:System.Windows.Forms.DataGridColumnStyle> -Objekte und fügen sie der <xref:System.Windows.Forms.GridColumnStylesCollection> vor dem Hinzufügen von <xref:System.Windows.Forms.DataGridTableStyle> -Objekte und die <xref:System.Windows.Forms.GridTableStylesCollection>. Wenn Sie eine leere hinzufügen <xref:System.Windows.Forms.DataGridTableStyle> durch einen gültigen <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> Wert auf die Auflistung <xref:System.Windows.Forms.DataGridColumnStyle> Objekte automatisch für Sie generiert werden. Daher eine Ausnahme wird ausgelöst, wenn Sie versuchen, das Hinzufügen neuer <xref:System.Windows.Forms.DataGridColumnStyle> Objekte mit doppelten <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> -Werte in der <xref:System.Windows.Forms.GridColumnStylesCollection>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel gibt Informationen zu den einzelnen <xref:System.Windows.Forms.DataGridColumnStyle> in einem <xref:System.Windows.Forms.GridColumnStylesCollection>.  
+  
+ [!code-cpp[Classic GridColumnStylesCollection Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic GridColumnStylesCollection Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic GridColumnStylesCollection Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic GridColumnStylesCollection Example/CS/Source.cs#1)]
+ [!code-vb[Classic GridColumnStylesCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic GridColumnStylesCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual int Add (System.Windows.Forms.DataGridColumnStyle column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Add(class System.Windows.Forms.DataGridColumnStyle column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.Add(System.Windows.Forms.DataGridColumnStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Windows.Forms.DataGridColumnStyle" />
+      </Parameters>
+      <Docs>
+        <param name="column">Das hinzuzufügende <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <summary>Die Auflistung hinzugefügt ein Spaltenformat.</summary>
+        <returns>Der Index des neuen <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt mehrere <xref:System.Windows.Forms.DataGridColumnStyle> -Objekte und fügt Sie jedes Element der <xref:System.Windows.Forms.GridColumnStylesCollection> zweier <xref:System.Windows.Forms.DataGridTableStyle> Objekte.  
+  
+ [!code-cpp[GridTableStylesCollectionExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CPP/gridtablestylescollectionexamples.cpp#1)]
+ [!code-csharp[GridTableStylesCollectionExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CS/gridtablestylescollectionexamples.cs#1)]
+ [!code-vb[GridTableStylesCollectionExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GridTableStylesCollectionExamples/VB/gridtablestylescollectionexamples.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Windows.Forms.DataGridColumnStyle[] columns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Windows.Forms.DataGridColumnStyle[] columns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.AddRange(System.Windows.Forms.DataGridColumnStyle[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columns" Type="System.Windows.Forms.DataGridColumnStyle[]" />
+      </Parameters>
+      <Docs>
+        <param name="columns">Ein Array von <see cref="T:System.Windows.Forms.DataGridColumnStyle" />-Objekten, die der Auflistung hinzugefügt werden sollen.</param>
+        <summary>Fügt ein Array von Spaltenobjekten-Format zur Auflistung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein Array von <xref:System.Windows.Forms.DataGridColumnStyle> -Objekte und verwendet die <xref:System.Windows.Forms.GridColumnStylesCollection.AddRange%2A> Methode, um das Array, das Hinzufügen der <xref:System.Windows.Forms.GridColumnStylesCollection>.  
+  
+ [!code-cpp[Classic GridColumnStylesCollection.AddRange Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic GridColumnStylesCollection.AddRange Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic GridColumnStylesCollection.AddRange Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic GridColumnStylesCollection.AddRange Example/CS/source.cs#1)]
+ [!code-vb[Classic GridColumnStylesCollection.AddRange Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic GridColumnStylesCollection.AddRange Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Auflistung der <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements.  
+  
+ [!code-cpp[GridColumnStylesCollection_Members#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GridColumnStylesCollection_Members/CPP/gridcolumnstylescollection_members.cpp#1)]
+ [!code-csharp[GridColumnStylesCollection_Members#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GridColumnStylesCollection_Members/CS/gridcolumnstylescollection_members.cs#1)]
+ [!code-vb[GridColumnStylesCollection_Members#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GridColumnStylesCollection_Members/VB/gridcolumnstylescollection_members.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CollectionChangeEventHandler CollectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CollectionChangeEventHandler CollectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.GridColumnStylesCollection.CollectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CollectionChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Änderung, um vorgenommen wird die <see cref="T:System.Windows.Forms.GridColumnStylesCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel fügt einen Handler für das <xref:System.Windows.Forms.GridColumnStylesCollection.CollectionChanged> Ereignis.  
+  
+ [!code-cpp[Classic GridColumnStylesCollection.CollectionChanged Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic GridColumnStylesCollection.CollectionChanged Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic GridColumnStylesCollection.CollectionChanged Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic GridColumnStylesCollection.CollectionChanged Example/CS/source.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.ComponentModel.PropertyDescriptor propertyDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.ComponentModel.PropertyDescriptor propertyDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.Contains(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyDescriptor" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="propertyDescriptor">Die <see cref="T:System.ComponentModel.PropertyDescriptor" /> verknüpft sind mit den gewünschten <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.GridColumnStylesCollection" /> enthält eine <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> verknüpft sind, mit dem angegebenen <see cref="T:System.ComponentModel.PropertyDescriptor" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die Auflistung enthält die <see cref="T:System.Windows.Forms.DataGridColumnStyle" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Abrufen einer <xref:System.ComponentModel.PropertyDescriptorCollection>, verwenden die <xref:System.Windows.Forms.BindingManagerBase.GetItemProperties%2A> Methode der <xref:System.Windows.Forms.BindingManagerBase> Klasse. Übergeben der <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> von der <xref:System.Windows.Forms.DataGridColumnStyle> auf der <xref:System.ComponentModel.PropertyDescriptorCollection.Item%2A> Eigenschaft von der <xref:System.ComponentModel.PropertyDescriptorCollection> zurückzugebenden der <xref:System.ComponentModel.PropertyDescriptor> für eine bestimmte Spalte.  
+  
+ Verwenden der <xref:System.Windows.Forms.GridColumnStylesCollection.Contains%2A> aufzurufende Methode bestimmen Sie, ob ein bestimmter <xref:System.Windows.Forms.DataGridColumnStyle> vorhanden ist, vor dem Aufrufen der <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> Methode, um das Element zu entfernen. Wenn Sie den Index eines bestimmten wissen müssen <xref:System.Windows.Forms.DataGridColumnStyle>, verwenden Sie die <xref:System.Windows.Forms.GridColumnStylesCollection.IndexOf%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.GridColumnStylesCollection.Contains%2A> Methode, um festzustellen, wo eine <xref:System.Windows.Forms.GridColumnStylesCollection> enthält eine <xref:System.Windows.Forms.DataGridColumnStyle> verknüpft sind mit einem angegebenen <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ [!code-vb[Classic GridColumnStylesCollection.Contains Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic GridColumnStylesCollection.Contains Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Die <see cref="P:System.Windows.Forms.DataGridColumnStyle.MappingName" /> des gewünschten <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.GridColumnStylesCollection" /> enthält die <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> mit dem angegebenen Namen.</summary>
+        <returns>
+          <see langword="true" />Wenn die Auflistung enthält die <see cref="T:System.Windows.Forms.DataGridColumnStyle" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Beschriftung des eine <xref:System.Windows.Forms.DataGridColumnStyle> festgelegt ist, mit der <xref:System.Windows.Forms.DataGridColumnStyle.HeaderText%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.Windows.Forms.GridColumnStylesCollection.Contains%2A> aufzurufende Methode bestimmen Sie, ob ein bestimmter <xref:System.Windows.Forms.DataGridColumnStyle> vorhanden ist, vor dem Aufrufen der <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> Methode, um das Element zu entfernen. Wenn Sie den Index eines bestimmten wissen müssen <xref:System.Windows.Forms.DataGridColumnStyle>, verwenden Sie die <xref:System.Windows.Forms.GridColumnStylesCollection.IndexOf%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.GridColumnStylesCollection.Contains%2A> Methode, um festzustellen, wo eine <xref:System.Windows.Forms.DataGridColumnStyle> mit einer angegebenen <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> vorhanden ist, der <xref:System.Windows.Forms.GridColumnStylesCollection>.  
+  
+ [!code-vb[Classic GridColumnStylesCollection.Contains2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic GridColumnStylesCollection.Contains2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Forms.DataGridColumnStyle column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Forms.DataGridColumnStyle column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.Contains(System.Windows.Forms.DataGridColumnStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Windows.Forms.DataGridColumnStyle" />
+      </Parameters>
+      <Docs>
+        <param name="column">Der gewünschte <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.GridColumnStylesCollection" /> enthält die angegebene <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die Auflistung enthält die <see cref="T:System.Windows.Forms.DataGridColumnStyle" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.GridColumnStylesCollection.Contains%2A> aufzurufende Methode bestimmen Sie, ob ein bestimmter <xref:System.Windows.Forms.DataGridColumnStyle> vorhanden ist, vor dem Aufrufen der <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> Methode, um das Element zu entfernen. Wenn Sie den Index eines bestimmten wissen müssen <xref:System.Windows.Forms.DataGridColumnStyle>, verwenden Sie die <xref:System.Windows.Forms.GridColumnStylesCollection.IndexOf%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.GridColumnStylesCollection.Contains%2A> Methode, um festzustellen, wo eine <xref:System.Windows.Forms.GridColumnStylesCollection> enthält eine bestimmte <xref:System.Windows.Forms.DataGridColumnStyle>.  
+  
+ [!code-vb[Classic GridColumnStylesCollection.Contains1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic GridColumnStylesCollection.Contains1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Forms.DataGridColumnStyle element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Forms.DataGridColumnStyle element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.IndexOf(System.Windows.Forms.DataGridColumnStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Forms.DataGridColumnStyle" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das zu suchende <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <summary>Ruft den Index eines angegebenen <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</summary>
+        <returns>Der nullbasierte Index des der <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> innerhalb der <see cref="T:System.Windows.Forms.GridColumnStylesCollection" /> oder -1, wenn kein entsprechender <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.GridColumnStylesCollection.Contains%2A> Methode, um zu bestimmen, ob ein bestimmter <xref:System.Windows.Forms.DataGridColumnStyle> vorhanden ist. Wenn dies der Fall ist, und Sie benötigen den Index des Elements in der Auflistung, verwenden die <xref:System.Windows.Forms.GridColumnStylesCollection.IndexOf%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.GridColumnStylesCollection.Contains%2A> Methode zum bestimmen, ob eine bestimmte <xref:System.Windows.Forms.DataGridColumnStyle> vorhanden ist, eine <xref:System.Windows.Forms.GridColumnStylesCollection>. Wenn dies der Fall ist, die <xref:System.Windows.Forms.GridColumnStylesCollection.IndexOf%2A> Methode gibt den Index des der <xref:System.Windows.Forms.DataGridColumnStyle>, und die <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> Methode wird aufgerufen, mit dem Index, um das Element aus der Auflistung zu entfernen.  
+  
+ [!code-vb[Classic GridColumnStylesCollection.IndexOf Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic GridColumnStylesCollection.IndexOf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridColumnStyle this[System.ComponentModel.PropertyDescriptor propertyDesciptor] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridColumnStyle Item(class System.ComponentModel.PropertyDescriptor)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridColumnStylesCollection.Item(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridColumnStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyDesciptor" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="propertyDesciptor">Der mit dem <see cref="T:System.ComponentModel.PropertyDescriptor" /> verknüpfte <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> ab, die dem angegebenen <see cref="T:System.ComponentModel.PropertyDescriptor" /> zugeordnet ist.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> verknüpft den angegebenen <see cref="T:System.ComponentModel.PropertyDescriptor" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.Windows.Forms.DataGridColumnStyle> erstellt, wobei eine <xref:System.ComponentModel.PropertyDescriptor>. Die <xref:System.ComponentModel.PropertyDescriptor> zurückgegeben werden kann, mithilfe der <xref:System.Windows.Forms.DataGridColumnStyle.PropertyDescriptor%2A> Eigenschaft.  
+  
+ Zum Abrufen der <xref:System.ComponentModel.PropertyDescriptorCollection> für eine bestimmte Datenquelle verwenden die <xref:System.Windows.Forms.BindingManagerBase.GetItemProperties%2A> Methode der <xref:System.Windows.Forms.BindingManagerBase> Klasse. Übergeben der <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> auf die <xref:System.ComponentModel.PropertyDescriptorCollection.Item%2A> Eigenschaft von der <xref:System.ComponentModel.PropertyDescriptorCollection> zurückzugebenden eine <xref:System.ComponentModel.PropertyDescriptor> für eine bestimmte Spalte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine <xref:System.Data.DataColumn> aus einer <xref:System.Data.DataTable> in einer <xref:System.Data.DataSet>, und übergibt ihn dann als Argument an die <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> Methode.  
+  
+ [!code-vb[Classic GridColumnStylesCollection.this2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic GridColumnStylesCollection.this2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridColumnStyle this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridColumnStyle Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridColumnStylesCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridColumnStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, der die <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> zurückgegeben.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> an einem angegebenen Index.</summary>
+        <value>Das angegebene <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.GridColumnStylesCollection.IndexOf%2A> Methode, um den Index eines Elements in der Auflistung bestimmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.DataGridColumnStyle> mithilfe der <xref:System.Windows.Forms.GridColumnStylesCollection.Item%2A> Eigenschaft.  
+  
+ [!code-vb[Classic GridColumnStylesCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic GridColumnStylesCollection.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridColumnStyle this[string columnName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridColumnStyle Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridColumnStylesCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridColumnStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Die <see cref="P:System.Windows.Forms.DataGridColumnStyle.MappingName" /> von der <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> abgerufen.</param>
+        <summary>Ruft den <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> mit dem angegebenen Namen ab.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> mit den angegebenen Spaltenheader.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kopfzeile der eine <xref:System.Windows.Forms.DataGridColumnStyle> können explizit festgelegt werden, durch Festlegen der <xref:System.Windows.Forms.DataGridColumnStyle.HeaderText%2A> Eigenschaft. Wird standardmäßig die <xref:System.Windows.Forms.DataGridColumnStyle.HeaderText%2A> festgelegt ist, verwendet <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> Eigenschaftswert.  
+  
+ Der Vergleich zwischen den Spaltenüberschriften und der Wert, der gesucht wird keine Groß-/Kleinschreibung beachtet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel gibt die <xref:System.Windows.Forms.DataGridColumnStyle> mit dem Namen der <xref:System.Windows.Forms.GridColumnStylesCollection.Item%2A> Eigenschaft.  
+  
+ [!code-vb[Classic GridColumnStylesCollection.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic GridColumnStylesCollection.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ArrayList List { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList List" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridColumnStylesCollection.List" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Elemente in der Auflistung ab.</summary>
+        <value>Ein <see cref="T:System.Collections.ArrayList" /> , enthält die Elemente der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCollectionChanged">
+      <MemberSignature Language="C#" Value="protected void OnCollectionChanged (System.ComponentModel.CollectionChangeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnCollectionChanged(class System.ComponentModel.CollectionChangeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.OnCollectionChanged(System.ComponentModel.CollectionChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.CollectionChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.ComponentModel.CollectionChangeEventArgs" /> , das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.GridColumnStylesCollection.CollectionChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.GridColumnStylesCollection.OnCollectionChanged(System.ComponentModel.CollectionChangeEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.GridColumnStylesCollection.OnCollectionChanged(System.ComponentModel.CollectionChangeEventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Forms.DataGridColumnStyle column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Forms.DataGridColumnStyle column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.Remove(System.Windows.Forms.DataGridColumnStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Windows.Forms.DataGridColumnStyle" />
+      </Parameters>
+      <Docs>
+        <param name="column">Die aus der Auflistung zu entfernende <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <summary>Entfernt die angegebene <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> aus der <see cref="T:System.Windows.Forms.GridColumnStylesCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.GridColumnStylesCollection.Contains%2A> Methode, um zu bestimmen, ob die <xref:System.Windows.Forms.DataGridColumnStyle> in der Auflistung vorhanden ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel entfernt eine <xref:System.Windows.Forms.DataGridColumnStyle> aus einem <xref:System.Windows.Forms.GridColumnStylesCollection>.  
+  
+ [!code-cpp[GridColumnStylesCollection_RemoveAt#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GridColumnStylesCollection_RemoveAt/CPP/gridcolumnstylescollection_removeat.cpp#1)]
+ [!code-csharp[GridColumnStylesCollection_RemoveAt#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GridColumnStylesCollection_RemoveAt/CS/gridcolumnstylescollection_removeat.cs#1)]
+ [!code-vb[GridColumnStylesCollection_RemoveAt#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GridColumnStylesCollection_RemoveAt/VB/gridcolumnstylescollection_removeat.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index der zu entfernenden <see cref="T:System.Windows.Forms.DataGridColumnStyle" />-Instanz.</param>
+        <summary>Entfernt die <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> mit dem angegebenen Index aus der <see cref="T:System.Windows.Forms.GridColumnStylesCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.GridColumnStylesCollection.Contains%2A> Methode, um zu bestimmen, ob die <xref:System.Windows.Forms.DataGridColumnStyle> in der Auflistung vorhanden ist.  
+  
+ Verwenden der <xref:System.Windows.Forms.GridColumnStylesCollection.IndexOf%2A> Methode, um den Index eines Elements in der Auflistung bestimmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.GridColumnStylesCollection.Contains%2A> Methode zum bestimmen, ob eine bestimmte <xref:System.Windows.Forms.DataGridColumnStyle> vorhanden ist, eine <xref:System.Windows.Forms.GridColumnStylesCollection>. Wenn dies der Fall ist, die <xref:System.Windows.Forms.GridColumnStylesCollection.IndexOf%2A> Methode gibt den Index des der <xref:System.Windows.Forms.DataGridColumnStyle>, und die <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> Methode wird aufgerufen, mit dem Index, um das Element aus der Auflistung zu entfernen.  
+  
+ [!code-vb[Classic GridColumnStylesCollection.IndexOf Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic GridColumnStylesCollection.IndexOf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetPropertyDescriptors">
+      <MemberSignature Language="C#" Value="public void ResetPropertyDescriptors ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetPropertyDescriptors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.ResetPropertyDescriptors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die <see cref="T:System.ComponentModel.PropertyDescriptor" /> für jedes Spaltenformat in der Auflistung zu <see langword="null" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements.  
+  
+ [!code-cpp[GridColumnStylesCollection_ResetPropertyDescriptor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GridColumnStylesCollection_ResetPropertyDescriptor/CPP/resetpropertydescriptor.cpp#1)]
+ [!code-csharp[GridColumnStylesCollection_ResetPropertyDescriptor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GridColumnStylesCollection_ResetPropertyDescriptor/CS/gridcolumnstylescollection_resetpropertydescriptor.cs#1)]
+ [!code-vb[GridColumnStylesCollection_ResetPropertyDescriptor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GridColumnStylesCollection_ResetPropertyDescriptor/VB/gridcolumnstylescollection_resetpropertydescriptor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> , die das Ziel der aus der Auflistung kopierten Elemente ist. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im Array, ab dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Auflistung in ein kompatibles eindimensionales <see cref="T:System.Array" />, beginnend am angegebenen Index des Zielarrays.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der <see cref="T:System.Windows.Forms.GridColumnStylesCollection" /> ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des <paramref name="array" />.</exception>
+        <exception cref="T:System.InvalidCastException">Der Typ des der <see cref="T:System.Windows.Forms.GridColumnStylesCollection" /> kann nicht automatisch in den Typ umgewandelt werden <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridColumnStylesCollection.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Auflistung ab.</summary>
+        <value>Die Anzahl der Elemente in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridColumnStylesCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die <see cref="T:System.Windows.Forms.GridColumnStylesCollection" /> synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridColumnStylesCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:System.Windows.Forms.GridColumnStylesCollection" /> synchronisiert werden kann.</summary>
+        <value>Das Objekt mit dem Zugriff auf die Auflistung synchronisiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator für die Auflistung zurück.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für die Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das der Auflistung hinzugefügt werden. Der Wert kann <see langword="null" /> sein.</param>
+        <summary>Fügt der Auflistung ein Objekt hinzu.</summary>
+        <returns>Der Index, an dem der Wert hinzugefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="value" />keine Typumwandlung in einem <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Auflistung der <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> Objekte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das in der Auflistung gesucht werden soll. Der Wert kann <see langword="null" /> sein.</param>
+        <summary>Bestimmt, ob sich ein Element in der Auflistung befindet.</summary>
+        <returns>
+          <see langword="true" />, wenn sich das Element in der Auflistung befindet, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das in der Auflistung gesucht werden soll. Der Wert kann <see langword="null" /> sein.</param>
+        <summary>Gibt den nullbasierten Index des ersten Vorkommens des angegebenen Objekts in der Auflistung zurück.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommens der <paramref name="value" /> Parameter in der Auflistung, sofern gefunden, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Wert</c> eingefügt werden soll.</param>
+        <param name="value">Das Objekt, das in die Auflistung eingefügt werden soll.</param>
+        <summary>Diese Methode wird von diesem Steuerelement nicht unterstützt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Wird immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridColumnStylesCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung eine feste Größe aufweist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridColumnStylesCollection.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridColumnStylesCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des abzurufenden Elements.</param>
+        <summary>Ruft das Element am angegebenen Index ab.</summary>
+        <value>Das Element am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Ein Vorgang versucht, diese Eigenschaft festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die aus der Auflistung zu entfernende <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <summary>Entfernt die angegebene <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> aus der <see cref="T:System.Windows.Forms.GridColumnStylesCollection" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="value" />keine Typumwandlung in einem <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridColumnStylesCollection.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index der zu entfernenden <see cref="T:System.Windows.Forms.DataGridColumnStyle" />-Instanz.</param>
+        <summary>Entfernt die <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> am angegebenen Index aus der <see cref="T:System.Windows.Forms.GridColumnStylesCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

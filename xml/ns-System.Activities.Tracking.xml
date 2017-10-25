@@ -1,0 +1,6 @@
+<Namespace Name="System.Activities.Tracking">
+  <Docs>
+    <summary>Die System.Activities.Tracking-Namespace enthält Klassen, die zum Erstellen von und interagieren mit Workflow-Verfolgungsdatensätze verwendet. Nachverfolgungsdatensätze werden von der Workflowlaufzeit erstellt, wenn eine Workflowinstanz ausgeführt wird. Der Zugriff erfolgt durch Klassen, die von  <see cref="T:System.Activities.Tracking.TrackingParticipant" /> erben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

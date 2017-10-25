@@ -1,0 +1,186 @@
+<Type Name="RoutedEventHandlerInfo" FullName="System.Windows.RoutedEventHandlerInfo">
+  <TypeSignature Language="C#" Value="public struct RoutedEventHandlerInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit RoutedEventHandlerInfo extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.RoutedEventHandlerInfo" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine besondere Behandlungsinformationen Ereignislistener zu informieren, ob bestimmte Handler aufgerufen werden soll.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventHandlerInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende mit dem aktuellen Objekt <see cref="T:System.Windows.RoutedEventHandlerInfo" />.</param>
+        <summary>Bestimmt, ob das angegebene Objekt gleich der aktuellen <see cref="T:System.Windows.RoutedEventHandlerInfo" />.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Objekt dem aktuellen entspricht <see cref="T:System.Windows.RoutedEventHandlerInfo" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.RoutedEventHandlerInfo handlerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.RoutedEventHandlerInfo handlerInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventHandlerInfo.Equals(System.Windows.RoutedEventHandlerInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handlerInfo" Type="System.Windows.RoutedEventHandlerInfo" />
+      </Parameters>
+      <Docs>
+        <param name="handlerInfo">Die <see cref="T:System.Windows.RoutedEventHandlerInfo" /> zum Vergleichen mit der aktuellen <see cref="T:System.Windows.RoutedEventHandlerInfo" />.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Windows.RoutedEventHandlerInfo" /> ist gleichbedeutend mit dem aktuellen <see cref="T:System.Windows.RoutedEventHandlerInfo" />.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Windows.RoutedEventHandlerInfo" /> ist gleichbedeutend mit dem aktuellen <see cref="T:System.Windows.RoutedEventHandlerInfo" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung beruht auf Äquivalenz von der <xref:System.Windows.RoutedEventHandlerInfo.Handler%2A> <xref:System.Windows.RoutedEventHandlerInfo.InvokeHandledEventsToo%2A> Eigenschaften. Die <xref:System.Windows.RoutedEventHandlerInfo.Handler%2A> Eigenschaft ist ein Delegatverweis. Aus diesem Grund bedeutet Äquivalenz einen doppelten Verweis auf den gleichen Handler.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventHandlerInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Hashcode für den aktuellen <see cref="T:System.Windows.RoutedEventHandlerInfo" /> zurück.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Windows.RoutedEventHandlerInfo" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Handler">
+      <MemberSignature Language="C#" Value="public Delegate Handler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Delegate Handler" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.RoutedEventHandlerInfo.Handler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ereignishandler ab.</summary>
+        <value>Der Ereignishandler.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeHandledEventsToo">
+      <MemberSignature Language="C#" Value="public bool InvokeHandledEventsToo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InvokeHandledEventsToo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.RoutedEventHandlerInfo.InvokeHandledEventsToo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Ereignishandler aufgerufen wird, wenn das Routingereignis als behandelt markiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Ereignishandler aufgerufen wird, wenn das Routingereignis gekennzeichnet ist behandelt wird. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.RoutedEventHandlerInfo handlerInfo1, System.Windows.RoutedEventHandlerInfo handlerInfo2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.RoutedEventHandlerInfo handlerInfo1, valuetype System.Windows.RoutedEventHandlerInfo handlerInfo2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventHandlerInfo.op_Equality(System.Windows.RoutedEventHandlerInfo,System.Windows.RoutedEventHandlerInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handlerInfo1" Type="System.Windows.RoutedEventHandlerInfo" />
+        <Parameter Name="handlerInfo2" Type="System.Windows.RoutedEventHandlerInfo" />
+      </Parameters>
+      <Docs>
+        <param name="handlerInfo1">Das erste zu vergleichende Objekt.</param>
+        <param name="handlerInfo2">Das zweite zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob die angegebenen Objekte gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die Objekte gleichwertig sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.RoutedEventHandlerInfo handlerInfo1, System.Windows.RoutedEventHandlerInfo handlerInfo2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.RoutedEventHandlerInfo handlerInfo1, valuetype System.Windows.RoutedEventHandlerInfo handlerInfo2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventHandlerInfo.op_Inequality(System.Windows.RoutedEventHandlerInfo,System.Windows.RoutedEventHandlerInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handlerInfo1" Type="System.Windows.RoutedEventHandlerInfo" />
+        <Parameter Name="handlerInfo2" Type="System.Windows.RoutedEventHandlerInfo" />
+      </Parameters>
+      <Docs>
+        <param name="handlerInfo1">Das erste zu vergleichende Objekt.</param>
+        <param name="handlerInfo2">Das zweite zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob die angegebenen Objekte nicht identisch sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die Objekte nicht identisch sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,278 @@
+<Type Name="RibbonGalleryItemDataAutomationPeer" FullName="System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer">
+  <TypeSignature Language="C#" Value="public class RibbonGalleryItemDataAutomationPeer : System.Windows.Automation.Peers.ItemAutomationPeer, System.Windows.Automation.Provider.IScrollItemProvider, System.Windows.Automation.Provider.ISelectionItemProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RibbonGalleryItemDataAutomationPeer extends System.Windows.Automation.Peers.ItemAutomationPeer implements class System.Windows.Automation.Provider.IScrollItemProvider, class System.Windows.Automation.Provider.ISelectionItemProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.ItemAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IScrollItemProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.ISelectionItemProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Macht <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" /> Typen für die UI-Automatisierung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonGalleryItemDataAutomationPeer (object owner, System.Windows.Automation.Peers.ItemsControlAutomationPeer itemsControlAutomationPeer, System.Windows.Automation.Peers.RibbonGalleryCategoryDataAutomationPeer parentCategoryDataAutomationPeer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object owner, class System.Windows.Automation.Peers.ItemsControlAutomationPeer itemsControlAutomationPeer, class System.Windows.Automation.Peers.RibbonGalleryCategoryDataAutomationPeer parentCategoryDataAutomationPeer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer.#ctor(System.Object,System.Windows.Automation.Peers.ItemsControlAutomationPeer,System.Windows.Automation.Peers.RibbonGalleryCategoryDataAutomationPeer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Object" />
+        <Parameter Name="itemsControlAutomationPeer" Type="System.Windows.Automation.Peers.ItemsControlAutomationPeer" />
+        <Parameter Name="parentCategoryDataAutomationPeer" Type="System.Windows.Automation.Peers.RibbonGalleryCategoryDataAutomationPeer" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" />, der diesem <see cref="T:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer" /> zugeordnet ist.</param>
+        <param name="itemsControlAutomationPeer">Der Automatisierungspeer zugeordnet ist, die die <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryCategory" /> , enthält die <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" />.</param>
+        <param name="parentCategoryDataAutomationPeer">Der Automatisierungspeer zugeordnet ist, die die <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryCategory" />.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationControlTypeCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer.GetAutomationControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Steuerelementtyp für die <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" /> aufgerufen.</summary>
+        <returns>Der <see cref="F:System.Windows.Automation.Peers.AutomationControlType.ListItem" />-Enumerationswert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetClassNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetClassNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer.GetClassNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Namen des der <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" /> aufgerufen.</summary>
+        <returns>Die Zeichenfolge "RibbonGalleryItem".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPattern">
+      <MemberSignature Language="C#" Value="public override object GetPattern (System.Windows.Automation.Peers.PatternInterface patternInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetPattern(valuetype System.Windows.Automation.Peers.PatternInterface patternInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternInterface" Type="System.Windows.Automation.Peers.PatternInterface" />
+      </Parameters>
+      <Docs>
+        <param name="patternInterface">Ein Enumerationswert, der den Befehlstyp angibt.</param>
+        <summary>Ruft das Steuerelementmuster für das <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" /> ab, das diesem <see cref="T:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer" /> zugeordnet ist.</summary>
+        <returns>Ein Objekt, das das Steuerelementmuster unterstützt, wenn <paramref name="patternInterface" /> ist die <see cref="F:System.Windows.Automation.Peers.PatternInterface.ScrollItem" /> oder <see cref="F:System.Windows.Automation.Peers.PatternInterface.SelectionItem" /> Wert; anderenfalls <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentCategoryDataAutomationPeer">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Peers.RibbonGalleryCategoryDataAutomationPeer ParentCategoryDataAutomationPeer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Peers.RibbonGalleryCategoryDataAutomationPeer ParentCategoryDataAutomationPeer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer.ParentCategoryDataAutomationPeer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.RibbonGalleryCategoryDataAutomationPeer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Automatisierungspeer für das übergeordnete <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryCategory" />.</summary>
+        <value>Für das übergeordnete Element der Automatisierungspeer <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryCategory" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView">
+      <MemberSignature Language="C#" Value="void IScrollItemProvider.ScrollIntoView ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer.System#Windows#Automation#Provider#IScrollItemProvider#ScrollIntoView" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt den <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" /> um das Steuerelement im sichtbaren Bereich (Viewport) des Containers angezeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer>-Instanz in eine <xref:System.Windows.Automation.Provider.IScrollItemProvider>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection">
+      <MemberSignature Language="C#" Value="void ISelectionItemProvider.AddToSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#AddToSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese API ist nicht implementiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer>-Instanz in eine <xref:System.Windows.Automation.Provider.ISelectionItemProvider>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ISelectionItemProvider.IsSelected">
+      <MemberSignature Language="C#" Value="bool System.Windows.Automation.Provider.ISelectionItemProvider.IsSelected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Windows.Automation.Provider.ISelectionItemProvider.IsSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#IsSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer" /> ausgewählt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer" /> ausgewählt ist, andernfalls wird <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer>-Instanz in eine <xref:System.Windows.Automation.Provider.ISelectionItemProvider>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection">
+      <MemberSignature Language="C#" Value="void ISelectionItemProvider.RemoveFromSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#RemoveFromSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt die <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer" /> aus der Auflistung ausgewählter Elemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer>-Instanz in eine <xref:System.Windows.Automation.Provider.ISelectionItemProvider>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ISelectionItemProvider.Select">
+      <MemberSignature Language="C#" Value="void ISelectionItemProvider.Select ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.ISelectionItemProvider.Select() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#Select" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hebt die Auswahl aller ausgewählten Elemente und wählt dann die <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer>-Instanz in eine <xref:System.Windows.Automation.Provider.ISelectionItemProvider>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer">
+      <MemberSignature Language="C#" Value="System.Windows.Automation.Provider.IRawElementProviderSimple System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Provider.IRawElementProviderSimple System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#SelectionContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Automatisierungspeer, die fungiert als Container für die <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" />.</summary>
+        <value>Der Automatisierungspeer, die fungiert als Container für die <see cref="T:System.Windows.Controls.Ribbon.RibbonGalleryItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Automation.Peers.RibbonGalleryItemDataAutomationPeer>-Instanz in eine <xref:System.Windows.Automation.Provider.ISelectionItemProvider>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

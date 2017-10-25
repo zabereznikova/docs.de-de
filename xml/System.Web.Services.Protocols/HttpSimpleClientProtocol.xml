@@ -1,0 +1,276 @@
+<Type Name="HttpSimpleClientProtocol" FullName="System.Web.Services.Protocols.HttpSimpleClientProtocol">
+  <TypeSignature Language="C#" Value="public abstract class HttpSimpleClientProtocol : System.Web.Services.Protocols.HttpWebClientProtocol" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HttpSimpleClientProtocol extends System.Web.Services.Protocols.HttpWebClientProtocol" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.HttpSimpleClientProtocol" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.HttpWebClientProtocol</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse für die Kommunikation mit einem XML-Webdienst mithilfe von einfachen HTTP-GET und HTTP-POST Protokolle-Bindungen dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse gibt den größten Teil der Implementierung für die Kommunikation mit einem XML-Webdienst über HTTP unter Verwendung der Encoder zum Codieren von die Parameter und Rückgabewerte in gemeinsamen MIME-Formaten. Diese Encoder Ableiten der <xref:System.Web.Services.Protocols.MimeFormatter> Klasse. Wird standardmäßig eine Proxyklasse von <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol> Parameter mithilfe der Application/X-www-form-urlencoded MIME-Typ und die Antwort in reinem XML codiert. Benutzerdefinierte MIME-Formatierungsprogramme können angegeben werden, mithilfe der <xref:System.Web.Services.Protocols.HttpMethodAttribute> -Attribut angegeben wird, besteht jedoch keine Unterstützung für die Integration dieser in eine Beschreibung und Proxy-Generierung von Dienst.  
+  
+ `Notes to Inheritors:`Wenn Sie diese Klasse überschreiben, können Sie Methoden in der abgeleiteten Klasse einführen, die auf einen bestimmten Typ eines XML-Webdiensts spezifisch sind. Die Methoden einfach erfassen die Parameter, und rufen die Basisklasse zum Durchführen der Aufgaben mit dem Standort kommunizieren. Wenn die eingeführten Methoden asynchron sind, rufen Sie die <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol.BeginInvoke%2A> und <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol.EndInvoke%2A> Methoden. Wenn die eingeführten Methoden synchron sind, rufen Sie die <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol.Invoke%2A> Methode. In der Regel die überschriebene Konstruktor legt die <xref:System.Web.Services.Protocols.WebClientProtocol.Url%2A> Eigenschaft, um den URI des XML-Webdienstmethode.  
+  
+ Das Web Services Description Language Tool (Wsdl.exe) wird von abgeleitete Klassen generiert <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol> für eine bestimmte Dienstbeschreibung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Proxyklasse, die von für Wsdl.exe generiert die `Math` XML-Webdienst, die weiter unten. Die Proxy-Klasse abgeleitet <xref:System.Web.Services.Protocols.HttpGetClientProtocol>, der von der abstrakten abgeleitet <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol> Klasse.  
+  
+ [!code-cpp[Classic HttpGetClientProtocol Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic HttpGetClientProtocol Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic HttpGetClientProtocol Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic HttpGetClientProtocol Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpGetClientProtocol Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic HttpGetClientProtocol Example/VB/source.vb#1)]  
+  
+ Im folgenden Codebeispiel wird die `Math` XML-Webdienst, von dem die vorherige Proxyklasse erstellt wurde.  
+  
+ [!code-cpp[Classic HttpSimpleClientProtocol Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic HttpSimpleClientProtocol Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpSimpleClientProtocol Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpSimpleClientProtocol ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HttpSimpleClientProtocol.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.HttpSimpleClientProtocol" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="protected IAsyncResult BeginInvoke (string methodName, string requestUrl, object[] parameters, AsyncCallback callback, object asyncState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IAsyncResult BeginInvoke(string methodName, string requestUrl, object[] parameters, class System.AsyncCallback callback, object asyncState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HttpSimpleClientProtocol.BeginInvoke(System.String,System.String,System.Object[],System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="requestUrl" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="asyncState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">Der Name der XML-Webdienstmethode.</param>
+        <param name="requestUrl">Die URL, verwenden Sie beim Erstellen der <see cref="T:System.Net.WebRequest" />.</param>
+        <param name="parameters">Ein Array von Objekten, die mit den Parametern, die an die XML-Webdienstmethode übergeben. Die Reihenfolge der Werte im Array entspricht der Reihenfolge der Parameter in der aufrufenden Methode der abgeleiteten Klasse.</param>
+        <param name="callback">Der Delegat, der beim Abschluss des asynchronen Methodenaufrufs aufgerufen werden soll. Wenn <c>Rückruf</c> ist <see langword="null" />, der Delegat wird nicht aufgerufen.</param>
+        <param name="asyncState">Die zusätzlichen Informationen, die von einem Client bereitgestellt wird.</param>
+        <summary>Startet einen asynchronen Aufruf einer Methode eines XML-Webdiensts.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" /> , die übergeben werden kann, um die <see cref="M:System.Web.Services.Protocols.HttpSimpleClientProtocol.EndInvoke(System.IAsyncResult)" /> Methode, um die Rückgabewerte aus der XML-Webdienstmethode abzurufen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `methodName` Parameter wird verwendet, um die Typen der Parameter und Rückgabewerte der Methode, die aufgerufen wird, wird die <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol.BeginInvoke%2A> Methode. Es wird auch verwendet, um benutzerdefinierte Attribute zu suchen, die an die Methode hinzugefügt wurden. <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>, <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute>, und <xref:System.Xml.Serialization.XmlElementAttribute> enthalten zusätzliche Informationen zu der abgeleiteten Methode, die für das HTTP-Protokoll erforderlich ist.  
+  
+ `asyncState`wird in übergeben `callback` und in der <xref:System.IAsyncResult> zurückgegeben wird, aus der <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol.BeginInvoke%2A> Methode. Es eignet sich für die Weitergabe von Informationen aus dem Kontext des asynchronen Aufrufs zur Behandlung des asynchronen Ergebnisses in `callback`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein ASP.NET Web Form, der aufgerufen wird, einen XML-Webdienst, der mit dem Namen `Math`. Innerhalb der `EnterBtn_Click` -Funktion, das Web Form beginnt und endet, einen asynchronen Aufruf der `Add` XML-Webdienstmethode.  
+  
+ [!code-aspx-csharp[Classic HttpSimpleClientProtocol.EndInvoke Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol.EndInvoke Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HttpSimpleClientProtocol.EndInvoke Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol.EndInvoke Example/VB/sourcevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird eine Proxyklasse, die von der Web Services Description Language Tool (Wsdl.exe) generiert wird, für die `Math` XML-Webdienst, die weiter unten. Innerhalb der `BeginAdd` Methode der Proxyklasse, die <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.BeginInvoke%2A> Methode startet einen asynchronen Aufruf der `Add` XML-Webdienstmethode.  
+  
+ [!code-cpp[Classic HttpSimpleClientProtocol.EndInvoke Example#2](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol.EndInvoke Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic HttpSimpleClientProtocol.EndInvoke Example#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol.EndInvoke Example/CS/source.cs#2)]
+ [!code-vb[Classic HttpSimpleClientProtocol.EndInvoke Example#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol.EndInvoke Example/VB/source.vb#2)]  
+  
+ Im folgenden Codebeispiel wird die `Math` XML-Webdienst, von dem die vorherige Proxyklasse erstellt wurde.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Die Anforderung den Server-Computer erreicht, aber nicht erfolgreich verarbeitet wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInvoke">
+      <MemberSignature Language="C#" Value="protected object EndInvoke (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object EndInvoke(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HttpSimpleClientProtocol.EndInvoke(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Das von der <see cref="T:System.IAsyncResult" />-Methode zurückgegebene <see cref="M:System.Web.Services.Protocols.HttpSimpleClientProtocol.BeginInvoke(System.String,System.String,System.Object[],System.AsyncCallback,System.Object)" />.</param>
+        <summary>Schließt den asynchronen Aufruf, der eine XML-Webdienstmethode über HTTP.</summary>
+        <returns>Ein Array von Objekten, die den Rückgabewert und eine als Verweis oder <paramref name="out" /> Parameter für die XML-Web-service-Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein ASP.NET Web Form, der aufgerufen wird, einen XML-Webdienst, der mit dem Namen `Math`. Innerhalb der `EnterBtn_Click` -Funktion, das Web Form beginnt und endet, einen asynchronen Aufruf der `Add` XML-Webdienstmethode.  
+  
+ [!code-aspx-csharp[Classic HttpSimpleClientProtocol.EndInvoke Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol.EndInvoke Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HttpSimpleClientProtocol.EndInvoke Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol.EndInvoke Example/VB/sourcevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird eine Proxyklasse, die von der Web Services Description Language Tool (Wsdl.exe) generiert wird, für die `Math` XML-Webdienst, die weiter unten. Innerhalb der `EndAdd` Methode der Proxyklasse, die <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.EndInvoke%2A> Methode startet einen asynchronen Aufruf der `Add` XML-Webdienstmethode.  
+  
+ [!code-cpp[Classic HttpSimpleClientProtocol.EndInvoke Example#2](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol.EndInvoke Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic HttpSimpleClientProtocol.EndInvoke Example#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol.EndInvoke Example/CS/source.cs#2)]
+ [!code-vb[Classic HttpSimpleClientProtocol.EndInvoke Example#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic HttpSimpleClientProtocol.EndInvoke Example/VB/source.vb#2)]  
+  
+ Im folgenden Codebeispiel wird die `Math` XML-Webdienst, von dem die oben stehende Proxyklasse erstellt wurde.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="asyncResult" />der Rückgabewert ist der <see cref="M:System.Web.Services.Protocols.HttpSimpleClientProtocol.BeginInvoke(System.String,System.String,System.Object[],System.AsyncCallback,System.Object)" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="protected object Invoke (string methodName, string requestUrl, object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object Invoke(string methodName, string requestUrl, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HttpSimpleClientProtocol.Invoke(System.String,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="requestUrl" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">Der Name der XML-Webdienstmethode in der abgeleiteten Klasse, die aufgerufen wird, wird die <see cref="M:System.Web.Services.Protocols.HttpSimpleClientProtocol.Invoke(System.String,System.String,System.Object[])" /> Methode.</param>
+        <param name="requestUrl">Die URL der XML-Webdienstmethode, die die vom Client angefordert wird.</param>
+        <param name="parameters">Ein Array von Objekten, die an den Remotedienst XML-Webdiensts zu übergebenden Parameter. Die Reihenfolge der Werte im Array entspricht der Reihenfolge der Parameter in der aufrufenden Methode der abgeleiteten Klasse.</param>
+        <summary>Ruft eine XML-Webdienstmethode über HTTP.</summary>
+        <returns>Ein Array von Objekten, die den Rückgabewert und alle per-Verweis oder <paramref name="out" /> Parameter der Methode der abgeleiteten Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `methodName` Parameter wird verwendet, um die Typen der Parameter und Rückgabewerte der Methode, die aufgerufen wird, wird die <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol.Invoke%2A> Methode. Es wird auch verwendet, um die benutzerdefinierten Attribute gefunden werden, die an die Methode hinzugefügt wurden. <xref:System.Web.Services.Protocols.HttpMethodAttribute>und <xref:System.Xml.Serialization.XmlElementAttribute> enthalten zusätzliche Informationen zu der abgeleiteten Methode, die für das SOAP-Protokoll erforderlich ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein ASP.NET Web Form, der aufgerufen wird, einen XML-Webdienst, der mit dem Namen `Math`. Innerhalb der `EnterBtn_Click` -Funktion, ruft das Web Form synchron der `Add` XML-Webdienstmethode.  
+  
+ [!code-csharp[HttpSimpleClientProtocol.Invoke Example#2](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpSimpleClientProtocol.Invoke Example/CS/sourcecs.aspx#2)]
+ [!code-vb[HttpSimpleClientProtocol.Invoke Example#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpSimpleClientProtocol.Invoke Example/VB/sourcevb.aspx#2)]  
+  
+ Im folgenden Codebeispiel wird eine Proxyklasse, die von der Web Services Description Language Tool (Wsdl.exe) generiert wird, für die `Math` XML-Webdienst, die weiter unten. Innerhalb der `Add` Methode der Proxyklasse, die <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol.Invoke%2A> synchron Methode ruft die `Add` Webdienstmethode.  
+  
+ [!code-cpp[HttpSimpleClientProtocol.Invoke Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/HttpSimpleClientProtocol.Invoke Example/CPP/source.cpp#1)]
+ [!code-csharp[HttpSimpleClientProtocol.Invoke Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpSimpleClientProtocol.Invoke Example/CS/source.cs#1)]
+ [!code-vb[HttpSimpleClientProtocol.Invoke Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpSimpleClientProtocol.Invoke Example/VB/source.vb#1)]  
+  
+ Im folgenden Codebeispiel wird die `Math` XML-Webdienst, von dem die oben stehende Proxyklasse erstellt wurde.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Die Anforderung den Server-Computer erreicht, aber nicht erfolgreich verarbeitet wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="protected void InvokeAsync (string methodName, string requestUrl, object[] parameters, System.Threading.SendOrPostCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InvokeAsync(string methodName, string requestUrl, object[] parameters, class System.Threading.SendOrPostCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HttpSimpleClientProtocol.InvokeAsync(System.String,System.String,System.Object[],System.Threading.SendOrPostCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="requestUrl" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="callback" Type="System.Threading.SendOrPostCallback" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">Der Name der aufzurufenden Methode.</param>
+        <param name="requestUrl">Der Anforderungs-URL des aufgerufenen Webdiensts.</param>
+        <param name="parameters">Die an die Methode zu übergebenden Parameter.</param>
+        <param name="callback">Der Delegat wird aufgerufen, wenn der Aufruf abgeschlossen wurde.</param>
+        <summary>Ruft die angegebene Methode asynchron auf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="protected void InvokeAsync (string methodName, string requestUrl, object[] parameters, System.Threading.SendOrPostCallback callback, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InvokeAsync(string methodName, string requestUrl, object[] parameters, class System.Threading.SendOrPostCallback callback, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HttpSimpleClientProtocol.InvokeAsync(System.String,System.String,System.Object[],System.Threading.SendOrPostCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="requestUrl" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="callback" Type="System.Threading.SendOrPostCallback" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">Der Name der aufzurufenden Methode.</param>
+        <param name="requestUrl">Der Anforderungs-URL des aufgerufenen Webdiensts.</param>
+        <param name="parameters">Die an die Methode zu übergebenden Parameter.</param>
+        <param name="callback">Der Delegat wird aufgerufen, wenn der Aufruf abgeschlossen wurde.</param>
+        <param name="userState">Ein Objekt mit zugeordneten Zustandsinformationen, die an die <c>Rückruf</c> delegieren, wenn die Methode abgeschlossen wurde.</param>
+        <summary>Ruft die angegebene Methode asynchron und gleichzeitig einen zugeordneten Zustand auf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,97 @@
+<Type Name="LineBreakCondition" FullName="System.Windows.LineBreakCondition">
+  <TypeSignature Language="C#" Value="public enum LineBreakCondition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LineBreakCondition extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.LineBreakCondition" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt wichtige-Bedingung, um ein eingebettetes Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration beschreibt, ob eine Unterbrechung für eingebettetes Objekt zulässig ist. Dieser Umbruch hat Auswirkungen auf die <xref:System.Windows.LineBreakCondition> des Inlineobjekts, bevor sie (sofern vorhanden). In der folgenden Tabelle die Werte am oberen darstellen <xref:System.Windows.LineBreakCondition> Werte für einen Inline-Objekt, während die Werte auf der linken Seite Werte für ein anderes eingebettetes Objekt darstellen. Der Wert "True" oder "False" wird angegeben, je nachdem, ob ein Zeilenumbruch zwischen den beiden Inlineobjekten zulässig ist.  
+  
+||||||  
+|-|-|-|-|-|  
+||BreakDesired|BreakPossible|BreakRestrained|BreakAlways|  
+|BreakDesired|True|True|False|True|  
+|BreakPossible|True|False|False|True|  
+|BreakRestrained|False|False|False|True|  
+|BreakAlways|True|True|True|True|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BreakAlways">
+      <MemberSignature Language="C#" Value="BreakAlways" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LineBreakCondition BreakAlways = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LineBreakCondition.BreakAlways" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineBreakCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Break ist immer zugelassen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakDesired">
+      <MemberSignature Language="C#" Value="BreakDesired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LineBreakCondition BreakDesired = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LineBreakCondition.BreakDesired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineBreakCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Unterbrechen Sie, wenn das nicht von einem anderen Objekt nicht zulässig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakPossible">
+      <MemberSignature Language="C#" Value="BreakPossible" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LineBreakCondition BreakPossible = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LineBreakCondition.BreakPossible" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineBreakCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Unterbrechen Sie, wenn von einem anderen Objekt zulässig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakRestrained">
+      <MemberSignature Language="C#" Value="BreakRestrained" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.LineBreakCondition BreakRestrained = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.LineBreakCondition.BreakRestrained" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineBreakCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Umbruch immer unzulässig, es sei denn, das andere Objekt, um festgelegt ist <see cref="F:System.Windows.LineBreakCondition.BreakAlways" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

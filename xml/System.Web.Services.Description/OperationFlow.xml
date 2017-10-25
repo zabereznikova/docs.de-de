@@ -1,0 +1,120 @@
+<Type Name="OperationFlow" FullName="System.Web.Services.Description.OperationFlow">
+  <TypeSignature Language="C#" Value="public enum OperationFlow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OperationFlow extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.OperationFlow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ der Übertragung, die ein Endpunkt des XML-Webdiensts unterstützen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl Anforderung / Antwort- oder "Antwort Anfragen"-Vorgänge in der Web Services Description Language (WSDL) Dokument logisch korreliert werden, wird die konkreten Korrelationsinformationen durch eine Bindung angegeben werden. Beispielsweise können die Anforderung und Antwort-Nachrichten im Rahmen des tatsächlichen ein oder zwei HTTP-Übertragungen ausgetauscht werden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht die Verwendung von der `OperationFlow` Enumeration.  
+  
+ [!code-cpp[OperationFlow_Enum#1](~/samples/snippets/cpp/VS_Snippets_Remoting/OperationFlow_Enum/CPP/operationflow_enum.cpp#1)]
+ [!code-csharp[OperationFlow_Enum#1](~/samples/snippets/csharp/VS_Snippets_Remoting/OperationFlow_Enum/CS/operationflow_enum.cs#1)]
+ [!code-vb[OperationFlow_Enum#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/OperationFlow_Enum/VB/operationflow_enum.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Description.OperationFlow None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Description.OperationFlow.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OperationFlow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Endpunkt des XML-Webdiensts keine Übertragungen empfängt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Notification">
+      <MemberSignature Language="C#" Value="Notification" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Description.OperationFlow Notification = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Description.OperationFlow.Notification" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OperationFlow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der den XML-Webdienst-Endpunkt eine Nachricht sendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OneWay">
+      <MemberSignature Language="C#" Value="OneWay" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Description.OperationFlow OneWay = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Description.OperationFlow.OneWay" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OperationFlow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Endpunkt des XML-Webdiensts eine Nachricht empfängt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestResponse">
+      <MemberSignature Language="C#" Value="RequestResponse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Description.OperationFlow RequestResponse = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Description.OperationFlow.RequestResponse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OperationFlow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Endpunkt des XML-Webdiensts eine Nachricht empfängt und eine korrelierte Meldung sendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SolicitResponse">
+      <MemberSignature Language="C#" Value="SolicitResponse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Description.OperationFlow SolicitResponse = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Description.OperationFlow.SolicitResponse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OperationFlow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Endpunkt des der XML-Webdienst eine Nachricht sendet, und klicken Sie dann eine korrelierte Nachricht empfängt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

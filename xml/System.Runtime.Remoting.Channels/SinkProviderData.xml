@@ -1,0 +1,114 @@
+<Type Name="SinkProviderData" FullName="System.Runtime.Remoting.Channels.SinkProviderData">
+  <TypeSignature Language="C#" Value="public class SinkProviderData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SinkProviderData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.SinkProviderData" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Speichert sink Anbieterdaten für Senkenanbieter.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anbieterdaten der Senke ist eine Baumstruktur der Konfigurationsinformationen gespeichert, der [ \<Provider >-Element (Vorlage)](http://msdn.microsoft.com/en-us/d3e67e16-8ca3-4b7f-b7a4-37e3e1a66364) Konfiguration Knoten. Alle Senkenanbieter müssen einen Konstruktor, der akzeptiert haben eine <xref:System.Collections.IDictionary> von Eigenschaften und eine <xref:System.Collections.ICollection> dieser Strukturen, die aus einer Konfigurationsdatei verwendet werden sollen.  
+  
+   
+  
+## Examples  
+ [!code-csharp[SinkProviderData#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SinkProviderData/CS/sinkproviderdata_ipfiltersink.cs#1)]
+ [!code-vb[SinkProviderData#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SinkProviderData/VB/sinkproviderdata_ipfiltersink.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SinkProviderData (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.SinkProviderData.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Senkenanbieters, die die Daten in der aktuellen <see cref="T:System.Runtime.Remoting.Channels.SinkProviderData" /> Objekt zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Channels.SinkProviderData" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Collections.IList Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList Children" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.SinkProviderData.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der untergeordneten <see cref="T:System.Runtime.Remoting.Channels.SinkProviderData" /> Knoten.</summary>
+        <value>Ein <see cref="T:System.Collections.IList" /> des untergeordneten Elements <see cref="T:System.Runtime.Remoting.Channels.SinkProviderData" /> Knoten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.SinkProviderData.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Senkenanbieters ab, die die Daten in der aktuellen <see cref="T:System.Runtime.Remoting.Channels.SinkProviderData" /> Objekt zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.String" /> durch den Namen der XML-Knoten, die die Daten in der aktuellen <see cref="T:System.Runtime.Remoting.Channels.SinkProviderData" /> Objekt zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.SinkProviderData.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch, das über die Eigenschaften für die Senke Anbieter zugegriffen werden kann.</summary>
+        <value>Ein Wörterbuch, das über die Eigenschaften für die Senke Anbieter zugegriffen werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

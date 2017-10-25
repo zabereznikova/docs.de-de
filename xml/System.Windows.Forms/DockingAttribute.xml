@@ -1,0 +1,161 @@
+<Type Name="DockingAttribute" FullName="System.Windows.Forms.DockingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DockingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DockingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DockingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die standardmäßige Andockverhalten für ein Steuerelement an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können neue Steuerelemente erstellen, in Windows Forms entweder aus einem vorhandenen Steuerelement oder abgeleitete <xref:System.Windows.Forms.UserControl>. Verwenden Sie dieses Attribut auf neue Steuerelemente um zu beschreiben, wie das Steuerelement standardmäßig bei Platzierung in einem Formular angedockt werden sollen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DockingAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DockingAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DockingAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DockingAttribute (System.Windows.Forms.DockingBehavior dockingBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.DockingBehavior dockingBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DockingAttribute.#ctor(System.Windows.Forms.DockingBehavior)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dockingBehavior" Type="System.Windows.Forms.DockingBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="dockingBehavior">Ein <see cref="T:System.Windows.Forms.DockingBehavior" /> Wert, der das Standardverhalten angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DockingAttribute" /> Klasse mit dem angegebenen Andockverhalten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Forms.DockingAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Forms.DockingAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockingAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockingAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Standardeinstellung <see cref="T:System.Windows.Forms.DockingAttribute" /> für dieses Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockingBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DockingBehavior DockingBehavior { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DockingBehavior DockingBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DockingAttribute.DockingBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockingBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Andockverhalten dieses Attribut ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DockingBehavior" />-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DockingAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Object" /> mit dem verglichen werden soll dies <see cref="T:System.Windows.Forms.DockingAttribute" />.</param>
+        <summary>Vergleicht ein beliebiges Objekt mit dem <see cref="T:System.Windows.Forms.DockingAttribute" /> Objekt auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />ist <paramref name="obj" /> gleich diesem <see cref="T:System.Windows.Forms.DockingAttribute" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DockingAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Der Hashcode für dieses Objekt.</summary>
+        <returns>Ein <see cref="T:System.Int32" />, der einen Speicherhash dieses Objekts darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DockingAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob dies <see cref="T:System.Windows.Forms.DockingAttribute" /> ist das Standardattribut andocken.</summary>
+        <returns>
+          <see langword="true" />der aktuelle <see cref="T:System.Windows.Forms.DockingAttribute" /> ist die Standardeinstellung ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

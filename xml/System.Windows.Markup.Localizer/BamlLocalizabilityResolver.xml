@@ -1,0 +1,158 @@
+<Type Name="BamlLocalizabilityResolver" FullName="System.Windows.Markup.Localizer.BamlLocalizabilityResolver">
+  <TypeSignature Language="C#" Value="public abstract class BamlLocalizabilityResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BamlLocalizabilityResolver extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Localizer.BamlLocalizabilityResolver" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Löst lokalisierbare Einstellungen für Klassen und Eigenschaften in binäre XAML (BAML).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.Localizer.BamlLocalizabilityResolver>wird verwendet, durch die <xref:System.Windows.Markup.Localizer.BamlLocalizer> zum Auflösen der Lokalisierbarkeitseinstellungen für Klassen und Eigenschaften im [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)]. Der Konfliktlöser aufgerufen wird, sowohl beim Extrahieren der Ressource sowie lokalisiert [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] wird aktualisiert.  
+  
+ Zum Zeitpunkt der Ressource extrahieren (<xref:System.Windows.Markup.Localizer.BamlLocalizer.ExtractResources%2A>), die Auflösung:  
+  
+-   Bietet <xref:System.Windows.LocalizabilityAttribute> für Klassen und Eigenschaften im [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] bei der <xref:System.Windows.Markup.Localizer.BamlLocalizer> lokalisierbare Ressourcen besteht darin zu konstruieren.  
+  
+-   Stellt die Formatierung Voreinstellungen für Elemente in [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] daher Elemente als Inline-Tags formatiert sind.  
+  
+ Zeit, zu der lokalisiert at [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] aktualisiert wird (<xref:System.Windows.Markup.Localizer.BamlLocalizer.UpdateBaml%2A>), der Konfliktlöser:  
+  
+-   Löst Formatierungstags wieder in Klassen.  
+  
+-   Löst den Namen der Assembly, die Definition der Klasse enthält.  
+  
+-   <xref:System.Windows.Markup.Localizer.BamlLocalizabilityResolver>ist eine interne Klasse, die die praktischen Aspekte der Klassenfunktionen für führt Klassenfunktionen <xref:System.Windows.Markup.Localizer.BamlLocalizer>.  
+  
+<a name="xamlTextUsage_BamlLocalizabilityResolver"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BamlLocalizabilityResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizabilityResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.Localizer.BamlLocalizabilityResolver" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementLocalizability">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Markup.Localizer.ElementLocalizability GetElementLocalizability (string assembly, string className);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Markup.Localizer.ElementLocalizability GetElementLocalizability(string assembly, string className) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizabilityResolver.GetElementLocalizability(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Localizer.ElementLocalizability</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.String" />
+        <Parameter Name="className" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">Der vollständige Name der Assembly, die enthält [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] lokalisiert werden soll.</param>
+        <param name="className">Der vollständige Klassenname des Elements, das Sie Lokalisierbarkeitsinformationen abrufen möchten.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein festgelegter Typ eines Elements lokalisiert werden kann, und wenn dies der Fall ist, gibt an, ob es Inline formatiert werden kann.</summary>
+        <returns>Ein Objekt, das der Lokalisierbarkeitsinformationen für die angegebene Assembly und ein Element enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyLocalizability">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.LocalizabilityAttribute GetPropertyLocalizability (string assembly, string className, string property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.LocalizabilityAttribute GetPropertyLocalizability(string assembly, string className, string property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizabilityResolver.GetPropertyLocalizability(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizabilityAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.String" />
+        <Parameter Name="className" Type="System.String" />
+        <Parameter Name="property" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">Der vollständige Name der Assembly, die enthält [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] lokalisiert werden soll.</param>
+        <param name="className">Der vollständige Klassenname des Elements, das Sie Lokalisierbarkeitsinformationen abrufen möchten.</param>
+        <param name="property">Der Name der Eigenschaft, der Sie Lokalisierbarkeitsinformationen abrufen möchten.</param>
+        <summary>Gibt einen Wert, der angibt, ob eine angegebene Eigenschaft des Elements eines angegebenen Typs lokalisiert werden kann.</summary>
+        <returns>Ein Objekt, das angibt, ob und wie die Eigenschaft lokalisiert werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveAssemblyFromClass">
+      <MemberSignature Language="C#" Value="public abstract string ResolveAssemblyFromClass (string className);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ResolveAssemblyFromClass(string className) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizabilityResolver.ResolveAssemblyFromClass(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="className" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="className">Der vollständige Klassenname.</param>
+        <summary>Gibt den vollständigen Namen der Assembly, die die angegebene Klasse enthält.</summary>
+        <returns>Der vollständige Name der Assembly, die die Klasse enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveFormattingTagToClass">
+      <MemberSignature Language="C#" Value="public abstract string ResolveFormattingTagToClass (string formattingTag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ResolveFormattingTagToClass(string formattingTag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizabilityResolver.ResolveFormattingTagToClass(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formattingTag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formattingTag">Der Name des Tags.</param>
+        <summary>Gibt den vollständigen Klassennamen des eine [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Tag, die nicht im aufgetreten [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)].</summary>
+        <returns>Der vollständige Klassenname, der das Tag zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn eine <xref:System.Windows.Markup.Localizer.BamlLocalizer> oder ein entsprechendes Ersetzungen auf lokalisierbaren Ressourcen anwendet. Wenn ein Formatierung Tag in die substitutionen gefunden wird, wird diese Methode aufgerufen, um die Formatierung Tag wieder in einen Klassennamen aufgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

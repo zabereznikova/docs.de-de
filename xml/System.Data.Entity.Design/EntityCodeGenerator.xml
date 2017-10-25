@@ -1,0 +1,281 @@
+<Type Name="EntityCodeGenerator" FullName="System.Data.Entity.Design.EntityCodeGenerator">
+  <TypeSignature Language="C#" Value="public class EntityCodeGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityCodeGenerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Entity.Design.EntityCodeGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Generiert Kontext und Entität Objektklassen (Objektebenencode) aus konzeptionelle Schemadefinitionssprache (CSDL) Definitionsdateien. Ab Entity Framework, Version 4, eine ObjectContext-Klasse für ein bestimmtes Modell enthält Eigenschaften des Typs <see cref="T:System.Data.Objects.ObjectSet`1" /> , die das Modell Entitätenmengen darstellen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityCodeGenerator (System.Data.Entity.Design.LanguageOption languageOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Data.Entity.Design.LanguageOption languageOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityCodeGenerator.#ctor(System.Data.Entity.Design.LanguageOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="languageOption" Type="System.Data.Entity.Design.LanguageOption" />
+      </Parameters>
+      <Docs>
+        <param name="languageOption">Die Sprache des generierten Codes.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.Entity.Design.EntityCodeGenerator" /> Klasse mit der angegebenen Sprache-Option.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EdmToObjectNamespaceMap">
+      <MemberSignature Language="C#" Value="public System.Data.Entity.Design.EdmToObjectNamespaceMap EdmToObjectNamespaceMap { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Entity.Design.EdmToObjectNamespaceMap EdmToObjectNamespaceMap" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Entity.Design.EntityCodeGenerator.EdmToObjectNamespaceMap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Entity.Design.EdmToObjectNamespaceMap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Data.Entity.Design.EdmToObjectNamespaceMap" /> , die konzeptionelle Schemadefinitionssprache (CSDL) zum Codieren von Namespacezuordnungen enthält.</summary>
+        <value>Die CSDL für Code Namespacezuordnungen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode (string sourceEdmSchemaFilePath, string targetPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode(string sourceEdmSchemaFilePath, string targetPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityCodeGenerator.GenerateCode(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceEdmSchemaFilePath" Type="System.String" />
+        <Parameter Name="targetPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceEdmSchemaFilePath">Der Pfad der CSDL-Datei.</param>
+        <param name="targetPath">Der Pfad der Datei, die die generierten Objektebenencode enthält.</param>
+        <summary>Erstellt eine Quellcodedatei, die die aus der angegebenen konzeptionellen Schema Definition Language (CSDL) Datei generierten Objektebenencode enthält.</summary>
+        <returns>Eine Liste der <see cref="T:System.Data.Metadata.Edm.EdmSchemaError" /> Objekten, das eine enthält den Fehler generiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode (System.Xml.XmlReader sourceEdmSchema, System.IO.TextWriter target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode(class System.Xml.XmlReader sourceEdmSchema, class System.IO.TextWriter target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityCodeGenerator.GenerateCode(System.Xml.XmlReader,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceEdmSchema" Type="System.Xml.XmlReader" />
+        <Parameter Name="target" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="sourceEdmSchema">Ein <see cref="T:System.Xml.XmlReader" /> , der den CSDL-Daten enthält.</param>
+        <param name="target">Die <see cref="T:System.IO.TextWriter" /> in den der Objektebenencode geschrieben wird.</param>
+        <summary>Mithilfe der konzeptionellen Schemadefinitionssprache (CSDL) im angegebenen Objektebenencode generiert die <see cref="T:System.Xml.XmlReader" /> Objekt und gibt den generierten Code an eine <see cref="T:System.IO.TextWriter" />.</summary>
+        <returns>Eine Liste der <see cref="T:System.Data.Metadata.Edm.EdmSchemaError" /> Objekten, das eine enthält den Fehler generiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode (string sourceEdmSchemaFilePath, string targetPath, System.Collections.Generic.IEnumerable&lt;string&gt; additionalEdmSchemaFilePaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode(string sourceEdmSchemaFilePath, string targetPath, class System.Collections.Generic.IEnumerable`1&lt;string&gt; additionalEdmSchemaFilePaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityCodeGenerator.GenerateCode(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceEdmSchemaFilePath" Type="System.String" />
+        <Parameter Name="targetPath" Type="System.String" />
+        <Parameter Name="additionalEdmSchemaFilePaths" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="sourceEdmSchemaFilePath">Der Pfad der CSDL-Datei.</param>
+        <param name="targetPath">Der Pfad der Datei, die die generierten Objektebenencode enthält.</param>
+        <param name="additionalEdmSchemaFilePaths">Eine Liste von Schemadateipfaden, die zur Auflösung von Verweisen im Quellschema (der CSDL-Datei) verwendet werden können. Wenn das Quellschema keine Abhängigkeiten enthält, übergeben Sie eine leere Liste.</param>
+        <summary>Erstellt eine Quellcodedatei, die aus der angegebenen konzeptionellen Schema Definition Language (CSDL) Datei generierten Objektebenencode enthält. Die Liste von Schemadateipfaden wird verwendet, um in der CSDL-Datei enthaltene Verweise aufzulösen.</summary>
+        <returns>Eine Liste der <see cref="T:System.Data.Metadata.Edm.EdmSchemaError" /> Objekten, das eine enthält den Fehler generiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode (string sourceEdmSchemaFilePath, string targetPath, Version targetEntityFrameworkVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode(string sourceEdmSchemaFilePath, string targetPath, class System.Version targetEntityFrameworkVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityCodeGenerator.GenerateCode(System.String,System.String,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceEdmSchemaFilePath" Type="System.String" />
+        <Parameter Name="targetPath" Type="System.String" />
+        <Parameter Name="targetEntityFrameworkVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="sourceEdmSchemaFilePath">Der Pfad der CSDL-Datei.</param>
+        <param name="targetPath">Der Pfad der Datei, die die generierten Objektebenencode enthält.</param>
+        <param name="targetEntityFrameworkVersion">Die interne Entity Framework-Version, die vorgesehen ist.</param>
+        <summary>Erstellt eine Quellcodedatei, die die aus der angegebenen konzeptionellen Schema Definition Language (CSDL) Datei generierten Objektebenencode enthält. Beachten Sie, dass der Parameter TargetEntityFrameworkVersion interne Entity Framework-Versionsnummern verwendet, wie in beschrieben die <see cref="T:System.Data.Entity.Design.EntityFrameworkVersions" /> Klasse.</summary>
+        <returns>Eine Liste der <see cref="T:System.Data.Metadata.Edm.EdmSchemaError" /> Objekten, das eine enthält den Fehler generiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode (System.Xml.XmlReader sourceEdmSchema, System.IO.TextWriter target, System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt; additionalEdmSchemas);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode(class System.Xml.XmlReader sourceEdmSchema, class System.IO.TextWriter target, class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.XmlReader&gt; additionalEdmSchemas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityCodeGenerator.GenerateCode(System.Xml.XmlReader,System.IO.TextWriter,System.Collections.Generic.IEnumerable{System.Xml.XmlReader})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceEdmSchema" Type="System.Xml.XmlReader" />
+        <Parameter Name="target" Type="System.IO.TextWriter" />
+        <Parameter Name="additionalEdmSchemas" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="sourceEdmSchema">Ein <see cref="T:System.Xml.XmlReader" /> , der den CSDL-Daten enthält.</param>
+        <param name="target">Die <see cref="T:System.IO.TextWriter" /> der generierten Objektebenencode ausgegeben.</param>
+        <param name="additionalEdmSchemas">Eine Liste der <see cref="T:System.Xml.XmlReader" /> Objekte, die Schemas enthalten, die vom Quellschema (der CSDL) verwiesen wird. Wenn das Quellschema keine Abhängigkeiten enthält, übergeben Sie eine leere Liste.</param>
+        <summary>Basierend auf der konzeptionellen Schemadefinitionssprache (CSDL) im angegebenen Objektebenencode generiert die <see cref="T:System.Xml.XmlReader" /> -Objekt und gibt den generierten Code an eine <see cref="T:System.IO.TextWriter" />. Eine Liste der <see cref="T:System.Xml.XmlReader" /> Objekte wird verwendet, um Verweise aufzulösen, die in der CSDL enthalten sind.</summary>
+        <returns>Eine Liste der <see cref="T:System.Data.Metadata.Edm.EdmSchemaError" /> Objekten, das eine enthält den Fehler generiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode (System.Xml.XmlReader sourceEdmSchema, System.IO.TextWriter target, Version targetEntityFrameworkVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode(class System.Xml.XmlReader sourceEdmSchema, class System.IO.TextWriter target, class System.Version targetEntityFrameworkVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityCodeGenerator.GenerateCode(System.Xml.XmlReader,System.IO.TextWriter,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceEdmSchema" Type="System.Xml.XmlReader" />
+        <Parameter Name="target" Type="System.IO.TextWriter" />
+        <Parameter Name="targetEntityFrameworkVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="sourceEdmSchema">Ein XmlReader, der den CSDL-Daten enthält.</param>
+        <param name="target">Der TextWriter, den in der Objektebenencode geschrieben wird.</param>
+        <param name="targetEntityFrameworkVersion">Die interne Entity Framework-Version, die vorgesehen ist.</param>
+        <summary>Generiert von Objektebenencode mit der konzeptionellen Schemadefinitionssprache (CSDL) in das XmlReader-Objekt angegeben und gibt den generierten Code an einen TextWriter aus. Beachten Sie, dass der TargetEntityFrameworkVersion Parameter interne EntityFramework Versionsnummern verwendet, wie beschrieben in der <see cref="T:System.Data.Entity.Design.EntityFrameworkVersions" /> Klasse.</summary>
+        <returns>Eine Liste der <see cref="T:System.Data.Metadata.Edm.EdmSchemaError" /> Objekten, das eine enthält den Fehler generiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode (string sourceEdmSchemaFilePath, string targetPath, System.Collections.Generic.IEnumerable&lt;string&gt; additionalEdmSchemaFilePaths, Version targetEntityFrameworkVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode(string sourceEdmSchemaFilePath, string targetPath, class System.Collections.Generic.IEnumerable`1&lt;string&gt; additionalEdmSchemaFilePaths, class System.Version targetEntityFrameworkVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityCodeGenerator.GenerateCode(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceEdmSchemaFilePath" Type="System.String" />
+        <Parameter Name="targetPath" Type="System.String" />
+        <Parameter Name="additionalEdmSchemaFilePaths" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="targetEntityFrameworkVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="sourceEdmSchemaFilePath">Der Pfad der CSDL-Datei.</param>
+        <param name="targetPath">Der Pfad der Datei, die die generierten Objektebenencode enthält.</param>
+        <param name="additionalEdmSchemaFilePaths">Eine Liste von Schemadateipfaden, die zur Auflösung von Verweisen im Quellschema (der CSDL-Datei) verwendet werden können. Wenn das Quellschema keine Abhängigkeiten enthält, übergeben Sie eine leere Liste.</param>
+        <param name="targetEntityFrameworkVersion">Die interne Entity Framework-Version, die vorgesehen ist.</param>
+        <summary>Erstellt eine Quellcodedatei, die aus der angegebenen konzeptionellen Schema Definition Language (CSDL) Datei generierten Objektebenencode enthält. Die Liste von Schemadateipfaden wird verwendet, um in der CSDL-Datei enthaltene Verweise aufzulösen. Beachten Sie, dass der TargetEntityFrameworkVersion Parameter interne EntityFramework Versionsnummern verwendet, wie beschrieben in der <see cref="T:System.Data.Entity.Design.EntityFrameworkVersions" /> Klasse.</summary>
+        <returns>Eine Liste der <see cref="T:System.Data.Metadata.Edm.EdmSchemaError" /> Objekten, das eine enthält den Fehler generiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode (System.Xml.XmlReader sourceEdmSchema, System.IO.TextWriter target, System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt; additionalEdmSchemas, Version targetEntityFrameworkVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateCode(class System.Xml.XmlReader sourceEdmSchema, class System.IO.TextWriter target, class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.XmlReader&gt; additionalEdmSchemas, class System.Version targetEntityFrameworkVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityCodeGenerator.GenerateCode(System.Xml.XmlReader,System.IO.TextWriter,System.Collections.Generic.IEnumerable{System.Xml.XmlReader},System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceEdmSchema" Type="System.Xml.XmlReader" />
+        <Parameter Name="target" Type="System.IO.TextWriter" />
+        <Parameter Name="additionalEdmSchemas" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt;" />
+        <Parameter Name="targetEntityFrameworkVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="sourceEdmSchema">Ein XmlReader, der den CSDL-Daten enthält.</param>
+        <param name="target">Der TextWriter, den in der Objektebenencode geschrieben wird.</param>
+        <param name="additionalEdmSchemas">Eine Liste der XmlReader-Objekten, die Schemas enthalten, die vom Quellschema (der CSDL) verwiesen wird. Wenn das Quellschema keine Abhängigkeiten, übergeben Sie ein leeres IList-Objekt.</param>
+        <param name="targetEntityFrameworkVersion">Die interne Entity Framework-Version, die vorgesehen ist.</param>
+        <summary>Erstellt eine Quellcodedatei, die die aus der angegebenen konzeptionellen Schema Definition Language (CSDL) Datei generierten Objektebenencode enthält. Beachten Sie, dass der Parameter TargetEntityFrameworkVersion interne Entity Framework-Versionsnummern verwendet, wie in beschrieben die <see cref="T:System.Data.Entity.Design.EntityFrameworkVersions" /> Klasse.</summary>
+        <returns>Eine Liste der <see cref="T:System.Data.Metadata.Edm.EdmSchemaError" /> Objekten, das eine enthält den Fehler generiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LanguageOption">
+      <MemberSignature Language="C#" Value="public System.Data.Entity.Design.LanguageOption LanguageOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Entity.Design.LanguageOption LanguageOption" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Entity.Design.EntityCodeGenerator.LanguageOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Entity.Design.LanguageOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Data.Entity.Design.LanguageOption" />-Wert ab, der die Sprache des generierten Codes angibt, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Data.Entity.Design.LanguageOption" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

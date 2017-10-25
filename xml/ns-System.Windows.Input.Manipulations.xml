@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Input.Manipulations">
+  <Docs>
+    <summary>Stellt Funktionen zum Überwachen und reagieren auf eine Auflistung von Manipulatoren als einem einzigen zusammengesetzten, aktivieren eine Anwendung zur nachverfolgung der Änderungen für die kombinierte anstelle der einzelnen Komponenten bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

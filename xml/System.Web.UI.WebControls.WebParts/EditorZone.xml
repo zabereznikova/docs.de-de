@@ -1,0 +1,175 @@
+<Type Name="EditorZone" FullName="System.Web.UI.WebControls.WebParts.EditorZone">
+  <TypeSignature Language="C#" Value="public class EditorZone : System.Web.UI.WebControls.WebParts.EditorZoneBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EditorZone extends System.Web.UI.WebControls.WebParts.EditorZoneBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.EditorZone" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.EditorZoneBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.EditorZoneDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als primäres Steuerelement im Webparts-Steuerelementsatz zum Hosten von <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" />-Steuerelementen auf einer Webseite.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Innerhalb der Webparts-Steuerelementsatz ist eine Zone eines zusammengesetzten Steuerelements, das eine definierte Region auf einer Webseite behandelt und Serversteuerelemente enthält. Hauptfunktionen einer Zone sind, um das Layout der Steuerelemente darin enthaltenen und eine gemeinsame Benutzeroberfläche (UI) für diese Steuerelemente bereitstellen. Allgemeine Informationen zu Zonen und wie sie in einer Webparts-Anwendungen verwendet werden, finden Sie in der Referenzdokumentation für die Basis <xref:System.Web.UI.WebControls.WebParts.WebZone> -Klasse, und [Web Parts Control Set Overview](http://msdn.microsoft.com/library/ff0149e4-695a-401a-8cda-53df6d7d2668).  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement ist eines der grundlegenden Steuerelemente im Webparts-Steuerelementsatz. Ein wichtiges Feature von Webparts ist die Fähigkeit der Endbenutzer Webseiten ändern (oder personalisieren) nach ihren Bedürfnissen, und speichern Sie ihre personalisierten Einstellungen für zukünftige Browsersitzungen an. Ein Aspekt der Ändern von Webparts-Seiten enthält, bearbeiten; Benutzer können die Darstellung, Layout, Verhalten und andere Eigenschaften des sichtbaren bearbeiten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Verschiedene Steuerelemente im Webparts-Steuerelementsatz bieten die Bearbeitungsfunktionen, einschließlich der <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement.  
+  
+ Ein <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement wird angezeigt, wenn eine Webparts-Seite in den Bearbeitungsmodus wechselt, und die verfügbaren verschiedenen <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente, die verwendet werden können, um zu personalisieren <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Die <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement ist vergleichbar mit dem übergeordneten Element, die <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> -Klasse, mit einer der Hauptunterschiede: die <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement stellt eine Vorlage für die Zone verwiesen wird, dessen <xref:System.Web.UI.WebControls.WebParts.EditorZone.ZoneTemplate%2A> Eigenschaft. Die Vorlage für die Zone fügt die Möglichkeit, den Inhalt in das Persistenzformat der Seite zu deklarieren. Können zur Vergabe von Entwicklern eine <xref:System.Web.UI.WebControls.WebParts.EditorZone> im deklarativen Markup einer Webseite zu steuern, fügen Sie ein untergeordnetes Element `<zonetemplate>` Element, und innerhalb der `<zonetemplate>` Element, deklarative Verweise auf Hinzufügen <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorZone> -Steuerelement verfügt über eine Methode <xref:System.Web.UI.WebControls.WebParts.EditorZone.CreateEditorParts%2A>, dem überschreibt einer base-Methode in der <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Klasse. Diese Methode ist erforderlich, damit ein <xref:System.Web.UI.WebControls.WebParts.EditorZone> -Steuerelement erstellen der Vorlage der Zone um enthalten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente, deklarativ zur Zone hinzugefügt werden.  
+  
+> [!NOTE]
+>  Die Schaltflächen in der <xref:System.Web.UI.WebControls.WebParts.EditorZone> UI erfordern clientseitige Skripts, um ordnungsgemäß zu funktionieren. Wenn Skripts im Browser deaktiviert ist, der Benutzer ist nicht möglich für Aktionen über die <xref:System.Web.UI.WebControls.WebParts.EditorZone> UI.  
+  
+## <a name="accessibility"></a>Barrierefreiheit  
+ Das Markup gerendert wird, wird standardmäßig für dieses Steuerelement kann nicht Accessibility Standards wie die Web Content Accessibility Guidelines 1.0 (WCAG) Priorität 1-Richtlinien entsprechen. Ausführliche Informationen zu Accessibility-Unterstützung für das genannte Steuerelement finden Sie unter [ASP.NET-Steuerelemente und Barrierefreiheit](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht mehrere deklarative und die programmgesteuerte Verwendung eines der <xref:System.Web.UI.WebControls.WebParts.EditorZone> Klasse. Das Beispiel erstellt eine benutzerdefinierten Editor-Zone, die von erben die <xref:System.Web.UI.WebControls.WebParts.EditorZone> Klasse, und in einer Webparts-Seite verwendet.  
+  
+ Das Codebeispiel besteht aus drei Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu ändern.  
+  
+-   Eine Webseite, die die benutzerdefinierte verweist <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Weitere Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_EditorZone_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorZone_Overview/CS/displaymodecs.ascx#4)]
+ [!code-aspx-vb[WebParts_EditorZone_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorZone_Overview/VB/displaymodevb.ascx#4)]  
+  
+ Der zweite Teil des Codebeispiels wird eine Webseite. Am oberen Rand der Seite ist eine `Register` Richtlinie für das Benutzersteuerelement. Das Steuerelement Benutzertag wird deklariert, auf der Seite mit einem `uc1:` Präfix für das Element. Beachten Sie, dass sich unterhalb der `<asp:WebPartZone>` Element ist ein `<asp:EditorZone>` Element, das mehrere enthält <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelemente, mit einigen Tags und Eigenschaften, die bestimmen, sein Aussehen und Verhalten. Es gibt auch eine Reihe von Methoden, die verschiedene Mitgliedern Zugriff auf die <xref:System.Web.UI.WebControls.WebParts.EditorZone> programmgesteuert zu steuern.  
+  
+ [!code-aspx-csharp[WebParts_EditorZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorZone_Overview/CS/editorzonecs.aspx#1)]
+ [!code-aspx-vb[WebParts_EditorZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorZone_Overview/VB/editorzonevb.aspx#1)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie auswählen **Bearbeitungsmodus** in der Dropdown-Liste, um den Bearbeitungsmodus zu wechseln. Um die bearbeitungs-UI anzuzeigen, können Sie auf Verbmenü (Pfeil nach unten) in der Titelleiste eines der beiden Steuerelemente, und klicken Sie auf **bearbeiten** auf das Steuerelement zu bearbeiten. Mit der Bearbeitung Benutzeroberfläche sichtbar ist, sehen Sie die Auswirkungen deklarative und programmgesteuerte Verwendungen der <xref:System.Web.UI.WebControls.WebParts.EditorZone> -Klassenmember.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Wenn Sie eine benutzerdefinierte erstellen möchten <see cref="T:System.Web.UI.WebControls.WebParts.EditorZone" /> zone um größere Kontrolle über das Rendering die bearbeitungs-UI zu gewinnen, können Sie direkt von erben die <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> Klasse, solange Sie nicht benötigen, um Zone Vorlage Seitenentwicklern das Hinzufügen von Unterstützung <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuert die relevante Zeitzone deklarativ ein. In diesem Fall fügen Sie alle <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> programmgesteuert auf eine Zone steuert. Wenn Sie die Zone Vorlage unterstützen möchten, sollten Sie erben von der <see cref="T:System.Web.UI.WebControls.WebParts.EditorZone" /> Klasse.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorZone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorZone.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.EditorZone" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEditorParts">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.WebParts.EditorPartCollection CreateEditorParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.WebParts.EditorPartCollection CreateEditorParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorZone.CreateEditorParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.EditorPartCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt alle die <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente innerhalb einer Zonenvorlage in einem persistenten Format deklariert.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" /> enthält Verweise auf alle die <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente in der Vorlage der Zone deklariert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorZone.CreateEditorParts%2A> Methode überschreibt die Basismethode und erstellen Sie nur die <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente, die in der Zonenvorlage deklariert werden. Alle anderen <xref:System.Web.UI.WebControls.WebParts.EditorPart> müssen die Zone hinzugefügten Steuerelemente programmgesteuert hinzugefügt werden. Dies kann erfolgen, z. B. durch die Implementierung der <xref:System.Web.UI.WebControls.WebParts.IWebEditable> -Schnittstelle in einem <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Klicken Sie dann in der überschriebenen <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> -Methode, können Sie eine Auflistung von benutzerdefinierten hinzufügen <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente zu einer Zone.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelement verfügt nicht über eine ID ein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoneTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate ZoneTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ZoneTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorZone.ZoneTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.WebParts.EditorZone))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateInstance(System.Web.UI.TemplateInstance.Single)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine Vorlage, um die untergeordneten Steuerelementen in einem <see cref="T:System.Web.UI.WebControls.WebParts.EditorZone" /> Steuerelement in einem persistenten Format.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" /> Zonenvorlage, die als Container für untergeordnete Steuerelemente in der Zone fungiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorZone.ZoneTemplate%2A> Eigenschaft ist der wesentliche Unterschied zwischen der <xref:System.Web.UI.WebControls.WebParts.EditorZone> Klasse und die Basis <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Klasse. Durch Hinzufügen der Unterstützung für eine Vorlage für die Zone, die <xref:System.Web.UI.WebControls.WebParts.EditorZone> Klasse ermöglicht Entwicklern untergeordneten platzieren <xref:System.Web.UI.WebControls.WebParts.EditorPart> steuert innerhalb einer <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement im deklarativen Markup einer Webseite. Die Vorlage für die Zone fungiert als Container für die untergeordneten Steuerelemente.  
+  
+> [!NOTE]
+>  Der Set-Accessor für die <xref:System.Web.UI.WebControls.WebParts.EditorZone.ZoneTemplate%2A> -Eigenschaft ruft die <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.InvalidateEditorParts%2A> -Methode, die die Auflistung der erzwingt <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente deklariert wird, in der Vorlage neu erstellt werden. Dadurch werden alle Änderungen in den Inhalt der Vorlage um erkannt zu werden.  
+  
+ Verwenden Sie eine Vorlage für die Zone deklarativ in ein <xref:System.Web.UI.WebControls.WebParts.EditorZone> -Steuerelement, fügen Sie ein Paar von `<zonetemplate>` Tags und einem Verweis <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente zwischen die Tags. Wird nur in einer Zonenvorlage pro Instanz von gerendert ein <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement (aus diesem Grund besteht kein Grund zum Hinzufügen von mehreren `<zonetemplate>` Elemente, die ein <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement). Auch die Zonenvorlage von einer <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement kann nur von abgeleitete Teilsteuerelemente enthalten die <xref:System.Web.UI.WebControls.WebParts.EditorPart> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative Verwendung des der <xref:System.Web.UI.WebControls.WebParts.EditorZone.ZoneTemplate%2A> Eigenschaft. Der vollständige Code für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.EditorZone> -Klassenübersicht.  
+  
+ Im Codebeispiel wird veranschaulicht, wie <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente platziert werden können, in eine `<zonetemplate>` Element in einer <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_EditorZone_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorZone_Overview/CS/editorzonecs.aspx#2)]
+ [!code-aspx-vb[WebParts_EditorZone_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorZone_Overview/VB/editorzonevb.aspx#2)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie auswählen **Bearbeitungsmodus** in der Dropdown-Liste, um den Bearbeitungsmodus zu wechseln. Um die Bearbeitung Benutzeroberfläche (UI) anzuzeigen, können Sie auf Verbmenü (Pfeil nach unten) in der Titelleiste eines der beiden Steuerelemente, und klicken Sie auf **bearbeiten** auf das Steuerelement zu bearbeiten. Mit der Bearbeitung Benutzeroberfläche sichtbar ist, sehen Sie, die mehrere <xref:System.Web.UI.WebControls.WebParts.EditorPart> deklarierten innerhalb der `<zonetemplate>` Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

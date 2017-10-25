@@ -1,0 +1,220 @@
+<Type Name="AsymmetricKeyExchangeFormatter" FullName="System.Security.Cryptography.AsymmetricKeyExchangeFormatter">
+  <TypeSignature Language="C#" Value="public abstract class AsymmetricKeyExchangeFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AsymmetricKeyExchangeFormatter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.AsymmetricKeyExchangeFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse dar, von der alle Formatierungsprogramme für den asymmetrischen Schlüsselaustausch abgeleitet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formatierungsprogramme für asymmetrischen Schlüsselaustausch verschlüsseln Schlüsselaustauschdaten.  
+  
+ Schlüsselaustausch ermöglicht einen Sender geheimen Informationen, z. B. Zufallsdaten zu erstellen, können in einen symmetrischen Verschlüsselungsalgorithmus als Schlüssel verwendet werden, und Verschlüsselung zum Senden an den beabsichtigten Empfänger zu verwenden.  
+  
+> [!CAUTION]
+>  Es wird dringend empfohlen, dass Sie nicht versuchen, eine eigene Methode Schlüsselaustausch über die grundlegende Funktionalität bereitgestellt wird, erstellt werden, da viele Aspekte des Vorgangs sorgfältig in Reihenfolge für den Schlüsselaustausch erfolgreich ausgeführt werden müssen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AsymmetricKeyExchangeFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Security.Cryptography.AsymmetricKeyExchangeFormatter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz einer abstrakten Klasse kann nicht erstellt werden. Anwendungscode erstellt eine neue Instanz einer abgeleiteten Klasse.  
+  
+ Verwendung <xref:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.SetKey%2A> , legen Sie den Schlüssel vor dem Aufruf <xref:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyExchange">
+      <MemberSignature Language="C#" Value="public abstract byte[] CreateKeyExchange (byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] CreateKeyExchange(unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die beim Schlüsselaustausch zu übergebenden geheimen Informationen.</param>
+        <summary>Erstellt, falls in einer abgeleiteten Klasse überschrieben, anhand der angegebenen Eingabedaten die verschlüsselten Schlüsselaustauschdaten.</summary>
+        <returns>Die an den Empfänger zu sendenden verschlüsselten Schlüsselaustauschdaten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Daten können nur durch den Inhaber des privaten Schlüssels für den öffentlichen Schlüssel zum Verschlüsseln von Daten interpretiert werden. Dadurch wird sichergestellt, dass nur der vorgesehene Empfänger die geheime Informationen zugreifen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyExchange">
+      <MemberSignature Language="C#" Value="public abstract byte[] CreateKeyExchange (byte[] data, Type symAlgType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] CreateKeyExchange(unsigned int8[] data, class System.Type symAlgType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange(System.Byte[],System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="symAlgType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die beim Schlüsselaustausch zu übergebenden geheimen Informationen.</param>
+        <param name="symAlgType">Dieser Parameter wird in der aktuellen Version nicht verwendet.</param>
+        <summary>Erstellt, falls in einer abgeleiteten Klasse überschrieben, anhand der angegebenen Eingabedaten die verschlüsselten Schlüsselaustauschdaten.</summary>
+        <returns>Die an den Empfänger zu sendenden verschlüsselten Schlüsselaustauschdaten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Daten können nur durch den Inhaber des privaten Schlüssels für den öffentlichen Schlüssel zum Verschlüsseln von Daten interpretiert werden. Dadurch wird sichergestellt, dass nur der vorgesehene Empfänger die geheime Informationen zugreifen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public abstract string Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Parameter für den asymmetrischen Schlüsselaustausch ab.</summary>
+        <value>Eine Zeichenfolge im XML-Format, die die Parameter für den asymmetrischen Schlüsselaustauschvorgang enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKey">
+      <MemberSignature Language="C#" Value="public abstract void SetKey (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetKey(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.SetKey(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die Instanz der Implementierung des <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" /> , die den öffentlichen Schlüssel enthält.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse den öffentlichen Schlüssel fest, der zum Verschlüsseln der geheimen Informationen verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen einen Schlüssel vor dem Aufruf Festlegen einer <xref:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange%2A> Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

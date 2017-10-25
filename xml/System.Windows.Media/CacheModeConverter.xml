@@ -1,0 +1,142 @@
+<Type Name="CacheModeConverter" FullName="System.Windows.Media.CacheModeConverter">
+  <TypeSignature Language="C#" Value="public sealed class CacheModeConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CacheModeConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.CacheModeConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert eine <see cref="T:System.Windows.Media.CacheMode" /> von einem Datentyp in einen anderen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheModeConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.CacheModeConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.CacheModeConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.CacheModeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="sourceType">Ein <see cref="T:System.Type" /> , der den angibt, aus dem konvertiert werden sollen.</param>
+        <summary>Bestimmt, ob dies <see cref="T:System.Windows.Media.CacheModeConverter" /> können eine Instanz des angegebenen Typs zu konvertieren, eine <see cref="T:System.Windows.Media.CacheMode" />, mit dem angegebenen Kontext.</summary>
+        <returns>
+          <see langword="true" />Wenn diese <see cref="T:System.Windows.Media.CacheModeConverter" /> die Konvertierung durchführen kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.CacheModeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="destinationType">Ein Typ, der den Zieltyp der Konvertierung darstellt.</param>
+        <summary>Bestimmt, ob dies <see cref="T:System.Windows.Media.CacheModeConverter" /> können Konvertieren einer <see cref="T:System.Windows.Media.CacheMode" /> an eine Instanz eines angegebenen Typs mithilfe des angegebenen Kontexts.</summary>
+        <returns>
+          <see langword="true" />Wenn diese <see cref="T:System.Windows.Media.CacheModeConverter" /> die Konvertierung durchführen kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.CacheModeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> Informationen zu einer bestimmten Kultur enthält.</param>
+        <param name="value">Der zu konvertierende <see cref="T:System.Object" />.</param>
+        <summary>Konvertiert ein angegebenes Objekt in eine <see cref="T:System.Windows.Media.CacheMode" />.</summary>
+        <returns>Die <see cref="T:System.Windows.Media.CacheMode" /> , wird erstellt, indem das Konvertieren von <paramref name="value" />ist, andernfalls wird eine Ausnahme ausgelöst.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" />ist <see langword="null" /> oder ein Typ, der konvertiert werden kann <see cref="T:System.Windows.Media.CacheMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.CacheModeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , das Informationen über eine Kultur, z. B. Sprache und Kalender darstellt. Kann <see langword="null" />.</param>
+        <param name="value">Die zu konvertierende <see cref="T:System.Object" />.</param>
+        <param name="destinationType">Die <see cref="T:System.Type" /> zu konvertieren.</param>
+        <summary>Konvertiert eine <see cref="T:System.Windows.Media.CacheMode" /> in den angegebenen Typ.</summary>
+        <returns>Das konvertierte Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" />ist <see langword="null" />, <paramref name="value" /> ist ein <see cref="T:System.Windows.Media.CacheMode" />, oder <paramref name="destinationType" /> ist keine Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,747 @@
+<Type Name="AdamInstance" FullName="System.DirectoryServices.ActiveDirectory.AdamInstance">
+  <TypeSignature Language="C#" Value="public class AdamInstance : System.DirectoryServices.ActiveDirectory.DirectoryServer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AdamInstance extends System.DirectoryServices.ActiveDirectory.DirectoryServer" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.AdamInstance" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.ActiveDirectory.DirectoryServer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> Klasse darstellt, der Server ein AD LDS-Instanz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.DirectoryServices.ActiveDirectory.AdamInstance> -Klasse bezieht sich auf Active Directory Lightweight Directory Services (AD LDS) umbenannt wurde auf Active Directory Anwendung Modus (ADAM).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName="CheckReplicationConsistency">
+      <MemberSignature Language="C#" Value="public override void CheckReplicationConsistency ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CheckReplicationConsistency() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.CheckReplicationConsistency" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Konsistenzprüfung (KCC), die die Replikationstopologie für diese AD LDS-Instanz überprüft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie im Thema "DsReplicaConsistencyCheck" in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationSet">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ConfigurationSet ConfigurationSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ConfigurationSet ConfigurationSet" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AdamInstance.ConfigurationSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ConfigurationSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.DirectoryServices.ActiveDirectory.ConfigurationSet" /> Objekt für diese AD LDS-Instanz.</summary>
+        <value>Die <see cref="T:System.DirectoryServices.ActiveDirectory.ConfigurationSet" /> für dieses Objekt <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPartition">
+      <MemberSignature Language="C#" Value="public string DefaultPartition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultPartition" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AdamInstance.DefaultPartition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Standardpartition, die diese AD LDS-Instanz dient.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält den distinguished Name der Standardpartition, die diese AD LDS-Instanz dient.  Wenn die Standardpartition nicht festgelegt ist, gibt diese zurück <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">Der Name der Partition ist nicht in einem gültigen DN-Format, oder die AD LDS-Instanz verarbeitet diese Partition nicht. Gilt für nur festgelegt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Ein <see cref="T:System.Boolean" />-Wert, der bestimmt, ob die verwalteten Ressourcen freigegeben werden sollen. <see langword="true" />, wenn die verwalteten Ressourcen freigegeben werden sollen, <see langword="false" />, wenn nur die nicht verwalteten Ressourcen freigegeben werden sollen.</param>
+        <summary>Gibt den nicht verwalteten Ressourcen, mit denen, die <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> Objekt und optional Versionen verwalteten Ressourcen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~AdamInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="M:System.Object.Finalize" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.AdamInstanceCollection FindAll (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string partitionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.AdamInstanceCollection FindAll(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string partitionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.FindAll(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstanceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="partitionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> -Objekt, das das Ziel und die Anmeldeinformationen für die Suche enthält. Das Ziel dieses Kontexts muss eine AD LDS-Konfigurationssatz sein.</param>
+        <param name="partitionName">Ein <see cref="T:System.String" /> , enthält den Namen der Partition, für die AD LDS-Instanzen gesucht werden soll.</param>
+        <summary>Sucht alle AD LDS-Instanzen im angegebenen Kontext, die angegebene Partition hosten.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstanceCollection" /> , enthält die AD LDS-Instanzen, die von der Suche gefunden werden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="context" /> oder <paramref name="partitionName" /> -Parameter ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="context" />-Parameter oder der <paramref name="partitionName" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es wurde keine AD LDS-Instanz gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindOne">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.AdamInstance FindOne (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string partitionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.AdamInstance FindOne(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string partitionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.FindOne(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="partitionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> -Objekt, das das Ziel und die Anmeldeinformationen für die Suche enthält. Das Ziel dieses Kontexts muss eine AD LDS-Konfigurationssatz sein.</param>
+        <param name="partitionName">Ein <see cref="T:System.String" /> , enthält den Namen der Partition, die nach einer AD LDS-Instanz zu suchen.</param>
+        <summary>Sucht eine einzelne AD LDS-Instanz im angegebenen Kontext, der die angegebene Partition hostet.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> Objekt, das die AD LDS-Instanz darstellt, die von der Suche gefunden wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Es wurde keine AD LDS-Instanz gefunden.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="context" /> oder <paramref name="partitionName" /> -Parameter ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="context" />-Parameter oder der <paramref name="partitionName" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAdamInstance">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.AdamInstance GetAdamInstance (System.DirectoryServices.ActiveDirectory.DirectoryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.AdamInstance GetAdamInstance(class System.DirectoryServices.ActiveDirectory.DirectoryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.GetAdamInstance(System.DirectoryServices.ActiveDirectory.DirectoryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> -Objekt, das das Ziel und die Anmeldeinformationen zum Abrufen des Objekts enthält. Das Ziel des Kontexts muss eine AD LDS-Instanz sein.</param>
+        <summary>Gibt eine AD LDS-Instanz für einen angegebenen Kontext zurück.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> -Objekt, das auf die AD LDS-Instanz verweist, die gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.DirectoryServices.ActiveDirectory.AdamInstance.GetAdamInstance%2A> Methode bezieht sich die zu Active Directory Lightweight Directory Services (AD LDS) umbenannt wurde auf Active Directory Anwendung Modus (ADAM).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Eine Verbindung mit dem Ziel, das im angegebenen der <paramref name="context" /> Parameter konnte nicht hergestellt werden.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="context" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="context" /> -Parameter ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllReplicationNeighbors">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection GetAllReplicationNeighbors ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection GetAllReplicationNeighbors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.GetAllReplicationNeighbors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Replikationsnachbarn für diese AD LDS-Instanz zurück.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection" /> Objekt, das die Replikationsnachbarn für diese AD LDS-Instanz enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReplicationConnectionFailures">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationFailureCollection GetReplicationConnectionFailures ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.ActiveDirectory.ReplicationFailureCollection GetReplicationConnectionFailures() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.GetReplicationConnectionFailures" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationFailureCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Liste der Replikation Verbindungsfehlern, die von dieser AD LDS-Instanz aufgezeichnet werden.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationFailureCollection" /> Objekt, das die Verbindung Replikationsfehler enthält, die von dieser AD LDS-Instanz aufgezeichnet werden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReplicationCursors">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationCursorCollection GetReplicationCursors (string partition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.ActiveDirectory.ReplicationCursorCollection GetReplicationCursors(string partition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.GetReplicationCursors(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationCursorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partition">Ein <see cref="T:System.String" /> , die den distinguished Name der Partition für das Abrufen der Informationen zum Replikationscursor enthält.</param>
+        <summary>Gibt die Informationen zum Replikationscursor für eine angegebene Partition zurück.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationCursorCollection" /> -Objekt, das Informationen zum Replikationscursor enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="partition" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="partition" /> -Parameter ist ungültig.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReplicationMetadata">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata GetReplicationMetadata (string objectPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata GetReplicationMetadata(string objectPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.GetReplicationMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="objectPath">Ein <see cref="T:System.String" /> , enthält den Pfad der Active Directory-Domänendienste-Objekts, für das die Replikationsmetadaten abgerufen werden sollen.</param>
+        <summary>Gibt die Replikationsmetadaten für ein bestimmtes Active Directory-Domänendienste-Objekt zurück.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata" /> -Objekt, das Informationen zum Replikationscursor enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="objectPath" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="objectPath" /> ist nicht gültig.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReplicationNeighbors">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection GetReplicationNeighbors (string partition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection GetReplicationNeighbors(string partition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.GetReplicationNeighbors(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partition">Ein <see cref="T:System.String" /> , enthält den distinguished Name der Partition, für das die Replikationsnachbarn abgerufen werden sollen.</param>
+        <summary>Gibt die Replikationsnachbarn für eine angegebene Partition zurück.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection" /> Objekt, das die Replikationsnachbarn für diese AD LDS-Instanz enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="partition" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="partition" /> -Parameter ist ungültig.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReplicationOperationInformation">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation GetReplicationOperationInformation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation GetReplicationOperationInformation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.GetReplicationOperationInformation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die aktuellen und ausstehenden Replikationsvorgänge für diese AD LDS-Instanz.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation" /> -Objekt, das die aktuellen und ausstehenden Replikationsvorgänge.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="HostName">
+      <MemberSignature Language="C#" Value="public string HostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AdamInstance.HostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Hostnamen des Computers, der diese AD LDS-Instanz hostet.</summary>
+        <value>Ein <see cref="T:System.String" /> , die der Hostname des Computers enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InboundConnections">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection InboundConnections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection InboundConnections" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AdamInstance.InboundConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die eingehenden Replikationsverbindungen für diese AD LDS-Instanz ab.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection" /> -Objekt, das die eingehenden replikationsverbindungen für diese AD LDS-Instanz enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IPAddress">
+      <MemberSignature Language="C#" Value="public override string IPAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IPAddress" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AdamInstance.IPAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die IP-Adresse des Computers, der diese AD LDS-Instanz hostet.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält die IP-Adresse des Computers, der diese AD LDS-Instanz hostet.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+        <permission cref="T:System.Net.DnsPermission">Assert-Wert:<see cref="F:System.Security.Permissions.SecurityAction.Assert" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LdapPort">
+      <MemberSignature Language="C#" Value="public int LdapPort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LdapPort" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AdamInstance.LdapPort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die LDAP-Portnummer der AD LDS-Instanz ab.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der die LDAP-Portnummer der AD LDS-Instanz enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OutboundConnections">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection OutboundConnections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection OutboundConnections" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AdamInstance.OutboundConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ausgehenden Replikationsverbindungen für diese AD LDS-Instanz ab.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection" /> -Objekt, das die ausgehenden replikationsverbindungen für diese AD LDS-Instanz enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Roles">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AdamRoleCollection Roles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.AdamRoleCollection Roles" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AdamInstance.Roles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamRoleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rollen, die diese AD LDS-Instanz enthält.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.AdamRoleCollection" /> Objekt, das enthält <see cref="T:System.DirectoryServices.ActiveDirectory.AdamRole" /> Elemente, die die Rollen angeben, die diese AD LDS-Instanz dient.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Commit für Änderungen an der <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> Objekt in den zugrunde liegenden Verzeichnisspeicher.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SeizeRoleOwnership">
+      <MemberSignature Language="C#" Value="public void SeizeRoleOwnership (System.DirectoryServices.ActiveDirectory.AdamRole role);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SeizeRoleOwnership(valuetype System.DirectoryServices.ActiveDirectory.AdamRole role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.SeizeRoleOwnership(System.DirectoryServices.ActiveDirectory.AdamRole)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="role" Type="System.DirectoryServices.ActiveDirectory.AdamRole" />
+      </Parameters>
+      <Docs>
+        <param name="role">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.AdamRole" /> Member, der angibt, welche Rolle die AD LDS-Instanz den Besitz übernehmen soll.</param>
+        <summary>Gibt den Umfang des Besitzes der angegebenen Rolle an.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Die <paramref name="role" /> -Parameter ist ungültig.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteName">
+      <MemberSignature Language="C#" Value="public override string SiteName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SiteName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AdamInstance.SiteName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Standorts, dem diese AD LDS-Instanz angehört.</summary>
+        <value>Ein <see cref="T:System.String" /> , der den Namen des Standorts, von dem diese AD LDS-Instanz ein Element ist, enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SslPort">
+      <MemberSignature Language="C#" Value="public int SslPort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SslPort" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AdamInstance.SslPort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die SSL-Portnummer dieser AD LDS-Instanz ab.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der die SSL-Portnummer dieser AD LDS-Instanz enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncFromAllServersCallback">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.ActiveDirectory.SyncUpdateCallback SyncFromAllServersCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.SyncUpdateCallback SyncFromAllServersCallback" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AdamInstance.SyncFromAllServersCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.SyncUpdateCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Synchronisierung Delegat für diese AD LDS-Instanz.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.SyncUpdateCallback" /> Delegat, der diese AD LDS-Instanz für Synchronisierung Benachrichtigungen verwenden.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncReplicaFromAllServers">
+      <MemberSignature Language="C#" Value="public override void SyncReplicaFromAllServers (string partition, System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SyncReplicaFromAllServers(string partition, valuetype System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.SyncReplicaFromAllServers(System.String,System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partition" Type="System.String" />
+        <Parameter Name="options" Type="System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions" />
+      </Parameters>
+      <Docs>
+        <param name="partition">Ein <see cref="T:System.String" /> , enthält den distinguished Name der Partition des Domänencontrollers synchronisiert.</param>
+        <param name="options">Eine Kombination aus ein oder mehrere der <see cref="T:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions" /> Elemente.</param>
+        <summary>Die angegebene Partition synchronisiert mit allen anderen Domänencontrollern.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="partition" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="partition" /> -Parameter ist ungültig.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOperationException">Bei der Synchronisierung ist ein Fehler aufgetreten.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncReplicaFromServer">
+      <MemberSignature Language="C#" Value="public override void SyncReplicaFromServer (string partition, string sourceServer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SyncReplicaFromServer(string partition, string sourceServer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.SyncReplicaFromServer(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partition" Type="System.String" />
+        <Parameter Name="sourceServer" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partition">Ein <see cref="T:System.String" /> , die den distinguished Name des zu synchronisierenden Partition enthält.</param>
+        <param name="sourceServer">Ein <see cref="T:System.String" /> , enthält den Namen des Servers mit der synchronisiert.</param>
+        <summary>Die angegebene Partition synchronisiert mit dem angegebenen Domänencontroller.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="partition" />-Parameter oder der <paramref name="sourceServer" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="partition" /> oder <paramref name="sourceServer" /> -Parameter ist ungültig.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferRoleOwnership">
+      <MemberSignature Language="C#" Value="public void TransferRoleOwnership (System.DirectoryServices.ActiveDirectory.AdamRole role);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TransferRoleOwnership(valuetype System.DirectoryServices.ActiveDirectory.AdamRole role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.TransferRoleOwnership(System.DirectoryServices.ActiveDirectory.AdamRole)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="role" Type="System.DirectoryServices.ActiveDirectory.AdamRole" />
+      </Parameters>
+      <Docs>
+        <param name="role">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.AdamRole" /> Member, der angibt, welche Rolle an diese AD LDS-Instanz übertragen werden sollen.</param>
+        <summary>Überträgt die angegebene Rolle an die AD LDS-Instanz.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Die <paramref name="role" /> -Parameter ist ungültig.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TriggerSyncReplicaFromNeighbors">
+      <MemberSignature Language="C#" Value="public override void TriggerSyncReplicaFromNeighbors (string partition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TriggerSyncReplicaFromNeighbors(string partition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.AdamInstance.TriggerSyncReplicaFromNeighbors(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partition">Ein <see cref="T:System.String" /> , die den distinguished Name des zu synchronisierenden Partition enthält.</param>
+        <summary>Beginnt eine Synchronisierung der angegebenen Partition.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="partition" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="partition" /> -Parameter ist ungültig.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

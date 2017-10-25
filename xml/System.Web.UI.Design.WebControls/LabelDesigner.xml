@@ -1,0 +1,99 @@
+<Type Name="LabelDesigner" FullName="System.Web.UI.Design.WebControls.LabelDesigner">
+  <TypeSignature Language="C#" Value="public class LabelDesigner : System.Web.UI.Design.TextControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LabelDesigner extends System.Web.UI.Design.TextControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.LabelDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.TextControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.Design.SupportsPreviewControl(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.WebControls.Label" />-Webserversteuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Label> Steuerelement ermöglicht es, Text, der programmgesteuert auf einer Webseite angezeigt werden.  
+  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht Markup-Quellcode, beschreibt eine <xref:System.Web.UI.WebControls.Label> Steuerelement wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet. Die <xref:System.Web.UI.Design.WebControls.LabelDesigner> -Klasse bietet zur Entwurfszeit Unterstützung für die <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.LabelDesigner.OnComponentChanged%2A> Methode wird aufgerufen, wenn eine an die zugeordnete Änderung <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Ableiten der `SampleLabel` -Steuerelement aus der <xref:System.Web.UI.WebControls.Label> steuern und wendet eine <xref:System.ComponentModel.DesignerAttribute> -Attribut auf die `SampleLabel` Steuerelement zuordnen der `SampleLabelDesigner` Klasse.  
+  
+ Im Codebeispiel wird außerdem leitet die `SampleLabelDesigner` aus der <xref:System.Web.UI.Design.WebControls.LabelDesigner> Klasse. Überschreibt die <xref:System.Web.UI.Design.TextControlDesigner.GetDesignTimeHtml%2A> -Methode zum Festlegen der <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> Eigenschaft, um <xref:System.Web.UI.WebControls.BorderStyle.Dashed>, wenn die ursprüngliche <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> wurde die <xref:System.Web.UI.WebControls.BorderStyle.NotSet> oder <xref:System.Web.UI.WebControls.BorderStyle.None> Wert. Dies verbessert die Sichtbarkeit des zugeordneten Steuerelements zur Entwurfszeit.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls_LabelDesignerExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls_LabelDesignerExample/CS/CustomLabelDesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.WebControls_LabelDesignerExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls_LabelDesignerExample/VB/customlabeldesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LabelDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LabelDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.LabelDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der der <xref:System.Web.UI.Design.WebControls.LabelDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.WebControls.Label> Steuerelement oder eine Kopie der <xref:System.Web.UI.WebControls.Label> Steuerelement auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanged">
+      <MemberSignature Language="C#" Value="public override void OnComponentChanged (object sender, System.ComponentModel.Design.ComponentChangedEventArgs ce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnComponentChanged(object sender, class System.ComponentModel.Design.ComponentChangedEventArgs ce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LabelDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="ce" Type="System.ComponentModel.Design.ComponentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das die Quelle des Ereignisses ist.</param>
+        <param name="ce">Ein <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn das zugeordnete Steuerelement geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.LabelDesigner.OnComponentChanged%2A> Methode wird aufgerufen, wenn die <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> -Ereignis für die zugeordnete <xref:System.Web.UI.WebControls.Label> Steuerelement ausgelöst wird. Dies ist normalerweise als Reaktion auf die Änderung einer Eigenschaft des Steuerelements (z. B. eine **Eigenschaften** Raster ändern).  
+  
+ Die <xref:System.Web.UI.Design.WebControls.LabelDesigner.OnComponentChanged%2A> erstellt eine <xref:System.ComponentModel.Design.ComponentChangedEventArgs> -Objekt und ruft die <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> -Basismethode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

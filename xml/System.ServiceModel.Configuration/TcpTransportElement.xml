@@ -1,0 +1,306 @@
+<Type Name="TcpTransportElement" FullName="System.ServiceModel.Configuration.TcpTransportElement">
+  <TypeSignature Language="C#" Value="public sealed class TcpTransportElement : System.ServiceModel.Configuration.ConnectionOrientedTransportElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TcpTransportElement extends System.ServiceModel.Configuration.ConnectionOrientedTransportElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.TcpTransportElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ConnectionOrientedTransportElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt ein Konfigurationselement an, das dafür sorgt, dass ein Kanal Meldungen auf dem TCP-Transport überträgt, wenn er in einer benutzerdefinierten Bindung eingeschlossen ist. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Konfigurationselement ermöglicht es Ihnen, eine benutzerdefinierte Bindung zu erstellen, die das TCP-Transportprotokoll implementiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TcpTransportElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.TcpTransportElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.TcpTransportElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="public override void ApplyConfiguration (System.ServiceModel.Channels.BindingElement bindingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ApplyConfiguration(class System.ServiceModel.Channels.BindingElement bindingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.TcpTransportElement.ApplyConfiguration(System.ServiceModel.Channels.BindingElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingElement" Type="System.ServiceModel.Channels.BindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="bindingElement">Das <see cref="T:System.ServiceModel.Channels.BindingElement" />, dessen Einstellungen für dieses Konfigurationselement übernommen werden sollen.</param>
+        <summary>Übernimmt die Einstellungen vom angegebenen <see cref="T:System.ServiceModel.Channels.BindingElement" /> für dieses Konfigurationselement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingElementType">
+      <MemberSignature Language="C#" Value="public override Type BindingElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BindingElementType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TcpTransportElement.BindingElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Type" />-Objekt ab, das das benutzerdefinierte Bindungselement darstellt.</summary>
+        <value>Ein <see cref="T:System.Type" />-Objekt, das das benutzerdefinierte Bindungselement darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionPoolSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement ConnectionPoolSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement ConnectionPoolSettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TcpTransportElement.ConnectionPoolSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("connectionPoolSettings")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert ein Konfigurationselement, das zusätzliche Verbindungsparameter Einstellungen angibt.</summary>
+        <value>Ein Konfigurationselement, das zusätzliche Verbindungsparameter Einstellungen angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.ServiceModel.Configuration.ServiceModelExtensionElement from);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.ServiceModel.Configuration.ServiceModelExtensionElement from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.TcpTransportElement.CopyFrom(System.ServiceModel.Configuration.ServiceModelExtensionElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.ServiceModel.Configuration.ServiceModelExtensionElement" />
+      </Parameters>
+      <Docs>
+        <param name="from">Das Konfigurationselement, dessen Einstellungen in diesen Konfigurationselementabschnitt kopiert werden sollen.</param>
+        <summary>Kopiert die Einstellungen des angegebenen Konfigurationselements in dieses Konfigurationselement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultBindingElement">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Channels.TransportBindingElement CreateDefaultBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Channels.TransportBindingElement CreateDefaultBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.TcpTransportElement.CreateDefaultBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.TransportBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedProtectionPolicy">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement ExtendedProtectionPolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement ExtendedProtectionPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TcpTransportElement.ExtendedProtectionPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("extendedProtectionPolicy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement" /> Instanz enthält die Konfigurationseinstellungen für die Verwendung erweiterter Schutz für eine Sitzung.</summary>
+        <value>Die Konfigurationseinstellungen für erweiterten Schutz einer Sitzung verwendet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="protected override void InitializeFrom (System.ServiceModel.Channels.BindingElement bindingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeFrom(class System.ServiceModel.Channels.BindingElement bindingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.TcpTransportElement.InitializeFrom(System.ServiceModel.Channels.BindingElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingElement" Type="System.ServiceModel.Channels.BindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="bindingElement">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenBacklog">
+      <MemberSignature Language="C#" Value="public int ListenBacklog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ListenBacklog" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TcpTransportElement.ListenBacklog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("listenBacklog", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Kanälen ab, die auf dem Listener warten können, um akzeptiert zu werden, oder legt diese Anzahl fest.</summary>
+        <value>Die maximale Anzahl von Kanälen, die auf dem Listener warten können, um akzeptiert zu werden. Der Standard ist 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verbindungen oberhalb des Limits werden in eine Warteschlange gestellt, bis unterhalb des Limits Speicherplatz verfügbar wird. Die <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement.LeaseTimeout%2A>-Eigenschaft schränkt die Dauer ein, die der Client auf eine Verbindung wartet, bevor eine Verbindungsausnahme ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PortSharingEnabled">
+      <MemberSignature Language="C#" Value="public bool PortSharingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PortSharingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TcpTransportElement.PortSharingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("portSharingEnabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die TCP-Anschlussfreigabe für diese Verbindung aktiviert ist, oder legt den Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn TCP-Portfreigabe aktiviert ist; <see langword="false" />, wenn jede Bindung ihren eigenen exklusiven Port verwendet. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Einstellung ist nur für Dienste relevant. Auf Clients hat dies keine Auswirkung.  
+  
+ Um diese Einstellung verwenden zu können, muss der TCP-Portfreigabedienst von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] durch Festlegen des manuellen oder automatischen Starttyps aktiviert werden.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)] zum TCP-Listener und zum Starten des Listeners finden Sie unter <xref:System.Net.Sockets.TcpListener>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TcpTransportElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TeredoEnabled">
+      <MemberSignature Language="C#" Value="public bool TeredoEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TeredoEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TcpTransportElement.TeredoEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("teredoEnabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Teredo-Protokoll aktiviert ist, das zur Adressierung von Clients hinter einer Firewall verwendet wird, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" /> wenn das Teredo-Protokoll aktiviert ist, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft wird das Teredo-Protokoll für das zugrunde liegende TCP-Socket aktiviert. Weitere Informationen finden Sie unter [Teredo – Übersicht](http://go.microsoft.com/fwlink/?LinkId=96651).  
+  
+ Diese Eigenschaft kann nur unter [!INCLUDE[wxpsp2](~/includes/wxpsp2-md.md)] und unter [!INCLUDE[ws2003](~/includes/ws2003-md.md)] verwendet werden. [!INCLUDE[wv](~/includes/wv-md.md)] verfügt über eine computerweite Konfigurationsoption für das Teredo-Protokoll, sodass diese Eigenschaft bei der Ausführung von [!INCLUDE[wv](~/includes/wv-md.md)] ignoriert wird. Um das Teredo-Protokoll verwenden zu können, müssen der Client und die Dienstcomputer über den IPv6-Stapel von Microsoft verfügen und ordnungsgemäß konfiguriert sein. Weitere Informationen zum Konfigurieren von Teredo finden Sie unter [Teredo – Übersicht](http://go.microsoft.com/fwlink/?LinkId=96651). Weitere Informationen finden Sie unter [Windows Server 2003 Technology Centers](http://go.microsoft.com/fwlink/?LinkId=96652).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

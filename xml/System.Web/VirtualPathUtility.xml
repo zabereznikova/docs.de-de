@@ -1,0 +1,549 @@
+<Type Name="VirtualPathUtility" FullName="System.Web.VirtualPathUtility">
+  <TypeSignature Language="C#" Value="public static class VirtualPathUtility" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit VirtualPathUtility extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.VirtualPathUtility" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Hilfsmethoden für Routinevorgänge virtuellen Pfad bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.VirtualPathUtility> Klasse stellt Hilfsmethoden für allgemeine Vorgänge, die im Zusammenhang mit virtuellen Pfaden bereit. Für ASP.NET-Serversteuerelemente und Servercode virtuellen Pfade, die mithilfe des Stamm-Operators Web-Anwendung, die Tilde (~) häufig dienen statt relative und absolute Pfade. Weitere Informationen finden Sie unter [ASP.NET Web Projektpfade](http://msdn.microsoft.com/library/2447f50c-b849-483c-8093-85ed53e7a5bd).  
+  
+ Verwenden der <xref:System.Web.VirtualPathUtility> Klasse bei der Anwendung relativen Pfade in absolute virtuelle Pfade konvertiert werden sollen, wie die Groß-/Kleinschreibung bei der Entwicklung eines benutzerdefinierten Web Service-Handlers werden möglicherweise.  
+  
+ Ein absoluter virtueller Pfad beginnt mit dem literal Schrägstrich (/). Ein relative virtueller Pfad ist relativ zum Stammverzeichnis Anwendung, wenn es nur eine Tilde (~) bzw. er mit der Tilde und einen doppelten umgekehrten Schrägstrich beginnt (~\\\\) oder die Tilde und einem Schrägstrich (~ /). Erstellen einen virtuellen Pfad relativ ist den Pfad unabhängig von der Anwendung.  
+  
+ Das virtuelle Verzeichnis für die Anwendung abgerufen werden kann, aus der <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A> und <xref:System.Web.HttpRequest.ApplicationPath%2A> Eigenschaften.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.VirtualPathUtility> Klasse ist nicht für Sicherheit oder Kanonisierungsalgorithmus Zwecke vorgesehen. Weitere Informationen zur Sicherheit bei der Anwendung finden Sie unter [Overview of Web Application Security Threats](http://msdn.microsoft.com/library/88d61678-f84e-4622-ae80-53128821855a). Generische URL-Verarbeitungsfunktionen finden Sie unter <xref:System.Uri>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.VirtualPathUtility> Klasse und einiger ihrer Methoden. Zunächst wird die <xref:System.Web.HttpRequest.FilePath%2A> Eigenschaft wird den virtuellen Pfad zur Webseite generiert. Die <xref:System.Web.VirtualPathUtility.GetFileName%2A>, <xref:System.Web.VirtualPathUtility.GetExtension%2A>, und <xref:System.Web.VirtualPathUtility.GetDirectory%2A> Methoden geben Informationen zu den virtuellen Pfad zurück. Als Nächstes wird die <xref:System.Web.HttpRequest.CurrentExecutionFilePath%2A> Eigenschaft generiert einen virtuellen Pfad der aktuellen Anforderung, die möglicherweise von anderen die <xref:System.Web.HttpRequest.FilePath%2A> -Eigenschaft, wenn eine <xref:System.Web.HttpResponse.Redirect%2A> Methode wurde aufgerufen. Die <xref:System.Web.VirtualPathUtility.IsAbsolute%2A>, <xref:System.Web.VirtualPathUtility.IsAppRelative%2A>, und <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> Methoden geben Informationen zu den virtuellen Pfad zurück.  
+  
+ [!code-aspx-csharp[System.Web.VirtualPathUtility#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#1)]
+ [!code-aspx-vb[System.Web.VirtualPathUtility#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppendTrailingSlash">
+      <MemberSignature Language="C#" Value="public static string AppendTrailingSlash (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string AppendTrailingSlash(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.AppendTrailingSlash(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad, den Schrägstrich auf angefügt werden soll.</param>
+        <summary>Fügt das literal Schrägstrich (/) am Ende der virtuelle Pfad an, wenn noch nicht vorhanden ist.</summary>
+        <returns>Der geänderte virtuelle Pfad.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das literal Schrägstrich (/) am Ende der virtuelle Pfad vorhanden ist, wird der virtuelle Pfad nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public static string Combine (string basePath, string relativePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Combine(string basePath, string relativePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.Combine(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="basePath" Type="System.String" />
+        <Parameter Name="relativePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="basePath">Der Basispfad.</param>
+        <param name="relativePath">Der relative Pfad.</param>
+        <summary>Kombiniert einen Basispfad und einen relativen Pfad.</summary>
+        <returns>Die kombinierte <paramref name="basePath" /> und <paramref name="relativePath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.VirtualPathUtility.Combine%2A> -Methode gibt den Wert, der die <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A> Eigenschaft, wenn der relative Pfad genau eine Tilde (~) ist.  
+  
+ Die <xref:System.Web.VirtualPathUtility.Combine%2A> -Methode verwendet die <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A> Eigenschaftswert anstelle der Basispfad, wenn der relative Pfad mit einer Tilde und einem Schrägstrich beginnt (~ /) ist, andernfalls die <xref:System.Web.VirtualPathUtility.Combine%2A> Methode verwendet den Basispfad.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="relativePath" />entspricht dem physischen Pfad.  
+  
+ - oder -   
+  
+ <paramref name="relativePath" />enthält eine oder mehrere Doppelpunkte.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          Der <paramref name="relativePath" /> ist <see langword="null" /> oder eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ Der <paramref name="basePath" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectory">
+      <MemberSignature Language="C#" Value="public static string GetDirectory (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDirectory(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.GetDirectory(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad.</param>
+        <summary>Gibt das Verzeichnisteil einen virtuellen Pfad zurück.</summary>
+        <returns>Das Verzeichnis, in den virtuellen Pfad verwiesen wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `virtualPath` nicht als Stammelement, d. h., er entspricht nicht den Stamm-Operator (die Tilde [~]), beginnt nicht mit einer Tilde (~), z. B. einer Tilde und einem Schrägstrich (~ /) oder eine Tilde und einen doppelten umgekehrten Schrägstrich (~ / /), oder beginnt nicht mit einem Schrägstrich (/), ein <xref:System.ArgumentException> Ausnahme  wird ausgelöst.  
+  
+ Wenn der virtuelle Pfad, der übergeben wird die <xref:System.Web.VirtualPathUtility.GetDirectory%2A> Methode ist `"/images/image1.gif"`, ist das zurückgegebene Verzeichnis `"/images"`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.VirtualPathUtility.GetFileName%2A>, <xref:System.Web.VirtualPathUtility.GetExtension%2A>, und <xref:System.Web.VirtualPathUtility.GetDirectory%2A> Methoden.  
+  
+ [!code-csharp[System.Web.VirtualPathUtility#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#2)]
+ [!code-vb[System.Web.VirtualPathUtility#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="virtualPath" />ist nicht als Stammelement.  
+  
+ \- oder –  
+  
+ Der <paramref name="virtualPath" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtension">
+      <MemberSignature Language="C#" Value="public static string GetExtension (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetExtension(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.GetExtension(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad.</param>
+        <summary>Ruft die Erweiterung der Datei, die in den virtuellen Pfad verwiesen wird.</summary>
+        <returns>Die Datei namens Erweiterung Zeichenfolgenliteral, einschließlich des Punkts (.), <see langword="null" />, oder eine leere Zeichenfolge ("").</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der virtuelle Pfad, der übergeben wird die <xref:System.Web.VirtualPathUtility.GetExtension%2A> Methode ist `"/images/image1.gif"`, der zurückgegebenen Erweiterung handelt `".gif"`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.VirtualPathUtility.GetFileName%2A>, <xref:System.Web.VirtualPathUtility.GetExtension%2A>, und <xref:System.Web.VirtualPathUtility.GetDirectory%2A> Methoden.  
+  
+ [!code-csharp[System.Web.VirtualPathUtility#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#2)]
+ [!code-vb[System.Web.VirtualPathUtility#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="virtualPath" />enthält eine oder mehrere Zeichen, die nicht gültig sind, gemäß <see cref="F:System.IO.Path.InvalidPathChars" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileName">
+      <MemberSignature Language="C#" Value="public static string GetFileName (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFileName(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.GetFileName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad.</param>
+        <summary>Ruft den Dateinamen der Datei, die in den virtuellen Pfad verwiesen wird.</summary>
+        <returns>Der Dateiname, die nach dem letzten Verzeichniszeichen in Literalen <paramref name="virtualPath" />ist, andernfalls der letzten Verzeichnisses zu benennen, wenn das letzte Zeichen des <paramref name="virtualPath" /> ein Verzeichnis bzw. Volumetrennzeichen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der virtuelle Pfad, der übergeben wird die <xref:System.Web.VirtualPathUtility.GetFileName%2A> Methode ist `"/images/image1.gif"`, ist der zurückgegebene Dateiname `"image1.gif"`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.VirtualPathUtility.GetFileName%2A>, <xref:System.Web.VirtualPathUtility.GetExtension%2A>, und <xref:System.Web.VirtualPathUtility.GetDirectory%2A> Methoden.  
+  
+ [!code-csharp[System.Web.VirtualPathUtility#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#2)]
+ [!code-vb[System.Web.VirtualPathUtility#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="virtualPath" />enthält eine oder mehrere Zeichen, die nicht gültig sind, gemäß <see cref="F:System.IO.Path.InvalidPathChars" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAbsolute">
+      <MemberSignature Language="C#" Value="public static bool IsAbsolute (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsAbsolute(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.IsAbsolute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad, um zu überprüfen.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob der angegebene virtuelle Pfad absolut ist; d. h. mit einem literalen Schrägstrich (/) wird gestartet.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="virtualPath" /> ist ein absoluter Pfad und nicht <see langword="null" /> oder eine leere Zeichenfolge (""); andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein virtueller Pfad ist absolut, wenn er mit einem literalen Schrägstrich (/) beginnt. Z. B. die <xref:System.Web.HttpRequest.Path%2A> Eigenschaft gibt einen absoluten virtuellen Pfad zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.VirtualPathUtility.IsAbsolute%2A>, <xref:System.Web.VirtualPathUtility.IsAppRelative%2A>, und <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> Methoden.  
+  
+ [!code-csharp[System.Web.VirtualPathUtility#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#3)]
+ [!code-vb[System.Web.VirtualPathUtility#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="virtualPath" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAppRelative">
+      <MemberSignature Language="C#" Value="public static bool IsAppRelative (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsAppRelative(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.IsAppRelative(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad, um zu überprüfen.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob die angegebene virtuelle Pfad relativ zur Anwendung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="virtualPath" /> relativ zur Anwendung ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der virtuelle Pfad kann nur die Stamm-Operator (die Tilde [~]) oder mit dem Stammoperator kann beginnen. Wenn `virtualPath` ist `null`, wird eine <xref:System.ArgumentNullException> Ausnahme ausgelöst. Wenn `virtualPath` ist eine leere Zeichenfolge (""), wird die <xref:System.Web.VirtualPathUtility.IsAppRelative%2A> -Methode zurückkehrt `false`.  
+  
+> [!NOTE]
+>  `"~``filename` `"` ist kein gültiger virtueller Pfad und gibt `false` für die <xref:System.Web.VirtualPathUtility.IsAppRelative%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.VirtualPathUtility.IsAbsolute%2A>, <xref:System.Web.VirtualPathUtility.IsAppRelative%2A>, und <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> Methoden.  
+  
+ [!code-csharp[System.Web.VirtualPathUtility#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#3)]
+ [!code-vb[System.Web.VirtualPathUtility#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="virtualPath" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeRelative">
+      <MemberSignature Language="C#" Value="public static string MakeRelative (string fromPath, string toPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string MakeRelative(string fromPath, string toPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.MakeRelative(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromPath" Type="System.String" />
+        <Parameter Name="toPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fromPath">Der beginnend virtuelle Pfad zum Zurückgeben der relativen virtuellen Pfads aus.</param>
+        <param name="toPath">Der Endwert virtuelle Pfad zu den relativen virtuellen Pfad zurück.</param>
+        <summary>Gibt den relativen virtuellen Pfad aus einem virtuellen Pfad mit dem Stammoperator (die Tilde [~]) in eine andere zurück.</summary>
+        <returns>Die relative virtuelle Pfad von <paramref name="fromPath" /> auf <paramref name="toPath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `fromPath` und `toPath` Parameter sind nicht als Stammelement, d. h., sie entspricht nicht den Stamm-Operator (die Tilde [~]), können nicht gestartet werden, mit einer Tilde (~), z. B. einer Tilde und einem Schrägstrich (~ /) oder eine Tilde und einen doppelten umgekehrten Schrägstrich (~ / /), oder starten Sie nicht mit einem Schrägstrich markieren ( /) enthält, eine <xref:System.ArgumentException> Ausnahme wird ausgelöst.  
+  
+ Abfragezeichenfolgen-Parametern und HTML-Anker, die im URI verwendet werden werden bei der Bestimmung des relativen Pfads nicht verwendet.  
+  
+ Wenn `fromPath` ist `"/directory1/file1.aspx"` und `toPath` ist `"/directory2/file2.aspx"`, <xref:System.Web.VirtualPathUtility.MakeRelative%2A> -Methode zurückkehrt `"../directory2/file2.aspx"`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="fromPath" />ist nicht als Stammelement.  
+  
+ \- oder –  
+  
+ <paramref name="toPath" />ist nicht als Stammelement.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveTrailingSlash">
+      <MemberSignature Language="C#" Value="public static string RemoveTrailingSlash (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string RemoveTrailingSlash(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.RemoveTrailingSlash(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad entfernt alle nachgestellten Schrägstrich aus.</param>
+        <summary>Entfernt einen nachgestellten Schrägstrich (/) aus einem virtuellen Pfad.</summary>
+        <returns>Ein virtueller Pfad ohne nachgestellten Schrägstrich, wenn der virtuelle Pfad nicht bereits das Stammverzeichnis ("/"); andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.VirtualPathUtility.RemoveTrailingSlash%2A> -Methode entfernt einen Schrägstrich (/) am Ende des virtuellen Pfads. Wenn der virtuelle Pfad bereits das Stammverzeichnis (`"/"`), wird keine Aktion ausgeführt. Wenn der virtuelle Pfad `null` oder eine leere Zeichenfolge (""), wird die <xref:System.Web.VirtualPathUtility.RemoveTrailingSlash%2A> -Methode zurückkehrt `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToAbsolute">
+      <MemberSignature Language="C#" Value="public static string ToAbsolute (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToAbsolute(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.ToAbsolute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad, in ein relativer Pfad zu konvertieren.</param>
+        <summary>Konvertiert einen virtuellen Pfad in einen absoluten Pfad der Anwendung an.</summary>
+        <returns>Die Darstellung der absolute Pfad des angegebenen virtuellen Pfads.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein absoluter Pfad der Anwendung ist eine, wobei der Pfad der Anwendung statt des Stammoperators (die Tilde [~]) verwendet wird.  
+  
+ Wenn `virtualPath` ist:  
+  
+-   Absolute, die <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> -Methode gibt den virtuellen Pfad unverändert zurück.  
+  
+-   Relativ zur Anwendung, die <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> Methode fügt den aktuellen Anwendung virtuelle Verzeichnispfad an den Anfang der `virtualPath`. Z. B. virtuelle Verzeichnispfad der aktuellen Anwendung aus zugegriffen werden kann die <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A> Eigenschaft.  
+  
+-   Nicht als Stammelement, das <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> Methode löst eine <xref:System.ArgumentOutOfRangeException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="virtualPath" />ist nicht als Stammelement.</exception>
+        <exception cref="T:System.Web.HttpException">Ein führender doppelter Punkt (.) Dient zum übergeordneten Verzeichnis zu beenden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToAbsolute">
+      <MemberSignature Language="C#" Value="public static string ToAbsolute (string virtualPath, string applicationPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToAbsolute(string virtualPath, string applicationPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.ToAbsolute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="applicationPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad, in ein relativer Pfad zu konvertieren.</param>
+        <param name="applicationPath">Zum Konvertieren der Anwendungspfad <c>"VirtualPath"</c> auf einen relativen Pfad.</param>
+        <summary>Konvertiert einen virtuellen Pfad, den absoluten Pfad einer Anwendung unter Verwendung des angegebenen Pfads.</summary>
+        <returns>Die Darstellung der absoluten virtuellen Pfad des <paramref name="virtualPath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> Überladung von der <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> Methode verwendet, der Pfad der angegebenen Anwendung statt auf den aktuellen Anwendungspfad.  
+  
+ Wenn `virtualPath` ist:  
+  
+-   Absolute, die <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> -Methode gibt den virtuellen Pfad unverändert zurück.  
+  
+-   Relativ zur Anwendung, die <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> Methode fügt `applicationPath` auf den Anfang des virtuellen Pfads.  
+  
+-   Nicht als Stammelement, das <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> Methode löst eine <xref:System.ArgumentOutOfRangeException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="applicationPath" />ist nicht als Stammelement.</exception>
+        <exception cref="T:System.Web.HttpException">Im Anwendungspfad dient ein führender doppelter Punkt (.) zum übergeordneten Verzeichnis zu beenden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToAppRelative">
+      <MemberSignature Language="C#" Value="public static string ToAppRelative (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToAppRelative(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.ToAppRelative(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad, in ein relativer Pfad zu konvertieren.</param>
+        <summary>Konvertiert einen virtuellen Pfad in einem anwendungsrelativen Pfad mithilfe des virtuellen Pfads der Anwendung, die in der <see cref="P:System.Web.HttpRuntime.AppDomainAppVirtualPath" /> Eigenschaft.</summary>
+        <returns>Die Darstellung der Anwendung relativen Pfad des <paramref name="virtualPath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der virtuelle Pfad für die Anwendung `"myapp"` und den virtuellen Pfad `"/myApp/sub/default.asp"` übergeben wird, in der <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> -Methode, um der resultierenden anwendungsrelativen Pfad ist `"~/sub/default.aspx"`.  
+  
+ Wenn `virtualPath` beginnt nicht mit den aktuellen Anwendungspfad, die <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> -Methode gibt den virtuellen Pfad unverändert zurück.  
+  
+ Wenn `virtualPath` ist identisch mit der Anwendungspfad ist der Stamm-Operator (die Tilde [~]) zurückgegeben. Z. B. virtuelle Verzeichnispfad der aktuellen Anwendung aus zugegriffen werden kann die <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.VirtualPathUtility.IsAbsolute%2A>, <xref:System.Web.VirtualPathUtility.IsAppRelative%2A>, und <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> Methoden.  
+  
+ [!code-csharp[System.Web.VirtualPathUtility#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#3)]
+ [!code-vb[System.Web.VirtualPathUtility#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="virtualPath" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToAppRelative">
+      <MemberSignature Language="C#" Value="public static string ToAppRelative (string virtualPath, string applicationPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToAppRelative(string virtualPath, string applicationPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.ToAppRelative(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="applicationPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad, in ein relativer Pfad zu konvertieren.</param>
+        <param name="applicationPath">Zum Konvertieren der Anwendungspfad <c>"VirtualPath"</c> auf einen relativen Pfad.</param>
+        <summary>Konvertiert einen virtuellen Pfad in einem anwendungsrelativen Pfad mit einem angegebenen Pfad.</summary>
+        <returns>Die Darstellung der Anwendung relativen Pfad des <paramref name="virtualPath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> Überladung von der <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> -Methode verwendet `applicationPath` anstelle der aktuellen Anwendung-Pfads. Wenn `virtualPath` beginnt nicht mit `applicationPath`die <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> -Methode gibt den virtuellen Pfad unverändert zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

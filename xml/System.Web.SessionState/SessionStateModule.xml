@@ -1,0 +1,289 @@
+<Type Name="SessionStateModule" FullName="System.Web.SessionState.SessionStateModule">
+  <TypeSignature Language="C#" Value="public sealed class SessionStateModule : System.Web.SessionState.ISessionStateModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SessionStateModule extends System.Object implements class System.Web.IHttpModule, class System.Web.SessionState.ISessionStateModule" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.SessionStateModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.SessionState.ISessionStateModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Sitzungszustanddienste für eine Anwendung bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.SessionState.SessionStateModule>wird von ASP. Sitzungsstatus Standardhandler des NET. Er schreibt Sitzungsdaten und aus dem Sitzungszustandsspeicher und löst abgerufen der **Session_OnStart** und **Session_OnEnd** Ereignisse. Ausführliche Informationen zur Verwendung des ASP.NET-SITZUNGSSTATUSANBIETERS zum Speichern und Abrufen von Werten für eine benutzersitzung finden Sie unter [ASP.NET Session State Overview](http://msdn.microsoft.com/library/6d60d381-6521-4e1d-9089-da6464f2a9bc).  
+  
+ Ersetzen Sie die <xref:System.Web.SessionState.SessionStateModule> durch eine benutzerdefinierte Implementierung von der <xref:System.Web.IHttpModule> -Schnittstelle, die Status der Sitzung verwaltet. Ein Beispiel eines benutzerdefinierten Sitzungsstatus Moduls finden Sie unter der <xref:System.Web.SessionState.SessionStateUtility> -Klassenübersicht.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionStateModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.SessionState.SessionStateModule" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird nicht von Anwendungscode aufgerufen werden soll.  
+  
+ Ein <xref:System.Web.HttpApplication> Objekt wird erstellt, wenn eine ASP.NET-Anwendung gestartet wird. Die <xref:System.Web.HttpApplication> -Objekt ruft die <xref:System.Web.SessionState.SessionStateModule> Konstruktor zur Erstellung der <xref:System.Web.SessionState.SessionStateModule> Objekt für die Anwendung. Die <xref:System.Web.SessionState.SessionStateModule> in der Konfiguration für eine Anwendung angegeben ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateModule.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt den endgültigen Bereinigungscode vor der <see cref="T:System.Web.SessionState.SessionStateModule" /> Objekt im Arbeitsspeicher freigegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht von Anwendungscode aufgerufen werden soll.  
+  
+ Ein <xref:System.Web.HttpApplication> Objekt wird erstellt, wenn eine ASP.NET-Anwendung gestartet wird. Die <xref:System.Web.HttpApplication> Objekt erstellt und initialisiert die <xref:System.Web.SessionState.SessionStateModule> Objekt für die Anwendung und ruft die <xref:System.Web.SessionState.SessionStateModule.Dispose%2A> Methode, wenn das Objekt freigegeben wird. Die <xref:System.Web.SessionState.SessionStateModule> in der Konfiguration für eine Anwendung angegeben ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="public event EventHandler End;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler End" />
+      <MemberSignature Language="DocId" Value="E:System.Web.SessionState.SessionStateModule.End" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Sitzung beendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SessionState.SessionStateModule.End> Ereignis wird am Ende einer Anforderung bei der <xref:System.Web.SessionState.HttpSessionState.Abandon%2A> -Methode aufgerufen wurde oder wenn die Sitzung ist abgelaufen. Eine Sitzung abläuft, wenn die Anzahl der Minuten von angegeben die <xref:System.Web.SessionState.HttpSessionState.Timeout%2A> Eigenschaft übergeben, ohne eine Anforderung für die Sitzung erfolgten.  
+  
+ Die **Session_OnEnd** Ereignis wird verwendet, um alle Bereinigungen für eine Sitzung, wie z. B. das Freigeben von Ressourcen, die von der Sitzung verwendeten ausführen.  
+  
+ Sie können angeben, einen Handler für das <xref:System.Web.SessionState.SessionStateModule.End> Ereignis, indem Sie eine öffentliche Unterroutine namens hinzufügen **Session_OnEnd** in die Datei "Global.asax".  
+  
+> [!NOTE]
+>  Die **Session_OnEnd** Ereignis wird nur unterstützt, wenn der Sitzungsstatus <xref:System.Web.SessionState.HttpSessionState.Mode%2A?displayProperty=nameWithType> Eigenschaftswert ist <xref:System.Web.SessionState.SessionStateMode.InProc>, dies ist die Standardeinstellung. Wenn der Sitzungsstatus <xref:System.Web.SessionState.HttpSessionState.Mode%2A> auf festgelegt ist <xref:System.Web.SessionState.SessionStateMode.StateServer> oder <xref:System.Web.SessionState.SessionStateMode.SQLServer>, und klicken Sie dann die **Session_OnEnd** Ereignis in der Datei "Global.asax" wird ignoriert. Wenn der Sitzungsstatus <xref:System.Web.SessionState.HttpSessionState.Mode%2A> Eigenschaftswert ist <xref:System.Web.SessionState.SessionStateMode.Custom>, die Unterstützung für die **Session_OnEnd** Ereignis richtet sich nach den benutzerdefinierten Sitzungszustandsspeicher-Anbieter.  
+  
+ Obwohl die <xref:System.Web.SessionState.SessionStateModule.End> Ereignis öffentlich ist, können Sie Sie nur durch Hinzufügen eines ereignishandlers in der Datei "Global.asax" behandeln. Diese Einschränkung wird implementiert, da <xref:System.Web.HttpApplication> Instanzen für Leistung wiederverwendet werden. Wenn eine Sitzung abläuft, wird nur der **Session_OnEnd** in der Datei "Global.asax" angegebene Ereignis ausgeführt wird, um zu verhindern, dass Code Aufrufen einer <xref:System.Web.SessionState.SessionStateModule.End> zugeordnete Ereignishandler eine <xref:System.Web.HttpApplication> -Instanz, die derzeit verwendet wird.  
+  
+ Weitere Informationen zu der Datei "Global.asax", finden Sie unter ["Global.asax" Syntax](http://msdn.microsoft.com/en-us/9ade9d4d-4d52-4e88-af52-53a9ffa26582).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Inhalt einer Datei "Global.asax" mit der **Session_OnStart** und **Session_OnEnd** Ereignisse definiert.  
+  
+```vb  
+<script language="VB" runat="server">  
+Public Sub Session_OnStart()  
+  
+End Sub  
+  
+Public Sub Session_OnEnd()  
+  
+End Sub  
+</script>  
+```  
+  
+```csharp  
+<script language="C#" runat="server">  
+public void Session_OnStart()  
+{  
+  
+}  
+  
+public void Session_OnEnd()  
+{  
+  
+}  
+</script>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init (System.Web.HttpApplication app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Web.HttpApplication app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateModule.Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="app" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="app">Die aktuelle Anwendung.</param>
+        <summary>Ruft die Initialisierung code, wenn ein <see cref="T:System.Web.SessionState.SessionStateModule" /> Objekt erstellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht von Anwendungscode aufgerufen werden soll.  
+  
+ Ein <xref:System.Web.HttpApplication> wird erstellt, wenn eine ASP.NET-Anwendung gestartet wird. Die <xref:System.Web.HttpApplication> -Objekt ruft die <xref:System.Web.SessionState.SessionStateModule.Init%2A> Methode, wenn er erstellt die <xref:System.Web.SessionState.SessionStateModule> Objekt für die Anwendung. Die <xref:System.Web.SessionState.SessionStateModule> Klasse in der Konfiguration für eine Anwendung angegeben wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see langword="mode" /> Attribut in der [SessionState Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/bda6fb8c-0076-43e3-9ce2-8cf1f8bdaa7d) Konfigurationselement auf festgelegt ist <see cref="F:System.Web.SessionState.SessionStateMode.StateServer" /> oder <see cref="F:System.Web.SessionState.SessionStateMode.SQLServer" />, und die ASP.NET-Anwendung weist weniger als <see cref="F:System.Web.AspNetHostingPermissionLevel.Medium" /> Vertrauensstellung.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die <see langword="mode" /> Attribut in der [SessionState Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/bda6fb8c-0076-43e3-9ce2-8cf1f8bdaa7d) Konfigurationselement auf festgelegt ist <see cref="F:System.Web.SessionState.SessionStateMode.Custom" /> und <see langword="customProvider" /> Attribut ist leer oder nicht vorhanden.  
+  
+ - oder -   
+  
+ Die <see langword="mode" /> Attribut in der [SessionState Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/bda6fb8c-0076-43e3-9ce2-8cf1f8bdaa7d) Konfigurationselement auf festgelegt ist <see cref="F:System.Web.SessionState.SessionStateMode.Custom" /> und der Anbieter im namentlich identifiziert die <see langword="customProvider" /> Attribut wurde nicht auf die hinzugefügt[Providers-Element für SessionState ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/219d6778-9fb8-48ac-810d-bec68cf7d6aa) Unterelement.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseSessionState">
+      <MemberSignature Language="C#" Value="public void ReleaseSessionState (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseSessionState(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateModule.ReleaseSessionState(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der <see cref="T:System.Web.HttpContext" />, für den der Sitzungszustand freigegeben werden soll.</param>
+        <summary>Gibt den Sitzungszustand für den angegebenen <see cref="T:System.Web.HttpContext" /> frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseSessionStateAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task ReleaseSessionStateAsync (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task ReleaseSessionStateAsync(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateModule.ReleaseSessionStateAsync(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der <see cref="T:System.Web.HttpContext" />, für den der Sitzungszustand freigegeben werden soll.</param>
+        <summary>Gibt den Sitzungszustand für den angegebenen <see cref="T:System.Web.HttpContext" /> asynchron frei.</summary>
+        <returns>Ein <see cref="T:System.Threading.Tasks.Task" /> für den asynchronen Vorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public event EventHandler Start;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Start" />
+      <MemberSignature Language="DocId" Value="E:System.Web.SessionState.SessionStateModule.Start" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Ereignis, das auftritt, wenn eine Sitzung erstellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SessionState.SessionStateModule.Start> Ereignis wird am Anfang einer Anforderung ausgelöst, wenn eine neue Sitzung gestartet wird. Eine neue Sitzung wird gestartet, wenn wird angefordert, die nicht über einen Sitzungsbezeichner enthält, die Sitzungs-ID ungültig ist oder die Sitzung, die eine Sitzungs-ID zugeordnet ist abgelaufen.  
+  
+ Die **Session_OnStart** Ereignis wird verwendet, um alle Initialisierungsvorgänge für eine Sitzung, z. B. das Festlegen von Standardwerten für Sitzungsvariablen auszuführen.  
+  
+ Sie können angeben, einen Handler für das <xref:System.Web.SessionState.SessionStateModule.Start> Ereignis, indem Sie eine öffentliche Unterroutine namens hinzufügen **Session_OnStart** in die Datei "Global.asax".  
+  
+ Weitere Informationen zu der Datei "Global.asax", finden Sie unter ["Global.asax" Syntax](http://msdn.microsoft.com/en-us/9ade9d4d-4d52-4e88-af52-53a9ffa26582).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Inhalt einer Datei "Global.asax" mit der **Session_OnStart** und **Session_OnEnd** Ereignisse definiert.  
+  
+```vb  
+<script language="VB" runat="server">  
+Public Sub Session_OnStart()  
+  
+End Sub  
+  
+Public Sub Session_OnEnd()  
+  
+End Sub  
+</script>  
+```  
+  
+```csharp  
+<script language="C#" runat="server">  
+public void Session_OnStart()  
+{  
+  
+}  
+  
+public void Session_OnEnd()  
+{  
+  
+}  
+</script>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

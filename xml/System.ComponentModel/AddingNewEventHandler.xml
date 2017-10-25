@@ -1,0 +1,54 @@
+<Type Name="AddingNewEventHandler" FullName="System.ComponentModel.AddingNewEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void AddingNewEventHandler(object sender, AddingNewEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AddingNewEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.AddingNewEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.ComponentModel.AddingNewEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses, in der Regel einen Container oder datengebundenen-Auflistung.</param>
+    <param name="e">Ein <see cref="T:System.ComponentModel.AddingNewEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Windows.Forms.BindingSource.AddingNew" />-Ereignisses dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingSource.AddingNew?displayProperty=nameWithType> Ereignis tritt auf, vor dem Hinzufügen eines neuen Elements zu einer Sammlung, in der Regel in Datenbindungsszenarien. Der Handler für dieses Ereignis kann das neue Element hinzugefügt werden soll, angeben, überschreiben die Standardaktionen der Collection-Klasse. Dies geschieht durch Festlegen der <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A> Eigenschaft von der <xref:System.ComponentModel.AddingNewEventArgs> Parameter `e` auf dieses neue Element. Dieses Element muss in der Regel eines Typs, der von der empfangenden Auflistung erwartet wird, oder löst eine Ausnahme des Typs aus der auflistungs <xref:System.InvalidCastException>.  
+  
+ Dieses Ereignis wird häufig verwendete in Datenbindungsszenarien innerhalb von Klassen wie <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> und <xref:System.ComponentModel.BindingList%601?displayProperty=nameWithType>.  
+  
+ Beim Erstellen eines <xref:System.ComponentModel.AddingNewEventHandler>-Delegaten geben Sie die Methode für die Ereignisbehandlung an. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.AddingNewEventHandler> Delegat zum Behandeln der <xref:System.Windows.Forms.BindingSource.AddingNew?displayProperty=nameWithType> Ereignis. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [wie: Anpassen der Hinzufügung mit der BindingSource in Windows Forms](~/docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataConnector.AddingNew#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/CPP/form1.cpp#8)]
+ [!code-csharp[System.Windows.Forms.DataConnector.AddingNew#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/CS/form1.cs#8)]
+ [!code-vb[System.Windows.Forms.DataConnector.AddingNew#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/VB/form1.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

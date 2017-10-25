@@ -1,0 +1,209 @@
+<Type Name="ClientScriptItem" FullName="System.Web.UI.Design.ClientScriptItem">
+  <TypeSignature Language="C#" Value="public sealed class ClientScriptItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ClientScriptItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ClientScriptItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Client-Script-Element in einem Web Form oder das Benutzersteuerelement zur Entwurfszeit dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ClientScriptItem> -Klasse stellt eine `script` -Element, das zur Entwurfszeit in einem Webdokument enthalten ist. Eine benutzerdefiniertes Steuerelement-Designer-Implementierung können Sie eine <xref:System.Web.UI.Design.ClientScriptItem> Objekt um ein Web Form oder das Benutzersteuerelement Client Skriptelemente hinzuzufügen.  
+  
+ Verwenden Sie zur Entwurfszeit die <xref:System.Web.UI.Design.WebFormsRootDesigner> Klasse festlegen oder Überprüfen Sie Client-Script-Elemente, die in einem Dokument, z. B. ein Web Form, ein Webserversteuerelement, einer Inhaltsseite oder einer Masterseite auf der Entwurfsoberfläche enthalten sind. Abrufen der Auflistung von Client-Script-Elemente, die innerhalb des Web-Dokuments, mithilfe enthalten sind der <xref:System.Web.UI.Design.WebFormsRootDesigner.GetClientScriptsInDocument%2A> Methode. Das Web-Dokument mithilfe einer Client-Script-Element hinzufügen die <xref:System.Web.UI.Design.WebFormsRootDesigner.AddClientScriptToDocument%2A> Methode.  
+  
+ In der Regel eine `script` Element skriptanweisungen enthält, oder es gibt einen externen Speicherort für skriptanweisungen. Die `script` Element können optional die Sprache der skriptanweisungen definiert werden. Verwenden der <xref:System.Web.UI.Design.ClientScriptItem.%23ctor%2A> Konstruktor initialisiert die Eigenschaften für ein neues Script-Objekt. Verwenden der <xref:System.Web.UI.Design.ClientScriptItem> Eigenschaften untersucht die `script` -Objekt Attribute und Inhalt. Die <xref:System.Web.UI.Design.ClientScriptItem.Language%2A> Eigenschaft stellt die `language` Attribut von der `script` Element. Die <xref:System.Web.UI.Design.ClientScriptItem.Source%2A> Eigenschaft stellt die `src` Attribut. Die <xref:System.Web.UI.Design.ClientScriptItem.Text%2A> Eigenschaft darstellt, die skriptanweisungen ausgeführt werden, auf dem Client, die in enthaltenen der `script` Element.  
+  
+ Verwenden der <xref:System.Web.UI.Design.ClientScriptItem> Klasse, um Skripts zu verwalten, die zur Entwurfszeit ausgeführt werden sollen.  
+  
+ Verwenden Sie zum Verwalten von Client-Script-Elemente zur Laufzeit die <xref:System.Web.UI.ClientScriptManager> Klasse. Weitere Informationen zur Verwendung von Clientskripts zur Laufzeit finden Sie unter [Clientskripts in ASP.NET Web Pages](http://msdn.microsoft.com/library/13edb6b9-2dea-43c6-b8c1-a47207de19aa).  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.ClientScriptItem> -Klasse stellt `script` Elemente zur Entwurfszeit, die letztendlich analysiert und im Clientbrowser ausgeführt. Da die `script` Elemente, die generiert werden, für die <xref:System.Web.UI.Design.ClientScriptItem> Objekte auf dem Server nicht ausgeführt werden, die Elemente werden keine der `runat="server"` Attribut.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientScriptItem (string text, string source, string language, string type, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, string source, string language, string type, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ClientScriptItem.#ctor(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="language" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Inhalt für die <see langword="script" /> Element; eine Zeichenfolge von skriptanweisungen, die auf dem Client ausgeführt.</param>
+        <param name="source">Die <see langword="src" /> -Attributwert für das <see langword="script" /> Element, der Speicherort für eine externe Quelle für den Inhalt des Clientskripts angibt.</param>
+        <param name="language">Die <see langword="language" /> -Attributwert für das <see langword="script" /> Element, das Angeben der Sprache der skriptanweisungen.</param>
+        <param name="type">Der Wert des Type-Attribut für die <see langword="script" /> Element, den MIME-Typ für das zugeordnete Skriptmodul angegeben.</param>
+        <param name="id">Die ID für die <see langword="script" /> Element. Dieses Argument ist vom Entwurfshost erforderlich (z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)]).</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.ClientScriptItem" /> -Klasse mit den angegebenen Parametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Initialisieren Sie die Anweisungen für die <xref:System.Web.UI.Design.ClientScriptItem> Objekt, indem Sie entweder die `text` oder `source` Parameter (nicht beide). Verwendung `text` initialisieren Sie das Skript mit einer Eingabezeichenfolge mit den Anweisungen. Verwenden Sie alternativ `source` initialisiert werden, ein Skript mit einem Pfad, die skriptanweisungen enthält.  
+  
+ Geben Sie eine der Eingabeparameter als `null` oder eine leere Zeichenfolge (""); die entsprechende Eigenschaft festgelegt ist, verwenden den Eingabewert, und die `script` Element ohne diese Eigenschaft generiert wird. Mithilfe von `null` oder eine leere Zeichenfolge ("") führt zu folgenden Ergebnissen:  
+  
+-   Für `text`, den entsprechenden `script` Element keinen skriptanweisungen enthält.  
+  
+-   Für `source`, `src` -Attribut nicht festgelegt ist, dem `script` Element.  
+  
+-   Für `language`, `language` -Attribut nicht festgelegt ist, dem `script` Element.  
+  
+     Wenn Sie ein Clientskriptblock die Skriptsprache nicht angegeben ist, bestimmt der Clientbrowser die Sprache an.  
+  
+-   Für `type`, die `type` in das Script-Element ist kein Attribut festgelegt.  
+  
+     Wenn Sie ein Clientskriptblock kein Skripttyp angegeben ist, bestimmt der Clientbrowser den Typ an.  
+  
+-   Für `id`, Entwurfshost (z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)]) löst eine <xref:System.ArgumentNullException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="id" />ist null (vom Entwurfshost ausgelöst).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ClientScriptItem.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see langword="ID" /> -Attributwert für das Client-Script-Element.</summary>
+        <value>Die <see langword="ID" /> Wert, der die <see langword="script" /> Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public string Language { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ClientScriptItem.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see langword="language" /> -Attributwert für das Client-Script-Element.</summary>
+        <value>Für die angegebene Sprachname der <see langword="language" /> Attribut in der <see langword="script" /> Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ClientScriptItem.Language%2A> Eigenschaft darstellt, die Sprache, in der die skriptanweisungen geschrieben werden. Wenn die <xref:System.Web.UI.Design.ClientScriptItem.Language%2A> Eigenschaft ist `null` oder eine leere Zeichenfolge (""), wird die `language` -Attribut nicht festgelegt ist, der `script` Element. Wenn Sie ein Clientskriptblock die Skriptsprache nicht angegeben ist, bestimmt der Clientbrowser die Sprache an.  
+  
+ Die <xref:System.Web.UI.Design.ClientScriptItem.Language%2A> Eigenschaft wird initialisiert, indem die <xref:System.Web.UI.Design.ClientScriptItem.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ClientScriptItem.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see langword="src" /> -Attributwert für das Client-Script-Element.</summary>
+        <value>Der Pfad zur Quelldatei angegeben für die <see langword="src" /> Attribut in der <see langword="script" /> Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ClientScriptItem.Source%2A> Eigenschaft gibt den Speicherort für eine externe Quelle für den Inhalt des Clientskripts. In der Regel die skriptanweisungen für eine `script` Element angegeben werden, entweder die <xref:System.Web.UI.Design.ClientScriptItem.Text%2A> oder <xref:System.Web.UI.Design.ClientScriptItem.Source%2A> Eigenschaft.  
+  
+ Wenn die <xref:System.Web.UI.Design.ClientScriptItem.Source%2A> Eigenschaft ist `null` oder eine leere Zeichenfolge (""), wird die `src` -Attribut nicht festgelegt ist, der `script` Element.  
+  
+ Die <xref:System.Web.UI.Design.ClientScriptItem.Source%2A> Eigenschaft wird initialisiert, indem die <xref:System.Web.UI.Design.ClientScriptItem.%23ctor%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ClientScriptItem.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die skriptanweisungen, die in das Client-Script-Element enthalten sind.</summary>
+        <value>In enthaltenen skriptanweisungen die <see langword="script" /> Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ClientScriptItem.Text%2A> Eigenschaft darstellt, die Anweisungen, die in enthaltenen der `script` Element. In der Regel die skriptanweisungen für eine `script` Element angegeben werden, entweder die <xref:System.Web.UI.Design.ClientScriptItem.Text%2A> oder <xref:System.Web.UI.Design.ClientScriptItem.Source%2A> Eigenschaft.  
+  
+ Wenn die <xref:System.Web.UI.Design.ClientScriptItem.Text%2A> Eigenschaft ist `null` oder eine leere Zeichenfolge (""), wird die `script` Element keine skriptanweisungen enthält.  
+  
+ Die <xref:System.Web.UI.Design.ClientScriptItem.Source%2A> Eigenschaft wird initialisiert, indem die <xref:System.Web.UI.Design.ClientScriptItem.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ClientScriptItem.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see langword="type" /> -Attributwert für das Client-Script-Element.</summary>
+        <value>Der Name der den MIME-Typ zugeordneten der <see langword="script" /> Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

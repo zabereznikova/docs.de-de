@@ -1,0 +1,171 @@
+<Type Name="WebHttpEndpoint" FullName="System.ServiceModel.Description.WebHttpEndpoint">
+  <TypeSignature Language="C#" Value="public class WebHttpEndpoint : System.ServiceModel.Description.WebServiceEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebHttpEndpoint extends System.ServiceModel.Description.WebServiceEndpoint" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.WebHttpEndpoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Description.WebServiceEndpoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Address={address}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Name={name}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein Standardendpunkt mit einer festen <see cref="T:System.ServiceModel.WebHttpBinding" />-Bindung, die das <see cref="T:System.ServiceModel.Description.WebHttpBehavior" />-Verhalten automatisch hinzufügt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Endpunkt, wenn Sie einen [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-REST-Dienst schreiben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebHttpEndpoint (System.ServiceModel.Description.ContractDescription contract);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ContractDescription contract) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpEndpoint.#ctor(System.ServiceModel.Description.ContractDescription)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contract" Type="System.ServiceModel.Description.ContractDescription" />
+      </Parameters>
+      <Docs>
+        <param name="contract">Die Beschreibung des Vertrags.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.WebHttpEndpoint" />-Klasse mit der angegebenen <see cref="T:System.ServiceModel.Description.ContractDescription" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebHttpEndpoint (System.ServiceModel.Description.ContractDescription contract, System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ContractDescription contract, class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpEndpoint.#ctor(System.ServiceModel.Description.ContractDescription,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contract" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="contract">Die Beschreibung des Vertrags.</param>
+        <param name="address">Die Endpunktadresse.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.WebHttpEndpoint" />-Klasse mit den angegebenen <see cref="T:System.ServiceModel.Description.ContractDescription" /> und dem angegebenen <see cref="T:System.ServiceModel.EndpointAddress" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticFormatSelectionEnabled">
+      <MemberSignature Language="C#" Value="public bool AutomaticFormatSelectionEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutomaticFormatSelectionEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebHttpEndpoint.AutomaticFormatSelectionEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob die automatische Formatauswahl aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die automatische Formatauswahl aktiviert ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die automatische Formatauswahl aktiviert ist, die [!INCLUDE[indigo2](~/includes/indigo2-md.md)] Infrastruktur analysiert die `Accept` Header der Anforderungsnachricht und bestimmt das geeignetste Antwortformat. Wenn die `Accept` Header gibt keinen geeignetes Antwortformat der [!INCLUDE[indigo2](~/includes/indigo2-md.md)] -Infrastruktur verwendet die `Content-Type` die Anforderungsnachricht oder das standardantwortformat des Vorgangs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOutgoingResponseFormat">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Web.WebMessageFormat DefaultOutgoingResponseFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Web.WebMessageFormat DefaultOutgoingResponseFormat" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebHttpEndpoint.DefaultOutgoingResponseFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Web.WebMessageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardformat für ausgehende Antworten ab oder legt es fest.</summary>
+        <value>Das Standardantwortformat für den Endpunkt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultExceptionEnabled">
+      <MemberSignature Language="C#" Value="public bool FaultExceptionEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FaultExceptionEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebHttpEndpoint.FaultExceptionEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Flag ab bzw. legt das Flag fest, das angibt, ob ein FaultException-Element generiert wird, wenn ein interner Serverfehler (HTTP-Statuscode: 500) auftritt.</summary>
+        <value>Gibt <see langword="true" /> zurück, wenn das Flag aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpEnabled">
+      <MemberSignature Language="C#" Value="public bool HelpEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HelpEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob die HTTP-Hilfeseite für den Endpunkt aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die HTTP-Hilfeseite aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebEndpointType">
+      <MemberSignature Language="C#" Value="protected override Type WebEndpointType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type WebEndpointType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebHttpEndpoint.WebEndpointType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Type" />-Element des Endpunkts ab.</summary>
+        <value>Der Typ des Endpunkts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

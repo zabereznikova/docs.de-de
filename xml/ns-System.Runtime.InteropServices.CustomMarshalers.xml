@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.InteropServices.CustomMarshalers">
+  <Docs>
+    <summary>Interne Marshallen-Unterstützung für .NET Framework bietet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

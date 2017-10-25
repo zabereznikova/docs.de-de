@@ -1,0 +1,40 @@
+<Type Name="EndEventHandler" FullName="System.Web.EndEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void EndEventHandler(IAsyncResult ar);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EndEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.EndEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="ar" Type="System.IAsyncResult" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="ar">Die <see cref="T:System.IAsyncResult" /> d. h. das Ergebnis der <see cref="T:System.Web.BeginEventHandler" /> Vorgang.</param>
+    <summary>Stellt die Methode, die asynchrone Ereignisse, z. B. Anwendungsereignisse behandelt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat wird von der Ereignisquelle aufgerufen, wenn es sich bei Abschluss des asynchronen Vorgangs signalisiert wird, indem Sie einen Rückruf an den <xref:System.Web.BeginEventHandler> delegieren.  
+  
+ Beim Erstellen eines <xref:System.Web.EndEventHandler>-Delegaten geben Sie die Methode für die Ereignisbehandlung an. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.EndEventHandler> Delegat, der einen Handler für eine asynchrone Seite zu registrieren.  
+  
+ [!code-aspx-csharp[PageAddOnPreRenderCompleteAsync#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PageAddOnPreRenderCompleteAsync/CS/pageaddonprerendercompleteasynccs.aspx#1)]
+ [!code-aspx-vb[PageAddOnPreRenderCompleteAsync#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PageAddOnPreRenderCompleteAsync/VB/pageaddonprerendercompleteasyncvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

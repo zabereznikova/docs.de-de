@@ -1,0 +1,124 @@
+<Type Name="ValueSerializerAttribute" FullName="System.Windows.Markup.ValueSerializerAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ValueSerializerAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ValueSerializerAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.ValueSerializerAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Interface, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifiziert die <see cref="T:System.Windows.Markup.ValueSerializer" /> -Klasse, die einen Typ oder die Eigenschaft verwendet werden soll, während diese serialisiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für einen Typ, übernehmen Sie die <xref:System.Windows.Markup.ValueSerializerAttribute> Attribut auf Typebene. Für eine Eigenschaft, die Sie anwenden der <xref:System.Windows.Markup.ValueSerializerAttribute> Attribut auf der Eigenschaftenebene. Anwendung auf der Eigenschaftenebene überschreibt möglicherweise vorherige Deklaration für den Typ dieser Eigenschaft wie auf Typebene angewendet.  
+  
+ Ein <xref:System.Windows.Markup.ValueSerializer> können durch Anwenden einer anfügbaren Members zugeordnet werden die <xref:System.Windows.Markup.ValueSerializerAttribute> -Attribut auf die statische `get` Accessor-Methode für die anfügbaren Members.  
+  
+ Wertserialisierung gilt auch für Enumerationen, Schnittstellen und Strukturen, aber nicht für Delegaten.  
+  
+ In früheren Versionen von .NET Framework war diese Klasse in der WPF-spezifischen Assembly WindowsBase. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.ValueSerializerAttribute> befindet sich in der System.Xaml-Assembly. Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValueSerializerAttribute (string valueSerializerTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string valueSerializerTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializerAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valueSerializerTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="valueSerializerTypeName">Die Assembly qualifizierten Typnamenzeichenfolge für die <see cref="T:System.Windows.Markup.ValueSerializer" /> -Klasse.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Markup.ValueSerializerAttribute" /> Klasse, die mit einem Assembly qualifizierten Typnamenzeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Assembly qualifizierten Typnamenzeichenfolge der Wert der ist <xref:System.Type.AssemblyQualifiedName%2A> für die angeforderte <xref:System.Type>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValueSerializerAttribute (Type valueSerializerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type valueSerializerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ValueSerializerAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valueSerializerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="valueSerializerType">Ein Typ, der den Typ des stellt die <see cref="T:System.Windows.Markup.ValueSerializer" /> Klasse.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Markup.ValueSerializerAttribute" /> -Klasse mithilfe des angegebenen Typs.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueSerializerType">
+      <MemberSignature Language="C#" Value="public Type ValueSerializerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ValueSerializerType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ValueSerializerAttribute.ValueSerializerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des der <see cref="T:System.Windows.Markup.ValueSerializer" /> Klasse, die von diesem Attribut gemeldet.</summary>
+        <value>Der Typ des <see cref="T:System.Windows.Markup.ValueSerializer" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueSerializerTypeName">
+      <MemberSignature Language="C#" Value="public string ValueSerializerTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValueSerializerTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ValueSerializerAttribute.ValueSerializerTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den qualifizierten Assemblynamen für die <see cref="T:System.Windows.Markup.ValueSerializer" /> Typ für diesen Typ oder die Eigenschaft.</summary>
+        <value>Der qualifizierte Assemblyname des Typs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

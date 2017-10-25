@@ -1,0 +1,133 @@
+<Type Name="GCCollectionMode" FullName="System.GCCollectionMode">
+  <TypeSignature Language="C#" Value="public enum GCCollectionMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed GCCollectionMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.GCCollectionMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das Verhalten für eine erzwungene Garbage Collection an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.GC.Collect%2A?displayProperty=nameWithType> -methodenüberladung geben der <xref:System.GCCollectionMode> Wert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Garbagecollection für Objekte der Generation 2 mit der Einstellung optimiert.  
+  
+ [!code-csharp[System.GC.GCCollectionMode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.GC.GCCollectionMode/cs/Program.cs#1)]
+ [!code-vb[System.GC.GCCollectionMode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.GC.GCCollectionMode/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GCCollectionMode Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.GCCollectionMode.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GCCollectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Standardeinstellung für diese Enumeration, die aktuell <see cref="F:System.GCCollectionMode.Forced" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Forced">
+      <MemberSignature Language="C#" Value="Forced" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GCCollectionMode Forced = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.GCCollectionMode.Forced" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GCCollectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erzwingt die Garbagecollection sofort durchgeführt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Optimized">
+      <MemberSignature Language="C#" Value="Optimized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.GCCollectionMode Optimized = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.GCCollectionMode.Optimized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.GCCollectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht der Garbage Collector aufgerufen, um zu bestimmen, ob die aktuelle Zeit zum Freigeben von Objekten optimal ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

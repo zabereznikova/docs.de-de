@@ -1,0 +1,297 @@
+<Type Name="AspNetWebSocket" FullName="System.Web.WebSockets.AspNetWebSocket">
+  <TypeSignature Language="C#" Value="public sealed class AspNetWebSocket : System.Net.WebSockets.WebSocket" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AspNetWebSocket extends System.Net.WebSockets.WebSocket" />
+  <TypeSignature Language="DocId" Value="T:System.Web.WebSockets.AspNetWebSocket" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.WebSockets.WebSocket</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine in Echtzeit Vollduplex-Verbindung zwischen einem Webserver und einem Client in einer ASP.NET-Anwendung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public override void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebSockets.AspNetWebSocket.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht alle ausstehenden e/a-Vorgänge auf die <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> -Objekt und legt den Zustand des Objekts, damit es verwendet werden, um zusätzliche e/a-Vorgänge zu starten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach der <xref:System.Web.WebSockets.AspNetWebSocket.Abort%2A> -Methode aufgerufen wurde, können Sie Eigenschaften und Methoden, die e/a-Vorgänge nicht beinhalten weiterhin zugreifen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task CloseAsync (System.Net.WebSockets.WebSocketCloseStatus closeStatus, string statusDescription, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task CloseAsync(valuetype System.Net.WebSockets.WebSocketCloseStatus closeStatus, string statusDescription, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebSockets.AspNetWebSocket.CloseAsync(System.Net.WebSockets.WebSocketCloseStatus,System.String,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="closeStatus" Type="System.Net.WebSockets.WebSocketCloseStatus" />
+        <Parameter Name="statusDescription" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="closeStatus">Der Statuscode des Schließvorgangs.</param>
+        <param name="statusDescription">Die Statusmeldung des Schließvorgangs.</param>
+        <param name="cancellationToken">Das Objekt, das einen ausstehenden Vorgang abbricht.</param>
+        <summary>Sendet eine asynchrone Meldung an einen Client, um die Verbindung zu schließen. Wenn der Server die Anforderung zum Schließen Sie der Verbindungs initiiert wird, wartet die Methode für den Client, um die Anforderung zu bestätigen, bevor zurückgegeben.</summary>
+        <returns>Ein Verweis auf den Vorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Web.WebSockets.AspNetWebSocket.CloseAsync%2A> und <xref:System.Web.WebSockets.AspNetWebSocket.CloseOutputAsync%2A> Methoden für Client initiierten und vom Server initiierte Anforderungen zu schließen eine <xref:System.Web.WebSockets.AspNetWebSocket> Verbindung. Die beiden Methoden Client initiierten Anforderungen auf die gleiche Weise verarbeitet: Nachdem der Client sendet eine Nachricht an den Server aus, um die Verbindung zu schließen, der Server eine der folgenden Methoden aufruft und sendet eine Bestätigung an den Client, und klicken Sie dann die Methode gibt.  
+  
+ Für serverseitig initiierte Anforderungen arbeiten die beiden Methoden unterschiedlich. Die <xref:System.Web.WebSockets.AspNetWebSocket.CloseAsync%2A> Methode sendet eine Nachricht an den Client die Verbindung schließen, eine Antwort wartet und wechselt zurück. Der Server wartet nicht auf alle zusätzlichen Daten, die vom Client gesendet. Im Gegensatz dazu die <xref:System.Web.WebSockets.AspNetWebSocket.CloseOutputAsync%2A> Methode sendet eine Nachricht an den Client zu schließen die Verbindung und gibt zurück, ohne eine Antwort warten. Nachdem der Rückgabewert dieser Methode können Sie rufen die <xref:System.Web.WebSockets.AspNetWebSocket.ReceiveAsync%2A> Methode und behandeln Sie zusätzliche Daten oder die Bestätigung, die der Client sendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> Objekt wurde bereits verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> Objekt befindet sich im Status "abgebrochen".  
+  
+ - oder -   
+  
+ Sendende Vorgänge sind nicht verfügbar.  
+  
+ - oder -   
+  
+ Empfangsvorgänge sind nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseOutputAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task CloseOutputAsync (System.Net.WebSockets.WebSocketCloseStatus closeStatus, string statusDescription, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task CloseOutputAsync(valuetype System.Net.WebSockets.WebSocketCloseStatus closeStatus, string statusDescription, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebSockets.AspNetWebSocket.CloseOutputAsync(System.Net.WebSockets.WebSocketCloseStatus,System.String,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="closeStatus" Type="System.Net.WebSockets.WebSocketCloseStatus" />
+        <Parameter Name="statusDescription" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="closeStatus">Der Statuscode des Schließvorgangs.</param>
+        <param name="statusDescription">Die Statusmeldung des Schließvorgangs.</param>
+        <param name="cancellationToken">Das Objekt, das einen ausstehenden Vorgang abbricht.</param>
+        <summary>Sendet eine asynchrone Meldung an einen Client, um die Verbindung zu schließen. Wenn der Server die Anforderung zum Schließen Sie der Verbindungs initiiert wird, erfolgt die Methodenrückgabe ohne eine Antwort warten.</summary>
+        <returns>Ein Verweis auf den Vorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Web.WebSockets.AspNetWebSocket.CloseAsync%2A> und <xref:System.Web.WebSockets.AspNetWebSocket.CloseOutputAsync%2A> Methoden für Client initiierten und vom Server initiierte Anforderungen zu schließen eine <xref:System.Web.WebSockets.AspNetWebSocket> Verbindung. Die beiden Methoden Client initiierten Anforderungen auf die gleiche Weise verarbeitet: Nachdem der Client sendet eine Nachricht an den Server aus, um die Verbindung zu schließen, der Server eine der folgenden Methoden aufruft und sendet eine Bestätigung an den Client, und klicken Sie dann die Methode gibt.  
+  
+ Für serverseitig initiierte Anforderungen arbeiten die beiden Methoden unterschiedlich. Die <xref:System.Web.WebSockets.AspNetWebSocket.CloseAsync%2A> Methode sendet eine Nachricht an den Client die Verbindung schließen, eine Antwort wartet und wechselt zurück. Der Server wartet nicht auf alle zusätzlichen Daten, die vom Client gesendet. Im Gegensatz dazu die <xref:System.Web.WebSockets.AspNetWebSocket.CloseOutputAsync%2A> Methode sendet eine Nachricht an den Client zu schließen die Verbindung und gibt zurück, ohne eine Antwort warten. Nachdem der Rückgabewert dieser Methode können Sie rufen die <xref:System.Web.WebSockets.AspNetWebSocket.ReceiveAsync%2A> Methode und behandeln Sie zusätzliche Daten oder die Bestätigung, die der Client sendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> Objekt befindet sich im Status "abgebrochen".  
+  
+ - oder -   
+  
+ Sendende Vorgänge sind nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseStatus">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;System.Net.WebSockets.WebSocketCloseStatus&gt; CloseStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Net.WebSockets.WebSocketCloseStatus&gt; CloseStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Web.WebSockets.AspNetWebSocket.CloseStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Net.WebSockets.WebSocketCloseStatus&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Statuscode, der gibt an, warum ein <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> -Objekt geschlossen wurde.</summary>
+        <value>Der Statuscode.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseStatusDescription">
+      <MemberSignature Language="C#" Value="public override string CloseStatusDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CloseStatusDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Web.WebSockets.AspNetWebSocket.CloseStatusDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Statusmeldung, die erläutert, warum ein <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> -Objekt geschlossen wurde.</summary>
+        <value>Die Statusmeldung.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebSockets.AspNetWebSocket.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von verwendete Ressourcen frei ein <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET ruft automatisch den <xref:System.Web.WebSockets.AspNetWebSocket.Dispose%2A> Methode auf eine <xref:System.Web.WebSockets.AspNetWebSocket> Objekt, um alle Ressourcen freizugeben, die nach dem Abschluss der Code ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;System.Net.WebSockets.WebSocketReceiveResult&gt; ReceiveAsync (ArraySegment&lt;byte&gt; buffer, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.WebSockets.WebSocketReceiveResult&gt; ReceiveAsync(valuetype System.ArraySegment`1&lt;unsigned int8&gt; buffer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebSockets.AspNetWebSocket.ReceiveAsync(System.ArraySegment{System.Byte},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.WebSockets.WebSocketReceiveResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das Array, das die Nachrichtendaten enthält.</param>
+        <param name="cancellationToken">Das Objekt, das einen ausstehenden Vorgang abbricht.</param>
+        <summary>Empfängt eine einzelne Nachrichtenfragmente von einem Remoteclient aus.</summary>
+        <returns>Ein Verweis auf die Aufgabe der Empfang einer Nachricht.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> Objekt wurde bereits verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> Objekt befindet sich im Status "abgebrochen".  
+  
+ - oder -   
+  
+ Empfangsvorgänge sind nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task SendAsync (ArraySegment&lt;byte&gt; buffer, System.Net.WebSockets.WebSocketMessageType messageType, bool endOfMessage, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task SendAsync(valuetype System.ArraySegment`1&lt;unsigned int8&gt; buffer, valuetype System.Net.WebSockets.WebSocketMessageType messageType, bool endOfMessage, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebSockets.AspNetWebSocket.SendAsync(System.ArraySegment{System.Byte},System.Net.WebSockets.WebSocketMessageType,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="messageType" Type="System.Net.WebSockets.WebSocketMessageType" />
+        <Parameter Name="endOfMessage" Type="System.Boolean" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das Array, das die Nachrichtendaten enthält.</param>
+        <param name="messageType">Der Meldungstyp.</param>
+        <param name="endOfMessage">
+          <see langword="true" />um anzugeben, dass ein Fragment das Ende einer vollständigen Nachricht darstellt. andernfalls <see langword="false" />.</param>
+        <param name="cancellationToken">Das Objekt, das einen ausstehenden Vorgang abbricht.</param>
+        <summary>Sendet eine einzelne Nachrichtenfragment mit einem Remoteclient an.</summary>
+        <returns>Ein Verweis auf die Aufgabe eine Nachricht zu senden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> -Objekt wurde verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> Objekt befindet sich im Status "abgebrochen".  
+  
+ - oder -   
+  
+ Sendende Vorgänge sind nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Net.WebSockets.WebSocketState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.WebSockets.WebSocketState State" />
+      <MemberSignature Language="DocId" Value="P:System.Web.WebSockets.AspNetWebSocket.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebSockets.WebSocketState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den offenen oder geschlossenen Status des angibt ein <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> Objekt.</summary>
+        <value>Der aktuelle Status.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubProtocol">
+      <MemberSignature Language="C#" Value="public override string SubProtocol { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SubProtocol" />
+      <MemberSignature Language="DocId" Value="P:System.Web.WebSockets.AspNetWebSocket.SubProtocol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen eines anwendungsspezifischen Protokolls, die von einem Remoteclient und Server verwenden können, für den Austausch von Daten über eine <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> Verbindung.</summary>
+        <value>Der Name des Protokolls.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

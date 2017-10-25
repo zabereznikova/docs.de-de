@@ -1,0 +1,210 @@
+<Type Name="ComposablePartException" FullName="System.ComponentModel.Composition.Primitives.ComposablePartException">
+  <TypeSignature Language="C#" Value="public class ComposablePartException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ComposablePartException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{Message}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.ComponentModel.Composition.Primitives.ComposablePartExceptionDebuggerProxy))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, tritt ein Fehler beim Aufruf von Methoden für ein <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> Objekt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComposablePartException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComposablePartException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, beschreibt der <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />, oder <see langword="null" /> festzulegende der <see cref="P:System.Exception.Message" /> Eigenschaft auf den Standardwert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />-Klasse mit der angegebenen Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ComposablePartException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein Objekt, das die serialisierten Objektdaten für enthält die <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />.</param>
+        <param name="context">Ein Objekt, das Kontextinformationen zur Quelle bzw. zum Ziel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" /> -Klasse mit den angegebenen Serialisierungsdaten.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">
+          <paramref name="info" />fehlt einen erforderlichen Wert.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="info" />enthält einen Wert, der in den richtigen Typ umgewandelt werden kann.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComposablePartException (string message, System.ComponentModel.Composition.Primitives.ICompositionElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.ComponentModel.Composition.Primitives.ICompositionElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartException.#ctor(System.String,System.ComponentModel.Composition.Primitives.ICompositionElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="element" Type="System.ComponentModel.Composition.Primitives.ICompositionElement" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, beschreibt der <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />, oder <see langword="null" /> festzulegende der <see cref="P:System.Exception.Message" /> Eigenschaft auf den Standardwert.</param>
+        <param name="element">Die Kompositionselement, das die Ursache ist die <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />, oder <see langword="null" /> festzulegende der <see cref="P:System.ComponentModel.Composition.Primitives.ComposablePartException.Element" /> Eigenschaft <see langword="null" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" /> -Klasse mit der angegebenen Fehlermeldung und der Kompositionselement, das die Ursache der Ausnahme darstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComposablePartException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, beschreibt der <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />, oder <see langword="null" /> festzulegende der <see cref="P:System.Exception.Message" /> Eigenschaft auf den Standardwert.</param>
+        <param name="innerException">Dazu führen, dass die Ausnahme, die die zugrunde liegende wird von der <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />, oder <see langword="null" /> festzulegende der <see cref="P:System.Exception.InnerException" /> Eigenschaft <see langword="null" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" /> Klasse mit der angegebenen Fehlermeldung und der Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComposablePartException (string message, System.ComponentModel.Composition.Primitives.ICompositionElement element, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.ComponentModel.Composition.Primitives.ICompositionElement element, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartException.#ctor(System.String,System.ComponentModel.Composition.Primitives.ICompositionElement,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="element" Type="System.ComponentModel.Composition.Primitives.ICompositionElement" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, beschreibt der <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />, oder <see langword="null" /> festzulegende der <see cref="P:System.Exception.Message" /> Eigenschaft auf den Standardwert.</param>
+        <param name="element">Die Kompositionselement, das die Ursache ist die <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />, oder <see langword="null" /> festzulegende der <see cref="P:System.ComponentModel.Composition.Primitives.ComposablePartException.Element" /> Eigenschaft <see langword="null" />.</param>
+        <param name="innerException">Dazu führen, dass die Ausnahme, die die zugrunde liegende wird von der <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />, oder <see langword="null" /> festzulegende der <see cref="P:System.Exception.InnerException" /> Eigenschaft <see langword="null" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" /> Klasse mit der angegebenen Fehlermeldung und der Kompositionselement und die Ausnahme, die die Ursache dieser Ausnahme sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Element">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Primitives.ICompositionElement Element { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Composition.Primitives.ICompositionElement Element" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ComposablePartException.Element" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ICompositionElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kompositionselement, das die Ursache der Ausnahme darstellt.</summary>
+        <value>Das festgelegte Element, das die Ursache ist die <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Nach dem Aufrufen der Methode enthält Sie serialisierten Objektdaten über die <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException" />.</param>
+        <param name="context">Nach dem Aufrufen der Methode, Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Ruft die Serialisierungsdaten für die Ausnahme ab.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

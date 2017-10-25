@@ -1,0 +1,107 @@
+<Type Name="ScrollableControlDesigner" FullName="System.Windows.Forms.Design.ScrollableControlDesigner">
+  <TypeSignature Language="C#" Value="public class ScrollableControlDesigner : System.Windows.Forms.Design.ParentControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScrollableControlDesigner extends System.Windows.Forms.Design.ParentControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.ScrollableControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Design.ParentControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Basisdesignerklasse zum Erweitern des Entwurfsmodusverhaltens von einem <see cref="T:System.Windows.Forms.Control" /> das bildlaufnachrichten empfangen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.Design.ScrollableControlDesigner>Stellt eine Basisklasse für Designer von Steuerelementen, reagieren, um Nachrichten zu scrollen. Zusätzlich zu den Methoden und Funktionen von geerbt der <xref:System.Windows.Forms.Design.ParentControlDesigner>, <xref:System.Windows.Forms.Design.ControlDesigner>, und <xref:System.ComponentModel.Design.ComponentDesigner> Klassen, <xref:System.Windows.Forms.Design.ScrollableControlDesigner> bietet eine <xref:System.Windows.Forms.Control.WndProc%2A> Überschreibung der WM_HSCROLL und WM_VSCROLL Nachrichten an das Steuerelement zur Entwurfszeit zu übergeben. .  
+  
+> [!NOTE]
+>  Wenn ein Formular weist seine <xref:System.Windows.Forms.Form.AutoScroll%2A> Eigenschaft als aktiv festgelegt wurde, die Bildlaufleisten sind immer aktiv in der entwurfszeitumgebung.  
+  
+ Sie können einen Designer Zuordnen eines Typs unter Verwendung einer <xref:System.ComponentModel.DesignerAttribute>. Einen Überblick über das Anpassen des Verhaltens der Design-Time finden Sie unter [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollableControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ScrollableControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.ScrollableControlDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHitTest">
+      <MemberSignature Language="C#" Value="protected override bool GetHitTest (System.Drawing.Point pt);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool GetHitTest(valuetype System.Drawing.Point pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ScrollableControlDesigner.GetHitTest(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pt">Ein <see cref="T:System.Drawing.Point" /> die Position, an dem die Maus, in Bildschirmkoordinaten geklickt wurde, angibt.</param>
+        <summary>Gibt an, ob ein Mausklick an der angegebenen Position vom Steuerelement behandelt werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Mausklick an der angegebenen Position vom Steuerelement behandelt werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.ScrollableControlDesigner.GetHitTest%2A> Methode bestimmt, ob ein Mausklick an der angegebenen Position an das Steuerelement übergeben werden sollen, während das Steuerelement im Entwurfsmodus befindet. Sie können überschreiben und implementieren diese Methode, um das Steuerelement klickt in der entwurfszeitumgebung empfangen aktivieren.  
+  
+> [!NOTE]
+>  Sie können einen Punkt in Bildschirmkoordinaten um übergeben der <xref:System.Windows.Forms.Control.PointToClient%2A> Methode der <xref:System.Windows.Forms.Control> Klasse, um die Koordinaten des Punkts relativ zur linken oberen Ecke des Steuerelements abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ScrollableControlDesigner.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Der zu verarbeitende <see cref="T:System.Windows.Forms.Message" />.</param>
+        <summary>Verarbeitet Windows-Meldungen, und übergeben WM_HSCROLL und WM_VSCROLL-Nachrichten an das Steuerelement zur Entwurfszeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überschreibung der <xref:System.Windows.Forms.Design.ControlDesigner.WndProc%2A> Methode übergibt alle WM_HSCROLL und WM_VSCROLL Nachrichten an das Steuerelement zur Entwurfszeit. Alle Nachrichten werden an den Basistext zuerst übergeben <xref:System.Windows.Forms.Design.ControlDesigner.WndProc%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

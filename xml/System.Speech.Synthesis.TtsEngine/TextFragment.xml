@@ -1,0 +1,434 @@
+<Type Name="TextFragment" FullName="System.Speech.Synthesis.TtsEngine.TextFragment">
+  <TypeSignature Language="C#" Value="public class TextFragment" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi beforefieldinit TextFragment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.TextFragment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Text und Spracherkennung Attributinformationen für die Nutzung von einem Synthsizer Sprachmodul an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Spracherkennung Plattforminfrastruktur entpackt die XML-basierte Struktur der SSML-Eingabe und Konstrukte <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Objekte.  
+  
+ Sprachinhalt kann über die <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextLength%2A>, <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextOffset%2A>, und <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextToSpeak%2A> Eigenschaften einer <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanz.  
+  
+ Spracherkennung-Attribut Informationen, wie z. B. Hervorhebung, Tonhöhe und Geschwindigkeit aus abgerufen werden die <xref:System.Speech.Synthesis.TtsEngine.FragmentState> zurückgegebenes Objekt die <xref:System.Speech.Synthesis.TtsEngine.TextFragment> <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ist Teil einer benutzerdefinierten Spracherkennung Sprachsynthese Implementierung erben von <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml>, und verwenden die Verwendung von <xref:System.Speech.Synthesis.TtsEngine.TextFragment>, <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo>, <xref:System.Speech.Synthesis.TtsEngine.FragmentState>, und <xref:System.Speech.Synthesis.TtsEngine.TtsEventId>.  
+  
+ Die Implementierung von<xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak%2A>  
+  
+1.  Empfängt ein Array von <xref:System.Speech.Synthesis.TtsEngine.TextFragment> -Instanzen und erstellt ein neues Array von <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanzen übergeben werden die `Speak` Methode auf eine zugrunde liegende sprachsynthesemodul.  
+  
+     Besonders wird verwendet, um Sie respektieren der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextOffset%2A>, <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextLength%2A> am ursprünglichen <xref:System.Speech.Synthesis.TtsEngine.TextFragment> beim Erstellen der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextToSpeak%2A> auf dem neuen <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanzen.  
+  
+2.  Wenn die <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction> Enumerationswert von gefunden wird, aus der <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Action%2A> Eigenschaft auf die <xref:System.Speech.Synthesis.TtsEngine.FragmentState> zurückgegebenes der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A> -Eigenschaft jedes <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanz ist <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction.Speak>, die Implementierung  
+  
+    -   Übersetzt Americanism zu Britishisms in der zu sprechende Text.  
+  
+    -   Wenn die <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.EventInterest%2A> Eigenschaft auf die <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite> Schnittstellen bereitgestellt, um die implementierungsunterstützung der <xref:System.Speech.Synthesis.TtsEngine.TtsEventId.WordBoundary> Ereignistyp, ein <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo> Instanz wird verwendet, um ein Ereignis, das Laufwerk zu erstellen, wird eine Statusanzeige Synthesizer erstellt.  
+  
+3.  Ein Speech-Renderingmodul wird dann aufgerufen, mit der geänderten <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Array.  
+  
+```  
+private const int WordBoundaryFlag = 1 << (int)TtsEventId.WordBoundary;  
+private readonly char[] spaces = new char[] { ' ', '\t', '\r', '\n' };  
+internal struct UsVsUk  
+{  
+  internal string UK;  
+  internal string US;  
+}  
+  
+override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite site)  
+{  
+  TextFragment [] newFrags=new TextFragment[frags.Length];  
+  
+  for (int i=0;i<frags.Length;i++){  
+    newFrags[i].State=frags[i].State;  
+    //truncate  
+    newFrags[i].TextToSpeak = frags[i].TextToSpeak.Substring(frags[i].TextOffset,  
+                               frags[i].TextLength);  
+    newFrags[i].TextLength = newFrags[i].TextToSpeak.Length;  
+    newFrags[i].TextOffset = 0;  
+    if (newFrags[i].State.Action == TtsEngineAction.Speak) {  
+      //Us to UK conversion  
+      foreach (UsVsUk term in TransList) {  
+      newFrags[i].TextToSpeak.Replace(term.US, term.UK);  
+      }  
+      //Generate progress meter events if supported  
+      if ((site.EventInterest & WordBoundaryFlag) != 0) {  
+      string[] subs = newFrags[i].TextToSpeak.Split(spaces);  
+  
+      foreach (string s in subs) {  
+        int offset = newFrags[i].TextOffset;  
+        SpeechEventInfo spEvent = new SpeechEventInfo((Int16)TtsEventId.WordBoundary,   
+                (Int16)EventParameterType.Undefined,   
+                 s.Length, new IntPtr(offset));  
+        offset += s.Length;  
+        if (s.Trim().Length > 0) {  
+          SpeechEventInfo[] events = new SpeechEventInfo[1];  
+          events[0] = spEvent;  
+          site.AddEvents(events, 1);  
+        }  
+      }  
+      }  
+    }  
+  }  
+  
+  _baseSynthesize.Speak(newFrags, wfx, site);  
+  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextFragment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.TextFragment.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz von <see langword="TextFragment" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardkonstruktor für <xref:System.Speech.Synthesis.TtsEngine.TextFragment>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.TtsEngine.FragmentState State { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Synthesis.TtsEngine.FragmentState State" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.TextFragment.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.FragmentState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest Spracherkennung Attributinformationen für eine <see langword="TextFragment" />.</summary>
+        <value>Ein <see cref="T:System.Speech.Synthesis.TtsEngine.FragmentState" /> Instanz zurückgegeben wird, oder zum Festlegen von Attributinformationen für Spracherkennung verwendet eine <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft ist `null`.  
+  
+ Prosody Informationen erhalten Sie von der Instanz von <xref:System.Speech.Synthesis.TtsEngine.Prosody> zurückgegebenes der <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Prosody%2A> Eigenschaft für die Instanz von <xref:System.Speech.Synthesis.TtsEngine.FragmentState> zurückgegebenes <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextLength">
+      <MemberSignature Language="C#" Value="public int TextLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TextLength" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.TextFragment.TextLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Länge des Texts Spracherkennung im Fragment.</summary>
+        <value>Ein <see langword="int" /> zurückgegeben wird, oder können verwendet werden, um die Länge in Zeichen, die Textzeichenfolge, die dieses Fragment zu sprechenden zugeordneten festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft ist 0.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ist Teil einer benutzerdefinierten Spracherkennung Sprachsynthese Implementierung erben von <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml>, und verwenden die Verwendung von <xref:System.Speech.Synthesis.TtsEngine.TextFragment>, <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo>, <xref:System.Speech.Synthesis.TtsEngine.FragmentState>, und <xref:System.Speech.Synthesis.TtsEngine.TtsEventId>.  
+  
+ Die Implementierung von<xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak%2A>  
+  
+1.  Empfängt ein Array von <xref:System.Speech.Synthesis.TtsEngine.TextFragment> -Instanzen und erstellt ein neues Array von <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanzen übergeben werden die `Speak` Methode auf eine zugrunde liegende sprachsynthesemodul.  
+  
+     Besonders wird verwendet, um Sie respektieren der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextOffset%2A>, <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextLength%2A> am ursprünglichen <xref:System.Speech.Synthesis.TtsEngine.TextFragment> beim Erstellen der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextToSpeak%2A> auf dem neuen <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanzen.  
+  
+2.  Wenn die <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction> Enumerationswert von gefunden wird, aus der <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Action%2A> Eigenschaft auf die <xref:System.Speech.Synthesis.TtsEngine.FragmentState> zurückgegebenes der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A> -Eigenschaft jedes <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanz ist <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction.Speak>, die Implementierung  
+  
+    -   Übersetzt Americanism zu Britishisms in der zu sprechende Text.  
+  
+    -   Wenn die <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.EventInterest%2A> Eigenschaft auf die <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite> Schnittstellen bereitgestellt, um die implementierungsunterstützung der <xref:System.Speech.Synthesis.TtsEngine.TtsEventId.WordBoundary> Ereignistyp, ein <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo> Instanz wird verwendet, um ein Ereignis, das Laufwerk zu erstellen, wird eine Statusanzeige Synthesizer erstellt.  
+  
+3.  Ein Speech-Renderingmodul wird dann aufgerufen, mit der geänderten <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Array.  
+  
+```  
+private const int WordBoundaryFlag = 1 << (int)TtsEventId.WordBoundary;  
+private readonly char[] spaces = new char[] { ' ', '\t', '\r', '\n' };  
+internal struct UsVsUk  
+{  
+  internal string UK;  
+  internal string US;  
+}  
+  
+override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite site)  
+{  
+  TextFragment [] newFrags=new TextFragment[frags.Length];  
+  
+  for (int i=0;i<frags.Length;i++){  
+    newFrags[i].State=frags[i].State;  
+    //truncate  
+    newFrags[i].TextToSpeak = frags[i].TextToSpeak.Substring(frags[i].TextOffset,  
+                               frags[i].TextLength);  
+    newFrags[i].TextLength = newFrags[i].TextToSpeak.Length;  
+    newFrags[i].TextOffset = 0;  
+    if (newFrags[i].State.Action == TtsEngineAction.Speak) {  
+      //Us to UK conversion  
+      foreach (UsVsUk term in TransList) {  
+      newFrags[i].TextToSpeak.Replace(term.US, term.UK);  
+      }  
+      //Generate progress meter events if supported  
+      if ((site.EventInterest & WordBoundaryFlag) != 0) {  
+      string[] subs = newFrags[i].TextToSpeak.Split(spaces);  
+  
+      foreach (string s in subs) {  
+        int offset = newFrags[i].TextOffset;  
+        SpeechEventInfo spEvent = new SpeechEventInfo((Int16)TtsEventId.WordBoundary,   
+                (Int16)EventParameterType.Undefined,   
+                 s.Length, new IntPtr(offset));  
+        offset += s.Length;  
+        if (s.Trim().Length > 0) {  
+          SpeechEventInfo[] events = new SpeechEventInfo[1];  
+          events[0] = spEvent;  
+          site.AddEvents(events, 1);  
+        }  
+      }  
+      }  
+    }  
+  }  
+  
+  _baseSynthesize.Speak(newFrags, wfx, site);  
+  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextOffset">
+      <MemberSignature Language="C#" Value="public int TextOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TextOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.TextFragment.TextOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Startposition des Texts im Fragment.</summary>
+        <value>Ein <see langword="int" /> zurückgegeben wird, oder kann verwendet werden, um die Startposition in Zeichen, die Teil des Textzeichenfolge, die dieses Fragment zu sprechenden zugeordnet festzulegen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft ist 0.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ist Teil einer benutzerdefinierten Spracherkennung Sprachsynthese Implementierung erben von <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml>, und verwenden die Verwendung von <xref:System.Speech.Synthesis.TtsEngine.TextFragment>, <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo>, <xref:System.Speech.Synthesis.TtsEngine.FragmentState>, und <xref:System.Speech.Synthesis.TtsEngine.TtsEventId>.  
+  
+ Die Implementierung von<xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak%2A>  
+  
+1.  Empfängt ein Array von <xref:System.Speech.Synthesis.TtsEngine.TextFragment> -Instanzen und erstellt ein neues Array von <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanzen übergeben werden die `Speak` Methode auf eine zugrunde liegende sprachsynthesemodul.  
+  
+     Besonders wird verwendet, um Sie respektieren der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextOffset%2A>, <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextLength%2A> am ursprünglichen <xref:System.Speech.Synthesis.TtsEngine.TextFragment> beim Erstellen der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextToSpeak%2A> auf dem neuen <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanzen.  
+  
+2.  Wenn die <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction> Enumerationswert von gefunden wird, aus der <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Action%2A> Eigenschaft auf die <xref:System.Speech.Synthesis.TtsEngine.FragmentState> zurückgegebenes der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A> -Eigenschaft jedes <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanz ist <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction.Speak>, die Implementierung  
+  
+    -   Übersetzt Americanism zu Britishisms in der zu sprechende Text.  
+  
+    -   Wenn die <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.EventInterest%2A> Eigenschaft auf die <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite> Schnittstellen bereitgestellt, um die implementierungsunterstützung der <xref:System.Speech.Synthesis.TtsEngine.TtsEventId.WordBoundary> Ereignistyp, ein <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo> Instanz wird verwendet, um ein Ereignis, das Laufwerk zu erstellen, wird eine Statusanzeige Synthesizer erstellt.  
+  
+3.  Ein Speech-Renderingmodul wird dann aufgerufen, mit der geänderten <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Array.  
+  
+```  
+private const int WordBoundaryFlag = 1 << (int)TtsEventId.WordBoundary;  
+private readonly char[] spaces = new char[] { ' ', '\t', '\r', '\n' };  
+internal struct UsVsUk  
+{  
+  internal string UK;  
+  internal string US;  
+}  
+  
+override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite site)  
+{  
+  TextFragment [] newFrags=new TextFragment[frags.Length];  
+  
+  for (int i=0;i<frags.Length;i++){  
+    newFrags[i].State=frags[i].State;  
+    //truncate  
+    newFrags[i].TextToSpeak = frags[i].TextToSpeak.Substring(frags[i].TextOffset,  
+                               frags[i].TextLength);  
+    newFrags[i].TextLength = newFrags[i].TextToSpeak.Length;  
+    newFrags[i].TextOffset = 0;  
+    if (newFrags[i].State.Action == TtsEngineAction.Speak) {  
+      //Us to UK conversion  
+      foreach (UsVsUk term in TransList) {  
+      newFrags[i].TextToSpeak.Replace(term.US, term.UK);  
+      }  
+      //Generate progress meter events if supported  
+      if ((site.EventInterest & WordBoundaryFlag) != 0) {  
+      string[] subs = newFrags[i].TextToSpeak.Split(spaces);  
+  
+      foreach (string s in subs) {  
+        int offset = newFrags[i].TextOffset;  
+        SpeechEventInfo spEvent = new SpeechEventInfo((Int16)TtsEventId.WordBoundary,   
+                (Int16)EventParameterType.Undefined,   
+                 s.Length, new IntPtr(offset));  
+        offset += s.Length;  
+        if (s.Trim().Length > 0) {  
+          SpeechEventInfo[] events = new SpeechEventInfo[1];  
+          events[0] = spEvent;  
+          site.AddEvents(events, 1);  
+        }  
+      }  
+      }  
+    }  
+  }  
+  
+  _baseSynthesize.Speak(newFrags, wfx, site);  
+  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextToSpeak">
+      <MemberSignature Language="C#" Value="public string TextToSpeak { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TextToSpeak" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.TextFragment.TextToSpeak" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Sprachtext des Fragments ab ab oder legt ihn fest.</summary>
+        <value>Ein <see langword="System.String" /> zurückgegeben wird, oder festlegen den Sprachtext, der von einem sprachsynthesemodul Spracherkennung zum Generieren von Audioausgabe verwendet werden können.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft ist `System.String.Empty`.  
+  
+ Anwendungen sind vollständig auf den Wert ändern kann nach Belieben <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextToSpeak%2A>.  
+  
+ Das Zurücksetzen des Wertes von <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextToSpeak%2A> ändert sich nicht auf den Wert der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextOffset%2A> und <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextLength%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ist Teil einer benutzerdefinierten Spracherkennung Sprachsynthese Implementierung erben von <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml>, und verwenden die Verwendung von <xref:System.Speech.Synthesis.TtsEngine.TextFragment>, <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo>, <xref:System.Speech.Synthesis.TtsEngine.FragmentState>, und <xref:System.Speech.Synthesis.TtsEngine.TtsEventId>.  
+  
+ Die Implementierung von<xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak%2A>  
+  
+1.  Empfängt ein Array von <xref:System.Speech.Synthesis.TtsEngine.TextFragment> -Instanzen und erstellt ein neues Array von <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanzen übergeben werden die `Speak` Methode auf eine zugrunde liegende sprachsynthesemodul.  
+  
+     Besonders wird verwendet, um Sie respektieren der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextOffset%2A>, <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextLength%2A> am ursprünglichen <xref:System.Speech.Synthesis.TtsEngine.TextFragment> beim Erstellen der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextToSpeak%2A> auf dem neuen <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanzen.  
+  
+2.  Wenn die <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction> Enumerationswert von gefunden wird, aus der <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Action%2A> Eigenschaft auf die <xref:System.Speech.Synthesis.TtsEngine.FragmentState> zurückgegebenes der <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A> -Eigenschaft jedes <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Instanz ist <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction.Speak>, die Implementierung  
+  
+    -   Übersetzt Americanism zu Britishisms in der zu sprechende Text.  
+  
+    -   Wenn die <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.EventInterest%2A> Eigenschaft auf die <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite> Schnittstellen bereitgestellt, um die implementierungsunterstützung der <xref:System.Speech.Synthesis.TtsEngine.TtsEventId.WordBoundary> Ereignistyp, ein <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo> Instanz wird verwendet, um ein Ereignis, das Laufwerk zu erstellen, wird eine Statusanzeige Synthesizer erstellt.  
+  
+3.  Ein Speech-Renderingmodul wird dann aufgerufen, mit der geänderten <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Array.  
+  
+```  
+private const int WordBoundaryFlag = 1 << (int)TtsEventId.WordBoundary;  
+private readonly char[] spaces = new char[] { ' ', '\t', '\r', '\n' };  
+internal struct UsVsUk  
+{  
+  internal string UK;  
+  internal string US;  
+}  
+  
+override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite site)  
+{  
+  TextFragment [] newFrags=new TextFragment[frags.Length];  
+  
+  for (int i=0;i<frags.Length;i++){  
+    newFrags[i].State=frags[i].State;  
+    //truncate  
+    newFrags[i].TextToSpeak = frags[i].TextToSpeak.Substring(frags[i].TextOffset,  
+                               frags[i].TextLength);  
+    newFrags[i].TextLength = newFrags[i].TextToSpeak.Length;  
+    newFrags[i].TextOffset = 0;  
+    if (newFrags[i].State.Action == TtsEngineAction.Speak) {  
+      //Us to UK conversion  
+      foreach (UsVsUk term in TransList) {  
+      newFrags[i].TextToSpeak.Replace(term.US, term.UK);  
+      }  
+      //Generate progress meter events if supported  
+      if ((site.EventInterest & WordBoundaryFlag) != 0) {  
+      string[] subs = newFrags[i].TextToSpeak.Split(spaces);  
+  
+      foreach (string s in subs) {  
+        int offset = newFrags[i].TextOffset;  
+        SpeechEventInfo spEvent = new SpeechEventInfo((Int16)TtsEventId.WordBoundary,   
+                (Int16)EventParameterType.Undefined,   
+                 s.Length, new IntPtr(offset));  
+        offset += s.Length;  
+        if (s.Trim().Length > 0) {  
+          SpeechEventInfo[] events = new SpeechEventInfo[1];  
+          events[0] = spEvent;  
+          site.AddEvents(events, 1);  
+        }  
+      }  
+      }  
+    }  
+  }  
+  
+  _baseSynthesize.Speak(newFrags, wfx, site);  
+  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

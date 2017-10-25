@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Versioning">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Versioning" /> -Namespace enthält erweiterte Typen, die versionsverwaltung in parallele Implementierungen von .NET Framework unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Typen in diesem Namespace sind für die Verwendung in .NET Framework und nicht für benutzeranwendungen vorgesehen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

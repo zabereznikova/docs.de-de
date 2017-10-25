@@ -1,0 +1,43 @@
+<Type Name="DesignerActionListsChangedEventHandler" FullName="System.ComponentModel.Design.DesignerActionListsChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DesignerActionListsChangedEventHandler(object sender, DesignerActionListsChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DesignerActionListsChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionListsChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.ComponentModel.Design.DesignerActionListsChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.ComponentModel.Design.DesignerActionListsChangedEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged" />-Ereignisses eines <see cref="T:System.ComponentModel.Design.DesignerActionService" />-Objekts dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ereignismodell in die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] basiert auf Vorhandensein eines Ereignisdelegaten, der ein Ereignis mit dem entsprechenden Handler verbindet. Zum Auslösen einer <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> Ereignis, zwei Elemente sind erforderlich:  
+  
+-   Die <xref:System.ComponentModel.Design.DesignerActionListsChangedEventArgs> von abgeleitete Klasse <xref:System.EventArgs?displayProperty=nameWithType>, die die Ereignisdaten enthält.  
+  
+-   Die <xref:System.ComponentModel.Design.DesignerActionListsChangedEventHandler> zu delegieren, die verweist auf eine Methode, die die Antwort auf das Ereignis bereitstellt.  
+  
+ Beim Erstellen eines <xref:System.ComponentModel.Design.DesignerActionListsChangedEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

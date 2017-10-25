@@ -1,0 +1,77 @@
+<Type Name="TrustDirection" FullName="System.DirectoryServices.ActiveDirectory.TrustDirection">
+  <TypeSignature Language="C#" Value="public enum TrustDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TrustDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.TrustDirection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Richtung einer Vertrauensstellung an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Richtung der Vertrauensstellung wird immer relativ zum 1-Seite einer Vertrauensstellung. Wenn Domäne A eine eingehende Vertrauensstellung mit Domäne B, dann per Definition verfügt hat Domäne B beispielsweise eine ausgehende Vertrauensstellung mit Domäne A.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bidirectional">
+      <MemberSignature Language="C#" Value="Bidirectional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.TrustDirection Bidirectional = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.TrustDirection.Bidirectional" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TrustDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Jede Domäne oder Gesamtstruktur hat Zugriff auf die Ressourcen der anderen Domäne oder Gesamtstruktur.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inbound">
+      <MemberSignature Language="C#" Value="Inbound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.TrustDirection Inbound = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.TrustDirection.Inbound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TrustDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dies ist eine vertrauende Domäne oder Gesamtstruktur. Die andere Domäne oder Gesamtstruktur hat Zugriff auf die Ressourcen dieser Domäne oder Gesamtstruktur. Diese Domäne oder Gesamtstruktur hat keinen Zugriff auf Ressourcen, die zu der anderen Domäne oder Gesamtstruktur gehören.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Outbound">
+      <MemberSignature Language="C#" Value="Outbound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.TrustDirection Outbound = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.TrustDirection.Outbound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TrustDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dies ist eine vertrauenswürdige Domäne oder Gesamtstruktur. Diese Domäne oder Gesamtstruktur hat Zugriff auf Ressourcen der anderen Domäne oder Gesamtstruktur. Die andere Domäne oder Gesamtstruktur hat keinen Zugriff auf die Ressourcen dieser Domäne oder Gesamtstruktur.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

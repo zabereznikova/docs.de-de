@@ -1,0 +1,764 @@
+<Type Name="NewLateBinding" FullName="Microsoft.VisualBasic.CompilerServices.NewLateBinding">
+  <TypeSignature Language="C#" Value="public sealed class NewLateBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NewLateBinding extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.CompilerServices.NewLateBinding" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Diese Klasse bietet Hilfsprogramme, die Visual Basic-Compiler für Aufrufe mit später Bindung verwendet. Es ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FallbackCall">
+      <MemberSignature Language="C#" Value="public static object FallbackCall (object Instance, string MemberName, object[] Arguments, string[] ArgumentNames, bool IgnoreReturn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object FallbackCall(object Instance, string MemberName, object[] Arguments, string[] ArgumentNames, bool IgnoreReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackCall(System.Object,System.String,System.Object[],System.String[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="IgnoreReturn" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="MemberName">Der Name der Eigenschaft oder Methode für das Objekt aufrufen.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <param name="IgnoreReturn">Ein <see langword="Boolean" /> -Wert, der angibt, und zwar unabhängig davon, ob der Rückgabewert ignoriert werden kann.</param>
+        <summary>Führt eine spät gebundene Methode oder Funktion aufrufen. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <returns>Eine Instanz des Aufrufobjekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vergleichbar zu <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackGet">
+      <MemberSignature Language="C#" Value="public static object FallbackGet (object Instance, string MemberName, object[] Arguments, string[] ArgumentNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object FallbackGet(object Instance, string MemberName, object[] Arguments, string[] ArgumentNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackGet(System.Object,System.String,System.Object[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="MemberName">Der Name der Eigenschaft oder Methode für das Objekt aufrufen.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <summary>Führt eine spät gebundene Eigenschaft abzurufen oder das Feld Zugriff-Aufruf. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <returns>Eine Instanz des Aufrufobjekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackIndexSet">
+      <MemberSignature Language="C#" Value="public static void FallbackIndexSet (object Instance, object[] Arguments, string[] ArgumentNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void FallbackIndexSet(object Instance, object[] Arguments, string[] ArgumentNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackIndexSet(System.Object,System.Object[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <summary>Führt einen spät gebundenen Aufruf Eigenschaftensatz oder ein Feld zu schreiben. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackIndexSetComplex">
+      <MemberSignature Language="C#" Value="public static void FallbackIndexSetComplex (object Instance, object[] Arguments, string[] ArgumentNames, bool OptimisticSet, bool RValueBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void FallbackIndexSetComplex(object Instance, object[] Arguments, string[] ArgumentNames, bool OptimisticSet, bool RValueBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackIndexSetComplex(System.Object,System.Object[],System.String[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="OptimisticSet" Type="System.Boolean" />
+        <Parameter Name="RValueBase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <param name="OptimisticSet">Ein <see langword="Boolean" /> Wert verwendet, um zu bestimmen, ob die Set-Vorgang verwendet werden kann. Legen Sie auf <see langword="True" /> , wenn Sie glauben, dass die Eigenschaft oder des Felds; ein intermediate Wert festgelegt wurde andernfalls <see langword="False" />.</param>
+        <param name="RValueBase">Ein <see langword="Boolean" /> -Wert, der angibt, wann die basisverweises des Verweises spät ist ein <see langword="RValue" />. Legen Sie auf <see langword="True" /> bei der basisverweises des spät Verweises wird ein <see langword="RValue" />; Dadurch können Sie generieren eine Laufzeitausnahme für spät Zuweisungen an Felder des <see langword="RValues" /> von Werttypen. Legen Sie andernfalls auf <see langword="False" />.</param>
+        <summary>Führt einen spät gebundenen Aufruf Eigenschaftensatz oder ein Feld zu schreiben. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackInvokeDefault1">
+      <MemberSignature Language="C#" Value="public static object FallbackInvokeDefault1 (object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object FallbackInvokeDefault1(object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackInvokeDefault1(System.Object,System.Object[],System.String[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="ReportErrors" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode. Wenn <c>Instanz</c> ist vom Typ <see cref="T:System.Dynamic.IDynamicMetaObjectProvider" />, binden Sie mit der Dynamic Language Runtime; andernfalls führen Sie standardmäßigen späte Bindung.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <param name="ReportErrors">Ein <see langword="Boolean" /> Wert verwendet, um anzugeben, ob Ausnahmen auslösen, wenn ein Fehler aufgetreten ist. Legen Sie auf <see langword="True" /> Ausnahmen ausgelöst. Legen Sie auf <see langword="False" /> zurückzugebenden <see langword="Nothing" /> Wenn ein Fehler aufgetreten ist.</param>
+        <summary>Führt einen spät gebundenen Abruf der Standardeigenschaft oder des Felds oder der Aufruf der Standardmethode oder Funktion. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <returns>Eine Instanz des Aufrufobjekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackInvokeDefault2">
+      <MemberSignature Language="C#" Value="public static object FallbackInvokeDefault2 (object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object FallbackInvokeDefault2(object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackInvokeDefault2(System.Object,System.Object[],System.String[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="ReportErrors" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <param name="ReportErrors">Ein <see langword="Boolean" /> Wert verwendet, um anzugeben, ob Ausnahmen auslösen, wenn ein Fehler aufgetreten ist. Legen Sie auf <see langword="True" /> Ausnahmen ausgelöst. Legen Sie auf <see langword="False" /> zurückzugebenden <see langword="Nothing" /> Wenn ein Fehler aufgetreten ist.</param>
+        <summary>Führt einen spät gebundenen Abruf der Standardeigenschaft oder des Felds oder der Aufruf der Standardmethode oder Funktion. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <returns>Eine Instanz des Aufrufobjekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackSet">
+      <MemberSignature Language="C#" Value="public static void FallbackSet (object Instance, string MemberName, object[] Arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void FallbackSet(object Instance, string MemberName, object[] Arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackSet(System.Object,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="MemberName">Der Name der Eigenschaft oder Methode für das Objekt aufrufen.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <summary>Führt einen spät gebundenen Aufruf Eigenschaftensatz oder ein Feld zu schreiben. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackSetComplex">
+      <MemberSignature Language="C#" Value="public static void FallbackSetComplex (object Instance, string MemberName, object[] Arguments, bool OptimisticSet, bool RValueBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void FallbackSetComplex(object Instance, string MemberName, object[] Arguments, bool OptimisticSet, bool RValueBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackSetComplex(System.Object,System.String,System.Object[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("do not use this method", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="OptimisticSet" Type="System.Boolean" />
+        <Parameter Name="RValueBase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="MemberName">Der Name der Eigenschaft oder Methode für das Objekt aufrufen.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="OptimisticSet">Ein <see langword="Boolean" /> Wert verwendet, um zu bestimmen, ob die Set-Vorgang verwendet werden kann. Legen Sie auf <see langword="True" /> , wenn Sie glauben, dass die Eigenschaft oder des Felds; ein intermediate Wert festgelegt wurde andernfalls <see langword="False" />.</param>
+        <param name="RValueBase">Ein <see langword="Boolean" /> -Wert, der angibt, wann die basisverweises des Verweises spät ist ein <see langword="RValue" />. Legen Sie auf <see langword="True" /> bei der basisverweises des spät Verweises wird ein <see langword="RValue" />; Dadurch können Sie generieren eine Laufzeitausnahme für spät Zuweisungen an Felder des <see langword="RValues" /> von Werttypen. Legen Sie andernfalls auf <see langword="False" />.</param>
+        <summary>Führt einen spät gebundenen Aufruf Eigenschaftensatz oder ein Feld zu schreiben. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateCall">
+      <MemberSignature Language="C#" Value="public static object LateCall (object Instance, Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, Type[] TypeArguments, bool[] CopyBack, bool IgnoreReturn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LateCall(object Instance, class System.Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, class System.Type[] TypeArguments, bool[] CopyBack, bool IgnoreReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateCall(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[],System.Boolean[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Type" Type="System.Type" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="TypeArguments" Type="System.Type[]" />
+        <Parameter Name="CopyBack" Type="System.Boolean[]" />
+        <Parameter Name="IgnoreReturn" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Type">Der Typ des Aufrufobjekts.</param>
+        <param name="MemberName">Der Name der Eigenschaft oder Methode für das Objekt aufrufen.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <param name="TypeArguments">Ein Array von Argumenttypen. nur für generische Aufrufe verwendet, um Argumenttypen übergeben.</param>
+        <param name="CopyBack">Ein Array von <see langword="Boolean" /> Werte, die das spät bindende Objekt verwendet wird, für die Kommunikation zurück, an der Aufrufsite, welche Argumente übereinstimmen <see langword="ByRef" /> Parameter. Jede <see langword="True" /> Wert gibt an, dass die Argumente abgeglichen und sollen, nach dem Aufruf von kopiert werden <see langword="LateCall" /> ist abgeschlossen.</param>
+        <param name="IgnoreReturn">Ein <see langword="Boolean" /> -Wert, der angibt, und zwar unabhängig davon, ob der Rückgabewert ignoriert werden kann.</param>
+        <summary>Führt eine spät gebundene Methode oder Funktion aufrufen. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <returns>Eine Instanz des Aufrufobjekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vergleichbar zu <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateCallInvokeDefault">
+      <MemberSignature Language="C#" Value="public static object LateCallInvokeDefault (object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LateCallInvokeDefault(object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateCallInvokeDefault(System.Object,System.Object[],System.String[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="ReportErrors" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <param name="ReportErrors">Ein <see langword="Boolean" /> Wert verwendet, um anzugeben, ob Ausnahmen auslösen, wenn ein Fehler aufgetreten ist. Legen Sie auf <see langword="True" /> Ausnahmen ausgelöst. Legen Sie auf <see langword="False" /> zurückzugebenden <see langword="Nothing" /> Wenn ein Fehler aufgetreten ist.</param>
+        <summary>Führt einen spät gebundenen Aufruf der Standardmethode oder die Funktion an. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <returns>Eine Instanz des Aufrufobjekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateCanEvaluate">
+      <MemberSignature Language="C#" Value="public static bool LateCanEvaluate (object instance, Type type, string memberName, object[] arguments, bool allowFunctionEvaluation, bool allowPropertyEvaluation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool LateCanEvaluate(object instance, class System.Type type, string memberName, object[] arguments, bool allowFunctionEvaluation, bool allowPropertyEvaluation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateCanEvaluate(System.Object,System.Type,System.String,System.Object[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="memberName" Type="System.String" />
+        <Parameter Name="arguments" Type="System.Object[]" />
+        <Parameter Name="allowFunctionEvaluation" Type="System.Boolean" />
+        <Parameter Name="allowPropertyEvaluation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="type">Der Typ des Aufrufobjekts.</param>
+        <param name="memberName">Der Name der Eigenschaft oder Methode für das Objekt aufrufen.</param>
+        <param name="arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="allowFunctionEvaluation">Ein <see langword="Boolean" /> Wert, der angibt, ob funktionsauswertung zulässig.</param>
+        <param name="allowPropertyEvaluation">Ein <see langword="Boolean" /> Wert, der angibt, ob eigenschaftenauswertung zulässig.</param>
+        <summary>Gibt an, ob ein Aufruf spät gebundene Auswertung erforderlich ist. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <returns>Ein <see langword="Boolean" /> Wert, der angibt, ob der Ausdruck eine spät gebundene Auswertung erfordert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateGet">
+      <MemberSignature Language="C#" Value="public static object LateGet (object Instance, Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, Type[] TypeArguments, bool[] CopyBack);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LateGet(object Instance, class System.Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, class System.Type[] TypeArguments, bool[] CopyBack) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateGet(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[],System.Boolean[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Type" Type="System.Type" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="TypeArguments" Type="System.Type[]" />
+        <Parameter Name="CopyBack" Type="System.Boolean[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Type">Der Typ des Aufrufobjekts.</param>
+        <param name="MemberName">Der Name der Eigenschaft oder Methode für das Objekt aufrufen.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <param name="TypeArguments">Ein Array von Argumenttypen. nur für generische Aufrufe verwendet, um Argumenttypen übergeben.</param>
+        <param name="CopyBack">Ein Array von <see langword="Boolean" /> Werte, die das spät bindende Objekt verwendet wird, für die Kommunikation zurück, an der Aufrufsite, welche Argumente übereinstimmen <see langword="ByRef" /> Parameter. Jede <see langword="True" /> Wert gibt an, dass die Argumente abgeglichen und sollen, nach dem Aufruf von kopiert werden <see langword="LateCall" /> ist abgeschlossen.</param>
+        <summary>Führt eine spät gebundene Eigenschaft abzurufen oder das Feld Zugriff-Aufruf. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <returns>Eine Instanz des Aufrufobjekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateGetInvokeDefault">
+      <MemberSignature Language="C#" Value="public static object LateGetInvokeDefault (object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LateGetInvokeDefault(object Instance, object[] Arguments, string[] ArgumentNames, bool ReportErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateGetInvokeDefault(System.Object,System.Object[],System.String[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="ReportErrors" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <param name="ReportErrors">Ein <see langword="Boolean" /> Wert verwendet, um anzugeben, ob Ausnahmen auslösen, wenn ein Fehler aufgetreten ist. Legen Sie auf <see langword="True" /> Ausnahmen ausgelöst. Legen Sie auf <see langword="False" /> zurückzugebenden <see langword="Nothing" /> Wenn ein Fehler aufgetreten ist.</param>
+        <summary>Führt einen spät gebundenen Abruf der Standardeigenschaft oder des Felds. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <returns>Eine Instanz des Aufrufobjekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateIndexGet">
+      <MemberSignature Language="C#" Value="public static object LateIndexGet (object Instance, object[] Arguments, string[] ArgumentNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object LateIndexGet(object Instance, object[] Arguments, string[] ArgumentNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateIndexGet(System.Object,System.Object[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <summary>Führt eine spät gebundene Eigenschaft abzurufen oder das Feld Zugriff-Aufruf. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <returns>Eine Instanz des Aufrufobjekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateIndexSet">
+      <MemberSignature Language="C#" Value="public static void LateIndexSet (object Instance, object[] Arguments, string[] ArgumentNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void LateIndexSet(object Instance, object[] Arguments, string[] ArgumentNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateIndexSet(System.Object,System.Object[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <summary>Führt einen spät gebundenen Aufruf Eigenschaftensatz oder ein Feld zu schreiben. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateIndexSetComplex">
+      <MemberSignature Language="C#" Value="public static void LateIndexSetComplex (object Instance, object[] Arguments, string[] ArgumentNames, bool OptimisticSet, bool RValueBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void LateIndexSetComplex(object Instance, object[] Arguments, string[] ArgumentNames, bool OptimisticSet, bool RValueBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateIndexSetComplex(System.Object,System.Object[],System.String[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="OptimisticSet" Type="System.Boolean" />
+        <Parameter Name="RValueBase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <param name="OptimisticSet">Ein <see langword="Boolean" /> Wert verwendet, um zu bestimmen, ob die Set-Vorgang verwendet werden kann. Legen Sie auf <see langword="True" /> , wenn Sie glauben, dass die Eigenschaft oder des Felds; ein intermediate Wert festgelegt wurde andernfalls <see langword="False" />.</param>
+        <param name="RValueBase">Ein <see langword="Boolean" /> -Wert, der angibt, wann die basisverweises des Verweises spät ist ein <see langword="RValue" />. Legen Sie auf <see langword="True" /> bei der basisverweises des spät Verweises wird ein <see langword="RValue" />; Dadurch können Sie generieren eine Laufzeitausnahme für spät Zuweisungen an Felder des <see langword="RValues" /> von Werttypen. Legen Sie andernfalls auf <see langword="False" />.</param>
+        <summary>Führt einen spät gebundenen Aufruf Eigenschaftensatz oder ein Feld zu schreiben. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateSet">
+      <MemberSignature Language="C#" Value="public static void LateSet (object Instance, Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, Type[] TypeArguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void LateSet(object Instance, class System.Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, class System.Type[] TypeArguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateSet(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Type" Type="System.Type" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="TypeArguments" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Type">Der Typ des Aufrufobjekts.</param>
+        <param name="MemberName">Der Name der Eigenschaft oder Methode für das Objekt aufrufen.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <param name="TypeArguments">Ein Array von Argumenttypen. nur für generische Aufrufe verwendet, um Argumenttypen übergeben.</param>
+        <summary>Führt einen spät gebundenen Aufruf Eigenschaftensatz oder ein Feld zu schreiben. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateSet">
+      <MemberSignature Language="C#" Value="public static void LateSet (object Instance, Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, Type[] TypeArguments, bool OptimisticSet, bool RValueBase, Microsoft.VisualBasic.CallType CallType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void LateSet(object Instance, class System.Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, class System.Type[] TypeArguments, bool OptimisticSet, bool RValueBase, valuetype Microsoft.VisualBasic.CallType CallType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateSet(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[],System.Boolean,System.Boolean,Microsoft.VisualBasic.CallType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Type" Type="System.Type" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="TypeArguments" Type="System.Type[]" />
+        <Parameter Name="OptimisticSet" Type="System.Boolean" />
+        <Parameter Name="RValueBase" Type="System.Boolean" />
+        <Parameter Name="CallType" Type="Microsoft.VisualBasic.CallType" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Type">Der Typ des Aufrufobjekts.</param>
+        <param name="MemberName">Der Name der Eigenschaft oder Methode für das Objekt aufrufen.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <param name="TypeArguments">Ein Array von Argumenttypen. nur für generische Aufrufe verwendet, um Argumenttypen übergeben.</param>
+        <param name="OptimisticSet">Ein <see langword="Boolean" /> Wert verwendet, um zu bestimmen, ob die Set-Vorgang verwendet werden kann. Legen Sie auf <see langword="True" /> , wenn Sie glauben, dass die Eigenschaft oder des Felds; ein intermediate Wert festgelegt wurde andernfalls <see langword="False" />.</param>
+        <param name="RValueBase">Ein <see langword="Boolean" /> -Wert, der angibt, wann die basisverweises des Verweises spät ist ein <see langword="RValue" />. Legen Sie auf <see langword="True" /> bei der basisverweises des spät Verweises wird ein <see langword="RValue" />; Dadurch können Sie generieren eine Laufzeitausnahme für spät Zuweisungen an Felder des <see langword="RValues" /> von Werttypen. Legen Sie andernfalls auf <see langword="False" />.</param>
+        <param name="CallType">Ein Enumerationsmember vom Typ <see cref="T:Microsoft.VisualBasic.CallType" /> , die den Typ der aufgerufenen Prozedur darstellt. Der Wert der Aufruftyp ist möglich <see langword="Method" />, <see langword="Get" />, oder <see langword="Set" />. Nur <see langword="Set" /> verwendet wird.</param>
+        <summary>Führt einen spät gebundenen Aufruf Eigenschaftensatz oder ein Feld zu schreiben. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist die Set-Vorgang das Zurückkopieren eines spät gebundenen Ausdrucks übergeben werden, als ein `ByRef` Parameter `OptimisticSet` wird verwendet, um zu bestimmen, ob die Set-Vorgang funktioniert, wie die spät gebundene Ausdruck in eine schreibgeschützte Eigenschaft oder Methode führen kann. Weitere Informationen finden Sie unter dem CopyBack-Parameter von <xref:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateCall%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LateSetComplex">
+      <MemberSignature Language="C#" Value="public static void LateSetComplex (object Instance, Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, Type[] TypeArguments, bool OptimisticSet, bool RValueBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void LateSetComplex(object Instance, class System.Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, class System.Type[] TypeArguments, bool OptimisticSet, bool RValueBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateSetComplex(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Instance" Type="System.Object" />
+        <Parameter Name="Type" Type="System.Type" />
+        <Parameter Name="MemberName" Type="System.String" />
+        <Parameter Name="Arguments" Type="System.Object[]" />
+        <Parameter Name="ArgumentNames" Type="System.String[]" />
+        <Parameter Name="TypeArguments" Type="System.Type[]" />
+        <Parameter Name="OptimisticSet" Type="System.Boolean" />
+        <Parameter Name="RValueBase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Instance">Eine Instanz des Aufrufobjekts verfügbar macht, die Eigenschaft oder Methode.</param>
+        <param name="Type">Der Typ des Aufrufobjekts.</param>
+        <param name="MemberName">Der Name der Eigenschaft oder Methode für das Objekt aufrufen.</param>
+        <param name="Arguments">Ein Array mit den Argumenten, die an die Eigenschaft oder der aufgerufenen Methode übergeben werden.</param>
+        <param name="ArgumentNames">Ein Array von Argumentnamen.</param>
+        <param name="TypeArguments">Ein Array von Argumenttypen. nur für generische Aufrufe verwendet, um Argumenttypen übergeben.</param>
+        <param name="OptimisticSet">Ein <see langword="Boolean" /> Wert verwendet, um zu bestimmen, ob die Set-Vorgang verwendet werden kann. Legen Sie auf <see langword="True" /> , wenn Sie glauben, dass die Eigenschaft oder des Felds; ein intermediate Wert festgelegt wurde andernfalls <see langword="False" />.</param>
+        <param name="RValueBase">Ein <see langword="Boolean" /> -Wert, der angibt, wann die basisverweises des Verweises spät ist ein <see langword="RValue" />. Legen Sie auf <see langword="True" /> bei der basisverweises des spät Verweises wird ein <see langword="RValue" />; Dadurch können Sie generieren eine Laufzeitausnahme für spät Zuweisungen an Felder des <see langword="RValues" /> von Werttypen. Legen Sie andernfalls auf <see langword="False" />.</param>
+        <summary>Führt einen spät gebundenen Aufruf Eigenschaftensatz oder ein Feld zu schreiben. Diese Hilfsmethode ist nicht vorgesehen, direkt aus Ihrem Code aufgerufen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ähnlich wie <xref:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateSet%2A> mit dem Unterschied, dass diese Methode mit komplexen Ausdrücken (z. B. Ausdrücke in Klammern) ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,109 @@
+<Type Name="StringListProperty" FullName="Microsoft.Build.Framework.XamlTypes.StringListProperty">
+  <TypeSignature Language="C#" Value="public sealed class StringListProperty : Microsoft.Build.Framework.XamlTypes.BaseProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StringListProperty extends Microsoft.Build.Framework.XamlTypes.BaseProperty" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.XamlTypes.StringListProperty" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.XamlTypes.BaseProperty</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das Schema einer Liste von Zeichenfolgen-Eigenschaft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass dies stellt eine Liste von Zeichenfolgen, die keiner Liste von <xref:Microsoft.Build.Framework.XamlTypes.StringProperty>s.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringListProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.StringListProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Standardkonstruktor Für die Verwendung von XAML-Deserialisierung Eigenschaft erforderlich.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandLineValueSeparator">
+      <MemberSignature Language="C#" Value="public string CommandLineValueSeparator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandLineValueSeparator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.StringListProperty.CommandLineValueSeparator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Trennzeichen in einzelne Werte dieser Zeichenfolge Listeneigenschaft Zeichenfolgenlisteneigenschaft verwenden</summary>
+        <value>Gibt das Trennzeichen an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für `Val1;Val2;Val3`, wenn `CommandLineValueSeparator` angegeben, z. B. `,`, die über die Befehlszeile sieht wie folgt: `/p:val1,val2,val3` Wenn nicht angegeben ist, sieht die Befehlszeile wie folgt: `/p:val1 /p:val2 /p:val3` dieses Feld ist optional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RendererValueSeparator">
+      <MemberSignature Language="C#" Value="public string RendererValueSeparator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RendererValueSeparator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.StringListProperty.RendererValueSeparator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das UI-Rendering-Trennzeichen. Diese Eigenschaft ist veraltet.</summary>
+        <value>Gibt das UI-Rendering-Trennzeichen an. Diese Eigenschaft ist veraltet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtype">
+      <MemberSignature Language="C#" Value="public string Subtype { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subtype" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.StringListProperty.Subtype" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Qualifiziert diese Zeichenfolgeneigenschaft, um ihm eine spezifischere Klassifizierung zu erteilen.</summary>
+        <value>Gibt den Eigenschaftenuntertyp zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ähnlich wie die <xref:Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

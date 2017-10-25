@@ -1,0 +1,158 @@
+<Type Name="AddingNewEventArgs" FullName="System.ComponentModel.AddingNewEventArgs">
+  <TypeSignature Language="C#" Value="public class AddingNewEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AddingNewEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.AddingNewEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.BindingSource.AddingNew" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.AddingNewEventArgs> Klasse stellt Daten für die <xref:System.Windows.Forms.BindingSource.AddingNew?displayProperty=nameWithType> Ereignis, das signalisiert, dass ein Element einer Auflistung hinzugefügt werden. Das Ereignis ermöglicht es dem Programmierer, innerhalb des ereignishandlers <xref:System.ComponentModel.AddingNewEventHandler>, die Möglichkeit, das neue Objekt angeben, durch Festlegen der <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A> -Eigenschaft auf dieses neue Element. Wenn diese Eigenschaft nicht festgelegt ist, wird die Auflistung den Standardkonstruktor des entsprechenden Typs in der Regel verwenden, um ein neues Element erstellen. In beiden Fällen wird das neue Element der Auflistung hinzugefügt werden.  
+  
+ Wenn die Auflistung außerdem implementiert die <xref:System.ComponentModel.ICancelAddNew> -Schnittstelle, das Element vorläufig hinzugefügt, warten ein nachfolgender Commit oder Rollback.  
+  
+ Dieses Ereignis wird häufig verwendete in Datenbindungsszenarien innerhalb von Klassen wie <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> und <xref:System.ComponentModel.BindingList%601?displayProperty=nameWithType>.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.AddingNewEventArgs> Klasse zum Behandeln der <xref:System.Windows.Forms.BindingSource.AddingNew?displayProperty=nameWithType> Ereignis. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [wie: Anpassen der Hinzufügung mit der BindingSource in Windows Forms](~/docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataConnector.AddingNew#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/CPP/form1.cpp#8)]
+ [!code-csharp[System.Windows.Forms.DataConnector.AddingNew#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/CS/form1.cs#8)]
+ [!code-vb[System.Windows.Forms.DataConnector.AddingNew#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/VB/form1.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AddingNewEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AddingNewEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.AddingNewEventArgs" /> -Klasse ohne Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor legt die <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A> Eigenschaft `null`. Ein Wert, `null` gibt an, wenn die <xref:System.ComponentModel.AddingNewEventHandler> diese Eigenschaft nicht explizit festlegt Auflistung dauert Standardschritte ein neues Element auf sich selbst hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AddingNewEventArgs (object newObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object newObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AddingNewEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="newObject">Ein <see cref="T:System.Object" /> als der neue Elementwert verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.AddingNewEventArgs" /> -Klasse mit dem angegebenen Objekt wie das neue Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.AddingNewEventArgs.%23ctor%2A> Konstruktor legt die <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A> Eigenschaft, um die `newObject` Parameter. Dieses Objekt wird als das neue Element verwendet werden, die an die zugeordnete Sammlung hinzugefügt werden, wenn diese Eigenschaft vom Ereignishandler aktualisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewObject">
+      <MemberSignature Language="C#" Value="public object NewObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NewObject" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.AddingNewEventArgs.NewObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Objekt, das die Bindungsliste hinzugefügt werden.</summary>
+        <value>Die <see cref="T:System.Object" /> als ein neues Element an die zugeordnete Sammlung hinzugefügt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A> -Eigenschaftensatz auf `null`, bedeutet dies, dass die Auflistung die Standardaktionen annehmen und somit die in der Regel umfasst das Erstellen eines Objekts des entsprechenden Typs, dessen Standardkonstruktor verwenden, und klicken Sie dann der Auflistung hinzugefügt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.AddingNewEventArgs> Klasse zum Behandeln der <xref:System.Windows.Forms.BindingSource.AddingNew?displayProperty=nameWithType> Ereignis. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [wie: Anpassen der Hinzufügung mit der BindingSource in Windows Forms](~/docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataConnector.AddingNew#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/CPP/form1.cpp#8)]
+ [!code-csharp[System.Windows.Forms.DataConnector.AddingNew#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/CS/form1.cs#8)]
+ [!code-vb[System.Windows.Forms.DataConnector.AddingNew#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

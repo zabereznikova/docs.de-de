@@ -1,0 +1,304 @@
+<Type Name="NavigatingCancelEventArgs" FullName="System.Windows.Navigation.NavigatingCancelEventArgs">
+  <TypeSignature Language="C#" Value="public class NavigatingCancelEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NavigatingCancelEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.NavigatingCancelEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die **Navigating** Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Ereignisargumente enthalten Informationen über die Navigation wurde angefordert, und werden an Handler des übergeben der **Navigating** Ereignis, das durch die folgende implementiert wird:  
+  
+-   <xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.Navigating?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Controls.Frame.Navigating?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Application.Navigating?displayProperty=nameWithType>  
+  
+ <xref:System.Windows.Navigation.NavigatingCancelEventArgs>Kapselt die folgenden Details der navigationsanforderung an:  
+  
+-   **Navigation Initiierung**: <xref:System.Windows.Navigation.NavigatingCancelEventArgs.NavigationMode%2A>, <xref:System.Windows.Navigation.NavigatingCancelEventArgs.Navigator%2A>, <xref:System.Windows.Navigation.NavigatingCancelEventArgs.IsNavigationInitiator%2A>.  
+  
+-   **Navigation Inhalt**: <xref:System.Windows.Navigation.NavigatingCancelEventArgs.Uri%2A>, <xref:System.Windows.Navigation.NavigatingCancelEventArgs.Content%2A>.  
+  
+-   **Navigationsanforderung**: <xref:System.Windows.Navigation.NavigationFailedEventArgs.WebRequest%2A>.  
+  
+-   **Navigationszustand**: <xref:System.Windows.Navigation.NavigatingCancelEventArgs.ExtraData%2A>, <xref:System.Windows.Navigation.NavigatingCancelEventArgs.ContentStateToSave%2A>, <xref:System.Windows.Navigation.NavigatingCancelEventArgs.TargetContentState%2A>.  
+  
+ Diese Informationen können Sie sowohl den Charakter der navigationsanforderung auswerten und anzeigen und angegebenen Anforderungsdetails aktualisieren, bevor navigiert wird.  
+  
+ Anhand der Navigation Anforderungsinformationen durch <xref:System.Windows.Navigation.NavigatingCancelEventArgs>, oder basierend auf den anwendungsspezifischen Status oder Code, Sie können vollständig zu verhindern, dass Navigation durch Festlegen der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true` (standardmäßig <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> ist `false`).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie behandelt <xref:System.Windows.Navigation.NavigationService.Navigating> zu ermitteln, ob eine Anforderung zum Aktualisieren von statischen Inhalts erfolgt ist, und wurde wie die Anforderung abgebrochen.  
+  
+ <xref:System.Windows.Navigation.NavigationService.Navigating>.  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowNavigatingCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindownavigatingcode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowNavigatingCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindownavigatingcode)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public object Content { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Content" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigatingCancelEventArgs.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf das Inhaltsobjekt, zu dem navigiert wird.</summary>
+        <value>Ein <see cref="T:System.Object" /> Verweis auf das Inhaltsobjekt, das dem navigiert wird, andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können navigieren, auf Inhalte, die entweder eine [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] oder ein Objekt. Bei der Navigation zu einem Objekt, das auftritt, wenn der Aufruf von <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> und <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>, <xref:System.Windows.Navigation.NavigatingCancelEventArgs.Content%2A> enthält einen Verweis auf das Inhaltsobjekt, zu dem navigiert wird. Darüber hinaus die <xref:System.Windows.Navigation.NavigatingCancelEventArgs.Uri%2A> -Eigenschaft `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentStateToSave">
+      <MemberSignature Language="C#" Value="public System.Windows.Navigation.CustomContentState ContentStateToSave { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Navigation.CustomContentState ContentStateToSave" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigatingCancelEventArgs.ContentStateToSave" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.CustomContentState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die <see cref="T:System.Windows.Navigation.CustomContentState" /> -Objekt, das den Eintrag im Navigationsverlauf zurück für die Seite, zu dem navigiert von zugeordnet ist.</summary>
+        <value>Die <see cref="T:System.Windows.Navigation.CustomContentState" /> -Objekt, das den Eintrag im Navigationsverlauf zurück für die Seite, zu dem navigiert von zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationService.Navigating>Ereignis wird ausgelöst, wenn von einem Teil des Inhalts in einen anderen zu navigieren. Der Inhalt, von dem navigiert wird, wird Navigationsverlauf sichern hinzugefügt. Sie können festlegen, <xref:System.Windows.Navigation.NavigatingCancelEventArgs.ContentStateToSave%2A> mit einem benutzerdefinierten <xref:System.Windows.Navigation.CustomContentState> Objekt, das Inhalt im Navigationsverlauf Zustandsinformationen zuzuordnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraData">
+      <MemberSignature Language="C#" Value="public object ExtraData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ExtraData" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigatingCancelEventArgs.ExtraData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die optionalen Daten <see cref="T:System.Object" /> , die bei Beginn der Navigation übergeben wurde.</summary>
+        <value>Optionalen Daten <see cref="T:System.Object" /> , die bei Beginn der Navigation übergeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigatingCancelEventArgs.ExtraData%2A>kann verwendet werden, um kontextspezifische Daten zu übergeben, die für eine bestimmte Navigation spezifisch sind. <xref:System.Windows.Navigation.NavigatingCancelEventArgs.ExtraData%2A>enthält einen Verweis auf das Objekt, das als zweites Argument, beim Aufrufen von übergeben wird <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> oder <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>. Andernfalls ist der Wert `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNavigationInitiator">
+      <MemberSignature Language="C#" Value="public bool IsNavigationInitiator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNavigationInitiator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigatingCancelEventArgs.IsNavigationInitiator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Navigator (<see cref="T:System.Windows.Navigation.NavigationWindow" />, <see cref="T:System.Windows.Controls.Frame" />) angegebenen <see cref="P:System.Windows.Navigation.NavigatingCancelEventArgs.Navigator" /> ist die Wartung dieser Navigation oder gibt an, ob ein übergeordnete Navigator ist.</summary>
+        <value>Ein <see cref="T:System.Boolean" /> Wert, der <see langword="true" /> Wenn der Navigator, der angegebenen <see cref="P:System.Windows.Navigation.NavigatingCancelEventArgs.Navigator" /> ist die Wartung dieser Navigation. Andernfalls <see langword="false" /> zurückgegeben, z. B. während einer geschachtelten <see cref="T:System.Windows.Controls.Frame" /> Navigation.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Navigation.NavigationMode NavigationMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Navigation.NavigationMode NavigationMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigatingCancelEventArgs.NavigationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Navigation.NavigationMode" /> Wert, der den Typ der Navigation angibt, das auftritt.</summary>
+        <value>Ein <see cref="T:System.Windows.Navigation.NavigationMode" /> Wert, der den Typ der Navigation angibt, das auftritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Typen der Navigation, die auftreten können sind:  
+  
+-   Navigation zu neuen Inhalten (<xref:System.Windows.Navigation.NavigationMode.New>).  
+  
+-   Navigieren zum vorherigen Element im Navigationsverlauf (<xref:System.Windows.Navigation.NavigationMode.Back>).  
+  
+-   Navigieren zum nächsten Element im Navigationsverlauf (<xref:System.Windows.Navigation.NavigationMode.Forward>).  
+  
+-   Aktualisieren von vorhandenem Inhalt (<xref:System.Windows.Navigation.NavigationMode.Refresh>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigator">
+      <MemberSignature Language="C#" Value="public object Navigator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Navigator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigatingCancelEventArgs.Navigator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Navigator, der das Ereignis ausgelöst.</summary>
+        <value>Ein <see cref="T:System.Object" /> also der Navigator, der das Ereignis ausgelöst</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während <xref:System.Windows.Navigation.NavigatingCancelEventArgs.Navigator%2A> speichert einen Verweis auf den Navigator, die dieses Ereignis, das den Navigator ausgelöst möglicherweise nicht zwangsläufig initiiert haben die Navigation. Um zu bestimmen, ob dieser Navigator die aktuelle Navigation initiiert hat, überprüfen Sie die <xref:System.Windows.Navigation.NavigatingCancelEventArgs.IsNavigationInitiator%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetContentState">
+      <MemberSignature Language="C#" Value="public System.Windows.Navigation.CustomContentState TargetContentState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Navigation.CustomContentState TargetContentState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigatingCancelEventArgs.TargetContentState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.CustomContentState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Navigation.CustomContentState" /> -Objekt, das auf den Inhalt, zu dem navigiert angewendet werden soll.</summary>
+        <value>Die <see cref="T:System.Windows.Navigation.CustomContentState" /> -Objekt, das auf den Inhalt, zu dem navigiert angewendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigatingCancelEventArgs.TargetContentState%2A>enthält eine <xref:System.Windows.Navigation.CustomContentState> Objekt bei der Navigation zu Inhalt sichern oder Navigationsverlauf an, die verfügt über eine <xref:System.Windows.Navigation.CustomContentState> Objekt zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigatingCancelEventArgs.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] für den Inhalt, zu dem navigiert.</summary>
+        <value>Die <see cref="T:System.Uri" /> für den Inhalt, zu dem navigiert. Wenn die Navigation zu einem Objekt <see cref="P:System.Windows.Navigation.NavigatingCancelEventArgs.Uri" /> ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können navigieren, auf Inhalte, die entweder eine [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] oder ein Objekt. Beim Navigieren zu einer [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)], der auftritt, wenn der Aufruf von <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> und <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>, <xref:System.Windows.Navigation.NavigatingCancelEventArgs.Uri%2A> enthält die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Inhalts navigiert wird. Darüber hinaus die <xref:System.Windows.Navigation.NavigatingCancelEventArgs.Content%2A> -Eigenschaft `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebRequest">
+      <MemberSignature Language="C#" Value="public System.Net.WebRequest WebRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebRequest WebRequest" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigatingCancelEventArgs.WebRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebRequest</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Net.WebRequest" /> -Objekt, das verwendet wird, um den angegebenen Inhalt anfordern.</summary>
+        <value>Ruft die <see cref="T:System.Net.WebRequest" /> -Objekt, das verwendet wird, um den angegebenen Inhalt anfordern.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebRequest?displayProperty=nameWithType>ist eine abstrakte Basisklasse, die eine webanforderung kapselt und protokollunabhängige. Für jede verwendete Protokoll der [!INCLUDE[TLA#tla_titlewinfx](~/includes/tlasharptla-titlewinfx-md.md)] enthält eine Klasse, die abgeleitet <xref:System.Net.WebRequest?displayProperty=nameWithType> und erweitert diese mit einem bestimmten Zustand Protokoll und das Verhalten, einschließlich:  
+  
+-   <xref:System.IO.Packaging.PackWebRequest>: [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] , bei denen die `pack://` -Schema zum Anfordern von Anwendungsdatendateien (finden Sie unter [Anwendungsressource WPF-Inhalt und Datendateien](~/docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)).  
+  
+-   <xref:System.Net.HttpWebRequest>: [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] , bei denen die `http://` -Schema, das Anforderung-Dateien von Webservern.  
+  
+-   <xref:System.Net.FtpWebRequest>: [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] , bei denen die `ftp://` -Schema, das Anforderung-Dateien von FTP-Servern.  
+  
+-   <xref:System.Net.FileWebRequest>: [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] , bei denen die `file://` -Schema, das Anfordern von lokalen Dateien.  
+  
+ Sie können sowohl anzeigen und ändern <xref:System.Net.WebRequest> Details.  
+  
+ <xref:System.Windows.Navigation.NavigatingCancelEventArgs.WebRequest%2A>ist `null` tritt die Navigation durch:  
+  
+-   Mithilfe der <xref:System.Windows.Controls.WebBrowser> Steuerelement.  
+  
+-   Aufrufen<xref:System.Windows.Navigation.NavigationService.Navigate%2A>  
+  
+-   Festlegen von <xref:System.Windows.Navigation.NavigationService.Content%2A?displayProperty=nameWithType>.  
+  
+-   Navigieren durch HTML-Inhalt in einem <xref:System.Windows.Controls.Frame>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

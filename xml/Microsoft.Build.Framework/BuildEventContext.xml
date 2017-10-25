@@ -1,0 +1,454 @@
+<Type Name="BuildEventContext" FullName="Microsoft.Build.Framework.BuildEventContext">
+  <TypeSignature Language="C#" Value="public class BuildEventContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit BuildEventContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.BuildEventContext" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält kontextbezogene Standortinformationen für Buildereignisse an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.Framework.BuildEventContext>ist besonders nützlich in Umgebungen mit mehreren Prozessoren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildEventContext (int nodeId, int targetId, int projectContextId, int taskId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 nodeId, int32 targetId, int32 projectContextId, int32 taskId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildEventContext.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="nodeId" Type="System.Int32" />
+        <Parameter Name="targetId" Type="System.Int32" />
+        <Parameter Name="projectContextId" Type="System.Int32" />
+        <Parameter Name="taskId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="nodeId">Der Knoten-ID, der das Ereignis erstellt.</param>
+        <param name="targetId">Die Ziel-ID, der das Ereignis erstellt werden soll.</param>
+        <param name="projectContextId">Die Projekt-ID, der das Ereignis erstellt werden soll.</param>
+        <param name="taskId">Die Task-ID, der das Ereignis erstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Framework.BuildEventContext" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildEventContext (int nodeId, int projectInstanceId, int projectContextId, int targetId, int taskId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 nodeId, int32 projectInstanceId, int32 projectContextId, int32 targetId, int32 taskId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildEventContext.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="nodeId" Type="System.Int32" />
+        <Parameter Name="projectInstanceId" Type="System.Int32" />
+        <Parameter Name="projectContextId" Type="System.Int32" />
+        <Parameter Name="targetId" Type="System.Int32" />
+        <Parameter Name="taskId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="nodeId">Der Knoten-ID, der das Ereignis erstellt.</param>
+        <param name="projectInstanceId">Die Projekt-ID des Buildereignisses.</param>
+        <param name="projectContextId">Die Projekt-ID, der das Ereignis erstellt werden soll.</param>
+        <param name="targetId">Die Ziel-ID, der das Ereignis erstellt werden soll.</param>
+        <param name="taskId">Die Task-ID, der das Ereignis erstellt.</param>
+        <summary>Erstellt einen BuildEventContext mit einer Instanz-Id des angegebenen Projekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildEventContext (int submissionId, int nodeId, int projectInstanceId, int projectContextId, int targetId, int taskId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 submissionId, int32 nodeId, int32 projectInstanceId, int32 projectContextId, int32 targetId, int32 taskId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildEventContext.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="submissionId" Type="System.Int32" />
+        <Parameter Name="nodeId" Type="System.Int32" />
+        <Parameter Name="projectInstanceId" Type="System.Int32" />
+        <Parameter Name="projectContextId" Type="System.Int32" />
+        <Parameter Name="targetId" Type="System.Int32" />
+        <Parameter Name="taskId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="submissionId">Die Übermittlung-ID, der das Ereignis erstellt werden soll.</param>
+        <param name="nodeId">Der Knoten-ID, der das Ereignis erstellt.</param>
+        <param name="projectInstanceId">Die Projekt-ID des Buildereignisses.</param>
+        <param name="projectContextId">Die Projekt-ID, der das Ereignis erstellt werden soll.</param>
+        <param name="targetId">Die Ziel-ID, der das Ereignis erstellt werden soll.</param>
+        <param name="taskId">Die Task-ID, der das Ereignis erstellt.</param>
+        <summary>Erstellt einen BuildEventContext mit einer bestimmten Übermittlung-id</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildRequestId">
+      <MemberSignature Language="C#" Value="public long BuildRequestId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 BuildRequestId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventContext.BuildRequestId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die BuildRequest-Id ab. Beachten Sie, dass dies nicht der globale Anforderungs-Id für eine BuildRequest oder BuildResult identisch ist.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildEventContext.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der Verweis auf die verglichen werden soll.</param>
+        <summary>Ruft ab, ob die Verweise identisch sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die Verweise gleich sind, <see langword="false" /> andernfalls.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildEventContext.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Code, bestehend aus dem <see cref="P:Microsoft.Build.Framework.BuildEventContext.ProjectContextId" /> und <see cref="P:Microsoft.Build.Framework.BuildEventContext.NodeId" />.</summary>
+        <returns>Ein Ganzzahlwert, der den Hashcode darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalid">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Framework.BuildEventContext Invalid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Build.Framework.BuildEventContext Invalid" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventContext.Invalid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.BuildEventContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob der Kontext, in dem das Ereignis aufgetreten ist, ungültig.</summary>
+        <value>
+          <see langword="true" />Wenn der Kontext gültig ist. <see langword="false" /> andernfalls.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidNodeId">
+      <MemberSignature Language="C#" Value="public const int InvalidNodeId = -2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidNodeId = (-2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.BuildEventContext.InvalidNodeId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-2</MemberValue>
+      <Docs>
+        <summary>Die Knoten-ID des Ziels das Ereignis wurde das Ereignis ausgelöst wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Ganzzahlwert, der Knoten-ID darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidProjectContextId">
+      <MemberSignature Language="C#" Value="public const int InvalidProjectContextId = -2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidProjectContextId = (-2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.BuildEventContext.InvalidProjectContextId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-2</MemberValue>
+      <Docs>
+        <summary>Die Projekt-ID des Ziels das Ereignis wurde das Ereignis ausgelöst wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidProjectInstanceId">
+      <MemberSignature Language="C#" Value="public const int InvalidProjectInstanceId = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidProjectInstanceId = (-1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.BuildEventContext.InvalidProjectInstanceId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>Die Projekt-ID der das Ziel das Ereignis wurde das Ereignis ausgelöst wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidSubmissionId">
+      <MemberSignature Language="C#" Value="public const int InvalidSubmissionId = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidSubmissionId = (-1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.BuildEventContext.InvalidSubmissionId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>Die Übermittlungs-ID des Ziels das Ereignis wurde das Ereignis ausgelöst wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidTargetId">
+      <MemberSignature Language="C#" Value="public const int InvalidTargetId = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidTargetId = (-1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.BuildEventContext.InvalidTargetId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>Der Name des Ziels wurde das Ereignis das Ereignis ausgelöst wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidTaskId">
+      <MemberSignature Language="C#" Value="public const int InvalidTaskId = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidTaskId = (-1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.BuildEventContext.InvalidTaskId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>Die Task-ID des Ziels das Ereignis wurde das Ereignis ausgelöst wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeId">
+      <MemberSignature Language="C#" Value="public int NodeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NodeId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventContext.NodeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Knoten-ID ab, in dem das Ereignis aufgetreten ist.</summary>
+        <value>Ein Ganzzahlwert, der Knoten-ID darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.Build.Framework.BuildEventContext left, Microsoft.Build.Framework.BuildEventContext right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Microsoft.Build.Framework.BuildEventContext left, class Microsoft.Build.Framework.BuildEventContext right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildEventContext.op_Equality(Microsoft.Build.Framework.BuildEventContext,Microsoft.Build.Framework.BuildEventContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.Build.Framework.BuildEventContext" />
+        <Parameter Name="right" Type="Microsoft.Build.Framework.BuildEventContext" />
+      </Parameters>
+      <Docs>
+        <param name="left">Linke Seite operand</param>
+        <param name="right">Rechte operand</param>
+        <summary>Überschreiben Sie ==, sodass die Verwendung dieses Operators Gleichheitsvergleich als gleich bleiben. Ist gleich</summary>
+        <returns>True, wenn die Werte des Objekts identisch sind, false, wenn sie nicht identisch sind</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.Build.Framework.BuildEventContext left, Microsoft.Build.Framework.BuildEventContext right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Microsoft.Build.Framework.BuildEventContext left, class Microsoft.Build.Framework.BuildEventContext right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildEventContext.op_Inequality(Microsoft.Build.Framework.BuildEventContext,Microsoft.Build.Framework.BuildEventContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.Build.Framework.BuildEventContext" />
+        <Parameter Name="right" Type="Microsoft.Build.Framework.BuildEventContext" />
+      </Parameters>
+      <Docs>
+        <param name="left">Linke Seite operand</param>
+        <param name="right">Rechte operand</param>
+        <summary>Überschreiben,! =, damit der Vergleich mit dieser Operator entspricht werden! gleich</summary>
+        <returns>True, wenn die Werte des Objekts nicht identisch sind, false, wenn sie identisch sind</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectContextId">
+      <MemberSignature Language="C#" Value="public int ProjectContextId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProjectContextId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventContext.ProjectContextId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID des Projekts ab, in dem das Ereignis aufgetreten ist.</summary>
+        <value>Ein Ganzzahlwert, der Projekt-ID darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectInstanceId">
+      <MemberSignature Language="C#" Value="public int ProjectInstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProjectInstanceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventContext.ProjectInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Instanz-Id des Projekts ab.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmissionId">
+      <MemberSignature Language="C#" Value="public int SubmissionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SubmissionId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventContext.SubmissionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Übermittlungs-Id ab.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetId">
+      <MemberSignature Language="C#" Value="public int TargetId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TargetId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventContext.TargetId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID des Ziels, in dem das Ereignis aufgetreten ist.</summary>
+        <value>Ein Ganzzahlwert, der Ziel-ID darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskId">
+      <MemberSignature Language="C#" Value="public int TaskId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TaskId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildEventContext.TaskId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID der Aufgabe ab, in dem das Ereignis aufgetreten ist.</summary>
+        <value>Ein Ganzzahlwert, der Task-ID darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

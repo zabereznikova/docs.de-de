@@ -1,0 +1,83 @@
+<Type Name="PageBorderless" FullName="System.Printing.PageBorderless">
+  <TypeSignature Language="C#" Value="public enum PageBorderless" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PageBorderless extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PageBorderless" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob ein Druckgerät an den Rand des Mediums druckt oder einen äußeren Rand stellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Laserdrucker und Tintenstrahldrucker unterstützt randlos Drucken nicht. Sie benötigen einen äußeren Rand, um zu verhindern, dass Toner nur noch die Teile des Druckers, die in diesem Dokument zu verschieben. Viele photographic Drucker, unterstützen jedoch randlos drucken.  
+  
+ Verwenden Sie die Werte dieses Typs hauptsächlich für folgende Zwecke:  
+  
+-   Als Mitglied der <xref:System.Printing.PrintCapabilities.PageBorderlessCapability%2A> -Auflistung, die eine Eigenschaft des <xref:System.Printing.PrintCapabilities>, diese Werte geben an, ob das Gerät randlos Drucken unterstützt.  
+  
+-   Als Wert für die <xref:System.Printing.PrintTicket.PageBorderless%2A> Eigenschaft ein <xref:System.Printing.PrintTicket>, der Wert weist dem Drucker an, ob auf den Rand des Mediums zu drucken.  
+  
+ Die **unbekannte** Wert wird in den Eigenschaften der nie verwendet <xref:System.Printing.PrintCapabilities> Objekte.  
+  
+ Sollten Sie niemals Festlegen einer <xref:System.Printing.PrintTicket> Eigenschaft, um **unbekannte**. Wenn eine andere <xref:System.Printing.PrintTicket> erstellt wurde, erzeugt die Anwendung eine *PrintTicket-Dokument* die Seite randlos-Funktion auf eine unbekannte Option festlegt wird eine <xref:System.Printing.PrintTicket> Objekten in der Anwendung, die mit dieser erstellt wird Dokument müssen **unbekannte** als Wert für die <xref:System.Printing.PrintTicket.PageBorderless%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Borderless">
+      <MemberSignature Language="C#" Value="Borderless" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageBorderless Borderless = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageBorderless.Borderless" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageBorderless</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Randlos drucken, d. h. das Gerät an den Rand des Mediums drucken.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageBorderless None = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageBorderless.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageBorderless</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Drucken mit einem Rahmen, stellt bereit, also das Gerät einen äußeren Rand des Mediums drucken.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageBorderless Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageBorderless.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageBorderless</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Funktion (deren Optionen durch diese Enumeration dargestellt werden) wird auf eine nicht definierte Option festgelegt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

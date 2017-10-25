@@ -1,0 +1,72 @@
+<Type Name="Cursor" FullName="System.Messaging.Cursor">
+  <TypeSignature Language="C#" Value="public sealed class Cursor : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Cursor extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.Cursor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ein <see cref="T:System.Messaging.Cursor" /> dient zum Verwalten einer bestimmten Position in einer <see cref="T:System.Messaging.MessageQueue" /> beim Lesen von Nachrichten in der Warteschlange.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Abrufen eines Cursors für eine <xref:System.Messaging.MessageQueue>, rufen Sie die <xref:System.Messaging.MessageQueue.CreateCursor%2A> Methode für diese Warteschlange.  
+  
+ Ein <xref:System.Messaging.Cursor> wird verwendet, beispielsweise mit den Methoden <xref:System.Messaging.MessageQueue.Peek%28System.TimeSpan%2CSystem.Messaging.Cursor%2CSystem.Messaging.PeekAction%29> und <xref:System.Messaging.MessageQueue.Receive%28System.TimeSpan%2CSystem.Messaging.Cursor%29> müssen Sie Nachrichten lesen, die sich nicht am Anfang der Warteschlange befinden. Dies umfasst das Lesen von Nachrichten synchron oder asynchron. Cursor müssen nicht verwendet werden, um nur die erste Nachricht in eine Warteschlange zu lesen.  
+  
+ Beim Lesen von Nachrichten innerhalb einer Transaktion Rollback Message Queuing kein Bewegung des Cursors durchgeführt, wenn die Transaktion abgebrochen wird. Nehmen Sie beispielsweise an, dass eine Warteschlange mit zwei Nachrichten, A1 und A2 vorhanden ist. Wenn Sie die Nachricht in einer Transaktion A1 entfernen, verschiebt Message Queuing den Cursor zu Meldung A2. Wenn aus irgendeinem Grund die Transaktion abgebrochen wird, bleibt jedoch Nachricht A1 wird wieder in die Warteschlange jedoch den Cursor eingefügt Meldung A2 zeigen.  
+  
+ Rufen Sie zum Schließen des Cursors <xref:System.Messaging.Cursor.Close%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Cursor.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den Cursor und ermöglicht es Message Queuing, um die zugeordneten Ressourcen freizugeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Cursor.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Messaging.Cursor" /> verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

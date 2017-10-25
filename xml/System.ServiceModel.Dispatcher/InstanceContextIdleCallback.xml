@@ -1,0 +1,32 @@
+<Type Name="InstanceContextIdleCallback" FullName="System.ServiceModel.Dispatcher.InstanceContextIdleCallback">
+  <TypeSignature Language="C#" Value="public delegate void InstanceContextIdleCallback(InstanceContext instanceContext);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed InstanceContextIdleCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.InstanceContextIdleCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="instanceContext" Type="System.ServiceModel.InstanceContext" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="instanceContext">Der Instanzkontext, der die Verarbeitung abgeschlossen hat.</param>
+    <summary>Stellt die Methode dar, die aufgerufen wird, wenn die Verarbeitung eines <see cref="T:System.ServiceModel.InstanceContext" />-Objekts abgeschlossen ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.ServiceModel.Dispatcher.InstanceContextIdleCallback>, um die [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Laufzeit zu benachrichtigen, dass die Verarbeitung eines <xref:System.ServiceModel.Dispatcher.InstanceContextIdleCallback>-Objekts abgeschlossen wurde. Wenn das <xref:System.ServiceModel.Dispatcher.InstanceContextIdleCallback>-Objekt eine Benachrichtigung an die Laufzeit sendet, dass <xref:System.ServiceModel.Dispatcher.InstanceContextIdleCallback> beendet wurde, ruft [!INCLUDE[indigo2](~/includes/indigo2-md.md)] <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType> erneut auf. Dieser Zyklus wird fortgesetzt, bis <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType> den Wert `true` zurückgibt und der Kontext geschlossen und wiederverwendet wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

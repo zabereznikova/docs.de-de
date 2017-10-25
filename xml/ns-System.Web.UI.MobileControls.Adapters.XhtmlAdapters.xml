@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.UI.MobileControls.Adapters.XhtmlAdapters">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI.MobileControls.Adapters.XhtmlAdapters" /> -Namespace enthält Klassen, die die Phasen im Lebenszyklus eines mobile-Steuerelements so ändern Sie das Standard-XHTML-Markup oder Verhalten für neue Markupstandards oder für bestimmte Browsern und mobilen Geräten außer Kraft setzen können. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der <see href="http://go.microsoft.com/fwlink/?LinkID=182900">www.asp.net/mobile</see> Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter>wird von allen Adapterklassen geerbt, die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters> Namespace, einschließlich <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlLabelAdapter> und <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlSelectionListAdapter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

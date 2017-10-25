@@ -1,0 +1,86 @@
+<Type Name="KeyStates" FullName="System.Windows.Input.KeyStates">
+  <TypeSignature Language="C#" Value="public enum KeyStates" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed KeyStates extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.KeyStates" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Konstanten an, die den Status eines Schlüssels zu definieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.KeyStates> Klasse ist ein wenig (Flag). Aus diesem Grund kann ein Schlüssel in mehreren Zuständen befinden.  Beispielsweise konnte kein Schlüssel im unten Zustand sowie den Status Toggled sein.  Verwenden Sie Bit Vorgänge, um zu bestimmen, der exakt den Zustand oder die Zustände an, denen die Schlüssel im ist.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ändert sich die Farbe einer <xref:System.Windows.Controls.Button> Wenn die <xref:System.Windows.Input.KeyStates.Toggled> der übergebene Schlüssel der <xref:System.Windows.Input.KeyEventArgs> ist nicht verfügbar. Der Status des Schlüssels wird bestimmt, mit einem bitweisen `AND` Vorgang.  Bestimmen, ob ein Schlüssel mehreren Zuständen befinden, z. B. befindet er in den Status Toggled sowie aus verfügt, kann das gleiche Verfahren verwendet werden.  
+  
+ [!code-csharp[keyargssnippetsample#KeyEventArgsKeyStatesDown](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeystatesdown)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsKeyStatesDown](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeystatesdown)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Down">
+      <MemberSignature Language="C#" Value="Down" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.KeyStates Down = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.KeyStates.Down" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Taste gedrückt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.KeyStates None = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.KeyStates.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel wird nicht gedrückt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Toggled">
+      <MemberSignature Language="C#" Value="Toggled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.KeyStates Toggled = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.KeyStates.Toggled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel ist ein-/ausgeschaltet werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

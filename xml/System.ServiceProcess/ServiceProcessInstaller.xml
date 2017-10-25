@@ -1,0 +1,310 @@
+<Type Name="ServiceProcessInstaller" FullName="System.ServiceProcess.ServiceProcessInstaller">
+  <TypeSignature Language="C#" Value="public class ServiceProcessInstaller : System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceProcessInstaller extends System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceProcess.ServiceProcessInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceProcess</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.ComponentInstaller</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Installiert eine ausführbare Datei, enthält die Klassen, die erweitern <see cref="T:System.ServiceProcess.ServiceBase" />. Diese Klasse wird vom Installations-Hilfsprogramme, z. B. InstallUtil.exe, aufgerufen, wenn eine Dienst-Anwendung zu installieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceProcess.ServiceProcessInstaller> funktioniert in einer ausführbaren Datei, die alle Dienste gemeinsam. Es wird vom Installationsprogramm verwendet, zum Schreiben von Registrierungswerten, die zugeordneten Dienste, die Sie installieren möchten.  
+  
+ Um einen Dienst zu installieren, erstellen Sie eine Projekt Installerklasse, die von erben <xref:System.Configuration.Install.Installer>, und legen Sie die <xref:System.ComponentModel.RunInstallerAttribute> für die Klasse, um `true`. Instanziieren Sie in Ihrem Projekt eine <xref:System.ServiceProcess.ServiceProcessInstaller> Instanz pro-dienstanwendung, und eine <xref:System.ServiceProcess.ServiceInstaller> Instanz für jeden Dienst in der Anwendung. Fügen Sie schließlich die <xref:System.ServiceProcess.ServiceProcessInstaller> Instanz und die <xref:System.ServiceProcess.ServiceInstaller> Instanzen der Installer-Klasse.  
+  
+ Wenn InstallUtil.exe ausgeführt wird, sucht das Hilfsprogramm von Klassen in der Assembly des Diensts mit der <xref:System.ComponentModel.RunInstallerAttribute> festgelegt `true`. Die Dienstassembly Klassen hinzuzufügen, indem Sie sie zum Hinzufügen der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung zugeordnet ist, in den Projekt-Installer. Wenn <xref:System.ComponentModel.RunInstallerAttribute> ist `false`, das Installationsprogramm ignoriert die Projekt-Installer.  
+  
+ Für eine Instanz von <xref:System.ServiceProcess.ServiceProcessInstaller>, Eigenschaften Sie ändern können, sind etwa das angeben, dass eine dienstanwendung unter einem anderen Konto als dem angemeldeten Benutzer ausgeführt. Sie können angeben, dass ein bestimmter <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> und <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> Paar unter dem der Dienst ausgeführt werden soll, oder Sie können <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> um anzugeben, dass der Dienst unter dem Systemkonto des Computers, einem lokalen oder Netzwerkdienstkonto oder ein Benutzerkonto ausgeführt werden.  
+  
+> [!NOTE]
+>  System-Konto des Computers ist nicht identisch mit dem Administratorkonto an.  
+  
+ Normalerweise Sie die Methoden nicht aufrufen, auf <xref:System.ServiceProcess.ServiceInstaller> innerhalb des Codes; sind sie in der Regel nur vom Installationsprogramm aufgerufen. Ruft das Installationsprogramm automatisch die <xref:System.ServiceProcess.ServiceProcessInstaller.Install%2A?displayProperty=nameWithType> und <xref:System.ServiceProcess.ServiceInstaller.Install%2A?displayProperty=nameWithType> Methoden, die während des Installationsvorgangs. Fehler werden behoben, bei Bedarf durch den Aufruf <xref:System.ServiceProcess.ServiceProcessInstaller.Rollback%2A> (oder <xref:System.ServiceProcess.ServiceInstaller.Rollback%2A?displayProperty=nameWithType>) für alle zuvor installierten Komponenten.  
+  
+ Eine Anwendung-Installationsroutine verwaltet automatisch Informationen über die Komponenten bereits installiert, mit dem Projekt Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType>. Diese Statusinformationen wird ständig aktualisiert, als die <xref:System.ServiceProcess.ServiceProcessInstaller> Instanz und alle <xref:System.ServiceProcess.ServiceInstaller> Instanz mit dem Hilfsprogramm installiert ist. Es ist in der Regel nicht erforderlich, für den Code so ändern Sie diese Statusinformationen explizit.  
+  
+ Instanziieren einer <xref:System.ServiceProcess.ServiceProcessInstaller> bewirkt, dass der Konstruktor der Basisklasse <xref:System.Configuration.Install.ComponentInstaller.%23ctor%2A>, aufgerufen werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Projektinstallationsprogramm Namen MyProjectInstaller, der vom erbt <xref:System.Configuration.Install.Installer>. Es wird vorausgesetzt, es ist eine ausführbare Datei, die zwei Dienste, die "Hello World-Dienst 1" und "Hello World-Dienst 2". Innerhalb des Konstruktors für MyProjectInstaller (die vom Installationsprogramm aufgerufen werden würde), <xref:System.ServiceProcess.ServiceInstaller> Objekte werden für jeden Dienst erstellt und ein <xref:System.ServiceProcess.ServiceProcessInstaller> wird für die ausführbare Datei erstellt. Damit das Installationsprogramm MyProjectInstaller als gültiges Installationsprogramm erkennt die <xref:System.ComponentModel.RunInstallerAttribute> -Attributsatz zur `true`.  
+  
+ Optionale Eigenschaften werden für die Prozess- und Dienstinstallationsprogramm festgelegt, bevor die Installationsprogramme hinzugefügt werden die <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung. Wenn das Installationsprogramm auf MyProjectInstaller zugreift, die Objekte hinzugefügt der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung durch einen Aufruf von <xref:System.Configuration.Install.InstallerCollection.Add%2A?displayProperty=nameWithType> wird wiederum installiert werden. Während des Prozesses verwaltet das Installationsprogramm Zustandsinformationen, die angibt, welche Objekte installiert wurden, damit jedes Objekt wiederum im Falle eines Fehlers bei Installation zurückgesetzt werden kann.  
+  
+ Normalerweise würden Sie nicht Ihr Projekt Installerklasse explizit instanziiert werden. Sie erstellen und Hinzufügen der <xref:System.ComponentModel.RunInstallerAttribute>, aber das Installationsprogramm tatsächlich aufruft, und deshalb instanziiert die Klasse.  
+  
+ [!code-cpp[Classic ServiceInstaller Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ServiceInstaller Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ServiceInstaller Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ServiceInstaller Example/CS/source.cs#1)]
+ [!code-vb[Classic ServiceInstaller Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ServiceInstaller Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceProcessInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceProcessInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceProcess.ServiceProcessInstaller" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Account">
+      <MemberSignature Language="C#" Value="public System.ServiceProcess.ServiceAccount Account { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceProcess.ServiceAccount Account" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceProcessInstaller.Account" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceProcess.ServiceProcessDescription("ServiceProcessInstallerAccount")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceAccount</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Kontos, unter dem dieser dienstanwendung ausgeführt.</summary>
+        <value>Ein <see cref="T:System.ServiceProcess.ServiceAccount" /> , definiert den Typ des Kontos, unter dem das System diesen Dienst ausgeführt wird. Die Standardeinstellung ist <see langword="User" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> Eigenschaft ist `User`, <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> und <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> Eigenschaften werden verwendet, um ein Konto zu definieren, unter dem die Dienst-Anwendung ausgeführt wird.  
+  
+ Die <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> und <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> Paar kann der Dienst unter einem anderen Konto als dem Systemkonto ausgeführt werden. Dies kann z. B. kann der Dienst beim Neustart des Computers, automatisch gestartet wird, wenn kein Benutzer angemeldet ist. Wenn Sie entweder die <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> oder <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> leer und festgelegte <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> zu `User`, werden Sie aufgefordert einen gültigen Benutzernamen und ein Kennwort bei der Installation.  
+  
+ Sie können auch angeben, der ausgeführt wird, unter dem lokalen Systemkonto oder als lokaler Dienst oder Netzwerkdienst. Finden Sie unter der <xref:System.ServiceProcess.ServiceAccount> Enumeration Einzelheiten zu den Arten von Konten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFromComponent">
+      <MemberSignature Language="C#" Value="public override void CopyFromComponent (System.ComponentModel.IComponent comp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFromComponent(class System.ComponentModel.IComponent comp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceProcessInstaller.CopyFromComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comp" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="comp">Die <see cref="T:System.ComponentModel.IComponent" /> , die den Dienstprozess darstellt.</param>
+        <summary>Implementiert die Basisklasse <see cref="M:System.Configuration.Install.ComponentInstaller.CopyFromComponent(System.ComponentModel.IComponent)" /> Methode ohne <see cref="T:System.ServiceProcess.ServiceProcessInstaller" /> Klasse prozessinternes spezifisches Verhalten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte nicht in Ihrem Code aufgerufen werden. Die Methode der Basisklasse auf <xref:System.Configuration.Install.ComponentInstaller> ist `abstract`, sodass er hier in der abgeleiteten Klasse implementiert wurde. Es ist jedoch keine <xref:System.ServiceProcess.ServiceProcessInstaller> Klasse-spezifische Verarbeitung in die Implementierung der Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpText">
+      <MemberSignature Language="C#" Value="public override string HelpText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpText" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceProcessInstaller.HelpText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Hilfetext für Installation Dienstoptionen angezeigt.</summary>
+        <value>Hilfetext, die eine Beschreibung der Schritte enthält, für den Benutzernamen und das Kennwort festlegen, um den Dienst unter einem bestimmten Konto auszuführen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Text kann verwendet werden, wenn ein Dienst manuell gestartet wird. Er gibt an, wie Sie Informationen zu Benutzername und Kennwort eingeben, die dem Benutzer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public override void Install (System.Collections.IDictionary stateSaver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Install(class System.Collections.IDictionary stateSaver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceProcessInstaller.Install(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateSaver" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="stateSaver">Ein <see cref="T:System.Collections.IDictionary" /> , das die Kontextinformationen, die verknüpft sind, mit der Installation enthält.</param>
+        <summary>Schreibt Anwendung Dienstinformationen in die Registrierung. Diese Methode soll vom Installations-Tools verwendet werden, automatisch die entsprechenden Methoden aufrufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise Sie die Methoden nicht aufrufen, auf <xref:System.ServiceProcess.ServiceProcessInstaller> innerhalb des Codes; sind sie in der Regel nur vom Installationsprogramm aufgerufen. Ruft das Installationsprogramm automatisch die <xref:System.ServiceProcess.ServiceProcessInstaller.Install%2A?displayProperty=nameWithType> Methode während der Installation. Fehler werden behoben, bei Bedarf durch den Aufruf <xref:System.ServiceProcess.ServiceProcessInstaller.Rollback%2A> für alle zuvor installierten Komponenten. Diese Methode übergibt die Installation auf die Basisklasse <xref:System.Configuration.Install.Installer.Install%2A?displayProperty=nameWithType> Methode.  
+  
+ Normalerweise werden Sie nicht die Methoden aufrufen, auf <xref:System.ServiceProcess.ServiceInstaller> innerhalb des Codes; sind sie in der Regel nur vom Installationsprogramm aufgerufen. Ruft das Installationsprogramm automatisch die <xref:System.ServiceProcess.ServiceProcessInstaller.Install%2A?displayProperty=nameWithType> und <xref:System.ServiceProcess.ServiceInstaller.Install%2A?displayProperty=nameWithType> Methoden, die während des Installationsvorgangs. Fehler werden behoben, bei Bedarf durch den Aufruf <xref:System.ServiceProcess.ServiceProcessInstaller.Rollback%2A> (oder <xref:System.ServiceProcess.ServiceInstaller.Rollback%2A?displayProperty=nameWithType>) für alle zuvor installierten Komponenten  
+  
+ Eine Anwendung-Installationsroutine verwaltet automatisch Informationen über die Komponenten bereits installiert, mit dem Projekt Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType>. Diese Statusinformationen übergebenen <xref:System.ServiceProcess.ServiceProcessInstaller.Install%2A> als die `stateSaver` -Parameter wird ständig aktualisiert, als die <xref:System.ServiceProcess.ServiceProcessInstaller> Instanz und alle <xref:System.ServiceProcess.ServiceInstaller> Instanz mit dem Hilfsprogramm installiert ist. Es ist in der Regel nicht erforderlich, für den Code so ändern Sie diese Statusinformationen explizit.  
+  
+ <xref:System.ServiceProcess.ServiceProcessInstaller.Install%2A>übergibt Sie an die aufrufende Methode keine Ausnahmen auslöst Basisklassenmethoden oder <xref:System.Configuration.Install.Installer.BeforeInstall>  /  <xref:System.Configuration.Install.Installer.AfterInstall> -Ereignishandler.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException"><paramref name="stateSaver" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceProcessInstaller.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Kennwort für das Benutzerkonto, unter dem die Dienst-Anwendung ausgeführt wird.</summary>
+        <value>Das Kennwort des Kontos, unter dem der Dienst ausgeführt werden soll. Der Standardwert ist eine leere Zeichenfolge (""). Die Eigenschaft ist nicht öffentlich und wird nicht serialisiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> und <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> Paar kann der Dienst unter einem anderen Konto als dem Systemkonto ausgeführt werden. Dies kann z. B. kann der Dienst beim Neustart des Computers, automatisch gestartet wird, wenn kein Benutzer angemeldet ist.  
+  
+ <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A>und <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> auf sichere Weise behandelt werden, dass sie nie serialisiert oder werden, um den Installationsstatus gespeichert (des Projektinstallationsprogramms <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType>) oder einen anderen Speicherort mit öffentlichem Zugriff.  
+  
+ Festlegen der <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> und <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> kann ein Konto bei der Installation automatisch mit dem Dienst zugeordnet werden soll. Wenn Sie entweder die <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> oder <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> leer und festgelegte <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> zu `User`, werden Sie aufgefordert einen gültigen Benutzernamen und ein Kennwort bei der Installation.  
+  
+ Eine andere Möglichkeit zum Ausführen eines Dienstes unter einem anderen Konto ist die Verwendung von Systemkonto des Computers. Dieses Konto, das sich von dem Administratorkonto ist, ist kein Kennwort erforderlich. Berechtigungen für das Systemkonto überschreitet möglicherweise des derzeit angemeldeten Benutzers. Der Dienst erfordert unter dem Systemkonto ausgeführt werden, statt ein Benutzerkontos Probleme, die vom Benutzer eine Berechtigung fehlen vermeidet  
+  
+ Wenn <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> ist jeder Wert außer `User`, das angegebene Konto (lokales oder Netzwerkdienst oder lokales System) wird verwendet, auch wenn die <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> und <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> Eigenschaften aufgefüllt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public override void Rollback (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Rollback(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceProcessInstaller.Rollback(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Collections.IDictionary" /> , das die Kontextinformationen, die verknüpft sind, mit der Installation enthält.</param>
+        <summary>Führt einen Rollback für Anwendung Dienstinformationen in die Registrierung geschrieben werden, indem Sie die Installationsprozedur aus. Diese Methode soll vom Installations-Tools verwendet werden, der die entsprechenden Methoden automatisch zu verarbeiten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise Sie die Methoden nicht aufrufen, auf <xref:System.ServiceProcess.ServiceProcessInstaller> innerhalb des Codes; sind sie in der Regel nur vom Installationsprogramm aufgerufen. Ruft das Installationsprogramm automatisch die <xref:System.ServiceProcess.ServiceProcessInstaller.Install%2A?displayProperty=nameWithType> Methode während der Installation. Fehler werden behoben, bei Bedarf durch den Aufruf <xref:System.ServiceProcess.ServiceProcessInstaller.Rollback%2A> auf das Objekt, das die Ausnahme generiert hat.  
+  
+ Eine Anwendung-Installationsroutine verwaltet automatisch Informationen über die Komponenten bereits installiert, mit dem Projekt Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType>. Diese Statusinformationen übergebenen <xref:System.ServiceProcess.ServiceProcessInstaller.Rollback%2A> als die `savedState` -Parameter wird ständig aktualisiert, als die <xref:System.ServiceProcess.ServiceProcessInstaller> Instanz und alle <xref:System.ServiceProcess.ServiceInstaller> Instanz mit dem Hilfsprogramm installiert ist. Es ist in der Regel nicht erforderlich, für den Code so ändern Sie diese Statusinformationen explizit.  
+  
+ <xref:System.ServiceProcess.ServiceProcessInstaller.Rollback%2A>übergibt Sie an die aufrufende Methode keine Ausnahmen auslöst Basisklassenmethoden oder <xref:System.Configuration.Install.Installer.BeforeInstall>  /  <xref:System.Configuration.Install.Installer.AfterInstall> -Ereignishandler.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException"><paramref name="savedState" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Die <paramref name="savedState" /> ist beschädigt oder nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Username">
+      <MemberSignature Language="C#" Value="public string Username { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Username" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceProcessInstaller.Username" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Benutzerkonto, unter dem die Dienst-Anwendung ausgeführt wird.</summary>
+        <value>Das Konto, unter dem der Dienst ausgeführt werden soll. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> und <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> Paar kann der Dienst unter einem anderen Konto als dem Systemkonto ausgeführt werden. Dies kann z. B. kann der Dienst beim Neustart des Computers, automatisch gestartet wird, wenn kein Benutzer angemeldet ist.  
+  
+ <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A>und <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> auf sichere Weise behandelt werden, dass sie nie serialisiert oder werden, um den Installationsstatus gespeichert (des Projektinstallationsprogramms <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType>) oder einen anderen Speicherort mit öffentlichem Zugriff.  
+  
+ Festlegen der <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> und <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> kann ein Konto bei der Installation automatisch mit dem Dienst zugeordnet werden soll. Wenn Sie entweder die <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> oder <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> leer und festgelegte <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> zu `User`, werden Sie aufgefordert einen gültigen Benutzernamen und ein Kennwort bei der Installation.  
+  
+ Eine andere Möglichkeit zum Ausführen eines Dienstes unter einem anderen Konto ist die Verwendung von Systemkonto des Computers. Dieses Konto, das sich von dem Administratorkonto ist, ist kein Kennwort erforderlich. Berechtigungen für das Systemkonto überschreitet möglicherweise des derzeit angemeldeten Benutzers. Der Dienst erfordert unter dem Systemkonto ausgeführt werden, statt ein Benutzerkontos Probleme, die vom Benutzer eine Berechtigung fehlen vermeidet  
+  
+ Wenn <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> ist jeder Wert außer `User`, wird das angegebene Konto (lokales oder Netzwerkdienst oder lokales System) verwendet, auch wenn die <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> und <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> Eigenschaften aufgefüllt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

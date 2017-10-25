@@ -1,0 +1,74 @@
+<Type Name="ICollectData" FullName="System.Diagnostics.ICollectData">
+  <TypeSignature Language="C#" Value="public interface ICollectData" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICollectData" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.ICollectData" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("73386977-D6FD-11D2-BED5-00C04F79E3AE")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bereitet die Leistungsdaten für die Leistung DLL das System, lädt bei der Arbeit mit Leistungsindikatoren vor.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="CloseData">
+      <MemberSignature Language="C#" Value="public void CloseData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ICollectData.CloseData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, durch die Leistung DLL Schließen der Leistungsdaten.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CollectData">
+      <MemberSignature Language="C#" Value="public void CollectData (int id, IntPtr valueName, IntPtr data, int totalBytes, out IntPtr res);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CollectData([in]int32 id, [in]native int valueName, [in]native int data, [in]int32 totalBytes, [out] native int&amp; res) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ICollectData.CollectData(System.Int32,System.IntPtr,System.IntPtr,System.Int32,System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="valueName" Type="System.IntPtr" />
+        <Parameter Name="data" Type="System.IntPtr" />
+        <Parameter Name="totalBytes" Type="System.Int32" />
+        <Parameter Name="res" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="id">Der Index aufrufen.</param>
+        <param name="valueName">Ein Zeiger auf eine Unicode-Zeichenfolgenliste mit den Bezeichnern des angeforderten Objekts.</param>
+        <param name="data">Ein Zeiger auf den Datenpuffer.</param>
+        <param name="totalBytes">Ein Zeiger auf eine Anzahl von Bytes.</param>
+        <param name="res">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.IntPtr" /> auf das erste Byte nach den Daten, bei einem Fehler-1 oder-2, wenn eine größerer Puffer ist erforderlich. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Werden die Leistungsdaten für die Leistung-DLL.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,15 @@
+<Namespace Name="System.Windows.Xps.Packaging">
+  <Docs>
+    <summary>Enthält Typen, die ermöglichen, Anwendungen zum Lesen und schreiben die Bestandteile eines XPS-Dokuments.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusätzlich zu den Schnittstellen und die Typen, die die Hauptbestandteile des darstellen einer [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Dokument, das <xref:System.Windows.Xps.Packaging> Namespace ermöglicht die Steuerung des Verpackungsprozesses, z. B. digitale Signaturen und Digital Rights Management (DRM) der [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)]Dokumente.  
+  
+ Weitere Informationen finden Sie unter XML Paper Specification (XPS), die am [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

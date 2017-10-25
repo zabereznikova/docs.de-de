@@ -1,0 +1,120 @@
+<Type Name="KeyInfoClause" FullName="System.Security.Cryptography.Xml.KeyInfoClause">
+  <TypeSignature Language="C#" Value="public abstract class KeyInfoClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit KeyInfoClause extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.KeyInfoClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die abstrakte Basisklasse dar, von der alle Implementierungen von <see cref="T:System.Security.Cryptography.Xml.KeyInfo" /> Unterelemente erben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie <xref:System.Security.Cryptography.Xml.KeyInfoClause> Objekte zum Erstellen einer <xref:System.Security.Cryptography.Xml.KeyInfo> Objekt für eine bestimmte digitale Signatur oder eine verschlüsselte XML-Dokument. <xref:System.Security.Cryptography.Xml.KeyInfo>können Empfänger für digitale XML-Signaturen und verschlüsselten XML-Dokumenten zu bestimmen, welche signieren und Schlüsselwerte Werte für die Überprüfung und Entschlüsselung verwendet werden soll.  
+  
+ Weitere Informationen zu den <xref:System.Security.Cryptography.Xml.KeyInfo> -Element und seine Unterelemente finden Sie in der XMLDSIG-Spezifikation in der W3C unter www.w3.org/TR/xmldsig-core/ verfügbar ist, oder der XML-Verschlüsselung-Spezifikation, die von der W3C am www.w3.org/TR/xmlenc-core/ verfügbar ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected KeyInfoClause ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoClause.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Security.Cryptography.Xml.KeyInfoClause" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz einer abstrakten Klasse kann nicht erstellt werden. Anwendungscode erstellt eine neue Instanz einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoClause.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt eine XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.KeyInfoClause" />.</summary>
+        <returns>Eine XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.KeyInfoClause" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlElement> zurückgegeben, die von dieser Methode eignet sich für die Verwendung als ein Unterelement eines XMLDSIG oder eine verschlüsselte XML- `<KeyInfo>` Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public abstract void LoadXml (System.Xml.XmlElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadXml(class System.Xml.XmlElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoClause.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die <see cref="T:System.Xml.XmlElement" /> , die den Status des gibt die <see cref="T:System.Security.Cryptography.Xml.KeyInfoClause" />.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse analysiert die Eingabe <see cref="T:System.Xml.XmlElement" /> und konfiguriert den internen Zustand des der <see cref="T:System.Security.Cryptography.Xml.KeyInfoClause" /> übereinstimmen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird normalerweise verwendet, um ein Unterelement des Verarbeiten einer `<KeyInfo>` Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

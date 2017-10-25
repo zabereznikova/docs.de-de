@@ -1,0 +1,188 @@
+<Type Name="NameReferenceConverter" FullName="System.Windows.Markup.NameReferenceConverter">
+  <TypeSignature Language="C#" Value="public class NameReferenceConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NameReferenceConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.NameReferenceConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Konvertierung vom Typ um einen Zeichenfolgennamen in einen Objektverweis auf das Objekt mit diesem Namen zu konvertieren oder um den Namen eines Objekts aus dem Objektdiagramm zurückzugeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt einen Typ-Konverter-Wrapper um zwei Dienste.  
+  
+ Die <xref:System.Windows.Markup.NameReferenceConverter.ConvertFrom%2A> Implementierung verwendet <xref:System.Xaml.IXamlNameResolver> -Dienst aus Kontext zum Ausführen von der Auflösung eines Objekts anhand des Namens in XAML. Dies ist Teil der relevanten XAML-Reader und XAML-Writer-Implementierungen in .NET Framework-XAML-Dienste. Zur ordnungsgemäßen Funktion dieser Konverter erfordert, dass die <xref:System.Xaml.IXamlNameResolver> Dienst Dienstkontext verfügbar ist.  
+  
+ Die <xref:System.Windows.Markup.NameReferenceConverter.ConvertTo%2A> Implementierung verwendet <xref:System.Xaml.IXamlNameProvider> -Diensts von Kontext, mit denen die Auflösung von Verweisnamen für ein Objekt speichern/Serialisierung durchgeführt. Dies ist Teil der relevanten Reader- und Writer-Implementierungen und Kontext. Zur ordnungsgemäßen Funktion dieser Konverter erfordert, dass es werden ein zugrundeliegendes <xref:System.Xaml.IXamlNameProvider> Dienst verfügbar.  
+  
+ Dieser Typkonverter-Implementierung für Anmeldestandort ist die <xref:System.ComponentModel.TypeConverter> Basistyp, da es nicht auf einen diskreten Umrechnungstyp begrenzt ist. Es kann potenziell jedes Objekt konvertieren in und aus einem verweisenden Namen so lange dieses Objekt konnte einen Namen in XAML zugewiesen haben, und der unterstützende Kontext die erforderlichen Dienste hat, um Ergebnisse zurückzugeben.  
+  
+ Im Rahmen der allgemeinen Dienste Unterstützung, basieren die "System.xaml" Implementierung von <xref:System.Xaml.XamlObjectWriter> und <xref:System.Xaml.XamlXmlWriter> bieten <xref:System.Xaml.IXamlNameProvider> und <xref:System.Xaml.IXamlNameResolver> Dienste für die Verwendung durch <xref:System.Windows.Markup.NameReferenceConverter>. Die Namensbasis für diese Dienste verwendet entweder `x:Name` oder ein <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> attributierte Alias-Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameReferenceConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NameReferenceConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.NameReferenceConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NameReferenceConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="sourceType">Ein <see cref="T:System.Type" />, der den Typ darstellt, aus dem konvertiert werden soll.</param>
+        <summary>Gibt zurück, ob dieser Konverter ein Objekt eines Typs in ein anderes Objekt konvertieren kann.</summary>
+        <returns>
+          <see langword="true" />, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung kann nur Verarbeiten einer `sourceType` von <xref:System.String>. Andere Typen geben `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NameReferenceConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="destinationType">Der Typ, in den konvertiert werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob der Konverter ein Objekt in den angegebenen Zieltyp konvertieren kann.</summary>
+        <returns>
+          <see langword="true" />Wenn der Konverter die Konvertierung durchführen kann; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `destinationType` , verweist der <xref:System.String> geben gibt `true`; alle anderen `destinationType` Rückgabewerte `false`.  
+  
+ Diese Methode gibt "false" zurück, wenn `context` ist `null`, oder wenn <xref:System.Xaml.IXamlNameProvider> kann nicht abgerufen werden, als Dienst aus `context`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NameReferenceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="culture">Das als aktuelle Kultur zu verwendende <see cref="T:System.Globalization.CultureInfo" />-Element.</param>
+        <param name="value">Der Verweis Namen zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert das angegebene Objekt in ein anderes Objekt, mit dem angegebenen Kontext und kulturinformationen.</summary>
+        <returns>Das zurückgegebene Objekt, das potenziell jedes Objekt, in den entsprechenden unterstützenden Assemblys Typ zugeordnet und kann in XAML deklariert wird, die mit einem Namensverweis XAML wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur eine <xref:System.String> Eingabe enthält ein Konvertierungsergebnis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="value" />ist ein null-Zeichenfolge oder eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <see cref="T:System.Xaml.IXamlNameResolver" />Dienst ist nicht vorhanden oder ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NameReferenceConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="culture">Das als aktuelle Kultur zu verwendende <see cref="T:System.Globalization.CultureInfo" />-Element.</param>
+        <param name="value">Das Objekt, das den Verweisnamen für abzurufen.</param>
+        <param name="destinationType">Der Typ, der zurückgegeben wird. Sie sollten immer verweisen die <see cref="T:System.String" /> Typ.</param>
+        <summary>Konvertiert ein Objekt in den angegebenen Typ. Dies dient als XAML-Verweisnamen für Objekte in einem Objektdiagramm zurückzugeben.</summary>
+        <returns>Der Verweisname der Eingabe <paramref name="value" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="T:System.Xaml.IXamlNameProvider" />Dienst ist nicht vorhanden oder ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

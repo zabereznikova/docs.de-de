@@ -1,0 +1,1523 @@
+<Type Name="UTF8Encoding" FullName="System.Text.UTF8Encoding">
+  <TypeSignature Language="C#" Value="public class UTF8Encoding : System.Text.Encoding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit UTF8Encoding extends System.Text.Encoding" />
+  <TypeSignature Language="DocId" Value="T:System.Text.UTF8Encoding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.Encoding</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine UTF-8-Codierung von Unicode-Zeichen dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Kodieren werden Unicode-Zeichen in eine Bytefolge transformiert. Beim Decodieren wird transformiert eine codierte Bytefolge in einen Satz von Unicode-Zeichen.  
+  
+ UTF-8 ist, dass eine Unicode-Codierung, die jeden Codepunkt als eine Folge von ein bis vier Bytes darstellt. Im Gegensatz zu der UTF-16 und UTF-32-Codierung erfordert UTF-8-Codierung "Endianness;" keine das Codierungsschema ist identisch, unabhängig davon, ob der Prozessor big-Endian oder little-Endian-befindet. <xref:System.Text.UTF8Encoding>die Windows-Codepage 65001 entspricht. Weitere Informationen zu den UTFs und andere von unterstützten Codierungen <xref:System.Text>, finden Sie unter [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md).  
+  
+ Instanziieren Sie ein <xref:System.Text.UTF8Encoding> Objekt in einer Reihe von Möglichkeiten, je nachdem, ob Sie darauf eine bytereihenfolgemarkierung (BOM) bereitstellen möchten, und gibt an, ob Sie fehlererkennung aktivieren möchten. Die folgende Tabelle enthält die Konstruktoren und der <xref:System.Text.Encoding> Eigenschaft, die Zurückgeben einer <xref:System.Text.UTF8Encoding> Objekt.  
+  
+|Member|BOM|Fehlererkennung|  
+|------------|---------|---------------------|  
+|<xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>|Ja|Keine (Ersatzfallback)|  
+|<xref:System.Text.UTF8Encoding.%23ctor?displayProperty=nameWithType>|Nein|Keine (Ersatzfallback)|  
+|<xref:System.Text.UTF8Encoding.%23ctor%28System.Boolean%29?displayProperty=nameWithType>|Konfigurierbare|Keine (Ersatzfallback)|  
+|<xref:System.Text.UTF8Encoding.%23ctor%28System.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType>|Konfigurierbare|Konfigurierbare|  
+  
+ Die <xref:System.Text.UTF8Encoding.GetByteCount%2A> -Methode bestimmt, wie viele Bytes zum Codieren von Unicode-Zeichen, und die <xref:System.Text.UTF8Encoding.GetBytes%2A> -Methode führt die eigentliche Codierung.  
+  
+ Entsprechend der <xref:System.Text.UTF8Encoding.GetCharCount%2A> -Methode bestimmt, wie viele Zeichen zum Decodieren einer Bytefolge und <xref:System.Text.UTF8Encoding.GetChars%2A> und <xref:System.Text.UTF8Encoding.GetString%2A> Methoden führen die tatsächliche Decodierung aus.  
+  
+ Für einen Encoder oder Decoder, der zum Speichern von Zustandsinformationen, die beim Codieren oder Decodieren von Daten, die umfasst mehrere Blöcke (z. B. String von 1 Mio. Zeichen, die in Segmenten von 100.000 Zeichen codiert wird) verwenden, können die <xref:System.Text.UTF8Encoding.GetEncoder%2A> und <xref:System.Text.UTF8Encoding.GetDecoder%2A> Eigenschaften bzw..  
+  
+ Optional können die <xref:System.Text.UTF8Encoding> -Objekt bietet eine bytereihenfolgemarkierung (BOM), also ein Array von Bytes, die auf den Anfang des Datenstroms als Präfix verwendet werden können, die durch die Codierungsvorgangs entsteht. Wenn ein UTF-8 codierten Datenstrom eine bytereihenfolgemarkierung (BOM) vorangestellt ist, leichter den Decoder die Bytereihenfolge und die Transformationsformat oder im UTF zu bestimmen. Beachten Sie jedoch, dass der Unicode-Standard, weder erfordert noch empfiehlt eine BOM in UTF-8 Streams codierte. Weitere Informationen zu Bytereihenfolge und Byte Order Mark, finden Sie im Unicode-Standard an die [Unicode-Homepage](http://go.microsoft.com/fwlink/?LinkId=37123).  
+  
+ Wenn der Encoder eine BOM enthalten konfiguriert ist, können Sie es abrufen, durch Aufrufen der <xref:System.Text.UTF8Encoding.GetPreamble%2A> Methode; andernfalls wird die Methode ein leeres Array zurückgegeben. Beachten Sie, dass selbst wenn eine <xref:System.Text.UTF8Encoding> -Objekt konfiguriert ist, für die Bytereihenfolge-Marke unterstützen, müssen Sie die BOM am Anfang des codierten Datenstrom nach Bedarf; auch Codierungsmethoden von der <xref:System.Text.UTF8Encoding> Klasse tun Sie dies automatisch.  
+  
+> [!NOTE]
+>  So aktivieren Sie die fehlererkennung und die Klasseninstanz sicherer zu gestalten, Sie sollten Aufrufen der <xref:System.Text.UTF8Encoding.%23ctor%28System.Boolean%2CSystem.Boolean%29> Konstruktor, und legen die `throwOnInvalidBytes` Parameter `true`. Mit der fehlererkennung ist aktiviert, löst eine Methode, die eine ungültige Folge von Zeichen oder Bytes erkennt eine <xref:System.ArgumentException> Ausnahme. Ohne Fehler erkannt wird keine Ausnahme ausgelöst und die ungültige Sequenz im Allgemeinen ignoriert.  
+  
+> [!NOTE]
+>  Der Status eines Objekts UTF-8 codierte wird nicht beibehalten, wenn das Objekt serialisiert wird und deserialisiert mit verschiedenen Versionen von .NET Framework.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein <xref:System.Text.UTF8Encoding> Objekt, das eine Zeichenfolge von Unicode-Zeichen codiert und in einem Bytearray zu speichern. Die Unicode-Zeichenfolge enthält zwei Zeichen, Pi (U + 03A0) und Sigma (U + 03A3), die außerhalb des ASCII-Zeichenbereichs liegen. Wenn das codierte Bytearray zurück in eine Zeichenfolge decodiert wird, sind die Pi als auch die Sigma-Zeichen weiterhin vorhanden.  
+  
+ [!code-cpp[System.Text.UTF8Encoding Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding Example/CPP/snippet.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding Example/CS/snippet.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding Example/VB/snippet.vb#1)]  
+  
+ Im folgenden Beispiel wird die gleiche Zeichenfolge wie im vorherigen Beispiel, außer dass die codierten Bytes in eine Datei geschrieben und Präfixe Bytestream mit einem Byte-reihenfolgemarkierung (BOM). Dann liest die Datei auf zwei verschiedene Arten: als Textdatei mit einer <xref:System.IO.StreamReader> Objekt; und als eine Binärdatei. Wie zu erwarten, ist die BOM in keinem Fall in der neu schreibgeschützte Zeichenfolge enthalten.  
+  
+ [!code-csharp[System.Text.UTF8Encoding Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding Example/CS/bom1.cs#2)]
+ [!code-vb[System.Text.UTF8Encoding Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding Example/VB/bom1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UTF8Encoding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Text.UTF8Encoding" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine Instanz, die bietet eine Unicode-bytereihenfolgemarkierung und löst keine Ausnahme aus, wenn eine ungültige Codierung gefunden wird.  
+  
+> [!NOTE]
+>  Aus Sicherheitsgründen wird empfohlen, Sie Erkennung aktivieren, durch den Aufruf eines Konstruktors mit einem `throwOnInvalidBytes` Parameter und deren Festlegung auf `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Text.UTF8Encoding> -Instanz und dessen Name angezeigt.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.ctor1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.ctor1 Example/CPP/ctor.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.ctor1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.ctor1 Example/CS/ctor.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.ctor1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.ctor1 Example/VB/ctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UTF8Encoding (bool encoderShouldEmitUTF8Identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool encoderShouldEmitUTF8Identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoderShouldEmitUTF8Identifier" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="encoderShouldEmitUTF8Identifier">
+          <see langword="true" />, um anzugeben, dass die <see cref="M:System.Text.UTF8Encoding.GetPreamble" />-Methode eine Unicode-Bytereihenfolgemarkierung zurückgibt; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Text.UTF8Encoding" />-Klasse. Ein Parameter gibt an, ob eine Unicode-Bytereihenfolgemarkierung bereitgestellt werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine Instanz, die keine Ausnahme auslöst, wenn eine ungültige Codierung gefunden wird.  
+  
+> [!NOTE]
+>  Aus Gründen der Sicherheit sollten Sie fehlererkennung aktivieren, durch den Aufruf eines Konstruktors, der enthält einem `throwOnInvalidBytes` Parameter und deren Festlegung auf `true`.  
+  
+ Die `encoderShouldEmitUTF8Identifier` Parameter steuert die Ausführung von der <xref:System.Text.UTF8Encoding.GetPreamble%2A> Methode. Wenn `true`, die Methode gibt ein Bytearray, das die Unicode-bytereihenfolgemarkierung (BOM) in UTF-8-Format enthält.  Wenn `false`, es gibt ein Bytearray der Länge 0 (null) zurück. Jedoch festlegen `encoderShouldEmitUTF8Identifier` auf `true` führt nicht dazu, dass die <xref:System.Text.UTF8Encoding.GetBytes%2A> Methode, um die BOM am Anfang des Bytearrays, Präfix noch führt es dazu, dass die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode, um die Anzahl der Bytes in der Stückliste in die Anzahl der Bytes enthalten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Text.UTF8Encoding> -Instanz und gibt an, dass ein Unicode-Byte Order Mark Präfix sollen, durch ausgegeben werden die <xref:System.Text.UTF8Encoding.GetPreamble%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetPreamble%2A> -Methode gibt dann das Unicode-Byte Order Mark Präfix zurück.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.ctor2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.ctor2 Example/CPP/ctor-boolean.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.ctor2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.ctor2 Example/CS/ctor-boolean.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.ctor2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.ctor2 Example/VB/ctor-boolean.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UTF8Encoding (bool encoderShouldEmitUTF8Identifier, bool throwOnInvalidBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool encoderShouldEmitUTF8Identifier, bool throwOnInvalidBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.#ctor(System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoderShouldEmitUTF8Identifier" Type="System.Boolean" />
+        <Parameter Name="throwOnInvalidBytes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="encoderShouldEmitUTF8Identifier">
+          <see langword="true" />, um anzugeben, dass die <see cref="M:System.Text.UTF8Encoding.GetPreamble" />-Methode eine Unicode-Bytereihenfolgemarkierung zurückgeben sollte; andernfalls <see langword="false" />.</param>
+        <param name="throwOnInvalidBytes">
+          <see langword="true" />, damit eine Ausnahme ausgelöst wird, wenn eine ungültige Codierung gefunden wird, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Text.UTF8Encoding" />-Klasse. Parameter geben an, ob eine Unicode-Bytereihenfolgemarkierung bereitgestellt werden soll und ob eine Ausnahme ausgelöst werden soll, wenn eine ungültige Codierung gefunden wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `encoderShouldEmitUTF8Identifier` Parameter steuert die Ausführung von der <xref:System.Text.UTF8Encoding.GetPreamble%2A> Methode. Wenn `true`, die Methode gibt ein Bytearray, das die Unicode-bytereihenfolgemarkierung (BOM) in UTF-8-Format enthält.  Wenn `false`, es gibt ein Bytearray der Länge 0 (null) zurück. Jedoch festlegen `encoderShouldEmitUTF8Identifier` auf `true` führt nicht dazu, dass die <xref:System.Text.UTF8Encoding.GetBytes%2A> Methode, um die BOM am Anfang des Bytearrays, Präfix noch führt es dazu, dass die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode, um die Anzahl der Bytes in der Stückliste in die Anzahl der Bytes enthalten.  
+  
+ Wenn `throwOnInvalidBytes` ist `true`, löst Sie eine Methode, die eine ungültige Bytesequenz erkennt eine <xref:System.ArgumentException?displayProperty=nameWithType> Ausnahme. Andernfalls wird die Methode löst eine Ausnahme, und die ungültige Sequenz wird ignoriert.  
+  
+> [!NOTE]
+>  Aus Gründen der Sicherheit sollten Sie fehlererkennung aktivieren, durch den Aufruf eines Konstruktors, der enthält einem `throwOnInvalidBytes` Parameter und setzen diese Parameters auf `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Text.UTF8Encoding> Instanz angeben, dass die <xref:System.Text.UTF8Encoding.GetPreamble%2A> Methode sollte keine Unicode-Byte Order Mark Präfix ausgeben, und eine Ausnahme ausgelöst werden soll, wenn eine ungültige Codierung gefunden wird. Das Verhalten dieses Konstruktors wird verglichen, auf den Standardwert <xref:System.Text.UTF8Encoding.%23ctor> -Konstruktor, der keine Ausnahme auslöst, wenn eine ungültige Codierung gefunden wird. Die beiden <xref:System.Text.UTF8Encoding> Instanzen codieren ein Array von Zeichen, die zwei hohe Ersatzzeichen (U + D801 und U + D802) enthält, in der Zeile, die eine ungültige Zeichenfolge ist; ein hohes Ersatzzeichen sollten immer ein niedriges Ersatzzeichen folgen.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.ctor3 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.ctor3 Example/CPP/ctor-boolean-boolean.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.ctor3 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.ctor3 Example/CS/ctor-boolean-boolean.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.ctor3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.ctor3 Example/VB/ctor-boolean-boolean.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Objekt und das aktuelle <see cref="T:System.Text.UTF8Encoding" />-Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value" /> eine Instanz von <see cref="T:System.Text.UTF8Encoding" /> und mit dem aktuellen Objekt identisch ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.Text.UTF8Encoding> Objekte werden als gleich betrachtet, wenn alle der folgenden Bedingungen erfüllt sind:  
+  
+-   Beide Objekte bereitzustellen, Byte Order Mark, oder beide nicht der Fall ist.  
+  
+-   Beide Objekte verwenden die gleichen EncoderFallback.  
+  
+-   Beide Objekte verwenden die gleichen DecoderFallback.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.UTF8Encoding.Equals%2A> Methode zum Testen, ob die aktuelle <xref:System.Text.UTF8Encoding> -Objekt gleich einem anderen <xref:System.Text.UTF8Encoding> Objekt. Vier <xref:System.Text.UTF8Encoding> Objekte erstellt und verglichen werden und die Ergebnisse der Vergleiche werden angezeigt.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.Equals Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.Equals Example/CPP/equals-object.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.Equals Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.Equals Example/CS/equals-object.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.Equals Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.Equals Example/VB/equals-object.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByteCount">
+      <MemberSignature Language="C#" Value="public override int GetByteCount (string chars);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetByteCount(string chars) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetByteCount(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="chars">Die <see cref="T:System.String" />-Klasse mit den zu codierenden Zeichen.</param>
+        <summary>Berechnet die Anzahl der Bytes, die durch das Codieren der Zeichen in der angegebenen <see cref="T:System.String" />-Klasse erzeugt werden.</summary>
+        <returns>Die Anzahl der Bytes, die beim Codieren der angegebenen Zeichen erzeugt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Berechnen der genauen Arraygröße <xref:System.Text.UTF8Encoding.GetBytes%2A> zum Speichern der resultierenden Bytes rufen Sie die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode. Um die maximale Arraygröße zu berechnen, rufen Sie die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode weist im Allgemeinen weniger Speicher, während die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode in der Regel schneller ausgeführt wird.  
+  
+ Fehlererkennung, eine ungültige Folge führt diese Methode löst eine <xref:System.ArgumentException> Ausnahme. Ohne fehlererkennung ungültige Sequenzen werden ignoriert, und keine Ausnahme ausgelöst wird.  
+  
+ Um sicherzustellen, dass die codierten Bytes ordnungsgemäß decodiert werden, wenn sie als eine Datei oder einem Stream gespeichert werden, können Sie einen Datenstrom von codierten Bytes mit einer Präambel voranstellen. Die Präambel am Anfang eines Bytestreams einfügen (z. B. am Anfang einer Folge von Bytes in eine Datei geschrieben werden sollen) ist Aufgabe des Entwicklers, und die Anzahl der Bytes in der Präambel ist nicht in den Rückgabewert von wiedergegeben, die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> und <xref:System.Text.UTF8Encoding.GetByteCount%28System.String%29> Methoden zum Berechnen der maximalen und den tatsächlichen Anzahl der Bytes, die erforderlich sind, um eine Zeichenfolge zu codieren. Es zeigt auch die tatsächliche Anzahl von Bytes, die zum Speichern eines Bytestreams mit einem Byte-reihenfolgemarkierung erforderlich.  
+  
+ [!code-csharp[System.Text.UTF8Encoding.GetByteCount#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.utf8encoding.getbytecount/cs/getbytecount1.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.GetByteCount#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.utf8encoding.getbytecount/vb/getbytecount1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die daraus resultierende Byteanzahl ist größer als die maximale Anzahl, die als ganze Zahl zurückgegeben werden kann.</exception>
+        <exception cref="T:System.ArgumentException">Die Fehlererkennung ist aktiviert, und <paramref name="chars" /> enthält eine ungültige Folge von Zeichen.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) vollständige Erläuterung)  
+  
+ - und -  
+  
+ Für <see cref="P:System.Text.Encoding.EncoderFallback" /> ist <see cref="T:System.Text.EncoderExceptionFallback" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByteCount">
+      <MemberSignature Language="C#" Value="public override int GetByteCount (char* chars, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetByteCount(char* chars, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetByteCount(System.Char*,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char*" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="chars">Ein Zeiger auf das erste zu codierende Zeichen.</param>
+        <param name="count">Die Anzahl der zu codierenden Zeichen.</param>
+        <summary>Berechnet die Anzahl der Bytes, die beim Codieren der Zeichen ab dem angegebenen Zeichenzeiger erzeugt werden.</summary>
+        <returns>Die Anzahl der Bytes, die beim Codieren der angegebenen Zeichen erzeugt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Berechnen der genauen Arraygröße, die <xref:System.Text.UTF8Encoding.GetBytes%2A> Methode zum Speichern der resultierenden Bytes, rufen Sie die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode. Um die maximale Arraygröße zu berechnen, rufen Sie die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode weist im Allgemeinen weniger Speicher, während die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode in der Regel schneller ausgeführt wird.  
+  
+ Fehlererkennung, eine ungültige Folge führt diese Methode löst eine <xref:System.ArgumentException> Ausnahme. Ohne fehlererkennung ungültige Sequenzen werden ignoriert, und keine Ausnahme ausgelöst wird.  
+  
+ Um sicherzustellen, dass die codierten Bytes ordnungsgemäß decodiert werden, wenn sie als eine Datei oder einem Stream gespeichert werden, können Sie einen Datenstrom von codierten Bytes mit einer Präambel voranstellen. Die Präambel am Anfang eines Bytestreams einfügen (z. B. am Anfang einer Folge von Bytes in eine Datei geschrieben werden sollen) ist Aufgabe des Entwicklers, und die Anzahl der Bytes in der Präambel ist nicht in den Rückgabewert von wiedergegeben, die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ Die daraus resultierende Byteanzahl ist größer als die maximale Anzahl, die als ganze Zahl zurückgegeben werden kann.</exception>
+        <exception cref="T:System.ArgumentException">Die Fehlererkennung ist aktiviert, und <paramref name="chars" /> enthält eine ungültige Folge von Zeichen.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) eine vollständige Erläuterung)  
+  
+ - und -  
+  
+ Für <see cref="P:System.Text.Encoding.EncoderFallback" /> ist <see cref="T:System.Text.EncoderExceptionFallback" /> festgelegt.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByteCount">
+      <MemberSignature Language="C#" Value="public override int GetByteCount (char[] chars, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetByteCount(char[] chars, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetByteCount(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="chars">Das Zeichenarray, das die zu codierenden Zeichen enthält.</param>
+        <param name="index">Der Index des ersten zu codierenden Zeichens.</param>
+        <param name="count">Die Anzahl der zu codierenden Zeichen.</param>
+        <summary>Berechnet die Anzahl der Bytes, die beim Codieren der Zeichen aus dem angegebenen Zeichenarray erzeugt werden.</summary>
+        <returns>Die Anzahl der Bytes, die beim Codieren der angegebenen Zeichen erzeugt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Berechnen der genauen Arraygröße <xref:System.Text.UTF8Encoding.GetBytes%2A> zum Speichern der resultierenden Bytes, die Sie aufrufen verwendet der <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode. Um die maximale Arraygröße zu berechnen, rufen Sie die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode weist im Allgemeinen weniger Speicher, während die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode in der Regel schneller ausgeführt wird.  
+  
+ Fehlererkennung, eine ungültige Folge führt diese Methode löst eine <xref:System.ArgumentException> Ausnahme. Ohne fehlererkennung ungültige Sequenzen werden ignoriert, und keine Ausnahme ausgelöst wird.  
+  
+ Um sicherzustellen, dass die codierten Bytes ordnungsgemäß decodiert werden, wenn sie als eine Datei oder einem Stream gespeichert werden, können Sie einen Datenstrom von codierten Bytes mit einer Präambel voranstellen. Die Präambel am Anfang eines Bytestreams einfügen (z. B. am Anfang einer Folge von Bytes in eine Datei geschrieben werden sollen) ist Aufgabe des Entwicklers, und die Anzahl der Bytes in der Präambel ist nicht in den Rückgabewert von wiedergegeben, die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Array mit einem lateinischen Großbuchstaben und Kleinbuchstaben und ruft die <xref:System.Text.UTF8Encoding.GetByteCount%28System.Char%5B%5D%2CSystem.Int32%2CSystem.Int32%29> Methode, um die Anzahl der Bytes, die zum Codieren der Zeichen des lateinischen Kleinbuchstaben erforderlich festzulegen. Es zeigt dann diese Informationen zusammen mit der Gesamtanzahl von Bytes erforderlich, wenn eine Bytereihenfolge-Marke hinzugefügt wird. Diese Zahl vergleicht Sie mit den Rückgabewert von der <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> -Methode, die maximale Anzahl von Bytes, die zum Codieren der Zeichen des lateinischen Kleinbuchstaben erforderlich angibt.  
+  
+ [!code-csharp[System.Text.UTF8Encoding.GetByteCount#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.utf8encoding.getbytecount/cs/getbytecount2.cs#2)]
+ [!code-vb[System.Text.UTF8Encoding.GetByteCount#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.utf8encoding.getbytecount/vb/getbytecount2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> oder <paramref name="count" /> ist kleiner als 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="index" /> und <paramref name="count" /> geben keinen gültigen Bereich in <paramref name="chars" /> an.  
+  
+ - oder -   
+  
+ Die daraus resultierende Byteanzahl ist größer als die maximale Anzahl, die als ganze Zahl zurückgegeben werden kann.</exception>
+        <exception cref="T:System.ArgumentException">Die Fehlererkennung ist aktiviert, und <paramref name="chars" /> enthält eine ungültige Folge von Zeichen.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) vollständige Erläuterung)  
+  
+ - und -  
+  
+ Die <see cref="P:System.Text.Encoding.EncoderFallback" />-Eigenschaft ist auf <see cref="T:System.Text.EncoderExceptionFallback" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public override int GetBytes (char* chars, int charCount, byte* bytes, int byteCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetBytes(char* chars, int32 charCount, unsigned int8* bytes, int32 byteCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetBytes(System.Char*,System.Int32,System.Byte*,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char*" />
+        <Parameter Name="charCount" Type="System.Int32" />
+        <Parameter Name="bytes" Type="System.Byte*" />
+        <Parameter Name="byteCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="chars">Ein Zeiger auf das erste zu codierende Zeichen.</param>
+        <param name="charCount">Die Anzahl der zu codierenden Zeichen.</param>
+        <param name="bytes">Ein Zeiger auf die Position, an der mit dem Schreiben der sich ergebenden Bytefolge begonnen werden soll.</param>
+        <param name="byteCount">Die maximale Anzahl der zu schreibenden Bytes.</param>
+        <summary>Codiert Zeichen beginnend am angegebenen Zeichenzeiger in eine Bytefolge, die beginnend am angegebenen Bytezeiger gespeichert wird.</summary>
+        <returns>Die durch <paramref name="bytes" /> angegebene tatsächliche Anzahl von Bytes, die am Speicherort geschrieben wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Berechnen der genauen Arraygröße <xref:System.Text.UTF8Encoding.GetBytes%2A> zum Speichern der resultierenden Bytes rufen Sie die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode. Um die maximale Arraygröße zu berechnen, rufen Sie die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode weist im Allgemeinen weniger Speicher, während die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode in der Regel schneller ausgeführt wird.  
+  
+ Fehlererkennung, eine ungültige Folge führt diese Methode löst eine <xref:System.ArgumentException> Ausnahme. Ohne fehlererkennung ungültige Sequenzen werden ignoriert, und keine Ausnahme ausgelöst wird.  
+  
+ Daten konvertiert werden, z. B. aus einem Stream gelesenen Daten möglicherweise nur in sequenzielle Blöcke verfügbar. In diesem Fall, oder wenn die Menge der Daten so umfangreich ist, dass er in kleinere Blöcke aufgeteilt werden muss, verwenden die <xref:System.Text.Decoder> oder die <xref:System.Text.Encoder> zurückgegebenes der <xref:System.Text.UTF8Encoding.GetDecoder%2A> Methode oder die <xref:System.Text.UTF8Encoding.GetEncoder%2A> -Methode, bzw..  
+  
+ Um sicherzustellen, dass die codierten Bytes ordnungsgemäß decodiert werden, wenn sie als eine Datei oder einem Stream gespeichert werden, können Sie einen Datenstrom von codierten Bytes mit einer Präambel voranstellen. Die Präambel am Anfang eines Bytestreams einfügen (z. B. am Anfang einer Folge von Bytes in eine Datei geschrieben werden) wird die Verantwortung des Entwicklers. Die <xref:System.Text.UTF8Encoding.GetBytes%2A> Methode ist keine Präambel am Anfang eine codierte Bytefolge nicht voranstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="bytes" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="charCount" /> oder <paramref name="byteCount" /> ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">Die Fehlererkennung ist aktiviert, und <paramref name="chars" /> enthält eine ungültige Folge von Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="byteCount" />ist kleiner als die resultierende Anzahl von Bytes.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) vollständige Erläuterung)  
+  
+ - und -  
+  
+ Für <see cref="P:System.Text.Encoding.EncoderFallback" /> ist <see cref="T:System.Text.EncoderExceptionFallback" /> festgelegt.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public override int GetBytes (char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetBytes(char[] chars, int32 charIndex, int32 charCount, unsigned int8[] bytes, int32 byteIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetBytes(System.Char[],System.Int32,System.Int32,System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char[]" />
+        <Parameter Name="charIndex" Type="System.Int32" />
+        <Parameter Name="charCount" Type="System.Int32" />
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="byteIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="chars">Das Zeichenarray, das die zu codierenden Zeichen enthält.</param>
+        <param name="charIndex">Der Index des ersten zu codierenden Zeichens.</param>
+        <param name="charCount">Die Anzahl der zu codierenden Zeichen.</param>
+        <param name="bytes">Das Bytearray, das die sich ergebende Bytefolge enthalten soll.</param>
+        <param name="byteIndex">Der Index, an dem mit dem Schreiben der sich ergebenden Bytefolge begonnen werden soll.</param>
+        <summary>Codiert Zeichen aus dem angegebenen Zeichenarray in das angegebene Bytearray.</summary>
+        <returns>Die tatsächliche Anzahl der Bytes, die in <paramref name="bytes" /> geschrieben werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Berechnen der genauen Arraygröße <xref:System.Text.UTF8Encoding.GetBytes%2A> zum Speichern der resultierenden Bytes rufen Sie die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode. Um die maximale Arraygröße zu berechnen, rufen Sie die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode weist im Allgemeinen weniger Speicher, während die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode in der Regel schneller ausgeführt wird.  
+  
+ Fehlererkennung, eine ungültige Folge führt diese Methode löst eine <xref:System.ArgumentException> Ausnahme. Ohne fehlererkennung ungültige Sequenzen werden ignoriert, und keine Ausnahme ausgelöst wird.  
+  
+ Daten konvertiert werden, z. B. aus einem Stream gelesenen Daten möglicherweise nur in sequenzielle Blöcke verfügbar. In diesem Fall, oder wenn die Menge der Daten so umfangreich ist, dass er in kleinere Blöcke aufgeteilt werden muss, verwenden die <xref:System.Text.Decoder> oder die <xref:System.Text.Encoder> gebotenen der <xref:System.Text.UTF8Encoding.GetDecoder%2A> Methode oder die <xref:System.Text.UTF8Encoding.GetEncoder%2A> -Methode, bzw..  
+  
+ Um sicherzustellen, dass die codierten Bytes ordnungsgemäß decodiert werden, wenn sie als eine Datei oder einem Stream gespeichert werden, können Sie einen Datenstrom von codierten Bytes mit einer Präambel voranstellen. Die Präambel am Anfang eines Bytestreams einfügen (z. B. am Anfang einer Folge von Bytes in eine Datei geschrieben werden) wird die Verantwortung des Entwicklers. Die <xref:System.Text.UTF8Encoding.GetBytes%2A> Methode ist keine Präambel am Anfang eine codierte Bytefolge nicht voranstellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.UTF8Encoding.GetBytes%2A> Methode, um einen Bereich von Zeichen aus einer Zeichenfolge und speichert die codierten Bytes in einem Bereich von Elementen in einem Bytearray codiert.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.GetBytes3 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetBytes3 Example/CPP/getbytes-string-int32-int32-byte[]-int32.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.GetBytes3 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetBytes3 Example/CS/getbytes-string-int32-int32-byte[]-int32.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.GetBytes3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetBytes3 Example/VB/getbytes-string-int32-int32-byte[]-int32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="bytes" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="charIndex" />oder <paramref name="charCount" /> oder <paramref name="byteIndex" /> ist kleiner als 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="charIndex" /> und <paramref name="charCount" /> geben keinen gültigen Bereich in <paramref name="chars" /> an.  
+  
+ - oder -   
+  
+ <paramref name="byteIndex" /> ist kein gültiger Index in <paramref name="bytes" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Fehlererkennung ist aktiviert, und <paramref name="chars" /> enthält eine ungültige Folge von Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="bytes" />verfügt nicht über genügend Kapazität von <paramref name="byteIndex" /> bis zum Ende des Arrays, die sich ergebenden Bytes aufzunehmen.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) vollständige Erläuterung)  
+  
+ - und -  
+  
+ Für <see cref="P:System.Text.Encoding.EncoderFallback" /> ist <see cref="T:System.Text.EncoderExceptionFallback" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public override int GetBytes (string s, int charIndex, int charCount, byte[] bytes, int byteIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetBytes(string s, int32 charIndex, int32 charCount, unsigned int8[] bytes, int32 byteIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetBytes(System.String,System.Int32,System.Int32,System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="charIndex" Type="System.Int32" />
+        <Parameter Name="charCount" Type="System.Int32" />
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="byteIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see cref="T:System.String" />-Klasse mit den zu codierenden Zeichen.</param>
+        <param name="charIndex">Der Index des ersten zu codierenden Zeichens.</param>
+        <param name="charCount">Die Anzahl der zu codierenden Zeichen.</param>
+        <param name="bytes">Das Bytearray, das die sich ergebende Bytefolge enthalten soll.</param>
+        <param name="byteIndex">Der Index, an dem mit dem Schreiben der sich ergebenden Bytefolge begonnen werden soll.</param>
+        <summary>Codiert Zeichen aus der angegebenen <see cref="T:System.String" />-Klasse in das angegebene Bytearray.</summary>
+        <returns>Die tatsächliche Anzahl der Bytes, die in <paramref name="bytes" /> geschrieben werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Berechnen der genauen Arraygröße <xref:System.Text.UTF8Encoding.GetBytes%2A> zum Speichern der resultierenden Bytes rufen Sie die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode. Um die maximale Arraygröße zu berechnen, rufen Sie die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode weist im Allgemeinen weniger Speicher, während die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode in der Regel schneller ausgeführt wird.  
+  
+ Fehlererkennung, eine ungültige Folge führt diese Methode löst eine <xref:System.ArgumentException> Ausnahme. Ohne fehlererkennung ungültige Sequenzen werden ignoriert, und keine Ausnahme ausgelöst wird.  
+  
+ Daten konvertiert werden, z. B. aus einem Stream gelesenen Daten möglicherweise nur in sequenzielle Blöcke verfügbar. In diesem Fall, oder wenn die Menge der Daten so umfangreich ist, dass er in kleinere Blöcke aufgeteilt werden muss, verwenden die <xref:System.Text.Decoder> oder die <xref:System.Text.Encoder> gebotenen der <xref:System.Text.UTF8Encoding.GetDecoder%2A> Methode oder die <xref:System.Text.UTF8Encoding.GetEncoder%2A> -Methode, bzw..  
+  
+ Um sicherzustellen, dass die codierten Bytes ordnungsgemäß decodiert werden, wenn sie als eine Datei oder einem Stream gespeichert werden, können Sie einen Datenstrom von codierten Bytes mit einer Präambel voranstellen. Die Präambel am Anfang eines Bytestreams einfügen (z. B. am Anfang einer Folge von Bytes in eine Datei geschrieben werden) wird die Verantwortung des Entwicklers. Die <xref:System.Text.UTF8Encoding.GetBytes%2A> Methode ist keine Präambel am Anfang eine codierte Bytefolge nicht voranstellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.UTF8Encoding.GetBytes%2A> Methode, um einen Bereich von Elementen aus einem Array von Unicode-Zeichen zu codieren, und speichern die codierten Bytes in einem Bereich von Elementen in einem Bytearray.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.GetBytes1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetBytes1 Example/CPP/getbytes-char[]-int32-int32-byte[]-int32.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.GetBytes1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetBytes1 Example/CS/getbytes-char[]-int32-int32-byte[]-int32.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.GetBytes1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetBytes1 Example/VB/getbytes-char[]-int32-int32-byte[]-int32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="bytes" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="charIndex" />oder <paramref name="charCount" /> oder <paramref name="byteIndex" /> ist kleiner als 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="charIndex" /> und <paramref name="charCount" /> geben keinen gültigen Bereich in <paramref name="chars" /> an.  
+  
+ - oder -   
+  
+ <paramref name="byteIndex" /> ist kein gültiger Index in <paramref name="bytes" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Fehlererkennung ist aktiviert, und <paramref name="s" /> enthält eine ungültige Folge von Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="bytes" />verfügt nicht über genügend Kapazität von <paramref name="byteIndex" /> bis zum Ende des Arrays, die sich ergebenden Bytes aufzunehmen.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) vollständige Erläuterung)  
+  
+ - und -  
+  
+ Für <see cref="P:System.Text.Encoding.EncoderFallback" /> ist <see cref="T:System.Text.EncoderExceptionFallback" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCharCount">
+      <MemberSignature Language="C#" Value="public override int GetCharCount (byte* bytes, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetCharCount(unsigned int8* bytes, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetCharCount(System.Byte*,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte*" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Ein Zeiger auf das erste zu decodierende Byte.</param>
+        <param name="count">Die Anzahl der zu decodierenden Bytes.</param>
+        <summary>Berechnet die Anzahl der Zeichen, die beim Decodieren einer Bytefolge ab dem angegebenen Bytezeiger erzeugt werden.</summary>
+        <returns>Die Anzahl der Zeichen, die beim Decodieren der angegebenen Bytefolge erzeugt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Berechnen der genauen Arraygröße <xref:System.Text.UTF8Encoding.GetChars%2A> rufen Sie zum Speichern der resultierenden Zeichen der <xref:System.Text.UTF8Encoding.GetCharCount%2A> Methode. Um die maximale Arraygröße zu berechnen, rufen die <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetCharCount%2A> Methode weist im Allgemeinen weniger Speicher, während die <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A> Methode in der Regel schneller ausgeführt wird.  
+  
+ Fehlererkennung, eine ungültige Folge führt diese Methode löst eine <xref:System.ArgumentException> Ausnahme. Ohne fehlererkennung ungültige Sequenzen werden ignoriert, und keine Ausnahme ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bytes" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ Die daraus resultierende Byteanzahl ist größer als die maximale Anzahl, die als ganze Zahl zurückgegeben werden kann.</exception>
+        <exception cref="T:System.ArgumentException">Die Fehlererkennung ist aktiviert, und <paramref name="bytes" /> enthält eine ungültige Folge von Bytes.</exception>
+        <exception cref="T:System.Text.DecoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) vollständige Erläuterung)  
+  
+ - und -  
+  
+ Für <see cref="P:System.Text.Encoding.DecoderFallback" /> ist <see cref="T:System.Text.DecoderExceptionFallback" /> festgelegt.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCharCount">
+      <MemberSignature Language="C#" Value="public override int GetCharCount (byte[] bytes, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetCharCount(unsigned int8[] bytes, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetCharCount(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Das Bytearray, das die zu decodierende Bytefolge enthält.</param>
+        <param name="index">Der Index des ersten zu decodierenden Bytes.</param>
+        <param name="count">Die Anzahl der zu decodierenden Bytes.</param>
+        <summary>Berechnet die Anzahl der Zeichen, die beim Decodieren einer Bytefolge aus dem angegebenen Bytearray erzeugt werden.</summary>
+        <returns>Die Anzahl der Zeichen, die beim Decodieren der angegebenen Bytefolge erzeugt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Berechnen der genauen Arraygröße <xref:System.Text.UTF8Encoding.GetChars%2A> rufen Sie zum Speichern der resultierenden Zeichen der <xref:System.Text.UTF8Encoding.GetCharCount%2A> Methode. Um die maximale Arraygröße zu berechnen, rufen die <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetCharCount%2A> Methode weist im Allgemeinen weniger Speicher, während die <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A> Methode in der Regel schneller ausgeführt wird.  
+  
+ Fehlererkennung, eine ungültige Folge führt diese Methode löst eine <xref:System.ArgumentException> Ausnahme. Ohne fehlererkennung ungültige Sequenzen werden ignoriert, und keine Ausnahme ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.UTF8Encoding.GetCharCount%2A> Methode, um die Anzahl von Zeichen zurückzugeben, die beim Decodieren Sie einen Bereich von Elementen in einem Bytearray erzeugt.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.GetCharCount Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetCharCount Example/CPP/getcharcount-byte[]-int32-int32.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.GetCharCount Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetCharCount Example/CS/getcharcount-byte[]-int32-int32.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.GetCharCount Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetCharCount Example/VB/getcharcount-byte[]-int32-int32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bytes" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> oder <paramref name="count" /> ist kleiner als 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="index" /> und <paramref name="count" /> geben keinen gültigen Bereich in <paramref name="bytes" /> an.  
+  
+ - oder -   
+  
+ Die daraus resultierende Byteanzahl ist größer als die maximale Anzahl, die als ganze Zahl zurückgegeben werden kann.</exception>
+        <exception cref="T:System.ArgumentException">Die Fehlererkennung ist aktiviert, und <paramref name="bytes" /> enthält eine ungültige Folge von Bytes.</exception>
+        <exception cref="T:System.Text.DecoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) vollständige Erläuterung)  
+  
+ - und -  
+  
+ Für <see cref="P:System.Text.Encoding.DecoderFallback" /> ist <see cref="T:System.Text.DecoderExceptionFallback" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChars">
+      <MemberSignature Language="C#" Value="public override int GetChars (byte* bytes, int byteCount, char* chars, int charCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetChars(unsigned int8* bytes, int32 byteCount, char* chars, int32 charCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetChars(System.Byte*,System.Int32,System.Char*,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte*" />
+        <Parameter Name="byteCount" Type="System.Int32" />
+        <Parameter Name="chars" Type="System.Char*" />
+        <Parameter Name="charCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Ein Zeiger auf das erste zu decodierende Byte.</param>
+        <param name="byteCount">Die Anzahl der zu decodierenden Bytes.</param>
+        <param name="chars">Ein Zeiger auf die Position, an der mit dem Schreiben der sich ergebenden Zeichen begonnen werden soll.</param>
+        <param name="charCount">Die maximale Anzahl der zu schreibenden Zeichen.</param>
+        <summary>Decodiert eine Bytefolge beginnend am angegebenen Bytezeiger in Zeichen, die beginnend am angegebenen Zeichenzeiger gespeichert werden.</summary>
+        <returns>Die durch <paramref name="chars" /> angegebene tatsächliche Anzahl der Zeichen, die am Speicherort geschrieben wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Berechnen der genauen Arraygröße <xref:System.Text.UTF8Encoding.GetChars%2A> rufen Sie zum Speichern der resultierenden Zeichen der <xref:System.Text.UTF8Encoding.GetCharCount%2A> Methode. Um die maximale Arraygröße zu berechnen, rufen die <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetCharCount%2A> Methode weist im Allgemeinen weniger Speicher, während die <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A> Methode in der Regel schneller ausgeführt wird.  
+  
+ Fehlererkennung, eine ungültige Folge führt diese Methode löst eine <xref:System.ArgumentException> Ausnahme. Ohne fehlererkennung ungültige Sequenzen werden ignoriert, und keine Ausnahme ausgelöst wird.  
+  
+ Wenn Sie der Bereich von Bytes, die zu decodierende enthält die Byte-reihenfolgemarkierung (BOM), und das Bytearray mit einer anderen Methode eines Typs nicht BOM beachten zurückgegeben wurde, ist das Zeichen U + FFFE im Zeichenarray, das von dieser Methode zurückgegebene enthalten. Sie können diesen entfernen, durch Aufrufen der <xref:System.String.TrimStart%2A?displayProperty=nameWithType> Methode.  
+  
+ Daten konvertiert werden, z. B. aus einem Stream gelesenen Daten möglicherweise nur in sequenzielle Blöcke verfügbar. Und in diesem Fall, wenn die Menge der Daten so umfangreich ist, dass er in kleinere Blöcke aufgeteilt werden muss, verwenden die <xref:System.Text.Decoder> oder <xref:System.Text.Encoder> Objekt bereitgestellt werden, indem Sie die <xref:System.Text.UTF8Encoding.GetDecoder%2A> Methode oder die <xref:System.Text.UTF8Encoding.GetEncoder%2A> -Methode, bzw..  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bytes" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="chars" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="byteCount" /> oder <paramref name="charCount" /> ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">Die Fehlererkennung ist aktiviert, und <paramref name="bytes" /> enthält eine ungültige Folge von Bytes.  
+  
+ - oder -   
+  
+ <paramref name="charCount" />ist kleiner als die daraus resultierende Zeichenanzahl.</exception>
+        <exception cref="T:System.Text.DecoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) vollständige Erläuterung)  
+  
+ - und -  
+  
+ Für <see cref="P:System.Text.Encoding.DecoderFallback" /> ist <see cref="T:System.Text.DecoderExceptionFallback" /> festgelegt.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChars">
+      <MemberSignature Language="C#" Value="public override int GetChars (byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetChars(unsigned int8[] bytes, int32 byteIndex, int32 byteCount, char[] chars, int32 charIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="byteIndex" Type="System.Int32" />
+        <Parameter Name="byteCount" Type="System.Int32" />
+        <Parameter Name="chars" Type="System.Char[]" />
+        <Parameter Name="charIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Das Bytearray, das die zu decodierende Bytefolge enthält.</param>
+        <param name="byteIndex">Der Index des ersten zu decodierenden Bytes.</param>
+        <param name="byteCount">Die Anzahl der zu decodierenden Bytes.</param>
+        <param name="chars">Das Zeichenarray, das die sich ergebenden Zeichen enthalten soll.</param>
+        <param name="charIndex">Der Index, an dem mit dem Schreiben der sich ergebenden Zeichen begonnen werden soll.</param>
+        <summary>Decodiert eine Bytefolge aus dem angegebenen Bytearray in das angegebene Zeichenarray.</summary>
+        <returns>Die tatsächliche Anzahl der Zeichen, die in <paramref name="chars" /> geschrieben werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Berechnen der genauen Arraygröße <xref:System.Text.UTF8Encoding.GetChars%2A> rufen Sie zum Speichern der resultierenden Zeichen der <xref:System.Text.UTF8Encoding.GetCharCount%2A> Methode. Um die maximale Arraygröße zu berechnen, rufen die <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetCharCount%2A> Methode weist im Allgemeinen weniger Speicher, während die <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A> Methode in der Regel schneller ausgeführt wird.  
+  
+ Fehlererkennung, eine ungültige Folge führt diese Methode löst eine <xref:System.ArgumentException> Ausnahme. Ohne fehlererkennung ungültige Sequenzen werden ignoriert, und keine Ausnahme ausgelöst wird.  
+  
+ Wenn Sie der Bereich von Bytes, die zu decodierende enthält die Byte-reihenfolgemarkierung (BOM), und das Bytearray mit einer anderen Methode eines Typs nicht BOM beachten zurückgegeben wurde, ist das Zeichen U + FFFE im Zeichenarray, das von dieser Methode zurückgegebene enthalten. Sie können diesen entfernen, durch Aufrufen der <xref:System.String.TrimStart%2A?displayProperty=nameWithType> Methode.  
+  
+ Daten konvertiert werden, z. B. aus einem Stream gelesenen Daten möglicherweise nur in sequenzielle Blöcke verfügbar. In diesem Fall, oder wenn die Menge der Daten so umfangreich ist, dass er in kleinere Blöcke aufgeteilt werden muss, verwenden die <xref:System.Text.Decoder> oder die <xref:System.Text.Encoder> gebotenen der <xref:System.Text.UTF8Encoding.GetDecoder%2A> Methode oder die <xref:System.Text.UTF8Encoding.GetEncoder%2A> -Methode, bzw..  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.UTF8Encoding.GetChars%2A> Methode, um einen Bereich von Elementen in einem Bytearray zu decodieren und Speichern des Ergebnisses in ein Zeichenarray.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.GetChars Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetChars Example/CPP/getchars-byte[]-int32-int32-char[]-int32.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.GetChars Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetChars Example/CS/getchars-byte[]-int32-int32-char[]-int32.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.GetChars Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetChars Example/VB/getchars-byte[]-int32-int32-char[]-int32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bytes" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="chars" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="byteIndex" />oder <paramref name="byteCount" /> oder <paramref name="charIndex" /> ist kleiner als 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="byteindex" /> und <paramref name="byteCount" /> geben keinen gültigen Bereich in <paramref name="bytes" /> an.  
+  
+ - oder -   
+  
+ <paramref name="charIndex" /> ist kein gültiger Index in <paramref name="chars" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Fehlererkennung ist aktiviert, und <paramref name="bytes" /> enthält eine ungültige Folge von Bytes.  
+  
+ - oder -   
+  
+ <paramref name="chars" />verfügt nicht über genügend Kapazität von <paramref name="charIndex" /> bis zum Ende des Arrays, die sich ergebenden Zeichen aufzunehmen.</exception>
+        <exception cref="T:System.Text.DecoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) vollständige Erläuterung)  
+  
+ - und -  
+  
+ Für <see cref="P:System.Text.Encoding.DecoderFallback" /> ist <see cref="T:System.Text.DecoderExceptionFallback" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecoder">
+      <MemberSignature Language="C#" Value="public override System.Text.Decoder GetDecoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Text.Decoder GetDecoder() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetDecoder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Decoder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Decoder ab, der eine UTF-8-codierte Bytefolge in eine Unicode-Zeichenfolge konvertiert.</summary>
+        <returns>Ein Decoder, der eine UTF-8-codierte Bytefolge in eine Unicode-Zeichenfolge konvertiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> konvertiert sequenzielle Blöcke von Bytes in sequenzielle Blöcke von Zeichen ähnlich wie die <xref:System.Text.UTF8Encoding.GetChars%2A> Methode dieser Klasse. Allerdings eine <xref:System.Text.Decoder> verwaltet Zustandsinformationen zwischen aufrufen, damit Bytesequenzen, die Blöcke umfassen, ordnungsgemäß decodiert werden können. Die <xref:System.Text.Decoder> behält nachfolgende Bytes am Ende der Datenblöcke und die nachfolgenden Bytes im nächste Decodierungsvorgang verwendet. Aus diesem Grund <xref:System.Text.UTF8Encoding.GetDecoder%2A> und <xref:System.Text.UTF8Encoding.GetEncoder%2A> eignen sich für die netzwerkübertragung und Dateivorgänge, da diese Vorgänge Datenblöcke anstelle einer vollständigen Datenstrom oft verarbeiten müssen.  
+  
+ Wenn Erkennung, d. h. aktiviert ist die `throwOnInvalidCharacters` Parameter des Konstruktors festgelegt ist, um `true`, fehlererkennung ist auch aktiviert, der <xref:System.Text.Decoder> von dieser Methode zurückgegebene. Wenn fehlererkennung ist aktiviert, und eine ungültige Folge festgestellt wird, der Zustand des Decoders ist nicht definiert und Verarbeitung muss beendet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.UTF8Encoding.GetDecoder%2A> Methode, um einen UTF-8-Decoder abzurufen. Der Decoder konvertiert eine Bytefolge in eine Folge von Zeichen an.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.GetDecoder Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetDecoder Example/CPP/getdecoder-.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.GetDecoder Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetDecoder Example/CS/getdecoder-.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.GetDecoder Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetDecoder Example/VB/getdecoder-.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEncoder">
+      <MemberSignature Language="C#" Value="public override System.Text.Encoder GetEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Text.Encoder GetEncoder() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetEncoder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Encoder ab, der eine Unicode-Zeichenfolge in eine UTF-8-codierte Bytefolge konvertiert.</summary>
+        <returns>Ein <see cref="T:System.Text.Encoder" />, der eine Unicode-Zeichenfolge in eine UTF-8-codierte Bytefolge konvertiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Text.Encoder.GetBytes%2A?displayProperty=nameWithType> konvertiert sequenzielle Blöcke von Zeichen in sequenzielle Blöcke von Bytes auf ähnliche Weise die <xref:System.Text.UTF8Encoding.GetBytes%2A> Methode. Allerdings eine <xref:System.Text.Encoder> verwaltet Zustandsinformationen zwischen aufrufen, damit Zeichensequenzen, die Blöcke umfassen, korrekt codiert werden können. Die <xref:System.Text.Encoder> auch beibehalten, nachfolgende Zeichen am Ende der Datenblöcke und das nachfolgenden Zeichen in der nächsten Codierungsvorgang verwendet. Z. B. ein Datenblock möglicherweise eine hohe Ersatzzeichen ohne Entsprechung enden, und die übereinstimmende niedrige Ersatzzeichen ist möglicherweise in den nächsten Datenblock. Aus diesem Grund <xref:System.Text.UTF8Encoding.GetDecoder%2A> und <xref:System.Text.UTF8Encoding.GetEncoder%2A> eignen sich für die netzwerkübertragung und Dateivorgänge, da diese Vorgänge Datenblöcke anstelle einer vollständigen Datenstrom oft verarbeiten müssen.  
+  
+ Wenn Erkennung, d. h. aktiviert ist die `throwOnInvalidCharacters` Parameter des Konstruktors festgelegt ist, um `true`, fehlererkennung ist auch aktiviert, der <xref:System.Text.Encoder> von dieser Methode zurückgegebene. Wenn die fehlererkennung ist aktiviert, und eine ungültige Folge festgestellt wird, der Zustand des Encoders ist nicht definiert und Verarbeitung muss beendet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.UTF8Encoding.GetEncoder%2A> Methode, um einen Encoder, um eine Sequenz von Zeichen in eine UTF-8 konvertieren abzurufen codierte Bytefolge.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.GetEncoder Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetEncoder Example/CPP/getencoder-.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.GetEncoder Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetEncoder Example/CS/getencoder-.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.GetEncoder Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetEncoder Example/VB/getencoder-.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für die aktuelle Instanz zurück.</summary>
+        <returns>Der Hashcode für die aktuelle Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.UTF8Encoding.GetHashCode%2A> Methode, um einen Hashcode für zurückzugeben <xref:System.Text.UTF8Encoding> Instanzen. Beachten Sie, dass der Konstruktor zum Erstellen der von dieser Methode zurückgegebene Hashcode abhängt der <xref:System.Text.UTF8Encoding> Objekt.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.GetHashCode Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetHashCode Example/CPP/gethashcode-.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.GetHashCode Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetHashCode Example/CS/gethashcode-.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.GetHashCode Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetHashCode Example/VB/gethashcode-.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMaxByteCount">
+      <MemberSignature Language="C#" Value="public override int GetMaxByteCount (int charCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMaxByteCount(int32 charCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetMaxByteCount(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="charCount">Die Anzahl der zu codierenden Zeichen.</param>
+        <summary>Berechnet die maximale Anzahl der Bytes, die beim Codieren der angegebenen Anzahl von Zeichen erzeugt wird.</summary>
+        <returns>Die maximale Anzahl an Bytes, die beim Codieren der angegebenen Anzahl von Zeichen erzeugt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Berechnen der genauen Arraygröße <xref:System.Text.UTF8Encoding.GetBytes%2A> zum Speichern der resultierenden Bytes rufen Sie die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode. Um die maximale Arraygröße zu berechnen, rufen Sie die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode weist im Allgemeinen weniger Speicher, während die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode in der Regel schneller ausgeführt wird.  
+  
+ <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A>ein Worst-Case Zahl ist, einschließlich ungünstigsten Fall für das derzeit ausgewählte <xref:System.Text.EncoderFallback>. Wenn ein Fallback mit einer potenziell großen Zeichenfolge ausgewählt wird <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> große Werte zurückgeben können.  
+  
+ In den meisten Fällen gibt diese Methode geeignete Zahlen für kleine Zeichenfolgen zurück. Für große Zeichenfolgen müssen Sie möglicherweise entscheiden sehr große Puffer und Erfassen von Fehlern in dem seltenen Fall, dass ein günstiger Puffer überschritten wird. Sie sollten auch einen anderen Ansatz erwägen <xref:System.Text.UTF8Encoding.GetByteCount%2A> oder <xref:System.Text.Encoder.Convert%2A?displayProperty=nameWithType>. Beispielsweise kann Text auf Englisch und vielen weiteren Sprachen benötigt häufig nur einen UTF-8-Byte zur Darstellung eines Zeichens, aber die Anzahl von zurückgegebenen <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> muss die Möglichkeit zu ermöglichen, dass die Zeichenfolge zu konvertierende Zeichen bestehen, da jedes bestehen benötigen Sie vier Bytes.  
+  
+ <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A>hat keinen Bezug zu <xref:System.Text.UTF8Encoding.GetChars%2A>. Wenn Ihre Anwendung eine ähnliche Funktion für die Verwendung mit benötigt <xref:System.Text.UTF8Encoding.GetChars%2A>, sollte <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A>.  
+  
+> [!NOTE]
+>  `GetMaxByteCount(N)`ist nicht unbedingt der gleiche Wert wie `N* GetMaxByteCount(1)`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A> Methode, um die maximale Anzahl von Bytes, die erforderlich sind, um eine angegebene Anzahl von Zeichen zu codieren zurückzugeben.  
+  
+ [!code-cpp[System.Text.utf8encoding.getmaxbytecount example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetMaxByteCount Example/CPP/getmaxbytecount-int32.cpp#1)]
+ [!code-csharp[System.Text.utf8encoding.getmaxbytecount example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetMaxByteCount Example/CS/getmaxbytecount-int32.cs#1)]
+ [!code-vb[System.Text.utf8encoding.getmaxbytecount example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetMaxByteCount Example/VB/getmaxbytecount-int32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="charCount" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ Die daraus resultierende Byteanzahl ist größer als die maximale Anzahl, die als ganze Zahl zurückgegeben werden kann.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) vollständige Erläuterung)  
+  
+ - und -  
+  
+ Für <see cref="P:System.Text.Encoding.EncoderFallback" /> ist <see cref="T:System.Text.EncoderExceptionFallback" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMaxCharCount">
+      <MemberSignature Language="C#" Value="public override int GetMaxCharCount (int byteCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMaxCharCount(int32 byteCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetMaxCharCount(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="byteCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="byteCount">Die Anzahl der zu decodierenden Bytes.</param>
+        <summary>Berechnet die maximale Anzahl der Zeichen, die beim Decodieren der angegebenen Anzahl von Bytes erzeugt werden.</summary>
+        <returns>Die maximale Anzahl von Zeichen, die beim Decodieren der angegebenen Anzahl von Bytes erzeugt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Berechnen der genauen Arraygröße <xref:System.Text.UTF8Encoding.GetChars%2A> zum Speichern der resultierenden Zeichen, rufen Sie die <xref:System.Text.UTF8Encoding.GetCharCount%2A> Methode. Um die maximale Arraygröße zu berechnen, rufen Sie die <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A> Methode. Die <xref:System.Text.UTF8Encoding.GetCharCount%2A> Methode weist im Allgemeinen weniger Speicher, während die <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A> Methode in der Regel schneller ausgeführt wird.  
+  
+ <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A>ein Worst-Case Zahl ist, einschließlich ungünstigsten Fall für das derzeit ausgewählte <xref:System.Text.DecoderFallback>. Wenn ein Fallback mit einer potenziell großen Zeichenfolge ausgewählt wird <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A> große Werte zurückgeben können.  
+  
+ In den meisten Fällen gibt diese Methode geeignete Zahlen für kleine Zeichenfolgen zurück. Für große Zeichenfolgen müssen Sie möglicherweise entscheiden sehr große Puffer und Erfassen von Fehlern in dem seltenen Fall, dass ein günstiger Puffer überschritten wird.  Sie sollten auch einen anderen Ansatz erwägen <xref:System.Text.UTF8Encoding.GetCharCount%2A> oder <xref:System.Text.Encoder.Convert%2A?displayProperty=nameWithType>.  
+  
+ <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A>hat keinen Bezug zu <xref:System.Text.UTF8Encoding.GetBytes%2A>. Wenn Ihre Anwendung eine ähnliche Funktion für die Verwendung mit benötigt <xref:System.Text.UTF8Encoding.GetBytes%2A>, sollte <xref:System.Text.UTF8Encoding.GetMaxByteCount%2A>.  
+  
+> [!NOTE]
+>  `GetMaxCharCount(N)`ist nicht unbedingt der gleiche Wert wie `N* GetMaxCharCount(1)`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.UTF8Encoding.GetMaxCharCount%2A> Methode, um die maximale Anzahl von Zeichen zurückzugeben, die beim Decodieren von einer angegebenen Anzahl von Bytes erzeugt.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.GetMaxCharCount Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetMaxCharCount Example/CPP/getmaxcharcount-int32.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.GetMaxCharCount Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetMaxCharCount Example/CS/getmaxcharcount-int32.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.GetMaxCharCount Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetMaxCharCount Example/VB/getmaxcharcount-int32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="byteCount" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ Die daraus resultierende Byteanzahl ist größer als die maximale Anzahl, die als ganze Zahl zurückgegeben werden kann.</exception>
+        <exception cref="T:System.Text.DecoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) vollständige Erläuterung)  
+  
+ - und -  
+  
+ Für <see cref="P:System.Text.Encoding.DecoderFallback" /> ist <see cref="T:System.Text.DecoderExceptionFallback" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreamble">
+      <MemberSignature Language="C#" Value="public override byte[] GetPreamble ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] GetPreamble() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetPreamble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Unicode-Bytereihenfolgemarkierung im UTF-8-Format zurück, wenn das <see cref="T:System.Text.UTF8Encoding" />-Codierungsobjekt dafür konfiguriert ist, eine bereitzustellen.</summary>
+        <returns>Ein Bytearray, das die Unicode-Bytereihenfolgemarkierung enthält, wenn das <see cref="T:System.Text.UTF8Encoding" />-Codierungsobjekt dafür konfiguriert ist, eine bereitzustellen. Andernfalls gibt diese Methode ein Bytearray mit der Länge Null zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Text.UTF8Encoding> Objekt kann keine Präambel, also ein Byte-Array, der in der Folge von Bytes vorangestellt werden kann und des Codierungsvorgangs ergeben bereitstellen. Eine Sequenz codierter Bytes mit einem Byte-reihenfolgemarkierung (Codepunkt U + FEFF) voran unterstützt den Decoder, der die Bytereihenfolge und die Transformationsformat oder im UTF zu bestimmen. Die Unicode-bytereihenfolgemarkierung (BOM) wird als 0xEF serialisiert 0xBB 0xBF. Beachten Sie, dass die Unicode-Standard werden weder erforderlich noch empfiehlt die Verwendung von eine BOM für UTF-8 Streams codiert.  
+  
+ Instanziieren Sie ein <xref:System.Text.UTF8Encoding> Objekt, dessen <xref:System.Text.UTF8Encoding.GetPreamble%2A> Methodenrückgabe eine gültige BOM auf folgende Weise:  
+  
+-   Durch das Abrufen der <xref:System.Text.UTF8Encoding> zurückgegebenes Objekt die <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+-   Durch Aufrufen einer <xref:System.Text.UTF8Encoding> Konstruktor mit einem `encoderShouldEmitUTF8Identifier` Parameter und deren Festlegung auf festgelegt `true`.  
+  
+ Alle anderen <xref:System.Text.UTF8Encoding> Objekte sind so konfiguriert, dass eine gültige BOM, anstatt ein leeres Array zurück.  
+  
+ Die BOM enthalten nahezu bestimmte Kennung für eine Codierung für Dateien, die andernfalls einen Verweis auf ihre Codierung verloren haben, z. B. nicht gekennzeichnet oder nicht ordnungsgemäß markierten Web Daten oder zufällige Dateien gespeichert, wenn ein Unternehmen keine internationale Aspekte. Häufig Benutzerprobleme können vermieden werden, wenn Daten einheitlich und ordnungsgemäß gekennzeichnet ist.  
+  
+ Für die Standards, die einen Codierungstyp bereitstellen, ist eine BOM etwas redundant. Es kann jedoch verwendet werden, zu einem Server, den richtigen encoding-Header zu senden. Alternativ können sie als ein Fallback verwendet werden, für den Fall, dass die Codierung verloren gegangen ist.  
+  
+ Es gibt einige Nachteile mit einer BOM. Zu wissen, wie die Datenbankfelder zu beschränken, die eine BOM verwenden kann z. B. schwierig sein. Die Verkettung von Dateien, problematisch sein kann auch, beispielsweise beim Zusammenführen von Dateien in einem solchen eine Möglichkeit, die ein unnötige Zeichen in der Mitte Daten annehmen kann. Trotz der einige Nachteile wird jedoch dringend die Verwendung einer Stückliste empfohlen.  
+  
+ Weitere Informationen zu Bytereihenfolge und Byte Order Mark, finden Sie im Unicode-Standard an die [Unicode-Homepage](http://go.microsoft.com/fwlink/?LinkId=37123).  
+  
+> [!CAUTION]
+>  Um sicherzustellen, dass die codierten Bytes ordnungsgemäß decodiert werden, wenn sie als eine Datei oder einem Stream gespeichert werden, können Sie den Anfang eines Streams codierter Bytes mit einer Präambel voranstellen. Beachten Sie, dass die <xref:System.Text.UTF8Encoding.GetBytes%2A> Methode ist eine BOM, um eine codierte Bytefolge nicht voranstellen; der Verantwortung des Entwicklers ist eine BOM am Anfang einer entsprechenden Bytedatenstrom bereitstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.UTF8Encoding.GetPreamble%2A> -Methode zur Rückgabe der Unicode-Byte order Mark in UTF-8-Format codiert. Beachten Sie, dass der Standardkonstruktor für <xref:System.Text.UTF8Encoding> bietet keine Präambel.  
+  
+ [!code-cpp[System.Text.UTF8Encoding.GetPreamble Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetPreamble Example/CPP/getpreamble-.cpp#1)]
+ [!code-csharp[System.Text.UTF8Encoding.GetPreamble Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetPreamble Example/CS/getpreamble-.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.GetPreamble Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF8Encoding.GetPreamble Example/VB/getpreamble-.vb#1)]  
+  
+ Das folgende Beispiel instanziiert zwei <xref:System.Text.UTF8Encoding> Objekte, die zuerst durch Aufrufen der parameterlosen <xref:System.Text.UTF8Encoding.%23ctor> -Konstruktor, der keine BOM, während die zweite durch Aufrufen von bietet die <xref:System.Text.UTF8Encoding.%23ctor%28System.Boolean%29> Konstruktor mit seiner `encoderShouldEmitUTF8Identifier` -Argument festgelegt `true`. Er ruft dann die <xref:System.Text.UTF8Encoding.GetPreamble%2A> -Methode, die BOM vor dem Schreiben einer UF8-codierte Zeichenfolge in eine Datei zu schreiben. Wie die Konsolenausgabe aus dem Beispiel zeigt, wurde die Datei, die die Bytes aus dem zweiten Encoder speichert drei weitere Bytes als der erste.  
+  
+ [!code-csharp[System.Text.UTF8Encoding.GetPreamble#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.utf8encoding.getpreamble/cs/getpreamble1.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.GetPreamble#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.utf8encoding.getpreamble/vb/getpreamble1.vb#1)]  
+  
+ Sie können auch die Dateien vergleichen, mithilfe der `fc` Befehl in einem Konsolenfenster, oder Sie können die Dateien in einem Text-Editor, der einen Hex-Ansichtsmodus enthält überprüfen. Beachten Sie, dass die Datei in einem Editor geöffnet ist, die UTF-8 unterstützt, die BOM nicht angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public override string GetString (byte[] bytes, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetString(unsigned int8[] bytes, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.UTF8Encoding.GetString(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Das Bytearray, das die zu decodierende Bytefolge enthält.</param>
+        <param name="index">Der Index des ersten zu decodierenden Bytes.</param>
+        <param name="count">Die Anzahl der zu decodierenden Bytes.</param>
+        <summary>Decodiert einen Bytebereich aus einem Bytearray in eine Zeichenfolge.</summary>
+        <returns>Eine <see cref="T:System.String" />-Klasse, die die Ergebnisse der Decodierung der angegebenen Bytefolge enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fehlererkennung, eine ungültige Folge führt diese Methode löst eine <xref:System.ArgumentException> Ausnahme. Ohne fehlererkennung ungültige Sequenzen werden ignoriert, und keine Ausnahme ausgelöst wird.  
+  
+ Wenn Sie der Bereich von Bytes, die zu decodierende enthält die Byte-reihenfolgemarkierung (BOM), und das Bytearray mit einer anderen Methode eines Typs nicht BOM beachten zurückgegeben wurde, ist das Zeichen U + FFFE im Zeichenarray, das von dieser Methode zurückgegebene enthalten. Sie können diesen entfernen, durch Aufrufen der <xref:System.String.TrimStart%2A?displayProperty=nameWithType> Methode.  
+  
+ Daten konvertiert werden, z. B. aus einem Stream gelesenen Daten möglicherweise nur in sequenzielle Blöcke verfügbar. In diesem Fall, oder wenn die Menge der Daten so umfangreich ist, dass er in kleinere Blöcke aufgeteilt werden muss, verwenden die <xref:System.Text.Decoder> oder die <xref:System.Text.Encoder> gebotenen der <xref:System.Text.UTF8Encoding.GetDecoder%2A> Methode oder die <xref:System.Text.UTF8Encoding.GetEncoder%2A> -Methode, bzw..  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein Array initialisiert, durch Aufrufen der <xref:System.Text.UTF8Encoding.GetByteCount%2A> Methode, um zu bestimmen, genau wie viele Bytes für eine codierte Zeichenfolge, und fügen die Größe des Byte-reihenfolgemarkierung (BOM) erforderlich sind. Das Beispiel ruft dann die <xref:System.Text.UTF8Encoding.GetPreamble%2A> Methode zum Speichern der Stückliste für das Array vor dem Aufruf der <xref:System.Text.UTF8Encoding.GetBytes%2A> Methode zum Speichern der codierten Bytes in das Array. Das Beispiel ruft dann die <xref:System.Text.UTF8Encoding.GetString%2A> Methode, um die Zeichenfolge zu decodieren.  
+  
+ [!code-csharp[System.Text.UTF8Encoding.GetString#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.utf8encoding.getstring/cs/getstring1.cs#1)]
+ [!code-vb[System.Text.UTF8Encoding.GetString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.utf8encoding.getstring/vb/getstring1.vb#1)]  
+  
+ Beachten Sie, dass in diesem Fall die decodierte Zeichenfolge aus der ursprünglichen Zeichenfolge abweicht, da er mit 16-Bit-Byte-reihenfolgemarkierung, U + FFFD beginnt. Dies bedeutet, dass die beiden Zeichenfolgen als ungleich verglichen werden und ist die Zeichenfolge Ausgabe, die BOM als das Ersatzzeichen angezeigt wird "?". Um die BOM am Anfang der Zeichenfolge zu entfernen, rufen Sie die <xref:System.String.TrimStart%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bytes" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> oder <paramref name="count" /> ist kleiner als 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="index" /> und <paramref name="count" /> geben keinen gültigen Bereich in <paramref name="bytes" /> an.</exception>
+        <exception cref="T:System.ArgumentException">Die Fehlererkennung ist aktiviert, und <paramref name="bytes" /> enthält eine ungültige Folge von Bytes.</exception>
+        <exception cref="T:System.Text.DecoderFallbackException">Ein Fallback ist aufgetreten (siehe [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) vollständige Erläuterung)  
+  
+ - und -  
+  
+ Für <see cref="P:System.Text.Encoding.DecoderFallback" /> ist <see cref="T:System.Text.DecoderExceptionFallback" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

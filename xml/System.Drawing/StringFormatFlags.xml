@@ -1,0 +1,202 @@
+<Type Name="StringFormatFlags" FullName="System.Drawing.StringFormatFlags">
+  <TypeSignature Language="C#" Value="public enum StringFormatFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StringFormatFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.StringFormatFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Anzeige und das Layout Textzeichenfolgen an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.StringFormatFlags>wird verwendet, durch die <xref:System.Drawing.StringFormat> Klasse.  
+  
+> [!NOTE]
+>  Das Feld FitBlackBox irreführenden und sein Verhalten ist ähnlich wie die `NoFitBlackBox` -Feld in der ursprünglichen GDI +-Implementierung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die folgenden Elemente:  
+  
+-   <xref:System.Drawing.Rectangle.%23ctor%2A>  
+  
+-   <xref:System.Drawing.StringFormat.%23ctor%2A>  
+  
+-   <xref:System.Drawing.StringFormat.%23ctor%2A>  
+  
+-   <xref:System.Drawing.StringFormat.Alignment%2A>  
+  
+-   <xref:System.Drawing.StringFormat.LineAlignment%2A>  
+  
+-   <xref:System.Drawing.StringAlignment>  
+  
+-   <xref:System.Drawing.StringFormatFlags>  
+  
+ In diesem Beispiel dient, die mit Windows Forms verwendet werden. Fügen Sie den Code in ein Formular, und rufen die `ShowLineAndAlignment` Methode beim Verarbeiten des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.Misc2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Misc2/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Misc2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc2/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Misc2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc2/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DirectionRightToLeft">
+      <MemberSignature Language="C#" Value="DirectionRightToLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringFormatFlags DirectionRightToLeft = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringFormatFlags.DirectionRightToLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringFormatFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Text wird von rechts nach links angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectionVertical">
+      <MemberSignature Language="C#" Value="DirectionVertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringFormatFlags DirectionVertical = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringFormatFlags.DirectionVertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringFormatFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Text wird vertikal ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayFormatControl">
+      <MemberSignature Language="C#" Value="DisplayFormatControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringFormatFlags DisplayFormatControl = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringFormatFlags.DisplayFormatControl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringFormatFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Steuerzeichen, wie z. B. die Markierung links nach rechts werden in der Ausgabe mit einem repräsentativen Symbol angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FitBlackBox">
+      <MemberSignature Language="C#" Value="FitBlackBox" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringFormatFlags FitBlackBox = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringFormatFlags.FitBlackBox" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringFormatFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Teile von Zeichen der Zeichenfolge das Layoutrechteck hinausragen dürfen. Standardmäßig werden Zeichen neu angeordnet, um einen Überhang zu vermeiden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LineLimit">
+      <MemberSignature Language="C#" Value="LineLimit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringFormatFlags LineLimit = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringFormatFlags.LineLimit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringFormatFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur ganze Zeilen werden in das Rechteck Formatierung angeordnet. Der Sendevorgang standardmäßig Layout bis zum Ende des Texts oder bis keine weiteren Zeilen sind sichtbar, als Ergebnis kürzen, je nachdem, was zuerst eintritt. Beachten Sie, dass die Standardeinstellungen die letzte Zeile durch eine Formatierung Rechteck teilweise verdeckt werden, die nicht auf ein ganzes Vielfaches der die Höhe einer Zeile ist. Um sicherzustellen, dass nur vollständige Zeilen angezeigt werden, geben Sie diesen Wert aus, und achten Sie darauf, um eine Formatierung Rechteck mindestens so groß wie die Höhe einer Zeile bereitzustellen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureTrailingSpaces">
+      <MemberSignature Language="C#" Value="MeasureTrailingSpaces" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringFormatFlags MeasureTrailingSpaces = int32(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringFormatFlags.MeasureTrailingSpaces" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringFormatFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schließt das Leerzeichen am Ende jeder Zeile an. Standardmäßig zurückgegebene Begrenzungsrechteck der <see cref="Overload:System.Drawing.Graphics.MeasureString" /> Methode schließt das Leerzeichen am Ende jeder Zeile. Legen Sie dieses Flag Messung diesen Speicherplatz einschließt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoClip">
+      <MemberSignature Language="C#" Value="NoClip" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringFormatFlags NoClip = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringFormatFlags.NoClip" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringFormatFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überhängende Teile der Symbole und Text außerhalb des Rechtecks Formatierung erreichen anzeigen dürfen. Standardmäßig werden alle Text und Symbol Teile außerhalb des Rechtecks Formatierung erreichen abgeschnitten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoFontFallback">
+      <MemberSignature Language="C#" Value="NoFontFallback" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringFormatFlags NoFontFallback = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringFormatFlags.NoFontFallback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringFormatFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fallback zu alternativen Schriftarten für in die gewünschte Schriftart nicht unterstützte Zeichen ist deaktiviert. Alle fehlenden Zeichen werden mit der fehlenden Glyphe, in der Regel eine offene eckige Schriftarten angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoWrap">
+      <MemberSignature Language="C#" Value="NoWrap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringFormatFlags NoWrap = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringFormatFlags.NoWrap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringFormatFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Umbrechen von Text zwischen den Zeilen, die beim Formatieren innerhalb eines Rechtecks deaktiviert ist. Dieses Flag wird verwendet, wenn ein Punkt anstelle eines Rechtecks übergeben wird, oder wenn das angegebene Rechteck eine Zeile die Länge 0 (null) aufweist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

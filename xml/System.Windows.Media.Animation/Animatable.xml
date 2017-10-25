@@ -1,0 +1,374 @@
+<Type Name="Animatable" FullName="System.Windows.Media.Animation.Animatable">
+  <TypeSignature Language="C#" Value="public abstract class Animatable : System.Windows.Freezable, System.Windows.Media.Animation.IAnimatable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Animatable extends System.Windows.Freezable implements class System.Windows.Media.Animation.IAnimatable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.Animatable" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Freezable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Media.Animation.IAnimatable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Abstrakte Klasse, die Unterstützung für Animationen bereitstellt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Animatable ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.Animatable" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyAnimationClock">
+      <MemberSignature Language="C#" Value="public void ApplyAnimationClock (System.Windows.DependencyProperty dp, System.Windows.Media.Animation.AnimationClock clock);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyAnimationClock(class System.Windows.DependencyProperty dp, class System.Windows.Media.Animation.AnimationClock clock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.ApplyAnimationClock(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="clock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Die zu animierende Eigenschaft.</param>
+        <param name="clock">Der Takt, mit dem die angegebene Eigenschaft animiert werden soll. Wenn <c>Uhr</c> ist <see langword="null" />, werden alle Animationen aus der angegebenen Eigenschaft entfernt (jedoch nicht angehalten).</param>
+        <summary>Wendet einen <see cref="T:System.Windows.Media.Animation.AnimationClock" /> auf die angegebene <see cref="T:System.Windows.DependencyProperty" /> an. Wenn die Eigenschaft bereits animiert wird, wird das <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" />-Übergabeverhalten verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass die Verwendung dieser Methode zum Entfernen von Uhren aus einer Eigenschaft die Uhren nicht angehalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyAnimationClock">
+      <MemberSignature Language="C#" Value="public void ApplyAnimationClock (System.Windows.DependencyProperty dp, System.Windows.Media.Animation.AnimationClock clock, System.Windows.Media.Animation.HandoffBehavior handoffBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyAnimationClock(class System.Windows.DependencyProperty dp, class System.Windows.Media.Animation.AnimationClock clock, valuetype System.Windows.Media.Animation.HandoffBehavior handoffBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.ApplyAnimationClock(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationClock,System.Windows.Media.Animation.HandoffBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="clock" Type="System.Windows.Media.Animation.AnimationClock" />
+        <Parameter Name="handoffBehavior" Type="System.Windows.Media.Animation.HandoffBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Die zu animierende Eigenschaft.</param>
+        <param name="clock">Der Takt, mit dem die angegebene Eigenschaft animiert werden soll. Wenn <c>HandoffBehavior</c> ist <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" /> und <c>Uhr</c> ist <see langword="null" />, werden alle Animationen aus der angegebenen Eigenschaft entfernt (jedoch nicht angehalten). Wenn <c>HandoffBehavior</c> ist <see cref="F:System.Windows.Media.Animation.HandoffBehavior.Compose" /> und Clock <see langword="null" />, diese Methode hat keine Auswirkungen.</param>
+        <param name="handoffBehavior">Ein Wert, der angibt, wie die neue Animation mit alle aktuellen Animationen bereits Auswirkungen auf den Wert der Eigenschaft interagieren soll.</param>
+        <summary>Wendet einen <see cref="T:System.Windows.Media.Animation.AnimationClock" /> auf die angegebene <see cref="T:System.Windows.DependencyProperty" /> an. Wenn die Eigenschaft bereits animiert wird, dem angegebenen <see cref="T:System.Windows.Media.Animation.HandoffBehavior" /> verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass die Verwendung dieser Methode zum Entfernen von Uhren aus einer Eigenschaft die Uhren nicht angehalten.  
+  
+## <a name="using-the-compose-handoffbehavior"></a>Mit dem Verfassen HandoffBehavior  
+ Beim Anwenden einer <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, oder <xref:System.Windows.Media.Animation.AnimationClock> mit einer Eigenschaft mithilfe der <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>, stellen alle <xref:System.Windows.Media.Animation.Clock> zuvor mit dieser Eigenschaft zugewiesenen Objekte weiter an Systemressourcen beanspruchen, die Zeitsteuerungssystems geschieht dies nicht Entfernen Sie diese Uhren automatisch.  
+  
+ Um Leistungsprobleme zu vermeiden, wenn Sie eine große Anzahl von Uhren mit anwenden <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, Sie sollten zusammengesetzte Uhren aus der animierten Eigenschaft nach dem Abschluss entfernen. Es gibt mehrere Möglichkeiten, eine Uhr zu entfernen.  
+  
+-   Verwenden Sie zum Entfernen aller Uhren aus einer Eigenschaft der <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> oder <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> -Methode des animierten Objekts. Geben Sie die Eigenschaft als erster Parameter animierten und `null` als das zweite. Dies entfernt alle Animationsuhren aus der Eigenschaft.  
+  
+-   Zum Entfernen einer bestimmten <xref:System.Windows.Media.Animation.AnimationClock> , aus einer Liste von Uhren verwenden die <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft der <xref:System.Windows.Media.Animation.AnimationClock> abgerufen eine <xref:System.Windows.Media.Animation.ClockController>, rufen Sie anschließend die <xref:System.Windows.Media.Animation.ClockController.Remove%2A> Methode der <xref:System.Windows.Media.Animation.ClockController>. Dies erfolgt in der Regel in der <xref:System.Windows.Media.Animation.Clock.Completed> -Ereignishandler für eine Uhr. Beachten Sie, dass nur Stammuhren von gesteuert werden, können eine <xref:System.Windows.Media.Animation.ClockController>; das <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft einer untergeordneten Uhr gibt zurück, `null`. Beachten Sie auch, dass die <xref:System.Windows.Media.Animation.Clock.Completed> Ereignis wird nicht aufgerufen werden, wenn die effektive Dauer der Uhr endlos ist.  In diesem Fall müssen die Benutzer zum Ermitteln, wann Aufrufen <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+  
+ Dies betrifft hauptsächlich Animationen für Objekte, die eine lange Lebensdauer haben.  Wenn ein Objekt an den Garbage Collector übergeben wird, werden auch die Uhren getrennt und an den Garbage Collector übergeben.  
+  
+ Weitere Informationen zu Uhr Objekten finden Sie unter der [Animationen und zeitlichen Steuerung Systemübersicht](~/docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Animationsuhren mit verschiedenen anzuwendende <xref:System.Windows.Media.Animation.HandoffBehavior> Einstellungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAnimation">
+      <MemberSignature Language="C#" Value="public void BeginAnimation (System.Windows.DependencyProperty dp, System.Windows.Media.Animation.AnimationTimeline animation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginAnimation(class System.Windows.DependencyProperty dp, class System.Windows.Media.Animation.AnimationTimeline animation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.BeginAnimation(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationTimeline)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="animation" Type="System.Windows.Media.Animation.AnimationTimeline" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Die zu animierende Eigenschaft.</param>
+        <param name="animation">Die Animation, mit der die angegebene Eigenschaft animiert werden soll.  
+  
+ Wenn der Animation <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> ist <see langword="null" />, werden alle aktuellen Animationen entfernt und der aktuelle Wert der Eigenschaft wird gespeichert.  
+  
+ Wenn <c>Animation</c> ist <see langword="null" />, werden alle Animationen aus der Eigenschaft entfernt, und der Eigenschaftswert wird auf den Basiswert zurückgesetzt.</param>
+        <summary>Wendet eine Animation auf dem angegebenen <see cref="T:System.Windows.DependencyProperty" />. Die Animation wird gestartet, wenn der nächste Frame gerendert wird. Wenn die angegebene Eigenschaft bereits animiert wird, die <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" /> -Übergabeverhalten verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Animation wurde eine <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> größer als 0 (null), der Animation an, nach dem angegebenen Zeitraum aus der Zeit verstrichen ist der nächste Frame gerendert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAnimation">
+      <MemberSignature Language="C#" Value="public void BeginAnimation (System.Windows.DependencyProperty dp, System.Windows.Media.Animation.AnimationTimeline animation, System.Windows.Media.Animation.HandoffBehavior handoffBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginAnimation(class System.Windows.DependencyProperty dp, class System.Windows.Media.Animation.AnimationTimeline animation, valuetype System.Windows.Media.Animation.HandoffBehavior handoffBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.BeginAnimation(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationTimeline,System.Windows.Media.Animation.HandoffBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="animation" Type="System.Windows.Media.Animation.AnimationTimeline" />
+        <Parameter Name="handoffBehavior" Type="System.Windows.Media.Animation.HandoffBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Die zu animierende Eigenschaft.</param>
+        <param name="animation">Die Animation, mit der die angegebene Eigenschaft animiert werden soll.  
+  
+ Wenn <c>HandoffBehavior</c> ist <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" /> und die Animation <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> ist <see langword="null" />, werden alle aktuellen Animationen entfernt und der aktuelle Wert der Eigenschaft wird gespeichert.  
+  
+ Wenn <c>HandoffBehavior</c> ist <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" /> und <c>Animation</c> ist eine <see langword="null" /> Verweis, werden alle Animationen aus der Eigenschaft entfernt, und der Eigenschaftswert wird auf den Basiswert zurückgesetzt.  
+  
+ Wenn <c>HandoffBehavior</c> ist <see cref="F:System.Windows.Media.Animation.HandoffBehavior.Compose" />, diese Methode hat keine Auswirkung, wenn die Animation oder den zugehörigen <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> ist <see langword="null" />.</param>
+        <param name="handoffBehavior">Ein Wert, der angibt, wie die neue Animation mit alle aktuellen Animationen bereits Auswirkungen auf den Wert der Eigenschaft interagieren soll.</param>
+        <summary>Wendet eine Animation auf dem angegebenen <see cref="T:System.Windows.DependencyProperty" />. Die Animation wird gestartet, wenn der nächste Frame gerendert wird. Wenn die angegebene Eigenschaft bereits animiert wird, dem angegebenen <see cref="T:System.Windows.Media.Animation.HandoffBehavior" /> verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Animation wurde eine <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> größer als 0 (null), der Animation an, nach dem angegebenen Zeitraum aus der Zeit verstrichen ist der nächste Frame gerendert wird.  
+  
+## <a name="using-the-compose-handoffbehavior"></a>Mit dem Verfassen HandoffBehavior  
+ Beim Anwenden einer <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, oder <xref:System.Windows.Media.Animation.AnimationClock> mit einer Eigenschaft mithilfe der <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>, stellen alle <xref:System.Windows.Media.Animation.Clock> zuvor mit dieser Eigenschaft zugewiesenen Objekte weiter an Systemressourcen beanspruchen, die Zeitsteuerungssystems geschieht dies nicht Entfernen Sie diese Uhren automatisch.  
+  
+ Um Leistungsprobleme zu vermeiden, wenn Sie eine große Anzahl von Uhren mit anwenden <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, Sie sollten zusammengesetzte Uhren aus der animierten Eigenschaft nach dem Abschluss entfernen. Es gibt mehrere Möglichkeiten, eine Uhr zu entfernen.  
+  
+-   Verwenden Sie zum Entfernen aller Uhren aus einer Eigenschaft der <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> oder <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> -Methode des animierten Objekts. Geben Sie die Eigenschaft als erster Parameter animierten und `null` als das zweite. Dies entfernt alle Animationsuhren aus der Eigenschaft.  
+  
+-   Zum Entfernen einer bestimmten <xref:System.Windows.Media.Animation.AnimationClock> , aus einer Liste von Uhren verwenden die <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft der <xref:System.Windows.Media.Animation.AnimationClock> abgerufen eine <xref:System.Windows.Media.Animation.ClockController>, rufen Sie anschließend die <xref:System.Windows.Media.Animation.ClockController.Remove%2A> Methode der <xref:System.Windows.Media.Animation.ClockController>. Dies erfolgt in der Regel in der <xref:System.Windows.Media.Animation.Clock.Completed> -Ereignishandler für eine Uhr. Beachten Sie, dass nur Stammuhren von gesteuert werden, können eine <xref:System.Windows.Media.Animation.ClockController>; das <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft einer untergeordneten Uhr gibt zurück, `null`. Beachten Sie auch, dass die <xref:System.Windows.Media.Animation.Clock.Completed> Ereignis wird nicht aufgerufen werden, wenn die effektive Dauer der Uhr endlos ist.  In diesem Fall müssen die Benutzer zum Ermitteln, wann Aufrufen <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+  
+ Dies betrifft hauptsächlich Animationen für Objekte, die eine lange Lebensdauer haben.  Wenn ein Objekt an den Garbage Collector übergeben wird, werden auch die Uhren getrennt und an den Garbage Collector übergeben.  
+  
+ Weitere Informationen zu Uhr Objekten finden Sie unter der [Animationen und zeitlichen Steuerung Systemübersicht](~/docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Anwenden von Animationen mit verschiedenen <xref:System.Windows.Media.Animation.HandoffBehavior> Einstellungen.  
+  
+ [!code-cpp[animateproperty#InteractiveAnimationExampleWholePage](~/samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/InteractiveExample.cpp#interactiveanimationexamplewholepage)]
+ [!code-csharp[animateproperty#InteractiveAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/InteractiveExample.cs#interactiveanimationexamplewholepage)]
+ [!code-vb[animateproperty#InteractiveAnimationExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/InteractiveExample.vb#interactiveanimationexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Animatable Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.Animatable Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Animatable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Animation.Animatable" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften dieses Objekts kopiert diese Methode Ressourcenverweise und datenbindungen von Ressourcen (aber möglicherweise nicht mehr aufgelöst), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon dieser Instanz. Bei dem zurückgegebenen Klon handelt es sich im Grunde um eine tiefe Kopie des aktuellen Objekts. Des Klons <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft **"false"**.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.Animation.Animatable.Clone%2A> Methode kann verwendet werden, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte. Der Einfachheit halber diese Methode führt Shadowing für die geerbte <xref:System.Windows.Freezable.Clone%2A> Methode, um eine stark typisierte Implementierung bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FreezeCore">
+      <MemberSignature Language="C#" Value="protected override bool FreezeCore (bool isChecking);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool FreezeCore(bool isChecking) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.FreezeCore(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isChecking" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isChecking">
+          <see langword="true" />Wenn diese Methode lediglich bestimmen soll, ob diese Instanz fixiert werden kann. <see langword="false" />Wenn diese Instanz beim Aufrufen dieser Methode tatsächlich fixiert werden soll.</param>
+        <summary>Macht diese <see cref="T:System.Windows.Media.Animation.Animatable" /> Objekt als nicht änderbar fest oder bestimmt, ob es als nicht änderbar festgelegt werden kann.</summary>
+        <returns>Wenn <paramref name="isChecking" /> ist <see langword="true" />, gibt diese Methode <see langword="true" /> Wenn diese <see cref="T:System.Windows.Media.Animation.Animatable" /> können änderbar festgelegt werden, oder <see langword="false" /> , wenn es als nicht änderbar festgelegt werden kann.  
+  
+ Wenn <paramref name="isChecking" /> ist <see langword="false" />, gibt diese Methode <see langword="true" /> Wenn If dies <see cref="T:System.Windows.Media.Animation.Animatable" /> ist jetzt als nicht änderbar fest, oder <see langword="false" /> , wenn er nicht als nicht festgelegt kann, mit dem Nebeneffekt änderbar werden, dass begonnen wurde, den fixierten Status dieses Objekts zu ändern.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Von dieser Methode zurückgegeben **"false"** Wenn <xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A> ist **"true"**.  
+  
+ Rufen Sie diese Methode direkt (außer beim Aufrufen der Basis in einer Implementierung) nicht. Diese Methode wird intern von aufgerufen <xref:System.Windows.Freezable.CanFreeze%2A> (mit `isChecking` gleich `true`) und <xref:System.Windows.Freezable.Freeze%2A> (mit `isChecking` gleich `false`).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen <see cref="T:System.Windows.Media.Animation.Animatable" /> müssen diese Methode überschreiben, wenn die Klasse Daten enthält, die nicht mit Abhängigkeitseigenschaften gespeichert werden.  
+  
+ Eine typische Implementierung die basisimplementierung aufrufen würde, und rufen Sie die statische <see cref="M:System.Windows.Freezable.Freeze" /> -Methode bei allen <see cref="T:System.Windows.Freezable" /> typisierte Eigenschaften, die die Klasse zurückgeben enthält, <see langword="true" /> nur, wenn alle Eigenschaften fixiert waren (oder konnte fixiert, in der Groß-/Kleinschreibung der Umweg über ein <see langword="false" /> Wert für <paramref name="isChecking" />).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnimationBaseValue">
+      <MemberSignature Language="C#" Value="public object GetAnimationBaseValue (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetAnimationBaseValue(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.GetAnimationBaseValue(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Bezeichnet die Eigenschaft, deren Basiswert (nicht animiert) abgerufen werden soll.</param>
+        <summary>Gibt den Wert nicht animiert des angegebenen <see cref="T:System.Windows.DependencyProperty" />.</summary>
+        <returns>Der Wert, der zurückgegeben würde, wenn die angegebene Eigenschaft nicht animiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die angegebene Eigenschaft nicht animiert wird, gibt diese Methode das gleiche Ergebnis wie <xref:System.Windows.DependencyObject.GetValue%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden die Werte nicht animiert animierten Eigenschaften abgerufen und angezeigt.  
+  
+ [!code-csharp[timingbehaviors_procedural_snip#GetAnimationBaseValueExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/GetAnimationBaseValueExample.cs#getanimationbasevalueexamplewholepage)]
+ [!code-vb[timingbehaviors_procedural_snip#GetAnimationBaseValueExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/getanimationbasevalueexample.vb#getanimationbasevalueexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAnimatedProperties">
+      <MemberSignature Language="C#" Value="public bool HasAnimatedProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAnimatedProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Animatable.HasAnimatedProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine oder mehrere <see cref="T:System.Windows.Media.Animation.AnimationClock" /> Objekte Abhängigkeitseigenschaften dieses Objekts zugeordnet ist.</summary>
+        <value>**"true"** eine oder mehrere <see cref="T:System.Windows.Media.Animation.AnimationClock" /> Objekte ist von Abhängigkeitseigenschaften dieses Objekts zugeordnet ist, andernfalls **"false"**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt keine, ob dieses Objekt über animierte Unterobjekte enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeStoredWeakReference">
+      <MemberSignature Language="C#" Value="public static bool ShouldSerializeStoredWeakReference (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ShouldSerializeStoredWeakReference(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.ShouldSerializeStoredWeakReference(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Stellt ein Objekt dar, das im Abhängigkeitseigenschaftensystem teilnimmt.</param>
+        <summary>Gibt an, ob ein Abhängigkeitsobjekt serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />zum Serialisieren <paramref name="target" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.TypeDescriptor> -Klasse verwendet die <xref:System.Windows.Media.Animation.Animatable.ShouldSerializeStoredWeakReference%2A> Methode, um zu bestimmen, ob eine Eigenschaft serialisiert werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

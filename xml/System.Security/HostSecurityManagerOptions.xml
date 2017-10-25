@@ -1,0 +1,178 @@
+<Type Name="HostSecurityManagerOptions" FullName="System.Security.HostSecurityManagerOptions">
+  <TypeSignature Language="C#" Value="public enum HostSecurityManagerOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed HostSecurityManagerOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.HostSecurityManagerOptions" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Komponenten der Sicherheitsrichtlinie, die von der Host-Sicherheits-Manager verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllFlags">
+      <MemberSignature Language="C#" Value="AllFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.HostSecurityManagerOptions AllFlags = int32(31)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.HostSecurityManagerOptions.AllFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.HostSecurityManagerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie alle Komponenten der Sicherheitsrichtlinie.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HostAppDomainEvidence">
+      <MemberSignature Language="C#" Value="HostAppDomainEvidence" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.HostSecurityManagerOptions HostAppDomainEvidence = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.HostSecurityManagerOptions.HostAppDomainEvidence" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.HostSecurityManagerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie den Beweis der Anwendungsdomäne.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HostAssemblyEvidence">
+      <MemberSignature Language="C#" Value="HostAssemblyEvidence" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.HostSecurityManagerOptions HostAssemblyEvidence = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.HostSecurityManagerOptions.HostAssemblyEvidence" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.HostSecurityManagerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie den Assemblybeweis an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HostDetermineApplicationTrust">
+      <MemberSignature Language="C#" Value="HostDetermineApplicationTrust" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.HostSecurityManagerOptions HostDetermineApplicationTrust = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.HostSecurityManagerOptions.HostDetermineApplicationTrust" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.HostSecurityManagerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Weiterleitung der Aufrufe an die <see cref="M:System.Security.Policy.ApplicationSecurityManager.DetermineApplicationTrust(System.ActivationContext,System.Security.Policy.TrustManagerContext)" /> Methode, um die <see cref="M:System.Security.HostSecurityManager.DetermineApplicationTrust(System.Security.Policy.Evidence,System.Security.Policy.Evidence,System.Security.Policy.TrustManagerContext)" /> Methode erste.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HostPolicyLevel">
+      <MemberSignature Language="C#" Value="HostPolicyLevel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.HostSecurityManagerOptions HostPolicyLevel = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.HostSecurityManagerOptions.HostPolicyLevel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.HostSecurityManagerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die Richtlinie angegeben, der <see cref="P:System.Security.HostSecurityManager.DomainPolicy" /> Eigenschaft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HostResolvePolicy">
+      <MemberSignature Language="C#" Value="HostResolvePolicy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.HostSecurityManagerOptions HostResolvePolicy = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.HostSecurityManagerOptions.HostResolvePolicy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.HostSecurityManagerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden der <see cref="M:System.Security.HostSecurityManager.ResolvePolicy(System.Security.Policy.Evidence)" /> Methode, um den Anwendungsbeweis zu beheben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.HostSecurityManagerOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.HostSecurityManagerOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.HostSecurityManagerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie keine der Komponenten der Sicherheitsrichtlinie.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

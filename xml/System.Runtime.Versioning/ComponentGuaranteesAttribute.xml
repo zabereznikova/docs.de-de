@@ -1,0 +1,228 @@
+<Type Name="ComponentGuaranteesAttribute" FullName="System.Runtime.Versioning.ComponentGuaranteesAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ComponentGuaranteesAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComponentGuaranteesAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Versioning.ComponentGuaranteesAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Module | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Constructor | System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Event | System.AttributeTargets.Interface | System.AttributeTargets.Delegate, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Kompatibilitätsgarantie einer Komponente, Typ oder Typmember, die mehrere Versionen umfassen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute> wird von Entwicklern von Komponenten und Klassenbibliotheken verwendet, um den Grad an Kompatibilität anzugeben, die Consumer ihrer Bibliotheken für mehrere Versionen erwarten können. Es gibt die Garantie, dass eine zukünftige Version von der Bibliothek oder Komponente ein vorhandenes Clients nicht unterbrochen wird. Clients können Sie dann die <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute> als Hilfsmittel beim Entwerfen ihrer eigenen Schnittstellen, die Stabilität der einzelnen Versionen sicherzustellen.  
+  
+> [!NOTE]
+>  Die common Language Runtime (CLR) verwendet dieses Attribut nicht in keiner Weise. Der Wert liegt in der formal dokumentieren die Absicht des Autors der Komponente. Zeitpunkt der Kompilierung Tools können auch diese Deklarationen verwenden, um Kompilierungsfehler zu erkennen, die andernfalls die deklarierte Garantie verletzen würde.  
+  
+## <a name="levels-of-compatibility"></a>Ebenen der Anwendungskompatibilität  
+ Die <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute> unterstützt die folgenden Ebenen der Kompatibilität, die von Mitgliedern der dargestellt werden die <xref:System.Runtime.Versioning.ComponentGuaranteesOptions> Enumeration:  
+  
+-   Keine Version zu Version-Kompatibilität (<xref:System.Runtime.Versioning.ComponentGuaranteesOptions?displayProperty=nameWithType>). Der Client kann davon ausgehen, dass zukünftige Versionen den vorhandenen Client unterbrochen werden. Weitere Informationen finden Sie unter der [keine Kompatibilität](#None) weiter unten in diesem Thema.  
+  
+-   Seite-an-Seite-Version zu Version-Kompatibilität (<xref:System.Runtime.Versioning.ComponentGuaranteesOptions?displayProperty=nameWithType>). Die Komponente wurde getestet, um arbeiten, wenn mehr als eine Version der Assembly in der gleichen Anwendungsdomäne geladen wird. Im Allgemeinen können die Kompatibilität von zukünftige Versionen aufgehoben. Wenn wichtige Änderungen vorgenommen werden, die alte Version wird nicht geändert, jedoch zusammen mit der neuen Version vorhanden ist. Seite-an-Seite-Ausführung ist die erwartete Möglichkeit, machen vorhandene Clients funktionieren, wenn wichtige Änderungen vorgenommen werden. Weitere Informationen finden Sie unter der [Side-by-Side-Kompatibilität](#SideBySide) weiter unten in diesem Thema.  
+  
+-   Stabile Version zu Version-Kompatibilität (<xref:System.Runtime.Versioning.ComponentGuaranteesOptions?displayProperty=nameWithType>). Zukünftige Versionen sollten den Client nicht unterbrechen und Seite-an-Seite-Ausführung sollte nicht erforderlich. Jedoch, wenn der Client versehentlich beschädigt ist, kann es möglich, eine Seite-an-Seite-Ausführung zu verwenden, um das Problem zu beheben sein. Weitere Informationen finden Sie unter der [stabile Kompatibilität](#Standard) Abschnitt.  
+  
+-   Exchange-Version zu Version-Kompatibilität (<xref:System.Runtime.Versioning.ComponentGuaranteesOptions?displayProperty=nameWithType>). Außergewöhnliche ist darauf geachtet, stellen Sie sicher, dass zukünftige Versionen des Clients nicht unterbrochen werden. Der Client sollte nur diese Typen in der Signatur der Schnittstellen verwenden, die für die Kommunikation mit anderen Assemblys verwendet werden, die unabhängig voneinander bereitgestellt werden. Nur eine Version dieser Typen muss in einer bestimmten Anwendungsdomäne sein, was bedeutet, dass wenn ein Client unterbrochen wird, Seite-an-Seite-Ausführung der Kompatibilitätsproblem nicht beheben kann. Weitere Informationen finden Sie unter der [Exchange Typkompatibilität](#Exchange) Abschnitt.  
+  
+ In den folgenden Abschnitten werden die jeder Ebene der Garantie ausführlicher erläutert.  
+  
+<a name="None"></a>   
+### <a name="no-compatibility"></a>Keine Kompatibilität  
+ Markieren eine Komponente als <xref:System.Runtime.Versioning.ComponentGuaranteesOptions?displayProperty=nameWithType> gibt an, dass der Anbieter keine Garantien zur Kompatibilität übernimmt. Clients sollten alle Abhängigkeiten für die verfügbar gemachten Schnittstellen dauert. Dieser Grad an Kompatibilität eignet sich für Typen, die experimentelle sind oder, die öffentlich verfügbar gemacht, aber dienen nur für Komponenten, die immer zur selben Zeit aktualisiert werden. <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.None>Gibt explizit an, dass diese Komponente nicht von externen Komponenten verwendet werden soll.  
+  
+<a name="SideBySide"></a>   
+### <a name="side-by-side-compatibility"></a>Seite-an-Seite-Kompatibilität  
+ Markieren eine Komponente als <xref:System.Runtime.Versioning.ComponentGuaranteesOptions?displayProperty=nameWithType> gibt an, dass die Komponente getestet wurde, funktioniert, wenn mehr als eine Version der Assembly in der gleichen Anwendungsdomäne geladen wird. Problematische Änderungen sind so lange, wie sie auf die Assembly bereitgestellt werden, die die Versionsnummer größer ist zulässig. Komponenten, die an eine alte Version der Assembly gebunden werden werden erwartet, dass Sie den Vorgang fortsetzen, zum Binden an die alte Version, und andere Komponenten können auf die neue Version binden. Es ist auch möglich, eine Komponente zu aktualisieren, die deklariert wird, werden <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.SideBySide> durch die alte Version destruktives ändern.  
+  
+<a name="Standard"></a>   
+### <a name="stable-compatibility"></a>Stabile Kompatibilität  
+ Das Markieren eines Typs als <xref:System.Runtime.Versioning.ComponentGuaranteesOptions?displayProperty=nameWithType> gibt an, dass der Typ in Versionen stabil bleiben soll. Jedoch, kann es auch möglich, dass die Seite-an-Seite Versionen eines stabilen Typs in der gleichen Anwendungsdomäne vorhanden sein.  
+  
+ Stabile Typen behalten eine hohe Binärkompatibilität Leiste. Aus diesem Grund sollten Anbieter wichtige Änderungen an stabile Typen. Die folgenden Arten von Änderungen sind zulässig:  
+  
+-   Private Instanzfelder hinzufügen oder Entfernen von Feldern aus einem Typ, solange dies nicht das Serialisierungsformat unterbricht.  
+  
+-   Ändern einen nicht serialisierbarer Typ in einen serialisierbaren Typ. (Allerdings kann ein serialisierbarer Typ in einen nicht serialisierbarer Typ geändert werden.)  
+  
+-   Auslösen von neuen, mehr abgeleitete Ausnahmen von einer Methode.  
+  
+-   Verbessern der Leistung einer Methode an.  
+  
+-   Ändern des Bereichs von Rückgabewerten, solange die Änderung der Mehrheit der Clients nicht beeinträchtigt.  
+  
+-   Schwerwiegende Fehler beheben, wenn die geschäftliche Begründung hoch ist und die Anzahl der sich negativ auf die betroffenen Clients mit niedriger.  
+  
+ Da neue Versionen der stabil Komponenten zu vorhandenen Clients unterbricht nicht erwartet werden, wird im Allgemeinen nur eine Version einer stabilen Komponente in einer Anwendungsdomäne benötigt. Dies ist jedoch nicht zwingend, da stabile Typen nicht als bekannte Austauschtypen verwendet werden, denen alle Komponenten vereinbaren. Aus diesem Grund ist, wenn eine neue Version einer stabilen Komponente versehentlich eine Komponente unterbricht und andere Komponenten die neue Version benötigen, es möglicherweise das Problem zu beheben, indem sowohl die alten und neuen Komponente laden möglich.  
+  
+ <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Stable>bietet eine höhere Versionskompatibilitätsgarantie als <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.None>. Es ist ein allgemeiner Standard für Komponenten mit mehreren Versionen.  
+  
+ <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Stable>kann zusammen mit <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.SideBySide>, die besagt, dass die Komponente keine Kompatibilität beeinträchtigt wird getestet, um funktionieren, wenn mehrere Versionen in einer bestimmten Anwendungsdomäne geladen wird.  
+  
+ Nachdem ein Typ oder eine Methode, als markiert wurde <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Stable>, er kann aktualisiert werden, um <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Exchange>. Allerdings kann nicht auf herabgestuft werden <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.None>.  
+  
+<a name="Exchange"></a>   
+### <a name="exchange-type-compatibility"></a>Exchange-Typkompatibilität  
+ Das Markieren eines Typs als <xref:System.Runtime.Versioning.ComponentGuaranteesOptions?displayProperty=nameWithType> bietet eine höhere Versionskompatibilitätsgarantie als <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Stable>, und auf diese am stabilsten aller Typen angewendet werden soll. Diese Typen für Austausch zwischen unabhängig erstellten Komponenten über alle komponentenbegrenzungen hinweg zeitlich sowohl (alle Versionen der CLR) oder eine beliebige Version einer Komponente oder Anwendung und Speicherplatz (Prozess-, Cross-CLR in einem Prozess verwendet werden sollen Cross-Anwendungsdomäne, in einen CLR). Wenn auf einen Exchange-Typ eine wichtige Änderung vorgenommen wird, ist es unmöglich, das Problem zu beheben, indem Sie mehrere Versionen des Typs zu laden.  
+  
+ Exchange-Datentypen sollten geändert werden, nur, wenn ein Problem (z. B. einem schweren Sicherheitsproblem) sehr schwerwiegend ist oder die Wahrscheinlichkeit des zerbrechen sehr niedrig ist (d. h., wenn das Verhalten bereits in einer zufälligen Weise, die Code nicht Positionsparameterverwendung eine Abhängigkeit berücksichtigt haben könnte beschädigt wurde). Sie können die folgenden Arten von Änderungen an einer Austauschtyp vornehmen:  
+  
+-   Fügen Sie die Vererbung von neuen Schnittstellendefinitionen hinzu.  
+  
+-   Fügen Sie neue private Methoden, die die Methoden der Definitionen neu geerbte Schnittstelle implementieren.  
+  
+-   Fügen Sie neue statische Felder hinzu.  
+  
+-   Neue statische Methoden hinzufügen.  
+  
+-   Fügen Sie neue nicht virtuelle Instanzmethoden hinzu.  
+  
+ Im folgenden werden wichtige Änderungen berücksichtigt und sind für primitive Typen nicht zulässig:  
+  
+-   Ändern der Serialisierungsformate. Versionstolerante ist erforderlich.  
+  
+-   Hinzufügen oder Entfernen von privaten Instanzfelder. Dies birgt das Risiko das Serialisierungsformat des Typs ändern und wichtige Clientcode, der Reflektion verwendet.  
+  
+-   Ändern die Serialisierbarkeit des Typs. Ein nicht serialisierbarer Typ kann nicht serialisierbar gemacht werden und umgekehrt.  
+  
+-   Auslösen von anderen Ausnahmen von einer Methode.  
+  
+-   Ändern des Bereichs der Rückgabewerte für eine Methode, an, es sei denn, die Definition für das Element löst diese Möglichkeit aus, und zeigen deutlich, wie Clients unbekannte Werte behandeln soll.  
+  
+-   Beheben der meisten Fehler. Consumer des Typs basieren auf dem vorhandenen Verhalten.  
+  
+ Wenn eine Komponente, Typ oder Member mit markiert ist die <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Exchange> zu garantieren, es kann nicht geändert werden, entweder <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Stable> oder <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.None>.  
+  
+ Exchange-Typen sind in der Regel die grundlegenden Typen (z. B. <xref:System.Int32> und <xref:System.String> in .NET Framework) und Schnittstellen (z. B. <xref:System.Collections.Generic.IList%601>, <xref:System.Collections.Generic.IEnumerable%601>, und <xref:System.IComparable%601>), die häufig in öffentlichen Schnittstellen verwendet werden.  
+  
+ Exchange-Typen können öffentlich verfügbar machen nur andere Typen, die auch mit gekennzeichnet sind <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Exchange> Kompatibilität. Darüber hinaus Exchange Typen können nicht auf das Verhalten von Windows-APIs abhängig sind, die so ändern Sie anfällig sind.  
+  
+## <a name="component-guarantees-a-summary"></a>-Komponente Garantien: Eine Übersicht  
+ Die folgende Tabelle zeigt, wie Eigenschaften und die Verwendung einer Komponente deren Kompatibilitätsgarantie beeinflussen.  
+  
+|Merkmale der Komponente|Exchange|Stable|Seite-an-Seite|Keine|  
+|-------------------------------|--------------|------------|--------------------|----------|  
+|Kann in Schnittstellen zwischen den Komponenten dieser Version unabhängig verwendet.|J|N|N|N|  
+|Kann (privat) von einer Assembly, die Versionen unabhängig verwendet.|J|J|J|N|  
+|Können mehrere Versionen in einer einzelnen Anwendungsdomäne haben.|N|J|J|J|  
+|Können Änderungen vornehmen|N|N|J|J|  
+|Getestet, um sicherzustellen, dass mehrere Versionen der Assembly zusammen geladen werden können.|N|N|J|N|  
+|Können wichtige Änderungen an Stelle vornehmen.|N|N|N|J|  
+|Kann sehr nicht maßgebliche Änderungen festliegen Wartung sicher zu gestalten.|J|J|J|J|  
+  
+## <a name="applying-the-attribute"></a>Anwenden des Attributs  
+ Sie können Anwenden der <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute> auf eine Assembly, einen Typ oder einen Typmember. Die Anwendung ist hierarchisch aufgebaut. D. h. standardmäßig die Garantie durch definiert die <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute.Guarantees%2A> -Eigenschaft des Attributs auf Assemblyebene die Garantie aller Typen in der Assembly und alle Elemente in diesen Typen definiert. Auf ähnliche Weise, wenn die Garantie auf den Typ angewendet wird, gilt standardmäßig es auch auf jeden Member des Typs.  
+  
+ Diese geerbte Garantie kann überschrieben werden, durch Anwenden der <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute> für einzelne Typen und Typmember. Garantien, die den Standardwert überschreiben, können jedoch nur die Garantie Schwächen; Sie können sie nicht stärken. Angenommen, eine Assembly gekennzeichnet ist, mit der <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.None> zu garantieren, seine Typen und Member verfügen über keine Kompatibilitätsgarantie, und eine beliebige andere Garantie, die auf Typen oder Member in der Assembly angewendet wird, wird ignoriert.  
+  
+## <a name="testing-the-guarantee"></a>Testen die Garantie  
+ Die <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute.Guarantees%2A> Eigenschaft gibt ein Mitglied der <xref:System.Runtime.Versioning.ComponentGuaranteesOptions> -Enumeration, die mit gekennzeichnet ist die <xref:System.FlagsAttribute> Attribut. Dies bedeutet, dass für das Flag getestet werden soll, die Sie interessiert sind, indem potenziell unbekannte Flags maskiert. Z. B. das folgende Beispiel testet, ob ein Typ als gekennzeichnet ist <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Stable>.  
+  
+ [!code-csharp[System.Runtime.Versioning.ComponentGuaranteesAttribute.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.versioning.componentguaranteesattribute.class/cs/apply1.cs#1)]
+ [!code-vb[System.Runtime.Versioning.ComponentGuaranteesAttribute.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.versioning.componentguaranteesattribute.class/vb/apply1.vb#1)]  
+  
+ Das folgende Beispiel testet, ob ein Typ als gekennzeichnet ist <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Stable> oder <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Exchange>.  
+  
+ [!code-csharp[System.Runtime.Versioning.ComponentGuaranteesAttribute.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.versioning.componentguaranteesattribute.class/cs/apply1.cs#2)]
+ [!code-vb[System.Runtime.Versioning.ComponentGuaranteesAttribute.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.versioning.componentguaranteesattribute.class/vb/apply1.vb#2)]  
+  
+ Im folgenden Beispiel wird getestet, ob einen Typ als markiert ist <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.None> (d. h. weder <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Stable> noch <xref:System.Runtime.Versioning.ComponentGuaranteesOptions.Exchange>).  
+  
+ [!code-csharp[System.Runtime.Versioning.ComponentGuaranteesAttribute.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.versioning.componentguaranteesattribute.class/cs/apply1.cs#3)]
+ [!code-vb[System.Runtime.Versioning.ComponentGuaranteesAttribute.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.versioning.componentguaranteesattribute.class/vb/apply1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentGuaranteesAttribute (System.Runtime.Versioning.ComponentGuaranteesOptions guarantees);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.Versioning.ComponentGuaranteesOptions guarantees) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.ComponentGuaranteesAttribute.#ctor(System.Runtime.Versioning.ComponentGuaranteesOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="guarantees" Type="System.Runtime.Versioning.ComponentGuaranteesOptions" />
+      </Parameters>
+      <Docs>
+        <param name="guarantees">Einer der Enumerationswerte, der den Grad an Kompatibilität gibt an, die über mehrere Versionen garantiert wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Versioning.ComponentGuaranteesAttribute" /> -Klasse mit einem Wert, der eine Bibliothek, Typ oder des Members angibt garantierten Kompatibilitätsgrad über mehrere Versionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute> Klasse instanziiert wird, den Wert des der `guarantees` Parameter zugewiesen ist die <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute.Guarantees%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Guarantees">
+      <MemberSignature Language="C#" Value="public System.Runtime.Versioning.ComponentGuaranteesOptions Guarantees { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Versioning.ComponentGuaranteesOptions Guarantees" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Versioning.ComponentGuaranteesAttribute.Guarantees" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ComponentGuaranteesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die Kompatibilität von einer Bibliothek, Typ oder Typmember, die mehrere Versionen umfasst garantiertem Servicelevel angibt.</summary>
+        <value>Einer der Enumerationswerte, der den Grad an Kompatibilität gibt an, die über mehrere Versionen garantiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des der <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute.Guarantees%2A> Eigenschaft entspricht der `guarantees` Parameter von der <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

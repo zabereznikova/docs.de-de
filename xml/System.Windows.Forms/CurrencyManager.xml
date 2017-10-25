@@ -1,0 +1,848 @@
+<Type Name="CurrencyManager" FullName="System.Windows.Forms.CurrencyManager">
+  <TypeSignature Language="C#" Value="public class CurrencyManager : System.Windows.Forms.BindingManagerBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CurrencyManager extends System.Windows.Forms.BindingManagerBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CurrencyManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.BindingManagerBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet eine Liste der <see cref="T:System.Windows.Forms.Binding" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.CurrencyManager> leitet sich von der <xref:System.Windows.Forms.BindingManagerBase> Klasse. Verwenden der <xref:System.Windows.Forms.BindingContext> zurückzugebenden entweder eine <xref:System.Windows.Forms.CurrencyManager> oder ein <xref:System.Windows.Forms.PropertyManager>. Das eigentliche Objekt zurückgegeben, hängt von der Datenquelle und Datenmember zu übergeben, um die <xref:System.Windows.Forms.BindingContext.Item%2A> Eigenschaft von der <xref:System.Windows.Forms.BindingContext>. Wenn die Datenquelle ein Objekt, die nur eine einzelne Eigenschaft (statt eine Liste von Objekten) zurückgeben kann ist, werden der Typ einer <xref:System.Windows.Forms.PropertyManager>. Wenn Sie angeben, z. B. eine <xref:System.Windows.Forms.TextBox> als Datenquelle, eine <xref:System.Windows.Forms.PropertyManager> zurückgegeben werden. Wenn andererseits, die Datenquelle für ein Objekt ist, implementiert die <xref:System.Collections.IList>, <xref:System.ComponentModel.IListSource>, oder <xref:System.ComponentModel.IBindingList> -Schnittstelle, eine <xref:System.Windows.Forms.CurrencyManager> zurückgegeben werden.  
+  
+ Die <xref:System.Windows.Forms.BindingManagerBase.Current%2A> -Eigenschaft gibt das aktuelle Element in der zugrunde liegenden Liste zurück. Um das aktuelle Element zu ändern, legen Sie die <xref:System.Windows.Forms.BindingManagerBase.Position%2A> Eigenschaft, um einen neuen Wert. Der Wert muss größer als 0 sein und muss kleiner sein als der Wert, der die <xref:System.Windows.Forms.BindingManagerBase.Count%2A> Eigenschaft.  
+  
+ Falls die zugrunde liegenden implementiert Datenquelle die <xref:System.ComponentModel.IBindingList> -Schnittstelle, und die <xref:System.ComponentModel.IBindingList.AllowNew%2A> -Eigenschaftensatz auf `true`, können Sie die <xref:System.Windows.Forms.CurrencyManager.AddNew%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel bindet ein <xref:System.Windows.Forms.TextBox> Steuerelement an eine Spalte in einer <xref:System.Data.DataTable>, ruft die <xref:System.Windows.Forms.CurrencyManager> für die Bindung und seine Position wird festgelegt.  
+  
+ [!code-cpp[Classic CurrencyManager Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CurrencyManager Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CurrencyManager Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CurrencyManager Example/CS/source.cs#1)]
+ [!code-vb[Classic CurrencyManager Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CurrencyManager Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddNew">
+      <MemberSignature Language="C#" Value="public override void AddNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.AddNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt der zugrunde liegenden Liste ein neues Element hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nur unterstützt, wenn die Datenquelle implementiert die <xref:System.ComponentModel.IBindingList> Schnittstelle und die Datenquelle ermöglicht das Hinzufügen von Zeilen (<xref:System.ComponentModel.IBindingList.AllowNew%2A> ist `true`).  
+  
+> [!NOTE]
+>  Diese Eigenschaft wurde entworfen, um komplexe datengebundenen Steuerelemente, z. B. ermöglichen die <xref:System.Windows.Forms.DataGrid> Steuerelement, Liste neue Elemente hinzufügen.  
+  
+ Diese Eigenschaft wird in der Regel verwenden, nur dann, wenn Sie ein eigenes Steuerelement erstellen, die integriert die <xref:System.Windows.Forms.CurrencyManager>. Hinzufügen von Elementen, wenn die Datenquelle ist, andernfalls ein <xref:System.Data.DataView>, verwenden die <xref:System.Data.DataView.AddNew%2A?displayProperty=nameWithType> Methode der <xref:System.Data.DataView> Klasse. Wenn die Datenquelle ist eine <xref:System.Data.DataTable>, verwenden die <xref:System.Data.DataTable.NewRow%2A> Methode und fügen Sie die Zeile an die <xref:System.Data.DataRowCollection>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel fügt ein neues Element der Liste mit den <xref:System.Windows.Forms.CurrencyManager.AddNew%2A> Methode.  
+  
+ [!code-cpp[Classic CurrencyManager.AddNew Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CurrencyManager.AddNew Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CurrencyManager.AddNew Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CurrencyManager.AddNew Example/CS/source.cs#1)]
+ [!code-vb[Classic CurrencyManager.AddNew Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CurrencyManager.AddNew Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die zugrunde liegenden Datenquelle nicht implementiert <see cref="T:System.ComponentModel.IBindingList" />, oder die Datenquelle hat eine Ausnahme ausgelöst, da der Benutzer versucht hat, um eine Zeile hinzuzufügen, um eine nur-Lese- oder eine feste Größe <see cref="T:System.Data.DataView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelCurrentEdit">
+      <MemberSignature Language="C#" Value="public override void CancelCurrentEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CancelCurrentEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.CancelCurrentEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht den aktuellen Bearbeitungsvorgang ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nur unterstützt, wenn die von der Datenquelle enthaltenen Objekte implementieren die <xref:System.ComponentModel.IEditableObject> Schnittstelle. Wenn nicht innerhalb der Datenquelle enthaltenen Objekte implementieren die <xref:System.ComponentModel.IEditableObject> -Schnittstelle, an den Daten vorgenommenen Änderungen nicht verworfen werden.  
+  
+> [!NOTE]
+>  Diese Eigenschaft soll von komplexen von datengebundenen Steuerelementen verwendet werden, z. B. die <xref:System.Windows.Forms.DataGrid> Steuerelement, um die Änderungen Abbrechen. Z. B. wenn der Benutzer die ESC-Taste drückt, die <xref:System.Windows.Forms.CurrencyManager.CancelCurrentEdit%2A> Methode wird aufgerufen, auf die <xref:System.Windows.Forms.CurrencyManager> für die <xref:System.Windows.Forms.DataGrid>. Wenn Sie ein Steuerelement, die dieselbe Funktionalität erforderlich sind erstellen, sollten Sie diese Methode nicht verwenden. Verwenden Sie stattdessen die <xref:System.Data.DataRowView.CancelEdit%2A> Methode der <xref:System.Data.DataRowView> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.CurrencyManager.CancelCurrentEdit%2A> Wenn der Benutzer die ESC-Taste drückt.  
+  
+ [!code-cpp[Classic CurrencyManager.CancelCurrentEdit Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CurrencyManager.CancelCurrentEdit Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CurrencyManager.CancelCurrentEdit Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CurrencyManager.CancelCurrentEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic CurrencyManager.CancelCurrentEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CurrencyManager.CancelCurrentEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckEmpty">
+      <MemberSignature Language="C#" Value="protected void CheckEmpty ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckEmpty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.CheckEmpty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst eine Ausnahme aus, wenn keine Liste vorhanden bzw. wenn die Liste leer ist.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">Keine Liste vorhanden ist, oder die Liste leer ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CurrencyManager.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Liste ab.</summary>
+        <value>Die Anzahl der Elemente in der Liste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Count-Eigenschaft, um zu bestimmen, wenn das Ende der Liste erreicht wurde. Da die <xref:System.Windows.Forms.CurrencyManager> verwaltet eine 0-basierte Array von Elementen, die am Ende der Liste ist immer <xref:System.Windows.Forms.CurrencyManager.Count%2A> minus eins.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel durchläuft die Liste, bis das letzte Element, das bestimmt, indem die <xref:System.Windows.Forms.CurrencyManager.Count%2A> Eigenschaft erreicht ist.  
+  
+ [!code-cpp[Classic CurrencyManager.Count Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CurrencyManager.Count Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CurrencyManager.Count Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CurrencyManager.Count Example/CS/source.cs#1)]
+ [!code-vb[Classic CurrencyManager.Count Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CurrencyManager.Count Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public override object Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CurrencyManager.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Element in der Liste ab.</summary>
+        <value>Ein Listenelement des Typs <see cref="T:System.Object" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um das aktuelle Element zu aktivieren, müssen Sie die Angabe des Datentyps kennen, damit er ordnungsgemäß umgewandelt. Wenn die Datenquelle ist beispielsweise eine <xref:System.Data.DataView> oder <xref:System.Data.DataTable>, müssen Sie das aktuelle Element als eine Umwandlung eine <xref:System.Data.DataRowView> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.CurrencyManager.Current%2A> Eigenschaft zum Drucken der `ContactName` Feld für das aktuelle Element in der Liste.  
+  
+ [!code-cpp[Classic CurrencyManager.Current Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CurrencyManager.Current Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CurrencyManager.Current Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CurrencyManager.Current Example/CS/source.cs#1)]
+ [!code-vb[Classic CurrencyManager.Current Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CurrencyManager.Current Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCurrentEdit">
+      <MemberSignature Language="C#" Value="public override void EndCurrentEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndCurrentEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.EndCurrentEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die aktuelle Bearbeitungsoperation.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nur unterstützt, wenn die von der Datenquelle enthaltenen Objekte implementieren die <xref:System.ComponentModel.IEditableObject> oder <xref:System.ComponentModel.ICancelAddNew> Schnittstellen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft soll von komplexen von datengebundenen Steuerelementen verwendet werden, z. B. die <xref:System.Windows.Forms.DataGridView> Steuerelement. Wenn Sie ein Steuerelement, die dieselbe Funktionalität erforderlich sind erstellen, sollten Sie diese Methode nicht verwenden. Stattdessen entweder ist die Datenquelle eine <xref:System.Data.DataView> oder <xref:System.Data.DataTable>, verwenden Sie die <xref:System.Data.DataRowView.EndEdit%2A> Methode der <xref:System.Data.DataRowView> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.CurrencyManager.EndCurrentEdit%2A>-Methode verwenden.  
+  
+ [!code-cpp[Classic CurrencyManager.EndCurrentEdit Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CurrencyManager.EndCurrentEdit Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CurrencyManager.EndCurrentEdit Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CurrencyManager.EndCurrentEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic CurrencyManager.EndCurrentEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CurrencyManager.EndCurrentEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="finalType">
+      <MemberSignature Language="C#" Value="protected Type finalType;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Type finalType" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.CurrencyManager.finalType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Datentyp der Liste an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemProperties">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.PropertyDescriptorCollection GetItemProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.PropertyDescriptorCollection GetItemProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.GetItemProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Eigenschaftendeskriptorauflistung für die zugrunde liegende Liste ab.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> für die Liste.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.PropertyDescriptorCollection> für die <xref:System.Windows.Forms.CurrencyManager> wird verwendet, um eine Spalte in der Liste angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.CurrencyManager.GetItemProperties%2A> -Methode zur Rückgabe einer <xref:System.ComponentModel.PropertyDescriptorCollection> für eine <xref:System.Windows.Forms.BindingManagerBase>. Klicken Sie dann den im Beispiel druckt die <xref:System.ComponentModel.MemberDescriptor.Name%2A> und <xref:System.ComponentModel.PropertyDescriptor.PropertyType%2A> jedes <xref:System.ComponentModel.PropertyDescriptor> in der Auflistung.  
+  
+ [!code-cpp[Classic CurrencyManager.GetItemProperties Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CurrencyManager.GetItemProperties Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CurrencyManager.GetItemProperties Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CurrencyManager.GetItemProperties Example/CS/source.cs#1)]
+ [!code-vb[Classic CurrencyManager.GetItemProperties Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CurrencyManager.GetItemProperties Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListName">
+      <MemberSignature Language="C#" Value="protected override string GetListName (System.Collections.ArrayList listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance string GetListName(class System.Collections.ArrayList listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.GetListName(System.Collections.ArrayList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listAccessors" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="listAccessors">Ein <see cref="T:System.Collections.ArrayList" /> von Eigenschaften in der Datenquelle gefunden werden.</param>
+        <summary>Ruft den Namen der Liste ab, die mithilfe der angegebenen Gruppe gebundener Eigenschaften die Daten für die Bindung bereitstellt.</summary>
+        <returns>Bei Erfolg eine <see cref="T:System.String" /> , enthält die Liste, die die Daten für die Bindung liefert, andernfalls ein <see cref="F:System.String.Empty" /> Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:System.Windows.Forms.CurrencyManager.GetListName%2A> aufzurufende Methode erfolgreich ist, muss die zugrunde liegende Liste muss vom Typ <xref:System.ComponentModel.ITypedList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ItemChangedEventHandler ItemChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ItemChangedEventHandler ItemChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.CurrencyManager.ItemChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ItemChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das aktuelle Element geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.CurrencyManager.ItemChanged> -Ereignis tritt auf, wenn der Benutzer ruft den <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> oder <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> Methode.  
+  
+ Die <xref:System.Windows.Forms.CurrencyManager.ItemChanged> Ereignis tritt auf, nur wenn das Element selbst auf eine Weise geändert wurde. Wenn der Wert eines Elements von 10 bis 42 geändert wird, wird z. B. das Ereignis auftreten. Dies sollte nicht mit verwechselt werden die <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> Ereignis, in dem das Element in ein neues Element geändert wurde.  
+  
+ Das Ereignis tritt auch auf, wenn sich die zugrunde liegenden Daten ändert. Angenommen, Sie ändern, dass den Wert des eine <xref:System.Data.DataRowView>, die <xref:System.Windows.Forms.CurrencyManager.ItemChanged> Ereignis erfolgt.  
+  
+> [!NOTE]
+>  Wenn Sie ein eigenes Steuerelement erstellen, verwendet die <xref:System.Windows.Forms.CurrencyManager>, verwenden Sie die <xref:System.ComponentModel.IBindingList.ListChanged?displayProperty=nameWithType> anstelle von der <xref:System.Windows.Forms.CurrencyManager.ItemChanged?displayProperty=nameWithType> Ereignis. Die <xref:System.ComponentModel.ListChangedEventArgs.ListChangedType%2A> Eigenschaft von der <xref:System.ComponentModel.ListChangedEventArgs> ermöglicht es Ihnen, den Typ der Aktion zu bestimmen, die aufgetreten ist.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel fügt der Ereignishandler für das <xref:System.Windows.Forms.CurrencyManager.ItemChanged> und <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> Ereignisse.  
+  
+ [!code-cpp[Classic CurrencyManager.ItemChanged Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CurrencyManager.ItemChanged Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CurrencyManager.ItemChanged Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CurrencyManager.ItemChanged Example/CS/source.cs#1)]
+ [!code-vb[Classic CurrencyManager.ItemChanged Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CurrencyManager.ItemChanged Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="public System.Collections.IList List { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList List" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CurrencyManager.List" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste für <see cref="T:System.Windows.Forms.CurrencyManager" />.</summary>
+        <value>Eine <see cref="T:System.Collections.IList" /> , die die Liste enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Objekt der <xref:System.Windows.Forms.CurrencyManager.List%2A> Eigenschaft umgewandelt werden kann, in jeden Typ, der implementiert die <xref:System.Collections.IList> Schnittstelle. Dies wird häufig verwendet werden, wenn Sie wissen, dass den Typ des zugrunde liegenden Liste. Wenn Sie auf datengebundene sind z. B. eine <xref:System.Data.DataSet>, die zugrunde liegende Liste eine <xref:System.Data.DataView> (implementiert <xref:System.Collections.IList>). Schließen Sie andere Klassen, die die Schnittstelle implementieren (Dies ist keine vollständige Liste) <xref:System.Array>, <xref:System.Collections.ArrayList>, und <xref:System.Collections.CollectionBase>.  
+  
+ Verwendung der <xref:System.Windows.Forms.CurrencyManager.List%2A> Eigenschaft hängt von der Klasse, die implementiert die <xref:System.Collections.IList> Schnittstelle. Beispielsweise können Sie die <xref:System.Windows.Forms.CurrencyManager.List%2A> Eigenschaft, um den Namen der Liste zu bestimmen. Wenn die Datenquelle implementiert die <xref:System.ComponentModel.ITypedList> -Schnittstelle, die Sie verwenden die <xref:System.ComponentModel.ITypedList.GetListName%2A> Methode, um den Namen der aktuellen Tabelle zurückzugeben. Dies wird im folgenden C#-Code veranschaulicht:  
+  
+```csharp  
+private void PrintCurrentListName(DataGrid myDataGrid){   
+   CurrencyManager myCM = (CurrencyManager)   
+   BindingContext[myDataGrid.DataSource, myDataGrid.DataMember];   
+   IList myList = myCM.List;   
+   ITypedList thisList = (ITypedList) myList;   
+   Console.WriteLine(thisList.GetListName(null));   
+}  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel kann Benutzer eine Gruppe von Datensätzen bearbeiten, aber keine neue Datensätze hinzufügen. In der <xref:System.Windows.Forms.DataGrid.Navigate> -Ereignis ein <xref:System.Windows.Forms.DataGrid> -Steuerelement, das <xref:System.Collections.IList> zurückgegebenes der <xref:System.Windows.Forms.CurrencyManager.List%2A> Eigenschaft umgewandelt wird eine <xref:System.Data.DataView> Variable. Die <xref:System.Data.DataView.AllowNew%2A>-Eigenschaft von <xref:System.Data.DataView> wird auf `false` festgelegt.  
+  
+ [!code-cpp[CurrencyManager.List Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/CurrencyManager.List Example/CPP/list.cpp#1)]
+ [!code-csharp[CurrencyManager.List Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/CurrencyManager.List Example/CS/list.cs#1)]
+ [!code-vb[CurrencyManager.List Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CurrencyManager.List Example/VB/list.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.ListChangedEventHandler ListChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.ListChangedEventHandler ListChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.CurrencyManager.ListChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die Liste oder ein Element der Liste geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.CurrencyManager.ListChanged> Ereignis wird ausgelöst, durch die <xref:System.Windows.Forms.CurrencyManager> Klasse bei der Änderungen zu einem Element vorgenommen werden mit Methoden wie <xref:System.Windows.Forms.CurrencyManager.EndCurrentEdit%2A>, <xref:System.Windows.Forms.CurrencyManager.CancelCurrentEdit%2A>, und <xref:System.Windows.Forms.CurrencyManager.Refresh%2A>. Dieses Ereignis kann auch auftreten, wenn die Datenquelle direkt bearbeitet wird, wenn es implementiert die <xref:System.ComponentModel.IBindingListView> Schnittstelle.  
+  
+ Die zugeordnete `OnListChanged` Methode ist eine private Methode in dieser Klasse.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.CurrencyManager.ListChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.CurrencyManager> mit dem Namen `CurrencyManager1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.CurrencyManager.ListChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#192](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#192)]
+ [!code-vb[System.Windows.Forms.EventExamples#192](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#192)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="listposition">
+      <MemberSignature Language="C#" Value="protected int listposition;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 listposition" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.CurrencyManager.listposition" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die aktuelle Position der <see cref="T:System.Windows.Forms.CurrencyManager" /> in der Liste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert der <xref:System.Windows.Forms.CurrencyManager.Count%2A> -Eigenschaft ist größer als 0 (null) der <xref:System.Windows.Forms.CurrencyManager.listposition> Feld ist eine Zahl zwischen 0 und <xref:System.Windows.Forms.CurrencyManager.Count%2A> minus 1. Wenn <xref:System.Windows.Forms.CurrencyManager.Count%2A> ist 0, <xref:System.Windows.Forms.CurrencyManager.listposition> ist-1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetaDataChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MetaDataChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MetaDataChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.CurrencyManager.MetaDataChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Metadaten der <see cref="P:System.Windows.Forms.CurrencyManager.List" /> hat sich geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Metadaten der <xref:System.Windows.Forms.CurrencyManager.List%2A> besteht aus dem Schema der zugrunde liegenden <xref:System.Windows.Forms.Binding.DataSource%2A?displayProperty=nameWithType>. Die <xref:System.Windows.Forms.CurrencyManager.MetaDataChanged> Ereignis wird ausgelöst, wenn sich das Schema geändert wurde. Z. B. die <xref:System.Windows.Forms.CurrencyManager.MetaDataChanged> Ereignis wird ausgelöst, wenn eine <xref:System.Data.DataColumn> programmgesteuert hinzugefügt wird eine <xref:System.Data.DataTable>.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.CurrencyManager.MetaDataChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.CurrencyManager> mit dem Namen `CurrencyManager1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.CurrencyManager.MetaDataChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#193](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#193)]
+ [!code-vb[System.Windows.Forms.EventExamples#193](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#193)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCurrentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnCurrentChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnCurrentChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.OnCurrentChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.BindingManagerBase.CurrentChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCurrentItemChanged">
+      <MemberSignature Language="C#" Value="protected override void OnCurrentItemChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnCurrentItemChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.OnCurrentItemChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.BindingManagerBase.CurrentItemChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemChanged (System.Windows.Forms.ItemChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemChanged(class System.Windows.Forms.ItemChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.OnItemChanged(System.Windows.Forms.ItemChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ItemChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.ItemChangedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.CurrencyManager.ItemChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.CurrencyManager.OnItemChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.CurrencyManager.OnItemChanged(System.Windows.Forms.ItemChangedEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.CurrencyManager.OnItemChanged(System.Windows.Forms.ItemChangedEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMetaDataChanged">
+      <MemberSignature Language="C#" Value="protected void OnMetaDataChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnMetaDataChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.OnMetaDataChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.CurrencyManager.MetaDataChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.CurrencyManager.OnMetaDataChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.CurrencyManager.OnMetaDataChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.CurrencyManager.OnMetaDataChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPositionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPositionChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPositionChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.OnPositionChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.BindingManagerBase.PositionChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.CurrencyManager.OnPositionChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.CurrencyManager.OnPositionChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.CurrencyManager.OnPositionChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public override int Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Position" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CurrencyManager.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position ab, an der Sie sich in der Liste befinden, oder legt diese Position fest.</summary>
+        <value>Eine Zahl zwischen 0 und <see cref="P:System.Windows.Forms.CurrencyManager.Count" /> minus 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine wichtige Eigenschaft von der <xref:System.Windows.Forms.CurrencyManager> Klasse ist die <xref:System.Windows.Forms.CurrencyManager.Position%2A> Eigenschaft. In einer Liste von Elementen können Sie nur ein Element aus der gesamten Liste anzeigen. Um zu bestimmen, welches Element angezeigt wird, legen Sie die <xref:System.Windows.Forms.CurrencyManager.Position%2A> eine Zahl zwischen 0 (am Anfang der Liste) und <xref:System.Windows.Forms.CurrencyManager.Count%2A> minus 1 sein (das Ende der Liste).  
+  
+ Aus diesem Grund die <xref:System.Windows.Forms.CurrencyManager.Position%2A> bestimmt die Währung oder direkt in der Liste aller Steuerelemente, die auf den gleichen gebunden <xref:System.Windows.Forms.CurrencyManager>. Angenommen Sie, eine Liste besteht aus zwei Spalten mit den Namen "FirstName" und "LastName". Zwei <xref:System.Windows.Forms.TextBox> Steuerelemente an die gleiche Liste gebunden werden; das erste Steuerelement mit der ersten Spalte gebunden ist und das zweite Steuerelement an die zweite Spalte gebunden ist. Wenn die <xref:System.Windows.Forms.CurrencyManager.Position%2A> der gängigsten <xref:System.Windows.Forms.CurrencyManager> festgelegt ist auf die dritte Position beide Steuerelemente die entsprechenden Werte für diese Position in der Liste angezeigt. Das heißt, wenn das Element an der dritten Position aus dem Vornamen "John" und dem Nachnamen "Smith" besteht, werden gebundenen Steuerelemente "John" und "Smith" angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiele verwenden die <xref:System.Windows.Forms.CurrencyManager.Position%2A> Eigenschaft, um die Navigation in einer Liste zu ermöglichen.  
+  
+ [!code-cpp[Classic CurrencyManager.Position Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CurrencyManager.Position Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CurrencyManager.Position Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CurrencyManager.Position Example/CS/source.cs#1)]
+ [!code-vb[Classic CurrencyManager.Position Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CurrencyManager.Position Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erzwingt ein erneutes Auffüllen der datengebundenen Liste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.CurrencyManager.Refresh%2A> Methode, wenn die Datenquelle Benachrichtigung nicht unterstützt, wenn er geändert wird (z. B., wenn es ist ein <xref:System.Array>).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein Array erstellt und bindet sie an einer <xref:System.Windows.Forms.TextBox> -Steuerelement, und klicken Sie dann auf einen Wert geändert wird. Die <xref:System.Windows.Forms.CurrencyManager.Refresh%2A> Methode kann aufgerufen werden, um von der angezeigte Wert aktualisiert die <xref:System.Windows.Forms.TextBox> Steuerelement.  
+  
+ [!code-cpp[Classic CurrencyManager.Refresh Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CurrencyManager.Refresh Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CurrencyManager.Refresh Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CurrencyManager.Refresh Example/CS/source.cs#1)]
+ [!code-vb[Classic CurrencyManager.Refresh Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CurrencyManager.Refresh Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public override void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements, das aus der Liste entfernen.</param>
+        <summary>Entfernt das Element am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.CurrencyManager.RemoveAt%2A> Methode ist darauf ausgelegt, um komplexe Steuerelemente zu ermöglichen, z. B. die <xref:System.Windows.Forms.DataGrid> -Steuerelement, um Elemente aus der Liste zu entfernen. Sie sollten diese Methode nicht verwenden, um Elemente zu entfernen. Verwenden Sie stattdessen die <xref:System.Data.DataView.Delete%2A> Methode der <xref:System.Data.DataView> Klasse, um Elemente zu löschen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.CurrencyManager.RemoveAt%2A> Methode, um das Element an Position 0 in der Liste zu entfernen.  
+  
+ [!code-cpp[Classic CurrencyManager.RemoveAt Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CurrencyManager.RemoveAt Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CurrencyManager.RemoveAt Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CurrencyManager.RemoveAt Example/CS/source.cs#1)]
+ [!code-vb[Classic CurrencyManager.RemoveAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CurrencyManager.RemoveAt Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Es gibt keine Zeile am angegebenen <paramref name="index" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeBinding">
+      <MemberSignature Language="C#" Value="public override void ResumeBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResumeBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.ResumeBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die Datenbindung fort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.CurrencyManager.SuspendBinding%2A>und <xref:System.Windows.Forms.CurrencyManager.ResumeBinding%2A> sind zwei Methoden, die die temporären Unterbrechung und Wiederaufnahme der in einem Datenbindungsszenario einfache Daten zu ermöglichen. Sie würden Datenbindung in der Regel anhalten, wenn der Benutzer zugelassen werden muss, um mehrere Änderungen an Datenfelder vorzunehmen, bevor die Überprüfung erfolgt. Z. B. würde Wenn ein Feld in Übereinstimmung mit einer Sekunde geändert werden muss, jedoch überprüft das erste Feld das zweite Feld fehlerhaft sein.  
+  
+> [!NOTE]
+>  Mit <xref:System.Windows.Forms.CurrencyManager.SuspendBinding%2A> verhindert, dass Änderungen in der Datenquelle bis gepusht <xref:System.Windows.Forms.CurrencyManager.ResumeBinding%2A> aufgerufen wird, aber verhindert nicht, dass Änderungen in der Datenquelle gebundenen Steuerelemente auswirken. Steuerelemente, die komplexe Datenbindung, z. B. verwenden die <xref:System.Windows.Forms.DataGridView> steuern, aktualisieren Sie ihre Werte basierend auf Change-Ereignissen, wie z. B. die <xref:System.Windows.Forms.CurrencyManager.ListChanged> Ereignis. Beim Aufrufen dieser Methode wird verhindert nicht, diese Ereignisse auftreten. Aus diesem Grund <xref:System.Windows.Forms.CurrencyManager.SuspendBinding%2A> und <xref:System.Windows.Forms.CurrencyManager.ResumeBinding%2A> dienen zur Verwendung mit einfachen datengebundenen Steuerelemente, z. B. eine <xref:System.Windows.Forms.TextBox>. Alternativ können diese Methoden in einem komplexen Datenbindungsszenario Wenn unterdrückt <xref:System.Windows.Forms.BindingSource.ListChanged> Ereignisse durch Festlegen der <xref:System.Windows.Forms.BindingSource.RaiseListChangedEvents%2A> Eigenschaft `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.CurrencyManager.ResumeBinding%2A>-Methode verwenden.  
+  
+ [!code-cpp[BindingManagerBase_Suspend_Resume_Binding#2](~/samples/snippets/cpp/VS_Snippets_Winforms/BindingManagerBase_Suspend_Resume_Binding/CPP/bindingmanagerbase_suspend_resume_binding.cpp#2)]
+ [!code-csharp[BindingManagerBase_Suspend_Resume_Binding#2](~/samples/snippets/csharp/VS_Snippets_Winforms/BindingManagerBase_Suspend_Resume_Binding/CS/bindingmanagerbase_suspend_resume_binding.cs#2)]
+ [!code-vb[BindingManagerBase_Suspend_Resume_Binding#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BindingManagerBase_Suspend_Resume_Binding/VB/bindingmanagerbase_suspend_resume_binding.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendBinding">
+      <MemberSignature Language="C#" Value="public override void SuspendBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SuspendBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.SuspendBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Unterbricht die Datenbindung, sodass die gebundene Datenquelle nicht durch Änderungen aktualisiert werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.CurrencyManager.SuspendBinding%2A> und <xref:System.Windows.Forms.BindingSource.ResumeBinding%2A> Methoden ermöglichen es dem temporären Unterbrechung und Wiederaufnahme der Datenbindung in einem einfachen Datenbindungsszenario. Sie würden Datenbindung in der Regel anhalten, wenn der Benutzer mehrere Bearbeitungen Datenfeldern vornehmen muss, bevor die Überprüfung erfolgt. Z. B. würde Wenn ein Feld in Übereinstimmung mit einer Sekunde geändert werden muss, jedoch überprüft das erste Feld das zweite Feld fehlerhaft sein.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Forms.BindingSource.SuspendBinding%2A>verhindert, dass Änderungen an der Datenquelle bis angewendet wird <xref:System.Windows.Forms.BindingSource.ResumeBinding%2A> aufgerufen wird, aber tatsächlich verhindert keine Ereignisse auftreten. Steuerelemente, die komplexe Datenbindung, z. B. verwenden die <xref:System.Windows.Forms.DataGridView> steuern, aktualisieren Sie ihre Werte basierend auf Change-Ereignissen, wie z. B. die <xref:System.Windows.Forms.CurrencyManager.ListChanged> Ereignis. Aus diesem Grund Aufrufen <xref:System.Windows.Forms.BindingSource.SuspendBinding%2A> wird nicht verhindert, komplexe datengebundenen Steuerelementen empfangen von Ereignissen, um die Datenquelle zu aktualisieren. Aus diesem Grund <xref:System.Windows.Forms.BindingSource.SuspendBinding%2A> und <xref:System.Windows.Forms.BindingSource.ResumeBinding%2A> dienen zur Verwendung mit einfach gebundenen Steuerelementen, wie z. B. die <xref:System.Windows.Forms.TextBox> Steuerelement. Alternativ können diese Methoden in einem komplexen Datenbindungsszenario Wenn unterdrückt <xref:System.Windows.Forms.BindingSource.ListChanged> Ereignisse durch Festlegen der <xref:System.Windows.Forms.BindingSource.RaiseListChangedEvents%2A> Eigenschaft `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.CurrencyManager.SuspendBinding%2A>-Methode verwenden.  
+  
+ [!code-cpp[BindingManagerBase_Suspend_Resume_Binding#1](~/samples/snippets/cpp/VS_Snippets_Winforms/BindingManagerBase_Suspend_Resume_Binding/CPP/bindingmanagerbase_suspend_resume_binding.cpp#1)]
+ [!code-csharp[BindingManagerBase_Suspend_Resume_Binding#1](~/samples/snippets/csharp/VS_Snippets_Winforms/BindingManagerBase_Suspend_Resume_Binding/CS/bindingmanagerbase_suspend_resume_binding.cs#1)]
+ [!code-vb[BindingManagerBase_Suspend_Resume_Binding#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BindingManagerBase_Suspend_Resume_Binding/VB/bindingmanagerbase_suspend_resume_binding.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateIsBinding">
+      <MemberSignature Language="C#" Value="protected override void UpdateIsBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void UpdateIsBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CurrencyManager.UpdateIsBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert den Status der Bindung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

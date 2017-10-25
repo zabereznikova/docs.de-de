@@ -1,0 +1,90 @@
+<Type Name="Func&lt;TResult&gt;" FullName="System.Func&lt;TResult&gt;">
+  <TypeSignature Language="C#" Value="public delegate TResult Func&lt;out TResult&gt;();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Func`1&lt;+ TResult&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Func`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TResult">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>TResult</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="TResult">Der Typ des Rückgabewerts der Methode, die dieser Delegat kapselt.</typeparam>
+    <summary>Kapselt eine Methode, hat keine Parameter und gibt einen Wert des Typs gemäß, den <paramref name="TResult" /> Parameter.</summary>
+    <returns>Der Rückgabewert der Methode, die dieser Delegat kapselt.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat können Sie eine Methode darstellen, die als Parameter übergeben werden kann, ohne explizit einen benutzerdefinierten Delegaten zu deklarieren. Die gekapselte Methode muss der Methodensignatur entsprechen, die von diesem Delegaten definiert ist. Dies bedeutet, dass die gekapselte Methode keine Parameter darf muss und einen Wert zurückgeben muss.  
+  
+> [!NOTE]
+>  Auf eine Methode zu verweisen, die über keine Parameter verfügt und zurückgibt `void` (oder in Visual Basic deklariert wird als eine `Sub` statt als ein `Function`), verwenden Sie die <xref:System.Action> stattdessen delegieren.  
+  
+ Bei Verwendung der <xref:System.Func%601> Delegaten, Sie müssen nicht explizit einen Delegaten definieren, der eine parameterlose Methode kapselt. Der folgende Code deklariert z. B. explizit einen Delegaten, mit dem Namen `WriteMethod` und weist einen Verweis auf die `OutputTarget.SendToFile` -Instanzmethode zu seiner Delegatinstanz.  
+  
+ [!code-csharp[System.Func~1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~1/cs/Delegate.cs#1)]
+ [!code-vb[System.Func~1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Func~1/vb/Delegate.vb#1)]  
+  
+ Im folgende Beispiel wird dieser Code vereinfacht, durch die Instanziierung der <xref:System.Func%601> Delegaten explizit einen neuen Delegaten definieren und eine benannte Methode zuweisen.  
+  
+ [!code-csharp[System.Func~1#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~1/cs/Func1.cs#2)]
+ [!code-vb[System.Func~1#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Func~1/vb/Func1.vb#2)]  
+  
+ Sie können die <xref:System.Func%601> delegieren mit anonymen Methoden in C# geschrieben, wie im folgenden Beispiel veranschaulicht. (Eine Einführung für anonyme Methoden finden Sie unter [anonyme Methoden](~/docs/csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).)  
+  
+ [!code-csharp[System.Func~1#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~1/cs/Anon.cs#3)]  
+  
+ Sie können auch einen Lambda-Ausdruck zum Zuweisen einer <xref:System.Func%602> zu delegieren, wie im folgenden Beispiel veranschaulicht. (Eine Einführung in Lambda-Ausdrücke finden Sie unter [Lambda-Ausdrücke](~/docs/visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) und [Lambda-Ausdrücke](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).)  
+  
+ [!code-csharp[System.Func~1#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~1/cs/Lambda.cs#4)]
+ [!code-vb[System.Func~1#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Func~1/vb/Lambda.vb#4)]  
+  
+ Der zugrunde liegende Typ eines Lambda-Ausdrucks ist eine der generischen `Func` Delegaten. Dadurch möglich, einen Lambda-Ausdruck als Parameter zu übergeben, ohne explizit einem Delegaten zuzuweisen. Insbesondere, da viele Methoden von Typen in der <xref:System.Linq> Namespace haben `Func` Parameter können übergeben dieser Methoden einen Lambda-Ausdruck ohne explizit Instanziieren einer `Func` delegieren.  
+  
+ Wenn Sie eine aufwändige Berechnungen, die nur, wenn das Ergebnis tatsächlich benötigt wird ausgeführt werden soll verfügen, können, weisen Sie die rechenintensive Funktion eine <xref:System.Func%601> delegieren. Die Ausführung der Funktion kann dann verzögert werden, bis eine Eigenschaft, die auf den Wert zugreift, die in einem Ausdruck verwendet wird. Im nächsten Abschnitt wird veranschaulicht, wie dies ausgeführt werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Delegat zu verwenden, die keine Parameter akzeptiert. Dieser Code erstellt eine generische Klasse namens `LazyValue` , die eine Feld des Typs hat <xref:System.Func%601>. Dieses Delegatfeld kann einen Verweis auf alle Funktionen, die einen Wert des Typs, der entspricht zurückgibt, an den Typparameter der speichern die `LazyValue` Objekt. Die `LazyValue` -Typ weist außerdem eine `Value` Eigenschaft, die die Funktion ausgeführt wird (wenn es nicht bereits ausgeführt wurde) und der resultierende Wert zurückgegeben.  
+  
+ Im Beispiel zwei Methoden erstellt und zwei instanziiert `LazyValue` Objekte mit Lambda-Ausdrücke, die diese Methoden aufrufen. Die Lambda-Ausdrücke nehmen keine Parameter an, da sie nur eine Methode aufrufen müssen. Die beiden Methoden werden ausgeführt, wie die Ausgabe zeigt, nur, wenn der Wert der einzelnen `LazyValue` Objekt abgerufen wird.  
+  
+ [!code-csharp[System.Func~1#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~1/cs/Example.cs#5)]
+ [!code-vb[System.Func~1#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Func~1/vb/Example.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

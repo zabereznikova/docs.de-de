@@ -1,0 +1,73 @@
+<Type Name="EventHandler&lt;TEventArgs&gt;" FullName="System.EventHandler&lt;TEventArgs&gt;">
+  <TypeSignature Language="C#" Value="public delegate void EventHandler&lt;TEventArgs&gt;(object sender, TEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed EventHandler`1&lt;TEventArgs&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.EventHandler`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TEventArgs" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="TEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="TEventArgs">Der Typ der vom Ereignis generierten Ereignisdaten.</typeparam>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein Objekt, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode dar, von der ein Ereignis behandelt wird, wenn das Ereignis die Daten bereitstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ereignismodell in .NET Framework basiert auf dem Vorhandensein eines Ereignisdelegaten, der ein Ereignis mit dem entsprechenden Handler verbindet. Um ein Ereignis auszulösen, werden zwei Elemente erforderlich:  
+  
+-   Ein Delegat, der auf eine Methode verweist, die die Antwort auf das Ereignis bereitstellt.  
+  
+-   Optional, eine Klasse, die die Ereignisdaten enthält, wenn das Ereignis die Daten bereitstellt.  
+  
+ Der Delegat ist ein Typ, der eine Signatur, d. h. den Typ des Rückgabewerts und Typen der Parameterliste für eine Methode definiert. Den Delegattyp können Sie um eine Variable zu deklarieren, die auf jede Methode mit der gleichen Signatur wie der Delegat verweisen können.  
+  
+ Die standard-Signatur von einem eventhandlerdelegaten definiert eine Methode, die keinen Wert zurückgibt. Diese Methode erste Parameter ist vom Typ <xref:System.Object> und bezieht sich auf die Instanz, die das Ereignis auslöst. Der zweite Parameter ist vom Typ abgeleitet <xref:System.EventArgs> und die Ereignisdaten enthält. Wenn das Ereignis keine Ereignisdaten generiert, wird der zweite Parameter ist einfach der Wert von der <xref:System.EventArgs.Empty?displayProperty=nameWithType> Feld. Der zweite Parameter ist, andernfalls abgeleitet <xref:System.EventArgs> und alle Felder oder Eigenschaften erforderlich sind, zum Speichern von Daten für das Ereignis bereitstellt.  
+  
+ Die <xref:System.EventHandler%601> Delegat ist ein vordefinierter Delegat, der eine Ereignishandlermethode für ein Ereignis darstellt, die Daten generiert. Der Vorteil der Verwendung <xref:System.EventHandler%601> darin, dass Sie nicht benötigen, Ihre eigenen benutzerdefinierten Delegaten zu codieren, wenn das Ereignis Ereignisdaten generiert. Sie geben einfach den Typ des Ereignisobjekts Daten als generischer Parameter.  
+  
+ Um die Methode das Ereignis zuzuordnen, die das Ereignis behandelt, fügen Sie eine Instanz des Delegaten das Ereignis ein. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird.  
+  
+ Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt ein Ereignis namens `ThresholdReached`. Das Ereignis zugeordnet ist ein <xref:System.EventHandler%601> delegieren.  
+  
+ [!code-cpp[EventsOverview#6](~/samples/snippets/cpp/VS_Snippets_CLR/eventsoverview/cpp/programwithdata.cpp#6)]
+ [!code-csharp[EventsOverview#6](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdata.cs#6)]
+ [!code-vb[EventsOverview#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdata.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+    <altCompliant cref="T:System.EventHandler" />
+  </Docs>
+</Type>

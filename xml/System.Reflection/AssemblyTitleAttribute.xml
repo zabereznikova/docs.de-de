@@ -1,0 +1,134 @@
+<Type Name="AssemblyTitleAttribute" FullName="System.Reflection.AssemblyTitleAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyTitleAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyTitleAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.AssemblyTitleAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine Beschreibung für eine Assembly an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Assemblytitel ist, einen Anzeigenamen, der Leerzeichen enthalten kann.  
+  
+ Unter Windows Vista für dieses Attribut angegebene Informationen wird angezeigt, auf die **Details** auf der Registerkarte die **Windows Dateieigenschaften** Dialogfeld für die Assembly. Der Eigenschaftsname ist **DateiBeschreibung**. Unter Windows XP werden diese Informationen angezeigt, auf die **Version** auf der Registerkarte die **Dateieigenschaften Windows** (Dialogfeld).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Hinzufügen von Attributen, einschließlich der <xref:System.Reflection.AssemblyTitleAttribute> Attribut, um eine dynamische Assembly. Im Beispiel wird die Assembly auf dem Datenträger gespeichert und kann den Wert des Attributs angezeigt werden, mithilfe der **Dateieigenschaften Windows** (Dialogfeld).  
+  
+ [!code-cpp[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/CPP/assemblybuilder_defineversioninforesource.cpp#1)]
+ [!code-csharp[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/CS/assemblybuilder_defineversioninforesource.cs#1)]
+ [!code-vb[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/VB/assemblybuilder_defineversioninforesource.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyTitleAttribute (string title);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string title) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyTitleAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="title">Der Assemblytitel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.AssemblyTitleAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unter Windows Vista angegebene Zeichenfolge für die `title` Parameter angezeigt wird, auf die **Details** auf der Registerkarte die **Dateieigenschaften für die Windows** im Dialogfeld für die Assembly. Der Eigenschaftsname ist **DateiBeschreibung**. Unter Windows XP: Bei dieser Zeichenfolge wird angezeigt, auf die **Version** auf der Registerkarte die **Dateieigenschaften Windows** (Dialogfeld).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyTitleAttribute.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Informationen über den Assemblytitel.</summary>
+        <value>Der Assemblytitel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Windows Vista, den Wert des der <xref:System.Reflection.AssemblyTitleAttribute.Title%2A> Eigenschaft angezeigt wird, auf die **Details** auf der Registerkarte die **Dateieigenschaften Windows** im Dialogfeld für die Assembly. Der Eigenschaftsname ist **DateiBeschreibung**. Unter Windows XP: Diese Eigenschaft wird angezeigt, auf die **Version** auf der Registerkarte die **Dateieigenschaften Windows** (Dialogfeld).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

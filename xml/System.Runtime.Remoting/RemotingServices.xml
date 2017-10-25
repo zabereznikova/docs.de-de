@@ -1,0 +1,1051 @@
+<Type Name="RemotingServices" FullName="System.Runtime.Remoting.RemotingServices">
+  <TypeSignature Language="C#" Value="public static class RemotingServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed RemotingServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.RemotingServices" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet mehrere Methoden zum verwenden und Veröffentlichen von Remoteobjekten und -Proxys an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Dienstanbieter Umgang mit Problemen wie Aktivierung, Verwaltung der Objektlebensdauer oder Transaktionen sind, müssen Sie nicht zwischen Proxy-Verweise und Objektverweise zu unterscheiden. Infrastruktur für den Remotezugriff verwendet transparente Proxys, die der Eindruck entstehen, dass Remoteobjekte auf dem Client Raum befinden. Proxys erreichen, indem die Weiterleitung der Aufrufe, die auf die tatsächlichen Objekte an Remotestandorten ein Zugriff darauf.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="public static object Connect (Type classToProxy, string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Connect(class System.Type classToProxy, string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.Connect(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="classToProxy" Type="System.Type" />
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="classToProxy">Die <see cref="T:System.Type" /> eines bekannten Objekts auf dem Server, dem Sie eine Verbindung herstellen möchten.</param>
+        <param name="url">Die URL des Server-Klasse.</param>
+        <summary>Erstellt einen Proxy für ein bekanntes Objekt, wenn die <see cref="T:System.Type" /> und URL.</summary>
+        <returns>Ein Proxy für das remote-Objekt, das an einen Endpunkt, der von dem angegebenen bekannten Objekt unterstützt verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Proxyobjekt verweist auf einen Endpunkt von der angegebenen bekannten Objekt unterstützt wird. Bis auf den Proxy eine Methode aufgerufen wird, werden keine Nachrichten über das Netzwerk gesendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Runtime.Remoting.RemotingServices.Connect%2A> Methode, um einen Proxy für ein bekanntes Objekt zu erstellen.  
+  
+ [!code-cpp[RemotingServices.BasicSample#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingServices.BasicSample/CPP/basicclient.cpp#1)]
+ [!code-csharp[RemotingServices.BasicSample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingServices.BasicSample/CS/basicclient.cs#1)]
+ [!code-vb[RemotingServices.BasicSample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingServices.BasicSample/VB/basicclient.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="public static object Connect (Type classToProxy, string url, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Connect(class System.Type classToProxy, string url, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.Connect(System.Type,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="classToProxy" Type="System.Type" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="classToProxy">Die <see cref="T:System.Type" /> des bekannten Objekts, dem Sie eine Verbindung herstellen möchten.</param>
+        <param name="url">Die URL des bekannten Objekts.</param>
+        <param name="data">Channelspezifische Daten. Kann <see langword="null" />.</param>
+        <summary>Erstellt einen Proxy für ein bekanntes Objekt, wenn die <see cref="T:System.Type" />, URL und channelspezifische Daten.</summary>
+        <returns>Ein Proxy, der auf einen Endpunkt zeigt, die von dem angeforderten bekannten Objekt bereitgestellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Proxyobjekt verweist auf einen Endpunkt von der angegebenen bekannten Objekt unterstützt wird. Bis auf den Proxy eine Methode aufgerufen wird, werden keine Nachrichten über das Netzwerk gesendet.  
+  
+ Die `data` Objekt wird verwendet, um die Übermittlung von Informationen an den Kanal, und übergeben der <xref:System.Runtime.Remoting.Channels.IChannelSender.CreateMessageSink%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Disconnect">
+      <MemberSignature Language="C#" Value="public static bool Disconnect (MarshalByRefObject obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Disconnect(class System.MarshalByRefObject obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.Disconnect(System.MarshalByRefObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+      </Parameters>
+      <Docs>
+        <param name="obj">So trennen Sie den Kanal-Objekt.</param>
+        <summary>Beendet ein Objekt aus weiteren Meldungen über die registrierten Remotingkanäle empfangen.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt wurde erfolgreich aus der registrierten Remotingkanäle getrennt wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Runtime.Remoting.RemotingServices.Disconnect%2A> Methode, um ein Objekt aus dem Remoting-Kanäle zu trennen.  
+  
+ [!code-cpp[RemotingServices.BasicSample#2](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingServices.BasicSample/CPP/manualserver.cpp#2)]
+ [!code-csharp[RemotingServices.BasicSample#2](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingServices.BasicSample/CS/manualserver.cs#2)]
+ [!code-vb[RemotingServices.BasicSample#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingServices.BasicSample/VB/manualserver.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="obj" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="obj" /> Parameter ist ein Proxy.</exception>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteMessage">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Messaging.IMethodReturnMessage ExecuteMessage (MarshalByRefObject target, System.Runtime.Remoting.Messaging.IMethodCallMessage reqMsg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.Messaging.IMethodReturnMessage ExecuteMessage(class System.MarshalByRefObject target, class System.Runtime.Remoting.Messaging.IMethodCallMessage reqMsg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.ExecuteMessage(System.MarshalByRefObject,System.Runtime.Remoting.Messaging.IMethodCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMethodReturnMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.MarshalByRefObject" />
+        <Parameter Name="reqMsg" Type="System.Runtime.Remoting.Messaging.IMethodCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das remote-Objekt, dessen Methode Sie aufrufen möchten.</param>
+        <param name="reqMsg">Meldung für einen Methodenaufruf an den angegebenen Remoteobjekt-Methode.</param>
+        <summary>Eine Verbindung mit dem angegebenen Remoteobjekt her und führt die bereitgestellte <see cref="T:System.Runtime.Remoting.Messaging.IMethodCallMessage" /> darauf.</summary>
+        <returns>Die Antwort der remote-Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Methode wird in besonderen Fällen vom Server zum Weiterleiten des angegebenen Methodenaufrufs von einer anderen, möglicherweise remote-Objekt verwendet. Diese Methode kann aufgerufen werden, nur, wenn der Aufrufer im entsprechenden Kontext ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Runtime.Remoting.RemotingServices.ExecuteMessage%2A> Methode, um Methodenaufrufe an Remoteobjekte weitergeleitet.  
+  
+ [!code-cpp[RemotingServices.ExecuteMessage#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingServices.ExecuteMessage/CPP/serviceclass.cpp#1)]
+ [!code-csharp[RemotingServices.ExecuteMessage#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingServices.ExecuteMessage/CS/serviceclass.cs#1)]
+ [!code-vb[RemotingServices.ExecuteMessage#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingServices.ExecuteMessage/VB/serviceclass.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">Die Methode wurde aus einem anderen Kontext als dem systemeigenen Kontext des Objekts aufgerufen.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnvoyChainForProxy">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Messaging.IMessageSink GetEnvoyChainForProxy (MarshalByRefObject obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.Messaging.IMessageSink GetEnvoyChainForProxy(class System.MarshalByRefObject obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.GetEnvoyChainForProxy(System.MarshalByRefObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der Proxy des Remoteobjekts, die angeforderte Botensenken zugeordnet sind.</param>
+        <summary>Gibt eine Kette von Botensenken, die beim Senden von Nachrichten an das Remoteobjekt, dargestellt durch den angegebenen Proxy verwendet werden soll.</summary>
+        <returns>Eine Kette von Botensenken, die den angegebenen Proxy zugeordnet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Botensenken werden Ereignissenken gesendet werden, zusammen mit der <xref:System.Runtime.Remoting.ObjRef> eines Objekts, das verwendet wird, wenn Nachrichten von zurückgeben, der diesem Objekt. Die aktuelle Methode gibt die Botensenken, die während der Kommunikation zwischen dem Proxy des Objekts und das Objekt selbst verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLifetimeService">
+      <MemberSignature Language="C#" Value="public static object GetLifetimeService (MarshalByRefObject obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetLifetimeService(class System.MarshalByRefObject obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.GetLifetimeService(System.MarshalByRefObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, für die Lebensdauerdienst abrufen.</param>
+        <summary>Gibt ein Lebensdauerdienstobjekt, die steuert, die Richtlinien für die Lebensdauer des angegebenen Objekts zurück.</summary>
+        <returns>Das Objekt, das die Lebensdauer des kontrolliert <paramref name="obj" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die Lebensdauer Standarddienst wird das zurückgegebene Objekt ein Objekt vom Typ <xref:System.Runtime.Remoting.Lifetime.ILease>. Wenn die `obj` Parameter ist `null`, gibt die Methode `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Runtime.Remoting.RemotingServices.GetLifetimeService%2A> Methode, um einen Lebensdauerlease für das angegebene Objekt abzurufen.  
+  
+ [!code-cpp[RemotingServices.TimerSample#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingServices.TimerSample/CPP/timerclient.cpp#1)]
+ [!code-csharp[RemotingServices.TimerSample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingServices.TimerSample/CS/timerclient.cs#1)]
+ [!code-vb[RemotingServices.TimerSample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingServices.TimerSample/VB/timerclient.vb#1)]  
+  
+ Zum Kompilieren und Ausführen dieses Beispiels, müssen Sie zum Kompilieren und Ausführen einer timerserver.dll Server timerserver.exe und Kompilieren einer freigegebenen Bibliothek.  
+  
+ Die Quelle für timerserver.exe lautet folgendermaßen:  
+  
+ [!code-csharp[RemotingServices.TimerSample#2](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingServices.TimerSample/CS/timerserver.cs#2)]
+ [!code-vb[RemotingServices.TimerSample#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingServices.TimerSample/VB/timerserver.vb#2)]  
+  
+ Die Quelle für timerserver.dll lautet folgendermaßen:  
+  
+ [!code-csharp[RemotingServices.TimerSample#3](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingServices.TimerSample/CS/timerservice.cs#3)]
+ [!code-vb[RemotingServices.TimerSample#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingServices.TimerSample/VB/timerservice.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodBaseFromMethodMessage">
+      <MemberSignature Language="C#" Value="public static System.Reflection.MethodBase GetMethodBaseFromMethodMessage (System.Runtime.Remoting.Messaging.IMethodMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.MethodBase GetMethodBaseFromMethodMessage(class System.Runtime.Remoting.Messaging.IMethodMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.GetMethodBaseFromMethodMessage(System.Runtime.Remoting.Messaging.IMethodMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMethodMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die Methode Meldung die Methodenbasis zu extrahieren.</param>
+        <summary>Erfolgt die Methodenrückgabe Basis aus der angegebenen <see cref="T:System.Runtime.Remoting.Messaging.IMethodMessage" />.</summary>
+        <returns>Der Methodenbasis extrahiert aus der <paramref name="msg" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies bestimmt die Methodenbasis der <xref:System.Runtime.Remoting.Messaging.IMethodMessage.TypeName%2A>, <xref:System.Runtime.Remoting.Messaging.IMethodMessage.MethodName%2A>, und <xref:System.Runtime.Remoting.Messaging.IMethodMessage.MethodSignature%2A> Eigenschaften des <xref:System.Runtime.Remoting.Messaging.IMethodMessage> und dient der Klassen implementieren die <xref:System.Runtime.Remoting.Messaging.IMethodMessage> Schnittstelle. Consumer von <xref:System.Runtime.Remoting.Messaging.IMethodMessage> Klassen sollten verweisen die <xref:System.Runtime.Remoting.Messaging.IMethodMessage.MethodBase%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Entweder der unmittelbaren Aufrufer verfügt nicht über die Berechtigung für die Infrastruktur, oder mindestens einer der Aufrufer in der Aufrufliste höher ist nicht berechtigt, um die Typinformationen nicht öffentlicher Member abzurufen.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public static void GetObjectData (object obj, System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetObjectData(object obj, class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu serialisierende Objekt.</param>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> in den das Objekt serialisiert wird.</param>
+        <param name="context">Die Quelle und das Ziel der Serialisierung.</param>
+        <summary>Serialisiert den angegebenen Marshal durch Verweis-Objekt in der bereitgestellten <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="obj" />-Parameter oder der <paramref name="info" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectUri">
+      <MemberSignature Language="C#" Value="public static string GetObjectUri (MarshalByRefObject obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetObjectUri(class System.MarshalByRefObject obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.GetObjectUri(System.MarshalByRefObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.MarshalByRefObject" /> für das ein URI angefordert wird.</param>
+        <summary>Ruft den URI für das angegebene Objekt ab.</summary>
+        <returns>Der URI des angegebenen Objekts, sofern vorhanden, oder <see langword="null" /> , wenn das Objekt noch nicht gemarshallt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[System.Runtime.Remoting.RemotingServices#18](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.RemotingServices/CPP/remotingservicessample.cpp#18)]
+ [!code-csharp[System.Runtime.Remoting.RemotingServices#18](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.RemotingServices/CS/remotingservicessample.cs#18)]
+ [!code-vb[System.Runtime.Remoting.RemotingServices#18](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Remoting.RemotingServices/VB/remotingservicessample.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjRefForProxy">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.ObjRef GetObjRefForProxy (MarshalByRefObject obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.ObjRef GetObjRefForProxy(class System.MarshalByRefObject obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.GetObjRefForProxy(System.MarshalByRefObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.ObjRef</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Proxy verbunden, auf das Objekt, das Sie erstellen möchten eine <see cref="T:System.Runtime.Remoting.ObjRef" /> für.</param>
+        <summary>Gibt die <see cref="T:System.Runtime.Remoting.ObjRef" /> , das das entfernte Objekt aus den angegebenen Proxy darstellt.</summary>
+        <returns>Ein <see cref="T:System.Runtime.Remoting.ObjRef" /> , die das remote-Objekt der angegebene Proxy, können verbunden ist darstellt oder <see langword="null" /> , wenn das Objekt oder der Proxy nicht gemarshallt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Runtime.Remoting.ObjRef> ist eine serialisierbare Darstellung eines Objekts verwendet, um einen Objektverweis über die Grenze einer Anwendungsdomäne zu übertragen. Erstellen einer <xref:System.Runtime.Remoting.ObjRef> für ein Objekt als Marshalling bezeichnet wird. Die <xref:System.Runtime.Remoting.ObjRef> übertragen kann über einen Kanal in einer anderen Anwendungsdomäne (möglicherweise auf einem anderen Prozess oder Computer). Einmal in der anderen Anwendungsdomäne der <xref:System.Runtime.Remoting.ObjRef> analysiert werden muss, um einen Proxy für das Objekt, in der Regel auf das eigentliche Objekt verbunden zu erstellen. Dieser Vorgang wird als Methodeninformationen bezeichnet. Während die Methodeninformationen, die <xref:System.Runtime.Remoting.ObjRef> wird analysiert, um die Methodeninformationen des Remoteobjekts und transparenter Proxy zu extrahieren und <xref:System.Runtime.Remoting.Proxies.RealProxy> Objekte erstellt werden.  
+  
+ Ein <xref:System.Runtime.Remoting.ObjRef> enthält Informationen zur Beschreibung der <xref:System.Type> und die Klasse des Objekts gemarshallt wird, ein URI, die bestimmte Objektinstanz und die Kommunikation eindeutig identifiziert, verwandte Informationen dazu, wie die remote-Anwendung nicht erreichen, in denen das Objekt befindet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen einer <xref:System.Runtime.Remoting.ObjRef> Instanz für das angegebene Objekt.  
+  
+ [!code-cpp[RemotingServices.GetObjRefForProxy#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingServices.GetObjRefForProxy/CPP/client.cpp#1)]
+ [!code-csharp[RemotingServices.GetObjRefForProxy#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingServices.GetObjRefForProxy/CS/client.cs#1)]
+ [!code-vb[RemotingServices.GetObjRefForProxy#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingServices.GetObjRefForProxy/VB/client.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRealProxy">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Proxies.RealProxy GetRealProxy (object proxy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.Proxies.RealProxy GetRealProxy(object proxy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.GetRealProxy(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Proxies.RealProxy</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="proxy" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="proxy">Ein transparenter Proxy.</param>
+        <summary>Gibt den echten Proxy hinter dem angegebenen transparenten Proxy zurück.</summary>
+        <returns>Der echte Proxyinstanz transparenten Proxy sichern.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Client, der ein Objekt über jede Art von Remotegrenze verwendet, wird tatsächlich einen transparenten Proxy für das Objekt verwendet. Der transparente Proxy vermittelt den Eindruck, dass das eigentliche Objekt auf dem Client befindet. Sie erreicht dies durch die Weiterleitung der Aufrufe, die an das eigentliche Objekt mit der Infrastruktur für den Remotezugriff auf.  
+  
+ Transparente Proxy wird durch eine Instanz einer verwalteten Klasse vom Typ unterstützt <xref:System.Runtime.Remoting.Proxies.RealProxy>. Die <xref:System.Runtime.Remoting.Proxies.RealProxy> implementiert einen Teil der Funktionen zum Weiterleiten der Vorgänge vom transparenten Proxy erforderlich sind.  
+  
+ Ein Proxyobjekt erbt die zugeordnete Semantik verwalteter Objekte, z. B. Garbagecollection, Unterstützung für Member und Methoden und auf neue Geräteklassen Formular erweitert werden können. Der Proxy fungiert als ein Objekt der Klasse des Remoteobjekts (transparenter Proxy) und ist auch ein verwaltetes Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetServerTypeForUri">
+      <MemberSignature Language="C#" Value="public static Type GetServerTypeForUri (string URI);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetServerTypeForUri(string URI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.GetServerTypeForUri(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="URI" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="URI">Der URI des Objekts, dessen <see cref="T:System.Type" /> angefordert wird.</param>
+        <summary>Gibt die <see cref="T:System.Type" /> des Objekts mit dem angegebenen URI.</summary>
+        <returns>Die <see cref="T:System.Type" /> des Objekts mit dem angegebenen URI.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da Remoting Endpunkte mithilfe von URIs identifiziert die <xref:System.Runtime.Remoting.RemotingServices.GetServerTypeForUri%2A> Methode ist sehr nützlich, in die austauschbare Teile der Remotinginfrastruktur (z. B. Kanal senken, dynamische senken und Kontextsenken), mit denen <xref:System.Runtime.Remoting.Messaging.IMessage> Objekten, da die aktuelle Methode wird aus dem URI zugeordneten Typ-Objekt zurück.  
+  
+   
+  
+## Examples  
+ [!code-cpp[System.Runtime.Remoting.RemotingServices#7](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.RemotingServices/CPP/remotingservicessample.cpp#7)]
+ [!code-csharp[System.Runtime.Remoting.RemotingServices#7](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.RemotingServices/CS/remotingservicessample.cs#7)]
+ [!code-vb[System.Runtime.Remoting.RemotingServices#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Remoting.RemotingServices/VB/remotingservicessample.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Entweder der unmittelbaren Aufrufer verfügt nicht über die Berechtigung für die Infrastruktur, oder mindestens einer der Aufrufer in der Aufrufliste höher ist nicht berechtigt, um die Typinformationen nicht öffentlicher Member abzurufen.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">um die Typinformationen nicht öffentlicher Member abzurufen. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSessionIdForMethodMessage">
+      <MemberSignature Language="C#" Value="public static string GetSessionIdForMethodMessage (System.Runtime.Remoting.Messaging.IMethodMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetSessionIdForMethodMessage(class System.Runtime.Remoting.Messaging.IMethodMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.GetSessionIdForMethodMessage(System.Runtime.Remoting.Messaging.IMethodMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMethodMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die <see cref="T:System.Runtime.Remoting.Messaging.IMethodMessage" /> für die eine Sitzungs-ID angefordert wird.</param>
+        <summary>Ruft eine Sitzungs-ID für eine Nachricht ab.</summary>
+        <returns>Eine Sitzungs-ID-Zeichenfolge, die die aktuelle Sitzung eindeutig identifiziert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieselbe Sitzungs-ID kann für Objekte in derselben Anwendung zurückgegeben werden, aber diese Methode gibt nie dieselbe Sitzungs-ID für zwei Objekte in anderen Remoteanwendungen zurück.  
+  
+ Weitere Informationen zum Identifizieren von Sitzungen und Sitzungs-IDs finden Sie unter ASP.Net [ASP.NET Session State Overview](http://msdn.microsoft.com/library/6d60d381-6521-4e1d-9089-da6464f2a9bc).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Sitzungs-ID-Zeichenfolge für die aktuelle Sitzung abgerufen wird.  
+  
+ [!code-cpp[RemotingServices.ExecuteMessage#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingServices.ExecuteMessage/CPP/serviceclass.cpp#1)]
+ [!code-csharp[RemotingServices.ExecuteMessage#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingServices.ExecuteMessage/CS/serviceclass.cs#1)]
+ [!code-vb[RemotingServices.ExecuteMessage#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingServices.ExecuteMessage/VB/serviceclass.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMethodOverloaded">
+      <MemberSignature Language="C#" Value="public static bool IsMethodOverloaded (System.Runtime.Remoting.Messaging.IMethodMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsMethodOverloaded(class System.Runtime.Remoting.Messaging.IMethodMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.IsMethodOverloaded(System.Runtime.Remoting.Messaging.IMethodMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMethodMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die Meldung, die einen Aufruf an die betreffende Methode enthält.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob die Methode in der angegebenen Meldung überlastet ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Methode aufgerufen wird, <paramref name="msg" /> überladene ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsObjectOutOfAppDomain">
+      <MemberSignature Language="C#" Value="public static bool IsObjectOutOfAppDomain (object tp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsObjectOutOfAppDomain(object tp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.IsObjectOutOfAppDomain(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tp" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="tp">Das zu überprüfende Objekt.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob das Objekt vom angegebenen transparenter Proxy angegeben in einer anderen Anwendungsdomäne als das Objekt enthalten ist, die die aktuelle Methode aufgerufen.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt aus der aktuellen Anwendungsdomäne ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zu Anwendungsdomänen finden Sie unter [Anwendungsdomänen](http://msdn.microsoft.com/en-us/39e57d07-a740-4cd4-ae82-e119ea3856c1).  
+  
+   
+  
+## Examples  
+ [!code-cpp[RemotingServices IsObject Snippets#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingServices IsObject Snippets/CPP/class1.cpp#1)]
+ [!code-csharp[RemotingServices IsObject Snippets#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingServices IsObject Snippets/CS/class1.cs#1)]
+ [!code-vb[RemotingServices IsObject Snippets#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingServices IsObject Snippets/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsObjectOutOfContext">
+      <MemberSignature Language="C#" Value="public static bool IsObjectOutOfContext (object tp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsObjectOutOfContext(object tp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.IsObjectOutOfContext(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tp" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="tp">Das zu überprüfende Objekt.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob das durch den angegebenen Proxy dargestellte Objekt in einem anderen Kontext als das Objekt enthalten ist, die die aktuelle Methode aufgerufen.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt aus dem aktuellen Kontext; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Kontext ist eine geordnete Sequenz von Eigenschaften, die eine Umgebung für die Objekte zu definieren, die sich darin befinden. Kontexte werden während des Aktivierungsprozesses für Objekte erstellt, die erfordern, dass bestimmte automatische solche Synchronisierung, Transaktionen, Just-in-Time-Aktivierung, Sicherheit usw. Dienste konfiguriert sind. Mehrere Objekte können in einem Kontext befinden.  
+  
+   
+  
+## Examples  
+ [!code-cpp[RemotingServices IsObject Snippets#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingServices IsObject Snippets/CPP/class1.cpp#1)]
+ [!code-csharp[RemotingServices IsObject Snippets#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingServices IsObject Snippets/CS/class1.cs#1)]
+ [!code-vb[RemotingServices IsObject Snippets#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingServices IsObject Snippets/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOneWay">
+      <MemberSignature Language="C#" Value="public static bool IsOneWay (System.Reflection.MethodBase method);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsOneWay(class System.Reflection.MethodBase method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.IsOneWay(System.Reflection.MethodBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Reflection.MethodBase" />
+      </Parameters>
+      <Docs>
+        <param name="method">Der betreffenden Methode.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob der Client, der die Methode aufgerufen in angegeben die angegebene Meldung für den Server zum Abschließen der Verarbeitung der Methodennamens vor dem Fortsetzen der Ausführung wartet.</summary>
+        <returns>
+          <see langword="true" />Wenn die Methode eine Möglichkeit ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine unidirektionale Methode aufgerufen wird, wartet der Client nicht für den Server zum Abschließen der Verarbeitung der Nachrichteninhalts. Die Clientmethode gibt die Anwendung mit keine Kenntnis davon, ob der Server die Nachricht erfolgreich verarbeitet. Methoden werden als eine Möglichkeit, mithilfe der <xref:System.Runtime.Remoting.Messaging.OneWayAttribute>.  
+  
+ Unidirektionale Methoden sind keinen Rückgabewert oder out-Parameter.  
+  
+   
+  
+## Examples  
+ [!code-cpp[System.Runtime.Remoting.RemotingServices#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.RemotingServices/CPP/remotingservicessample.cpp#2)]
+ [!code-csharp[System.Runtime.Remoting.RemotingServices#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.RemotingServices/CS/remotingservicessample.cs#2)]
+ [!code-vb[System.Runtime.Remoting.RemotingServices#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Remoting.RemotingServices/VB/remotingservicessample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTransparentProxy">
+      <MemberSignature Language="C#" Value="public static bool IsTransparentProxy (object proxy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsTransparentProxy(object proxy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.IsTransparentProxy(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="proxy" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="proxy">Der Verweis auf das zu überprüfende Objekt.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob das angegebene Objekt einen transparenten Proxy oder ein echtes Objekt ist.</summary>
+        <returns>Ein boolescher Wert, der angibt, ob das angegebene Objekt in der <paramref name="proxy" /> -Parameter ist ein transparenter Proxy oder ein echtes Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Client, der ein Objekt über jede Art von Remotegrenze verwendet, wird tatsächlich einen transparenten Proxy für das Objekt verwendet. Der transparente Proxy vermittelt den Eindruck, dass das eigentliche Objekt auf dem Client befindet. Sie erreicht dies durch die Weiterleitung der Aufrufe, die an das eigentliche Objekt mit der Infrastruktur für den Remotezugriff auf.  
+  
+ Transparente Proxy wird selbst durch eine Instanz einer verwalteten Klasse vom Typ untergebracht <xref:System.Runtime.Remoting.Proxies.RealProxy>. Die <xref:System.Runtime.Remoting.Proxies.RealProxy> implementiert einen Teil der Funktionen zum Weiterleiten der Vorgänge vom transparenten Proxy erforderlich sind. Ein Proxyobjekt erbt die zugeordnete Semantik verwalteter Objekte, z. B. Garbagecollection, Unterstützung für Member und Methoden und auf neue Geräteklassen Formular erweitert werden können. Daher weist der Proxy dual aufgebaut; Einerseits muss als ein Objekt der Klasse des Remoteobjekts (transparenter Proxy) fungieren, und auf die andere ist es ein verwaltetes Objekt selbst.  
+  
+ Ein Proxy-Objekt kann verwendet werden, unabhängig von der Remote-Untereinheiten innerhalb einer <xref:System.AppDomain>. Anwendungen müssen Proxy-Verweise und Objektverweise nicht unterscheiden. Allerdings müssen Dienstanbieter Umgang mit Problemen wie Aktivierung, Verwaltung der Objektlebensdauer und Transaktionen solche Unterschiede vornehmen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Runtime.Remoting.RemotingServices.IsTransparentProxy%2A> Methode, um zu bestimmen, ob ein Objekt über einen Proxy oder ein echtes Objekt ist. Der vollständige Beispielcode finden Sie im Beispiel für die <xref:System.Runtime.Remoting.Messaging.AsyncResult> Klasse.  
+  
+ [!code-cpp[AsyncResult.NewExamples#6](~/samples/snippets/cpp/VS_Snippets_CLR/AsyncResult.NewExamples/CPP/ad.cpp#6)]
+ [!code-csharp[AsyncResult.NewExamples#6](~/samples/snippets/csharp/VS_Snippets_CLR/AsyncResult.NewExamples/CS/ad.cs#6)]
+ [!code-vb[AsyncResult.NewExamples#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/AsyncResult.NewExamples/VB/ad.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogRemotingStage">
+      <MemberSignature Language="C#" Value="public static void LogRemotingStage (int stage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void LogRemotingStage(int32 stage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.LogRemotingStage(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("REMOTING_PERF")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("It existed for only internal use in .NET and unimplemented in mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stage" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="stage">Eine intern definierte Konstante, die die Phase im Remotingaustausch einer identifiziert.</param>
+        <summary>Protokolliert die Stufe in einem Remoting--Austausch in einem externen Debugger.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `"REMOTING_PERF"` Vorverarbeitungssymbol an die Methode angewendet wird, mithilfe der <xref:System.Diagnostics.ConditionalAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Marshal">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.ObjRef Marshal (MarshalByRefObject Obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.ObjRef Marshal(class System.MarshalByRefObject Obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.Marshal(System.MarshalByRefObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.ObjRef</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Obj" Type="System.MarshalByRefObject" />
+      </Parameters>
+      <Docs>
+        <param name="Obj">Das zu konvertierende Objekt.</param>
+        <summary>Akzeptiert eine <see cref="T:System.MarshalByRefObject" />, registriert er mit der Remotinginfrastruktur und konvertiert sie in einer Instanz von der <see cref="T:System.Runtime.Remoting.ObjRef" /> Klasse.</summary>
+        <returns>Eine Instanz von der <see cref="T:System.Runtime.Remoting.ObjRef" /> -Klasse, die das angegebene Objekt darstellt der <paramref name="Obj" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Runtime.Remoting.ObjRef> ist eine serialisierbare Darstellung eines Objekts verwendet, um einen Objektverweis über die Grenze einer Anwendungsdomäne zu übertragen. Erstellen einer <xref:System.Runtime.Remoting.ObjRef> für ein Objekt als Marshalling bezeichnet wird. Die <xref:System.Runtime.Remoting.ObjRef> übertragen kann über einen Kanal in einer anderen Anwendungsdomäne (möglicherweise auf einem anderen Prozess oder Computer). Einmal in der anderen Anwendungsdomäne der <xref:System.Runtime.Remoting.ObjRef> analysiert werden muss, um einen Proxy für das Objekt, in der Regel auf das eigentliche Objekt verbunden zu erstellen. Dieser Vorgang wird als Methodeninformationen bezeichnet.  
+  
+ Ein <xref:System.Runtime.Remoting.ObjRef> enthält Informationen zur Beschreibung der <xref:System.Type> und die Klasse des Objekts gemarshallt wird, ein URI, die bestimmte Objektinstanz und die Kommunikation eindeutig identifiziert, verwandte Informationen zum Erreichen der Unterteilung Remoting in dem sich das Objekt befindet.  
+  
+ Während des Marshallens der Kontext des aktuellen Threads verwendet wird, nicht den Kontext, die aktiv war, wenn das Objekt erstellt wurde. Wenn ein URI nicht explizit durch festgelegt wurde die <xref:System.Runtime.Remoting.RemotingServices.SetObjectUriForMarshal%2A> -Methode, wird er vom Remoting-Identitätsinfrastruktur automatisch generiert.  
+  
+ Einen URI nicht mit einem Proxy zugeordnet werden, für eine der folgenden beiden Gründe: der URI für das Objekt dar, auf dem Server generiert wurde, oder das Objekt ist gut bekannt, in diesem Fall wird der URI ist unbekannt. Aus diesem Grund ist wenn die `Obj` Parameter ist ein Proxy, wird eine Ausnahme ausgelöst. Diese Einschränkung ist für benutzerdefinierte Proxys gelockert, da die transparente Proxy als das Serverobjekt behandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">Die <paramref name="Obj" /> Parameter ist ein Objekt der Proxy.</exception>
+        <exception cref="T:System.Security.SecurityException">Verfügt über mindestens eines der Aufrufern einer höheren Ebene in der Aufrufliste nicht über die Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Marshal">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.ObjRef Marshal (MarshalByRefObject Obj, string URI);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.ObjRef Marshal(class System.MarshalByRefObject Obj, string URI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.Marshal(System.MarshalByRefObject,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.ObjRef</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Obj" Type="System.MarshalByRefObject" />
+        <Parameter Name="URI" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Obj">Das zu konvertierende Objekt.</param>
+        <param name="URI">Den angegebenen URI mit dem zur Initialisierung der neuen <see cref="T:System.Runtime.Remoting.ObjRef" />. Kann <see langword="null" />.</param>
+        <summary>Konvertiert den angegebenen <see cref="T:System.MarshalByRefObject" /> in eine Instanz von der <see cref="T:System.Runtime.Remoting.ObjRef" /> Klasse mit dem angegebenen URI.</summary>
+        <returns>Eine Instanz von der <see cref="T:System.Runtime.Remoting.ObjRef" /> -Klasse, die das angegebene Objekt darstellt der <paramref name="Obj" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Runtime.Remoting.ObjRef> ist eine serialisierbare Darstellung eines Objekts verwendet, um einen Objektverweis über die Grenze einer Anwendungsdomäne zu übertragen. Erstellen einer <xref:System.Runtime.Remoting.ObjRef> für ein Objekt als Marshalling bezeichnet wird. Die <xref:System.Runtime.Remoting.ObjRef> übertragen kann über einen Kanal in einer anderen Anwendungsdomäne (möglicherweise auf einem anderen Prozess oder Computer). Einmal in der anderen Anwendungsdomäne der <xref:System.Runtime.Remoting.ObjRef> analysiert werden muss, um einen Proxy für das Objekt, in der Regel auf das eigentliche Objekt verbunden zu erstellen. Dieser Vorgang wird als Methodeninformationen bezeichnet.  
+  
+ Ein <xref:System.Runtime.Remoting.ObjRef> enthält Informationen zur Beschreibung der <xref:System.Type> und die Klasse des Objekts gemarshallt wird, ein URI, die bestimmte Objektinstanz und die Kommunikation eindeutig identifiziert, verwandte Informationen zum Erreichen der Unterteilung Remoting in dem sich das Objekt befindet.  
+  
+ Während des Marshallens der Kontext des aktuellen Threads verwendet wird, nicht den Kontext, die aktiv war, wenn das Objekt erstellt wurde.  
+  
+ Einen URI nicht mit einem Proxy zugeordnet werden, für eine der folgenden beiden Gründe: der URI für das Objekt dar, auf dem Server generiert wurde, oder das Objekt ist gut bekannt, in diesem Fall wird der URI ist unbekannt. Aus diesem Grund ist wenn die `Obj` Parameter ist ein Proxy, wird eine Ausnahme ausgelöst. Diese Einschränkung ist für benutzerdefinierte Proxys gelockert, da die transparente Proxy als das Serverobjekt behandelt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die aktuelle <xref:System.Runtime.Remoting.RemotingServices.Marshal%2A> Methode, um ein angegebenes Objekt zu marshallen.  
+  
+ [!code-cpp[RemotingServices.BasicSample#2](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingServices.BasicSample/CPP/manualserver.cpp#2)]
+ [!code-csharp[RemotingServices.BasicSample#2](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingServices.BasicSample/CS/manualserver.cs#2)]
+ [!code-vb[RemotingServices.BasicSample#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingServices.BasicSample/VB/manualserver.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">
+          <paramref name="Obj" />ein Objektproxy ist und die <paramref name="URI" /> -Parameter ist kein <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Verfügt über mindestens eines der Aufrufern einer höheren Ebene in der Aufrufliste nicht über die Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Marshal">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.ObjRef Marshal (MarshalByRefObject Obj, string ObjURI, Type RequestedType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.ObjRef Marshal(class System.MarshalByRefObject Obj, string ObjURI, class System.Type RequestedType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.Marshal(System.MarshalByRefObject,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.ObjRef</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Obj" Type="System.MarshalByRefObject" />
+        <Parameter Name="ObjURI" Type="System.String" />
+        <Parameter Name="RequestedType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="Obj">Das in eine <see cref="T:System.Runtime.Remoting.ObjRef" /> zu konvertierende Objekt.</param>
+        <param name="ObjURI">Der URI dem Objekt angegeben wird, der <c>Obj</c> mit Parameter gemarshallt wird. Kann <see langword="null" />.</param>
+        <param name="RequestedType">Die <see cref="T:System.Type" /> <c>Obj</c> als gemarshallt wird. Kann <see langword="null" />.</param>
+        <summary>Akzeptiert eine <see cref="T:System.MarshalByRefObject" /> und konvertiert sie in einer Instanz von der <see cref="T:System.Runtime.Remoting.ObjRef" /> -Klasse mit dem angegebenen URI und der bereitgestellten <see cref="T:System.Type" />.</summary>
+        <returns>Eine Instanz von der <see cref="T:System.Runtime.Remoting.ObjRef" /> -Klasse, die das angegebene Objekt darstellt der <paramref name="Obj" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Runtime.Remoting.ObjRef> ist eine serialisierbare Darstellung eines Objekts verwendet, um einen Objektverweis über die Grenze einer Anwendungsdomäne zu übertragen. Erstellen einer <xref:System.Runtime.Remoting.ObjRef> für ein Objekt als Marshalling bezeichnet wird. Die <xref:System.Runtime.Remoting.ObjRef> übertragen kann über einen Kanal in einer anderen Anwendungsdomäne (möglicherweise auf einem anderen Prozess oder Computer). Einmal in der anderen Anwendungsdomäne der <xref:System.Runtime.Remoting.ObjRef> analysiert werden muss, um einen Proxy für das Objekt, in der Regel auf das eigentliche Objekt verbunden zu erstellen. Dieser Vorgang wird als Methodeninformationen bezeichnet.  
+  
+ Ein <xref:System.Runtime.Remoting.ObjRef> enthält Informationen zur Beschreibung der <xref:System.Type> und die Klasse des Objekts gemarshallt wird, ein URI, die bestimmte Objektinstanz und die Kommunikation eindeutig identifiziert, verwandte Informationen zum Erreichen der Unterteilung Remoting in dem sich das Objekt befindet.  
+  
+ Das angegebene <xref:System.Type> wird von der Remotinginfrastruktur zum Begrenzen des Bereichs der verfügbar gemachte Typhierarchie verwendet. Wenn Objekt A Objekt B, abgeleitet wird abgeleitet von C-Objekt, z. B. und <xref:System.Runtime.Remoting.RemotingServices.Marshal%2A> aufgerufen wird, wird der Client den Proxy zwischen C und B, aber nicht an a umgewandelt werden kann  
+  
+ Während des Marshallens der Kontext des aktuellen Threads verwendet wird, nicht den Kontext, die aktiv war, wenn das Objekt erstellt wurde.  
+  
+ Einen URI nicht mit einem Proxy zugeordnet werden, für eine der folgenden beiden Gründe: der URI für das Objekt dar, auf dem Server generiert wurde, oder das Objekt ist gut bekannt, in diesem Fall wird der URI ist unbekannt. Aus diesem Grund ist wenn die `Obj` Parameter ist ein Proxy, wird eine Ausnahme ausgelöst. Diese Einschränkung ist für benutzerdefinierte Proxys gelockert, da die transparente Proxy als das Serverobjekt behandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">
+          <paramref name="Obj" />ist ein Proxy eines Remoteobjekts und die <paramref name="ObjUri" /> -Parameter ist kein <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Verfügt über mindestens eines der Aufrufern einer höheren Ebene in der Aufrufliste nicht über die Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetObjectUriForMarshal">
+      <MemberSignature Language="C#" Value="public static void SetObjectUriForMarshal (MarshalByRefObject obj, string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetObjectUriForMarshal(class System.MarshalByRefObject obj, string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.SetObjectUriForMarshal(System.MarshalByRefObject,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das ein URI festgelegt.</param>
+        <param name="uri">Der URI für das angegebene Objekt zugewiesen werden soll.</param>
+        <summary>Definiert die URI für den nachfolgenden Aufruf der <see cref="M:System.Runtime.Remoting.RemotingServices.Marshal(System.MarshalByRefObject)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von der aktuellen Methode festgelegte URI wird verwendet, wenn das angegebene Objekt zu marshallen.  
+  
+ Nach dem Marshallen der URI des angegebenen Objekts festgelegt ist, auf die Zeichenfolge in der `uri` Parameter angefügt wird, auf die <xref:System.Guid> des aktuellen <xref:System.AppDomain>.  
+  
+ Wenn die aktuelle Anwendung einen HTTP-Port lauscht, und klicken Sie dann beide der angegebenen Zeichenfolge der `uri` Parameter und die `uri` Zeichenfolge angefügt wird, auf die <xref:System.Guid> des aktuellen <xref:System.AppDomain> Route mit dem angegebenen Objekt. Beispiel: Wenn die Anwendung über HTTP-Port 9000 überwacht wird und dann http://localhost: 9000/ObjectUri und http://localhost: 9000 /\<Appdomainguid > / ObjectUri Weiterleitung an das Objekt angegeben wird, der `obj` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den URI festgelegt wird, die von verwendet werden, die <xref:System.Runtime.Remoting.RemotingServices.Marshal%2A> Methode, wenn das angegebene Objekt zu marshallen.  
+  
+ [!code-cpp[RemotingServices.SetObjectUriForMarshal#1](~/samples/snippets/cpp/VS_Snippets_CLR/RemotingServices.SetObjectUriForMarshal/CPP/source.cpp#1)]
+ [!code-csharp[RemotingServices.SetObjectUriForMarshal#1](~/samples/snippets/csharp/VS_Snippets_CLR/RemotingServices.SetObjectUriForMarshal/CS/source.cs#1)]
+ [!code-vb[RemotingServices.SetObjectUriForMarshal#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RemotingServices.SetObjectUriForMarshal/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">
+          <paramref name="obj" />ist nicht für ein lokales Objekt wurde bereits gemarshallt werden soll, oder wurde bereits für die aktuelle Methode aufgerufen.</exception>
+        <exception cref="T:System.Security.SecurityException">Verfügt über mindestens eines der Aufrufern einer höheren Ebene in der Aufrufliste nicht über die Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Unmarshal">
+      <MemberSignature Language="C#" Value="public static object Unmarshal (System.Runtime.Remoting.ObjRef objectRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Unmarshal(class System.Runtime.Remoting.ObjRef objectRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.Unmarshal(System.Runtime.Remoting.ObjRef)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectRef" Type="System.Runtime.Remoting.ObjRef" />
+      </Parameters>
+      <Docs>
+        <param name="objectRef">Die <see cref="T:System.Runtime.Remoting.ObjRef" /> Objekt, das darstellt remote für den Proxy erstellt wird.</param>
+        <summary>Akzeptiert eine <see cref="T:System.Runtime.Remoting.ObjRef" /> und ein Proxyobjekt erstellt.</summary>
+        <returns>Ein Proxy für das Objekt, das die angegebenen <see cref="T:System.Runtime.Remoting.ObjRef" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Runtime.Remoting.ObjRef> ist eine serialisierbare Darstellung eines Objekts verwendet, um einen Objektverweis über die Grenze einer Anwendungsdomäne zu übertragen. Erstellen einer <xref:System.Runtime.Remoting.ObjRef> für ein Objekt als Marshalling bezeichnet wird. Die <xref:System.Runtime.Remoting.ObjRef> übertragen kann über einen Kanal in einer anderen Anwendungsdomäne (möglicherweise auf einem anderen Prozess oder Computer). Einmal in der anderen Anwendungsdomäne der <xref:System.Runtime.Remoting.ObjRef> analysiert werden muss, um einen Proxy für das Objekt, in der Regel auf das eigentliche Objekt verbunden zu erstellen. Dieser Vorgang wird als Methodeninformationen bezeichnet. Während die Methodeninformationen, die <xref:System.Runtime.Remoting.ObjRef> wird analysiert, um die Methodeninformationen des Remoteobjekts und transparenter Proxy zu extrahieren und <xref:System.Runtime.Remoting.Proxies.RealProxy> Objekte erstellt werden. Der Inhalt der analysierten <xref:System.Runtime.Remoting.ObjRef> transparenter Proxy hinzugefügt, bevor die mit der common Language Runtime registriert wird.  
+  
+ Ein <xref:System.Runtime.Remoting.ObjRef> enthält Informationen zur Beschreibung der <xref:System.Type> und die Klasse des Objekts gemarshallt wird, ein URI, die bestimmte Objektinstanz und die Kommunikation eindeutig identifiziert, verwandte Informationen zum Erreichen der Unterteilung Remoting in dem sich das Objekt befindet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf ein Objekt Marshallens.  
+  
+ [!code-cpp[RemotingServices.Unmarshal#2](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingServices.Unmarshal/CPP/client.cpp#2)]
+ [!code-csharp[RemotingServices.Unmarshal#2](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingServices.Unmarshal/CS/client.cs#2)]
+ [!code-vb[RemotingServices.Unmarshal#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingServices.Unmarshal/VB/client.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Runtime.Remoting.ObjRef" /> Instanz angegeben, der <paramref name="objectRef" /> Parameter ist nicht ordnungsgemäß formatiert.</exception>
+        <exception cref="T:System.Security.SecurityException">Verfügt über mindestens eines der Aufrufern einer höheren Ebene in der Aufrufliste nicht über die Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Unmarshal">
+      <MemberSignature Language="C#" Value="public static object Unmarshal (System.Runtime.Remoting.ObjRef objectRef, bool fRefine);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Unmarshal(class System.Runtime.Remoting.ObjRef objectRef, bool fRefine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingServices.Unmarshal(System.Runtime.Remoting.ObjRef,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectRef" Type="System.Runtime.Remoting.ObjRef" />
+        <Parameter Name="fRefine" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="objectRef">Die <see cref="T:System.Runtime.Remoting.ObjRef" /> Objekt, das darstellt remote für den Proxy erstellt wird.</param>
+        <param name="fRefine">
+          <see langword="true" />der Proxy für den Typ auf dem Server zu optimieren; andernfalls <see langword="false" />.</param>
+        <summary>Akzeptiert eine <see cref="T:System.Runtime.Remoting.ObjRef" /> und ein Proxyobjekt aus, und optimieren es in den Typ auf dem Server erstellt.</summary>
+        <returns>Ein Proxy für das Objekt, das die angegebenen <see cref="T:System.Runtime.Remoting.ObjRef" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Runtime.Remoting.ObjRef> ist eine serialisierbare Darstellung eines Objekts verwendet, um einen Objektverweis über die Grenze einer Anwendungsdomäne zu übertragen. Erstellen einer <xref:System.Runtime.Remoting.ObjRef> für ein Objekt als Marshalling bezeichnet wird. Die <xref:System.Runtime.Remoting.ObjRef> übertragen kann über einen Kanal in einer anderen Anwendungsdomäne (möglicherweise auf einem anderen Prozess oder Computer). Einmal in der anderen Anwendungsdomäne der <xref:System.Runtime.Remoting.ObjRef> analysiert werden muss, um einen Proxy für das Objekt, in der Regel auf das eigentliche Objekt verbunden zu erstellen. Dieser Vorgang wird als Methodeninformationen bezeichnet. Während die Methodeninformationen, die <xref:System.Runtime.Remoting.ObjRef> wird analysiert, um die Methodeninformationen des Remoteobjekts und transparenter Proxy zu extrahieren und <xref:System.Runtime.Remoting.Proxies.RealProxy> Objekte erstellt werden. Der Inhalt der analysierten <xref:System.Runtime.Remoting.ObjRef> transparenter Proxy hinzugefügt, bevor die mit der common Language Runtime registriert wird.  
+  
+ Ein <xref:System.Runtime.Remoting.ObjRef> enthält Informationen zur Beschreibung der <xref:System.Type> und die Klasse des Objekts gemarshallt wird, ein URI, die bestimmte Objektinstanz und die Kommunikation eindeutig identifiziert, verwandte Informationen zum Erreichen der Unterteilung Remoting in dem sich das Objekt befindet.  
+  
+ Beim ersten erstellen, wird der Proxy des Typs <xref:System.MarshalByRefObject>. Wie Sie ihn in verschiedene Typen umwandeln, der nachverfolgt Infrastruktur für den Remotezugriff die am häufigsten verwendeten Typ, um zu vermeiden, unnötigerweise Laden des Typs.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Runtime.Remoting.ObjRef" /> Instanz angegeben, der <paramref name="objectRef" /> Parameter ist nicht ordnungsgemäß formatiert.</exception>
+        <exception cref="T:System.Security.SecurityException">Verfügt über mindestens eines der Aufrufern einer höheren Ebene in der Aufrufliste nicht über die Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

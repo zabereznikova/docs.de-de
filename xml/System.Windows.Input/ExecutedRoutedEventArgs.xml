@@ -1,0 +1,131 @@
+<Type Name="ExecutedRoutedEventArgs" FullName="System.Windows.Input.ExecutedRoutedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ExecutedRoutedEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExecutedRoutedEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ExecutedRoutedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Windows.Input.CommandManager.Executed" /> und <see cref="E:System.Windows.Input.CommandManager.PreviewExecuted" /> Routingereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Input.ExecutedRoutedEventHandler>Stellt die Methode, die der Befehlslogik implementiert eine <xref:System.Windows.Input.RoutedCommand>.  Trennen die Implementierungslogik des Befehls können den Befehl aus, um aus verschiedenen Quellen und Typen aufgerufen werden und ermöglicht die Zentralisierung von Logik.  
+  
+ Diese Ereignisdatenklasse wird auch zum <xref:System.Windows.Input.CommandManager.Executed?displayProperty=nameWithType> und <xref:System.Windows.Input.CommandManager.PreviewExecuted?displayProperty=nameWithType>. Aber die zweckmäßigste Handler verarbeiten die <xref:System.Windows.Input.CommandBinding.Executed> Ereignisse aus einem bestimmten <xref:System.Windows.Input.CommandBinding>, sondern als für die Arbeit an der <xref:System.Windows.Input.CommandManager> Ebene.  
+  
+ Weitere Informationen über Befehle finden Sie unter [Befehlsübersicht](~/docs/framework/wpf/advanced/commanding-overview.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Input.ExecutedRoutedEventHandler> , öffnet ein <xref:System.Windows.MessageBox> Wenn der Befehl ausgeführt wird.  
+  
+ [!code-csharp[commandwithhandler#CommandHandlerExecutedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerexecutedhandler)]
+ [!code-vb[commandwithhandler#CommandHandlerExecutedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerexecutedhandler)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ICommand Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ICommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ExecutedRoutedEventArgs.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Befehl ab, der aufgerufen wurde.</summary>
+        <value>Der Befehl, der dem Ereignis zugeordnet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Befehl, der dem Ereignis zugeordneten umgewandelt werden kann, um die spezielle Implementierung der <xref:System.Windows.Input.ICommand>, z. B. eine <xref:System.Windows.Input.RoutedCommand>, wenn der Typ bekannt ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Input.ExecutedRoutedEventHandler> , die mehrere Befehle verarbeitet. Der Handler überprüft die <xref:System.Windows.Input.ExecutedRoutedEventArgs.Command%2A> Eigenschaft auf die <xref:System.Windows.Input.ExecutedRoutedEventArgs> um zu bestimmen, welche Methode aufgerufen.  
+  
+ [!code-csharp[commandingoverviewsnippets#CommandingOverviewMultipleCmdHander](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewmultiplecmdhander)]
+ [!code-vb[commandingoverviewsnippets#CommandingOverviewMultipleCmdHander](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewmultiplecmdhander)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ExecutedRoutedEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="target">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameter">
+      <MemberSignature Language="C#" Value="public object Parameter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parameter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ExecutedRoutedEventArgs.Parameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Data-Parameter des Befehls ab.</summary>
+        <value>Die befehlsspezifischen Daten. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt einen generische Data-Parameter, der von bestimmten Befehl definiert ist.  
+  
+ Wenn dieser Parameter nicht erforderlich ist, `null` übergeben werden kann.  
+  
+ In der Regel wird die <xref:System.Windows.Input.ExecutedRoutedEventArgs.Parameter%2A> wird verwendet, um bestimmte Informationen an den Befehl übergeben werden, bei der Ausführung.  Der Typ der Daten wird vom Befehl definiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Input.ExecutedRoutedEventHandler> für ein benutzerdefiniertes <xref:System.Windows.Input.RoutedCommand>.  Der Handler aktualisiert eine <xref:System.Windows.Controls.TextBox> mit der aktuellen Uhrzeit und die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> Eigenschaft eine <xref:System.Windows.Controls.Slider> Steuerelement, das an den Handler durch übergeben wird die <xref:System.Windows.Input.ExecutedRoutedEventArgs.Parameter%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[invalidaterequerywithdispatchertimer#InvalidateSampleExecuted](~/samples/snippets/csharp/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/CSharp/Window1.xaml.cs#invalidatesampleexecuted)]
+ [!code-vb[invalidaterequerywithdispatchertimer#InvalidateSampleExecuted](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/visualbasic/window1.xaml.vb#invalidatesampleexecuted)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

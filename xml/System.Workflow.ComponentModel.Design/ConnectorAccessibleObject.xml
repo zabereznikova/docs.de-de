@@ -1,0 +1,158 @@
+<Type Name="ConnectorAccessibleObject" FullName="System.Workflow.ComponentModel.Design.ConnectorAccessibleObject">
+  <TypeSignature Language="C#" Value="public class ConnectorAccessibleObject : System.Windows.Forms.AccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConnectorAccessibleObject extends System.Windows.Forms.AccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ConnectorAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.AccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Informationen zu Verbindungen zwischen Aktivitätsdesignern zu Verfügung, die von Eingabehilfen-Anwendungen zum Anpassen ihrer Benutzeroberfläche für Benutzer mit Behinderung verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Bei Verwendung eines Freihandform-Layouts werden Aktivitätsdesigner miteinander verbunden, die die <xref:System.Workflow.ComponentModel.Design.Connector>-Klasse verwenden.  Die <xref:System.Workflow.ComponentModel.Design.ConnectorAccessibleObject>-Klasse wird zur Bereitstellung von Informationen zu diesen Verbindungen zwischen Aktivitätsdesignern verwendet, die von Eingabehilfen-Anwendungen zum Anpassen ihrer Benutzeroberfläche verwendet werden.  
+  
+ Diese Klasse kann außerdem zum Anpassen der Zeichnung beim Ableiten einer Klasse aus <xref:System.Workflow.ComponentModel.Design.Connector> verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectorAccessibleObject (System.Workflow.ComponentModel.Design.Connector connector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Design.Connector connector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ConnectorAccessibleObject.#ctor(System.Workflow.ComponentModel.Design.Connector)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connector" Type="System.Workflow.ComponentModel.Design.Connector" />
+      </Parameters>
+      <Docs>
+        <param name="connector">Eine Instanz von <see cref="T:System.Workflow.ComponentModel.Design.Connector" /> , der eine Verbindung zwischen zwei Aktivitätsdesignern auf einer Workflowentwurfsoberfläche darstellt.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Workflow.ComponentModel.Design.ConnectorAccessibleObject" />-Klasse mithilfe einer Instanz von <see cref="T:System.Workflow.ComponentModel.Design.Connector" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ConnectorAccessibleObject.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position und Größe des Eingabehilfenobjekts ab.</summary>
+        <value>Rechteck, das Informationen zu Speicherort und Größe des zugreifbaren Objekts enthält</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject HitTest (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.AccessibleObject HitTest(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ConnectorAccessibleObject.HitTest(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die horizontale Bildschirmkoordinate.</param>
+        <param name="y">Die vertikale Bildschirmkoordinate.</param>
+        <summary>Ruft das untergeordnete Objekt an den angegebenen Bildschirmkoordinaten ab.</summary>
+        <returns>Ein <see cref="T:System.Workflow.ComponentModel.Design.ConnectorAccessibleObject" /> für das untergeordnete Objekt an den angegebenen Bildschirmkoordinaten. Diese Methode gibt das aufrufende Objekt zurück, wenn das Objekt selbst sich an der angegebenen Position befindet. Gibt einen null-Verweis (<see langword="Nothing" /> in Visual Basic), wenn kein Objekt am getesteten Speicherort befindet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ConnectorAccessibleObject.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Objektnamen ab oder legt diesen fest.</summary>
+        <value>Zeichenfolgenwert, der den Namen des zugreifbaren Objekts darstellt</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AccessibleObject Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ConnectorAccessibleObject.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Element eines zugreifbaren Objekts ab.</summary>
+        <value>Übergeordnetes Objekt des zugreifbaren Objekts</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ConnectorAccessibleObject.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rolle dieses zugreifbaren Objekts ab.</summary>
+        <value>Einer der Werte von AccessibleRole.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `AccessibleRole`-Eigenschaft beschreibt, zu welcher Art von Benutzeroberflächenelement ein Objekt gehört. Wenn die Rolle des Steuerelements nicht bestimmt werden kann, wird die `AccessibleRole`-Eigenschaft auf `Default` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

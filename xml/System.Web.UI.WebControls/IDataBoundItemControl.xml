@@ -1,0 +1,70 @@
+<Type Name="IDataBoundItemControl" FullName="System.Web.UI.WebControls.IDataBoundItemControl">
+  <TypeSignature Language="C#" Value="public interface IDataBoundItemControl : System.Web.UI.WebControls.IDataBoundControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataBoundItemControl implements class System.Web.UI.WebControls.IDataBoundControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.IDataBoundItemControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.IDataBoundControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Zeigt die Eigenschaften, die verwendet werden, um ein einzelnes Element in einem datengebundenen Steuerelement anzuzeigen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle enthält Eigenschaften, die verwendet werden, um ein einzelnes Element im Anzeigen der <xref:System.Web.UI.WebControls.FormView> und <xref:System.Web.UI.WebControls.DetailsView> datengebundene Steuerelemente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataKey">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataKey DataKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataKey DataKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundItemControl.DataKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das Daten-Schlüssel-Wert der Zeile in einem datengebundenen Steuerelement darstellt.</summary>
+        <value>Das Objekt, das Daten-Schlüssel-Wert der Zeile in der das datengebundene Steuerelement darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataBoundControlMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DataBoundControlMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundItemControl.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataBoundControlMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Modus eines datengebundenen Steuerelements ab.</summary>
+        <value>Der aktuelle Modus des datengebundenen Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die möglichen Modi sind `ReadOnly`, `Edit` und `Insert`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

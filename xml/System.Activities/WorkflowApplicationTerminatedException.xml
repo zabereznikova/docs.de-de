@@ -1,0 +1,134 @@
+<Type Name="WorkflowApplicationTerminatedException" FullName="System.Activities.WorkflowApplicationTerminatedException">
+  <TypeSignature Language="C#" Value="public class WorkflowApplicationTerminatedException : System.Activities.WorkflowApplicationCompletedException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WorkflowApplicationTerminatedException extends System.Activities.WorkflowApplicationCompletedException" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowApplicationTerminatedException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.WorkflowApplicationCompletedException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Ausnahme, die ausgelöst wird, wenn ein Vorgang für eine Workflowinstanz nicht gültig ist, da die Instanz beendet wurde.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationTerminatedException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationTerminatedException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.WorkflowApplicationTerminatedException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationTerminatedException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationTerminatedException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Beschreibung der von der Anwendung beendeten Ausnahme.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.WorkflowApplicationTerminatedException" />-Klasse mit einer Beschreibung der Ausnahme als Textzeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowApplicationTerminatedException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationTerminatedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Alle erforderlichen Informationen, um das von der Anwendung beendete Ausnahmeobjekt zu serialisieren oder zu deserialisieren.</param>
+        <param name="context">Die Quelle und das Ziel eines angegebenen serialisierten Streams und ein zusätzlicher, vom Aufrufer definierter Kontext.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.WorkflowApplicationTerminatedException" />-Klasse mit dem Kontext und den Serialisierungsinformationen, die zum Abrufen von Daten über diese Ausnahme aus einem serialisierten Datenstrom erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationTerminatedException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationTerminatedException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Beschreibung der von der Anwendung beendeten Ausnahme.</param>
+        <param name="innerException">Eine Ausnahme, die eine kausale Beziehung zur von der Anwendung beendeten Ausnahme hat. Die von der Anwendung beendete Ausnahme wird als Antwort auf die innere Ausnahme ausgelöst und kann Informationen der inneren Ausnahme verwenden, um den Fehler besser zu behandeln.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.WorkflowApplicationTerminatedException" />-Klasse mit einer Beschreibung der Ausnahme als Textzeichenfolge und einer Ausnahme, die die von der Anwendung beendete Ausnahme verursacht hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationTerminatedException (string message, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationTerminatedException.#ctor(System.String,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Beschreibung der von der Anwendung beendeten Ausnahme.</param>
+        <param name="instanceId">Ein GUID (Globally Unique Identifier).</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.WorkflowApplicationTerminatedException" />-Klasse mit einer Beschreibung der Ausnahme als Textzeichenfolge und einem eindeutigen Bezeichner der Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationTerminatedException (string message, Guid instanceId, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, valuetype System.Guid instanceId, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationTerminatedException.#ctor(System.String,System.Guid,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Beschreibung der von der Anwendung beendeten Ausnahme.</param>
+        <param name="instanceId">Ein GUID (Globally Unique Identifier).</param>
+        <param name="innerException">Eine Ausnahme, die eine kausale Beziehung zur von der Anwendung beendeten Ausnahme hat. Die von der Anwendung beendete Ausnahme wird als Antwort auf die innere Ausnahme ausgelöst und kann Informationen der inneren Ausnahme verwenden, um den Fehler besser zu behandeln.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.WorkflowApplicationTerminatedException" />-Klasse mit einer Beschreibung der Ausnahme als Textzeichenfolge, einem eindeutigen Bezeichner der Ausnahme und einer Ausnahme, die die aktuelle Ausnahme verursacht hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

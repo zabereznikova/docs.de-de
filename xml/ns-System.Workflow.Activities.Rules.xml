@@ -1,0 +1,6 @@
+<Namespace Name="System.Workflow.Activities.Rules">
+  <Docs>
+    <summary>Beinhaltet einen Satz von Klassen, die die Bedingungen und Aktionen definieren, aus denen eine Regel besteht.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,254 @@
+<Type Name="MessageSecurityOverHttp" FullName="System.ServiceModel.MessageSecurityOverHttp">
+  <TypeSignature Language="C#" Value="public class MessageSecurityOverHttp" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageSecurityOverHttp extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MessageSecurityOverHttp" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht das Festlegen von Sicherheitseigenschaften auf Nachrichtenebene für die wsDualHttpBinding-Bindung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf dieses Objekt wird von der Bindung über die <xref:System.ServiceModel.WSDualHttpBinding.Security%2A>-Eigenschaft zugegriffen, die ein <xref:System.ServiceModel.WSDualHttpSecurity>-Objekt zurückgibt. Die <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>-Eigenschaft stellt einen Verweis auf das <xref:System.ServiceModel.MessageSecurityOverHttp>-Objekt bereit.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageSecurityOverHttp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageSecurityOverHttp.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessageSecurityOverHttp" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmSuite">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityOverHttp.AlgorithmSuite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Algorithmussammlung für Sicherheitsmeldungen auf SOAP-Ebene an.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />. Die Standardeinstellung ist <see cref="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist besonders dann relevant, wenn mit einer Nicht-[!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Plattform gearbeitet wird, die einen anderen Algorithmensatz als den Standardalgorithmensatz verwendet. Sie sollten die Stärken und Schwächen der relevanten Algorithmen kennen, wenn Sie Änderungen an dieser Einstellung vornehmen.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie diese Eigenschaft aufgerufen und festgelegt wird.  
+  
+ [!code-csharp[c_ProgrammingSecurity#8](~/samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#8)]
+ [!code-vb[c_ProgrammingSecurity#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert von <see cref="P:System.ServiceModel.MessageSecurityOverHttp.AlgorithmSuite" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCredentialType">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MessageCredentialType ClientCredentialType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.MessageCredentialType ClientCredentialType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageCredentialType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Typ der Clientanmeldeinformationen an, der in den wsHttpBinding- oder wsDualHttpBinding-Bindungen zur Clientauthentifizierung verwendet wird.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.MessageCredentialType" />. Die Standardeinstellung ist <see cref="F:System.ServiceModel.MessageCredentialType.Windows" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, um den `MessageCredentialType` festzulegen, der für die Authentifizierung des Aufrufers beim Dienst verwendet wird. Gültige Typen sind:  
+  
+-   <xref:System.ServiceModel.MessageCredentialType.Certificate>  
+  
+-   <xref:System.ServiceModel.MessageCredentialType.IssuedToken>  
+  
+-   <xref:System.ServiceModel.MessageCredentialType.None>  
+  
+-   <xref:System.ServiceModel.MessageCredentialType.UserName>  
+  
+-   <xref:System.ServiceModel.MessageCredentialType.Windows>  
+  
+   
+  
+## Examples  
+ Mit dem folgenden Code wird diese Eigenschaft festgelegt.  
+  
+ [!code-csharp[c_CreateSecureSession#4](~/samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert von <see cref="P:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType" /> ist kein gültiger <see cref="T:System.ServiceModel.MessageCredentialType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecureConversationEnabled">
+      <MemberSignature Language="C#" Value="protected virtual bool IsSecureConversationEnabled ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsSecureConversationEnabled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageSecurityOverHttp.IsSecureConversationEnabled" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird nur in Erweiterbarkeitsszenarien verwendet, um anzuzeigen, ob eine Instanz einer von <see cref="T:System.ServiceModel.MessageSecurityOverHttp" /> abgeleiteten Klasse konfiguriert wird, um eine sichere Konversation auszuführen, wie in der WS-SecurityConversation beschrieben.</summary>
+        <returns>Gibt stets <see langword="true" /> zurück, außer wenn in einer abgeleiteten Klasse überschrieben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NegotiateServiceCredential">
+      <MemberSignature Language="C#" Value="public bool NegotiateServiceCredential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NegotiateServiceCredential" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob die Dienstanmeldeinformationen auf dem Client außerhalb des Bereichs bereitgestellt oder vom Dienst über einen Aushandlungsvorgang abgerufen werden.</summary>
+        <value>
+          <see langword="true" />, wenn die Dienstanmeldeinformationen über einen Aushandlungsvorgang abgerufen werden, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für das Festlegen dieser Eigenschaft auf `true` müssen WS-Vertrauenswürdigkeit und WS-SecureConversation vom Client und vom Dienst unterstützt werden. Für das Festlegen dieser Eigenschaft auf `false` muss keine WS-Vertrauenswürdigkeit oder WS-SecureConversation unterstützt werden.  
+  
+ Für Clientanmeldeinformationen des Typs Anonym, Benutzername oder Zertifikat impliziert das Festlegen dieser Eigenschaft auf `false`, dass das Dienstzertifikat beim Client außerhalb des Bereichs verfügbar sein und der Client das zu verwendende Dienstzertifikat angeben muss.  
+  
+ Wenn diese Eigenschaft durch Windows-Anmeldeinformationen auf `false` festgelegt wird, wird eine Authentifizierung ausgelöst, die auf `KerberosToken` basiert. Dies erfordert, dass der Client und der Dienst ein Teil einer Kerberos-Domäne sind. Dieser Modus ist mit SOAP-Stapeln interoperabel, die Kerberos-Tokenprofile von OASIS implementieren. Durch das Festlegen dieser Eigenschaft auf `true` wird eine SOAP-Aushandlung verursacht, die den SPNego-Austausch über SOAP-Meldungen tunnelt. Dieser Modus ist nicht interoperabel.  
+  
+ Diese Eigenschaft gibt an, ob die Dienstanmeldeinformationen automatisch zwischen dem Client und dem Dienst ausgehandelt werden. Wenn diese Eigenschaft `true` ist, dann tritt eine solche Aushandlung auf. Wenn diese Eigenschaft `false` ist, müssen die Dienstanmeldeinformationen auf dem Client vor der Kommunikation mit dem Dienst angegeben werden.  
+  
+ Wenn diese Eigenschaft auf `false` festgelegt ist und die Bindung zum Verwenden von Windows als Clientanmeldeinformations-Typ konfiguriert ist, muss das Dienstkonto einem SPN (Service Principal Name) zugeordnet werden. Führen Sie zu diesem Zweck den Dienst unter dem Konto NETZWERKDIENST oder dem Konto LOKALES SYSTEM aus. Verwenden Sie andernfalls das Tool SetSpn.exe, um einen Dienstprinzipalnamen für das Dienstkonto zu erstellen. Der Client muss in jedem Fall den korrekten Dienstprinzipalnamen im Verwenden der [ &lt;ServicePrincipalName&gt; ](~/docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) Element, oder indem Sie die <xref:System.ServiceModel.EndpointAddress> Konstruktor. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][-Identität und Authentifizierung](~/docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie diese Eigenschaft aufgerufen und festgelegt wird.  
+  
+ [!code-csharp[c_ProgrammingSecurity#7](~/samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#7)]
+ [!code-vb[c_ProgrammingSecurity#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeAlgorithmSuite">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeAlgorithmSuite ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeAlgorithmSuite() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageSecurityOverHttp.ShouldSerializeAlgorithmSuite" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.MessageSecurityOverHttp.AlgorithmSuite" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.MessageSecurityOverHttp.AlgorithmSuite" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeClientCredentialType">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeClientCredentialType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeClientCredentialType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageSecurityOverHttp.ShouldSerializeClientCredentialType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeNegotiateServiceCredential">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeNegotiateServiceCredential ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeNegotiateServiceCredential() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageSecurityOverHttp.ShouldSerializeNegotiateServiceCredential" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

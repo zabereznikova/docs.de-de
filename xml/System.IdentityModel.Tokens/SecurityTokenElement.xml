@@ -1,0 +1,197 @@
+<Type Name="SecurityTokenElement" FullName="System.IdentityModel.Tokens.SecurityTokenElement">
+  <TypeSignature Language="C#" Value="public class SecurityTokenElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityTokenElement extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SecurityTokenElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Anzahl der Elemente aus einem <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> Sicherheitstoken darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist nicht threadsicher.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenElement (System.IdentityModel.Tokens.SecurityToken securityToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityToken securityToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenElement.#ctor(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityToken" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="securityToken">Das Sicherheitstoken, das die neue Instanz darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.SecurityTokenElement" /> Klasse, indem eine <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser Konstruktor verwendet wird, die <xref:System.IdentityModel.Tokens.SecurityTokenElement.GetIdentities%2A> Methode wird von der neuen Instanz nicht unterstützt, es sei denn, die <xref:System.IdentityModel.Tokens.SecurityTokenElement.ValidateToken%2A> -Methode überschrieben wird.  
+  
+ Wenn die `securityToken` Parameter ist eine Instanz des <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> die <xref:System.IdentityModel.Tokens.SecurityTokenElement.SecurityTokenXml%2A> auf den Wert der Eigenschaft festgelegt ist die <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.TokenXml%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenElement (System.Xml.XmlElement securityTokenXml, System.IdentityModel.Tokens.SecurityTokenHandlerCollection securityTokenHandlers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlElement securityTokenXml, class System.IdentityModel.Tokens.SecurityTokenHandlerCollection securityTokenHandlers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenElement.#ctor(System.Xml.XmlElement,System.IdentityModel.Tokens.SecurityTokenHandlerCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityTokenXml" Type="System.Xml.XmlElement" />
+        <Parameter Name="securityTokenHandlers" Type="System.IdentityModel.Tokens.SecurityTokenHandlerCollection" />
+      </Parameters>
+      <Docs>
+        <param name="securityTokenXml">Die XML-Darstellung des Sicherheitstokens.</param>
+        <param name="securityTokenHandlers">Die Standard-Tokenhandler-Auflistung, die zum Lesen und überprüfen das Sicherheitstoken umschlossen, die von der neuen Instanz verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.SecurityTokenElement" /> -Klasse unter Verwendung der angegebenen XML-Darstellung eines Sicherheitstokens.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIdentities">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt; GetIdentities ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Security.Claims.ClaimsIdentity&gt; GetIdentities() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenElement.GetIdentities" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Identitäten, die in das eingeschlossene Token enthalten sind.</summary>
+        <returns>Die im Token enthaltenen Identitäten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSecurityToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken GetSecurityToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken GetSecurityToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenElement.GetSecurityToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Sicherheitstoken, das von der aktuellen Instanz dargestellt wird.</summary>
+        <returns>Das Sicherheitstoken, das die aktuelle Instanz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die aktuelle Instanz nicht explizit durch erstellt wurde eine <xref:System.IdentityModel.Tokens.SecurityToken> Objekt mithilfe der <xref:System.IdentityModel.Tokens.SecurityTokenElement.%23ctor%28System.IdentityModel.Tokens.SecurityToken%29?displayProperty=nameWithType> Konstruktor die <xref:System.IdentityModel.Tokens.SecurityTokenElement.ReadSecurityToken%2A> Methode wird aufgerufen, um das Sicherheitstoken zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSecurityToken">
+      <MemberSignature Language="C#" Value="protected virtual System.IdentityModel.Tokens.SecurityToken ReadSecurityToken (System.Xml.XmlElement securityTokenXml, System.IdentityModel.Tokens.SecurityTokenHandlerCollection securityTokenHandlers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityToken ReadSecurityToken(class System.Xml.XmlElement securityTokenXml, class System.IdentityModel.Tokens.SecurityTokenHandlerCollection securityTokenHandlers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenElement.ReadSecurityToken(System.Xml.XmlElement,System.IdentityModel.Tokens.SecurityTokenHandlerCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityTokenXml" Type="System.Xml.XmlElement" />
+        <Parameter Name="securityTokenHandlers" Type="System.IdentityModel.Tokens.SecurityTokenHandlerCollection" />
+      </Parameters>
+      <Docs>
+        <param name="securityTokenXml">Die XML-Darstellung des Sicherheitstokens.</param>
+        <param name="securityTokenHandlers">Die Auflistung der Tokenhandler zu verwenden, um das Token zu lesen.</param>
+        <summary>Deserialisiert eine <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> aus der angegebenen XML-Darstellung.</summary>
+        <returns>Das Sicherheitstoken, das aus XML deserialisiert wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement SecurityTokenXml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement SecurityTokenXml" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenElement.SecurityTokenXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die XML-Darstellung des umschlossenen Tokens ab.</summary>
+        <value>Die XML-Darstellung des Tokens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist `null` , wenn die aktuelle Instanz, mithilfe initialisiert wurde der <xref:System.IdentityModel.Tokens.SecurityTokenElement.%23ctor%28System.Xml.XmlElement%2CSystem.IdentityModel.Tokens.SecurityTokenHandlerCollection%29?displayProperty=nameWithType> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateToken">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt; ValidateToken (System.Xml.XmlElement securityTokenXml, System.IdentityModel.Tokens.SecurityTokenHandlerCollection securityTokenHandlers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Security.Claims.ClaimsIdentity&gt; ValidateToken(class System.Xml.XmlElement securityTokenXml, class System.IdentityModel.Tokens.SecurityTokenHandlerCollection securityTokenHandlers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenElement.ValidateToken(System.Xml.XmlElement,System.IdentityModel.Tokens.SecurityTokenHandlerCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityTokenXml" Type="System.Xml.XmlElement" />
+        <Parameter Name="securityTokenHandlers" Type="System.IdentityModel.Tokens.SecurityTokenHandlerCollection" />
+      </Parameters>
+      <Docs>
+        <param name="securityTokenXml">Die XML-Darstellung des Sicherheitstokens.</param>
+        <param name="securityTokenHandlers">Die Auflistung der Tokenhandler zu verwenden, um das Token zu lesen.</param>
+        <summary>Erstellt die Identitäten, die enthalten sind in der angegebenen XML-Darstellung eines Sicherheitstokens an.</summary>
+        <returns>Die im Token enthaltenen Identitäten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="securityTokenXml" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="securityTokenHandlers" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,174 @@
+<Type Name="ImageCodecFlags" FullName="System.Drawing.Imaging.ImageCodecFlags">
+  <TypeSignature Language="C#" Value="public enum ImageCodecFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ImageCodecFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.ImageCodecFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Attribute für ein Bild Encoder/-Decoder (Codec).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Imaging.ImageCodecFlags> Klasse wird verwendet, durch die <xref:System.Drawing.Imaging.ImageCodecInfo.Flags%2A> Eigenschaft von der <xref:System.Drawing.Imaging.ImageCodecInfo> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BlockingDecode">
+      <MemberSignature Language="C#" Value="BlockingDecode" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageCodecFlags BlockingDecode = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageCodecFlags.BlockingDecode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageCodecFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Decoder hat Blockierverhalten während der Decodierung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Builtin">
+      <MemberSignature Language="C#" Value="Builtin" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageCodecFlags Builtin = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageCodecFlags.Builtin" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageCodecFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Codec wird in GDI + integriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Decoder">
+      <MemberSignature Language="C#" Value="Decoder" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageCodecFlags Decoder = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageCodecFlags.Decoder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageCodecFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Codec unterstützt die Decodierung (Lesen).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoder">
+      <MemberSignature Language="C#" Value="Encoder" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageCodecFlags Encoder = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageCodecFlags.Encoder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageCodecFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Codec unterstützt Codierung (Speichern).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SeekableEncode">
+      <MemberSignature Language="C#" Value="SeekableEncode" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageCodecFlags SeekableEncode = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageCodecFlags.SeekableEncode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageCodecFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Encoder erfordert einen durchsuchbaren Ausgabestream.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportBitmap">
+      <MemberSignature Language="C#" Value="SupportBitmap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageCodecFlags SupportBitmap = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageCodecFlags.SupportBitmap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageCodecFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Codec unterstützt Rasterbildern (Bitmaps).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportVector">
+      <MemberSignature Language="C#" Value="SupportVector" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageCodecFlags SupportVector = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageCodecFlags.SupportVector" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageCodecFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Codec unterstützt Vektorbildern (Metadateien).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="System" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageCodecFlags System = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageCodecFlags.System" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageCodecFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nicht verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="User" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageCodecFlags User = int32(262144)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageCodecFlags.User" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageCodecFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nicht verwendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

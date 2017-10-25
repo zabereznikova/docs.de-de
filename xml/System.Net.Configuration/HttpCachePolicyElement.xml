@@ -1,0 +1,244 @@
+<Type Name="HttpCachePolicyElement" FullName="System.Net.Configuration.HttpCachePolicyElement">
+  <TypeSignature Language="C#" Value="public sealed class HttpCachePolicyElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpCachePolicyElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.HttpCachePolicyElement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die HTTP-Standardcacherichtlinie für Netzwerkressourcen dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse entspricht dem [ &lt;DefaultHttpCachePolicy&gt; -Element (Netzwerkeinstellungen)](~/docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md) Konfigurationselement.  
+  
+ Diese Klasse wird verwendet, um die HTTP-caching-Konfiguration angeben, die auf Netzwerkressourcen mithilfe abgerufen gelten die <xref:System.Net.WebRequest> und <xref:System.Net.WebClient> Klassen.  
+  
+ Diese Klasse bietet programmgesteuerten Zugriff auf Informationen, die in Konfigurationsdateien gespeichert werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCachePolicyElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.HttpCachePolicyElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Configuration.HttpCachePolicyElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor fügt die <xref:System.Net.Configuration.HttpCachePolicyElement.MaximumAge%2A>, <xref:System.Net.Configuration.HttpCachePolicyElement.MaximumStale%2A>, <xref:System.Net.Configuration.HttpCachePolicyElement.MinimumFresh%2A>, und <xref:System.Net.Configuration.HttpCachePolicyElement.PolicyLevel%2A> Eigenschaften in der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeElement">
+      <MemberSignature Language="C#" Value="protected override void DeserializeElement (System.Xml.XmlReader reader, bool serializeCollectionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DeserializeElement(class System.Xml.XmlReader reader, bool serializeCollectionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.HttpCachePolicyElement.DeserializeElement(System.Xml.XmlReader,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="serializeCollectionKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="reader">To be added.</param>
+        <param name="serializeCollectionKey">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumAge">
+      <MemberSignature Language="C#" Value="public TimeSpan MaximumAge { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaximumAge" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.HttpCachePolicyElement.MaximumAge" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maximumAge", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale zulässige Alter für eine Ressource aus dem Cache zurückgegeben.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> Wert, der angibt, für das maximale Alter zwischengespeicherter Ressourcen, die in der Konfigurationsdatei angegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die zwischengespeicherte Kopie der Ressource älter als die angegebene Zeit-Wert ist, muss die Ressource durch Vergleichen der zwischengespeicherten Ressource, auf die Ressource auf dem Server erneut überprüft werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumStale">
+      <MemberSignature Language="C#" Value="public TimeSpan MaximumStale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaximumStale" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.HttpCachePolicyElement.MaximumStale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maximumStale", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Überalterung-Wert zulässig für eine Ressource aus dem Cache zurückgegeben.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> Wert, der auf den in der Konfigurationsdatei angegebenen maximale Überalterung Wert festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die Zeitdauer nach dem Ablauf von Inhalten während der die zwischengespeicherte Kopie der Ressource zulässig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumFresh">
+      <MemberSignature Language="C#" Value="public TimeSpan MinimumFresh { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MinimumFresh" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.HttpCachePolicyElement.MinimumFresh" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("minimumFresh", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die minimale zulässige Aktualität für eine Ressource aus dem Cache zurückgegeben.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> -Wert, die in der Konfigurationsdatei festgelegte minimale Aktualität angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert gibt die Zeitspanne vor Ablauf, bei denen die zwischengespeicherte Kopie der Ressource zulässig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Cache.HttpRequestCacheLevel PolicyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Cache.HttpRequestCacheLevel PolicyLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.HttpCachePolicyElement.PolicyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("policyLevel", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.IsRequired)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpRequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der HTTP-Cacheverhalten für den lokalen Computer.</summary>
+        <value>Ein <see cref="T:System.Net.Cache.HttpRequestCacheLevel" /> Wert, der das Cacheverhalten angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Anwendungen in der Regel <xref:System.Net.Cache.HttpRequestCacheLevel.Default> als ihren Cacherichtlinienebene. Die <xref:System.Net.WebRequest.CachePolicy%2A> Eigenschaft, wenn nicht `null`, bestimmt die Cacherichtlinie für eine Anforderung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.HttpCachePolicyElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="protected override void Reset (System.Configuration.ConfigurationElement parentElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Reset(class System.Configuration.ConfigurationElement parentElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.HttpCachePolicyElement.Reset(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="parentElement">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

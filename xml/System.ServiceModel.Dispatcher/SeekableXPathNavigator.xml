@@ -1,0 +1,242 @@
+<Type Name="SeekableXPathNavigator" FullName="System.ServiceModel.Dispatcher.SeekableXPathNavigator">
+  <TypeSignature Language="C#" Value="public abstract class SeekableXPathNavigator : System.Xml.XPath.XPathNavigator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SeekableXPathNavigator extends System.Xml.XPath.XPathNavigator" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.SeekableXPathNavigator" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XPath.XPathNavigator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet schreibgeschützten, zufälligen Zugriff auf Daten, die in XML-Dokumenten enthalten sind, und ermöglicht ein effizientes Abfragen angegebener Knoten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zwischen den Teilen des [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Systems übergebenen SOAP-Nachrichten werden von verschiedenen Komponenten des Systems verarbeitet, die diese Nachrichten überprüfen müssen, um Aktionen für deren Verarbeitung zu ermitteln. Das XPath-Modul ist eine Komponente, die Nachrichten für diesen Zweck abfragt. Dazu wird ein Navigator für das Lesen von SOAP-Nachrichten und anderen XML-Dokumenten benötigt. Ein Navigator stellt einen Cursor bereit, der sich von Knoten zu Knoten bewegt, um zu verfolgen, an welcher Stelle das XML-Dokument gerade gelesen wird.  
+  
+ Das XPath-Modul arbeitet mit einem <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>, der die <xref:System.Xml.XPath.XPathNavigator>-Klasse durch das Hinzufügen einer <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>-Eigenschaft erweitert. Diese Eigenschaft ermöglicht es, Positionen innerhalb des XML-Dokuments zu speichern und rasch zu laden, ohne den Navigator klonen zu müssen (eine ressourcenintensive Speicherbelegung, die <xref:System.Xml.XPath.XPathNavigator> für einen solchen Vorgang benötigt). Das XPath-Modul muss häufig die Position des Cursors im Verlauf der Ausführung von Abfragen von XML-Dokumenten aufzeichnen, sodass der <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> eine wichtige Optimierung der Nachrichtenverarbeitung liefert.  
+  
+ Beachten Sie, dass der Wert der <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>-Eigenschaft spezifisch für die Implementierung ist und nicht einer Knotenposition oder Zeichenposition zugeordnet sein muss. Sein Wert hat nur Bedeutung für die <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>-Implementierung (und Instanz), die ihn geliefert hat.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SeekableXPathNavigator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.SeekableXPathNavigator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.SeekableXPathNavigator" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComparePosition">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XmlNodeOrder ComparePosition (long first, long second);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Xml.XmlNodeOrder ComparePosition(int64 first, int64 second) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.SeekableXPathNavigator.ComparePosition(System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeOrder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstPosition" Type="System.Int64" />
+        <Parameter Name="secondPosition" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="first">To be added.</param>
+        <param name="second">To be added.</param>
+        <summary>Beim Überschreiben in einer abgeleiteten Klasse wird ein Wert zurückgegeben, der die Dokumentreihenfolge der zwei angegebenen Positionen beschreibt.</summary>
+        <returns>Einer der <see cref="T:System.Xml.XmlNodeOrder" />-Werte, die die Beziehung zwischen <paramref name="firstPosition" /> und <paramref name="secondPosition" /> im Dokument beschreiben.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="firstPosition" /> oder <paramref name="secondPosition" /> ist ungültig.</exception>
+        <block subset="none" type="overrides">
+          <para>Diese Methode sollte eine Ausnahme für ungültige Positionswerte auslösen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPosition">
+      <MemberSignature Language="C#" Value="public abstract long CurrentPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 CurrentPosition" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse einen Wert ab, der dem Knoten in den Daten, an dem der XPath-Navigator positioniert ist, zugeordnet ist, bzw. legt einen solchen Wert fest.</summary>
+        <value>Ein Wert, der der aktuellen Position des Navigators zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `set`-Vorgang verschiebt den Navigator an die Position, die dem angegebenen Wert zugeordnet ist. Der `get`-Vorgang gibt einen der aktuellen Position des Navigators zugeordneten Wert zurück.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Eigenschaft hat keine Bedeutung für sich: Sie liefert einen nicht transparenten <see cref="T:System.Int64" />-Wert, den eine Implementierung der aktuellen Position des Navigators zuordnet. Für den Wert selbst gelten keine Beschränkungen oder Anforderungen. Es können keine Annahmen über seine interne Datenstruktur gemacht werden.  
+  
+ Es ist nicht erforderlich, dass die Werte sequenziell sind oder dass einer Navigatorposition ein eindeutiger Wert zugewiesen ist. Mehrere Werte können auf dieselbe Navigatorposition verweisen. Das Vergleichen von zwei Werten liefert daher keine sinnvollen Informationen.  
+  
+ Jeder Wert, den ein <see langword="get" />-Vorgang liefert, muss für einen <see langword="set" />-Vorgang gültig sein. Es ist nicht unbedingt ein Fehler, wenn ein <see langword="set" />-Vorgang einen Wert verwendet, der nicht zunächst durch einen <see langword="get" />-Vorgang abgerufen wurde. Ein Wert, der nicht von <see cref="P:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition" /> zurückgegeben wurde und in anderer Weise abgerufen wurde, kann durch die Implementierung als gültig betrachtet werden: Diese Entscheidung wird vom Implementierer getroffen.  
+  
+ Die Bedeutung eines Werts darf sich während der Lebensdauer seines Navigators beim Navigieren im selben Dokument nicht ändern. Auch muss die Bedeutung der Werte für zwei durch Klonen miteinander in Beziehung stehende Navigatoren gleich sein, wenn diese weiterhin im selben Dokument navigieren. Alle von einem <see langword="get" />-Vorgang gelieferten Werte müssen während der Lebensdauer eines Navigators und seiner Klone gültig bleiben, solange die Instanz weiterhin im selben Dokument navigiert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalName">
+      <MemberSignature Language="C#" Value="public abstract string GetLocalName (long node_position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetLocalName(int64 node_position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.SeekableXPathNavigator.GetLocalName(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodePosition" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="node_position">To be added.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse den lokalen Namen des Knotens an der angegebenen Position zurück.</summary>
+        <returns>Der lokale Name des Knotens an der angegebenen Position. <see cref="F:System.String.Empty" /> wird zurückgegeben, wenn der Knoten keinen lokalen Namen hat,  wenn die aktuelle Position beispielsweise auf einen Textknoten verweist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="node_position" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public abstract string GetName (long node_position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetName(int64 node_position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.SeekableXPathNavigator.GetName(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodePosition" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="node_position">To be added.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse den Namen des Knotens an der angegebenen Position zurück.</summary>
+        <returns>Der neue Namen des Knotens an der Position <paramref name="node_position" />. <see cref="F:System.String.Empty" /> wird zurückgegeben, wenn der Knoten keinen Namen hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name ist der Name des XML-Elements bei `nodePosition` und schließt in der Regel. ein Namespacepräfix ein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="node_position" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamespace">
+      <MemberSignature Language="C#" Value="public abstract string GetNamespace (long node_position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetNamespace(int64 node_position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.SeekableXPathNavigator.GetNamespace(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodePosition" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="node_position">To be added.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse den Namespace des Knotens an der angegebenen Position zurück.</summary>
+        <returns>Der Namespace des Knotens an der Position <paramref name="node_position" />. <see cref="F:System.String.Empty" /> wird zurückgegeben, wenn der Knoten keinen Namespace hat.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="node_position" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNodeType">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNodeType GetNodeType (long node_position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Xml.XPath.XPathNodeType GetNodeType(int64 node_position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.SeekableXPathNavigator.GetNodeType(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodePosition" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="node_position">To be added.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse den Typ des Knotens an der angegebenen Position zurück.</summary>
+        <returns>Einer der <see cref="T:System.Xml.XPath.XPathNodeType" />-Werte, der den Typ des XML-Knotens angibt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="node_position" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public abstract string GetValue (long node_position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetValue(int64 node_position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.SeekableXPathNavigator.GetValue(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodePosition" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="node_position">To be added.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse den Textwert des Knotens an der angegebenen Position zurück.</summary>
+        <returns>Die Textwert des Knotens an der Position <paramref name="node_position" />. <see cref="F:System.String.Empty" /> wird zurückgegeben, wenn der Knoten keinen Textwert hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Elemente gibt diese Methode die Verkettung aller untergeordneten Textelemente des Knotens an der angegebenen Position zurück, vergleichbar mit der <xref:System.Xml.XmlElement.InnerText%2A>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="node_position" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

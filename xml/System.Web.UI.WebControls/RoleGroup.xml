@@ -1,0 +1,200 @@
+<Type Name="RoleGroup" FullName="System.Web.UI.WebControls.RoleGroup">
+  <TypeSignature Language="C#" Value="public sealed class RoleGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RoleGroup extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RoleGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ordnet eine Inhaltsvorlage in einem <see cref="T:System.Web.UI.WebControls.LoginView" /> -Steuerelement mit einer oder mehreren Rollen, die für die Website definiert. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Web.UI.WebControls.LoginView> Steuerelement um einen Satz von Inhalt von Vorlagen zu definieren, die den Inhalt enthalten, die den Benutzern der Website angezeigt basierend auf der Rolle von Website-Administratoren zugewiesen. Die <xref:System.Web.UI.WebControls.RoleGroup> Klasse wird verwendet, durch die <xref:System.Web.UI.WebControls.LoginView> Steuerelement, eine Reihe von Rollen eine Inhaltsvorlage zugeordnet werden soll.  
+  
+ Die Rollengruppe "" dynamisch eine Vorlage zuweisen möchten, legen Sie die <xref:System.Web.UI.WebControls.RoleGroup.ContentTemplate%2A> Eigenschaft, um einen Verweis auf ein Objekt, das implementiert die <xref:System.Web.UI.ITemplate> Schnittstelle.  
+  
+ Sie müssen konfigurieren, Rollenverwaltung verwenden die <xref:System.Web.UI.WebControls.RoleGroup> Klasse. Weitere Informationen finden Sie unter [Grundlegendes zur Rollenverwaltung](http://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine benutzerdefinierte Vorlage zugewiesen der <xref:System.Web.UI.WebControls.RoleGroup.ContentTemplate%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[RoleGroupClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RoleGroupClass/CS/rolegroupclasscs.aspx#1)]
+ [!code-aspx-vb[RoleGroupClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RoleGroupClass/VB/rolegroupclassvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoleGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.RoleGroup" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.RoleGroup> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsUser">
+      <MemberSignature Language="C#" Value="public bool ContainsUser (System.Security.Principal.IPrincipal user);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsUser(class System.Security.Principal.IPrincipal user) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroup.ContainsUser(System.Security.Principal.IPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="user" Type="System.Security.Principal.IPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="user">Der Benutzername, der in der Rollengruppe gesucht werden soll.</param>
+        <summary>Gibt an, ob der angegebene Benutzer ein Mitglied der Rollen in der Rollengruppe ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Benutzer ein Mitglied einer der Rollen, die dieser Rollengruppe zugeordnet ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RoleGroup.ContainsUser%2A> -Methode zurückkehrt `true` , wenn der angegebene Benutzer ein Mitglied der Rollen, die dieser Rollengruppe zugeordnet ist. Rollen werden in der Reihenfolge, in dem sie aufgelisteten, durchsucht die <xref:System.Web.UI.WebControls.RoleGroup.Roles%2A> -Eigenschaft und die Suche beendet, nachdem die erste Übereinstimmung gefunden wird.  
+  
+ Diese Methode verwendet die <xref:System.Web.Security.Roles.IsUserInRole%2A> Methode, um zu bestimmen, ob ein Benutzer Mitglied einer Rolle ist. Sie müssen konfigurieren, Rollenverwaltung verwenden die <xref:System.Web.UI.WebControls.RoleGroup.ContainsUser%2A> Methode. Weitere Informationen finden Sie unter [Grundlegendes zur Rollenverwaltung](http://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="User" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplate">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ITemplate ContentTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ContentTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RoleGroup.ContentTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.LoginView))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert den Inhalten der Vorlage mit dieser Rollengruppe verknüpft ist.</summary>
+        <value>Die <see cref="T:System.Web.UI.ITemplate" /> mit dieser Rollengruppe verknüpft ist. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RoleGroup.ContentTemplate%2A> Eigenschaft enthält den Inhalt, der Benutzern angezeigt wird, die Mitglieder dieser Rolle-Gruppe sind.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt dynamisch eine Inhaltsvorlage.  
+  
+ [!code-aspx-csharp[RoleGroupClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RoleGroupClass/CS/rolegroupclasscs.aspx#1)]
+ [!code-aspx-vb[RoleGroupClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RoleGroupClass/VB/rolegroupclassvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Roles">
+      <MemberSignature Language="C#" Value="public string[] Roles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Roles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RoleGroup.Roles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.StringArrayConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Rollen, die mit dieser Rollengruppe verknüpft ist.</summary>
+        <value>Eine durch Trennzeichen getrennte Liste von Rollen, die mit dieser Rollengruppe verknüpft ist. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird weist eine Liste der Rollen, eine Rollengruppe zugeordnet werden soll. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.RoleGroup> Klasse.  
+  
+ [!code-csharp[RoleGroupClass#3](~/samples/snippets/csharp/VS_Snippets_WebNet/RoleGroupClass/CS/rolegroupclasscs.aspx#3)]
+ [!code-vb[RoleGroupClass#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RoleGroupClass/VB/rolegroupclassvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroup.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine durch Trennzeichen getrennte Liste der Rollen, die mit dieser Rollengruppe verknüpft ist.</summary>
+        <returns>Eine durch Trennzeichen getrennte Liste der Rollen, die mit dieser Rollengruppe verknüpft ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RoleGroup.ToString%2A> Methodenrückgabe den Inhalt der <xref:System.Web.UI.WebControls.RoleGroup.Roles%2A> Eigenschaft als durch Trennzeichen getrennte Liste von Rollen, die der Rollengruppe zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

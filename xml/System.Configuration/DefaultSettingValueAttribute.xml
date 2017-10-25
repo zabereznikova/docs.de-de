@@ -1,0 +1,118 @@
+<Type Name="DefaultSettingValueAttribute" FullName="System.Configuration.DefaultSettingValueAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DefaultSettingValueAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DefaultSettingValueAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.DefaultSettingValueAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Standardwert für eine Anwendungseinstellungseigenschaft an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  <xref:System.Configuration.DefaultSettingValueAttribute>kann nur auf einzelne Einstellungseigenschaften angewendet werden; Um dieses Attribut auf eine gesamte Anwendung Settings-Klasse anzuwenden ist.  
+  
+ Für unterschiedliche Einstellungsanbieter verfügt möglicherweise über unterschiedliche Anforderungen oder Einschränkungen für die Verwendung von der <xref:System.Configuration.DefaultSettingValueAttribute>. Z. B. die <xref:System.Configuration.LocalFileSettingsProvider> dieses Attribut ist nicht erforderlich, und jeder Wert, der von diesem Attribut bereitgestellt werden, wenn Werte überschrieben werden – Standard oder Benutzer geändert – im Datenspeicher ist bereits vorhanden.  
+  
+ <xref:System.Configuration.DefaultSettingValueAttribute>erfordert, dass der Standardwert als Zeichenfolge dargestellt werden kann. Folglich keine Einstellungen, die mit XML-Serialisierung Standardwert mithilfe dieses Attribut angegeben. Einige Anbieter können mehrere Serialisierungsschemas zu unterstützen, die zum Zeitpunkt der Kompilierung mit angegeben werden, können die <xref:System.Configuration.SettingsSerializeAsAttribute>.  
+  
+> [!CAUTION]
+>  Die Standardwerte, die von diesem Attribut angegeben werden als nur-Text in der resultierenden kompilierten .exe oder .dll-Datei gespeichert. Aus diesem Grund werden diese Standardwerte grundsätzlich unsicher.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Configuration.DefaultSettingValueAttribute> angewendet auf drei der vier Eigenschaften von der `FormSettings` Wrapperklasse, das von abgeleitet ist die <xref:System.Configuration.ApplicationSettingsBase> Klasse. Diese Klasse wird verwendet, um den Speicherort, Größe, Hintergrundfarbe und Text der Form beizubehalten. Die ersten drei dieser Form Eigenschaften haben Standardwerte, die ihnen zugeordneten.  
+  
+ Das vollständige Codebeispiel, finden Sie unter der <xref:System.Configuration.ApplicationSettingsBase> -Klassenübersicht.  
+  
+ [!code-cpp[AppSettingsSample#9](~/samples/snippets/cpp/VS_Snippets_Winforms/AppSettingsSample/cpp/AppSettingsSample.cpp#9)]
+ [!code-csharp[AppSettingsSample#9](~/samples/snippets/csharp/VS_Snippets_Winforms/AppSettingsSample/CS/AppSettingsSample.cs#9)]
+ [!code-vb[AppSettingsSample#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AppSettingsSample/VB/Form1.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultSettingValueAttribute (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.DefaultSettingValueAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.String" /> , der Standardwert für die Eigenschaft darstellt.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Configuration.DefaultSettingValueAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die angegebene Zeichenfolge muss ein Wert sein, der kompatibel mit den verfügbaren Serialisierungsmechanismus verwenden, die dem Eigenschaftentyp zugeordnet ist. Angenommen, wenn die Eigenschaft vom Typ <xref:System.Drawing.Color>, ein `value` der `"Azure"` gültig wäre.  
+  
+> [!CAUTION]
+>  Die Standardwerte, die von diesem Attribut angegeben werden als nur-Text in der resultierenden kompilierten .exe oder .dll-Datei gespeichert. Aus diesem Grund werden diese Standardwerte grundsätzlich unsicher.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.DefaultSettingValueAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardwert für die Anwendungseinstellungseigenschaft ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , der Standardwert für die Eigenschaft darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.DefaultSettingValueAttribute.Value%2A> Eigenschaft wird festgelegt, der <xref:System.Configuration.DefaultSettingValueAttribute.%23ctor%2A> Konstruktor.  
+  
+ Festlegen von Anbietern möglicherweise unterstützen mehrere Serialisierungsschemas, die mit angegeben werden können die <xref:System.Configuration.SettingsSerializeAsAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,67 @@
+<Type Name="MetadataExchangeClientMode" FullName="System.ServiceModel.Description.MetadataExchangeClientMode">
+  <TypeSignature Language="C#" Value="public enum MetadataExchangeClientMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MetadataExchangeClientMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.MetadataExchangeClientMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Legt den Austauschmodus zum Abrufen von Metadaten fest.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den <xref:System.ServiceModel.Description.MetadataExchangeClientMode> mit dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>, um anzugeben, ob Metadaten mit einer HTTP GET- oder WS-Transfer Get-Anforderung heruntergeladen werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung des <xref:System.ServiceModel.Description.MetadataExchangeClient> zum Angeben einer Downloadbindung, zum Auflösen aller enthaltenen Verweise auf Metadaten und zum Herunterladen der Metadaten veranschaulicht.  
+  
+ [!code-csharp[MetadataResolver#3](~/samples/snippets/csharp/VS_Snippets_CFX/metadataresolver/cs/client.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HttpGet">
+      <MemberSignature Language="C#" Value="HttpGet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Description.MetadataExchangeClientMode HttpGet = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Description.MetadataExchangeClientMode.HttpGet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MetadataExchangeClientMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wird eine HTTP GET-Anforderung verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataExchange">
+      <MemberSignature Language="C#" Value="MetadataExchange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Description.MetadataExchangeClientMode MetadataExchange = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Description.MetadataExchangeClientMode.MetadataExchange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MetadataExchangeClientMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wird eine WS-Transfer Get-Anforderung verwendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

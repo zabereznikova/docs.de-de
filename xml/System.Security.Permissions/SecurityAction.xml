@@ -1,0 +1,312 @@
+<Type Name="SecurityAction" FullName="System.Security.Permissions.SecurityAction">
+  <TypeSignature Language="C#" Value="public enum SecurityAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed SecurityAction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.SecurityAction" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Sicherheitsaktionen an, die mit deklarativer Sicherheit ausgeführt werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle beschreibt die Dauer jeder Sicherheitsaktion eingesetzt sind und die Ziele, die dies unterstützt.  
+  
+> [!IMPORTANT]
+>  In der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], Runtime-Unterstützung wurde für das Erzwingen der berechtigungsanforderungen verweigern, RequestMinimum, RequestOptional und RequestRefuse entfernt. Diese Anforderungen sollten nicht in Code verwendet werden, der auf [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] oder höher basiert. Weitere Informationen zu diesen und anderen Änderungen finden Sie unter [Sicherheitsänderungen](~/docs/framework/security/security-changes.md).  
+  
+ Sie sollten nicht UseLinkDemand in der [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]. Verwenden Sie stattdessen die <xref:System.Security.SecurityCriticalAttribute> Verwendung auf voll vertrauenswürdige Anwendungen einschränken, oder bei Bedarf für teilweise vertrauenswürdige Aufrufer zu beschränken.  
+  
+|Deklaration von Sicherheitsaktion|Zeitpunkt der Aktion|Unterstützte Ziele|  
+|------------------------------------|--------------------|-----------------------|  
+|`LinkDemand`(verwenden Sie nicht in der [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)])|Just-in-Time-Kompilierung|-Methode-Klasse|  
+|`InheritanceDemand`|Ladezeit|-Methode-Klasse|  
+|`Demand`|Laufzeit|-Methode-Klasse|  
+|`Assert`|Laufzeit|-Methode-Klasse|  
+|`Deny`(veraltete Elemente in der [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)])|Laufzeit|-Methode-Klasse|  
+|`PermitOnly`|Laufzeit|-Methode-Klasse|  
+|`RequestMinimum`(veraltete Elemente in der [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)])|GRANT-Zeit|Assembly|  
+|`RequestOptional`(veraltete Elemente in der [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)])|GRANT-Zeit|Assembly|  
+|`RequestRefuse`(veraltete Elemente in der [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)])|GRANT-Zeit|Assembly|  
+  
+ Weitere Informationen zu Attributziele, finden Sie unter <xref:System.Attribute>.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird gezeigt, wie die CLR zu benachrichtigen, die Code in aufgerufenen Methoden nur <xref:System.Security.Permissions.IsolatedStoragePermission>, und veranschaulicht, wie aus dem isolierten Speicher gelesen und geschrieben.  
+  
+ [!code-cpp[IsolatedStoragePermissionAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR/IsolatedStoragePermissionAttribute/cpp/IsolatedStoragePermissionAttribute.cpp#1)]
+ [!code-csharp[IsolatedStoragePermissionAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/IsolatedStoragePermissionAttribute/CS/IsolatedStoragePermissionAttribute.cs#1)]
+ [!code-vb[IsolatedStoragePermissionAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsolatedStoragePermissionAttribute/VB/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="Assert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityAction Assert = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityAction.Assert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aufrufende Code auf die durch das aktuelle Berechtigungsobjekt identifizierte Ressource zugreifen, selbst wenn Aufrufern einer höheren Ebene im Stapel nicht die Berechtigung zum Zugriff auf die Ressource erteilt wurde (siehe [mithilfe der Assert-Methode](~/docs/framework/misc/using-the-assert-method.md)).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Demand">
+      <MemberSignature Language="C#" Value="Demand" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityAction Demand = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityAction.Demand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Allen Aufrufern einer höheren Ebene in der Aufrufliste muss die vom aktuellen Berechtigungsobjekt angegebene Berechtigung erteilt worden sein.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Deny">
+      <MemberSignature Language="C#" Value="Deny" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityAction Deny = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityAction.Deny" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This requests should not be used")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Möglichkeit, Zugriff auf die Ressource, die vom aktuellen Berechtigungsobjekt angegebene wird Aufrufern verweigert, selbst wenn ihnen eine Berechtigung für den Zugriff erteilt wurde (siehe [mithilfe der Deny-Methode](http://msdn.microsoft.com/en-us/6b4d2e01-c504-4ac3-b50e-d6f5e7f5df25)).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritanceDemand">
+      <MemberSignature Language="C#" Value="InheritanceDemand" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityAction InheritanceDemand = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der abgeleiteten Klasse, die die Klasse erbt oder eine Methode überschreibt, muss die angegebene Berechtigung erteilt worden sein.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkDemand">
+      <MemberSignature Language="C#" Value="LinkDemand" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityAction LinkDemand = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dem unmittelbaren Aufrufer muss die angegebene Berechtigung erteilt worden sein. Verwenden Sie dies nicht in [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]. Verwenden Sie für volle Vertrauenswürdigkeit <see cref="T:System.Security.SecurityCriticalAttribute" /> für teilweise Vertrauenswürdigkeit verwenden Sie stattdessen; <see cref="F:System.Security.Permissions.SecurityAction.Demand" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PermitOnly">
+      <MemberSignature Language="C#" Value="PermitOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityAction PermitOnly = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityAction.PermitOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur auf die durch dieses Berechtigungsobjekt angegebenen Ressourcen kann zugegriffen werden, selbst wenn dem Code die Berechtigung für den Zugriff auf andere Ressourcen gewährt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestMinimum">
+      <MemberSignature Language="C#" Value="RequestMinimum" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityAction RequestMinimum = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityAction.RequestMinimum" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This requests should not be used")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anforderung der Mindestberechtigungen, die zum Ausführen des Codes erforderlich sind. Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestOptional">
+      <MemberSignature Language="C#" Value="RequestOptional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityAction RequestOptional = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityAction.RequestOptional" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This requests should not be used")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anforderung weiterer Berechtigungen, die optional sind (zur Ausführung nicht erforderlich). Diese Anforderung lehnt implizit alle anderen nicht speziell angeforderten Berechtigungen ab. Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestRefuse">
+      <MemberSignature Language="C#" Value="RequestRefuse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityAction RequestRefuse = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityAction.RequestRefuse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This requests should not be used")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anforderung, dass dem aufrufenden Code keine Berechtigungen erteilt werden, die missbraucht werden könnten. Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

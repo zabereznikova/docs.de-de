@@ -1,0 +1,75 @@
+<Type Name="ICustomFactory" FullName="System.Runtime.InteropServices.ICustomFactory">
+  <TypeSignature Language="C#" Value="public interface ICustomFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICustomFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ICustomFactory" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht es Benutzern, Aktivierungscode für verwaltete Objekte zu schreiben, mit denen erweitert <see cref="T:System.MarshalByRefObject" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können benutzerdefinierte Aktivierung aktivieren, indem Sie eine Proxyklasse, die implementiert `ICustomFactory` und Attributierung der <xref:System.MarshalByRefObject> -Klasse mit der <xref:System.Runtime.Remoting.Proxies.ProxyAttribute>. Wenn die Klasse aktiviert ist, des Proxys <xref:System.Runtime.InteropServices.ICustomFactory.CreateInstance%2A> Methode wird aufgerufen, durch die common Language Runtime verwenden, um die Klasse zu aktivieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public MarshalByRefObject CreateInstance (Type serverType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.MarshalByRefObject CreateInstance(class System.Type serverType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ICustomFactory.CreateInstance(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.MarshalByRefObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serverType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serverType">Der Typ zu aktivieren.</param>
+        <summary>Erstellt eine neue Instanz des angegebenen Typs.</summary>
+        <returns>Ein <see cref="T:System.MarshalByRefObject" /> dem angegebenen Typ zugeordnet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `CreateInstance`wird von der common Language Runtime aufgerufen werden, wenn ein neues Objekt des angegebenen Typs erstellt werden muss. Überschreiben Sie diese Methode, um eine eigene benutzerdefinierte Klassenfactory bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

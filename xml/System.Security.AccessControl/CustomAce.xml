@@ -1,0 +1,222 @@
+<Type Name="CustomAce" FullName="System.Security.AccessControl.CustomAce">
+  <TypeSignature Language="C#" Value="public sealed class CustomAce : System.Security.AccessControl.GenericAce" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CustomAce extends System.Security.AccessControl.GenericAce" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.CustomAce" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.GenericAce</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Zugriff Zugriffssteuerungseintrag (ACE), die nicht definiert ist von einem Mitglied der <see cref="T:System.Security.AccessControl.AceType" /> Enumeration.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Security.AccessControl.CustomAce> Objekt enthält einen ACE-Header und ein nicht transparentes Blob von Daten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomAce (System.Security.AccessControl.AceType type, System.Security.AccessControl.AceFlags flags, byte[] opaque);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.AccessControl.AceType type, valuetype System.Security.AccessControl.AceFlags flags, unsigned int8[] opaque) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CustomAce.#ctor(System.Security.AccessControl.AceType,System.Security.AccessControl.AceFlags,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Security.AccessControl.AceType" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AceFlags" />
+        <Parameter Name="opaque" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="type">Typ des der neuen Zugriff Zugriffssteuerungseintrag (ACE). Dieser Wert muss größer sein <see cref="F:System.Security.AccessControl.AceType.MaxDefinedAceType" />.</param>
+        <param name="flags">Flags, die Angaben zu Vererbung, Vererbungsweitergabe und überwachungsbedingungen für den neuen ACE.</param>
+        <param name="opaque">Ein Array von Bytewerten, das die Daten für den neuen ACE enthält. Dieser Wert kann <see langword="null" /> sein. Die Länge dieses Arrays darf nicht größer als der Wert des sein der <see cref="F:System.Security.AccessControl.CustomAce.MaxOpaqueLength" /> ein, und muss ein Vielfaches von vier sein.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.AccessControl.CustomAce" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `opaque` -Daten werden nicht geklont. Die Daten sollten geklont werden, bevor Sie diesen Konstruktor aufrufen, wenn der Aufrufer hat nicht die Quelle der Daten, ändern Sie die Daten nicht vertraut.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert des der <paramref name="type" /> Parameter ist nicht größer als <see cref="F:System.Security.AccessControl.AceType.MaxDefinedAceType" /> oder die Länge des der <paramref name="opaque" /> Array handelt es sich um größer als der Wert von der <see cref="F:System.Security.AccessControl.CustomAce.MaxOpaqueLength" /> Feld oder eine nicht auf ein Vielfaches von vier.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BinaryLength">
+      <MemberSignature Language="C#" Value="public override int BinaryLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BinaryLength" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CustomAce.BinaryLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge der binären Darstellung des aktuellen <see cref="T:System.Security.AccessControl.CustomAce" />-Objekts (in Bytes) ab. Diese Länge muss vor dem Marshallen der ACL in ein binäres Array mit der <see cref="M:System.Security.AccessControl.CustomAce.GetBinaryForm(System.Byte[],System.Int32)" />-Methode verwendet werden.</summary>
+        <value>Die Länge der binären Darstellung des aktuellen <see cref="T:System.Security.AccessControl.CustomAce" />-Objekts (in Bytes).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBinaryForm">
+      <MemberSignature Language="C#" Value="public override void GetBinaryForm (byte[] binaryForm, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetBinaryForm(unsigned int8[] binaryForm, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CustomAce.GetBinaryForm(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binaryForm" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="binaryForm">Das Bytearray, in das der Inhalt von <see cref="T:System.Security.AccessControl.CustomAce" /> gemarshallt wird.</param>
+        <param name="offset">Der Offset, bei dem das Marshallen begonnen werden soll.</param>
+        <summary>Marshallt den Inhalt des <see cref="T:System.Security.AccessControl.CustomAce" />-Objekts in das angegebene Bytearray, wobei beim angegebenen Offset begonnen wird.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist negativ oder zu hoch, um den gesamten <see cref="T:System.Security.AccessControl.CustomAce" /> in <paramref name="array" /> zu kopieren.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOpaque">
+      <MemberSignature Language="C#" Value="public byte[] GetOpaque ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetOpaque() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CustomAce.GetOpaque" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, die nicht transparenten Daten, die mit diesem verknüpften <see cref="T:System.Security.AccessControl.CustomAce" /> Objekt.</summary>
+        <returns>Ein Array von Bytewerten, die nicht transparenten Daten, die mit diesem verknüpften darstellt <see cref="T:System.Security.AccessControl.CustomAce" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxOpaqueLength">
+      <MemberSignature Language="C#" Value="public static readonly int MaxOpaqueLength;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 MaxOpaqueLength" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.CustomAce.MaxOpaqueLength" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die maximal zulässige Länge eines opaken Daten-BLOBs für diesen <see cref="T:System.Security.AccessControl.CustomAce" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpaqueLength">
+      <MemberSignature Language="C#" Value="public int OpaqueLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OpaqueLength" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CustomAce.OpaqueLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge der die nicht transparenten Daten, die mit diesem verknüpften <see cref="T:System.Security.AccessControl.CustomAce" /> Objekt.</summary>
+        <value>Die Länge der Rückrufdaten nicht transparenten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOpaque">
+      <MemberSignature Language="C#" Value="public void SetOpaque (byte[] opaque);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOpaque(unsigned int8[] opaque) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CustomAce.SetOpaque(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="opaque" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="opaque">Ein Array von Bytewerten, das die nicht transparenten Rückrufdaten für diesen <see cref="T:System.Security.AccessControl.CustomAce" /> Objekt.</param>
+        <summary>Legt die nicht transparenten Rückrufdaten zugeordnete <see cref="T:System.Security.AccessControl.CustomAce" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

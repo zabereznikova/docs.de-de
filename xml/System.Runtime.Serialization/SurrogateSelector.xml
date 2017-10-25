@@ -1,0 +1,291 @@
+<Type Name="SurrogateSelector" FullName="System.Runtime.Serialization.SurrogateSelector">
+  <TypeSignature Language="C#" Value="public class SurrogateSelector : System.Runtime.Serialization.ISurrogateSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SurrogateSelector extends System.Object implements class System.Runtime.Serialization.ISurrogateSelector" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.SurrogateSelector" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISurrogateSelector</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Unterstützt Formatierungsprogrammen bei der Auswahl des Ersatzzeichens Serialisierung zum Delegieren der Serialisierungs oder Deserialisierung auf.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Serialisierungsersatz stellt dem Benutzer ein Objekt, das die Serialisierungsanforderungen eines anderen Objekts behandeln und ggf. die Serialisierungsdaten transformieren kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie um eine Serialisierung Ersatzzeichen-Klasse, die weiß, wie ordnungsgemäß serialisiert oder deserialisiert eine Klasse, die nicht selbst ist serialisierbar zu machen. Dieses Beispiel zeigt darüber hinaus auch Informationen zum Wiederherstellen einer <xref:System.Runtime.Serialization.SerializationException>.  
+  
+ [!code-csharp[SurrogateSelector#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SurrogateSelector/CS/SurrogateSelector.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SurrogateSelector ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SurrogateSelector.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.SurrogateSelector" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSurrogate">
+      <MemberSignature Language="C#" Value="public virtual void AddSurrogate (Type type, System.Runtime.Serialization.StreamingContext context, System.Runtime.Serialization.ISerializationSurrogate surrogate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddSurrogate(class System.Type type, valuetype System.Runtime.Serialization.StreamingContext context, class System.Runtime.Serialization.ISerializationSurrogate surrogate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SurrogateSelector.AddSurrogate(System.Type,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISerializationSurrogate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+        <Parameter Name="surrogate" Type="System.Runtime.Serialization.ISerializationSurrogate" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> für die das Ersatzzeichen erforderlich ist.</param>
+        <param name="context">Die Kontext-spezifische Daten.</param>
+        <param name="surrogate">Das Ersatzzeichen für diesen Typ aufgerufen werden soll.</param>
+        <summary>Die Liste der aktivierten Ersatzzeichen hinzugefügt ein Ersatzzeichens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Aufrufen der <xref:System.Runtime.Serialization.SurrogateSelector.AddSurrogate%2A> Methode. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Serialization.SurrogateSelector> Klasse.  
+  
+ [!code-csharp[SurrogateSelector#2](~/samples/snippets/csharp/VS_Snippets_Remoting/SurrogateSelector/CS/SurrogateSelector.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="type" />-Parameter oder der <paramref name="surrogate" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein Ersatzzeichen für dieses Typs und Kontexts ist bereits vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChainSelector">
+      <MemberSignature Language="C#" Value="public virtual void ChainSelector (System.Runtime.Serialization.ISurrogateSelector selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ChainSelector(class System.Runtime.Serialization.ISurrogateSelector selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SurrogateSelector.ChainSelector(System.Runtime.Serialization.ISurrogateSelector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selector" Type="System.Runtime.Serialization.ISurrogateSelector" />
+      </Parameters>
+      <Docs>
+        <param name="selector">Der hinzuzufügende Ersatzselektor.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> können, die einen bestimmten Objekttyp zur Liste der Ersatzzeichen behandeln.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die letzten Auswahl zur Liste hinzugefügt wird das erste Schema überprüft werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="selector" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die Auswahl ist bereits in der Liste der Selektoren.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für das Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextSelector">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Serialization.ISurrogateSelector GetNextSelector ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Serialization.ISurrogateSelector GetNextSelector() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SurrogateSelector.GetNextSelector" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ISurrogateSelector</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den nächsten Selektor in der Kette der Selektoren zurück.</summary>
+        <returns>Das nächste <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> in der Kette der Selektoren.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für das Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSurrogate">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Serialization.ISerializationSurrogate GetSurrogate (Type type, System.Runtime.Serialization.StreamingContext context, out System.Runtime.Serialization.ISurrogateSelector selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Serialization.ISerializationSurrogate GetSurrogate(class System.Type type, valuetype System.Runtime.Serialization.StreamingContext context, [out] class System.Runtime.Serialization.ISurrogateSelector&amp; selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SurrogateSelector.GetSurrogate(System.Type,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ISerializationSurrogate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+        <Parameter Name="selector" Type="System.Runtime.Serialization.ISurrogateSelector&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> für das das Ersatzzeichen angefordert wird.</param>
+        <param name="context">Der Streamingkontext.</param>
+        <param name="selector">Das Ersatzzeichen verwendet.</param>
+        <summary>Gibt das Ersatzzeichen für einen bestimmten Typ zurück.</summary>
+        <returns>Der Ersatz für einen bestimmten Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die aktuelle Auswahl ein Ersatzzeichen bereitstellen kann, überprüft er alle untergeordneten Objekte vor der Rückgabe `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="type" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für das Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSurrogate">
+      <MemberSignature Language="C#" Value="public virtual void RemoveSurrogate (Type type, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveSurrogate(class System.Type type, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SurrogateSelector.RemoveSurrogate(System.Type,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> für die das Ersatzzeichen entfernt.</param>
+        <param name="context">Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> für den aktuellen Ersatz.</param>
+        <summary>Entfernt das Ersatzzeichen eines bestimmten Typs zugeordnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft nicht verkettete Ersatzzeichen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="type" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,63 @@
+<Type Name="ToolStripSplitButton+ToolStripSplitButtonAccessibleObject" FullName="System.Windows.Forms.ToolStripSplitButton+ToolStripSplitButtonAccessibleObject">
+  <TypeSignature Language="C#" Value="public class ToolStripSplitButton.ToolStripSplitButtonAccessibleObject : System.Windows.Forms.ToolStripItem.ToolStripItemAccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit ToolStripSplitButton/ToolStripSplitButtonAccessibleObject extends System.Windows.Forms.ToolStripItem/ToolStripItemAccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripSplitButton.ToolStripSplitButtonAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripItem+ToolStripItemAccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen, die von Eingabehilfen-Anwendungen zum Anpassen der Benutzeroberfläche von einem <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> für Benutzer mit Behinderung verwendet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripSplitButtonAccessibleObject (System.Windows.Forms.ToolStripSplitButton item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ToolStripSplitButton item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.ToolStripSplitButtonAccessibleObject.#ctor(System.Windows.Forms.ToolStripSplitButton)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Forms.ToolStripSplitButton" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> , besitzt dies <see cref="T:System.Windows.Forms.ToolStripSplitButton.ToolStripSplitButtonAccessibleObject" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripSplitButton.ToolStripSplitButtonAccessibleObject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoDefaultAction">
+      <MemberSignature Language="C#" Value="public override void DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.ToolStripSplitButtonAccessibleObject.DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Standardaktion zugeordnete <see cref="T:System.Windows.Forms.ToolStripSplitButton.ToolStripSplitButtonAccessibleObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Clients können Standardaktion des Objekts abrufen, indem Sie ein Objekt überprüfen <xref:System.Windows.Forms.AccessibleObject.DefaultAction%2A> Eigenschaft. Ein Client kann mithilfe der Automatisierung (sofern unterstützt) anstelle von <xref:System.Windows.Forms.ToolStripSplitButton.ToolStripSplitButtonAccessibleObject.DoDefaultAction%2A> zum Ausführen der Standardaktion des Objekts. Allerdings <xref:System.Windows.Forms.ToolStripSplitButton.ToolStripSplitButtonAccessibleObject.DoDefaultAction%2A> bietet eine einfache Möglichkeit, ein Objekt Ausführen der Aktion am häufigsten verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für erbende Klassen zum Aufrufen von nicht verwalteten Codes. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

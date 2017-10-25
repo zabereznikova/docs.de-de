@@ -1,0 +1,81 @@
+<Type Name="AsyncCodeActivityContext" FullName="System.Activities.AsyncCodeActivityContext">
+  <TypeSignature Language="C#" Value="public sealed class AsyncCodeActivityContext : System.Activities.CodeActivityContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AsyncCodeActivityContext extends System.Activities.CodeActivityContext" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.AsyncCodeActivityContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.CodeActivityContext</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Der Ausführungskontext für eine asynchrone Aktivität.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine versiegelte Klasse, die von <xref:System.Activities.CodeActivityContext> abgeleitet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsCancellationRequested">
+      <MemberSignature Language="C#" Value="public bool IsCancellationRequested { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCancellationRequested" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.AsyncCodeActivityContext.IsCancellationRequested" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die momentan ausführende <see cref="T:System.Activities.AsyncCodeActivity" /> abgebrochen werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn der aktuell ausgeführten <see cref="T:System.Activities.AsyncCodeActivity" /> abgebrochen wurde, andernfalls werden <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkCanceled">
+      <MemberSignature Language="C#" Value="public void MarkCanceled ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MarkCanceled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.AsyncCodeActivityContext.MarkCanceled" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kennzeichnet die aktuelle Aktivitätsinstanz als abgebrochen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserState">
+      <MemberSignature Language="C#" Value="public object UserState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object UserState" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.AsyncCodeActivityContext.UserState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein benutzerdefiniertes Objekt ab (bzw. legt dieses fest), das der aktuellen asynchronen Aktivität zugeordnet ist.</summary>
+        <value>Das benutzerdefinierte Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

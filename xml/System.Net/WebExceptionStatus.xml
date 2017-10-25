@@ -1,0 +1,603 @@
+<Type Name="WebExceptionStatus" FullName="System.Net.WebExceptionStatus">
+  <TypeSignature Language="C#" Value="public enum WebExceptionStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebExceptionStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.WebExceptionStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Requests</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Statuscodes für die <see cref="T:System.Net.WebException" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebExceptionStatus> -Enumeration definiert die Statuscodes zugewiesene die <xref:System.Net.WebException.Status%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="CacheEntryNotFound">
+      <MemberSignature Language="C#" Value="CacheEntryNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus CacheEntryNotFound = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.CacheEntryNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der angegebene Cacheeintrag wurde nicht gefunden.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectFailure">
+      <MemberSignature Language="C#" Value="ConnectFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus ConnectFailure = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.ConnectFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der remote-Dienstpunkt konnte auf der Transportebene keine Verbindung hergestellt werden.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionClosed">
+      <MemberSignature Language="C#" Value="ConnectionClosed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus ConnectionClosed = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.ConnectionClosed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Verbindung wurde vorzeitig geschlossen.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KeepAliveFailure">
+      <MemberSignature Language="C#" Value="KeepAliveFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus KeepAliveFailure = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.KeepAliveFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Verbindung für eine Anforderung, die angibt, die Keep-alive-Header wurde unerwartet geschlossen.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MessageLengthLimitExceeded">
+      <MemberSignature Language="C#" Value="MessageLengthLimitExceeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus MessageLengthLimitExceeded = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.MessageLengthLimitExceeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wurde eine Nachricht erhalten, die den angegebenen Grenzwert für das Senden einer Anforderung oder das Erhalten einer Antwort vom Server überschritten hat.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NameResolutionFailure">
+      <MemberSignature Language="C#" Value="NameResolutionFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus NameResolutionFailure = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.NameResolutionFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der namensresolverdienst konnte den Hostnamen nicht aufgelöst werden.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Pending">
+      <MemberSignature Language="C#" Value="Pending" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus Pending = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.Pending" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine interne asynchrone Anforderung steht aus.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PipelineFailure">
+      <MemberSignature Language="C#" Value="PipelineFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus PipelineFailure = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.PipelineFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anforderung wurde eine Anforderung über pipelineverbindungen gesendet, und die Verbindung wurde geschlossen, bevor die Antwort empfangen wurde.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolError">
+      <MemberSignature Language="C#" Value="ProtocolError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus ProtocolError = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.ProtocolError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Antwort vom Server empfangen wurde abgeschlossen, aber hat einen Fehler Protokollebene. Beispielsweise würde ein HTTP-Protokollfehler, z. B. 401 Access Denied dieser Status verwenden.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyNameResolutionFailure">
+      <MemberSignature Language="C#" Value="ProxyNameResolutionFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus ProxyNameResolutionFailure = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.ProxyNameResolutionFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Namensresolverdienst konnte den Hostnamen des Proxys nicht auflösen.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveFailure">
+      <MemberSignature Language="C#" Value="ReceiveFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus ReceiveFailure = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.ReceiveFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wurde keine vollständige Nachricht vom Remoteserver empfangen.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RequestCanceled">
+      <MemberSignature Language="C#" Value="RequestCanceled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus RequestCanceled = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.RequestCanceled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anforderung wurde abgebrochen, die <see cref="M:System.Net.WebRequest.Abort" /> -Methode wurde aufgerufen, oder ein nicht klassifizierbar Fehler aufgetreten. Dies ist der Standardwert für <see cref="P:System.Net.WebException.Status" />.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RequestProhibitedByCachePolicy">
+      <MemberSignature Language="C#" Value="RequestProhibitedByCachePolicy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus RequestProhibitedByCachePolicy = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.RequestProhibitedByCachePolicy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anforderung wurde durch die Cacherichtlinie nicht zugelassen. Das tritt im Allgemeinen auf, wenn eine Anforderung keine zwischenspeicherbar ist und die wirksame Richtlinie verhindert, dass die Anforderung an den Server gesendet. Dieser Status möglicherweise angezeigt werden, wenn eine Anforderungsmethode das Vorhandensein der Anforderungstext bedeutet, eine Anforderungsmethode direkte Interaktion mit dem Server erfordert oder eine Anforderung einen bedingten Header enthält.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RequestProhibitedByProxy">
+      <MemberSignature Language="C#" Value="RequestProhibitedByProxy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus RequestProhibitedByProxy = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.RequestProhibitedByProxy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Anforderung wurde vom Proxy nicht zulässig.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SecureChannelFailure">
+      <MemberSignature Language="C#" Value="SecureChannelFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus SecureChannelFailure = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.SecureChannelFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fehler beim Herstellen einer Verbindung mit SSL.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SendFailure">
+      <MemberSignature Language="C#" Value="SendFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus SendFailure = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.SendFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es konnte keine vollständige Anforderung an den Remoteserver gesendet werden.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ServerProtocolViolation">
+      <MemberSignature Language="C#" Value="ServerProtocolViolation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus ServerProtocolViolation = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.ServerProtocolViolation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Serverantwort ist eine ungültige HTTP-Antwort.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="Success" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus Success = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.Success" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es ist kein Fehler aufgetreten.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="Timeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus Timeout = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.Timeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Innerhalb des Timeoutzeitraums für eine Anforderung wurde keine Antwort empfangen.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TrustFailure">
+      <MemberSignature Language="C#" Value="TrustFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus TrustFailure = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.TrustFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Serverzertifikat konnte nicht überprüft werden.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownError">
+      <MemberSignature Language="C#" Value="UnknownError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.WebExceptionStatus UnknownError = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.WebExceptionStatus.UnknownError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebExceptionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Ausnahme unbekannten Typs wurde ausgelöst.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

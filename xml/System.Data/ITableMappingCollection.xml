@@ -1,0 +1,249 @@
+<Type Name="ITableMappingCollection" FullName="System.Data.ITableMappingCollection">
+  <TypeSignature Language="C#" Value="public interface ITableMappingCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITableMappingCollection implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Data.ITableMappingCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Enthält eine Auflistung von TableMapping-Objekten und wird implementiert, indem die <see cref="T:System.Data.Common.DataTableMappingCollection" />, der von .NET Framework-Datenanbietern gemeinsam verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.ITableMappingCollection> Schnittstelle ermöglicht es eine erbende Klasse zum Implementieren einer TableMapping-Auflistung. Weitere Informationen finden Sie unter [DataAdapter DataTable- und DataColumn-Zuordnungen](~/docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md).  
+  
+ Eine Anwendung erstellt eine Instanz der nicht der <xref:System.Data.ITableMappingCollection> -Schnittstelle direkt, sondern erstellt eine Instanz einer Klasse, die erbt <xref:System.Data.ITableMappingCollection>.  
+  
+ Klassen, erben <xref:System.Data.ITableMappingCollection> müssen Sie die geerbten Member implementieren und definieren Sie in der Regel zusätzliche Elemente, um die anbieterspezifische Funktionalität hinzufügen. Z. B. die <xref:System.Data.ITableMappingCollection> Schnittstelle definiert eine Implementierung der <xref:System.Data.ITableMappingCollection.RemoveAt%2A> Methode. Wiederum die <xref:System.Data.Common.DataTableMappingCollection> Klasse erbt von dieser Methode und definiert zwei weitere Überladungen <xref:System.Data.Common.DataTableMappingCollection.RemoveAt%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Instanz der abgeleiteten Klasse <xref:System.Data.Common.DataTableMapping>, und fügt es einer <xref:System.Data.Common.DataTableMappingCollection> Auflistung. Anschließend wird dem Benutzer darüber informiert, dass die Zuordnung der Auflistung hinzugefügt wurde.  
+  
+ [!code-csharp[Classic WebData DataTableMapping Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Data.ITableMappingCollection" /> -Schnittstelle, implementieren Sie den folgenden Konstruktor:  
+  
+ <list type="table"><listheader><term>Element  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>PrvTableMappingCollection()  
+  
+ </term><description>Erstellt eine leere PrvTableMappingCollection-Klasse.  
+  
+ </description></item></list></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.ITableMapping Add (string sourceTableName, string dataSetTableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.ITableMapping Add(string sourceTableName, string dataSetTableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ITableMappingCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ITableMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceTableName" Type="System.String" />
+        <Parameter Name="dataSetTableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceTableName">Der Name der Quelltabelle.</param>
+        <param name="dataSetTableName">Der Name des der <see cref="T:System.Data.DataSet" /> Tabelle.</param>
+        <summary>Eine Zuordnung zu einer Tabelle und der Auflistung hinzugefügt.</summary>
+        <returns>Ein Verweis auf das neu zugeordnete <see cref="T:System.Data.ITableMapping" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string sourceTableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(string sourceTableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ITableMappingCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceTableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceTableName">Der Name der Quelltabelle.</param>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistung eine tabellenzuordnung mit dem Namen der angegebenen Quelltabelle enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn eine tabellenzuordnung mit dem Namen der angegebenen Quelltabelle vorhanden, andernfalls ist <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByDataSetTable">
+      <MemberSignature Language="C#" Value="public System.Data.ITableMapping GetByDataSetTable (string dataSetTableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.ITableMapping GetByDataSetTable(string dataSetTableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ITableMappingCollection.GetByDataSetTable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ITableMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSetTableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSetTableName">Der Name des der <see langword="DataSet" /> Tabelle innerhalb der Auflistung.</param>
+        <summary>Ruft das TableMapping-Objekt mit dem angegebenen <see cref="T:System.Data.DataSet" /> Tabellenname.</summary>
+        <returns>Das TableMapping-Objekt mit dem angegebenen <see langword="DataSet" /> Tabellenname.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string sourceTableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(string sourceTableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ITableMappingCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceTableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceTableName">Der Name der Quelltabelle.</param>
+        <summary>Ruft den Speicherort des der <see cref="T:System.Data.ITableMapping" /> Objekt innerhalb der Auflistung.</summary>
+        <returns>Die nullbasierte Position des der <see cref="T:System.Data.ITableMapping" /> Objekt innerhalb der Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ITableMappingCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die <see langword="SourceTable" /> der Name der <see cref="T:System.Data.ITableMapping" />.</param>
+        <summary>Ruft ab oder legt die Instanz der <see cref="T:System.Data.ITableMapping" /> mit dem angegebenen <see cref="P:System.Data.ITableMapping.SourceTable" /> Name.</summary>
+        <value>Die Instanz von <see cref="T:System.Data.ITableMapping" /> mit dem angegebenen <see langword="SourceTable" /> Name.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (string sourceTableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(string sourceTableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ITableMappingCollection.RemoveAt(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceTableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceTableName">Der Name des der <see langword="SourceTable" />.</param>
+        <summary>Entfernt die <see cref="T:System.Data.ITableMapping" /> Objekt mit dem angegebenen <see cref="P:System.Data.ITableMapping.SourceTable" /> Namen aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

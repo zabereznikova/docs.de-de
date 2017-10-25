@@ -1,0 +1,138 @@
+<Type Name="RegistrationErrorInfo" FullName="System.EnterpriseServices.RegistrationErrorInfo">
+  <TypeSignature Language="C#" Value="public sealed class RegistrationErrorInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit RegistrationErrorInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.RegistrationErrorInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ruft erweiterte Fehlerinformationen über Methoden, die im Zusammenhang mit mehreren COM+-Objekten. Dies schließt auch Methoden, die installieren, importieren und Exportieren von COM+-Anwendungen und Komponenten. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie erweiterte Fehlerinformationen über Methoden für komponentenhosts mit mehreren COM+-Objekte abgerufen wird.  
+  
+ [!code-cpp[EnterpriseServices Registration#0](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices Registration/CPP/deployservicedcomponent.cpp#0)]
+ [!code-csharp[EnterpriseServices Registration#0](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices Registration/CS/deployservicedcomponent.cs#0)]
+ [!code-vb[EnterpriseServices Registration#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices Registration/VB/deployservicedcomponent.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ErrorCode">
+      <MemberSignature Language="C#" Value="public int ErrorCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ErrorCode" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.RegistrationErrorInfo.ErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fehlercode des Objekts oder der Datei ab.</summary>
+        <value>Der Fehlercode für das Objekt oder die Datei.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorString">
+      <MemberSignature Language="C#" Value="public string ErrorString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorString" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.RegistrationErrorInfo.ErrorString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung ab der <see cref="P:System.EnterpriseServices.RegistrationErrorInfo.ErrorCode" />.</summary>
+        <value>Eine Beschreibung des <see cref="P:System.EnterpriseServices.RegistrationErrorInfo.ErrorCode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Fehlerzeichenfolge von abzurufenden ein `RegistrationErrorInfo` Objekt.  
+  
+ [!code-cpp[EnterpriseServices Registration#4](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices Registration/CPP/deployservicedcomponent.cpp#4)]
+ [!code-csharp[EnterpriseServices Registration#4](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices Registration/CS/deployservicedcomponent.cs#4)]
+ [!code-vb[EnterpriseServices Registration#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices Registration/VB/deployservicedcomponent.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorRef">
+      <MemberSignature Language="C#" Value="public string MajorRef { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MajorRef" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.RegistrationErrorInfo.MajorRef" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüsselwert für das Objekt, das den Fehler verursacht hat, falls zutreffend.</summary>
+        <value>Der Wert für das Objekt, das den Fehler verursacht hat, falls zutreffend.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Schlüsselwert nicht gilt, <xref:System.EnterpriseServices.RegistrationErrorInfo.MajorRef%2A> ist identisch mit <xref:System.EnterpriseServices.RegistrationErrorInfo.Name%2A>. Verwenden Sie diese Option, um das Element zu suchen, die Fehler beim Aktualisieren oder zu suchen, die Komponente oder DLL, die bei der Installation.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorRef">
+      <MemberSignature Language="C#" Value="public string MinorRef { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MinorRef" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.RegistrationErrorInfo.MinorRef" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine präzise Spezifikation des Elements, das den Fehler, z. B. einen Eigenschaftsnamen verursacht hat.</summary>
+        <value>Eine genaue Spezifikation des Elements, z. B. einen Eigenschaftsnamen, die den Fehler verursacht hat. Wenn mehrere Fehler aufgetreten, oder dies nicht gilt, <see cref="P:System.EnterpriseServices.RegistrationErrorInfo.MinorRef" /> gibt die Zeichenfolge "&lt;ungültige&gt;".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.RegistrationErrorInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Objekts oder der Datei, die den Fehler verursacht hat.</summary>
+        <value>Der Name des Objekts oder der Datei, die den Fehler verursacht hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

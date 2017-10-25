@@ -1,0 +1,211 @@
+<Type Name="RangeExpression" FullName="System.Web.UI.WebControls.Expressions.RangeExpression">
+  <TypeSignature Language="C#" Value="public class RangeExpression : System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RangeExpression extends System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Expressions.RangeExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Möglichkeit, um zu bestimmen, ob ein Wert größer oder kleiner als ein angegebener Wert ist, oder, ob ein Wert zwischen zwei angegebenen Werten liegt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement bietet die Möglichkeit zum Filtern von Daten auf einer Webseite mithilfe von Klassen in der <xref:System.Web.UI.WebControls.Expressions> Namespace. Diese Klassen umfassen die <xref:System.Web.UI.WebControls.Expressions.RangeExpression> Klasse.  
+  
+ Die <xref:System.Web.UI.WebControls.Expressions.RangeExpression> -Klasse durchsucht eine Datenspalte mithilfe eines Paars von Werten, die den Bereich zu definieren. Verwenden Sie die <xref:System.Web.UI.WebControls.Expressions.RangeExpression.DataField%2A> Eigenschaft, um die zu durchsuchende Spalte anzugeben. Verwenden Sie die <xref:System.Web.UI.WebControls.Expressions.RangeExpression.MinType%2A> Eigenschaft, um anzugeben, ob zum ein- bzw. Ausschließen von mindestens in die Suche durchgeführt, und Sie verwenden die <xref:System.Web.UI.WebControls.Expressions.RangeExpression.MaxType%2A> Eigenschaft, um anzugeben, ob der maximale Wert ein- oder ausgeschlossen. Die maximalen und minimalen Werte angegeben werden können, [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Steuerelemente und die Werte können dann zum Übergeben der <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement als Parameter in <xref:System.Web.UI.WebControls.ControlParameter> Steuerelemente. Die Ergebnisse werden in der Regel in einem datengebundenen Steuerelement angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie die ListPrice-Spalte in der Products-Tabelle der AdventureWorks-Datenbank für Produkte gesucht werden soll, die einen Listenpreis im Bereich, die im angegebenen enthalten der `FromTextBox` und `ToTextBox` Textfelder. Der Filter schließt den minimalen Wert, sondern schließt den Maximalwert in den Ergebnissen. Die Ergebnisse werden angezeigt, einem <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite mithilfe von deklarativer Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.WebControls.Expressions.RangeExpression.DataField" />-Eigenschaft ist <see langword="null" />.</exception>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RangeExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.RangeExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Expressions.RangeExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataField">
+      <MemberSignature Language="C#" Value="public string DataField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.RangeExpression.DataField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Feld für den Vergleich verwendet.</summary>
+        <value>Das Feld für den Vergleich verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Bereichsausdruck sucht Feld "Daten" für den angegebenen Bereich.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie die Listenpreis-Spalte in der Products-Tabelle der AdventureWorks-Datenbank für Produkte gesucht werden soll, die einen Listenpreis im Bereich, die im angegebenen enthalten der `FromTextBox` und `ToTextBox` Textfelder.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite mithilfe von deklarativer Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:RangeExpression DataField="ListPrice"    
+    MinType="Inclusive" MaxType="Exclusive">  
+  <asp:ControlParameter ControlID="FromTextBox" />  
+  <asp:ControlParameter ControlID="ToTextBox" />  
+</asp:RangeExpression>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryable">
+      <MemberSignature Language="C#" Value="public override System.Linq.IQueryable GetQueryable (System.Linq.IQueryable source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Linq.IQueryable GetQueryable(class System.Linq.IQueryable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.RangeExpression.GetQueryable(System.Linq.IQueryable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+      </Parameters>
+      <Docs>
+        <param name="source">Das Objekt, für den Vergleich verwendet werden soll.</param>
+        <summary>Ruft die <see cref="T:System.Linq.IQueryable" /> -Objekt, das für die Bereichsvergleiche ausgeführt wurde.</summary>
+        <returns>Eine Instanz von der <see cref="T:System.Linq.IQueryable" /> -Objekt, das den Ausdruck angewendet wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet den angegebenen <xref:System.Linq.IQueryable> Objekt zum Auflösen des Ausdrucks.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.WebControls.Expressions.RangeExpression.DataField" />-Eigenschaft ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Web.UI.WebControls.Expressions.RangeExpression.MinType" /> und <see cref="P:System.Web.UI.WebControls.Expressions.RangeExpression.MaxType" /> Eigenschaften werden festgelegt, um <see cref="F:System.Web.UI.WebControls.Expressions.RangeType.None" />.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Web.UI.WebControls.Expressions.RangeExpression.MinType" /> oder <see cref="P:System.Web.UI.WebControls.Expressions.RangeExpression.MaxType" /> Eigenschaft nicht festgelegt ist, um <see cref="F:System.Web.UI.WebControls.Expressions.RangeType.None" /> und die Parameters-Auflistung leer ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Expressions.RangeType MaxType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Expressions.RangeType MaxType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.RangeExpression.MaxType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Expressions.RangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den maximalen Wert des Bereichs.</summary>
+        <value>Der Typ des Vergleichs, der für den maximalen Wert verwendet. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.Expressions.RangeType.None" />, was bedeutet, dass der maximale Vergleich nicht ausgeführt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mögliche Werte für diese Eigenschaft sind <xref:System.Web.UI.WebControls.Expressions.RangeType.Inclusive>, <xref:System.Web.UI.WebControls.Expressions.RangeType.Exclusive>, und <xref:System.Web.UI.WebControls.Expressions.RangeType.None>.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.Expressions.RangeExpression.MaxType%2A> festgelegt ist, um <xref:System.Web.UI.WebControls.Expressions.RangeType.Inclusive>, ist der Höchstwert des Bereichs in den Suchergebnissen enthalten. Dies entspricht dem Ausführen einer > = Vorgang. Wenn Sie die Eigenschaft, um festlegen <xref:System.Web.UI.WebControls.Expressions.RangeType.Exclusive> Feld, sie ist gleichbedeutend mit der Angabe einer > oder < Vorgang. Wenn Sie die Eigenschaft, um festlegen <xref:System.Web.UI.WebControls.Expressions.RangeType.None>, keine Beschränkung für den Bereich.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie den minimalen Wert enthalten, der im Bereich angegeben wird und der maximale Wert ausgeschlossen. Die maximale und minimale Werte werden in Textfelder eingegeben. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite mithilfe von deklarativer Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:RangeExpression DataField="ListPrice"    
+    MinType="Inclusive" MaxType="Exclusive">  
+  <asp:ControlParameter ControlID="FromTextBox" />  
+  <asp:ControlParameter ControlID="ToTextBox" />  
+</asp:RangeExpression>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Expressions.RangeType MinType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Expressions.RangeType MinType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.RangeExpression.MinType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Expressions.RangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Mindestwert des Bereichs.</summary>
+        <value>Der Typ des Vergleichs, der für den minimalen Wert verwendet. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.Expressions.RangeType.None" />, was bedeutet, dass der minimale Vergleich nicht ausgeführt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mögliche Werte für diese Eigenschaft sind <xref:System.Web.UI.WebControls.Expressions.RangeType.Inclusive>, <xref:System.Web.UI.WebControls.Expressions.RangeType.Exclusive>, und <xref:System.Web.UI.WebControls.Expressions.RangeType.None>.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.Expressions.RangeExpression.MinType%2A> oder <xref:System.Web.UI.WebControls.Expressions.RangeExpression.MaxType%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.Expressions.RangeType.Inclusive>, die minimale und maximale Wert des Bereichs ist in den Suchergebnissen enthalten. Dies entspricht dem Ausführen einer > = oder \<= Vorgang. Die <xref:System.Web.UI.WebControls.Expressions.RangeType.Exclusive> Feld entspricht der > oder < Operation und <xref:System.Web.UI.WebControls.Expressions.RangeType.None> erzwingt keine Begrenzung des Bereichs.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie den minimalen Wert enthalten, der im Bereich angegeben wird und der maximale Wert ausgeschlossen. Die maximale und minimale Werte werden in Textfelder eingegeben. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite mithilfe von deklarativer Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:RangeExpression DataField="ListPrice"    
+    MinType="Inclusive" MaxType="Exclusive">  
+  <asp:ControlParameter ControlID="FromTextBox" />  
+  <asp:ControlParameter ControlID="ToTextBox" />  
+</asp:RangeExpression>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

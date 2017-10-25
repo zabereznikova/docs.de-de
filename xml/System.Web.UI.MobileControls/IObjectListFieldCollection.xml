@@ -1,0 +1,132 @@
+<Type Name="IObjectListFieldCollection" FullName="System.Web.UI.MobileControls.IObjectListFieldCollection">
+  <TypeSignature Language="C#" Value="public interface IObjectListFieldCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IObjectListFieldCollection implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.IObjectListFieldCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert eine schreibgeschützte Basisschnittstelle für die <see cref="T:System.Web.UI.MobileControls.ObjectListFieldCollection" /> Klasse. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.IObjectListFieldCollection> Schnittstellen implementieren, die <xref:System.Collections.ICollection> Schnittstelle; d. h. alle Eigenschaften und Methoden dieser Schnittstelle werden hier impliziert. Sie können diese Art von Schnittstelle für nur-Lese feldauflistungen verwenden. Beispielsweise kann die Anwendung des Steuerelements abrufen <xref:System.Web.UI.MobileControls.ObjectList.AllFields%2A> Eigenschaft, die eine kombinierte Auflistung der explizit definierten und automatisch generierte Felder für das Steuerelement darstellt. Allerdings kann die Anwendung hinzugefügt oder Entfernen von Feldern in dieser Auflistung.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAll">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.ObjectListField[] GetAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.MobileControls.ObjectListField[] GetAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.IObjectListFieldCollection.GetAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListField[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Array aller Elemente in der <see cref="T:System.Web.UI.MobileControls.ObjectListField" /> Auflistung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein Array aller Elemente in der Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string fieldIDOrTitle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(string fieldIDOrTitle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.IObjectListFieldCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fieldIDOrTitle" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fieldIDOrTitle">Eine Zeichenfolge für den Vergleich mit der <see langword="Title" /> oder <see langword="DataField" /> Eigenschaft.</param>
+        <summary>Gibt den Index eines Felds zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Index des angegebenen Felds.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der zweiten Version dieser Methode, sucht es ein Feld mit der `Title` Eigenschaft `fieldId` und gibt das erste übereinstimmende Feld zurück. Wenn keine Übereinstimmung gefunden wird, sucht es nach ein Feld mit der `DataField` der Eigenschaft `fieldID` Parameter und gibt das erste übereinstimmende Feld zurück. Andernfalls wird zurückgegeben `-1`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.MobileControls.ObjectListField field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(class System.Web.UI.MobileControls.ObjectListField field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.IObjectListFieldCollection.IndexOf(System.Web.UI.MobileControls.ObjectListField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.Web.UI.MobileControls.ObjectListField" />
+      </Parameters>
+      <Docs>
+        <param name="field">Ein Feld, das in der angegebenen Auflistung gesucht werden soll.</param>
+        <summary>Gibt den Index eines Felds zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Index des angegebenen Felds.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der ersten Version dieser Methode wird den Index des angegebenen Felds zurückgegeben. Wenn das angegebene Feld nicht in der Auflistung vorhanden ist, gibt es `-1`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.ObjectListField this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.ObjectListField Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.IObjectListFieldCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListField</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements, das aus der Auflistung abgerufen werden soll.</param>
+        <summary>Gibt ein Element in der Auflistung nach Index zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Element in der Auflistung am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

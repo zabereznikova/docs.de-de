@@ -1,0 +1,122 @@
+<Type Name="IControlDesignerBehavior" FullName="System.Web.UI.Design.IControlDesignerBehavior">
+  <TypeSignature Language="C#" Value="public interface IControlDesignerBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IControlDesignerBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IControlDesignerBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The recommended alternative is System.Web.UI.Design.IControlDesignerTag and System.Web.UI.Design.IControlDesignerView. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht die Erweiterung der bestimmte Verhaltensweisen von einem Steuerelement-Designer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.IControlDesignerBehavior> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.Design.IControlDesignerTag> und <xref:System.Web.UI.Design.IControlDesignerView> Schnittstellen für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DesignTimeElementView">
+      <MemberSignature Language="C#" Value="public object DesignTimeElementView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DesignTimeElementView" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IControlDesignerBehavior.DesignTimeElementView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Steuerelementobjekt Entwurfszeitansicht für den Designer ab.</summary>
+        <value>Das Steuerelement Ansichtsobjekt für den Designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.IControlDesignerBehavior> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.Design.IControlDesignerTag> und <xref:System.Web.UI.Design.IControlDesignerView> Schnittstellen für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignTimeHtml">
+      <MemberSignature Language="C#" Value="public string DesignTimeHtml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DesignTimeHtml" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IControlDesignerBehavior.DesignTimeHtml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Entwurfszeit HTML für das Steuerelement des Designers.</summary>
+        <value>Der HTML-Code, der zum Formatieren des Steuerelements zur Entwurfszeit verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.IControlDesignerBehavior> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.Design.IControlDesignerTag> und <xref:System.Web.UI.Design.IControlDesignerView> Schnittstellen für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTemplateModeChanged">
+      <MemberSignature Language="C#" Value="public void OnTemplateModeChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnTemplateModeChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IControlDesignerBehavior.OnTemplateModeChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bietet die Möglichkeit zum Ausführen der Verarbeitung, wenn der Designer betritt oder verlässt Vorlagenmodus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.Design.IControlDesignerBehavior.OnTemplateModeChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <block subset="none" type="note">
+              <para>  
+ Die <see cref="T:System.Web.UI.Design.IControlDesignerBehavior" /> Schnittstelle ist veraltet. Verwenden der <see cref="T:System.Web.UI.Design.IControlDesignerTag" /> und <see cref="T:System.Web.UI.Design.IControlDesignerView" /> Schnittstellen für das entsprechende Steuerelement-Designer-Funktionen.  
+  
+</para>
+            </block>  
+  
+ Wenn Sie <see cref="M:System.Web.UI.Design.IControlDesignerBehavior.OnTemplateModeChanged" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.Design.IControlDesignerBehavior.OnTemplateModeChanged" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

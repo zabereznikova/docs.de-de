@@ -1,0 +1,333 @@
+<Type Name="XamlWriter" FullName="System.Xaml.XamlWriter">
+  <TypeSignature Language="C#" Value="public abstract class XamlWriter : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XamlWriter extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Standard-Implementierung und Base Klassendefinitionen für ein XAML-Writer. Dies ist kein arbeiten standardmäßig XAML-Writer. Sie müssen entweder von abgeleitet <see cref="T:System.Xaml.XamlWriter" /> und dessen abstrakte Member implementieren, oder verwenden Sie ein vorhandenes <see cref="T:System.Xaml.XamlWriter" /> abgeleitete Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die beiden wichtigsten praktischen abgeleiteten Klassen von <xref:System.Xaml.XamlWriter> sind die <xref:System.Xaml.XamlXmlWriter> und <xref:System.Xaml.XamlObjectWriter> Klassen, wie die folgenden Details erläutern:  
+  
+-   <xref:System.Xaml.XamlXmlWriter>verarbeitet einen XAML-Knotensatz und erzeugt eine XML-Textdatei. Diese Klasse kann verwendet werden, für die Serialisierung oder als Teil der Funktion ein Tool, arbeitet mit in-Memory-Darstellung von XAML und die Verwendung von XAML-Datei für die Ausgabe.  
+  
+-   <xref:System.Xaml.XamlObjectWriter>verarbeitet einen XAML-Knotensatz auf und erzeugt ein Objektdiagramm. Diese Klasse kann als Teil einer vollständigen oder teilweisen Anpassung des eine Technologie XAML-Parser verwendet werden.  
+  
+ <xref:System.Xaml.XamlWriterSettings>ist eine Klasse für Einstellungen, mit denen, eine <xref:System.Xaml.XamlWriter>; allerdings standardmäßig der <xref:System.Xaml.XamlWriterSettings> Klasse errichtet keine bestimmten Einstellungen. Die <xref:System.Xaml.XamlWriter> Basiskonstruktor verwendet diese Einstellungsklasse nicht als Argument, noch kein anderer <xref:System.Xaml.XamlWriter> Member. Stattdessen die <xref:System.Xaml.XamlXmlWriter> und <xref:System.Xaml.XamlObjectWriter> Klassen umfassen eigene Einstellungenklassen als Konstruktionsargumente. Diese Einstellungsklassen sind <xref:System.Xaml.XamlXmlWriterSettings> und <xref:System.Xaml.XamlObjectWriterSettings>. Die für Einstellungenklassen definieren die tatsächlichen Einstellungenwerte und basieren auf <xref:System.Xaml.XamlWriterSettings>, sodass sie verwenden, können die <xref:System.Xaml.XamlWriterSettings> Merge-Funktion.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XamlWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlWriter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xaml.XamlWriter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlWriter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die Verwendung von XAML-Writer-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der basisimplementierung Aufrufen <xref:System.Xaml.XamlWriter.Close%2A> Aufrufe der <xref:System.Xaml.XamlWriter.Dispose%2A> Methode mit dem `isDisposing` Parameter als `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlWriter.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um die verwalteten Ressourcen freizugeben, andernfalls <see langword="false" />.</param>
+        <summary>Gibt die von <see cref="T:System.Xaml.XamlWriter" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen zum Abrufen der Basisklasse aufrufen <xref:System.Xaml.XamlWriter.IsDisposed%2A>  =  `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDisposed">
+      <MemberSignature Language="C#" Value="protected bool IsDisposed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDisposed" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlWriter.IsDisposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob <see cref="M:System.Xaml.XamlWriter.Dispose(System.Boolean)" /> aufgerufen wurde.</summary>
+        <value>
+          <see langword="true" />, wenn <see cref="M:System.Xaml.XamlWriter.Dispose(System.Boolean)" /> aufgerufen wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaContext">
+      <MemberSignature Language="C#" Value="public abstract System.Xaml.XamlSchemaContext SchemaContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlSchemaContext SchemaContext" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlWriter.SchemaContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlSchemaContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse ruft den aktiven XAML-Schemakontext ab.</summary>
+        <value>Den aktiven XAML-Schemakontext.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlWriter.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Siehe <see cref="M:System.IDisposable.Dispose" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndMember">
+      <MemberSignature Language="C#" Value="public abstract void WriteEndMember ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteEndMember() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlWriter.WriteEndMember" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse wird die Darstellung einer End-Memberknotens erzeugt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndObject">
+      <MemberSignature Language="C#" Value="public abstract void WriteEndObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteEndObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlWriter.WriteEndObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse wird die Darstellung von Endobjektknoten erzeugt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteGetObject">
+      <MemberSignature Language="C#" Value="public abstract void WriteGetObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteGetObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlWriter.WriteGetObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse generiert ein Objekt für Fälle, in dem das Objekt eine Standardinstanz oder eine implizite Wert der Eigenschaft festgelegt wird, statt als Wert für ein diskreter Objekt im XAML-Knoten Eingabeset angegeben ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteNamespace">
+      <MemberSignature Language="C#" Value="public abstract void WriteNamespace (System.Xaml.NamespaceDeclaration namespaceDeclaration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteNamespace(class System.Xaml.NamespaceDeclaration namespaceDeclaration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlWriter.WriteNamespace(System.Xaml.NamespaceDeclaration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceDeclaration" Type="System.Xaml.NamespaceDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceDeclaration">Die Namespacedeklaration zu schreiben.</param>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse schreibt einen XAML-Namespace-Deklaration-Knoten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteNode">
+      <MemberSignature Language="C#" Value="public void WriteNode (System.Xaml.XamlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteNode(class System.Xaml.XamlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlWriter.WriteNode(System.Xaml.XamlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xaml.XamlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der Reader, der zur Bestimmung der Knoten verwenden.</param>
+        <summary>Führt die Umschaltung basierend auf den Typ des Knotens aus dem XAML-Reader (<see cref="P:System.Xaml.XamlReader.NodeType" />) und ruft die relevanten <see langword="Write" /> Methode für die Implementierung des Writers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Hinweise zur Vererbung  
+ Die <xref:System.Xaml.XamlWriter.WriteNode%2A> Methode ist nicht virtuelle Methode, da sie die praktische Implementierung für alle vorhandenen hat <xref:System.Xaml.XamlNodeType> Werte. Basierend auf <xref:System.Xaml.XamlNodeType>, <xref:System.Xaml.XamlWriter.WriteNode%2A> Aufrufe der `Write` virtuelle Member, die bestimmten Knotentypen zugeordnet sind.  
+  
+ Bei einem erweiterten Szenario für die Verwendung von XAML-Schreibvorgänge, die das XAML-Typsystem und XAML-Knotenstreamkonzept so, dass neue erweitert Knotentypen definiert sind, verwenden Sie keine <xref:System.Xaml.XamlWriter.WriteNode%2A> in Ihre Logik aufruft. Stattdessen müssen Sie Ihre eigene Alternative für Knotentyp switching-Logik in der Klasse oder in virtuellen Außerkraftsetzungen angeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotImplementedException">Die standardmäßige Implementierung gefunden eine <see cref="T:System.Xaml.XamlNodeType" /> , die sich nicht in der Standard-Enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartMember">
+      <MemberSignature Language="C#" Value="public abstract void WriteStartMember (System.Xaml.XamlMember xamlMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteStartMember(class System.Xaml.XamlMember xamlMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlWriter.WriteStartMember(System.Xaml.XamlMember)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlMember" Type="System.Xaml.XamlMember" />
+      </Parameters>
+      <Docs>
+        <param name="xamlMember">Der Elementknoten zu schreiben.</param>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse die Darstellung einer Start Memberknotens geschrieben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartObject">
+      <MemberSignature Language="C#" Value="public abstract void WriteStartObject (System.Xaml.XamlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteStartObject(class System.Xaml.XamlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlWriter.WriteStartObject(System.Xaml.XamlType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Xaml.XamlType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die Verwendung von XAML-Typ des Objekts schreiben.</param>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse schreibt die Zeichenfolgendarstellung eines Objektknotens für Start.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteValue">
+      <MemberSignature Language="C#" Value="public abstract void WriteValue (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteValue(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlWriter.WriteValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu schreibende Wert.</param>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse schreibt einen Wertknoten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

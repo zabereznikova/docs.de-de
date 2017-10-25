@@ -1,0 +1,63 @@
+<Type Name="PeerNameType" FullName="System.Net.PeerToPeer.PeerNameType">
+  <TypeSignature Language="C#" Value="public enum PeerNameType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PeerNameType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.PeerNameType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert den Typ der <see cref="T:System.Net.PeerToPeer.PeerName" /> zu erstellen. Ein Peername ist entweder geschützt oder unsichere. Ein gesicherte Peername stellt einen Besitznachweis für den Namen bereit. Ein unsichere PeerName hat keine zugeordnete Identität.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Knoten benötigen Zugriff auf die zugeordneten privaten Schlüssel für den öffentlichen Schlüssel zum Erstellen der sicheren verwendet <xref:System.Net.PeerToPeer.PeerName>, um den Besitz nachzuweisen. Der Knoten keine Beziehung zu einem öffentlichen Schlüssel.  
+  
+ Das Format eines Peer-Namens ist: *Zertifizierungsstelle.Klassifizierung*. Der Wert des <xref:System.Net.PeerToPeer.PeerName.Authority%2A> abhängt, ob der Name ein gesicherter Peername oder ein ungesicherter Peername ist. Die <xref:System.Net.PeerToPeer.PeerName.Classifier%2A> Teil des Namens kann festgelegt werden, um eine beliebige Zeichenfolge mit 15 Unicode-Zeichen, einschließlich der `null` Abschlusszeichen. Sobald die <xref:System.Net.PeerToPeer.PeerName.Authority%2A>, <xref:System.Net.PeerToPeer.PeerName.Classifier%2A> und Sicherheitsstufe von einem Peer eingerichtet wurden, ein Peer kann auch zum bezeichnet werden, mit einem relativen Namen oder einen Hostnamen an.  
+  
+ Nur der Besitzer oder Peerhost kann einen sicheren Peernamen mit Registrieren der [PNRP Namespace Provider-API](http://go.microsoft.com/fwlink?LinkID=92731). Jeder Knoten kann den Besitz an ein beliebiges unsichere in Anspruch genommen <xref:System.Net.PeerToPeer.PeerName>.  
+  
+ **Hinweis** mithilfe einer gesicherten <xref:System.Net.PeerToPeer.PeerName> gewährleistet nicht die gesamte Sicherheit einer Anwendung Netzwerke. Die Sicherheit der Anwendung ist implementierungsabhängig.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Secured">
+      <MemberSignature Language="C#" Value="Secured" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.PeerToPeer.PeerNameType Secured = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.PeerToPeer.PeerNameType.Secured" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerNameType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellen einer gesicherten <see cref="T:System.Net.PeerToPeer.PeerName" /> über die Identität des aktuellen Benutzers.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unsecured">
+      <MemberSignature Language="C#" Value="Unsecured" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.PeerToPeer.PeerNameType Unsecured = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.PeerToPeer.PeerNameType.Unsecured" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerNameType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellen Sie eine unsichere <see cref="T:System.Net.PeerToPeer.PeerName" /> über die Identität des aktuellen Benutzers.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

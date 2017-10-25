@@ -1,0 +1,192 @@
+<Type Name="MultidimensionalArrayItemReference&lt;TItem&gt;" FullName="System.Activities.Expressions.MultidimensionalArrayItemReference&lt;TItem&gt;">
+  <TypeSignature Language="C#" Value="public sealed class MultidimensionalArrayItemReference&lt;TItem&gt; : System.Activities.CodeActivity&lt;System.Activities.Location&lt;TItem&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MultidimensionalArrayItemReference`1&lt;TItem&gt; extends System.Activities.CodeActivity`1&lt;class System.Activities.Location`1&lt;!TItem&gt;&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Expressions.MultidimensionalArrayItemReference`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TItem" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Activities.CodeActivity&lt;System.Activities.Location&lt;TItem&gt;&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TResult">System.Activities.Location&lt;TItem&gt;</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Indices")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="TItem">Der Typ der Elemente im Array.</typeparam>
+    <summary>Stellt ein Element in einem mehrdimensionalen Array dar, das in einem Ausdruck als L-Wert verwendet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das <xref:System.Activities.Expressions.MultidimensionalArrayItemReference%601>-Element in einer `Assign`-Aktivität verwendet, um dem Arrayelement in Zeile 1 und Spalte 2 einen Ganzzahlwert zuzuweisen, und der Wert des Arrayelements wird auf der Konsole ausgegeben. Die `Assign`-Aktivität entspricht der folgenden Anweisung beim Verwenden von Arrays: `array[1, 2] = 1;`.  
+  
+> [!NOTE]
+>  Anstatt die <xref:System.Activities.Expressions.MultidimensionalArrayItemReference%601>-L-Wert-Ausdrucksaktivität direkt zu instanziieren, wird dringend empfohlen, das <xref:System.Activities.Expressions.ExpressionServices.ConvertReference%2A>-Element aufzurufen, das eine höhere Abstraktionsebene bereitstellt und es Ihnen ermöglicht, den Workflow intuitiver zu implementieren.  
+  
+```  
+  
+public static void MultidimensionalArrayItemReferenceSample()  
+{  
+    // Create a variable to store a multidimensional array.  
+    var arrayvar = new Variable<int[,]>("arrayvar", new int[4, 5]);  
+  
+    Activity myActivity = new Sequence  
+    {  
+        Variables = { arrayvar },  
+        Activities =   
+        {                      
+            // Create an Assign activity to assign a value to the array item at index [1,2].  
+            new Assign<int>  
+            {  
+                To = new MultidimensionalArrayItemReference<int>  
+                {  
+                    Array = arrayvar,  
+                    Indices = {1, 2}  
+                },  
+                // Assign an integer value to the array item at row 1 column 2.  
+                Value = 1,  
+            },  
+            // Print the array item value to the console.  
+            new WriteLine()  
+            {  
+                Text = ExpressionServices.Convert<string>(ctx => arrayvar.Get(ctx)[1, 2].ToString()),  
+            }  
+        }  
+    };  
+  
+    // Invoke the Sequence activity.  
+    WorkflowInvoker.Invoke(myActivity);  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MultidimensionalArrayItemReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.MultidimensionalArrayItemReference`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Expressions.MultidimensionalArrayItemReference`1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Array">
+      <MemberSignature Language="C#" Value="public System.Activities.InArgument&lt;Array&gt; Array { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.InArgument`1&lt;class System.Array&gt; Array" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Expressions.MultidimensionalArrayItemReference`1.Array" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Activities.RequiredArgument</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;System.Array&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Array ab, auf das das <see cref="T:System.Activities.Expressions.MultidimensionalArrayItemReference`1" />-Element verweist, oder legt es fest.</summary>
+        <value>Das Array, auf das das <see cref="T:System.Activities.Expressions.MultidimensionalArrayItemReference`1" />-Element verweist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.CodeActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.CodeActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.MultidimensionalArrayItemReference`1.CacheMetadata(System.Activities.CodeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.CodeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override System.Activities.Location&lt;TItem&gt; Execute (System.Activities.CodeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Activities.Location`1&lt;!TItem&gt; Execute(class System.Activities.CodeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.MultidimensionalArrayItemReference`1.Execute(System.Activities.CodeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Location&lt;TItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.CodeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Indices">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Activities.InArgument&lt;int&gt;&gt; Indices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Activities.InArgument`1&lt;int32&gt;&gt; Indices" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Expressions.MultidimensionalArrayItemReference`1.Indices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Activities.InArgument&lt;System.Int32&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Argumenten ab, die die Indizes des Elements im Array darstellen.</summary>
+        <value>Die Indizes des Elements im Array.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Activities.Expressions.MultidimensionalArrayItemReference%601.Indices%2A>-Eigenschaft ist schreibgeschützt, aber die Elemente in der Auflistung und die Indizes können geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

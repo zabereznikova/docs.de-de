@@ -1,0 +1,108 @@
+<Type Name="ScriptMode" FullName="System.Web.UI.ScriptMode">
+  <TypeSignature Language="C#" Value="public enum ScriptMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ScriptMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ScriptMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob <see cref="T:System.Web.UI.ScriptManager" />- und <see cref="T:System.Web.UI.ScriptReference" />-Objekte sich auf die Debug- oder endgültige Produktversion des Clientskripts beziehen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ScriptMode> Enumeration stellt Werte bereit, für die Version des Clientskripts für die Verwendung auf einer Webseite festlegen. Enumerationswerte können angewendet werden, um entweder die <xref:System.Web.UI.ScriptManager.ScriptMode%2A?displayProperty=nameWithType> Eigenschaft oder die [ScriptReference.ScriptMode](<xref:System.Web.UI.ScriptReferenceBase.ScriptMode%2A>) Eigenschaft. Die <xref:System.Web.UI.ScriptManager> Objekt wird die Version für alle Skripts auf der Seite, es sei denn, es durch überschrieben wird ein <xref:System.Web.UI.ScriptReference> Objekt. Die <xref:System.Web.UI.ScriptReference> Objekt wird die Version für ein bestimmtes Skript.  
+  
+ Die <xref:System.Web.UI.ScriptMode.Auto?displayProperty=nameWithType> Wert führt zu unterschiedlichen Ergebnissen, je nachdem, ob er verweist auf eine eigenständige Skriptdatei oder in einer Skriptdatei, die als Ressource in einer Assembly eingebettet ist. Eine eigenständige Skriptdatei wird definiert, mit der [ScriptReference.Path](<xref:System.Web.UI.ScriptReferenceBase.Path%2A>) Eigenschaft. Verweis auf eine Assembly zugegriffen werden muss, bis die <xref:System.Web.UI.ScriptReference.Name%2A> und <xref:System.Web.UI.ScriptReference.Assembly%2A> Eigenschaften. Die Ergebnisse für die <xref:System.Web.UI.ScriptMode.Auto?displayProperty=nameWithType> Wert lauten wie folgt:  
+  
+-   Wenn es in einer eigenständigen Skriptdatei angewendet wird, in dem die [ScriptReference.Path]<xref:System.Web.UI.ScriptReferenceBase.Path%2A> Eigenschaft wird angegeben, die <xref:System.Web.UI.ScriptMode.Auto?displayProperty=nameWithType> Wert entspricht <xref:System.Web.UI.ScriptMode.Release?displayProperty=nameWithType>.  
+  
+-   Wenn es einen Skriptverweis in einer Assembly angewendet wird <xref:System.Web.UI.ScriptMode.Auto?displayProperty=nameWithType> entspricht <xref:System.Web.UI.ScriptMode.Inherit?displayProperty=nameWithType>. Wenn nur <xref:System.Web.UI.ScriptReference.Name%2A> angegeben ist, wird verwendet, um das Skript zu verweisen. Wenn <xref:System.Web.UI.ScriptReference.Name%2A> und der [ScriptReference.Path]<xref:System.Web.UI.ScriptReferenceBase.Path%2A> Eigenschaft sind beide angegeben, die [ScriptReference.Path]<xref:System.Web.UI.ScriptReferenceBase.Path%2A> Eigenschaft wird verwendet, anstelle von <xref:System.Web.UI.ScriptReference.Name%2A>, aber die <xref:System.Web.UI.ScriptMode.Auto?displayProperty=nameWithType> Wert entspricht immer noch <xref:System.Web.UI.ScriptMode.Inherit?displayProperty=nameWithType>.  
+  
+ Ein Fehler wird ausgelöst, wenn die angeforderte Version des Skripts nicht vorhanden ist. Beispielsweise wird ein Fehler ausgelöst, wenn ein Verweis auf eine eigenständige Skriptdatei erfolgt mit dem Namen CustomScript.js und die <xref:System.Web.UI.ScriptManager.ScriptMode%2A?displayProperty=nameWithType> -Eigenschaftensatz auf <xref:System.Web.UI.ScriptMode.Debug?displayProperty=nameWithType>, aber CustomScript.debug.js auf der Website nicht vorhanden. Verweise auf die Skripts in einer Assembly zurück die endgültigen Produktversion, wenn die Debugversion nicht vorhanden ist.  
+  
+> [!NOTE]
+>  Wenn die `retail` Attribut des der [Bereitstellung](http://msdn.microsoft.com/en-us/dbcc2c62-3159-4a62-9f1e-8cfe3b8b09dc) -Element der Datei "Machine.config" festgelegt ist, um `true`, die Releaseversionen von Clientskripts werden in der gesamten Website verwendet. Die <xref:System.Web.UI.ScriptMode> Werte in der <xref:System.Web.UI.ScriptManager.ScriptMode%2A?displayProperty=nameWithType> und [ScriptReference.ScriptMode](<xref:System.Web.UI.ScriptReferenceBase.ScriptMode%2A>) Eigenschaften werden ignoriert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Seite, die Skriptversionen auf Version in deklarativ festgelegt sind die <xref:System.Web.UI.ScriptManager> -Steuerelement, aber ein Skript mit dem Namen CustomClient.js wird deklarativ festgelegt, zum Debuggen in der <xref:System.Web.UI.ScriptReference.Name%2A> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.ScriptMode#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptMode/cs/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ScriptMode#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.ScriptMode/vb/Default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ScriptMode Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ScriptMode.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ScriptMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>In der <see cref="T:System.Web.UI.ScriptManager" /> -Steuerelement, die Version des Clientskripts verwenden wird zur Laufzeit basierend auf der Anwendungsebene bestimmt [ &lt;Kompilierung&gt; ](http://msdn.microsoft.com/en-us/7c319582-074a-4d2a-a787-03b9d4541c12) Element von der Datei "Web.config"-Datei, es sei denn, sie in überschrieben wird ein Instanz der <see cref="T:System.Web.UI.ScriptReference" /> Steuerelement. Im <see cref="T:System.Web.UI.ScriptReference" />-Steuerelement entspricht <see cref="F:System.Web.UI.ScriptMode.Auto" /> bei Anwendung auf eine eigenständige Skriptdatei <see cref="F:System.Web.UI.ScriptMode.Release" />. Bei Anwendung auf einen Skriptverweis in einer Assembly entspricht <see cref="F:System.Web.UI.ScriptMode.Auto" /> <see cref="F:System.Web.UI.ScriptMode.Inherit" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Debug">
+      <MemberSignature Language="C#" Value="Debug" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ScriptMode Debug = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ScriptMode.Debug" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ScriptMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Im <see cref="T:System.Web.UI.ScriptManager" />-Steuerelement wird die Debugversion des Clientskripts auf der Webseite verwendet, sofern es nicht in einer Instanz des <see cref="T:System.Web.UI.ScriptReference" />-Steuerelements überschrieben wird. Im <see cref="T:System.Web.UI.ScriptReference" />-Steuerelement wird die Debugversion des Clientskripts auf der Webseite verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inherit">
+      <MemberSignature Language="C#" Value="Inherit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ScriptMode Inherit = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ScriptMode.Inherit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ScriptMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Im <see cref="T:System.Web.UI.ScriptManager" />-Steuerelement entspricht <see cref="F:System.Web.UI.ScriptMode.Inherit" /> <see cref="F:System.Web.UI.ScriptMode.Auto" />. Im <see cref="T:System.Web.UI.ScriptReference" />-Steuerelement bestimmt der <see cref="P:System.Web.UI.ScriptManager.ScriptMode" />-Wert aus <see cref="T:System.Web.UI.ScriptManager" />, welche Version des Clientskripts verwendet wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Release">
+      <MemberSignature Language="C#" Value="Release" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ScriptMode Release = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ScriptMode.Release" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ScriptMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Im <see cref="T:System.Web.UI.ScriptManager" />-Steuerelement wird die endgültige Produktversion des Clientskripts auf der Webseite verwendet, sofern es nicht durch Einstellung der <see cref="P:System.Web.UI.ScriptReference.ScriptMode" />-Eigenschaft einer <see cref="T:System.Web.UI.ScriptReference" />-Instanz zu <see cref="F:System.Web.UI.ScriptMode.Debug" /> überschrieben wird. Im <see cref="T:System.Web.UI.ScriptReference" />-Steuerelement wird die endgültige Produktversion des Clientskripts auf der Webseite verwendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

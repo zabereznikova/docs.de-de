@@ -1,0 +1,126 @@
+<Type Name="InertiaRotationBehavior2D" FullName="System.Windows.Input.Manipulations.InertiaRotationBehavior2D">
+  <TypeSignature Language="C#" Value="public sealed class InertiaRotationBehavior2D : System.Windows.Input.Manipulations.InertiaParameters2D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InertiaRotationBehavior2D extends System.Windows.Input.Manipulations.InertiaParameters2D" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Manipulations.InertiaRotationBehavior2D" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.Manipulations.InertiaParameters2D</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt ein Trägheitsprozessor gewünschte Drehung Verhalten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InertiaRotationBehavior2D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.Manipulations.InertiaRotationBehavior2D" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredDeceleration">
+      <MemberSignature Language="C#" Value="public float DesiredDeceleration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 DesiredDeceleration" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredDeceleration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die gewünschte angular Verlangsamung im Bogenmaß pro Millisekunde Quadrat.</summary>
+        <value>Die gewünschte angular Verlangsamung im Bogenmaß pro Millisekunde Quadrat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die gewünschte angular Verlangsamung während des Vorgangs Trägheit verwendet werden. Dieser Eigenschaftswert wird sich gegenseitig ausschließende mit der <xref:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredRotation%2A> Eigenschaft; die Einstellung dieser Eigenschaft wird festgelegt <xref:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredRotation%2A> auf `NaN`. Der Standardwert für diese Eigenschaft und <xref:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredRotation%2A> ist `NaN`. Sie müssen eine oder die Eigenschaft vor dem trägheitsverarbeitung beginnt festlegen.  
+  
+ <xref:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredDeceleration%2A>eine endliche, nicht Negative Zahl muss sein.  
+  
+ Diese Eigenschaft kann nicht festgelegt werden, während der Trägheitsprozessor ausgeführt wird. Andernfalls wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredRotation">
+      <MemberSignature Language="C#" Value="public float DesiredRotation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 DesiredRotation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredRotation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die gewünschte Drehung im Bogenmaß.</summary>
+        <value>Die gewünschte Drehung im Bogenmaß.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt das gewünschte Enddatum Drehung des Vorgangs Trägheit dar. Dieser Eigenschaftswert wird sich gegenseitig ausschließende mit der <xref:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredDeceleration%2A> Eigenschaft; die Einstellung dieser Eigenschaft wird festgelegt <xref:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredDeceleration%2A> auf `NaN`. Der Standardwert für diese Eigenschaft und <xref:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredDeceleration%2A> ist `NaN`. Sie müssen eine oder die Eigenschaft vor dem trägheitsverarbeitung beginnt festlegen.  
+  
+ <xref:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredRotation%2A>eine endliche, nicht Negative Zahl muss sein. Die Richtung der Drehung richtet sich nach der <xref:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.InitialVelocity%2A> Eigenschaft.  
+  
+ Diese Eigenschaft kann nicht festgelegt werden, während der Trägheitsprozessor ausgeführt wird. Andernfalls wird eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die <xref:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredRotation%2A> Eigenschaftensatz So aktivieren Sie die trägheitsverarbeitung, um ein Objekt drei und-eine halbe Mal von der ersten Ausrichtung zu drehen.  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_SetDesiredRotation](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_setdesiredrotation)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialVelocity">
+      <MemberSignature Language="C#" Value="public float InitialVelocity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 InitialVelocity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaRotationBehavior2D.InitialVelocity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den ursprüngliche rotierenden Geschwindigkeit im Bogenmaß pro Millisekunde.</summary>
+        <value>Der ursprünglichen rotierenden Geschwindigkeit im Bogenmaß pro Millisekunde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist `NaN`. Diese Eigenschaft unverändert bleibt von der Standardeinstellung oder rotierenden Trägheit deaktiviert Festlegen dieser Eigenschaft auf 0 (null).  
+  
+ Diese Eigenschaft kann nicht festgelegt werden, während der Trägheitsprozessor ausgeführt wird. Andernfalls wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

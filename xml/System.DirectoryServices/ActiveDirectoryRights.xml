@@ -1,0 +1,347 @@
+<Type Name="ActiveDirectoryRights" FullName="System.DirectoryServices.ActiveDirectoryRights">
+  <TypeSignature Language="C#" Value="public enum ActiveDirectoryRights" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ActiveDirectoryRights extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectoryRights" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ActiveDirectoryRights" /> Enumeration gibt an, die Zugriffsrechte, die zu einem Active Directory-Domänendienste-Objekt zugewiesen sind.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccessSystemSecurity">
+      <MemberSignature Language="C#" Value="AccessSystemSecurity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights AccessSystemSecurity = int32(16777216)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.AccessSystemSecurity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Abrufen oder Festlegen der SACL in der Sicherheitsbeschreibung für Objekt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChild">
+      <MemberSignature Language="C#" Value="CreateChild" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights CreateChild = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.CreateChild" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Erstellen von untergeordneten Elementen des Objekts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights Delete = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.Delete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Löschen des Objekts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteChild">
+      <MemberSignature Language="C#" Value="DeleteChild" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights DeleteChild = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.DeleteChild" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Löschen der untergeordneten Elemente des Objekts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteTree">
+      <MemberSignature Language="C#" Value="DeleteTree" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights DeleteTree = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.DeleteTree" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Löschen aller untergeordneten Elemente dieses Objekts, unabhängig von den Berechtigungen der untergeordneten Elemente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedRight">
+      <MemberSignature Language="C#" Value="ExtendedRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights ExtendedRight = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.ExtendedRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein benutzerdefiniertes Zugriffssteuerungsrecht. Eine Liste der möglichen erweiterten Rechte, finden Sie im Thema "Extended Rights" in der MSDN Library unter [http://msdn.microsoft.com](http://msdn.microsoft.com/). Weitere Informationen über erweiterte Rechte finden Sie im Thema "Steuern von Zugriffsrechten" in der MSDN Library unter [http://msdn.microsoft.com](http://msdn.microsoft.com/).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericAll">
+      <MemberSignature Language="C#" Value="GenericAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights GenericAll = int32(983551)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.GenericAll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Erstellen untergeordneten Elemente löschen, Löschen einer Unterstruktur, lesen und Schreibeigenschaften, untersuchen Sie untergeordnete Elemente und das Objekt selbst, hinzufügen und entfernen Sie das Objekt aus dem Verzeichnis und Lese- oder Schreibzugriff oder mit einer erweiterten Rechte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericExecute">
+      <MemberSignature Language="C#" Value="GenericExecute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights GenericExecute = int32(131076)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.GenericExecute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, Leseberechtigungen auf, und das Auflisten der Container-Objekt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericRead">
+      <MemberSignature Language="C#" Value="GenericRead" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights GenericRead = int32(131220)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.GenericRead" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, die über Leseberechtigungen für dieses Objekt alle Eigenschaften für dieses Objekt lesen, Liste der Objektname, wenn der übergeordnete Container aufgeführt ist und den Inhalt dieses Objekts auflisten, wenn es sich um einen Container handelt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericWrite">
+      <MemberSignature Language="C#" Value="GenericWrite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights GenericWrite = int32(131112)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.GenericWrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, die über Leseberechtigungen für dieses Objekt schreiben alle Eigenschaften für dieses Objekt, und führen alle validierten Schreibvorgänge für dieses Objekt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ListChildren">
+      <MemberSignature Language="C#" Value="ListChildren" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights ListChildren = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.ListChildren" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, untergeordnete Elemente auflisten dieses Objekts. Weitere Informationen über dieses Recht finden Sie im Thema "Controlling Object Visibility" in der MSDN Library [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ListObject">
+      <MemberSignature Language="C#" Value="ListObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights ListObject = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.ListObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Auflisten eines bestimmten Objekts. Weitere Informationen über dieses Recht finden Sie im Thema "Controlling Object Visibility" in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadControl">
+      <MemberSignature Language="C#" Value="ReadControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights ReadControl = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.ReadControl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Lesen von Daten aus dem Sicherheitsdeskriptor des Objekts, z. B. nicht die Daten in die SACL.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadProperty">
+      <MemberSignature Language="C#" Value="ReadProperty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights ReadProperty = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.ReadProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Lesen der Eigenschaften des Objekts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Self">
+      <MemberSignature Language="C#" Value="Self" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights Self = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.Self" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Ausführen eines Vorgangs, das durch ein Recht überprüfte Schreibzugriff gesteuert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronize">
+      <MemberSignature Language="C#" Value="Synchronize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights Synchronize = int32(1048576)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.Synchronize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, das Objekt für die Synchronisierung verwenden. Dieses Recht ermöglicht einen Thread warten, bis das Objekt in den signalisierten Zustand ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDacl">
+      <MemberSignature Language="C#" Value="WriteDacl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights WriteDacl = int32(262144)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.WriteDacl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, die DACL in der Sicherheitsbeschreibung für Objekt zu ändern.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteOwner">
+      <MemberSignature Language="C#" Value="WriteOwner" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights WriteOwner = int32(524288)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.WriteOwner" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, den Besitz des Objekts wird angenommen. Der Benutzer muss ein Vertrauensnehmer für das Objekt sein. Der Benutzer kann nicht den Besitz an andere Benutzer übertragen werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteProperty">
+      <MemberSignature Language="C#" Value="WriteProperty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectoryRights WriteProperty = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectoryRights.WriteProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectoryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, die Eigenschaften des Objekts schreiben.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

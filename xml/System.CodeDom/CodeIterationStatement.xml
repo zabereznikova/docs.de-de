@@ -1,0 +1,211 @@
+<Type Name="CodeIterationStatement" FullName="System.CodeDom.CodeIterationStatement">
+  <TypeSignature Language="C#" Value="public class CodeIterationStatement : System.CodeDom.CodeStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeIterationStatement extends System.CodeDom.CodeStatement" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeIterationStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine <see langword="for" /> -Anweisung oder eine Schleife durch einen Block von Anweisungen mit einem Testausdruck als Bedingung für die Fortsetzung in einer Schleife.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.CodeDom.CodeIterationStatement> darstellen kann eine `for` Schleife oder `while` Schleife.  
+  
+ Die <xref:System.CodeDom.CodeIterationStatement.InitStatement%2A> -Eigenschaft gibt die Anweisung vor der ersten Schleifeniteration ausgeführt. Die <xref:System.CodeDom.CodeIterationStatement.TestExpression%2A> Eigenschaft gibt an, der Schleifenausdruck für die Fortsetzung, der ausgewertet werden muss `true` am Ende jeder Iteration der Schleife eine andere Iteration starten. Die <xref:System.CodeDom.CodeIterationStatement.IncrementStatement%2A> Eigenschaft gibt an, der am Ende jeder Schleifeniteration auszuführenden Anweisung. Die <xref:System.CodeDom.CodeIterationStatement.Statements%2A> Eigenschaft gibt die Auflistung von Anweisungen, die innerhalb der Schleife ausgeführt.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel veranschaulicht die Verwendung einer <xref:System.CodeDom.CodeIterationStatement> zur Darstellung einer `for` Schleife.  
+  
+ [!code-cpp[CodeIterationStatementExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeIterationStatementExample/CPP/codeiterationstatementexample.cpp#2)]
+ [!code-csharp[CodeIterationStatementExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeIterationStatementExample/CS/codeiterationstatementexample.cs#2)]
+ [!code-vb[CodeIterationStatementExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeIterationStatementExample/VB/codeiterationstatementexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeIterationStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeIterationStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeIterationStatement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeIterationStatement (System.CodeDom.CodeStatement initStatement, System.CodeDom.CodeExpression testExpression, System.CodeDom.CodeStatement incrementStatement, params System.CodeDom.CodeStatement[] statements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeStatement initStatement, class System.CodeDom.CodeExpression testExpression, class System.CodeDom.CodeStatement incrementStatement, class System.CodeDom.CodeStatement[] statements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeIterationStatement.#ctor(System.CodeDom.CodeStatement,System.CodeDom.CodeExpression,System.CodeDom.CodeStatement,System.CodeDom.CodeStatement[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initStatement" Type="System.CodeDom.CodeStatement" />
+        <Parameter Name="testExpression" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="incrementStatement" Type="System.CodeDom.CodeStatement" />
+        <Parameter Name="statements" Type="System.CodeDom.CodeStatement[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="initStatement">Ein <see cref="T:System.CodeDom.CodeStatement" /> , die Anweisung zum Initialisieren der Schleife enthält.</param>
+        <param name="testExpression">Ein <see cref="T:System.CodeDom.CodeExpression" /> mit dem Ausdruck beenden-Bedingung zu testen.</param>
+        <param name="incrementStatement">Ein <see cref="T:System.CodeDom.CodeStatement" /> , der pro Zyklus-Inkrement-Anweisung enthält.</param>
+        <param name="statements">Ein Array vom Typ <see cref="T:System.CodeDom.CodeStatement" /> mit den Anweisungen innerhalb der Schleife.</param>
+        <summary>Initialisiert mit den angegebenen Parametern eine neue Instanz der <see cref="T:System.CodeDom.CodeIterationStatement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementStatement">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatement IncrementStatement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatement IncrementStatement" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeIterationStatement.IncrementStatement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anweisung, die nach jedem Schleifendurchlauf aufgerufen wird.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeStatement" /> gibt, die an der pro Zyklus-Inkrement-Anweisung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Anweisung wird nach jeder Iteration aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitStatement">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatement InitStatement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatement InitStatement" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeIterationStatement.InitStatement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anweisung zum Initialisieren der Schleife.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeStatement" /> , der Anweisung zum Initialisieren der Schleife angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine leere initialisierungsanweisung angeben, durch Festlegen dieser Eigenschaft auf eine <xref:System.CodeDom.CodeExpressionStatement> , enthält eine <xref:System.CodeDom.CodeSnippetExpression> , eine leere Zeichenfolge enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Statements">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatementCollection Statements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatementCollection Statements" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeIterationStatement.Statements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Anweisungen innerhalb der Schleife ausgeführt werden.</summary>
+        <value>Ein Array vom Typ <see cref="T:System.CodeDom.CodeStatement" /> , der die Anweisungen innerhalb der Schleife angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TestExpression">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression TestExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression TestExpression" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeIterationStatement.TestExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausdruck als Bedingung zu testen, die die Schleife fortgesetzt wird.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeExpression" /> , der die zu testende Ausdruck angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser Ausdruck ergibt `true`, wird die Schleife fortgesetzt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,189 @@
+<Type Name="Size3DConverter" FullName="System.Windows.Media.Media3D.Size3DConverter">
+  <TypeSignature Language="C#" Value="public sealed class Size3DConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Size3DConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.Size3DConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert Instanzen anderer Typen in und aus einer <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+  
+ Das folgende Beispiel verwendet eine <xref:System.Windows.Media.Media3D.Size3DConverter> Struktur zum Konvertieren einer Zeichenfolge in eine <xref:System.Windows.Media.Media3D.Size3D> Struktur.  
+  
+```csharp  
+...  
+  
+// Converts a String to a Size3D using a Size3DConverter  
+// Returns a Size3D.  
+  
+Size3DConverter s3DConverter = new Size3DConverter();  
+Size3D size3DResult = new Size3D();  
+string string3 = "10,20,30";  
+  
+size3DResult = (Size3D)s3DConverter.ConvertFromString(string3);  
+// size3DResult is equal to (10, 20, 30)  
+  
+...  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Size3DConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Size3DConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Windows.Media.Media3D.Size3DConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Size3DConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Beschreibt die Kontextinformationen eines Typs.</param>
+        <param name="sourceType">Der Typ der Quelle, die für die Konvertierung ausgewertet wird.</param>
+        <summary>Bestimmt, ob eine Klasse mit einer Instanz von aus einem angegebenen Typ konvertiert werden kann eine <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur.</summary>
+        <returns>Gibt an, ob der Typ kann, um konvertiert werden eine <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur.  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Bedeutung  
+  
+ </description></listheader><item><term>"false"  
+  
+ </term><description>Der Konverter kann nicht aus dem angegebenen Typ konvertiert werden.  
+  
+ </description></item><item><term>"true"  
+  
+ </term><description>Der Konverter kann den bereitgestellten Typ zum Konvertieren einer <see cref="T:System.Windows.Media.Media3D.Size3D" />.  
+  
+ </description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Size3DConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Beschreibt die Kontextinformationen eines Typs.</param>
+        <param name="destinationType">Der gewünschte Typ, die von diesem <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur für die Konvertierung ausgewertet wird.</param>
+        <summary>Bestimmt, ob eine Instanz einer <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur in einen anderen Typ konvertiert werden kann.</summary>
+        <returns>Gibt an, ob dies <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur konvertiert werden kann, um <paramref name="destinationType" />.  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Bedeutung  
+  
+ </description></listheader><item><term>"false"  
+  
+ </term><description>Der Konverter kann nicht konvertiert werden, dies <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur in den angegebenen Typ.  
+  
+ </description></item><item><term>"true"  
+  
+ </term><description>Der Konverter kann dies konvertieren <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur in den angegebenen Typ.  
+  
+ </description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Size3DConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Beschreibt die Kontextinformationen eines Typs.</param>
+        <param name="culture">Beschreibt die <see cref="T:System.Globalization.CultureInfo" /> des konvertierten Typs.</param>
+        <param name="value">Das Objekt, das konvertiert wird.</param>
+        <summary>Versucht, ein angegebenes Objekt zum Konvertieren einer <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur.</summary>
+        <returns>Die <see cref="T:System.Windows.Media.Media3D.Size3D" /> aus der konvertierten erstellten Struktur <paramref name="value" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Tritt auf, wenn das angegebene Objekt **null** oder ist ein Typ, der in konvertiert werden kann eine <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Size3DConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Beschreibt die Kontextinformationen eines Typs.</param>
+        <param name="culture">Die CultureInfo, die beim Konvertieren berücksichtigt wird.</param>
+        <param name="value">Die <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur konvertieren.</param>
+        <param name="destinationType">Der Typ dieses <see cref="T:System.Windows.Media.Media3D.Size3D" /> -Struktur konvertiert wird.</param>
+        <summary>Versucht, konvertieren Sie eine <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur in einen angegebenen Typ.</summary>
+        <returns>Das Objekt erstellt, durch Konvertieren <see cref="T:System.Windows.Media.Media3D.Size3D" /> Struktur.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

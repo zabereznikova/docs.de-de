@@ -1,0 +1,111 @@
+<Type Name="ArrayShape" FullName="System.Reflection.Metadata.ArrayShape">
+  <TypeSignature Language="C#" Value="public struct ArrayShape" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ArrayShape extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Metadata.ArrayShape" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Metadata</AssemblyName>
+    <AssemblyVersion>1.4.1.0</AssemblyVersion>
+    <AssemblyVersion>1.4.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Form eines Arraytyps dar.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrayShape (int rank, System.Collections.Immutable.ImmutableArray&lt;int&gt; sizes, System.Collections.Immutable.ImmutableArray&lt;int&gt; lowerBounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rank, valuetype System.Collections.Immutable.ImmutableArray`1&lt;int32&gt; sizes, valuetype System.Collections.Immutable.ImmutableArray`1&lt;int32&gt; lowerBounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Metadata.ArrayShape.#ctor(System.Int32,System.Collections.Immutable.ImmutableArray{System.Int32},System.Collections.Immutable.ImmutableArray{System.Int32})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rank" Type="System.Int32" />
+        <Parameter Name="sizes" Type="System.Collections.Immutable.ImmutableArray&lt;System.Int32&gt;" />
+        <Parameter Name="lowerBounds" Type="System.Collections.Immutable.ImmutableArray&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rank">Die Anzahl der Dimensionen im Array.</param>
+        <param name="sizes">Die Größe der einzelnen Dimensionen.</param>
+        <param name="lowerBounds">Die Untergrenze aller Dimensionen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.Metadata.ArrayShape" />-Struktur.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LowerBounds">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;int&gt; LowerBounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;int32&gt; LowerBounds" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Metadata.ArrayShape.LowerBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Untergrenze aller Dimensionen ab. Länge kleiner als Rang, möglicherweise in diesem Fall die nachfolgenden Dimensionen Untergrenzen angegeben haben.</summary>
+        <value>Ein Array von unteren Grenzen.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rank">
+      <MemberSignature Language="C#" Value="public int Rank { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Rank" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Metadata.ArrayShape.Rank" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Dimensionen im Array ab.</summary>
+        <value>Die Anzahl von Dimensionen.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sizes">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;int&gt; Sizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;int32&gt; Sizes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Metadata.ArrayShape.Sizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größen aller Dimensionen ab.</summary>
+        <value>Ein Array von Größen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anzahl der Elemente im zurückgegebenen Array möglicherweise kleiner als die Anzahl der Dimensionen des Arraytyps (Rang). In diesem Fall sind die nachfolgenden Dimensionen Größen kein Wert angegeben.
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

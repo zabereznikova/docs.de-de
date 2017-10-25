@@ -1,0 +1,271 @@
+<Type Name="IKeyboardInputSink" FullName="System.Windows.Interop.IKeyboardInputSink">
+  <TypeSignature Language="C#" Value="public interface IKeyboardInputSink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IKeyboardInputSink" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.IKeyboardInputSink" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt über die Interop-Grenzen hinweg und zwischen HWNDs Tastatursenke für Komponenten, die TAB-Taste verwaltet, Zugriffstasten und Zugriffstasten bereit. Diese Schnittstelle implementiert, Verwaltung von Nachrichten in WPF-Win32-Interoperationsszenarios.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tastatursenke behandelt Eingaben von bestimmten Untergruppen des gesamten Eingabemodell Tastatur für [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)] und [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)], und einige Tastatureingaben verarbeitet und auf HWNDs als die mit dem aktuellen Tastaturfokus weitergeleitet werden können.  
+  
+ Wenn die Komponente Komponenten enthält und eine Tabulatorreihenfolge, muss auch die Komponente implementieren <xref:System.Windows.Interop.IKeyboardInputSite> und das Verfolgen von welche Komponente den Fokus besitzt.  
+  
+ Eine Erläuterung der input-Architektur speziell für implementiert [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] interop, finden Sie unter [Windows Forms- und WPF-Interoperabilität Eingabearchitektur](~/docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md).  
+  
+ <xref:System.Windows.Interop.HwndSource>und <xref:System.Windows.Interop.HwndHost> implementieren jeweils die <xref:System.Windows.Interop.IKeyboardInputSink> -Schnittstelle durch explizite Definitionen. Die explizite Definitionen bereitstellen, Standardverhaltensweisen, auch möglich, ggf. durch eine <xref:System.Windows.Interop.IKeyboardInputSink> Schnittstelle umwandeln, der <xref:System.Windows.Interop.HwndSource> oder <xref:System.Windows.Interop.HwndHost>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HasFocusWithin">
+      <MemberSignature Language="C#" Value="public bool HasFocusWithin ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasFocusWithin() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.IKeyboardInputSink.HasFocusWithin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Senke oder eines der darin enthaltenen Komponenten den Fokus besitzt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Senke oder eine der enthaltenen Komponenten den Fokus besitzt; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist erforderlich für die Weiterleitung <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> Aufrufe an untergeordneten Komponenten mit dem Fokus innerhalb der <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> Implementierung. Rufen Sie <xref:System.Windows.Interop.IKeyboardInputSink.HasFocusWithin%2A> rekursiv, bis Sie das Maß an bestimmten Fokus und Weiterleiten von erreichen <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> vorhanden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyboardInputSite">
+      <MemberSignature Language="C#" Value="public System.Windows.Interop.IKeyboardInputSite KeyboardInputSite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Interop.IKeyboardInputSite KeyboardInputSite" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IKeyboardInputSink.KeyboardInputSite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Interop.IKeyboardInputSite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Verweis auf die Komponente des Containers <see cref="T:System.Windows.Interop.IKeyboardInputSite" /> Schnittstelle.</summary>
+        <value>Ein Verweis auf den Container <see cref="T:System.Windows.Interop.IKeyboardInputSite" /> Schnittstelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft sollte zunächst festgelegt werden, um `null`. Alle Container, die der Komponentenliste die Senke hinzufügt wird legen <xref:System.Windows.Interop.IKeyboardInputSink.KeyboardInputSite%2A> bevor andere Methoden aufgerufen werden, und mehrere Male danach festgelegt werden. Legen Sie die Eigenschaft auf `null` vor der Freigabe wieder.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMnemonic">
+      <MemberSignature Language="C#" Value="public bool OnMnemonic (ref System.Windows.Interop.MSG msg, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool OnMnemonic(valuetype System.Windows.Interop.MSG&amp; msg, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.IKeyboardInputSink.OnMnemonic(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Interop.MSG&amp;" RefType="ref" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die Meldung für die mnemonischen und zugeordneten Daten. Ändern Sie diese Struktur nicht. Es wird nur aus Gründen der Leistung Verweisübergabe übergeben.</param>
+        <param name="modifiers">Zusatztasten.</param>
+        <summary>Wird aufgerufen, wenn eine der Zugriffstasten (Zugriffsschlüssel) für diese Senke aufgerufen wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die Nachricht behandelt wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] Nachricht muss WM_CHAR und WM_SYSCHAR, WM_DEADCHAR WM_SYSDEADCHAR sein.  
+  
+ Wenn die Komponente Komponenten enthalten sind, muss die Nachricht übergeben werden, in der Implementierung durch jeden Aufruf von enthaltenen Komponentennamens <xref:System.Windows.Interop.IKeyboardInputSink.OnMnemonic%2A> Methode.  
+  
+ Eine Schnittstelle, die gibt `true` aus <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> kein Aufruf <xref:System.Windows.Interop.IKeyboardInputSink.OnMnemonic%2A>. Implementierungen können auch alle bestimmte Tastenkombination Verarbeitung ausführen <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A>umgehen und <xref:System.Windows.Interop.IKeyboardInputSink.OnMnemonic%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterKeyboardInputSink">
+      <MemberSignature Language="C#" Value="public System.Windows.Interop.IKeyboardInputSite RegisterKeyboardInputSink (System.Windows.Interop.IKeyboardInputSink sink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Interop.IKeyboardInputSite RegisterKeyboardInputSink(class System.Windows.Interop.IKeyboardInputSink sink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.IKeyboardInputSink.RegisterKeyboardInputSink(System.Windows.Interop.IKeyboardInputSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Interop.IKeyboardInputSite</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sink" Type="System.Windows.Interop.IKeyboardInputSink" />
+      </Parameters>
+      <Docs>
+        <param name="sink">Die <see cref="T:System.Windows.Interop.IKeyboardInputSink" /> Senke der enthaltenen Komponente.</param>
+        <summary>Registriert die <see cref="T:System.Windows.Interop.IKeyboardInputSink" /> Schnittstelle einer eigenständigen Komponente.</summary>
+        <returns>Die <see cref="T:System.Windows.Interop.IKeyboardInputSite" /> Site der Komponente enthalten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Komponenten mit untergeordneten Komponenten sollten interne Sammlungen Standorte verwalten und verwenden Sie diese Methode zum Hinzufügen einer neuen Senke und am neuen Standort zurück. Sie müssen nur die Websitesammlung zu verwalten, da die Senke vom Standort abgerufen werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabInto">
+      <MemberSignature Language="C#" Value="public bool TabInto (System.Windows.Input.TraversalRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TabInto(class System.Windows.Input.TraversalRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.IKeyboardInputSink.TabInto(System.Windows.Input.TraversalRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Windows.Input.TraversalRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Gibt an, ob der Fokus zum ersten oder letzten Tabstopp festgelegt werden soll.</param>
+        <summary>Legt den Fokus auf den ersten Tabstopp oder den letzten Tabstopp der Senke.</summary>
+        <returns>
+          <see langword="true" />Wenn der Fokus wie angefordert festgelegt wurde; <see langword="false" />, wenn keine Tabstopps vorhanden sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Input.FocusNavigationDirection.First>und <xref:System.Windows.Input.FocusNavigationDirection.Last> sind die einzigen relevanten Werte, die an diese Methode in übergeben werden sollen die <xref:System.Windows.Input.TraversalRequest>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateAccelerator">
+      <MemberSignature Language="C#" Value="public bool TranslateAccelerator (ref System.Windows.Interop.MSG msg, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TranslateAccelerator(valuetype System.Windows.Interop.MSG&amp; msg, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Interop.MSG&amp;" RefType="ref" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die Nachricht und die zugehörigen Daten. Ändern Sie diese Struktur nicht. Es wird nur aus Gründen der Leistung Verweisübergabe übergeben.</param>
+        <param name="modifiers">Zusatztasten.</param>
+        <summary>Verarbeitet die Tastatureingabe auf Nachrichtenebene Keydown.</summary>
+        <returns>
+          <see langword="true" />Wenn die Nachricht durch die Implementierung der Methode verarbeitet wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Nachricht muss entweder WM_KEYDOWN oder WM_SYSKEYDOWN sein.  
+  
+ Wenn die Komponente kann nicht die Eingaben Übersetzungen verarbeitet und untergeordneten Komponenten, die Übersetzungen möglicherweise hat, ruft es in der Regel <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> Methode für die untergeordnete Komponente, die den aktuellen Fokus enthält, bevor ein Ergebnis zurückgegeben.  
+  
+ Wenn die Nachricht nicht unmittelbar behandelt werden kann, Sie können erneut verteilen sie innerhalb der <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> Implementierung, falls erforderlich, und geben Sie `false`.  
+  
+ Szenario zum Übersetzen von Zugriffstasten Verarbeiten der VK_TAB Keydown-Nachricht und ermittelt, ob der Fokus innerhalb der Komponente aufrufen, legen Sie <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A> an eine untergeordnete Komponente oder Aufrufen <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> am übergeordneten Standort da die Sequenz der Registerkarte " die Anfang oder Ende Grenzen erreicht. Bestimmte Komponenten können die Tab-Taste auf diese Weise nicht zu behandeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateChar">
+      <MemberSignature Language="C#" Value="public bool TranslateChar (ref System.Windows.Interop.MSG msg, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TranslateChar(valuetype System.Windows.Interop.MSG&amp; msg, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.IKeyboardInputSink.TranslateChar(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Interop.MSG&amp;" RefType="ref" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die Nachricht und die zugehörigen Daten. Ändern Sie diese Struktur nicht. Es wird nur aus Gründen der Leistung Verweisübergabe übergeben.</param>
+        <param name="modifiers">Zusatztasten.</param>
+        <summary>Verarbeitet WM_CHAR, WM_SYSCHAR WM_DEADCHAR und WM_SYSDEADCHAR eingabemeldungen vor <see cref="M:System.Windows.Interop.IKeyboardInputSink.OnMnemonic(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" /> aufgerufen wird.</summary>
+        <returns>
+          <see langword="true" />Wenn die Meldung verarbeitet wurde und <see cref="M:System.Windows.Interop.IKeyboardInputSink.OnMnemonic(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" /> sollte nicht aufgerufen werden, andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Methode zurückzugebenden implementieren `true`, Eingabearchitektur für die kein Aufruf <xref:System.Windows.Interop.IKeyboardInputSink.OnMnemonic%2A> für diese Schlüssel Nachricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

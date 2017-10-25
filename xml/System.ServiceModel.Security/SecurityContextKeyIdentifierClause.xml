@@ -1,0 +1,207 @@
+<Type Name="SecurityContextKeyIdentifierClause" FullName="System.ServiceModel.Security.SecurityContextKeyIdentifierClause">
+  <TypeSignature Language="C#" Value="public class SecurityContextKeyIdentifierClause : System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityContextKeyIdentifierClause extends System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.SecurityContextKeyIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Schlüsselbezeichnerklausel für einen Sicherheitskontexttoken dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityContextKeyIdentifierClause (System.Xml.UniqueId contextId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.UniqueId contextId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityContextKeyIdentifierClause.#ctor(System.Xml.UniqueId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contextId" Type="System.Xml.UniqueId" />
+      </Parameters>
+      <Docs>
+        <param name="contextId">Die eindeutige ID des Sicherheitskontexts.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ServiceModel.Security.SecurityContextKeyIdentifierClause" /> -Klasse unter Verwendung des angegebenen kontextbezeichners.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen über den `contextId`-Parameter finden Sie unter <xref:System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.ContextId%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityContextKeyIdentifierClause (System.Xml.UniqueId contextId, System.Xml.UniqueId generation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.UniqueId contextId, class System.Xml.UniqueId generation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityContextKeyIdentifierClause.#ctor(System.Xml.UniqueId,System.Xml.UniqueId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contextId" Type="System.Xml.UniqueId" />
+        <Parameter Name="generation" Type="System.Xml.UniqueId" />
+      </Parameters>
+      <Docs>
+        <param name="contextId">Eine <see cref="T:System.Xml.UniqueId" />, die die Kontextkennung des Sicherheitskontexts darstellt.</param>
+        <param name="generation">Eine <see cref="T:System.Xml.UniqueId" />, die auf die Schlüsselgenerierung des Sicherheitskontexttokens verweist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ServiceModel.Security.SecurityContextKeyIdentifierClause" /> -Klasse mit dem angegebenen Kontext-ID und Generierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen über den `contextId`-Parameter finden Sie unter <xref:System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.ContextId%2A>.  
+  
+ Weitere Informationen über den `generation`-Parameter finden Sie unter <xref:System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.KeyGeneration%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityContextKeyIdentifierClause (System.Xml.UniqueId contextId, System.Xml.UniqueId generation, byte[] derivationNonce, int derivationLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.UniqueId contextId, class System.Xml.UniqueId generation, unsigned int8[] derivationNonce, int32 derivationLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityContextKeyIdentifierClause.#ctor(System.Xml.UniqueId,System.Xml.UniqueId,System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contextId" Type="System.Xml.UniqueId" />
+        <Parameter Name="generation" Type="System.Xml.UniqueId" />
+        <Parameter Name="derivationNonce" Type="System.Byte[]" />
+        <Parameter Name="derivationLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="contextId">Der Kontext-ID-Bestandteil der Bezeichnerklausel.</param>
+        <param name="generation">Der Generierungsteil der Bezeichnerklausel.</param>
+        <param name="derivationNonce">To be added.</param>
+        <param name="derivationLength">Die Länge des abgeleiteten Schlüssels.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.SecurityContextKeyIdentifierClause" />-Klasse mit den angegebenen Werten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `derivationNonce` und `derivationLength` werden für implizite abgeleitete Schlüssel verwendet. Dies wird nur auf der sendenden Seite unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextId">
+      <MemberSignature Language="C#" Value="public System.Xml.UniqueId ContextId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.UniqueId ContextId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityContextKeyIdentifierClause.ContextId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.UniqueId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID des Sicherheitskontexts ab.</summary>
+        <value>Die eindeutige ID des Sicherheitskontexts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generation">
+      <MemberSignature Language="C#" Value="public System.Xml.UniqueId Generation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.UniqueId Generation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityContextKeyIdentifierClause.Generation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.UniqueId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Generierung ab.</summary>
+        <value>Die Generierung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public override bool Matches (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Matches(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityContextKeyIdentifierClause.Matches(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Die zu vergleichende <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />.</param>
+        <summary>Vergleicht eine angegebene <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> mit der aktuellen Instanz der <see cref="T:System.ServiceModel.Security.SecurityContextKeyIdentifierClause" />-Klasse.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Instanzen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public bool Matches (System.Xml.UniqueId contextId, System.Xml.UniqueId generation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Matches(class System.Xml.UniqueId contextId, class System.Xml.UniqueId generation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityContextKeyIdentifierClause.Matches(System.Xml.UniqueId,System.Xml.UniqueId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextId" Type="System.Xml.UniqueId" />
+        <Parameter Name="generation" Type="System.Xml.UniqueId" />
+      </Parameters>
+      <Docs>
+        <param name="contextId">Der Kontext-ID-Bestandteil der Bezeichnerklausel.</param>
+        <param name="generation">Der Generierungsteil der Bezeichnerklausel.</param>
+        <summary>Vergleicht eine angegebene <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> mit der aktuellen Instanz von der <see cref="T:System.ServiceModel.Security.SecurityContextKeyIdentifierClause" /> -Klasse mit dem angegebenen Kontext-ID und Generierung.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Instanzen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityContextKeyIdentifierClause.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine Textdarstellung dieser Instanz der Klasse bereit.</summary>
+        <returns>Eine Textdarstellung dieser Instanz der Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

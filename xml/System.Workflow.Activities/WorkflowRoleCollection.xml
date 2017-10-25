@@ -1,0 +1,76 @@
+<Type Name="WorkflowRoleCollection" FullName="System.Workflow.Activities.WorkflowRoleCollection">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowRoleCollection : System.Collections.Generic.List&lt;System.Workflow.Activities.WorkflowRole&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit WorkflowRoleCollection extends System.Collections.Generic.List`1&lt;class System.Workflow.Activities.WorkflowRole&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.WorkflowRoleCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Generic.List&lt;System.Workflow.Activities.WorkflowRole&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Workflow.Activities.WorkflowRole</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Workflow.Activities.WorkflowRole" />-Objekten dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Activities.WorkflowRoleCollection> bietet programmgesteuerten Zugriff, um zu überprüfen, ob eine <xref:System.Workflow.Activities.WorkflowRole> zugeordnete Identität <xref:System.Workflow.Activities.HandleExternalEventActivity> oder <xref:System.Workflow.Activities.WebServiceInputActivity> hinzugefügt wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowRoleCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.WorkflowRoleCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.WorkflowRoleCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludesIdentity">
+      <MemberSignature Language="C#" Value="public bool IncludesIdentity (string identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IncludesIdentity(string identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.WorkflowRoleCollection.IncludesIdentity(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Eine Zeichenfolge, die die zu suchende Identität enthält.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob <see cref="T:System.Workflow.Activities.WorkflowRoleCollection" /> die angegebene Identität enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn <see cref="T:System.Workflow.Activities.WorkflowRoleCollection" /> die Identität enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

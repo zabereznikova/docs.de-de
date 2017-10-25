@@ -1,0 +1,171 @@
+<Type Name="ErrorFormatterPage" FullName="System.Web.UI.MobileControls.ErrorFormatterPage">
+  <TypeSignature Language="C#" Value="public class ErrorFormatterPage : System.Web.UI.MobileControls.MobilePage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ErrorFormatterPage extends System.Web.UI.MobileControls.MobilePage" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ErrorFormatterPage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.MobilePage</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine integrierte Seite an, mit der Informationen zu Ausnahmen und Fehlern auf mobilen Geräten gerendert werden können. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Seite ist eine interne von Mechanismus zum bieten die Fehlermeldungen, die formatiert werden entsprechend für das Zielgerät für die adaptive Fehlerbehandlung verwendet.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorFormatterPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ErrorFormatterPage.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.ErrorFormatterPage" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorInfo">
+      <MemberSignature Language="C#" Value="protected System.Web.Mobile.MobileErrorInfo ErrorInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Mobile.MobileErrorInfo ErrorInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ErrorFormatterPage.ErrorInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Mobile.MobileErrorInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt Informationen zu einer Ausnahme zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein <see cref="T:System.Web.Mobile.MobileErrorInfo" /> Objekt, das Informationen zum Fehler enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, durch die adaptive Fehlerbehandlungsmechanismus formatierte Fehlermeldungen für bestimmte Geräte bietet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitContent">
+      <MemberSignature Language="C#" Value="protected virtual void InitContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ErrorFormatterPage.InitContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert den Inhalt der Seite "Fehler", basierend auf die Fehlerinformationen abgerufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die grundlegende Implementierung erstellt die mobile-Steuerelemente erforderlich sind, um den Fehler zu rendern.  
+  
+ Diese Eigenschaft ist eine interne von Mechanismus für die adaptive Fehlerbehandlung verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPageStateFromPersistenceMedium">
+      <MemberSignature Language="C#" Value="protected override object LoadPageStateFromPersistenceMedium ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object LoadPageStateFromPersistenceMedium() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ErrorFormatterPage.LoadPageStateFromPersistenceMedium" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lädt alle gespeicherten Ansichtszustand Informationen zu den <see cref="T:System.Web.UI.MobileControls.MobilePage" /> Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein Objekt, das den gespeicherten Ansichtszustand enthält. Dies wird intern in der Regel eine <see cref="T:System.Web.UI.StateBag" /> oder <see cref="T:System.Collections.IDictionary" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ErrorFormatterPage.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Wird nach der Initialisierung eines Objekts, z. B. eines Formulars oder einer Seite, aufgerufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die <xref:System.Web.UI.Page.OnInit%2A?displayProperty=nameWithType> Methode, um die Daten für das Ereignis für den Adapter anzupassen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Es ist keine Ausnahme gespeichert, der <see cref="T:System.Web.HttpContext" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SavePageStateToPersistenceMedium">
+      <MemberSignature Language="C#" Value="protected override void SavePageStateToPersistenceMedium (object viewState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SavePageStateToPersistenceMedium(object viewState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ErrorFormatterPage.SavePageStateToPersistenceMedium(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="viewState">Ein Objekt, in dem die Ansichtszustandsinformationen gespeichert werden soll.</param>
+        <summary>Speichert alle Ansichts- oder Zustandsinformationen für die Seite. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

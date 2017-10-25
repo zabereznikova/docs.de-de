@@ -1,0 +1,115 @@
+<Type Name="NumberSubstitutionMethod" FullName="System.Windows.Media.NumberSubstitutionMethod">
+  <TypeSignature Language="C#" Value="public enum NumberSubstitutionMethod" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NumberSubstitutionMethod extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.NumberSubstitutionMethod" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert eine Enumeratorklasse, die den Typ der Zahlen für Zahlen in einer textausführung ausführen angibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In den meisten Kulturen der Decimal-System verwenden, um Zahlen darzustellen, aber viele Kulturen verwenden unterschiedliche Ziffernformen. Die folgende Tabelle zeigt verschiedene Nummerierung Systeme von unterschiedlichen Kulturen verwendet.  
+  
+ ![Tabelle mit Symbolen für das Zahl ersetzen](~/add/media/numbersubstitution01.png "Tabelle mit Symbolen für das Zahl ersetzen")  
+Beispiel für die Darstellung von Ziffern in unterschiedlichen Kulturen  
+  
+ Es ist nicht ausreichen, um alternative Unicode-Codepunkten für jeden Satz von Ziffernformen zu gewähren, da im Gegensatz zu Buchstaben, Ziffern, die in Berechnungen verwendet werden. Jede Anwendung, jedes Betriebssystem und jede Laufzeitbibliothek enthält Code zum Konvertieren eines numerischen Werts der internen binären Format in eine Zeichenfolge von Zeichen, und umgekehrt. Diese Konvertierungsroutinen sind codiert, um Unicode-Ziffern "0030" bis "0039" verwenden.  
+  
+ Die <xref:System.Windows.Media.NumberSubstitution> -Klasse bietet eine Funktionalität, die unterschiedliche Kulturen, die entsprechende Ziffernformen zur Renderingzeit ersetzen kann. Diese Funktion ist ähnlich, die zum Bereitstellen von Schriftarten und Sprache abhängige Schriftart Rendering.  
+  
+> [!NOTE]
+>  Viele Kulturen werden ihre Formen traditionelle Zeichen verwerfen und Übernahme westlichen Ziffernformen, daher ersetzt erkennt die Unterschiede für jede Kultur herkömmlichen Ziffer Shapes und national standard Ziffer.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsCulture">
+      <MemberSignature Language="C#" Value="AsCulture" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.NumberSubstitutionMethod AsCulture = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.NumberSubstitutionMethod.AsCulture" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberSubstitutionMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Standard. Gibt an, dass die Ersetzungsmethode bestimmt werden sollen, basierend auf der Anzahl Kultur <see cref="P:System.Globalization.NumberFormatInfo.DigitSubstitution" /> Eigenschaftswert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="Context" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.NumberSubstitutionMethod Context = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.NumberSubstitutionMethod.Context" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberSubstitutionMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn die Kultur eine Kultur Arabisch oder Farsi ist, gibt Sie an, dass die Ziffern für den Kontext abhängig sind. Entweder herkömmliche oder westlichen Ziffern werden verwendet, abhängig vom nächstgelegenen starke Zeichen oder, falls keine Komponente, die textrichtung des Absatzes vorhanden ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="European">
+      <MemberSignature Language="C#" Value="European" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.NumberSubstitutionMethod European = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.NumberSubstitutionMethod.European" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberSubstitutionMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Codepunkte 0 x 0 x 30-39 immer als europäische Ziffern gerendert werden in diesem Fall erfolgt keine Zahlen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NativeNational">
+      <MemberSignature Language="C#" Value="NativeNational" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.NumberSubstitutionMethod NativeNational = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.NumberSubstitutionMethod.NativeNational" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberSubstitutionMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Zahlen mit den nationalen Ziffern für die Kultur, entsprechend den Angaben von der Kultur gerendert werden <see cref="P:System.Globalization.NumberFormatInfo.NativeDigits" /> Eigenschaftswert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Traditional">
+      <MemberSignature Language="C#" Value="Traditional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.NumberSubstitutionMethod Traditional = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.NumberSubstitutionMethod.Traditional" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberSubstitutionMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Zahlen mit traditionellen Zeichen für die Kultur gerendert werden. Für die meisten Kulturen, dies ist identisch mit der <see cref="F:System.Globalization.DigitShapes.NativeNational" /> -Enumerationswert. Allerdings <see cref="F:System.Windows.Media.NumberSubstitutionMethod.NativeNational" /> kann für einige arabischen Kulturen westlichen Ziffern führen, während bei Verwendung von <see cref="F:System.Windows.Media.NumberSubstitutionMethod.Traditional" /> Arabische Ziffern für alle arabische Kulturen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

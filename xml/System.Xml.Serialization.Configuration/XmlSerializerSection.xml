@@ -1,0 +1,137 @@
+<Type Name="XmlSerializerSection" FullName="System.Xml.Serialization.Configuration.XmlSerializerSection">
+  <TypeSignature Language="C#" Value="public sealed class XmlSerializerSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlSerializerSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.Configuration.XmlSerializerSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verarbeitet die XML-Elemente, die zum Konfigurieren von XML-Serialisierung verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient zur Verarbeitung der [ &lt;XmlSerializer&gt; Element](~/docs/standard/serialization/xmlserializer-element.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializerSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Configuration.XmlSerializerSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.Configuration.XmlSerializerSection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckDeserializeAdvances">
+      <MemberSignature Language="C#" Value="public bool CheckDeserializeAdvances { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CheckDeserializeAdvances" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.Configuration.XmlSerializerSection.CheckDeserializeAdvances" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("checkDeserializeAdvances", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob eine zusätzliche Überprüfung des Status der <see cref="T:System.Xml.Serialization.XmlSerializer" /> erfolgt.</summary>
+        <value>
+          <see langword="true" />Wenn die Überprüfung erfolgt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode nicht. Legen Sie stattdessen die `checkDeserializerAdvances` Attribut von der [ &lt;XmlSerializer&gt; Element](~/docs/standard/serialization/xmlserializer-element.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.Configuration.XmlSerializerSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TempFilesLocation">
+      <MemberSignature Language="C#" Value="public string TempFilesLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TempFilesLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.Configuration.XmlSerializerSection.TempFilesLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("tempFilesLocation", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Speicherort, der für die Erstellung der temporären Datei angegeben wurde.</summary>
+        <value>Der Speicherort, der für die Erstellung der temporären Datei angegeben wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseLegacySerializerGeneration">
+      <MemberSignature Language="C#" Value="public bool UseLegacySerializerGeneration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseLegacySerializerGeneration" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.Configuration.XmlSerializerSection.UseLegacySerializerGeneration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("useLegacySerializerGeneration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das angegebene Objekt die Generierung von älteren Serialisierungsprogramm verwendet.</summary>
+        <value>
+          <see langword="true" />Wenn das Objekt die Generierung von älteren Serialisierungsprogramm verwendet; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

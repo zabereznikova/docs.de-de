@@ -1,0 +1,1120 @@
+<Type Name="HttpListener" FullName="System.Net.HttpListener">
+  <TypeSignature Language="C#" Value="public sealed class HttpListener : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpListener extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.HttpListener" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.HttpListener</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen einfachen, programmgesteuerten HTTP-Protokolllistener bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe der <xref:System.Net.HttpListener> -Klasse, erstellen Sie eine einfache HTTP-Protokolllistener, der auf HTTP-Anforderungen reagiert. Der Listener ist für die Lebensdauer des aktiven der <xref:System.Net.HttpListener> Objekt und führt innerhalb der Anwendung mit seinen Berechtigungen.  
+  
+> [!NOTE]
+>  Diese Klasse ist nur auf Computern unter den Betriebssystemen Windows XP SP2 oder Windows Server 2003 verfügbar. Wenn Sie versuchen, Sie erstellen eine <xref:System.Net.HttpListener> Objekt auf einem Computer mit einem älteren Betriebssystem, löst die Konstruktor eine <xref:System.PlatformNotSupportedException> Ausnahme.  
+  
+ Mit <xref:System.Net.HttpListener>, erstellen Sie eine neue Instanz der Klasse unter Verwendung der <xref:System.Net.HttpListener> Konstruktor und die Verwendung der <xref:System.Net.HttpListener.Prefixes%2A> Eigenschaft für den Zugriff auf die Auflistung, die die Zeichenfolgen enthält, die angeben, welche Uniform Resource Identifier (URI) das Präfix der <xref:System.Net.HttpListener>verarbeiten sollen.  
+  
+ Eine URI-Präfix-Zeichenfolge besteht aus einem Schema (http oder Https), einem Host, einem optionalen Port und einen optionalen Pfad. Ist ein Beispiel für eine vollständige Präfixzeichenfolge "`http://www.contoso.com:8080/customerData``/`". Präfixe enden in einem Schrägstrich ("/"). Die <xref:System.Net.HttpListener> Objekt mit dem Präfix an, die am ehesten, einen angeforderten URI entspricht auf die Anforderung reagiert. Mehrere <xref:System.Net.HttpListener> Objekte können nicht das gleiche Präfix hinzufügen; eine <xref:System.ComponentModel.Win32Exception> Ausnahme wird ausgelöst, wenn eine <xref:System.Net.HttpListener> Fügt ein Präfix, das bereits verwenden.  
+  
+ Wenn ein Port angegeben ist, kann das Hostelement ersetzt werden, mit "*" gibt an, dass die <xref:System.Net.HttpListener> akzeptiert Anforderungen an den Port gesendet werden, wenn der angeforderte URI nicht mit einem anderen Präfix übereinstimmt. Beispielsweise zum Empfangen von allen Anforderungen gesendet, an Port 8080, wenn der angeforderte URI nicht durch eine erfolgt <xref:System.Net.HttpListener>, ist das Präfix "`http://*:8080``/`". Auf ähnliche Weise angeben, dass die <xref:System.Net.HttpListener> akzeptiert alle Anforderungen an einen Port gesendet ersetzen Sie die Hostelement mit dem Zeichen "+", "`https://+:8080`". Die "\*" und "+" Zeichen können in Präfixe, die Pfade enthalten vorhanden sein.  
+  
+ Beginnend mit .NET 4.5.3 und Windows 10, werden Platzhalter Unterdomänen in URI-Präfixe, die vom verwalteten unterstützt ein <xref:System.Net.HttpListener> Objekt. Um eine Unterdomäne Platzhalter anzugeben, verwenden die "*" Zeichen als Teil der Hostname in URI-Präfix: z. B. `http://*.foo.com/`, und übergeben Sie das als Argument an die HttpListenerPrefixCollection.Add-Methode. Dies funktioniert unter .NET 4.5.3 und Windows 10; in früheren Versionen wäre dadurch generiert eine<xref:System.Net.HttpListenerException>  
+  
+ Um die Überwachung auf Anforderungen von Clients beginnen, fügen Sie die URI-Präfixe auf die Auflistung, und rufen die <xref:System.Net.HttpListener.Start%2A> Methode. <xref:System.Net.HttpListener>Bietet synchrone und asynchrone Modelle für die Verarbeitung von Clientanforderungen. Anforderungen und ihre zugeordneten Reaktion erfolgt mithilfe der <xref:System.Net.HttpListenerContext> zurückgegebenes Objekt die <xref:System.Net.HttpListener.GetContext%2A> -Methode oder die asynchronen Entsprechungen der <xref:System.Net.HttpListener.BeginGetContext%2A> und <xref:System.Net.HttpListener.EndGetContext%2A> Methoden.  
+  
+ Das synchrone Modell eignet sich, wenn die Anwendung während des Wartens auf einer Clientanforderungs blockiert werden soll und Sie jeweils nur eine Anforderung verarbeiten möchten. Rufen Sie das synchrone Modell mithilfe der <xref:System.Net.HttpListener.GetContext%2A> -Methode, die für einen Client zum Senden einer Anforderung wartet. Die Methode gibt ein <xref:System.Net.HttpListenerContext> -Objekt zur Verarbeitung, wenn bei mindestens einem tritt auf.  
+  
+ In der komplexere asynchrone Modell blockiert Ihre Anwendung nicht beim Warten auf die Anforderungen und jede Anforderung in einem eigenen Ausführungsthread verarbeitet wird. Verwenden der <xref:System.Net.HttpListener.BeginGetContext%2A> -Methode an eine anwendungsdefinierte-Methode, die für jede eingehende Anforderung aufgerufen werden. Rufen Sie in dieser Methode die <xref:System.Net.HttpListener.EndGetContext%2A> Methode, um die Anforderung abrufen, verarbeiten und darauf reagieren.  
+  
+ Bei beiden Modellen eingehende Anforderungen erfolgt mithilfe der <xref:System.Net.HttpListenerContext.Request%2A?displayProperty=nameWithType> -Eigenschaft dargestellte <xref:System.Net.HttpListenerRequest> Objekte. Auf ähnliche Weise Antworten erfolgt mithilfe der <xref:System.Net.HttpListenerContext.Response%2A?displayProperty=nameWithType> -Eigenschaft dargestellte <xref:System.Net.HttpListenerResponse> Objekte. Diese Objekte freigeben, einige Funktionen mit dem <xref:System.Net.HttpWebRequest> und <xref:System.Net.HttpWebResponse> Objekte, aber die zweite Objekte können nicht in Verbindung mit verwendet werden <xref:System.Net.HttpListener> , da sie Client, nicht Serververhalten implementieren.  
+  
+ Ein <xref:System.Net.HttpListener> können die Clientauthentifizierung anfordern. Sie können entweder ein bestimmtes Schema für die Authentifizierung angeben, oder Sie können ein Delegat, der das Schema, das bestimmt angeben. Sie müssen eine Form der Authentifizierung, um Informationen über die Identität des Clients abzurufen. Weitere Informationen finden Sie unter der <xref:System.Net.HttpListenerContext.User%2A>, <xref:System.Net.HttpListener.AuthenticationSchemes%2A>, und <xref:System.Net.HttpListener.AuthenticationSchemeSelectorDelegate%2A> Eigenschaften.  
+  
+> [!NOTE]
+>  Wenn Sie erstellen ein <xref:System.Net.HttpListener> mithilfe von Https müssen Sie ein Serverzertifikat für diesen Listener auswählen. Andernfalls ein <xref:System.Net.HttpWebRequest> dieses <xref:System.Net.HttpListener> schlagen mit einem unerwarteten Schließen der Verbindung.  
+  
+> [!NOTE]
+>  Sie können Serverzertifikate und andere Listeneroptionen mithilfe von HttpCfg.exe konfigurieren. Finden Sie unter [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/http/http/httpcfg_exe.asp](http://msdn.microsoft.com/library/default.asp?url=/library/http/http/httpcfg_exe.asp) Weitere Details. Die ausführbare Datei ist im Lieferumfang Windows Server 2003 oder aus Quellcode verfügbar im Plattform-SDK erstellt werden kann.  
+  
+> [!NOTE]
+>  Bei Angabe mehrerer Authentifizierungsschemas für das <xref:System.Net.HttpListener>, fordern Sie der Listener wird Clients in der folgenden Reihenfolge: `Negotiate`, `NTLM`, `Digest`, und klicken Sie dann `Basic`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung einer <xref:System.Net.HttpListener>.  
+  
+ [!code-csharp[Net_Listener_Basic#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListener.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.HttpListener" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie vor der Verwendung der Instanz, die von diesem Konstruktor zurückgegeben, dessen <xref:System.Net.HttpListener.Start%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Net.HttpListener> Konstruktor zum Erstellen eines neuen <xref:System.Net.HttpListener> Objekt. Das vollständige Beispiel finden Sie unter der <xref:System.Net.HttpListener> klassenthema.  
+  
+ [!code-csharp[Net_listener_Basic#9](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Diese Klasse kann nicht auf das aktuelle Betriebssystem verwendet werden. Windows Server 2003 oder Windows XP SP2 ist erforderlich, um die Instanzen dieser Klasse verwenden.</exception>
+        <block subset="none" type="usage">
+          <para>Hinweis: Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [Netzwerkablaufverfolgung in .NET Framework](~/docs/framework/network-programming/network-tracing.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListener.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet sofort das <see cref="T:System.Net.HttpListener" />-Objekt und verwirft alle Anforderungen, die sich gegenwärtig in der Warteschlange befinden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt alle von diesem Listener reservierten Ressourcen frei. Alle ausstehenden Anforderungen sind nicht abgeschlossen werden.  
+  
+ Nach dem Aufrufen dieser Methode erhalten Sie eine <xref:System.ObjectDisposedException> Wenn Sie versuchen, diese Option verwenden <xref:System.Net.HttpListener>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Aufrufen dieser Methode.  
+  
+ [!code-csharp[Net_Listener_Basic#11](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [Netzwerkablaufverfolgung in .NET Framework](~/docs/framework/network-programming/network-tracing.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationSchemes">
+      <MemberSignature Language="C#" Value="public System.Net.AuthenticationSchemes AuthenticationSchemes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.AuthenticationSchemes AuthenticationSchemes" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListener.AuthenticationSchemes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.AuthenticationSchemes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Schema ab, das zum Authentifizieren von Clients verwendet wird, oder legt dieses fest.</summary>
+        <value>Eine bitweise Kombination von <see cref="T:System.Net.AuthenticationSchemes" />-Enumerationswerten, die angibt, wie Clients authentifiziert werden sollen. Der Standardwert ist <see cref="F:System.Net.AuthenticationSchemes.Anonymous" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.HttpListener> das angegebene Schema verwendet, um alle eingehenden Anforderungen zu authentifizieren. Die <xref:System.Net.HttpListener.GetContext%2A> und <xref:System.Net.HttpListener.EndGetContext%2A> Methoden eine eingehende Clientanforderung nur zurück, wenn die <xref:System.Net.HttpListener> erfolgreich authentifiziert die Anforderung.  
+  
+ Sie können die Identität eines erfolgreich authentifizierten Clients mithilfe von Abfragen die <xref:System.Net.HttpListenerContext.User%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Gegebenenfalls ein <xref:System.Net.HttpListener> -Objekt unterschiedliche Authentifizierungsmechanismen verwenden auf der Grundlage von Eigenschaften der Anforderungen, die es empfängt (z. B. der Anforderung des <xref:System.Net.HttpListenerRequest.Url%2A> oder <xref:System.Net.HttpListenerRequest.UserHostName%2A> Eigenschaft), müssen Sie eine Methode, die wählt implementieren die Authentifizierungsschema. Anleitungen hierzu finden Sie unter der <xref:System.Net.HttpListener.AuthenticationSchemeSelectorDelegate%2A> Dokumentation zur Eigenschaft.  
+  
+> [!NOTE]
+>  Zum Festlegen dieser Eigenschaft zum Aktivieren von Digest, NTLM oder Negotiate erfordert die <xref:System.Security.Permissions.SecurityPermission>, <xref:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Net.HttpListener.AuthenticationSchemes%2A> Eigenschaft, um ein anderes Authentifizierungsschema anzugeben.  
+  
+ [!code-csharp[Net_listener_Basic#14](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#14)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt wurde geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationSchemeSelectorDelegate">
+      <MemberSignature Language="C#" Value="public System.Net.AuthenticationSchemeSelector AuthenticationSchemeSelectorDelegate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.AuthenticationSchemeSelector AuthenticationSchemeSelectorDelegate" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListener.AuthenticationSchemeSelectorDelegate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.AuthenticationSchemeSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Delegaten ab, der zum Bestimmen des für die Authentifizierung von Clients verwendeten Protokolls aufgerufen wird, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Net.AuthenticationSchemeSelector" />-Delegat, der die zum Auswählen eines Authentifizierungsprotokolls verwendete Methode aufruft. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Wenn das gleiche Authentifizierungsprotokoll für alle Anforderungen, die von einer bestimmten Instanz verarbeitet verwendet werden soll <xref:System.Net.HttpListener>, Sie müssen nicht auf diese Eigenschaft festgelegt. Um ein Protokoll für alle Clientanforderungen zu verwendende anzugeben, verwenden die <xref:System.Net.HttpListener.AuthenticationSchemes%2A> Eigenschaft.  
+  
+ Wenn der Client die Authentifizierungsinformationen in den Headern nicht angegeben wurde die <xref:System.Net.HttpListener> Ruft den angegebenen Delegaten für jede nicht authentifizierte eingehende Anforderung, um zu bestimmen, die ggf. Protokoll zum Authentifizieren des Clients verwenden. Die <xref:System.Net.HttpListener.GetContext%2A> und <xref:System.Net.HttpListener.EndGetContext%2A> -Methoden zurückgeben einer eingehenden Anforderung nur, wenn die <xref:System.Net.HttpListener> erfolgreich authentifiziert die Anforderung. Wenn eine Anforderung nicht authentifiziert werden kann, die <xref:System.Net.HttpListener> automatisch zurücksendet 401-Antwort. Sie erhalten die Identität eines erfolgreich authentifizierten Clients, die mit der <xref:System.Web.HttpRequest.LogonUserIdentity%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Die Möglichkeit, delegieren die Auswahl des Authentifizierungsprotokoll eine anwendungsspezifische-Methode ist hilfreich, wenn Sie eine Instanz von <xref:System.Net.HttpListener> verschiedenen Authentifizierungsprotokollen, abhängig von den Eigenschaften der Anforderungen verwenden (für Empfang der Anforderung z. B. <xref:System.Net.HttpListenerRequest.Url%2A> oder <xref:System.Net.HttpListenerRequest.UserHostAddress%2A> Eigenschaft).  
+  
+> [!NOTE]
+>  Zum Festlegen dieser Eigenschaft zum Aktivieren von Digest, NTLM oder Negotiate erfordert die <xref:System.Security.Permissions.SecurityPermission>, <xref:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt den Wert dieser Eigenschaft fest.  
+  
+ [!code-csharp[NclListener#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLListener/CS/sample.cs#2)]
+ [!code-vb[NclListener#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb#2)]  
+  
+ Das folgende Codebeispiel stellt eine Implementierung einer Methode aufgerufen, indem ein <xref:System.Net.AuthenticationSchemeSelector> delegieren.  
+  
+ [!code-csharp[NclListener#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLListener/CS/sample.cs#1)]
+ [!code-vb[NclListener#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt wurde geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetContext">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetContext (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetContext(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListener.BeginGetContext(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein <see cref="T:System.AsyncCallback" />-Delegat, der auf die Methode verweist, die aufgerufen werden soll, wenn eine Clientanforderung verfügbar ist.</param>
+        <param name="state">Ein benutzerdefiniertes Objekt, das Informationen über den Vorgang enthält. Dieses Objekt wird zum Übergeben der <c>Rückruf</c> delegieren, wenn der Vorgang abgeschlossen ist.</param>
+        <summary>Startet den asynchronen Abruf einer eingehenden Anforderung.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" />-Objekt, das den Status des asynchronen Vorgangs angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.HttpListener.BeginGetContext%2A> Methode startet einen asynchronen Aufruf der (nicht blockierend) auf eingehende Clientanforderungen empfangen. Vor dem Aufrufen dieser Methode, rufen Sie die <xref:System.Net.HttpListener.Start%2A> Methode und fügen Sie mindestens ein Uniform Resource Identifier (URI)-Präfix zum Abhören durch Hinzufügen der URI-Zeichenfolgen, die die <xref:System.Net.HttpListenerPrefixCollection> zurückgegebenes der <xref:System.Net.HttpListener.Prefixes%2A> Eigenschaft.  
+  
+ Der asynchrone Vorgang abgeschlossen werden muss, durch Aufrufen der <xref:System.Net.HttpListener.EndGetContext%2A> Methode. In der Regel wird die Methode aufgerufen, indem die `callback` delegieren.  
+  
+ Diese Methode wird nicht blockiert, während der Vorgang abgeschlossen ist. Damit erhalten eine eingehende Anforderung und blockieren, bis der Vorgang abgeschlossen ist, rufen Sie die <xref:System.Net.HttpListener.GetContext%2A> Methode.  
+  
+ Ausführliche Informationen zur Verwendung des asynchronen Programmiermodells finden Sie unter [asynchron aufrufen synchroner Methoden](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Net.HttpListener.BeginGetContext%2A> Methode, um eine Rückrufmethode anzugeben, die eingehende Clientanforderungen behandelt.  
+  
+ [!code-csharp[Net_Listener_Basic#12](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#12)]  
+  
+ Das folgende Codebeispiel implementiert eine Rückrufmethode.  
+  
+ [!code-csharp[Net_Listener_Basic#13](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.HttpListenerException">Fehler bei der ein Win32-Funktionsaufruf. Überprüfen Sie die <see cref="P:System.Net.HttpListenerException.ErrorCode" />-Eigenschaft der Ausnahme, um die Ursache der Ausnahme zu bestimmen.</exception>
+        <exception cref="T:System.InvalidOperationException">Dieses Objekt wurde nicht gestartet wurde oder gerade beendet wird.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+        <block subset="none" type="usage">
+          <para>Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [Netzwerkablaufverfolgung in .NET Framework](~/docs/framework/network-programming/network-tracing.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListener.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fährt den <see cref="T:System.Net.HttpListener" /> herunter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Aufrufen dieser Methode können Sie nicht mehr die <xref:System.Net.HttpListener> Objekt. Vorübergehend anhalten einer <xref:System.Net.HttpListener> -Objekts die <xref:System.Net.HttpListener.Stop%2A> Methode.  
+  
+ Diese Methode beendet Ausschalten der <xref:System.Net.HttpListener> Objekt ohne Verarbeitung von Anforderungen in der Warteschlange. Alle ausstehenden Anforderungen sind nicht abgeschlossen werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Aufrufen dieser Methode.  
+  
+ [!code-csharp[Net_Listener_Basic#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [Netzwerkablaufverfolgung in .NET Framework](~/docs/framework/network-programming/network-tracing.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultServiceNames">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.ExtendedProtection.ServiceNameCollection DefaultServiceNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Authentication.ExtendedProtection.ServiceNameCollection DefaultServiceNames" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListener.DefaultServiceNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.ServiceNameCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft entsprechend den registrierten Präfixen eine Standardliste von Dienstanbieternamen (Service Provider Names, SPNs) ab.</summary>
+        <value>Eine <see cref="T:System.Security.Authentication.ExtendedProtection.ServiceNameCollection" />, die eine Liste von Dienstanbieternamen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.HttpListener.DefaultServiceNames%2A> Eigenschaft wird mit integrierter Windows-Authentifizierung verwendet, um erweiterten Schutz zu bieten. Die Liste der SPNs initialisiert wird die <xref:System.Net.HttpListener.Prefixes%2A> Eigenschaft beim Zugriff auf und gelöscht werden, wenn neue Präfixe hinzugefügt werden die <xref:System.Net.HttpListener.Prefixes%2A> Eigenschaft.  
+  
+ Die <xref:System.Net.HttpListener.DefaultServiceNames%2A> Eigenschaft wird verwendet, wenn eine Anwendung festlegen, nicht die <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.CustomServiceNames%2A> Eigenschaft für die erweiterte Schutzrichtlinie.  
+  
+ Die <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> abgerufen, die mit der <xref:System.Net.HttpListener.DefaultServiceNames%2A> Eigenschaft basiert aus der <xref:System.Net.HttpListener.Prefixes%2A> Eigenschaft gemäß den folgenden Regeln:  
+  
+1.  Wenn der Hostname "+", "*", oder ein IPv4- oder IPv6-Literal (entspricht "\*" aber eingeschränkt auf eine bestimmte lokale Schnittstelle), wird der folgende SPN hinzugefügt:  
+  
+ `"HTTP/"`Plus den vollständig qualifizierten Domänennamen des Computers.  
+  
+1.  Wenn der Hostname keine Punkte (keine Domänen oder Unterdomänen) enthält, wird versucht, den vollqualifizierten Domänennamen, der mithilfe von DNS aufgelöst (das gleiche Verhalten von verwendeten <xref:System.Net.HttpWebRequest>). Wenn Sie der vollqualifizierten Domänennamen aufgelöst werden kann, werden die folgenden SPNs hinzugefügt:  
+  
+ `"HTTP/"`und der Hostname (kurzer Name).  
+  
+ `"HTTP/"`Plus den vollständig qualifizierten Domänennamen für den Hostnamen.  
+  
+1.  Wenn der Hostname keine Punkte (keine Domänen oder Unterdomänen enthält) und ein vollständig qualifizierten Domänennamen kann nicht aufgelöst werden, wird der folgende SPN hinzugefügt:  
+  
+ `"HTTP/"`und der Hostname.  
+  
+1.  Wenn der Hostname Punkte (Domänen oder Unterdomänen) enthält, wird der folgende SPN hinzugefügt:  
+  
+ `"HTTP/"`und der Hostname.  
+  
+ Die <xref:System.Net.HttpListener.DefaultServiceNames%2A> Eigenschaft kann von einer Anwendung verwendet werden, um die Liste der Standard-SPNs, die für die Authentifizierung verwendet wird, wenn keine benutzerdefinierte Liste angegeben wird, überprüfen. Wenn andere SPNs benötigt werden, kann eine Anwendung hinzufügen sie mit einer von der <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection.Merge%2A> Methoden.  
+  
+ Es ist nicht sicher, bei der Verwendung des erweiterten Schutzes Richtlinie Entscheidungen basierend auf der angeforderten URL an, da dies manipuliert werden kann. Anwendungen sollten stattdessen basieren auf der <xref:System.Net.HttpListenerRequest.LocalEndPoint%2A> oder <xref:System.Net.HttpListenerRequest.RemoteEndPoint%2A> Eigenschaften für eine solche Richtlinie Entscheidungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetContext">
+      <MemberSignature Language="C#" Value="public System.Net.HttpListenerContext EndGetContext (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.HttpListenerContext EndGetContext(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListener.EndGetContext(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpListenerContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Ein <see cref="T:System.IAsyncResult" />-Objekt, das beim Starten des asynchronen Vorgangs abgerufen wurde.</param>
+        <summary>Schließt einen asynchronen Vorgang ab, um eine eingehende Clientanforderung abzurufen.</summary>
+        <returns>Ein <see cref="T:System.Net.HttpListenerContext" />-Objekt, das die Clientanforderung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.HttpListener.EndGetContext%2A> -Methode aufgerufen wird, in der Regel innerhalb einer Anwendung definierte Rückrufmethode aufgerufen, indem ein Delegat, zum Abrufen der <xref:System.Net.HttpListenerContext> Objekt, das eine eingehende Clientanforderung und die zugeordnete Antwort enthält. Diese Methode schließt einen Vorgang, der zuvor gestartete durch Aufrufen der <xref:System.Net.HttpListener.BeginGetContext%2A> Methode. Wenn der Vorgang nicht, wird diese Methode blockiert abgeschlossen wurde, bis dies der Fall ist.  
+  
+ Da Aufrufen der <xref:System.Net.HttpListener.EndGetContext%2A> Methode erfordert die <xref:System.Net.HttpListener> übergeben, dieses Objekt wird in der Regel in einer Rückrufmethode von verwenden das übergebene Zustandsobjekt, das die <xref:System.Net.HttpListener.BeginGetContext%2A> Methode. Sie können dieses Zustandsobjekt abrufen, indem Sie mit der <xref:System.IAsyncResult.AsyncState%2A> Eigenschaft der `asyncResult` Objekt.  
+  
+ Ausführliche Informationen zur Verwendung des asynchronen Programmiermodells finden Sie unter [asynchron aufrufen synchroner Methoden](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Implementierung einer Rückrufmethode, die Aufrufe der <xref:System.Net.HttpListener.EndGetContext%2A> Methode.  
+  
+ [!code-csharp[Net_Listener_Basic#13](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="asyncResult" />nicht durch den Aufruf abgerufen wurde die <see cref="M:System.Net.HttpListener.BeginGetContext(System.AsyncCallback,System.Object)" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="M:System.Net.HttpListener.EndGetContext(System.IAsyncResult)" /> Methode wurde bereits aufgerufen, für den angegebenen <paramref name="asyncResult" /> Objekt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+        <block subset="none" type="usage">
+          <para>Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [Netzwerkablaufverfolgung in .NET Framework](~/docs/framework/network-programming/network-tracing.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedProtectionPolicy">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy ExtendedProtectionPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy ExtendedProtectionPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListener.ExtendedProtectionPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("not used anywhere in the implementation")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy" /> für den erweiterten Schutz einer Sitzung ab oder legt sie fest.</summary>
+        <value>Eine <see cref="T:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy" />, die die für erweiterten Schutz zu verwendende Richtlinie angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A> Eigenschaft wird mit integrierter Windows-Authentifizierung verwendet, um erweiterten Schutz zu bieten. Die <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A> Eigenschaft ermöglicht die Konfiguration der die erweiterte Schutzrichtlinie für den gesamten <xref:System.Net.HttpListener> Sitzung. Die <xref:System.Net.HttpListener.ExtendedProtectionSelectorDelegate%2A> Eigenschaft ermöglicht die Konfiguration der die erweiterte Schutzrichtlinie für jede einzelne Anforderung.  
+  
+ Die <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.CustomChannelBinding%2A> Eigenschaft muss `null`. Die <xref:System.Net.HttpListener> Instanz ruft die Kanalbindungstokens (CBT) direkt aus einer eigenen TLS-Sitzung ab, sofern vorhanden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Es wurde versucht, Festlegen der <see cref="P:System.Net.HttpListener.ExtendedProtectionPolicy" /> -Eigenschaft, aber die <see cref="P:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.CustomChannelBinding" /> Eigenschaft wurde nicht <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Es wurde versucht, Festlegen der <see cref="P:System.Net.HttpListener.ExtendedProtectionPolicy" /> Eigenschaft <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, Festlegen der <see cref="P:System.Net.HttpListener.ExtendedProtectionPolicy" /> Eigenschaft nach der <see cref="M:System.Net.HttpListener.Start" /> -Methode wurde bereits aufgerufen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die <see cref="P:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.PolicyEnforcement" /> -Eigenschaft wurde festgelegt, um <see cref="F:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always" /> auf einer Plattform, die keinen erweiterten Schutz unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedProtectionSelectorDelegate">
+      <MemberSignature Language="C#" Value="public System.Net.HttpListener.ExtendedProtectionSelector ExtendedProtectionSelectorDelegate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.HttpListener/ExtendedProtectionSelector ExtendedProtectionSelectorDelegate" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListener.ExtendedProtectionSelectorDelegate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpListener+ExtendedProtectionSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Delegaten ab, der aufgerufen wird, um die <see cref="T:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy" /> für jede Anforderung zu bestimmen, oder legt ihn fest.</summary>
+        <value>Eine <see cref="T:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy" />, die die für erweiterten Schutz zu verwendende Richtlinie angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A> Eigenschaft wird mit integrierter Windows-Authentifizierung verwendet, um erweiterten Schutz zu bieten. Die <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A> Eigenschaft ermöglicht die Konfiguration der die erweiterte Schutzrichtlinie für den gesamten <xref:System.Net.HttpListener> Sitzung. Die <xref:System.Net.HttpListener.ExtendedProtectionSelectorDelegate%2A> Eigenschaft ermöglicht die Konfiguration der erweiterte Schutzrichtlinie für jede einzelne Anforderung.  
+  
+ Die <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.CustomChannelBinding%2A> Eigenschaft muss `null`. Die <xref:System.Net.HttpListener> Instanz ruft die Kanalbindungstokens (CBT) direkt aus einer eigenen TLS-Sitzung ab, sofern vorhanden.  
+  
+ Für jede Anforderung, Delegaten können den Einstellungen, die die <xref:System.Net.HttpListener> -Instanz verwendet, um erweiterten Schutz zu bieten.  
+  
+ Wenn ein Delegaten zurückgibt `null` für diese Eigenschaft stellt dies eine <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> die der <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.PolicyEnforcement%2A> -Eigenschaftensatz auf <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Never>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Es wurde versucht, Festlegen der <see cref="P:System.Net.HttpListener.ExtendedProtectionSelectorDelegate" /> -Eigenschaft, aber die <see cref="P:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.CustomChannelBinding" /> Eigenschaft muss <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Es wurde versucht, Festlegen der <see cref="P:System.Net.HttpListener.ExtendedProtectionSelectorDelegate" /> Eigenschaft <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, Festlegen der <see cref="P:System.Net.HttpListener.ExtendedProtectionSelectorDelegate" /> Eigenschaft nach der <see cref="M:System.Net.HttpListener.Start" /> -Methode wurde bereits aufgerufen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Es wurde versucht, Festlegen der <see cref="P:System.Net.HttpListener.ExtendedProtectionSelectorDelegate" /> Eigenschaft auf einer Plattform, die keinen erweiterten Schutz unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContext">
+      <MemberSignature Language="C#" Value="public System.Net.HttpListenerContext GetContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.HttpListenerContext GetContext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListener.GetContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpListenerContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wartet auf eine eingehende Anforderung und wird beendet, wenn eine Anforderung empfangen wird.</summary>
+        <returns>Ein <see cref="T:System.Net.HttpListenerContext" />-Objekt, das eine Clientanforderung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode, rufen Sie die <xref:System.Net.HttpListener.Start%2A> Methode und fügen Sie mindestens eine URI-Präfix zum Abhören durch Hinzufügen der URI-Zeichenfolgen, die die <xref:System.Net.HttpListenerPrefixCollection> zurückgegebenes der <xref:System.Net.HttpListener.Prefixes%2A> Eigenschaft. Eine ausführliche Beschreibung der Präfixe, finden Sie unter der <xref:System.Net.HttpListener> -Klassenübersicht.  
+  
+ Diese Methode blockiert, während des Wartens auf einer eingehenden Anforderungs. Wenn eingehende Anforderungen asynchron (für separate Threads) verarbeitet werden, sodass Ihre Anwendung nicht blockiert werden sollen, verwenden Sie die <xref:System.Net.HttpListener.BeginGetContext%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Aufrufen dieser Methode.  
+  
+ [!code-csharp[Net_Listener_Basic#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.HttpListenerException">Fehler bei der ein Win32-Funktionsaufruf. Überprüfen Sie die <see cref="P:System.Net.HttpListenerException.ErrorCode" />-Eigenschaft der Ausnahme, um die Ursache der Ausnahme zu bestimmen.</exception>
+        <exception cref="T:System.InvalidOperationException">Dieses Objekt wurde nicht gestartet wurde oder gerade beendet wird.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Net.HttpListener" /> verfügt nicht über alle Präfixe Uniform Resource Identifier (URI) zu reagieren.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+        <block subset="none" type="usage">
+          <para>Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [Netzwerkablaufverfolgung in .NET Framework](~/docs/framework/network-programming/network-tracing.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContextAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.HttpListenerContext&gt; GetContextAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.HttpListenerContext&gt; GetContextAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListener.GetContextAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.HttpListenerContext&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wartet auf eine eingehende Anforderung als asynchrone Operation.</summary>
+        <returns>Gibt <see cref="T:System.Threading.Tasks.Task`1" />zurück.  
+  
+ Das Aufgabenobjekt, das den asynchronen Vorgang darstellt. Die <see cref="P:System.Threading.Tasks.Task`1.Result" />-Eigenschaft im Task-Objekt gibt ein <see cref="T:System.Net.HttpListenerContext" />-Objekt zurück, das eine Clientanforderung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, wenn die eingehende Anforderung empfangen wurde.  
+  
+ Vor dem Aufrufen dieser Methode, rufen Sie die <xref:System.Net.HttpListener.Start%2A> Methode und fügen Sie mindestens eine URI-Präfix zum Abhören durch Hinzufügen der URI-Zeichenfolgen, die die <xref:System.Net.HttpListenerPrefixCollection> zurückgegebenes der <xref:System.Net.HttpListener.Prefixes%2A> Eigenschaft. Eine ausführliche Beschreibung der Präfixe, finden Sie unter der <xref:System.Net.HttpListener> -Klassenübersicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreWriteExceptions">
+      <MemberSignature Language="C#" Value="public bool IgnoreWriteExceptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreWriteExceptions" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListener.IgnoreWriteExceptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Boolean" />-Wert ab, der angibt, ob die Anwendung Ausnahmen empfängt, die auftreten, wenn ein <see cref="T:System.Net.HttpListener" /> die Antwort an den Client sendet, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn dieser <see cref="T:System.Net.HttpListener" /> keine Ausnahmen zurückgeben soll, die beim Senden der Antwort an den Client auftreten, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf `true` Wenn Ihre Anwendung nicht erfordert, dass eine Antwort erfolgreich an jeden Client gesendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#14](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#14)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt wurde geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsListening">
+      <MemberSignature Language="C#" Value="public bool IsListening { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsListening" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListener.IsListening" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der <see cref="T:System.Net.HttpListener" /> gestartet wurde.</summary>
+        <value>
+          <see langword="true" />, wenn der <see cref="T:System.Net.HttpListener" /> gestartet wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Starten einer <xref:System.Net.HttpListener>, rufen Sie die <xref:System.Net.HttpListener.Start%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, mit dieser Eigenschaft lauschenden Zustand einer Instanz zu bestimmen.  
+  
+ [!code-csharp[Net_Listener_Basic#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupported">
+      <MemberSignature Language="C#" Value="public static bool IsSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsSupported" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListener.IsSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob <see cref="T:System.Net.HttpListener" /> mit dem aktuellen Betriebssystem verwendet werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn <see cref="T:System.Net.HttpListener" /> unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist nur auf Computern unter den Betriebssystemen Windows XP SP2 oder Windows Server 2003 verfügbar.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Net.HttpListener.IsSupported%2A> Eigenschaft, um zu erkennen, ob ein <xref:System.Net.HttpListener> Objekt mit dem aktuellen Betriebssystem verwendet werden kann.  
+  
+ [!code-csharp[Net_Listener_Basic#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefixes">
+      <MemberSignature Language="C#" Value="public System.Net.HttpListenerPrefixCollection Prefixes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.HttpListenerPrefixCollection Prefixes" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListener.Prefixes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpListenerPrefixCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die von diesem <see cref="T:System.Net.HttpListener" />-Objekt behandelten URI-Präfixe (Uniform Resource Identifier) ab.</summary>
+        <value>Eine <see cref="T:System.Net.HttpListenerPrefixCollection" /> mit den URI-Präfixen, für deren Behandlung dieses <see cref="T:System.Net.HttpListener" />-Objekt konfiguriert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Präfixe sind in kanonische Form. Eine ausführliche Beschreibung der Präfixe, finden Sie unter der <xref:System.Net.HttpListener> -Klassenübersicht.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Net.HttpListener.Prefixes%2A> Eigenschaft zum Abrufen und Drucken die URI-Präfixe, die verarbeitet werden.  
+  
+ [!code-csharp[Net_Listener_Basic#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt wurde geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Realm">
+      <MemberSignature Language="C#" Value="public string Realm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Realm" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListener.Realm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bereich oder die Ressourcenpartition ab, der bzw. die diesem <see cref="T:System.Net.HttpListener" />-Objekt zugeordnet ist, oder legt den Bereich bzw. die Partition fest.</summary>
+        <value>Ein <see cref="T:System.String" />-Wert, der den Namen des dem <see cref="T:System.Net.HttpListener" />-Objekt zugeordneten Bereichs enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Server verwenden Bereiche zum Partitionieren geschützter Ressourcen; Jede Partition kann eine eigene Authentifizierung Authentifizierungsschema und/oder Autorisierung der Datenbank verfügen. Bereiche werden nur für die Standard- und Digestauthentifizierung verwendet. Nach der erfolgreichen Authentifizierung eines Clients ist die Authentifizierung für alle Ressourcen in einem bestimmten Bereich gültig. Eine ausführliche Beschreibung der Bereiche finden Sie unter RFC 2617 unter [http://www.ietf.org](http://www.ietf.org).  
+  
+ Eine Instanz von <xref:System.Net.HttpListener> verfügt über nur einen zugeordneten Bereich.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Net.HttpListener.Realm%2A> Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#10](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt wurde geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListener.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht das Empfangen eingehender Anforderungen durch diese Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode muss aufgerufen werden, vor dem Aufrufen der <xref:System.Net.HttpListener.GetContext%2A> oder <xref:System.Net.HttpListener.BeginGetContext%2A> Methode.  
+  
+ Nachdem Sie gestartet haben eine <xref:System.Net.HttpListener> -Objekt können Sie die <xref:System.Net.HttpListener.Stop%2A> Methode zu beenden.  
+  
+> [!NOTE]
+>  Wenn Https von diesem Listenerinstanz verwendet wird, müssen Sie installieren, und wählen Sie ein Serverzertifikat. Andernfalls ein <xref:System.Net.HttpWebRequest> dieses <xref:System.Net.HttpListener> schlagen mit einem unerwarteten Schließen der Verbindung. Sie können Serverzertifikate und andere Listeneroptionen mithilfe von HttpCfg.exe konfigurieren. Finden Sie unter [http://msdn.microsoft.com/library/default.asp?url=/library/http/http/httpcfg_exe.asp](http://msdn.microsoft.com/library/default.asp?url=/library/http/http/httpcfg_exe.asp) Weitere Details.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Net.HttpListener.Start%2A> Methode mit der Verarbeitung von eingehender Anforderungen beginnen.  
+  
+ [!code-csharp[Net_Listener_Basic#12](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.HttpListenerException">Fehler bei der ein Win32-Funktionsaufruf. Überprüfen Sie die <see cref="P:System.Net.HttpListenerException.ErrorCode" />-Eigenschaft der Ausnahme, um die Ursache der Ausnahme zu bestimmen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+        <block subset="none" type="usage">
+          <para>Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [Netzwerkablaufverfolgung in .NET Framework](~/docs/framework/network-programming/network-tracing.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListener.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass diese Instanz keine eingehenden Anforderungen mehr empfängt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Instanz bereits beendet wurde, hat das Aufrufen dieser Methode keine Auswirkung.  
+  
+ Nachdem Sie angehalten haben eine <xref:System.Net.HttpListener> -Objekt können Sie die <xref:System.Net.HttpListener.Start%2A> Methode, um ihn neu zu starten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Net.HttpListener.Stop%2A> Methode zum Beenden der Verarbeitung von eingehenden Anforderungen.  
+  
+ [!code-csharp[Net_Listener_Basic#12](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt wurde geschlossen.</exception>
+        <block subset="none" type="usage">
+          <para>Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [Netzwerkablaufverfolgung in .NET Framework](~/docs/framework/network-programming/network-tracing.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListener.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die für dieses <see cref="T:System.Net.HttpListener" />-Objekt reservierten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungen sollten verwenden die <xref:System.Net.HttpListener.Close%2A> Methode statt dieser Methode aufzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutManager">
+      <MemberSignature Language="C#" Value="public System.Net.HttpListenerTimeoutManager TimeoutManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.HttpListenerTimeoutManager TimeoutManager" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListener.TimeoutManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpListenerTimeoutManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Timeout-Manager für diese <see cref="T:System.Net.HttpListener" /> Instanz .</summary>
+        <value>Gibt <see cref="T:System.Net.HttpListenerTimeoutManager" />zurück.  
+  
+ Der Timeout-Manager für diese <see cref="T:System.Net.HttpListener" /> Instanz .</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Timeout-Manager definiert den Timeout Verbindungslimits dafür <xref:System.Net.HttpListener> Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeConnectionNtlmAuthentication">
+      <MemberSignature Language="C#" Value="public bool UnsafeConnectionNtlmAuthentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnsafeConnectionNtlmAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListener.UnsafeConnectionNtlmAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Support for NTLM needs some loving.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Boolean" />-Wert ab, der steuert, ob bei Verwendung von NTLM zusätzliche Anforderungen, die dieselbe TCP (Transmission Control Protocol)-Verbindung verwenden, authentifiziert werden müssen, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="T:System.Security.Principal.IIdentity" /> der ersten Anforderung für nachfolgende Anforderungen über dieselbe Verbindung verwendet wird, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft festgelegt wird, um `true` und die erste Anforderung über eine bestimmte TCP-Verbindung wird mithilfe von NTLM authentifiziert, nachfolgende Anforderungen über dieselbe TCP-Verbindung werden unter Verwendung der Authentifizierungsinformationen verarbeitet (<xref:System.Security.Principal.IIdentity>) des ursprünglichen Anforderung.  
+  
+ Diese Eigenschaft hat keine Auswirkungen, wenn das Authentifizierungsprotokoll nicht NTLM ist. Wenn das Authentifizierungsprotokoll aushandeln angegeben wird, wirkt sich diese Eigenschaft nur, wenn NTLM das tatsächliche Protokoll für die Authentifizierung verwendet wird.  
+  
+> [!NOTE]
+>  Beim Festlegen dieser Eigenschaft auf `true` wird die Leistung erhöht, da die <xref:System.Net.HttpListener> nicht senden zusätzliche NTLM authentifizierungsaufforderungen verfügt, besteht ein Sicherheitsrisiko in alle Anforderungen Authentifizierungsinformationen bereitstellen. Sie müssen bestimmen, ob die Erhöhung der Leistung dieses Risiko wert ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#14](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#14)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt wurde geschlossen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

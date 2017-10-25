@@ -1,0 +1,195 @@
+<Type Name="SelectionGlyph" FullName="System.Workflow.ComponentModel.Design.SelectionGlyph">
+  <TypeSignature Language="C#" Value="public abstract class SelectionGlyph : System.Workflow.ComponentModel.Design.DesignerGlyph" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SelectionGlyph extends System.Workflow.ComponentModel.Design.DesignerGlyph" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.SelectionGlyph" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Design.DesignerGlyph</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Methoden und Eigenschaften für alle Symbolklassen bereit, die in einem <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> angezeigt werden, wenn er auf der Workflowentwurfsoberfläche ausgewählt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Einige der auf einem Aktivitätsdesigner angezeigten Symbole können vom Benutzer ausgewählt werden, andere hingegen nicht. Wählt ein Benutzer ein auswählbares Symbol aus, wird die Darstellung des Symbols auf der Aktivitätsentwurfsoberfläche geändert. Bei der <xref:System.Workflow.ComponentModel.Design.SelectionGlyph>-Klasse handelt es sich um die Basisklasse für alle Symbolklassen, deren Darstellung geändert wird, wenn sie ein Benutzer auf der Aktivitätsentwurfsoberfläche auswählt.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Wenn Sie von <see cref="T:System.Workflow.ComponentModel.Design.SelectionGlyph" /> erben, müssen Sie folgenden Member überschreiben: <see cref="P:System.Workflow.ComponentModel.Design.SelectionGlyph.IsPrimarySelection" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SelectionGlyph ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SelectionGlyph.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert beim Implementieren in einer abgeleiteten Klasse eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.SelectionGlyph" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBounds">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Rectangle GetBounds (System.Workflow.ComponentModel.Design.ActivityDesigner designer, bool activated);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Rectangle GetBounds(class System.Workflow.ComponentModel.Design.ActivityDesigner designer, bool activated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SelectionGlyph.GetBounds(System.Workflow.ComponentModel.Design.ActivityDesigner,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+        <Parameter Name="activated" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="designer">Der <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />, dem das ausgewählte Symbol zugeordnet ist.</param>
+        <param name="activated">
+          <see langword="true" /> gibt an, dass das ausgewählte Symbol auf der Aktivitätsdesigneroberfläche angezeigt wird, andernfalls <see langword="false" />.</param>
+        <summary>Gibt die Begrenzung für das ausgewählte Symbol auf dem angegebenen <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> zurück.</summary>
+        <returns><see cref="T:System.Drawing.Rectangle" />, das die Begrenzung für das Symbol darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.SelectionGlyph.GetBounds%2A> gibt ein Rechteck zurück, das eineinhalb mal so groß ist wie die <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.Bounds%2A> von `designer`, es sei denn, in einer abgeleiteten Klasse fand eine Überschreibung statt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGrabHandles">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Rectangle[] GetGrabHandles (System.Workflow.ComponentModel.Design.ActivityDesigner designer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Drawing.Rectangle[] GetGrabHandles(class System.Workflow.ComponentModel.Design.ActivityDesigner designer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SelectionGlyph.GetGrabHandles(System.Workflow.ComponentModel.Design.ActivityDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="designer">Der <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />, dem das ausgewählte Symbol zugeordnet ist.</param>
+        <summary>Gibt ein Array von Rechtecken zurück, die die Ziehpunkte des ausgewählten Symbols darstellen.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Rectangle" />-Array der Ziehpunkte, die auf dem ausgewählten Symbol angezeigt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Ziehpunkten handelt es sich um die kleinen Felder an den Kanten eines ausgewählten Symbols, mit deren Hilfe ein Benutzer das Symbol verschieben oder die Größe des Symbols ändern kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrimarySelection">
+      <MemberSignature Language="C#" Value="public abstract bool IsPrimarySelection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrimarySelection" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SelectionGlyph.IsPrimarySelection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft bei Überschreibung in einer abgeleiteten Klasse einen Wert ab, der angibt, ob das ausgewählte Symbol das oberste aller ausgewählten Symbole auf der Entwurfsoberfläche ist.</summary>
+        <value>
+          <see langword="true" />, wenn das ausgewählte Symbol das oberste ausgewählte Symbol auf dem Aktivitätsdesigner ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Drawing.Graphics graphics, bool activated, System.Workflow.ComponentModel.Design.AmbientTheme ambientTheme, System.Workflow.ComponentModel.Design.ActivityDesigner designer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Drawing.Graphics graphics, bool activated, class System.Workflow.ComponentModel.Design.AmbientTheme ambientTheme, class System.Workflow.ComponentModel.Design.ActivityDesigner designer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SelectionGlyph.OnPaint(System.Drawing.Graphics,System.Boolean,System.Workflow.ComponentModel.Design.AmbientTheme,System.Workflow.ComponentModel.Design.ActivityDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="activated" Type="System.Boolean" />
+        <Parameter Name="ambientTheme" Type="System.Workflow.ComponentModel.Design.AmbientTheme" />
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="graphics"><see cref="T:System.Drawing.Graphics" /> zum Ausführen von Füll- und Zeichnungsaufgaben.</param>
+        <param name="activated">
+          <see langword="true" /> gibt an, dass das Symbol auf der Entwurfsoberfläche angezeigt wird, andernfalls <see langword="false" />.</param>
+        <param name="ambientTheme"><see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> für den Zugriff auf Ambient-Eigenschaftseinstellungen.</param>
+        <param name="designer">Der <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />, von dem Informationen zu Benutzeraktionen abgerufen werden.</param>
+        <summary>Führt alle erforderlichen Aufgaben aus, um das Symbol auf der Aktivitätsdesigneroberfläche zu rendern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.SelectionGlyph.OnPaint%2A> zeichnet alle Elemente des vom Benutzer ausgewählten Symbols, einschließlich der Ziehpunkte des Symbols.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public override int Priority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SelectionGlyph.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ansichtspriorität des Symbols auf dem Aktivitätsdesigner ab.</summary>
+        <value>Eine ganze Zahl, die die Ansichtspriorität des Symbols auf dem Aktivitätsdesigner darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die möglichen Prioritätseinstellungen werden anhand folgender <xref:System.Workflow.ComponentModel.Design.DesignerGlyph>-Felder definiert:  
+  
+ <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.HighestPriority>, <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.LowestPriority> und <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.NormalPriority>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

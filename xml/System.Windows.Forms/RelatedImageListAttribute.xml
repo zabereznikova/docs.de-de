@@ -1,0 +1,81 @@
+<Type Name="RelatedImageListAttribute" FullName="System.Windows.Forms.RelatedImageListAttribute">
+  <TypeSignature Language="C#" Value="public sealed class RelatedImageListAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RelatedImageListAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.RelatedImageListAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, welche <see cref="T:System.Windows.Forms.ImageList" /> eine Eigenschaft verknüpft ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RelatedImageListAttribute (string relatedImageList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string relatedImageList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RelatedImageListAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="relatedImageList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relatedImageList">Der Name des der <see cref="T:System.Windows.Forms.ImageList" /> Eigenschaft bezieht sich auf.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.RelatedImageListAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `relatedImageList` -Parameter auf eine Eigenschaft des aktuellen Objekts oder eine Eigenschaft einer Eigenschaft des aktuellen Objekts verweisen kann. Angenommen, Sie haben eine <xref:System.Windows.Forms.ListViewItem> -Objekt mit einer <xref:System.Windows.Forms.ListViewItem.ListView%2A> Eigenschaftensatz zu einer mit <xref:System.Windows.Forms.ListView> Objekt und die mit <xref:System.Windows.Forms.ListView> Objekt verfügt über eine <xref:System.Windows.Forms.ListView.SmallImageList%2A> -Eigenschaft, übergeben Sie `"ListView.SmallImageList"` als die `relatedImageList` Wert .  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedImageList">
+      <MemberSignature Language="C#" Value="public string RelatedImageList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelatedImageList" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RelatedImageListAttribute.RelatedImageList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der zugehörigen ab<see cref="T:System.Windows.Forms.ImageList" /></summary>
+        <value>Der Name der zugehörigen<see cref="T:System.Windows.Forms.ImageList" /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.RelatedImageListAttribute.RelatedImageList%2A> Eigenschaft kann auf eine Eigenschaft des aktuellen Objekts oder eine Eigenschaft einer Eigenschaft des aktuellen Objekts verweisen. Angenommen, Sie haben eine <xref:System.Windows.Forms.ListViewItem> -Objekt mit eine <xref:System.Windows.Forms.ListViewItem.ListView%2A> Eigenschaftensatz zu einer mit <xref:System.Windows.Forms.ListView> Objekt und die mit <xref:System.Windows.Forms.ListView> Objekt verfügt über eine <xref:System.Windows.Forms.ListView.SmallImageList%2A> -Eigenschaft, die <xref:System.Windows.Forms.RelatedImageListAttribute.RelatedImageList%2A> -Eigenschaftensatz würde auf `"ListView.SmallImageList"`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

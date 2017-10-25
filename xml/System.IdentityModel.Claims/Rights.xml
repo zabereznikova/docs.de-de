@@ -1,0 +1,73 @@
+<Type Name="Rights" FullName="System.IdentityModel.Claims.Rights">
+  <TypeSignature Language="C#" Value="public static class Rights" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Rights extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Claims.Rights" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die vordefinierten Typen von Rechten, die einem <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt zugeordnet werden können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public static string Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Identity" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Rights.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die angibt, dass das Recht eine Identität darstellt.</summary>
+        <value>Das Recht, das eine Identität darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolge, die von der <xref:System.IdentityModel.Claims.Rights.Identity%2A>-Eigenschaft zurückgegeben wird, lautet http://schemas.xmlsoap.org/ws/2005/05/identity/right/Identity.  
+  
+ Im Allgemeinen weist ein typischer <xref:System.IdentityModel.Claims.ClaimSet> einen Anspruch mit dem <xref:System.IdentityModel.Claims.Rights.Identity%2A>-Recht auf. Dieser Anspruch stellt die Identität vom <xref:System.IdentityModel.Claims.ClaimSet> dar. Zum Beispiel weist ein <xref:System.IdentityModel.Claims.WindowsClaimSet> einen SID-Anspruch auf, der die SID des Benutzers darstellt. Entsprechend hat <xref:System.IdentityModel.Claims.X509CertificateClaimSet> einen <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>-Anspruch, der die Identität darstellt, die einem X.509-Zertifikat zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PossessProperty">
+      <MemberSignature Language="C#" Value="public static string PossessProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PossessProperty" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Rights.PossessProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die angibt, dass das Recht eine Eigenschaft darstellt, die die einem Anspruch zugeordnete Entität besitzt.</summary>
+        <value>Das Recht, das eine Eigenschaft darstellt, die die einem <see cref="T:System.IdentityModel.Claims.Claim" />-Objekt zugeordnete Entität besitzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolge, die von der <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>-Eigenschaft zurückgegeben wird, lautet http://schemas.xmlsoap.org/ws/2005/05/identity/right/PossessProperty.  
+  
+ Ein Anspruch des Typs <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> mit dem Recht <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> über den Wert `Martin` gibt an, dass die einem solchen Anspruch zugeordnete Entität eine `Name`-Eigenschaft mit dem Wert `Martin` besitzt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

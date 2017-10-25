@@ -1,0 +1,240 @@
+<Type Name="PanelContainerDesigner" FullName="System.Web.UI.Design.WebControls.PanelContainerDesigner">
+  <TypeSignature Language="C#" Value="public class PanelContainerDesigner : System.Web.UI.Design.ContainerControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PanelContainerDesigner extends System.Web.UI.Design.ContainerControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.PanelContainerDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ContainerControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.WebControls.Panel" />-Steuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Panel> Steuerelement wird als Container für andere Steuerelemente verwendet, insbesondere, wenn Sie Steuerelemente programmgesteuert generiert werden.  
+  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht Markup-Quellcode an, die die zugeordnete beschreibt <xref:System.Web.UI.WebControls.Panel> Steuerelement wird analysiert, und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet. Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> -Klasse bietet zur Entwurfszeit Unterstützung für <xref:System.Web.UI.WebControls.Panel> Steuerelemente in einem visuellen Designer.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameCaption%2A> -Eigenschaft ruft die Beschriftung, die auf dem zugeordneten <xref:System.Web.UI.WebControls.Panel> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameStyle%2A> -Eigenschaft ruft die Stile des zugeordneten Steuerelements ab.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.UsePreviewControl%2A> -Eigenschaft gibt immer `true`, gibt an, dass der Designer eine temporäre Kopie des zugeordneten erstellt <xref:System.Web.UI.WebControls.Panel> Markup zur Entwurfszeit zu generieren.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.Initialize%2A> Methode bereitet den Designer zum Anzeigen, bearbeiten und Entwerfen des zugeordneten <xref:System.Web.UI.WebControls.Panel> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.AddDesignTimeCssAttributes%2A> -Methode Auflistungselemente in zeichenfolgendarstellungen der verschiedenen Formatattribute des zugeordneten Steuerelements fest.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erweitern der <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> so ändern Sie das Aussehen und Verhalten von Steuerelementen, die von der abgeleiteten Klasse die <xref:System.Web.UI.WebControls.Panel> -Steuerelements zur Entwurfszeit.  
+  
+ Im Beispiel leitet der `MyPanelContainer` -Klasse aus den <xref:System.Web.UI.WebControls.Panel> Steuerelement. Im Beispiel wird außerdem abgeleitet der `MyPanelContainerDesigner` -Klasse aus der <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> Klasse und wendet eine <xref:System.ComponentModel.DesignerAttribute> -Attribut für die `MyPanelContainerDesigner` auf die `MyPanelContainer` Klasse.  
+  
+ Die `MyPanelContainerDesigner` überschreibt die folgenden <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> Elemente:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameStyle%2A> Eigenschaft definieren eine zur Entwurfszeit Rahmenart für die `MyPanelContainer` Steuerelement.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameCaption%2A> -Eigenschaft geben Sie eine standardbeschriftung für die `MyPanelContainer` zu steuern, wenn keine definiert wurde.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.Initialize%2A> -Methode auslöst ein <xref:System.ArgumentException> Ausnahme, wenn das zugeordnete Steuerelement nicht ist ein `MyPanelContainer` Objekt.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.PanelContainerDesigner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/CS/PanelContainerDesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.WebControls.PanelContainerDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/VB/PanelContainerDesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PanelContainerDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.PanelContainerDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.PanelContainerDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.WebControls.Panel> Steuerelement oder eine Kopie des Steuerelements auf das visuelle Designeroberfläche.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDesignTimeCssAttributes">
+      <MemberSignature Language="C#" Value="protected override void AddDesignTimeCssAttributes (System.Collections.IDictionary styleAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddDesignTimeCssAttributes(class System.Collections.IDictionary styleAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.PanelContainerDesigner.AddDesignTimeCssAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="styleAttributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="styleAttributes">Eine Auflistung von formateigenschaftenschlüsseln Attribute implementieren die <see cref="T:System.Collections.IDictionary" />.</param>
+        <summary>Fügt zeichenfolgenentsprechungen von Formatattributen auf eine Sammlung aus, um beim Rendern des Steuerelements zur Entwurfszeit verwendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.AddDesignTimeCssAttributes%2A> Methodenaufrufe der <xref:System.Web.UI.Design.ContainerControlDesigner.AddDesignTimeCssAttributes%2A?displayProperty=nameWithType> Basis-Methode, die zeichenfolgenentsprechungen von Formatattributen, fügt die `styleAttributes` Auflistung. Diese Attribute werden basierend auf die Stileigenschaften des zugeordneten <xref:System.Web.UI.WebControls.Panel> Steuerelement.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.AddDesignTimeCssAttributes%2A> legt die Richtung des `styleAttribute` in einen Code, der angibt, links-nach-rechts oder rechts-nach-links, basierend auf den Wert der <xref:System.Web.UI.WebControls.Panel.Direction%2A> Eigenschaft des zugeordneten Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameCaption">
+      <MemberSignature Language="C#" Value="public override string FrameCaption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameCaption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameCaption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschriftung, die auf dem zugeordneten <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die die Beschriftung Bereich enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameCaption%2A> -Eigenschaft gibt die <xref:System.Web.UI.WebControls.Panel.GroupingText%2A> Eigenschaft der zugeordneten <xref:System.Web.UI.WebControls.Panel> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameCaption%2A> Eigenschaft in einer Klasse, die vom geerbt wird die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> Klasse, um die Darstellung eines Steuerelements ändern, die abgeleitet ist die <xref:System.Web.UI.WebControls.Panel> Klasse zur Entwurfszeit. Im Beispiel stellt eine standardbeschriftung für das zugeordnete Steuerelement an, wenn keine definiert wurde.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.PanelContainerDesigner#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/CS/PanelContainerDesigner.cs#3)]
+ [!code-vb[System.Web.UI.Design.WebControls.PanelContainerDesigner#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/VB/PanelContainerDesigner.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameStyle">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Style FrameStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style FrameStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Formatvorlagen der zugeordneten <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.Style" /> Objekt, das die zur Entwurfszeit Formate für die zugeordnete enthält <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameCaption%2A> Eigenschaft ist eine leere Zeichenfolge (""), wird die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameStyle%2A> Eigenschaft gibt ein leeres <xref:System.Web.UI.WebControls.Style> Objekt. Andernfalls die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameStyle%2A> Eigenschaft gibt den Standardwert zurück <xref:System.Web.UI.WebControls.Style> -Objekt, das vom generiert wird die <xref:System.Web.UI.Design.ContainerControlDesigner.FrameStyle%2A?displayProperty=nameWithType> -Basiseigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameStyle%2A> Eigenschaft in einer Klasse, die vom geerbt wird die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> Klasse, um die Darstellung eines Steuerelements ändern, die abgeleitet ist die <xref:System.Web.UI.WebControls.Panel> Klasse zur Entwurfszeit. Im Beispiel wird eine zur Entwurfszeit Rahmenart für das zugeordnete Steuerelement definiert.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.PanelContainerDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/CS/PanelContainerDesigner.cs#4)]
+ [!code-vb[System.Web.UI.Design.WebControls.PanelContainerDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/VB/PanelContainerDesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.PanelContainerDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein <see cref="T:System.Web.UI.WebControls.Panel" />, das eine <see cref="T:System.ComponentModel.IComponent" /> implementiert.</param>
+        <summary>Bereitet den Designer zum Anzeigen, Bearbeiten und Entwerfen des zugeordneten Steuerelements vor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der visuelle Designer Ruft die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.Initialize%2A> Methode, wenn es der Designer zum Rendern verwenden kann die <xref:System.Web.UI.WebControls.Panel> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.Initialize%2A> und ihre Basismethoden konfigurieren Eigenschaften und Ereignisse, die erforderlich, für den Vorgang des Designers sind einrichten.  
+  
+ Die `component` Parameter ist der <xref:System.Web.UI.WebControls.Panel> Steuerelement, das diesem Designer zugeordnet oder eine Kopie des der <xref:System.Web.UI.WebControls.Panel> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.Initialize%2A> Methode in einer Klasse, die vom geerbt wird die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> Klasse, um das Verhalten eines Steuerelements ändern, die abgeleitet ist die <xref:System.Web.UI.WebControls.Panel> Klasse zur Entwurfszeit. Löst das Beispiel ein <xref:System.ArgumentException> Ausnahme, wenn das zugeordnete Steuerelement nicht ist ein `MyPanelContainer` Objekt.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.PanelContainerDesigner#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/CS/PanelContainerDesigner.cs#5)]
+ [!code-vb[System.Web.UI.Design.WebControls.PanelContainerDesigner#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/VB/PanelContainerDesigner.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="component" />ist eine <see cref="T:System.Web.UI.WebControls.Panel" /> oder einer Klasse abgeleitet <see cref="T:System.Web.UI.WebControls.Panel" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.PanelContainerDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Designer das tatsächliche Steuerelement, das der Designer zum Generieren des Markups zur Entwurfszeit zugeordnet ist, anstatt eine temporäre Kopie verwenden soll.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da der <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.UsePreviewControl%2A> Eigenschaft ist immer `true`, verwendet der Designer eine <xref:System.Web.UI.WebControls.View> Steuerelement, das eine Kopie des zugeordneten enthält <xref:System.Web.UI.WebControls.Panel> Steuerelement, um das Markup zur Entwurfszeit zu generieren. Die <xref:System.Web.UI.WebControls.View> Steuerelement wirkt sich nicht auf die Persistenz der <xref:System.Web.UI.WebControls.Panel>.  
+  
+ Wenn die <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.UsePreviewControl%2A> Eigenschaft wurde überschrieben, um zurückzukehren `false`, mithilfe des Designers die zugeordnete <xref:System.Web.UI.WebControls.Panel> zum Generieren der Markup zur Entwurfszeit und zur Entwurfszeit Änderungen an das Steuerelement selbst bleiben erhalten, um Markupquellcode für die Seite.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können außer Kraft setzen die <see cref="P:System.Web.UI.Design.WebControls.PanelContainerDesigner.UsePreviewControl" /> -Eigenschaft zum Zurückgeben von <see langword="false" /> oder um zu bestimmen, deren Wert basierend auf, ob das Steuerelement mit einem auf Klassenebene gekennzeichnet ist <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> Attribut. Wenn die <see cref="P:System.Web.UI.Design.WebControls.PanelContainerDesigner.UsePreviewControl" /> nicht überschrieben wird, die <see cref="T:System.Web.UI.WebControls.Panel" /> -Steuerelement ignoriert die <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> Attribut.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

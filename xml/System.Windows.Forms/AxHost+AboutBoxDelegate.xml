@@ -1,0 +1,36 @@
+<Type Name="AxHost+AboutBoxDelegate" FullName="System.Windows.Forms.AxHost+AboutBoxDelegate">
+  <TypeSignature Language="C#" Value="protected delegate void AxHost.AboutBoxDelegate();" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi sealed AxHost/AboutBoxDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.AxHost.AboutBoxDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Stellt die Methode dar, die das Info-Dialogfeld eines ActiveX-Steuerelements anzeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.AxHost.AboutBoxDelegate> bietet Ihnen die Möglichkeit, die benachrichtigt werden, wenn das ActiveX-Steuerelement-Info-Dialogfeld angezeigt werden soll. Code, um die Delegatmethode hinzugefügt wird ausgeführt, bevor das Informationsfeld angezeigt wird.  
+  
+ Beim Erstellen einer <xref:System.Windows.Forms.AxHost.AboutBoxDelegate> -Delegaten bestimmen Sie die Methode, die Anzeige eines ActiveX-Steuerelements zum Dialogfeld behandelt wird, falls vorhanden. Um die Methode den Handler zuzuordnen, fügen Sie eine Instanz des Delegaten an die Methode ein. Der Handler wird aufgerufen, wenn die Methode aufgerufen wird, es sei denn, Sie den Delegaten entfernen. Weitere Informationen über Delegaten finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird den Konstruktor und die <xref:System.Windows.Forms.AxHost.SetAboutBoxDelegate%2A> und <xref:System.Windows.Forms.AxHost.AttachInterfaces%2A> Methoden eine <xref:System.Windows.Forms.AxHost> abgeleitete Klasse, die das maskierte bearbeiten ActiveX-Steuerelement von Microsoft umschließt. Dieser Code geht davon aus, Sie den generierten Quellcode erstellt haben, indem AxImp.exe ausgeführt, auf die MSMask32.ocx-Datei mit der `/source` Switch zum Generieren von der Wrapperklasse bearbeitet werden. Dieser Code wird nur angezeigt, in der C#-Syntax als, d. h. der einzige Sprache Ausgabe von AxImp.exe.  
+  
+ [!code-csharp[AxHost_Wrap_MaskEdit#1](~/samples/snippets/csharp/VS_Snippets_Winforms/AxHost_Wrap_MaskEdit/CS/axmsmask.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

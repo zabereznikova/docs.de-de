@@ -1,0 +1,1369 @@
+<Type Name="QueryableDataSourceView" FullName="System.Web.UI.WebControls.QueryableDataSourceView">
+  <TypeSignature Language="C#" Value="public abstract class QueryableDataSourceView : System.Web.UI.DataSourceView, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit QueryableDataSourceView extends System.Web.UI.DataSourceView implements class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.QueryableDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Unterstützt die <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> -Steuerelement und stellt eine Schnittstelle für datengebundene Steuerelemente zum Ausführen von LINQ-Datenvorgängen bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected QueryableDataSourceView (System.Web.UI.DataSourceControl owner, string viewName, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.DataSourceControl owner, string viewName, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.#ctor(System.Web.UI.DataSourceControl,System.String,System.Web.HttpContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.DataSourceControl" />
+        <Parameter Name="viewName" Type="System.String" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die Datenquelle zu steuern, die die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> Objekt zugeordnet ist.</param>
+        <param name="viewName">Der eindeutige Name für die Datenquellensicht im Bereich des Datenquellen-Steuerelements, die er besitzt.</param>
+        <param name="context">Die aktuelle <see cref="T:System.Web.HttpContext" />-Instanz.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoGenerateOrderByClause">
+      <MemberSignature Language="C#" Value="public bool AutoGenerateOrderByClause { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoGenerateOrderByClause" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.AutoGenerateOrderByClause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> -Objekt, das das aktuelle zugeordnet ist <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> -Steuerelements erstellt einen dynamischen ein <see langword="OrderBy" /> Klausel.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> Objekt dynamisch erstellt ein <see langword="OrderBy" /> Klausel ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoGenerateWhereClause">
+      <MemberSignature Language="C#" Value="public bool AutoGenerateWhereClause { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoGenerateWhereClause" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.AutoGenerateWhereClause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> -Objekt, das das aktuelle zugeordnet ist <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> -Steuerelements erstellt einen dynamischen <see langword="Where" /> Klausel.</summary>
+        <value>
+          <see langword="true" />Wenn die dynamische Erstellung von der <see langword="Where" /> -Klausel ist, unterstützt wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoPage">
+      <MemberSignature Language="C#" Value="public virtual bool AutoPage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.AutoPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> -Objekt, das das aktuelle zugeordnet ist <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement standardmäßig Paging unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn Paging unterstützt wird. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSort">
+      <MemberSignature Language="C#" Value="public virtual bool AutoSort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSort" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.AutoSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> -Objekt, das mit dem aktuellen anfallen <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement unterstützt standardmäßig die Sortierung.</summary>
+        <value>
+          <see langword="true" />Wenn Sortierung unterstützt wird. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildDeleteObject">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.QueryableDataSourceEditData BuildDeleteObject (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues, System.Collections.Generic.IDictionary&lt;string,Exception&gt; validationErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Web.UI.WebControls.QueryableDataSourceEditData BuildDeleteObject(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues, class System.Collections.Generic.IDictionary`2&lt;string, class System.Exception&gt; validationErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.BuildDeleteObject(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.Generic.IDictionary{System.String,System.Exception})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.QueryableDataSourceEditData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+        <Parameter Name="validationErrors" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Exception&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Der Schlüssel, der die zu löschenden Zeilen werden soll.</param>
+        <param name="oldValues">Die Zeilenwerte um auszuwerten, um Daten zu erkennen.</param>
+        <param name="validationErrors">Die Liste der Fehler bei der Konvertierung, die in der Datenquelle erstellt werden, wenn ein CRUD-Vorgang fehlschlägt.</param>
+        <summary>Erstellt die Objekte, die für den Löschvorgang verwendet.</summary>
+        <returns>Die Objekte, die für den Löschvorgang zu verwenden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildInsertObject">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.QueryableDataSourceEditData BuildInsertObject (System.Collections.IDictionary values, System.Collections.Generic.IDictionary&lt;string,Exception&gt; validationErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Web.UI.WebControls.QueryableDataSourceEditData BuildInsertObject(class System.Collections.IDictionary values, class System.Collections.Generic.IDictionary`2&lt;string, class System.Exception&gt; validationErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.BuildInsertObject(System.Collections.IDictionary,System.Collections.Generic.IDictionary{System.String,System.Exception})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.QueryableDataSourceEditData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="validationErrors" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Exception&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="values">Die Werte der Zeilen in der Datenquelle eingefügt werden soll.</param>
+        <param name="validationErrors">Die Liste der Fehler bei der Konvertierung, die vom System erstellt werden, wenn ein CRUD-Vorgang fehlschlägt.</param>
+        <summary>Erstellt die Objekte, für den Einfügevorgang verwendet werden, indem die einzufügenden Werte und die anzuzeigende Fehlermeldung, wenn der Vorgang fehlschlägt.</summary>
+        <returns>Die Objekte, die für den Einfügevorgang verwenden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildQuery">
+      <MemberSignature Language="C#" Value="protected virtual System.Linq.IQueryable BuildQuery (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Linq.IQueryable BuildQuery(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.BuildQuery(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Objekte, die verwendet werden, um Vorgänge für die Daten jenseits der grundlegenden Datenabruf anzufordern.</param>
+        <summary>Erstellt einen Select-Abfrage-Ausdruck mithilfe der Option Argumente der Datenquelle an.</summary>
+        <returns>Eine Liste von Datenobjekten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildUpdateObjects">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.QueryableDataSourceEditData BuildUpdateObjects (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues, System.Collections.Generic.IDictionary&lt;string,Exception&gt; validationErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Web.UI.WebControls.QueryableDataSourceEditData BuildUpdateObjects(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues, class System.Collections.Generic.IDictionary`2&lt;string, class System.Exception&gt; validationErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.BuildUpdateObjects(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.Generic.IDictionary{System.String,System.Exception})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.QueryableDataSourceEditData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+        <Parameter Name="validationErrors" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Exception&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Die Schlüssel, der die zu aktualisierenden Zeilengruppe.</param>
+        <param name="values">Die Werte der Zeilen, die in der Datenquelle zu aktualisieren.</param>
+        <param name="oldValues">Die Zeilenwerte um auszuwerten, um Daten zu erkennen.</param>
+        <param name="validationErrors">Die Liste der Fehler bei der Konvertierung, die vom System erstellt werden, wenn ein CRUD-Vorgang fehlschlägt.</param>
+        <summary>Erstellt die Objekte mit den angegebenen Werten für den Updatevorgang zu verwenden.</summary>
+        <returns>Die Objekte, die für den Updatevorgang verwendet werden soll.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDelete">
+      <MemberSignature Language="C#" Value="public override bool CanDelete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.CanDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> -Objekt, das mit dem aktuellen anfallen <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement unterstützt delete-Operationen.</summary>
+        <value>
+          <see langword="true" />Wenn Delete-Vorgänge unterstützt werden. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanInsert">
+      <MemberSignature Language="C#" Value="public override bool CanInsert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.CanInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> -Objekt, das mit dem aktuellen anfallen <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Einfügevorgänge Steuerelement unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn Insert-Vorgänge unterstützt werden. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanPage">
+      <MemberSignature Language="C#" Value="public override bool CanPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.CanPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> -Objekt, das mit dem aktuellen anfallen <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement Paging unterstützt.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRetrieveTotalRowCount">
+      <MemberSignature Language="C#" Value="public override bool CanRetrieveTotalRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRetrieveTotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.CanRetrieveTotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> -Objekt, das mit dem aktuellen anfallen <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> -Steuerelement unterstützt das Abrufen der Gesamtanzahl der Datenzeilen und Abrufen der Daten.</summary>
+        <value>
+          <see langword="true" />Wenn das Objekt unterstützt das Abrufen der Gesamtanzahl der Datenzeilen; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSort">
+      <MemberSignature Language="C#" Value="public override bool CanSort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSort" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.CanSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.QueryableDataSource" />-Steuerelement zugeordnet ist, eine sortierte Ansicht der abgerufenen Daten unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn das Objekt eine sortierte Ansicht der abgerufenen Daten unterstützt. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUpdate">
+      <MemberSignature Language="C#" Value="public override bool CanUpdate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.CanUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> -Objekt, das das aktuelle zugeordnet ist <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement unterstützt Update-Vorgänge.</summary>
+        <value>
+          <see langword="true" />Wenn Update-Vorgänge unterstützt werden. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearOriginalValues">
+      <MemberSignature Language="C#" Value="protected void ClearOriginalValues ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ClearOriginalValues() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.ClearOriginalValues" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die ursprünglichen Werten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateQueryContext">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.QueryContext CreateQueryContext (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Web.UI.WebControls.QueryContext CreateQueryContext(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.CreateQueryContext(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.QueryContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Eine Auflistung von Objekten, die verwendet werden, um Vorgänge für die Daten jenseits der grundlegenden Datenabruf anzufordern.</param>
+        <summary>Erstellt eine Instanz eines Objekts Kontext Abfrage, die die Sammlungen ausgewerteten Parameter enthält.</summary>
+        <returns>Eine Instanz des Context-Objekts, das die ausgewerteten Parameters-Auflistungen enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public int Delete (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Delete(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.Delete(System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Der Schlüssel, der die zu löschenden Zeilen werden soll.</param>
+        <param name="oldValues">Die Zeilenwerte um auszuwerten, um Daten zu erkennen.</param>
+        <summary>Führt einen Löschvorgang an.</summary>
+        <returns>Die Anzahl der Zeilen, die aus der Datenquelle gelöscht wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteObject">
+      <MemberSignature Language="C#" Value="protected virtual int DeleteObject (object oldEntity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 DeleteObject(object oldEntity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.DeleteObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldEntity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oldEntity">Das Datenobjekt zu löschen.</param>
+        <summary>Löscht ein Objekt aus einer Tabelle an.</summary>
+        <returns>Die Anzahl der Zeilen, die aus dem Datenobjekt gelöscht wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ParameterCollection DeleteParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection DeleteParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.DeleteParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung mit den Parametern an, die während eines Delete-Vorgangs verwendet werden.</summary>
+        <value>Eine Auflistung, die Parameter enthält, mit denen, die <see cref="M:System.Web.UI.WebControls.QueryableDataSourceView.Delete(System.Collections.IDictionary,System.Collections.IDictionary)" /> Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityType">
+      <MemberSignature Language="C#" Value="protected abstract Type EntityType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EntityType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.EntityType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Datenobjekts für CRUD-Vorgänge verwenden.</summary>
+        <value>Eine Instanz des Typs des Datenobjekts für CRUD-Vorgänge verwenden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSelected">
+      <MemberSignature Language="C#" Value="protected static readonly object EventSelected;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly object EventSelected" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.QueryableDataSourceView.EventSelected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob das Ereignis, das Abrufen von Daten zum Abschluss des Vorgangs aufgetreten ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSelecting">
+      <MemberSignature Language="C#" Value="protected static readonly object EventSelecting;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly object EventSelecting" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.QueryableDataSourceView.EventSelecting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob das Ereignis, das vor einem Datenabruf Vorgang aufgetreten ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteDelete">
+      <MemberSignature Language="C#" Value="protected override int ExecuteDelete (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteDelete(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Der Schlüssel, der die zu löschenden Zeilen werden soll.</param>
+        <param name="oldValues">Die Zeilenwerte um auszuwerten, um Daten zu erkennen.</param>
+        <summary>Führt einen Löschvorgang Operation für die Elemente, die die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> Objekt darstellt, unter Verwendung der angegebenen Werte.</summary>
+        <returns>Die Anzahl der Objekte oder Zeilen, die aus der Datenquelle gelöscht wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteInsert">
+      <MemberSignature Language="C#" Value="protected override int ExecuteInsert (System.Collections.IDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteInsert(class System.Collections.IDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.ExecuteInsert(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="values">Die Werte der Zeilen in der Datenquelle eingefügt werden soll.</param>
+        <summary>Führt eine Insert-Vorgang für die Daten die Elemente an, die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> Objekt darstellt, mit dem angegebenen Wert.</summary>
+        <returns>Die Anzahl der Objekte oder Zeilen, die in der Datenquelle eingefügt wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutePaging">
+      <MemberSignature Language="C#" Value="protected System.Linq.IQueryable ExecutePaging (System.Linq.IQueryable source, System.Web.UI.WebControls.QueryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Linq.IQueryable ExecutePaging(class System.Linq.IQueryable source, class System.Web.UI.WebControls.QueryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.ExecutePaging(System.Linq.IQueryable,System.Web.UI.WebControls.QueryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+        <Parameter Name="context" Type="System.Web.UI.WebControls.QueryContext" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Datenquelle zu verwenden.</param>
+        <param name="context">Der Datenkontext zu verwenden.</param>
+        <summary>Führt Paging mithilfe der <see cref="T:System.Web.UI.WebControls.QueryContext" /> -Objekt aus der <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Objekt.</summary>
+        <returns>Die Anzahl der Seiten, die Daten in das Datenobjekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteQuery">
+      <MemberSignature Language="C#" Value="protected virtual System.Linq.IQueryable ExecuteQuery (System.Linq.IQueryable source, System.Web.UI.WebControls.QueryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Linq.IQueryable ExecuteQuery(class System.Linq.IQueryable source, class System.Web.UI.WebControls.QueryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.ExecuteQuery(System.Linq.IQueryable,System.Web.UI.WebControls.QueryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+        <Parameter Name="context" Type="System.Web.UI.WebControls.QueryContext" />
+      </Parameters>
+      <Docs>
+        <param name="source">Das Datenquellenobjekt zu verwenden.</param>
+        <param name="context">Der Datenkontext zu verwenden.</param>
+        <summary>Führt eine Abfrage, Sortier- oder Pagingvorgang für die <see cref="T:System.Linq.IQueryable`1" /> Objekt.</summary>
+        <returns>Das Datenobjekt, das das Ergebnis der Abfrage, der Sortierung und Paging enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteQueryExpressions">
+      <MemberSignature Language="C#" Value="protected System.Linq.IQueryable ExecuteQueryExpressions (System.Linq.IQueryable source, System.Web.UI.WebControls.QueryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Linq.IQueryable ExecuteQueryExpressions(class System.Linq.IQueryable source, class System.Web.UI.WebControls.QueryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.ExecuteQueryExpressions(System.Linq.IQueryable,System.Web.UI.WebControls.QueryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+        <Parameter Name="context" Type="System.Web.UI.WebControls.QueryContext" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Datenquelle zu verwenden.</param>
+        <param name="context">Der Datenkontext zu verwenden.</param>
+        <summary>Führt Abfrageausdrücke, indem ein <see cref="T:System.Linq.IQueryable" /> Objekt und die <see cref="T:System.Web.UI.WebControls.QueryContext" /> Objekt.</summary>
+        <returns>Die Datenquelle, die die Ergebnisse der Abfrageausdrücke enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteSelect">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerable ExecuteSelect (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Collections.IEnumerable ExecuteSelect(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Eine Auflistung von Objekten, die verwendet werden, um Vorgänge für die Daten jenseits der grundlegenden Datenabruf anzufordern.</param>
+        <summary>Führt einen Datenabruf aus.</summary>
+        <returns>Das Ergebnis des angeforderten Vorgangs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteSorting">
+      <MemberSignature Language="C#" Value="protected System.Linq.IQueryable ExecuteSorting (System.Linq.IQueryable source, System.Web.UI.WebControls.QueryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Linq.IQueryable ExecuteSorting(class System.Linq.IQueryable source, class System.Web.UI.WebControls.QueryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.ExecuteSorting(System.Linq.IQueryable,System.Web.UI.WebControls.QueryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+        <Parameter Name="context" Type="System.Web.UI.WebControls.QueryContext" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Datenquelle zu verwenden.</param>
+        <param name="context">Der Datenkontext zu verwenden.</param>
+        <summary>Führt einen Sortiervorgang an.</summary>
+        <returns>Das Objekt sortierte Daten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteUpdate">
+      <MemberSignature Language="C#" Value="protected override int ExecuteUpdate (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteUpdate(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Die Schlüssel, der die zu aktualisierenden Zeilengruppe.</param>
+        <param name="values">Die Werte der Zeilen, die aktualisiert werden soll.</param>
+        <param name="oldValues">Die Zeilenwerte um auszuwerten, um Daten zu erkennen.</param>
+        <summary>Führt einen Updatevorgang an.</summary>
+        <returns>Die Anzahl der Zeilen, die in der Datenquelle aktualisiert wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOriginalValues">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.IDictionary GetOriginalValues (System.Collections.IDictionary keys);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.IDictionary GetOriginalValues(class System.Collections.IDictionary keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.GetOriginalValues(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Die Schlüssel, der die zu aktualisierenden Zeilengruppe.</param>
+        <summary>Ruft die ursprünglichen Werte für den angegebenen Schlüsseln, die während der Select-Vorgang gespeichert wurden.</summary>
+        <returns>Die ursprünglichen Werte für den angegebenen Schlüsseln, die während der Select-Vorgang gespeichert wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSource">
+      <MemberSignature Language="C#" Value="protected abstract object GetSource (System.Web.UI.WebControls.QueryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetSource(class System.Web.UI.WebControls.QueryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.GetSource(System.Web.UI.WebControls.QueryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.UI.WebControls.QueryContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Datenkontext auf die Abfrage angewendet werden soll.</param>
+        <summary>Ruft die erste <see cref="T:System.Linq.IQueryable" /> -Objekts für die Datenquellensicht basierend auf den Abfragekontext.</summary>
+        <returns>Der ursprüngliche <see cref="T:System.Linq.IQueryable" /> Objekt für die Datenquellensicht an.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupBy">
+      <MemberSignature Language="C#" Value="public virtual string GroupBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupBy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.GroupBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen oder die Namen der Eigenschaften, die während der select-Vorgang zum Gruppieren von Daten verwendet.</summary>
+        <value>Ein Wert, der zum Erstellen des Group By-Ausdrucks verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupByParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ParameterCollection GroupByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection GroupByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.GroupByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Parametern, deren Werte werden zum Erstellen, der <see langword="GroupBy" /> -Klausel bei der select-Vorgang.</summary>
+        <value>Eine Auflistung von Parametern, die zum Erstellen der <see langword="GroupBy" /> Klausel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleValidationErrors">
+      <MemberSignature Language="C#" Value="protected abstract void HandleValidationErrors (System.Collections.Generic.IDictionary&lt;string,Exception&gt; errors, System.Web.UI.DataSourceOperation operation);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void HandleValidationErrors(class System.Collections.Generic.IDictionary`2&lt;string, class System.Exception&gt; errors, valuetype System.Web.UI.DataSourceOperation operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.HandleValidationErrors(System.Collections.Generic.IDictionary{System.String,System.Exception},System.Web.UI.DataSourceOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errors" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Exception&gt;" />
+        <Parameter Name="operation" Type="System.Web.UI.DataSourceOperation" />
+      </Parameters>
+      <Docs>
+        <param name="errors">Der Typ des feldspezifischen Ausnahmen, die während der CRUD-Vorgänge aufgetreten sind.</param>
+        <param name="operation">Der Datenvorgang, der die Ausnahme verursacht hat.</param>
+        <summary>Wird von Methoden, die CRUD-Vorgänge ausführen, wenn ein CRUD-Vorgang fehlschlägt in die Erstellung von Data-Objekt aufgerufen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public int Insert (System.Collections.IDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Insert(class System.Collections.IDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.Insert(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="values">Die Werte der Zeilen eingefügt werden soll.</param>
+        <summary>Führt eine asynchrone Insert-Vorgang für die Daten die Elemente an, die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> -Objekt darstellt.</summary>
+        <returns>Die Anzahl der Zeilen, die in der Datenquelle eingefügt wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertObject">
+      <MemberSignature Language="C#" Value="protected virtual int InsertObject (object newEntity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 InsertObject(object newEntity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.InsertObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newEntity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="newEntity">Das Datenobjekt, das zum Einfügen.</param>
+        <summary>Fügt ein Datenobjekte in einem <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> Objekt.</summary>
+        <returns>Die Anzahl der Objekte, die in der Datenquellensicht eingefügt wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ParameterCollection InsertParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection InsertParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.InsertParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Parametern, die während des Einfügevorgangs verwendet werden.</summary>
+        <value>Eine Auflistung mit den Parametern an, die während des Einfügevorgangs verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrackingViewState">
+      <MemberSignature Language="C#" Value="protected bool IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> Objekt Änderungen an seinem Ansichtszustand speichert.</summary>
+        <value>
+          <see langword="true" />Wenn die Datenquellensicht ist zum Speichern ihres Zustands markiert; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected virtual void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> steuern Sie den wiederherzustellenden Zustand.</param>
+        <summary>Stellt den zuvor gespeicherten Ansichtszustand für die Datenquellensicht an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQueryCreated">
+      <MemberSignature Language="C#" Value="protected virtual void OnQueryCreated (System.Web.UI.WebControls.QueryCreatedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnQueryCreated(class System.Web.UI.WebControls.QueryCreatedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.OnQueryCreated(System.Web.UI.WebControls.QueryCreatedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.QueryCreatedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.QueryableDataSourceView.QueryCreated" /> Ereignis nach der <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement erstellt hat ein <see cref="T:System.Linq.IQueryable" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQueryParametersChanged">
+      <MemberSignature Language="C#" Value="protected void OnQueryParametersChanged (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnQueryParametersChanged(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.OnQueryParametersChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Ruft die <see cref="M:System.Web.UI.WebControls.QueryableDataSourceView.RaiseViewChanged" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderBy">
+      <MemberSignature Language="C#" Value="public virtual string OrderBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OrderBy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.OrderBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen oder die Namen der Eigenschaften, die bei der select-Vorgang verwendet werden, um Daten zu sortieren.</summary>
+        <value>Ein Wert, der zum Erstellen der <see langword="OrderBy" /> Klausel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderByParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ParameterCollection OrderByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection OrderByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.OrderByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Parametern, die bei der select-Vorgang verwendet werden, um Daten zu sortieren.</summary>
+        <value>Die Parameter, die zum Erstellen der <see langword="OrderBy" /> Klausel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderGroupsBy">
+      <MemberSignature Language="C#" Value="public virtual string OrderGroupsBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OrderGroupsBy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.OrderGroupsBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Eigenschaften, die bei der select-Vorgang verwendet werden, um gruppierte Daten zu sortieren.</summary>
+        <value>Ein Wert, der zum Erstellen der <see langword="OrderGroupsBy" /> Klausel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderGroupsByParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ParameterCollection OrderGroupsByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection OrderGroupsByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.OrderGroupsByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Parametern, die zum Erstellen der <see langword="OrderGroupsBy" /> Klausel.</summary>
+        <value>Die Parameter, die zum Erstellen der <see langword="OrderGroupsBy" /> Klausel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryCreated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.QueryCreatedEventArgs&gt; QueryCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.QueryCreatedEventArgs&gt; QueryCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.QueryableDataSourceView.QueryCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.QueryCreatedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Abfrage erstellt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseViewChanged">
+      <MemberSignature Language="C#" Value="public void RaiseViewChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseViewChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.RaiseViewChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="M:System.Web.UI.DataSourceView.OnDataSourceViewChanged(System.EventArgs)" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected virtual object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert Änderungen am Ansichtszustand für die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> Objekt seit dem Zeitpunkt, der die Seite an den Server zurückgesendet wurde.</summary>
+        <returns>Das Objekt, das die Änderungen an der <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> Ansichtszustand des Steuerelements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectNew">
+      <MemberSignature Language="C#" Value="public virtual string SelectNew { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectNew" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.SelectNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, die Eigenschaften und die berechneten Werte, die in den abgerufenen Daten enthalten sind.</summary>
+        <value>Die Werte, die verwendet werden, um die Select-Befehl zu erstellen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectNewParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ParameterCollection SelectNewParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection SelectNewParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.SelectNewParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Parametern, die während eines Vorgangs Abrufen von Daten verwendet werden.</summary>
+        <value>Die Parameter, die verwendet werden, um die Select-Befehl zu erstellen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreOriginalValues">
+      <MemberSignature Language="C#" Value="protected virtual void StoreOriginalValues (System.Collections.IList results);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void StoreOriginalValues(class System.Collections.IList results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.StoreOriginalValues(System.Collections.IList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="results">Das Ergebnis der Vorgänge.</param>
+        <summary>Speichert die ursprünglichen Werte aus der <see langword="Select" /> Vorgang im Ansichtszustand des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie von dieser Klasse ableiten, können Sie überschreiben diese Methode, und rufen die <xref:System.Web.UI.WebControls.QueryableDataSourceView.StoreOriginalValues%2A> Methode, um zu bestimmen, welche Spalten für vollständige Parallelität gespeichert werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreOriginalValues">
+      <MemberSignature Language="C#" Value="protected void StoreOriginalValues (System.Collections.IList results, Func&lt;System.ComponentModel.PropertyDescriptor,bool&gt; include);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void StoreOriginalValues(class System.Collections.IList results, class System.Func`2&lt;class System.ComponentModel.PropertyDescriptor, bool&gt; include) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.StoreOriginalValues(System.Collections.IList,System.Func{System.ComponentModel.PropertyDescriptor,System.Boolean})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.Collections.IList" />
+        <Parameter Name="include" Type="System.Func&lt;System.ComponentModel.PropertyDescriptor,System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="results">Das Ergebnis des Vorgangs.</param>
+        <param name="include">Die Methode, die bestimmt, die Eigenschaften enthalten.</param>
+        <summary>Speichert die ursprünglichen Werte aus der select-Vorgang in der Ansicht für das Steuerelement beim Status löschen oder Updatevorgänge aktiviert sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei der Implementierung durch eine Klasse ruft einen Wert, der angibt, ob ein Serversteuerelement seine Änderungen am Ansichtszustand nachverfolgt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Datenquellensicht ist zum Speichern ihres Zustands markiert; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.QueryableDataSourceView>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Der Status des Datenquellen-Steuerelements.</param>
+        <summary>Bei der Implementierung durch eine Klasse anzeigen lädt des Webserversteuerelement zuvor gespeicherten Zustand für das Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.QueryableDataSourceView>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bei der Implementierung durch eine Klasse speichert die Änderungen Ansichtszustand des Serversteuerelements, auf ein Objekt.</summary>
+        <returns>Das Objekt, das die Änderungen an den Ansichtszustand des Serversteuerelements enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.QueryableDataSourceView>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bei der Implementierung durch eine Klasse ruft einen Wert, der angibt, ob ein Serversteuerelement seine Änderungen am Ansichtszustand nachverfolgt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.QueryableDataSourceView>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected virtual void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ursachen Track Ansichtszustand ändert, der dem Serversteuerelement, sodass sie in den Zustand des Serversteuerelements gespeichert werden können.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public int Update (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Update(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.Update(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Die Schlüssel, der die zu aktualisierenden Zeilengruppe.</param>
+        <param name="values">Die Werte der Zeilen, die aktualisiert werden soll.</param>
+        <param name="oldValues">Die Zeilenwerte um auszuwerten, um Daten zu erkennen.</param>
+        <summary>Führt einen Updatevorgang an.</summary>
+        <returns>Die Anzahl der Zeilen, die in der Datenquelle aktualisiert wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateObject">
+      <MemberSignature Language="C#" Value="protected virtual int UpdateObject (object oldEntity, object newEntity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 UpdateObject(object oldEntity, object newEntity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSourceView.UpdateObject(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldEntity" Type="System.Object" />
+        <Parameter Name="newEntity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oldEntity">Die zu aktualisierenden Objekts.</param>
+        <param name="newEntity">Das aktualisierte Objekt.</param>
+        <summary>Aktualisiert ein Datenobjekt.</summary>
+        <returns>Die Anzahl der Zeilen, die in das Datenobjekt aktualisiert wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ParameterCollection UpdateParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection UpdateParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.UpdateParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Parametern, die während eines Updatevorgangs verwendet werden.</summary>
+        <value>Eine Auflistung von Parametern, die während eines Updatevorgangs verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Where">
+      <MemberSignature Language="C#" Value="public virtual string Where { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Where" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.Where" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt muss ein Wert, der angibt, welche Bedingungen "true" für eine Zeile, in die abgerufenen Daten eingeschlossen werden sollen.</summary>
+        <value>Eine Zeichenfolge, die zum Erstellen der <see langword="Where" /> Klausel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WhereParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ParameterCollection WhereParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection WhereParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryableDataSourceView.WhereParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Parametern, die zum Erstellen einer <see langword="Where" /> Klausel.</summary>
+        <value>Eine Auflistung von Parametern, die zum Erstellen einer <see langword="Where" /> Klausel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

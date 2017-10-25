@@ -1,0 +1,76 @@
+<Type Name="MediaEntryAttribute" FullName="System.Data.Services.Client.MediaEntryAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MediaEntryAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MediaEntryAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.MediaEntryAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass die angegebene Klasse als Medienlinkeintrag behandelt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klasse wird als Medienlinkeintrag behandelt. Dieser ist ein AtomPub-Protokoll für die Behandlung von Binärdaten und Metadaten zu diesen Binärdaten.  
+  
+ Ein mit diesem Attribut markierter Typ weist ein geändertes Verhalten auf, wenn <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> aufgerufen wird. Die Medieneigenschaft wird auch als Medienressource bezeichnet. Beim Speichern wird die von der <xref:System.Data.Services.Client.MediaEntryAttribute.MediaMemberName%2A>-Eigenschaft angegebene Medieneigenschaft des Typs durch eine POST-Anforderung in den URI `/<EntitySet>/$value` eingefügt.  
+  
+ Nach dem `POST` wird eine `PUT`-Anforderung mit allen Eigenschaften des Typs mit Ausnahme von <xref:System.Data.Services.Client.MediaEntryAttribute.MediaMemberName%2A> (binärer Inhalt) an den URI `/<EntitySet>(<key>)` gesendet.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaEntryAttribute (string mediaMemberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string mediaMemberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.MediaEntryAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mediaMemberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mediaMemberName">Ein Zeichenfolgenwert, der die Eigenschaft identifiziert, die Mediendaten enthält.</param>
+        <summary>Erstellt eine neue Instanz von <see cref="T:System.Data.Services.Client.MediaEntryAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaMemberName">
+      <MemberSignature Language="C#" Value="public string MediaMemberName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MediaMemberName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.MediaEntryAttribute.MediaMemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name der Klasseneigenschaft, die die Medien enthält (in der Regel Binärdaten).</summary>
+        <value>Ein Zeichenfolgenwert, der die Eigenschaft identifiziert, die Mediendaten enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

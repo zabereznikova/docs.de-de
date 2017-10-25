@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Framework">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.Build.Framework" /> -Namespace enthält Typen, die Interaktion zwischen Aufgaben und Protokollierungen mit der MSBuild-Modul zu definieren. Informationen finden Sie unter <see href="https://docs.microsoft.com/visualstudio/msbuild/">MSBuild</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

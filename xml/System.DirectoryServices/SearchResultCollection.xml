@@ -1,0 +1,472 @@
+<Type Name="SearchResultCollection" FullName="System.DirectoryServices.SearchResultCollection">
+  <TypeSignature Language="C#" Value="public class SearchResultCollection : MarshalByRefObject, IDisposable, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SearchResultCollection extends System.MarshalByRefObject implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.SearchResultCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.SearchResultCollection" />-Klasse enthält die <see cref="T:System.DirectoryServices.SearchResult" />-Instanzen, die von der Active Directory-Hierarchie während einer <see cref="T:System.DirectoryServices.DirectorySearcher" />-Abfrage zurückgegeben wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufgrund von Einschränkungen für die Implementierung der <xref:System.DirectoryServices.SearchResultCollection> Klasse kann nicht mit alle nicht verwalteten Ressourcen freizugeben, wenn der Garbage Collection ist. Um einen Speicherverlust zu verhindern, rufen Sie die <xref:System.DirectoryServices.SearchResultCollection.Dispose%2A> Methode bei der <xref:System.DirectoryServices.SearchResultCollection> Objekt nicht mehr benötigt werden.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+      <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+    </permission>
+  </Docs>
+  <Members>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.SearchResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.SearchResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.Contains(System.DirectoryServices.SearchResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.DirectoryServices.SearchResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das zu suchende <see cref="T:System.DirectoryServices.SearchResult" />-Objekt.</param>
+        <summary>Ermittelt, ob ein angegebenes <see cref="T:System.DirectoryServices.SearchResult" />-Objekt in dieser Auflistung vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die angegebene Eigenschaft zu dieser Auflistung gehört, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.DirectoryServices.SearchResult[] results, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.DirectoryServices.SearchResult[] results, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.CopyTo(System.DirectoryServices.SearchResult[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.DirectoryServices.SearchResult[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="results">Das Array von <see cref="T:System.DirectoryServices.SearchResult" />-Objekten, das die Elemente dieser Auflistung empfängt.</param>
+        <param name="index">Der nullbasierte Index im <c>Ergebnisse</c> , in dem diese Methode mit dem Kopieren dieser Auflistung beginnt.</param>
+        <summary>Kopiert alle <see cref="T:System.DirectoryServices.SearchResult" />-Objekte in dieser Auflistung in das angegebene Array, beginnend bei dem angegebenen Index des Zielarrays.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResultCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von <see cref="T:System.DirectoryServices.SearchResult" />-Objekten in dieser Auflistung ab.</summary>
+        <value>Die Anzahl der <see cref="T:System.DirectoryServices.SearchResult" />-Objekte in dieser Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle Ressourcen frei, die vom <see cref="T:System.DirectoryServices.SearchResultCollection" />-Objekt verwendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.DirectoryServices.SearchResultCollection.Dispose%2A> -Methode, können Sie die Ressourcen, mit denen, die <xref:System.DirectoryServices.SearchResultCollection> neu für andere Zwecke reserviert werden. Weitere Informationen zu <xref:System.DirectoryServices.SearchResultCollection.Dispose%2A>, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).  
+  
+ Der Garbage Collector nicht frei Speicher für eine <xref:System.DirectoryServices.SearchResultCollection> Objekt. Daher muss eine Anwendung Aufrufen der <xref:System.DirectoryServices.SearchResultCollection.Dispose%2A> -Methode explizit, um einen Speicherverlust zu verhindern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die vom <see cref="T:System.DirectoryServices.SearchResultCollection" />-Objekt verwendeten nicht verwalteten Ressourcen und optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich <xref:System.DirectoryServices.SearchResultCollection.Dispose%2A> Methode und die <xref:System.Object.Finalize%2A> Methode. <xref:System.DirectoryServices.SearchResultCollection.Dispose%2A>Ruft die geschützte <xref:System.DirectoryServices.SearchResultCollection.Dispose%2A> Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft <xref:System.DirectoryServices.SearchResultCollection.Dispose%2A> mit der `disposing` Parametersatz auf `false`.  
+  
+ Wenn die `disposing` Parameter ist `true`, gibt diese Methode alle Ressourcen, die für verwaltete Objekte reserviert sind, die von diesem <xref:System.DirectoryServices.SearchResultCollection> Verweise.  
+  
+ Der Garbage Collector nicht frei Speicher für eine <xref:System.DirectoryServices.SearchResultCollection> Objekt. Aus diesem Grund müssen Sie Aufrufen der <xref:System.DirectoryServices.SearchResultCollection.Dispose%2A> -Methode explizit, um einen Speicherverlust zu verhindern.  
+  
+ Diese Methode ruft die <xref:System.DirectoryServices.SearchResultCollection.Dispose%2A> -Methode aller Objekte in der Auflistung.  
+  
+ Weitere Informationen zu <xref:System.DirectoryServices.SearchResultCollection.Dispose> und <xref:System.Object.Finalize%2A>, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.DirectoryServices.SearchResultCollection.Dispose" /> Methode kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben der <see cref="M:System.DirectoryServices.SearchResultCollection.Dispose(System.Boolean)" /> Methode werden nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden die <see cref="M:System.DirectoryServices.SearchResultCollection.Dispose" /> Methode. Weitere Informationen zum Implementieren <see cref="M:System.DirectoryServices.SearchResultCollection.Dispose" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~SearchResultCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="M:System.Object.Finalize" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, mit dem diese Auflistung durchlaufen werden kann.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, mit dem diese Auflistung durchlaufen werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public IntPtr Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResultCollection.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Handle, das von zurückgegebene der [IDirectorySearch:: ExecuteSearch](http://msdn.microsoft.com/library/default.asp?url=/library/adsi/adsi/idirectorysearch_executesearch.asp) Methode, die die eigentliche Suche ausführt. Weitere Informationen finden Sie unter der [IDirectorySearch:: ExecuteSearch](http://msdn.microsoft.com/library/default.asp?url=/library/adsi/adsi/idirectorysearch_executesearch.asp) Thema in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).</summary>
+        <value>Der von dieser Auflistung verwendete ADS_SEARCH_HANDLE-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.DirectoryServices.DirectorySearcher> , die dieser Sammlung erstellt Ruft die [IDirectorySearch:: ExecuteSearch](http://msdn.microsoft.com/library/default.asp?url=/library/adsi/adsi/idirectorysearch_executesearch.asp) -Methode, die Ergebnisse der Abfrage an das Objekt: System.DirectoryServices.SearchResultCollection zur Verfügung stellt. Weitere Informationen finden Sie unter der [IDirectorySearch:: ExecuteSearch](http://msdn.microsoft.com/library/default.asp?url=/library/adsi/adsi/idirectorysearch_executesearch.asp) Thema in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ Jedes Mal, die eine Abfrage ausgeführt wird, ein Handle für die Ergebnisse dieser Abfrage zugeordnet ist seine <xref:System.DirectoryServices.SearchResultCollection> Objekt. Dieses Handle entspricht dem Suchhandle in ADSI. Dieses Handle, das persistent gespeichert, bis Sie Aufrufen der <xref:System.DirectoryServices.SearchResultCollection.Dispose> Methode für die <xref:System.DirectoryServices.SearchResultCollection> Objekt, sodass Sie aufrufen müssen <xref:System.DirectoryServices.SearchResultCollection.Dispose> um einen Speicherverlust zu verhindern. Der Garbage Collector gibt Arbeitsspeicher für dieses bestimmte Objekt nicht frei.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.DirectoryServices.SearchResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.DirectoryServices.SearchResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.IndexOf(System.DirectoryServices.SearchResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.DirectoryServices.SearchResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.DirectoryServices.SearchResult" />-Objekt, das in dieser Auflistung gesucht werden soll.</param>
+        <summary>Gibt den Index des ersten Vorkommens des angegebenen <see cref="T:System.DirectoryServices.SearchResult" />-Objekts in dieser Auflistung zurück.</summary>
+        <returns>Der nullbasierte Index des ersten übereinstimmenden Objekts. Gibt -1 zurück, wenn kein Member dieser Auflistung mit dem <see cref="T:System.DirectoryServices.SearchResult" />-Objekt identisch ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.SearchResult this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.SearchResult Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResultCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.SearchResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des abzurufenden <see cref="T:System.DirectoryServices.SearchResult" />-Objekts.</param>
+        <summary>Ruft das <see cref="T:System.DirectoryServices.SearchResult" />-Objekt ab, das sich an einem angegebenen Index dieser Auflistung befindet.</summary>
+        <value>Das <see cref="T:System.DirectoryServices.SearchResult" />-Objekt, das sich am angegebenen Index befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In C# ist diese Eigenschaft der Indexer für die <xref:System.DirectoryServices.SearchResultCollection>-Klasse.  
+  
+ In JScript können Sie die von einem Typ definierten indizierten Standardeigenschaften verwenden, jedoch keine eigenen Eigenschaften explizit definieren. Wird jedoch angeben, das Expando-Attribut für eine Klasse stellt automatisch eine indizierte Eigenschaft, deren Typ Objekt und mit dem Indextyp <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesLoaded">
+      <MemberSignature Language="C#" Value="public string[] PropertiesLoaded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] PropertiesLoaded" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResultCollection.PropertiesLoaded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.DirectoryServices.DirectorySearcher" />-Eigenschaften ab, die vor dem Ausführen der Suche angegeben wurden.</summary>
+        <value>Ein Array vom Typ <see cref="T:System.String" /> mit den Eigenschaften, die vor dem Ausführen der Suche von der <see cref="P:System.DirectoryServices.DirectorySearcher.PropertiesToLoad" />-Eigenschaftenauflistung angegeben wurden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Collections.ICollection" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der <see cref="T:System.Collections.ICollection" /> in ein <see cref="T:System.Array" />, beginnend bei einem bestimmten <see cref="T:System.Array" />-Index.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der Quell-<see cref="T:System.Collections.ICollection" /> ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Ziel-<paramref name="array" />s.</exception>
+        <exception cref="T:System.InvalidCastException">Der Typ des Quell-<see cref="T:System.Collections.ICollection" />s kann nicht automatisch in den Typ des Ziel-<paramref name="array" />s umgewandelt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResultCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf das <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ICollection.SyncRoot%2A> gibt ein Objekt zurück, mit dem der Zugriff auf <xref:System.Collections.ICollection> synchronisiert werden kann.  
+  
+ Die meisten Auflistungsklassen im die <xref:System.Collections?displayProperty=nameWithType> Namespace implementieren darüber hinaus eine Synchronized-Methode, die einen synchronisierten Wrapper um die zugrunde liegende Auflistung bietet.  
+  
+ Einer Auflistung ist systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.  
+  
+ [Visual Basic, c#]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, das die Auflistung mit Sperren der <xref:System.Collections.ICollection.SyncRoot%2A> während der gesamten Enumeration:  
+  
+```csharp  
+ICollection myCollection = new ICollection();  
+  lock(myCollection.SyncRoot) {  
+  foreach (Object item in myCollection) {  
+  // Insert your code here.  
+  }  
+ }  
+```  
+  
+```vb  
+Dim myCollection As New ICollection()  
+ Dim item As Object  
+ SyncLock myCollection.SyncRoot  
+  For Each item In myCollection  
+  ' Insert your code here.  
+  Next item  
+ End SyncLock  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResultCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Auflistungen, die einen nicht öffentlich verfügbaren Speicher verwenden, besteht die erwartete Implementierung in der Rückgabe der aktuellen Instanz. Beachten Sie, dass der Zeiger auf die aktuelle Instanz möglicherweise nicht ausreichend für Auflistungen, die andere Auflistungen. sollte der zugrunde liegenden Auflistung zurückgegeben `SyncRoot` Eigenschaft.  
+  
+ Die meisten Auflistungsklassen im <xref:System.Collections?displayProperty=nameWithType>-Namespace implementieren darüber hinaus eine `Synchronized`-Methode, die einen synchronisierten Wrapper um die zugrunde liegende Auflistung zur Verfügung stellt. Abgeleitete Klassen können jedoch mithilfe der <xref:System.Collections.ICollection.SyncRoot%2A>-Eigenschaft eine eigene synchronisierte Version der Auflistung bereitstellen. Im Synchronisierungscode führen Vorgänge für die <xref:System.Collections.ICollection.SyncRoot%2A> der Auflistung, nicht direkt für die Auflistung. Dies gewährleistet die einwandfreie Funktion von Auflistungen, die von anderen Objekten abgeleitet sind. Im Besonderen wird die ordnungsgemäße Synchronisierung mit anderen Threads gewährleistet, die eventuell zur gleichen Zeit Änderungen an der Auflistungsinstanz vornehmen.  
+  
+ In Ermangelung einer `Synchronized` Methode auf eine Auflistung, die erwartete Verwendung für <xref:System.Collections.ICollection.SyncRoot%2A> wie folgt aussieht:  
+  
+```csharp  
+ICollection MyCollection =...  
+ lock(MyCollection.SyncRoot) {  
+  // Some operation on the collection, which is now thread safe.  
+ }  
+```  
+  
+```vb  
+Dim myCollection as New ICollection()  
+ SyncLock myCollection.SyncRoot  
+  ' Some operation on the collection, which is now thread safe.  
+ End SyncLock  
+```  
+  
+ Einer Auflistung ist systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.  
+  
+ [Visual Basic, c#]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, das die Auflistung mit Sperren der <xref:System.Collections.ICollection.SyncRoot%2A> während der gesamten Enumeration:  
+  
+```csharp  
+ICollection myCollection = new ICollection();  
+ lock(myCollection.SyncRoot) {  
+  foreach (Object item in myCollection) {  
+  // Insert your code here.  
+  }  
+ }  
+```  
+  
+```vb  
+Dim myCollection As New ICollection()  
+ Dim item As Object  
+ SyncLock myCollection.SyncRoot  
+  For Each item In myCollection  
+  ' Insert your code here.  
+  Next item  
+ End SyncLock  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,77 @@
+<Type Name="MessageType" FullName="System.Messaging.MessageType">
+  <TypeSignature Language="C#" Value="public enum MessageType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MessageType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifiziert den Typ einer Nachricht. Eine Nachricht kann eine typische Message Queuing-Nachricht einen positiven (Lesen und Eingang) oder Negative (Lesen und Eingang) Bestätigung sein oder einen berichtsmeldung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Typische (`Normal` Typ) Nachrichten sind solche, die Sie senden an eine Warteschlange, die entweder die <xref:System.Messaging.Message> Klasse oder eine Überladung der der <xref:System.Messaging.MessageQueue.Send%2A?displayProperty=nameWithType> Methode.  
+  
+ Message Queuing generiert Bestätigungsnachrichten, wenn die sendende Anwendung anfordert. Wenn Sie eine Nachricht über senden die <xref:System.Messaging.Message> -Klasse, die Sie verwenden die <xref:System.Messaging.Message.AcknowledgeType%2A> Eigenschaft, um die Typen von Bestätigungen empfangen anzugeben. Message Queuing kann positive oder negative Nachrichten erzeugen und hierdurch anzeigen, ob die ursprüngliche Nachricht empfangen oder gelesen wurde. Message Queuing sendet die entsprechende Bestätigungsnachricht an die von der sendenden Anwendung festgelegte Verwaltungswarteschlange zurück. Wenn Sie empfangen oder Einsehen einer Nachricht mit Bestätigung eine <xref:System.Messaging.Message>, dessen <xref:System.Messaging.Message.Acknowledgment%2A> -Eigenschaft gibt die Ursache, die Message Queuing die Bestätigung gesendet.  
+  
+ Message Queuing generiert Berichtnachrichten immer an der Quellwarteschlangen-Manager eine Berichtswarteschlange definiert ist. Wenn die Ablaufverfolgung aktiviert ist (durch Festlegen der <xref:System.Messaging.Message.UseTracing%2A?displayProperty=nameWithType> Eigenschaft auf die ursprüngliche Nachricht), Message Queuing sendet eine berichtsnachricht an die Message Queuing-Berichtswarteschlange jedes Mal die Originalnachricht betritt oder verlässt Message Queuing-Servers.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Acknowledgment">
+      <MemberSignature Language="C#" Value="Acknowledgment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageType Acknowledgment = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageType.Acknowledgment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Bestätigungsnachricht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageType Normal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageType.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine normale Message Queuing-Nachricht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Report">
+      <MemberSignature Language="C#" Value="Report" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageType Report = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageType.Report" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Berichtsserver-Meldung.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

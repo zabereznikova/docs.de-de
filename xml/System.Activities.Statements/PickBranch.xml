@@ -1,0 +1,173 @@
+<Type Name="PickBranch" FullName="System.Activities.Statements.PickBranch">
+  <TypeSignature Language="C#" Value="public sealed class PickBranch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PickBranch extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.PickBranch" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Action")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein potenzieller Ausführungspfad innerhalb einer <see cref="T:System.Activities.Statements.Pick" />-Aktivität.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine <xref:System.Activities.Statements.PickBranch> enthält einen <xref:System.Activities.Statements.PickBranch.Trigger%2A> und eine <xref:System.Activities.Statements.PickBranch.Action%2A>. Am Anfang der Ausführung eines <xref:System.Activities.Statements.Pick>-Elements werden sämtliche Triggeraktivitäten aus sämtlichen <xref:System.Activities.Statements.PickBranch>-Elementen geplant. Bei der ersten (linken) Aktivität abgeschlossen wird, wird die entsprechende aktionsaktivität geplant, und alle anderen triggeraktivitäten werden abgebrochen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen einer <xref:System.Activities.Statements.PickBranch>-Aktivität gezeigt. Dieses Beispiel stammt aus dem [verwenden der Pick-Aktivität](~/docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md) Beispiel.  
+  
+ [!code-csharp[wfs_Pick#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_pick/cs/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PickBranch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.PickBranch.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Statements.PickBranch" />-Aktivität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen einer <xref:System.Activities.Statements.PickBranch>-Aktivität gezeigt. Dieses Beispiel stammt aus dem [verwenden der Pick-Aktivität](~/docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md) Beispiel.  
+  
+ [!code-csharp[wfs_Pick#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_pick/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Action" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.PickBranch.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Trigger")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Activities.Activity" />, die bei Ausführauslösung dieser Verzweigung ausgeführt werden soll.</summary>
+        <value>Die auszuführende Aktivität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Festlegen der Action-Eigenschaft einer <xref:System.Activities.Statements.PickBranch>-Aktivität gezeigt. Dieses Beispiel stammt aus dem [verwenden der Pick-Aktivität](~/docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md) Beispiel.  
+  
+ [!code-csharp[wfs_Pick#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_pick/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.PickBranch.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("PickBranch")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name dieses Branches, der im Aktivitätsdesigner angezeigt werden soll.</summary>
+        <value>Der Verzweigungsname.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trigger">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Trigger { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Trigger" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.PickBranch.Trigger" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Variables")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Aktivität, deren Beendigung diese Auswahlverzweigung aktiviert.</summary>
+        <value>Die auslösende Aktivität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Festlegen der Trigger-Eigenschaft einer <xref:System.Activities.Statements.PickBranch>-Aktivität gezeigt. Dieses Beispiel stammt aus dem [verwenden der Pick-Aktivität](~/docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md) Beispiel.  
+  
+ [!code-csharp[wfs_Pick#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_pick/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variables">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Activities.Variable&gt; Variables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Activities.Variable&gt; Variables" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.PickBranch.Variables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Activities.Variable&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Auflistung der benutzerdefinierten Variablen, die dieser Aktivität zugeordnet sind.</summary>
+        <value>Die Auflistung der Variablen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,304 @@
+<Type Name="ViewStateException" FullName="System.Web.UI.ViewStateException">
+  <TypeSignature Language="C#" Value="public sealed class ViewStateException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ViewStateException extends System.Exception implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ViewStateException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Ausnahme, die ausgelöst wird, wenn der Ansichtszustand geladen oder überprüft werden kann. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Ausnahme tritt auf, wenn die Seite die Informationen zum Ansichtszustand lädt, wird die Seite erstellt eine <xref:System.Web.UI.ViewStateException> -Objekt und übergibt diese als innere Ausnahme in einer <xref:System.Web.HttpException> Ausnahme. Die <xref:System.Web.HttpException> Ausnahme wird erneut ausgelöst, um die von der Anwendung behandelt werden.  
+  
+ Die <xref:System.Web.UI.ViewStateException> Klasse speichert Informationen über die Ausnahme in der <xref:System.Web.UI.ViewStateException.Message%2A> Eigenschaft. Wenn die Anforderung über eine Zugriffsberechtigung verfügt die <xref:System.Web.HttpRequest.ServerVariables%2A> -Eigenschaft, die <xref:System.Web.UI.ViewStateException.Message%2A> Eigenschaft enthält die Rückgabewerte aus der <xref:System.Web.UI.ViewStateException.RemoteAddress%2A>, <xref:System.Web.UI.ViewStateException.RemotePort%2A>, <xref:System.Web.UI.ViewStateException.UserAgent%2A>, <xref:System.Web.UI.ViewStateException.PersistedState%2A>, <xref:System.Web.UI.ViewStateException.Referer%2A>, und <xref:System.Web.UI.ViewStateException.Path%2A> die Eigenschaften aus. andernfalls die <xref:System.Web.UI.ViewStateException.Message%2A> Eigenschaft enthält eine allgemeine Fehlermeldung Ansichtszustand.  
+  
+ Eine Ausnahme Ansichtszustand kann das Ergebnis eines Validierungsfehlers Codes MAC (Message Authentication) sein. Wenn das Attribut `enableViewStateMac` festgelegt ist, um `true`, Ansichtszustandsinformationen mit einem MAC-Bezeichner codiert ist. Wenn die Ansichtszustandsinformationen zurück an den Server zurückgesendet wird, überprüft die Seite an, die Codierung, um sicherzustellen, dass er nicht vom Benutzer geändert wurde. Wenn die Seite die MAC-Codierung für die Ansichtszustandsinformationen überprüfen kann, löst sie eine <xref:System.Web.HttpException> mit Ausnahme der <xref:System.Web.UI.ViewStateException> Objekt als interne Ausnahme.  
+  
+ Für die MAC-Validierung erfolgreich ausgeführt werden kann muss die Ansichtszustandsinformationen mit dem gleichen Schlüssel Hashwert berechnet werden soll beim Senden und empfangen. Innerhalb einer Webfarm sollte der Computerschlüssel auf jedem Server auf einem gemeinsamen Schlüssel festgelegt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Methode zu implementieren, deserialisiert eine base64-codierte Zeichenfolge und gibt, eine <xref:System.Collections.ICollection> Auflistung von Einstellungen. Die <xref:System.Web.UI.ObjectStateFormatter.Deserialize%2A> Methode festgehaltenen ein <xref:System.Web.HttpException> Ausnahme, die enthält ein <xref:System.Web.UI.ViewStateException> Objekt als interne Ausnahme. Im Beispiel wird gezeigt, wie Sie abfangen können ein <xref:System.Web.HttpException> Ausnahme und Abrufen von Eigenschaften aus der <xref:System.Web.UI.ViewStateException> Objekt.  
+  
+ [!code-csharp[System.Web.UI.ViewStateException#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ViewStateException/CS/Class1.cs#2)]
+ [!code-vb[System.Web.UI.ViewStateException#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ViewStateException/VB/Class1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ViewStateException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ViewStateException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.ViewStateException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ViewStateException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.ViewStateException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConnected">
+      <MemberSignature Language="C#" Value="public bool IsConnected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConnected" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ViewStateException.IsConnected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Client gegenwärtig mit dem Server verbunden ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Client noch mit dem Server verbunden ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den gleichen Wert wie das Aufrufen der <xref:System.Web.HttpResponse.IsClientConnected%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Methode zu implementieren, deserialisiert eine base64-codierte Zeichenfolge und gibt, eine <xref:System.Collections.ICollection> Auflistung von Einstellungen. Die <xref:System.Web.UI.ObjectStateFormatter.Deserialize%2A> Methode festgehaltenen ein <xref:System.Web.HttpException> Ausnahme, die enthält ein <xref:System.Web.UI.ViewStateException> Objekt als interne Ausnahme. Im Beispiel wird gezeigt, wie Sie abfangen können ein <xref:System.Web.HttpException> Ausnahme und Abrufen von Eigenschaften aus der <xref:System.Web.UI.ViewStateException> Objekt.  
+  
+ [!code-csharp[System.Web.UI.ViewStateException#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ViewStateException/CS/Class1.cs#2)]
+ [!code-vb[System.Web.UI.ViewStateException#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ViewStateException/VB/Class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ViewStateException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Informationen über die HTTP-Anforderung Debuggen, die in einem Ansichtszustand Ausnahme geführt haben.</summary>
+        <value>Ein <see cref="T:System.String" /> , die die formatierte Meldung mit Informationen zur Ausnahme enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Anforderung nicht über eine Zugriffsberechtigung für die Servervariablen verfügt, gibt diese Eigenschaft eine generische Fehlermeldung Ansichtszustand. Wenn die Anforderung über die Berechtigung zum Zugriff auf Servervariablen verfügt die <xref:System.Web.UI.ViewStateException.Message%2A> Eigenschaft enthält die Rückgabewerte aus der <xref:System.Web.UI.ViewStateException.RemoteAddress%2A>, <xref:System.Web.UI.ViewStateException.RemotePort%2A>, <xref:System.Web.UI.ViewStateException.UserAgent%2A>, <xref:System.Web.UI.ViewStateException.PersistedState%2A>, <xref:System.Web.UI.ViewStateException.Referer%2A>, und <xref:System.Web.UI.ViewStateException.Path%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ViewStateException.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad der HTTP-Anforderung, die in einem Ansichtszustand Ausnahme geführt haben.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Pfad der Anforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den gleichen Wert wie die `PATH_INFO` -Variable in der <xref:System.Web.HttpRequest.ServerVariables%2A> Eigenschaft. Es gibt den Teil des Pfads nach den Namen des Hosts zurück. Beispielsweise ist in der URL http://www.contoso.com/virdir/page.html <xref:System.Web.UI.ViewStateException.Path%2A> /virdir/page.html zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Methode zu implementieren, deserialisiert eine base64-codierte Zeichenfolge und gibt, eine <xref:System.Collections.ICollection> Auflistung von Einstellungen. Die <xref:System.Web.UI.ObjectStateFormatter.Deserialize%2A> Methode festgehaltenen ein <xref:System.Web.HttpException> Ausnahme, die enthält ein <xref:System.Web.UI.ViewStateException> Objekt als interne Ausnahme. Im Beispiel wird gezeigt, wie Sie abfangen können ein <xref:System.Web.HttpException> Ausnahme und Abrufen von Eigenschaften aus der <xref:System.Web.UI.ViewStateException> Objekt.  
+  
+ [!code-csharp[System.Web.UI.ViewStateException#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ViewStateException/CS/Class1.cs#2)]
+ [!code-vb[System.Web.UI.ViewStateException#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ViewStateException/VB/Class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistedState">
+      <MemberSignature Language="C#" Value="public string PersistedState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PersistedState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ViewStateException.PersistedState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Inhalt der Ansichtszustand Zeichenfolge, die beim Lesen der Ansichtszustand Ausnahme verursacht hat.</summary>
+        <value>Ein <see cref="T:System.String" /> , das den Ansichtszustand enthält Werte, die den Ansichtszustand Ausnahme verursacht hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Referer">
+      <MemberSignature Language="C#" Value="public string Referer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Referer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ViewStateException.Referer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die URL der Seite, die auf der Seite verknüpft, auf dem der Ansichtszustand Ausnahme, ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den HTTP-Referer enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den gleichen Wert wie die `HTTP_REFERER` -Variable in der <xref:System.Web.HttpRequest.ServerVariables%2A> Eigenschaft. Der Wert ist eine leere Zeichenfolge (""), wenn keine vorherige Anforderung mit der Seite verknüpft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Methode zu implementieren, deserialisiert eine base64-codierte Zeichenfolge und gibt, eine <xref:System.Collections.ICollection> Auflistung von Einstellungen. Die <xref:System.Web.UI.ObjectStateFormatter.Deserialize%2A> Methode festgehaltenen ein <xref:System.Web.HttpException> Ausnahme, die enthält ein <xref:System.Web.UI.ViewStateException> Objekt als interne Ausnahme. Im Beispiel wird gezeigt, wie Sie abfangen können ein <xref:System.Web.HttpException> Ausnahme und Abrufen von Eigenschaften aus der <xref:System.Web.UI.ViewStateException> Objekt.  
+  
+ [!code-csharp[System.Web.UI.ViewStateException#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ViewStateException/CS/Class1.cs#2)]
+ [!code-vb[System.Web.UI.ViewStateException#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ViewStateException/VB/Class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteAddress">
+      <MemberSignature Language="C#" Value="public string RemoteAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RemoteAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ViewStateException.RemoteAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die IP-Adresse der HTTP-Anforderung, die in einem Ansichtszustand Ausnahme geführt haben.</summary>
+        <value>Ein <see cref="T:System.String" /> , die die remote IP-Adresse des Clients enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den gleichen Wert wie die `REMOTE_ADDR` -Variable in der <xref:System.Web.HttpRequest.ServerVariables%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemotePort">
+      <MemberSignature Language="C#" Value="public string RemotePort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RemotePort" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ViewStateException.RemotePort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Portnummer der HTTP-Anforderung, die in einem Ansichtszustand Ausnahme geführt haben.</summary>
+        <value>Ein <see cref="T:System.String" /> , die Nummer des Remoteports enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den gleichen Wert wie die `REMOTE_PORT` -Variable in der <xref:System.Web.HttpRequest.ServerVariables%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAgent">
+      <MemberSignature Language="C#" Value="public string UserAgent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAgent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ViewStateException.UserAgent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Browsertyp HTTP-Anforderung, die in einem Ansichtszustand Ausnahme geführt haben.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält die Benutzer-Agent in der Regel der Browsertyp ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den gleichen Wert wie die `HTTP_USER_AGENT` -Variable in der <xref:System.Web.HttpRequest.ServerVariables%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Methode zu implementieren, deserialisiert eine base64-codierte Zeichenfolge und gibt, eine <xref:System.Collections.ICollection> Auflistung von Einstellungen. Die <xref:System.Web.UI.ObjectStateFormatter.Deserialize%2A> Methode festgehaltenen ein <xref:System.Web.HttpException> Ausnahme, die enthält ein <xref:System.Web.UI.ViewStateException> Objekt als interne Ausnahme. Im Beispiel wird gezeigt, wie Sie abfangen können ein <xref:System.Web.HttpException> Ausnahme und Abrufen von Eigenschaften aus der <xref:System.Web.UI.ViewStateException> Objekt.  
+  
+ [!code-csharp[System.Web.UI.ViewStateException#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ViewStateException/CS/Class1.cs#2)]
+ [!code-vb[System.Web.UI.ViewStateException#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ViewStateException/VB/Class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

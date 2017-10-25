@@ -1,0 +1,352 @@
+<Type Name="ProjectElementContainer" FullName="Microsoft.Build.Construction.ProjectElementContainer">
+  <TypeSignature Language="C#" Value="public abstract class ProjectElementContainer : Microsoft.Build.Construction.ProjectElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProjectElementContainer extends Microsoft.Build.Construction.ProjectElement" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectElementContainer" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Construction.ProjectElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine abstrakte Containerklasse für Projektelemente bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllChildren">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectElement&gt; AllChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Construction.ProjectElement&gt; AllChildren" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectElementContainer.AllChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen rekursiven Tiefensuche-Enumerator über alle untergeordneten Elemente ab.</summary>
+        <value>Gibt einen rekursiven Tiefensuche-Enumerator über alle untergeordneten Elemente zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rekursion ist möglich, da Projektelementcontainer möglicherweise untergeordnete Elemente enthalten, die selbst werden Projektelementcontainer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendChild">
+      <MemberSignature Language="C#" Value="public void AppendChild (Microsoft.Build.Construction.ProjectElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendChild(class Microsoft.Build.Construction.ProjectElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectElementContainer.AppendChild(Microsoft.Build.Construction.ProjectElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="Microsoft.Build.Construction.ProjectElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">Das Projektelement angefügt werden.</param>
+        <summary>Fügt der <paramref name="child" /> Element als das letzte untergeordnete Element dieses Containers Projekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löst eine Ausnahme aus, wenn dieser Projektcontainer kein übergeordnetes Element ist, oder wenn die `child` Element ist bereits ein übergeordnetes Element besitzen, oder wenn die `child` -Element wurde erstellt, indem Sie ein anderes <xref:Microsoft.Build.Construction.ProjectRootElement>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectElement&gt; Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectElement&gt; Children" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectElementContainer.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Elemente ab.</summary>
+        <value>Gibt alle untergeordneten Elemente zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildrenReversed">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectElement&gt; ChildrenReversed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectElement&gt; ChildrenReversed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectElementContainer.ChildrenReversed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Elemente, beginnend mit dem letzten untergeordneten Element ab.</summary>
+        <value>Gibt alle untergeordneten Elemente, beginnend mit dem letzten untergeordneten Element zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectElementContainer.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der untergeordneten Elemente ab.</summary>
+        <value>Gibt die Anzahl der untergeordneten Elemente zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstChild">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectElement FirstChild { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ProjectElement FirstChild" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectElementContainer.FirstChild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das erste untergeordnete Element ab.</summary>
+        <value>Gibt das erste untergeordnete Element zurück. Gibt null zurück, wenn kein untergeordnetes Element vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A> um diese Eigenschaft zu initialisieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertAfterChild">
+      <MemberSignature Language="C#" Value="public void InsertAfterChild (Microsoft.Build.Construction.ProjectElement child, Microsoft.Build.Construction.ProjectElement reference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertAfterChild(class Microsoft.Build.Construction.ProjectElement child, class Microsoft.Build.Construction.ProjectElement reference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectElementContainer.InsertAfterChild(Microsoft.Build.Construction.ProjectElement,Microsoft.Build.Construction.ProjectElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="Microsoft.Build.Construction.ProjectElement" />
+        <Parameter Name="reference" Type="Microsoft.Build.Construction.ProjectElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">Die Project-Element eingefügt werden.</param>
+        <param name="reference">Das Projektelement nach eingefügt werden.</param>
+        <summary>Fügt der <paramref name="child" /> Elements nach dem <paramref name="reference" /> Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `reference` Element null ist, diese Methode ist äquivalent zu <xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A>.  
+  
+ Löst eine Ausnahme aus, wenn dieser Projektcontainer kein übergeordnetes Element ist, oder wenn die `child` Element ist bereits ein übergeordnetes Element besitzen, oder, wenn die `child` -Element wurde erstellt, indem Sie ein anderes <xref:Microsoft.Build.Construction.ProjectRootElement>, oder wenn die `reference` Element ist kein untergeordnetes Element dieses Projektcontainers .  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertBeforeChild">
+      <MemberSignature Language="C#" Value="public void InsertBeforeChild (Microsoft.Build.Construction.ProjectElement child, Microsoft.Build.Construction.ProjectElement reference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertBeforeChild(class Microsoft.Build.Construction.ProjectElement child, class Microsoft.Build.Construction.ProjectElement reference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectElementContainer.InsertBeforeChild(Microsoft.Build.Construction.ProjectElement,Microsoft.Build.Construction.ProjectElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="Microsoft.Build.Construction.ProjectElement" />
+        <Parameter Name="reference" Type="Microsoft.Build.Construction.ProjectElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">Die Project-Element eingefügt werden.</param>
+        <param name="reference">Das Projektelement vor eingefügt wird.</param>
+        <summary>Fügt der <paramref name="child" /> Element vor dem <paramref name="reference" /> Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `reference` Element null ist, diese Methode ist äquivalent zu <xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A>.  
+  
+ Löst eine Ausnahme aus, wenn dieser Projektcontainer kein übergeordnetes Element ist, oder wenn die `child` Element ist bereits ein übergeordnetes Element besitzen, oder, wenn die `child` -Element wurde erstellt, indem Sie ein anderes <xref:Microsoft.Build.Construction.ProjectRootElement>, oder wenn die `reference` Element ist kein untergeordnetes Element dieses Projektcontainers .  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastChild">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectElement LastChild { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ProjectElement LastChild" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectElementContainer.LastChild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das letzte untergeordnete Element ab.</summary>
+        <value>Gibt das letzte untergeordnete Element zurück. Gibt null zurück, wenn kein untergeordnetes Element vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A> um diese Eigenschaft zu initialisieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrependChild">
+      <MemberSignature Language="C#" Value="public void PrependChild (Microsoft.Build.Construction.ProjectElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PrependChild(class Microsoft.Build.Construction.ProjectElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectElementContainer.PrependChild(Microsoft.Build.Construction.ProjectElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="Microsoft.Build.Construction.ProjectElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">Das Projektelement vorangestellt wird.</param>
+        <summary>Voran die <paramref name="child" /> Element als das erste untergeordnete Element dieses Containers Projekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löst eine Ausnahme aus, wenn dieser Projektcontainer kein übergeordnetes Element ist, oder wenn die `child` Element ist bereits ein übergeordnetes Element besitzen, oder wenn die `child` -Element wurde erstellt, indem Sie ein anderes <xref:Microsoft.Build.Construction.ProjectRootElement>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAllChildren">
+      <MemberSignature Language="C#" Value="public void RemoveAllChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAllChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectElementContainer.RemoveAllChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle untergeordneten Elemente an, ggf. aus diesem Projektcontainer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können ruhig so ändern Sie die untergeordneten Elemente auf diese Weise während der Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveChild">
+      <MemberSignature Language="C#" Value="public void RemoveChild (Microsoft.Build.Construction.ProjectElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveChild(class Microsoft.Build.Construction.ProjectElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectElementContainer.RemoveChild(Microsoft.Build.Construction.ProjectElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="Microsoft.Build.Construction.ProjectElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">Die Project-Element entfernt werden soll.</param>
+        <summary>Entfernt eine <paramref name="child" /> Element dieses Containers Projekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löst eine Ausnahme aus, wenn das untergeordnete Element zurzeit nicht von diesem Projektcontainer übergeordnet ist. Sie können ruhig So entfernen Sie ein untergeordnetes Element auf diese Weise während der Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

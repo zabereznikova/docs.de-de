@@ -1,0 +1,130 @@
+<Type Name="ToolStripDropDownDirection" FullName="System.Windows.Forms.ToolStripDropDownDirection">
+  <TypeSignature Language="C#" Value="public enum ToolStripDropDownDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolStripDropDownDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripDropDownDirection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Richtung, in dem ein <see cref="T:System.Windows.Forms.ToolStripDropDown" /> Steuerelement relativ zu seinem übergeordneten Steuerelement angezeigt wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AboveLeft">
+      <MemberSignature Language="C#" Value="AboveLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripDropDownDirection AboveLeft = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripDropDownDirection.AboveLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripDropDownDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Mithilfe der Mausposition an, dass die <see cref="T:System.Windows.Forms.ToolStripDropDown" /> oberhalb und auf der linken Seite des am übergeordneten Steuerelement angezeigt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AboveRight">
+      <MemberSignature Language="C#" Value="AboveRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripDropDownDirection AboveRight = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripDropDownDirection.AboveRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripDropDownDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Position des Mauszeigers verwendet, angeben, dass die <see cref="T:System.Windows.Forms.ToolStripDropDown" /> oben und rechts neben das übergeordnete Steuerelement angezeigt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BelowLeft">
+      <MemberSignature Language="C#" Value="BelowLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripDropDownDirection BelowLeft = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripDropDownDirection.BelowLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripDropDownDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Mithilfe der Mausposition an, dass die <see cref="T:System.Windows.Forms.ToolStripDropDown" /> unten, und klicken Sie auf der linken Seite des am übergeordneten Steuerelement angezeigt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BelowRight">
+      <MemberSignature Language="C#" Value="BelowRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripDropDownDirection BelowRight = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripDropDownDirection.BelowRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripDropDownDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Position des Mauszeigers verwendet, angeben, dass die <see cref="T:System.Windows.Forms.ToolStripDropDown" /> wird unten und rechts neben das übergeordnete Steuerelement angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripDropDownDirection Default = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripDropDownDirection.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripDropDownDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kompensiert geschachtelte Dropdown-Steuerelemente und reagiert auf die <see cref="T:System.Windows.Forms.RightToLeft" /> entweder durch Angeben der Einstellung <see cref="F:System.Windows.Forms.ToolStripDropDownDirection.Left" /> oder <see cref="F:System.Windows.Forms.ToolStripDropDownDirection.Right" /> entsprechend.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripDropDownDirection Left = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripDropDownDirection.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripDropDownDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt einen Ausgleich für geschachtelte Dropdown-Steuerelemente aus und gibt an, dass die <see cref="T:System.Windows.Forms.ToolStripDropDown" /> auf der linken Seite des am übergeordneten Steuerelement angezeigt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripDropDownDirection Right = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripDropDownDirection.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripDropDownDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt einen Ausgleich für geschachtelte Dropdown-Steuerelemente aus und gibt an, dass die <see cref="T:System.Windows.Forms.ToolStripDropDown" /> auf der rechten Seite des am übergeordneten Steuerelement angezeigt wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

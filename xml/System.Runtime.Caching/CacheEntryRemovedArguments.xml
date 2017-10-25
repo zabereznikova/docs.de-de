@@ -1,0 +1,126 @@
+<Type Name="CacheEntryRemovedArguments" FullName="System.Runtime.Caching.CacheEntryRemovedArguments">
+  <TypeSignature Language="C#" Value="public class CacheEntryRemovedArguments" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CacheEntryRemovedArguments extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.CacheEntryRemovedArguments" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen zu dem ein Cacheeintrag, der aus dem Cache entfernt wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften des <xref:System.Runtime.Caching.CacheEntryRemovedArguments> Klasse repräsentieren den Cacheeintrag, der <xref:System.Runtime.Caching.ObjectCache> Instanz, die der Eintrag entfernt wurde, und der Grund für das Entfernen. Der Konstruktor, der die <xref:System.Runtime.Caching.CacheEntryRemovedArguments> Klasse verwendet diese Argumente zum Erstellen einer neuen Instanz der Klasse.  
+  
+ Ein <xref:System.Runtime.Caching.CacheEntryRemovedArguments> -Objekts wird in der Regel in einer Rückrufmethode, die Informationen über eine entfernte Cacheeintrag wieder zu einer Anwendung übergeben werden, wenn ein Cacheeintrag aus dem Cache entfernt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheEntryRemovedArguments (System.Runtime.Caching.ObjectCache source, System.Runtime.Caching.CacheEntryRemovedReason reason, System.Runtime.Caching.CacheItem cacheItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Caching.ObjectCache source, valuetype System.Runtime.Caching.CacheEntryRemovedReason reason, class System.Runtime.Caching.CacheItem cacheItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.CacheEntryRemovedArguments.#ctor(System.Runtime.Caching.ObjectCache,System.Runtime.Caching.CacheEntryRemovedReason,System.Runtime.Caching.CacheItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.Runtime.Caching.ObjectCache" />
+        <Parameter Name="reason" Type="System.Runtime.Caching.CacheEntryRemovedReason" />
+        <Parameter Name="cacheItem" Type="System.Runtime.Caching.CacheItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die <see cref="T:System.Runtime.Caching.ObjectCache" /> Instanz, aus der <c>CacheItem</c> wurde entfernt.</param>
+        <param name="reason">Einer der Enumerationswerte, die angeben, warum <c>CacheItem</c> wurde entfernt.</param>
+        <param name="cacheItem">Eine Instanz des zwischengespeicherten Eintrags, der entfernt wurde.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Caching.CacheEntryRemovedArguments" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel Entwickler verwenden die <xref:System.Runtime.Caching.CacheEntryRemovedArguments> Klasse bei der sie benachrichtigt werden möchten, nachdem ein Cacheeintrag aus dem Cache entfernt wurde.  
+  
+ Wenn eine Cacheimplementierung ist eine oder mehrere Cacheeinträge aus dem Cache entfernen, ruft der Cacheimplementierung die <xref:System.Runtime.Caching.CacheEntryRemovedCallback> Delegat, der in der Anwendung registriert wurde. Wenn eine Cacheimplementierung des Delegaten aufruft, ruft er in der Regel die <xref:System.Runtime.Caching.CacheEntryRemovedArguments.%23ctor%2A> Konstruktor für die Übergabe an den Rückruf ein neues <xref:System.Runtime.Caching.CacheEntryRemovedArguments> Instanz, die Informationen zu den Cacheeintrag enthält, die entfernt wird. Der Rückruf benachrichtigt die Anwendung, die den Rückruf über den Cacheeintrag registriert, die entfernt wird. Nachdem Sie den Konstruktor zurück, die <xref:System.Runtime.Caching.CacheEntryRemovedArguments> Instanz enthält die Details über das Entfernen des Cacheeintrags.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="cacheItem" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheItem">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.CacheItem CacheItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Caching.CacheItem CacheItem" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheEntryRemovedArguments.CacheItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.CacheItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Instanz eines Cache-Eintrags, der aus dem Cache entfernt wurde.</summary>
+        <value>Eine Instanz von der <see cref="T:System.Runtime.Caching.CacheItem" /> -Klasse, die aus dem Cache entfernt wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovedReason">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.CacheEntryRemovedReason RemovedReason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Caching.CacheEntryRemovedReason RemovedReason" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheEntryRemovedArguments.RemovedReason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.CacheEntryRemovedReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, warum ein Cacheeintrag entfernt wurde.</summary>
+        <value>Einer der Enumerationswerte, der angibt, warum der Eintrag entfernt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.CacheEntryRemovedReason> Enumeration gibt an, zu einem vordefinierten Satz von Gründen für das Entfernen wie der Eintrag explizit entfernt wurde oder abgelaufen ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.ObjectCache Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Caching.ObjectCache Source" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheEntryRemovedArguments.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.ObjectCache</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die Quelle <see cref="T:System.Runtime.Caching.ObjectCache" /> -Instanz, die ursprünglich den entfernte Cacheeintrag enthalten sind.</summary>
+        <value>Ein Verweis auf den Cache, der ursprünglich den entfernte Cacheeintrag enthalten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

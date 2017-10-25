@@ -1,0 +1,87 @@
+<Type Name="IgnoreSectionHandler" FullName="System.Configuration.IgnoreSectionHandler">
+  <TypeSignature Language="C#" Value="public class IgnoreSectionHandler : System.Configuration.IConfigurationSectionHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IgnoreSectionHandler extends System.Object implements class System.Configuration.IConfigurationSectionHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.IgnoreSectionHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Configuration.IConfigurationSectionHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine ältere Abschnitt-Handler-Definition für Konfigurationsabschnitte, die nicht vom behandelt werden die <see cref="N:System.Configuration" /> Typen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Konfigurationssystem vollständig analysiert Konfigurationsdateien, um Konfigurationsinformationen zu sammeln und löst Ausnahmen aus, wenn Konfigurationsabschnitte gefunden, auf denen kein entsprechenden Eintrag wird in der `configSections` Abschnitt.  
+  
+ Für diese Abschnitte nicht behandelt, durch die <xref:System.Configuration> Typen, die neue Wrappertyp <xref:System.Configuration.IgnoreSection> bereitgestellt wird. Dadurch wird verhindert, dass Ausnahmen bei der Konfigurationsdatei.  
+  
+ Für Legacyzwecke der <xref:System.Configuration.IgnoreSectionHandler> ebenfalls bereitgestellt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IgnoreSectionHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IgnoreSectionHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.IgnoreSectionHandler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public virtual object Create (object parent, object configContext, System.Xml.XmlNode section);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Create(object parent, object configContext, class System.Xml.XmlNode section) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IgnoreSectionHandler.Create(System.Object,System.Object,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Object" />
+        <Parameter Name="configContext" Type="System.Object" />
+        <Parameter Name="section" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Die Konfigurationseinstellungen in einer entsprechenden übergeordneten Konfigurationsabschnitt.</param>
+        <param name="configContext">Der virtuelle Pfad für den die Konfigurationsabschnittshandler Konfigurationswerte berechnet. Normalerweise dieser Parameter ist reserviert und ist <see langword="null" />.</param>
+        <param name="section">Ein <see cref="T:System.Xml.XmlNode" /> , enthält die Konfigurationsinformationen behandelt werden. Bietet direkten Zugriff auf den XML-Inhalt des Konfigurationsabschnitts.</param>
+        <summary>Erstellt einen neuen Konfigurationshandler und fügt das angegebene Konfigurationsobjekt der Abschnitt Handlerauflistung.</summary>
+        <returns>Das Handlerobjekt Konfiguration erstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
